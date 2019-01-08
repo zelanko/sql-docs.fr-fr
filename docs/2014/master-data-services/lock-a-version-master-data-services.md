@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], locking
@@ -14,12 +13,12 @@ ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad236e42b0556ddef4e316b1b6b24280615b7e9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23e705dd936383db09b0a9eda37eb6d925dbffbb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140519"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750871"
 ---
 # <a name="lock-a-version-master-data-services"></a>Verrouiller une version (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], verrouillez une version d’un modèle pour empêcher que des modifications ne soient apportées aux membres du modèle et à leurs attributs.  
@@ -32,7 +31,7 @@ ms.locfileid: "48140519"
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Gestion des versions** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   L’état de la version doit être **Ouvert**.  
   
@@ -48,12 +47,12 @@ ms.locfileid: "48140519"
   
 ## <a name="next-steps"></a>Étapes suivantes  
   
--   [Valider une Version par rapport aux règles métier &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [Valider une version par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
--   [Valider une Version &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
+-   [Activer une version &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Versions &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
- [Déverrouiller une Version &#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)  
+ [Déverrouiller une version &#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)  
   
   

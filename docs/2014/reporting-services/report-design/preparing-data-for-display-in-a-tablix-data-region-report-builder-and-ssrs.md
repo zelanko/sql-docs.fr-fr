@@ -11,12 +11,12 @@ ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: be7dc2e586afc2a7e0ca7b2b1189716f8f5e5c40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a73c208a40cff6f582826bd0ab75b1b494cff01
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156049"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367981"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>Préparation des données à afficher dans une région de données de tableau matriciel (Générateur de rapports et SSRS)
   Une région de données de tableau matriciel affiche les données d'un dataset. Vous pouvez afficher toutes les données récupérées pour le dataset ou créer des filtres afin d'afficher uniquement un sous-ensemble de données. Vous pouvez également ajouter des expressions conditionnelles pour combler des valeurs NULL ou modifier la requête de dataset afin d'inclure des colonnes qui définissent l'ordre de tri d'une colonne existante.  
@@ -25,7 +25,7 @@ ms.locfileid: "48156049"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="working-with-nulls-and-blanks-in-field-values"></a>Utilisation de valeurs NULL et d'espaces dans les valeurs de champ  
- Les données de la collection de champs d'un dataset incluent toutes les valeurs extraites de la source de données au moment de l'exécution, y compris les valeurs NULL et les espaces. Normalement, les valeurs NULL et les espaces sont indifférenciables. C'est le comportement souhaité dans la plupart des cas. Par exemple, les fonctions d’agrégation numériques comme [somme](report-builder-functions-sum-function.md) et [Avg](report-builder-functions-avg-function.md) ignorent les valeurs null. Pour plus d’informations, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
+ Les données de la collection de champs d'un dataset incluent toutes les valeurs extraites de la source de données au moment de l'exécution, y compris les valeurs NULL et les espaces. Normalement, les valeurs NULL et les espaces sont indifférenciables. C'est le comportement souhaité dans la plupart des cas. Par exemple, les fonctions d’agrégation numériques comme [Sum](report-builder-functions-sum-function.md) et [Avg](report-builder-functions-avg-function.md) ignorent les valeurs null. Pour plus d’informations, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
  Si vous souhaitez gérer les valeurs NULL différemment, vous pouvez utiliser des expressions conditionnelles ou du code personnalisé pour substituer une valeur personnalisée à la valeur NULL. Par exemple, l’expression suivante substitue le texte `Null` quand une valeur null est présente dans le champ `[Size]`.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48156049"
 =IIF(Fields!Size.Value IS NOTHING,"Null",Fields!Size.Value)  
 ```  
   
- Pour plus d’informations sur la suppression des valeurs null dans vos données avant d’extraire les données d’une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] , consultez « Valeurs Null » et « Valeurs Null et jointures » dans la documentation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au sein de la [documentation en ligne SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Pour plus d’informations sur la suppression des valeurs null dans vos données avant d’extraire les données d’une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] , consultez « Valeurs Null » et « Valeurs Null et jointures » dans la documentation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au sein de la [documentation en ligne SQL Server](https://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## <a name="handling-null-field-names"></a>Gestion de noms de champ NULL  
  Il est acceptable de tester une expression à la recherche de valeurs NULL tant que le champ lui-même existe dans le jeu de résultats de la requête. À partir de code personnalisé, vous pouvez vérifier si le champ lui-même est présent dans la collection de champs retournée par la source de données au moment de l'exécution. Pour plus d’informations, consultez [Référence à une collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](built-in-collections-dataset-fields-collection-references-report-builder.md).  
@@ -58,6 +58,6 @@ FROM Production.Product p
 ## <a name="see-also"></a>Voir aussi  
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Filtrer, regrouper et trier les données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

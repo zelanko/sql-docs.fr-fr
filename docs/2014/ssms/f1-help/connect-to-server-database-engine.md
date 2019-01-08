@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connectoserverunknownservertype.f1
@@ -17,12 +17,12 @@ ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: beb7afac36d1183fc9142874f4c2de1589ff0df2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 018ca302bf4d5fe8271369008ffbfec7d228cfbf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189959"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768441"
 ---
 # <a name="connect-to-server-database-engine"></a>Se connecter au serveur (Moteur de base de données)
   Utilisez cette boîte de dialogue pour afficher ou spécifier des options de connexion à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Dans la plupart des cas, vous pouvez vous connecter en entrant le nom d’ordinateur du serveur de base de données dans la zone **Nom du serveur** et en cliquant sur **Se connecter**. Si vous vous connectez à [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], utilisez le nom d’ordinateur suivi de **\sqlexpress**.  

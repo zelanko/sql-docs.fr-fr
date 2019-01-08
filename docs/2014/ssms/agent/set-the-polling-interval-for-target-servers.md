@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - interval for polling [SQL Server]
@@ -14,19 +14,19 @@ ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12f35342d6303559ab41546dc9154a06f9a30eda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091329"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818681"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Définir la fréquence d’interrogation pour les serveurs cibles
   Cette rubrique explique comment définir la fréquence avec laquelle l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualise les informations du serveur maître sur les serveurs cibles. Un travail est une série d'actions exécutées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Un travail multiserveur est un travail exécuté par un serveur maître sur un ou plusieurs serveurs cibles.  
   
 -   **Avant de commencer :**  [Sécurité](#Security)  
   
--   **Pour définir l’intervalle d’interrogation pour les serveurs cibles, avec :**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
+-   **Pour définir l’intervalle d’interrogation pour les serveurs cibles, à l’aide de :**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Chaque serveur cible peut exécuter une instance du même travail au même moment. Chaque serveur cible interroge régulièrement le serveur maître, télécharge une copie des nouveaux travaux affectés au serveur cible, puis se déconnecte. Le serveur cible exécute localement le travail, puis se reconnecte au serveur maître pour charger l'état de la sortie du travail.  
@@ -35,12 +35,12 @@ ms.locfileid: "48091329"
 >  Si le serveur maître est accessible lorsque le serveur cible tente de charger l'état du travail, ce dernier est mis en attente dans le spouleur jusqu'à ce que le serveur maître soit accessible.  
   
 ###  <a name="Security"></a> Sécurité  
- Pour plus d'informations, consultez [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) et [Choisir le compte de service SQL Server Agent correct pour les environnements multiserveurs](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
+ Pour plus d'informations, consultez [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) et [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
 ##  <a name="SSMS"></a> Utilisation de SQL Server Management Studio  
  **Pour définir l'intervalle d'interrogation pour les serveurs cibles**  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
   
 2.  Cliquez avec le bouton droit sur **Agent SQL Server**, pointez sur **Administration multiserveur**, puis cliquez sur **Gérer les serveurs cibles**.  
   

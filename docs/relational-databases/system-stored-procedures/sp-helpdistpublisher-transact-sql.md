@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdistpublisher_TSQL
@@ -17,12 +16,12 @@ ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a909154d1d8f8c5d4a260199b3738d7526338350
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85a6eaf76497b1fa763047a255cdb7784316541e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601243"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802741"
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
  **sp_helpdistpublisher** n’affichera pas la connexion de serveur de publication ou de mot de passe dans le résultat défini pour non -**sysadmin** connexions.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Membres de la **sysadmin** du rôle serveur fixe peut-être exécuter **sp_helpdistpublisher** pour n’importe quel serveur de publication utilise le serveur local comme serveur de distribution. Membres de la **db_owner** rôle de base de données fixe ou le **replmonitor** du rôle dans une base de données de distribution peut-être exécuter **sp_helpdistpublisher** pour n’importe quel serveur de publication à l’aide qui base de données de distribution. Liste des utilisateurs de l’accès à une publication pour une publication à l’emplacement spécifié *publisher* peut s’exécuter **sp_helpdistpublisher**. Si *publisher* n’est pas spécifié, les informations sont retournées pour tous les serveurs de publication que l’utilisateur dispose des droits d’accès.  
   
 ## <a name="see-also"></a>Voir aussi  

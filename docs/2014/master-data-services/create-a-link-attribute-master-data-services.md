@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating link attributes
@@ -14,12 +13,12 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 53e105e441f0e8d5f218415b20d3540fa6be7fcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 943cb761e9c456b0c9da24be3ef14e22a2310dde
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068319"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755251"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Créer un attribut de lien (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un attribut de lien quand vous souhaitez que les utilisateurs entrent un lien hypertexte comme valeur d’attribut, par exemple, http://www.contoso.com.  
@@ -32,7 +31,7 @@ ms.locfileid: "48068319"
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   Une entité doit exister pour créer l'attribut qui lui est destiné. Pour plus d’informations, consultez [Créer une entité &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md).  
   

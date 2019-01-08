@@ -18,12 +18,12 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 924c6ccdcd5d6e2c5529c3967c2943ec6349fe19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12c44c565e6e867c2fde6a99d770c2b083e3d6f9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610750"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203279"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,10 +84,10 @@ sp_add_alert [ @name = ] 'name'
  [  **@include_event_description_in =** ] *inclure_description_événement_dans*  
  Argument à utiliser si la description de l'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être incluse dans le message de notification. *inclure_description_événement_dans*est **tinyint**, avec une valeur par défaut **5** (courrier électronique et **net send**) et peut avoir une ou plusieurs de ces valeurs combinées avec un **Ou** opérateur logique.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Les options du récepteur de radiomessagerie et **net send** seront supprimées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans une version future de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0**|None|  
 |**1**|Messagerie électronique|  
@@ -119,7 +119,7 @@ sp_add_alert [ @name = ] 'name'
 |--------------------|-----------------|  
 |*Élément*|Objet de performances, compteur de performances ou instance nommée du compteur.|  
 |*Comparateur*|Un des opérateurs suivants : >, < ou =|  
-|*Value*|Valeur numérique du compteur.|  
+|*Valeur*|Valeur numérique du compteur.|  
   
  [  **@category_name =** ] **'***catégorie***'**  
  Nom de la catégorie d'alerte. *catégorie* est **sysname**, avec NULL comme valeur par défaut.  
@@ -161,7 +161,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   Les événements créés à l’aide de **xp_logevent** surviennent dans la base de données master. Ainsi, la procédure **xp_logevent** ne déclenche pas d’alerte sauf si la valeur de **@database_name** pour l’alerte est **'master'** ou NULL.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter la procédure **sp_add_alert**.  
   
 ## <a name="examples"></a>Exemples  

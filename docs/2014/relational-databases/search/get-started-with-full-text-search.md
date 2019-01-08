@@ -15,12 +15,12 @@ ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 722921015886e8aed687a8bf689dd7f7d8c592ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125039"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541410"
 ---
 # <a name="get-started-with-full-text-search"></a>Commencer à utiliser la recherche en texte intégral
   Les bases de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge le texte intégral par défaut. Cependant, pour utiliser l'index de recherche en texte intégral dans une table, vous devez configurer l'outil d'indexation de texte intégral dans les colonnes des tables auxquelles vous souhaitez accéder via le moteur de texte intégral.  
@@ -51,7 +51,7 @@ ms.locfileid: "48125039"
   
 2.  Créez un index de recherche en texte intégral sur la table ou vue indexée.  
   
-     Un index de recherche en texte intégral est un type spécial d'index fonctionnel par jeton qui est construit et géré par le Moteur d'indexation et de recherche en texte intégral. Pour que la création d'une recherche en texte intégral soit possible sur une table ou une vue, celles-ci doivent avoir un index unique ne comportant qu'une seule colonne et n'acceptant pas les valeurs Null. Le Moteur d'indexation et de recherche en texte intégral utilise cet index unique pour mapper chaque ligne de la table à une clé compressible unique. Un index de recherche en texte intégral peut inclure `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, et `varbinary(max)` colonnes. Pour plus d’informations, consultez [Créer et gérer des index de recherche en texte intégral](create-and-manage-full-text-indexes.md).  
+     Un index de recherche en texte intégral est un type spécial d'index fonctionnel par jeton qui est construit et géré par le Moteur d'indexation et de recherche en texte intégral. Pour que la création d'une recherche en texte intégral soit possible sur une table ou une vue, celles-ci doivent avoir un index unique ne comportant qu'une seule colonne et n'acceptant pas les valeurs Null. Le Moteur d'indexation et de recherche en texte intégral utilise cet index unique pour mapper chaque ligne de la table à une clé compressible unique. Un index de recherche en texte intégral peut inclure les colonnes `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary` et `varbinary(max)`. Pour plus d’informations, consultez [Créer et gérer des index de recherche en texte intégral](create-and-manage-full-text-indexes.md).  
   
  Avant d'apprendre à créer des index de recherche en texte intégral, il est important de déterminer en quoi ils diffèrent des index [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] classiques. Le tableau suivant répertorie les différences.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48125039"
   
  Lorsque vous affectez une table à un catalogue de texte intégral, prenez en considération les directives suivantes :  
   
--   Sélectionnez systématiquement le plus petit index unique disponible comme clé unique de texte intégral Il s'agira idéalement d'un index de quatre octets, basé sur des entiers. Ainsi, les ressources exigées par le service [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search dans le système de fichiers sont réduites de manière significative. Si la clé primaire est volumineuse (plus de 100 octets), pensez à choisir un autre index unique pour la table (ou créez-le) comme clé unique de texte intégral. Dans le cas contraire, si la taille de la clé unique de texte intégral dépasse la taille maximale autorisée (900 octets), le remplissage de texte intégral est impossible.  
+-   Sélectionnez systématiquement le plus petit index unique disponible comme clé unique de texte intégral Il s'agira idéalement d'un index de quatre octets, basé sur des entiers. Ainsi, les ressources exigées par le service [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search dans le système de fichiers sont réduites de manière significative. Si la clé primaire est volumineuse (plus de 100 octets), pensez à choisir un autre index unique pour la table (ou créez-le) comme clé unique de texte intégral. Dans le cas contraire, si la taille de la clé unique de texte intégral dépasse la taille maximale autorisée (900 octets), le remplissage de texte intégral est impossible.  
   
 -   Si vous indexez une table de plusieurs millions de lignes, affectez-la à un catalogue de texte intégral qui lui est propre.  
   
@@ -101,14 +101,14 @@ ms.locfileid: "48125039"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>Association d'une liste de mots vides à l'index de recherche en texte intégral  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduit les listes de mots vides. Une *liste de mots vides* est une liste contenant des mots vides, également appelés mots parasites. Une liste de mots vides est associée à chaque index de recherche en texte intégral, et les mots contenus dans cette liste de mots vides s'appliquent aux requêtes de texte intégral sur cet index. Par défaut, la liste de mots vides système est associée à un nouvel index de recherche en texte intégral. Toutefois, vous pouvez créer et utiliser à la place votre propre liste de mots vides. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- Par exemple, ce qui suit [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction crée un nouveau stoplist de recherche en texte intégral nommée myStoplist3 en copiant à partir de la liste de mots vides système :  
+ Par exemple, l’instruction [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante crée une liste de mots vides de texte intégral nommée myStoplist3 en copiant la liste de mots vides système :  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- Ce qui suit [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction modifie une liste de mots vides nommée myStoplist en ajoutant le mot « en » en premier pour l’espagnol puis pour le Français :  
+ L’instruction [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante modifie une liste de mots vides nommée myStoplist en ajoutant le mot « en » (d’abord pour l’espagnol, puis pour le français) :  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -129,7 +129,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
  En règle générale, si un remplissage complet est en cours, le résultat retourné est 1.  
   
   
-##  <a name="example"></a> Exemple : Configuration de la recherche en texte intégral  
+##  <a name="example"></a> Exemple : Configuration de recherche en texte intégral  
  L'exemple en deux parties ci-dessous crée un catalogue de texte intégral nommé `AdvWksDocFTCat` sur la base de données AdventureWorks, puis crée un index de recherche en texte intégral sur la table `Document` dans [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Cette instruction permet de créer le catalogue de texte intégral dans le répertoire par défaut spécifié durant l'installation. Le dossier nommé `AdvWksDocFTCat` se trouve dans le répertoire par défaut.  
   
 1.  Pour créer un catalogue de texte intégral nommé `AdvWksDocFTCat`, l’exemple utilise une instruction [CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) :  
@@ -161,7 +161,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
     ```  
   
-     Le paramètre TYPE COLUMN défini dans cet exemple spécifie la colonne de type dans la table qui contient le type du document dans chaque ligne de la colonne Document (lequel est de type binaire). La colonne de type stocke l'extension de fichier fournie par l'utilisateur (.doc, .xls, etc.) du document dans une ligne donnée. Le moteur d'indexation et de recherche en texte intégral utilise l'extension de fichier dans une ligne donnée afin d'appeler le filtre approprié pour l'analyse des données de cette ligne. Une fois que le filtre a analysé les données binaires de la ligne, l'analyseur lexical spécifié analyse le contenu (dans cet exemple, c'est l'analyseur lexical pour l'anglais britannique qui est utilisé). Notez que le processus de filtrage se produit uniquement au moment de l'indexation ou si un utilisateur insère ou met à jour une colonne dans la table de base alors que le suivi automatique des modifications est activé pour l'index de recherche en texte intégral. Pour plus d’informations, consultez [Configurer et gérer les extensions analytiques avancées](configure-and-manage-filters-for-search.md).  
+     Le paramètre TYPE COLUMN défini dans cet exemple spécifie la colonne de type dans la table qui contient le type du document dans chaque ligne de la colonne Document (lequel est de type binaire). La colonne de type stocke le fichier fourni par l’utilisateur d’extension-« .doc », « .xls » et ainsi de suite du document dans une ligne donnée. Le moteur d'indexation et de recherche en texte intégral utilise l'extension de fichier dans une ligne donnée afin d'appeler le filtre approprié pour l'analyse des données de cette ligne. Une fois que le filtre a analysé les données binaires de la ligne, l'analyseur lexical spécifié analyse le contenu (dans cet exemple, c'est l'analyseur lexical pour l'anglais britannique qui est utilisé). Notez que le processus de filtrage se produit uniquement au moment de l'indexation ou si un utilisateur insère ou met à jour une colonne dans la table de base alors que le suivi automatique des modifications est activé pour l'index de recherche en texte intégral. Pour plus d’informations, consultez [Configurer et gérer les extensions analytiques avancées](configure-and-manage-filters-for-search.md).  
   
   
 ##  <a name="tasks"></a> Tâches courantes  

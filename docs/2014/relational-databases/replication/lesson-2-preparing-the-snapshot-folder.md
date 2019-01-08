@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Préparation du dossier d’instantanés | Microsoft Docs'
+title: 'Leçon 2 : Préparation du dossier d’instantané | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9ee7028a14cebadd6d49fac1a081e8db78ea7990
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d15b08a5ff98392961c3f4fb01c397f220303e86
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157029"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591023"
 ---
-# <a name="lesson-2-preparing-the-snapshot-folder"></a>Leçon 2 : Préparation du dossier d'instantanés
+# <a name="lesson-2-preparing-the-snapshot-folder"></a>Leçon 2 : Préparation du dossier d'instantanés
   Dans cette leçon, vous allez apprendre à configurer le dossier d'instantanés utilisé pour créer et stocker l'instantané des publications.  
   
 ### <a name="to-create-a-share-for-the-snapshot-folder-and-assign-permissions"></a>Pour créer un partage pour le dossier d'instantanés et attribuer les autorisations  
@@ -37,9 +37,9 @@ ms.locfileid: "48157029"
   
 6.  Sur l'onglet **Sécurité** , cliquez sur **Modifier**.  
   
-7.  Dans la boîte de dialogue **Autorisations** , cliquez sur **Ajouter**. Dans la zone de texte **Sélectionnez Utilisateurs, Ordinateurs, Compte de service ou Groupes**, tapez le nom du compte d’Agent d’instantané créé à la leçon 1, sous la forme \<*nom_ordinateur>***\repl_snapshot**, où \<* nom_ordinateur>* est le nom du serveur de publication. Cliquez sur **Vérifier les noms**, puis sur **OK**.  
+7.  Dans la boîte de dialogue **Autorisations** , cliquez sur **Ajouter**. Dans la zone de texte **Sélectionnez Utilisateurs, Ordinateurs, Compte de service ou Groupes**, tapez le nom du compte d’Agent d’instantané créé à la leçon 1, sous la forme \<_nom_ordinateur>_**\repl_snapshot**, où \<*nom_ordinateur>* est le nom du serveur de publication. Cliquez sur **Vérifier les noms**, puis sur **OK**.  
   
-8.  Répétez l’étape précédente pour ajouter des autorisations pour l’Agent de distribution, sous la forme \<*nom_ordinateur>***\repl_distribution**, et pour l’Agent de fusion, sous la forme \<* nom_ordinateur>***\repl_merge**.  
+8.  Répétez l’étape précédente pour ajouter des autorisations pour l’Agent de distribution, sous la forme \<_nom_ordinateur>_**\repl_distribution**, et pour l’Agent de fusion, sous la forme \<_nom_ordinateur>_**\repl_merge**.  
   
 9. Vérifiez que les autorisations suivantes sont accordées :  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48157029"
 10. Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés de repldata** et créer le partage repldata.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez configuré avec succès le partage du dossier d'instantanés. Ensuite, vous allez configurer la distribution. Consultez [Leçon 3 : Configuration de la distribution](lesson-3-configuring-distribution.md).  
+ Vous avez configuré avec succès le partage du dossier d'instantanés. Ensuite, vous allez configurer la distribution. Consultez [leçon 3 : Configuration de la Distribution](lesson-3-configuring-distribution.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécuriser le dossier d'instantané](security/secure-the-snapshot-folder.md)  

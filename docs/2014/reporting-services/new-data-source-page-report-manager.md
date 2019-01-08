@@ -11,12 +11,12 @@ ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 74a48d913a5222ee566843eff85d71aaec194bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4bc08bcf6e56a5f839ebe17a8907bb7ce603d78
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073732"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349961"
 ---
 # <a name="new-data-source-page-report-manager"></a>Page Nouvelle source de données (Gestionnaire de rapports)
   La page Nouvelle source de données vous permet de créer un élément de source de données partagée. Une source de données partagée définit une connexion à une source de données externe. À l'aide d'une source de données partagée, vous pouvez créer et gérer les paramètres de connexion à la source de données séparément des rapports, modèles et abonnements pilotés par les données qui utilisent la source de données.  
@@ -44,14 +44,14 @@ ms.locfileid: "48073732"
  Sélectionnez cette option pour activer ou désactiver la source de données partagée. Vous pouvez désactiver la source de données partagée pour empêcher le traitement des rapports et modèles qui font référence à l'élément.  
   
  **Type de source de données**  
- Spécifiez l'extension pour le traitement des données utilisée pour traiter les données de la source de données. Serveur de rapports contient des extensions de traitement des données pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], SAP, XML, ODBC et OLE DB. Des extensions supplémentaires peuvent être disponibles auprès d'éditeurs tiers.  
+ Spécifiez l'extension pour le traitement des données utilisée pour traiter les données de la source de données. Le serveur de rapports contient des extensions pour le traitement des données pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], SAP, XML, ODBC et OLE DB. Des extensions supplémentaires peuvent être disponibles auprès d'éditeurs tiers.  
   
- Pour plus d’informations sur le support de source de données distantes et non-SQL, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (lien hypertexte « http://go.microsoft.com/fwlink/?linkid=232473» http://go.microsoft.com/fwlink/?linkid=232473) et [Sources de données prises en charge par la création de rapports Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ Pour plus d’informations sur le support de source de données distantes et non-SQL, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (lien hypertexte «<https://go.microsoft.com/fwlink/?linkid=232473>» <https://go.microsoft.com/fwlink/?linkid=232473>) et [Sources de données prises en charge par la création de rapports Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  **Chaîne de connexion**  
  Spécifiez la chaîne de connexion utilisée par le serveur de rapports pour se connecter à la source de données. Le type de connexion détermine la syntaxe à utiliser. Par exemple, une chaîne de connexion pour une extension pour le traitement des données XML est une URL vers un document XML. Dans la plupart des cas, une chaîne de connexion type spécifie le serveur de bases de données et un fichier de données.  
   
- L’exemple suivant illustre une chaîne de connexion utilisée pour se connecter à la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] base de données :  
+ L'exemple suivant illustre l'utilisation d'une chaîne de connexion pour se connecter à la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] :  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
@@ -68,14 +68,14 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **Informations d’identification fournies par l’utilisateur qui exécute le rapport (se connecter avec)**  
  Chaque utilisateur est invité à taper un nom d'utilisateur et un mot de passe pour accéder à la source de données. Vous pouvez définir le texte de l'invite qui demande les informations d'identification aux utilisateurs. La chaîne de texte par défaut est la suivante : « Entrer un nom d'utilisateur et un mot de passe pour accéder à la source de données ».  
   
- Activez la case à cocher **Utiliser en tant qu’informations d’identification Windows lors de la connexion à la source de données** si les informations d’identification fournies par l’utilisateur sont des informations d’identification de l’authentification Windows. Ne sélectionnez pas cette case à cocher si vous utilisez l’authentification de base de données (par exemple, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentification).  
+ Activez la case à cocher **Utiliser en tant qu’informations d’identification Windows lors de la connexion à la source de données** si les informations d’identification fournies par l’utilisateur sont des informations d’identification de l’authentification Windows. N'activez pas cette case à cocher si vous utilisez une authentification dans la base de données (par exemple, l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
  **Informations d’identification stockées en toute sécurité dans le serveur de rapports (se connecter avec)**  
  Stocke un nom d'utilisateur et un mot de passe chiffrés dans la base de données du serveur de rapports. Choisissez cette option pour exécuter un rapport sans assistance (par exemple, des rapports qui sont démarrés par des planifications ou des événements au lieu des actions utilisateur). Si vous utilisez la sécurité par défaut, le nom d'utilisateur doit être un compte de domaine Windows. Spécifiez le compte sous ce format : \<domaine >\\< nom d’utilisateur\>. Le compte que vous spécifiez doit disposer d'autorisations d'ouverture d'une session locale sur l'ordinateur qui héberge la source de données utilisée par le rapport.  
   
- Activez la case à cocher **Utiliser en tant qu'informations d'identification Windows lors de la connexion à la source de données** si les informations d'identification sont des informations d'identification de l'authentification Windows. Ne sélectionnez pas cette case à cocher si vous utilisez l’authentification de base de données (par exemple, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentification).  
+ Activez la case à cocher **Utiliser en tant qu'informations d'identification Windows lors de la connexion à la source de données** si les informations d'identification sont des informations d'identification de l'authentification Windows. N'activez pas cette case à cocher si vous utilisez une authentification dans la base de données (par exemple, l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
- Si vous utilisez l'authentification dans la base de données, sélectionnez **Emprunter l'identité de l'utilisateur authentifié une fois la connexion établie à la source de données** pour autoriser la délégation des informations d'identification de la base de données, mais uniquement si un serveur de base de données prend en charge l'emprunt d'identité. Pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bases de données, cette option définit la fonction SETUSER.  
+ Si vous utilisez l'authentification dans la base de données, sélectionnez **Emprunter l'identité de l'utilisateur authentifié une fois la connexion établie à la source de données** pour autoriser la délégation des informations d'identification de la base de données, mais uniquement si un serveur de base de données prend en charge l'emprunt d'identité. Pour les bases de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , cette option définit la fonction SETUSER.  
   
  **Sécurité intégrée de Windows (se connecter avec)**  
  Utilise les informations d'identification Windows de l'utilisateur actuel pour accéder à la source de données. Choisissez cette option lorsque les informations d'identification utilisées pour accéder à une source de données sont identiques à celles utilisées pour ouvrir une session sur le domaine réseau. Cette option convient mieux lorsque l'authentification Kerberos est activée pour votre domaine ou que la source de données se trouve sur le même ordinateur que le serveur de rapports. Si l'authentification Kerberos n'est pas activée, les informations d'identification Windows peuvent être transmises à un autre ordinateur. Si des connexions supplémentaires à des ordinateurs sont requises, vous obtiendrez une erreur à la place des données attendues.  
@@ -93,11 +93,11 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  Cliquez pour enregistrer vos modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer, supprimer ou modifier une Source de données partagée &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenu de la Page &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Créer, modifier et supprimer des Sources de données partagées &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Page Contenu &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Créer, modifier et supprimer des sources de données partagées &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapports](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.create.ucp.progress.F1
@@ -20,15 +20,15 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 753866ef0ddb01b42bbe6c5f03e007075568d53e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189269"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377661"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Créer un point de contrôle de l'utilitaire SQL Server (utilitaire SQL Server)
-  Une entreprise peut disposer de plusieurs utilitaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut gérer de nombreuses instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et applications de la couche Données. Chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détient un seul et unique point de contrôle de l’utilitaire (UCP). Vous devez créer un UCP pour chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chaque instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque composant d’application de la couche Données est membre d’un seul et unique utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et est géré par un UCP unique.  
+  Une entreprise peut disposer de plusieurs utilitaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut gérer de nombreuses instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et applications de la couche Données. Chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détient un seul et unique point de contrôle de l’utilitaire (UCP). Vous devez créer un UCP pour chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chaque instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque composant d'application de la couche Données est membre d'un seul et unique utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et est géré par un UCP unique.  
   
  L'UCP recueille des informations sur la configuration et les performances des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les 15 minutes. Ces informations sont stockées dans l'entrepôt de données de gestion de l'utilitaire (UMDW) sur l'UCP ; le nom de fichier UMDW est sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont comparées aux stratégies afin d'aider à identifier les opportunités de consolidation et les goulots d'étranglement de performances.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48189269"
   
 -   Nous recommandons d'héberger l'UCP sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]qui respecte la casse.  
   
- Tenez compte des recommandations suivantes pour planifier la capacité sur l'ordinateur de l'UCP :  
+ Tenez compte des recommandations suivantes pour planifier la capacité sur l'ordinateur de l'UCP :  
   
 -   Dans un scénario classique, l'espace disque utilisé par la base de données UMDW (sysutility_mdw) sur l'UCP est d'environ 2 Go par instance gérée de SQL Server par an. Cette évaluation peut varier selon le nombre d'objets de base de données et système collectés par l'instance gérée. Le taux de croissance de l'espace disque de la base de données UMDW (sysutility_mdw) est plus élevé pendant les deux premiers jours.  
   
@@ -76,11 +76,11 @@ ms.locfileid: "48189269"
   
 -   Cette procédure doit être exécutée par un utilisateur disposant d'autorisations sysadmin, qui sont les mêmes autorisations requises pour créer un UCP.  
   
--   Toutes les instances gérées de SQL Server doivent être supprimées de l'UCP. Notez que l'UCP est une instance gérée de SQL Server. Pour plus d'informations, consultez [Procédure : supprimer une instance de SQL Server de l'utilitaire SQL Server](http://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Toutes les instances gérées de SQL Server doivent être supprimées de l'UCP. Notez que l'UCP est une instance gérée de SQL Server. Pour plus d'informations, consultez [Procédure : Supprimer une Instance de SQL Server à partir de l’utilitaire SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Utilisez cette procédure pour supprimer un UCP SQL Server de l'utilitaire SQL Server. Une fois l'opération terminée, il est possible de créer à nouveau un UCP sur l'instance de SQL Server.  
   
- Utilisez SQL Server Management Studio pour la connexion au point de contrôle de l'utilitaire, puis exécutez le script suivant :  
+ Utilisez SQL Server Management Studio pour la connexion au point de contrôle de l'utilitaire, puis exécutez le script suivant :  
   
 ```  
 EXEC msdb.dbo.sp_sysutility_ucp_remove;  
@@ -131,7 +131,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Instance_name"></a> Spécifier une instance  
  Spécifiez les informations suivantes à propos de l'UCP que vous créez :  
   
--   **Nom de l’instance** - Pour sélectionner une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir du dialogue de connexion, cliquez sur **Se connecter…**. Indiquez le nom de l’ordinateur et le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format NomOrdinateur\NomInstance.  
+-   **Nom de l’instance** - Pour sélectionner une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la boîte de dialogue de connexion, cliquez sur **Se connecter…**. Indiquez le nom de l’ordinateur et le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format NomOrdinateur\NomInstance.  
   
 -   **Nom de l’utilitaire** - Spécifiez un nom qui sera utilisé pour identifier l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le réseau.  
   
@@ -220,7 +220,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  Utilisez l'exemple suivant pour créer un point de contrôle d'utilitaire :  
   
 ```  
-> $UtilityInstance = new-object –Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
+> $UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
 > $SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
 > $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  

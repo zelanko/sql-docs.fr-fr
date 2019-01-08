@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,15 +14,15 @@ ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee308c9cb55fc851809a713f1cf052b69206c8d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 534379a9ae5ea7150348bb345c59083c3392155f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160289"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799561"
 ---
 # <a name="using-synonyms"></a>Utilisation de synonymes
-  Un synonyme est un alias donné à un objet dans l'étendue du schéma. Dans SMO, les synonymes sont représentés par le <xref:Microsoft.SqlServer.Management.Smo.Synonym> objet. L'objet <xref:Microsoft.SqlServer.Management.Smo.Synonym> est un enfant de l'objet <xref:Microsoft.SqlServer.Management.Smo.Database>. Cela signifie que les synonymes ne sont valides que dans le contexte de la base de données dans laquelle ils ont été définis. Toutefois, le synonyme peut faire référence aux objets sur une autre base de données, ou sur une instance distante de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Un synonyme est un alias donné à un objet dans l'étendue du schéma. Dans SMO, les synonymes sont représentés par l'objet <xref:Microsoft.SqlServer.Management.Smo.Synonym>. L'objet <xref:Microsoft.SqlServer.Management.Smo.Synonym> est un enfant de l'objet <xref:Microsoft.SqlServer.Management.Smo.Database>. Cela signifie que les synonymes ne sont valides que dans le contexte de la base de données dans laquelle ils ont été définis. Toutefois, le synonyme peut faire référence aux objets d'une autre base de données ou d'une instance distante de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  L'objet auquel est attribué un alias est l'objet de base. La propriété de nom de l'objet <xref:Microsoft.SqlServer.Management.Smo.Synonym> est l'alias attribué à l'objet de base.  
   

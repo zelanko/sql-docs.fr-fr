@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication synchronization [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 72d8b7697af9920f7bd15e7120a6724acff231d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a3dfc7b81bf6f6a3ef0b9b74a2d1a78f3e3e1db
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190913"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816731"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Synchronisation Web pour la réplication de fusion
   La synchronisation Web pour la réplication de fusion permet de répliquer des données à l'aide du protocole HTTPS ; elle est utile dans les scénarios suivants :  
@@ -42,13 +41,13 @@ ms.locfileid: "48190913"
 >  La synchronisation Web est conçue pour synchroniser des données avec des ordinateurs portables, des périphériques de poche et d'autres clients. Elle n'est pas conçue pour des applications de serveur à serveur pour des volumes élevés.  
   
 ## <a name="overview-of-how-web-synchronization-works"></a>Aperçu du fonctionnement de la synchronisation Web  
- Lorsque la synchronisation Web est utilisée, les mises à jour sur l'Abonné sont empaquetées et envoyées sous forme de message XML sur l'ordinateur exécutant IIS via le protocole HTTPS. L'ordinateur exécutant IIS envoie ensuite les commandes au serveur de publication sous un format binaire, généralement à l'aide de TCP/IP. Les mises à jour sur l'Abonné sont envoyées à l'ordinateur exécutant IIS, puis empaquetées sous forme de message XML pour la remise à l'Abonné.  
+ Lorsque la synchronisation Web est utilisée, les mises à jour sur l'Abonné sont empaquetées et envoyées sous forme de message XML sur l'ordinateur exécutant IIS via le protocole HTTPS. L'ordinateur exécutant IIS envoie ensuite les commandes au serveur de publication sous un format binaire, généralement à l'aide de TCP/IP. Les mises à jour sur l'Abonné sont envoyées à l'ordinateur exécutant IIS, puis empaquetées sous forme de message XML pour la remise à l'Abonné.  
   
  L'illustration suivante montre certains des composants concernés par la synchronisation Web pour la réplication de fusion.  
   
  ![Composants et flux de données de synchronisation Web](media/web-sync01.gif "Composants et flux de données de synchronisation Web")  
   
- La synchronisation Web est une option disponible uniquement pour les abonnements par extraction de données (pull) ; un Agent de fusion sera donc toujours exécuté sur l'Abonné. Il peut s'agir de l'Agent de fusion standard, du contrôle ActiveX de l'Agent de fusion, ou d'une application assurant la synchronisation par le biais de Replication Management Objects. Pour spécifier l’emplacement de l’ordinateur exécutant IIS, utilisez le paramètre **–InternetUrl** pour l’Agent de fusion.  
+ La synchronisation Web est une option disponible uniquement pour les abonnements par extraction de données (pull) ; un Agent de fusion sera donc toujours exécuté sur l'Abonné. Il peut s'agir de l'Agent de fusion standard, du contrôle ActiveX de l'Agent de fusion, ou d'une application assurant la synchronisation par le biais de Replication Management Objects. Pour spécifier l’emplacement de l’ordinateur exécutant IIS, utilisez le paramètre **-InternetUrl** pour l’Agent de fusion.  
   
  L'écouteur de réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll) est configuré sur l'ordinateur exécutant IIS ; il est également responsable de la gestion des messages qui sont envoyés au serveur à partir du serveur de publication et des Abonnés. Chaque nœud de la topologie gère le flux de données XML par le biais du réconciliateur de réplication de fusion (Replrec.dll).  
   

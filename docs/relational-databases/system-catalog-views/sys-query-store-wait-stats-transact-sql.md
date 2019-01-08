@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96f6b91d68159bd1326b30ffc8b7e89e61cb8402
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 620413448f7bd6c10af2d0e7333cd9eb793ef41a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169139"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521250"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>Sys.query_store_wait_stats (Transact-SQL)
 
@@ -40,8 +40,8 @@ ms.locfileid: "49169139"
 |**runtime_stats_interval_id**|**bigint**|Clé étrangère. Joint à [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Types d’attente sont classés à l’aide de la table ci-dessous, et ensuite les temps d’attente est agrégé dans ces catégories d’attente. Différentes catégories d’attente nécessitent une analyse de suivi différente pour résoudre le problème, mais les types à partir du même prospect de catégorie à des expériences de résolution des problèmes similaires d’attente, et en fournissant la requête affectée en outre à des attentes est la pièce manquante pour terminer le majorité de ces expériences avec succès.|
 |**wait_category_desc**|**nvarchar(128)**|Pour obtenir une description textuelle du champ de catégorie d’attente, consultez le tableau ci-dessous.|
-|**execution_type**|**tinyint**|Détermine le type d’exécution de requête :<br /><br /> 0 – exécution normale (achevée correctement)<br /><br /> 3 – initié par le client annulé l’exécution<br /><br /> 4 - exception abandonnée de l’exécution|  
-|**execution_type_desc**|**nvarchar(128)**|Description textuelle du champ de type d’exécution :<br /><br /> 0 – standard<br /><br /> 3 – abandonnée<br /><br /> 4 - exception|  
+|**execution_type**|**tinyint**|Détermine le type d’exécution de requête :<br /><br /> 0 - exécution normale (achevée correctement)<br /><br /> 3 - initié par le client annulé l’exécution<br /><br /> 4 - exception abandonnée de l’exécution|  
+|**execution_type_desc**|**nvarchar(128)**|Description textuelle du champ de type d’exécution :<br /><br /> 0 - standard<br /><br /> 3 - abandonnée<br /><br /> 4 - exception|  
 |**total_query_wait_time_ms**|**bigint**|Total `CPU wait` heure pour le plan de requête dans l’intervalle d’agrégation et de catégorie (indiqué en millisecondes) d’attente.|
 |**avg_query_wait_time_ms**|**float**|Durée du plan de requête par l’exécution dans la catégorie d’intervalle et l’attente d’agrégation (indiquée en millisecondes) d’attente moyen.|
 |**last_query_wait_time_ms**|**bigint**|Dernière durée du plan de requête dans l’intervalle d’agrégation d’attente et la catégorie (indiqué en millisecondes) d’attente.|
@@ -82,7 +82,7 @@ ms.locfileid: "49169139"
 
 **Compilation** catégorie d’attente n’est actuellement pas pris en charge.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
  Nécessite le **VIEW DATABASE STATE** autorisation.  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49471e25b85884f80c04260fa555441f67a98872
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9bac4dba698af6e7f3dc57904da66a7fb15a08b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053416"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365721"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Désinstaller et supprimer Master Data Services
   Pour désinstaller la fonctionnalité [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], suivez la procédure [Désinstaller une instance existante de SQL Server &#40;programme d’installation&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) et spécifiez [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] comme fonctionnalité à supprimer dans la page **Sélectionner les composants**. Le processus de désinstallation supprime les dossiers et les fichiers [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] et désinstalle [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] de l'ordinateur local.  
@@ -29,7 +28,7 @@ ms.locfileid: "48053416"
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] assemblys|Le processus de désinstallation supprime des assemblys [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] du Global Assembly Cache (GAC).|  
 |Base de données|Le processus de désinstallation n'affecte pas la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . La base de données reste intacte dans l’instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] afin que vous ne perdiez aucune donnée, notamment les données de référence, les objets modèle, les autorisations d’accès, les règles d’entreprise et ainsi de suite.<br /><br /> Si vous n'avez pas besoin de la base de données, et si vous ne prévoyez pas de la connecter à un autre site ou application Web [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] à l'avenir, vous pouvez la supprimer de l'instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui l'héberge. Pour plus d’informations, consultez [Supprimer une base de données](../../relational-databases/databases/delete-a-database.md).|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] et Web.config|Le processus de désinstallation supprime le dossier WebApplication du système de fichiers. Le dossier WebApplication contient les fichiers de l'application Web et le fichier Web.config de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].<br /><br /> **\*\* Important \*\*** Avant de procéder à la désinstallation, vous pouvez copier le fichier Web.config vers un autre emplacement pour conserver tous les paramètres personnalisés ou d’autres informations contenues dans le fichier. Une fois le processus de désinstallation terminé, le fichier Web.config n'est pas récupérable.|  
-|Éléments IIS (Internet Information Services)|Le processus de désinstallation n'affecte pas les pools d'applications, les sites Web ou les applications Web dans IIS sur l'ordinateur local. Étant donné que le processus de désinstallation supprime le dossier WebApplication et le fichier Web.config pour [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], toutes les applications Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] qui requièrent ces fichiers ne serviront plus le contenu. Si des utilisateurs tentent d’accéder à l’application web, ils obtiennent l’erreur HTTP 500.19 de serveur interne : « La page demandée n’est pas accessible, car les données de configuration de la page sont erronées ».<br /><br /> Si vous n'avez plus besoin du site ou de l'application Web, ni du pool d'applications qui sert votre site ou votre application, vous pouvez utiliser un outil IIS pour les supprimer. Pour plus d’informations, consultez [Guide des opérations IIS 7](http://go.microsoft.com/fwlink/?LinkId=184885) sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
+|Éléments IIS (Internet Information Services)|Le processus de désinstallation n'affecte pas les pools d'applications, les sites Web ou les applications Web dans IIS sur l'ordinateur local. Étant donné que le processus de désinstallation supprime le dossier WebApplication et le fichier Web.config pour [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], toutes les applications Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] qui requièrent ces fichiers ne serviront plus le contenu. Si les utilisateurs essaient d’accéder à l’application web, il reçoit une erreur HTTP 500.19-serveur Erreur interne : « La page demandée est inaccessible, car les données de configuration de la page ne sont pas valides. »<br /><br /> Si vous n'avez plus besoin du site ou de l'application Web, ni du pool d'applications qui sert votre site ou votre application, vous pouvez utiliser un outil IIS pour les supprimer. Pour plus d’informations, consultez [Guide des opérations IIS 7](https://go.microsoft.com/fwlink/?LinkId=184885) sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
 |Groupe**MDS_ServiceAccounts** |La désinstallation ne supprime pas le groupe Windows **MDS_ServiceAccounts** et tous les comptes de service ajoutés au groupe. Si vous n'avez plus besoin du groupe ni des comptes, vous pouvez les supprimer.|  
 |Registre|Le processus de désinstallation supprime toutes les clés de Registre [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] du Registre Windows.|  
   

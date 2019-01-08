@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.tabledesigner
@@ -13,12 +13,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33e75ea1383a597f3e896ad2d7d24f05a7021ac2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065379"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812851"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propriétés de la table (Visual Database Tools)
   Ces propriétés apparaissent dans la fenêtre Propriétés lorsque vous cliquez avec le bouton droit dans le Concepteur de tables puis sélectionnez Propriétés. Sauf indication contraire, vous pouvez modifier ces propriétés dans la fenêtre Propriétés lorsque la table est sélectionnée.  
@@ -44,7 +44,7 @@ ms.locfileid: "48065379"
  Affiche le nom de la source de données de la table sélectionnée.  
   
  **Description**  
- Indique la description de la table sélectionnée. Pour afficher l’intégralité de la description, ou la modifier, cliquez sur la description, puis sur le bouton de sélection **(...)** situé à droite de la propriété.  
+ Indique la description de la table sélectionnée. Pour afficher l’intégralité de la description, ou la modifier, cliquez sur la description, puis sur le bouton de sélection **(…)** situé à droite de la propriété.  
   
  **Schéma**  
  Affiche le nom du schéma auquel cette table appartient. (S'applique uniquement à Microsoft SQL Server.)  

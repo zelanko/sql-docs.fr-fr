@@ -12,12 +12,12 @@ ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d1c06aed65cbc2ac97efc1a4e3095c252b609dd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8d49bcc6b25b9d66d8aba77c2300549c682a879
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211799"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350310"
 ---
 # <a name="mssqlserver605"></a>MSSQLSERVER_605
     
@@ -45,7 +45,7 @@ ms.locfileid: "48211799"
   
 -   Le système d'exploitation informe prématurément [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qu'une opération d'E/S vient de se terminer. Le message d'erreur est affiché même si aucune altération des données n'a lieu.  
   
- Une requête est exécutée avec l'indicateur d'optimiseur NOLOCK ou le niveau d'isolement des transactions est défini avec la valeur READ UNCOMMITTED. Lorsqu'une requête utilisant NOLOCK ou READ UNCOMMITTED tente de lire des données qui ont été déplacées ou modifiées par un autre utilisateur, une erreur 605 se produit. Pour vérifier qu'il s'agit bien d'une erreur 605 temporaire, réexécutez la requête ultérieurement. Pour plus d’informations, consultez l’article [235880](http://support.microsoft.com/kb/235880/en-us) de la Base de connaissances : « Vous recevez un message d’erreur « Erreur 605 » lorsque vous exécutez une requête avec l’indicateur d’optimiseur NOLOCK ou vous le niveau d’isolement de transaction définissez à READ UNCOMMITTED dans SQL Server ».  
+ Une requête est exécutée avec l'indicateur d'optimiseur NOLOCK ou le niveau d'isolement des transactions est défini avec la valeur READ UNCOMMITTED. Lorsqu'une requête utilisant NOLOCK ou READ UNCOMMITTED tente de lire des données qui ont été déplacées ou modifiées par un autre utilisateur, une erreur 605 se produit. Pour vérifier qu'il s'agit bien d'une erreur 605 temporaire, réexécutez la requête ultérieurement. Pour plus d’informations, consultez l’article [235880](https://support.microsoft.com/kb/235880/en-us): « Vous recevez un message d’erreur « Erreur 605 » lorsque vous exécutez une requête avec l’indicateur d’optimiseur NOLOCK ou que vous définissez le niveau d’isolation de transaction READ UNCOMMITTED dans SQL Server ».  
   
  Généralement, si l'erreur se produit lors de l'accès aux données, mais que les opérations DBCC CHECKDB qui suivent s'exécutent sans erreur, l'erreur 605 était probablement temporaire.  
   

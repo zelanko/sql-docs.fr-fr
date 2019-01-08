@@ -10,12 +10,12 @@ ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50c29f343399e0cc7d3c65d630ac622278d10eec
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 19bac073db3de3b2944fcf6a2937ac3e350c7579
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032016"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524542"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Attachement et détachement de bases de données DQS
   Cette rubrique explique comment attacher et détacher les bases de données DQS.  
@@ -71,7 +71,7 @@ ms.locfileid: "51032016"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  Le volet (inférieur) des **détails de la base de données** affiche les noms des fichiers à attacher. Pour vérifier ou modifier le nom du chemin d'accès d'un fichier, cliquez sur le bouton **Parcourir** (…).  
+5.  Le volet (inférieur) des **détails de la base de données** affiche les noms des fichiers à attacher. Pour vérifier ou modifier le nom du chemin d’un fichier, cliquez sur le bouton **Parcourir** (...).  
   
 6.  Cliquez sur **OK** pour attacher la base de données DQS_MAIN.  
   

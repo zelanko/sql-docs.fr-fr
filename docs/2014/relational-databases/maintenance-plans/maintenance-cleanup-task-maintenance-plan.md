@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.cleanup.f1
@@ -15,12 +14,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03e4059b6a35b1d447953c8816d40c1b753f59fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142299"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801491"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Tâche de nettoyage de maintenance (Plan de maintenance)
   Utilisez la **Tâche de nettoyage de maintenance** pour supprimer les anciens fichiers associés à des plans de maintenance, notamment les rapports texte créés par les plans de maintenance et les fichiers de sauvegarde de base de données.  
@@ -78,7 +77,7 @@ ms.locfileid: "48142299"
  **Sélectionnez ou entrez un nom de serveur.**  
  Sélectionnez un serveur auquel établir la connexion pour exécuter la tâche.  
   
- **…**  
+ **...**  
  Sélectionnez cette option pour visualiser la liste des serveurs disponibles.  
   
  **Entrez des informations pour vous connecter au serveur**  

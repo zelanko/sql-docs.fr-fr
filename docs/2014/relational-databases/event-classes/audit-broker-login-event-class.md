@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9ff2e1adad233d7bee51194858d1cca530bdfdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de23ecd1201d7ce0e24638cf9e64c63cb782face
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155279"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814831"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login, classe d'événements
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un événement **Audit Broker Login** pour renvoyer des messages d'audit relatifs à la sécurité du transport de Service Broker.  
@@ -32,25 +31,25 @@ ms.locfileid: "48155279"
 |**ApplicationName**|**nvarchar**|Inutilisé dans cette classe d'événements.|10|Oui|  
 |**ClientProcessID**|**Int**|Inutilisé dans cette classe d'événements.|9|Oui|  
 |**DatabaseID**|**Int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
-|**EventClass**|**Int**|Type de classe d'événements capturée. La valeur est toujours **159** pour **Audit Broker Login**.|27|non|  
-|**EventSequence**|**Int**|Numéro de séquence de cet événement.|51|non|  
+|**EventClass**|**Int**|Type de classe d'événements capturée. La valeur est toujours **159** pour **Audit Broker Login**.|27|Non|  
+|**EventSequence**|**Int**|Numéro de séquence de cet événement.|51|Non|  
 |**EventSubClass**|**Int**|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Le tableau suivant répertorie les valeurs des sous-classes d'événements pour cet événement.|21|Oui|  
-|**FileName**|**nvarchar**|Niveau d'authentification du Broker distant. Méthode d'authentification prise en charge configurée sur le point de terminaison du Broker distant. Lorsque plusieurs méthodes sont disponibles, le point de terminaison cible détermine la première méthode qui sera tentée. Les valeurs possibles sont :<br /><br /> **Aucune**. Aucune méthode d'authentification n'est configurée.<br /><br /> **NTLM**. Requiert l'authentification NTLM.<br /><br /> **KERBEROS**. Requiert l'authentification Kerberos.<br /><br /> **NEGOTIATE**. Windows négocie la méthode d'authentification.<br /><br /> **CERTIFICATE**. Requiert le certificat configuré pour le point de terminaison, qui est stocké dans la base de données **master** .<br /><br /> **NTLM, CERTIFICATE**. Accepte l'authentification par certificat NTLM ou SSL.<br /><br /> **KERBEROS, CERTIFICATE**. Accepte l'authentification Kerberos ou par certificat du point de terminaison.<br /><br /> **NEGOCIATE, CERTIFICAT**. Windows négocie la méthode d'authentification ou un certificat de point de terminaison peut être utilisé pour l'authentification.<br /><br /> **CERTIFICATE, NTLM**. Accepte un certificat de point de terminaison ou NTLM pour l'authentification.<br /><br /> **CERTIFICATE, KERBEROS**. Accepte un certificat de point de terminaison ou Kerberos pour l'authentification.<br /><br /> **CERTIFICAT, NEGOTIATE**. Accepte un certificat de point de terminaison pour l'authentification ou Windows négocie la méthode d'authentification.|36|non|  
+|**FileName**|**nvarchar**|Niveau d'authentification du Broker distant. Méthode d'authentification prise en charge configurée sur le point de terminaison du Broker distant. Lorsque plusieurs méthodes sont disponibles, le point de terminaison cible détermine la première méthode qui sera tentée. Les valeurs possibles sont :<br /><br /> **Aucune**. Aucune méthode d'authentification n'est configurée.<br /><br /> **NTLM**. Requiert l'authentification NTLM.<br /><br /> **KERBEROS**. Requiert l'authentification Kerberos.<br /><br /> **NEGOTIATE**. Windows négocie la méthode d'authentification.<br /><br /> **CERTIFICATE**. Requiert le certificat configuré pour le point de terminaison, qui est stocké dans la base de données **master** .<br /><br /> **NTLM, CERTIFICATE**. Accepte l'authentification par certificat NTLM ou SSL.<br /><br /> **KERBEROS, CERTIFICATE**. Accepte l'authentification Kerberos ou par certificat du point de terminaison.<br /><br /> **NEGOCIATE, CERTIFICAT**. Windows négocie la méthode d'authentification ou un certificat de point de terminaison peut être utilisé pour l'authentification.<br /><br /> **CERTIFICATE, NTLM**. Accepte un certificat de point de terminaison ou NTLM pour l'authentification.<br /><br /> **CERTIFICATE, KERBEROS**. Accepte un certificat de point de terminaison ou Kerberos pour l'authentification.<br /><br /> **CERTIFICAT, NEGOTIATE**. Accepte un certificat de point de terminaison pour l'authentification ou Windows négocie la méthode d'authentification.|36|Non|  
 |**HostName**|**nvarchar**|Inutilisé dans cette classe d'événements.|8|Oui|  
-|**IsSystem**|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|non|  
+|**IsSystem**|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Non|  
 |**LoginSid**|**image**|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |**NTDomainName**|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |**NTUserName**|**nvarchar**|Nom de l'utilisateur propriétaire de la connexion ayant généré l'événement.|6|Oui|  
-|**ObjectName**|**nvarchar**|Chaîne de connexion utilisée pour cette connexion.|34|non|  
-|**OwnerName**|**nvarchar**|Méthode d'authentification prise en charge configurée sur le point de terminaison du Broker local. Lorsque plusieurs méthodes sont disponibles, le point de terminaison cible détermine la première méthode qui sera tentée. Les valeurs possibles sont :<br /><br /> **Aucune**. Aucune méthode d'authentification n'est configurée.<br /><br /> **NTLM**. Requiert l'authentification NTLM.<br /><br /> **KERBEROS**. Requiert l'authentification Kerberos.<br /><br /> **NEGOTIATE**. Windows négocie la méthode d'authentification.<br /><br /> **CERTIFICATE**. Requiert le certificat configuré pour le point de terminaison, qui est stocké dans la base de données **master** .<br /><br /> **NTLM, CERTIFICATE**. Accepte l'authentification par certificat NTLM ou SSL.<br /><br /> **KERBEROS, CERTIFICATE**. Accepte l'authentification Kerberos ou par certificat du point de terminaison.<br /><br /> **NEGOCIATE, CERTIFICAT**. Windows négocie la méthode d'authentification ou un certificat de point de terminaison peut être utilisé pour l'authentification.<br /><br /> **CERTIFICATE, NTLM**. Accepte un certificat de point de terminaison ou NTLM pour l'authentification.<br /><br /> **CERTIFICATE, KERBEROS**. Accepte un certificat de point de terminaison ou Kerberos pour l'authentification.<br /><br /> **CERTIFICAT, NEGOTIATE**. Accepte un certificat de point de terminaison pour l'authentification ou Windows négocie la méthode d'authentification.|37|non|  
-|**ProviderName**|**nvarchar**|Méthode d'authentification utilisée pour cette connexion|46|non|  
-|**RoleName**|**nvarchar**|Rôle de la connexion. Il peut prendre la valeur **initiator** ou la valeur **target**.|38|non|  
-|**ServerName**|**nvarchar**|Nom de l'instance SQL Server analysée.|26|non|  
+|**ObjectName**|**nvarchar**|Chaîne de connexion utilisée pour cette connexion.|34|Non|  
+|**OwnerName**|**nvarchar**|Méthode d'authentification prise en charge configurée sur le point de terminaison du Broker local. Lorsque plusieurs méthodes sont disponibles, le point de terminaison cible détermine la première méthode qui sera tentée. Les valeurs possibles sont :<br /><br /> **Aucune**. Aucune méthode d'authentification n'est configurée.<br /><br /> **NTLM**. Requiert l'authentification NTLM.<br /><br /> **KERBEROS**. Requiert l'authentification Kerberos.<br /><br /> **NEGOTIATE**. Windows négocie la méthode d'authentification.<br /><br /> **CERTIFICATE**. Requiert le certificat configuré pour le point de terminaison, qui est stocké dans la base de données **master** .<br /><br /> **NTLM, CERTIFICATE**. Accepte l'authentification par certificat NTLM ou SSL.<br /><br /> **KERBEROS, CERTIFICATE**. Accepte l'authentification Kerberos ou par certificat du point de terminaison.<br /><br /> **NEGOCIATE, CERTIFICAT**. Windows négocie la méthode d'authentification ou un certificat de point de terminaison peut être utilisé pour l'authentification.<br /><br /> **CERTIFICATE, NTLM**. Accepte un certificat de point de terminaison ou NTLM pour l'authentification.<br /><br /> **CERTIFICATE, KERBEROS**. Accepte un certificat de point de terminaison ou Kerberos pour l'authentification.<br /><br /> **CERTIFICAT, NEGOTIATE**. Accepte un certificat de point de terminaison pour l'authentification ou Windows négocie la méthode d'authentification.|37|Non|  
+|**ProviderName**|**nvarchar**|Méthode d'authentification utilisée pour cette connexion|46|Non|  
+|**RoleName**|**nvarchar**|Rôle de la connexion. Il peut prendre la valeur **initiator** ou la valeur **target**.|38|Non|  
+|**ServerName**|**nvarchar**|Nom de l'instance SQL Server analysée.|26|Non|  
 |**SPID**|**Int**|ID du processus serveur affecté par SQL Server au processus associé au client.|12|Oui|  
 |**StartTime**|**datetime**|Heure de début de l'événement, le cas échéant.|14|Oui|  
-|**État**|**Int**|Indique l'emplacement dans le code source SQL Server à l'origine de l'événement. Chaque emplacement susceptible de générer cet événement possède un code d'état spécifique. Un spécialiste de l'assistance technique Microsoft peut se servir de ce code d'état afin de déterminer où l'événement s'est produit.|30|non|  
-|**TargetUserName**|**nvarchar**|État de connexion. Une des valeurs suivantes :<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> d’erreur<br /><br /> **Remarque** ISC = Initiate Security Context (initialiser le contexte de sécurité). ASC = Accept Security Context (accepter le contexte de sécurité)|39|non|  
-|**TransactionID**|**bigint**|ID affecté à la transaction par le système.|4|non|  
+|**État**|**Int**|Indique l'emplacement dans le code source SQL Server à l'origine de l'événement. Chaque emplacement susceptible de générer cet événement possède un code d'état spécifique. Un spécialiste de l'assistance technique Microsoft peut se servir de ce code d'état afin de déterminer où l'événement s'est produit.|30|Non|  
+|**TargetUserName**|**nvarchar**|État de connexion. Une des valeurs suivantes :<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> d’erreur<br /><br /> **Remarque** ISC = Initiate Security Context (initialiser le contexte de sécurité). ASC = Accept Security Context (accepter le contexte de sécurité)|39|Non|  
+|**TransactionID**|**bigint**|ID affecté à la transaction par le système.|4|Non|  
   
  Le tableau suivant répertorie les valeurs des sous-classes pour cette classe d'événements.  
   

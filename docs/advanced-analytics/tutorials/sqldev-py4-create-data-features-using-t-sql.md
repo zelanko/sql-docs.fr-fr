@@ -1,5 +1,5 @@
 ---
-title: Créer des caractéristiques de données à l’aide des fonctions T-SQL (Python dans SQL Server Machine Learning) | Microsoft Docs
+title: Créer des caractéristiques de données à l’aide des fonctions T-SQL et Python - SQL Server Machine Learning
 description: Didacticiel montrant comment ajouter des calculs à des procédures stockées pour une utilisation dans les modèles d’apprentissage automatique Python.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1006f4baabeca97aafead784ce4d9bfc213aaad1
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 0e9a502a2fbc7af0793bdd1a8e8a2135828df898
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032696"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644958"
 ---
 # <a name="create-data-features-using-t-sql"></a>Créer des caractéristiques de données à l’aide de T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ Vous allez utiliser une fonction T-SQL personnalisée, _fnCalculateDistance_, po
     Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], développez **Programmabilité**, **Fonctions** puis **Fonctions scalaires**.
     Cliquez avec le bouton droit sur _fnCalculateDistance_, puis sélectionnez **Modifier** pour ouvrir le script [!INCLUDE[tsql](../../includes/tsql-md.md)] dans une nouvelle fenêtre de requête.
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
     -- User-defined function that calculates the direct distance between two geographical coordinates
     RETURNS float
@@ -73,7 +73,7 @@ Pour ajouter la valeur calculée à une table qui peut être utilisée pour l’
   
     Il s’agit d’une fonction table qui prend plusieurs colonnes comme entrées et retourne une table avec plusieurs colonnes de caractéristiques.  Le rôle de cette fonction consiste à créer un ensemble de caractéristiques servant à générer un modèle. La fonction _fnEngineerFeatures_ appelle la fonction T-SQL créée précédemment, _fnCalculateDistance_, pour obtenir la distance directe entre les lieux de prise en charge et de dépose des passagers.
   
-    ```
+    ```sql
     CREATE FUNCTION [dbo].[fnEngineerFeatures] (
     @passenger_count int = 0,
     @trip_distance float = 0,
@@ -98,7 +98,7 @@ Pour ajouter la valeur calculée à une table qui peut être utilisée pour l’
   
 2. Pour vérifier que cette fonction fonctionne, vous pouvez l’utiliser pour calculer la distance géographique pour les trajets où la distance au compteur était égale à 0, mais où les lieux de prise en charge et de dépose étaient différents.
   
-    ```
+    ```sql
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
         trip_distance, pickup_datetime, dropoff_datetime,
         dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance

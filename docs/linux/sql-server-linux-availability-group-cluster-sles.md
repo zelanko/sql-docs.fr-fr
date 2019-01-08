@@ -1,21 +1,22 @@
 ---
-title: Configurer un Cluster SLES pour le groupe de disponibilité de SQL Server | Microsoft Docs
-description: ''
+title: Configurer un Cluster SLES pour le groupe de disponibilité de SQL Server
+titleSuffix: SQL Server
+description: Découvrez comment créer des clusters de groupe de disponibilité pour SQL Server sur SUSE Linux Enterprise Server (SLES)
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670618"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160627"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurer un Cluster SLES pour le groupe de disponibilité de SQL Server
 
@@ -220,7 +221,7 @@ Délimitation de niveau ressource garantit principalement qu’il n’existe auc
 
 Délimitation de niveau de nœud garantit qu’un nœud ne s’exécute pas toutes les ressources. Cela est effectué en réinitialisant le nœud et l’implémentation de Pacemaker de celui-ci est appelée STONITH (ce qui signifie « dépanner l’autre nœud dans la tête »). Pacemaker prend en charge une grande variété de périphériques, tels que d’un onduleur approvisionnement ou gestion des cartes d’interface pour les serveurs de clôture.
 
-Pour plus d’informations, consultez [Clusters Pacemaker à partir de zéro](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [délimitation et Stonith](https://clusterlabs.org/doc/crm_fencing.html) et [haute disponibilité SUSE documentation : délimitation et STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Pour plus d’informations, consultez [Clusters Pacemaker à partir de zéro](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [délimitation et Stonith](https://clusterlabs.org/doc/crm_fencing.html) et [haute disponibilité SUSE documentation : La délimitation et STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 Au moment de l’initialisation du cluster, STONITH est désactivé si aucune configuration n’est détectée. Il peut être activé ultérieurement en exécutant la commande suivante :
 

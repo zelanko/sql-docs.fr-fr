@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - disk space [SQL Server], indexes
@@ -17,12 +16,12 @@ ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0464304a23e53762b3e2eb887383b111764379fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192059"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778422"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimer la taille d’un segment de mémoire
   La procédure suivante vous permet d'obtenir une estimation de la quantité d'espace nécessaire au stockage de données dans un segment de mémoire.  
@@ -58,7 +57,7 @@ ms.locfileid: "48192059"
      Les octets ajoutés à ***Max_Var_Size*** servent à assurer le suivi de chaque colonne de longueur variable. Il est supposé, lorsque vous utilisez cette formule, que toutes les colonnes de longueur variable sont entièrement remplies. Si vous pensez qu’un pourcentage inférieur de l’espace de stockage des colonnes de longueur variable sera utilisé, vous pouvez ajuster la valeur de ***Max_Var_Size*** en fonction de ce pourcentage pour obtenir une estimation plus précise de la taille globale de la table.  
   
     > [!NOTE]  
-    >  Vous pouvez combiner `varchar`, `nvarchar`, `varbinary`, ou `sql_variant` colonnes aboutissant à la largeur totale définie de la table dépasse 8 060 octets. La longueur de chacune de ces colonnes doit toujours être inférieure à la limite de 8 000 octets pour un `varchar`, `nvarchar,``varbinary`, ou `sql_variant` colonne. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table.  
+    >  Vous pouvez combiner des colonnes `varchar`, `nvarchar`, `varbinary` ou `sql_variant` qui provoquent le dépassement de la largeur totale de la table définie au-delà de 8 060 octets. La longueur de chacune de ces colonnes doit toujours être inférieure à la limite de 8 000 octets pour un `varchar`, `nvarchar,``varbinary`, ou `sql_variant` colonne. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table.  
   
      En l’absence de toute colonne de longueur variable, attribuez la valeur 0 à ***Variable_Data_Size*** .  
   

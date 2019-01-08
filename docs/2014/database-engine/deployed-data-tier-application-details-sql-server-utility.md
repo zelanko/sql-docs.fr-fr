@@ -18,12 +18,12 @@ ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb7b23b6ff9bf81d9c156f52dd93797203c1161f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073294"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354922"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Détails des applications de la couche Données déployées (utilitaire SQL Server)
   Les informations de la vue Applications de la couche Données déployées de l'Explorateur de l'utilitaire fournissent des données d'utilisation pour les applications de la couche Données, l'historique de l'utilisation du processeur, des détails sur l'utilisation du stockage au niveau du fichier, ainsi que la capacité d'afficher et de mettre à jour des seuils de stratégie. Les seuils de stratégie peuvent être contrôlés au niveau de l'application de la couche Données pour l'utilisation du processeur et pour les fichiers des données de la base de données et les fichiers journaux. Vous pouvez également consulter les détails des propriétés des applications de la couche Données.  
@@ -60,7 +60,7 @@ ms.locfileid: "48073294"
   
     -   Flèche bas verte : l'état d'intégrité d'au moins un groupe de fichiers ou du groupe de fichiers journaux est sous-exploité et aucun groupe de fichiers ou groupe de fichiers journaux n'est surexploité.  
   
-    -   Flèche haut rouge : l'état d'intégrité d'au moins un groupe de fichiers ou du groupe de fichier journal est surexploité. Notez que si la base de données se trouve dans l'état « urgence », l'état d'intégrité affiche l'espace de fichier journal surexploité.  
+    -   Flèche haut rouge : l'état d'intégrité d'au moins un groupe de fichiers ou du groupe de fichier journal est surexploité. Notez que, si une base de données se trouve dans l’état « urgence », l’état d’intégrité affiche l’espace de fichier journal surexploité.  
   
      Pour afficher ou modifier les limites de la stratégie d’espace de fichier, cliquez sur l’onglet **Utilisation du stockage** .  
   
@@ -76,17 +76,17 @@ ms.locfileid: "48073294"
   
 -   Date déployée  
   
--   Digne de confiance : (True ou False)  
+-   Digne de confiance : (True ou False)  
   
 -   Classement  
   
 -   Niveau de compatibilité : (par exemple, Version100)  
   
--   Chiffrement activé : (True ou False)  
+-   Chiffrement est activé : (True ou False)  
   
--   Mode de récupération : (simple, complet ou en utilisant les journaux de transactions)  
+-   Mode de récupération : (Simple, complet ou journalisé en bloc)  
   
--   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
+-   Dernière heure signalée : Cette colonne indique la date locales du processeur et l’heure à l’aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
   
  Onglet Utilisation du processeur  
  L'onglet d'utilisation du processeur affiche côte à côte des graphiques de données d'historique pour l'application de la couche Données et l'utilisation du processeur de l'ordinateur.  
@@ -104,7 +104,7 @@ ms.locfileid: "48073294"
 -   1 an, affiché par intervalles de 1 mois.  
   
  Onglet Utilisation du stockage  
- L'arborescence de l'onglet Utilisation du stockage montre les détails de l'utilisation de stockage pour les fichiers de base de données et les fichiers journaux qui appartiennent à l'application de la couche Données sélectionnée en mode Liste. Notez que les données temporelles affichent la date et l'heure locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
+ L'arborescence de l'onglet Utilisation du stockage montre les détails de l'utilisation de stockage pour les fichiers de base de données et les fichiers journaux qui appartiennent à l'application de la couche Données sélectionnée en mode Liste. Notez que les données temporelles affichent la date et l'heure locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
   
  L'affichage peut être regroupé par groupe de fichiers ou par volume. Pour utiliser l’arborescence de groupe de fichiers, sélectionnez la case d’option **Groupe de fichiers** dans la sélection **Regrouper les fichiers par :** .  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48073294"
   
 -   Flèche bas verte : l'utilisation de l'espace de fichier d'au moins un fichier de données du groupe de fichiers est sous-exploitée et aucun fichier du groupe de fichiers n'est surexploité.  
   
--   Flèche haut rouge : l'utilisation de l'espace de fichier de tous les fichiers de données du groupe de fichiers est surexploitée. Notez que si la base de données se trouve dans l'état « urgence », l'état d'intégrité affiche l'espace de fichier journal surexploité.  
+-   Flèche haut rouge : l'utilisation de l'espace de fichier de tous les fichiers de données du groupe de fichiers est surexploitée. Notez que, si une base de données se trouve dans l’état « urgence », l’état d’intégrité affiche l’espace de fichier journal surexploité.  
   
  Pour consulter les fichiers par volume, sélectionnez la case d’option **Volume** dans la sélection **Regrouper les fichiers par** . Le graphique d'historique de l'utilisation du stockage montre l'espace de fichier utilisé par tous les fichiers de données et tous les fichiers journaux du volume de stockage. Développez l'arborescence pour voir le détail des fichiers des données et des fichiers journaux de la base de données.  
   
@@ -153,17 +153,17 @@ ms.locfileid: "48073294"
   
 -   Date déployée  
   
--   Digne de confiance : (True ou False)  
+-   Digne de confiance : (True ou False)  
   
 -   Classement  
   
 -   Niveau de compatibilité : (par exemple, Version100)  
   
--   Chiffrement activé : (True ou False)  
+-   Chiffrement est activé : (True ou False)  
   
--   Mode de récupération : (simple, complet ou en utilisant les journaux de transactions)  
+-   Mode de récupération : (Simple, complet ou journalisé en bloc)  
   
--   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
+-   Dernière heure signalée : Cette colonne indique la date locales du processeur et l’heure à l’aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Détails de l’instance gérée &#40;utilitaire SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   

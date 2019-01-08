@@ -15,12 +15,12 @@ ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b9a41fb224d5042c1cc826785ead32376727444
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2e926047d5423d31307dc344bca5717ca7a77dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105579"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535533"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>Éditeur de tâche de transfert de travaux (page Travaux)
   Utilisez la page **Travaux** de la boîte de dialogue **Éditeur de tâche de transfert de travaux** pour spécifier les propriétés de copie d’un ou plusieurs travaux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent d’une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à une autre. Pour plus d'informations sur la tâche de transfert de travaux, consultez [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  
@@ -38,15 +38,15 @@ ms.locfileid: "48105579"
  **TransferAllJobs**  
  Déterminez si la tâche doit copier du serveur source au serveur de destination tous les travaux de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou seulement ceux spécifiés.  
   
- Cette propriété dispose des options répertoriées dans le tableau suivant :  
+ Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**True**|Copie tous les travaux.|  
 |**False**|Copie uniquement les travaux spécifiés.|  
   
  **JobsList**  
- Cliquez sur le bouton Parcourir **(…)** pour sélectionner les travaux à copier. Un travail au moins doit être sélectionné.  
+ Cliquez sur le bouton Parcourir **(...)** pour sélectionner les travaux à copier. Un travail au moins doit être sélectionné.  
   
 > [!NOTE]  
 >  Spécifiez **SourceConnection** avant de sélectionner les travaux à copier.  
@@ -58,7 +58,7 @@ ms.locfileid: "48105579"
   
  Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**FailTask**|La tâche échoue si des travaux de même nom existent déjà sur le serveur de destination.|  
 |**Remplacer**|La tâche remplace les travaux de même nom sur le serveur de destination.|  
@@ -69,16 +69,16 @@ ms.locfileid: "48105579"
   
  Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**True**|Active les travaux sur le serveur de destination.|  
 |**False**|Désactive les travaux sur le serveur de destination.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
  [Éditeur de tâche de transfert de travaux &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Page expressions](expressions/expressions-page.md)   
+ [Page Expressions](expressions/expressions-page.md)   
  [Gestionnaire de connexions SMO](connection-manager/smo-connection-manager.md)  
   
   

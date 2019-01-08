@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], database size
@@ -20,12 +19,12 @@ ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61f62b56e2eb825f933dc11a30039e9b18ca9228
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6370b6b08639f57419b08a1c380b440d0d98a591
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125889"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808911"
 ---
 # <a name="estimate-the-size-of-a-database"></a>Estimer la taille d'une base de données
   Lorsque vous concevez une base de données, il peut être utile d'estimer quelle taille elle aura une fois remplie. Cette estimation peut vous aider à déterminer la configuration matérielle dont vous aurez besoin pour :  
@@ -43,7 +42,7 @@ ms.locfileid: "48125889"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Estimer la taille d'une table](estimate-the-size-of-a-table.md)|Définit les étapes et les calculs nécessaires pour estimer l'espace requis pour le stockage des données dans une table et les index associés.|  
-|[Estimer la taille d’un segment de mémoire](estimate-the-size-of-a-heap.md)|Définit les étapes et les calculs nécessaires pour estimer l'espace requis pour le stockage des données dans un segment. Un segment est une table qui n'a pas d'index cluster.|  
+|[Estimer la taille d'un segment de mémoire](estimate-the-size-of-a-heap.md)|Définit les étapes et les calculs nécessaires pour estimer l'espace requis pour le stockage des données dans un segment. Un segment est une table qui n'a pas d'index cluster.|  
 |[Estimer la taille d'un index cluster](estimate-the-size-of-a-clustered-index.md)|Définit les étapes et les calculs nécessaires pour estimer l'espace requis pour le stockage des données dans un index cluster.|  
 |[Estimer la taille d'un index non-cluster](estimate-the-size-of-a-nonclustered-index.md)|Définit les étapes et les calculs nécessaires pour estimer l'espace requis pour le stockage des données dans un index non-cluster.|  
   

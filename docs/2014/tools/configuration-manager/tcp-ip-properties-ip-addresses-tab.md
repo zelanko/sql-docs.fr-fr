@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
@@ -14,17 +13,17 @@ ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fcccefeda97346c43fd70b41653f2f125816adc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136209"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747971"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>Propriétés TCP/IP (onglet des adresses IP)
   La boîte de dialogue **Propriétés TCP/IP (onglet Adresses IP)** permet de configurer les options du protocole TCP/IP pour une adresse IP spécifique. Seules les options **Ports TCP dynamiques** et **Port TCP** peuvent être configurées pour toutes les adresses en une seule fois en sélectionnant **IPAll**.  
   
- Les modifications sont appliquées au redémarrage de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour obtenir des informations sur le démarrage et l'arrêt du service SQL Server Browser, consultez Procédure : démarrer et arrêter le service SQL Server Browser dans la documentation en ligne.  
+ Les modifications sont appliquées au redémarrage de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour obtenir des informations sur le démarrage et l'arrêt du service SQL Server Browser, consultez Procédure : démarrer et arrêter le service SQL Server Browser dans la documentation en ligne.  
   
 ## <a name="static-vs-dynamic-ports"></a>Ports statiques et Ports dynamiques  
  L'instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute les connexions entrantes sur le port 1433. Le port peut être modifié pour des raisons de sécurité ou parce qu'une application cliente le requiert. Par défaut, les instances nommées (y compris SQL Server Express) sont configurées pour être à l'écoute sur les ports dynamiques. Pour configurer un port statique, ne complétez pas la zone **Ports TCP dynamiques** et spécifiez un numéro de port disponible dans la zone **Port TCP** . Pour plus d'informations sur l'ouverture de ports dans le pare-feu, consultez Configuration du Pare-feu Windows pour autoriser l'accès à SQL Server dans la documentation en ligne.  
@@ -52,14 +51,14 @@ ms.locfileid: "48136209"
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] peut écouter sur plusieurs ports sur la même adresse IP, répertorie les ports, séparés par des virgules, au format 1433,1500,1501. Ce champ est limité à 2 047 caractères.  
   
- Pour configurer une seule adresse IP pour l'écoute sur plusieurs ports, le paramètre **Écouter tout** doit également être défini avec la valeur **Non**, dans l'onglet **Protocoles** de la boîte de dialogue **Propriétés de TCP/IP** . Pour plus d'informations, consultez « Procédure : configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Pour configurer une seule adresse IP pour l’écoute sur plusieurs ports, le paramètre **Écouter tout** doit également avoir la valeur **Non**, sous l’onglet **Protocoles** de la boîte de dialogue **Propriétés de TCP/IP** . Pour plus d'informations, consultez « Procédure : configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Ajout ou suppression d'adresses IP  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager affiche les adresses IP qui étaient disponibles au moment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été installé. Les adresses IP disponibles peuvent changer lorsque : des cartes réseau sont ajoutées ou supprimées, une adresse IP affectée dynamiquement arrive à expiration, une structure de réseau est reconfigurée ou un ordinateur est déplacé physiquement, par exemple si un ordinateur portable est connecté au réseau d'un autre bâtiment. Pour changer une adresse IP, modifiez la zone **Adresse IP** , puis redémarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche les adresses IP qui étaient disponibles au moment de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les adresses IP disponibles peuvent changer lorsque : des cartes réseau sont ajoutées ou supprimées, une adresse IP affectée dynamiquement arrive à expiration, une structure de réseau est reconfigurée ou un ordinateur est déplacé physiquement, par exemple si un ordinateur portable est connecté au réseau d'un autre bâtiment. Pour changer une adresse IP, modifiez la zone **Adresse IP** , puis redémarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Choix d’un protocole réseau](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
- [Création d’une chaîne de connexion valide avec TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
+ [Choix d'un protocole réseau](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
+ [Création d’une chaîne de connexion valide à l’aide du protocole TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [Service SQL Server Browser](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
   
   

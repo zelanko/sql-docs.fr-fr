@@ -11,15 +11,15 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9970c8c086c14dcc49f741e47c48f76f9b9c6f96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb982848854eef74363250c291b9f5676abec2f6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189129"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507856"
 ---
 # <a name="defining-named-sets"></a>Définition de jeux nommés
-  Un jeu nommé est une expression MDX (Multidimensional Expressions) qui retourne un ensemble de membres de dimension. Vous pouvez définir des jeux nommés et les enregistrer en tant que partie de la définition du cube ; vous pouvez aussi créer des jeux nommés dans des applications clientes. Vous créez des jeux nommés en combinant des données de cube, des opérateurs arithmétiques, des nombres et des fonctions. Les jeux nommés peuvent être employés par les utilisateurs dans des requêtes MDX dans des applications clientes. Ils peuvent aussi être utilisés pour définir des jeux dans des sous-cubes. Un sous-cube est une collection de jeux joints entre eux qui limite l'espace du cube au sous-espace défini pour les instructions suivantes. Définir un espace de cube limité est un des concepts fondamentaux des scripts MDX.  
+  Un jeu nommé est une expression MDX (Multidimensional Expressions) qui retourne un ensemble de membres de dimension. Vous pouvez définir des jeux nommés et les enregistrer en tant que partie de la définition du cube ; vous pouvez aussi créer des jeux nommés dans des applications clientes. Vous créez des jeux nommés en combinant des données de cube, des opérateurs arithmétiques, des nombres et des fonctions. Les jeux nommés peuvent être employés par les utilisateurs dans des requêtes MDX dans des applications clientes. Ils peuvent aussi être utilisés pour définir des jeux dans des sous-cubes. Un sous-cube est une collection de jeux joints entre eux qui limite l'espace du cube au sous-espace défini pour les instructions suivantes. Définir un espace de cube limité est un des concepts fondamentaux des scripts MDX.  
   
  Les jeux nommés simplifient les requêtes MDX et fournissent d'utiles alias pour les expressions d'ensemble complexes utilisées généralement. Par exemple, vous pouvez définir un jeu nommé appelé Large Resellers qui contient les membres de la dimension Reseller qui ont le plus d'employés. Les utilisateurs finaux pourront ensuite utiliser le jeu nommé Large Resellers dans des requêtes, ou s'en servir pour définir un ensemble dans un sous-cube. Les définitions de jeu nommé sont stockées dans les cubes, mais leurs valeurs existent uniquement en mémoire. Pour créer un jeu nommé, utilisez la commande **Nouveau jeu nommé** , disponible sous l'onglet **Calculs** du Concepteur de cube. Pour plus d’informations, consultez [Calculs](multidimensional-models-olap-logical-cube-objects/calculations.md)et [Créer des jeux nommés](multidimensional-models/create-named-sets.md).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48189129"
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-     À présent que vous avez défini le premier jeu pour l’expression d’ensemble Exists, vous êtes prêt à ajouter le second (le jeu de membres de la dimension Reseller contenant le plus grand nombre d’employés).  
+     Maintenant que vous avez défini le premier jeu pour l’Exists expression d’ensemble, vous êtes prêt à ajouter le second ensemble de l’ensemble de membres de la dimension Reseller contenant le plus grand nombre d’employés.  
   
 7.  Sur le **métadonnées** onglet dans le **outils de calcul** volet, développez **Number of Employees** dans la dimension Reseller, développez `Members`, puis développez **Tous les revendeurs**.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48189129"
      ![Volet filtre contenant deux nommées définit](../../2014/tutorials/media/l6-named-set-05.gif "définit volet filtre contenant deux nommées")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Leçon 7 : Définition d’indicateurs de performance clés &#40;KPIs&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Leçon 7 : Définition des indicateurs de Performance clés &#40;indicateurs de performance clés&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Calculs](multidimensional-models-olap-logical-cube-objects/calculations.md)   

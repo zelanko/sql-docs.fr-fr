@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 07fdcf0e38f6b48e70140f1ce5c7d9e29d329267
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 1094d6fd52841a65afa58768dfaee9a05aa20810
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643967"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208288"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analyser les rapports d’évaluation consolidée créés par l’Assistant Migration des données avec Power BI
 
@@ -40,7 +40,7 @@ Les rapports suivants sont inclus :
 
 - [Locale mise à niveau de disponibilité](#on-premises-upgrade-readiness--details)
 
-  La source de données est la vue UpgradeSuccessRanking dans la base de données DMAReporting.  Ce rapport affiche le pourcentage de mise à niveau réussie pour vos bases de données évaluées.
+  La source de données est la vue UpgradeSuccessRanking dans la base de données DMAReporting.  Ce rapport affiche le pourcentage de mise à niveau réussie pour vos bases de données évaluées.
 
 - [Parité des fonctionnalités sur site](#on-premise-feature-parity--details)
 
@@ -48,7 +48,7 @@ Les rapports suivants sont inclus :
 
 - [Préparation de mise à niveau de la base de données SQL Azure](#azure-sql-db-upgrade-readiness--details)
 
-  La source de données est la vue UpgradeSuccessRanking dans la base de données DMAReporting.  Ce rapport affiche le pourcentage de mise à niveau réussie pour les bases de données évalué pour les migrations de base de données SQL Azure.
+  La source de données est la vue UpgradeSuccessRanking dans la base de données DMAReporting.  Ce rapport affiche le pourcentage de mise à niveau réussie pour les bases de données évalué pour les migrations de base de données SQL Azure.
 
 - [Fonctionnalités de base de données SQL non pris en charge Azure](#azure-sql-db-unsupported-features--details)
 
@@ -74,17 +74,17 @@ Vous pouvez modifier ces rapports pour travailler avec votre environnement en mo
 
 ![Rapport de tableau de bord](../dma/media/DashboardReport.png)
 
-Le tableau de bord affiche les détails de toutes vos évaluations. Vous pouvez utiliser les segments sur le côté gauche pour filtrer par instance ou de la base de données. Vous pouvez utiliser le graphique à barres pour explorer des catégories spécifiques pour voir où se situent les problèmes.
+Le tableau de bord affiche les détails de toutes vos évaluations. Vous pouvez utiliser les segments sur le côté gauche pour filtrer par instance ou de la base de données. Vous pouvez utiliser le graphique à barres pour explorer des catégories spécifiques pour voir où se situent les problèmes.
 
 Pour Explorer, sélectionnez le cercle avec la flèche bas en haut à droite du graphique à barres.
 
 ![Extraction de la catégorie](../dma/media/CategoryDrillDown.png)
 
-La séquence d’exploration vers le bas est définie comme indiqué dans l’image suivante (sous **axe**). Pour modifier la séquence, faites glisser les colonnes à l’ordre souhaité.
+La séquence d’exploration vers le bas est définie comme indiqué dans l’image suivante (sous **axe**). Pour modifier la séquence, faites glisser les colonnes à l’ordre souhaité.
 
 ![Axe de graphique à barres, des visualisations](../dma/media/VisualizationsAxis.png)
 
-Cette vue est encore plus efficace lorsque vous filtrez tout d’abord par une base de données spécifique, puis Explorez les problèmes d’une catégorie spécifique. Dans l’exemple suivant, la base de données ressources humaines est sélectionné par exemple **SQL01** pour afficher tous les objets qui empêchent les migrations (modifications avec rupture).
+Cette vue est encore plus efficace lorsque vous filtrez tout d’abord par une base de données spécifique, puis Explorez les problèmes d’une catégorie spécifique. Dans l’exemple suivant, la base de données ressources humaines est sélectionné par exemple **SQL01** pour afficher tous les objets qui empêchent les migrations (modifications avec rupture).
 
 ![Dernières modifications de base de données ressources humaines](../dma/media/BreakingChanges.png)
 
@@ -92,9 +92,9 @@ Cette vue est encore plus efficace lorsque vous filtrez tout d’abord par une b
 
 ![Sur site mise à niveau de disponibilité du rapport](../dma/media/OnPremisesUpgradeReadinessReport.png)
 
-Ce rapport affiche un instantané de l’état de préparation de vos bases de données sont à migrer vers une version ultérieure de SQL Server. Les données de ce rapport proviennent de dbo. UpgradeSuccessFactor\_affichage local dans la base de données DMAReporting.
+Ce rapport affiche un instantané de l’état de préparation de vos bases de données sont à migrer vers une version ultérieure de SQL Server. Les données de ce rapport proviennent de dbo. UpgradeSuccessFactor\_affichage local dans la base de données DMAReporting.
 
-Filtrage par instance et le nom de la base de données et l’utilisation de cartes de score en haut, vous pouvez afficher les version de la base de données peut être migrée en trop. Par exemple, si vous filtrez par la base de données AdventureWorks 2012, vous pouvez voir que la base de données est prêt à passer à toutes les versions de SQL Server répertoriées dans le rapport. Cela est déterminé en vous assurant qu'aucune modification avec rupture pour ce niveau de compatibilité et de la base de données.
+Filtrage par instance et le nom de la base de données et l’utilisation de cartes de score en haut, vous pouvez afficher les version de la base de données peut être migrée en trop. Par exemple, si vous filtrez par la base de données AdventureWorks 2012, vous pouvez voir que la base de données est prêt à passer à toutes les versions de SQL Server répertoriées dans le rapport. Cela est déterminé en vous assurant qu'aucune modification avec rupture pour ce niveau de compatibilité et de la base de données.
 
 ![Facteur de réussite de mise à niveau de base de données AdventureWorks](../dma/media/UpgradeSuccessFactor.png)
 
@@ -104,7 +104,7 @@ Filtrage par instance et le nom de la base de données et l’utilisation de car
 
 Utilisez ce rapport pour mettre en évidence les nouvelles fonctionnalités qui peuvent être utilisées pour la base de données dans la version de SQL Server cible.
 
-Lorsque vous sélectionnez une fonctionnalité dans le graphique en entonnoir, les données en bas met en évidence les objets qui sont affectés par la fonctionnalité. Dans l’exemple suivant, le **Stretch database pour les besoins de stockage** fonctionnalité est sélectionnée, et un tableau est répertorié qui peuvent tirer parti de cette fonctionnalité.
+Lorsque vous sélectionnez une fonctionnalité dans le graphique en entonnoir, les données en bas met en évidence les objets qui sont affectés par la fonctionnalité. Dans l’exemple suivant, le **Stretch database pour les besoins de stockage** fonctionnalité est sélectionnée, et un tableau est répertorié qui peuvent tirer parti de cette fonctionnalité.
 
 ![Recommandation de fonctionnalité pour Stretch Database](../dma/media/FeatureRecommend_StretchDatabase.png)
 
@@ -112,7 +112,7 @@ Lorsque vous sélectionnez une fonctionnalité dans le graphique en entonnoir, l
 
 ![Rapport de disponibilité de mise à niveau de base de données SQL Azure](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
 
-Ce rapport présente la disponibilité de base de données à migrer vers Azure SQL Database V12. Les données à partir de ce rapport proviennent de dbo. Vue UpgradeSuccessRanking dans la base de données DMAReporting.
+Ce rapport présente la disponibilité de base de données à migrer vers Azure SQL Database V12. Les données à partir de ce rapport proviennent de dbo. Vue UpgradeSuccessRanking dans la base de données DMAReporting.
 
 ### <a name="azure-features-parity-report"></a>Rapport de parité des fonctionnalités Azure
 
@@ -120,7 +120,7 @@ Ce rapport présente la disponibilité de base de données à migrer vers Azure 
 
 Utilisez ce rapport pour mettre en surbrillance le *fonctionnalités au niveau de l’instance* qui ne sont pas pris en charge par Azure SQL Database V12.
 
-Lorsque vous sélectionnez une fonctionnalité dans le graphique en entonnoir, les données dans la partie inférieure répertorient les instances et les fonctionnalités de base de données qui ne sont pas pris en charge. Dans l’exemple suivant, cette fonctionnalité est sélectionnée : **toujours sur la configuration du groupe de disponibilité n’est pas pris en charge dans Azure SQL Database**.  
+Lorsque vous sélectionnez une fonctionnalité dans le graphique en entonnoir, les données dans la partie inférieure répertorient les instances et les fonctionnalités de base de données qui ne sont pas pris en charge. Dans l’exemple suivant, cette fonctionnalité est sélectionnée : **Toujours sur la disponibilité de configuration du groupe n'est pas pris en charge dans Azure SQL Database**.  
 
 ![Toujours sur la fonctionnalité groupe de disponibilité](../dma/media/Feature_AlwaysOnAvailability.png)
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
@@ -21,12 +20,12 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1fc46b6f7827143c3fdd523970fd5748a28aeb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd4f907c45007942d7185decac2f958576647fed
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201309"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787631"
 ---
 # <a name="error-handling-in-data"></a>Gestion des erreurs dans les données
   Lorsqu'un composant de flux de données applique une transformation à des données de colonne, extrait des données à partir de sources ou charge des données dans des destinations, des erreurs peuvent se produire. Les erreurs sont fréquemment dues à des valeurs de données inattendues. Par exemple, une conversion de données échoue car une colonne contient une chaîne au lieu d'un nombre, une insertion dans une colonne de base de données échoue car les données sont une date et que la colonne a un type de données numérique, ou l'évaluation d'une expression échoue car la valeur d'une colonne est nulle, ce qui engendre une opération mathématique non valide.  
@@ -79,7 +78,7 @@ ms.locfileid: "48201309"
  [Flux de données](data-flow.md)   
  [Transformer des données avec des transformations](transformations/transform-data-with-transformations.md)   
  [Connecter des composants avec des chemins](../connect-components-with-paths.md)   
- [Tâche de flux de données](../control-flow/data-flow-task.md)   
+ [tâche de flux de données](../control-flow/data-flow-task.md)   
  [Flux de données](data-flow.md)  
   
   

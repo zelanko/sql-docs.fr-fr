@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, upgrading
@@ -14,12 +13,12 @@ ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 783a4313f4f204f80b5efbefd3a377056addfe5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a902bb06c0aa624e3fa40c166210d6e13d9b2772
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071829"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807141"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Mettre à niveau des packages Integration Services à l'aide de l'Assistant Mise à niveau de packages SSIS
   Vous pouvez mettre à niveau des packages créés dans des versions antérieures d' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vers le format [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisé par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit l'Assistant Mise à niveau de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] à cet effet. Étant donné que vous pouvez configurer l'Assistant pour qu'il sauvegarde vos packages d'origine, vous pouvez continuer à les utiliser si vous rencontrez des problèmes de mise à niveau.  

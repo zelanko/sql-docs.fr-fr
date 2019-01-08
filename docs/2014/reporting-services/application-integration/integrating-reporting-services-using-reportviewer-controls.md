@@ -15,12 +15,12 @@ ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ddefd0e0096748f6a333313881fdc7ba25f6e3fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 230ee06508cf5dab0a89371202b8e7623f7652dc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117929"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373161"
 ---
 # <a name="integrating-reporting-services-using-the-reportviewer-controls"></a>Intégration de Reporting Services à l'aide des contrôles ReportViewer
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] propose deux contrôles ReportViewer permettant d’intégrer des fonctionnalités dans vos applications d’affichage de rapports. Il existe une version pour les applications Windows Forms et une version pour les applications Web Forms. Chaque contrôle offre des fonctionnalités similaires, mais chacun est conçu pour un environnement particulier. Les deux contrôles peuvent traiter des rapports qui ont été déployés sur un serveur de rapports (mode de traitement à distance) ou qui ont été copiés sur un ordinateur où [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n’a pas été installé (mode de traitement local).  
@@ -44,6 +44,6 @@ ms.locfileid: "48117929"
   
 ## <a name="see-also"></a>Voir aussi  
  [Intégration de Reporting Services dans des applications](../application-integration/integrating-reporting-services-into-applications.md)   
- [Créer des rapports SSRS à l’aide de Visual Studio (réponse traitée)](http://go.microsoft.com/fwlink/?LinkId=321991)  
+ [Créer des rapports SSRS à l’aide de Visual Studio (réponse traitée)](https://go.microsoft.com/fwlink/?LinkId=321991)  
   
   

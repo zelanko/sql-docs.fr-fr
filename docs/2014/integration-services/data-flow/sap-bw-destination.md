@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29998bdd95a24b66ff2aebf304cd6b36b7701d02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1eff0a59ad719f2f609bd96a7a11147204c7b8a3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102309"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367511"
 ---
 # <a name="sap-bw-destination"></a>Destination SAP BW
   La destination SAP BW est le composant de destination de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. Ainsi, la destination SAP BW charge les données du flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans un système SAP Netweaver BW version 7.  
@@ -84,18 +83,18 @@ ms.locfileid: "48102309"
   
  Si vous ne connaissez pas toutes les valeurs requises pour configurer la destination, adressez-vous à votre administrateur SAP.  
   
- Pour obtenir la procédure pas à pas qui montre comment configurer et utiliser le gestionnaire de connexions, la source et la destination SAP BW, consultez le livre blanc [Utilisation de SQL Server 2008 Integration Services avec SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). Ce livre blanc explique également comment configurer les objets nécessaires dans SAP BW.  
+ Pour obtenir la procédure pas à pas qui montre comment configurer et utiliser le gestionnaire de connexions, la source et la destination SAP BW, consultez le livre blanc [Utilisation de SQL Server 2008 Integration Services avec SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). Ce livre blanc explique également comment configurer les objets nécessaires dans SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>Utilisation du concepteur SSIS pour configurer la destination  
  Pour plus d'informations sur les propriétés de la destination SAP BW que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de Destination SAP BW &#40;Page Gestionnaire de connexions&#41;](sap-bw-destination-editor-connection-manager-page.md)  
+-   [Éditeur de destination SAP BW &#40;page Gestionnaire de connexions&#41;](sap-bw-destination-editor-connection-manager-page.md)  
   
--   [Éditeur de Destination SAP BW &#40;Page mappages&#41;](sap-bw-destination-editor-mappings-page.md)  
+-   [Éditeur de destination SAP BW &#40;page Mappages&#41;](sap-bw-destination-editor-mappings-page.md)  
   
--   [Éditeur de Destination SAP BW &#40;Page sortie d’erreur&#41;](sap-bw-destination-editor-error-output-page.md)  
+-   [Éditeur de destination SAP BW &#40;page Sortie d’erreur&#41;](sap-bw-destination-editor-error-output-page.md)  
   
--   [Éditeur de Destination SAP BW &#40;Page avancé&#41;](sap-bw-destination-editor-advanced-page.md)  
+-   [Éditeur de destination SAP BW &#40;page Avancé&#41;](sap-bw-destination-editor-advanced-page.md)  
   
  Lorsque vous configurez la destination SAP BW, vous pouvez également utiliser différentes boîtes de dialogue pour rechercher ou pour créer des objets SAP Netweaver BW. Pour plus d'informations sur ces boîtes de dialogue, cliquez sur l'une des rubriques suivantes :  
   

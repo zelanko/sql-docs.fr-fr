@@ -12,12 +12,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b27c1b9d9086f36387afb5686ebc1a945b8d7b56
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51017696"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370565"
 ---
 # <a name="about-the-sql-server-database-engine"></a>À propos du moteur de base de données SQL Server
   Le composant [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est le service de base pour le stockage, le traitement et la protection des données. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fournit un accès contrôlé et un traitement transactionnel rapide qui répondent aux exigences des applications les plus gourmandes en termes de données dans votre entreprise.  
@@ -34,7 +34,7 @@ ms.locfileid: "51017696"
   
 -   Recherche en texte intégral (composant facultatif)  
   
--   Data Quality Services. est un composant facultatif  
+-   Data Quality Services est un composant facultatif  
   
     > [!NOTE]  
     >  Dans cette version, le fait de cocher la case **Data Quality Services** au moment de l’installation n’installe pas le serveur Data Quality Services (DQS). Vous devrez procéder à des étapes supplémentaires après l'installation pour installer le serveur DQS. Pour plus d’informations, consultez [Installer Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "51017696"
 -   Composants de documentation  
   
 > [!NOTE]  
->  Par défaut, les exemples de bases de données et les exemples de code ne sont pas installés dans le cadre de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour installer les exemples de bases de données et les exemples de code, consultez le [site web CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843).  
+>  Par défaut, les exemples de bases de données et les exemples de code ne sont pas installés dans le cadre de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour installer les exemples de bases de données et les exemples de code, consultez le [site web CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

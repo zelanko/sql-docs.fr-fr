@@ -11,12 +11,12 @@ ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 611b4cf87158be48cae3bc37ef7311de64c77ddf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7f04f586511140b9e21c8eca80ec19b43fa90eb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126219"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510382"
 ---
 # <a name="deploying-an-analysis-services-project"></a>Déploiement d'un projet Analysis Services
   Pour afficher les données du cube et de dimension pour les objets du cube Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans le projet Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous devez déployer le projet sur une instance spécifiée d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puis traiter le cube et ses dimensions. Le *déploiement* d'un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entraîne la création des objets définis dans une instance d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Le*traitement* des objets dans une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] copie les données à partir des sources de données sous-jacentes dans les objets du cube. Pour plus d’informations, consultez [Déployer des projets Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) et [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
@@ -45,11 +45,11 @@ ms.locfileid: "48126219"
     > [!NOTE]  
     >  Si vous obtenez des erreurs pendant le déploiement, utilisez SQL Server Management Studio pour vérifier les autorisations relatives à la base de données. Le compte que vous avez spécifié pour la connexion à la source de données doit avoir une connexion sur l'instance SQL Server. Double-cliquez sur la connexion pour consulter les propriétés de mappage des utilisateurs. Le compte doit avoir les autorisations db_datareader sur la base de données **AdventureWorksDW2012** .  
   
-     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] génère et déploie le projet Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur l’instance spécifiée de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à l’aide d’un script de déploiement. La progression du déploiement apparaît dans deux fenêtres : la fenêtre **Sortie** et la fenêtre **État d’avancement du déploiement – Didacticiel Analysis Services** .  
+     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] génère et déploie le projet Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur l’instance spécifiée de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à l’aide d’un script de déploiement. La progression du déploiement s’affiche dans deux fenêtres : la **sortie** fenêtre et la **progression du déploiement - Analysis Services Tutorial** fenêtre.  
   
-     Ouvrez la fenêtre de sortie, si nécessaire, en cliquant sur **Sortie** dans le menu **Affichage** . La fenêtre **Sortie** affiche la progression globale du déploiement. La fenêtre **État d’avancement du déploiement – Analysis Services Tutorial** affiche le détail de chaque étape du déploiement. Pour plus d’informations, consultez [Générer des projets Analysis Services &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md) et [Déployer des projets Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
+     Ouvrez la fenêtre de sortie, si nécessaire, en cliquant sur **Sortie** dans le menu **Affichage** . La fenêtre **Sortie** affiche la progression globale du déploiement. Le **progression du déploiement - Analysis Services Tutorial** fenêtre affiche le détail de chaque étape du déploiement. Pour plus d’informations, consultez [Générer des projets Analysis Services &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md) et [Déployer des projets Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
-5.  Examinez le contenu des fenêtres **Sortie** et **État d’avancement du déploiement – Analysis Services Tutorial** pour vérifier que le cube a été généré, déployé et traité sans erreurs.  
+5.  Passez en revue le contenu de la **sortie** fenêtre et la **progression du déploiement - Analysis Services Tutorial** fenêtre pour vérifier que le cube a été généré, déployé et traité sans erreurs.  
   
 6.  Pour masquer la fenêtre **État d’avancement du déploiement - Analysis Services Tutorial** , cliquez sur l’icône **Masquer automatiquement** (en forme de punaise) dans la barre d’outils de la fenêtre.  
   
@@ -62,6 +62,6 @@ ms.locfileid: "48126219"
   
 ## <a name="see-also"></a>Voir aussi  
  [Déployer des projets Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
- [Configurer les propriétés de projet Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+ [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

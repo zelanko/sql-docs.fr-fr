@@ -11,12 +11,12 @@ ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4e47b2cc13c05438ce38d1b6f63bcbcb357c60d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24804b6233e701ef0c27f113a294987156b6174c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211949"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363371"
 ---
 # <a name="xml-connection-type-ssrs"></a>Type de connexion XML (SSRS)
   Pour inclure les données d'une source de données XML dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type XML. Ce type de source de données intégré est basé sur l'extension de données XML. Ce type de source de données vous permet de vous connecter et de récupérer des données à partir de documents XML, de services Web ou de données XML incorporées dans la requête.  
@@ -36,7 +36,7 @@ ms.locfileid: "48211949"
 |Document XML|`http://localhost/XML/Customers.xml`|  
 |Document XML incorporé|*Vide*|  
   
- Pour obtenir d’autres exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ Pour obtenir d’autres exemples sur les chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ##  <a name="Credentials"></a> Informations d'identification  
  Les informations d'identification sont obligatoires pour exécuter des requêtes, afficher l'aperçu du rapport localement et afficher l'aperçu du rapport à partir du serveur de rapports.  
@@ -47,7 +47,7 @@ ms.locfileid: "48211949"
   
 -   Utilisateur Windows actuel (également appelé sécurité intégrée).  
   
--   Aucune information d'identification n'est requise. Si vous choisissez de ne pas demander d'informations d'identification, l'accès anonyme est utilisé. Vérifiez que vous avez défini le compte d'exécution sans assistance pour le serveur de rapports afin d'établir une connexion à une source de données externe. L'extension pour le traitement des données XML ne transmet pas d'informations d'identification à l'URL cible ou au service Web ; la connexion ne peut aboutir que si vous avez défini le compte d'exécution sans assistance. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
+-   Aucune information d'identification n'est requise. Si vous choisissez de ne pas demander d'informations d'identification, l'accès anonyme est utilisé. Vérifiez que vous avez défini le compte d'exécution sans assistance pour le serveur de rapports afin d'établir une connexion à une source de données externe. L'extension pour le traitement des données XML ne transmet pas d'informations d'identification à l'URL cible ou au service Web ; la connexion ne peut aboutir que si vous avez défini le compte d'exécution sans assistance. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
   
  Les informations d'identification stockées ou demandées ne sont pas prises en charge. Notez bien que si vous désactivez la sécurité intégrée de Windows, vous ne pouvez pas l'utiliser pour récupérer des données. Si vous spécifiez des informations d'identification stockées ou demandées par invite, une erreur se produit au moment de l'exécution.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "48211949"
   
  Les valeurs possibles d’une requête de jeu de données pour une source de données de type XML sont indiquées ci-dessous.  
   
--   *Vide*: utiliser une requête vide pour créer un jeu de résultats par défaut. La requête par défaut est créée en lisant la source de données et en parcourant la hiérarchie de nœuds XML jusqu'à la première collection inférieure. L'ensemble de résultats inclut tous les nœuds avec des valeurs de texte et tous les attributs de nœud rencontrés sur ce parcours. Les colonnes dans l'ensemble de résultats sont mappées avec les champs du dataset.  
+-   *Vide*: Utilisez une requête vide pour créer un ensemble de résultats par défaut. La requête par défaut est créée en lisant la source de données et en parcourant la hiérarchie de nœuds XML jusqu'à la première collection inférieure. L'ensemble de résultats inclut tous les nœuds avec des valeurs de texte et tous les attributs de nœud rencontrés sur ce parcours. Les colonnes dans l'ensemble de résultats sont mappées avec les champs du dataset.  
   
--   Un chemin d’accès de l’élément : Spécifie la séquence de nœuds à utiliser lors de la récupération des données XML à partir de la source de données.  
+-   Un chemin d’accès de l’élément : Spécifie la séquence des nœuds à utiliser lors de l'extraction des données XML de la source de données.  
   
--   Un élément de requête XML : spécification de requête XML avec les éléments facultatifs suivants :  
+-   Élément de requête XML : Spécification de requête XML avec les éléments facultatifs suivants :  
   
     -   **Pour un service Web :**  
   
@@ -108,23 +108,23 @@ ms.locfileid: "48211949"
   
          `<ElementPath IgnoreNamespaces="true">`  *chemin d'accès à l'élément*  `</ElementPath>`  
   
- Pour plus d'informations sur la syntaxe des requêtes, consultez [Syntaxe de requête XML pour les données de rapport XML &#40;SSRS&#41;](report-data-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
+ Pour plus d'informations sur la syntaxe des requêtes, consultez [Syntaxe de requête XML pour les données de rapport XML &#40;SSRS&#41;](report-data-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
   
- Pour obtenir des exemples, consultez [Reporting Services : utilisation de sources de données XML et de service web](http://go.microsoft.com/fwlink/?LinkId=81654).  
+ Pour obtenir des exemples, consultez [Reporting Services : À l’aide de XML et des Sources de données de Service Web](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Configuration requise pour la récupération de données d'un service Web XML  
  L'extension pour le traitement des données XML ne détecte pas le schéma automatiquement. Vous devez donc disposer d'un moyen d'identifier quelles méthodes SOAP permettent d'extraire les données de votre choix. Vous devez également comprendre le schéma d'adressage ou l'espace de noms que le service Web utilise pour ses données.  
   
- Pour un service Web, vous pouvez fournir un élément <`Query`> qui spécifie une méthode à appeler ou une action SOAP. Vous pouvez laisser la requête vide et adopter la requête par défaut si la source de données XML dispose d'une structure hiérarchique produisant les données que vous souhaitez utiliser dans votre rapport. Les valeurs de nœud d'élément XML et les attributs récupérés lors de l'exécution de la requête correspondent aux champs de dataset que vous utilisez dans votre rapport.  
+ Pour un service Web, vous pouvez fournir un élément <`Query`> qui spécifie une méthode à appeler ou une action SOAP. Vous pouvez laisser la requête vide et adopter la requête par défaut si la source de données XML dispose d'une structure hiérarchique produisant les données que vous souhaitez utiliser dans votre rapport. Les valeurs de nœud d'élément XML et les attributs récupérés lors de l'exécution de la requête correspondent aux champs de dataset que vous utilisez dans votre rapport.  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>Conditions requises pour la récupération de données de documents XML  
- À l'aide du protocole HTTP, le serveur doit retourner les données XML ou ces dernières doivent être incorporées dans l'élément `Query` XML. Si vous faites directement référence à un document XML à l'aide du protocole HTTP, l'extension employée doit être l'extension .xml.  
+ À l'aide du protocole HTTP, le serveur doit retourner les données XML ou ces dernières doivent être incorporées dans l'élément `Query` XML. Si vous faites directement référence à un document XML à l'aide du protocole HTTP, l'extension employée doit être l'extension .xml.  
   
  Vous devez savoir comment créer une requête XML qui récupère toutes les données dont vous avez besoin. Si vous ne spécifiez pas un chemin d'accès à l'élément, le comportement par défaut pour l'analyse d'un document XML consiste à sélectionner le premier chemin d'accès disponible vers une collection de nœuds terminaux dans le document. Si le document XML inclut des chemins d'accès supplémentaires à d'autres collections sœurs de nœuds terminaux (inférieurs), ces nœuds seront ignorés sauf si vous spécifiez un chemin dans votre requête.  
   
  Vous pouvez préciser un chemin d'accès de l'élément à l'aide d'une syntaxe XML semblable à la syntaxe XQuery.  
   
- Pour plus d’informations, consultez [Syntaxe du chemin d’accès à l’élément pour des données de rapport XML &#40;SSRS&#41;](element-path-syntax-for-xml-report-data-ssrs.md) dans la documentation relative à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] au sein de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]msdn.microsoft.com.  
+ Pour plus d’informations, consultez [Syntaxe du chemin d’accès à l’élément pour des données de rapport XML &#40;SSRS&#41;](element-path-syntax-for-xml-report-data-ssrs.md) dans la documentation relative à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] au sein de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]msdn.microsoft.com.  
   
 ##  <a name="Parameters"></a> Paramètres  
  La requête n'est pas analysée pour l'identification des paramètres.  
@@ -160,7 +160,7 @@ ms.locfileid: "48211949"
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs de dataset générée par la requête.  
   
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
   
 ## <a name="see-also"></a>Voir aussi  

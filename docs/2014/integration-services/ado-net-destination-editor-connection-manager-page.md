@@ -13,12 +13,12 @@ ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 887f881ad6a4cefec80620ebedb2ac210692ce5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cdb70467f5844c2d2dba623c340209f495002cdd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090095"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357265"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>Éditeur de destination ADO NET (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination ADO NET** pour sélectionner la connexion [!INCLUDE[vstecado](../includes/vstecado-md.md)] de la destination. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
@@ -57,22 +57,22 @@ ms.locfileid: "48090095"
   
  Seuls les fournisseurs ADO.NET qui retournent un objet <xref:System.Data.SqlClient.SqlConnection> prennent en charge l’utilisation de l’interface <xref:System.Data.SqlClient.SqlBulkCopy> . Le fournisseur de données .NET pour SQL Server (SqlClient) retourne un objet <xref:System.Data.SqlClient.SqlConnection> , et un fournisseur personnalisé peut retourner un objet <xref:System.Data.SqlClient.SqlConnection> .  
   
- Vous pouvez utiliser le fournisseur de données .NET pour SQL Server (SqlClient) pour se connecter à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
+ Le fournisseur de données .NET pour SQL Server (SqlClient) vous permet de vous connecter à [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
   
- Si vous sélectionnez **Utiliser l’insertion en bloc le cas échéant**et affectez à l’option **Erreur** la valeur **Rediriger la ligne**, le lot de données que la destination redirige vers la sortie d’erreur peut inclure des lignes correctes. Pour plus d’informations sur la gestion des erreurs dans les opérations en bloc, consultez [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md). Pour plus d’informations sur la **erreur** , consultez l’option [éditeur de Destination ADO NET &#40;Page sortie d’erreur&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
+ Si vous sélectionnez **Utiliser l’insertion en bloc le cas échéant**et affectez à l’option **Erreur** la valeur **Rediriger la ligne**, le lot de données que la destination redirige vers la sortie d’erreur peut inclure des lignes correctes. Pour plus d’informations sur la gestion des erreurs dans les opérations en bloc, consultez [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md). Pour plus d’informations sur l’option **Erreur** , consultez [Éditeur de destination ADO NET &#40;page Sortie d’erreur&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  Si une table source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou Sybase inclut une colonne d'identité, vous devez utiliser les tâches d'exécution de requêtes SQL pour exécuter une instruction SET IDENTITY_INSERT avant et après la destination ADO NET. La propriété de la colonne d'identité spécifie une valeur incrémentielle pour la colonne. L'instruction SET IDENTITY_INSERT autorise l'insertion de valeurs explicites dans la colonne d'identité. Pour exécuter les instructions CREATE TABLE et SET IDENTITY sur la même connexion de base de données, définissez la `RetainSameConnection` propriété de la [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gestionnaire de connexions à `True`. En outre, utilisez le même gestionnaire de connexions [!INCLUDE[vstecado](../includes/vstecado-md.md)] pour les tâches Exécuter SQL et la destination ADO NET.  
+>  Si une table source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou Sybase inclut une colonne d'identité, vous devez utiliser les tâches d'exécution de requêtes SQL pour exécuter une instruction SET IDENTITY_INSERT avant et après la destination ADO NET. La propriété de la colonne d'identité spécifie une valeur incrémentielle pour la colonne. L'instruction SET IDENTITY_INSERT autorise l'insertion de valeurs explicites dans la colonne d'identité. Pour exécuter les instructions CREATE TABLE et SET IDENTITY sur la même connexion de base de données, définissez la propriété `RetainSameConnection` du gestionnaire de connexions [!INCLUDE[vstecado](../includes/vstecado-md.md)] avec la valeur `True`. En outre, utilisez le même gestionnaire de connexions [!INCLUDE[vstecado](../includes/vstecado-md.md)] pour les tâches Exécuter SQL et la destination ADO NET.  
 >   
 >  Pour plus d’informations, consultez [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) et [IDENTITY &#40;Propriété&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property).  
   
 ## <a name="external-resources"></a>Ressources externes  
- Article technique sur sqlcat.com, traitant du [chargement rapide de données sur Microsoft Azure SQL Database](http://go.microsoft.com/fwlink/?LinkId=244333)  
+ Article technique sur sqlcat.com, traitant du [chargement rapide de données sur Microsoft Azure SQL Database](https://go.microsoft.com/fwlink/?LinkId=244333)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de Destination ADO NET &#40;Page mappages&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
- [Éditeur de Destination ADO NET &#40;Page sortie d’erreur&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
+ [Éditeur de destination ADO NET &#40;page Mappages&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
+ [Éditeur de destination ADO NET &#40;page Sortie d’erreur&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
  [Gestionnaire de connexions ADO.NET](connection-manager/ado-net-connection-manager.md)   
- [Tache d’exécution de requêtes SQL](control-flow/execute-sql-task.md)  
+ [Tache d'exécution de requêtes SQL](control-flow/execute-sql-task.md)  
   
   

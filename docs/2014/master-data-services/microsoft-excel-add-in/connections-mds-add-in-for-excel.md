@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 2f2b2f9d-7744-460e-83cd-56d34ea70ff0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8e03e9a63017db0dc719c8b82a8755c25150ded7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5593e7dd54ebdfcc2eb67dd94f6f9f9dd02cbcb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204829"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360061"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>Connexions (Complément MDS pour Excel)
   Pour télécharger des données dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], vous devez d’abord créer une connexion. Une connexion permet au service web [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] de savoir à quelle base de données MDS se connecter.  
@@ -36,7 +35,7 @@ ms.locfileid: "48204829"
  Le [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] inclut la fonctionnalité Data Quality Services qui vous aide à mettre en correspondance les données avant de les publier sur le référentiel MDS. Lorsque vous vous connectez, si une base de données DQS est installée sur la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que la base de données MDS, vous pouvez voir les boutons DQS sur le ruban. Si la base de données DQS_Main n'existe pas sur l'instance, ces boutons ne sont pas affichés et les fonctionnalités de qualité des données ne sont pas disponibles.  
   
 ## <a name="troubleshooting-connections"></a>Dépannage des connexions  
- Lorsque vous vous connectez à MDS, si vous rencontrez des problèmes, consultez [ http://social.technet.microsoft.com/wiki/contents/articles/4520.aspx ](http://social.technet.microsoft.com/wiki/contents/articles/4520.aspx) pour des conseils de dépannage.  
+ Lorsque vous vous connectez à MDS, si vous rencontrez des problèmes, consultez [ https://social.technet.microsoft.com/wiki/contents/articles/4520.aspx ](https://social.technet.microsoft.com/wiki/contents/articles/4520.aspx) pour des conseils de dépannage.  
   
 ## <a name="related-tasks"></a>Tâches associées  
   

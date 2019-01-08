@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - XML output file format [ssbdiagnose], diagnosticinformation element
@@ -15,12 +14,12 @@ ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6dfc3946f0087b65699968448bdb1c014750572
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55da8efd6ee5b330e259ed78bdd152720403f310
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194878"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367871"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>Élément DiagnosticInformation (ssbdiagnose)
   L’élément **DiagnosticInformation** contient tous les éléments qui signalent les informations de diagnostic trouvées par l’utilitaire. **DiagnosticInformation** est l’élément racine d’un fichier de sortie XML **ssbdiagnostic** .  
@@ -38,7 +37,7 @@ ms.locfileid: "48194878"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|`None`|Néant|  
+|`None`|N/A|  
   
 ## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   
@@ -53,10 +52,10 @@ ms.locfileid: "48194878"
 |Relation|Éléments|  
 |------------------|--------------|  
 |**Élément parent**|Aucun.|  
-|**Éléments enfants**|[Élément de bannière &#40;ssbdiagnose&#41;](banner-element-ssbdiagnose.md)<br /><br /> [Élément issue &#40;ssbdiagnose&#41;](issue-element-ssbdiagnose.md)|  
+|**Éléments enfants**|[Élément Banner &#40;ssbdiagnose&#41;](banner-element-ssbdiagnose.md)<br /><br /> [Élément Issue &#40;ssbdiagnose&#41;](issue-element-ssbdiagnose.md)|  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d'informations sur les espaces de noms XML, consultez l'article [Namespaces in an XML Document](http://go.microsoft.com/fwlink/?LinkId=7341) dans la bibliothèque [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN.  
+ Pour plus d'informations sur les espaces de noms XML, consultez l'article [Namespaces in an XML Document](https://go.microsoft.com/fwlink/?LinkId=7341) dans la bibliothèque [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilitaire ssbdiagnose &#40;Service Broker&#41;](ssbdiagnose-utility-service-broker.md)  

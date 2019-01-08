@@ -18,15 +18,15 @@ ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68f748ce1df9f1ae28600539759433188d534036
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2fe6b8670e8ca6f35b5e3d89dfcac653566417b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118419"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506274"
 ---
 # <a name="creating-stored-procedures"></a>Création de procédures stockées
-  Toutes les procédures stockées doivent être associées à une classe CLR (Common Language Runtime) ou COM (Component Object Model) pour pouvoir être utilisées. La classe doit être installée sur le serveur, généralement sous la forme d’un [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX®, bibliothèque de liens dynamiques (DLL) — et enregistré en tant qu’assembly sur le serveur ou dans un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données.  
+  Toutes les procédures stockées doivent être associées à une classe CLR (Common Language Runtime) ou COM (Component Object Model) pour pouvoir être utilisées. La classe doit être installée sur le serveur, généralement sous la forme d’un [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® dynamiques (DLL) - de bibliothèque de liens et inscrit en tant qu’assembly sur le serveur ou dans un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données.  
   
  Les procédures stockées sont enregistrées sur le serveur ou dans une base de données. Les procédures stockées enregistrées sur le serveur peuvent être appelées à partir de n'importe quel contexte de requête. Les procédures stockées enregistrées dans la base de données sont uniquement accessibles si le contexte de base de données est la base de données dans laquelle la procédure stockée est définie. Si les fonctions d'un assembly appellent les fonctions d'un autre assembly, vous devez enregistrer les deux assemblys dans le même contexte (serveur ou base de données). Pour un serveur ou un déploiement [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données sur un serveur, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour inscrire un assembly. Pour un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser le Concepteur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour enregistrer un assembly dans le projet.  
   

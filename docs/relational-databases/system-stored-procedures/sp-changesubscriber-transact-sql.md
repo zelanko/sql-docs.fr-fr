@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changesubscriber
@@ -17,12 +16,12 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af971732866142104b3f674fbf20f6f774db9e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 466b2c0316cb5de9b38200fd643d0302c5b1ae93
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818522"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203098"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  Nom de l'Abonné sur lequel modifier les options. *abonné* est **sysname**, sans valeur par défaut.  
   
  [  **@type=**] *type*  
- Type de l'Abonné. *type* est **tinyint**, avec NULL comme valeur par défaut. **0** indique un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné. **1** spécifie non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un autre serveur de source de données ODBC abonné.  
+ Type de l'Abonné. *type* est **tinyint**, avec NULL comme valeur par défaut. **0** indique un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné. **1** spécifie non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un autre serveur de source de données ODBC abonné.  
   
  [  **@login=**] **'***connexion***'**  
  ID de connexion pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
@@ -82,7 +81,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_type=**] *frequency_type*  
  Fréquence de planification de la tâche de distribution. *frequency_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|À la demande|  
@@ -99,7 +98,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Date de la tâche de distribution. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Première|  
 |**2**|Seconde|  
@@ -113,7 +112,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_subday=**] *frequency_subday*  
  Fréquence de replanification nécessaire pendant la période définie. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
@@ -141,13 +140,13 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@security_mode=**] *security_mode*  
  Représente le mode de sécurité implémenté. *security_mode* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentification|  
 |**1**|Authentification Windows|  
   
  [ **@publisher**=] **'***publisher***'**  
- Spécifie un serveur de publication non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+ Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé lors de la modification des propriétés de l’article sur un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
@@ -158,7 +157,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="remarks"></a>Notes  
  **sp_changesubscriber** est utilisée dans tous les types de réplication.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_changesubscriber**.  
   
 ## <a name="see-also"></a>Voir aussi  

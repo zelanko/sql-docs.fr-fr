@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65539
@@ -13,12 +13,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a960d003d998cfdd5d87009e7ef34f434d4f1d43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076793"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806941"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Index et clés, boîte de dialogue (Visual Database Tools)
   Utilisez cette boîte de dialogue pour créer ou modifier des index, des clés primaires et des clés uniques. Pour y accéder, ouvrez la définition de table pour la table possédant l’index ou la clé, cliquez avec le bouton droit sur la grille de définition de table et cliquez sur **Index/Clés**.  
@@ -40,7 +40,7 @@ ms.locfileid: "48076793"
  Développée, elle affiche les propriétés **Colonnes**, **Est unique**et **Type**.  
   
  **Colonnes**  
- Répertorie les ordres de tri choisis pour les colonnes de la clé ou de l'index, et donne accès à une boîte de dialogue permettant de définir les ordres de tri. Pour afficher la boîte de dialogue, cliquez sur **Colonnes** , puis sur le bouton de sélection (...) qui apparaît à droite du champ de propriété.  
+ Répertorie les ordres de tri choisis pour les colonnes de la clé ou de l'index, et donne accès à une boîte de dialogue permettant de définir les ordres de tri. Pour afficher la boîte de dialogue, cliquez sur **Colonnes**, puis sur le bouton de sélection (...) qui apparaît à droite du champ de propriété.  
   
  **Est unique**  
  Indique si les données entrées dans cet index ou cette clé doivent être uniques. Cette option n'est pas disponible pour les index XML.  
@@ -55,7 +55,7 @@ ms.locfileid: "48076793"
  Indique le nom de la clé ou de l'index. Lorsqu'un nouvel index ou une nouvelle clé sont créés, ils obtiennent un nom par défaut basé sur la table affichée dans la fenêtre active du Concepteur de tables. Vous pouvez modifier le nom à tout moment.  
   
  **Description**  
- Fournit un endroit auquel décrire la clé ou l'index. Pour écrire une description plus détaillée, cliquez sur **Description** , puis sur le bouton de sélection **(...)** qui apparaît à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
+ Fournit un endroit auquel décrire la clé ou l'index. Pour écrire une description plus détaillée, cliquez sur **Description**, puis sur le bouton de sélection **(...)** qui apparaît à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
   
  **Catégorie Concepteur de tables**  
  Développée, elle affiche des informations pour **Créer comme Clustered**.  

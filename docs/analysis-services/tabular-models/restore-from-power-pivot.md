@@ -1,5 +1,5 @@
 ---
-title: Restaurer à partir de PowerPivot | Documents Microsoft
+title: Restaurer à partir de Power Pivot dans Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f95c1e891a218af73eb7c5bacbd1ea5a48e3a830
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 75290c6b877c3bb10cd42fbb10f1c087310791d3
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041924"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072770"
 ---
 # <a name="restore-from-power-pivot"></a>Restaurer à partir de PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Utilisez la fonctionnalité Restaurer à partir de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de SQL Server Management Studio pour créer une base de données model tabulaire sur une instance Analysis Services (exécutée en mode tabulaire) ou restaurer vers une base de données existante à partir d’un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (.xlsx).  
   
 > [!NOTE]  
->  Le modèle de projet Importer à partir de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de SQL Server Data Tools fournit des fonctionnalités similaires. Pour plus d’informations, consultez [importation à partir de PowerPivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md).  
+>  Le modèle de projet Importer à partir de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de SQL Server Data Tools fournit des fonctionnalités similaires. Pour plus d’informations, consultez [importer à partir de Power Pivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md).  
   
  Lorsque vous utilisez la fonctionnalité Restaurer à partir de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], gardez à l’esprit les points suivants :  
   

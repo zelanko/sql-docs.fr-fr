@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - restoring file state [SQL Server]
@@ -29,12 +28,12 @@ ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3acbe6dffaec03e876f4d9cfc1092c7d6367c364
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc37fbade038b39d6d05cb5b51ecc3e8ba405e2a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071799"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816301"
 ---
 # <a name="file-states"></a>États des fichiers
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'état d'un fichier de base de données est géré indépendamment de l'état de la base de données. Un fichier a toujours un seul état spécifique, tel que ONLINE ou OFFLINE. Pour afficher l’état actuel d’un fichier, utilisez l’affichage catalogue [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) ou [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) . Si la base de données est hors connexion, l’état des fichiers peut être visualisé à partir de l’affichage catalogue [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) .  
@@ -51,12 +50,12 @@ ms.locfileid: "48071799"
 |RESTORING|Le fichier est en cours de restauration. Les fichiers passent à l'état « restauration » en raison d'une commande de restauration affectant l'ensemble du fichier, et non pas juste une page, et conservent cet état tant que la restauration n'est pas accomplie et le fichier récupéré.|  
 |RECOVERY PENDING|La récupération du fichier a été différée. Un fichier prend cet état automatiquement à la suite d'un processus de restauration fragmentaire au cours duquel le fichier n'est ni restauré ni récupéré. Une action supplémentaire est requise de la part de l'utilisateur pour résoudre l'erreur et permettre au processus de récupération de s'achever. Pour plus d’informations, consultez [Restaurations fragmentaires &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md).|  
 |SUSPECT|La récupération du fichier a échoué au cours d'un processus de restauration en ligne. Si le fichier fait partie du groupe de fichiers primaire, la base de données est également marquée comme étant suspecte. Sans cela, seul le fichier est suspect et la base de données reste en ligne.<br /><br /> Le fichier garde l'état suspect tant qu'il n'est pas rendu de nouveau disponible à l'aide de l'une des méthodes suivantes :<br /><br /> Restauration et récupération<br /><br /> DBCC CHECKDB avec REPAIR_ALLOW_DATA_LOSS|  
-|DEFUNCT|Le fichier a été supprimé alors qu'il n'était pas en ligne. Tous les fichiers d'un groupe de fichiers prennent l'état « ancien » quand un groupe de fichiers hors connexion est supprimé.|  
+|DEFUNCT|Le fichier a été supprimé alors qu'il n'était pas en ligne. Tous les fichiers d'un groupe de fichiers prennent l'état « ancien » quand un groupe de fichiers hors connexion est supprimé.|  
   
 ## <a name="related-content"></a>Contenu associé  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
- [États d’une base de données](database-states.md)  
+ [États d'une base de données](database-states.md)  
   
  [États de la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   

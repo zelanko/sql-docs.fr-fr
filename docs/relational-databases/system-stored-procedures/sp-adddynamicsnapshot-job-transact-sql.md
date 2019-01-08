@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddynamicsnapshot_job
@@ -17,12 +16,12 @@ ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5dfdaabc65e98bbad3c6a2df97dfcb32a9c77c50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79412d81e0a16443f3fec515d1d866c3aff1804c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810340"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771221"
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_type=**] *frequency_type*  
  Fréquence à laquelle doit être planifié le travail d'instantané de données filtrées. *frequency_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|À la demande|  
@@ -110,7 +109,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_subday=**] *frequency_subday*  
  Spécifie les unités pour *frequency_subday_interval*. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
@@ -123,7 +122,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Occurrence du travail d'instantané de données filtrées pour chaque mois. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (par défaut)|Première|  
 |**2**|Seconde|  
@@ -163,7 +162,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_MergeDynamicPubPlusPartition](../../relational-databases/replication/codesnippet/tsql/sp-adddynamicsnapshot-jo_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_adddynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>Voir aussi  

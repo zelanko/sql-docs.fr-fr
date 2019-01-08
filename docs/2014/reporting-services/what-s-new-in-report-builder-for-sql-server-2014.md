@@ -11,23 +11,23 @@ ms.assetid: 8223c19b-4b0d-4b1d-a042-9a726c18e708
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15e4e4a90232f4db1b83b3a09d45589e6fcdeb8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06a517f2444c032e52b72f86f115167a0151fea2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226879"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371091"
 ---
 # <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>Ce que&#39;s nouveau générateur de rapports pour SQL Server 2014
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] inclut plusieurs fonctionnalités [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] inclut plusieurs fonctionnalités [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
  Pour plus d’informations sur les fonctionnalités de cette version pour les autres [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] produits et technologies, consultez [What ' s New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
 > [!TIP]  
->  Pour obtenir les dernières informations et ressources sur les nouvelles fonctionnalités de cette version, consultez [Informations supplémentaires sur les nouveautés de SQL Server Reporting Services (SSRS)](http://go.microsoft.com/fwlink/?LinkId=207147).  
+>  Pour obtenir les dernières informations et ressources sur les nouvelles fonctionnalités de cette version, consultez [Informations supplémentaires sur les nouveautés de SQL Server Reporting Services (SSRS)](https://go.microsoft.com/fwlink/?LinkId=207147).  
   
 ##  <a name="ExcelRenderer"></a> Convertisseur Excel pour Microsoft Excel 2007-2010 et Microsoft Excel 2003  
- L'extension de rendu Excel [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], nouvelle dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], restitue un rapport sous la forme d'un document Excel compatible avec [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2007-2010, ainsi qu'avec [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2003 moyennant l'installation préalable du Module de compatibilité pour formats de fichiers Microsoft Office Word, Excel et PowerPoint. Le format est Office Open XML et l'extension de fichier est .xlsx.  
+ L'extension de rendu Excel [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , nouvelle dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], restitue un rapport sous la forme d'un document Excel compatible avec [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2007-2010, ainsi qu'avec [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2003 moyennant l'installation préalable du Module de compatibilité pour formats de fichiers Microsoft Office Word, Excel et PowerPoint. Le format est Office Open XML et l'extension de fichier est .xlsx.  
   
  Cette extension de rendu Excel supprime les limitations de la version antérieure, compatible avec Excel 2003. Voici les améliorations apportées à l'extension de rendu :  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48226879"
  Pour plus d’informations, consultez [Exportation vers Microsoft Excel &#40;Générateur de rapports et SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ##  <a name="WordRenderer"></a> Convertisseur Word pour Microsoft Word 2007-2010 et Microsoft Word 2003  
- L'extension de rendu Word [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], nouvelle dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], restitue un rapport sous la forme d'un document Word compatible avec [!INCLUDE[ofprword](../includes/ofprword-md.md)] 2007-2010, ainsi qu'avec [!INCLUDE[ofprword](../includes/ofprword-md.md)] 2003 moyennant l'installation préalable du Module de compatibilité pour formats de fichiers [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word, Excel et PowerPoint. Le format est Office Open XML et l'extension de fichier est .docx.  
+ L'extension de rendu Word [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , nouvelle dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], restitue un rapport sous la forme d'un document Word compatible avec [!INCLUDE[ofprword](../includes/ofprword-md.md)] 2007-2010, ainsi qu'avec [!INCLUDE[ofprword](../includes/ofprword-md.md)] 2003 moyennant l'installation préalable du Module de compatibilité pour formats de fichiers [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word, Excel et PowerPoint. Le format est Office Open XML et l'extension de fichier est .docx.  
   
  En plus de rendre les nouvelles fonctions de Word 2007-2010 disponibles dans les rapports exportés, les fichiers *.docx des rapports exportés paraissent plus petits. Les rapports exportés à l'aide du convertisseur Word sont généralement beaucoup plus petits que les mêmes rapports exportés à l'aide du convertisseur Word 2003.  
   

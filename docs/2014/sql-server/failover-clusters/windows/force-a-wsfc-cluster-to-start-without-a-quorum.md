@@ -13,21 +13,21 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec157f7d9e0b793df6881b8fa8e110ec36838ed6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 674f6f53610c8bf864aba5a2b5c7310c10f969c2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078719"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376731"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forcer un cluster WSFC à démarrer sans quorum
   Cette rubrique explique comment forcer un nœud de cluster de clustering de basculement Windows Server (WSFC) à démarrer sans quorum.  Cela peut être nécessaire dans les scénarios de récupération d'urgence et de sous-réseaux multiples pour récupérer des données et pour rétablir entièrement la haute disponibilité pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Avant de commencer :**  [Recommandations](#Recommendations), [Sécurité](#Security)  
+-   **Avant de commencer :**  [Recommandations](#Recommendations), [sécurité](#Security)  
   
--   **Pour forcer un cluster à démarrer sans quorum :**  [Utilisation du Gestionnaire du cluster de basculement](#FailoverClusterManagerProcedure), [Utilisation de PowerShell](#PowerShellProcedure), [Utilisation de Net.exe](#CommandPromptProcedure)  
+-   **Pour forcer un cluster à démarrer sans quorum :**  [À l’aide du Gestionnaire du Cluster de basculement](#FailoverClusterManagerProcedure), [à l’aide de Powershell](#PowerShellProcedure), [à l’aide de Net.exe](#CommandPromptProcedure)  
   
--   **Suivi :**  [Suivi : après avoir forcé le cluster à démarrer sans quorum](#FollowUp)  
+-   **Suivi :**  [Suivi : Après avoir forcé le Cluster à démarrer sans Quorum](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -43,11 +43,11 @@ ms.locfileid: "48078719"
   
 1.  Ouvrez un Gestionnaire du cluster de basculement et connectez-vous au nœud de cluster souhaité pour forcer la mise en ligne.  
   
-2.  Dans le volet **Actions** , cliquez sur **Forcer le démarrage du cluster**, puis cliquez sur **Oui – Forcer mon cluster à démarrer**.  
+2.  Dans le volet **Actions**, cliquez sur **Forcer le démarrage du cluster**, puis cliquez sur **Oui - Forcer mon cluster à démarrer**.  
   
 3.  Dans le volet gauche, dans l'arborescence du **Gestionnaire du cluster de basculement** , cliquez sur le nom de cluster.  
   
-4.  Dans le volet résumé, vérifiez que la valeur active de **Configuration de quorum** est  **Avertissement : le cluster s'exécute dans l'état ForceQuorum**.  
+4.  Dans le volet Résumé, vérifiez que l’actuel **Configuration de Quorum** valeur est :  **Avertissement : Cluster est en cours d’exécution dans l’état ForceQuorum**.  
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
   
@@ -59,9 +59,9 @@ ms.locfileid: "48078719"
   
 3.  Utilisez `Stop-ClusterNode` pour vous assurer que le service de cluster est arrêté.  
   
-4.  Utilisez `Start-ClusterNode` avec `–FixQuorum` pour forcer le service de cluster à démarrer.  
+4.  Utilisez `Start-ClusterNode` avec `-FixQuorum` pour forcer le service de cluster à démarrer.  
   
-5.  Utilisez `Get-ClusterNode` avec `–Propery NodeWieght = 1` pour définir la valeur qui garantit que le nœud est un membre du quorum disposant de droits de vote.  
+5.  Utilisez `Get-ClusterNode` avec `-Propery NodeWieght = 1` pour définir la valeur qui garantit que le nœud est un membre du quorum disposant de droits de vote.  
   
 6.  Générez la sortie des propriétés du nœud de cluster dans un format lisible.  
   
@@ -72,8 +72,8 @@ ms.locfileid: "48078719"
 Import-Module FailoverClusters  
   
 $node = "AlwaysOnSrv02"  
-Stop-ClusterNode –Name $node  
-Start-ClusterNode –Name $node -FixQuorum  
+Stop-ClusterNode -Name $node  
+Start-ClusterNode -Name $node -FixQuorum  
   
 (Get-ClusterNode $node).NodeWeight = 1  
   
@@ -102,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> Suivi : après avoir forcé le cluster à démarrer sans quorum  
+##  <a name="FollowUp"></a> Suivi : après avoir forcé le cluster à démarrer sans quorum  
   
 -   Vous devez réévaluer et reconfigurer les valeurs NodeWeight pour construire correctement un nouveau quorum avant de mettre en ligne d'autres nœuds. Sinon, le cluster peut de nouveau se trouver hors connexion.  
   
@@ -122,13 +122,13 @@ net.exe start clussvc /forcequorum
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Afficher les événements et journaux pour un cluster de basculement](http://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
+-   [Afficher les événements et journaux pour un cluster de basculement](https://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
   
--   [Applets de commande de cluster de basculement Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Applets de commande de cluster de basculement Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Récupération d’urgence WSFC par le quorum forcé &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Configurer les paramètres NodeWeight pour un quorum de cluster](configure-cluster-quorum-nodeweight-settings.md)   
- [Applets de commande de cluster de basculement dans Windows PowerShell répertoriées par tâche](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [Applets de commande de cluster de basculement dans Windows PowerShell répertoriées par tâche](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
   
   

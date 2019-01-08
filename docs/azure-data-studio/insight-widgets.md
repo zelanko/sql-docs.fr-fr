@@ -1,7 +1,8 @@
 ---
-title: Utiliser des widgets d’analyse pour surveiller les serveurs et bases de données dans Azure Data Studio | Microsoft Docs
-description: Découvrez les widgets d’analyse dans Azure Data Studio.
-ms.custom: tools|sos
+title: Utiliser des widgets d’analyse pour surveiller les serveurs et bases de données
+titleSuffix: Azure Data Studio
+description: En savoir plus sur les widgets d’analyse dans Azure Data Studio
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d669b72aadb9fe1ea2ec61c2059a1d932ee52d4d
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 7fa7317d048d2bb9e19b6e82f5323a3b8ed15751
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356330"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030193"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gérer les serveurs et bases de données avec des widgets d’analyse dans [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

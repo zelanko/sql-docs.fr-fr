@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ae900ea29dba0217a9e186007476c12fa15c92e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac9e0cfe4b8e7d0250f6da7acea276f64dfb622f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098579"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790731"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>Options Demande de profil de distribution de longueurs de colonne (tâche de profilage des données)
   Utilisez le volet **Propriétés de demandes** de la page **Demandes de profil** pour définir les options de la **Demande de profil de distribution de longueurs de colonne** sélectionnée dans le volet Demandes. Un profil de distribution de longueurs de colonne signale toutes les longueurs distinctes des valeurs de chaîne dans la colonne sélectionnée, et le pourcentage de lignes dans la table que chaque longueur représente. Ce profil peut vous aider à identifier les problèmes dans vos données, tels que les valeurs non valides. Par exemple, vous profilez une colonne de codes d'états des États-Unis à deux caractères et découvrez des valeurs excédant deux caractères.  
@@ -80,7 +79,7 @@ ms.locfileid: "48098579"
  Indiquez si les espaces de fin doivent être ignorés lorsque le profil compare des valeurs de chaîne. La valeur par défaut de cette option est **True**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de tâche de profilage des données &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de profilage de données &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

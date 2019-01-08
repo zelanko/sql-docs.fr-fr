@@ -1,5 +1,6 @@
 ---
-title: Utiliser des fournisseurs d’Active Directory tiers avec SQL Server sur Linux | Microsoft Docs
+title: Utiliser des fournisseurs d’Active Directory tiers avec SQL Server sur Linux
+titleSuffix: SQL Server
 description: Ce didacticiel décrit les étapes de configuration d’authentification Active Directory avec des fournisseurs tiers
 author: dylan-MSFT
 ms.date: 07/25/2018
@@ -7,16 +8,16 @@ ms.author: dygray
 manager: mikehab
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AD authentication
-ms.openlocfilehash: 0ffe146de3a842f9c273b4dbba2a9fe4d9ff7ff5
-ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
+ms.openlocfilehash: de28696efd16a2be61864a810b3fd713b1066258
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757994"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160567"
 ---
 # <a name="use-third-party-active-directory-providers-with-sql-server-on-linux"></a>Utiliser des fournisseurs d’Active Directory tiers avec SQL Server sur Linux
 

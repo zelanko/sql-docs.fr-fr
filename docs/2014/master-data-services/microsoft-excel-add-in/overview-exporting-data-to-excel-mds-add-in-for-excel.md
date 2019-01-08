@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0d2e97c16773cd83d208faf711e7c0bebe8282a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 465b14ab5cb96f3f587222427ea793bbaf225b01
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107919"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762401"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>Chargement de données (Complément MDS pour Excel)
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], vous devez charger des données à partir du référentiel MDS dans une feuille de calcul Excel active avant de pouvoir travailler avec lui. Lorsque vous avez terminé de manipuler les données, publiez-les dans le référentiel MDS afin que d'autres utilisateurs puissent les utiliser.  
@@ -29,7 +28,7 @@ ms.locfileid: "48107919"
 >  Un classeur compatible DM doit être ouvert et mis à jour uniquement dans Excel avec le complément MDS pour Excel. L'ouverture d'un classeur compatible DM dans Excel sur un ordinateur sur lequel le complément MDS Excel n'est pas installé n'est pas prise en charge et peut endommager le fichier du classeur. Si vous souhaitez partager des données avec une autre personne, envoyez-lui un fichier de requête de raccourci par courrier électronique au lieu d'enregistrer la feuille de calcul et de la lui envoyer par courrier électronique. Pour plus d’informations sur la requête, consultez [Envoyer par e-mail un fichier de requête de raccourci &#40;Complément MDS pour Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md).  
   
 ## <a name="filtering-data"></a>Filtrage des données  
- Vous pouvez filtrer les données avant le chargement afin de limiter le volume de données que vous allez télécharger. Par exemple, vous pouvez choisir les attributs (colonnes) que vous souhaitez charger, l'ordre d'affichage des attributs et les membres (lignes de données) que vous souhaitez utiliser. Pour plus d’informations, consultez [filtrer les données avant le chargement &#40;complément MDS pour Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md).  
+ Vous pouvez filtrer les données avant le chargement afin de limiter la quantité de données que vous allez télécharger. Par exemple, vous pouvez choisir les attributs (colonnes) que vous souhaitez charger, l'ordre d'affichage des attributs et les membres (lignes de données) que vous souhaitez utiliser. Pour plus d’informations, consultez [filtrer les données avant le chargement &#40;complément MDS pour Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md).  
   
 ## <a name="connect-automatically-and-load-frequently-used-data"></a>Connexion automatique et chargement de données fréquemment utilisées  
  Si vous souhaitez vous connecter toujours au même serveur et charger le même jeu de données, vous pouvez créer des fichiers de requête de raccourci contenant les informations de connexion et de filtre. Pour plus d’informations sur les fichiers de requête, consultez [Fichiers de requête de raccourci &#40;Complément MDS pour Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md).  
@@ -43,7 +42,7 @@ ms.locfileid: "48107919"
 |----------------------|-----------|  
 |Filtrez les données MDS avant de les charger dans Excel.|[Filtrer les données avant le chargement &#40;complément MDS pour Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
 |Chargez des données MDS dans Excel.|[Charger des données MDS dans Excel](export-data-to-excel-from-master-data-services.md)|  
-|Modifiez l'ordre des colonnes avant de télécharger les données.|[Réorganiser les colonnes &#40;complément MDS pour Excel&#41;](reorder-columns-mds-add-in-for-excel.md)|  
+|Modifiez l'ordre des colonnes avant de télécharger les données.|[Réorganiser des colonnes &#40;Complément MDS pour Excel&#41;](reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenu associé  
   

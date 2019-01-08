@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - spoofing attacks
@@ -18,23 +17,23 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 156fa271582673d93cf2f76e92e447ea63b846c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0df4e17291e03e23cb68e984c8473064b0208a9c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200829"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366321"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Se connecter au moteur de base de données à l'aide de la protection étendue
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la **protection étendue** depuis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protection étendue de l'authentification** est une fonctionnalité des composants réseau implémentée par le système d'exploitation. La**protection étendue** est prise en charge dans Windows 7 et Windows Server 2008 R2. La**protection étendue** figure dans les Service Packs pour les systèmes d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] plus anciens. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est plus sécurisé lorsque les connexions sont établies à l'aide de la **protection étendue**.  
   
 > [!IMPORTANT]  
->  Windows n'active pas la **protection étendue** par défaut. Pour plus d'informations sur l'activation de la **protection étendue** dans Windows, consultez [Protection étendue de l'authentification](http://support.microsoft.com/kb/968389)  
+>  Windows n'active pas la **protection étendue** par défaut. Pour plus d'informations sur l'activation de la **protection étendue** dans Windows, consultez [Protection étendue de l'authentification](https://support.microsoft.com/kb/968389)  
   
 ## <a name="description-of-extended-protection"></a>Description de la protection étendue  
- La**protection étendue** utilise la liaison de canal et la liaison de service pour mieux empêcher une attaque de relais d'authentification. Dans une attaque de relais d'authentification, un client qui peut effectuer l'authentification NTLM (par exemple, l'Explorateur Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, une application SqlClient .NET, etc.), se connecte à une personne malveillante (par exemple, un serveur de fichiers CIFS nuisible). La personne malveillante utilise les informations d'identification du client pour se faire passer pour le client et s'authentifier auprès d'un service (par exemple, une instance du service [!INCLUDE[ssDE](../../includes/ssde-md.md)] ).  
+ La**protection étendue** utilise la liaison de canal et la liaison de service pour mieux empêcher une attaque de relais d'authentification. Dans une attaque de relais d'authentification, un client qui peut effectuer l'authentification NTLM (par exemple, l'Explorateur Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, une application SqlClient .NET, etc.), se connecte à une personne malveillante (par exemple, un serveur de fichiers CIFS nuisible). L’attaquant utilise les informations d’identification du client pour se faire passer pour le client et s’authentifier auprès d’un service (par exemple, une instance du service [!INCLUDE[ssDE](../../includes/ssde-md.md)]).  
   
- Cette attaque se présente sous deux formes :  
+ Cette attaque se présente sous deux formes :  
   
 -   Dans une attaque par ruse, le client est attiré dans un piège pour se connecter volontairement à la personne malveillante.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "48200829"
  La liaison de service répond aux attaques par leurre en demandant à un client d'envoyer un nom de principal du service (SPN) signé du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auquel il envisage de se connecter. Dans le cadre de la réponse d'authentification, le service valide que le SPN reçu dans le paquet correspond à son propre SPN. Si un client est leurré pour se connecter à une personne malveillante, le client inclura le SPN signé de la personne malveillante. La personne malveillante ne peut pas relayer le paquet pour s'authentifier auprès du véritable service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comme client, parce qu'il inclurait le SPN de la personne malveillante. La liaison de service implique un coût unique et négligeable, mais ne traite pas les attaques d'usurpation. La liaison de service se produit lorsqu'une application cliente n'utilise pas le chiffrement pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="channel-binding"></a>liaison de canal  
- La liaison de canal établit un canal sécurisé (Schannel) entre un client et une instance du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le service vérifie l'authenticité du client en comparant le jeton de liaison de canal du client spécifique à ce canal à son propre jeton de liaison de canal. La liaison de canal répond à la fois aux attaques par leurre et d'usurpation. Toutefois, elle implique un coût d'exécution plus important, car elle nécessite le chiffrement TLS (Transport Layer Security) de tout le trafic de session. La liaison de canal se produit lorsqu'une application cliente utilise le chiffrement pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que le chiffrement soit appliqué par le client ou par le serveur.  
+ La liaison de canal établit un canal sécurisé (Schannel) entre un client et une instance du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le service vérifie l’authenticité du client en comparant le jeton de liaison de canaux du client à son propre jeton de liaison de canaux. La liaison de canal répond à la fois aux attaques par leurre et d'usurpation. Toutefois, elle implique un coût d'exécution plus important, car elle nécessite le chiffrement TLS (Transport Layer Security) de tout le trafic de session. La liaison de canal se produit lorsqu'une application cliente utilise le chiffrement pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que le chiffrement soit appliqué par le client ou par le serveur.  
   
 > [!WARNING]  
 >  Les fournisseurs de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge TLS 1.0 et SSL 3.0. Si vous appliquez un autre protocole (comme TLS 1.1 ou TLS 1.2) en apportant des modifications dans la couche SChannel du système d’exploitation, vos connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risquent d’échouer.  
@@ -54,9 +53,9 @@ ms.locfileid: "48200829"
 ### <a name="operating-system-support"></a>Prise en charge du système d'exploitation  
  Les liens suivants fournissent davantage d'informations sur la prise en charge de la **protection étendue**par Windows :  
   
--   [Integrated Windows Authentication with Extended Protection (en anglais)](http://msdn.microsoft.com/library/dd639324.aspx)  
+-   [Integrated Windows Authentication with Extended Protection (en anglais)](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Microsoft Security Advisory (973811), Extended Protection for Authentication (en anglais)](http://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Microsoft Security Advisory (973811), Extended Protection for Authentication (en anglais)](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
   
 ## <a name="settings"></a>Paramètres  
  Trois paramètres de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affectent la liaison de service et la liaison de canal. Les paramètres peuvent être configurés à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou en utilisant WMI, et peuvent être affichés à l'aide de la facette **Paramètres de protocole serveur** de la gestion basée sur des stratégies.  
@@ -80,7 +79,7 @@ ms.locfileid: "48200829"
      La variable **SPN NTLM acceptés** est requise lorsqu'un serveur est connu de plusieurs SPN. Lorsqu'un client essaie de se connecter au serveur à l'aide d'un SPN valide que le serveur ne connaît pas, la liaison de service échoue. Pour éviter ce problème, les utilisateurs peuvent spécifier plusieurs SPN qui représentent le serveur à l'aide de **SPN NTLM acceptés**. **SPN NTLM acceptés** est une série de SPN séparés par des points-virgules. Par exemple, pour autoriser les SPN **MSSQLSvc/ NomHôte1.Contoso.com** et **MSSQLSvc/ NomHôte2.Contoso.com**, tapez **MSSQLSvc/NomHôte1.Contoso.com;MSSQLSvc/NomHôte2.Contoso.com** dans la zone **SPN NTLM acceptés** . La variable a une longueur maximale de 2 048 caractères. **SPN NTLM acceptés** figure dans **Propriétés de Protocoles pour MSSQLSERVER (onglet Avancé)** dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>Activation de la protection étendue pour le moteur de base de données  
- Pour utiliser la **protection étendue**, le serveur et le client doivent tous deux avoir un système d'exploitation qui prend en charge la **protection étendue**, et la **protection étendue** doit être activée sur le système d'exploitation. Pour plus d’informations sur l’activation de la **protection étendue** pour le système d’exploitation, consultez [Protection étendue de l’authentification](http://support.microsoft.com/kb/968389).  
+ Pour utiliser la **protection étendue**, le serveur et le client doivent tous deux avoir un système d'exploitation qui prend en charge la **protection étendue**, et la **protection étendue** doit être activée sur le système d'exploitation. Pour plus d’informations sur l’activation de la **protection étendue** pour le système d’exploitation, consultez [Protection étendue de l’authentification](https://support.microsoft.com/kb/968389).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la **protection étendue** depuis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protection étendue** de quelques versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sera disponible dans de futures mises à jour. Après avoir activé la **protection étendue** sur le serveur, procédez comme suit pour activer la **protection étendue**:  
   
@@ -99,12 +98,12 @@ ms.locfileid: "48200829"
 ## <a name="configuring-other-sql-server-components"></a>Configuration d'autres composants SQL Server  
  Pour plus d’informations sur la configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Protection étendue de l’authentification avec Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
   
- Lors de l'utilisation d'IIS pour accéder aux données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'aide d'une connexion HTTP ou HTTPs, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut tirer parti de la protection étendue fournie par IIS. Pour plus d'informations sur la configuration d'IIS pour utiliser la protection étendue, consultez [Configure Extended Protection in IIS 7.5](http://go.microsoft.com/fwlink/?LinkId=181105)(en anglais).  
+ Lors de l'utilisation d'IIS pour accéder aux données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'aide d'une connexion HTTP ou HTTPs, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut tirer parti de la protection étendue fournie par IIS. Pour plus d'informations sur la configuration d'IIS pour utiliser la protection étendue, consultez [Configure Extended Protection in IIS 7.5](https://go.microsoft.com/fwlink/?LinkId=181105)(en anglais).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration réseau du serveur](server-network-configuration.md)   
  [Configuration du réseau client](client-network-configuration.md)   
- [Extended Protection for Authentication Overview (en anglais)](http://go.microsoft.com/fwlink/?LinkID=177943)   
- [Authentification Windows intégrée avec protection étendue](http://go.microsoft.com/fwlink/?LinkId=179922) (Integrated Windows Authentication with Extended Protection)  
+ [Extended Protection for Authentication Overview (en anglais)](https://go.microsoft.com/fwlink/?LinkID=177943)   
+ [Authentification Windows intégrée avec protection étendue](https://go.microsoft.com/fwlink/?LinkId=179922) (Integrated Windows Authentication with Extended Protection)  
   
   

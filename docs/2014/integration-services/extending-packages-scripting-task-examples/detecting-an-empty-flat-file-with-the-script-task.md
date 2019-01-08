@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - flat files
@@ -17,12 +15,12 @@ ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c33e25a9fde0a410773de9c2070d0ded53962d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66f0bf42724b2806704503f0e0538d5b69ed7738
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088959"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355637"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>Détection d'un fichier plat vide à l'aide de la tâche de script
   La source de fichier plat ne détermine pas si un fichier plat contient des lignes de données avant de tenter de les traiter. Vous pouvez améliorer l'efficacité d'un package, notamment d'un package qui parcourt de nombreux fichiers plats, en ignorant les fichiers qui ne contiennent aucune ligne de données. La tâche de script peut rechercher un fichier plat vide avant que le package ne commence à traiter le flux de données.  
@@ -141,7 +139,7 @@ public void Main()
         }  
 ```  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemples de tâche de script](../extending-packages-scripting-task-examples/script-task-examples.md)  

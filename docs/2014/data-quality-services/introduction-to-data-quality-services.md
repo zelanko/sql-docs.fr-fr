@@ -12,12 +12,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 585639067bd75c12be1b580ecd210171dff848a8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6dcc318a7bcd4bdbf8a8f4466e0a15bed155761c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030984"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392247"
 ---
 # <a name="introduction-to-data-quality-services"></a>Présentation de Data Quality Services
   La solution de qualité des données fournie par [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permet aux gestionnaires de données et aux professionnels de l'informatique de préserver la qualité de leurs données et de s'assurer que ces dernières sont adaptées à leur utilisation professionnelle. DQS est une solution reposant sur des connaissances qui offre des méthodes interactives et assistées par ordinateur pour gérer l'intégrité et la qualité de vos sources de données. DQS vous permet de découvrir, de générer et de gérer les connaissances relatives à vos données. Vous pouvez ensuite utiliser ces connaissances pour procéder au nettoyage, à la mise en correspondance et au profilage des données. Vous pouvez également tirer parti des services en nuage de fournisseurs de données de référence dans un projet de qualité des données DQS.  
@@ -27,7 +27,7 @@ ms.locfileid: "51030984"
   
  Des données de qualité supérieure sont essentielles à la rentabilité des entreprises et des institutions. Les organisations de toutes tailles peuvent utiliser DQS pour améliorer la valeur informative de leurs données afin que celles-ci soient mieux adaptées à l'usage prévu. Une solution de qualité des données peut améliorer la fiabilité, l'accessibilité et la réutilisabilité des données. Elle peut améliorer exhaustivité, l'exactitude, la conformité et la cohérence de vos données, résolvant ainsi les problèmes dus à des données incorrectes dans les charges de travail de business intelligence ou d'entrepôt de données, ainsi que dans les systèmes opérationnels OLTP.  
   
- DQS permet à un utilisateur professionnel, un travailleur de l'information ou un professionnel de l'informatique non spécialiste des bases de données ou de la programmation de créer, de gérer et d'exécuter les opérations de qualité des données de son organisation avec un minimum de configuration ou de préparation.  
+ DQS permet à un utilisateur professionnel, un travailleur de l’information ou un professionnel de l’informatique non spécialiste des bases de données ou de la programmation, de créer, gérer et exécuter les opérations de qualité des données de son organisation avec un minimum de configuration et de préparation.  
   
 ##  <a name="Answer"></a> Répondre au besoin avec DQS  
  La qualité des données n'est pas définie en termes absolus. Elle dépend de la pertinence des données vis-à-vis de l'objectif qu'elle doit atteindre. DQS identifie les données potentiellement incorrectes et vous fournit une estimation de la probabilité d'inexactitude des données. DQS vous fournit une présentation sémantique des données afin de vous permettre de déterminer leur pertinence. DQS vous permet de résoudre les problèmes résultant de la non-exhaustivité, de l'absence de conformité, de l'incohérence, de l'inexactitude, de la non-validité et de la duplication des données.  
@@ -44,7 +44,7 @@ ms.locfileid: "51030984"
   
 -   **Analyse :** suivi et détermination de l'état des activités de qualité des données. L'analyse vous permet de vérifier que votre solution de qualité des données fait ce pour quoi elle a été conçue. Pour plus d’informations, consultez [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
--   **Base de connaissances :** Data Quality Services est une solution reposant sur des connaissances qui analyse les données en fonction des connaissances que vous générez avec DQS. Ainsi, vous pouvez créer des processus de qualité des données qui améliorent continuellement les connaissances, et par conséquent, la qualité des données.  
+-   **Base de connaissances :** Data Quality Services est une solution de base de connaissances qui analyse les données en fonction des connaissances que vous générez avec DQS. Ainsi, vous pouvez créer des processus de qualité des données qui améliorent continuellement les connaissances, et par conséquent, la qualité des données.  
   
  L'illustration ci-dessous montre le processus DQS :  
   

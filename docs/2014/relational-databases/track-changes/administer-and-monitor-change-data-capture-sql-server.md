@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
@@ -15,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dc1702fd89a232d6b939dc8300e42925a0da293b
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560166"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788901"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrer et surveiller la capture de données modifiées (SQL Server)
   Cette rubrique décrit comment administrer et surveiller la capture de données modifiées.  
@@ -32,7 +31,7 @@ ms.locfileid: "51560166"
  Pour comprendre le comportement du travail de capture, vous devez comprendre comment les paramètres configurables sont utilisés par `sp_cdc_scan`.  
   
 #### <a name="maxtrans-parameter"></a>Paramètre maxtrans  
- Le paramètre *maxtrans* spécifie le nombre maximal de transactions qui peuvent être traitées au cours d'un même cycle d'analyse du journal. Si, lors de l’analyse, le nombre de transactions à traiter atteint cette limite, aucune transaction supplémentaire n’est incluse dans l’analyse en cours. Une fois le cycle d'analyse terminé, le nombre de transactions qui ont été traitées sera toujours inférieur ou égal à *maxtrans*.  
+ Le paramètre *maxtrans* spécifie le nombre maximal de transactions qui peuvent être traitées au cours d'un même cycle d'analyse du journal. Si, au cours de l'analyse, le nombre de transactions à traiter atteint cette limite, aucune transaction supplémentaire n'est incluse dans l'analyse en cours. Une fois le cycle d'analyse terminé, le nombre de transactions qui ont été traitées sera toujours inférieur ou égal à *maxtrans*.  
   
 #### <a name="maxscans-parameter"></a>Paramètre maxscans  
  Le paramètre *maxscans* spécifie le nombre maximal de cycles d’analyse tentés pour vider le journal avant de retourner (continuous = 0) ou d’exécuter un waitfor (continuous = 1).  
@@ -76,7 +75,7 @@ ms.locfileid: "51560166"
  Lorsqu'un nettoyage est effectué, la limite inférieure de toutes les instances de capture est initialement mise à jour au cours d'une même transaction. Le processus essaie ensuite de supprimer les entrées obsolètes des tables de modifications et de la table cdc.lsn_time_mapping. La valeur de seuil configurable limite le nombre d'entrées pouvant être supprimées au cours de chaque instruction. Tout échec de suppression sur une table individuelle n'empêchera pas l'opération d'être tentée sur les tables restantes.  
   
 ### <a name="cleanup-job-customization"></a>Personnalisation d'un travail de nettoyage  
- Pour le travail de nettoyage, la possibilité de personnalisation réside dans la stratégie utilisée pour déterminer quelles entrées de table de modifications doivent être ignorées. La seule stratégie prise en charge dans le travail de nettoyage réalisé est une stratégie basée sur le temps. Dans cette situation, la nouvelle limite inférieure est calculée en soustrayant la période de rétention autorisée de l'heure de validation de la dernière transaction traitée. Étant donné que les procédures de nettoyage sous-jacentes sont basées sur `lsn` au lieu du temps, autant de stratégies peut être utilisée pour déterminer le plus petit `lsn` à conserver dans les tables de modifications. Seules certaines sont strictement basées sur le temps. Par exemple, la connaissance des clients pourrait être utilisée comme mécanisme de prévention de défaillance si en aval, les processus qui requièrent l'accès aux tables de modifications ne peuvent pas s'exécuter. Par ailleurs, bien que la stratégie par défaut applique le même `lsn` pour nettoyer les tables de modifications de toutes les bases de données, la procédure de nettoyage sous-jacente, peut également être appelée pour effectuer le nettoyage au niveau de l'instance de capture.  
+ Pour le travail de nettoyage, la possibilité de personnalisation réside dans la stratégie utilisée pour déterminer quelles entrées de table de modifications doivent être ignorées. La seule stratégie prise en charge dans le travail de nettoyage réalisé est une stratégie basée sur le temps. Dans cette situation, la nouvelle limite inférieure est calculée en soustrayant la période de rétention autorisée de l'heure de validation de la dernière transaction traitée. Étant donné que les procédures de nettoyage sous-jacentes sont basées sur `lsn` au lieu du temps, autant de stratégies peut être utilisée pour déterminer le plus petit `lsn` à conserver dans les tables de modifications. Seules certaines sont strictement basées sur le temps. Par exemple, la connaissance des clients pourrait être utilisée comme mécanisme de prévention de défaillance si en aval, les processus qui requièrent l'accès aux tables de modifications ne peuvent pas s'exécuter. En outre, bien que la stratégie par défaut applique le même `lsn` pour nettoyer les tables de modifications de toutes les bases de données, la procédure de nettoyage sous-jacente peut également être appelée pour le nettoyage au niveau de l’instance de capture.  
   
 ##  <a name="Monitor"></a> Surveiller le processus de capture de données modifiées  
  La surveillance du processus de capture de données modifiées vous permet de déterminer si les modifications sont écrites correctement et avec une latence raisonnable aux tables de modifications. La surveillance peut également vous aider à identifier les erreurs qui peuvent se produire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut deux vues de gestion dynamique pour vous aider à surveiller la capture de données modifiées : [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) et [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  
@@ -89,7 +88,7 @@ SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0
 ```
   
 ### <a name="determine-latency"></a>Déterminer la latence  
- La vue de gestion sys.dm_cdc_log_scan_sessions inclut une colonne qui enregistre la latence pour chaque session de capture. La latence correspond au temps écoulé entre la validation d'une transaction sur une table source et la dernière transaction capturée en cours de validation sur la table de modifications. La colonne de latence est remplie uniquement pour les sessions actives. Pour les sessions ayant une valeur supérieure à 0 dans la colonne empty_scan_count, la colonne de latence a la valeur 0. La requête suivante retourne la latence moyenne pour les sessions les plus récentes :  
+ La vue de gestion sys.dm_cdc_log_scan_sessions inclut une colonne qui enregistre la latence pour chaque session de capture. La latence correspond au temps écoulé entre la validation d'une transaction sur une table source et la dernière transaction capturée en cours de validation sur la table de modifications. La colonne de latence est remplie uniquement pour les sessions actives. Pour les sessions ayant une valeur supérieure à 0 dans la colonne empty_scan_count, la colonne de latence a la valeur 0. La requête suivante retourne la latence moyenne pour les sessions les plus récentes :  
   
 ```sql
 SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
@@ -97,7 +96,7 @@ SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
   
  Vous pouvez utiliser des données de latence pour déterminer si le processus de capture traite les transactions rapidement ou lentement. Ces données sont très utiles lorsque le processus de capture s'exécute continuellement. Si le processus de capture s'exécute selon une planification, la latence peut être élevée à cause du décalage entre les transactions qui sont validées sur la table source et le processus de capture qui s'exécute à l'heure planifiée.  
   
- Une autre mesure importante du rendement du processus de la capture est le débit. Il s'agit du nombre moyen de commandes par seconde qui sont traitées pendant chaque session. Pour déterminer le débit d'une session, divisez la valeur dans la colonne command_count par la valeur dans la colonne de durée. La requête suivante retourne le débit moyen pour les sessions les plus récentes :  
+ Une autre mesure importante du rendement du processus de la capture est le débit. Il s'agit du nombre moyen de commandes par seconde qui sont traitées pendant chaque session. Pour déterminer le débit d'une session, divisez la valeur dans la colonne command_count par la valeur dans la colonne de durée. La requête suivante retourne le débit moyen pour les sessions les plus récentes :  
   
 ```sql
 SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0

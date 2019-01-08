@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - recursive hierarchies [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b18ec687743d035e56ac3111f894add26f2b8f71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c62c04ccbfa6e4143277f09950f79e8b59a01f97
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198509"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810921"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>Hiérarchies récursives (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], une hiérarchie récursive est une hiérarchie dérivée qui comporte une relation récursive. Une relation récursive existe lorsqu'une entité a un attribut basé sur un domaine et sur l'entité elle-même.  
@@ -56,7 +55,7 @@ ms.locfileid: "48198509"
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Créer une hiérarchie dérivée.|[Créer une hiérarchie dérivée &#40;Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|  
-|Modifier le nom d'une hiérarchie dérivée existante.|[Modifier un nom de hiérarchie dérivée &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|Modifier le nom d'une hiérarchie dérivée existante.|[Modifier le nom d’une hiérarchie dérivée &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |Supprimer une hiérarchie dérivée existante.|[Supprimer une hiérarchie dérivée &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenu associé  

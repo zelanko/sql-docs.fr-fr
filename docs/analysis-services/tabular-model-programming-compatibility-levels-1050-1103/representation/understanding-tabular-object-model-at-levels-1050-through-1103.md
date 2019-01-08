@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 16808ae1ceccd64a109a78c33d861ab45076b98d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ad3963cd7b0b2b40e6b3a08cab68ad809378bff1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146414"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526793"
 ---
 # <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>Présentation du modèle objet tabulaire aux niveaux 1050 à 1103
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "50146414"
   
  Consultez [la représentation sous forme de hiérarchie &#40;tabulaire&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-hierarchy-representation.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de hiérarchie.  
   
-### <a name="key-performance-indicator-kpi--representation"></a>Représentation d'un indicateur de performance clé (KPI)  
+### <a name="key-performance-indicator--kpi--representation"></a>Clé des performances - indicateur de performance clé-représentation d’un indicateur  
  Un KPI évalue la performance d'une valeur, définie par une mesure de base, par rapport à une valeur cible. En termes d'objets AMO, la représentation d'un KPI a une relation de mappage un-à-plusieurs. Un KPI est représenté par l’utilisation des objets AMO suivants : `xref:Microsoft.AnalysisServices.MdxScript.Commands%2A` et `xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A` sont les principaux objets requis.  Il est important de noter que cela ne signifie pas que tous les objets contenus dans les objets AMO mentionnés précédemment peuvent être utilisés lors de la modélisation.  
   
 > [!NOTE]  

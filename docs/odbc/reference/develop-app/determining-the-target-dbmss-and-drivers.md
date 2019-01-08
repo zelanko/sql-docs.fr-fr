@@ -14,17 +14,17 @@ ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fe868eb16b48afd83fdd5af7dcd146157338947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92da788205213394edc75257d8266752a2a9d8df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788467"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535784"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Détermination des SGBD et des pilotes cibles
 La question suivante à prendre en compte est, quelles sont le SGBD cible pour l’application, et quels pilotes sont disponibles qui prennent en charge ces SGBD ? Étant donné que les applications génériques ont tendance à être hautement interopérable, la question de cible de SGBD est plus applicable aux applications personnalisées et verticales. Toutefois, la question des pilotes cibles s’applique à toutes les applications, étant donné que les pilotes peuvent varier en vitesse, qualité, prise en charge de fonctionnalité et de disponibilité. En outre, si les pilotes doivent être redistribué avec l’application, le coût et la disponibilité des plans de licence faut tenir compte.  
   
- Pour de nombreuses applications personnalisées, la cible du SGBD sont évidents : ils sont des SGBD l’application est conçue pour y accéder. SGBD auquel est prévue future migration doit également être considérée. Toutefois, la question majeure pour ces applications est l’ou les pilotes à utiliser avec eux. Pour les autres applications personnalisées : celles qui ne sont pas conçus pour accéder à un SGBD existant, la SGBD cible peut être choisie en fonction de prise en charge de la fonctionnalité, prise en charge des utilisateurs simultanés, disponibilité du pilote et prix abordable.  
+ Pour de nombreuses applications personnalisées, la cible du SGBD sont évidents : Ils sont des SGBD l’application est conçue pour y accéder. SGBD auquel est prévue future migration doit également être considérée. Toutefois, la question majeure pour ces applications est l’ou les pilotes à utiliser avec eux. Pour d’autres applications personnalisées : celles qui ne sont pas conçus pour accéder à un SGBD existant - la SGBD cible peut être choisie en fonction de prise en charge de la fonctionnalité, prise en charge des utilisateurs simultanés, disponibilité du pilote et prix abordable.  
   
  Pour applications verticales, la cible de que SGBD est généralement choisi dépend de prise en charge de la fonctionnalité, la disponibilité du pilote et sur le marché. Par exemple, une application verticale conçue pour les petites entreprises doit cibler les SGBD qui s’adaptent à ces entreprises. une application verticale conçue comme un module complémentaire pour les SGBD existants doit cibler largement utilisé SGBD.  
   

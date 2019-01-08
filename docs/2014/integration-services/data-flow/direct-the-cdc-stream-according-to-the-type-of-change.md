@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bff3b71c0f091bc60d500dfaced02cb62b483753
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe0f98b373b736b9e7b97e9c5a599812210e4136
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069259"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799651"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Diriger le flux de capture de données modifiées en fonction du type de modification
   Pour pouvoir ajouter et configurer une transformation de séparateur de capture de données modifiées, le package doit contenir au moins une tâche de flux de données et une source CDC.  
@@ -37,11 +36,11 @@ ms.locfileid: "48069259"
   
 6.  Sélectionnez l'une des sorties suivantes :  
   
-    -   Sortie de suppression : sortie vers laquelle les lignes de modification DELETE sont dirigées.  
+    -   Supprimer la sortie : La sortie dans lequel les lignes de modification DELETE sont dirigées.  
   
-    -   Sortie d'insertion : sortie vers laquelle les lignes de modification INSERT sont dirigées.  
+    -   Sortie d’insertion : La sortie dans lequel les lignes de modification INSERT sont dirigées.  
   
-    -   Sortie de mise à jour : sortie vers laquelle les lignes de modification avant/après UPDATE et les lignes de modification MERGE sont dirigées.  
+    -   Sortie de la mise à jour : La sortie où avant/après UPDATE lignes et fusion les lignes de modification sont dirigées.  
   
 7.  Éventuellement, vous pouvez configurer les propriétés avancées à l'aide de la boîte de dialogue **Éditeur avancé** .  
   

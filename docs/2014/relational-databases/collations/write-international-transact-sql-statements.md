@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - writing international statements
@@ -19,17 +18,17 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fdd35b7af73cbbfce49f8a8b399f7cf64e97b51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d092939ca68c0d556b33c2f74b6cd4925061716
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208909"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778341"
 ---
 # <a name="write-international-transact-sql-statements"></a>Rédiger des instructions Transact-SQL internationales
   Les directives suivantes facilitent la transition d'une langue à l'autre des bases de données et applications de bases de données qui utilisent des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , ou leur permettent de prendre en charge directement plusieurs langues :  
   
--   Remplacez toutes les utilisations des types de données `char`, `varchar`, et `text` par `nchar`, `nvarchar`, et `nvarchar(max)`. Vous réglez ainsi le problème de conversion des pages de codes. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](collation-and-unicode-support.md).  
+-   Remplacez toutes les utilisations des types de données `char`, `varchar`, et `text` par `nchar`, `nvarchar`, et `nvarchar(max)`. Vous réglez ainsi le problème de conversion des pages de codes. Pour plus d’informations, consultez [Collation and Unicode Support](collation-and-unicode-support.md).  
   
 -   Lors des comparaisons et opérations sur les mois et jours de la semaine, utilisez la partie numérique de la date plutôt que les chaînes de noms. Selon les paramètres de langue, des noms de mois et de jours de la semaine différents sont retournés. Par exemple, DATENAME(MONTH,GETDATE()) retourne « May » pour l'anglais (États-Unis), « Mai » pour l'allemand et « mai » pour le français. Utilisez à la place une fonction comme DATEPART qui utilise le numéro du mois plutôt que son nom. Utilisez les noms DATEPART lorsque vous générez des ensembles de résultats qui seront affichés par un utilisateur, car les noms de date sont souvent plus clairs qu'une représentation numérique. Pour autant, ne codez aucun élément logique dépendant des noms affichés d'une langue spécifique.  
   

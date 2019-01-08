@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, planning
@@ -13,12 +12,12 @@ ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bf9656564422d76e8d18795fc72e48856eca7e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161629"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367904"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planification d’une installation de SQL Server
   Pour installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], suivez ces étapes :  
@@ -31,7 +30,7 @@ ms.locfileid: "48161629"
   
  Indépendamment de la méthode d'installation, vous êtes invité à confirmer l'acceptation des termes de la licence de logiciel en tant que personne physique ou pour le compte d'une entité, sauf si votre utilisation du logiciel est régie par un accord distinct, tel qu'un accord de concession de licence en volume de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou un accord tiers avec un éditeur de logiciels ou un fabricant OEM.  
   
- Les termes du contrat de licence sont affichés afin que vous puissiez les consulter et les accepter dans l'interface utilisateur du programme d'installation. Les installations sans assistance (à l'aide du paramètre /Q ou /QS) doivent inclure le paramètre /IAcceptSQLServerLicenseTerms. Vous pouvez passer en revue les termes du contrat de licence séparément à la page [Termes du contrat de licence logiciel Microsoft](http://go.microsoft.com/fwlink/?LinkID=148209).  
+ Les termes du contrat de licence sont affichés afin que vous puissiez les consulter et les accepter dans l'interface utilisateur du programme d'installation. Les installations sans assistance (à l'aide du paramètre /Q ou /QS) doivent inclure le paramètre /IAcceptSQLServerLicenseTerms. Vous pouvez passer en revue les termes du contrat de licence séparément à la page [Termes du contrat de licence logiciel Microsoft](https://go.microsoft.com/fwlink/?LinkID=148209).  
   
 > [!NOTE]  
 >  Selon la façon dont vous avez reçu le logiciel (par exemple, via le programme de licence en volume [!INCLUDE[msCoName](../../includes/msconame-md.md)] ), votre utilisation du logiciel peut être soumise à des termes et conditions supplémentaires.  

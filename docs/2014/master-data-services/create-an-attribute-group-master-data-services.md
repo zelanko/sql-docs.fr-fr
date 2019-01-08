@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], creating
@@ -14,12 +13,12 @@ ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a1aa0fdc536a4f0b80e5f855fb9d04dda264c5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 055c02ae541ec62d0ea556a20aab5d12d9c0a001
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163455"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760911"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Créer un groupe d'attributs (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez des groupes d'attributs lorsque vous souhaitez afficher des attributs sous des onglets individuels dans la grille de l' **Explorateur** .  
@@ -32,7 +31,7 @@ ms.locfileid: "48163455"
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
 -   Au moins un attribut doit exister. Pour plus d’informations, consultez [Créer un attribut de texte &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md).  
   
@@ -71,12 +70,12 @@ ms.locfileid: "48163455"
   
 ## <a name="next-steps"></a>Étapes suivantes  
   
--   [Rendre un groupe d’attributs Visible aux utilisateurs &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)  
+-   [Rendre un groupe d’attributs visible pour les utilisateurs &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Groupes d’attributs &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
  [Attributs &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
- [Renommer un groupe d’attributs &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
+ [Modifier le nom d’un groupe d’attributs &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
  [Supprimer un groupe d’attributs &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
  [Autorisations de feuille &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
  [Consolidés autorisations &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  

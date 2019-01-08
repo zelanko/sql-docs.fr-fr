@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_replmonitorhelpsubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42bd6f5d20fff8a02c6bc10261505ffc65196f75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ac45c3b25e1a13366ae273b8d21d7e41e768251
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629447"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748304"
 ---
 # <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
  [ **@publication_type** =] *publication_type*  
  Type de publication. *publication_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0**|Publication transactionnelle.|  
 |**1**|Publication d'instantané.|  
@@ -68,7 +67,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
  [ **@mode** =] *mode*  
  Mode de filtrage à utiliser pour retourner les informations de surveillance des abonnements. *mode* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0** (valeur par défaut)|Retourne tous les abonnements.|  
 |**1**|Retourne uniquement les abonnements qui ont des erreurs.|  
@@ -93,7 +92,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**status**|**Int**|Examine l'état de tous les agents de réplication associés à la publication, puis retourne l'état le plus élevé dans l'ordre suivant :<br /><br /> **6** = Échec<br /><br /> **5** = reprise<br /><br /> **2** = arrêté<br /><br /> **4** = inactif<br /><br /> **3** = en cours<br /><br /> **1** = démarré|  
-|**avertissement**|**Int**|Avertissement de seuil maximal généré par un abonnement appartenant à la publication, qui peut être le résultat OR logique d'au moins l'une des valeurs suivantes.<br /><br /> **1** = expiration – un abonnement à une publication transactionnelle n’a pas été synchronisé dans le seuil de période de rétention.<br /><br /> **2** = latency - le temps nécessaire pour répliquer des données à partir d’un serveur de publication transactionnelle à l’abonné dépasse le seuil, en secondes.<br /><br /> **4** = mergeexpiration – un abonnement à une publication de fusion n’a pas été synchronisé dans le seuil de période de rétention.<br /><br /> **8** = mergefastrunduration - le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, via une connexion réseau rapide.<br /><br /> **16** = mergeslowrunduration - le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, via une connexion réseau lente ou accès à distance.<br /><br /> **32** = mergefastrunspeed – la vitesse de transmission de lignes pendant la synchronisation d’un abonnement de fusion a échoué à maintenir le taux du seuil, en lignes par seconde, via une connexion réseau rapide.<br /><br /> **64** = mergeslowrunspeed – la vitesse de transmission de lignes pendant la synchronisation d’un abonnement de fusion a échoué à maintenir le taux du seuil, en lignes par seconde, via une connexion réseau lente ou accès à distance.|  
+|**avertissement**|**Int**|Avertissement de seuil maximal généré par un abonnement appartenant à la publication, qui peut être le résultat OR logique d'au moins l'une des valeurs suivantes.<br /><br /> **1** = expiration - un abonnement à une publication transactionnelle n’a pas été synchronisé dans le seuil de période de rétention.<br /><br /> **2** = latency - le temps nécessaire pour répliquer des données à partir d’un serveur de publication transactionnelle à l’abonné dépasse le seuil, en secondes.<br /><br /> **4** = mergeexpiration – un abonnement à une publication de fusion n’a pas été synchronisé dans le seuil de période de rétention.<br /><br /> **8** = mergefastrunduration - le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, via une connexion réseau rapide.<br /><br /> **16** = mergeslowrunduration - le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, via une connexion réseau lente ou accès à distance.<br /><br /> **32** = mergefastrunspeed - la vitesse de transmission de lignes pendant la synchronisation d’un abonnement de fusion a échoué à maintenir le taux du seuil, en lignes par seconde, via une connexion réseau rapide.<br /><br /> **64** = mergeslowrunspeed - la vitesse de transmission de lignes pendant la synchronisation d’un abonnement de fusion a échoué à maintenir le taux du seuil, en lignes par seconde, via une connexion réseau lente ou accès à distance.|  
 |**subscriber** (Abonné)|**sysname**|Nom de l'Abonné.|  
 |**bd_abonné**|**sysname**|Nom de la base de données utilisée pour l'abonnement.|  
 |**publisher_db**|**sysname**|Nom de la base de données de publication.|  
@@ -131,7 +130,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
  **sp_replmonitorhelpsubscription** trie les résultats selon la gravité de l’état de l’abonnement, ce qui est déterminé par la valeur de *monitorranking*. Par exemple, les lignes de tous les abonnements se trouvant dans un état d'erreur précèdent les lignes des abonnements se trouvant dans un état d'avertissement.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **db_owner** ou **replmonitor** rôle de base de données fixe sur la base de données de distribution peut exécuter **sp_replmonitorhelpsubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  

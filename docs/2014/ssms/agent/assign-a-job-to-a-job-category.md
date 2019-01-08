@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], assigning
@@ -17,12 +17,12 @@ ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 645953aa9864eb867617dc8aacd71735d978d4c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177199"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786291"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Affecter un travail à une catégorie de travaux
   Cette rubrique décrit comment affecter des travaux de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent aux catégories de travaux dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de SQL Server Management Objects.  
@@ -49,7 +49,7 @@ ms.locfileid: "48177199"
   
 4.  Cliquez avec le bouton droit sur le travail à modifier, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du travail -***nom_travail*, dans la liste **Catégorie**, sélectionnez la catégorie de travaux que vous voulez affecter au travail.  
+5.  Dans la boîte de dialogue **Propriétés du travail -**_nom_travail_ , dans la liste **Catégorie** , sélectionnez la catégorie de travaux que vous voulez affecter au travail.  
   
 6.  Cliquez sur **OK**.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48177199"
 ##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
  **Pour affecter un travail à une catégorie de travaux**  
   
- Utilisez la `JobCategory` classe à l’aide d’un langage de programmation que vous choisissez, tel que Visual Basic, Visual c# ou PowerShell.  
+ Utilisez la classe `JobCategory` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell.  
   
   
   

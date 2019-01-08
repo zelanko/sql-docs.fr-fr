@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e21317e2019fe1530e346567a5767a1dfc18c329
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165419"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758011"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Surveiller et appliquer les bonnes pratiques à l'aide de la Gestion basée sur des stratégies
   Gestion basée sur des stratégies vous permet de surveiller les bonnes pratiques pour la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose un ensemble de fichiers de stratégie que vous pouvez importer en tant que stratégies de meilleures pratiques, pour ensuite évaluer ces stratégies par rapport à un jeu de cibles qui inclut des instances, des objets d'instance, des bases de données ou des objets de base de données. Vous pouvez évaluer des stratégies manuellement, définir des stratégies pour évaluer un jeu de cibles selon une planification ou définir des stratégies pour évaluer un jeu de cibles en fonction d'un événement. Pour plus d’informations sur la gestion basée sur des stratégies, consultez [Administrer des serveurs à l’aide de la gestion basée sur des stratégies](administer-servers-by-using-policy-based-management.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "48165419"
 |Regroupement léger SQL Server|[Désactiver le regroupement léger](disable-lightweight-pooling.md)|  
 |Mode de connexion SQL Server|[Choisir un mode d'authentification](../security/choose-an-authentication-mode.md)|  
 |Degré maximal de parallélisme SQL Server|[Définir l'option max degree of parallelism pour des performances optimales](set-the-max-degree-of-parallelism-option-for-optimal-performance.md)|  
-|Nombre maximal de threads de travail SQL Server pour SQL Server 2000 32 bits|[Vérifier le paramètre Nombre maximum de threads de travail](verify-max-worker-threads-setting.md)|  
+|Nombre maximal de threads de travail SQL Server pour SQL Server 2000 32 bits|[Vérifier le paramètre de l'option Max Worker Threads](verify-max-worker-threads-setting.md)|  
 |Nombre maximal de threads de travail SQL Server pour SQL Server 2000 64 bits|[Vérifier le paramètre Nombre maximum de threads de travail](verify-max-worker-threads-setting.md)|  
 |Nombre maximal de threads de travail SQL Server pour SQL Server 2005 et versions ultérieures|[Vérifier le paramètre de l'option Max Worker Threads](verify-max-worker-threads-setting.md)|  
 |Taille du paquet réseau SQL Server|[La taille du paquet réseau ne doit pas dépasser 8060 octets](network-packet-size-should-not-exceed-8060-bytes.md)|  

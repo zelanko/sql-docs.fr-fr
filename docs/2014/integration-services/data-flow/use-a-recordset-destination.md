@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
@@ -13,12 +12,12 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4d3afbb967238cfef049b491f6ab871f830708b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04c63477a53de07777806aa8efb1fda78ef44264
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102459"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791101"
 ---
 # <a name="use-a-recordset-destination"></a>Utiliser une destination de jeu d'enregistrements
   La destination d'ensemble d'enregistrements n'enregistre pas les données sur une source de données externe. Elle enregistre les données en mémoire dans un ensemble d'enregistrements stocké dans une variable de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de type `Object`. Une fois que la destination d'ensemble d'enregistrements a sauvegardé les données, vous devez en général utiliser un conteneur de boucles Foreach avec l'énumérateur ADO Foreach pour traiter une par une les lignes de l'ensemble d'enregistrements. L'énumérateur ADO Foreach enregistre la valeur de chaque colonne de la ligne actuelle dans une variable de package distincte. Ensuite, les tâches que vous configurez à l'intérieur du conteneur de boucles Foreach lisent les valeurs contenues dans ces variables et effectuent certaines actions sur ces valeurs.  
@@ -38,7 +37,7 @@ ms.locfileid: "48102459"
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], créez ou ouvrez un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  Créez une variable qui contiendra le jeu d’enregistrements enregistré en mémoire par la destination de Recordset et la valeur est le type de variable `Object`.  
+2.  Créez une variable qui contiendra l'ensemble d'enregistrements enregistré en mémoire par la destination d'ensemble d'enregistrements et définissez le type de la variable sur `Object`.  
   
 3.  Créez des variables supplémentaires avec les types appropriés pour contenir les valeurs de chaque colonne de l'ensemble d'enregistrements que vous souhaitez utiliser.  
   
@@ -69,21 +68,21 @@ ms.locfileid: "48102459"
   
 3.  Dans la fenêtre **Variables** , créez les variables qui contiendront l'ensemble d'enregistrements et les valeurs de colonne de la ligne actuelle :  
   
-    1.  Créez une variable nommée `BonusRecordset`et définissez son type sur `Object`.  
+    1.  Créez une variable nommée `BonusRecordset` et définissez son type sur `Object`.  
   
-         Le `BonusRecordset` variable conserve le jeu d’enregistrements.  
+         La variable `BonusRecordset` contient le jeu d’enregistrements.  
   
-    2.  Créez une variable nommée `EmailAddress`et définissez son type sur `String`.  
+    2.  Créez une variable nommée `EmailAddress` et définissez son type sur `String`.  
   
-         Le `EmailAddress` variable contient l’adresse e-mail du vendeur.  
+         La variable `EmailAddress` contient l’adresse de messagerie du vendeur.  
   
-    3.  Créez une variable nommée `FirstName`et définissez son type sur `String`.  
+    3.  Créez une variable nommée `FirstName` et définissez son type sur `String`.  
   
-         Le `FirstName` variable contient le prénom du vendeur.  
+         La variable `FirstName` contient le prénom du vendeur.  
   
-    4.  Créez une variable nommée `Bonus`et définissez son type sur `Double`.  
+    4.  Créez une variable nommée `Bonus` et définissez son type sur `Double`.  
   
-         Le `Bonus` variable conserve le montant de la prime du vendeur.  
+         La variable `Bonus` contient le montant de la prime du vendeur.  
   
 #### <a name="to-configure-the-connection-managers"></a>Pour configurer les gestionnaires de connexions  
   

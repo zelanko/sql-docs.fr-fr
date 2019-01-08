@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 026421f146158562e1c1789620e2aa30d3bcfd6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 898a36e6f8dc65be24f386159a34158f23c1125a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145049"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811511"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>FT:Crawl Stopped, classe d’événements
   La classe d’événements **:Crawl Stopped** indique qu’une analyse de texte intégral (remplissage) s’est arrêtée. L'arrêt peut être dû à l'achèvement réussi d'une analyse ou à une erreur irrécupérable.  
@@ -30,8 +29,8 @@ ms.locfileid: "48145049"
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**Int**|ID de la base de données dans laquelle s'est arrêtée l'analyse de texte intégral. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
-|**EventClass**|**Int**|Type d’événement = 156.|27|non|  
-|**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|non|  
+|**EventClass**|**Int**|Type d’événement = 156.|27|Non|  
+|**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |**IsSystem**|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
 |**ObjectID**|**Int**|ID affecté à l'objet par le système. L'analyse de texte intégral s'est arrêtée pour l'index de texte intégral sur cet objet.|22|Oui|  
 |**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Oui|  

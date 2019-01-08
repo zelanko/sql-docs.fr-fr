@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21f2ea4a439d794b2998acab4220ce1304b0942f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: aba5db3b36fd6caf5026db22c812c5e24af7de38
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656988"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216018"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Utiliser les fonctionnalités de date et d’heure améliorées (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "51656988"
 >  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Exemple  
- La première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crée une procédure stockée utilisée par l'exemple.  
+ Le premier ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) liste de code crée une procédure stockée utilisée par l’exemple.  
   
  Compilez avec ole32.lib oleaut32.lib et exécutez la deuxième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
- La troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) supprime la procédure stockée utilisée par l'exemple.  
+ Le troisième ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) du code supprime la procédure stockée utilisée par l’exemple.  
   
 ```  
 CREATE PROCEDURE sp_datetimetypes  

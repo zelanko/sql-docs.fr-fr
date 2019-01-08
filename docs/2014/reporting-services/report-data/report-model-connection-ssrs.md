@@ -11,12 +11,12 @@ ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 121f1265e567636fb979a84c609861bc0e558dcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1b1355893e9134723e9f073327b3da1d4803cf9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119769"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359021"
 ---
 # <a name="report-model-connection-ssrs"></a>Connexion à un modèle de rapport (SSRS)
   Pour inclure les données d'un modèle de rapport, vous devez avoir un dataset basé sur un modèle de rapport en tant que source de données. Contrairement aux autres sources de données de rapport, il n'y a aucune extension de données pour un modèle de rapport. Dans le Générateur de rapports, vous recherchez et sélectionnez le modèle directement à partir du serveur de rapports. Dans le Concepteur de rapports, vous spécifiez l'URL au modèle de rapport.  
@@ -26,7 +26,7 @@ ms.locfileid: "48119769"
 ##  <a name="Connection"></a> Chaîne de connexion  
  Vous n'avez pas besoin d'une chaîne de connexion pour utiliser un modèle de rapport en tant que source de données. Pour vous connecter à un modèle de rapport, accédez à un serveur de rapports ou un site SharePoint, puis sélectionnez un modèle publié. Sur un site SharePoint, l'extension de nom de fichier de modèle de rapport est .smdl.  
   
- Pour obtenir d’autres exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ Pour obtenir d’autres exemples sur les chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
   
   
@@ -49,7 +49,7 @@ ms.locfileid: "48119769"
   
  Les paramètres de rapport sont créés avec des valeurs de propriétés par défaut que vous devrez peut-être modifier. Par défaut, chaque paramètre de rapport a le type de données **Texte**. Si les données sous-jacentes ont un autre type de données, vous devez modifier le type de données du paramètre.  
   
- Pour plus d’informations, consultez [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
   
@@ -84,7 +84,7 @@ ms.locfileid: "48119769"
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs de dataset générée par la requête.  
   
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
   
   

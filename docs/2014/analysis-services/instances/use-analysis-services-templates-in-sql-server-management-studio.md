@@ -11,12 +11,12 @@ ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5b33d4c3e7f5ea10efc89fc5b7234bf2faaf0c7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: b2f65e31a6a1c42d4d2bfd79f6daf0139edcd49f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146749"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358421"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Utiliser des modèles Analysis Services dans SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit un ensemble de modèles qui vous aident à créer rapidement des scripts XMLA et des requêtes DMX ou MDX, à créer des indicateurs de performance clés dans un cube ou un modèle tabulaire, à générer des scripts pour les opérations de sauvegarde et de restauration et à effectuer de nombreuses autres tâches. Les modèles sont situés dans l' **Explorateur de modèles** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -57,7 +57,7 @@ ms.locfileid: "50146749"
      Basculez vers l'onglet **Messages** pour afficher le nombre d'enregistrements retournés, les erreurs, les instructions de requête et tous les autres messages associés à l'exécution de la requête. Par exemple, si vous exécutez une instruction DAX sur un modèle exécuté en mode Requête directe, vous pouvez voir l'instruction Transact-SQL qui est générée par le moteur d'analyse en mémoire xVelocity (VertiPaq).  
   
 ##  <a name="BKMK_Building_Queries"></a> Générer et exécuter une requête MDX sur un modèle tabulaire à l'aide d'un modèle  
- Cet exemple montre comment créer une requête MDX dans SQL Server Management Studio en utilisant une base de données model tabulaire comme source de données. Pour répéter cet exemple sur votre ordinateur, vous pouvez [télécharger l'exemple de projet de modèle tabulaire Adventureworks](http://go.microsoft.com/fwlink/?LinkId=231183).  
+ Cet exemple montre comment créer une requête MDX dans SQL Server Management Studio en utilisant une base de données model tabulaire comme source de données. Pour répéter cet exemple sur votre ordinateur, vous pouvez [télécharger l'exemple de projet de modèle tabulaire Adventureworks](https://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
 >  Vous ne pouvez pas utiliser de requêtes MDX sur les modèles tabulaires qui ont été déployés en mode Requête directe. En revanche, vous pouvez envoyer des requêtes équivalentes à l'aide de requêtes de table DAX avec la commande EVALUATE. Pour plus d’informations, consultez [paramètres pour les requêtes DAX](https://msdn.microsoft.com/library/gg492200(v=sql.120).aspx).  
@@ -214,7 +214,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Traiter la partition|Indique comment utiliser la commande XMLA `Batch`, associée à l'élément `Parallel` et à la commande `Process`, pour traiter complètement une partition en utilisant une opération de traitement par lots parallèle.|  
 ||Restaurer|Indique comment utiliser la commande XMLA `Restore` pour restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir d'un fichier de sauvegarde existant.|  
 ||Synchroniser|Indique comment utiliser la commande XMLA `Synchronize` pour synchroniser une autre base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avec la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] actuelle en utilisant l'option SkipMembership pour la balise SynchronizeSecurity.|  
-|XMLA\Ensembles de lignes du schéma|Découvrir les ensembles de lignes du schéma|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_SCHEMA_ROWSETS.|  
+|XMLA\Ensembles de lignes du schéma|Découvrir des ensembles de lignes de schéma|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_SCHEMA_ROWSETS.|  
 |XMLA\État de serveur|Connexions|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_CONNECTIONS.|  
 ||travaux|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_JOBS.|  
 ||Emplacements|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_LOCATIONS, en spécifiant le chemin d'accès des fichiers de sauvegarde d'emplacement.|  

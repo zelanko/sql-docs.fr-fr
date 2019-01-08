@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
@@ -17,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69aea0ec22ec03f05f05f10998e955d7f19bffd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9513e58afc764fe8df5719ad03ac575a2632da6b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216159"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770081"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
   La réplication d'égal à égal offre une solution avec montée en puissance parallèle et haute disponibilité en conservant des copies de données sur plusieurs instances de serveur, également appelées *nœuds*. Conçue sur la base de la réplication transactionnelle, la réplication d'égal à égal propage les modifications quasiment en temps réel de manière transactionnelle. Les applications qui requièrent la montée en puissance parallèle des opérations de lecture peuvent ainsi distribuer les lectures effectuées par les clients sur plusieurs nœuds. Dans la mesure où les données sont conservées sur les nœuds quasiment en temps réel, la réplication d'égal à égal génère une redondance des données, ce qui améliore leur disponibilité.  
@@ -73,13 +72,13 @@ ms.locfileid: "48216159"
   
  Chaque bureau possède un serveur de base de données et un serveur d'applications dont se servent les ingénieurs de support lorsqu'ils entrent et mettent à jour les informations sur les appels clients. La topologie est partitionnée selon l'horaire. Les mises à jour n'ont donc lieu que sur le nœud actuellement ouvert, puis elles sont acheminées aux autres bases de données participantes. Cette topologie présente les avantages suivants :  
   
--   indépendance sans isolement : chaque bureau peut insérer, mettre à jour ou supprimer des données indépendamment, mais aussi les partager du fait de leur réplication sur toutes les bases de données participantes ;  
+-   indépendance sans isolement : chaque bureau peut insérer, mettre à jour ou supprimer des données indépendamment, mais aussi les partager du fait de leur réplication sur toutes les bases de données participantes ;  
   
 -   disponibilité élevée en cas de panne ou de maintenance sur une ou plusieurs bases de données participante.  
   
      ![Réplication d’égal à égal, trois et quatre nœuds](../media/repl-multinode-04.gif "Réplication d’égal à égal, trois et quatre nœuds")  
   
- L'illustration ci-dessus montre l'ajout d'un nœud dans la topologie qui en compte déjà trois. Un nœud pourrait être ajouté dans ce scénario pour les raisons suivantes :  
+ L'illustration ci-dessus montre l'ajout d'un nœud dans la topologie qui en compte déjà trois. Un nœud pourrait être ajouté dans ce scénario pour les raisons suivantes :  
   
 -   parce qu'un autre bureau est ouvert ;  
   
@@ -122,7 +121,7 @@ ms.locfileid: "48216159"
   
 -   filtres de lignes et de colonnes ;  
   
--   colonnes d'horodatage ;  
+-   colonnes d'horodatage ;  
   
 -   serveurs de publication et Abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ;  
   

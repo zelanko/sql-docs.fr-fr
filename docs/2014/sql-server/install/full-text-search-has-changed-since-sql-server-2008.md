@@ -11,12 +11,12 @@ ms.assetid: d253bb05-9166-4b50-bd4a-27b818f514e0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39fc136bc29813c01c237289debbc6474f7d291d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6a5301a972775d262f0b7d4640880610bef3b9d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161357"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361051"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>La recherche en texte intégral a été modifiée dans SQL Server 2008
   Le Conseiller de mise à niveau a détecté que la fonctionnalité de recherche en texte intégral va être mise à niveau. De nombreux paramètres et options de recherche en texte intégral ont changé. Par conséquent, lorsque vous effectuez une mise à niveau vers la recherche en texte intégral [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pourriez avoir besoin de modifier quelques-uns de vos paramètres.  
@@ -33,7 +33,7 @@ ms.locfileid: "48161357"
 ## <a name="external-resources"></a>Ressources externes  
  [Compatibilité descendante de la recherche en texte intégral](../../../2014/database-engine/full-text-search-backward-compatibility.md)  
   
- [Mise à niveau de la recherche en texte intégral](http://go.microsoft.com/fwlink/?LinkId=112291)  
+ [Mise à niveau de la recherche en texte intégral](https://go.microsoft.com/fwlink/?LinkId=112291)  
   
  [Modifications importantes apportées à la recherche en texte intégral](../../../2014/database-engine/breaking-changes-to-full-text-search.md)  
   

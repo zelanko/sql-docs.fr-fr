@@ -17,15 +17,15 @@ ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b324857816df774486716978425d1332a695952a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 461b9ea2196fed61587b1a9e20cc21feced258da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708467"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535050"
 ---
 # <a name="types-of-events"></a>Types d’événements
-Il existe deux types d’événements. « Événements will », appelés avant le début d’une opération, comportent généralement « Est » dans leurs noms, par exemple, **WillChangeRecordset** ou **WillConnect**. Les événements qui sont appelées après un événement a été effectué généralement incluent « Complète » dans leurs noms, par exemple, **RecordChangeComplete** ou **ConnectComplete**. Exceptions existent, tel que **InfoMessage** , mais elles se produisent une fois l’opération associée terminée.  
+Il existe deux types d’événements. « Événements will », appelés avant le début d’une opération, comportent généralement de « Est » dans leurs noms - par exemple, **WillChangeRecordset** ou **WillConnect**. Les événements qui sont appelées après un événement a été effectué généralement incluent par exemple, « Complète » dans leurs noms - **RecordChangeComplete** ou **ConnectComplete**. Exceptions existent - comme **InfoMessage** - mais elles se produisent une fois l’opération associée terminée.  
   
 ## <a name="will-events"></a>Sont des événements  
  Gestionnaires d’événements appelés avant le démarrage de l’opération vous offre la possibilité d’examiner ou modifier les paramètres d’opération, puis annuler l’opération ou lui permettre d’effectuer. Ces routines de gestionnaire d’événements ont généralement des noms au format **sera*événement ***.  
@@ -36,7 +36,7 @@ Il existe deux types d’événements. « Événements will », appelés avant
  Va et événements de fin sont généralement utilisées par paires.  
   
 ## <a name="other-events"></a>Autres événements  
- Les autres gestionnaires d’événements, autrement dit, les événements dont les noms ne sont pas sous la forme **sera * événement*** ou ***événement * terminé** — sont appelées uniquement après une opération se termine. Ces événements sont **déconnexion**, **EndOfRecordset**, et **InfoMessage**.  
+ Les autres gestionnaires d’événements - autrement dit, les événements dont les noms ne sont pas sous la forme **sera * événement*** ou ***événement * terminé** -sont appelées uniquement après une opération se termine. Ces événements sont **déconnexion**, **EndOfRecordset**, et **InfoMessage**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Résumé du Gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)   

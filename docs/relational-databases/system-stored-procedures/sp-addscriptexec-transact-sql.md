@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addscriptexec
@@ -17,12 +16,12 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42bc6c0c89c5f697eabec38485a70a955ffe456e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36188e2faa578c0c4ef2a89b32e00d474366d32d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722757"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212432"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_addscriptexec [ @publication = ] publication
  **1** = l’agent continue le script et ignore l’erreur.  
   
  [  **@publisher=** ] **'***publisher***'**  
- Spécifie un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+ Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé lors de la publication à partir d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
@@ -80,7 +79,7 @@ sp_addscriptexec [ @publication = ] publication
   
  À l’aide de **sp_addscriptexec** pour valider un fichier de script pour les publications utilisant FTP pour la remise d’instantanés est uniquement pris en charge pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addscriptexec**.  
   
 ## <a name="see-also"></a>Voir aussi  

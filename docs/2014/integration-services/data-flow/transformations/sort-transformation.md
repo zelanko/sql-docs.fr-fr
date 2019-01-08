@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sorttrans.f1
@@ -20,12 +19,12 @@ ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 177255d30cb0a667475108fb8e28a8100d3aceae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50a8d1a0242b1317bcefd387d68cf3e0a958d0d7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130589"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371301"
 ---
 # <a name="sort-transformation"></a>transformation de tri
   La transformation de tri trie les données d'entrée dans l'ordre croissant ou décroissant et copie les données triées dans sa sortie. Vous pouvez appliquer plusieurs tris à une entrée ; chaque tri est identifié par un chiffre qui détermine l'ordre de tri. La colonne qui possède le plus petit nombre est triée en premier, puis la colonne de tri ayant le deuxième plus petit nombre, et ainsi de suite. Par exemple, si une colonne nommée **PaysRégion** a un ordre de tri égal à 1 et qu’une colonne nommée **Ville** a un ordre de tri égal à 2, la sortie est triée par pays/région puis par ville. Un nombre positif indique que le tri est croissant, tandis qu'un nombre négatif indique qu'il est décroissant. Les colonnes qui ne sont pas triées ont un ordre de tri égal à 0. Les colonnes qui ne sont pas sélectionnées pour le tri sont automatiquement copiées dans la sortie de la transformation avec les colonnes triées.  
@@ -37,7 +36,7 @@ ms.locfileid: "48130589"
   
  La transformation de tri peut également supprimer les doublons de lignes dans le cadre du tri. Les doublons de lignes sont des lignes possédant les mêmes valeurs de clé de tri. La valeur de clé de tri est générée en fonction des options de comparaison de chaînes en cours d'utilisation ; par conséquent, différentes chaînes littérales peuvent avoir les mêmes valeurs de clé de tri. Dans les colonnes d'entrée, la transformation identifie en tant que doublons les lignes qui ont des valeurs différentes mais la même clé de tri.  
   
- La transformation de tri inclut la `MaximumThreads` propriété personnalisée pouvant être mis à jour par une expression de propriété lorsque le package est chargé. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41; ](../../expressions/integration-services-ssis-expressions.md), [Expressions de propriété dans des packages](../../expressions/use-property-expressions-in-packages.md) et [Propriétés personnalisées des transformations](transformation-custom-properties.md).  
+ La transformation de tri inclut la propriété personnalisée `MaximumThreads`, qui peut être mise à jour par une expression de propriété lors du chargement du package. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41; ](../../expressions/integration-services-ssis-expressions.md), [Expressions de propriété dans des packages](../../expressions/use-property-expressions-in-packages.md) et [Propriétés personnalisées des transformations](transformation-custom-properties.md).  
   
  Cette transformation a une entrée et une sortie. Elle ne prend pas en charge les sorties d'erreur.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48130589"
  Pour plus d’informations sur la définition des propriétés du composant, consultez [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-content"></a>Contenu associé  
- Exemple, [SortDeDuplicateDelimitedString Custom SSIS Component](http://go.microsoft.com/fwlink/?LinkId=220821), sur codeplex.com.  
+ Exemple, [SortDeDuplicateDelimitedString Custom SSIS Component](https://go.microsoft.com/fwlink/?LinkId=220821), sur codeplex.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de données](../data-flow.md)   

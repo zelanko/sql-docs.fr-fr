@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - schemas [SMO]
@@ -14,12 +12,12 @@ ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c47550f4c0488d5a6f97d1fb5a3356762e726961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 384c1e0f14d3cfe5237913b29be1d9ae74aa2d9d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121339"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799421"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>Création, modification et suppression de schémas
   L'objet <xref:Microsoft.SqlServer.Management.Smo.Schema> représente le contexte de propriété pour un objet de base de données. La propriété <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Database> représente une collection d'objets <xref:Microsoft.SqlServer.Management.Smo.Schema>.  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 643f2adc5ef2cabf230fd273cce1b3c2a7cf3307
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa06da06ae057839a9d0e6433e57edb1f8a603d1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672597"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617129"
 ---
 # <a name="sysdmexecbackgroundjobqueuestats-transact-sql"></a>sys.dm_exec_background_job_queue_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47672597"
 ## <a name="remarks"></a>Notes  
  Seules les informations pour les travaux de mise à jour des statistiques asynchrone apparaissent dans cette vue. Pour plus d’informations sur la mise à jour asynchrone des statistiques, consultez [statistiques](../../relational-databases/statistics/statistics.md).  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
@@ -74,14 +74,14 @@ FROM sys.dm_exec_background_job_queue_stats;
 GO  
 ```  
   
-### <a name="b-determining-the-percentage-of-failed-enqueue-attempts"></a>B. Détermination du pourcentage des tentatives d'empilement ayant échoué  
+### <a name="b-determining-the-percentage-of-failed-enqueue-attempts"></a>b. Détermination du pourcentage des tentatives d'empilement ayant échoué  
  L'exemple suivant retourne le pourcentage des tentatives d'empilement ayant échoué pour toutes les requêtes exécutées.  
   
 ```  
 SELECT   
         CASE enqueued_count WHEN 0   
                 THEN 'No jobs posted'   
-                ELSE CAST((enqueue_failed_full_count + enqueue_failed_duplicate_count) / CAST(enqueued_count AS float) * 100 AS varchar(20))   
+                ELSE CAST((enqueue_failed_full_count + enqueue_failed_duplicate_count) / CAST(enqueued_count + enqueue_failed_full_count + enqueue_failed_duplicate_count AS float) * 100 AS varchar(20))   
         END AS [Percent Enqueue Failed]  
 FROM sys.dm_exec_background_job_queue_stats;  
 GO  

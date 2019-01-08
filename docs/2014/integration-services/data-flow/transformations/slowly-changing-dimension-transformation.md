@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.slowlychangingdimtrans.f1
@@ -18,12 +17,12 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c417f01f7256863902f4e446bcb04c0732be832c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fae586ee68a75127d5085b57f5f200498967d1d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056189"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352134"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Transformation de dimension à variation lente
   La transformation de dimension à variation lente coordonne la mise à jour et l'insertion d'enregistrements dans des tables de dimension d'entrepôts de données. Par exemple, vous pouvez utiliser cette transformation pour configurer les sorties de la transformation qui insèrent et mettent à jour des enregistrements dans la table DimProduct de la base de données [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] à l’aide des données de la table Production.Products de la base de données OLTP AdventureWorks.  
@@ -47,7 +46,7 @@ ms.locfileid: "48056189"
   
 -   Les modifications « modification d'attribut » remplacent les enregistrements existants. Ce type de modification est équivalent à une modification de Type 1. La transformation de dimension à variation lente dirige ces lignes vers une sortie nommée **Sortie de mises à jour d’attribut de validation**.  
   
--   Les modifications « attribut d'historique » créent des enregistrements au lieu de mettre à jour les enregistrements existants. La seule modification autorisée dans un enregistrement existant est une mise à jour d'une colonne qui indique si l'enregistrement est actif ou expiré. Ce type de modification est équivalent à une modification de Type 2. La transformation de dimension à variation lente dirige ces lignes vers deux sorties : **Sortie d’insertions d’attribut d’historique** et **Nouvelle sortie**.  
+-   Les modifications « attribut d'historique » créent des enregistrements au lieu de mettre à jour les enregistrements existants. La seule modification autorisée dans un enregistrement existant est une mise à jour d'une colonne qui indique si l'enregistrement est actif ou expiré. Ce type de modification est équivalent à une modification de Type 2. La transformation de dimension à variation lente dirige ces lignes vers deux sorties : **Sortie d’insertions d’attribut d’historique** et **nouvelle sortie**.  
   
 -   Les modifications « attribut fixe » indiquent que la valeur de colonne ne doit pas changer. La transformation de dimension à variation lente détecte les modifications et peut diriger les lignes modifiées vers une sortie nommée **Sortie d’attribut fixe**.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "48056189"
 |------------|-----------------|----------------------------|  
 |**Sortie de mises à jour d’attribut de validation**|L'enregistrement de la table de recherche est mis à jour. Cette sortie est utilisée pour les lignes à attributs variables.|Une transformation de commande OLE DB met à jour l'enregistrement à l'aide d'une instruction UPDATE.|  
 |**Sortie d’attribut fixe**|Les valeurs des lignes qui ne doivent pas changer ne correspondent pas aux valeurs de la table de recherche. Cette sortie est utilisée pour les lignes à attributs fixes.|Aucun flux de données par défaut n'est créé. Si la transformation est configurée de façon à continuer après avoir rencontré des modifications de colonnes d'attributs fixes, vous devez créer un flux de données qui capture ces lignes.|  
-|**Sortie d’insertions d’attribut d’historique**|La table de recherche contient au moins une ligne correspondante. La ligne marquée comme « active » doit maintenant être marquée comme ayant « expiré ». Cette sortie est utilisée pour les lignes d'attributs d'historique.|Les transformations de colonnes dérivées créent des colonnes pour les indicateurs de ligne active et de ligne expirée. Une transformation de commande OLE DB met à jour l'enregistrement qui doit maintenant être marqué comme « expiré ». La ligne avec les nouvelles valeurs de colonne est dirigée vers la nouvelle sortie, où la ligne est insérée et marquée comme « active ».|  
+|**Sortie d’insertions d’attribut d’historique**|La table de recherche contient au moins une ligne correspondante. La ligne marquée comme « active » doit maintenant être marquée comme ayant « expiré ». Cette sortie est utilisée pour les lignes d'attributs d'historique.|Les transformations de colonnes dérivées créent des colonnes pour les indicateurs de ligne active et de ligne expirée. Une transformation de commande OLE DB met à jour l'enregistrement qui doit maintenant être marqué comme « expiré ». La ligne avec les nouvelles valeurs de colonne est dirigée vers la nouvelle sortie, où la ligne est insérée et marquée comme « active ».|  
 |**Sortie de mises à jour de membre déduit**|Des lignes pour les membres de dimension inférés sont insérées. Cette sortie est utilisée pour les lignes de membres inférés.|Une transformation de commande OLE DB met à jour l'enregistrement à l'aide d'une instruction SQL UPDATE.|  
 |**Nouvelle sortie**|La table de recherche ne contient aucune ligne correspondante. La ligne est ajoutée à la table de dimension. Cette sortie est utilisée pour les nouvelles lignes et les modifications de lignes à attributs d'historique.|Une transformation de colonnes dérivées définit l'indicateur de ligne active et une destination OLE DB insère la ligne.|  
 |**Sortie inchangée**|Les valeurs de la table de recherche correspondent aux valeurs de lignes. Cette sortie est utilisée pour les lignes inchangées.|Aucun flux de données n'est créé car la transformation de dimension à variation lente n'effectue aucune opération. Si vous souhaitez capturer ces lignes, vous devez créer un flux de données pour cette sortie.|  
@@ -77,7 +76,7 @@ ms.locfileid: "48056189"
 ## <a name="business-keys"></a>Clés d'entreprise  
  La transformation de dimension à variation lente requiert au moins une colonne clé d'entreprise.  
   
- La transformation de dimension à variation lente ne prend pas en charge les clés d'entreprise nulles. Si les données incluent des lignes dans lesquelles la colonne clé d'entreprise est nulle, ces lignes doivent être supprimées du flux de données. Vous pouvez utiliser la transformation de fractionnement conditionnel pour filtrer les lignes dont les colonnes clés d'entreprise contiennent des valeurs nulles. Pour plus d'informations, consultez [Conditional Split Transformation](conditional-split-transformation.md).  
+ La transformation de dimension à variation lente ne prend pas en charge les clés d'entreprise nulles. Si les données incluent des lignes dans lesquelles la colonne clé d'entreprise est nulle, ces lignes doivent être supprimées du flux de données. Vous pouvez utiliser la transformation de fractionnement conditionnel pour filtrer les lignes dont les colonnes clés d'entreprise contiennent des valeurs nulles. Pour plus d’informations, voir [Conditional Split Transformation](conditional-split-transformation.md).  
   
 ## <a name="optimizing-the-performance-of-the-slowly-changing-dimension-transformation"></a>Optimisation des performances de la transformation de dimension à variation lente  
  Pour les suggestions sur l’amélioration des performances de la transformation de dimension à variation lente, consultez [Fonctionnalités de performances de flux de données](../data-flow-performance-features.md).  
@@ -94,7 +93,7 @@ ms.locfileid: "48056189"
   
 -   [Propriétés personnalisées des transformations](transformation-custom-properties.md)  
   
- Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la définition des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="configuring-the-slowly-changing-dimension-transformation-outputs"></a>Configuration des sorties de la transformation de dimension à variation lente  
  La coordination de la mise à jour et de l'insertion d'enregistrements dans des tables de dimension peut être une tâche complexe, en particulier si des modifications de Type 1 et de Type 2 sont utilisées. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Le concepteur propose deux manières de configurer la prise en charge des dimensions à variation lente :  
@@ -108,6 +107,6 @@ ms.locfileid: "48056189"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Entrée de blog [Optimizing the Slowly Changing Dimension Wizard](http://go.microsoft.com/fwlink/?LinkId=199481)(Optimisation de l’Assistant Dimension à variation lente) sur blogs.msdn.com.  
+-   Entrée de blog [Optimizing the Slowly Changing Dimension Wizard](https://go.microsoft.com/fwlink/?LinkId=199481)(Optimisation de l’Assistant Dimension à variation lente) sur blogs.msdn.com.  
   
   

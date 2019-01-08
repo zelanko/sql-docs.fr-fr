@@ -17,15 +17,15 @@ ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 508d4083549cf1c6db6209be08d23b3fad054845
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207939"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354225"
 ---
 # <a name="prepared-execution"></a>Exécution préparée
-  L'API ODBC définit l'exécution préparée comme un moyen de réduire la charge d'analyse et de compilation associée à l'exécution répétée d'une instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'application génère une chaîne de caractères contenant une instruction SQL, puis l'exécute en deux étapes. Il appelle [SQLPrepare, fonction](http://go.microsoft.com/fwlink/?LinkId=59360) une fois pour que l’instruction soit analysée et compilée dans un plan d’exécution par le [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Il appelle ensuite **SQLExecute** pour chaque exécution du plan d’exécution préparée. Cela permet de réduire la charge d'analyse et de compilation pour chaque exécution. L'exécution préparée est couramment utilisée par les applications pour exécuter de manière répétée la même instruction SQL paramétrable.  
+  L'API ODBC définit l'exécution préparée comme un moyen de réduire la charge d'analyse et de compilation associée à l'exécution répétée d'une instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'application génère une chaîne de caractères contenant une instruction SQL, puis l'exécute en deux étapes. Il appelle [SQLPrepare, fonction](https://go.microsoft.com/fwlink/?LinkId=59360) une fois pour que l’instruction soit analysée et compilée dans un plan d’exécution par le [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Il appelle ensuite **SQLExecute** pour chaque exécution du plan d’exécution préparée. Cela permet de réduire la charge d'analyse et de compilation pour chaque exécution. L'exécution préparée est couramment utilisée par les applications pour exécuter de manière répétée la même instruction SQL paramétrable.  
   
  Avec la plupart des bases de données, l'exécution préparée est plus rapide que l'exécution directe pour les instructions qui sont exécutées plus de trois ou quatre fois principalement du fait que l'instruction est compilée une seule fois, alors que les instructions exécutées directement sont compilées chaque fois qu'elles sont exécutées. L'exécution préparée peut également permettre de réduire le trafic réseau car le pilote peut envoyer un identificateur de plan d'exécution et les valeurs de paramètre, plutôt qu'une instruction SQL entière, à la source de données chaque fois que l'instruction est exécutée.  
   

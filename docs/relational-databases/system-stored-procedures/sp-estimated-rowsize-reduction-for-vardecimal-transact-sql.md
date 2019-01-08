@@ -22,12 +22,12 @@ ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee1d51d304e43e2c6e50bd8621035486dd778133
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d7f088d85a5a56a6440266bd9851cbd90c9c0f9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799517"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590453"
 ---
 # <a name="spestimatedrowsizereductionforvardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@table=** ] **'***table***'**  
+ [  **@table=** ] **'**_table_**'**  
  Nom en trois parties de la table dont le format de stockage doit être modifié. *table* est **nvarchar(776)**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -69,7 +69,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
   
  Si une table est activée pour le format de stockage vardecimal, utilisez **sp_estimated_rowsize_reduction_for_vardecimal** pour estimer la taille moyenne de la ligne si le format de stockage vardecimal est désactivé.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur la table.  
   
 ## <a name="examples"></a>Exemples  

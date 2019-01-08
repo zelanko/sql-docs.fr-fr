@@ -1,24 +1,23 @@
 ---
-title: 'Étape 1 : Création d’un projet Integration Services | Microsoft Docs'
+title: 'Étape 1 : Création d’une nouvelle intégration de projet Services | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 363c3c86c9c98c17d937b1ea766fd2015f985218
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eff00a91c6fff1caee5e5fc41dd6d59f8635f78f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147139"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377405"
 ---
-# <a name="step-1-creating-a-new-integration-services-project"></a>Étape 1 : Création d'un nouveau projet Integration Services
+# <a name="step-1-creating-a-new-integration-services-project"></a>Étape 1 : Création d'un nouveau projet Integration Services
   La première étape de la création d'un package dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste à créer un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Ce projet comprend les modèles des objets (sources de données, vues de source de données et packages) que vous utilisez dans une solution de transformation de données.  
   
  Les packages que vous allez créer dans ce didacticiel [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] interprètent les valeurs des données de paramètres régionaux. Si votre ordinateur n'est pas configuré pour l'utilisation du paramètre Anglais (États-Unis), vous devez définir des propriétés supplémentaires dans le package. Les packages que vous utilisez dans les leçons 2 à 5 sont copiés à partir du package créé dans la leçon 1 ; vous n'avez pas besoin de mettre à jour les propriétés des paramètres régionaux dans les packages copiés.  
@@ -26,7 +25,7 @@ ms.locfileid: "48147139"
 > [!NOTE]  
 >  Ce didacticiel nécessite Microsoft SQL Server Data Tools.  
 >   
->  Pour plus d'informations sur l'installation de SQL Server Data Tools, consultez [Téléchargement de SQL Server Data Tools](http://msdn.microsoft.com/data/hh297027).  
+>  Pour plus d'informations sur l'installation de SQL Server Data Tools, consultez [Téléchargement de SQL Server Data Tools](https://msdn.microsoft.com/data/hh297027).  
   
 ### <a name="to-create-a-new-integration-services-project"></a>Pour créer un nouveau projet Integration Services  
   
@@ -47,6 +46,6 @@ ms.locfileid: "48147139"
 7.  Dans la barre d’outils de **l’Explorateur de solutions** , cliquez avec le bouton droit sur **Package.dtsx**, choisissez **Renommer**, puis attribuez au package par défaut le nom **Lesson 1.dtsx**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 2 : Ajout et configuration d’un gestionnaire de connexions de fichiers plats](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+ [Étape 2 : Ajout et configuration d’un gestionnaire de connexions de fichier plat](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
   

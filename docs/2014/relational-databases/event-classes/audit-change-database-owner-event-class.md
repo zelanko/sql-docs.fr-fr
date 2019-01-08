@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 2f1dd4fc-2540-423c-80ad-c5bc712c42e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12f55d2f1c404bf5c9d9d8f3daaddc8bc2235b8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35ffa7a1a9a5f914d95c13d0ada205d2dc0db483
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050629"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822413"
 ---
 # <a name="audit-change-database-owner-event-class"></a>Audit Change Database Owner (classe d'événements)
   La classe d’événements **Audit Change Database Owner** se produit lorsque vous utilisez l’instruction ALTER AUTHORIZATION pour changer le propriétaire d’une base de données et que les autorisations requises à cet effet sont activées.  
@@ -34,8 +33,8 @@ ms.locfileid: "48050629"
 |**DatabaseID**|**Int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |**DatabaseName**|**nvarchar**|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |**DBUserName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du client.|40|Oui|  
-|**EventClass**|**Int**|Type d’événement = 152.|27|non|  
-|**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|non|  
+|**EventClass**|**Int**|Type d’événement = 152.|27|Non|  
+|**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**IsSystem**|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
 |**LoginName**|**nvarchar**|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , soit les informations d'identification de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows au format DOMAINE\nom_utilisateur).|11|Oui|  
@@ -43,7 +42,7 @@ ms.locfileid: "48050629"
 |**NTDomainName**|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |**NTUserName**|**nvarchar**|Nom d'utilisateur Windows.|6|Oui|  
 |**RequestID**|**Int**|ID de la demande contenant l'instruction.|49|Oui|  
-|**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |**SPID**|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  

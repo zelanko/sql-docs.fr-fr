@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], deploying
@@ -14,12 +13,12 @@ ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d39e7bf701165794d52af970e227ae63cdfb6bb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b74a2de7cd9479552fdf560a324a93541496eaa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069079"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792791"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Déployer un package de déploiement de modèle à l'aide de l'Assistant
   Utilisez l'Assistant Déploiement de modèle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour déployer les packages qui contiennent uniquement des objets de modèle. Si vous avez besoin de déployer un package avec des données, consultez [Déployer un package de déploiement de modèle à l’aide de MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
@@ -34,7 +33,7 @@ ms.locfileid: "48069079"
   
 -   Un package de déploiement de modèle doit exister. Pour plus d’informations, consultez [Créer un package de déploiement de modèle à l’aide de l’Assistant](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
   
--   Vous devez être administrateur dans l'environnement où vous déployez le modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Vous devez être administrateur dans l'environnement où vous déployez le modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-deploy-a-model-deployment-package-of-model-objects-only"></a>Pour déployer un package de déploiement de modèle d'objets de modèle uniquement  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48069079"
   
 5.  Recherchez votre package de déploiement (fichier .pkg), puis cliquez sur **Ouvrir**.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 7.  Une fois le package chargé, cliquez sur **Suivant**.  
   

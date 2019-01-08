@@ -20,21 +20,21 @@ ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2a4965fedc7da47751742e863119b818a9fcba9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62d22d1bf5fc3d01bf62afd2da6b3ebbc2bb0289
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646357"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204349"
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption, fonction
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : déconseillé  
+ Version introduite : Conformité aux normes 1.0 ODBC : Déprécié  
   
  **Résumé**  
  Dans ODBC 3 *.x*, la fonction ODBC 2.0 **SQLSetConnectOption** a été remplacé par **SQLSetConnectAttr**. Pour plus d’informations, consultez [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 2 *.x* application fonctionne avec un ODBC 3 *.x* pilote, consultez [mappage de fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)".  
   
 ## <a name="remarks"></a>Notes  

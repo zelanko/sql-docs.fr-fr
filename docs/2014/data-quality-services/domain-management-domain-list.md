@@ -1,5 +1,5 @@
 ---
-title: 'Gestion de l’arborescence du domaine : Liste des domaines | Microsoft Docs'
+title: 'Gestion des domaines : Liste des domaines | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0dfc543659bdb8476d880bbe6021d0f3fd27bfd
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3b0956c98b8e086fe8e44c69001e391d203d376b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032486"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520349"
 ---
-# <a name="domain-management-domain-list"></a>Gestion de l'arborescence du domaine : Liste des domaines
+# <a name="domain-management-domain-list"></a>Gestion des domaines : Liste des domaines
   Cette rubrique décrit les contrôles dans la liste des domaines de la page **Gestion de l'arborescence du domaine** dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Utilisez ce volet pour sélectionner un domaine sur lequel effectuer des opérations de gestion. Le même volet est utilisé pour toutes les pages à onglets dans la page **Gestion de l'arborescence du domaine** .  
   
 ## <a name="options"></a>Options  
@@ -35,7 +35,7 @@ ms.locfileid: "51032486"
  Créez un nouveau domaine dans la base de connaissances. Cette commande affiche la boîte de dialogue **Créer un domaine** . Cette commande est disponible en cliquant avec le bouton droit sur un domaine ou en cliquant sur l'icône au-dessus de la liste des domaines. Pour plus d’informations, consultez [Créer un domaine](../../2014/data-quality-services/create-a-domain.md).  
   
  **Créer une copie du domaine sélectionné**  
- Créez une copie exacte du domaine sélectionné, puis ajoutez-la à la base de connaissances. Son nom est le nom du domaine à partir duquel elle a été créée, avec « – Copie » ajouté à la fin du nom. Cette commande est disponible en cliquant avec le bouton droit sur un domaine, puis en cliquant sur **Créer une copie**, ou en cliquant sur l'icône au-dessus de la liste des domaines. Elle n'est pas disponible pour un domaine composite.  
+ Créez une copie exacte du domaine sélectionné, puis ajoutez-la à la base de connaissances. Son nom est le nom du domaine à partir duquel elle a été créée, avec « - Copie » ajouté à la fin du nom. Cette commande est disponible en cliquant avec le bouton droit sur un domaine, puis en cliquant sur **Créer une copie**, ou en cliquant sur l'icône au-dessus de la liste des domaines. Elle n'est pas disponible pour un domaine composite.  
   
  **Importer un domaine à partir d'un fichier de données**  
  Importez un domaine à partir d'un fichier .dqs. Cette commande affiche la boîte de dialogue **Importer à partir d'un fichier de données** qui vous permet de parcourir le système de fichiers et de sélectionner un fichier .dqs pour un seul domaine ou un domaine composite. Cette commande est disponible en cliquant sur l'icône au-dessus de la liste des domaines. Pour plus d’informations, consultez [Importez un domaine à partir d'un fichier .dqs](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md).  

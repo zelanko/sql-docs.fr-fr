@@ -14,12 +14,12 @@ ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 102c116e24cc194590ff9ac91abf4c234700acc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5c1ee253c6fedde6b0954f36eb115253f876d0b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102129"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408496"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>Supprimer un écouteur de groupe de disponibilité (SQL Server)
   Cette rubrique explique comment supprimer un écouteur de groupe de disponibilité d'un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -88,13 +88,13 @@ ms.locfileid: "48102129"
      L'exemple suivant supprime l'écouteur du groupe de disponibilité `AccountsAG` . Le nom DNS est AccountsAG_Listener.  
   
     ```  
-    ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER ‘AccountsAG_Listener’;  
+    ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER 'AccountsAG_Listener';  
     ```  
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour supprimer un écouteur de groupe de disponibilité**  
   
-1.  Définir par défaut (`cd`) à l’instance de serveur qui héberge le réplica principal.  
+1.  Définissez la valeur par défaut (`cd`) sur l'instance de serveur qui héberge le réplica principal.  
   
 2.  Utilisez l'applet de commande `Remove-Item` intégrée pour supprimer un écouteur. Par exemple, la commande suivante supprime un écouteur nommé `MyListener` d'un groupe de disponibilité nommé `MyAg`.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48102129"
     ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d’une applet de commande, utilisez le `Get-Help` applet de commande dans le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] environnement PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   

@@ -18,12 +18,12 @@ ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e8ecad7b3d9df0974d7f7548438f2464d75fd35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d98c06131029f804476fe1f3779352a34ccd81e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225057"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537479"
 ---
 # <a name="specifying-the-installation-target"></a>Spécification de la cible d'installation
   Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit les informations de cible d’installation à partir de la \< *nom_projet*> .deploymenttargets fichier. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crée ce fichier lorsque vous générez le projet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise la base de données et le serveur spécifié sur le **déploiement** page de la  *\<nom_projet >* **Pages de propriétés** boîte de dialogue pour créer le \< *nom_projet*> fichier .targets.  
@@ -37,17 +37,17 @@ ms.locfileid: "48225057"
   
 -   Exécutez l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode interactif. Sur la page **Cible d'installation** , spécifiez une nouvelle destination pour l'instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et la base de données.  
   
-     —ou—  
+     -ou-  
   
 -   Exécutez l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'invite de commandes en mode fichier de réponses. Pour plus d'informations sur le mode fichier de réponses, consultez [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md).  
   
-     —ou—  
+     -ou-  
   
 -   Modifier le \< *nom_projet*> fichier .deploymenttargets à l’aide de n’importe quel éditeur de texte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécification des partitions et des Options de déploiement de rôle](deployment-script-files-partition-and-role-deployment-options.md)   
- [Spécification des paramètres de Configuration pour le déploiement de la Solution](deployment-script-files-solution-deployment-config-settings.md)   
- [Spécification d’options de traitement](deployment-script-files-specifying-processing-options.md)  
+ [Spécification des options de déploiement de partitions et de rôles](deployment-script-files-partition-and-role-deployment-options.md)   
+ [Spécification de paramètres de configuration pour le déploiement de solutions](deployment-script-files-solution-deployment-config-settings.md)   
+ [Spécification d'options de traitement](deployment-script-files-specifying-processing-options.md)  
   
   

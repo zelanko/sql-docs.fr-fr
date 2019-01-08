@@ -10,12 +10,12 @@ ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8929a59cbffc8a9aad3ed3c6be4504fe7937be69
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109309"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416970"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Création et gestion du stockage des objets mémoire optimisés
   Le moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] est intégré dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce qui vous permet d’avoir des tables optimisées en mémoire et des tables sur disque (traditionnelles) dans la même base de données. Toutefois, la structure de stockage des tables optimisées en mémoire est différente de celle des tables sur disque.  
@@ -24,9 +24,9 @@ ms.locfileid: "48109309"
   
 -   Elles sont mappées à groupe de fichiers contenant un ou plusieurs fichiers.  
   
--   Chaque fichier est divisé en étendues de 8 pages de 8 Ko chacune.  
+-   Chaque fichier est divisé en étendues de 8 pages de 8 Ko chacune.  
   
--   Une étendue peut être partagée entre plusieurs tables, mais il existe une correspondance univoque entre une page allouée et la table ou l’index. En d’autres termes, une page ne peut pas contenir de lignes appartenant à plusieurs tables ou index.  
+-   Une étendue peut être partagée entre plusieurs tables, mais il existe une correspondance univoque entre une page allouée et la table ou l’index. En d’autres termes, une page ne peut pas contenir de lignes issues de plusieurs tables ou index.  
   
 -   Les données sont placées dans la mémoire (le pool de mémoires tampons) en fonction des besoins et les pages modifiées ou créées sont écrites de façon asynchrone sur le disque, générant essentiellement des E/S aléatoires.  
   

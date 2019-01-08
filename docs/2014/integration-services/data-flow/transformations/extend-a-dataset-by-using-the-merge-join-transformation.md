@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Merge Join transformation
@@ -16,12 +15,12 @@ ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe0d9ebeea4693eeacebe9d0747bf71f26f85ad5
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 1be287eea3abc54bbefac7a4d4efa62a49386c25
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460194"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823043"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Étendre un dataset à l'aide de la transformation de jointure de fusion
   Pour pouvoir ajouter et configurer une transformation de jointure de fusion, le package doit inclure au moins une tâche de flux de données et deux composants de flux de données qui fournissent des entrées à la transformation de jointure de fusion.  

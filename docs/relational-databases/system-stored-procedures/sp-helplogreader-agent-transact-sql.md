@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helplogreader_agent
@@ -17,12 +16,12 @@ ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 96d4554cc02f68f4f59e84f9a2b4c454097b3125
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 811a6c78400e0030d89067d2998ed8cc0ad32be2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764787"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789677"
 ---
 # <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ## <a name="remarks"></a>Notes  
  **sp_helplogreader_agent** est utilisé dans la réplication transactionnelle.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe sur le serveur de publication ou les membres de la **db_owner** rôle de base de données fixe sur la base de données de publication peut exécuter **sp_helplogreader_agent**.  
   
 ## <a name="see-also"></a>Voir aussi  

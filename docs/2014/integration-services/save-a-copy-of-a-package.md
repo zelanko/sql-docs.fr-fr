@@ -17,12 +17,12 @@ ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e77ba9379ebf482d8ed2f587ea175706458bd275
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24e5e554af43cd95a65c6d392106217af9ab2cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193409"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532183"
 ---
 # <a name="save-a-copy-of-a-package"></a>Enregistrer une copie d'un package
   Cette procédure décrit comment enregistrer une copie d’un package dans le système de fichiers, dans le magasin de packages ou dans la base de données **msdb** dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lorsque vous spécifiez un emplacement dans lequel enregistrer la copie du package, vous pouvez également mettre à jour le nom de celui-ci.  
@@ -46,7 +46,7 @@ ms.locfileid: "48193409"
   
 5.  Si vous enregistrez une copie du package dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], indiquez le type d'authentification et, si vous utilisez l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , indiquez un nom d'utilisateur et un mot de passe.  
   
-6.  Pour spécifier le chemin du package, tapez le chemin ou cliquez sur le bouton Parcourir **(…)** pour indiquer l’emplacement du package. Le nom par défaut du package est Package. Le cas échéant, attribuez au package un nom qui réponde mieux à vos besoins.  
+6.  Pour spécifier le chemin du package, tapez le chemin ou cliquez sur le bouton Parcourir **(...)** pour indiquer l’emplacement du package. Le nom par défaut du package est Package. Le cas échéant, attribuez au package un nom qui réponde mieux à vos besoins.  
   
      Si vous sélectionnez **SQL Server** dans l’option **Chemin d’accès au package** , le chemin du package comprend les dossiers logiques enregistrés dans la base de données **msdb** et le nom du package. Par exemple, si le package DownloadMonthlyData est associé au sous-dossier Finance du dossier MSDB (nom par défaut du dossier logique racine dans la base de données **msdb**), le chemin du package nommé DownloadMonthlyData est MSDB/Finance/DownloadMonthlyData.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48193409"
   
 7.  Vérifiez le niveau de protection du package.  
   
-8.  Si vous le souhaitez, cliquez sur le bouton **(…)** en regard de la zone **Niveau de protection** pour modifier le niveau de protection.  
+8.  Si vous le souhaitez, cliquez sur le bouton **(...)** en regard de la zone **Niveau de protection** pour changer le niveau de protection.  
   
     -   Dans la boîte de dialogue **Niveau de protection du package** , sélectionnez un niveau de protection différent.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48193409"
 9. Cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Packages Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Configuration de l’intégration des Services Service &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

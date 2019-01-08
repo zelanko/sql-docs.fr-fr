@@ -17,14 +17,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b35f34499100e8331f968d6f9297280451885290
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ac104808f5d4e0b2b612c8f3ebbd17f34fc6493
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169609"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358581"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secondaires actifs : réplicas secondaires accessibles en lecture (groupes de disponibilité Always On)
+# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secondaires actifs : Réplicas secondaires lisibles (groupes de disponibilité) Always On
   Les fonctions secondaires actives de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluent la prise en charge de l’accès en lecture seule à un ou plusieurs réplicas secondaires (*réplicas secondaires accessibles en lecture*). Un réplica secondaire accessible en lecture autorise l'accès en lecture seule à toutes ses bases de données secondaires. Toutefois, les bases de données secondaires accessibles en lecture ne sont pas définies en lecture seule. Elles sont dynamiques. Chaque base de données secondaire change à mesure que les modifications apportées à la base de données primaire sont répercutées sur elle. Pour un réplica secondaire classique, les données des bases de données secondaires, y compris les tables optimisées en mémoire durables, sont quasiment synchronisées en temps réel. De plus, les index de recherche en texte intégral sont synchronisés avec les bases de données secondaires. En général, la latence des données entre une base de données primaire et la base de données secondaire correspondante n'est que de quelques secondes.  
   
  Les paramètres de sécurité définis pour les bases de données primaires sont également appliqués dans les bases de données secondaires. Cela inclut les utilisateurs, les rôles de base de données et les rôles d'applications avec leurs autorisations respectives, ainsi que le chiffrement transparent des données s'il est activé sur la base de données primaire.  
@@ -94,7 +94,7 @@ ms.locfileid: "48169609"
   
 -   Dans une base de données secondaire comportant des tables mémoire optimisées, bien que les versions de ligne soient toujours générées pour les tables mémoire optimisées, les requêtes sont bloquées jusqu'à la fin de toutes les transactions actives qui existaient dans le réplica principal au moment où le réplica secondaire a été activé pour un accès en lecture. Cela garantit que les tables sur disque et mémoire optimisées sont disponibles en même temps pour la charge de travail de création de rapports et les requêtes en lecture seule.  
   
--   Le suivi des modifications et la capture de données modifiées ne sont pas pris en charge sur les bases de données secondaires qui appartiennent à un réplica secondaire accessible en lecture :  
+-   Le suivi des modifications et la capture de données modifiées ne sont pas pris en charge sur les bases de données secondaires qui appartiennent à un réplica secondaire accessible en lecture :  
   
     -   Le suivi des modifications est explicitement désactivé sur les bases de données secondaires.  
   
@@ -219,7 +219,7 @@ GO
   
     ```  
   
-     Message d'erreur :  
+     Message d'erreur :  
   
     ```  
     Msg 41368, Level 16, State 0, Line 2  
@@ -238,7 +238,7 @@ GO
     SELECT * FROM t_hk WITH (UPDLOCK)  
     ```  
   
--   Pour les transactions entre conteneurs, les transactions avec le niveau d'isolation de session SNAPSHOT qui accèdent aux tables mémoire optimisées ne sont pas prises en charge. Par exemple,  
+-   Pour les transactions entre conteneurs, les transactions avec niveau d’isolation de session « snapshot » que tables mémoire optimisées n’est pas prise en charge l’accès. Par exemple,  
   
     ```tsql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
@@ -271,9 +271,9 @@ GO
   
     |Accès en lecture au réplica secondaire ?|Isolation d'instantané ou isolation d'instantané Read Committed ?|Base de données primaire|Base de données secondaire|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |non|non|Aucune version de ligne ni surcharge de 14 octets|Aucune version de ligne ni surcharge de 14 octets|  
-    |non|Oui|Versions de ligne et surcharge de 14 octets|Aucune version de ligne, mais surcharge de 14 octets|  
-    |Oui|non|Aucune version de ligne, mais surcharge de 14 octets|Versions de ligne et surcharge de 14 octets|  
+    |Non|Non|Aucune version de ligne ni surcharge de 14 octets|Aucune version de ligne ni surcharge de 14 octets|  
+    |Non|Oui|Versions de ligne et surcharge de 14 octets|Aucune version de ligne, mais surcharge de 14 octets|  
+    |Oui|Non|Aucune version de ligne, mais surcharge de 14 octets|Versions de ligne et surcharge de 14 octets|  
     |Oui|Oui|Versions de ligne et surcharge de 14 octets|Versions de ligne et surcharge de 14 octets|  
   
 ##  <a name="bkmk_RelatedTasks"></a> Tâches associées  
@@ -292,7 +292,7 @@ GO
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Blog de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog de l’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

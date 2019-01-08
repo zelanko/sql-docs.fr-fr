@@ -19,12 +19,12 @@ ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68907320922f0181521a9ff30de708f660e8dd8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08c490fd6643d8d440444d46d9ac19673d847938
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207099"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518629"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserverconfigurationsetting"></a>Méthode SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting)
   Définit la connexion à une base de données de serveur de rapports spécifique.  
@@ -55,7 +55,7 @@ public void BackupEncryptionKey(string Server,
   
 -   0 - Windows  
   
--   1 – [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   1 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   2 - Service Windows  
   
@@ -76,17 +76,17 @@ public void BackupEncryptionKey(string Server,
   
  Quand le paramètre *CredentialsType* a la valeur 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), la valeur transmise dans le paramètre *UserName* doit être conforme aux spécifications d’un nom de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Quand le paramètre *CredentialsType* a la valeur 2 (Service Windows), le serveur de rapports utilise la sécurité intégrée pour se connecter à la base de données du serveur de rapports, et les paramètres *UserName* et *Password* sont ignorés. Le service Web Report Server utilise soit le compte [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , soit le compte d’un pool d’applications et le compte de service Windows pour accéder à la base de données du serveur de rapports.  
+ Quand le paramètre *CredentialsType* a la valeur 2 (Service Windows), le serveur de rapports utilise la sécurité intégrée pour se connecter à la base de données du serveur de rapports, et les paramètres *UserName* et *Password* sont ignorés. Le service web Report Server utilise soit le compte [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)], soit le compte d’un pool d’applications et le compte de service Windows pour accéder à la base de données du serveur de rapports.  
   
  Quand la méthode SetDatabaseConnection est appelée, elle chiffre et stocke les informations d’identification et les informations sur la base de données dans le fichier de configuration du serveur de rapports spécifié.  
   
  La méthode SetDatabaseConnection ne vérifie pas si le serveur de rapports peut se connecter à la base de données à l’aide des données spécifiées.  
   
- Quand elle est configurée pour la première fois, la propriété ConnectionPoolSize est définie selon les processeurs suivants : ConnectionPoolSize = #Processors * 75.  
+ Si la valeur pour la première fois, la propriété a la valeur de ConnectionPoolSize basée sur les processeurs suivants : ConnectionPoolSize = #Processors * 75.  
   
- La méthode SetDatabaseConnection n’accorde pas d’autorisations aux comptes spécifiés. Vous devez appeler la [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) méthode pour chaque compte qui requiert l’accès à la base de données de serveur de rapports et exécuter le script obtenu.  
+ La méthode SetDatabaseConnection n’accorde pas d’autorisations aux comptes spécifiés. Vous devez appeler la méthode [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) pour chaque compte qui doit accéder à la base de données du serveur de rapports et exécuter le script obtenu.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

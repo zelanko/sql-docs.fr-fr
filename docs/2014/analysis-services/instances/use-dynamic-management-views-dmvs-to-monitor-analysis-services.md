@@ -11,12 +11,12 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56e2626f2d8e452c34f57ad883720eb96d140b27
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 9047458e09e5dd24fa255122d06d211d2c315877
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148117"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376611"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Utiliser des vues de gestion dynamique (DMV) pour surveiller Analysis Services
   Les vues de gestion dynamique (DMV) d'Analysis Services sont des structures de requête qui exposent des informations sur les opérations de serveur local et l'intégrité du serveur. La structure de requête est une interface vers des ensembles de lignes de schéma qui retournent des métadonnées et des informations d'analyse relatives à une instance Analysis Services.  
@@ -47,9 +47,9 @@ SELECT * FROM $System.<schemaRowset>
  Les requêtes DMV sont une alternative à l'exécution des commandes Discover XML/A. Pour la plupart des administrateurs, l'écriture d'une requête DMV est plus simple car la syntaxe de la requête est basée sur le langage SQL. En outre, le jeu de résultats est retourné dans un format tabulaire qui est plus facile à lire et à copier.  
   
 ##  <a name="bkmk_ex"></a> Exemples et scénarios  
- Une requête DMV peut vous aider à répondre à des questions sur les sessions et les connexions actives, ainsi que sur les objets qui consomment le plus d'UC ou de mémoire à un moment précis. Cette section fournit des exemples pour les scénarios d'utilisation de requêtes DMV les plus courants. Vous pouvez également consulter le [Guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) pour plus d’informations sur l’utilisation de requêtes DMV pour surveiller une instance de serveur.  
+ Une requête DMV peut vous aider à répondre à des questions sur les sessions et les connexions actives, ainsi que sur les objets qui consomment le plus d'UC ou de mémoire à un moment précis. Cette section fournit des exemples pour les scénarios d'utilisation de requêtes DMV les plus courants. Vous pouvez également consulter le [Guide des opérations de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) pour plus d’informations sur l’utilisation de requêtes DMV pour surveiller une instance de serveur.  
   
- `Select * from $System.discover_object_activity` /** Cette requête rend compte de l’activité des objets depuis le dernier démarrage du service. Pour obtenir des exemples de requêtes basées sur cette vue DMV, consultez [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322).  
+ `Select * from $System.discover_object_activity` /** Cette requête rend compte de l’activité des objets depuis le dernier démarrage du service. Pour obtenir des exemples de requêtes basées sur cette vue DMV, consultez [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322).  
   
  `Select * from $System.discover_object_memory_usage` /** Cette requête rend compte de la consommation de mémoire par objet.  
   
@@ -99,7 +99,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Si une vue DMV n’est pas disponible pour un ensemble de lignes donné, le serveur retourne l’erreur suivante : « la \<schemarowset > type de demande n’est pas reconnu par le serveur ». Toutes les autres erreurs signalent des problèmes de syntaxe.  
+>  Si une vue DMV n’est pas disponible pour un ensemble de lignes donné, le serveur renvoie l’erreur suivante : « Le \<schemarowset > type de demande n’est pas reconnu par le serveur ». Toutes les autres erreurs signalent des problèmes de syntaxe.  
   
 |Ensemble de lignes|Description|  
 |------------|-----------------|  
@@ -164,8 +164,8 @@ ORDER BY TABLE_NAME ASC
 |[Ensemble de lignes MDSCHEMA_SETS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|Retourne la liste des ensembles qui sont définis dans la connexion actuelle.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [Nouvelle fonction SYSTEMRESTRICTEDSCHEMA pour les ensembles de lignes restreints et les vues de gestion dynamique](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [Guide des opérations de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+ [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
+ [Nouvelle fonction SYSTEMRESTRICTEDSCHEMA pour les ensembles de lignes restreints et les vues de gestion dynamique](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

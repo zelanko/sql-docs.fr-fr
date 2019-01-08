@@ -14,12 +14,12 @@ ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03554319ea3bb9d8ae66bde44e7e4c5026c9da39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0fb7d422687d0bc956937b30bae261b28edb3931
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146529"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351484"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>Certains réplicas de disponibilité ne synchronisent pas de données
     
@@ -38,7 +38,7 @@ ms.locfileid: "48146529"
  Cette stratégie se trouve dans un état sain si aucun des états de synchronisation des données du réplica de disponibilité n'est NOT SYNCHRONIZING.  
   
 > [!NOTE]  
->  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les informations sur les causes et les solutions possibles sont situées sous [Certains réplicas de disponibilité ne synchronisent pas de données](http://go.microsoft.com/fwlink/p/?LinkId=220852) sur TechNet Wiki.  
+>  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les informations sur les causes et les solutions possibles sont situées sous [Certains réplicas de disponibilité ne synchronisent pas de données](https://go.microsoft.com/fwlink/p/?LinkId=220852) sur TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Causes possibles  
  Dans ce groupe de disponibilité, au moins un réplica secondaire affiche l'état de synchronisation NOT SYNCHRONIZING et n'accepte pas les données du réplica principal.  

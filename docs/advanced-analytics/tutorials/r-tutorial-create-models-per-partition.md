@@ -1,5 +1,5 @@
 ---
-title: Didacticiel sur la création, formation et évaluation des modèles en fonction de partition dans R (SQL Server Machine Learning Services) | Microsoft Docs
+title: Didacticiel sur la création, formation et évaluation des modèles en fonction de partition dans R - Services de SQL Server Machine Learning
 description: Apprenez à modéliser, former et utiliser des données partitionnées qui sont créées dynamiquement lorsque vous utilisez les capacités de modélisation basées sur une partition de l’apprentissage de SQL Server.
 ms.custom: sqlseattle
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ddd6fd14d34b53eb14fd8b303b97dfd1b098154c
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 4c60a50f5a0f1c1831a4831d1f93ddf7d81a11d9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462005"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596460"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Didacticiel : Créer des modèles basés sur une partition dans R sur SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]

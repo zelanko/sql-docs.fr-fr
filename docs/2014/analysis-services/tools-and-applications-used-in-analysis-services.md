@@ -11,12 +11,12 @@ ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac80f4187bc57c86736f09a19200d408e83eb57d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e8425b3d6fdb461b369c2311ba415dd8f032293
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213792"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354974"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Outils et applications utilisés dans Analysis Services
   Trouvez les outils et les applications dont vous avez besoin pour créer des modèles Analysis Services, ainsi que pour gérer les bases de données associées sur une instance Analysis Services.  
@@ -24,17 +24,17 @@ ms.locfileid: "48213792"
 ## <a name="analysis-services-model-designers"></a>Concepteurs de modèles Analysis Services  
  Les modèles tabulaires et multidimensionnels sont créés à partir de modèles de projet dans une solution générée au sein de l'interpréteur de commandes Visual Studio. Le modèle de projet permet aux concepteurs de créer les modèles, les cubes, les dimensions et les rôles qui constituent une solution Analysis Services.  
   
-### <a name="download-sql-server-data-tools-for-business-intelligence-ssdt-bi"></a>Télécharger SQL Server Data Tools - Business Intelligence (SSDT-BI)  
+### <a name="download-sql-server-data-tools-for-business-intelligence-ssdt-bi"></a>Télécharger SQL Server Data Tools - Business Intelligence (SSDT-BI)  
  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] pour Business Intelligence (SSDT-BI), anciennement Business Intelligence Development Studio (BIDS), permet de créer des modèles Analysis Services, des rapports Reporting Services et des packages Integration Services. Téléchargez SSDT-BI à partir des emplacements suivants :  
   
--   [Télécharger SSDT-BI pour Visual Studio 2013](http://go.microsoft.com/fwlink/p/?LinkId=396526)  
+-   [Télécharger SSDT-BI pour Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
   
--   [Télécharger SSDT-BI pour Visual Studio 2012](http://go.microsoft.com/fwlink/p/?LinkID=273673)  
+-   [Télécharger SSDT-BI pour Visual Studio 2012](https://go.microsoft.com/fwlink/p/?LinkID=273673)  
   
  Si vous avez installé une version antérieure de SSDT-BI ou BIDS sur votre ordinateur, la version plus récente est installée côte à côte à la version antérieure. Il est habituel d'exécuter des versions précédentes et plus récentes des outils de conception sur une même station de travail afin de pouvoir modifier les projets et les solutions liés à des versions spécifiques du serveur.  
   
 > [!NOTE]  
->  Il existe plusieurs sites de téléchargement de la version Visual Studio 2012 et Visual Studio 2013 de SSDT. La plupart ne comprennent pas les modèles de projet BI. En cliquant sur les liens ci-dessus, vous obtiendrez la version appropriée. Vous saurez que vous disposez de la version de SSDT-BI correcte si vous voyez le dossier des modèles de projet Business Intelligence. Ce dossier contient les modèles de projet pour Analysis Services, Reporting Services et Integration Services. Selon la manière dont vous avez installé SSDT-BI, vous verrez également un modèle de projet supplémentaire pour les bases de données SQL Server.  
+>  Il existe plusieurs sites de téléchargement de la version Visual Studio 2012 et Visual Studio 2013 de SSDT. La plupart ne comprennent pas les modèles de projet BI. En cliquant sur les liens ci-dessus, vous obtiendrez la version appropriée. Vous saurez que vous avez la version de SSDT-BI correcte si vous voyez le dossier de modèles de projet Business Intelligence. Ce dossier contient les modèles de projet pour Analysis Services, Reporting Services et Integration Services. Selon la manière dont vous avez installé SSDT-BI, vous verrez également un modèle de projet supplémentaire pour les bases de données SQL Server.  
   
  ![Modèles Nouveau projet dans SSDT](media/ssdt-biprojects.png "Modèles Nouveau projet dans SSDT")  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - validating versions [Master Data Services]
@@ -16,12 +15,12 @@ ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6c937e0d78b4c3e9ee1e2c0ab68d32d840173ae7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e3d554fe68eb488da90f4b6124c978e3430f2e8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187360"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793351"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Valider une version par rapport aux règles d'entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], validez une version pour appliquer des règles d’entreprise à tous les membres dans la version de modèle.  
@@ -36,7 +35,7 @@ ms.locfileid: "48187360"
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Gestion des versions** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
 -   L’état de la version doit être **Ouvert** ou **Verrouillé**.  
   
@@ -59,13 +58,13 @@ ms.locfileid: "48187360"
   
 ## <a name="next-steps"></a>Étapes suivantes  
   
--   [Verrouiller une Version &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
+-   [Verrouiller une version &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [États de validation &#40;Master Data Services&#41;](../../2014/master-data-services/validation-statuses-master-data-services.md)   
  [Procédure stockée de validation &#40;Master Data Services&#41;](validation-stored-procedure-master-data-services.md)   
  [Versions &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
- [Les règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
- [Valider des membres spécifiques par rapport aux règles métier &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+ [Règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
+ [Valider des membres spécifiques par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
   

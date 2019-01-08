@@ -11,12 +11,12 @@ ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e3eff042078ad7dde6352c3826103bc680da432
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf954178516cef633dbe34c1b8b01579c8f3e4ea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068927"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374861"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Actualisation planifiée des données et sources de données qui ne prennent pas en charge l'authentification Windows (PowerPivot pour SharePoint)
   Cette rubrique décrit un flux de travail d’actualisation planifiée des données PowerPivot pour SharePoint qui peut utiliser des sources de données qui **NE PRENNENT PAS EN CHARGE** l’authentification Windows. Par exemple, des sources de données Oracle ou IDM DB2. Les illustrations et les étapes figurant dans cette rubrique font référence à des sources de données Oracle, mais le même flux de travail s'applique aux autres sources de données.  
@@ -25,15 +25,15 @@ ms.locfileid: "48068927"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2010 &#124; SharePoint 2013.|  
   
- **Présentation :** créer deux applications cibles Banque d'informations sécurisées. Configurez la première application cible (PowerPivotDataRefresh) en vue d'utiliser les informations d'identification Windows. Configurez la deuxième application cible avec les informations d'identification d'une source de données qui ne prend pas en charge l'authentification Windows, une base de données Oracle par exemple. La deuxième application cible utilise également la première application cible pour le compte d'actualisation des données sans assistance.  
+ **Vue d’ensemble :** Créez deux applications cibles Banque d'informations sécurisées. Configurez la première application cible (PowerPivotDataRefresh) en vue d'utiliser les informations d'identification Windows. Configurez la deuxième application cible avec les informations d'identification d'une source de données qui ne prend pas en charge l'authentification Windows, une base de données Oracle par exemple. La deuxième application cible utilise également la première application cible pour le compte d'actualisation des données sans assistance.  
   
  ![as_powerpivot_refresh_no_windows_auth](../media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh :** ID d’application cible de la Banque d’informations sécurisées qui est défini avec l’authentification Windows.  
+-   **(1) PowerPivotDatarefresh :** ID d'application cible de la Banque d'informations sécurisées qui est défini avec l'authentification Windows.  
   
--   **(2) OracleAuthentication :** ID d’application cible de la Banque d’informations sécurisées qui est défini avec les informations d’identification Oracle.  
+-   **(2) OracleAuthentication :** ID d'application cible de la Banque d'informations sécurisées qui est défini avec les informations d'identification Oracle.  
   
--   **(3)** L’application de service PowerPivot est configurée de manière à utiliser l’application cible « PowerPivotDataRefresh » pour le **compte d’actualisation des données sans assistance**.  
+-   **(3)**  Application du PowerPivot Service est configurée pour utiliser l’application cible « PowerPivotDataRefresh » pour le **compte d’actualisation des données sans assistance**.  
   
 -   **(4)** Le classeur PowerPivot utilise des données Oracle. Les paramètres d’actualisation du classeur spécifient que la connexion de source de données utilise l’application cible **(2)** pour les informations d’identification.  
   
@@ -55,21 +55,21 @@ ms.locfileid: "48068927"
   
 4.  Sur la page **Créer une nouvelle application cible du magasin sécurisé** , configurez les valeurs suivantes :  
   
-    -   **ID de l'application cible :** PowerPivotDataRefresh.  
+    -   **ID d’Application cible :** PowerPivotDataRefresh.  
   
-    -   **Nom complet :** PowerPivotDataRefresh.  
+    -   **Nom complet :** PowerPivotDataRefresh.  
   
     -   **Adresse de messagerie du contact :** ?  
   
-    -   **Type d'application cible :** Groupe.  
+    -   **Type d’Application cible :** Groupe.  
   
-    -   **URL de la page de l'application cible :** aucune.  
+    -   **URL de Page d’Application cible :** Aucun.  
   
-5.  Cliquez sur **Suivant**.  
+5.  Cliquer sur **Suivant**.  
   
 6.  Sur la page Informations d'identification, ne changez pas les deux noms de champ par défaut, ainsi que les types de champ pour **Nom d'utilisateur Windows** et **Mot de passe Windows**.  
   
-7.  Cliquez sur **Suivant**.  
+7.  Cliquer sur **Suivant**.  
   
 8.  Sur la page **Paramètres d'appartenance** , ajoutez au moins un **administrateur d'application cible** , puis ajoutez des membres qui ont besoin d'accéder à l'application cible.  
   
@@ -89,23 +89,23 @@ ms.locfileid: "48068927"
   
 4.  Sur la page **Créer une nouvelle application cible du magasin sécurisé** , configurez les valeurs suivantes :  
   
-    -   **ID de l'application cible :** OracleAuthentication.  
+    -   **ID d’Application cible :** OracleAuthentication.  
   
-    -   **Nom complet :** OracleAuthentication.  
+    -   **Nom complet :** OracleAuthentication.  
   
     -   **Adresse de messagerie du contact :** ?  
   
-    -   **Type d'application cible :** Groupe.  
+    -   **Type d’Application cible :** Groupe.  
   
-    -   **URL de la page de l'application cible :** aucune.  
+    -   **URL de Page d’Application cible :** Aucun.  
   
-5.  Cliquez sur **Suivant**.  
+5.  Cliquer sur **Suivant**.  
   
 6.  Sur le **informations d’identification** , changez le nom du premier champ à `Oracle User ID` et modifiez le **Type de champ** à `User Name`.  
   
      Modifier le nom du deuxième champ à `Oracle Password` et **Type de champ** à `Password`.  
   
-7.  Cliquez sur **Suivant**.  
+7.  Cliquer sur **Suivant**.  
   
 8.  Sur la page **Paramètres d'appartenance** , ajoutez au moins un **administrateur d'application cible** , puis ajoutez des membres qui ont besoin d'accéder à l'application cible.  
   
@@ -115,13 +115,13 @@ ms.locfileid: "48068927"
   
 11. Tapez l'ID d'utilisateur Oracle, ainsi que le mot de passe Oracle, puis cliquez sur **OK**.  
   
- Pour plus d’informations, consultez la section « Pour créer une application cible pour l’authentification SQL Server » dans [utilisez Secure Store avec l’authentification SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ Pour plus d’informations, consultez la section « Pour créer une application cible pour l’authentification SQL Server » dans [utilisez Secure Store avec l’authentification SQL Server (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) (https://technet.microsoft.com/library/gg298949.aspx).  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>Pour configurer l'application de service PowerPivot  
   
 1.  Dans l'administration centrale de SharePoint, cliquez sur Gérer les applications de service.  
   
-2.  Cliquez sur le nom de votre application de service PowerPivot, par exemple « Application de service PowerPivot par défaut ».  
+2.  Cliquez sur le nom de votre Application de Service PowerPivot, par exemple « par défaut PowerPivot Service Application ».  
   
 3.  Cliquez sur **Configurer les paramètres d'application de service** dans la section Actions.  
   
@@ -166,8 +166,8 @@ ms.locfileid: "48068927"
   
 ## <a name="more-information"></a>Informations supplémentaires  
   
--   [Configurer le service Banque d'informations sécurisé dans SharePoint 2013](http://technet.microsoft.com/library/ee806866.aspx).  
+-   [Configurer le service Banque d'informations sécurisé dans SharePoint 2013](https://technet.microsoft.com/library/ee806866.aspx).  
   
--   Consultez la section « Actualisation planifiée des données » de la rubrique [Actualisation des données PowerPivot avec SharePoint 2013 et SQL Server 2012 SP1 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
+-   Consultez la section « Actualisation planifiée des données » de [d’actualisation des données PowerPivot avec SharePoint 2013 et SQL Server 2012 SP1 (Analysis Services)](https://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   
   

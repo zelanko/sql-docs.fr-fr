@@ -11,27 +11,27 @@ ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9db2bfec3a189fcad99d72821e1415e935b1368c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7d4e13542e8361fb9f4bf4fb05509ebe01669ad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168579"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365791"
 ---
 # <a name="performance-counters-ssas"></a>Compteurs de performance (SSAS)
   L'Analyseur de performances vous permet d'analyser les performances d'une instance Microsoft SQL Server Analysis Services (SSAS) à l'aide de compteurs de performance.  
   
  L'Analyseur de performances est un composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) qui assure le suivi de l'utilisation des ressources. Pour démarrer ce composant logiciel enfichable, tapez **PerfMon** à l’invite de commandes ou dans le Panneau de configuration, cliquez sur **Outils d’administration**, puis sur **Analyseur de performances**. L'Analyseur de performances vous permet d'assurer le suivi des performances et de l'activité du serveur et du traitement à l'aide d'objets et de compteurs prédéfinis et de surveiller les événements à l'aide de compteurs définis par l'utilisateur. L'Analyseur de performances collecte des comptes, et non des données, relatifs aux événements (par exemple, sur l'utilisation de la mémoire, le nombre de transactions actives ou l'activité de l'UC.) Vous pouvez également définir des seuils pour des compteurs spécifiques de manière à générer des alertes pour avertir les opérateurs.  
   
- L'Analyseur de performances analyse les instances locales et distantes d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Utilisation de l'Analyseur de performances](http://technet.microsoft.com/library/cc749115.aspx).  
+ L'Analyseur de performances analyse les instances locales et distantes d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Utilisation de l'Analyseur de performances](https://technet.microsoft.com/library/cc749115.aspx).  
   
- Pour afficher la description de l'un des compteurs pouvant être utilisés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], dans l'Analyseur de performances, ouvrez la boîte de dialogue **Ajouter des compteurs** , sélectionnez un objet de performance, puis cliquez sur **Afficher la description**. Les compteurs les plus importants sont les compteurs relatifs à l'utilisation de l'UC, à l'utilisation de la mémoire et à l'activité des disques. Nous vous recommandons de commencer par ces compteurs importants et de passer à des compteurs plus détaillés une fois que vous aurez une meilleure idée de ce qui peut être amélioré par le biais de l'analyse. Pour plus d'informations sur les compteurs à inclure, consultez le [guide des opérations de SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ Pour afficher la description de l'un des compteurs pouvant être utilisés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], dans l'Analyseur de performances, ouvrez la boîte de dialogue **Ajouter des compteurs** , sélectionnez un objet de performance, puis cliquez sur **Afficher la description**. Les compteurs les plus importants sont les compteurs relatifs à l'utilisation de l'UC, à l'utilisation de la mémoire et à l'activité des disques. Nous vous recommandons de commencer par ces compteurs importants et de passer à des compteurs plus détaillés une fois que vous aurez une meilleure idée de ce qui peut être amélioré par le biais de l'analyse. Pour plus d'informations sur les compteurs à inclure, consultez le [guide des opérations de SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Les compteurs sont regroupés afin que vous puissiez plus facilement rechercher les compteurs associés.  
   
 ## <a name="counters-by-groups"></a>Compteurs par groupes  
   
-|Grouper|Description|  
+|Regrouper|Description|  
 |-----------|-----------------|  
 |[Cache](#bkmk_Cache)|Statistiques relatives au cache d'agrégation Analysis Services.|  
 |[Connexion](#bkmk_Connection)|Statistiques relatives aux connexions Microsoft Analysis Services.|  
@@ -135,7 +135,7 @@ ms.locfileid: "48168579"
 |Nombre actuel de nœuds d'évaluation mis en cache|Nombre actuel (approximatif) de nœuds d'évaluation mis en cache générés par les plans d'exécution MDX.|  
 |Nombre de nœuds d'évaluation du moteur de stockage mis en cache|Nombre total de nœuds d'évaluation du moteur de stockage mis en cache générés par les plans d'exécution MDX.|  
 |Nombre de nœuds d'évaluation en mode bloc mis en cache|Nombre total de nœuds d'évaluation en mode bloc mis en cache générés par les plans d'exécution MDX.|  
-|Nombre de nœuds d'évaluation « autres » mis en cache|Nombre total de nœuds d'évaluation mis en cache générés par les plans d'exécution MDX qui ne sont ni du moteur de stockage ni en mode bloc.|  
+|Nombre de nœuds d'évaluation « autres » mis en cache|Nombre total de nœuds d'évaluation mis en cache générés par les plans d'exécution MDX qui ne sont ni du moteur de stockage ni en mode bloc.|  
 |Nombre de suppressions de nœuds d'évaluation|Nombre total de suppressions dans le cache des nœuds d'évaluation en raison de collisions.|  
 |Nombre d'accès à l'index de hachage dans le cache des nœuds d'évaluation|Nombre total d'accès dans le cache des nœuds d'évaluation satisfaits par l'index de hachage.|  
 |Nombre d'accès cellule par cellule dans le cache des nœuds d'évaluation|Nombre total d'accès cellule par cellule dans le cache des nœuds d'évaluation.|  
@@ -159,7 +159,7 @@ ms.locfileid: "48168579"
 |Compteur|Description|  
 |-------------|-----------------|  
 |Pool de pages mémoire d'allocation 64 (Ko)|Mémoire empruntée au système, en Ko.  Cette mémoire est distribuée aux autres parties du serveur.|  
-|Pool de pages mémoire disponible 64 (Ko)|Mémoire actuelle (en Ko) dans la liste de disponibilité 64 Ko  (pages de mémoire prêtes à être utilisées).|  
+|Pool de pages mémoire disponible 64 (Ko)|Mémoire actuelle (en Ko) dans la liste de disponibilité 64 Ko  (pages de mémoire prêtes à être utilisées).|  
 |Pool de pages mémoire d'allocation 8 (Ko)|Mémoire empruntée (en Ko) au pool de pages 64 Ko.  Cette mémoire est distribuée aux autres parties du serveur.|  
 |Pool de pages mémoire disponible 8 (Ko)|Mémoire actuelle (en Ko) dans la liste de disponibilité 8 Ko  (pages de mémoire prêtes à être utilisées).|  
 |Pool de pages mémoire d'allocation 1 (Ko)|Mémoire empruntée (en Ko) au pool de pages 64 Ko.  Cette mémoire est distribuée aux autres parties du serveur.|  

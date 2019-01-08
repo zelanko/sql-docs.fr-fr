@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], effective permissions
@@ -15,12 +14,12 @@ ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 964fdfbb739d03ca20c55b3d1009fcb762aa54b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e70b6dab6399026606382396bded3a467a9b639c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201840"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814561"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Chevauchement des autorisations de modèle et de membre (Master Data Services)
   Une autorisation attribuée à un membre et une autorisation attribuée à un objet de modèle peuvent se chevaucher. Lorsque des chevauchements se produisent, l'autorisation la plus restrictive entre en vigueur.  
@@ -42,7 +41,7 @@ ms.locfileid: "48201840"
   
  Sous l'onglet **Membres de hiérarchie** , le nœud de sous-catégorie Mountain Bikes dans une hiérarchie dérivée a l'autorisation **Mise à jour** attribuée.  
   
- Résultat : dans **Explorateur**, l'utilisateur a l'autorisation **Mise à jour** sur toutes les valeurs d'attribut de tous les membres qui se trouvent dans le nœud Mountain Bikes. Tous les autres membres et attributs sont masqués.  
+ Résultat : Dans **Explorer**, l’utilisateur a **mise à jour** autorisation sur toutes les valeurs d’attribut pour tous les membres dans le nœud Mountain Bikes. Tous les autres membres et attributs sont masqués.  
   
  ![mds_conc_overlap_model_example_1](../../2014/master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48201840"
   
  Sur le **membres de hiérarchie** onglet, le nœud de sous-catégorie Mountain Bikes dans une hiérarchie dérivée est explicitement affecté **en lecture seule** autorisation.  
   
- Résultat : Dans **Explorer**, l’utilisateur a **en lecture seule** autorisation sur les valeurs d’attribut Subcategory des membres dans le nœud Mountain Bikes. Tous les autres membres et attributs sont masqués.  
+ Résultat : Dans **Explorer**, l’utilisateur a **en lecture seule** autorisation sur les valeurs d’attribut Subcategory des membres dans le nœud Mountain Bikes. Tous les autres membres et attributs sont masqués.  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48201840"
   
  Sous l'onglet **Membres de hiérarchie** , le nœud de sous-catégorie Mountain Bikes dans une hiérarchie dérivée a l'autorisation **Mise à jour** attribuée explicitement.  
   
- Résultat : Dans **Explorer**, l’utilisateur a **en lecture seule** autorisation aux valeurs d’attribut. Tous les autres membres et attributs sont masqués.  
+ Résultat : Dans **Explorer**, l’utilisateur a **en lecture seule** autorisation aux valeurs d’attribut. Tous les autres membres et attributs sont masqués.  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   

@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7dc1581fd2940ec5bad7698985eeab2c8ed96b2c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 29fb46b02e887ceebde293383fda99cbd3ed42be
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037517"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072426"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Compatibilité descendante de Analysis Services (2017 SQL)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
 
 Cet article décrit les modifications apportées dans la disponibilité des fonctionnalités et de comportement entre la version actuelle et la version précédente.
 
-## <a name="deprecated-features"></a>Fonctionnalités déconseillées
+## <a name="deprecated-features"></a>Fonctionnalités dépréciées
 Un *fonctionnalité déconseillée* seront abandonnés à partir du produit dans une version ultérieure, mais est toujours pris en charge et inclus dans la version actuelle pour assurer la compatibilité descendante. Il est recommandé de que vous interrompre l’utilisation des fonctionnalités déconseillées dans les projets nouveaux ou existants pour assurer la compatibilité avec les versions ultérieures.
 
 Les fonctionnalités suivantes sont déconseillées dans cette version :
@@ -32,10 +32,10 @@ Les fonctionnalités suivantes sont déconseillées dans cette version :
 |(Multidimensionnel)|Exploration de données|
 |(Multidimensionnel)|Groupes de mesures liés distants|
 |Tabulaire|Modèles au niveau de compatibilité 1100 et 1103|
-|Tabulaire|Propriétés de modèle d’objet tabulaire : Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
+|Tabulaire|Propriétés du modèle d’objet tabulaires : Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
 |Outils|SQL Server Profiler pour la capture de traces<br /><br /> La solution consiste à utiliser le Générateur de profils d’événements étendus, intégré dans SQL Server Management Studio.  <br /> Consultez [Surveiller Analysis Services avec des événements étendus SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Outils|Server Profiler pour Trace Replay <br />Remplacement. Il n’existe aucune solution de remplacement.|  
-|Objets de gestion de trace et API de trace|Objets Microsoft.AnalysisServices.Trace (contenant les API des objets Analysis Services de trace et de relecture). La solution de remplacement est multiple :<br /><br /> -Configuration de trace : Microsoft.SqlServer.Management.XEvent<br />-Lecture de trace : Microsoft.SqlServer.XEvent.Linq<br />-   Relecture de trace : Aucune|  
+|Objets de gestion de trace et API de trace|Objets Microsoft.AnalysisServices.Trace (contenant les API des objets Analysis Services de trace et de relecture). La solution de remplacement est multiple :<br /><br /> -Configuration de trace : Microsoft.SqlServer.Management.XEvent<br />-Lecture de trace : Microsoft.SqlServer.XEvent.Linq<br />-Relecture de trace : None|  
 
 
 ## <a name="discontinued-features"></a>Fonctionnalités supprimées

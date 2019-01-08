@@ -10,12 +10,12 @@ ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d423dc8eb00dfce0434c680046f39e0fb9dfa8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101509"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351655"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Tableau de bord de l'utilitaire (utilitaire SQL Server)
   Pour consulter des données dans le tableau de bord de l’utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], sélectionnez le nœud supérieur dans l’arborescence de l’Explorateur de l’utilitaire - étiqueté « Utility<nom_UCP\\\(NomOrdinateur\UCP) ». Le tableau de bord inclut les données de synthèse et les données détaillées de toutes les instances managées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et de toutes les applications de couche Données dans l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour actualiser les données du tableau de bord, cliquez avec le bouton droit sur le nœud supérieur de l’arborescence de l’Explorateur de l’utilitaire et sélectionnez **Actualiser**.  
@@ -36,7 +36,7 @@ ms.locfileid: "48101509"
   
 -   utilisation du processeur par l'ordinateur ;  
   
--   L'état de chaque paramètre est divisé en trois catégories :  
+-   L'état de chaque paramètre est divisé en trois catégories :  
   
 -   bien utilisé : nombre d'instances gérées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui ne violent pas les stratégies d'utilisation des ressources ;  
   
@@ -83,13 +83,13 @@ ms.locfileid: "48101509"
  L'état détaillé de chaque paramètre d'intégrité est répertorié dans des curseurs. La fraction située à droite des curseurs montre combien d'applications de couche Données se trouvent dans chaque catégorie d'état. Pour plus d’informations sur la consultation de l’état des instances de la couche Données, ou pour afficher ou modifier des paramètres de configuration de stratégie, consultez [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md).  
   
  Historique de l'utilisation de l'utilitaire du stockage  
- L'historique de l'utilisation s'affiche dans un graphique temporel situé au bas du tableau de bord de l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Notez que les données temporelles affichent la date et l'heure locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
+ L'historique de l'utilisation s'affiche dans un graphique temporel situé au bas du tableau de bord de l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Notez que les données temporelles affichent la date et l'heure locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
   
  Utilisez les cases d'option situées à gauche de la zone d'affichage pour modifier la période de création de rapports pour le graphique.  
   
  Les options d'intervalle de création de rapport sont les suivants :  
   
--   1 jour, affiché par intervalles de 15 minutes ;  
+-   1 jour, affiché par intervalles de 15 minutes ;  
   
 -   1 semaine, affiché par intervalles de 1 jour ;  
   

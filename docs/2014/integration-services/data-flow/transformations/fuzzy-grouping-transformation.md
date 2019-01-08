@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtrans.f1
@@ -26,22 +25,22 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f0b1fc213fb1916421b1c9b0f02bb82b5553770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0108e55f6038b234d78f3fd66d9bae243af28a9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123002"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357355"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation de regroupement approximatif
   La transformation de regroupement probable effectue des tâches de nettoyage des données en identifiant les lignes de données susceptibles d'être des doublons et en sélectionnant une ligne canonique de données à utiliser pour standardiser les données.  
   
 > [!NOTE]  
->  Pour plus d’informations sur la transformation de regroupement floue, y compris les limitations en termes de performances et de mémoire, consultez le livre blanc, [Présentation des transformations Fuzzy Lookup (recherche approximative) et Fuzzy Grouping (regroupement approximatif) dans les services DTS (Data Transformation Services) de SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+>  Pour plus d’informations sur la transformation de regroupement floue, y compris les limitations en termes de performances et de mémoire, consultez le livre blanc, [Présentation des transformations Fuzzy Lookup (recherche approximative) et Fuzzy Grouping (regroupement approximatif) dans les services DTS (Data Transformation Services) de SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
  La transformation de regroupement approximatif nécessite une connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour créer les tables temporaires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessaires à l'algorithme de transformation. La connexion doit correspondre à un utilisateur disposant de l'autorisation de créer des tables dans la base de données.  
   
- Pour configurer la transformation, vous devez sélectionner les colonnes d'entrée à utiliser lors de l'identification des doublons, et vous devez sélectionner le type de correspondance (approximative ou exacte) pour chaque colonne. Une correspondance exacte garantit que seules les lignes possédant des valeurs identiques dans cette colonne seront regroupées. La correspondance exacte peut être appliquée aux colonnes de n'importe quel type de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , à l'exception des types DT_TEXT, DT_NTEXT et DT_IMAGE. Une correspondance approximative regroupe des lignes ayant à peu près les mêmes valeurs. La méthode utilisée pour la correspondance approximative des données est basée sur un score de similarité spécifié par l'utilisateur. Seules les colonnes avec les types de données DT_WSTR et DT_STR peuvent être utilisées dans la correspondance approximative. Pour plus d’informations, consultez [Types de données Integration Services](../integration-services-data-types.md).  
+ Pour configurer la transformation, vous devez sélectionner les colonnes d’entrée à utiliser pendant l’identification des doublons, et vous devez sélectionner le type de correspondance (approximative ou exacte) pour chaque colonne. Une correspondance exacte garantit que seules les lignes possédant des valeurs identiques dans cette colonne seront regroupées. La correspondance exacte peut être appliquée aux colonnes de n'importe quel type de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , à l'exception des types DT_TEXT, DT_NTEXT et DT_IMAGE. Une correspondance approximative regroupe des lignes ayant à peu près les mêmes valeurs. La méthode utilisée pour la correspondance approximative des données est basée sur un score de similarité spécifié par l'utilisateur. Seules les colonnes avec les types de données DT_WSTR et DT_STR peuvent être utilisées dans la correspondance approximative. Pour plus d’informations, consultez [Types de données Integration Services](../integration-services-data-types.md).  
   
  La sortie de transformation comprend toutes les colonnes d'entrée, une ou plusieurs colonnes avec des données standardisées et une colonne contenant le score de similarité. Le score est représenté par une valeur décimale entre 0 et 1. La ligne canonique obtient le score de 1. Les scores des autres lignes dans le regroupement probable indiquent leur degré de correspondance avec cette ligne canonique. Plus le score se rapproche de 1, plus la ligne correspond à la ligne canonique. Si le regroupement probable comprend des lignes qui sont des doublons exacts de la ligne canonique, ces lignes ont également pour score la valeur 1. La transformation ne supprime pas les lignes dupliquées, mais les regroupe en créant une clé qui associe la ligne canonique à des lignes similaires.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48123002"
   
  La transformation de regroupement probable comprend deux fonctionnalités de personnalisation du regroupement qu'elle effectue : les séparateurs de jetons et les seuils de similarité. La transformation fournit un ensemble par défaut de délimiteurs utilisés pour marquer des données, mais vous pouvez ajouter de nouveaux délimiteurs pour améliorer la création de jetons pour vos données.  
   
- Le seuil de similarité indique le degré de précision avec lequel la transformation identifie les doublons. Les seuils de similarité peuvent être définis au niveau du composant et de la colonne. Le seuil de similarité n'est disponible que pour les colonnes participant à une correspondance approximative. La plage de similarité va de 0 à 1. Plus le seuil s'approche de 1, plus les lignes et les colonnes doivent être similaires pour être répertoriées comme doublons. Vous spécifiez le seuil de similarité en définissant la propriété MinSimilarity au niveau du composant et de la colonne. Pour obtenir la similarité spécifiée au niveau du composant, toutes les lignes doivent montrer une similarité à travers toutes les colonnes qui est supérieure ou égale au seuil de similarité spécifié au niveau du composant.  
+ Le seuil de similarité indique le degré de précision avec lequel la transformation identifie les doublons. Les seuils de similarité peuvent être définis au niveau du composant et de la colonne. Le seuil de similarité n'est disponible que pour les colonnes participant à une correspondance approximative. La plage de similarité va de 0 à 1. Plus le seuil s'approche de 1, plus les lignes et les colonnes doivent être similaires pour être répertoriées comme doublons. Vous spécifiez le seuil de similarité en définissant la propriété MinSimilarity au niveau du composant et de la colonne. Pour obtenir la similarité spécifiée au niveau du composant, toutes les lignes doivent montrer une similarité à travers toutes les colonnes qui est supérieure ou égale au seuil de similarité spécifié au niveau du composant.  
   
  La transformation de regroupement probable calcule les mesures internes de similarité ; les lignes moins similaires à la valeur spécifiée dans MinSimilarity ne sont pas regroupées.  
   
@@ -84,11 +83,11 @@ ms.locfileid: "48123002"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation de regroupement probable** , cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de Transformation de regroupement probable &#40;onglet Gestionnaire de connexions&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [Éditeur de transformation de regroupement probable &#40;onglet Gestionnaire de connexions&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [Éditeur de Transformation de regroupement probable &#40;onglet colonnes&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [Éditeur de transformation de regroupement approximatif &#40;onglet Colonnes&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [Éditeur de Transformation de regroupement probable &#40;onglet Avancé&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [Éditeur de transformation de regroupement probable &#40;onglet Avancé&#41;.](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   

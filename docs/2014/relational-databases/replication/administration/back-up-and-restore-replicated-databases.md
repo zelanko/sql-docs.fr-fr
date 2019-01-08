@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - backups [SQL Server replication]
@@ -26,12 +25,12 @@ ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ea5fc487bdac09fab4003076d42cce59a06e27a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af4229037b9c34bbc9a0316ef073f294209be6d5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076858"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773361"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Sauvegarder et restaurer des bases de données répliquées
   Les bases de données répliquées nécessitent une attention toute particulière en ce qui concerne la sauvegarde et la restauration de données. Cette rubrique fournit des informations introductives et des liens vers des informations plus complètes sur les stratégies de sauvegarde et de restauration pour chaque type de réplication.  

@@ -16,12 +16,12 @@ ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9b48d22e463b8596065c1df68d1affc0de5ef92a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 15e75dd27ca447eaab326ff50cc67614d442e096
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091523"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543593"
 ---
 # <a name="high-availability-solutions-sql-server"></a>Solutions haute disponibilité (SQL Server)
   Cette rubrique présente plusieurs solutions haute disponibilité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui améliorent la disponibilité des serveurs ou des bases de données. Une solution à haute disponibilité masque l'impact d'une défaillance matérielle ou logicielle et gère la disponibilité des applications pour réduire au maximum le temps mort que perçoit l'utilisateur.  
@@ -34,7 +34,7 @@ ms.locfileid: "48091523"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit plusieurs options permettant de garantir un haut niveau de disponibilité pour un serveur ou une base de données. Les options de haute disponibilité sont les suivantes :  
   
  Instances de cluster de basculement AlwaysOn  
- Dans le cadre de l'offre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn, les instances de cluster de basculement AlwaysOn exploitent la fonctionnalité WSFC (clustering de basculement Windows Server) pour fournir une haute disponibilité locale grâce à la redondance au niveau de l'instance de serveur, une *instance de cluster de basculement* (FCI). Une instance FCI est une instance unique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installée sur plusieurs nœuds WSFC (clustering de basculement Windows Server) et, éventuellement, sur plusieurs sous-réseaux. Sur le réseau, une instance de cluster de basculement FCI apparaît en tant qu'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécutant sur un ordinateur unique, mais elle permet le basculement d'un nœud WSFC vers un autre en cas d'indisponibilité du nœud actuel.  
+ Dans le cadre de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn offre, les Instances de Cluster de basculement AlwaysOn exploitent la fonctionnalité de Clustering de basculement Windows Server (WSFC) pour fournir une haute disponibilité locale grâce à la redondance à l’instance de serveur un niveau  *instance de cluster de basculement* (ICF). Une instance FCI est une instance unique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installée sur plusieurs nœuds WSFC (clustering de basculement Windows Server) et, éventuellement, sur plusieurs sous-réseaux. Sur le réseau, une instance de cluster de basculement FCI apparaît en tant qu'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécutant sur un ordinateur unique, mais elle permet le basculement d'un nœud WSFC vers un autre en cas d'indisponibilité du nœud actuel.  
   
  Pour plus d’informations, consultez [ Instances de Cluster de basculement AlwaysOn (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48091523"
   
 ## <a name="see-also"></a>Voir aussi  
  [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Mise en miroir de bases de données : interopérabilité et coexistence &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Mise en miroir de base de données : Interopérabilité et Coexistence &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Fonctionnalités dépréciées du moteur de base de données dans SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1cd24b1717bca086bf1419a2df3b44b57104d1f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226609"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370441"
 ---
 # <a name="sqlerrorlogfile-class"></a>Classe SqlErrorLogFile
   Fournit des propriétés pour l'affichage des informations relatives à un fichier journal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,10 +41,10 @@ class SQLErrorLogFile
 |||  
 |-|-|  
 |ArchiveNumber|Type de données : `uint32`<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Numéro d'archive pour le fichier journal.|  
-|InstanceName|Type de données : `string`<br /><br /> Type d'accès : Lecture seule<br /><br /> Qualificateurs : Clé<br /><br /> <br /><br /> Nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où le fichier journal réside.|  
+|InstanceName|Type de données : `string`<br /><br /> Type d'accès : Lecture seule<br /><br /> Qualificateurs : Touche<br /><br /> <br /><br /> Nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où le fichier journal réside.|  
 |LastModified|Type de données : `datetime`<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Date de la dernière modification du fichier journal.|  
 |LogFileSize|Type de données : `uint32`<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Taille du fichier journal, en octets.|  
-|Nom   |Type de données : `string`<br /><br /> Type d'accès : Lecture seule<br /><br /> Qualificateurs : Clé<br /><br /> <br /><br /> Nom du fichier journal.|  
+|Créer une vue d’abonnement|Type de données : `string`<br /><br /> Type d'accès : Lecture seule<br /><br /> Qualificateurs : Touche<br /><br /> <br /><br /> Nom du fichier journal.|  
   
 ## <a name="remarks"></a>Notes  
   
@@ -95,7 +93,7 @@ Next
   
      **\<Lecteur > : \Program Files\Microsoft SQL Server\MSSQL11** **.\< Nom_instance > \MSSQL\Log**  
   
- Si vous vous connectez via un pare-feu, vérifiez qu'une exception est définie dans le pare-feu pour WMI sur les ordinateurs cibles distants. Pour plus d’informations, consultez [connexion à WMI à distance avec Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
+ Si vous vous connectez via un pare-feu, vérifiez qu'une exception est définie dans le pare-feu pour WMI sur les ordinateurs cibles distants. Pour plus d’informations, consultez [connexion à WMI à distance avec Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sqlerrorlogevent, classe](sqlerrorlogevent-class.md)   

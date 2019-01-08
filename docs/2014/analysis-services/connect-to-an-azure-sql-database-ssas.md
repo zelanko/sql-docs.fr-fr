@@ -13,12 +13,12 @@ ms.assetid: 4e0344e9-1822-4698-ad22-05f1f341ced7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b81207d2cb045b330560c652e98b2488aad421b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94a830bba0339262148a0a7f826f3bcb89371274
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149209"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372891"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Connexion à une base de données Azure SQL Database (SSAS)
   Cette page de **l’Assistant Importation de table** vous permet de vous connecter à une [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -26,7 +26,7 @@ ms.locfileid: "48149209"
 > [!NOTE]  
 >  Si vous vous connectez à un dataset Azure DataMarket, consultez [Connexion à un flux de rapport ou de données &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md).  
   
- La [!INCLUDE[ssSDS](../includes/sssds-md.md)] est une base de données relationnelle hébergée à laquelle vous vous connectez à l'aide de l'authentification SQL Server. Pour plus d'informations sur [!INCLUDE[ssSDS](../includes/sssds-md.md)], consultez le site Web [Base de données SQL](http://go.microsoft.com/fwlink/?LinkID=157856). Pour vous connecter à une source de données, vous devez disposer du fournisseur approprié, installé sur votre ordinateur.  
+ La [!INCLUDE[ssSDS](../includes/sssds-md.md)] est une base de données relationnelle hébergée à laquelle vous vous connectez à l'aide de l'authentification SQL Server. Pour plus d'informations sur [!INCLUDE[ssSDS](../includes/sssds-md.md)], consultez le site Web [Base de données SQL](https://go.microsoft.com/fwlink/?LinkID=157856). Pour vous connecter à une source de données, vous devez disposer du fournisseur approprié, installé sur votre ordinateur.  
   
 > [!NOTE]  
 >  Les informations d'identification de l'utilisateur actuel sont utilisées lors de la sélection d'une base de données sur cette page. Toutefois, l'importation ne réussira pas si l'utilisateur spécifié dans la page Informations d'emprunt d'identité n'a pas de privilèges suffisants pour lire la base de données sélectionnée.  

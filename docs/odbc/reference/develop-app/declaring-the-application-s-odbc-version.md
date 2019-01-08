@@ -18,12 +18,12 @@ ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd212f45e02ddce4c64a8b4a7d664ddaedf8090a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c5bb124af74d1fa009a61237edb54a9c8baec74
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666827"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591543"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Déclaration de l’Application&#39;s Version ODBC
 Une application alloue une connexion, il doit au préalable l’attribut d’environnement SQL_ATTR_ODBC_VERSION. Cet attribut indique que l’application suit ODBC 2. *x* ou ODBC 3. *x* spécification lors de l’utilisation des éléments suivants :  
@@ -43,7 +43,7 @@ Une application alloue une connexion, il doit au préalable l’attribut d’env
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   *CatalogName***Argument dans SQLTables**.   Dans ODBC 2. *x*, les caractères génériques (« % » et « _ ») dans le *CatalogName* argument sont traités de manière littérale. Dans ODBC 3. *x*, ils sont traités comme des caractères génériques. Par conséquent, une application qui suit ODBC 2. *x* spécification ne peut pas utiliser ces caractères génériques caractères et n’échappe pas à les lors de leur utilisation en tant que littéraux. Une application qui suit la ODBC 3. *x* spécification peut les utiliser en tant que caractères génériques ou échappement et les utiliser en tant que littéraux. Pour plus d’informations, consultez [Arguments dans les fonctions de catalogue](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+-   _CatalogName_  **Argument dans SQLTables**. Dans ODBC 2. *x*, les caractères génériques (« % » et « _ ») dans le *CatalogName* argument sont traités de manière littérale. Dans ODBC 3. *x*, ils sont traités comme des caractères génériques. Par conséquent, une application qui suit ODBC 2. *x* spécification ne peut pas utiliser ces caractères génériques caractères et n’échappe pas à les lors de leur utilisation en tant que littéraux. Une application qui suit la ODBC 3. *x* spécification peut les utiliser en tant que caractères génériques ou échappement et les utiliser en tant que littéraux. Pour plus d’informations, consultez [Arguments dans les fonctions de catalogue](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
  Le 3 ODBC *.x* Gestionnaire de pilotes alors que ODBC 3 *.x* pilotes vérifier la version de la spécification ODBC dans lequel une application est écrite et réagir en conséquence. Par exemple, si l’application suit ODBC 2. *x* spécification et appelle **SQLExecute** avant d’appeler **SQLPrepare**, les 3 ODBC *.x* Gestionnaire de pilotes retourne SQLSTATE S1010 () Erreur de séquence de fonction). Si l’application suit la ODBC 3 *.x* spécification, le Gestionnaire de pilotes retourne SQLSTATE HY010 (erreur de séquence de fonction). Pour plus d’informations, consultez [la compatibilité descendante et conformité aux normes](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   

@@ -21,12 +21,12 @@ ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a36ad2d94982a0e536f223ceff187a04632baa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e8182a0fca11105541f8dd435f352ba0d393731
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647047"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391652"
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  La liaison prendra effet lors de la prochaine mise en ligne (ONLINE) de la base de données.  
  
- B. Exemple développé d’exemple qui inclut certaines vérifications de base ci-dessus.  Exécutez l’instruction suivante [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ b. Exemple développé d’exemple qui inclut certaines vérifications de base ci-dessus.  Exécutez l’instruction suivante [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -146,7 +146,7 @@ ELSE BEGIN
 END 
 ``` 
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 -   La base de données spécifiée par `database_name`, ainsi que le pool de ressources spécifié par `resource_pool_name`, doivent exister avant de pouvoir procéder à leur liaison.  
   

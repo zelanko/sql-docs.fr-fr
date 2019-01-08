@@ -13,12 +13,12 @@ ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c1618bb590ea0733d537216548679eeb67f53ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8fe601413985cd61cb3c1c7c1fb61a65cdc49de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180289"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354321"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Effectuer une copie en bloc à l'aide d'un fichier de format (ODBC)
   Cet exemple montre comment utiliser la fonction ODBC bcp_init avec un fichier de format.  
@@ -29,7 +29,7 @@ ms.locfileid: "48180289"
   
 2.  Définissez SQL_COPT_SS_BCP et SQL_BCP_ON de façon à activer les opérations de copie en bloc.  
   
-3.  Connectez-vous à Microsoft® SQL Server™.  
+3.  Se connecter à Microsoft ?? SQL Server ???.  
   
 4.  Appelez [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) pour définir les informations suivantes :  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48180289"
   
     -   Nom d'un fichier de données devant recevoir tous les messages d'erreur de copie en bloc (spécifiez NULL si vous ne souhaitez pas de fichier de message).  
   
-    -   Direction de la copie : DB_IN du fichier vers la table ou vue.  
+    -   La direction de la copie : DB_IN du fichier à la table ou vue.  
   
 5.  Appelez [bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) pour lire le fichier de format décrivant le fichier de données utilisable par l’opération de copie en bloc.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48180289"
 ## <a name="example"></a>Exemple  
  Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’accueil des [exemples et projets de communautés Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).) Cette source de données doit être basée sur le pilote ODBC fourni par le système d'exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).) Cette source de données doit être basée sur le pilote ODBC fourni par le système d'exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   

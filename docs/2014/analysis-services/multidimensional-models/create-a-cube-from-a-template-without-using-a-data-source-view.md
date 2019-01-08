@@ -11,12 +11,12 @@ ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 19006a02476591ef4f5e01d4a58f0f2e2894b0b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0125550f8ec4a3fa290ea29df3d33cc3bebe3c7e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104889"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504979"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Créer un cube a partir d'un modèle sans utiliser de vue de source de données
   Sélectionnez **Construire le cube sans utiliser de source de données** dans la première page de l’Assistant Cube pour créer un cube sans utiliser de vue de source de données. Vous pouvez par la suite utiliser l’Assistant Génération de schéma pour générer le schéma relationnel pour la vue de source de données basée sur la structure du cube et éventuellement d’autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations sur la génération d’un schéma, consultez [Assistant Génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
@@ -42,10 +42,10 @@ ms.locfileid: "48104889"
   
 |colonne|Description|  
 |------------|-----------------|  
-|**Nom de la mesure**|Une valeur de cette colonne définit le nom d'une mesure dans le cube. Cliquez sur une valeur dans cette colonne pour taper un nom. Cliquez sur **Ajouter une nouvelle mesure** dans cette colonne pour créer une nouvelle mesure. Cette colonne définit la `Name` propriété sur l’objet de mesure.|  
-|**Groupe de mesures**|Nom du groupe de mesures qui contient la mesure. Cliquez sur cette valeur pour effectuer votre choix ou tapez un nom. Si vous supprimez toutes les mesures qui appartiennent à un groupe de mesures particulier, le groupe de mesures est également supprimé. Cette colonne définit la `Name` propriété pour l’objet de groupe de mesures.|  
-|**Type de données**|Type de données de la mesure. Cliquez sur cette valeur pour modifier le type de données. La valeur par défaut lorsque vous créez une mesure est `Single`. Cette colonne définit la `DataType` propriété sur l’objet de mesure.|  
-|**Agrégation**|Agrégation standard de la mesure. Cliquez sur cette cellule pour spécifier l’une des agrégations standard de la mesure (ou **Aucune**). La valeur par défaut lorsque vous créez une mesure est `Sum`. Cette colonne définit la `AggregationFunction` propriété sur l’objet de mesure.|  
+|**Nom de la mesure**|Une valeur de cette colonne définit le nom d'une mesure dans le cube. Cliquez sur une valeur dans cette colonne pour taper un nom. Cliquez sur **Ajouter une nouvelle mesure** dans cette colonne pour créer une nouvelle mesure. Cette colonne définit la propriété `Name` sur l'objet de mesure.|  
+|**Groupe de mesures**|Nom du groupe de mesures qui contient la mesure. Cliquez sur cette valeur pour effectuer votre choix ou tapez un nom. Si vous supprimez toutes les mesures qui appartiennent à un groupe de mesures particulier, le groupe de mesures est également supprimé. Cette colonne définit la propriété `Name` de l'objet groupe de mesures.|  
+|**Type de données**|Type de données de la mesure. Cliquez sur cette valeur pour modifier le type de données. La valeur par défaut lorsque vous créez une mesure est `Single`. Cette colonne définit la propriété `DataType` sur l'objet de mesure.|  
+|**Agrégation**|Agrégation standard de la mesure. Cliquez sur cette cellule pour spécifier l’une des agrégations standard de la mesure (ou **Aucune**). La valeur par défaut lorsque vous créez une mesure est `Sum`. Cette colonne définit la propriété `AggregationFunction` sur l'objet de mesure.|  
   
 ## <a name="defining-new-dimensions"></a>Définition de nouvelles dimensions  
  Utilisez la page **Définir de nouvelles dimensions** de l’Assistant pour spécifier les dimensions du nouveau cube.  
@@ -64,7 +64,7 @@ ms.locfileid: "48104889"
 |**Attributs**|Affiche les attributs qui doivent être créés pour la dimension. Chaque nom d'attribut dans la liste est précédé du nom de la dimension. Cette liste est en lecture seule. Vous pouvez modifier les attributs à l'aide du Concepteur de dimensions une fois l'exécution de l'Assistant terminée.|  
   
 ## <a name="defining-time-periods"></a>Définition de périodes  
- Utilisez la page **Définir des périodes** de l’Assistant pour spécifier la plage de dates que vous voulez inclure dans la dimension. Par exemple, vous pouvez choisir une plage commençant le 1er janvier de la première année de vos données et se prolongeant des années après votre transaction la plus actuelle. Les transactions qui sont en dehors de la plage de ne pas apparaître ou apparaissent comme étant inconnus membres dans la dimension, selon le `UnknownMemberVisible` paramètre de propriété pour la dimension. Le `UnknownMemberName` propriété spécifie la légende du membre inconnu. Vous pouvez également modifier le premier jour de la semaine utilisé par vos données (le jour par défaut est le dimanche).  
+ Utilisez la page **Définir des périodes** de l’Assistant pour spécifier la plage de dates que vous voulez inclure dans la dimension. Par exemple, vous pouvez choisir une plage commençant le 1er janvier de la première année de vos données et se prolongeant des années après votre transaction la plus actuelle. Les transactions qui sont en dehors de la plage n'apparaissent pas ou apparaissent en tant que membres inconnus dans la dimension, selon la valeur de la propriété `UnknownMemberVisible` de la dimension. La propriété `UnknownMemberName` spécifie la légende du membre inconnu. Vous pouvez également modifier le premier jour de la semaine utilisé par vos données (le jour par défaut est le dimanche).  
   
 > [!NOTE]  
 >  La page **Définir des périodes** s’affiche uniquement si vous incluez une dimension de temps dans votre cube dans la page **Définir de nouvelles dimensions** de l’Assistant.  
@@ -83,7 +83,7 @@ ms.locfileid: "48104889"
 |Calendrier|Description|  
 |--------------|-----------------|  
 |Calendrier fiscal|Calendrier fiscal de 12 mois. Si vous sélectionnez ce calendrier, définissez le jour et le mois de début de l'exercice fiscal utilisé par votre organisation.|  
-|Calendrier de rapports (ou du marketing)|Calendrier de rapports de 12 mois qui contient deux mois de quatre semaines et un mois de cinq semaines sur un modèle récurrent de trois mois (trimestre). Si vous définissez ce calendrier, définissez le jour et le mois de départ et le modèle de trois mois de 4–4–5, 4–5–4 ou 5–4–4 semaines, où chaque chiffre correspond au nombre de semaines du mois.|  
+|Calendrier de rapports (ou du marketing)|Calendrier de rapports de 12 mois qui contient deux mois de quatre semaines et un mois de cinq semaines sur un modèle récurrent de trois mois (trimestre). Si vous sélectionnez ce calendrier, spécifiez le jour de début et le mois et le modèle de trois mois de 4-4-5, 4-5-4 ou 5-4-4 semaines, où chaque chiffre représente le nombre de semaines du mois.|  
 |Calendrier de fabrication|Calendrier qui utilise 13 périodes de quatre semaines, divisé en trois trimestres de quatre périodes et un trimestre de cinq périodes. Si vous sélectionnez ce calendrier, définissez la semaine initiale (entre 1 et 4), le mois de l'année de fabrication et le trimestre avec des périodes supplémentaires.|  
 |Calendrier ISO 8601|Calendrier standard de représentation de dates et d'heure ISO (International Organization for Standardization) (8601). Ce calendrier a un nombre intégral de semaines de sept jours. Pour éviter de fractionner une semaine, ce calendrier démarre une nouvelle année jusqu'à plusieurs jours avant ou après le 1er janvier.|  
   

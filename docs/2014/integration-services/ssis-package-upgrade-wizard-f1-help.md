@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ead2fbcff003474ef04807967a062ff8f2049d03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b92f8d272faf79388939ff3378b489d28ff3697
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219421"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813371"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Aide sur l'Assistant Mise à niveau de packages SSIS via la touche F1
   Utilisez l’Assistant Mise à niveau de packages SSIS pour mettre à niveau [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] packages et [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] packages au format de package pour la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

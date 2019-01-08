@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 2c61859b-00c9-4267-aef3-bc3ad075db69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4cbf619c33963980b4b6c975a817d601317ae82c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d4559c13091f809cc222128d0f9e991ea424628
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122429"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808021"
 ---
 # <a name="exec-prepared-sql-event-class"></a>Exec Prepared SQL (classe d'événements)
   La classe d'événements Exec Prepared SQL indique que SqlClient, ODBC, OLE DB ou la bibliothèque de bases de données a exécuté une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] préparées.  
@@ -44,7 +43,7 @@ ms.locfileid: "48122429"
 |NTDomainName|`nvarchar`|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |NTUserName|`nvarchar`|Nom d'utilisateur Windows.|6|Oui|  
 |RequestID|`int`|ID de la demande contenant l'instruction.|49|Oui|  
-|ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  

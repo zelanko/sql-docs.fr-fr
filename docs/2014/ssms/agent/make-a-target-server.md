@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.tsxwiz.msx.f1
@@ -19,12 +19,12 @@ ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a9531e5395e22737365810906b793f0f38b06b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a001509cba1ef02182963fd8d8f8946f95321ef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065949"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823663"
 ---
 # <a name="make-a-target-server"></a>Créer un serveur cible
   Cette rubrique explique comment créer un serveur cible dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets SMO (SQL Server Management Objects).  
@@ -63,7 +63,7 @@ ms.locfileid: "48065949"
      Pour résoudre ce problème, vérifiez qu'un compte proxy portant le même nom que le compte proxy du serveur maître sous lequel l'étape s'exécute existe sur le serveur cible.  
   
 ####  <a name="Permissions"></a> Permissions  
- Autorisations pour exécuter cette procédure reviennent par défaut aux membres de la `sysadmin` rôle serveur fixe.  
+ Les autorisations d'exécution de cette procédure sont octroyées par défaut aux membres du rôle serveur fixe `sysadmin`.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   

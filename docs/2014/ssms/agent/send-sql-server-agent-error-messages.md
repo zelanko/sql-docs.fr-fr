@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [SQL Server], SQL Server Agent
@@ -15,12 +15,12 @@ ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ab4aa53c70c15615f3d2ce4f780f2095c1fecec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75c7fbe2997c84963f2ed1d420840b514fb89860
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141529"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779041"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Envoyer des messages d'erreur SQL Server Agent
   Cette rubrique explique comment configurer l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour envoyer ses messages d'erreur sur le réseau dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -39,7 +39,7 @@ ms.locfileid: "48141529"
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   Cependant, l'Explorateur d'objets affiche le nœud [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent uniquement si vous avez l'autorisation de l'utiliser.  
+-   Cependant, l'Explorateur d'objets affiche le nœud de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent uniquement si vous avez l'autorisation de l'utiliser.  
   
 -   Le service [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Messenger doit être en cours d'exécution pour recevoir les événements d'envoi sur le réseau.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48141529"
   
 2.  Cliquez avec le bouton droit sur **SQL Server Agent** , puis sélectionnez **Propriétés**.  
   
-3.  Dans la boîte de dialogue **Propriétés de SQL Server Agent –***nom_serveur*, sous **Journal des erreurs** dans la page **Général**, tapez le nom d’utilisateur ou le nom d’ordinateur auquel vous souhaitez envoyer des messages d’erreur dans la zone **Destinataire NET SEND**.  
+3.  Dans le **propriétés de l’Agent SQL Server-*** nom_serveur* boîte de dialogue **journal des erreurs** sur le **général** , tapez le nom d’utilisateur ou le nom de l’ordinateur auquel vous souhaitez envoyer messages d’erreur dans le **destinataire Net send** boîte.  
   
 4.  Cliquez sur **OK**.  
   

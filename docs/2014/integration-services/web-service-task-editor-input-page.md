@@ -15,12 +15,12 @@ ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adc1283b3917bd82478ee4ed2e537926e73aa7e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eec6368855b52088d5ed5ff253ec6020286aadf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056689"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515151"
 ---
 # <a name="web-service-task-editor-input-page"></a>Éditeur de tâche de service Web (page Entrée)
   Utilisez la page **Entrée** de l' **Éditeur de tâche de service Web** pour définir le service Web, la méthode Web et les valeurs à fournir à la méthode Web comme entrée. Vous pouvez fournir les valeurs en tapant des chaînes directement dans la colonne Valeur ou en y sélectionnant des variables.  
@@ -35,7 +35,7 @@ ms.locfileid: "48056689"
  Dans la liste, sélectionnez la méthode Web que doit exécuter la tâche.  
   
  **WebMethodDocumentation**  
- Entrez la description de la méthode web ou cliquez sur le bouton Parcourir **(…)** et entrez la description dans la boîte de dialogue **Documentation de la méthode Web** .  
+ Entrez la description de la méthode web ou cliquez sur le bouton Parcourir **(...)** et entrez la description dans la boîte de dialogue **Documentation de la méthode Web**.  
   
  **Nom**  
  Contient la liste des noms des entrées dans la méthode Web.  
@@ -53,9 +53,9 @@ ms.locfileid: "48056689"
  Si les cases Variable sont cochées, sélectionnez les variables dans la liste pour fournir les entrées ; sinon, tapez les valeurs à utiliser en guise d’entrées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche de Service Web &#40;Page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur de tâche de Service Web &#40;Page de sortie&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de tâche de service Web &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de service Web &#40;page Sortie&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

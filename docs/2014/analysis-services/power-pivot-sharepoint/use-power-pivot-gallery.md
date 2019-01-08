@@ -11,12 +11,12 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85fbcf7fdf8a15f9705c9b27ba838b41911f31db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91cc8740dfaeddcf489f3274b6766cdb803b1321
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113589"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416930"
 ---
 # <a name="use-powerpivot-gallery"></a>Utiliser la Galerie PowerPivot
   La Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une bibliothèque de documents SharePoint à usage spécial qui fournit des options d'aperçu et de gestion des documents pour les classeurs Excel publiés et des rapports Reporting Services contenant des données PowerPivot et d'autres types de documents.  
@@ -50,7 +50,7 @@ ms.locfileid: "48113589"
 >  La Galerie PowerPivot requiert Microsoft Silverlight.  Le navigateur Microsoft Edge ne prend pas en charge Silverlight.   
 > Pour afficher le contenu de la bibliothèque dans Edge, cliquez sur l’onglet **Bibliothèque** dans la Galerie PowerPivot, puis définissez l’affichage de la bibliothèque de documents sur **Tous les documents**.    
 > Pour modifier l’affichage par défaut, cliquez sur l’onglet **Bibliothèque** , puis sur Modifier l’affichage. Cliquez sur Définir cet affichage comme affichage par défaut, puis sur OK pour enregistrer l’affichage par défaut.  
->  Pour plus d'informations sur les composants pris en charge par Edge, consultez le billet du blog Windows intitulé [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Pour plus d’informations sur les prend en charge de Edge, consultez le blog de Windows, [un saut dans le passé, partie 2 : L’adieu à ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  Pour obtenir une liste complète des conditions préalables requises, consultez [créer et personnaliser la galerie PowerPivot](create-and-customize-power-pivot-gallery.md).  
   
@@ -70,13 +70,13 @@ ms.locfileid: "48113589"
   
 1.  Enregistrez le fichier.  
   
-2.  1.  **Excel 2010 :** dans le menu Fichier, cliquez sur **Enregistrer​​ et envoyer**.  
+2.  1.  **Excel 2010 :** Dans le menu fichier, cliquez sur **enregistrer et envoyer**.  
   
     2.  Cliquez sur **Enregistrer dans SharePoint**.  
   
     3.  Cliquez sur **Options de publication** si vous souhaitez utiliser les options Excel Services pour sélectionner des feuilles ou paramètres individuels que vous souhaitez publier. Par exemple, l'onglet Paramètres dans Options Excel Services vous permet de choisir les découpages qui apparaissent dans le classeur publié.  
   
-    1.  **Excel 2013 :**  dans le menu Fichier, cliquez sur **Enregistrer**.  
+    1.  **Excel 2013 :**  Dans le menu fichier, cliquez sur **enregistrer**.  
   
     2.  Cliquez sur **Options du Mode Navigateur** si vous souhaitez utiliser les options Excel Services pour sélectionner des feuilles ou paramètres individuels que vous souhaitez publier. Par exemple, l'onglet Paramètres dans Options Excel Services vous permet de choisir les découpages qui apparaissent dans le classeur publié.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48113589"
  Pour créer un rapport basé sur un classeur PowerPivot existant dans la bibliothèque, Reporting Services doit être configuré pour l'intégration SharePoint pour les mêmes sites qui contiennent la Galerie PowerPivot. Lorsque vous sélectionnez l'option Créer un rapport du Générateur de rapports, le Générateur de rapports est téléchargé à partir du serveur de rapports et installé sur la station de travail locale, lors de sa première utilisation. Un fichier de rapport d'espace réservé est créé pour le nouveau rapport et enregistré dans la Galerie PowerPivot. Les informations de connexion au classeur PowerPivot sont automatiquement créées en tant que nouvelle source de données dans le rapport. Ensuite, vous pouvez générer les datasets et la mise en page du rapport dans l'espace de conception. Lorsque vous utilisez le Générateur de rapports pour assembler votre rapport, vous pouvez enregistrer vos modifications et le résultat final sur le document de rapport dans la bibliothèque. Pour éviter des déconnexions de données ultérieures, veillez à conserver les fichiers du classeur et du rapport ensemble dans la même bibliothèque.  
   
 #### <a name="open-new-excel-workbook"></a>Ouvrir le nouveau classeur Excel  
- Pour créer un classeur Excel à partir d'un classeur existant, vous devez déjà disposer d'Excel et de [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] sur l'ordinateur local. La sélection de l’option Ouvrir le nouveau classeur Excel entraîne le démarrage d’Excel, l’ouverture d’un fichier de classeur (.xlsx) vierge et le chargement des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en arrière-plan comme source de données connectée. Seules les données provenant de la fenêtre PowerPivot dans le classeur d'origine sont utilisées dans le nouveau classeur. Les tableaux ou graphiques croisés dynamiques du classeur d'origine sont exclus. Le nouveau classeur établit une liaison aux données du classeur d'origine. Les données ne sont pas copiées vers le nouveau classeur.  
+ Pour créer un classeur Excel à partir d'un classeur existant, vous devez déjà disposer d'Excel et de [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] sur l'ordinateur local. La sélection de l'option Ouvrir le nouveau classeur Excel entraîne le démarrage d'Excel, l'ouverture d'un fichier de classeur (.xlsx) vierge et le chargement des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en arrière-plan comme source de données connectée. Seules les données provenant de la fenêtre PowerPivot dans le classeur d'origine sont utilisées dans le nouveau classeur. Les tableaux ou graphiques croisés dynamiques du classeur d'origine sont exclus. Le nouveau classeur établit une liaison aux données du classeur d'origine. Les données ne sont pas copiées vers le nouveau classeur.  
   
 ##  <a name="view"></a> Ouvrir un classeur ou un rapport en mode page entière  
  Cliquez sur une image miniature visible sur le document prévisualisé pour ouvrir celui-ci en mode page entière, indépendamment de l'aperçu de la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] s'ouvrent dans un navigateur. Les rapports Reporting Services s'ouvrent dans le composant WebPart Visionneuse de rapports qui fait partie du déploiement de Reporting Services sur un serveur SharePoint.  
@@ -155,9 +155,9 @@ ms.locfileid: "48113589"
 ### <a name="document-type-is-not-supported"></a>Le type de document n'est pas pris en charge.  
  Le type de contenu **Document de Galerie PowerPivot** n'est pas pris en charge. Si vous activez le type de contenu **Document de Galerie PowerPivot** pour une bibliothèque de documents, et si vous tentez de créer un document de ce type, un message d'erreur semblable à l'un des messages suivants s'affiche :  
   
--   Le « nouveau document » nécessite une application et un navigateur Web compatibles avec Microsoft SharePoint Foundation. Pour ajouter un document dans cette bibliothèque de documents, cliquez sur le bouton « Télécharger un document ».  
+-   « Nouveau Document » nécessite un navigateur de l’application et web compatible avec Microsoft Sharepoint Foundation. Pour ajouter un document à cette bibliothèque de documents, cliquez sur le bouton Télécharger un Document.  
   
--   « L'adresse Internet 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' n'est pas valide. » Microsoft Excel ne peut pas accéder au fichier 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. Plusieurs raisons sont possibles :  
+-   « L’adresse Internet ' http://[server name] / testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' n’est pas valide. » » Microsoft Excel ne peut pas accéder au fichier ' http://[server name] / testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. Plusieurs raisons sont possibles :  
   
  Le type de contenu **Document de Galerie PowerPivot** n'est pas automatiquement ajouté aux bibliothèques de documents. Vous ne rencontrerez pas ce problème à moins que vous n'ayez activé manuellement le type de contenu non pris en charge.  
   

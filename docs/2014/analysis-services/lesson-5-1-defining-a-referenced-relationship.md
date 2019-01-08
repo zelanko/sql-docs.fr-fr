@@ -11,12 +11,12 @@ ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 892b00f07f9a316ba856e8be97e4159fd3889bcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b006a2d5ef8c6de9b915f73fe68223329c6393d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141889"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519902"
 ---
 # <a name="defining-a-referenced-relationship"></a>Définition d'une relation référencée
   Jusqu'à présent, vous avez défini dans ce didacticiel des dimensions de cube basées sur une table directement liée à la table de faits d'un groupe de mesures par une relation clé primaire/clé étrangère. Au cours des tâches de cette rubrique, vous allez lier la dimension **Geography** à la table de faits pour les ventes de revendeurs par le biais de la dimension **Reseller** , qui est appelée *dimension de référence*. Cela permet aux utilisateurs de dimensionner les ventes des revendeurs par zone géographique. Pour plus d’informations, consultez [Définir une relation référencée et des propriétés de relation référencée](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "48141889"
   
      Notez que la dimension de cube **Geography** n’a actuellement aucune relation avec le groupe de mesures **Internet Sales** ou **Reseller Sales** .  
   
-8.  Cliquez sur le bouton Parcourir (**…**) dans la cellule **Nom complet** située à l’intersection de la dimension **Customer** et du groupe de mesures **Internet Sales** .  
+8.  Cliquez sur le bouton de sélection (**...** ) dans le **nom complet** cellule à l’intersection de la **client** dimension et le **Internet Sales** groupe de mesures.  
   
      Dans la boîte de dialogue **Définir une relation** , notez qu’une relation **régulière** est définie entre la table de dimension **DimCustomer** et le groupe de mesures **FactInternetSales** , et qu’elle est basée sur la colonne **CustomerKey** dans chacune de ces tables. Toutes les relations que vous avez définies jusqu'à présent dans ce didacticiel sont des relations régulières.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48141889"
   
 9. Cliquez sur **Annuler**.  
   
-10. Cliquez sur le bouton Parcourir (**…**) dans la cellule sans nom située à l’intersection de la dimension **Geography** et du groupe de mesures **Reseller Sales** .  
+10. Cliquez sur le bouton de sélection (**...** ) dans la cellule sans nom à l’intersection de la **Geography** dimension et le **Reseller Sales** groupe de mesures.  
   
      Dans la boîte de dialogue **Définir une relation** , notez qu’aucune relation n’est actuellement définie entre la dimension de cube Geography et le groupe de mesures Reseller Sales. Vous ne pouvez pas définir une relation régulière car il n'existe pas de relation directe entre la table de dimension de la dimension Geography et la table de faits du groupe de mesures Reseller Sales.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48141889"
   
      L'attribut Geography Key de la dimension Reseller sera utilisé uniquement pour lier la dimension Geography à la table de faits Reseller Sales. Étant donné que la hiérarchie d'attributs ne sera pas utilisée pour des recherches, cela ne présente pas d'intérêt de la définir comme hiérarchie visible. En outre, le classement et l'optimisation de la hiérarchie d'attributs nuit aux performances. Toutefois, l'attribut doit être activé pour servir de lien entre les deux dimensions.  
   
-4.  Affichez le Concepteur de cube du cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , cliquez sur l’onglet **Utilisation de la dimension** , puis cliquez sur le bouton Parcourir (**…**) à l’intersection du groupe de mesures **Reseller Sales** et de la dimension de cube **Geography** .  
+4.  Affichez le Concepteur de Cube pour le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube du didacticiel, cliquez sur le **utilisation de la Dimension** onglet, puis cliquez sur le bouton de sélection (**...** ) à l’intersection de la **Reseller Sales** groupe de mesures et les **Geography** dimension de cube.  
   
 5.  Dans la liste **Sélectionnez un type de relation** , sélectionnez **Référence**.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48141889"
  [Définition d’une relation de faits](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Relations d’attributs](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+ [Relations d'attributs](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [Définir une relation référencée et des propriétés de relation référencée](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
   

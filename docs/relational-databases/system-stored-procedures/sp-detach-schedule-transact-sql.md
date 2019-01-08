@@ -18,12 +18,12 @@ ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7ba1ee6a8fae84d0371c30758fcd2be1098b60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 409dec92a6dbfe9c4dd2c8cef1d81b2aa7f21d91
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649267"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536381"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_detach_schedule
  [  **@job_id=** ] *job_id*  
  Numéro d'identification du travail à partir duquel supprimer la planification. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name=** ] **'***nom_travail***'**  
+ [  **@job_name=** ] **'**_nom_travail_**'**  
  Nom du travail à partir duquel supprimer la planification. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
@@ -55,7 +55,7 @@ sp_detach_schedule
  [  **@schedule_id=** ] *id_de_la_planification*  
  Numéro d'identification de la planification à supprimer du travail. *id_de_la_planification* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@schedule_name=** ] **'***nom_de_la_planification***'**  
+ [  **@schedule_name=** ] **'**_nom_de_la_planification_**'**  
  Nom de la planification à supprimer du travail. *nom_de_la_planification* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
@@ -70,7 +70,7 @@ sp_detach_schedule
 ## <a name="result-sets"></a>Jeux de résultats  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  

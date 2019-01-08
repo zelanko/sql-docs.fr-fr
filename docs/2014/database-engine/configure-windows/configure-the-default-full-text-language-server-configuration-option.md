@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
@@ -14,15 +13,15 @@ ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 575acd7d4fb264ebb8cba218c1e37b45e9af5a33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80827416661c613393bbf3657bf2bb9d4cd25ec3
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062959"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639407"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>Configurer l'option de configuration de serveur default full-text
-  Cette rubrique explique comment configurer le `default full-text language` option de configuration de serveur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le `default full-text language` option spécifie une valeur de langue par défaut pour les index de recherche en texte intégral. L’analyse linguistique est effectuée sur toutes les données de texte intégral indexées et elle dépend de la langue des données. La valeur par défaut de cette option est la langue du serveur. Pour une version localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le programme d’installation définit le `default full-text language` option à la langue du serveur s’il existe une correspondance appropriée. Pour obtenir une version non localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la `default full-text language` option est l’anglaise.  
+  Cette rubrique explique comment configurer le `default full-text language` option de configuration de serveur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le `default full-text language` option spécifie une valeur de langue par défaut pour les index de recherche en texte intégral. L’analyse linguistique est effectuée sur toutes les données de texte intégral indexées et elle dépend de la langue des données. La valeur par défaut de cette option est la langue du serveur. Pour une version localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le programme d’installation définit le `default full-text language` option à la langue du serveur s’il existe une correspondance appropriée. Pour une version non localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'anglais est la valeur affectée par défaut à l'option `default full-text language`.  
   
  **Dans cette rubrique**  
   
@@ -40,7 +39,7 @@ ms.locfileid: "48062959"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l’option default full-text](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l’option de langue de texte intégral par défaut](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -95,7 +94,7 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option default full-text par défaut  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option de langue de texte intégral par défaut  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

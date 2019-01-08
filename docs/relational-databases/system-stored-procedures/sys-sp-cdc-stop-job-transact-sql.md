@@ -20,12 +20,12 @@ ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 931b25de9acbf851f3a68475000833080d25ae93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e39a456e9d6c6479f6dab95270dcbd2d549c986
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846521"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589153"
 ---
 # <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [[  **@job_type=** ] **' *** type_du_travail*']  
+ [[  **@job_type=** ] **'**_type_du_travail_']  
  Type du travail à ajouter. *type_du_travail* est **nvarchar (20)** avec une valeur par défaut **capturer**. Les entrées valides sont **capturer** et **nettoyage**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -54,7 +54,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ## <a name="remarks"></a>Notes  
  sys.sp_cdc_stop_job peut être utilisée par un administrateur pour arrêter de manière explicite le travail de capture ou le travail de nettoyage.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe db_owner.  
   
 ## <a name="examples"></a>Exemples  

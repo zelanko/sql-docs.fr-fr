@@ -16,12 +16,12 @@ ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b60e17ca95bff865d1a0786aa7da5ee398adcb7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 623f3a4724de84dbb1e355ffbd64a6868ea0f12a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170290"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518114"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Prévisions (Outils d'analyse de table pour Excel)
   ![Ruban des outils de prévision de bouton dans l’analyse de Table](media/tat-forecast.gif "bouton prévisions dans le ruban des outils d’analyse de Table")  
@@ -40,7 +40,7 @@ ms.locfileid: "48170290"
   
 2.  Cliquez sur **prévision** sur le **analyser** onglet.  
   
-3.  Spécifiez les colonnes à prévoir. L'outil sélectionne automatiquement les colonnes dont le type de données est prévisible, c'est-à-dire celles qui contiennent des données numériques continues. L'outil ne peut pas sélectionner certaines colonnes qui contiennent des données numériques continues si ces colonnes contiennent de nombreuses valeurs null ou égales à zéro, car les données manquantes peuvent affecter les résultats. Si cela se produit, vous pouvez corriger les données à l’aide de la [Réétiqueter &#40;SQL Server Data Mining Add-ins&#41; ](relabel-sql-server-data-mining-add-ins.md) outil.  
+3.  Spécifiez les colonnes à prévoir. L’outil sélectionne automatiquement les colonnes dans les données qui ont un type de données prévisibles-autrement dit, les données numériques continues. L'outil ne peut pas sélectionner certaines colonnes qui contiennent des données numériques continues si ces colonnes contiennent de nombreuses valeurs null ou égales à zéro, car les données manquantes peuvent affecter les résultats. Si cela se produit, vous pouvez corriger les données à l’aide de la [Réétiqueter &#40;SQL Server Data Mining Add-ins&#41; ](relabel-sql-server-data-mining-add-ins.md) outil.  
   
 4.  Spécifiez la colonne qui contient la date, l'heure ou un autre identificateur pour la série. Si vous sélectionnez l’option  **\<aucun horodatage >** l’outil créera une série selon l’ordre des lignes dans la source de données.  
   
@@ -52,10 +52,10 @@ ms.locfileid: "48170290"
   
 8.  Pour ajouter les nouvelles valeur au graphique de prédiction, étendez la série chronologique pour inclure les valeurs projetées.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Les colonnes que vous prévoyez doivent contenir des données numériques continues (devise ou autres nombres).  
   
- Si possible, vos données doivent également inclure une colonne qui contient une série de dates ou d'heures. Vous pouvez utiliser une série numérique (1,2,3...) à la place des données de date et d'heure. Cependant, les valeurs dans la colonne de série doivent être uniques. Une erreur se produit si le **prévision** outil recherche les valeurs en double dans la colonne de la série.  
+ Si possible, vos données doivent également inclure une colonne qui contient une série de dates ou d'heures. Vous pouvez utiliser une série numérique (1,2,3...) au lieu des données de date et d’heure. Cependant, les valeurs dans la colonne de série doivent être uniques. Une erreur se produit si le **prévision** outil recherche les valeurs en double dans la colonne de la série.  
   
  Vous ne pouvez pas prévoir une date à l’aide de la **prévision** outil. Même en l'absence d'erreur, cet algorithme n'est pas conçu pour utiliser des dates comme des valeurs prévisibles.  
   

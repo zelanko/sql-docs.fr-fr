@@ -18,12 +18,12 @@ ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87a5bababd2129ffb7e0aad36a2ceb3362d4acd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 491fb8db9e37cfb3bfa07881958fe7828e6bb911
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792357"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514592"
 ---
 # <a name="auto-commit-mode"></a>Mode de validation automatique
 *En mode de validation automatique,* chaque opération de base de données est une transaction est validée lorsque effectuée. Ce mode est approprié pour le nombre réel de transactions qui se composent d’une instruction SQL unique. Il est inutile de délimiter ou spécifier l’achèvement de ces transactions. Dans les bases de données sans prise en charge de la transaction, mode de validation automatique est le seul mode pris en charge. Dans ces bases de données, les instructions sont validées lors de leur exécution et il n’existe aucun moyen pour les annuler ; ils sont donc toujours en mode de validation automatique.  

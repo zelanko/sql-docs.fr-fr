@@ -13,12 +13,12 @@ ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 19991410178a97b64d427feb56ce622e06c76570
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a6d398c2c9d8439025c7ff5ec7a8e4295b24d337
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071589"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506134"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>Supprimer la mise en miroir des bases de données (SQL Server)
   Cette rubrique explique comment supprimer la mise en miroir de bases de données depuis une base de données de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  À tout moment, le propriétaire d'une base de données peut arrêter manuellement une session de mise en miroir de bases de données en supprimant la mise en miroir de la base de données.  
@@ -69,7 +69,7 @@ ms.locfileid: "48071589"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a> Suivi : suppression de la mise en miroir de bases de données  
+##  <a name="FollowUp"></a> Suivi : Suppression d'une mise en miroir des bases de données  
   
 > [!NOTE]  
 >  Pour plus d’informations sur l’impact de la suppression d’une mise en miroir de bases de données, consultez [Suppression d’une mise en miroir des bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "48071589"
     ```  
   
     > [!IMPORTANT]  
-    >  Si vous récupérez cette base de données, deux bases de données divergentes portant le même nom se trouvent alors en ligne. Vous devez par conséquent vous assurer que les clients ne peuvent accéder qu'à une seule d'entre elles, en général la base de données principale la plus récente.  
+    >  Si vous récupérez cette base de données, deux bases de données divergentes portant le même nom se trouvent alors en ligne. Vous devez par conséquent vérifier que les clients ne peuvent accéder qu’à une seule d’entre elles, en général la base de données principale la plus récente.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48071589"
   
 -   [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
   
--   [Exemple : configuration de la mise en miroir de bases de données à l’aide de certificats &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [Exemple : Configuration des certificats à l’aide de la mise en miroir de base de données &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)   

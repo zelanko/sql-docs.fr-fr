@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddistpublisher
@@ -17,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b8233a5ba3d4610e43dc2c9fb47ba9107ffad268
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 171618db612b77de63feb2a7e53b248a6ac847b0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716987"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206568"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,9 +55,9 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  Est le nom de la base de données de distribution. *distributor_db* est **sysname**, sans valeur par défaut. Il est utilisé par les agents de réplication pour se connecter au serveur de publication.  
   
  [  **@security_mode=**] *security_mode*  
- Représente le mode de sécurité implémenté. Ce paramètre est uniquement utilisé par les agents de réplication afin de se connecter au serveur de publication pour les abonnements de mise à jour en attente ou à un serveur de publication non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *security_mode* est **int**, et peut prendre l’une des valeurs suivantes.  
+ Représente le mode de sécurité implémenté. Ce paramètre est utilisé uniquement par les agents de réplication pour se connecter au serveur de publication pour les abonnements mis à jour en file d’attente ou à un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *security_mode* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0**|Les Agents de réplication situés sur le serveur de distribution utilisent l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour se connecter au serveur de publication.|  
 |**1** (par défaut)|Les agents de réplication situés sur le serveur de distribution utilisent l'authentification Windows pour se connecter au serveur de publication.|  
@@ -91,7 +90,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [  **@thirdparty_flag =**] *thirdparty_flag*  
  Indique que le serveur de publication est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *thirdparty_flag* est **bits**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0** (valeur par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données.|  
 |**1**|Base de données autre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -99,7 +98,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [ **@publisher_type**=] **'***publisher_type***'**  
  Spécifie le type du serveur de publication lorsque celui-ci n'est pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* est de type sysname et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> (par défaut)|Spécifie un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Spécifie un serveur de publication Oracle standard.|  
@@ -116,7 +115,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistpublisher-tran_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_adddistpublisher**.  
   
 ## <a name="see-also"></a>Voir aussi  

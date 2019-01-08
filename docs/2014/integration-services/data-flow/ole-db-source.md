@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
@@ -16,12 +15,12 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b1d37bba3216a22d732c5562108db51925d37bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b428117cd445cf4cc8f06e588d344924394dcf02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120576"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357603"
 ---
 # <a name="ole-db-source"></a>Source OLE DB
   La source OLE DB extrait des données d'une série de bases de données relationnelles compatibles OLE DB à l'aide d'une table de base de données, d'une vue ou d'une commande SQL. Par exemple, la source OLE DB peut extraire des données de tables de bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -91,11 +90,11 @@ ms.locfileid: "48120576"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source OLE DB**, cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de Source OLE DB &#40;Page Gestionnaire de connexions&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [Éditeur de source OLE DB &#40;page Gestionnaire de connexions&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [Éditeur de Source OLE DB &#40;Page colonnes&#41;](../ole-db-source-editor-columns-page.md)  
+-   [Éditeur de source OLE DB &#40;page Colonnes&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [Éditeur de Source OLE DB &#40;Page sortie d’erreur&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [Éditeur de source OLE DB &#40;page Sortie d’erreur&#41;](../ole-db-source-editor-error-output-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -105,7 +104,7 @@ ms.locfileid: "48120576"
   
 ## <a name="related-tasks"></a>Tâches associées  
   
--   [Extraire des données à l’aide de la source OLE DB](ole-db-source.md)  
+-   [Extraire des données à l'aide de la source OLE DB](ole-db-source.md)  
   
 -   [Mapper des paramètres de requête à des variables dans un composant de flux de données](map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -114,11 +113,11 @@ ms.locfileid: "48120576"
 -   [Trier des données pour les transformations de fusion et de jointure de fusion](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Article Wiki, [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670)(SSIS avec connecteurs Oracle) sur social.technet.microsoft.com.  
+ Article Wiki, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670)(SSIS avec connecteurs Oracle) sur social.technet.microsoft.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Destination OLE DB](ole-db-destination.md)   
- [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
+ [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Flux de données](data-flow.md)  
   
   

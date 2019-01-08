@@ -17,17 +17,17 @@ ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7827a42a58e11847cdf9c3a63f4a7424eb5cfc5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654965"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539899"
 ---
 # <a name="multiple-results"></a>Résultats multiples
 Un *résultat* est un élément retourné par la source de données après une instruction est exécutée. ODBC comporte deux types de résultats : jeux de résultats et des nombres de lignes. *Nombres de lignes* sont le nombre de lignes affectées par une mise à jour, supprimer, ou instruction insert. Lots, décrit dans [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md), peut générer plusieurs résultats.  
   
- Le tableau suivant répertorie les **SQLGetInfo** options utilisées par une application pour déterminer si une source de données retourne plusieurs résultats pour chaque type de traitement par lots. En particulier, une source de données peut retourner un nombre de lignes unique pour l’ensemble du lot d’instructions ou le nombre de lignes individuelles pour chaque instruction du lot. Dans le cas d’une instruction de résultat ensemble – génération exécutée avec un tableau de paramètres, la source de données peut retourner un seul jeu de résultats pour tous les jeux de paramètres ou différents jeux de résultats pour chaque jeu de paramètres.  
+ Le tableau suivant répertorie les **SQLGetInfo** options utilisées par une application pour déterminer si une source de données retourne plusieurs résultats pour chaque type de traitement par lots. En particulier, une source de données peut retourner un nombre de lignes unique pour l’ensemble du lot d’instructions ou le nombre de lignes individuelles pour chaque instruction du lot. Dans le cas d’une instruction de résultat génératrice de jeu exécutée avec un tableau de paramètres, la source de données peut retourner un seul jeu de résultats pour tous les jeux de paramètres ou différents jeux de résultats pour chaque jeu de paramètres.  
   
 |Type de lot|Nombre de lignes|Jeux de résultats|  
 |----------------|----------------|-----------------|  
@@ -35,9 +35,9 @@ Un *résultat* est un élément retourné par la source de données après une i
 |Procédure|SQL_BATCH_ROW_COUNT [a]|--[b].|  
 |Tableaux de paramètres|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
- [a] ligne – génération d’un nombre d’instructions dans un lot peuvent être pris en charge, mais le retour du nombre de lignes non pris en charge. L’option SQL_BATCH_SUPPORT dans **SQLGetInfo** indique si les instructions de génération : le nombre de lignes sont autorisées par lots ; l’option SQL_BATCH_ROW_COUNTS indique si ces nombres de lignes sont retournées à l’application.  
+ [a] ligne génératrice de nombre d’instructions dans un lot peuvent être pris en charge, mais le retour du nombre de lignes non pris en charge. L’option SQL_BATCH_SUPPORT dans **SQLGetInfo** indique si les instructions de génération de nombre de lignes sont autorisées par lots ; l’option SQL_BATCH_ROW_COUNTS indique si ces nombres de lignes sont retournées à l’application.  
   
- [b] lots explicites et procédures toujours retournent plusieurs jeux de résultats lorsqu’elles incluent plusieurs instructions de création de jeu de résultats.  
+ [b] lots explicites et procédures toujours retournent plusieurs jeux de résultats lorsqu’elles incluent plusieurs instructions de génération de jeu de résultats.  
   
 > [!NOTE]  
 >  L’option SQL_MULT_RESULT_SETS introduite dans ODBC 1.0 fournit uniquement des informations concernant si plusieurs jeux de résultats peut être retournées. En particulier, elle est définie à « Y » si les bits SQL_BS_SELECT_EXPLICIT ou SQL_BS_SELECT_PROC sont renvoyés pour SQL_BATCH_SUPPORT ou si SQL_PAS_BATCH est retournée pour SQL_PARAM_ARRAYS_SELECT.  

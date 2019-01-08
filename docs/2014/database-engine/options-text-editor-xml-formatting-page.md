@@ -7,24 +7,23 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.XML.Formatting
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: bc45797c7978e1b851078b1644c4a14e31d04bbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c792bc2b37bbaae5161b856a7423adb4b707228
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154233"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328656"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Options (Éditeur de texte - XML - Page Mise en forme)
-  Cette boîte de dialogue vous permet de spécifier les paramètres de mise en forme de l'Éditeur XML. Vous pouvez accéder à la boîte de dialogue **Options** à partir du menu **Outils**.  
+
+Cette boîte de dialogue vous permet de spécifier les paramètres de mise en forme de l'Éditeur XML. Vous pouvez accéder à la boîte de dialogue **Options** à partir du menu **Outils**.  
   
 > [!NOTE]  
->  Ces paramètres sont disponibles lorsque vous sélectionnez le dossier **Éditeur de texte**, le dossier **XML**, puis l’option **Mise en forme** de la boîte de dialogue **Options**.  
+> Ces paramètres sont disponibles lorsque vous sélectionnez le dossier **Éditeur de texte**, le dossier **XML**, puis l’option **Mise en forme** de la boîte de dialogue **Options**.  
   
 ## <a name="attributes"></a>Attributs  
  **Conserver la mise en forme manuelle des attributs**  
@@ -66,5 +65,3 @@ ms.locfileid: "48154233"
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur XML &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  
-  
-  

@@ -20,16 +20,16 @@ ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9055fa6c277ebcbeccae909ddd397d39d62cf04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7b04dc2554b820fc6ac8344457754aae984d4b8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846057"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213108"
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources, fonction
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ISO 92  
+ Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
   
  **Résumé**  
  **SQLDataSources** renvoie des informations sur une source de données. Cette fonction est implémentée uniquement par le Gestionnaire de pilotes.  

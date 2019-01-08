@@ -10,30 +10,30 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40ea7c27958fe2a245b2279dc35f2029f81e21d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147419"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377899"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Déterminer le nombre de compartiments correct pour les index de hachage
-  Vous devez spécifier une valeur pour le `BUCKET_COUNT` paramètre lorsque vous créez la table mémoire optimisée. Cette rubrique fournit des recommandations pour déterminer la valeur appropriée du paramètre `BUCKET_COUNT`. Si vous ne pouvez pas déterminer le nombre de compartiments correct, utilisez un index non cluster à la place.  Une valeur `BUCKET_COUNT` incorrecte, en particulier une valeur trop basse, peut avoir un impact important sur les performances de la charge de travail, ainsi que sur le temps de récupération de la base de données. Il vaut mieux surestimer le nombre de compartiments.  
+  Vous devez spécifier une valeur pour le paramètre `BUCKET_COUNT` lorsque vous créez la table mémoire optimisée. Cette rubrique fournit des recommandations pour déterminer la valeur appropriée du paramètre `BUCKET_COUNT`. Si vous ne pouvez pas déterminer le nombre de compartiments correct, utilisez un index non cluster à la place.  Une valeur `BUCKET_COUNT` incorrecte, en particulier une valeur trop basse, peut avoir un impact important sur les performances de la charge de travail, ainsi que sur le temps de récupération de la base de données. Il vaut mieux surestimer le nombre de compartiments.  
   
  Les clés d'index dupliquées peuvent réduire les performances avec un index hach car elles sont hachées dans le même compartiment, ce qui entraîne l'augmentation de la chaîne du compartiment.  
   
- Pour plus d’informations sur les index de hachage non cluster, consultez [index de hachage](hash-indexes.md) et [les instructions Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Pour plus d'informations sur les index de hachage non cluster, consultez [Hash Indexes](hash-indexes.md) et [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Une table de hachage est allouée pour chaque index de hachage sur une table mémoire optimisée. La taille de la table de hachage allouée pour un index est spécifié par le `BUCKET_COUNT` paramètre dans [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) ou [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). Le nombre de compartiment est arrondi en interne à la puissance de 2 suivante. Par exemple, la spécification d'un nombre de compartiments égal à 300 000 créera un nombre réel de compartiments égal à 524 288.  
   
- Pour accéder à un article et à une vidéo sur le nombre de compartiments, consultez [How to determine the right bucket count for hash indexes (In-Memory OLTP)](http://go.microsoft.com/fwlink/p/?LinkId=525853).  
+ Pour accéder à un article et à une vidéo sur le nombre de compartiments, consultez [How to determine the right bucket count for hash indexes (In-Memory OLTP)](https://go.microsoft.com/fwlink/p/?LinkId=525853).  
   
 ## <a name="recommendations"></a>Recommandations  
  Dans la plupart des cas, le nombre de compartiments doit être compris entre 1 et 2 fois par le nombre estimé maximal de valeurs distinctes dans la clé d'index. Si la clé d'index contient de nombreuses valeurs dupliquées (en moyenne il y a plus de 10 lignes pour chaque valeur de clé d'index), utilisez un index non cluster à la place  
   
- Vous ne pouvez pas toujours prédire le nombre exact de valeurs qu'une clé d'index donnée peut avoir ou aura. Les performances doivent être acceptables si la `BUCKET_COUNT` valeur se trouve dans 5 fois le nombre réel de valeurs de clé.  
+ Vous ne pouvez pas toujours prédire le nombre exact de valeurs qu'une clé d'index donnée peut avoir ou aura. Les performances doivent être acceptables si la valeur `BUCKET_COUNT` est inférieure ou égale à 5 fois le nombre réel de valeurs de clés.  
   
- Pour déterminer le nombre de clés d'index uniques dans les données existantes, utilisez des requêtes similaires aux exemples suivants :  
+ Pour déterminer le nombre de clés d'index uniques dans les données existantes, utilisez des requêtes similaires aux exemples suivants :  
   
 ### <a name="primary-key-and-unique-indexes"></a>Clé primaire et index uniques  
  Étant donné que l'index de clé primaire est unique, le nombre de valeurs distinctes dans la clé correspond au nombre de lignes dans la table. Pour obtenir un exemple de clé primaire sur (SalesOrderID, SalesOrderDetailID) dans la table Sales.SalesOrderDetail dans la base de données AdventureWorks, exécutez la requête suivante pour calculer le nombre de valeurs de clé primaire distinctes, qui correspond au nombre de lignes dans la table :  
@@ -82,12 +82,12 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  Les deux indicateurs clés d'intégrité d'index de hachage sont :  
   
  *empty_bucket_percent*  
- *empty_bucket_percent* indique le nombre de compartiments vides dans l’index de hachage.  
+ *empty_bucket_percent* indique le nombre de compartiments vides dans l'index de hachage.  
   
  Si *empty_bucket_percent* est inférieur à 10 pour cent, le nombre de compartiments est probablement trop bas. Idéalement, *empty_bucket_percent* devrait être de 33 pour cent ou plus. Si le nombre de compartiments correspond au nombre de valeurs de clés d'index, environ 1/3 des compartiments est vide, en raison de la distribution du hachage.  
   
  *avg_chain_length*  
- *avg_chain_length* indique la longueur moyenne des chaînes de lignes dans les compartiments de hachage.  
+ *avg_chain_length* indique la longueur maximale des chaînes de ligne dans les compartiments de hachage.  
   
  Si *avg_chain_length* est supérieur à 10 et *empty_bucket_percent* est supérieur à 10 pour cent, il existe probablement plusieurs valeurs de clé d'index dupliquées et un index non cluster serait plus approprié. Une longueur de chaîne moyenne de 1 est idéale.  
   
@@ -125,7 +125,7 @@ COMMIT
 GO  
 ```  
   
- Le script insère 262 144 lignes dans la table. Il insère des valeurs uniques dans l'index de clé primaire et dans IX_OrderSequence. Il insère plusieurs valeurs dupliquées dans l'index IX_Status : le script génère uniquement 8 valeurs distinctes.  
+ Le script insère 262 144 lignes dans la table. Il insère des valeurs uniques dans l'index de clé primaire et dans IX_OrderSequence. Il insère plusieurs valeurs dupliquées dans l'index IX_Status : le script génère uniquement 8 valeurs distinctes.  
   
  La sortie de la requête de résolution des problèmes BUCKET_COUNT est la suivante :  
   
@@ -135,15 +135,15 @@ GO
 |IX_OrderSequence|32768|13|0|8|26|  
 |PK_SalesOrd_B14003C3F8FB3364|262144|96319|36|1|8|  
   
- Considérez les trois index de hachage sur cette table :  
+ Considérez les trois index de hachage sur cette table :  
   
--   IX_Status : 50 pour cent des compartiments sont vides, ce qui est correct. Cependant, la longueur de chaîne moyenne est très élevée (65 536). Cela indique un grand nombre de valeurs dupliquées. Par conséquent, l'utilisation d'un index de hachage non cluster n'est pas appropriée dans ce cas. Il convient d'utiliser un index non cluster.  
+-   IX_Status : 50 pour cent des compartiments sont vides, ce qui est correct. Cependant, la longueur de chaîne moyenne est très élevée (65 536). Cela indique un grand nombre de valeurs dupliquées. Par conséquent, l'utilisation d'un index de hachage non cluster n'est pas appropriée dans ce cas. Il convient d'utiliser un index non cluster.  
   
--   IX_OrderSequence : 0 pour cent des compartiments sont vides, ce qui est trop bas. En outre, la longueur de chaîne moyenne est de 8. En tant donné que les valeurs dans cet index sont uniques, cela signifie que 8 valeurs en moyenne sont mappées à chaque compartiment. Le nombre de compartiments doit être augmenté. Étant donné que la clé d'index a 262 144 valeurs uniques, le nombre de compartiments doit être égal ou supérieur à 262 144. Si une croissance future est attendue, le nombre doit être supérieur.  
+-   IX_OrderSequence : 0 pour cent des compartiments sont vides, ce qui est trop faible. En outre, la longueur de chaîne moyenne est de 8. En tant donné que les valeurs dans cet index sont uniques, cela signifie que 8 valeurs en moyenne sont mappées à chaque compartiment. Le nombre de compartiments doit être augmenté. Étant donné que la clé d'index a 262 144 valeurs uniques, le nombre de compartiments doit être égal ou supérieur à 262 144. Si une croissance future est attendue, le nombre doit être supérieur.  
   
--   Index de clé primaire (PK__SalesOrder…) : 36 pour cent des compartiments sont vides, ce qui est correct. En outre, la longueur de chaîne moyenne est de 1, ce qui est également correct. Aucun changement n'est requis.  
+-   Index de clé primaire (PK__SalesOrder …) : 36 pour cent des compartiments sont vides, ce qui est correct. En outre, la longueur de chaîne moyenne est de 1, ce qui est également correct. Aucun changement n'est requis.  
   
- Pour plus d’informations sur la résolution des problèmes avec vos index de hachage mémoire optimisés, consultez [dépannage de problèmes de performances courants avec des index de hachage à mémoire optimisée](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
+ Pour plus d'informations sur le dépannage de vos index de hachage mémoire optimisés, consultez [Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
   
 ## <a name="detailed-considerations-for-further-optimization"></a>Observations détaillées pour une meilleure optimisation  
  Cette section décrit d'autres éléments à prendre en considération pour optimiser le nombre de compartiments.  
@@ -152,7 +152,7 @@ GO
   
 -   Plus la valeur du nombre de compartiments est élevée, plus les compartiments vides seront nombreux dans l'index. Cela a un impact sur l'utilisation de la mémoire (8 octets par compartiment) et les performances des analyses de table, car chaque compartiment est analysé dans le cadre d'une analyse de table.  
   
--   Plus le nombre de compartiments est faible, plus le nombre de valeurs affectées à un seul compartiment est grand. Cela réduit les performances pour les recherches de points et les insertions, étant donné que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit pouvoir franchir plusieurs valeurs dans un seul compartiment pour rechercher la valeur spécifiée par le prédicat de recherche.  
+-   Plus le nombre de compartiments est faible, plus le nombre de valeurs affectées à un seul compartiment est grand. Cela réduit les performances des recherches et des insertions de points, car [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut potentiellement parcourir plusieurs valeurs dans un seul compartiment pour trouver la valeur spécifiée par le prédicat de recherche.  
   
  Si le nombre de compartiments est considérablement inférieur au nombre de clés d'index uniques, plusieurs valeurs mapperont à chaque compartiment. Cela dégrade les performances de la plupart des opérations DML, en particulier les recherches de points (recherches de clés d'index individuelles) et des opérations d'insertion. Par exemple, vous pouvez constater des performances médiocres des requêtes et SELECT et des opérations UPDATE et DELETE avec des prédicats d'égalité correspondant aux colonnes clés d'index dans la clause WHERE. Un nombre de compartiments faible affectera également le temps de récupération de la base de données, car les index sont recréés au démarrage de la base de données.  
   

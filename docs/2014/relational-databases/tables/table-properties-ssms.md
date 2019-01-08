@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
@@ -17,12 +16,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b518a0044c4d4778fa2b94a6643c805e7c19ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096659"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356282"
 ---
 # <a name="table-properties"></a>Propriétés de la table
   Cette rubrique décrit les propriétés de table qui sont affichées dans la boîte de dialogue Propriétés d'une table dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations sur la façon d’afficher ces propriétés, consultez [Afficher la définition de table](view-the-table-definition.md).  
@@ -66,7 +65,7 @@ ms.locfileid: "48096659"
  Indique si l'objet a été créé avec l'option d'identificateur entre guillemets activée (ON). Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).  
   
  **Escalade de verrous**  
- Indique la granularité de l'escalade de verrous de la table. Pour plus d'informations sur le verrouillage dans le moteur de base de données, consultez [Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server](http://msdn.microsoft.com/library/jj856598.aspx). Les valeurs possibles sont :  
+ Indique la granularité de l'escalade de verrous de la table. Pour plus d'informations sur le verrouillage dans le moteur de base de données, consultez [Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server](https://msdn.microsoft.com/library/jj856598.aspx). Les valeurs possibles sont :  
   
  AUTO  
  Cette option permet au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de sélectionner la granularité de l'escalade de verrous appropriée pour le schéma de la table.  
@@ -136,7 +135,7 @@ ms.locfileid: "48096659"
  Les valeurs possibles sont `True` et `False`.  
   
  **Groupe de fichiers Filestream**  
- Spécifiez le nom du groupe de fichiers de données FILESTREAM si la table possède un `varbinary(max)` colonne qui a l’attribut FILESTREAM. La valeur par défaut est le groupe de fichiers de données FILESTREAM par défaut.  
+ Indiquez le nom du groupe de fichiers de données FILESTREAM si la table contient une colonne `varbinary(max)` avec l'attribut FILESTREAM. La valeur par défaut est le groupe de fichiers de données FILESTREAM par défaut.  
   
  Si la table ne contient pas de données FILESTREAM, ce champ est vierge.  
   
@@ -154,7 +153,7 @@ ms.locfileid: "48096659"
  Quantité d'espace occupée par les données dans la table, en mégaoctets.  
   
 ### <a name="partitioning"></a>Partitionnement  
- Cette section est disponible uniquement si la table est partitionnée. Pour plus d’informations, consultez [Tables et index partitionnés](../partitions/partitioned-tables-and-indexes.md).  
+ Cette section est disponible uniquement si la table est partitionnée. Pour plus d’informations, consultez [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
  **Colonne de partition**  
  Nom de la colonne sur laquelle la table est partitionnée.  

@@ -12,12 +12,12 @@ ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c736cbf5a5c6fd98f3635224c21c785468ce932d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7f617c7a69925f4ddb4bf6a2c0ef34c2e43f03a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105699"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372791"
 ---
 # <a name="send-dataset-sample"></a>Exemple Send DataSet
   L'exemple Send `DataSet` montre comment retourner un `DataSet` basé sur ADO.NET dans une procédure stockée CLR (Common Language Runtime) côté serveur en tant que jeu de résultats au client. Cette opération est utile lorsque, par exemple, ce type de procédure stockée remplit un `DataSet` à l'aide des résultats d'une requête, puis manipule les données contenues dans ce `DataSet`. C'est également utile si la procédure stockée crée et remplit un `DataSet` de toutes pièces. L'exemple est composé de deux classes, `DataSetUtilities` et `TestSendDataSet`. La méthode `SendDataSet` sur la classe `DataSetUtilities` implémente une méthode globale pour transmettre le contenu d'une instance de `DataSet` au client. La méthode `DoTest` définie sur la classe `TestSendDataSet` s'assure que la méthode `SendDataSet` fonctionne en créant un `DataSet` et en le remplissant de données provenant de la procédure stockée `uspGetTwoBOMTestData` Transact-SQL. `uspGetTwoBOMTestData` exécute la procédure stockée Transact-SQL exécute la procédure stockée `uspGetBillOfMaterials` à deux reprises pour interroger de manière récursive la nomenclature de deux produits spécifiés en tant que paramètres pour la procédure stockée `usp_GetTwoBOMTestData` . Généralement, après avoir rempli le jeu de données, les données sont modifiées avant d'appeler `SendDataSet` pour remettre les données dans le jeu de données, sous la forme d'un jeu de résultats au client. Mais, à des fins de simplicité, cet exemple retourne les données sans modification.  
@@ -25,9 +25,9 @@ ms.locfileid: "48105699"
 ## <a name="prerequisites"></a>Prérequis  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](http://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
   
--   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   Le Kit de développement logiciel .NET Framework SDK 2.0 ou version ultérieure, ou Microsoft Visual Studio 2005 ou version ultérieure. Vous pouvez vous procurer gratuitement le Kit de développement logiciel .NET Framework SDK.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48105699"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer le CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer l'intégration du CLR, vous devez disposer de l'autorisation de niveau serveur `ALTER SETTINGS` qui est attribuée implicitement aux membres des rôles serveur fixes `sysadmin` et `serveradmin`.  
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
@@ -565,7 +565,7 @@ EXTERNAL NAME [SendDataSet].[TestSendDataSet].[DoTest];
 GO  
 ```  
   
- Il s’agit du script test [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`), qui teste l’exemple.  
+ Il s'agit du script test [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`), qui teste l'exemple.  
   
 ```  
 USE AdventureWorks  

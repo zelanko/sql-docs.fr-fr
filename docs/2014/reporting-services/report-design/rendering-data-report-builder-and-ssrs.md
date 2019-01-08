@@ -11,12 +11,12 @@ ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 74fbdebc3e884b4a1068641e25cf7f656bfdbb11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 755e70e9ee037cabb33275a848411e40c784d5e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081382"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363111"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Rendu des données (Générateur de rapports et SSRS)
   Lorsque vous utilisez des convertisseurs de mise en page, tels que HTML, MHTML, Word, Excel, PDF ou Image, les données et leur organisation restent inchangées. Lorsque vous effectuez une exportation à l'aide d'un format de convertisseur de données, comme CSV ou XML, aucun élément de présentation visuelle n'est rendu. Lors du rendu du rapport, les formats CSV et XML appliquent certaines règles au corps du rapport et à son contenu. Ces règles déterminent la façon dont les données sont rendues dans ces formats.  
@@ -49,9 +49,9 @@ ms.locfileid: "48081382"
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   
  [Listes &#40;Générateur de rapports et SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Paramètres d’informations de périphérique Reporting Services](http://go.microsoft.com/fwlink/?LinkId=102515)  
+ [Paramètres d’informations de périphérique Reporting Services](https://go.microsoft.com/fwlink/?LinkId=102515)  
   
   

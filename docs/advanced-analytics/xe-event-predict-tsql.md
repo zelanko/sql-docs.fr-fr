@@ -1,5 +1,5 @@
 ---
-title: Événements étendus pour prédire les instructions d’analyse | Documents Microsoft
+title: Événements étendus pour la surveillance d’instructions PREDICT - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,22 +7,22 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9f56544416d88cc56fed13833667bf689f395693
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e680da7485069e6838edff260a505461a22c472b
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31201871"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432242"
 ---
-# <a name="extended-events-for-monitoring-predict-statements"></a>Événements étendus pour prédire les instructions d’analyse
+# <a name="extended-events-for-monitoring-predict-statements"></a>Événements étendus pour le monitoring d’instructions PREDICT
 
-Cet article décrit les événements étendus fournis dans SQL Server que vous pouvez utiliser pour surveiller et analyser les travaux qui utilisent [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) pour effectuer le calcul de score en temps réel dans SQL Server.
+Cet article décrit les événements étendus fournis dans SQL Server que vous pouvez utiliser pour surveiller et analyser les travaux qui utilisent [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) pour effectuer la notation en temps réel dans SQL Server.
 
-Calculer les scores en temps réel génère les scores à partir d’un modèle qui a été stocké dans SQL Server d’apprentissage. La fonction PREDICT ne nécessite pas d’une exécution externe tels que R ou Python, seul un modèle qui a été créé à l’aide d’un format binaire spécifique. Pour plus d’informations, consultez [en temps réel de calcul de score](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
+Calcul de score en temps réel génère les scores à partir d’un modèle machine learning ayant été stockées dans SQL Server. La fonction PREDICT ne nécessite pas une exécution externe comme R ou Python, uniquement un modèle qui a été créé à l’aide d’un format binaire spécifique. Pour plus d’informations, consultez [de score en temps réel](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Prérequis
 
-Pour obtenir des informations générales sur les événements étendus (parfois appelés événements étendus) et comment assurer le suivi des événements dans une session, consultez les articles suivants :
+Pour obtenir des informations générales sur les événements étendus (parfois appelés événements étendus) et comment effectuer le suivi des événements dans une session, consultez les articles suivants :
 
 + [Architecture et des concepts des événements étendus](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
 + [Configurer la capture d’événements dans SSMS](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
@@ -34,13 +34,13 @@ Les événements étendus suivants sont disponibles dans toutes les versions de 
 
 L’instruction T-SQL prédire a été introduite dans SQL Server 2017. 
 
-|name |object_type|description| 
+|NAME |object_type|description| 
 |----|----|----|
-|predict_function_completed |événement  |Répartition du temps d’exécution de Builtin|
-|predict_model_cache_hit |événement|Se produit lorsqu’un modèle est récupéré du cache du modèle de fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_ * pour résoudre les problèmes causés par le cache de modèle de fonction PREDICT.|
-|predict_model_cache_insert |événement  |   Se produit lorsqu’un modèle est inséré dans le cache de modèle de fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_ * pour résoudre les problèmes causés par le cache de modèle de fonction PREDICT.    |
-|predict_model_cache_miss   |événement|Se produit lorsqu’un modèle est introuvable dans le cache de modèle de fonction PREDICT. De fréquentes occurrences de cet événement peut indiquer que SQL Server a besoin de davantage de mémoire. Utilisez cet événement avec d’autres événements predict_model_cache_ * pour résoudre les problèmes causés par le cache de modèle de fonction PREDICT.|
-|predict_model_cache_remove |événement| Se produit lorsqu’un modèle est supprimé du cache de modèle pour la fonction de prédiction. Utilisez cet événement avec d’autres événements predict_model_cache_ * pour résoudre les problèmes causés par le cache de modèle de fonction PREDICT.|
+|predict_function_completed |événement  |Répartition du temps d’exécution Builtin|
+|predict_model_cache_hit |événement|Se produit lorsqu’un modèle est récupéré du cache du modèle de fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_ * pour résoudre les problèmes provoqués par le cache de modèle de fonction PREDICT.|
+|predict_model_cache_insert |événement  |   Se produit lorsqu’un modèle est inséré dans le cache de modèle de fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_ * pour résoudre les problèmes provoqués par le cache de modèle de fonction PREDICT.    |
+|predict_model_cache_miss   |événement|Se produit lorsqu’un modèle est introuvable dans le cache de modèle de fonction PREDICT. De fréquentes occurrences de cet événement peut indiquer que SQL Server nécessite davantage de mémoire. Utilisez cet événement avec d’autres événements predict_model_cache_ * pour résoudre les problèmes provoqués par le cache de modèle de fonction PREDICT.|
+|predict_model_cache_remove |événement| Se produit lorsqu’un modèle est supprimé du cache de modèle pour la fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_ * pour résoudre les problèmes provoqués par le cache de modèle de fonction PREDICT.|
 
 ## <a name="query-for-related-events"></a>Rechercher des événements connexes
 
@@ -52,23 +52,23 @@ SELECT * FROM sys.dm_xe_object_columns WHERE object_name LIKE `predict%'
 
 ## <a name="examples"></a>Exemples
 
-Capture d’informations sur les performances d’une session de score à l’aide de la prédiction :
+Pour capturer des informations sur les performances d’une session de calcul de score à l’aide de la prédiction :
 
-1. Créer une nouvelle étendue de session d’événements, à l’aide de Management Studio ou un autre pris en charge [outil](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools).
+1. Créer une nouvelle étendue de session d’événements, à l’aide de Management Studio ou une autre prise en charge [outil](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools).
 2. Ajoutez les événements `predict_function_completed` et `predict_model_cache_hit` à la session.
 3. Démarrer la session d’événements étendus.
-4. Exécutez la requête qui utilise la prédiction.
+4. Exécutez la requête qui utilise PREDICT.
 
 Dans les résultats, passez en revue ces colonnes :
 
-+ La valeur de `predict_function_completed` affiche le temps que la requête consacrée à charger le modèle et le score.
++ La valeur de `predict_function_completed` montre la durée la requête passée sur le chargement du modèle et la notation.
 + La valeur booléenne pour `predict_model_cache_hit` indique si la requête a utilisé un modèle mis en cache ou non. 
 
-### <a name="native-scoring-model-cache"></a>Cache de modèle de score natif
+### <a name="native-scoring-model-cache"></a>Cache des modèles de notation native
 
 Outre les événements spécifiques à prédire, vous pouvez utiliser les requêtes suivantes pour obtenir plus d’informations sur le modèle mis en cache et l’utilisation du cache :
 
-Afficher le cache de modèle de score natif :
+Afficher le cache de modèle de notation native :
 
 ```sql
 SELECT *

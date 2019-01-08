@@ -16,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a562aa5947444fe149c5e24f3a5a1b9cd74fe4d3
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: d04bc4e669faad149a4dccbfc1b40a82a9a1aae0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571219"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398172"
 ---
 # <a name="localdbgetinstances-function"></a>Fonction LocalDBGetInstances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Paramètres  
  *pInstanceNames*  
- [Sortie] Si cette fonction retourne, elle contient les noms des instances nommées et par défaut de LocalDB sur la station de travail de l'utilisateur.  
+ [Sortie] Lorsque cette fonction est retournée, contient les noms des deux nommé et instances de base de données locale sur le poste de travail par défaut.  
   
  *lpdwNumberOfInstances*  
- [Entrée/sortie] En entrée, contient le nombre d'emplacements de noms d'instances dans la mémoire tampon de *pInstanceNames* . Dans la sortie, contient le nombre d'instances de LocalDB sur la station de travail de l'utilisateur.  
+ [Entrée/sortie] En entrée, contient le nombre d'emplacements de noms d'instances dans la mémoire tampon de *pInstanceNames* . Lors de la sortie, contient le nombre d’instances de LocalDB sur la station de travail de l’utilisateur.  
   
 ## <a name="returns"></a>Valeur renvoyée  
  Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  

@@ -1,7 +1,8 @@
 ---
-title: Activer ou désactiver la collecte de données d’utilisation et rapports pour Azure Data Studio sur les incidents | Microsoft Docs
+title: Activer ou désactiver la collecte des données d’utilisation et des rapports d’incidents
+titleSuffix: Azure Data Studio
 description: Cet article explique comment contrôler si les données de rapports d’incidents et de l’utilisation sont collectées et envoyées à Microsoft.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0a5adf802ab07e05f1041b1385044e2d580db32
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 1f9dd29edf2474ab8db0e3dc7ad7dc2ff78016d1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356480"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030103"
 ---
 # <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>Activer ou désactiver la collecte des données d’utilisation [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -31,7 +32,7 @@ Pour exclure tous les événements de télémétrie à partir de [!INCLUDE[name-
     "telemetry.enableTelemetry": false
 ```
 
-**Avis important**: cette option nécessite un redémarrage de [!INCLUDE[name-sos](../includes/name-sos-short.md)] entrent en vigueur. 
+**Avis important**: Cette option nécessite un redémarrage de [!INCLUDE[name-sos](../includes/name-sos-short.md)] entrent en vigueur. 
 
 ## <a name="how-to-disable-crash-reporting"></a>Comment désactiver le signalement des incidents
 
@@ -41,7 +42,7 @@ Pour désactiver le rapport d’incident, à partir de **fichier** > **préfére
     "telemetry.enableCrashReporter": false
 ```
 
-**Avis important**: cette option nécessite un redémarrage de [!INCLUDE[name-sos](../includes/name-sos-short.md)] entrent en vigueur.
+**Avis important**: Cette option nécessite un redémarrage de [!INCLUDE[name-sos](../includes/name-sos-short.md)] entrent en vigueur.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 - [Paramètres de l’espace de travail et l’utilisateur](settings.md)

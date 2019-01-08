@@ -11,12 +11,12 @@ ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a955d01840995c269f94de4d83a038c0b26cc725
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39db8cb33e2adbf24ff03b6ad84dfefe0e8bfb81
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142986"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504637"
 ---
 # <a name="defining-and-browsing-translations"></a>Définition et exploration de traductions
   Une traduction est la représentation de noms d'objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans un langage spécifique. Les objets incluent les groupes de mesures, mesures, dimensions, attributs, hiérarchies, indicateurs de performance clé, actions et membres calculés. Les traductions permettent au serveur de prendre en charge les applications clientes qui autorisent l'emploi de plusieurs langues. Un tel client transmet l'identificateur des paramètres régionaux locaux (LCID, Locale Identifier) à l'instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], qui l'utilise pour déterminer le jeu de traductions à employer lorsqu'elle fournit des métadonnées pour des objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Si un objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne contient pas de traduction pour cette langue ou ne contient pas de traduction pour un objet spécifié, la langue par défaut est utilisée pour renvoyer les métadonnées d'objets au client. Par exemple, si un utilisateur situé en France accède à un cube à partir d'une station de travail utilisant les paramètres régionaux français, l'utilisateur en question voit les légendes des membres et les valeurs de leurs propriétés en français si une traduction française est disponible. Cependant, si un utilisateur situé en Allemagne accède au même cube à partir d'une station de travail utilisant des paramètres régionaux allemands, cet utilisateur voit les noms des légendes et les valeurs des propriétés de membre en allemand. Pour plus d’informations, consultez [traductions de Dimension](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [traductions de Cube](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [traductions &#40;Analysis Services&#41;](translations-analysis-services.md).  
@@ -45,9 +45,9 @@ ms.locfileid: "48142986"
   
 6.  Dans la ligne de la **légende** de l’objet pour le **Month Name** d’attribut, tapez `Mes del Año` dans le **Espagnol (Espagne)** colonne de traduction et `Mois d'Année` dans le **Français (France)** colonne de traduction.  
   
-     Notez que quand vous entrez ces traductions, des points de suspension (**…**) apparaissent. En cliquant sur ces points de suspension, vous pouvez spécifier une colonne de la table sous-jacente qui fournit les traductions pour chaque membre de la hiérarchie d'attribut.  
+     Notez que lorsque vous entrez ces traductions, des points de suspension (**...** ) s’affiche. En cliquant sur ces points de suspension, vous pouvez spécifier une colonne de la table sous-jacente qui fournit les traductions pour chaque membre de la hiérarchie d'attribut.  
   
-7.  Cliquez sur les points de suspension (**…**) pour la traduction **Espagnol (Espagne)** de l’attribut **Month Name** .  
+7.  Cliquez sur le bouton de sélection (**...** ) pour le **Espagnol (Espagne)** traduction pour la **Month Name** attribut.  
   
      La boîte de dialogue **Traduction de données d’attribut** apparaît.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48142986"
   
      ![Boîte de dialogue traduction de données attribut](../../2014/tutorials/media/l9-translations-4.gif "boîte de dialogue traduction de données d’attribut")  
   
-9. Cliquez sur **OK**, puis cliquez sur les points de suspension (**…**) pour la traduction **Français (France)** de l’attribut **Month Name** .  
+9. Cliquez sur **OK**, puis cliquez sur le bouton de sélection (**...** ) pour le **Français (France)** traduction pour la **Month Name** attribut.  
   
 10. Dans la liste **Colonnes de traduction** , sélectionnez **FrenchMonthName**, puis cliquez sur **OK**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48142986"
      Observez que les noms de mois apparaissent maintenant en français, de même que le nom de la mesure.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 10 : Définition de rôles d’administration](../analysis-services/lesson-10-defining-administrative-roles.md)  
+ [Leçon 10 : Définition de rôles administratifs](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Traductions de dimension](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   

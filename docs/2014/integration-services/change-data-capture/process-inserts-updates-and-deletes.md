@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
@@ -13,12 +12,12 @@ ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7cf579c8839b2f990486f9bf5dcca1700dac50e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22c944306fd73b6acd2dc2d107d5bfdff69d1439
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066409"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804905"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Traiter les insertions, les mises à jour et les suppressions
   Dans le flux de données d'un package Integration Services qui effectue un chargement incrémentiel des données modifiées, la deuxième tâche consiste à séparer les insertions, les mises à jour et les suppressions. Ensuite, vous pouvez utiliser des commandes appropriées pour les appliquer à la destination.  
@@ -68,7 +67,7 @@ select
 ## <a name="next-step"></a>Étape suivante  
  Après avoir fractionné les lignes à des fins de traitement, l'étape suivante consiste à appliquer les modifications à la destination.  
   
- **Rubrique suivante :** [Appliquer les modifications à la destination](apply-the-changes-to-the-destination.md)  
+ **Rubrique suivante :** [Appliquer les modifications à la destination](apply-the-changes-to-the-destination.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Transformation de fractionnement conditionnel](../data-flow/transformations/conditional-split-transformation.md)   

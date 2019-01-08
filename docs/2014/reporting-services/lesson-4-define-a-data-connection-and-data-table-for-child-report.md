@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 4 : définir une connexion de données et une table de données pour le rapport enfant | Microsoft Docs'
+title: 'Leçon 4 : Définir une connexion de données et la Table de données pour le rapport enfant | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3403d416ed7945d4f980ef4c15d89ff0e56c8720
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0aed81ff4ac2daa517bb17ddb53ebaf7eacdcbe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184309"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365411"
 ---
-# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Leçon 4 : définir une connexion de données et une table de données pour le rapport enfant
+# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Leçon 4 : définir une connexion de données et une table de données pour le rapport enfant
   Après avoir créé le rapport parent, l'étape suivante consiste à créer une connexion de données et une table de données pour le rapport enfant. Dans ce didacticiel, la connexion de données doit s'établir avec la base de données AdventureWorks2008. Vous avez également la possibilité de vous connecter à la base de données AdventureWorks2012.  
   
 ### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>Pour définir une connexion de données et un objet DataTable en ajoutant un DataSet (pour le rapport enfant)  
@@ -47,7 +47,7 @@ ms.locfileid: "48184309"
   
 6.  Si vous avez sélectionné **Utiliser l’authentification SQL Server** à l’étape 5 (b), choisissez s’il faut inclure les données sensibles dans la chaîne ou définir les informations dans votre code d’application.  
   
-7.  Sur le **enregistrer la chaîne de connexion au fichier de Configuration de l’Application** page, tapez le nom de la chaîne de connexion ou acceptez la valeur par défaut **AdventureWorks2008ConnectionString**. Cliquez sur **Suivant**.  
+7.  Sur le **enregistrer la chaîne de connexion au fichier de Configuration de l’Application** page, tapez le nom de la chaîne de connexion ou acceptez la valeur par défaut **AdventureWorks2008ConnectionString**. Cliquer sur **Suivant**.  
   
 8.  Sur le **choisir un Type de commande** page, sélectionnez **utiliser des instructions SQL**, puis cliquez sur **suivant**.  
   
@@ -57,11 +57,11 @@ ms.locfileid: "48184309"
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
     ```  
   
-     Vous pouvez également créer la requête en cliquant sur **Générateur de requêtes**, puis vérifiez la requête en cliquant sur **exécuter la requête** bouton. Si la requête ne retourne pas les données attendues, c'est peut-être que vous utilisez une version antérieure d'AdventureWorks. Pour plus d’informations sur l’installation de la **AdventureWorks2008** version d’AdventureWorks, consultez [procédure pas à pas : installation de la base de données AdventureWorks](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
+     Vous pouvez également créer la requête en cliquant sur **Générateur de requêtes**, puis vérifiez la requête en cliquant sur **exécuter la requête** bouton. Si la requête ne retourne pas les données attendues, c'est peut-être que vous utilisez une version antérieure d'AdventureWorks. Pour plus d’informations sur l’installation de la **AdventureWorks2008** version d’AdventureWorks, consultez [procédure pas à pas : L’installation de la base de données AdventureWorks](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
   
 10. Sur le **choisir les méthodes à générer** page, décochez la case **créer des méthodes pour envoyer des mises à jour directement à la base de données (GenerateDBDirectMethods)**, puis cliquez sur **Terminer**.  
   
-     Vous avez maintenant terminé la configuration de l’objet ADO.NET [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) en tant que source de données pour votre rapport. Dans la page du Concepteur de DataSet dans Visual Studio, vous devez voir l’objet **DataTable** que vous avez ajouté, qui répertorie les colonnes spécifiées dans la requête. DataSet2 contient les données de la table PurchaseOrderDetail, en fonction de la requête.  
+     Vous avez maintenant terminé la configuration de l’objet ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) en tant que source de données pour votre rapport. Dans la page du Concepteur de DataSet dans Visual Studio, vous devez voir l’objet **DataTable** que vous avez ajouté, qui répertorie les colonnes spécifiées dans la requête. DataSet2 contient les données de la table PurchaseOrderDetail, en fonction de la requête.  
   
 11. Enregistrez le fichier.  
   

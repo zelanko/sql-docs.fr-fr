@@ -13,12 +13,12 @@ ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f95e963264b122440c85334cb69b622c6aa122a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714117"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207768"
 ---
 # <a name="data-section"></a>Section de données
 La section de données définit les données de l’ensemble de lignes ainsi que tout en attente de mises à jour, les insertions ou les suppressions. La section de données peut contenir zéro ou plusieurs lignes. Il ne peut contenir que des données à partir d’un ensemble de lignes où la ligne est définie par le schéma. En outre, comme mentionné précédemment, les colonnes sans aucune donnée peuvent être omis. Si un attribut ou un sous-élément est utilisé dans la section de données et que cette construction n’a pas été définie dans la section de schéma, il est ignoré en mode silencieux.  

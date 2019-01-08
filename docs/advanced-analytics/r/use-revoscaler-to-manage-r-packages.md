@@ -1,5 +1,5 @@
 ---
-title: Comment utiliser les fonctions RevoScaleR pour rechercher ou installer R packages sur SQL Server | Microsoft Docs
+title: Comment utiliser les fonctions RevoScaleR pour rechercher ou installer des packages R - Services de SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e9009e26a891c031194697de78cac97db6844d58
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 64f930a72dbb7f8c6aff8338f22dd3e9b7cc7bbe
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563975"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645358"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Comment utiliser les fonctions RevoScaleR pour rechercher ou installer des packages R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -181,7 +181,7 @@ Fonctionnement de la synchronisation de package sur un par base de données et p
 
 Exécutez cette commande à partir de Management Studio ou un autre outil qui prend en charge T-SQL, pour obtenir la liste des packages installés sur l’instance actuelle, à l’aide de `rxInstalledPackages` dans une procédure stockée.
 
-```SQL
+```sql
 EXEC sp_execute_external_script 
   @language=N'R', 
   @script=N'
@@ -192,7 +192,7 @@ EXEC sp_execute_external_script
 
 Le `rxSqlLibPaths` fonction peut être utilisée pour déterminer la bibliothèque active utilisée par SQL Server Machine Learning Services. Ce script peut retourner uniquement le chemin de bibliothèque pour le serveur actif. 
 
-```SQL
+```sql
 declare @instance_name nvarchar(100) = @@SERVERNAME, @database_name nvarchar(128) = db_name();
 exec sp_execute_external_script 
   @language = N'R',

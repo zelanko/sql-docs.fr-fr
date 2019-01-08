@@ -1,24 +1,23 @@
 ---
-title: 'Étape 1 : Copie du package de la leçon 4 | Microsoft Docs'
+title: 'Étape 1 : Copie du Package de la leçon 4 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76017bf54455d702dbea060e4f966765ddb1e47b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9aaa786680ff15a8b2efcb00d104f73f64089a55
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070012"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360851"
 ---
-# <a name="step-1-copying-the-lesson-4-package"></a>Étape 1 : Copie du package de la leçon 4
+# <a name="step-1-copying-the-lesson-4-package"></a>Étape 1 : Copie du Package de la leçon 4
   Dans cette tâche, vous créez une copie du package Lesson 4.dtsx que vous avez créé à la leçon 4. Vous pouvez également ajouter au projet le package final de la leçon 4 inclus avec le didacticiel, puis le copier. Vous allez utiliser cette nouvelle copie tout au long de la leçon 5.  
   
 ### <a name="to-copy-the-lesson-4-package"></a>Pour copier le package de la leçon 4  
@@ -49,11 +48,11 @@ ms.locfileid: "48070012"
   
 3.  Dans la boîte de dialogue **Ajouter une copie des packages existants** , dans **Emplacement du package**, sélectionnez **Système de fichiers**.  
   
-4.  Cliquez sur le bouton de navigation **(...)** , accédez à **Lesson 4.dtsx** sur votre ordinateur, puis cliquez sur **Ouvrir**.  
+4.  Cliquez sur le bouton de navigation **(...)**, accédez à **Lesson 4.dtsx** sur votre ordinateur, puis cliquez sur **Ouvrir**.  
   
      Pour télécharger tous les packages de leçons de ce didacticiel, procédez comme suit.  
   
-    1.  Accédez à [Exemples de produits Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Accédez à [Exemples de produits Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48070012"
 5.  Copiez et collez le package de la leçon 4 comme décrit dans les étapes 3 à 8 de la procédure précédente.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 2 : Activation et configuration des configurations de package](lesson-5-2-enabling-and-configuring-package-configurations.md)  
+ [Étape 2 : Activation et configuration des Configurations de Package](lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
   

@@ -12,24 +12,24 @@ ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96e727752ab7c0023efeed63e478f9d39cd27207
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b679c93d8e946092518ca9bc020c3fbcfca834d5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097749"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366761"
 ---
 # <a name="hello-world-sample"></a>Exemple Hello World
   L'exemple Hello World montre les opérations de base à effectuer pour créer, déployer et tester une procédure stockée simple et basée sur l'intégration du CLR (Common Language Runtime). Cet exemple montre également comment retourner des données via un enregistrement qui est construit dynamiquement par la procédure stockée et retourné à l'appelant.  
   
- Le `HelloWorld` procédure stockée retourne la chaîne « Hello world ! » dans un jeu de résultats composé d’une ligne. Cet exemple illustre quelques utilisations pour les classes [Microsoft.SqlServer.Server.SqlMetaData](http://go.microsoft.com/fwlink/?LinkID=193572), [Microsoft.SqlServer.Server.SqlDataRecord](http://go.microsoft.com/fwlink/?LinkID=193573) et [ Microsoft.SqlServer.Server.Pipe](http://go.microsoft.com/fwlink/?LinkID=193571).  
+ Le `HelloWorld` procédure stockée retourne la chaîne « Hello world ! » dans un jeu de résultats composé d’une ligne. Cet exemple illustre quelques utilisations pour les classes [Microsoft.SqlServer.Server.SqlMetaData](https://go.microsoft.com/fwlink/?LinkID=193572), [Microsoft.SqlServer.Server.SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573) et [ Microsoft.SqlServer.Server.Pipe](https://go.microsoft.com/fwlink/?LinkID=193571).  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](http://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
   
--   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   Le Kit de développement logiciel .NET Framework SDK 2.0 ou version ultérieure, ou Microsoft Visual Studio 2005 ou version ultérieure. Vous pouvez vous procurer gratuitement le Kit de développement logiciel .NET Framework SDK.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "48097749"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer le CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer l'intégration du CLR, vous devez disposer de l'autorisation de niveau serveur `ALTER SETTINGS` qui est attribuée implicitement aux membres des rôles serveur fixes `sysadmin` et `serveradmin`.  
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
--   Si vous n’êtes pas administrateur de le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance que vous utilisez, vous devez demander un administrateur vous accorder **CreateAssembly** autorisation pour terminer l’installation.  
+-   Si vous n'êtes pas administrateur de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée, vous devez demander à un administrateur de vous accorder l'autorisation **CreateAssembly** pour terminer l'installation.  
   
 ## <a name="building-the-sample"></a>Génération de l'exemple  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48097749"
   
 2.  Si nécessaire, créez un répertoire pour votre exemple. Pour cet exemple, nous utiliserons C:\MySample.  
   
-3.  Dans c:\MySample, créez `HelloWorld.vb` (pour l'exemple Visual Basic) ou `HelloWorld.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
+3.  Dans c:\MySample, créez `HelloWorld.vb` (pour l'exemple Visual Basic) ou `HelloWorld.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
   
 4.  Compilez l'exemple de code à partir de l'invite de ligne de commande en exécutant l'un des éléments suivants, selon le langage choisi.  
   

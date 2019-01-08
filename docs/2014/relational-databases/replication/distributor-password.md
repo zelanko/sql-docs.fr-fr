@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configuredistributionwizard.distributorpassword.f1
@@ -13,12 +12,12 @@ ms.assetid: 52787c5e-c9ef-440e-a000-0787111b7dbb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e13c6a658409dbf0d8349a05621afd9768e5ee7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a6d3c7971f6d5e117ae923ee8697a4ec51e1a34e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119239"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774851"
 ---
 # <a name="distributor-password"></a>Mot de passe du serveur de distribution
   Si, dans la page **Serveurs de publication** de cet Assistant, vous avez autorisé un ou plusieurs serveurs de publication à utiliser ce serveur comme serveur de distribution distant, vous devez définir un mot de passe pour la connexion que la réplication établit entre le serveur de publication et le serveur de distribution distant à l'aide de la connexion **distributor_admin** . Dans la page **Mot de passe d'administration** de l'Assistant Nouvelle publication ou de l'Assistant Configurer le serveur de distribution, vous devez entrer le même mot de passe pour chaque serveur de publication qui utilise le serveur de distribution. Pour plus d’informations sur la sécurité des serveurs de distribution, consultez [Sécuriser le serveur de distribution](security/secure-the-distributor.md).  

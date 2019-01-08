@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sequence.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54a6d265c6ad8f7c585a629c2adc997b808d636b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063241"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781602"
 ---
 # <a name="sequence-properties-general-page"></a>Propriétés de séquence (page Général)
   Crée un objet séquence et spécifie ses propriétés. Une séquence est un objet lié par schéma défini par l'utilisateur qui génère une séquence de valeurs numériques d'après la spécification avec laquelle la séquence a été créée. La séquence de valeurs numériques est générée dans un ordre croissant ou décroissant à un intervalle défini et peut être configurée pour redémarrer (cycle) lorsque épuisée. Les séquences, contrairement aux colonnes d'identité, ne sont pas associées aux tables spécifiques. Les applications font référence à un objet séquence pour extraire sa valeur suivante. La relation entre les séquences et les tables est contrôlée par l'application. Les applications utilisateur peuvent référencer un objet séquence et coordonner les valeurs sur plusieurs lignes et tables.  
@@ -42,9 +41,9 @@ ms.locfileid: "48063241"
 |Type de données|Plage|  
 |---------------|-----------|  
 |`tinyint`|0 à 255|  
-|`smallint`|-32 768 à 32 767|  
-|`int`|-2 147 483 648 à 2 147 483 647|  
-|`bigint`|-9 223 372 036 854 775 808 à 9 223 372 036 854 775 807|  
+|`smallint`|-32 768 à 32 767|  
+|`int`|-2 147 483 648 à 2 147 483 647|  
+|`bigint`|-9 223 372 036 854 775 808 à 9 223 372 036 854 775 807|  
   
 -   `decimal` ou `numeric` avec une échelle de 0.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48063241"
  Valeur utilisée pour incrémenter (ou décrémenter en cas de valeurs négatives) la valeur de l’objet séquence pour chaque appel à la fonction **NEXT VALUE FOR** . Si l'incrément est une valeur négative, l'objet séquence décroît ; sinon, il augmente. L'incrément ne peut pas avoir la valeur 0.  
   
  **Valeur minimale**  
- Spécifie les limites de l'objet séquence. La valeur minimale par défaut d'un nouvel objet séquence correspond à la valeur minimale du type de données de l'objet séquence. Il est égal à zéro pour le `tinyint` type de données et un nombre négatif pour tous les autres types de données.  
+ Spécifie les limites de l'objet séquence. La valeur minimale par défaut d'un nouvel objet séquence correspond à la valeur minimale du type de données de l'objet séquence. Il s'agit de zéro pour le type de données `tinyint` et d'un nombre négatif pour tous les autres types de données.  
   
  **Valeur maximale**  
  Spécifie les limites de l'objet séquence. La valeur maximale par défaut d'un nouvel objet séquence correspond à la valeur maximale du type de données de l'objet séquence.  
@@ -84,7 +83,7 @@ ms.locfileid: "48063241"
   
  Pour plus d’informations sur les options de création de séquence, consultez [CREATE SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-sequence-transact-sql).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation **CREATE SEQUENCE**, **ALTER**ou **CONTROL** sur le SCHEMA.  
   
 ## <a name="see-also"></a>Voir aussi  

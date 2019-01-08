@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG020557 error
@@ -13,12 +12,12 @@ ms.assetid: c43c6952-5b60-4347-b881-11a0004dce24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7701a709d9415c660ad63a70c8cfbb3bfafd0878
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc61a235cbfd96812e632dfd56f6ef1cbdabb4b6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193959"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357327"
 ---
 # <a name="mssqleng020557"></a>MSSQL_ENG020557
     
@@ -50,7 +49,7 @@ ms.locfileid: "48193959"
   
 -   Si l'erreur se produit lors de la création ou de l'application d'un instantané, vérifiez si les fichiers du répertoire d'instantanés comportent des erreurs.  
   
--   Si l'erreur continue de se produire, augmentez le facteur de journalisation de l'agent et spécifiez un fichier de sortie pour le journal. En fonction du contexte de l'erreur, cette action peut révéler les étapes qui conduisent à l'erreur et fournir d'autres messages d'erreur. Pour plus d'informations sur la configuration de la journalisation pour la réplication, consultez l'article [312292](http://support.microsoft.com/kb/312292)de la Base de connaissances Microsoft.  
+-   Si l'erreur continue de se produire, augmentez le facteur de journalisation de l'agent et spécifiez un fichier de sortie pour le journal. En fonction du contexte de l'erreur, cette action peut révéler les étapes qui conduisent à l'erreur et fournir d'autres messages d'erreur. Pour plus d'informations sur la configuration de la journalisation pour la réplication, consultez l'article [312292](https://support.microsoft.com/kb/312292)de la Base de connaissances Microsoft.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](errors-and-events-reference-replication.md)  

@@ -1,6 +1,6 @@
 ---
-title: Autoriser les utilisateurs à SQL Server Machine Learning Services | Microsoft Docs
-description: Comment autoriser les utilisateurs à SQL Server Machine Learning Services.
+title: Accorder des autorisations de base de données pour l’exécution du script R et Python - SQL Server Machine Learning Services
+description: Comment accorder des autorisations d’utilisateur de base de données pour l’exécution du script R et Python sur SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 07268386ad66350eed7f1382348fa4d698863600
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: e281f1712163aeee1846565458c2b037077c8588
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419064"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644838"
 ---
 # <a name="give-users-permission-to-sql-server-machine-learning-services"></a>Autoriser les utilisateurs à SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ Si vous avez installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 La plupart des utilisateurs, toutefois, n’ont pas de ces autorisations élevées. Par exemple, les utilisateurs d’une organisation qui utilisent des connexions SQL pour accéder à la base de données généralement n’ont pas des autorisations élevées. Par conséquent, pour chaque utilisateur qui est à l’aide de R ou Python, vous devez accorder aux utilisateurs des Services Machine Learning l’autorisation d’exécuter des scripts externes dans chaque base de données où la langue est utilisée. Voici comment :
 
-```SQL
+```sql
 USE <database_name>
 GO
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
@@ -49,7 +49,7 @@ Pour chaque compte d’utilisateur Windows ou un compte de connexion SQL qui est
 
 Par exemple, ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction donne la connexion SQL *MySQLLogin* les droits pour exécuter des requêtes T-SQL le *ML_Samples* base de données. Pour exécuter cette instruction, la connexion SQL doit déjà exister dans le contexte de sécurité du serveur.
 
-```SQL
+```sql
 USE ML_Samples
 GO
 EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'

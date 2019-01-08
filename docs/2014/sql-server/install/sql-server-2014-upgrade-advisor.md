@@ -11,17 +11,17 @@ ms.assetid: d28a5ca8-ea9f-443f-af4f-b7e77987f8f0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c6e49e9c5c5306ba5d1986c7fd8e09ea463c8b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 18a88e4c6029705e5587dffce1803208186dfcd0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129019"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361311"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>Conseiller de mise à niveau SQL Server 2014
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Le Conseiller de mise à niveau analyse la configuration d’installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants, puis génère un rapport des problèmes que vous devez prendre afin de garantir une mise à niveau réussie.  
+  Le Conseiller de mise à niveau [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] analyse la configuration des composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installés, puis génère un rapport des problèmes à traiter pour assurer une mise à niveau réussie.  
   
- Obtenez le fichier d'installation du Conseiller de mise à niveau (sqlua.msi) dans le dossier redist du support d'installation ou dans le cadre du [téléchargement de SQL 2014 Feature Pack](http://www.microsoft.com/download/details.aspx?id=42295).  
+ Obtenez le fichier d'installation du Conseiller de mise à niveau (sqlua.msi) dans le dossier redist du support d'installation ou dans le cadre du [téléchargement de SQL 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=42295).  
   
 |Rubrique|Description|  
 |-----------|-----------------|  

@@ -14,12 +14,12 @@ ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f2476ebb3997db16c8ffebdd0aac2d6eebe9a68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e422ac6535900a287ae610a85241dc67172c4f7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182689"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357735"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Création d'une application de fournisseur OLE DB de SQL Server Native Client
   Création d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implique l’application du fournisseur OLE DB Native Client comme suit :  
@@ -31,7 +31,7 @@ ms.locfileid: "48182689"
 3.  Traitement des résultats.  
   
 > [!NOTE]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d’identification persistantes, chiffrez-les avec [l’API de chiffrement Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d’identification persistantes, chiffrez-les avec [l’API de chiffrement Win32 cryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

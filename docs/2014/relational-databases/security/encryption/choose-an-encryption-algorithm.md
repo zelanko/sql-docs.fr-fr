@@ -15,12 +15,12 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 6d89cd1ee72b39c3441a4aea70f3e0ad622b4e49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 853e85ea84b84f1ed0af040be5d8614feab193b0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204489"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365651"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Choisir un algorithme de chiffrement
   Le chiffrement est l'une des mesures préventives à la disposition des administrateurs qui souhaitent sécuriser une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -48,7 +48,7 @@ ms.locfileid: "48204489"
 >   
 >  L'utilisation répétée du même RC4 ou RC4_128 KEY_GUID sur différents blocs de données entraîne la même clé RC4 car [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne fournit pas automatiquement de salt. L'utilisation répétée de la même clé RC4 est une erreur connue qui entraîne un chiffrement très faible. Par conséquent, les mots clés RC4 et RC4_128 sont déconseillés. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- Pour plus d'informations sur les algorithmes et la technologie de chiffrement, consultez la rubrique [Concepts fondamentaux sur la sécurité](http://go.microsoft.com/fwlink/?LinkId=62082) dans le Guide du développeur .NET Framework sur le site MSDN.  
+ Pour plus d'informations sur les algorithmes et la technologie de chiffrement, consultez la rubrique [Concepts fondamentaux sur la sécurité](https://go.microsoft.com/fwlink/?LinkId=62082) dans le Guide du développeur .NET Framework sur le site MSDN.  
   
  **Éclaircissement concernant les algorithmes DES :**  
   

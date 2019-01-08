@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.warningsandagents.merge.f1
@@ -13,19 +12,19 @@ ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 099a4e4685a2eb5a77448f6230ea928adf49c2d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d13debf78da8b028114b6012a24a30b2275dcdd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073439"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762627"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Informations de publication, Avertissements (Publication de fusion, SQL Server 2005 et version ultérieure)
   L'onglet **Avertissements** est disponible pour les serveurs de distribution qui exécutent [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures. L'onglet **Avertissements** vous permet d'effectuer les tâches suivantes selon la publication sélectionnée :  
   
 -   activer les avertissements ;  
   
--   définir des seuils associés aux avertissements ;  
+-   définir des seuils associés aux avertissements ;  
   
 -   définir des alertes associées aux avertissements ;  
   
@@ -82,6 +81,6 @@ ms.locfileid: "48073439"
  [Afficher des informations et exécuter des tâches pour une publication &#40;moniteur de réplication&#41;](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
  [Analyser les performances avec le moniteur de réplication](monitor/monitor-performance-with-replication-monitor.md)   
  [Surveillance de la réplication](monitoring-replication.md)   
- [Définir des seuils et des avertissements dans le moniteur de réplication](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

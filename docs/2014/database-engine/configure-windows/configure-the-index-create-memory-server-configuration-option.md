@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - index create memory option
@@ -13,12 +12,12 @@ ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5251c55d438d5596a9ce910dbf3ac0811eceef7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1274cf9a9e747412cc4fb212eee18a9d5d4a8f40
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209869"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639307"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>Configurer l'option de configuration de serveur index create memory
   Cette rubrique explique comment configurer l'option de configuration de serveur **index create memory** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **index create memory** contrôle la quantité maximale de mémoire initialement allouée pour la création d'index. La valeur par défaut de cette option est 0 (auto-configuration). Si une quantité supplémentaire de mémoire est requise ultérieurement pour créer les index et que cette quantité de mémoire est disponible, le serveur l'utilisera, outrepassant ainsi le paramétrage de cette option. Si la mémoire supplémentaire requise n'est pas disponible, la création d'index se poursuivra en utilisant la mémoire déjà allouée.  
@@ -39,7 +38,7 @@ ms.locfileid: "48209869"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l'option index create memory](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l’option index create memory](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -98,7 +97,7 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option index create memory  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option Création d'index en mémoire  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

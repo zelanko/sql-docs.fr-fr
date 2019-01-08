@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
@@ -16,12 +16,12 @@ ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a58590fe431fa898c617f9d1fd552aa131678b89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57117e531714e93000fef6beefefffc2ef210c80
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217269"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823173"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Écrire des messages de trace d'exécution dans le journal des erreurs de SQL Server Agent (SQL Server Management Studio)
   Cette rubrique indique comment configurer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour inclure des messages de trace d'exécution dans le journal des erreurs dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "48217269"
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   Cependant, l'Explorateur d'objets affiche le nœud [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent uniquement si vous avez l'autorisation de l'utiliser.  
+-   Cependant, l'Explorateur d'objets affiche le nœud de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent uniquement si vous avez l'autorisation de l'utiliser.  
   
 -   Étant donné que cette option peut entraîner une augmentation importante de la taille du journal des erreurs, n'incluez que les messages de trace d'exécution dans les journaux des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent lors de l'investigation d'un problème spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48217269"
   
 2.  Cliquez avec le bouton droit sur **SQL Server Agent** , puis sélectionnez **Propriétés**.  
   
-3.  Dans la boîte de dialogue **Propriétés de SQL Server Agent –***nom_serveur*, sous **Journal des erreurs** dans la page **Général**, cochez la case **Inclure les messages de trace d’exécution**.  
+3.  Dans le **propriétés de l’Agent SQL Server-*** nom_serveur* boîte de dialogue **journal des erreurs** sur le **général** page, sélectionnez le **inclure trace d’exécution messages** case à cocher.  
   
 4.  Cliquez sur **OK**.  
   

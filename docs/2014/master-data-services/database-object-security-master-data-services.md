@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
@@ -14,12 +13,12 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b2e4feb3f09b8012c17156e085e16dcf39df3088
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5d485aec6d3056022ea55f1cb2bc8ee29a4e314
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183519"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822233"
 ---
 # <a name="database-object-security-master-data-services"></a>Sécurité de l'objet de base de données (Master Data Services)
   Dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , les données sont stockées dans plusieurs tables de base de données et sont visible dans les vues. Les informations que vous avez sécurisées dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] sont visibles aux utilisateurs qui ont accès à la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -43,15 +42,15 @@ ms.locfileid: "48183519"
 -   [Configuration des paramètres système](#SysSettings)  
   
 ##  <a name="Staging"></a> Mise en lots de données  
- Dans le tableau suivant, le nom de chaque élément sécurisable comporte le terme « name ». Il indique le nom de la table de mise en lots spécifié lors de la création d'une entité. Pour plus d’informations, consultez [importation des données &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+ Dans le tableau suivant, le nom de chaque élément sécurisable comporte le terme « name ». Il indique le nom de la table de mise en lots spécifié lors de la création d'une entité. Pour plus d’informations, consultez [importation des données &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
-|Action|Éléments sécurisables|Permissions|  
+|Action|Éléments sécurisables|Autorisations|  
 |------------|----------------|-----------------|  
-|Chargez les membres feuille et leurs attributs dans la table de mise en lots.|stg.name_Leaf|Obligatoire : INSERT<br /><br /> Facultatif : SELECT et UPDATE|  
+|Chargez les membres feuille et leurs attributs dans la table de mise en lots.|stg.name_Leaf|Obligatoire : INSERT<br /><br /> Facultatif : SÉLECTIONNER et mettre à jour|  
 |Chargez les données de la table de mise en lots Feuille dans les tables de base de données MDS appropriées.|stg.udp_name_Leaf|Exécutez|  
-|Chargez les membres consolidés et leurs attributs dans la table de mise en lots.|stg.name_Consolidated|Obligatoire : INSERT<br /><br /> Facultatif : SELECT et UPDATE|  
+|Chargez les membres consolidés et leurs attributs dans la table de mise en lots.|stg.name_Consolidated|Obligatoire : INSERT<br /><br /> Facultatif : SÉLECTIONNER et mettre à jour|  
 |Chargez les données de la table de mise en lots Consolidé dans les tables de base de données MDS appropriées.|stg.udp_name_Consolidated|Exécutez|  
-|Chargez les relations réciproques des membres feuille et consolidés dans une hiérarchie explicite de la table de mise en lots.|stg.name_Relationship|Obligatoire : INSERT<br /><br /> Facultatif : SELECT et UPDATE|  
+|Charger la feuille et les relations entre eux des membres consolidés dans une hiérarchie explicite dans la table intermédiaire.|stg.name_Relationship|Obligatoire : INSERT<br /><br /> Facultatif : SÉLECTIONNER et mettre à jour|  
 |Chargez les données de la table de mise en lots Relation dans les tables MDS appropriées.|stg.udp_name_Relationship|Exécutez|  
 |Affichez les erreurs qui se sont produites lors de l'insertion des données des tables de mise en lots dans les tables de base de données MDS.|stg.udp_name_Relationship|SELECT|  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48183519"
   
 ##  <a name="rules"></a> Validation de données par rapport aux règles d’entreprise  
   
-|Action|Élément sécurisable|Permissions|  
+|Action|Élément sécurisable|Autorisations|  
 |------------|---------------|-----------------|  
 |Valider une version des données par rapport aux règles d'entreprise|mdm.udpValidateModel|Exécutez|  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48183519"
   
 ##  <a name="Versions"></a> Suppression de versions  
   
-|Action|Éléments sécurisables|Permissions|  
+|Action|Éléments sécurisables|Autorisations|  
 |------------|----------------|-----------------|  
 |Déterminer l'ID de la version que vous souhaitez supprimer|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |Supprimer une version d'un modèle|mdm.udpVersionDelete|Exécutez|  
@@ -76,7 +75,7 @@ ms.locfileid: "48183519"
   
 ##  <a name="Hierarchy"></a> Application immédiate des autorisations des membres de la hiérarchie  
   
-|Action|Éléments sécurisables|Permissions|  
+|Action|Éléments sécurisables|Autorisations|  
 |------------|----------------|-----------------|  
 |Application immédiate d'autorisations de membre|mdm.udpSecurityMemberProcessRebuildModel|Exécutez|  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48183519"
   
 ##  <a name="SysAdmin"></a> Modification du compte d’administrateur système  
   
-|Action|Éléments sécurisables|Permissions|  
+|Action|Éléments sécurisables|Autorisations|  
 |------------|----------------|-----------------|  
 |Déterminer le SID du nouvel administrateur|mdm.tblUser|SELECT|  
 |Modifier le compte de l'administrateur système|mdm.udpSecuritySetAdministrator|Exécutez|  

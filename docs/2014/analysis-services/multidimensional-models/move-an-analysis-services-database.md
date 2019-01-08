@@ -15,12 +15,12 @@ ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69a3d667bbe057387d05ffd814ca3ea1a3854238
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0939540af0c302832925a7a1bef6367718b8c1be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145324"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369278"
 ---
 # <a name="move-an-analysis-services-database"></a>Déplacer une base de données Analysis Services
   Il existe souvent des situations où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] souhaite déplacer une base de données de modèle multidimensionnel ou tabulaire à un emplacement différent. Ces cas sont souvent motivés par des impératifs d’exploitation, tels que le déplacement de la base de données vers un autre disque afin d’obtenir de meilleures performances, le gain de place afin de permettre la croissance de la base de données, ou la mise à niveau d'un produit.  
@@ -44,7 +44,7 @@ ms.locfileid: "50145324"
   
 1.  Localisez la base de données à déplacer dans le volet gauche ou droit de SSMS.  
   
-2.  Cliquez avec le bouton droit sur la base de données et choisissez **Détacher...**  
+2.  Avec le bouton droit sur la base de données, puis sélectionnez **détachement...**  
   
 3.  Attribuez un mot de passe à la base de données à détacher, puis cliquez sur **OK** pour exécuter la commande de détachement.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "50145324"
   
 5.  Recherchez le dossier **Bases de données** dans le volet gauche ou droit de SSMS.  
   
-6.  Cliquez avec le bouton droit sur le dossier **Bases de données** et sélectionnez **Attacher...**  
+6.  Avec le bouton droit sur le **bases de données** dossier et sélectionnez **attacher...**  
   
-7.  Dans la zone de texte **dossier** , tapez le nouvel emplacement du dossier de base de données. Vous pouvez également utiliser le bouton Parcourir (**...**) pour rechercher le dossier de base de données.  
+7.  Dans la zone de texte **dossier** , tapez le nouvel emplacement du dossier de base de données. Vous pouvez également utiliser le bouton Parcourir (**...** ) pour rechercher le dossier de base de données.  
   
 8.  Sélectionnez le `ReadWrite` mode pour la base de données.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "50145324"
   
 2.  Copiez le modèle de script suivant pour XMLA :  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -128,11 +128,11 @@ ms.locfileid: "50145324"
   
 4.  Copiez le modèle de script suivant pour XMLA dans un nouvel onglet XMLA.  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

@@ -21,12 +21,12 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13352451c31822acdc9fea70965b22c6269577f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152011"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375941"
 ---
 # <a name="working-with-query-notifications"></a>Utilisation de notifications de requêtes
   Les notifications de requêtes ont été introduites dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Basées sur l'infrastructure de Service Broker introduite dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], les notifications de requêtes permettent aux applications d'être notifiées en cas de modification des données. Cette fonctionnalité est particulièrement utile pour les applications qui fournissent un cache d'informations à partir d'une base de données, par exemple une application Web, et qui doivent être notifiées en cas de modification des données sources.  
@@ -58,11 +58,11 @@ ms.locfileid: "48152011"
 CREATE QUEUE myQueue  
 CREATE SERVICE myService ON QUEUE myQueue   
   
-([http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
+([https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
 ```  
   
 > [!NOTE]  
->  Le service doit utiliser le contrat prédéfini `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`, comme indiqué plus haut.  
+>  Le service doit utiliser le contrat prédéfini `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`, comme indiqué plus haut.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Fournisseur OLE DB SQL Server Native Client  
  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif prend en charge la notification des consommateurs sur la modification de l’ensemble de lignes. Le consommateur reçoit la notification à chaque phase de la modification de l'ensemble de lignes et à chaque tentative de modification.  
@@ -73,7 +73,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Le jeu de propriétés DBPROPSET_SQLSERVERROWSET  
  Pour prendre en charge les notifications de requêtes via OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ajoute les nouvelles propriétés suivantes au jeu de propriétés DBPROPSET_SQLSERVERROWSET.  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Nombre de secondes pendant lesquelles la notification de requête doit rester active.<br /><br /> La valeur par défaut est 432 000 secondes (5 jours). La valeur minimale est 1 seconde, et la valeur maximale est 2^31-1 secondes.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Texte du message de la notification. Il est défini par l'utilisateur et n'a aucun format prédéfini.<br /><br /> Par défaut, la chaîne est vide. Vous pouvez spécifier un message à l'aide de 1-2000 caractères.|  
@@ -113,7 +113,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- Si SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT et SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS ne sont pas NULL, l'en-tête TDS de notifications de requêtes contenant les trois attributs définis plus haut sera envoyé au serveur chaque fois que la commande est exécutée. Si l'un d'eux est Null, l'en-tête n'est pas envoyé, et SQL_SUCCESS_WITH_INFO est retourné. La validation se produit sur [SQLPrepare, fonction](http://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, et **SqlExecute**, tous les qui échouent si les attributs ne sont pas valides. De la même façon, lorsque ces attributs de notification de requête sont définis pour les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'exécution échoue avec SQL_SUCCESS_WITH_INFO.  
+ Si SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT et SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS ne sont pas NULL, l'en-tête TDS de notifications de requêtes contenant les trois attributs définis plus haut sera envoyé au serveur chaque fois que la commande est exécutée. Si l'un d'eux est Null, l'en-tête n'est pas envoyé, et SQL_SUCCESS_WITH_INFO est retourné. La validation se produit sur [SQLPrepare, fonction](https://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, et **SqlExecute**, tous les qui échouent si les attributs ne sont pas valides. De la même façon, lorsque ces attributs de notification de requête sont définis pour les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'exécution échoue avec SQL_SUCCESS_WITH_INFO.  
   
 > [!NOTE]  
 >  La préparation d'instructions ne provoque jamais l'initialisation de l'abonnement ; l'abonnement peut être initialisé par l'exécution d'instructions.  

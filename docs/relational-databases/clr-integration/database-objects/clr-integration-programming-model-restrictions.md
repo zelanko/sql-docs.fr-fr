@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c39bb3499302ef1b60744a4332c665506c7fd21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809037"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538527"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrictions du modèle de programmation de l'intégration du CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "47809037"
  Pendant l'exécution, les conditions suivantes sont vérifiées pour l'assembly de code. Si l'une de ces conditions est remplie, le code managé n'est pas autorisé à s'exécuter et une exception est levée.  
   
 ### <a name="unsafe"></a>UNSAFE  
- Chargement d’un assembly, soit explicitement en appelant le **System.Reflection.Assembly.Load()** (méthode) à partir d’un tableau d’octets, ou implicitement via l’utilisation de **Reflection.Emit** espace de noms, n’est pas autorisée.  
+ Charger un assembly-soit explicitement en appelant le **System.Reflection.Assembly.Load()** (méthode) à partir d’un tableau d’octets, ou implicitement via l’utilisation de **Reflection.Emit** espace de noms-n’est pas autorisée.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Tous les **UNSAFE** conditions sont vérifiées.  

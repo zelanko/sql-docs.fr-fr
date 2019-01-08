@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -21,12 +20,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 174343d5c937c8c58277579192a9deb968355a0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edafb305050b36798990ecea21b08dde42e3f068
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091734"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770711"
 ---
 # <a name="dta-utility"></a>dta (utilitaire)
   L'utilitaire **dta** constitue la version d'invite de commandes de l'Assistant Paramétrage du moteur de base de données. L'utilitaire **dta** est conçu pour permettre l'utilisation de l'Assistant Paramétrage du moteur de base de données dans des applications et des scripts.  
@@ -41,7 +40,7 @@ ms.locfileid: "48091734"
 [ -? ] |  
 [  
       [ -S server_name[ \instance ] ]  
-      { { -U login_id [-P password ] } | –E  }  
+      { { -U login_id [-P password ] } | -E  }  
       { -D database_name [ ,...n ] }  
       [ -ddatabase_name ]   
       [ -Tltable_list | -Tf table_list_file ]  
@@ -103,13 +102,13 @@ ms.locfileid: "48091734"
  Spécifie le nom de chaque base de données à paramétrer. La première base de données est la base de données par défaut. Vous pouvez spécifier plusieurs bases de données en séparant les noms de bases de données avec des virgules, par exemple :  
   
 ```  
-dta –D database_name1, database_name2...  
+dta -D database_name1, database_name2...  
 ```  
   
  Vous pouvez également spécifier plusieurs bases de données en utilisant l'argument **-D** pour chaque nom de base de données, par exemple :  
   
 ```  
-dta –D database_name1 -D database_name2... n  
+dta -D database_name1 -D database_name2... n  
 ```  
   
  L’argument **-D** est obligatoire. Si l’argument **-d** n’a pas été spécifié, **dta** se connecte initialement à la base de données qui a été spécifiée avec la première clause `USE database_name` dans la charge de travail. Si la charge de travail ne comporte pas de clause `USE database_name` explicite, vous devez utiliser l’argument **-d** .  
@@ -149,7 +148,7 @@ dta -d AdventureWorks2012 ...
   
 |Paramètre|Valeur par défaut|  
 |---------------|-------------------|  
-|*database_name*|*database_name* spécifié avec l’option **–D**|  
+|*database_name*|*database_name* spécifié avec l’option **-D**|  
 |*owner_name*|**dbo**<br /><br /> Remarque : *owner_name* doit être **dbo**. Si une autre valeur est spécifiée, l'exécution de **dta** échoue et il retourne une erreur.|  
 |*table_name*|None|  
   
@@ -164,7 +163,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Spécifie les types de PDS (Physical Design Structures) que **dta** doit inclure dans la recommandation. Le tableau suivant répertorie et décrit les valeurs pouvant être spécifiées pour cet argument. Lorsqu’aucune valeur n’est spécifiée, **dta** utilise la valeur par défaut **-fa**`IDX`.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |IDX_IV|Index et vues indexées.|  
 |IDX|Index uniquement.|  
@@ -177,7 +176,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Spécifie les structures PDS (Physical Design Structures) que **dta** doit conserver lors de la génération de sa recommandation. Le tableau suivant répertorie et décrit les valeurs pouvant être spécifiées pour cet argument :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Aucune|Aucune structure existante|  
 |ALL|Toutes les structures existantes|  
@@ -188,7 +187,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Spécifie si les nouvelles PDS (Physical Design Structures) (index et vues indexées) que **dta** propose doivent être partitionnées et de quelle manière. Le tableau suivant répertorie et décrit les valeurs pouvant être spécifiées pour cet argument :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Aucune|Aucun partitionnement|  
 |FULL|Partitionnement complet (choisissez cette option pour améliorer les performances)|  
@@ -203,10 +202,10 @@ dta -d AdventureWorks2012 ...
  Spécifie un identificateur numérique pour la session de réglage. Si ce paramètre n'est pas spécifié, **dta** génère un numéro d'identification. Vous pouvez utiliser cet identificateur pour afficher des informations pour des sessions de réglage existantes. Si vous ne spécifiez pas de valeur pour **-ID**, un nom de session doit être spécifié avec **-s**.  
   
  **-ip**  
- Spécifie que le cache du plan est utilisé comme charge de travail. Les 1 000 premiers événements du cache du plan pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n** .  
+ Spécifie que le cache du plan est utilisé comme charge de travail. Les 1 000 premiers événements du cache du plan pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n**.  
   
  **-ipf**  
- Spécifie que le cache du plan est utilisé comme charge de travail. Les 1 000 premiers événements du cache du plan pour toutes les bases de données sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n** .  
+ Spécifie que le cache du plan est utilisé comme charge de travail. Les 1 000 premiers événements du cache du plan pour toutes les bases de données sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n**.  
   
  **-if** *workload_file*  
  Spécifie le chemin d'accès et le nom du fichier de charge de travail à utiliser comme entrée pour le réglage. Le fichier doit être dans l'un de ces formats : .trc (fichier trace du Générateur de profils SQL Server), .sql (fichier SQL) ou .log (fichier de trace de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Un fichier de charge de travail ou une table de charge travail doit être spécifié.  
@@ -218,7 +217,7 @@ dta -d AdventureWorks2012 ...
   
 |Paramètre|Valeur par défaut|  
 |---------------|-------------------|  
-|*database_name*|*database_name* spécifié avec l’option **–D** .|  
+|*database_name*|*database_name* spécifié avec l’option **-D** .|  
 |*owner_name*|**dbo**.|  
 |*table_name*|Aucun.|  
   
@@ -234,7 +233,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Spécifie si des PDS (Physical Design Structures) sont créées en ligne. Le tableau suivant répertorie et décrit les valeurs pouvant être spécifiées pour cet argument :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |OFF|Aucune PDS ne peut être créée en ligne.|  
 |ON|Toutes les PDS recommandées peuvent être créées en ligne.|  
@@ -275,7 +274,7 @@ dta -n number_of_events -A 0
  **-rl** *analysis_report_list*  
  Spécifie la liste des rapports d'analyse à générer. Le tableau suivant répertorie les valeurs pouvant être spécifiées pour cet argument :  
   
-|Valeur|Rapport|  
+|Value|Rapport|  
 |-----------|------------|  
 |ALL|Tous les rapports d'analyse|  
 |STMT_COST|Rapport de coût d'instruction|  
@@ -344,7 +343,7 @@ dta -n number_of_events -A 0
  Cet exemple utilise une connexion sécurisée (`-E`) pour se connecter à la base de données **tpcd1G** sur MyServer afin d’analyser une charge de travail et créer des recommandations. Il écrit la sortie dans un fichier de script nommé script.sql. Si script.sql existe déjà, **dta** remplace le fichier, car l'argument `-F` a été spécifié. La session de réglage se poursuit pendant une durée illimitée pour garantir l'analyse complète de la charge de travail (`-A 0`). La recommandation doit fournir une amélioration minimale de 5 % (`-m 5`). **dta** doit inclure des index et des vues indexées dans sa recommandation finale (`-fa IDX_IV`).  
   
 ```  
-dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
+dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
  **B. Limiter l’utilisation du disque**  
@@ -352,7 +351,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
  Cet exemple limite la taille de base de données totale, qui inclut les données brutes et les index supplémentaires, à 3 gigaoctets (Go) (`-B 3000`) et dirige la sortie vers d:\result_dir\script1.sql. Il ne s'exécute pas plus d'une heure (`-A 60`).  
   
 ```  
-dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
+dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
  **C. Limiter le nombre de requêtes optimisées**  
@@ -360,7 +359,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
  Cet exemple limite le nombre de requêtes lues du fichier orders_wkld.sql à un maximum de 10 (`-n 10`) et s'exécute pendant 15 minutes (`-A 15`), selon l'événement se produisant en premier. Pour être certain que toutes les 10 requêtes sont réglées, spécifiez une durée de réglage illimitée avec `-A 0`. Si le temps est important, spécifiez une limite de temps appropriée en spécifiant le nombre de minutes disponibles pour le réglage avec l'argument `-A` comme l'illustre cet exemple.  
   
 ```  
-dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
+dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
  **D. Optimiser des tables spécifiques répertoriées dans un fichier**  
@@ -386,11 +385,11 @@ AdventureWorks2012.Production.Product  2000000
  La durée de réglage est de 2 heures (`-A 120`) et la sortie est écrite dans un fichier XML (`-ox XMLTune.xml`).  
   
 ```  
-dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
+dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de l’invite de commandes utilitaire &#40;moteur de base de données&#41;](../command-prompt-utility-reference-database-engine.md)   
- [Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../command-prompt-utility-reference-database-engine.md)   
+ [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

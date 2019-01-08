@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helptracertokens
@@ -17,12 +16,12 @@ ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a86c366097caef5a08bc7c0805cf2a567c63a081
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f521f416c7415d2a27554e7f3d91f5df89023798
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815577"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210408"
 ---
 # <a name="sphelptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +46,8 @@ sp_helptracertokens [ @publication = ] 'publication'
  [  **@publisher=** ] **'***publisher***'**  
  Le nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
-> [!NOTE]  
->  Ce paramètre ne doit être spécifié pour les non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication.  
+> [!NOTE]
+>  Ce paramètre ne doit être spécifié pour les non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
  Le nom de la base de données de publication. *publisher_db* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre est ignoré si la procédure stockée est exécutée sur le serveur de publication.  
@@ -71,7 +70,7 @@ sp_helptracertokens [ @publication = ] 'publication'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokens-tran_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe le **db_owner** fixe du rôle de base de données dans la base de données de publication, ou **db_owner** base de données fixe ou  **replmonitor** rôles dans la base de données de distribution peuvent exécuter **sp_helptracertokenhistory**.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - restoring recovery interval [SQL Server]
@@ -20,12 +19,12 @@ ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 18da33b5827fa6f06b9cf84659259e40d08a29ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07e9e5c6b96e33dc416f7e81e363b988a0f615e3
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175789"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641240"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>Configurer l'option de configuration de serveur recovery interval
   Cette rubrique explique comment configurer l'option de configuration de serveur **recovery interval** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **intervalle de récupération** définit une limite supérieure de durée de récupération pour une base de données. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilise la valeur spécifiée pour cette option afin de déterminer approximativement à quelle fréquence les [points de contrôle automatique](../../relational-databases/logs/database-checkpoints-sql-server.md) génèrent des points de contrôle automatique sur une base de données spécifiée.  
@@ -48,7 +47,7 @@ ms.locfileid: "48175789"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l'option recovery interval](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l’option recovery interval](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -104,7 +103,7 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option recovery interval  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option recovery interval  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

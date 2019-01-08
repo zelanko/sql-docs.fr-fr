@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
@@ -21,14 +20,14 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 49aff131d55dbc38511fdae0dc930e161904a985
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f55b593bc172174002074de759f45b9b5f7d8243
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188969"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368251"
 ---
-# <a name="ssis-tutorial-deploying-packages"></a>Didacticiel SSIS : déploiement de packages
+# <a name="ssis-tutorial-deploying-packages"></a>Didacticiel SSIS : Déploiement des packages
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] propose des outils qui simplifient le déploiement des packages vers un autre ordinateur. Ces outils de déploiement gèrent aussi les dépendances, telles que les configurations et les fichiers dont les packages ont besoin. Dans ce didacticiel, vous allez apprendre à utiliser ces outils pour installer des packages et leurs dépendances sur un ordinateur cible.  
   
  Pour commencer, vous allez effectuer les tâches de préparation du déploiement. Vous allez créer un nouveau projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et ajouter des packages et des fichiers de données existants au projet. Vous n'allez pas créer de nouveaux packages entièrement ; en revanche, vous allez travailler uniquement avec des packages finalisés et créés spécialement pour ce didacticiel. Vous n'allez pas modifier les fonctionnalités des packages de ce didacticiel ; cependant, une fois que les packages sont ajoutés au projet, il vous sera peut-être utile d'ouvrir les packages dans le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] et d'examiner le contenu de chaque package. Cette opération vous permet d'obtenir des informations sur les dépendances de package telles que les fichiers journaux et d'autres fonctionnalités intéressantes des packages.  
@@ -46,8 +45,8 @@ ms.locfileid: "48188969"
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Le meilleur moyen de se familiariser avec les nouveaux outils et les nouvelles commandes et fonctionnalités de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est de les utiliser. Ce didacticiel vous guide dans les étapes de création d'un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] puis d'ajout des packages et autres fichiers nécessaires au projet. Une fois le projet terminé, vous allez créer une application de déploiement, copier cette application sur l'ordinateur de destination, puis installer les packages sur l'ordinateur de destination.  
   
-## <a name="requirements"></a>Spécifications  
- Ce didacticiel s’adresse aux utilisateurs qui ont une connaissance des notions fondamentales liées aux opérations effectuées sur les systèmes de fichiers, mais une maîtrise limitée des nouvelles fonctionnalités disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour mieux comprendre base [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] concepts que vous allez mettre en œuvre dans ce didacticiel, il peut s’avérer utile pour tout d’abord effectuer les opérations suivantes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] didacticiels : [exécuter le SQL Server Assistant Importation et exportation](import-export-data/start-the-sql-server-import-and-export-wizard.md) et [ Didacticiel SSIS : Création d’un Package ETL Simple](../integration-services/ssis-how-to-create-an-etl-package.md).  
+## <a name="requirements"></a>Configuration requise  
+ Ce didacticiel s’adresse aux utilisateurs qui ont une connaissance des notions fondamentales liées aux opérations effectuées sur les systèmes de fichiers, mais une maîtrise limitée des nouvelles fonctionnalités disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour mieux comprendre les concepts [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de base que vous allez mettre en œuvre dans ce didacticiel, il est peut-être intéressant d'achever d'abord les didacticiels [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suivants : [Exécuter le serveur SQL Server Assistant Importation et exportation](import-export-data/start-the-sql-server-import-and-export-wizard.md) et [didacticiel SSIS : Création d’un Package ETL Simple](../integration-services/ssis-how-to-create-an-etl-package.md).  
   
  **Ordinateur source.** Les composants suivants doivent être installés sur l'ordinateur sur lequel vous allez créer l'application de déploiement :  
   
@@ -73,18 +72,18 @@ ms.locfileid: "48188969"
   
  Si vous envisagez de déployer les packages sur le même ordinateur que celui où vous créez l'application de déploiement, ce dernier doit avoir la configuration requise pour les ordinateurs source et de destination.  
   
- **Durée estimée pour effectuer ce didacticiel :** 2 heures.  
+ **Durée estimée pour effectuer ce didacticiel :** 2 heures  
   
 ## <a name="lessons-in-this-tutorial"></a>Leçons du didacticiel  
- [Leçon 1 : Préparation à la création du bundle de déploiement](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
+ [Leçon 1 : Préparation à la création de l’application de déploiement](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
  Au cours de cette leçon, vous allez vous préparer à déployer une solution ETL en créant un nouveau projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et en ajoutant au projet les packages et les autres fichiers requis.  
   
- [Leçon 2 : Création de bundle de déploiement](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+ [Leçon 2 : Création de l’application de déploiement](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  Au cours de cette leçon, vous allez élaborer un utilitaire de déploiement et vérifier que l'application de déploiement inclut les fichiers nécessaires.  
   
- [Leçon 3 : Installation de packages](../integration-services/lesson-3-install-ssis-package.md)  
+ [Leçon 3 : Installation des Packages](../integration-services/lesson-3-install-ssis-package.md)  
  Vous allez aussi copier l'application de déploiement sur l'ordinateur cible, installer les packages, puis les exécuter.  
   
-![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
   

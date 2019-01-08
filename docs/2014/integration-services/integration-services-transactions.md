@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], transactions
@@ -16,15 +15,15 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b1057dd8a7e70dc663d1b0de7d206fd7cc84e2c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41ab59a7eedcfcdfb2c93217397da1b3cd81e8e6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129909"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360651"
 ---
 # <a name="integration-services-transactions"></a>Transactions Integration Services
-  Les packages utilisent les transactions pour lier les actions de base de données que les tâches effectuent en unités atomiques, et maintiennent ce faisant l'intégrité des données. Tous les types de conteneurs [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (packages, conteneurs de boucles For et Foreach et conteneurs de séquences, ainsi que les hôtes de tâches qui encapsulent chaque tâche) peuvent être configurés pour utiliser les transactions. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] offre trois options de configuration des transactions : **NotSupported**, **Supported**et **Required**.  
+  Les packages utilisent les transactions pour lier les actions de base de données que les tâches effectuent en unités atomiques, et maintiennent ce faisant l'intégrité des données. Tous les types de conteneurs [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (packages, conteneurs de boucles For et Foreach et conteneurs de séquences, ainsi que les hôtes de tâches qui encapsulent chaque tâche) peuvent être configurés pour utiliser les transactions. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit trois options de configuration des transactions : **NotSupported**, **pris en charge**, et **requis**.  
   
 -   **Required** indique que le conteneur démarre une transaction, à moins qu’une autre transaction soit déjà démarrée par son conteneur parent. Si la transaction existe déjà, le conteneur rejoint la transaction. Par exemple, si un package non configuré pour prendre en charge les transactions inclut un conteneur de séquences utilisant l’option **Required** , le conteneur de séquences démarre sa propre transaction. Si le package a été configuré pour utiliser l’option **Required** , le conteneur de séquences rejoint la transaction du package.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "48129909"
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   Entrée de blog, [How to Use Transactions in SQL Server Integration Services SSIS](http://go.microsoft.com/fwlink/?LinkId=157783)(Comment utiliser des transactions dans SQL Server Integration Services SSIS), sur www.mssqltips.com  
+-   Entrée de blog, [How to Use Transactions in SQL Server Integration Services SSIS](https://go.microsoft.com/fwlink/?LinkId=157783) (Comment utiliser des transactions dans SQL Server Integration Services SSIS), sur www.mssqltips.com  
   
 ## <a name="see-also"></a>Voir aussi  
  [Transactions héritées](../../2014/integration-services/inherited-transactions.md)   

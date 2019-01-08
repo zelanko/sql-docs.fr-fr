@@ -1,27 +1,26 @@
 ---
-title: 'Étape 2 : Vérification du bundle de déploiement | Microsoft Docs'
+title: 'Étape 2 : Vérification du Bundle de déploiement | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a9f5ef250617b445ce30624537f715be73b3d2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 163df99c54ed323d1039d50c69e812cb4c1d2286
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102119"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368781"
 ---
-# <a name="step-2-verifying-the-deployment-bundle"></a>Étape 2 : Vérification de l'application de déploiement
+# <a name="step-2-verifying-the-deployment-bundle"></a>Étape 2 : Vérification de l'application de déploiement
   Dans la leçon 1, vous avez créé le projet Didacticiel de déploiement et ajouté au projet les packages et les fichiers annexes ; dans la tâche précédente, vous avez créé un utilitaire de déploiement pour le projet.  
   
- Dans cette tâche, vous allez vérifier le contenu de l'application de déploiement. Elle correspond au dossier que vous allez copier sur l'ordinateur de destination et qui servira à installer des packages. Si vous avez utilisé la valeur par défaut—bin\Deployment—comme emplacement de l'utilitaire de déploiement, l'application de déploiement correspond au dossier Bin\Deployment dans le dossier du didacticiel de déploiement du projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+ Dans cette tâche, vous allez vérifier le contenu de l'application de déploiement. Elle correspond au dossier que vous allez copier sur l'ordinateur de destination et qui servira à installer des packages. Si vous avez utilisé la valeur par défaut, bin\Deployment, comme emplacement de l’utilitaire de déploiement, l’application de déploiement correspond au dossier Bin\Deployment dans le dossier du tutoriel de déploiement du projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 ### <a name="to-verify-the-content-of-deployment-bundle"></a>Pour vérifier le contenu de l'application de déploiement  
   
@@ -56,8 +55,8 @@ ms.locfileid: "48102119"
 5.  Quittez Internet Explorer ou l'éditeur de texte.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 3 : Installation de packages](../integration-services/lesson-3-install-ssis-package.md)  
+ [Leçon 3 : Installation des Packages](../integration-services/lesson-3-install-ssis-package.md)  
   
-![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
   

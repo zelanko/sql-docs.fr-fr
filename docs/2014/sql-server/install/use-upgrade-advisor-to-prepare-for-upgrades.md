@@ -17,12 +17,12 @@ ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8ade9c0d0d877ca1c12c1361e0e0ba45c2e7ecb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209289"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368071"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Utiliser le Conseiller de mise à niveau pour la préparation des mises à niveau
   Le Conseiller de mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous assiste lors de la préparation des mises à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Le Conseiller de mise à niveau analyse les composants installés des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis génère un rapport qui identifie les problèmes à résoudre avant ou après la mise à niveau.  
@@ -65,9 +65,9 @@ ms.locfileid: "48209289"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1, et [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
--   Windows Installer depuis la version 4.5. Vous pouvez installer le programme d’installation de Windows à partir de la [site Web du programme d’installation Windows](http://go.microsoft.com/fwlink/?LinkId=49112).  
+-   Windows Installer depuis la version 4.5. Vous pouvez installer le programme d’installation de Windows à partir de la [site Web du programme d’installation Windows](https://go.microsoft.com/fwlink/?LinkId=49112).  
   
--   Microsoft .NET Framework 4. .NET framework 4 est disponible sur le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] support du produit et à partir de la [page de téléchargement de .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. .NET framework 4 est disponible sur le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] support du produit et à partir de la [page de téléchargement de .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Pour installer .NET Framework 4 à partir du support de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], localisez la racine du lecteur de disque. Ensuite, double-cliquez sur le dossier \redist, sur le dossier DotNetFrameworks et exécutez dotNetFx40_Full_x86_x64.exe (pour les systèmes d'exploitation 32 bits ou 64 bits).  
   

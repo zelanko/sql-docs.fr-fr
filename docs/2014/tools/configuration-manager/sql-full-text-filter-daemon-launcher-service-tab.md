@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc88d88a752950e89511c5abd2bc5a7812edc493
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f5129771e5d487075ad2223317047fbbb3c09fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181229"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803376"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>Lanceur de démon de filtre de texte intégral SQL (onglet Service)
   À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], le lanceur de démon de filtre de texte intégral SQL (service de lancement FDHOST) est utilisé par la recherche en texte intégral [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce service doit être en cours d'exécution pendant que vous utilisez la recherche en texte intégral. Pour plus d’informations sur les processus hôtes de démon de filtre, consultez « Architecture de la recherche en texte intégral » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -48,13 +47,13 @@ ms.locfileid: "48181229"
  **Mode de démarrage**  
  Les options disponibles pour ce service sont les suivantes :  
   
--   Manuel : ce service n'est pas automatiquement lancé au démarrage de l'ordinateur. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
+-   Manuel : Ce service n'est pas automatiquement lancé au démarrage de l'ordinateur. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
   
--   Automatique : ce service essaie de se lancer au démarrage de cet ordinateur.  
+-   Automatique : ce service essaie de se lancer au démarrage de cet ordinateur.  
   
--   Désactivé : ce service ne peut pas être démarré.  
+-   Désactivé : ce service ne peut pas être démarré.  
   
  **État**  
- Indique si ce service est en cours d'exécution, arrêté ou désactivé. «**…**» indique qu'un changement d'état est en attente.  
+ Indique si ce service est en cours d'exécution, arrêté ou désactivé. « **…** » indique qu’un changement d’état est en attente.  
   
   

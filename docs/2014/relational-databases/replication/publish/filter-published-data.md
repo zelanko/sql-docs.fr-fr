@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication]
@@ -21,12 +20,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac56fd795f819fe308dee9980e12883e73b0172d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222625"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810641"
 ---
 # <a name="filter-published-data"></a>Filtrer des données publiées
   Le filtrage des articles d'une table vous permet de créer des partitions de données à publier. En filtrant les données publiées, vous pouvez :  
@@ -73,7 +72,7 @@ ms.locfileid: "48222625"
     > [!NOTE]  
     >  Dans les publications transactionnelles, les filtres de lignes peuvent ajouter un surcroît de traitement considérable car la clause de filtrage d'articles est évaluée pour chaque ligne de journal écrite pour une table publiée afin de déterminer si la ligne doit être répliquée. Les filtres de lignes doivent être évités dans les publications transactionnelles si chaque nœud de réplication peut prendre en charge la charge complète des données, et si l'ensemble global des données est relativement peu volumineux.  
   
--   Avec la réplication de fusion, utilisez le filtrage des lignes paramétrables plutôt que la création de plusieurs publications à l'aide des filtres de lignes statiques. Pour plus d'informations, consultez [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+-   Avec la réplication de fusion, utilisez le filtrage des lignes paramétrables plutôt que la création de plusieurs publications à l'aide des filtres de lignes statiques. Pour plus d’informations, consultez [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  Pour définir et modifier un filtre de lignes statiques, consultez [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
@@ -114,7 +113,7 @@ ms.locfileid: "48222625"
   
 -   La taille maximale d'une colonne utilisée dans un filtre est de 1 024 octets pour un article d'une publication de fusion, et de 8 000 octets pour un article d'une publication transactionnelle.  
   
--   Les colonnes avec les types de données suivants ne peuvent pas être référencées dans des filtres de lignes ou de jointure :  
+-   Les colonnes avec les types de données suivants ne peuvent pas être référencées dans des filtres de lignes ou de jointure :  
   
     -   `varchar(max) and nvarchar(max)`  
   
@@ -130,7 +129,7 @@ ms.locfileid: "48222625"
   
 -   La réplication transactionnelle vous permet de répliquer une vue indexée comme une vue ou une table. Si vous répliquez la vue comme une table, vous ne pouvez pas filtrer les colonnes de la table.  
   
- Les filtres de lignes ne sont pas conçus pour fonctionner sur les bases de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limite volontairement l’exécution de `sp_replcmds` (qui filtres s’exécutent sous) au propriétaire de la base de données (`dbo`). Le `dbo` n’a pas les privilèges de base de données croisés. Avec l'ajout de la capture de données modifiées (CDC) dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la logique `sp_replcmds` remplit les tables de suivi des modifications avec les informations que l'utilisateur peut retourner et interroger. Pour des raisons de sécurité, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limite l’exécution de cette logique afin qu’un texte malveillant `dbo` ne puisse pas détourner ce chemin d’exécution. Par exemple, un `dbo` malveillant pourrait ajouter des déclencheurs sur les tables de capture de données modifiées qui seraient alors exécutés dans le contexte de l'utilisateur qui appelle `sp_replcmds`, dans ce cas l'agent lecteur du journal.  Si le compte sous lequel l'agent s'exécute dispose de privilèges plus élevés, le `dbo` malveillant pourrait transmettre ses privilèges.  
+ Les filtres de lignes ne sont pas conçus pour fonctionner sur les bases de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limite volontairement l'exécution de `sp_replcmds` (les filtres qui s'exécutent sous) au propriétaire de la base de données (`dbo`). `dbo` n'a pas de privilèges de base de données croisés. Avec l'ajout de la capture de données modifiées (CDC) dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la logique `sp_replcmds` remplit les tables de suivi des modifications avec les informations que l'utilisateur peut retourner et interroger. Pour des raisons de sécurité, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limite l’exécution de cette logique afin qu’un texte malveillant `dbo` ne puisse pas détourner ce chemin d’exécution. Par exemple, un `dbo` malveillant pourrait ajouter des déclencheurs sur les tables de capture de données modifiées qui seraient alors exécutés dans le contexte de l'utilisateur qui appelle `sp_replcmds`, dans ce cas l'agent lecteur du journal.  Si le compte sous lequel l'agent s'exécute dispose de privilèges plus élevés, le `dbo` malveillant pourrait transmettre ses privilèges.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Publier des données et des objets de base de données](publish-data-and-database-objects.md)  

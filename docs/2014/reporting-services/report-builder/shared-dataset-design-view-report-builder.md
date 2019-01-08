@@ -11,12 +11,12 @@ ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: aff516055e1bfce27408aed1d0779d3956424b82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 897f44349c04f02a6b41823590998b09221e3a03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057757"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354193"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Mode création de dataset partagé (Générateur de rapports)
   La fenêtre du mode création de dataset partagé vous aide à créer une requête de dataset que vous pouvez partager avec d'autres utilisateurs. La fenêtre vous permet de sélectionner une source de données partagée, de spécifier des propriétés pour le dataset partagé et de créer une requête dans le concepteur de requêtes.  
@@ -26,15 +26,15 @@ ms.locfileid: "48057757"
  Pour plus d’informations sur l’utilisation des données dans un rapport, consultez [ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> Ruban  
- Le ruban vous permet de trouver rapidement les commandes dont vous avez besoin pour effectuer une tâche. Les commandes sont organisées selon les groupes logiques suivants : Connexion, Dataset et Concepteur de requêtes.  
+ Le ruban vous permet de trouver rapidement les commandes dont vous avez besoin pour effectuer une tâche. Les commandes sont organisées selon les groupes logiques suivants : Connexion, jeu de données et concepteur de requêtes.  
   
 ### <a name="connection"></a>Connexion  
  Utilisez le bouton **Sélectionner** dans le groupe Connexion pour sélectionner une source de données partagée dans votre rapport, ou naviguez jusqu’à une source de données partagée sur le serveur de rapports.  
   
 > [!NOTE]  
->  Un dataset partagé doit être basé sur une source de données partagée. Si la source de données dont vous avez besoin n'est pas disponible, vous devez en créer une sur le serveur de rapports. Pour plus d’informations, consultez [créer, supprimer ou modifier une Source de données partagée &#40;le Gestionnaire de rapports&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md) dans la documentation de Reporting Services dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312).  
+>  Un dataset partagé doit être basé sur une source de données partagée. Si la source de données dont vous avez besoin n'est pas disponible, vous devez en créer une sur le serveur de rapports. Pour plus d’informations, consultez [créer, supprimer ou modifier une Source de données partagée &#40;le Gestionnaire de rapports&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md) dans la documentation de Reporting Services dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [la documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312).  
   
- Pour plus d’informations, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ Pour plus d'informations, consultez [Connexions de données, sources de données et chaînes de connexion](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ### <a name="dataset"></a>Dataset  
  Utilisez le bouton **Définir les options** pour définir les propriétés de dataset partagé. Ces options en question sont les suivantes :  
@@ -51,9 +51,9 @@ ms.locfileid: "48057757"
   
  Après avoir ajouté un dataset partagé à un rapport, un auteur de rapport peut substituer les options suivantes : classement, respect de la casse, respect des accents, respect du jeu de caractères Kana, respect de la largeur, sous-totaux. Il peut également créer des filtres de dataset supplémentaires pour limiter les données du rapport.  
   
- Pour plus d’informations, consultez [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
- Pour plus d’informations sur les plans d’actualisation du cache, consultez [Cache les Datasets partagés &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) dans la documentation de Reporting Services dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Pour plus d’informations sur les plans d’actualisation du cache, consultez [Cache les Datasets partagés &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) dans la documentation de Reporting Services dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [la documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 ### <a name="query-designer"></a>Concepteur de requêtes  
  Utilisez la barre d'outils du concepteur de requêtes pour générer une requête qui spécifie les données à récupérer à partir de la connexion de données. La barre d'outils que vous voyez dépend du concepteur de requêtes associé au type de source de données de la connexion de données.  
@@ -69,7 +69,7 @@ ms.locfileid: "48057757"
   
  Certains types de sources de données prennent en charge un concepteur de requêtes textuel que vous pouvez utiliser pour coller des requêtes que vous avez créées dans d’autres outils, tels que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Chaque type de source de données a des besoins spécifiques pour la requête basée sur la source de données externe. Pour plus d’informations, consultez la rubrique qui correspond au type de source de données dans [ajouter des données à partir de Sources de données externes &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) et [Sources de données prises en charge par Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la documentation de Reporting Services dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Chaque type de source de données a des besoins spécifiques pour la requête basée sur la source de données externe. Pour plus d’informations, consultez la rubrique qui correspond au type de source de données dans [ajouter des données à partir de Sources de données externes &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) et [Sources de données prises en charge par Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la documentation de Reporting Services dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [la documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 
   
@@ -87,7 +87,7 @@ ms.locfileid: "48057757"
   
  Si un rapport contient des paramètres, ils doivent tous avoir des valeurs par défaut pour que le rapport puisse s'exécuter automatiquement. Si un paramètre n’a pas de valeur par défaut, vous devez choisir une valeur pour chaque paramètre lors de l’exécution du rapport, puis cliquer sur **Afficher le rapport** sous l’onglet **Exécuter** .  
   
- Pour plus d’informations, consultez [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 
   

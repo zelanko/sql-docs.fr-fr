@@ -22,12 +22,12 @@ ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e8dafc5dce762810b2348d41e84fd71fcdb2e436
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b234aba562c095d2861bddec5310cf321b5d331
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832521"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591063"
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,20 +55,20 @@ sys.sp_cdc_enable_table
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@source_schema =** ] **'***source_schema***'**  
+ [  **@source_schema =** ] **'**_source_schema_**'**  
  Est le nom du schéma auquel appartient la table source. *source_schema* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
   
- [  **@source_name =** ] **'***source_name***'**  
+ [  **@source_name =** ] **'**_source_name_**'**  
  Nom de la table source sur laquelle activer la capture de données modifiées. *source_name* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
   
  *source_name* doit exister dans la base de données actuelle. Tables dans le **cdc** schéma ne peut pas être activé pour la capture de données modifiées.  
   
- [  **@role_name =** ] **'***nom_rôle***'**  
+ [  **@role_name =** ] **'**_nom_rôle_**'**  
  Nom du rôle de base de données utilisé pour réguler l'accès aux données modifiées. *nom_rôle* est **sysname** et doit être spécifié. En cas de définition explicitement sur NULL, aucun rôle de régulation n'est utilisé pour limiter l'accès aux données de modifications.  
   
  Si le rôle existe actuellement, il est utilisé. Si le rôle n'existe pas, une tentative est faite pour créer un rôle de base de données avec le nom spécifié. L'espace blanc est retiré à la droite de la chaîne dans le nom de rôle avant d'essayer de créer le rôle. Si l'appelant n'est pas autorisé à créer un rôle dans la base de données, la procédure stockée échoue.  
   
- [  **@capture_instance =** ] **'***capture_instance***'**  
+ [  **@capture_instance =** ] **'**_capture_instance_**'**  
  Nom de l'instance de capture utilisée pour nommer les objets de capture de données modifiées spécifiques à l'instance. *capture_instance* est **sysname** et ne peut pas être NULL.  
   
  Si non spécifié, le nom est dérivé du nom de schéma ainsi que le nom de la table source au format *schemaname_sourcename*. *capture_instance* ne peut pas dépasser 100 caractères et doit être unique au sein de la base de données. Si spécifié ou dérivé, *capture_instance* n’importe quel espace blanc à droite de la chaîne est retiré.  
@@ -84,10 +84,10 @@ sys.sp_cdc_enable_table
   
  Si *supports_net_changes* est défini sur 1, *index_name* doit être spécifié, ou la table source doit avoir une clé primaire définie.  
   
- [  **@index_name =** ] **' *** index_name*'  
+ [  **@index_name =** ] **'**_index_name_'  
  Nom d'un index unique utilisé pour identifier de manière unique les lignes dans la table source. *index_name* est **sysname** et peut être NULL. Si spécifié, *index_name* doit être un index unique valid sur la table source. Si *index_name* est spécifié, les colonnes d’index identifiées prévaut sur toute colonne de clé primaire définie comme identificateur de ligne unique pour la table.  
   
- [  **@captured_column_list =** ] **'***captured_column_list***'**  
+ [  **@captured_column_list =** ] **'**_captured_column_list_**'**  
  Identifie les colonnes de la table source qui doivent être incluses dans la table de modifications. *captured_column_list* est **nvarchar (max)** et peut être NULL. Si la valeur est NULL, toutes les colonnes sont incluses dans la table de modifications.  
   
  Les noms de colonnes doivent être des colonnes valides dans la table source. Colonnes définies dans un index de clé primaire, ou les colonnes définies dans un index référencé par *index_name* doit être inclus.  
@@ -96,12 +96,12 @@ sys.sp_cdc_enable_table
   
  *captured_column_list* ne peut pas contenir les noms de colonnes réservés suivants : **__ $start_lsn**, **__ $end_lsn**, **__ $seqval**, **__ $ opération**, et **__ $update_mask**.  
   
- [  **@filegroup_name =** ] **'***filegroup_name***'**  
+ [  **@filegroup_name =** ] **'**_filegroup_name_**'**  
  Groupe de fichiers à utiliser pour la table de modifications créée pour l'instance de capture. *FILEGROUP_NAME* est **sysname** et peut être NULL. Si spécifié, *filegroup_name* doit être définie pour la base de données actuelle. Si la valeur est NULL, le groupe de fichiers par défaut est utilisé.  
   
  Nous recommandons de créer un groupe de fichiers séparé pour les tables de modifications de capture des données modifiées.  
   
- [  **@allow_partition_switch=** ] **'***allow_partition_switch***'**  
+ [  **@allow_partition_switch=** ] **'**_allow_partition_switch_**'**  
  Indique si la commande SWITCH PARTITION d'ALTER TABLE peut être exécutée sur une table activée pour la capture de données modifiées. *allow_partition_switch* est **bits**, avec 1 comme valeur par défaut.  
   
  Pour les tables non partitionnées, le paramètre de commutation est toujours 1 et le paramètre réel est ignoré. Si la commutation est définie explicitement sur 0 pour une table non partitionnée, un avertissement 22857 est émis pour indiquer que le paramètre de commutation a été ignoré. Si la commutation est définie explicitement sur 0 pour une table partitionnée, un avertissement 22356 est émis pour indiquer que les opérations de commutation de partition sur la table source seront rejetées. Pour finir, si le paramètre de commutation est défini explicitement sur 1 ou autorisé à avoir comme valeur par défaut 1 et que la table active est partitionnée, un avertissement 22855 est émis pour indiquer que les commutations de partition ne seront pas bloquées. Si une commutation de partition se produit, la capture de données modifiées n'effectue pas le suivi des modifications qui résultent de la commutation. Cela provoquera des incohérences de données lors de la consommation des données de modifications.  
@@ -129,7 +129,7 @@ sys.sp_cdc_enable_table
 > [!NOTE]  
 >  Il n'est pas nécessaire que l'agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soit en cours d'exécution lorsque la capture de données modifiées est activée pour une table. Toutefois, le processus de capture ne traitera pas le journal des transactions et n'écrira pas d'entrées dans la table de modifications si l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne s'exécute pas.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **db_owner** rôle de base de données fixe.  
   
 ## <a name="examples"></a>Exemples  
@@ -147,7 +147,7 @@ EXECUTE sys.sp_cdc_enable_table
 GO  
 ```  
   
-### <a name="b-enabling-change-data-capture-by-specifying-additional-optional-parameters"></a>B. Activation de la capture de données modifiées en spécifiant des paramètres facultatifs supplémentaires  
+### <a name="b-enabling-change-data-capture-by-specifying-additional-optional-parameters"></a>b. Activation de la capture de données modifiées en spécifiant des paramètres facultatifs supplémentaires  
  L'exemple suivant active la capture des données modifiées pour la table `HumanResources.Department`. Tous les paramètres sauf `@allow_partition_switch` sont spécifiés.  
   
 ```  

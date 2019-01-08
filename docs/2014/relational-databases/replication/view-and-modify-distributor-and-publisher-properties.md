@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
@@ -16,12 +15,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84b8655494daca0f3c9203775304710591a4081e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90eb7b166316533b68fdc128fb6ecc65e1820efb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069715"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361331"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Afficher et modifier les propriétés d'un serveur de distribution ou d'un serveur de publication
   Cette rubrique décrit comment afficher et modifier les propriétés du serveur de distribution et du serveur de publication dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -174,7 +173,7 @@ ms.locfileid: "48069715"
 5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Passez la nouvelle valeur de mot de passe pour le paramètre *password* .  
   
     > [!IMPORTANT]  
-    >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](http://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+    >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](https://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 6.  (Facultatif) Effectuez la procédure suivante pour modifier le mot de passe sur chaque serveur de publication distant qui utilise ce serveur de distribution :  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Leçon du didacticiel Analysis Services 4 : créer des relations | Microsoft Docs'
+title: 'Analysis Services leçon du didacticiel 4 : Créer des relations | Microsoft Docs'
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1768bd38be49515012139f8cd93c749ac7e3c48c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063730"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394517"
 ---
 # <a name="create-relationships"></a>Créer des relations
 
@@ -22,11 +22,11 @@ ms.locfileid: "43063730"
 
 Dans cette leçon, vous vérifiez les relations qui ont été créées automatiquement lorsque vous avez importé des données et ajoutez de nouvelles relations entre les différentes tables. Une relation est une connexion entre deux tables qui établit le mode de corrélation des données dans les deux tables. Par exemple, la table DimProduct et la table DimProductSubcategory ont une relation basée sur le fait que chaque produit appartient à une sous-catégorie. Pour plus d’informations, consultez [relations](../tabular-models/relationships-ssas-tabular.md).
   
-Durée estimée pour effectuer cette leçon : **10 minutes**  
+Durée estimée pour effectuer cette leçon : **10 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
 
-Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 3 : marquer en tant que Table de dates](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
+Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 3 : Marquer en tant que Table de dates](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Examiner les relations existantes et ajouter de nouvelles relations  
 
@@ -50,7 +50,7 @@ Avant de poursuivre la création de votre modèle, vous devez vérifier ces rela
   
 2.  Cliquez sur la ligne pleine entre la **DimCustomer** table et le **DimGeography** table. La ligne pleine entre ces deux tables indique que cette relation est active, autrement dit, qu'il est utilisé par défaut lors du calcul des formules DAX.  
   
-    Notez que le **GeographyKey** colonne dans le **DimCustomer** table et le **GeographyKey** colonne dans le **DimGeography** table maintenant à la fois chacun s’affichent dans une zone. Ces colonnes sont utilisées dans la relation. Les propriétés de la relation apparaissent maintenant aussi dans la fenêtre **Propriétés** .  
+    Notez que le **GeographyKey** colonne dans le **DimCustomer** table et le **GeographyKey** colonne dans le **DimGeography** table maintenant à la fois chacun s’affichent dans une zone. Ces colonnes sont utilisées dans la relation. Propriétés de la relation apparaissent maintenant aussi dans le **propriétés** fenêtre.  
   
     > [!TIP]  
     > Vous pouvez également utiliser la boîte de dialogue Gérer les relations pour afficher les relations entre toutes les tables dans un format tabulaire. Dans l’Explorateur de modèles tabulaires, cliquez sur **relations** > **gérer les relations**.

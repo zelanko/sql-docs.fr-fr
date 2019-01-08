@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - push subscriptions [SQL Server replication], creating
@@ -17,12 +16,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 993ef680dd4009b70dbcfc2ab193254e4bd47d20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e723c42dd41c21abb2c11059b8706a098f7fcfd9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110605"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353341"
 ---
 # <a name="create-a-push-subscription"></a>Créer un abonnement par émission (push)
   Cette rubrique explique comment créer un abonnement par émission de données (push) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Pour plus d’informations sur la création d’un abonnement par émission de données pour un Abonné non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Créer un abonnement pour un Abonné non-SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md).  
@@ -44,7 +43,7 @@ ms.locfileid: "48110605"
   
     -   Pour les abonnements aux publications de fusion, spécifiez les informations d'identification dans la page **Sécurité de l'Agent de fusion** .  
   
-     Pour plus d'informations sur les autorisations requises par chaque agent, consultez [Replication Agent Security Model](security/replication-agent-security-model.md).  
+     Pour plus d’informations sur les autorisations requises par chaque agent, consultez [Modèle de sécurité de l’Agent de réplication](security/replication-agent-security-model.md).  
   
 -   Spécifiez une planification de la synchronisation et le moment choisi pour initialiser l'Abonné.  
   
@@ -143,7 +142,7 @@ ms.locfileid: "48110605"
   
     -   (Facultatif) La valeur **0** pour **@publisher_security_mode** et les informations de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**. Spécifiez ces valeurs si vous devez utiliser l'authentification SQL Server lors de la connexion à l'abonné.  
   
-    -   Une planification du travail de l'Agent de fusion pour cet abonnement. Pour plus d'informations, voir [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
+    -   Une planification du travail de l'Agent de fusion pour cet abonnement. Pour plus d’informations, consultez [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
     >  Lors de la création d'un abonnement par émission de données sur un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées au serveur de distribution en texte brut. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -161,7 +160,7 @@ ms.locfileid: "48110605"
  Vous pouvez créer par programme des abonnements par émission de données (push) à l'aide d'objets RMO (Replication Management Objects). Les classes RMO que vous utilisez pour créer un abonnement par envoi de données dépendent du type de publication sur laquelle l'abonnement a été créé.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](http://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](https://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Pour créer un abonnement par envoi de données vers un instantané ou une publication transactionnelle  
   
@@ -171,7 +170,7 @@ ms.locfileid: "48110605"
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si elle retourne la valeur `false`, les propriétés spécifiées à l'étape 2 sont incorrectes, ou la publication n'existe pas sur le serveur.  
   
-4.  Effectuez une opération AND logique au niveau du bit (`&` en Visual c# et `And` en Visual Basic) entre le <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> propriété et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Si le résultat est <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, appliquez à<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> le résutat d'une opération OR logique au niveau du bit (`|` dans Visual C# et `Or` dans Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Appelez ensuite <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour activer les abonnements par envoi de données.  
+4.  Effectuez une opération AND logique au niveau du bit (`&` dans Visual C# et `And` dans Visual Basic) entre la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Si le résultat est <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, appliquez à<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> le résultat d'une opération OR logique au niveau du bit (`|` dans Visual C# et `Or` dans Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Appelez ensuite <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour activer les abonnements par envoi de données.  
   
 5.  Si la base de données d'abonnements n'existe pas, créez-la en utilisant la classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Pour plus d’informations, consultez [Création, modification et suppression de bases de données](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
@@ -211,7 +210,7 @@ ms.locfileid: "48110605"
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si elle retourne la valeur `false`, les propriétés spécifiées à l'étape 2 sont incorrectes, ou la publication n'existe pas sur le serveur.  
   
-4.  Effectuez une opération AND logique au niveau du bit (`&` en Visual c# et `And` en Visual Basic) entre le <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> propriété et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Si le résultat est <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, appliquez à<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> le résutat d'une opération OR logique au niveau du bit (`|` dans Visual C# et `Or` dans Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Appelez ensuite <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour activer les abonnements par envoi de données.  
+4.  Effectuez une opération AND logique au niveau du bit (`&` dans Visual C# et `And` dans Visual Basic) entre la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Si le résultat est <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, appliquez à<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> le résultat d'une opération OR logique au niveau du bit (`|` dans Visual C# et `Or` dans Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Appelez ensuite <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour activer les abonnements par envoi de données.  
   
 5.  Si la base de données d'abonnements n'existe pas, créez-la en utilisant la classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Pour plus d’informations, consultez [Création, modification et suppression de bases de données](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
@@ -229,7 +228,7 @@ ms.locfileid: "48110605"
   
     -   Nom de la publication pour <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>.  
   
-    -   Le <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> ou <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> champs de <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> pour fournir les informations d’identification pour le [!INCLUDE[msCoName](../../includes/msconame-md.md)] compte Windows sous lequel l’Agent de fusion s’exécute sur le serveur de distribution. Ce compte permet de créer des connexions locales avec le serveur de distribution et des connexions distantes à l'aide de l'authentification Windows.  
+    -   Champs <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> ou <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> de <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> pour fournir les informations d'identification pour le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent de fusion fonctionne sur le serveur de distribution. Ce compte permet de créer des connexions locales avec le serveur de distribution et des connexions distantes à l'aide de l'authentification Windows.  
   
         > [!NOTE]  
         >  La configuration de <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> lorsqu'un abonnement est créé par un membre du rôle serveur fixe `sysadmin` n'est pas nécessaire, mais elle est néanmoins recommandée. Dans ce cas, l'Agent va emprunter l'identité du compte de l'Agent SQL Server. Pour plus d’informations, voir [Replication Agent Security Model](security/replication-agent-security-model.md).  
@@ -264,7 +263,7 @@ ms.locfileid: "48110605"
  [Create a Publication](publish/create-a-publication.md)   
  [Concepts liés à RMO (Replication Management Objects)](concepts/replication-management-objects-concepts.md)   
  [Synchroniser un abonnement par émission de données](synchronize-a-push-subscription.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [S’abonner aux Publications](subscribe-to-publications.md)   
  [Utiliser sqlcmd avec des variables de script](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

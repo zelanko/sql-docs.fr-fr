@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
@@ -15,12 +14,12 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ff6cda85a64841e5b97c89e1ccf936b857fd1f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077689"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774911"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Créer un abonnement pour un Abonné non-SQL Server
   Cette rubrique explique comment créer un abonnement pour un abonné non-SQL Server dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La réplication transactionnelle et la réplication d'instantané prennent en charge la publication de données vers des Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations sur les plateformes d'Abonné prises en charge, consultez [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
@@ -97,7 +96,7 @@ ms.locfileid: "48077689"
   
     -   Pour IBM DB2, la base de données est spécifiée dans la propriété **Catalogue initial** de la chaîne de connexion DB2, qui peut être entrée dans le champ **Options de connexion supplémentaires** décrit plus loin.  
   
-8.  Dans la page **Sécurité de l'Agent de distribution** , cliquez sur le bouton de propriétés (**…**) à côté de l'Abonné pour accéder à la boîte de dialogue **Sécurité de l'Agent de distribution** .  
+8.  Dans la page **Sécurité de l’Agent de distribution**, cliquez sur le bouton des propriétés (**...**) à côté de l’Abonné pour accéder à la boîte de dialogue **Sécurité de l’Agent de distribution**.  
   
 9. Dans la boîte de dialogue **Sécurité de l'Agent de distribution** :  
   
@@ -126,7 +125,7 @@ ms.locfileid: "48077689"
   
     -   Sélectionnez **Immédiatement** dans la liste déroulante de la colonne **À quel moment** pour que l'Agent de distribution transfère les fichiers d'instantanés à l'Abonné lorsque l'Assistant se termine. Sélectionnez **Lors de la première synchronisation** pour que l'Agent transfère les fichiers lors de la prochaine exécution planifiée de l'Agent.  
   
-12. Sur la page **Actions de l'Assistant** , scriptez en option l'abonnement. Pour plus d'informations, voir [Scripting Replication](scripting-replication.md).  
+12. Sur la page **Actions de l'Assistant** , scriptez en option l'abonnement. Pour plus d’informations, consultez [Scripting Replication](scripting-replication.md).  
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>Pour conserver les tables sur l'Abonné  
   
@@ -154,12 +153,12 @@ ms.locfileid: "48077689"
   
 2.  Dans la base de données de publication sur le serveur de publication, vérifiez que la publication prend en charge les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en exécutant [sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql).  
   
-    -   Si la valeur de `enabled_for_het_sub` est 1, non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés sont pris en charge.  
+    -   Si `enabled_for_het_sub` a la valeur 1, les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont pris en charge.  
   
     -   Si la valeur de `enabled_for_het_sub` est 0, exécutez [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), en spécifiant `enabled_for_het_sub` pour **@property** et `true` pour  **@value**.  
   
         > [!NOTE]  
-        >  Avant de modifier `enabled_for_het_sub` à `true`, vous devez supprimer tout abonnement existant à la publication. Vous ne pouvez pas affecter la valeur `enabled_for_het_sub` à `true` lorsque la publication prend également en charge la mise à jour des abonnements. La modification de `enabled_for_het_sub` affectera d'autres propriétés de publication. Pour plus d’informations, voir [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
+        >  Avant de remplacer la valeur de `enabled_for_het_sub` par `true`, vous devez supprimer tout abonnement existant à la publication. Vous ne pouvez pas affecter la valeur `enabled_for_het_sub` à `true` lorsque la publication prend également en charge la mise à jour des abonnements. La modification de `enabled_for_het_sub` affectera d'autres propriétés de publication. Pour plus d’informations, consultez [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
 3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Spécifiez **@publication**, **@subscriber**, affectez la valeur **(destination par défaut)** pour **@destination_db**, affectez la valeur **push** pour **@subscription_type**et la valeur 3 à **@subscriber_type** (indique un fournisseur OLE DB).  
   

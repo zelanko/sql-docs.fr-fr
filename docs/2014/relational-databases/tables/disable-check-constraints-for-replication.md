@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - CHECK constraints, disabling
@@ -16,12 +15,12 @@ ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0ffb9af3b02bf8c92041d64b54d06b55a24f42a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 957fcd77a6443cf2e23be8965a68823085db870c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061569"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807521"
 ---
 # <a name="disable-check-constraints-for-replication"></a>Désactiver des contraintes de validation lors de la réplication
   Vous pouvez désactiver des contrainte de validation dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez également choisir expressément de désactiver les contraintes de validation pour la réplication, ce qui est parfois très utile si vous publiez des données issues d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -11,19 +11,19 @@ ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1f113778433e13e68b8847e5f54f1d9ae2bdc6e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b22f958a0b4bb78e297e23665db36b8c16fe74e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074467"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363141"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Ajouter un paramètre à valeurs multiples sur un rapport
   Il est possible d'ajouter à un rapport un paramètre qui permet à l'utilisateur de sélectionner plus d'une valeur pour le paramètre.  
   
- Il est possible de passer un paramètre à valeurs multiples dans le rapport, dans son URL. Pour un exemple d’URL contenant un paramètre à valeurs multiples, consultez [passer un paramètre de rapport dans une URL](../pass-a-report-parameter-within-a-url.md).  
+ Il est possible de passer un paramètre à valeurs multiples dans le rapport, dans son URL. Pour obtenir un exemple d’URL contenant un paramètre à valeurs multiples, consultez [Passer un paramètre de rapport dans une URL](../pass-a-report-parameter-within-a-url.md).  
   
- Pour plus d’informations sur la façon de passer un paramètre à valeurs multiples dans une procédure stockée, consultez [Working With Multi-Select Parameters for SSRS Reports](http://go.microsoft.com/fwlink/?LinkId=321529) sur le site mssqltips.com.  
+ Pour plus d’informations sur la façon de passer un paramètre à valeurs multiples dans une procédure stockée, consultez [Working With Multi-Select Parameters for SSRS Reports](https://go.microsoft.com/fwlink/?LinkId=321529) sur le site mssqltips.com.  
   
 ### <a name="to-add-a-multi-value-parameter"></a>Pour ajouter un paramètre à valeurs multiples  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48074467"
     ```  
   
     > [!IMPORTANT]  
-    >  Si vous n'incluez pas les parenthèses autour de la variable comme indiqué ci-dessus, le rapport échoue et l'erreur « La variable scalaire « xx » doit être déclarée » s'affiche.  
+    >  Si vous n’incluez pas les parenthèses autour de la variable comme indiqué ci-dessus, le rapport échoue et l’erreur doit être déclarée » la variable scalaire » s’affiche.  
   
      Un paramètre de dataset pour un dataset incorporé ou partagé est créé automatiquement pour la variable de la requête. Un paramètre de rapport est créé automatiquement pour le paramètre du dataset.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48074467"
     ```  
   
     > [!IMPORTANT]  
-    >  Si vous n'incluez pas les parenthèses autour de la variable comme indiqué ci-dessus, le rapport échoue et l'erreur « La variable scalaire « xx » doit être déclarée » s'affiche.  
+    >  Si vous n’incluez pas les parenthèses autour de la variable comme indiqué ci-dessus, le rapport échoue et l’erreur doit être déclarée » la variable scalaire » s’affiche.  
   
      Un paramètre de dataset pour un dataset incorporé ou partagé est créé automatiquement pour la variable de la requête. Un paramètre de rapport est créé automatiquement pour le paramètre du dataset.  
   

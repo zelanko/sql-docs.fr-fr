@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 5b00e4eb-1742-43ec-98d8-d84216b6b840
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b0aa30cc394d766544aaaf6f599da643d295d83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 46a51a1ead140209145635e422d3ea1033b117e2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192469"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810881"
 ---
 # <a name="simple-xml-input-file-sample-dta"></a>Exemple de fichier d'entrée XML simple (DTA)
   Copiez et collez cet exemple de fichier d'entrée XML simple à utiliser pour le paramétrage des charges de travail dans votre éditeur XML ou de texte favori. Remplacez ensuite les valeurs spécifiées pour les éléments **Server**, **Database**, **Schema**, **Table**, **Workload**et **TuningOptions** par celles dont vous avez besoin pour votre session de paramétrage. Pour plus d’informations sur les attributs et les éléments enfants que vous pouvez utiliser avec ces éléments, consultez la [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md). L'exemple ci-dessous utilise uniquement un sous-ensemble des options d'attributs et d'éléments enfants disponibles.  

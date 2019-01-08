@@ -21,12 +21,12 @@ ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4bf6602e8ff631831e07d17cf9fc22515f610191
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a57719becab0c7dda9d684e4de3218e29418b6a3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673718"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203448"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "51673718"
   
  Les informations retournées par **sys.dm_os_child_instances** peut être utilisé pour déterminer l’état de chaque Instance de l’utilisateur (heart_beat) et pour obtenir le nom du canal (instance_pipe_name) qui peut être utilisé pour créer une connexion à l’utilisateur À l’aide de l’instance [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou SQLCmd. Vous pouvez vous connecter à une instance utilisateur uniquement lorsque cette dernière a été démarrée par un processus externe, tel qu'une application cliente. Les outils de gestion de SQL Server ne peuvent pas démarrer une instance utilisateur.  
   
-> **Remarque :** les Instances utilisateur sont une fonctionnalité de [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] uniquement.  
-  
+> **REMARQUE :** Les instances utilisateur sont une fonctionnalité de [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] uniquement.  
+> 
 > **Remarque** à appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_child_instances**.  
   
 |colonne|Data type|Description|  
@@ -53,7 +53,7 @@ ms.locfileid: "51673718"
 |**heart_beat**|**nvarchar(5)**|État actuel de cette instance utilisateur ; ALIVE ou DEAD.|  
 |**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="remarks"></a>Notes  

@@ -12,12 +12,12 @@ ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b01e23f282f4b39043f23e70a98dab633806090
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228953"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372961"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Extraire des colonnes avec IRow::GetColumns (OLE DB)
   L'interface `IRow` autorise un accès direct aux colonnes d'une ligne unique dans le jeu de résultats. `IRow` est donc une méthode efficace pour extraire des colonnes d'un jeu de résultats avec une seule ligne.  
@@ -29,7 +29,7 @@ ms.locfileid: "48228953"
 -   comment accéder deux fois à une colonne avec extraction de la largeur réelle de la colonne la première fois, puis accès aux données concernées par la suite. Dans la structure DBCOLUMNACCESS, si **pData** a la valeur NULL et **cbMaxLen** est 0, l’appel à `IRow` - `>GetColumns()` retourne uniquement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler `IRow->GetColumns()` sur la même colonne pour récupérer les données réelles.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>Pour extraire des colonnes avec IRow::GetColumns  
   
@@ -50,11 +50,11 @@ ms.locfileid: "48228953"
   
  Dans la structure DBCOLUMNACCESS, si pData a la valeur NULL et cbMaxLen est définie sur 0, l'appel à IRow->GetColumns retourne uniquement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler IRow->GetColumns sur la même colonne pour récupérer les données effectives. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
- Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384) .  
+ Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
  La première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crée une table utilisée par l'exemple.  
   
- Compilez avec ole32.lib oleaut32.lib et exécutez la deuxième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+ Compilez avec ole32.lib oleaut32.lib et exécutez la deuxième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
  La troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) supprime la table utilisée par l'exemple.  
   

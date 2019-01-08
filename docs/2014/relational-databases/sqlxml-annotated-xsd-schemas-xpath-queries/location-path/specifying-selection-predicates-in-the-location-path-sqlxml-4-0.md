@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], predicates
@@ -19,12 +17,12 @@ ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a491b824881f9c308eed30e797e492561c40ad73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ded9395af45d9445f9189f411c7a0911a26e653
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144219"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807451"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Spécification de prédicats de sélection dans le chemin d'accès d'emplacement (SQLXML 4.0)
   Un prédicat filtre un élément node-set par rapport à un axe (semblable à une clause WHERE dans une instruction SELECT). Le prédicat est spécifié entre crochets. Pour chaque nœud de l'élément node-set à filtrer, l'expression de prédicat est évaluée avec ce nœud en tant que nœud de contexte et avec le nombre de nœuds de l'élément node-set en tant que taille de contexte. Si l'expression de prédicat prend la valeur TRUE pour ce nœud, ce dernier est inclus dans l'élément node-set obtenu.  
@@ -115,7 +113,7 @@ child::Customer[attribute::CustomerID]
 Customer[@CustomerID]  
 ```  
   
-## <a name="selection-predicate-example-6"></a>Prédicat de sélection : exemple 6  
+## <a name="selection-predicate-example-6"></a>Prédicat de sélection : Exemple 6  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 inclut la prise en charge des requêtes XPath qui contiennent un produit croisé dans le prédicat, comme l'illustre l'exemple suivant :  
   
 ```  

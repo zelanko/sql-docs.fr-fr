@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - removing instances of SQL Server
@@ -17,12 +16,12 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9961b074839559bca04d1860084d46fd94ce1b70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085909"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363821"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Désinstaller une instance existante de SQL Server (programme d'installation)
   Cet article explique comment désinstaller une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En suivant les étapes de cette rubrique, vous préparez également le système afin de pouvoir réinstaller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -99,13 +98,13 @@ ms.locfileid: "48085909"
   
 1.  Si le processus de désinstallation ne se termine pas correctement, essayez de résoudre le problème à l'origine de cet échec. Les articles suivants peuvent vous aider à comprendre la cause de l'échec de la désinstallation :  
   
-    -   [Procédure pour identifier les problèmes d'installation de SQL Server 2008 dans les fichiers journaux d'installation](http://support.microsoft.com/kb/955396/en-us)  
+    -   [Procédure pour identifier les problèmes d'installation de SQL Server 2008 dans les fichiers journaux d'installation](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [Afficher et lire les fichiers journaux d'installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
 2.  Si vous ne parvenez pas à remédier à la cause de l'échec de désinstallation, vous pouvez contacter le support technique de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Dans certains cas, comme la suppression involontaire de fichiers importants, la réinstallation du système d'exploitation peut être requise avant de réinstaller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l'ordinateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et lire les fichiers journaux d'installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [Afficher et lire les fichiers journaux d’installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

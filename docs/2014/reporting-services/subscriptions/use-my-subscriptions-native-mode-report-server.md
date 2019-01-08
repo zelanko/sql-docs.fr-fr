@@ -14,12 +14,12 @@ ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3a45edaedce83d741d24ee085ccf962854303a68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63154af6d155dd05e1f07d38185830fefc30068a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129349"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371361"
 ---
 # <a name="use-my-subscriptions"></a>Utiliser Mes abonnements
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Le Gestionnaire de rapports inclut un **Mes abonnements** page qui organise l’ensemble de vos abonnements dans un seul endroit. Vous pouvez utiliser cette page pour afficher, modifier et supprimer des abonnements existants. En revanche, vous ne pouvez pas l'utiliser pour créer des abonnements.  
@@ -40,7 +40,7 @@ ms.locfileid: "48129349"
 ## <a name="use-windows-powershell-to-list-mysubscriptions"></a>Utiliser Windows PowerShell pour répertorier les abonnements MySubscriptions  
  ![Contenu relatif à PowerShell](../media/rs-powershellicon.jpg "Contenu relatif à PowerShell")  
   
- Le script PowerShell suivant renvoie la liste des abonnements et des propriétés d'abonnement pour l'utilisateur actuel. Pour plus d'informations, consultez [Méthode ReportingService2010.ListMySubscriptions](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx).  
+ Le script PowerShell suivant renvoie la liste des abonnements et des propriétés d'abonnement pour l'utilisateur actuel. Pour plus d'informations, consultez [Méthode ReportingService2010.ListMySubscriptions](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx).  
   
 ```  
 #server -  all subscriptions of the current user at the given server or site  
@@ -56,7 +56,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
   
 ## <a name="see-also"></a>Voir aussi  
  [Abonnements pilotés par les données](data-driven-subscriptions.md)   
- [Abonnements et remises &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Abonnements et remise &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Créer et gérer des abonnements pour les serveurs de rapports en mode Natif](../create-manage-subscriptions-native-mode-report-servers.md)  
   
   

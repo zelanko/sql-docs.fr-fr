@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], Flat File
@@ -18,12 +17,12 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a87cf5f7f9f6b81a989b67b2a68484280498aba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65cebbe74b1be5cc0d625a70c8c5b87e8f515150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815291"
 ---
 # <a name="flat-file-connection-manager"></a>Gestionnaire de connexions de fichiers plats
   Un gestionnaire de connexions de fichiers plats permet à un package d'accéder aux données d'un fichier plat. Ainsi, les sources et destinations de fichiers plats peuvent utiliser des gestionnaires de connexions de fichiers plats pour extraire et charger des données.  
@@ -38,7 +37,7 @@ ms.locfileid: "48147163"
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>Configuration du gestionnaire de connexions de fichiers plats  
  Lorsque vous ajoutez un gestionnaire de connexions de fichier plat à un package, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée une connexion de gestionnaire qui sera converti en une connexion de fichier plat en cours d’exécution, définit les propriétés de connexion de fichier plat et ajoute le Gestionnaire de connexions de fichier plat pour le `Connections` collection du package.  
   
- Le `ConnectionManagerType` propriété du Gestionnaire de connexions est définie sur `FLATFILE`.  
+ La propriété `ConnectionManagerType` du gestionnaire de connexions a pour valeur `FLATFILE`.  
   
  Par défaut, le gestionnaire de connexions de fichiers plats cherche toujours la présence d'un séparateur de lignes dans les données non délimitées par des guillemets, puis démarre une nouvelle ligne lorsqu'un séparateur de lignes est trouvé. Cela permet au gestionnaire de connexions de fichiers plats d'analyser correctement les fichiers comportant des lignes auxquelles il manque des champs de colonnes.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48147163"
   
 -   Spécifiez un caractère d'identificateur de texte. Chaque colonne peut être configurée pour reconnaître un identificateur de texte.  
   
-     L'utilisation d'un caractère qualificateur pour incorporer un caractère qualificateur dans une chaîne qualifiée est désormais prise en charge. La double instance d'un qualificateur de texte est interprétée comme une instance littérale et unique de cette chaîne. Par exemple, si l'identificateur de texte est un guillemet simple et si les données d'entrée sont 'abc', 'def', 'g'hi', les données de sortie sont abc, def, g'hi.  
+     L'utilisation d'un caractère qualificateur pour incorporer un caractère qualificateur dans une chaîne qualifiée est désormais prise en charge. La double instance d'un qualificateur de texte est interprétée comme une instance littérale et unique de cette chaîne. Par exemple, si l’identificateur de texte est un guillemet simple et si les données d’entrée sont 'abc', 'def', 'g'hi', les données de sortie sont abc, def, g'hi.  
   
 -   Définissez des propriétés comme le nom, le type de données et la largeur maximale pour des colonnes individuelles.  
   
@@ -80,6 +79,6 @@ ms.locfileid: "48147163"
   
 -   [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Aperçu&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
- Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programmation](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

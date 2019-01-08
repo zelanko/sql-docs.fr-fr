@@ -14,15 +14,15 @@ ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f48418911358fb7833b745ee8c3172de2d763155
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091433"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519441"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>Page Sélectionner la synchronisation de données initiale (assistants de groupe de disponibilité AlwaysOn)
-  Utilisez la page AlwaysOn **Sélectionner la synchronisation de données initiale** afin d'indiquer votre préférence pour la synchronisation des données initiale des nouvelles bases de données secondaires. Cette page est commune à trois Assistants : [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]et [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
+  Utilisez la page AlwaysOn **Sélectionner la synchronisation de données initiale** afin d'indiquer votre préférence pour la synchronisation des données initiale des nouvelles bases de données secondaires. Cette page est commune à trois Assistants : [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] et [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
   
  Les choix possibles sont : **Complet**, **Joindre uniquement**ou **Ignorer la synchronisation de données initiale**. Avant de sélectionner **Complet** ou **Joindre uniquement** , assurez-vous que votre environnement satisfait aux conditions préalables requises.  
   

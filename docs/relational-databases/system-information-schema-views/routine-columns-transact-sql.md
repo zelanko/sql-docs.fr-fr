@@ -20,24 +20,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 862d07d3a27549f8bb0b45a807d1a04c7b13e364
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8ecfff92b5865ebe9bf255f4bcc1b02150cffb31
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659628"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588380"
 ---
 # <a name="routinecolumns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque colonne retournée par les fonctions table, accessibles à l'utilisateur actuel de la base de données active.  
   
- Pour récupérer des informations à partir de cette vue, spécifiez le nom qualifié complet de **INFORMATION_SCHEMA. *** nom_vue*.  
+ Pour récupérer des informations à partir de cette vue, spécifiez le nom qualifié complet de **INFORMATION_SCHEMA.** _nom_vue_.  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Nom du catalogue ou de la base de données de la fonction table|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la fonction table.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la fonction table.<br /><br /> <strong>\*\* Important \* \*</strong>  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|Nom de la fonction table|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|Nom de colonne.|  
 |**ORDINAL_POSITION**|**Int**|Numéro d’identification de colonne.|  
@@ -57,7 +57,7 @@ ms.locfileid: "51659628"
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|Retourne toujours la valeur Null.|  
 |**COLLATION_NAME**|**nvarchar(** 128 **)**|Retourne le nom unique pour l’ordre de tri si la colonne est de données de type caractère ou **texte** type de données. Dans le cas contraire, la valeur NULL est retournée.|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|Si la colonne est un type de données alias, elle correspond au nom de la base de données dans laquelle le type de données défini par l'utilisateur a été créé. Dans le cas contraire, la valeur NULL est retournée.|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Si la colonne est un type de données défini par l'utilisateur, elle représente le nom du schéma qui contient le type de données défini par l'utilisateur. Dans le cas contraire, la valeur NULL est retournée.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Si la colonne est un type de données défini par l'utilisateur, elle représente le nom du schéma qui contient le type de données défini par l'utilisateur. Dans le cas contraire, la valeur NULL est retournée.<br /><br /> <strong>\*\* Important \* \*</strong>  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**NOM_DOMAINE**|**nvarchar(** 128 **)**|Si la colonne est un type de données défini par l'utilisateur, elle représente le nom du type de données défini par l'utilisateur. Dans le cas contraire, la valeur NULL est retournée.|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -13,19 +13,19 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb0cc2f091ce6365e91dd285e553498cc595c76e
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 5062f24c679d2d85da09a1dc81d9c487d6536f1f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119869"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377531"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Tâche 4 : Gestion et affichage des résultats
-  Dans cette tâche, vous allez examiner les résultats du nettoyage assisté par ordinateur, et vous allez également effectuer un nettoyage interactif des données du fournisseur. Consultez [étape de nettoyage interactif](http://msdn.microsoft.com/library/hh213061.aspx#Interactive) pour plus d’informations.  
+  Dans cette tâche, vous allez examiner les résultats du nettoyage assisté par ordinateur, et vous allez également effectuer un nettoyage interactif des données du fournisseur. Consultez [étape de nettoyage interactif](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) pour plus d’informations.  
   
 1.  Sélectionnez **adresse E-mail de Contact** domaine à partir de la liste des domaines.  
   
-2.  Basculez vers le **non valide** onglet dans le volet droit. Notez les deux adresses de messagerie dans lesquelles il manque le caractère « s » à la fin. Ces deux adresses électroniques qui ont été trouvés n’est pas valide par la règle de domaine qui nécessite toutes les adresses de messagerie se terminent par **@adventure-works.com** (avec de '). DQS utilise la règle de domaine lors du nettoyage afin de déterminer si une adresse électronique est valide ou non. Cet onglet affiche les valeurs de domaine qui ont été marquées comme non valides dans la base de connaissances, ou celles qui ne respectent pas une règle de domaine. Dans ce cas, ces valeurs ne respectent pas la règle de domaine (validation de l'adresse électronique).  
+2.  Basculez vers le **non valide** onglet dans le volet droit. Notez que deux adresses de messagerie qui ont été manquant du caractère ' à la fin. Ces deux adresses électroniques qui ont été trouvés n’est pas valide par la règle de domaine qui nécessite toutes les adresses de messagerie se terminent par **@adventure-works.com** (avec de '). DQS utilise la règle de domaine lors du nettoyage afin de déterminer si une adresse électronique est valide ou non. Cet onglet affiche les valeurs de domaine qui ont été marquées comme non valides dans la base de connaissances, ou celles qui ne respectent pas une règle de domaine. Dans ce cas, ces valeurs ne respectent pas la règle de domaine (validation de l'adresse électronique).  
   
 3.  Dans le **corriger vers** , entrez la bonne adresse de messagerie qui se terminent par **@adventure-works.com** (avec de ').  
   

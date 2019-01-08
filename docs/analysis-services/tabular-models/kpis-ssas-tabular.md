@@ -1,5 +1,5 @@
 ---
-title: Indicateurs de performance clés | Microsoft Docs
+title: Indicateurs de performance clés dans les modèles tabulaires Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8c718c3f8501a56b9ba02062e9457ca0cd67ad56
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 2f6714d61ce53b251a6511aaf78c803213e19860
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906429"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072316"
 ---
 # <a name="kpis"></a>Indicateurs de performance clés
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "48906429"
 ##  <a name="bkmk_example"></a> Exemple  
  La responsable commerciale d'AdventureWorks souhaite créer un tableau croisé dynamique qu'elle pourra utiliser pour déterminer rapidement si ses commerciaux atteignent leurs quotas de vente pendant une période donnée (généralement annuelle). Pour chaque employé, elle souhaite que le tableau croisé dynamique pour afficher le montant des ventes réel en dollars, la quantité de quota de ventes en dollars et un affichage graphique simple indiquant l’état de chaque employé soit ou non ci-dessous, sur ou au-dessus de leur quota de ventes. Elle souhaite obtenir des données annuelles.  
   
- Pour cela, la directrice commerciale demande l'aide du développeur de solutions de décisionnel de son organisation pour ajouter un KPI Ventes au modèle tabulaire AdventureWorks. Le responsable des ventes sera ensuite utiliser Excel pour vous connecter pour le modèle tabulaire Adventure Works comme source de données et créer un tableau croisé dynamique avec les champs (mesures et KPI) et les segments pour analyser ou non la force de vente atteint ses quotas.  
+ Pour ce faire, la directrice commerciale demande l’aide du développeur de solutions BI de son organisation pour ajouter un KPI ventes au modèle tabulaire AdventureWorks. Le responsable des ventes sera ensuite utiliser Excel pour vous connecter pour le modèle tabulaire Adventure Works comme source de données et créer un tableau croisé dynamique avec les champs (mesures et KPI) et les segments pour analyser ou non la force de vente atteint ses quotas.  
   
  Dans le modèle, une mesure de la colonne SalesAmount dans la table FactResellerSales est créée, indiquant le montant des ventes réel en dollars pour chaque employé. Cette mesure va définir la valeur de base du KPI.  
   
@@ -60,7 +60,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  Maintenant que les mesures ont été créées pour servir de valeur de base et de valeur cible du KPI, la mesure Sales est étendue à un nouveau KPI des ventes. Dans le KPI Sales, la mesure Target SalesAmountQuota est définie comme valeur cible. Le seuil d'état est défini comme une plage en pourcentage dont la cible est 100 %, signifiant que les ventes réelles définies par la mesure Sales correspondent au quota défini dans la mesure SalesAmoutnQuota cible. Les pourcentages haut et bas sont définis sur la barre d'état et un type de graphique est sélectionné.  
   
- La responsable commerciale peut maintenant créer un tableau croisé dynamique en ajoutant la valeur de base, la valeur cible et l'état du KPI aux champs de valeurs. La colonne Employees est ajoutée au champ RowLabel et la colonne CalendarYear est ajoutée en tant que segment.  
+ Le responsable des ventes peut maintenant créer un tableau croisé dynamique, ajout de valeur de Base, valeur cible et état de l’indicateur de performance clé pour le champ de valeurs. La colonne Employees est ajoutée au champ RowLabel et la colonne CalendarYear est ajoutée en tant que segment.  
   
  Elle peut ainsi segmenter par an le montant des ventes, le quota des ventes et l'état réels de chaque employé. Elle peut ensuite analyser les tendances des ventes de chaque année pour déterminer si elle doit rectifier le quota d'un employé donné.  
   

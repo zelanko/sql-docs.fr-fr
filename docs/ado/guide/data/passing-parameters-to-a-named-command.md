@@ -14,12 +14,12 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f7db54ca3cd3b7574896bac11bce87446b6d4b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773387"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505713"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Passage de paramètres à une commande nommée
 Tout comme le résultat de la commande est transmis en tant qu’un *out* variable de la commande nommée, les paramètres pour une commande paramétrable peut été transmis en tant que *dans* variables à la commande nommée.  
@@ -77,21 +77,21 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- Notez que tous les paramètres d’entrée doivent précéder n’importe quelle variable de sortie et les types de données de paramètres doivent correspondre ou peuvent être converties à ceux des champs correspondants. L’instruction suivante :  
+ Notez que tous les paramètres d’entrée doivent précéder n’importe quelle variable de sortie et les types de données de paramètres doivent correspondre ou peuvent être converties à ceux des champs correspondants. L’instruction suivante-  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- — entraîne une erreur de types de données ne correspondent pas, car le paramètre d’entrée requis est d’un **chaîne** type, pas d’un **entier** type.  
+ -entraîne une erreur de types de données ne correspondent pas, car le paramètre d’entrée requis est d’un **chaîne** type, pas d’un **entier** type.  
   
- L’appel suivant :  
+ L’appel suivant-  
   
 ```  
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- — est valide, mais génère un résultat vide, car aucun enregistrement n’existe dans la base de données.  
+ -n’est valide, mais génère un résultat vide, car aucun enregistrement n’existe dans la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)

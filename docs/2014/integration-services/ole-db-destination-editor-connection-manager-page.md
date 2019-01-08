@@ -15,12 +15,12 @@ ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5db99f475b1fc1a71d36f8643dea56f99d00d0b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7688f3979f935b6d461c47fe2747eb7718835f01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188339"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504699"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Éditeur de destination OLE DB (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination OLE DB** pour sélectionner la connexion OLE DB de la destination. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
@@ -64,7 +64,7 @@ ms.locfileid: "48188339"
 > [!NOTE]  
 >  Quand vous cliquez sur **Nouvelle**, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] génère une instruction CREATE TABLE par défaut, basée sur la source de données connectée. Cette instruction CREATE TABLE par défaut n'inclut pas l'attribut FILESTREAM, même si la table source inclut une colonne dans laquelle l'attribut FILESTREAM est déclaré. Pour exécuter un composant [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] avec l'attribut FILESTREAM, implémentez d'abord le stockage FILESTREAM sur la base de données de destination. Ajoutez ensuite l’attribut FILESTREAM à l’instruction CREATE TABLE dans la boîte de dialogue **Créer une table**. Pour plus d’informations, consultez [Données blob &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-### <a name="data-access-mode--table-or-view--fast-load"></a>Mode d'accès aux données = Table ou vue - chargement rapide  
+### <a name="data-access-mode--table-or-view---fast-load"></a>Mode d’accès aux données = Table ou vue - chargement rapide  
  **Nom de la table ou de la vue**  
  Sélectionnez une table ou une vue dans la base de données à l’aide de cette liste, ou créez une table en cliquant sur **Nouveau**.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48188339"
  Spécifiez si la destination vérifie les contraintes lors du chargement des données. La valeur par défaut de cette propriété est `true`.  
   
  **Lignes par lot**  
- Permet d'indiquer le nombre de lignes contenues dans un traitement. La valeur par défaut de cette propriété est **–1**, ce qui signifie qu’aucune valeur n’a été attribuée.  
+ Permet d'indiquer le nombre de lignes contenues dans un traitement. La valeur par défaut de cette propriété est **-1**, ce qui signifie qu’aucune valeur n’a été attribuée.  
   
 > [!NOTE]  
 >  Effacez la zone de texte dans **l’Éditeur de destination OLE DB** pour indiquer que vous ne voulez pas assigner de valeur personnalisée à cette propriété.  
@@ -107,7 +107,7 @@ ms.locfileid: "48188339"
  **Nom de la variable**  
  Sélectionnez la variable qui contient le nom de la table ou de la vue.  
   
-### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>Mode d'accès aux données = Variable de nom de table ou de vue - chargement rapide  
+### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>Mode d’accès aux données = Variable de nom de table ou de vue - chargement rapide  
  **Nom de la variable**  
  Sélectionnez la variable qui contient le nom de la table ou de la vue.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48188339"
  Spécifiez si la tâche vérifie les contraintes. La valeur par défaut de cette propriété est `false`.  
   
  **Lignes par lot**  
- Permet d'indiquer le nombre de lignes contenues dans un traitement. La valeur par défaut de cette propriété est **–1**, ce qui signifie qu’aucune valeur n’a été attribuée.  
+ Permet d'indiquer le nombre de lignes contenues dans un traitement. La valeur par défaut de cette propriété est **-1**, ce qui signifie qu’aucune valeur n’a été attribuée.  
   
 > [!NOTE]  
 >  Effacez la zone de texte dans **l’Éditeur de destination OLE DB** pour indiquer que vous ne voulez pas assigner de valeur personnalisée à cette propriété.  
@@ -158,9 +158,9 @@ ms.locfileid: "48188339"
  Vérifiez la syntaxe du texte de la requête.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de Destination OLE DB &#40;Page mappages&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
- [Éditeur de Destination OLE DB &#40;Page sortie d’erreur&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
- [Charger des données à l’aide de la destination OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de destination OLE DB &#40;page Mappages&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [Éditeur de destination OLE DB &#40;page Sortie d’erreur&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
+ [Charger des données à l'aide de la destination OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

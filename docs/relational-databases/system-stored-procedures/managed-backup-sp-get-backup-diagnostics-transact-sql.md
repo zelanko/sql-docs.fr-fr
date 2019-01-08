@@ -21,12 +21,12 @@ ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e86b68bc387b777a94d6f1435ae6161674013699
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84fe7cea5418a022282958a7c16d263e5c7e9604
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705657"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399833"
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> Arguments  
  @xevent_channel  
- Type d'événement étendu. La valeur par défaut retourne tous les événements enregistrés au cours des 30 dernières minutes. Les événements enregistrés dépendent des types d'événements étendus activés. Vous pouvez utiliser ce paramètre pour filtrer la procédure stockée et afficher uniquement les événements d'un type spécifique. Vous pouvez spécifier le nom d’événement complet ou spécifier une sous-chaîne comme : **'Admin'**, **'Analytic'**, **'Operational'**, et **'Debug'** . Le @event_channel est **VARCHAR (255)**.  
+ Type d'événement étendu. La valeur par défaut retourne tous les événements enregistrés au cours des 30 dernières minutes. Les événements enregistrés dépendent des types d'événements étendus activés. Vous pouvez utiliser ce paramètre pour filtrer la procédure stockée et afficher uniquement les événements d'un type spécifique. Vous pouvez spécifier le nom d'événement complet ou spécifier une sous-chaîne comme **'Admin'**, **'Analytic'**, **'Operational'**, et **'Debug'**. Le @event_channel est **VARCHAR (255)**.  
   
  Pour obtenir une liste d’utilisation de types actuellement activés événement la **managed_backup.fn_get_current_xevent_settings** (fonction).  
   
@@ -67,7 +67,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert **EXECUTE** autorisations sur la procédure stockée. Elle nécessite également **VIEW SERVER STATE** autorisations dans la mesure où elle appelle en interne autres objets système qui nécessitent cette autorisation.  
   
 ## <a name="examples"></a>Exemples  

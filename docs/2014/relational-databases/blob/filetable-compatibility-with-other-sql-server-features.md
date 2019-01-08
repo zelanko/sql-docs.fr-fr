@@ -12,12 +12,12 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2c0ed3a548ffb67557a9ffb7bdbe932c2187ebc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ab7963d83937c3572363ea921724cefb8b4adff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205779"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507687"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilité de FileTable avec d'autres fonctionnalités SQL Server
   Décrit le fonctionnement des FileTables avec d'autres fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -73,7 +73,7 @@ ms.locfileid: "48205779"
   
 -   En plus de ces impacts, les déclencheurs sur les FileTables doivent gérer quelques comportements supplémentaires :  
   
-    -   En cas d'opérations de mise à jour non transactionnelles sur le FileTable via le système de fichiers, il est possible que le contenu FILESTREAM soit verrouillé exclusivement par d'autres opérations Win32 et ne puisse pas être accessible en lecture/écriture via le corps du déclencheur. Dans ce cas, toute tentative d'accès au contenu FILESTREAM dans le corps du déclencheur peut provoquer une erreur de violation de partage. Les déclencheurs doivent être conçus pour gérer ces erreurs convenablement.  
+    -   En cas d'opérations de mise à jour non transactionnelles sur le FileTable via le système de fichiers, il est possible que le contenu FILESTREAM soit verrouillé exclusivement par d'autres opérations Win32 et ne puisse pas être accessible en lecture/écriture via le corps du déclencheur. Dans ce cas, toute tentative d’accès au contenu FILESTREAM dans le corps du déclencheur peut provoquer une erreur de violation de partage. Les déclencheurs doivent être conçus pour gérer ces erreurs convenablement.  
   
     -   L'image AFTER du FILESTREAM peut ne pas être stable, car dans certains cas, d'autres mises à jour non transactionnelles peuvent y écrire de manière active en même temps (en raison des modes de partage autorisés dans l'accès au système de fichiers).  
   
@@ -85,17 +85,17 @@ ms.locfileid: "48205779"
   
 -   La vue n'aura pas de sémantique FileTable. autrement dit les colonnes de l’affichage (notamment les colonnes d’attributs de fichier) se comportent comme des colonnes d’affichage normales sans sémantique spéciale. Ceci est également vrai pour les lignes qui représentent des fichiers/répertoires.  
   
--   La vue peut être modifiable selon la sémantique de la « vue modifiable », mais les contraintes de table sous-jacentes peuvent refuser les mises à jour comme dans la table.  
+-   La vue peut être modifiable selon la sémantique de la « vue modifiable », mais les contraintes de table sous-jacentes peuvent refuser les mises à jour comme dans la table.  
   
 -   Le chemin d'accès à un fichier peut être visualisé dans la vue en l'ajoutant en tant que colonne explicite dans la vue. Exemple :  
   
-     `CREATE VIEW MP3FILES AS SELECT column1, column2, …, GetFileNamespacePath() AS PATH, column3,…  FROM Documents`  
+     `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   
  **Vues indexées**  
  Actuellement, les vues indexées ne peuvent pas inclure de colonnes FILESTREAM ni de colonnes calculées/calculées persistantes qui dépendent des colonnes FILESTREAM. Ce comportement reste également inchangé avec les vues définies sur le FileTable.  
   
 ##  <a name="OtherSnapshots"></a> Isolement de capture instantanée et FileTables  
- L'isolement de capture instantanée de lecture validée (RCSI) et l'isolement de capture instantanée (SI) comptent sur la possibilité d'avoir un instantané des données disponible pour les lecteurs même lorsque des opérations de mise à jour se produisent sur les données. Cependant, les FileTables autorisent l'accès en écriture non transactionnel aux données FILESTREAM. Par conséquent, les restrictions suivantes s'appliquent à l'utilisation de ces fonctionnalités dans les bases de données qui contiennent des FileTables :  
+ L'isolement de capture instantanée de lecture validée (RCSI) et l'isolement de capture instantanée (SI) comptent sur la possibilité d'avoir un instantané des données disponible pour les lecteurs même lorsque des opérations de mise à jour se produisent sur les données. Cependant, les FileTables autorisent l'accès en écriture non transactionnel aux données FILESTREAM. Par conséquent, les restrictions suivantes s'appliquent à l'utilisation de ces fonctionnalités dans les bases de données qui contiennent des FileTables :  
   
 -   Une base de données qui contient des FileTables peut être modifiée pour activer l'isolement RCSI/SI.  
   

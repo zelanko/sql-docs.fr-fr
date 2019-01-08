@@ -1,24 +1,23 @@
 ---
-title: 'Étape 2 : Exécution de l’Assistant Installation de package | Microsoft Docs'
+title: 'Étape 2 : Exécuter l’Assistant Installation de Package | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 661b411c87d5a1f570545d2e8d174c8900274bb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1af58b00b41b741ea0540a2fa29503dc33badcf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053361"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351804"
 ---
-# <a name="step-2-running-the-package-installation-wizard"></a>Étape 2 : exécution de l'Assistant Installation de package
+# <a name="step-2-running-the-package-installation-wizard"></a>Étape 2 : Exécution de l'Assistant Installation de package
   Au cours de cette tâche, vous allez exécuter l'Assistant Installation de package pour déployer les packages du projet Didacticiel de déploiement dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Seuls des packages peuvent être installés dans la table sysssispackages de la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, les fichiers de support inclus dans l'application de déploiement seront déployés dans le système de fichiers.  
   
  L'Assistant Installation de package va vous guider tout au long de l'installation et de la configuration des packages. Vous allez installer les packages dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l'ordinateur de destination (ordinateur où vous avez copié l'application de déploiement). Vous allez aussi créer un dossier, C:\DeploymentTutorialInstall, où l'Assistant va installer les fichiers non-package.  
@@ -29,7 +28,7 @@ ms.locfileid: "48053361"
   
 1.  Sur l'ordinateur de destination, recherchez l'application de déploiement.  
   
-     Si vous avez utilisé la valeur par défaut—bin\Deployment—comme emplacement de l'utilitaire de déploiement, l'application de déploiement correspond au dossier Deployment dans le projet Didacticiel de déploiement.  
+     Si vous avez utilisé la valeur par défaut, bin\Deployment, comme emplacement de l’utilitaire de déploiement, l’application de déploiement correspond au dossier Deployment dans le projet Didacticiel de déploiement.  
   
 2.  Dans le dossier Déploiement, double-cliquez sur le fichier de manifeste, Didacticiel de déploiement.SSISDeploymentManifest.  
   
@@ -66,14 +65,14 @@ ms.locfileid: "48053361"
   
 16. Dans la liste **Fichier de configuration** , cliquez sur **datatransferconfig.dtsconfig**, développez Property dans la colonne **Path** de la zone **Configurations** , et mettez à jour la colonne **Value** avec les valeurs suivantes :  
   
-    |Propriété|Valeur|Valeur mise à jour|  
+    |Propriété|Value|Valeur mise à jour|  
     |--------------|-----------|-------------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. Dans la liste **Fichier de configuration** , cliquez sur loadxmldataconfig.dtsconfig, développez Property dans la colonne **Path** de la zone **Configurations** et mettez à jour la colonne **Value** avec les valeurs suivantes :  
   
-    |Propriété|Valeur|Valeur mise à jour|  
+    |Propriété|Value|Valeur mise à jour|  
     |--------------|-----------|-------------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  
@@ -82,11 +81,11 @@ ms.locfileid: "48053361"
   
      Étant donné que les valeurs des variables d'environnement sur l'ordinateur de destination sont différentes des valeurs des variables d'environnement sur l'ordinateur de développement, plusieurs avertissements s'affichent dans la page Validation des packages. Attendez-vous à quatre avertissements :  
   
-    -   Le fichier de configuration : « C:\DeploymentTutorial\DataTransferConfig.dtsConfig » n'est pas valide. Vérifiez le nom du fichier de configuration.  
+    -   Le nom de fichier de configuration « C:\DeploymentTutorial\DataTransferConfig.dtsConfig » n'est pas valide. Vérifiez le nom du fichier de configuration.  
   
     -   Impossible de charger au moins une des entrées de configuration du package. Recherchez dans les entrées de configuration et les précédents avertissements les descriptions de la configuration qui a échoué.  
   
-    -   Le fichier de configuration : « C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig » n'est pas valide. Vérifiez le nom du fichier de configuration.  
+    -   Le nom de fichier de configuration « C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig » n'est pas valide. Vérifiez le nom du fichier de configuration.  
   
     -   Impossible de charger au moins une des entrées de configuration du package. Recherchez dans les entrées de configuration et les précédents avertissements les descriptions de la configuration qui a échoué.  
   
@@ -100,9 +99,9 @@ ms.locfileid: "48053361"
     >  Un fichier journal temporaire est créé pour être utilisé dans la validation de package. Ce fichier n'est pas utilisé lorsque le package s'exécute.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 3 : Test des packages déployés](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+ [Étape 3 : Test des Packages déployés](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)   

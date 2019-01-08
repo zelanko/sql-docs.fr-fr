@@ -20,19 +20,19 @@ ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35c8786c571936a27570166c8d331cbd2a641b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 329cad1c2d60b40d3f8e448a1ea92b8ee5bebfb9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204649"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591433"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Boîte de dialogue Remplissage (Générateur de rapports et SSRS)
   Sous l'onglet **Remplissage** , vous pouvez spécifier les options de couleur de l'arrière-plan d'une seule cellule ou de plusieurs cellules dans une région de données ou une zone de texte.  
   
 ## <a name="options"></a>Options  
  **Couleur de remplissage**  
- Cliquez sur le bouton de couleur pour sélectionner une couleur de remplissage pour le rectangle. Cliquez sur le **Expression***(fx)* bouton pour modifier l’expression, ce qui peut être une valeur hexadécimale pour la couleur RVB ou un des noms de couleur prédéfinis fournis dans le **Expression** boîte de dialogue. Pour afficher la liste des couleurs prédéfinies, sélectionnez **Web** dans le volet **Élément**. Les noms de couleur répertoriés dans le volet **Titre** peuvent être tapés dans le volet de texte de l'expression. N'utilisez pas de signe égal (=) ou de guillemets ("") lorsque vous tapez le nom de couleur.  
+ Cliquez sur le bouton de couleur pour sélectionner une couleur de remplissage pour le rectangle. Cliquez sur le bouton **Expression**_(fx)_ pour modifier l’expression, qui peut être une valeur hexadécimale pour la couleur RVB ou l’un des noms de couleur prédéfinis fournis dans la boîte de dialogue **Expression** . Pour afficher la liste des couleurs prédéfinies, sélectionnez **Web** dans le volet **Élément**. Les noms de couleur répertoriés dans le volet **Titre** peuvent être tapés dans le volet de texte de l'expression. N'utilisez pas de signe égal (=) ou de guillemets ("") lorsque vous tapez le nom de couleur.  
   
  **Sélectionnez la source d’image**  
  Indiquez l'endroit où l'image est stockée afin que lorsque le rapport est rendu, le processeur de rapports puisse l'afficher.  
@@ -61,7 +61,7 @@ ms.locfileid: "48204649"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Mise en forme de texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Images &#40;Générateur de rapports et SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
   
   

@@ -1,7 +1,8 @@
 ---
-title: 'Didacticiel : Activer les cinq requêtes les plus lentes exemple widget - Studio de données Azure | Microsoft Docs'
+title: 'Didacticiel : Activer le widget cinq exemples de requêtes les plus lentes'
+titleSuffix: Azure Data Studio
 description: Ce didacticiel montre comment activer le widget d’exemple requêtes les plus lentes cinq sur le tableau de bord de base de données.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75886c26b7ceff9df9e2fc96f76038e8d6e70dd0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 491e66ecc8b0dfb3024a2beb59cfefd3f8e0d28f
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356240"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030783"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Didacticiel : Ajouter la *cinq requêtes les plus lentes* widget exemple au tableau de bord de base de données
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Didacticiel : Ajouter le *cinq requêtes les plus lentes* widget exemple au tableau de bord de base de données
 
 Ce didacticiel illustre le processus d’ajout d’un des [!INCLUDE[name-sos](../includes/name-sos-short.md)]de widgets exemples intégrés pour le *tableau de bord de base de données* pour afficher rapidement les requêtes les plus lentes cinq une base de données. Vous allez également apprendre à afficher les détails des requêtes lentes et plans de requête à l’aide [!INCLUDE[name-sos](../includes/name-sos-short.md)]de fonctionnalités. Au cours de ce didacticiel, vous découvrez comment :
 
@@ -54,7 +55,7 @@ Le widget dans cet exemple nécessite *requête Store* doit être activé.
 Pour ajouter le *ralentir le widget de requêtes* à votre tableau de bord, vous devez modifier le *dashboard.database.widgets* définissant dans votre *paramètres utilisateur* fichier.
 
 1. Ouvrez *paramètres utilisateur* en appuyant sur **Ctrl + Maj + P** pour ouvrir le *Palette de commandes*.
-2. Type *paramètres* dans la zone de recherche, puis sélectionnez **préférences : ouvrir les paramètres utilisateur**.
+2. Type *paramètres* dans la zone de recherche, puis sélectionnez **préférences : Ouvrez les paramètres utilisateur**.
 
    ![Commande de paramètres utilisateur ouvertes](./media/tutorial-qds-sql-server/open-user-settings.png)
 
@@ -171,7 +172,7 @@ Pour ajouter le *ralentir le widget de requêtes* à votre tableau de bord, vous
 
 
 ## <a name="next-steps"></a>Étapes suivantes
-Dans ce didacticiel, vous avez appris comment :
+Dans ce didacticiel, vous avez appris à :
 > [!div class="checklist"]
 > * Activer le Store de requête sur une base de données
 > * Ajouter un widget d’insight au tableau de bord de base de données

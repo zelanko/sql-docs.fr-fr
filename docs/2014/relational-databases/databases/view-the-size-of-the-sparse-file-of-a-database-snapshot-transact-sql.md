@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server database snapshots], sparse files
@@ -19,12 +18,12 @@ ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bb15ea519cc97785479851a2366c32ee8018652
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2a7e507e45d8429312834911b7bef5ae1e784c8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213251"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803681"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Afficher la taille du fichier partiellement alloué d'un instantané de base de données (Transact-SQL)
   Cette rubrique explique comment utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)] pour vérifier qu'un fichier de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un fichier partiellement alloué et pour déterminer ses tailles réelle et maximale. Les fichiers partiellement alloués, qui sont une fonctionnalité du système de fichiers NTFS, sont utilisés par les instantanés de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -60,7 +59,7 @@ ms.locfileid: "48213251"
   
     2.  Sélectionnez le fichier partiellement alloué, ouvrez la boîte de dialogue **Propriétés** dans Windows et relevez la valeur du champ **Taille** .  
   
--   Sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+-   Sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
      Sélectionnez la colonne **size** soit dans **sys.database_files** dans l’instantané de la base de données, soit dans **sys.master_files**. La valeur de la colonne **size** reflète l'espace maximal que l'instantané peut utiliser en pages SQL. Cette valeur correspond à celle du champ **Taille** de Windows, sauf qu'elle est exprimée en termes de nombre de pages SQL dans le fichier ; la taille en octets étant :  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, performance
@@ -17,15 +16,15 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e87c43039294526a253f514be250bf89a6428d3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180679"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813901"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Mesurer la latence et valider les connexions pour la réplication transactionnelle
-  Cette rubrique explique comment mesurer la latence et valider les connexions pour la réplication transactionnelle dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide du Moniteur de réplication, de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). La réplication transactionnelle offre la fonctionnalité de jeton de suivi, moyen facile de mesurer la latence dans les topologies de réplication transactionnelle et de valider les connexions entre le serveur de publication, le serveur de distribution et les Abonnés. Un jeton (une petite quantité de données) est écrit dans le journal des transactions de la base de données de publication et est marqué comme s'il s'agissait d'une transaction standard répliquée, puis est envoyé dans le système, permettant ainsi le calcul :  
+  Cette rubrique explique comment mesurer la latence et valider les connexions pour la réplication transactionnelle dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide du Moniteur de réplication, de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). La réplication transactionnelle offre la fonctionnalité de jeton de suivi, moyen facile de mesurer la latence dans les topologies de réplication transactionnelle et de valider les connexions entre le serveur de publication, le serveur de distribution et les Abonnés. Un jeton (une petite quantité de données) est écrit dans le journal des transactions de la base de données de publication et est marqué comme s'il s'agissait d'une transaction standard répliquée, puis est envoyé dans le système, permettant ainsi le calcul :  
   
 -   du temps écoulé entre la validation d'une transaction par le serveur de publication et l'insertion de la commande qui en découle dans la base de données de distribution sur le serveur de distribution ;  
   
@@ -89,7 +88,7 @@ ms.locfileid: "48180679"
   
 3.  Cliquez sur **Insérer un suivi**.  
   
-4.  Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l'Abonné**et **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
+4.  Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Serveur de publication au serveur de distribution**, **serveur de distribution à l’abonné**, **latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Pour afficher les informations d'un jeton de suivi inséré précédemment  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48180679"
   
 3.  Sélectionnez une heure dans la liste déroulante **Heure de l'insertion** .  
   
-4.  Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l'Abonné**et **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
+4.  Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Serveur de publication au serveur de distribution**, **serveur de distribution à l’abonné**, **latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
   
     > [!NOTE]  
     >  Les informations de jeton de suivi sont conservées pour la même durée que toute autre donnée d'historique, elles-mêmes étant régies par la période de rétention des historiques définie dans la base de données de distribution. Pour plus d’informations sur la modification des propriétés de base de données de distribution, consultez [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../view-and-modify-distributor-and-publisher-properties.md).  
@@ -143,7 +142,7 @@ ms.locfileid: "48180679"
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication, et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
   
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication à l’étape 3 ont été définies de manière incorrecte ou que la publication n’existe pas.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication ont été définies de manière incorrecte à l’étape 3, soit la publication n’existe pas.  
   
 5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> . Cette méthode insère un jeton de suivi dans le journal des transactions de la publication.  
   

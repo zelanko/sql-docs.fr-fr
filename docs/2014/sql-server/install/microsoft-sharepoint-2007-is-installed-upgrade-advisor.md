@@ -11,12 +11,12 @@ ms.assetid: 6f1da295-d9b7-4948-99d3-ebd3587337c6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bed7c8b14faef5116b1032451016708e341562d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c5036763ba4cbc48a00e604c4498b8dc277e155
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118029"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417380"
 ---
 # <a name="microsoft-sharepoint-2007-is-installed-upgrade-advisor"></a>Microsoft SharePoint 2007 installé (Conseiller de mise à niveau)
   Le Conseiller de mise à niveau a détecté une version non prise en charge d'un produit ou d'une technologie SharePoint.  
@@ -34,7 +34,7 @@ ms.locfileid: "48118029"
 ## <a name="corrective-action"></a>Action corrective  
  Pour continuer la mise à niveau, vous devez désinstaller SharePoint 2007 ou procéder à la mise à niveau de SharePoint 2007 vers un produit SharePoint 2010. Une fois votre installation de SharePoint mise à jour, relancez le Conseiller de mise à niveau pour confirmer qu'il n'y a pas d'autre problèmes de mise à niveau.  
   
- Il n'est pas possible de mettre directement à niveau SharePoint 2007 vers SharePoint 2013. Cependant, vous pouvez effectuer ce qu'on appelle un attachement de base de données « à deux tronçons » pour la mise à niveau d'Office SharePoint Server 2007 vers SharePoint Server 2010, puis de SharePoint Server 2010 vers SharePoint Server 2013.  
+ Il n'est pas possible de mettre directement à niveau SharePoint 2007 vers SharePoint 2013. mais vous pouvez faire ce qu’on appelle pour comme une base de données « double saut » attacher pour mettre à niveau à partir d’Office SharePoint Server 2007 vers SharePoint Server 2010, puis à partir de SharePoint Server 2010 vers SharePoint Server 2013.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de mise à niveau Reporting Services &#40;Conseiller de mise à niveau&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

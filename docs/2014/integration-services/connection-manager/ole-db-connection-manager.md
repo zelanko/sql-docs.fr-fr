@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB connection manager
@@ -16,28 +15,28 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7034c52fa3f05032d6fc4585f1baf171421d0ab2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 149feca03a64839caffe0565cc46b683f265b77b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156709"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370131"
 ---
 # <a name="ole-db-connection-manager"></a>Gestionnaire de connexions OLE DB
   Un gestionnaire de connexions OLE DB permet à un package de se connecter à une source de données à l'aide d'un fournisseur OLE DB. Par exemple, un gestionnaire de connexions OLE DB qui se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut utiliser le fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-> [!NOTE]  
->  Le fournisseur OLEDB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 ne prend pas en charge les mots clés de la nouvelle chaîne de connexion (MultiSubnetFailover=True) pour le clustering de basculement de sous-réseaux multiples. Pour plus d’informations, consultez le [Notes de publication de SQL Server](http://go.microsoft.com/fwlink/?LinkId=247824) et le billet de blog, [basculement de sous-réseaux multiples AlwaysOn et SSIS](http://go.microsoft.com/fwlink/?LinkId=247825), sur www.mattmasson.com.  
+> [!NOTE]
+>  Le fournisseur OLEDB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 ne prend pas en charge les mots clés de la nouvelle chaîne de connexion (MultiSubnetFailover=True) pour le clustering de basculement de sous-réseaux multiples. Pour plus d’informations, consultez le [Notes de publication de SQL Server](https://go.microsoft.com/fwlink/?LinkId=247824) et le billet de blog, [basculement de sous-réseaux multiples AlwaysOn et SSIS](https://go.microsoft.com/fwlink/?LinkId=247825), sur www.mattmasson.com.  
   
  Plusieurs tâches et composants de flux de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent un gestionnaire de connexions OLE DB. Ainsi, la source et la destination OLE DB utilisent ce gestionnaire de connexions pour extraire et charger des données, tandis que la tâche d’exécution SQL utilise ce gestionnaire pour se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d’exécuter des requêtes.  
   
  Le gestionnaire de connexions OLE DB est également utilisé pour accéder à des sources de données OLE DB dans des tâches personnalisées écrites dans du code non géré utilisant un langage comme C++.  
   
- Lorsque vous ajoutez un gestionnaire de connexions OLE DB à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée une connexion de gestionnaire qui sera converti en connexion OLE DB au moment de l’exécution, définit des propriétés du Gestionnaire de la connexion et ajoute le Gestionnaire de connexion à la `Connections` collection sur le package.  
+ Lorsque vous ajoutez un gestionnaire de connexions OLE DB à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions qui sera converti en connexion OLE DB au moment de l'exécution, définit les propriétés du gestionnaire de connexions et ajoute le gestionnaire de connexions à la collection `Connections` du package.  
   
- Le `ConnectionManagerType` propriété du Gestionnaire de connexions est définie sur `OLEDB`.  
+ La propriété `ConnectionManagerType` du gestionnaire de connexions a pour valeur `OLEDB`.  
   
- Le gestionnaire de connexions OLE DB peut être configuré de plusieurs manières :  
+ Le gestionnaire de connexions OLE DB peut être configuré de plusieurs manières :  
   
 -   Indiquez une chaîne de connexion spécifique configurée pour répondre aux besoins du fournisseur sélectionné.  
   
@@ -55,14 +54,14 @@ ms.locfileid: "48156709"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Article Wiki, [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670) (SSIS avec connecteurs Oracle) sur social.technet.microsoft.com.  
+-   Article Wiki, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670) (SSIS avec connecteurs Oracle) sur social.technet.microsoft.com.  
   
--   Article technique, [Connection Strings for OLE DB Providers](http://go.microsoft.com/fwlink/?LinkId=220744)(Chaînes de connexion pour les fournisseurs OLE DB), sur carlprothman.net.  
+-   Article technique, [Connection Strings for OLE DB Providers](https://go.microsoft.com/fwlink/?LinkId=220744)(Chaînes de connexion pour les fournisseurs OLE DB), sur carlprothman.net.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Source OLE DB](../data-flow/ole-db-source.md)   
  [Destination OLE DB](../data-flow/ole-db-destination.md)   
- [Exécution de requêtes SQL, tâche](../control-flow/execute-sql-task.md)   
- [Integration Services &#40;SSIS&#41; connexions](integration-services-ssis-connections.md)  
+ [Tache d'exécution de requêtes SQL](../control-flow/execute-sql-task.md)   
+ [Connexions Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

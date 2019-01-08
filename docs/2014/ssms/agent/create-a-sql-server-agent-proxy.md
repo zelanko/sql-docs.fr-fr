@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - proxies [SQL Server Agent], creating
@@ -12,12 +12,12 @@ ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef4a623dca8ecdc92753b80438682f12521bfe8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfaba668e4f2328610656db6a61f01960814bff0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108809"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784421"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Create a SQL Server Agent Proxy
   Cette rubrique explique comment créer un proxy de SQL Server Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "48108809"
   
 -   Vous devez créer des informations d'identification avant de créer un proxy si elles ne sont pas disponibles.  
   
--   Les proxys de l'Agent[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent les informations d'identification pour stocker les informations relatives aux comptes d'utilisateur Windows. L'utilisateur spécifié dans l'information d'identification doit être habilité à ouvrir une session en tant que programme de traitement par lots sur l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent les informations d'identification pour stocker les informations relatives aux comptes d'utilisateur Windows. L'utilisateur spécifié dans l'information d'identification doit être habilité à ouvrir une session en tant que programme de traitement par lots sur l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vérifie l'accès au sous-système pour un proxy et donne accès au proxy à chaque exécution de l'étape de travail. Si le proxy n'a plus accès au sous-système, l'étape de travail échoue. Sinon, l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emprunte l'identité de l'utilisateur spécifié dans le proxy et exécute l'étape de travail.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48108809"
   
 ####  <a name="Permissions"></a> Permissions  
   
--   Seuls les membres du rôle de serveur fixe **sysadmin** ont l'autorisation de créer, modifier ou supprimer des comptes proxy. Les utilisateurs qui ne sont pas des membres du rôle serveur fixe **sysadmin** doivent être ajoutés à l'un des rôles de bases de données fixes Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivants dans la base de données **msdb** pour utiliser des proxys : **SQLAgentUserRole**, **SQLAgentReaderRole**ou **SQLAgentOperatorRole**.  
+-   Seuls les membres du rôle de serveur fixe **sysadmin** ont l'autorisation de créer, modifier ou supprimer des comptes proxy. Les utilisateurs qui ne sont pas membres de la **sysadmin** rôle serveur fixe doit être ajouté à une de ces [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent de base de données fixé dans le **msdb** base de données pour utiliser des proxys : **SQLAgentUserRole**, **SQLAgentReaderRole**, ou **SQLAgentOperatorRole**.  
   
 -   Requiert l'autorisation `ALTER ANY CREDENTIAL` lors de la création des informations d'identification en plus du proxy.  
   

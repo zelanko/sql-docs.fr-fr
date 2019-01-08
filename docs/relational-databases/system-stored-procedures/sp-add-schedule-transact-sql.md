@@ -18,12 +18,12 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d4f057351f6d3c4713c616c90748c2c6e43524f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fc52fd7af36d2238c53d8cbd877b7a6d43cd1dd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837757"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591483"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@schedule_name =** ] **'***nom_de_la_planification***'**  
+ [  **@schedule_name =** ] **'**_nom_de_la_planification_**'**  
  Nom de la planification. *nom_de_la_planification* est **sysname**, sans valeur par défaut.  
   
  [  **@enabled =** ] *activé*  
@@ -64,7 +64,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@freq_type =** ] *freq_type*  
  Valeur indiquant à quel moment un travail doit être exécuté. *freq_type* est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**4**|Tous les jours|  
@@ -90,7 +90,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@freq_subday_type =** ] *freq_subday_type*  
  Spécifie les unités pour *freq_subday_interval*. *freq_subday_type* est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description (unité)|  
+|Value|Description (unité)|  
 |-----------|--------------------------|  
 |**0x1**|À une heure spécifiée|  
 |**0x2**|Secondes|  
@@ -98,12 +98,12 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x8**|Heures|  
   
  [  **@freq_subday_interval =** ] *freq_subday_interval*  
- Le nombre de *freq_subday_type* périodes entre chaque exécution d’un travail. *freq_subday_interval* est **int**, avec une valeur par défaut **0**. Remarque : l'intervalle doit être supérieur à 10 secondes. *freq_subday_interval* est ignoré dans les cas où *freq_subday_type* est égal à **1**.  
+ Le nombre de *freq_subday_type* périodes entre chaque exécution d’un travail. *freq_subday_interval* est **int**, avec une valeur par défaut **0**. Remarque : Intervalle doit être supérieur à 10 secondes. *freq_subday_interval* est ignoré dans les cas où *freq_subday_type* est égal à **1**.  
   
  [ **@freq_relative_interval =** ] *freq_relative_interval*  
  Occurrence d’un travail de *freq_interval* chaque mois, si *freq_interval* a la valeur 32 (fréquence mensuelle relative). *freq_relative_interval* est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes. *freq_relative_interval* est ignoré dans les cas où *freq_type* n’est pas égal à 32.  
   
-|Valeur|Description (unité)|  
+|Value|Description (unité)|  
 |-----------|--------------------------|  
 |**1**|Première|  
 |**2**|Seconde|  
@@ -130,13 +130,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [  **@active_end_time =** ] *heure_fin_active*  
  L’heure sur n’importe quel jour entre *active_start_date* et *active_end_date* pour arrêter l’exécution d’un travail. *heure_fin_active* est **int**, avec une valeur par défaut **235959**, ce qui indique à 11:59:59 P.M. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
- [ **@owner_login_name**=] **'***owner_login_name***'**  
+ [ **@owner_login_name**=] **'**_owner_login_name_**'**  
  Nom du principal de serveur qui détient la planification. *owner_login_name* est **sysname**, avec NULL comme valeur par défaut, ce qui indique que la planification est détenue par le créateur.  
   
- [ **@schedule_uid**=] *schedule_uid *** sortie**  
+ [ **@schedule_uid**=] _schedule_uid_**sortie**  
  Identificateur unique de la planification. *schedule_uid* est une variable de type **uniqueidentifier**.  
   
- [ **@schedule_id**=] *id_de_la_planification *** sortie**  
+ [ **@schedule_id**=] _id_de_la_planification_**sortie**  
  Identificateur pour la planification. *id_de_la_planification* est une variable de type **int**.  
   
  [ **@originating_server**=] *nom_serveur*  
@@ -151,7 +151,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ## <a name="remarks"></a>Notes  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -179,7 +179,7 @@ EXEC dbo.sp_add_schedule
 GO  
 ```  
   
-### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>B. Création d'une planification et attachement à plusieurs travaux  
+### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>b. Création d'une planification et attachement à plusieurs travaux  
  L'exemple suivant crée une planification nommée `NightlyJobs`. Les travaux qui utilisent cette planification s'exécutent tous les jours lorsque l'heure indiquée par le serveur est `01:00`. L'exemple joint la planification au travail `BackupDatabase` et au travail `RunReports`.  
   
 > [!NOTE]  

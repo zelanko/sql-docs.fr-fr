@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - IDREF type attribute [SQLXML]
@@ -28,12 +26,12 @@ ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7611e0c52f4b7e2efab23d55fdacd07e565113d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24d0b4d15dd425bc58e307f5b3cc5ba765d1fa3a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222835"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808171"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Mise à jour de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
   Lorsque vous mettez à jour les données existantes, vous devez spécifier à la fois le  **\<avant >** et  **\<après >** blocs. Les éléments spécifiés dans le  **\<avant >** et  **\<après >** blocs décrivent la modification souhaitée. Mise à jour utilise l’ou les éléments qui sont spécifié dans le  **\<avant >** bloc pour identifier les ou les enregistrements existants dans la base de données. Les éléments correspondants dans le  **\<après >** bloc indiquer comment les enregistrements doivent ressembler après l’exécution de l’opération de mise à jour. À partir de ces informations, la mise à jour crée une instruction SQL qui correspond à la  **\<après >** bloc. Le code de mise à jour (updategram) utilise ensuite cette instruction pour mettre à jour la base de données.  
@@ -121,7 +119,7 @@ ms.locfileid: "48222835"
   
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. Mise à jour de plusieurs enregistrements à l'aide de l'attribut updg:id  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>b. Mise à jour de plusieurs enregistrements à l'aide de l'attribut updg:id  
  Dans cet exemple, le code de mise à jour (updategram) effectue deux mises à jour sur la table HumanResources.Shift de la base de données AdventureWorks :  
   
 -   Il modifie le nom de l'équipe de jour d'origine qui commence à 7 h 09 en remplaçant « Day » par « Early Morning ».  

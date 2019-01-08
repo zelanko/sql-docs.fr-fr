@@ -11,12 +11,12 @@ ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8eb5d5f003076a9a883363f5da4bb7d2bf501577
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af69191452137761cfaa49d6add0ad39ad3ccdde
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084759"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363661"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Type de connexion SAP NetWeaver BI (SSRS)
   Pour inclure les données d'une source de données externe SAP NetWeaver® Business Intelligence dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Ce type de source de données intégré est basé sur l'extension de données du fournisseur de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 pour [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -45,7 +45,7 @@ ms.locfileid: "48084759"
 DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla  
 ```  
   
- Pour obtenir d’autres exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ Pour obtenir d’autres exemples sur les chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
   
   
@@ -72,17 +72,17 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
 ##  <a name="Extended"></a> Propriétés de champ étendues  
- La source de données [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] prend en charge les propriétés de champ étendues. Propriétés de champ étendues sont des propriétés en plus de `Value` et `IsMissing` qui sont définies pour un champ de dataset par l’extension de traitement des données. Les propriétés étendues incluent des propriétés prédéfinies et des propriétés personnalisées. Les propriétés prédéfinies sont des propriétés communes à plusieurs sources de données. Les propriétés personnalisées sont uniques à chaque source de données.  
+ La source de données [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] prend en charge les propriétés de champ étendues. Les propriétés de champ étendues sont des propriétés complémentaires à `Value` et `IsMissing` qui sont définies pour un champ de dataset par l'extension pour le traitement des données. Les propriétés étendues incluent des propriétés prédéfinies et des propriétés personnalisées. Les propriétés prédéfinies sont des propriétés communes à plusieurs sources de données. Les propriétés personnalisées sont uniques à chaque source de données.  
   
 ### <a name="working-with-field-properties"></a>Utilisation des propriétés de champ  
- Les propriétés de champ étendues n'apparaissent pas dans le volet des données de rapport en tant qu'éléments que vous pouvez faire glisser vers votre disposition de rapport. Au lieu de cela, vous faites glisser le champ parent de la propriété sur le rapport et puis vous remplacez la propriété par défaut `Value` à la propriété que vous souhaitez utiliser. Par exemple, si le nom de champ **Calendar Year/Month Level 01** est créé dans un Concepteur de requêtes MDX en déplaçant un niveau du volet de métadonnées vers le volet de requête, vous faites référence à la propriété d’étendue personnalisée **Long name** (Nom long) dans une expression à l’aide de la syntaxe suivante :  
+ Les propriétés de champ étendues n'apparaissent pas dans le volet des données de rapport en tant qu'éléments que vous pouvez faire glisser vers votre disposition de rapport. À la place, vous faites glisser le champ parent de la propriété sur le rapport, puis vous remplacez la propriété par défaut `Value` par la propriété que vous voulez utiliser. Par exemple, si le nom de champ **Calendar Year/Month Level 01** est créé dans un Concepteur de requêtes MDX en déplaçant un niveau du volet de métadonnées vers le volet de requête, vous faites référence à la propriété d’étendue personnalisée **Long name** (Nom long) dans une expression à l’aide de la syntaxe suivante :  
   
  `=Fields!Calendar_Year_Month_Level_01("Long Name")`  
   
- Le nom d'une propriété de champ étendue apparaît dans l'info-bulle lorsque vous placez le pointeur sur un champ dans le volet de métadonnées. Pour plus d’informations sur les concepteurs de requêtes que vous pouvez utiliser pour Explorer les données sous-jacentes, consultez [Interface utilisateur des Concepteur de requêtes SAP NetWeaver BI](sap-netweaver-bi-query-designer-user-interface.md).  
+ Le nom d'une propriété de champ étendue apparaît dans l'info-bulle lorsque vous placez le pointeur sur un champ dans le volet de métadonnées. Pour plus d'informations sur les concepteurs de requêtes que vous pouvez utiliser pour explorer les données sous-jacentes, consultez [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md).  
   
 > [!NOTE]  
->  Il existe des valeurs pour les propriétés de champ étendues uniquement si la source de données fournit ces valeurs lorsque votre rapport s'exécute et récupère les données pour ses datasets. Vous pouvez alors faire référence à celles `Field` les valeurs de propriété à partir de n’importe quelle expression à l’aide de la syntaxe décrite ci-dessous. Cependant, dans la mesure où ces champs sont spécifiques à ce fournisseur de données et ne font pas partie du langage de définition de rapport, les modifications que vous apportez à ces valeurs ne sont pas enregistrées avec la définition du rapport.  
+>  Il existe des valeurs pour les propriétés de champ étendues uniquement si la source de données fournit ces valeurs lorsque votre rapport s'exécute et récupère les données pour ses datasets. Vous pouvez alors faire référence à ces valeurs de propriété `Field` à partir d'une expression en utilisant la syntaxe décrite ci-dessous. Cependant, dans la mesure où ces champs sont spécifiques à ce fournisseur de données et ne font pas partie du langage de définition de rapport, les modifications que vous apportez à ces valeurs ne sont pas enregistrées avec la définition du rapport.  
   
  Pour faire référence à des propriétés étendues prédéfinies dans une expression, vous pouvez utiliser l'une des syntaxes décrites ci-dessous :  
   
@@ -118,7 +118,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="Remarks"></a> Notes  
  Certains modes de remise de rapport ne sont pas pris en charge par ce fournisseur de données. La remise des rapports par le biais d'abonnements pilotés par les données n'est pas prise en charge pour cette extension pour le traitement des données. Pour plus d’informations, consultez [Utiliser une source de données externe pour les données des abonnés &#40;abonnements pilotés par les données&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
- Pour plus d'informations, consultez [Utilisation de SQL Server 2008 Reporting Services avec SAP NetWeaver Business Intelligence](http://go.microsoft.com/fwlink/?LinkId=167352).  
+ Pour plus d'informations, consultez [Utilisation de SQL Server 2008 Reporting Services avec SAP NetWeaver Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=167352).  
   
   
   

@@ -1,7 +1,8 @@
 ---
-title: 'Didacticiel : Activer le widget table espace utilisation exemple insight dans Azure Data Studio | Microsoft Docs'
+title: 'Didacticiel : Activer le widget de tableau espace utilisation exemple insight'
+titleSuffix: Azure Data Studio
 description: Ce didacticiel montre comment activer le widget d’insight exemple de table espace l’utilisation du tableau de bord de base de données Azure Data Studio.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55d6c96cc328f21d1b51ce7186c8396ab278ee6f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355990"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030353"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Didacticiel : Activer la table espace utilisation exemple insight widget à l’aide [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -38,7 +39,7 @@ Ce didacticiel requiert SQL Server ou la base de données SQL Azure *TutorialDB*
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] comporte un widget exemples intégrés pour surveiller l’espace utilisé par les tables dans une base de données.
 
 1. Ouvrez *paramètres utilisateur* en appuyant sur **Ctrl + Maj + P** pour ouvrir le *Palette de commandes*.
-2. Type *paramètres* dans la zone de recherche, puis sélectionnez **préférences : ouvrir les paramètres utilisateur**.
+2. Type *paramètres* dans la zone de recherche, puis sélectionnez **préférences : Ouvrez les paramètres utilisateur**.
 2. Type *tableau de bord* zone de recherche des paramètres d’entrée et recherchez **dashboard.database.widgets**.
 
 3. Pour personnaliser le **dashboard.database.widgets** paramètres, vous devez modifier le **dashboard.database.widgets** entrée dans le **paramètres utilisateur** section (la colonne dans le côté droit). S’il existe aucune **dashboard.database.widgets** dans le **paramètres utilisateur** section, placez le curseur sur le **dashboard.database.widgets** texte dans la colonne de paramètres par défaut et cliquez sur l’icône de crayon qui apparaît à gauche du texte et cliquez sur **copie aux paramètres**. Si la fenêtre contextuelle indique **remplacer dans les paramètres**, ne cliquez pas dessus ! Accédez à la **paramètres utilisateur** colonne vers la droite et recherchez le **dashboard.database.widgets** section et passez à l’étape suivante.
@@ -82,7 +83,7 @@ Le **dashboard.database.widgets** section doit ressembler à l’image suivante�
 
 
 ## <a name="next-steps"></a>Étapes suivantes
-Dans ce didacticiel, vous avez appris comment :
+Dans ce didacticiel, vous avez appris à :
 > [!div class="checklist"]
 > * Activez rapidement un widget d’insight à l’aide d’un exemple de widget insight intégrés.
 > * Afficher les détails d’utilisation d’espace de table.
