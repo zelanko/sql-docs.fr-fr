@@ -13,19 +13,19 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c83c2d1aa07a93ff4b6109d43f074f5c0da1d0db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07db329a7ba6cb65e5beb94d34f90d1e55582915
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222419"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367781"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>Afficher les paramètres NodeWeight pour le quorum de cluster
   Cette rubrique explique comment afficher les paramètres NodeWeight pour chaque nœud membre dans un cluster de clustering de basculement Windows Server (WSFC). Les paramètres NodeWeight sont utilisés pendant le vote du quorum pour prendre en charge les scénarios de récupération d'urgence et de sous-réseaux multiples pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Avant de commencer :**  [Conditions préalables](#Prerequisites), [Sécurité](#Security)  
+-   **Avant de commencer :**  [Conditions préalables](#Prerequisites), [sécurité](#Security)  
   
--   **Pour afficher les paramètres NodeWeight du quorum avec :** [Utilisation de Transact-SQL](#TsqlProcedure), [Utilisation de PowerShell](#PowerShellProcedure), [Utilisation de Cluster.exe](#CommandPromptProcedure)  
+-   **Pour afficher les paramètres NodeWeight du quorum avec :** [À l’aide de Transact-SQL](#TsqlProcedure), [à l’aide de Powershell](#PowerShellProcedure), [à l’aide de Cluster.exe](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48222419"
 > [!IMPORTANT]  
 >  Pour utiliser les paramètres NodeWeight, le correctif logiciel suivant doit être appliqué à tous les serveurs dans le cluster WSFC :  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): un correctif est disponible pour vous permettre de configurer un nœud de cluster qui n'a pas de votes de quorum dans [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] et dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): un correctif est disponible pour vous permettre de configurer un nœud de cluster qui n'a pas de votes de quorum dans [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] et dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 > [!TIP]  
 >  Si ce correctif logiciel n'est pas installé, les exemples de cette rubrique retournent des valeurs vides ou NULL pour NodeWeight.  
@@ -52,7 +52,7 @@ ms.locfileid: "48222419"
 2.  Interrogez la vue [sys].[dm_hadr_cluster_members].  
   
 ### <a name="example-transact-sql"></a>Exemple (Transact-SQL)  
- L'exemple suivant interroge une vue système pour retourner les valeurs de tous les nœuds du cluster de cette instance.  
+ L’exemple suivant interroge une vue système pour retourner les valeurs de tous les nœuds du cluster de cette instance.  
   
 ```tsql  
 SELECT  member_name, member_state_desc, number_of_quorum_votes  
@@ -72,7 +72,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
 4.  Générez la sortie des propriétés du nœud de cluster dans un format lisible.  
   
 ### <a name="example-powershell"></a>Exemple (PowerShell)  
- L'exemple suivant génère certaines des propriétés de nœud du cluster appelé « Cluster001 ».  
+ L’exemple suivant génère certaines des propriétés de nœud du cluster « Cluster001 ».  
   
 ```powershell  
 Import-Module FailoverClusters  
@@ -86,7 +86,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ##  <a name="CommandPromptProcedure"></a> Utilisation de Cluster.exe  
   
 > [!NOTE]  
->  L'utilitaire cluster.exe est déconseillé dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] .  Utilisez PowerShell avec le clustering de basculement pour le développement futur.  L'utilitaire cluster.exe sera supprimé dans la prochaine version de Windows Server. Pour plus d'informations, consultez [Mappage des commandes Cluster.exe aux applets de commande Windows PowerShell pour les clusters de basculement](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
+>  L'utilitaire cluster.exe est déconseillé dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] .  Utilisez PowerShell avec le clustering de basculement pour le développement futur.  L'utilitaire cluster.exe sera supprimé dans la prochaine version de Windows Server. Pour plus d'informations, consultez [Mappage des commandes Cluster.exe aux applets de commande Windows PowerShell pour les clusters de basculement](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
   
 ##### <a name="to-view-nodeweight-settings"></a>Pour consulter les paramètres NodeWeight  
   
@@ -95,7 +95,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  Utilisez **cluster.exe** pour retourner l'état du nœud et les valeurs de NodeWeight  
   
 ### <a name="example-clusterexe"></a>Exemple (Cluster.exe)  
- L'exemple suivant génère certaines des propriétés de nœud du cluster appelé « Cluster001 ».  
+ L’exemple suivant génère certaines des propriétés de nœud du cluster « Cluster001 ».  
   
 ```ms-dos  
 cluster.exe Cluster001 node /status /properties  
@@ -105,6 +105,6 @@ cluster.exe Cluster001 node /status /properties
  [Modes de quorum WSFC et configuration de vote &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Configurer les paramètres NodeWeight pour un quorum de cluster](configure-cluster-quorum-nodeweight-settings.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)   
- [Applets de commande de cluster de basculement dans Windows PowerShell répertoriées par tâche](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [Applets de commande de cluster de basculement dans Windows PowerShell répertoriées par tâche](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
   
   

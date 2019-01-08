@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - Properties Property (ClientNetworkProtocol Class)
@@ -20,15 +18,15 @@ ms.assetid: 7e0a4e38-4555-4750-8fd3-4425b29e6aa1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1464f236966f830125e62da65b3a645c99374a11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d6c2dbfb1254260f5c92df5f1da33ba26e368aa7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219941"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358471"
 ---
 # <a name="properties-property-clientnetworkprotocol-class"></a>Propriété Properties (classe ClientNetworkProtocol)
-  Obtient les propriétés associées au protocole réseau client actuel spécifié par [Configurer des protocoles clients](http://technet.microsoft.com/library/ms181035.aspx).  
+  Obtient les propriétés associées au protocole réseau client actuel spécifié par [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des bibliothèques réseau et des protocoles réseau clients](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configuration des bibliothèques réseau et des protocoles réseau clients](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

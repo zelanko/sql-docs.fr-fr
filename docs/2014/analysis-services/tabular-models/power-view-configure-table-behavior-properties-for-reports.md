@@ -13,12 +13,12 @@ ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7a4d0b4c7bcb7867eb58618c3860d2e50ddfeccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84060846dc19862e057e55e4096df7e97fa4d825
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219239"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352881"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurer les propriétés de comportement de table pour les rapports Power View (SSAS Tabulaire)
   Si vous utilisez un modèle tabulaire comme modèle de données pour [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous pouvez définir les propriétés de comportement de table qui exposent les lignes de détails à un niveau plus granulaire. La définition des propriétés de comportement de table modifie le comportement de regroupement des lignes de détail et produit un meilleur placement par défaut des informations d'identification (tels que les noms, les cartes d'identité avec photo ou les images de logo) dans les mises en page de mosaïque, de carte et de graphique.  
@@ -41,7 +41,7 @@ ms.locfileid: "48219239"
 -   **Image par défaut** : spécifie la colonne qui fournit une image représentant les données de ligne (par exemple, une pièce d’identité avec photo dans un enregistrement d’employé).  
   
 > [!NOTE]  
->  Consultez la section suivante pour considérer les optimisations de mise en page du point de vue d’un format de présentation particulier :  [Optimisation pour les dispositions spécifiques](#bkmk_optimizeforlayout).  
+>  Consultez la section suivante pour considérer les optimisations de mise en page du point de vue d’un format de présentation particulier :  [Optimisation pour les dispositions spécifiques](#bkmk_optimizeforlayout).  
   
 ## <a name="opening-the-table-behavior-dialog-box"></a>Ouverture de la boîte de dialogue Comportement de la table  
   
@@ -52,11 +52,11 @@ ms.locfileid: "48219239"
 3.  Dans la boîte de dialogue **Comportement de la table** , définissez **Identificateur de ligne**, puis spécifiez d'autres propriétés dans cette boîte de dialogue.  
   
 ## <a name="setting-the-row-identifier-property"></a>Définition de la propriété Identificateur de ligne  
- Dans la table, l'identificateur de ligne spécifie une colonne unique qui contient seulement des valeurs uniques et aucune valeur vide. La propriété Identificateur de ligne est utilisée pour modifier le regroupement de sorte qu'un groupe ne soit pas basé sur la composition de champ d'une ligne, mais plutôt sur une colonne fixe qui est toujours utilisée pour identifier une ligne de manière unique, indépendamment des champs utilisés dans une mise en page de rapport donnée.  
+ Dans la table, l'identificateur de ligne spécifie une colonne unique qui contient seulement des valeurs uniques et aucune valeur vide. La propriété identificateur de ligne est utilisée pour modifier le regroupement de sorte qu’un groupe n’est pas basé sur la composition de champ d’une ligne, mais plutôt sur une colonne fixe est toujours utilisée pour identifier de manière unique une ligne, indépendamment des champs utilisés dans une disposition de rapport particulier.  
   
  La définition de cette propriété modifie le comportement de regroupement par défaut, qui passe d'un regroupement dynamique basé sur les colonnes présentes dans la zone de dessin à un comportement de regroupement fixe qui effectue la synthèse en fonction de l'identificateur de ligne. Modifier le comportement de regroupement par défaut est approprié pour les mises en page de rapport, telles qu'une matrice qui, autrement, regrouperaient les données (ou afficherait les sous-totaux) pour chaque colonne dans la ligne.  
   
- Dans [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], la définition d'un identificateur de ligne active les propriétés supplémentaires suivantes : propriété **Conserver les lignes uniques** , propriété **Étiquette par défaut** et propriété **Image par défaut** .  
+ Dans [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], définition d’un identificateur de ligne active les propriétés supplémentaires suivantes : **Conserver les lignes uniques** propriété, **étiquette par défaut** propriété, et **Image par défaut** propriété.  
   
  Vous pouvez également utiliser **Identificateur de ligne** seul, en tant que propriété autonome, pour activer ce qui suit :  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48219239"
  En définissant la propriété **Conserver les lignes uniques** , vous pouvez indiquer une ou plusieurs colonnes qui doivent toujours être répétées, même s'il existe des instances en double, chaque fois que vous ajoutez cette colonne à la zone de dessin du rapport. Les valeurs calculées associées à la ligne sont ainsi allouées en fonction de chaque ligne individuelle plutôt que regroupées en une seule ligne. Lorsque vous choisissez des colonnes pour la propriété  **Conserver les lignes uniques** , choisissez celles contenant des valeurs uniques ou quasiment uniques.  
   
 > [!NOTE]  
->  Étant donné que les colonnes sélectionnées par l'utilisateur final peuvent affecter le regroupement, ce qui modifie le contexte de filtre pour les calculs d'expression, les concepteurs de modèles doivent veiller à créer des mesures qui retournent des résultats corrects. Pour plus d'informations, consultez [Questions fréquentes sur Power View](http://go.microsoft.com/fwlink/?LinkId=220674).  
+>  Étant donné que les colonnes sélectionnées par l'utilisateur final peuvent affecter le regroupement, ce qui modifie le contexte de filtre pour les calculs d'expression, les concepteurs de modèles doivent veiller à créer des mesures qui retournent des résultats corrects. Pour plus d'informations, consultez [Questions fréquentes sur Power View](https://go.microsoft.com/fwlink/?LinkId=220674).  
   
 ## <a name="setting-a-default-label"></a>Définition d'une étiquette par défaut  
  Cette propriété spécifie une étiquette qui apparaît dans la bande de navigation d'un rapport en mosaïque. En cas d'utilisation avec une image par défaut, l'étiquette par défaut apparaît sous l'image. En l'absence d'image, l'étiquette par défaut apparaît seule. Lorsque vous choisissez une étiquette par défaut, sélectionnez la colonne qui fournit le plus d'informations sur la ligne (par exemple, un nom).  
@@ -113,11 +113,11 @@ ms.locfileid: "48219239"
   
  Comparez les images avant et après suivantes qui illustrent l'incidence de la définition de cette propriété sur une présentation en matrice.  
   
- **Avant : regroupement par défaut en fonction des champs dans la matrice**  
+ **Avant : Regroupement par défaut basé sur les champs dans la matrice**  
   
  ![Disposition de matrice regroupés sur un identificateur de ligne](../media/ssas-rptprop-matrixrowid.gif "présentation en matrice regroupés sur un identificateur de ligne")  
   
- **Après : regroupement en fonction de l'identificateur de ligne**  
+ **Après : Regroupement de l’identificateur de ligne**  
   
  ![Disposition de matrice regroupés sur un identificateur de ligne](../media/ssas-rptprop-matrixrowid.gif "présentation en matrice regroupés sur un identificateur de ligne")  
   
@@ -126,11 +126,11 @@ ms.locfileid: "48219239"
   
  Comparez les images avant et après suivantes qui illustrent l'incidence de la définition de cette propriété sur une présentation en graphique. Il s'agit du même rapport, avec des champs et une présentation identiques. La seule différence est que l'image du bas affiche un rapport après définition de l' **Identificateur de ligne** sur la table Éléments.  
   
- **Avant : regroupement par défaut en fonction des champs dans le graphique**  
+ **Avant : Regroupement par défaut en fonction des champs dans un graphique**  
   
  ![Graphique basé sur le regroupement par défaut au niveau du champ](../media/ssas-rptprop-chartfieldgroup.gif "graphique basé sur le regroupement par défaut au niveau des champs")  
   
- **Après : regroupement en fonction de l'identificateur de ligne (l'identificateur de ligne devient l'axe)**  
+ **Après : Regroupement de l’identificateur de ligne (identificateur de ligne devient l’axe)**  
   
  ![Graphique basé sur le regroupement par ID de ligne](../media/ssas-rptprop-chartrowid.gif "graphique basé sur le regroupement par ID de ligne")  
   

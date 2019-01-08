@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.advancedtuningoptions.f1
@@ -20,18 +19,18 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d587b8cd2fb4342ddba42ac85a1d595d6b7b23c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097819"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356384"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
   Cette rubrique décrit comment démarrer et utiliser l'Assistant Paramétrage du moteur de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur l’affichage et l’utilisation des résultats après avoir paramétré une base de données, consultez [Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Initialiser l'Assistant Paramétrage du moteur de base de données  
- Pour la première utilisation, un utilisateur membre du rôle serveur fixe **sysadmin** doit initialiser l'Assistant Paramétrage du moteur de base de données. Il s’agit, car plusieurs tables système doivent être créées dans le `msdb` base de données pour prendre en charge les opérations de paramétrage. L’initialisation permet aussi aux utilisateurs membres du rôle de base de données fixe **db_owner** de paramétrer des charges de travail sur les tables des bases de données dont ils sont propriétaires.  
+ Pour la première utilisation, un utilisateur membre du rôle serveur fixe **sysadmin** doit initialiser l'Assistant Paramétrage du moteur de base de données. Cela est dû au fait que plusieurs tables système doivent être créées dans la base de données `msdb` pour prendre en charge les opérations de paramétrage. L’initialisation permet aussi aux utilisateurs membres du rôle de base de données fixe **db_owner** de paramétrer des charges de travail sur les tables des bases de données dont ils sont propriétaires.  
   
  Un utilisateur disposant d'autorisations d'administrateur système doit exécuter l'une des actions suivantes :  
   
@@ -213,7 +212,7 @@ ms.locfileid: "48097819"
 >  La suspension de l'Assistant Paramétrage du moteur de base de données n'est pas acceptée. Si vous cliquez sur le bouton de barre d’outils **Démarrer l’analyse** après avoir cliqué soit sur **Arrêter l’analyse** soit sur **Arrêter l’analyse (avec recommandations)** , l’Assistant Paramétrage du moteur de base de données démarre une nouvelle session de paramétrage.  
   
 ###  <a name="dta"></a> Utilisation de l'utilitaire dta  
- L' [utilitaire dta](../../tools/dta/dta-utility.md) fournit un fichier exécutable d'invite de commandes qui vous permet de paramétrer des bases de données. Il vous permet d'utiliser l'Assistant Paramétrage du moteur de base de données dans les scripts et les fichiers de commandes. L’utilitaire **dta** accepte les entrées de cache du plan, les fichiers de trace, les tables de trace et les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] en tant que charges de travail. Il accepte également les entrées XML qui sont conformes aux schéma XML de l'Assistant Paramétrage du moteur de base de données, qui est disponible sur ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?linkid=43100).  
+ L' [utilitaire dta](../../tools/dta/dta-utility.md) fournit un fichier exécutable d'invite de commandes qui vous permet de paramétrer des bases de données. Il vous permet d'utiliser l'Assistant Paramétrage du moteur de base de données dans les scripts et les fichiers de commandes. L’utilitaire **dta** accepte les entrées de cache du plan, les fichiers de trace, les tables de trace et les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] en tant que charges de travail. Il accepte également les entrées XML qui sont conformes aux schéma XML de l'Assistant Paramétrage du moteur de base de données, qui est disponible sur ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?linkid=43100).  
   
  Prenez en considération les points suivants avant de paramétrer une charge de travail à l’aide de l’utilitaire **dta** :  
   
@@ -235,16 +234,16 @@ ms.locfileid: "48097819"
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  Pour modifier le nombre d'événements à utiliser pour l'analyse, spécifiez l'option **-n** . L'exemple suivant augmente le nombre d'entrées du cache à 2 000.  
+2.  Pour modifier le nombre d’événements à utiliser pour l’analyse, spécifiez l’option **-n**. L'exemple suivant augmente le nombre d'entrées du cache à 2 000.  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  Pour analyser les événements pour toutes les bases de données de l’instance, spécifiez l’option **-ipf** .  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>Pour paramétrer une base de données en utilisant les paramètres par défaut d'une charge de travail et de l'utilitaire dta  
@@ -303,7 +302,7 @@ ms.locfileid: "48097819"
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- Le schéma XML de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est également disponible en ligne sur ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ Le schéma XML de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est également disponible en ligne sur ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
  Cette adresse URL pointe vers une page contenant de nombreux schémas XML [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Parcourez la page pour atteindre la ligne correspondant à l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
@@ -444,7 +443,7 @@ database_name.owner_name.table_name
  Incluez uniquement des recommandations relatives à l'ajout de vues indexées. Les index cluster et non-cluster ne sont pas concernés par les recommandations.  
   
  **Inclure les index filtrés**  
- Incluez des recommandations relatives à l'ajout d'index filtrés. Cette option est disponible si vous sélectionnez l'une des structures de conception physique courantes suivantes : **Index et vues indexées**, **Index**ou **Index non cluster**.  
+ Incluez des recommandations relatives à l'ajout d'index filtrés. Cette option est disponible si vous sélectionnez une de ces structures PDS : **Index et vues indexées**, **index**, ou **index non cluster**.  
   
  **Index**  
  Incluez uniquement des recommandations relatives à l'ajout d'index cluster et non-cluster. Les vues indexées ne sont pas concernées par les recommandations.  

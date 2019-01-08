@@ -18,15 +18,15 @@ ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 708aed70836bfc5fdccb9dd8ba3afc2545e093f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e43af2841de0f2e5a00bf4e7871f71092e6bc87
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089319"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373781"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Afficher une collection de schémas XML stockée
-  Après l’importation d’une collection de schémas XML à l’aide de l’instruction [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql), les composants du schéma sont stockés dans les métadonnées. Vous pouvez utiliser la fonction intrinsèque [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)pour reconstruire la collection de schémas XML. Cette fonction retourne un `xml` instance de type de données.  
+  Après l’importation d’une collection de schémas XML à l’aide de l’instruction [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql), les composants du schéma sont stockés dans les métadonnées. Vous pouvez utiliser la fonction intrinsèque [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)pour reconstruire la collection de schémas XML. Cette fonction renvoie une instance de type de données `xml`.  
   
  Par exemple, la requête suivante reprend une collection de schémas XML (à savoir`ProductDescriptionSchemaCollection`) à partir du schéma relationnel de production se trouvant dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
@@ -35,7 +35,7 @@ SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
- Si vous voulez ne consulter qu’un seul schéma de la collection de schémas XML, vous pouvez spécifier la requête XQuery portant sur la `xml` type de résultat qui est retourné par `xml_schema_namespace`.  
+ Si vous ne voulez consulter qu'un seul schéma de la collection de schémas XML, vous pouvez spécifier une requête XQuery portant sur le résultat de type `xml` renvoyé par la fonction `xml_schema_namespace`.  
   
 ```  
 SELECT xml_schema_namespace(N'RelationalSchemaName',N'XmlSchemaCollectionName').query('  
@@ -48,7 +48,7 @@ GO
   
 ```  
 SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection').query('  
-/xs:schema[@targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"]  
+/xs:schema[@targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"]  
 ')  
 GO  
 ```  
@@ -56,7 +56,7 @@ GO
  Vous pouvez également transmettre l'espace de noms cible facultatif en tant que troisième paramètre à la fonction `xml_schema_namespace` pour extraire un schéma spécifique de la collection, comme illustré dans la requête suivante :  
   
 ```  
-SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection', N'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain')  
+SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection', N'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain')  
 GO  
 ```  
   

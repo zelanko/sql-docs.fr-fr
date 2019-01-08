@@ -14,15 +14,15 @@ ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ee2297f01ef2cc0a4dc94beca66939bf6ae9030
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c9614a71c0015d17178a57d33c5fd0d9b62433c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145649"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358851"
 ---
 # <a name="sqlfetchscroll"></a>SQLFetchScroll
-  **SQLFetchScroll** retourne un ensemble de lignes de données à l'application. La taille de l’ensemble de lignes est définie à l’aide de [SQLSetStmtAttr](sqlsetstmtattr.md). Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge toutes les instructions d’extraction définies (par exemple, SQL_FETCH_RELATIVE) avec les limitations suivantes :  
+  **SQLFetchScroll** retourne un ensemble de lignes de données à l'application. La taille de l'ensemble de lignes est définie à l'aide de [SQLSetStmtAttr](sqlsetstmtattr.md). Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend en charge toutes les instructions d'extraction définies (par exemple, SQL_FETCH_RELATIVE) avec les limitations suivantes :  
   
 -   Si un curseur avant uniquement est défini pour l'instruction, SQL_FETCH_NEXT est requis et toute tentative d'extraction effectuée d'une autre manière retournera une erreur.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48145649"
  **SQLFetchScroll** prend en charge les types CLR volumineux définis par l'utilisateur (UDT). Pour plus d’informations, consultez [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonction SQLFetchScroll](http://go.microsoft.com/fwlink/?LinkId=59343)   
+ [Fonction SQLFetchScroll](https://go.microsoft.com/fwlink/?LinkId=59343)   
  [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

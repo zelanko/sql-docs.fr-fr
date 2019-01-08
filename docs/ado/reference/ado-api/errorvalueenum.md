@@ -16,28 +16,28 @@ ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6ccf5a83cd53b953a9b43c252e90a6e13f1e3f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635867"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542600"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Spécifie le type d’erreur d’exécution ADO.  
   
  Trois formes de numéro d’erreur sont répertoriés :  
   
--   Nombre décimal positif, les deux octets faibles du nombre complet au format décimal. Ce nombre est affiché dans la boîte de dialogue de message par défaut Visual Basic erreur. Par exemple, erreur d’exécution '3707 ''.  
+-   Positif décimale, à savoir le deux octets faibles du nombre complet au format décimal. Ce nombre est affiché dans la boîte de dialogue de message par défaut Visual Basic erreur. Par exemple, erreur d’exécution '3707 ''.  
   
--   Décimale négative — la conversion décimale du numéro d’erreur complet.  
+-   La valeur décimale-la conversion décimale du numéro d’erreur complet.  
   
--   Hexadécimale — la représentation hexadécimale d’un numéro d’erreur complet. Le code de fonction Windows est dans le quatrième chiffre. Le code de fonction des numéros d’erreur ADO est *A*. Par exemple : 0 x 800***A***0E7B.  
+-   Représentation hexadécimale hexadécimal, à savoir le du numéro d’erreur complet. Le code de fonction Windows est dans le quatrième chiffre. Le code de fonction des numéros d’erreur ADO est *A*. Exemple : 0 x 800***A***0E7B.  
   
 > [!NOTE]
 >  Erreurs OLE DB peuvent être passés à votre application ADO. En règle générale, elles peuvent être identifiées par un code de fonction Windows *4*. Par exemple, 0 x 800***4***.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|Ne peut pas modifier le **ActiveConnection** propriété d’un **Recordset** objet qui a un **commande** objet en tant que sa source.|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|Serveur ne peut pas terminer l’opération.|  

@@ -11,17 +11,17 @@ ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5407fdc291cd1d0d0a533466b0e45dd0cbce320b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc40f29ec61c1818a4cdb1186a4ceccf3553a107
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106099"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365911"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Graphiques à barres (Générateur de rapports et SSRS)
   Un graphique à barres affiche les séries sous la forme d'ensembles de barres horizontales. Le graphique à barres ordinaire est étroitement lié à l'histogramme, qui affiche les séries sous la forme d'ensembles de barres verticales, ainsi qu'au graphique d'étendue à barres, qui affiche les séries sous la forme d'ensembles de barres horizontales avec des points de départ et de fin variables.  
   
- Le graphique à barres est le seul type de graphique qui affiche des données horizontalement. C'est pourquoi, il est souvent utilisé pour représenter des données qui se produisent avec le temps, avec une date de début et une date de fin fixes. Il est également souvent utilisé pour afficher des informations de catégorie, dans la mesure où les catégories peuvent être affichées horizontalement. Pour plus d’informations sur comment ajouter des données à un graphique à barres, consultez [graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Le graphique à barres est le seul type de graphique qui affiche des données horizontalement. C'est pourquoi, il est souvent utilisé pour représenter des données qui se produisent avec le temps, avec une date de début et une date de fin fixes. Il est également souvent utilisé pour afficher des informations de catégorie, dans la mesure où les catégories peuvent être affichées horizontalement. Pour plus d’informations sur l’ajout de données à un graphique à barres, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  L'illustration suivante montre un graphique à barres. Le graphique à barres convient bien pour ce type de données, car les trois séries partagent une période de temps commune, ce qui permet d'effectuer des comparaisons valables.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48106099"
   
 -   Si vous souhaitez ajouter des barres à un tableau ou une matrice au sein d'un rapport, pensez à utiliser une jauge linéaire plutôt qu'un graphique à barres. La jauge linéaire est conçue pour afficher une valeur au lieu de plusieurs groupes, c'est pourquoi elle est plus flexible pour une utilisation dans une liste ou une région de données de table. Pour plus d’informations, consultez [Jauges &#40;Générateur de rapports et SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
--   Vous pouvez ajouter des styles de dessin spéciaux aux barres individuelles d'un graphique à barre pour augmenter son impact visuel. Les styles de dessin incluent les effets de coin, de relief, de cylindre et de clair à sombre. Ces effets sont destinés à améliorer l'apparence de votre graphique 2D. Si vous utilisez un graphique 3D, les styles de dessin seront toujours appliqués, mais ils peuvent ne pas avoir le même effet. Pour plus d’informations sur l’ajout d’un style de dessin à un graphique à barres, consultez [ajouter un biseau, de relief et de Styles de Texture à un graphique &#40;Générateur de rapports et SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
+-   Vous pouvez ajouter des styles de dessin spéciaux aux barres individuelles d'un graphique à barre pour augmenter son impact visuel. Les styles de dessin incluent les effets de coin, de relief, de cylindre et de clair à sombre. Ces effets sont destinés à améliorer l'apparence de votre graphique 2D. Si vous utilisez un graphique 3D, les styles de dessin seront toujours appliqués, mais ils peuvent ne pas avoir le même effet. Pour plus d’informations sur l’ajout d’un style de dessin à un graphique à barres, consultez [Ajouter des styles de biseau, de relief et de textures à un graphique &#40;Générateur de rapports et SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
 -   Les graphiques à barres empilées placent les séries les unes au-dessus des autres pour créer une pile de barres. Vous avez la possibilité de scinder le graphique à barres empilées en plusieurs groupes de piles pour chaque catégorie. Le graphique à barres empilées groupées est affiché côte à côte. Vous pouvez avoir n'importe quel nombre de séries empilées groupées dans un graphique.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48106099"
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Ajouter des styles de biseau, de relief et de texture à un graphique &#40;Générateur de rapports et SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Didacticiel : ajout d’un graphique à barres à un rapport (Générateur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Didacticiel : ajout d’un graphique à barres dans un rapport](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Didacticiel : Ajout d’un graphique à barres à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Didacticiel : Ajout d’un graphique à barres à un rapport](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

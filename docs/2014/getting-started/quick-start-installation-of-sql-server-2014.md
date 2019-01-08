@@ -22,12 +22,12 @@ ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c682b29a4265b9c6955b440dc45e4920ca87d081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f70b3367d2ca0b6c896c970f29b179dc969640c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223379"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366641"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Installation de démarrage rapide de SQL Server 2014
     
@@ -82,7 +82,7 @@ ms.locfileid: "48223379"
   
      Consultez [Installation de Cluster de basculement SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) pour obtenir des informations sur l’installation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cluster de basculement.  
   
- Par défaut, les exemples de bases de données et les exemples de code ne sont pas installés dans le cadre de l'installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour installer des exemples de bases de données et de code pour les éditions non-Express de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez le [site Web CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). Pour plus d'informations sur la prise en charge des exemples de base de données et de code [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], consultez [Vue d'ensemble des bases de données et des exemples](http://go.microsoft.com/fwlink/?LinkId=110391).  
+ Par défaut, les exemples de bases de données et les exemples de code ne sont pas installés dans le cadre de l'installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour installer des exemples de bases de données et de code pour les éditions non-Express de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez le [site Web CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843). Pour plus d'informations sur la prise en charge des exemples de base de données et de code [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], consultez [Vue d'ensemble des bases de données et des exemples](https://go.microsoft.com/fwlink/?LinkId=110391).  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-installation"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Installation  
  Que vous utilisiez l'Assistant Installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou l'invite de commandes pour installer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le processus d'installation implique une ou plusieurs des étapes suivantes :  

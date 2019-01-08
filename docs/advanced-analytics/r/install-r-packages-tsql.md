@@ -1,6 +1,6 @@
 ---
-title: Utiliser T-SQL (CREATE EXTERNAL LIBRARY) pour installer des packages R sur SQL Server Machine Learning Services | Microsoft Docs
-description: Ajouter de nouveaux packages R pour SQL Server 2017 Machine Learning Services (en base de données)
+title: Utiliser T-SQL (CREATE EXTERNAL LIBRARY) pour installer des packages R - Services de SQL Server Machine Learning
+description: Ajouter de nouveaux packages R pour SQL Server 2016 R Services ou SQL Server 2017 Machine Learning Services (en base de données).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/30/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 897bafaaf5ec32c417bb5d9625ce6cef22d6e783
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6e910f1c3b29522b11f1faa83db890d399bf3680
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699387"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645048"
 ---
-# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server-2017-machine-learning-services"></a>Utiliser T-SQL (CREATE EXTERNAL LIBRARY) pour installer des packages R sur SQL Server 2017 Machine Learning Services
+# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Utiliser T-SQL (CREATE EXTERNAL LIBRARY) pour installer des packages R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article explique comment installer de nouveaux packages R sur une instance de SQL Server où l’apprentissage automatique est activé. Il existe plusieurs approches sélectionnables. À l’aide de T-SQL convient le mieux pour les administrateurs de serveur qui ne sont pas familiarisés avec R.
@@ -48,7 +48,7 @@ Exécutez l’instruction T-SQL `CREATE EXTERNAL LIBRARY` pour charger la collec
 
 Par exemple, l’instruction suivante nomme comme source du package miniCRAN référentiel contenant le **randomForest** package, ainsi que ses dépendances. 
 
-```SQL
+```sql
 CREATE EXTERNAL LIBRARY randomForest
 FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
 WITH (LANGUAGE = 'R');
@@ -60,7 +60,7 @@ Vous ne pouvez pas utiliser un nom arbitraire ; le nom de la bibliothèque exte
 
 Si la bibliothèque est créée avec succès, vous pouvez exécuter le package dans SQL Server, en l’appelant à l’intérieur d’une procédure stockée.
     
-```SQL
+```sql
 EXEC sp_execute_external_script
 @language =N'R',
 @script=N'library(randomForest)'

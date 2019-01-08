@@ -14,12 +14,12 @@ ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a6654b7ec23e2aae071a7e4ce6cd360b7ef10e4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 292baa254bffc16650376dbbc30e7193b8bc367c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107489"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358821"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Création d'un composant au moment de la conception d'élément de rapport personnalisé
   Un composant au moment de la conception d'élément de rapport personnalisé est un contrôle qui peut être utilisé dans l'environnement du Concepteur de rapports Visual Studio. Le composant au moment de la conception d'élément de rapport personnalisé fournit une aire de conception activée qui prend en charge les opérations de glisser-déplacer et l'intégration avec l'Explorateur de propriétés [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], tout en fournissant des éditeurs de propriété personnalisée.  
@@ -29,9 +29,9 @@ ms.locfileid: "48107489"
  Les propriétés définies à l'aide du composant au moment de la conception dans l'environnement de développement sont sérialisées et désérialisées par l'environnement de conception hôte, puis stockées comme éléments dans le fichier RDL (Report Definition Language). Lorsque le rapport est exécuté par le processeur de rapports, les propriétés définies à l'aide du composant au moment de la conception sont passées par le processeur de rapports à un composant d'exécution d'élément de rapport personnalisé, qui génère l'élément de rapport personnalisé et le repasse au processeur de rapports.  
   
 > [!NOTE]  
->  Le composant au moment de la conception d’élément de rapport personnalisé est implémenté en tant que composant [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Ce document décrit les détails d'implémentation spécifiques au composant au moment de la conception d'élément de rapport personnalisé. Pour plus d’informations sur le développement de composants à l’aide de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consultez [Composants dans Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) dans MSDN Library.  
+>  Le composant au moment de la conception d’élément de rapport personnalisé est implémenté en tant que composant [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Ce document décrit les détails d'implémentation spécifiques au composant au moment de la conception d'élément de rapport personnalisé. Pour plus d’informations sur le développement de composants à l’aide de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consultez [Composants dans Visual Studio](https://go.microsoft.com/fwlink/?LinkId=116576) dans MSDN Library.  
   
- Pour un exemple d’élément de rapport personnalisé totalement implémenté, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
+ Pour un exemple d’élément de rapport personnalisé totalement implémenté, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
 ## <a name="implementing-a-design-time-component"></a>Implémentation d'un composant au moment de la conception  
  La classe principale d'un composant au moment de la conception d'élément de rapport personnalisé est héritée de la classe `Microsoft.ReportDesigner.CustomReportItemDesigner`. En plus des attributs standard utilisés pour un contrôle [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], votre classe de composant doit définir un attribut `CustomReportItem`. Cet attribut doit correspondre au nom de l'élément de rapport personnalisé tel que défini dans le fichier reportserver.config. Pour obtenir une liste des attributs [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consultez la section Attributs dans la documentation du SDK du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
@@ -186,7 +186,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Utilisation d'ornements  
- Les classes d'éléments de rapport personnalisés peuvent également implémenter une classe `Microsoft.ReportDesigner.Design.Adornment`. Un ornement permet au contrôle d'élément de rapport personnalisé de fournir des zones à l'extérieur du rectangle principal de l'aire de conception. Ces zones permettent de gérer les événements de l'interface utilisateur, tels que les clics de souris et les opérations de glisser-déplacer. Le `Adornment` classe qui est définie dans le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` espace de noms est une implémentation directe de la <xref:System.Windows.Forms.Design.Behavior.Adorner> classe trouvé dans les Windows Forms. Pour obtenir une documentation complète sur le `Adorner` de classe, consultez [vue d’ensemble du Service de comportement](http://go.microsoft.com/fwlink/?LinkId=116673) dans MSDN library. Pour l’exemple de code qui implémente un `Microsoft.ReportDesigner.Design.Adornment` de classe, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Les classes d'éléments de rapport personnalisés peuvent également implémenter une classe `Microsoft.ReportDesigner.Design.Adornment`. Un ornement permet au contrôle d'élément de rapport personnalisé de fournir des zones à l'extérieur du rectangle principal de l'aire de conception. Ces zones permettent de gérer les événements de l'interface utilisateur, tels que les clics de souris et les opérations de glisser-déplacer. Le `Adornment` classe qui est définie dans le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` espace de noms est une implémentation directe de la <xref:System.Windows.Forms.Design.Behavior.Adorner> classe trouvé dans les Windows Forms. Pour obtenir une documentation complète sur le `Adorner` de classe, consultez [vue d’ensemble du Service de comportement](https://go.microsoft.com/fwlink/?LinkId=116673) dans MSDN library. Pour l’exemple de code qui implémente un `Microsoft.ReportDesigner.Design.Adornment` de classe, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Pour plus d'informations sur la programmation et l'utilisation de Windows Forms dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], consultez les rubriques suivantes dans MSDN Library :  
   
@@ -194,12 +194,12 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Composants dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
--   Procédure pas à pas : création d'un contrôle Windows Forms qui tire parti des fonctionnalités au moment de la conception de Visual Studio  
+-   Procédure pas à pas : Création d’un contrôle de formulaire Windows qui tire parti des fonctionnalités au moment du Design de Visual Studio  
   
 ## <a name="see-also"></a>Voir aussi  
  [Architecture des éléments de rapports personnalisés](custom-report-item-architecture.md)   
  [Création d’un composant d’exécution d’éléments de rapport personnalisé](creating-a-custom-report-item-run-time-component.md)   
  [Bibliothèques de classes d’éléments de rapports personnalisés](custom-report-item-class-libraries.md)   
- [Procédure : déployer un élément de rapport personnalisé](how-to-deploy-a-custom-report-item.md)  
+ [Comment : Déployer un élément de rapport personnalisé](how-to-deploy-a-custom-report-item.md)  
   
   

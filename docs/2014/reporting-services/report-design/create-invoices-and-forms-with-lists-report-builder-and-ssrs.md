@@ -11,12 +11,12 @@ ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c09c3d61cb371e314d511754498f65919d85b507
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7026a1fcdfa3a030761d11c2f8d763220fd436d8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161519"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375221"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Listes (Générateur de rapports et SSRS)
   Une région de données de liste est répétée pour chaque groupe ou ligne du dataset du rapport. Une liste peut être utilisée pour créer des formulaires ou des rapports de forme libre, tels que des factures, ou associés à d'autres régions de données. Vous pouvez définir des listes contenant n'importe quel nombre d'éléments de rapport. Une liste peut être imbriquée dans une autre pour fournir plusieurs groupes de données.  
@@ -24,9 +24,9 @@ ms.locfileid: "48161519"
 > [!NOTE]  
 >  Vous pouvez publier des listes hors d'un rapport en tant que parties du rapport. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Pour prendre en main les listes rapidement, consultez [Didacticiel : création d’un rapport de forme libre &#40;Générateur de rapports&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Pour commencer rapidement avec des listes, consultez [didacticiel : Création d’un rapport de forme libre &#40;Générateur de rapports&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
- Les exemples de rapports de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluent un rapport qui utilise une liste. Vous pouvez découvrir les listes en explorant la définition de rapport d'un exemple de rapport dans le Générateur de rapports ou le Concepteur de rapports ou en affichant un aperçu du rapport rendu dans le Générateur de rapports ou le Concepteur de rapports. Pour plus d'informations sur le téléchargement des exemples de rapports, consultez [Exemples de produits (SSRS) Server Reporting Services](http://go.microsoft.com/fwlink/?LinkID=198283).  
+ Les exemples de rapports de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluent un rapport qui utilise une liste. Vous pouvez découvrir les listes en explorant la définition de rapport d'un exemple de rapport dans le Générateur de rapports ou le Concepteur de rapports ou en affichant un aperçu du rapport rendu dans le Générateur de rapports ou le Concepteur de rapports. Pour plus d'informations sur le téléchargement des exemples de rapports, consultez [Exemples de produits (SSRS) Server Reporting Services](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "48161519"
 ##  <a name="DisplayingLayout"></a> Affichage des données dans une disposition libre  
  Pour organiser les données de rapport dans une disposition libre au lieu de les présenter sous forme de grille, vous pouvez ajouter une liste à l'aire de conception. Faites glisser les champs du volet des données de rapportvers la cellule. Par défaut, la cellule contient un rectangle qui joue le rôle de conteneur. Déplacez chaque champ dans le conteneur jusqu'à ce que vous obteniez la conception voulue. Utilisez les lignes d'alignement qui apparaissent lorsque vous faites glisser des zones de texte dans le conteneur rectangle pour vous aider à aligner les contours verticalement et horizontalement. Supprimez l'espace vide inutile en ajustant la taille de la cellule. Pour plus d’informations, consultez [Modifier la hauteur de ligne ou la largeur de colonne &#40;Générateur de rapports et SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md).  
   
- L'illustration suivante montre une liste qui affiche des informations sur une commande et comporte les champs suivants : Date, Order, Qty, Product, LineTotal et une image.  
+ La figure suivante montre une liste qui affiche des informations sur une commande, y compris ces champs : Date, Order, Qty, Product, LineTotal et une image.  
   
  ![Liste en mode Création, 4 champs et une image](../media/rs-basiclistformdesign.gif "Liste en mode Création, 4 champs et une image")  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48161519"
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

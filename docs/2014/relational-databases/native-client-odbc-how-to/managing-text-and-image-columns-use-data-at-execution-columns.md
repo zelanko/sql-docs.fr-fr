@@ -12,12 +12,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c63ff8eada8123e3bb7dfab5f8761f66ba2d2ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efaf7e38ef829d5250c10902151024e09df1723c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227129"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374091"
 ---
 # <a name="use-data-at-execution-columns-odbc"></a>Utiliser des colonnes de données en cours d'exécution (ODBC)
     
@@ -29,20 +29,20 @@ ms.locfileid: "48227129"
   
     -   Pour le quatrième paramètre, entrez un identificateur de colonne défini par le programme.  
   
-2.  L'appel de [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) retourne SQL_NEED_DATA, ce qui indique que les colonnes de données en cours d'exécution sont prêtes à être traitées.  
+2.  L'appel de [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) retourne SQL_NEED_DATA, ce qui indique que les colonnes de données en cours d'exécution sont prêtes à être traitées.  
   
 3.  Pour chaque colonne de données en cours d'exécution :  
   
-    -   Appelez [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) pour obtenir le pointeur du tableau de colonne. SQL_NEED_DATA est retourné s'il existe une autre colonne de données en cours d'exécution.  
+    -   Appelez [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) pour obtenir le pointeur du tableau de colonne. SQL_NEED_DATA est retourné s'il existe une autre colonne de données en cours d'exécution.  
   
     -   Appelez [SQLPutData](../native-client-odbc-api/sqlputdata.md) une ou plusieurs fois pour envoyer les données de la colonne jusqu'à ce que toute la longueur soit envoyée.  
   
-4.  Appelez [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) pour indiquer que toutes les données de la dernière colonne de données en cours d'exécution ont été envoyées. SQL_NEED_DATA n'est pas retourné.  
+4.  Appelez [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) pour indiquer que toutes les données de la dernière colonne de données en cours d'exécution ont été envoyées. SQL_NEED_DATA n'est pas retourné.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant montre comment lire des données de type caractères SQL_LONG variables à l'aide de SQLGetData. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’accueil des [exemples et projets de communautés Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).) Cette source de données doit être basée sur le pilote ODBC fourni par le système d'exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).) Cette source de données doit être basée sur le pilote ODBC fourni par le système d'exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
