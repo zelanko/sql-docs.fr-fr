@@ -21,12 +21,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03226910c9af65708504dc3d99865e88c9ab193e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00ef0f5df65f6b472e6c439e097c745d03d86040
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605157"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215150"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtres paramétrés - Filtres de lignes paramétrés
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47605157"
  Pour définir ou modifier un filtre de lignes paramétré, consultez [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Fonctionnement des filtres paramétrés  
- Un filtre de lignes paramétré utilise une clause WHERE pour sélectionner les données appropriées à publier. Plutôt que de spécifier une valeur littérale dans la clause (comme dans un filtre de lignes statique), vous spécifiez l'une des deux fonctions système suivantes ou les deux : SUSER_SNAME() et HOST_NAME(). Il est également possible d'utiliser des fonctions définies par l'utilisateur mais elles doivent inclure SUSER_SNAME() ou HOST_NAME() dans le corps de la fonction ou évaluer l'une de ces fonctions système (par exemple, `MyUDF(SUSER_SNAME()`). Si une fonction définie par l'utilisateur inclut SUSER_SNAME() ou HOST_NAME() dans le corps de la fonction, vous ne pouvez pas passer de paramètres à la fonction.  
+ Un filtre de lignes paramétré utilise une clause WHERE pour sélectionner les données appropriées à publier. Au lieu de spécifier une valeur littérale dans la clause (comme c'est le cas avec un filtre de lignes statique), vous spécifiez l'une des deux fonctions système suivantes ou les deux : SUSER_SNAME() et HOST_NAME(). Il est également possible d'utiliser des fonctions définies par l'utilisateur mais elles doivent inclure SUSER_SNAME() ou HOST_NAME() dans le corps de la fonction ou évaluer l'une de ces fonctions système (par exemple, `MyUDF(SUSER_SNAME()`). Si une fonction définie par l'utilisateur inclut SUSER_SNAME() ou HOST_NAME() dans le corps de la fonction, vous ne pouvez pas passer de paramètres à la fonction.  
   
  Les fonctions système SUSER_SNAME() et HOST_NAME() ne sont pas propres à la réplication de fusion mais elles sont utilisées par celle-ci pour le filtrage paramétré :  
   
@@ -72,7 +72,7 @@ ComputerName = HOST_NAME()
   
  Par exemple, la valeur correspondant à l'un des employés peut être « john5_laptop ». Lorsque l'Agent de fusion se connecte au serveur de publication, il compare la valeur retournée par SUSER_SNAME() aux valeurs de la table et ne télécharge que la ligne contenant la valeur « john5_laptop » dans la colonne **ComputerName** .  
   
- Il est également possible de combiner les fonctions dans un filtre. Si, par exemple, vous souhaitez qu'un employé ne reçoive les données que s'il se connecte avec son nom de connexion sur son ordinateur, la clause du filtre peut se présenter comme suit :  
+ Il est également possible de combiner les fonctions dans un filtre. Si, par exemple, vous souhaitez qu'un employé ne reçoive les données que s'il se connecte avec son nom de connexion sur son ordinateur, la clause du filtre peut se présenter comme suit :  
   
 ```  
 LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()  
@@ -95,7 +95,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  Par exemple, l'employée Pamela Ansman-Wolfe possède l'ID d'employé 280. Spécifiez la valeur de l'ID d'employé (280 dans notre exemple) comme valeur de HOST_NAME() lorsque vous créez un abonnement pour celle-ci. Lorsque l'Agent de fusion se connecte au serveur de publication, il compare la valeur retournée par HOST_NAME() aux valeurs de la table et ne télécharge que la ligne contenant la valeur 280 dans la colonne **EmployeeID** .  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Du fait que la fonction HOST_NAME() retourne une valeur de type **nchar** , vous devez utiliser CONVERT si la colonne dans la clause de filtre affiche un type de données numérique comme dans l'exemple ci-dessus. Pour des raisons de performances, nous vous recommandons de ne pas appliquer de fonctions aux noms de colonnes dans les clauses de filtre de lignes paramétrables, telles que `CONVERT(nchar,EmployeeID) = HOST_NAME()`. En revanche, il est conseillé d'adopter l'approche illustrée dans l'exemple : `EmployeeID = CONVERT(int,HOST_NAME())`. Cette clause peut être utilisée pour le paramètre **@subset_filterclause** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)mais elle ne peut généralement pas être utilisée dans l'Assistant Nouvelle publication (l'Assistant exécute la clause de filtre pour la valider mais l'opération échoue car le nom de l'ordinateur ne peut pas être converti en un type **int**). Si vous utilisez l'Assistant Nouvelle publication, nous vous recommandons de spécifier `CONVERT(nchar,EmployeeID) = HOST_NAME()` dans l'Assistant, puis d'utiliser ensuite [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) pour modifier la clause en `EmployeeID = CONVERT(int,HOST_NAME())` avant de créer un instantané de la publication.  
   
  **Pour substituer la valeur de HOST_NAME()**  
