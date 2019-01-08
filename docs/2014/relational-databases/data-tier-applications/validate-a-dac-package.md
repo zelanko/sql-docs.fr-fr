@@ -17,19 +17,19 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7aca52e23bf392c411063ab48ddd3e4ce9b6ae41
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809815"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798371"
 ---
 # <a name="validate-a-dac-package"></a>Valider un package DAC
   Il est conseillé d'examiner le contenu d'un package DAC avant de le déployer en production et de valider les actions de mise à niveau avant de mettre à niveau une DAC existante. Ceci tout particulièrement lors du déploiement de packages qui n'ont pas été développés dans votre organisation.  
   
 1.  **Avant de commencer :**  [Conditions préalables](#Prerequisites)  
   
-2.  **Pour mettre à niveau une DAC, à l'aide de :**  [Afficher le contenu d'une DAC](#ViewDACContents), [Afficher les modifications de base de données](#ViewDBChanges), [Afficher les actions de mise à niveau](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
+2.  **Pour mettre à niveau une DAC, à l’aide de :**  [Afficher le contenu d’une DAC](#ViewDACContents), [afficher les modifications de base de données](#ViewDBChanges), [afficher les Actions de mise à niveau](#ViewUpgradeActions), [comparer des DAC](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Conditions préalables  
  Nous vous recommandons de ne pas déployer un package DAC provenant de sources inconnues ou non approuvées. Ces DAC peuvent contenir du code malveillant susceptible d'exécuter un code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d’utiliser une DAC provenant d’une source inconnue ou non approuvée, déployez-la sur une instance de test isolée de [!INCLUDE[ssDE](../../includes/ssde-md.md)], exécutez [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code (par exemple les procédures stockées ou tout autre code défini par l’utilisateur) contenu dans la base de données.  
@@ -39,15 +39,15 @@ ms.locfileid: "43809815"
   
  **Afficher une DAC dans les outils de développement de SQL Server**  
   
-1.  Dans le menu **Fichier** , sélectionnez **Nouveau**, puis **Projet**.  
+1.  Dans le menu **Fichier**, sélectionnez **Nouveau**, puis **Projet**.  
   
 2.  Sélectionnez le modèle de projet **SQL Server** , puis spécifiez un **Nom**, un **Emplacement**et un **Nom de solution**.  
   
-3.  Dans l' **Explorateur de solutions**, cliquez avec le bouton droit sur le nœud de projet, puis sélectionnez **Propriétés**.  
+3.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud de projet, puis sélectionnez **Propriétés**.  
   
 4.  Sous l’onglet **Paramètres du projet** , dans la section **Type de sortie** , cochez la case **Application de la couche Données (fichier .dacpac)** , puis fermez la boîte de dialogue de propriétés.  
   
-5.  Dans l’ **Explorateur de solutions**, cliquez avec le bouton droit sur le nœud du projet et sélectionnez **Importer une application de la couche Données**.  
+5.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud du projet et sélectionnez **Importer une application de la couche Données**.  
   
 6.  Utilisez l’ **Explorateur de solutions** pour ouvrir tous les fichiers de la DAC, tels que la stratégie de sélection du serveur et les scripts de pré- et post-déploiement.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "43809815"
   
 1.  Créez un objet serveur SMO et définissez-le sur l'instance qui contient la DAC à afficher.  
   
-2.  Ouvrir un `ServerConnection` de l’objet et de se connecter à la même instance.  
+2.  Ouvrez un objet `ServerConnection` et connectez-vous à la même instance.  
   
 3.  Spécifiez le nom de la DAC dans une variable.  
   
-4.  Utilisez le `GetDatabaseChanges()` méthode pour récupérer un `ChangeResults` objet et redirigez l’objet vers un fichier texte pour générer un rapport simple des nouveaux, supprimés, objets et modifiés.  
+4.  Utilisez la méthode `GetDatabaseChanges()` pour récupérer un objet `ChangeResults`, et redirigez l'objet vers un fichier texte pour générer un rapport simple des objets nouveaux, supprimés et modifiés.  
   
 ### <a name="view-database-changes-example-powershell"></a>Afficher une exemple de modifications de base de données (PowerShell)  
  **Afficher une exemple de modifications de base de données (PowerShell)**  
@@ -123,13 +123,13 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 1.  Créez un objet serveur SMO et définissez-le sur l'instance qui contient la DAC déployée.  
   
-2.  Ouvrir un `ServerConnection` de l’objet et de se connecter à la même instance.  
+2.  Ouvrez un objet `ServerConnection` et connectez-vous à la même instance.  
   
 3.  Utilisez `System.IO.File` pour charger le fichier de package DAC.  
   
 4.  Spécifiez le nom de la DAC dans une variable.  
   
-5.  Utilisez le `GetIncrementalUpgradeScript()` méthode pour obtenir une liste des instructions Transact-SQL à une mise à niveau est exécuté et redirigez cette liste dans un fichier texte.  
+5.  Utilisez la méthode `GetIncrementalUpgradeScript()` pour obtenir la liste des instructions Transact-SQL qui seraient exécutées par une mise à niveau et redirigez cette liste vers un fichier texte.  
   
 6.  Fermez le flux de fichier utilisé pour lire le fichier de package DAC.  
   

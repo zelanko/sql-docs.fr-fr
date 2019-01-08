@@ -17,12 +17,12 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 91ca323cf22c41b44ae9f1664e1ca5801aad1e37
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 20fb2d2ec2094e87b904ffdc616942bfb449840c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681357"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528002"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Gestion des espaces de noms dans XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ WHERE ProductModelID=7
   
 ```  
 <AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>. </AWMI:step>  
-…  
+...  
 ```  
   
  Notez que le **espace de noms** mot clé est utilisé pour définir un nouveau préfixe d’espace de noms, « AWMI : ». Ce préfixe doit ensuite être utilisé dans la requête pour tous les éléments couverts par l'étendue de cet espace de noms.  
   
-### <a name="b-declaring-a-default-namespace"></a>B. Déclaration d'un espace de noms par défaut  
+### <a name="b-declaring-a-default-namespace"></a>b. Déclaration d'un espace de noms par défaut  
  Dans la requête précédente, un nouveau préfixe d'espace de noms a été défini. Il a fallu ensuite utiliser ce préfixe dans la requête pour sélectionner les structures XML appropriées. Une alternative consiste à déclarer un espace de noms par défaut, comme le montre la requête modifiée suivante :  
   
 ```  
@@ -68,7 +68,7 @@ where ProductModelID=7
   
 ```  
 <step xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
-…  
+...  
 ```  
   
  Notez, dans cet exemple, que l'espace de noms défini, `"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`, est créé pour remplacer l'espace de noms par défaut ou vide. Grâce à cela, vous pouvez vous passer d'un préfixe d'espace de noms dans l'expression de chemin utilisée lors de l'interrogation. Le préfixe d'espace de noms devient également inutile dans les noms d'élément qui apparaissent dans les résultats. De plus, l'espace de noms par défaut s'applique à tous les éléments, mais pas à leurs attributs.  
@@ -88,7 +88,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
   
@@ -130,7 +130,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
   

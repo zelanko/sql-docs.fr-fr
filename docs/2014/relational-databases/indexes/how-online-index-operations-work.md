@@ -17,12 +17,12 @@ ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2d9a0eb261f40773df48d01a3e6e32214174a5b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 102c3d72d811627074da570ee74902e51a4b86dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102639"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818062"
 ---
 # <a name="how-online-index-operations-work"></a>Fonctionnement des opérations d'index en ligne
   Cette rubrique définit les structures qui existent pendant une opération d'index en ligne et illustre les activités qui y sont associées.  

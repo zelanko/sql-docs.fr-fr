@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
@@ -19,12 +18,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b30ae5c49ec66b5612e1472c896084ebb92991d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6df40fef89955b792e31e0a7539a4adf9409d70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069739"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772571"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables Integration Services (SSIS)
   Les variables stockent des valeurs qu'un package [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ses conteneurs, tâches et gestionnaires d'événements peuvent utiliser au moment de l'exécution. Les scripts de la tâche de script et du composant Script peuvent également utiliser des variables. Les contraintes de précédence qui séquencent les tâches et les conteneurs dans un flux de travail peuvent utiliser des variables lorsque leurs définitions de contraintes incluent des expressions.  
@@ -46,7 +45,7 @@ ms.locfileid: "48069739"
 ## <a name="system-and-user-defined-variables"></a>Variables système et variables définies par l'utilisateur  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge deux types de variables : les variables définies par l’utilisateur et les variables système. Les variables définies par l'utilisateur sont définies par les développeurs de packages, tandis que les variables système sont définies par [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Vous pouvez créer autant de variables définies par l'utilisateur qu'un package l'exige, mais vous ne pouvez pas créer de variables système supplémentaires.  
   
- Toutes les variables (système et définies par l'utilisateur) peuvent être utilisées dans les liaisons de paramètres que la tâche d'exécution SQL utilise pour mapper des variables à des paramètres dans des instructions SQL. Pour plus d’informations, consultez [Tache d’exécution de requêtes SQL](control-flow/execute-sql-task.md) et [Paramètres et codes de retour dans la tâche d’exécution SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
+ Toutes les variables (système et définies par l’utilisateur) peuvent être utilisées dans les liaisons de paramètres que la tâche d’exécution SQL utilise pour mapper des variables à des paramètres dans des instructions SQL. Pour plus d’informations, consultez [Tâche d’exécution de requêtes SQL](control-flow/execute-sql-task.md) et [Paramètres et codes de retour dans la tâche d’exécution SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 > [!NOTE]  
 >  Les noms des variables définies par l’utilisateur et des variables système respectent la casse.  
@@ -92,7 +91,7 @@ ms.locfileid: "48069739"
  Expression  
  Spécifie l'expression affectée à la variable.  
   
- Nom     
+ Créer une vue d’abonnement  
  Spécifie le nom de la variable.  
   
  Espace de noms  
@@ -127,7 +126,7 @@ ms.locfileid: "48069739"
   
  Lorsque le système réinitialise le **IncludeInDebugDump** option `false`, cela peut remplacer la valeur sélectionnée par l’utilisateur.  
   
- Valeur  
+ Value  
  La valeur d'une variable définie par l'utilisateur peut être un littéral ou une expression. Une variable inclut des options permettant de définir la valeur de la variable et le type de données de la valeur. Les deux propriétés doivent être compatibles : par exemple, l'utilisation d'une valeur de chaîne avec un type de données Integer n'est pas valide.  
   
  Si la variable est configurée de façon à correspondre à une expression, vous devez fournir une expression. Au moment de l'exécution, l'expression est évaluée et le résultat de l'évaluation est affecté comme valeur de la variable. Par exemple, si une variable utilise l'expression `DATEPART("month", GETDATE())` , la valeur de la variable est l'équivalent numérique du mois de la date actuelle. L'expression doit être une expression valide qui utilise la syntaxe de grammaire d'expression [!INCLUDE[ssIS](../includes/ssis-md.md)] . Lorsqu'une expression est utilisée avec des variables, elle peut utiliser des littéraux et les opérateurs et fonctions fournis par la grammaire d'expression, mais elle ne peut pas faire référence aux colonnes d'un flux de données du package. La longueur maximale d'une expression est limitée à 4 000 caractères. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
@@ -141,9 +140,9 @@ ms.locfileid: "48069739"
 ## <a name="configuring-variables"></a>Configuration des variables  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)], consultez [Fenêtre Variables](../../2014/integration-services/variables-window.md).  
+ Pour plus d’informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , consultez [Fenêtre Variables](../../2014/integration-services/variables-window.md).  
   
- Pour en savoir plus sur les propriétés de la variable et pour plus d’informations sur la définition par programmation de ces propriétés, consultez <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
+ Pour en savoir plus sur les propriétés des variables et sur la définition par programme de ces propriétés, consultez <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
   
 ## <a name="related-tasks"></a>Tâches associées  
  [Ajouter, supprimer, modifier l’étendue d’une variable définie par l’utilisateur dans un package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  

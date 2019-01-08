@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
@@ -15,12 +14,12 @@ ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4460b94a758a60abe27d8e9f3a90567ecbcbaa13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163509"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785621"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurer un ordinateur multirésident pour l'accès à SQL Server
   Lorsqu'un serveur doit fournir une connexion à plusieurs réseaux ou sous-réseaux, le scénario classique consiste à utiliser un ordinateur multirésident. Bien souvent, cet ordinateur se trouve dans un réseau de périmètre (également appelé sous-réseau filtré). Cette rubrique explique comment configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le Pare-feu Windows avec fonctions avancées de sécurité pour fournir des connexions réseau à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement multirésident.  
@@ -58,7 +57,7 @@ ms.locfileid: "48163509"
   
 1.  Sur l’ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, cliquez sur **Démarrer**, cliquez sur **exécuter**, type `cmd` , puis [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-2.  Dans la fenêtre d’invite de commandes, tapez `ipconfig,` et appuyez sur ENTRÉE pour répertorier les adresses IP disponibles sur cet ordinateur.  
+2.  Dans la fenêtre d’invite de commandes, tapez `ipconfig,`, puis appuyez sur Entrée pour visualiser la liste des adresses IP disponibles sur cet ordinateur.  
   
     > [!NOTE]  
     >  La commande **ipconfig** répertorie parfois de nombreuses connexions possibles, notamment les connexions déconnectées. La commande **ipconfig** peut énumérer à la fois les adresses IPv4 et IPv6.  
@@ -100,7 +99,7 @@ ms.locfileid: "48163509"
   
 8.  Dans la page **Protocoles et ports** , sélectionnez **TCP**.  
   
-9. Sélectionnez **Ports locaux spécifiques**. Tapez les numéros de port en les séparant par des virgules, puis cliquez sur **Suivant**. Dans cet exemple, vous allez configurer le port par défaut ; Par conséquent, entrez `1433`.  
+9. Sélectionnez **Ports locaux spécifiques**. Tapez les numéros de port en les séparant par des virgules, puis cliquez sur **Suivant**. Dans cet exemple, vous devez configurer le port par défaut ; par conséquent, entrez `1433`.  
   
 10. Dans la page **Action** , passez en revue les options. Dans cet exemple, vous n'utilisez pas le pare-feu pour forcer des connexions sécurisées. Par conséquent, cliquez sur **Autoriser la connexion**, puis sur **Suivant**.  
   

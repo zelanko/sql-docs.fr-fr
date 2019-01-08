@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.pivottrans.f1
@@ -19,12 +18,12 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbca3b0ce90e56f3327e1e591a033e8d5fb212c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dd6e2b6fad2ea40c3a536b8b89eecbba441ecfd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157589"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771881"
 ---
 # <a name="pivot-transformation"></a>transformation de tableau croisé dynamique
   La transformation de tableau croisé dynamique transforme un dataset normalisé en une version moins normalisée mais plus compacte en croisant dynamiquement les données d'entrée sur une valeur de colonne. Par exemple, un dataset **Commandes** normalisé comprenant le nom de client, le produit et la quantité achetée contient généralement plusieurs lignes pour un même client ayant acheté plusieurs produits ; chaque ligne indiquant les détails de commande d’un produit différent. En croisant dynamiquement le dataset sur la colonne de produit, la transformation de tableau croisé dynamique peut sortir un dataset contenant une seule ligne par client. Cette ligne unique indique tous les achats du client ; le nom des produits est indiqué sous forme de nom de colonne et la quantité sous forme de valeur de la colonne de produit. Dans la mesure où tous les clients n'achètent pas chacun des produits, de nombreuses colonnes peuvent contenir des valeurs null.  
@@ -98,7 +97,7 @@ ms.locfileid: "48157589"
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
-|2004|Water Bottle – 30 oz.|2805.00|  
+|2004|Water Bottle - 30 oz.|2805.00|  
 |2002|Touring Tire|62364.225|  
   
  Le tableau suivant illustre un jeu de données après que les données ont été croisées dynamiquement dans la colonne **Year** .  
@@ -107,7 +106,7 @@ ms.locfileid: "48157589"
 |-|----------|----------|----------|  
 |HL Mountain Tire|141164.10|446297.775|1504884.15|  
 |Road Tire Tube|3592.05|35920.50|89801.25|  
-|Water Bottle – 30 oz.|*NULL*|*NULL*|2805.00|  
+|Water Bottle - 30 oz.|*NULL*|*NULL*|2805.00|  
 |Touring Tire|62364.225|375051.60|1041810.00|  
   
  Pour croiser dynamiquement les données de la colonne **Year** , comme indiqué ci-dessus, vous devez définir les options suivantes dans la boîte de dialogue **Tableau croisé dynamique** .  
@@ -135,7 +134,7 @@ ms.locfileid: "48157589"
  Pour plus d’informations sur la définition des propriétés de ce composant, consultez [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Transformation UNPIVOT](pivot-transformation.md)   
+ [Transformation Unpivot](pivot-transformation.md)   
  [Flux de données](../data-flow.md)   
  [Transformations Integration Services](integration-services-transformations.md)  
   

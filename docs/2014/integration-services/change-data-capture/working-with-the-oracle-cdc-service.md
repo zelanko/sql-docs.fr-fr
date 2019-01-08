@@ -4,32 +4,31 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac741a4f3c5ea5b4aecbe7943a55ec1f6bef145f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae456229482288e2fcf5e27f822e4f6f11540930
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110559"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749981"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Utilisation du service de capture de données modifiées Oracle
   Cette section décrit des concepts importants du service de capture de données modifiées Oracle. Les concepts inclus dans cette section sont les suivants :  
   
--   [La base de données MSXDBCDC](#BKMK_MSXDBCDC)  
+-   [Base de données MSXDBCDC](#BKMK_MSXDBCDC)  
   
      Cette section décrit les tables incluses dans cette base de données et leur importance pour la capture de données modifiées.  
   
--   [Les bases de données de capture de données modifiées](#BKMK_CDCdatabas)  
+-   [Bases de données CDC](#BKMK_CDCdatabas)  
   
      Cette section fournit une brève description des bases de données CDC. Ces bases de données sont créées à l'aide de la console du concepteur de capture de données modifiées Oracle. Pour plus d'informations sur les bases de données CDC, consultez la documentation fournie avec votre installation de la console du concepteur CDC.  
   
--   [À l’aide de la ligne de commande pour configurer le Service de capture de données modifiées](#BKMK_CommandConfigCDC)  
+-   [Utilisation de la ligne de commande pour configurer le service de capture de données modifiées](#BKMK_CommandConfigCDC)  
   
      Cette section décrit les commandes de ligne de commande qui peuvent être utilisées pour configurer le service de capture de données modifiées Oracle.  
   
@@ -115,15 +114,15 @@ ms.locfileid: "48110559"
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Procédures stockées de base de données MSXDBCDC  
  Cette section décrit les procédures stockées suivantes dans la base de données MSXDBCDC.  
   
--   [dbo.xcbcdc_reset_db (nom de la base de données)](#BKMK_dboxcbcdc_reset_db)  
+-   [dbo.xcbcdc_reset_db(Database Name)](#BKMK_dboxcbcdc_reset_db)  
   
--   [dbo.xdbcdc_disable_db(DBName)](#BKMK_dboxdbcdc_disable_db)  
+-   [dbo.xdbcdc_disable_db(dbname)](#BKMK_dboxdbcdc_disable_db)  
   
--   [dbo.xcbcdc_add_service(svcname,sqlusr)](#BKMK_dboxcbcdc_add_service)  
+-   [dbo.xcbcdc_add_service (svcname,sqlusr)](#BKMK_dboxcbcdc_add_service)  
   
--   [dbo.xdbcdc_start(DBName)](#BKMK_dboxdbcdc_start)  
+-   [dbo.xdbcdc_start(dbname)](#BKMK_dboxdbcdc_start)  
   
--   [dbo.xdbcdc_stop(DBName)](#BKMK_dboxdbcdc_stop)  
+-   [dbo.xdbcdc_stop(dbname)](#BKMK_dboxdbcdc_stop)  
   
 ###  <a name="BKMK_dboxcbcdc_reset_db"></a> dbo.xcbcdc_reset_db(Database Name)  
  Cette procédure efface les données d'une instance Oracle CDC. Mode d'utilisation  
@@ -187,7 +186,7 @@ ms.locfileid: "48110559"
 ### <a name="service-program-commands"></a>Commandes du programme de service  
  Cette section décrit les commandes suivantes utilisées pour configurer le service CDC.  
   
--   [config](#BKMK_config)  
+-   [Config](#BKMK_config)  
   
 -   [Créer](#BKMK_create)  
   
@@ -218,7 +217,7 @@ ms.locfileid: "48110559"
   
  **sql-username**, **sql-password** sont les informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mises à jour. Si sqlacct a un nom d'utilisateur vide et un mot de passe vide, le service de capture de données modifiées Oracle se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant l'authentification Windows.  
   
- **Remarque**: Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"**).  
+ **Remarque**: N’importe quel paramètre qui contient des espaces ou des guillemets doubles doit être inclu entre guillemets doubles («). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"**).  
   
 ###  <a name="BKMK_create"></a> Créer  
  Utilisez `Create` pour créer un service de capture de données modifiées Oracle à partir d'un script. La commande doit être exécutée par un administrateur de l'ordinateur. Voici un exemple de commande `Create` :  
@@ -244,7 +243,7 @@ ms.locfileid: "48110559"
   
  **sql-username**, **sql-password** sont le nom et le mot de passe du compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisés pour se connecter à l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si ces deux paramètres sont vides, le service de capture de données modifiées pour Oracle se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant l'authentification Windows.  
   
- **Remarque**: Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"**).  
+ **Remarque**: N’importe quel paramètre qui contient des espaces ou des guillemets doubles doit être inclu entre guillemets doubles («). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"**).  
   
 ###  <a name="BKMK_delete"></a> Supprimer  
  Utilisez `Delete` pour supprimer correctement le service de capture de données modifiées Oracle à partir d'un script. Cette commande doit être exécutée par un administrateur de l'ordinateur. Voici un exemple de commande `Delete` .  
@@ -259,10 +258,10 @@ ms.locfileid: "48110559"
   
  **cdc-service-name** est le nom du service de capture de données modifiées (CDC) à supprimer.  
   
- **Remarque**: Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"**).  
+ **Remarque**: N’importe quel paramètre qui contient des espaces ou des guillemets doubles doit être inclu entre guillemets doubles («). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"**).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment utiliser l’Interface de ligne de commande de Service de capture de données modifiées](how-to-use-the-cdc-service-command-line-interface.md)   
+ [Procédure : utiliser l'interface de ligne de commande du service de capture de données modifiées](how-to-use-the-cdc-service-command-line-interface.md)   
  [Guide pratique pour préparer SQL Server pour CDC](prepare-sql-server-for-cdc.md)  
   
   

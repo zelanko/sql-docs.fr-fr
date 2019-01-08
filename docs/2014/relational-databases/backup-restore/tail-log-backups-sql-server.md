@@ -17,12 +17,12 @@ ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bf259a06d99b06e431d735e6194e17ae9bb19180
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6da8f9de22f1b3191d6fba1918e8c05a64d062f2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135605"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507368"
 ---
 # <a name="tail-log-backups-sql-server"></a>Sauvegardes de la fin du journal (SQL Server)
   Cette rubrique s'applique uniquement à la sauvegarde et la restauration des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] employant le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions.  
@@ -37,7 +37,7 @@ ms.locfileid: "48135605"
 ##  <a name="TailLogScenarios"></a> Scénarios qui nécessitent une sauvegarde de la fin du journal  
  Nous vous recommandons d'effectuer une sauvegarde de la fin du journal dans les scénarios suivants :  
   
--   Si la base de données est en ligne et que vous envisagez d'effectuer une opération de restauration de la base de données, commencez par sauvegarder la fin du journal. Pour éviter une erreur de base de données en ligne, vous devez utiliser... Option WITH NORECOVERY de le [sauvegarde](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction.  
+-   Si la base de données est en ligne et que vous envisagez d'effectuer une opération de restauration de la base de données, commencez par sauvegarder la fin du journal. Pour éviter une erreur de base de données en ligne, vous devez utiliser ... l’option WITH NORECOVERY de l’instruction [BACKUP](/sql/t-sql/statements/backup-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   Si une base de données est hors connexion, ne démarre pas et que vous devez restaurer la base de données, sauvegardez d'abord la fin du journal. Comme il est exclu d'effectuer une transaction à ce stade, l'utilisation de WITH NORECOVERY est facultative.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48135605"
 |Option BACKUP LOG|Commentaires|  
 |-----------------------|--------------|  
 |NORECOVERY|Utilisez NORECOVERY chaque fois que vous envisagez de poursuivre une opération de restauration sur la base de données. NORECOVERY fait passer la base de données en état de restauration. Ceci permet d'éviter des modifications dans la base de données après la sauvegarde de la fin du journal.  Le journal est tronqué sauf si l'option NO_TRUNCATE ou COPY_ONLY est aussi spécifiée.<br /><br /> **\*\* Important \* \***  nous recommandons d’éviter d’utiliser NO_TRUNCATE, sauf si la base de données est endommagée.|  
-|CONTINUE_AFTER_ERROR|Utilisez CONTINUE_AFTER_ERROR uniquement si vous sauvegardez la fin d'une base de données endommagée.<br /><br /> Remarque : Lorsque vous utilisez sauvegardez la fin du journal sur une base de données endommagée, certaines métadonnées capturées normalement dans les sauvegardes du journal peuvent être indisponible. Pour plus d’informations, consultez [Sauvegardes de la fin du journal avec des métadonnées de sauvegarde incomplètes](#IncompleteMetadata), plus loin dans cette rubrique.|  
+|CONTINUE_AFTER_ERROR|Utilisez CONTINUE_AFTER_ERROR uniquement si vous sauvegardez la fin d'une base de données endommagée.<br /><br /> Remarque : Si vous sauvegardez la fin du journal sur une base de données endommagée, certaines métadonnées capturées normalement dans des sauvegardes de journaux sont parfois indisponibles. Pour plus d’informations, consultez [Sauvegardes de la fin du journal avec des métadonnées de sauvegarde incomplètes](#IncompleteMetadata), plus loin dans cette rubrique.|  
   
 ##  <a name="IncompleteMetadata"></a> Sauvegardes de la fin du journal avec des métadonnées de sauvegarde incomplètes  
  Les sauvegardes de la fin du journal capturent la fin du journal même si la base de données est hors connexion ou endommagée, ou s'il y manque des fichiers de données. Cela peut aboutir à des métadonnées incomplètes à partir des commandes d'informations de restauration et de **msdb**. Mais seules les métadonnées sont incomplètes ; le journal capturé est complet et exploitable.  

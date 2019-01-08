@@ -1,5 +1,5 @@
 ---
-title: Modification de la Dimension Customer | Documents Microsoft
+title: Modification de la Dimension Customer | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9f922dfcc073ce72834515b42691bef2e3c90d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d777d39bed047ac1807ebb2413eec3539d70428
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019046"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514712"
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Leçon 3-2 : modification de la Dimension Customer
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,11 +32,11 @@ Vous pouvez modifier les noms d’attributs avec l’onglet **Structure de dimen
   
 3.  Modifiez les noms des attributs suivants de la même manière :  
   
-    -   Remplacez l’attribut**English Education** par l’attribut **Education**.  
+    -   **English Education** d’attribut - Modifier pour **éducation**  
   
-    -   Remplacez l’attribut**English Occupation** par l’attribut **Occupation**.  
+    -   **English Occupation** d’attribut - Modifier pour **profession**  
   
-    -   Remplacez l’attribut**State Province Name** par l’attribut **État-Province**.  
+    -   **State Province Name** d’attribut - Modifier pour **State-Province**  
   
 4.  Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
@@ -106,7 +106,7 @@ Après avoir créé un calcul nommé dans la vue de la source de données, vous 
   
 4.  Dans le champ de propriété **Name** , tapez **Nom complet**.  
   
-5.  Cliquez dans le champ de propriété **NameColumn** en bas, puis cliquez sur le bouton de navigation (**...**) pour ouvrir la boîte de dialogue **Colonne de nom** .  
+5.  Cliquez dans le **NameColumn** propriété champ du bas, puis cliquez sur le bouton de navigation (**...** ) pour ouvrir la **colonne nom** boîte de dialogue.  
   
 6.  Sélectionnez **SimpleDate** dans la liste **Colonne source** , puis cliquez sur **OK**.  
   

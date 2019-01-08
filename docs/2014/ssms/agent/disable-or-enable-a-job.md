@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - stopping jobs
@@ -15,12 +15,12 @@ ms.assetid: 5041261f-0c32-4d4a-8bee-59a6c16200dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 828d1489c56ffb30be77293bfe06f805ffe64a1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1fa9a2700bd2f6a9ce2b074b1633182fc30c9aa7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144489"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816911"
 ---
 # <a name="disable-or-enable-a-job"></a>Activer ou désactiver un travail
   Cette rubrique explique comment désactiver un travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lorsque vous désactivez un travail, celui-ci n'est pas supprimé et peut être éventuellement réactivé.  

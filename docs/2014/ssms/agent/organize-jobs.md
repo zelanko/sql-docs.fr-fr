@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job category
@@ -13,12 +13,12 @@ ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3373d6bb3adf749cc6c5f4aca3face1954ee6295
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53e0424f15818903e913fc41e4a5a4a3fdade41d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206229"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786401"
 ---
 # <a name="organize-jobs"></a>organiser les travaux
   Les catégories de travaux permettent d'organiser les travaux afin d'en faciliter le filtrage et le regroupement. Par exemple, vous pouvez organiser tous vos travaux de sauvegarde de base de données dans la catégorie Maintenance de bases de données. Vous pouvez également créer vos propres catégories de travaux.  
@@ -34,7 +34,7 @@ ms.locfileid: "48206229"
 |Explique comment créer une catégorie de travaux.|[Créer une catégorie de travaux](create-a-job-category.md)|  
 |Explique comment supprimer une catégorie de travaux.|[Supprimer une catégorie de travaux](delete-a-job-category.md)|  
 |Explique comment attribuer un travail à une catégorie de travaux.|[Affecter un travail à une catégorie de travaux](assign-a-job-to-a-job-category.md)|  
-|Décrit comment modifier l'appartenance à une catégorie de travaux.|[Modifier l’appartenance d’une catégorie de travaux](change-the-membership-of-a-job-category.md)|  
+|Décrit comment modifier l'appartenance à une catégorie de travaux.|[Change the Membership of a Job Category](change-the-membership-of-a-job-category.md)|  
 |Décrit comment répertorier les informations de catégorie.|[Répertorier les informations de catégorie de travaux](list-job-category-information.md)|  
   
   

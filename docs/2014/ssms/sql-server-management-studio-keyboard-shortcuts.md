@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -21,12 +20,12 @@ ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20fe82c5ca0060d5a373f90fe72b8f4468240af8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085839"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794731"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Raccourcis clavier dans SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] propose deux schémas de clavier. Par défaut, il utilise le schéma [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] avec les raccourcis clavier basés sur [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre également un schéma de clavier semblable au schéma standard de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Pour modifier le schéma de clavier ou ajouter d'autres raccourcis clavier, cliquez dans le menu **Outils** sur **Options**. Sélectionnez le schéma de clavier désiré dans la page **Environnement**, **Clavier** .  
@@ -103,7 +102,7 @@ ms.locfileid: "48085839"
 |Déplacer le curseur vers le bas|Bas|Bas|  
 |Placer le curseur au début de la ligne|Origine|Origine|  
 |Placer le curseur à la fin de la ligne|END|END|  
-|Placer le curseur au début du document|CTRL+ORIGINE|Ctrl+Origine|  
+|Placer le curseur au début du document|Ctrl+Origine|Ctrl+Origine|  
 |Placer le curseur à la fin du document|CTRL+FIN|CTRL+FIN|  
 |Déplacer le curseur d'un écran vers le haut|Pg. préc|Pg. préc|  
 |Déplacer le curseur d'un écran vers le bas|Pg. suiv|Pg. suiv|  
@@ -138,7 +137,7 @@ ms.locfileid: "48085839"
 |Étendre la sélection d'une page vers le bas|Maj+Pg. suiv|Maj+Pg. suiv|  
 |Sélectionner le document actif tout entier|Ctrl+A|Ctrl+A|  
 |Sélectionner le mot contenant le curseur ou le mot le plus proche|Ctrl+W|Ctrl+W|  
-|Effectuer la sélection de l'emplacement actuel dans l'éditeur vers l'emplacement précédent dans l'éditeur|Ctrl + =|Ctrl + =|  
+|Effectuer la sélection de l'emplacement actuel dans l'éditeur vers l'emplacement précédent dans l'éditeur|Ctrl + =|Ctrl + =|  
 |Étendre la sélection jusqu'en haut de la fenêtre active|Ctrl+Maj+Pg. préc|Ctrl+Maj+Pg. préc|  
 |Étendre la sélection en plaçant le curseur sur la dernière ligne affichée|Ctrl+Maj+Pg. suiv|Ctrl+Maj+Pg. suiv|  
 |Étendre la sélection d'un mot vers la droite|Ctrl+Maj+Flèche droite|Ctrl+Maj+Flèche droite|  
@@ -361,7 +360,7 @@ ms.locfileid: "48085839"
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Afficher la boîte de dialogue **Rechercher**|Ctrl+F|Ctrl+F|  
-|Affiche l'onglet ***** In Files ***** de la boîte de dialogue **Rechercher** .|||  
+|Affiche l'onglet **In Files** de la boîte de dialogue **Rechercher** .|||  
 |Affiche la définition du symbole sélectionné.|F12|Pas d'équivalent|  
 |Affiche la liste des références pour le symbole sélectionné.|Maj+F12|Pas d'équivalent|  
 |Afficher la boîte de dialogue **Remplacer**|Ctrl+H|Ctrl+H|  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergepullsubscription
@@ -17,12 +16,12 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43397c243985fac65e14be8af3acadf129fd8114
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a71f486318c9431e25898b36343c67562da5451e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714937"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784681"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  [  **@value=**] **'***valeur***'**  
  Est la nouvelle valeur pour la propriété spécifiée. *valeur*est **nvarchar (255)**, et peut prendre l’une des valeurs dans la table.  
   
-|Propriété|Valeur|Description|  
+|Propriété|Value|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Emplacement de stockage du dossier d'instantanés, si cet emplacement est différent ou en complément de l'emplacement par défaut.|  
 |**description**||Description de cet abonnement extrait.|  
@@ -108,7 +107,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
  Après avoir modifié le nom de connexion ou le mot de passe d'un Agent, vous devez arrêter et redémarrer celui-ci avant que la modification prenne effet.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_changemergepullsubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  

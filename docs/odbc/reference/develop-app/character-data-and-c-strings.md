@@ -21,12 +21,12 @@ ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df2afd988e46692f816c22e69a31b33833129ff1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00daac655f0c435c1ee22239d3d4aafa23065997
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809387"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515890"
 ---
 # <a name="character-data-and-c-strings"></a>Données caractères et chaînes C
 Les paramètres d’entrée qui font référence aux données de caractères de longueur variable (par exemple, les noms de colonnes, paramètres dynamiques et les valeurs d’attribut de chaîne) disposent d’un paramètre de longueur. Si l’application termine par le caractère null, comme cela est courant en C, les chaînes, il fournit en tant qu’argument soit la longueur en octets de la chaîne (sans la marque de fin null) ou SQL_NTS (String Null-Terminated). Un argument de longueur non négative spécifie la longueur réelle de la chaîne associée. L’argument de longueur peut être 0 pour spécifier une chaîne de longueur nulle, ce qui est différente d’une valeur NULL. La valeur négative SQL_NTS dirige le pilote pour déterminer la longueur de la chaîne en recherchant le caractère de fin de la valeur null.  
@@ -35,10 +35,10 @@ Les paramètres d’entrée qui font référence aux données de caractères de 
   
  Une attention particulière doit être prise par l’application et le pilote lors de l’envoi ou de récupération la durée pendant laquelle les données de caractères dans des parties avec **SQLPutData** ou **SQLGetData**. Si les données sont transmises en tant que série de chaînes se terminant par null, les caractères de caractère nul de terminaison sur ces chaînes doivent être supprimés avant que les données peuvent être réassemblées.  
   
- Un nombre de programmeurs ODBC ont confondu des données de caractères et chaînes C. Cet événement est un artefact de l’utilisation du langage C lors de la définition de fonctions ODBC. Si un pilote ODBC ou une application utilise un autre langage, n’oubliez pas que ODBC est indépendant du langage — cette confusion est moins susceptible de survenir.  
+ Un nombre de programmeurs ODBC ont confondu des données de caractères et chaînes C. Cet événement est un artefact de l’utilisation du langage C lors de la définition de fonctions ODBC. Si un pilote ODBC ou une application utilise une autre langue - n’oubliez pas que ODBC est indépendant du langage, cette confusion est moins susceptible de survenir.  
   
  Lorsque les chaînes C servent à stocker des données de type caractère, le caractère null de terminaison n’est pas considéré comme faisant partie des données et n’est pas compté dans le cadre de sa longueur en octets. Par exemple, le données de caractères « ABC » peut être maintenu en tant que la chaîne C « ABC\0 » ou le tableau de caractères {« A », « B », « C »}. La longueur d’octet des données est 3, si elle est traitée comme une chaîne ou un tableau de caractères.  
   
  Bien que les applications et pilotes utilisent couramment chaînes C (se terminant par null les tableaux de caractères) pour contenir les données de type caractère, il n’est pas nécessaire pour ce faire. En C, les données de caractères peuvent également être traitées comme un tableau de caractères (sans le caractère nul de terminaison) et sa longueur en octets passé séparément dans la mémoire tampon de longueur / d’indicateur.  
   
- Étant donné que les données caractères peuvent être conservées dans un tableau non –-se terminant par null et sa longueur en octets passé séparément, il est possible d’incorporer des caractères null dans les données de type caractère. Toutefois, le comportement de fonctions ODBC dans ce cas n’est pas défini, et il est spécifique au pilote si un pilote gère cela correctement. Par conséquent, les applications interopérables doivent gérer les données de caractères qui peuvent contenir des caractères null incorporés en tant que données binaires.
+ Étant donné que les données caractères peuvent être conservées dans un tableau non nul et sa longueur en octets passé séparément, il est possible d’incorporer des caractères null dans les données de type caractère. Toutefois, le comportement de fonctions ODBC dans ce cas n’est pas défini, et il est spécifique au pilote si un pilote gère cela correctement. Par conséquent, les applications interopérables doivent gérer les données de caractères qui peuvent contenir des caractères null incorporés en tant que données binaires.

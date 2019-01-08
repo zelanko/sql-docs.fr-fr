@@ -20,16 +20,16 @@ ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 169088bbd99de070bfff81ffd83f01fc0e4d44a7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 83253faf14d1ccabaa39aabb52d7d1265e13e728
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120166"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207688"
 ---
 # <a name="sqlcolumnprivileges-function"></a>Fonction SQLColumnPrivileges
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ODBC  
+ Version introduite : Conformité aux normes 1.0 ODBC : ODBC  
   
  **Résumé**  
  **SQLColumnPrivileges** renvoie une liste de colonnes et les privilèges associés pour la table spécifiée. Le pilote retourne les informations comme jeu de résultats sur spécifié *au paramètre StatementHandle*.  
@@ -143,7 +143,7 @@ SQLRETURN SQLColumnPrivileges(
 |COLUMN_NAME (ODBC 1.0)|4|Varchar non NULL|Nom de colonne. Le pilote retourne une chaîne vide pour une colonne qui n’a pas de nom.|  
 |FOURNISSEUR D’AUTORISATIONS (ODBC 1.0)|5|Varchar|Nom de l’utilisateur qui dispose du privilège ; NULL si non applicable à la source de données.<br /><br /> Pour toutes les lignes dans lequel la valeur dans la colonne GRANTEE est le propriétaire de l’objet, la colonne GRANTOR sera « _système ».|  
 |BÉNÉFICIAIRE (ODBC 1.0)|6|Varchar non NULL|Nom de l’utilisateur auquel l’autorisation a été accordée.|  
-|PRIVILÈGE (ODBC 1.0)|7|Varchar non NULL|Identifie le privilège de la colonne. Peut être une des opérations suivantes (ou d’autres prises en charge par les données source défini par l’implémentation) :<br /><br /> Sélectionnez : Le grantee est autorisé à récupérer des données pour la colonne.<br /><br /> INSERTION : Le grantee est autorisé à fournir des données pour la colonne dans les nouvelles lignes sont insérées dans la table associée.<br /><br /> Mise à jour : Le grantee est autorisé à mettre à jour des données dans la colonne.<br /><br /> RÉFÉRENCES : Le grantee est autorisé pour faire référence à la colonne dans une contrainte (par exemple, une valeur unique, référentielle, ou une contrainte de validation de table).|  
+|PRIVILÈGE (ODBC 1.0)|7|Varchar non NULL|Identifie le privilège de la colonne. Peut être une des opérations suivantes (ou d’autres prises en charge par les données source défini par l’implémentation) :<br /><br /> SÉLECTIONNEZ : Le grantee est autorisé à récupérer des données pour la colonne.<br /><br /> INSERTION : Le grantee est autorisé à fournir des données pour la colonne dans les nouvelles lignes sont insérées dans la table associée.<br /><br /> MISE À JOUR : Le grantee est autorisé à mettre à jour des données dans la colonne.<br /><br /> RÉFÉRENCES : Le grantee est autorisé pour faire référence à la colonne dans une contrainte (par exemple, une valeur unique, référentielle, ou une contrainte de validation de table).|  
 |IS_GRANTABLE (ODBC 1.0)|8|Varchar|Indique si le grantee est autorisé à accorder le privilège à d’autres utilisateurs ; « Oui », « Non » ou « NULL » si inconnu ou non applicable à la source de données.<br /><br /> Un privilège est possible d’accorder ou non transférables, mais pas les deux. Le jeu de résultats retourné par **SQLColumnPrivileges** ne contient jamais les deux lignes pour lequel toutes les colonnes à l’exception de la colonne IS_GRANTABLE contiennent la même valeur.|  
   
 ## <a name="code-example"></a>Exemple de code  

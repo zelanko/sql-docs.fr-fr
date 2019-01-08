@@ -1,5 +1,5 @@
 ---
-title: Tables et colonnes | Documents Microsoft
+title: Tables et colonnes de modèle tabulaire à Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 10133b2843c01f16134c028140394247c2669236
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f7a9844032ad24de1c81144ca742bfb185aecc36
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043423"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072156"
 ---
 # <a name="tables-and-columns"></a>Tables et colonnes 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34043423"
  **Métadonnées de table**  
  Les relations, les mesures, les rôles, les perspectives et les données collées sont des métadonnées qui définissent des objets dans le contexte d'une table.  
   
- **Données**  
+ **Data**  
  Les données sont remplies dans les colonnes de table lorsque vous importez d'abord les tables à l'aide de l'Assistant Importation de table ou en créant de nouvelles données dans les colonnes calculées. Lorsque des données changent au niveau de la source, ou lorsqu'un modèle est supprimé de la mémoire, vous devez exécuter une opération de traitement pour remplir à nouveau les données dans les tables.  
   
 ##  <a name="bkmk_working"></a> Utilisation de tables et de colonnes  
@@ -57,7 +57,7 @@ ms.locfileid: "34043423"
   
 ##  <a name="bkmk_related_tasks"></a> Tâches associées  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Ajouter des colonnes à une table](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|Décrit comment ajouter une colonne source à une définition de table.|  
 |[Supprimer une colonne](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|Explique comment supprimer une colonne de table de modèle à l'aide du concepteur de modèles ou à l'aide de la boîte de dialogue Propriétés de la table.|  
@@ -67,8 +67,8 @@ ms.locfileid: "34043423"
 |[Supprimer une table](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|Décrit comment supprimer des tables dans votre base de données model de l'espace de travail dont vous n'avez plus besoin.|  
 |[Renommer une table ou une colonne](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|Décrit comment renommer une table ou une colonne pour la rendre plus identifiable dans votre modèle.|  
 |[Définir le type de données d’une colonne](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|Décrit la manière de modifier le type de données d'une colonne. Le type de données définit comment les données de la colonne sont stockées et présentées.|  
-|[Masquer ou figer des colonnes](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Décrit comment masquer les colonnes que vous ne souhaitez pas afficher et comment conserver une zone d'un visible modèle pendant que vous faites défiler vers une autre zone du modèle en figeant (verrouillant) des colonnes spécifiques dans une région.|  
+|[Masquer ou figer des colonnes](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Décrit comment masquer des colonnes que vous ne souhaitez pas afficher et comment garder une zone d’un modèle visible pendant que vous faites défiler vers une autre zone du modèle en figeant (verrouillant) des colonnes spécifiques dans une zone.|  
 |[Colonnes calculées](../../analysis-services/tabular-models/ssas-calculated-columns.md)|Les rubriques de cette section décrivent comment utiliser les colonnes calculées pour ajouter des données agrégées à votre modèle.|  
-|[Filtrer et trier des données](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|Les rubriques de cette section décrivent comment filtrer ou trier des données à l'aide de contrôles dans le générateur de modèles.|  
+|[Filtrer et trier les données](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|Les rubriques de cette section décrivent comment filtrer ou trier des données à l'aide de contrôles dans le générateur de modèles.|  
   
   

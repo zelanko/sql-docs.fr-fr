@@ -13,12 +13,12 @@ ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: da18ee258d12a667280c601526f0433c1a5b0600
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93914da7f225fca03a5a078d1dd1d5b2c7890546
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070489"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514367"
 ---
 # <a name="createsslcertificatebinding-method-wmi-msreportserverconfigurationsetting"></a>Méthode CreateSSLCertificateBinding (WMI MSReportServer_ConfigurationSetting)
   Crée une liaison de certificat SSL.  
@@ -74,13 +74,13 @@ public void CreateSSLCertificateBinding(string application,
   
 2.  L'adresse IP spécifiée ne correspond à aucune adresse IP de cet ordinateur.  
   
-3.  L'adresse IP spécifiée est une adresse IP DHCP (modifications régulières) ; utilisez plutôt l'adresse IP générique (0.0.0.0).  
+3.  L’adresse IP spécifiée est une adresse IP DHCP (modifications régulières) ; utilisez plutôt l’adresse IP générique (0.0.0.0).  
   
 4.  L'adresse IP spécifiée ne correspond pas à l'adresse IP des réservations d'URL ET il n'existe pas de réservation d'URL générique ni de nom d'hôte.  
   
 5.  Une réservation d'URL qui spécifie un nom d'hôte existe, mais le nom d'hôte ne correspond pas au nom d'hôte de certificat.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

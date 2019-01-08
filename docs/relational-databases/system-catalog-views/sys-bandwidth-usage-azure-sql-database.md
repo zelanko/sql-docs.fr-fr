@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5f671e8450255e9c03005c71d6f887c63559d3a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90ad88cfaae5c82b79d9da1fa7de5baa60fe46f3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603847"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403715"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,12 +44,12 @@ ms.locfileid: "47603847"
 |-----------------|-----------------|  
 |**time**|Heure à laquelle la bande passante a été consommée. Les lignes de cette vue sont par heure. Par exemple, 2009-09-19 02:00:00.000 indique que la bande passante a été consommée le 19 septembre 2009 entre 2h00 et 3h00.|  
 |**database_name**|Nom de la base de données qui a utilisé la bande passante.|  
-|**Direction**|Type de bande passante utilisé, un des suivants :<br /><br /> Entrée : Les données sont déplacées vers le [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Sortie : Données qui sont déplacées hors de la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-|**class**|Classe de bande passante utilisée, une des suivantes :<br />Interne : Les données sont déplacent au sein de la plateforme Azure.<br />Externes : Les données qui se déplacent hors de la plateforme Azure.<br /><br /> Cette classe est retournée uniquement si la base de données est engagée dans une relation de copie continue entre les régions ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Si la base de données ne participe pas à une relation de copie continue, les lignes « Interlink » ne sont pas retournées. Pour plus d'informations, consultez la section « Notes », plus loin dans cette rubrique.|  
+|**direction**|Type de bande passante utilisé, un des suivants :<br /><br /> Entrée : Les données sont déplacées vers [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Sortie : Les données sont déplacées depuis [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**class**|Classe de bande passante utilisée, une des suivantes :<br />Interne : Données qui se déplacent au sein de la plateforme Windows Azure.<br />Externes : Données qui se déplacent hors de la plateforme Microsoft Azure.<br /><br /> Cette classe est retournée uniquement si la base de données est engagée dans une relation de copie continue entre des régions ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Si une base de données n’est pas inclus dans une relation de copie continue, les lignes « Interlink » ne sont pas retournés. Pour plus d’informations, consultez la section « Remarques » plus loin dans cette rubrique.|  
 |**time_period**|La période de temps lorsque l’utilisation s’est produite est pointe ou fixes. La période de pointe (Peak) repose sur la zone dans laquelle le serveur a été créé. Par exemple, si un serveur a été créé dans la zone « US_Northwest », la période de pointe est définie comme étant entre 10h00 et et 18 h 00. PST.|  
 |**Quantité**|Quantité de bande passante, en kilo-octets (Ko), qui a été utilisée.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue est disponible uniquement dans le **master** base de données pour la connexion du principal au niveau du serveur.  
   
 ## <a name="remarks"></a>Notes  

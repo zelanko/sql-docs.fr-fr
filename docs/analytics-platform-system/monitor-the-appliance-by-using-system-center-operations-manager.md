@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df3e932427665e7225c83043fb48e933cb503028
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909719"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417560"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Moniteur avec System Center Operations Manager - Analytique Platform System
 Utilisez System Center Operations Manager (SCOM) pour surveiller l’appliance Analytique Platform System (APS).
@@ -39,7 +39,7 @@ Utilisez System Center Operations Manager (SCOM) pour surveiller l’appliance A
    
   
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>Pour surveiller SQL Server PDW avec SCOM  
-Après avoir configuré les Packs d’administration SCOM, cliquez sur le volet surveillance de SCOM et explorez pour **SQL Server Appliance** , puis **Microsoft SQL Server Parallel Data Warehouse**. Sous Microsoft SQL Server Parallel Data Warehouse, il existe quatre options : alertes, appareils, diagramme de l’Appliance et de nœuds.  
+Après avoir configuré les Packs d’administration SCOM, cliquez sur le volet surveillance de SCOM et explorez pour **SQL Server Appliance** , puis **Microsoft SQL Server Parallel Data Warehouse**. Sous Microsoft SQL Server Parallel Data Warehouse, il existe quatre options : Alertes, appareils, diagramme de l’Appliance et nœuds.  
   
 ### <a name="alerts"></a>Alertes  
 Les alertes sont où vous pouvez trouver les alertes actives à gérer.  

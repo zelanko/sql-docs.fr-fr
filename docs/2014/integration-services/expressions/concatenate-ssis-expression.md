@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - concatenation [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 809586f89288a930a672e2f6daa45fafe7901ec6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00886e865600da44f5b1e92adf175f975d446996
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146239"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811811"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (Concaténer) (expression SSIS)
   Concatène deux expressions en une seule.  
@@ -49,7 +48,7 @@ character_expression1 + character_expression2
   
  Les deux expressions doivent être du même type de données, ou l'une des expressions doit être implicitement convertible vers le type de données de l'autre expression. Par exemple, si la chaîne « La date de commande est » et la colonne **OrderDate** sont concaténées, les valeurs de la colonne **OrderDate** sont implicitement converties vers un type de données string. Deux valeurs numériques ne peuvent être concaténées que si elles sont toutes deux explicitement converties en un type de données chaîne.  
   
- Une concaténation ne peut utiliser qu'un seul type de données BLOB : DT_TEXT, DT_NTEXT ou DT_IMAGE.  
+ Une concaténation ne peut utiliser qu'un seul type de données BLOB : DT_TEXT, DT_NTEXT ou DT_IMAGE.  
   
  Si l'un des éléments est NULL, le résultat est NULL.  
   
@@ -69,7 +68,7 @@ FirstName + ' ' + LastName
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Opérateurs et associativité](operator-precedence-and-associativity.md)   
- [Opérateurs &#40;SSIS Expression&#41;](operators-ssis-expression.md)  
+ [Priorités et associativité des opérateurs](operator-precedence-and-associativity.md)   
+ [Opérateurs &#40;expression SSIS&#41;](operators-ssis-expression.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Étape 4 : Remplir la zone de texte Détails | Microsoft Docs'
+title: 'Étape 4 : Remplir la zone de texte Détails | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5bb2a49043857cfe9278862efd9e540e4597808
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 060de551afa266dae4d5384fe765e16b997bcccd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706838"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206648"
 ---
-# <a name="step-4-populate-the-details-text-box"></a>Étape 4 : Remplir la zone de texte Détails
+# <a name="step-4-populate-the-details-text-box"></a>Étape 4 : Remplir la zone de texte Détails
 Pour remplir la zone de texte de détails, créez une nouvelle sous-routine nommée **recFields** et insérez le code suivant :  
   
 ```  
@@ -49,4 +49,4 @@ End Sub
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario de publication Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Étape 3 : Remplir la zone de liste des champs](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [Étape 3 : Remplir la zone de liste de champs](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

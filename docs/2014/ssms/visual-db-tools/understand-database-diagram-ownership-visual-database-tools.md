@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.diagnostic.CannotOpenWithInvalidOwner
@@ -16,12 +16,12 @@ ms.assetid: 4a27a48e-c4ef-4017-82b8-0cac4d0bbcac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fef70305887b7d0b2d5face1dc31a2e7ea451c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 6056a5136d8aceab338a18b32ecfac35a1af0364
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102449"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773611"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>Comprendre la propriété du diagramme de base de données (Visual Database Tools)
   Pour utiliser le Concepteur de diagrammes de base de données, il doit d’abord être installé par un membre du rôle db_owner (rôle de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) pour contrôler l’accès aux diagrammes. Chaque schéma a un seul propriétaire : l'utilisateur qui l'a créé. Pour plus d’informations sur la configuration des schémas, consultez [Set Up Database Diagram Designer &#40;Visual Database Tools&#41;](visual-database-tools.md).  

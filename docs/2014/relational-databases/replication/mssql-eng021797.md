@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG021797 error
@@ -13,12 +12,12 @@ ms.assetid: 54d83a1e-43fd-449c-a2b2-fdda2609a534
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03ebaa70dbb9fb7e774d48b59e06a6d4dc03b11b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88f9fff576b52e83073bbf917a43edf0a7648086
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097279"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753781"
 ---
 # <a name="mssqleng021797"></a>MSSQL_ENG021797
     
@@ -31,7 +30,7 @@ ms.locfileid: "48097279"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
-|Texte du message|'%s' doit être une connexion Windows valide sous la forme 'MACHINE\Login' ou 'DOMAIN\Login'. Consultez la documentation de '%s'.|  
+|Texte du message|'%s' doit être une connexion Windows valide de ce format : 'MACHINE\Connexion' ou 'DOMAIN\Connexion'. Consultez la documentation de '%s'.|  
   
 ## <a name="explanation"></a>Explication  
  Cette erreur est émise par les procédures stockées de réplication ci-dessous, si la valeur spécifiée pour le paramètre **@job_login** est NULL ou n'est pas correcte. Cette erreur peut se produire si un membre du rôle de base de données fixe **db_owner** exécute des scripts à partir d'anciennes versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le modèle de sécurité a changé dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]et ces scripts doivent être mis à jour.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b62f749bf308684a5d47386011339505b8a23bb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2dcccbdf117b52f32801020bb7a119ee429dbd7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222889"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780061"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Rôles d'utilisateur du service de capture de données modifiées pour Oracle par Attunity
   Cette section décrit les rôles d'utilisateur du service de capture de données modifiées pour Oracle par Attunity. Les rôles décrits sont des rôles de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les rôles Windows ou des rôles de base de données Oracle.  
@@ -24,7 +23,7 @@ ms.locfileid: "48222889"
 ## <a name="windows-user-roles"></a>Rôles d'utilisateur Windows  
  La section suivante décrit les rôles d'utilisateur Windows utilisés par le service de capture de données modifiées Oracle.  
   
-### <a name="computer-administrator-oracle-cdc-service"></a>Administrateur de l'ordinateur : service de capture de données modifiées Oracle  
+### <a name="computer-administrator-oracle-cdc-service"></a>Administrateur d'ordinateur : service de capture de données modifiées Oracle  
  L'administrateur de l'ordinateur est un utilisateur Windows chargé de créer et de gérer le service de capture de données modifiées sur l'ordinateur. Cet utilisateur doit appartenir au groupe des administrateurs de l'ordinateur local.  
   
  Les tâches effectuées par l'administrateur de l'ordinateur de service de capture de données modifiées Oracle sont les suivantes :  
@@ -129,7 +128,7 @@ ms.locfileid: "48222889"
   
  L'administrateur de base de données Oracle peut obtenir les scripts Oracle SQL à exécuter de façon à les évaluer avant de les exécuter. L'administrateur de base de données Oracle peut également exécuter directement des scripts Oracle SQL à partir de la console du concepteur de capture de données modifiées Oracle.  
   
- Si l'administrateur de base de données Oracle choisit d'utiliser la console du concepteur de capture de données modifiées Oracle, les informations d'identification de l'administrateur ne sont pas conservées sauf le contexte (dialogue) dans lequel elles ont été utilisées.  
+ Si l’administrateur de base de données Oracle choisit d’utiliser la console du concepteur de capture de données modifiées Oracle, les informations d’identification de l’administrateur ne sont pas conservées sauf le contexte (dialogue) dans lequel elles ont été utilisées.  
   
  L'administrateur de base de données Oracle travaille de concert avec l'administrateur de service de capture de données modifiées Oracle sur la configuration des instances Oracle CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

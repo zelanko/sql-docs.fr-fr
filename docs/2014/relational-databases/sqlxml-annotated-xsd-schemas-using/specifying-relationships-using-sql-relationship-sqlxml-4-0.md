@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - IDREFS relationships [SQLXML]
@@ -30,12 +28,12 @@ ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5ca0676d280a266561c45388beac938366d17ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ae1037a8b04ad1a16b8d42485105927015359a1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144909"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814871"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Spécification de relations à l'aide de sql:relationship (SQLXML 4.0)
   Les éléments d'un document XML peuvent être liés. Les éléments peuvent être imbriqués hiérarchiquement ; en outre, des relations ID, IDREF ou IDREFS peuvent être spécifiées entre les éléments.  
@@ -186,7 +184,7 @@ ms.locfileid: "48144909"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-a-relationship-chain"></a>B. Spécification d'une chaîne de relation  
+### <a name="b-specifying-a-relationship-chain"></a>b. Spécification d'une chaîne de relation  
  Pour cet exemple, vous souhaitez obtenir le document XML suivant à l'aide des données provenant de la base de données AdventureWorks :  
   
 ```  
@@ -200,7 +198,7 @@ ms.locfileid: "48144909"
   
  Pour chaque commande dans la table Sales.SalesOrderHeader, le document XML comporte une  **\<ordre >** élément. Et chaque  **\<ordre >** élément possède une liste de  **\<produit >** éléments enfants, un pour chaque produit demandé dans l’ordre.  
   
- Pour spécifier un schéma XSD qui produit cette hiérarchie, vous devez indiquer deux relations : OrderOD et ODProduct. La relation OrderOD spécifie la relation parent-enfant entre les tables Sales.SalesOrderHeader et Sales.SalesOrderDetail. La relation ODProduct spécifie la relation entre les tables Sales.SalesOrderDetail et Production.Product.  
+ Pour spécifier un schéma XSD qui produit cette hiérarchie, vous devez spécifier deux relations : OrderOD et ODProduct. La relation OrderOD spécifie la relation parent-enfant entre les tables Sales.SalesOrderHeader et Sales.SalesOrderDetail. La relation ODProduct spécifie la relation entre les tables Sales.SalesOrderDetail et Production.Product.  
   
  Dans le schéma suivant, le `msdata:relationship` annotation sur le  **\<produit >** élément spécifie deux valeurs : OrderOD et ODProduct. L'ordre dans lequel ces valeurs sont spécifiées est important.  
   

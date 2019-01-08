@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.fulltextindex
@@ -12,12 +12,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aac010a0dc1d9d6cd23b6ccdfbff5358455cddd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080429"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822743"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Boîte de dialogue Index de texte intégral (Visual Database Tools)
   Cette boîte de dialogue permet de créer un index de texte intégral si vous souhaitez effectuer des recherches en texte intégral sur les colonnes de type texte de vos tables de base de données. Un index de texte intégral se base sur un index normal ; vous devez donc d'abord le créer. L'index normal doit être créé sur une colonne unique, non null ; il est conseillé de choisir une colonne contenant des petites valeurs plutôt que des grandes.  
@@ -42,7 +42,7 @@ ms.locfileid: "48080429"
  Développée, elle affiche les propriétés **Colonnes** et **Nom de catalogue de texte intégral**.  
   
  **Colonnes**  
- Affiche une liste avec la virgule comme séparateur des noms de colonnes pouvant faire l'objet d'une recherche en texte intégral. Pour afficher la liste complète, cliquez sur le bouton de sélection **(...)**, à gauche du champ de propriété.  
+ Affiche une liste avec la virgule comme séparateur des noms de colonnes pouvant faire l'objet d'une recherche en texte intégral. Pour afficher la liste complète, cliquez sur le bouton de sélection (**...**), à gauche du champ de propriété.  
   
  **Full-Text Catalog Name**  
  Affiche le nom du catalogue de texte intégral dans lequel cet index de texte intégral est stocké. Pour stocker l'index dans un autre catalogue, cliquez sur le nom du catalogue et choisissez-en un autre dans la liste déroulante.  
@@ -63,7 +63,7 @@ ms.locfileid: "48080429"
  Indique si vous pouvez actuellement exécuter une recherche en texte intégral à l'aide de cet index de texte intégral.  
   
  **Paramètre du suivi des modifications**  
- Décrit le statut du suivi des modifications pour cet index : Manuel, Auto ou Inactif.  
+ Décrit le statut du suivi des modifications pour cet index : Manuel, Auto ou Inactif.  
   
  **Analyse terminée**  
  Indique si l'analyse la plus récente est terminée. Si cette propriété a la valeur Non, une analyse est actuellement en cours.  
@@ -87,7 +87,7 @@ ms.locfileid: "48080429"
  Affiche la date et l'heure de démarrage de la prochaine analyse.  
   
  **Type de l'analyse actuelle ou de la dernière analyse**  
- Affiche le type de l'analyse actuelle ou de la dernière analyse : Complet, Incrémentiel, Mettre à jour ou Propagation automatique.  
+ Affiche le type de l'analyse actuelle ou de la dernière analyse : Complet, Incrémentiel, Mettre à jour ou Propagation automatique.  
   
  **Nom d'index unique**  
  Affiche la liste de tous les noms de colonnes de cette base de données qui possèdent des index uniques à une seule colonne. Ces colonnes peuvent être utilisées pour créer un index de texte intégral.  

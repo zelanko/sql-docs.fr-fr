@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.updatestatisticstask.f1
@@ -16,12 +15,12 @@ ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 612f14114e43755f19fd79b9baacd34d5a1ad356
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa7b0df1374e10689c069d4f3e5da2a461817ede
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208869"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813381"
 ---
 # <a name="update-statistics-task"></a>Tâche Mettre à jour les statistiques
   La tâche Mettre à jour les statistiques met à jour les informations sur la distribution des valeurs de clé pour un ou plusieurs groupes de statistiques (collections) dans la table ou la vue indexée spécifiées. Pour plus d'informations, consultez [Statistics](../../relational-databases/statistics/statistics.md).  
@@ -46,14 +45,14 @@ ms.locfileid: "48208869"
 ## <a name="configuration-of-the-update-statistics-task"></a>Configuration de la tâche Mettre à jour les statistiques  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] . Cette tâche se trouve dans la section **Tâches du plan de maintenance** de la **boîte à outils** du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] .  
   
- Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)], cliquez sur la rubrique suivante :  
+ Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
 -   [Tâche Mettre à jour les statistiques &#40;Plan de maintenance&#41;](../../relational-databases/maintenance-plans/update-statistics-task-maintenance-plan.md)  
   
 ## <a name="related-tasks"></a>Tâches associées  
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches Integration Services](integration-services-tasks.md)   

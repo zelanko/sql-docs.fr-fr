@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
@@ -14,12 +13,12 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 33b5bab2bb9d812686b6afbc65e0a8292247634b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b309669027da801681c1386abe604fce2f915f3d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129049"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798121"
 ---
 # <a name="transactions-master-data-services"></a>Transactions (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], une transaction est enregistrée à chaque fois qu'une action est effectuée sur un membre. Les transactions peuvent être affichées par tous les utilisateurs et être inversées par les administrateurs. Les transactions affichent la date, l'heure et l'utilisateur qui a effectué l'action, ainsi que d'autres détails. Les utilisateurs peuvent ajouter une annotation à une transaction, pour indiquer pourquoi une transaction a eu lieu.  
@@ -57,11 +56,11 @@ ms.locfileid: "48129049"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Annuler une action en inversant une transaction (administrateurs uniquement)|[Inverser une Transaction &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
+|Annuler une action en inversant une transaction (administrateurs uniquement)|[Inverser une transaction &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenu associé  
   
--   [Les administrateurs &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+-   [Administrateurs &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
   
 -   [Annotations &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   

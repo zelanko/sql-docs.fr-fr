@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -18,12 +17,12 @@ ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e8059fcb984b4b2d6450cefaa20e5e01e06fb0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cba8e2547f2e8d13a399038a887a6c1b97351bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051199"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792879"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>Outils de dépannage de la connectivité des packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut des fonctionnalités et des outils que vous pouvez utiliser pour dépanner la connectivité entre les packages et les sources de données à partir desquelles les packages extraient et chargent des données.  
@@ -70,7 +69,7 @@ ms.locfileid: "48051199"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils de dépannage pour le développement de Package](troubleshooting-tools-for-package-development.md)   
- [Outils de dépannage pour l’exécution des packages](troubleshooting-tools-for-package-execution.md)  
+ [Outils de dépannage pour le développement des packages](troubleshooting-tools-for-package-development.md)   
+ [Outils de dépannage pour l'exécution des packages](troubleshooting-tools-for-package-execution.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
@@ -21,12 +20,12 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19516e1b90a04c29efdfc8175d003a30ddf7957c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071059"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763221"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
   Les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suivants peuvent s'abonner aux publications d'instantané et transactionnelle à l'aide d'abonnements par envoi de données (push). Les abonnements sont pris en charge pour les deux versions les plus récentes de chaque base de données listée, à l'aide de la version la plus récente du fournisseur OLE DB listé.  
@@ -39,7 +38,7 @@ ms.locfileid: "48071059"
 |Base de données|Système d'exploitation|Fournisseur|  
 |--------------|----------------------|--------------|  
 |Oracle|Toute plateforme prenant en charge Oracle|Fournisseur OLE DB Oracle (fourni par Oracle)|  
-|IBM DB2|MVS, AS400, Unix, Linux, Windows sauf 9.x|Fournisseur OLE DB du serveur HIS Microsoft (Host Integration Server)|  
+|IBM DB2|MVS, AS400, Unix, Linux, Windows sauf 9.x|Fournisseur OLE DB du serveur HIS Microsoft (Host Integration Server)|  
   
  Pour plus d'informations sur la création d'abonnements à Oracle et IBM DB2, consultez [Oracle Subscribers](oracle-subscribers.md) et [IBM DB2 Subscribers](ibm-db2-subscribers.md).  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48071059"
   
 -   Si un article est ajouté ou supprimé d'une publication, les abonnements aux abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent être réinitialisés.  
   
--   Les seules contraintes prises en charge pour tous les Abonnés non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont : NULL et NOT NULL. Les contraintes de clés primaires sont répliquées en tant qu'index uniques.  
+-   Les seules contraintes prises en charge pour tous les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont : NULL et NOT NULL. Les contraintes de clés primaires sont répliquées en tant qu'index uniques.  
   
 -   La valeur NULL est traitée différemment par différentes bases de données, ce qui affecte la façon dont une valeur vide, une chaîne vide ou une valeur NULL est représentée. Cela affecte à son tour le comportement des valeurs insérées dans des colonnes où des contraintes uniques sont définies. Par exemple, Oracle autorise plusieurs valeurs NULL dans une colonne considérée comme unique, alors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'autorise qu'une seule valeur NULL dans une colonne unique.  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], job steps
@@ -15,12 +15,12 @@ ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68f671d8c0345db830a6cdac463869b531b39011
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08a27fd6edbfa93fd76ae99186e2425e5279e8aa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104609"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818058"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Créer une étape de travail exécutant un script PowerShell
   Cette rubrique explique comment créer et définir une étape de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui exécute un script PowerShell dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,7 +48,7 @@ ms.locfileid: "48104609"
   
 #### <a name="to-create-a-powershell-script-job-step"></a>Pour créer une étape de travail exécutant un script PowerShell  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
   
 2.  Développez **SQL Server Agent**, créez un travail ou cliquez avec le bouton droit de la souris sur un travail existant, puis cliquez sur **Propriétés**. Pour plus d'informations sur la création d'un travail, consultez [Création de travaux](create-jobs.md).  
   
@@ -93,6 +93,6 @@ ms.locfileid: "48104609"
 ##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
  **Pour créer une étape de travail exécutant un script PowerShell**  
   
- Utilisez la `JobStep` classe à l’aide d’un langage de programmation que vous choisissez, tel que Visual Basic, Visual c# ou PowerShell.  
+ Utilisez la classe `JobStep` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell.  
   
   

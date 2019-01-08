@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
@@ -13,12 +12,12 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b28d456d299c0f408ec2c9f4a284156dadfe9491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd6980bd66e4aeca0672fd4c8c1bffb95e09b9ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079139"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770961"
 ---
 # <a name="odbc-destination"></a>Destination ODBC
   La destination ODBC charge en masse les données dans les tables de base de données compatibles ODBC. La destination ODBC utilise un gestionnaire de connexions ODBC pour se connecter à la source de données.  
@@ -28,18 +27,18 @@ ms.locfileid: "48079139"
  La destination ODBC comporte une sortie standard et une sortie d'erreur.  
   
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> Options de chargement  
- La destination ODBC peut utiliser l'un des deux modules de charge d'accès. Vous définissez le mode dans l’[Éditeur de source ODBC &#40;page Gestionnaire de connexions&#41;](../odbc-source-editor-connection-manager-page.md). Les deux modes sont :  
+ La destination ODBC peut utiliser l'un des deux modules de charge d'accès. Vous définissez le mode dans l’[Éditeur de source ODBC &#40;page Gestionnaire de connexions&#41;](../odbc-source-editor-connection-manager-page.md). Les deux modes sont :  
   
--   **Lot**: dans ce mode, la destination ODBC tente d’utiliser la méthode d’insertion la plus efficace en fonction des capacités perçues du fournisseur ODBC. Pour la plupart des fournisseurs modernes ODBC, cela implique de préparer une instruction INSERT avec des paramètres, puis d’utiliser une liaison de paramètre de table selon les lignes (où la taille de la table est contrôlée par la propriété **BatchSize** ). Si vous sélectionnez **Lot** et que le fournisseur ne prend pas en charge cette méthode, la destination ODBC bascule automatiquement en mode **Ligne par ligne** .  
+-   **Batch**: Dans ce mode, la destination ODBC tente d’utiliser la méthode d’insertion la plus efficace en fonction des capacités perçues du fournisseur ODBC. Pour la plupart des fournisseurs modernes ODBC, cela implique de préparer une instruction INSERT avec des paramètres, puis d’utiliser une liaison de paramètre de table selon les lignes (où la taille de la table est contrôlée par la propriété **BatchSize** ). Si vous sélectionnez **Lot** et que le fournisseur ne prend pas en charge cette méthode, la destination ODBC bascule automatiquement en mode **Ligne par ligne** .  
   
--   **Ligne par ligne**: dans ce mode, la destination ODBC prépare une instruction INSERT avec des paramètres et utilise **SQL Execute** pour insérer les lignes une par une.  
+-   **Ligne par ligne**: Dans ce mode, la destination ODBC prépare une instruction INSERT avec des paramètres et utilise **SQL Execute** pour insérer des lignes une par une.  
   
 ## <a name="error-handling"></a>Gestion des erreurs  
  La destination ODBC a une sortie d'erreur. La sortie d'erreur du composant contient les colonnes de sortie suivantes :  
   
--   **Code d’erreur**: numéro qui correspond à l’erreur actuelle. Consultez la documentation de votre base de données source pour obtenir la liste des erreurs. Pour obtenir la liste des codes d'erreur SSIS, consultez le Guide de référence des erreurs et des événements SSIS.  
+-   **Code d’erreur**: Le numéro qui correspond à l’erreur actuelle. Consultez la documentation de votre base de données source pour obtenir la liste des erreurs. Pour obtenir la liste des codes d'erreur SSIS, consultez le Guide de référence des erreurs et des événements SSIS.  
   
--   **Colonne d’erreur**: colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
+-   **Colonne d’erreur**: La colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
   
 -   Colonnes de données de sortie standard.  
   
@@ -60,11 +59,11 @@ ms.locfileid: "48079139"
   
  Pour plus d’informations, consultez l’une des rubriques suivantes :  
   
--   [Éditeur de Destination ODBC &#40;Page Gestionnaire de connexions&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [Éditeur de destination ODBC &#40;page Gestionnaire de connexions&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
--   [Éditeur de Destination ODBC &#40;Page mappages&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [Éditeur de destination ODBC &#40;page Mappages&#41;](../odbc-destination-editor-mappings-page.md)  
   
--   [Éditeur de Destination ODBC &#40;Page sortie d’erreur&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [Éditeur de destination ODBC &#40;page Sortie d’erreur&#41;](../odbc-destination-editor-error-output-page.md)  
   
  La boîte de dialogue **Éditeur avancé** contient les propriétés qui peuvent être définies par programme.  
   
@@ -76,13 +75,13 @@ ms.locfileid: "48079139"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Éditeur de Destination ODBC &#40;Page sortie d’erreur&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [Éditeur de destination ODBC &#40;page Sortie d’erreur&#41;](../odbc-destination-editor-error-output-page.md)  
   
--   [Éditeur de Destination ODBC &#40;Page mappages&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [Éditeur de destination ODBC &#40;page Mappages&#41;](../odbc-destination-editor-mappings-page.md)  
   
--   [Éditeur de Destination ODBC &#40;Page Gestionnaire de connexions&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [Éditeur de destination ODBC &#40;page Gestionnaire de connexions&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
--   [Charger des données à l’aide de la destination ODBC](odbc-destination.md)  
+-   [Charger des données à l'aide de la destination ODBC](odbc-destination.md)  
   
 -   [Propriétés personnalisées des destinations ODBC](odbc-destination-custom-properties.md)  
   

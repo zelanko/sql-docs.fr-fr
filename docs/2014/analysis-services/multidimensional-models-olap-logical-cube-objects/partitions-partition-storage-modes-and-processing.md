@@ -23,12 +23,12 @@ ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc0c149ab222976d643eb65ebde540af514bd86c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffb6331f3e02c0974320d8d9c71df9aff7602874
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218910"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507790"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Traitement et modes de stockage des partitions
   Le mode de stockage d'une partition affecte les performances de traitement et des requêtes, les besoins en espace de stockage, ainsi que les emplacements de stockage de la partition, de son cube et de son groupe de mesures parents. Le mode de stockage a également une incidence sur les options de traitement.  
@@ -54,7 +54,7 @@ ms.locfileid: "48218910"
 > [!NOTE]  
 >  Lorsque le mode ROLAP est utilisé, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut retourner des informations incorrectes sur le membre inconnu si une jointure est combinée avec une clause GROUP BY. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] élimine les erreurs d'intégrité relationnelles plutôt que de retourner la valeur du membre inconnu.  
   
- Si une partition utilise le mode de stockage ROLAP et sa source de données est stocké dans [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tente de créer des vues indexées pour contenir les agrégations de la partition. Si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne peut pas créer de vues indexées, il ne crée pas de tables d'agrégation. Bien que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gère les besoins de session pour la création de vues indexées sur [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], les conditions suivantes doivent être remplies par la partition ROLAP et les tables de son schéma remplissent [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour créer des vues indexées pour les agrégations :  
+ Si une partition utilise le mode de stockage ROLAP et que ses données sources sont stockées dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tente de créer des vues indexées pour contenir les agrégations de la partition. Si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne peut pas créer de vues indexées, il ne crée pas de tables d'agrégation. Même si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gère les exigences en matière de session pour créer des vues indexées sur le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], la création par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de vues indexées pour les agrégations exigent que la partition ROLAP et les tables de son schéma remplissent les conditions suivantes :  
   
 -   La partition ne peut pas contenir des mesures qui utilisent les fonctions d'agrégation `Min` ou `Max`.  
   
@@ -74,20 +74,20 @@ ms.locfileid: "48218910"
   
     -   QUOTED_IDENTIFIER  
   
--   La taille totale de l’index de clé, en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], ne peut pas dépasser 900 octets. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vérifie cette condition grâce aux colonnes de clés de longueur fixe lors du traitement de l’instruction CREATE INDEX. Toutefois, s’il existe des colonnes de longueur variable dans la clé d’index, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vérifie également cette condition pour chaque mise à jour pour les tables de base. Dans la mesure où des agrégations différentes correspondent à des définitions de vues différentes, le traitement ROLAP à l'aide de vues indexées peut réussir ou échouer en fonction de la structure de l'agrégation.  
+-   Dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], la taille totale de la clé d'index ne peut pas dépasser 900 octets. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vérifie cette condition grâce aux colonnes de clés de longueur fixe lors du traitement de l’instruction CREATE INDEX. Toutefois, s’il existe des colonnes de longueur variable dans la clé d’index, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vérifie également cette condition pour chaque mise à jour pour les tables de base. Dans la mesure où des agrégations différentes correspondent à des définitions de vues différentes, le traitement ROLAP à l'aide de vues indexées peut réussir ou échouer en fonction de la structure de l'agrégation.  
   
--   Les options suivantes doivent être activées (ON) pour la session de création de la vue indexée : ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING et ANSI_WARNING. Ce paramétrage peut être effectué dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   Les options suivantes doivent être activées (ON) pour la session de création de la vue indexée : ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING, et ANSI_WARNING. Ce paramétrage peut être effectué dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   L'option suivante doit être désactivée (OFF) pour la session de création de la vue indexée : NUMERIC_ROUNDABORT. Ce paramétrage peut être effectué dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   L'option suivante doit être activée (OFF) pour la session de création de la vue indexée : NUMERIC_ROUNDABORT. Ce paramétrage peut être effectué dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="holap"></a>HOLAP  
- Le mode de stockage HOLAP combine les attributs des modes de stockage MOLAP et ROLAP. Comme MOLAP, HOLAP les agrégations de la partition sont stockées dans une structure multidimensionnelle dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Dans le mode HOLAP, aucune copie des données source n'est stockée. Pour les requêtes qui accèdent uniquement aux données de synthèse dans les agrégations d'une partition, le stockage HOLAP est similaire au stockage MOLAP. Les requêtes qui accèdent aux données sources, comme celles qui descendent jusqu'au niveau d'une cellule de cube atomique pour laquelle aucune donnée d'agrégation n'existe, doivent extraire les données de la base de données relationnelle. Le temps de réponse à ces requêtes ne sera pas aussi rapide que si les données source avaient été stockées dans une structure MOLAP. Dans le mode HOLAP, les temps de requête sont généralement très différents selon que la requête peut être résolue dans le cache ou les agrégations, ou dans les données sources.  
+ Le mode de stockage HOLAP combine les attributs des modes de stockage MOLAP et ROLAP. Comme MOLAP, HOLAP les agrégations de la partition sont stockées dans une structure multidimensionnelle dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Dans le mode HOLAP, aucune copie des données source n'est stockée. Pour les requêtes qui accèdent uniquement aux données de synthèse dans les agrégations d'une partition, le stockage HOLAP est similaire au stockage MOLAP. Requêtes qui accèdent à la source de données-par exemple, si vous souhaitez Explorer d’une cellule de cube atomique pour lequel il n’existe aucune agrégation données-doit récupérer des données à partir de la base de données relationnelle et ne sera pas aussi rapide tels qu’ils seraient si la source de données ont été stockées dans le structur MOLAP e. Dans le mode HOLAP, les temps de requête sont généralement très différents selon que la requête peut être résolue dans le cache ou les agrégations, ou dans les données sources.  
   
  Les partitions stockées dans le mode HOLAP sont plus petites que leurs homologues MOLAP car elles ne contiennent pas de données sources, et elles permettent de répondre plus rapidement que les partitions ROLAP aux requêtes portant sur des données de synthèse. Le mode de stockage HOLAP convient généralement pour les partitions de cubes qui nécessitent des réponses rapides aux requêtes sur des données de synthèse calculées à partir d'un volume important de données source. Toutefois, lorsque les utilisateurs génèrent des requêtes touchant des données de niveau feuille, comme pour le calcul de valeurs médianes, le stockage MOLAP constitue généralement le meilleur choix.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en cache proactive &#40;Partitions&#41;](partitions-proactive-caching.md)   
- [Synchroniser les bases de données Analysis Services](../multidimensional-models/synchronize-analysis-services-databases.md)   
- [Partitions &#40;Analysis Services - données multidimensionnelles&#41;](partitions-analysis-services-multidimensional-data.md)  
+ [Synchroniser des base de données Analysis Services](../multidimensional-models/synchronize-analysis-services-databases.md)   
+ [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](partitions-analysis-services-multidimensional-data.md)  
   
   

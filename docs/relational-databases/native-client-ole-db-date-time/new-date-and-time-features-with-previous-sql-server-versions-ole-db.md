@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6757868bf492a08caec1b8062776d6634331f868
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a568fdfcf2e6dc6abd59d060f2e374339e13341
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666727"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534724"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Nouvelles fonctionnalités de date et d’heure avec les versions précédentes de SQL Server (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47666727"
   Cette rubrique décrit le comportement attendu lorsqu’une application cliente qui utilise des fonctionnalités améliorées de date et heure communique avec une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]et lorsqu’un client compilé avec une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] envoie des commandes à un serveur qui prend en charge améliorées des fonctionnalités de date et d’heure.  
   
 ## <a name="down-level-client-behavior"></a>Comportement de client de bas niveau  
- Applications clientes qui utilisent une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] voir les types date/heure de nouveau en tant que **nvarchar** colonnes. Les contenus des colonnes sont des représentations littérales. Pour plus d’informations, consultez la section « Formats de données : chaînes et littéraux » de [prise en charge du Type de données pour les améliorations OLE DB Date / heure](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). La taille de colonne est la longueur littérale maximale pour la précision spécifiée pour la colonne.  
+ Applications clientes qui utilisent une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] voir les types date/heure de nouveau en tant que **nvarchar** colonnes. Les contenus des colonnes sont des représentations littérales. Pour plus d’informations, consultez les « Formats de données : Section de chaînes et littéraux » de [prise en charge du Type de données pour les améliorations OLE DB Date / heure](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). La taille de colonne est la longueur littérale maximale pour la précision spécifiée pour la colonne.  
   
  API du catalogue retournent des métadonnées cohérentes avec le code de type de données de bas niveau retourné au client (par exemple, **nvarchar**) et la représentation de bas niveau associée (par exemple, le format littéral approprié). Toutefois, le nom du type de données retourné est le nom de type [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] réel.  
   
@@ -38,8 +38,8 @@ ms.locfileid: "47666727"
 |DBTYPE_DBTIMESTAMP|||Champs d'heure définis à zéro.|IRowsetChange échoue en raison de la troncation de chaîne si le champ d’heure est différent de zéro.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Champs de date définis à la date actuelle.|IRowsetChange échoue en raison de la troncation de chaîne si en fractions de seconde est différents de zéro.<br /><br /> Date est ignorée.|  
-|DBTYPE_DBTIME||Time(7)|Échec : littéral d'heure non valide.|OK|  
-|DBTYPE_DBTIMESTAMP|||Échec : littéral d'heure non valide.|OK|  
+|DBTYPE_DBTIME||Time(7)|Échec : littéral d’heure non valide.|OK|  
+|DBTYPE_DBTIMESTAMP|||Échec : littéral d’heure non valide.|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|OK|OK|  
 |DBTYPE_DBTIMESTAMP||datetime2 (7)|OK|OK|  
 |DBTYPE_DBDATE|Smalldatetime|Date|OK|OK|  
@@ -68,7 +68,7 @@ ms.locfileid: "47666727"
   
 |Type de paramètre|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|Date|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -82,7 +82,7 @@ ms.locfileid: "47666727"
   
 |Type de colonne|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|Date|DBTYPE_WSTR|10|NULL|NULL|  
+|date|DBTYPE_WSTR|10|NULL|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -94,7 +94,7 @@ ms.locfileid: "47666727"
   
 |Type de paramètre|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|Date|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -109,7 +109,7 @@ ms.locfileid: "47666727"
   
 |Type de colonne|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|Date|DBTYPE_WSTR|10|20|NULL|  
+|date|DBTYPE_WSTR|10|20|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
@@ -121,7 +121,7 @@ ms.locfileid: "47666727"
   
 |Type de colonne|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|Date|DBTYPE_WSTR|10|20|Date|  
+|date|DBTYPE_WSTR|10|20|date|  
 |time|DBTYPE_WSTR|8, 10..16|16,20..32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
@@ -131,13 +131,13 @@ ms.locfileid: "47666727"
 #### <a name="providertypes-rowset"></a>Ensemble de lignes PROVIDER_TYPES  
  Les lignes suivantes sont retournées pour les types date/heure :  
   
-|Type -><br /><br /> colonne|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Type -><br /><br /> colonne|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|»|»|»|»|»|»|  
+|LITERAL_SUFFIX|»|»|»|»|»|»|  
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
@@ -145,7 +145,7 @@ ms.locfileid: "47666727"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  

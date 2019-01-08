@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -22,12 +21,12 @@ ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf244ce793bfcf3e5e5a01d2a79166b49c18c4fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22355696fda59f984e21b72e1070aaa69cba9b97
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198219"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792351"
 ---
 # <a name="view-and-modify-article-properties"></a>Afficher et modifier les propriétés d'un article
   Cette rubrique décrit comment afficher et modifier les propriétés de l'article dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -157,11 +156,11 @@ ms.locfileid: "48198219"
   
 4.  Définissez la connexion créée à l'étape 1 pour la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, les propriétés de l’article à l’étape 3 ont été définies de manière incorrecte ou de l’article n’existe pas.  
+5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, soit les propriétés de l'article ont été définies de manière incorrecte à l'étape 3, soit l'article n'existe pas.  
   
 6.  (Facultatif) Pour modifier des propriétés, modifiez la valeur d'une des propriétés <xref:Microsoft.SqlServer.Replication.TransArticle> qui peuvent être définies.  
   
-7.  (Facultatif) Si vous avez spécifié une valeur de `true` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, appelez le <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> méthode pour valider les modifications sur le serveur. Si vous avez spécifié une valeur de `false` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (la valeur par défaut), les modifications sont envoyées au serveur immédiatement.  
+7.  (Facultatif) Si vous avez spécifié la valeur `true` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour valider les modifications sur le serveur. Si vous avez spécifié la valeur `false` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (valeur par défaut), les modifications sont envoyées immédiatement au serveur.  
   
 #### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-merge-publication"></a>Pour afficher ou modifier les propriétés d'un article qui appartient à une publication de fusion  
   
@@ -173,11 +172,11 @@ ms.locfileid: "48198219"
   
 4.  Définissez la connexion créée à l'étape 1 pour la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, les propriétés de l’article à l’étape 3 ont été définies de manière incorrecte ou de l’article n’existe pas.  
+5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, soit les propriétés de l'article ont été définies de manière incorrecte à l'étape 3, soit l'article n'existe pas.  
   
 6.  (Facultatif) Pour modifier des propriétés, modifiez la valeur d'une des propriétés <xref:Microsoft.SqlServer.Replication.MergeArticle> qui peuvent être définies.  
   
-7.  (Facultatif) Si vous avez spécifié une valeur de `true` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, appelez le <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> méthode pour valider les modifications sur le serveur. Si vous avez spécifié une valeur de `false` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (la valeur par défaut), les modifications sont envoyées au serveur immédiatement.  
+7.  (Facultatif) Si vous avez spécifié la valeur `true` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour valider les modifications sur le serveur. Si vous avez spécifié la valeur `false` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (valeur par défaut), les modifications sont envoyées immédiatement au serveur.  
   
 ###  <a name="PShellExample"></a> Exemple (RMO)  
  Cet exemple modifie un article de fusion pour spécifier le gestionnaire de logique métier utilisé par l'article.  
@@ -189,8 +188,8 @@ ms.locfileid: "48198219"
 ## <a name="see-also"></a>Voir aussi  
  [Implémenter un gestionnaire de logique métier pour un article de fusion](../implement-a-business-logic-handler-for-a-merge-article.md)   
  [Publier des données et des objets de base de données](publish-data-and-database-objects.md)   
- [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md)   
+ [Changer les propriétés des publications et des articles](change-publication-and-article-properties.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [Détection et résolution des conflits de réplication de fusion avancée](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
+ [Advanced Merge Replication Conflict Detection and Resolution](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

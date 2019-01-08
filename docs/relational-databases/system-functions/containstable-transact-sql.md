@@ -34,12 +34,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3614abd1e02425dcda0943f3e4b3773eeb8b4499
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b2a987309091ada65c036d518d948c21c521bded
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660102"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524447"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,9 +89,9 @@ CONTAINSTABLE
 <custom_proximity_term> ::=   
   NEAR (   
      {  
-        { <simple_term> | <prefix_term> } [ ,…n ]  
+        { <simple_term> | <prefix_term> } [ ,...n ]  
      |  
-        ( { <simple_term> | <prefix_term> } [ ,…n ] )   
+        ( { <simple_term> | <prefix_term> } [ ,...n ] )   
       [, <maximum_distance> [, <match_order> ] ]  
      }  
        )   
@@ -165,7 +165,7 @@ FROM table AS FT_TBL INNER JOIN
   
 -   dans la liste de sélection, pour indiquer la valeur de classement affectée à chaque ligne.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations d'exécution sont disponibles uniquement aux utilisateurs bénéficiant des privilèges SELECT appropriés sur la table ou sur les colonnes de la table référencée.  
   
 ## <a name="examples"></a>Exemples  
@@ -191,7 +191,7 @@ SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green') ORDER BY RANK DESC;
 SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green or Black') ORDER BY RANK DESC;  
 ```  
   
-### <a name="b-returning-rank-values"></a>B. Retour de valeurs de classement  
+### <a name="b-returning-rank-values"></a>b. Retour de valeurs de classement  
  L'exemple suivant recherche tous les noms de produits contenant les mots « frame », « wheel » ou « tire ». Une pondération différente est affectée à chacun des mots. Le degré de correspondance (valeur de classement) est indiqué pour chaque ligne retournée correspondant à ces critères de recherche. Les lignes ayant le degré de correspondance le plus élevé sont retournées en premier.  
   
 ```  

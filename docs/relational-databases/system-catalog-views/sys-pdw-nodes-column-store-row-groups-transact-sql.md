@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b3c09c2a1771f1fad8640031ea1c1327921f8c82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7332f9e4196c901777e0c35a349f55207e7608dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698237"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520364"
 ---
 # <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47698237"
 |**row_group_id**|**Int**|ID de ce groupe de lignes. Cet ID est unique dans la partition.|  
 |**dellta_store_hobt_id**|**bigint**|hobt_id des groupes de lignes delta, ou NULL si le type de groupe de lignes n'est pas delta. Un groupe de lignes delta est un groupe de lignes en lecture/écriture qui reçoit des enregistrements. Un groupe de lignes delta a la **OPEN** état. Un groupe de lignes delta est toujours au format rowstore et n'a pas été compressé au format columnstore.|  
 |**state**|**tinyint**|Numéro d'ID associé à state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**nvarchar(60)**|Description de l'état permanent du groupe de lignes :<br /><br /> OPEN - Un groupe de lignes en lecture/écriture qui reçoit des enregistrements. Un groupe de lignes ouvert est toujours au format rowstore et n'a pas été compressé au format columnstore.<br /><br /> CLOSED – Un groupe de lignes qui a été renseigné, mais pas encore compressé par le processus du moteur de tuple.<br /><br /> COMPRESSED – Un groupe de lignes rempli et compressé.|  
+|**state_desccription**|**nvarchar(60)**|Description de l'état permanent du groupe de lignes :<br /><br /> Ouvrez - un groupe de lignes en lecture/écriture qui reçoit des enregistrements. Un groupe de lignes ouvert est toujours au format rowstore et n'a pas été compressé au format columnstore.<br /><br /> FERMÉ - un groupe de lignes qui a été rempli, mais pas encore compressé par le processus du moteur de tuple.<br /><br /> COMPRESSÉ - un groupe de lignes rempli et compressé.|  
 |**total_rows**|**bigint**|Nombre total de lignes stockées physiquement dans le groupe de lignes. Certaines peuvent avoir été supprimées, mais elles sont toujours stockées. Le nombre maximal de lignes d'un groupe de lignes est 1 048 576 (hexadécimal FFFFF).|  
 |**deleted_rows**|**bigint**|Nombre de lignes stockées physiquement dans le groupe de lignes qui sont marqués pour suppression.<br /><br /> Toujours 0 pour DELTA les groupes de lignes.|  
 |**size_in_bytes**|**Int**|Taille combinée, en octets, de toutes les pages dans ce groupe de lignes. Cette taille n’inclut pas la taille requise pour stocker les métadonnées ou les dictionnaires partagés.|  
@@ -51,7 +51,7 @@ ms.locfileid: "47698237"
   
  Lorsqu'un groupe de lignes columnstore est rempli, il est compressé, et cesse de recevoir de nouvelles lignes. Lorsque vous supprimez des lignes d'un groupe compressé, elles sont conservées mais sont marquées comme étant supprimées. Les mises à jour dans un groupe compressé sont implémentées comme une suppression du groupe compressé, et une insertion dans un groupe ouvert.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation **VIEW SERVER STATE**.  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

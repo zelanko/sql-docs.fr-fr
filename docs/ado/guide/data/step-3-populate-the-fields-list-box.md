@@ -1,5 +1,5 @@
 ---
-title: 'Étape 3 : Remplir la zone de liste de champs | Microsoft Docs'
+title: 'Étape 3 : Remplir la zone de liste de champs | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9bf639f5b624c222ca115b443ec327b45b836b82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1aecb94fd7367b12ed2c1aaca06ffe26f586e604
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784007"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206888"
 ---
-# <a name="step-3-populate-the-fields-list-box"></a>Étape 3 : Remplir la zone de liste des champs
+# <a name="step-3-populate-the-fields-list-box"></a>Étape 3 : Remplir la zone de liste de champs
 Pour remplir la zone de liste de champs, insérez le code suivant dans le Gestionnaire d’événements Click de `lstMain`:  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : modification des propriétés d’une source de données de rapport | Microsoft Docs'
+title: 'Leçon 2 : Modification du rapport Source de données Propriétés | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,15 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e2a729c844d88ffb11b5de3622868fc9bc2eee17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa3dbc789b561702d21d705d1b9d362f7f3c01d7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159619"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416660"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
-  Dans cette leçon, vous allez utiliser le Gestionnaire de rapports pour sélectionner un rapport qui sera remis à ses destinataires. L’abonnement piloté par les données que vous allez définir distribue le rapport **Sales Order** créé dans le didacticiel [Créer un rapport de tableau de base &amp;#40;Didacticiel SSRS&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Au cours des étapes qui suivent, vous allez modifier les informations de connexion à la source de données utilisée par le rapport pour extraire les données. Seuls les rapports qui utilisent des **informations d’identification stockées** pour accéder à une source de données de rapport peuvent être distribués par le biais d’un abonnement piloté par les données. Les informations d'identification stockées sont nécessaires pour traiter les rapports de façon autonome.  
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Leçon 2 : Modification des propriétés d'une source de données de rapport
+  Dans cette leçon, vous allez utiliser le Gestionnaire de rapports pour sélectionner un rapport qui sera remis à ses destinataires. L’abonnement piloté par les données que vous allez définir distribue le rapport **Sales Order** créé dans le didacticiel [Créer un rapport de tableau de base &#40;Didacticiel SSRS &#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Au cours des étapes qui suivent, vous allez modifier les informations de connexion à la source de données utilisée par le rapport pour extraire les données. Seuls les rapports qui utilisent des **informations d’identification stockées** pour accéder à une source de données de rapport peuvent être distribués par le biais d’un abonnement piloté par les données. Les informations d'identification stockées sont nécessaires pour traiter les rapports de façon autonome.  
   
  Vous allez également modifier le dataset et le rapport pour qu'ils utilisent un paramètre permettant de filtrer le rapport sur `[Order]` de sorte que l'abonnement puisse générer plusieurs instances différentes du rapport pour des commandes et des formats de rendu spécifiques.  
   
@@ -53,19 +53,19 @@ ms.locfileid: "48159619"
   
 6.  Cliquez sur **Informations d'identification stockées en sécurité dans le serveur de rapports**.  
   
-7.  Tapez votre nom d'utilisateur (en respectant le format *domaine\utilisateur*) et votre mot de passe. Si vous n’avez pas l’autorisation d’accéder à la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] de base de données, spécifiez une connexion qui effectue.  
+7.  Tapez votre nom d'utilisateur (en respectant le format *domaine\utilisateur*) et votre mot de passe. Si vous n'êtes pas autorisé à accéder à la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , spécifiez une connexion qui rendra cet accès possible.  
   
-8.  Cliquez sur **Utiliser comme informations d'identification Windows lors de la connexion à la source de données**, puis cliquez sur **OK**. Si vous n’utilisez pas un compte de domaine (par exemple, si vous utilisez un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] connexion), ne cliquez pas sur cette case à cocher.  
+8.  Cliquez sur **Utiliser comme informations d'identification Windows lors de la connexion à la source de données**, puis cliquez sur **OK**. Si vous n'utilisez pas de compte de domaine (par exemple, si vous utilisez une connexion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ), n'activez pas cette case à cocher.  
   
 9. Cliquez sur **Tester la connexion** pour vous assurer que vous pouvez vous connecter à la source de données.  
   
 10. Cliquez sur **Appliquer**.  
   
-11. Affichez le rapport pour vérifier qu'il s'exécute avec les informations d'identification que vous avez spécifiées. Pour afficher le rapport, cliquez sur l'onglet **Affichage** . Notez que, une fois que le rapport est ouvert, vous devez sélectionner un nom d’employé et puis cliquez sur le **afficher le rapport** bouton pour afficher le rapport.  
+11. Affichez le rapport pour vérifier qu'il s'exécute avec les informations d'identification que vous avez spécifiées. Pour afficher le rapport, cliquez sur l'onglet **Affichage** . Notez qu'une fois le rapport ouvert, vous devez sélectionner le nom d'un employé, puis cliquer sur le bouton **Afficher le rapport** pour afficher le rapport.  
   
 ##  <a name="bkmk_modify_dataset"></a> Pour modifier AdventureWorksDataset  
   
-1.  Ouvrir le rapport Sales Orders dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
+1.  Ouvrez le rapport Sales Orders dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
 2.  Cliquez avec le bouton droit sur le dataset `AdventureWorksDataset` et cliquez sur **Propriétés du dataset**.  
   
@@ -114,19 +114,19 @@ ms.locfileid: "48159619"
   
          ![Visionneuse de rapports avec zone de paramètres visible](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "visionneuse de rapports avec zone de paramètres visible")  
   
-8.  Redéployez le rapport afin que la configuration de l'abonnement dans la leçon suivante puisse utiliser les modifications que vous avez apportées dans cette leçon. Pour plus d’informations sur les propriétés de projet utilisées dans le didacticiel de création d’une table, consultez la section « Pour publier le rapport sur le serveur de rapports (facultatif) » de la [Leçon 6 : ajout d’un regroupement et de totaux &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+8.  Redéployez le rapport afin que la configuration de l'abonnement dans la leçon suivante puisse utiliser les modifications que vous avez apportées dans cette leçon. Pour plus d’informations sur les propriétés du projet utilisé dans le didacticiel de la table, consultez la section « Pour publier le rapport sur le serveur de rapports (facultatif) » de [Leçon 6 : Ajout de regroupements et des totaux &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 ##  <a name="bkmk_redeploy"></a> Pour redéployer le rapport  
   
-1.  Redéployez le rapport afin que la configuration de l'abonnement dans la leçon suivante puisse utiliser les modifications que vous avez apportées dans cette leçon. Pour plus d’informations sur les propriétés de projet utilisées dans le didacticiel de création d’une table, consultez la section « Pour publier le rapport sur le serveur de rapports (facultatif) » de la [Leçon 6 : ajout d’un regroupement et de totaux &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Redéployez le rapport afin que la configuration de l'abonnement dans la leçon suivante puisse utiliser les modifications que vous avez apportées dans cette leçon. Pour plus d’informations sur les propriétés du projet utilisé dans le didacticiel de la table, consultez la section « Pour publier le rapport sur le serveur de rapports (facultatif) » de [Leçon 6 : Ajout de regroupements et des totaux &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  Dans la barre d'outils, cliquez sur **Générer** , puis sur **Déployer le didacticiel**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez correctement configuré le rapport pour extraire les données au moyen des informations d'identification stockées. Vous allez ensuite spécifier l'abonnement en utilisant les pages d'abonnement piloté par les données du Gestionnaire de rapports. Consultez la [Leçon 3 : Définition d’un abonnement piloté par les données](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
+ Vous avez correctement configuré le rapport pour extraire les données au moyen des informations d'identification stockées. Vous allez ensuite spécifier l'abonnement en utilisant les pages d'abonnement piloté par les données du Gestionnaire de rapports. Consultez [leçon 3 : Définition d’un abonnement piloté par les données](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer les Sources de données de rapport](report-data/manage-report-data-sources.md)   
+ [Gérer des sources de données de rapports](report-data/manage-report-data-sources.md)   
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Créer un rapport de tableau de base &#40;Didacticiel SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  

@@ -1,5 +1,5 @@
 ---
-title: Propriétés générales | Microsoft Docs
+title: Les propriétés générales Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 935d2559705aba64ecb1f19cb25bebf174d995cb
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 883df6b2562e7fa3b80fac6a0063bd6483d1119d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906209"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072386"
 ---
 # <a name="general-properties"></a>Propriétés générales
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur répertoriées dans les tableaux suivants. Cette rubrique décrit les propriétés de serveur qui se trouvent dans le fichier msmdsrv.ini et qui ne font pas l'objet d'une section spécifique, traitant par exemple de la sécurité, du réseau ou de ThreadPool. Pour plus d’informations sur les autres propriétés de serveur et sur la façon de les configurer, consultez [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **S’applique à :** mode serveur multidimensionnel et tabulaire, sauf indication contraire  
+ **S’applique à :** Mode serveur multidimensionnel et tabulaire, sauf indication contraire  
   
 ## <a name="non-specific-category"></a>Catégorie non spécifique  
  **AdminTimeout**  
@@ -64,13 +64,13 @@ ms.locfileid: "48906209"
  Propriété de type chaîne qui spécifie le nom du répertoire où les données sont stockées.  
   
  **DeploymentMode**  
- Détermine le contexte opérationnel d'une instance de serveur Analysis Services. Cette propriété constitue le « mode serveur » dans les boîtes de dialogue, les messages et la documentation. Cette propriété est configurée par le programme d'installation de SQL Server selon le mode serveur que vous avez sélectionné en installant Analysis Services. Cette propriété doit être considérée uniquement comme une propriété interne, toujours à l'aide de la valeur spécifiée par le programme d'installation.  
+ Détermine le contexte opérationnel d'une instance de serveur Analysis Services. Cette propriété est appelée « mode serveur » dans la documentation, les messages et les boîtes de dialogue. Cette propriété est configurée par le programme d'installation de SQL Server selon le mode serveur que vous avez sélectionné en installant Analysis Services. Cette propriété doit être considérée uniquement comme une propriété interne, toujours à l'aide de la valeur spécifiée par le programme d'installation.  
   
  Les valeurs valides pour cette propriété sont les suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|0|Il s'agit de la valeur par défaut. Elle spécifie le mode multidimensionnel, utilisé pour servir les bases de données multidimensionnelles qui utilisent le stockage MOLAP, HOLAP et ROLAP, ainsi que les modèles d'exploration de données.|  
+|0|Valeur par défaut. Elle spécifie le mode multidimensionnel, utilisé pour servir les bases de données multidimensionnelles qui utilisent le stockage MOLAP, HOLAP et ROLAP, ainsi que les modèles d'exploration de données.|  
 |1|Spécifie des instances d’Analysis Services installées dans le cadre d’un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Ne modifiez pas la propriété du mode de déploiement de l’instance Analysis Services qui fait partie d’une installation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne s’exécuteront plus sur le serveur si vous modifiez le mode.|  
 |2|Spécifie le mode tabulaire utilisé pour héberger les bases de données model tabulaires qui utilisent le stockage en mémoire ou le stockage DirectQuery.|  
   

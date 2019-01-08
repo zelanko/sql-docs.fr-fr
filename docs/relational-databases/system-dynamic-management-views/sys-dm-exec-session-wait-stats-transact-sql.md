@@ -17,19 +17,19 @@ ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5d99f844a83ee112dbd66f6e4c2110035d70658a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89054576eb64a913e67bf3ae9a3f53d0c79eb48f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681127"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206608"
 ---
 # <a name="sysdmexecsessionwaitstats-transact-sql"></a>Sys.dm_exec_session_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Retourne des informations sur toutes les attentes subies par les threads exécutés pour chaque session. Vous pouvez utiliser cette vue pour diagnostiquer les problèmes de performances avec la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session ainsi qu’avec des requêtes spécifiques et des lots.  Cette vue retourne session les mêmes informations qui sont agrégées pour [sys.dm_os_wait_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) mais fournit le **session_id** également.  
   
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "47681127"
   
  Pour plus d’informations sur les types d’attente, consultez [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Si l’utilisateur a **VIEW SERVER STATE** autorisation sur le serveur, l’utilisateur verra en cours d’exécution toutes les sessions sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; sinon, l’utilisateur verra uniquement la session active.  
   
 ## <a name="see-also"></a>Voir aussi  

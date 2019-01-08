@@ -10,12 +10,12 @@ ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bffdc944c10a534cffd58a6b9931165f556432b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ff22023f9f6f8bcbe1d2a1d0f57557676cea1cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145379"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353010"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Améliorer les performances des requêtes de texte intégral
   La liste suivante comprend des recommandations destinées à améliorer les performances des requêtes de texte intégral.  
@@ -26,7 +26,7 @@ ms.locfileid: "48145379"
   
 -   Réorganisez le catalogue de texte intégral à l’aide de [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql). Assurez-vous d'effectuer ces opérations avant de tester les performances car l'exécution de cette instruction entraîne une fusion principale des index de texte intégral dans ce catalogue.  
   
--   Limitez le choix de vos colonnes clés de texte intégral à une petite colonne. Même si une colonne de 900 octets est prise en charge, il est recommandé d'utiliser une colonne clé inférieure à cette taille dans un index de recherche en texte intégral. `int` et `bigint` offrent les meilleures performances.  
+-   Limitez le choix de vos colonnes clés de texte intégral à une petite colonne. Même si une colonne de 900 octets est prise en charge, il est recommandé d'utiliser une colonne clé inférieure à cette taille dans un index de recherche en texte intégral. `int` et `bigint` offrent les meilleures performances.  
   
 -   L’utilisation d’une clé de texte intégral de type entier évite une jointure avec la table de mappage **docid** . Par conséquent, une clé de texte intégral de type entier améliore considérablement les performances des requêtes et renforce les performances d'analyse. Des avantages en matière de performances supplémentaires peuvent résulter si la clé de texte intégral est également une clé d'index cluster.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48145379"
 -   Pour les applications qui contiennent des prédications de relation sélectives, les requêtes qui utilisent des prédicats relationnels sélectifs et des prédicats de texte intégral non sélectifs peuvent s'exécuter de manière optimale lorsqu'elles sont écrites pour utiliser l'optimiseur de requête. Cela permet à l'optimiseur de requête de déterminer s'il peut exploiter le prédicat ou le menu déroulant de plage pour produire un plan de requête effectif. Cette approche est plus simple et souvent plus efficace que l'indexation des données relationnelles comme données de texte intégral.  
   
 ## <a name="related-resources"></a>Ressources connexes  
- [SQL Server 2008 Full-Text Search: Internals and Enhancements (en anglais)](http://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 Full-Text Search : Données internes et améliorations](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## <a name="see-also"></a>Voir aussi  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,12 +16,12 @@ ms.assetid: 9ca284c5-f3e0-4a67-a132-fff376ff0ffe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 614bbbf4520ee0e1dd7cced276ca2a69ca948c48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 375e7c8a1bb520f5a3004c5279682d5b3f145b13
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198249"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640100"
 ---
 # <a name="ft-notify-bandwidth-server-configuration-option"></a>ft notify bandwidth (option de configuration de serveur)
   Utilisez l’option **ft notify bandwidth** pour spécifier la taille maximale que peut prendre le pool des petites mémoires tampons. Les petites mémoires tampons ont une taille de 64 kilo-octets (Ko). La valeur du paramètre *max* spécifie le nombre maximal de tampons que le gestionnaire de mémoire de texte intégral doit maintenir dans un pool de petites mémoires tampons. Si le `max` valeur est égale à zéro, alors il n’existe aucune limite supérieure au nombre de mémoires tampons qui peuvent être dans un pool de petites mémoires tampons.  

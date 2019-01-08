@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, installing
@@ -19,12 +18,12 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d9549d988da0892324ceafbbd471e7e201557e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6ded31664a8eaf6b11bc630754752677d46d7ac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204799"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750331"
 ---
 # <a name="install-integration-services"></a>Installer Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un programme d'installation unique pour installer tout ou une partie de ses composants, y compris [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Le programme d'installation vous permet d'installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec ou sans d'autres composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur unique.  
@@ -102,7 +101,7 @@ ms.locfileid: "48204799"
   
      Si Windows 7 ou Windows Server 2008 R2 est installé, le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service est inscrit pour s’exécuter sous le compte virtuel NT Services\MsDtsServer120 et le **Type de démarrage** est **automatique**.  Vous n'êtes pas tenu d'entrer un mot de passe pour le compte virtuel. Si Microsoft Vista ou Windows Server 2008 est installé, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est inscrit pour s’exécuter sous le compte Service Réseau intégré et le **Type de démarrage** est **Automatique**. Vous n'êtes pas tenu d'entrer un mot de passe pour le compte de service réseau intégré.  
   
- Par défaut, dans une nouvelle installation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré de façon à ne pas journaliser les événements en rapport avec l'exécution de packages dans le journal des événements des applications. Ce paramètre limite le nombre d'entrées de journal des événements lorsque vous utilisez la fonctionnalité du collecteur de données de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les événements qui ne sont pas enregistrés incluent l'ID d'événement 12288, « le Package a démarré », et l'ID d'événement 12289, « le Package a fini avec succès ». Pour enregistrer ces événements dans le journal des événements des applications, ouvrez le Registre pour y apporter des modifications. Dans le Registre, recherchez le nœud HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS et modifiez la valeur DWORD du paramètre LogPackageExecutionToEventLog en remplaçant 0 par 1.  
+ Par défaut, dans une nouvelle installation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré de façon à ne pas journaliser les événements en rapport avec l'exécution de packages dans le journal des événements des applications. Ce paramètre limite le nombre d'entrées de journal des événements lorsque vous utilisez la fonctionnalité du collecteur de données de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les événements qui ne sont pas enregistrés incluent l'ID d'événement 12288, « le Package a démarré », et l'ID d'événement 12289, « le Package a fini avec succès ». Pour enregistrer ces événements dans le journal des événements des applications, ouvrez le Registre pour y apporter des modifications. Dans le Registre, recherchez le nœud HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS et modifiez la valeur DWORD du paramètre LogPackageExecutionToEventLog en remplaçant 0 par 1.  
   
 ## <a name="understanding-the-integration-services-service"></a>Fonctionnement du service Integration Services  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -125,6 +124,6 @@ ms.locfileid: "48204799"
  Les fonctionnalités 64 bits sont installées dans le répertoire **Program Files** et les fonctionnalités 32 bits sont installées séparément dans le répertoire **Program Files (x86)** . (Ce comportement n'est pas spécifique à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (environnement de développement 32 bits des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]) n'est pas pris en charge sur le système d'exploitation 64 bits [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] et n'est pas installé sur les serveurs [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)](environnement de développement 32 bits des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ) n’est pas pris en charge sur le système d’exploitation 64 bits [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] et n’est pas installé sur les serveurs [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] .  
   
   

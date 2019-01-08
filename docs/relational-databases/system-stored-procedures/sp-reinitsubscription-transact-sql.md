@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_reinitsubscription
@@ -17,12 +16,12 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1e22ef6cd6ed820bf290125c109ab5e0f772cbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da8e0d9ab1959251bf5e41e35e4b3d647e072d8a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785137"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207330"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  Indique si la réinitialisation se produit à la suite de la modification d'un schéma dans la base de données de publication. *for_schema_change* est **bits**, avec 0 comme valeur par défaut. Si **0**, les abonnements actifs pour les publications qui autorisent la mise à jour immédiate sont réactivés tant que la totalité de la publication et pas seulement certains de ses articles, sont réinitialisés. Ceci implique que la réinitialisation est effectuée à la suite de modifications du schéma. Si **1**, les abonnements actifs ne sont pas réactivés jusqu'à ce que l’Agent d’instantané s’exécute.  
   
  [  **@publisher=** ] **'***publisher***'**  
- Spécifie un non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+ Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication.  
@@ -98,7 +97,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_reinittranpushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitsubscription-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** , les membres du rôle serveur fixe le **db_owner** rôle de base de données fixe ou le créateur de l’abonnement peut exécuter **sp_reinitsubscription** .  
   
 ## <a name="see-also"></a>Voir aussi  

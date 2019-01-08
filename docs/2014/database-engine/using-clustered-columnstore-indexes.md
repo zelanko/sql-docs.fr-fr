@@ -10,19 +10,19 @@ ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6d040f8d7e784650cfbf0cf8b4540c599ed9599
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059399"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502705"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Utilisation d'index columnstore cluster
   Tâches pour utiliser des index columnstore cluster dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- Pour une vue d’ensemble des index columnstore, consultez [index Columnstore décrits](../relational-databases/indexes/columnstore-indexes-described.md).  
+ Pour une présentation des index columnstore, consultez [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
   
- Pour plus d’informations sur les index columnstore en cluster, consultez [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
+ Pour plus d'informations sur les index columnstore cluster, consultez [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
 ## <a name="contents"></a>Sommaire  
   
@@ -60,7 +60,7 @@ GO
  Utilisez le [DROP INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql) instruction pour supprimer un index cluster columnstore. Cette opération supprime l'index et convertit la table columnstore en un segment de mémoire rowstore.  
   
 ##  <a name="load"></a> Charger des données dans un Index cluster Columnstore  
- Ajoutez des données à un index columnstore cluster existant à l'aide de l'une des méthodes de chargement standard.  Par exemple, l’outil de chargement en masse bcp, Integration Services et INSERT... SELECT peut charger des données dans un index columnstore en cluster.  
+ Ajoutez des données à un index columnstore cluster existant à l'aide de l'une des méthodes de chargement standard.  Par exemple, le chargement en masse bcp outil, Integration Services et INSERT... SELECT peut charger des données dans un index columnstore en cluster.  
   
  Les index columnstore cluster tirent parti du deltastore pour éviter la fragmentation de segments de colonne dans le columnstore.  
   
@@ -68,7 +68,7 @@ GO
  Pour les données partitionnées, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] affecte d'abord chaque ligne à une partition, puis effectue les opérations de columnstore sur les données dans la partition. Chaque partition a ses propres rowgroups et au moins un deltastore.  
   
 ### <a name="deltastore-loading-scenarios"></a>Scénarios de chargement de deltastore  
- Les lignes s'accumulent dans le deltastore tant que le nombre de lignes n'atteint pas le nombre maximal de lignes autorisées pour un rowgroup. Lorsque le deltastore contient le nombre maximal de lignes par rowgroup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] marque le rowgroup comme étant fermé (« CLOSED »). Un processus en arrière-plan, appelé « déplacement de tuple » recherche le rowgroup fermé et le déplace dans le columnstore, où le rowgroup est compressé dans des segments de colonne stockés dans le columnstore.  
+ Les lignes s'accumulent dans le deltastore tant que le nombre de lignes n'atteint pas le nombre maximal de lignes autorisées pour un rowgroup. Lorsque le deltastore contient le nombre maximal de lignes par rowgroup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] marque le rowgroup en tant que « Fermé ». Un processus en arrière-plan, appelé le « tuple », recherche le rowgroup fermé et le déplace dans le columnstore, où le rowgroup est compressé dans des segments de colonne et les segments de colonne sont stockés dans le columnstore.  
   
  Pour chaque index columnstore cluster il peut y avoir plusieurs deltastores.  
   
@@ -83,9 +83,9 @@ GO
 |Lignes à charger en masse|Lignes ajoutées au columnstore|Lignes ajoutées au deltastore|  
 |-----------------------|-----------------------------------|----------------------------------|  
 |102 000|0|102 000|  
-|145 000|145 000<br /><br /> Taille de rowgroup : 145 000|0|  
-|1 048 577|1,048,576<br /><br /> Taille de rowgroup : 1 048 576|1|  
-|2 252 152|2 252 152<br /><br /> Tailles de rowgroup : 1 048 576, 1 048 576, 155 000.|0|  
+|145 000|145 000<br /><br /> Taille de rowgroup : 145 000|0|  
+|1 048 577|1,048,576<br /><br /> Taille de rowgroup : 1 048 576|1|  
+|2 252 152|2 252 152<br /><br /> Tailles de rowgroup : 1 048 576, 1 048 576, 155 000.|0|  
   
  L'exemple suivant montre les résultats du chargement de 1 048 577 lignes dans une partition. Les résultats indiquent un rowgroup COMPRESSÉ dans le columnstore (comme segments de colonne compressés), et 1 ligne dans le deltastore.  
   
@@ -115,12 +115,12 @@ SELECT * FROM sys.column_store_row_groups
 -   Si la ligne est dans le deltastore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] met à jour la ligne dans le deltastore.  
   
 ##  <a name="rebuild"></a> Reconstruire un Index Columnstore en cluster  
- Utilisez [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) ou [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) pour effectuer une reconstruction complète d’un index cluster columnstore existant. En outre, vous pouvez utiliser ALTER INDEX... REBUILD pour reconstruire une partition spécifique.  
+ Utilisez [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) ou [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) pour effectuer une reconstruction complète d’un index cluster columnstore existant. En outre, vous pouvez utiliser ALTER INDEX ... REBUILD pour reconstruire une partition spécifique.  
   
 ### <a name="rebuild-process"></a>Processus de reconstruction  
  Pour reconstruire un index cluster columnstore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
--   Acquiert un verrou exclusif sur la table ou la partition lorsque la reconstruction se produit.  Les données sont hors connexion et indisponibles pendant la reconstruction.  
+-   Acquiert un verrou exclusif sur la table ou la partition lorsque la reconstruction se produit.  Les données sont « hors connexion » et indisponibles pendant la reconstruction.  
   
 -   Défragmente le columnstore en supprimant physiquement les lignes qui ont été logiquement supprimées de la table ; les octets supprimés sont récupérés sur le support physique.  
   
@@ -129,7 +129,7 @@ SELECT * FROM sys.column_store_row_groups
 -   Recompresse toutes les données dans le columnstore. Il existe deux copies de l'index columnstore pendant la reconstruction. Lorsque la reconstruction est terminée, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supprime l'index columnstore d'origine.  
   
 ### <a name="recommendations-for-rebuilding-a-clustered-columnstore-index"></a>Recommandations pour reconstruire un index columnstore cluster  
- Reconstruire un index columnstore cluster est utile pour supprimer une fragmentation, et pour déplacer toutes les lignes dans le columnstore. Tenez compte des recommandations suivantes :  
+ Reconstruire un index columnstore cluster est utile pour supprimer une fragmentation, et pour déplacer toutes les lignes dans le columnstore. Tenez compte des recommandations suivantes :  
   
 -   Reconstruisez une partition au lieu de la table entière.  
   

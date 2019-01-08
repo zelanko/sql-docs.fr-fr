@@ -1,5 +1,5 @@
 ---
-title: Conversions monétaires (Analysis Services) | Documents Microsoft
+title: Conversions monétaires (Analysis Services) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ebcce8d042b7a87771f99bac53b78bb59af6f7e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3e9934345856e3af3c10be5bf2cea38b259ec09d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015766"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207208"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversions monétaires (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "34015766"
 ## <a name="defining-currency-conversions"></a>Définition des conversions monétaires  
  Vous pouvez utiliser l'Assistant Business Intelligence pour définir la fonctionnalité de conversion monétaire pour un cube ou vous pouvez définir manuellement les conversions monétaires à l'aide de scripts MDX.  
   
-### <a name="prerequisites"></a>Conditions préalables  
+### <a name="prerequisites"></a>Prérequis  
  Avant de pouvoir définir une conversion monétaire dans un cube à l'aide de l'Assistant Business Intelligence, vous devez définir au préalable au moins une dimension monétaire, au moins une dimension de temps et au moins un groupe de mesures de taux. À partir de ces objets, l'Assistant Business Intelligence peut récupérer les données et métadonnées utilisées pour générer la dimension monétaire de rapport et le script MDX nécessaires pour assurer la fonctionnalité de conversion monétaire.  
   
 ### <a name="decisions"></a>Décisions  

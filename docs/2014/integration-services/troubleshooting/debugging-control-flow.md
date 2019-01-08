@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
@@ -18,41 +17,41 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 142a22e07a9abf5a87e63268910de35ff95b79ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 786ede341e899acf2831c5c3e0a6204d3a80b1b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216279"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791943"
 ---
 # <a name="debugging-control-flow"></a>Débogage du flux de contrôle
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluent des fonctionnalités et outils que vous pouvez utiliser pour dépanner le flux de contrôle dans un [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] package.  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluent des fonctionnalités et des outils permettant de résoudre les problèmes du flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
--   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] prend en charge des points d’arrêt sur les conteneurs et tâches.  
+-   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] prend en charge les points d’arrêt sur les conteneurs et les tâches.  
   
--   Le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] génère des rapports de progression au moment de l'exécution.  
+-   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Le concepteur génère des rapports de progression au moment de l’exécution.  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] propose des fenêtres de débogage.  
   
 ## <a name="breakpoints"></a>Points d'arrêt  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Le concepteur fournit le **définir des points d’arrêt** boîte de dialogue, dans laquelle vous pouvez définir des points d’arrêt en activant des conditions d’arrêt et en spécifiant le nombre de fois où un point d’arrêt peut se produire avant l’exécution du package est suspendu. Les points d'arrêt peuvent être activés au niveau du package ou au niveau du composant. Si des conditions d’arrêt sont activées au niveau de la tâche ou du conteneur, l’icône de point d’arrêt apparaît en regard de la tâche ou du conteneur sur la surface de dessin de l’onglet **Flux de contrôle** . Si les conditions d’arrêt sont activées au niveau du package, l’icône de point d’arrêt apparaît sur l’étiquette de l’onglet **Flux de contrôle** .  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Le concepteur propose la boîte de dialogue **Définir des points d’arrêt** dans laquelle vous pouvez définir des points d’arrêt en activant des conditions d’arrêt et en spécifiant le nombre d’occurrences d’un point d’arrêt avant la suspension de l’exécution du package. Les points d'arrêt peuvent être activés au niveau du package ou au niveau du composant. Si des conditions d’arrêt sont activées au niveau de la tâche ou du conteneur, l’icône de point d’arrêt apparaît en regard de la tâche ou du conteneur sur la surface de dessin de l’onglet **Flux de contrôle** . Si les conditions d’arrêt sont activées au niveau du package, l’icône de point d’arrêt apparaît sur l’étiquette de l’onglet **Flux de contrôle** .  
   
  Lorsqu'un point d'arrêt est atteint, l'icône de point d'arrêt se transforme pour vous aider à identifier la source du point d'arrêt. Vous pouvez ajouter, supprimer et modifier des points d'arrêt au cours de l'exécution du package.  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] propose dix conditions d'arrêt que vous pouvez activer sur toutes les tâches et tous les conteneurs. Dans la boîte de dialogue **Définir des points d’arrêt** , vous pouvez activer des points d’arrêt pour les conditions suivantes :  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] propose dix conditions d’arrêt que vous pouvez activer sur toutes les tâches et tous les conteneurs. Dans la boîte de dialogue **Définir des points d’arrêt** , vous pouvez activer des points d’arrêt pour les conditions suivantes :  
   
 |Condition d'arrêt|Description|  
 |---------------------|-----------------|  
-|Quand la tâche ou le conteneur reçoit le `OnPreExecute` événement.|Appelée lorsqu'une tâche est sur le point de s'exécuter. Cet événement est déclenché par une tâche ou un conteneur immédiatement avant son exécution.|  
-|Quand la tâche ou le conteneur reçoit le `OnPostExecute` événement.|Appelée immédiatement après la fin de la logique d'exécution de la tâche. Cet événement est déclenché par une tâche ou un conteneur immédiatement après son exécution.|  
-|Quand la tâche ou le conteneur reçoit le `OnError` événement.|Appelée par une tâche ou un conteneur lorsqu'une erreur se produit.|  
-|Quand la tâche ou le conteneur reçoit le `OnWarning` événement.|Appelée lorsque la tâche est dans un état qui ne justifie pas une erreur, mais garantit un avertissement.|  
-|Quand la tâche ou le conteneur reçoit le `OnInformation` événement.|Appelée lorsque la tâche doit fournir des informations.|  
-|Quand la tâche ou le conteneur reçoit le `OnTaskFailed` événement.|Appelée par l'hôte de la tâche lorsqu'il échoue.|  
-|Quand la tâche ou le conteneur reçoit le `OnProgress` événement.|Appelée pour mettre à jour la progression de l'exécution de la tâche.|  
-|Quand la tâche ou le conteneur reçoit le `OnQueryCancel` événement.|Appelée à tout moment du traitement de la tâche lorsque vous pouvez annuler l'exécution de la tâche.|  
-|Quand la tâche ou le conteneur reçoit le `OnVariableValueChanged` événement.|Appelée par le runtime [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] lorsque la valeur d'une variable change. L’événement RaiseChangeEvent de la variable doit être définie sur `true` pour déclencher cet événement.<br /><br /> **\*\* Avertissement ** \*\*** La variable associée à ce point d’arrêt doit être définie dans l’étendue du **conteneur** . Si la variable est définie dans l'étendue du package, le point d'arrêt n'obtient pas de correspondance.|  
-|Quand la tâche ou le conteneur reçoit le `OnCustomEvent` événement.|Appelée par les tâches pour déclencher des événements personnalisés définis par la tâche.|  
+|Lorsque la tâche ou le conteneur reçoit l'événement `OnPreExecute`.|Appelée lorsqu'une tâche est sur le point de s'exécuter. Cet événement est déclenché par une tâche ou un conteneur immédiatement avant son exécution.|  
+|Lorsque la tâche ou le conteneur reçoit l'événement `OnPostExecute`.|Appelée immédiatement après la fin de la logique d'exécution de la tâche. Cet événement est déclenché par une tâche ou un conteneur immédiatement après son exécution.|  
+|Lorsque la tâche ou le conteneur reçoit l'événement `OnError`.|Appelée par une tâche ou un conteneur lorsqu'une erreur se produit.|  
+|Lorsque la tâche ou le conteneur reçoit l'événement `OnWarning`.|Appelée lorsque la tâche est dans un état qui ne justifie pas une erreur, mais garantit un avertissement.|  
+|Lorsque la tâche ou le conteneur reçoit l'événement `OnInformation`.|Appelée lorsque la tâche doit fournir des informations.|  
+|Lorsque la tâche ou le conteneur reçoit l'événement `OnTaskFailed`.|Appelée par l'hôte de la tâche lorsqu'il échoue.|  
+|Lorsque la tâche ou le conteneur reçoit l'événement `OnProgress`.|Appelée pour mettre à jour la progression de l'exécution de la tâche.|  
+|Lorsque la tâche ou le conteneur reçoit l'événement `OnQueryCancel`.|Appelée à tout moment du traitement de la tâche lorsque vous pouvez annuler l'exécution de la tâche.|  
+|Lorsque la tâche ou le conteneur reçoit l'événement `OnVariableValueChanged`.|Appelée par le runtime [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] lorsque la valeur d'une variable change. L’événement RaiseChangeEvent de la variable doit être définie sur `true` pour déclencher cet événement.<br /><br /> **\*\* Avertissement ** \*\*** La variable associée à ce point d’arrêt doit être définie dans l’étendue du **conteneur** . Si la variable est définie dans l'étendue du package, le point d'arrêt n'obtient pas de correspondance.|  
+|Lorsque la tâche ou le conteneur reçoit l'événement `OnCustomEvent`.|Appelée par les tâches pour déclencher des événements personnalisés définis par la tâche.|  
   
  Outre les conditions d'arrêt disponibles pour toutes les tâches et tous les conteneurs, certaines tâches et certains conteneurs proposent des conditions d'arrêt spéciales permettant de définir des points d'arrêt. Vous pouvez ainsi activer une condition d'arrêt sur le conteneur de boucles For définissant un point d'arrêt qui suspend l'exécution au début de chaque itération de la boucle.  
   
@@ -75,16 +74,16 @@ ms.locfileid: "48216279"
   
 #### <a name="to-set-breakpoints"></a>Pour définir des points d'arrêt  
   
--   [Déboguer un package en définissant des points d’arrêt sur une tâche ou un conteneur](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
+-   [Déboguer un package en définissant des points d'arrêt sur une tâche ou un conteneur](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
   
 ## <a name="progress-reporting"></a>Rapport de progression  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Concepteur propose deux types de rapports de progression : codes de couleur sur l’aire de conception de la **flux de contrôle** onglet et les messages de progression sous le **progression** onglet.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Le concepteur propose deux types de rapports de progression : les codes de couleur sur l’aire de conception de l’onglet **Flux de contrôle** et les messages de progression sous l’onglet **Progression** .  
   
  Lorsque vous exécutez un package, le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] indique la progression de l'exécution en affichant chaque tâche ou conteneur dans une couleur qui indique l'état de l'exécution. En fonction de la couleur, vous pouvez déterminer si l'élément est en attente d'exécution, s'il est en cours d'exécution, s'il s'est terminé avec succès ou s'il s'est terminé avec des erreurs. Les codes de couleur disparaissent dès que vous arrêtez l'exécution du package.  
   
  Le tableau suivant indique les couleurs utilisées pour décrire l'état de l'exécution.  
   
-|Couleur|État de l'exécution|  
+|Color|État de l'exécution|  
 |-----------|----------------------|  
 |Gris|En attente d'exécution|  
 |Jaune|Exécution en cours|  
@@ -101,7 +100,7 @@ ms.locfileid: "48216279"
  ![Onglet Progression du Concepteur SSIS](../media/mw-dtsflow04.gif "Onglet Progression du Concepteur SSIS")  
   
 ## <a name="debug-windows"></a>Fenêtres de débogage  
- [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] propose de nombreuses fenêtres que vous pouvez utiliser pour travailler avec les points d'arrêt et déboguer les packages qui contiennent des points d'arrêt. Pour en savoir plus sur chacune des fenêtres, ouvrez-les et appuyez sur F1 pour afficher l'aide.  
+ [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] propose de nombreuses fenêtres que vous pouvez utiliser pour travailler avec les points d’arrêt et déboguer les packages qui contiennent des points d’arrêt. Pour en savoir plus sur chacune des fenêtres, ouvrez-les et appuyez sur F1 pour afficher l'aide.  
   
  Pour ouvrir ces fenêtres dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], cliquez sur le menu **Déboguer** , pointez sur **Fenêtres**, puis cliquez sur **Points d’arrêt**, **Sortie**ou **Immédiat**.  
   

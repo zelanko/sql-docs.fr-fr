@@ -13,17 +13,17 @@ ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27e153fd72c588f81342d74ce1fc851adc6fda91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc9c7a3d9f75e1863d90b16986234e0036229d01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622327"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540438"
 ---
 # <a name="what-is-odbc"></a>Qu’est-ce que ODBC ?
 Il existe plusieurs idées fausses à propos d’ODBC dans le monde informatique. Il est à l’utilisateur final, une icône dans le panneau de configuration Microsoft® Windows®. Pour les programmeurs d’applications, il est une bibliothèque contenant les routines d’accès aux données. Beaucoup d’autres, il est la réponse à tous les problèmes d’accès de base de données imaginé.  
   
- Tout d’abord, ODBC est une spécification pour une API de base de données. Cette API est indépendante de tout un SGBD ou le système d’exploitation ; Bien que ce manuel utilise C, l’API ODBC est indépendant du langage. L’API ODBC est basé sur les spécifications de l’interface CLI à partir d’Open Group et ISO/IEC. ODBC 3. *x* implémente entièrement les deux de ces spécifications, les versions antérieures d’ODBC étaient basées sur des versions préliminaires de ces spécifications, mais n’implémente pas entièrement les — et ajoute des fonctionnalités couramment requises par les développeurs de basée sur l’écran applications de base de données, telles que des curseurs avec défilement.  
+ Tout d’abord, ODBC est une spécification pour une API de base de données. Cette API est indépendante de tout un SGBD ou le système d’exploitation ; Bien que ce manuel utilise C, l’API ODBC est indépendant du langage. L’API ODBC est basé sur les spécifications de l’interface CLI à partir d’Open Group et ISO/IEC. ODBC 3. *x* entièrement implémente à la fois de ces spécifications - versions antérieures d’ODBC étaient basés sur des versions préliminaires de ces spécifications, mais n’implémentent pas entièrement les - et ajoute des fonctionnalités couramment requises par les développeurs de basée sur l’écran applications de base de données, telles que des curseurs avec défilement.  
   
  Les fonctions de l’API ODBC sont implémentées par les développeurs de pilotes spécifiques au SGBD. Applications appellent les fonctions de ces pilotes pour accéder aux données d’une manière indépendante du SGBD. Un gestionnaire de pilotes gère la communication entre les applications et pilotes.  
   

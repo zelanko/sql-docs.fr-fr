@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea0f839fb1f1366827279d2a9254a88dbe0f8de6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5dcea48b96087770ff90202a9e0758c35203316
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854647"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532163"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,10 +72,10 @@ RETCODE bcp_setbulkmode (
   
 |property|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Spécifie le mode de sortie de caractères.<br /><br /> Correspond à l’option – c dans BCP. EXE et à bcp_setcolfmt avec **BCP_FMT_TYPE** propriété définie sur **SQLCHARACTER**.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Spécifie le mode de sortie Unicode.<br /><br /> Correspond à l’option – w dans BCP. EXE et bcp_setcolfmt avec **BCP_FMT_TYPE** propriété définie sur **SQLNCHAR**.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Spécifie des types natifs pour les types de non-caractères et Unicode pour les types de caractères.<br /><br /> Correspond à l’option – N dans BCP. EXE et bcp_setcolfmt avec **BCP_FMT_TYPE** propriété définie sur **SQLNCHAR** si le type de colonne est une chaîne (valeur par défaut si ce n’est pas une chaîne).|  
-|BCP_OUT_NATIVE_MODE|Spécifie les types de base de données natifs.<br /><br /> Correspond à l’option – n dans BCP. EXE et bcp_setcolfmt avec **BCP_FMT_TYPE** propriété la valeur par défaut.|  
+|BCP_OUT_CHARACTER_MODE|Spécifie le mode de sortie de caractères.<br /><br /> Correspond à l’option-c dans BCP. EXE et à bcp_setcolfmt avec **BCP_FMT_TYPE** propriété définie sur **SQLCHARACTER**.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Spécifie le mode de sortie Unicode.<br /><br /> Correspond à l’option -w dans BCP. EXE et bcp_setcolfmt avec **BCP_FMT_TYPE** propriété définie sur **SQLNCHAR**.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Spécifie des types natifs pour les types de non-caractères et Unicode pour les types de caractères.<br /><br /> Correspond à l’option -N dans BCP. EXE et bcp_setcolfmt avec **BCP_FMT_TYPE** propriété définie sur **SQLNCHAR** si le type de colonne est une chaîne (valeur par défaut si ce n’est pas une chaîne).|  
+|BCP_OUT_NATIVE_MODE|Spécifie les types de base de données natifs.<br /><br /> Correspond à l’option - n dans BCP. EXE et bcp_setcolfmt avec **BCP_FMT_TYPE** propriété la valeur par défaut.|  
   
  Vous ne devez pas utiliser bcp_setbulkmode avec une séquence d’appels de fonction qui inclut bcp_setcolfmt, bcp_control et bcp_readfmt. Par exemple, vous ne devez pas appeler bcp_control(BCPTEXTFILE) et bcp_setbulkmode.  
   
@@ -86,30 +86,30 @@ RETCODE bcp_setbulkmode (
  Voici quelques exemples d’appels de fonction qui provoque une erreur de séquence de fonction :  
   
 ```  
-bcp_init(“table”, DB_IN);  
+bcp_init("table", DB_IN);  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_readfmt();  
 ```  
   
 ```  
 bcp_init(NULL, DB_OUT);  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_setcolfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_readfmt();  
 bcp_setcolfmt();  
@@ -119,18 +119,18 @@ bcp_setcolfmt();
 bcp_init(NULL, DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setbulkmode();  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_readfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_columns();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setcolfmt();  
 ```  

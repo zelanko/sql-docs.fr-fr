@@ -1,7 +1,8 @@
 ---
-title: Téléchargez et installez Azure Data Studio | Microsoft Docs
+title: Téléchargez et installez
+titleSuffix: Azure Data Studio
 description: Télécharger et installer Azure Data Studio pour Windows, macOS ou Linux
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f177b7756a1afc7d28f4f3bd85ac46c1f7563cbe
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 7ab531acaf5b8246da6603807760d716ab7ffb74
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217807"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030653"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Téléchargez et installez Azure Data Studio
 
@@ -160,7 +161,7 @@ Pour vérifier les dernières mises à jour, cliquez sur l’icône d’engrenag
 
 ## <a name="supported-sql-offerings"></a>Produits SQL pris en charge
 
-* Cette version de Azure Data Studio fonctionne avec toutes les [prise en charge des versions de SQL Server 2014 - [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) et prend en charge pour l’utilisation avec les dernières fonctionnalités de cloud dans Azure SQL Database et Azure SQL Data Warehouse. Azure Data Studio offre également la prise en charge de la version préliminaire de Azure SQL Managed Instance.
+* Cette version de Azure Data Studio fonctionne avec toutes les [prise en charge des versions de SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ](https://support.microsoft.com/lifecycle?C2=1044) et prend en charge pour l’utilisation avec les dernières fonctionnalités de cloud dans Azure SQL Database et Azure SQL Data Warehouse. Azure Data Studio offre également la prise en charge de la version préliminaire de Azure SQL Managed Instance.
 
 ## <a name="move-user-settings"></a>Déplacer les paramètres de l’utilisateur
 

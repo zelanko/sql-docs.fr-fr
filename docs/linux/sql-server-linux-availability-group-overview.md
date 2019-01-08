@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 6bc375492034f4e9b05eda85805cd452fe6d3557
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723187"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206618"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Sur Linux, les groupes de disponibilité Always On
 
@@ -51,15 +51,15 @@ Type de cluster est stocké dans le [!INCLUDE[ssnoversion-md](../includes/ssnove
 
 ## <a name="requiredsynchronizedsecondariestocommit"></a>requis\_synchronisés\_secondaires\_à\_validation
 
-Débutez [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] est un paramètre qui est utilisé par les groupes de disponibilité appelés `required_synchronized_secondaries_to_commit`. Le groupe de disponibilité vous indique le nombre de réplicas secondaires qui doivent être par échelons avec le réplica principal. Cela permet le basculement automatique (uniquement en cas d’intégré à Pacemaker avec un type de cluster externe) et contrôle le comportement des éléments tels que la disponibilité du site principal si le nombre approprié de réplicas secondaires est en ligne ou hors connexion. Pour en savoir plus sur cette procédure, consultez [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](sql-server-linux-availability-group-ha.md). Le `required_synchronized_secondaries_to_commit` valeur est définie par défaut et gérée par Pacemaker /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Vous pouvez substituer manuellement cette valeur.
+Débutez [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] est un paramètre qui est utilisé par les groupes de disponibilité appelés `required_synchronized_secondaries_to_commit`. Le groupe de disponibilité vous indique le nombre de réplicas secondaires qui doivent être par échelons avec le réplica principal. Cela permet le basculement automatique (uniquement en cas d’intégré à Pacemaker avec un type de cluster externe) et contrôle le comportement des éléments tels que la disponibilité du site principal si le nombre approprié de réplicas secondaires est en ligne ou hors connexion. Pour en savoir plus sur cette procédure, consultez [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](sql-server-linux-availability-group-ha.md). Le `required_synchronized_secondaries_to_commit` valeur est définie par défaut et gérée par Pacemaker / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Vous pouvez substituer manuellement cette valeur.
 
 La combinaison de `required_synchronized_secondaries_to_commit` et le nouveau numéro de séquence (qui est stocké dans `sys.availability_groups`) informe Pacemaker et [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] que, par exemple, le basculement automatique peut se produire. Dans ce cas, un réplica secondaire aurait le même numéro de séquence en tant que le réplica principal, ce qui signifie qu’il est à jour avec les dernières informations de configuration.
 
 Il existe trois valeurs qui peuvent être définies pour `required_synchronized_secondaries_to_commit`: 0, 1 ou 2. Ils contrôlent le comportement de ce qui se passe lorsqu’un réplica devient indisponible. Les numéros correspondent au nombre de réplicas secondaires qui doivent être synchronisés avec le réplica principal. Le comportement est comme suit sous Linux :
 
--   0 – aucun basculement automatique n’est possible dans la mesure où aucun réplica secondaire n’est nécessaire pour être synchronisé. La base de données primaire est disponible en permanence.
--   1 – un réplica secondaire doit être dans un état synchronisé avec le réplica principal ; le basculement automatique est possible. La base de données primaire n’est pas disponible jusqu'à ce qu’un réplica synchrone secondaire n’est disponible.
--   2 – les deux réplicas secondaires dans une configuration de groupe de disponibilité au moins trois nœuds doivent être synchronisés avec le serveur principal ; le basculement automatique est possible.
+-   0 - aucun basculement automatique n’est possible dans la mesure où aucun réplica secondaire n’est nécessaire pour être synchronisé. La base de données primaire est disponible en permanence.
+-   1 - un réplica secondaire doit être dans un état synchronisé avec le réplica principal ; le basculement automatique est possible. La base de données primaire n’est pas disponible jusqu'à ce qu’un réplica synchrone secondaire n’est disponible.
+-   2 - les deux réplicas secondaires dans une configuration de groupe de disponibilité au moins trois nœuds doivent être synchronisés avec le serveur principal ; le basculement automatique est possible.
 
 `required_synchronized_secondaries_to_commit` contrôle non seulement le comportement de basculement avec des réplicas synchrones, mais une perte de données. Avec la valeur 1 ou 2, un réplica secondaire est toujours requis pour être synchronisé, il y aura toujours la redondance des données. Cela signifie qu’aucune perte de données.
 
@@ -87,7 +87,7 @@ Le basculement automatique d’un groupe de disponibilité est possible lorsque 
 -   Le réplica principal et le réplica secondaire sont définies sur le déplacement des données synchrone.
 -   La base de données secondaire a un état synchronisé (se synchronisent ne pas), ce qui signifie que les deux sont au même point de données.
 -   Le type de cluster est défini sur externe. Le basculement automatique n’est pas possible avec un type de cluster aucun.
--   Le `sequence_number` du réplica secondaire devienne le réplica principal a le numéro de séquence le plus élevé : en d’autres termes, le réplica secondaire `sequence_number` correspond à celui du réplica principal d’origine.
+-   Le `sequence_number` du réplica secondaire devienne le réplica principal a le numéro de séquence le plus élevé - en d’autres termes, le réplica secondaire `sequence_number` correspond à celui du réplica principal d’origine.
 
 Si ces conditions sont remplies et que le serveur qui héberge le réplica principal échoue, le groupe de disponibilité changent de propriété vers un réplica synchrone. Le comportement des réplicas synchrones (de laquelle il peut y avoir trois total : un réplica principal et deux réplicas secondaires) peuvent également être gérées par `required_synchronized_secondaries_to_commit`. Cela fonctionne avec les groupes de disponibilité sur Windows et Linux, mais il est configuré complètement différemment. Sur Linux, la valeur est configurée automatiquement par le cluster sur la ressource de groupe de disponibilité elle-même.
 
@@ -151,7 +151,7 @@ Un groupe de disponibilité distribué peut également traverser les limites du 
 
 ![Groupe de disponibilité Dist hybride](./media/sql-server-linux-availability-group-overview/image2.png)
 
-<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article “x”].
+<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article "x"].
 
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->

@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f72b451ab5897593042189f77ba7c351f7ff8119
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4193f98f4431ae5d73cfeadb1ef9898bd330a078
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664090"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522185"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Extraction de données non consommées à l'aide de sql:overflow-field (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- En outre, vous devez créer un répertoire virtuel pour la base de données tempdb et un nom virtuel du modèle de **modèle** type intitulé « template ».  
+ En outre, vous devez créer un répertoire virtuel pour la base de données tempdb- et un nom virtuel du modèle de **modèle** type intitulé « template ».  
   
  Dans l'exemple suivant, le schéma de mappage extrait les données non consommées stockées dans la colonne AddressOverflow de la table Customers2 :  
   

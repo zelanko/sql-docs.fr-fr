@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.filtertablerows.f1
@@ -13,12 +12,12 @@ ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae3a31913ad603bb7acbb801a2c923105ddbc915
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eafa0dc2be5ee9ceffd86185399168589fdd8b1f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057179"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752231"
 ---
 # <a name="filter-table-rows"></a>Filtrer les lignes de la table
   La page **Filtrer les lignes de la table** vous permet d'effectuer les opérations suivantes :  
@@ -50,7 +49,7 @@ ms.locfileid: "48057179"
  Ce volet est rempli avec des filtres à mesure que vous les ajoutez aux articles de table dans la publication. Les tables avec filtres de lignes sont affichées en tant que nœuds de niveau supérieur dans le volet. Pour les publications de fusion, les tables auxquelles les filtres ont été étendus par le biais d'un filtre de jointure sont affichées en tant que nœuds enfants.  
   
  **Ajouter**  
- Cliquez sur **Ajouter** pour lancer une boîte de dialogue qui vous permet de filtrer les articles de table. Si vous cliquez sur **Ajouter** pour une publication d'instantané ou transactionnelle, une boîte de dialogue s'ouvre immédiatement. Si vous cliquez sur **Ajouter** pour une publication de fusion, trois choix s'affichent : **Ajouter un filtre**; **Ajouter une jointure pour étendre le filtre sélectionné**; **Générer automatiquement des filtres**.  
+ Cliquez sur **Ajouter** pour lancer une boîte de dialogue qui vous permet de filtrer les articles de table. Si vous cliquez sur **Ajouter** pour une publication d'instantané ou transactionnelle, une boîte de dialogue s'ouvre immédiatement. En cliquant sur **ajouter** pour une fusion de publication des trois choix s’affiche : **Ajouter un filtre**; **Ajouter une jointure pour étendre le filtre sélectionné**; **Générer automatiquement des filtres**.  
   
 -   Sélectionnez **Ajouter un filtre** pour ouvrir la boîte de dialogue du **même nom** . Elle vous permet d'appliquer des filtres de lignes à un article de table. Dans la boîte de dialogue **Ajouter un filtre** , vous pouvez, par exemple, indiquer qu'une table contenant des données client doit uniquement comporter des données relatives aux clients français lors de sa réplication vers des abonnés.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48057179"
  [Create a Publication](publish/create-a-publication.md)   
  [Afficher et modifier les propriétés d’une publication](publish/view-and-modify-publication-properties.md)   
  [Filtrer des données publiées](publish/filter-published-data.md)   
- [Join Filters](merge/join-filters.md)   
+ [Filtres de jointure](merge/join-filters.md)   
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
  [Publier des données et des objets de base de données](publish/publish-data-and-database-objects.md)  
   

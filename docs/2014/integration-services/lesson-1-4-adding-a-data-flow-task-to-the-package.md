@@ -1,24 +1,23 @@
 ---
-title: 'Étape 4 : Ajout d’une tâche de flux de données au package | Microsoft Docs'
+title: 'Étape 4 : Ajout d’une tâche de flux de données au Package | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e36f658dc2742efba59d5a708fd5f626ea8a1609
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06c80bc188937ef66f72fef003a5f8c27830ad10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219449"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793941"
 ---
-# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Étape 4 : ajout d'une tâche de flux de données au package
+# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Étape 4 : Ajout d'une tâche de flux de données au package
   Après avoir créé des gestionnaires de connexions pour les données sources et de destination, la tâche suivante consiste à ajouter une tâche de flux de données à votre package. La tâche de flux de données permet d'encapsuler le moteur de flux de données qui déplace les données entre les sources et les destinations et fournit la fonctionnalité grâce à laquelle il est possible de transformer, nettoyer et modifier les données lors de leur déplacement. La tâche de flux de données est l'endroit où s'effectue la majorité du travail d'un processus d'extraction, de transformation et de chargement (ETL).  
   
 > [!NOTE]  
@@ -31,7 +30,7 @@ ms.locfileid: "48219449"
 2.  Dans la **Boîte à outils SSIS**, développez **Favoris**, puis faites glisser une **tâche de flux de données** sur l’aire de conception de l’onglet **Flux de contrôle** .  
   
     > [!NOTE]  
-    >  Si la boîte à outils SSIS n'est pas disponible, dans le menu principal, sélectionnez SSIS, puis Boîte à outils SSIS pour afficher cette dernière.  
+    >  Si la boîte à outils SSIS n’est pas disponible, dans le menu principal, sélectionnez SSIS, puis Boîte à outils SSIS pour afficher cette dernière.  
   
 3.  Sur le **flux de contrôle** aire de conception, cliquez sur récemment ajouté **Data Flow Task**, cliquez sur **renommer**et remplacez le nom par `Extract Sample Currency Data`.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "48219449"
 4.  Avec le bouton droit de la tâche de flux de données, cliquez sur **propriétés**, puis dans la fenêtre Propriétés, vérifiez que le `LocaleID` propriété est définie sur **anglais (États-Unis)**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 5 : Ajout et configuration de la source de fichier plat](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+ [Étape 5 : Ajout et configuration de la Source de fichier plat](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [tâche de flux de données](control-flow/data-flow-task.md)  

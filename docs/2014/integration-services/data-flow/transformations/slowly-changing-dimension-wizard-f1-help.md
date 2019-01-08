@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
@@ -13,12 +12,12 @@ ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1bf6cb9b62db574ebd5546c2c29823428addf53f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e70590fb67c1fba5c3781fb224211aaab721f5bd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065296"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773011"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Aide (F1) de l'Assistant Dimension à variation lente
   Utilisez l' **Assistant Dimension à variation lente** pour configurer le chargement des données dans divers types de dimensions à variation lente. Cette section fournit l'aide (accessible à l'aide de la touche F1) **relative aux pages de cet Assistant**. Le tableau suivant décrit les rubriques de cette section.  
@@ -28,26 +27,26 @@ ms.locfileid: "48065296"
  [Assistant Dimension à variation lente](welcome-to-the-slowly-changing-dimension-wizard.md)  
  Présentation de l'Assistant Dimension à variation lente  
   
- [Sélectionner une Table de Dimension et des clés &#40;Assistant Dimension à variation lente&#41;](select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md)  
+ [Sélectionner une table et des clés de dimension &#40;Assistant Dimension à variation lente&#41;](select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md)  
  Sélectionnez une table de dimension à variation lente et spécifiez ses colonnes clés.  
   
- [Colonnes de Dimension à variation lente &#40;Assistant Dimension à variation lente&#41;](slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md)  
+ [Colonnes de dimensions à variation lente &#40;Assistant Dimension à variation lente&#41;](slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md)  
  Sélectionnez le type de variation pour les colonnes sélectionnées de la dimension à variation lente.  
   
- [Options des attributs fixes et variables &#40;Assistant Dimension à variation lente](fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md)  
+ [Options des attributs fixes et variables &#40;Assistant Dimension à variation lente&#41;](fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md)  
  Paramétrez les options des attributs fixes et variables pour les colonnes de dimension.  
   
  [Options des attributs d’historique &#40;Assistant Dimension à variation lente&#41;](historical-attribute-options-slowly-changing-dimension-wizard.md)  
  Paramétrez les options des colonnes de la dimension d'attributs historiques.  
   
- [Les membres de Dimension inférés &#40;Assistant Dimension à variation lente&#41;](inferred-dimension-members-slowly-changing-dimension-wizard.md)  
+ [Membres de la dimension inférés &#40;Assistant Dimension à variation lente&#41;](inferred-dimension-members-slowly-changing-dimension-wizard.md)  
  Paramétrez les options des membres inférés de la dimension.  
   
  [Fin de l'Assistant Dimension à variation lente](finish-the-slowly-changing-dimension-wizard.md)  
  Prenez connaissance des options de configuration sélectionnées par l'utilisateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Transformation de Dimension à variation lente](slowly-changing-dimension-transformation.md)   
+ [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)   
  [Configurer les sorties à l'aide de l'Assistant Dimension à variation lente](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

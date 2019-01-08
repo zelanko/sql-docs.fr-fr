@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : spécification de la directive ELEMENT | Microsoft Docs'
+title: 'Exemple : Spécification de la Directive ELEMENT | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e4fa28044f133a04f581ee51bd40663eaa871e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b8310618b76a4c5efff06e1561dcb9bd2933f6e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166685"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789131"
 ---
-# <a name="example-specifying-the-element-directive"></a>Exemple : spécification de la directive ELEMENT
+# <a name="example-specifying-the-element-directive"></a>Exemple : Spécification de la Directive ELEMENT
   Cette directive extrait des informations sur les employés et génère des données XML centrées sur l'élément, comme illustré par le code suivant :  
   
 ```  
@@ -63,7 +63,7 @@ FOR XML EXPLICIT;
   
  `<FName>Ken</FName>`  
   
- `<LName>Sánchez</LName>`  
+ `<LName>S??nchez</LName>`  
   
  `</Name>`  
   

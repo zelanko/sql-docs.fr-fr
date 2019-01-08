@@ -21,12 +21,12 @@ ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f68b53dd77305163aa2595c60a1994a13bb9964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 168fa55d89488277cd17f4bdca3105f7d879c8f8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793807"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509399"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Conversion de données de C en types de données SQL
 Lorsqu’une application appelle **SQLExecute** ou **SQLExecDirect**, le pilote récupère les données pour tous les paramètres liés avec **SQLBindParameter** à partir d’emplacements de stockage dans l’application. Lorsqu’une application appelle **SQLSetPos**, le pilote récupère les données pour une mise à jour ou ajouter une opération à partir de colonnes liées avec **SQLBindCol**. Pour les paramètres de data-at-execution, l’application envoie les données de paramètre avec **SQLPutData**. Si nécessaire, le pilote convertit les données à partir du type de données spécifié par le *ValueType* argument dans **SQLBindParameter** au type de données spécifié par le *ParameterType*argument dans **SQLBindParameter**, puis envoie les données à la source de données.  
@@ -45,37 +45,37 @@ Lorsqu’une application appelle **SQLExecute** ou **SQLExecDirect**, le pilote 
   
  Les termes suivants sont utilisés dans les tables :  
   
--   **Longueur d’octet de données** — nombre d’octets de données SQL disponibles pour envoyer à la source de données, ou non les données seront tronquées avant son envoi à la source de données. Données de chaînes, cela n’inclut pas d’espace pour le caractère de fin de la valeur null.  
+-   **Longueur d’octet de données** : nombre d’octets de données SQL disponibles pour envoyer à la source de données, ou non les données seront tronquées avant son envoi à la source de données. Données de chaînes, cela n’inclut pas d’espace pour le caractère de fin de la valeur null.  
   
--   **Longueur d’octet de colonne** — nombre d’octets requis pour stocker les données à la source de données.  
+-   **Longueur d’octet de colonne** -nombre d’octets requis pour stocker les données à la source de données.  
   
--   **Longueur d’octet de caractère** : nombre maximal d’octets nécessaires pour afficher les données sous forme de caractère. Il s’agit comme défini pour chaque type de données SQL dans [taille afficher](../../../odbc/reference/appendixes/display-size.md), sauf que la longueur d’octet de caractère est en octets, tandis que la taille d’affichage est en caractères.  
+-   **Longueur d’octet de caractère** - Maximum nombre d’octets nécessaires pour afficher les données sous forme de caractère. Il s’agit comme défini pour chaque type de données SQL dans [taille afficher](../../../odbc/reference/appendixes/display-size.md), sauf que la longueur d’octet de caractère est en octets, tandis que la taille d’affichage est en caractères.  
   
--   **Nombre de chiffres** : nombre de caractères utilisé pour représenter un nombre, y compris le signe moins, une virgule décimale et un exposant (si nécessaire).  
+-   **Nombre de chiffres** : nombre de caractères utilisés pour représenter un nombre, y compris le signe moins, une virgule décimale et un exposant (si nécessaire).  
   
 -   **Mots dans**   
-     ***italique*** : éléments de la grammaire SQL. Pour connaître la syntaxe d’éléments de syntaxe, consultez [annexe c : SQL grammaire](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+     ***italique*** -éléments de la grammaire SQL. Pour connaître la syntaxe d’éléments de syntaxe, consultez [annexe c : Grammaire SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  Cette section contient les rubriques suivantes.  
   
--   [C en SQL : caractère](../../../odbc/reference/appendixes/c-to-sql-character.md)  
+-   [C en SQL : Caractère](../../../odbc/reference/appendixes/c-to-sql-character.md)  
   
--   [C en SQL : numérique](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
+-   [C en SQL : Numérique](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
--   [C en SQL : bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
+-   [C en SQL : Bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   
--   [C en SQL : binaire](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
+-   [C en SQL : fichier binaire](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
   
--   [C en SQL : date](../../../odbc/reference/appendixes/c-to-sql-date.md)  
+-   [C en SQL : Date](../../../odbc/reference/appendixes/c-to-sql-date.md)  
   
 -   [C en SQL : GUID](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
   
 -   [C en SQL : heure](../../../odbc/reference/appendixes/c-to-sql-time.md)  
   
--   [C en SQL : horodatage](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
+-   [C en SQL : Horodatage](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
   
--   [C en SQL : intervalles d’années-mois](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
+-   [C en SQL : Intervalles d’années-mois](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   
--   [C en SQL : intervalles de jours-heures](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
+-   [C en SQL : Intervalles de jours-heures](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   
 -   [Exemples de conversion de données C en SQL](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)

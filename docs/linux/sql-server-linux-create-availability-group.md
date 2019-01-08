@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: d1e1254f8a3b3cd994c31f252ca61a0384dc9bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692137"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205748"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Créer et configurer un groupe de disponibilité pour SQL Server sur Linux
 
@@ -71,7 +71,7 @@ sudo systemctl restart mssql-server
 
 Un groupe de disponibilité utilise des points de terminaison TCP pour la communication. Sous Linux, les points de terminaison pour un groupe de disponibilité sont uniquement pris en charge si des certificats sont utilisés pour l’authentification. Cela signifie que le certificat provenant d’une instance doit être restauré sur toutes les autres instances qui seront des réplicas participant au même groupe de disponibilité. Le processus de certificat est nécessaire même pour un réplica en configuration uniquement. 
 
-La création de points de terminaison et la restauration des certificats ne sont possibles que par le biais de Transact-SQL. Vous pouvez ainsi utiliser des certificats non générés par [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Vous aurez également besoin d’un processus pour gérer et remplacer tous les certificats qui expirent.
+La création de points de terminaison et la restauration des certificats ne sont possibles que par le biais de Transact-SQL. Vous pouvez utiliser non - [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-certificats ainsi générés. Vous aurez également besoin d’un processus pour gérer et remplacer tous les certificats qui expirent.
 
 > [!IMPORTANT]
 > Si vous envisagez d’utiliser l'assistant [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] pour créer le groupe de disponibilité, vous devrez néanmoins créer et restaurer les certificats à l’aide de Transact-SQL sur Linux.
@@ -202,7 +202,7 @@ Cet exemple va créer des certificats pour une configuration à trois nœuds. Le
     GO
     ```
     
-7.  Restaurer LinAGN2_Cert et LinAGN3_Cert sur LinAGN1. Avoir les certificats des autres réplicas, est un aspect important de la communication et sécurité du groupe de disponibilité.
+7.  Restaurer LinAGN2_Cert et LinAGN3_Cert sur LinAGN1. Certificats d’autres réplicas est un aspect important de communication de groupe de disponibilité et de sécurité.
     
     ```SQL
     CREATE CERTIFICATE LinAGN2_Cert
@@ -347,7 +347,7 @@ Cette section montre comment créer un groupe de disponibilité avec un cluster 
 
 9.  Si vous souhaitez modifier les préférences de sauvegarde, cliquez sur l’onglet Préférences de sauvegarde. Pour plus d’informations sur les préférences de sauvegarde avec les groupes de disponibilité, consultez [configurer la sauvegarde sur les réplicas de disponibilité](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
 
-10. Si vous utilisez des bases de données secondaires ou si vous créez un groupe de disponibilité avec un cluster de type None pour une lecture répartie, vous pouvez créer un écouteur en sélectionnant l’onglet de l’écouteur. Un écouteur peut également être ajouté plus tard. Pour créer un écouteur, choisissez l’option **créer un écouteur de groupe de disponibilité** et entrez un nom, un port TCP/IP et déterminez s’il faut utiliser une adresse IP DHCP statique ou attribuée automatiquement. N’oubliez pas que pour un groupe de disponibilité avec un cluster de type None, l’adresse IP doit être statique et affectée à l’adresse principale.
+10. Si vous utilisez des bases de données secondaires ou si vous créez un groupe de disponibilité avec un cluster de type None pour une lecture répartie, vous pouvez créer un écouteur en sélectionnant l’onglet de l’écouteur. Un écouteur peut également être ajouté plus tard. Pour créer un écouteur, choisissez l’option **créer un écouteur de groupe de disponibilité** et entrez un nom, un port TCP/IP et déterminez s’il faut utiliser une adresse IP DHCP statique ou attribuée automatiquement. N’oubliez pas que pour un groupe de disponibilité avec un type de cluster aucun, l’adresse IP doit être statique et affectez à l’adresse du principal.
 
     ![](./media/sql-server-linux-create-availability-group/image6.png)
 
@@ -378,7 +378,7 @@ Cette section présente des exemples de création d’un groupe de disponibilit�
 -   [Configurer le routage en lecture seule pour un groupe de disponibilité (SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
 -   [Créer ou configurer un écouteur de groupe de disponibilité (SQL Server)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-#### <a name="example-one--two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>Réplicas exemple 1 – 2 avec un réplica de la configuration uniquement (type de cluster externe)
+#### <a name="example-one---two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>Réplicas exemple un deux avec un réplica de la configuration uniquement (type de cluster externe)
 
 Cet exemple montre comment créer un groupe de disponibilité de deux réplicas qui utilise un réplica en configuration seule.
 
@@ -424,7 +424,7 @@ Cet exemple montre comment créer un groupe de disponibilité de deux réplicas 
     GO
    ```
 
-#### <a name="example-two--three-replicas-with-read-only-routing-external-cluster-type"></a>Réplicas exemple deux – trois avec (type de cluster externe) de routage en lecture seule
+#### <a name="example-two---three-replicas-with-read-only-routing-external-cluster-type"></a>Réplicas exemple deux trois avec (type de cluster externe) de routage en lecture seule
 
 Cet exemple illustre trois complète de réplicas et de routage comment en lecture seule peuvent être configurés dans le cadre de la création initiale du groupe de disponibilité.
 
@@ -482,7 +482,7 @@ Cet exemple illustre trois complète de réplicas et de routage comment en lectu
     
 3.  Répétez l’étape 2 pour le troisième réplica.
 
-#### <a name="example-three--two-replicas-with-read-only-routing-none-cluster-type"></a>Réplicas de trois : le deuxième exemple avec le routage en lecture seule (aucun type de cluster)
+#### <a name="example-three---two-replicas-with-read-only-routing-none-cluster-type"></a>Réplicas de trois-le deuxième exemple avec le routage en lecture seule (aucun type de cluster)
 
 Cet exemple illustre la création d’une configuration de deux réplicas à l’aide d’un type de cluster aucun. Il est utilisé pour le scénario de mise à l’échelle lecture où aucun basculement n’est attendue. Cette opération crée l’écouteur est en fait le réplica principal, ainsi que le routage en lecture seule, à l’aide de la fonctionnalité de tourniquet (Round Robin).
 

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_articlefilter_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98bafb6441b29bef41f7a2fffefac38a8ce9048a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0869cfb6914766e2ab43e138831e2992aa6977b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633417"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209198"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +44,19 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_publication_**'**  
  Nom de la publication contenant l'article. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@article=**] **'***article***'**  
+ [  **@article=**] **'**_article_**'**  
  Nom de l'article. *article* est **sysname**, sans valeur par défaut.  
   
- [  **@filter_name=**] **'***nom_de_filtre***'**  
+ [  **@filter_name=**] **'**_nom_de_filtre_**'**  
  Est le nom de la procédure stockée de filtre doit être créé à partir de la *nom_de_filtre*. *nom_de_filtre* est **nvarchar (386)**, avec NULL comme valeur par défaut. Vous devez spécifier un nom unique pour le filtre d'article.  
   
- [  **@filter_clause=**] **'***filter_clause***'**  
+ [  **@filter_clause=**] **'**_filter_clause_**'**  
  Clause de restriction (WHERE) qui définit un filtre horizontal. Lorsque vous entrez la clause de restriction, omettez le mot clé où. *filter_clause* est **ntext**, avec NULL comme valeur par défaut.  
   
- [  **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
  Signale que l'action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications de l’article n’invalident pas l’instantané n’est pas valide. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur se produit et aucune modification n'est effectuée.  
@@ -71,8 +70,8 @@ sp_articlefilter [ @publication = ] 'publication'
   
  **1** indique que les modifications apportées à l’article entraînent la réinitialisation des abonnements existants et autorise la réinitialisation des abonnements se produise.  
   
- [  **@publisher=** ] **'***publisher***'**  
- Spécifie un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+ [  **@publisher=** ] **'**_publisher_**'**  
+ Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé avec un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
@@ -94,7 +93,7 @@ sp_articlefilter [ @publication = ] 'publication'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlefilter-transac_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_articlefilter**.  
   
 ## <a name="see-also"></a>Voir aussi  

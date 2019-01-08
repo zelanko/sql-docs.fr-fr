@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server], resource usage
@@ -25,12 +25,12 @@ ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef07f6885b99393b05b85b530464040490dd7bd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135069"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777061"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Analyser l'utilisation des ressources (Moniteur système)
   Si vous utilisez le système d'exploitation Microsoft Windows Server, faites appel à l'outil graphique Moniteur système pour mesurer les performances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez afficher les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les compteurs de performance ainsi que le comportement d’autres objets, tels que les processeurs, la mémoire, le cache, les threads et les processus. Chacun de ces objets dispose d'un jeu de compteurs qui mesurent l'utilisation du dispositif, la longueur des files d'attente, les temporisations et d'autres indicateurs de débit et de congestion interne.  
@@ -53,7 +53,7 @@ ms.locfileid: "48135069"
   
 -   d'exécuter un programme prédéfini la première fois ou chaque fois que la valeur d'un compteur est supérieure ou inférieure à une valeur définie par l'utilisateur ;  
   
--   de créer des fichiers journaux contenant des données relatives à différents objets provenant de différents ordinateurs ;  
+-   de créer des fichiers journaux contenant des données relatives à différents objets provenant de différents ordinateurs ;  
   
 -   d'ajouter à un fichier sélectionné des sections d'autres fichiers journaux afin de créer un fichier d'archive à long terme ;  
   

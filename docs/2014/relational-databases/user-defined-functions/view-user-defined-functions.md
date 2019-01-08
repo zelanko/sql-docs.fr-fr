@@ -18,12 +18,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab407cac265c148b946380c58d48e2c98f231a81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73f3fcdb485d4fdfbb06392414086d25f405a77f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223169"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505450"
 ---
 # <a name="view-user-defined-functions"></a>Afficher les fonctions définies par l'utilisateur
   Vous pouvez obtenir des informations sur la définition ou les propriétés d'une fonction définie par l'utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous devrez peut-être examiner la définition de la fonction pour comprendre comment les données de celle-ci sont issues des tables source ou pour connaître les données définies par la fonction.  
@@ -52,7 +52,7 @@ ms.locfileid: "48223169"
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### <a name="to-show-a-user-defined-functions-properties"></a>Pour afficher les propriétés d'une fonction définies par l'utilisateur  
+#### <a name="to-show-a-user-defined-functions-properties"></a>Pour afficher les propriétés d’une fonction définie par l’utilisateur  
   
 1.  Dans l' **Explorateur d'objets**, cliquez sur le signe plus (+) en regard de la base de données qui contient la fonction dont vous souhaitez afficher les propriétés, puis cliquez sur le signe plus (+) pour développer le dossier **Programmabilité** .  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48223169"
   
 4.  Cliquez avec le bouton droit sur la fonction dont vous voulez afficher les propriétés, puis sélectionnez **Propriétés**.  
   
-     Les propriétés suivantes s’affichent dans la boîte de dialogue **Propriétés de la fonction –** *nom_fonction* .  
+     Les propriétés suivantes s’affichent dans la boîte de dialogue **Propriétés de la fonction -** *nom_fonction*.  
   
      **Sauvegarde de la base de données**  
      Nom de la base de données contenant cette fonction.  
@@ -113,7 +113,7 @@ ms.locfileid: "48223169"
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>Pour obtenir la définition et les propriétés d'une fonction  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48223169"
   
 #### <a name="to-get-the-dependencies-of-a-function"></a>Pour obtenir les dépendances d'une fonction  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

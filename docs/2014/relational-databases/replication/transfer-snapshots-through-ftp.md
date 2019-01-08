@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
@@ -15,12 +14,12 @@ ms.assetid: 55c30791-cd2a-420b-8ba7-5700e005cb45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34cb32b12913f912154ed8fb03f914a6e1abab74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96c6c03d06efa587a8644af2a0ffa0b7532f15dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225609"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785011"
 ---
 # <a name="transfer-snapshots-through-ftp"></a>Transférer des instantanés via FTP
   Par défaut, les instantanés sont stockés dans des dossiers définis sous forme de partages UNC (Universal Naming Convention). La réplication vous permet aussi de spécifier un partage FTP (File Transfer Protocol) plutôt qu'UNC. Pour utiliser FTP, vous devez configurer un serveur FTP puis une publication et un ou plusieurs abonnements qui utiliseront FTP. Pour obtenir des informations sur la configuration d'un serveur SMTP, consultez la documentation IIS (Internet Information Services). Si vous spécifiez des informations FTP pour une publication, les abonnements à cette publication utiliseront par défaut FTP. FTP est uniquement utilisé avec la synchronisation Web lorsque l'ordinateur exécutant IIS est séparé du serveur de distribution par un pare-feu. Dans ce cas, FTP peut être utilisé pour transférer l'instantané entre le serveur de distribution et l'ordinateur qui exécute IIS. (L'instantané est toujours transféré à l'Abonné en utilisant le protocole HTTPS.)  

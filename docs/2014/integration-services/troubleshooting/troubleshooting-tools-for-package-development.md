@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -17,12 +16,12 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8dc02c97daa09091c2f7ca4063c32325e0a39a3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e1935b7ffa0acc22183f91cf5c7fe3896c9e1a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176689"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792080"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Outils de dépannage pour le développement des packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend des fonctionnalités et des outils que vous pouvez utiliser pour dépanner les packages quand vous les développez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -44,9 +43,9 @@ ms.locfileid: "48176689"
   
 -   **Définir tous les packages et toutes les connexions pour travailler hors connexion quand les sources de données ne sont pas disponibles**. Vous pouvez activer **Travailler hors connexion** à partir du menu **SSIS** . Contrairement à la `DelayValidation` propriété, le **travailler hors connexion** option est disponible avant même que vous ouvriez un package. Vous pouvez également activer l’option **Travailler hors connexion** pour accélérer les opérations exécutées dans le concepteur, puis la désactiver dès que vous souhaitez valider votre package.  
   
--   **Configurer la propriété DelayValidation dans les éléments de package qui ne sont pas valides avant l’exécution**. Pour éviter toute erreur de validation, vous pouvez définir la propriété `DelayValidation` avec la valeur `True` dans les éléments de package dont la configuration n'est pas valide au moment de la conception. Par exemple, vous pouvez disposer d'une tâche Flux de données qui utilise une table de destination qui n'existe pas jusqu'à ce qu'une tâche d'exécution SQL crée la table au moment de l'exécution. Le `DelayValidation` propriété peut être activée au niveau du package ou au niveau des tâches individuelles et des conteneurs inclus dans le package. Normalement, vous devez laisser cette propriété définie sur `True` sur les mêmes éléments de package lorsque vous déployez le package, pour éviter les mêmes erreurs de validation au moment de l’exécution.  
+-   **Configurer la propriété DelayValidation dans les éléments de package qui ne sont pas valides avant l’exécution**. Pour éviter toute erreur de validation, vous pouvez définir la propriété `DelayValidation` avec la valeur `True` dans les éléments de package dont la configuration n'est pas valide au moment de la conception. Par exemple, vous pouvez disposer d'une tâche Flux de données qui utilise une table de destination qui n'existe pas jusqu'à ce qu'une tâche d'exécution SQL crée la table au moment de l'exécution. La propriété `DelayValidation` peut être activée au niveau du package ou au niveau des tâches individuelles et des conteneurs inclus dans le package. En règle générale, pour éviter les mêmes erreurs de validation au moment de l'exécution, vous devez laisser cette propriété avec la valeur `True` dans les mêmes éléments de package lors du déploiement du package.  
   
-     Le `DelayValidation` propriété peut être définie sur une tâche de flux de données, mais pas sur les données individuelles des composants de flux. Vous pouvez obtenir un résultat similaire en affectant à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> des composants de flux de données individuels la valeur `false`. Toutefois, lorsque la valeur de cette propriété est `false`, le composant n’a pas connaissance des modifications apportées aux métadonnées des sources de données externes.  
+     La propriété `DelayValidation` peut être définie sur une tâche Flux de données mais pas sur des composants de flux de données individuels. Vous pouvez obtenir un résultat similaire en affectant à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> des composants de flux de données individuels la valeur `false`. Néanmoins, si cette propriété affiche la valeur `false`, le composant n'a pas connaissance des modifications apportées aux métadonnées des sources de données externes.  
   
  Si les objets de base de données utilisés par le package sont verrouillés lorsque la validation se produit, le processus de validation peut cesser de répondre. Dans ces circonstances, le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] cesse également de répondre. Vous pouvez reprendre la validation à l’aide de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour fermer la session associée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez aussi éviter ce problème en utilisant les paramètres décrits dans cette section.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "48176689"
  Si vous rencontrez un numéro d’erreur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] accompagné d’aucune description lors du développement du package, vous pouvez rechercher la description dans le [Guide de référence des erreurs et des messages propres à Integration Services](../integration-services-error-and-message-reference.md). La liste ne comporte actuellement aucune information de dépannage.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils de dépannage pour l’exécution du Package](troubleshooting-tools-for-package-execution.md)   
+ [Outils de dépannage pour l'exécution des packages](troubleshooting-tools-for-package-execution.md)   
  [Fonctionnalités de performances de flux de données](../data-flow/data-flow-performance-features.md)  
   
   

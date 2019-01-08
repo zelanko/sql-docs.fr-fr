@@ -1,7 +1,8 @@
 ---
-title: 'Démarrage rapide : Se connecter et interroger un entrepôt de données SQL Azure à l’aide d’Azure Data Studio | Microsoft Docs'
-description: Ce démarrage rapide montre comment utiliser Azure Data Studio pour vous connecter à une base de données SQL et exécuter une requête
-ms.custom: tools|sos
+title: 'Démarrage rapide : Se connecter et interroger un entrepôt de données SQL Azure'
+titleSuffix: Azure Data Studio
+description: Ce démarrage rapide montre comment utiliser Azure Data Studio pour vous connecter à un entrepôt de données SQL Azure et exécuter une requête
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: bf26924bc7791cf5321c32b3c127abc52780740b
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 72e7e0e83757b52ba7fba6a24cc91499ca4863b1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355730"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030753"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Démarrage rapide : Utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter et interroger des données dans Azure SQL Data Warehouse
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Démarrage rapide : Utilisez [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter et interroger des données dans Azure SQL Data Warehouse
 
 Ce démarrage rapide montre comment utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter à Azure SQL data warehouse, puis utiliser les instructions Transact-SQL pour créer, insérer et sélectionner des données. 
 

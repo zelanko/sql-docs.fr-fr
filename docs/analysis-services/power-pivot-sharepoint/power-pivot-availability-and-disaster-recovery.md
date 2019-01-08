@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9ed5a7d272f5f21b720df33ef71c0c562f8d699a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 96b8703f18f7867ed57101f33e2ec1c4d31b35c7
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979581"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984020"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Récupération d’urgence et disponibilité PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "38979581"
   
  ![disponibilité PowerPivot dans sharepoint 2010](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2010.png "disponibilité powerpivot dans sharepoint 2010")  
   
--   **(1)** Serveurs web frontaux. Installez les fournisseurs de données sur chaque serveur. Pour plus d’informations, voir [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)(Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint).  
+-   **(1)** Serveurs web frontaux. Installez les fournisseurs de données sur chaque serveur. Pour plus d’informations, voir [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
 -   **(2)** Les deux services partagés [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et **(4)** le service Windows **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** sont installés sur les serveurs d’applications SharePoint.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "38979581"
   
 ||Commentaires|  
 |-|--------------|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] dans une batterie de serveurs pour la disponibilité.|Prise en charge mais non recommandée. La recommandation consiste à utiliser AlwaysOn en mode de validation synchrone.|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] dans une batterie de serveurs pour la disponibilité.|Prise en charge mais non recommandée. La recommandation consiste à utiliser AlwaysOn en mode de validation - synchrone.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en mode de validation synchrone|Pris en charge et recommandé.|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] mise en miroir asynchrone ou envoi de journaux à une autre batterie de serveurs pour la récupération d’urgence.|Pris en charge.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] avec validation asynchrone pour la récupération d’urgence|Pris en charge|  
@@ -91,15 +91,13 @@ ms.locfileid: "38979581"
  Pour plus d'informations sur la façon de planifier un scénario de reprise progressive avec [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], consultez [Récupération d'urgence pour PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx).  
   
 ## <a name="verification"></a>Vérification  
- Pour obtenir des directives et des scripts permettant de vérifier un déploiement [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] avant et après un cycle de récupération d’urgence, consultez [Liste de vérification : utiliser PowerShell pour vérifier Power Pivot pour SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
+ Pour des conseils et des scripts pour vous aider à vérifier un [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] déploiement avant et après un cycle de récupération d’urgence, consultez [liste de vérification : Utiliser PowerShell pour vérifier Power Pivot pour SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_more_resources"></a> Liens vers des informations supplémentaires  
   
 -   [Options de haute disponibilité et de récupération d’urgence prises en charge pour les bases de données SharePoint (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
   
 -   [Plan de récupération d'urgence (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
-  
--   [Livre blanc sur la sauvegarde et la récupération de SQL Server Cloud](http://www.microsoft.com/server-cloud/solutions/cloud-backup-recovery.aspx?WT.srch=1&WT.mc_ID=SEM_BING_USEvergreenSearch_Unassigned&CR_CC=Unassigned#fbid=RjU2Nbzu2dT)  
   
 -   [Outil Microsoft® SQL Server Backup to Microsoft Windows® Azure®](http://www.microsoft.com/download/details.aspx?id=40740)  
   

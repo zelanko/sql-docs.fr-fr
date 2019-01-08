@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjectstask.f1
@@ -15,12 +14,12 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b45c0c3d20b3b7f6405e44a456cd5ebbce6472c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 163418048c50b35bd831174d6cd516d301dfa53f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175469"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761871"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tâche de transfert d'objets SQL Server
   La tâche de transfert d’objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transfère un ou plusieurs types d’objets d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par exemple, la tâche peut copier des tables et des procédures stockées. Selon la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée comme source, différents types d’objets sont disponibles pour la copie. Par exemple, seule une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut des schémas et des agrégats définis par l’utilisateur.  
@@ -33,7 +32,7 @@ ms.locfileid: "48175469"
 |Object|  
 |------------|  
 |Tables|  
-|Vues|  
+|Affichages|  
 |Procédures stockées|  
 |Fonctions définies par l'utilisateur|  
 |Valeurs par défaut|  
@@ -80,7 +79,7 @@ ms.locfileid: "48175469"
  La tâche de transfert d’objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’indique pas les stades intermédiaires de l’avancement du transfert des objets : elle signale uniquement la tâche comme réalisée à 0 % ou à 100 %.  
   
 ## <a name="execution-value"></a>Valeur d'exécution  
- La valeur de l’exécution, stockée dans le `ExecutionValue` propriété de la tâche, retourne le nombre d’objets transférés. En affectant une variable définie par l'utilisateur à la propriété `ExecValueVariable` de la tâche de transfert d'objets SQL Server, les informations sur le transfert d'objets peuvent être mises à la disposition d'autres objets du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../use-variables-in-packages.md).  
+ La valeur d'exécution, stockée dans la propriété `ExecutionValue` de la tâche, retourne le nombre d'objets transférés. En affectant une variable définie par l'utilisateur à la propriété `ExecValueVariable` de la tâche de transfert d'objets SQL Server, les informations sur le transfert d'objets peuvent être mises à la disposition d'autres objets du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Entrées du journal  
  La tâche de transfert d'objets SQL Server comporte les entrées de journal personnalisées suivantes :  
@@ -89,7 +88,7 @@ ms.locfileid: "48175469"
   
 -   TransferSqlServerObjectsTaskFinishedTransferringObjects   Cette entrée du journal indique que le transfert est terminé. L'entrée du journal inclut l'heure de fin.  
   
- En outre, une entrée de journal pour l'événement `OnInformation` indique le nombre d'objets pour les types d'objet qui ont été sélectionnés pour le transfert, le nombre d'objets transférés, ainsi que les actions telles que la troncation de tables lorsque des données sont transférées avec les tables. Une entrée de journal pour le `OnWarning` événement est écrit pour chaque objet de destination est remplacée.  
+ En outre, une entrée de journal pour l'événement `OnInformation` indique le nombre d'objets pour les types d'objet qui ont été sélectionnés pour le transfert, le nombre d'objets transférés, ainsi que les actions telles que la troncation de tables lorsque des données sont transférées avec les tables. Une entrée de journal pour l'événement `OnWarning` est écrite pour chaque objet de destination remplacé.  
   
 ## <a name="security-and-permissions"></a>Sécurité et autorisations  
  L'utilisateur doit avoir l'autorisation de parcourir les objets sur le serveur source et de supprimer ou de créer des objets sur le serveur de destination. L'utilisateur doit en outre avoir accès à la base de données spécifiée et aux objets de base de données.  
@@ -107,15 +106,15 @@ ms.locfileid: "48175469"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche SQL Server objets transfert &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de transfert d’objets SQL Server &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche SQL Server objets transfert &#40;Page objets&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
+-   [Éditeur de tâche de transfert d’objets SQL Server &#40;page Objets&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-sql-server-objects-task"></a>Configuration par programmation de la tâche de transfert d'objets SQL Server  
  Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  

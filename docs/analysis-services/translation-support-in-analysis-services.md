@@ -1,5 +1,5 @@
 ---
-title: Prise en charge de la traduction dans Analysis Services | Documents Microsoft
+title: Prise en charge de la traduction dans Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 882434c2bd0a194a2ecbe21a62d3b22964b30f09
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 18b0dd9990c863d6630e63969250bc60b3287255
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041833"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213628"
 ---
 # <a name="translation-support-in-analysis-services"></a>Prise en charge des traductions dans Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "34041833"
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénarios de globalisation pour Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Langues et classements & #40 ; Analysis Services & #41 ;](../analysis-services/languages-and-collations-analysis-services.md)   
+ [Langues et classements &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)   
  [Définir ou modifier le classement des colonnes](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Globalisation conseils et meilleures pratiques & #40 ; Analysis Services & #41 ;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
+ [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
   
   

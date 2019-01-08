@@ -18,12 +18,12 @@ ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7752c1c1d5184ddb1beea26d7c35e29ea5769796
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644327"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538751"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Fonctions d’heure et de date (pilote ODBC Visual FoxPro)
 Le tableau suivant répertorie les fonctions de date et heure ODBC pris en charge par le pilote ODBC Visual FoxPro ; lors de la grammaire de Visual FoxPro pour la même fonction diffère de la syntaxe ODBC, le Visual FoxPro équivalent est répertorié.  
@@ -57,8 +57,8 @@ Le tableau suivant répertorie les fonctions de date et heure ODBC pris en charg
  Le pilote prend également en charge la séquence d’échappement ODBC pour les données de date et d’horodatage. La syntaxe de clause d’échappement est comme suit :  
   
 ```  
---(*vendor(Microsoft),product(ODBC) d 'value' *)—  
---(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
+--(*vendor(Microsoft),product(ODBC) d 'value' *)-  
+--(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
  Dans cette syntaxe, **d** indique que *valeur* est une date dans le *aaaa-mm-jj* format et **ts** indique que *valeur*  est un horodateur dans le *aaaa-mm-jj hh : mm :*[.*f...*] format. La syntaxe raccourcie pour les données de date et l’horodatage est comme suit :  

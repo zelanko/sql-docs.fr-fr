@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3934f596eecf9f0c431814c9e55823f876e51a7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133249"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781191"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Définir des seuils et des avertissements dans le Moniteur de réplication
   Le moniteur de réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] présente des informations sur l'état des publications et des abonnements. Par défaut, le Moniteur de réplication affiche des avertissements uniquement pour les abonnements non initialisés, mais vous pouvez activer les avertissements pour d'autres conditions. Il est recommandé d'activer les avertissements pour votre topologie, afin que vous soyez informés de l'état et des performances en temps voulu.  
@@ -62,11 +61,11 @@ ms.locfileid: "48133249"
   
 2.  Cliquez sur l'onglet **Avertissements** . Pour afficher des informations plus complètes sur les options de cet onglet, cliquez sur **Aide** dans la barre de menus.  
   
-3.  Sélectionnez un avertissement en activant la case à cocher appropriée : **Avertir si un abonnement expire avant le seuil défini** ou **Avertir si la latence dépasse le seuil**.  
+3.  Sélectionnez un avertissement en activant la case à cocher appropriée : **Avertir si un abonnement expire avant le seuil** ou **avertir si la latence dépasse le seuil**.  
   
 4.  Définissez un seuil pour les avertissements dans la colonne **Seuil** . Si, par exemple, vous avez sélectionné **Avertir si la latence dépasse le seuil** à l'étape 3, vous pouvez choisir une latence de **60 secondes** dans la colonne **Seuil** .  
   
-5.  Cliquez sur **Enregistrer les modifications**.  
+5.  Cliquez sur **enregistrer les modifications**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Pour configurer une alerte pour un seuil  
   
@@ -140,7 +139,7 @@ ms.locfileid: "48133249"
   
 4.  Définissez un seuil pour l'avertissement dans la colonne **Seuil** . Par exemple, vous pouvez sélectionner une valeur de **70%** dans la colonne **Seuil** .  
   
-5.  Cliquez sur **Enregistrer les modifications**.  
+5.  Cliquez sur **enregistrer les modifications**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Pour configurer une alerte pour un seuil  
   

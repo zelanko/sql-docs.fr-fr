@@ -21,17 +21,17 @@ ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbcd8616fc743ee749b3adb9b30f343939fa7f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23495d6f2d18964bb35395666c3c7b867e508e20
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819237"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211218"
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supprime des données de l'entrepôt de données de gestion en fonction d'une stratégie de rétention. Cette procédure est exécutée quotidiennement par les mdw_purge_data[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l’Agent par rapport à l’entrepôt de données de gestion associé à l’instance spécifiée. Vous pouvez utiliser cette procédure stockée pour effectuer une suppression à la demande des données dans l'entrepôt de données de gestion.  
+  Supprime des données de l'entrepôt de données de gestion en fonction d'une stratégie de rétention. Cette procédure est exécutée quotidiennement par le travail de l'agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mdw_purge_data contre l'entrepôt de données de gestion associé à l'instance spécifiée. Vous pouvez utiliser cette procédure stockée pour effectuer une suppression à la demande des données dans l'entrepôt de données de gestion.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,7 +71,7 @@ core.sp_purge_data
   
  La procédure doit être exécutée dans le contexte de la base de données d'entrepôt de données de gestion.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **mdw_admin** (avec autorisation EXECUTE) rôle fixe de base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -85,7 +85,7 @@ EXECUTE core.sp_purge_data;
 GO  
 ```  
   
-### <a name="b-specifying-retention-and-duration-values"></a>B. Spécification de valeurs de rétention et de durée  
+### <a name="b-specifying-retention-and-duration-values"></a>b. Spécification de valeurs de rétention et de durée  
  L'exemple suivant supprime les données de l'entrepôt de données de gestion antérieures à 7 jours. En outre, le @duration paramètre est spécifié afin que l’opération s’exécute pas plue de 5 minutes.  
   
 ```  

@@ -12,12 +12,12 @@ ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d95910ce8874d2a9eacdc28c6abf5d7d3be6efa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103389"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530615"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode fournit une alternative à [IBCPSession::BCPColFmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md) pour spécifier le format de colonne. Contrairement à IBCPSession::BCPColFmt, qui définit les attributs de format de colonne individuels, IBCPSession2::BCPSetBulkMode définit tous les attributs.  
@@ -63,7 +63,7 @@ HRESULT BCPSetBulkMode (
 |`E_OUTOFMEMORY`|Erreur de mémoire insuffisante.|  
   
 ## <a name="remarks"></a>Notes  
- IBCPSession2::BCPSetBulkMode peut être utilisé pour copier en une requête ou une table de bloc. Lorsque IBCPSession2::BCPSetBulkMode est utilisé pour copier en bloc une instruction de requête, il doit être appelé avant d’appeler `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` pour spécifier l’instruction de requête.  
+ IBCPSession2::BCPSetBulkMode peut être utilisé pour copier en une requête ou une table de bloc. Lorsque IBCPSession2::BCPSetBulkMode est utilisé pour copier en bloc une instruction de requête, il doit être appelé avant d’appeler `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` pour spécifier l’instruction de requête.  
   
  Vous devez éviter de combiner la syntaxe d'appel RPC avec la syntaxe de requête de lot (`{rpc func};SELECT * from Tbl`, par exemple) dans un texte de commande simple.  Cela entraîne ICommandPrepare::Prepare retourner une erreur et vous empêche de récupérer les métadonnées. Utilisez la syntaxe ODBC CALL (`{call func}; SELECT * from Tbl`, par exemple) si vous devez combiner l'exécution d'une procédure stockée et une requête de lot dans un texte de commande simple.  
   
@@ -71,10 +71,10 @@ HRESULT BCPSetBulkMode (
   
 |property|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Spécifie le mode de sortie de caractères.<br /><br /> Correspond à l’option – c dans BCP. EXE et à IBCPSession::BCPColFmt avec *eUserDataType* propriété définie sur `BCP_TYPE_SQLCHARACTER`.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Spécifie le mode de sortie Unicode.<br /><br /> Correspond à l’option – w dans BCP. EXE et IBCPSession::BCPColFmt avec *eUserDataType* propriété définie sur `BCP_TYPE_SQLNCHAR`.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Spécifie des types natifs pour les types de non-caractères et Unicode pour les types de caractères.<br /><br /> Correspond à l’option – N dans BCP. EXE et IBCPSession::BCPColFmt avec *eUserDataType* propriété définie sur `BCP_TYPE_SQLNCHAR` si le type de colonne est une chaîne ou `BCP_TYPE_DEFAULT` si pas une chaîne.|  
-|BCP_OUT_NATIVE_MODE|Spécifie les types de base de données natifs.<br /><br /> Correspond à l’option – n dans BCP. EXE et IBCPSession::BCPColFmt avec *eUserDataType* propriété définie sur `BCP_TYPE_DEFAULT`.|  
+|BCP_OUT_CHARACTER_MODE|Spécifie le mode de sortie de caractères.<br /><br /> Correspond à l’option-c dans BCP. EXE et à IBCPSession::BCPColFmt avec *eUserDataType* propriété définie sur `BCP_TYPE_SQLCHARACTER`.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Spécifie le mode de sortie Unicode.<br /><br /> Correspond à l’option -w dans BCP. EXE et IBCPSession::BCPColFmt avec *eUserDataType* propriété définie sur `BCP_TYPE_SQLNCHAR`.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Spécifie des types natifs pour les types de non-caractères et Unicode pour les types de caractères.<br /><br /> Correspond à l’option -N dans BCP. EXE et IBCPSession::BCPColFmt avec *eUserDataType* propriété définie sur `BCP_TYPE_SQLNCHAR` si le type de colonne est une chaîne ou `BCP_TYPE_DEFAULT` si pas une chaîne.|  
+|BCP_OUT_NATIVE_MODE|Spécifie les types de base de données natifs.<br /><br /> Correspond à l’option - n dans BCP. EXE et IBCPSession::BCPColFmt avec *eUserDataType* propriété définie sur `BCP_TYPE_DEFAULT`.|  
   
  Vous pouvez appeler IBCPSession::BCPControl et IBCPSession2::BCPSetBulkMode pour IBCPSession::BCPControl les options qui ne sont pas en conflit avec IBCPSession2::BCPSetBulkMode. Par exemple, vous pouvez appeler IBCPSession::BCPControl avec `BCP_OPTION_FIRST` et IBCPSession2::BCPSetBulkMode.  
   
@@ -99,7 +99,7 @@ BCPReadFmt();
   
 ```  
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
-BCPControl(BCP_OPTION_HINTS, "select …");  
+BCPControl(BCP_OPTION_HINTS, "select ...");  
 BCPSetBulkMode();  
 ```  
   
@@ -120,7 +120,7 @@ BCPColFmt();
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPSetBulkMode();  
-BCPControl(BCP_OPTION_HINTS, "select …");  
+BCPControl(BCP_OPTION_HINTS, "select ...");  
 BCPReadFmt();  
 ```  
   

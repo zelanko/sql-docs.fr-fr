@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], traces
@@ -14,12 +13,12 @@ ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fed48fdb4b6e86bc2c1920e80ea9e62ba4b73a7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 803acc60555c996a0556e456b8d31753506b43ab
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177422"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205788"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>Définir un filtre de trace (Transact-SQL)
   Cette rubrique explique comment utiliser des procédures stockées pour créer un filtre qui n'extrait que les informations requises lors d'un événement en cours de traçage.  
@@ -30,7 +29,7 @@ ms.locfileid: "48177422"
   
 2.  Exécutez **sp_trace_setfilter** pour configurer le type d’informations extraites pour l’événement dont vous voulez suivre la trace.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Contrairement aux procédures stockées standard, les paramètres de toutes les procédures stockées [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (**sp_trace_* xx***) sont strictement typés et ne prennent pas en charge la conversion automatique des types de données. Si ces paramètres ne sont pas appelés avec des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée renvoie une erreur.  
   
 ## <a name="see-also"></a>Voir aussi  

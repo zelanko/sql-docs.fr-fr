@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29bb70b8f1acabc94798a4a86b52e9e0b149cd97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85bc34af971db386862528ac36ea04fef33f2daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102701"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759191"
 ---
 # <a name="projects-sql-server-management-studio"></a>Projets (SQL Server Management Studio)
   Un projet [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] est une collection de scripts et de fichiers associés de façon logique qui peuvent être enregistrés ensemble en vue de l'administration et du développement d'une base de données.  
@@ -48,7 +48,7 @@ ms.locfileid: "48102701"
 |----------------------|-----------|  
 |Explique comment créer un projet dans une solution.|[Créer un projet](create-a-project.md)|  
 |Explique comment ajouter un projet existant à une solution.|[Ajouter un projet existant à une solution](add-an-existing-project-to-a-solution.md)|  
-|Explique comment modifier l'emplacement par défaut dans lequel les fichiers du projet sont enregistrés.|[Modifier l’emplacement par défaut des projets](change-the-default-location-for-projects.md)|  
+|Explique comment modifier l'emplacement par défaut dans lequel les fichiers du projet sont enregistrés.|[Modifier l'emplacement par défaut des projets](change-the-default-location-for-projects.md)|  
 |Explique comment afficher les propriétés actuelles d'un projet.|[Afficher les propriétés d'un projet](view-project-properties.md)|  
 |Explique comment ajouter de nouveaux éléments, tels que des connexions ou des fichiers de script, à un projet.|[Ajouter de nouveaux éléments à un projet](add-new-items-to-a-project.md)|  
 |Explique comment établir les informations de connexion d'une requête.|[Associer une requête à une connexion dans un projet](associate-a-query-with-a-connection-in-a-project.md)|  

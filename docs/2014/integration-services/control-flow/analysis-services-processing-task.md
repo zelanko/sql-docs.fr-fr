@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asprocessingtask.f1
@@ -16,12 +15,12 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42b8ba863f4fbe8c5ce444cd253ea06aec0c7480
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c5b5d52b1f4b2c2c260854230b53ccbe99aa641
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050011"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766541"
 ---
 # <a name="analysis-services-processing-task"></a>tâche de traitement d'Analysis Services
   La tâche de traitement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] traite les objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tels que les modèles tabulaires, les cubes, les dimensions et les modèles d'exploration de données.  
@@ -38,7 +37,7 @@ ms.locfileid: "48050011"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend une série de tâches qui effectuent des opérations de Business Intelligence, telles que l’exécution d’instructions DDL (Data Definition Language) et de requêtes de prédiction d’exploration de données. Pour plus d'informations sur les tâches Business Intelligence associées, cliquez sur l'une des rubriques suivantes :  
   
--   [Tâche DDL d’exécution de SQL Server Analysis Services](analysis-services-execute-ddl-task.md)  
+-   [Tâche DDL d'exécution de SQL Server Analysis Services](analysis-services-execute-ddl-task.md)  
   
 -   [Tâche de requête d’exploration de données](data-mining-query-task.md)  
   
@@ -67,15 +66,15 @@ ms.locfileid: "48050011"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche de traitement de Analysis Services &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de traitement d’Analysis Services &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche de traitement de Analysis Services &#40;Page de Analysis Services&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
+-   [Éditeur de tâche de traitement d’Analysis Services &#40;page Analysis Services&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>Configuration par programmation de la tâche de traitement Analysis Services  
  Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur l'une des rubriques suivantes :  

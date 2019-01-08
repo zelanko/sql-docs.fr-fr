@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdatatypemap
@@ -17,17 +16,17 @@ ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1eab8424e2ff5eb81e8d89a6ed897b7d19b5b72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1d4addec6f0b5a7faff69d513c655450202d099
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837937"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210848"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne des informations sur les mappages de types de données définis entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SGBD) des systèmes de gestion de base de données. Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données.  
+  Retourne des informations sur les mappages de types de données définis entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SGBD) des systèmes de gestion de base de données. Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +47,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  [ **@source_dbms**=] **'***source_dbms***'**  
  Nom du SGBD à partir duquel les types de données sont mappés. *source_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Base de données source au format [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Base de données Oracle source.|  
@@ -62,7 +61,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  [ **@destination_dbms** =] **'***destination_dbms***'**  
  Nom du SGBD de destination. *destination_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destination.|  
 |**ORACLE**|Base de données Oracle de destination.|  
@@ -93,11 +92,11 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_helpdatatypemap** définit les mappages de types de données à partir d’éditeurs non SQL Server et à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] éditeurs non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
+ **sp_helpdatatypemap** définit les mappages de types de données à partir d’éditeurs non SQL Server et à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] éditeurs non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
   
  Lors de la combinaison spécifiée de la source et le SGBD de destination n’est pas pris en charge, **sp_helpdatatypemap** retourne un jeu de résultats vide.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe sur le serveur de distribution ou les membres de la **db_owner** rôle de base de données fixe sur la base de données de distribution peut exécuter **sp_helpdatatypemap**.  
   
 ## <a name="see-also"></a>Voir aussi  

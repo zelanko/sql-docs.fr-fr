@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
@@ -16,12 +16,12 @@ ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e98d9f168e0256b96fefdd1d1c1bf65b5b54155
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4d1ecf24b8bde6ed02557a2a0d4de722240f754
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078389"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762941"
 ---
 # <a name="delete-a-job-category"></a>Supprimer une catégorie de travaux
   Cette rubrique explique comment supprimer une catégorie de travaux de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de SQL Server Management Objects.  
@@ -50,13 +50,13 @@ ms.locfileid: "48078389"
   
 3.  Cliquez avec le bouton droit sur le dossier **Travaux** et sélectionnez **Gérer les catégories de travaux**.  
   
-4.  Dans la boîte de dialogue**Gérer les catégories de travaux***nom_serveur*, sélectionnez la catégorie de travaux à supprimer.  
+4.  Dans la boîte de dialogue **Gérer les catégories de travaux**_nom_serveur_ , sélectionnez la catégorie de travaux à supprimer.  
   
 5.  Cliquez sur **Supprimer**.  
   
 6.  Dans la boîte de dialogue **Catégories de travaux** , cliquez sur **Oui**.  
   
-7.  Fermez la boîte de dialogue **Gérer les catégories de travaux***nom_serveur*.  
+7.  Fermez la boîte de dialogue **Gérer les catégories de travaux**_nom_serveur_ .  
   
 
   
@@ -87,7 +87,7 @@ ms.locfileid: "48078389"
 ##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
  **Pour supprimer une catégorie de travaux**  
   
- Appelez le `JobCategory` classe à l’aide d’un langage de programmation que vous choisissez, tel que Visual Basic, Visual c# ou PowerShell.  
+ Appelez la classe `JobCategory` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell.  
   
 
   

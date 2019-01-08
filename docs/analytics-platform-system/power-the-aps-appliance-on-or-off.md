@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a8be7ec364a257752576fa150434a67a92c28d9c
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909509"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527865"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>L’appliance ou désactiver l’alimentation pour l’Analytique Platform System
 Cette rubrique décrit comment à puissance ou de mise hors tension de votre Systemappliance de plateforme d’Analytique qui est en cours d’exécution Parallel Data Warehouse. Utilisez cette rubrique lorsqu’une appliance Analytique Platform System est déplacée, ou à puissance sur une appliance après une panne catastrophique.  
@@ -39,15 +39,15 @@ Avant la mise hors tension de l’appliance, vous devez terminer la toutes les a
 > [!WARNING]  
 > Toutes les étapes doivent être effectuées dans l’ordre indiqué et chaque étape doit terminer avant l’exécution de l’étape suivante, sauf indication contraire. Les étapes en désordre ou sans attendre que chaque étape pour terminer peuvent engendrer des erreurs lors de l’appliance est sous tension à une date ultérieure.  
   
-1.  Se connecter au nœud de contrôle de PDW (***PDW_region *-CTL01** ) et connectez-vous avec le compte administrateur de domaine Analytique Platform System appliance.  
+1.  Se connecter au nœud de contrôle de PDW (**_PDW_region_-CTL01** ) et connectez-vous avec le compte administrateur de domaine Analytique Platform System appliance.  
   
 2.  Exécutez `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` pour ouvrir le **Configuration Manager**.  
   
 3.  Dans le Gestionnaire de Configuration, sous le **topologie de l’entrepôt de données parallèle** menu, cliquez sur le **l’état des Services** onglet, puis cliquez sur **région arrêter** pour arrêter les services PDW.   
   
-4.  Se connecter à ***appliance_domain *-HST01** et connectez-vous avec le compte d’administrateur de domaine appliance.  
+4.  Se connecter à  **_appliance_domain_-HST01** et connectez-vous avec le compte d’administrateur de domaine appliance.  
   
-5.  À l’aide de la **Gestionnaire du Cluster de basculement** se connecter à la ***appliance_domain *-WFOHST01** de cluster, si pas automatiquement connecté et, dans le volet de Navigation, cliquez sur **rôles**. Dans le **rôles** volet :  
+5.  À l’aide de la **Gestionnaire du Cluster de basculement** se connecter à la  **_appliance_domain_-WFOHST01** de cluster, si pas automatiquement connecté et, dans le volet de Navigation, cliquez sur **Rôles**. Dans le **rôles** volet :  
   
     1.  Multisélection des machines virtuelles. Effectuez un clic droit, puis sélectionnez **arrêter**.  
   
@@ -55,9 +55,9 @@ Avant la mise hors tension de l’appliance, vous devez terminer la toutes les a
   
 6.  Fermer le **Gestionnaire du Cluster de basculement** application.  
   
-7. Arrêtez tous les serveurs à l’exception ***appliance_domain *-HST01**.  
+7. Arrêtez tous les serveurs à l’exception  **_appliance_domain_-HST01**.  
   
-8. Arrêter le ***appliance_domain *-HST01** server.  
+8. Arrêter le  **_appliance_domain_-HST01** server.  
   
 9. Arrêtez les unités de Distribution d’alimentation (PDU).  
   
@@ -70,25 +70,25 @@ Avant la mise hors tension de l’appliance, vous devez terminer la toutes les a
   
 1.  Mise sous tension les unités de Distribution d’alimentation (PDU) et attendez que les commutateurs pour démarrer automatiquement.  
   
-2.  Mettre sous tension le ***appliance_domain *-HST01** server.  
+2.  Mettre sous tension le  **_appliance_domain_-HST01** server.  
   
-3.  Connectez-vous à ***appliance_domain *-HST01** en tant que l’administrateur de domaine d’application.  
+3.  Connectez-vous à  **_appliance_domain_-HST01** en tant que l’administrateur de domaine d’application.  
   
-4.  Démarrer le **Gestionnaire Hyper-V** programme (**virtmgmt.msc**) et connectez-vous à ***appliance_domain *-HST01** si ne pas connecté par défaut.  
+4.  Démarrer le **Gestionnaire Hyper-V** programme (**virtmgmt.msc**) et connectez-vous à  **_appliance_domain_-HST01** si ne pas connecté par défaut.  
   
-    1.  Si vous ne pouvez pas vous connecter par nom, car le ***PDW_region *-AD01** est ne pas en cours d’exécution, essayez de vous connecter à l’aide de l’adresse IP.  
+    1.  Si vous ne pouvez pas vous connecter par nom, car le  **_PDW_region_-AD01** est ne pas en cours d’exécution, essayez de vous connecter à l’aide de l’adresse IP.  
   
-    2.  Dans le **Machines virtuelles** volet, recherchez ***PDW_region *-AD01** et confirmez qu’il s’exécute. Si ce n’est pas le cas, démarrez cette machine virtuelle et attendez qu’elle doit être entièrement démarré.  
+    2.  Dans le **Machines virtuelles** volet, recherchez  **_PDW_region_-AD01** et confirmez qu’il s’exécute. Si ce n’est pas le cas, démarrez cette machine virtuelle et attendez qu’elle doit être entièrement démarré.  
   
 5.  Mise sous tension le reste des serveurs dans l’appliance.  
   
 6.  Tout en sur **HST01** connecté comme administrateur de domaine d’application, à partir de **Gestionnaire Hyper-V**:  
   
-    1.  Se connecter à ***appliance_domain *-HST02**.  
+    1.  Se connecter à  **_appliance_domain_-HST02**.  
   
-    2.  Dans le **Machines virtuelles** volet, recherchez ***PDW_region *-AD02** et confirmez qu’il s’exécute.  Si ce n’est pas le cas, démarrez cette machine virtuelle et attendez qu’elle doit être entièrement démarré.  
+    2.  Dans le **Machines virtuelles** volet, recherchez  **_PDW_region_-AD02** et confirmez qu’il s’exécute.  Si ce n’est pas le cas, démarrez cette machine virtuelle et attendez qu’elle doit être entièrement démarré.  
   
-7.  À l’aide de la **Gestionnaire du Cluster de basculement** se connecter à la ***appliance_domain *-WFOHST01** de cluster, si pas automatiquement connecté, puis, dans le **Navigation** volet, cliquez sur **Rôles**. Dans le **rôles** volet :  
+7.  À l’aide de la **Gestionnaire du Cluster de basculement** se connecter à la  **_appliance_domain_-WFOHST01** de cluster, si pas automatiquement connecté, puis, dans le  **Navigation** volet, cliquez sur **rôles**. Dans le **rôles** volet :  
   
     1.  Multisélection de tous les ordinateurs virtuels, effectuez un clic droit, puis cliquez sur **Démarrer**.  
   
@@ -98,7 +98,7 @@ Avant la mise hors tension de l’appliance, vous devez terminer la toutes les a
   
 8. Déconnectez **HST01** si vous le souhaitez.  
   
-9. Se connecter à ***PDW_region *-CTL01** utilisant le compte d’administrateur de domaine appliance.  
+9. Se connecter à  **_PDW_region_-CTL01** utilisant le compte d’administrateur de domaine appliance.  
   
 10. Exécutez `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` pour lancer le **Configuration Manager**.  
   

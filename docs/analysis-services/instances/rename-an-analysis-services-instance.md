@@ -1,5 +1,5 @@
 ---
-title: Renommer une Instance Analysis Services | Documents Microsoft
+title: Renommer une Instance Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6214dbcef4036bc545a931f90ee8dca4580ef287
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7ec5f84d40c3ba0628ea111502dd2be41cc7d346
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015916"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393012"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Renommer une instance d'Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34015916"
   
      La mise à jour d'une connexion à une base de données ou des autorisations de fichiers est nécessaire si vous avez utilisé un compte virtuel pour configurer le service. Les comptes virtuels sont basés sur le nom de l'instance, donc si vous renommez l'instance, le compte virtuel est également mis à jour. Cela signifie que toutes les connexions ou autorisations précédentes créées pour l'instance antérieure ne sont plus valides.  
   
-     L'exemple suivant en est l'illustration. Supposons que vous avez installé un serveur en mode tabulaire en tant qu'instance nommée « tabular » à l'aide du compte virtuel par défaut, ce qui entraîne la configuration suivante :  
+     L'exemple suivant en est l'illustration. Supposons que vous avez installé un serveur en mode tabulaire en tant qu’instance nommée « Tabular » à l’aide du compte virtuel par défaut, ce qui entraîne la configuration suivante :  
   
     1.  Nom de l’instance = \<serveur > \TABULAR  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34015916"
   
     3.  Compte virtuel = NT Service\ MSOLAP$TABULAR  
   
-     Supposons à présent que vous renommez l'instance en « TAB2 ». Suite au changement de nom, la configuration se présente à présent comme suit :  
+     Maintenant Supposons que vous renommez l’instance en « TAB2 ». Suite au changement de nom, la configuration se présente à présent comme suit :  
   
     1.  Nom de l’instance = \<serveur > \TAB2  
   
@@ -68,6 +68,6 @@ ms.locfileid: "34015916"
   
     3.  Compte virtuel = NT Service\ MSOLAP$TAB2  
   
-     Comme vous pouvez le voir, les autorisations d'accès à la base de données et aux fichiers précédemment accordées au service « NT Service\ MSOLAP$TABULAR » ne sont plus valides. Pour vous assurer que les tâches et les opérations effectuées par le service s'exécutent comme précédemment, vous devez maintenant accorder au service « NT Service\ MSOLAP$TAB2 » les autorisations d'accès à la nouvelle base de données et aux fichiers.  
+     Comme vous pouvez le voir, les autorisations de base de données et les fichiers qui ont été précédemment accordées à « NT Service\ MSOLAP$ TABULAR » ne sont plus valides. Pour vous assurer que les tâches et les opérations effectuées par le service s’exécute comme précédemment, vous devez maintenant devez accorder des autorisations de base de données et les fichiers nouveaux à « NT Service\ MSOLAP$ TAB2 ».  
   
   

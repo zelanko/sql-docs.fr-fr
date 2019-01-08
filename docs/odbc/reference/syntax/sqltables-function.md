@@ -20,16 +20,16 @@ ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0930f61ea43fb77e93b9b3ebcb9d20073f1950d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfe77cba535b78f387a786ddc56f65cf87172644
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708357"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212398"
 ---
 # <a name="sqltables-function"></a>Fonction SQLTables
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : Open Group  
+ Version introduite : Conformité aux normes 1.0 ODBC : Ouvrir le groupe  
   
  **Résumé**  
  **SQLTables** renvoie la liste des noms de table, de catalogue ou de schéma et les types de tables, stockées dans une source de données spécifique. Le pilote retourne les informations comme jeu de résultats.  
@@ -156,7 +156,7 @@ SQLRETURN SQLTables(
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Nom de catalogue ; NULL si non applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de catalogues.|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nom du schéma ; NULL si non applicable à la source de données. Si un pilote prend en charge les schémas pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de schémas.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar|Nom de la table.|  
-|TABLE_TYPE (ODBC 1.0)|4|Varchar|Nom du type de table ; les valeurs suivantes : « TABLE », « Vue », « TABLE système », « GLOBAL temporaire », « Temporaire LOCAL », « ALIAS », « SYNONYME » ou un nom de type de spécifique à la source de données.<br /><br /> La signification de « ALIAS » et « SYNONYME » est spécifiques au pilote.|  
+|TABLE_TYPE (ODBC 1.0)|4|Varchar|Nom du type de table ; les valeurs suivantes : « TABLE », « Vue », « TABLE système », « GLOBAL temporaire », « Temporaire LOCAL », « ALIAS », « SYNONYME » ou un nom de type spécifique à la source de données.<br /><br /> La signification de « ALIAS » et « SYNONYME » est spécifiques au pilote.|  
 |REMARQUES (ODBC 1.0)|5|Varchar|Une description de la table.|  
   
 ## <a name="example"></a>Exemple  

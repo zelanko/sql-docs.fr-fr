@@ -11,17 +11,17 @@ ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 272aba58ecd342bd1bf0040a9b14beca15e4d160
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ec516a74d28ff868e8a20d1c3d5cd568d3420ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110854"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352793"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expressions (Générateur de rapports et SSRS)
-  Les expressions sont couramment utilisées dans un rapport pour récupérer, calculer, afficher, regrouper, trier, filtrer, paramétrer et mettre en forme les données d'un rapport. De nombreuses propriétés d'élément de rapport peuvent avoir la valeur d'une expression. Les expressions vous aident à contrôler le contenu, la conception et l'interactivité de votre rapport. Les expressions sont écrites [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], enregistrées dans la définition de rapport et évaluées par le processeur de rapports lorsque vous exécutez le rapport.  
+  Les expressions sont couramment utilisées dans un rapport pour récupérer, calculer, afficher, regrouper, trier, filtrer, paramétrer et mettre en forme les données d'un rapport. De nombreuses propriétés d'élément de rapport peuvent avoir la valeur d'une expression. Les expressions vous aident à contrôler le contenu, la conception et l'interactivité de votre rapport. Les expressions sont écrites dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], enregistrées dans la définition de rapport et évaluées par le processeur de rapports au moment où vous exécutez le rapport.  
   
- Contrairement aux applications telles que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel où vous utilisez des données directement dans une feuille de calcul dans un rapport, vous utilisez des expressions qui sont des espaces réservés pour les données. Pour consulter les données effectives des expressions évaluées, vous devez afficher un aperçu du rapport. Lorsque vous exécutez le rapport, le processeur de rapports évalue chaque expression au moment de combiner les données de rapport et les éléments de disposition du rapport tels que les tableaux et les graphiques.  
+ Contrairement à certaines applications comme [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel, où vous utilisez les données directement dans une feuille de calcul, dans un rapport, vous utilisez des expressions qui représentent des espaces réservés pour les données. Pour consulter les données effectives des expressions évaluées, vous devez afficher un aperçu du rapport. Lorsque vous exécutez le rapport, le processeur de rapports évalue chaque expression au moment de combiner les données de rapport et les éléments de disposition du rapport tels que les tableaux et les graphiques.  
   
  Lorsque vous concevez un rapport, de nombreuses expressions relatives aux éléments de rapport sont définies automatiquement. Par exemple, lorsque vous faites glisser un champ du volet de données vers une cellule de tableau sur l'aire de conception du rapport, la zone de texte prend la valeur d'une expression simple pour le champ. Dans l'illustration suivante, le volet des données de rapport affiche l'ID des champs du dataset, Name, SalesTerritory, Code et Sales. Trois champs ont été ajoutés à la table : [Name], [Code] et [Sales]. La notation [Name] sur l'aire de conception représente l'expression sous-jacente `=Fields!Name.Value`.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "48110854"
   
 -   [Didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
--   [Exemples de rapports (Générateur de rapports et SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+-   [Exemples de rapports (Générateur de rapports et SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
- Pour développer des expressions complexes ou des expressions qui utilisent du code ou des assemblys personnalisés, nous vous recommandons d’utiliser le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations, consultez [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ Pour développer des expressions complexes ou des expressions qui utilisent du code personnalisé ou des assemblys personnalisés, il est recommandé de recourir au Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations, consultez [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -99,18 +99,18 @@ ms.locfileid: "48110854"
 ##  <a name="References"></a> Écriture d'expressions complexes  
  Les expressions peuvent inclure des références à des fonctions, des opérateurs, des constantes, des champs, des paramètres, des éléments provenant de collections intégrées, ainsi que des références à du code personnalisé incorporé ou à des assemblys personnalisés.  
   
-> [!NOTE]  
->  Pour développer des expressions complexes ou des expressions qui utilisent du code personnalisé ou des assemblys personnalisés, nous vous recommandons d’utiliser le Concepteur de rapports dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations, consultez [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+> [!NOTE]
+>  Pour développer des expressions complexes ou des expressions qui utilisent du code personnalisé ou des assemblys personnalisés, il est recommandé de recourir au Concepteur de rapports dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations, consultez [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
  Le tableau suivant répertorie les types de références que vous pouvez inclure dans une expression :  
   
 |Références|Description|Exemple|  
 |----------------|-----------------|-------------|  
 |[Constantes](expressions-report-builder-and-ssrs.md)|Décrit les constantes auxquelles vous pouvez accéder de manière interactive pour les propriétés qui requièrent des valeurs constantes ; par exemple les couleurs de police.|`="Blue"`|  
-|[Opérateurs](operators-in-expressions-report-builder-and-ssrs.md)|Décrit les opérateurs que vous pouvez utiliser pour combiner des références dans une expression. Par exemple, le `&` opérateur est utilisé pour concaténer des chaînes.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
+|[Opérateurs](operators-in-expressions-report-builder-and-ssrs.md)|Décrit les opérateurs que vous pouvez utiliser pour combiner des références dans une expression. Par exemple, l'opérateur `&` est utilisé pour la concaténation de chaînes.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
 |[Collections intégrées](built-in-collections-in-expressions-report-builder.md)|Décrit les collections intégrées que vous pouvez inclure dans une expression ; par exemple, `Fields`, `Parameters`et `Variables`.|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
-|[Rapports intégrés et les fonctions d’agrégation](report-builder-functions-aggregate-functions-reference.md)|Décrit les fonctions intégrées, telles que `Sum` ou `Previous`, auxquelles vous pouvez accéder à partir d’une expression.|`=Previous(Sum(Fields!Sales.Value))`|  
-|[Code personnalisé et références d’Assembly dans les Expressions dans le Concepteur de rapports &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Explique comment vous pouvez accéder aux classes CLR intégrées <xref:System.Math> et <xref:System.Convert>, autres classes CLR, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] des fonctions de bibliothèque du run-time ou des méthodes à partir d’un assembly externe.<br /><br /> Explique comment vous pouvez accéder à du code personnalisé qui est incorporé dans votre rapport ou que vous compilez et installez en tant qu'assembly personnalisé à la fois sur le client de rapports et sur le serveur de rapports.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
+|[Fonctions de rapport et d'agrégation intégrées](report-builder-functions-aggregate-functions-reference.md)|Décrit les fonctions intégrées, telles que `Sum` ou `Previous`, auxquelles vous pouvez accéder à partir d’une expression.|`=Previous(Sum(Fields!Sales.Value))`|  
+|[Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Explique comment vous pouvez accéder aux classes CLR intégrées <xref:System.Math> et <xref:System.Convert>et à d’autres classes CLR, à des fonctions de la bibliothèque runtime [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ou à des méthodes à partir d’un assembly externe.<br /><br /> Explique comment vous pouvez accéder à du code personnalisé qui est incorporé dans votre rapport ou que vous compilez et installez en tant qu'assembly personnalisé à la fois sur le client de rapports et sur le serveur de rapports.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
   
 
   
@@ -132,7 +132,7 @@ ms.locfileid: "48110854"
   
  [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
  [Référence d’expression &#40;Générateur de rapports et SSRS&#41;](expression-reference-report-builder-and-ssrs.md)  
   

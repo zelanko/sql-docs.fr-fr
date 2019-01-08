@@ -23,19 +23,19 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0faae3cec2d71c28056a384b196a9b46929d5d6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb5b2558a6dca79d4794b5d12c8e63fd6f002312
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792107"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527509"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>Sys.DM\_db\_paramétrage\_recommandations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Retourne des informations détaillées sur les recommandations de paramétrage.  
   
- Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d'exposer ces informations, chaque ligne contenant des données qui n'appartient pas au locataire connecté est filtrée.
+ Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d’exposer ces informations, chaque ligne qui contient les données qui n’appartient pas au locataire connecté est filtrée.
 
 | **Nom de colonne** | **Data type** | **Description** |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ ms.locfileid: "47792107"
 | **raison** | **nvarchar(4000)** | Pourquoi cette recommandation a été fournie de raison. |
 | **valide\_dans la mesure où** | **datetime2** | La première fois que cette recommandation a été générée. |
 | **last\_refresh** | **datetime2** | La dernière fois cette recommandation a été générée. |
-| **state** | **nvarchar(4000)** | Document JSON qui décrit l’état de la recommandation. Les champs suivants sont disponibles :<br />-   `currentValue` -l’état actuel de la recommandation.<br />-   `reason` – constante qui décrit la raison pour laquelle il est recommandé dans l’état actuel.|
+| **state** | **nvarchar(4000)** | Document JSON qui décrit l’état de la recommandation. Les champs suivants sont disponibles :<br />-   `currentValue` -l’état actuel de la recommandation.<br />-   `reason` -(constante) qui décrit la raison pour laquelle il est recommandé dans l’état actuel.|
 | **est\_exécutable\_action** | **bit** | 1 = la recommandation peut être exécutée sur la base de données par le biais de [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script.<br />0 = la recommandation ne peut pas être exécutée sur la base de données (par exemple : recommandation uniquement ou rétabli d’informations) |
 | **est\_revertable\_action** | **bit** | 1 = la recommandation sont surveillée et automatiquement annulée par le moteur de base de données.<br />0 = la recommandation ne peut pas être surveillée et restaurée automatiquement. La plupart des &quot;exécutable&quot; actions seront &quot;revertable&quot;. |
 | **execute\_action\_start\_time** | **datetime2** | Date de que la recommandation est appliquée. |
@@ -80,7 +80,7 @@ Document JSON dans `state` colonne contient la raison pour laquelle décrit la r
 | `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` option est désactivée par l’utilisateur pendant le processus de vérification. Activer `FORCE_LAST_GOOD_PLAN` option à l’aide de [AUTOMATIC_TUNING de définir de base de données ALTER &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) instruction ou forcer le plan manuellement à l’aide du script dans `[details]` colonne. |
 | `UnsupportedStatementType` | Plan ne peut pas être forcé sur la requête. Exemples de requêtes non pris en charge sont les curseurs et `INSERT BULK` instruction. |
 | `LastGoodPlanForced` | La recommandation est correctement appliquée. |
-| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identifié de régression des performances potentielles, mais la `FORCE_LAST_GOOD_PLAN` option n’est pas activée : consultez [AUTOMATIC_TUNING de définir de base de données ALTER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Appliquer les recommandations manuellement ou activer `FORCE_LAST_GOOD_PLAN` option. |
+| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identifié de régression des performances potentielles, mais la `FORCE_LAST_GOOD_PLAN` option n’est pas activée, consultez [AUTOMATIC_TUNING de définir de base de données ALTER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Appliquer les recommandations manuellement ou activer `FORCE_LAST_GOOD_PLAN` option. |
 | `VerificationAborted`| Processus de vérification est abandonnée en raison du redémarrage ou de nettoyage de la requête Store. |
 | `VerificationForcedQueryRecompile`| La requête est recompilée, car il n’existe aucune amélioration significative des performances. |
 | `PlanForcedByUser`| Utilisateur manuellement le plan l’utilisation forcée [sp_query_store_force_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procédure. |
@@ -105,7 +105,7 @@ WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
   
  Pour plus d’informations sur les fonctions JSON qui peut être utilisé pour interroger les valeurs dans la vue de la recommandation, consultez [prise en charge JSON](../../relational-databases/json/index.md) dans [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   

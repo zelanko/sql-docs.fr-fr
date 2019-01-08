@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_articleview
@@ -17,12 +16,12 @@ ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 369c7218e5d4d2c18d14d07b97d336cbe31ed4b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cda4e884608c10e75ab4c33a89fcf23a1919fc0d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727937"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202043"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_articleview [ @publication = ] 'publication'
  [  **@change_active =** ] *change_active*  
  Autorise la modification des colonnes dans les publications possédant des abonnements. *change_active* est un **int**, avec une valeur par défaut **0**. Si **0**, les colonnes ne sont pas modifiés. Si **1**, les vues peuvent être créés ou recréés sur des articles actifs possédant des abonnements.  
   
- [  **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
  Signale que l'action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications de l’article n’invalident pas l’instantané n’est pas valide. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur se produit et aucune modification n'est effectuée.  
@@ -78,7 +77,7 @@ sp_articleview [ @publication = ] 'publication'
  **1** indique que les modifications apportées à l’article entraînent la réinitialisation des abonnements existants et autorise la réinitialisation des abonnements se produise.  
   
  [ **@publisher**=] **'***publisher***'**  
- Spécifie un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+ Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé lors de la publication à partir d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
@@ -112,7 +111,7 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articleview-transact-_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_articleview**.  
   
 ## <a name="see-also"></a>Voir aussi  

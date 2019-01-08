@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afppigtask.f1
@@ -14,12 +13,12 @@ ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b5f0fb11e7dc5395ddb64d1b68dd8ee96083d16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30340a873846e20911a7f14694f9602c17d960e8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152969"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749411"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Tâche Pig Azure HDInsight
 Utilisez la **tâche Pig Azure HDInsight** pour exécuter un script Pig sur un cluster Azure HDInsight.
@@ -38,8 +37,8 @@ Pour ajouter une **tâche Pig Azure HDInsight**, faites-la glisser sur le concep
   
 5.  Deux méthodes permettent de spécifier le script Pig à exécuter :
   
-    1.  **Script en ligne** : renseignez le champ **Script** en tapant en ligne le script à exécuter dans la boîte de dialogue **Entrer le script**.
+    1.  **Script en ligne**: Spécifiez le **Script** champ en tapant en ligne le script à exécuter dans le **entrer le Script** boîte de dialogue.
   
-    2.  **Fichier de script** : téléchargez le fichier de script dans Stockage Blob Azure et renseignez le champ **BlobName**. Si l’objet blob ne se trouve pas dans le compte ou le conteneur de stockage par défaut associé au cluster HDInsight, vous devez renseigner les champs **ExternalStorageAccountName** et **ExternalBlobContainer**. Dans le cas d’un objet blob externe, assurez-vous qu’il est configuré comme étant accessible au public.  
+    2.  **Fichier de script**: Téléchargez le fichier de script vers le stockage Blob Azure et spécifiez le **BlobName** champ. Si l’objet blob ne se trouve pas dans le compte ou le conteneur de stockage par défaut associé au cluster HDInsight, vous devez renseigner les champs **ExternalStorageAccountName** et **ExternalBlobContainer**. Dans le cas d’un objet blob externe, assurez-vous qu’il est configuré comme étant accessible au public.  
   
      Si les deux sont spécifiés, le fichier de script est utilisé et le script en ligne est ignoré.

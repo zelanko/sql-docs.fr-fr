@@ -1,5 +1,5 @@
 ---
-title: Créer et gérer des indicateurs de performance clés | Documents Microsoft
+title: Créer et gérer des indicateurs de performance clés dans les modèles tabulaires Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8740cfbcf8448a0344d68e182a7cbf379c458a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ae17e727367b702967ec879ed8469973ab3b812
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042113"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072086"
 ---
 # <a name="create-and-manage-kpis"></a>Créer et gérer des indicateurs de performance clés 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Cet article décrit comment créer, modifier ou supprimer un KPI (indicateur de Performance clé) dans un modèle tabulaire. Pour créer un indicateur de performance clé (KPI), sélectionnez une mesure qui donne la valeur de base de l'indicateur de performance clé. Utilisez ensuite la boîte de dialogue Indicateur de performance clé pour sélectionner une seconde mesure ou une valeur absolue qui prend une valeur cible. Vous pourrez ensuite définir des seuils d'état qui mesurent les performances entre les mesures de base et cible.  
+  Cet article décrit comment créer, modifier ou supprimer un KPI (indicateur de Performance clé) dans un modèle tabulaire. Pour créer un KPI, vous sélectionnez une mesure qui prend la valeur de la valeur de Base de l’indicateur de performance clé. Utilisez ensuite la boîte de dialogue Indicateur de performance clé pour sélectionner une seconde mesure ou une valeur absolue qui prend une valeur cible. Vous pourrez ensuite définir des seuils d'état qui mesurent les performances entre les mesures de base et cible.  
   
 ## <a name="tasks"></a>Tâches  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34042113"
   
 ## <a name="see-also"></a>Voir aussi  
  [Indicateurs de performance clés](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Mesures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [mesures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Créer et managemeasures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
@@ -14,12 +14,12 @@ ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6dc52d113ccf11da78e02357256fcd1840c5444
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211809"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756111"
 ---
 # <a name="data-collector-security"></a>Sécurité du collecteur de données
   Le collecteur de données utilise le modèle de sécurité basée sur les rôles implémenté par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce modèle permet à l'administrateur de base de données d'exécuter les différentes tâches du collecteur de données dans un contexte de sécurité qui ne dispose que des autorisations requises pour effectuer ces tâches. Cette méthode est également utilisée pour les opérations qui impliquent des tables internes, uniquement accessibles à l'aide d'une procédure stockée ou d'une vue. Aucune autorisation n'est accordée aux tables internes. En revanche, il est procédé à une vérification des autorisations de l'utilisateur de la procédure stockée ou de la vue utilisée pour accéder à une table.  
@@ -82,7 +82,7 @@ ms.locfileid: "48211809"
   
 -   afficher les informations détaillées (par exemple, les éléments de collection et la fréquence de collecte) associées à un jeu d'éléments de collection ;  
   
--   modifier la fréquence de téléchargement des jeux d'éléments de collection existants ;  
+-   modifier la fréquence de téléchargement des jeux d'éléments de collection existants ;  
   
 -   modifier la fréquence de collecte des éléments de collecte appartenant à un jeu d'éléments de collecte existant.  
   

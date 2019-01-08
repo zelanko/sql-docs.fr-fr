@@ -22,19 +22,19 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad76099b7cc6386e20b8c46f300298a13492f32b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104929"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529546"
 ---
 # <a name="deploy-a-data-tier-application"></a>Déployer une application de la couche Données
   Vous pouvez déployer une application de la couche Données (DAC) sur une instance existante du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] à l'aide d'un Assistant ou d'un script PowerShell. Le processus de déploiement inscrit une instance DAC en stockant la définition de la DAC dans la base de données système **msdb** (**master** dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), crée une base de données, puis remplit la base de données avec tous les objets de base de données définis dans la DAC.  
   
--   **Avant de commencer :**  [Utilitaire SQL Server](#SQLUtility), [Options et paramètres de base de données](#DBOptSettings), [Limitations et restrictions](#LimitationsRestrictions), [Conditions préalables](#Prerequisites), [Sécurité](#Security), [Autorisations](#Permissions)  
+-   **Avant de commencer :**  [Utilitaire SQL Server](#SQLUtility), [Options et paramètres de base de données](#DBOptSettings), [Limitations et Restrictions](#LimitationsRestrictions), [prérequis](#Prerequisites), [sécurité](#Security), [Autorisations](#Permissions)  
   
--   **Pour déployer une DAC en utilisant :**  [l’Assistant Déployer une application de la couche Données](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
+-   **Pour déployer une DAC, à l’aide de :**  [L’Assistant déployer une couche de données Application](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> Avant de commencer  
  Un même package DAC peut être déployé plusieurs fois sur une instance unique du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , mais les déploiements doivent être exécutés un par un. Le nom d'instance DAC spécifié pour chaque déploiement doit être unique dans l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -55,7 +55,7 @@ ms.locfileid: "48104929"
  Une DAC peut être déployée vers [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui exécute [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure. Si vous créez une DAC à l'aide d'une version ultérieure, elle peut contenir des objets non pris en charge par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Vous ne pouvez pas déployer ces DAC vers les instances de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ###  <a name="Prerequisites"></a> Conditions préalables  
- Nous vous recommandons de ne pas déployer un package DAC provenant de sources inconnues ou non approuvées. De tels packages peuvent contenir du code malveillant susceptible d'exécuter un code Transact-SQL indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d'utiliser un package provenant d'une source inconnue ou non approuvée, décompressez la DAC et vérifiez le code, par exemple les procédures stockées ou autre code défini par l'utilisateur. Pour plus d’informations sur la façon de procéder à ces vérifications, consultez [Valider un package DAC](validate-a-dac-package.md).  
+ Nous vous recommandons de ne pas déployer un package DAC provenant de sources inconnues ou non approuvées. De tels packages peuvent contenir du code malveillant susceptible d'exécuter un code Transact-SQL indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d'utiliser un package provenant d'une source inconnue ou non approuvée, décompressez la DAC et vérifiez le code, par exemple les procédures stockées ou autre code défini par l'utilisateur. Pour plus d'informations sur la façon de procéder à ces vérifications, consultez [Validate a DAC Package](validate-a-dac-package.md).  
   
 ###  <a name="Security"></a> Sécurité  
  Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un package DAC sans mot de passe. Lorsque le package est déployé ou mis à niveau, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l'aide d'une connexion qui possède l'autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l'utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
@@ -68,7 +68,7 @@ ms.locfileid: "48104929"
   
 1.  Dans l' **Explorateur d'objets**, développez le nœud pour l'instance vers laquelle vous voulez déployer la DAC.  
   
-2.  Cliquez avec le bouton droit sur le nœud **Bases de données** , puis sélectionnez **Déployer une application de la couche Données...**.  
+2.  Cliquez avec le bouton droit sur le nœud **Bases de données**, puis sélectionnez **Déployer une application de la couche Données...**.  
   
 3.  Renseignez les boîtes de dialogue de l'Assistant :  
   
@@ -189,13 +189,13 @@ ms.locfileid: "48104929"
   
 1.  Créez un objet serveur SMO et affectez-lui l'instance à laquelle vous voulez déployer la DAC.  
   
-2.  Ouvrir un `ServerConnection` de l’objet et de se connecter à la même instance.  
+2.  Ouvrez un objet `ServerConnection` et connectez-vous à la même instance.  
   
 3.  Utilisez `System.IO.File` pour charger le fichier de package DAC.  
   
 4.  Utilisez `add_DacActionStarted` et `add_DacActionFinished` pour vous abonner aux événements de déploiement de la DAC.  
   
-5.  Définir le `DatabaseDeploymentProperties`.  
+5.  Définissez `DatabaseDeploymentProperties`.  
   
 6.  Utilisez la méthode `DacStore.Install` pour déployer la DAC.  
   

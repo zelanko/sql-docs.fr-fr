@@ -1,5 +1,5 @@
 ---
-title: Rôles de modèles tabulaires | Documents Microsoft
+title: Analysis Services tabulaires modeler les rôles | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4afed626100c1c46c9e2d1110c7b23cd599acb8c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 460f5e8605e7a855430231083bf9a0bd0477542b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039039"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071856"
 ---
 # <a name="tabular-model-roles"></a>Rôles de modèles tabulaires 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34039039"
   
 ## <a name="related-tasks"></a>Tâches associées  
   
-|Tâche| Description|  
+|Tâche|Description|  
 |----------|-----------------|  
 |[Gérer les rôles à l’aide de SSMS](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)|Décrit comment créer des rôles, ajouter et supprimer les membres d'un rôle, modifier des autorisations pour un rôle et ajouter, modifier ou supprimer les filtres au niveau des lignes avec DAX.|  
   

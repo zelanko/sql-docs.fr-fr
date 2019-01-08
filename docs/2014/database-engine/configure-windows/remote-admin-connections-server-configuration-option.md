@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - administrator connections [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7a63994b64920f9fa85d31ae551d2078faa8bb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e4894fa7e05c863095fdca7b26f448efe176216
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168309"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640214"
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>remote admin connections (option de configuration de serveur)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une connexion administrateur dédiée. Celle-ci permet à un administrateur d’accéder à un serveur actif pour exécuter des fonctions de diagnostic ou des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ou pour résoudre des problèmes sur ce serveur, même s’il est verrouillé, que son état est anormal ou qu’il ne répond pas à une connexion du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Par défaut, cette connexion n'est disponible qu'à partir d'un client sur le serveur. Pour autoriser des applications clientes sur des ordinateurs distants à utiliser la connexion administrateur dédiée, utilisez l'option remote admin connections de sp_configure.  
@@ -31,7 +30,7 @@ ms.locfileid: "48168309"
   
  Le tableau suivant répertorie les valeurs possibles de l'option remote admin connections.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0|Indique que seules les connexions locales sont autorisées à utiliser la connexion administrateur dédiée.|  
 |1|Indique que les connexions à distance sont autorisées à utiliser la connexion administrateur dédiée.|  

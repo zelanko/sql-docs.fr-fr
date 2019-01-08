@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergefilter_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d43af8f9ffc64eb7fcfaba5aff7434696376321
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c872cbafb3cb0a3a54c34e489242d9f69339b68f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704847"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748221"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  Le tableau ci-dessous décrit les propriétés des articles et les valeurs de ces propriétés.  
   
-|Propriété|Valeur|Description|  
+|Propriété|Value|Description|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Filtre de jointure.<br /><br /> Cette option est nécessaire pour la prise en charge d'Abonnés [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relation d'enregistrement logique.|  
@@ -73,7 +72,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|La jointure se fait sur une clé unique.|  
 ||**false**|La jointure ne se fait pas sur une clé unique.|  
   
- [  **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
  Signale que l'action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications apportées à l’article de fusion n’invalident pas l’instantané n’est pas valide. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur se produit et aucune modification n'est effectuée.  
@@ -97,11 +96,11 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  Pour utiliser des enregistrements logiques, la publication et les articles doivent répondre à certaines conditions. Pour plus d’informations, consultez [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_changemergefilter**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modifier les propriétés des publications et des articles](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Changer les propriétés des publications et des articles](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   

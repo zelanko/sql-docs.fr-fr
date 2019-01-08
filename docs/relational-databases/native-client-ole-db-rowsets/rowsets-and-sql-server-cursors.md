@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6d31038f5c392f5dde04af753e42874f495362e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f8c58f38f100258ed9c6b0b1a95cbd37273aaa1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601828"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507813"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Ensembles de lignes et curseurs SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47601828"
   
  Les propriétés d'ensemble de lignes suivantes font en sorte que le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utilise des curseurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Certaines propriétés peuvent être combinées avec d'autres sans risque. Par exemple, un ensemble de lignes qui expose les propriétés DBPROP_IRowsetScroll et DBPROP_IRowsetChange sera un ensemble de lignes signet présentant un comportement de mise à jour immédiat. Les autres propriétés s'excluent mutuellement. Par exemple, un ensemble de lignes exposant DBPROP_OTHERINSERT ne peut pas contenir de signets.  
   
-|ID de propriété|Valeur|Comportement d'ensemble de lignes|  
+|ID de propriété|Value|Comportement d'ensemble de lignes|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|Impossibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes est séquentiel et prend en charge l'extraction et le défilement vers l'avant uniquement. Le positionnement de ligne relatif est pris en charge. Le texte de la commande peut contenir une clause ORDER BY.|  
 |DBPROP_CANSCROLLBACKWARDS ou DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|Impossibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes prend en charge le défilement et l'extraction dans l'une ou l'autre direction. Le positionnement de ligne relatif est pris en charge. Le texte de la commande peut contenir une clause ORDER BY.|  
@@ -94,7 +94,7 @@ ms.locfileid: "47601828"
   
  Pour utiliser un certain type de modèle de curseur, recherchez la colonne correspondant au modèle de curseur et recherchez toutes les propriétés d'ensemble de lignes avec la valeur « T » dans la colonne. Affectez la valeur VARIANT_TRUE à ces propriétés d'ensemble de lignes pour utiliser le modèle de curseur spécifique. Les propriétés d'ensemble de lignes avec '-' comme valeur peuvent être définies à VARIANT_TRUE ou VARIANT_FALSE.  
   
-|Propriétés d’ensemble de lignes/modèles de curseur|Valeur par défaut<br /><br /> result<br /><br /> jeu<br /><br /> (RO)|Rapide<br /><br /> rapide<br /><br /> uniquement<br /><br /> (RO)|Statique<br /><br /> (RO)|Keyset<br /><br /> clés<br /><br /> (RO)|  
+|Propriétés d’ensemble de lignes/modèles de curseur|Par défaut<br /><br /> result<br /><br /> jeu<br /><br /> (RO)|Rapide<br /><br /> rapide<br /><br /> uniquement<br /><br /> (RO)|Statique<br /><br /> (RO)|Keyset<br /><br /> clés<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
@@ -146,7 +146,7 @@ ms.locfileid: "47601828"
   
  Pour un jeu particulier de propriétés d'ensemble de lignes, le modèle de curseur sélectionné est déterminé comme suit.  
   
- À partir de la collection spécifiée de propriétés d'ensemble de lignes, obtenez un sous-ensemble de propriétés répertoriées dans les tableaux précédents. Divisez ces propriétés en deux sous-groupes selon la valeur de l'indicateur, requis (T, F) ou facultatif (-), de chaque propriété d'ensemble de lignes. Pour chaque modèle de curseur, commencez par la première table et déplacez-vous de gauche à droite. Comparez les valeurs des propriétés dans les deux sous-groupes avec les valeurs des propriétés correspondantes dans cette colonne. Le modèle de curseur qui n'a aucune incompatibilité avec les propriétés requises et le plus petit nombre d'incompatibilités avec les propriétés facultatives est sélectionné. S'il y a plusieurs modèles de curseur, celui situé le plus à gauche est choisi.  
+ À partir de la collection spécifiée de propriétés d'ensemble de lignes, obtenez un sous-ensemble de propriétés répertoriées dans les tableaux précédents. Divisez ces propriétés en deux sous-groupes en fonction de l’indicateur de valeur requise (T, F) ou facultatif (-)-de chaque propriété de l’ensemble de lignes. Pour chaque modèle de curseur, commencez par la première table et déplacez-vous de gauche à droite. Comparez les valeurs des propriétés dans les deux sous-groupes avec les valeurs des propriétés correspondantes dans cette colonne. Le modèle de curseur qui n'a aucune incompatibilité avec les propriétés requises et le plus petit nombre d'incompatibilités avec les propriétés facultatives est sélectionné. S'il y a plusieurs modèles de curseur, celui situé le plus à gauche est choisi.  
   
 ## <a name="sql-server-cursor-block-size"></a>Taille de bloc des curseurs SQL Server  
  Quand un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] curseur prend en charge un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ensemble de lignes du fournisseur OLE DB Native Client, le nombre d’éléments dans la ligne de gérer les paramètre du tableau de la **IRowset::GetNextRows** ou le **IRowsetLocate::GetRowsAt**  méthodes définit la taille de bloc de curseur. Les lignes indiquées par les descripteurs dans le tableau sont les membres du bloc de curseur.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
@@ -13,18 +12,18 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 649d92089f8e46a9618e7416ee959d153385f1c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89a988a5d664e460a3148cf910c0be31ba07a5dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193669"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816331"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Meilleures pratiques de sécurité recommandées avec les bases de données autonomes
-  Les bases de données autonomes présentent quelques menaces originales que les administrateurs du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doivent connaître et limiter. La plupart des menaces sont liées à la `USER WITH PASSWORD` processus d’authentification, qui déplace la limite de l’authentification à partir de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] niveau au niveau base de données.  
+  Les bases de données autonomes présentent quelques menaces originales que les administrateurs du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doivent connaître et limiter. La plupart de ces menaces sont liées au processus d’authentification `USER WITH PASSWORD`, qui déplace la limite de l’authentification du niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers celui de la base de données.  
   
 ## <a name="threats-related-to-users"></a>Menaces associées aux utilisateurs  
- Dans une base de données de relation contenant-contenu, les utilisateurs qui ont le `ALTER ANY USER` autorisation, tels que les membres de la **db_owner** et **db_securityadmin** base de données fixe, accorder l’accès à la base de données sans la base de connaissances ou l’autorisation si le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrateur. Autoriser des utilisateurs à accéder à une base de données autonome augmente la surface d'exposition potentielle aux attaques contre l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entière. Les administrateurs doivent comprendre cette délégation du contrôle d’accès et être très prudents d’accorder aux utilisateurs dans la base de données de relation contenant-contenu le `ALTER ANY USER` autorisation. Tous les propriétaires de base de données ont le `ALTER ANY USER` autorisation. Les administrateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent procéder périodiquement à un audit des utilisateurs dans une base de données autonome.  
+ Dans une base de données de relation contenant-contenu, les utilisateurs qui ont le `ALTER ANY USER` autorisation, tels que les membres de la **db_owner** et **db_securityadmin** base de données fixe, accorder l’accès à la base de données sans la base de connaissances ou l’autorisation si le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrateur. Autoriser des utilisateurs à accéder à une base de données autonome augmente la surface d'exposition potentielle aux attaques contre l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entière. Les administrateurs doivent comprendre cette délégation du contrôle d'accès et être très prudents lorsqu'ils accordent à des utilisateurs l'autorisation `ALTER ANY USER` dans la base de données autonome. Tous les propriétaires de base de données disposent de l'autorisation `ALTER ANY USER`. Les administrateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent procéder périodiquement à un audit des utilisateurs dans une base de données autonome.  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>Accès à d'autres bases de données à l'aide du compte Invité  
  Les propriétaires de base de données et les utilisateurs de base de données disposant de l'autorisation `ALTER ANY USER` peuvent créer des utilisateurs de base de données autonome. Une fois connecté à une base de données autonome sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utilisateur d'une base de données autonome peut accéder à d'autres bases de données sur le [!INCLUDE[ssDE](../../includes/ssde-md.md)], si ces bases de données ont activé le compte **Invité**.  
@@ -46,7 +45,7 @@ CREATE USER Carlo WITH PASSWORD = '<same password>', SID = <SID from DB1>;
 GO  
 ```  
   
- Pour exécuter une requête de bases de données croisées, vous devez définir le `TRUSTWORTHY` option sur la base de données appelant. Par exemple, si l'utilisateur (Carlo) défini ci-dessus figure dans DB1, pour exécuter `SELECT * FROM db2.dbo.Table1;`, le paramètre `TRUSTWORTHY` doit être activé pour la base de données DB1. Exécutez le code suivant pour définir le `TRUSTWORHTY` définissant sur.  
+ Pour exécuter une requête de bases de données croisées, vous devez définir l'option `TRUSTWORTHY` sur la base de données appelante. Par exemple, si l'utilisateur (Carlo) défini ci-dessus figure dans DB1, pour exécuter `SELECT * FROM db2.dbo.Table1;`, le paramètre `TRUSTWORTHY` doit être activé pour la base de données DB1. Exécutez le code suivant pour activer le paramètre `TRUSTWORHTY`.  
   
 ```  
 ALTER DATABASE DB1 SET TRUSTWORTHY ON;  

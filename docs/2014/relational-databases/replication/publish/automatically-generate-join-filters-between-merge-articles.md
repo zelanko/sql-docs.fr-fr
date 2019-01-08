@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic join filter generation
@@ -14,12 +13,12 @@ ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 938e00f53cb63b4261eb80d91d7b853b8e1ae824
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66c32615b3fd9f417eab27f156b2645c2c89593b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103689"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770131"
 ---
 # <a name="automatically-generate-a-set-of-join-filters-between-merge-articles-sql-server-management-studio"></a>générer automatiquement un ensemble de filtres de jointure entre des articles de fusion (SQL Server Management Studio)
   Générez automatiquement un ensemble de filtres de jointure sur la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
@@ -54,11 +53,11 @@ ms.locfileid: "48103689"
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE LoginID = SUSER_SNAME()  
         ```  
   
-         La clause WHERE doit utiliser un nommage en deux parties ; les nommages en trois et en quatre parties ne sont pas pris en charge.  
+         La clause WHERE doit utiliser un nommage en deux parties ; les nommages en trois et en quatre parties ne sont pas pris en charge.  
   
     3.  Spécifiez les options de filtre.  
   
-         Sélectionnez l'option correspondant à la façon dont les données seront partagées parmi les abonnés : **Une ligne de cette table ira à plusieurs abonnements** ou **Une ligne de cette table ira à un seul abonnement**. Si vous sélectionnez **Filtre paramétré créant des partitions qui ne se chevauchent pas, avec un seul abonnement par partition**, la réplication de fusion peut optimiser les performances en stockant et en traitant moins de métadonnées. Cependant, vous devez vérifier que les données sont partitionnées de telle façon qu'une ligne ne peut pas être répliquée sur plus d'un Abonné. Pour plus d'informations, consultez la section « Définition de « partition options » » dans la rubrique [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+         Sélectionnez l'option qui correspond aux données qui seront partagées entre des Abonnés : **Une ligne de cette table ira à plusieurs abonnements** ou **une ligne de cette table ira à un seul abonnement**. Si vous sélectionnez **Filtre paramétré créant des partitions qui ne se chevauchent pas, avec un seul abonnement par partition**, la réplication de fusion peut optimiser les performances en stockant et en traitant moins de métadonnées. Cependant, vous devez vérifier que les données sont partitionnées de telle façon qu'une ligne ne peut pas être répliquée sur plus d'un Abonné. Pour plus d'informations, consultez la section « Définition de « partition options » » dans la rubrique [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

@@ -16,25 +16,25 @@ ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3dab107fb57ab2e6d0abaa97bd76a1ce8082b726
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92630f90d7b18ad668dcffc02feeb65990cf3c84
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055229"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512634"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Formes d'exploration de données pour Visio
   Les formes d'exploration de données pour Visio fournissent des modèles personnalisés pour l'affichage de modèles d'exploration de données. En utilisant ces modèles, vous pouvez vous connecter à un modèle que vous avez créé et créer des présentations interactives pour illustrer les résultats de l'exploration de données.  
   
- Les modèles offrent de nombreux avantages par rapport aux graphiques statiques et aux captures d'écran. Ils interagissent avec les modèles d'exploration de données sous-jacents, stockés sur une instance d'Analysis Services, et vous laissent personnaliser la manière dont les modèles s'affichent dans le modèle d'exploration de données. Réduisez et développez les niveaux d'un modèle d'arbre, filtrez sur les nœuds de données ou par les attributs, et affichez des statistiques du modèle telles que les probabilités et des coefficients.  
+ Les modèles offrent de nombreux avantages par rapport aux graphiques statiques et des captures d’écran : ils interagissent avec les modèles d’exploration de données sous-jacente, qui sont stockés sur une instance d’Analysis Services, et vous permettent de personnaliser la façon dont les modèles dans le modèle d’exploration de données s’affichent. Réduisez et développez les niveaux d'un modèle d'arbre, filtrez sur les nœuds de données ou par les attributs, et affichez des statistiques du modèle telles que les probabilités et des coefficients.  
   
  ![DM](media/dm-stencil.gif "DM")  
   
  Les modèles Visio incluent ces Assistants :  
   
--   **Diagramme réseau de dépendances :** Utilisez cet Assistant pour créer des graphiques pour les arbres de décision et les réseaux neuronaux.  
+-   **Diagramme du réseau de dépendances :** Utilisez cet Assistant pour créer des graphiques pour les arbres de décision et les réseaux neuronaux.  
   
--   **Diagramme d’arbre de décision :** cet Assistant permet de créer des diagrammes qui affichent les points de décision et les formules associées aux modèles d’arbre de décision. Ce diagramme peut également être utilisé avec des modèles de régression.  
+-   **Diagramme d’arbre de décision :** Utilisez cet Assistant pour créer des diagrammes qui affichent les points de décision et les formules associées aux modèles d’arbre de décision. Ce diagramme peut également être utilisé avec des modèles de régression.  
   
 -   **Diagramme de cluster :** Utilisez cet Assistant pour créer des graphiques colorés pour vos modèles de segmentation. Activez/désactivez les vues, telles que la discrimination d'attribut, les profils de cluster et les dépendances, et personnalisez l'apparence des clusters.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48055229"
   
  Pour plus d’informations sur l’utilisation et l’amélioration des diagrammes de modèle Visio, consultez [affichant les modèles d’exploration de données dans Visio &#40;des compléments d’exploration de données&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 -   Pour utiliser les modèles, vous devez d'abord créer une connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   

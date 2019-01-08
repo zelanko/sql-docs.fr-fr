@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.alert.general.f1
@@ -12,12 +12,12 @@ ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0a3abb807efffd757c7f56e447c888ea4febef4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206349"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772841"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>Alerte de propriétés de nouvelle alerte (Page Général)
   Utilisez cette page pour afficher et modifier les propriétés générales des alertes de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -78,7 +78,7 @@ ms.locfileid: "48206349"
  Spécifiez l'instruction WQL identifiant l'événement auquel l'alerte répond.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Alertes](alerts.md)   
+ [Alerts](alerts.md)   
  [À l’aide de WQL avec le fournisseur WMI pour les événements serveur](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [Créer une alerte à l’aide d’un numéro d’erreur](create-an-alert-using-an-error-number.md)   
  [Créer une alerte à l’aide d’un niveau de gravité](create-an-alert-using-severity-level.md)  

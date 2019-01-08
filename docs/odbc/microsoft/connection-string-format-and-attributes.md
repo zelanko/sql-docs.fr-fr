@@ -14,12 +14,12 @@ ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a28c3f7128d05307afba95d288f6a20afd75aeea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98c8e18432bfd386555863a917824b18b2d11885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652467"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542777"
 ---
 # <a name="connection-string-format-and-attributes"></a>Format et attributs de la chaîne de connexion
 > [!IMPORTANT]  
@@ -45,7 +45,7 @@ ms.locfileid: "47652467"
 |DSN|Le nom de source de données répertoriés dans l’onglet pilotes de la **administrateur de sources de données ODBC** boîte de dialogue.|""|  
 |PWD|Le mot de passe pour le serveur Oracle que vous souhaitez accéder. Ce pilote prend en charge les limitations Oracle place sur les mots de passe.|""|  
 |SERVER|La chaîne de connexion pour le serveur Oracle que vous souhaitez accéder.|""|  
-|UID|Le nom d’utilisateur Oracle Server. Selon votre système, cet attribut ne peut pas être facultatif, autrement dit, certaines bases de données et les tables peuvent nécessiter cet attribut pour des raisons de sécurité.<br /><br /> Utilisez « / » pour utiliser Oracle d’exploitation de l’authentification du système.|""|  
+|UID|Le nom d’utilisateur Oracle Server. Selon votre système, cet attribut ne peut pas être facultatif : autrement dit, certaines bases de données et les tables peuvent nécessiter cet attribut pour des raisons de sécurité.<br /><br /> Utilisez « / » pour utiliser Oracle d’exploitation de l’authentification du système.|""|  
 |BUFFERSIZE|La taille du tampon optimal utilisée lors de l’extraction des colonnes.<br /><br /> Le pilote optimise l’extraction de sorte qu’une opération d’extraction à partir du serveur Oracle retourne suffisamment de lignes pour remplir une mémoire tampon de cette taille. Valeurs plus élevées ont tendance à augmenter les performances si vous récupérez une grande quantité de données.|65535|  
 |SYNONYMCOLUMNS|Lorsque cette valeur est true (1), un appel de () API SQLColumn renvoie des informations de colonne. Sinon, () SQLColumn retourne uniquement les colonnes pour les tables et vues. Le pilote ODBC pour Oracle fournit un accès plus rapide lorsque cette valeur n’est pas définie.|1|  
 |REMARKS|Lorsque cette valeur est true (1), le pilote retourne les colonnes de notes pour la [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) jeu de résultats. Le pilote ODBC pour Oracle fournit un accès plus rapide lorsque cette valeur n’est pas définie.|0|  

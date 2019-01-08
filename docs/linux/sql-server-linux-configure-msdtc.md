@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a06dfa03442cfbcff2f8815f9c946afbd9ff771c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 127f39075a1b84b1250a27003efeb28083d1adbd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269672"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513190"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Comment configurer Microsoft Distributed Transaction Coordinator (MSDTC) sur Linux
 
@@ -101,7 +101,7 @@ Il est important de configurer le pare-feu avant de configurer le routage de por
 
 ## <a name="configure-port-routing"></a>Configurer le routage de port
 
-Configurer la table de routage du serveur Linux afin que la communication RPC sur le port 135 est redirigée vers SQL Server **network.rpcport**. Les règles d’iptable ne sont pas persistant au cours des redémarrages, les commandes suivantes fournissent également des instructions permettant de restaurer les règles après un redémarrage.
+Configurer la table de routage du serveur Linux afin que la communication RPC sur le port 135 est redirigée vers SQL Server **network.rpcport**. Mécanisme de configuration de distribution différente de réacheminement de port peut différer. Dans les distributions qui n’utilisent pas de service de firewalld, de règles d’iptable sont un mécanisme efficace pour y parvenir. Exemples de ce type distrubution : Ubuntu 16.04 et SUSE Enterprise Linux v12. Les règles d’iptable ne sont pas persistant au cours des redémarrages, les commandes suivantes fournissent également des instructions permettant de restaurer les règles après un redémarrage.
 
 1. Créer des règles de routage pour le port 135. Dans l’exemple suivant, le port 135 est dirigé vers le port RPC 13500, défini dans la section précédente. Remplacez `<ipaddress>` avec l’adresse IP de votre serveur.
 
@@ -132,10 +132,16 @@ Configurer la table de routage du serveur Linux afin que la communication RPC su
    iptables-restore < /etc/iptables.conf
    ```
 
-Le **iptables-enregistrer** et **iptables-restauration** commandes fournissent un mécanisme de base pour enregistrer et restaurer les entrées de tables d’adresses IP. En fonction de votre distribution Linux, il peut être plus avancée ou automatisée des options disponibles. Par exemple, une alternative Ubuntu est la **iptables persistant** package pour effectuer des entrées persistant. Ou pour Red Hat Enterprise Linux, vous pourrez peut-être utiliser le service de firewalld (via l’utilitaire de configuration de pare-feu-cmd avec – Ajouter-progression-port ou des options similaires) pour créer des règles au lieu d’utiliser iptables de réacheminement de port persistant.
+Le **iptables-enregistrer** et **iptables-restauration** commandes fournissent un mécanisme de base pour enregistrer et restaurer les entrées de tables d’adresses IP. En fonction de votre distribution Linux, il peut être plus avancée ou automatisée des options disponibles. Par exemple, une alternative Ubuntu est la **iptables persistant** package pour effectuer des entrées persistant. 
+
+Sur les distributions qui utilisent firewalld service, le même service peut être utilisé pour les deux ouvrant le port sur le serveur et le réacheminement de port interne. Par exemple, vous devez utiliser sur Red Hat Enterprise Linux, le service de firewalld (via l’utilitaire de configuration de pare-feu-cmd avec - Ajouter-progression-port ou des options similaires) pour créer et gérer des règles au lieu d’utiliser iptables de réacheminement de port persistant.
+
+```bash
+firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
+```
 
 > [!IMPORTANT]
-> Les étapes précédentes supposent une adresse IP fixe. Si l’adresse IP de votre instance SQL Server change (en raison d’une intervention manuelle ou DHCP), vous devez supprimer et recréer les règles de routage. Si vous avez besoin de recréer ni de supprimer des règles de routage existantes, vous pouvez utiliser la commande suivante pour supprimer l’ancien `RpcEndPointMapper` règles :
+> Les étapes précédentes supposent une adresse IP fixe. Si l’adresse IP de votre instance SQL Server change (en raison d’une intervention manuelle ou DHCP), vous devez supprimer et recréer les règles de routage si elles ont été créées avec iptables. Si vous avez besoin de recréer ni de supprimer des règles de routage existantes, vous pouvez utiliser la commande suivante pour supprimer l’ancien `RpcEndPointMapper` règles :
 > 
 > ```bash
 > iptables -S -t nat | grep "RpcEndPointMapper" | sed 's/^-A //' | while read rule; do iptables -t nat -D $rule; done

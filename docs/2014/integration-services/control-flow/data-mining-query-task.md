@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytask.f1
@@ -16,12 +15,12 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4eddd53df9d9a373a9a4101686dd016a09d20e38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa3e66397a61dc6cf5679e089bc03ce0e2d252cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225159"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785031"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   La tâche de requête d'exploration de données exécute des requêtes de prédiction basées sur les modèles d'exploration de données intégrés à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La requête de prédiction crée une prédiction de nouvelles données à l'aide de modèles d'exploration de données. Par exemple, une requête de prédiction peut prédire le nombre de voiliers susceptibles d'être vendus pendant les mois d'été ou générer la liste des prospects susceptibles d'acheter un voilier.  
@@ -32,7 +31,7 @@ ms.locfileid: "48225159"
   
 -   [Tâche DDL d’exécution de SQL Server Analysis Services](analysis-services-execute-ddl-task.md)  
   
--   [Tâche de traitement d’Analysis Services](analysis-services-processing-task.md)  
+-   [Tâche de traitement d'Analysis Services](analysis-services-processing-task.md)  
   
 ## <a name="prediction-queries"></a>Requêtes de prédiction  
  La requête est une instruction DMX (Data Mining Extensions). Le langage DMX est une extension du langage SQL qui prend en charge l'utilisation de modèles d'exploration de données. Pour plus d’informations sur l’utilisation du langage DMX, consultez [Guide de référence du langage DMX & #40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference).  
@@ -52,18 +51,18 @@ ms.locfileid: "48225159"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche de requête d’exploration de données données &#40;onglet modèle d’exploration de données&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
+-   [Éditeur de tâche de requête d’exploration de données &#40;onglet Modèle d’exploration de données&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
   
--   [Éditeur de tâche de requête d’exploration de données données &#40;onglet requête&#41;](../data-mining-query-task-editor-query-tab.md)  
+-   [Éditeur de tâche de requête d’exploration de données &#40;onglet Requête&#41;](../data-mining-query-task-editor-query-tab.md)  
   
--   [Éditeur de tâche de requête d’exploration de données données &#40;onglet sortie&#41;](../data-mining-query-task-editor-output-tab.md)  
+-   [Éditeur de tâche de requête d’exploration de données &#40;onglet Sortie&#41;](../data-mining-query-task-editor-output-tab.md)  
   
 > [!NOTE]  
 >  L'éditeur de tâche de requête d'exploration de données n'a pas de page Expressions. À la place, utilisez la fenêtre **Propriétés** pour accéder aux outils de création et de gestion des expressions des propriétés de la tâche de requête d'exploration de données.  
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-data-mining-query-task"></a>Configuration par programmation de la tâche de requête d'exploration de données  
  Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur l'une des rubriques suivantes :  

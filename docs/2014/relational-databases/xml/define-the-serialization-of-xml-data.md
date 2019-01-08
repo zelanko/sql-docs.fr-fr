@@ -18,12 +18,12 @@ ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51f65bc99f5fa4ac3840c283c110594eeb48800c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 268204e17083d5ddfe02fefca97a3cea6c857c88
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156109"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814551"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Définir la sérialisation des données XML
   Lors de la conversion explicite ou implicite du type de données xml en données SQL de type chaîne ou binaire, le contenu des données de type xml sera sérialisé conformément aux règles présentées dans cette rubrique.  
@@ -34,10 +34,10 @@ ms.locfileid: "48156109"
  Exemple :  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 0xFFFE3C0094032F003E00  
@@ -48,13 +48,13 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
  Exemple :  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
-<Δ/>  
+<??/>  
 ```  
   
  Si le type cible SQL est VARCHAR ou NCHAR, le résultat est sérialisé dans l'encodage correspondant à la page de codes du classement de la base de données sans marque d'ordre d'octet ni déclaration XML. Si le type cible est trop petit ou s'il est impossible de faire correspondre la valeur à la page de codes du classement de la cible, une erreur est générée.  
@@ -62,10 +62,10 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
  Exemple :  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  
 ```  
   
- Une erreur peut se produire si la page de codes du classement actuel ne peut pas représenter le caractère Unicode Δ, sinon l'encodage spécifique sera utilisé.  
+ Cela peut entraîner une erreur, si la page de codes du classement actuel ne peut pas représenter le caractère Unicode ??, ou il le représente dans l’encodage spécifique.  
   
  Lors du renvoi des résultats XML côté client, les données seront transmises en UTF-16. Le fournisseur côté client exposera ensuite les données d'après les règles de son API.  
   
@@ -96,11 +96,11 @@ set @u = N'<a a="
 select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <a a="  
-    𐌀>">     
+    ????>">     
 </a>  
 ```  
   
@@ -118,7 +118,7 @@ set @x = N'<a>This example contains an entitized char: <.</a>'
 select @x.query('/a/text()')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 This example contains an entitized char: <.  
@@ -130,7 +130,7 @@ This example contains an entitized char: <.
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 This example contains an entitized char: <.  

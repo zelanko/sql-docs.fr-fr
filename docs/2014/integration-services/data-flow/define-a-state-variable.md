@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d80c4dc4d304dfb6b3043475026e0e5e34c2e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca9e4b8dd9c00904b09645e4d0c45673fbb6020f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072563"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811631"
 ---
 # <a name="define-a-state-variable"></a>Définir une variable d’état
   Cette procédure explique comment définir une variable de package dans laquelle l'état de capture de données modifiées est stocké.  
@@ -33,7 +32,7 @@ ms.locfileid: "48072563"
 |`CS`|Cela marque le point de départ de la plage de traitement actuelle (début actuel).|  
 |`<cs-lsn>`|Il s'agit du dernier numéro séquentiel dans le journal (NSE) traité dans l'exécution de capture de données modifiées précédente.|  
 |`CE`|Cela marque le point d'arrivée de la plage de traitement actuelle (fin actuelle). La présence du composant CE dans l'état de capture de données modifiées indique qu'un package de capture de données modifiées est actuellement en cours de traitement ou qu'un package de capture de données modifiées a échoué avant la fin du traitement complet de sa plage de traitement de capture de données modifiées.|  
-|`<ce-lsn>`|Il s'agit du dernier numéro séquentiel dans le journal à traiter dans l'exécution de capture de données modifiées actuelle. On part du principe que le dernier numéro de séquence à traiter correspond au maximum (0xFFF…).|  
+|`<ce-lsn>`|Il s'agit du dernier numéro séquentiel dans le journal à traiter dans l'exécution de capture de données modifiées actuelle. On part du principe que le dernier numéro de séquence à traiter correspond au maximum (0xFFF...).|  
 |`IR`|Cela marque la plage de traitement initiale.|  
 |`<ir-start>`|Il s'agit d'un numéro séquentiel dans le journal d'un changement juste avant le début de la charge initiale.|  
 |`<ir-end>`|Il s'agit d'un numéro séquentiel dans le journal d'un changement juste après la fin de la charge initiale.|  
@@ -50,10 +49,10 @@ ms.locfileid: "48072563"
 |-----------|-----------------|  
 |(INITIAL)|Il s'agit de l'état initial avant l'exécution d'un package sur le groupe CDC actuel. Il s'agit également de l'état correspondant à une capture de données modifiées vide.|  
 |ILSTART (charge initiale démarrée)|Il s'agit de l'état au démarrage du package de charge initiale, après l'appel de l'opération `MarkInitialLoadStart` à la tâche de contrôle CDC.|  
-|ILEND (fin de la charge initiale)|C’est l’état lorsque le package de charge initiale se termine avec succès, une fois que le `MarkInitialLoadEnd` appel d’opération pour la tâche de contrôle de capture de données modifiées.|  
-|ILUPDATE (mise à jour de la charge initiale)|Il s'agit de l'état lors des exécutions du package de mise à jour à flux progressif, suivant la charge initiale, alors que le traitement de la plage initiale est encore en cours. Il s’agit d’après le `GetProcessingRange` appel d’opération pour la tâche de contrôle de capture de données modifiées.<br /><br /> Si vous utilisez la colonne __$reprocessing, elle contient la valeur 1 pour indiquer que le package peut retraiter des lignes qui sont déjà au niveau de la cible.|  
+|ILEND (fin de la charge initiale)|Il s'agit de l'état à la fin du package de charge initiale, après l'appel de l'opération `MarkInitialLoadEnd` à la tâche de contrôle CDC.|  
+|ILUPDATE (mise à jour de la charge initiale)|Il s'agit de l'état lors des exécutions du package de mise à jour à flux progressif, suivant la charge initiale, alors que le traitement de la plage initiale est encore en cours. Il est constaté après l'appel de l'opération `GetProcessingRange` à la tâche de contrôle CDC.<br /><br /> Si vous utilisez la colonne __$reprocessing, elle contient la valeur 1 pour indiquer que le package peut retraiter des lignes qui sont déjà au niveau de la cible.|  
 |TFEND (fin de la mise à jour à flux progressif)|Il s'agit de l'état attendu pour une exécution CDC normale. Il indique que l'exécution précédente a réussi et qu'une nouvelle exécution avec une nouvelle plage de traitement peut démarrer.|  
-|TFSTART|C’est l’état sur une exécution non initiale du package de mise à jour de flux progressif, après le `GetProcessingRange` appel d’opération pour la tâche de contrôle de capture de données modifiées.<br /><br /> Cela indique qu’une exécution CDC normale a démarré mais n’est pas terminée ou n'a pas encore terminée correctement (`MarkProcessedRange`).|  
+|TFSTART|Il s'agit de l'état sur une exécution non initiale du package de mise à jour à flux progressif, après l'appel de l'opération `GetProcessingRange` à la tâche de contrôle CDC.<br /><br /> Il indique qu'une exécution CDC normale a démarré mais n'est pas terminée ou ne s'est pas encore terminée correctement (`MarkProcessedRange`).|  
 |TFREDO (Retraitement des mises à jour à flux progressif)|Il s'agit de l'état d'un `GetProcessingRange` qui se produit après TFSTART. Il indique que l'exécution précédente ne s'est pas terminée avec succès.<br /><br /> Si vous utilisez la colonne __$reprocessing, elle contient la valeur 1 pour indiquer que le package peut retraiter des lignes qui sont déjà au niveau de la cible.|  
 |ERROR|Le groupe CDC est dans un état ERROR.|  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48072563"
  Si vous n'utilisez pas la tâche de contrôle de capture de données modifiées avec Permanence d'état automatique, vous devez charger la valeur de la variable depuis le stockage permanent dans lequel sa valeur a été enregistrée lors la dernière exécution du package, puis la réécrire dans le stockage permanent une fois le traitement de la plage de traitement actuelle terminé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâche de contrôle CDC](../control-flow/cdc-control-task.md)   
+ [Tâche de contrôle de capture de données modifiées](../control-flow/cdc-control-task.md)   
  [Éditeur de tâche de contrôle CDC](../cdc-control-task-editor.md)  
   
   

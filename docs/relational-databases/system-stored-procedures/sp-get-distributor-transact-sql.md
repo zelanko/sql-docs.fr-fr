@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_get_distributor
@@ -17,12 +16,12 @@ ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf685a9dec6f815d30b11db3e4f4933cd7ac19d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccdc8529bb62e4e1db15f0a5ea85a64c5b679abf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634447"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760181"
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_get_distributor
 ## <a name="remarks"></a>Notes  
  **sp_get_distributor** est principalement utilisée par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et de capture instantanée, transactionnelle, la réplication de fusion.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Tout utilisateur peut exécuter **sp_get_distributor**. Un jeu de résultats non NULL est retourné lorsque cette stockée procédure est exécutée par les membres de la **db_owner** ou **replmonitor** base de données fixe sur la base de données de distribution, ou les membres de la  **db_owner** rôle de base de données fixe sur au moins une base de données publiée. Un jeu de résultats non NULL est également retourné lorsque cette procédure stockée est exécutée par les utilisateurs dans la liste d’accès de publication (PAL) d’au moins une base de données publiée, ou dans la PAL de la base de données de distribution pour un serveur non-SQL, peuvent également exécuter **sp _get_distributor**.  
   
 ## <a name="see-also"></a>Voir aussi  

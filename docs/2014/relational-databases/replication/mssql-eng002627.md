@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG002627 error
@@ -13,12 +12,12 @@ ms.assetid: 7f4136ac-3784-4a41-a98c-8a02308e4883
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1526c0f0a19cc171eaf63c829199af205f2756db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a102991d08085f093e08a068a3d3127c9d7f7fc6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226189"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772424"
 ---
 # <a name="mssqleng002627"></a>MSSQL_ENG002627
     
@@ -30,7 +29,7 @@ ms.locfileid: "48226189"
 |ID d'événement|2627|  
 |Source de l'événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|Nom symbolique|Néant|  
+|Nom symbolique|N/A|  
 |Texte du message|Violation de la contrainte '%.*ls'. Impossible d’insérer une clé en double dans l’objet '%.\*ls'.|  
   
 ## <a name="explanation"></a>Explication  
@@ -60,7 +59,7 @@ ms.locfileid: "48226189"
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](errors-and-events-reference-replication.md)   
  [Réplication de fusion](merge/merge-replication.md)   
- [Réplication transactionnelle d’égal à égal](transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)   
  [Abonnements pouvant être mis à jour pour la réplication transactionnelle](transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpullsubscription
@@ -17,12 +16,12 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d3c09a2d625f8b1a8c92d3fc55d8b571336a020
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c003b103c7957e737f53eb8733022e68073b3aef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857027"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802501"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  Spécifie s'il existe une version autonome de l'Agent de distribution pour cette publication *independent_agent* est **nvarchar (5)**, avec TRUE comme valeur par défaut. Si **true**, il existe un Agent de Distribution autonome pour cette publication. Si **false**, il existe un Agent de Distribution pour chaque paire de base de données de serveur de publication/abonné de base de données. *independent_agent* est une propriété de la publication et doit avoir la même valeur ici que sur le serveur de publication.  
   
  [  **@subscription_type=**] **'***subscription_type***'**  
- Est le type d’abonnement. *subscription_type* est **nvarchar(9)**, avec une valeur par défaut **anonyme**. Vous devez spécifier une valeur de **extraction** pour *subscription_type*, sauf si vous souhaitez créer un abonnement sans l’enregistrer sur le serveur de publication. Dans ce cas, vous devez spécifier une valeur de **anonyme**. Cela est nécessaire pour les cas dans lequel vous ne pouvez pas établir une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion au serveur de publication lors de la configuration de l’abonnement.  
+ Est le type d’abonnement. *subscription_type* est **nvarchar(9)**, avec une valeur par défaut **anonyme**. Vous devez spécifier une valeur de **extraction** pour *subscription_type*, sauf si vous souhaitez créer un abonnement sans l’enregistrer sur le serveur de publication. Dans ce cas, vous devez spécifier une valeur de **anonyme**. Cela s'avère nécessaire lorsque vous ne pouvez pas établir de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le serveur de publication pendant la configuration de l'abonnement.  
   
  [  **@description=**] **'***description***'**  
  Est la description de la publication. *Description* est **nvarchar (100)**, avec NULL comme valeur par défaut.  
@@ -67,7 +66,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  [  **@update_mode=**] **'***update_mode***'**  
  Est le type de mise à jour. *update_mode* est **nvarchar (30)**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**en lecture seule** (valeur par défaut)|L'abonnement est en lecture seule. Aucune modification effectuée sur l'Abonné ne sera retournée au serveur de publication. Cette valeur doit être utilisée si aucune mise à jour ne doit être effectuée sur le serveur de publication.|  
 |**synctran**|Active la prise en charge des abonnements de mise à jour immédiate.|  
@@ -92,7 +91,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-t_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addpullsubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  

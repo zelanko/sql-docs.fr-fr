@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying article properties
@@ -17,19 +16,19 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9cdbbbedacd9f88133e0d17411f441aa5ed884a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9f106af7d3464ca1b0f2047fd86e2670389d821
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149399"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822593"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifier les propriétés des publications et des articles
   Quand une publication a été créée, la plupart des propriétés de la publication et des articles peuvent être modifiées, mais certaines nécessitent que l'instantané soit régénéré et/ou que les abonnements soient réinitialisés. Cette rubrique contient des informations sur toutes les propriétés qui requièrent l'une de ces actions ou les deux si elles sont modifiées.  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Propriétés de la publication pour la réplication d'instantané et transactionnelle  
   
-|Description|Procédure stockée|Properties|Spécifications|  
+|Description|Procédure stockée|Properties|Configuration requise|  
 |-----------------|----------------------|----------------|------------------|  
 |Modifier le format d'instantané.|**sp_changepublication**|**sync_method**|Nouvel instantané.|  
 |Modifier l'emplacement de l'instantané.|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Nouvel instantané.|  
@@ -43,7 +42,7 @@ ms.locfileid: "48149399"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>Propriétés des articles pour la réplication d'instantané et transactionnelle  
   
-|Description|Procédure stockée|Properties|Spécifications|  
+|Description|Procédure stockée|Properties|Configuration requise|  
 |-----------------|----------------------|----------------|------------------|  
 |Supprimer un article|**sp_droparticle**|Tous les paramètres.|Les articles peuvent être supprimés avant que des abonnements soient créés. À l'aide de procédures stockées, il est possible de supprimer un abonnement à un article ; à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], l'abonnement tout entier peut être supprimé, recréé et synchronisé. Pour plus d’informations, consultez [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Modifier un filtre de colonne.|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
@@ -61,7 +60,7 @@ ms.locfileid: "48149399"
   
 ## <a name="publication-properties-for-merge-replication"></a>Propriétés de la publication pour la réplication de fusion  
   
-|Description|Procédure stockée|Properties|Spécifications|  
+|Description|Procédure stockée|Properties|Configuration requise|  
 |-----------------|----------------------|----------------|------------------|  
 |Modifier le format d'instantané|**sp_changemergepublication**|**sync_mode**|Nouvel instantané.|  
 |Modifier l'emplacement de l'instantané.|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Nouvel instantané.|  
@@ -80,7 +79,7 @@ ms.locfileid: "48149399"
   
 ## <a name="article-properties-for-merge-replication"></a>Propriétés d'un article pour la réplication de fusion  
   
-|Description|Procédure stockée|Properties|Spécifications|  
+|Description|Procédure stockée|Properties|Configuration requise|  
 |-----------------|----------------------|----------------|------------------|  
 |Supprimer un article, où l'article a le dernier filtre paramétré dans la publication.|**sp_dropmergearticle**|Tous les paramètres|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Supprimer un article, où l'article est un parent dans un filtre de jointure ou dans un enregistrement logique (ceci a comme effet de bord de supprimer la jointure).|**sp_dropmergearticle**|Tous les paramètres|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  

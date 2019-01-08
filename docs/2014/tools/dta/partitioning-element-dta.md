@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b576cdc67ca5592175cce696999aa5f1443926e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acf6d033595952186b411ef0e547858f8b59771b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170901"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769341"
 ---
 # <a name="partitioning-element-dta"></a>Partitioning, élément (Assistant Paramétrage de base de données)
   Contient le schéma de partitionnement que vous aimeriez que l'Assistant Paramétrage du moteur de base de données utilise durant l'analyse.  
@@ -42,13 +41,13 @@ ms.locfileid: "48170901"
 |**Type de données et longueur**|`string`, aucune longueur maximale.|  
 |**Valeurs autorisées**|**NONE**<br /> Aucun partitionnement.<br /><br /> **FULL**<br /> Partitionnement complet. (Améliore les performances.)<br /><br /> **ALIGNED**<br /> Partitionnement aligné uniquement. (Améliore la gestion.)<br /><br /> Utilisez une seule de ces valeurs avec cet élément.<br /><br /> La valeur**ALIGNED** signifie que dans la recommandation générée par l’Assistant Paramétrage du moteur de base de données chaque index proposé est partitionné de la même façon que la table sous-jacente pour laquelle l’index est défini. Les index non-cluster sur une vue indexée sont alignés avec la vue indexée.|  
 |**Valeur par défaut**|**NONE**|  
-|**Occurrence**|Obligatoire une fois pour l'élément `TuningOptions`, excepté si l'élément `DropOnlyMode` est utilisé. Si `DropOnlyMode` est utilisé, vous ne pouvez pas utiliser `Partitioning`. Ces éléments s'excluent mutuellement.|  
+|**Occurrence**|Obligatoire une fois pour l'élément `TuningOptions`, excepté si l'élément `DropOnlyMode` est utilisé. Si l'élément `DropOnlyMode` est utilisé, vous ne pouvez pas utiliser l'élément `Partitioning`. Ces éléments s'excluent mutuellement.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[TuningOptions, élément &#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**Élément parent**|[Élément TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
 ## <a name="example"></a>Exemple  

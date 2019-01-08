@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], files
@@ -19,12 +18,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11e70904aa8a67a1290cd466aeabcd33d2e7e651
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213459"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778321"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Ajouter des fichiers de données ou journaux à une base de données
   Cette rubrique explique comment ajouter des fichiers de données ou des fichiers journaux à une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -76,7 +75,7 @@ ms.locfileid: "48213459"
   
 8.  Spécifiez la taille initiale du fichier. Attribuez aux fichiers de données un maximum d'espace en tenant compte du volume maximal de données qu'est censée contenir la base de données.  
   
-9. Pour spécifier la manière dont la taille du fichier doit augmenter, cliquez sur (**...**) dans la colonne **Croissance automatique** . Sélectionnez l'une des options suivantes :  
+9. Pour spécifier la manière dont la taille du fichier doit augmenter, cliquez sur (**...**) dans la colonne **Croissance automatique**. Sélectionnez l'une des options suivantes :  
   
     1.  Pour autoriser la croissance du fichier sélectionné au fur et à mesure que l'espace requis pour les données augmente, activez la case à cocher **Activer la croissance automatique** , puis sélectionnez l'une des options suivantes :  
   

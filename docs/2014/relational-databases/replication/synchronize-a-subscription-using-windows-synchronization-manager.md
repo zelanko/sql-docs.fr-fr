@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], Windows Synchronization Manager
@@ -14,17 +13,17 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d12b1cc5b4626ab9093639d69a7ee724f2cc745d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb3e20913a2a7232aeeb93132fb6a8d0bb69e532
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147429"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782791"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>synchroniser un abonnement à l'aide du Gestionnaire de synchronisation Windows (Windows Synchronization Manager)
   Le Gestionnaire de synchronisation[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ne peut être utilisé que pour synchroniser des abonnements à des publications Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est exécuté sur le même ordinateur que le Gestionnaire de synchronisation (il peut également servir à synchroniser des fichiers hors connexion et des pages Web). Pour utiliser le Gestionnaire de synchronisation :  
   
-1.  Activez la synchronisation des abonnements par extraction avec le Gestionnaire de synchronisation Windows dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonné> : \<Base_de_données_d’abonnement>**. Pour plus d’informations sur l’accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un abonnement par extraction (pull)](view-and-modify-pull-subscription-properties.md).  
+1.  Activez la synchronisation des abonnements par extraction avec le Gestionnaire de synchronisation Windows dans le **Subscription Properties - \<abonné > : \<Base_de_données_abonnement >** boîte de dialogue. Pour plus d’informations sur l’accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un abonnement par extraction (pull)](view-and-modify-pull-subscription-properties.md).  
   
 2.  Accédez au Gestionnaire de synchronisation par le menu **Démarrer** de Windows.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "48147429"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Pour activer la synchronisation des abonnements par extraction de données (pull) avec le Gestionnaire de synchronisation Windows  
   
-1.  Dans la page **Général** de la boîte de dialogue **Propriétés de l’abonnement - \<Abonné> : \<Base_de_données_d’abonnement>**, sélectionnez la valeur **Activer** pour l’option **Utiliser le Gestionnaire de synchronisation Windows**.  
+1.  Sur le **général** page de la **Subscription Properties - \<abonné > : \<Base_de_données_abonnement >** boîte de dialogue, sélectionnez la valeur **activer** pour le **utilisez le Gestionnaire de synchronisation Windows** option.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

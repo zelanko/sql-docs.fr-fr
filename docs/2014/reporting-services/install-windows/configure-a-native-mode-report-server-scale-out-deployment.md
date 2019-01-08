@@ -15,12 +15,12 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 68951c637d0c0db1fc86bab6405868e73770aca2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606849"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395232"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif (Gestionnaire de configuration de SSRS)
 
@@ -111,9 +111,9 @@ ms.locfileid: "51606849"
 3.  Sur la page déploiement avec montée en puissance, sélectionnez l’instance de serveur de rapports qui est en attente de joindre le déploiement, puis cliquez sur **ajouter un serveur**.  
   
     > [!NOTE]  
-    >  **Problème :** au moment de joindre une instance de serveur de rapports Reporting Services au déploiement avec montée en puissance parallèle, un message d’erreur du type « Accès refusé » peut s’afficher.  
+    >  **Problème :** Lorsque vous tentez de joindre une instance de serveur de rapports Reporting Services au déploiement avec montée en puissance, vous pouvez rencontrer des messages d’erreur semblables à « Accès refusé ».  
     >   
-    >  **Solution :** sauvegardez la clé de chiffrement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la première instance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et restaurez la clé dans le deuxième serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Puis, essayez de joindre le second serveur au déploiement avec montée en puissance parallèle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+    >  **Solution de contournement :** Sauvegarder le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] clé de chiffrement à partir de la première [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] d’instance et restaurer la clé à la seconde [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serveur de rapports. Puis, essayez de joindre le second serveur au déploiement avec montée en puissance parallèle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 4.  Vous devez maintenant être en mesure de vérifier que les deux instances de serveur de rapports sont opérationnelles. Pour vérifier la deuxième instance, vous pouvez utiliser l'outil de configuration de Reporting Services pour vous connecter au serveur de rapports et cliquer sur l'URL du service Web ou l'URL du Gestionnaire de rapports.  
   

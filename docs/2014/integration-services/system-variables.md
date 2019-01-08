@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
@@ -17,17 +16,17 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7c77ca84cd844b5c49f704d44f2eca3ba34c4269
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0798b78aebb308d76585df0e5c7e6e9200e20b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163469"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792312"
 ---
 # <a name="system-variables"></a>Variables système
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un ensemble de variables système qui stockent des informations sur le package en cours d'exécution et ses objets. Ces variables peuvent être utilisées dans des expressions et des propriétés d'expressions afin de personnaliser des packages, des conteneurs, des tâches et des gestionnaires d'événements.  
   
- Toutes les variables (système et définies par l'utilisateur) peuvent être utilisées dans les liaisons de paramètres que la tâche d'exécution SQL utilise pour mapper des variables à des paramètres.  
+ Toutes les variables (système et définies par l’utilisateur) peuvent être utilisées dans les liaisons de paramètres que la tâche d’exécution SQL utilise pour mapper des variables à des paramètres.  
   
 ## <a name="system-variables-for-packages"></a>Variables système pour les packages  
  Le tableau suivant décrit les variables système fournies par [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour les packages.  
@@ -90,7 +89,7 @@ ms.locfileid: "48163469"
 |**ProgressCountHigh**|Int32|Partie supérieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
 |`ProgressCountLow`|Int32|Partie inférieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
 |**ProgressDescription**|String|Description de la progression.|Gestionnaire d'événements OnProgress|  
-|`Propagate`|Booléen|Indique si l'événement est propagé à un gestionnaire d'événements de niveau supérieur.<br /><br /> Remarque : La valeur de la `Propagate` variable est ignorée lors de la validation du package.<br /><br /> Si vous affectez la valeur `Propagate` à `False` dans un package enfant, cela n'empêche pas la propagation d'un événement à un package parent.|Tous les gestionnaires d'événements|  
+|`Propagate`|Booléen|Indique si l'événement est propagé à un gestionnaire d'événements de niveau supérieur.<br /><br /> Remarque : La valeur de la variable `Propagate` est ignorée lors de la validation du package.<br /><br /> Si vous affectez la valeur `Propagate` à `False` dans un package enfant, cela n'empêche pas la propagation d'un événement à un package parent.|Tous les gestionnaires d'événements|  
 |`SourceDescription`|String|Description de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
 |`SourceID`|String|Identificateur unique de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
 |**SourceName**|String|Nom de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
@@ -105,6 +104,6 @@ ms.locfileid: "48163469"
  Cette règle s'applique également aux variables définies par l'utilisateur. Cependant, lorsque les types de données de variables système ne peuvent pas être modifiés et si vous devez personnaliser l'utilisation de ces variables en fonction des types de données, les variables définies par l'utilisateur offrent plus de souplesse. Les variables définies par l'utilisateur qui sont utilisées dans des liaisons de paramètres sont généralement définies avec des types de données compatibles avec les types de données des paramètres auxquels elles sont mappées.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Mapper des paramètres de requête à des variables dans une tâche d’exécution SQL](control-flow/execute-sql-task.md)  
+ [Mapper des paramètres de requête à des variables dans une tâche d'exécution SQL](control-flow/execute-sql-task.md)  
   
   

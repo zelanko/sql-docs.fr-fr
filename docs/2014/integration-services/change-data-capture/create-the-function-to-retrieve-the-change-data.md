@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
@@ -13,12 +12,12 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9749418654d76f542d865aad78135b1a11a987b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b49001c7b62be67097223421ef85db2b475aa1d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088599"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761891"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Créer la fonction de récupération des données modifiées
   Une fois que vous avez terminé le flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un chargement incrémentiel des données modifiées, la tâche suivante consiste à créer une fonction table qui récupère les données modifiées. Vous ne devez créer cette fonction qu'une seule fois avant le premier chargement incrémentiel.  
@@ -133,16 +132,16 @@ deallocate #hfunctions
   
 -   Toutes les colonnes de données modifiées requises.  
   
--   Une colonne appelée __CDC_OPERATION qui utilise un champ à un ou deux caractères qui identifie l'opération associée à la ligne. Les valeurs valides pour ce champ sont les suivantes : « I » pour insert (insertion), « D » pour delete (suppression), « UO » pour update old values (mise à jour des anciennes valeurs) et « UN » pour update old values (mise à jour des nouvelles valeurs).  
+-   Une colonne appelée __CDC_OPERATION qui utilise un champ à un ou deux caractères qui identifie l'opération associée à la ligne. Les valeurs valides pour ce champ sont comme suit : « I » pour l’insertion, qui a recours à ' pour la suppression, ou ' UO' pour mettre à jour les anciennes valeurs et un ' pour la mise à jour de nouvelles valeurs.  
   
--   Indicateurs de mise à jour, lorsque vous les demandez, qui apparaissent sous la forme de colonnes de bits après le code d'opération et dans l'ordre spécifié dans le paramètre *@update_flag_list* . Ces colonnes sont nommées en ajoutant « _uflag » au nom de colonne associé.  
+-   Indicateurs de mise à jour, lorsque vous les demandez, qui apparaissent sous la forme de colonnes de bits après le code d'opération et dans l'ordre spécifié dans le paramètre *@update_flag_list* . Ces colonnes sont nommées en ajoutant « _uflag » au nom de colonne associé.  
   
  Si votre package appelle une fonction wrapper qui interroge toutes les modifications, elle retourne également les colonnes __CDC_STARTLSN et \__CDC_SEQVAL. Ces deux colonnes deviennent les première et deuxième colonnes, respectivement, du jeu de résultats. La fonction wrapper trie également le jeu de résultats en fonction de ces deux colonnes.  
   
 ## <a name="writing-your-own-table-value-function"></a>Écriture de votre propre fonction table  
  Vous pouvez également utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour écrire votre propre fonction wrapper table qui appelle la fonction de requête de capture de données modifiées et qui stocke la fonction wrapper table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la création d’une fonction Transact-SQL, consultez [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
- L'exemple suivant définit une fonction table qui récupère les modifications d'une table Customer pour l'intervalle de modification spécifié. Cette fonction utilise data capture des fonctions modifiées pour mapper le `datetime` séquence de valeurs dans le journal binaire des valeurs de numéro séquentiel que les tables de modifications utilisent en interne. Cette fonction gère également plusieurs conditions spéciales :  
+ L'exemple suivant définit une fonction table qui récupère les modifications d'une table Customer pour l'intervalle de modification spécifié. Cette fonction utilise des fonctions de capture de données modifiées pour mapper les valeurs `datetime` aux valeurs binaires de numéros séquentiels dans le journal que les tables de modifications utilisent en interne. Cette fonction gère également plusieurs conditions spéciales :  
   
 -   Lorsqu'une valeur NULL est passée pour l'heure de début, cette fonction utilise la valeur correspondante à la première heure disponible.  
   
@@ -220,6 +219,6 @@ go
 ## <a name="next-step"></a>Étape suivante  
  Après avoir créé la fonction table qui interroge les données modifiées, l'étape suivante consiste à commencer à concevoir le flux de données dans le package.  
   
- **Rubriques suivante :** [Récupérer et comprendre les données modifiées](retrieve-and-understand-the-change-data.md)  
+ **Rubrique suivante :** [Récupérer et comprendre les données modifiées](retrieve-and-understand-the-change-data.md)  
   
   

@@ -20,16 +20,16 @@ ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c26111571eb505640acee035cba37d617b43c481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a680f5579b241f6b279f5ecc994d32c8fad784f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849937"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205358"
 ---
 # <a name="sqlmoreresults-function"></a>Fonction SQLMoreResults
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ODBC  
+ Version introduite : Conformité aux normes 1.0 ODBC : ODBC  
   
  **Résumé**  
  **SQLMoreResults** détermine si plus de résultats sont disponibles sur une instruction contenant **sélectionnez**, **mise à jour**, **insérer**, ou  **SUPPRIMER** instructions et, dans ce cas, initialise le traitement de ces résultats.  
@@ -39,7 +39,7 @@ ms.locfileid: "47849937"
 ```  
   
 SQLRETURN SQLMoreResults(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -73,7 +73,7 @@ SQLRETURN SQLMoreResults(
 ## <a name="comments"></a>Commentaires  
  **Sélectionnez** instructions retournent des jeux de résultats. **Mise à jour**, **insérer**, et **supprimer** instructions retournent un nombre de lignes affectées. Si une de ces instructions sont exécutées par lot soumis avec des tableaux de paramètres (numérotées dans l’ordre de paramètre, dans l’ordre où ils apparaissent dans le lot croissant) ou dans les procédures, elles peuvent retourner plusieurs jeux de résultats, ou le nombre de lignes. Pour plus d’informations sur les lots d’instructions et des tableaux de paramètres, consultez [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md) et [tableaux de valeurs de paramètre](../../../odbc/reference/develop-app/arrays-of-parameter-values.md).  
   
- Après l’exécution du lot, l’application est positionnée sur le premier jeu de résultats. L’application peut appeler **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll** , **SQLSetPos**et toutes les fonctions de métadonnées, sur les première ou tous les résultats les jeux, tout comme il le ferait s’il y avait simplement un seul jeu de résultats. Une fois que cela est fait avec le premier jeu de résultats, l’application appelle **SQLMoreResults** pour déplacer vers le jeu de résultats suivant. Si un autre jeu de résultats ou count est disponible, **SQLMoreResults** retourne SQL_SUCCESS et initialise le jeu de résultats ou un nombre pour un traitement supplémentaire. Si des instructions de génération : le nombre de ligne apparaissent entre les deux entraîner des instructions de création de jeu, ils peuvent être échelonnées en appelant **SQLMoreResults**. Après avoir appelé **SQLMoreResults** pour **mise à jour**, **insérer**, ou **supprimer** instructions, une application peut appeler **SQLRowCount**.  
+ Après l’exécution du lot, l’application est positionnée sur le premier jeu de résultats. L’application peut appeler **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll** , **SQLSetPos**et toutes les fonctions de métadonnées, sur les première ou tous les résultats les jeux, tout comme il le ferait s’il y avait simplement un seul jeu de résultats. Une fois que cela est fait avec le premier jeu de résultats, l’application appelle **SQLMoreResults** pour déplacer vers le jeu de résultats suivant. Si un autre jeu de résultats ou count est disponible, **SQLMoreResults** retourne SQL_SUCCESS et initialise le jeu de résultats ou un nombre pour un traitement supplémentaire. Si les instructions de génération de nombre de ligne apparaissent entre les deux entraîner des instructions de génération de jeu, ils peuvent être échelonnées en appelant **SQLMoreResults**. Après avoir appelé **SQLMoreResults** pour **mise à jour**, **insérer**, ou **supprimer** instructions, une application peut appeler **SQLRowCount**.  
   
  S’il y avait un jeu avec des lignes, de résultats actuel **SQLMoreResults** ignore ce jeu de résultats et rend l’autre jeu de résultats ou de nombre disponibles. Si tous les résultats ont été traités, **SQLMoreResults** retourne SQL_NO_DATA. Pour certains pilotes, paramètres de sortie et les valeurs de retour ne sont pas disponibles jusqu'à ce que tous les jeux de résultats et les nombres de lignes ont été traités. Pour ces pilotes, les paramètres de sortie et retourner des valeurs deviennent disponibles lorsque **SQLMoreResults** retourne SQL_NO_DATA.  
   
@@ -89,14 +89,14 @@ SQLRETURN SQLMoreResults(
   
  Si une recherche update, insert ou delete, instruction dans un lot d’instructions n’affecte pas toutes les lignes à la source de données **SQLMoreResults** retourne SQL_SUCCESS. Cela est différent du cas d’une mise à jour recherchée, insérer ou supprimer l’instruction est exécutée via **SQLExecDirect**, **SQLExecute**, ou **SQLParamData**, qui Retourne SQL_NO_DATA si elle n’affecte pas toutes les lignes à la source de données. Si une application appelle **SQLRowCount** pour récupérer le nombre de lignes après un appel à **SQLMoreResults** n’a pas affecté aucune ligne, **SQLRowCount** retourne SQL_NO_DATA.  
   
- Pour plus d’informations sur la mise en séquence valide de fonctions de traitement des résultats, consultez [tableaux des transitions d’état ODBC annexe b :](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Pour plus d’informations sur la mise en séquence valide de fonctions de traitement des résultats, consultez [annexe b : Tableaux des transitions d’état ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Pour plus d’informations sur les SQL_PARAM_DATA_AVAILABLE et les paramètres de sortie diffusées en continu, consultez [récupération des paramètres de sortie à l’aide de SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
 ## <a name="availability-of-row-counts"></a>Disponibilité des nombres de lignes  
- Lorsqu’un lot contient plusieurs instructions de génération : le nombre de lignes consécutives, il est possible que ces nombres de lignes soient restaurées en nombre de lignes qu’une seule. Par exemple, si un lot contient cinq instructions insert, certaines sources de données est capables de retourner des cinq nombres de lignes individuelles. Certaines autres sources de données retournent le nombre qu’une seule ligne qui représente la somme des nombres de lignes individuelles cinq.  
+ Lorsqu’un lot contient plusieurs instructions de génération de nombre de lignes consécutives, il est possible que ces nombres de lignes soient restaurées en nombre de lignes qu’une seule. Par exemple, si un lot contient cinq instructions insert, certaines sources de données est capables de retourner des cinq nombres de lignes individuelles. Certaines autres sources de données retournent le nombre qu’une seule ligne qui représente la somme des nombres de lignes individuelles cinq.  
   
- Lorsqu’un lot contienne une combinaison d’instructions de génération : le nombre de lignes et de création de jeu de résultats, nombre de lignes peut ou ne peut pas être disponibles à tout. Le comportement du pilote en ce qui concerne la disponibilité des nombres de lignes est énuméré dans le type d’information SQL_BATCH_ROW_COUNT disponible via un appel à **SQLGetInfo**. Par exemple, supposons que le lot contient un **sélectionnez**, suivie de deux **insérer**s et l’autre **sélectionnez**. Ensuite, les cas suivants sont possibles :  
+ Lorsqu’un lot contienne une combinaison d’instructions de génération de nombre de lignes et de génération de jeu de résultats, nombre de lignes peut ou ne peut pas être disponibles à tout. Le comportement du pilote en ce qui concerne la disponibilité des nombres de lignes est énuméré dans le type d’information SQL_BATCH_ROW_COUNT disponible via un appel à **SQLGetInfo**. Par exemple, supposons que le lot contient un **sélectionnez**, suivie de deux **insérer**s et l’autre **sélectionnez**. Ensuite, les cas suivants sont possibles :  
   
 -   Le nombre de lignes correspondant aux deux **insérer** instructions ne sont pas disponibles du tout. Le premier appel à **SQLMoreResults** sera vous positionner sur le jeu de résultats de la deuxième **sélectionnez** instruction.  
   

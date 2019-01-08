@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesource.f1
@@ -18,12 +17,12 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8a06ae3b308c90b2dc789c97f5f262530826229
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a0b353cfb1aef011d6fc63a3bea252685b38a42
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125409"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771331"
 ---
 # <a name="flat-file-source"></a>Source de fichier plat
   La source de fichier plat lit des données figurant dans un fichier texte. Le fichier texte peut être d'un format délimité, à largeur fixe ou mixte.  
@@ -56,11 +55,11 @@ ms.locfileid: "48125409"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source de fichier plat**, cliquez sur l’une des rubriques suivantes :  
   
--   [Flat File Source Editor &#40;Page Gestionnaire de connexions&#41;](../flat-file-source-editor-connection-manager-page.md)  
+-   [Éditeur de source de fichier plat &#40;page Gestionnaire de connexions&#41;](../flat-file-source-editor-connection-manager-page.md)  
   
--   [Flat File Source Editor &#40;Page colonnes&#41;](../flat-file-source-editor-columns-page.md)  
+-   [Éditeur de source de fichier plat &#40;page Colonnes&#41;](../flat-file-source-editor-columns-page.md)  
   
--   [Flat File Source Editor &#40;Page sortie d’erreur&#41;](../flat-file-source-editor-error-output-page.md)  
+-   [Éditeur de source de fichier plat &#40;page Sortie d’erreur&#41;](../flat-file-source-editor-error-output-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   

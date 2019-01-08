@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 99c1f51f1bb9ac20571af3f6e39e357cfae976f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02a0eac15050584d2ce232a82bbf327db3b44fd9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208789"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755425"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Supprimer un groupe d'attributs (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez un groupe d'attributs lorsque vous n'avez plus besoin de l'onglet à afficher dans la zone fonctionnelle **Explorateur** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -31,7 +30,7 @@ ms.locfileid: "48208789"
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-an-attribute-group"></a>Pour supprimer un groupe d'attributs  
   

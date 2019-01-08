@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - void ExecuteNonQuery() method
@@ -32,12 +30,12 @@ ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0aba35418c1a7759f5c083bd5e5f7485118cbfc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 736345b7ee5b9c3e40f0ae34fe139cb911cad42f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207219"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807341"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Objet SqlXmlCommand (classes managées SQLXML)
   Il s’agit du constructeur pour l’objet SqlXmlCommand :  
@@ -46,7 +44,7 @@ ms.locfileid: "48207219"
 public SqlXmlCommand(string cnString)  
 ```  
   
- Où `cnString` correspond à la chaîne de connexion ADO ou OLEDB qui identifie le serveur, la base de données et les informations de connexion — par exemple, `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
+ Où `cnString` est la chaîne de connexion ADO ou OLEDB qui identifie le serveur, base de données et les informations de connexion-par exemple, `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
   
  Dans la chaîne de connexion, le `Provider` doit être SQLOLEDB et le `Data Provider` ne doit pas être inclus dans la chaîne de fournisseur).  
   
@@ -108,7 +106,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Identifie le type de commande. Cette propriété est utilisée pour spécifier le type de commande que vous souhaitez exécuter. Les valeurs du tableau ci-dessous déterminent le type de la commande. Pour obtenir un exemple fonctionnel, consultez [l’accès à des fonctionnalités de SQLXML dans l’environnement .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SqlXmlCommandType.Sql|Exécute une commande SQL (par exemple, `SELECT * FROM Employees FOR XML AUTO`).|  
 |SqlXmlCommandType.XPath|Exécute une commande XPath (par exemple, `Employees[@EmployeeID=1]`).|  

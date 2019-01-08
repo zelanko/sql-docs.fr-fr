@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publisherinfo.commonjobs.f1
@@ -13,12 +12,12 @@ ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cc2dfb12427625c9bdb6fdf8731e32083673ffd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 266c839fbaf899af4f882c9ae858303f8cd7eac3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136279"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771431"
 ---
 # <a name="publisher-information-agents"></a>Informations sur le serveur de publication, Agents
   L'onglet **Agents** affiche des informations sur les agents et les travaux de maintenance associés au serveur de publication :  
@@ -48,13 +47,13 @@ ms.locfileid: "48136279"
 ## <a name="options"></a>Options  
  Pour afficher des informations sur un agent ou un travail, sélectionnez l'option de votre choix dans le menu déroulant **Types d'agents et de travaux** . Pour des informations plus détaillées et obtenir des tâches en relation avec un Agent ou un travail, cliquez avec le bouton droit sur la ligne correspondant à cet Agent ou à ce travail, puis cliquez sur une option dans le menu contextuel. Pour modifier la façon dont la grille affiche les données, cliquez avec le bouton droit sur la grille, puis cliquez sur l'une des options suivantes :  
   
--   **Trier**: cette option vous permet d'effectuer un tri sur ou plusieurs colonnes dans la boîte de dialogue **Trier les colonnes** .  
+-   **Tri**: Trier sur une ou plusieurs colonnes dans le **trier les colonnes** boîte de dialogue.  
   
--   **Choisir les colonnes à afficher**: cette option vous permet de sélectionner les colonnes à afficher et l'ordre d'affichage dans la boîte de dialogue **Choisir les colonnes** .  
+-   **Choisissez les colonnes à afficher**: Sélectionner les colonnes à afficher et l’ordre dans lequel les afficher dans le **choisir les colonnes** boîte de dialogue.  
   
--   **Filtre**: cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre** .  
+-   **Filtre**: Filtrer des lignes dans la grille en fonction des valeurs de colonne dans la **paramètres de filtre** boîte de dialogue.  
   
--   **Effacer le filtre**: cette option vous permet d'effacer tous les paramètres du filtre pour la grille.  
+-   **Effacer le filtre**: Effacer des paramètres de filtre pour la grille.  
   
  Les paramètres du filtre sont spécifiques à chaque grille. La sélection et le tri des colonnes sont appliqués à toutes les grilles du même type, par exemple la grille de publications pour chaque serveur de publication.  
   

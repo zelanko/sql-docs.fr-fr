@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b932b7f102e304ad110e5073005d2623cee2693c
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324592"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507502"
 ---
 # <a name="sql-data-types"></a>Types de données SQL
 Chaque SGBD définit ses propres types SQL. Chaque pilote ODBC expose uniquement ces types de données SQL qui définit le SGBD associé. Plus d’informations sur la façon dont un pilote mappe les types DBMS SQL pour les identificateurs de type SQL définie par ODBC et comment un pilote mappe les types de DBMS SQL à ses propres identificateurs de type spécifiques au pilote SQL est retourné via un appel à **SQLGetTypeInfo**. Un pilote retourne également les types de données SQL lorsque vous décrivez les types de données des colonnes et des paramètres via des appels aux **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, et **SQLSpecialColumns**.  
@@ -39,23 +39,23 @@ Chaque SGBD définit ses propres types SQL. Chaque pilote ODBC expose uniquement
 |------------------------------|------------------------------------|------------------------------|  
 |SQL_CHAR|CHAR (*n*)|Chaîne de longueur fixe de caractères *n*.|  
 |SQL_VARCHAR|VARCHAR (*n*)|Chaîne de caractères de longueur variable avec une longueur de chaîne maximale *n*.|  
-|SQL_LONGVARCHAR|LONG VARCHAR|Données de caractères de longueur variable. Longueur maximale est la source de données. [9]|  
+|SQL_LONGVARCHAR|LONG VARCHAR|Données de caractères de longueur variable. Longueur maximale est dépend de la source de données. [9]|  
 |SQL_WCHAR|WCHAR (*n*)|Chaîne de caractères Unicode de longueur de chaîne fixe *n*|  
 |SQL_WVARCHAR|VARWCHAR (*n*)|Chaîne de caractères de longueur variable Unicode avec une longueur de chaîne maximale *n*|  
-|SQL_WLONGVARCHAR|LONGWVARCHAR|Données Unicode de longueur variable. Longueur maximale est la source de données|  
+|SQL_WLONGVARCHAR|LONGWVARCHAR|Données Unicode de longueur variable. Longueur maximale est de dépend de la source de données|  
 |SQL_DECIMAL|DECIMAL (*p*,*s*)|Signé, une valeur numérique exacte avec une précision d’au moins *p* et mise à l’échelle *s.* (La précision maximale est définie par le pilote). (1 < = *p* < = 15 ; *s* <= *p*). [ 4]|  
 |SQL_NUMERIC|NUMÉRIQUE (*p*,*s*)|Signé, une valeur numérique exacte avec une précision *p* et mise à l’échelle *s* (1 < = *p* < = 15 ; *s* <= *p*). [ 4]|  
-|SQL_SMALLINT|SMALLINT|Valeur numérique exacte avec une précision de 5 et une échelle 0 (signée : – 32 768 et < = *n* < = 32 767, non signée : 0 < = *n* < = 65 535) [3].|  
-|SQL_INTEGER|INTEGER|Valeur numérique exacte avec une précision de 10 et une échelle 0 (signée : – 2 [31] < = *n* < = 2 [31] – 1, non signée : 0 < = *n* < = 2 [32] – 1) [3].|  
-|SQL_REAL|real|Signé, une valeur numérique approximative avec une précision binaire de 24 (zéro ou valeur absolue 10 [–38] à 10[38]).|  
+|SQL_SMALLINT|SMALLINT|Valeur numérique exacte avec une précision de 5 et une échelle 0 (signée :-32 768 et < = *n* < = 32 767, non signé :  0 < = *n* < = 65 535) [3].|  
+|SQL_INTEGER|INTEGER|Valeur numérique exacte avec une précision de 10 et une échelle 0 (signée : -2 [31] < = *n* < = 2 [31] - 1, non signée :  0 < = *n* < = 2 [32] - 1) [3].|  
+|SQL_REAL|real|Signé, une valeur numérique approximative avec une précision binaire de 24 (zéro ou valeur absolue 10 [-38] à 10[38]).|  
 |SQL_FLOAT|FLOAT (*p*)|Signé, au moins une valeur numérique approximative avec une précision binaire de *p*. (La précision maximale est définie par le pilote). [5]|  
-|SQL_DOUBLE|DOUBLE PRECISION|Signé, une valeur numérique approximative avec une précision binaire de 53 (zéro ou valeur absolue 10 [–308] à 10[308]).|  
+|SQL_DOUBLE|DOUBLE PRECISION|Signé, une valeur numérique approximative avec une précision binaire de 53 (zéro ou valeur absolue 10 [-308] à 10[308]).|  
 |SQL_BIT|BIT|Données binaires de bit unique. [8]|  
-|SQL_TINYINT|TINYINT|Valeur numérique exacte avec une précision de 3 et une échelle 0 (signée : – 128 < = *n* < = 127, non signée : 0 < = *n* < = 255) [3].|  
-|SQL_BIGINT|bigint|Valeur numérique exacte avec une précision de 19 (signée) ou 20 (si non signée) et une échelle 0 (signée : – 2 [63] < = *n* < = 2 [63] – 1, non signée : 0 < = *n* < = 2 [64] – 1) [3], [9].|  
+|SQL_TINYINT|TINYINT|Valeur numérique exacte avec une précision de 3 et une échelle 0 (signée : -128 < = *n* < = 127, non signée :  0 < = *n* < = 255) [3].|  
+|SQL_BIGINT|bigint|Valeur numérique exacte avec une précision de 19 (signée) ou 20 (si non signée) et une échelle 0 (signée : -2 [63] < = *n* < = 2 [63] - 1, non signée : 0 < = *n* < = 2 [64] – 1) [3], [9].|  
 |SQL_BINARY|BINAIRE (*n*)|Données binaires de longueur fixe *n*. [ 9]|  
 |SQL_VARBINARY|VARBINARY (*n*)|Données binaires de longueur variable de longueur maximale *n*. La valeur maximale est définie par l’utilisateur. [9]|  
-|SQL_LONGVARBINARY|LONGS VARBINARY|Données binaires de longueur variable. Longueur maximale est la source de données. [9]|  
+|SQL_LONGVARBINARY|LONGS VARBINARY|Données binaires de longueur variable. Longueur maximale est dépend de la source de données. [9]|  
 |SQL_TYPE_DATE [6]|DATE|Year, month et champs de la journée, conforme aux règles du calendrier grégorien. (Consultez [contraintes du calendrier grégorien](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), plus loin dans cette annexe.)|  
 |SQL_TYPE_TIME [6]|HEURE (*p*)|Heure, minute et secondes champs, avec les valeurs valides pour les heures de 00 à 23, les valeurs valides pour les minutes de 00 à 59 et les valeurs valides pour les secondes de 00 à 61. Précision *p* indique la précision en secondes.|  
 |SQL_TYPE_TIMESTAMP [6]|HORODATEUR (*p*)|Year, month, day, heure, minute et secondes champs, avec les valeurs valides sont définis pour les types de données DATE et d’heure.|  
@@ -78,7 +78,7 @@ Chaque SGBD définit ses propres types SQL. Chaque pilote ODBC expose uniquement
   
  [1] c’est la valeur retournée dans la colonne DATA_TYPE par un appel à **SQLGetTypeInfo**.  
   
- [2] c’est la valeur retournée dans la colonne de nom et de créer des paramètres par un appel à **SQLGetTypeInfo**. La colonne de nom renvoie la désignation — par exemple, CHAR, tandis que la colonne PARAMS créer retourne une liste séparée par des virgules des paramètres de création tels que la précision, échelle et longueur.  
+ [2] c’est la valeur retournée dans la colonne de nom et de créer des paramètres par un appel à **SQLGetTypeInfo**. La colonne de nom renvoie la désignation-par exemple, CHAR-tandis que la colonne PARAMS créer retourne une liste séparée par des virgules des paramètres de création tels que la précision, échelle et longueur.  
   
  [3] une application utilise **SQLGetTypeInfo** ou **SQLColAttribute** pour déterminer si un type de données spécifique ou une colonne particulière dans un jeu de résultats n’est pas signée.  
   

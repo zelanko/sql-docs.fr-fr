@@ -1,5 +1,5 @@
 ---
-title: Créer une Source de données de rapport | Documents Microsoft
+title: Créer une Source de données de rapport | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bf4b8048392121c37b6f4f13584aa2fd18a90984
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b6e811f9114a484f7b0b68ca9782b9b60e366383
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026966"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393322"
 ---
 # <a name="create-a-report-data-source"></a>Créer une source de données de rapport
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,14 +50,14 @@ ms.locfileid: "34026966"
   
 5.  Dans **Chaîne de connexion**, spécifiez le nom du serveur Analysis Services, le nom de la base de données, le nom du cube et d’autres paramètres facultatifs.  
   
-     Chaîne de connexion : `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’`  
+     Chaîne de connexion : `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
     > [!NOTE]  
     >  S'il existe plusieurs cubes, spécifiez un nom de cube.  
   
-     (Facultatif) Les cubes peuvent contenir des perspectives qui fournissent aux utilisateurs une vue sélectionnée dans laquelle seules certaines dimensions ou seuls certains groupes de mesures sont visibles dans le client. Pour spécifier une perspective, entrez le nom de la perspective en tant que valeur de la propriété Cube : `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>’`  
+     (Facultatif) Les cubes peuvent contenir des perspectives qui fournissent aux utilisateurs une vue sélectionnée dans laquelle seules certaines dimensions ou seuls certains groupes de mesures sont visibles dans le client. Pour spécifier une perspective, entrez le nom de la perspective en tant que valeur de la propriété Cube : `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (Facultatif) Les cubes peuvent disposer de traductions de données et de métadonnées, spécifiées pour différentes langues au sein du modèle. Pour voir les traductions (données et métadonnées), vous devez ajouter la propriété « Locale Identifier » à la chaîne de connexion : `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’; Locale Identifier=<identifier number>`  
+     (Facultatif) Les cubes peuvent disposer de traductions de données et de métadonnées, spécifiées pour différentes langues au sein du modèle. Pour voir les traductions (données et métadonnées), vous devez ajouter la propriété « Locale Identifier » à la chaîne de connexion : `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  Dans **Informations d'identification**, spécifiez comment le serveur de rapports obtient les informations d'identification permettant d'accéder à la source de données externe.  
   

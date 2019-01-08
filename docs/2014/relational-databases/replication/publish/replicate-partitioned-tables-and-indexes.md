@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 09/10/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - partitioned indexes [SQL Server], replicating
@@ -17,15 +16,15 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b55612e8143a8ec207902ff7c802d518382820b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b38446a96f29006356f0ebf083a382fff4fb50f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214821"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793621"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Répliquer des tables et des index partitionnés
-  Le partitionnement facilite la gestion des tables et des index de grande taille, car il permet de gérer et d'accéder rapidement et efficacement à des sous-ensembles de données, tout en conservant l'intégrité d'une collecte de données. Pour plus d’informations, consultez [Tables et index partitionnés](../../partitions/partitioned-tables-and-indexes.md). La réplication prend en charge le partitionnement en fournissant un ensemble de propriétés qui indiquent comment les tables et les index partitionnés doivent être traités.  
+  Le partitionnement facilite la gestion des tables et des index de grande taille, car il permet de gérer et d'accéder rapidement et efficacement à des sous-ensembles de données, tout en conservant l'intégrité d'une collecte de données. Pour plus d'informations, consultez [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). La réplication prend en charge le partitionnement en fournissant un ensemble de propriétés qui indiquent comment les tables et les index partitionnés doivent être traités.  
   
 ## <a name="article-properties-for-transactional-and-merge-replication"></a>Propriétés d'article pour la réplication transactionnelle et de fusion  
  Le tableau suivant répertorie les objets utilisés pour partitionner des données.  
@@ -50,7 +49,7 @@ ms.locfileid: "48214821"
   
  La réplication copie les objets vers l'Abonné pendant la synchronisation initiale. Si le schéma de partition utilise des groupes de fichiers autres que le groupe de fichiers PRIMARY, ces groupes de fichiers doivent exister sur l'Abonné avant la synchronisation initiale.  
   
- Après avoir initialisé l'Abonné, les modifications de données sont propagées à l'Abonné et appliquées aux partitions appropriées. Toutefois, les modifications apportées au schéma de partition ne sont pas prises en charge. La réplication transactionnelle et de fusion ne prend pas en charge la réplication des commandes suivantes : ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou l’instruction REBUILD WITH PARTITION d’ALTER INDEX.  Les modifications associées ne sont pas automatiquement répliquées sur l’Abonné. Il incombe à l'utilisateur d'apporter des modifications similaires manuellement sur l'Abonné.  
+ Après avoir initialisé l'Abonné, les modifications de données sont propagées à l'Abonné et appliquées aux partitions appropriées. Toutefois, les modifications apportées au schéma de partition ne sont pas prises en charge. La réplication transactionnelle et de fusion ne prend pas en charge la réplication des commandes suivantes : ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou l'instruction REBUILD WITH PARTITION d'ALTER INDEX.  Les modifications associées ne sont pas automatiquement répliquées sur l’Abonné. Il incombe à l'utilisateur d'apporter des modifications similaires manuellement sur l'Abonné.  
   
 ## <a name="replication-support-for-partition-switching"></a>Prise en charge de la réplication pour le basculement de partition  
  La possibilité de déplacer rapidement et efficacement des sous-ensembles de données entre des partitions constitue l'un des principaux avantages du partitionnement de table. Les données sont déplacées à l'aide de la commande SWITCH PARTITION. Par défaut, lorsqu'une table est activée pour la réplication, les opérations SWITCH PARTITION sont bloquées pour les raisons suivantes :  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.maintplanproperties.general.f1
@@ -14,12 +13,12 @@ ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 65092404fede7f5dd8cd04e64092c46cefcfab44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9dbc755d5ee95b74991b249bc037fb6fc5a9f11
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048939"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803021"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Plan de maintenance (Propriétés du sous-plan)
   Utilisez la boîte de dialogue **Plan de maintenance (Propriétés du sous-plan)** pour spécifier un nom, une description et une planification de sous-plan de maintenance de plan. Cliquez sur **Propriétés du sous-plan** sous l’onglet **Conception** du plan de maintenance ou double-cliquez sur un sous-plan dans la grille du concepteur pour afficher cette boîte de dialogue.  

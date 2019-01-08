@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG002601 error
@@ -13,12 +12,12 @@ ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55a175f7ac4d7d00b84ea44cf04f34d81fcb35ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176101"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760242"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
     
@@ -30,7 +29,7 @@ ms.locfileid: "48176101"
 |ID d'événement|2601|  
 |Source de l'événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|Nom symbolique|Néant|  
+|Nom symbolique|N/A|  
 |Texte du message|Impossible d’insérer une ligne de clé en double dans l’objet '%.*ls' avec un index unique '%.\*ls'.|  
   
 ## <a name="explanation"></a>Explication  
@@ -42,7 +41,7 @@ ms.locfileid: "48176101"
   
 -   Une table avec une colonne d'identité est utilisée, mais la colonne n'est par gérée de façon appropriée.  
   
--   Dans la réplication de fusion, cette erreur peut également se produite lors d'une insertion dans une table système **MSmerge_contents**; l'erreur déclenchée est similaire à : impossible d'insérer une ligne de clé dupliquée dans l'objet « MSmerge_contents » d'index unique « ucl1SycContents ».  
+-   Dans la réplication de fusion, cette erreur peut également se produire lors d’une insertion dans la table système **MSmerge_contents**; l’erreur déclenchée est similaire à : Impossible d’insérer une ligne de clé en double dans l’objet « MSmerge_contents » avec un index unique « ucl1SycContents ».  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
  L'action requise dépend de la raison du déclenchement de l'erreur :  

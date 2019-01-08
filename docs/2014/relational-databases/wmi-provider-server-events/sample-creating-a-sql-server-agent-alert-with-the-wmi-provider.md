@@ -1,12 +1,10 @@
 ---
-title: 'Exemple : Création d’une alerte de l’Agent SQL Server à l’aide du fournisseur WMI pour les événements serveur | Microsoft Docs'
+title: 'Exemple : Création d’une alerte de l’Agent SQL Server à l’aide du fournisseur WMI pour les événements serveur | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Agent [WMI]
@@ -16,18 +14,18 @@ ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2623087a485070b442716c953501b2496679be9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180579"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823443"
 ---
-# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Exemple : création d'une alerte de l'Agent SQL Server en utilisant le fournisseur WMI pour les événements de serveur
+# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Exemple : Création d’une alerte de l’Agent SQL Server à l’aide du fournisseur WMI pour les événements serveur
   Une façon courante d'utiliser le fournisseur d'événements WMI consiste à créer des alertes de l'Agent SQL Server qui répondent à des événements spécifiques. L'exemple suivant présente une alerte simple qui enregistre les événements du graphique de blocage XML dans une table pour leur analyse ultérieure. L'Agent SQL Server soumet une demande WQL, reçoit des événements WMI et exécute un travail en réponse à l'événement. Remarquez que, bien que plusieurs objets Service Broker soient impliqués dans le traitement du message de notification, le fournisseur d'événements WMI gère les détails de la création et de la gestion de ces objets.  
   
 ## <a name="example"></a>Exemple  
- En premier lieu, une table est créée dans la base de données `AdventureWorks` pour contenir l'événement du graphique du blocage. La table contient deux colonnes : la colonne `AlertTime` contient l'heure à laquelle l'alerte s'exécute et la colonne `DeadlockGraph` contient le document XML qui inclut le graphique du blocage.  
+ En premier lieu, une table est créée dans la base de données `AdventureWorks` pour contenir l'événement du graphique du blocage. Le tableau contient deux colonnes : Le `AlertTime` colonne contient l’heure à laquelle l’alerte s’exécute, et le `DeadlockGraph` colonne contient le document XML qui contient le graphique de blocage.  
   
  Ensuite, l'alerte est créée. Le script commence par créer le travail que l'alerte exécutera, ajoute une étape de travail au travail et cible le travail sur l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le script crée alors l'alerte.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying filters, static row
@@ -15,12 +14,12 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 73c0e6d0ab47960aae61955cc4c432f2a883ae42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0af353d79fcb84d1ca4b8921048c3c5f502c29f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184929"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771551"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Définir et modifier un filtre de lignes statique
   Cette rubrique explique comment définir et modifier un filtre de lignes statique dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -151,13 +150,13 @@ ms.locfileid: "48184929"
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
   
- Dans cet exemple de réplication de fusion, les articles sont filtrés horizontalement pour que seules les lignes qui appartiennent au vendeur spécifié soient retournées. Un filtre de jointure est également utilisé. Pour plus d'informations, voir [Définir et modifier un filtre de jointure entre des articles de fusion](define-and-modify-a-join-filter-between-merge-articles.md).  
+ Dans cet exemple de réplication de fusion, les articles sont filtrés horizontalement pour que seules les lignes qui appartiennent au vendeur spécifié soient retournées. Un filtre de jointure est également utilisé. Pour plus d’informations, consultez [Définir et modifier un filtre de jointure entre des articles de fusion](define-and-modify-a-join-filter-between-merge-articles.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [DDéfinir et modifier un filtre de lignes paramétrable pour un article de fusion](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md)   
+ [Changer les propriétés des publications et des articles](change-publication-and-article-properties.md)   
  [Filtrer des données publiées](filter-published-data.md)   
  [Filtrer des données publiées en vue de la réplication de fusion](../merge/filter-published-data-for-merge-replication.md)  
   

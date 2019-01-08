@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 25fb50dbd858007a29d2a10a94053884620ed68b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49f5e3fd6250d3a9bb20ff68927bc66fa1e5d426
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750587"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211538"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Déployer un cluster Pacemaker pour SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Ce didacticiel décrit les tâches nécessaires pour déployer un cluster Linux Pacemaker pour un groupe de disponibilité [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] AlwaysOn ou une instance de cluster de basculement. Contrairement à la pile étroitement couplée Windows Server /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], la création du cluster Pacemaker et la configuration d'un groupe de disponibilité sur Linux peuvent être effectuées avant ou après l’installation de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. L’intégration et la configuration des ressources pour la partie Pacemaker du déploiement d’un groupe de disponibilité ou d’une instance de cluster de basculement sont effectuées une fois que le cluster est configuré.
+Ce didacticiel décrit les tâches nécessaires pour déployer un cluster Linux Pacemaker pour un groupe de disponibilité [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] AlwaysOn ou une instance de cluster de basculement. Contrairement à Windows Server étroitement couplé / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pile, la création du cluster Pacemaker comme configuration de groupe (AG) de disponibilité sur Linux peut être effectuée avant ou après l’installation de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. L’intégration et la configuration des ressources pour la partie Pacemaker du déploiement d’un groupe de disponibilité ou d’une instance de cluster de basculement sont effectuées une fois que le cluster est configuré.
 > [!IMPORTANT]
 > Un groupe de disponibilité avec un cluster de type "Aucun" ne nécessite  *pas*  de cluster Pacemaker, et il ne peut pas être géré par Pacemaker. 
 
@@ -126,7 +126,7 @@ Cette section décrit comment créer et configurer le cluster pour chaque distri
 1. Autoriser les nœuds
    
    ```bash
-   sudo pcs cluster auth <Node1 Node2 … NodeN> -u hacluster
+   sudo pcs cluster auth <Node1 Node2 ... NodeN> -u hacluster
    ```
    
    où *NodeX* est le nom du nœud.

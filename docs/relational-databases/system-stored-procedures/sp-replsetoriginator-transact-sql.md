@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_replsetoriginator
@@ -17,12 +16,12 @@ ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c3acfd7e4127d1b9c2c7a6231e5582f730999238
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ded79b417b868cc82cb1a59e34d72c3a5bf9f045
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826507"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748201"
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ## <a name="remarks"></a>Notes  
  **sp_replsetoriginator** est exécutée par l’Agent de Distribution pour enregistrer la source des transactions appliquées par réplication. Cette information est utilisée pour appeler une détection en boucle des abonnements transactionnels bidirectionnels qui possèdent le jeu de propriétés de la boucle.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres du **sysadmin** rôle serveur fixe sur le serveur de publication, les membres de la **db_owner** rôle de base de données fixe sur la base de données de publication, ou les utilisateurs dans la liste d’accès aux publications (PAL) peuvent exécuter **sp_replsetoriginator**.  
   
 ## <a name="see-also"></a>Voir aussi  

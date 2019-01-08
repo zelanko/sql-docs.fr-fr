@@ -15,19 +15,19 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74caa8d0ef17bf0b9401662969ce34c8d78cc112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14e699be884ff24136b8bae1a744593be86c42ca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125479"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798731"
 ---
 # <a name="unpack-a-dac-package"></a>Décompresser un package DAC
   Utilisez la boîte de dialogue Décompresser une application de la couche Données pour décompresser les scripts et les fichiers d'un package d'application de la couche Données (DAC). Les scripts et les fichiers sont placés dans un dossier où ils peuvent être examinés avant que le package soit utilisé pour déployer la DAC dans un système de production. Le contenu d'une DAC peut également être comparé avec le contenu d'un autre package décompressé dans un autre dossier.  
   
 1.  **Avant de commencer :**  [Sécurité](#Security)  
   
-2.  **Pour décompresser une DAC, à l'aide de la boîte de dialogue**  [Décompresser une application de la couche Données](#UnpackDACDial), [Examen du contenu d'un package DAC](#ExamDACPack)  
+2.  **Pour décompresser une DAC, à l’aide de :**  [Boîte de dialogue Application de couche données décompresser](#UnpackDACDial), [examiner le contenu d’un Package DAC](#ExamDACPack)  
   
 ##  <a name="Security"></a> Sécurité  
  Nous vous recommandons de ne pas déployer un package DAC provenant de sources inconnues ou non approuvées. Ces DAC peuvent contenir du code malveillant susceptible d'exécuter un code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d'utiliser une DAC provenant d'une source inconnue ou non approuvée, déployez-la sur une instance de test isolée du [!INCLUDE[ssDE](../../includes/ssde-md.md)], décompressez la DAC et examinez le code, par exemple les procédures stockées ou autre code défini par l'utilisateur.  

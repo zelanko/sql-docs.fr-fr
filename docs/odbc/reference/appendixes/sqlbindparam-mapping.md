@@ -14,15 +14,15 @@ ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26f9bdc0564b98132bb5ec413c99917e78e4d62e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57e0fe66d76f91c8cea35710e9d0245db7619628
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855177"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544433"
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam, mappage
-**SQLBindParam** ne peut pas réellement être appelée déconseillé car il existait jamais dans ODBC ; Toutefois, il représente toujours les fonctionnalités en double, le Gestionnaire de pilotes doit exporter, car les applications ISO et ouvrez groupe compatible, l’utiliserez. Étant donné que **SQLBindParameter** contient toutes les fonctionnalités de **SQLBindParam**, **SQLBindParam** seront mappées sur des **SQLBindParameter** (lorsque le pilote sous-jacent est un ODBC 3 *.x* pilote). Un ODBC 3 *.x* pilote n’a pas besoin d’implémenter **SQLBindParam**.  
+**SQLBindParam** ne peut pas réellement être appelée déconseillé, car il n’a jamais été il dans ODBC ; Toutefois, il représente toujours les fonctionnalités en double : le Gestionnaire de pilotes doit exporter, car les applications ISO et conforme Open groupe l’utiliserez. Étant donné que **SQLBindParameter** contient toutes les fonctionnalités de **SQLBindParam**, **SQLBindParam** seront mappées sur des **SQLBindParameter** (lorsque le pilote sous-jacent est un ODBC 3 *.x* pilote). Un ODBC 3 *.x* pilote n’a pas besoin d’implémenter **SQLBindParam**.  
   
 ## <a name="remarks"></a>Notes  
  Lorsque l’appel suivant à **SQLBindParam** est effectuée :  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - sql:relationship
@@ -16,12 +14,12 @@ ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55ec5dab60311e06f09e1d1d5b4a9d1258a32565
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71eef27236a42f7e1869cb619b7ba557785ba4e7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121819"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787181"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship et la règle de tri par clé (SQLXML 4.0)
   Dans la mesure où la fonctionnalité de chargement en masse XML génère des enregistrements lorsque les nœuds de ces derniers entrent dans l'étendue, et qu'elle envoie ces enregistrements à Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lorsque les nœuds correspondants sortent de l'étendue, les données de l'enregistrement doivent être présentes dans l'étendue du nœud.  
@@ -117,7 +115,7 @@ ms.locfileid: "48121819"
     set objBL=Nothing  
     ```  
   
-     Il en résulte que la fonctionnalité de chargement en masse XML insère une valeur NULL dans la colonne de clé étrangère CustomerID de la table CustOrder. Si vous modifiez les exemples de données XML afin que le  **\<CustomerID >** élément enfant apparaisse avant la  **\<ordre >** élément enfant, vous obtenez le résultat attendu : chargement en masse XML Insère la valeur de clé étrangère spécifiée dans la colonne.  
+     Il en résulte que la fonctionnalité de chargement en masse XML insère une valeur NULL dans la colonne de clé étrangère CustomerID de la table CustOrder. Si vous modifiez les exemples de données XML afin que le  **\<CustomerID >** élément enfant apparaisse avant la  **\<ordre >** élément enfant, vous obtenez le résultat attendu : Chargement en masse XML insère la valeur de clé étrangère spécifiée dans la colonne.  
   
  Voici le schéma XDR équivalent :  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
@@ -18,12 +17,12 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d233d2ee94a611c63e8466102c66bd01e77b0513
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4376967ea1d21e1022a21b9df836e1be3d66858
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063459"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349664"
 ---
 # <a name="precedence-constraints"></a>Contraintes de précédence
   Les contraintes de précédence lient les exécutables, les conteneurs et les tâches des packages dans un flux de contrôle et spécifient les conditions qui déterminent si les exécutables s'exécutent. Un exécutable peut être une boucle For, une boucle Foreach, un conteneur de séquence, une tâche ou un gestionnaire d'événement. Les gestionnaires d'événements utilisent également les contraintes de précédence pour lier leurs exécutables dans un flux de contrôle.  
@@ -38,7 +37,7 @@ ms.locfileid: "48063459"
   
  ![Contraintes de précédence dans un package](../media/mw-dts-12.gif "Contraintes de précédence dans un package")  
   
- Le package étant situé au sommet de la hiérarchie de conteneurs [!INCLUDE[ssIS](../../../includes/ssis-md.md)], plusieurs packages ne peuvent pas être liés par des contraintes de précédence ; toutefois, vous pouvez ajouter une tâche d’exécution de package à un package et lier indirectement un autre package au flux de contrôle.  
+ Le package étant situé au sommet de la hiérarchie de conteneurs [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , plusieurs packages ne peuvent pas être liés par des contraintes de précédence ; toutefois, vous pouvez ajouter une tâche d’exécution de package à un package et lier indirectement un autre package au flux de contrôle.  
   
  Vous pouvez configurer des contraintes de précédence de plusieurs manières :  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48063459"
 -   Spécifiez si la contrainte de précédence est évaluée seule ou avec d'autres contraintes qui s'appliquent à l'exécutable contraint.  
   
 ## <a name="evaluation-operations"></a>Opérations d'évaluation  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] propose les opérations d'évaluation suivantes :  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre les opérations d’évaluation suivantes :  
   
 -   Une contrainte qui utilise uniquement le résultat d'exécution de l'exécutable de précédence pour déterminer si l'exécutable contraint s'exécute. Le résultat d'exécution de l'exécutable de précédence peut être achèvement, réussite ou échec. Il s'agit de l'opération par défaut.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48063459"
   
 -   Une expression ou une contrainte qui utilisent les résultats d'exécution de l'exécutable de précédence ou les résultats de retour de l'évaluation de l'expression.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Concepteur utilise une couleur pour identifier le type de contrainte de précédence. La contrainte Success (réussite) est verte, la contrainte Failure (échec) est rouge et la contrainte Completion (fin) est bleue. Pour afficher les étiquettes de texte indiquant le type de contrainte dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)], vous devez configurer les fonctionnalités d’accessibilité du Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Le Concepteur utilise une couleur pour identifier le type de contrainte de précédence. La contrainte Success (réussite) est verte, la contrainte Failure (échec) est rouge et la contrainte Completion (fin) est bleue. Pour afficher les étiquettes de texte indiquant le type de contrainte dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)], vous devez configurer les fonctionnalités d’accessibilité du Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
  L’expression doit être une expression [!INCLUDE[ssIS](../../../includes/ssis-md.md)] valide et elle peut inclure des fonctions, des opérateurs, et des variables système et personnalisées. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41; ](../expressions/integration-services-ssis-expressions.md) et [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
@@ -75,14 +74,14 @@ ms.locfileid: "48063459"
 -   L'échec requiert que l'exécutable de précédence échoue pour que l'exécutable contraint s'exécute.  
   
 > [!NOTE]  
->  Seules les contraintes de précédence qui sont membres du même `Precedence Constraint` collection peut être regroupée dans une condition AND logique. Par exemple, vous ne pouvez pas combiner des contraintes de précédence à partir de deux conteneurs de boucles Foreach.  
+>  Seules les contraintes de précédence membres de la même collection `Precedence Constraint` peuvent être groupées dans une condition AND logique. Par exemple, vous ne pouvez pas combiner des contraintes de précédence à partir de deux conteneurs de boucles Foreach.  
   
 ## <a name="configuration-of-the-precedence-constraint"></a>Configuration de la contrainte de précédence  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)], consultez [Éditeur de contrainte de précédence](../precedence-constraint-editor.md).  
+ Pour plus d’informations sur les propriétés que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , consultez [Éditeur de contrainte de précédence](../precedence-constraint-editor.md).  
   
- Pour plus d'informations sur la définition par programme de ces propriétés, consultez <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>.  
+ Pour plus d’informations sur la définition par programmation de ces propriétés, consultez <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>.  
   
 ## <a name="related-tasks"></a>Tâches associées  
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
@@ -96,7 +95,7 @@ ms.locfileid: "48063459"
      Cette rubrique fournit des informations sur la définition du comportement par défaut des contraintes de précédence et sur la connexion d'exécutables à l'aide de contraintes de précédence par défaut.  
   
 ## <a name="related-content"></a>Contenu associé  
- Article technique, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  
+ Article technique, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter des Expressions aux contraintes de précédence](../add-expressions-to-precedence-constraints.md)   

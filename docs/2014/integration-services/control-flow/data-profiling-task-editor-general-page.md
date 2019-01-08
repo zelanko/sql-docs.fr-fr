@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e6bf10248bb3d8f280a24191634392df3b4ff5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bef22daeb42b0c08e7668dec533e663057f1a8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084825"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805031"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Éditeur de tâche de profilage de données (page Général)
   Utilisez la page **Général** de l' **Éditeur de tâche de profilage de données** pour configurer les options suivantes :  
@@ -51,10 +50,10 @@ ms.locfileid: "48084825"
  **DestinationType**  
  Spécifiez si la sortie du profil des données doit être enregistrée dans un fichier ou une variable :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**FileConnection**|Enregistrez la sortie du profil dans un fichier à l'emplacement spécifié dans un gestionnaire de connexions de fichiers.<br /><br /> Remarque : vous devez spécifier le gestionnaire de connexions de fichiers à utiliser dans l’option **Destination** .|  
-|**Variable**|Enregistrez la sortie du profil dans une variable de package.<br /><br /> Remarque : vous devez spécifier la variable de package à utiliser dans l’option **Destination** .|  
+|**FileConnection**|Enregistrez la sortie du profil dans un fichier à l'emplacement spécifié dans un gestionnaire de connexions de fichiers.<br /><br /> Remarque : Vous spécifiez le Gestionnaire de connexions de fichiers à utiliser dans le **Destination** option.|  
+|**Variable**|Enregistrez la sortie du profil dans une variable de package.<br /><br /> Remarque : Vous spécifiez la variable de package à utiliser dans le **Destination** option.|  
   
  **Destination**  
  Spécifiez le gestionnaire de connexions de fichiers ou la variable de package qui contient la sortie du profil des données :  
@@ -80,7 +79,7 @@ ms.locfileid: "48084825"
 >  Pour ouvrir la Visionneuse du profil des données, vous pouvez aussi exécuter DataProfileViewer.exe dans le dossier, *\<lecteur>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Formulaire de profil rapide de Table simple &#40;tâche de profilage des données&#41;](single-table-quick-profile-form-data-profiling-task.md)   
+ [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](single-table-quick-profile-form-data-profiling-task.md)   
  [Éditeur de tâche de profilage de données &#40;page Demandes de profil&#41;](data-profiling-task-editor-profile-requests-page.md)  
   
   

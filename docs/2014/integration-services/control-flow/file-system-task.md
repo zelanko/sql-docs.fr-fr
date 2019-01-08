@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.filesystemtask.f1
@@ -15,12 +14,12 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45b0323ffea075bc914de54b58e922eb6bcbb4b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd924464331b144040f33797d0333b1ddb5a4032
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226029"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790941"
 ---
 # <a name="file-system-task"></a>Tâches du système de fichiers
   La tâche de système de fichiers effectue des opérations sur les fichiers et les répertoires du système de fichiers. Par exemple, à l'aide de la tâche de système de fichiers, un package peut créer, déplacer ou supprimer des répertoires et des fichiers. Vous pouvez également utiliser la tâche de système de fichiers pour définir les attributs des fichiers et des répertoires. Par exemple, la tâche de système de fichiers peut rendre les fichiers cachés ou accessibles en lecture seule.  
@@ -63,13 +62,13 @@ ms.locfileid: "48226029"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez les rubriques suivantes :  
   
--   [Éditeur de tâche de système de fichiers &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de système de fichiers &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
  Pour plus d’informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
  Pour plus d'informations sur la définition par programmation de ces propriétés, consultez la rubrique suivante :  
   

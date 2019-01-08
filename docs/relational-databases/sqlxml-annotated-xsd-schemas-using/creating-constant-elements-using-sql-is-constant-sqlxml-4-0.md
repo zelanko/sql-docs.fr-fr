@@ -20,16 +20,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ca3206315b4b8c0738d9a1ce0534000b30bdd52
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f749e5c37742ac4e52a9cf0fc9dcb417d07aede0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666370"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545430"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Création d'éléments constants à l'aide de sql:is-constant (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Pour spécifier un élément constant, autrement dit, un élément dans le schéma XSD qui n’est pas mappé à aucune table de base de données ou d’une colonne, vous pouvez utiliser la **sql : constante est** annotation. Cette annotation accepte une valeur booléenne (0 = false, 1 = true). Les valeurs acceptables sont 0, 1, true et false. Le **sql : constante est** annotation peut être spécifiée sur un élément qui n’a pas d’attributs. Si elle est spécifiée sur un élément qui a la valeur true (ou 1), cet élément n'est pas mappé à la base de données mais apparaît néanmoins dans le document XML.  
+  Pour spécifier un élément constant-autrement dit, un élément dans le schéma XSD qui n’est pas mappé à aucune table de base de données ou de la colonne-vous pouvez utiliser la **sql : constante est** annotation. Cette annotation accepte une valeur booléenne (0 = false, 1 = true). Les valeurs acceptables sont 0, 1, true et false. Le **sql : constante est** annotation peut être spécifiée sur un élément qui n’a pas d’attributs. Si elle est spécifiée sur un élément qui a la valeur true (ou 1), cet élément n'est pas mappé à la base de données mais apparaît néanmoins dans le document XML.  
   
  Le **sql : constante est** annotation peut être utilisée pour :  
   

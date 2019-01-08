@@ -1,24 +1,23 @@
 ---
-title: "Étape 3 : Ajout de redirection de flux d'erreurs | Microsoft Docs"
+title: 'Étape 3 : Ajout de Redirection de flux d’erreurs | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 217aa8a702d636b920be157974a5d90e695ad191
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ff729a43f1dbc414ba6a67a0c80e9f17e4d0cc4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051309"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747921"
 ---
-# <a name="step-3-adding-error-flow-redirection"></a>Étape 3 : Ajout de redirection de flux d'erreurs
+# <a name="step-3-adding-error-flow-redirection"></a>Étape 3 : Ajout de redirection de flux d'erreurs
   Comme nous l'avons démontré au cours de la tâche précédente, la transformation Lookup Currency Key ne peut pas générer de correspondance lorsqu'elle tente de traiter le fichier plat exemple endommagé qui a généré une erreur. Du fait que la transformation utilise les paramètres par défaut pour l'affichage en sortie des erreurs, toute erreur qui survient entraîne un échec de la transformation. Si la transformation échoue, le reste du package échoue également.  
   
  Pour éviter tout échec de la transformation, vous pouvez configurer le composant afin qu'il réachemine la ligne qui a échoué vers un autre chemin de traitement à l'aide de la sortie d'erreur. L'utilisation d'un chemin de traitement des erreurs distinct vous permet d'accomplir un certain nombre de choses. Par exemple, vous pouvez essayer de nettoyer les données puis de retraiter la ligne qui a échoué. Ou vous pouvez enregistrer la ligne qui a échoué avec d'autres informations d'erreur, pour la vérifier et la retraiter ultérieurement.  
@@ -70,7 +69,7 @@ ms.locfileid: "48051309"
   
      La sous-routine terminée doit se présenter comme le code ci-dessous.  
   
-     [Visual Basic]  
+     [Visual Basic]  
   
     ```  
     Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)  
@@ -97,6 +96,6 @@ ms.locfileid: "48051309"
 13. Cliquez sur **OK** pour fermer la boîte de dialogue **Éditeur de transformation de script** .  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Étape 4 : ajout d’une Destination de fichier plat] (lesson-4-4-adding-a-flat-file-destination.md  
+ [Étape 4 : Ajout d’une Destination de fichier plat] (lesson-4-4-adding-a-flat-file-destination.md  
   
   

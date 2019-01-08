@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5025524fb0f414a3a419b53d51868009eafc9820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab881af80386badae624b1d5910ba99ba67a4a43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147011"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767821"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>Implémenter une transformation de recherche en mode Cache complet à l'aide du gestionnaire de connexions OLE DB
   Vous pouvez configurer la transformation de recherche afin qu'elle utilise le mode Cache complet et un gestionnaire de connexions OLE DB. Dans le mode Cache complet, le dataset de référence est chargé dans le cache avant l’exécution de la transformation de recherche.  
@@ -52,11 +51,11 @@ ms.locfileid: "48147011"
   
     -   Cliquez sur **Utiliser une table ou une vue**, puis sélectionnez une table ou une vue, ou cliquez sur **Nouveau** pour créer une table ou une vue.  
   
-         —ou—  
+         -ou-  
   
     -   Cliquez sur **Utiliser les résultats d’une requête SQL**, puis générez une requête dans la fenêtre **Commande SQL** , ou cliquez sur **Générer la requête** pour générer une requête à l’aide des outils graphiques du **Générateur de requêtes** .  
   
-         —ou—  
+         -ou-  
   
     -   Vous pouvez aussi cliquer sur **Parcourir** pour importer une instruction SQL à partir d’un fichier.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48147011"
 13. Cliquez sur **OK** pour enregistrer les modifications apportées à la transformation de recherche, puis exécutez le package.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Implémenter une transformation de recherche en mode Cache complet à l’aide du gestionnaire de connexions du cache](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Implémenter une transformation de recherche en mode Cache complet à l'aide du gestionnaire de connexions du cache](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implémenter une recherche en mode Aucun cache ou Cache partiel](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformations Integration Services](../data-flow/transformations/integration-services-transformations.md)  
   

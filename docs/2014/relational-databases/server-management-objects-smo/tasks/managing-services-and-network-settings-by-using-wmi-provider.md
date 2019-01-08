@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - WMI provider [SMO]
@@ -17,17 +15,17 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc42cd7c5f7670ed3ece73ee424de03891ed5781
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d16548f201f047ba83516469050e41380b7bc6f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211659"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762201"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Gestion des services et des paramètres réseau à l'aide du fournisseur WMI
-  Le fournisseur WMI est une interface publiée utilisée par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) pour gérer le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services et protocoles réseau. Dans SMO, le <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> objet représente le fournisseur WMI.  
+  Le fournisseur WMI est une interface publiée utilisée par MMC ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console) pour gérer les services et protocoles de réseau de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Dans SMO, l'objet <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> représente le fournisseur WMI.  
   
- Le <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> objet fonctionne indépendamment de la connexion établie avec le <xref:Microsoft.SqlServer.Management.Smo.Server> objet à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]et utilise les informations d’identification Windows pour se connecter au service WMI.  
+ L'objet <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> agit indépendamment de la connexion établie avec l'objet <xref:Microsoft.SqlServer.Management.Smo.Server> vers une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et utilise les informations d'identification Windows pour se connecter au service WMI.  
   
 ## <a name="example"></a>Exemple  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

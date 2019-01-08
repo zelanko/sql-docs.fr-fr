@@ -16,12 +16,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0dda9622ec6b5faa753310861557961ca54b4971
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06b97ac4bf58b933f55c4b53bfeacfbc9a736f28
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063159"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516220"
 ---
 # <a name="create-clustered-indexes"></a>Créer des index cluster
   Vous pouvez créer des index cluster sur les tables dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. À quelques exceptions près, chaque table doit posséder un index cluster. Outre le fait qu'il améliore les performances des requêtes, un index cluster peut être reconstruit ou réorganisé à la demande pour contrôler la fragmentation de la table. Un index cluster peut également être créé sur une vue. (Les index cluster sont définis dans la rubrique [Description des index cluster et non-cluster](clustered-and-nonclustered-indexes-described.md).)  
@@ -80,11 +80,11 @@ ms.locfileid: "48063159"
   
 1.  Dans l'Explorateur d'objets, développez la table sur laquelle vous souhaitez créer un index cluster.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Index** , pointez sur **Nouvel index**, puis sélectionnez **Index cluster...**.  
+2.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index cluster...**.  
   
 3.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
-4.  Sous **Colonnes clés d'index**, cliquez sur **Ajouter…**.  
+4.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…**.  
   
 5.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table*, cochez la case de la colonne de la table à ajouter à l’index cluster.  
   

@@ -16,15 +16,15 @@ ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e47248ac5719b2303c71f2e7b93161112ca7f870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758037"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507628"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Choix d’une source de données ou d’un pilote
-La source de données ou le pilote utilisé par une application est parfois codées en dur dans l’application. Par exemple, une application personnalisée écrite par un service MIS à transférer des données à partir d’une source de données à l’autre contient les noms de ces sources de données, l’application ne fonctionnerait pas avec toutes les autres sources de données. Un autre exemple est une application verticale, tel que celui utilisé pour la saisie de commandes. Une telle application always utilise la même source de données, ce qui a un schéma prédéfini connu par l’application.  
+La source de données ou le pilote utilisé par une application est parfois codées en dur dans l’application. Par exemple, une application personnalisée écrite par un service MIS à transférer des données à partir d’une source de données à l’autre contient les noms de ces données sources, l’application ne fonctionnerait pas avec toutes les autres sources de données. Un autre exemple est une application verticale, tel que celui utilisé pour la saisie de commandes. Une telle application always utilise la même source de données, ce qui a un schéma prédéfini connu par l’application.  
   
  Autres applications sélectionner la source de données ou le pilote en cours d’exécution. En règle générale, il s’agit d’applications génériques qui effectuent des requêtes ad hoc, par exemple une feuille de calcul qui utilise ODBC pour importer des données. De telles applications généralement répertorient les sources de données disponibles ou les pilotes et permettent aux utilisateurs de choisir celles avec qu'ils veulent pouvoir travailler. Si une application générique répertorie les sources de données, les pilotes ou les deux fréquemment dépend de si l’application utilise des pilotes basés sur SGBD ou basé sur fichier.  
   

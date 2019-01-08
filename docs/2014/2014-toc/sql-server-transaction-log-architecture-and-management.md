@@ -10,12 +10,12 @@ ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 799b6a05850abb88c97c8e2a27214055eb20d976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0880f2c8591c1b0bd75bf2d11fe99321bb294e4a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164869"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351935"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management"></a>Architecture et gestion du journal des transactions SQL Server
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ ms.locfileid: "48164869"
 ## <a name="additional-reading"></a>Lecture supplémentaire  
  Pour plus d'informations sur le journal des transactions, nous vous recommandons de lire les articles et les ouvrages suivants.  
   
- [Fonctionnement de la journalisation et de la récupération dans SQL Server de Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
+ [Fonctionnement de la journalisation et de la récupération dans SQL Server de Paul Randall](https://technet.microsoft.com/magazine/2009.02.logging.aspx)  
   
  [Gestion du journal des transactions SQL Server de Tony Davis et Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   

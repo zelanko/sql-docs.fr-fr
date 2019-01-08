@@ -1,5 +1,5 @@
 ---
-title: Gestion des assemblys de modèle multidimensionnel | Documents Microsoft
+title: Gestion des assemblys de modèle multidimensionnel | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df015e99df80915c68fa8f45e9f31ec475e22bc2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5b7b04f074dcd11eec022a689f865454681d2ae8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025666"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215788"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gestion des assemblys de modèles multidimensionnels
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre de nombreuses fonctions intrinsèques à utiliser avec les langages MDX (Multidimensional Expressions) et les Extensions DMX (Data Mining), conçu pour effectuer toutes les opérations des calculs statistiques standard au parcours des membres dans une hiérarchie. Cependant, comme dans tout autre produit complexe et robuste, il est toujours nécessaire d'étendre la fonctionnalité de ce type d'outil.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre de nombreuses fonctions intrinsèques à utiliser avec les langages MDX (Multidimensional Expressions) et DMX (Data Mining Extensions). Ces fonctions sont conçues pour effectuer toutes les opérations possibles, des calculs statistiques standard au parcours des membres d’une hiérarchie. Cependant, comme dans tout autre produit complexe et robuste, il est toujours nécessaire d'étendre la fonctionnalité de ce type d'outil.  
   
  Par conséquent, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous permet d'ajouter des assemblys à une base de données ou à une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les assemblys vous permettent de créer des fonctions externes définies par l'utilisateur à l'aide de tout langage CLR (Common Language Runtime), tel que Microsoft Visual Basic .NET ou Microsoft Visual C#. Vous pouvez aussi utiliser des langages d'automatisation COM (Component Object Model) tels que Microsoft Visual Basic ou Microsoft Visual C++.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "34025666"
   
  Un assembly avec les nouvelles procédures et les fonctions peut être ajouté au serveur. Vous pouvez utiliser des assemblys pour améliorer ou ajouter des fonctionnalités personnalisées qui ne sont pas fournies par le serveur. En utilisant des assemblys, vous pouvez ajouter de nouvelles fonctions aux expressions MDX (Multidimensional Expressions), aux Extensions DMX (Data Mining Extensions) ou aux procédures stockées. Les assemblys sont chargés à partir de l'emplacement où l'application personnalisée est exécutée, et une copie du fichier binaire d'assembly est enregistrée avec les données de base de données dans le serveur. Lorsqu'un assembly est supprimé, l'assembly copié est également supprimé du serveur.  
   
- Les assemblys peuvent être de deux types différents : COM et CLR. Les assemblys CLR sont de assemblys développés dans les langages de programmation du .NET Framework tels que C#, Visual Basic .NET, C++ managé. Les assemblys COM sont des bibliothèques COM qui doivent être enregistrées dans le serveur.  
+ Assemblys peuvent être de deux types différents : COM et CLR. Les assemblys CLR sont de assemblys développés dans les langages de programmation du .NET Framework tels que C#, Visual Basic .NET, C++ managé. Les assemblys COM sont des bibliothèques COM qui doivent être enregistrées dans le serveur.  
   
  Les assemblys peuvent être ajoutés aux objets <xref:Microsoft.AnalysisServices.Server> ou <xref:Microsoft.AnalysisServices.Database> . Les assemblys de serveur peuvent être appelés par tout utilisateur connecté au serveur ou tout objet dans le serveur. Les assemblys de base de données peuvent être appelés uniquement par les objets <xref:Microsoft.AnalysisServices.Database> ou les utilisateurs connectés à la base de données.  
   
@@ -71,13 +71,13 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 ## <a name="security"></a>Sécurité  
  La sécurité des assemblys est basée sur le modèle de sécurité de .NET Framework, qui est un modèle de sécurité d'accès du code. .NET Framework prend en charge un mécanisme de sécurité d'accès du code qui suppose que le module d'exécution peut héberger à la fois du code d'un niveau de confiance total et d'un niveau de confiance partiel. Les ressources qui sont protégées par la sécurité d'accès du code de .NET Framework sont généralement intégrées à du code managé qui demande l'autorisation correspondante avant d'autoriser l'accès à la ressource. La demande d'autorisation est satisfaite seulement si tous les appelants (au niveau de l'assembly) de la pile d'appels ont l'autorisation pour la ressource correspondante.  
   
- Pour les assemblys, l’autorisation d’exécution est passée avec la propriété **PermissionSet** sur l’objet **Assembly** . Les autorisations reçues par le code managé sont déterminées par la stratégie de sécurité effective. Il existe déjà trois niveaux de stratégie effectifs dans un environnement hébergé non-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : entreprise, ordinateur et utilisateur. La liste effective des autorisations reçues par le code est déterminée par l'intersection des autorisations obtenues par ces trois niveaux.  
+ Pour les assemblys, l’autorisation d’exécution est passée avec la propriété **PermissionSet** sur l’objet **Assembly** . Les autorisations reçues par le code managé sont déterminées par la stratégie de sécurité effective. Il existe déjà trois niveaux de stratégie effectifs dans un non - [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] environnement hébergé : entreprise, ordinateur et utilisateur. La liste effective des autorisations reçues par le code est déterminée par l'intersection des autorisations obtenues par ces trois niveaux.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit un niveau de stratégie de sécurité au niveau de l'hôte au CLR (Common Language Runtime) quand il l'héberge ; cette stratégie est un niveau de stratégie supplémentaire sous les trois niveaux de stratégie qui sont toujours effectifs. Cette stratégie est définie pour chaque domaine d'application qui est créé par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une stratégie de sécurité au niveau de l’hôte au CLR (Common Language Runtime) quand il l’héberge. Cette stratégie est un niveau de stratégie supplémentaire sous les trois niveaux de stratégie qui sont toujours effectifs. Cette stratégie est définie pour chaque domaine d'application qui est créé par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  La stratégie de niveau hôte de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est une combinaison de la stratégie fixe de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les assemblys système et de la stratégie spécifiée par l’utilisateur pour les assemblys utilisateur. La partie spécifiée par l'utilisateur de la stratégie d'hôte d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est basée sur le propriétaire de l'assembly spécifiant un des trois compartiments d'autorisation pour chaque assembly :  
   
-|Paramètre d'autorisation| Description|  
+|Paramètre d'autorisation|Description|  
 |------------------------|-----------------|  
 |**Sécurisé**|Fournit une autorisation de traitement interne. Ce compartiment d'autorisations ne donne pas d'autorisations pour accéder aux ressources protégées dans le .NET Framework. Il s’agit du compartiment d’autorisations utilisé par défaut pour un assembly si aucun n’est spécifié avec la propriété **PermissionSet** .|  
 |**ExternalAccess**|Fournit le même accès que le paramètre **Safe** , avec la possibilité supplémentaire de pouvoir accéder à des ressources système externes. Ce compartiment d'autorisations n'offre pas de garanties de sécurité (même s'il est possible de sécuriser ce scénario), mais il donne des garanties de fiabilité.|  

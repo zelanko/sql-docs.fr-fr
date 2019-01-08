@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server], CPU usage
@@ -22,12 +22,12 @@ ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cbbef4106ca9a913820cf30387a504747a5f8960
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e46610823432efde0cc757e3dff317227b7548ac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073139"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747701"
 ---
 # <a name="monitor-cpu-usage"></a>Surveiller l'utilisation de l'UC
   Surveillez régulièrement une instance Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin de déterminer si les taux d'utilisation de l'unité centrale restent dans des limites normales. Un taux d'utilisation de l'unité centrale régulièrement élevé peut mettre en évidence le besoin d'une mise à niveau de celle-ci ou d'un ajout de plusieurs processeurs. Sinon, si une application sollicite constamment l'unité centrale, cela implique un paramétrage incorrect ou une conception médiocre de cette dernière. En optimisant l'application vous réduirez l'utilisation de l'unité centrale.  
@@ -47,7 +47,7 @@ ms.locfileid: "48073139"
   
      Indique en pourcentage le temps consacré par le processeur aux processus utilisateur tels que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Système : Longueur de la file d'attente du processeur**  
+-   **Système : Longueur de file d’attente du processeur**  
   
      Indique le nombre de threads en attente de temps processeur. Un encombrement du processeur survient quand les threads d'un processus demandent plus de cycles processeur qu'il n'y en a de disponibles. Si de nombreux processus essaient d'utiliser le temps du processeur, vous devez peut-être installer un processeur plus rapide. Si vous avez un système multiprocesseur, vous pouvez ajouter un processeur.  
   

@@ -1,18 +1,20 @@
 ---
-title: Comment gérer des ordinateurs portables dans Azure Data Studio | Microsoft Docs
-description: ''
+title: Gérer les ordinateurs portables dans Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: Découvrez comment gérer des ordinateurs portables dans Azure Data Studio. Cela inclut l’ouverture des blocs-notes, leur enregistrement et la modification de votre connexion au cluster big data.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ca756c81dcf54f42cb46be4b0f412ce9630814af
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.custom: seodec18
+ms.openlocfilehash: 998692f56f75e890ef0b4f8e40e256f2ebbd54de
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48796251"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246588"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Comment gérer des ordinateurs portables dans Azure Data Studio
 
@@ -22,8 +24,11 @@ Cet article vous montre comment ouvrir et enregistrer des fichiers de bloc-notes
 
 Cet article suppose que vous disposez déjà d’un bloc-notes que vous souhaitez utiliser dans Azure Data Studio. Si vous souhaitez créer un bloc-notes, consultez [comment utiliser des blocs-notes en version préliminaire de SQL Server 2019](notebooks-guidance.md). Pour utiliser des blocs-notes dans Azure Data Studio, vous devez respecter les conditions préalables suivantes :
 
-- [Installer les derniers outils de données volumineuses pour la version préliminaire de SQL Server 2019](deploy-big-data-tools.md).
 - [Déployer un cluster de données volumineuses](quickstart-big-data-cluster-deploy.md).
+- [Outils de données volumineuses de SQL Server 2019](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **Extension de SQL Server 2019**
+   - **kubectl**
 
 ## <a name="open-a-notebook"></a>Ouvrez un bloc-notes
 
@@ -43,7 +48,7 @@ Cliquez sur **ouvrir le bloc-notes** dans le tableau de bord pour ouvrir la boî
 
 ### <a name="command-palette"></a>Palette de commandes
 
-Utilisez la commande **fichier : ouvrez** à partir de la palette de commandes en tapant Ctrl + Maj + P (dans Windows) et Cmd + Maj + P (sur Mac).
+Utilisez la commande **fichier : Ouvrez** à partir de la palette de commandes en tapant Ctrl + Maj + P (dans Windows) et Cmd + Maj + P (sur Mac).
 
 ![Ouvrez la boîte de dialogue Ouvrir un fichier en entrant File:Open dans la palette de commandes](./media/notebooks-how-to-manage/open-file-3.png)
 
@@ -57,7 +62,7 @@ Il existe actuellement une méthode pour enregistrer un bloc-notes. Vous devez s
 > Actuellement les méthodes suivantes n’enregistrement pas les modifications sur les ordinateurs portables :
 >
 > - **Enregistrement de fichiers**, **fichier Enregistrer sous...**  et **fichier Enregistrer tout** commandes dans le menu fichier.
-> - **Fichier : L’enregistrement** commandes entrées dans la palette de commandes.
+> - **Fichier : Enregistrer** commandes entrées dans la palette de commandes.
 
 ## <a name="change-the-big-data-cluster"></a>Modifiez le cluster de données volumineuses
 

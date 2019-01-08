@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -34,24 +33,24 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d3198f2d361726a3e17c152b259471062f6a297
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9610dc1cc729dc555d42c0dfe5eeb117f9cfba18
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142189"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798281"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>Éditions et composants de SQL Server 2014
   La configuration requise pour l'installation varie selon vos besoins applicatifs. Les différentes éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s'adaptent aux exigences de chaque organisation et de chaque individu en termes de performances, d'exécution et de prix. Les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que vous installez dépendent également de vos exigences spécifiques. Les sections suivantes vous aident à choisir parmi les éditions et les composants disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>Principales éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- Le tableau ci-dessous décrit les principales éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+ Le tableau ci-dessous décrit les principales éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 |Édition de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Définition|  
 |---------------------------------------|----------------|  
-|Enterprise (64 bits et 32 bits)|Offre Premium, l'édition [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise fournit des fonctions Datacenter avancées et complètes avec des performances ultra-rapides, une virtualisation illimitée et des fonctions Business Intelligence de bout en bout qui autorisent un haut niveau de service pour les charges de travail critiques et l'accès de l'utilisateur aux analyses de données.|  
+|Enterprise (64 bits et 32 bits)|Offre Premium, l’édition [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise fournit des fonctions Datacenter avancées et complètes avec des performances ultrarapides, une virtualisation illimitée et des fonctions Business Intelligence de bout en bout qui autorisent un haut niveau de service pour les charges de travail critiques et l’accès de l’utilisateur aux insights de données.|  
 |Business Intelligence (64 bits et 32 bits)|L'édition [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence fournit une plateforme complète autorisant les organisations à créer et déployer des solutions de BI sécurisées, évolutives et maniables. Il offre des fonctionnalités passionnantes telles que l’exploration de données et la visualisation ; basées sur un navigateur puissantes combinaison des fonctionnalités de données et de gestion de l’intégration améliorée.|  
-|Standard (64 bits et 32 bits)|L'édition[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard permet la gestion des données de base et inclut une base de données Business Intelligence destinée aux services des grandes entreprises comme aux PME, leur permettant d'exécuter les applications et prenant en charge des outils de développement communs sur site et dans le cloud, pour une gestion efficace des bases de données avec des ressources informatiques minimales.|  
+|Standard (64 bits et 32 bits)|L’édition[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard permet la gestion des données de base et inclut une base de données Business Intelligence destinée aux services des grandes entreprises comme aux PME, leur permettant d’exécuter les applications et prenant en charge des outils de développement communs locaux et dans le cloud, pour une gestion efficace des bases de données avec des ressources informatiques minimales.|  
   
 ## <a name="specialized-editions-of-includesscurrentincludessscurrent-mdmd"></a>Éditions spécialisées de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  Les éditions spécialisées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ciblent les différentes charges de travail de l'entreprise. Le tableau ci-dessous décrit les éditions spécialisées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -60,7 +59,7 @@ ms.locfileid: "48142189"
 |---------------------------------------|-----------------|  
 |Web (64 bits et 32 bits)|L'édition Web[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] est une option offrant un coût total de possession faible destinée aux hébergeurs Web et aux VAP Web, fournissant des fonctions évolutives, rentables et gérables aux propriétés Web à petite ou grande échelle.|  
   
-## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>Éditions transversales de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>Éditions [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] transversales  
  Les éditions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] transverales sont conçues pour des scénarios clients spécifiques et sont offertes gratuitement ou à un coût nominal. Le tableau ci-dessous décrit les éditions transversales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 |Édition de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Description|  

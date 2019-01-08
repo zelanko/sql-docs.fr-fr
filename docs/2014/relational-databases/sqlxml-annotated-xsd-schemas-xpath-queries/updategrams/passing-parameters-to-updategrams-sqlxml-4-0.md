@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - nullvalue attribute
@@ -18,12 +16,12 @@ ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9097ed23a228a48500d9f40ca8f8e3b3f12b1ba0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d0d9c0ad613a4453fad62e387a0eb7b0fd67aaa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113739"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777001"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Passage de paramètres aux codes de mise à jour (updategrams) (SQLXML 4.0)
   Les codes de mise à jour sont des modèles ; par conséquent, vous pouvez leur passer des paramètres. Pour plus d’informations sur le passage de paramètres aux modèles, consultez [considérations de sécurité de mise à jour &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
@@ -41,7 +39,7 @@ ms.locfileid: "48113739"
 -   Les exemples utilisent le mappage par défaut (en d'autres termes, aucun schéma de mappage n'est spécifié dans le code de mise à jour (updategram)). Pour plus d’exemples de codes qui utilisent des schémas de mappage, consultez [spécification d’un schéma de mappage annoté dans une mise à jour &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ### <a name="a-passing-parameters-to-an-updategram"></a>A. Passage de paramètres à un code de mise à jour  
- Dans cet exemple, le code de mise à jour modifie le nom d'un employé dans la table HumanResources.Shift. Deux paramètres sont passés au code de mise à jour : ShiftID, utilisé pour identifier un horaire de travail de manière unique, et Nom.  
+ Dans cet exemple, le code de mise à jour modifie le nom d'un employé dans la table HumanResources.Shift. Mise à jour est passé de deux paramètres : ShiftID, qui est utilisé pour identifier un travail d’équipe et de manière unique nom.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -73,7 +71,7 @@ ms.locfileid: "48113739"
     cmd.Parameters.Append cmd.CreateParameter("@Name",   200, 1, 50, "New Name")  
     ```  
   
-### <a name="b-passing-null-as-a-parameter-value-to-an-updategram"></a>B. Passage de NULL comme valeur de paramètre à un code de mise à jour  
+### <a name="b-passing-null-as-a-parameter-value-to-an-updategram"></a>b. Passage de NULL comme valeur de paramètre à un code de mise à jour  
  Lors de l'exécution d'un code de mise à jour, la valeur « isnull » est assignée au paramètre auquel vous souhaitez affecter la valeur NULL. Le code de mise à jour convertit la valeur de paramètre « isnull » en NULL et la traite en conséquence.  
   
  Le code de mise à jour suivant affecte la valeur NULL à un titre d'employé :  

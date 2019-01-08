@@ -18,15 +18,15 @@ ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09c13d17415f44ba52c57c2323e7fd671ddff0b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119399"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398013"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Graphique de courbes d'élévation (Analysis Services - Exploration de données)
-  Un **graphique de courbes d’élévation** graphiquement représente l’amélioration apportée par un modèle d’exploration de données par rapport à une estimation aléatoire, et mesure la modification en termes d’un *de courbes d’élévation* score. En comparant les scores de courbes d'élévation pour différentes parties de votre jeu de données et pour différents modèles, vous pouvez identifier le modèle le plus performant, ainsi que le pourcentage de cas dans lesquels le jeu de données bénéficierait de l'application des prédictions du modèle.  
+  Un **graphique de courbes d’élévation** graphiquement représente l’amélioration apportée par un modèle d’exploration de données par rapport à une estimation aléatoire, et mesure la modification en termes d’un *de courbes d’élévation* score. En comparant les scores de courbes d’élévation pour différentes parties de votre jeu de données et pour différents modèles, vous pouvez déterminer quel modèle plus performant, ainsi que le pourcentage de cas dans le jeu de données tireront parti d’appliquer les prédictions du modèle.  
   
  Avec un graphique de courbes d'élévation, vous pouvez comparer la précision des prédictions pour plusieurs modèles qui ont le même attribut prédictible. Vous pouvez également évaluer la précision de la prédiction de résultats uniques (une seule valeur de l'attribut prédictible) ou de tous les résultats (toutes les valeurs de l'attribut spécifié).  
   
@@ -71,8 +71,8 @@ ms.locfileid: "48119399"
 |Publipostage ciblé global|0.71|47.40%|61.38%|  
 |Publipostage ciblé inférieur à 30|0.85|51.81%|46.62%|  
 |Modèle d'estimation aléatoire||31.00%||  
-|Modèle idéal pour : Publipostage ciblé global||62.48%||  
-|Modèle idéal pour : Publipostage ciblé inférieur à 30||65.28%||  
+|Modèle idéal pour : Publipostage ciblé global||62.48%||  
+|Modèle idéal pour : Publipostage ciblé inférieur à 30||65.28%||  
   
  [Retour au début](#bkmk_Top)  
   
@@ -118,6 +118,6 @@ ms.locfileid: "48119399"
  [Retour au début](#bkmk_Top)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
   

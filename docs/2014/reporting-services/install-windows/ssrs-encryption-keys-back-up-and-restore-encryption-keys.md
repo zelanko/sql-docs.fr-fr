@@ -16,12 +16,12 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 85bf679fe5ab9f9224a4d8b09aa8fa64643ce80b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19bdabaab24d9276386095cb8ef97b0130a13c58
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054316"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530377"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Sauvegarder et restaurer les clés de chiffrement Reporting Services
   Une part importante de la configuration d'un serveur de rapports est réservée à la création d'une copie de sauvegarde de la clé symétrique utilisée pour le chiffrement d'informations confidentielles. Cet exemplaire de clé sauvegardée est nécessaire dans de nombreuses opérations courantes. Elle vous permet de réutiliser une base de données de serveur de rapports existante dans une nouvelle installation.  
@@ -47,12 +47,12 @@ ms.locfileid: "48054316"
 ## <a name="backing-up-the-encryption-keys"></a>Sauvegarde des clés de chiffrement  
  La sauvegarde de la clé symétrique est un processus qui consiste à écrire la clé dans le fichier que vous spécifiez, puis à brouiller ces données à l'aide du mot de passe que vous fournissez. En aucun cas la clé symétrique ne peut être conservée sans être chiffrée, vous devez donc fournir un mot de passe afin de chiffrer la clé au moment de son enregistrement sur un disque. Une fois le fichier créé, vous devez le stocker dans un endroit sécurisé et **vous souvenir du mot de passe** qui permet de déverrouiller le fichier. Pour sauvegarder la clé symétrique, utilisez les outils suivants :  
   
- **Mode natif :** le Gestionnaire de configuration de Reporting Services ou l'utilitaire **rskeymgmt** .  
+ **Mode natif :** Le Reporting Services Gestionnaire de Configuration ou le **rskeymgmt** utilitaire.  
   
  **Mode SharePoint :** pages de l'Administration centrale de SharePoint ou PowerShell.  
   
 ####  <a name="bkmk_backup_sharepoint"></a> Sauvegarde de serveurs de rapports en mode SharePoint  
- Pour les serveurs de rapports en mode SharePoint, vous pouvez utiliser des commandes PowerShell ou utiliser les pages de gestion pour l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez la section « Gestion des clés » de la rubrique [Gérer une application de service SharePoint Reporting Services](../manage-a-reporting-services-sharepoint-service-application.md).  
+ Pour les serveurs de rapports en mode SharePoint, vous pouvez utiliser des commandes PowerShell ou utiliser les pages de gestion pour l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez la section « Gestion des clés » de l’article [Gérer une application de service Reporting Services SharePoint](../manage-a-reporting-services-sharepoint-service-application.md).  
   
 ####  <a name="bkmk_backup_configuration_manager"></a> Sauvegarder les clés de chiffrement - Gestionnaire de configuration Reporting Services (mode natif)  
   
@@ -101,13 +101,13 @@ ms.locfileid: "48054316"
   
 ####  <a name="bkmk_restore_rskeymgmt"></a> Restaurer les clés de chiffrement - rskeymgmt (mode natif)  
   
-1.  Exécutez le fichier **rskeymgmt.exe** localement sur l'ordinateur qui héberge le serveur de rapports. Utilisez le `-a` argument pour restaurer les clés. Vous devez fournir un nom de fichier complet et spécifier un mot de passe. L'exemple suivant illustre les arguments que vous devez spécifier :  
+1.  Exécutez le fichier **rskeymgmt.exe** localement sur l'ordinateur qui héberge le serveur de rapports. Utilisez l'argument `-a` pour restaurer les clés. Vous devez fournir un nom de fichier complet et spécifier un mot de passe. L'exemple suivant illustre les arguments que vous devez spécifier :  
   
     ```  
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer et gérer les clés de chiffrement &#40;Gestionnaire de Configuration de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

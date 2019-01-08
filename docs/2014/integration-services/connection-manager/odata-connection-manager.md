@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac0ffe016e2c88a381b230a26c58be2f6b2087a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d88e90e595cd69da28c4767c723fed63b0e052
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136629"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756641"
 ---
 # <a name="odata-connection-manager"></a>Gestionnaire de connexions OData
   Un gestionnaire de connexions OData permet à un package de se connecter à une source OData. Un composant source OData se connecte à une source OData à l'aide d'un gestionnaire de connexions OData et consomme les données du service. Consultez la [OData Source](../data-flow/odata-source.md)section qui traite des informations détaillées et des instructions d'installation de ces composants.  
@@ -24,11 +23,11 @@ ms.locfileid: "48136629"
 ## <a name="adding-connection-manager-to-an-ssis-package"></a>Ajout d'un gestionnaire de connexions à un package SSIS  
  Vous pouvez ajouter un nouveau gestionnaire de connexions OData à un package SSIS de trois manières :  
   
--   Cliquez sur le bouton **Nouveau…** dans **Éditeur de source OData**  
+-   Cliquez sur le bouton **Nouveau...** dans **Éditeur de source OData**.  
   
 -   Cliquez avec le bouton droit sur le dossier **Gestionnaires de connexions** dans l' **Explorateur de solutions** et cliquez sur **Nouveau gestionnaire de connexions**. Sélectionnez **ODATA** pour **Type du gestionnaire de connexions**.  
   
--   Cliquez avec le bouton droit dans le volet **Gestionnaires de connexions** au bas du concepteur de packages, puis sélectionnez **Nouvelle connexion…**. Sélectionnez **ODATA** pour **Type du gestionnaire de connexions**.  
+-   Avec le bouton droit dans le **gestionnaires de connexions** volet en bas du Concepteur de packages, puis sélectionnez **nouvelle connexion...** . Sélectionnez **ODATA** pour **Type du gestionnaire de connexions**.  
   
 ## <a name="connection-manager-authentication"></a>Authentification du gestionnaire de connexions  
  Le Gestionnaire de connexions OData prend en charge deux modes d'authentification.  

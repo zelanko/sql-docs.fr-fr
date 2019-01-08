@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71de5e0e883961af7737ba0aec5495fa59d2b453
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196609"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782971"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Filegroup, élément pour les index (Assistant Paramétrage de base de données)
   Spécifie le groupe de fichiers sur lequel l'index doit être créé pour une configuration spécifiée par l'utilisateur.  
@@ -42,13 +41,13 @@ ms.locfileid: "48196609"
 |--------------------|-----------------|  
 |**Type de données et longueur**|`string`, longueur illimitée.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Facultatif. Peut utiliser qu’une seule fois pour chaque `Index` élément. Cet élément ne peut pas être utilisé si le `PartitionScheme` et `PartitionColumn` éléments sont spécifiés pour le `Index` élément.|  
+|**Occurrence**|Facultatif. Peut être utilisé une seule fois pour chaque élément `Index`. Cet élément ne peut pas être utilisé si les éléments `PartitionScheme` et `PartitionColumn` sont spécifiés pour l'élément `Index`.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Élément d’index &#40;DTA&#41;](index-element-dta.md)|  
+|**Élément parent**|[Index, élément &#40;Assistant Paramétrage de base de données&#41;](index-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
 ## <a name="example"></a>Exemple  

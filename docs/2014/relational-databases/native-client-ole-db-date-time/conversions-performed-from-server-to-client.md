@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
@@ -12,18 +12,18 @@ ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c1ec005ab299a8be40e977ccf6a3a8f318591b86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9e922f5bf8d07e75c976dbfc07b89b8527dbbc8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167195"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763593"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversions de serveur à client
   Cette rubrique décrit les conversions date/heure effectuées entre [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure) et une application cliente écrite avec OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="conversions"></a>Conversions  
- Le tableau suivant décrit les conversions entre le type retourné au client et le type de la liaison. Paramètres de sortie, si ICommandWithParameters::SetParameterInfo a été appelée et que le type spécifié dans *pwszDataSourceType* ne correspond pas au type réel sur le serveur, une conversion implicite sera effectué par le serveur , et le type retourné au client correspond au type spécifié via ICommandWithParameters::SetParameterInfo. Cela peut provoquer des résultats de conversion inattendus lorsque les règles de conversion du serveur sont différentes de celles décrites dans cette rubrique. Par exemple, quand une date par défaut doit être fournie, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise 1900-1-1, plutôt que 1899-12-30.  
+ Le tableau suivant décrit les conversions entre le type retourné au client et le type de la liaison. Paramètres de sortie, si ICommandWithParameters::SetParameterInfo a été appelée et que le type spécifié dans *pwszDataSourceType* ne correspond pas au type réel sur le serveur, une conversion implicite sera effectué par le serveur , et le type retourné au client correspond au type spécifié via ICommandWithParameters::SetParameterInfo. Cela peut entraîner des résultats de conversion inattendus lorsque les règles de conversion du serveur sont différentes de celles décrites dans cette rubrique. Par exemple, quand une date par défaut doit être fournie, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise 1900-1-1, plutôt que 1899-12-30.  
   
 |Vers -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
@@ -33,7 +33,7 @@ ms.locfileid: "48167195"
 |DATETIME|5,7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
 |Datetime2|5,7|8|9,10|10|7|3|5,7|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|OK|5,7,11|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Char, Varchar,<br /><br /> NVARCHAR2, NCHAR|7, 13|12|12,9|12|12|12|7,13|Néant|Néant|Néant|Néant|Néant|Néant|  
+|Char, Varchar,<br /><br /> NVARCHAR2, NCHAR|7, 13|12|12,9|12|12|12|7,13|N/A|N/A|N/A|N/A|N/A|N/A|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (date)|1,7|OK|2|2|1|1,3|1,7|-|OK(VT_BSTR)|OK|OK|4|4|  

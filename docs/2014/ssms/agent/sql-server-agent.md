@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
@@ -13,12 +13,12 @@ ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e0f1e8f3e76ffbe84495fc7bae6229a1b590089
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211929"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783881"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est un service Microsoft Windows qui exécute des tâches administratives planifiées appelées *travaux* dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -170,7 +170,7 @@ ms.locfileid: "48211929"
 |Explique comment configurer SQL Server Agent.|[Configurer SQL Server Agent](configure-sql-server-agent.md)|  
 |Explique comment démarrer, arrêter et interrompre le service SQL Server Agent.|[Démarrer, arrêter ou suspendre le service SQL Server Agent](start-stop-or-pause-the-sql-server-agent-service.md)|  
 |Décrit les considérations à prendre en compte lors de la spécification d'un compte pour le service SQL Server Agent.|[Sélectionner un compte pour le service SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md)|  
-|Explique comment utiliser le journal des erreurs de SQL Server Agent.|[Journal des erreurs de l'Agent SQL Server](sql-server-agent-error-log.md)|  
+|Explique comment utiliser le journal des erreurs de SQL Server Agent.|[Journal des erreurs de SQL Server Agent](sql-server-agent-error-log.md)|  
 |||  
 |Explique comment utiliser des objets de performances.|[Utiliser des objets de performance](use-performance-objects.md)|  
 |Décrit l'Assistant Plan de maintenance qui est un utilitaire permettant de créer des travaux, des alertes et des opérateurs en vue d'automatiser l'administration d'une instance de SQL Server.|[Utiliser l'Assistant Plan de maintenance](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  

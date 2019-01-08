@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6aabfe5664f5370cc1d5699403cde84c5108886b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098051"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780116"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propriétés SQL Server (onglet Paramètres de démarrage)
   Utilisez cette boîte de dialogue pour ajouter ou supprimer des paramètres de démarrage pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les paramètres de démarrage peuvent avoir un effet considérable sur les performances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Avant d'ajouter ou de modifier des paramètres de démarrage, consultez la rubrique « Utilisation des options de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,7 +34,7 @@ ms.locfileid: "48098051"
   
 -   Les espaces de début et de fin sont supprimés des paramètres de démarrage.  
   
--   Tous les paramètres de démarrage commencent par un – (tiret) et la deuxième valeur est une lettre.  
+-   Tous les paramètres de démarrage commencent par un - (tiret) et la deuxième valeur est une lettre.  
   
 ## <a name="required-parameters"></a>Paramètres obligatoires  
  Les paramètres suivants sont obligatoires. Ils peuvent être modifiés, mais pas supprimés.  
@@ -78,6 +77,6 @@ ms.locfileid: "48098051"
 -   Le compte de domaine utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est configuré pour l'exécution sous un compte de domaine.  
   
 ## <a name="books-online-references"></a>Références de la documentation en ligne  
- Pour plus d’informations sur les paramètres de démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez « Procédure : configurer les options de démarrage du serveur (Gestionnaire de configuration[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paramètres de démarrage, consultez « Comment : configurer les options de démarrage du serveur (Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

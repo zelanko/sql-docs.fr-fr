@@ -15,12 +15,12 @@ ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a01d130cc37faa29e2aebe8612fc5e02fef10c78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 965022adeeee40ca7f8fd45a722b22fa6aa64931
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099619"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350610"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Définir des requêtes nommées dans une vue de source de données (Analysis Services)
   Une requête nommée est une expression SQL représentée sous forme de table. Dans une requête nommée, vous pouvez spécifier une expression SQL pour sélectionner les lignes et les colonnes retournées d'une ou de plusieurs tables dans une ou plusieurs sources de données. Une requête nommée est similaire à toute autre table dans une vue de source de données (DSV) avec des lignes et des relations, si ce n'est que la requête nommée se base sur une expression.  
@@ -36,7 +36,7 @@ ms.locfileid: "48099619"
   
  Les tables et les colonnes référencées dans la requête SQL ne doivent pas être qualifiées ou doivent être qualifiées par le nom de table uniquement. Par exemple, pour faire référence à la colonne SaleAmount dans une table, `SaleAmount` ou `Sales.SaleAmount` est valide, mais `dbo.Sales.SaleAmount` génère une erreur.  
   
- **Remarque** : quand vous définissez une requête nommée qui interroge une source de données [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, cela a pour effet de faire échouer une requête nommée qui contient une sous-requête corrélée et une clause GROUP BY. Pour plus d’informations, consultez [Erreur interne avec l’instruction SELECT contenant une sous-requête corrélée et GROUP BY](http://support.microsoft.com/kb/274729) dans la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ **Remarque** : quand vous définissez une requête nommée qui interroge une source de données [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, cela a pour effet de faire échouer une requête nommée qui contient une sous-requête corrélée et une clause GROUP BY. Pour plus d’informations, consultez [Erreur interne avec l’instruction SELECT contenant une sous-requête corrélée et GROUP BY](https://support.microsoft.com/kb/274729) dans la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="add-or-edit-a-named-query"></a>Ajouter ou modifier une requête nommée  
   
@@ -63,6 +63,6 @@ ms.locfileid: "48099619"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md)   
- [Définir des calculs nommés dans une vue de Source de données &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

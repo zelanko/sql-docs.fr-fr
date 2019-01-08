@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
@@ -13,12 +12,12 @@ ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f640fb20e950dc576c57e0faad71dcad0cd55a09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b138dd1cf07ccfccefb9e1556c743f3c0a45abd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217822"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747411"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Mode de détermination des autorisations (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], la méthode la plus simple pour configurer la sécurité est d'affecter des autorisations d'objet de modèle à un groupe dont l'utilisateur est membre.  
@@ -36,7 +35,7 @@ ms.locfileid: "48217822"
   
  ![mds_conc_security_no_overlap](../../2014/master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>Étape 1 : les autorisations d'attribut effectives sont déterminées.  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>Étape 1 : Autorisations d’attribut effectives sont déterminées.  
  La liste suivante décrit comment sont déterminées les autorisations d'attribut effectives :  
   
 -   Les autorisations attribuées aux objets de modèle déterminent les attributs auxquels un utilisateur peut accéder.  
@@ -51,7 +50,7 @@ ms.locfileid: "48217822"
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Étape 2 : si les autorisations des membres de la hiérarchie sont attribuées, les autorisations de membre effectives sont déterminées.  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Étape 2 : Si les autorisations des membres de hiérarchie sont affectées, les autorisations de membre effectives sont déterminées.  
  La liste suivante explique comment les autorisations des membres de la hiérarchie effectives sont déterminées :  
   
 -   Les autorisations attribuées aux nœuds de la hiérarchie déterminent les membres auxquels un utilisateur peut accéder.  
@@ -66,7 +65,7 @@ ms.locfileid: "48217822"
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
-### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Étape 3 : l'intersection des autorisations d'attribut et de membre est déterminée.  
+### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Étape 3 : L’intersection des autorisations de membre et d’attribut est déterminée.  
  Si les autorisations d'attribut effectives sont différentes des autorisations de membre effectives, les autorisations doivent être déterminées pour chaque valeur d'attribut individuelle. Pour plus d’informations, consultez [Chevauchement des autorisations de modèle et de membre &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>Autorisations attribuées à plusieurs groupes  
@@ -77,7 +76,7 @@ ms.locfileid: "48217822"
  Dans ce cas, le chevauchement des autorisations de l'utilisateur et du groupe doit être résolu avant que les autorisations de l'objet de modèle et des membres de la hiérarchie puissent être comparées. Pour plus d’informations, consultez [Chevauchement des autorisations d’accès &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Chevauchement des autorisations de groupe &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
+ [Chevauchement des autorisations d’accès &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
  [Chevauchement des autorisations de modèle et de membre &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

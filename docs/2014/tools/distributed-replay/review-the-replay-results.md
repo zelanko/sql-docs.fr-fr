@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a60b3f18d6249f0fcce10b25521aa9652699c3a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181329"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792831"
 ---
 # <a name="review-the-replay-results"></a>Examiner les résultats de la relecture
   Une fois que la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay a terminé une relecture distribuée, l'activité de relecture de chaque client peut être capturée et enregistrée dans des fichiers de trace de résultats sur chaque client. Pour capturer cette activité, vous devez utiliser le paramètre **-o** quand vous exécutez l’outil d’administration avec l’option **replay**. Pour plus d’informations sur l’option replay, consultez [Option replay &#40;outil d’administration Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "48181329"
 |Erreurs et avertissements|Replay Internal Error|Une fois pour chaque erreur interne|En cas de condition d'erreur interne|  
 ||Replay Provider Error|Une fois pour chaque erreur de fournisseur|En cas de condition d'erreur de fournisseur|  
   
- Notez les points suivants :  
+ Notez les points suivants :  
   
 -   Pour chaque événement relu avec succès sur le serveur cible, il existe une classe d'événement de sortie correspondante.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48181329"
 ## <a name="event-class-column-mapping"></a>Mappage de colonne de la classe d'événements  
  La figure suivante répertorie les colonnes de trace de résultats disponibles pour chaque type de classe d'événements capturée lors de la relecture.  
   
- ![Mappage de colonne classe d’événements](../../database-engine/media/eventclassmappings.gif "mappage colonne classe d’événements")  
+ ![Event class column mapping](../../database-engine/media/eventclassmappings.gif "Event class column mapping")  
   
 ## <a name="column-descriptions-for-result-trace"></a>Descriptions des colonnes de la trace de résultats  
  Le tableau suivant décrit les colonnes des données de la trace de résultats.  
@@ -64,7 +64,7 @@ ms.locfileid: "48181329"
 |TextData|`ntext`|Le contenu de TextData dépend de l'EventClass.<br /><br /> Pour Audit Login et ExistingConnection, il s'agit des options définies pour la connexion.<br /><br /> Pour SQL:BatchStarting, il s'agit du corps de la requête de lots.<br /><br /> Pour RPC:Starting, c'est la procédure stockée appelée.<br /><br /> Pour les événements de paramètres de relecture, cette colonne contient les paramètres définis dans le fichier de configuration de relecture.<br /><br /> Pour l'événement de statistiques de relecture, TexData contient les informations suivantes :<br />serveur SQL cible de la relecture ;<br />nombre total d'événements pouvant être relus ;<br />nombre d'erreurs de fournisseur ;<br />nombre d'erreurs internes ;<br />avertissements internes .<br />nombre total d'erreurs ;<br />taux global de réussite ;<br />heure de relecture (HH:MM:SS:MMM).<br /><br /> Pour l'événement de jeu de résultats de relecture, il affiche la liste des en-têtes de colonne de résultats retournés.<br /><br /> Pour l'événement de ligne de résultats de relecture, il affiche la valeur de retour de toutes les colonnes de cette ligne.<br /><br /> Pour l'avertissement interne de relecture et l'erreur de fournisseur de relecture, cette colonne contient les avertissements ou les erreurs de fournisseur.|4|  
 |Attention|`bigint`|Durée (en microsecondes) de l'avertissement pour l'événement. Elle est calculée à partir de l'événement d'avertissement de la trace de capture. Si aucun délai de requête n'a été spécifié pour l'événement, cette colonne n'est pas remplie (Null).|5|  
 |SubmitTime|`datetime`|Heure à laquelle l'événement a été soumis à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|6|  
-|IsSuccessful|`int`|Indicateur booléen qui indique si un événement particulier a été exécuté avec succès et si les jeux de résultats ont été retournés au côté client.<br /><br /> Un événement qui génère un avertissement (comme lorsqu'un événement est annulé en raison d'un événement Attention ou d'un délai d'expiration spécifié par l'utilisateur) est considéré comme réussi.<br /><br /> IsSuccessful peut prendre l'une des valeurs suivantes :<br /><br /> 1 = Réussi<br /><br /> 0 = Échec|7|  
+|IsSuccessful|`int`|Indicateur booléen qui indique si un événement particulier a été exécuté avec succès et si les jeux de résultats ont été retournés au côté client.<br /><br /> Un événement qui génère un avertissement (comme lorsqu'un événement est annulé en raison d'un événement Attention ou d'un délai d'expiration spécifié par l'utilisateur) est considéré comme réussi.<br /><br /> IsSuccessful peut prendre l'une des valeurs suivantes :<br /><br /> 1 = Réussi<br /><br /> 0 = Échec|7|  
 |Durée [microsec]|`bigint`|Durée de temps de réponse (en microsecondes) pour l'événement. Le temps est mesuré à partir du moment où l'événement d'ouverture de session/de fermeture de session/RPC/Langage a été soumis à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Si l'événement réussit, la mesure se termine lorsque le jeu de résultats complet a été consommé.<br /><br /> Si l'événement ne réussit pas, la mesure se termine au moment de l'échec ou de l'annulation de l'événement.|8|  
 |RowCount|`bigint`|Rempli selon la valeur de `<RecordRowCount>` dans le fichier de configuration de relecture :<br /><br /> Si `<RecordRowCount>` est égal à Oui, cette cellule contient le nombre de lignes dans le jeu de résultats retournées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Si `<RecordRowCount>` est égal à Non, cette cellule n'est pas remplie (Null).|9|  
 |CaptureSPID|`int`|ID de la session de capture de l'événement.|10|  
@@ -78,8 +78,8 @@ ms.locfileid: "48181329"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Conditions préalables de relecture distribuée](distributed-replay-requirements.md)   
- [Options de ligne de l’outil d’administration &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurer Distributed Replay](configure-distributed-replay.md)  
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configure Distributed Replay](configure-distributed-replay.md)  
   
   

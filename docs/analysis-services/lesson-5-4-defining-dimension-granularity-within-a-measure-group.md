@@ -1,5 +1,5 @@
 ---
-title: Définir la granularité des dimensions dans un groupe de mesures | Documents Microsoft
+title: Définition de la granularité de Dimension au sein d’un groupe de mesures | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9faa4c869591c6885a1856fca0ec63661af7799a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e047f955f9c4ecccc02404dc139d557935e0f090
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018816"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542244"
 ---
-# <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Leçon 5-4-définition granularité des dimensions dans un groupe de mesures
+# <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Leçon 5-4 : définition granularité des dimensions dans un groupe de mesures
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Les utilisateurs peuvent souhaiter dimensionner des données de faits avec des granularités ou spécificités différentes pour diverses raisons. Prenons l'exemple d'un scénario dans lequel les données de ventes des revendeurs ou des ventes Internet sont enregistrées quotidiennement tandis que les données relatives aux quotas de ventes n'existent qu'au niveau du mois ou du trimestre. Dans un scénario de ce type, les utilisateurs souhaiteront que la dimension de temps ait une granularité ou un niveau de détail différent pour chaque table de faits. S'il est possible de définir une nouvelle dimension de base de données comme dimension de temps avec une granularité différente, la méthode qui fait appel à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]est plus simple.  
@@ -95,11 +95,11 @@ Au cours des tâches de cette rubrique, vous allez ajouter un groupe de mesures 
   
 7.  Dans la liste des champs de tableau croisé dynamique, sélectionnez la hiérarchie définie par l’utilisateur **Sales Territories** , puis cliquez sur la flèche vers le bas située à droite.  
   
-    ![Hiérarchie de secteurs de vente dans la liste de champs](../analysis-services/media/l5-granularity-1a.png "hiérarchie de secteurs de vente dans la liste de champs")  
+    ![Hiérarchie de secteurs de vente dans la liste de champs](../analysis-services/media/l5-granularity-1a.png "hiérarchie Sales Territories dans la liste de champs")  
   
 8.  Dans le filtre, cliquez sur la case à cocher Sélectionner tout pour effacer toutes les sélections, puis choisissez uniquement **North America**.  
   
-    ![Volet de filtre pour la sélection d’Amérique du Nord](../analysis-services/media/l5-granularity-1b.png "volet filtre pour sélectionner l’Amérique du Nord")  
+    ![Volet de filtre pour la sélection d’Amérique du Nord](../analysis-services/media/l5-granularity-1b.png "volet de filtre pour la sélection d’Amérique du Nord")  
   
 9. Dans la liste des champs de tableau croisé dynamique, développez **Date**.  
   
@@ -127,7 +127,7 @@ Au cours des tâches de cette rubrique, vous allez ajouter un groupe de mesures 
   
     Notez que les dimensions de cube **Employee** et **Date** sont liées aux groupes de mesures **Sales Quotas et Sales Quotas 1** par le biais de relations régulières. Notez également que la dimension de cube **Sales Territory** n’est liée à aucun de ces groupes de mesures.  
   
-4.  Cliquez sur la cellule à l’intersection de la dimension **Sales Territory** et du groupe de mesures **Sales Quotas** , puis cliquez sur le bouton Parcourir (**…**). La boîte de dialogue **Définir une relation** s’affiche.  
+4.  Cliquez sur la cellule à l’intersection de la **Sales Territory** dimension et le **Sales Quotas** groupe de mesures, puis cliquez sur le bouton Parcourir (**...** ). La boîte de dialogue **Définir une relation** s’affiche.  
   
 5.  Dans la liste **Sélectionnez un type de relation** , sélectionnez **Référence**.  
   
@@ -141,7 +141,7 @@ Au cours des tâches de cette rubrique, vous allez ajouter un groupe de mesures 
   
 10. Cliquez sur **OK**.  
   
-11. Cliquez sur la cellule à l’intersection de la dimension **Sales Territory** et du groupe de mesures **Sales Quotas 1** , puis cliquez sur le bouton Parcourir (**…**). La boîte de dialogue **Définir une relation** s’affiche.  
+11. Cliquez sur la cellule à l’intersection de la **Sales Territory** dimension et le **Sales Quotas 1** groupe de mesures, puis cliquez sur le bouton Parcourir (**...** ). La boîte de dialogue **Définir une relation** s’affiche.  
   
 12. Dans la liste **Sélectionnez un type de relation** , sélectionnez **Référence**.  
   
@@ -163,7 +163,7 @@ Au cours des tâches de cette rubrique, vous allez ajouter un groupe de mesures 
   
     Remplacer la dimension de cube **Order Date** par **Date** permet aux utilisateurs de comprendre son rôle en tant que dimension de date principale dans ce cube.  
   
-20. Cliquez sur le bouton Parcourir (**…**) dans la cellule située à l’intersection du groupe de mesures **Sales Quotas** et de la dimension **Date** .  
+20. Cliquez sur le bouton Parcourir (**...** ) dans la cellule à l’intersection de la **Sales Quotas** groupe de mesures et les **Date** dimension.  
   
 21. Dans la boîte de dialogue **Définir une relation** , sélectionnez **Normal** dans la liste **Sélectionnez un type de relation** .  
   

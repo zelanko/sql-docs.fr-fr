@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c3c41cf90d15ee8c5342dd0274cd8fedbd30dee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 750911c19224ff088fee5c27272bf13c14875975
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171529"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767742"
 ---
 # <a name="name-element-for-server-dta"></a>Name, élément pour les serveurs (Assistant Paramétrage de base de données)
   Contient le nom du serveur sur lequel résident les bases de données que vous souhaitez paramétrer.  
@@ -46,7 +45,7 @@ ms.locfileid: "48171529"
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Élément de serveur &#40;DTA&#41;](server-element-dta.md)|  
+|**Élément parent**|[Server, élément &#40;Assistant Paramétrage de base de données&#41;](server-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
 ## <a name="example"></a>Exemple  

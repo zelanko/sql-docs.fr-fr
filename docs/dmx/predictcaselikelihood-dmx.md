@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d8159af8ac4b3c9bf21dcdc68a0cfb30c46e33e5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8e061269ebf864a93d6dde50455627cf8e2ea780
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040307"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514250"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
   
 -   y = probabilité de cas marginale, calculée comme le logarithme du rapport de vraisemblance du cas en fonction des cas d'apprentissage  
   
--   Z = Exp( log(x) – Log(Y))  
+-   Z = Exp (LOG10 (x) - Log(Y))  
   
  Normalisé = (z / (1 + z))  
   

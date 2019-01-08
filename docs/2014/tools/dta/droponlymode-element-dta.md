@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4c0c0ce3c367ad557584bfbed222e93bc616d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171071"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764571"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode, élément (Assistant Paramétrage de base de données)
   Spécifie que l'Assistant Paramétrage du moteur de base de données doit supprimer uniquement les index, les vues indexées ou les partitions existantes pendant la session de paramétrage. Aucune nouvelle structure PDS n'est pas prise en compte lorsque cette option de paramétrage est spécifiée.  
@@ -41,17 +40,17 @@ ms.locfileid: "48171071"
 |--------------------|-----------------|  
 |**Type de données et longueur**|Aucun.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Facultatif. Peut utiliser qu’une seule fois pour chaque `TuningOptions` élément. Ne peut pas être utilisé si les éléments suivants sont spécifiés dans le `TuningOptions` élément :<br /><br /> [Featureset, élément &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Partitioning, élément &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [L’élément KeepExisting &#40;Assistant Paramétrage de base de données&#41;](keepexisting-element-dta.md) est défini sur **ALL**|  
+|**Occurrence**|Facultatif. Ne peut être utilisé qu'une seule fois pour chaque élément `TuningOptions`. Ne peut pas être utilisé si les éléments suivants sont spécifiés dans l'élément `TuningOptions` :<br /><br /> [FeatureSet, élément &#40;Assistant Paramétrage de base de données&#41;](featureset-element-dta.md)<br /><br /> [Partitioning, élément &#40;Assistant Paramétrage de base de données&#41;](partitioning-element-dta.md)<br /><br /> [L’élément KeepExisting &#40;Assistant Paramétrage de base de données&#41;](keepexisting-element-dta.md) est défini sur **ALL**|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[TuningOptions, élément &#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**Élément parent**|[Élément TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre le `TuningOptions` section d’un fichier d’entrée Database Engine Tuning Advisor XML où le `DropOnlyMode` est spécifié. Dans cet exemple, la durée de paramétrage est limitée à 24 heures (1440 minutes) et tous les index cluster et non cluster existants sont pris en compte en vue de leur suppression :  
+ L'exemple suivant illustre la section `TuningOptions` d'un fichier d'entrée XML de l'Assistant Paramétrage du moteur de base de données dans lequel l'élément `DropOnlyMode` est spécifié. Dans cet exemple, la durée de paramétrage est limitée à 24 heures (1440 minutes) et tous les index cluster et non cluster existants sont pris en compte en vue de leur suppression :  
   
 ```xml  
 <TuningOptions  

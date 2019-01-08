@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
@@ -18,12 +18,12 @@ ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 799ca3ef2acdc9c9b71f62f66d5a931f1d515f83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8afa4b2dfb2b140d67644289e93aa2d96eb1697c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080650"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812661"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Supprimer des lignes dans le volet Résultats (Visual Database Tools)
   Supprimez des lignes dans le volet Résultats si vous souhaitez supprimer des enregistrements dans la base de données. Pour supprimer l'ensemble des lignes, vous pouvez utiliser une requête Delete. Pour plus d’informations, consultez [Créer des requêtes Delete &#40;Visual Database Tools&#41;](visual-database-tools.md). Si vous souhaitez uniquement supprimer des lignes du volet Résultats, modifiez les critères de la requête. Pour plus d’informations, consultez [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md).  

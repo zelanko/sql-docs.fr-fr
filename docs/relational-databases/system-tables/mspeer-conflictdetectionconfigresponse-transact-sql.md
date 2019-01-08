@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSpeer_conflictdetectionconfigresponse
@@ -19,12 +18,12 @@ ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc28b885ee00f520e8f6d8e372974680df9478bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0b4ffd576c9be5f219a1f7d792aa04f00ed1b6c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703377"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757871"
 ---
 # <a name="mspeerconflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47703377"
 |peer_db_version|**sysname**|Identifie le numéro de version de la base de données d'homologue.|  
 |is_peer|**bit**|Indique si un nœud est un Abonné en lecture seule. La valeur **0** indiqué un abonné en lecture seule.|  
 |conflict_detection_enabled|**bit**|Indique si la détection de conflit est activée pour la topologie.|  
-|originator_id|**varbinary(16)**|Identifie chaque nœud dans la topologie pour les besoins de la détection de conflit. Pour plus d'informations, consultez [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|originator_id|**varbinary(16)**|Identifie chaque nœud dans la topologie pour les besoins de la détection de conflit. Pour plus d’informations, voir [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |peer_conflict_retention|**Int**|Durée, en jours, du stockage des métadonnées dans les tables en conflit.|  
 |peer_subscriptions|**XML**|Informations relatives au nœud ayant répondu à la demande.|  
 |progress_phase|**nvarchar(32)**|Identifie la phase actuelle du traitement en utilisant l'une des valeurs suivantes :<br /><br /> Démarré<br /><br /> Version homologue collectée<br /><br /> État collecté|  

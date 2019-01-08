@@ -13,12 +13,12 @@ ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7c9515b1ea4260d7e6843c9f3c1c0777e300c392
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f04b786aaef8a994cff1051a289bbdad3b3fd5ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656839"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527672"
 ---
 # <a name="managing-passwords-mysqltosql"></a>Gestion des mots de passe (MySQLToSQL)
 Cette section concerne la sécurisation des mots de passe de base de données et la procédure pour importer ou exporter les sur les serveurs :  
@@ -34,15 +34,15 @@ Utilisez la procédure suivante pour implémenter une connexion sécurisée :
   
 Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :  
   
-1.  **Texte clair :** tapez le mot de passe de base de données dans l’attribut de valeur du nœud « password ». Il se trouve sous le nœud de définition de serveur dans la section serveur du fichier de script ou du fichier de connexion de serveur.  
+1.  **Texte clair :** Tapez le mot de passe de base de données dans l’attribut de valeur du nœud « password ». Il se trouve sous le nœud de définition de serveur dans la section serveur du fichier de script ou du fichier de connexion de serveur.  
   
-    Les mots de passe en texte clair ne sont pas sécurisés. Par conséquent, vous rencontrerez le message d’avertissement suivant dans la sortie de console : *« Server &lt;id serveur&gt; mot de passe n’est fourni sous forme de texte en clair non sécurisées, application de Console SSMA fournit une option pour protéger le mot de passe via le chiffrement, consultez option – securepassword dans SSMA fichier d’aide pour plus d’informations. »*  
+    Les mots de passe en texte clair ne sont pas sécurisés. Par conséquent, vous rencontrerez le message d’avertissement suivant dans la sortie de console : *« Serveur &lt;id serveur&gt; mot de passe n’est fourni sous forme de texte en clair non sécurisées, application de Console SSMA fournit une option pour protéger le mot de passe via le chiffrement, consultez option - securepassword dans le fichier d’aide SSMA pour en savoir plus informations ».*  
   
-    **Mots de passe chiffrés :** le mot de passe, dans ce cas, est stocké sous forme chiffrée sur l’ordinateur local dans ProtectedStorage.ssma.  
+    **Mots de passe chiffrés :** Le mot de passe, dans ce cas, est stockée sous forme chiffrée sur l’ordinateur local dans ProtectedStorage.ssma.  
   
     -   **Sécurisation des mots de passe**  
   
-        -   Exécuter le `SSMAforMySQLConsole.exe` avec le `–securepassword` et ajoutez le commutateur à la ligne de commande en passant le serveur de connexion ou fichier de script contenant le nœud de mot de passe dans la section de définition de serveur.  
+        -   Exécuter le `SSMAforMySQLConsole.exe` avec le `-securepassword` et ajoutez le commutateur à la ligne de commande en passant le serveur de connexion ou fichier de script contenant le nœud de mot de passe dans la section de définition de serveur.  
   
         -   À l’invite de commandes, l’utilisateur est invité à entrer le mot de passe de base de données et confirmez-le.  
   
@@ -52,7 +52,7 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
             
                 Specify password
                 
-                C:\SSMA\SSMAforMySQLConsole.EXE –securepassword –add all –s "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\AssessmentReportGenerationSample.xml" –v "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\ VariableValueFileSample.xml"
+                C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\ VariableValueFileSample.xml"
                 
                 Enter password for server_id 'XXX_1': xxxxxxx
                 
@@ -60,7 +60,7 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
             
             Exemple 2 :
             
-                C:\SSMA\SSMAforMySQLConsole.EXE –securepassword –add "source_1,target_1" –c "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\ServersConnectionFileSample.xml" – v "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\ VariableValueFileSample.xml" -o
+                C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 
                 Enter password for server_id 'source_1': xxxxxxx
                 
@@ -72,20 +72,20 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
             
     -   **Suppression des mots de passe chiffrés**  
   
-        Exécuter le `SSMAforMySQLConsole.exe` avec la`–securepassword` et `–remove` passer à la ligne de commande en passant l’ID de serveur pour supprimer les mots de passe chiffrés à partir du fichier de stockage protégé présent sur l’ordinateur local.  
+        Exécuter le `SSMAforMySQLConsole.exe` avec la`-securepassword` et `-remove` passer à la ligne de commande en passant l’ID de serveur pour supprimer les mots de passe chiffrés à partir du fichier de stockage protégé présent sur l’ordinateur local.  
   
         Exemple :  
 
-            C:\SSMA\SSMAforMySQLConsole.EXE –securepassword –remove all
-            C:\SSMA\SSMAforMySQLConsole.EXE –securepassword –remove "source_1,target_1"  
+            C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -remove all
+            C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -remove "source_1,target_1"  
   
     -   **Liste des ID de serveur dont les mots de passe sont chiffrés.**  
   
-        Exécuter le `SSMAforMySQLConsole.exe` avec la `–securepassword` et `–list` passer à la ligne de commande pour répertorier tous les ID de serveur dont les mots de passe ont été chiffrés.  
+        Exécuter le `SSMAforMySQLConsole.exe` avec la `-securepassword` et `-list` passer à la ligne de commande pour répertorier tous les ID de serveur dont les mots de passe ont été chiffrés.  
   
         Exemple :  
         
-            C:\SSMA\SSMAforMySQLConsole.EXE –securepassword –list  
+            C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -list  
   
     > [!NOTE]  
     > 1.  Le mot de passe en texte clair mentionné dans le fichier de connexion de serveur ou de script est prioritaire sur le mot de passe chiffré dans le fichier sécurisé.  
@@ -100,13 +100,13 @@ Exemple :
     
     Enter password for protecting the exported file
     
-    C:\SSMA\SSMAforMySQLConsole.EXE –securepassword –export all "machine1passwords.file"
+    C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -export all "machine1passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforMySQLConsole.EXE –p –e "MySQLDB_1_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforMySQLConsole.EXE -p -e "MySQLDB_1_1,Sql_1" "machine2passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
@@ -118,13 +118,13 @@ Exemple :
     
     Enter password for protecting the imported file
     
-    C:\SSMA\SSMAforMySQLConsole.EXE –securepassword –import all "machine1passwords.file"
+    C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -import all "machine1passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforMySQLConsole.EXE –p –i "MySQLDB_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforMySQLConsole.EXE -p -i "MySQLDB_1,Sql_1" "machine2passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     

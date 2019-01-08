@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
@@ -15,12 +14,12 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98cdf4263025f202279e4496b67f23eb0780b633
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 959344c0c191f390a6f6ec61f05467af1f88107b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048349"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766661"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach
   Les procédures de cette rubrique expliquent comment effectuer une boucle dans les classeurs Excel d'un dossier, ou dans les tableaux d'un classeur Excel, à l'aide du conteneur de boucles Foreach et de l'énumérateur approprié.  
@@ -44,9 +43,9 @@ ms.locfileid: "48048349"
 7.  Ajoutez un gestionnaire de connexions Excel au package, comme décrit dans la rubrique [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](../add-delete-or-share-a-connection-manager-in-a-package.md). Pour éviter toute erreur de validation, sélectionnez un fichier de classeur Excel pour la connexion.  
   
     > [!IMPORTANT]  
-    >  Pour éviter des erreurs de validation à mesure que vous configurez des tâches et des composants de flux de données qui utilisent ce gestionnaire de connexions Excel, sélectionnez un classeur Excel existant dans **l’Éditeur du gestionnaire de connexions Excel**. Le gestionnaire de connexions n'utilise pas ce classeur au moment de l'exécution après que vous ayez configuré une expression pour la propriété `ConnectionString` comme décrit dans la procédure suivante. Après avoir créé et configuré le package, vous pouvez supprimer la valeur de la propriété `ConnectionString` dans la fenêtre Propriétés. Néanmoins, si vous supprimez cette valeur, la propriété de chaîne de connexion du gestionnaire de connexions Excel n'est plus valide tant que la boucle Foreach n'est pas exécutée. Vous devez donc définir la propriété `DelayValidation` à `True` dans les tâches où le gestionnaire de connexions est utilisé, ou bien dans le package, pour éviter des erreurs de validation.  
+    >  Pour éviter des erreurs de validation à mesure que vous configurez des tâches et des composants de flux de données qui utilisent ce gestionnaire de connexions Excel, sélectionnez un classeur Excel existant dans **l’Éditeur du gestionnaire de connexions Excel**. Le gestionnaire de connexions n'utilise pas ce classeur au moment de l'exécution après que vous ayez configuré une expression pour la propriété `ConnectionString` comme décrit dans la procédure suivante. Après avoir créé et configuré le package, vous pouvez supprimer la valeur de la propriété `ConnectionString` dans la fenêtre Propriétés. Néanmoins, si vous supprimez cette valeur, la propriété de chaîne de connexion du gestionnaire de connexions Excel n'est plus valide tant que la boucle Foreach n'est pas exécutée. Vous devez donc définir la propriété `DelayValidation` à `True` dans les tâches où le gestionnaire de connexions est utilisé, ou bien dans le package, pour éviter des erreurs de validation.  
     >   
-    >  Vous devez également utiliser la valeur par défaut `False` pour le `RetainSameConnection` propriété du Gestionnaire de connexions Excel. Si vous remplacez cette valeur par `True`, chaque itération de la boucle continue d'ouvrir le premier classeur Excel.  
+    >  Vous devez également utiliser la valeur par défaut `False` pour la propriété `RetainSameConnection` du gestionnaire de connexions Excel. Si vous remplacez cette valeur par `True`, chaque itération de la boucle continue d'ouvrir le premier classeur Excel.  
   
 8.  Sélectionnez le nouveau gestionnaire de connexions Excel, cliquez sur la propriété **Expressions** dans la fenêtre Propriétés, puis cliquez sur les points de suspension.  
   

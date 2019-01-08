@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f26ffdf21519a1b5aa2ce26060a2c6d36a53d6ff
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 65374ec0499d6dbb549a14af239c03c06dca4062
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145924"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545422"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -128,7 +128,7 @@ USING <algorithm> [(<parameter list>)]
 ## <a name="filter-criteria-expressions"></a>Expressions de critères de filtre  
  Vous pouvez définir un filtre qui restreint les cas utilisés dans le modèle d'exploration de données. Le filtre peut être appliqué aux colonnes dans la table de cas ou aux lignes dans la table imbriquée, ou bien aux deux à la fois.  
   
- Les expressions de critères de filtre sont des prédicats DMX simplifiées, semblables à une clause WHERE. Les expressions de filtre se limitent à des formules qui utilisent des opérateurs mathématiques de base, des scalaires et des noms de colonne. L'opérateur EXISTS fait figure d'exception, car il prend la valeur True si au moins une ligne est retournée pour la sous-requête. Les prédicats peuvent être combinés en utilisant les opérateurs logiques communs AND, OR et NOT.  
+ Les expressions de critères de filtre sont des prédicats DMX simplifiées, semblables à une clause WHERE. Les expressions de filtre se limitent à des formules qui utilisent des opérateurs mathématiques de base, des scalaires et des noms de colonne. L'opérateur EXISTS fait figure d'exception, car il prend la valeur True si au moins une ligne est retournée pour la sous-requête. Les prédicats peuvent être combinées à l’aide des opérateurs logiques courantes : AND, OR et pas.  
   
  Pour plus d’informations sur les filtres utilisés avec les modèles d’exploration de données, consultez [filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
@@ -143,10 +143,10 @@ USING <algorithm> [(<parameter list>)]
  La syntaxe de la liste des paramètres est la suivante :  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
-## <a name="example-1-add-a-model-to-a-structure"></a>Exemple 1 : ajouter un modèle à une structure  
+## <a name="example-1-add-a-model-to-a-structure"></a>Exemple 1 : Ajouter un modèle à une Structure  
  L’exemple suivant ajoute un modèle d’exploration de données Naive Bayes à la **New Mailing** structure d’exploration et les limites du nombre maximal d’attribut États à 50.  
   
 ```  
@@ -161,7 +161,7 @@ ADD MINING MODEL [Naive Bayes]
 USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)  
 ```  
   
-## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Exemple 2 : ajouter un modèle filtré à une structure  
+## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Exemple 2 : Ajouter un modèle filtré à une Structure  
  L’exemple suivant ajoute un modèle d’exploration de données, `Naive Bayes Women`, à la **New Mailing** structure d’exploration de données. Le nouveau modèle a la même structure de base que le modèle d'exploration de données ajouté dans l'exemple 1, à la différence près que ce modèle restreint les cas de la structure d'exploration de données aux clients qui sont des femmes de plus de 50 ans.  
   
 ```  
@@ -177,7 +177,7 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Exemple 3 : ajouter un modèle filtré à une structure avec une table imbriquée  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Exemple 3 : Ajouter un modèle filtré à une Structure avec une Table imbriquée  
  L'exemple suivant ajoute un modèle d'exploration de données à une version modifiée de la structure d'exploration de données du panier d'achat. La structure d’exploration de données utilisée dans l’exemple a été modifiée pour ajouter un **région** colonne qui contient les attributs pour la région du client, et un **Income Group** colonne, qui classe le revenu du client à l’aide de les valeurs **haute**, **modéré**, ou **faible**.  
   
  La structure d'exploration de données inclut également une table imbriquée qui répertorie les articles que le client a achetés.  

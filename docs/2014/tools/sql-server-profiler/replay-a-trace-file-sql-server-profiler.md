@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
@@ -14,12 +13,12 @@ ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22b0fb207a837407752a6356c452e215980bea24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 503f7a3eeeeeee36893231c48b330a099a5adc61
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171009"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779461"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>Relire un fichier de trace (SQL Server Profiler)
   La relecture est la possibilité d'ouvrir une trace enregistrée et de la relire. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] contient un moteur de lecture à plusieurs threads capable de simuler les connexions utilisateur et l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La relecture est utile pour résoudre les problèmes d'applications ou de processus. Lorsque vous identifiez le problème et appliquez des corrections, exécutez la trace qui a détecté le problème potentiel sur l'application ou le processus corrigé. Relisez ensuite la trace d'origine et comparez les résultats.  
@@ -60,8 +59,8 @@ ms.locfileid: "48171009"
     -   Pour déterminer la manière dont SQL Server gèrera les processus durant la relecture, configurez les **Options du moniteur d’intégrité**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Autorisations requises pour exécuter SQL Server Profiler](sql-server-profiler.md)   
- [Relire des Traces](replay-traces.md)   
+ [Autorisations nécessaires pour exécuter SQL Server Profiler](sql-server-profiler.md)   
+ [Relire des traces](replay-traces.md)   
  [Ouvrir un fichier de trace &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

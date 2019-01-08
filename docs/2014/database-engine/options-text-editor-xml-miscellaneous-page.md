@@ -7,21 +7,20 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2a87635bedba24e440dd2d6c5b7a2c48c7408a9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70689ff767661409dce982d7bb294d0b620838e2
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126669"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328429"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Options (Éditeur de texte - XML - Page Divers)
-  La boîte de dialogue **Options** vous permet de modifier les paramètres de saisie automatique et de schémas de l’Éditeur XML. Pour accéder à ces paramètres, dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Éditeur de texte** , cliquez sur **XML** , puis sur **Divers** .  
+
+La boîte de dialogue **Options** vous permet de modifier les paramètres de saisie automatique et de schémas de l’Éditeur XML. Pour accéder à ces paramètres, dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Éditeur de texte** , cliquez sur **XML** , puis sur **Divers** .  
   
 ## <a name="auto-insert"></a>Insertion automatique  
  **Balises de fermeture**  
@@ -47,5 +46,3 @@ ms.locfileid: "48126669"
 ## <a name="caching"></a>Mise en cache  
  **Schémas**  
  Indique l'emplacement du cache des schémas. Le bouton Parcourir (...) ouvre l'emplacement actuel du cache des schémas dans une nouvelle fenêtre. L’emplacement par défaut est  *\<répertoire d’installation de Management Studio >* \Xml\Schemas.  
-  
-  

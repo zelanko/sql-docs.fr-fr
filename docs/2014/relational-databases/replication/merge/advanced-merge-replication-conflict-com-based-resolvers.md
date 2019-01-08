@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66a8adfa8d9e060f316062e033be23ba8f5dbbc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fb5a27e9087044b1049106ca5abd071db74af9f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186819"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766412"
 ---
 # <a name="microsoft-com-based-resolvers"></a>Microsoft COM-Based Resolvers
   Tous les programmes de résolution COM fournis avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gèrent les conflits de mise à jour, et lorsque cela est indiqué, ils gèrent également les conflits d'insertion et de suppression. Ils gèrent tous le suivi des colonnes et la plupart gèrent également le suivi des lignes. Ces programmes de résolution ainsi que tous les programmes de résolution COM déclarent les types de conflit qu'ils peuvent gérer. Ainsi, l'Agent de fusion utilise le programme de résolution par défaut pour tous les autres types de conflit.  
@@ -30,7 +29,7 @@ ms.locfileid: "48186819"
   
  Le tableau suivant décrit les attributs des programmes de résolution spécifiques.  
   
-|Nom   |Entrée requise|Description|Commentaires|  
+|Créer une vue d’abonnement|Entrée requise|Description|Commentaires|  
 |----------|--------------------|-----------------|--------------|  
 |Outil de résolution des conflits d'addition[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Nom de la colonne à totaliser. Elle doit être d'un type de données arithmétique (tel que **int**, **smallint**, **numeric**, etc.).|Le gagnant du conflit est déterminé à partir de la valeur de priorité. Les valeurs des colonnes spécifiées prennent la valeur représentant la somme des valeurs des colonnes source et de destination. Si l'une des colonnes a la valeur NULL, elles ont la valeur de l'autre colonne.|Prend uniquement en charge les conflits de mise à jour, le suivi de colonnes.|  
 |Outil de résolution des conflits de moyenne[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Nom de la colonne dont la moyenne doit être établie. Elle doit être d'un type de données arithmétique (tel que **int**, **smallint**, **numeric**, etc.).|Le gagnant du conflit est déterminé à partir de la valeur de priorité. Les valeurs de colonnes résultantes représentent la moyenne des valeurs des colonnes source et de destination. Si l'une des colonnes a la valeur NULL, elles ont la valeur de l'autre colonne.|Prend uniquement en charge les conflits de mise à jour, le suivi de colonnes.|  
@@ -46,7 +45,7 @@ ms.locfileid: "48186819"
 |Programme de résolution des procédures stockées[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQL Server|Nom de la procédure stockée que le programme de résolution doit appeler pour gérer le conflit.|La résolution du conflit dépend de la logique de la procédure stockée spécifiée.|Prend en charge les conflits de mise à jour. Pour plus d’informations, consultez [Implémenter un outil personnalisé de résolution des conflits pour un article de fusion](../implement-a-custom-conflict-resolver-for-a-merge-article.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Détection et résolution des conflits de réplication de fusion avancée](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)  
   
   

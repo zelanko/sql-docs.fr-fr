@@ -11,12 +11,12 @@ ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e2c54ec3c724e9fb43eff956e0bf96fd406d6bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6360770c57660ec62493b8ecd6c2aaea695289f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091109"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395522"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Colonnes calculées (SSAS Tabulaire)
   Les colonnes calculées, dans les modèles tabulaires, vous permettent d'ajouter de nouvelles données à votre modèle. Au lieu de coller ou importer des valeurs dans la colonne, vous créez une formule DAX qui définit les valeurs de niveau de ligne de la colonne. La colonne calculée peut alors être utilisée dans un rapport, un tableau croisé dynamique ou un graphique croisé dynamique comme toute autre colonne.  
@@ -50,7 +50,7 @@ ms.locfileid: "48091109"
   
 ```  
   
- Cette formule extrait le mois de la colonne StartDate. Elle calcule ensuite la valeur de fin du mois pour chaque ligne de la table. Le deuxième paramètre spécifie le nombre de mois avant ou après le mois indiqué dans StartDate ; dans cette cas, 0 signifie le même mois. Par exemple, si la valeur de la colonne StartDate est 1/6/2001, la valeur dans la colonne calculée sera 30/6/2001.  
+ Cette formule extrait le mois de la colonne StartDate. Elle calcule ensuite la valeur de fin du mois pour chaque ligne de la table. Le deuxième paramètre spécifie le nombre de mois avant ou après le mois indiqué dans StartDate ; dans cette cas, 0 signifie le même mois. Par exemple, si la valeur de la colonne StartDate est 1/6/2001, la valeur dans la colonne calculée sera 30/6/2001.  
   
 ##  <a name="bkmk_naming"></a> Nommer une colonne calculée  
  Par défaut, les nouvelles colonnes calculées sont ajoutées à droite des autres colonnes d'une table, et le nom par défaut **CalculatedColumn1**, **CalculatedColumn2**, etc. est automatiquement affecté à la colonne. Vous pouvez également cliquer avec le bouton droit sur une colonne, puis sélectionner Insérer une colonne pour créer une nouvelle colonne entre deux colonnes existantes. Vous pouvez réorganiser les colonnes dans la même table en cliquant et en faisant glisser, et vous pouvez renommer des colonnes une fois créées ; toutefois, tenez compte des restrictions suivantes relatives aux modifications apportées aux colonnes calculées :  
@@ -82,11 +82,11 @@ ms.locfileid: "48091109"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Créer une colonne calculée &#40;SSAS tabulaire&#41;](ssas-calculated-columns-create-a-calculated-column.md)|Les tâches de cette rubrique décrivent comment ajouter une nouvelle colonne calculée dans une table.|  
+|[Créer une colonne calculée &#40;SSAS Tabulaire&#41;](ssas-calculated-columns-create-a-calculated-column.md)|Les tâches de cette rubrique décrivent comment ajouter une nouvelle colonne calculée dans une table.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et colonnes &#40;SSAS tabulaire&#41;](tables-and-columns-ssas-tabular.md)   
- [Mesures &#40;SSAS tabulaire&#41;](measures-ssas-tabular.md)   
- [Calculs &#40;SSAS tabulaire&#41;](calculations-ssas-tabular.md)  
+ [Tables et colonnes &#40;SSAS Tabulaire&#41;](tables-and-columns-ssas-tabular.md)   
+ [Mesures &#40;SSAS Tabulaire&#41;](measures-ssas-tabular.md)   
+ [Calculs &#40;SSAS Tabulaire&#41;](calculations-ssas-tabular.md)  
   
   

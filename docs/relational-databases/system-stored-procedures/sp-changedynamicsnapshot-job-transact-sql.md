@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changedynamicsnapshot_job
@@ -17,12 +16,12 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 984967c174e35115124054f68a70627b974d8ef4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b3f2d65811e856bfec95fcd5ffa1749f62c58c3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779767"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822473"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_type =** ] *frequency_type*  
  Fréquence de planification de l'Agent. *frequency_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|À la demande|  
@@ -80,7 +79,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_interval =** ] *frequency_interval*  
  Jours où l'Agent est exécuté. *frequency_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Dimanche|  
 |**2**|Lundi|  
@@ -97,7 +96,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_subday =** ] *frequency_subday*  
  Fréquence de replanification nécessaire pendant la période définie. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
@@ -111,7 +110,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  Date d'exécution de l'Agent de fusion. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Première|  
 |**2**|Seconde|  
@@ -152,7 +151,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
  Après avoir modifié le nom de connexion ou le mot de passe d'un Agent, vous devez arrêter et redémarrer celui-ci avant que la modification prenne effet.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_changedynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>Voir aussi  

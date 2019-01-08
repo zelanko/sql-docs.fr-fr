@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/20/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.linkedserver.properties.general.f1
@@ -18,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d4026596d06941286b137a60201ba0ee6489c34
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120206"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766611"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
   Cette rubrique indique comment créer un serveur lié et accéder aux données provenant d'un autre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. En créant un serveur lié, vous pouvez utiliser des données provenant de plusieurs sources. Il n'est pas nécessaire que le serveur lié soit une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais il s'agit d'un scénario courant.  
@@ -35,7 +34,7 @@ ms.locfileid: "49120206"
   
 ##  <a name="Security"></a> Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Lorsque vous utilisez [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, nécessite `ALTER ANY LINKED SERVER` sur le serveur ou l’appartenance dans le **setupadmin** rôle serveur fixe. Lorsque vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] requiert `CONTROL SERVER` autorisation ou l’appartenance dans le **sysadmin** rôle serveur fixe.  
   
 ##  <a name="Procedures"></a> Comment créer un serveur lié  
@@ -82,9 +81,9 @@ ms.locfileid: "49120206"
     > [!NOTE]  
     >  Si l'instance de **SQL Server** est l'instance par défaut, entrez le nom de l'ordinateur qui héberge l'instance de **SQL Server**. Si l’instance de **SQL Server** est une instance nommée, entrez le nom de l’ordinateur et le nom de l’instance, par exemple **Accounting\SQLExpress**.  
   
-3.  Dans le **type de serveur** zone, sélectionnez **SQL Server** pour indiquer que le serveur lié est une autre instance de **SQL Server**.  
+3.  Dans la zone **Type de serveur** , sélectionnez **SQL Server** pour indiquer que le serveur lié est une autre instance de **SQL Server**.  
   
-4.  Dans la page **Sécurité** , spécifiez le contexte de sécurité qui sera utilisé lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'origine se connectera au serveur lié. Dans un environnement de domaine où les utilisateurs se connectent à l'aide de leurs connexions de domaine, sélectionner **Seront effectuées dans le contexte de sécurité de la connexion actuelle** est souvent le meilleur choix. Lorsque les utilisateurs se connectent au **SQL Server** d'origine en utilisant un compte de connexion **SQL Server** , le meilleur choix est souvent de sélectionner **Seront effectuées dans ce contexte de sécurité**, puis de fournir les informations d'identification nécessaires pour l'authentification sur le serveur lié.  
+4.  Dans la page **Sécurité** , spécifiez le contexte de sécurité qui sera utilisé lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'origine se connectera au serveur lié. Dans un environnement de domaine où les utilisateurs se connectent à l’aide de leurs connexions de domaine, la sélection de **Seront effectuées dans le contexte de sécurité de la connexion actuelle** est souvent le meilleur choix. Lorsque les utilisateurs se connectent au **SQL Server** d'origine en utilisant un compte de connexion **SQL Server** , le meilleur choix est souvent de sélectionner **Seront effectuées dans ce contexte de sécurité**, puis de fournir les informations d'identification nécessaires pour l'authentification sur le serveur lié.  
   
      **Connexion locale**  
      Affiche la connexion locale qui peut se connecter au serveur lié. La connexion locale peut être une connexion utilisant l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une connexion utilisant l'authentification Windows. Utilisez cette liste pour restreindre la connexion à des connexions spécifiques ou pour autoriser certaines connexions à se connecter sous une connexion différente.  
@@ -221,7 +220,7 @@ ms.locfileid: "49120206"
   
     ```  
   
-##  <a name="FollowUp"></a> Suivi : mesures à prendre après avoir créé un serveur lié  
+##  <a name="FollowUp"></a> Suivi : mesures à prendre après avoir créé un serveur lié  
   
 #### <a name="to-test-the-linked-server"></a>Pour tester le serveur lié  
   

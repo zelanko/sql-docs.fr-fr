@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.browseprincipals.f1
@@ -13,12 +12,12 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8389729eac371f01d32d610d69d1d1a8a3d9e8dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96a31970edba4507ab17f93dfb0a139b9a2a1547
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128249"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749542"
 ---
 # <a name="browse-all-principals-dialog-box"></a>Parcourir tous les principaux, boîte de dialogue
   Utilisez la boîte de dialogue **Parcourir tous les principaux** pour sélectionner un principal de base de données et modifier les autorisations du principal sur le projet sélectionné ou sur tous les projets contenus dans un dossier sélectionné.  
@@ -33,15 +32,15 @@ ms.locfileid: "48128249"
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous au serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-     Vous devez vous connecter à l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui héberge le catalogue SSISDB.  
+     Vous devez vous connecter à l’instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui héberge le catalogue SSISDB.  
   
 2.  Dans l'Explorateur d'objets, développez l'arborescence pour afficher le nœud **Integration Services Catalogues** .  
   
 3.  Développez le nœud **SSISDB** .  
   
-4.  Pour modifier les autorisations du principal sur tous les projets contenus dans un dossier sélectionné, cliquez avec le bouton droit sur le dossier, puis cliquez sur **Propriétés**.  
+4.  Pour changer les autorisations du principal sur tous les projets contenus dans un dossier sélectionné, cliquez avec le bouton droit sur le dossier, puis cliquez sur **Propriétés**.  
   
-     Pour modifier les autorisations du principal sur un projet sélectionné, développez le dossier qui contient le projet, cliquez avec le bouton droit sur le projet, puis cliquez sur **Propriétés**.  
+     Pour changer les autorisations du principal sur un projet sélectionné, développez le dossier qui contient le projet, cliquez avec le bouton droit sur le projet, puis cliquez sur **Propriétés**.  
   
 5.  Sélectionnez la page **Autorisations** , puis cliquez sur **Parcourir**.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48128249"
  Nom du principal.  
   
  **Type**  
- Type du principal. Les types courants sont :  
+ Type du principal. Les types courants sont :  
   
 -   Utilisateur SQL  
   

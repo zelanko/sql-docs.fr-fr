@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, resource pool
@@ -15,12 +14,12 @@ ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0410e7662358bcbe7f89bb16d7a5c62e9e48438c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147119"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799821"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de ressources du gouverneur de ressources
   Dans le gouverneur de ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un pool de ressources représente un sous-ensemble des ressources physiques d'une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le gouverneur de ressources vous permet de spécifier des limites sur la quantité d'UC, les E/S physiques et la mémoire que les demandes d'application entrantes peuvent utiliser avec le pool de ressources. Chaque pool de ressources peut contenir un ou plusieurs groupes de charges de travail. Lorsqu'une session est démarrée, le classifieur du gouverneur de ressources affecte la session à un groupe de charges de travail spécifique, et la session doit s'exécuter à l'aide des ressources attribuées au groupe de charges de travail.  
@@ -42,7 +41,7 @@ ms.locfileid: "48147119"
   
 -   **AFFINITY**  
   
-     Ce paramètre permet de définir l'affinité d'un pool de ressources en fonction d'un ou de plusieurs planificateurs ou nœuds NUMA pour un niveau d'isolation supérieur des ressources du processeur. Dans le scénario précédemment décrit, nous supposons que le service des ventes a besoin d'un environnement mieux isolé et souhaite disposer en permanence de 100 % d'un cœur d'UC. L'option AFFINITY permet de planifier les charges de travail Ventes et Marketing sur différentes UC. En supposant que la limite CAP_CPU_PERCENT est encore appliquée sur le pool marketing, la charge de travail Marketing continue à utiliser jusqu'à 30 % d'un cœur, tandis que la charge de travail Ventes utilise 100 % de l'autre cœur. Les charges de travail Ventes et Marketing s'exécutent sur deux ordinateurs isolés.  
+     Ce paramètre permet de définir l'affinité d'un pool de ressources en fonction d'un ou de plusieurs planificateurs ou nœuds NUMA pour un niveau d'isolation supérieur des ressources du processeur. Dans le scénario précédemment décrit, nous supposons que le service des ventes a besoin d'un environnement mieux isolé et souhaite disposer en permanence de 100 % d'un cœur d'UC. L'option AFFINITY permet de planifier les charges de travail Ventes et Marketing sur différentes UC. En supposant que la limite CAP_CPU_PERCENT est encore appliquée sur le pool marketing, la charge de travail Marketing continue à utiliser jusqu'à 30 % d'un cœur, tandis que la charge de travail Ventes utilise 100 % de l'autre cœur. Les charges de travail Ventes et Marketing s'exécutent sur deux ordinateurs isolés.  
   
 -   **MIN_IOPS_PER_VOLUME et MAX_IOPS_PER_VOLUME**  
   
@@ -68,8 +67,8 @@ ms.locfileid: "48147119"
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |interne|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
 |par défaut|0|100|30|30|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50)) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
-|Pool 1|20|100|50|30|La valeur MAX effectif est calculée comme suit : min(100,100-50) = 50. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
-|Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-20) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
+|Pool 1|20|100|50|30|La valeur MAX effectif est calculée comme suit : min(100,100-50) = 50. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
+|Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-20) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
   
  Sur la base du tableau précédent donné en exemple, détaillons les ajustements qui sont effectués à la création d'un pool supplémentaire. Ce pool (Pool 3) a un paramètre % MIN égal à 5.  
   

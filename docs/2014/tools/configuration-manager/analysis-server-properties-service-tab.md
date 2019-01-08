@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80f8c532bd416926a604d29946e979669b964228
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f083aafd2dc8718bb79798d43483c66b3520b0d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173379"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795871"
 ---
 # <a name="analysis-server-properties-service-tab"></a>Propriétés de Analysis Server (onglet Service)
   Ce service est le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ce service doit être en cours d'exécution pour que [!INCLUDE[ssAS](../../includes/ssas-md.md)] fonctionne correctement. Les valeurs des propriétés en gris clair ne peuvent pas être modifiées à l'aide de cette application.  
@@ -46,11 +45,11 @@ ms.locfileid: "48173379"
  **Mode de démarrage**  
  Les options disponibles pour ce service sont les suivantes :  
   
--   Manuel : ce service n'est pas automatiquement lancé au démarrage de l'ordinateur. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
+-   Manuel : Ce service n'est pas automatiquement lancé au démarrage de l'ordinateur. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
   
--   Automatique : ce service essaie de se lancer au démarrage de cet ordinateur.  
+-   Automatique : ce service essaie de se lancer au démarrage de cet ordinateur.  
   
--   Désactivé : ce service ne peut pas être démarré.  
+-   Désactivé : ce service ne peut pas être démarré.  
   
  **État**  
  Indique si ce service est en cours d'exécution, arrêté ou désactivé.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.checkconstraint
@@ -12,12 +12,12 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f1840adadfe059939563dd2945db2883345fc51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: d41cc9f3b52c0c5e70ead6b93c0b929ef521f673
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204979"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763751"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Boîte de dialogue Contraintes de validation (Visual Database Tools)
   Cette boîte de dialogue apparaît quand vous cliquez avec le bouton droit sur une grille de définition de table dans le Concepteur de tables puis cliquez sur **Vérifier les contraintes**. Elle contient un jeu de propriétés pour les contraintes non uniques jointes aux tables de votre base de données. Les propriétés qui s’appliquent aux contraintes uniques apparaissent dans la boîte de dialogue **Index/Clés** .  
@@ -48,7 +48,7 @@ ms.locfileid: "48204979"
  Indique le nom de la contrainte de validation sélectionnée. Pour modifier le nom de cette contrainte, tapez directement le texte dans le champ de la propriété.  
   
  **Description**  
- Description de cette contrainte de validation. Vous pouvez modifier la description en la tapant dans le champ de propriété ou cliquer sur le bouton de sélection (**...**) qui s’affiche à droite du champ de propriété et modifier la description dans la boîte de dialogue **Propriété de la description** .  
+ Description de cette contrainte de validation. Vous pouvez modifier la description en la tapant dans le champ de propriété ou cliquer sur le bouton de sélection (**...**) qui s’affiche à droite du champ de propriété et modifier la description dans la boîte de dialogue **Propriété de la description**.  
   
  **Catégorie Concepteur de tables**  
  Se développe pour afficher les propriétés de **Vérifier les données existantes à la création ou à la réactivation**, **Appliquer INSERTs et UPDATEs**et **Appliquer la réplication**.  

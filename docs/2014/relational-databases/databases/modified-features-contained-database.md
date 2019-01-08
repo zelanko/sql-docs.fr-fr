@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, modifications to DBs
@@ -13,12 +12,12 @@ ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d08eb0368840a6f2850467d13cbe42c5519c7b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f78f4bdf08b9a5caf9b2654289bf181080efff02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083649"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751081"
 ---
 # <a name="modified-features-contained-database"></a>Fonctionnalités modifiées (base de données autonome)
   Les fonctionnalités suivantes ont été modifiées pour être prises en charge par une base de données partiellement autonome. Les fonctionnalités sont généralement modifiées de façon à ce qu'elles ne traversent pas la limite de base de données.  
@@ -46,7 +45,7 @@ ms.locfileid: "48083649"
  Les tables temporaires ne peuvent pas faire référence aux types définis par l'utilisateur, aux collections de schémas XML ou aux fonctions définies par l'utilisateur.  
   
 ## <a name="collation"></a>Classement  
- Dans le modèle de base de données non autonome, il existe trois types de classement distincts : classement de base de données, classement d’instance et classement tempdb. Les bases de données autonomes utilisent uniquement deux classements, le classement de base de données et le nouveau classement de catalogue. Consultez [Classements de base de données autonome](contained-database-collations.md) pour plus d’informations sur le classement de bases de données autonomes.  
+ Dans le modèle de base de données sans relation contenant contenu, il existe trois types de classement distincts : Classement de base de données, classement d’Instance et classement tempdb. Les bases de données autonomes utilisent uniquement deux classements, le classement de base de données et le nouveau classement de catalogue. Consultez [Classements de base de données autonome](contained-database-collations.md) pour plus d’informations sur le classement de bases de données autonomes.  
   
 ## <a name="user-options"></a>Options utilisateur  
  Au moment d’activer les bases de données autonomes, l’option [user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) doit avoir la valeur 0 pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

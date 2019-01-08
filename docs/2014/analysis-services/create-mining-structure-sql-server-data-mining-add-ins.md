@@ -13,12 +13,12 @@ ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 166689f175485af66ca140f82fa968512baf8519
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2788c663553d8b01e6a047be70f101dc364d6042
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086339"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542966"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Créer une structure d'exploration de données (Compléments d'exploration de données SQL Server)
   ![Bouton de créer une Structure d’exploration de données, ruban Exploration de données](media/dmc-createstruct.gif "bouton Créer la Structure d’exploration de données, ruban Exploration de données")  
@@ -38,7 +38,7 @@ ms.locfileid: "48086339"
   
 2.  Dans le **sélectionner les données source** boîte de dialogue, spécifiez la plage Excel, une table de données Excel ou une source de données externe qui contient les données que vous souhaitez utiliser pour l’analyse.  
   
-     Cliquez sur **Suivant**.  
+     Cliquer sur **Suivant**.  
   
 3.  Dans le **sélectionner des colonnes** boîte de dialogue zone, passez en revue la liste des colonnes disponibles dans la source de données sélectionnée.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48086339"
   
      Cliquez sur **OK** pour fermer la boîte de dialogue.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
      Selon le type de données que vous utilisez, vous pouvez exécuter l'Assistant après cette étape. Dans ce cas, passez directement à la **Terminer** page pour nommer votre structure d’exploration de données.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48086339"
   
      Le cas échéant, tapez le nombre maximum de lignes à utiliser pour le test.  
   
-     Cliquez sur **Suivant**.  
+     Cliquer sur **Suivant**.  
   
 8.  Dans le **Terminer** boîte de dialogue, tapez un nom et une description pour la nouvelle structure d’exploration de données.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48086339"
   
 -   Tous les algorithmes nécessitent un **clé** colonne. Les valeurs de la colonne Clé doivent être uniques. Un **Key Time** colonne est uniquement requis pour la prévision ou de série chronologique modèles. .  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Pour créer une structure d'exploration de données, vous devez disposer d'une connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La connexion est requise même si vous utilisez des structures temporaires. Pour plus d’informations sur la création ou modification d’une connexion, consultez [se connecter à la Source de données &#40;Client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],retrieving data
@@ -13,12 +12,12 @@ ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b19ad6aba7f81094c08a93c1bcccd1bca466f80d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc856bcee4aa873d2359c444af6147b0ca0909d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193649"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762051"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>Récupérer et comprendre les données modifiées
   Dans le flux de données d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un chargement incrémentiel des données modifiées, la première tâche consiste à exécuter la requête qui récupère les données modifiées. Vous exécutez cette requête dans un composant source dans une tâche de flux de données. Vous pouvez ensuite utiliser des transformations et des destinations en aval pour appliquer les données modifiées à votre destination.  
@@ -58,6 +57,6 @@ ms.locfileid: "48193649"
 ## <a name="next-step"></a>Étape suivante  
  Après avoir configuré une source OLE DB pour récupérer les données modifiées, l'étape suivante consiste à commencer à concevoir le flux de données dans le package.  
   
- **Rubrique suivante :** [Traiter les insertions, les mises à jour et les suppressions](process-inserts-updates-and-deletes.md)  
+ **Rubrique suivante :** [Traiter les insertions, les mises à jour et les suppressions](process-inserts-updates-and-deletes.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e4532e52bb2efe190d962bfcfc50e65c441b5575
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3df2ef3f14cb8ca4fd7e7bcf5799b6966c16dc10
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668648"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511446"
 ---
 # <a name="type-system---sequence-type-matching"></a>Système de types : mise en correspondance du type de séquence
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51668648"
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>Comparaison du type de valeur atomique retourné par une expression  
  Si une expression retourne une séquence de valeurs atomiques, vous pouvez être amené à rechercher le type de la valeur dans la séquence. Les exemples ci-dessous illustrent comment utiliser la syntaxe de type de séquence pour évaluer le type de valeur atomique retourné par une expression.  
   
-### <a name="example-determining-whether-a-sequence-is-empty"></a>Exemple : déterminer si une séquence est vide  
+### <a name="example-determining-whether-a-sequence-is-empty"></a>Exemple : Pour déterminer si une séquence est vide  
  Le **empty()** type de séquence peut être utilisé dans une expression de type de séquence pour déterminer si la séquence retournée par l’expression spécifiée est une séquence vide.  
   
  Dans l'exemple ci-dessous, le schéma XML autorise l'annulation de l'élément <`root`> :  
@@ -71,7 +71,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
-### <a name="example-determining-the-type-of-an-attribute-value"></a>Exemple : déterminer le type d'une valeur d'attribut  
+### <a name="example-determining-the-type-of-an-attribute-value"></a>Exemple : Détermination du type d’une valeur d’attribut  
  Parfois, vous voudrez peut-être évaluer le type de séquence retourné par une expression avant le traitement. Par exemple, vous pouvez disposer d'un schéma XML dans lequel un nœud est défini comme type d'union. Dans l'exemple ci-dessous, le schéma XML dans la collection définit l'attribut `a` comme un type d'union dont la valeur peut être de type décimal ou chaîne.  
   
 ```  
@@ -112,7 +112,7 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:string')
 GO  
 ```  
   
-### <a name="example-cardinality-in-sequence-expressions"></a>Exemple : cardinalité dans les expressions de séquence  
+### <a name="example-cardinality-in-sequence-expressions"></a>Exemple : Cardinalité dans les expressions de séquence  
  Cet exemple illustre l'effet de la cardinalité dans une expression de séquence. Le schéma XML ci-dessous définit un élément <`root`> de type octet qui accepte la valeur NULL.  
   
 ```  
@@ -160,7 +160,7 @@ GO
   
  Si les deux conditions sont remplies, l'expression `instance of` retourne True.  
   
-### <a name="example-querying-against-an-xml-type-column"></a>Exemple : interrogation d'une colonne de type xml  
+### <a name="example-querying-against-an-xml-type-column"></a>Exemple : Interrogation d’une colonne de type xml  
  Dans l’exemple suivant, une requête est spécifiée sur une colonne Instructions de **xml** tapez dans la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données. Il s'agit d'une colonne XML typée car un schéma lui est associé. Le schéma XML définit l'attribut `LocationID` du type entier. Par conséquent, dans l’expression de séquence, la `instance of xs:integer?` retourne la valeur True.  
   
 ```  
@@ -174,19 +174,19 @@ WHERE ProductModelID = 7
 ## <a name="comparing-the-node-type-returned-by-an-expression"></a>Comparaison du type de nœud retourné par une expression  
  Si une expression retourne une séquence de nœuds, vous pouvez être amené à rechercher le type du nœud dans la séquence. Les exemples ci-dessous illustrent comment utiliser la syntaxe de type de séquence pour évaluer le type de nœud retourné par une expression. Vous pouvez utiliser les types de séquence suivants :  
   
--   **Item()** – correspond à n’importe quel élément dans la séquence.  
+-   **Item()** -correspond à n’importe quel élément dans la séquence.  
   
--   **Node()** – détermine si la séquence est un nœud.  
+-   **Node()** -détermine si la séquence est un nœud.  
   
--   **//processing-instruction ()** – détermine si l’expression retourne une instruction de traitement.  
+-   **//processing-instruction ()** -détermine si l’expression retourne une instruction de traitement.  
   
--   **Comment()** – détermine si l’expression retourne un commentaire.  
+-   **Comment()** -détermine si l’expression retourne un commentaire.  
   
--   **document-node()** – détermine si l’expression retourne un nœud de document.  
+-   **document-node()** -détermine si l’expression retourne un nœud de document.  
   
  L'exemple ci-dessous illustre ces types de séquence.  
   
-### <a name="example-using-sequence-types"></a>Exemple : utilisation des types de séquence  
+### <a name="example-using-sequence-types"></a>Exemple : À l’aide des types de séquence  
  Dans cet exemple, plusieurs requêtes sont exécutées sur une variable XML non typée. Ces requêtes illustrent l'utilisation des types de séquence.  
   
 ```  

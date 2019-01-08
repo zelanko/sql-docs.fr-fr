@@ -14,12 +14,12 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9a46c83c497c8eaeba3873bafef399f924506916
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076259"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532439"
 ---
 # <a name="create-an-application-role"></a>Créer un rôle d'application
   Cette rubrique explique comment créer un rôle d'application dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Les rôles d'application limitent l'accès utilisateur à une base de données sauf via des applications spécifiques. Les rôles d'application ne possèdent pas d'utilisateurs, de sorte que la liste **Membres du rôle** n'est pas affichée lorsque l'option **Rôle d'application** est sélectionnée.  
@@ -56,11 +56,11 @@ ms.locfileid: "48076259"
   
 3.  Développez le dossier **Rôles** .  
   
-4.  Cliquez avec le bouton droit sur le dossier **Rôles d’application** et sélectionnez **Nouveau rôle d’application**.  
+4.  Cliquez avec le bouton droit sur le dossier **Rôles d’application** et sélectionnez **Nouveau rôle d’application...**.  
   
-5.  Dans la boîte de dialogue **Rôle d'application - Nouveau** , sur la **Page générale**, entrez le nouveau nom du nouvel rôle d'application dans la zone **Nom du rôle** .  
+5.  Dans la boîte de dialogue **Rôle d’application - Nouveau**, dans la **page Général**, entrez le nouveau nom du nouveau rôle d’application dans la zone **Nom du rôle**.  
   
-6.  Dans la zone **Schéma par défaut** , spécifiez le schéma qui possédera les objets créés par ce rôle en entrant les noms d'objet. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Localiser le schéma** .  
+6.  Dans la zone **Schéma par défaut** , spécifiez le schéma qui possédera les objets créés par ce rôle en entrant les noms d'objet. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Localiser le schéma**.  
   
 7.  Dans la zone **Mot de passe** , entrez un mot de passe pour le nouveau rôle. Entrez à nouveau ce mot de passe dans la zone **Confirmer le mot de passe** .  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48076259"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Options supplémentaires  
- La boîte de dialogue **Rôle d'application - Nouveau** offre également des options sur deux pages supplémentaires : **Éléments sécurisables** et **Propriétés étendues**.  
+ Le **rôle d’Application - nouveau** boîte de dialogue offre également des options sur deux pages supplémentaires : **Éléments sécurisables** et **propriétés étendues**.  
   
 -   La page **Éléments sécurisables** répertorie tous les éléments sécurisables possibles et les autorisations sur ces éléments sécurisables qui peuvent être accordées à la connexion.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48076259"
   
 #### <a name="to-create-an-application-role"></a>Pour créer un rôle d'application  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

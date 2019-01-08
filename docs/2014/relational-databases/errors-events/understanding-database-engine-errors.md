@@ -15,12 +15,12 @@ ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 759dd5aa8381669f2f17136406f144e23b1ec103
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174719"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534644"
 ---
 # <a name="understanding-database-engine-errors"></a>Présentation des erreurs du moteur de base de données
   Les erreurs déclenchées par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] have the attributes described in the following table.  
@@ -38,7 +38,7 @@ ms.locfileid: "48174719"
   
  Toutes les API de base de données, telles que l’espace de noms [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** , ADO (ActiveX Data Objects), OLE DB et ODBC (Open DataBase Connectivity), signalent les attributs d’erreur de base. Ces informations comprennent le numéro de l'erreur et la chaîne du message. Cependant, toutes les API ne signalent pas l'ensemble des autres attributs d'erreur.  
   
- Les informations relatives à une erreur qui se produit dans la portée du bloc TRY d'une construction TRY…CATCH peuvent être obtenues en code [!INCLUDE[tsql](../../includes/tsql-md.md)] à l'aide de fonctions telles que ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE dans la portée du bloc CATCH associé. Pour plus d’informations, consultez [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql).  
+ Les informations relatives à une erreur qui se produit dans la portée du bloc TRY d’une construction TRY...CATCH peuvent être obtenues en code [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de fonctions telles que ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE dans la portée du bloc CATCH associé. Pour plus d’informations, consultez [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant interroge l'affichage catalogue `sys.messages` pour renvoyer une liste de tous les messages d'erreur système et de tous les messages d'erreur définis par l'utilisateur du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui contiennent du texte anglais (`1033`).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, frequently asked questions
@@ -14,12 +13,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 30058e297e22ed63a9e22a4755f22c4cc35ab213
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fa90f7732b504000696ad2977ae465b392ff565
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105159"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748722"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Questions fréquentes (FAQ) pour les administrateurs de la réplication
   Les questions et réponses suivantes fournissent des indications sur une variété de tâches auxquelles les administrateurs de bases de données répliquées sont confrontés.  
@@ -122,7 +121,7 @@ ms.locfileid: "48105159"
   
 -   La définition d'un objet, par exemple une instruction CREATE TABLE. Par défaut, la réplication copie les définitions de tous les objets répliqués sur l'Abonné.  
   
--   L’espace de noms dans lequel un objet est créé : \<Base de données>.\<Schéma>.\<Objet>. Les schémas sont définis à l'aide de l'instruction CREATE SCHEMA.  
+-   L’espace de noms dans lequel un objet est créé : \<Base de données >. \<Schéma >. \<Objet >. Les schémas sont définis à l'aide de l'instruction CREATE SCHEMA.  
   
 -   La réplication fonctionne par défaut de la façon suivante dans l'Assistant Nouvelle publication quant aux schémas et à la propriété des objets :  
   
@@ -185,7 +184,7 @@ ms.locfileid: "48105159"
  Commencez par supprimer l’article de la publication en utilisant [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) ou la boîte de dialogue **Propriétés de la publication - \<Publication>**, puis supprimez-le de la base de données à l’aide de `DROP <Object>`. Vous ne pouvez pas supprimer d'articles d'un instantané ou de publications transactionnelles après avoir ajouté les abonnements, vous devez d'abord supprimer les abonnements. Pour plus d’informations, consultez [Ajouter et supprimer des articles de publications existantes](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Comment puis-je ajouter ou supprimer des colonnes sur une table publiée ?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge une large variété de modifications de schéma sur les objets publiés, y compris l'ajout et la suppression de colonnes. Par exemple, si vous exécutez ALTER TABLE … DROP COLUMN sur le serveur de publication, l’instruction est répliquée vers les abonnés, puis exécutée pour supprimer la colonne. Les abonnés qui exécutent des versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] prennent en charge l'ajout et la suppression de colonnes à travers les procédures stockées [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) et [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge une large variété de modifications de schéma sur les objets publiés, y compris l'ajout et la suppression de colonnes. Par exemple, si vous exécutez ALTER TABLE ... DROP COLUMN sur le serveur de publication, l’instruction est répliquée vers les abonnés, puis exécutée pour supprimer la colonne. Les abonnés qui exécutent des versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] prennent en charge l'ajout et la suppression de colonnes à travers les procédures stockées [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) et [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="replication-maintenance"></a>Maintenance de réplication  
   

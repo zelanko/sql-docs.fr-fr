@@ -1,5 +1,5 @@
 ---
-title: Définir les Options d’emprunt d’identité (SSAS - multidimensionnel) | Documents Microsoft
+title: Définir les Options d’emprunt d’identité (SSAS - multidimensionnel) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6c11064ecc87744999c31080e6a4d57a3849f5d2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 279aff4acd671318b75988919d7625591f17812f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026156"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533815"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Définir les options d'emprunt d'identité (SSAS - Multidimensionnel)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34026156"
  Toutes les options sont disponibles dans la boîte de dialogue, mais elles ne sont pertinentes pour tous les scénarios. Utilisez les informations suivantes pour déterminer la meilleure solution pour votre scénario.  
   
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
- Sélectionnez cette option pour que le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet utiliser les informations d’identification de sécurité d’un compte d’utilisateur Windows spécifié dans ce format :  *\<nom de domaine >***\\***\<utilisateur nom du compte >*.  
+ Sélectionnez cette option pour que le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet utiliser les informations d’identification de sécurité d’un compte d’utilisateur Windows spécifié dans ce format : *\<Nom de domaine >***\\***\<nom de compte d’utilisateur >*.  
   
  Sélectionnez cette option pour utiliser une identité d'utilisateur Windows dédiée et dotée de privilèges minimaux que vous avez créée spécifiquement à des fins d'accès aux données. Par exemple, si vous créez de manière régulière un compte à usage général pour la récupération de données utilisées dans des rapports, vous pouvez spécifier ce compte ici.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34026156"
  Pour les instructions DMX OPENQUERY, les cubes locaux et les modèles d'exploration de données, les informations d'identification de l'utilisateur courant sont utilisées même si vous choisissez l'option de compte de service. L'option de compte de service n'est pas prise en charge pour les liaisons hors ligne.  
   
 > [!NOTE]  
->  Des erreurs peuvent se produire lors du traitement d'un modèle d'exploration de données d'un cube si le compte de service ne dispose pas d'autorisations d'administrateur sur l'instance Analysis Services. Pour plus d’informations, consultez [Structure d’exploration de données : problème lors du traitement si la source de données est dans un cube OLAP](http://go.microsoft.com/fwlink/?LinkId=251610).  
+>  Des erreurs peuvent se produire lors du traitement d'un modèle d'exploration de données d'un cube si le compte de service ne dispose pas d'autorisations d'administrateur sur l'instance Analysis Services. Pour plus d’informations, consultez [Structure d’exploration de données : Problème lors du traitement lors de la source de données est le Cube OLAP](http://go.microsoft.com/fwlink/?LinkId=251610).  
   
  **Utiliser les informations d'identification de l'utilisateur actuel**  
  Sélectionnez cette option afin que l'objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les informations d'identification de sécurité de l'utilisateur actuel pour les liaisons hors ligne, les instructions DMX OPENQUERY, les cubes locaux et les modèles d'exploration de données.  
@@ -76,7 +76,7 @@ ms.locfileid: "34026156"
  **Par défaut** ou **Hériter**  
  La boîte de dialogue utilise **Par défaut** pour les options d’emprunt d’identité définies au niveau de la base de données et **Hériter** pour les options d’emprunt d’identité définies au niveau de la source de données.  
   
- **Sources de données - Option Hériter**  
+ **Sources de données - Option hériter**  
   
  Au niveau de la source de données, **Hériter** spécifie qu’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] doit utiliser l’option d’emprunt d’identité de l’objet parent. Dans un modèle multidimensionnel, l'objet parent est la base de données d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le choix de l’option **Hériter** vous permet de gérer de manière centralisée les paramètres d’emprunt d’identité pour cette source de données et d’autres sources qui font partie de la même base de données. Pour que cette option soit explicite, choisissez un nom et un mot de passe d'utilisateur Windows spécifiques à la base de données. Sinon, la combinaison de **Hériter** sur la source de données et de **Par défaut** sur la base de données équivaut à utiliser l’option de compte de service.  
   
@@ -90,13 +90,13 @@ ms.locfileid: "34026156"
   
  Pour plus d’informations sur les paramètres par défaut au niveau de la base de données, consultez [Définir les propriétés de base de données multidimensionnelle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md).  
   
- **Bases de données - Option Par défaut**  
+ **Bases de données - option par défaut**  
 
  Pour les bases de données multidimensionnelles, l’option **Par défaut** signifie que l’on utilise le compte de service et l’utilisateur actuel pour les opérations d’exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer une source de données &#40;SSAS Multidimensionnel&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Définir les propriétés de Source de données & #40 ; SSAS multidimensionnel & #41 ;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
+ [Définir les propriétés de la source de données &#40;SSAS Multidimensionnel&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 
   
   

@@ -21,12 +21,12 @@ ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d94d3127a5957b1684133019cf4991cba7adbff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e8e2af3150b6c0e8663c28a1342b68be57e043d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769428"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409798"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ S'il existe des ruptures dans la séquence des LSN, indiquant qu'il existe une r
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|URL du fichier de sauvegarde.|  
-|backup_type|NVARCHAR(6)|« DB » pour la sauvegarde de base de données « LOG » pour la sauvegarde de journal|  
+|backup_type|NVARCHAR(6)|« DB » pour la base de données de sauvegarde « LOG » pour la sauvegarde du journal|  
 |expiration_date|DATETIME|Date à laquelle ce fichier doit être supprimé. Elle est déterminée en fonction de la capacité à récupérer la base de données à un point précis dans le temps au sein de la période de rétention spécifiée.|  
 |database_guid|UNIQUEIDENTIFIER|Valeur GUID pour la base de données spécifiée.  Le GUID identifie de manière unique une base de données.|  
 |first_lsn|NUMERIC(25, 0)|Numéro séquentiel dans le journal correspondant au premier enregistrement ou à l'enregistrement le plus ancien du journal dans le jeu de sauvegardes Sa valeur peut être NULL.|  
@@ -71,11 +71,11 @@ S'il existe des ruptures dans la séquence des LSN, indiquant qu'il existe une r
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert **sélectionnez** autorisations sur cette fonction.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant recense toutes les sauvegardes disponibles effectuées par la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la base de données « MyDB »  
+ L’exemple suivant répertorie toutes les sauvegardes disponibles sauvegardées par le biais [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la base de données 'MyDB'  
   
 ```  
 SELECT *   

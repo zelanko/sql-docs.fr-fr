@@ -1,24 +1,23 @@
 ---
-title: 'Étape 2 : Conversion du projet en modèle de déploiement de projet | Microsoft Docs'
+title: 'Étape 2 : Convertir le projet dans le modèle de déploiement de projet | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 459630f452458d4bbc9723133013c861619806bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfca842a547ac20365dbd79ad5ad3295fa83f75f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093929"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752551"
 ---
-# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>Étape 2 : Conversion du projet en modèle de déploiement de projet
+# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>Étape 2 : Conversion du projet en modèle de déploiement de projet
   Dans cette tâche, vous allez utiliser l'Assistant Conversion de projet Integration Services pour convertir le projet en modèle de déploiement de projet.  
   
 ### <a name="converting-the-project-to-the-project-deployment-model"></a>Conversion du projet en modèle de déploiement de projet  
@@ -52,6 +51,6 @@ ms.locfileid: "48093929"
 13. Cliquez sur l'onglet Paramètres et vérifiez que le package contient désormais un paramètre pour VarFolderName et que la valeur est le même chemin d'accès que celui spécifié pour le dossier New Sample Data du fichier de configuration de la leçon 5.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 3 : Test du package de la leçon 6](lesson-6-3-testing-the-lesson-6-package.md)  
+ [Étape 3 : Test du Package de la leçon 6](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f983b412b6ef4a91293e07b66a8a0cab6d15a71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcf15af9fb5e351dd4c965d0eb6ef520b62b65b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079439"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531370"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Éditeur de tâche d'exécution SQL (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche d'exécution SQL** pour configurer la tâche d'exécution SQL et indiquer l'instruction SQL que la tâche exécuter.  
@@ -47,7 +47,7 @@ ms.locfileid: "48079439"
 >  Lorsque la tâche d'exécution SQL utilise un gestionnaire de connexions ADO ou ODBC, la propriété **CodePage** n'est pas disponible. Si votre solution requiert l'utilisation d'une page de codes, utilisez un gestionnaire de connexions OLE DB ou ADO.NET avec la tâche d'exécution SQL.  
   
  **TypeConversionMode**  
- Lorsque vous définissez cette propriété sur `Allowed`, la tâche d’exécution SQL tente de convertir le paramètre de sortie et le type de résultats aux données de la variable les résultats de requête sont affectés. Cela s'applique au type de jeu de résultats **Ligne unique** .  
+ Lorsque vous définissez cette propriété sur `Allowed`, la tâche d'exécution SQL tente de convertir le paramètre de sortie et les résultats de la requête dans le type de données de la variable à laquelle les résultats sont affectés. Cela s'applique au type de jeu de résultats **Ligne unique** .  
   
  **ResultSet**  
  Spécifiez le type de résultats attendu par l'instruction SQL en cours d'exécution. Choisissez parmi les options suivantes : **Ligne unique**, **Ensemble de résultats complet**, **XML**ou **Aucun**.  
@@ -55,7 +55,7 @@ ms.locfileid: "48079439"
  **ConnectionType**  
  Choisissez le type de gestionnaire de connexions à utiliser pour vous connecter à la source de données. Les types de connexions disponibles sont **OLE DB**, **ODBC**, **ADO**, **ADO.NET** et **SQLMOBILE**.  
   
- **Rubriques connexes :** [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md), [Gestionnaire de connexions ODBC](connection-manager/odbc-connection-manager.md), [Gestionnaire de connexions ADO](connection-manager/ado-connection-manager.md), [Gestionnaire de connexions ADO.NET](connection-manager/ado-net-connection-manager.md), [Gestionnaire de connexions de SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md), [Gestionnaire de connexions ODBC](connection-manager/odbc-connection-manager.md), [Gestionnaire de connexions ADO](connection-manager/ado-connection-manager.md), [Gestionnaire de connexions ADO.NET](connection-manager/ado-net-connection-manager.md), [SQL Server Gestionnaire de connexions de Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Connexion**  
  Choisissez la connexion dans la liste des gestionnaires de connexions définis. Pour créer une connexion, sélectionnez \<**Nouvelle connexion...**>.  
@@ -65,11 +65,11 @@ ms.locfileid: "48079439"
   
  Selon le type de gestionnaire de connexions que la tâche d'exécution SQL utilise, vous devez utiliser des marqueurs de paramètres spécifiques dans les instructions SQL paramétrables.  
   
- **Rubriques connexes :** section relative à l'exécution des commandes SQL paramétrables dans [Execute SQL Task](control-flow/execute-sql-task.md)  
+ **Rubriques connexes :** Section des commandes SQL paramétrables en cours d’exécution [tâche d’exécution SQL](control-flow/execute-sql-task.md)  
   
  Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Définissez la source d'une instruction Transact-SQL. Sélectionnez cette valeur pour afficher l'option dynamique **SQLStatement**.|  
 |**Connexion de fichiers**|Sélectionnez un fichier qui contient une instruction Transact-SQL. Configurez cette option pour afficher l'option dynamique **FileConnection**.|  
@@ -81,7 +81,7 @@ ms.locfileid: "48079439"
  **BypassPrepare**  
  Indiquez si l'instruction SQL est préparée.  `true` ignore la préparation ; `false` prépare l'instruction SQL avant de l'exécuter. Cette option est disponible uniquement avec les connexions OLE DB qui prennent en charge la préparation.  
   
- **Rubriques connexes :**  [Exécution préparée](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
+ **Rubriques connexes :**  [Exécution préparée](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
  **Parcourir**  
  Utilisez la boîte de dialogue **Ouvrir** pour rechercher un fichier qui contient une instruction SQL. Sélectionnez un fichier dont vous voulez copier le contenu en tant qu'instruction SQL dans la propriété **SQLStatement** .  
@@ -96,24 +96,24 @@ ms.locfileid: "48079439"
   
 ### <a name="sqlsourcetype--direct-input"></a>SQLSourceType = Entrée directe  
  **SQLStatement**  
- Dans la zone des options, tapez l’instruction SQL à exécuter ou cliquez sur le bouton d’exploration (…) pour taper l’instruction SQL dans la boîte de dialogue **Entrer une requête SQL** . Vous pouvez également cliquer sur **Générer la requête** pour composer l’instruction à l’aide de la boîte de dialogue **Générateur de requêtes** .  
+ Dans la zone des options, tapez l’instruction SQL à exécuter ou cliquez sur le bouton d’exploration (...) pour taper l’instruction SQL dans la boîte de dialogue **Entrer une requête SQL**. Vous pouvez également cliquer sur **Générer la requête** pour composer l’instruction à l’aide de la boîte de dialogue **Générateur de requêtes**.  
   
- **Rubriques connexes :** [Générateur de requêtes](../../2014/integration-services/query-builder.md)  
+ **Rubriques connexes :** [Générateur de requêtes](../../2014/integration-services/query-builder.md)  
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Connexion de fichiers  
  **FileConnection**  
  Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions file](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
  Sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
   
- **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
+ **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [ajouter une Variable](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche SQL exécution &#40;Page mappage de paramètre&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
  [Éditeur de tâche SQL exécution &#40;Page ensemble de résultats&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   

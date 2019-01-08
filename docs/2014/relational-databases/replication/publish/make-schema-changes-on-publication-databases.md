@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
@@ -18,12 +17,12 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd2ea10d145e52150d3a34a8f1b668152922ddb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203029"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815431"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifier le schéma dans les bases de données de publication
   La réplication prend en charge une grande variété de modifications de schéma pour les objets publiés. Lorsque vous effectuez l'une des modifications de schémas qui suit sur l'objet publié approprié sur un serveur de publication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cette modification est propagée par défaut sur tous les Abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -58,7 +57,7 @@ ms.locfileid: "48203029"
   
 -   Les modifications de schéma sont soumises aux restrictions imposées par [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Par exemple, ALTER TABLE ne vous permet pas de modifier les colonnes clés primaire.  
   
--   Le mappage de type de données est effectué uniquement pour l'instantané initial. Les modifications de schéma ne sont pas mappées aux versions précédentes des types de données. Par exemple, si l’instruction `ALTER TABLE ADD datetime2 column` est utilisée dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], le type de données n’est pas traduit par `nvarchar` pour [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] abonnés. Dans certains cas, les modifications de schéma sont bloquées sur le serveur de publication.  
+-   Le mappage de type de données est effectué uniquement pour l'instantané initial. Les modifications de schéma ne sont pas mappées aux versions précédentes des types de données. Par exemple, si l'instruction `ALTER TABLE ADD datetime2 column` est utilisée dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], le type de données n'est pas traduit par `nvarchar` pour les Abonnés [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Dans certains cas, les modifications de schéma sont bloquées sur le serveur de publication.  
   
 -   Si la configuration d'une publication autorise la propagation des modifications de schéma, celles-ci sont propagées quelle que soit la configuration de l'option de schéma associée pour un article de la publication. Si, par exemple, vous décidez de ne pas répliquer les contraintes de clé étrangère pour un article de table mais qu'ensuite vous émettez une commande ALTER TABLE qui ajoute une clé étrangère sur le serveur de publication, la clé étrangère est ajoutée à la table sur l'Abonné. Pour éviter cela, désactivez la propagation des modifications de schéma avant d'émettre la commande ALTER TABLE.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48203029"
   
 -   Pour inclure une colonne existante dans une publication existante, utilisez [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) ou la boîte de dialogue **Propriétés de la publication - \<Publication>**.  
   
-     Pour plus d’informations, voir [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Cette opération exige la réinitialisation des abonnements.  
+     Pour plus d'informations, voir [Définir et modifier un filtre de colonne](define-and-modify-a-column-filter.md). Cette opération exige la réinitialisation des abonnements.  
   
 -   L'ajout d'une colonne d'identité à une table publiée n'est pas pris en charge, car la nouvelle colonne peut entraîner une non-convergence quand la colonne est répliquée vers l'Abonné. Les valeurs de la colonne d'identité sur l'Abonné dépendent de l'ordre dans lequel les lignes sont physiquement stockées dans la table affectée. Les lignes sont susceptibles d'être stockées différemment sur l'Abonné ; la valeur de la colonne d'identité peut donc être différente pour les mêmes lignes.  
   

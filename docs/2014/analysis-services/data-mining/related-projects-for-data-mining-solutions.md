@@ -11,12 +11,12 @@ ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a99d28697a25e2b8fc6d1550765e03e52a8fdc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106869"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400653"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projets connexes pour des solutions d'exploration de données
   Une solution d'exploration de données requiert au minimum le projet d'exploration de données, lequel définit les sources de données, les vues de source de données, ainsi que les structures et modèles d'exploration de données. Toutefois, lorsque les modèles d'exploration de données sont utilisés dans les prises de décision quotidiennes, il est important que l'exploration de données soit intégrée à l'autre partie d'une solution d'analyse prédictive, qui peut inclure ces processus et composants :  
@@ -162,7 +162,7 @@ ms.locfileid: "48106869"
   
  Pour plus d’informations, consultez [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- La version d'un mot stocké après l'indexation de texte intégral est un jeton au format compressé. Les requêtes suivantes de l'index de recherche en texte intégral génèrent plusieurs formes flexionnelles d'un mot particulier selon les règles d'une langue donnée pour s'assurer que toutes les correspondances potentielles sont effectuées. Par exemple, même si le jeton qui est stocké est « courir », le moteur de requête recherche également les termes « course », « couru » et « coureur », car ils correspondent à des variations morphologiques dérivées du mot racine « courir ».  
+ La version d'un mot stocké après l'indexation de texte intégral est un jeton au format compressé. Les requêtes suivantes de l'index de recherche en texte intégral génèrent plusieurs formes flexionnelles d'un mot particulier selon les règles d'une langue donnée pour s'assurer que toutes les correspondances potentielles sont effectuées. Par exemple, bien que le jeton qui est stocké est « courir », le moteur de requête recherche également les termes « running », « ran » et « coureur », car il s’agit des variations morphologiques dérivées du mot racine « exécuter ».  
   
  Vous pouvez également créer et générer un dictionnaire des synonymes utilisateur pour stocker des synonymes et obtenir de meilleurs résultats de recherche ou un meilleur classement des termes. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données. Pour plus d’informations, consultez [Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
@@ -203,6 +203,6 @@ ms.locfileid: "48106869"
   
 ## <a name="see-also"></a>Voir aussi  
  [Solutions de modèles multidimensionnels &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Solutions de modèles tabulaires &#40;SSAS tabulaire&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [Solutions de modèles tabulaires &#40;SSAS Tabulaire&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

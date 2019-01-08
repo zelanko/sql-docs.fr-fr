@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59351e8ec30cf02dc74b2d47d6ef160cd5aff74e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739907"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266100"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -208,18 +208,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |177|Audit Server Principal Management Event|Intervient lors de la création, de la modification ou de la suppression de principaux du serveur.|  
 |178|Audit Database Operation Event|Se produit lorsque surviennent diverses opérations dans une base de données, tel qu'un point de contrôle ou une notification de requête d'abonnement.|  
 |180|Audit Database Object Access Event|Se produit lors de l'accès à des objets de base de données, tels que des schémas.|  
-|181|TM: Begin Tran starting|Intervient lors du démarrage d'une requête BEGIN TRANSACTION.|  
-|182|TM: Begin Tran completed|Intervient lors de l'achèvement d'une requête BEGIN TRANSACTION.|  
-|183|TM: Promote Tran starting|Intervient lors du démarrage d'une requête PROMOTE TRANSACTION.|  
-|184|TM: Promote Tran completed|Intervient lors de l'achèvement d'une requête PROMOTE TRANSACTION.|  
-|185|TM: Commit Tran starting|Intervient lors du démarrage d'une requête COMMIT TRANSACTION.|  
-|186.|TM: Commit Tran completed|Intervient lors de l'achèvement d'une requête COMMIT TRANSACTION.|  
-|187|TM: Rollback Tran starting|Intervient lors du démarrage d'une requête ROLLBACK TRANSACTION.|  
-|188|TM: Rollback Tran completed|Intervient lors de l'achèvement d'une requête ROLLBACK TRANSACTION.|  
+|181|Classe d'événements TM: BEGIN Tran starting|Intervient lors du démarrage d'une requête BEGIN TRANSACTION.|  
+|182|Classe d'événements TM: BEGIN Tran terminée|Intervient lors de l'achèvement d'une requête BEGIN TRANSACTION.|  
+|183|Classe d'événements TM: Promote Tran starting|Intervient lors du démarrage d'une requête PROMOTE TRANSACTION.|  
+|184|Classe d'événements TM: Promote Tran terminée|Intervient lors de l'achèvement d'une requête PROMOTE TRANSACTION.|  
+|185|Classe d'événements TM: COMMIT Tran starting|Intervient lors du démarrage d'une requête COMMIT TRANSACTION.|  
+|186.|Classe d'événements TM: COMMIT Tran terminée|Intervient lors de l'achèvement d'une requête COMMIT TRANSACTION.|  
+|187|Classe d'événements TM: ROLLBACK Tran starting|Intervient lors du démarrage d'une requête ROLLBACK TRANSACTION.|  
+|188|Classe d'événements TM: ROLLBACK Tran terminée|Intervient lors de l'achèvement d'une requête ROLLBACK TRANSACTION.|  
 |189|Lock : Timeout (timeout > 0)|Se produit lors de l'expiration d'une demande de verrou sur une ressource, telle qu'une page.|  
-|190|Progress Report: Online Index Operation|Indique la progression d'une opération de génération d'index en ligne pendant l'exécution du processus de création.|  
-|191|TM: Save Tran starting|Intervient lors du démarrage d'une requête SAVE TRANSACTION.|  
-|192|TM: Save Tran completed|Intervient lors de l'achèvement d'une requête SAVE TRANSACTION.|  
+|190|Progress Report: Opération d’Index en ligne|Indique la progression d'une opération de génération d'index en ligne pendant l'exécution du processus de création.|  
+|191|Classe d'événements TM: Enregistrer Tran starting|Intervient lors du démarrage d'une requête SAVE TRANSACTION.|  
+|192|Classe d'événements TM: Save Tran terminée|Intervient lors de l'achèvement d'une requête SAVE TRANSACTION.|  
 |193|Background Job Error|Se produit lorsque le travail en arrière-plan s'est terminé anormalement.|  
 |194|OLEDB Provider Information|Intervient lorsqu'une requête distribuée s'exécute et collecte des informations correspondant à la connexion du fournisseur.|  
 |195|Mount Tape|Se produit lorsqu'une demande de montage de bande est reçue.|  
@@ -233,7 +233,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |212|Bitmap Warning|Indique quand les filtres bitmap ont été désactivés dans une requête.|  
 |213|Database Suspect Data Page|Indique qu’une page est ajoutée à la **suspect_pages** table **msdb**.|  
 |214|CPU Threshold Exceeded|Indique quand le gouverneur de ressources détecte qu'une requête a dépassé la valeur de seuil de l'UC (REQUEST_MAX_CPU_TIME_SEC).|  
-|215|Indique quand un déclencheur LOGON ou une fonction classifieur du gouverneur de ressources commence à s'exécuter.|Indique quand un déclencheur LOGON ou une fonction classifieur du gouverneur de ressources commence à s'exécuter.|  
+|215|PreConnect:Starting|Indique quand un déclencheur LOGON ou une fonction classifieur du gouverneur de ressources commence à s'exécuter.|  
 |216|PreConnect:Completed|Indique quand un déclencheur LOGON ou la fonction classifieur du gouverneur de ressources a été exécutée.|  
 |217|Plan Guide Successful|Indique que SQL Server a pu produire un plan d'exécution pour une requête ou un lot qui contenait un repère de plan.|  
 |218|Plan Guide Unsuccessful|Indique que SQL Server n'a pas pu produire un plan d'exécution pour une requête ou un lot qui contenait un repère de plan. SQL Server a tenté de générer un plan d'exécution pour cette requête ou ce lot sans appliquer le repère de plan. Un repère de plan non valide peut être à l'origine de ce problème. Vous pouvez valider le repère de plan à l'aide de la fonction système sys.fn_validate_plan_guide.|  
@@ -320,7 +320,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Le tableau suivant illustre l’interaction entre **@on** et **@columnid**.  
   
-|@on|@columnid|Résultats|  
+|@on|@columnid|Résultat|  
 |---------|---------------|------------|  
 |ON (**1**)|NULL|Événement activé (ON).<br /><br /> Toutes les colonnes sont effacées.|  
 ||NOT NULL|La colonne est activée (ON) pour l'événement spécifié.|  
@@ -357,7 +357,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Pour obtenir un exemple d’utilisation de procédures stockées de trace, consultez [Créer une trace &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'utilisateur doit disposer de l'autorisation ALTER TRACE.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -12,12 +12,12 @@ ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 8344d307f32187f8efad484b56748368dbd569ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40e591615850d16994c4023b63a354aa2061da59
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759577"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204288"
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>Connexion à SQL Server (OracleToSQL)
 Pour migrer des bases de données Oracle à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 R2 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, vous devez vous connecter à une de ces cibles des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque vous vous connectez, SSMA récupère les métadonnées sur toutes les bases de données dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et affiche les métadonnées de base de données dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées. SSMA stocke des informations sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous êtes connecté à, mais ne stocke pas les mots de passe.  
@@ -71,7 +71,7 @@ Lorsque vous définissez les propriétés de connexion, vous spécifiez égaleme
   
 6.  Pour une connexion sécurisée, les deux contrôles sont ajoutés, le **chiffrer la connexion** et **TrustServerCertificate** cases à cocher. Uniquement lorsque **chiffrer la connexion** est activée, le **TrustServerCertificate** case à cocher est visible. Lorsque **chiffrer la connexion** est vérifiée (true) et **TrustServerCertificate** est désactivée (false), il valide le certificat SSL SQL Server. La validation du certificat de serveur est une partie de la négociation SSL qui garantit qu'il s'agit du serveur correct avec lequel établir une connexion. Pour ce faire, un certificat doit être installé sur le côté client, ainsi que sur le côté serveur.  
   
-7.  Cliquez sur **Se connecter**.  
+7.  Cliquer sur **Se connecter**.  
   
 **Compatibilité de Version supérieure**  
   
@@ -91,8 +91,8 @@ Lorsque vous définissez les propriétés de connexion, vous spécifiez égaleme
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Oui||
 |Base de données SQL Azure||||||Oui|
   
-> [!IMPORTANT]  
-> Conversion des objets de base de données est effectuée selon le type de projet, mais pas conformément à la version de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous êtes connecté. Dans le cas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] projet 2005, Conversion est effectuée conformément [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 même si vous êtes connecté à une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016).  
+> [!IMPORTANT]
+> Conversion des objets de base de données est effectuée selon le type de projet, mais pas conformément à la version de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous êtes connecté. Dans le cas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] projet 2005, Conversion est effectuée conformément [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 même si vous êtes connecté à une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016).  
   
 ## <a name="synchronizing-sql-server-metadata"></a>Synchronisation des métadonnées du serveur SQL  
 Métadonnées relatives à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données n’est pas automatiquement mis à jour. Les métadonnées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées est un instantané des métadonnées lorsque vous avez connecté tout d’abord à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou la dernière fois que vous avez mis à jour manuellement des métadonnées. Vous pouvez mettre à jour manuellement les métadonnées pour toutes les bases de données, ou pour n’importe quel base de données unique ou un objet de base de données.  

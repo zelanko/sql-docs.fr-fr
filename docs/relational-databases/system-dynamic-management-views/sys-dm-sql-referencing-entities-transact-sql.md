@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 920729184dff2b770eb4cc702a437c6771e3ac91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf1f5b633b432d24ea143d857dcd7fbdf72968fd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754737"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204538"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47754737"
   
 -   Déclencheurs DDL au niveau du serveur  
   
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -105,27 +105,27 @@ sys.dm_sql_referencing_entities (
 |Table de charge de travail|Oui*|Oui|  
 |Affichage|Oui|Oui|  
 |Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Oui|Oui|  
-|Procédure stockée CLR|non|Oui|  
+|Procédure stockée CLR|Non|Oui|  
 |Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Oui|Oui|  
-|Fonction CLR définie par l'utilisateur|non|Oui|  
-|Déclencheur CLR (DML et DDL)|non|non|  
-|Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|non|  
-|Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|non|  
-|Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|non|  
-|Procédures stockées étendues|non|Oui|  
-|File d'attente|non|Oui|  
-|Synonyme|non|Oui|  
-|Type (alias et type CLR défini par l'utilisateur)|non|Oui|  
-|Collection de schémas XML|non|Oui|  
-|Fonction de partition|non|Oui|  
+|Fonction CLR définie par l'utilisateur|Non|Oui|  
+|Déclencheur CLR (DML et DDL)|Non|Non|  
+|Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
+|Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
+|Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
+|Procédures stockées étendues|Non|Oui|  
+|File d'attente|Non|Oui|  
+|Synonyme|Non|Oui|  
+|Type (alias et type CLR défini par l'utilisateur)|Non|Oui|  
+|Collection de schémas XML|Non|Oui|  
+|Fonction de partition|Non|Oui|  
   
  \* Une table est suivie comme entité de référence uniquement lorsqu’il fait référence à un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, de type défini par l’utilisateur ou de collection de schémas XML dans la définition d’une colonne calculée, une contrainte CHECK ou une contrainte par défaut.  
   
  ** Les procédures stockées numérotées avec une valeur entière supérieure à 1 ne sont pas suivies en tant qu'entité de référence ou référencée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
   
-### <a name="includesskatmaiincludessskatmai-mdmd--includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] – [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+### <a name="includesskatmaiincludessskatmai-mdmd---includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
   
 -   Requiert l'autorisation CONTROL sur l'objet référencé. Lorsque l'entité référencée est une fonction de partition, l'autorisation CONTROL sur la base de données est requise.  
   
@@ -154,7 +154,7 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Retour des entités qui font référence à un type donné  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>b. Retour des entités qui font référence à un type donné  
  L'exemple suivant retourne les entités qui référencent le type d'alias `dbo.Flag`. Le jeu de résultats montre que deux procédures stockées utilisent ce type. Le `dbo.Flag` type est également utilisé dans la définition de plusieurs colonnes dans le `HumanResources.Employee` table ; Toutefois, étant donné que le type n’est pas dans la définition d’une colonne calculée, une contrainte CHECK ou une contrainte par défaut dans la table, ne retourne aucune ligne pour le `HumanResources.Employee`table.  
   
 ```sql  

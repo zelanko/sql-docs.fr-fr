@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a9df35b685d9814636acaa194d5cb30741e9b994
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd7098e2a92ab2a18249e6566e1711637d2489ea
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122755"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807441"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Créer un package de déploiement de modèle à l'aide de MDSModelDeploy
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], utilisez l’outil MDSModelDeploy pour créer un package. Selon les commandes spécifiées, le package peut contenir :  
   
--   des objets de modèle uniquement ;  
+-   Des objets de modèle uniquement.  
   
 -   Des objets de modèle et des données.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48122755"
   
  Un modèle doit exister pour que vous puissiez créer un package. Pour plus d’informations, consultez [Créer un modèle &#40;Master Data Services&#41;](create-a-model-master-data-services.md).  
   
- Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+ Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Pour créer un package de déploiement de modèle à l'aide de MDSModelDeploy  
   
@@ -93,7 +92,7 @@ ms.locfileid: "48122755"
   
      Si vous ne souhaitez pas inclure de données, n’utilisez pas les commutateurs `-version` et `-includedata` .  
   
-6.  Appuyez sur Entrée. Lorsque le package est créé, un message indiquant que l'opération de MDSModelDeploy est terminée s'affiche.  
+6.  Appuyez sur Entrée. Quand le package est créé, un message indiquant que l’opération de MDSModelDeploy est terminée s’affiche.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
   

@@ -18,12 +18,12 @@ ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 909fd7c82e91f90b24b643a555ddd8d8d93c639f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734097"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202565"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  Si vous tentez de supprimer ou de modifier une fonction, une procédure stockée ou un déclencheur DML référencé par un repère de plan, qu'il soit activé ou désactivé, une erreur se produit. Une erreur se produit également si vous tentez de supprimer une table dont un des déclencheurs est référencé par un repère de plan.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Les repères de plan ne peuvent pas être utilisés dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Les repères de plan sont visibles dans n'importe quelle édition. En outre, vous pouvez attacher une base de données qui contient des repères de plan à n'importe quelle édition. Les repères de plan demeurent intacts lorsque vous restaurez ou attachez une base de données à une version mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous devez vérifier les avantages des repères de plan dans chaque base de données après avoir réalisé une mise à niveau de serveur.  
   
 ## <a name="plan-guide-matching-requirements"></a>Paramétrage de la mise en correspondance du repère de plan  
@@ -142,7 +142,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>Effet du repère de plan sur le cache du plan  
  La création d'un repère de plan sur un module supprime le plan de requête pour ce module du cache du plan. La création d'un repère de plan de type OBJET ou SQL sur un lot supprime le plan de requête pour un lot qui a la même valeur de hachage. La création d'un repère de plan de type TEMPLATE supprime tous les lots comprenant une instruction unique du cache du plan dans cette base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour créer un repère de plan de type OBJECT, il vous faut une autorisation ALTER sur l'objet référencé. Pour créer un repère de plan de type SQL ou TEMPLATE, il vous faut une autorisation ALTER pour la base de données active.  
   
 ## <a name="examples"></a>Exemples  
@@ -188,7 +188,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (OPTIMIZE FOR (@Country_region = N''US''))';  
 ```  
   
-### <a name="b-creating-a-plan-guide-of-type-sql-for-a-stand-alone-query"></a>B. Création d'un repère de plan de type SQL pour une requête autonome  
+### <a name="b-creating-a-plan-guide-of-type-sql-for-a-stand-alone-query"></a>b. Création d'un repère de plan de type SQL pour une requête autonome  
  L'exemple suivant crée un repère de plan à mettre en correspondance avec une requête dans un lot soumis par une application qui utilise la procédure stockée système sp_executesql.  
   
  Voici le traitement :  

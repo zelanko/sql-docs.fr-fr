@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, updategrams
@@ -22,12 +20,12 @@ ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f9ea8423567f7ad8f5dcfff4ee0c57d37c87fe98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 135ca9d30b6baa9d5f358409c9a49fb3d0fc61e2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112941"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772161"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Spécification d'un schéma de mappage annoté dans un code de mise à jour (updategram) (SQLXML 4.0)
   Cette rubrique explique comment le schéma de mappage (XSD ou XDR) spécifié dans un code de mise à jour est utilisé pour traiter les mises à jour. Dans une mise à jour, vous pouvez fournir le nom d’un schéma de mappage annoté à utiliser lors du mappage des éléments et attributs dans la mise à jour aux tables et colonnes dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Lorsqu'un schéma de mappage est spécifié dans un code de mise à jour, les noms d'élément et d'attribut spécifiés dans le code de mise à jour doivent être mappés aux éléments et aux attributs dans le schéma de mappage.  
@@ -114,7 +112,7 @@ ms.locfileid: "48112941"
    </Schema>   
 ```  
   
-### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Insertion d'un enregistrement à l'aide de la relation parent-enfant spécifiée dans le schéma de mappage  
+### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>b. Insertion d'un enregistrement à l'aide de la relation parent-enfant spécifiée dans le schéma de mappage  
  Les éléments du schéma peuvent être liés. Le  **\<SQL : Relationship >** élément spécifie la relation parent-enfant entre les éléments de schéma. Ces informations sont utilisées pour mettre à jour les tables correspondantes qui ont une relation clé primaire/clé étrangère.  
   
  Le schéma de mappage suivant (SampleSchema.xml) se compose de deux éléments,  **\<ordre >** et  **\<OD >**:  

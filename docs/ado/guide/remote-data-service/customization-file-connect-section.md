@@ -14,12 +14,12 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb493378240f8c536b0af1c1b0ff5cf3bc93c042
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d9b891d4c8196dbac8fd7e557abc17f15bafbe0f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558536"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545219"
 ---
 # <a name="customization-file-connect-section"></a>Fichier de personnalisation, section connect
 Le comportement par défaut du gestionnaire consiste à refuser toutes les connexions. Le **connecter** section indique les exceptions à ce comportement. Par exemple, si tous les **connecter** sections sont absents ou vides, puis par défaut aucune connexion n’a pu être établie.  
@@ -59,7 +59,7 @@ connectionString
 |**Se connecter**|Une chaîne littérale qui indique qu’il est une entrée de chaîne de connexion.|  
 |***connectionString***|Chaîne qui remplace la chaîne de connexion client global.|  
 |**Accès**|Une chaîne littérale qui indique qu’il est une entrée d’accès.|  
-|***accessRight***|L’un des droits d’accès suivants :<br /><br /> -   **NoAccess** : utilisateur ne peut pas accéder à la source de données.<br />-   **ReadOnly** : l’utilisateur peut lire la source de données.<br />-   **Lecture/écriture** : utilisateur capable de lire ou écrire dans la source de données.|  
+|***accessRight***|L’un des droits d’accès suivants :<br /><br /> -   **NoAccess** -utilisateur ne peut pas accéder à la source de données.<br />-   **ReadOnly** -l’utilisateur peut lire la source de données.<br />-   **Lecture/écriture** -utilisateur capable de lire ou écrire dans la source de données.|  
   
  Si vous souhaitez autoriser toute connexion (en le désactivant, le comportement du gestionnaire par défaut), définissez l’entrée d’accès le **connecter par défaut** section à `Access=ReadWrite`et supprimez ou commentez à n’importe quel autre **connecter** *identificateur* section.  
   

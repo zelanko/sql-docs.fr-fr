@@ -1,5 +1,5 @@
 ---
-title: MemberToStr (MDX) | Documents Microsoft
+title: MemberToStr (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9bd0b59cca8560ae615e7044f13161a01f26835b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ff7ffb1b57c8af38e1b2eeebc64f2a3e753fc5b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742098"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528470"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 
 
-  Retourne une chaîne au format MDX correspondant au membre spécifié.  
+  Retourne une chaîne au format d’expression multidimensionnelle MDX qui correspond à un membre spécifié.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -29,11 +29,11 @@ MemberToStr(Member_Expression)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Argument*  
+ *Member_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction retourne une chaîne qui contient le nom unique d'un membre. Elle est utilisée habituellement pour transmettre le nom unique d'un membre à une fonction externe.  
+ Cette fonction retourne une chaîne qui contient le nom unique d'un membre. Il est généralement utilisé pour transmettre le nom unique d’un membre vers une fonction externe.  
   
 ## <a name="example"></a>Exemple  
  L'exemple ci-dessous retourne la chaîne [Geography].[Geography].[Country].&[United States] :  
@@ -47,6 +47,6 @@ MemberToStr(Member_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

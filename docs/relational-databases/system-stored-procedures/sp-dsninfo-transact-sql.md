@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_dsninfo
@@ -17,12 +16,12 @@ ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93b8fb31c89d48a3281e5d5b102e94f95e5f2855
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2836db0eef25c21861ec7b2d766f1195d250f20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828169"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817731"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  [  **@infotype =**] **'***type_info***'**  
  Est le type d’informations à retourner. Si *type_info* n’est pas spécifié ou si NULL est spécifié, tous les types d’informations sont retournées. *type_info* est **varchar (128)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**DBMS_NAME**|Spécifie le nom du fournisseur de la source de données.|  
 |**DBMS_VERSION**|Spécifie la version de la source de données.|  
@@ -65,7 +64,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  [  **@dso_type=**] *type_dso*  
  Est le type de source de données. *type_dso* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (par défaut)|Source de données ODBC|  
 |**3**|Source de données OLE DB|  
@@ -85,7 +84,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
  **sp_dsninfo** récupère ODBC ou OLE DB informations de source de données qui indique si la base de données peut être utilisé pour la réplication ou l’interrogation.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_dsninfo**.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -18,12 +18,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12201091caba40e145e6848fe25eef3b02b6b06a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d573faebbbfcaf8a501a80aa093584af7fa0307
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221039"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515853"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemples d'importation et d'exportation en bloc de documents XML (SQL Server)
     
@@ -46,7 +46,7 @@ ms.locfileid: "48221039"
   
 -   A. [L’importation de données XML comme un flux d’octets binaires en bloc](#binary_byte_stream)  
   
--   B. [L’importation de données XML dans une ligne existante en bloc](#existing_row)  
+-   b. [L’importation de données XML dans une ligne existante en bloc](#existing_row)  
   
 -   C. [Importation des données XML à partir d’un fichier qui contient une DTD en bloc](#file_contains_dtd)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48221039"
 -   E. [Exportation des données XML en bloc](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. Importation en bloc de données XML sous forme de flux d'octets binaires  
- Si vous importez en bloc des données XML à partir d'un fichier contenant la déclaration d'encodage à appliquer, spécifiez l'option SINGLE_BLOB dans la clause OPENROWSET(BULK…). Cette option permet de s’assurer que l’analyseur XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importe les données selon le schéma d’encodage spécifié dans la déclaration XML.  
+ Si vous importez en bloc des données XML à partir d’un fichier contenant la déclaration d’encodage à appliquer, spécifiez l’option SINGLE_BLOB dans la clause OPENROWSET(BULK...). Cette option permet à l'analyseur XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'importer les données conformément au schéma d'encodage spécifié dans la déclaration XML.  
   
 #### <a name="sample-table"></a>Exemple de table  
  Pour tester l'exemple A, créez la table d'exemple `T`.  
@@ -151,7 +151,7 @@ GO
   
  Pour résoudre ce problème, vous pouvez importer des données XML à partir d'un fichier de données qui contient une DTD à l'aide de la fonction `OPENROWSET(BULK...)` et en spécifiant l'option `CONVERT` dans la clause `SELECT` de la commande. La syntaxe de base pour la commande est la suivante :  
   
- `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
+ `INSERT ... SELECT CONVERT(...) FROM OPENROWSET(BULK...)`  
   
 #### <a name="sample-data-file"></a>Fichier de données d'exemple  
  Avant de pouvoir tester cet exemple d’importation en bloc, créez un fichier (`C:\temp\Dtdfile.xml`) qui contient l’instance d’exemple suivant :  

@@ -14,17 +14,17 @@ ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f3c06bbb9a8390b6ec41aa3e2233feeb10b8ce5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187759"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353005"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client expose les champs de descripteur spécifiques au pilote pour le descripteur de ligne implémentation (IRD) uniquement. Dans le descripteur IRD, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] champs de descripteur sont référencés par le biais des attributs de colonne spécifiques aux pilotes. Pour plus d’informations sur la liste complète des champs de descripteur spécifiques au pilote disponibles, consultez [SQLColAttribute](sqlcolattribute.md).  
+  Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client expose uniquement les champs de descripteur spécifiques au pilote pour le descripteur de ligne d'implémentation (IRD). Dans le descripteur IRD, les champs de descripteur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont référencés par le biais d'attributs de colonne spécifiques aux pilotes. Pour obtenir une liste complète des champs de descripteur spécifiques au pilote disponibles, consultez [SQLColAttribute](sqlcolattribute.md).  
   
- Les champs de descripteur qui contiennent des chaînes d'identificateur de colonne sont souvent des chaînes de longueur nulle. Toutes les valeurs des champs de descripteur spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont en lecture seule.  
+ Les champs de descripteur qui contiennent des chaînes d'identificateur de colonne sont souvent des chaînes de longueur nulle. Toutes les valeurs des champs de descripteur spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sont en lecture seule.  
   
  Comme les attributs récupérés avec SQLColAttribute, les champs de descripteur que les attributs au niveau des lignes de rapport (tels que SQL_CA_SS_COMPUTE_ID) sont signalés pour toutes les colonnes du jeu de résultats.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48187759"
  SQLGetDescField peut être utilisé pour obtenir des valeurs pour les attributs étendus des paramètres table et les colonnes de paramètre table. Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>Prise en charge par SQLGetDescField des fonctionnalités de date et heure améliorées  
- Pour plus d’informations sur les champs de descripteur disponibles avec les types de la nouvelle date/heure, consultez [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Pour plus d'informations sur les champs de descripteur disponibles avec les nouveaux types date/heure, consultez [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
  Pour plus d’informations, consultez [améliorations Date / heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
@@ -152,7 +152,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLGetDescField, fonction](http://go.microsoft.com/fwlink/?LinkId=59351)   
+ [SQLGetDescField, fonction](https://go.microsoft.com/fwlink/?LinkId=59351)   
  [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

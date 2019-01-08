@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_resyncmergesubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fb59abb80a1a7f8454d7aa97f227e4746675b03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 087bb377be29db42f4e58ede6cfb0a823459501b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810391"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747551"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
  [ **@resync_type** =] *resync_type*  
  Indique quand la resynchronisation doit démarrer. *resync_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0**|La synchronisation démarre après l'instantané initial. Il s'agit de l'option qui utilise le plus de ressources, dans la mesure où toutes les modifications depuis l'instantané initial sont réappliquées à l'Abonné.|  
 |**1**|La synchronisation démarre à partir de la dernière validation réussie. Toutes les générations nouvelles ou incomplètes effectuées depuis la dernière validation réussie sont réappliquées à l'Abonné.|  
@@ -80,7 +79,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
   
  La valeur **0** pour le *resync_type* paramètre, qui réapplique toutes les modifications depuis l’instantané initial, peut être gourmande en ressources, mais éventuellement moins qu’une réinitialisation complète. Par exemple, si l'instantané initial a été fourni un mois auparavant, cette valeur provoque la réapplication des données du mois écoulé. Si l'instantané contient 1 gigaoctet (Go) de données et que le nombre de modifications depuis le mois dernier correspond à 2 mégaoctets (Mo) de données, il est plus efficace de réappliquer les données que de réappliquer l'ensemble de l'instantané de 1 Go.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_resyncmergesubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.xmlindexes
@@ -12,12 +12,12 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d0b162e8eb232f605e837a42fa55d3d39dcccd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100079"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792273"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Boîte de dialogue Index XML (Visual Database Tools)
   Utilisez la boîte de dialogue **Index XML** pour créer des index pour les colonnes du type de données XML qui ne peuvent pas être indexées à l’aide de la boîte de dialogue **Index/Clés** . Chaque colonne XML peut posséder plusieurs index XML, mais le premier index créé (principal) est utilisé comme base pour les autres (secondaires). Si vous supprimez l'index XML principal, les index secondaires sont également supprimés.  
@@ -57,7 +57,7 @@ ms.locfileid: "48100079"
  Indique le nom de l'index XML. Lorsqu'un nouvel index ou une nouvelle clé sont créés, ils obtiennent un nom par défaut basé sur la table affichée dans la fenêtre active du Concepteur de tables. Vous pouvez modifier le nom à tout moment.  
   
  **Description**  
- Décrivez l’index. Pour écrire une description plus détaillée, cliquez sur **Description** , puis sur le bouton de sélection **(...)** qui apparaît à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
+ Décrivez l’index. Pour écrire une description plus détaillée, cliquez sur **Description**, puis sur le bouton de sélection (**...**) qui s’affiche à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
   
  **Catégorie Concepteur de tables**  
  Développée, elle affiche des informations sur les propriétés de cet index XML.  

@@ -20,16 +20,16 @@ ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d211fff7cdc008988dd9f984e64838c8903c6dc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61e32c11aafeaf693188a96b48ddd60728ba5bc4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813947"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203948"
 ---
 # <a name="sqldisconnect-function"></a>SQLDisconnect, fonction
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ISO 92  
+ Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
   
  **Résumé**  
  **SQLDisconnect** ferme la connexion associée à un handle de connexion spécifique.  
@@ -39,7 +39,7 @@ ms.locfileid: "47813947"
 ```  
   
 SQLRETURN SQLDisconnect(  
-     SQLHDBC     ConnectionHandle);  
+     SQLHDBC     ConnectionHandle);  
 ```  
   
 ## <a name="arguments"></a>Arguments  

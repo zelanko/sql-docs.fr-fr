@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -15,12 +15,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8296657608d2633cc57ed4b3e30a532b7a24e2b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211849"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763941"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objet Deprecated Features
   L'objet SQLServer:Deprecated Features de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un compteur permettant de contrôler les fonctionnalités désignées comme dépréciées. Dans tous les cas, le compteur fournit un nombre d'utilisations indiquant combien de fois la fonctionnalité déconseillée a été rencontrée depuis le dernier démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "48211849"
 |CREATE TRIGGER WITH APPEND|Une instruction CREATE TRIGGER avec la clause WITH APPEND a été rencontrée. Recréez à la place le déclencheur entier. Se produit une fois par utilisation dans une instruction DDL.|  
 |CREATE_DROP_DEFAULT|La syntaxe CREATE DEFAULT ou DROP DEFAULT a été rencontrée. Réécrivez la commande en utilisant l'option DEFAULT de CREATE TABLE ou ALTER TABLE. Se produit une fois par compilation.|  
 |CREATE_DROP_RULE|La syntaxe CREATE RULE a été rencontrée. Réécrivez la commande en utilisant des contraintes. Se produit une fois par compilation.|  
-|Types de données text, ntext ou image|Un type de données `text`, `ntext` ou `image` a été rencontré. Réécrire les applications pour utiliser le `varchar(max)` type de données et supprimé `text`, `ntext`, et `image` syntaxe du type de données. Se produit une fois par requête.|  
+|Types de données text, ntext ou image|Un type de données `text`, `ntext` ou `image` a été rencontré. Réécrivez les applications de manière à utiliser le type de données `varchar(max)` et à supprimer les types de données `text`, `ntext` et `image` de la syntaxe. Se produit une fois par requête.|  
 |Niveau de compatibilité 80 de la base de données|Nombre total de fois où le niveau de compatibilité 80 a été appliqué à une base de données. Projetez de mettre à niveau la base de données et l'application avant la prochaine version. Se produit également lorsqu’une base de données présentant le niveau de compatibilité 80 est démarrée.|  
 |Niveau de compatibilité 90 de la base de données|Nombre total de fois où le niveau de compatibilité 90 a été appliqué à une base de données. Projetez de mettre à niveau la base de données et l'application avant la prochaine version. Se produit également lorsqu'une base de données ayant le niveau de compatibilité 90 est démarrée.|  
 |DATABASE_MIRRORING|Des références à la fonctionnalité de mise en miroir de bases de données ont été rencontrées. Prévoyez d'effectuer une mise à niveau vers des groupes de disponibilité AlwaysOn, ou si vous exécutez une édition de SQL Server qui ne prend pas en charge les groupes de disponibilité AlwaysOn, planifiez une migration vers la copie des journaux de transaction.|  
@@ -112,14 +112,14 @@ ms.locfileid: "48211849"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Des références à la fonctionnalité déconseillée sys.numbered_procedure_parameters ont été rencontrées. Ne pas utiliser. Se produit une fois par compilation.|  
 |numbered_procedures|Des références à la fonctionnalité déconseillée sys.numbered_procedures ont été rencontrées. Ne pas utiliser. Se produit une fois par compilation.|  
-|Ancien style RAISEERROR|La syntaxe RAISERROR déconseillée (Format : RAISERROR entier chaîne) a été rencontrée. Réécrivez l'instruction en utilisant la syntaxe RAISERROR actuelle. Se produit une fois par compilation.|  
+|Ancien style RAISEERROR|L’instruction RAISERROR déconseillée (Format : Syntaxe RAISERROR entier chaîne) a été rencontrée. Réécrivez l'instruction en utilisant la syntaxe RAISERROR actuelle. Se produit une fois par compilation.|  
 |OLEDB pour les connexions ad hoc|Le fournisseur SQLOLEDB n'est pas pris en charge. Utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour les connexions ad hoc.|  
 |PERMISSIONS|Des références à la fonction intrinsèque PERMISSIONS ont été rencontrées. Interrogez à la place sys.fn_my_permissions. Se produit une fois par requête.|  
 |ProcNums|La syntaxe déconseillée ProcNums a été rencontrée. Réécrivez les instructions de manière à supprimer ces références. Se produit une fois par compilation.|  
 |READTEXT|La syntaxe READTEXT a été rencontrée. Réécrivez les applications de manière à utiliser le type de données `varchar(max)` et à supprimer le type de données `text`. Se produit une fois par requête.|  
-|RESTORE DATABASE ou LOG WITH DBO_ONLY|La syntaxe RESTORE … WITH DBO_ONLY a été rencontrée. Utilisez plutôt RESTORE … RESTRICTED_USER.|  
-|RESTORE DATABASE ou LOG WITH MEDIAPASSWORD|La syntaxe RESTORE … WITH MEDIAPASSWORD a été rencontrée. WITH MEDIAPASSWORD fournit un faible niveau de sécurité et doit être supprimé.|  
-|RESTORE DATABASE ou LOG WITH PASSWORD|La syntaxe RESTORE … WITH PASSWORD a été rencontrée. WITH PASSWORD fournit un faible niveau de sécurité et doit être supprimé.|  
+|RESTORE DATABASE ou LOG WITH DBO_ONLY|La syntaxe RESTORE ... WITH DBO_ONLY a été rencontrée. Utilisez plutôt RESTORE … RESTRICTED_USER.|  
+|RESTORE DATABASE ou LOG WITH MEDIAPASSWORD|La syntaxe RESTORE ... WITH MEDIAPASSWORD a été rencontrée. WITH MEDIAPASSWORD fournit un faible niveau de sécurité et doit être supprimé.|  
+|RESTORE DATABASE ou LOG WITH PASSWORD|La syntaxe RESTORE ... WITH PASSWORD a été rencontrée. WITH PASSWORD fournit un faible niveau de sécurité et doit être supprimé.|  
 |Le déclencheur retourne des résultats|Cet événement se produit une fois par appel de déclencheur. Réécrivez le déclencheur de manière à ce qu'il ne retourne pas de jeux de résultats.|  
 |ROWGUIDCOL|La syntaxe ROWGUIDCOL a été rencontrée. Réécrivez les instructions de manière à utiliser la syntaxe $rowguid. Se produit une fois par compilation.|  
 |SET ANSI_NULLS OFF|La syntaxe SET ANSI_NULLS OFF a été rencontrée. Supprimez cette syntaxe déconseillée. Se produit une fois par compilation.|  
@@ -156,13 +156,13 @@ ms.locfileid: "48211849"
 |sp_configure 'ft notify bandwidth (min)'|L'option ft notify bandwidth (min) de sp_configure a été rencontrée. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_configure 'locks'|L'option locks de sp_configure a été rencontrée. Les verrous ne peuvent plus être configurés. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_configure 'open objects'|L'option open objects de sp_configure a été rencontrée. Le nombre d'objets ouverts ne peut plus être configuré. Ne pas utiliser. Se produit une fois par requête.|  
-|sp_configure "priority boost"|L'option renforcement de priorité de sp_configure a été rencontrée. Ne pas utiliser. Se produit une fois par requête. À la place, utilisez l’option start /high … program.exe de Windows.|  
+|sp_configure "priority boost"|L'option renforcement de priorité de sp_configure a été rencontrée. Ne pas utiliser. Se produit une fois par requête. Utilisez à la place l’option start /high … program.exe de Windows.|  
 |sp_configure 'remote proc trans'|L'option remote proc trans de sp_configure a été rencontrée. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_configure 'set working set size'|L'option set working set size de sp_configure a été rencontrée. La taille de la plage de travail ne peut plus être configurée. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_control_dbmasterkey_password|La procédure stockée sp_control_dbmasterkey_password ne vérifie pas s'il existe une clé principale. Cette opération est autorisée à des fins de compatibilité descendante, mais affiche un avertissement. Ce comportement est déconseillé. Dans une version ultérieure, la clé principale doit exister et le mot de passe utilisé dans la procédure stockée sp_control_dbmasterkey_password doit être identique à un des mots de passe utilisés pour chiffrer la clé principale de la base de données.|  
 |sp_create_removable|La procédure sp_create_removable a été rencontrée. Utilisez à la place CREATE DATABASE. Se produit une fois par requête.|  
-|sp_db_vardecimal_storage_format|Utilisation de `vardecimal` le format de stockage a été rencontré. Utilisez à la place la compression de données.|  
-|sp_dbcmptlevel|La procédure sp_dbcmptlevel a été rencontrée. Utilisez plutôt ALTER DATABASE … SET COMPATIBILITY_LEVEL. Se produit une fois par requête.|  
+|sp_db_vardecimal_storage_format|Le format de stockage `vardecimal` a été rencontré. Utilisez à la place la compression de données.|  
+|sp_dbcmptlevel|La procédure sp_dbcmptlevel a été rencontrée. Utilisez ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Se produit une fois par requête.|  
 |sp_dbfixedrolepermission|La procédure sp_dbfixedrolepermission a été rencontrée. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_dboption|La procédure sp_dboption a été rencontrée. Utilisez à la place ALTER DATABASE et DATABASEPROPERTYEX. Se produit une fois par compilation.|  
 |sp_dbremove|La procédure sp_dbremove a été rencontrée. Utilisez à la place DROP DATABASE. Se produit une fois par requête.|  
@@ -179,7 +179,7 @@ ms.locfileid: "48211849"
 |sp_droprole|La procédure sp_droprole a été rencontrée. Utilisez à la place DROP ROLE. Se produit une fois par requête.|  
 |sp_droptype|La procédure sp_droptype a été rencontrée. Utilisez à la place DROP TYPE.|  
 |sp_dropuser|La procédure sp_dropuser a été rencontrée. Utilisez à la place DROP USER. Se produit une fois par requête.|  
-|sp_estimated_rowsize_reduction_for_vardecimal|Utilisation de `vardecimal` le format de stockage a été rencontré. Utilisez à la place la compression de données et sp_estimate_data_compression_savings.|  
+|sp_estimated_rowsize_reduction_for_vardecimal|Le format de stockage `vardecimal` a été rencontré. Utilisez à la place la compression de données et sp_estimate_data_compression_savings.|  
 |sp_fulltext_catalog|La procédure sp_fulltext_catalog a été rencontrée. Utilisez à la place CREATE/ALTER/DROP FULLTEXT CATALOG Se produit une fois par compilation.|  
 |sp_fulltext_column|La procédure sp_fulltext_column a été rencontrée. Utilisez à la place ALTER FULLTEXT INDEX. Se produit une fois par compilation.|  
 |sp_fulltext_database|La procédure sp_fulltext_database a été rencontrée. Utilisez à la place ALTER DATABASE. Se produit une fois par compilation.|  
@@ -249,13 +249,13 @@ ms.locfileid: "48211849"
 |sysusers|Des références à sysusers ont été rencontrées. Utilisez à la place sys.database_principals. Se produit une fois par compilation.|  
 |Indicateur de table sans WITH|Une instruction utilisant des indicateurs de table sans le mot clé WITH a été rencontrée. Modifiez les instructions de manière à inclure le mot clé WITH. Se produit une fois par compilation.|  
 |Option de table text in row|Des références à l'option de table 'text in row' ont été rencontrées. Utilisez à la place sp_tableoption 'large value types out of row'. Se produit une fois par requête.|  
-|TEXTPTR|Des références à la fonction TEXTPTR ont été rencontrées. Réécrire les applications pour utiliser le `varchar(max)` type de données et supprimé `text`, `ntext`, et `image` syntaxe du type de données. Se produit une fois par requête.|  
-|TEXTVALID|Des références à la fonction TEXTVALID ont été rencontrées. Réécrire les applications pour utiliser le `varchar(max)` type de données et supprimé `text`, `ntext`, et `image` syntaxe du type de données. Se produit une fois par requête.|  
-|timestamp|Nombre total d’exécutions déconseillées `timestamp` type de données a été rencontré dans une instruction DDL. Utilisez le `rowversion` à la place du type de données.|  
-|UPDATETEXT ou WRITETEXT|L'instruction UPDATETEXT ou WRITETEXT a été rencontrée. Réécrire les applications pour utiliser le `varchar(max)` type de données et supprimé `text`, `ntext`, et `image` syntaxe du type de données. Se produit une fois par requête.|  
+|TEXTPTR|Des références à la fonction TEXTPTR ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données `varchar(max)` et à supprimer les types de données `text`, `ntext` et `image` de la syntaxe. Se produit une fois par requête.|  
+|TEXTVALID|Des références à la fonction TEXTVALID ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données `varchar(max)` et à supprimer les types de données `text`, `ntext` et `image` de la syntaxe. Se produit une fois par requête.|  
+|timestamp|Nombre total des fois où le type de données `timestamp` déconseillé a été rencontré dans une instruction DDL. Utilisez à la place le type de données `rowversion`.|  
+|UPDATETEXT ou WRITETEXT|L'instruction UPDATETEXT ou WRITETEXT a été rencontrée. Réécrivez les applications de manière à utiliser le type de données `varchar(max)` et à supprimer les types de données `text`, `ntext` et `image` de la syntaxe. Se produit une fois par requête.|  
 |USER_ID|Des références à la fonction USER_ID ont été rencontrées. Utilisez à la place la fonction DATABASE_PRINCIPAL_ID. Se produit une fois par compilation.|  
 |Utilisation d'OLEDB pour les serveurs liés||  
-|Format de stockage vardecimal|Utilisation de `vardecimal` le format de stockage a été rencontré. Utilisez à la place la compression de données.|  
+|Format de stockage vardecimal|Le format de stockage `vardecimal` a été rencontré. Utilisez à la place la compression de données.|  
 |XMLDATA|La syntaxe FOR XML a été rencontrée. Utilisez la génération XSD en modes RAW et AUTO. Il n'y a aucun remplacement pour le mode explicite. Se produit une fois par compilation.|  
 |XP_API|Une instruction de procédure stockée étendue a été rencontrée. Ne pas utiliser.|  
 |xp_grantlogin|La procédure xp_grantlogin a été rencontrée. Utilisez à la place CREATE LOGIN. Se produit une fois par compilation.|  

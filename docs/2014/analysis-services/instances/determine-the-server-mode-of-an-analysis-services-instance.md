@@ -11,15 +11,15 @@ ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50ddca5c3cdb1b7e314ccc6650bbd8fcc3ed3841
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f71f7b3f8d2cb6f7bd50ef676742282ee73d540
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113439"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411676"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Déterminer le mode serveur d'une instance Analysis Services
-  Analysis Services peuvent être installés dans l'un des trois modes serveur : multidimensionnel et exploration de données (par défaut), PowerPivot pour SharePoint et tabulaire. Le mode serveur d'une instance Analysis Services est déterminé au moment de l'installation lorsque vous choisissez les options d'installation du serveur.  
+  Analysis Services peuvent être installés dans l'un des trois modes serveur : multidimensionnel et exploration de données (par défaut), PowerPivot pour SharePoint et tabulaire. Le mode serveur d'une instance Analysis Services est déterminé au moment de l'installation lorsque vous choisissez les options d'installation du serveur.  
   
  Le mode serveur détermine le type de solution que vous créez et déployez. Si vous n'avez pas installé le logiciel serveur et que vous souhaitez savoir dans quel mode le serveur a été installé, vous pouvez utiliser les informations de cette rubrique pour déterminer le mode. Pour plus d’informations sur la disponibilité des fonctionnalités dans un mode spécifique, consultez [Comparaison des solutions tabulaires et multidimensionnelles &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -34,16 +34,16 @@ ms.locfileid: "48113439"
  Vous pouvez également vérifier la propriété `DeploymentMode` dans le fichier msmdsrv.ini inclus dans chaque instance Analysis Services. La valeur de cette propriété identifie le mode serveur. Les valeurs valides sont 0 (multidimensionnel), 1 (SharePoint) ou 2 (tabulaire). Vous devez être un administrateur d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (autrement dit, un membre du rôle Serveur) pour pouvoir ouvrir le fichier msmdsrv.ini. Ce fichier contient du code XML structuré. Vous pouvez utiliser le Bloc-notes ou un autre éditeur de texte pour afficher le fichier.  
   
 > [!CAUTION]  
->  Ne modifiez pas la valeur de la `DeploymentMode` propriété. La modification manuelle de la propriété après l'installation du serveur n'est pas prise en charge.  
+>  Ne modifiez pas la valeur de la propriété `DeploymentMode`. La modification manuelle de la propriété après l'installation du serveur n'est pas prise en charge.  
   
 ## <a name="about-the-deploymentmode-property"></a>À propos de la propriété DeploymentMode  
- La propriété `DeploymentMode` détermine le contexte opérationnel d'une instance de serveur Analysis Services. Cette propriété constitue le « mode serveur » dans les boîtes de dialogue, les messages et la documentation. Cette propriété est initialisée par le programme d'installation selon l'installation d'Analysis Services. Cette propriété doit être considérée uniquement comme une propriété interne, toujours à l'aide de la valeur spécifiée par le programme d'installation.  
+ La propriété `DeploymentMode` détermine le contexte opérationnel d'une instance de serveur Analysis Services. Cette propriété est appelée « mode serveur » dans la documentation, les messages et les boîtes de dialogue. Cette propriété est initialisée par le programme d'installation selon l'installation d'Analysis Services. Cette propriété doit être considérée uniquement comme une propriété interne, toujours à l'aide de la valeur spécifiée par le programme d'installation.  
   
  Les valeurs valides pour cette propriété sont les suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|0|Il s'agit de la valeur par défaut. Elle spécifie le mode multidimensionnel, utilisé pour servir les bases de données multidimensionnelles qui utilisent le stockage MOLAP, HOLAP et ROLAP, ainsi que les modèles d'exploration de données.|  
+|0|Valeur par défaut. Elle spécifie le mode multidimensionnel, utilisé pour servir les bases de données multidimensionnelles qui utilisent le stockage MOLAP, HOLAP et ROLAP, ainsi que les modèles d'exploration de données.|  
 |1|Spécifie des instances d'Analysis Services installées dans le cadre d'un déploiement PowerPivot pour SharePoint. Ne modifiez pas la propriété du mode de déploiement de l'instance Analysis Services qui fait partie d'une installation PowerPivot pour SharePoint. Les données PowerPivot ne s'exécuteront plus sur le serveur si vous modifiez le mode.|  
 |2|Spécifie le mode tabulaire utilisé pour héberger les bases de données model tabulaires qui utilisent le stockage en mémoire ou le stockage DirectQuery.|  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48113439"
  [Installer Analysis Services en mode multidimensionnel et exploration de données](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [Installation PowerPivot pour SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [Se connecter à Analysis Services](connect-to-analysis-services.md)   
- [Solutions de modèles tabulaires &#40;SSAS tabulaire&#41;](../tabular-model-solutions-ssas-tabular.md)   
+ [Solutions de modèles tabulaires &#40;SSAS Tabulaire&#41;](../tabular-model-solutions-ssas-tabular.md)   
  [Solutions de modèles multidimensionnels &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2fba7ca3af280beaea72e4055d29e9fc7e444c52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b05d3b02c4fcd0d90b0b96a1a32c792537818e1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177189"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757921"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Regrouper les modifications apportées à des lignes connexes à l'aide d'enregistrements logiques
     
@@ -78,7 +77,7 @@ ms.locfileid: "48177189"
   
 -   Il est recommandé de limiter au maximum le nombre de tables dans un enregistrement logique : cinq tables ou moins.  
   
--   Les enregistrements logiques ne peuvent pas référencer des colonnes contenant l'un des types de données suivants :  
+-   Les enregistrements logiques ne peuvent pas référencer des colonnes contenant l'un des types de données suivants :  
   
     -   `varchar(max)` et `nvarchar(max)`  
   
@@ -98,7 +97,7 @@ ms.locfileid: "48177189"
   
 -   La résolution de conflits personnalisée avec des gestionnaires de logique métier ou des outils de résolution personnalisés n'est pas prise en charge pour les articles inclus dans un enregistrement logique.  
   
--   Si des enregistrements logiques sont utilisés dans une publication qui comprend des filtres paramétrés, vous devez initialiser chaque Abonné avec un instantané de sa partition. Si vous initialisez un Abonné avec une autre méthode, l'Agent de fusion échoue. Pour plus d'informations, voir [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   Si des enregistrements logiques sont utilisés dans une publication qui comprend des filtres paramétrés, vous devez initialiser chaque Abonné avec un instantané de sa partition. Si vous initialisez un Abonné avec une autre méthode, l'Agent de fusion échoue. Pour plus d’informations, voir [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 -   Les conflits qui concernent des enregistrements logiques ne sont pas affichés dans l'Outil de résolution des conflits. Pour afficher des informations sur ces conflits, utilisez des procédures stockées de réplication. Pour plus d’informations, consultez [Afficher les informations relatives aux conflits pour les publications de fusion &#40;programmation Transact-SQL de la réplication&#41;](../view-conflict-information-for-merge-publications.md).  
   

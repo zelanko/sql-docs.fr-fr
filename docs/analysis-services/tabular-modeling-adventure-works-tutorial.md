@@ -1,5 +1,5 @@
 ---
-title: (Niveau de compatibilité 1200) de modélisation tabulaire | Microsoft Docs
+title: Analysis Services (niveau de compatibilité 1200) de modélisation tabulaires | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0b8d60c6c365d48f8eccc46cbc9a3b0f5222ff5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 43ef5c290e1234af4482f09f2ec7f01e2edbca99
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054686"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072176"
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>Modélisation tabulaire (niveau de compatibilité 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -75,13 +75,13 @@ Ce didacticiel inclut les leçons suivantes :
   
 |Leçon|Durée estimée|  
 |----------|------------------------------|  
-|[Leçon 1 : Créer un projet de modèle tabulaire](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 minutes|  
-|[Leçon 2 : Ajouter des données](../analysis-services/lesson-2-add-data.md)|20 minutes|  
-|[Leçon 3 : Marquer en tant que table de dates](../analysis-services/lesson-3-mark-as-date-table.md)|3 minutes|  
+|[Leçon 1 : Créez un projet de modèle tabulaire](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 minutes|  
+|[Leçon 2 : Ajouter des données](../analysis-services/lesson-2-add-data.md)|20 minutes|  
+|[Leçon 3 : Marquer comme Table de dates](../analysis-services/lesson-3-mark-as-date-table.md)|3 minutes|  
 |[Leçon 4 : Créer des relations](../analysis-services/lesson-4-create-relationships.md)|10 minutes|  
 |[Leçon 5 : Créer des colonnes calculées](../analysis-services/lesson-5-create-calculated-columns.md)|15 minutes|
 |[Leçon 6 : Créer des mesures](../analysis-services/lesson-6-create-measures.md)|30 minutes|  
-|[Leçon 7 : Créer des indicateurs de performance clés](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 minutes|  
+|[Leçon 7 : Créer des indicateurs de Performance clés](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 minutes|  
 |[Leçon 8 : Créer des Perspectives](../analysis-services/lesson-8-create-perspectives.md)|5 minutes|  
 |[Leçon 9 : Créer des hiérarchies](../analysis-services/lesson-9-create-hierarchies.md)|20 minutes|  
 |[Leçon 10 : Créer des Partitions](../analysis-services/lesson-10-create-partitions.md)|15 minutes|  
@@ -98,7 +98,7 @@ Ce didacticiel inclut également des [leçons supplémentaires](http://msdn.micr
 
   
 ## <a name="next-step"></a>Étape suivante  
-Pour démarrer le didacticiel, passez à la première leçon : [Leçon 1 : Créer un projet de modèle tabulaire](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
+Pour démarrer le didacticiel, passez à la première leçon : [Leçon 1 : Créez un projet de modèle tabulaire](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
   
   

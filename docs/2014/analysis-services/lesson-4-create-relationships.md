@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 5 : Créer des relations | Microsoft Docs'
+title: 'Leçon 5 : Créer des relations | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 935957ce0934e6b57bd7abd27bcf74fd14ee8cd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05ebc2ffa952c0b5c927d890aad70bbf55f3c5af
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113239"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409056"
 ---
-# <a name="lesson-5-create-relationships"></a>Leçon 5 : Créer des relations
+# <a name="lesson-5-create-relationships"></a>Leçon 5 : Créer des relations
   Dans cette leçon, vous allez vérifier les relations qui ont été créées automatiquement lorsque vous avez importé des données, et vous allez ajouter de nouvelles relations entre les tables. Une relation est une connexion entre deux tables qui établit le mode de corrélation des données dans les deux tables. Par exemple, la table Product et la table Product Subcategory ont une relation basée sur le fait que chaque produit appartient à une sous-catégorie. Pour en savoir plus, consultez [Relations &#40;SSAS Tabulaire&#41;](tabular-models/relationships-ssas-tabular.md).  
   
- Durée estimée pour effectuer cette leçon : **10 minutes**  
+ Durée estimée pour effectuer cette leçon : **10 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la [Leçon 3 : Renommer des colonnes](rename-columns.md).  
+ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 3 : Renommer des colonnes](rename-columns.md).  
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Examiner les relations existantes et ajouter de nouvelles relations  
  Lorsque vous avez importé des données à l'aide de l'Assistant Importation de table, vous avez importé sept tables de la base de données AdventureWorksDW. En général, si vous importez des données d'une source relationnelle, les relations existantes sont importées automatiquement avec les données. Toutefois, avant de poursuivre la création de votre modèle, vous devez vérifier que les relations entre les tables ont été créées correctement. Pour ce didacticiel, vous allez également ajouter trois relations.  
@@ -39,7 +39,7 @@ ms.locfileid: "48113239"
   
 2.  Cliquez sur la ligne pleine entre la table **Customer** et la table **Geography** . La ligne pleine entre ces deux tables indique que cette relation est active, c.-à-d. qu'elle est utilisée par défaut lors du calcul des formules DAX.  
   
-     Notez que la colonne **Geography Id** dans la table **Customer** et la colonne **Geography Id** dans la table **Geography** apparaissent maintenant chacune dans une zone. Cela indique qu'il s'agit des colonnes utilisées dans la relation. Les propriétés de la relation apparaissent maintenant aussi dans la fenêtre **Propriétés** .  
+     Notez que la colonne **Geography Id** dans la table **Customer** et la colonne **Geography Id** dans la table **Geography** apparaissent maintenant chacune dans une zone. Cela indique qu'il s'agit des colonnes utilisées dans la relation. Propriétés de la relation apparaissent maintenant aussi dans le **propriétés** fenêtre.  
   
     > [!TIP]  
     >  Outre l’utilisation du concepteur de modèles dans la vue de diagramme, vous pouvez également utiliser la boîte de dialogue **Gérer les relations** pour afficher les relations entre toutes les tables dans un format tabulaire. Cliquez sur le menu **Table** , puis sur **Gérer les relations**. La boîte de dialogue **Gérer les relations** affiche les relations qui ont été créées automatiquement quand vous avez importé des données.  
@@ -54,7 +54,7 @@ ms.locfileid: "48113239"
     |Oui|**Ventes sur Internet [Id de client]**|**Client [Id de client]**|  
     |Oui|**Ventes sur Internet [Id de produit]**|**Produit [Id de produit]**|  
   
- Si l'une des relations dans la table ci-dessus est manquante, vérifiez que votre modèle inclut les tables suivantes : Customer, Date, Geography, Product, Product Category, Product Subcategory et Internet Sales. Si des tables provenant de la même connexion de source de données sont importées à des moments différents, aucune relation entre ces tables ne sera créée et les relations devront être créées manuellement.  
+ Si une des relations dans le tableau ci-dessus est manquante, vérifiez que votre modèle inclut les tableaux suivants : Customer, Date, Geography, Product, Product Category, Product Subcategory et Internet Sales. Si des tables provenant de la même connexion de source de données sont importées à des moments différents, aucune relation entre ces tables ne sera créée et les relations devront être créées manuellement.  
   
  Dans certains cas, vous devrez peut-être créer des relations supplémentaires entre les tables dans votre modèle pour prendre en charge certaines logiques métiers. Pour ce didacticiel, vous devez créer trois relations supplémentaires entre la table Internet sales et la table Date.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "48113239"
      Une ligne en pointillés apparaît et indique que vous avez créé une relation inactive entre la colonne **Ship Date** dans la table **Internet Sales** et la colonne **Date** dans la table **Date** .  
   
 ## <a name="next-step"></a>Étape suivante  
- Pour continuer cette leçon, passez à la [Leçon 6 : Créer des colonnes calculées](lesson-5-create-calculated-columns.md).  
+ Pour continuer cette leçon, passez à la leçon suivante : [Leçon 6 : Créer des colonnes calculées](lesson-5-create-calculated-columns.md).  
   
   

@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f711dc12ed5014dbc397e5a72f97f55350da7d38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4535ce33d0615cd98bf910da9b765a0e972131d7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002221"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525661"
 ---
-# <a name="deployment-script-files---solution-deployment-config-settings"></a>Fichiers de Script de déploiement - paramètres de configuration de déploiement de Solution
+# <a name="deployment-script-files---solution-deployment-config-settings"></a>Fichiers de script de déploiement - Paramètres de configuration du déploiement de solutions
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit la partition et le rôle des options de déploiement que vous utilisez dans le script de déploiement à partir de la \< *nom_projet*> .configsettings fichier. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crée ce fichier lorsque vous générez le projet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise les paramètres de configuration du projet actuel pour créer le \< *nom_projet*> .configsettings fichier.  
@@ -46,11 +46,11 @@ ms.locfileid: "38002221"
   
 -   Exécutez l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode interactif et, dans la page **Paramètres de configuration** , spécifiez les paramètres de configuration pour les objets déployés.  
   
-     —ou—  
+     -ou-  
   
 -   Exécutez l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'invite de commandes en mode fichier de réponses. Pour plus d'informations sur le mode fichier de réponses, consultez [Running the Analysis Services Deployment Wizard](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md).  
   
-     —ou—  
+     -ou-  
   
 -   Modifier le \< *nom_projet*> fichier .configsettings à l’aide de n’importe quel éditeur de texte.  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
@@ -16,12 +16,12 @@ ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e6369fc45ffd26bf28064735c23a1d9d7f75e37c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 798d9f09bcfa2c9f73b0b70b795ebb53cfb97a79
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073809"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823063"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>Afficher le journal des erreurs de SQL Server Agent (SQL Server Management Studio)
   Cette rubrique décrit comment afficher le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "48073809"
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
- Cependant, l'Explorateur d'objets affiche le nœud [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent uniquement si vous avez l'autorisation de l'utiliser.  
+ Cependant, l'Explorateur d'objets affiche le nœud de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent uniquement si vous avez l'autorisation de l'utiliser.  
   
 ###  <a name="Security"></a> Sécurité  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48073809"
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### <a name="to-view-the-includessnoversionincludesssnoversion-mdmd-agent-error-log"></a>Pour afficher le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
+#### <a name="to-view-the-includessnoversionincludesssnoversion-mdmd-agent-error-log"></a>Pour afficher le journal des erreurs de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Dans l' **Explorateur d'objets**, cliquez sur le signe plus (+) pour développer le serveur qui contient le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que vous souhaitez afficher.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48073809"
   
 4.  Cliquez avec le bouton droit sur le journal d’erreurs que vous souhaitez afficher et sélectionnez **Afficher le journal de l’Agent**.  
   
-     Les options suivantes sont disponibles dans la boîte de dialogue **Visionneuse du fichier journal –***nom_serveur* :  
+     Les options suivantes sont disponibles dans la boîte de dialogue **Visionneuse du fichier journal -***nom_serveur* :  
   
      **Charger le journal**  
      Ouvre une boîte de dialogue dans laquelle vous pouvez spécifier un fichier journal à charger.  

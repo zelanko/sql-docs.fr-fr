@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - custom error resolution [SQL Server replication]
@@ -18,19 +17,19 @@ ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fafdf2b889cd978a65f8bce2e087b6121bfb88c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050523"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822183"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Exécuter la logique métier lors de la synchronisation de fusion
   L'infrastructure de gestion de logique métier permet d'écrire un assembly de code managé qui est appelé pendant le processus de synchronisation de fusion. L'assembly comprend une logique métier qui peut répondre à un certain nombre de conditions au cours de la synchronisation : les modifications de données, les conflits et les erreurs. L'infrastructure de gestionnaires de logique métier propose un modèle de programmation simple et les données fournies par le processus de fusion à votre assembly se présentent sous la forme d'un dataset ADO.NET, de sorte que vous pouvez tirer parti de la connaissance d'ADO.NET au lieu d'apprendre une interface propriétaire. Pour plus d'informations sur la programmation de gestionnaires de logique métier, consultez :  
   
 -   Référence de l'interface de programmation d'applications (API) : <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   Instructions sur l’implémentation d’un gestionnaire de logique métier : [Implémenter un gestionnaire de logique métier pour un article de fusion](../implement-a-business-logic-handler-for-a-merge-article.md)  
+-   Instructions sur l'implémentation d'un gestionnaire de logique métier : [Implémenter un gestionnaire de logique métier pour un article de fusion](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>Utilisations des gestionnaires de logique métier  
  Le processus de synchronisation de fusion peut appeler les gestionnaires de logique métier pour effectuer les opérations suivantes :  
@@ -49,7 +48,7 @@ ms.locfileid: "48050523"
   
 -   Refuser les données  
   
-     Cette option est utile dans le cas d'applications qui ne veulent pas propager des modifications vers un Abonné spécifique ou à partir de celui-ci. Ainsi, un administrateur peut éliminer les insertions qui n'appartiennent pas à la partition de l'Abonné ou éventuellement rejeter des suppressions effectuées au niveau d'un Abonné. Une application qui refuse une commande entrée sur l'Abonné pour indisponibilité de stock en est un autre exemple.  
+     Cette option est utile dans le cas d'applications qui ne veulent pas propager des modifications vers un Abonné spécifique ou à partir de celui-ci. Ainsi, un administrateur peut éliminer les insertions qui n’appartiennent pas à la partition de l’Abonné ou éventuellement rejeter des suppressions effectuées au niveau d’un Abonné. Une application qui refuse une commande entrée sur l'Abonné pour indisponibilité de stock en est un autre exemple.  
   
 -   Accepter les données  
   

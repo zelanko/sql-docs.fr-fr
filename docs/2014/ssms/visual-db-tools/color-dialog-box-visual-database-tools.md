@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptions.FontsAndColors.ColorPicker
@@ -12,12 +12,12 @@ ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc0e52371d63ce8ce5789c6407259c269f5bf70f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29d748f6ff75fc46bef3f667e50aa9cbd92bff5f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181819"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800281"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Boîte de dialogue Couleur (Visual Database Tools)
   La **boîte de dialogue Couleur** retourne la valeur RVB d'une couleur sélectionnée par l'utilisateur. L'utilisateur peut faire son choix dans un jeu de couleurs de base déterminé par le pilote d'affichage ou dans un jeu de couleurs personnalisées. Sélectionnez une couleur parmi les couleurs de base ou créez des couleurs personnalisées. Définissez les couleurs en cliquant sur la matrice des couleurs ou en renseignant les zones **Teinte**, **Sat**, **Lum**, **Rouge**, **Vert**et **Bleu** .  

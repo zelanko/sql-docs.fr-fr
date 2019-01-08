@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, applying XSL transformations
@@ -18,12 +16,12 @@ ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11f7ce945dcf4b89c6b76ba14e0383bc38ca3c39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74f8834ef29e4b5a1cf2b3988585f771cb9d1f1f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224039"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800011"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Application d'une transformation XSL (fournisseur SQLXMLOLEDB)
   Dans cet exemple d'application ADO, une requête SQL est exécutée et le langage XSLT est appliqué au résultat. La définition de la propriété ClientSideXML sur True applique le traitement de l’ensemble de lignes du côté client. Le dialecte de commande a pour valeur {5d531cb2-e6ed-11d2-b252-00c04f681b71} car la requête SQL est spécifiée dans un modèle et que ce dialecte doit être spécifié lors de l'exécution d'un modèle. La propriété xsl Spécifie le fichier XSL à utiliser pour appliquer la transformation. La valeur de propriété de chemin d’accès de Base est utilisée pour rechercher le fichier XSL. Si vous spécifiez un chemin d’accès dans la valeur de la propriété xsl, le chemin d’accès est relatif le chemin d’accès qui est spécifié dans la propriété de chemin d’accès de Base.  
@@ -40,7 +38,7 @@ ms.locfileid: "48224039"
   
  La propriété xsl est spécifiée dans l’application ; Par conséquent, la transformation XSL est appliquée au document XML qui est généré sur le client et le résultat est un tableau à deux colonnes.  
   
- Pour exécuter la commande de modèle, le dialecte de modèle XML — {5d531cb2-e6ed-11d2-b252-00c04f681b71} — doit être spécifié.  
+ Pour exécuter la commande de modèle, le dialecte de modèle XML - {5d531cb2-e6ed-11d2-b252-00c04f681b71} - doit être spécifié.  
   
 > [!NOTE]  
 >  Dans le code, vous devez fournir le nom de l'instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion. En outre, cet exemple spécifie l'utilisation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client comme fournisseur de données, ce qui requiert l'installation d'un logiciel client réseau supplémentaire. Pour plus d’informations, consultez [configuration système requise pour SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  

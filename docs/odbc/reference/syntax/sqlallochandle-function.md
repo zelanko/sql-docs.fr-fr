@@ -20,16 +20,16 @@ ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12fe4ceda2a6ee219763b2d07b23e73508e84363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0a075b96e7a29cef4a10f034147732bf03f64b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778367"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538858"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle, fonction
 **Conformité**  
- Version introduite : Conformité des normes 3.0 de ODBC : ISO 92  
+ Version introduite : Conformité aux normes 3.0 de ODBC : ISO 92  
   
  **Résumé**  
  **SQLAllocHandle** alloue un handle d’environnement, connexion, instruction ou descripteur.  
@@ -79,7 +79,7 @@ SQLRETURN SQLAllocHandle(
   
  Si le Gestionnaire de pilotes ne peut pas allouer de la mémoire pour  *\*OutputHandlePtr* lorsque **SQLAllocHandle** avec un *HandleType* de SQL_HANDLE_ENV est appelée, ou application fournit un pointeur null pour *OutputHandlePtr*, **SQLAllocHandle** retourne SQL_ERROR. Définit le Gestionnaire de pilotes **OutputHandlePtr* à SQL_NULL_HENV (sauf si l’application a fourni un pointeur null, ce qui retourne SQL_ERROR). Il n’existe aucun handle auquel associer les informations de diagnostic supplémentaires.  
   
- Le Gestionnaire de pilotes n’appelle pas la fonction d’allocation du handle d’environnement au niveau du pilote jusqu'à ce que l’application appelle **SQLConnect**, **SQLBrowseConnect**, ou **SQLDriverConnect**. Si une erreur se produit dans le niveau de pilote **SQLAllocHandle** (fonction), puis le Gestionnaire de pilotes – niveau **SQLConnect**, **SQLBrowseConnect**, ou  **SQLDriverConnect** fonction retourne SQL_ERROR. La structure de données de diagnostic contient SQLSTATE IM004 (chauffeur **SQLAllocHandle** a échoué). L’erreur est retournée sur un handle de connexion.  
+ Le Gestionnaire de pilotes n’appelle pas la fonction d’allocation du handle d’environnement au niveau du pilote jusqu'à ce que l’application appelle **SQLConnect**, **SQLBrowseConnect**, ou **SQLDriverConnect**. Si une erreur se produit dans le niveau de pilote **SQLAllocHandle** (fonction), puis le Gestionnaire de pilotes-niveau **SQLConnect**, **SQLBrowseConnect**, ou  **SQLDriverConnect** fonction retourne SQL_ERROR. La structure de données de diagnostic contient SQLSTATE IM004 (chauffeur **SQLAllocHandle** a échoué). L’erreur est retournée sur un handle de connexion.  
   
  Pour plus d’informations sur le flux d’appels de fonction entre le Gestionnaire de pilotes et d’un pilote, consultez [fonction SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   

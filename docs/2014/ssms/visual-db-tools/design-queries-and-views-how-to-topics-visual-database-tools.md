@@ -4,10 +4,10 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- • vs.solutionexplorer.file.query
+- vs.solutionexplorer.file.query
 helpviewer_keywords:
 - queries [Visual Database Tools]
 - View Designer, about View Designer
@@ -20,12 +20,12 @@ ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1652e8a15b973e46a6692fcc2f79bc56cc2fdff8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108359"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328379"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Rubriques de procédures relatives à la conception de requêtes et de vues (Visual Database Tools)
   Le Concepteur de requêtes et de vues vous permet de créer et de gérer les éléments d'extraction et de manipulation des données de votre application.  
@@ -61,5 +61,3 @@ ms.locfileid: "48108359"
 ## <a name="related-sections"></a>Sections connexes  
  [Concevoir des tables &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)  
  Procédure détaillée pour concevoir et gérer une structure de base de données par l'intermédiaire des tables, des colonnes, des clés, des index, des procédures stockées, etc.  
-  
-  

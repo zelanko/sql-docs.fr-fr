@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_replmonitorhelpmergesession_TSQL
@@ -17,12 +16,12 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5378f5fc2e62445b55f89cc09b68c414d47c983f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e08a08bbd3343386ed4b07749bde5216ae23c8b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825447"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789191"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  [ **@hours** =] *heures*  
  Plage horaire pour laquelle sont retournées les informations d'historique des sessions de l'Agent. *heures* est **int**, qui peut être une des plages suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |< **0**|Retourne des informations sur les exécutions passées de l'Agent, dans la limite de 100 exécutions.|  
 |**0** (valeur par défaut)|Retourne des informations sur toutes les exécutions passées de l'Agent.|  
@@ -59,7 +58,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  [ **@session_type** =] *session_type*  
  Filtre l'ensemble de résultats en fonction du résultat final de la session. *SESSION_TYPE* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (par défaut)|Sessions de l'Agent se soldant par une nouvelle tentative ou par un succès.|  
 |**0**|Sessions de l'Agent se soldant par un échec.|  
@@ -99,7 +98,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
  Lors de l’exécution sur l’abonné, **sp_replmonitorhelpmergesession** retourne uniquement des informations sur les cinq dernières sessions d’Agent de fusion.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **db_owner** ou **replmonitor** rôle de base de données fixe sur la base de données de distribution sur le serveur de distribution ou sur la base de données d’abonnement sur l’abonné peuvent exécuter **sp_ replmonitorhelpmergesession**.  
   
 ## <a name="see-also"></a>Voir aussi  

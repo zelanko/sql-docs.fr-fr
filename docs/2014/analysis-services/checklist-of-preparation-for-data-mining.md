@@ -11,12 +11,12 @@ ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd702443b8f1addf43217499b639044d359647bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c74fcbc925091a563d10bc8feef44337af48f84
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057569"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519926"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Liste de vérification : préparation pour l'exploration de données
   Bien que les compléments d'exploration de données facilitent et agrémentent la création de modèles et leur expérimentation, lorsque vous devez obtenir des résultats reproductibles et utilisables, vous devez prévoir suffisamment de temps pour formuler les critères fondamentaux pour l'entreprise, ainsi que pour obtenir et préparer les données. Cette section fournit une liste de vérification pour vous aider à planifier les tâches d'inspection, et décrit les problèmes courants.  
@@ -40,18 +40,18 @@ ms.locfileid: "48057569"
   
 -   De quel volume de données disposez-vous ? Les données sont-elles suffisantes pour la modélisation ?  
   
-     Une grande quantité de données n'est pas nécessaire ; un volume plus petit et équilibré peut s'avérer plus approprié.  
+     Il ne sont pas nécessairement une énorme quantité - plus petite et équilibré peut être mieux.  
   
 -   Les données proviennent-elles de plusieurs sources, ou d'une seule source ?  
   
 -   Est-ce-que les données sont déjà traitée et nettoyées ? Des données d'entrée supplémentaires sont-elles disponibles ?  
   
--   Savez-vous comment elles ont été manipulées avant réception, comment elles ont été tronquées, synthétisées ou converties ?  
+-   Savez-vous comment elles ont été manipulées avant réception - comment données peuvent ont été tronquées, synthétisées ou converties ?  
   
 -   Les données d'entrée ont-elles des exemples de résultats qui peuvent être utilisés pour l'apprentissage ?  
   
  **Je comprends le niveau de l’intégrité des données que nous avons et le niveau que nous avons besoin.**  
- Des données incorrectes peuvent affecter la qualité du modèle ou empêcher la génération du modèle. Vous devez avoir une bonne compréhension de la distribution et de la signification des données, et de la manière dont elles sont parvenues à cet état. Vous devrez comprendre s'il est possible ou approprié de simplifier les données par étiquetage, en tronquant des types de données numériques ou par synthèse.  
+ Des données incorrectes peuvent affecter la qualité du modèle ou empêcher la génération du modèle. Vous devez avoir une bonne compréhension de la distribution et de la signification des données, et de la manière dont elles sont parvenues à cet état. Vous devrez comprendre s’il est possible ou approprié de simplifier les données en les étiquetant, tronquer les types de données numériques, ou par synthèse.  
   
 -   Étiquettes de données : sont-elles claires et correctes ?  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48057569"
 -   Si vous avez combiné des jeux de données, avez-vous recherché plusieurs colonnes représentant les mêmes données ?  
   
  **Je sais où les données sources sont stockées, d'où elles proviennent et comment elles sont traitées. Le processus peut être répété facilement si nécessaire.**  
- Les jeux de données uniques sont très bien pour les expériences, mais si vous souhaitez déplacer le modèle en production, vous souhaiterez envisager à l'avance la manière dont le processus de nettoyage peut être appliqué aux données opérationnelles. En outre, si vous disposez de données opérationnelles, vous devez savoir comment elles ont été modifiées avant obtention (comment elles ont été arrondies ou synthétisées).  
+ Jeux de données uniques sont très bien pour les expériences, mais si vous voulez déplacer le modèle en production, vous souhaiterez penser à l’avance comment le processus de nettoyage peuvent être appliqué aux données opérationnelles. En outre, si vous disposez de données opérationnelles, vous devez savoir comment il ont été modifiée avant obtention-vous devez savoir comment il a été arrondie ou synthétisée.  
   
 -   Voulez-vous être en mesure de répéter l'expérience ?  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48057569"
 -   Avez-vous décidé d'utiliser une valeur initiale pour le modèle ?  
   
  **Nous disposent de connaissances de domaine pour valider les résultats, ou avoir accès à des experts techniques qui peuvent nous conseiller.**  
- Prenez le temps de valider les variables, le modèle et les résultats. Obtenez de l'aide auprès d'experts pour évaluer les interactions et les résultats. Toutefois, ne laissez aucun des hypothèses remplacer une preuve. Soyez ouvert aux résultats nouveaux et inattendus.  
+ Prenez le temps de valider les variables, le modèle et les résultats. Obtenez de l'aide auprès d'experts pour évaluer les interactions et les résultats. Toutefois, ne laissez aucun des hypothèses preuve. Soyez ouvert aux résultats nouveaux et inattendus.  
   
 -   La connaissance de domaine est-elle disponible pour faciliter le filtrage des données et réduire le bruit des données d'entrée ?  
   

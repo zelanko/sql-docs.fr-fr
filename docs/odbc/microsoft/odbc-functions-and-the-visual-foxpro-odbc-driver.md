@@ -21,12 +21,12 @@ ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b83edd4ce5bfafcd8413683abad50918cc47d3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d82fde382bf3ed92f400dbbe234790ccd510cc93
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782677"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512459"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>Fonctions ODBC et pilote ODBC Visual FoxPro
 Les rubriques de cette section fournissent un bref résumé des fonctions API ODBC et des détails spécifiques à Visual FoxPro.  
@@ -34,7 +34,7 @@ Les rubriques de cette section fournissent un bref résumé des fonctions API OD
 > [!NOTE]  
 >  Pour obtenir des informations générales sur les fonctions ODBC, consultez [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md) dans « Guide du programmeur ODBC ».  
   
- Les fonctions API ODBC ont été divisées en trois catégories principales : les fonctions API de niveau de base, les fonctions API de niveau 1 et API de niveau 2.  
+ Les fonctions API ODBC ont été divisées en trois catégories principales : Principales fonctions d’API de niveau, les fonctions API de niveau 1 et les fonctions API de niveau 2.  
   
 > [!NOTE]  
 >  Plusieurs fonctions se comportent différemment selon que la source de données est définie en tant que connexion dans le répertoire de [gratuit tables](../../odbc/microsoft/visual-foxpro-terminology.md) (fichiers .dbf) ou à un Visual FoxPro [base de données](../../odbc/microsoft/visual-foxpro-terminology.md) (fichier .dbc). Certaines opérations sont prises en charge uniquement pour les connexions de base de données.  

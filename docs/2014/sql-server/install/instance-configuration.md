@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
@@ -16,12 +15,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5008096ef5c10dbd3f14198194cec4e7795d9f4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9177aa0abe0a5f2a3746486c5cf71163bcd1e1be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202309"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791298"
 ---
 # <a name="instance-configuration"></a>Configuration de l'instance
   Utilisez la page **Configuration d’une instance** de l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour spécifier s’il faut créer une instance par défaut ou une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas déjà installée, une instance par défaut est créée, sauf si vous spécifiez une instance nommée.  
@@ -35,12 +34,12 @@ ms.locfileid: "48202309"
 ## <a name="multiple-instances"></a>Instances multiples  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un seul serveur ou processeur, mais une seule instance peut être l'instance par défaut. Toutes les autres instances doivent être des instances nommées. Un ordinateur peut exécuter simultanément plusieurs instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque instance s'exécute indépendamment des autres.  
   
- Pour plus d’informations, consultez [Spécifications des capacités maximales pour SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
+ Pour plus d'informations, consultez [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
 ## <a name="options"></a>Options  
  Instances de cluster de basculement uniquement : Spécifiez le nom réseau du cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce nom identifie l'instance de cluster de basculement sur le réseau.  
   
- Instance par défaut ou instance nommée — Prenez ces informations en compte lorsque vous décidez d'installer une instance par défaut ou une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ Instance par défaut ou instance nommée : Prenez ces informations en compte lorsque vous décidez d’installer une instance par défaut ou une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Si vous envisagez d'installer une seule instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un serveur de bases de données, ce doit être une instance par défaut.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48202309"
   
 -   Si vous spécifiez MSSQLServer comme nom d'instance, une instance par défaut est créée.  
   
--   Une installation de [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] est toujours installée comme instance nommée de « PowerPivot ». Vous ne pouvez pas spécifier de nom d'instance différent pour ce rôle de fonctionnalité.  
+-   [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] est toujours installé comme une instance nommée de « PowerPivot ». Vous ne pouvez pas spécifier de nom d'instance différent pour ce rôle de fonctionnalité.  
   
 -   Les noms d'instance sont limités à 16 caractères.  
   

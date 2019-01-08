@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bdc6ec79432d97d8ed53cade4a7db4c0b8bbec82
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4cfbb4d3cfb62405546ef5ff955a52811ded41b5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031901"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202248"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Scénarios de globalisation pour Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "38031901"
   
 -   Les fichiers journaux contiendront un mélange de messages localisés et en anglais, en supposant que vous avez installé un module linguistique sur le serveur Windows qui exécute Analysis Services.  
   
--   La documentation et les outils, tels que [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] et [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], sont traduits dans les langues suivantes : allemand, chinois simplifié, chinois traditionnel, coréen, espagnol, français, italien, japonais, portugais (brésilien) et russe. La culture est spécifiée lors de l’installation.  
+-   La documentation et les outils, tels que [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] et [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], sont traduits dans les langues suivantes : chinois simplifié, chinois traditionnel, français, allemand, italien, japonais, coréen, portugais (Brésil), russe et espagnol. La culture est spécifiée lors de l’installation.  
   
  Dans les modèles multidimensionnels, Analysis Services vous permet de définir la langue, le classement et les traductions indépendamment dans toute la hiérarchie d’objets.  Dans les modèles tabulaires, vous ne pouvez qu’ajouter des traductions : la langue et le classement sont gérés par le système d’exploitation hôte.  
   
@@ -57,14 +57,14 @@ ms.locfileid: "38031901"
 |**Fonctionnalité**|**Tabulaire**|**(Multidimensionnel)**|  
 |[Langues et classements &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)|Héritée du système d’exploitation.|Héritée, mais avec la possibilité de remplacer la langue et le classement des objets principaux dans la hiérarchie du modèle.|  
 |Étendue de la prise en charge de la traduction|Légendes et descriptions.|Vous pouvez traduire les noms d’objet, les légendes, les identificateurs et les descriptions dans n’importe quel script et langage Unicode. Cela est vrai même quand les outils et l'environnement sont dans une autre langue. Par exemple, dans un environnement de développement qui utilise la langue anglaise et un classement Latin dans toute la pile, vous pouvez inclure dans votre modèle un objet dont le nom contient des caractères cyrilliques.|  
-|Implémentation de la prise en charge de la traduction|Utilisez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour générer des fichiers de traduction que vous complétez et réimporter dans le modèle.<br /><br /> Pour plus d’informations, consultez [Traductions dans les modèles tabulaires &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|Utilisez[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir les traductions de la légende, de la description et des types de compte des cubes, mesures, dimensions et attributs.<br /><br /> Pour plus d’informations, consultez [Traductions dans les modèles multidimensionnels &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md). Pour apprendre à utiliser cette fonctionnalité, consultez la [leçon 9 : définition de perspectives et de traductions](../analysis-services/lesson-9-defining-perspectives-and-translations.md) du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|Implémentation de la prise en charge de la traduction|Utilisez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour générer des fichiers de traduction que vous complétez et réimporter dans le modèle.<br /><br /> Pour plus d’informations, consultez [Traductions dans les modèles tabulaires &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|Utilisez[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir les traductions de la légende, de la description et des types de compte des cubes, mesures, dimensions et attributs.<br /><br /> Pour plus d’informations, consultez [Traductions dans les modèles multidimensionnels &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md). Vous trouverez une leçon sur la façon d’utiliser cette fonctionnalité dans [leçon 9 : Définition de Perspectives et traductions](../analysis-services/lesson-9-defining-perspectives-and-translations.md) de la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] didacticiel.|  
 |Conversion monétaire|Non disponible.|La conversion monétaire s’effectue à l’aide de scripts MDX spécialisés qui convertissent les mesures contenant des données monétaires. Vous pouvez utiliser l'Assistant Business Intelligence de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] pour générer un script MDX qui utilise une combinaison de données et de métadonnées issues de dimensions, d'attributs et de groupes de mesures pour convertir des mesures contenant des données monétaires. Consultez [Conversions monétaires &#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge des traductions dans Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
- [Internationalisation pour les Applications Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Accédez au centre de développement](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Applications d’écriture Windows Store avec conception adaptative en fonction des paramètres régionaux](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Développement d’applications Windows universelles avec c# et XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Internationalisation pour les applications Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
+ [Accédez au Centre de développement](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Écriture d’applications du Windows Store avec la conception adaptative en fonction des paramètres régionaux](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Développement d'applications Windows universelles avec C# et XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

@@ -1,27 +1,31 @@
 ---
-title: Soumettre un travail Spark sur des clusters de données volumineuses de SQL Server dans Azure Data Studio
-description: Soumettre un travail Spark sur des clusters de données volumineuses de SQL Server dans Azure Data Studio
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: Exécuter les travaux Spark dans Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: Envoyez des travaux Spark sur des clusters de données volumineuses de SQL Server dans Azure Data Studio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+ms.date: 12/07/2018
 ms.topic: conceptual
-ms.date: 11/06/2018
-ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: d0843315b44b52a38377068023b9d17ba2bd05a2
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221605"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246498"
 ---
-# <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Soumettre un travail Spark sur des clusters de données volumineuses de SQL Server dans Azure Data Studio
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Envoyer des travaux Spark sur des clusters de données volumineuses de SQL Server dans Azure Data Studio
 
-Un des principaux scénarios consiste à soumettre un travail Spark dans SQL Server 2019 CTP 2.1. La fonctionnalité de soumission de travaux Spark vous permet de soumettre des fichiers Jar ou Py locaux avec des références à un cluster de données volumineux de SQL Server 2019. Il vous permet également d’exécuter des fichiers Jar ou Py, ce qui sont trouvent déjà dans le système de fichiers HDFS. 
+L’un des scénarios clés pour les clusters de données volumineuses est la possibilité d’envoyer des travaux Spark pour la version préliminaire de SQL Server 2019. La fonctionnalité de soumission de travaux Spark vous permet de soumettre des fichiers Jar ou Py locaux avec des références à un cluster de données volumineux de SQL Server 2019. Il vous permet également d’exécuter des fichiers Jar ou Py, ce qui sont trouvent déjà dans le système de fichiers HDFS. 
 
-## <a name="prerequisite"></a>Condition préalable 
-Installez les outils de big data pour SQL Server et vous connecter à un cluster de données volumineux avant d’envoyer le travail Spark. Pour les détails de l’installation, consultez pour créer un lien [déployer big data Tools](deploy-big-data-tools.md).
+## <a name="prerequisites"></a>Prérequis
+
+- [Outils de données volumineuses de SQL Server 2019](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **Extension de SQL Server 2019**
+   - **kubectl**
+
+- [Connexion d’Azure Data Studio à la passerelle HDFS/Spark de votre cluster big data](connect-to-big-data-cluster.md).
 
 ## <a name="open-spark-job-submission-dialog"></a>Ouvrir la boîte de dialogue envoi de travaux Spark
 Il existe plusieurs manières d’ouvrir la boîte de dialogue envoi de travail Spark. Les méthodes incluent le tableau de bord, Menu contextuel dans l’Explorateur d’objets et commande lieu d’accueil.

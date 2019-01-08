@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Publishers [SQL Server replication], information scripts
@@ -14,12 +13,12 @@ ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8999be5356a1d4901ce0c918530451b32ee262c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35b7c489b49a4463dc0b12f1469d1310f5d26fef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170209"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815061"
 ---
 # <a name="distributor-and-publisher-information-script"></a>Script d'information du serveur de distribution et du serveur de publication
   Le script utilise les tables système et les procédures stockées de réplication pour répondre aux questions les plus courantes sur les objets posées sur le serveur de distribution et sur le serveur de publication. Le script peut être utilisé « tel quel » et peut également servir de base pour des scripts personnalisés. Le script peut nécessiter deux modifications afin qu'il fonctionne dans votre environnement :  

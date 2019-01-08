@@ -15,12 +15,12 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a792063b76beebfba4d0d7179e5bc5ed394d3f6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207749"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519875"
 ---
 # <a name="create-a-new-plan-guide"></a>Créer un repère de plan
   Vous pouvez créer un repère de plan dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les repères de plan influencent l'optimisation des requêtes en attachant des indicateurs de requête ou un plan fixe de requête à celles-ci. Dans le repère de plan, vous spécifiez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] que vous voulez optimiser et une clause OPTION contenant les indicateurs de requête ou un plan de requête spécifique à utiliser pour optimiser la requête. Lorsque la requête s'exécute, l'optimiseur de requête fait correspondre l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] au repère de plan et attache la clause OPTION à la requête au moment de l'exécution ou fait appel au plan de requête spécifié.  
@@ -43,7 +43,7 @@ ms.locfileid: "48207749"
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   Les arguments de sp_create_plan_guide doivent être indiqués dans l'ordre affiché. Quand vous fournissez des valeurs pour les paramètres de `sp_create_plan_guide`, paramètre de tous les noms doivent être spécifiés explicitement, ou aucun. Par exemple, si `@name =` est spécifié, `@stmt =`, `@type =` (etc.) doit l'être aussi. De même, si `@name =` est omis et que seule la valeur du paramètre est fournie, les noms de paramètres restants doivent également être omis, alors seules leurs valeurs. Les noms d'arguments sont utilisés à des fins descriptives uniquement, pour une meilleure compréhension de la syntaxe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne vérifie pas que le nom de paramètre spécifié correspond au nom du paramètre à l'emplacement où le nom est utilisé.  
+-   Les arguments de sp_create_plan_guide doivent être indiqués dans l'ordre affiché. Lorsque vous fournissez des valeurs pour les paramètres de `sp_create_plan_guide`, tous les noms de paramètres doivent être spécifiés explicitement, ou aucun nom ne doit être spécifié. Par exemple, si `@name =` est spécifié, `@stmt =`, `@type =` (etc.) doit l'être aussi. De même, si `@name =` est omis et que seule la valeur du paramètre est indiquée, les noms de paramètres restants doivent également être omis, et seules leurs valeurs doivent être indiquées. Les noms d'arguments sont utilisés à des fins descriptives uniquement, pour une meilleure compréhension de la syntaxe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne vérifie pas que le nom de paramètre spécifié correspond au nom du paramètre à l'emplacement où le nom est utilisé.  
   
 -   Vous pouvez créer plusieurs repères de plan OBJECT ou SQL pour la même requête et le même lot ou module. Toutefois, un seul repère de plan peut être activé à un moment donné.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48207749"
   
 1.  Cliquez sur le signe plus (+) pour développer la base de données dans laquelle vous souhaitez créer un repère de plan, puis cliquez sur le signe plus (+) pour développer le dossier **Programmabilité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Repères de plan** et sélectionnez **Nouveau repère de plan…**.  
+2.  Cliquez sur le **repères de Plan** dossier et sélectionnez **nouveau repère de Plan...** .  
   
 3.  Dans la boîte de dialogue **Nouveau repère de plan** , dans la zone **Nom** , entrez le nom du repère de plan.  
   

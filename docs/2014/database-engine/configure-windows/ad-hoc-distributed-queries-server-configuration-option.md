@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - OPENROWSET function, ad hoc distributed queries option
@@ -18,12 +17,12 @@ ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: edd15d3d18b7b4d4d7a03689548186829389889f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04c2ea76808c2fa98e933021af93481c829baa21
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093291"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641158"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>ad hoc distributed queries (option de configuration de serveur)
   Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas les requêtes distribuées ad hoc avec les fonctions OPENROWSET et OPENDATASOURCE. Lorsque cette option est définie sur 1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise l'accès d'égal à égal. Lorsque cette option n'est pas définie ou lorsqu'elle est définie sur 0, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne permet pas non plus l'accès d'égal à égal.  
@@ -34,7 +33,7 @@ ms.locfileid: "48093291"
 >  L'activation de l'utilisation de noms ad hoc signifie que toute connexion authentifiée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut accéder au fournisseur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les administrateurs doivent activer cette fonctionnalité pour les fournisseurs accessibles en toute sécurité via une connexion locale.  
   
 ## <a name="remarks"></a>Notes  
- Toute tentative d’établissement d’une connexion ad hoc alors que l’option **Requêtes distribuées ad hoc** n’est pas activée génère une erreur : Msg 7415, Niveau 16, État 1, Ligne 1  
+ Essayez d’établir une connexion ad hoc avec **Ad Hoc Distributed Queries** est pas activée génère une erreur : Msg 7415, niveau 16, état 1, ligne 1  
   
  L'accès d'égal à égal au fournisseur OLE DB « Microsoft.ACE.OLEDB.12.0 » a été refusé. Vous devez accéder à ce fournisseur par le biais d'un serveur lié.  
   

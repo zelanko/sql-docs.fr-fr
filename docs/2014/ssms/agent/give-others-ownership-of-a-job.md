@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], owners
@@ -14,17 +14,17 @@ ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5245bd58ab52af1383cf056ac583729968d79162
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f22d153d55674d5dd615ab50848e4a7fd85a6dcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203099"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800231"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Attribuer la propriété d’un travail à d’autres utilisateurs
   Cette rubrique explique comment réattribuer la propriété de travaux  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent à un autre utilisateur.  
   
--   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Sécurité](#Security)  
+-   **Avant de commencer :**  [Limitations et Restrictions](#Restrictions), [sécurité](#Security)  
   
 -   **Pour attribuer la propriété d'un travail à d'autres utilisateurs, utilisez :**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48203099"
 ##  <a name="SSMSProc2"></a> Utilisation de SQL Server Management Studio  
  **Pour attribuer la propriété d'un travail à d'autres utilisateurs**  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
   
 2.  Développez **SQL Server Agent**, développez **Travaux**, cliquez avec le bouton droit de la souris sur le travail, puis cliquez sur **Propriétés**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48203099"
   
 2.  Dans la barre d'outils, cliquez sur **Nouvelle requête**.  
   
-3.  Dans la fenêtre de requête, entrez les instructions suivantes qui utilisent le [sp_manage_jobs_by_login &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) procédure stockée système. L'exemple suivant réaffecte tous les travaux de `danw` à `françoisa`.  
+3.  Dans la fenêtre de requête, entrez les instructions suivantes qui utilisent le [sp_manage_jobs_by_login &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) procédure stockée système. L'exemple suivant réaffecte tous les travaux de `danw` à `fran??oisa`.  
   
     ```  
     USE msdb ;  
@@ -79,14 +79,14 @@ ms.locfileid: "48203099"
     EXEC dbo.sp_manage_jobs_by_login  
         @action = N'REASSIGN',  
         @current_owner_login_name = N'danw',  
-        @new_owner_login_name = N'françoisa' ;  
+        @new_owner_login_name = N'fran??oisa' ;  
     GO  
     ```  
   
 ##  <a name="SMOProc2"></a> À l’aide de SQL Server Management Objects  
  **Pour attribuer la propriété d'un travail à d'autres utilisateurs**  
   
-1.  Appelez le `Job` classe à l’aide d’un langage de programmation que vous choisissez, tel que Visual Basic, Visual c# ou PowerShell. Pour obtenir un exemple de code, consultez [Planification des tâches administratives automatiques dans l’Agent SQL Server](sql-server-agent.md).  
+1.  Appelez la classe `Job` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour obtenir un exemple de code, consultez [Planification des tâches administratives automatiques dans l’Agent SQL Server](sql-server-agent.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémenter des travaux](implement-jobs.md)   

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0035994dbcc1e0f4aebf01b6dbc4b69dcb7bfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157949"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640740"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instances du moteur de base de données (SQL Server)
-  Une instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] est une copie de la `sqlservr.exe` exécutable qui s’exécute comme un service de système d’exploitation. Chaque instance gère plusieurs bases de données système et une ou plusieurs bases de données utilisateur. Chaque ordinateur peut exécuter plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les applications se connectent à l'instance afin d'effectuer des travaux dans une base de données gérée par l'instance.  
+  Une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est une copie de l'exécutable `sqlservr.exe` qui s'exécute en tant que service du système d'exploitation. Chaque instance gère plusieurs bases de données système et une ou plusieurs bases de données utilisateur. Chaque ordinateur peut exécuter plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les applications se connectent à l'instance afin d'effectuer des travaux dans une base de données gérée par l'instance.  
   
 ## <a name="instances"></a>Instances  
  Une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] s'exécute en tant que service, celui-ci gérant toutes les demandes des applications concernant l'utilisation des données dans les bases de données gérées par cette instance. Il s'agit de la cible des demandes de connexion émanant des applications. La connexion passe par une connexion réseau si l'application et l'instance se trouvent sur des ordinateurs différents. Si l'application et l'instance se trouvent sur le même ordinateur, la connexion SQL Server peut s'exécuter en tant que connexion réseau ou en tant que connexion en mémoire. Une fois qu'une connexion est établie, une application envoie des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sur la connexion à l'instance. L'instance résout les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] en opérations sur les données et les objets dans les bases de données. Si les autorisations requises ont été accordées aux informations d'identification de la connexion, l'instance effectue le travail. Toutes les données récupérées sont retournées à l'application, de même que les éventuels messages (notamment les erreurs).  
@@ -46,7 +45,7 @@ ms.locfileid: "48157949"
 |Explique comment utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler pour capturer les traces de demandes d'applications arrivant à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ces traces peuvent être relues pour des activités telles que le test des performances ou le diagnostic de problèmes.|[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |Décrit les fonctionnalités de capture de données modifiées (CDC) et de suivi des modifications, ainsi que la manière d'utiliser ces fonctionnalités pour effectuer le suivi des modifications apportées aux données d'une base de données.|[Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |Explique comment utiliser la visionneuse du fichier journal pour rechercher et afficher les erreurs et les messages de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans différents journaux, tels que l'historique des travaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les journaux SQL Server et les journaux d'événements Windows.|[Visionneuse du fichier journal](../../relational-databases/logs/log-file-viewer.md)|  
-|Explique comment utiliser l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour analyser les bases de données et faire des recommandations en vue de résoudre les problèmes potentiels liés aux performances.|[Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|Explique comment utiliser l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour analyser les bases de données et faire des recommandations en vue de résoudre les problèmes potentiels liés aux performances.|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |Explique comment les administrateurs de base de données de production peuvent établir une connexion de diagnostic aux instances lorsque les connexions standard ne sont pas acceptées.|[Connexion de diagnostic pour les administrateurs de base de données](diagnostic-connection-for-database-administrators.md)|  
 |Explique comment utiliser la fonctionnalité des serveurs distants déconseillés pour autoriser l'accès d'une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à une autre. Le mécanisme recommandé pour cette fonctionnalité est un serveur lié.|[Serveurs distants](remote-servers.md)|  
 |Décrit les fonctionnalités de Service Broker pour les applications de messagerie et de file d'attente et fournit des pointeurs vers la documentation de Service Broker.|[Service Broker](sql-server-service-broker.md)|  

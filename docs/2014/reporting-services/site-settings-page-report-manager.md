@@ -11,12 +11,12 @@ ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3bd40d6b97215329bb2cab060853fc06ef862dbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d8e61f4f82df496a475717b34f0ce54db07d4a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065292"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413689"
 ---
 # <a name="site-settings-page-report-manager"></a>Page Paramètres du site (Gestionnaire de rapports)
   Utilisez la page Paramètres du site pour modifier le titre de l'application, définir des valeurs par défaut à l'échelle du serveur pour les limites de l'historique de rapport et les valeurs du délai d'exécution du traitement du rapport, gérer les attributions de rôle au niveau du système et gérer les planifications partagées. Vous devez disposer des autorisations de gestionnaire de contenu et d'administrateur système pour consulter cette page.  
@@ -33,11 +33,11 @@ ms.locfileid: "48065292"
   
 2.  Cliquez sur **Paramètres du site**en haut de la page. La page des propriétés générales du site s'ouvre.  
   
-     **Remarque :** si vous ne voyez pas le **paramètres du Site** option dans le menu, vous n’avez pas les autorisations requises, pour plus d’informations, consultez la section « Paramètres du site » de [configurer un serveur de rapports en Mode natif pour Administration locale &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+     **Remarque :** Si vous ne voyez pas le **paramètres du Site** option dans le menu, vous n’avez pas les autorisations requises, pour plus d’informations, consultez la section « Paramètres du site » de [configurer un serveur de rapports en Mode natif pour l’Administration locale &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="options"></a>Options  
  **Nom**  
- Spécifiez le titre à utiliser pour cette instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le Gestionnaire de rapports. Par défaut, le titre est «[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]».  
+ Spécifiez le titre à utiliser pour cette instance du Gestionnaire de rapports [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Par défaut, le titre est «[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]».  
   
  **Sélectionnez les paramètres par défaut pour l’historique de rapport**  
  Sélectionnez une valeur par défaut pour déterminer le nombre de copies que l'historique de rapport peut conserver. La valeur par défaut fournit un paramètre initial qui établit les limites de l'historique de rapport. Vous pouvez modifier ces paramètres au niveau des rapports. Pour plus d’informations, consultez [Page de propriétés Options d’instantanés &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md).  
@@ -54,9 +54,9 @@ ms.locfileid: "48065292"
  **URL de lancement du Générateur de rapports personnalisé**  
  Spécifie une URL personnalisée lorsque le serveur de rapports n'utilise pas l'URL par défaut du Générateur de rapports. Ce paramètre est facultatif. Si vous ne spécifiez pas de valeur, l'URL par défaut sera utilisée pour lancer le Générateur de rapports comme une application ClickOnce. L'URL par défaut est l'une des suivantes :  
   
- **Serveur de rapports en mode natif :** dans une installation en mode natif, l’URL par défaut prendra la forme http://\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application.  
+ **Serveur de rapports en mode natif :** Dans une installation en mode natif, l’URL par défaut prendra la forme http://\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application.  
   
- En mode intégré SharePoint : l’URL par défaut prendra la forme http://\<*Site_sharepoint*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. »  
+ Mode intégré SharePoint : L’URL par défaut prendra la forme http://\<*Site_sharepoint*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. »  
   
  **Appliquer**  
  Cliquez pour enregistrer les modifications apportées au serveur de rapports.  
@@ -68,7 +68,7 @@ ms.locfileid: "48065292"
  Cliquez sur ce lien pour ouvrir la page Planifications, sur laquelle vous pouvez prédéfinir les planifications partagées que les utilisateurs peuvent sélectionner pour leurs rapports et abonnements.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Rôles prédéfinis](security/role-definitions-predefined-roles.md)   
  [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  

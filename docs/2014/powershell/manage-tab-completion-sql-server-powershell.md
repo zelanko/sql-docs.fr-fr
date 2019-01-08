@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1815b3e4e45fb08430af1c22a39a125cd8d81595
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec946a26c898c4ed66bd60e1ad71e69c008766df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155505"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766701"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>Gérer la saisie semi-automatique par tabulation (SQL Server PowerShell)
-  Le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] des composants logiciels enfichables PowerShell introduisent trois variables (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems`, et `$SqlServerIncludeSystemObjects`) au contrôle de saisie semi-automatique par tabulation Windows PowerShell. La saisie semi-automatique par tabulation réduit la quantité de caractères que vous devez taper en renvoyant des tableaux d'éléments dont le nom commence par la chaîne que vous tapez.  
+  Les composants logiciels enfichables PowerShell [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] introduisent trois variables (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems` et `$SqlServerIncludeSystemObjects`) pour contrôler la saisie semi-automatique par tabulation de Windows PowerShell. La saisie semi-automatique par tabulation réduit la quantité de caractères que vous devez taper en renvoyant des tableaux d'éléments dont le nom commence par la chaîne que vous tapez.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  Avec la saisie semi-automatique par tabulation de Windows PowerShell, une fois que vous avez tapé une partie d'un chemin d'accès ou d'un nom d'applet de commande, vous pouvez appuyer sur la touche Tab pour obtenir la liste des éléments dont le nom correspond à ce que vous avez déjà tapé. Vous pouvez alors sélectionner l'élément souhaité dans la liste sans avoir à taper le reste du nom.  

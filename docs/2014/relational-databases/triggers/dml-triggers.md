@@ -14,12 +14,12 @@ ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d99c70928dfc1d3de2ff02499c0b33a173cf888a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195139"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797741"
 ---
 # <a name="dml-triggers"></a>Déclencheurs DML
   Un déclencheur DML est un type spécial de procédure stockée qui entre automatiquement en vigueur lorsqu'un événement de langage de manipulation de données (DML, ou Data Manipulation Language) qui affecte la table ou la vue définie dans le déclencheur se produit. Les événements DML incluent les instructions INSERT, UPDATE ou DELETE. Les déclencheurs DML peuvent être utilisés pour appliquer des règles d'entreprise et l'intégrité des données, interroger d'autres tables et inclure des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] complexes. Le déclencheur et l'instruction qui le déclenche sont traités comme une unique transaction qui peut être annulée (par une opération de restauration) à partir du déclencheur. Si une erreur grave est détectée (par exemple un espace disque insuffisant), toute la transaction est automatiquement annulée.  
@@ -59,7 +59,7 @@ ms.locfileid: "48195139"
 |Applicabilité|Tables|Tables et vues|  
 |Quantité par table ou vue|Plusieurs par action de déclenchement (UPDATE, DELETE et INSERT)|Un par action de déclenchement (UPDATE, DELETE et INSERT)|  
 |Références en cascade|Aucune restriction|Les déclencheurs INSTEAD OF UPDATE et DELETE ne sont pas autorisés sur des tables qui sont des cibles de contraintes d'intégrité référentielle en cascade.|  
-|Exécution|Après :<br /><br /> Traitement des contraintes<br />Actions référentielles déclaratives<br />Création de tables**inserted** et **deleted** <br />L'action de déclenchement|Avant : Traitement des contraintes<br /><br /> Au lieu de : L’action de déclenchement<br /><br /> Après : Création de tables  **inserted** et **deleted**|  
+|Exécution|Après :<br /><br /> Traitement des contraintes<br />Actions référentielles déclaratives<br />Création de tables**inserted** et **deleted** <br />L'action de déclenchement|Avant : Traitement des contraintes<br /><br /> Au lieu de :  L'action de déclenchement<br /><br /> Après : Création de tables  **inserted** et **deleted**|  
 |Ordre d'exécution|La première et la dernière exécution peuvent être spécifiées|Non applicable|  
 |`varchar(max)`, `nvarchar(max)`, et `varbinary(max)` références de colonne dans **inséré** et **supprimé** tables|Autorisé|Autorisé|  
 |`text`, `ntext`, et `image` références de colonne dans **inséré** et **supprimé** tables|Non autorisées|Autorisé|  

@@ -1,5 +1,5 @@
 ---
-title: Projets connexes pour les Solutions d’exploration de données | Documents Microsoft
+title: Projets connexes pour les Solutions d’exploration de données | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f884a7d70447771769ba2d6ff8928234095c7cae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e7a1934a207beebca88e3939a211667e94be976
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019456"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415606"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projets connexes pour des solutions d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34019456"
  [Indexation sémantique](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Fournit des composants et fonctionnalités qui sont nécessaires pour les phases de formation d’un projet d’exploration de données et de préparation des données. Bien que vous puissiez effectuer de nombreuses tâches de nettoyage et de préparation des données à l'aide d'autres outils, tels que les scripts, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] présente beaucoup d'avantages pour l'exploration de données :  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit des composants et fonctionnalités requis pour les phases de préparation et d'apprentissage des données d'un projet d'exploration de données. Bien que vous puissiez effectuer de nombreuses tâches de nettoyage et de préparation des données à l'aide d'autres outils, tels que les scripts, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] présente beaucoup d'avantages pour l'exploration de données :  
   
 -   Représente des tâches dans le cadre d'un flux de travail, qui peuvent être répétées, automatisées, ramifiées et étendues.  
   
@@ -57,9 +57,9 @@ ms.locfileid: "34019456"
   
  **Composants de flux de contrôle**  
   
--   [Tâche DDL d’exécution d’Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
+-   [Tâche DDL d’exécution de SQL Server Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Tâche de traitement Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Tâche de traitement d’Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
 -   [Tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task.md)  
   
@@ -71,21 +71,21 @@ ms.locfileid: "34019456"
   
  **Composants de flux de données**  
   
--   [Composants de flux de capture de données modifiées](../../integration-services/data-flow/cdc-flow-components.md)  
+-   [Composants de flux CDC](../../integration-services/data-flow/cdc-flow-components.md)  
   
 -   [Transformation de fractionnement conditionnel](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
--   [Transformation de Conversion de données](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
+-   [Transformation de conversion de données](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
--   [Données Destination de formation du modèle d’exploration de données](../../integration-services/data-flow/data-mining-model-training-destination.md)  
+-   [Destination d’apprentissage du modèle d’exploration de données](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
 -   [Transformation de requête d’exploration de données](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
 -   [Transformation de colonne dérivée](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
--   [Transformation d’échantillonnage par pourcentage](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
+-   [Transformation de l'échantillonnage du pourcentage](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
--   [Transformation d’Extraction de terme](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+-   [Transformation d'extraction de terme](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
 -   [Transformation de recherche de terme](../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
   
@@ -102,11 +102,11 @@ ms.locfileid: "34019456"
   
  Pour plus d'informations sur l'utilisation de Reporting Services avec les requêtes DMX comme source de données, consultez les liens suivants :  
   
- [Récupérer des données à partir d’un modèle d’exploration de données & #40 ; DMX & #41 ; & #40 ; SSRS & #41 ;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Récupérer des données d’un modèle d’exploration de données &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
- [Interface utilisateur du Concepteur de requêtes Analysis Services DMX](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
+ [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Type de connexion Analysis Services pour DMX & #40 ; SSRS & #41 ;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Type de connexion Analysis Services pour DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Toutefois, il n'est pas nécessaire d'utiliser DMX comme source de données. Les composants d' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour l'exploration de données prennent également en charge l'enregistrement des résultats d'une requête de prédiction dans une base de données relationnelle. Si vous avez établi un flux de travail pour mettre à jour des modèles à l'aide d' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], les prédictions persistantes et d'autres résultats de requête d'exploration de données dans SQL Server vous permettent d'utiliser [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] pour créer des rapports, ainsi que d'autres outils qui n'ont pas d'interface avec DMX.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34019456"
   
  Pour plus d’informations, consultez [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- La version d'un mot stocké après l'indexation de texte intégral est un jeton au format compressé. Les requêtes suivantes de l'index de recherche en texte intégral génèrent plusieurs formes flexionnelles d'un mot particulier selon les règles d'une langue donnée pour s'assurer que toutes les correspondances potentielles sont effectuées. Par exemple, même si le jeton qui est stocké est « courir », le moteur de requête recherche également les termes « course », « couru » et « coureur », car ils correspondent à des variations morphologiques dérivées du mot racine « courir ».  
+ La version d'un mot stocké après l'indexation de texte intégral est un jeton au format compressé. Les requêtes suivantes de l'index de recherche en texte intégral génèrent plusieurs formes flexionnelles d'un mot particulier selon les règles d'une langue donnée pour s'assurer que toutes les correspondances potentielles sont effectuées. Par exemple, bien que le jeton qui est stocké est « courir », le moteur de requête recherche également les termes « running », « ran » et « coureur », car il s’agit des variations morphologiques dérivées du mot racine « exécuter ».  
   
  Vous pouvez également créer et générer un dictionnaire des synonymes utilisateur pour stocker des synonymes et obtenir de meilleurs résultats de recherche ou un meilleur classement des termes. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données. Pour plus d’informations, consultez [Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   

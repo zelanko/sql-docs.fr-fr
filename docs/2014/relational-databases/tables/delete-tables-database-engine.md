@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table deletions [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: ca6aa3e9-9885-44c3-bafc-aec441fd97ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60b92e01601a2c0103594405e9adca41969142fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f040c9907574bba718827999bb9c0fbb432a0bd0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165499"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814511"
 ---
 # <a name="delete-tables-database-engine"></a>Supprimer des tables (moteur de base de données)
   Vous pouvez supprimer une table de votre base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -51,7 +50,7 @@ ms.locfileid: "48165499"
   
 -   Lorsqu'une table est supprimée, les règles et les valeurs par défaut liées à celle-ci sont dissociées et toutes les contraintes et les déclencheurs qui lui sont associés sont automatiquement supprimés. Si vous recréez la table, vous devez réassocier les règles et valeurs par défaut appropriées, recréer les déclencheurs et ajouter les toutes les contraintes nécessaires.  
   
--   Si vous supprimez une table qui contient un `varbinary (max)` colonne avec l’attribut FILESTREAM, toutes les données stockées dans le système de fichiers n’est pas supprimé.  
+-   Si vous supprimez une table qui contient une colonne `varbinary (max)` avec l'attribut FILESTREAM, toutes les données stockées dans le système de fichiers ne seront pas supprimées.  
   
 -   DROP TABLE et CREATE TABLE ne doivent pas être exécutés sur la même table dans le même lot. Sinon, une erreur inattendue risque de se produire.  
   

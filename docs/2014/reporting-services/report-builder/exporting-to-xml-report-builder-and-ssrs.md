@@ -11,12 +11,12 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 947cdf64fa93eadb13724220fc6684813be11fb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0f17e055f4f1ddcf7f19ba58d92c5617c891a5e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116399"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204748"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportation vers XML (Générateur de rapports et SSRS)
   L'extension de rendu XML rend un rapport au format XML. Le schéma du rapport XML est spécifique du rapport et contient uniquement des données. Les informations de mise en page ne sont pas rendues et la pagination n'est pas conservée par l'extension de rendu XML. La sortie XML générée par cette extension peut être importée dans une base de données, utilisée en tant que message de données XML ou envoyée à une application personnalisée.  
@@ -62,9 +62,9 @@ ms.locfileid: "48116399"
 |Si toutes les valeurs de zone de texte sont|Le type de données affecté est|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|`Decimal` (ou `Decimal` et n’importe quel type de données entier ou octet)|**xsd:decimal**|  
-|`Float` (ou `Decimal` et n’importe quel type de données entier ou octet)|**xsd:float**|  
-|`Double` (ou `Decimal` et n’importe quel type de données entier ou octet)|**xsd:double**|  
+|`Decimal` (ou `Decimal` et toutes données de type entier ou octet)|**xsd:decimal**|  
+|`Float` (ou `Decimal` et toutes données de type entier ou octet)|**xsd:float**|  
+|`Double` (ou `Decimal` et toutes données de type entier ou octet)|**xsd:double**|  
 |`DateTime or DateTime Offset`|**xsd:dateTime**|  
 |`Time`|**xsd:string**|  
 |`Boolean`|**xsd:boolean**|  
@@ -81,11 +81,11 @@ ms.locfileid: "48116399"
   
  Les définitions d'espaces de noms XML et les attributs de référence de schéma sont également inclus dans l'élément de rapport. Les variables sont notées en gras :  
   
- \<**Rapport** xmlns = «**SchemaName**"xmlns : xsi = » http://www.w3.org/2001/XMLSchema-instance« xsi :**schemaLocation**= «**SchemaNameReportURL**&amp;rc % 3aSchema = True « nom = « ReportName » >  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  Les valeurs des variables sont les suivantes :  
   
-|Nom   |Valeur|  
+|Créer une vue d’abonnement|Value|  
 |----------|-----------|  
 |Rapport|Report.DataElementName|  
 |ReportURL|URL absolue URLEncoded d'accès au rapport sur le serveur.|  
@@ -200,7 +200,7 @@ ms.locfileid: "48116399"
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

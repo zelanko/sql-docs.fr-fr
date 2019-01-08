@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.subscription.pubtodist.snapshot.f1
@@ -13,12 +12,12 @@ ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b01b8a29cadd1d317a22528d33eff041d9a1ad73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a53fb37c9775ef863724db418c574b31ef8a3e2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112026"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784741"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>Abonnement, Historique du serveur de distribution vers l'Abonné (abonnement aux instantanés)
   L'onglet **Historique du serveur de distribution vers l'Abonné** affiche des informations détaillées sur l'Agent de distribution, y compris l'état, l'historique, des messages d'information et d'éventuels messages d'erreur.  
@@ -26,7 +25,7 @@ ms.locfileid: "48112026"
 ## <a name="options"></a>Options  
  Dans le menu **Affichage** , sélectionnez les sessions de l'Agent de distribution à afficher. Sélectionnez ensuite une session particulière dans la grille étiquetée **Sessions de l'Agent de distribution**. Des informations détaillées sur cette session s'affichent dans la grille étiquetée **Actions dans la session sélectionnée**. Si la session sélectionnée s'est terminée sur une erreur, la zone de texte étiquetée **Détails de l'erreur ou message de la session sélectionnée** s'affiche également.  
   
- **Afficher**  
+ **Affichage**  
  Sélectionnez les sessions de l'Agent de distribution à afficher.  
   
  **État**  

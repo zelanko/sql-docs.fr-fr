@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
@@ -13,12 +12,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fecf123299d81f1d1b39c62c7ab1ecb2368f98dd
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072093"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639296"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Se connecter à un autre ordinateur (Gestionnaire de configuration SQL Server)
   Cette rubrique explique comment se connecter à un autre ordinateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Suivez la première procédure pour ouvrir la Console de gestion [!INCLUDE[msCoName](../../includes/msconame-md.md)] (mmc) de Gestion de l'ordinateur Windows, connectez-vous à l'ordinateur et développez l'arborescence Services et Applications. Suivez la deuxième procédure pour créer un fichier avec un lien vers le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur distant.  
@@ -64,7 +63,7 @@ ms.locfileid: "49072093"
   
 10. Cliquez avec le bouton droit sur **Gestionnaire de configuration SQL Server**, puis cliquez sur **Nouvelle fenêtre à partir d’ici**.  
   
-11. Sur le **fenêtre** menu, cliquez sur **racine de la Console**, pour revenir à la première fenêtre et supprimez la fenêtre.  
+11. Dans le menu **Fenêtre**, cliquez sur **Racine de la console** pour revenir à la première fenêtre et supprimez-la.  
   
 12. Sur le **fichier** menu, cliquez sur **enregistrer en tant que**, enregistrez le fichier dans le dossier souhaité, avec un nom approprié et le `.msc` extension de fichier. Fermez [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   

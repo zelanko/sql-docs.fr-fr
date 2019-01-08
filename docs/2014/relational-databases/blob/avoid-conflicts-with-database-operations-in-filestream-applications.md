@@ -12,12 +12,12 @@ ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dff42f1cf2a028b4bfa6f7c770c7a244f4c18c3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7063448da86c97a7e3ff88899a9488915a055c71
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111990"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545603"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Éviter les conflits avec les opérations de base de données dans les applications FILESTREAM
   Les applications qui utilisent SqlOpenFilestream() pour ouvrir des descripteurs de fichiers Win32 afin de lire ou d’écrire des données BLOB FILESTREAM peuvent rencontrer des erreurs de conflit avec les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] gérées dans une transaction commune. Cela inclut [!INCLUDE[tsql](../../includes/tsql-md.md)] ou les requêtes MARS dont l'exécution dure longtemps. Les applications doivent être conçues avec soin afin de mieux éviter ces types de conflits.  
@@ -46,13 +46,13 @@ dstHandle =  OpenSqlFilestream(dstFilePath, Write, 0,
     transactionToken, cbTransactionToken, 0);  
   
 //Write some date to the FILESTREAM BLOB.  
-WriteFile(dstHandle, updateData, …);  
+WriteFile(dstHandle, updateData, ...);  
   
 //DDL statements will be denied.  
 //DML statements will be denied.  
 //SELECT statements will be allowed. The FILESTREAM BLOB is  
 //returned without the modifications that are made by  
-//WriteFile(dstHandle, updateData, …).  
+//WriteFile(dstHandle, updateData, ...).  
 CloseHandle(dstHandle);  
   
 //DDL statements will be allowed.  
@@ -61,7 +61,7 @@ CloseHandle(dstHandle);
 //is returned with the updateData applied.  
 ```  
   
-### <a name="b-opening-a-filestream-blob-for-read-access"></a>B. Ouverture d'un BLOB FILESTREAM pour un accès en lecture  
+### <a name="b-opening-a-filestream-blob-for-read-access"></a>b. Ouverture d'un BLOB FILESTREAM pour un accès en lecture  
  L'exemple suivant montre l'effet d'ouverture d'un fichier pour un accès uniquement en lecture.  
   
 ```  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
@@ -16,12 +15,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3b7a3b52b30bdce214dd7d481403425dd07cd09
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 9d3b323be70911881b99f055503d12bb6b79988d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237105"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762821"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   L'Agent de fusion de réplication est un fichier exécutable d'utilitaire qui applique l'instantané initial contenu dans les tables de base de données aux Abonnés. Il fusionne également les modifications de données incrémentielles ayant eu lieu sur le serveur de publication après la création de l'instantané initial, puis harmonise les conflits soit en fonction des règles que vous configurez, soit à l'aide d'un programme de résolution personnalisé que vous créez.  
@@ -64,7 +63,7 @@ ms.locfileid: "50237105"
 [-InternetLogininternet_login]  
 [-InternetPasswordinternet_password]  
 [-InternetProxyLogininternet_proxy_login]  
-[–InternetProxyPasswordinternet_proxy_password]  
+[-InternetProxyPasswordinternet_proxy_password]  
 [-InternetProxyServerinternet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeoutinternet_timeout]  
@@ -171,7 +170,7 @@ ms.locfileid: "50237105"
 |**2**|Spécifie que le chiffrement SSL est utilisé et que le certificat est vérifié.|  
 
  > [!NOTE]  
- >  Un certificat SSL valide est défini avec un nom de domaine complet du serveur SQL. Pour l’agent pour se connecter avec succès lors de la définition - EncryptionLevel à 2, créer un alias sur le serveur SQL local. Le paramètre de nom de l’Alias doit être le nom du serveur et le paramètre « Serveur » doit être défini pour le nom qualifié complet de SQL Server.
+ >  Un certificat SSL valide est défini avec le nom de domaine complet de l’instance SQL Server. Pour que l’agent puisse se connecter lorsque vous définissez EncryptionLevel sur 2, créez un alias sur l’instance locale de SQL Server. Le paramètre « Nom de l’alias » doit correspondre au nom du serveur, et le paramètre « Serveur » doit être défini sur le nom complet de l’instance SQL Server.
   
  Pour plus d’informations, consultez [Vue d’ensemble de la sécurité &#40;réplication&#41;](../security/security-overview-replication.md).  
   
@@ -179,7 +178,7 @@ ms.locfileid: "50237105"
  > [!WARNING]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Afin de limiter le téléchargement, utilisez `@subscriber_upload_options` de `sp_addmergearticle` à la place.  
   
- Spécifie le type d'échange de données au cours de la synchronisation parmi les types suivants :  
+ Spécifie le type d'échange de données au cours de la synchronisation parmi les types suivants :  
   
 |Valeur ExchangeType|Description|  
 |------------------------|-----------------|  
@@ -243,7 +242,7 @@ ms.locfileid: "50237105"
  **-InternetProxyLogin**  *internet_proxy_login*  
  Spécifie le nom de connexion utilisé lors de la connexion à un serveur proxy, défini dans *internet_proxy_server*, qui nécessite une authentification.  
   
- **–InternetProxyPassword**  *internet_proxy_password*  
+ **-InternetProxyPassword**  *internet_proxy_password*  
  Spécifie le mot de passe utilisé lors de la connexion à un serveur proxy, défini dans *internet_proxy_server*, qui nécessite une authentification.  
   
  **-InternetProxyServer**  *internet_proxy_server*  
@@ -273,7 +272,7 @@ ms.locfileid: "50237105"
  Spécifie le nombre d'opérations de copie en bloc pouvant être effectuées en parallèle. Le nombre maximal de threads et de connexions ODBC pouvant exister simultanément est, en privilégiant la valeur la plus petite, **MaxBcpThreads** ou le nombre de demandes de copie en bloc qui apparaissent dans la table système **sysmergeschemachange** dans la base de données de publication. **MaxBcpThreads** doit avoir une valeur supérieure à 0 et n'a aucune limite supérieure codée en dur. La valeur par défaut est **1**.  
   
  **-MaxDownloadChanges** *number_of_download_changes*  
- Spécifie le nombre maximal de lignes modifiées qui doivent être téléchargées du serveur de publication vers l'Abonné. Le nombre de lignes téléchargées peut être supérieur au nombre maximal spécifié. Cela est dû au fait que des générations complètes sont traitées et que des threads de destination parallèles peuvent s'exécuter, chacun traitant au moins 100 modifications lors du premier passage. Par défaut, toutes les modifications qui sont prêtes à être téléchargées sont envoyées.  
+ Spécifie le nombre maximal de lignes modifiées qui doivent être téléchargées du serveur de publication vers l'Abonné. Le nombre de lignes téléchargées peut être supérieur au nombre maximal spécifié. Cela est dû au fait que des générations complètes sont traitées et que des threads de destination parallèles peuvent s'exécuter, chacun traitant au moins 100 modifications lors du premier passage. Par défaut, toutes les modifications qui sont prêtes à être téléchargées sont envoyées.  
   
  **-MaxUploadChanges** *number_of_upload_changes*  
  Spécifie le nombre maximal de lignes modifiées qui doivent être téléchargées de l'Abonné au serveur de publication. Le nombre de lignes téléchargées peut être supérieur au nombre maximal spécifié. Cela est dû au fait que des générations complètes sont traitées et que des threads de destination parallèles peuvent s'exécuter, chacun traitant au moins 100 modifications lors du premier passage. Par défaut, toutes les modifications qui sont prêtes à être téléchargées sont envoyées.  
