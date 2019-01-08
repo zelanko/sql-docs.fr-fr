@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6df05fc03563c88a10a7c56b71536e41068ffb05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af0251b5a493eb757b16dfb01b08304751eaa4dc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845477"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589523"
 ---
 # <a name="duplicate-tables"></a>Dupliquer des tables
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47845477"
   
 6.  Dans le menu **Edition** , cliquez sur **Coller**.  
   
-7.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom de la table*.  
+7.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
   
 8.  Dans la boîte de dialogue **Choisir un nom** , tapez un nom pour la nouvelle table et cliquez sur **OK**.  
   
