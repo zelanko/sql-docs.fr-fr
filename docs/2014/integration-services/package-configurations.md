@@ -22,18 +22,18 @@ ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 832cd038151c3816decbc17542c805ed7e161465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a44b923f98a5e54f8907953d38bf42c37ca0968b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200919"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369501"
 ---
 # <a name="package-configurations"></a>Configurations du package
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Fournit des configurations de package que vous pouvez utiliser pour mettre à jour les valeurs des propriétés au moment de l’exécution.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit des configurations de package avec lesquelles vous pouvez mettre à jour les valeurs des propriétés au moment de l'exécution.  
   
 > [!NOTE]  
->  Des configurations sont disponibles pour le modèle de déploiement de package. Les paramètres sont utilisés à la place des configurations pour le modèle de déploiement de projet. Le modèle de déploiement de projet vous permet de déployer des projets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les modèles de déploiement, consultez [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  Des configurations sont disponibles pour le modèle de déploiement de package. Les paramètres sont utilisés à la place des configurations pour le modèle de déploiement de projet. Le modèle de déploiement de projet vous permet de déployer des projets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les modèles de déploiement, consultez [Déploiement de projets et de packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Une configuration est une paire propriété/valeur que vous ajoutez à un package terminé. En règle générale, vous devez créer un package, définir des propriétés sur les objets du package lors du développement de ce dernier, puis ajouter la configuration au package. Lors de son exécution, le package extrait les nouvelles valeurs de la propriété à partir de la configuration. Par exemple, lorsque vous utilisez une configuration, vous pouvez modifier la chaîne de connexion d'un gestionnaire de connexions ou mettre à jour la valeur d'une variable.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48200919"
   
 -   Les configurations rendent ces packages plus souples. Par exemple, une configuration peut mettre à jour la valeur d'une variable utilisée dans une expression de propriété.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge plusieurs méthodes de stockage de configurations de package, telles que des fichiers XML, les tables d’un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de données et les variables d’environnement et de package.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge différentes méthodes de stockage des configurations de package, telles que les fichiers XML, les tables d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les variables d'environnement et de package.  
   
  Chaque configuration est une paire propriété/valeur. Le fichier de configuration XML et les types de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent inclure plusieurs configurations.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48200919"
 |Variable d'environnement|Une variable d'environnement contient la configuration.|  
 |Entrée de Registre|Une entrée de Registre contient la configuration.|  
 |Variable de package parent|Une variable dans le package contient la configuration. Ce type de configuration est généralement utilisé pour mettre à jour les propriétés dans les packages enfants.|  
-|Table [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Une table d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contient la configuration. La table peut inclure plusieurs configurations.|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table|Une table d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contient la configuration. La table peut inclure plusieurs configurations.|  
   
 ### <a name="xml-configuration-files"></a>Fichiers de configuration XML  
  Si vous sélectionnez le type de configuration **Fichier de configuration XML** , vous pouvez créer un nouveau fichier de configuration, réutiliser un fichier existant et ajouter de nouvelles configurations, ou réutiliser un fichier existant en remplaçant son contenu.  
@@ -122,7 +122,7 @@ ms.locfileid: "48200919"
 ```  
   
 ### <a name="registry-entry"></a>Entrée de Registre  
- Si vous souhaitez utiliser une entrée de Registre pour stocker la configuration, vous pouvez utiliser une clé existante ou créer une nouvelle clé dans HKEY_CURRENT_USER. La clé de Registre que vous utilisez doit avoir une valeur nommée `Value`. Cette valeur peut être de type DWORD ou une chaîne.  
+ Si vous souhaitez utiliser une entrée de Registre pour stocker la configuration, vous pouvez utiliser une clé existante ou créer une nouvelle clé dans HKEY_CURRENT_USER. La clé de Registre que vous utilisez doit contenir une valeur nommée `Value`. Cette valeur peut être de type DWORD ou une chaîne.  
   
  Si vous sélectionnez le type de configuration **Entrée de Registre** , tapez le nom de la clé de Registre dans la zone d'entrée de Registre. Le format est \<clé de Registre>. Si vous souhaitez utiliser une clé de Registre qui n’est pas à la racine de HKEY_CURRENT_USER, utilisez le format \<Clé de Registre\clé de Registre\\...> pour identifier la clé. Par exemple, pour utiliser la clé MyPackage située dans SSISPackages, tapez `SSISPackages\MyPackage`.  
   
@@ -145,7 +145,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  Le nom que vous donnez à la configuration est la valeur stockée dans la colonne **ConfigurationFilter** .  
   
 ## <a name="direct-and-indirect-configurations"></a>Configurations directes et indirectes  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Fournit des configurations directes et indirectes. Si vous spécifiez directement les configurations, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] crée un lien direct entre l'élément de configuration et la propriété de l'objet package. Les configurations directes sont un meilleur choix lorsque l'emplacement de la source ne change pas. Par exemple, si vous êtes sûr que tous les déploiements dans le package utilisent le même chemin d'accès de fichier, vous pouvez spécifier un fichier de configuration XML.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit des configurations directes et indirectes. Si vous spécifiez directement les configurations, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] crée un lien direct entre l'élément de configuration et la propriété de l'objet package. Les configurations directes sont un meilleur choix lorsque l'emplacement de la source ne change pas. Par exemple, si vous êtes sûr que tous les déploiements dans le package utilisent le même chemin d'accès de fichier, vous pouvez spécifier un fichier de configuration XML.  
   
  Les configurations indirectes utilisent des variables d'environnement. Au lieu de spécifier directement le paramètre de configuration, la configuration pointe vers une variable d'environnement, qui contient à son tour la valeur de configuration. L'utilisation de configurations indirectes est un meilleur choix lorsque l'emplacement de la configuration peut changer pour chaque déploiement d'un package.  
   
@@ -154,10 +154,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Article technique, [Understanding Integration Services Package Configurations](http://go.microsoft.com/fwlink/?LinkId=165643), sur msdn.microsoft.com  
+-   Article technique, [Présentation des configurations de packages Integration Services.](https://go.microsoft.com/fwlink/?LinkId=165643), sur msdn.microsoft.com  
   
--   Entrée de blog, [Creating packages in code – Package Configurations](http://go.microsoft.com/fwlink/?LinkId=217663), sur www.sqlis.com.  
+-   Entrée de blog, [création de packages dans le code - Configurations de Package](https://go.microsoft.com/fwlink/?LinkId=217663), sur www.sqlis.com.  
   
--   Entrée de blog, [API Sample – Programmatically add a configuration file to a package](http://go.microsoft.com/fwlink/?LinkId=217664), sur blogs.msdn.com.  
+-   Entrée de blog, [exemple API - ajouter par programmation un fichier de configuration à un package](https://go.microsoft.com/fwlink/?LinkId=217664), sur blogs.msdn.com.  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ea86d548e509650f0ec237bb77097e3fb4b267ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143790"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367995"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données
   Cette rubrique fournit des instructions pour appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données.  
@@ -36,7 +36,7 @@ ms.locfileid: "48143790"
   
  Les recommandations suivantes s'appliquent aux appels de procédures stockées compilées en mode natif à l'aide du pilote ODBC dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- Le moyen le plus efficace d’appeler une procédure stockée une fois consiste à émettre un appel RPC direct à l’aide `SQLExecDirect` et les clauses ODBC CALL. N’utilisez pas le [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` instruction. Si une procédure stockée doit être appelée plusieurs fois, l'exécution préparée est plus efficace.  
+ Pour appeler une procédure stockée une seule fois, la meilleure méthode est d'émettre un appel RPC direct avec `SQLExecDirect` et les clauses ODBC CALL. N’utilisez pas le [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` instruction. Si une procédure stockée doit être appelée plusieurs fois, l'exécution préparée est plus efficace.  
   
  Il est recommandé d'utiliser des appels de procédure RPC préparés pour appeler la même procédure stockée [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] plusieurs fois. Les appels RPC préparés sont mis en œuvre comme suit à l'aide du pilote ODBC dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client :  
   
@@ -61,7 +61,7 @@ if (returnCode != SQL_SUCCESS && returnCode != SQL_SUCCESS_WITH_INFO) {
 }  
   
 // 2, 3, 4 - ItemNo, ProdCode, Qty  
-…  
+...  
   
 // Prepare stored procedure  
 returnCode = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),SQL_NTS);  
@@ -87,7 +87,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 1.  Créez une base de données d'exemple avec un groupe de fichiers de données mémoire optimisé. Pour plus d’informations sur la création d’une base de données avec un groupe de fichiers de données optimisées en mémoire, consultez [Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif](creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
-2.  Créez une source de données ODBC appelée PrepExecSample qui pointe vers la base de données. Utilisez le pilote [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Vous pouvez également modifier l’exemple et utiliser le [pilote Microsoft ODBC pour SQL Server](http://msdn.microsoft.com/library/jj730314.aspx).  
+2.  Créez une source de données ODBC appelée PrepExecSample qui pointe vers la base de données. Utilisez le pilote [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Vous pouvez également modifier l’exemple et utiliser le [pilote Microsoft ODBC pour SQL Server](https://msdn.microsoft.com/library/jj730314.aspx).  
   
 3.  Exécutez le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] (ci-dessous) sur l'exemple de base de données.  
   

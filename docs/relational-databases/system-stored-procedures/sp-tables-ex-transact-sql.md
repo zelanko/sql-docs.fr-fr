@@ -18,12 +18,12 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44ffbbfdac8e1976df99be35ecbed7dd94e3ee61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f034b1247f9865b83077ed11f644d6fdbbc4cecd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745437"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589384"
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +45,22 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@table_server=** ] **'***serveur_de_la_table***'**  
+ [  **@table_server=** ] **'**_serveur_de_la_table_**'**  
  Nom du serveur lié pour lequel sont retournées les informations de table. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
   
- [ **,** [  **@table_name=** ] **'***table_name***'**]  
+ [ **,** [  **@table_name=** ] **'**_table_name_**'**]  
  Nom de la table dans laquelle sont retournées les informations de type de données. *table_name*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@table_schema=** ] **'***table_schema***'**]  
+ [  **@table_schema=** ] **'**_table_schema_**'**]  
  Schéma de la table. *table_schema*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@table_catalog=** ] **'***table_catalog***'**  
+ [  **@table_catalog=** ] **'**_table_catalog_**'**  
  Est le nom de la base de données dans laquelle le texte spécifié *table_name* réside. *table_catalog* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@table_type=** ] **'***table_type***'**  
+ [  **@table_type=** ] **'**_table_type_**'**  
  Type de la table à retourner. *TABLE_TYPE* est **sysname**, avec NULL comme valeur par défaut et peut avoir l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**ALIAS**|Nom d'un alias.|  
 |**TEMPORAIRE GLOBALE**|Nom d'une table temporaire disponible au niveau du système.|  
@@ -71,7 +71,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|Nom d'une table utilisateur.|  
 |**VIEW**|Nom d'une vue.|  
   
- [  **@fUsePattern=** ] **'***fUsePattern***'**  
+ [  **@fUsePattern=** ] **'**_fUsePattern_**'**  
  Détermine si les caractères **_**, **%**, **[**, et **]** sont interprétés comme des caractères génériques. Les valeurs valides sont 0 (critères spéciaux désactivés) et 1 (critères spéciaux activés). *fUsePattern* est **bits**, avec 1 comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -81,7 +81,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nom du qualificateur de table. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (*qualificateur ***.*** propriétaire ***.*** nom*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d’autres produits, elle représente le nom du serveur de l’environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
+|**TABLE_CAT**|**sysname**|Nom du qualificateur de table. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d’autres produits, elle représente le nom du serveur de l’environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nom du propriétaire de la table. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de l'utilisateur de la base de données qui a créé la table. Ce champ retourne toujours une valeur.|  
 |**TABLE_NAME**|**sysname**|Nom de la table. Ce champ retourne toujours une valeur.|  
 |**TABLE_TYPE**|**varchar(32)**|Table, table système ou vue.|  
@@ -92,7 +92,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
  **sp_tables_ex** retourne un résultat vide si le fournisseur OLE DB du serveur lié spécifié ne prend pas en charge l’ensemble de lignes de TABLES de la **IDBSchemaRowset** interface.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="examples"></a>Exemples  

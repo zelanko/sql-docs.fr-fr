@@ -1,5 +1,6 @@
 ---
-title: Former et enregistrer un modèle de Python à l’aide de T-SQL | Microsoft Docs
+title: Former et enregistrer un modèle de Python à l’aide de T-SQL - SQL Server Machine Learning
+description: Didacticiel Python montrant comment former et enregistrer un modèle à l’aide de Transact-SQL sur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
@@ -7,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d3917678cb16462f065754dd389be53ae8cd6016
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a0991f43ed7446cc9b86325d4f536a0787b8dcc1
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032716"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645170"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>Former et enregistrer un modèle de Python à l’aide de T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ Vous chargez les modules et appelez les fonctions nécessaires pour créer et fo
 
     Cette procédure stockée doit déjà être créée pour vous, mais vous pouvez exécuter le code suivant pour la créer :
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainTestSplit;
     GO
 
@@ -48,20 +49,10 @@ Vous chargez les modules et appelez les fonctions nécessaires pour créer et fo
 
 2. Pour diviser vos données à l’aide d’un fractionnement personnalisé, exécutez la procédure stockée et tapez un entier qui représente le pourcentage de données allouées au jeu d’apprentissage. Par exemple, l’instruction suivante alloue 60 % des données au jeu d’apprentissage.
 
-    ```SQL
+    ```sql
     EXEC PyTrainTestSplit 60
     GO
     ```
-
-## <a name="add-a-name-column-in-nyctaximodels"></a>Ajouter une colonne de nom dans nyc_taxi_models
-
-Dans ce didacticiel, les scripts de stocker un nom de modèle en tant qu’étiquette pour les modèles générés. Le nom de modèle est utilisé dans les requêtes pour sélectionner un revoscalepy ou un modèle de SciKit.
-
-1. Dans Management Studio, ouvrez le **nyc_taxi_models** table.
-
-2. Avec le bouton droit **colonnes** et cliquez sur **nouvelle colonne**. La valeur est le nom de colonne *nom*, avec un type **nchar(250)** et autoriser les valeurs NULL.
-
-    ![Colonne de nom pour le stockage des noms de modèle](media/sqldev-python-newcolumn.png)
 
 ## <a name="build-a-logistic-regression-model"></a>Générer un modèle de régression logistique
 
@@ -78,7 +69,7 @@ Pour faciliter le reformer le modèle sur les nouvelles données, vous encapsule
 
 1.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ouvrez une nouvelle **requête** fenêtre et exécutez l’instruction suivante pour créer la procédure stockée **PyTrainScikit**.  La procédure stockée contient une définition des données d’entrée, vous n’avez pas besoin de fournir une requête d’entrée.
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainScikit;
     GO
 
@@ -117,7 +108,7 @@ Pour faciliter le reformer le modèle sur les nouvelles données, vous encapsule
 
 2. Exécutez la commande suivante des instructions SQL pour insérer le modèle formé dans table nyc\_taxi_models.
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC PyTrainScikit @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
@@ -136,11 +127,11 @@ Pour faciliter le reformer le modèle sur les nouvelles données, vous encapsule
 
 Cette procédure stockée utilise le nouveau **revoscalepy** package, qui est un nouveau package pour Python. Il contient des objets, de transformation et d’algorithmes semblables à ceux fournis pour le langage R **RevoScaleR** package. 
 
-À l’aide de **revoscalepy**, vous pouvez créer des contextes de calcul distants, déplacer des données entre les contextes de calcul, transformer des données et former des modèles prédictifs à l’aide d’algorithmes populaires comme la régression logistique et linéaire, arbres de décision, et plus. Pour plus d’informations, consultez [What ' s revoscalepy ?](../python/what-is-revoscalepy.md)
+À l’aide de **revoscalepy**, vous pouvez créer des contextes de calcul distants, déplacer des données entre les contextes de calcul, transformer des données et former des modèles prédictifs à l’aide d’algorithmes populaires comme la régression logistique et linéaire, arbres de décision, et plus. Pour plus d’informations, consultez [module revoscalepy dans SQL Server](../python/ref-py-revoscalepy.md) et [revoscalepy de référence des fonctions](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
 
 1. Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ouvrez une nouvelle **requête** fenêtre et exécutez l’instruction suivante pour créer la procédure stockée _TrainTipPredictionModelRxPy_.  Étant donné que la procédure stockée contenant déjà une définition des données d’entrée, vous n’avez pas besoin de fournir une requête d’entrée.
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
     GO
 
@@ -181,7 +172,7 @@ Cette procédure stockée utilise le nouveau **revoscalepy** package, qui est un
 
 2. Exécutez la procédure stockée suivante pour insérer le formé **revoscalepy** modèle dans la table *nyc_taxi_models*.
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC TrainTipPredictionModelRxPy @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);

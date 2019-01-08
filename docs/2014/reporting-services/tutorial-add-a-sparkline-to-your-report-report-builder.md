@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : ajouter un graphique sparkline à un rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Ajouter un graphique Sparkline à votre rapport (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 542720be68e6fabd2cb16e25928d73efa4f41d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcadf726623b71daa0f9bf3e699c6bd8ac3ab122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091479"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376671"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique sparkline à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique sparkline à un rapport (Générateur de rapports)
   Dans ce didacticiel, vous allez créer un rapport de tableau de base reposant sur les exemples de données de vente, puis ajouter un graphique sparkline à une cellule du tableau.  
   
- Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [exemples de rapports Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=184851). L'illustration suivante montre l'exemple de rapport similaire à celui que vous allez créer.  
+ Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [exemples de rapports Générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=184851). L'illustration suivante montre l'exemple de rapport similaire à celui que vous allez créer.  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
- La vidéo [Comment : créer un graphique Sparkline dans une Table (vidéo Générateur de rapports)](http://technet.microsoft.com/bi/ff871942.aspx) montre comment créer un rapport similaire avec des graphiques sparkline.  
+ La vidéo [Comment : Créer un graphique Sparkline dans une Table (vidéo Générateur de rapports)](https://technet.microsoft.com/bi/ff871942.aspx) montre comment créer un rapport similaire avec des graphiques sparkline.  
   
 ##  <a name="BackToTop"></a> Ce que vous allez apprendre  
  Dans ce didacticiel, vous apprendrez à effectuer les tâches suivantes :  
@@ -49,9 +49,9 @@ ms.locfileid: "48091479"
   
  9. [Enregistrer le rapport](#Save)  
   
- Durée estimée pour effectuer ce didacticiel : 30 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 30 minutes  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="CreateTable"></a> 1. Créer un rapport avec un tableau  
@@ -98,7 +98,7 @@ ms.locfileid: "48091479"
   
 12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-13. Cliquez sur **Suivant**.  
+13. Cliquer sur **Suivant**.  
   
 ##  <a name="Query"></a> 2. Créer une requête dans l'Assistant Tableau  
  Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requête prédéfinie, ou vous pouvez créer un dataset incorporé utilisable uniquement dans votre rapport. Dans ce didacticiel, vous allez créer un dataset incorporé.  
@@ -151,7 +151,7 @@ ms.locfileid: "48091479"
   
      La requête s’exécute et affiche le jeu de résultats pour les champs **SalesDate**, **Subcategory**, **Product**, **Sales**et **Quantity**.  
   
-5.  Cliquez sur **Suivant**.  
+5.  Cliquer sur **Suivant**.  
   
 6.  Dans la page **Organiser les champs** , faites glisser **Sales** vers **Valeurs**.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48091479"
   
 8.  Faites glisser **SalesDate** vers **Groupes de colonnes**.  
   
-9. Cliquez sur **Suivant**.  
+9. Cliquer sur **Suivant**.  
   
 10. Dans la page **Choisir la disposition** , sous **Options**, vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "48091479"
   
     3.  La troisième ligne apparaît une fois pour le tableau afin d'afficher les totaux généraux.  
   
-11. Cliquez sur **Suivant**.  
+11. Cliquer sur **Suivant**.  
   
 12. Dans la page **Choisir un style** , dans le volet **Styles** , sélectionnez **Ardoise**.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "48091479"
   
 14. Le tableau est ajouté à l'aire de conception. Il comporte trois colonnes et trois lignes.  
   
-     Recherchez le volet de regroupement. S’il n’est pas visible, dans le menu **Affichage** , cliquez sur **Regroupement**. Le volet Groupes de lignes affiche un groupe de lignes : **Product**. Le volet Groupes de colonnes affiche un groupe de colonnes : **SalesDate**. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+     Recherchez le volet de regroupement. S’il n’est pas visible, dans le menu **Affichage** , cliquez sur **Regroupement**. Le volet Groupes de lignes affiche un groupe de lignes : **Produit**. Le volet Groupes de colonnes affiche un groupe de colonnes : **SalesDate**. Les données de détail sont toutes les données récupérées par la requête de dataset.  
   
 15. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -213,12 +213,12 @@ ms.locfileid: "48091479"
   
      Notez que des graphiques sparkline sont présents dans chaque ligne du tableau, mais qu'ils ne sont pas corrects. Les barres des graphiques ne sont pas alignées les unes par rapport aux autres. Il n'y a que quatre barres dans la seconde ligne de données, ce qui fait qu'elles sont plus larges que les barres de la première ligne, qui en a six. Vous ne pouvez pas comparer les valeurs de chaque produit par jour. Elles doivent être alignées les unes par rapport aux autres.  
   
-     Notez également que pour chaque ligne, la barre la plus grande correspond à la hauteur de la ligne. Ceci est également trompeur car les valeurs les plus élevées de chaque ligne ne sont pas égales : la valeur la plus élevée pour Budget Movie-Maker est 10 400 $, tandis que la valeur la plus élevée pour Digital Svelte est 26 576 $ (plus de deux fois plus). Or les barres les plus grandes pour ces deux lignes ont pratiquement la même hauteur. Il faut donc également les mettre à la même échelle que les autres graphiques sparkline.  
+     Notez également que pour chaque ligne, la barre la plus grande correspond à la hauteur de la ligne. Ceci est également trompeur, car les valeurs les plus grandes pour chaque ligne ne sont pas égales : la valeur la plus élevée pour Budget Movie-Maker est $10,400, mais la plus grande valeur pour Digital est $26,576-plus de double de la taille. Or les barres les plus grandes pour ces deux lignes ont pratiquement la même hauteur. Il faut donc également les mettre à la même échelle que les autres graphiques sparkline.  
   
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
 ##  <a name="AlignSparklines"></a> 4. Aligner les graphiques sparkline verticalement et horizontalement  
- Les graphiques sparkline sont difficiles à lire s'ils n'utilisent pas tous les mêmes mesures. Les axes horizontal et vertical doivent chacun correspondre au reste.  
+ Les graphiques sparkline sont difficiles à lire s’ils n’utilisent pas tous les mêmes mesures. Les axes horizontal et vertical doivent chacun correspondre au reste.  
   
 #### <a name="to-set-alignment-for-the-sparklines-in-the-table"></a>Pour définir l'alignement des graphiques sparkline dans le tableau  
   
@@ -329,7 +329,7 @@ ms.locfileid: "48091479"
   
 3.  Sélectionnez ou tapez le nom du serveur de rapports sur lequel vous êtes autorisé à enregistrer des rapports.  
   
-     Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
+     Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
   
 4.  Dans **Nom**, remplacez le nom par défaut par **Ventes de produits**.  
   

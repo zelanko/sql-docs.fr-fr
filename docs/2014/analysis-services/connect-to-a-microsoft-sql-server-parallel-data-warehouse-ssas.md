@@ -13,17 +13,17 @@ ms.assetid: 98c879ee-7257-40c9-bc85-6766bd3b4885
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b13e56895a9880a8bffc319c247769b4f5b2911
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e8dd851604203a9a6c02959c3d11002145f9dc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191069"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354322"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>Connexion à un entrepôt de données Microsoft SQL Server Parallel Data Warehouse (SSAS)
   Cette page de **l’Assistant Importation de table** vous permet de spécifier des paramètres pour vous connecter à un entrepôt de données Microsoft SQL Server Parallel Data Warehouse (PDW). Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
   
- SQL Server PDW est un appareil très évolutif qui offre des performances à faible coût via le traitement parallèle massif. Pour plus d’informations sur SQL Server PDW, consultez le site web [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895). Vous pouvez vous connecter à l'entrepôt de données à l'aide de l'authentification SQL Server. Pour vous connecter à une source de données, vous devez disposer du fournisseur approprié, installé sur votre ordinateur.  
+ SQL Server PDW est un appareil très évolutif qui offre des performances à faible coût via le traitement parallèle massif. Pour plus d’informations sur SQL Server PDW, consultez le site web [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895). Vous pouvez vous connecter à l'entrepôt de données à l'aide de l'authentification SQL Server. Pour vous connecter à une source de données, vous devez disposer du fournisseur approprié, installé sur votre ordinateur.  
   
 > [!NOTE]  
 >  Les informations d'identification de l'utilisateur actuel sont utilisées lors de la sélection d'une base de données sur cette page. Toutefois, l'importation ne réussira pas si l'utilisateur spécifié dans la page Informations d'emprunt d'identité n'a pas de privilèges suffisants pour lire la base de données sélectionnée.  

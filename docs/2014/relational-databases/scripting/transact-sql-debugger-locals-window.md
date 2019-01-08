@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.locals
 helpviewer_keywords:
 - Locals Window [Transact-SQL]
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6e79bed7775a55d52382d38eb44f6711ed1050c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22090b4bdb1827be4add47ec2f539cde0ea70827
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221309"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327399"
 ---
 # <a name="locals-window"></a>Variables locales (fenêtre)
   La fenêtre **Variables locales** affiche des informations sur les expressions locales dans l'étendue actuelle du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'étendue est définie selon le frame de pile des appels actuellement sélectionné dans la fenêtre **Pile des appels** . Vous devez être en mode débogage pour afficher les expressions locales.  
@@ -55,5 +53,3 @@ ms.locfileid: "48221309"
  [Fenêtre Pile des appels](transact-sql-debugger-call-stack-window.md)   
  [Boîte de dialogue Espion express](transact-sql-debugger-quickwatch-dialog-box.md)   
  [Expressions &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
-  
-  

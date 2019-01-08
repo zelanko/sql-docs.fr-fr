@@ -16,21 +16,21 @@ ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28e4b5a405279b1aaede6fc9db96cf9024a59b96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f55c99ad60dd449a3f5b591adf09f325127258b6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148049"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366571"
 ---
 # <a name="custom-messages-for-logging"></a>Messages personnalisés pour la journalisation
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un ensemble complet d’événements personnalisés pour l’écriture des entrées de journal pour les packages et de nombreuses tâches. Vous pouvez utiliser ces entrées pour enregistrer des informations détaillées sur l'avancement, les résultats et les problèmes d'exécution en enregistrant des événements prédéfinis ou des messages définis par l'utilisateur en vue d'une analyse ultérieure. Vous pouvez ainsi enregistrer l'heure de début et de fin d'une insertion en bloc pour identifier des problèmes de performances lors de l'exécution du package.  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un ensemble complet d'événements personnalisés permettant d'écrire des entrées de journal pour des packages et bon nombre de tâches. Vous pouvez utiliser ces entrées pour enregistrer des informations détaillées sur l'avancement, les résultats et les problèmes d'exécution en enregistrant des événements prédéfinis ou des messages définis par l'utilisateur en vue d'une analyse ultérieure. Vous pouvez ainsi enregistrer l'heure de début et de fin d'une insertion en bloc pour identifier des problèmes de performances lors de l'exécution du package.  
   
  Les entrées de journal personnalisées constituent un ensemble qui se distingue de l'ensemble des événements de journalisation standard, disponibles pour les packages et tous les conteneurs et tâches. Ces entrées sont conçues pour capturer des informations utiles sur une tâche spécifique d'un package. Par exemple, l'une des entrées de journal personnalisées pour la tâche d'exécution de requêtes SQL consigne l'instruction SQL que la tâche exécute dans le journal.  
   
- Toutes les entrées de journal contiennent des informations de date et d'heure, y compris les entrées qui sont écrites automatiquement au début et à la fin d'un package. La plupart des événements de journal écrivent plusieurs entrées dans le journal. C'est généralement le cas lorsque l'événement comprend plusieurs phases. Par exemple, le `ExecuteSQLExecutingQuery` journal des événements consigne trois entrées : une entrée une fois la tâche acquiert une connexion à la base de données, une fois que la tâche commence à préparer l’instruction SQL et après l’exécution de l’instruction SQL est terminée.  
+ Toutes les entrées de journal contiennent des informations de date et d'heure, y compris les entrées qui sont écrites automatiquement au début et à la fin d'un package. La plupart des événements de journal écrivent plusieurs entrées dans le journal. C'est généralement le cas lorsque l'événement comprend plusieurs phases. Par exemple, l'événement du journal `ExecuteSQLExecutingQuery` consigne trois entrées : la première après que la tâche acquiert une connexion à la base de données, la seconde après que la tâche commence à préparer l'instruction SQL et la troisième à la fin de l'exécution de l'instruction SQL.  
   
- Les objets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suivants possèdent des entrées de journal personnalisées :  
+ Les objets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suivants possèdent des entrées de journal personnalisées :  
   
  [Package](#Package)  
   
@@ -81,9 +81,9 @@ ms.locfileid: "48148049"
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
-|`PackageStart`|Indique que le package a commencé à s'exécuter.<br /><br /> Remarque : cette entrée de journal est automatiquement écrite dans le journal. Vous ne pouvez pas l'exclure.|  
-|`PackageEnd`|Indique que le package est terminé.<br /><br /> Remarque : cette entrée de journal est automatiquement écrite dans le journal. Vous ne pouvez pas l'exclure.|  
-|`Diagnostic`|Fournit des informations sur la configuration système qui affecte l'exécution du package, notamment le nombre d'exécutables pouvant s'exécuter simultanément.<br /><br /> Le `Diagnostic` entrée de journal inclut également des entrées pour les appels aux fournisseurs de données externes avant et après. Pour plus d’informations, voir [Outils de dépannage de la connectivité des packages](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
+|`PackageStart`|Indique que le package a commencé à s'exécuter.<br /><br /> Remarque : Cette entrée de journal est automatiquement écrite au journal. Vous ne pouvez pas l'exclure.|  
+|`PackageEnd`|Indique que le package est terminé.<br /><br /> Remarque : Cette entrée de journal est automatiquement écrite au journal. Vous ne pouvez pas l'exclure.|  
+|`Diagnostic`|Fournit des informations sur la configuration système qui affecte l'exécution du package, notamment le nombre d'exécutables pouvant s'exécuter simultanément.<br /><br /> L'entrée de journal `Diagnostic` inclut également des entrées avant et après les appels effectués auprès des fournisseurs de données externes. Pour plus d’informations, voir [Outils de dépannage de la connectivité des packages](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
   
 ###  <a name="BulkInsert"></a> Tâche d'insertion en bloc  
  Le tableau suivant répertorie les entrées de journal personnalisées de la tâche d'insertion en bloc.  
@@ -100,9 +100,9 @@ ms.locfileid: "48148049"
 |Entrée du journal|Description|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Indique que la tâche de flux de données a modifié la taille du tampon. L'entrée de journal décrit les raisons de cette modification de taille et indique la nouvelle taille temporaire du tampon.|  
-|`OnPipelinePostEndOfRowset`|Indique qu’un composant a reçu son signal de fin d’ensemble de lignes, qui est définie par le dernier appel de la `ProcessInput` (méthode). Une entrée est écrite pour chaque composant du flux de données qui traite l'entrée. L'entrée inclut le nom du composant.|  
-|`OnPipelinePostPrimeOutput`|Indique que le composant a terminé son dernier appel de la `PrimeOutput` (méthode). Selon le flux de données, plusieurs entrées de journal peuvent être écrites. Si le composant est une source, cela signifie que le composant a terminé le traitement des lignes.|  
-|`OnPipelinePreEndOfRowset`|Indique qu’un composant est sur le point de recevoir son signal de fin d’ensemble de lignes, ce qui est défini par le dernier appel de la `ProcessInput` (méthode). Une entrée est écrite pour chaque composant du flux de données qui traite l'entrée. L'entrée inclut le nom du composant.|  
+|`OnPipelinePostEndOfRowset`|Indique qu'un composant a reçu son signal de fin d'ensemble de lignes, défini par le dernier appel de la méthode `ProcessInput`. Une entrée est écrite pour chaque composant du flux de données qui traite l'entrée. L'entrée inclut le nom du composant.|  
+|`OnPipelinePostPrimeOutput`|Indique que le composant a terminé son dernier appel de la méthode `PrimeOutput`. Selon le flux de données, plusieurs entrées de journal peuvent être écrites. Si le composant est une source, cela signifie que le composant a terminé le traitement des lignes.|  
+|`OnPipelinePreEndOfRowset`|Indique qu'un composant est sur le point de recevoir son signal de fin d'ensemble de lignes, défini par le dernier appel de la méthode `ProcessInput`. Une entrée est écrite pour chaque composant du flux de données qui traite l'entrée. L'entrée inclut le nom du composant.|  
 |`OnPipelinePrePrimeOutput`|Indique que le composant est sur le point de recevoir son appel de la méthode `PrimeOutput`. Selon le flux de données, plusieurs entrées de journal peuvent être écrites.|  
 |`OnPipelineRowsSent`|Indique le nombre de lignes fournies à une entrée de composant par un appel de la méthode `ProcessInput`. L'entrée du journal inclut le nom du composant.|  
 |`PipelineBufferLeak`|Donne des informations sur tout composant qui maintient l'activité des tampons après la fermeture du gestionnaire de tampons. Cela signifie que des ressources des tampons n'ont pas été libérées et qu'elles peuvent provoquer des fuites de mémoire. L'entrée du journal fournit le nom du composant et l'ID du tampon.|  
@@ -115,8 +115,8 @@ ms.locfileid: "48148049"
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
-|`ExecuteDTS80PackageTaskBegin`|Indique que la tâche a commencé l'exécution d'un package DTS 2000.|  
-|`ExecuteDTS80PackageTaskEnd`|Indique que la tâche est terminée.<br /><br /> Remarque : il est possible que le package DTS 2000 continue à s’exécuter à la fin de la tâche.|  
+|`ExecuteDTS80PackageTaskBegin`|Indique que la tâche a commencé l'exécution d'un package DTS 2000.|  
+|`ExecuteDTS80PackageTaskEnd`|Indique que la tâche est terminée.<br /><br /> Remarque : Il est possible que le package DTS 2000 continue à s'exécuter à la fin de la tâche.|  
 |`ExecuteDTS80PackageTaskTaskInfo`|Fournit des informations détaillées concernant la tâche.|  
 |`ExecuteDTS80PackageTaskTaskResult`|Indique le résultat d'exécution du package DTS 2000 que la tâche a exécuté.|  
   
@@ -147,7 +147,7 @@ ms.locfileid: "48148049"
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
-|`FTPConnectingToServer`|Indique que la tâche a lancé une connexion au serveur FTP.|  
+|`FTPConnectingToServer`|Indique que la tâche a lancé une connexion au serveur FTP.|  
 |`FTPOperation`|Indique le démarrage et le type d'une opération FTP effectuée par la tâche.|  
   
 ###  <a name="MessageQueue"></a> Tâche MSMQ  
@@ -169,7 +169,7 @@ ms.locfileid: "48148049"
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|Indique les résultats de l'implémentation de la journalisation dans le script. Une entrée de journal est écrit pour chaque appel à la `Log` méthode de la `Dts` objet. L'entrée est écrite à l'exécution du code. Pour plus d’informations, consultez [Journalisation dans la tâche de script](extending-packages-scripting/task/logging-in-the-script-task.md).|  
+|`ScriptTaskLogEntry`|Indique les résultats de l'implémentation de la journalisation dans le script. Une entrée de journal est écrite pour chaque appel de la méthode `Log` de l'objet `Dts`. L'entrée est écrite à l'exécution du code. Pour plus d’informations, consultez [Journalisation dans la tâche de script](extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
 ###  <a name="SendMail"></a> Tâche Envoyer un message  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche Envoyer un message.  
@@ -201,8 +201,8 @@ ms.locfileid: "48148049"
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
-|`TransferJobsTaskFinishedTransferringObjects`|Indique que la tâche a terminé le transfert des travaux de l’Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|`TransferJobsTaskStartTransferringObjects`|Indique que la tâche a commencé le transfert des travaux de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|`TransferJobsTaskFinishedTransferringObjects`|Indique que la tâche a terminé le transfert des travaux de l’Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|`TransferJobsTaskStartTransferringObjects`|Indique que la tâche a commencé le transfert des travaux de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
   
 ###  <a name="TransferLogins"></a> Tâche de transfert de connexions  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de transfert de connexions.  
@@ -221,12 +221,12 @@ ms.locfileid: "48148049"
 |`TransferStoredProceduresTaskStartTransferringObjects`|Indique que la tâche a commencé le transfert des procédures stockées définies par l’utilisateur qui existent dans la base de données **master** .|  
   
 ###  <a name="TransferSQLServerObjects"></a> Tâche de transfert d'objets SQL Server  
- Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de transfert d'objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de transfert d'objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
-|`TransferSqlServerObjectsTaskFinishedTransferringObjects`|Indique que la tâche a terminé le transfert des objets de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|`TransferSqlServerObjectsTaskStartTransferringObjects`|Indique que la tâche a commencé le transfert des objets de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|`TransferSqlServerObjectsTaskFinishedTransferringObjects`|Indique que la tâche a terminé le transfert des objets de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|`TransferSqlServerObjectsTaskStartTransferringObjects`|Indique que la tâche a commencé le transfert des objets de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
   
 ###  <a name="WebServices"></a> Tâche de services Web  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de services Web.  
@@ -262,7 +262,7 @@ ms.locfileid: "48148049"
 |`XMLOperation`|Fournit des informations sur l'opération que la tâche effectue.|  
   
 ## <a name="related-content"></a>Contenu associé  
- Entrée de blog, [Logging custom events for Integration Services tasks](http://go.microsoft.com/fwlink/?LinkId=150580)(Journalisation d’événements personnalisés pour les tâches Integration Services), sur dougbert.com.  
+ Entrée de blog, [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=150580) (Journalisation d’événements personnalisés pour les tâches Integration Services), sur dougbert.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Journalisation Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  

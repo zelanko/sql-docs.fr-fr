@@ -11,17 +11,17 @@ ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 64d690c11a76d40e851a23374c568727e3f47a40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c2873a6864e3ac5d55f180bfc2555d8cb471620
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172779"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354481"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Sauvegarder, restaurer et déplacer le catalogue SSIS
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] inclut la base de données SSISDB. Interrogez les vues de la base de données SSISDB pour inspecter les objets, les paramètres et les données opérationnelles stockés dans le catalogue **SSISDB** . Cette rubrique fournit des instructions sur la sauvegarde et la restauration de la base de données.  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] comprend la base de données SSISDB. Interrogez les vues de la base de données SSISDB pour inspecter les objets, les paramètres et les données opérationnelles stockés dans le catalogue **SSISDB** . Cette rubrique fournit des instructions sur la sauvegarde et la restauration de la base de données.  
   
- Le catalogue **SSISDB** stocke les packages que vous avez déployés sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d’informations sur le catalogue, consultez [Catalogue SSIS](catalog/ssis-catalog.md).  
+ Le catalogue **SSISDB** stocke les packages que vous avez déployés sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour plus d’informations sur le catalogue, consultez [Catalogue SSIS](catalog/ssis-catalog.md).  
   
 ##  <a name="backup"></a> Pour sauvegarder la base de données SSIS  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48172779"
   
     ```  
   
-3.  Sauvegardez la base de données SSISDB à l’aide de la boîte de dialogue **Sauvegarder la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Procédure : sauvegarder une base de données (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Sauvegardez la base de données SSISDB à l’aide de la boîte de dialogue **Sauvegarder la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour plus d'informations, consultez [Procédure : Sauvegarder une base de données (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Générez le script CREATE LOGIN pour ##MS_SSISServerCleanupJobLogin## en procédant comme suit. Pour plus d’informations, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48172779"
   
 ### <a name="to-restore-the-ssis-database"></a>Pour restaurer la base de données SSIS  
   
-1.  Si vous restaurez la base de données SSISDB sur une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] où le catalogue SSISDB n'a jamais été créé, activez le CLR en exécutant la procédure stockée sp_configure. Pour plus d’informations, consultez [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) et [clr enabled (option de configuration de serveur)](http://go.microsoft.com/fwlink/?LinkId=231855).  
+1.  Si vous restaurez la base de données SSISDB sur une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] où le catalogue SSISDB n'a jamais été créé, activez le CLR en exécutant la procédure stockée sp_configure. Pour plus d’informations, consultez [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) et [clr enabled (option de configuration de serveur)](https://go.microsoft.com/fwlink/?LinkId=231855).  
   
     ```  
     use master   
@@ -80,7 +80,7 @@ ms.locfileid: "48172779"
   
     ```  
   
-     Les procédures stockées CLR [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] requièrent l'octroi d'autorisations UNSAFE à la connexion, car cette dernière nécessite un accès supplémentaire aux ressources restreintes, par exemple l'API Win32 de Microsoft. Pour plus d’informations sur l’autorisation de code UNSAFE, consultez [Création d’un assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Les procédures stockées CLR exigent l’octroi d’autorisations UNSAFE à la connexion, car cette dernière nécessite un accès supplémentaire aux ressources restreintes, par exemple l’API Win32 de Microsoft. Pour plus d’informations sur l’autorisation de code UNSAFE, consultez [Création d’un assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  

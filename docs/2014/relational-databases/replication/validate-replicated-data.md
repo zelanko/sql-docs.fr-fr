@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - inline data validation [SQL Server replication]
@@ -20,12 +19,12 @@ ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae1484fd98b7cf10f06eb86406b03b9c2991a210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84ffe2ad4be91f8a05e4bbbd84b2ad5a67cb09a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098099"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792491"
 ---
 # <a name="validate-replicated-data"></a>Valider des données répliquées
   La réplication transactionnelle et de fusion vous permet de vérifier que les données sur l'Abonné correspondent aux données sur le serveur de publication. La validation peut être réalisée pour des abonnements spécifiques ou pour tous les abonnements à une publication. Spécifiez un des types de validation suivants et l'Agent de distribution ou l'Agent de fusion validera les données lors de sa prochaine exécution :  
@@ -38,14 +37,14 @@ ms.locfileid: "48098099"
   
  **Pour valider des données**  
   
- Pour valider tous les articles d'un abonnement, utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], des procédures stockées ou Replication Management Objects. Pour plus d'informations, voir [Validate Data at the Subscriber](validate-data-at-the-subscriber.md). Pour valider des articles individuels dans des publications d'instantané et transactionnelles, vous devez utiliser des procédures stockées.  
+ Pour valider tous les articles d'un abonnement, utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], des procédures stockées ou Replication Management Objects. Pour plus d’informations, voir [Validate Data at the Subscriber](validate-data-at-the-subscriber.md). Pour valider des articles individuels dans des publications d'instantané et transactionnelles, vous devez utiliser des procédures stockées.  
   
 ## <a name="data-validation-results"></a>Résultats de la validation des données  
  Quand la validation est terminée, l'Agent de distribution ou l'Agent de fusion consigne des messages relatifs au succès ou à l'échec (la réplication ne rapporte pas quelles lignes ont échoué). Ces messages peuvent être affichés dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans le moniteur de réplication et dans les tables système de réplication. La rubrique de procédure ci-dessus montre comment exécuter une validation et afficher les résultats.  
   
  Pour gérer les échecs de validation, considérez les points suivants :  
   
--   Configurez l'alerte de réplication nommée **Réplication : l'Abonné n'a pas réussi la validation des données** pour recevoir une notification de l'échec. Pour plus d’informations, consultez [configurer des alertes de réplication prédéfinies &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
+-   Configurez l'alerte de réplication nommée **Réplication : Échec de la validation des données par l’abonné** afin que vous êtes informé de l’échec. Pour plus d’informations, consultez [configurer des alertes de réplication prédéfinies &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
   
 -   Le fait que la validation a échoué est-il un problème pour votre application ? Si l'échec de la validation constitue un problème, mettez à jour manuellement les données pour qu'elles soient synchronisées, ou bien réinitialisez l'abonnement :  
   

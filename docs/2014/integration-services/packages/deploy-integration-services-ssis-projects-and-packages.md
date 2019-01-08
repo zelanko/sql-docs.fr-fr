@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9648e78567bbddf9209c53923cfe6c12d046d1a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bd9e036baa91991352d00f97fcf2c8e689bae6c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200899"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372151"
 ---
 # <a name="deployment-of-projects-and-packages"></a>Déploiement de projets et de packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge deux modèles de déploiement : le modèle de déploiement de projet et le modèle de déploiement de package. Le modèle de déploiement de projet vous permet de déployer vos projets sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Pour plus d’informations sur le déploiement de projets sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Déployer des projets sur le serveur Integration Services](../deploy-projects-to-integration-services-server.md).  
+ Pour plus d’informations sur le déploiement de projets sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consultez [Déployer des projets sur le serveur Integration Services](../deploy-projects-to-integration-services-server.md).  
   
  Pour plus d’informations sur le modèle de déploiement de package, consultez [déploiement de Package &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
   
@@ -33,11 +32,11 @@ ms.locfileid: "48200899"
 |Un projet est l'unité de déploiement.|Un package est l'unité de déploiement.|  
 |Des paramètres sont utilisés pour affecter des valeurs aux propriétés du package.|Des configurations sont utilisées pour affecter des valeurs aux propriétés du package.|  
 |Un projet, contenant des packages et des paramètres, est généré dans un fichier de déploiement de projet (extension .ispac).|Les packages (extension .dtsx) et les configurations (extension .dtsConfig) sont enregistrés individuellement dans le système de fichiers.|  
-|Un projet, contenant des packages et des paramètres, est déployé dans le catalogue SSISDB sur une instance de SQL Server.|Les packages et les configurations sont copiés dans le système de fichiers sur un autre ordinateur. Les packages peuvent également être enregistrés dans la base de données MSDB sur une instance de SQL Server.|  
+|Un projet, contenant des packages et des paramètres, est déployé dans le catalogue SSISDB sur une instance de SQL Server.|Les packages et les configurations sont copiés dans le système de fichiers sur un autre ordinateur. Les packages peuvent également être enregistrés dans la base de données MSDB sur une instance de SQL Server.|  
 |L'intégration du CLR est requise sur le moteur de base de données.|L'intégration du CLR n'est pas requise sur le moteur de base de données.|  
 |Les valeurs des paramètres spécifiques à l'environnement sont stockées dans des variables d'environnement.|Les valeurs de la configuration spécifique à l'environnement sont stockées dans des fichiers de configuration.|  
 |Les projets et les packages contenus dans le catalogue peuvent être validés sur le serveur avant l'exécution. Vous pouvez effectuer la validation à l'aide de SQL Server Management Studio, de procédures stockées ou de code managé.|Les packages sont validés juste avant l'exécution. Vous pouvez également valider un package avec dtExec ou du code managé.|  
-|Les packages sont exécutés en démarrant une exécution sur le moteur de base de données. Un identificateur de projet, des valeurs de paramètre explicites (facultatif) et des références environnementales (facultatif) sont affectés à une exécution avant son démarrage.<br /><br /> Vous pouvez également exécuter des packages à l'aide de `dtExec`.|Les packages sont exécutés à l’aide de la `dtExec` et `DTExecUI` utilitaires d’exécution. Les configurations applicables sont identifiées par des arguments d'invite de commandes (facultatif).|  
+|Les packages sont exécutés en démarrant une exécution sur le moteur de base de données. Un identificateur de projet, des valeurs de paramètre explicites (facultatif) et des références environnementales (facultatif) sont affectés à une exécution avant son démarrage.<br /><br /> Vous pouvez également exécuter des packages à l'aide de `dtExec`.|Les packages sont exécutés à l'aide des utilitaires d'exécution `dtExec` et `DTExecUI`. Les configurations applicables sont identifiées par des arguments d'invite de commandes (facultatif).|  
 |Pendant l'exécution, les événements qui sont produits par le package sont automatiquement capturés et sont enregistrés dans le catalogue. Vous pouvez interroger ces événements avec des vues Transact-SQL.|Pendant l'exécution, les événements qui sont produits par un package ne sont pas automatiquement capturés. Un module fournisseur d'informations doit être ajouté au package pour capture les événements.|  
 |Les packages sont exécutés dans un processus Windows distinct.|Les packages sont exécutés dans un processus Windows distinct.|  
 |L'Agent SQL Server est utilisé pour planifier l'exécution du package.|L'Agent SQL Server est utilisé pour planifier l'exécution du package.|  
@@ -61,7 +60,7 @@ ms.locfileid: "48200899"
 -   [Déployer des projets sur le serveur Integration Services](../deploy-projects-to-integration-services-server.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Entrée de blog, [Thoughts on Branching Strategies for SSIS Projects](http://go.microsoft.com/fwlink/?LinkId=245739), sur mattmasson.com.  
+ Entrée de blog, [Thoughts on Branching Strategies for SSIS Projects](https://go.microsoft.com/fwlink/?LinkId=245739), sur mattmasson.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilitaire dtexec](dtexec-utility.md)  

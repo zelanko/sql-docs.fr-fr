@@ -17,19 +17,19 @@ ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6264b245667d4378e126151616bd1e936000fcd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b81acf6c60bd11e03a598e349e145dbf72e174b4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712591"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205288"
 ---
 # <a name="bookmark-c-data-type"></a>Type de données C pour les signets
 Le type de données C de signet permet à une application récupérer un signet. Les types de signet C sont utilisés seulement pour récupérer les valeurs de signet qui peuvent être variable en longueur ; ils ne doivent pas être convertis en autres types de données. Une application récupère un signet à partir de la colonne 0 du résultat défini avec **SQLBulkOperations** (avec une opération de SQL_ADD), **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**. Pour plus d’informations, consultez [signets](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
   
  Le tableau suivant répertorie la valeur de *CType* pour le type de données C de signet, le type de données ODBC C qui implémente le type de données C de signet et la définition de ces données de type à partir de SQL. H.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Le type de données SQL_C_BOOKMARK a été déconseillé. ODBC 3 *.x* applications ne doivent pas utiliser SQL_C_BOOKMARK. ODBC 3 *.x* pilotes doivent prendre en charge de SQL_C_BOOKMARK uniquement si ils veulent pouvoir travailler avec ODBC 2. *x* applications qui l’utilisent. Le Gestionnaire de pilotes mappe SQL_C_VARBOOKMARK à SQL_C_BOOKMARK quand une application fonctionne avec une API ODBC 2. *x* pilote.  
   
 |Identificateur de type C|ODBC C typedef|Type C|  

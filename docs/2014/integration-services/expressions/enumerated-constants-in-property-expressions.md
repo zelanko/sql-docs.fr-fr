@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - enumerators [Integration Services]
@@ -18,19 +17,19 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb882f13b7f4fd19cab5f9b44885647aaafa65d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd7508b806d3dbfc488dd8e1358d3bab4d624b06
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089658"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359791"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes énumérées dans des expressions de propriété
-  Si des expressions de propriété incluent des valeurs d'une liste de membres d'énumérateur, l'expression doit utiliser la valeur numérique du membre énumérateur et non le nom convivial du membre. Par exemple, si une expression définit la `LoggingMode` propriété, vous devez utiliser la valeur numérique 2 au lieu du nom convivial désactivé.  
+  Si des expressions de propriété incluent des valeurs d'une liste de membres d'énumérateur, l'expression doit utiliser la valeur numérique du membre énumérateur et non le nom convivial du membre. Par exemple, si une expression définit la propriété `LoggingMode`, vous devez utiliser la valeur numérique 2 à la place du nom convivial Désactivé.  
   
  Cette rubrique répertorie uniquement les valeurs numériques équivalant aux noms conviviaux d'énumérateurs dont les membres sont fréquemment utilisés dans des expressions de propriété. Le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut de nombreux énumérateurs supplémentaires que vous utilisez quand vous programmez le modèle objet pour générer des packages par programmation ou des éléments de package de code personnalisé, tels que des tâches et des composants de flux de données.  
   
- En complément des propriétés personnalisées pour les packages et les objets package, la fenêtre Propriétés de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclut un jeu de propriétés accessibles aux packages, aux tâches, ainsi qu'aux conteneurs de boucles Foreach, de boucles For et de séquences. Les propriétés communes qui sont définies par des valeurs provenant d'énumérateurs (`ForceExecutionResult`, `LoggingMode`, `IsolationLevel` et `Transaction Option`) sont répertoriées dans la section Propriétés communes.  
+ En complément des propriétés personnalisées pour les packages et les objets package, la fenêtre Propriétés de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclut un jeu de propriétés accessibles aux packages, aux tâches, ainsi qu'aux conteneurs de boucles Foreach, de boucles For et de séquences. Les propriétés communes qui sont définies par des valeurs provenant d’énumérateurs -`ForceExecutionResult`, `LoggingMode`, `IsolationLevel`, et `Transaction Option`-sont répertoriées dans la section Propriétés communes.  
   
  Les sections suivantes fournissent des informations sur les constantes énumérées :  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48089658"
 ##  <a name="Package"></a> Package  
  Les tableaux suivants répertorient les noms conviviaux et les équivalents en valeur numérique pour des propriétés de packages que vous définissez à l'aide de valeurs provenant d'un énumérateur.  
   
- `PackageType` propriété, définie à l’aide de valeurs à partir de la `DTSPackageType` énumération.  
+ `PackageType` Jeu de propriétés à l’aide de valeurs à partir de la `DTSPackageType` énumération.  
   
 |Nom convivial dans DTSPackageType|Valeur numérique|  
 |-------------------------------------|-------------------|  
@@ -58,7 +57,7 @@ ms.locfileid: "48089658"
 |DTSDesigner100|5|  
 |SQLDBMaint|6|  
   
- `CheckpointUsage` propriété, définie à l’aide de valeurs à partir de la `DTSCheckpointUsage` énumération.  
+ `CheckpointUsage` Jeu de propriétés à l’aide de valeurs à partir de la `DTSCheckpointUsage` énumération.  
   
 |Nom convivial dans DTSCheckpointUsage|Valeur numérique|  
 |-----------------------------------------|-------------------|  
@@ -66,7 +65,7 @@ ms.locfileid: "48089658"
 |IfExists|1|  
 |Always|2|  
   
- `PackagePriorityClass` propriété, définie à l’aide de valeurs à partir de la `DTSPriorityClass` énumération.  
+ `PackagePriorityClass` Jeu de propriétés à l’aide de valeurs à partir de la `DTSPriorityClass` énumération.  
   
 |Nom convivial dans DTSPriorityClass|Valeur numérique|  
 |---------------------------------------|-------------------|  
@@ -76,7 +75,7 @@ ms.locfileid: "48089658"
 |BelowNormal|3|  
 |Idle|4|  
   
- `ProtectionLevel` propriété, définie à l’aide de valeurs à partir de la `DTSProtectionLevel` énumération.  
+ `ProtectionLevel` Jeu de propriétés à l’aide de valeurs à partir de la `DTSProtectionLevel` énumération.  
   
 |Nom convivial dans DTSProtectionLevel|Valeur numérique|  
 |-----------------------------------------|-------------------|  
@@ -88,7 +87,7 @@ ms.locfileid: "48089658"
 |ServerStorage|5|  
   
 ##  <a name="PrecedenceConstraints"></a> Contraintes de précédence  
- `EvalOp` propriété, définie à l’aide de valeurs à partir de la `DTSPrecedenceEvalOp` énumération.  
+ `EvalOp` Jeu de propriétés à l’aide de valeurs à partir de la `DTSPrecedenceEvalOp` énumération.  
   
 |Nom convivial dans DTSPrecedenceEvalOp|Valeur numérique|  
 |------------------------------------------|-------------------|  
@@ -97,11 +96,11 @@ ms.locfileid: "48089658"
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
   
- `Value` propriété, définie à l’aide de valeurs à partir de la `DTSExecResult` énumération.  
+ `Value` Jeu de propriétés à l’aide de valeurs à partir de la `DTSExecResult` énumération.  
   
 |Nom convivial|Valeur numérique|  
 |-------------------|-------------------|  
-|Réussi|0|  
+|Opération réussie|0|  
 |Failure|1|  
 |Completion|2|  
 |Opération annulée|3|  
@@ -110,7 +109,7 @@ ms.locfileid: "48089658"
  La boucle Foreach inclut un jeu d'énumérateurs comportant des propriétés pouvant être définies par des expressions de la propriété.  
   
 ### <a name="foreach-ado-enumerator"></a>Énumérateur Foreach ADO  
- `Type` propriété, définie à l’aide de valeurs à partir de la `ADOEnumerationType` énumération.  
+ `Type` Jeu de propriétés à l’aide de valeurs à partir de la `ADOEnumerationType` énumération.  
   
 |Nom convivial dans ADOEnumerationType|Valeur numérique|  
 |-----------------------------------------|-------------------|  
@@ -119,7 +118,7 @@ ms.locfileid: "48089658"
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Énumérateur Foreach Nodelist  
- `SourceDocumentType`, `InnerXPathStringSourceType`, et **OuterXPathStringSourceType** propriétés — définie à l’aide de valeurs à partir de la `SourceType` énumération.  
+ `SourceDocumentType`, `InnerXPathStringSourceType`, et **OuterXPathStringSourceType** jeu de propriétés à l’aide de valeurs à partir de la `SourceType` énumération.  
   
 |Nom convivial dans SourceType|Valeur numérique|  
 |---------------------------------|-------------------|  
@@ -127,7 +126,7 @@ ms.locfileid: "48089658"
 |Variable|1|  
 |DirectInput|2|  
   
- `EnumerationType` propriété, définie à l’aide de valeurs à partir de la `EnumerationType` énumération.  
+ `EnumerationType` Jeu de propriétés à l’aide de valeurs à partir de la `EnumerationType` énumération.  
   
 |Nom convivial dans EnumerationType|Valeur numérique|  
 |--------------------------------------|-------------------|  
@@ -136,7 +135,7 @@ ms.locfileid: "48089658"
 |NodeText|2|  
 |ElementCollection|3|  
   
- `InnerElementType` propriété, définie à l’aide de valeurs à partir de la `InnerElementType` énumération.  
+ `InnerElementType` Jeu de propriétés à l’aide de valeurs à partir de la `InnerElementType` énumération.  
   
 |Nom convivial dans InnerElementType|Valeur numérique|  
 |---------------------------------------|-------------------|  
@@ -148,7 +147,7 @@ ms.locfileid: "48089658"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut de nombreuses tâches avec des propriétés pouvant être définies par des expressions de la propriété.  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Tâche DDL d'exécution de SQL Server Analysis Services  
- `SourceType` propriété, définie à l’aide de valeurs à partir de la `DDLSourceType` énumération.  
+ `SourceType` Jeu de propriétés à l’aide de valeurs à partir de la `DDLSourceType` énumération.  
   
 |Nom convivial dans DDLSourceType|Valeur numérique|  
 |------------------------------------|-------------------|  
@@ -157,7 +156,7 @@ ms.locfileid: "48089658"
 |Variable|2|  
   
 ### <a name="bulk-insert-task"></a>tâche d'insertion en bloc  
- `DataFileType` propriété, définie à l’aide de valeurs à partir de la `DTSBulkInsert_DataFileType` énumération.  
+ `DataFileType` Jeu de propriétés à l’aide de valeurs à partir de la `DTSBulkInsert_DataFileType` énumération.  
   
 |Nom convivial dans DTSBulkInsert_DataFileType|Valeur numérique|  
 |--------------------------------------------------|-------------------|  
@@ -167,7 +166,7 @@ ms.locfileid: "48089658"
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
 ### <a name="execute-sql-task"></a>Tâche d’exécution de requêtes SQL  
- `ResultSetType` propriété, définie à l’aide de valeurs à partir de la `ResultSetType` énumération.  
+ `ResultSetType` Jeu de propriétés à l’aide de valeurs à partir de la `ResultSetType` énumération.  
   
 |Nom convivial dans ResultSetType|Valeur numérique|  
 |------------------------------------|-------------------|  
@@ -176,7 +175,7 @@ ms.locfileid: "48089658"
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
   
- `SqlStatementSourceType` propriété, définie à l’aide de valeurs à partir de la `SqlStatementSourceType` énumération.  
+ `SqlStatementSourceType` Jeu de propriétés à l’aide de valeurs à partir de la `SqlStatementSourceType` énumération.  
   
 |Nom convivial dans SqlStatementSourceType|Valeur numérique|  
 |---------------------------------------------|-------------------|  
@@ -185,7 +184,7 @@ ms.locfileid: "48089658"
 |Variable|3|  
   
 ### <a name="file-system-task"></a>Tâches du système de fichiers  
- `Operation` propriété, définie à l’aide de valeurs à partir de la `DTSFileSystemOperation` énumération.  
+ `Operation` Jeu de propriétés à l’aide de valeurs à partir de la `DTSFileSystemOperation` énumération.  
   
 |Nom convivial dans DTSFileSystemOperation|Valeur numérique|  
 |---------------------------------------------|-------------------|  
@@ -200,7 +199,7 @@ ms.locfileid: "48089658"
 |DeleteDirectory|8|  
 |DeleteDirectoryContent|9|  
   
- `Attributes` propriété, définie à l’aide de valeurs à partir de la `DTSFileSystemAttributes` énumération.  
+ `Attributes` Jeu de propriétés à l’aide de valeurs à partir de la `DTSFileSystemAttributes` énumération.  
   
 |Nom convivial dans DTSFileSystemAttributes|Valeur numérique|  
 |----------------------------------------------|-------------------|  
@@ -211,7 +210,7 @@ ms.locfileid: "48089658"
 |Système|8|  
   
 ### <a name="ftp-task"></a>Tâche FTP  
- `Operation` propriété, définie à l’aide de valeurs à partir de la `DTSFTPOp` énumération.  
+ `Operation` Jeu de propriétés à l’aide de valeurs à partir de la `DTSFTPOp` énumération.  
   
 |Nom convivial dans DTSFTPOp|Valeur numérique|  
 |-------------------------------|-------------------|  
@@ -225,7 +224,7 @@ ms.locfileid: "48089658"
 |RemoveDirRemote|7|  
   
 ### <a name="message-queue-task"></a>Message Queue Task  
- `MessageType` propriété, définie à l’aide de valeurs à partir de la `MQMessageType` énumération.  
+ `MessageType` Jeu de propriétés à l’aide de valeurs à partir de la `MQMessageType` énumération.  
   
 |Nom convivial dans MQMessageType|Valeur numérique|  
 |------------------------------------|-------------------|  
@@ -234,7 +233,7 @@ ms.locfileid: "48089658"
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
- `StringCompareType` propriété, définie à l’aide de valeurs à partir de la `MQStringMessageCompare` énumération.  
+ `StringCompareType` Jeu de propriétés à l’aide de valeurs à partir de la `MQStringMessageCompare` énumération.  
   
 |Nom convivial dans MQStringMessageCompare|Valeur numérique|  
 |---------------------------------------------|-------------------|  
@@ -243,7 +242,7 @@ ms.locfileid: "48089658"
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
- `TaskType` propriété, définie à l’aide de valeurs à partir de la `MQType` énumération.  
+ `TaskType` Jeu de propriétés à l’aide de valeurs à partir de la `MQType` énumération.  
   
 |Nom convivial dans MQType|Valeur numérique|  
 |-----------------------------|-------------------|  
@@ -251,7 +250,7 @@ ms.locfileid: "48089658"
 |DTSMQType_Receiver|1|  
   
 ### <a name="send-mail-task"></a>tache Envoyer un message  
- `MessageSourceType` propriété, définie à l’aide de valeurs à partir de la `SendMailMessageSourceType` énumération.  
+ `MessageSourceType` Jeu de propriétés à l’aide de valeurs à partir de la `SendMailMessageSourceType` énumération.  
   
 |Nom convivial dans SendMailMessageSourceType|Valeur numérique|  
 |------------------------------------------------|-------------------|  
@@ -259,7 +258,7 @@ ms.locfileid: "48089658"
 |FileConnection|1|  
 |Variable|2|  
   
- `Priority` propriété, définie à l’aide de valeurs à partir de la `MailPriority` énumération.  
+ `Priority` Jeu de propriétés à l’aide de valeurs à partir de la `MailPriority` énumération.  
   
 |Nom convivial dans MailPriority|Valeur numérique|  
 |-----------------------------------|-------------------|  
@@ -268,14 +267,14 @@ ms.locfileid: "48089658"
 |Faible|5|  
   
 ### <a name="transfer-database-task"></a>Tâche de transfert de bases de données  
- `Action` propriété, définie à l’aide de valeurs à partir de la `TransferAction` énumération.  
+ `Action` Jeu de propriétés à l’aide de valeurs à partir de la `TransferAction` énumération.  
   
 |Nom convivial dans TransferAction|Valeur numérique|  
 |-------------------------------------|-------------------|  
 |Copier|0|  
 |Déplacer|1|  
   
- `Method` propriété, définie à l’aide de valeurs à partir de la `TransferMethod` énumération.  
+ `Method` Jeu de propriétés à l’aide de valeurs à partir de la `TransferMethod` énumération.  
   
 |Nom convivial dans TransferMethod|Valeur numérique|  
 |-------------------------------------|-------------------|  
@@ -283,7 +282,7 @@ ms.locfileid: "48089658"
 |DatabaseOnline|1|  
   
 ### <a name="transfer-error-messages-task"></a>Tâche de transfert de messages d'erreur  
- `IfObjectExists` propriété, définie à l’aide de valeurs à partir de la `IfObjectExists` énumération.  
+ `IfObjectExists` Jeu de propriétés à l’aide de valeurs à partir de la `IfObjectExists` énumération.  
   
 |Nom convivial dans IfObjectExists|Valeur numérique|  
 |-------------------------------------|-------------------|  
@@ -292,7 +291,7 @@ ms.locfileid: "48089658"
 |Ignorer|2|  
   
 ### <a name="transfer-jobs-task"></a>Tâche de transfert de travaux  
- `IfObjectExists` propriété, définie à l’aide de valeurs à partir de la `IfObjectExists` énumération.  
+ `IfObjectExists` Jeu de propriétés à l’aide de valeurs à partir de la `IfObjectExists` énumération.  
   
 |Nom convivial dans IfObjectExists|Valeur numérique|  
 |-------------------------------------|-------------------|  
@@ -301,7 +300,7 @@ ms.locfileid: "48089658"
 |Ignorer|2|  
   
 ### <a name="transfer-logins-task"></a>Tâche de transfert de connexions  
- `IfObjectExists` propriété, définie à l’aide de valeurs à partir de la `IfObjectExists` énumération.  
+ `IfObjectExists` Jeu de propriétés à l’aide de valeurs à partir de la `IfObjectExists` énumération.  
   
 |Nom convivial dans IfObjectExists|Valeur numérique|  
 |-------------------------------------|-------------------|  
@@ -309,7 +308,7 @@ ms.locfileid: "48089658"
 |Remplacer|1|  
 |Ignorer|2|  
   
- `LoginsToTransfer` propriété, définie à l’aide de valeurs à partir de la `LoginsToTransfer` énumération.  
+ `LoginsToTransfer` Jeu de propriétés à l’aide de valeurs à partir de la `LoginsToTransfer` énumération.  
   
 |Nom convivial dans LoginsToTransfer|Valeur numérique|  
 |---------------------------------------|-------------------|  
@@ -318,7 +317,7 @@ ms.locfileid: "48089658"
 |AllLoginsFromSelectedDatabases|2|  
   
 ### <a name="transfer-master-stored-procedures-task"></a>Tâche de transfert de procédures stockées de master  
- `IfObjectExists` propriété, définie à l’aide de valeurs à partir de la `IfObjectExists` énumération.  
+ `IfObjectExists` Jeu de propriétés à l’aide de valeurs à partir de la `IfObjectExists` énumération.  
   
 |Nom convivial dans IfObjectExists|Valeur numérique|  
 |-------------------------------------|-------------------|  
@@ -327,7 +326,7 @@ ms.locfileid: "48089658"
 |Ignorer|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>Tâche de transfert d'objets SQL Server  
- `ExistingData` propriété, définie à l’aide de valeurs à partir de la `ExistingData` énumération.  
+ `ExistingData` Jeu de propriétés à l’aide de valeurs à partir de la `ExistingData` énumération.  
   
 |Nom convivial dans ExistingData|Valeur numérique|  
 |-----------------------------------|-------------------|  
@@ -335,7 +334,7 @@ ms.locfileid: "48089658"
 |Append|1|  
   
 ### <a name="web-service-task"></a>Tâche de service Web  
- `OutputType` propriété, définie à l’aide de valeurs à partir de la `DTSOutputType` énumération.  
+ `OutputType` Jeu de propriétés à l’aide de valeurs à partir de la `DTSOutputType` énumération.  
   
 |Nom convivial dans DTSOutputType|Valeur numérique|  
 |------------------------------------|-------------------|  
@@ -343,7 +342,7 @@ ms.locfileid: "48089658"
 |Variable|1|  
   
 ### <a name="wmi-data-reader-task"></a>Tâche Lecteur de données WMI  
- `OverwriteDestination` propriété, définie à l’aide de valeurs à partir de la `OverwriteDestination` énumération.  
+ `OverwriteDestination` Jeu de propriétés à l’aide de valeurs à partir de la `OverwriteDestination` énumération.  
   
 |Nom convivial dans OverwriteDestination|Valeur numérique|  
 |-------------------------------------------|-------------------|  
@@ -351,7 +350,7 @@ ms.locfileid: "48089658"
 |AppendToDestination|1|  
 |KeepOriginal|2|  
   
- `OutputType` propriété, définie à l’aide de valeurs à partir de la `OutputType` énumération.  
+ `OutputType` Jeu de propriétés à l’aide de valeurs à partir de la `OutputType` énumération.  
   
 |Nom convivial dans OutputType|Valeur numérique|  
 |---------------------------------|-------------------|  
@@ -359,14 +358,14 @@ ms.locfileid: "48089658"
 |PropertyValue|1|  
 |PropertyNameAndValue|2|  
   
- `DestinationType` propriété, définie à l’aide de valeurs à partir de la `DestinationType` énumération.  
+ `DestinationType` Jeu de propriétés à l’aide de valeurs à partir de la `DestinationType` énumération.  
   
 |Nom convivial dans DestinationType|Valeur numérique|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
 |Variable|1|  
   
- `WqlQuerySourceType` propriété, définie à l’aide de valeurs à partir de la `QuerySourceType` énumération.  
+ `WqlQuerySourceType` Jeu de propriétés à l’aide de valeurs à partir de la `QuerySourceType` énumération.  
   
 |Nom convivial dans QuerySourceType|Valeur numérique|  
 |--------------------------------------|-------------------|  
@@ -374,21 +373,21 @@ ms.locfileid: "48089658"
 |DirectInput|1|  
 |Variable|2|  
   
- Propriété `ActionAtEvent` de l'Observateur d'événement WMI - définie à l'aide de valeurs provenant de l'énumération `ActionAtEvent`.  
+ Observateur d’événement WMI `ActionAtEvent` jeu de propriétés à l’aide de valeurs à partir de la `ActionAtEvent` énumération.  
   
 |Nom convivial dans ActionAtEvent|Valeur numérique|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
 |LogTheEvent|1|  
   
- `ActionAtTimeout` propriété, définie à l’aide de valeurs à partir de la `ActionAtTimeout` énumération.  
+ `ActionAtTimeout` Jeu de propriétés à l’aide de valeurs à partir de la `ActionAtTimeout` énumération.  
   
 |Nom convivial dans ActionAtTimeout|Valeur numérique|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
 |LogTimeout|1|  
   
- `AfterEvent` propriété, définie à l’aide de valeurs à partir de la `AfterEvent` énumération.  
+ `AfterEvent` Jeu de propriétés à l’aide de valeurs à partir de la `AfterEvent` énumération.  
   
 |Nom convivial dans AfterEvent|Valeur numérique|  
 |---------------------------------|-------------------|  
@@ -396,7 +395,7 @@ ms.locfileid: "48089658"
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `AfterTimeout` propriété, définie à l’aide de valeurs à partir de la `AfterTimeout` énumération.  
+ `AfterTimeout` Jeu de propriétés à l’aide de valeurs à partir de la `AfterTimeout` énumération.  
   
 |Nom convivial dans AfterTimeout|Valeur numérique|  
 |-----------------------------------|-------------------|  
@@ -404,7 +403,7 @@ ms.locfileid: "48089658"
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `WqlQuerySourceType` propriété, définie à l’aide de valeurs à partir de la `QuerySourceType` énumération.  
+ `WqlQuerySourceType` Jeu de propriétés à l’aide de valeurs à partir de la `QuerySourceType` énumération.  
   
 |Nom convivial dans QuerySourceType|Valeur numérique|  
 |--------------------------------------|-------------------|  
@@ -413,7 +412,7 @@ ms.locfileid: "48089658"
 |Variable|2|  
   
 ### <a name="xml-task"></a>Tâche XML  
- `OperationType` propriété, définie à l’aide de valeurs à partir de la `DTSXMLOperation` énumération.  
+ `OperationType` Jeu de propriétés à l’aide de valeurs à partir de la `DTSXMLOperation` énumération.  
   
 |Nom convivial dans DTSXMLOperation|Valeur numérique|  
 |--------------------------------------|-------------------|  
@@ -424,7 +423,7 @@ ms.locfileid: "48089658"
 |Diff|4|  
 |Patch|5|  
   
- Propriétés `SourceType`, `SecondOperandType` et `XPathSourceType` - définies à l'aide de valeurs provenant de l'énumération `DTSXMLSourceType`.  
+ `SourceType`, `SecondOperandType`, et `XPathSourceType` jeu de propriétés à l’aide de valeurs à partir de la `DTSXMLSourceType` énumération.  
   
 |Nom convivial dans DTSXMLSourceType|Valeur numérique|  
 |---------------------------------------|-------------------|  
@@ -432,21 +431,21 @@ ms.locfileid: "48089658"
 |Variable|1|  
 |DirectInput|2|  
   
- `DestinationType` et **DiffGramDestinationType** propriétés — définie à l’aide de valeurs à partir de la `DTSXMLSaveResultTo` énumération.  
+ `DestinationType` et **DiffGramDestinationType** jeu de propriétés à l’aide de valeurs à partir de la `DTSXMLSaveResultTo` énumération.  
   
 |Nom convivial dans DTSXMLSaveResultTo|Valeur numérique|  
 |-----------------------------------------|-------------------|  
 |FileConnection|0|  
 |Variable|1|  
   
- `ValidationType` propriété, définie à l’aide de valeurs à partir de la `DTSXMLValidationType` énumération.  
+ `ValidationType` Jeu de propriétés à l’aide de valeurs à partir de la `DTSXMLValidationType` énumération.  
   
 |Nom convivial dans DTSXMLValidationType|Valeur numérique|  
 |-------------------------------------------|-------------------|  
 |DTD|0|  
 |XSD|1|  
   
- `XPathOperation` propriété, définie à l’aide de valeurs à partir de la `DTSXMLXPathOperation` énumération.  
+ `XPathOperation` Jeu de propriétés à l’aide de valeurs à partir de la `DTSXMLXPathOperation` énumération.  
   
 |Nom convivial dans DTSXMLXPathOperation|Valeur numérique|  
 |-------------------------------------------|-------------------|  
@@ -454,7 +453,7 @@ ms.locfileid: "48089658"
 |Valeurs|1|  
 |NodeList|2|  
   
- `DiffOptions` propriété, définie à l’aide de valeurs à partir de la `DTSXMLDiffOptions` énumération. Les options dans cet énumérateur ne sont pas mutuellement exclusives. Pour utiliser plusieurs options, fournissez une liste des options à appliquer, séparées par des virgules.  
+ `DiffOptions` Jeu de propriétés à l’aide de valeurs à partir de la `DTSXMLDiffOptions` énumération. Les options dans cet énumérateur ne sont pas mutuellement exclusives. Pour utiliser plusieurs options, fournissez une liste des options à appliquer, séparées par des virgules.  
   
 |Nom convivial dans DTSXMLDiffOptions|Valeur numérique|  
 |----------------------------------------|-------------------|  
@@ -468,7 +467,7 @@ ms.locfileid: "48089658"
 |IgnoreXmlDecl|64|  
 |IgnoreDtd|128|  
   
- `DiffAlgorithm` propriété, définie à l’aide de valeurs à partir de la `DTSXMLDiffAlgorithm` énumération.  
+ `DiffAlgorithm` Jeu de propriétés à l’aide de valeurs à partir de la `DTSXMLDiffAlgorithm` énumération.  
   
 |Nom convivial dans DTSXMLDiffAlgorithm|Valeur numérique|  
 |------------------------------------------|-------------------|  
@@ -484,7 +483,7 @@ ms.locfileid: "48089658"
 ### <a name="all-maintenance-tasks"></a>Toutes les tâches de maintenance  
  Toutes les tâches de maintenance utilisent les énumérations suivantes pour définir les propriétés spécifiées.  
   
- `DatabaseSelectionType` propriété, définie à l’aide de valeurs à partir de la `DatabaseSelection` énumération.  
+ `DatabaseSelectionType` Jeu de propriétés à l’aide de valeurs à partir de la `DatabaseSelection` énumération.  
   
 |Nom convivial dans DatabaseSelection|Valeur numérique|  
 |----------------------------------------|-------------------|  
@@ -494,7 +493,7 @@ ms.locfileid: "48089658"
 |Utilisateur|3|  
 |Specific|4|  
   
- `TableSelectionType` propriété, définie à l’aide de valeurs à partir de la `TableSelection` énumération.  
+ `TableSelectionType` Jeu de propriétés à l’aide de valeurs à partir de la `TableSelection` énumération.  
   
 |Nom convivial dans TableSelection|Valeur numérique|  
 |-------------------------------------|-------------------|  
@@ -502,7 +501,7 @@ ms.locfileid: "48089658"
 |All|1|  
 |Specific|2|  
   
- `ObjectTypeSelection` propriété, définie à l’aide de valeurs à partir de la `ObjectType` énumération.  
+ `ObjectTypeSelection` Jeu de propriétés à l’aide de valeurs à partir de la `ObjectType` énumération.  
   
 |Nom convivial dans ObjectType|Valeur numérique|  
 |---------------------------------|-------------------|  
@@ -511,21 +510,21 @@ ms.locfileid: "48089658"
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>Tâche Sauvegarder la base de données  
- `DestinationCreationType` propriété, définie à l’aide de valeurs à partir de la `DestinationType` énumération.  
+ `DestinationCreationType` Jeu de propriétés à l’aide de valeurs à partir de la `DestinationType` énumération.  
   
 |Nom convivial dans DestinationType|Valeur numérique|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
 |Manuel|1|  
   
- `ExistingBackupsAction` propriété, définie à l’aide de valeurs à partir de la `ActionForExistingBackups` énumération.  
+ `ExistingBackupsAction` Jeu de propriétés à l’aide de valeurs à partir de la `ActionForExistingBackups` énumération.  
   
 |Nom convivial dans ActionForExistingBackups|Valeur numérique|  
 |-----------------------------------------------|-------------------|  
 |Ajouter|0|  
 |Remplacer|1|  
   
- `BackupAction` propriété, définie à l’aide de valeurs à partir de la `BackupTaskType` énumération. Cette propriété fonctionne avec la `BackupIsIncremental` propriété pour définir le type de sauvegarde que la tâche effectue.  
+ `BackupAction` Jeu de propriétés à l’aide de valeurs à partir de la `BackupTaskType` énumération. Cette propriété définit avec la propriété `BackupIsIncremental` le type de sauvegarde que la tâche effectue.  
   
 |Nom convivial dans BackupTaskType|Valeur numérique|  
 |-------------------------------------|-------------------|  
@@ -533,7 +532,7 @@ ms.locfileid: "48089658"
 |Fichiers|1|  
 |Journal|2|  
   
- Propriété `BackupDevice` : définie à l'aide de valeurs provenant de l'énumération SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) `DeviceType`.  
+ `BackupDevice` Jeu de propriétés à l’aide de valeurs à partir de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) `DeviceType` énumération.  
   
 |Nom convivial dans DeviceType|Valeur numérique|  
 |---------------------------------|-------------------|  
@@ -544,14 +543,14 @@ ms.locfileid: "48089658"
 |VirtualDevice|4|  
   
 ### <a name="maintenance-cleanup-task"></a>Tâche de nettoyage de maintenance  
- `FileTypeSelected` propriété, définie à l’aide de valeurs à partir de la `FileType` énumération.  
+ `FileTypeSelected` Jeu de propriétés à l’aide de valeurs à partir de la `FileType` énumération.  
   
 |Nom convivial dans FileType|Valeur numérique|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
 |FileReport|1|  
   
- `OlderThanTimeUnitType` propriété, définie à l’aide de valeurs à partir de la `TimeUnitType` énumération.  
+ `OlderThanTimeUnitType` Jeu de propriétés à l’aide de valeurs à partir de la `TimeUnitType` énumération.  
   
 |Nom convivial dans TimeUnitType|Valeur numérique|  
 |-----------------------------------|-------------------|  
@@ -561,7 +560,7 @@ ms.locfileid: "48089658"
 |Année|3|  
   
 ### <a name="update-statistics-task"></a>Tâche Mettre à jour les statistiques  
- Propriété `UpdateType` : définie à l'aide de valeurs provenant de l'énumération SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) `StatisticsTarget`.  
+ `UpdateType` Jeu de propriétés à l’aide de valeurs à partir de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) `StatisticsTarget` énumération.  
   
 |Nom convivial dans StatisticsTarget|Valeur numérique|  
 |---------------------------------------|-------------------|  
@@ -572,18 +571,18 @@ ms.locfileid: "48089658"
 ##  <a name="CommonProperties"></a> Propriétés communes  
  Les packages, les tâches et les conteneurs de boucles Foreach, de boucles For et de séquences peuvent utiliser les énumérations suivantes pour définir les propriétés spécifiées.  
   
- `ForceExecutionResult` propriété, définie à l’aide de valeurs à partir de la `DTSForcedExecResult` énumération.  
+ `ForceExecutionResult` Jeu de propriétés à l’aide de valeurs à partir de la `DTSForcedExecResult` énumération.  
   
 |Nom convivial dans DTSForcedExecResult|Valeur numérique|  
 |------------------------------------------|-------------------|  
 |None|-1|  
-|Réussi|0|  
+|Opération réussie|0|  
 |Failure|1|  
 |Completion|2|  
   
- Propriété `IsolationLevel` - définie à l'aide de valeurs provenant de l'énumération `IsolationLevel` .NET Framework. Pour plus d’informations, consultez la bibliothèque de classes .NET Framework dans [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313).  
+ `IsolationLevel` Jeu de propriétés par le .NET Framework `IsolationLevel` énumération. Pour plus d’informations, consultez la bibliothèque de classes .NET Framework dans [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313).  
   
- `LoggingMode` propriété, définie à l’aide de valeurs à partir de la `DTSLoggingMode` énumération.  
+ `LoggingMode` Jeu de propriétés à l’aide de valeurs à partir de la `DTSLoggingMode` énumération.  
   
 |Nom convivial dans DTSLoggingMode|Valeur numérique|  
 |-------------------------------------|-------------------|  
@@ -591,7 +590,7 @@ ms.locfileid: "48089658"
 |Activé|1|  
 |Désactivé|2|  
   
- `TransactionOption` propriété, définie à l’aide de valeurs à partir de la `DTSTransactionOption` énumération.  
+ `TransactionOption` Jeu de propriétés à l’aide de valeurs à partir de la `DTSTransactionOption` énumération.  
   
 |Nom convivial dans DTSTransactionOption|Valeur numérique|  
 |-------------------------------------------|-------------------|  
@@ -603,8 +602,8 @@ ms.locfileid: "48089658"
  [Ajouter ou modifier une expression de propriété](add-or-change-a-property-expression.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser des Expressions de propriété dans des Packages](use-property-expressions-in-packages.md)   
- [Integration Services &#40;SSIS&#41; Packages](../integration-services-ssis-packages.md)   
+ [Expressions de propriété dans des packages](use-property-expressions-in-packages.md)   
+ [Packages Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
  [Conteneurs Integration Services](../control-flow/integration-services-containers.md)   
  [Tâches Integration Services](../control-flow/integration-services-tasks.md)   
  [Contraintes de précédence](../control-flow/precedence-constraints.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
@@ -18,12 +17,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe677e6b2fb13c3a158c78e0416142b7b15ce975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64e3a60d767c100ad66a293f1e588369a140d1e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204819"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367311"
 ---
 # <a name="execute-sql-task"></a>Tâche d’exécution de requêtes SQL
   La tâche d'exécution SQL exécute des instructions ou des procédures stockées SQL à partir d'un package. La tâche peut contenir une seule ou plusieurs instructions SQL s'exécutant de façon séquentielle. Vous pouvez utiliser la tâche d'exécution SQL aux fins suivantes :  
@@ -63,7 +62,7 @@ ms.locfileid: "48204819"
 >  Les instructions SQL valides écrites en dehors de la tâche d'exécution SQL peuvent ne pas être analysées correctement par celle-ci.  
   
 > [!NOTE]  
->  La tâche d'exécution SQL utilise la valeur d'énumération `RecognizeAll` ParseMode. Pour plus d’informations, consultez [ManagedBatchParser Namespace](http://go.microsoft.com/fwlink/?LinkId=223617)(Espace de noms ManagedBatchParser).  
+>  La tâche d'exécution SQL utilise la valeur d'énumération `RecognizeAll` ParseMode. Pour plus d’informations, consultez [ManagedBatchParser Namespace](https://go.microsoft.com/fwlink/?LinkId=223617)(Espace de noms ManagedBatchParser).  
   
 ## <a name="sending-multiple-statements-in-a-batch"></a>Envoi de plusieurs instructions dans un traitement  
  Si vous incluez plusieurs instructions dans une tâche d'exécution SQL, vous pouvez les regrouper et les exécuter sous forme de traitement. Pour indiquer la fin d'un traitement, utilisez la commande GO. Toutes les instructions SQL comprises entre deux commandes GO sont envoyées dans un traitement au fournisseur OLE DB afin d'être exécutées. La commande SQL peut comprendre plusieurs traitements séparés par des commandes GO.  
@@ -81,7 +80,7 @@ ms.locfileid: "48204819"
 -   Si la tâche utilise la liaison de paramètre, toutes les requêtes du traitement doivent avoir le même nombre et les mêmes types de paramètres.  
   
 ## <a name="running-parameterized-sql-commands"></a>Exécution de commandes SQL paramétrables  
- Les instructions et les procédures stockées SQL utilisent fréquemment des paramètres d'entrée, des paramètres de sortie et des codes de retour. La tâche d’exécution SQL prend en charge la `Input`, `Output`, et `ReturnValue` types de paramètres. Vous utilisez le `Input` type pour les paramètres d’entrée, `Output` pour les paramètres de sortie, et `ReturnValue` pour les codes de retour.  
+ Les instructions et les procédures stockées SQL utilisent fréquemment des paramètres d'entrée, des paramètres de sortie et des codes de retour. La tâche d'exécution SQL prend en charge les types de paramètres `Input`, `Output` et `ReturnValue`. Vous utilisez le type `Input` pour les paramètres d'entrée, `Output` pour les paramètres de sortie et `ReturnValue` pour les codes de retour.  
   
 > [!NOTE]  
 >  Vous ne pouvez utiliser des paramètres dans une tâche d'exécution SQL que si le fournisseur de données les prend en charge.  
@@ -94,9 +93,9 @@ ms.locfileid: "48204819"
  Pour plus d’informations sur la récupération de jeux de résultats à partir de commandes SQL dans la tâche d’exécution SQL, consultez [Ensembles de résultats dans la tâche d’exécution SQL](../result-sets-in-the-execute-sql-task.md).  
   
 ## <a name="troubleshooting-the-execute-sql-task"></a>Résolution des problèmes liés à la tâche d'exécution SQL  
- Vous pouvez consigner les appels que la tâche d'exécution SQL effectue auprès de fournisseurs de données externes. Vous pouvez utiliser cette fonctionnalité de journalisation pour résoudre les problèmes liés aux commandes SQL qu'exécute la tâche d'exécution SQL. Pour consigner les appels que la tâche d’exécution SQL passe à des fournisseurs de données externes, activez la journalisation des packages et sélectionnez l’événement **Diagnostic** au niveau du package. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
+ Vous pouvez consigner les appels que la tâche d'exécution SQL effectue auprès de fournisseurs de données externes. Vous pouvez utiliser cette fonctionnalité de journalisation pour résoudre les problèmes liés aux commandes SQL qu'exécute la tâche d'exécution SQL. Pour consigner les appels que la tâche d’exécution SQL passe à des fournisseurs de données externes, activez la journalisation des packages et sélectionnez l’événement **Diagnostic** au niveau du package. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
- Parfois, une commande SQL ou une procédure stockée retourne plusieurs jeux de résultats. Ces jeux de résultats inclure non seulement les ensembles de lignes qui sont le résultat de `SELECT` les requêtes, mais des valeurs uniques qui sont le résultat d’erreurs de `RAISERROR` ou `PRINT` instructions. Le fait que la tâche ignore les erreurs dans des jeux de résultats qui se produisent après le premier jeu de résultats dépend du type de gestionnaire de connexions utilisé :  
+ Parfois, une commande SQL ou une procédure stockée retourne plusieurs jeux de résultats. Ces jeux de résultats incluent non seulement des ensembles de lignes qui sont le résultat de requêtes `SELECT`, mais également des valeurs uniques qui sont le résultat d'erreurs d'instructions `RAISERROR` ou `PRINT`. Le fait que la tâche ignore les erreurs dans des jeux de résultats qui se produisent après le premier jeu de résultats dépend du type de gestionnaire de connexions utilisé :  
   
 -   Lorsque vous utilisez les gestionnaires de connexions OLE DB et ADO, la tâche ignore les jeux de résultats qui se produisent après le premier jeu de résultats. Par conséquent, avec ces gestionnaires de connexions, la tâche ignore une erreur retournée par une commande SQL ou une procédure stockée lorsque l'erreur ne fait pas partie du premier jeu de résultats.  
   
@@ -122,7 +121,7 @@ ms.locfileid: "48204819"
   
 -   Indiquez si la tâche passe la phase de préparation de l'instruction SQL.  
   
--   Si vous utilisez le type de connexion ADO, indiquez si l'instruction SQL est une procédure stockée. Pour les autres types de connexion, cette propriété est en lecture seule et sa valeur est toujours `false`.  
+-   Si vous utilisez le type de connexion ADO, indiquez si l'instruction SQL est une procédure stockée. Pour d'autres types de connexion, cette propriété est définie en lecture seule et sa valeur est toujours `false`.  
   
  Vous pouvez définir les propriétés par programmation ou par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
@@ -138,7 +137,7 @@ ms.locfileid: "48204819"
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="configuring-the-execute-sql-task-programmatically"></a>Configuration de la tâche d'exécution SQL par programmation  
  Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
@@ -159,6 +158,6 @@ ms.locfileid: "48204819"
   
 -   [Référence Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference)  
   
--   Entrée de blog, [New Date and Time Functions in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=239783), sur le site mssqltips.com  
+-   Entrée de blog, [New Date and Time Functions in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=239783), sur le site mssqltips.com  
   
   

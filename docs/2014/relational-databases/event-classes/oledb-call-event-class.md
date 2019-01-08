@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 954ba93ab5c32a9fa957133a6b8b10682ed7d019
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2250847ee35210c63a4ac9ed5e1e41bab33a08ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133402"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793291"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call (classe d'événements)
   La classe d’événements **OLEDB Call** se produit quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelle un fournisseur OLE DB pour les requêtes distribuées et les procédures stockées distantes.  
@@ -35,12 +34,12 @@ ms.locfileid: "48133402"
 |ClientProcessID|`Int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
 |DatabaseID|`Int`|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |DatabaseName|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
-|Duration|`Bigint`|Durée nécessaire pour exécuter l'événement d'appel OLE DB.|13|non|  
+|Duration|`Bigint`|Durée nécessaire pour exécuter l'événement d'appel OLE DB.|13|Non|  
 |EndTime|`Datetime`|Heure de fin de l'événement.|15|Oui|  
 |Error|`int`|Numéro d'erreur d'un événement donné. Il s'agit souvent du numéro d'erreur stocké dans l'affichage catalogue sys.messages.|31|Oui|  
-|EventClass|`Int`|Type d’événement = 119.|27|non|  
-|EventSequence|`Int`|Séquence de la classe d'événements OLE DB dans le lot.|51|non|  
-|EventSubClass|`Int`|0=Démarrage<br /><br /> 1=Terminée|21|non|  
+|EventClass|`Int`|Type d’événement = 119.|27|Non|  
+|EventSequence|`Int`|Séquence de la classe d'événements OLE DB dans le lot.|51|Non|  
+|EventSubClass|`Int`|0=Démarrage<br /><br /> 1=Terminée|21|Non|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IsSystem|`int`|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
@@ -52,10 +51,10 @@ ms.locfileid: "48133402"
 |NTUserName|`nvarchar`|Nom d'utilisateur Windows.|6|Oui|  
 |ProviderName|`nvarchar`|Nom du fournisseur OLE DB.|46|Oui|  
 |RequestID|`Int`|ID de la demande contenant l'instruction.|49|Oui|  
-|SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et exécutez une instruction en tant que connexion2, `SessionLoginName` affiche Login1 et `LoginName` affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
+|SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Exemple : si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom d'utilisateur Login1 et exécutez une instruction sous le nom Login2, `SessionLoginName` retourne Login1 et `LoginName` retourne Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`Int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`nvarchar`|Paramètres envoyés et reçus au sein de l'appel OLE DB.|1|non|  
+|TextData|`nvarchar`|Paramètres envoyés et reçus au sein de l'appel OLE DB.|1|Non|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  

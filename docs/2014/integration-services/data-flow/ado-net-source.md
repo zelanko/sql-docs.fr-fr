@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.f1
@@ -19,17 +18,17 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43e7e3e85567b74b2195214c37f9761cde5f0d91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b672d602666fd51f98cf1854917dd2a035157d5e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072159"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352117"
 ---
 # <a name="ado-net-source"></a>Source ADO NET
   La source ADO .NET exploite des données issues d'un fournisseur .NET et les met à la disposition du flux de données.  
   
- Vous pouvez utiliser la source ADO .NET. pour vous connecter à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] via OLE DB n'est pas prise en charge. Pour plus d’informations sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [Recommandations générales et limitations (Microsoft Azure SQL Database)](http://go.microsoft.com/fwlink/?LinkId=248228).  
+ Vous pouvez utiliser la source ADO .NET. pour vous connecter à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] via OLE DB n'est pas prise en charge. Pour plus d’informations sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [Recommandations générales et limitations (Microsoft Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Prise en charge du type de données  
  La source convertit tout type de données qui ne mappe pas à un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] spécifique en un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_NTEXT. Cette conversion se produit même si le type de données est `System.Object`.  
@@ -68,7 +67,7 @@ ms.locfileid: "48072159"
 >  Lorsque vous utilisez une instruction SQL pour appeler une procédure stockée qui retourne des résultats à partir d'une table temporaire, utilisez l'option WITH RESULT SETS afin de définir les métadonnées du jeu de résultats.  
   
 > [!NOTE]  
->  Si vous utilisez une instruction SQL pour exécuter une procédure stockée et le package échoue avec l’erreur suivante, vous pourrez peut-être résoudre l’erreur en ajoutant le `SET FMTONLY OFF` instruction avant l’instruction exec.  
+>  Si vous utilisez une instruction SQL pour exécuter une procédure stockées et que le package échoue avec l'erreur suivante, vous pouvez résoudre l'erreur en ajoutant l'instruction `SET FMTONLY OFF` avant l'instruction exec.  
 >   
 >  **La colonne « nom_colonne » est introuvable dans la source de données.**  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48072159"
   
 -   [Propriétés personnalisées ADO NET](ado-net-custom-properties.md)  
   
- Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Destination DataReader](datareader-destination.md)   

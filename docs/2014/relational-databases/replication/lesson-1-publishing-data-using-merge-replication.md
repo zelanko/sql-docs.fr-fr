@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Publication de données à l’aide de la réplication de fusion | Microsoft Docs'
+title: 'Leçon 1 : Publication des données à l’aide de la réplication de fusion | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 65debc2ad15045984f43e05d0afcf3011c50f2b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2160f4e2a204f1e1e6b90da9949bd356bc9b7cf5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112909"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589263"
 ---
-# <a name="lesson-1-publishing-data-using-merge-replication"></a>Leçon 1 : publication de données à l'aide de la réplication de fusion
+# <a name="lesson-1-publishing-data-using-merge-replication"></a>Leçon 1 : Publication de données à l'aide de la réplication de fusion
   Dans cette leçon, vous créez une publication de fusion à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour publier un sous-ensemble des tables **Employee**, **SalesOrderHeader**et **SalesOrderDetail** de l’exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Ces tables sont filtrées avec des filtres de lignes paramétrables pour que chaque abonnement contienne une partition unique des données. Vous ajoutez également la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée par l’Agent de fusion à la liste d’accès à la publication. Pour suivre ce didacticiel, vous devez avoir terminé le didacticiel précédent, [Préparation du serveur pour la réplication](tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Pour créer une publication et définir des articles  
@@ -84,7 +84,7 @@ ms.locfileid: "48112909"
   
 21. Sélectionnez **Créer un instantané immédiatement**, décochez **Planifier l’exécution de l’Agent d’instantané aux heures suivantes**, puis cliquez sur **Suivant**.  
   
-22. Dans la page Sécurité de l’agent, cliquez sur **Paramètres de sécurité**, tapez \<*nom_ordinateur>***\repl_snapshot** dans la zone **Compte de processus**, fournissez le mot de passe du compte et cliquez sur **OK**. Cliquez sur **Terminer**.  
+22. Dans la page Sécurité de l’agent, cliquez sur **Paramètres de sécurité**, tapez \<_nom_ordinateur>_**\repl_snapshot** dans la zone **Compte de processus**, fournissez le mot de passe du compte et cliquez sur **OK**. Cliquez sur **Terminer**.  
   
 23. Dans la page Terminer l’Assistant, entrez **AdvWorksSalesOrdersMerge** dans la zone **Nom de la publication** , puis cliquez sur **Terminer**.  
   
@@ -106,16 +106,16 @@ ms.locfileid: "48112909"
   
      La boîte de dialogue **Propriétés de la publication** s’affiche.  
   
-3.  Sélectionnez la page **Liste d’accès à la publication** , puis cliquez sur **Ajouter**.  
+3.  Sélectionnez la page **Liste d’accès à la publication**, puis cliquez sur **Ajouter**.  
   
-4.  Dans la boîte de dialogue Ajouter un accès à une publication, sélectionnez *<nom_ordinateur>***\repl_merge* et cliquez sur **OK**. Cliquez sur **OK**.  
+4.  Dans la boîte de dialogue Ajouter un accès à une publication, sélectionnez _<nom_ordinateur>_**\repl_merge** et cliquez sur **OK**. Cliquez sur **OK**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez créé avec succès la publication de fusion. Ensuite, vous allez créer l'abonnement à cette publication. Consultez [Leçon 2 : Création d’un abonnement à la publication de fusion](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
+ Vous avez créé avec succès la publication de fusion. Ensuite, vous allez créer l'abonnement à cette publication. Consultez [leçon 2 : Création d’un abonnement à la Publication de fusion](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtrer des données publiées](publish/filter-published-data.md)   
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
- [Define an Article](publish/define-an-article.md)  
+ [Définir un article](publish/define-an-article.md)  
   
   

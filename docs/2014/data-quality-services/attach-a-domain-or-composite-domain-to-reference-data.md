@@ -13,12 +13,12 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecc2a15cda3c63b1f4b29510192a28f962ffe93c
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f3990965c78bec153ef87011f152ca0f13881055
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032766"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519199"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Attacher un domaine ou un domaine composite à des données de référence
   Cette rubrique explique comment attacher des domaines/domaines composites dans une base de connaissances à un service de données de référence dans Windows Azure Marketplace pour générer des connaissances sur les données de référence de haute qualité. Chaque service de données de référence contient un schéma (colonnes de données). Après avoir attaché un domaine ou un domaine composite à un service de données de référence, vous devez mapper le domaine joint, ou chaque domaine au sein du domaine composite joint, aux colonnes appropriées du schéma de service des données de référence. L'attachement d'un domaine composite à un service de données de référence vous permet d'attacher un seul domaine à un service de données de référence, puis de mapper les différents domaines du domaine composite aux colonnes appropriées du schéma de service des données de référence.  
@@ -26,9 +26,9 @@ ms.locfileid: "51032766"
 > [!WARNING]  
 >  Le domaine composite associé à un service de données de référence est disponible dans la liste déroulante des domaines lors du mappage des domaines aux colonnes du schéma de service de données de référence. Ne mappez pas le domaine composite à une colonne dans le schéma de service de données de référence ; vous devez uniquement mapper les domaines individuels au sein d'un domaine composite aux colonnes appropriées dans le schéma de service de données de référence. Sinon, cela génère une erreur.  
   
- Un schéma de service de données de référence peut avoir une colonne obligatoire qui doit être mappée au domaine approprié si vous choisissez d'utiliser le schéma. La colonne obligatoire d'un schéma de données de référence est identifiée par « (M) » au niveau de son nom. Par exemple, **Adresse** est la colonne de schéma obligatoire dans **Melissa Data – Address Data** et **CompanyName** est la colonne de schéma obligatoire dans **Digital Trowel Inc. – Us companies and professional data for SQL users**.  
+ Un schéma de service de données de référence peut avoir une colonne obligatoire qui doit être mappée au domaine approprié si vous choisissez d'utiliser le schéma. La colonne obligatoire d’un schéma de données de référence est identifiée par « (M) » au niveau de son nom. Par exemple, **Adresse** est la colonne de schéma obligatoire dans **Melissa Data - Address Data** et **CompanyName** est la colonne de schéma obligatoire dans **Digital Trowel Inc. - Us companies and professional data for SQL users**.  
   
- Dans cette rubrique, nous allons créer quatre domaines : **Address Line**, **City**, **State**et **Zip**, sous un domaine composite **Address Verification**; joignez le domaine composite au service de données de référence **Melissa Data – Address Check** , puis mappez les domaines dans le domaine composite aux colonnes appropriées dans le schéma de service de données de référence.  
+ Dans cette rubrique, nous allons créer quatre domaines : **Ligne d’adresse**, **Ville**, **état**, et **Zip**, sous un domaine composite, **vérification de l’adresse**, attacher le un domaine composite pour le **Melissa Data – contrôle d’adresse** service de données de référence, puis mapper les domaines individuels au sein du domaine composite aux colonnes appropriées dans le schéma de service de données de référence.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
@@ -37,7 +37,7 @@ ms.locfileid: "51032766"
   
 ###  <a name="Security"></a> Sécurité  
   
-#### <a name="permissions"></a>Permissions  
+#### <a name="permissions"></a>Autorisations  
  Vous devez disposer du rôle de dqs_kb_editor sur la base de données de DQS_MAIN pour mapper les domaines aux données de référence.  
   
 ##  <a name="Map"></a> Mapper les domaines aux données de référence de Melissa Data  
@@ -48,7 +48,7 @@ ms.locfileid: "51032766"
   
 3.  Dans l'écran **Nouvelle Base de connaissances** , tapez un nom pour la nouvelle base de connaissances, cliquez sur l'activité **Gestion de l'arborescence du domaine** , puis cliquez **Créer**.  
   
-4.  Dans l'écran **Gestion de l'arborescence du domaine** , cliquez sur l'icône **Créer un domaine** pour créer un domaine. Créez les quatre domaines suivants : **Adresse**, **Ville**, **État**et **Code postal**.  
+4.  Dans l'écran **Gestion de l'arborescence du domaine** , cliquez sur l'icône **Créer un domaine** pour créer un domaine. Créez les quatre domaines suivants : **Ligne d’adresse**, **Ville**, **état**, et **Zip**.  
   
 5.  Cliquez sur l'icône **Créer un domaine composite** pour créer un domaine composite. Dans la boîte de dialogue **Créer un domaine composite** , tapez **Contrôle d'adresse** dans la zone **Nom du domaine composite** et incluez tous les domaines créés à l'étape 3 du domaine composite. Cliquez sur **OK**.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "51032766"
   
 8.  Dans la boîte de dialogue **Catalogue des fournisseurs de données de référence en ligne** :  
   
-    1.  Sous **DataMarket Data Quality Services**, sélectionnez la zone de **Melissa Data – Contrôle d'adresse** .  
+    1.  Sous **DataMarket Data Quality Services**, sélectionnez la zone **Melissa Data - Contrôle d’adresse**.  
   
-    2.  Mappez les colonnes du service de données de référence Melissa Data – Address Check aux domaines appropriés (Address Line, City, State et Zip). Vous mappez les colonnes en sélectionnant une colonne de service de données de référence dans la colonne **Schéma de service de données de référence** , puis en sélectionnant le domaine approprié dans la colonne **Domaine** . Pour ajouter des lignes à la table, cliquez sur l'icône **Ajouter une entrée de schéma** .  
+    2.  Mappez les colonnes du service de données de référence Melissa Data - Address Check aux domaines appropriés (Address Line, City, State et Zip). Vous mappez les colonnes en sélectionnant une colonne de service de données de référence dans la colonne **Schéma de service de données de référence** , puis en sélectionnant le domaine approprié dans la colonne **Domaine** . Pour ajouter des lignes à la table, cliquez sur l'icône **Ajouter une entrée de schéma** .  
   
     3.  Cliquez sur **OK** pour enregistrer les modifications et fermez la boîte de dialogue **Catalogue des fournisseurs de données de référence en ligne** .  
   
@@ -71,17 +71,17 @@ ms.locfileid: "51032766"
   
 9. Retournez à l'onglet **Données de référence** . Dans la zone **Paramètres des fournisseurs**, modifiez les valeurs dans les zones suivantes, si nécessaire :  
   
-    -   **Seuil de correction automatique**: les corrections des services de données de référence avec un niveau de confiance supérieur à ces valeurs de seuil seront automatiquement effectuées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,9 pour 90 %.  
+    -   **Seuil de Correction automatique**: Corrections des données du service de référence avec un niveau de confiance supérieur à ces valeurs de seuil seront automatiquement effectuées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,9 pour 90 %.  
   
-    -   **Candidats suggérés**: nombre des candidats suggérés à afficher à partir du service de données de référence.  
+    -   **Candidats suggérés**: Nombre de candidats suggérés à afficher à partir du service de données de référence.  
   
-    -   **Confiance minimale**: les suggestions du service des données de référence avec un niveau de confiance inférieur à cette valeur sont ignorées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,6 pour 60 %.  
+    -   **Confiance minimale**: Suggestions du service de données de référence avec un niveau de confiance inférieur à cette valeur seront ignorées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,6 pour 60 %.  
   
 10. Cliquez sur **Terminer** pour publier la base de connaissances. Un message de confirmation s'affiche après que la base de connaissances a été publiée avec succès.  
   
  Vous pouvez maintenant utiliser cette base de connaissances pour l'activité de nettoyage dans un projet de qualité des données afin de normaliser et nettoyer les adresses américaines de vos données sources selon les connaissances fournies par Melissa Data via Windows Azure Marketplace.  
   
-##  <a name="FollowUp"></a> Suivi : Après le mappage d'un domaine aux données de référence  
+##  <a name="FollowUp"></a> Suivi : Après le mappage d’un domaine aux données de référence  
  Créez un projet de qualité des données et exécutez l'activité de nettoyage sur vos données sources contenant les adresses américaines en les comparant à la base de connaissances créée dans cette rubrique. Consultez [Nettoyer les données à l’aide de la connaissance des données de référence &#40;externes&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
 ## <a name="see-also"></a>Voir aussi  

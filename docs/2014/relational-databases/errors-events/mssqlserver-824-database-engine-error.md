@@ -12,12 +12,12 @@ ms.assetid: 2aa22246-2712-4fdb-9744-36e7e6f3175e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: baf815460951a91daad76df814cd32298d49a9fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad5619983fbbaf390c756bb21a66f80487f1c076
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208319"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370251"
 ---
 # <a name="mssqlserver824"></a>MSSQLSERVER_824
     
@@ -33,7 +33,7 @@ ms.locfileid: "48208319"
 |Texte du message|SQL Server a détecté une erreur d'E/S logique et relative à la cohérence. L'erreur %ls s'est produite pendant une opération de %S_MSG de la page %S_PGID dans la base de données avec l'ID %d au niveau du décalage %#016I64x dans le fichier '%ls'.  Vous trouverez peut-être plus de détails dans les messages supplémentaires qui figurent dans le journal des erreurs et le journal des événements système de SQL Server.|  
   
 ## <a name="explanation"></a>Explication  
- Cette erreur indique que Windows considère que la page est correctement lue à partir du disque alors que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] signale qu'il y a un problème avec la page. Cette erreur est similaire à l'erreur 823, à la différence qu'elle n'a pas été détectée par Windows. Cela indique généralement un problème dans le sous-système d'E/S, comme un lecteur de disque défaillant, des problèmes avec le microprogramme d'un disque, un pilote de périphérique défectueux, etc. Pour plus d’informations sur les erreurs d’E/S, consultez [Concepts de base des E/S Microsoft SQL Server, chapitre 2](http://go.microsoft.com/fwlink/?LinkId=69370).  
+ Cette erreur indique que Windows considère que la page est correctement lue à partir du disque alors que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] signale qu'il y a un problème avec la page. Cette erreur est similaire à l'erreur 823, à la différence qu'elle n'a pas été détectée par Windows. Cela indique généralement un problème dans le sous-système d'E/S, comme un lecteur de disque défaillant, des problèmes avec le microprogramme d'un disque, un pilote de périphérique défectueux, etc. Pour plus d’informations sur les erreurs d’E/S, consultez [Concepts de base des E/S Microsoft SQL Server, chapitre 2](https://go.microsoft.com/fwlink/?LinkId=69370).  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
   

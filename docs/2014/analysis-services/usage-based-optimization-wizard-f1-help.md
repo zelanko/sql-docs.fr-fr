@@ -15,12 +15,12 @@ ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b7ef284a927504bb4c7567d8700a8b15d63c92be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3800e9ed229491c4abe1746f6d0325ff1c63525d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190799"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365261"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Aide F1 sur l'Assistant Optimisation de l'utilisation
   Le résultat de l'Assistant Optimisation de l'utilisation est similaire à celui de l'Assistant Conception d'agrégation : il s'utilise pour concevoir les agrégations d'une partition. Cependant, l'Assistant Optimisation de l'utilisation conçoit les agrégations en fonction des habitudes d'utilisation des requêtes enregistrées dans le journal des requêtes d'une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Les agrégations améliorent les performances en permettant à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] d’extraire des totaux précalculés du stockage des cubes au lieu de recalculer les données à partir d’une source de données sous-jacente pour chaque requête.  
@@ -39,12 +39,12 @@ ms.locfileid: "48190799"
   
 -   enregistrement et traitement facultatif de la partition, du groupe de mesures ou du cube pour générer les agrégations définies.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit l’Assistant conception d’agrégation pour concevoir des agrégations en fonction de l’analyse statistique de la structure de la partition pour fournir une conception d’agrégation qui peut être limitée par la taille de stockage ou de performances estimées. Vous l'utilisez pour améliorer les performances globales d'une partition ; cependant, le modèle d'agrégation n'est pas destiné aux besoins particuliers de vos utilisateurs. L’Assistant Optimisation de l’utilisation fournit un modèle d’agrégation destiné à ces besoins particuliers ; cependant, il ne peut le faire que si le journal des requêtes de l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contient suffisamment d’informations pour construire de telles requêtes.  
+ L'Assistant Conception d'agrégation [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est destiné à concevoir des agrégations en fonction de l'analyse statistique de la partition. Il permet d'obtenir un modèle d'agrégation qui peut être à nouveau limité par la capacité de stockage ou les performances estimées. Vous l'utilisez pour améliorer les performances globales d'une partition ; cependant, le modèle d'agrégation n'est pas destiné aux besoins particuliers de vos utilisateurs. L’Assistant Optimisation de l’utilisation fournit un modèle d’agrégation destiné à ces besoins particuliers ; cependant, il ne peut le faire que si le journal des requêtes de l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contient suffisamment d’informations pour construire de telles requêtes.  
   
  Généralement, les deux assistants s'utilisent ensemble pour améliorer les performances lors du déploiement et par la suite. L'Assistant Conception d'agrégation doit être utilisé en premier lors du déploiement initial de la partition (ou du cube ou du groupe de mesures la contenant) pour améliorer globalement les performances. Après quelque temps passé à enregistrer dans le journal des requêtes les requêtes des utilisateurs de la partition, vous pouvez utiliser l'Assistant Optimisation de l'utilisation pour affiner le modèle d'agrégation et répondre plus précisément aux besoins de performances et aux exigences des requêtes de vos utilisateurs.  
   
 > [!NOTE]  
->  Pour des informations sur la configuration du journal des requêtes, consultez [Configuring the Analysis Services Query Log](http://www.microsoft.com/technet/prodtechnol/sql/2005/technologies/config_ssas_querylog.mspx)(Configuration du journal des requêtes Analysis Services).  
+>  Pour des informations sur la configuration du journal des requêtes, consultez [Configuring the Analysis Services Query Log](https://www.microsoft.com/technet/prodtechnol/sql/2005/technologies/config_ssas_querylog.mspx)(Configuration du journal des requêtes Analysis Services).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

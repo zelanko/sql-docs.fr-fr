@@ -15,12 +15,12 @@ ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4e938b75bce51aa89952b7cb13cb4fd52434386c
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 26d75b623c9a3ca92b0d395e3ec4df47dd03418f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168869"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375261"
 ---
 # <a name="helplink-element"></a>Élément HelpLink
   L’élément **HelpLink** de la propriété **Detail** est une chaîne d’URL générée par le serveur de rapports. L'URL cible une page Web gérée par le centre d'Aide et de support [!INCLUDE[msCoName](../../../includes/msconame-md.md)] et fournit une aide et des articles de base de connaissances supplémentaires sur les erreurs spécifiques qui se produisent dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La syntaxe de l'URL est la suivante :  
@@ -29,7 +29,7 @@ ms.locfileid: "49168869"
   
  Le tableau suivant répertorie les arguments de l’URL **HelpLink**.  
   
-|Argument|Valeur|  
+|Argument|Value|  
 |--------------|-----------|  
 |**EvtSrc**|"Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings"|  
 |**EvtID**|Par exemple, rsReservedItem est le code d'erreur du serveur de rapports.|  
@@ -39,7 +39,7 @@ ms.locfileid: "49168869"
  L’exemple suivant illustre la **HelpLink** URL retournée pour le code d’erreur `rsReservedItem`. Cette erreur se produit lorsqu'un utilisateur essaie de modifier ou supprimer un élément réservé dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  
   
 ```  
-http://www.microsoft.com/products/ee/transform.aspx?  
+https://www.microsoft.com/products/ee/transform.aspx?  
 EvtSrc=Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings  
 &EvtID=rsReservedItem&ProdName=Microsoft%20SQL%20Server%20Reporting%20Services&ProdVer=8.00  
 ```  

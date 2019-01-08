@@ -15,19 +15,19 @@ ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d38957be6a022a3f3837a9f7b2539423dd48b3ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29bd6c25ec826f1c2ce7af1aae6e29462de0b6c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184809"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374481"
 ---
 # <a name="sql-server-native-client-ole-db-reference"></a>Guide de référence SQL Server Native Client (OLE DB)
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB fournisseur expose des interfaces aux consommateurs souhaitant accéder aux données sur un ou plusieurs ordinateurs en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est un fournisseur compatible avec OLE DB version 2.0.  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB fournisseur expose des interfaces aux consommateurs souhaitant accéder aux données sur un ou plusieurs ordinateurs en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif est le fournisseur OLE DB version 2.0 compatible.  
   
  Cela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client référence de programmation ne documente pas la totalité des interfaces OLE DB et des méthodes, uniquement les interfaces et les méthodes qui exposent un comportement spécifique au fournisseur lors de l’utilisation du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB fournisseur.  
   
- Pour une description complète des principales interfaces et méthodes OLE DB, consultez [OLE DB Programmer’s Reference](http://go.microsoft.com/fwlink/?LinkId=45232).  
+ Pour une description complète des principales interfaces et méthodes OLE DB, consultez [OLE DB Programmer’s Reference](https://go.microsoft.com/fwlink/?LinkId=45232).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

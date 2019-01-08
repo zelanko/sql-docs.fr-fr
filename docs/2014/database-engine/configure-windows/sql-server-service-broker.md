@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SSBQUEUEPROPERTIES.GENERAL.F1
@@ -23,12 +22,12 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9b6b873ce3bac898fd5e273bce7e8c28cebea0c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7e721ca02733b1602c2388657d52321f46fa9bc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214039"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375571"
 ---
 # <a name="sql-server-service-broker"></a>SQL Server Service Broker
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] fournit la prise en charge native des applications de messagerie et de mise en file d’attente dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Cette opération permet aux développeurs de créer plus facilement des applications perfectionnées qui utilisent des composants de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour la communication entre des bases de données disparates. Les développeurs peuvent utiliser [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour créer facilement des applications fiables et distribuées.  
@@ -46,7 +45,7 @@ ms.locfileid: "48214039"
   
 -   [Utilitaire ssbdiagnose &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
- Consultez la [documentation précédemment publiée](http://go.microsoft.com/fwlink/?LinkId=231312) pour les concepts [!INCLUDE[ssSB](../../includes/sssb-md.md)] et pour les tâches de gestion et de développement. Cette documentation n'est pas reproduite dans la documentation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en raison de quelques modifications apportées dans [!INCLUDE[ssSB](../../includes/sssb-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Consultez la [documentation précédemment publiée](https://go.microsoft.com/fwlink/?LinkId=231312) pour les concepts [!INCLUDE[ssSB](../../includes/sssb-md.md)] et pour les tâches de gestion et de développement. Cette documentation n'est pas reproduite dans la documentation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en raison de quelques modifications apportées dans [!INCLUDE[ssSB](../../includes/sssb-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="whats-new-in-service-broker"></a>Nouveautés dans Service Broker  
  Aucune modification importante n'a été introduite dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  Les modifications suivantes ont été introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  

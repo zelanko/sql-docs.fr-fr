@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c521e524e6e205989e2bff96928af4da9c24bb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091872"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354013"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Définir une relation plusieurs à plusieurs et les propriétés d’une relation plusieurs à plusieurs
   Cette rubrique explique les dimensions plusieurs-à-plusieurs dans Analysis Services, à quel moment les utiliser, et comment les créer.  
@@ -61,7 +61,7 @@ ms.locfileid: "48091872"
   
  Pour illustrer les étapes de création d'une relation plusieurs-à-plusieurs, cette procédure recrée l'une des relations plusieurs-à-plusieurs dans l'exemple de cube Adventure Works. Si les données sources (c'est-à-dire, l'entrepôt de données d'exemple Adventure Works) sont installées sur une instance de moteur de base de données relationnelle, suivez les étapes suivantes.  
   
-#### <a name="step-1-verify-dsv-relationships"></a>Étape 1 - Vérifier les relations de la vue de gestion dynamique  
+#### <a name="step-1-verify-dsv-relationships"></a>Étape 1 : Vérifier les relations de la vue DSV  
   
 1.  Dans SQL Server Data Tools, dans un projet multidimensionnel, créez une source de données sur l'entrepôt de données Adventure Works DW 2012, hébergé sur une instance de moteur de base de données SQL Server.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48091872"
   
      ![Vue DSV affichant les tables associées](../media/ssas-m2m-dsvpkeys.PNG "DSV affichant les tables associées")  
   
-#### <a name="step-2-create-dimensions-and-measure-groups"></a>Étape 2 - Créer des dimensions et des groupes de mesures  
+#### <a name="step-2-create-dimensions-and-measure-groups"></a>Étape 2 : Créer des dimensions et de groupes de mesures  
   
 1.  Dans SQL Server Data Tools, dans un projet multidimensionnel, cliquez avec le bouton droit sur **Dimensions** et sélectionnez **Nouvelle dimension**.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48091872"
   
 11. Nommez le cube et cliquez sur **Terminer**.  
   
-#### <a name="step-3-define-many-to-many-relationship"></a>Étape 3 - Définir une relation plusieurs-à-plusieurs  
+#### <a name="step-3-define-many-to-many-relationship"></a>Étape 3 : Définir plusieurs-à-plusieurs relation  
   
 1.  Dans le concepteur de cube, cliquez sur l'onglet Utilisation de la dimension. Notez qu’il existe déjà une relation plusieurs à plusieurs entre **Dim Sales Reason** et **Fact Internet Sales**. Rappelez-vous que l'icône suivante indique une relation plusieurs-à-plusieurs.  
   
@@ -175,20 +175,20 @@ ms.locfileid: "48091872"
   
 3.  N'oubliez pas de déployer et vous reconnecter après avoir modifié un modèle. Dans Excel, utilisez le bouton Actualiser sur le ruban Analyser du tableau croisé dynamique.  
   
-4.  Évitez d'utiliser des groupes de mesures liés dans des relations plusieurs-à-plusieurs, en particulier lorsque ces relations sont dans des cubes différents. Cela peut entraîner des agrégations ambiguës. Pour plus d’informations, consultez [Quantités incorrectes de mesures liées dans les cubes contenant des relations plusieurs-à-plusieurs](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
+4.  Évitez d'utiliser des groupes de mesures liés dans des relations plusieurs-à-plusieurs, en particulier lorsque ces relations sont dans des cubes différents. Cela peut entraîner des agrégations ambiguës. Pour plus d’informations, consultez [Quantités incorrectes de mesures liées dans les cubes contenant des relations plusieurs-à-plusieurs](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
   
 ##  <a name="bkmk_Learn"></a> Learn more  
  Consultez les liens suivants pour obtenir davantage d'informations sur ces concepts.  
   
- [Comment définir une dimension plusieurs-à-plusieurs dans Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Comment définir une dimension plusieurs-à-plusieurs dans Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324759)  
   
- [La révolution 2.0 des relations plusieurs-à-plusieurs](http://go.microsoft.com/fwlink/?LinkId=324760)  
+ [La révolution 2.0 des relations plusieurs-à-plusieurs](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Didacticiel - Exemple d'une dimension plusieurs-à-plusieurs pour SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Didacticiel : Exemple d’une dimension plusieurs-à-plusieurs pour SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Relations de dimension](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Installer des exemples de données et les projets pour les didacticiel sur la modélisation multidimensionnelle Analysis Services](../install-sample-data-and-projects.md)   
+ [Installer les exemples de données et de projets pour le didacticiel sur la modélisation multidimensionnelle Analysis Services](../install-sample-data-and-projects.md)   
  [Déployer des projets Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
  [Perspectives dans les modèles multidimensionnels](perspectives-in-multidimensional-models.md)  
   

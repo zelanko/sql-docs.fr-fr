@@ -11,12 +11,12 @@ ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ef55fa4a5715ba58ed1ecd426533ef161034dc7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af3216db3e2e281448a0fd371d67b475fafd5af0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141778"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371973"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Type de connexion Oracle (SSRS)
   Pour utiliser des données d'une base de données Oracle dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type Oracle. Ce type de source de données intégré est basé sur le fournisseur managé .NET Framework pour Oracle et requiert un composant logiciel client Oracle.  
@@ -47,9 +47,9 @@ Data Source="Oracle9"; Unicode="True"
  Vous pouvez spécifier des procédures stockées qui ne retournent qu'un seul jeu de résultats. L'utilisation des requêtes basées sur curseur n'est pas prise en charge.  
   
 ##  <a name="Parameters"></a> Paramètres  
- Si la requête inclut des variables de requête, les paramètres de rapport sont générés automatiquement. Les paramètres nommés sont pris en charge par cette extension. Pour Oracle version 9 ou une version ultérieure, les paramètres à valeurs multiples sont pris en charge.  
+ Si la requête inclut des variables de requête, les paramètres de rapport sont générés automatiquement. Les paramètres nommés sont pris en charge par cette extension. Pour Oracle version 9 ou une version ultérieure, les paramètres à valeurs multiples sont pris en charge.  
   
- Les paramètres de rapport sont créés avec des valeurs de propriétés par défaut que vous devrez peut-être modifier. Par exemple, chaque paramètre de rapport a le type de données **Texte**. Après avoir créé les paramètres de rapport, vous devrez peut-être modifier les valeurs par défaut. Pour plus d’informations, consultez [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Les paramètres de rapport sont créés avec des valeurs de propriétés par défaut que vous devrez peut-être modifier. Par exemple, chaque paramètre de rapport a le type de données **Texte**. Après avoir créé les paramètres de rapport, vous devrez peut-être modifier les valeurs par défaut. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 
   
@@ -58,11 +58,11 @@ Data Source="Oracle9"; Unicode="True"
   
  Pour plus d'informations, consultez les documents suivants :  
   
--   [Utilisation du fournisseur de données .NET Framework pour Oracle](http://go.microsoft.com/fwlink/?LinkId=112314) sur msdn.microsoft.com  
+-   [Utilisation du fournisseur de données .NET Framework pour Oracle](https://go.microsoft.com/fwlink/?LinkId=112314) sur msdn.microsoft.com  
   
--   [How to use Reporting Services to configure and to access an Oracle data source (en anglais)](http://support.microsoft.com/kb/834305)  
+-   [How to use Reporting Services to configure and to access an Oracle data source (en anglais)](https://support.microsoft.com/kb/834305)  
   
--   [Comment ajouter des autorisations pour le principal de sécurité SERVICE RÉSEAU](http://support.microsoft.com/kb/870668)  
+-   [Comment ajouter des autorisations pour le principal de sécurité SERVICE RÉSEAU](https://support.microsoft.com/kb/870668)  
   
 ###### <a name="alternate-data-extensions"></a>Autres extensions de données  
  Vous pouvez également récupérer des données à partir d'une base de données Oracle à l'aide d'un type de source de données OLE DB. Pour plus d’informations, consultez [Type de connexion OLE DB &#40;SSRS&#41;](ole-db-connection-type-ssrs.md).  
@@ -71,7 +71,7 @@ Data Source="Oracle9"; Unicode="True"
  Vous pouvez également créer des modèles basés sur une base de données Oracle.  
   
 ###### <a name="platform-and-version-information"></a>Informations sur les plateformes et les versions  
- Pour plus d’informations sur la prise en charge des plateformes et des versions, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Pour plus d’informations sur la prise en charge des plateformes et des versions, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 
   
@@ -101,7 +101,7 @@ Data Source="Oracle9"; Unicode="True"
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs de dataset générée par la requête.  
   
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
   
 

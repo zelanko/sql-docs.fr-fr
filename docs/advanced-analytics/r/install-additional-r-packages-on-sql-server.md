@@ -1,5 +1,5 @@
 ---
-title: Installer de nouveaux packages R sur SQL Server Machine Learning Services | Microsoft Docs
+title: Installer de nouveaux packages de langage R - Services de SQL Server Machine Learning
 description: Ajouter de nouveaux packages R pour SQL Server 2016 R Services ou SQL Server 2017 Machine Learning Services (en base de données)
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f345dc0649c5b7b9665e095207ad7a5a12d16871
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 590dbcc08d433147b61678c2b865ba205a0e547d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697047"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432793"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Installer de nouveaux packages R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article décrit comment installer de nouveaux packages R à une instance de SQL Server où l’apprentissage automatique est activé. Il existe plusieurs méthodes pour l’installation de nouveaux packages R, en fonction de la version de SQL Server que vous avez et indique si le serveur possède une connexion internet. Les approches suivantes pour une nouvelle installation de package sont possibles.
 
-| Approche                           | Permissions               | Distante/locale |
+| Approche                           | Autorisations               | Distante/locale |
 |------------------------------------|---------------------------|--------------|
 | [Utilisation des gestionnaires de package R conventionnelles](use-r-package-managers-on-sql-server.md)  | Administratifs | Local |
 | [Utiliser RevoScaleR](use-revoscaler-to-manage-r-packages.md) |  Administrateur activé par la suite les rôles de base de données | both|
@@ -30,7 +30,7 @@ Cet article décrit comment installer de nouveaux packages R à une instance de 
 
 La bibliothèque de packages R se trouve physiquement dans le dossier Program Files de votre instance de SQL Server, dans un dossier sécurisé avec un accès restreint. L’écriture à cet emplacement nécessite des autorisations d’administrateur.
 
-Non, les administrateurs peuvent installer des packages, mais cela requiert complétez configuration et fonctionnalité non disponible dans les installations initiales. Il existe deux approches pour les installations de package non-admin : RevoScaleR à l’aide de la version 9.0.1 et version ultérieure, ou en utilisant CREATE EXTERNAL LIBRARY (SQL Server 2017 uniquement). Dans SQL Server 2017, **dbo_owner** ou un autre utilisateur avec l’autorisation de créer une bibliothèque externe peut installer des packages R à la base de données actuelle.
+Non, les administrateurs peuvent installer des packages, mais cela requiert complétez configuration et fonctionnalité non disponible dans les installations initiales. Il existe deux approches pour les installations de package non administrateur : RevoScaleR à l’aide de la version 9.0.1 et version ultérieure, ou en utilisant CREATE EXTERNAL LIBRARY (SQL Server 2017 uniquement). Dans SQL Server 2017, **dbo_owner** ou un autre utilisateur avec l’autorisation de créer une bibliothèque externe peut installer des packages R à la base de données actuelle.
 
 R développeurs sont habitués à créer des bibliothèques utilisateur pour les packages que dont ils ont besoin si les bibliothèques centralisées sont hors d’atteinte. Cette pratique est problématique pour le code R exécuté dans une instance du moteur de base de données SQL Server. SQL Server ne peut pas charger des packages à partir de bibliothèques externes, même si cette bibliothèque est sur le même ordinateur. Uniquement les packages à partir de la bibliothèque d’instance peuvent être utilisés dans le code R dans SQL Server.
 

@@ -9,12 +9,12 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.date: 08/10/2017
-ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6993b1fa53bc6aa3d0b6de95ca9feff4eb34ad51
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604059"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351851"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrer une installation Reporting Services (mode natif)
 
@@ -26,7 +26,7 @@ ms.locfileid: "51604059"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Nécessite des étapes supplémentaires, consultez [vous ne pouvez pas utiliser SQL Server 2005 pour héberger les bases de données Report Server 2014](http://support.microsoft.com/kb/2796721).  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Nécessite des étapes supplémentaires, consultez [vous ne pouvez pas utiliser SQL Server 2005 pour héberger les bases de données Report Server 2014](https://support.microsoft.com/kb/2796721).  
   
 ||  
 |-|  
@@ -184,7 +184,7 @@ ms.locfileid: "51604059"
   
     1.  [Déploiement d'un assembly personnalisé](../custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2.  [Procédure : déployer un élément de rapport personnalisé](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2.  [Comment : Déployer un élément de rapport personnalisé](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3.  [Déploiement d'une extension pour le traitement des données](../extensions/data-processing/deploying-a-data-processing-extension.md)  
   

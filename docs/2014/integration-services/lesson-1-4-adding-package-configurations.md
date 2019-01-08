@@ -1,24 +1,23 @@
 ---
-title: 'Étape 4 : Ajout de configurations au package | Microsoft Docs'
+title: 'Étape 4 : Ajout de Configurations de Package | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20d4e13b765e58ef5bfd7464bbf46b6106e4f525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8284f25e54cadbedd4cb14e07970af249fe4521
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085391"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364011"
 ---
-# <a name="step-4-adding-package-configurations"></a>Étape 4 : Ajout de configurations au package
+# <a name="step-4-adding-package-configurations"></a>Étape 4 : Ajout de configurations au package
   Au cours de cette tâche, vous allez ajouter une configuration à chaque package. Les configurations mettent à jour les valeurs des propriétés de package et des objets de package au moment de l'exécution.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un éventail de types de configuration. Vous pouvez stocker des configurations dans des variables d'environnement, des entrées de registre, des variables définies par l'utilisateur, des tables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et des fichiers XML. Pour une souplesse accrue, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge l'utilisation des configurations indirectes. Cela signifie que vous utilisez une variable d'environnement pour spécifier l'emplacement de la configuration qui de son côté spécifie les valeurs réelles. Les packages du projet Didacticiel de déploiement utilisent une combinaison des fichiers de configuration XML et des configurations indirectes. Un fichier de configuration XML peut inclure des configurations destinées à plusieurs propriétés et, le cas échéant, peut être référencé par plusieurs packages. Dans ce didacticiel, vous allez utiliser un fichier de configuration séparé pour chaque package.  
@@ -48,7 +47,7 @@ ms.locfileid: "48085391"
     > [!NOTE]  
     >  Pour que la variable d'environnement soit disponible dans la liste, vous devrez peut-être redémarrer votre ordinateur après l'ajout de la variable. Si vous ne souhaitez pas redémarrer l'ordinateur, vous pouvez taper le nom de la variable d'environnement.  
   
-7.  Cliquez sur **Suivant**.  
+7.  Cliquer sur **Suivant**.  
   
 8.  Dans la page Fin de l'Assistant, tapez **DataTransfer EV Configuration** dans la zone **Nom de la configuration** , examinez le contenu de la configuration dans le volet **Aperçu** , puis cliquez sur **Terminer**.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48085391"
   
 10. Dans Gestionnaires de connexions, développez NewCustomers, puis cochez la case **Chaîne de connexion** .  
   
-11. Cliquez sur **Suivant**.  
+11. Cliquer sur **Suivant**.  
   
 12. Dans la page Fin de l'Assistant, tapez **DataTransfer Configuration** dans la zone **Nom de la configuration** , examinez le contenu de la configuration puis cliquez sur **Terminer**.  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48085391"
     > [!NOTE]  
     >  Pour que la variable d'environnement soit disponible dans la liste, vous devrez peut-être redémarrer votre ordinateur après l'ajout de la variable.  
   
-7.  Cliquez sur **Suivant**.  
+7.  Cliquer sur **Suivant**.  
   
 8.  Dans la page Fin de l'Assistant, tapez **LoadXMLData EV Configuration** dans la zone **Nom de la configuration** , examinez le contenu de la configuration puis cliquez sur **Terminer**.  
   
@@ -123,20 +122,20 @@ ms.locfileid: "48085391"
   
 9. Dans la page Sélectionner les propriétés à exporter, développez successivement LoadXMLData, Exécutables, Charger les données XML et Propriétés, puis cochez les cases **[XMLSource].[XMLData]** et **[XMLSource].[XMLSchemaDefinition]** .  
   
-10. Cliquez sur **Suivant**.  
+10. Cliquer sur **Suivant**.  
   
 11. Dans la page Fin de l'Assistant, tapez **LoadXMLData Configuration** dans la zone **Nom de la configuration** , examinez le contenu de la configuration puis cliquez sur **Terminer**.  
   
 12. Dans la boîte de dialogue **Bibliothèque des configurations du package** , vérifiez que LoadXMLData EV Configuration est en haut de la liste et que LoadXMLData Configuration est second, puis cliquez sur **Fermer**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 5 : Test des packages mis à jour](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+ [Étape 5 : Test des Packages mis à jour](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurations de package](../../2014/integration-services/package-configurations.md)   
- [Créer des Configurations de Package](../../2014/integration-services/create-package-configurations.md)   
+ [Configurations du package](../../2014/integration-services/package-configurations.md)   
+ [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md)   
  [Accéder aux fichiers utilisés par des packages](../../2014/integration-services/access-to-files-used-by-packages.md)  
   
   

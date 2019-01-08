@@ -12,12 +12,12 @@ ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc2ba0e196fa2440152fe1bd7415feeeb6f4e079
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bbbb50000f88e35b03f5a006c4a50708f10b05b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079639"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366871"
 ---
 # <a name="hello-world-ready-sample"></a>Exemple HelloWorldReady
   L'exemple HelloWorldReady présente les opérations de base à effectuer pour créer, déployer et tester une procédure stockée simple basée sur l'intégration du CLR (Common Language Runtime) et adaptée pour un usage international. Un composant est dit adapté pour un usage international lorsqu'il est possible de le localiser facilement, sans changer son code source, en différentes langues pour divers marchés dans le monde entier. Cet exemple montre également comment retourner des données via un paramètre de sortie et via un enregistrement, qui est construit de manière dynamique par la procédure stockée et est retourné au client. Cet exemple est presque identique à l'exemple Hello World, mais il est beaucoup plus facile et sécurisé de localiser cette application. La modification du texte localisé nécessite les opérations suivantes :  
@@ -37,9 +37,9 @@ ms.locfileid: "48079639"
   
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](http://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
   
--   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   Le Kit de développement logiciel .NET Framework SDK 2.0 ou version ultérieure, ou Microsoft Visual Studio 2005 ou version ultérieure. Vous pouvez vous procurer gratuitement le Kit de développement logiciel .NET Framework SDK.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48079639"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer le CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer l'intégration du CLR, vous devez disposer de l'autorisation de niveau serveur `ALTER SETTINGS` qui est attribuée implicitement aux membres des rôles serveur fixes `sysadmin` et `serveradmin`.  
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48079639"
   
 2.  Si nécessaire, créez un répertoire pour votre exemple. Pour cet exemple, nous utiliserons C:\MySample.  
   
-3.  Dans c:\MySample, créez `HelloWorld.vb` (pour l'exemple Visual Basic) ou `HelloWorld.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
+3.  Dans c:\MySample, créez `HelloWorld.vb` (pour l'exemple Visual Basic) ou `HelloWorld.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
   
 4.  Dans c:\MySample, créez le fichier `messages.resx` et copiez l'exemple de code C# dans le fichier.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48079639"
   
     -   Pour lire  
   
-    -   `<value xml:space="preserve">` `ã“ã‚“ã«ã¡ã¯</value>`  
+    -   `<value xml:space="preserve">` `ã"ã‚"ã«ã¡ã¯</value>`  
   
 11. Dans c:\MySample, créez le fichier `build.com` et copiez l'exemple de code dans le fichier.  
   

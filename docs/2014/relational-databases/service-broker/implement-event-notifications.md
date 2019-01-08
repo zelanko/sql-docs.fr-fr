@@ -14,12 +14,12 @@ ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d46a1874c530020f815d2854b4524dfb201d598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c5b17b45b50634806c60e5064efc6ebd9d03f8b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124429"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353764"
 ---
 # <a name="implement-event-notifications"></a>Implémenter des notifications d'événements
   Pour implémenter une notification d'événement, vous devez créer un service cible destiné à recevoir les notifications d'événements avant de créer la notification d'événement.  
@@ -31,7 +31,7 @@ ms.locfileid: "48124429"
  Il n'est pas nécessaire que vous créiez un service d'initialisation de [!INCLUDE[ssSB](../../includes/sssb-md.md)], car [!INCLUDE[ssSB](../../includes/sssb-md.md)] inclut le type de message et le contrat de notifications d'événements suivants :  
   
 ```  
-http://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
+https://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
 ```  
   
  Le service cible qui reçoit les notifications d'événements doit respecter ce contrat préexistant.  
@@ -41,7 +41,7 @@ http://schemas.microsoft.com/SQL/Notifications/PostEventNotification
 1.  Créez une file d'attente pour recevoir les messages.  
   
     > [!NOTE]  
-    >  Cette file d'attente reçoit le type de message suivant : `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
+    >  Cette file d'attente reçoit le type de message suivant : `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
   
 2.  Créez un service dans la file d'attente qui fasse référence au contrat de notification d'événement.  
   
@@ -58,7 +58,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  
@@ -86,7 +86,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  Dans ce cas, la notification d'événement est déclenchée deux fois : une première fois quand se produit l'événement CREATE_SCHEMA, et une deuxième fois quand se produit l'événement CREATE_TABLE. Nous recommandons d'éviter de créer des notifications d'événements sur les événements CREATE_SCHEMA et les textes <schema_element> des définitions CREATE SCHEMA correspondantes, ou de créer une logique dans votre application destinée à éviter la capture des données d'événement non souhaitées.  
+>  Dans ce cas, la notification d'événement est déclenchée deux fois : une première fois quand se produit l'événement CREATE_SCHEMA, et une deuxième fois quand se produit l'événement CREATE_TABLE. Nous recommandons d'éviter de créer des notifications d'événements sur les événements CREATE_SCHEMA et les textes <schema_element> des définitions CREATE SCHEMA correspondantes, ou de créer une logique dans votre application destinée à éviter la capture des données d'événement non souhaitées.  
   
  **Pour créer une notification d'événement**  
   

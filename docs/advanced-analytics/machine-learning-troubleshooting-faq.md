@@ -1,5 +1,5 @@
 ---
-title: Résolution des problèmes et Forum aux questions sur machine learning dans SQL Server | Microsoft Docs
+title: Résolution des problèmes et Forum aux questions pour l’apprentissage - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: dc04f74c4db5c05840795caea87efb9b0001171c
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 8cc89ee500e9240ef1fff085a34d9c1792c3e80c
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877922"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432112"
 ---
 # <a name="troubleshoot-machine-learning-in-sql-server"></a>Résoudre les problèmes de machine learning dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

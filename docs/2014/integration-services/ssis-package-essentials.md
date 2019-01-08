@@ -13,15 +13,15 @@ ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 91aa24a11c7d4587500ab7154f582bb47b8f8c4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f767bf80d2271b88eca526be3a47a2033f56d5bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193239"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360861"
 ---
 # <a name="ssis-package-essentials"></a>Notions fondamentales sur le package SSIS
-  Un package est l'objet qui implémente les fonctionnalités [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour extraire, transformer et charger des données. Vous créez un package en utilisant le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Vous pouvez aussi créer un package en exécutant l'Assistant Importation et Exportation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou l'Assistant Projet de connexions [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour plus d’informations, [créer des Packages dans SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) dans le concepteur SSIS et [Assistant Importation de projet](../../2014/integration-services/import-project-wizard.md).  
+  Un package est l'objet qui implémente les fonctionnalités [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour extraire, transformer et charger des données. Vous créez un package en utilisant le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Vous pouvez aussi créer un package en exécutant l'Assistant Importation et Exportation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou l'Assistant Projet de connexions [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d’informations, [créer des Packages dans SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) dans le concepteur SSIS et [Assistant Importation de projet](../../2014/integration-services/import-project-wizard.md).  
   
  Un package de base inclut les éléments suivants :  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48193239"
   
  Pour en savoir plus, voir [Data Flow](data-flow/data-flow.md).  
   
- Pour obtenir un exemple montrant comment créer un package de base, consultez [leçon 1 : création du projet et le Package de base](lesson-1-create-a-project-and-basic-package-with-ssis.md).  
+ Pour obtenir un exemple montrant comment créer un package de base, consultez [leçon 1 : Création du projet et le Package de base](lesson-1-create-a-project-and-basic-package-with-ssis.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
@@ -43,16 +43,16 @@ ms.locfileid: "48193239"
   
 -   [Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
 -   [Ajouter ou supprimer un composant dans un flux de données](data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>Contenu associé  
   
-1.  Vidéo, [Création d’un package de base (vidéo liée à SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131023)sur MSDN.Microsoft.com  
+1.  Vidéo, [Création d’un package de base (vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131023) sur MSDN.Microsoft.com  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Packages Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Contraintes de précédence](control-flow/precedence-constraints.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.f1
@@ -13,12 +12,12 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f178c968a6460841e12aa3d0e675bc7f4de56e2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbac13f1d65a984a90ffbeb3ee0b1ae4e0cec719
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086369"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376081"
 ---
 # <a name="cdc-control-task"></a>Tâche de contrôle de capture de données modifiées
   La tâche de contrôle de capture de données modifiées permet de contrôler le cycle de vie des packages de capture de données modifiées. Elle gère la synchronisation des package de capture de données modifiées avec le package de charge initiale et la gestion des plages de numéros séquentiels dans le journal (NSE) qui sont traités lors de l'exécution d'un package de capture de données modifiées. En outre, la tâche de contrôle de capture de données modifiées traite les scénarios d'erreur et la récupération.  
@@ -41,16 +40,16 @@ ms.locfileid: "48086369"
 |Opération|Description|  
 |---------------|-----------------|  
 |GetProcessingRange|Cette opération est utilisée avant d'appeler le flux de données qui utilise le flux de données de la source CDC. Elle établit une plage de numéros LSN que le flux de données de la source CDC lit lorsqu'il est appelé. La plage est stockée dans une variable de package SSIS qui est utilisée par la source CDC pendant le traitement du flux de données.<br /><br /> Pour plus d’informations sur les états stockés, consultez [Définir une variable d’état](../data-flow/define-a-state-variable.md).|  
-|MarkProcessedRange|Cette opération est exécutée après que chaque exécution de la capture de données modifiées (une fois le flux de données de capture de données modifiées terminé avec succès) pour consigner le dernier NSE qui a été entièrement traité dans le cadre de l'exécution de la capture de données modifiées. Lors de la prochaine exécution de GetProcessingRange, cette position constitue le début de la plage de traitement.|  
+|MarkProcessedRange|: Cette opération est exécutée après chaque exécution CDC (après que le flux de données de capture de données modifiées est terminé avec succès) pour enregistrer le dernier numéro LSN qui était complètement traité dans l’exécution CDC. Lors de la prochaine exécution de GetProcessingRange, cette position constitue le début de la plage de traitement.|  
   
 ## <a name="handling-cdc-state-persistency"></a>Gestion de la permanence de l'état de capture de données modifiées  
  La tâche de contrôle de capture de données modifiées conserve un état permanent entre les activations. Les informations stockées dans l'état de capture de données modifiées sont utilisées pour déterminer et gérer la plage de traitement pour le package de capture de données modifiées et pour détecter les conditions d'erreur. L'état permanent est stocké sous forme de chaîne. Pour plus d’informations, consultez [Définir une variable d’état](../data-flow/define-a-state-variable.md).  
   
  La tâche de contrôle de capture de données modifiées prend en charge deux types de permanence d'état :  
   
--   Permanence d'état manuelle : dans ce cas, la tâche de contrôle de capture de données modifiées gère l'état stocké dans une variable de package, mais le développeur de package doit lire la variable dans un stockage permanent avant d'appeler le contrôle de capture de données modifiées, puis la réécrire dans ce stockage permanent après le dernier appel du contrôle de capture de données modifiées et une fois l'exécution de la capture de données modifiées terminée.  
+-   Permanence d’état de manuel : Dans ce cas, la tâche de contrôle CDC gère l’état stocké dans une variable de package, mais le développeur du package doit lire la variable à partir d’un magasin persistant avant d’appeler le contrôle de capture de données modifiées et ensuite les enregistrer à nouveau à ce magasin persistant après que le contrôle de capture de données modifiées est la dernière appelée et se termine l’exécution CDC.  
   
--   Permanence d'état automatique : l'état de capture de données modifiées est stocké dans une table dans une base de données. L’état est stocké sous un nom fourni par la propriété **StateName** dans une table nommée de la propriété **Table à utiliser pour le stockage de l’état** , qui se trouve dans un gestionnaire de connexions sélectionné pour le stockage de l’état. La valeur par défaut est le gestionnaire de connexions source, mais la pratique courante consiste à utiliser le gestionnaire de connexions cible. La tâche de contrôle de capture de données modifiées met à jour la valeur d'état dans la table d'état et celle-ci est validée dans le cadre de la transaction en cours.  
+-   Permanence d’état automatique : L’état de capture de données modifiées est stocké dans une table dans une base de données. L’état est stocké sous un nom fourni par la propriété **StateName** dans une table nommée de la propriété **Table à utiliser pour le stockage de l’état** , qui se trouve dans un gestionnaire de connexions sélectionné pour le stockage de l’état. La valeur par défaut est le gestionnaire de connexions source, mais la pratique courante consiste à utiliser le gestionnaire de connexions cible. La tâche de contrôle de capture de données modifiées met à jour la valeur d'état dans la table d'état et celle-ci est validée dans le cadre de la transaction en cours.  
   
 ## <a name="error-handling"></a>Gestion des erreurs  
  La tâche de contrôle de capture de données modifiées peut signaler une erreur dans les conditions suivantes :  
@@ -79,10 +78,10 @@ ms.locfileid: "48086369"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Article technique, [Installation du service de capture de données modifiées Microsoft SQL Server 2012 pour Oracle par Attunity](http://go.microsoft.com/fwlink/?LinkId=252958), sur social.technet.microsoft.com.  
+-   Article technique, [Installation du service de capture de données modifiées Microsoft SQL Server 2012 pour Oracle par Attunity](https://go.microsoft.com/fwlink/?LinkId=252958), sur social.technet.microsoft.com.  
   
--   Article technique, [Résolution des problèmes de configuration dans le service de capture de données modifiées Microsoft SQL Server pour Oracle par Attunity](http://go.microsoft.com/fwlink/?LinkId=252960), sur social.technet.microsoft.com.  
+-   Article technique, [Résolution des problèmes de configuration dans le service de capture de données modifiées Microsoft SQL Server pour Oracle par Attunity](https://go.microsoft.com/fwlink/?LinkId=252960), sur social.technet.microsoft.com.  
   
--   Article technique, [Dépannage des erreurs d'instance du service de capture de données modifiées Microsoft SQL Server pour Oracle par Attunity](http://go.microsoft.com/fwlink/?LinkId=252961), sur social.technet.microsoft.com.  
+-   Article technique, [Dépannage des erreurs d'instance du service de capture de données modifiées Microsoft SQL Server pour Oracle par Attunity](https://go.microsoft.com/fwlink/?LinkId=252961), sur social.technet.microsoft.com.  
   
   

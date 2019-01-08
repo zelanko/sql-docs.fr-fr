@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSpeer_topologyresponse
@@ -20,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1d4a85b20632d6e0ada1a9caf6a5a7d223fc81c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 701cac875a9870de840f7955c3c327aee4133a3f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644757"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764531"
 ---
 # <a name="mspeertopologyresponse-transact-sql"></a>MSpeer_topologyresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47644757"
 |peer|**sysname**|Nom de l'instance serveur qui a généré la réponse.|  
 |peer_version|**Int**|Spécifie le numéro de version du serveur de publication.|  
 |peer_db|**sysname**|Base de données abonnement sur l’homologue qui a généré la réponse.|  
-|originator_id|**Int**|Identifie chaque nœud dans la topologie pour les besoins de la détection de conflit. Pour plus d'informations, consultez [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|originator_id|**Int**|Identifie chaque nœud dans la topologie pour les besoins de la détection de conflit. Pour plus d’informations, voir [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |peer_conflict_retention|**Int**|Durée, en jours, du stockage des métadonnées dans les tables en conflit.|  
 |received_date|**datetime**|Heure de réception de la demande de topologie.|  
 |connection_info|**xml**|Informations relatives au nœud ayant répondu à la demande.|  

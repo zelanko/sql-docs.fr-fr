@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - limiting values [SQLXML]
@@ -19,12 +17,12 @@ ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77415951f7f581eb75604668fca4f5d573a69675
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 608b14de16b338225be7e500a77cb612b5ee9312
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200179"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751111"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field et sql:limit-value (SQLXML 4.0)
   Le chargement en masse XML traite les annotations `sql:limit-field` et `sql:limit-value` selon leur définition. Pour plus d’informations, consultez [filtrage de valeurs à l’aide de SQL : limit-champ et SQL : limit-valeur &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md).  
@@ -111,7 +109,7 @@ ms.locfileid: "48200179"
                  ShipTo="222 Spruce (Shipping)" />  
     ```  
   
-4.  Pour exécuter le chargement en masse XML, enregistrez cet exemple [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) sous le nom Sample.vbs et exécutez-le :  
+4.  Pour exécuter le chargement en masse XML, enregistrez cet exemple [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) sous le nom Sample.vbs et exécutez-le :  
   
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  

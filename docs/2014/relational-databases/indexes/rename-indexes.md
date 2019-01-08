@@ -14,12 +14,12 @@ ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ed26bf1d1ccdf0b523a24edf0d38c41c581709e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5925e277b6e1585612147918b469427e4aa92968
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158709"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395782"
 ---
 # <a name="rename-indexes"></a>Renommer des index
   Cette rubrique explique comment renommer un index dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le changement du nom d'un index remplace le nom actuel de l'index par le nouveau nom fourni. Le nom spécifié doit être unique dans la table ou la vue. Par exemple, deux tables peuvent contenir un index nommé **XPK_1**, mais la même table ne peut pas avoir deux index nommés **XPK_1**. Vous ne pouvez pas créer un index dont le nom est le même qu'un index désactivé existant. Le changement du nom d'un index ne provoque pas sa reconstruction.  
@@ -80,7 +80,7 @@ ms.locfileid: "48158709"
   
 5.  Cliquez avec le bouton droit sur l’index que vous souhaitez renommer et sélectionnez **Renommer**.  
   
-6.  Tapez le nouveau nom de l'index et appuyez sur ENTRÉE.  
+6.  Tapez le nouveau nom de l’index et appuyez sur Entrée.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

@@ -17,12 +17,12 @@ ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 704897c5da43f3f48479e155d1679a002b586866
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086571"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356206"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d'index en ligne
   Lorsque vous effectuez des opérations en ligne sur les index, les directives suivantes s'appliquent :  
@@ -71,7 +71,7 @@ ms.locfileid: "48086571"
   
  Du fait qu'un verrou S ou Sch-M lock est conservé dans la phase finale de l'opération sur un index, soyez prudent lorsque vous exécutez une opération en ligne sur un index dans une transaction utilisateur explicite, telle qu'un blocage BEGIN TRANSACTION...COMMIT. Cette action maintient le verrou jusqu'à la fin de la transaction, gênant ainsi l'accès concurrentiel des utilisateurs.  
   
- La reconstruction d'index en ligne peut augmenter la fragmentation lorsqu'elle est autorisée à s'exécuter avec les options `MAX DOP > 1` et `ALLOW_PAGE_LOCKS = OFF` . Pour plus d’informations, consultez [Fonctionnement : La reconstruction d’index en ligne peut entraîner une fragmentation accrue](http://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
+ La reconstruction d'index en ligne peut augmenter la fragmentation lorsqu'elle est autorisée à s'exécuter avec les options `MAX DOP > 1` et `ALLOW_PAGE_LOCKS = OFF` . Pour plus d’informations, consultez [fonctionnement : Reconstruction d’Index en ligne - peut entraîner une Fragmentation accrue](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
   
 ## <a name="transaction-log-considerations"></a>Considérations relatives aux journaux de transactions  
  Les opérations d'index à grande échelle, réalisées hors connexion ou en ligne, peuvent générer de fortes charges de données susceptibles de remplir rapidement le journal de transactions. Pour garantir que l'opération d'index peut être restaurée, le journal des transactions ne doit pas être tronqué tant que l'opération d'index n'est pas terminée ; toutefois, le journal peut être sauvegardé pendant l'opération d'index. Par conséquent, le journal des transactions doit disposer d'un espace suffisant pour stocker les transactions des opérations d'index et les éventuelles transactions utilisateur simultanées pendant la durée de l'opération d'index. Pour plus d’informations, consultez [Espace disque du journal des transactions pour les opérations d’index](transaction-log-disk-space-for-index-operations.md).  

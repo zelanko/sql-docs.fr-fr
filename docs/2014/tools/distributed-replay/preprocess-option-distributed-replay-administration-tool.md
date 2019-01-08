@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28e4f41d6f11381fcb6fcdf82f708d185a293120
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f5f4492dc18a93ab1fea9d34287eb90703bc3d5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174609"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792801"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Option preprocess (outil d'administration Distributed Replay)
   Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] outil d’administration Distributed Replay, `DReplay.exe`, est un outil de ligne de commande que vous pouvez utiliser pour communiquer avec distributed replay controller. Cette rubrique décrit l’option de ligne de commande **preprocess** et la syntaxe correspondante.  
@@ -41,7 +41,7 @@ ms.locfileid: "48174609"
  **-i** *input_trace_file*  
  Spécifie le chemin complet du fichier de trace d’entrée sur le contrôleur, tel que `D:\Mytrace.trc`. Le paramètre **-i** est obligatoire.  
   
- Si des fichiers de substitution se trouvent dans le même répertoire, ils seront chargés et utilisés automatiquement. Les fichiers doivent suivre la convention d’affectation des noms de substitution de fichier, par exemple : `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, etc. `Mytrace_n.trc`.  
+ Si des fichiers de substitution se trouvent dans le même répertoire, ils seront chargés et utilisés automatiquement. Les fichiers doivent suivre la convention d’affectation des noms de substitution de fichier, par exemple : `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, ... `Mytrace_n.trc`.  
   
 > [!NOTE]  
 >  Si vous utilisez l'outil d'administration sur un autre ordinateur que le contrôleur, vous devrez copier les fichiers de trace d'entrée vers le contrôleur afin qu'un chemin d'accès local puisse être utilisé pour ce paramètre.  
@@ -75,13 +75,13 @@ ms.locfileid: "48174609"
  Dans cet exemple, l'étape de prétraitement est initialisée avec tous les paramètres par défaut. La valeur `localhost` indique que le service contrôleur s'exécute sur le même ordinateur que l'outil d'administration. Le paramètre *input_trace_file* spécifie l’emplacement des données de trace d’entrée ( `c:\mytrace.trc`). Étant donné qu’aucun filtre de fichier de trace n’est impliqué, le paramètre **-c** doit être spécifié.  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
  Dans cet exemple, l'étape de prétraitement est initialisée et un fichier de configuration de prétraitement modifié est spécifié. Contrairement à l’exemple précédent, le paramètre **-c** est utilisé pour pointer sur le fichier de configuration modifié, si vous l’avez stocké dans un emplacement différent. Exemple :  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
 ```  
   
  Dans le fichier de configuration de prétraitement modifié, une condition de filtre est ajoutée qui exclut les sessions système pendant la relecture distribuée. Le filtre est ajouté en modifiant l'élément `<PreprocessModifiers>` dans le fichier de configuration de prétraitement, `DReplay.exe.preprocess.config`.  
@@ -98,13 +98,13 @@ dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DRepl
 </Options>  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Vous devez exécuter l'outil d'administration en tant qu'utilisateur interactif, comme un utilisateur local ou un compte d'utilisateur de domaine. Pour utiliser un compte d'utilisateur local, l'outil d'administration et le contrôleur doivent s'exécuter sur le même ordinateur.  
   
  Pour plus d’informations, voir [Distributed Replay Security](distributed-replay-security.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Préparer les données de Trace d’entrée](prepare-the-input-trace-data.md)   
+ [Préparer les données de trace d'entrée](prepare-the-input-trace-data.md)   
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Configurer Distributed Replay](configure-distributed-replay.md)  
   

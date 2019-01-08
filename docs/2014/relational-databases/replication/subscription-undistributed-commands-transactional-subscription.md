@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.subscription.performance.f1
@@ -13,12 +12,12 @@ ms.assetid: 5451561e-0ce3-4bb5-844a-88cd15b0b371
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48717793cb90a0e8a0c7ea7d77594f1ebecd9d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a1f957c417c5c63766dfbffa923edd6935d1eb5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187989"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752531"
 ---
 # <a name="subscription-undistributed-commands-transactional-subscription-sql-server-2005-and-later"></a>Abonnement, Commandes non distribuées (Abonnement transactionnel, SQL Server 2005 et version ultérieure)
   L'onglet **Commandes non distribuées** contient des informations sur le nombre de commandes de la base de données de distribution qui n'ont pas été distribuées à l'abonné sélectionné, ainsi que le délai estimé de distribution de ces commandes. Pour plus d’informations sur l’affichage des commandes dans la base de données de distribution, consultez [sp_replshowcmds &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql).  

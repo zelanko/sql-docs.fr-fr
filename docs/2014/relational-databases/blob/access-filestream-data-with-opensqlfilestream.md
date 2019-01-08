@@ -16,17 +16,17 @@ ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6afb64b852ac6050a2705c1c4d7da7d2d9b52f1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c40d22c19f8398ef9499cb23c80ab80dab16b5b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059449"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353226"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Accéder à des données FILESTREAM avec OpenSqlFilestream
-  L’API OpenSqlFilestream Obtient un descripteur de fichier compatible Win32 pour un objet FILESTREAM (BLOB) qui est stocké dans le système de fichiers. Le descripteur peut être passé à chacune des API Win32 suivantes : [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)ou [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Si vous passez ce descripteur à une autre API Win32, l'erreur ERROR_ACCESS_DENIED est retournée. Le descripteur doit être fermé en le passant à l’API [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) Win32 avant que la transaction soit validée ou restaurée. Si le descripteur n'est pas fermé, il peut y avoir des fuites de ressources côté serveur.  
+  L’API OpenSqlFilestream Obtient un descripteur de fichier compatible Win32 pour un objet FILESTREAM (BLOB) qui est stocké dans le système de fichiers. Le handle peut être passé à chacune des API Win32 suivantes : [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), ou [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Si vous passez ce descripteur à une autre API Win32, l'erreur ERROR_ACCESS_DENIED est retournée. Le descripteur doit être fermé en le passant à l’API [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) Win32 avant que la transaction soit validée ou restaurée. Si le descripteur n'est pas fermé, il peut y avoir des fuites de ressources côté serveur.  
   
- Tous les accès de conteneur de données FILESTREAM doivent être effectuées dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction. [!INCLUDE[tsql](../../includes/tsql-md.md)] Vous pouvez également exécuter des instructions dans la même transaction. Cela maintient la cohérence entre les données SQL et les données BLOB FILESTREAM.  
+ Tout accès au conteneur de données FILESTREAM doit être exécuté dans une transaction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] Vous pouvez également exécuter des instructions dans la même transaction. Cela maintient la cohérence entre les données SQL et les données BLOB FILESTREAM.  
   
  Pour accéder à l’objet BLOB FILESTREAM à l’aide de Win32, [l’Autorisation Windows](../security/choose-an-authentication-mode.md) doit être activée.  
   
@@ -51,9 +51,9 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  [in] Est le `nvarchar(max)` chemin d’accès qui est retourné par la [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) (fonction). PathName doit être appelé à partir du contexte d’un compte qui dispose des autorisations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT ou UPDATE sur la table et la colonne FILESTREAM.  
   
  *DesiredAccess*  
- [in] Définit le mode utilisé pour accéder aux données BLOB FILESTREAM. Cette valeur est passée à la [fonction DeviceIoControl](http://go.microsoft.com/fwlink/?LinkId=105527).  
+ [in] Définit le mode utilisé pour accéder aux données BLOB FILESTREAM. Cette valeur est passée à la [fonction DeviceIoControl](https://go.microsoft.com/fwlink/?LinkId=105527).  
   
-|Nom   |Valeur|Signification|  
+|Créer une vue d’abonnement|Value|Signification|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|Les données peuvent être lues à partir du fichier.|  
 |SQL_FILESTREAM_WRITE|1|Les données peuvent être écrites dans le fichier.|  
@@ -65,7 +65,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  *OpenOptions*  
  [in] Les attributs et indicateurs de fichier. Ce paramètre peut également inclure toute combinaison des indicateurs suivants.  
   
-|Indicateur|Valeur|Signification|  
+|Indicateur|Value|Signification|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_OPEN_NONE|0x00000000:|Le fichier est ouvert ou créé sans options spéciales.|  
 |SQL_FILESTREAM_OPEN_FLAG_ASYNC|0x00000001L|Le fichier est ouvert ou créé pour les E/S asynchrones.|  
@@ -78,7 +78,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  [in] Valeur renvoyée par la fonction [GET_FILESTREAM_TRANSACTION_CONTEXT](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) .  
   
  *FilestreamTransactionContextLength*  
- [in] Nombre d’octets dans le `varbinary(max)` données retournées par la fonction GET_FILESTREAM_TRANSACTION_CONTEXT. La fonction retourne un tableau de N octets. N est déterminé par la fonction et est une propriété du tableau d'octets retourné.  
+ [in] Nombre d'octets dans les données `varbinary(max)` retournées par la fonction GET_FILESTREAM_TRANSACTION_CONTEXT. La fonction retourne un tableau de N octets. N est déterminé par la fonction et est une propriété du tableau d'octets retourné.  
   
  *AllocationSize*  
  [in] Spécifie la taille d'allocation initiale du fichier de données en octets. Cet indicateur est ignoré en mode lecture. Ce paramètre peut être NULL, auquel cas le comportement de système de fichiers par défaut est utilisé.  

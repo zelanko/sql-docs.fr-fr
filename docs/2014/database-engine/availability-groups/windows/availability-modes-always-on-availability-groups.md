@@ -17,12 +17,12 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d993ef299f08400a54487a4e7e99b017e8e9bc55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a05f52eceb554d8f4b023a3136fd4cf8e55d4fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129039"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376311"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modes de disponibilité (Groupes de disponibilité Always On)
   Dans [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], le *mode de disponibilité* est une propriété de réplica qui détermine si un réplica de disponibilité donné peut fonctionner en mode de validation synchrone. Pour chaque réplica de disponibilité, le mode de disponibilité doit être configuré pour le mode de validation synchrone ou pour le mode de validation asynchrone.  Si le réplica principal est configuré pour le *mode de validation asynchrone*, il n’attend pas que le réplica secondaire écrive des enregistrements dans le journal des transactions entrantes sur le disque (pour *renforcer le journal*). Si un réplica secondaire donné est configuré en mode de validation asynchrone, le réplica principal n'attend pas que ce réplica secondaire renforce le journal. Si le réplica principal et un réplica secondaire donné sont configurés pour le *mode de validation synchrone*, le réplica principal attend que le réplica secondaire confirme qu’il a renforcé le journal (sauf si le réplica secondaire n’envoie pas de commande ping au réplica principal pendant la *période d’expiration de session*du réplica principal).  
@@ -32,7 +32,7 @@ ms.locfileid: "48129039"
   
   
 ##  <a name="SupportedAvModes"></a> Modes de disponibilité pris en charge  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend en charge deux modes de disponibilité : le mode avec validation asynchrone et le mode avec validation synchrone, comme suit :  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend en charge deux mode de validation asynchrone modes de disponibilité et le mode de validation synchrone, comme suit :  
   
 -   Le*mode avec validation asynchrone* est une solution de récupération d’urgence qui fonctionne bien quand les réplicas de disponibilité sont séparés par des distances considérables. Si chaque réplica secondaire s'exécute en mode avec validation asynchrone, le réplica principal n'attend pas que les réplicas secondaires renforcent le journal. En revanche, immédiatement après l'écriture d'un enregistrement de journal dans le journal local, le réplica principal envoie une confirmation de transaction au client. Le réplica principal s'exécute avec une latence de transaction minimale par rapport à un réplica secondaire configuré pour le mode avec validation asynchrone.  Si le serveur principal actuel est configuré pour le mode de disponibilité avec validation asynchrone, il valide les transactions de façon asynchrone pour tous les réplicas secondaires, indépendamment de leurs paramètres de mode de disponibilité.  
   
@@ -52,8 +52,8 @@ ms.locfileid: "48129039"
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
 |01|02|02 et 03|04|Oui|  
 |02|01|01 et 03|04|Oui|  
-|03||01 et 02|04|non|  
-|04|||01, 02 et 03|non|  
+|03||01 et 02|04|Non|  
+|04|||01, 02 et 03|Non|  
   
  En général, le nœud 04 (réplica avec validation asynchrone), est déployé dans un site de récupération d'urgence. Le fait que les nœuds 01, 02 et 03 demeurent en mode de validation asynchrone après avoir basculé vers le nœud 04 empêche une dégradation des performances potentielle dans votre groupe de disponibilité en raison de temps de réponse du réseau élevé entre les deux sites.  
   
@@ -149,9 +149,9 @@ ms.locfileid: "48129039"
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog de l’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

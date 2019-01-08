@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance"
 ms.topic: conceptual
 helpviewer_keywords:
 - database monitoring [SQL Server], disk usage
@@ -23,12 +23,12 @@ ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9520c304cc98183a66bc60409fbefe9dcfa79985
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ceda8768fa5033e1a21152a3a3a28b301310ddec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133669"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373482"
 ---
 # <a name="monitor-disk-usage"></a>Surveiller l'utilisation du disque
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les appels d'entrées/sorties (E/S) du système d'exploitation Microsoft Windows pour effectuer des opérations de lecture et d'écriture sur le disque. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère quand et comment les E/S disque sont effectuées, mais le système d’exploitation Windows effectue les opérations d’E/S sous-jacentes. Le sous-système d'E/S comporte le bus système, les cartes contrôleurs de disque, les disques, les unités de sauvegarde sur bande, les unités de CD-Rom et de nombreux autres périphériques d'E/S. Les E/S sur le disque sont souvent responsables des problèmes de goulot d’étranglement d’un système.  
@@ -39,6 +39,6 @@ ms.locfileid: "48133669"
   
 -   Isolement de l'activité de disque créée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- Pour plus d'informations sur l'utilisation du disque, consultez [Surveillance de l'utilisation du disque](http://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx).  
+ Pour plus d'informations sur l'utilisation du disque, consultez [Surveillance de l'utilisation du disque](https://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx).  
   
   

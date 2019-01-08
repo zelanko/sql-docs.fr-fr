@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetEnable Method (ServerNetworkProtocol Class)
@@ -20,12 +18,12 @@ ms.assetid: a287950b-086f-4b6d-a2d8-4d3973bd1b21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b766ec37e22169a0f9e5716826713345405f5345
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3dee294e84ebe0fa8577630886ee00255e928ac
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215439"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360691"
 ---
 # <a name="setenable-method-servernetworkprotocol-class"></a>Méthode SetEnable (classe ServerNetworkProtocol)
   Active le protocole réseau serveur.  
@@ -49,6 +47,6 @@ object
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des bibliothèques réseau et des protocoles réseau du serveur](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

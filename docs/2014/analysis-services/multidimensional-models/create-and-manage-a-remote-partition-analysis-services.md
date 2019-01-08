@@ -14,12 +14,12 @@ ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 584dea7a48b316a4e78a46b0ef1b014b8cc7cf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5f451a9948315a32710bdb1755bb95a5b8d3b98
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106902"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356642"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Créer et gérer une partition distante (Analysis Services)
   Lorsque vous partitionnez un groupe de mesures, vous pouvez configurer une base de données secondaire sur une instance distante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comme stockage de partition.  
@@ -35,7 +35,7 @@ ms.locfileid: "48106902"
   
 -   Les deux instances du serveur doivent présenter la même version. Les deux bases de données doivent avoir le même niveau fonctionnel.  
   
--   Les instances doivent être configurées en vue de connexions TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne prend pas en charge la création de partitions distantes à l’aide du protocole HTTP.  
+-   Les instances doivent être configurées en vue de connexions TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne prend pas en charge la création de partitions distantes à l’aide du protocole HTTP.  
   
 -   Les paramètres de pare-feu sur les deux ordinateurs doivent être définis de manière à accepter les connexions externes. Pour plus d’informations sur la configuration du pare-feu, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -57,36 +57,36 @@ ms.locfileid: "48106902"
   
 #### <a name="specify-valid-server-names-for-cube-deployment-in-ssdt"></a>Spécifier les noms de serveur valides pour le déploiement du cube (dans SSDT)  
   
-1.  Sur le serveur maître : dans l’Explorateur de solutions, cliquez avec le bouton droit sur le nom de la solution et sélectionnez **Propriétés**. Dans la boîte de dialogue **Propriétés** , cliquez sur **Propriétés de configuration**, puis sur **Déploiement**et sur **Serveur** , et définissez le nom du serveur maître.  
+1.  Sur le serveur maître : Dans l’Explorateur de solutions, cliquez sur le nom de la solution et sélectionnez **propriétés**. Dans la boîte de dialogue **Propriétés** , cliquez sur **Propriétés de configuration**, puis sur **Déploiement**et sur **Serveur** , et définissez le nom du serveur maître.  
   
-2.  Sur le serveur subordonné : dans l’Explorateur de solutions, cliquez avec le bouton droit sur le nom de la solution et sélectionnez **Propriétés**. Dans la boîte de dialogue **Propriétés** , cliquez sur **Propriétés de configuration**, puis sur **Déploiement**et sur **Serveur** , et définissez le nom du serveur subordonné.  
+2.  Sur le serveur subordonné : Dans l’Explorateur de solutions, cliquez sur le nom de la solution et sélectionnez **propriétés**. Dans la boîte de dialogue **Propriétés** , cliquez sur **Propriétés de configuration**, puis sur **Déploiement**et sur **Serveur** , et définissez le nom du serveur subordonné.  
   
 #### <a name="create-and-deploy-a-secondary-database-in-ssdt"></a>Créer et déployer une base de données secondaire (dans SSDT)  
   
-1.  Sur le serveur subordonné : créez un projet Analysis Services pour la base de données de stockage.  
+1.  Sur le serveur subordonné : Créer un nouveau projet Analysis Services pour la base de données de stockage.  
   
-2.  Sur le serveur subordonné : dans l'explorateur de solutions, créez une source de données désignant la base de données de cube, db-master. Utilisez le fournisseur **OLE DB natif\Fournisseur Microsoft OLE DB pour Analysis Services 11.0**.  
+2.  Sur le serveur subordonné : Dans l’Explorateur de solutions, créer une nouvelle source de données qui pointe vers la base de données de cube, db-master. Utilisez le fournisseur **OLE DB natif\Fournisseur Microsoft OLE DB pour Analysis Services 11.0**.  
   
-3.  Sur le serveur subordonné : déployez la solution.  
+3.  Sur le serveur subordonné : déployer la solution ;  
   
 #### <a name="enable-features-in-ssms"></a>Activer les fonctionnalités (dans SSMS)  
   
-1.  Sur le serveur subordonné : dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur l’instance connectée de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans l’Explorateur d’objets, puis sélectionnez **Propriétés**. Affectez la valeur **True** à **Feature\LinkToOtherInstanceEnabled** et **Feature\LinkFromOtherInstanceEnabled**.  
+1.  Sur le serveur subordonné : Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], avec le bouton droit votre connectés [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] d’instance dans l’Explorateur d’objets et sélectionnez **propriétés**. Affectez la valeur **True** à **Feature\LinkToOtherInstanceEnabled** et **Feature\LinkFromOtherInstanceEnabled**.  
   
-2.  Sur le serveur subordonné : redémarrez le serveur en cliquant avec le bouton droit sur le nom du serveur dans l’Explorateur d’objets, puis en sélectionnant **Redémarrer**.  
+2.  Sur le serveur subordonné : Redémarrez le serveur en cliquant sur le nom de serveur dans l’Explorateur d’objets et en sélectionnant **redémarrer**.  
   
-3.  Sur le serveur maître : dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur l’instance connectée de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans l’Explorateur d’objets, puis sélectionnez **Propriétés**. Affectez la valeur **True** à **Feature\LinkToOtherInstanceEnabled** et **Feature\LinkFromOtherInstanceEnabled**.  
+3.  Sur le serveur maître : Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], avec le bouton droit votre connectés [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] d’instance dans l’Explorateur d’objets et sélectionnez **propriétés**. Affectez la valeur **True** à **Feature\LinkToOtherInstanceEnabled** et **Feature\LinkFromOtherInstanceEnabled**.  
   
-4.  Sur le serveur maître : pour redémarrer le serveur, cliquez avec le bouton droit sur le nom du serveur dans l’Explorateur d’objets, puis sélectionnez **Redémarrer**.  
+4.  Sur le serveur maître : Pour redémarrer le serveur, cliquez sur le nom du serveur dans l’Explorateur d’objets et sélectionnez **redémarrer**.  
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>Définir la propriété de base de données MasterDataSourceID sur le serveur distant (dans SSMS)  
   
-1.  Sur le serveur subordonné : cliquez avec le bouton droit sur la base de données de stockage, db-storage, pointez sur **Générer un script de la base de données en tant que** | **ALTER To** | **Nouvelle fenêtre d’éditeur de requête**.  
+1.  Sur le serveur subordonné : Cliquez sur le stockage de base de données, stockage de base de données, pointez sur **Script de base de données en tant que** | **ALTER To** | **nouvelle fenêtre d’éditeur de requête**.  
   
 2.  Ajoutez **MasterDataSourceID** à XMLA, puis spécifiez l’ID de la base de données de cube, db-master, comme valeur. Le code XMLA doit ressembler à ce qui suit.  
   
     ```  
-    <Alter ObjectExpansion="ExpandFull" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Alter ObjectExpansion="ExpandFull" xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <Object>  
        <DatabaseID>DB-Storage</DatabaseID>  
     </Object>  
@@ -111,7 +111,7 @@ ms.locfileid: "48106902"
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>Configurer la partition distante (dans SSDT)  
   
-1.  Sur le serveur maître : ouvrez le cube dans le Concepteur de cube et cliquez sur l’onglet **Partitions** . Développez le groupe de mesures. Cliquez sur **Nouvelle partition** si le groupe de mesures est déjà configuré pour plusieurs partitions, ou cliquez sur le bouton de navigation (. . ) dans la colonne Source pour modifier la partition existante.  
+1.  Sur le serveur maître : Ouvrez le cube dans Concepteur de Cube et cliquez sur **Partitions** onglet. Développez le groupe de mesures. Cliquez sur **Nouvelle partition** si le groupe de mesures est déjà configuré pour plusieurs partitions, ou cliquez sur le bouton de navigation (. . ) dans la colonne Source pour modifier la partition existante.  
   
 2.  Dans l’Assistant Partition, dans **Spécifier des informations sur la source**, sélectionnez la table des faits et la vue de source de données d’origine.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48106902"
     > [!NOTE]  
     >  Si vous obtenez une erreur indiquant que la source de données n'existe pas dans la collection, vous devez ouvrir le projet de la base de données de stockage, db-storage, et créer une source de données qui désigne la base de données master, db-master.  
   
-5.  Sur le serveur maître : cliquez avec le bouton droit sur le nom du cube dans l’Explorateur de solutions, sélectionnez **Traiter** et traitez entièrement le cube.  
+5.  Sur le serveur maître : Avec le bouton droit dans l’Explorateur de solutions, sélectionnez le nom du cube **processus** et traitez entièrement le cube.  
   
 ## <a name="administering-remote-partitions"></a>Administration de partitions distantes  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge à la fois le traitement parallèle et séquentiel des partitions distantes. La base de données master, dans laquelle les partitions ont été définies, coordonne les transactions entre toutes les instances qui participent au traitement des partitions d'un cube. Les rapports de traitement sont ensuite envoyés à toutes les instances qui ont traité une partition.  
@@ -133,6 +133,6 @@ ms.locfileid: "48106902"
 >  Bien que les bases de données dédiées au stockage des partitions distantes ne soient pas exposées aux ensembles de lignes de schéma, les applications utilisant des objets AMO (Analysis Management Objects) peuvent toujours découvrir une base de données dédiée à l'aide de XML pour la commande Analysis Discover. Toute commande CREATE ou DELETE envoyée directement à une base de données dédiée à l'aide d'un protocole TCP ou client HTTP réussit, mais le serveur retourne un avertissement indiquant que l'action peut endommager cette base de données étroitement gérée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions &#40;Analysis Services - données multidimensionnelles&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

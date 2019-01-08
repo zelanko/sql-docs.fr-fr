@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], modifying
@@ -14,12 +14,12 @@ ms.assetid: dd5e5f20-20c4-4ab9-a19a-db87577dcd43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df29ac669fba94afb386132c2368cc61cd6b5ccd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 614c35992be2f85ef15afd0645140746041d083d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189539"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349503"
 ---
 # <a name="modify-a-job"></a>Modifier un travail
   Cette rubrique explique comment modifier les propriétés des travaux de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de SQL Server Management Objects.  
@@ -52,7 +52,7 @@ ms.locfileid: "48189539"
   
 #### <a name="to-modify-a-job"></a>Pour modifier un travail  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
   
 2.  Développez **Agent SQL Server**et **Travaux**, cliquez avec le bouton droit sur le travail à modifier, puis cliquez sur **Propriétés**.  
   
@@ -87,6 +87,6 @@ ms.locfileid: "48189539"
 ##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
  **Pour modifier un travail**  
   
- Utilisez la `Job` classe à l’aide d’un langage de programmation que vous choisissez, tel que Visual Basic, Visual c# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Utilisez la classe `Job` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

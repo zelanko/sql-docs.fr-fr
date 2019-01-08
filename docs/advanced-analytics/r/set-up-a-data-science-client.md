@@ -1,32 +1,32 @@
 ---
-title: Configurer un client de science des données pour le développement R sur SQL Server | Microsoft Docs
+title: Configurer un client de science des données pour le développement R - Services de SQL Server Machine Learning
 description: Installer les outils et les bibliothèques R locales sur une station de travail de développement pour les connexions à distance à SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/12/2018
+ms.date: 12/17/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 087d7249fbcbb206566e822c634f10e8bc4ba838
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 86b2ba305263b4699a3fe85328e854ba3105e4ab
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703152"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645510"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configurer un client de science des données pour le développement R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Intégration de R est disponible dans SQL Server 2016 ou version ultérieure lorsque vous incluez l’option de langage R dans un [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) ou [SQL Server 2017 Machine Learning Services (en base de données)](../install/sql-machine-learning-services-windows-install.md) installation. 
 
-Pour créer et déployer des solutions R sur SQL Server, installez [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) pour obtenir [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) et d’autres bibliothèques R sur votre station de travail de développement. La bibliothèque RevoScaleR, qui est également sur l’instance distante de SQL Server, coordonne les demandes entre les deux systèmes informatiques. 
+Pour développer et déployer des solutions R pour SQL Server, installez [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) sur votre station de travail de développement pour obtenir [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) et d’autres bibliothèques R. La bibliothèque RevoScaleR, qui est également requis sur l’instance distante de SQL Server, coordonne les demandes entre les deux systèmes informatiques. 
 
-Dans cet article, découvrez comment configurer une station de travail du développement client R afin que vous pouvez vous connecter à un serveur SQL distant activé pour l’apprentissage automatique et intégration de R. Après avoir effectué les étapes décrites dans cet article, vous devez les mêmes bibliothèques R que celles sur SQL Server. Vous saurez également comment envoyer des calculs à partir d’une session R locale à une session à distance de R sur SQL Server.
+Dans cet article, découvrez comment configurer une station de travail du développement client R afin que vous pouvez interagir avec un serveur SQL distant activé pour l’apprentissage automatique et intégration de R. Après avoir effectué les étapes décrites dans cet article, vous devez les mêmes bibliothèques R que celles sur SQL Server. Vous saurez également comment envoyer des calculs à partir d’une session R locale à une session à distance de R sur SQL Server.
 
 ![Composants client-serveur](media/sqlmls-r-client-revo.png "des sessions R locales et distantes et des bibliothèques")
 
-Vous pouvez utiliser intégrée **RGUI** comme décrit dans cet article, l’outil ou [lier les bibliothèques](#install-ide) RStudio ou n’importe quel IDE d’un autre que vous utilisez normalement.
+Pour valider l’installation, vous pouvez utiliser intégrée **RGUI** comme décrit dans cet article, l’outil ou [lier les bibliothèques](#install-ide) RStudio ou n’importe quel IDE d’un autre que vous utilisez normalement.
 
 > [!Tip]
 > Pour une démonstration vidéo de ces exercices, consultez [exécuter de R et Python à distance dans SQL Server à partir des blocs-notes Jupyter](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
@@ -50,9 +50,12 @@ Les packages R de Microsoft sont disponibles dans plusieurs produits et services
 
 2. Dans l’Assistant installation, acceptez ou modifiez le chemin d’installation par défaut, accepter ou modifier la liste des composants et accepter les termes du contrat de licence de Microsoft R Client.
 
-Lors de l’installation terminée, un écran de bienvenue vous présente le produit et la documentation.
+  Lors de l’installation terminée, un écran de bienvenue vous présente le produit et la documentation.
 
-Dans R Client, traitement de R est limité à deux threads et les données en mémoire. Traitement évolutif à l’aide de plusieurs cœurs et les jeux de données volumineux, vous pouvez décaler l’exécution (appelé *contexte de calcul*) pour les jeux de données et la puissance de calcul d’une instance distante de SQL Server. Il s’agit de l’approche recommandée pour l’intégration de client avec une instance de SQL Server de production. 
+3. Créer une variable d’environnement système MKL_CBWR pour garantir une sortie cohérente sur des calculs d’Intel Math Kernel Library (MKL).
+
+  + Dans le panneau de configuration, cliquez sur **système et sécurité** > **système** > **paramètres système avancés**  >   **Variables d’environnement**.
+  + Créer une nouvelle variable système nommée **MKL_CBWR**, avec une valeur définie sur **automatique**.
 
 ## <a name="2---locate-executables"></a>2 - localiser des exécutables
 
@@ -60,12 +63,12 @@ Rechercher et répertorier le contenu du dossier d’installation pour confirmer
 
 1. Dans l’Explorateur de fichiers, ouvrez le dossier C:\Program Files\Microsoft\R Client\R_SERVER\bin pour vérifier l’emplacement de R.exe.
 
-2. Sous-dossier Open le x64 pour confirmer **RGUI**.
+2. Sous-dossier Open le x64 pour confirmer **RGUI**. Vous allez utiliser cet outil à l’étape suivante.
 
 3. Ouvrez C:\Program Files\Microsoft\R Client\R_SERVER\library pour passer en revue la liste des packages installés avec R Client, y compris RevoScaleR, MicrosoftML et autres.
 
 
-<a name="r-tool"></a>
+<a name="R-tools"></a>
  
 ## <a name="3---start-rgui"></a>3 - début RGUI
 
@@ -84,6 +87,8 @@ Lorsque vous installez R avec SQL Server, vous obtenez les mêmes outils R stand
 
 ## <a name="4---get-sql-permissions"></a>4 - obtenir les autorisations SQL
 
+Dans R Client, traitement de R est limité à deux threads et les données en mémoire. Traitement évolutif à l’aide de plusieurs cœurs et les jeux de données volumineux, vous pouvez décaler l’exécution (appelé *contexte de calcul*) pour les jeux de données et la puissance de calcul d’une instance distante de SQL Server. C’est l’approche recommandée pour l’intégration de client avec une instance de SQL Server de production, et que vous avez besoin des autorisations et informations de connexion pour qu’il fonctionne.
+
 Pour vous connecter à une instance de SQL Server pour exécuter des scripts et charger des données, vous devez disposer d’une connexion valide sur le serveur de base de données. Vous pouvez utiliser un compte de connexion SQL ou l’authentification Windows intégrée. Nous recommandons généralement que vous utilisez l’authentification intégrée de Windows, mais à l’aide de la connexion SQL est plus simple pour certains scénarios, en particulier lorsque votre script contient les chaînes de connexion à des données externes.
 
 Au minimum, le compte utilisé pour exécuter du code doit avoir l’autorisation de lire à partir de bases de données, vous travaillez, ainsi que l’autorisation spéciale exécuter n’importe quel SCRIPT externe. En outre, la plupart des développeurs nécessitent des autorisations pour créer des procédures stockées et d’écrire des données dans des tables contenant des données d’apprentissage ou notées des données. 
@@ -100,7 +105,7 @@ Si votre code requiert les packages qui ne sont pas installés par défaut avec 
 
 ## <a name="5---test-connections"></a>5 - test des connexions
 
- En guise de vérification, utilisez **RGUI** et RevoScaleR pour vérifier la connectivité au serveur distant. SQL Server doit être activé pour [connexions à distance](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) et vous devez disposer des autorisations, y compris une connexion d’utilisateur et de se connecter à une base de données. 
+ En guise de vérification, utilisez **RGUI** et RevoScaleR pour vérifier la connectivité au serveur distant. SQL Server doit être activé pour [connexions à distance](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server) et vous devez disposer des autorisations, y compris une connexion d’utilisateur et de se connecter à une base de données. 
 
 Les étapes suivantes supposent que la base de données de démonstration, [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md)et l’authentification Windows.
 
@@ -110,7 +115,7 @@ Les étapes suivantes supposent que la base de données de démonstration, [NYCT
 
 3. Entrez le script de démonstration qui s’exécute sur le serveur distant. Vous devez modifier l’exemple de script suivant pour inclure un nom valide pour une instance distante de SQL Server. Cette session commence en tant qu’une session locale, mais la **rxSummary** fonction s’exécute sur l’instance distante de SQL Server.
 
-  ```r
+  ```R
   # Define a connection. Replace server with a valid server name.
   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
   
@@ -128,7 +133,7 @@ Les étapes suivantes supposent que la base de données de démonstration, [NYCT
 
   Ce script se connecte à une base de données sur le serveur distant, fournit une requête, crée un contexte de calcul `cc` instruction pour l’exécution de code à distance, puis fournit la fonction RevoScaleR **rxSummary** pour retourner une statistique Résumé des résultats de la requête.
 
-  ```r
+  ```R
     Call:
   rxSummary(formula = ~., data = RxSqlServerData(sqlQuery = sampleQuery, 
       connectionString = connStr), computeContext = cc)
@@ -143,7 +148,7 @@ Les étapes suivantes supposent que la base de données de démonstration, [NYCT
 
 4. Obtenir et définir le contexte de calcul. Une fois que vous définissez un contexte de calcul, il reste en vigueur pendant la durée de la session. Si vous ne savez pas si le calcul est local ou distant, exécutez la commande suivante pour découvrir. Les résultats qui spécifient une chaîne de connexion indiquent un contexte de calcul à distance.
 
-  ```r
+  ```R
   # Return the current compute context.
   rxGetComputeContext()
 
@@ -160,7 +165,7 @@ Les étapes suivantes supposent que la base de données de démonstration, [NYCT
 
 5. Retourner des informations sur les variables dans la source de données, y compris le nom et le type.
 
-  ```r
+  ```R
   rxGetVarInfo(data = inDataSource)
   ```
   Résultats incluent des 23 variables.
@@ -168,7 +173,7 @@ Les étapes suivantes supposent que la base de données de démonstration, [NYCT
 
 6. Générer un nuage de points pour Explorer s’il existe des dépendances entre les deux variables. 
 
-  ```r
+  ```R
   # Set the connection string. Substitute a valid server name for the placeholder.
   connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
 
@@ -199,7 +204,7 @@ Lorsque vous utilisez [RStudio](https://www.rstudio.com/), vous pouvez configure
 
 1. Vérifiez les versions de packages R installées sur SQL Server. Pour plus d’informations, consultez [les informations de package R obtenir](determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location).
 
-1. Installez Microsoft R Client ou une des options de serveur autonome pour ajouter RevoScaleR et les autres packages R, y compris la distribution R de base utilisée par votre instance de SQL Server. Choisissez une version à la même ou un niveau inférieur (packages sont à compatibilité descendante) qui fournit les mêmes versions de package comme sur le serveur. Informations de version, voir la version de la carte dans cet article : [les composants de mise à niveau de R et Python](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+1. Installez Microsoft R Client ou une des options de serveur autonome pour ajouter RevoScaleR et les autres packages R, y compris la distribution R de base utilisée par votre instance de SQL Server. Choisissez une version à la même ou un niveau inférieur (packages sont à compatibilité descendante) qui fournit les mêmes versions de package comme sur le serveur. Informations de version, voir la version de la carte dans cet article : [Mettre à niveau les composants R et Python](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 1. Dans RStudio, [mettre à jour votre chemin R](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) pour pointer vers l’environnement R en fournissant RevoScaleR, Microsoft R Open et autres packages de Microsoft. 
 
@@ -242,5 +247,5 @@ Cet exemple utilise Visual Studio 2017 Community Edition, avec la charge de trav
 
 Deux didacticiels différents incluent des exercices afin que vous pouvez vous entraîner le basculement du contexte de calcul local à une instance distante de SQL Server.
 
-+ [Didacticiel : Les fonctions utilisent RevoScaleR R avec des données SQL Server](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
++ [Didacticiel : Utiliser les fonctions RevoScaleR R avec des données de SQL Server](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 + [Procédure pas à pas pour une solution complète de science des données](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)

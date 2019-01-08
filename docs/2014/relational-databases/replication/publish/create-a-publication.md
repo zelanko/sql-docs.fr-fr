@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], creating
@@ -16,12 +15,12 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ce1f698224a7e1938ac30e94565033e3c32f5c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 142dd6544cafde4cea2839f955f23685a3a673f5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195569"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365965"
 ---
 # <a name="create-a-publication"></a>Créer une publication
   Cette rubrique explique comment créer une publication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -49,7 +48,7 @@ ms.locfileid: "48195569"
 -   Les noms de publications et d’articles ne peuvent pas contenir les caractères suivants : % , \* , [ , ] , | , : , " , ? , «, \, /, \< , >. Si les objets de la base de données contiennent l’un de ces caractères, et si vous voulez les répliquer, vous devez spécifier un nom d’article différent du nom de l’objet dans la boîte de dialogue **Propriétés de l’article - \<Article>**, qui est disponible dans la page **Articles** de l’Assistant.  
   
 ###  <a name="Security"></a> Sécurité  
- Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](http://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
+ Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](https://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Créez des publication et définissez des articles avec l'Assistant Nouvelle publication. Après avoir créé une publication, affichez et modifiez les propriétés de publication dans la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d’informations sur la création d’une publication à partir d’une base de données Oracle, consultez [Créer une publication à partir d’une base de données Oracle](create-a-publication-from-an-oracle-database.md).  
@@ -167,12 +166,12 @@ ms.locfileid: "48195569"
   
 3.  Si le <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> propriété est `false`, affectez-lui la valeur `true`.  
   
-4.  Pour une publication transactionnelle, vérifiez la valeur de la propriété <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> . Si cette propriété est `true`, un travail d’Agent de lecture du journal existe déjà pour cette base de données. Si cette propriété est `false`, procédez comme suit :  
+4.  Pour une publication transactionnelle, vérifiez la valeur de la propriété <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> . Si elle a la valeur `true`, un travail de l'Agent de lecture du journal existe déjà pour cette base de données. Si elle a la valeur `false`, procédez comme suit :  
   
-    -   Définir le <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> ou <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> champs de <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> pour fournir les informations d’identification pour le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] du compte Windows sous lequel s’exécute l’Agent de lecture du journal.  
+    -   Définissez les champs <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> ou <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> de <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> afin de fournir les informations d'identification pour le compte [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows sous lequel l'Agent de lecture du journal s'exécute.  
   
         > [!NOTE]  
-        >  Paramètre <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> n’est pas nécessaire lorsque la publication est créée par un membre de la `sysadmin` rôle serveur fixe. Dans ce cas, l'Agent va emprunter l'identité du compte de l'Agent SQL Server. Pour plus d’informations, voir [Replication Agent Security Model](../security/replication-agent-security-model.md).  
+        >  Il n'est pas nécessaire de définir <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> lorsque la publication est créée par un membre du rôle serveur fixe `sysadmin`. Dans ce cas, l'Agent va emprunter l'identité du compte de l'Agent SQL Server. Pour plus d’informations, voir [Replication Agent Security Model](../security/replication-agent-security-model.md).  
   
     -   (Facultatif) Définissez les champs <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> et <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> lorsque vous utilisez l'authentification SQL Server pour vous connecter au serveur de publication.  
   
@@ -191,7 +190,7 @@ ms.locfileid: "48195569"
     -   Les champs <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> pour fournir les informations d'identification pour le compte Windows sous lequel le travail de l'Agent d'instantané s'exécute. Ce compte est également utilisé lorsque l'Agent d'instantané établit des connexions au serveur de distribution local et pour toute connexion distante lors de l'utilisation de l'authentification Windows.  
   
         > [!NOTE]  
-        >  Paramètre <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> n’est pas nécessaire lorsque la publication est créée par un membre de la `sysadmin` rôle serveur fixe. Dans ce cas, l'Agent va emprunter l'identité du compte de l'Agent SQL Server. Pour plus d’informations, voir [Replication Agent Security Model](../security/replication-agent-security-model.md).  
+        >  Il n'est pas nécessaire de définir <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> lorsque la publication est créée par un membre du rôle serveur fixe `sysadmin`. Dans ce cas, l'Agent va emprunter l'identité du compte de l'Agent SQL Server. Pour plus d’informations, voir [Replication Agent Security Model](../security/replication-agent-security-model.md).  
   
     -   (Facultatif) Les champs <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> et <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> lorsque vous utilisez l'authentification SQL Server pour vous connecter au serveur de publication.  
   
@@ -225,7 +224,7 @@ ms.locfileid: "48195569"
     -   Les champs <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> pour fournir les informations d'identification pour le compte Windows sous lequel le travail de l'Agent d'instantané s'exécute. Ce compte est également utilisé lorsque l'Agent d'instantané établit des connexions au serveur de distribution local et pour toute connexion distante lors de l'utilisation de l'authentification Windows.  
   
         > [!NOTE]  
-        >  Paramètre <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> n’est pas nécessaire lorsque la publication est créée par un membre de la `sysadmin` rôle serveur fixe. Pour plus d’informations, voir [Replication Agent Security Model](../security/replication-agent-security-model.md).  
+        >  Il n'est pas nécessaire de définir <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> lorsque la publication est créée par un membre du rôle serveur fixe `sysadmin`. Pour plus d’informations, voir [Replication Agent Security Model](../security/replication-agent-security-model.md).  
   
     -   (Facultatif) Utilisez l'opérateur OR logique inclusif (`|` en Visual C# et `Or` en Visual Basic) et l'opérateur OR logique exclusif (`^` en Visual C# et `Xor` en Visual Basic) pour définir les valeurs <xref:Microsoft.SqlServer.Replication.PublicationAttributes> de la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   

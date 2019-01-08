@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies
@@ -15,12 +14,12 @@ ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c7c8b41b996845d7a0850af989320496ceea6f51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 786c075fa30819c84827bf57ea33a91213ced856
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176479"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801052"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Hiérarchies dérivées (services de données de référence)
   Une hiérarchie dérivée [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] est dérivée des relations d'attributs basés sur un domaine qui existent déjà entre des entités dans un modèle.  
@@ -73,7 +72,7 @@ ms.locfileid: "48176479"
 |----------------------|-----------|  
 |Créer une hiérarchie dérivée.|[Créer une hiérarchie dérivée &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |Masquer ou supprimer des niveaux dans une hiérarchie dérivée existante.|[Masquer ou supprimer des niveaux dans une hiérarchie dérivée &#40;Master Data Services&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
-|Modifier le nom d'une hiérarchie dérivée existante.|[Modifier un nom de hiérarchie dérivée &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|Modifier le nom d'une hiérarchie dérivée existante.|[Modifier le nom d’une hiérarchie dérivée &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |Supprimer une hiérarchie dérivée existante.|[Supprimer une hiérarchie dérivée &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
 |||  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48176479"
   
 -   [Hiérarchies récursives &#40;Master Data Services&#41;](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [Hiérarchies avec un niveau supérieur explicite dérivées &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [Hiérarchies dérivées avec un niveau supérieur composé d’une hiérarchie explicite &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
 -   [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   

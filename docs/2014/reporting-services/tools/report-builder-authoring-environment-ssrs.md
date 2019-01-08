@@ -11,12 +11,12 @@ ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e9c5505aaed0fba7ff5097c059f11cd0af8f50f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e1fe559e8bbb4c9c484671737223766c4a0554
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117489"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358151"
 ---
 # <a name="report-builder-ssrs"></a>Générateur de rapports (SSRS)
   Le Générateur de rapports est un environnement de création de rapports destiné aux utilisateurs professionnels qui préfèrent travailler dans l'environnement [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office. Lorsque vous concevez un rapport, vous spécifiez l'emplacement des données à obtenir, leur nature et leur mode d'affichage. Au moment de l'exécution du rapport, le processeur de rapports assimile l'ensemble des informations que vous avez spécifiées, puis il récupère les données et les combine à la mise en page du rapport pour générer le rapport.  
@@ -42,10 +42,10 @@ ms.locfileid: "48117489"
   
 -   enregistrer le rapport et ses éléments associés dans une bibliothèque SharePoint, un serveur de rapport ou sur l'ordinateur local.  
   
- Le Générateur et le Concepteur de rapports partagent de nombreuses fonctionnalités. Pour plus d'informations sur le Générateur de rapports, consultez la [documentation du Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
+ Le Générateur et le Concepteur de rapports partagent de nombreuses fonctionnalités. Pour plus d'informations sur le Générateur de rapports, consultez la [documentation du Générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer l’accès au Générateur de rapports](../report-server/configure-report-builder-access.md)   
+ [Configurer l'accès au Générateur de rapports](../report-server/configure-report-builder-access.md)   
  [Outils de Reporting Services](reporting-services-tools.md)   
  [Concevoir des rapports à l’aide du Concepteur de rapports &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

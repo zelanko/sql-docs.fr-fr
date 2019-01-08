@@ -16,12 +16,12 @@ ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f69ae2b8c00f062d3650606de071a4d07eefab4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af81fd6c4b0b56474497a829985a754ccf88f3ff
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607247"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408846"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>Gestionnaire de pilotes&#39;rôle s dans le processus de connexion
 N’oubliez pas que les applications n’appellent pas directement les fonctions de pilote. Au lieu de cela, ils appellent des fonctions de gestionnaire de pilotes portant le même nom et le Gestionnaire de pilotes appelle les fonctions de pilote. En règle générale, cela se produit presque immédiatement. Par exemple, l’application appelle **SQLExecute** dans le Gestionnaire de pilotes et après quelques vérifications des erreurs, le Gestionnaire de pilotes appelle **SQLExecute** dans le pilote.  

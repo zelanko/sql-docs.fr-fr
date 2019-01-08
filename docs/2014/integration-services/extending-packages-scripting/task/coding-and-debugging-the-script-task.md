@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,12 +21,12 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cc28e7645732d46bd9cf62eba049fbc7dd48ad7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a84154aa1ea11ea432db46ad5b2a04c76dd6230
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215269"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372905"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codage et débogage de la tâche de script
   Après avoir configuré la tâche de script dans l’**éditeur de tâche de script**, vous pouvez écrire votre code personnalisé dans l’environnement de développement de tâche de script.  
@@ -212,7 +210,7 @@ To open Help, press F1.
   
  Le tableau suivant répertorie les principaux membres publics de la classe <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>, exposée au code de la tâche de script par le biais de l'objet `Dts` global. Les rubriques de cette section examinent en détail l'utilisation de ces membres.  
   
-|Membre|Fonction|  
+|Membre|Objectif|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|Permet d'accéder aux gestionnaires de connexion définis dans le package.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|Fournit une interface d'événements pour permettre à la tâche de script de déclencher des erreurs, des avertissements et des messages d'information.|  
@@ -245,9 +243,9 @@ To open Help, press F1.
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   Entrée de blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661), sur blogs.msdn.com.  
+-   Entrée de blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661), sur blogs.msdn.com.  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour les derniers téléchargements, articles, exemples et des vidéos à partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], ainsi que les solutions sélectionnées à partir de la Communauté, visitez le [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les téléchargements, articles, exemples et vidéos les plus récents de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], ainsi que les solutions retenues par la communauté informatique, consultez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référencement d’autres assemblys dans les solutions de script](../referencing-other-assemblies-in-scripting-solutions.md)   

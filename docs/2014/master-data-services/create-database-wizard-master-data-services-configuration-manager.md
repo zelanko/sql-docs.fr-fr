@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createdbwiz.f1
@@ -13,12 +12,12 @@ ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f49407c1b49f5a4556a4f4705c6865b3cab87b16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce2b909ea7853a0a77d42f8c14a510b529f4ae88
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128689"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799231"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>Assistant Création d'une base de données (Gestionnaire de configuration des services de données de référence)
   Utilisez l'Assistant **Création d'une base de données** pour créer une base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -29,9 +28,9 @@ ms.locfileid: "48128689"
 |Nom du contrôle|Description|  
 |------------------|-----------------|  
 |**Instance SQL Server**|Spécifiez le nom de l’instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] qui doit héberger la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Il peut s'agir d'une instance par défaut ou nommée sur un ordinateur local ou distant. Spécifiez les informations en tapant :<br /><br /> un point (.) pour se connecter à l'instance par défaut sur votre ordinateur local ;<br /><br /> le nom du serveur ou l'adresse IP pour se connecter à l'instance par défaut sur l'ordinateur local ou distant spécifié ;<br /><br /> le nom du serveur ou l'adresse IP ainsi que le nom de l'instance pour se connecter à l'instance nommée sur l'ordinateur local ou distant spécifié. Spécifiez ces informations au format *nom_serveur*\\*nom_instance*.|  
-|**Type d'authentification**|Sélectionnez le type d'authentification à utiliser lors de la connexion à l'instance SQL Server spécifiée. Les informations d'identification que vous utilisez pour vous connecter doivent faire partie du rôle serveur **sysadmin** pour l'instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée. Pour plus d’informations sur le rôle sysadmin, consultez [Rôles de niveau serveur](../relational-databases/security/authentication-access/server-level-roles.md). Les types d'authentification sont les suivants :<br /><br /> **Utilisateur actuel - Sécurité intégrée**: utilise l'authentification Windows intégrée pour la connexion à l'aide des informations d'identification du compte d'utilisateur Windows actuel. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] utilise les informations d’identification Windows de l’utilisateur qui s’est connecté à l’ordinateur et a ouvert l’application. Vous ne pouvez pas spécifier des informations d'identification Windows différentes dans l'application. Si vous souhaitez vous connecter avec des informations d'identification Windows différentes, vous devez ouvrir une session sur l'ordinateur sous l'identité de cet utilisateur, puis ouvrir le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].<br /><br /> **Compte SQL Server**: utilise un compte SQL Server pour se connecter. Quand vous sélectionnez cette option, les champs **Nom d’utilisateur** et **Mot de passe** sont activés et vous devez spécifier des informations d’identification pour un compte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l’instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée.|  
-|**Nom d'utilisateur**|Spécifiez le nom du compte d'utilisateur qui sera utilisé pour se connecter à l'instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée. Le compte doit faire partie du rôle **sysadmin** sur l’instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée.<br /><br /> Lorsque le **Type d’authentification** est **Utilisateur actuel - Sécurité intégrée**, la zone **Nom d’utilisateur** est en lecture seule et affiche le nom du compte d’utilisateur Windows qui a ouvert une session sur l’ordinateur.<br /><br /> Lorsque le **Type d'authentification** est **Compte SQL Server**, la zone **Nom d'utilisateur** est activée et vous devez spécifier des informations d'identification pour un compte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l'instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée.|  
-|**Mot de passe**|Spécifiez le mot de passe associé au compte d'utilisateur.<br /><br /> Lorsque le **Type d’authentification** est **Utilisateur actuel - Sécurité intégrée**, la zone **Mot de passe** est en lecture seule et les informations d’identification du compte d’utilisateur Windows spécifié sont utilisées pour la connexion.<br /><br /> Lorsque le **Type d'authentification** est **Compte SQL Server**, la zone **Mot de passe** est activée et vous devez spécifier le mot de passe associé au compte d'utilisateur spécifié.|  
+|**Type d'authentification**|Sélectionnez le type d'authentification à utiliser lors de la connexion à l'instance SQL Server spécifiée. Les informations d'identification que vous utilisez pour vous connecter doivent faire partie du rôle serveur **sysadmin** pour l'instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée. Pour plus d’informations sur le rôle sysadmin, consultez [Rôles de niveau serveur](../relational-databases/security/authentication-access/server-level-roles.md). Les types d'authentification sont les suivants :<br /><br /> **Utilisateur actuel - sécurité intégrée**: Utilise l’authentification Windows intégrée pour se connecter en utilisant les informations d’identification du compte d’utilisateur Windows actuel. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] utilise les informations d’identification Windows de l’utilisateur qui s’est connecté à l’ordinateur et a ouvert l’application. Vous ne pouvez pas spécifier des informations d'identification Windows différentes dans l'application. Si vous souhaitez vous connecter avec des informations d'identification Windows différentes, vous devez ouvrir une session sur l'ordinateur sous l'identité de cet utilisateur, puis ouvrir le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].<br /><br /> **Compte SQL Server**: Utilise un compte SQL Server pour se connecter. Quand vous sélectionnez cette option, les champs **Nom d’utilisateur** et **Mot de passe** sont activés et vous devez spécifier des informations d’identification pour un compte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l’instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée.|  
+|**Nom d'utilisateur**|Spécifiez le nom du compte d'utilisateur qui sera utilisé pour se connecter à l'instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée. Le compte doit faire partie du rôle **sysadmin** sur l’instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée.<br /><br /> Quand le **Type d’authentification** est **Utilisateur actuel - Sécurité intégrée**, la zone **Nom d’utilisateur** est en lecture seule et affiche le nom du compte d’utilisateur Windows qui a ouvert une session sur l’ordinateur.<br /><br /> Lorsque le **Type d'authentification** est **Compte SQL Server**, la zone **Nom d'utilisateur** est activée et vous devez spécifier des informations d'identification pour un compte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l'instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée.|  
+|**Mot de passe**|Spécifiez le mot de passe associé au compte d'utilisateur.<br /><br /> Quand le **Type d’authentification** est **Utilisateur actuel - Sécurité intégrée**, la zone **Mot de passe** est en lecture seule et les informations d’identification du compte d’utilisateur Windows spécifié sont utilisées pour la connexion.<br /><br /> Lorsque le **Type d'authentification** est **Compte SQL Server**, la zone **Mot de passe** est activée et vous devez spécifier le mot de passe associé au compte d'utilisateur spécifié.|  
 |**Tester la connexion**|Vérifiez que le compte d'utilisateur spécifié peut se connecter à l'instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et que le compte a l'autorisation de créer une base de données des [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pour cette instance. Si vous ne cliquez pas sur **Tester la connexion**, la connexion est testée quand vous cliquez sur **Suivant**.|  
   
 ## <a name="database"></a>Base de données  
@@ -41,15 +40,15 @@ ms.locfileid: "48128689"
 |------------------|-----------------|  
 |**Nom de la base de données**|Spécifiez un nom pour la base de données des [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
 |**Classement par défaut de SQL Server**|Sélectionnez cette option pour utiliser le paramètre de classement de base de données actuel de l'instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée pour la nouvelle base de données.|  
-|**Classement Windows**|Spécifiez les paramètres de classement Windows à utiliser pour la nouvelle base de données. Les classements Windows définissent des règles de stockage des données caractères selon les paramètres régionaux Windows associés. Pour plus d’informations sur les classements Windows et les options associées, consultez [Nom de classement Windows &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql).<br /><br /> Remarque : la liste **Classement Windows** et les options associées sont activées uniquement après que vous avez désactivé la case à cocher **Utiliser le classement SQL Server par défaut** .|  
+|**Classement Windows**|Spécifiez les paramètres de classement Windows à utiliser pour la nouvelle base de données. Les classements Windows définissent des règles de stockage des données caractères selon les paramètres régionaux Windows associés. Pour plus d’informations sur les classements Windows et les options associées, consultez [Nom de classement Windows &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql).<br /><br /> Remarque : Le **classement de Windows** liste et les options associées sont activées uniquement après que vous désactivez le **classement par défaut de SQL Server** boîte.|  
   
 ## <a name="administrator-account"></a>Compte d'administrateur  
   
 |Nom du contrôle|Description|  
 |------------------|-----------------|  
-|**Nom d'utilisateur**|Spécifiez un compte d’utilisateur de domaine pour être le [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] administrateur système. Pour toutes les [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] applications Web associées à cette base de données, cet utilisateur peuvent mettre à jour tous les modèles et toutes les données dans toutes les zones fonctionnelles. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).|  
+|**Nom d'utilisateur**|Spécifiez un compte d'utilisateur de domaine qui sera l'administrateur système [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Pour toutes les [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] applications Web associées à cette base de données, cet utilisateur peuvent mettre à jour tous les modèles et toutes les données dans toutes les zones fonctionnelles. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).|  
   
-## <a name="summary"></a>Résumé  
+## <a name="summary"></a>Récapitulatif  
  Affiche un résumé des options sélectionnées. Passez vos sélections en revue, puis cliquez sur **Suivant** pour commencer à créer la base de données avec les paramètres spécifiés.  
   
 ## <a name="progress-and-finish"></a>État d'avancement et fin  
@@ -58,6 +57,6 @@ ms.locfileid: "48128689"
 ## <a name="see-also"></a>Voir aussi  
  [Page Configuration de base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [Configurer le site Web et la base de données pour Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [Exigences de base de données &#40;Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
+ [Configuration requise pour la base de données &#40;Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6a0318d041a43e96246931015ef35edaf7fd74a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5aae805b154d8c8876766f98e4d17c277a034764
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162869"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528252"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Mettre en surbrillance des données de graphique en ajoutant des bandes (Générateur de rapports et SSRS)
   Les franges sont des plages horizontales ou verticales qui assombrissent l'arrière-plan du graphique à intervalles réguliers ou personnalisés. Vous pouvez utiliser des bandes pour obtenir les résultats suivants :  
@@ -50,7 +50,7 @@ ms.locfileid: "48162869"
   
      Les propriétés de l'axe s'affichent dans la fenêtre Propriétés.  
   
-2.  Dans la section **Apparence** du volet Propriétés, pour la propriété StripLines, cliquez sur le bouton Modifier la collection (…) pour ouvrir **l’Éditeur de collections ChartStripLine**.  
+2.  Dans la section **Apparence** du volet Propriétés, pour la propriété StripLines, cliquez sur le bouton Modifier la collection (...) pour ouvrir l’**Éditeur de collections ChartStripLine**.  
   
 3.  Cliquez sur **Ajouter** pour ajouter une nouvelle bande à la collection.  
   

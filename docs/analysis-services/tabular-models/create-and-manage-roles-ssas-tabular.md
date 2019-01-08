@@ -1,5 +1,5 @@
 ---
-title: Créer et gérer des rôles | Microsoft Docs
+title: Créer et gérer des rôles dans les modèles tabulaires Analysis Services | Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 883eab47796f5cb09d5993fa2b2570cdda3cd2ae
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 093197db8257cf9be261658f1828783fa01d7cc2
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099650"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072216"
 ---
 # <a name="create-and-manage-roles"></a>Créer et gérer des rôles 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

@@ -18,12 +18,12 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e52684ee8c73c976e42c29ca54079ac716527a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4411cb68c86bbea92429a983449e77985d3d236d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834487"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591583"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@job_id=** ] *job_id*  
  Numéro d'identification du travail auquel ajouter la planification. *job_id* est **uniqueidentifier**, sans valeur par défaut.  
   
- [  **@job_name=** ] **'***nom_travail***'**  
+ [  **@job_name=** ] **'**_nom_travail_**'**  
  Nom du travail auquel ajouter la planification. *job_name* est **nvarchar (128)**, sans valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@name=** ] **'***nom***'**  
+ [  **@name=** ] **'**_nom_**'**  
  Nom de la planification. *nom* est **nvarchar (128)**, sans valeur par défaut.  
   
  [  **@enabled=** ] *enabled_flag*  
@@ -70,7 +70,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@freq_type=** ] *frequency_type*  
  Valeur qui indique à quel moment le travail doit s'exécuter. *frequency_type* est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**4**|Tous les jours|  
@@ -83,7 +83,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_interval=** ] *frequency_interval*  
  Jour d'exécution du travail. *frequency_interval* est **int**, avec une valeur par défaut 0 et dépend de la valeur de *frequency_type* comme indiqué dans le tableau suivant :  
   
-|Valeur|Effet|  
+|Value|Effet|  
 |-----------|------------|  
 |**1** (une fois)|*frequency_interval* n’est pas utilisé.|  
 |**4** (quotidienne)|Chaque *frequency_interval* jours.|  
@@ -96,7 +96,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_subday_type=** ] *frequency_subday_type*  
  Spécifie les unités pour *frequency_subday_interval*. *frequency_subday_type* est **int**, sans valeur par défaut et peut prendre l’une des valeurs suivantes :  
   
-|Valeur|Description (unité)|  
+|Value|Description (unité)|  
 |-----------|--------------------------|  
 |**0x1**|À une heure spécifiée|  
 |**0x4**|Minutes|  
@@ -110,7 +110,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* est **int**, sans valeur par défaut et peut prendre l’une des valeurs suivantes :  
   
-|Valeur|Description (unité)|  
+|Value|Description (unité)|  
 |-----------|--------------------------|  
 |**1**|Première|  
 |**2**|Seconde|  
@@ -134,13 +134,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_start_time=** ] *active_start_time*  
  Heure sur n’importe quel jour entre *active_start_date* et *active_end_date* pour commencer l’exécution du travail. *heure_de_début_active* est **int**, sans valeur par défaut. L'heure est au format HHMMSS et est exprimée sur 24 heures.  
   
- [**@active_end_time= *** heure_fin_active*  
+ [  **@active_end_time=**_heure_fin_active_  
  Heure sur n’importe quel jour entre *active_start_date* et *active_end_date* pour arrêter l’exécution de travail. *heure_fin_active* est **int**, sans valeur par défaut. L'heure est au format HHMMSS et est exprimée sur 24 heures.  
   
- [  **@schedule_id=***id_de_la_planification***sortie**  
+ [  **@schedule_id=**_id_de_la_planification_**sortie**  
  Numéro d'identification de planification affecté à la planification si le travail est correctement créé. *id_de_la_planification* est une variable output de type **int**, sans valeur par défaut.  
   
- [ **@schedule_uid**=] *schedule_uid *** sortie**  
+ [ **@schedule_uid**=] _schedule_uid_**sortie**  
  Identificateur unique de la planification. *schedule_uid* est une variable de type **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -152,7 +152,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="remarks"></a>Notes  
  Il est désormais possible de gérer la planification des travaux indépendamment des travaux. Pour ajouter une planification à un travail, utilisez **sp_add_schedule** pour créer le calendrier et **sp_attach_schedule** pour l’associer à un travail.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  

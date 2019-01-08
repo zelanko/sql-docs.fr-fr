@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46572a9fac9e3d1749c65acf9370718fbc8b3dd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e4d8da5c0b352964fe9017be902557e29e1e2ed3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125501"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781421"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Éditeur de destination SAP BW (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de l' **Éditeur de destination SAP BW** pour sélectionner le gestionnaire de connexions SAP BW qui sera utilisé par la destination SAP BW. Sur cette page, sélectionnez également les paramètres pour charger les données dans le système SAP Netweaver BW.  
@@ -103,7 +102,7 @@ ms.locfileid: "48125501"
  **Créer**  
  Créez le type sélectionné d'objet SAP Netweaver BW.  
   
-|Type d'objet|Résultats|  
+|Type d'objet|Résultat|  
 |-----------------|------------|  
 |**InfoObject**|Créez un nouvel InfoObject à l'aide de la boîte de dialogue **Créer un nouvel InfoObject** . Pour plus d'informations sur cette boîte de dialogue, consultez [Create New InfoObject](create-new-infoobject.md).|  
 |**InfoCube**|Créez un nouvel InfoCube à l'aide de la boîte de dialogue **Créer un InfoCube pour les données de transaction** . Pour plus d'informations sur cette boîte de dialogue, consultez [Create InfoCube for Transaction Data](create-infocube-for-transaction-data.md).|  
@@ -111,7 +110,7 @@ ms.locfileid: "48125501"
 |**InfoPackage**|Créez un nouvel InfoPackage à l'aide de la boîte de dialogue **Créer un InfoPackage** . Pour plus d'informations sur cette boîte de dialogue, consultez [Create InfoPackage](create-infopackage.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de Destination SAP BW &#40;Page mappages&#41;](sap-bw-destination-editor-mappings-page.md)   
+ [Éditeur de destination SAP BW &#40;page Mappages&#41;](sap-bw-destination-editor-mappings-page.md)   
  [Éditeur de destination SAP BW &#40;page Sortie d’erreur&#41;](sap-bw-destination-editor-error-output-page.md)   
  [Éditeur de destination SAP BW &#40;page Avancé&#41;](sap-bw-destination-editor-advanced-page.md)   
  [Aide (F1) sur Microsoft Connector 1.1 pour SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  

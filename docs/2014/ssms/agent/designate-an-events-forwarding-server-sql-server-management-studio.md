@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - event forwarding servers [SQL Server]
@@ -14,12 +14,12 @@ ms.assetid: 81dfcbe4-3000-4e77-99de-bf85fef63a12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6d8e24883fe71463b4c03e4caefc1735cf794bc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b79da95e2709e2bb5ff3a3d76cac06b2a4268f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167269"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760721"
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>Designate an Events Forwarding Server (SQL Server Management Studio)
   Cette rubrique explique comment désigner un serveur auquel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transfère les événements dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Notez que le transfert d'événements s'applique aux événements transférés entre serveurs, et non aux événements transférés entre instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hébergées sur un même ordinateur. Notez également qu'afin de recevoir les événements transférés, le serveur de gestion des alertes doit être une instance par défaut de SQL Server.  
@@ -48,9 +48,9 @@ ms.locfileid: "48167269"
 1.  Dans l' **Explorateur d'objets** , cliquez sur le signe plus (+) pour développer le serveur depuis lequel vous souhaitez transférer des événements vers un autre serveur.  
   
 2.  Cliquez avec le bouton droit sur **SQL Server Agent** , puis sélectionnez **Propriétés**.  
-  
-3.  Dans la boîte de dialogue **Propriétés de SQL Server Agent –***nom_serveur*, sous **Sélectionner une page**, sélectionnez **Avancé**.  
-  
+
+3.  Dans la boîte de dialogue **Propriétés de SQL Server Agent -**_nom_serveur_, sous **Sélectionner une page**, sélectionnez **Avancé**.  
+
 4.  Sous **Transfert d'événements SQL Server**, sélectionnez la case à cocher **Transférer les événements sur un autre serveur** .  
   
 5.  Dans la liste **Serveur** , sélectionnez un serveur, puis, sous **Événements**, sélectionnez l'une des options suivantes :  

@@ -11,12 +11,12 @@ ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 37620b099bf07d8c38472dc211040d9efb252992
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e549fa2b443d0ec634c6d226b79bbcc33d674a3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182039"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376131"
 ---
 # <a name="saving-reports-report-builder"></a>Enregistrement des rapports (Générateur de rapports)
   Dans le Générateur de rapports vous avez la possibilité d'enregistrer un rapport sur un serveur de rapports, une bibliothèque SharePoint, un partage de fichiers sur lequel vous disposez d'une autorisation d'écriture, ou sur votre ordinateur. Vous pouvez enregistrer un rapport au même emplacement que celui où vous l'avez ouvert, l'enregistrer à un emplacement différent ou avec un nouveau nom au même emplacement ou à un emplacement différent. Par défaut, un rapport est réenregistré à l'emplacement où vous l'avez ouvert. Lorsque vous enregistrez le rapport, vous enregistrez en fait la définition de rapport, laquelle décrit la disposition du rapport. Les données ne sont pas enregistrées. Chaque fois que vous exécutez le rapport, les données de rapport sont actualisées et peuvent être différentes de celles obtenues lors de la dernière exécution du rapport.  
@@ -29,7 +29,7 @@ ms.locfileid: "48182039"
   
 -   Utilisez l'historique de rapport pour enregistrer des versions de rapports rendus en tant que copies historiques.  
   
- Pour en savoir plus sur l’affichage et la gestion des rapports directement sur le serveur de rapports, consultez [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) et [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md) dans la [documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=154888) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
+ Pour en savoir plus sur l’affichage et la gestion des rapports directement sur le serveur de rapports, consultez [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) et [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md) dans la [documentation en ligne](https://go.microsoft.com/fwlink/?LinkId=154888) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
   
 ##  <a name="SavingReportDefinitions"></a> Enregistrement des définitions de rapport  
  Bien que vous puissiez enregistrer des rapports sur votre ordinateur, l'enregistrement des rapports sur un serveur de rapports offre de nombreux avantages.  
@@ -58,12 +58,12 @@ ms.locfileid: "48182039"
 
   
 ##  <a name="UsingFileShareDelivery"></a> Utilisation de la remise par partage de fichiers  
- Si vous avez un grand nombre de rapports à archiver, créez un abonnement qui remet le rapport directement au système de fichiers. Pour cette approche, vous devez créer un abonnement pour chaque rapport, choisir un dossier partagé où stocker les rapports et définir une planification qui détermine le moment auquel le fichier est créé. Une fois l'abonnement défini, le serveur de rapports peut exécuter le rapport sans surveillance et ajouter des fichiers de rapports à l'archive à l'aide de la planification que vous fournissez. Vous pouvez également créer des planifications à usage unique si vous souhaitez archiver des rapports occasionnellement. Pour plus d'informations sur les abonnements et la remise par partage de fichiers, consultez « Remise de fichiers dans Reporting Services » dans la [documentation de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) de la documentation en ligne de SQL Server.  
+ Si vous avez un grand nombre de rapports à archiver, créez un abonnement qui remet le rapport directement au système de fichiers. Pour cette approche, vous devez créer un abonnement pour chaque rapport, choisir un dossier partagé où stocker les rapports et définir une planification qui détermine le moment auquel le fichier est créé. Une fois l'abonnement défini, le serveur de rapports peut exécuter le rapport sans surveillance et ajouter des fichiers de rapports à l'archive à l'aide de la planification que vous fournissez. Vous pouvez également créer des planifications à usage unique si vous souhaitez archiver des rapports occasionnellement. Pour plus d'informations sur les abonnements et la remise par partage de fichiers, consultez « Remise de fichiers dans Reporting Services » dans la [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) de la documentation en ligne de SQL Server.  
   
 
   
 ##  <a name="UsingReportHistory"></a> Utilisation de l'historique de rapport  
- Vous pouvez également utiliser la fonctionnalité d'historique de rapport pour créer des copies historiques. Vous pouvez ensuite sauvegarder la base de données du serveur de rapports, puis stocker la sauvegarde à un emplacement sûr en vue d'une utilisation future. L'ensemble de l'historique de rapport (avec les rapports, les éléments de sources de données partagées, les dossiers, les abonnements et les planifications partagées) est stocké dans la base de données du serveur de rapports. Vous pouvez créer une sauvegarde pour conserver une copie permanente de l'historique et des métadonnées d'un rapport, notamment les informations d'abonnement indiquant ses différents destinataires. Pour plus d'informations, consultez « Gestion de l'historique de rapport » dans la [documentation de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) de la documentation en ligne de SQL Server.  
+ Vous pouvez également utiliser la fonctionnalité d'historique de rapport pour créer des copies historiques. Vous pouvez ensuite sauvegarder la base de données du serveur de rapports, puis stocker la sauvegarde à un emplacement sûr en vue d'une utilisation future. L'ensemble de l'historique de rapport (avec les rapports, les éléments de sources de données partagées, les dossiers, les abonnements et les planifications partagées) est stocké dans la base de données du serveur de rapports. Vous pouvez créer une sauvegarde pour conserver une copie permanente de l'historique et des métadonnées d'un rapport, notamment les informations d'abonnement indiquant ses différents destinataires. Pour plus d'informations, consultez « Gestion de l'historique de rapport » dans la [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) de la documentation en ligne de SQL Server.  
   
 
   
@@ -78,7 +78,7 @@ ms.locfileid: "48182039"
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Rapports, parties de rapports et définitions de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Rapports, parties de rapports et définitions de rapports &#40;Générateur de rapports et SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Installer, désinstaller et prise en charge du Générateur de rapports](../install-uninstall-and-report-builder-support.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](export-reports-report-builder-and-ssrs.md)   

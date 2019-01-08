@@ -12,12 +12,12 @@ ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4b0333fea0588911274846b05ffc90bc2145309
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0597054914dcbce7e7b1fb1475beb29bab7b8a57
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109559"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360051"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>Exécuter directement une instruction (ODBC)
     
@@ -25,9 +25,9 @@ ms.locfileid: "48109559"
   
 1.  Si l'instruction contient des marqueurs de paramètres, utilisez [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) pour lier chaque paramètre à une variable de programme. Remplissez les variables de programme de valeurs de données, puis configurez tous les paramètres de données en cours d'exécution.  
   
-2.  Appelez [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) pour exécuter l'instruction.  
+2.  Appelez [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) pour exécuter l'instruction.  
   
-3.  Si vous utilisez des paramètres d'entrée de données en cours d'exécution, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) et [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
+3.  Si vous utilisez des paramètres d'entrée de données en cours d'exécution, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) et [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>Pour exécuter plusieurs fois une instruction au moyen d'une liaison de paramètre selon les colonnes  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48109559"
   
      Mettez les valeurs de données S et les longueurs de données S dans les tableaux de paramètres liés.  
   
-3.  Appelez [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) pour exécuter l'instruction. Le pilote exécute efficacement l'instruction S fois, une fois pour chaque jeu de paramètres.  
+3.  Appelez [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) pour exécuter l'instruction. Le pilote exécute efficacement l'instruction S fois, une fois pour chaque jeu de paramètres.  
   
-4.  Si vous utilisez des paramètres d'entrée de données en cours d'exécution, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) et [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
+4.  Si vous utilisez des paramètres d'entrée de données en cours d'exécution, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) et [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-row-wise-parameter-binding"></a>Pour exécuter plusieurs fois une instruction au moyen d'une liaison de paramètre selon les lignes  
   
@@ -79,11 +79,11 @@ ms.locfileid: "48109559"
   
 4.  Remplissez le tableau de tampons de paramètres liés avec les valeurs de données.  
   
-5.  Appelez [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) pour exécuter l'instruction. Le pilote exécute efficacement l'instruction S fois, une fois pour chaque jeu de paramètres.  
+5.  Appelez [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) pour exécuter l'instruction. Le pilote exécute efficacement l'instruction S fois, une fois pour chaque jeu de paramètres.  
   
-6.  Si vous utilisez des paramètres d'entrée de données en cours d'exécution, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) et [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
+6.  Si vous utilisez des paramètres d'entrée de données en cours d'exécution, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) et [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
   
- **Remarque** En règle générale, la liaison selon les colonnes et les lignes est davantage employée avec les fonctions [SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360) et [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) qu'avec [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
+ **Remarque** En règle générale, la liaison selon les colonnes et les lignes est davantage employée avec les fonctions [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) et [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) qu'avec [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures relatives à l’exécution de requêtes &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  

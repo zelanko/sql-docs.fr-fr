@@ -13,15 +13,15 @@ ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a028a8cc32003dfb44f6ce449a5f6313492fcfd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00640766d7a19c91f517d8e96e6de9f863d5ed54
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211399"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365701"
 ---
-# <a name="task-6-setting-synonyms"></a>Tâche 6 : Définition des synonymes
-  Dans cette tâche, vous devez définir deux valeurs de domaine, **USA** et **États-Unis**, du domaine **Pays** comme synonymes, avec **États-Unis** comme valeur menante. Dans la mesure où l'option **Utiliser des valeurs menantes** a été sélectionnée lors de la création du domaine **Pays** , toutes les valeurs **USA** pour le domaine **Pays** seront remplacées par **États-Unis** (car États-Unis est la valeur menante). Consultez [Modifier les valeurs de domaine](http://msdn.microsoft.com/library/hh510408.aspx) pour plus de détails.  
+# <a name="task-6-setting-synonyms"></a>Tâche 6 : Définition des synonymes
+  Dans cette tâche, vous devez définir deux valeurs de domaine, **USA** et **États-Unis**, du domaine **Pays** comme synonymes, avec **États-Unis** comme valeur menante. Dans la mesure où l'option **Utiliser des valeurs menantes** a été sélectionnée lors de la création du domaine **Pays** , toutes les valeurs **USA** pour le domaine **Pays** seront remplacées par **États-Unis** (car États-Unis est la valeur menante). Consultez [Modifier les valeurs de domaine](https://msdn.microsoft.com/library/hh510408.aspx) pour plus de détails.  
   
 1.  Sélectionnez le domaine **Pays** dans la liste des domaines.  
   
@@ -40,6 +40,6 @@ ms.locfileid: "48211399"
      ![United States et USA comme synonymes](../../2014/tutorials/media/et-settingsynonyms-02.jpg "United States et USA comme synonymes")  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 7 : Création d’une règle de domaine composite](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
+ [Tâche 7 : Création d’un domaine Composite](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
   
   

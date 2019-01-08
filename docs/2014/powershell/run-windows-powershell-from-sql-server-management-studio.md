@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 1f841825-da1f-4062-9a81-3cdbab03845b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc952b88a4828ae672bd6cee2cad0754f0ef6eaf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b07f2e39421bdeb777af1e31fe414ec1fe2890c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205239"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823893"
 ---
 # <a name="run-windows-powershell-from-sql-server-management-studio"></a>Exécuter Windows PowerShell à partir de SQL Server Management Studio
   Vous pouvez démarrer des sessions Windows PowerShell à partir de l' **Explorateur d'objets** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] lance Windows PowerShell, charge le `sqlps` module et définit le contexte de chemin d’accès sur le nœud associé dans le **Explorateur d’objets** arborescence.  
@@ -37,7 +36,7 @@ SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>
   
 3.  Cliquez avec le bouton droit sur l’objet et sélectionnez **Démarrer PowerShell**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  S'il a été ouvert à partir de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], PowerShell ne fonctionne pas avec les privilèges d'administrateur, ce qui peut empêcher certaines activités telles que les appels à WMI.  
   
 ## <a name="see-also"></a>Voir aussi  

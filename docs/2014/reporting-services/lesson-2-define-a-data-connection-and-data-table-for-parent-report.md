@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : définir une connexion de données et une table de données pour le rapport parent | Microsoft Docs'
+title: 'Leçon 2 : Définir une connexion de données et la Table de données pour le rapport Parent | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 13bb0c14b4458122ee94b4a674b86d20bf667d3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5dba0a87f34c794e22fa52274591bbec0db63f86
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162649"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358541"
 ---
-# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Leçon 2 : définir une connexion de données et une table de données pour le rapport parent
+# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Leçon 2 : Définir une connexion de données et une table de données pour le rapport parent
   Après avoir créé un projet de site Web à l'aide du modèle de site Web ASP.NET pour Visual C#, l'étape suivante consiste à créer une connexion de données et une table de données pour le rapport parent. Dans ce didacticiel, la connexion de données doit s'établir avec la base de données AdventureWorks2008. Vous avez également la possibilité de vous connecter à la base de données AdventureWorks2012.  
   
 ### <a name="to-define-a-data-connection-and-data-table-by-adding-a-dataset-for-parent-report"></a>Pour définir une connexion de données et une table de données en ajoutant un dataset (pour le rapport parent)  
@@ -29,11 +29,11 @@ ms.locfileid: "48162649"
   
      Ce faisant, vous ajoutez un nouveau fichier XSD **DataSet1.xsd** au projet et ouvrez le Concepteur de DataSet.  
   
-3.  Dans la fenêtre Boîte à outils, faites glisser un **[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** contrôle à l’aire de conception. Cette opération permet de lancer l’Assistant de configuration de **TableAdapter** .  
+3.  À partir de la fenêtre Boîte à outils, faites glisser un contrôle **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** dans l’aire de conception. Cette opération permet de lancer l’Assistant de configuration de **TableAdapter** .  
   
 4.  Sur le **choisir votre connexion de données** , cliquez sur **nouvelle connexion**.  
   
-5.  S’il s’agit de la première fois que vous avez créé une source de données dans Visual Studio, vous verrez s’afficher la page **Choisir une source de données** . Dans la zone **Source de données** , sélectionnez **Microsoft SQL Server**.  
+5.  Si vous avez créé une source de données dans Visual Studio pour la première fois, la page **Choisir une source de données** s’affiche. Dans la zone **Source de données** , sélectionnez **Microsoft SQL Server**.  
   
 6.  Dans la boîte de dialogue **Ajouter une connexion** , effectuez les étapes suivantes :  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48162649"
   
 7.  Si vous avez sélectionné **Utiliser l’authentification SQL Server** à l’étape 6 (b), déterminez s’il faut inclure les données sensibles dans la chaîne ou définir les informations dans votre code d’application.  
   
-8.  Sur le **enregistrer la chaîne de connexion au fichier de Configuration de l’Application** page, tapez le nom de la chaîne de connexion ou acceptez la valeur par défaut **AdventureWorks2008ConnectionString**. Cliquez sur **Suivant**.  
+8.  Sur le **enregistrer la chaîne de connexion au fichier de Configuration de l’Application** page, tapez le nom de la chaîne de connexion ou acceptez la valeur par défaut **AdventureWorks2008ConnectionString**. Cliquer sur **Suivant**.  
   
 9. Sur le **choisir un Type de commande** page, sélectionnez **utiliser des instructions SQL**, puis cliquez sur **suivant**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48162649"
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-     Vous pouvez également créer la requête en cliquant sur **Générateur de requêtes**, puis vérifiez la requête en cliquant sur **exécuter la requête**. Si la requête ne retourne pas les données attendues, c'est peut-être que vous utilisez une version antérieure d'AdventureWorks. Pour plus d’informations sur l’installation de la **AdventureWorks2008** version d’AdventureWorks, consultez [procédure pas à pas : installation de la base de données AdventureWorks](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
+     Vous pouvez également créer la requête en cliquant sur **Générateur de requêtes**, puis vérifiez la requête en cliquant sur **exécuter la requête**. Si la requête ne retourne pas les données attendues, c'est peut-être que vous utilisez une version antérieure d'AdventureWorks. Pour plus d’informations sur l’installation de la **AdventureWorks2008** version d’AdventureWorks, consultez [procédure pas à pas : L’installation de la base de données AdventureWorks](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
   
 11. Sur le **choisir les méthodes à générer** page, veillez à décocher **créer des méthodes pour envoyer des mises à jour directement à la base de données (GenerateDBDirectMethods)**, puis cliquez sur **Terminer**.  
   

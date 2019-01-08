@@ -18,12 +18,12 @@ ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a27efabaa838ed4b93fc7c17eeb67f721c8aa634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 719038f8ce72bdb05ad9dbf3c3585c377abb3a75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630157"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526235"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,26 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id =**] **'***job_id***'**  
+ [  **@job_id =**] **'**_job_id_**'**  
  Numéro d'identification du travail qui contient le journal d'étapes de travail à supprimer. *job_id* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@job_name =**] **'***nom_travail***'**  
+ [  **@job_name =**] **'**_nom_travail_**'**  
  Nom du travail. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
-> **Remarque :** soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
+> **REMARQUE :** Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
  [ **@step_id =**] *step_id*  
  Numéro d'identification de l'étape de travail pour laquelle le journal d'étapes doit être supprimé. Si ne pas inclus, tous les journaux d’étapes du travail sont supprimés, sauf si **@older_than** ou **@larger_than** sont spécifiés. *l’argument id_étape* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@step_name =**] **'***nom_de_l***'**  
+ [  **@step_name =**] **'**_nom_de_l_**'**  
  Nom de l'étape de travail pour laquelle le journal d'étapes doit être supprimé. *nom_de_l* est **sysname**, avec NULL comme valeur par défaut.  
   
-> **Remarque :** soit *id_de_l* ou *nom_de_l* peut être spécifié, mais ne peut pas être spécifiés.  
+> **REMARQUE :** Soit *id_de_l* ou *nom_de_l* peut être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@older_than =**] **'***date***'**  
+ [  **@older_than =**] **'**_date_**'**  
  Date et heure du plus ancien journal d'étapes de travail à conserver. Tous les journaux d'étapes de travail antérieurs à cette date/heure sont supprimés. *date* est **datetime**, avec NULL comme valeur par défaut. Les deux **@older_than** et **@larger_than** peut être spécifié.  
   
- [  **@larger_than =**] **'***size_in_bytes***'**  
+ [  **@larger_than =**] **'**_size_in_bytes_**'**  
  Taille en octets du journal d'étapes de travail le plus volumineux à conserver. Tous les journaux d'étapes de travail dont la taille est supérieure à celle spécifiée sont supprimés. Les deux **@larger_than** et **@older_than** peut être spécifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -77,7 +77,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
  Si aucun argument sauf **@job_id** ou **@job_name** sont spécifiés, tous les journaux d’étape de travail pour le travail spécifié sont supprimés.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -104,7 +104,7 @@ EXEC dbo.sp_delete_jobsteplog
 GO  
 ```  
   
-### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>B. Suppression du journal d'étapes de travail pour une étape particulière  
+### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>b. Suppression du journal d'étapes de travail pour une étape particulière  
  L'exemple suivant montre la suppression du journal d'étapes de travail pour l'étape 2 du travail `Weekly Sales Data Backup`.  
   
 ```  

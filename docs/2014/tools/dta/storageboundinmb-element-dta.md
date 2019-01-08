@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5e6cf3c0be2ec3ab8587bd086c99b32e718cd78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069448"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801851"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB, élément (Assistant Paramétrage de base de données)
   Spécifie l'espace maximal, en mégaoctets, pouvant être consommé par la recommandation de paramétrage de l'Assistant Paramétrage du moteur de base de données (jeu d'index et de partitions).  
@@ -47,7 +46,7 @@ ms.locfileid: "48069448"
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[TuningOptions, élément &#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**Élément parent**|[Élément TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**Éléments enfants**|None|  
   
 ## <a name="remarks"></a>Notes  
@@ -59,7 +58,7 @@ ms.locfileid: "48069448"
   
  La taille de stockage par défaut ne comprend pas les index non-cluster et les vues indexées.  
   
- Si la valeur spécifiée pour le `StorageBoundInMB` élément dépasse l’espace disque réel, renvoie Database Engine Tuning Advisor une erreur mais continue le paramétrage. Une fois le paramétrage terminé, vous pouvez ajouter de l'espace disque si vous décidez d'appliquer la recommandation.  
+ Si la valeur spécifiée pour l'élément `StorageBoundInMB` dépasse celle de l'espace disque, l'Assistant Paramétrage du moteur de base de données renvoie une erreur mais continue le paramétrage. Une fois le paramétrage terminé, vous pouvez ajouter de l'espace disque si vous décidez d'appliquer la recommandation.  
   
 ## <a name="example"></a>Exemple  
   

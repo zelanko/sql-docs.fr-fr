@@ -1,18 +1,19 @@
 ---
-title: Comment les requêtes Oracle à partir d’un cluster de données volumineux de SQL Server | Microsoft Docs
+title: Interroger des données externes dans Oracle
+titleSuffix: SQL Server 2019 big data clusters
 description: Ce didacticiel montre comment interroger des données Oracle à partir d’un cluster de données volumineuses de SQL Server 2019 (version préliminaire). Vous créez une table externe sur les données dans Oracle et puis exécutez une requête.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/12/2018
+ms.date: 12/12/2018
 ms.topic: tutorial
-ms.prod: sql
-ms.openlocfilehash: 7f5383a6faf13f0454439a42efb7524eaeda7c76
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: f7a367a41814a7cb590276b10fcfb7c4c8697011
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644174"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432152"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Didacticiel : Interroger Oracle à partir d’un cluster de données volumineux de SQL Server
 
@@ -29,11 +30,11 @@ Dans ce didacticiel, vous allez découvrir comment :
 
 ## <a id="prereqs"></a> Conditions préalables
 
-* [Déployer un cluster de données volumineuses sur Kubernetes](deployment-guidance.md).
-* [Installer Azure Data Studio et l’extension de SQL Server 2019](deploy-big-data-tools.md).
-* [Charger des exemples de données dans le cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Outils de données volumineuses](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **Extension de SQL Server 2019**
+- [Charger des exemples de données dans votre cluster de données volumineux](tutorial-load-sample-data.md)
 
 ## <a name="create-an-oracle-table"></a>Créer une table Oracle
 
@@ -61,7 +62,7 @@ Les étapes suivantes créent un exemple de table nommé `INVENTORY` dans Oracle
 
 La première étape consiste à créer une source de données externe qui peut accéder à votre serveur Oracle.
 
-1. Dans Azure Data Studio, connectez-vous à l’instance principale de SQL Server de votre cluster big data. Pour plus d’informations, consultez [se connecter à l’instance principale de SQL Server](deploy-big-data-tools.md#master).
+1. Dans Azure Data Studio, connectez-vous à l’instance principale de SQL Server de votre cluster big data. Pour plus d’informations, consultez [se connecter à l’instance principale de SQL Server](connect-to-big-data-cluster.md#master).
 
 1. Double-cliquez sur la connexion dans le **serveurs** fenêtre pour afficher le tableau de bord du serveur pour l’instance principale de SQL Server. Sélectionnez **nouvelle requête**.
 

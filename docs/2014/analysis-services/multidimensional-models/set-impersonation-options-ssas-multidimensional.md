@@ -15,12 +15,12 @@ ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c8b5a891686a1317305c43d179e892caf69d8b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 273cc75fdd09db548b8083c20a322e9ba9172c70
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218269"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365741"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Définir les options d'emprunt d'identité (SSAS - Multidimensionnel)
   Lorsque vous créez un objet `data source` dans un modèle Analysis Services, un des paramètres que vous devez configurer est une option d'emprunt d'identité. Cette option détermine si Analysis Services utilise l'identité d'un compte d'utilisateur Windows spécifique lors d'opérations locales spécifiques associées à la connexion, telles que le téléchargement d'un fournisseur de données OLE DB ou la résolution d'informations de profil utilisateur dans des environnements qui prennent en charge les profils itinérants.  
@@ -50,7 +50,7 @@ ms.locfileid: "48218269"
  Toutes les options sont disponibles dans la boîte de dialogue, mais elles ne sont pertinentes pour tous les scénarios. Utilisez les informations suivantes pour déterminer la meilleure solution pour votre scénario.  
   
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
- Sélectionnez cette option pour que le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet utiliser les informations d’identification de sécurité d’un compte d’utilisateur Windows spécifié dans ce format :  *\<nom de domaine >***\\***\<utilisateur nom du compte >*.  
+ Sélectionnez cette option pour que le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet utiliser les informations d’identification de sécurité d’un compte d’utilisateur Windows spécifié dans ce format : *\<Nom de domaine >***\\***\<nom de compte d’utilisateur >*.  
   
  Sélectionnez cette option pour utiliser une identité d'utilisateur Windows dédiée et dotée de privilèges minimaux que vous avez créée spécifiquement à des fins d'accès aux données. Par exemple, si vous créez de manière régulière un compte à usage général pour la récupération de données utilisées dans des rapports, vous pouvez spécifier ce compte ici.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48218269"
  Pour les instructions DMX OPENQUERY, les cubes locaux et les modèles d'exploration de données, les informations d'identification de l'utilisateur courant sont utilisées même si vous choisissez l'option de compte de service. L'option de compte de service n'est pas prise en charge pour les liaisons hors ligne.  
   
 > [!NOTE]  
->  Des erreurs peuvent se produire lors du traitement d'un modèle d'exploration de données d'un cube si le compte de service ne dispose pas d'autorisations d'administrateur sur l'instance Analysis Services. Pour plus d’informations, consultez [Structure d’exploration de données : problème lors du traitement si la source de données est dans un cube OLAP](http://go.microsoft.com/fwlink/?LinkId=251610).  
+>  Des erreurs peuvent se produire lors du traitement d'un modèle d'exploration de données d'un cube si le compte de service ne dispose pas d'autorisations d'administrateur sur l'instance Analysis Services. Pour plus d’informations, consultez [Structure d’exploration de données : Problème lors du traitement lors de la source de données est le Cube OLAP](https://go.microsoft.com/fwlink/?LinkId=251610).  
   
  **Utiliser les informations d'identification de l'utilisateur actuel**  
  Sélectionnez cette option afin que l'objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les informations d'identification de sécurité de l'utilisateur actuel pour les liaisons hors ligne, les instructions DMX OPENQUERY, les cubes locaux et les modèles d'exploration de données.  
@@ -87,7 +87,7 @@ ms.locfileid: "48218269"
  **Par défaut** ou **Hériter**  
  La boîte de dialogue utilise **Par défaut** pour les options d’emprunt d’identité définies au niveau de la base de données et **Hériter** pour les options d’emprunt d’identité définies au niveau de la source de données.  
   
- **Sources de données - Option Hériter**  
+ **Sources de données - Option hériter**  
   
  Au niveau de la source de données, **Hériter** spécifie qu’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] doit utiliser l’option d’emprunt d’identité de l’objet parent. Dans un modèle multidimensionnel, l'objet parent est la base de données d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le choix de l’option **Hériter** vous permet de gérer de manière centralisée les paramètres d’emprunt d’identité pour cette source de données et d’autres sources qui font partie de la même base de données. Pour que cette option soit explicite, choisissez un nom et un mot de passe d'utilisateur Windows spécifiques à la base de données. Sinon, la combinaison de **Hériter** sur la source de données et de **Par défaut** sur la base de données équivaut à utiliser l’option de compte de service.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48218269"
   
  Pour plus d’informations sur les paramètres par défaut au niveau de la base de données, consultez [Définir les propriétés de base de données multidimensionnelle &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md).  
   
- **Bases de données - Option Par défaut**  
+ **Bases de données - option par défaut**  
   
  Pour les bases de données tabulaires, **par défaut** signifie que l'on utilise le compte de service.  
   

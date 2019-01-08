@@ -16,19 +16,19 @@ ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07c13662da9a558c6c9406a7659c5529114236d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54e2a0f5de93ee9f0d760adfd5a95551d19cc782
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157389"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364231"
 ---
 # <a name="set-partition-writeback"></a>Définir l'écriture différée de partition
   Si vous activez en écriture un groupe de mesures, les utilisateurs finaux peuvent modifier les données du cube lorsqu'ils le parcourent, et les modifications sont stockées dans une table séparée appelée « table d'écriture différée », et non dans les données du cube ou les données sources. Les utilisateurs finaux qui explorent une partition activée en écriture peuvent voir le résultat de toutes les modifications dans la table d'écriture différée de la partition.  
   
  Vous pouvez parcourir ou supprimer les données en écriture différée. Vous pouvez aussi convertir en partition les données en écriture différée. Sur une partition activée en écriture, vous pouvez utiliser des rôles de cube pour accorder l'accès en lecture/écriture aux utilisateurs et aux groupes d'utilisateurs et pour limiter l'accès à des cellules ou des groupes de cellules spécifiques de la partition.  
   
- Pour obtenir une présentation visuelle courte de l’écriture différée, consultez [Excel 2010 Writeback to Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394951)(Écriture différée Excel 2010 vers Analysis Services). Pour obtenir une description plus détaillée de cette fonctionnalité, consultez la série de publications de blog [Building a Writeback Application with Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977)(Création d’une application d’écriture différée avec Analysis Services).  
+ Pour obtenir une présentation visuelle courte de l’écriture différée, consultez [Excel 2010 Writeback to Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394951)(Écriture différée Excel 2010 vers Analysis Services). Pour obtenir une description plus détaillée de cette fonctionnalité, consultez la série de publications de blog [Building a Writeback Application with Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)(Création d’une application d’écriture différée avec Analysis Services).  
   
 > [!NOTE]  
 >  L’écriture différée est prise en charge pour les mini-Data Warehouse et les bases de données relationnelles SQL Server, et uniquement pour les modèles multidimensionnels [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -62,7 +62,7 @@ ms.locfileid: "48157389"
   
 ## <a name="see-also"></a>Voir aussi  
  [Partitions activées en écriture](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Activation de l’écriture différée sur un Cube OLAP au niveau des cellules dans Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [L’activation et sécurisation de l’entrée de données avec écriture différée d’Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Activation de l’écriture différée sur un Cube OLAP au niveau des cellules dans Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Activation et sécurisation de l’entrée de données avec écriture différée d’Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

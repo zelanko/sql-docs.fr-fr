@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9bfe89f0f9d78b2d957797ea45001b8b2d19c07a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f501b2fd05327619d9e561a9f99b21bf909ec3af
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053249"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370751"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Méthodes d'exécution d'un composant de flux de données
   Au moment de l'exécution, la tâche de flux de données examine la séquence de composants, prépare un plan d'exécution et gère un pool de threads de travail qui exécute le plan de travail. La tâche charge des lignes de données à partir des sources, les traite via des transformations, puis les enregistre dans des destinations.  
@@ -210,7 +208,7 @@ End Sub
   
  Pour plus d’informations sur le développement de composants qui reçoivent des lignes dans les mémoires tampons d’entrée, consultez [Développement d’un composant de destination personnalisé](../../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) et [Développement d’un composant de transformation personnalisé à sorties asynchrones](../../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Méthodes de conception d’un composant de flux de données](design-time-methods-of-a-data-flow-component.md)  

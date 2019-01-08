@@ -13,12 +13,12 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbe9d1338e3b64bf829eec0be1cf33bee3d8591e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161939"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364391"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Conditions préalables requises pour la migration de la copie des journaux de transaction vers les groupes de disponibilité AlwaysOn (SQL Server)
   Cette rubrique décrit les conditions requises pour convertir une base de données principale pour la copie des journaux de transaction avec une ou plusieurs de ses bases de données secondaires en base de données principale AlwaysOn et ses bases de données secondaires.  
@@ -54,7 +54,7 @@ ms.locfileid: "48161939"
   
 -   La base de données principale pour la copie des journaux de transaction doit résider sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le réplica principal initial/actuel du groupe de disponibilité.  
   
--   Pour qu'une base de données secondaire pour la copie des journaux de transaction soit convertie en base de données secondaire AlwaysOn, procédez comme suit :  
+-   Pour qu'une base de données secondaire pour la copie des journaux de transaction soit convertie en base de données secondaire AlwaysOn, procédez comme suit :  
   
     -   Utilisez le même nom que celui de la base de données principale.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48161939"
   
  **Pour plus d'informations, consultez :**  
   
- [Converting a logshipping configuration to Availability Group](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (Conversion d’une configuration de copie de journaux de transaction en groupe de disponibilité - blog SQL Server)  
+ [Converting a logshipping configuration to Availability Group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (Conversion d’une configuration de copie de journaux de transaction en groupe de disponibilité - blog SQL Server)  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
  **Envoi des journaux de transaction**  
@@ -93,19 +93,19 @@ ms.locfileid: "48161939"
   
 -   **Blogs :**  
   
-     [Converting a logshipping configuration to Availability Group](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
+     [Converting a logshipping configuration to Availability Group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
   
-     [Ajouter une base de données primaire de copie des journaux de transaction et une base de données secondaire à un groupe de disponibilité existant](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
+     [Ajouter une base de données primaire de copie des journaux de transaction et une base de données secondaire à un groupe de disponibilité existant](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
   
-     [Blogs de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Blogs de l’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](http://blogs.msdn.com/b/psssql/)  
+     [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Livres blancs :**  
   
-     [Guide de migration : Migration vers les groupes de disponibilité AlwaysOn à partir des déploiements antérieurs combinant la mise en miroir de base de données et des journaux de transaction](http://msdn.microsoft.com/library/jj635217)  
+     [Guide de migration : Migration vers les groupes de disponibilité AlwaysOn à partir de déploiements antérieurs combinant la mise en miroir de base de données et des journaux de transaction](https://msdn.microsoft.com/library/jj635217)  
   
-     [Livres blancs de Microsoft pour SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Livres blancs de Microsoft pour SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Livres blancs de l'équipe de consultants clients de SQL Server](http://sqlcat.com/)  
   

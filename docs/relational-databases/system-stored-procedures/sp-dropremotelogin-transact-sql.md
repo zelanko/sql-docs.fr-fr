@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a834dbb26bfc8c712531084e528f82bba50cd05e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa52c7e66a690b54c33330e09fe4373962ea2f9b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800697"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589313"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@remoteserver =** ] **'***remoteserver***'**  
+ [  **@remoteserver =** ] **'**_remoteserver_**'**  
  Nom du serveur distant mappé à la connexion distante à supprimer. *RemoteServer* est **sysname**, sans valeur par défaut. *RemoteServer* doit déjà exister.  
   
- [  **@loginame =** ] **'***connexion***'**  
+ [  **@loginame =** ] **'**_connexion_**'**  
  Nom de connexion facultatif sur le serveur local associé au serveur distant. *login* est de type **sysname**, avec NULL comme valeur par défaut. *connexion* doit déjà exister si spécifié.  
   
- [  **@remotename =** ] **'***nom_distant***'**  
+ [  **@remotename =** ] **'**_nom_distant_**'**  
  Nom facultatif de la connexion distante qui est mappée à *connexion* lors de la connexion à partir du serveur distant. *nom_distant* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -65,7 +65,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
  **sp_dropremotelogin** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **sysadmin** ou **securityadmin** rôles serveur fixes.  
   
 ## <a name="examples"></a>Exemples  
@@ -77,7 +77,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
-### <a name="b-dropping-a-login-mapping"></a>B. Suppression d'un mappage de connexion  
+### <a name="b-dropping-a-login-mapping"></a>b. Suppression d'un mappage de connexion  
  Le code exemple suivant supprime l'entrée qui mappe des connexions distantes du serveur distant `ACCOUNTS` sur la connexion locale `Albert`.  
   
 ```  

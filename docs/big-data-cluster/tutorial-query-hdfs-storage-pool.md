@@ -1,22 +1,24 @@
 ---
-title: Comment la requête HDFS dans un cluster de données volumineux de SQL Server | Microsoft Docs
+title: Interroger des données HDFS dans le pool de stockage
+titleSuffix: SQL Server 2019 big data clusters
 description: Ce didacticiel montre comment interroger des données HDFS dans un cluster de données volumineuses de SQL Server 2019 (version préliminaire). Vous créez une table externe sur les données dans le pool de stockage et puis exécutez une requête.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/11/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: c6f0f01936d5b6e570c2bff53d19ae7a64f151ab
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 78b78fafa8b2dce197fae98ef42b763cc0fa2f4e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644169"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432172"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Didacticiel : Interroger HDFS dans un cluster de données volumineux de SQL Server
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Didacticiel : Requête HDFS dans un cluster de données volumineux de SQL Server
 
-Ce didacticiel montre comment interroger des données HDFS dans un cluster de données volumineux de SQL Server 2019.
+Ce didacticiel montre comment interroger des données HDFS dans un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
 
 Dans ce didacticiel, vous allez découvrir comment :
 
@@ -27,19 +29,19 @@ Dans ce didacticiel, vous allez découvrir comment :
 > [!TIP]
 > Si vous préférez, vous pouvez télécharger et exécuter un script pour les commandes de ce didacticiel. Pour obtenir des instructions, consultez le [échantillons de virtualisation des données](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) sur GitHub.
 
-## <a name="prerequisites"></a>Prérequis
+## <a id="prereqs"></a> Conditions préalables
 
-- [Déployer un cluster de données volumineuses sur Kubernetes](deployment-guidance.md).
-- [Installer Azure Data Studio et l’extension de SQL Server 2019](deploy-big-data-tools.md).
-- [Charger des exemples de données dans le cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Outils de données volumineuses](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **Extension de SQL Server 2019**
+- [Charger des exemples de données dans votre cluster de données volumineux](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-to-hdfs"></a>Créer une table externe à HDFS
 
 Le pool de stockage contient des données de parcours web dans un fichier CSV stockée dans HDFS. Utilisez les étapes suivantes pour définir une table externe qui peut accéder aux données dans ce fichier.
 
-1. Dans Azure Data Studio, connectez-vous à l’instance principale de SQL Server de votre cluster big data. Pour plus d’informations, consultez [se connecter à l’instance principale de SQL Server](deploy-big-data-tools.md#master).
+1. Dans Azure Data Studio, connectez-vous à l’instance principale de SQL Server de votre cluster big data. Pour plus d’informations, consultez [se connecter à l’instance principale de SQL Server](connect-to-big-data-cluster.md#master).
 
 2. Double-cliquez sur la connexion dans le **serveurs** fenêtre pour afficher le tableau de bord du serveur pour l’instance principale de SQL Server. Sélectionnez **nouvelle requête**.
 

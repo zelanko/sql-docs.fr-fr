@@ -12,12 +12,12 @@ ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51f83f4bc0cfc60a2e8137407a7efc9635dd9f70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41bd489752dc1b4084d9c012cad97413c6ff98b5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229219"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368591"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
   Cette rubrique décrit les fonctionnalités de SQLGetDescRec qui sont spécifique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -48,7 +48,7 @@ ms.locfileid: "48229219"
 |-|---------------|------------------|-----------------|--------------------|----------------|  
 |DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|Date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
@@ -59,7 +59,7 @@ ms.locfileid: "48229219"
  `SQLGetDescRec` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLGetDescRec](http://go.microsoft.com/fwlink/?LinkId=80707)   
+ [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
  [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

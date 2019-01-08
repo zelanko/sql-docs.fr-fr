@@ -14,15 +14,15 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c578e5e56d575f3d324d8585f73a9891b2ad00ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3204e8f3f47dc77f38e9690bf34c0e6b69c79fdc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091679"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353140"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Performances, instantanés, mise en cache (Reporting Services)
-  Les performances du serveur de rapports sont affectées par une combinaison de facteurs qui incluent le matériel, le nombre d'utilisateurs simultanés qui accèdent aux rapports, la quantité de données d'un rapport et le format de sortie. Pour déterminer quels sont les facteurs de performances spécifiques à votre installation et quelles sont les solutions qui produiront les résultats escomptés, vous devez obtenir des données de référence et effectuer des tests. Pour plus d'informations sur les outils et instructions disponibles, consultez les publications suivantes sur MSDN : [Optimisation des performances de Reporting Services](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) et [Utilisation de Visual Studio 2005 pour effectuer un test de charge sur un serveur de rapports SQL Server 2005 Reporting Services](http://go.microsoft.com/fwlink/?LinkID=77519)(en anglais).  
+  Les performances du serveur de rapports sont affectées par une combinaison de facteurs qui incluent le matériel, le nombre d'utilisateurs simultanés qui accèdent aux rapports, la quantité de données d'un rapport et le format de sortie. Pour déterminer quels sont les facteurs de performances spécifiques à votre installation et quelles sont les solutions qui produiront les résultats escomptés, vous devez obtenir des données de référence et effectuer des tests. Pour plus d'informations sur les outils et pour obtenir des instructions, consultez les publications suivantes sur MSDN : [Optimisation des performances de Reporting Services](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) et [à l’aide de Visual Studio 2005 pour effectuer le test de charge sur un SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
  Les principes généraux à prendre en considération sont les suivants :  
   
@@ -38,10 +38,10 @@ ms.locfileid: "48091679"
   
 -   Pour déterminer le temps de traitement d'un rapport et pour connaître d'autres mesures relatives à l'utilisation, consultez le journal des exécutions du serveur de rapports. Pour plus d’informations, consultez [journal de l’exécution de serveur de rapports et vue ExecutionLog3](report-server-executionlog-and-the-executionlog3-view.md).  
   
--   Pour plus d’informations sur la façon d’atténuer les problèmes de performances en ajustant les paramètres de configuration de gestion de mémoire, consultez [configurer la mémoire disponible pour les Applications de serveur de rapports](../report-server/configure-available-memory-for-report-server-applications.md).  
+-   Pour plus d’informations sur la façon d’atténuer les problèmes de performances en réglant les paramètres de configuration liés à la gestion de mémoire, consultez [Configurer la mémoire disponible pour les applications du serveur de rapports](../report-server/configure-available-memory-for-report-server-applications.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Contrôle des performances d'un serveur de rapports](monitoring-report-server-performance.md)  
+ [Analyse des performances d'un serveur de rapports](monitoring-report-server-performance.md)  
  Décrit les objets de performances dont vous pouvez vous servir pour assurer le suivi de la charge de traitement sur votre serveur.  
   
  [Définir les propriétés de traitement d'un rapport](set-report-processing-properties.md)  
@@ -50,20 +50,20 @@ ms.locfileid: "48091679"
  [Configurer la mémoire disponible pour les applications du serveur de rapports](../report-server/configure-available-memory-for-report-server-applications.md)  
  Décrit comment remplacer le comportement par défaut de gestion de la mémoire.  
   
- [La mise en cache des rapports &#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [Mise en cache de rapports &#40;SSRS&#41;](caching-reports-ssrs.md)  
  Décrit le comportement de mise en cache d'un rapport sur un serveur de rapports.  
   
- [Cache des Datasets partagés &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)  
+ [Mettre en cache les datasets partagés &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)  
  Décrit le comportement de mise en cache d'un dataset partagé sur un serveur de rapports.  
   
  [Traiter les rapports volumineux](process-large-reports.md)  
  Délivre des recommandations sur la façon de configurer et de distribuer un rapport de taille volumineuse.  
   
- [Définition des valeurs de délai d’attente pour traitement des rapports et jeu de données partagée &#40;SSRS&#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Définition des valeurs de délai d’attente pour le traitement d’un rapport et d’un dataset partagé &#40;SSRS&#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
  Explique comment définir des délais d'attente pour le traitement des requêtes et des rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer un processus en cours d’exécution](../subscriptions/manage-a-running-process.md)   
+ [Gérer un processus en cours d'exécution](../subscriptions/manage-a-running-process.md)   
  [Vérification de l'exécution d'un rapport](verifying-a-report-run.md)  
   
   

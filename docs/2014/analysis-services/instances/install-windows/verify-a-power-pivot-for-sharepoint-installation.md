@@ -11,12 +11,12 @@ ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0830a6be96cbfdf85d53976b0a7c3ac2ec86b80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0be629b4c2b8c47ed191651260bf1a722b40f007
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214779"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355087"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Vérifier une installation PowerPivot pour SharePoint
   Une instance de PowerPivot pour SharePoint que vous installez dans une batterie de serveurs SharePoint est administrée via l'Administration centrale de SharePoint. Au minimum, vous pouvez vérifier des pages dans l'Administration centrale et sur les sites SharePoint pour vérifier que les composants et fonctionnalités du serveur PowerPivot sont disponibles. Toutefois, pour une vérification complète, vous devez disposer d'un classeur PowerPivot que vous pouvez publier sur SharePoint et auquel vous pouvez accéder à partir d'une bibliothèque. Vous pouvez, à des fins de test, publier un classeur d'exemple contenant déjà des données PowerPivot et l'utiliser pour confirmer que l'intégration SharePoint est correctement configurée.  
@@ -41,7 +41,7 @@ ms.locfileid: "48214779"
     5.  Cliquez sur **Fermer**, puis sur **OK**.  
   
         > [!NOTE]  
-        >  La documentation d'installation de SharePoint inclut des instructions supplémentaires permettant de contourner des erreurs de serveur proxy et de désactiver l'option Configuration de sécurité renforcée d'Internet Explorer afin de pouvoir télécharger et installer des mises à jour. Pour plus d'informations, consultez la section **Effectuer des tâches supplémentaires** dans [Déployer un serveur unique avec SQL Server](http://go.microsoft.com/fwlink/?LinkId=177754) sur le site Web Microsoft.  
+        >  La documentation d'installation de SharePoint inclut des instructions supplémentaires permettant de contourner des erreurs de serveur proxy et de désactiver l'option Configuration de sécurité renforcée d'Internet Explorer afin de pouvoir télécharger et installer des mises à jour. Pour plus d'informations, consultez la section **Effectuer des tâches supplémentaires** dans [Déployer un serveur unique avec SQL Server](https://go.microsoft.com/fwlink/?LinkId=177754) sur le site Web Microsoft.  
   
 3.  Dans l'Administration centrale, sous Paramètres système, cliquez sur **Gérer les fonctionnalités des batteries de serveurs**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48214779"
 ## <a name="verify-data-access-on-the-server"></a>Vérifiez l'accès aux données sur le serveur  
  Pour vérifier l'accès aux données PowerPivot sur le serveur, procédez comme suit :  
   
-1.  [Téléchargez](http://go.microsoft.com/fwlink/?LinkID=219108) l'exemple de données Picnic qui accompagne un didacticiel Reporting Services. Vous allez utiliser l'exemple de classeur des fichiers téléchargés pour vérifier l'accès aux données PowerPivot. Extrayez les fichiers.  
+1.  [Téléchargez](https://go.microsoft.com/fwlink/?LinkID=219108) l'exemple de données Picnic qui accompagne un didacticiel Reporting Services. Vous allez utiliser l'exemple de classeur des fichiers téléchargés pour vérifier l'accès aux données PowerPivot. Extrayez les fichiers.  
   
 2.  Téléchargez le classeur Excel (.xlsx) dans Documents partagés. Le classeur contient des données PowerPivot incorporées.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48214779"
   
 8.  Nom du serveur, entrez  **\<nom-serveur > \powerpivot**, où  **\<nom-serveur >** est le nom de l’ordinateur qui a l’installation de PowerPivot pour SharePoint.  
   
-9. Cliquez sur **Se connecter**. Le programme vérifie que le serveur Analysis Services est disponible.  
+9. Cliquer sur **Se connecter**. Le programme vérifie que le serveur Analysis Services est disponible.  
   
 10. Dans l’Explorateur d’objets, vous pouvez cliquer sur **bases de données** pour afficher la liste des fichiers de données PowerPivot qui sont chargés.  
   

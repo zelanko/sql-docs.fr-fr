@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169219"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590863"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Fichier Schema.ini (pilote du fichier texte)
 Lorsque le pilote de texte est utilisé, le format du fichier texte est déterminé à l’aide d’un fichier d’informations de schéma. Le fichier d’informations de schéma est toujours nommé Schema.ini et toujours conservé dans le même répertoire que la source de données de texte. Le fichier d’informations de schéma fournit la méthode IISAM avec des informations sur le format général du fichier, le nom de colonne et les informations de type de données et plusieurs autres caractéristiques de données. Un fichier Schema.ini est toujours requis pour accéder aux données de longueur fixe. Vous devez utiliser un fichier Schema.ini lorsque votre table de texte contient la date/heure, devise, ou données Decimal ou à tout moment que vous souhaitez contrôler davantage la gestion des données dans la table.  
@@ -95,7 +95,7 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>Notes  
- Le tableau suivant décrit chaque partie de la **Col *** n* entrée.  
+ Le tableau suivant décrit chaque partie de la **Col**_n_ entrée.  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
@@ -105,7 +105,7 @@ n=ColumnNametype [#]
 |*#*|La valeur entière qui désigne la largeur de la colonne (obligatoire si **largeur** est spécifié).|  
   
 ## <a name="selecting-a-character-set"></a>Sélection d’un jeu de caractères  
- Vous pouvez choisir parmi deux jeux de caractères : ANSI et OEM. Le **CharacterSet** paramètre dans Schema.ini remplace le paramètre dans le Registre Windows, fichier par fichier. L’exemple suivant illustre l’entrée de Schema.ini qui définit le jeu de caractères à ANSI :  
+ Vous pouvez sélectionner à partir de deux jeux de caractères : ANSI et OEM. Le **CharacterSet** paramètre dans Schema.ini remplace le paramètre dans le Registre Windows, fichier par fichier. L’exemple suivant illustre l’entrée de Schema.ini qui définit le jeu de caractères à ANSI :  
   
 ```  
 CharacterSet=ANSI  
@@ -119,11 +119,11 @@ CharacterSet=ANSI
 |**DateTimeFormat**|Peut être définie à une chaîne de format qui indique les dates et heures. Vous devez spécifier cette entrée si tous les champs de date/heure de l’importation/exportation sont traités avec le même format. Tous les formats de Microsoft Jet, à l’exception du matin. et heures. sont pris en charge. S’il n’existe aucune chaîne de format, les options de date courte le panneau de configuration Windows image et l’heure sont utilisées.|  
 |**DecimalSymbol**|Peut être définie sur n’importe quel caractère unique qui est utilisé pour séparer l’entier à partir de la partie fractionnaire d’un nombre.|  
 |**NumberDigits**|Indique le nombre de chiffres décimaux dans la partie fractionnaire d’un nombre.|  
-|**NumberLeadingZeros**|Spécifie si une valeur décimale inférieure à 1 et plus de – 1 doit contenir des zéros non significatifs ; Cette valeur peut être soit False (sans zéros) ou True.|  
+|**NumberLeadingZeros**|Spécifie si une valeur décimale inférieure à 1 et plus de -1 doit contenir des zéros non significatifs ; Cette valeur peut être soit False (sans zéros) ou True.|  
 |**CurrencySymbol**|Indique le symbole monétaire qui peut être utilisé pour les valeurs monétaires dans le fichier texte. Le signe dollar ($) et exemples Dm.|  
 |**CurrencyPosFormat**|Peut être définie à une des valeurs suivantes :<br /><br /> -Préfixe de symbole de devise sans séparation ($1)<br />-Suffixe de symbole de devise sans séparation (1$)<br />-Préfixe de symbole de devise avec la séparation d’un caractère ($ 1)<br />-Suffixe de symbole de devise avec la séparation d’un caractère (1 $)|  
 |**CurrencyDigits**|Spécifie le nombre de chiffres utilisés pour la partie fractionnaire d’un montant monétaire.|  
-|**CurrencyNegFormat**|Il peut s'agir de l'une des valeurs suivantes :<br /><br /> -   ($1)<br />-   –$1<br />-   $–1<br />-   $1–<br />-   (1$)<br />-   –1$<br />-   1–$<br />-   1$–<br />-   –1 $<br />-   –$ 1<br />-   1 $–<br />-   $ 1–<br />-   $ –1<br />-   1– $<br />-   ($ 1)<br />-   (1 $)<br /><br /> Cet exemple montre le signe dollar, mais vous devez le remplacer avec le bon **CurrencySymbol** valeur dans le programme.|  
+|**CurrencyNegFormat**|Peut avoir l'une des valeurs suivantes :<br /><br /> -   ($1)<br />--$1<br />-$-1<br />-$1 -<br />-   (1$)<br />--1$<br />-1$<br />-$ 1-<br />--1 $<br />--$ 1<br />-$ 1-<br />-$ 1 -<br />-$ -1<br />-1 $<br />-   ($ 1)<br />-   (1 $)<br /><br /> Cet exemple montre le signe dollar, mais vous devez le remplacer avec le bon **CurrencySymbol** valeur dans le programme.|  
 |**CurrencyThousandSymbol**|Indique le symbole de caractère unique qui peut être utilisé pour séparer les valeurs de devise dans le fichier texte par des milliers.|  
 |**CurrencyDecimalSymbol**|Peut être définie sur n’importe quel caractère unique qui est utilisé pour séparer la totalité de la partie fractionnaire d’un montant monétaire.|  
   

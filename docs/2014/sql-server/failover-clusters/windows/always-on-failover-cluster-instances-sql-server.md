@@ -20,20 +20,20 @@ ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6bdc16e4bd09a0f5e93b0335cb8383040e778dc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff76632459f25981041e5585cd9cbb3dbcf906c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220959"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349567"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instances de cluster de basculement Always On (SQL Server)
-  Dans le cadre de l’offre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On, les instances de cluster de basculement Always On exploitent la fonctionnalité de clustering de basculement Windows Server (WSFC) pour fournir une haute disponibilité locale grâce à la redondance au niveau de l’instance de serveur, une *instance de cluster de basculement* (FCI). Une instance FCI est une instance unique de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installée sur plusieurs nœuds WSFC (clustering de basculement Windows Server) et, éventuellement, sur plusieurs sous-réseaux. Sur le réseau, une instance de cluster de basculement FCI apparaît en tant qu'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécutant sur un ordinateur unique, mais elle permet le basculement d'un nœud WSFC vers un autre en cas d'indisponibilité du nœud actuel.  
+  Dans le cadre de l’offre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn, les instances de cluster de basculement AlwaysOn exploitent la fonctionnalité de clustering de basculement Windows Server (WSFC) pour fournir une haute disponibilité locale grâce à la redondance au niveau de l’instance de serveur, une *instance de cluster de basculement* (FCI). Une instance FCI est une instance unique de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installée sur plusieurs nœuds WSFC (clustering de basculement Windows Server) et, éventuellement, sur plusieurs sous-réseaux. Sur le réseau, une instance de cluster de basculement FCI apparaît en tant qu'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécutant sur un ordinateur unique, mais elle permet le basculement d'un nœud WSFC vers un autre en cas d'indisponibilité du nœud actuel.  
   
  Une instance FCI peut tirer parti des [groupes de disponibilité Always On](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) pour permettre la récupération d’urgence à distance au niveau de la base de données. Pour plus d’informations, consultez [Clustering de basculement et groupes de disponibilité Always On (;SQL Server);](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
 > [!NOTE]  
->  À compter de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], les instances de cluster de basculement Always On prennent en charge les volumes partagés de cluster dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] et [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Pour plus d'informations sur les volumes partagés de cluster, consultez [Présentation des volumes partagés de cluster dans un cluster de basculement](http://technet.microsoft.com/library/dd759255.aspx).  
+>  À compter de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], les instances de cluster de basculement Always On prennent en charge les volumes partagés de cluster dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] et [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Pour plus d'informations sur les volumes partagés de cluster, consultez [Présentation des volumes partagés de cluster dans un cluster de basculement](https://technet.microsoft.com/library/dd759255.aspx).  
   
  **Dans cette rubrique :**  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48220959"
   
 -   Nom du réseau  
   
--   Adresse IP  
+-   Adresse IP  
   
 -   Disques partagés  
   
@@ -143,7 +143,7 @@ ms.locfileid: "48220959"
   
 |Concepts et tâches|Rubrique|  
 |------------------------|-----------|  
-|Décrit le mécanisme de détection de pannes et la stratégie flexible de basculement.|[Stratégie de basculement pour les instances de cluster de basculement](failover-policy-for-failover-cluster-instances.md)|  
+|Décrit le mécanisme de détection de pannes et la stratégie flexible de basculement.|[Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)|  
 |Décrit les concepts dans l'administration et la maintenance de l'instance FCI.|[Administration et maintenance de l'instance de cluster de basculement](failover-cluster-instance-administration-and-maintenance.md)|  
 |Décrit la configuration de sous-réseaux multiples et les concepts associés|[Clustering de sous-réseaux multiples SQL Server ( ; SQL Server) ;](sql-server-multi-subnet-clustering-sql-server.md)|  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48220959"
 |----------------------------|---------------|  
 |Décrit comment installer une nouvelle instance FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Créer un nouveau Cluster de basculement SQL Server ( ; Programme d’installation) ;](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Explique comment effectuer une mise à niveau vers un cluster de basculement [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Mettre à niveau un cluster de basculement SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Décrit les concepts de clustering de basculement Windows et fournit des liens vers les tâches liées au clustering de basculement Windows.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Présentation des clusters de basculement](http://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2 : [Présentation des clusters de basculement](http://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Décrit les concepts de clustering de basculement Windows et fournit des liens vers les tâches liées au clustering de basculement Windows.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Vue d’ensemble des Clusters de basculement](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2 : [Vue d’ensemble des Clusters de basculement](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |Décrit les différences de concepts entre les nœuds dans une instance FCI et les réplicas au sein d'un groupe de disponibilité, ainsi que les éléments à prendre en compte pour utiliser une instance FCI pour héberger un réplica pour un groupe de disponibilité.|[Clustering de basculement et groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

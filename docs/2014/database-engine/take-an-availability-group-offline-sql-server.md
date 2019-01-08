@@ -12,17 +12,17 @@ ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f3f8a777704123834a12062b9cbac978960af91c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28d8279226469b8d7a39c5cf6ec802a393337087
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156479"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371371"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>Placer un groupe de disponibilité hors connexion (SQL Server)
   Cette rubrique explique comment faire passer un groupe de disponibilité AlwaysOn de l'état ONLINE à l'état OFFLINE à l'aide de [!INCLUDE[tsql](../includes/tsql-md.md)] dans [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] et versions ultérieures. Il n'y a aucune perte de données des bases de données de validation synchrone, car si aucun réplica avec validation synchrone n'est synchronisé, l'opération OFFLINE génère une erreur et conserve le groupe de disponibilité dans l'état ONLINE. Conserver le groupe de disponibilité en ligne protège les bases de données non synchronisées avec validation synchrone contre la perte de données. Après qu'un groupe de disponibilité a été mis hors connexion, ses bases de données deviennent indisponibles pour les clients et vous ne pouvez pas remettre le groupe de disponibilité en ligne. Par conséquent, mettez un groupe de disponibilité hors connexion uniquement pour migrer les ressources du groupe de disponibilité d'un cluster WSFC à un autre.  
   
- Pendant une migration entre clusters de [!INCLUDE[ssHADR](../includes/sshadr-md.md)], si les applications se connectent directement au réplica principal d'un groupe de disponibilité, le groupe de disponibilité doit être mis hors connexion. La migration entre clusters de [!INCLUDE[ssHADR](../includes/sshadr-md.md)] prend en charge la mise à niveau du système d'exploitation avec un temps mort minimal des groupes de disponibilité. Le scénario classique consiste à utiliser la migration entre clusters de [!INCLUDE[ssHADR](../includes/sshadr-md.md)] pour la mise à niveau du système d'exploitation vers [!INCLUDE[win8](../includes/win8-md.md)] ou [!INCLUDE[win8srv](../includes/win8srv-md.md)]. Pour plus d'informations, consultez [Migration entre clusters de groupes de disponibilité AlwaysOn pour la mise à niveau du système d'exploitation](http://msdn.microsoft.com/library/jj873730.aspx).  
+ Pendant une migration entre clusters de [!INCLUDE[ssHADR](../includes/sshadr-md.md)], si les applications se connectent directement au réplica principal d'un groupe de disponibilité, le groupe de disponibilité doit être mis hors connexion. La migration entre clusters de [!INCLUDE[ssHADR](../includes/sshadr-md.md)] prend en charge la mise à niveau du système d'exploitation avec un temps mort minimal des groupes de disponibilité. Le scénario classique consiste à utiliser la migration entre clusters de [!INCLUDE[ssHADR](../includes/sshadr-md.md)] pour la mise à niveau du système d'exploitation vers [!INCLUDE[win8](../includes/win8-md.md)] ou [!INCLUDE[win8srv](../includes/win8srv-md.md)]. Pour plus d'informations, consultez [Migration entre clusters de groupes de disponibilité AlwaysOn pour la mise à niveau du système d'exploitation](https://msdn.microsoft.com/library/jj873730.aspx).  
   
 
   
@@ -63,11 +63,11 @@ ms.locfileid: "48156479"
 ALTER AVAILABILITY GROUP AccountsAG OFFLINE;  
 ```  
   
-##  <a name="FollowUp"></a> Suivi : Après que le groupe de disponibilité a été mis hors connexion  
+##  <a name="FollowUp"></a> Suivi : Après que le groupe de disponibilité a été mis hors connexion  
   
--   **Enregistrement d l'opération OFFLINE :**  l'identité du nœud WSFC sur lequel l'opération OFFLINE a été initialisée est stockée dans le journal du cluster WSFC et dans le journal des erreurs SQL.  
+-   **Journalisation des opérations hors connexion :**  L’identité du nœud WSFC sur lequel l’opération hors connexion a été initialisée est stockée dans le journal du cluster WSFC et SQL ERRORLOG.  
   
--   **Si vous n’avez pas supprimé l’écouteur du groupe de disponibilité avant la mise hors connexion du groupe :**  si vous migrez le groupe de disponibilité vers un autre cluster WSFC, supprimez le numéro de réseau virtuel et l’adresse IP virtuelle de l’écouteur. Vous pouvez les supprimer à l’aide de la console de gestion du cluster de basculement, de l’applet de commande PowerShell [Remove-ClusterResource](http://technet.microsoft.com/library/ee461015\(WS.10\).aspx) ou de [cluster.exe](http://technet.microsoft.com/library/ee461015\(WS.10\).aspx). Notez que cluster.exe est déconseillé sur Windows 8.  
+-   **Si vous n’avez pas supprimé l’écouteur de groupe de disponibilité avant de déconnecter le groupe :**  Si vous migrez le groupe de disponibilité vers un autre cluster WSFC, supprimez le VNN et le VIP de l’écouteur. Vous pouvez les supprimer à l’aide de la console de gestion du cluster de basculement, de l’applet de commande PowerShell [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) ou de [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx). Notez que cluster.exe est déconseillé sur Windows 8.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -77,9 +77,9 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Articles techniques SQL Server 2012](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
+-   [Articles techniques SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [Blog de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog de l’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/always-on-availability-groups-sql-server.md)  

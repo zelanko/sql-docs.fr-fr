@@ -22,17 +22,17 @@ ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a84ad46068260524a2e6232ca668da445447529
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 625d56a38d88b3cccbea1c75ad88917af1a6f6dd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207419"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368091"
 ---
 # <a name="return-codes"></a>Codes de retour
   Au niveau le plus élémentaire, une fonction membre réussit ou échoue. À un niveau plus précis, une fonction peut réussir, mais son succès peut ne pas être ce que le développeur d'applications prévoyait.  
   
- Pour plus d’informations sur les codes de retour OLE DB, consultez [Codes de retour (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631).  
+ Pour plus d’informations sur les codes de retour OLE DB, consultez [Codes de retour (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
   
  Quand un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonction membre du fournisseur OLE DB Native Client retourne S_OK, la fonction a réussi.  
   

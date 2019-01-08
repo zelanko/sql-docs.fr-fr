@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65538
@@ -17,15 +16,15 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a07b83aa6c7556cc8404dab6ff5e26e75800e340
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e6886e9ef69842432a0759095f11335cfbb494
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130629"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797661"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modifier des relations de clé étrangère
-  Vous pouvez modifier le côté clé étrangère d'une relation dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La modification de la clé étrangère d'une table modifie les colonnes liées aux colonnes figurant dans la table de clé primaire.  
+  Vous pouvez modifier le côté clé étrangère d'une relation dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La modification de la clé étrangère d’une table modifie les colonnes liées aux colonnes figurant dans la table de clé primaire.  
   
  **Dans cette rubrique**  
   

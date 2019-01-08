@@ -22,12 +22,12 @@ ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32068cf03a971cd6b8010618d7b74d1a613ec856
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109891"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376741"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Envoi de commentaires sur SQL Server 2014
   [!INCLUDE[msCoName](../includes/msconame-md.md)] vous remercie de l'aide que vous lui apportez afin d'améliorer ses produits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et leur documentation. Vous pouvez transmettre vos suggestions et rapports de bogues sur les caractéristiques et l'interface utilisateur d'un produit, soumettre des commentaires sur la documentation, ou envoyer automatiquement des rapports d'erreurs et des données sur l'utilisation à [!INCLUDE[msCoName](../includes/msconame-md.md)] en vue de leur analyse. Chacune de ces trois options d'envoi de commentaires est décrite ici.  
@@ -37,7 +37,7 @@ ms.locfileid: "48109891"
   
  Pour accéder à la page de commentaires sur [!INCLUDE[msCoName](../includes/msconame-md.md)] de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Connect, vous pouvez procéder de l'une des manières suivantes.  
   
--   Accédez à la [page web](http://go.microsoft.com/fwlink/?linkid=34178) de commentaires sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect.  
+-   Accédez à la [page web](https://go.microsoft.com/fwlink/?linkid=34178) de commentaires sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect.  
   
 -   Cliquez sur le bouton **Envoyer des commentaires** de la barre d’outils d’aide de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou sélectionnez la commande **Communauté/Envoyer des commentaires**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48109891"
   
 -   vous n'accédez pas à l'aide à partir de l'utilitaire ;  
   
--   vous ne cochez pas **Aide** sous l’onglet **Barres d’outils** de la commande **Outils/Personnaliser** .  
+-   Sélectionnez le **aide** case à cocher sur la **barres d’outils** onglet de la **outils/Personnaliser...**  commande.  
   
 ## <a name="automatic-error-and-usage-reporting"></a>Rapports d'erreur et d'utilisation automatiques  
  Vous pouvez décider d'envoyer automatiquement des rapports d'erreur ou des informations sur la façon dont vous utilisez le logiciel et les services de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[msCoName](../includes/msconame-md.md)] se sert de ces informations pour améliorer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Toutes les données sont traitées de manière confidentielle.  

@@ -18,12 +18,12 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c0c65216c2a74653cb2752d0183b3d0635a6c3cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 320737c3a84eb1f01899c14dfb2f4c1eefb60856
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187959"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354472"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Cartes (Générateur de rapports et SSRS)
   Pour visualiser des données métier sur un arrière-plan géographique, vous pouvez ajouter une carte à votre rapport. Le type de carte que vous sélectionnez dépend des informations que vous souhaitez communiquer dans votre rapport. Vous pouvez ajouter une carte qui affiche uniquement des emplacements géographiques, ou une carte à bulles dans laquelle la taille des bulles varie en fonction du nombre de ménages habitant dans une zone, ou une carte à marqueurs faisant varier le style de marqueur en fonction du produit ayant le plus gros chiffre d'affaires pour chaque magasin, ou encore une carte linéaire pour afficher des itinéraires entre des magasins.  
@@ -32,7 +32,7 @@ ms.locfileid: "48187959"
   
  ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
- Pour commencer immédiatement à utiliser une carte, consultez [Didacticiel : Rapport cartographique &#40;Générateur de rapports&#41;](../tutorial-map-report-report-builder.md) ou [Exemples de rapports (Générateur de rapports et SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Pour commencer à utiliser immédiatement une carte, consultez [didacticiel : Rapport cartographique &#40;Générateur de rapports&#41; ](../tutorial-map-report-report-builder.md) ou [exemples (Générateur de rapports et SSRS) de rapports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  Vous pouvez enregistrer des cartes hors d'un rapport en tant que parties de rapports.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -83,13 +83,13 @@ ms.locfileid: "48187959"
     > [!NOTE]  
     >  Cette fonctionnalité de cartographie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des données de fichiers de forme TIGER/Line gracieusement fournis par Bureau de recensement ([http://www.census.gov/](http://www.census.gov/)). Les fichiers de forme TIGER/Line sont un extrait d'informations géographiques et cartographiques sélectionnées de la base de données MAF/TIGER du Bureau de recensement. Ces fichiers sont mis à disposition gratuitement par le Bureau de recensement. Pour plus d’informations sur les fichiers de forme TIGER/Line, consultez [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Les informations de frontières dans les fichiers de forme TIGER/Line sont fournies à des fins de collecte et de tabulation de données statistiques uniquement ; leur description et leur désignation pour des objectifs statistiques ne constituent pas une détermination d'autorité juridictionnelle ou de droits de propriété et les informations ne constituent pas des descriptions juridiquement valables. Census TIGER et TIGER/Line sont des marques déposées du Bureau de recensement des États-Unis.  
   
--   **Fichiers de forme ESRI.** Les fichiers de forme ESRI contiennent des données conformes au format de données spatiales ESRI (Environmental Systems Research Institute, Inc.). Les fichiers de forme ESRI font référence à un jeu de fichiers. Les données enregistrées dans le fichier .shp spécifient des formes géographiques ou géométriques. Les données du fichier .dbf fournissent des attributs pour ces formes. Pour afficher un plan en mode Conception ou pour exécuter un plan à partir du serveur de rapports, les deux fichiers doivent être dans le même dossier. Lorsque vous ajoutez des données spatiales d'un fichier .shp sur votre système de fichiers local, les données spatiales sont incorporées dans votre rapport. Pour récupérer dynamiquement des données spatiales au moment de l'exécution, téléchargez les fichiers de forme sur votre serveur de rapports, puis spécifiez-les comme source pour les données spatiales. Pour plus d’informations, consultez [Rechercher des fichiers de forme ESRI pour une carte](http://go.microsoft.com/fwlink/?linkid=178814).  
+-   **Fichiers de forme ESRI.** Les fichiers de forme ESRI contiennent des données conformes au format de données spatiales ESRI (Environmental Systems Research Institute, Inc.). Les fichiers de forme ESRI font référence à un jeu de fichiers. Les données enregistrées dans le fichier .shp spécifient des formes géographiques ou géométriques. Les données du fichier .dbf fournissent des attributs pour ces formes. Pour afficher un plan en mode Conception ou pour exécuter un plan à partir du serveur de rapports, les deux fichiers doivent être dans le même dossier. Lorsque vous ajoutez des données spatiales d'un fichier .shp sur votre système de fichiers local, les données spatiales sont incorporées dans votre rapport. Pour récupérer dynamiquement des données spatiales au moment de l'exécution, téléchargez les fichiers de forme sur votre serveur de rapports, puis spécifiez-les comme source pour les données spatiales. Pour plus d’informations, consultez [Rechercher des fichiers de forme ESRI pour une carte](https://go.microsoft.com/fwlink/?linkid=178814).  
   
--   **Données spatiales SQL Server stockées dans une base de données.** Vous pouvez utiliser une requête qui spécifie les types de données `SQLGeometry` ou `SQLGeography` dans une base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Présentation des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md) dans la [documentation en ligne de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+-   **Données spatiales SQL Server stockées dans une base de données.** Vous pouvez utiliser une requête qui spécifie les types de données `SQLGeometry` ou `SQLGeography` dans une base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Présentation des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md) dans la [documentation en ligne de SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
   
      Dans le jeu de résultats affiché dans le concepteur de requêtes, chaque ligne de données spatiales est traitée comme une unité et stockée dans un élément cartographique unique. Par exemple, si plusieurs points sont définis dans une ligne dans le jeu de résultats, les propriétés d'affichage s'appliquent à tous les points de cet élément cartographique.  
   
--   **Emplacements personnalisés que vous créez.** Vous pouvez ajouter manuellement des emplacements en tant que points incorporés à une couche de points incorporés. Pour plus d’informations, consultez [ajouter des emplacements personnalisés à un mappage &#40;Générateur de rapports et SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
+-   **Emplacements personnalisés que vous créez.** Vous pouvez ajouter manuellement des emplacements en tant que points incorporés à une couche de points incorporés. Pour plus d’informations, consultez [Ajouter des emplacements personnalisés à une carte &#40;Générateur de rapports et SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
   
 #### <a name="spatial-data-in-design-view"></a>Données spatiales en mode Conception  
  En mode Conception, le processeur de rapports affiche des exemples de données spatiales pour vous aider à concevoir la couche. Les données affichées dépendent de la disponibilité des données spatiales :  
@@ -172,9 +172,9 @@ ms.locfileid: "48187959"
   
 -   Nécessité ou non d'utiliser une connexion sécurisée pour récupérer les mosaïques du service Web Bing Maps.  
   
- Pour obtenir des instructions détaillées, consultez [ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Pour obtenir des instructions détaillées, consultez [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Pour plus d'informations sur les mosaïques, consultez [Système de mosaïques Bing Maps](http://go.microsoft.com/fwlink/?linkid=147315)(éventuellement en anglais). Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
+ Pour plus d'informations sur les mosaïques, consultez [Système de mosaïques Bing Maps](https://go.microsoft.com/fwlink/?linkid=147315)(éventuellement en anglais). Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](https://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
   
  
   
@@ -244,7 +244,7 @@ ms.locfileid: "48187959"
   
  Si vous n'obtenez pas le résultat souhaité lorsque vous affichez un rapport cartographique, les causes principales peuvent provenir de divers problèmes. Pour vous aider à isoler et à comprendre chaque problème, il est recommandé de travailler avec une seule couche à la fois. Utilisez le volet Carte pour sélectionner une couche et facilement activer/désactiver sa visibilité.  
   
- Pour plus d’informations sur les problèmes de carte de rapport, consultez [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ Pour plus d’informations sur les problèmes de carte de rapport, consultez [résoudre les problèmes de rapports : Mapper des rapports &#40;Générateur de rapports et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 
   
@@ -255,7 +255,7 @@ ms.locfileid: "48187959"
   
 -   [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;Générateur de rapports et SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [Ajouter des emplacements personnalisés à un mappage &#40;Générateur de rapports et SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [Ajouter des emplacements personnalisés à une carte &#40;Générateur de rapports et SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
@@ -264,7 +264,7 @@ ms.locfileid: "48187959"
   
  [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [Personnaliser des données et l’affichage d’une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Personnaliser des données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
@@ -272,7 +272,7 @@ ms.locfileid: "48187959"
   
  [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;Générateur de rapports et SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [Ajouter des emplacements personnalisés à un mappage &#40;Générateur de rapports et SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [Ajouter des emplacements personnalisés à une carte &#40;Générateur de rapports et SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  [Dépanner les rapports : Mapper des rapports &#40;Générateur de rapports et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   

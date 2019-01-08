@@ -12,12 +12,12 @@ ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b19f0a7e8bbc3724ddea364055c8023f327faa6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4896c9219632d816565fdd30c11aa82ccbf7fef1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170159"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355360"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>Administration d'un groupe de disponibilité (SQL Server)
   La gestion d'un groupe de disponibilité AlwaysOn existant dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] implique une ou plusieurs des tâches suivantes :  
@@ -117,9 +117,9 @@ ms.locfileid: "48170159"
   
 -   **Blogs :**  
   
-     [Blogs de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Blogs de l’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](http://blogs.msdn.com/b/psssql/)  
+     [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Vidéos :**  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48170159"
   
 -   **Livres blancs :**  
   
-     [Livres blancs de Microsoft pour SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Livres blancs de Microsoft pour SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Livres blancs de l'équipe de consultants clients de SQL Server](http://sqlcat.com/)  
   

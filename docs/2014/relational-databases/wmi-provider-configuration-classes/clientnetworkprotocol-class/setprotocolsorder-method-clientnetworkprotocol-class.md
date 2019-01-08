@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetProtocolsOrder Method (ClientNetworkProtocol Class)
@@ -20,12 +18,12 @@ ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f78bb32e4e6a4cf7cc6f84fd6737900ea07d03c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16a939835d5129a12d5c3b9fce9d6fa5e0c07f80
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075759"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356862"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>Méthode SetProtocolsOrder (classe ClientNetworkProtocol)
   Modifie l'ordre de la liste de protocoles.  
@@ -57,7 +55,7 @@ ProtocolOrderList
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](http://technet.microsoft.com/library/ms181035.aspx)   
- [Configuration des bibliothèques réseau et des protocoles réseau clients](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)   
+ [Configuration des bibliothèques réseau et des protocoles réseau clients](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

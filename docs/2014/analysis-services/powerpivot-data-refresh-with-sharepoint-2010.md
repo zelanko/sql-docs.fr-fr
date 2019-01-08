@@ -15,12 +15,12 @@ ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1af27b0571ef073a5ada2937b93b6cc0487974d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3d385ae733c44e403ba9de412c0c2a3e0eacd3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143742"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365551"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>Actualisation des données PowerPivot avec SharePoint 2010
   L'actualisation des données [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] est une opération côté serveur planifiée qui interroge des sources de données externes pour mettre à jour les données incorporées [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] dans un classeur Excel 2010 stocké dans la bibliothèque de contenus.  
@@ -30,11 +30,11 @@ ms.locfileid: "48143742"
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et SharePoint Server 2013 Excel Services utilisent une architecture différente pour l’actualisation des données de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] des modèles de données. La nouvelle architecture utilise Excel Services en tant que composant principal pour charger les modèles de données PowerPivot. L'architecture d'actualisation des données précédente reposait sur un serveur exécutant le service système PowerPivot et [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en mode SharePoint afin de charger les modèles de données. Pour plus d’informations, consultez [d’actualisation des données PowerPivot avec SharePoint 2013](power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md).  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et SharePoint Server 2013 Excel Services utilisent une architecture différente pour l'actualisation des données des modèles de données [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] . La nouvelle architecture utilise Excel Services en tant que composant principal pour charger les modèles de données PowerPivot. L'architecture d'actualisation des données précédente reposait sur un serveur exécutant le service système PowerPivot et [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en mode SharePoint afin de charger les modèles de données. Pour plus d’informations, consultez [d’actualisation des données PowerPivot avec SharePoint 2013](power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md).  
   
  **Dans cette rubrique :**  
   
- [Étape 1 : Activer le Service de Store sécurisé et générer une clé principale](#bkmk_services)  
+ [Étape 1 : Activer le Service de Store sécurisé et générer une clé principale](#bkmk_services)  
   
  [Étape 2 : Désactiver les options d’informations d’identification que vous ne souhaitez pas prendre en charge](#bkmk_creds)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48143742"
   
  [Étape 5 : Installer les fournisseurs de données utilisés pour importer des données PowerPivot](#bkmk_installdp)  
   
- [Étape 6 : Octroyer les autorisations pour créer des planifications et d’accéder aux sources de données externes](#bkmk_accounts)  
+ [Étape 6 : Accorder des autorisations pour créer des planifications et d’accéder aux sources de données externes](#bkmk_accounts)  
   
  [Étape 7 : Activer la mise à niveau du classeur pour l’actualisation des données](#bkmk_upgradewrkbk)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48143742"
   
  Une fois l'environnement de serveur et les autorisations configurés, vous pouvez utiliser l'actualisation des données. Pour utiliser l'actualisation des données, un utilisateur SharePoint crée une planification sur un classeur PowerPivot qui spécifie quand et à quelle fréquence elle se produira. C'est généralement le propriétaire du classeur qui crée la planification, ou bien l'auteur qui a publié le fichier sur SharePoint. Cette personne crée et gère les planifications d'actualisation des données pour les classeurs dont elle est propriétaire. Pour plus d’informations, consultez [planifier une actualisation des données &#40;PowerPivot pour SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
-##  <a name="bkmk_services"></a> Étape 1 : Activer le Service de Store sécurisé et générer une clé principale  
+##  <a name="bkmk_services"></a> Étape 1 : Activer le service Banque d'informations sécurisé et générer une clé principale  
  L'actualisation des données PowerPivot dépend du Service Banque d'informations sécurisé pour fournir les informations d'identification utilisées pour exécuter des travaux d'actualisation des données et se connecter aux sources de données externes qui utilisent les informations d'identification stockées.  
   
  Si vous avez installé PowerPivot pour SharePoint à l'aide de l'option Nouveau serveur, le Service Banque d'informations sécurisé est automatiquement configuré. Pour tous les autres scénarios d'installation, vous devez créer et configurer une application de service et générer une clé de chiffrement principale pour le Service Banque d'informations sécurisé.  
@@ -96,9 +96,9 @@ ms.locfileid: "48143742"
   
 15. Cliquez sur **OK**.  
   
- L'enregistrement de l'audit des opérations du Service Banque d'informations, utile à des fins de résolution des problèmes, doit être activé avant de pouvoir être utilisé. Pour plus d’informations sur comment activer la journalisation, consultez [configurer Secure Store Service (SharePoint 2010)](http://go.microsoft.com/fwlink/p/?LinkID=223294).  
+ L'enregistrement de l'audit des opérations du Service Banque d'informations, utile à des fins de résolution des problèmes, doit être activé avant de pouvoir être utilisé. Pour plus d’informations sur comment activer la journalisation, consultez [configurer Secure Store Service (SharePoint 2010)](https://go.microsoft.com/fwlink/p/?LinkID=223294).  
   
-##  <a name="bkmk_creds"></a> Étape 2 : Désactiver les options d’informations d’identification que vous ne souhaitez pas prendre en charge  
+##  <a name="bkmk_creds"></a> Étape 2 : Désactiver les options d'informations d'identification que vous ne souhaitez pas prendre en charge  
  L'actualisation des données PowerPivot fournit trois options d'informations d'identification dans une planification d'actualisation des données. Lorsqu'un propriétaire de classeur planifie l'actualisation des données, il choisit l'une de ces options, en déterminant le compte sous lequel le travail d'actualisation des données s'exécute. En tant qu'administrateur, vous pouvez déterminer quelles options d'informations d'identification sont disponibles pour les propriétaires de planification.  
   
  Vous devez avoir au moins une option disponible pour que l'actualisation des données fonctionne.  
@@ -117,13 +117,13 @@ ms.locfileid: "48143742"
   
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")  
   
- Cette option d'identification est activée par défaut. Lorsque cette option d'informations d'identification est activée, le service système PowerPivot génère une application cible dans le Service Banque d'informations sécurisé pour stocker le nom d'utilisateur et le mot de passe entrés par le propriétaire de la planification. Une application cible générée est créée à l’aide de cette convention d’affectation de noms : PowerPivotDataRefresh_\<guid >. Une application de cible est créée pour chaque ensemble d'informations d'identification Windows. Si une application cible existe déjà, détenue par le service système PowerPivot, et stocke le nom d'utilisateur et le mot de passe entrés par la personne qui définit la planification, le service système PowerPivot utilisera cette application cible au lieu d'en créer une.  
+ Cette option d'identification est activée par défaut. Lorsque cette option d'informations d'identification est activée, le service système PowerPivot génère une application cible dans le Service Banque d'informations sécurisé pour stocker le nom d'utilisateur et le mot de passe entrés par le propriétaire de la planification. Une application cible générée est créée à l'aide de cette convention d'affectation de noms : PowerPivotDataRefresh_\<guid >. Une application de cible est créée pour chaque ensemble d'informations d'identification Windows. Si une application cible existe déjà, détenue par le service système PowerPivot, et stocke le nom d'utilisateur et le mot de passe entrés par la personne qui définit la planification, le service système PowerPivot utilisera cette application cible au lieu d'en créer une.  
   
- Le principal avantage de l'utilisation de cette option d'informations d'identification est la facilité d'utilisation et la simplicité. Le travail préalable est minime, car les applications cibles sont créées pour vous. En outre, l'exécution de l'actualisation des données sous les informations d'identification du propriétaire de la planification (qui est très probablement la personne qui a créé le classeur) simplifie les autorisations requises en aval. Très probablement, cet utilisateur dispose déjà des autorisations nécessaires sur la base de données cible. Lorsque l'actualisation des données s'exécute sous l'identité d'utilisateur Windows de cette personne, toutes les connexions de données qui spécifient l'« utilisateur actuel » fonctionnent automatiquement.  
+ Le principal avantage de l'utilisation de cette option d'informations d'identification est la facilité d'utilisation et la simplicité. Le travail préalable est minime, car les applications cibles sont créées pour vous. En outre, l'exécution de l'actualisation des données sous les informations d'identification du propriétaire de la planification (qui est très probablement la personne qui a créé le classeur) simplifie les autorisations requises en aval. Très probablement, cet utilisateur dispose déjà des autorisations nécessaires sur la base de données cible. Lors de l’actualisation des données s’exécute sous l’identité d’utilisateur Windows de cette personne, toutes les données de connexions qui spécifient « utilisateur actuel » fonctionnent automatiquement.  
   
  L'inconvénient est la fonction de gestion limitée. Bien que les applications cibles soient créées automatiquement, elles ne sont pas supprimées ou mises à jour automatiquement à mesure que les informations sur le compte changent. Avec les stratégies d'expiration des mots de passe, ces applications cibles risquent de devenir obsolètes. Les travaux d'actualisation des données qui utilisent des informations d'identification arrivées à expiration commenceront à échouer. Lorsque cela se produit, les propriétaires de planification doivent mettre à jour leurs informations d'identification en fournissant des valeurs de nom d'utilisateur et de mot de passe actuelles dans une planification d'actualisation des données. Une nouvelle application cible sera créée à ce stade. Avec le temps, comme les utilisateurs ajoutent et modifient les informations d'identification dans leurs planifications d'actualisation des données, vous pouvez constater que vous avez un grand nombre d'applications cibles générées automatiquement sur votre système.  
   
- Actuellement, il n'existe aucune méthode pour déterminer lesquelles de ces applications cibles sont actives ou inactives, ni pour suivre une application cible spécifique jusqu'aux planifications d'actualisation des données qui l'utilisent. En général, vous devez vous abstenir de toucher aux applications cibles, car leur suppression peut entraver des planifications d'actualisation des données existantes. La suppression d'une application cible qui est encore en cours d'utilisation provoquera un échec de l'actualisation des données avec le message suivant : « Application cible introuvable », qui s'affiche dans la page d'historique d'actualisation des données du classeur.  
+ Actuellement, il n'existe aucune méthode pour déterminer lesquelles de ces applications cibles sont actives ou inactives, ni pour suivre une application cible spécifique jusqu'aux planifications d'actualisation des données qui l'utilisent. En général, vous devez vous abstenir de toucher aux applications cibles, car leur suppression peut entraver des planifications d'actualisation des données existantes. Suppression d’une application cible qui est en cours d’utilisation entraîne l’actualisation des données échoue avec le message, « Application cible introuvable », qui apparaissent dans la page de l’historique de l’actualisation des données du classeur.  
   
  Si vous devez choisir de désactiver cette option d'informations d'identification, vous pouvez supprimer sans risque toutes les applications cibles générées pour l'actualisation des données PowerPivot.  
   
@@ -139,14 +139,14 @@ ms.locfileid: "48143742"
   
      ![SSAS_PowerPivotDatarefreshOptions_AllowUser](media/ssas-powerpivotdatarefreshoptions-allowuser.gif "SSAS_PowerPivotDatarefreshOptions_AllowUser")  
   
-##  <a name="bkmk_stored"></a> Étape 3 : Créer des applications cibles pour stocker les informations d’identification utilisées dans l’actualisation des données  
+##  <a name="bkmk_stored"></a> Étape 3 : Créer des applications cibles pour stocker les informations d'identification utilisées pour l'actualisation des données  
  Une fois le service Banque d'informations sécurisé configuré, les administrateurs SharePoint peuvent créer des applications cibles pour rendre les informations d'identification stockées disponibles à des fins d'actualisation des données, notamment le compte d'actualisation des données PowerPivot sans assistance ou tout autre compte utilisé pour exécuter le travail ou se connecter aux sources de données externes.  
   
  Nous avons vu dans la section précédente que vous devez créer des applications cibles de façon à pouvoir utiliser certaines options d'informations d'identification. Spécifiquement, vous devez créer des applications cibles pour le compte d'actualisation des données PowerPivot sans assistance, plus toutes les informations d'identification stockées supplémentaires dont vous pensez qu'elles seront utilisées dans les opérations d'actualisation des données.  
   
  Pour plus d’informations sur la création d’applications cibles qui contiennent des informations d’identification stockées, consultez [configurer le compte d’actualisation des données PowerPivot sans assistance &#40;PowerPivot pour SharePoint&#41; ](configure-unattended-data-refresh-account-powerpivot-sharepoint.md) et [ Configurer les informations d’identification stockées pour l’actualisation des données PowerPivot &#40;PowerPivot pour SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
-##  <a name="bkmk_scale"></a> Étape 4 : Configurer le serveur pour l’actualisation des données évolutive  
+##  <a name="bkmk_scale"></a> Étape 4 : Configurer le serveur pour l'actualisation des données évolutive  
  Par défaut, chaque installation PowerPivot pour SharePoint prend en charge à la fois des requêtes à la demande et l'actualisation des données planifiée.  
   
  Pour chaque installation, vous pouvez spécifier si l'instance de serveur Analysis Services prend en charge les requêtes et l'actualisation des données planifiée, ou est dédiée à un type d'opération spécifique. Si vous avez plusieurs installations de PowerPivot pour SharePoint dans votre batterie, vous pouvez envisager de consacrer un serveur uniquement aux opérations d'actualisation des données si vous constatez que les travaux sont différés ou échouent.  
@@ -155,15 +155,15 @@ ms.locfileid: "48143742"
   
  Pour plus d’informations, consultez [configurer l’actualisation des données dédié ou traitement Query-Only &#40;PowerPivot pour SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md).  
   
-##  <a name="bkmk_installdp"></a> Étape 5 : Installer les fournisseurs de données utilisés pour importer des données PowerPivot  
+##  <a name="bkmk_installdp"></a> Étape 5 : Installer les fournisseurs de données utilisés pour importer les données PowerPivot  
  Une opération d'actualisation des données est essentiellement une répétition d'une opération d'importation ayant récupéré les données d'origine. Cela signifie que les mêmes fournisseurs de données utilisés pour importer les données dans l'application cliente PowerPivot doivent également être installés sur le serveur PowerPivot.  
   
  Vous devez être un administrateur local pour installer des fournisseurs de données sur un serveur Windows. Si vous installez des pilotes supplémentaires, veillez à les installer sur chaque ordinateur dans la batterie de serveurs SharePoint qui possède une installation de PowerPivot pour SharePoint. Si vous avez plusieurs serveurs PowerPivot dans la batterie, vous devez installer les fournisseurs sur chacun.  
   
  n'oubliez pas que les serveurs SharePoint sont des applications 64 bits. Assurez-vous d'avoir installé la version 64 bits des fournisseurs de données que vous utilisez pour prendre en charge les opérations d'actualisation des données.  
   
-##  <a name="bkmk_accounts"></a> Étape 6 : Octroyer les autorisations pour créer des planifications et d’accéder aux sources de données externes  
- Les propriétaires ou auteurs de classeurs doivent avoir l'autorisation **Collaboration** pour planifier des actualisation de données sur un classeur. Avec ce niveau d'autorisation, l'utilisateur peut ouvrir et modifier la page de configuration de l'actualisation des données pour spécifier les informations d'identification et de planification utilisées pour actualiser les données.  
+##  <a name="bkmk_accounts"></a> Étape 6 : Octroyer les autorisations pour la création de planifications et l'accès aux sources de données externes  
+ Les propriétaires ou auteurs de classeurs doivent avoir l'autorisation **Collaboration** pour planifier des actualisation de données sur un classeur. Étant donné ce niveau d’autorisation, il peut ouvrir et modifier la page de configuration de l’actualisation de données du classeur pour spécifier les informations d’identification et de planifier les informations utilisées pour actualiser les données.  
   
  En plus des autorisations SharePoint, les autorisations relatives à la base de données sur les sources de données externes doivent également être examinées pour vérifier que les comptes utilisés pendant l'actualisation des données ont des droits d'accès suffisants aux données. La détermination des autorisations requises nécessite une évaluation prudente de votre part, car les autorisations que vous devez accorder varieront selon la chaîne de connexion dans le classeur et l'identité de l'utilisateur sous laquelle le travail d'actualisation des données s'exécute.  
   
@@ -171,11 +171,11 @@ ms.locfileid: "48143742"
   
  Lorsque l'actualisation des données s'exécute, le serveur envoie une demande de connexion à la source de données externe à l'aide de la chaîne de connexion créée lors de l'importation d'origine des données. L'emplacement du serveur, le nom de la base de données et les paramètres d'authentification spécifiés dans cette chaîne de connexion sont maintenant réutilisés pendant l'actualisation des données de façon à accéder aux mêmes sources de données. La chaîne de connexion et sa construction globale ne peuvent pas être modifiées à des fins d'actualisation des données. Elle est simplement réutilisée tel quel pendant l'actualisation des données. Dans certains cas, si vous utilisez une authentification autre que l'authentification Windows pour vous connecter à une source de données, vous pouvez remplacer le nom d'utilisateur et le mot de passe dans la chaîne de connexion. Vous trouverez plus d'informations à ce sujet plus loin dans cette rubrique.  
   
- Pour la plupart des classeurs, l'option d'authentification par défaut sur la connexion consiste à utiliser des connexions approuvées ou la sécurité intégrée de Windows, provoquant des chaînes de connexion qui incluent `SSPI=IntegratedSecurity` ou `SSPI=TrustedConnection`. Lorsque cette chaîne de connexion est utilisée pendant l'actualisation des données, le compte utilisé pour exécuter le travail d'actualisation des données devient l'« utilisateur actuel ». En tant que tel, ce compte a besoin d'autorisations de lecture sur toute source de données externe à laquelle il a accès via une connexion approuvée.  
+ Pour la plupart des classeurs, l'option d'authentification par défaut sur la connexion consiste à utiliser des connexions approuvées ou la sécurité intégrée de Windows, provoquant des chaînes de connexion qui incluent `SSPI=IntegratedSecurity` ou `SSPI=TrustedConnection`. Lorsque cette chaîne de connexion est utilisée pendant l’actualisation des données, le compte utilisé pour exécuter le travail d’actualisation des données devient le « utilisateur actuel ». En tant que tel, ce compte a besoin d'autorisations de lecture sur toute source de données externe à laquelle il a accès via une connexion approuvée.  
   
  **Avez-vous activé le PowerPivot compte d’actualisation des données sans assistance ?**  
   
- Dans l'affirmative, vous devez accorder à ce compte des autorisations de lecture sur les sources de données auxquelles il accède pendant l'actualisation des données. En effet, dans un classeur qui utilise les options d'authentification par défaut, le compte sans assistance est l'« utilisateur actuel » pendant l'actualisation des données. À moins que le propriétaire de planification remplace les informations d'identification dans la chaîne de connexion, ce compte aura besoin d'autorisations de lecture sur un nombre illimité de sources de données utilisées activement dans votre organisation.  
+ Dans l'affirmative, vous devez accorder à ce compte des autorisations de lecture sur les sources de données auxquelles il accède pendant l'actualisation des données. Actualisation de la raison pour laquelle pourquoi ce compte doit en effet, dans un classeur qui utilise les options d’authentification par défaut, le compte sans assistance sera le « utilisateur actuel » au cours des données. À moins que le propriétaire de planification remplace les informations d'identification dans la chaîne de connexion, ce compte aura besoin d'autorisations de lecture sur un nombre illimité de sources de données utilisées activement dans votre organisation.  
   
  **Vous êtes à l’aide des informations d’identification, option 2 : autoriser le propriétaire de la planification d’entrer un nom d’utilisateur Windows et un mot de passe ?**  
   
@@ -225,17 +225,17 @@ ms.locfileid: "48143742"
   
  Après avoir compris quels comptes requièrent l'accès aux données, vous pouvez commencer à vérifier les autorisations sur les sources de données utilisées le plus souvent dans les classeurs PowerPivot. Démarrez avec des entrepôts de données ou des bases de données de création de rapports utilisés activement, mais sollicitez également l'entrée de vos utilisateurs PowerPivot les plus actifs pour déterminer quelles sources de données ils utilisent. Une fois que vous avez une liste de sources de données, vous pouvez commencer à vérifier chacune d'entre elles de façon à vous assurer que les autorisations sont définies correctement.  
   
-##  <a name="bkmk_upgradewrkbk"></a> Étape 7 : Activer la mise à niveau du classeur pour l’actualisation des données  
+##  <a name="bkmk_upgradewrkbk"></a> Étape 7 : Activer la mise à niveau de classeur pour l'actualisation des données  
  Par défaut, les classeurs créés à l'aide de la version [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] de PowerPivot pour Excel ne peuvent pas être configurés pour l'actualisation des données planifiée sur une version [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] de PowerPivot pour SharePoint. Si vous hébergez des versions anciennes et récentes des classeurs PowerPivot dans votre environnement SharePoint, vous devez d'abord mettre à niveau tous les classeurs [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] avant qu'ils ne puissent être planifiés pour une actualisation automatique des données sur le serveur.  
   
-##  <a name="bkmk_verify"></a> Étape 8 : Vérifier la configuration de l’actualisation de données  
+##  <a name="bkmk_verify"></a> Étape 8 : Vérifier la configuration de l'actualisation des données  
  Pour vérifier l'actualisation des données, vous devez avoir un classeur PowerPivot publié sur un site SharePoint. Vous devez avoir des autorisations Collaboration sur le classeur et des autorisations d'accès à toutes les sources de données incluses dans la planification de l'actualisation des données.  
   
  Lorsque vous créez la planification, sélectionnez le **aussi actualiser dès que possible** case à cocher pour exécuter immédiatement l’actualisation des données. Vous pouvez ensuite examiner la page d'historique d'actualisation des données de ce classeur pour vérifier qu'elle s'est exécutée avec succès. N'oubliez pas que le travail du minuteur d'actualisation des données PowerPivot s'exécute toutes les minutes. Il faut autant de temps pour d'obtenir la confirmation de réussite de l'actualisation des données.  
   
  Veillez à essayer toutes les options d'informations d'identification que vous projetez de prendre en charge. Par exemple, si vous avez configuré le compte d'actualisation des données PowerPivot sans assistance, vérifiez que l'actualisation des données réussit à l'aide de cette option. Pour plus d’informations sur la planification et l’affichage des informations d’état, consultez [planifier une actualisation des données &#40;PowerPivot pour SharePoint&#41; ](schedule-a-data-refresh-powerpivot-for-sharepoint.md) et [historique des actualisations des données d’affichage &#40;PowerPivot pour SharePoint &#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
- Si l’actualisation des données échoue, reportez-vous à la [résolution des problèmes d’actualisation des données PowerPivot](http://go.microsoft.com/fwlink/?LinkID=223279) page sur le wiki TechNet pour les solutions possibles.  
+ Si l’actualisation des données échoue, reportez-vous à la [résolution des problèmes d’actualisation des données PowerPivot](https://go.microsoft.com/fwlink/?LinkID=223279) page sur le wiki TechNet pour les solutions possibles.  
   
 ##  <a name="bkmk_config"></a> Modifier les paramètres de Configuration pour l’actualisation des données  
  Chaque application de service PowerPivot possède des paramètres de configuration qui affectent les opérations d'actualisation des données. Cette section explique comment modifier ces paramètres.  

@@ -15,17 +15,17 @@ ms.assetid: fe364ddc-576e-42fc-9ced-baa399992f92
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eba304a7e525b9466787ad1314acd52c4368f9a2
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3112efa1b2eec2f25abe35315ecec13bedbf8871
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144804"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375481"
 ---
 # <a name="plugin-algorithms"></a>Algorithmes de plug-in
   Outre les algorithmes fournis par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous pouvez utiliser de nombreux autres algorithmes pour l’exploration de données. Ainsi, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit un mécanisme d'ajout d'algorithmes créés par des concepteurs tiers. Tant que ces algorithmes respectent certaines normes, vous pouvez les utiliser dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de la même manière que vous utilisez les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Les algorithmes de plug-in ont toutes les fonctionnalités des algorithmes fournis par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- Pour obtenir une description complète des interfaces qu’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise pour communiquer avec les algorithmes de plug-in, consultez les exemples de création d’un algorithme personnalisé et d’une visionneuse de modèles personnalisés qui sont publiés sur le site web [CodePlex](http://go.microsoft.com/fwlink/?LinkID=87843) .  
+ Pour obtenir une description complète des interfaces qu’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise pour communiquer avec les algorithmes de plug-in, consultez les exemples de création d’un algorithme personnalisé et d’une visionneuse de modèles personnalisés qui sont publiés sur le site web [CodePlex](https://go.microsoft.com/fwlink/?LinkID=87843) .  
   
 ## <a name="algorithm-requirements"></a>Conditions préalables à l'ajout d'algorithmes  
  Pour intégrer un algorithme dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous devez implémenter les interfaces COM suivantes :  

@@ -18,12 +18,12 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec91d276308b38a16763dc824989d28fd66fd837
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23b0ba70ee6141ab8453aa3e6949ceff2d537b2c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595649"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591183"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +48,18 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@name =** ] **'***object_statement***'**  
- Nom de l'objet dans la base de données active, ou instruction, disposant des autorisations à signaler. *object_statement* est **nvarchar(776)**, avec NULL comme valeur par défaut, qui retourne toutes les autorisations d’objet et d’instruction. Si sa valeur est un objet (table, vue, procédure stockée ou procédure stockée étendue), ce doit être un objet valide dans la base de données en cours. Le nom d’objet peut inclure un identificateur de propriétaire sous la forme *propriétaire ***.*** objet*.  
+ [  **@name =** ] **'**_object_statement_**'**  
+ Nom de l'objet dans la base de données active, ou instruction, disposant des autorisations à signaler. *object_statement* est **nvarchar(776)**, avec NULL comme valeur par défaut, qui retourne toutes les autorisations d’objet et d’instruction. Si sa valeur est un objet (table, vue, procédure stockée ou procédure stockée étendue), ce doit être un objet valide dans la base de données en cours. Le nom d’objet peut inclure un identificateur de propriétaire sous la forme _propriétaire_**.** _objet_.  
   
  Si *object_statement* est une instruction, il peut être une instruction CREATE.  
   
- [  **@username =** ] **'***auxquels celui-ci a***'**  
+ [  **@username =** ] **'**_auxquels celui-ci a_**'**  
  Nom du principal pour lequel des autorisations sont retournées. *celui-ci* est **sysname**, avec NULL comme valeur par défaut, qui retourne tous les principaux dans la base de données actuelle. *celui-ci* doit exister dans la base de données actuelle.  
   
- [  **@grantorname =** ] **'***grantor***'**  
+ [  **@grantorname =** ] **'**_grantor_**'**  
  Nom du principal qui a accordé les autorisations. *fournisseur d’autorisations* est **sysname**, avec NULL comme valeur par défaut, qui retourne toutes les informations sur les autorisations accordées par un principal dans la base de données.  
   
- [  **@permissionarea =** ] **'***type***'**  
+ [  **@permissionarea =** ] **'**_type_**'**  
  Est une chaîne de caractères qui indique s’il faut afficher les autorisations d’objet (chaîne de caractères **o**), les autorisations d’instruction (chaîne de caractères **s**), ou les deux (**système d’exploitation**). *type* est **varchar (10)**, avec une valeur par défaut **système d’exploitation**. *type* peut être n’importe quelle combinaison de **o** et **s**, avec ou sans virgule ou espace entre **o** et **s**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -94,7 +94,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
   
  Le rapport de sortie est trié par catégorie d'autorisation, propriétaire, objet, bénéficiaire, fournisseur, catégorie du type de protection, type de protection, action et ID séquentiel de colonne.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
  Les informations retournées sont sujettes à des restrictions d'accès aux métadonnées. Les entités sur lesquelles le principal ne possède pas d'autorisation n'apparaissent pas. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -108,7 +108,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 EXEC sp_helprotect 'titles';  
 ```  
   
-### <a name="b-listing-the-permissions-for-a-user"></a>B. Répertorier les autorisations pour un utilisateur  
+### <a name="b-listing-the-permissions-for-a-user"></a>b. Répertorier les autorisations pour un utilisateur  
  Dans l'exemple ci-dessous, toutes les autorisations que l'utilisateur `Judy` possède dans la base de données active sont répertoriées.  
   
 ```  

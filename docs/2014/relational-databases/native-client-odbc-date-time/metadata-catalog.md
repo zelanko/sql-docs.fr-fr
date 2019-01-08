@@ -13,12 +13,12 @@ ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7f94a0daf7ebd62286aa033c63780e25221e85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2784b7915d96665cae814e0dff46b2f2135bc52
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136129"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395869"
 ---
 # <a name="catalog-metadata"></a>Métadonnées de catalogue
   Cette rubrique décrit les métadonnées de colonne retournées par `SQLColumns` et `SQLProcedureColumns`, ainsi que les métadonnées de type de données retournées par `SQLGetTypeInfo`.  
@@ -26,10 +26,10 @@ ms.locfileid: "48136129"
 ## <a name="remarks"></a>Notes  
  Les valeurs de colonnes suivantes sont retournées pour les types date/heure `SQLColumns` et `SQLProcedureColumns`.  
   
-|Type de paramètre|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Type de paramètre|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
-|TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|6|10|16|16|16|20|  
 |DECIMAL_DIGITS|0|0..7|0|3|1..7|1..7|  
@@ -40,13 +40,13 @@ ms.locfileid: "48136129"
   
  Les valeurs de colonnes suivantes sont retournées pour les types date/heure par `SQLGetTypeInfo` :  
   
-|Type de paramètre|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Type de paramètre|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|»|»|»|»|»|»|  
+|LITERAL_SUFFIX|»|»|»|»|»|»|  
 |CREATE_PARAMS|NULL|scale|NULL|NULL|scale|scale|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
@@ -54,7 +54,7 @@ ms.locfileid: "48136129"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|LOCAL_TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|0|0|0|3|0|0|  
 |MAXIMUM_SCALE|0|7|0|3|7|7|  
 |SQL_DATA_TYPE|SQL_DATETIME|SQL_SS_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TYPE_TIMESTAMPOFFSET|  

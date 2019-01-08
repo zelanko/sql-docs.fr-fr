@@ -17,12 +17,12 @@ ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8125f5b8693eccfc619dd2ee3aed6f203e17dad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61f863aa3d32ae60ff1cbcac562e74250899088
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183169"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356575"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>Sérialisation XML à partir d'objets de base de données CLR
   La sérialisation XML est nécessaire dans deux scénarios :  
@@ -37,7 +37,7 @@ ms.locfileid: "48183169"
   
 2.  Inscrivez l'assembly généré dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de l'instruction `CREATE ASSEMBLY`.  
   
- Pour plus d’informations sur les erreurs susceptibles de survenir lorsque la sérialisation XML, consultez l’article de Support Microsoft suivant : [« Impossible de charger un assembly de sérialisation généré de manière dynamique »](http://support.microsoft.com/kb/913668).  
+ Pour plus d’informations sur les erreurs que vous pouvez recevoir lorsque vous effectuez la sérialisation XML, consultez l’article de Support Microsoft suivant : [« Impossible de charger un assembly de sérialisation généré de manière dynamique »](https://support.microsoft.com/kb/913668).  
   
  Pour plus d'informations sur les types de données qui ne sont pas pris en charge par le sérialiseur XML, consultez la rubrique consacrée à la prise en charge de la liaison de schéma XML dans le .NET Framework dans la documentation de ce dernier.  
   

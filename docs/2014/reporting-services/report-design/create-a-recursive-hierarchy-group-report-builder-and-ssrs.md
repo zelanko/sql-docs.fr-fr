@@ -11,12 +11,12 @@ ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f234f4112cee70e3b62fc5076f9e04c05e9bf56f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d708c3ad151cf213f21715f6837c7669aa7baff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154109"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511683"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Créer un groupe de hiérarchies récursives (Générateur de rapports et SSRS)
   Un groupe de hiérarchies récursives organise les données d'un dataset de rapport unique qui inclut plusieurs niveaux hiérarchiques, tels que la structure de rapports pour les relations entre directeur et employé dans une hiérarchie d'organisation.  
@@ -57,7 +57,7 @@ ms.locfileid: "48154109"
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Les propriétés de remplissage nécessitent toutes une chaîne au format *nnyy*, où *nn* est un nombre et *yy* une unité de mesure. L’exemple d’expression génère une chaîne qui utilise le `Level` (fonction) pour augmenter la taille de la marge intérieure en fonction de niveau de récursivité. Ainsi, une ligne de niveau 1 implique un remplissage de 12 points (2 + (1\*10)) et une ligne de niveau 3 correspond à un remplissage de 32 points (2 + (3\*10)). Pour plus d’informations sur la `Level` de fonction, consultez [niveau](report-builder-functions-level-function.md).  
+     Les propriétés de remplissage nécessitent toutes une chaîne au format *nnyy*, où *nn* est un nombre et *yy* une unité de mesure. L'exemple d'expression génère une chaîne utilisant la fonction `Level` pour augmenter la taille du remplissage en fonction du niveau de récursivité. Ainsi, une ligne de niveau 1 implique un remplissage de 12 points (2 + (1\*10)) et une ligne de niveau 3 correspond à un remplissage de 32 points (2 + (3\*10)). Pour plus d’informations sur la `Level` de fonction, consultez [niveau](report-builder-functions-level-function.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48154109"
 ## <a name="see-also"></a>Voir aussi  
  [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Tables &#40;Générateur de rapports et SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Générateur de rapports et SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Listes &#40;Générateur de rapports et SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

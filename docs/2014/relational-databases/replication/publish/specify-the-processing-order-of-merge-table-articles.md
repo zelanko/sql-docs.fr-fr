@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -16,12 +15,12 @@ ms.assetid: 9fe576a2-f5fb-4fdf-bd7d-cb322021b669
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c017a7e5dbc2d2eec535765c8889c68a16aad25b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbc61994e251063fe6d23450582d44c77616a662
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146379"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795571"
 ---
 # <a name="specify-the-processing-order-of-merge-table-articles-replication-transact-sql-programming"></a>Spécifier l'ordre de traitement d'articles de table de fusion (programmation Transact-SQL de la réplication)
   La réplication de fusion vous permet de spécifier l'ordre dans lequel les articles sont traités par l'Agent de fusion pendant le processus de synchronisation. Vous pouvez attribuer par programme un ordre à chaque article lors de la création de l'article à l'aide des procédures stockées de réplication. Les articles sont traités à partir de la valeur la plus faible vers la valeur la plus élevée. Si deux articles ont la même valeur, ils sont traités simultanément. Pour plus d’informations, consultez [Spécifier l’ordre de traitement d’articles de fusion](../merge/specify-the-processing-order-of-merge-articles.md).  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -16,12 +16,12 @@ ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 009c83975aa730626858c793b53c51c309c218b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2036dd0624e8c2c6479c8ba039aa5646f374902d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222789"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356877"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utiliser des jetons dans les étapes d'un travail
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent vous permet d’utiliser des jetons dans des scripts d’étape de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ces jetons avec lesquels vous rédigez des étapes de travail vous offrent la même flexibilité que les variables lors de l'écriture de programmes logiciels. Après que vous avez inséré un jeton dans un script d'étape de travail, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent le remplace au moment de l'exécution avant que le sous-système [!INCLUDE[tsql](../../includes/tsql-md.md)] n'exécute l'étape de travail.  
@@ -34,11 +34,11 @@ ms.locfileid: "48222789"
 ## <a name="understanding-using-tokens"></a>Utilisation de jetons  
   
 > [!IMPORTANT]  
->  Tout utilisateur Windows qui dispose des autorisations d'écriture dans le journal des événements Windows peut accéder aux étapes de travail activées par les alertes WMI ou par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Ces jetons sont : **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**., et **() WMI *`property`*)**. Notez que dans cette version, l'utilisation des jetons est étendue toutes les alertes.  
+>  Tout utilisateur Windows qui dispose des autorisations d'écriture dans le journal des événements Windows peut accéder aux étapes de travail activées par les alertes WMI ou par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Ces jetons sont : **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**., et **WMI ( *`property`*)**. Notez que dans cette version, l'utilisation des jetons est étendue toutes les alertes.  
 >   
 >  Si vous devez utiliser ces jetons, assurez-vous d'abord que seuls les membres des groupes de sécurité Windows approuvés, comme le groupe Administrateurs, disposent des autorisations d'écriture pour le journal d'événements de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réside. Ensuite, pour activer ces jetons, cliquez avec le bouton droit sur **SQL Server Agent** dans l’Explorateur d’objets, sélectionnez **Propriétés**, puis dans la page **Système d’alerte** qui s’affiche, sélectionnez l’option **Remplacer les jetons pour toutes les réponses de travaux aux alertes** .  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent : Le remplacement du jeton est simple et efficace, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent remplace le jeton par une valeur de chaîne littérale exacte. Tous les jetons respectent la casse. Vous devez tenir compte de ce changement dans vos étapes de travail et nommer correctement les jetons utilisés, ou bien convertir la chaîne de remplacement en type de données correct.  
+ Le remplacement de jetons dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est simple et efficace : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent remplace le jeton par une valeur de chaîne littérale exacte. Tous les jetons respectent la casse. Vous devez tenir compte de ce changement dans vos étapes de travail et nommer correctement les jetons utilisés, ou bien convertir la chaîne de remplacement en type de données correct.  
   
  Par exemple, vous pouvez utiliser l'instruction suivante pour imprimer le nom de la base de données dans une étape de travail :  
   
@@ -67,13 +67,13 @@ ms.locfileid: "48222789"
 |**(A-SEV)**|Gravité de l'erreur Si le travail est exécuté par une alerte, la valeur de la gravité de l'erreur remplace automatiquement ce jeton dans l'étape de travail.|  
 |**(A-MSG)**|Texte du message. Si le travail est exécuté par une alerte, la valeur du texte du message remplace automatiquement ce jeton dans l'étape de travail.|  
 |**(DATE)**|Date actuelle (au format AAAAMMJJ).|  
-|**(INST)**|Nom de l’instance. Pour une instance par défaut, ce jeton aura le nom de l'instance par défaut : MSSQLSERVER.|  
+|**(INST)**|Nom de l’instance. Pour une instance par défaut, ce jeton aura le nom de l’instance par défaut : MSSQLSERVER.|  
 |**(JOBID)**|ID de travail.|  
 |**(MACH)**|Nom de l’ordinateur.|  
 |**(MSSA)**|Nom du service SQLServerAgent principal.|  
 |**(OSCMD)**|Préfixe du programme utilisé pour exécuter les étapes de travail **CmdExec** .|  
 |**(SQLDIR)**|Répertoire d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La valeur par défaut est : C:\Program Files\Microsoft SQL Server\MSSQL.|  
-|**(SQLLOGDIR)**|Jeton de remplacement pour le chemin d'accès du dossier des fichiers journaux des erreurs SQL Server, par exemple, $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
+|**(SQLLOGDIR)**|Jeton de remplacement pour le chemin du dossier des fichiers journaux des erreurs SQL Server, par exemple, $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
 |**(STEPCT)**|Nombre de fois où cette étape a été exécutée (ne tient pas compte des nouvelles tentatives). Peut être utilisé par la commande d'étape pour forcer l'arrêt d'une boucle multi-étape.|  
 |**(STEPID)**|Numéro d'identification de l'étape.|  
 |**(SRVR)**|Nom de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]est exécuté. Si l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance nommée, le nom de l'instance est compris.|  
@@ -94,7 +94,7 @@ ms.locfileid: "48222789"
 ## <a name="updating-job-steps-to-use-macros"></a>Mise à jour des étapes de travail pour l'utilisation de macros  
  Depuis [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, les étapes de travail munies de jetons sans macros d'échappement échouent et retournent un message d'erreur indiquant que l'étape de travail contenant un ou plusieurs jetons doit être mise à jour à l'aide d'une macro avant l'exécution du travail.  
   
- Un script est disponible dans l’article 915845 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Les étapes de travail de SQL Server Agent qui utilisent des jetons échouent dans SQL Server 2005 Service Pack 1 [de la Base de connaissances](http://support.microsoft.com/kb/915845). Vous pouvez vous servir de ce script pour mettre à jour toutes vos étapes de travail utilisant les jetons avec la macro **ESCAPE_NONE** . Après avoir appliqué ce script, nous vous recommandons de passer en revue vos étapes de travail qui utilisent des jetons le plus tôt possible, puis de remplacer la macro **ESCAPE_NONE** par une macro d’échappement adaptée au contexte de vos étapes de travail.  
+ Un script est fourni avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’article 915845 de la Base de connaissances : [Étapes du travail SQL Server Agent qui utilisent des jetons échouent dans SQL Server 2005 Service Pack 1](https://support.microsoft.com/kb/915845). Vous pouvez utiliser ce script pour mettre à jour tous vos étapes de travail qui utilisent des jetons avec la **ESCAPE_NONE** (macro). Après avoir appliqué ce script, nous vous recommandons de passer en revue vos étapes de travail qui utilisent des jetons le plus tôt possible, puis de remplacer la macro **ESCAPE_NONE** par une macro d’échappement adaptée au contexte de vos étapes de travail.  
   
  La table suivante décrit comment le remplacement des jetons est contrôlé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour activer/désactiver le remplacement des jetons, cliquez avec le bouton droit sur **SQL Server Agent** dans l’Explorateur d’objets, sélectionnez **Propriétés**, puis dans la page **Système d’alerte** , cochez ou décochez la case **Remplacer les jetons pour toutes les réponses de travaux aux alertes** .  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48222789"
   
  `PRINT N'Current database name is $(ESCAPE_SQUOTE(A-DBN))' ;`  
   
-### <a name="b-using-tokens-in-nested-strings"></a>B. Utilisation de jetons dans des chaînes imbriquées  
+### <a name="b-using-tokens-in-nested-strings"></a>b. Utilisation de jetons dans des chaînes imbriquées  
  Dans les scripts d'étape de travail où les jetons sont utilisés dans des chaînes ou des instructions imbriquées, les instructions imbriquées doivent être réécrites sous forme de plusieurs instructions avant d'insérer les macros d'échappement appropriées.  
   
  Par exemple, imaginez l'étape de travail suivante qui utilise le jeton `A-MSG` et n'a pas été mise à jour avec une macro d'échappement :  

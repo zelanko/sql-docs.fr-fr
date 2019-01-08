@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c793124ad2bf503a231d46335aa06be0fa2a872
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b49f6b4ae3ec88339927f083b58e016dbc38639b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162079"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370421"
 ---
 # <a name="building-packages-programmatically"></a>Génération de packages par programme
   Si vous devez créer des packages de manière dynamique, ou gérer et exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l'extérieur de l'environnement de développement, vous pouvez manipuler les packages par programme. Cette méthode vous offre une gamme continue d'options :  
@@ -93,11 +91,11 @@ ms.locfileid: "48162079"
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   Exemples de code CodePlex, [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkID=131204), sur www.codeplex.com/MSFTISProdSamples  
+-   Exemples de code CodePlex, [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204), sur www.codeplex.com/MSFTISProdSamples  
   
--   Entrée de blog, [Performance profiling your custom extensions](http://go.microsoft.com/fwlink/?LinkId=238831), sur le site blogs.msdn.com.  
+-   Entrée de blog, [Performance profiling your custom extensions](https://go.microsoft.com/fwlink/?LinkId=238831), sur le site blogs.msdn.com.  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

@@ -15,15 +15,15 @@ ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dbd89984e64ac3ca37c3ac9ec31e19191606dc9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 960a435500f243598f9db078644950d38d7869f2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217569"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351956"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
-  Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). Il est important de se rappeler que l'algorithme MDT (Microsoft Decision Trees) est un algorithme hybride qui peut créer des modèles avec des fonctions très différentes : un arbre de décision peut représenter des associations, des règles ou même une régression linéaire. La structure de l'arbre est essentiellement la même, mais le mode d’interprétation des informations dépendra de l'objectif visé par la création du modèle.  
+  Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md). Il est important de se rappeler que l'algorithme MDT (Microsoft Decision Trees) est un algorithme hybride qui peut créer des modèles avec des fonctions très différentes : un arbre de décision peut représenter des associations, des règles ou même une régression linéaire. La structure de l'arbre est essentiellement la même, mais le mode d’interprétation des informations dépendra de l'objectif visé par la création du modèle.  
   
 ##  <a name="bkmk_Top"></a> Présentation de la structure d'un modèle d’arbre de décision  
  Un modèle d’arbre de décision comprend un nœud parent unique qui représente le modèle et ses métadonnées. Sous le nœud parent se trouvent des arbres indépendants qui représentent les attributs prédictibles sélectionnés. Par exemple, si vous installez votre modèle d'arbre de décision pour prédire si les clients achèteront un produit et pour fournir des entrées correspondant au genre et au revenu, le modèle créera une arborescence unique pour l'attribut d'achat, avec de nombreuses branches en fonction des conditions liées au genre et au revenu.  
@@ -199,7 +199,7 @@ ms.locfileid: "48217569"
  L'attribut représenté par le fragment XML peut être simple ou complexe. Un attribut simple contient le nom de la colonne du modèle, ainsi que la valeur de l’attribut. Si la colonne du modèle contient une table imbriquée, l'attribut de table imbriquée est représenté sous la forme d’une concaténation du nom de la table, de la valeur de clé et de l'attribut.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge la version 2.0 du PMML standard, ainsi que les extensions permettant l'utilisation de la table imbriquée. Si vos données contiennent des tables imbriquées et si vous générez une version PMML du modèle, tous les éléments du modèle qui incluent les prédicats sont marqués comme extensions.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge la version 2.0 du PMML standard, avec des extensions prenant en charge l’utilisation d’une table imbriquée. Si vos données contiennent des tables imbriquées et si vous générez une version PMML du modèle, tous les éléments du modèle qui incluent les prédicats sont marqués comme extensions.  
   
 ###  <a name="bkmk_NodeDist_Discrete"></a> Distribution du nœud pour les attributs discrets  
  Dans un modèle d'arbre de décision, la table NODE_DISTRIBUTION contient des statistiques utiles. Toutefois, le type de statistiques varie selon que l'arborescence prédit un attribut discret ou continu. Cette section explique la signification des statistiques de distribution du nœud pour les attributs discrets.  
@@ -262,7 +262,7 @@ ms.locfileid: "48217569"
   
  Pour tous les autres nœuds de l'arborescence (excepté les nœuds terminaux), le score de chaque nœud représente le meilleur score de fractionnement du nœud actuel, moins le score de fractionnement du nœud parent. En règle générale, le score de fractionnement d’un nœud parent doit toujours être meilleur que celui de ses nœuds enfants. Cela est dû au fait qu'un modèle d'arbre de décision se fractionne normalement en premier sur les attributs les plus importants.  
   
- Il existe de nombreuses façons de calculer un score pour un fractionnement, selon le paramètre d'algorithme choisi. La manière dont les scores sont calculés pour chacune des méthodes de calcul de score dépasse le cadre de cette rubrique. Pour plus d'informations, consultez «[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=45963)» (en anglais) sur le site Web [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research.  
+ Il existe de nombreuses façons de calculer un score pour un fractionnement, selon le paramètre d'algorithme choisi. La manière dont les scores sont calculés pour chacune des méthodes de calcul de score dépasse le cadre de cette rubrique. Pour plus d’informations, consultez «[réseaux BAYÉSIENS : La connaissance et données statistiques](https://go.microsoft.com/fwlink/?LinkId=45963)», dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] site Web de recherche.  
   
 > [!NOTE]  
 >  Si vous créez un modèle d'arbre de décision ayant des attributs prédictibles continus et discrets, vous verrez des scores complètement différents dans les nœuds (Tout) qui représentent chaque type d'arborescence. Chaque modèle doit être considéré indépendamment, et les méthodes utilisées pour calculer le score de la régression sont complètement différentes de celles utilisées pour calculer le score de la classification. Les valeurs de score de nœud ne peuvent pas être comparées.  
@@ -283,9 +283,9 @@ ms.locfileid: "48217569"
  Pour plus d’informations sur les nœuds de régression, consultez [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)   
- [Requêtes d’exploration de données](data-mining-queries.md)   
+ [Requêtes d'exploration de données](data-mining-queries.md)   
  [Algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm.md)  
   
   

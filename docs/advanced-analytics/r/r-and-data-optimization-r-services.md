@@ -1,5 +1,5 @@
 ---
-title: Performances pour SQL Server R Services - optimisation des données | Microsoft Docs
+title: Optimisation des performances pour l’optimisation des données - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fda560aedb7a0e1119a0524ffefe42a476c4aed
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b6e25ec0c7bc1ce332514910cdaf5cdf9fdb9e07
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699507"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432402"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Performances pour R Services - optimisation des données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -149,13 +149,13 @@ De nombreux algorithmes RevoScaleR prennent en charge les paramètres pour contr
 
 Pour obtenir des conseils supplémentaires sur l’optimisation de RevoScaleR, consultez ces articles :
 
-+ Article du support technique : [options pour rxDForest et rxDTree de réglage des performances](https://support.microsoft.com/kb/3104235)
++ Article du support technique : [Options pour rxDForest et rxDTree de réglage des performances](https://support.microsoft.com/kb/3104235)
 
-+ Les méthodes de contrôle du modèle tiennent dans un modèle d’arbre de décision optimisé : [estimation des modèles à l’aide de stochastique Gradient Boosting](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ Les méthodes de modèle de contrôle s’intègrent dans un modèle d’arbre de décision optimisé : [Estimation des modèles à l’aide de Gradient stochastique Boosting](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
 
-+ Vue d’ensemble de la façon dont RevoScaleR déplace et traite les données : [écrire des algorithmes de segmentation personnalisés de ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ Vue d’ensemble de la façon dont RevoScaleR déplace et traite les données : [Écrire des algorithmes de segmentation personnalisés de ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 
-+ Modèle de programmation pour RevoScaleR : [la gestion des threads dans RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
++ Modèle de programmation pour RevoScaleR : [La gestion des threads dans RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
 
 + Référence de fonction pour [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
@@ -173,13 +173,13 @@ Nous vous recommandons également que vous recherchez dans le nouvel **Microsoft
 
 Si votre scénario implique la prédiction rapide à l’aide d’un modèle stocké, ou l’intégration d’apprentissage automatique dans une application, vous pouvez utiliser la [Opérationnalisation](https://docs.microsoft.com/r-server/what-is-operationalization) fonctionnalités dans Microsoft R Server (anciennement appelées DeployR).
 
-+ Comme un **scientifique des données**, utilisez le [package mrsdeploy](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) partager du code R avec d’autres ordinateurs et d’intégrer l’analytique R à l’intérieur d’applications web, bureau, mobiles et tableau de bord : [comment publier et gérer des services web de R dans R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ Comme un **scientifique des données**, utilisez le [package mrsdeploy](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) partager du code R avec d’autres ordinateurs et d’intégrer l’analytique R à l’intérieur d’applications web, bureau, mobiles et tableau de bord : [Comment publier et gérer les services web de R dans R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ Comme un **administrateur**, apprenez à gérer les packages, surveiller les nœuds de site web et les nœuds de calcul et contrôler la sécurité sur les travaux R : [comment interagir avec et consommer des services web dans R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ Comme un **administrateur**, apprenez à gérer les packages, surveiller les nœuds de site web et les nœuds de calcul et contrôler la sécurité sur les travaux R : [Comment interagir avec et consommer des services web dans R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## <a name="articles-in-this-series"></a>Articles de cette série
 
-[Performances de paramétrage pour R – introduction](sql-server-r-services-performance-tuning.md)
+[Performances optimisation pour R - introduction](sql-server-r-services-performance-tuning.md)
 
 [Optimisation des performances pour R - configuration de SQL Server](sql-server-configuration-r-services.md)
 

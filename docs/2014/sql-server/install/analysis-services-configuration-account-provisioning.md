@@ -14,12 +14,12 @@ ms.assetid: 169b1af2-6fe2-467f-8ca4-919f24c620ce
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: e18073ff783ae8925424551dd62f570e9b2eea6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 095709115c15e770b8ad54678d4a359ab4b04ac8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105819"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351821"
 ---
 # <a name="analysis-services-configuration---account-provisioning"></a>Configuration Analysis Services – Mise en service de compte
   Utilisez cette page pour définir le mode serveur et pour accorder des autorisations administratives aux utilisateurs ou services qui requièrent un accès non restreint à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le programme d’installation n’ajoute pas automatiquement le groupe Windows local BUILTIN\Administrateurs au rôle des administrateurs de serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de l’instance que vous installez. Si vous souhaitez ajouter le groupe Administrateurs local au rôle des administrateurs de serveur, vous devez spécifier explicitement ce groupe.  
@@ -32,7 +32,7 @@ ms.locfileid: "48105819"
  **Spécifier les administrateurs** - Vous devez spécifier au moins un administrateur de serveur pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les utilisateurs ou groupes que vous spécifiez deviendront membres du rôle des administrateurs de serveur de l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que vous installez. Ceux-ci doivent être des comptes d'utilisateur de domaine Windows dans le même domaine que l'ordinateur sur lequel vous installez le logiciel.  
   
 > [!NOTE]  
->  Le contrôle de compte d'utilisateur est une fonctionnalité de sécurité Windows qui requiert qu'un administrateur approuve de façon spécifique les actions ou applications administratives avant qu'elles soient autorisées à s'exécuter. Dans la mesure où le contrôle de compte d'utilisateur est activé par défaut, vous serez invité à autoriser des opérations spécifiques qui requièrent des privilèges élevés. Vous pouvez configurer le contrôle de compte d'utilisateur de manière à modifier son comportement par défaut ou à le personnaliser pour des programmes spécifiques. Pour plus d’informations sur la configuration des contrôles de compte d’utilisateur, consultez [Guide pas à pas du contrôle de compte d’utilisateur](http://go.microsoft.com/fwlink/?linkid=196350) et [User Account Control (Contrôle de compte d’utilisateur) Wikipédia](http://go.microsoft.com/fwlink/?linkid=196351).  
+>  Le contrôle de compte d'utilisateur est une fonctionnalité de sécurité Windows qui requiert qu'un administrateur approuve de façon spécifique les actions ou applications administratives avant qu'elles soient autorisées à s'exécuter. Dans la mesure où le contrôle de compte d'utilisateur est activé par défaut, vous serez invité à autoriser des opérations spécifiques qui requièrent des privilèges élevés. Vous pouvez configurer le contrôle de compte d'utilisateur de manière à modifier son comportement par défaut ou à le personnaliser pour des programmes spécifiques. Pour plus d’informations sur la configuration des contrôles de compte d’utilisateur, consultez [Guide pas à pas du contrôle de compte d’utilisateur](https://go.microsoft.com/fwlink/?linkid=196350) et [User Account Control (Contrôle de compte d’utilisateur) Wikipédia](https://go.microsoft.com/fwlink/?linkid=196351).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les comptes de Service &#40;Analysis Services&#41;](../../../2014/analysis-services/instances/configure-service-accounts-analysis-services.md)   

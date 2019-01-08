@@ -14,12 +14,12 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f2d6612b50fc3bd9b07231c42363a8e1e6889e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148719"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359711"
 ---
 # <a name="availability-group-is-offline"></a>Le groupe de disponibilité est hors connexion
     
@@ -38,7 +38,7 @@ ms.locfileid: "48148719"
  L'état de la stratégie est sain lorsque la ressource de cluster du groupe de disponibilité est en ligne et que le groupe de disponibilité a un réplica principal.  
   
 > [!NOTE]  
->  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les informations sur les causes et les solutions possibles sont situées sous [Le groupe de disponibilité est hors connexion](http://go.microsoft.com/fwlink/p/?LinkId=220850) sur le Wiki TechNet.  
+>  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les informations sur les causes et les solutions possibles sont situées sous [Le groupe de disponibilité est hors connexion](https://go.microsoft.com/fwlink/p/?LinkId=220850) sur le Wiki TechNet.  
   
 ## <a name="possible-causes"></a>Causes possibles  
  Ce problème peut être dû à un échec de l'instance de serveur qui héberge le réplica principal ou à la mise hors connexion de la ressource de groupe de disponibilité du cluster de basculement Windows Server (WSFC). Voici les causes possibles de mise hors connexion du groupe de disponibilité :  
@@ -62,7 +62,7 @@ ms.locfileid: "48148719"
 -   Un basculement automatique, manuel ou forcé est en cours pour le groupe de disponibilité.  
   
 ## <a name="possible-solutions"></a>Solutions possibles  
- Voici les solutions possibles à ce problème :  
+ Voici les solutions possibles à ce problème :  
   
 -   Si l'instance SQL Server du réplica principal est arrêtée, redémarrez le serveur, puis vérifiez que le groupe de disponibilité repasse à un état sain.  
   

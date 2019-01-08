@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
@@ -15,12 +14,12 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b44d6948f68c3fd102ef189c22ec5854e8f2c9e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117069"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202468"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limites de capacité de calcul par l'édition de SQL Server
   Cette rubrique traite des limites de capacité de calcul des différentes éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et de la façon dont elles diffèrent dans les environnements physiques et virtualisés avec les processeurs hyperthreaded.  
@@ -29,7 +28,7 @@ ms.locfileid: "48117069"
   
  Le tableau suivant décrit les notations utilisées dans le schéma ci-dessus :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0..1|Zéro ou un|  
 |1|Un seul|  
@@ -37,23 +36,23 @@ ms.locfileid: "48117069"
 |0..*|Zéro ou plus|  
 |1..2|Un ou deux|  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Pour approfondir :  
->   
+> 
 >  1.  Un ordinateur virtuel est alloué à un ou plusieurs processeurs virtuels.  
 > 2.  Un ou plusieurs processeurs virtuels sont alloués à un seul ordinateur virtuel.  
 > 3.  Zéro ou un processeur virtuel est mappé à zéro ou un processeur logique. Lorsque le mappage d'un processeur virtuel à un processeur logique est :  
->   
+> 
 >      -   Un-à-zéro, il représente un processeur logique indépendant non utilisé par les systèmes d'exploitation invités.  
 >     -   Un-à-plusieurs, il représente un overcommit.  
 >     -   Zéro-à-plusieurs, il représente l'absence d'ordinateur virtuel sur le système hôte, de sorte qu'aucun processeur logique n'est utilisé par les VM.  
 > 4.  Un socket est mappé à zéro ou plusieurs noyaux. Lorsque le socket de mappage de noyau est :  
->   
+> 
 >      -   Un-à-zéro, il représente un socket vide (aucun processeur installé).  
 >     -   Un-à-un, il représente un processeur à un noyau installé dans le socket (très rare de nos jours).  
 >     -   Un-à-plusieurs, il représente un processeur à plusieurs noyaux installé dans le socket (les valeurs courantes sont 2,4,8).  
 > 5.  Un noyau est mappé à un ou deux processeurs logiques. Lorsque le mappage du noyau au processeur logique est :  
->   
+> 
 >      -   Un-à-un, l'hyperthreading est désactivé.  
 >     -   Un-à-deux, l'hyperthreading est activé.  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48117069"
   
 -   Un processeur physique peut comprendre un ou plusieurs noyaux. Un processeur physique est identique à un package de processeurs ou à un socket.  
   
- Les systèmes avec plusieurs processeurs physiques ou avec des processeurs physiques qui ont plusieurs noyaux et/ou des hyperthreads, permettent au système d'exploitation d'exécuter plusieurs tâches simultanément. Chaque thread d'exécution apparaît comme un processeur logique. Par exemple, si vous avez un ordinateur qui a deux processeurs quadruple cœur avec des threads activés et deux threads par noyau, vous avez 16 processeurs logiques : 2 processeurs X les 4 cœurs par processeur X 2 thread par cœur. Il faut noter que :  
+ Les systèmes avec plusieurs processeurs physiques ou avec des processeurs physiques qui ont plusieurs noyaux et/ou des hyperthreads, permettent au système d'exploitation d'exécuter plusieurs tâches simultanément. Chaque thread d'exécution apparaît comme un processeur logique. Par exemple, si vous avez un ordinateur doté de deux processeurs quadruple cœur avec hyper-threading activé et deux threads par cœur, vous avez 16 processeurs logiques : 2 processeurs x 4 les cœurs par processeur x 2 thread par cœur. Il faut noter que :  
   
 -   La capacité de calcul d'un processeur logique à partir d'un thread unique d'un noyau hyperthreaded est inférieure à la capacité de calcul d'un processeur logique de ce même noyau avec l'hyperthreading désactivé.  
   
@@ -83,19 +82,19 @@ ms.locfileid: "48117069"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Édition|Capacité maximale de calcul utilisée par une instance unique ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacité maximale de calcul utilisée par une instance unique (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition : Gestion des licences par noyau<sup>1</sup>|Maximum du système d'exploitation|Maximum du système d'exploitation|  
+|Enterprise Edition : Licence par cœur<sup>1</sup>|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Développeur|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Evaluation|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Business Intelligence|Limité inférieure à 4 sockets ou 16 noyaux|Maximum du système d'exploitation|  
 |Standard|Limité inférieure à 4 sockets ou 16 noyaux|Limité inférieure à 4 sockets ou 16 noyaux|  
-|Web|Limité inférieure à 4 sockets ou 16 noyaux|Limité inférieure à 4 sockets ou 16 noyaux|  
+|Web|Limité inférieure à 4 sockets ou 16 noyaux|Limité inférieure à 4 sockets ou 16 noyaux|  
 |Express|Limité inférieure à 1 sockets ou 4 noyaux|Limité inférieure à 1 sockets ou 4 noyaux|  
 |Express with Tools|Limité inférieure à 1 sockets ou 4 noyaux|Limité inférieure à 1 sockets ou 4 noyaux|  
 |Express with Advanced Services|Limité inférieure à 1 sockets ou 4 noyaux|Limité inférieure à 1 sockets ou 4 noyaux|  
   
  <sup>1</sup> Enterprise Edition avec serveur + Client Access License (CAL) basé (non disponible pour les nouveaux contrats) est limitée à un maximum de 20 cœurs par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. Il n'existe aucune limite dans le mode de licence Serveur selon le nombre de cœurs.  
   
- Dans un environnement virtualisé, la limite de capacité de calcul est basée sur le nombre de processeurs logiques et non de noyaux, car l'architecture du processeur n'est pas visible aux applications invitées.  Par exemple, un serveur avec quatre sockets comprenant des processeurs quadruple cœur et autorisant l'activation de deux hyperthreads par cœur, contient 32 processeurs logiques avec l'hyperthreading activé mais seulement 16 processeurs logiques avec l'hyperthreading désactivé. Ces processeurs logiques peuvent être mappés aux ordinateurs virtuels sur le serveur avec la charge du calcul des ordinateurs virtuels, sur ce processeur logique mappé sur un thread d'exécution sur le processeur physique dans le serveur hôte.  
+ Dans un environnement virtualisé, la limite de capacité de calcul est basée sur le nombre de processeurs logiques et non de noyaux, car l'architecture du processeur n'est pas visible aux applications invitées.  Par exemple, un serveur avec quatre sockets comprenant des processeurs quadruple cœur et autorisant l'activation de deux hyperthreads par cœur, contient 32 processeurs logiques avec l'hyperthreading activé mais seulement 16 processeurs logiques avec l'hyperthreading désactivé. Ces processeurs logiques peuvent être mappés aux machines virtuelles sur le serveur avec la charge de calcul de machines virtuelles sur ce processeur logique mappé sur un thread d’exécution sur le processeur physique du serveur hôte.  
   
  Vous pouvez désactiver l'hyperthreading lorsque les performances par processeur virtuel sont importantes. Vous pouvez activer ou désactiver l'hyperthreading sur le processeur à l'aide d'un paramètre du BIOS pendant l'installation de celui-ci, mais il s'agit en général d'une opération couvrant l'étendue du serveur qui aura un impact sur toutes les charges de travail qui s'exécutent sur le serveur. On peut dans ce cas suggérer la séparation des charges de travail qui s'exécutent dans des environnements virtualisés de celles qui tirent parti de l'amélioration des performances grâce à l'hyperthreading dans un environnement de système d'exploitation physique.  
   

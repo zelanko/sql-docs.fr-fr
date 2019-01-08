@@ -1,5 +1,5 @@
 ---
-title: Erreurs de script R dans SQL Server Machine Learning et R Services | Microsoft Docs
+title: R les erreurs de script et résolution des problèmes - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 941a8bbc5e7326d87dcdba8c822fb2c3f2190900
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5e4ac26b10a8a9f7e17345e927ee89ea6c731fb1
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695437"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644888"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>Erreurs de script R dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ Si le runtime R fonctionne mais que votre script retourne des erreurs, nous vous
 Nous recommandons également que vous passez en revue et légèrement Réécrivez le script pour corriger tout problème avec les types de données qui peuvent se produire lorsque vous déplacez des données entre R et le moteur de base de données. Pour plus d’informations, consultez [R bibliothèques et types de données](r/r-libraries-and-data-types.md).
 
 En outre, vous pouvez utiliser le package sqlrutils pour regrouper votre script R dans un format qui est plus simple à utiliser comme une procédure stockée. Pour plus d'informations, consultez :
-* [Générer une procédure stockée pour le code R à l’aide du package sqlrutils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+* [package sqlrutils](r/ref-r-sqlrutils.md)
 * [Créer une procédure stockée à l’aide de sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## <a name="script-returns-inconsistent-results"></a>Script retourne des résultats incohérents
@@ -68,7 +68,7 @@ Pour activer vos informations d’identification Windows à passer en toute séc
 
 2. Exécutez le script suivant. Veillez à modifier le nom du groupe utilisateur, si vous avez modifié la valeur par défaut et les noms d’ordinateur et d’instance.
 
-    ```SQL
+    ```sql
     USE [master]
     GO
     

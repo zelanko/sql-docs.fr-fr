@@ -17,12 +17,12 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 41736a7de5469650d1d2e13b6b78d8a9c2e92573
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20b64e86aa63b88175b505659e78dce35b2250bb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152819"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361261"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes relationnelles (Générateur de rapports)
   Générateur de rapports fournit un concepteur de requêtes graphique et un concepteur de requêtes textuel qui permettent de créer une requête qui spécifie les données à récupérer à partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bases de données relationnelles et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] pour un dataset de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
@@ -92,7 +92,7 @@ ms.locfileid: "48152819"
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise [!INCLUDE[tsql](../../../includes/tsql-md.md)] et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] utilise [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Les deux dialectes du langage SQL prennent en charge la clause, le mot clé et les agrégats fournis par le Concepteur de requêtes.  
   
- Pour plus d’informations sur [!INCLUDE[tsql](../../../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference) dans la [documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
+ Pour plus d’informations sur [!INCLUDE[tsql](../../../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference) dans la [documentation en ligne](https://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
   
  Le tableau suivant répertorie les agrégats et fournit de brèves descriptions de ces derniers.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48152819"
 |Max|Renvoie la valeur maximale figurant dans un groupe. Implémente l'agrégat SQL MAX.|  
 |StDev|Retourne l'écart type statistique de toutes les valeurs d'un groupe. Implémente l'agrégat SQL STDEV.|  
 |StDevP|Retourne l'écart type de remplissage de toutes les valeurs de l'expression spécifiée d'un groupe. Implémente l'agrégat SQL STDEVP.|  
-|SUM|Retourne la somme de toutes les valeurs du groupe. Implémente l'agrégat SQL SUM.|  
+|Sum|Retourne la somme de toutes les valeurs du groupe. Implémente l'agrégat SQL SUM.|  
 |Var|Retourne la variance statistique de toutes les valeurs du groupe. Implémente l'agrégat SQL VAR.|  
 |VarP|Retourne la variance statistique du remplissage pour toutes les valeurs du groupe. Implémente l'agrégat SQL VARP.|  
 |Avg Distinct|Retourne des moyennes uniques. Implémente une combinaison de l'agrégation AVG et du mot clé DISTINCT.|  
@@ -132,7 +132,7 @@ ms.locfileid: "48152819"
 -   **Détection automatique** : active/désactive la fonctionnalité de détection automatique qui crée automatiquement les relations entre les tables. Si la détection automatique est activée, le Concepteur de requêtes crée les relations à partir des clés étrangères des tables ; sinon, vous devez créer les relations manuellement. Lorsque vous sélectionnez des tables dans le volet **Vue de base de données** , la fonctionnalité de détection automatique tente de créer les relations. Si vous activez la détection automatique après avoir créé des jointures manuellement, ces jointures sont ignorées.  
   
     > [!IMPORTANT]  
-    >  Lorsque vous utilisez avec [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] ne sont pas fournie par les métadonnées nécessaires pour créer des jointures et les relations ne peuvent pas être détectées automatiquement. Si votre requête récupère les données à partir de [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)], toutes les jointures de table doivent être créées manuellement.  
+    >  Lors de l'utilisation de [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] , les métadonnées nécessaires à la création de jointures ne sont pas fournies ; en outre, les relations ne peuvent pas être détectées automatiquement. Si votre requête récupère les données à partir de [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)], toutes les jointures de table doivent être créées manuellement.  
   
 -   **Ajouter une relation** Ajoute une relation à la liste **Relation** .  
   
@@ -156,7 +156,7 @@ ms.locfileid: "48152819"
   
 -   **Table de gauche** Affiche le nom de la première table qui fait partie d'une relation de jointure.  
   
--   **Type de jointure** Affiche le type d'instruction SQL JOIN utilisée dans la requête générée automatiquement. Par défaut, si une contrainte de clé étrangère est détectée, une jointure interne (INNER JOIN) est utilisée. D'autres types de jointures peuvent être des jointures gauches (LEFT JOIN) ou droites (RIGHT JOIN). Si aucun de ces types de jointures ne s'applique, la colonne **Type de jointure** affiche **Non lié**. Aucune jointure CROSS JOIN n'est créée pour les tables non associées ; à la place, vous devez créer manuellement les relations en joignant les colonnes des tables de gauche et de droite. Pour plus d’informations sur les types de jointures, consultez « Joindre les principes de base » dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=141687) sur msdn.microsoft.com...  
+-   **Type de jointure** Affiche le type d'instruction SQL JOIN utilisée dans la requête générée automatiquement. Par défaut, si une contrainte de clé étrangère est détectée, une jointure interne (INNER JOIN) est utilisée. D'autres types de jointures peuvent être des jointures gauches (LEFT JOIN) ou droites (RIGHT JOIN). Si aucun de ces types de jointures ne s'applique, la colonne **Type de jointure** affiche **Non lié**. Aucune jointure CROSS JOIN n'est créée pour les tables non associées ; à la place, vous devez créer manuellement les relations en joignant les colonnes des tables de gauche et de droite. Pour plus d'informations sur les types de jointures, consultez « Principes de base des jointures » dans la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [de](https://go.microsoft.com/fwlink/?LinkId=141687) sur msdn.microsoft.com.  
   
 -   **Table de droite** Affiche le nom de la deuxième table dans la relation de jointure.  
   

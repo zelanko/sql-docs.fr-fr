@@ -14,12 +14,12 @@ ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 84194cf92cfd4c6270697aa1c3fd4f475df956ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 210f25b55c2cc2536d4c6f00f215b27eac5f7be0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714087"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409226"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Exécution de la console SSMA (OracleToSQL)
 Microsoft vous fournit un ensemble robuste de script de commandes de fichier pour exécuter et contrôler les activités SSMA. L’application console utilise certaines commandes de fichier de script standard comme énuméré dans cette section.  
@@ -63,7 +63,7 @@ L’attribut « type de projet » est **sql-server-2008** par défaut.
   
 **Commande**  
   
-Open-projet : ouvre un projet existant.  
+Open-projet : Ouvre un projet existant.  
   
 **Script**  
   
@@ -294,7 +294,7 @@ ou Gestionnaire de configuration
 ## <a name="migration-script-file-commands"></a>Commandes de fichier de Script de migration  
 Les commandes de Migration convertir le schéma de base de données cible au schéma source et migre les données vers le serveur cible.  
   
-La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreurs détaillées : résumé uniquement sur le nœud racine d’arborescence objet source.  
+La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreurs détaillées : Résumé uniquement sur le nœud racine d’arborescence objet source.  
   
 **Commande**  
   
@@ -459,7 +459,7 @@ Migre les données source vers la cible.
 ```  
   
 ## <a name="manageability-script-file-commands"></a>Commandes de fichier de Script de la facilité de gestion  
-Les commandes de la facilité de gestion permettent de synchroniser les objets de base de données cible avec la base de données source. La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreurs détaillées : résumé uniquement sur le nœud racine d’arborescence objet source.  
+Les commandes de la facilité de gestion permettent de synchroniser les objets de base de données cible avec la base de données source. La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreurs détaillées : Résumé uniquement sur le nœud racine d’arborescence objet source.  
   
 **Commande**  
   
@@ -589,7 +589,7 @@ ou Gestionnaire de configuration
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>Commandes de fichier de Script de génération script  
-Les commandes de génération du Script effectuent deux tâches : ils permettent d’enregistrer la sortie dans un fichier de script de console et enregistrer la sortie de T-SQL dans la console ou un fichier basé sur le paramètre que vous spécifiez.  
+Les commandes de génération du Script effectuent deux tâches : Ils permettent d’enregistrer la sortie dans un fichier de script de console et enregistrer la sortie de T-SQL dans la console ou un fichier basé sur le paramètre que vous spécifiez.  
   
 **Commande**  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
@@ -17,12 +16,12 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bedd4c228f540cd4277b4f77750e797b70424c30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155359"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356658"
 ---
 # <a name="ibm-db2-subscribers"></a>Abonnés IBM DB2
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les abonnements par émission de données à IBM DB2/AS 400, DB2/MVS et DB2/Universal Database par l'intermédiaire de fournisseurs OLE DB inclus avec [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
@@ -32,11 +31,11 @@ ms.locfileid: "48155359"
   
 1.  Installez la dernière version du fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB pour DB2 sur le serveur de distribution :  
   
-    -   Si vous utilisez [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)], dans le [téléchargements SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=149256) page Web, dans le **téléchargements apparentés** , cliquez sur le lien vers la dernière version de Microsoft SQL Server 2008 Feature Pack. Dans la page Web **Microsoft SQL Server 2008 Feature Pack** , recherchez **Fournisseur Microsoft OLEDB pour DB2**.  
+    -   Si vous utilisez [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)], dans la page Web [Téléchargements SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=149256) , dans la section **Téléchargements apparentés** , cliquez sur le lien pointant vers la dernière version de Microsoft SQL Server 2008 Feature Pack. Dans la page Web **Microsoft SQL Server 2008 Feature Pack** , recherchez **Fournisseur Microsoft OLEDB pour DB2**.  
   
-    -   Si vous utilisez [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard, installez la dernière version du serveur HIS ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]) qui inclut le fournisseur.  
+    -   Si vous utilisez [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard, installez la dernière version du serveur HIS ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ) qui inclut le fournisseur.  
   
-     Outre l’installation du fournisseur, nous vous recommandons d’installer l’outil d’accès aux données, qui est utilisé dans l’étape suivante (il est installé par défaut avec le téléchargement de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). Pour plus d'informations sur l’installation et l'utilisation de l'outil d'accès aux données, consultez la documentation du fournisseur ou de HIS.  
+     Outre le fournisseur, nous vous recommandons d'installer l'outil d'accès aux données, qui est utilisé à l'étape suivante (il est installé par défaut avec le téléchargement de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). Pour plus d'informations sur l’installation et l'utilisation de l'outil d'accès aux données, consultez la documentation du fournisseur ou de HIS.  
   
 2.  Créez une chaîne de connexion pour l'Abonné. Il est possible de créer la chaîne de connexion dans n'importe quel éditeur de texte mais il est conseillé d'utiliser l'outil d'accès aux données. Pour créer la chaîne dans l'outil d'accès aux données :  
   
@@ -131,7 +130,7 @@ ms.locfileid: "48155359"
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|Néant|  
+|`sql_variant`|N/A|  
 |`sysname`|VARCHAR (128)|  
 |`text`|VARCHAR(0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  

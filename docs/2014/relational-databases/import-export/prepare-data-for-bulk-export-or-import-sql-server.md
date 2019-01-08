@@ -16,12 +16,12 @@ ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47c8b792158095693ea4223578ef811a2509b2a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0836d835b77241a27dfccc65528e8cda440559c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073479"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358131"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Préparer des données en vue d'une exportation ou d'une importation en bloc (SQL Server)
   Cette section présente les points à prendre en considération lors de la planification d'opérations d'exportation en bloc et les contraintes liées aux opérations d'importation en bloc.  
@@ -52,10 +52,10 @@ ms.locfileid: "48073479"
   
 -   Pour que vous puissiez importer des données à l’aide d’une commande **bcp** d’une instruction BULK INSERT ou d’une instruction INSERT... SELECT * FROM OPENROWSET(BULK...), la table de destination doit déjà exister.  
   
--   Chaque champ du fichier de données doit être compatible avec la colonne correspondante de la table cible. Par exemple, un `int` champ ne peut pas être chargé dans un `datetime` colonne. Pour plus d’informations, consultez [Formats de données pour l’importation ou l’exportation en bloc &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md) et [Spécifier des formats de données pour la compatibilité lors de l’utilisation de bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+-   Chaque champ du fichier de données doit être compatible avec la colonne correspondante de la table cible. Par exemple, un champ `int` ne peut pas être chargé dans une colonne `datetime`. Pour plus d’informations, consultez [Formats de données pour l’importation ou l’exportation en bloc &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md) et [Spécifier des formats de données pour la compatibilité lors de l’utilisation de bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
     > [!NOTE]  
-    >  Pour spécifier un sous-ensemble de lignes à importer depuis un fichier de données au lieu de procéder avec le fichier entier, vous pouvez utiliser une commande **bcp** avec le commutateur **-F** *first_row* et/ou le commutateur **-L** *last_row*. Pour plus d’informations, consultez [bcp Utility](../../tools/bcp-utility.md).  
+    >  Pour spécifier un sous-ensemble de lignes à importer depuis un fichier de données au lieu de procéder avec le fichier entier, vous pouvez utiliser une commande **bcp** avec le commutateur **-F** *first_row* et/ou le commutateur **-L** *last_row*. Pour plus d'informations, consultez [bcp Utility](../../tools/bcp-utility.md).  
   
 -   Pour importer des données à partir de fichiers de données contenant des champs de longueur fixe ou de largeur fixe, utilisez un fichier de format. Pour plus d’informations, consultez [Fichiers de format XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48073479"
   
      Pour effectuer une importation en bloc des données d'un fichier de table [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro ou Visual FoxPro (.dbf) ou d'un fichier de feuille de calcul [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xls), vous devez convertir les données en un fichier CSV conforme aux limitations décrites précédemment. L'extension de fichier est en général .csv. Vous pouvez alors utiliser ce fichier .csv comme fichier de données dans une opération d'importation en bloc [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Sur les systèmes 32 bits, il est possible d’importer des données CSV dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans optimisation de l’importation en bloc en utilisant [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) avec le fournisseur OLE DB pour Jet. Jet traite les fichiers texte comme des tables, à l'aide du schéma défini par un fichier schema.ini situé dans le même répertoire que la source de données.  Pour des données CSV, l'un des paramètres du fichier schema.ini doit être « FORMAT=CSVDelimited ». Pour utiliser cette solution, vous devez comprendre le fonctionnement de Jet Text IISAM (syntaxe de sa chaîne de connexion, utilisation de schema.ini, options de configuration du Registre, etc.).  Les meilleures sources d'informations sont l'Aide de Microsoft Access et les articles de la Base de connaissances. Pour plus d'informations, consultez [Initialisation du pilote de source de données de texte](http://go.microsoft.com/fwlink/?LinkId=128503)(en anglais), [Comment utiliser une requête distribuée SQL Server 7.0 avec un serveur lié à des bases de données Access sécurisées](http://go.microsoft.com/fwlink/?LinkId=128504)(en anglais), [Comment : utiliser Jet OLE DB Provider 4.0 pour se connecter à des bases de données ISAM](http://go.microsoft.com/fwlink/?LinkId=128505)(en anglais) et [Comment ouvrir des fichiers texte délimité en utilisant Text IIsam du fournisseur Jet](http://go.microsoft.com/fwlink/?LinkId=128501)(en anglais).  
+     Sur les systèmes 32 bits, il est possible d’importer des données CSV dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans optimisation de l’importation en bloc en utilisant [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) avec le fournisseur OLE DB pour Jet. Jet traite les fichiers texte comme des tables, à l'aide du schéma défini par un fichier schema.ini situé dans le même répertoire que la source de données.  Pour des données CSV, l'un des paramètres du fichier schema.ini doit être « FORMAT=CSVDelimited ». Pour utiliser cette solution, vous devez comprendre le fonctionnement de Jet Text IISAM (syntaxe de sa chaîne de connexion, utilisation de schema.ini, options de configuration du Registre, etc.).  Les meilleures sources d'informations sont l'Aide de Microsoft Access et les articles de la Base de connaissances. Pour plus d’informations, consultez [initialisation du pilote de Source de données texte](https://go.microsoft.com/fwlink/?LinkId=128503), [comment utiliser une requête distribuée de SQL Server 7.0 avec un serveur lié pour les bases de données Access sécurisées](https://go.microsoft.com/fwlink/?LinkId=128504), [HOW TO : Utiliser le fournisseur Jet OLE DB 4.0 pour se connecter aux bases de données ISAM](https://go.microsoft.com/fwlink/?LinkId=128505), et [comment ouvrir des fichiers texte délimités à l’aide Text IIsam du fournisseur Jet](https://go.microsoft.com/fwlink/?LinkId=128501).  
   
  En outre, l'importation en bloc de données depuis un fichier de données vers une table requiert le respect des points suivants :  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48073479"
 >  L'importation en bloc dans une vue partitionnée n'est pas prise en charge et toute tentative en ce sens est vouée à l'échec.  
   
 ## <a name="external-resources"></a>Ressources externes  
- [Comment importer des données d'Excel vers SQL Server](http://support.microsoft.com/kb/321686)  
+ [Comment importer des données d'Excel vers SQL Server](https://support.microsoft.com/kb/321686)  
   
 ## <a name="change-history"></a>Historique des modifications  
   

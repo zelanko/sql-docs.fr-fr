@@ -15,12 +15,12 @@ ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a84857925cd4f9db7088ec922a3cceccb0d64895
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 89900ccb182c58041af7b428af336ddab217d245
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147615"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538893"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Requêtes d'extraction (exploration de données)
   Une *requête d'extraction* vous permet de récupérer les détails des cas ou des données de structure sous-jacents, en envoyant une requête au modèle d'exploration de données. L'extraction est utile si vous souhaitez consulter les cas utilisés pour l'apprentissage du modèle, par opposition à ceux utilisés pour tester le modèle, ou si vous souhaitez consulter des détails supplémentaires à partir des données de cas.  
@@ -29,7 +29,7 @@ ms.locfileid: "50147615"
   
 -   Extraction des **cas du modèle**  
   
-     L'extraction des cas du modèle est utilisée lorsque vous souhaitez partir d'un schéma spécifique dans le modèle, tel qu'un cluster ou une branche d'un arbre de décision, et afficher des détails sur les cas individuels.  
+     L’extraction des cas du modèle est utilisée lorsque vous souhaitez accéder à partir d’un modèle spécifique dans le modèle, tels que d’un cluster ou une branche d’un arbre de décision- et afficher des détails sur les cas individuels.  
   
 -   Extraction des **cas de structure**  
   

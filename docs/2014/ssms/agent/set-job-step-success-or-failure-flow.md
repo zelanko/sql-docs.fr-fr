@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, action flow logic
@@ -15,12 +15,12 @@ ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8899b2e90fecc5c355b71e64c5df3c90c38c5315
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c592964e5da7503c39b97db1f332a9420a1b53f0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127399"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366621"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Définir un flux en cas de réussite ou d'échec de l'étape de travail
   Lors de la création de travaux de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez spécifier l'action que doit effectuer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si un échec survient pendant l'exécution du travail. Déterminez l'action que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit effectuer en cas de réussite ou d'échec de chaque étape de travail. Procédez ensuite comme suit pour définir le déroulement logique des actions de l'étape de travail en utilisant l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -97,6 +97,6 @@ ms.locfileid: "48127399"
 ##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
  **Pour définir un flux en cas de réussite ou d'échec de l'étape de travail**  
   
- Utilisez la `JobStep` classe à l’aide d’un langage de programmation que vous choisissez, tel que Visual Basic, Visual c# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Utilisez la classe `JobStep` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

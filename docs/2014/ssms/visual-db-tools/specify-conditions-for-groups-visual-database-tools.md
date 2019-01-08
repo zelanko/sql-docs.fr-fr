@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - HAVING clause, query groups
@@ -13,15 +13,15 @@ ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe04960e690ad5ba01486b1b961d045645b636bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc0f9319e4d598548111b44b1a10542773a7daa4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192689"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783821"
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>Spécifier des conditions pour des groupes (Visual Database Tools)
-  Vous pouvez limiter les groupes qui apparaissent dans une requête en spécifiant une condition qui s'applique à l'ensemble des groupes, une clause HAVING. Après regroupement et agrégation des données, les conditions de la clause HAVING sont appliquées. Seuls les groupes qui répondent aux conditions apparaissent dans la requête.  
+  Vous pouvez limiter les groupes qui apparaissent dans une requête en spécifiant une condition qui s’applique à l’ensemble des groupes (une clause HAVING). Après regroupement et agrégation des données, les conditions de la clause HAVING sont appliquées. Seuls les groupes qui répondent aux conditions apparaissent dans la requête.  
   
  Supposons que vous vouliez voir le prix moyen de tous les livres pour chaque éditeur dans une table `titles` , mais uniquement dans le cas où ce prix serait supérieur à 10 $. Dans ce cas, vous pouvez spécifier une clause HAVING avec une condition telle que `AVG(price) > 10`.  
   

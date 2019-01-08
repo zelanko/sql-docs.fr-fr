@@ -14,12 +14,12 @@ ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b262cea6362c1f6cb3c69c8b9e96e2bb09aa3e14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0de01fcb7f694331eb9ab4df33429f9a32ee1308
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062467"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978415"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Éditeur de transformation de nettoyage DQS (boîte de dialogue)
   Utilisez la boîte de dialogue de **l’Éditeur de transformation de nettoyage DQS** pour corriger les données à l’aide de DQS (Data Quality Services). Pour plus d’informations, consultez [Concepts Data Quality Services](../../2014/data-quality-services/data-quality-services-concepts.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "48062467"
  Sélectionnez une base de connaissances DQS existante pour la source de données connectée. Pour plus d’informations sur la base de connaissances DQS, consultez [Bases de connaissances et domaines DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Chiffrer la connexion**  
- Spécifiez s’il faut chiffrer la connexion, afin de chiffrer le transfert des données entre le serveur DQS et [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+ Spécifiez s’il faut chiffrer la connexion, afin de chiffrer le transfert de données entre le serveur DQS et [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  **Champs disponibles**  
  Répertorie les champs disponibles pour la base de connaissances sélectionnée. Il existe deux types de champs : domaines uniques, et domaines composés qui contiennent au moins deux domaines uniques.  
@@ -69,7 +69,7 @@ ms.locfileid: "48062467"
   
  Les valeurs suivantes sont valides :  
   
--   **Composant défaillant**, qui indique que la transformation a échoué et que les données d’entrée ne sont pas insérées dans la base de données Data Quality Services. Il s'agit de la valeur par défaut.  
+-   **Composant défaillant**, qui indique que la transformation a échoué et que les données d’entrée ne sont pas insérées dans la base de données Data Quality Services. Valeur par défaut.  
   
 -   **Réacheminer la ligne**, qui indique que les données d’entrée ne sont pas insérées dans la base de données Data Quality Services et qu’elles sont redirigées vers la sortie d’erreur.  
   

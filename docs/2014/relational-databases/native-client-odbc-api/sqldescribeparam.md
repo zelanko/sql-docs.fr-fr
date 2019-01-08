@@ -14,19 +14,19 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cde0718a387fa197e7aeb7d157ecb9b0a0aa4ae6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d52d68cc0cd31e9dbb3da25c46901e126252607
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135139"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359491"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
   Pour décrire les paramètres d’une instruction SQL, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client génère et exécute un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction SELECT lorsque SQLDescribeParam est appelée sur un handle d’instruction ODBC préparé. Les métadonnées du jeu de résultats déterminent les caractéristiques des paramètres dans l'instruction préparée. SQLDescribeParam peut retourner tout code d’erreur SQLExecute ou SQLExecDirect peut retourner.  
   
  Améliorations du moteur de base de données en commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] autoriser SQLDescribeParam obtenir des descriptions plus exactes des résultats attendus. Ces résultats plus exacts peuvent différer des valeurs retournées par SQLDescribeParam dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Découverte des métadonnées](../native-client/features/metadata-discovery.md).  
   
- Autres nouveautés de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *ParameterSizePtr* maintenant retourne une valeur qui s’aligne avec la définition de la taille, en caractères, de la colonne ou l’expression du marqueur de paramètre correspondant, tel que défini dans la [ODBC spécification](http://go.microsoft.com/fwlink/?LinkId=207044). Dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, *ParameterSizePtr* peut être la valeur correspondante de `SQL_DESC_OCTET_LENGTH` pour le type ou une valeur de taille de colonne peu pertinente fournie à SQLBindParameter pour un type, la valeur de ce qui doit être ignoré (`SQL_INTEGER`, par exemple).  
+ Autres nouveautés de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *ParameterSizePtr* maintenant retourne une valeur qui s’aligne avec la définition de la taille, en caractères, de la colonne ou l’expression du marqueur de paramètre correspondant, tel que défini dans la [ODBC spécification](https://go.microsoft.com/fwlink/?LinkId=207044). Dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, *ParameterSizePtr* peut être la valeur correspondante de `SQL_DESC_OCTET_LENGTH` pour le type ou une valeur de taille de colonne peu pertinente fournie à SQLBindParameter pour un type, la valeur de ce qui doit être ignoré (`SQL_INTEGER`, par exemple).  
   
  Le pilote ne prend pas en charge SQLDescribeParam appelant dans les situations suivantes :  
   
@@ -77,7 +77,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 |-|-------------------|------------------------|------------------------|  
 |DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
-|Date|SQL_TYPE_DATE|10|0|  
+|date|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  
 |datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  
@@ -88,7 +88,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
  `SQLDescribeParam` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLDescribeParam, fonction](http://go.microsoft.com/fwlink/?LinkId=59339)   
+ [SQLDescribeParam, fonction](https://go.microsoft.com/fwlink/?LinkId=59339)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], file and folder
@@ -16,12 +15,12 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 06cec1895333e305739476d6c2eca731544fcd3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 594ceb3c21dec321afb7b08a2a54e90571ec8f5f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204129"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802851"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Autorisations d'accès aux dossiers et aux fichiers (Master Data Services)
   Lorsque vous installez [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], des dossiers et des fichiers sont installés dans le système de fichiers dans le chemin d’installation que vous spécifiez pour les fonctionnalités partagées [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Si vous utilisez le chemin d’installation par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonctionnalités partagées, le chemin d’installation pour [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] est *lecteur*: \Program Files\Microsoft SQL Server\120\Master Data Services. Vous pouvez modifier le chemin d’installation des fonctionnalités partagées, mais tenez compte des autorisations héritées du dossier parent et des autorisations définies explicitement pour [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
@@ -47,7 +46,7 @@ ms.locfileid: "48204129"
   
 ###### <a name="mdstempdir-permissions"></a>Autorisations MDSTempDir  
   
-|Nom de groupe ou de compte|Permissions|  
+|Nom de groupe ou de compte|Autorisations|  
 |---------------------------|-----------------|  
 |SYSTEM|Modifier, lire & exécuter, répertorier le contenu des dossiers, lire, écrire|  
 |Administrateurs|Modifier, lire & exécuter, répertorier le contenu des dossiers, lire, écrire|  
@@ -55,7 +54,7 @@ ms.locfileid: "48204129"
   
 ###### <a name="webconfig-permissions"></a>Autorisations Web.config  
   
-|Nom de groupe ou de compte|Permissions|  
+|Nom de groupe ou de compte|Autorisations|  
 |---------------------------|-----------------|  
 |SYSTEM|Contrôle total, modifier, lire & exécuter, lire, écrire|  
 |Administrateurs|Contrôle total, modifier, lire & exécuter, lire, écrire|  

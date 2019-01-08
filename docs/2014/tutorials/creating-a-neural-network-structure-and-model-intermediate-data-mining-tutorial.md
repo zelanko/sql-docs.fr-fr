@@ -17,12 +17,12 @@ ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa474cfd298b5d482f8b1804159f085fca5f8c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 144f2f754dc93be29f6be8fc786afa354a96c911
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195559"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395801"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Création d'une structure et d'un modèle de réseau neuronal (Didacticiel sur l'exploration de données intermédiaire)
   Pour créer un modèle d'exploration de données, vous devez d'abord utiliser l'Assistant Exploration de données pour créer une nouvelle structure d'exploration de données basée sur la nouvelle vue de source de données. Au cours de cette tâche, vous allez utiliser cet Assistant pour créer une structure d'exploration de données ainsi qu'un modèle d'exploration de données associé basé sur l'algorithme MNN ([!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network).  
@@ -57,13 +57,13 @@ ms.locfileid: "48195559"
   
      Les modèles de régression logistique étant basés sur les réseaux neuronaux, vous pouvez réutiliser la même structure et ajouter un nouveau modèle d'exploration de données.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
      Le **sélectionner une vue de Source de données** page s’affiche.  
   
 7.  Sous **vues de sources de données disponibles**, sélectionnez `Call Center`, puis cliquez sur **suivant**.  
   
-8.  Sur le **spécifier les Types de Table** page, sélectionnez le **cas** case à cocher à côté du **FactCallCenter** table. Ne sélectionnez pas quoi que ce soit pour **DimDate**. Cliquez sur **Suivant**.  
+8.  Sur le **spécifier les Types de Table** page, sélectionnez le **cas** case à cocher à côté du **FactCallCenter** table. Ne sélectionnez pas quoi que ce soit pour **DimDate**. Cliquer sur **Suivant**.  
   
 9. Sur le **spécifier les données d’apprentissage** page, sélectionnez **clé** en regard de la colonne **FactCallCenterID.**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48195559"
     |Calls|Entrée|  
     |DateKey|À ne pas utiliser|  
     |DayOfWeek|Entrée|  
-    |FactCallCenterID|Key|  
+    |FactCallCenterID|Touche|  
     |IssuesRaised|Entrée|  
     |LevelOneOperators|Entrée/Prédire|  
     |LevelTwoOperators|Entrée|  
@@ -88,7 +88,7 @@ ms.locfileid: "48195559"
     |TotalOperators|À ne pas utiliser|  
     |WageType|Entrée|  
   
-     Notez que plusieurs colonnes prédictibles ont été sélectionnées. L'une des forces de l'algorithme de réseau neuronal réside dans sa possibilité à analyser toutes les combinaisons possibles des attributs d'entrée et de sortie. Cette action ne convient pas pour un jeu de données de grande taille, car cela peut augmenter de manière exponentielle le temps de traitement.  
+     Notez que plusieurs colonnes prédictibles ont été sélectionnées. L'une des forces de l'algorithme de réseau neuronal réside dans sa possibilité à analyser toutes les combinaisons possibles des attributs d'entrée et de sortie. Vous ne voudriez procéder pour un jeu de données volumineux, car il peut augmenter de manière exponentielle le temps de traitement...  
   
 12. Sur le **colonnes spécifier Type de contenu et données** page, vérifiez que la grille contient les colonnes, les types de contenu et les types de données comme indiqué dans le tableau suivant, puis cliquez sur **suivant**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48195559"
     |AverageTimePerIssue|Continu|Long|  
     |Calls|Continu|Long|  
     |DayOfWeek|Discret|Texte|  
-    |FactCallCenterID|Key|Long|  
+    |FactCallCenterID|Touche|Long|  
     |IssuesRaised|Continu|Long|  
     |LevelOneOperators|Continu|Long|  
     |LevelTwoOperators|Continu|Long|  
@@ -107,7 +107,7 @@ ms.locfileid: "48195559"
     |Shift|Discret|Texte|  
     |WageType|Discret|Texte|  
   
-13. Sur le **créer le test défini** page, désactivez la zone de texte pour l’option, **pourcentage des données de test**. Cliquez sur **Suivant**.  
+13. Sur le **créer le test défini** page, désactivez la zone de texte pour l’option, **pourcentage des données de test**. Cliquer sur **Suivant**.  
   
 14. Sur le **fin de l’Assistant** page, pour le **nom de la structure d’exploration de données**, type `Call Center`.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48195559"
   
  En conséquence, lorsque vous traitez le modèle, les sorties peuvent ne pas être regroupées comme vous le souhaitez. Par exemple, si vous utilisez le clustering pour identifier les meilleurs groupes de valeurs, l’algorithme divise les valeurs de ServiceGrade en plages telles que celle-ci : 0.0748051948 - 0.09716216215. Bien que ce regroupement soit mathématiquement exact, il est possible que ce type de plage ne soit pas aussi explicite pour les utilisateurs professionnels.  
   
- Au cours de cette étape, pour rendre le résultat plus intuitif, vous allez regrouper les valeurs numériques différemment, en créant des copies de la colonne de données numériques.  
+ Dans cette étape, pour rendre le résultat plus intuitif, vous allez regrouper les valeurs numériques différemment, création de copies de la colonne de données numériques.  
   
 ### <a name="how-discretization-works"></a>Fonctionne de discrétisation  
  Analysis Services fournit plusieurs méthodes pour le traitement des données numériques ou leur placement dans un conteneur. Le tableau suivant illustre les différences qui existent entre les résultats lorsque l'attribut de sortie ServiceGrade est traité de trois manières différentes :  
@@ -263,7 +263,7 @@ ms.locfileid: "48195559"
   
      Le **propriétés** fenêtre doit contenir les informations suivantes :  
   
-    |Propriété|Valeur|  
+    |Propriété|Value|  
     |--------------|-----------|  
     |**Description**|Temporary column alias (Alias de colonne temporaire)|  
     |**ID**|ServiceGrade Binned|  
@@ -283,7 +283,7 @@ ms.locfileid: "48195559"
     |AverageTimePerIssue|Prédire|Prédire|  
     |Calls|Entrée|Entrée|  
     |DayOfWeek|Entrée|Entrée|  
-    |FactCallCenterID|Key|Key|  
+    |FactCallCenterID|Touche|Touche|  
     |IssuesRaised|Entrée|Entrée|  
     |LevelOneOperators|Entrée|Entrée|  
     |LevelTwoOperators|Entrée|Entrée|  

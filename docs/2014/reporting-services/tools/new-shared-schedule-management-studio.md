@@ -13,12 +13,12 @@ ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 48119fdcfe2957926910faae03af27c66e719b08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d94043e338ddcaeffbfc87a1cfad74e6fd854be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132209"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355554"
 ---
 # <a name="new-shared-schedule-management-studio"></a>Nouvelle planification partagée (Management Studio)
   Utilisez cette page pour créer une planification partagée pour exécuter les rapports publiés et les abonnements. Les planifications partagées peuvent être utilisées à la place des planifications spécifiques des rapports ou spécifiques des abonnements. Des informations de planification centralisées et la capacité de suspendre et de reprendre les opérations planifiées sont deux fonctionnalités clés qui distinguent les planifications partagées des planifications spécifiques aux éléments.  
@@ -30,7 +30,7 @@ ms.locfileid: "48132209"
  Pour ouvrir cette page, démarrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à un serveur de rapports, cliquez avec le bouton droit sur **Planification partagée**et sélectionnez **Nouvelle planification**. Pour enregistrer la planification, le service Agent SQL Server doit être en cours d'exécution.  
   
 > [!NOTE]  
->  Cette fonctionnalité n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Cette fonctionnalité n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="options"></a>Options  
  **Nom**  

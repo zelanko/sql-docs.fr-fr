@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], stopping
@@ -14,12 +14,12 @@ ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2f2d7a8e7ae1e8e6972f98f50eb52a1b31a7ab70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f334834ff1deecebbc719ec71fb8348c13e4f68e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057482"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358761"
 ---
 # <a name="stop-a-job"></a>Arrêter un travail
   Cette rubrique explique comment arrêter un travail de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Un travail est une suite d'actions effectuées par SQL Server Agent.  
@@ -53,7 +53,7 @@ ms.locfileid: "48057482"
   
 #### <a name="to-stop-a-job"></a>Pour arrêter un travail  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
   
 2.  Développez **SQL Server Agent**, **Travaux**, cliquez avec le bouton droit sur le travail à arrêter, puis cliquez sur **Arrêter le travail**.  
   
@@ -84,6 +84,6 @@ ms.locfileid: "48057482"
 ##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
  **Pour arrêter un travail**  
   
- Appelez la méthode `Stop` de la classe `Job` à l'aide d'un langage de programmation tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Appelez la méthode `Stop` de la classe `Job` à l'aide d'un langage de programmation tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

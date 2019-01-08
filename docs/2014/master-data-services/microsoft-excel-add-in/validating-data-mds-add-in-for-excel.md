@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a01af53372a8be1fce6ffa2e4ee8d4cddce8d057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98844917c047e2e52018e9ed8b050f708617ae2f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135339"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799101"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Validation des données (Complément MDS pour Excel)
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], lorsque vous publiez des données, deux types de validation ont lieu :  
@@ -39,7 +38,7 @@ ms.locfileid: "48135339"
 |------------|-----------------|  
 |Error|Une ou plusieurs valeurs dans la ligne n'ont pas pu être validées par rapport aux règles d'entreprise définies par un administrateur MDS.|  
 |Non validé|Les valeurs dans la ligne n'ont pas encore été validées par rapport aux règles d'entreprise.|  
-|Réussi|Toutes les valeurs dans la ligne ont réussi la validation par rapport aux règles d'entreprise.|  
+|Opération réussie|Toutes les valeurs dans la ligne ont réussi la validation par rapport aux règles d'entreprise.|  
   
 ## <a name="input-statuses"></a>États d'entrée  
  Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], les états d’entrée suivants sont possibles :  
@@ -55,7 +54,7 @@ ms.locfileid: "48135339"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Déterminez les valeurs qui ne respectent pas les règles d'entreprise définies.|[Appliquer des règles d’entreprise &#40;complément MDS pour Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
+|Déterminez les valeurs qui ne respectent pas les règles d'entreprise définies.|[Appliquer des règles d’entreprise &#40;Complément MDS pour Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
 |Pour aider à corriger les erreurs de validation, affichez toutes les transactions qui ont eu lieu pour un membre.|[Afficher toutes les annotations ou transactions pour un membre &#40;Complément MDS pour Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenu associé  

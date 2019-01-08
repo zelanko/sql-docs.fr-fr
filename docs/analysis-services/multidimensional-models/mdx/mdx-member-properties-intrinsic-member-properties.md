@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a2e30dcf1875b09630516be9d9deb3248a95481e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e54aa6bb53e6ce9f34e6647927f29b7aadb97180
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146164"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206878"
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>Propriétés de membre MDX - propriétés de membre intrinsèques
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "50146164"
   
  Pour obtenir une présentation de l’utilisation et de l’affichage des propriétés de membre de dimension, consultez [Affichage de propriétés de membre SSAS dans une fenêtre de requête MDX dans SSMS](http://go.microsoft.com/fwlink/?LinkId=317362).  
   
-> [!NOTE]  
+> [!NOTE]
 >  En tant que fournisseur compatible avec la section OLAP de la norme OLE DB de mars 1999 (2.6), [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prend en charge les propriétés de membre intrinsèques répertoriées dans cette rubrique.  
->   
+> 
 >  Des fournisseurs autres que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] peuvent prendre en charge des propriétés de membre intrinsèques supplémentaires. Pour plus d'informations sur les propriétés de membre intrinsèques prises en charge par d'autres fournisseurs, consultez la documentation qui les accompagne.  
   
 ## <a name="types-of-member-properties"></a>Types de propriétés de membre  
@@ -61,13 +61,13 @@ ms.locfileid: "50146164"
 |--------------|-----------------|  
 |**ID**|Identificateur géré en interne pour le membre.|  
 |**Key**|Valeur de la clé du membre dans le type de données d'origine. MEMBER_KEY est fournie à des fins de compatibilité descendante.  MEMBER_KEY a la même valeur que KEY0 pour les clés non composites et la propriété MEMBER_KEY est Null pour les clés composites.|  
-|**KEYx**|Clé du membre, où x est la valeur ordinale de base zéro de la clé. KEY0 est disponible pour les clés composites et non composites, mais utilisé principalement pour les clés composites.<br /><br /> Pour les clés composites, KEY0, KEY1, KEY2, etc., forment collectivement la clé composite. Vous pouvez utiliser chacune indépendamment dans une requête pour retourner la partie en question de la clé composite. Par exemple, la spécification de KEY0 retourne la première partie de la clé composite, la spécification de KEY1 retourne la partie suivante de la clé composite, et ainsi de suite.<br /><br /> S’il s’agit d’une clé non composite, KEY0 équivaut alors à **Key**.<br /><br /> Notez que **KEYx** peut être utilisé en contexte, ainsi que sans contexte. Pour cette raison, il apparaît dans les deux listes.<br /><br /> Pour obtenir un exemple d’utilisation de cette propriété de membre, consultez [A Simple MDX Tidbit : Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)(Une astuce MDX toute simple : Key0, Key1, Key2).|  
-|**Name**|Nom du membre.|  
+|**KEYx**|Clé du membre, où x est la valeur ordinale de base zéro de la clé. KEY0 est disponible pour les clés composites et non composites, mais utilisé principalement pour les clés composites.<br /><br /> Pour les clés composites, KEY0, KEY1, KEY2, etc., forment collectivement la clé composite. Vous pouvez utiliser chacune indépendamment dans une requête pour retourner la partie en question de la clé composite. Par exemple, la spécification de KEY0 retourne la première partie de la clé composite, la spécification de KEY1 retourne la partie suivante de la clé composite, et ainsi de suite.<br /><br /> S’il s’agit d’une clé non composite, KEY0 équivaut alors à **Key**.<br /><br /> Notez que **KEYx** peut être utilisé en contexte, ainsi que sans contexte. Pour cette raison, il apparaît dans les deux listes.<br /><br /> Pour obtenir un exemple montrant comment utiliser cette propriété de membre, consultez [A Simple MDX Tidbit : Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
+|**Nom**|Nom du membre.|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>Syntaxe PROPERTIES pour les propriétés sensibles au contexte  
  Vous utilisez ces propriétés de membre dans le contexte d’une dimension ou d’un niveau spécifique, et fournissez les valeurs de chaque membre de la dimension ou du niveau en question.  
   
- Pour les propriétés de membre de dimension, vous devez faire précéder le nom de la propriété du nom de la dimension à laquelle elle s'applique. L'exemple suivant illustre la syntaxe appropriée :  
+ Pour les propriétés de membre de dimension, vous devez faire précéder le nom de la propriété du nom de la dimension à laquelle elle s'applique. L'exemple suivant illustre la syntaxe appropriée :  
   
  `DIMENSION PROPERTIES Dimension.Property_name`  
   
@@ -98,7 +98,7 @@ ms.locfileid: "50146164"
 |**HIERARCHY_UNIQUE_NAME**|Nom unique de la hiérarchie. Si le membre appartient à plusieurs hiérarchies, il existe une ligne pour chaque hiérarchie dont il fait partie. Pour les fournisseurs qui produisent des noms uniques par qualification, chaque composant du nom est délimité.|  
 |**IS_DATAMEMBER**|Valeur booléenne indiquant si le membre est un membre de données.|  
 |**IS_PLACEHOLDERMEMBER**|Valeur booléenne indiquant si le membre est un espace réservé.|  
-|**KEYx**|Clé du membre, où x est la valeur ordinale de base zéro de la clé. KEY0 est disponible pour les clés composites et non composites.<br /><br /> S’il s’agit d’une clé non composite, KEY0 équivaut alors à **Key**.<br /><br /> Pour les clés composites, KEY0, KEY1, KEY2, etc., forment collectivement la clé composite. Vous pouvez faire référence à chacune indépendamment dans une requête pour retourner la partie en question de la clé composite. Par exemple, la spécification de KEY0 retourne la première partie de la clé composite, la spécification de KEY1 retourne la partie suivante de la clé composite, et ainsi de suite.<br /><br /> Notez que **KEYx** peut être utilisé en contexte, ainsi que sans contexte. Pour cette raison, il apparaît dans les deux listes.<br /><br /> Pour obtenir un exemple d’utilisation de cette propriété de membre, consultez [A Simple MDX Tidbit : Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)(Une astuce MDX toute simple : Key0, Key1, Key2).|  
+|**KEYx**|Clé du membre, où x est la valeur ordinale de base zéro de la clé. KEY0 est disponible pour les clés composites et non composites.<br /><br /> S’il s’agit d’une clé non composite, KEY0 équivaut alors à **Key**.<br /><br /> Pour les clés composites, KEY0, KEY1, KEY2, etc., forment collectivement la clé composite. Vous pouvez faire référence à chacune indépendamment dans une requête pour retourner la partie en question de la clé composite. Par exemple, la spécification de KEY0 retourne la première partie de la clé composite, la spécification de KEY1 retourne la partie suivante de la clé composite, et ainsi de suite.<br /><br /> Notez que **KEYx** peut être utilisé en contexte, ainsi que sans contexte. Pour cette raison, il apparaît dans les deux listes.<br /><br /> Pour obtenir un exemple montrant comment utiliser cette propriété de membre, consultez [A Simple MDX Tidbit : Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
 |**LCID** *x*|Traduction de la légende du membre dans la valeur hexadécimale de l’ID des paramètres régionaux, où *x* correspond à la valeur décimale de l’ID des paramètres régionaux (par exemple, LCID1009 pour Anglais - Canada). Uniquement disponible si la colonne de légende de la traduction est liée à la source de données.|  
 |**LEVEL_NUMBER**|Distance du membre par rapport à la racine de la hiérarchie. Le niveau de la racine est égal à zéro.|  
 |**LEVEL_UNIQUE_NAME**|Nom unique du niveau auquel le membre appartient. Pour les fournisseurs qui produisent des noms uniques par qualification, chaque composant du nom est délimité.|  
@@ -131,7 +131,7 @@ ms.locfileid: "50146164"
 ### <a name="example"></a>Exemple  
  Les exemples suivants montrent des requêtes MDX qui retournent les propriétés intrinsèques.  
   
- **Exemple 1 : utiliser les propriétés intrinsèques contextuelles dans une requête**  
+ **Exemple 1 : Utilisez les propriétés intrinsèques contextuelles dans la requête**  
   
  L'exemple suivant retourne l'ID parent, la clé et le nom de chaque catégorie de produits. Notez que les propriétés sont exposées en tant que mesures. Cela vous permet d'afficher les propriétés d'un ensemble de cellules lorsque vous exécutez la requête, plutôt que la boîte de dialogue Propriétés de membre dans SSMS. Vous pouvez exécuter une requête comme celle qui suit pour récupérer des métadonnées de membre à partir d'un cube déjà déployé.  
   
@@ -149,7 +149,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **Exemple 2 : propriétés intrinsèques non sensibles au contexte**  
+ **Exemple 2 : Propriétés intrinsèques non sensibles au contexte**  
   
  L'exemple suivant correspond à la liste exhaustive des propriétés intrinsèques non sensibles au contexte. Après avoir exécuté la requête dans SSMS, cliquez sur les membres individuels pour afficher les propriétés dans la boîte de dialogue Propriétés de membre.  
   
@@ -187,7 +187,7 @@ FROM [Adventure Works]
 WHERE [Employee].[Employee Department].[Department].&[Sales]  
 ```  
   
- **Exemple 3 : retourner les propriétés de membre sous forme de données dans un jeu de résultats**  
+ **Exemple 3 : Retourner les propriétés de membre sous forme de données dans un jeu de résultats**  
   
  L'exemple suivant retourne la légende traduite pour le membre de la catégorie de produit dans la dimension Product du cube Adventure Works pour les paramètres régionaux spécifiés.  
   

@@ -18,12 +18,12 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1fa8689862184f0554eff0aefd3d39896f2abdf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662518"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210518"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51662518"
   
 ||  
 |-|  
-|**S’applique aux**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**S’applique à** : SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  Paramètre obligatoire qui désigne quelle opération le curseur effectuera. *optype* requiert l’une des opérations suivantes **int** valeurs d’entrée.  
   
-|Valeur|Nom   |Description|  
+|Value|Créer une vue d’abonnement|Description|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Utilisée pour mettre à jour une ou plusieurs lignes dans le tampon d'extraction.  Les lignes spécifiées dans *rownum* sont accessibles de nouveau et mis à jour.|  
 |0x0002|Suppression|Utilisée pour supprimer une ou plusieurs lignes dans le tampon d'extraction. Les lignes spécifiées dans *rownum* sont de nouveau accès et de suppression.|  
@@ -59,7 +59,7 @@ sp_cursor  cursor, optype, rownum, table
 |0X0008|REFRESH|Utilisée pour remplir la mémoire tampon à partir de tables sous-jacentes et peut être utilisée pour actualiser la ligne si une mise à jour ou une suppression échoue en raison d'un contrôle d'accès concurrentiel optimiste, ou après une opération UPDATE.|  
 |0X10|LOCK|Provoque un SQL Server U-acquisition du verrou sur la page contenant la ligne spécifiée. Ce verrou est compatible avec les verrous S-Lock mais pas avec les verrous X-Lock ou autres verrous U-Lock. Permet d'implémenter le verrouillage à court terme.|  
 |0X20|SETPOSITION|Est utilisé uniquement lorsque le programme va émettre un serveur SQL suivant positionné instruction DELETE ou UPDATE.|  
-|0X40|ABSOLUTE|Peut uniquement être utilisée avec UPDATE ou DELETE.  ABSOLUTE est utilisée uniquement avec les curseurs KEYSET (est ignorée pour les curseurs DYNAMIC et les curseurs STATIC ne peuvent pas être mis à jour).<br /><br /> Remarque : Si ABSOLUTE est spécifiée sur une ligne dans le jeu de clés n’a pas été extrait, l’opération peut échouer la vérification d’accès concurrentiel et le résultat obtenu ne peut pas être garanti.|  
+|0X40|ABSOLUTE|Peut uniquement être utilisée avec UPDATE ou DELETE.  ABSOLUTE est utilisée uniquement avec les curseurs KEYSET (est ignorée pour les curseurs DYNAMIC et les curseurs STATIC ne peuvent pas être mis à jour).<br /><br /> Remarque : Si ABSOLUTE est spécifiée sur une ligne dans le jeu de clés qui n'a pas été extrait, l'opération peut entraîner l'échec du contrôle d'accès concurrentiel et le résultat obtenu ne peut pas être garanti.|  
   
  *ROWNUM*  
  Spécifie les lignes dans le tampon d'extraction sur lesquelles le curseur interviendra, qu'il mettra à jour ou supprimera.  
@@ -137,7 +137,7 @@ sp_cursor  cursor, optype, rownum, table
   
  Lorsqu'un paramètre unique est utilisé, une instruction UPDATE peut être envoyée à l'aide de la syntaxe suivante :  
   
- `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,…n]`  
+ `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
 >  Si UPDATE \<nom_table > est spécifié, toute valeur spécifiée pour le *table* paramètre sera ignoré.  
@@ -169,7 +169,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- sauf lorsque VALUES a été spécifié, auquel cas une « ) » de fin est nécessaire après la dernière expression. Dans ce cas, le  *\<nom_table >* dans le UDPATE construite instruction est celui spécifié ou défini par défaut par le *table* paramètre.  
+ sauf lorsque VALUES a été spécifié, auquel cas une « ) » de fin est nécessaire après la dernière expression. Dans ce cas, le  *\<nom_table >* dans la mise à jour construite instruction est celui spécifié ou défini par défaut par le *table* paramètre.  
   
 > [!NOTE]  
 >  Il est possible d'envoyer un paramètre comme paramètre nommé, c'est-à-dire « `@VALUES` ». Dans ce cas, aucun autre paramètre nommé ne peut être utilisé.  

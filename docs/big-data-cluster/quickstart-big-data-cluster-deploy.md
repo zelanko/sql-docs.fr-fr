@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: c760bd4c149a63de0335c6d6651036bba56533a0
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: f5ddd80eaf29db657c42eec5c84c8485e8b0d8b6
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246758"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531154"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)
 
@@ -56,7 +56,6 @@ Avant de continuer, notez les instructions importantes suivantes :
 - Dans le [fenêtre de commande](https://docs.microsoft.com/visualstudio/ide/reference/command-window), guillemets doubles sont inclus dans les variables d’environnement. Si vous utilisez des guillemets pour encapsuler un mot de passe, les guillemets sont inclus dans le mot de passe.
 - Dans bash, les guillemets ne sont pas inclus dans la variable. Nos exemples utilisent des guillemets doubles `"`.
 - Vous pouvez définir les variables d’environnement le mot de passe à comme vous le souhaitez, mais assurez-vous qu’ils sont suffisamment complexes et n’utilisent pas le `!`, `&`, ou `'` caractères.
-- Pour la version CTP 2.2, ne modifiez pas les ports par défaut.
 - Le `sa` compte est un administrateur système sur l’instance principale de SQL Server qui est créé pendant l’installation. Une fois le conteneur SQL Server créé, la variable d’environnement `MSSQL_SA_PASSWORD` que vous avez spécifiée peut être découverte en exécutant `echo $MSSQL_SA_PASSWORD` dans le conteneur. Pour des raisons de sécurité, vous devez modifier votre `sa` mot de passe conformément aux bonnes pratiques documentées [ici](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Initialiser les variables d’environnement suivantes.  Ils sont requis pour le déploiement d’un cluster de données volumineuses :

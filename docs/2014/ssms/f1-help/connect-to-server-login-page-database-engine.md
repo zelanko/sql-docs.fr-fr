@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttosqlserver.login.f1
@@ -12,12 +12,12 @@ ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81bf42f1daae71e2b2730b611c62c195e73d9f75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 906bc6f3426913adfbff94b8f8b76d641c4a04a4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207389"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362221"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Se connecter au serveur (page Connexion) — Moteur de base de données
   Utilisez cet onglet pour afficher ou spécifier les options de connexion à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -31,7 +31,7 @@ ms.locfileid: "48207389"
   
  Quand vous vous connectez à une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous devez utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et spécifier une base de données dans la boîte de dialogue **Se connecter au serveur** , sous l’onglet **Propriétés de connexion** . Vérifiez que vous avez coché la case **Chiffrer la connexion** .  
   
- Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecte à **master**. Si vous spécifiez une base de données utilisateur, vous ne verrez que la base de données et ses objets dans l'Explorateur d'objets. Si vous vous connectez à **master**, vous pouvez consulter toutes les bases de données. Pour plus d’informations, consultez [Présentation de Microsoft Azure SQL Database](http://go.microsoft.com/fwlink/?LinkId=163948).  
+ Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecte à **master**. Si vous spécifiez une base de données utilisateur, vous ne verrez que la base de données et ses objets dans l'Explorateur d'objets. Si vous vous connectez à **master**, vous pouvez consulter toutes les bases de données. Pour plus d’informations, consultez [Présentation de Microsoft Azure SQL Database](https://go.microsoft.com/fwlink/?LinkId=163948).  
   
  **Nom du serveur**  
  Sélectionnez l'instance de serveur à laquelle se connecter. La dernière instance de serveur à laquelle une connexion a été établie est affichée par défaut.  
@@ -41,7 +41,7 @@ ms.locfileid: "48207389"
   
  Quand vous vous connectez à une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vous devez utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et spécifier une base de données dans la boîte de dialogue **Se connecter au serveur** , sous l’onglet **Propriétés de connexion** . Vérifiez que vous avez coché la case **Chiffrer la connexion** .  
   
- Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecte à **master**. Si vous spécifiez une base de données utilisateur, vous ne verrez que la base de données et ses objets dans l'Explorateur d'objets. Si vous vous connectez à **master**, vous pouvez consulter toutes les bases de données. Pour plus d’informations, consultez [Présentation de la base de données SQL Azure Windows](http://go.microsoft.com/fwlink/?LinkId=163948).  
+ Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecte à **master**. Si vous spécifiez une base de données utilisateur, vous ne verrez que la base de données et ses objets dans l'Explorateur d'objets. Si vous vous connectez à **master**, vous pouvez consulter toutes les bases de données. Pour plus d’informations, consultez [Présentation de la base de données SQL Azure Windows](https://go.microsoft.com/fwlink/?LinkId=163948).  
   
  **Mode d'authentification Windows (authentification Windows)**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Le mode d’authentification Windows permet à l’utilisateur de se connecter au moyen d’un compte d’utilisateur Windows.  

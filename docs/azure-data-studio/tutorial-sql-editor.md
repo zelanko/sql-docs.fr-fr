@@ -1,7 +1,8 @@
 ---
-title: 'Didacticiel : Utiliser l’éditeur Transact-SQL Azure Data Studio pour créer des objets de base de données | Microsoft Docs'
-description: Ce didacticiel illustre les fonctionnalités clées dans Azure Data Studio qui simplifient l’utilisation de T-SQL.
-ms.custom: tools|sos
+title: 'Didacticiel : Utiliser l’éditeur Transact-SQL pour créer des objets de base de données'
+titleSuffix: Azure Data Studio
+description: Ce didacticiel illustre les fonctionnalités clées dans Azure Data Studio qui simplifient l’utilisation avec T-SQL.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2a517b1efb6a86d70bd05f9a1418792c0b61098
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355930"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030453"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Didacticiel : Utiliser l’éditeur Transact-SQL pour créer des objets de base de données- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -218,7 +219,7 @@ Le *setCustomer* procédure stockée créée dans la section précédente néces
    ![résultat de test](./media/tutorial-sql-editor/test-result.png)
 
 ## <a name="next-steps"></a>Étapes suivantes
-Dans ce didacticiel, vous avez appris comment :
+Dans ce didacticiel, vous avez appris à :
 > [!div class="checklist"]
 > * Objets de schéma de recherche rapide
 > * Modifier les données de table 

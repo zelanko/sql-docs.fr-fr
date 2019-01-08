@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBGetInstances
@@ -18,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7e35b7b2a3551882ce8b244c5e93aa8ad107b8fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128589"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795031"
 ---
 # <a name="localdbgetinstances-function"></a>Fonction LocalDBGetInstances
   Retourne toutes les instances de SQL Server Express LocalDB avec la version donnée.  
@@ -42,10 +40,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Paramètres  
  *pInstanceNames*  
- [Sortie] Si cette fonction retourne, elle contient les noms des instances nommées et par défaut de LocalDB sur la station de travail de l'utilisateur.  
+ [Sortie] Lorsque cette fonction est retournée, contient les noms des deux nommé et instances de base de données locale sur le poste de travail par défaut.  
   
  *lpdwNumberOfInstances*  
- [Entrée/sortie] En entrée, contient le nombre d'emplacements de noms d'instances dans la mémoire tampon de *pInstanceNames* . Dans la sortie, contient le nombre d'instances de LocalDB sur la station de travail de l'utilisateur.  
+ [Entrée/sortie] En entrée, contient le nombre d'emplacements de noms d'instances dans la mémoire tampon de *pInstanceNames* . Lors de la sortie, contient le nombre d’instances de LocalDB sur la station de travail de l’utilisateur.  
   
 ## <a name="returns"></a>Valeur renvoyée  
  Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  

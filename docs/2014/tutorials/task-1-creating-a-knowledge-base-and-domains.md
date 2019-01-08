@@ -13,12 +13,12 @@ ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1222d6d217c004790336a6a234d7f52154e148ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53b67f363f076108a3b3add6950b14e37e0bd1ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132433"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373201"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>Tâche 1 : Création d'une base de connaissances et de domaines
   Dans cette tâche, vous allez créer le **fournisseurs** base de connaissances et créer des domaines qui est utilisé pour la correspondance des données et de nettoyage des données pour supprimer les doublons.  
@@ -49,7 +49,7 @@ ms.locfileid: "48132433"
   
      ![Créer la boîte de dialogue domaine](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "créer la boîte de dialogue domaine")  
   
-9. Répétez l'étape précédente pour créer les domaines suivants avec les paramètres par défaut. Pour simplifier le didacticiel, vous définissez le **Type de données** de tous les domaines en tant que **chaîne**. Les autres types de données autorisés sont : entier, décimal, et date. Lorsque le **utiliser des valeurs Menantes** option est activée (par défaut), tous les synonymes sont remplacés par la valeur de début du groupe de synonymes dans la sortie. Paramètre **normaliser la chaîne** option (valeur par défaut) supprime tous les caractères spéciaux dans les valeurs de domaine. Le **Format de sortie à** option vous permet de sélectionner la mise en forme est appliquée lorsque les valeurs de données dans le domaine sont générées. Sélectionnez **activer le vérificateur d’orthographe** (valeur par défaut) pour exécuter le vérificateur orthographique sur toutes les valeurs de chaîne en remplissant le domaine. Le **langage** paramètre spécifie la version linguistique de la **le vérificateur d’orthographe** vous souhaitez appliquer. Sélectionnez **désactiver les algorithmes d’erreur de syntaxe** pour remplir le domaine sans vérifier les valeurs de chaîne pour les erreurs de syntaxe. Consultez [créer un domaine](http://msdn.microsoft.com/library/hh510401.aspx) rubrique dans la bibliothèque MSDN pour plus d’informations.  
+9. Répétez l'étape précédente pour créer les domaines suivants avec les paramètres par défaut. Pour simplifier le didacticiel, vous définissez le **Type de données** de tous les domaines en tant que **chaîne**. Les autres types de données autorisés sont les suivants : Integer, Decimal, et Date. Lorsque le **utiliser des valeurs Menantes** option est activée (par défaut), tous les synonymes sont remplacés par la valeur de début du groupe de synonymes dans la sortie. Paramètre **normaliser la chaîne** option (valeur par défaut) supprime tous les caractères spéciaux dans les valeurs de domaine. Le **Format de sortie à** option vous permet de sélectionner la mise en forme est appliquée lorsque les valeurs de données dans le domaine sont générées. Sélectionnez **activer le vérificateur d’orthographe** (valeur par défaut) pour exécuter le vérificateur orthographique sur toutes les valeurs de chaîne en remplissant le domaine. Le **langage** paramètre spécifie la version linguistique de la **le vérificateur d’orthographe** vous souhaitez appliquer. Sélectionnez **désactiver les algorithmes d’erreur de syntaxe** pour remplir le domaine sans vérifier les valeurs de chaîne pour les erreurs de syntaxe. Consultez [créer un domaine](https://msdn.microsoft.com/library/hh510401.aspx) rubrique dans la bibliothèque MSDN pour plus d’informations.  
   
     -   Nom du fournisseur  
   

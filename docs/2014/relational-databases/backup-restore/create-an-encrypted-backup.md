@@ -10,12 +10,12 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7fcfdf8a6d25d950970952d9f5dec93a523dc37f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3959e998111d5fa45eee45b3d7de35501f86f794
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205629"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531850"
 ---
 # <a name="create-an-encrypted-backup"></a>Créer une sauvegarde chiffrée
   Cette rubrique décrit les étapes nécessaires pour créer une sauvegarde chiffrée à l'aide de Transact-SQL.  
@@ -29,7 +29,7 @@ ms.locfileid: "48205629"
   
  Utilisez la procédure suivante pour créer une sauvegarde chiffrée d'une base de données sur un disque local. Cet exemple utilise une base de données utilisateur appelée MyTestDB.  
   
-1.  **Créez une clé principale de base de données pour la base de données master :** Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera enregistrée dans la base de données. Connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple, puis cliquez sur **Exécuter**.  
+1.  **Créer une clé principale de base de données de la base de données master :** Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera stockée dans la base de données. Connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple, puis cliquez sur **Exécuter**.  
   
     ```  
     -- Creates a database master key.   
@@ -41,7 +41,7 @@ ms.locfileid: "48205629"
   
     ```  
   
-2.  **Créez une sauvegarde du certificat :** Créez un certificat dans la base de données MASTER. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+2.  **Créer une sauvegarde du certificat :** Créez un certificat dans la base de données MASTER. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
     Use Master  
@@ -52,7 +52,7 @@ ms.locfileid: "48205629"
   
     ```  
   
-3.  **Sauvegardez la base de données :** spécifiez l'algorithme de chiffrement et le certificat à utiliser. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+3.  **Sauvegarde la base de données :** spécifiez l'algorithme de chiffrement et le certificat à utiliser. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
@@ -80,15 +80,15 @@ ms.locfileid: "48205629"
   
 -   Une clé principale de base de données pour la base de données master, et un certificat ou une clé asymétrique sur l'instance de SQL Server. Pour les conditions et les autorisations de chiffrement, consultez [Backup Encryption](backup-encryption.md).  
   
-1.  **Créez les informations d'identification SQL Server :** Pour créer des informations d'identification SQL Server, connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple suivant, puis cliquez sur **Exécuter**.  
+1.  **Créer des informations d’identification SQL Server :** Pour créer des informations d’identification SQL Server, connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête et copiez et collez l’exemple suivant et cliquez sur **Execute**.  
   
     ```  
     CREATE CREDENTIAL mycredential   
-    WITH IDENTITY= 'mystorageaccount' – this is the name of the storage account you specified when creating a storage account    
-    , SECRET = '<storage account access key>' – this should be either the Primary or Secondary Access Key for the storage account  
+    WITH IDENTITY= 'mystorageaccount' - this is the name of the storage account you specified when creating a storage account    
+    , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **Créer une clé principale de base de données :** Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera stockée dans la base de données. Connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple, puis cliquez sur **Exécuter**.  
+2.  **Créer une clé principale de base de données :** Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera stockée dans la base de données. Connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple, puis cliquez sur **Exécuter**.  
   
     ```  
     -- Creates a database master key.  
@@ -100,7 +100,7 @@ ms.locfileid: "48205629"
   
     ```  
   
-3.  **Créez une sauvegarde du certificat :** créez un certificat de sauvegarde dans la base de données MASTER. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+3.  **Créer une sauvegarde du certificat :** créez un certificat de sauvegarde dans la base de données MASTER. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
     USE Master;  
@@ -111,13 +111,13 @@ ms.locfileid: "48205629"
   
     ```  
   
-4.  **Sauvegardez la base de données :** spécifiez l'algorithme de chiffrement et le certificat à utiliser. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+4.  **Sauvegarde la base de données :** spécifiez l'algorithme de chiffrement et le certificat à utiliser. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
     TO URL = N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
     WITH  
-      CREDENTIAL 'mycredential' – this is the name of the credential created in the first step.  
+      CREDENTIAL 'mycredential' - this is the name of the credential created in the first step.  
       ,COMPRESSION  
       ,ENCRYPTION   
        (  

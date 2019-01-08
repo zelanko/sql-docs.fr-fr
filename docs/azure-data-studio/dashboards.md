@@ -1,7 +1,8 @@
 ---
-title: Accéder rapidement aux insights et des tâches courantes dans Azure Data Studio | Microsoft Docs
-description: En savoir plus sur l’affichage des widgets dans Azure Data Studio.
-ms.custom: tools|sos
+title: Accéder rapidement aux insights et des tâches courantes
+titleSuffix: Azure Data Studio
+description: En savoir plus sur l’affichage des widgets du tableau de bord de base de données dans Azure Data Studio.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: b163d110353d07811f0feb991772c90053651659
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: faaa59e8607f707bb43f31638880f771ae7ae6ab
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356192"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030483"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Tableaux de bord dans [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -42,7 +43,7 @@ Une fois ce didacticiel, poursuivez votre lecture pour plus d’informations sur
 La fenêtre Détails de Insight mobile fournit des informations détaillées pour un widget insight connexes. 
 - Un widget d’Insight restitue une vue de résumé at-a-glance avec count, ligne, etc. de graphique. 
 - La fenêtre Détails de Insight mobile fournit des détails « Explorer », répertoriant les données plus précises pour chaque élément répertorié dans le widget un aperçu de haut niveau. 
-  - Le contenu du menu volant détails est défini avec une requête SQL distincte pour les requêtes du widget principal. 
+  - Le contenu du menu volant détails est défini avec une requête SQL distincte pour les requêtes du widget principal.
 
 Il n’est pas nécessaire de jeu pour une requête de détails Insight, mais la disposition est standard.
 - La moitié supérieure de la vue est toujours une vue « summary » 2 colonnes. Les colonnes à utiliser sont définies par les propriétés « label » et « valeur » de la configuration JSON
@@ -88,11 +89,11 @@ Exemple de configuration de menu volant Insight détails
 |détails|objet JSON|||propriété obligatoire à définir des définitions de détail insight dans sa structure||
 |queryFile|chaîne|||le chemin d’accès du fichier de requête sql insight en détail et le nom de fichier relatif à l’emplacement de package.json||
 |Étiquette|objet JSON|||propriété obligatoire pour définir chaque élément de ligne dans la vue liste récapitulative|dans les futures le nom de cette propriété à modifier, comme « summaryList »|
-|Icône|chaîne|||indiquer le nom de l’icône à consulter pour chaque élément de la vue liste récapitulative.|liste (tbd) des icônes pris en charge est documentée|
+|Icône|chaîne|||indiquer le nom de l’icône à afficher pour chaque élément de la vue liste récapitulative.|liste (tbd) des icônes pris en charge est documentée|
 |column|chaîne|||indiquer le nom de la première colonne dans la vue liste récapitulative du jeu de résultats de requête|dans les futures le nom de cette propriété devient plus intuitif nom|
-|valeur|chaîne|||indiquer le nom de la deuxième colonne dans la vue liste récapitulative du jeu de résultats de requête. La valeur de cette colonne est utilisée pour vérifier les conditions et définir la couleur de point de couleur du chaque liste récapitulative afficher les éléments|dans les futures le nom de cette propriété change pour quelque chose de plus intuitive|
+|valeur|chaîne|||indiquer le nom de la deuxième colonne dans la vue liste récapitulative du jeu de résultats de requête. La valeur de cette colonne est utilisée pour vérifier les conditions et définir des couleurs pour chaque point de couleur des éléments de liste récapitulative vue|dans les futures le nom de cette propriété change pour quelque chose de plus intuitive|
 |condition|objet JSON|||définit la vérification de condition pour la valeur de colonne et de déterminer la couleur de chaque élément de la vue liste récapitulative||
-|if|chaîne|toujours, equals, notEquals, greaterThan, lessThan, greaterThanOrEqauls, lessThanOrEquals||opérateur de vérification de condition|dans les futures le nom de propriété change à l’opérateur|
+|if|chaîne|toujours, equals, notEquals, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals||opérateur de vérification de condition|dans les futures le nom de propriété change à l’opérateur|
 |equals|chaîne|||valeur de vérification de condition|dans les futures ce nom de propriété changera à 'value'|
 
 ## <a name="insight-actions"></a>Actions d’Insight
@@ -104,7 +105,7 @@ Avec un widget d’insight et les détails de l’analyse, vous pouvez facilemen
 
 ## <a name="sample-insight-action-definition"></a>Exemple de définition d’Action d’analyse
 
-```"actions"{}``` définit une action insight. Action peut être définie sur une étendue spécifique tel que ```"server"```, ```"database"``` et ainsi de suite et [!INCLUDE[name-sos](../includes/name-sos-short.md)] transmet les informations de contexte de connexion actuelle à l’action. 
+```"actions"{}``` définit une action insight. Action peut être définie sur une étendue spécifique tel que ```"server"```, ```"database"``` et ainsi de suite et [!INCLUDE[name-sos](../includes/name-sos-short.md)] transmet les informations de contexte de connexion actuelle à l’action.
 
 Par exemple, lorsque l’action de restauration est lancée pour la base de données WideWorldImporters, ```"database": "${Database}"``` définition indique qu’il faut pour passer ```Database``` valeur de colonne dans les résultats de votre requête à l’action de restauration. Action de restauration démarre ensuite la base de données. ```"types"``` est un tableau json et plusieurs actions peuvent être répertoriées dans le tableau. Il devient en fait un menu contextuel sur la boîte de dialogue Détails de l’information que l’utilisateur pouvez cliquer sur et effectuer l’action. 
 

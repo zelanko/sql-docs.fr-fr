@@ -14,18 +14,18 @@ ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2c5a6219ce20bdcb1cb55b1bc49f71c7d3ccb01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a90937eafc531612968ac4248b329ba7a0a47d83
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059309"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357016"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Copier en bloc un jeu de résultats SELECT (ODBC)
   Cet exemple montre comment utiliser les fonctions de copie en bloc pour copier en bloc le jeu de résultats d'une instruction SELECT. Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-out-the-result-set-of-a-select-statement"></a>Pour copier en bloc le jeu de résultats d'une instruction SELECT  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48059309"
   
     -   Nom d'un fichier de données devant recevoir tous les messages d'erreur de copie en bloc (spécifiez NULL si vous ne souhaitez pas de fichier de message).  
   
-    -   Direction de la copie : DB_OUT.  
+    -   La direction de la copie : DB_OUT.  
   
 5.  Appelez [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), définissez eOption avec la valeur BCPHINTS et placez dans iValue un pointeur vers un tableau SQLTCHAR contenant l’instruction SELECT.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48059309"
  Durant ces étapes, le fichier est créé au format natif. Vous pouvez convertir les valeurs de données à d’autres types de données à l’aide de [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Pour plus d’informations, consultez [créer un fichier de Format de copie en bloc &#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md).  
   
 ## <a name="example"></a>Exemple  
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’accueil des [exemples et projets de communautés Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).) Cette source de données doit être basée sur le pilote ODBC fourni par le système d'exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).) Cette source de données doit être basée sur le pilote ODBC fourni par le système d'exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   

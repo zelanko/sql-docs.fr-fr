@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 45e874ab6ed6f73ab5f0c27081daf200971603d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 588e656ca71bc5843e3483879f5a58951373aff5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206185"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353512"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>Fichiers de données SQL Server dans Windows Azure
-  Les fichiers de données SQL Server dans Windows Azure permettent la prise en charge native des fichiers de base de données SQL Server stockés en tant qu'objets blob Windows Azure. Elle permet de créer une base de données dans SQL Server exécuté localement ou sur une machine virtuelle dans Windows Azure, avec un emplacement de stockage dédié pour vos données dans le service de stockage d'objets blob Windows Azure. Cette amélioration simplifie en particulier le déplacement des bases de données entre les ordinateurs, grâce aux opérations par attachement et détachement. En outre, elle fournit un autre emplacement de stockage pour les fichiers de sauvegarde de base de données, ce qui permet de restaurer ces fichiers depuis ou vers le service de Stockage Microsoft Azure. Par conséquent, elle permet plusieurs solutions hybrides en offrant différents avantages en matière de virtualisation des données, de déplacement des données, de sécurité et de disponibilité, le tout à des coûts et une maintenance réduits pour une mise à l'échelle élastique et une haute disponibilité.  
+  Les fichiers de données SQL Server dans Windows Azure permettent la prise en charge native des fichiers de base de données SQL Server stockés en tant qu'objets blob Windows Azure. Elle permet de créer une base de données dans SQL Server exécuté localement ou sur une machine virtuelle dans Windows Azure, avec un emplacement de stockage dédié pour vos données dans le service de Stockage Blob Windows Azure. Cette amélioration simplifie en particulier le déplacement des bases de données entre les ordinateurs, grâce aux opérations par attachement et détachement. En outre, elle fournit un autre emplacement de stockage pour les fichiers de sauvegarde de base de données, ce qui permet de restaurer ces fichiers depuis ou vers le service de Stockage Microsoft Azure. Par conséquent, elle permet plusieurs solutions hybrides en offrant différents avantages en matière de virtualisation des données, de déplacement des données, de sécurité et de disponibilité, le tout à des coûts et une maintenance réduits pour une mise à l'échelle élastique et une haute disponibilité.  
   
  Cette rubrique présente les concepts et les considérations essentiels au stockage des fichiers de données SQL Server dans le service Windows Azure Storage.  
   
- Pour une expérience pratique de l’utilisation de cette nouvelle fonctionnalité, consultez [didacticiel : fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ Pour une expérience pratique de l’utilisation de cette nouvelle fonctionnalité, consultez [didacticiel : Fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
  Le diagramme suivant montre que cette amélioration vous permet de stocker des fichiers de base de données SQL Server sous forme d'objets blob Windows Azure dans le Stockage Microsoft Azure, quel que soit l'emplacement de votre serveur.  
   
@@ -31,13 +30,13 @@ ms.locfileid: "48206185"
   
 ## <a name="benefits-of-using-sql-server-data-files-in-windows-azure"></a>Avantages de l'utilisation des fichiers de données SQL Server dans Windows Azure  
   
--   **Migration facile et rapide :** cette fonctionnalité simplifie le processus de migration en déplaçant une base de données à la fois entre les ordinateurs locaux ainsi qu’entre les environnements locaux et le cloud, sans aucune modification de l’application. Par conséquent, elle prend en charge une migration incrémentielle tout en conservant l'infrastructure locale existante. En outre, avoir accès à un stockage de données centralisé simplifie la logique d'application lorsqu'une application doit s'exécuter à plusieurs emplacements dans un environnement local. Dans certains cas, vous devez configurer rapidement des centres de calcul situés dans des emplacements géographiquement dispersés, qui rassemblent des données de nombreuses sources différentes. Grâce à cette nouvelle amélioration, au lieu de déplacer des données d'un emplacement à un autre, vous pouvez stocker un grand nombre de bases de données en tant qu'objets blob Windows Azure, puis exécuter des scripts Transact-SQL pour créer des bases de données sur des ordinateurs locaux ou virtuels.  
+-   **Avantages de la migration facile et rapide :** cette fonctionnalité simplifie le processus de migration en déplaçant une base de données à la fois entre les ordinateurs locaux et entre les environnements locaux et le cloud, sans aucune modification de l'application. Par conséquent, elle prend en charge une migration incrémentielle tout en conservant l'infrastructure locale existante. En outre, avoir accès à un stockage de données centralisé simplifie la logique d'application lorsqu'une application doit s'exécuter à plusieurs emplacements dans un environnement local. Dans certains cas, vous devez configurer rapidement des centres de calcul situés dans des emplacements géographiquement dispersés, qui rassemblent des données de nombreuses sources différentes. Grâce à cette nouvelle amélioration, au lieu de déplacer des données d'un emplacement à un autre, vous pouvez stocker un grand nombre de bases de données en tant qu'objets blob Windows Azure, puis exécuter des scripts Transact-SQL pour créer des bases de données sur des ordinateurs locaux ou virtuels.  
   
--   **Coûts réduits et stockage illimité :** cette fonctionnalité vous permet d’avoir un stockage hors site illimité dans Windows Azure tout en tirant parti en local les ressources de calcul. Lorsque vous utilisez Windows Azure comme emplacement de stockage, vous pouvez aisément vous concentrer sur la logique d'application sans surcharge pour la gestion du matériel. Si vous perdez un nœud de calcul local, vous pouvez en configurer un autre sans aucun déplacement des données.  
+-   **Coûts réduits et stockage illimité :** cette fonctionnalité vous permet de bénéficier d'un stockage hors site illimité dans Windows Azure tout en tirant parti des ressources de calcul locales. Lorsque vous utilisez Windows Azure comme emplacement de stockage, vous pouvez aisément vous concentrer sur la logique d'application sans surcharge pour la gestion du matériel. Si vous perdez un nœud de calcul local, vous pouvez en configurer un autre sans aucun déplacement des données.  
   
--   **Avantages de récupération d’urgence et disponibilité élevées :** à l’aide des fichiers de données SQL Server dans la fonctionnalité de Windows Azure peut simplifier les solutions de récupération d’urgence et disponibilité élevées. Par exemple, si une machine virtuelle dans Windows Azure ou une instance de SQL Server est défaillant, vous pouvez recréer les bases de données sur un nouvel ordinateur en rétablissant tout simplement les liens aux objets blob de Windows Azure.  
+-   **Avantages de récupération d’urgence et disponibilité élevées :** la fonctionnalité Fichiers de données SQL Server dans Windows Azure peut simplifier les solutions de haute disponibilité et de récupération d'urgence. Par exemple, si une machine virtuelle dans Windows Azure ou une instance de SQL Server est défaillant, vous pouvez recréer les bases de données sur un nouvel ordinateur en rétablissant tout simplement les liens aux objets blob de Windows Azure.  
   
--   **Sécurité :** cette nouvelle amélioration vous permet de séparer une instance de calcul d'une instance de stockage. Vous pouvez avoir une base de données entièrement chiffrée où le déchiffrement ne concerne que l'instance de calcul, mais pas l'instance de stockage. En d'autres termes, cette nouvelle amélioration vous permet de chiffrer toutes les données dans un cloud public à l'aide de certificats TDE (Transparent Data Encryption), lesquels sont physiquement séparés des données. Les clés TDE peuvent être stockées dans la base de données master, qui est stockée localement sur votre ordinateur physiquement sécurisé et sauvegardée localement. Vous pouvez utiliser ces clés locales pour chiffrer les données, qui résident dans le Stockage Microsoft Azure. Si les informations d'identification du compte de stockage en nuage (cloud) sont dérobées, vos données restent sécurisées dans la mesure où les certificats TDE résident toujours localement.  
+-   **Avantages de sécurité :** cette nouvelle amélioration vous permet de séparer une instance de calcul d'une instance de stockage. Vous pouvez avoir une base de données entièrement chiffrée où le déchiffrement ne concerne que l'instance de calcul, mais pas l'instance de stockage. En d'autres termes, cette nouvelle amélioration vous permet de chiffrer toutes les données dans un cloud public à l'aide de certificats TDE (Transparent Data Encryption), lesquels sont physiquement séparés des données. Les clés TDE peuvent être stockées dans la base de données master, qui est stockée localement sur votre ordinateur physiquement sécurisé et sauvegardée localement. Vous pouvez utiliser ces clés locales pour chiffrer les données, qui résident dans le Stockage Microsoft Azure. Si les informations d'identification du compte de stockage en nuage (cloud) sont dérobées, vos données restent sécurisées dans la mesure où les certificats TDE résident toujours localement.  
   
 ## <a name="concepts-and-requirements"></a>Concepts et configuration requise  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48206185"
  L'estimation du coût d'utilisation des services Windows Azure est une question importante dans le processus de prise de décision et de planification. Lorsque vous stockez des fichiers de données SQL Server dans le stockage Windows Azure, vous devez payer les coûts associés au stockage et aux transactions. En outre, l'implémentation de la fonctionnalité Fichiers de données SQL Server dans le stockage Windows Azure nécessite un renouvellement implicite du bail d'objets blob toutes les 45 à 60 secondes. Cela entraîne également des coûts de transaction par fichier de base de données (.mdf ou .ldf, par exemple). Selon nos évaluations, le coût de renouvellement des baux pour deux fichiers de base de données (.mdf et .ldf) se monte à environ 2 cents par mois d'après la grille de tarification actuelle. Nous vous recommandons de consulter les informations de la page [Tarifs de Microsoft Azure](http://azure.microsoft.com/pricing/) pour vous aider à estimer les coûts mensuels associés à l'utilisation du stockage Microsoft Azure et des machines virtuelles Microsoft Azure.  
   
 ### <a name="sql-server-concepts"></a>Concepts de serveur SQL  
- Si vous utilisez cette nouvelle amélioration, assurez-vous de procéder comme suit :  
+ Si vous utilisez cette nouvelle amélioration, assurez-vous de procéder comme suit :  
   
 -   Créez une stratégie sur un conteneur et générez également une clé de signature d'accès partagé (SAS).  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48206185"
   
 -   Stockez les informations relatives au conteneur de Stockage Microsoft Azure, le nom de stratégie associé et la clé SAS dans la banque d'informations d'identification de SQL Server.  
   
- Dans l'exemple suivant, on suppose qu'un conteneur de Stockage Microsoft Azure a été créé et qu'une stratégie a été créée avec des droits de lecture, d'écriture et de création de liste. La création d'une stratégie sur un conteneur génère une clé SAS qui peut rester non chiffrée en mémoire et qui est requise par SQL Server pour accéder aux fichiers d'objet blob dans le conteneur. Dans l'extrait de code suivant, remplacez `'your SAS key'` par une entrée similaire à la suivante : `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. Pour plus d’informations, consultez [créer et utiliser une Signature d’accès partagé](http://msdn.microsoft.com/library/azure/jj721951.aspx)  
+ Dans l'exemple suivant, on suppose qu'un conteneur de Stockage Microsoft Azure a été créé et qu'une stratégie a été créée avec des droits de lecture, d'écriture et de création de liste. La création d'une stratégie sur un conteneur génère une clé SAS qui peut rester non chiffrée en mémoire et qui est requise par SQL Server pour accéder aux fichiers d'objet blob dans le conteneur. Dans l'extrait de code suivant, remplacez `'your SAS key'` par une entrée similaire à la suivante : `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. Pour plus d’informations, consultez [créer et utiliser une Signature d’accès partagé](https://msdn.microsoft.com/library/azure/jj721951.aspx)  
   
 ```  
   
@@ -78,7 +77,7 @@ ON
   
 ```  
   
- **Remarque importante :** s'il existe des références actives aux fichiers de données dans un conteneur, toutes les tentatives de suppression des informations d'identification SQL Server correspondantes échouent.  
+ **Remarque importante :** s'il existe des références actives aux fichiers de données dans un conteneur, toutes les tentatives de suppression des informations d'identification SQL Server correspondantes échouent.  
   
 ### <a name="security"></a>Sécurité  
  Vous trouverez ci-dessous les considérations de sécurité et la configuration requise pour le stockage de fichiers de données SQL Server dans le stockage Windows Azure.  
@@ -92,13 +91,13 @@ ON
 ### <a name="installation-prerequisites"></a>Conditions préalables d'installation  
  Vous trouverez ci-dessous les conditions préalables à l'installation pour le stockage de fichiers de données SQL Server dans le stockage Windows Azure.  
   
--   **SQL Server local :** SQL Server 2014 comprend cette fonctionnalité. Pour savoir comment télécharger SQL Server 2014, consultez [SQL Server 2014](http://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   **SQL Server local :** la version SQL Server 2014 inclut cette fonctionnalité. Pour savoir comment télécharger SQL Server 2014, consultez [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
--   SQL Server s’exécutant dans une machine virtuelle Windows Azure : Si vous installez SQL Server sur un ordinateur virtuel Windows Azure, installez SQL Server 2014 ou mettez à jour votre instance existante. De la même manière, vous pouvez aussi créer une nouvelle machine virtuelle dans Windows Azure à l'aide de l'image de la plateforme SQL Server 2014. Pour savoir comment télécharger SQL Server 2014, consultez [SQL Server 2014](http://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   SQL Server s'exécutant sur une machine virtuelle Windows Azure : si vous installez SQL Server sur Windows Azure Virtual Machine, installez SQL Server 2014 ou mettez à jour votre instance existante. De la même manière, vous pouvez aussi créer une nouvelle machine virtuelle dans Windows Azure à l'aide de l'image de la plateforme SQL Server 2014. Pour savoir comment télécharger SQL Server 2014, consultez [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
 ###  <a name="bkmk_Limitations"></a> Limitations  
   
--   Dans la version actuelle de cette fonctionnalité, l'enregistrement de données `FileStream` dans le Stockage Microsoft Azure n'est pas pris en charge. Vous pouvez enregistrer des données `Filestream` dans une base de données locale intégrée au Stockage Microsoft Azure, mais vous ne pouvez pas déplacer ces données entre des ordinateurs à l'aide du Stockage Microsoft Azure. Pour `FileStream` données, nous vous recommandons de continuer à l’aide des techniques traditionnelles pour déplacer les fichiers (.mdf, .ldf) associés à Filestream entre différents ordinateurs.  
+-   Dans la version actuelle de cette fonctionnalité, l'enregistrement de données `FileStream` dans le Stockage Microsoft Azure n'est pas pris en charge. Vous pouvez enregistrer des données `Filestream` dans une base de données locale intégrée au Stockage Microsoft Azure, mais vous ne pouvez pas déplacer ces données entre des ordinateurs à l'aide du Stockage Microsoft Azure. Pour les données `FileStream`, nous vous recommandons de continuer à utiliser les méthodes traditionnelles pour déplacer des fichiers (.mdf, .ldf) associés à Filestream entre différents ordinateurs.  
   
 -   Actuellement, cette nouvelle amélioration ne prend pas en charge plusieurs instances SQL Server qui accèdent en même temps aux mêmes fichiers de base de données dans le Stockage Microsoft Azure. Si ServerA est en ligne avec un fichier de base de données actif et si ServerB est démarré par erreur et qu’il comporte également une base de données qui désigne le même fichier de données, le deuxième serveur ne parvient pas à démarrer la base de données et génère le code d’erreur **5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d’exploitation : « %ls »**.  
   
@@ -108,7 +107,7 @@ ON
   
 -   La taille d'un objet blob peut atteindre 1 To au maximum. Cette limite supérieure s'applique à chaque fichier journal ou fichier de données de base de données pouvant être enregistré dans le stockage Windows Azure.  
   
--   Il est impossible d'enregistrer des données de l'OLTP en mémoire dans un objet blob Windows Azure à l'aide de la fonctionnalité Fichiers de données SQL Server dans le stockage Windows Azure. Cela s'explique par le fait que l'OLTP en mémoire compte une dépendance sur `FileStream` et que, dans la version actuelle de cette fonctionnalité, l'enregistrement de données `FileStream` dans le Stockage Microsoft Azure n'est pas pris en charge.  
+-   Il est impossible d'enregistrer des données de l'OLTP en mémoire dans un objet blob Windows Azure à l'aide de la fonctionnalité Fichiers de données SQL Server dans le Stockage Microsoft Azure. Cela s'explique par le fait que l'OLTP en mémoire compte une dépendance sur `FileStream` et que, dans la version actuelle de cette fonctionnalité, l'enregistrement de données `FileStream` dans le Stockage Microsoft Azure n'est pas pris en charge.  
   
 -   Si la fonctionnalité Fichiers de données SQL Server dans Windows Azure est activée, SQL Server effectue une comparaison de toutes les URL ou de tous les chemins d'accès de fichier à l'aide du classement défini dans la base de données `master`.  
   
@@ -126,7 +125,7 @@ ON
  Depuis SQL Server 2014, un nouvel objet SQL Server a été ajouté pour être utilisé avec la fonctionnalité Fichiers de données SQL Server dans le stockage Windows Azure. Le nouvel objet SQL Server est appelé [SQL Server, HTTP_STORAGE_OBJECT](../performance-monitor/sql-server-http-storage-object.md) et il peut être utilisé par le Moniteur système pour surveiller l’activité lors de l’exécution de SQL Server avec Microsoft Azure Storage.  
   
 ### <a name="sql-server-management-studio-support"></a>Prise en charge de SQL Server Management Studio  
- SQL Server Management Studio vous permet d'utiliser cette fonctionnalité via plusieurs fenêtres de dialogue. Par exemple, vous pouvez taper le chemin d'accès de l'URL du conteneur de stockage, tel que `https://teststorageaccnt.blob.core.windows.net/testcontainer/` sous la forme d'un **Chemin d'accès** dans plusieurs fenêtres de dialogue, telles que **Nouvelle base de données**, **Attacher la base de données**ou **Restaurer la base de données**. Pour plus d’informations, consultez [didacticiel : fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ SQL Server Management Studio vous permet d'utiliser cette fonctionnalité via plusieurs fenêtres de dialogue. Par exemple, vous pouvez taper le chemin d'accès de l'URL du conteneur de stockage, tel que `https://teststorageaccnt.blob.core.windows.net/testcontainer/` sous la forme d'un **Chemin d'accès** dans plusieurs fenêtres de dialogue, telles que **Nouvelle base de données**, **Attacher la base de données**ou **Restaurer la base de données**. Pour plus d’informations, consultez [didacticiel : Fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 ### <a name="sql-server-management-objects-support"></a>Prise en charge d'objets SMO (SQL Server Management Objects)  
  Quand vous utilisez la fonctionnalité Fichiers de données SQL Server dans Microsoft Azure, tous les objets SMO (SQL Server Management Objects) sont pris en charge. Si un objet SMO nécessite un chemin d'accès de fichier, utilisez le format d'URL BLOB à la place d'un chemin d'accès de fichier local, tel que `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. Pour plus d’informations sur les objets SMO, consultez [Guide de programmation SMO &#40;SQL Server Management Objects&#41;](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) dans la documentation en ligne de SQL Server.  
@@ -144,28 +143,28 @@ ON
  **Erreurs d'authentification**  
   
 -   *Impossible de supprimer les informations d’identification « %.\*ls » parce qu’elles sont utilisées par un fichier de base de données actif.*   
-    Résolution : vous pouvez voir cette erreur lorsque vous tentez de supprimer des informations d'identification encore utilisées par un fichier de base de données actif dans le Stockage Microsoft Azure. Pour supprimer les informations d'identification, vous devez d'abord supprimer l'objet blob associé qui comporte ce fichier de base de données. Pour supprimer un objet blob dont le bail est actif, vous devez d'abord résilier le bail.  
+    Résolution : vous pouvez voir cette erreur lorsque vous tentez de supprimer des informations d'identification encore utilisées par un fichier de base de données actif dans le Stockage Microsoft Azure. Pour supprimer les informations d'identification, vous devez d'abord supprimer l'objet blob associé qui comporte ce fichier de base de données. Pour supprimer un objet blob dont le bail est actif, vous devez d'abord résilier le bail.  
   
 -   *La signature d'accès partagé n'a pas été créée correctement sur le conteneur.*   
-     Résolution : vérifiez que vous avez créé correctement une signature d'accès partagé sur le conteneur. Passez en revue les instructions fournies dans la leçon 2 dans [didacticiel : fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+     Résolution : vérifiez que vous avez créé correctement une signature d'accès partagé sur le conteneur. Passez en revue les instructions fournies dans la leçon 2 dans [didacticiel : Fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 -   *Les informations d'identification de SQL Server n'ont pas été créées correctement.*   
-    Résolution : vérifiez que vous avez utilisé une « signature d'accès partagé » pour le champ **Identité** et que vous avez créé un secret correctement. Passez en revue les instructions fournies dans la leçon 3 dans [didacticiel : fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+    Résolution : Assurez-vous que vous avez utilisé « Signature d’accès partagé » pour le **identité** champ et créé un secret correctement. Passez en revue les instructions fournies dans la leçon 3 dans [didacticiel : Fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
  **Erreurs de bail d'un objet blob :**  
   
--   Erreur lors de la tentative de démarrage de SQL Server après la défaillance d'une autre instance utilisant les mêmes fichiers d'objets blob. Résolution : en mode de fonctionnement normal, SQL Server utilise des baux temporaires pour réserver des objets blob pour le stockage, avec un renouvellement du bail de chaque objet blob toutes les 45 à 60 secondes. En cas de défaillance d'un serveur et du démarrage d'une autre instance de SQL Server configurée pour utiliser les mêmes objets blob, la nouvelle instance attend jusqu'à 60 secondes, le temps que le bail existant sur l'objet blob expire. Si vous voulez attacher la base de données à une autre instance et que vous ne pouvez pas attendre l'expiration du bail pendant 60 secondes, vous pouvez résilier explicitement le bail sur l'objet blob afin d'éviter les erreurs dans les opérations d'attachement.  
+-   Erreur lors de la tentative de démarrage de SQL Server après la défaillance d'une autre instance utilisant les mêmes fichiers d'objets blob. Résolution : En mode de fonctionnement normal, SQL Server utilise des baux temporaires pour réserver des objets blob pour le stockage, avec un renouvellement du bail de chaque objet blob toutes les 45 à 60 secondes. En cas de défaillance d'un serveur et du démarrage d'une autre instance de SQL Server configurée pour utiliser les mêmes objets blob, la nouvelle instance attend jusqu'à 60 secondes, le temps que le bail existant sur l'objet blob expire. Si vous voulez attacher la base de données à une autre instance et que vous ne pouvez pas attendre l'expiration du bail pendant 60 secondes, vous pouvez résilier explicitement le bail sur l'objet blob afin d'éviter les erreurs dans les opérations d'attachement.  
   
  **Erreurs de base de données**  
   
 1.  *Erreurs lors de la création d'une base de données*   
-    Solution : Passez en revue les instructions fournies dans la leçon 4 dans [didacticiel : fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+    Résolution : Passez en revue les instructions fournies dans la leçon 4 dans [didacticiel : Fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 2.  *Erreurs lors de l'exécution de l'instruction Alter*   
-    Résolution : veillez à exécuter l'instruction Alter Database lorsque la base de données est en ligne. Lors de la copie des fichiers de données vers le stockage Windows Azure, créez toujours un objet blob de pages, et non un objet blob de blocs. Sinon, la modification de la base de données avec l'instruction ALTER échouera. Passez en revue les instructions fournies dans la leçon 7 dans [didacticiel : fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+    Résolution : veillez à exécuter l'instruction Alter Database lorsque la base de données est en ligne. Lors de la copie des fichiers de données vers le Stockage Microsoft Azure, créez toujours un objet blob de pages, et non un objet blob de blocs. Sinon, la modification de la base de données avec l'instruction ALTER échouera. Passez en revue les instructions fournies dans la leçon 7 dans [didacticiel : Fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 3.  *Code d’erreur 5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d’exploitation : « %ls »*   
-    Résolution : actuellement, cette nouvelle amélioration ne prend pas en charge plusieurs instances de SQL Server qui accèdent en même temps aux mêmes fichiers de base de données dans le Stockage Microsoft Azure. Si ServerA est en ligne avec un fichier de base de données actif et si ServerB est démarré par erreur et qu’il comporte également une base de données qui désigne le même fichier de données, le deuxième serveur ne parvient pas à démarrer la base de données et génère le code d’erreur *5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d’exploitation : « %ls »*.  
+    Résolution : Actuellement, cette nouvelle amélioration ne prend pas en charge plusieurs instances SQL Server qui accèdent en même temps aux mêmes fichiers de base de données dans le Stockage Microsoft Azure. Si ServerA est en ligne avec un fichier de base de données actif et si ServerB est démarré par erreur et qu’il comporte également une base de données qui désigne le même fichier de données, le deuxième serveur ne parvient pas à démarrer la base de données et génère le code d’erreur *5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d’exploitation : « %ls »*.  
   
      Pour résoudre ce problème, déterminez d'abord si vous avez besoin du serveur A pour accéder au fichier de base de données dans le stockage Windows Azure. Si vous n'en avez pas besoin, supprimez simplement toute connexion entre le serveur A et les fichiers de base de données dans le stockage Windows Azure. Pour cela, procédez comme suit :  
   
@@ -178,6 +177,6 @@ ON
     4.  Mettez la base de données en ligne.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tutoriel : Fichiers de données SQL Server dans le service Stockage Microsoft Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [Didacticiel : Fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   

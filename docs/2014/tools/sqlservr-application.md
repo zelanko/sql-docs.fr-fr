@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], sqlservr
@@ -23,12 +22,12 @@ ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2616e1ad8aa794f5aff14857b68b146e35dc04f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174639"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591863"
 ---
 # <a name="sqlservr-application"></a>Application sqlservr
   l’application **sqlservr** démarre, arrête, suspend et poursuit une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d’une invite de commandes.  
@@ -43,7 +42,7 @@ ms.locfileid: "48174639"
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **-s** *nom_instance*  
+ **-s** _nom_instance_  
  Spécifie l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à laquelle établir une connexion. Si aucune instance nommée n’est spécifiée, **sqlservr** démarre l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
@@ -55,16 +54,16 @@ ms.locfileid: "48174639"
 > [!NOTE]  
 >  Avec cette option, vous ne pouvez pas arrêter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en utilisant le Gestionnaire des services [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou la commande **net stop** . De plus, si vous vous déconnectez de l’ordinateur, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est arrêté.  
   
- **-d** *chemin_master*  
+ **-d** _chemin_master_  
  Indique le chemin complet du fichier de base de données **master** . Il n’y a pas d’espace entre **-d** et *chemin_master*. Si vous ne spécifiez pas cette option, les paramètres du Registre existant sont utilisés.  
   
  **-f**  
  Démarre une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec une configuration minimale. Cette option est utile lorsqu'une valeur de configuration définie (espace mémoire insuffisant, par exemple) a empêché le serveur de démarrer.  
   
- **-e** *chemin_du_journal_des_erreurs*  
+ **-e** _chemin_du_journal_des_erreurs_  
  Indique le chemin d'accès complet au fichier journal des erreurs. Si cette option n’est pas spécifiée, l’emplacement par défaut est *\<lecteur>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog pour l’instance par défaut et *\<lecteur>* \Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog pour une instance nommée. Il n’existe aucun espace entre **-e** et *chemin_du_journal_des_erreurs*.  
   
- **-l** *chemin_du_journal_master*  
+ **-l** _chemin_du_journal_master_  
  Indique le chemin complet du fichier journal des transactions de la base de données **master** . Il n’existe aucun espace entre **-l** et *chemin_du_journal_master*.  
   
  **-m**  
@@ -73,7 +72,7 @@ ms.locfileid: "48174639"
  **-n**  
  Permet de démarrer une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si le paramètre **-s** n’est pas spécifié, l’instance par défaut tente de démarrer. Vous devez accéder au répertoire BINN de l’instance, dans l’invite de commandes, avant de démarrer **sqlservr.exe**. Par exemple, si Instance1 doit utiliser \mssql$Instance1 pour ses fichiers binaires, l’utilisateur doit être dans le répertoire \mssql$Instance1\binn pour démarrer **sqlservr.exe -s instance1**. Si vous démarrez une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec l’option **-n** , il est également recommandé d’utiliser l’option **-e** , sinon les événements [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne sont pas consignés.  
   
- **-T** *trace#*  
+ **-T** _trace#_  
  Indique qu’une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit être démarrée avec un indicateur de trace spécifique (*trace#*) en vigueur. Les indicateurs de trace permettent de démarrer le serveur avec un comportement non standard. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
 > [!IMPORTANT]  
@@ -85,16 +84,16 @@ ms.locfileid: "48174639"
  **-x**  
  Désactive le suivi des statistiques temps UC et taux d'accès au cache. Optimise les performances au maximum.  
   
- **-g** *mémoire_à_réserver*  
+ **-g** _mémoire_à_réserver_  
  Spécifie un nombre entier de mégaoctets (Mo) de mémoire que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] laisse disponible pour des allocations de mémoire à l'intérieur du processus de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mais hors du pool de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La mémoire en dehors du pool de mémoire est la zone utilisée par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour le chargement d'éléments tels que les fichiers `.dll` des procédures stockées étendues, les fournisseurs OLE DB référencés par les requêtes distribuées et les objets automation référencés dans les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] . La valeur par défaut est 256 Mo.  
   
  Cette option peut faciliter l'ajustement de l'allocation de mémoire, mais uniquement lorsque la mémoire physique dépasse la limite configurée définie par le système d'exploitation sur la mémoire virtuelle disponible pour les applications. L'utilisation de cette option peut s'avérer appropriée avec des configurations de mémoire importantes, dans lesquelles les besoins en utilisation de la mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne sont pas standard et l'espace d'adressage virtuel du processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est utilisé dans son intégralité. L'utilisation incorrecte de cette option peut mener à des situations dans lesquelles une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne démarre pas ou rencontre des erreurs lors de l'exécution.  
   
  Utilisez la valeur par défaut du paramètre **-g** , sauf si l’un des avertissements suivants figure dans le journal des erreurs de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
--   « Échec de l’allocation d’octets pour la réserve virtuelle : FAIL_VIRTUAL_RESERVE \<taille> »  
+-   « Échec de l'allocation d'octets pour la réserve virtuelle : FAIL_VIRTUAL_RESERVE \<taille > »  
   
--   « Échec de l’allocation d’octets pour la réserve virtuelle : FAIL_VIRTUAL_COMMIT \<taille> »  
+-   « Échec de l'allocation d'octets pour la réserve virtuelle : FAIL_VIRTUAL_COMMIT \<taille > »  
   
  Ces messages peuvent indiquer que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tente de libérer des parties du pool de la mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] afin de trouver de l'espace pour des éléments tels que les fichiers .dll de procédure stockée étendue ou des objets Automation. Dans ce cas, envisagez d’augmenter la quantité de mémoire réservée par le commutateur **-g**``.  
   

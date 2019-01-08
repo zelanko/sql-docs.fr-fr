@@ -21,15 +21,15 @@ ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 050a7e4b7b89eb52d9fcb8f9d7a6b8a911eaa825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a9c7a8152896aa3bd9f75cf483aaf29429a5638
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134619"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355811"
 ---
 # <a name="choosing-data-for-data-mining"></a>Choisir les données pour l'exploration de données
-  Lorsque vous vous lancez dans l'exploration de données, vous vous demandez peut-être « De quelle quantité de données ai-je besoin ? » ou « Quelles sont les exigences spéciales à connaître lors du nettoyage ou de la mise en forme de mes donnée ? »  
+  Lorsque vous commencez l’exploration de données, vous vous demandez peut-être « la quantité de données besoin ? » ou « Quels sont les exigences spéciales à que connaître lors du nettoyage ou de mise en forme de mes données ? »  
   
  En particulier, ces personnes rencontrent souvent des problèmes avec les données Excel, notamment, pour mettre en forme uniformément les données dans les colonnes, pour nettoyer les valeurs manquantes, ou pour placer des nombres dans un conteneur. Cette section répertorie également les spécifications de données pour des types de modèles spécifiques.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48134619"
 ### <a name="how-much-data-do-i-need"></a>De quelle quantité de données a-t-on besoin ?  
  En règle générale, vous devez avoir au moins 50 à 100 lignes de données pour les types de modèles et les scénarios les plus simples. Par exemple, si vous évaluez un seul attribut à l'aide d'un modèle utilisant la classification naïve bayésienne et le jeu de données est bien constitué, vous obtiendrez des prédictions assez précises en utilisant 50 à 100 lignes de données.  
   
- Pour les modèles d'association, vous aurez généralement besoin de beaucoup plus de données : un millier de lignes peut ne pas suffire si vous analysez beaucoup d'attributs, par exemple pour créer des associations entre les produits. Si votre jeu de données est trop grand ou trop petit, vous obtiendrez parfois de meilleurs résultats en réduisant les lignes en catégories. Par exemple, au lieu d'analyser les associations entre des produits individuels, vous pouvez classer les produits par catégorie.  
+ Pour les modèles d’association, vous devez généralement beaucoup plus de données - un millier de lignes peut ne pas suffire si vous analysez beaucoup d’attributs, tels que des associations entre les produits. Si votre jeu de données est trop grand ou trop petit, vous obtiendrez parfois de meilleurs résultats en réduisant les lignes en catégories. Par exemple, au lieu d'analyser les associations entre des produits individuels, vous pouvez classer les produits par catégorie.  
   
  Si vous disposez d'un jeu de données d'une taille raisonnable, concentrez-vous davantage sur leur qualité au lieu d'ajouter une plus grande quantité de données. Au bout d'un certain temps, vous aurez déterminé tous les modèles statistiquement valides, et l'ajout de plus de données n'aura pas d'influence sur leur validité. À l'inverse, lorsque vous ajoutez plus de données, des corrélations accidentelles sont parfois introduites.  
   
@@ -113,11 +113,11 @@ ms.locfileid: "48134619"
 ##  <a name="bkmk_CommonDataProblems"></a> Problèmes de données courants  
   
 ### <a name="excel-number-formats"></a>Formats de nombres Excel  
- Excel est un outil simple à utiliser, car il est indulgent. Vous pouvez insérer n'importe quel type de données n'importe où ! Toutefois, avant de commencer à rechercher des modèles et à analyser les corrélations, vous devez appliquer une structure ou des contraintes à vos données.  
+ Excel est un outil facile à utiliser, car il est indulgent : vous pouvez placer n’importe quel type de données n’importe où ! Toutefois, avant de commencer à rechercher des modèles et à analyser les corrélations, vous devez appliquer une structure ou des contraintes à vos données.  
   
  Par défaut, lors de l'importation de données numériques dans [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel, les nombres sont stockés au format décimal avec deux décimales. Si ce format numérique ne convient pas, vous devez le remplacer par un format numérique différent ou changer le nombre de décimales.  
   
- Une option consiste à utiliser le [Réétiqueter](relabel-sql-server-data-mining-add-ins.md) outil pour modifier la façon dont sont affichés ou de nombres groupés.  
+ L'une des possibilités consiste à utiliser l'outil [Réétiqueter](relabel-sql-server-data-mining-add-ins.md) , disponible dans les outils d'analyse de table pour Excel, pour modifier le mode d'affichage ou de regroupement des nombres.  
   
  Toutefois, si vos données sont trop compliquées à traiter à l'aide de l'outil **Réétiqueter** , utilisez les fonctions numériques dans Excel pour les convertir en plages discrètes, enregistrer ce résultat dans une colonne séparée, puis utilisez à la place la colonne discrétisée pour la classification.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "48134619"
   
  Par exemple, si une colonne contient des nombres qui se répètent à une fréquence spécifique pour indiquer les jours de la semaine, définissez le type de contenu de cette colonne comme étant `Cyclical`.  
   
- Vous n'avez pas à vous soucier des types de contenu si vous utilisez les Assistants et les outils disponibles dans ce complément. Toutefois, si vous utilisez le [ajouter le modèle à la Structure &#40;des compléments d’exploration de données pour Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) option pour ajouter un nouveau modèle aux données existantes de modélisation, vous pouvez obtenir une erreur relative aux types de contenu.  
+ Vous n’avez pas à vous soucier des types de contenu si vous utilisez les Assistants et les outils fournis dans ce module complémentaire. Toutefois, si vous utilisez le [ajouter le modèle à la Structure &#40;des compléments d’exploration de données pour Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) option pour ajouter un nouveau modèle aux données existantes de modélisation, vous pouvez obtenir une erreur relative aux types de contenu.  
   
  La raison en est que certains types de modèle requièrent un certain type de données (par exemple un horodatage). Les outils traitent ces colonnes en fonction d'exigences spécifiques et ajoutent également une propriété de type de contenu. Par conséquent, si vous réutilisez les données avec un algorithme complètement différent, il sera peut-être nécessaire de remplacer le type de données ou le type de contenu.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48134619"
  `Continuous`  
  Cette colonne contient des valeurs qui représentent des données numériques sur une échelle qui autorise des valeurs intérimaires. Une colonne continue représente des mesures évolutives et les données peuvent contenir un nombre infini de valeurs fractionnaires. Une colonne de températures est un exemple de colonne d'attributs continue.  
   
- Le `Continuous` type de contenu peut être utilisé avec les types de données suivants : `Date`, `Double`, et `Long`.  
+ Le type de contenu `Continuous` peut être utilisé avec les types de données suivants : `Date`, `Double` et `Long`.  
   
  `Discretized`  
  La colonne contient des valeurs qui représentent des groupes de valeurs dérivées d'une colonne continue. Les compartiments sont traités comme des valeurs discrètes et **ordonnées** .  
@@ -206,14 +206,14 @@ ms.locfileid: "48134619"
   
  En général la colonne clé est un identificateur numérique ou texte qui ne doit pas être utilisé pour l'analyse, uniquement pour le suivi des enregistrements. Les exceptions sont les clés de série chronologique et les clés de séquence.  
   
- **Clés de tables imbriquées** sont utilisés uniquement si vous obtenez les données à partir de la source de données externe qui a été définie comme un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vue de source de données. Pour plus d’informations sur les tables imbriquées, consultez [ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
+ Les**clés de tables imbriquées** s'utilisent uniquement si vous obtenez les données d'une source de données externe ayant été définie comme une vue de source de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour plus d’informations sur les tables imbriquées, consultez [ https://msdn.microsoft.com/library/ms175659.aspx ](https://msdn.microsoft.com/library/ms175659.aspx):  
   
  Ce type de contenu peut être utilisé avec les types de données suivants : `Date`, `Double`, `Long` et `Text`.  
   
  **Séquence clé**  
  La colonne contient des valeurs qui représentent une séquence d'événements. Les valeurs sont ordonnées, mais elles n'ont pas besoin d'être séparées par une distance égale.  
   
- Ce type de contenu est pris en charge par les types de données suivants : `Double`, `Long`, `Text`, et `Date`.  
+ Ce type de contenu est pris en charge par les types de données suivants : `Double`, `Long`, `Text` et `Date`.  
   
  **Temps clé**  
  La colonne contient des valeurs qui sont ordonnées et qui représentent une échelle de temps. Utilisez le type de contenu de temps clé uniquement si le modèle est un modèle de série chronologique ou un modèle Sequence Clustering.  
@@ -221,7 +221,7 @@ ms.locfileid: "48134619"
  Ce type de contenu est pris en charge par les types de données suivants : `Double`, `Long` et `Date`.  
   
  **Table**  
- Ce type de contenu s'utilise uniquement si vous obtenez les données d'une source de données externe ayant été définie comme une vue de source de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Ce type de contenu s'utilise uniquement si vous obtenez les données d'une source de données externe ayant été définie comme une vue de source de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Cela signifie que chaque ligne de données contient réellement une table de données imbriquée, avec une ou plusieurs colonnes et une ou plusieurs lignes.  
   

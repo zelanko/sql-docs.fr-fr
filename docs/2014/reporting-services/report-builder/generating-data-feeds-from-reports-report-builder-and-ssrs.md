@@ -11,17 +11,17 @@ ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6d02f24574d6a49edcdbeca2ccfc6fea95893356
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff83364a11c50ce5403b434052bdb28d53aaf2b3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224209"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377591"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Génération de flux de données à partir de rapports (Générateur de rapports et SSRS)
-  Le [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extension de rendu Atom génère un document de service Atom qui répertorie les flux de données disponibles à partir d’un rapport et les flux de données à partir des données régions dans un rapport. Cette extension est utilisée pour générer des flux de données compatibles avec Atom pouvant être lus et échangés avec des applications qui prennent en charge les flux de données générés à partir de rapports. Par exemple, vous pouvez utiliser l'extension de rendu Atom pour générer des flux de données que vous pourrez ensuite utiliser dans le client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+  L'extension de rendu [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom génère un document de service Atom qui répertorie les flux de données disponibles d'un rapport et les flux de données des régions de données d'un rapport. Cette extension est utilisée pour générer des flux de données compatibles avec Atom pouvant être lus et échangés avec des applications qui prennent en charge les flux de données générés à partir de rapports. Par exemple, vous pouvez utiliser l'extension de rendu Atom pour générer des flux de données que vous pourrez ensuite utiliser dans le client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
- Le document de service Atom répertorie au moins un flux de données pour chaque région de données d'un rapport. Selon le type de région de données et les données de la région de données s’affiche, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] peut générer plusieurs flux de données à partir d’une région de données. Par exemple, une matrice ou un graphique peut fournir plusieurs flux de données. Lorsque l'extension de rendu Atom crée le document de service Atom, un identificateur unique est créé pour chaque flux de données et vous utilisez cet identificateur dans l'URL pour accéder au contenu du flux de données.  
+ Le document de service Atom répertorie au moins un flux de données pour chaque région de données d'un rapport. Selon le type de région de données et les données affichées par cette région, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] peut générer plusieurs flux de données à partir d'une région de données. Par exemple, une matrice ou un graphique peut fournir plusieurs flux de données. Lorsque l'extension de rendu Atom crée le document de service Atom, un identificateur unique est créé pour chaque flux de données et vous utilisez cet identificateur dans l'URL pour accéder au contenu du flux de données.  
   
  La façon dont l'extension de rendu Atom génère des données pour un flux de données est semblable à la façon dont l'extension de rendu à valeurs séparées par des virgules (CSV) restitue des données dans un fichier CSV. Comme un fichier CSV, un flux de données est une représentation aplatie des données de rapport. Par exemple, un tableau comprenant un groupe de lignes qui additionne les chiffres des ventes au sein d'un groupe répète la somme dans chaque ligne de données et il n'existe aucune ligne séparée contenant uniquement la somme.  
   
@@ -57,21 +57,21 @@ ms.locfileid: "48224209"
   
  ![RS_Atom_PeerDynamicColumns](../media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- Le document de service Atom généré à partir de ce rapport inclut deux flux, un pour chacune des colonnes homologues dynamiques : Territory et Year. Le diagramme ci-dessous illustre le contenu de chaque flux.  
+ Le document de service Atom généré à partir de ce rapport inclut deux flux de données, un pour chacune des colonnes homologues dynamiques : Territory et Year. Le diagramme ci-dessous illustre le contenu de chaque flux.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
 
   
 ##  <a name="DataFeeds"></a> Flux de données  
- Un flux est un fichier XML ayant un format tabulaire cohérent qui ne varie pas dans le temps et des données variables qui peuvent être différentes chaque fois que le rapport est exécuté. Les flux de données générés par [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se trouvent dans le même format que ceux générés par ADO.NET Data Services.  
+ Un flux est un fichier XML ayant un format tabulaire cohérent qui ne varie pas dans le temps et des données variables qui peuvent être différentes chaque fois que le rapport est exécuté. Les flux de données générés par [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ont le même format que ceux générés par ADO.NET Data Services.  
   
  Un flux de données contient deux sections : l'en-tête et les données. La spécification Atom définit les éléments de chaque section. L'en-tête inclut des informations telles que le schéma d'encodage de caractères à utiliser avec les flux de données.  
   
 ### <a name="header-section"></a>Section d'en-tête  
  Le code XML suivant illustre la section d'en-tête d'un flux de données.  
   
- `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
+ `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="https://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="https://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
   
  `<title type="text"></title>`  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48224209"
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- Le code XML suivant montre un <`entry`> élément de ce rapport dans un flux de données. Notez que le <`entry`> élément inclut les totaux des ventes et des commandes pour le groupe et les totaux des ventes et des commandes pour tous les groupes. L'élément <`entry`> inclut toutes les valeurs dans le rapport.  
+ Le code XML suivant illustre un élément <`entry`> de ce rapport dans un flux de données. Notez que l'élément <`entry`> inclut les totaux des chiffres des ventes et des commandes pour le groupe et les totaux des chiffres des ventes et des commandes pour tous les groupes. L'élément <`entry`> inclut toutes les valeurs dans le rapport.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48224209"
   
  Les lignes de données pour les régions de données imbriquées sont en général larges, particulièrement si les tables et matrices imbriquées incluent des groupes et des totaux. Vous souhaiterez peut-être exporter le rapport vers un flux de données et afficher celui-ci pour vérifier que les données générées correspondent bien à vos attentes.  
   
- Lorsque l'extension de rendu Atom crée le document de service Atom, un identificateur unique est créé pour le flux de données et vous utilisez cet identificateur dans l'URL pour afficher le contenu du flux de données. L’exemple document de service Atom ci-dessus, inclut l’URL http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1" . L'URL identifie le rapport (Product Sales Summary), le format de rendu Atom (ATOM) et le nom du flux de données (xAx0x1).  
+ Lorsque l'extension de rendu Atom crée le document de service Atom, un identificateur unique est créé pour le flux de données et vous utilisez cet identificateur dans l'URL pour afficher le contenu du flux de données. L’exemple document de service Atom ci-dessus, inclut l’URL <http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1>" . L'URL identifie le rapport (Product Sales Summary), le format de rendu Atom (ATOM) et le nom du flux de données (xAx0x1).  
   
  Les noms des éléments de rapport sont par défaut les noms d'élément RDL (Report Definition Language) des éléments de rapport et, souvent, ils ne sont pas intuitifs ni faciles à mémoriser. Par exemple, le nom par défaut de la première matrice placés dans un rapport est Tablix 1. Les flux de données utilisent ces noms.  
   

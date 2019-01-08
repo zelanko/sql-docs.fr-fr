@@ -12,12 +12,12 @@ ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 02c1c7196134d1ffc5f268d8f2d4a162fbec6e5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 739d87c7a590489a2dd263535356b0b520a4a9b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144749"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353166"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>Utiliser Microsoft Distributed Transaction Coordinator (ODBC)
     
@@ -25,13 +25,13 @@ ms.locfileid: "48144749"
   
 1.  Connectez-vous à MS DTC en utilisant la fonction MS DTC OLE DtcGetTransactionManager. Pour plus d'informations sur MS DTC, consultez Microsoft Distributed Transaction Coordinator.  
   
-2.  Appelez SQL DriverConnect une fois pour chaque connexion Microsoft® SQL Server™ que vous souhaitez établir.  
+2.  Appelez SQL DriverConnect une fois pour chaque Microsoft ?? SQL Server ??? vous souhaitez établir la connexion.  
   
 3.  Appelez la fonction MS DTC OLE ITransactionDispenser::BeginTransaction pour commencer une transaction MS DTC et obtenir un objet Transaction qui représente la transaction.  
   
 4.  Appelez [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) une ou plusieurs fois pour chaque connexion ODBC que vous souhaitez inscrire dans la transaction MS DTC. Le deuxième paramètre [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) doit être SQL_ATTR_ENLIST_IN_DTC et le troisième paramètre doit être l’objet Transaction (obtenu à l’Étape 3).  
   
-5.  Appelez [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) une fois pour chaque serveur SQL Server à mettre à jour.  
+5.  Appelez [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) une fois pour chaque serveur SQL Server à mettre à jour.  
   
 6.  Appelez la fonction MS DTC OLE ITransaction::Commit pour valider la transaction MS DTC. L'objet Transaction n'est plus valide.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48144749"
  Pour utiliser une connexion ODBC avec une transaction MS DTC, puis utiliser la même connexion avec une transaction SQL Server locale, appelez [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) avec SQL_DTC_DONE.  
   
 > [!NOTE]  
->  Vous pouvez également appeler [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) puis [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) pour chaque SQL Server au lieu de les appeler comme suggéré précédemment aux Étapes 4 et 5.  
+>  Vous pouvez également appeler [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) puis [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) pour chaque SQL Server au lieu de les appeler comme suggéré précédemment aux Étapes 4 et 5.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécution de Transactions &#40;ODBC&#41;](../../database-engine/dev-guide/performing-transactions-odbc.md)  

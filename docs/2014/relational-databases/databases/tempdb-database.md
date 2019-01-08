@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -16,12 +15,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81d2bf84e758ccfd8664408a760e77700a323e0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1db606c086624610a158b6a87576188fa14aefaa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141059"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357835"
 ---
 # <a name="tempdb-database"></a>Base de données tempdb
   La base de données système **tempdb** est une ressource globale disponible pour tous les utilisateurs connectés à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sert de conteneur aux éléments suivants :  
@@ -71,28 +70,28 @@ ms.locfileid: "48141059"
 |ANSI_PADDING|OFF|Oui|  
 |ANSI_WARNINGS|OFF|Oui|  
 |ARITHABORT|OFF|Oui|  
-|AUTO_CLOSE|OFF|non|  
+|AUTO_CLOSE|OFF|Non|  
 |AUTO_CREATE_STATISTICS|ON|Oui|  
-|AUTO_SHRINK|OFF|non|  
+|AUTO_SHRINK|OFF|Non|  
 |AUTO_UPDATE_STATISTICS|ON|Oui|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Oui|  
-|CHANGE_TRACKING|OFF|non|  
+|CHANGE_TRACKING|OFF|Non|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Oui|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Oui|  
 |CURSOR_DEFAULT|GLOBAL|Oui|  
-|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|non<br /><br /> non<br /><br /> non|  
+|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Non<br /><br /> Non|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Oui|  
-|DB_CHAINING|ON|non|  
-|ENCRYPTION|OFF|non|  
+|DB_CHAINING|ON|Non|  
+|ENCRYPTION|OFF|Non|  
 |NUMERIC_ROUNDABORT|OFF|Oui|  
 |PAGE_VERIFY|CHECKSUM pour les nouvelles installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE pour les mises à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Oui|  
 |PARAMETERIZATION|SIMPLE|Oui|  
 |QUOTED_IDENTIFIER|OFF|Oui|  
-|READ_COMMITTED_SNAPSHOT|OFF|non|  
-|RECOVERY|SIMPLE|non|  
+|READ_COMMITTED_SNAPSHOT|OFF|Non|  
+|RECOVERY|SIMPLE|Non|  
 |RECURSIVE_TRIGGERS|OFF|Oui|  
 |Options de Service Broker|ENABLE_BROKER|Oui|  
-|TRUSTWORTHY|OFF|non|  
+|TRUSTWORTHY|OFF|Non|  
   
  Pour obtenir une description de ces options de base de données, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
@@ -129,7 +128,7 @@ ms.locfileid: "48141059"
   
 -   Affectation de la valeur READ_ONLY à la base de données ou au groupe de fichiers primaire  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Tous les utilisateurs peuvent créer des objets temporaires dans tempdb. Les utilisateurs n'ont accès qu'aux objets qu'ils possèdent, sauf s'ils ont reçu des autorisations supplémentaires. Il est possible de révoquer l’autorisation de connexion à tempdb pour empêcher un utilisateur d’utiliser tempdb. Cependant, cela n’est pas recommandé, car certaines opérations courantes nécessitent l’utilisation de tempdb.  
   
 ## <a name="related-content"></a>Contenu associé  
@@ -144,6 +143,6 @@ ms.locfileid: "48141059"
  [Déplacer des fichiers de bases de données](move-database-files.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation de tempdb dans SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81216)  
+ [Utilisation de tempdb dans SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81216)  
   
   

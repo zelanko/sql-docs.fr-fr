@@ -10,12 +10,12 @@ ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8bc8cf096c1859d2829531ac181fb45253b18bda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f5e5c052bb779ac6f6227aaf0b4b6a60a94110d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674687"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524562"
 ---
 # <a name="legal-notice-db2tosql"></a>Notice légale (DB2toSQL)
 Cette documentation, ainsi que les exemples d’applications qu’elle contient, est fournie à titre d’information uniquement et sans aucune garantie, expresse ou implicite. Les informations contenues dans cette documentation, notamment les URL et autres références à des sites web Internet, pourront faire l’objet de modifications sans préavis. L’utilisateur reconnaît assumer tous les risques liés à l’utilisation ou aux résultats de l’utilisation de cette documentation.  
@@ -35,11 +35,11 @@ SAP NetWeaver est une marque déposée de SAP AG en Allemagne et dans plusieur
 Toutes les autres marques sont la propriété de leurs propriétaires respectifs.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Usage de la documentation pour le support et la mise à niveau de SQL Server  
-Le contenu qui se trouve dans la documentation de SQL Server est publié uniquement après avoir été suffisamment testé. La documentation du produit – documentation SQL Server en ligne, fichiers Lisez-moi, documents de problèmes connus et articles de la Base de connaissances – contient des informations sur les fonctions et fonctionnalités SQL Server qui sont assez fiables pour être utilisées par tous les clients. Ceci s’applique à la totalité de la documentation SQL Server, y compris aux fichiers Lisez-moi des versions et des service packs (dans la mesure où les fichiers Lisez-moi sont considérés comme des extensions de la documentation en ligne).  
+Le contenu qui se trouve dans la documentation de SQL Server est publié uniquement après avoir été suffisamment testé. Documentation du produit - documentation en ligne de SQL Server, fichiers Lisez-moi, documents relatifs aux problèmes connus et articles de la Base de connaissances - contient des informations sur les fonctionnalités de SQL Server qui est suffisamment robuste pour être sûr pour une utilisation générale par tous les clients. Ceci s’applique à la totalité de la documentation SQL Server, y compris aux fichiers Lisez-moi des versions et des service packs (dans la mesure où les fichiers Lisez-moi sont considérés comme des extensions de la documentation en ligne).  
   
 Il peut arriver qu’une fonctionnalité donnée ne doive pas être utilisée directement par les clients. Dans ce cas, elle n’est pas documentée. Le contenu de documentations ou sites web tiers n’est pas pris en charge par le support technique Microsoft et ne doit pas être utilisé dans des applications ou des bases de données de production, sauf si ladite fonctionnalité est également traitée dans la documentation SQL Server publiée par Microsoft.  
   
-Les clients ne doivent pas utiliser d’API non documentées, y compris mais de manière non limitative : les procédures stockées, les procédures stockées étendues, les fonctions, les vues, les tables, les colonnes, les propriétés ou les métadonnées. Le support technique Microsoft ne gérera pas les bases de données ou les applications qui exploitent ou utilisent des points d’entrée non documentés.  
+Les clients ne doivent pas utiliser d’API non documentées, y compris mais de manière non limitative : les procédures stockées, les procédures stockées étendues, les fonctions, les vues, les tables, les colonnes, les propriétés ou les métadonnées. Le support technique Microsoft ne gérera pas les bases de données ou les applications qui exploitent ou utilisent des points d’entrée non documentés.  
   
 Les mises à niveau de serveur et de base de données vers les versions ultérieures de SQL Server ne sont pas garanties pour les applications et les bases de données qui exploitent et utilisent des points d’entrée non documentés. L’utilisation des fonctions et fonctionnalités SQL Server doit être limitée à celles qui sont incluses dans la documentation Microsoft SQL Server. Si une fonctionnalité n’est pas documentée dans la documentation Microsoft SQL Server, elle n’est pas considérée comme une partie prise en charge de SQL Server.  
   

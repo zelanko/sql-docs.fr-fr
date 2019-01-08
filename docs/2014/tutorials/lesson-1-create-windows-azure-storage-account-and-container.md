@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Créer le compte de stockage Azure Windows et conteneur | Microsoft Docs'
+title: 'Leçon 1 : Créer le compte de stockage Azure Windows et conteneur | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 43489355aabc9c03407dd6b5779996ceef8967b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edeefac46805ba74b011d7c86202c7d5dbcdec14
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143643"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367151"
 ---
-# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Leçon 1 : Créer un compte et un conteneur de Stockage Microsoft Azure
+# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Leçon 1 : Créer un compte et un conteneur Microsoft Azure Storage
   Avant de stocker des fichiers de données SQL Server dans le Stockage Windows Azure, vous devez d'abord créer un compte de stockage Windows Azure et un conteneur d'objets blob, ainsi qu'une signature d'accès partagé. La leçon 1 présente les étapes de connexion au Portail de gestion Windows Azure, puis de création d'un compte de stockage, d'un conteneur d'objets blob et d'une signature d'accès partagé.  
   
  Par défaut, seul le propriétaire du compte de stockage peut accéder aux objets blob, aux tables et aux files d'attente dans ce compte. Pour accéder à ces ressources en utilisant cette nouvelle amélioration SQL Server sans partager la clé d'accès du compte de stockage, effectuez les tâches suivantes :  
@@ -29,7 +29,7 @@ ms.locfileid: "48143643"
   
 -   Utilisez une stratégie d'accès stockée pour gérer les signatures d'accès partagé d'un conteneur ou de ses objets blob. La stratégie d'accès stockée vous donne une mesure supplémentaire de contrôle de vos signatures d'accès partagé et fournit également un moyen simple de les révoquer.  
   
- Pour plus d'informations, consultez [Gérer l'accès aux ressources Microsoft Azure Storage](http://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
+ Pour plus d'informations, consultez [Gérer l'accès aux ressources Microsoft Azure Storage](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
   
 ## <a name="create-storage-account"></a>Créer un compte de stockage  
  Pour créer un compte de stockage sur le Portail de gestion Windows Azure, procédez comme suit :  
@@ -58,7 +58,7 @@ ms.locfileid: "48143643"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  Pour créer un conteneur par programme, utilisez également des API REST. Pour plus d'informations, consultez [Créer un conteneur](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx) et [Référence de l'API REST des services Microsoft Azure Storage](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
+>  Pour créer un conteneur par programme, utilisez également des API REST. Pour plus d'informations, consultez [Créer un conteneur](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx) et [Référence de l'API REST des services Microsoft Azure Storage](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
   
  **Leçon suivante :**  
   

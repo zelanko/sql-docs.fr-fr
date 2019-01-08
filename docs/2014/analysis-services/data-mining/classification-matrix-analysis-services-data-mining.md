@@ -19,12 +19,12 @@ ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2bb84f3ba798ba8d1af4132f6553e6428365ca9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7949729f3ebee87d06e5e591c46513c111b70016
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171299"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358891"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Matrice de classification (Analysis Services - Exploration de données)
   Une *matrice de classification* trie tous les cas du modèle en catégories, en déterminant si la valeur prédite correspondait à la valeur réelle. Tous les cas dans chaque catégorie sont ensuite comptés et les totaux sont affichés dans la matrice. La matrice de classification est un outil standard d’évaluation des modèles statistiques et est parfois appelée *matrice de confusion*.  
@@ -67,7 +67,7 @@ ms.locfileid: "48171299"
 |1|2|123|17|  
 |2|19|0|20|  
   
- Bien que l'ajout de plusieurs colonnes rende la disposition du rapport plus complexe, les détails supplémentaires peuvent être très utiles lorsque vous voulez évaluer le coût cumulé d'une prédiction incorrecte. Pour créer des sommes sur les diagonales ou comparer les résultats de différentes combinaisons de lignes, vous pouvez cliquer sur le bouton **Copier** sous l’onglet **Matrice de classification** et coller le rapport dans Excel. Vous pouvez aussi utiliser un client tel que le Client d’exploration de données pour Excel, qui prend en charge [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures, pour créer, directement dans Excel, un rapport de classification qui inclut des nombres et des pourcentages. Pour plus d’informations, consultez [SQL Server Data Mining](http://go.microsoft.com/fwlink/?LinkID=77733)(en anglais).  
+ Bien que l'ajout de plusieurs colonnes rende la disposition du rapport plus complexe, les détails supplémentaires peuvent être très utiles lorsque vous voulez évaluer le coût cumulé d'une prédiction incorrecte. Pour créer des sommes sur les diagonales ou comparer les résultats de différentes combinaisons de lignes, vous pouvez cliquer sur le bouton **Copier** sous l’onglet **Matrice de classification** et coller le rapport dans Excel. Vous pouvez aussi utiliser un client tel que le Client d’exploration de données pour Excel, qui prend en charge [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures, pour créer, directement dans Excel, un rapport de classification qui inclut des nombres et des pourcentages. Pour plus d’informations, consultez [SQL Server Data Mining](https://go.microsoft.com/fwlink/?LinkID=77733)(en anglais).  
   
 ## <a name="restrictions-on-the-classification-matrix"></a>Restrictions relatives à la matrice de classification  
  Une matrice de classification peut être utilisée uniquement avec des attributs prédictibles discrets.  
@@ -79,12 +79,12 @@ ms.locfileid: "48171299"
   
 |Rubriques|Liens|  
 |------------|-----------|  
-|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Tutoriel sur l’exploration de données de base](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test de la précision avec des graphiques de courbes d’élévation &#40;didacticiel d’exploration de données de base&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Didacticiel sur l'exploration de données de base](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
 |Explique les types de graphique associés.|[Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices &#40;Analysis Services - Exploration de données&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services - Exploration de données&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Décrit les utilisations de la validation croisée pour les modèles et les structures d'exploration de données.|[La Validation croisée &#40;Analysis Services - Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Décrit les utilisations de la validation croisée pour les modèles et les structures d'exploration de données.|[Validation croisée &#40;Analysis Services - Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Tâches de test et validation et procédures &#40;exploration des données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
   

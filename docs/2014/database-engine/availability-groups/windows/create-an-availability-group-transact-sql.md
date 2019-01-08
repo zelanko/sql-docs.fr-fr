@@ -12,12 +12,12 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40f47820be28dccb90b158a7b71c886306d7961d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13d14fafd18fb9e0cdb156617798c8d2f15ff661
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169859"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365181"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Créer un groupe de disponibilité (Transact-SQL)
   Cette rubrique explique comment utiliser [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour créer et configurer un groupe de disponibilité sur des instances de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] sur lesquelles la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est activée. Un *groupe de disponibilité* définit un jeu de bases de données utilisateur qui basculent en tant qu'unité unique et un jeu de partenaires de basculement, appelés *réplicas de disponibilité*, qui prennent en charge le basculement.  
@@ -47,7 +47,7 @@ ms.locfileid: "48169859"
   
 |Tâche|Instruction(s) Transact-SQL|Où effectuer la tâche**<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
-|Créer le point de terminaison de mise en miroir de bases de données (une fois par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|[CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql) *endpointName* … FOR DATABASE_MIRRORING|Exécutez sur chaque instance de serveur dans laquelle le point de terminaison de mise en miroir de bases de données est manquant.|  
+|Créer le point de terminaison de mise en miroir de bases de données (une fois par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|[CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql) *endpointName*... FOR DATABASE_MIRRORING|Exécutez sur chaque instance de serveur dans laquelle le point de terminaison de mise en miroir de bases de données est manquant.|  
 |Créer un groupe de disponibilité|[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)|Exécutez sur l'instance de serveur qui hébergera le réplica principal initial.|  
 |Joindre le réplica secondaire au groupe de disponibilité|[ALTER AVAILABILITY GROUP](join-a-secondary-replica-to-an-availability-group-sql-server.md) *nom_groupe* JOIN|Exécutez sur chaque instance de serveur qui héberge un réplica secondaire.|  
 |Préparer la base de données secondaire|[BACKUP](/sql/t-sql/statements/backup-transact-sql) et [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).|Créez des sauvegardes sur l'instance de serveur qui héberge le réplica principal.<br /><br /> Restaurez les sauvegardes sur chaque instance de serveur qui héberge un réplica secondaire, à l'aide de RESTORE WITH NORECOVERY.|  
@@ -58,7 +58,7 @@ ms.locfileid: "48169859"
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL pour créer et configurer un groupe de disponibilité  
   
 > [!NOTE]  
->  Pour obtenir un exemple de procédure de configuration qui contient des exemples de code de chacune de ces instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] , consultez [Exemple : configuration d’un groupe de disponibilité qui utilise l’authentification Windows](#ExampleConfigAGWinAuth).  
+>  Pour un exemple de procédure de configuration qui contient des exemples de code de chacune de ces [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions, consultez [exemple : Configuration d’un groupe de disponibilité qui utilise l’authentification Windows](#ExampleConfigAGWinAuth).  
   
 1.  Connectez-vous à l'instance de serveur qui hébergera le réplica principal.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "48169859"
   
 3.  Joignez le nouveau réplica secondaire au groupe de disponibilité. Pour plus d’informations, consultez [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-4.  Pour chaque base de données dans le groupe de disponibilité, créez une base de données secondaire en restaurant des sauvegardes récentes de la base de données primaire, à l'aide de RESTORE WITH NORECOVERY. Pour plus d’informations, consultez [Exemple : configuration d’un groupe de disponibilité à l’aide de l’authentification Windows (Transact-SQL)](create-an-availability-group-transact-sql.md), en commençant par l’étape de restauration de la sauvegarde de base de données.  
+4.  Pour chaque base de données dans le groupe de disponibilité, créez une base de données secondaire en restaurant des sauvegardes récentes de la base de données primaire, à l'aide de RESTORE WITH NORECOVERY. Pour plus d’informations, consultez [exemple : Paramètre d’une disponibilité à l’aide de Windows authentification de groupe (Transact-SQL)](create-an-availability-group-transact-sql.md), en commençant à l’étape de restauration de la sauvegarde de base de données.  
   
 5.  Joignez chaque nouvelle base de données secondaire au groupe de disponibilité. Pour plus d’informations, consultez [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-##  <a name="ExampleConfigAGWinAuth"></a> Exemple : configuration d’un groupe de disponibilité qui utilise l’authentification Windows  
+##  <a name="ExampleConfigAGWinAuth"></a> Exemple : Configuration d'un groupe de disponibilité qui utilise l'authentification Windows  
  Cet exemple crée un exemple de procédure de configuration [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] qui utilise [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour installer des points de terminaison de mise en miroir de bases de données qui utilisent l'authentification Windows, et créer et configurer un groupe de disponibilité et ses bases de données secondaires.  
   
  Cet exemple contient les sections suivantes :  
@@ -126,7 +126,7 @@ ms.locfileid: "48169859"
   
 |Rôle initial|Système|Instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hôte|  
 |------------------|------------|---------------------------------------------|  
-|Principal|`COMPUTER01`|`AgHostInstance`|  
+|Principale|`COMPUTER01`|`AgHostInstance`|  
 |Secondary|`COMPUTER02`|Instance par défaut.|  
   
 1.  Créez un point de terminaison de mise en miroir de bases de données nommé *dbm_endpoint* sur l’instance de serveur sur laquelle vous envisagez de créer le groupe de disponibilité (il s’agit d’une instance nommée `AgHostInstance` sur `COMPUTER01`). Ce point de terminaison utilise le port 7022. Notez que l'instance de serveur sur laquelle vous créez le groupe de disponibilité hébergera le réplica principal.  
@@ -510,11 +510,11 @@ GO
   
 -   **Blogs :**  
   
-     [AlwaysON - HADRON Learning Series : Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON - HADRON Learning Series : Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Blogs de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Blogs de l’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](http://blogs.msdn.com/b/psssql/)  
+     [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Vidéos :**  
   
@@ -524,9 +524,9 @@ GO
   
 -   **Livres blancs :**  
   
-     [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Livres blancs de Microsoft pour SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Livres blancs de Microsoft pour SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Livres blancs de l'équipe de consultants clients de SQL Server](http://sqlcat.com/)  
   

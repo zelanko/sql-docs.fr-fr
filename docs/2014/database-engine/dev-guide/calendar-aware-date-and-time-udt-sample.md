@@ -12,12 +12,12 @@ ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 82c52544bf808bee40097043871a4e4703c513d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96cac25e91c369b5069e4b91c72b99911f3e4d44
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108699"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361321"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>Exemple d’UDT prenant en charge les Calendar Date et heure
   Le stockage de dates sous forme de chaînes peut prêter à confusion car les dates sont sans intérêt si vous ne connaissez pas le système de calendrier utilisé. L'exemple `CADatetime` présente deux types de données définis par l'utilisateur, `CADatetime` et `CADate`, qui fournissent une gestion des dates et des heures utilisant un calendrier.  
@@ -25,9 +25,9 @@ ms.locfileid: "48108699"
 ## <a name="prerequisites"></a>Prérequis  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](http://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
   
--   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   Le Kit de développement logiciel .NET Framework SDK 2.0 ou version ultérieure, ou Microsoft Visual Studio 2005 ou version ultérieure. Vous pouvez vous procurer gratuitement le Kit de développement logiciel .NET Framework SDK.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48108699"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer le CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer l'intégration du CLR, vous devez disposer de l'autorisation de niveau serveur `ALTER SETTINGS` qui est attribuée implicitement aux membres des rôles serveur fixes `sysadmin` et `serveradmin`.  
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
@@ -161,8 +161,8 @@ ms.locfileid: "48108699"
         // This type uses days == 0 as the way to designate a NULL value  
   
         const string CADateSchema =  
-            "<xs:schema targetNamespace=\"http://schemas.microsoft.com/sqlserver/2004/08/CADate\" " +  
-                "xmlns=\"http://schemas.microsoft.com/sqlserver/2004/07/CADate\" " +  
+            "<xs:schema targetNamespace=\"https://schemas.microsoft.com/sqlserver/2004/08/CADate\" " +  
+                "xmlns=\"https://schemas.microsoft.com/sqlserver/2004/07/CADate\" " +  
                 "elementFormDefault=\"qualified\"" +  
                 "xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" >" +  
                 "<xs:element name=\"CADate\" >" +  
@@ -611,7 +611,7 @@ ms.locfileid: "48108699"
   
             writer.WriteStartElement(  
                 "CADate",  
-                "http://schemas.microsoft.com/sqlserver/2004/08/CADate");  
+                "https://schemas.microsoft.com/sqlserver/2004/08/CADate");  
             writer.WriteAttributeString("IsNull", this.IsNull.ToString(CultureInfo.CurrentUICulture));  
             if (!this.IsNull)  
             {  
@@ -807,8 +807,8 @@ ms.locfileid: "48108699"
     public struct CADateTime : INullable, IXmlSerializable  
     {  
         const string CADateTimeSchema =  
-            "<xs:schema targetNamespace=\"http://schemas.microsoft.com/sqlserver/2004/08/CADateTime\" " +  
-                "xmlns=\"http://schemas.microsoft.com/sqlserver/2004/07/CADate\" " +  
+            "<xs:schema targetNamespace=\"https://schemas.microsoft.com/sqlserver/2004/08/CADateTime\" " +  
+                "xmlns=\"https://schemas.microsoft.com/sqlserver/2004/07/CADate\" " +  
                 "elementFormDefault=\"qualified\"" +  
                 "xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" >" +  
                 "<xs:element name=\"CADate\" >" +  
@@ -1336,7 +1336,7 @@ ms.locfileid: "48108699"
                 throw new ArgumentNullException("writer");  
             }  
   
-            writer.WriteStartElement("CADate", "http://schemas.microsoft.com/sqlserver/2004/08/CADate");  
+            writer.WriteStartElement("CADate", "https://schemas.microsoft.com/sqlserver/2004/08/CADate");  
             writer.WriteAttributeString("IsNull", this.IsNull.ToString());  
   
             if (!this.IsNull)  

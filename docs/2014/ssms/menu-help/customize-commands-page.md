@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.vs.customizecom.f1
-- vs.customize.commands
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1636d8a99cd337afc1c2ec28f2463455a7b9ff98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158409"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328529"
 ---
 # <a name="customize-commands-page"></a>Personnaliser (page Commandes)
   Cette boîte de dialogue vous permet d'ajouter des commandes à des barres d'outils et à des menus et d'en supprimer, ainsi que de modifier les images utilisées pour représenter les boutons des barres d'outils ou les commandes des menus. Vous pouvez accéder à la page **Commandes** en cliquant sur **Personnaliser** dans le menu **Outils** , puis en cliquant sur **Commandes**.  
@@ -41,5 +40,3 @@ ms.locfileid: "48158409"
   
 ## <a name="see-also"></a>Voir aussi  
  [Personnaliser des menus et des touches de raccourci](../customize-menus-and-shortcut-keys.md)  
-  
-  
