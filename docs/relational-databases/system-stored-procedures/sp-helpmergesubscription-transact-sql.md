@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergesubscription
@@ -17,12 +16,12 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e74e6b5b921439f905197795aa50e5c0f8181f4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad32cd5b8e6936bc646fa664052a307a9e0d7ed0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685397"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779371"
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
  [  **@subscription_type=**] **'***subscription_type***'**  
  Est le type d’abonnement. *subscription_type*est **nvarchar (15)**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**push** (valeur par défaut)|Abonnement par envoi de données (push)|  
 |**Extraction**|Abonnement par extraction de données (pull)|  
@@ -106,7 +105,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
  Pour les abonnements anonymes, le *subscription_type*valeur est toujours **1** (pull). Toutefois, vous devez exécuter [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) sur l’abonné pour plus d’informations sur les abonnements anonymes.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe ou de la liste d’accès à la publication à laquelle appartient l’abonnement peut exécuter **sp_ helpmergesubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  

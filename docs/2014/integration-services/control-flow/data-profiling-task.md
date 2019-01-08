@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.f1
@@ -17,12 +16,12 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4119b2ef17bcb735669d25662972ae4c79bbae31
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 546b52e8e0cc944e279e976bc4709d9fcee076f7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906409"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369961"
 ---
 # <a name="data-profiling-task"></a>Tâche de profilage des données
   La tâche de profilage des données calcule différents profils qui vous aident à vous familiariser avec une source de données et à identifier les problèmes à résoudre au niveau des données.  
@@ -30,7 +29,7 @@ ms.locfileid: "48906409"
  Vous pouvez utiliser la tâche de profilage des données à l’intérieur d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour profiler les données stockées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et pour identifier les problèmes potentiels de qualité des données.  
   
 > [!NOTE]  
->  Cette rubrique décrit uniquement les fonctionnalités et les exigences de la tâche de profilage des données. Pour connaître la procédure pas à pas d’utilisation de la tâche de profilage des données, consultez la section [Tâche de profilage des données et visionneuse](data-profiling-task-and-viewer.md).  
+>  Cette rubrique décrit uniquement les fonctionnalités et les spécifications de la tâche de profilage des données. Pour connaître la procédure pas à pas d’utilisation de la tâche de profilage des données, consultez la section [Tâche de profilage des données et visionneuse](data-profiling-task-and-viewer.md).  
   
 ## <a name="requirements-and-limitations"></a>Limitations et exigences  
  La tâche de profilage des données fonctionne uniquement avec les données stockées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette tâche ne fonctionne pas avec les sources de données tierces ou basées sur des fichiers.  
@@ -53,7 +52,7 @@ ms.locfileid: "48906409"
 |Profils qui analysent des colonnes individuelles|Description|  
 |----------------------------------------------|-----------------|  
 |Profil de distribution de longueurs de colonne|Signale toutes les longueurs distinctes des valeurs de chaîne dans la colonne sélectionnée, ainsi que le pourcentage de lignes dans la table que chaque longueur représente.<br /><br /> Ce profil vous aide à identifier des problèmes dans vos données, tels que des valeurs non valides. Par exemple, vous profilez une colonne des codes des États américains, ceux-ci comportant deux caractères, et découvrez des valeurs excédant deux caractères.|  
-|Profil de ratio de colonne Null|Signale le pourcentage de valeurs Null dans la colonne sélectionnée.<br /><br /> Ce profil vous aide à identifier des problèmes dans vos données, tels qu'un ratio élevé inattendu de valeurs Null dans une colonne. Par exemple, vous profilez une colonne de codes postaux et découvrez un pourcentage élevé et inacceptable de codes manquants.|  
+|Profil de ratio de colonne Null|Signale le pourcentage de valeurs Null dans la colonne sélectionnée.<br /><br /> Ce profil vous aide à identifier des problèmes dans vos données, tels qu'un ratio élevé inattendu de valeurs Null dans une colonne. Par exemple, vous profilez une colonne de codes postaux et découvrez un pourcentage élevé et inacceptable de codes manquants.|  
 |Profil de modèle de colonne|Signale un ensemble d'expressions régulières qui reflètent le pourcentage spécifié de valeurs dans une colonne de chaîne.<br /><br /> Ce profil vous aide à identifier des problèmes dans vos données, tels que des chaînes non valides. Il peut également suggérer des expressions régulières susceptibles d'être utilisées à l'avenir pour la validation de nouvelles valeurs. Par exemple, un profil de modèle d'une colonne de codes postaux américains peut générer les expressions régulières \d{5}-\d{4}, \d{5} et \d{9}. Si vous rencontrez d'autres expressions régulières, il est probable que vos données contiennent des valeurs qui ne sont pas valides ou utilisent un format incorrect.|  
 |Profil de statistiques de colonnes|Signale des statistiques, telles que la valeur minimale, la valeur maximale, la moyenne et l'écart type pour des colonnes numériques, et la valeur minimale et la valeur maximale pour des colonnes `datetime`.<br /><br /> Ce profil vous aide à identifier des problèmes dans vos données, tels que des dates non valides. Par exemple, vous profilez une colonne de dates historiques et découvrez une date maximum dont l'échéance est à venir.|  
 |Profil de distribution de valeurs de colonne|Signale toutes les valeurs distinctes dans la colonne sélectionnée, ainsi que le pourcentage de lignes dans la table que chaque valeur représente. Peut également signaler des valeurs qui représentent plus qu'un pourcentage de lignes spécifié dans la table.<br /><br /> Ce profil vous aide à identifier des problèmes dans vos données, tels qu'un nombre incorrect de valeurs distinctes dans une colonne. Par exemple, vous profilez une colonne supposée contenir les États américains et découvrez plus de 50 valeurs distinctes.|  
@@ -117,7 +116,7 @@ ms.locfileid: "48906409"
 |**DataProfilingTaskTrace**|Donne des informations détaillées sur l'état de la tâche. Les messages contiennent les informations suivantes :<br /><br /> Début de traitement des requêtes<br /><br /> Début de requête<br /><br /> Query End<br /><br /> Fin du calcul de requête|  
   
 ## <a name="output-and-its-schema"></a>Sortie et son schéma  
- La tâche de profilage des données génère en sortie les profils sélectionnés en langage XML structuré conformément au schéma DataProfile.xsd. Vous pouvez préciser si cette sortie XML doit être enregistrée dans un fichier ou dans une variable de package. Vous pouvez voir ce schéma en ligne sur [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Vous pouvez, à partir de la page web, enregistrer une copie locale du schéma. Vous pouvez ensuite afficher la copie locale du schéma dans Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou un autre éditeur de schéma, dans un éditeur XML ou encore dans un éditeur de texte tel que le Bloc-notes.  
+ La tâche de profilage des données génère en sortie les profils sélectionnés en langage XML structuré conformément au schéma DataProfile.xsd. Vous pouvez préciser si cette sortie XML doit être enregistrée dans un fichier ou dans une variable de package. Vous pouvez voir ce schéma en ligne sur [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Vous pouvez, à partir de la page web, enregistrer une copie locale du schéma. Vous pouvez ensuite afficher la copie locale du schéma dans Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou un autre éditeur de schéma, dans un éditeur XML ou encore dans un éditeur de texte tel que le Bloc-notes.  
   
  Ce schéma pour les informations sur la qualité des données peut être utile pour :  
   
@@ -125,7 +124,7 @@ ms.locfileid: "48906409"
   
 -   construire des outils personnalisés qui fonctionnent avec les informations sur la qualité des données.  
   
- L’espace de noms cible est identifié dans le schéma en tant que [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ L’espace de noms cible est identifié dans le schéma en tant que [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>Sortie dans le flux de travail conditionnel d'un package  
  Les composants de profilage des données n'incluent pas de fonctionnalités intégrées pour implémenter la logique conditionnelle dans le flux de travail du package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] basée sur la sortie de la tâche de profilage des données. Toutefois, vous pouvez ajouter facilement cette logique, avec un minimum de programmation, dans une tâche de script. Ce code effectuerait une requête XPath sur la sortie XML, puis enregistrerait le résultat dans une variable de package. Les contraintes de précédence qui connectent la tâche de script aux tâches suivantes peuvent utiliser une expression pour déterminer le flux de travail. Par exemple, la tâche de script détecte que le pourcentage de valeurs Null dans une colonne dépasse un certain seuil. Lorsque cette condition est remplie, vous pouvez interrompre le package et résoudre le problème avant de continuer.  

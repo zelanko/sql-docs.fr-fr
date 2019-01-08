@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, migrating
@@ -14,12 +13,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d22744898dcc45ac213436afcdf25359ba24adec
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072203"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351463"
 ---
 # <a name="upgrade-integration-services-packages"></a>Mettre à niveau des packages Integration Services
   Lorsque vous mettez à niveau une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] vers la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], votre [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages ne sont pas automatiquement mis à niveau vers le format de package par la version actuelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise. Vous devez choisir une méthode de mise à niveau et mettre à niveau vos packages manuellement.  
@@ -33,7 +32,7 @@ ms.locfileid: "49072203"
   
 -   Runtime DTS ;  
   
--   DTS API ;  
+-   DTS API ;  
   
 -   Assistant Migration de package pour la migration de packages DTS vers la prochaine version de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
@@ -47,7 +46,7 @@ ms.locfileid: "49072203"
   
 -   Migrez les packages vers [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], puis mettez à niveau les packages vers [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)].  
   
-     Pour plus d’informations sur la migration des packages DTS vers [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] et [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], consultez [Migration des packages DTS (Data Transformation Services](http://go.microsoft.com/fwlink/?LinkId=251870) (2005) et [Migration des packages DTS (Data Transformation Services)](http://go.microsoft.com/fwlink/?LinkId=251871) (2008).  
+     Pour plus d’informations sur la migration des packages DTS vers [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] et [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], consultez [Migration des packages DTS (Data Transformation Services](https://go.microsoft.com/fwlink/?LinkId=251870) (2005) et [Migration des packages DTS (Data Transformation Services)](https://go.microsoft.com/fwlink/?LinkId=251871) (2008).  
   
 -   Recréez les packages DTS à l'aide de [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)].  
   
@@ -70,7 +69,7 @@ ms.locfileid: "49072203"
 ## <a name="custom-applications-and-custom-components"></a>Applications et composants personnalisés  
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ne fonctionnent pas avec la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- Vous pouvez utiliser la version actuelle des outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour exécuter et gérer des packages qui incluent des composants personnalisés [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)]. Nous avons ajouté quatre règles de redirection de liaison aux fichiers suivants pour aider à rediriger des assemblys du runtime de la version 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) vers la version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ Vous pouvez utiliser la version actuelle des outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour exécuter et gérer des packages qui incluent des composants personnalisés [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)]. Nous avons ajouté quatre règles de redirection de liaison aux fichiers suivants pour aider à rediriger des assemblys du runtime de la version 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) vers la version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 -   DTExec.exe.config  
   
@@ -84,7 +83,7 @@ ms.locfileid: "49072203"
   
  Pour utiliser [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour concevoir des packages qui incluent [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] des composants personnalisés, vous devez modifier le fichier devenv.exe.config qui se trouve dans  *\<lecteur >*: \Program Files\ Microsoft Visual Studio 10.0\Common7\IDE.  
   
- Pour utiliser ces packages avec les applications clientes générées avec le runtime pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], incluez les règles de redirection dans la section de configuration du fichier *.exe .config de l'exécutable. Les règles redirigent les assemblys du runtime vers la version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Pour plus d’informations sur la redirection des versions d’assemblys, consultez Élément [\<assemblyBinding> pour \<runtime>](http://msdn.microsoft.com/library/twy1dw1e.aspx).  
+ Pour utiliser ces packages avec les applications clientes générées avec le runtime pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], incluez les règles de redirection dans la section de configuration du fichier *.exe .config de l'exécutable. Les règles redirigent les assemblys du runtime vers la version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Pour plus d’informations sur la redirection des versions d’assemblys, consultez Élément [\<assemblyBinding> pour \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
 ### <a name="locating-the-assemblies"></a>Recherche d'assemblys  
  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les assemblys [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ont été mis à niveau vers le .NET 4.0. Il existe un Global Assembly Cache distinct pour le .NET 4, situé dans *\<lecteur>*:\Windows\Microsoft.NET\assembly. Vous trouverez tous les assemblys [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sous ce chemin d'accès, en général dans le dossier GAC_MSIL.  
@@ -99,7 +98,7 @@ ms.locfileid: "49072203"
   
 |Composant ou fonctionnalité|Résultats de la mise à niveau|  
 |--------------------------|---------------------|  
-|Chaînes de connexion|Pour les packages [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , les noms de certains fournisseurs ont changé et requièrent des valeurs différentes dans les chaînes de connexion. Pour mettre à jour les chaînes de connexion, utilisez l'une des procédures suivantes :<br /><br /> -Utilisez l’Assistant Mise à niveau de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour mettre à niveau le package et sélectionnez l’option **Mettre à jour les chaînes de connexion pour l’utilisation des nouveaux noms de fournisseurs** .<br /><br /> -Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans la page Général de la boîte de dialogue Options, sélectionnez l’option **Mettre à jour les chaînes de connexion pour l’utilisation des nouveaux noms de fournisseurs** . Pour plus d'informations sur cette option, consultez [General Page](../general-page-of-integration-services-designers-options.md).<br /><br /> -Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le package et modifiez manuellement le texte de la propriété ConnectionString.<br /><br /> Remarque : vous ne pouvez pas appliquer les procédures ci-dessus pour mettre à jour une chaîne de connexion lorsque celle-ci est stockée dans un fichier de configuration ou dans un fichier de source de données, ou lorsqu’une expression définit la propriété `ConnectionString`. Pour mettre à jour la chaîne de connexion dans ces cas-là, vous devez mettre à jour le fichier ou l'expression manuellement.<br /><br /> Pour plus d’informations sur les sources de données disponibles, consultez [Sources de données](../connection-manager/data-sources.md).|  
+|Chaînes de connexion|Pour les packages [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , les noms de certains fournisseurs ont changé et requièrent des valeurs différentes dans les chaînes de connexion. Pour mettre à jour les chaînes de connexion, utilisez l'une des procédures suivantes :<br /><br /> -Utilisez l’Assistant Mise à niveau de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour mettre à niveau le package et sélectionnez l’option **Mettre à jour les chaînes de connexion pour l’utilisation des nouveaux noms de fournisseurs** .<br /><br /> -Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans la page Général de la boîte de dialogue Options, sélectionnez l’option **Mettre à jour les chaînes de connexion pour l’utilisation des nouveaux noms de fournisseurs** . Pour plus d'informations sur cette option, consultez [General Page](../general-page-of-integration-services-designers-options.md).<br /><br /> -Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le package et modifiez manuellement le texte de la propriété ConnectionString.<br /><br /> Remarque : Vous ne pouvez pas appliquer les procédures ci-dessus pour mettre à jour une chaîne de connexion lorsque celle-ci est stockée dans un fichier de configuration ou dans un fichier de source de données, ou lorsqu'une expression définit la propriété `ConnectionString`. Pour mettre à jour la chaîne de connexion dans ces cas-là, vous devez mettre à jour le fichier ou l'expression manuellement.<br /><br /> Pour plus d’informations sur les sources de données disponibles, consultez [Sources de données](../connection-manager/data-sources.md).|  
 |Transformation de recherche|Pour les packages [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], le processus de mise à niveau effectue automatiquement une mise à niveau de la transformation de recherche vers la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Toutefois, la version actuelle de ce composant propose des fonctions supplémentaires dont vous souhaiterez peut-être tirer parti.<br /><br /> Pour plus d'informations, consultez [Lookup Transformation](../data-flow/transformations/lookup-transformation.md).|  
 |Tâche de script et composant Script|Pour les packages [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , le processus de mise à niveau de packages effectue automatiquement une migration des scripts de la tâche de script et du composant Script de VSA vers VSTA.<br /><br /> Pour plus d’informations sur les modifications que vous devrez peut-être effectuer avant la migration et sur l’échec de conversion de scripts, consultez [Migrer des scripts vers VSTA](../../sql-server/install/migrate-scripts-to-vsta.md).|  
   
@@ -108,10 +107,10 @@ ms.locfileid: "49072203"
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   Article technique, [5 conseils pour une mise à niveau en douceur de SSIS vers SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=235321), sur msdn.microsoft.com.  
+-   Article technique, [5 conseils pour une mise à niveau en douceur de SSIS vers SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=235321), sur msdn.microsoft.com.  
   
--   Entrée de blog [Making your Existing Custom SSIS Extensions and Applications Work in Denali](http://go.microsoft.com/fwlink/?LinkId=238157), sur blogs.msdn.com.  
+-   Entrée de blog [Making your Existing Custom SSIS Extensions and Applications Work in Denali](https://go.microsoft.com/fwlink/?LinkId=238157), sur blogs.msdn.com.  
   
--   WebCast [Mise à niveau des packages SSIS vers SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=258674), sur channel9.msdn.com.  
+-   WebCast [Mise à niveau des packages SSIS vers SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=258674), sur channel9.msdn.com.  
   
   

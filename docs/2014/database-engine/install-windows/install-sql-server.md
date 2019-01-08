@@ -13,12 +13,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cabca146b31035b6c1023cfc6c8bdda3e6a71958
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 7f631209a655b11062ffd17fa9f83f3e355011cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018864"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356694"
 ---
 # <a name="install-sql-server-2014"></a>Installer SQL Server 2014
 ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ Télécharger SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
@@ -27,7 +27,7 @@ ms.locfileid: "51018864"
  Cette rubrique fournit une vue d'ensemble des différentes options d'installation disponibles pour installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur les différents [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants qui peuvent être installés et le processus d’installation, consultez [Installation pour SQL Server 2014](installation-for-sql-server.md).  
 > **Remarque :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est disponible dans les éditions 32 bits et 64 bits. Les éditions 64 bits et 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installées via l'Assistant Installation ou à l'invite de commandes. Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants, consultez [éditions et composants de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) et [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Par défaut, les exemples de bases de données et les exemples de code ne sont pas installés dans le cadre de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour installer des exemples de bases de données et de code pour les éditions non-Express de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez le [site Web CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). Pour plus d'informations sur la prise en charge des exemples de base de données et de code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], consultez [Vue d'ensemble des bases de données et des exemples](http://go.microsoft.com/fwlink/?LinkId=110391).  
+ Par défaut, les exemples de bases de données et les exemples de code ne sont pas installés dans le cadre de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour installer des exemples de bases de données et de code pour les éditions non-Express de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez le [site Web CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843). Pour plus d'informations sur la prise en charge des exemples de base de données et de code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], consultez [Vue d'ensemble des bases de données et des exemples](https://go.microsoft.com/fwlink/?LinkId=110391).  
   
  Avant d'installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], prenez connaissance des conditions requises pour l'installation, des contrôles de configuration du système et des considérations sur la sécurité. Pour en savoir plus, voir [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md). Examinez les rubriques de la section suivante pour plus d'informations sur différents scénarios d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

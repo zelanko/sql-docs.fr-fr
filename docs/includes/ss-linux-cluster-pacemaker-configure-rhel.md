@@ -5,10 +5,10 @@
    sudo firewall-cmd --reload
    ```
 
-   > Si le pare-feu n’a pas de configuration de haute disponibilité intégrée, ouvrez les ports suivants pour Pacemaker.
+   > Si le pare-feu n’a pas une configuration de haute disponibilité intégrée, ouvrez les ports suivants pour Pacemaker.
    >
-   > * TCP : ports 2224, 3121, 21064
-   > * UDP : port 5405
+   > * TCP : Ports 2224, 3121, 21064
+   > * UDP : Port 5405
 
 1. Installez les packages Pacemaker sur tous les nœuds.
 

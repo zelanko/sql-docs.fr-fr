@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 18277b6db2a59c502c4aafbec98974385a4a053d
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 852fb3c6cee7c65f8799102bbd65ab368cd0d9e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168787"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538582"
 ---
 # <a name="create-an-aps-domain-administrator"></a>Créer un administrateur de domaine APS
 Certaines opérations requièrent des privilèges d’administrateur de domaine de système de plateforme d’Analytique. Cette rubrique explique comment créer des administrateurs de domaine de matériel supplémentaires.  
@@ -30,7 +30,7 @@ Dispose des autorisations appropriées pour configurer tous les nœuds de points
   
 3.  Dans le **Active Directory Users and Computers** programmer, avec le bouton droit **utilisateurs**, pointez sur **New**, puis cliquez sur **utilisateur**.  
   
-4.  Dans le **nouvel objet – utilisateur** boîte de dialogue, terminez la description du nouvel utilisateur, puis cliquez sur **suivant**.  
+4.  Dans le **nouvel objet - utilisateur** boîte de dialogue, terminez la description du nouvel utilisateur, puis cliquez sur **suivant**.  
   
     Fermer la boîte de dialogue de mot de passe, puis cliquez sur **suivant**.  
   

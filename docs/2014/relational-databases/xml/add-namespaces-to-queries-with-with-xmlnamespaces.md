@@ -21,12 +21,12 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9689a0e46abbcba53e7c9765e9d327df4ef220a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04b4696f52566d0217e0d0a26c8a0b0f30308b7f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172469"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359511"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES
   [WITH XMLNAMESPACES (Transact-SQL)](/sql/t-sql/xml/with-xmlnamespaces) fournit une prise en charge des URI d’espace de noms de la manière suivante :  
@@ -45,7 +45,7 @@ WHERE  ProductID=316 or ProductID=317
 FOR XML RAW  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <row ProductID="316" Name="Blade" />  
@@ -192,7 +192,7 @@ go
   
  Les attributs @xml:lang utilisent l’espace de noms xml prédéfini. Comme XML version 1.0 ne requiert pas la déclaration explicite de la liaison d'espace de noms xml, le résultat n'inclut pas de déclaration explicite de la liaison d'espace de noms.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Translation>  
@@ -206,14 +206,14 @@ go
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
     <Product   
         ProductModelID= "{ sql:column("ProductModelID") }"   
         />  
 ') AS Result  
 FROM Production.ProductModel  
 WHERE CatalogDescription.exist('  
-    declare namespace  pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+    declare namespace  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      /pd:ProductDescription[(pd:Specifications)]'  
     ) = 1  
 ```  
@@ -221,13 +221,13 @@ WHERE CatalogDescription.exist('
  Dans la requête précédente, les deux méthodes **query()** et **exist()** déclarent le même espace de noms dans leur prologue. Exemple :  
   
 ```  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 ```  
   
  Une autre méthode consiste à déclarer WITH XMLNAMESPACES au préalable et à utiliser les préfixes d'espace de noms dans la requête. Dans ce cas, il n’est pas nécessaire que les méthodes **query()** et **exist()** incluent les déclarations d’espace de noms dans leurs prologues.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
 SELECT ProductModelID, CatalogDescription.query('  
     <Product   
         ProductModelID= "{ sql:column("ProductModelID") }"   

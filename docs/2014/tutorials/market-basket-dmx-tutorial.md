@@ -19,12 +19,12 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c4c35b3cc6a1e7b925be09704fccd2d7ed5bc38
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 0f29aff4341126665e184e12219aca014222cd82
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461905"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360791"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Didacticiel DMX Market Basket
   Dans ce didacticiel, vous allez apprendre à créer et explorer des modèles d'exploration de données, ou à en effectuer l'apprentissage, à l'aide du langage de requête DMX (Data Mining Extensions). Vous utiliserez ensuite ces modèles d'exploration pour établir des prédictions décrivant les produits susceptibles d'être achetés simultanément.  
@@ -46,7 +46,7 @@ ms.locfileid: "49461905"
   
  L'objectif de ce didacticiel est de fournir des requêtes DMX à utiliser dans l'application personnalisée.  
   
- **Pour plus d’informations :** [Solutions d’exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **Pour plus d'informations, consultez :** [Solutions d'exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Structure et modèles d'exploration de données  
  Avant de créer des instructions DMX, il est primordial de comprendre les objets principaux auxquels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fait appel pour créer des modèles d'exploration de données. Le *structure d’exploration de* est une structure de données qui définit le domaine de données à partir de laquelle les modèles d’exploration de données sont créés. Une structure d’exploration de données unique peut contenir plusieurs *les modèles d’exploration de données* qui partagent le même domaine. Un modèle d'exploration applique un algorithme de modèle d'exploration aux données qui sont représentées par une structure d'exploration de données.  
@@ -58,7 +58,7 @@ ms.locfileid: "49461905"
  Deux méthodes permettent de créer des modèles d'exploration de données dans DMX. Vous pouvez soit créer ensemble la structure d'exploration de données et le modèle qui y est associé par le biais de l'instruction `CREATE MINING MODEL`, soit créer d'abord une structure d'exploration de données à l'aide de l'instruction `CREATE MINING STRUCTURE`, puis ajouter un modèle d'exploration de données à la structure à l'aide de l'instruction `ALTER STRUCTURE`. Ces méthodes sont décrites ci-dessous.  
   
  `CREATE MINING MODEL`  
- Utilisez cette instruction pour créer en même temps une structure d'exploration de données et son modèle associé en utilisant le même nom. Le nom du modèle d'exploration de données est ajouté à la mention « Structure » pour le différencier de la structure d'exploration de données.  
+ Utilisez cette instruction pour créer en même temps une structure d'exploration de données et son modèle associé en utilisant le même nom. Le nom du modèle d'exploration de données est ajouté à la mention « Structure » pour le différencier de la structure d'exploration de données.  
   
  Cette instruction est utile si vous créez une structure d'exploration de données conçue pour accueillir un seul modèle d'exploration de données.  
   
@@ -87,19 +87,19 @@ ms.locfileid: "49461905"
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Ce didacticiel contient les leçons suivantes :  
   
- [Leçon 1 : Création de la structure d’exploration de données Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
+ [Leçon 1 : Création de la Structure d’exploration de données de panier d’achat](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `CREATE` pour créer des structures d'exploration de données.  
   
- [Leçon 2 : Ajout de modèles d’exploration de données à la structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Leçon 2 : Ajout de modèles d’exploration de données à la Structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `ALTER` pour ajouter des modèles d'exploration de données à une structure d'exploration de données.  
   
- [Leçon 3 : Traitement de la structure d’exploration de données Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Leçon 3 : Traitement de la Structure d’exploration de données de panier d’achat](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `INSERT INTO` pour traiter des structures d'exploration de données et les modèles qui y sont associés.  
   
- [Leçon 4 : Exécution de prédictions Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Leçon 4 : L’exécution de prédictions Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `PREDICTION JOIN` pour établir des prédictions par rapport à des modèles d'exploration de données.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Avant d'entamer ce didacticiel, assurez-vous que les éléments suivants sont installés :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
@@ -108,7 +108,7 @@ ms.locfileid: "49461905"
   
 -   Base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]   
   
- Pour des raisons de sécurité, les bases de données exemples ne sont pas installées par défaut. Pour installer les bases de données exemples officiels pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], accédez à [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417) ou sur la page d’accueil de Microsoft SQL Server Samples and Community Projects dans la section Microsoft SQL Server Product Samples. Cliquez sur **Databases**, puis cliquez sur l'onglet **Releases** et sélectionnez les bases de données souhaitées.  
+ Pour des raisons de sécurité, les bases de données exemples ne sont pas installées par défaut. Pour installer les bases de données exemples officiels pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], accédez à [ http://www.CodePlex.com/MSFTDBProdSamples ](https://go.microsoft.com/fwlink/?LinkId=88417) ou sur la page d’accueil de Microsoft SQL Server Samples and Community Projects dans la section Microsoft SQL Server Product Samples. Cliquez sur **Databases**, puis cliquez sur l'onglet **Releases** et sélectionnez les bases de données souhaitées.  
   
 > [!NOTE]  
 >  Lorsque vous parcourez les didacticiels, il est recommandé d'ajouter les boutons **Rubrique suivante** et **Rubrique précédente** dans la barre d'outils de l'afficheur de document.  
@@ -116,6 +116,6 @@ ms.locfileid: "49461905"
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiel DMX Bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [Didacticiel sur l'exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Leçon 3 : Génération d’un scénario de panier d’achat &#40;Didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

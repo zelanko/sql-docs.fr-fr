@@ -12,12 +12,12 @@ ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc2813b3d43b86ec495912feeaf1052f1c5b97ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ea24081f4b3a41211f3bd8d6bba52aaec8b74fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117439"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370181"
 ---
 # <a name="mssqlserver3168"></a>MSSQLSERVER_3168
     
@@ -48,7 +48,7 @@ ms.locfileid: "48117439"
 -   Un utilisateur tente de restaurer une base de données système à partir d'une sauvegarde réalisée sur le même serveur. Cependant, le serveur exécutait une version différente au moment de la sauvegarde. Cela signifie que le serveur a été mis à niveau depuis la réalisation de la sauvegarde.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
- Le processus de restauration intervient en bonne partie dans cette situation et n'est utilisé qu'en dernier recours. Pour plus d’informations, consultez «[You cannot restore system database backups to a different build of SQL Server](http://support.microsoft.com/kb/264474)».  
+ Le processus de restauration intervient en bonne partie dans cette situation et n'est utilisé qu'en dernier recours. Pour plus d’informations, consultez «[You cannot restore system database backups to a different build of SQL Server](https://support.microsoft.com/kb/264474)».  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sauvegarde et restauration des bases de données système &#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  

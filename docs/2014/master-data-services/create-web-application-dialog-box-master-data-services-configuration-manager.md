@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createapp.f1
@@ -13,12 +12,12 @@ ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d05645a9dcf73dff1ffff2f2370260f44ca1e015
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dac7b74969c341b7f68c7dfbf56d2314d9ab4427
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074655"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788361"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>Boîte de dialogue Créer une application Web (Gestionnaire de configuration des services de données de référence)
   Utilisez la boîte de dialogue **Créer une application web** pour créer l’application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Cette application web est créée sur le site que vous avez sélectionné dans la page **Configuration web** .  
@@ -41,7 +40,7 @@ ms.locfileid: "48074655"
 |**Confirmer le mot de passe**|Retapez le mot de passe du compte d'utilisateur spécifié. Les champs **Mot de passe** et **Confirmer le mot de passe** doivent contenir le même mot de passe.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page Configuration Web &#40;Gestionnaire de Configuration de Master Data Services&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
+ [Page Configuration web &#40;Gestionnaire de configuration de Master Data Services&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
  [Configurer le site Web et la base de données pour Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Web Application exigences &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [Créer une application web Master Data Manager &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  

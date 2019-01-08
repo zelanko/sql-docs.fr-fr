@@ -20,16 +20,16 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d59e4d93b082312b6ae33fc3c2e2ca1e4177c771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815174"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212709"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations, fonction
 **Conformité**  
- Version introduite : Conformité des normes 3.0 de ODBC : ODBC  
+ Version introduite : Conformité aux normes 3.0 de ODBC : ODBC  
   
  **Résumé**  
  **SQLBulkOperations** effectue les insertions en bloc et signet de bulk operations, notamment la mise à jour, supprimer et l’extraction par signet.  
@@ -89,7 +89,7 @@ SQLRETURN SQLBulkOperations(
 |HY010|Erreur de séquence de fonction|(DM) une fonction de façon asynchrone en cours d’exécution a été appelée pour le handle de connexion qui est associé à la *au paramètre StatementHandle*. Cette fonction asynchrone était en cours d’exécution lorsque le **SQLBulkOperations** fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** a été appelé pour le *au paramètre StatementHandle* et retourné SQL_PARAM_DATA_ DISPONIBLE. Cette fonction a été appelée avant que les données ont été récupérées pour tous les paramètres transmis en continu.<br /><br /> (DM) spécifié *au paramètre StatementHandle* n’était pas dans un état d’exécution. La fonction a été appelée sans préalablement appeler **SQLExecDirect**, **SQLExecute**, ou une fonction de catalogue.<br /><br /> (DM) une fonction de façon asynchrone en cours d’exécution (pas celui-ci) a été appelée pour le *au paramètre StatementHandle* et était en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLSetPos** a été appelé pour le *au paramètre StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi de données pour tous les paramètres de data-at-execution ou les colonnes.<br /><br /> (DM) le pilote a été un ODBC 2. *x* pilote, et **SQLBulkOperations** a été appelé pour un *au paramètre StatementHandle* avant **SQLFetchScroll** ou **SQLFetch**  a été appelée.<br /><br /> (DM) **SQLBulkOperations** a été appelée après **SQLExtendedFetch** a été appelé sur le *au paramètre StatementHandle*.|  
 |HY011|Attribut ne peut pas être défini maintenant|(DM) le pilote a été un ODBC 2. *x* pilote et l’attribut d’instruction SQL_ATTR_ROW_STATUS_PTR a été défini entre les appels à **SQLFetch** ou **SQLFetchScroll** et **SQLBulkOperations** .|  
 |HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, probablement en raison de conditions de mémoire insuffisante.|  
-|HY090|Longueur de chaîne ou une mémoire tampon non valide|Le *opération* argument a été SQL_ADD ou SQL_UPDATE_BY_BOOKMARK ; une valeur de données n’était pas un pointeur null ; le type de données C a été SQL_C_BINARY ou SQL_C_CHAR ; et la valeur de longueur de colonne était inférieure à 0, mais pas égale à SQL_DATA_AT_EXEC , SQL_COLUMN_IGNORE, SQL_NTS ou SQL_NULL_DATA, ou inférieure ou égale à SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> La valeur dans une mémoire tampon de longueur / d’indicateur était SQL_DATA_AT_EXEC ; le type SQL a été SQL_LONGVARCHAR, SQL_LONGVARBINARY ou un type de données de spécifique à la source de données de type long ; et le type d’information SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo** a été « Y ».<br /><br /> Le *opération* argument a été SQL_ADD, l’attribut d’instruction SQL_ATTR_USE_BOOKMARK a été défini sur SQL_UB_VARIABLE, et la colonne 0 a été liée à une mémoire tampon dont la longueur n’était pas égale à la longueur maximale pour le signet pour ce jeu de résultats. (Cette longueur est disponible dans le champ SQL_DESC_OCTET_LENGTH de l’IRD et peut être obtenue en appelant **SQLDescribeCol**, **SQLColAttribute**, ou **SQLGetDescField**.)|  
+|HY090|Longueur de chaîne ou une mémoire tampon non valide|Le *opération* argument a été SQL_ADD ou SQL_UPDATE_BY_BOOKMARK ; une valeur de données n’était pas un pointeur null ; le type de données C a été SQL_C_BINARY ou SQL_C_CHAR ; et la valeur de longueur de colonne était inférieure à 0, mais pas égale à SQL_DATA_AT_EXEC , SQL_COLUMN_IGNORE, SQL_NTS ou SQL_NULL_DATA, ou inférieure ou égale à SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> La valeur dans une mémoire tampon de longueur / d’indicateur était SQL_DATA_AT_EXEC ; le type SQL a été SQL_LONGVARCHAR, SQL_LONGVARBINARY ou un type de données spécifiques à la source de données de type long ; et le type d’information SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo** a été « Y ».<br /><br /> Le *opération* argument a été SQL_ADD, l’attribut d’instruction SQL_ATTR_USE_BOOKMARK a été défini sur SQL_UB_VARIABLE, et la colonne 0 a été liée à une mémoire tampon dont la longueur n’était pas égale à la longueur maximale pour le signet pour ce jeu de résultats. (Cette longueur est disponible dans le champ SQL_DESC_OCTET_LENGTH de l’IRD et peut être obtenue en appelant **SQLDescribeCol**, **SQLColAttribute**, ou **SQLGetDescField**.)|  
 |HY092|Identificateur d’attribut non valide|(DM) la valeur spécifiée pour le *opération* argument n’est pas valide.<br /><br /> Le *opération* argument était SQL_ADD, SQL_UPDATE_BY_BOOKMARK ou SQL_DELETE_BY_BOOKMARK, et l’attribut d’instruction SQL_ATTR_CONCURRENCY a été paramétré à SQL_CONCUR_READ_ONLY.<br /><br /> Le *opération* argument était SQL_DELETE_BY_BOOKMARK, SQL_FETCH_BY_BOOKMARK ou SQL_UPDATE_BY_BOOKMARK et la colonne de signet n’était pas liée ou l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS a été SQL_UB_OFF.|  
 |HY117|Connexion est suspendue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [SQLEndTran, fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYC00|Fonctionnalité optionnelle non implémentée|La pilote ou source de données ne prend pas en charge l’opération demandée dans le *opération* argument.|  
@@ -102,7 +102,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="comments"></a>Commentaires  
   
 > [!CAUTION]  
->  Pour plus d’informations sur les États de l’instruction qui **SQLBulkOperations** peut être appelée et ce qu’il doit faire pour assurer la compatibilité avec ODBC 2. *x* applications, consultez le [curseurs de bloc, curseurs avec défilement et compatibilité descendante](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) section dans la section annexe g : pilote instructions pour la compatibilité descendante.  
+>  Pour plus d’informations sur les États de l’instruction qui **SQLBulkOperations** peut être appelée et ce qu’il doit faire pour assurer la compatibilité avec ODBC 2. *x* applications, consultez le [curseurs de bloc, curseurs avec défilement et compatibilité descendante](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) section dans l’annexe G: Instructions de pilote pour la compatibilité descendante.  
   
  Une application utilise **SQLBulkOperations** pour effectuer les opérations suivantes sur la table de base ou la vue qui correspond à la requête actuelle :  
   
@@ -232,7 +232,7 @@ SQLRETURN SQLBulkOperations(
   
 1.  Quand il lie les données à l’aide de **SQLBindCol**, l’application place une valeur définie par l’application, comme le numéro de colonne, dans le  *\*TargetValuePtr* mémoire tampon pour data-at-execution colonnes. La valeur peut être utilisée ultérieurement pour identifier la colonne.  
   
-     L’application place le résultat de la SQL_LEN_DATA_AT_EXEC (*longueur*) (macro) dans le  *\*StrLen_or_IndPtr* mémoire tampon. Si le type de données SQL de la colonne est SQL_LONGVARBINARY, SQL_LONGVARCHAR ou un type de données de spécifique à la source de données de type long et que le pilote retourne « Y » pour le type d’information SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo**, *longueur*  est le nombre d’octets de données à envoyer pour le paramètre ; sinon, il doit être une valeur non négative et est ignoré.  
+     L’application place le résultat de la SQL_LEN_DATA_AT_EXEC (*longueur*) (macro) dans le  *\*StrLen_or_IndPtr* mémoire tampon. Si le type de données SQL de la colonne est SQL_LONGVARBINARY, SQL_LONGVARCHAR ou un type de données spécifiques à la source de données de type long et que le pilote retourne « Y » pour le type d’information SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo**, *longueur*  est le nombre d’octets de données à envoyer pour le paramètre ; sinon, il doit être une valeur non négative et est ignoré.  
   
 2.  Lorsque **SQLBulkOperations** est appelée, s’il existe des colonnes de données en cours d’exécution, que la fonction retourne SQL_NEED_DATA et les passe à l’étape 3, ce qui suit. (S’il n’y a aucune colonne de données en cours d’exécution, le processus est terminé).  
   

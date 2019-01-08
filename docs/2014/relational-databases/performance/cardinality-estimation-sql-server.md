@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
@@ -15,15 +14,15 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 393c4f88f9ab60f3a25ddaab5bb091fb298e1e02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200609"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363791"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Évaluation de la cardinalité (SQL Server)
-  La logique d’estimation de cardinalité, appelée estimateur de cardinalité, est remodelée dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] pour améliorer la qualité des plans de requête et par conséquent pour améliorer les performances de requête. Le nouvel estimateur de cardinalité incorpore des hypothèses et des algorithmes qui fonctionnent sur les charges de travail OLTP et de stockage de données modernes. Il repose sur la recherche détaillée des estimations de cardinalité sur les charges de travail modernes et sur nos connaissances acquises au cours des 15 dernières années sur l'amélioration de l'estimateur de cardinalité SQL Server. Les commentaires des clients indiquent que bien que la plupart des requêtes tirent parti des modifications ou demeurent inchangées, un petit nombre d'entre elles présente des régressions par rapport à l'estimateur de cardinalité précédent.  
+  La logique d'estimation de la cardinalité, appelée estimateur de cardinalité, est remodelée dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] afin d'améliorer la qualité des plans de requête, et par conséquent, améliorer les performances des requêtes. Le nouvel estimateur de cardinalité incorpore des hypothèses et des algorithmes qui fonctionnent sur les charges de travail OLTP et de stockage de données modernes. Il repose sur la recherche détaillée des estimations de cardinalité sur les charges de travail modernes et sur nos connaissances acquises au cours des 15 dernières années sur l'amélioration de l'estimateur de cardinalité SQL Server. Les commentaires des clients indiquent que bien que la plupart des requêtes tirent parti des modifications ou demeurent inchangées, un petit nombre d'entre elles présente des régressions par rapport à l'estimateur de cardinalité précédent.  
   
 > [!NOTE]  
 >  Les estimations de cardinalité sont une prédiction du nombre de lignes dans le résultat de la requête. L'optimiseur de requête utilise ces estimations pour choisir un plan d'exécution de la requête. La qualité du plan de requête a un impact direct sur l'amélioration des performances des requêtes.  
@@ -37,11 +36,11 @@ ms.locfileid: "48200609"
   
 2.  Exécutez votre test de charge de travail avec le nouvel estimateur de cardinalité, puis résolvez les nouveaux problèmes de performances de la même façon que les problèmes de performances.  
   
-3.  Une fois que votre charge de travail est en cours d’exécution avec le nouvel estimateur de cardinalité (niveau de compatibilité de la base de données 120 (SQL Server 2014)) et une requête spécifique a régressé, vous pouvez exécuter la requête avec l’indicateur de trace 9481 de façon à utiliser la version de l’estimateur de cardinalité utilisé dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]et versions antérieures. Pour exécuter une requête avec un indicateur de trace, consultez l'article de la Base de connaissances [Activer un plan affectant le comportement de l'optimiseur de requête SQL Server qui peut être contrôlé par des indicateurs de trace différents à un niveau spécifique à une requête](http://support.microsoft.com/kb/2801413).  
+3.  Une fois que votre charge de travail s’exécute avec le nouvel estimateur de cardinalité (niveau de compatibilité de la base de données 120, SQL Server 2014) et qu’une requête spécifique a régressé, exécutez la requête avec l’indicateur de trace 9481 pour utiliser la version de l’estimateur de cardinalité fournie dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions ultérieures. Pour exécuter une requête avec un indicateur de trace, consultez l'article de la Base de connaissances [Activer un plan affectant le comportement de l'optimiseur de requête SQL Server qui peut être contrôlé par des indicateurs de trace différents à un niveau spécifique à une requête](https://support.microsoft.com/kb/2801413).  
   
 4.  Si vous ne pouvez pas modifier toutes les bases de données à la fois pour utiliser le nouvel estimateur de cardinalité, vous pouvez utiliser l’estimateur de cardinalité précédent pour toutes les bases de données à l’aide de [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) à définir le niveau de compatibilité de base de données à 110.  
   
-5.  Si votre charge de travail s’exécute avec le niveau de compatibilité de la base de données 110 et que vous voulez tester ou exécuter une requête spécifique avec le nouvel estimateur de cardinalité, exécutez la requête avec l’indicateur de trace 2312 pour utiliser la version SQL Server 2014 de l’estimateur de cardinalité.  Pour exécuter une requête avec un indicateur de trace, consultez l'article de la Base de connaissances [Activer un plan affectant le comportement de l'optimiseur de requête SQL Server qui peut être contrôlé par des indicateurs de trace différents à un niveau spécifique à une requête](http://support.microsoft.com/kb/2801413).  
+5.  Si votre charge de travail s’exécute avec le niveau de compatibilité de la base de données 110 et que vous voulez tester ou exécuter une requête spécifique avec le nouvel estimateur de cardinalité, exécutez la requête avec l’indicateur de trace 2312 pour utiliser la version SQL Server 2014 de l’estimateur de cardinalité.  Pour exécuter une requête avec un indicateur de trace, consultez l'article de la Base de connaissances [Activer un plan affectant le comportement de l'optimiseur de requête SQL Server qui peut être contrôlé par des indicateurs de trace différents à un niveau spécifique à une requête](https://support.microsoft.com/kb/2801413).  
   
 ## <a name="new-xevents"></a>Nouveaux XEvents  
  Il y a deux nouveaux XEvents query_optimizer_estimate_cardinality pour prendre en charge les nouveaux plans de requête.  

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1df7792f5850ad9d312baefc374bcb9f99e904c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 685e8e2147066e8bdb1f34de3d5271bc56c7aac3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618267"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206638"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Envoyer et recevoir des données de façon incrémentielle avec FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "47618267"
 ## <a name="example"></a>Exemple  
  Avant de compiler et exécuter cet exemple, activer la prise en charge FILESTREAM ([activer et configurer FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- La première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crée une base de données utilisée par cet exemple. Votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit disposer d'un accès en écriture pour exécuter ce script (par exemple, ouvrez une session en tant que compte système local).  
+ Le premier ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) liste de code crée une base de données utilisée par cet exemple. Votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit disposer d'un accès en écriture pour exécuter ce script (par exemple, ouvrez une session en tant que compte système local).  
   
  La deuxième liste de code correspond au code C++. Vous devez spécifier un serveur ; dans le code C++, modifiez « MyServer » par un nom de serveur valide. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h. Compilez le code C++ avec odbc32.lib, user32.lib, /D « _UNICODE », /D « UNICODE », odbc32.lib et /EHsc.  
   
- La troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) supprime la base de données utilisée par cet exemple.  
+ Le troisième ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) du code supprime la base de données utilisée par cet exemple.  
   
 ```  
 USE master  

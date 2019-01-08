@@ -14,12 +14,12 @@ ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9288c6a4f01cff6c3c4a19ff79a1d49775035cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e5ee759c4a23ab2891597fd3a5c884ce7332ea4e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179429"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400472"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>Assistant Association (Client d'exploration de données pour Excel)
   ![Assistant association dans le ruban Exploration de données](media/dmc-associate.gif "associer l’Assistant dans le ruban Exploration de données")  
@@ -62,7 +62,7 @@ ms.locfileid: "48179429"
   
     -   Lorsque vous diminuez la probabilité d'une règle, vous diminuez les impératifs auxquels une combinaison doit répondre pour être considérée comme importante dans le contexte du jeu de données total.  
   
-     **Conseil :** il est judicieux de créer plusieurs modèles d’exploration de données à l’aide des combinaisons différentes de prise en charge et probabilité. Pour suivre les paramètres utilisés pour chaque modèle, vous pouvez utiliser la **Document modèle** Assistant, disponible dans le Client d’exploration de données pour Excel, puis utilisez le **Detailed** l’option de rapport. Pour plus d’informations, consultez [documentant les modèles d’exploration de données &#40;des compléments d’exploration de données pour Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
+     **Conseil :** Il est judicieux de créer plusieurs modèles d’exploration de données à l’aide des combinaisons différentes de prise en charge et probabilité. Pour suivre les paramètres utilisés pour chaque modèle, vous pouvez utiliser la **Document modèle** Assistant, disponible dans le Client d’exploration de données pour Excel, puis utilisez le **Detailed** l’option de rapport. Pour plus d’informations, consultez [documentant les modèles d’exploration de données &#40;des compléments d’exploration de données pour Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
   
 6.  Si vous le souhaitez, cliquez sur **paramètres** pour modifier les paramètres d’algorithme et personnaliser le comportement du modèle d’exploration de données.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48179429"
   
          L'extraction est utile, par exemple, si vous souhaitez cliquer sur un jeu d'éléments spécifique et voir les données sources.  
   
-    -   **Utiliser le modèle temporaire**. Sélectionnez cette option si vous ne souhaitez pas que le modèle soit enregistré sur le serveur. Lorsque vous fermez Excel, les modèles temporaires sont supprimés.  
+    -   **Utiliser le modèle temporaire**. Sélectionnez cette option si vous ne souhaitez pas le modèle enregistré sur le serveur. Lorsque vous fermez Excel, les modèles temporaires sont supprimés.  
   
 9. L'Assistant analyse toutes les combinaisons possibles et crée un rapport qui contient des jeux d'éléments et des règles.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48179429"
   
  L'algorithme utilise ces informations sur les jeux d'éléments pour générer des règles qui peuvent être utilisées pour prédire des associations ou faire des recommandations. Par exemple, une règle peut énoncer « si l'utilisateur a acheté un livre de l'auteur 1 et un livre de l'auteur 2, il est probable qu'il achètera aussi un livre de l'auteur 3 ». Une probabilité est attribuée à chaque recommandation, en fonction de la force des associations.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Pour pouvoir utiliser l'Assistant Association, vous devez être connecté à une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Vos données sources doivent être organisées sous forme de table des transactions. Les données sources doivent contenir une colonne incluant l'identificateur de transaction. Cette colonne identifie chaque groupe d'éléments. Cette colonne Transaction doit être dans une relation un-à-plusieurs avec une seconde colonne, la colonne Identificateur d'élément, qui stocke les noms ou les numéros d'ID des différents éléments du groupe.  

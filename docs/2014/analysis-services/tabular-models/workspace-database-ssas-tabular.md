@@ -11,12 +11,12 @@ ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 65d4a23044084f18662c3aca1cc68bfd157ea3dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d70cf1724eb67dbf8f1a75989df5f4021b5512d6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134989"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416700"
 ---
 # <a name="workspace-database-ssas-tabular"></a>Base de données d'espace de travail (SSAS Tabulaire)
   La base de données de l'espace de travail de modèles tabulaires, utilisée lors de la création d'un modèle, est créée lorsque vous créez un projet de modèle tabulaire dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. La base de données de l’espace de travail réside en mémoire sur une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s’exécutant en mode tabulaire, en général sur le même ordinateur que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -78,10 +78,10 @@ ms.locfileid: "48134989"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Propriétés de modèle &#40;SSAS tabulaire&#41;](model-properties-ssas-tabular.md)|Fournit des descriptions et les étapes de configuration des propriétés de base de données de l'espace de travail d'un modèle.|  
+|[Propriétés de modèle &#40;SSAS Tabulaire&#41;](model-properties-ssas-tabular.md)|Fournit des descriptions et des étapes de configuration pour l’espace de travail d’un modèle des propriétés de base de données.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer les propriétés de déploiement et de modélisation des données par défaut &#40;SSAS tabulaire&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [Propriétés de projet &#40;SSAS tabulaire&#41;](properties-ssas-tabular.md)  
+ [Configurer les propriétés par défaut de modélisation des données et de déploiement &#40;SSAS Tabulaire&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Propriétés de projet &#40;SSAS Tabulaire&#41;](properties-ssas-tabular.md)  
   
   

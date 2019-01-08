@@ -11,18 +11,18 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 71ebb54d32893f90dd1a88f56056d6db75644c9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f588e5266b3707ac012d6e18e062d01d23fca56d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187209"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362081"
 ---
-# <a name="lesson-10-defining-administrative-roles"></a>Leçon 10 : Définition de rôles administratifs
+# <a name="lesson-10-defining-administrative-roles"></a>Leçon 10 : Définition de rôles administratifs
   Dans cette leçon, vous allez apprendre à définir des rôles de sécurité pour les tâches d'administration.  
   
 > [!NOTE]  
->  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](http://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projet de ce didacticiel.  
+>  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](https://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projet de ce didacticiel.  
   
  Cette leçon contient la tâche suivante :  
   

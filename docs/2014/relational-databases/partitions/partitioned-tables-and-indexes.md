@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
@@ -15,12 +15,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8d3342c6a45b705c72c113f58bde7d8df2ae71c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 946b447b974be9c24403957681f26df627094084
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229819"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353399"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le partitionnement des tables et des index. Les données des tables et des index partitionnés sont divisées en unités qui peuvent être réparties sur plusieurs groupes de fichiers d'une base de données. Les données sont partitionnées horizontalement, de sorte que les groupes de lignes sont mappés à des partitions individuelles. Toutes les partitions d'un index ou d'une table unique doivent résider dans la même base de données. La table ou l'index est traité en tant qu'entité logique unique lorsque des requêtes ou des mises à jour sont effectuées sur les données. Les tables et les index partitionnés ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -45,13 +45,13 @@ ms.locfileid: "48229819"
  Les termes suivants s'appliquent aux partitionnement de table et d'index.  
   
  Fonction de partition  
- Objet de base de données qui définit comment les lignes d'une table ou d'un index sont mappées à un ensemble de partitions en fonction des valeurs de certaines colonnes, appelées « colonnes de partitionnement ». Autrement dit, la fonction de partition définit le nombre de partitions qu'aura la table, ainsi que la façon dont les limites des partitions sont définies. Par exemple, étant donné une table qui contient les données de ventes, vous souhaiterez partitionner la table en douze partitions (mensuellement) selon une `datetime` colonne telle qu’une date de vente.  
+ Objet de base de données qui définit comment les lignes d'une table ou d'un index sont mappées à un ensemble de partitions en fonction des valeurs de certaines colonnes, appelées « colonnes de partitionnement ». Autrement dit, la fonction de partition définit le nombre de partitions qu'aura la table, ainsi que la façon dont les limites des partitions sont définies. Prenons l'exemple d'une table qui contient des données de commande client ; vous pouvez partitionner la table en douze partitions (mensuellement) en fonction d'une colonne `datetime`, telle qu'une date de vente.  
   
  Schéma de partition  
  Objet de base de données qui mappe les partitions d'une fonction de partition à un ensemble de groupes de fichiers. Le principal motif de placement des partitions sur des groupes de fichiers distincts est la possibilité de réaliser des opérations de sauvegarde indépendantes sur les partitions. En effet, vous pouvez réaliser des sauvegardes sur des groupes de fichiers spécifiques.  
   
  Colonne de partitionnement  
- Colonne d'une table ou d'un index utilisée par une fonction de partition pour partitionner la table ou l'index. Les colonnes calculées qui font partie d'une fonction de partition doivent présenter l'attribut PERSISTED. Tous les types de données qui sont valides pour les utilisent comme colonnes d’index peuvent être utilisés dans une colonne de partitionnement, sauf `timestamp`. Les types de données `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` ou `varbinary(max)` ne peuvent pas être spécifiés. Le type défini par l’utilisateur CLR (Common Langage Runtime) Microsoft .NET Framework et les colonnes de type de données alias ne peuvent pas être non plus spécifiés.  
+ Colonne d'une table ou d'un index utilisée par une fonction de partition pour partitionner la table ou l'index. Les colonnes calculées qui font partie d'une fonction de partition doivent présenter l'attribut PERSISTED. Tous les types de données autorisés dans les colonnes d'index peuvent être utilisés dans la colonne de partitionnement, sauf `timestamp`. Les types de données `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` ou `varbinary(max)` ne peuvent pas être spécifiés. Le type défini par l’utilisateur CLR (Common Langage Runtime) Microsoft .NET Framework et les colonnes de type de données alias ne peuvent pas être non plus spécifiés.  
   
  Index aligné  
  Index créé sur le même schéma de partition que la table qui lui correspond. Lorsqu'une table et ses index sont alignés, SQL Server peut commuter rapidement et efficacement les partitions tout en préservant leur structure aussi bien dans la table que dans les index. Un index n'a pas besoin de participer à la même fonction de partition nommée pour être aligné avec sa table de base. Toutefois, la fonction de partition de l'index et celle de la table de base doivent être identique de trois points de vue : 1) les arguments des fonctions de partition ont le même type de données, 2) elles définissent le même nombre de partitions et 3) elles définissent les mêmes valeurs limites pour les partitions.  
@@ -72,7 +72,7 @@ ms.locfileid: "48229819"
  La nouvelle limite plus élevée de 15 000 partitions affecte la mémoire, les opérations d'index partitionnés, les commandes DBCC et les requêtes. Cette section décrit les implications en matière de performances de l'augmentation du nombre de partitions au-delà de 1000 et fournit des solutions de contournement si nécessaire. La quantité maximale de partitions étant passée à 15 000, vous pouvez stocker des données pendant plus longtemps. Toutefois, vous devez conserver les données uniquement pendant la durée nécessaire et obtenir un compromis entre les performances et le nombre de partitions.  
   
 ### <a name="memory-usage-and-guidelines"></a>Utilisation de la mémoire et recommandations  
- Nous vous recommandons d'utiliser au moins 16 Go de RAM si un grand nombre de partitions sont en cours d'utilisation. Si le système n'a pas assez de mémoire, les instructions DML (Data Manipulation Language), les instructions DDL (Data Definition Language) et d'autres opérations peuvent échouer en raison d'une insuffisance de mémoire. Les systèmes avec 16 Go de RAM qui exécutent un grand nombre de processus nécessitant beaucoup de mémoire risque de ne pas disposer de suffisamment de mémoire lors des opérations qui s'exécutent sur un grand nombre de partitions. Par conséquent, plus vous disposez de mémoire au-delà de 16 Go, moins vous risquez de rencontrer des problèmes de performances et de mémoire.  
+ Nous vous recommandons d'utiliser au moins 16 Go de RAM si un grand nombre de partitions sont en cours d'utilisation. Si le système n'a pas assez de mémoire, les instructions DML (Data Manipulation Language), les instructions DDL (Data Definition Language) et d'autres opérations peuvent échouer en raison d'une insuffisance de mémoire. Les systèmes avec 16 Go de RAM qui exécutent un grand nombre de processus nécessitant beaucoup de mémoire risque de ne pas disposer de suffisamment de mémoire lors des opérations qui s'exécutent sur un grand nombre de partitions. Par conséquent, plus vous disposez de mémoire au-delà de 16 Go, moins vous risquez de rencontrer des problèmes de performances et de mémoire.  
   
  Les limitations de mémoire peuvent affecter les performances de SQL Server ou sa capacité à créer un index partitionné. C'est le cas notamment lorsque l'index n'est pas aligné avec sa table de base ou son index cluster, si un index cluster a été appliqué à la table.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48229819"
   
  La création et la reconstruction d'index alignés peuvent exiger davantage de temps à mesure que le nombre de partitions augmente. Nous vous recommandons de ne pas exécuter simultanément plusieurs commandes de création et de reconstruction d'index, car vous risquez de rencontrer des problèmes de performances et de mémoire.  
   
- Lorsque SQL Server effectue un tri pour créer des index partitionnés, il commence par créer une table de tri pour chaque partition. Il crée ensuite les tables de tri soit dans le groupe de fichiers de chaque partition, soit en `tempdb`, si l’option d’index SORT_IN_TEMPDB est spécifiée. La création de chaque table de tri nécessite une quantité minimale de mémoire. Lorsque vous créez un index partitionné qui est aligné avec sa table de base, les tables de tri sont créées une par une, ce qui utilise moins de mémoire. Toutefois, lorsque vous créez un index partitionné non aligné, les tables de tri sont produites en même temps. De ce fait, il doit y avoir assez de mémoire pour gérer ces tri simultanés. Plus il y a de partitions, plus il faut de mémoire. La taille minimale pour chaque table de tri, pour chaque partition, est de 40 pages, à raison de 8 kilo-octets par page. Par exemple, un index partitionné non aligné avec 100 partitions nécessite une quantité de mémoire suffisante pour trier en série 4 000 (40 * 100) pages à la fois. Si cette mémoire est disponible, l'opération de création réussit, mais les performances risquent d'en pâtir. Sinon, la création échoue. À l'inverse, un index partitionné aligné avec 100 partitions n'a besoin que de la mémoire suffisante pour trier 40 pages, parce que les tris ne sont pas effectués en même temps.  
+ Lorsque SQL Server effectue un tri pour créer des index partitionnés, il commence par créer une table de tri pour chaque partition. Ensuite, il génère les tables de tri soit dans le groupe de fichiers de chaque partition, soit dans `tempdb`, si l'option d'index SORT_IN_TEMPDB est spécifiée. La création de chaque table de tri nécessite une quantité minimale de mémoire. Lorsque vous créez un index partitionné qui est aligné avec sa table de base, les tables de tri sont créées une par une, ce qui utilise moins de mémoire. Toutefois, lorsque vous créez un index partitionné non aligné, les tables de tri sont produites en même temps. De ce fait, il doit y avoir assez de mémoire pour gérer ces tri simultanés. Plus il y a de partitions, plus il faut de mémoire. La taille minimale pour chaque table de tri, pour chaque partition, est de 40 pages, à raison de 8 kilo-octets par page. Par exemple, un index partitionné non aligné avec 100 partitions nécessite une quantité de mémoire suffisante pour trier en série 4 000 (40 * 100) pages à la fois. Si cette mémoire est disponible, l'opération de création réussit, mais les performances risquent d'en pâtir. Sinon, la création échoue. À l'inverse, un index partitionné aligné avec 100 partitions n'a besoin que de la mémoire suffisante pour trier 40 pages, parce que les tris ne sont pas effectués en même temps.  
   
  Pour les deux types d'index, alignés et non alignés, la mémoire requise peut être beaucoup plus importante si SQL Server applique divers degrés de parallélisme à l'opération de création sur un ordinateur multiprocesseur. En effet, plus il y a de degrés de parallélisme, plus il faut de mémoire. Par exemple, si SQL Server affecte aux degrés de parallélisme la valeur 4, un index partitionné non aligné avec 100 partitions a besoin d'une quantité de mémoire suffisante pour que quatre processeurs puissent trier 4 000 pages à la fois, soit 16 000 pages. Si l'index partitionné est aligné, la mémoire requise est moins importante puisqu'il en faut pour quatre processeurs triant 40 pages ou 160 (4 * 40) pages. Vous pouvez utiliser l'option d'index MAXDOP pour réduire manuellement les degrés de parallélisme.  
   
@@ -109,15 +109,15 @@ ms.locfileid: "48229819"
 ## <a name="related-content"></a>Contenu associé  
  Les livres blancs suivants relatifs aux stratégies et implémentations de tables et index partitionnés pourront se révéler utiles.  
   
--   [Stratégies de tables et d’index partitionnés avec SQL Server 2008](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
+-   [Stratégies de tables et d’index partitionnés avec SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [Comment implémenter une fenêtre glissante automatique](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
+-   [Comment implémenter une fenêtre glissante automatique](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
--   [Chargement en masse dans une table partitionnée](http://msdn.microsoft.com/library/cc966380.aspx)  
+-   [Chargement en masse dans une table partitionnée](https://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [Projet REAL : Cycle de vie de données -- Partitionnement](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
+-   [Projet REAL : Cycle de vie de données--partitionnement](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
   
--   [Améliorations du traitement des requêtes sur les tables et les index partitionnés](http://msdn.microsoft.com/library/ms345599.aspx)  
+-   [Améliorations du traitement des requêtes sur les tables et les index partitionnés](https://msdn.microsoft.com/library/ms345599.aspx)  
   
 -   [10 meilleures pratiques pour générer un entrepôt de données relationnelles à grande échelle](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   

@@ -22,21 +22,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f77ccdfc7c236d1f009ff872712991a4c104fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3fac82c2fd669bb1a7dd3f45b5a614738fdf189
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779687"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529893"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Cet affichage catalogue contient une ligne par langue dont les analyseurs lexicaux sont enregistrés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque ligne affiche l'identificateur de paramètres régionaux (LCID) et le nom de la langue. Lorsque des analyseurs lexicaux sont enregistrés pour une langue, les autres resources linguistiques de cette langue (générateurs de formes dérivées, mots parasites [mots vides] et fichiers de dictionnaire des synonymes) deviennent disponibles pour des opérations d'indexation et d'interrogation de texte intégral. La valeur de **nom** ou **lcid** peuvent être spécifiés dans les requêtes de recherche en texte intégral et les index de recherche en texte intégral [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions.  
+  Cet affichage catalogue contient une ligne par langue dont les analyseurs lexicaux sont enregistrés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque ligne affiche l'identificateur de paramètres régionaux (LCID) et le nom de la langue. Lorsque les analyseurs lexicaux sont inscrits pour une langue, ses autres linguistiques ressources-générateurs de formes dérivées, mots parasites (mots vides) et du dictionnaire des synonymes fichiers deviennent disponibles pour les opérations d’indexation et d’interrogation de texte intégral. La valeur de **nom** ou **lcid** peuvent être spécifiés dans les requêtes de recherche en texte intégral et les index de recherche en texte intégral [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions.  
    
 |colonne|Data type|Description|  
 |------------|---------------|-----------------|  
-|**LCID**|**Int**|Identificateur des paramètres régionaux (LCID) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows de la langue.|  
+|**lcid**|**Int**|Identificateur des paramètres régionaux (LCID) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows de la langue.|  
 |**nom**|**sysname**|Représente la valeur de l’alias dans [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) correspondant à la valeur de **lcid** ou la représentation sous forme de chaîne du LCID numérique.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valeurs retournées pour les langues par défaut  
@@ -50,10 +50,10 @@ ms.locfileid: "47779687"
 |Bulgare|1026|  
 |Catalan|1027|  
 |Chinois (Hong Kong R.A.S., RPC)|3076|  
-|Chinois (Macao R.A.S.)|5124|  
-|Chinois (Singapour)|4100|  
+|Chinese (Macao (R.A.S.))|5124|  
+|Chinese (Singapore)|4100|  
 |Croate|1050|  
-|Tchèque|1029|  
+|Czech|1029|  
 |Danish|1030|  
 |Néerlandais|1043|  
 |Anglais|1033|  
@@ -71,7 +71,7 @@ ms.locfileid: "47779687"
 |Coréen|1042|  
 |Letton|1062|  
 |Lituanien|1063|  
-|Malais (Malaisie)|1086|  
+|Malay - Malaysia|1086|  
 |Malayalam|1100|  
 |Marathe|1102|  
 |Neutre|0|  
@@ -82,8 +82,8 @@ ms.locfileid: "47779687"
 |Pendjabi|1094|  
 |Roumain|1048|  
 |Russe|1049|  
-|Serbe (cyrillique)|3098|  
-|Serbe (latin)|2074|  
+|Serbian (Cyrillic)|3098|  
+|Serbian (Latin)|2074|  
 |Chinois simplifié|2052|  
 |Slovaque|1051|  
 |Slovène|1060|  
@@ -101,7 +101,7 @@ ms.locfileid: "47779687"
 ## <a name="remarks"></a>Notes  
  Pour mettre à jour la liste des langues inscrites avec la recherche en texte intégral, utilisez [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**».  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

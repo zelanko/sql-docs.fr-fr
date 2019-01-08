@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
@@ -26,12 +25,12 @@ ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cfaad106f7d2671dad24de87c64e02859b021769
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138286"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780721"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
   Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] est une interface puissante qui permet de créer et gérer des traces ainsi que d'analyser et relire les résultats de trace. Ces événements sont enregistrés dans un fichier de trace qui peut être analysé ou utilisé ultérieurement pour relire une série d'étapes spécifique lors d'une tentative de diagnostic d'un problème.  
@@ -77,7 +76,7 @@ ms.locfileid: "48138286"
   
 -   état du traitement d'appel de procédure distante (RPC) ;  
   
--   le lancement ou la fin d'une procédure stockée ;  
+-   le lancement ou la fin d'une procédure stockée ;  
   
 -   le lancement ou la fin d'instructions à l'intérieur de procédures stockées ;  
   
@@ -129,7 +128,7 @@ ms.locfileid: "48138286"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Répertorie les modèles prédéfinis que SQL Server fournit pour surveiller certains types d'événements, et les autorisations requises à utiliser pour relire les traces.|[Modèles et autorisations SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)|  
+|Répertorie les modèles prédéfinis que SQL Server fournit pour surveiller certains types d'événements, et les autorisations requises à utiliser pour relire les traces.|[Modèles et autorisations du générateur de SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)|  
 |Décrit comment exécuter le Générateur de profils SQL Server.|[Autorisations nécessaires pour exécuter SQL Server Profiler](permissions-required-to-run-sql-server-profiler.md)|  
 |Décrit comment créer une trace.|[Créer une trace &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)|  
 |Décrit comment spécifier les événements et les colonnes de données d'un fichier de trace.|[Spécifier les événements et les colonnes de données d’un fichier de trace &#40;SQL Server Profiler&#41;](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)|  

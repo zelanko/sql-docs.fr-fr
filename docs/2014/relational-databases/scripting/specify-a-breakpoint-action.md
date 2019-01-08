@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.action
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
 - Transact-SQL debugger, breakpoint when hit action
@@ -16,12 +14,12 @@ ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b2dfffc59284a0eb2d4f121b2f2328bdadae1d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92ac0e98924b54a20ad16c183386dd407fc7604c
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189511"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328989"
 ---
 # <a name="specify-a-breakpoint-action"></a>Spécifier une action de point d'arrêt
   L’action de point d’arrêt **Lorsqu’il est atteint** spécifie une tâche personnalisée que le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] effectue pour un point d’arrêt. Si le nombre d'accès spécifié est atteint et si les conditions de point d'arrêt spécifiées sont satisfaites, le débogueur effectue l'action spécifiée pour le point d'arrêt.  
@@ -31,7 +29,7 @@ ms.locfileid: "48189511"
   
  Le message à afficher est indiqué dans l’option **Afficher un message** et spécifié comme une chaîne de texte qui inclut des expressions contenant des informations issues du [!INCLUDE[tsql](../../includes/tsql-md.md)] débogué. Ces expressions sont notamment les suivantes.  
   
--   Une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] comprise entre des accolades ({}). Les expressions peuvent inclure des variables [!INCLUDE[tsql](../../includes/tsql-md.md)] , des paramètres et des fonctions intégrées, par exemple {@MyVariable}, {@NameParameter}, {@@SPID} ou {SERVERPROPERTY(‘ProcessID’)}.  
+-   Une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] comprise entre des accolades ({}). Les expressions peuvent inclure des variables [!INCLUDE[tsql](../../includes/tsql-md.md)] , des paramètres et des fonctions intégrées, par exemple {@MyVariable}, {@NameParameter}, {@@SPID} ou {SERVERPROPERTY(’ProcessID')}.  
   
 -   Un des mots clés suivants :  
   
@@ -43,7 +41,7 @@ ms.locfileid: "48189511"
   
     4.  $FUNCTION retourne le nom de la procédure stockée ou de la fonction définie par l'utilisateur dans laquelle le point d'arrêt est défini. Si le point d'arrêt est défini dans la fenêtre de l'éditeur, $FUNCTION retourne le nom du fichier de script modifié.  
   
-    5.  $PID et $PNAME retournent l'ID et le nom du processus de système d'exploitation qui exécute l'instance du moteur de base de données où le code [!INCLUDE[tsql](../../includes/tsql-md.md)] s'exécute. $PID retourne le même ID que SERVERPROPERTY(‘ProcessID’), mais $PID est une valeur hexadécimale alors que SERVERPROPERTY(‘ProcessID’) est une valeur décimale.  
+    5.  $PID et $PNAME retournent l'ID et le nom du processus de système d'exploitation qui exécute l'instance du moteur de base de données où le code [!INCLUDE[tsql](../../includes/tsql-md.md)] s'exécute. $PID retourne le même ID que SERVERPROPERTY('ProcessID'), mais $PID est une valeur hexadécimale alors que SERVERPROPERTY('ProcessID') est une valeur décimale.  
   
     6.  $TID et $TNAME retournent l'ID et le nom du thread de système d'exploitation qui exécute le lot [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le thread est associé au processus qui exécute l'instance du moteur de base de données. $TID retourne la même valeur que SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID, mais $TID est une valeur hexadécimale alors que kpid est une valeur décimale.  
   
@@ -69,6 +67,4 @@ ms.locfileid: "48189511"
   
 ## <a name="see-also"></a>Voir aussi  
  [Spécifier une condition de point d'arrêt](specify-a-breakpoint-condition.md)   
- [Spécifier un nombre d’accès](specify-a-hit-count.md)  
-  
-  
+ [Spécifier un nombre d'accès](specify-a-hit-count.md)  

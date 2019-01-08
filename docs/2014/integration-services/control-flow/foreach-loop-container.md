@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
@@ -18,27 +17,27 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3d67e256b6dca357db45cd831b2f9eab3ff93dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 664a338dd1d34126717b3953c54b175ffccd63e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103452"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355711"
 ---
 # <a name="foreach-loop-container"></a>Conteneur de boucles Foreach
   Le conteneur de boucles Foreach définit un flux de contrôle répétitif dans un package. La mise en œuvre de la boucle est similaire à la structure de bouclage **Foreach** des langages de programmation. Dans un package, le bouclage repose sur l'utilisation d'un énumérateur Foreach.  Le conteneur de boucles Foreach répète le flux de contrôle pour chaque membre d'un énumérateur spécifié.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit les types d’énumérateur suivants :  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit les types d'énumérateur suivants :  
   
 -   Foreach ADO Enumerator, pour l'énumération des lignes des tables. Par exemple, vous pouvez obtenir les lignes d'un ensemble d'enregistrements ADO.  
   
-     Enregistre les données en mémoire dans un jeu d’enregistrements qui est stocké dans une variable de package de `Object` type de données. Vous devez en général utiliser un conteneur de boucles Foreach avec l'énumérateur ADO Foreach pour traiter une par une les lignes de l'ensemble d'enregistrements. La variable spécifiée pour l'énumérateur ADO Foreach doit être de type Object. Pour plus d'informations sur la destination d'un ensemble d'enregistrements, consultez [Use a Recordset Destination](../data-flow/recordset-destination.md).  
+     La destination de l'ensemble d'enregistrements enregistre les données en mémoire dans un ensemble d'enregistrements stocké dans une variable de package de type `Object`. Vous devez en général utiliser un conteneur de boucles Foreach avec l'énumérateur ADO Foreach pour traiter une par une les lignes de l'ensemble d'enregistrements. La variable spécifiée pour l'énumérateur ADO Foreach doit être de type Object. Pour plus d'informations sur la destination d'un ensemble d'enregistrements, consultez [Use a Recordset Destination](../data-flow/recordset-destination.md).  
   
 -   Énumérateur de l'ensemble de lignes du schéma Foreach ADO.NET, pour l'énumération des informations de schéma relatives à une source de données. Par exemple, vous pouvez énumérer les tables de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et en obtenir la liste.  
   
 -   Énumérateur de fichier Foreach, pour l'énumération des fichiers d'un dossier. L'énumérateur peut parcourir les sous-dossiers. Par exemple, vous pouvez lire tous les fichiers portant l'extension de nom de fichier *.log stockés dans le dossier Windows et ses sous-dossiers.  
   
--   Foreach From Variable Enumerator, pour l'énumération de l'objet énumérable contenu dans une variable spécifiée. L’objet énumérable peut être un tableau, un élément ADO.NET `DataTable`, un [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] énumérateur et ainsi de suite. Par exemple, vous pouvez énumérer les valeurs d'un tableau qui contient des noms de serveurs.  
+-   Foreach From Variable Enumerator, pour l'énumération de l'objet énumérable contenu dans une variable spécifiée. L'objet énumérable peut être un tableau, un `DataTable` ADO.NET, un énumérateur [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], etc. Par exemple, vous pouvez énumérer les valeurs d'un tableau qui contient des noms de serveurs.  
   
 -   Énumérateur d'élément Foreach, pour l'énumération des éléments qui sont des collections. Par exemple, vous pouvez énumérer les noms d'exécutables et de répertoires de travail qu'une tâche d'exécution de processus utilise.  
   
@@ -93,14 +92,14 @@ ms.locfileid: "48103452"
   
 -   [Configurer un conteneur de boucles Foreach](foreach-loop-container.md)  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
  Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>  
   
 ## <a name="related-content"></a>Contenu associé  
- Entrée de blog, [SSIS For Each Node List Enumerator](http://go.microsoft.com/fwlink/?LinkId=220671), sur bidn.com.  
+ Entrée de blog, [SSIS For Each Node List Enumerator](https://go.microsoft.com/fwlink/?LinkId=220671), sur bidn.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de contrôle](control-flow.md)   

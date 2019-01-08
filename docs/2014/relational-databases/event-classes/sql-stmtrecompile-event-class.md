@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 288e086f164199ae372ccca2ffb482855bb3c2d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211889"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804051"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile, classe d'événements
   La classe d’événements SQL:StmtRecompile indique des recompilations au niveau de l’instruction provoquées par tous les types de lots : procédures stockées, déclencheurs, lots ad hoc et requêtes. Les requêtes peuvent être envoyées avec sp_executesql, SQL dynamique, des méthodes Prepare, des méthodes Execute ou des interfaces analogues. La classe d’événements SQL:StmtRecompile doit être utilisée à la place de la classe d’événements SP:Recompile.  
@@ -33,7 +32,7 @@ ms.locfileid: "48211889"
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si le client fournit l'ID du processus.|9|Oui|  
 |DatabaseID|`int`|ID de la base de données dans laquelle la procédure stockée est en cours d'exécution. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |DatabaseName|`nvarchar`|Nom de la base de données dans laquelle la procédure stockée est en cours d'exécution.|35|Oui|  
-|EventSequence|`int`|Séquence d'un événement dans la demande.|51|non|  
+|EventSequence|`int`|Séquence d'un événement dans la demande.|51|Non|  
 |EventSubClass|`int`|Décrit les causes de la recompilation :<br /><br /> 1 = Schéma modifié<br /><br /> 2 = Statistiques modifiées<br /><br /> 3 = Compilation différée<br /><br /> 4 = Option Set modifiée<br /><br /> 5 = Table temporaire modifiée<br /><br /> 6 = Ensemble de lignes distant modifié<br /><br /> 7 = Autorisations de recherche modifiées<br /><br /> 8 = Environnement de notification de requête modifié<br /><br /> 9 = Affichage partition modifié<br /><br /> 10 = Options de curseur modifiées<br /><br /> 11 = Option (recompilation) demandée|21|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel s'exécute le client qui a envoyé cette instruction. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
@@ -50,10 +49,10 @@ ms.locfileid: "48211889"
 |ObjectType|`int`|Valeur représentant le type de l'objet qui intervient dans l'événement. Pour plus d’informations, consultez [Colonne d’événements de trace ObjectType](objecttype-trace-event-column.md).|28|Oui|  
 |Offset|`int`|Décalage de début de l'instruction dans la procédure stockée ou le traitement qui a provoqué la recompilation.|61|Oui|  
 |RequestID|`int`|ID de la demande contenant l'instruction.|49|Oui|  
-|ServerName|`nvarchar`|Nom de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracé.|26|non|  
+|ServerName|`nvarchar`|Nom de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracé.|26|Non|  
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`int`|ID du processus serveur de la connexion.|12|Oui|  
-|SqlHandle|`varbinary`|Hachage 64 bits basé sur le texte d'une requête ad hoc ou sur l'ID de base de données et d'objet d'un objet SQL. Cette valeur peut être passée à sys.dm_exec_sql_text pour récupérer le texte SQL associé.|63|non|  
+|SqlHandle|`varbinary`|Hachage 64 bits basé sur le texte d'une requête ad hoc ou sur l'ID de base de données et d'objet d'un objet SQL. Cette valeur peut être passée à sys.dm_exec_sql_text pour récupérer le texte SQL associé.|63|Non|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |TextData|`ntext`|Texte de l'instruction Transact-SQL qui a été recompilée.|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  

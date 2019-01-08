@@ -21,12 +21,12 @@ ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4eff2dd82db75bf1dc0114477152cb18b9d715d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081eaa3995507edf20be0b83f3e0ce766135139c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681747"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416320"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  Indicateurs de bits sont ensuite rajoutés au jeu de résultats pour chaque colonne identifiée dans le paramètre @update_flag_list. Pour le **net modifications** wrapper, les bits indicateurs sont toujours NULL si le @row_filter_option qui est utilisé dans l’appel à la fonction wrapper est 'all' ou « all with merge ». Si la @row_filter_option est définie sur « all with mask » et __CDC_OPERATION est ' ou 'I', la valeur de l’indicateur est également NULL. Si \__CDC_OPERATION est un ', l’indicateur a la valeur 1 ou 0, selon que le **net** la mise à jour a provoqué une modification de la colonne.  
   
- Le modèle de configuration de capture de données modifiées 'Instantiate CDC Wrapper TVFs for Schema' illustre comment utiliser la procédure stockée sp_cdc_generate_wrapper_function pour obtenir des scripts CREATE pour toutes les fonctions wrapper pour les fonctions de requêtes définies d'un schéma. Le modèle crée ensuite ces scripts. Pour plus d’informations sur les modèles, consultez [Explorateur de modèles](../../ssms/template/template-explorer.md).  
+ Le modèle de configuration de capture de données modifiées 'Instantiate de CDC Wrapper TVFs for Schema' illustre comment utiliser la procédure stockée sp_cdc_generate_wrapper_function pour obtenir des scripts CREATE pour toutes les fonctions wrapper pour les fonctions de requêtes définies d’un schéma. Le modèle crée ensuite ces scripts. Pour plus d’informations sur les modèles, consultez [Explorateur de modèles](../../ssms/template/template-explorer.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

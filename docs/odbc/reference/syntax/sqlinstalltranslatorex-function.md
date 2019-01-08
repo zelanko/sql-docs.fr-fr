@@ -20,12 +20,12 @@ ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3506e1421ef47c4bb74537f81b7007348895555b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742377"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212528"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx, fonction
 **Conformité**  
@@ -73,7 +73,7 @@ BOOL SQLInstallTranslatorEx(
  *fréquents*  
  [Entrée] Type de requête. *fréquents* doit contenir l’une des valeurs suivantes :  
   
- ODBC_INSTALL_INQUIRY : Vous renseigner sur lesquels un traducteur peut être installé.  
+ ODBC_INSTALL_INQUIRY : Savoir où un traducteur peut être installé.  
   
  ODBC_INSTALL_COMPLETE : Terminer la requête de l’installation.  
   

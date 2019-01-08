@@ -13,12 +13,12 @@ ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 464f5428f9c55ffa7d634e05fc54122882067674
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7372f5457e047772febf4cf040da3f897ae033a2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077819"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362901"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Rapports Reporting Services (SSRS)
   Les rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sont des définitions de rapport XML qui incluent des données de rapport et des éléments de disposition du rapport. Sur un système de fichiers client, les définitions de rapport portent l'extension de fichier .rdl. Une fois qu'un rapport est publié, il s'agit d'un élément de rapport stocké sur le serveur de rapports ou site SharePoint. Les rapports sont une partie de la plateforme serveur de création de rapports fournie par [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -64,7 +64,7 @@ ms.locfileid: "48077819"
 ## <a name="create-reports"></a>Créer des rapports  
  Pour créer un rapport :  
   
--   **Déterminez l'objectif du rapport.** Identifiez l'objectif du rapport pour le public qui l'utilise. Un rapport bien conçu fournit des informations qui aboutissent à une analyse et à une action. Les décisions de conception prises lors de cette étape influencent votre choix de paramètres de rapport, de mise en page de rapport et d'affichage de rapport. Pour plus d’informations, consultez [Planification d’un rapport &#40;Générateur de rapports&#41;](../report-design/planning-a-report-report-builder.md) et [Conseils de création de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md) dans la [ documentation du Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
+-   **Déterminez l'objectif du rapport.** Identifiez l'objectif du rapport pour le public qui l'utilise. Un rapport bien conçu fournit des informations qui aboutissent à une analyse et à une action. Les décisions de conception prises lors de cette étape influencent votre choix de paramètres de rapport, de mise en page de rapport et d'affichage de rapport. Pour plus d’informations, consultez [Planification d’un rapport &#40;Générateur de rapports&#41;](../report-design/planning-a-report-report-builder.md) et [Conseils de création de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md) dans la [ documentation du Générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
   
 -   **Sélectionnez le type de requête.** Déterminez s'il faut utiliser une requête de dataset généralisée et partagée ou une requête de dataset spécifique à votre ensemble de rapports. Il est facile de gérer un dataset partagé avec une requête généralisée destinée à être utilisée par plusieurs rapports, mais chaque concepteur de rapports doit filtrer les données autant que nécessaire pour son ensemble de rapports. Pour plus d'informations, consultez [Données de rapport &#40;SSRS&#41;](../report-data/report-data-ssrs.md).  
   
@@ -80,11 +80,11 @@ ms.locfileid: "48077819"
   
     -   **Choisissez les données à utiliser à partir de chaque source.** Pour chaque source de données, définissez les datasets de rapport. Chaque dataset inclut une requête pour spécifier les données à utiliser. Si vous avez des paramètres de rapport, définissez un dataset pour remplir une liste de valeurs disponibles pour chaque paramètre. Pour plus d’informations, consultez [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](../report-data/report-datasets-ssrs.md) et [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
-    -   **Choisissez une visualisation des données.** Pour chaque dataset, sélectionnez la région de données à utiliser pour l'affichage des données. Choisissez dans la liste de tables, graphiques, jauges et cartes. Pour plus d'informations, consultez les rubriques suivantes :  
+    -   **Choisissez une visualisation des données.** Pour chaque dataset, sélectionnez la région de données à utiliser pour l'affichage des données. Choisissez dans la liste de tables, graphiques, jauges et cartes. Pour plus d’informations, consultez les rubriques suivantes :  
   
         -   [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
-        -   [Graphiques &#40;Générateur de rapports et SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+        -   [Graphiques (Générateur de rapports et SSRS)](../report-design/charts-report-builder-and-ssrs.md)  
   
         -   [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48077819"
   
         -   [Jauges &#40;Générateur de rapports et SSRS&#41;](../report-design/gauges-report-builder-and-ssrs.md)  
   
-    -   **Personnalisez les données et la mise en page.** Concevez la mise en page du rapport. Une définition de rapport comporte un corps de rapport, des sources de données, des datasets, des régions de données, des zones de texte, des lignes et des images. Les rectangles sont utilisés comme conteneurs pour la mise en page ainsi que les éléments visuels. Personnalisez chaque région de données en écrivant des expressions pour contrôler le filtrage, le regroupement, le tri, le format et l'affichage des données. Ajoutez les noms de rapport, les emplacements, et d'autres informations d'identification qui permettent de gérer des dizaines ou des centaines de rapports. Ajoutez conteneurs et des éléments visuels pour organiser les éléments de mise en page sur la page. Pour plus d'informations, consultez les rubriques suivantes :  
+    -   **Personnalisez les données et la mise en page.** Concevez la mise en page du rapport. Une définition de rapport comporte un corps de rapport, des sources de données, des datasets, des régions de données, des zones de texte, des lignes et des images. Les rectangles sont utilisés comme conteneurs pour la mise en page ainsi que les éléments visuels. Personnalisez chaque région de données en écrivant des expressions pour contrôler le filtrage, le regroupement, le tri, le format et l'affichage des données. Ajoutez les noms de rapport, les emplacements, et d'autres informations d'identification qui permettent de gérer des dizaines ou des centaines de rapports. Ajoutez conteneurs et des éléments visuels pour organiser les éléments de mise en page sur la page. Pour plus d’informations, consultez les rubriques suivantes :  
   
-        -   [Filtrer, regrouper et trier les données &#40;Générateur de rapports et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
         -   [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
@@ -117,10 +117,10 @@ ms.locfileid: "48077819"
 -   **Prenez en compte les composants pouvant être réutilisés.**  Déterminez si les sources de données ou les requêtes de dataset peuvent être partagées en vue d'une réutilisation. Dans l'affirmative, sur le serveur de rapports ou site SharePoint, créez des sources de données partagées et des datasets partagés. Déterminez si les régions de données conviennent pour la réutilisation en tant que parties de rapports. Pour plus d’informations, consultez [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md).  
   
 ## <a name="preview-reports"></a>Afficher un aperçu des rapports  
- Chaque outil de création de rapports prend en charge l'affichage de l'aperçu d'un rapport. Pour plus d’informations, consultez [Aperçu](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview), [Générateur de rapports &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) et [Aperçu des rapports dans le Générateur de rapports](../report-builder/previewing-reports-in-report-builder.md) dans la [documentation du Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
+ Chaque outil de création de rapports prend en charge l'affichage de l'aperçu d'un rapport. Pour plus d’informations, consultez [Aperçu](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview), [Générateur de rapports &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) et [Aperçu des rapports dans le Générateur de rapports](../report-builder/previewing-reports-in-report-builder.md) dans la [documentation du Générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
   
 ## <a name="save-or-publish-reports"></a>Enregistrer ou publier des rapports  
- Chaque outil de création prend en charge l'enregistrement d'un rapport localement ou la publication du rapport sur un serveur de rapports ou un site SharePoint. Pour plus d’informations, consultez [Enregistrer et déployer](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy), [Générateur de rapports &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) et [Enregistrement de rapports &#40;Générateur de rapports&#41;](../report-builder/saving-reports-report-builder.md) dans la [documentation du Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
+ Chaque outil de création prend en charge l'enregistrement d'un rapport localement ou la publication du rapport sur un serveur de rapports ou un site SharePoint. Pour plus d’informations, consultez [Enregistrer et déployer](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy), [Générateur de rapports &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) et [Enregistrement de rapports &#40;Générateur de rapports&#41;](../report-builder/saving-reports-report-builder.md) dans la [documentation du Générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
   
 ## <a name="view-reports"></a>Afficher les rapports  
  En plus de l'aperçu d'un rapport enregistré localement ou publié sur un serveur de rapports, vous pouvez fournir un large éventail d'affichages pour les lecteurs de votre rapport. Pour afficher un rapport :  
@@ -133,7 +133,7 @@ ms.locfileid: "48077819"
   
 -   **Impression.**  Un lecteur de rapport peut imprimer un rapport ou des pages d'un rapport selon la façon dont il est affiché. Pour plus d’informations, consultez [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Application Web ou Windows Form.**  Utilisez Visual Studio pour développer une application AJAX ASP.NET ou Windows Form qui héberge le contrôle Visionneuse de rapports. Le contrôle peut indiquer les rapports publiés sur un serveur de rapports. Pour plus d'informations, consultez [Rapports Microsoft](http://go.microsoft.com/fwlink/?LinkID=205399).  
+-   **Application Web ou Windows Form.**  Utilisez Visual Studio pour développer une application AJAX ASP.NET ou Windows Form qui héberge le contrôle Visionneuse de rapports. Le contrôle peut indiquer les rapports publiés sur un serveur de rapports. Pour plus d'informations, consultez [Rapports Microsoft](https://go.microsoft.com/fwlink/?LinkID=205399).  
   
 ## <a name="manage-reports"></a>Gérer les rapports  
  Pour gérer un rapport publié :  
@@ -157,7 +157,7 @@ ms.locfileid: "48077819"
 ##  <a name="bkmk_SecureReportsSummary"></a> Sécuriser les rapports  
  Pour sécuriser un rapport :  
   
--   Auprès de l'administrateur du serveur de rapports, identifiez le système d'autorisation et d'authentification utilisé pour votre installation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Par défaut, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise l’authentification Windows, la sécurité intégrée et attribution de rôle pour contrôler l’accès aux rapports publiés. Pour plus d’informations, consultez [Rôles et autorisations &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) et [Sécurité et protection de Reporting Services](../security/reporting-services-security-and-protection.md).  
+-   Auprès de l'administrateur du serveur de rapports, identifiez le système d'autorisation et d'authentification utilisé pour votre installation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Par défaut, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise l'authentification Windows, la sécurité intégrée, et l'attribution de rôle pour contrôler l'accès aux rapports publiés. Pour plus d’informations, consultez [Rôles et autorisations &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) et [Sécurité et protection de Reporting Services](../security/reporting-services-security-and-protection.md).  
   
 ## <a name="create-notifications-based-on-report-data"></a>Créer des notifications en fonction de données de rapport  
  Vous pouvez créer des alertes de données pour les rapports publiés sur un site SharePoint. Les alertes de données sont basées sur les flux de données des régions de données dans le rapport. Par défaut, les régions de données sont nommées automatiquement. Les auteurs de rapport peuvent faciliter la création d'alertes de données dans leurs rapports en nommant les régions de données en fonction de leur objectif métier. Si vous créez une alerte de données, vous êtes averti par message électronique lorsque les données remplissent les critères que vous spécifiez. Pour plus d’informations, consultez [Génération de flux de données à partir de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Créer une alerte de données dans le Concepteur d’alertes](../create-a-data-alert-in-data-alert-designer.md) et [Alertes de données Reporting Services](../reporting-services-data-alerts.md).  

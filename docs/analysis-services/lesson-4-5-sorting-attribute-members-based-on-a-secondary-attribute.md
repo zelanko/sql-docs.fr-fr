@@ -1,5 +1,5 @@
 ---
-title: Le tri des membres d’attribut basé sur un attribut secondaire | Documents Microsoft
+title: Tri des membres d’attribut basé sur un attribut secondaire | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720920da4dbd935bca493e3a2e76ab9a683fff21
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 010e416115e793c46f8744c7724dc164ca01ec87
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019346"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951691"
 ---
-# <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Leçon 4-5 - tri des membres d’attribut basés sur un attribut secondaire
+# <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Leçon 4-5 : tri des membres d’un attribut basés sur un attribut secondaire
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 Au cours de la leçon 3, vous avez appris à trier les membres d'attribut en fonction de leur nom ou de la valeur de leur clé. Vous avez également appris à utiliser une clé de membre composite pour modifier les membres d'attribut et l'ordre de tri. Pour plus d’informations, consultez [Modification de la dimension Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Toutefois, si ni le nom ni la clé de l'attribut principal ne fournissent l'ordre de tri que vous souhaitez, vous pouvez utiliser un attribut secondaire pour obtenir l'ordre de tri désiré. En définissant une relation entre les attributs, vous pouvez utiliser le deuxième attribut pour trier les membres du premier attribut.  
   
 Les relations d'attributs définissent les relations ou les dépendances entre les attributs. Dans une dimension qui est basée sur une seule table relationnelle, tous les attributs sont généralement liés les uns aux autres via l'attribut clé. Cela est dû au fait que tous les attributs d'une dimension fournissent des informations sur les membres liés par l'attribut clé de la dimension aux faits de la table de faits pour chaque groupe de mesures associé. Dans une dimension basée sur plusieurs tables, les attributs sont généralement liés par une clé de jointure entre les tables. Si les données sous-jacentes le prennent en charge, les attributs associés peuvent être utilisés pour spécifier un ordre de tri. Par exemple, vous pouvez créer un nouvel attribut qui fournit la logique de tri pour un attribut associé.  
   
-Le Concepteur de dimensions permet de définir d'autres relations entre les attributs ou de modifier les relations par défaut pour augmenter les performances. Lorsque vous créez une relation d'attribut, la principale contrainte est de s'assurer que l'attribut référencé n'a qu'une seule valeur pour chaque membre dans l'attribut auquel il est lié. Lorsque vous définissez une relation entre deux attributs, vous pouvez définir une relation rigide ou flexible selon que les relations entre les membres doivent ou non évoluer dans le temps. Par exemple, un employé peut être muté dans une autre région, mais la ville elle-même ne changera pas d'état. Si une relation est définie en tant que relation rigide, les agrégations d'attributs ne sont pas recalculées à chaque fois que la dimension est traitée de façon incrémentielle. Toutefois, si la relation entre les membres ne change pas, elle doit être traitée entièrement. Pour plus d’informations, consultez [Relations d’attributs](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Définir des relations d’attributs](../analysis-services/multidimensional-models/attribute-relationships-define.md), [Configurer des propriétés de relations d’attributs](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md)et [Spécification des relations d’attribut dans une hiérarchie définie par l’utilisateur](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md).  
+Le Concepteur de dimensions permet de définir d'autres relations entre les attributs ou de modifier les relations par défaut pour augmenter les performances. Lorsque vous créez une relation d'attribut, la principale contrainte est de s'assurer que l'attribut référencé n'a qu'une seule valeur pour chaque membre dans l'attribut auquel il est lié. Lorsque vous définissez une relation entre deux attributs, vous pouvez définir une relation rigide ou flexible selon que les relations entre les membres doivent ou non évoluer dans le temps. Par exemple, un employé peut être muté dans une autre région, mais la ville elle-même ne changera pas d'état. Si une relation est définie en tant que relation rigide, les agrégations d'attributs ne sont pas recalculées à chaque fois que la dimension est traitée de façon incrémentielle. Toutefois, si la relation entre les membres ne change pas, elle doit être traitée entièrement. Pour plus d’informations, consultez [Relations d’attributs](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Définir des relations d’attributs](../analysis-services/multidimensional-models/attribute-relationships-define.md), [Configurer des propriétés de relations d’attributs](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md)et [Spécification des relations d’attribut dans une hiérarchie définie par l’utilisateur](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md).  
   
 Au cours des tâches de cette rubrique, vous allez définir un nouvel attribut dans la dimension **Date** basé sur une colonne existante de la table de dimension sous-jacente. Vous allez utiliser ce nouvel attribut pour trier les membres de type mois calendaire par ordre chronologique et non par ordre alphabétique. Vous allez également définir un nouvel attribut dans la dimension **Customer** basé sur le calcul nommé que vous utiliserez pour trier les membres d’attribut **Commute Distance** . Au cours des tâches de la rubrique suivante, vous allez apprendre à utiliser les relations d'attributs pour augmenter les performances des requêtes.  
   
@@ -69,7 +69,7 @@ Au cours des tâches de cette rubrique, vous allez définir un nouvel attribut d
   
     Notez que les mois sont bien triés par ordre chronologique, comme montré dans l'illustration suivante.  
   
-    ![Modification de hiérarchie de l’utilisateur dans l’ordre chronologique](../analysis-services/media/l4-memberproperties-3.gif "modifié la hiérarchie de l’utilisateur dans l’ordre chronologique")  
+    ![Modification de la hiérarchie utilisateur dans l’ordre chronologique](../analysis-services/media/l4-memberproperties-3.gif "modifié la hiérarchie de l’utilisateur dans l’ordre chronologique")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Définition des relations d'attributs et d'un ordre de tri dans la dimension Customer  
   
@@ -79,7 +79,7 @@ Au cours des tâches de cette rubrique, vous allez définir un nouvel attribut d
   
     L’illustration suivante montre les membres de la hiérarchie d’attribut **Commute Distance** , triés en fonction des valeurs ASCII de la clé de membre.  
   
-    ![Commute la hiérarchie d’attribut Distance](../analysis-services/media/l4-memberproperties-4.gif "hiérarchie d’attribut Commute Distance")  
+    ![Domicile-travail de la hiérarchie d’attribut Distance](../analysis-services/media/l4-memberproperties-4.gif "hiérarchie d’attribut Commute Distance")  
   
 2.  Affichez l’onglet **Structure de dimension** dans le Concepteur de dimensions pour la dimension Customer, cliquez avec le bouton droit sur **CommuteDistanceSort** dans la table **Customer** du volet **Vue de source de données** et choisissez **Nouvel attribut de colonne**.  
   
@@ -115,10 +115,10 @@ Au cours des tâches de cette rubrique, vous allez définir un nouvel attribut d
   
     Notez que les membres de la hiérarchie d'attribut sont maintenant triés par ordre croissant, comme montré dans l'illustration suivante.  
   
-    ![Hiérarchie d’attribut Commute Distance de nouveau tri](../analysis-services/media/l4-memberproperties-5.gif "hiérarchie d’attribut Re-sorted Commute Distance")  
+    ![Retrier hiérarchie d’attribut Commute Distance](../analysis-services/media/l4-memberproperties-5.gif "hiérarchie d’attribut Re-sorted Commute Distance")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Spécification des relations d’attribut dans une hiérarchie définie par l’utilisateur](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+[Spécification des relations d’attribut dans une hiérarchie définie par l’utilisateur](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
   
   
   

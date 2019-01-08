@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a93aa651324d54aa1cc476d2e2408224dd537a95
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ad884bb6e08c6d3878ca059cd93aa76ba838f3cc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656708"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206978"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Créer un fichier de format de copie en bloc (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51656708"
   
     -   Nom d'un fichier de données devant recevoir tous les messages d'erreur de copie en bloc (spécifiez NULL si vous ne souhaitez pas de fichier de message).  
   
-    -   Direction de la copie : DB_OUT vers le fichier à partir de la table ou vue.  
+    -   La direction de la copie : DB_OUT vers le fichier à partir de la table ou vue.  
   
 5.  Appelez [bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) pour définir le nombre de colonnes.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "51656708"
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- Exécutez la première liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour créer la table que l'exemple utilisera.  
+ Exécutez la première ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) liste pour créer la table qui utilise l’exemple de code.  
   
  Compilez la deuxième liste de code (C++) avec odbc32.lib et odbcbcp.lib.  
   
- Exécutez la troisième liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour supprimer la table que l'exemple a utilisée.  
+ Exécutez la troisième ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) liste pour supprimer la table qui a utilisé l’exemple de code.  
   
 ```  
 use AdventureWorks  

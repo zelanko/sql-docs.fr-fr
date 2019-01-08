@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e5cb0bdbbbb535293835a0114061d8ca322ec8a8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99e51be32264dd90b126860b33abe35c7a27781a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675098"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819101"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|Showplan XML avec des statistiques partielles. Autorise la valeur Null.|
 
 ## <a name="remarks"></a>Notes
-Cette fonction système est disponible à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+Cette fonction système est disponible à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Consultez la base de connaissances [3190871](https://support.microsoft.com/en-us/help/3190871)
 
 Cette fonction système fonctionne dans les répertoires **standard** et **léger** infrastructure de profilage des statistiques d’exécution de requête.  
   
@@ -64,7 +64,7 @@ Cette fonction système fonctionne dans les répertoires **standard** et **lége
   -  [SET STATISTICS PROFILE SUR](../../t-sql/statements/set-statistics-profile-transact-sql.md)
   -  le `query_post_execution_showplan` événements étendus.  
   
-**Lightweight** infrastructure de profilage des statistiques est disponible dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et peuvent être activées :
+**Lightweight** infrastructure de profilage des statistiques est disponible dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et peuvent être activées :
   -  Dans le monde entier à l’aide de trace indicateur 7412.
   -  À l’aide de la [ *query_thread_profile* ](https://support.microsoft.com/kb/3170113) événements étendus.
   
@@ -75,7 +75,7 @@ Cette fonction système fonctionne dans les répertoires **standard** et **lége
 > [!IMPORTANT]
 > Dans TPC-C comme tests de charge de travail, l’activation de l’infrastructure de profilage légère de statistiques ajoute une surcharge de 1,5 à 2 %. En revanche, l’infrastructure de profilage de statistiques standard peut ajouter jusqu'à 90 % de surcharge pour le même scénario de charge de travail.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW SERVER STATE` sur le serveur.  
 
 ## <a name="examples"></a>Exemples  

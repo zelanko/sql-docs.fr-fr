@@ -11,19 +11,19 @@ ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d5ba084d6912d7f60b124b28ea8635aa37d8259f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f735e1a46e5b42ec226d3d885dad00d11dcc39f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222289"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589358"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Enregistrer des rapports sur votre ordinateur (Générateur de rapports)
   Dans le Générateur de rapports, vous pouvez enregistrer des définitions de rapport sur votre ordinateur. Toutefois, lorsque des définitions sont enregistrées sur votre ordinateur, les autres utilisateurs ne peuvent pas consulter les rapports. Par ailleurs, les rapports qui font référence aux sources de données partagées ou qui stockent en externe des éléments de rapport, tels que des images et des sous-rapports, peuvent ne pas s'exécuter. Il est recommandé d'enregistrer des rapports sur un serveur de rapports ou un site SharePoint.  
   
 ### <a name="to-save-a-report"></a>Pour enregistrer un rapport  
   
-1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer**. La boîte de dialogue **Enregistrer sous****\<élément de rapport>* s’affiche.  
+1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer**. La boîte de dialogue **Enregistrer sous**_\<élément de rapport>_ s’affiche.  
   
     > [!NOTE]  
     >  Si vous réenregistrez un rapport, il est automatiquement stocké à son emplacement précédent. Utilisez l’option **Enregistrer sous** pour modifier l’emplacement.  
@@ -36,7 +36,7 @@ ms.locfileid: "48222289"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Pour enregistrer un rapport sous un nom différent  
   
-1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer sous**. La boîte de dialogue **Enregistrer sous****\<élément de rapport>* s’affiche.  
+1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer sous**. La boîte de dialogue **Enregistrer sous**_\<élément de rapport>_ s’affiche.  
   
 2.  Sur votre ordinateur, accédez à l'emplacement où vous souhaitez enregistrer le rapport.  
   

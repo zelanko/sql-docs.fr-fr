@@ -12,12 +12,12 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7834ce4de7b4fa788dcdfb72c9f38510a11a9fac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9363dfe3bee63bb6b32ecb5d7c29468f6a3def1a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187009"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215798"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Restaurer la base de données MASTER (Transact-SQL)
   Cette rubrique explique comment restaurer la base de données **master** à partir d'une sauvegarde complète d'une base de données.  
@@ -42,7 +42,7 @@ ms.locfileid: "48187009"
 ## <a name="example"></a>Exemple  
  Dans l'exemple suivant, la base de données `master` est restaurée sur l'instance du serveur par défaut. L'exemple suppose que l'instance du serveur s'exécute déjà en mode mono-utilisateur. L’exemple démarre `sqlcmd` et exécute une instruction `RESTORE DATABASE` qui restaure une sauvegarde complète de la base de données de `master` à partir d’une unité de disque : `Z:\SQLServerBackups\master.bak`.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Dans le cas d’une instance nommée, la commande **sqlcmd** doit spécifier l’option **-S***\<nom_ordinateur>*\\*\<nom_instance>*.  
   
 ```  

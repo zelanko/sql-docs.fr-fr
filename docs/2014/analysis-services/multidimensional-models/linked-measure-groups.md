@@ -17,12 +17,12 @@ ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a1377552b3e50fe5c536ae0d7d854346ccb062d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7695f971504744d42056d0067217e102ef3d990
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140349"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368452"
 ---
 # <a name="linked-measure-groups"></a>Groupes de mesures liés
   Un groupe de mesures lié est basé sur un autre groupe de mesures situé dans un autre cube de la même base de données ou d'une autre base de données Analysis Services. Utilisez un groupe de mesures lié si vous voulez réutiliser un jeu de mesures, et les valeurs de données correspondantes, dans plusieurs cubes.  
@@ -47,7 +47,7 @@ ms.locfileid: "48140349"
   
 -   Les groupes de mesures liés ne prennent pas en charge l'écriture différée.  
   
--   Les groupes de mesures liés ne peuvent pas être utilisés dans des relations plusieurs-à-plusieurs, en particulier lorsque ces relations sont dans des cubes différents. Cela peut entraîner des agrégations ambiguës. Pour plus d’informations, consultez [Quantités incorrectes de mesures liées dans les cubes contenant des relations plusieurs-à-plusieurs](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
+-   Les groupes de mesures liés ne peuvent pas être utilisés dans des relations plusieurs-à-plusieurs, en particulier lorsque ces relations sont dans des cubes différents. Cela peut entraîner des agrégations ambiguës. Pour plus d’informations, consultez [Quantités incorrectes de mesures liées dans les cubes contenant des relations plusieurs-à-plusieurs](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
   
  Les mesures contenues dans un groupe de mesures lié ne s’organisent directement que conjointement à des dimensions liées extraites de la même base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Toutefois, vous pouvez utiliser les membres calculés pour associer les informations de groupes de mesures liés aux autres dimensions non liées de votre cube. Vous pouvez également utiliser une relation indirecte, telle qu'une référence ou une relation plusieurs-à-plusieurs, pour lier des dimensions non liées à un groupe de mesures lié.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48140349"
 ## <a name="secure-a-linked-measure"></a>Sécuriser une mesure liée  
  Une fois le lien défini, l'accès aux mesures d'un groupe de mesures lié est géré de la même façon que l'accès aux autres groupes de mesures. Un objet lié apparaît à côté de ses homologues non liés dans le Concepteur de rôle. Pour plus d’informations sur la gestion de la sécurité d’un groupe de mesures, consultez [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
- Pour définir ou utiliser un groupe de mesures lié, les Windows compte de service pour le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance doit appartenir à un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rôle de base de données a `ReadDefinition` et `Read` droits sur la source d’accès [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] l’instance à la source du cube et mesure au groupe, ou doit appartenir à la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rôle Administrateurs pour la source de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
+ Pour définir ou utiliser un groupe de mesures lié, le compte de service Windows pour l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] doit être membre d'un rôle de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui a les droits d'accès `ReadDefinition` et `Read` au cube source et au groupe de mesures sur l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] source ou membre du rôle Administrateurs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] source.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir des dimensions liées](define-linked-dimensions.md)  

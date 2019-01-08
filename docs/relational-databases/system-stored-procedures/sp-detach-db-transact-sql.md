@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b727bceb20b275128ea030f87c85872a88e931d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825667"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201908"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  Spécifie que le fichier d'index de texte intégral associé à la base de données à détacher ne sera pas supprimé pendant l'opération de détachement de la base de données. *KeepFulltextIndexFile* est un **nvarchar (10)** valeur par défaut de **true**. Si *KeepFulltextIndexFile* est **false**, tous les fichiers d’index de recherche en texte intégral associé à la base de données et les métadonnées de l’index de recherche en texte intégral sont supprimés, sauf si la base de données est en lecture seule. Si NULL ou **true**, liée au texte intégral métadonnées sont conservées.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Le**@keepfulltextindexfile** paramètre sera supprimé dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ce paramètre dans de nouveaux travaux de développement, et modifiez dès que possible les applications qui utilisent actuellement ce paramètre.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -114,12 +114,12 @@ GO
 ```  
   
 > [!NOTE]  
->  Pour forcer actuelle aux utilisateurs en dehors de la base de données immédiatement ou après un nombre spécifié de secondes, également utilisent l’option ROLLBACK : ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Pour forcer les utilisateurs actuels à se déconnecter de la base de données immédiatement ou après un nombre de secondes spécifié, utilisez également l'option ROLLBACK : ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Rattachement d'une base de données  
  Les fichiers détachés restent et peuvent être rattachés à l'aide de CREATE DATABASE (avec l'option FOR ATTACH ou FOR ATTACH_REBUILD_LOG). Vous pouvez les déplacer sur un autre serveur et les y attacher.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **sysadmin** rôle serveur fixe ou l’appartenance à la **db_owner** rôle de la base de données.  
   
 ## <a name="examples"></a>Exemples  

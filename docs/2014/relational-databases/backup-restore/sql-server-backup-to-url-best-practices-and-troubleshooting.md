@@ -10,12 +10,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9347a38b1289afa3150cb5354aa85e16516947b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049019"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349991"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL
   Cette rubrique présente les pratiques recommandées et des conseils de dépannage pour la sauvegarde et la restauration SQL Server dans le service d'objets blob Windows Azure.  
@@ -24,7 +24,7 @@ ms.locfileid: "48049019"
   
 -   [Sauvegarde et restauration SQL Server avec le service Stockage Blob Microsoft Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Didacticiel : Sauvegarde et restauration SQL Server dans le service de stockage d'objets blob Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Didacticiel : SQL Server Backup and Restore au Service de stockage Windows Azure Blob](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Gestion des sauvegardes  
  La liste suivante comprend des recommandations générales sur la gestion des sauvegardes :  
@@ -41,7 +41,7 @@ ms.locfileid: "48049019"
   
 ## <a name="handling-large-files"></a>Gestion des fichiers volumineux  
   
--   L'opération de sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise plusieurs threads pour optimiser le transfert de données vers les services de stockage d'objets blob Windows Azure.  Toutefois, les performances dépendent de divers facteurs, tels que la bande passante de l'éditeur de logiciels et la taille de la base de données. Si vous envisagez de sauvegarder des bases de données ou groupes de fichiers volumineux à partir d'une base de données SQL Server locale, nous vous recommandons de commencer par tester le débit. [Windows Azure SLA du stockage](http://go.microsoft.com/fwlink/?LinkId=271619) ont des temps de traitement maximum pour les objets BLOB que vous pouvez prendre en considération.  
+-   L'opération de sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise plusieurs threads pour optimiser le transfert de données vers les services de stockage d'objets blob Windows Azure.  Toutefois, les performances dépendent de divers facteurs, tels que la bande passante de l'éditeur de logiciels et la taille de la base de données. Si vous envisagez de sauvegarder des bases de données ou groupes de fichiers volumineux à partir d'une base de données SQL Server locale, nous vous recommandons de commencer par tester le débit. [Windows Azure SLA du stockage](https://go.microsoft.com/fwlink/?LinkId=271619) ont des temps de traitement maximum pour les objets BLOB que vous pouvez prendre en considération.  
   
 -   L’utilisation de l’option `WITH COMPRESSION`, comme recommandé dans la section **Gestion de la sauvegarde**, est très importante lors de la sauvegarde de fichiers volumineux.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "48049019"
   
  **Erreurs d'authentification :**  
   
--   WITH CREDENTIAL est une nouvelle option requise pour la sauvegarde ou la restauration vers/depuis le service de stockage d'objets blob Windows Azure. Les défaillances liées aux informations d'identification peuvent être les suivantes :  
+-   WITH CREDENTIAL est une nouvelle option requise pour la sauvegarde ou la restauration vers/depuis le service de stockage d'objets blob Windows Azure. Les défaillances liées aux informations d'identification peuvent être les suivantes :  
   
-     Les informations d’identification spécifiées dans le `BACKUP` ou `RESTORE` commande n’existe pas. Pour éviter ce problème, vous pouvez inclure des instructions T-SQL afin de créer les informations d'identification si elles n'existent pas dans l'instruction de sauvegarde. Voici un exemple que vous pouvez utiliser :  
+     Les informations d'identification spécifiées dans la commande `BACKUP` ou `RESTORE` n'existent pas. Pour éviter ce problème, vous pouvez inclure des instructions T-SQL afin de créer les informations d'identification si elles n'existent pas dans l'instruction de sauvegarde. Voici un exemple que vous pouvez utiliser :  
   
     ```  
     IF NOT EXISTS  
@@ -89,24 +89,24 @@ ms.locfileid: "48049019"
   
         -   `VERIFYONLY`  
   
-    -   Vous pouvez également trouver des informations en examinant le journal des événements Windows nommé « SQLBackupToUrl » sous Journaux d'application.  
+    -   Vous trouverez également des informations en consultant le journal des événements Windows - journaux d’Application sous le nom « SQLBackupToUrl ».  
   
 -   En cas de restauration d'une sauvegarde compressée, vous pouvez rencontrer l'erreur suivante :  
   
-    -   **Une exception SqlException 3284 s’est produite. Gravité : 16 État : 5**  
-        **Marque de fichier de message sur le périphérique 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' n’est pas alignée. Réexécutez l’instruction Restore avec la même taille de bloc que celle utilisée pour créer le jeu de sauvegarde : « 65536 » semble une valeur possible.**  
+    -   **Une exception SqlException 3284 s’est produite. Gravité : 16 état : 5**  
+        **Marque de fichier de message sur le périphérique 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' n’est pas alignée. Réexécutez l’instruction Restore avec la même taille de bloc utilisée pour créer le jeu de sauvegarde : « 65536 » semble une valeur possible.**  
   
          Pour résoudre cette erreur, réexécutez l'instruction `BACKUP` en spécifiant `BLOCKSIZE = 65536`.  
   
--   Erreur lors de la sauvegarde en raison d'objets blob avec un bail actif : l'activité de sauvegarde en échec peut générer des objets blob avec des baux actifs.  
+-   Erreur lors de la sauvegarde en raison d’objets BLOB qui ont un bail actif sur ces derniers : Activité de sauvegarde ayant échoué peut entraîner des objets BLOB avec baux actifs.  
   
      Si une instruction de sauvegarde est retentée, l'opération de sauvegarde échoue avec une erreur semblable à celle qui suit :  
   
-     **La sauvegarde vers l'URL a reçu une exception du point de terminaison distant. Message d’exception : Le serveur distant a retourné une erreur : (412) Il y a actuellement un bail sur l’objet blob et aucun ID de bail n’a été spécifié dans la requête**.  
+     **La sauvegarde vers l'URL a reçu une exception du point de terminaison distant. Message d’exception : Le serveur distant a retourné une erreur : (412) il y a actuellement un bail sur l’objet blob et aucun ID de bail a été spécifié dans la demande**.  
   
      Si une instruction de restauration est tentée sur un fichier de sauvegarde d'objet blob dont le bail est actif, l'opération de restauration échoue avec une erreur semblable à celle qui suit :  
   
-     **Message d'exception : Le serveur distant a retourné une erreur : (409) Conflit.**  
+     **Message d’exception : Le serveur distant a retourné une erreur : Conflit (409)...**  
   
      Lorsqu'une telle erreur se produit, les fichiers d'objets blob doivent être supprimés. Pour plus d'informations sur ce scénario et la résolution du problème, consultez [Deleting Backup Blob Files with Active Leases](deleting-backup-blob-files-with-active-leases.md)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48049019"
   
  Les serveurs proxy peuvent avoir des paramètres qui limitent le nombre de connexions par minute. Le processus de sauvegarde vers l'URL est un processus multithread et, par conséquent, il peut dépasser cette limite. Si cela se produit, le serveur proxy supprime la connexion. Pour résoudre ce problème, modifiez les paramètres du proxy afin que SQL Server n'utilise pas le proxy.   Voici quelques exemples des types d'erreur ou des messages qui peuvent s'afficher dans le journal des erreurs :  
   
--   Écriture sur « http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak» a échoué : sauvegarde vers une URL a reçu une exception à partir du point de terminaison distant. Message d'exception : impossible de lire les données de la connexion de transport : la connexion a été fermée.  
+-   Écriture sur « http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak» a échoué : La sauvegarde vers l’URL a reçu une exception du point de terminaison distant. Message d’exception : Impossible de lire les données à partir de la connexion de transport : La connexion a été fermée.  
   
 -   Une erreur d’E/S non récupérable s’est produite sur le fichier « http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: ». L’erreur n’a pas pu être collectée à partir du point de terminaison distant.  
   
@@ -125,15 +125,15 @@ ms.locfileid: "48049019"
   
      La sauvegarde de base de données s'est terminée anormalement.  
   
--   BackupIoRequest::ReportIoError : échec d’écriture sur l’unité de sauvegarde http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak». Erreur de système d'exploitation. La sauvegarde vers l'URL a reçu une exception du point de terminaison distant. Message d'exception : impossible de lire les données de la connexion de transport : la connexion a été fermée.  
+-   BackupIoRequest::ReportIoError : échec d’écriture sur l’unité de sauvegarde http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak». Erreur de système d'exploitation. La sauvegarde vers l'URL a reçu une exception du point de terminaison distant. Message d’exception : Impossible de lire les données à partir de la connexion de transport : La connexion a été fermée.  
   
- Si vous activez la journalisation détaillée à l'aide de l'indicateur de trace 3051, vous pouvez également voir le message suivant dans les journaux :  
+ Si vous activez la journalisation détaillée à l'aide de l'indicateur de trace 3051, vous pouvez également voir le message suivant dans les journaux :  
   
  Code d'état HTTP 502, message d'état HTTP, erreur de proxy (le nombre de requêtes HTTP par minute a dépassé la limite configurée. Contactez votre administrateur ISA Server.  )  
   
  **Les paramètres du proxy par défaut ne sont pas sélectionnés :**  
   
- Parfois, les paramètres par défaut ne sont pas sélectionnés et provoquent des erreurs d’authentification du proxy telles que celle affichée ci-dessous :*Une erreur d’E/S non récupérable s’est produite dans le fichier « http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: » La sauvegarde vers l’URL a reçu une exception du point de terminaison distant. Message d’exception : Le serveur distant a retourné une erreur : (407)* **Authentification du proxy nécessaire**.  
+ Parfois, les paramètres par défaut ne sont pas sélectionnés et provoquent des erreurs d’authentification du proxy telles que celle affichée ci-dessous :*Une erreur d’E/S non récupérable s’est produite dans le fichier « http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: » La sauvegarde vers l’URL a reçu une exception du point de terminaison distant. Message d’exception : Le serveur distant a retourné une erreur : (407)*  **Authentification proxy requise**.  
   
  Pour résoudre ce problème, créez un fichier de configuration qui permet au processus de sauvegarde vers l'URL d'utiliser les paramètres du proxy par défaut à l'aide des étapes suivantes :  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48049019"
   
     ```  
   
-2.  Placez le fichier de configuration dans le dossier Binn de l'instance de SQL Server. Par exemple, si mon instance SQL Server est installé sur le lecteur C de l’ordinateur, placez le fichier de configuration ici : *C:\Program Files\Microsoft SQL Server\MSSQL12.\< Nom_instance > \MSSQL\Binn*.  
+2.  Placez le fichier de configuration dans le dossier Binn de l'instance de SQL Server. Par exemple, si mon instance SQL Server est installé sur le lecteur C de l’ordinateur, placez le fichier de configuration ici : *C:\Program Files\Microsoft SQL Server\MSSQL12. \<Nom_instance > \MSSQL\Binn*.  
   
 ## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>Dépannage de la sauvegarde managée de SQL Server sur Windows Azure  
  Étant donné que la sauvegarde managée de SQL Server est générée par dessus la sauvegarde vers l'URL, les conseils de dépannage décrits dans les premières sections s'appliquent aux bases de données ou aux instances qui utilisent la sauvegarde managée de SQL Server.  Informations sur le dépannage de SQL Server Managed Backup pour Windows Azure sont décrite en détail dans [dépannage de sauvegarde managée SQL Server sur Windows Azure](sql-server-managed-backup-to-microsoft-azure.md).  

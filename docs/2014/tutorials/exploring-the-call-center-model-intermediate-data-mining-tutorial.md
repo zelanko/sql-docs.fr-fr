@@ -11,22 +11,22 @@ ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 21a1f76992e902f8b9b3c5ba18efad3f16734300
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6b1995ad715ea529da548f06e0643be076abe96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110029"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518898"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Exploration du modèle de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
   Maintenant que vous avez généré le modèle exploratoire, vous pouvez l'utiliser pour en savoir plus sur vos données à l'aide des outils suivants fournis dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   [Visionneuse Microsoft Neural Network](#bkmk_NNviewer) **:** cette visionneuse est disponible dans le **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données et est conçu pour vous aider à faire des essais avec les interactions dans les données.  
+-   [Observateur de réseau neuronal de Microsoft](#bkmk_NNviewer) **:** Cette visionneuse est disponible dans le **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données et est conçu pour vous aider à faire des essais avec les interactions dans les données.  
   
--   [Visionneuse d’arborescences contenu générique Microsoft](#bkmk_genviewer) **:** cette visionneuse standard fournit des détails approfondis sur les modèles et les statistiques découverts par l’algorithme lorsqu’il a généré le modèle.  
+-   [Visionneuse de l’arborescence de contenu générique Microsoft](#bkmk_genviewer) **:** Cette visionneuse standard fournit des détails approfondis sur les modèles et les statistiques découverts par l’algorithme lorsqu’il a généré le modèle.  
   
 ##  <a name="bkmk_NNviewer"></a> Observateur de réseau neuronal de Microsoft  
- La visionneuse comporte trois volets : **entrée**, **sortie**, et **Variables**.  
+ La visionneuse comporte trois volets - **entrée**, **sortie**, et **Variables**.  
   
  À l’aide de la **sortie** volet, vous pouvez sélectionner des valeurs différentes pour l’attribut prédictible, ou la variable dépendante. Si votre modèle contient plusieurs attributs prédictibles, vous pouvez sélectionner l’attribut à partir de la **attribut de sortie** liste.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48110029"
   
 2.  Pour **valeur**, sélectionnez **AM**.  
   
-     Le **Variables** mises à jour du volet pour montrer l’impact sur le modèle lors de l’équipe sélectionnée est **AM**. Toutes les autres sélections restent inchangées ; vous comparez toujours les niveaux de services les plus bas et les plus élevés.  
+     Le **Variables** mises à jour du volet pour montrer l’impact sur le modèle lors de l’équipe sélectionnée est **AM**. Toutes les autres sélections restent les mêmes, vous comparez toujours les niveaux de service les plus élevés.  
   
 3.  Pour **valeur**, sélectionnez **PM1**.  
   
@@ -94,13 +94,13 @@ ms.locfileid: "48110029"
 ### <a name="interpreting-the-statistics-provided-in-the-viewer"></a>Interprétation des statistiques fournies dans la visionneuse  
  Des temps d'attente plus longs sont un prédicteur fort d'un taux d'abandon élevé, ce qui correspond à un niveau de service médiocre. Cela peut sembler être une conclusion évidente ; toutefois, le modèle d'exploration de données vous fournit des données statistiques supplémentaires afin de vous aider à interpréter ces tendances.  
   
--   **Score**: valeur qui indique l’importance globale de cette variable pour établir une discrimination entre les résultats. Plus le score est élevé, plus l'incidence de la variable sur le résultat est importante.  
+-   **Score**: Valeur qui indique l’importance globale de cette variable pour établir une discrimination entre les résultats. Plus le score est élevé, plus l'incidence de la variable sur le résultat est importante.  
   
--   **Probabilité de value 1**: pourcentage qui représente la probabilité de cette valeur pour ce résultat.  
+-   **Probabilité de value 1**: Pourcentage qui représente la probabilité de cette valeur pour ce résultat.  
   
--   **Probabilité de value 2**: pourcentage qui représente la probabilité de cette valeur pour ce résultat.  
+-   **Probabilité de value 2**: Pourcentage qui représente la probabilité de cette valeur pour ce résultat.  
   
--   **Finesse pour Value 1** et **finesse pour Value 2**: Scores qui représentent l’impact de l’utilisation de cette variable particulière pour prévoir les résultats de la valeur 1 et valeur 2. Plus le score est élevé, plus la variable est appropriée pour prédire les résultats.  
+-   **Finesse pour valeur 1** et **de courbes d’élévation pour valeur 2**: Scores qui représentent l’impact de l’utilisation de cette variable particulière pour prévoir les résultats de la valeur 1 et valeur 2. Plus le score est élevé, plus la variable est appropriée pour prédire les résultats.  
   
  Le tableau suivant contient des exemples de valeurs pour les principaux facteurs d'influence. Par exemple, le **probabilité de value 1** est 60,6 % et **probabilité de value 2** est 8,30 %, ce qui signifie que lorsque la durée moyenne par problème était dans la plage 44-70 minutes, 60,6 % des cas étaient dans l’équipe ayant le niveaux de service le plus élevé (valeur 1) et 8,30 % des cas étaient dans l’équipe ayant les niveaux de service pires (valeur 2).  
   
@@ -108,10 +108,10 @@ ms.locfileid: "48110029"
   
  Toutefois, lorsque vous parcourez la liste des facteurs contributeurs, vous voyez d'autres facteurs dont les effets sont plus subtils et plus difficiles à interpréter. Par exemple, l'équipe semble avoir une influence sur le service, mais les scores de finesse et les probabilités relatives indiquent que l'équipe n'est pas un facteur majeur.  
   
-|Attribute|Valeur|Privilégie \< 0,07|Privilèges >= 0.12|  
+|Attribute|Value|Privilégie \< 0,07|Privilèges >= 0.12|  
 |---------------|-----------|--------------------|----------------------|  
-|Average Time Per Issue|89.087-120.000||Score : 100<br /><br /> Probabilité de Value1 : 4,45 %<br /><br /> Probabilité de Value2 : 51.94 %<br /><br /> Finesse pour Value1 : 0.19<br /><br /> Finesse pour Value2 : 1,94|  
-|Average Time Per Issue|44.000-70.597|Score : 92.35<br /><br /> Probabilité de Value1 : 60.06 %<br /><br /> Probabilité de Value2 : 8,30 %<br /><br /> Finesse pour Value1 : 2.61<br /><br /> Finesse pour Value2 : 0.31||  
+|Average Time Per Issue|89.087-120.000||Score :  100<br /><br /> Probabilité de Value1 : 4,45 %<br /><br /> Probabilité de Value2 : 51.94 %<br /><br /> Finesse pour Value1 : 0.19<br /><br /> Finesse pour Value2 : 1,94|  
+|Average Time Per Issue|44.000-70.597|Score : 92.35<br /><br /> Probabilité de Value1 : 60.06 %<br /><br /> Probabilité de Value2 : 8,30 %<br /><br /> Finesse pour Value1 : 2.61<br /><br /> Finesse pour Value2 : 0.31||  
   
  [Retour au début](#bkmk_NNviewer)  
   
@@ -152,9 +152,9 @@ WHERE NODE_NAME = '10000000000000000'
  [Ajout d’un modèle de régression logistique à la Structure de centre d’appels &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle pour les modèles de réseau neuronal d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemples de requêtes de modèle de réseau neuronal](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)   
- [Référence technique de Microsoft Neural Network algorithme](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Modifier la discrétisation d’une colonne dans un modèle d’exploration de données](../../2014/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
   
   

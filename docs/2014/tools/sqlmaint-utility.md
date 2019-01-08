@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -19,18 +18,18 @@ ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e8da941588b466aeaf690214dfee836718569a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e15dbb5b7cb21d29936fce5c9b0d1f215d244ac
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110060"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591674"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint (utilitaire)
   L’utilitaire**sqlmaint** exécute un ensemble spécifique d’opérations de maintenance sur une ou plusieurs bases de données. Utilisez **sqlmaint** pour exécuter des vérifications DBCC, sauvegarder une base de données et son journal des transactions, mettre à jour des statistiques et reconstruire des index. Toutes les activités de maintenance de base de données produisent un rapport qui peut être envoyé vers un fichier texte, un fichier HTML ou un compte de messagerie déterminé. **sqlmaint** exécute les plans de maintenance de base de données créés avec des versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour exécuter des plans de maintenance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir de l’invite de commandes, utilisez [l’utilitaire dtexec](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Utilisez plutôt la fonction plan de maintenance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations sur les plans de maintenance, consultez [Plans de maintenance](../relational-databases/maintenance-plans/maintenance-plans.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Utilisez plutôt la fonction plan de maintenance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations sur les plans de maintenance, consultez [Plans de maintenance](../relational-databases/maintenance-plans/maintenance-plans.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -80,31 +79,31 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Spécifie que le diagramme de syntaxe pour l’utilitaire **sqlmaint** doit être retourné. Ce paramètre doit être utilisé seul.  
   
- **-S** *server_name*[ **\\***instance_name*]  
- Spécifie l’instance cible de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez *server_name* pour vous connecter à l’instance par défaut du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sur ce serveur. Spécifiez *server_name***\\***instance_name* pour vous connecter à une instance nommée de [!INCLUDE[ssDE](../includes/ssde-md.md)] sur ce serveur. Si aucun serveur n’est spécifié, **sqlmaint** se connecte à l’instance par défaut de [!INCLUDE[ssDE](../includes/ssde-md.md)] sur l’ordinateur local.  
+ **-S** _server_name_[ **\\**_instance_name_]  
+ Spécifie l’instance cible de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez *server_name* pour vous connecter à l’instance par défaut du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sur ce serveur. Spécifiez *server_name**_\\_** nom_instance* pour vous connecter à une instance nommée du [!INCLUDE[ssDE](../includes/ssde-md.md)] sur ce serveur. Si aucun serveur n’est spécifié, **sqlmaint** se connecte à l’instance par défaut de [!INCLUDE[ssDE](../includes/ssde-md.md)] sur l’ordinateur local.  
   
- **-U** *login_ID*  
+ **-U** _login_ID_  
  Spécifie l'ID de connexion à utiliser lors de la connexion au serveur. Si celui-ci n’est pas fourni, **sqlmaint** tente d’utiliser l’authentification [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Si *login_ID* contient des caractères spéciaux, il doit être encadré par des guillemets doubles. Ceux-ci sont facultatifs dans tous les autres cas.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, utilisez l'authentification Windows.  
   
- **-P** *mot de passe*  
+ **-P** _mot de passe_  
  Spécifie le mot de passe de l’ID de connexion. Uniquement valide si le paramètre **-U** est également fourni. Si le *password* contient des caractères spéciaux, il doit être encadré par des guillemets doubles ; ceux-ci sont facultatifs dans tous les autres cas.  
   
 > [!IMPORTANT]  
 >  Le mot de passe n'est pas masqué. Lorsque c'est possible, utilisez l'authentification Windows.  
   
- **-D** *database_name*  
+ **-D** _database_name_  
  Spécifie le nom de la base de données dans laquelle l'opération de maintenance doit être effectuée. Si *database_name* contient des caractères spéciaux, il doit être encadré par des guillemets doubles. Ceux-ci sont facultatifs dans tous les autres cas.  
   
- **-PlanName** *name*  
+ **-PlanName** _name_  
  Spécifie le nom du plan de maintenance de base de données défini par l'Assistant Plan de maintenance de base de données. La seule information du plan utilisée par **sqlmaint** est la liste des bases de données qui y figurent. Toutes les activités de maintenance spécifiées dans les autres paramètres de **sqlmaint** s’appliquent à cette liste de bases de données.  
   
- **-PlanID** *guid*  
+ **-PlanID** _guid_  
  Spécifie l'identificateur global unique (GUID) d'un plan de maintenance de base de données à l'aide de l'Assistant Plan de maintenance de base de données. La seule information du plan utilisée par **sqlmaint** est la liste des bases de données qui y figurent. Toutes les activités de maintenance spécifiées dans les autres paramètres de **sqlmaint** s’appliquent à cette liste de bases de données. Cela doit correspondre à une valeur plan_id dans msdb.dbo.sysdbmaintplans.  
   
- **-Rpt** *text_file*  
+ **-Rpt** _text_file_  
  Spécifie le chemin et le nom complet du fichier dans lequel le rapport doit être créé. Le rapport est aussi créé à l'écran. Le rapport conserve les informations de version en ajoutant une date au nom de fichier. La date est générée comme suit : à la fin du nom de fichier, mais avant le point, sous la forme _*yyyyMMddhhmm*. *yyyy* = année, *MM* = mois, *dd* = jour, *hh* = heure, *mm* = minute.  
   
  Si vous exécutez l'utilitaire à 10h23 le 1er décembre 1996, avec la valeur *text_file* suivante :  
@@ -121,10 +120,10 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  Le nom de fichier complet UNC (Universal Naming Convention) est requis pour *text_file* lorsque **sqlmaint** accède à un serveur distant.  
   
- **-To**  *operator_name*  
+ **-** _Nom_opérateur_  
  Spécifie l'opérateur auquel le rapport créé sera envoyé par l'intermédiaire de SQL Mail.  
   
- **-HtmlRpt** *html_file*  
+ **-HtmlRpt** _html_file_  
  Spécifie le chemin et le nom complets du fichier dans lequel un rapport HTML doit être créé. **sqlmaint** crée le nom de fichier en lui ajoutant une chaîne de type _*yyyyMMddhhmm* de la même manière que pour le paramètre **-Rpt** .  
   
  Le nom de fichier complet UNC est requis pour *html_file* lorsque **sqlmaint** accède à un serveur distant.  
@@ -132,7 +131,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-DelHtmlRpt** \<*time_period*>  
  Spécifie que tous les rapports HTML du répertoire des rapports doivent être supprimés si l’intervalle de temps écoulé depuis la création du fichier de rapport excède la valeur spécifiée par \<*time_period*>. **-DelHtmlRpt** recherche les fichiers dont les noms correspondent au modèle créé à partir du paramètre *html_file*. Si *html_file* est c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, **-DelHtmlRpt** provoque la suppression par **sqlmaint** de tous les fichiers dont le nom correspond au modèle C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm et qui sont antérieurs à la date/heure spécifiée par \<*time_period*>.  
   
- **-RmUnusedSpace** *threshold_percent free_percent*  
+ **-RmUnusedSpace** _threshold_percent free_percent_  
  Spécifie que l’espace inutilisé est retiré de la base de données spécifiée dans **-D**. Cette option est uniquement utile pour les bases de données dont la configuration prévoit une croissance automatique. *Threshold_percent* indique, en Mo, la taille qu’une base de données doit atteindre pour que **sqlmaint** tente d’en supprimer l’espace de données inutilisé. Si la base de données est plus petite que *threshold_percent*, aucune action n’est exécutée. *Free_percent* spécifie l’espace qui doit rester libre dans la base de données, exprimé sous la forme d’un pourcentage de la taille finale de celle-ci. Prenons l’exemple d’une base de données de 200 Mo contenant 100 Mo de données. Si la valeur 10 est affectée à *free_percent* , la base de données a pour taille finale 110 Mo. La base de données n’est pas étendue si elle est inférieure à la valeur de *free_percent* augmentée de la quantité de données contenue dans la base de données. Prenons l’exemple d’une base de données de 108 Mo contenant 100 Mo de données. Si la valeur 10 est affectée à *free_percent* , la base de données ne passera pas à 110 Mo, mais conserve sa taille de 108 Mo.  
   
  **-CkDB** | **-CkDBNoIdx**  
@@ -146,7 +145,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-CkCat**  
  Spécifie qu’une instruction DBCC CHECKCATALOG (Transact-SQL) est exécutée dans la base de données indiquée dans **-D**. Pour plus d’informations, consultez [DBCC CHECKCATALOG &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkcatalog-transact-sql).  
   
- **-UpdOptiStats** *sample_percent*  
+ **-UpdOptiStats** _sample_percent_  
  Spécifie que l'instruction suivante doit être exécutée sur chacune des tables de la base de données :  
   
 ```  
@@ -157,7 +156,7 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
   
  Pour plus d’informations, consultez [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql).  
   
- **-RebldIdx** *free_space*  
+ **-RebldIdx** _free_space_  
  Spécifie que les index sur les tables de la base de données cible doivent être reconstruits sur base d’un pourcentage *free_space* inversement proportionnel au facteur de remplissage. Par exemple, si le pourcentage *free_space* est égal à 30, le facteur de remplissage utilisé est 70. Si le pourcentage indiqué dans *free_space* a comme valeur 100, les index sont reconstruits sur base du facteur de remplissage d’origine.  
   
  Si les index se trouvent sur des colonnes calculées, vous devez également spécifier l’argument **-SupportComputedColumn** lorsque vous utilisez **-RebldIdx**.  
@@ -239,7 +238,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   En cas de panne générale.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’utilitaire **sqlmaint** peut être exécuté par tout utilisateur Windows disposant de l’autorisation **Lecture et exécution** sur `sqlmaint.exe`, qui est stockée par défaut dans le dossier `x:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER1\MSSQL\Binn` . En outre, la connexion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée avec **-login_ID** doit disposer des autorisations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requises pour effectuer l’action spécifiée. Si la connexion à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise l'authentification Windows, le nom d'ouverture de session [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mappé à l'utilisateur Windows authentifié doit disposer des autorisations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requises pour effectuer l'action spécifiée.  
   
  Par exemple, l’utilisation de l’argument **-BkUpDB** nécessite l’autorisation d’exécution de l’instruction BACKUP. L’utilisation de l’argument **-UpdOptiStats** nécessite l’autorisation d’exécution de l’instruction UPDATE STATISTICS. Pour plus d'informations, consultez la section « Autorisations » des rubriques correspondantes de la documentation en ligne.  
@@ -252,7 +251,7 @@ dbname_log_yyyymmddhhmm.BAK
 sqlmaint -S MyServer -D AdventureWorks2012 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  
 ```  
   
-### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>B. Mise à jour des statistiques avec un échantillonnage de 15 % dans toutes les bases de données d'un plan. Compactage des bases de données ayant atteint 110 Mo de sorte qu'elles aient seulement 10 % d'espace libre  
+### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>b. Mise à jour des statistiques avec un échantillonnage de 15 % dans toutes les bases de données d'un plan. Compactage des bases de données ayant atteint 110 Mo de sorte qu'elles aient seulement 10 % d'espace libre  
   
 ```  
 sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 10  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9012e7469fc91c5274f374d0b99e2411dd57af3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69ca337b8b4ed4ab0e801cbb510ad533b4558448
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150349"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800481"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Installer les outils clients sur un cluster de basculement SQL Server
   Les outils clients tels que [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sont des fonctionnalités partagées communes à toutes les instances sur le même ordinateur. Elles sont à compatibilité descendante, et les versions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prises en charge peuvent être installées côte à côte. Seule une version de l'outil client existe sur un nœud à la fois.  
@@ -44,11 +43,11 @@ ms.locfileid: "48150349"
   
 #### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>Installation des outils clients [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'invite de commandes  
   
-1.  Pour installer les outils clients [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , exécutez la commande suivante : Setup.exe/q/Action=Install /Features=Tools  
+1.  Pour installer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] outils clients et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la documentation en ligne, exécutez la commande suivante : Setup.exe/q/Action=Install/Features = Tools  
   
-2.  Pour installer uniquement les outils d'administration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de base, exécutez la commande suivante : Setup.exe/q/Action=Install Features=SSMS. Ceci installe la prise en charge de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] pour le [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], l'utilitaire sqlcmd et le fournisseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Powershell.  
+2.  Pour installer uniquement le basic [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] outils de gestion exécutent la commande suivante : Setup.exe/q/Action=Install Features = SSMS. Ceci installe la prise en charge de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] pour le [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], l'utilitaire sqlcmd et le fournisseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Powershell.  
   
-3.  Pour installer l'ensemble des outils d'administration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , exécutez la commande suivante : Setup.exe/q/Action=Install /Features=ADV_SSMS. Pour plus d’informations sur les valeurs de paramètre pour les fonctionnalités, consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+3.  Pour installer le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] outils d’administration, exécutez la commande suivante : Setup.exe/q/Action=Install/Features = ADV_SSMS. Pour plus d’informations sur les valeurs de paramètre pour les fonctionnalités, consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>Désinstallation des outils clients [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Ils sont répertoriés avec l’intitulé **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** dans le Panneau de configuration, sous Ajout/Suppression de programmes. Vous pouvez les supprimer à partir de cet emplacement. Lorsque vous utilisez la fonctionnalité Supprimer un nœud pour désinstaller une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] du cluster de basculement, les composants clients ne sont pas désinstallés en même temps.  

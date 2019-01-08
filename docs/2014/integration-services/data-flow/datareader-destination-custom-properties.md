@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bdbfcd41afdfe7fd27651efbabf0983a56c786e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7117115e461d0e33a3c62100a3e914128003b96
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187439"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790351"
 ---
 # <a name="datareader-destination-custom-properties"></a>Propriétés personnalisées de la destination DataReader
   La destination DataReader comporte à la fois des propriétés personnalisées et les propriétés communes à l'ensemble des composants de flux de données.  
   
- Le tableau suivant décrit les propriétés personnalisées de la destination DataReader. Toutes les propriétés à l’exception de `DataReader` sont en lecture/écriture.  
+ Le tableau suivant décrit les propriétés personnalisées de la destination DataReader. Toutes les propriétés sont en lecture/écriture, à l'exception de `DataReader`.  
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  

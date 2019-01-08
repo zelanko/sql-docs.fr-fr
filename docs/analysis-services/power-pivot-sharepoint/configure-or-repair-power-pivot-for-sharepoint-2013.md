@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 07a92747b2687acb6556b96eeef0737b236abaf5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c2306f89ba724d6ba799f6bda6ec03f7f6377a97
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980711"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210858"
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>Configurer ou réparer PowerPivot pour SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -76,11 +76,11 @@ ms.locfileid: "38980711"
   
 3.  Affichez la fenêtre en plein écran. Vous devez voir une barre d'icônes en bas de la fenêtre qui comprend les commandes **Valider**, **Exécuter**et **Quitter** .  
   
-4.  **Compte par défaut :** sous l'onglet Paramètres, entrez un compte d'utilisateur de domaine pour **Nom d'utilisateur de compte par défaut**. Ce compte est utilisé pour configurer des services essentiels, notamment le pool d'applications de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Ne spécifiez pas un compte intégré tel que Service réseau ou Système local. L'outil bloque les configurations qui spécifient des comptes intégrés.  
+4.  **Compte par défaut :** Sous l’onglet Paramètres, tapez un compte d’utilisateur de domaine pour le **nom d’utilisateur de compte par défaut**. Ce compte est utilisé pour configurer des services essentiels, notamment le pool d'applications de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Ne spécifiez pas un compte intégré tel que Service réseau ou Système local. L'outil bloque les configurations qui spécifient des comptes intégrés.  
   
      **Phrase secrète :** entrez une phrase secrète. Pour une nouvelle batterie de serveurs SharePoint, la phrase secrète est utilisée chaque fois que vous ajoutez un nouveau serveur ou une nouvelle application à la batterie de serveurs SharePoint. Si la batterie existe, entrez la phrase secrète qui vous permet d'ajouter une application de serveur à la batterie.  
   
-5.  **Port :** si vous le souhaitez, entrez un numéro de port pour vous connecter à l'application Web de l'Administration centrale ou utilisez le nombre généré de manière aléatoire fourni. L'outil de configuration vérifie que le nombre est disponible avant de le proposer comme option.  
+5.  **Port :** si vous le souhaitez, entrez un numéro de port pour vous connecter à l'application Web de l'Administration centrale ou utilisez le nombre généré de manière aléatoire fourni. L'outil de configuration vérifie que le nombre est disponible avant de le proposer comme option.  
   
 6.  Dans la page principale, tapez le nom d'un serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] exécuté en mode SharePoint.  
   
@@ -109,14 +109,14 @@ ms.locfileid: "38980711"
   
 |Radiomessagerie|Valeur d'entrée|Source|Description|  
 |----------|-----------------|------------|-----------------|  
-|**Configurer ou réparer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint**|Compte par défaut|Utilisateur actuel|Le compte par défaut est un compte d'utilisateur de domaine Windows utilisé pour configurer des services partagés dans la batterie. Il est utilisé pour mettre en service les éléments suivants :|  
+|**Configurer ou réparer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint**|Compte par défaut|Utilisateur actuel|Le compte par défaut est un compte d'utilisateur de domaine Windows utilisé pour configurer des services partagés dans la batterie. Il est utilisé pour mettre en service les éléments suivants :|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] par défaut|  
 ||||- Service Banque d’informations sécurisé|  
 ||||- Excel Services|  
 ||||- Identité du pool d’applications Web|  
 ||||- Administrateur de collection de sites|  
 ||||- Compte d’actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sans assistance|  
-||||Le compte de domaine de l’utilisateur actuel est utilisé par défaut.<br /><br /> Remarque : Il est recommandé de remplacer la valeur par défaut sauf si vous configurez un serveur à des fins d’évaluation et expérimentales.<br /><br /> Vous pouvez modifier les identités de service après une configuration ou une réparation, à l’aide de l’Administration centrale.<br /><br /> Éventuellement, dans l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , spécifiez des comptes dédiés pour ce qui suit :|  
+||||Le compte de domaine de l’utilisateur actuel est utilisé par défaut.<br /><br /> Remarque : Il est recommandé de remplacer la valeur par défaut sauf si vous configurez un serveur à des fins d'évaluation et expérimentales.<br /><br /> Vous pouvez modifier les identités de service après une configuration ou une réparation, à l’aide de l’Administration centrale.<br /><br /> Éventuellement, dans l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , spécifiez des comptes dédiés pour ce qui suit :|  
 ||||- Application web, via la page **Créer une application Web par défaut** (en supposant que l’outil crée une application web pour la batterie).|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , à l’aide de la page **Créer un compte sans assistance pour l’actualisation des données** de cet outil.|  
 ||Serveur de base de données|Instance nommée [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locale, le cas échéant|Si une instance du moteur de base de données est installée en tant qu'instance nommée [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , l'outil renseigne le champ du serveur de base de données avec ce nom d'instance. Si vous n'avez pas installé le moteur de base de données, ce champ est vide.<br /><br /> Le**Serveur de base de données**  est un paramètre obligatoire. Il peut s'agir de n'importe quelle version ou édition de SQL Server prise en charge pour les batteries de serveurs SharePoint.|  
@@ -124,9 +124,9 @@ ms.locfileid: "38980711"
 ||Port de l'Administration centrale de SharePoint|Par défaut, si nécessaire|Si la batterie de serveurs n'est pas configurée, l'outil fournit des options pour la création de la batterie de serveurs, notamment pour la création d'un point de terminaison HTTP dans l'Administration centrale. Il choisit un numéro de port généré de manière aléatoire qui n'est pas encore utilisé.|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel Services ([NomServeur]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Entrée utilisateur|Le serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est requis pour qu'Excel Services active les fonctionnalités principales de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le nom du serveur que vous tapez dans cette page est aussi ajouté à la liste figurant dans la page **Configurer les serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.|  
 |**Configurer une nouvelle batterie de serveurs**|Serveur de base de données<br /><br /> Compte de batterie de serveurs<br /><br /> Phrase secrète<br /><br /> Port de l'Administration centrale de SharePoint|Par défaut, si nécessaire|Valeur par défaut de paramètres que vous avez entrés dans dans la page principale.|  
-|**Créer une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nom d'application de service|Valeur par défaut|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Le nom par défaut est **Par défaut [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**. Vous pouvez le remplacer par une valeur différente dans l'outil.|  
-||Serveur de base de données|Valeur par défaut|Serveur de base de données qui héberge la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le nom par défaut du serveur est le même que celui du serveur de base de données utilisé pour la batterie. Vous pouvez utiliser une autre valeur que le nom du serveur par défaut.|  
-||Nom de la base de données|Valeur par défaut|Nom de la base de données à créer pour la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le nom de la base de données par défaut est basé sur le nom de l'application de service, suivi d'un GUID pour garantir un nom unique. Vous pouvez le remplacer par une valeur différente dans l'outil.|  
+|**Créer une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nom d'application de service|Par défaut|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Le nom par défaut est **Par défaut [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**. Vous pouvez le remplacer par une valeur différente dans l'outil.|  
+||Serveur de base de données|Par défaut|Serveur de base de données qui héberge la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le nom par défaut du serveur est le même que celui du serveur de base de données utilisé pour la batterie. Vous pouvez utiliser une autre valeur que le nom du serveur par défaut.|  
+||Nom de la base de données|Par défaut|Nom de la base de données à créer pour la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le nom de la base de données par défaut est basé sur le nom de l'application de service, suivi d'un GUID pour garantir un nom unique. Vous pouvez le remplacer par une valeur différente dans l'outil.|  
 |**Créer une application Web par défaut**|Nom de l'application Web|Par défaut, si nécessaire|S'il n'existe aucune application Web, l'outil en crée une. L'application Web est configurée pour l'authentification en mode classique et écoute le port 80. La taille maximale de téléchargement de fichier a la valeur 2047, qui est la valeur maximale autorisée par SharePoint. La taille maximale de téléchargement de fichier permet de prendre en charge les fichiers [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] volumineux qui seront téléchargés sur le serveur.|  
 ||URL|Par défaut, si nécessaire|L'outil crée une URL basée sur le nom du serveur, en respectant les mêmes conventions d'affectation de noms de fichier que SharePoint.|  
 ||Pool d'applications|Par défaut, si nécessaire|L'outil crée un pool d'applications par défaut dans IIS.|  
@@ -140,7 +140,7 @@ ms.locfileid: "38980711"
 ||URL du site|Par défaut, si nécessaire|L'outil crée l'URL de site, en respectant les mêmes conventions d'affectation de noms d'URL que SharePoint.|  
 ||Titre du site|Par défaut, si nécessaire|L’outil ajoute **Site [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** comme titre par défaut.|  
 |**Activer une fonctionnalité [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans une collection de sites**|URL du site||URL de la collection de sites pour laquelle vous activez les fonctionnalités [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-||Activer la fonctionnalité Premium pour ce site||Activez la fonctionnalité de site SharePoint « PremiumSite ».|  
+||Activer la fonctionnalité Premium pour ce site||Activer la fonctionnalité de site SharePoint « PremiumSite ».|  
 |**Créer une application du service Banque d'informations sécurisé**|Nom d'application de service|Par défaut, si nécessaire|Tapez le nom de l'application du Service Banque d'informations sécurisé.|  
 ||Serveur de base de données|Entrée utilisateur|Tapez le nom du serveur de base de données à utiliser pour l'application du Service Banque d'informations sécurisé.|  
 |**Créer un proxy d'application du service Banque d'informations sécurisé**|Nom d'application de service|Par défaut, si nécessaire|Tapez le nom de l'application du Service Banque d'informations sécurisé entré dans la page précédente.|  
@@ -151,7 +151,7 @@ ms.locfileid: "38980711"
 ||Nom convivial pour l'application cible|Par défaut, si nécessaire||  
 ||Nom d'utilisateur et mot de passe du compte sans assistance|Par défaut, si nécessaire|Tapez les informations d'identification d'un compte d'utilisateur Windows utilisé par l'application cible pour exécuter l'actualisation des données sans assistance. Pour plus d’informations, consultez [d’actualisation des données de configurer Excel Services en utilisant le compte de service sans assistance dans SharePoint Server 2013](http://technet.microsoft.com/library/hh525344\(office.15\).aspx) (http://technet.microsoft.com/library/hh525344(office.15).aspx).|  
 ||URL du site|Par défaut, si nécessaire|Tapez l'URL du site de la collection de sites associée à l'application cible. Pour associer d'autres collections de sites, utilisez l'Administration centrale de SharePoint.|  
-|**Créer une application de service Excel Services**|Nom d'application de service|Par défaut, si nécessaire|Entrez un nom pour l'application de service. Une base de données d'application de service portant le même nom est créée sur le serveur de base de données de la batterie de serveurs SharePoint.|  
+|**Créer une application de service Excel Services**|Nom d'application de service|Par défaut, si nécessaire|Entrez un nom pour l'application de service. Une base de données portant le même nom est créé sur le serveur de base de données de la batterie de serveurs SharePoint.|  
 |**Configurer les serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nom d'application de service|Par défaut, si nécessaire|Nom de l'application de service que vous avez entré dans la page précédente.|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Nom de serveur||Liste des serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] enregistrés.<br /><br /> Le nom du serveur entré dans la page principale est automatiquement ajouté à cette page.|  
 |**Inscrire le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour le suivi de l’utilisation d’Excel Services**|Nom d'application de service||Nom de l'application de service que vous avez entré dans la page précédente.|  
@@ -162,7 +162,7 @@ ms.locfileid: "38980711"
  Si l'outil crée une collection de sites, il crée une base de données de contenu sur le serveur de base de données, en respectant les mêmes conventions d'affectation de noms de fichier que SharePoint. Vous ne pouvez pas modifier le nom de la base de données de contenu.  
   
 ## <a name="verify-the-configuration"></a>Vérifier la configuration  
- Consultez la section « Vérifiez la configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]» de la rubrique [Configurer Power Pivot et déployer des solutions &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
+ Consultez le « Vérifiez [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration « section de [configurer Power Pivot et déployer des Solutions &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
 ##  <a name="bkmk_nextsteps"></a> Étapes suivantes  
  Une fois que vous avez terminé l'installation du serveur, vous devez effectuer plusieurs tâches de post-installation :  
@@ -189,7 +189,7 @@ ms.locfileid: "38980711"
 ### <a name="install-data-providers-used-in-data-refresh-and-check-user-permissions"></a>Installer les fournisseurs de données utilisés dans l'actualisation des données et vérifier les autorisations utilisateur  
  L'actualisation des données côté serveur autorise des utilisateurs à ré-importer des données mises à jour en mode sans assistance. Pour que l'actualisation des données réussisse, le serveur qui exécute Analysis Services en mode SharePoint doit avoir les mêmes fournisseurs de données que ceux utilisés à l'origine pour importer les données. De plus, le compte d'utilisateur sous lequel l'actualisation des données s'exécute requiert souvent des autorisations de lecture sur les sources de données externes. Veillez à vérifier les configurations requises pour l'activation et la configuration de l'actualisation des données afin de garantir le résultat. Pour plus d’informations, consultez [Actualisation des données Power Pivot SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013, les fournisseurs de données sont installés lorsque vous exécutez le programme d'installation **spPowerPivot.msi** et l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013. Pour plus d’informations, consultez [Installer ou désinstaller le complément Power Pivot pour SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 ### <a name="change-application-pool-and-service-identities-in-sharepoint"></a>Modifier les identités de pool d'applications et de service dans SharePoint  
@@ -206,14 +206,14 @@ ms.locfileid: "38980711"
 -   [Démarrer Power Pivot dans le complément Excel 2013](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110) (http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110).  
   
 ### <a name="add-additional-analysis-services-servers-in-sharepoint-mode"></a>Ajouter des serveurs Analysis Services supplémentaires en mode SharePoint  
- Avec le temps, si vous souhaitez élargir les capacités de stockage et de traitement des données, vous pouvez ajouter à la batterie de serveurs des serveurs supplémentaires exécutant Analysis Services en mode SharePoint. Pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013, vous installez de nouveaux serveurs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode SharePoint, puis vous configurez Excel Services. Pour plus d’informations, consultez la section « Au-delà de l’installation de serveur unique » de la rubrique [Installation d’Analysis Services en mode Power Pivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+ Avec le temps, si vous souhaitez élargir les capacités de stockage et de traitement des données, vous pouvez ajouter à la batterie de serveurs des serveurs supplémentaires exécutant Analysis Services en mode SharePoint. Pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013, vous installez de nouveaux serveurs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode SharePoint, puis vous configurez Excel Services. Pour plus d’informations, consultez la section « au-delà de l’installation de serveur unique » de [installer Analysis Services en Mode Power Pivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
 ## <a name="additional-resources"></a>Ressources supplémentaires  
  ![Paramètres SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint") [envoyer des commentaires et des informations via les commentaires relatifs à SQL Server](https://feedback.azure.com/forums/908035-sql-server).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer ou désinstaller le complément Power Pivot pour SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [Outils de Configuration Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
+ [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Administration et configuration d’un serveur Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Mettre à niveau les classeurs et l’actualisation planifiée des données &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   

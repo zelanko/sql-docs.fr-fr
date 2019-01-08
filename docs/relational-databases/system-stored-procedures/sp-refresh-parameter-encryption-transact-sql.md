@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58d2d159d0788d3a32c793899b253b66c62a0dbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9a24c843ed45a42fe4072b47c5642d81520a75e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703301"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214138"
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ Lorsque les propriétés de chiffrement d’une table sont modifiées, `sp_refre
 
 Pour actualiser un déclencheur DDL au niveau du serveur, exécutez cette procédure stockée à partir du contexte de toute base de données.
 
->  [!NOTE]   
+> [!NOTE]
 >  Les signatures qui sont associés à l’objet sont supprimées lorsque vous exécutez `sp_refresh_parameter_encryption`.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Requiert `ALTER` autorisation sur le module et `REFERENCES` autorisation sur les types CLR définis par l’utilisateur et les collections de schémas XML qui sont référencées par l’objet.   
 

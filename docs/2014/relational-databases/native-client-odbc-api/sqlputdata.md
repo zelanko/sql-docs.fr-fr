@@ -14,12 +14,12 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3226e759ab1a92cdfa3a251c1803a54ed9ed010a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140779"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358551"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   Les restrictions suivantes s’appliquent lors de l’utilisation de SQLPutData pour envoyer plus de 65 535 octets de données (pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 4. 21 a) ou 400 Ko de données (pour SQL Server version 6.0 ou ultérieure) pour un SQL_LONGVARCHAR (`text`), SQL_WLONGVARCHAR (`ntext`) ou SQL_LONGVARBINARY (`image`) colonne :  
@@ -51,7 +51,7 @@ ms.locfileid: "48140779"
   
  Le *DataPtr* paramètre est ignoré, mais doit être défini sur une valeur non NULL. Pour plus d’informations, consultez la section sur la liaison de ligne Variable TVP dans [liaison et les valeurs de colonne et les paramètres Data Transfer of Table-Valued](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
- Si *StrLen_Or_Ind* a une valeur autre que SQL_DEFAULT_PARAM ou un nombre compris entre 0 et SQL_PARAMSET_SIZE (autrement dit, le *ColumnSize* paramètre de SQLBindParameter), il s’agit d’une erreur. Cette erreur conduit SQLPutData à retourner SQL_ERROR: SQLSTATE=HY090, « Longueur de chaîne ou de mémoire tampon non valide ».  
+ Si *StrLen_Or_Ind* a une valeur autre que SQL_DEFAULT_PARAM ou un nombre compris entre 0 et SQL_PARAMSET_SIZE (autrement dit, le *ColumnSize* paramètre de SQLBindParameter), il s’agit d’une erreur. Cette erreur conduit SQLPutData à retourner SQL_ERROR : SQLSTATE = HY090, « Longueur de chaîne ou une mémoire tampon non valide ».  
   
  Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48140779"
  `SQLPutData` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLPutData, fonction](http://go.microsoft.com/fwlink/?LinkId=59365)   
+ [SQLPutData, fonction](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

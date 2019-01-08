@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], about administrators
@@ -15,12 +14,12 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 676af20a08829dcc1bd4fda019c4f42b5d51eb51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c47d1905602f5cd96b58265963072cdd2dc01939
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083527"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778241"
 ---
 # <a name="administrators-master-data-services"></a>Administrateurs (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], il existe deux types d'administrateurs : les administrateurs de modèle et l'administrateur système [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "48083527"
   
  Chaque modèle peut avoir plusieurs administrateurs. Chaque utilisateur peut être un administrateur de modèle pour un, plusieurs ou tous les modèles du déploiement [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
- Un utilisateur peut être configuré en tant qu'administrateur de modèle dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou par programme. Pour plus d’informations, consultez [Create a Model Administrator &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md).  
+ Un utilisateur peut être configuré en tant qu'administrateur de modèle dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou par programme. Pour plus d’informations, consultez [Créer un administrateur de modèle &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md).  
   
 ## <a name="master-data-services-system-administrator"></a>Administrateur système Master Data Services  
  Il n'existe qu'un seul administrateur système [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. L’administrateur système est l’utilisateur spécifié pour le **compte d’administrateur** lorsque vous créez le [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données.  
@@ -51,7 +50,7 @@ ms.locfileid: "48083527"
   
 |Type d'administrateur|Description|  
 |------------------------|-----------------|  
-|Administrateur système [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Les autorisations affectées dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] n'ont aucun effet sur l'accès de l'administrateur.<br /><br /> A automatiquement **mise à jour** autorisation à tous les modèles.<br /><br /> Accès automatique à toutes les zones fonctionnelles.<br /><br /> Dans mdm.tblUser, la valeur dans le **ID** colonne est **1**.|  
+|Administrateur système [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Les autorisations affectées dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] n’ont aucun effet sur l’accès de l’administrateur.<br /><br /> A automatiquement **mise à jour** autorisation à tous les modèles.<br /><br /> Accès automatique à toutes les zones fonctionnelles.<br /><br /> Dans mdm.tblUser, la valeur dans le **ID** colonne est **1**.|  
 |Administrateur de modèle|Les autorisations affectées dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] déterminent si l'utilisateur est ou non un administrateur de modèle.<br /><br /> Peut être administrateur de modèle en fonction des autorisations qui lui sont affectées explicitement ou de celles héritées d'un groupe.<br /><br /> Est un administrateur uniquement pour les modèles qui ont **mise à jour** autorisation affectée à l’objet de modèle de niveau supérieur et aucune autre autorisation.<br /><br /> Accès uniquement aux zones fonctionnelles auxquelles l'accès est accordé.<br /><br /> Dans mdm.tblUser, la valeur dans le **ID** colonne n’est pas **1**.|  
   
 ## <a name="see-also"></a>Voir aussi  

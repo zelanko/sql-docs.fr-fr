@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 1 (condition préalable) : Supprimer des données des fournisseurs dans MDS | Microsoft Docs'
+title: 'Tâche 1 (condition préalable) : Supprimer les données des fournisseurs dans MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74862c1db4ad3c34afc759ba94f36ba5fb896e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a922d01d0085830cde30bbc16fcd6f79e106ff03
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227699"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394240"
 ---
-# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tâche 1 (Condition préalable) : Supprimer des données de fournisseur dans MDS
+# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tâche 1 (condition préalable) : Supprimer des données sur les fournisseurs dans MDS
   Dans cette tâche, vous allez supprimer les données des fournisseurs stockées dans MDS. Vous avez téléchargé les données manuellement à l’aide **complément MDS pour Excel** dans la leçon précédente. Le package SSIS que vous créez dans cette leçon téléchargera automatiquement les données dans MDS pour vous. Par conséquent, avant de tester le package SSIS, vous devez supprimer les données des fournisseurs dans MDS, ainsi que la hiérarchie dérivée, les entités Fournisseur et État, et créer l'entité Fournisseur sans données.  
   
 1.  Lancez **Master Data Manager** en accédant à **http://localhost/MDS** ou le site Web et l’application que vous avez spécifié lorsque la configuration de MDS. Si vous avez conservé le **Master Data Manager** ouvrir, cliquez sur **SQL Server 2012 Master Data Services** en haut pour basculer vers le **page d’accueil**.  
@@ -43,7 +43,7 @@ ms.locfileid: "48227699"
   
 10. Basculez vers la fenêtre Excel qui a **Cleansed and Matched Suppliers.xls** le fichier est ouvert. Basculez vers le **Sheet1** onglet en bas.  
   
-11. Sélectionnez uniquement le **première ligne avec les en-têtes**. Ne sélectionnez aucune autre ligne. Vous souhaitez créer les entités en fonction des colonnes Excel mais vous ne souhaitez pas télécharger toutes les données. Par conséquent, sélectionnez uniquement la première ligne avec les en-têtes.  
+11. Sélectionnez uniquement le **première ligne avec les en-têtes**. Ne sélectionnez pas des autres lignes. Vous souhaitez créer les entités en fonction des colonnes Excel mais que vous ne souhaitez pas charger des données. Par conséquent, sélectionnez uniquement la première ligne avec les en-têtes.  
   
 12. Cliquez sur **données maîtres** sur la barre de menus.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48227699"
 22. Cliquez sur **Explorateur**. Notez que le **fournisseur** entité avec tous les attributs est créée avec **aucune valeur**.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 2 &#40;facultatif&#41;: création d’une vue d’abonnement MDS à l’aide de Master Data Manager](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
+ [Tâche 2 &#40;facultatif&#41;: Création d’une vue d’abonnement MDS à l’aide de Master Data Manager](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - selOraTabDia
@@ -13,12 +12,12 @@ ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02807f264d967d59a1fd0f02c5b43bb76df09aa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 148b287bc07aa949bcb918bdfa489be297001bf6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199759"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788171"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>Sélectionner des tables Oracle pour capturer des modifications
   Cette boîte de dialogue permet de sélectionner les tables incluses dans l'instance de capture de données modifiées. Les tables sélectionnées sont ajoutées à la liste dans la page **Sélectionner des tables et des colonnes** de l'Assistant Nouvelle instance. Cette boîte de dialogue permet d'effectuer les opérations suivantes :  
@@ -28,14 +27,14 @@ ms.locfileid: "48199759"
  **Pour rechercher des tables spécifiques**  
  Entrez les critères de recherche comme suit, puis cliquez sur **Rechercher**:  
   
--   **Schéma**: dans la liste, sélectionnez un schéma de base de données. Seules les tables qui ont ce schéma seront incluses dans la liste.  
+-   **Schéma**: Sélectionnez un schéma de base de données dans la liste. Seules les tables qui ont ce schéma seront incluses dans la liste.  
   
--   **Modèle de nom de table**: entrez n'importe quelle chaîne de caractères. Seules les tables qui incluent la chaîne de caractères entrée s'affichent.  
+-   **Modèle de nom de table**: Entrez la chaîne de caractères. Seules les tables qui incluent la chaîne de caractères entrée s'affichent.  
   
 > [!NOTE]  
 >  Vous pouvez entrer des critères dans un des deux champs ou dans les deux.  
   
--   **Afficher les 1 000 premières tables correspondantes**: par défaut cette case à cocher est activée. Elle limite l'affichage aux 1 000 premières tables correspondantes. Si vous désactivez la case à cocher, toutes les tables qui correspondent aux critères s'affichent. S'il existe un grand nombre de tables, l'affichage de la liste peut prendre beaucoup de temps.  
+-   **Afficher les 1 000 premières tables correspondantes**: Par défaut, cette case à cocher est sélectionnée. Elle limite l'affichage aux 1 000 premières tables correspondantes. Si vous désactivez la case à cocher, toutes les tables qui correspondent aux critères s'affichent. S'il existe un grand nombre de tables, l'affichage de la liste peut prendre beaucoup de temps.  
   
  **Pour sélectionner les tables à inclure dans l'instance CDC**  
  Cochez la case en regard d’une table à inclure, puis cliquez sur **Ajouter**. Les tables sont ajoutées à la liste dans la page **Sélectionner des tables et des colonnes** de l'Assistant Nouvelle instance.  
@@ -46,7 +45,7 @@ ms.locfileid: "48199759"
 >  Si vous sélectionnez une table qui inclut un type de données non pris en charge, un message d'erreur s'affiche et la table n'est pas incluse.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment créer l’Instance de base de données de modifications SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
+ [Procédure : créer l'instance SQL Server de base de données de modifications](how-to-create-the-sql-server-change-database-instance.md)   
  [Sélectionner des tables et des colonnes Oracle](select-oracle-tables-and-columns.md)  
   
   

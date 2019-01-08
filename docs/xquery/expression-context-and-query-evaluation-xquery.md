@@ -19,21 +19,21 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ac74fa854d76431fd90232b79abd2dc4e32db3b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 872b14f2b9ced766086d98af74e5ea9d1129d6df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673518"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501935"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contexte des expressions et évaluation des requêtes (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Le contexte d'une expression rassemble les informations utilisées pour l'analyser et l'évaluer. Voici les deux phases au cours desquelles XQuery est évalué :  
   
--   **Contexte statique** – il s’agit la phase de compilation de requête. En fonction des informations disponibles, des erreurs sont quelquefois générées au cours de l'analyse statique de la requête.  
+-   **Contexte statique** -il s’agit la phase de compilation de requête. En fonction des informations disponibles, des erreurs sont quelquefois générées au cours de l'analyse statique de la requête.  
   
--   **Contexte dynamique** – il s’agit la phase d’exécution de requête. Même si elle ne présente pas d'erreurs statiques (erreurs survenues lors de la compilation de la requête), la requête peut renvoyer des erreurs au cours de son exécution.  
+-   **Contexte dynamique** -il s’agit la phase d’exécution de requête. Même si elle ne présente pas d'erreurs statiques (erreurs survenues lors de la compilation de la requête), la requête peut renvoyer des erreurs au cours de son exécution.  
   
 ## <a name="static-context"></a>Contexte statique  
  L'initialisation du contexte statique consiste à rassembler toutes les informations requises par l'analyse statique de l'expression. L'initialisation du contexte statique comprend les étapes suivantes :  

@@ -18,12 +18,12 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e7ddb90a20b8d7d3c5aab323b803ca9fe3fcecf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a4d8a511fe163907de4cec6e12c6f884c7ad983
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605237"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589576"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,18 +41,18 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>Arguments  
  *ProgID*  
- Identificateur de programme (ProgID) de l'objet OLE à créer. Cette chaîne de caractères décrit la classe de l’objet OLE et se présente sous la forme : **'***OLEComponent***. ***Objet***'**  
+ Identificateur de programme (ProgID) de l'objet OLE à créer. Cette chaîne de caractères décrit la classe de l'objet OLE ; elle se présente sous la forme suivante : **«**_OLEComponent_**.** _Objet_**'**  
   
  *OLEComponent* est le nom du composant du serveur OLE Automation, et *objet* est le nom de l’objet OLE. L’objet OLE spécifié doit être valide et doit prendre en charge la **IDispatch** interface.  
   
  Par exemple, SQLDMO. SQL Server est le ProgID de SQL-DMO **SQLServer** objet. SQL-DMO a un nom de composant SQLDMO, le **SQLServer** objet est valid et (telles que SQL-DMO tous les objets) le **SQLServer** prend en charge de l’objet **IDispatch**.  
   
  *clsid*  
- Identificateur de classe (CLSID) de l'objet OLE à créer. Cette chaîne de caractères décrit la classe de l’objet OLE et se présente sous la forme : **' {***nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***}'**. L’objet OLE spécifié doit être valide et doit prendre en charge la **IDispatch** interface.  
+ Identificateur de classe (CLSID) de l'objet OLE à créer. Cette chaîne de caractères décrit la classe de l’objet OLE et se présente sous la forme : **' {**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**}'**. L’objet OLE spécifié doit être valide et doit prendre en charge la **IDispatch** interface.  
   
  Par exemple, {00026BA1-0000-0000-C000-000000000046} est le CLSID de SQL-DMO **SQLServer** objet.  
   
- *objecttoken* **sortie**  
+ _objecttoken_ **sortie**  
  Est le jeton de l’objet retourné, et doit être une variable locale du type de données **int**. Ce jeton d'objet identifie l'objet OLE créé et il est utilisé dans les appels aux autres procédures stockées de OLE Automation.  
   
  *Contexte*  
@@ -83,7 +83,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  L'objet OLE créé est automatiquement détruit à la fin du lot d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
@@ -105,7 +105,7 @@ END;
 GO  
 ```  
   
-### <a name="b-using-clsid"></a>B. Utilisation de CLSID  
+### <a name="b-using-clsid"></a>b. Utilisation de CLSID  
  L’exemple suivant crée une SQL-DMO **SQLServer** objet en utilisant son CLSID.  
   
 ```  

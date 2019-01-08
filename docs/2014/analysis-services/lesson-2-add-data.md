@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Ajouter des données | Microsoft Docs'
+title: 'Leçon 2 : Ajouter des données | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d2ffda70d3af46434886a7f2878ce238d3190905
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049349"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416350"
 ---
-# <a name="lesson-2-add-data"></a>Leçon 2 : Ajouter des données
+# <a name="lesson-2-add-data"></a>Leçon 2 : Ajouter des données
   Dans cette leçon, vous allez utiliser l'Assistant Importation de table dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] pour vous connecter à la base de données SQL AdventureWorksDW, sélectionner des données, afficher un aperçu et filtrer les données, puis les importer dans votre espace de travail de modèle.  
   
- À l'aide de l'Assistant Importation de Table, vous pouvez importer des données provenant de diverses sources relationnelles : Access, SQL, Oracle, Sybase, Informix, DB2, Teradata et bien plus encore. Les étapes d'importation de données à partir des différentes sources relationnelles sont très semblables à celles qui suivent. En outre, les données peuvent être sélectionnées à l'aide d'une procédure stockée.  
+ À l'aide de l'Assistant Importation de Table, vous pouvez importer des données provenant de diverses sources relationnelles : Access, SQL, Oracle, Sybase, Informix, DB2, Teradata et bien plus encore. Les étapes d'importation de données à partir des différentes sources relationnelles sont très semblables à celles qui suivent. En outre, les données peuvent être sélectionnées à l'aide d'une procédure stockée.  
   
  Pour en savoir plus sur l’importation de données et les différents types de sources de données que vous pouvez importer, consultez [Sources de données &#40;SSAS Tabulaire&#41;](data-sources-ssas-tabular.md).  
   
- Durée estimée pour effectuer cette leçon : **20 minutes**  
+ Durée estimée pour effectuer cette leçon : **20 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 1 : Créer un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md).  
+ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 1 : Créez un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Créer une connexion  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48049349"
   
 7.  Dans la page **Choisir comment importer les données** , vérifiez que l'option **Sélectionner les données à importer dans une liste de tables et de vues** est sélectionnée. Vous souhaitez choisir dans une liste de tables et de vues et vous devez donc cliquer sur **Suivant** pour afficher la liste de toutes les tables sources dans la base de données source.  
   
-8.  Dans la page **Sélectionner des Tables et des vues** , activez la case à cocher pour les tables suivantes : **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**et **FactInternetSales**.  
+8.  Dans le **sélectionner des Tables et vues** , sélectionnez la case à cocher pour les tables suivantes : **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, et **FactInternetSales**.  
   
-9. Nous souhaitons donner aux tables du modèle des noms plus facilement compréhensibles. Cliquez sur la cellule dans la colonne **Nom convivial** pour **DimCustomer**. Renommez la table en supprimant « Dim » de DimCustomer.  
+9. Nous souhaitons donner aux tables du modèle des noms plus facilement compréhensibles. Cliquez sur la cellule dans la colonne **Nom convivial** pour **DimCustomer**. Renommer la table en supprimant « Dim » de DimCustomer.  
   
 10. Renommez les autres tables :  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48049349"
     |-----------------|-------------------|  
     |DimDate|Date|  
     |DimGeography|Géographie|  
-    |DimProduct|Product|  
+    |DimProduct|Produit|  
     |DimProductCategory|Catégorie de produit|  
     |DimProductSubcategory|Product Subcategory|  
     |FactInternetSales|Internet Sales|  
@@ -73,7 +73,7 @@ ms.locfileid: "48049349"
  Maintenant que vous êtes connecté à la base de données, que vous avez sélectionné les tables à importer et que vous leur avez attribué un nom convivial, passez directement à la section suivante intitulée [Filtrer les données de table avant l'importation](#FilterData).  
   
 ##  <a name="FilterData"></a> Filtrer les données de Table  
- La table DimCustomer que vous importez de la base de données contient un sous-ensemble des données de la base de données d'origine SQL Server Adventure Works. Vous allez filtrer les colonnes de la table DimCustomer qui ne sont pas nécessaires. Lorsque cela est possible, filtrez les données qui ne seront pas utilisées afin d'économiser l'espace en mémoire utilisé par le modèle.  
+ La table DimCustomer que vous importez de la base de données contient un sous-ensemble des données de la base de données d'origine SQL Server Adventure Works. Vous allez filtrer certaines colonnes de la table DimCustomer qui ne sont pas nécessaires. Lorsque cela est possible, filtrez les données qui ne seront pas utilisées afin d'économiser l'espace en mémoire utilisé par le modèle.  
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>Pour filtrer les données de table avant l'importation  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48049349"
   
 3.  Vérifiez que toutes les autres colonnes sont cochées, puis cliquez sur **OK**.  
   
-     Remarquez que les mots **Filtres appliqués** s'affichent maintenant dans la colonne **Détails du filtre** dans la ligne **Customer** ; si vous cliquez sur ce lien, vous verrez une description textuelle des filtres que vous venez d'appliquer.  
+     Remarquez que les mots **filtres appliqués** s’affichent maintenant dans le **détails du filtre** colonne dans le **client** ligne ; si vous cliquez sur ce lien vous verrez une description textuelle de la vous venez d’appliquer des filtres.  
   
 4.  Filtrez les autres tables en désactivant les cases à cocher des colonnes suivantes dans chaque table :  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48049349"
     |**FrenchCountryRegionName**|  
     |**IpAddressLocator**|  
   
-    |Product|  
+    |Produit|  
     |-------------|  
     |**SpanishProductName**|  
     |**FrenchProductName**|  
@@ -165,6 +165,6 @@ ms.locfileid: "48049349"
 -   Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur le menu **Fichier** , puis cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-step"></a>Étape suivante  
- Pour poursuivre l’étude de ce didacticiel, passez à la [Leçon 3 : Renommer des colonnes](rename-columns.md).  
+ Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 3 : Renommer des colonnes](rename-columns.md).  
   
   

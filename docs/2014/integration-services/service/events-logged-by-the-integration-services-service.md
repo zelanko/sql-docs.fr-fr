@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - service [Integration Services], events
@@ -15,12 +14,12 @@ ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52cb18c5828a2d72ef8a36082554425e7e3afb82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29e121f600d9dc34aac21bb87ce3b77b4f21d3cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187089"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799069"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Événements consignés par le service Integration Services
   Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consigne différents messages dans le journal des événements des applications Windows. Le service enregistre ces messages lorsque le service démarre, lorsqu'il s'arrête et lorsque certains problèmes se produisent.  
@@ -41,7 +40,7 @@ ms.locfileid: "48187089"
 |259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Service arrêté.%nVersion du serveur %1|Le service s'est arrêté.|  
   
 ## <a name="messages-about-the-configuration-file"></a>Messages relatifs au fichier de configuration  
- Les paramètres pour le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont stockés dans un fichier XML que vous pouvez modifier. Pour plus d’informations, consultez [Configuring the Integration Services Service &#40;SSIS Service&#41;](../configuring-the-integration-services-service-ssis-service.md).  
+ Les paramètres pour le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont stockés dans un fichier XML que vous pouvez modifier. Pour plus d’informations, consultez [Configuration du service Integration Services &#40;Service SSIS&#41;](../configuring-the-integration-services-service-ssis-service.md).  
   
 |ID d'événement|Nom symbolique|Texte|Remarques|  
 |--------------|-------------------|----------|-----------|  

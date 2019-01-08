@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - createSrv
@@ -13,12 +12,12 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2de12fd6ada3fc70511ebc49f85da30306e7cac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e362438b12c103dd6210766da888086da79df126
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150399"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785461"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Créer et modifier un service de capture de données modifiées Oracle
   Vous créez et modifiez un service Windows de capture de données modifiées Oracle dans la console de configuration du service de capture de données modifiées.  
@@ -57,14 +56,14 @@ ms.locfileid: "48150399"
   
      Vous pouvez utiliser un compte Windows local ou de domaine pour le compte de service. Dans ce cas, vous devez entrer le **Mot de passe** pour ce compte. Ce compte peut correspondre à l'hôte local ou à un compte de domaine. Veillez à mettre à jour le mot de passe lorsqu'il est modifié à l'aide du composant Services locaux dans le Panneau de configuration Windows.  
   
- **Nom du serveur** : sélectionnez l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible à laquelle vous connecter (par exemple, **\\\\<nom_ordinateur>\\<nom_instance>**). La dernière instance de serveur à laquelle une connexion a été établie est affichée par défaut.  
+ **Nom du serveur**: Sélectionnez la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance vous connecter (par exemple,  **\\ \\< nom_ordinateur >\\< nom_instance >**). La dernière instance de serveur à laquelle une connexion a été établie est affichée par défaut.  
   
  **Authentification**  
  Sélectionnez l'une des options suivantes :  
   
--   **Authentification Windows**: si vous sélectionnez cette option, le service de capture de données modifiées Oracle se connecte à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible à l'aide de l'identité du compte de service. Si l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur un autre ordinateur, l'authentification Windows doit être utilisée avec les comptes de domaine.  
+-   **L’authentification Windows**: Si vous sélectionnez cette option, le service de capture de données modifiées Oracle se connecte à la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance à l’aide de l’identité de compte de service. Si l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur un autre ordinateur, l'authentification Windows doit être utilisée avec les comptes de domaine.  
   
--   **Authentification SQL Server**: si vous sélectionnez cette option, vous devez taper le **Nom d'utilisateur** et le **Mot de passe** pour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous souhaitez utiliser. Le service de capture de données modifiées Oracle utilise ces informations d'identification lors de la connexion à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible.  
+-   **L’authentification SQL Server**: Si vous sélectionnez cette option, vous devez taper le **nom d’utilisateur** et **mot de passe** pour la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion que vous souhaitez utiliser. Le service de capture de données modifiées Oracle utilise ces informations d'identification lors de la connexion à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible.  
   
  La connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée par le service de capture de données modifiées Oracle doit être membre du rôle serveur fixe public ; aucun autre privilège n'est nécessaire. Une fois que de nouvelles instances Oracle CDC sont ajoutées, cette connexion a un accès **db_owner** aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associées.  
   
@@ -75,13 +74,13 @@ ms.locfileid: "48150399"
  **Options**  
  Cliquez sur la flèche pour afficher les options disponibles à configurer. Vous pouvez choisir de conserver ces options avec leur valeur par défaut. Options disponibles :  
   
--   **Délai de connexion**: tapez le délai (en secondes) pendant lequel le service de capture de données modifiées pour Oracle attend une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avant expiration. La valeur par défaut est **15**.  
+-   **Délai de connexion**: Tapez le délai (en secondes) pendant lequel le service de capture de données modifiées pour Oracle attend une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avant expiration. La valeur par défaut est **15**.  
   
--   **Délai d’exécution**: tapez le délai (en secondes) pendant lequel le service Windows de capture de données modifiées Oracle attend l’exécution d’une commande avant expiration. La valeur par défaut est **30**.  
+-   **Délai d’exécution**: Tapez le délai (en secondes) pendant lequel le service Windows de capture de données modifiées Oracle attend l'exécution d'une commande avant expiration. La valeur par défaut est **30**.  
   
--   **Chiffrer la connexion**: sélectionnez **Chiffrer la connexion** pour la communication entre le service de capture de données modifiées Oracle et l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible à l'aide d'une connexion chiffrée.  
+-   **Chiffrer la connexion**: Sélectionnez **chiffrer la connexion** pour la communication entre le Service de capture de données modifiées Oracle et la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance à l’aide d’une connexion chiffrée.  
   
--   **Avancé**: tapez des propriétés de connexion supplémentaires, si nécessaire.  
+-   **Avancé** : Tapez des propriétés de connexion supplémentaires, si nécessaire.  
   
  **Mot de passe principal**  
  Entrez un mot de passe qui sera utilisé par le service Windows de capture de données modifiées Oracle pour protéger les informations d'identification de l'exploration de données de journaux Oracle.  
@@ -89,6 +88,6 @@ ms.locfileid: "48150399"
  Le même mot de passe principal doit également être utilisé lorsque d'autres instances du même service sont configurées sur d'autres nœuds sur un cluster dans une configuration haute disponibilité. Si vous perdez ou modifiez le mot de passe principal, tous les mots de passe d'exploration de données de journaux stockés dans des bases de données d'instance Oracle CDC doivent être entrés de nouveau via la console du concepteur CDC.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour créer et modifier un service CDC](how-to-create-and-edit-a-cdc-service.md)  
+ [Procédure : créer et modifier un service de capture de données modifiées](how-to-create-and-edit-a-cdc-service.md)  
   
   

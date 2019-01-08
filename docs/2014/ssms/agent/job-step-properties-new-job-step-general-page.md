@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.stepgeneral.f1
@@ -12,14 +12,14 @@ ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d20df5bbaaa7c9ba273b5796dc6a6b9e32bc287f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196071"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807122"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>Propriétés de l’étape du travail : Nouvelle étape du travail (page Général)
+# <a name="job-step-properties-new-job-step-general-page"></a>Propriétés d’étape de travail : Nouvelle étape du travail (Page Général)
   Utilisez cette page pour afficher et modifier les propriétés d’une étape d’un travail de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou pour définir une nouvelle étape de travail.  
   
  Pour naviguer vers cette page, dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , développez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, cliquez avec le bouton droit sur **Travaux**, cliquez sur **Nouvelles tâches**, sélectionnez la page **Étapes** et cliquez sur **Nouveau**. Vous pouvez également accéder à cette page en cliquant avec le bouton droit sur un travail dans l’Explorateur d’objets, en cliquant sur **Propriétés**, en sélectionnant la page **Étapes** et en cliquant sur **Nouveau**, **Insérer**ou **Modifier**.  

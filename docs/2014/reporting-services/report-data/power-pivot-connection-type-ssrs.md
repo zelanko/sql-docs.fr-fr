@@ -11,12 +11,12 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1938012555328b389c2b1b3e6c10fc20514496db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bce7d17a2edb004f662d5229ea929d89c6d66d4f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166099"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350481"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Type de connexion PowerPivot (SSRS)
   Vous pouvez utiliser l'extension pour le traitement des données SQL Server Analysis Services pour récupérer des données d'un classeur PowerPivot qui est publié dans une Galerie SharePoint PowerPivot.  
@@ -26,7 +26,7 @@ ms.locfileid: "48166099"
 ## <a name="prerequisites"></a>Prérequis  
  La source de données PowerPivot doit être publiée dans une Galerie PowerPivot sur un site SharePoint.  
   
- Pour prendre en charge les connexions du Générateur de rapports à un classeur PowerPivot, vous devez disposer de SQL Server 2008 R2 ADOMD.NET sur votre station de travail. Cette bibliothèque cliente est installée avec PowerPivot pour Excel, mais si vous utilisez un ordinateur qui n'a pas cette application, vous devez télécharger et installer ADOMD.NET à partir de la page [SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=192565).  
+ Pour prendre en charge les connexions du Générateur de rapports à un classeur PowerPivot, vous devez disposer de SQL Server 2008 R2 ADOMD.NET sur votre station de travail. Cette bibliothèque cliente est installée avec PowerPivot pour Excel, mais si vous utilisez un ordinateur qui n'a pas cette application, vous devez télécharger et installer ADOMD.NET à partir de la page [SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=192565).  
   
 ## <a name="data-source-type"></a>Type de source de données  
  Utilisez le type de source de données de rapport **Microsoft SQL Server Analysis Services**.  
@@ -53,7 +53,7 @@ ms.locfileid: "48166099"
   
  Les données contenues dans un classeur PowerPivot sont fortement compressées ; les données récupérées à partir du classeur PowerPivot pour un rapport ne sont pas compressées. Utilisez le concepteur de requêtes pour spécifier des filtres et des paramètres afin de limiter les données à ce qui est absolument nécessaire dans le rapport.  
   
- Contrairement à la connexion à un cube Analysis Services, un modèle PowerPivot n'a pas de hiérarchies. Pour fournir des fonctionnalités semblables aux segments associés dans le classeur, vous devez créer des paramètres en cascade dans le rapport. Pour plus d’informations, consultez [ajouter des paramètres en cascade à un rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
+ Contrairement à la connexion à un cube Analysis Services, un modèle PowerPivot n'a pas de hiérarchies. Pour fournir des fonctionnalités semblables aux segments associés dans le classeur, vous devez créer des paramètres en cascade dans le rapport. Pour plus d’informations, consultez [Ajouter des paramètres en cascade à un rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
   
  Dans certains cas, vous devrez peut-être ajuster les expressions pour adapter les valeurs de données sous-jacentes du modèle PowerPivot. Vous devrez peut-être modifier des expressions pour convertir les données dans le type de données approprié, ou ajouter ou supprimer une fonction d'agrégation. Par exemple, pour convertir le type de données de Chaîne en Entier, utilisez `=CInt`. Vérifiez toujours que le rapport affiche les valeurs attendues des données dans le modèle PowerPivot avant de publier le rapport.  
   

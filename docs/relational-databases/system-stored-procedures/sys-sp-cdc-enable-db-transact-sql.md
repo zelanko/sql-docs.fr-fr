@@ -22,19 +22,19 @@ ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 26fdd13e19e2542f5020467323d9e640a4b563b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9778d44f3a11bcea066aea3ef43d36489b5daded
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827517"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211508"
 ---
 # <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Active la capture de données modifiées pour la base de données actuelle. Cette procédure doit être exécutée pour une base de données afin que des tables puissent être activées pour la capture de données modifiées dans cette base de données. Les enregistrements de capture de données modifiées insèrent, mettent à jour et suppriment l'activité appliquée aux tables activées, en rendant les détails des modifications disponibles dans un format relationnel simple à utiliser. Les informations sur la colonne qui reflètent la structure de colonne d'une table source suivie sont capturées pour les lignes modifiées, avec les métadonnées nécessaires à l'application des modifications à un environnement cible.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  La capture des modifications de données n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -57,7 +57,7 @@ sys.sp_cdc_enable_db
   
  sys.sp_cdc_enable_db crée les objets de capture de données modifiées qui ont une portée à l'échelle de la base de données, y compris les tables de métadonnées et les déclencheurs DDL. Il crée le schéma cdc et l’utilisateur de base de données cdc et définit la colonne is_cdc_enabled pour l’entrée de la base de données dans les également le [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) affichage 1 catalogue.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe sysadmin.  
   
 ## <a name="examples"></a>Exemples  

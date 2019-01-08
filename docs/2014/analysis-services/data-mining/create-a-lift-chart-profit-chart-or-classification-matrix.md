@@ -13,12 +13,12 @@ ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67399a724001cbd1f04a24f0558f2618aafd155a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e183c1e25aa81b05c897674fc5c9f4a2dd8d0c5b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069429"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529363"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Créer un graphique de courbes d'élévation, un graphique des bénéfices ou une matrice de classification
   Vous pouvez créer un graphique d'analyse de précision pour un modèle d'exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en cinq étapes de base :  
@@ -70,7 +70,7 @@ ms.locfileid: "48069429"
   
     -   Sélectionnez l'option **Utiliser des scénarios de test de structure d'exploration de données**, pour utiliser le jeu complet de scénarios de test définis dans le jeu de données d'exclusion des structures d'exploration de données.  
   
-    -   Sélectionnez l’option **Spécifier un autre jeu de données**si vous souhaitez utiliser des données externes.  Le jeu de données doit être disponible comme vue de source de données.   Cliquez sur le bouton Parcourir (**…**) pour choisir les tables de données à utiliser pour le graphique d’analyse de précision. Pour plus d’informations, consultez [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
+    -   Sélectionnez l’option **Spécifier un autre jeu de données**si vous souhaitez utiliser des données externes.  Le jeu de données doit être disponible comme vue de source de données.   Cliquez sur le bouton de navigation (**...** ) pour choisir les tables de données à utiliser pour le graphique de précision. Pour plus d’informations, consultez [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
   
          Si vous utilisez un jeu de données externes, vous pouvez éventuellement filtrer le jeu de données d'entrée. Pour plus d’informations, consultez [Appliquer des filtres aux données de test du modèle](apply-filters-to-model-testing-data.md).  
   

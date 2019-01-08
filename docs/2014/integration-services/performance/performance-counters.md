@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], performance counters
@@ -17,12 +16,12 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8edbd94ef143eeb4f8b029f8f8d567cc3c571a19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70694b2814ab23ad13e29a1348e7bfb73d884fbc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140739"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367671"
 ---
 # <a name="performance-counters"></a>Compteurs de performances
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe un ensemble de compteurs de performances qui vous permettent d’analyser les performances du moteur de flux de données. Par exemple, le compteur Mémoires tampon spoulées permet de déterminer si des tampons de données sont écrits temporairement sur le disque lors de l'exécution d'un package. Cette permutation diminue les performances et indique que la mémoire de l'ordinateur est insuffisante.  
@@ -72,11 +71,11 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Outil : [SSIS Performance Visualization for Business Intelligence Development Studio (projet CodePlex)](http://go.microsoft.com/fwlink/?LinkId=146626), sur le site codeplex.com.  
+-   Outil : [SSIS Performance Visualization for Business Intelligence Development Studio (projet CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146626), sur le site codeplex.com.  
   
--   Vidéo : [Mesure et présentation des performances de vos packages SSIS dans l’entreprise (Vidéo liée à SQL Server)](http://go.microsoft.com/fwlink/?LinkId=150497), sur le site msdn.microsoft.com.  
+-   Vidéo : [Mesure et présentation des performances de vos packages SSIS dans l’entreprise (Vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=150497), sur le site msdn.microsoft.com.  
   
--   Article du Support technique : [Le compteur de performance SSIS n’est plus disponible dans l’Analyseur de performances après la mise à niveau vers Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=235319), sur le site support.microsoft.com.  
+-   Article du Support technique : [Le compteur de performance SSIS n’est plus disponible dans l’Analyseur de performances après la mise à niveau vers Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319), sur le site support.microsoft.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécution de projets et de packages](../packages/run-integration-services-ssis-packages.md)  

@@ -1,5 +1,5 @@
 ---
-title: Configurer la collecte de données d’utilisation pour (Power Pivot pour SharePoint | Documents Microsoft
+title: Configurer la collecte de données d’utilisation pour (Power Pivot pour SharePoint | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bafa3d8b45dc2ad59314218f34959120b50e6bfe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026876"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420280"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurer la collecte des données d’utilisation (PowerPivot pour SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "34026876"
   
 4.  Dans la section **Événements à enregistrer** , activez ou désactivez les cases à cocher afin d'activer ou de désactiver les événements Analysis Services suivants :  
   
-    |Événement| Description|  
+    |Événement|Description|  
     |-----------|-----------------|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Connexions**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] permet de superviser les connexions au serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] établies pour le compte d’un utilisateur.|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Utilisation des données de chargement**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] permet de surveiller les demandes qui chargent des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la mémoire du serveur. Un événement de chargement est généré pour les fichiers de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] chargés à partir d’une base de données ou du cache.|  
@@ -86,9 +86,9 @@ ms.locfileid: "34026876"
 ##  <a name="jobs"></a> Configurer les travaux du minuteur utilisés dans la collecte des données d'utilisation  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont déplacées vers divers emplacements du système de collecte des données d’utilisation, par deux travaux du minuteur :  
   
--   Le travail du minuteur « Importation des données d’utilisation de Microsoft SharePoint Foundation » déplace les données d’utilisation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vers la base de données d’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+-   Déplace le travail du minuteur « Importation Microsoft SharePoint Foundation l’utilisation des données » [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] l’utilisation pour la [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] base de données.  
   
--   Le travail du minuteur chargé de traiter le tableau de bord de gestion des données[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] déplace les données vers un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui est la source des données des rapports d’administration intégrés.  
+-   Le «[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] travail du minuteur traitement de tableau de bord de gestion » les données à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeur qui est la source de données pour les rapports d’administration intégrés.  
   
  Si vous devez actualiser plus fréquemment les rapports d’administration affichés dans le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , procédez comme suit.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "34026876"
  Pour plus d’informations sur la collecte et le stockage des données d’utilisation, consultez [Collecte des données d’utilisation Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Définir des catégories de temps de réponse aux requêtes lents, moyens et rapides à des fins de création de rapports  
- Les performances de traitement des requêtes sont mesurées par rapport à des catégories prédéfinies qui définissent un cycle de requête-réponse en fonction de sa durée d'exécution. Les catégories prédéfinies sont les suivantes : Triviale, Rapide, Attendue, Longue et Hors limite. Chaque demande envoyée à un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] relève de l’une des catégories en fonction de sa durée d’exécution.  
+ Les performances de traitement des requêtes sont mesurées par rapport à des catégories prédéfinies qui définissent un cycle de requête-réponse en fonction de sa durée d'exécution. Les catégories prédéfinies sont notamment les suivantes : Triviale, Rapide, Attendue, Longue et Hors limite. Chaque demande envoyée à un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] relève de l’une des catégories en fonction de sa durée d’exécution.  
   
  Les informations de réponse à une requête sont utilisées dans les rapports d'activité. Dans les rapports, chaque catégorie est utilisée différemment pour déterminer plus efficacement l’évolution des performances du système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Par exemple, les demandes triviales sont totalement exclues, car leur exclusion supprime le bruit dans les données et affiche des tendances plus significatives avec les catégories restantes. Par opposition, les statistiques sur les demandes longues ou hors limite sont les plus importantes dans le rapport afin que les administrateurs ou les propriétaires de classeurs puissent entreprendre l'action corrective sur le champ.  
   

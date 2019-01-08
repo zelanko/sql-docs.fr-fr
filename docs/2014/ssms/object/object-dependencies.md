@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.objectdependencies.f1
@@ -12,12 +12,12 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 188b3400308c540050793787ced03d69e79ca50c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7f0cf758123331dae9f3a3132bdc81880b7ce6a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090189"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823263"
 ---
 # <a name="object-dependencies"></a>Dépendances d'objet
   Certains objets de base de données possèdent des dépendances sur d'autres objets de base de données. Par exemple, les vues et les procédures stockées dépendent de l'existence de tables qui contiennent les données retournées par la vue ou la procédure. Les **Dépendances d'objets (page Général)** de l'objet actuel répertorient à la fois les objets de base de données indispensables au bon fonctionnement de l'objet et les objets qui dépendent de l'objet sélectionné. Un objet qui référence un autre objet dans sa définition et dont la définition est stockée dans le catalogue système est appelé une *entité de référence*. Un objet référencé par un autre objet est appelé *entité référencée*.  
@@ -27,10 +27,10 @@ ms.locfileid: "48090189"
  Utilisez cette boîte de dialogue pour comprendre les dépendances avant de modifier ou de supprimer l'objet sélectionné.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Les objets qui dépendent de***\<objet sélectionné >*   
+ **Les objets qui dépendent de***\<objet sélectionné >*  
  Cliquez sur ce bouton pour afficher la liste des objets dont les dépendances sont suivies et qui dépendent de l'objet sélectionné.  
   
- **Objets dont dépend***\<objet sélectionné >***dépend**   
+ **Objets dont dépend***\<objet sélectionné >***dépend**  
  Cliquez sur ce bouton pour afficher la liste des objets dont les dépendances sont suivies et dont dépend l'objet sélectionné.  
   
  **Dépendances**  

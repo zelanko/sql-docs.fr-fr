@@ -1,5 +1,5 @@
 ---
-title: Notation native dans l’apprentissage de SQL Server | Microsoft Docs
+title: Notation native à l’aide de la déclaration de prédire le T-SQL - SQL Server Machine Learning Services
 description: Générer des prédictions à l’aide de la fonction de prédire le T-SQL, notation entrées dta par rapport à un modèle préentraîné écrites en R ou Python sur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: a14a4b188aa27acdef0bc836e939a7df0021e522
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713151"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645128"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Notation native à l’aide de la fonction de prédire le T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Types de modèles non pris en charge sont les suivants :
 + Modèles PMML
 + Modèles créés à l’aide d’autres bibliothèques open source ou tierces
 
-## <a name="example-predict-t-sql"></a>Exemple : Prédire (T-SQL)
+## <a name="example-predict-t-sql"></a>Exemple : PRÉDIRE (T-SQL)
 
 Dans cet exemple, vous créez un modèle et puis appelez la fonction de prédiction en temps réel à partir de T-SQL.
 
@@ -78,7 +78,7 @@ Dans cet exemple, vous créez un modèle et puis appelez la fonction de prédict
 
 Exécutez le code suivant pour créer la base de données exemple et les tables requises.
 
-```SQL
+```sql
 CREATE DATABASE NativeScoringTest;
 GO
 USE NativeScoringTest;
@@ -95,7 +95,7 @@ GO
 
 Utilisez l’instruction suivante pour remplir la table de données avec des données à partir de la **iris** jeu de données.
 
-```SQL
+```sql
 INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -107,7 +107,7 @@ GO
 
 Maintenant, créez une table pour stocker les modèles.
 
-```SQL
+```sql
 DROP TABLE IF EXISTS ml_models;
 GO
 CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
@@ -118,7 +118,7 @@ GO
 
 Le code suivant crée un modèle basé sur le **iris** jeu de données et l’enregistre dans la table nommée **modèles**.
 
-```SQL
+```sql
 DECLARE @model varbinary(max);
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -138,7 +138,7 @@ EXECUTE sp_execute_external_script
 
 Vous pouvez exécuter une instruction telle que la suivante pour afficher le modèle stocké au format binaire :
 
-```SQL
+```sql
 SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
@@ -147,7 +147,7 @@ FROM ml_models;
 
 L’instruction PREDICT simple suivante obtient une classification du modèle d’arborescence de décision à l’aide du **notation native** (fonction). Il prévoit l’espèce iris en fonction des attributs fournis, la longueur des pétales et la largeur.
 
-```SQL
+```sql
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models
@@ -168,5 +168,5 @@ Si vous obtenez l’erreur, « erreur s’est produite pendant l’exécution d
 
 Pour une solution complète qui inclut la notation native, consultez ces exemples à partir de l’équipe de développement SQL Server :
 
-+ Déployer votre script ML : [à l’aide d’un modèle Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
-+ Déployer votre script ML : [à l’aide d’un modèle R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
++ Déployer votre script ML : [À l’aide d’un modèle Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ Déployer votre script ML : [À l’aide d’un modèle R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)

@@ -23,12 +23,12 @@ ms.assetid: e9b9ca57-a5cc-4fc0-87b5-305257038d56
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14a547098cf72ac4b4f1c49044aba1bb2f024adc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66c2683bd383ebd3d0a9278cb008b6909dc80007
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055529"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527117"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>Spécification des options de déploiement de partitions et de rôles
   Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit les options de déploiement de rôles et de partitions à partir de la \< *nom_projet*> .deploymentoptions fichier. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crée ce fichier lorsque vous générez le projet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise les options de déploiement de partitions et de rôles du courant de projet lorsque le \< *nom_projet*> .deploymentoptions fichier est créé. Pour plus d'informations sur les paramètres de configuration, consultez [Précisions sur les fichiers d'entrée utilisés pour créer le script de déploiement](deployment-script-files-input-used-to-create-deployment-script.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "48055529"
   
 -   Les rôles et les membres de rôle existant dans la base de données de destination sont conservés, et aucun nouveau rôle n'est déployé.  
   
--   **Remarque** Lorsque des membres et des rôles existants sont conservés, les autorisations associées à ces rôles sont réinitialisées à Aucune autorisation. Les autorisations de sécurité sont contenues dans les objets qu'elles sécurisent, et non dans les rôles de sécurité auxquels elles sont associées. Pour plus d'informations sur la manière de gérer ce comportement à l'aide de l'Assistant Déploiement de Analysis Services, consultez l'article relatif à la conservation de rôles et de membres dans la Base de connaissances Microsoft.  
+-   **Remarque** Lorsque des membres et des rôles existants sont conservés, les autorisations associées à ces rôles sont réinitialisées à Aucune autorisation. Les autorisations de sécurité sont contenues dans les objets qu'elles sécurisent, et non dans les rôles de sécurité auxquels elles sont associées. Pour plus d’informations sur la façon de travailler avec ce comportement à l’aide de l’Assistant Déploiement d’Analysis Service, consultez « Conservation de rôles et membres » dans la Base de connaissances Microsoft.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>Modification des options de déploiement de partitions et de rôles  
  Vous devrez peut-être déployer la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet à l’aide des options de partitions et de rôles différentes de celles stockées dans le \< *nom_projet*> .deploymentoptions fichier. Par exemple, vous pouvez choisir de conserver des partitions existantes, les rôles et les membres du rôle, au lieu de remplacer toutes les partitions existantes, les rôles et les membres comme indiqué dans le \< *nom_projet*> .deploymentoptions fichier.  
@@ -62,17 +62,17 @@ ms.locfileid: "48055529"
   
 -   Exécutez l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode interactif et, sur la page **Spécifiez des options pour les partitions et les rôles** , spécifiez de nouvelles options de déploiement pour les partitions et les rôles.  
   
-     —ou—  
+     -ou-  
   
 -   Exécutez l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'invite de commandes en mode fichier de réponses. (Pour plus d’informations sur le mode fichier de réponses, consultez [Exécution de l’Assistant Déploiement d’Analysis Services](running-the-analysis-services-deployment-wizard.md).)  
   
-     —ou—  
+     -ou-  
   
 -   Ouvrez le \< *nom_projet*> .deploymentoptions dans un éditeur de texte et manuellement modifier les options.  
   
 ## <a name="see-also"></a>Voir aussi  
- [En spécifiant la cible d’Installation](deployment-script-files-specifying-the-installation-target.md)   
- [Spécification des paramètres de Configuration pour le déploiement de la Solution](deployment-script-files-solution-deployment-config-settings.md)   
- [Spécification d’options de traitement](deployment-script-files-specifying-processing-options.md)  
+ [Spécification de la cible d'installation](deployment-script-files-specifying-the-installation-target.md)   
+ [Spécification de paramètres de configuration pour le déploiement de solutions](deployment-script-files-solution-deployment-config-settings.md)   
+ [Spécification d'options de traitement](deployment-script-files-specifying-processing-options.md)  
   
   

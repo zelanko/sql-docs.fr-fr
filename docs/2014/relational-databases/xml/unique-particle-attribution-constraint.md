@@ -17,12 +17,12 @@ ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbcbf7f2e0a6423e9e2ea918d5bb561a9ec1c97c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e38ceb561c2b0d66cbf274e09d61fc327d8543f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076792"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372601"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Contrainte d'attribution de particule unique
   Dans XSD, les modèles de contenu complexe sont soumis à la règle de la contrainte d'attribution de particule unique. Cette règle requiert que chaque élément d'un document d'instance corresponde sans ambiguïté à exactement une particule `<xsd:element>` ou `<xsd:any>` dans le modèle de contenu de son parent. Tout schéma qui contient un type avec un modèle de contenu potentiellement ambigu est rejeté.  
@@ -80,13 +80,13 @@ ms.locfileid: "48076792"
 ## <a name="finding-more-information"></a>Sources d'informations complémentaires  
  Le document suivant est publié par le World Wide Web Consortium (W3C) et contient la description technique de la contrainte d'attribution de particule unique :  
   
- « XML Schema Part 1 : Structures Second Edition, W3C Proposed Edited Recommendation » :  
+ « XML Schema Part 1: Structures Deuxième Édition, recommandation proposée par le W3C :  
   
--   Section 3.8.6 : Constraints on Model Group Schema Components  
+-   Section 3.8.6 : Contraintes sur des composants de schéma de groupes modèles  
   
--   Appendix H : Analysis of the Unique Particle Attribution Constraint (non-normative)  
+-   Appendix H : Analyse de la contrainte d'attribution de particule unique (partie non normative)  
   
- Pour lire le document, consultez [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?linkid=48881).  
+ Pour lire le document, consultez [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Collections de schémas XML &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  

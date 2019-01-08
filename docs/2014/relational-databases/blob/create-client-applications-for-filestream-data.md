@@ -12,12 +12,12 @@ ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a9b4b5b41908c726f8baca6acb38a8bcacdf93a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 017762b9897af951020793fdd02fc34d3209da2d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151043"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363651"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Créer des applications clientes pour les données FILESTREAM
   Vous pouvez utiliser Win32 pour lire et écrire des données dans un objet BLOB FILESTREAM. Les étapes suivantes sont nécessaires :  
@@ -40,14 +40,14 @@ ms.locfileid: "48151043"
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT ()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) retourne un jeton qui représente la transaction actuelle d’une session. Une application utilise ce jeton pour lier des opérations de diffusion en continu de système de fichiers FILESTREAM à la transaction.  
   
--   L' [API OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md) obtient un descripteur de fichier Win32. L'application utilise le descripteur pour transmettre en continu les données FILESTREAM et peut ensuite passer le descripteur aux API Win32 suivantes : [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)ou [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Si l'application appelle toute autre API en utilisant le descripteur, une erreur ERROR_ACCESS_DENIED est retournée. L'application doit fermer le descripteur à l'aide de [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428).  
+-   L' [API OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md) obtient un descripteur de fichier Win32. L’application utilise le handle pour diffuser les données FILESTREAM et peut ensuite passer le descripteur aux API Win32 suivantes : [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), ou [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Si l'application appelle toute autre API en utilisant le descripteur, une erreur ERROR_ACCESS_DENIED est retournée. L'application doit fermer le descripteur à l'aide de [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428).  
   
  Tout accès au conteneur de données FILESTREAM est exécuté dans une transaction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent être exécutées dans la même transaction afin de maintenir la cohérence entre les données SQL et les données FILESTREAM.  
   
 ##  <a name="steps"></a> Étapes à suivre pour accéder aux données FILESTREAM  
   
 ###  <a name="path"></a> Lecture du chemin d'accès au fichier FILESTREAM  
- Chaque cellule d'une table FILESTREAM est associée à un chemin d'accès au fichier. Pour lire le chemin d’accès, utilisez le `PathName` propriété d’un `varbinary(max)` colonne dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction. L’exemple suivant montre comment lire le chemin d’accès au fichier un `varbinary(max)` colonne.  
+ Chaque cellule d'une table FILESTREAM est associée à un chemin d'accès au fichier. Pour lire le chemin d'accès, utilisez la propriété `PathName` d'une colonne `varbinary(max)` dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'exemple suivant montre comment lire le chemin d'accès d'une colonne `varbinary(max)`.  
   
  [!code-sql[FILESTREAM#FS_PathName](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48151043"
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_get_transaction_context)]  
   
 ###  <a name="handle"></a> Obtention d'un descripteur de fichier Win32  
- Pour obtenir un descripteur de fichier Win32, appelez l’API OpenSqlFilestream. Cette API est exportée à partir du fichier sqlncli.dll. Le descripteur retourné peut être passé à chacune des API Win32 suivantes : [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)ou [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Les exemples suivants montrent comment obtenir un descripteur de fichier Win32 et l'utiliser pour lire et écrire des données dans un BLOB FILESTREAM.  
+ Pour obtenir un descripteur de fichier Win32, appelez l’API OpenSqlFilestream. Cette API est exportée à partir du fichier sqlncli.dll. Le handle retourné peut être passé à chacune des API Win32 suivantes : [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), ou [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Les exemples suivants montrent comment obtenir un descripteur de fichier Win32 et l'utiliser pour lire et écrire des données dans un BLOB FILESTREAM.  
   
  [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cs/filestream.cs#fs_cs_readandwriteblob)]  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48151043"
   
 -   Évitez les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui permettent de mettre à jour ou d'ajouter des données à l'objet BLOB FILESTREAM. En effet, les données BLOB sont mises en file d'attente dans la base de données tempdb, puis retournées dans un nouveau fichier physique.  
   
--   Évitez d'ajouter de petites mises à jour BLOB à un objet BLOB FILESTREAM. Chaque ajout entraîne la copie des fichiers FILESTREAM sous-jacents. Si une application doit ajouter de petits objets BLOB, écrivez ces derniers dans un `varbinary(max)` colonne, puis effectuez une seule opération d’écriture pour l’objet BLOB FILESTREAM lorsque le nombre d’objets BLOB atteint une limite prédéterminée.  
+-   Évitez d'ajouter de petites mises à jour BLOB à un objet BLOB FILESTREAM. Chaque ajout entraîne la copie des fichiers FILESTREAM sous-jacents. Si une application doit ajouter de petits objets blob, écrivez ces derniers dans une colonne `varbinary(max)`, puis effectuez une opération d'écriture unique dans l'objet blob FILESTREAM lorsque le nombre d'objets blob atteint une limite prédéterminée.  
   
 -   Évitez de récupérer la longueur des données de nombreux fichiers BLOB dans une application. Il s'agit d'une opération qui prend du temps, car la taille n'est pas stockée dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Pour déterminer la longueur d’un fichier BLOB, utilisez la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] DATALENGTH() afin de déterminer la taille du fichier BLOB, s’il est fermé. DATALENGTH() n’ouvre pas le fichier BLOB pour déterminer sa taille.  
   

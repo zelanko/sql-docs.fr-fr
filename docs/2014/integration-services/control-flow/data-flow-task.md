@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
@@ -19,12 +18,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48a40f38706ad9562f5dde3f4ec5472e678250c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2afaa918e25c9473513dfdac82cde3223e83df38
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069579"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366861"
 ---
 # <a name="data-flow-task"></a>tâche de flux de données
   La tâche de flux de données encapsule le moteur de flux de données chargé de déplacer des données entre les sources et les destinations et permet à l'utilisateur de transformer, nettoyer et modifier les données au cours de leur déplacement. L'ajout d'une tâche de flux de données à un flux de contrôle de package permet au package d'extraire, de transformer et de charger des données.  
@@ -45,18 +44,18 @@ ms.locfileid: "48069579"
  ![Flux de données](../media/mw-dts-09.gif "Flux de données")  
   
 ## <a name="log-entries"></a>Entrées du journal  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] propose un ensemble de journaux d'événements disponibles pour toutes les tâches. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit également des entrées de journal personnalisées pour de nombreuses tâches. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md). La tâche de flux de données comprend les entrées de journal personnalisées suivantes :  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit un ensemble de journaux d’événements disponibles pour toutes les tâches. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit également des entrées de journal personnalisées pour de nombreuses tâches. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md). La tâche de flux de données comprend les entrées de journal personnalisées suivantes :  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Indique que la tâche de flux de données a modifié la taille du tampon. L'entrée de journal décrit les raisons de cette modification de taille et indique la nouvelle taille temporaire du tampon.|  
-|`OnPipelinePostEndOfRowset`|Indique qu’un composant a reçu son signal de fin d’ensemble de lignes, qui est définie par le dernier appel de la `ProcessInput` (méthode). Une entrée est écrite pour chaque composant du flux de données qui traite l'entrée. L'entrée inclut le nom du composant.|  
-|`OnPipelinePostPrimeOutput`|Indique que le composant a terminé son dernier appel de la `PrimeOutput` (méthode). Selon le flux de données, plusieurs entrées de journal peuvent être écrites. Si le composant est une source, cette entrée du journal signifie que le composant a terminé le traitement des lignes.|  
-|`OnPipelinePreEndOfRowset`|Indique qu’un composant est sur le point de recevoir son signal de fin d’ensemble de lignes, ce qui est défini par le dernier appel de la `ProcessInput` (méthode). Une entrée est écrite pour chaque composant du flux de données qui traite l'entrée. L'entrée inclut le nom du composant.|  
+|`OnPipelinePostEndOfRowset`|Indique qu'un composant a reçu son signal de fin d'ensemble de lignes, défini par le dernier appel de la méthode `ProcessInput`. Une entrée est écrite pour chaque composant du flux de données qui traite l'entrée. L'entrée inclut le nom du composant.|  
+|`OnPipelinePostPrimeOutput`|Indique que le composant a terminé son dernier appel de la méthode `PrimeOutput`. Selon le flux de données, plusieurs entrées de journal peuvent être écrites. Si le composant est une source, cette entrée du journal signifie que le composant a terminé le traitement des lignes.|  
+|`OnPipelinePreEndOfRowset`|Indique qu'un composant est sur le point de recevoir son signal de fin d'ensemble de lignes, défini par le dernier appel de la méthode `ProcessInput`. Une entrée est écrite pour chaque composant du flux de données qui traite l'entrée. L'entrée inclut le nom du composant.|  
 |`OnPipelinePrePrimeOutput`|Indique que le composant est sur le point de recevoir son appel de la méthode `PrimeOutput`. Selon le flux de données, plusieurs entrées de journal peuvent être écrites.|  
 |`OnPipelineRowsSent`|Indique le nombre de lignes fournies à une entrée de composant par un appel de la méthode `ProcessInput`. L'entrée du journal inclut le nom du composant.|  
 |`PipelineBufferLeak`|Donne des informations sur tout composant qui maintient l'activité des tampons après la fermeture du gestionnaire de tampons. Si un tampon est toujours actif, cela signifie que des ressources des tampons n'ont pas été libérées et qu'elles peuvent provoquer des fuites de mémoire. L'entrée du journal fournit le nom du composant et l'ID du tampon.|  
-|`PipelineComponentTime`|Signale le temps (en millisecondes) que le composant a passé dans chacune de ses cinq étapes de traitement majeures : Validate, PreExecute, PostExecute, ProcessInput et ProcessOutput.|  
+|`PipelineComponentTime`|Signale le temps (en millisecondes) que le composant a passé dans chacune de ses cinq étapes de traitement majeures : Validate, PreExecute, PostExecute, ProcessInput et ProcessOutput.|  
 |`PipelineExecutionPlan`|Indique le plan d'exécution du flux de données. Le plan d'exécution fournit des informations sur la manière dont les tampons sont envoyés aux composants. Ces informations, conjuguées à l'entrée PipelineExecutionTrees du journal, décrivent ce qui se passe dans la tâche de flux de données.|  
 |`PipelineExecutionTrees`|Indique les arborescences d'exécution de la disposition du flux de données. Le planificateur du moteur du flux de données utilise les arborescences pour construire le plan d'exécution du flux de données.|  
 |`PipelineInitialization`|Donne des informations d'initialisation relatives à la tâche. Ces informations incluent les répertoires à utiliser pour le stockage temporaire des données blob, la taille par défaut de la mémoire tampon, ainsi que le nombre de lignes contenues dans une mémoire tampon. Selon la configuration de la tâche de flux de données, plusieurs entrées de journal peuvent être écrites.|  
@@ -65,7 +64,7 @@ ms.locfileid: "48069579"
   
  Pour plus d'informations sur la façon d'utiliser ces entrées de journal pour analyser et améliorer les performances du flux de données, consultez l'une des rubriques suivantes :  
   
--   [Compteurs de performance](../performance/performance-counters.md)  
+-   [Compteurs de performances](../performance/performance-counters.md)  
   
 -   [Fonctionnalités de performances de flux de données](../data-flow/data-flow-performance-features.md)  
   
@@ -87,12 +86,12 @@ ms.locfileid: "48069579"
   
  De nombreux événements de journal écrivent plusieurs entrées et les messages liés à de nombreuses entrées de journal contiennent des données complexes. Pour faciliter la compréhension et la communication du contenu des messages complexes, vous pouvez analyser leur texte. En fonction de l'emplacement des journaux, vous pouvez utiliser des instructions Transact-SQL ou un composant Script pour répartir le texte complexe sur plusieurs colonnes ou sous d'autres formats que vous jugez plus utiles.  
   
- Par exemple, le tableau suivant affiche le message « Des lignes ont été fournies comme entrée à un composant de flux de données. :  : 1185 : Sortie de source OLE DB : 1180 : Tri : 1181 : Entrée de tri : 76 », analysé sur plusieurs colonnes. Le message a été écrit par l'événement `OnPipelineRowsSent` au moment où les lignes ont été transmises de la source OLE DB vers la transformation de tri.  
+ Par exemple, le tableau suivant affiche le message « Des lignes ont été fournies comme entrée à un composant de flux de données. :  : 1185 : Sortie de source OLE DB : 1180 : Tri : 1181 : Entrée de tri : 76 », analysé sur plusieurs colonnes. Le message a été écrit par l'événement `OnPipelineRowsSent` au moment où les lignes ont été transmises de la source OLE DB vers la transformation de tri.  
   
-|colonne|Description|Valeur|  
+|colonne|Description|Value|  
 |------------|-----------------|-----------|  
-|**PathID**|La valeur à partir de la `ID` propriété du chemin entre la source OLE DB et la transformation de tri.|1185|  
-|**PathName**|La valeur à partir de la `Name` propriété du chemin d’accès.|Sortie de source OLE DB|  
+|**PathID**|Valeur de la propriété `ID` du chemin d'accès entre la source OLE DB et la transformation de tri.|1185|  
+|**PathName**|Valeur de la propriété `Name` du chemin d'accès.|Sortie de source OLE DB|  
 |**ComponentID**|La valeur de la `ID` propriété de la transformation de tri.|1180|  
 |**ComponentName**|Valeur de la propriété `Name` de la transformation de tri.|Trier|  
 |**InputID**|Valeur de la propriété `ID` de l'entrée à la transformation de tri.|1181|  
@@ -104,7 +103,7 @@ ms.locfileid: "48069579"
   
  Pour plus d’informations sur la façon de définir ces propriétés dans la fenêtre **Propriétés** , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>Configuration par programmation de la tâche de flux de données  
  Pour plus d'informations sur l'ajout par programmation d'une tâche de flux de données à un package et sur la définition des propriétés de flux de données, cliquez sur la rubrique suivante :  
@@ -112,9 +111,9 @@ ms.locfileid: "48069579"
 -   [Ajout de la tâche de flux de données par programmation](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+ [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Vidéo, [Distributeur de données équilibrées](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), sur technet.microsoft.com.  
+ Vidéo, [Distributeur de données équilibrées](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), sur technet.microsoft.com.  
   
   

@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661748"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417370"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Développement de la reconnaissance des pools de connexions dans un pilote ODBC
 Cette rubrique décrit les détails du développement d’un pilote ODBC qui contient des informations sur la façon dont le pilote doit fournir des services de regroupement de connexion.  
@@ -44,8 +44,8 @@ Cette rubrique décrit les détails du développement d’un pilote ODBC qui con
   
 |Fonction|Fonctionnalités supplémentaires|  
 |--------------|-------------------------|  
-|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Prend en charge le nouveau type de handle : SQL_HANDLE_DBC_INFO_TOKEN (voir la description ci-dessous).|  
-|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Prend en charge le nouvel attribut de connexion uniquement : SQL_ATTR_DBC_INFO_TOKEN permettant de réinitialiser la connexion (voir la description ci-dessous).|  
+|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Prise en charge le nouveau type de handle : SQL_HANDLE_DBC_INFO_TOKEN (voir la description ci-dessous).|  
+|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Prise en charge le nouvel attribut de connexion uniquement : SQL_ATTR_DBC_INFO_TOKEN permettant de réinitialiser la connexion (voir la description ci-dessous).|  
   
 > [!NOTE]  
 >  Fonctions déconseillées comme **SQLError** et **SQLSetConnectOption** ne sont pas pris en charge pour le regroupement de connexions prenant en charge de pilote.  

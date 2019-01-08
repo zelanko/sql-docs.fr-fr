@@ -13,12 +13,12 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f44eb85e80135f81d0e2ca1f37657818843a237
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710057"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540245"
 ---
 # <a name="select---sql-command"></a>SELECT, commande SQL
 Récupère les données à partir d’une ou plusieurs tables.  
@@ -35,7 +35,7 @@ SELECT [ALL | DISTINCT]
 FROM [DatabaseName!]Table [Local_Alias]  
    [, [DatabaseName!]Table [Local_Alias] ...]   
 [WHERE JoinCondition [AND JoinCondition  
-…]  
+...]  
    [AND | OR FilterCondition [AND | OR FilterCondition ...]]]  
 [GROUP BY GroupColumn [, GroupColumn ...]]  
 [HAVING FilterCondition]  
@@ -82,15 +82,15 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  Les fonctions de champ suivantes sont disponibles pour une utilisation avec un élément sélectionné est un champ ou une expression impliquant un champ :  
   
--   AVG (*Select_Item*) — moyenne d’une colonne de données numériques.  
+-   AVG (*Select_Item*)-moyenne d’une colonne de données numériques.  
   
--   NOMBRE (*Select_Item*) : compte le nombre de sélectionner des éléments dans une colonne. Count compte le nombre de lignes dans la sortie de requête.  
+-   NOMBRE (*Select_Item*)-compte le nombre de sélectionner des éléments dans une colonne. Count compte le nombre de lignes dans la sortie de requête.  
   
--   MIN (*Select_Item*) : détermine la plus petite valeur de *Select_Item* dans une colonne.  
+-   MIN (*Select_Item*)-détermine la plus petite valeur de *Select_Item* dans une colonne.  
   
--   MAX (*Select_Item*) : détermine la plus grande valeur de *Select_Item* dans une colonne.  
+-   MAX (*Select_Item*)-détermine la plus grande valeur de *Select_Item* dans une colonne.  
   
--   Somme (*Select_Item*) — additionne une colonne de données numériques.  
+-   Somme (*Select_Item*)-additionne une colonne de données numériques.  
   
  Vous ne pouvez pas imbriquer des fonctions de champ.  
   

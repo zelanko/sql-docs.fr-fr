@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], delete
@@ -14,19 +13,19 @@ ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 28de150be95c10e8c1c1ef9f4c5280d185c5bc18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174329"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764021"
 ---
 # <a name="delete-a-workload-group"></a>Supprimer un groupe de charge de travail
   Vous pouvez supprimer un groupe de charge de travail ou un pool de ressources à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de Transact-SQL.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Avant de commencer :**  [Limitations et Restrictions](#LimitationsRestrictions), [autorisations](#Permissions)  
   
--   **Pour supprimer un groupe de charge de travail, utilisez :**  [Explorateur d’objets](#DelWGObjEx), [Propriétés de Resource Governor](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **Pour supprimer une charge de travail de groupe, à l’aide de :**  [Explorateur d’objets](#DelWGObjEx), [propriétés de Resource Governor](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Vous ne pouvez pas supprimer un groupe de charge de travail s'il contient des sessions actives.  
@@ -68,9 +67,9 @@ ms.locfileid: "48174329"
 ##  <a name="DelWGTSQL"></a> Supprimer un groupe de charge de travail à l'aide de Transact-SQL  
  **Pour supprimer un groupe de charge de travail à l'aide de Transact-SQL**  
   
-1.  Exécuter la `DROP WORKLOAD GROUP` instruction en spécifiant le nom du groupe de charge de travail à supprimer.  
+1.  Exécutez l'instruction `DROP WORKLOAD GROUP` en spécifiant le nom du groupe de charge de travail à supprimer.  
   
-2.  Avant d'émettre l'instruction `ALTER RESOURCE GOVERNOR RECONFIGURE`, vérifiez qu'il n'y a pas de demandes actives dans le groupe de charge de travail en cours de suppression. S’il existe des demandes actives, `ALTER RESOURCE GOVERNOR` échouera. Pour éviter ce problème, vous pouvez effectuer l'une des actions suivantes :  
+2.  Avant d'émettre l'instruction `ALTER RESOURCE GOVERNOR RECONFIGURE`, vérifiez qu'il n'y a pas de demandes actives dans le groupe de charge de travail en cours de suppression. S'il existe des demandes actives, `ALTER RESOURCE GOVERNOR` échoue. Pour éviter ce problème, vous pouvez effectuer l'une des actions suivantes :  
   
     -   Attendez jusqu'à ce que toutes les sessions du groupe de charges de travail soient déconnectées.  
   

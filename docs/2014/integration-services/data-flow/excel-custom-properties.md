@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4d9ef1b6727a80beb5e1f55427479a6a5acf53e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed4f6f89091b3e8d46a13f0a93e685b4520c697f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151319"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790511"
 ---
 # <a name="excel-custom-properties"></a>Propriétés personnalisées d'Excel
   **Propriétés personnalisées des sources**  
@@ -47,12 +46,12 @@ ms.locfileid: "48151319"
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer (énumération)|Valeur qui spécifie la manière dont la destination accède à sa base de données de destination.<br /><br /> Cette propriété peut prendre les valeurs suivantes :<br /><br /> `OpenRowset` (0), vous indiquez le nom de la table ou vue.<br /><br /> `OpenRowset from Variable` (1), vous indiquez le nom d’une variable qui contient le nom de la table ou vue.<br /><br /> `OpenRowset Using Fastload` (3) : vous devez fournir le nom d'une table ou d'une vue.<br /><br /> `OpenRowset Using Fastload from Variable` (4), vous indiquez le nom d’une variable qui contient le nom de la table ou vue.<br /><br /> `SQL Command` (2) : vous devez fournir une instruction SQL.|  
-|CommandTimeout|Entier|Nombre maximal de secondes pendant lesquelles la commande SQL peut être exécutée avant d'arriver à expiration. Une valeur égale à **0** indique une durée illimitée. La valeur par défaut de cette propriété est **0**.<br /><br /> Remarque : Cette propriété n’est pas disponible dans l’ **Éditeur de destination Excel**, mais peut être définie à l’aide de l’ **Éditeur avancé**.|  
+|AccessMode|Integer (énumération)|Valeur qui spécifie la manière dont la destination accède à sa base de données de destination.<br /><br /> Cette propriété peut prendre les valeurs suivantes :<br /><br /> `OpenRowset` (0)-vous fournir le nom de la table ou vue.<br /><br /> `OpenRowset from Variable` (1)-vous fournir le nom d’une variable qui contient le nom de la table ou vue.<br /><br /> `OpenRowset Using Fastload` (3)-vous fournir le nom de la table ou vue.<br /><br /> `OpenRowset Using Fastload from Variable` (4)-vous fournir le nom d’une variable qui contient le nom de la table ou vue.<br /><br /> `SQL Command` (2)-vous fournissez une instruction SQL.|  
+|CommandTimeout|Entier|Nombre maximal de secondes pendant lesquelles la commande SQL peut être exécutée avant d'arriver à expiration. Une valeur égale à **0** indique une durée illimitée. La valeur par défaut de cette propriété est **0**.<br /><br /> Remarque : Cette propriété n’est pas disponible dans le **éditeur de Destination Excel**, mais peut être définie à l’aide de la **éditeur avancé**.|  
 |FastLoadKeepIdentity|Booléen|Valeur spécifiant si les valeurs d'identité doivent être copiées lors du chargement des données. Cette propriété est disponible uniquement lorsque vous utilisez l'une des options de chargement rapide. La valeur par défaut de cette propriété est **False**.|  
 |FastLoadKeepNulls|Booléen|Valeur spécifiant si les valeurs NULL doivent être copiées lors du chargement des données. Cette propriété est disponible uniquement avec l'une des options de chargement rapide. La valeur par défaut de cette propriété est **False**.|  
 |FastLoadMaxInsertCommitSize|Entier|Valeur qui spécifie la taille du lot que la destination Excel tente de valider au cours des opérations de chargement rapide. La valeur par défaut est **2147483647**. La valeur **0** indique une opération de validation simple après le traitement de toutes les lignes.|  
-|FastLoadOptions|String|Collection d'options de chargement rapide. Les options de chargement rapide incluent le verrouillage des tables et la vérification des contraintes. Vous pouvez spécifier une de ces options, les deux ou ni l'une ni l'autre.<br /><br /> Remarque : certaines options de cette propriété ne sont pas disponibles dans l’ **Éditeur de destination Excel**, mais vous pouvez les définir à l’aide de l’ **éditeur avancé**.|  
+|FastLoadOptions|String|Collection d'options de chargement rapide. Les options de chargement rapide incluent le verrouillage des tables et la vérification des contraintes. Vous pouvez spécifier une de ces options, les deux ou ni l'une ni l'autre.<br /><br /> Remarque : Certaines options de cette propriété ne sont pas disponibles dans le **éditeur de Destination Excel**, mais peut être définie à l’aide de la **éditeur avancé**.|  
 |OpenRowset|String|Quand AccessMode est `OpenRowset`, le nom de la table ou vue qui accède à la destination Excel.|  
 |OpenRowsetVariable|String|Quand AccessMode est `OpenRowset from Variable`, le nom de la variable qui contient le nom de la table ou vue qui accède à la destination Excel.|  
 |SqlCommand|String|Quand AccessMode est `SQL Command`, l’instruction Transact-SQL que la destination Excel utilise pour spécifier les colonnes de destination pour les données.|  

@@ -1,5 +1,5 @@
 ---
-title: Effectuer une copie d’un modèle d’exploration de données | Documents Microsoft
+title: Effectuer une copie d’un modèle d’exploration de données | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 23770ec59e31a51b7aca7badf5b827baa6181155
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7c5479a43a07a6398ff45635828a2a9c88b7cb11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014586"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502162"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>Créer une copie d'un modèle d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34014586"
   
 3.  Sélectionnez le modèle et cliquez avec le bouton droit pour ouvrir le menu contextuel.  
   
-     - ou -  
+     -ou-  
   
      Sélectionnez le modèle. Dans le menu **Modèle d’exploration de données** , sélectionnez **Nouveau modèle d’exploration de données**.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34014586"
   
 1.  Sélectionnez le modèle d'exploration de données.  
   
-2.  Dans la fenêtre **Propriétés** , cliquez dans la zone de texte de la propriété **Filter** , puis sur le bouton de génération **(…)** .  
+2.  Dans le **propriétés** fenêtre, cliquez sur la zone de texte pour le **filtre** propriété, puis cliquez sur la build **(...)**  bouton.  
   
 3.  Modifiez les conditions de filtre.  
   
@@ -53,8 +53,8 @@ ms.locfileid: "34014586"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filtres pour les modèles d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Tâches liées aux modèles d’exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Supprimer un filtre d’un modèle d’exploration de données](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
+ [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Tâches du modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Supprimer un filtre d'un modèle d'exploration de données](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   

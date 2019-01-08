@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - breakpoints [SQL Server]
@@ -14,19 +13,19 @@ ms.assetid: 3caf751e-df3b-40c7-b5e8-4490ae178e0c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d40fd8e92eb7c3453c700eb2ae7f2a45ea6c0b41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33860d4e84e828b404236527dbe3c8c8cf6becc2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166409"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808381"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>Relecture jusqu'à un point d'arrêt (SQL Server Profiler)
   Cette rubrique explique comment définir des points d'arrêt dans un fichier ou une table de trace que vous souhaitez relire à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. La définition de points d'arrêt dans un fichier ou une table de trace avant de démarrer la relecture de cette dernière vous permet de suspendre la relecture de la trace lorsque surviennent des événements spécifiques. L'utilisation de points d'arrêt pendant la relecture d'une trace n'empêche pas le débogage. Vous pouvez en effet fractionner la relecture de scripts de trace longs en petits segments, qui peuvent être analysés de façon incrémentielle.  
   
 ### <a name="to-replay-to-a-breakpoint"></a>Pour relire jusqu'à un point d'arrêt  
   
-1.  Ouvrez le fichier de trace ou la table de trace à relire. Pour plus d’informations, consultez [Ouvrir un fichier de trace&#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) ou [Ouvrir une table de trace &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
+1.  Ouvrez le fichier de trace ou la table de trace à relire. Pour plus d’informations, consultez [Ouvrir un fichier de trace &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) ou l'Assistant Paramétrage du [Ouvrir une table de trace &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
   
      Vérifiez que le fichier de trace ou la table de trace que vous ouvrez contient les classes d'événements nécessaires pour la relecture. Pour plus d’informations, consultez [Conditions préalables à la relecture](replay-requirements.md).  
   
@@ -53,8 +52,8 @@ ms.locfileid: "48166409"
 6.  Répétez l'étape 5 jusqu'à la fin de la trace.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Relire jusqu'à un curseur &#40;SQL Server Profiler&#41;](replay-to-a-cursor-sql-server-profiler.md)   
- [Relire des Traces](replay-traces.md)   
+ [Relire jusqu’à un curseur &#40;SQL Server Profiler&#41;](replay-to-a-cursor-sql-server-profiler.md)   
+ [Relire des traces](replay-traces.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

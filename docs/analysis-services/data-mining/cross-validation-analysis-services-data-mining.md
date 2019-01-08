@@ -1,5 +1,5 @@
 ---
-title: La Validation croisée (Analysis Services - Exploration de données) | Documents Microsoft
+title: La Validation croisée (Analysis Services - Exploration de données) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 910df69baf3b6af2b084bf1c45d06c6289cc83d9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bf8960fb659611003325275b2cf86d9325351c29
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017876"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540749"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validation croisée (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  La*validation croisée* est un outil d’analyse standard et une fonctionnalité importante quand il s’agit de développer et d’optimiser des modèles d’exploration de données. Vous recourez à la validation croisée après avoir créé une structure d'exploration de données et des modèles d'exploration de données connexes dans le but d'établir la validité du modèle.  Les applications de la validation croisée sont les suivantes :  
+  La *validation croisée* est un outil d’analyse standard et une fonctionnalité importante quand il s’agit de développer et d’optimiser des modèles d’exploration de données. Vous recourez à la validation croisée après avoir créé une structure d'exploration de données et des modèles d'exploration de données connexes dans le but d'établir la validité du modèle.  Les applications de la validation croisée sont les suivantes :  
   
 -   Validation de la robustesse d'un modèle d'exploration de données particulier  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34017876"
   
     -   Le nombre de replis dans lesquels partitionner les données de structure ou de modèle.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée autant de modèles qu'il y a de replis et effectue l'apprentissage de ces modèles.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée autant de modèles qu’il y a de replis et effectue l’apprentissage de ces modèles.  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne un jeu de mesures de précision pour chaque repli de chaque modèle ou pour le jeu de données dans son ensemble.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "34017876"
   
  L'exemple dans le diagramme illustre l'utilisation des données si trois replis sont spécifiés.  
   
- ![Comment les segments de données de validation croisée](../../analysis-services/data-mining/media/xvoverviewmain.gif "la validation croisée les segments de données")  
+ ![Comment la validation croisée segmente les données](../../analysis-services/data-mining/media/xvoverviewmain.gif "comment la validation croisée segmente les données")  
   
  Dans le scénario du diagramme, la structure d'exploration de données contient un jeu de données d'exclusion utilisé pour le test, mais le jeu de données de test n'a pas été inclus pour la validation croisée. En conséquence, toutes les données dans le jeu de données d'apprentissage, 70 pour cent des données dans la structure d'exploration de données, sont utilisées pour la validation croisée. Le rapport de validation croisée affiche le nombre total de cas utilisés dans chaque partition.  
   
@@ -77,13 +77,13 @@ ms.locfileid: "34017876"
 ### <a name="choosing-models-and-columns-to-validate"></a>Choix des modèles et colonnes à valider  
  Quand vous utilisez l’onglet **Validation croisée** dans le Concepteur d’exploration de données, vous devez en premier lieu sélectionner la colonne prédictible dans une liste. Une structure d'exploration de données peut généralement prendre en charge de nombreux modèles d'exploration de données, qui n'utilisent pas tous la même colonne prédictible. Lorsque vous exécutez la validation croisée, seuls les modèles qui utilisent la même colonne prédictible peuvent être inclus dans le rapport.  
   
- Pour choisir un attribut prédictible, cliquez sur **Attribut cible** et sélectionnez la colonne dans la liste. Si l’attribut cible est une colonne imbriquée ou une colonne dans une table imbriquée, vous devez taper le nom de la colonne imbriquée en utilisant le format \<nom de la Table imbriquée > (key).\< Imbriqués de colonne >. Si la seule colonne utilisée à partir de la table imbriquée est la colonne clé, vous pouvez utiliser \<nom de la Table imbriquée > (key).  
+ Pour choisir un attribut prédictible, cliquez sur **Attribut cible** et sélectionnez la colonne dans la liste. Si l’attribut cible est une colonne imbriquée ou une colonne dans une table imbriquée, vous devez taper le nom de la colonne imbriquée en utilisant le format \<nom de la Table imbriquée > (key).\< Imbriqués de colonne >. Si la seule colonne de la table imbriquée utilisée est la colonne clé, vous pouvez utiliser \<nom de la Table imbriquée > (key).  
   
  Une fois que vous avez sélectionné l'attribut prédictible, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] teste automatiquement tous les modèles qui utilisent le même attribut prédictible. Si l'attribut cible contient des valeurs discrètes, une fois que vous avez sélectionné la colonne prédictible, vous pouvez taper facultativement un état cible, si vous souhaitez prédire une valeur spécifique.  
   
- La sélection de l'état cible affecte les mesures retournées. Si vous spécifiez un attribut cible (c'est-à-dire un nom de colonne) et ne choisissez pas de valeur spécifique que le modèle doit prédire, le modèle sera évalué par défaut sur sa prédiction de l'état le plus probable.  
+ La sélection de l'état cible affecte les mesures retournées. Si vous spécifiez un attribut cible-autrement dit, un nom de colonne- et ne choisissez pas une valeur spécifique que vous souhaitez que le modèle pour prédire, par défaut, le modèle doit être évalué selon sa prédiction de l’état le plus probable.  
   
- Quand vous utilisez la validation croisée avec des modèles de clustering, il n’existe aucune colonne prédictible. Vous sélectionnez à la place **#Cluster** dans la liste de la zone de liste **Attribut cible** . Après avoir sélectionné cette option, d’autres options non applicables aux modèles de clustering, telles que **État cible**, sont désactivées. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] testera tous les modèles de clustering associés à la structure d'exploration de données.  
+ Quand vous utilisez la validation croisée avec des modèles de clustering, il n’existe aucune colonne prédictible. Vous sélectionnez à la place **#Cluster** dans la liste de la zone de liste **Attribut cible** . Après avoir sélectionné cette option, d’autres options non applicables aux modèles de clustering, telles que **État cible**, sont désactivées. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] testera tous les modèles de clustering associés à la structure d’exploration de données.  
   
 ## <a name="tools-for-cross-validation"></a>Outils pour la validation croisée  
  Vous pouvez utiliser la validation croisée du Concepteur d'exploration de données ou vous pouvez effectuer une validation croisée en exécutant des procédures stockées.  
@@ -106,17 +106,17 @@ ms.locfileid: "34017876"
   
  Pour la première phase, vous appelez une procédure stockée système qui crée le nombre de partitions que vous spécifiez dans le jeu de données, et retourne des résultats de précision pour chaque partition. Pour chaque mesure, Analysis Services calcule alors la moyenne et l'écart type pour les partitions.  
   
--   [SystemGetCrossValidationResults & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterCrossValidationResults & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
   
  **Générer des mesures pour un jeu de données entier**  
   
  Dans la seconde phase, vous appelez un autre jeu de procédures stockées. Ces procédures stockées ne partitionnent pas le jeu de données, mais génèrent des résultats de précision pour l'ensemble du jeu de données spécifié. Si vous avez déjà partitionnée et traité une structure d'exploration de données, vous pouvez appeler ce second jeu de procédures stockées pour obtenir uniquement les résultats.  
   
--   [SystemGetAccuracyResults & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterAccuracyResults & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
 #### <a name="defining-the-testing-data"></a>Définition des données de test  
  Lorsque vous exécutez les procédures stockées de validation qui calculent la précision, (SystemGetAccuracyResults ou SystemGetClusterAccuracyResults), vous pouvez spécifier la source des données utilisée pour le test au cours de la validation croisée. Cette option n'est pas disponible dans l'interface utilisateur.  
@@ -142,11 +142,11 @@ ms.locfileid: "34017876"
   
  Le rapport contient deux types de mesures : les agrégats qui indiquent la variabilité du jeu de données une fois divisé en replis, et les mesures de précision spécifiques au modèle pour chaque repli. Les rubriques ci-dessous fournissent des informations supplémentaires sur ces mesures :  
   
- [Formules de Validation croisée](../../analysis-services/data-mining/cross-validation-formulas.md)  
+ [Formules de validation croisée](../../analysis-services/data-mining/cross-validation-formulas.md)  
   
  Répertorie toutes les mesures par type de test. Décrit de manière générale les différentes interprétations des mesures.  
   
- [Mesures dans le rapport de Validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
+ [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
  Décrit les formules pour calculer chaque mesure et répertorie le type d'attribut auquel chaque mesure peut être appliquée.  
   
@@ -171,21 +171,21 @@ ms.locfileid: "34017876"
   
  La validation croisée ne peut pas être utilisée avec des modèles de série chronologique ou des modèles Sequence Clustering. En particulier, aucun modèle contenant une colonne KEY TIME ou une colonne KEY SEQUENCE ne peut être inclus dans la validation croisée.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Consultez les rubriques suivantes pour plus d'informations sur la validation croisée, ou pour des informations sur les méthodes associées pour tester les modèles d'exploration de données, telles que les graphiques d'analyse de précision.  
   
 |Rubriques|Liens|  
 |------------|-----------|  
-|Décrit la définition des paramètres de validation croisée dans SQL Server Development Studio.|[Onglet Validation croisée & #40 ; Vue graphique d’analyse de précision d’exploration de données & #41 ;](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)|  
-|Décrit les mesures fournies par la validation croisée|[Formules de Validation croisée](../../analysis-services/data-mining/cross-validation-formulas.md)|  
-|Explique le format des rapports de validation croisée et définit les mesures statistiques fournies pour chaque type de modèle.|[Mesures dans le rapport de Validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)|  
-|Répertorie les procédures stockées pour calculer des statistiques de validation croisée.|[Exploration de données stockées procédures & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  
+|Décrit la définition des paramètres de validation croisée dans SQL Server Development Studio.|[Onglet Validation croisée &#40;vue Graphique d’analyse de précision de l’exploration de données&#41;](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)|  
+|Décrit les mesures fournies par la validation croisée|[Formules de validation croisée](../../analysis-services/data-mining/cross-validation-formulas.md)|  
+|Explique le format des rapports de validation croisée et définit les mesures statistiques fournies pour chaque type de modèle.|[Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)|  
+|Répertorie les procédures stockées pour calculer des statistiques de validation croisée.|[Procédures stockées d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  
 |||  
-|Décrit la création d'un jeu de données de test pour les structures d'exploration de données et les modèles associés.|[Apprentissage et jeux de données de test](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|Consultez des exemples d'autres types de graphiques d'analyse de précision.|[Matrice de classification & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Graphique de courbes d’élévation & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Nuage de points & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Décrit les étapes de création de différents graphiques d'analyse de précision.|[Test et de tâches de Validation et de procédures & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Décrit la création d'un jeu de données de test pour les structures d'exploration de données et les modèles associés.|[Jeux de données d’apprentissage et de test](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
+|Consultez des exemples d'autres types de graphiques d'analyse de précision.|[Matrice de classification &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Décrit les étapes de création de différents graphiques d'analyse de précision.|[Tâches de test et validation et procédures &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et Validation & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sécurité pour l’apprentissage de SQL Server | Microsoft Docs
+title: Vue d’ensemble de la sécurité pour les extensions R et Python - SQL Server Machine Learning
 description: Vue d’ensemble de la sécurité pour l’infrastructure d’extensibilité dans SQL Server Machine Learning Services. Sécurité pour les comptes d’utilisateur et de connexion, le service SQL Server Launchpad, comptes de travail, exécution de plusieurs scripts et les autorisations de fichiers.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a5d109e16c81481f9e4267dc4963ecea74cfa736
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 5fd8850271ab4ebf7ac69ff32cfa0877394f1d89
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419374"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596570"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Vue d’ensemble de la sécurité pour l’infrastructure d’extensibilité dans SQL Server Machine Learning Services
 
@@ -31,7 +31,7 @@ Quel que soit votre utilisation de script, ou qu’ils se composent de, les obje
 
 <a name="permissions"></a>
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Modèle de sécurité des données de SQL Server des connexions de base de données et des rôles étendre au script R et Python. Une connexion SQL Server ou compte d’utilisateur Windows est requis pour exécuter des scripts externes qui utilisent des données SQL Server ou qui s’exécutent avec SQL Server comme contexte de calcul. Base de données accessibles aux utilisateurs ayant des autorisations pour exécuter une requête ad hoc les mêmes données à partir du script R ou Python.
 
@@ -71,7 +71,7 @@ Par conséquent, tous les scripts externes qui sont lancées à partir d’un cl
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Services utilisés dans le traitement externe (Launchpad)
 
-L’infrastructure d’extensibilité ajoute un nouveau service de NT à la [liste des services](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) dans une installation de SQL Server : [ **SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
+L’infrastructure d’extensibilité ajoute un nouveau service de NT à la [liste des services](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) dans une installation de SQL Server : [**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 Le moteur de base de données utilise le service SQL Server Launchpad pour instancier une session R ou Python comme un processus séparé. Le processus s’exécute sous un compte à faibles privilèges ; distinctes de SQL Server, Launchpad lui-même et l’identité d’utilisateur sous lequel la requête d’hôte ou de la procédure stockée a été exécutée. Script en cours d’exécution dans un processus distinct, sous compte à faibles privilèges, est la base du modèle de sécurité et d’isolation de R et Python dans SQL Server.
 

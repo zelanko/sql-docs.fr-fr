@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2a90b7c7aac9ad7f5f0398951e1d4e39ae810a8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f273823825cf94da6269a58389f04207ad1c2707
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134121"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211880"
 ---
 # <a name="remove-data-quality-server-objects"></a>Supprimer les objets serveur DQS
   La désinstallation de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou la suppression totale d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ne supprime pas tous les objets [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , notamment les bases de données DQS. Cela signifie que vous ne perdez pas vos données DQS si vous désinstallez le [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] à l'aide du programme d'installation de SQL Server. Vous devez supprimer manuellement ces objets [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] une fois le processus de désinstallation terminé.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   Avant de désinstaller [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], pensez à sauvegarder toutes vos bases de connaissances existantes en les exportant vers un fichier .dqsb, puis utilisez ce fichier ultérieurement pour importer toutes les bases de connaissances dans une nouvelle installation [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . L'exportation et l'importation de toutes les bases de connaissances DQS peuvent s'effectuer via l'exécution de DQSInstaller.exe avec les paramètres de ligne de commande appropriés à partir de l'invite de commandes. Pour plus d'informations, consultez [Exporter et importer des bases de connaissances DQS à l'aide de DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).  
 > -   Avant de supprimer les bases de données DQS, envisagez de sauvegarder les bases de données si vous souhaitez les conserver et les utiliser ultérieurement pour restaurer les données. Pour plus d’informations, consultez [Gérer des bases de données DQS](../../../2014/data-quality-services/manage-dqs-databases.md).  
   
@@ -37,7 +36,7 @@ ms.locfileid: "48134121"
  Vous pouvez supprimer ces objets dans SQL Server Management Studio en cliquant avec le bouton droit sur l’objet, puis en cliquant sur **Supprimer** dans le menu contextuel.  
   
 > [!IMPORTANT]  
->  Si vous ne faites que désinstaller le [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] depuis une instance de serveur SQL à l'aide du paramètre de ligne de commande `–uninstall` à partir de l'invite de commande, tous les objets DQS sont supprimés dans le cadre du processus de désinstallation. Vous ne devez pas les supprimer manuellement après la désinstallation du [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. Pour désinstaller le [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] à partir de l'invite de commandes, tapez la commande suivante à l'invite de commandes, puis appuyez sur Entrée :   
+>  Si vous ne faites que désinstaller le [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] depuis une instance de serveur SQL à l'aide du paramètre de ligne de commande `-uninstall` à partir de l'invite de commande, tous les objets DQS sont supprimés dans le cadre du processus de désinstallation. Vous ne devez pas les supprimer manuellement après la désinstallation du [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. Pour désinstaller le [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] à partir de l'invite de commandes, tapez la commande suivante à l'invite de commandes, puis appuyez sur Entrée :   
 > `dqsinstaller.exe -uninstall`  
   
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>Désinstaller une instance de SQL Server contenant le serveur Data Quality Services  

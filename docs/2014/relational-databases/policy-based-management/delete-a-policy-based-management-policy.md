@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, delete policies
@@ -12,12 +12,12 @@ ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e7196350dd12febf326d59fa8a270630fb9248b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef717625e94b95559a6ae8bba57b0b82043fbc42
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108219"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804351"
 ---
 # <a name="delete-a-policy-based-management-policy"></a>Supprimer une stratégie de gestion basée sur des stratégies
   Cette rubrique explique comment supprimer une stratégie de gestion basée sur des stratégies dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  

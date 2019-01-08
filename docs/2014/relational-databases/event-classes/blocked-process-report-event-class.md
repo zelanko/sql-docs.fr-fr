@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2aecd264eac2a6beada1009ae070f1858dd6822c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c3061794a565c4397bbf949211774306c9acebf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141029"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752881"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report (classe d'événements)
   La classe d’événements **Blocked Process Report** indique qu’une tâche a été bloquée plus longtemps que la période spécifiée. Elle ne s'applique pas aux tâches système ou aux tâches en attente de ressources à blocage non détectable.  
@@ -36,8 +35,8 @@ ms.locfileid: "48141029"
 |**DatabaseID**|**Int**|ID de la base de données dans laquelle le verrou a été obtenu. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |**Duration**|**bigint**|Durée (en millisecondes) du blocage du processus|13|Oui|  
 |**EndTime**|**datetime**|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme **SQL:BatchStarting** ou **SP:Starting**.|15|Oui|  
-|**EventClass**|**Int**|Type d’événement = 137.|27|non|  
-|**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|non|  
+|**EventClass**|**Int**|Type d’événement = 137.|27|Non|  
+|**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |**IndexID**|**Int**|ID de l'index de l'objet affecté par l'événement. Pour déterminer l’ID d’index d’un objet, utilisez la colonne **indid** de la table système **sysindexes** .|24|Oui|  
 |**IsSystem**|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
 |**LoginSid**|**image**|Identificateur de sécurité (SID) de l'utilisateur connecté. Cet événement est toujours signalé à partir du thread système. IsSystem = 1 ; SID = sa.|41|Oui|  

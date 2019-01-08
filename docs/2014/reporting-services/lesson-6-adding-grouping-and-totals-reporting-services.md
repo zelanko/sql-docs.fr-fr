@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 6 : ajout d’un regroupement et de totaux (Reporting Services) | Microsoft Docs'
+title: 'Leçon 6 : Ajout de regroupement et totaux (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5a372f230cfc2fc63e59787b8f9b674928f72368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7565cf64d64197a261c36fb755e3f20a65f1fa27
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095293"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356463"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Leçon 6 : ajout d'un regroupement et de totaux (Reporting Services)
   Ajoutez un regroupement et des totaux à votre rapport pour organiser et synthétiser vos données.  
   
- Pour plus d’informations sur l’ajout de totaux cumulés à des rapports, consultez le site curah.microsoft.com : [Ajout de totaux à des rapports Reporting Services (SSRS)](http://go.microsoft.com/fwlink/p/?LinkId=403698).  
+ Pour plus d'informations sur l'ajout de totaux cumulés à des rapports, consultez le site curah.microsoft.com : [Ajout de totaux à des rapports Reporting Services (SSRS)](https://go.microsoft.com/fwlink/p/?LinkId=403698).  
   
  **Dans cette rubrique :**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48095293"
   
 6.  Dans le menu **Format** , cliquez sur **Couleur d'arrière-plan**, sur **Gris clair**, puis sur **OK**.  
   
-     ![Mode Création : table de base avec total des commandes](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Mode Création : table de base avec total des commandes")  
+     ![Mode Conception : Tableau de base avec total des commandes](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "mode conception : Tableau de base avec total des commandes")  
   
 ##  <a name="bkmk_adddailytotal"></a> Pour ajouter un total quotidien à un rapport  
   
@@ -107,13 +107,13 @@ ms.locfileid: "48095293"
   
 4.  Dans le menu **Format** , cliquez sur **Couleur d'arrière-plan**, sur **Bleu clair**, puis sur **OK**.  
   
-     ![Mode Création : total général dans la table de base](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Mode Conception : total général dans la table de base")  
+     ![Mode Conception : Total général dans la table de base](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "mode conception : Total général dans la table de base")  
   
 5.  Cliquez sur Aperçu.  
   
      La dernière page doit avoir l'aspect suivant :  
   
-     ![Aperçu : table de base avec total général](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Aperçu : table de base avec total général")  
+     ![Aperçu : Table de base avec total général](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Preview : Table de base avec total général")  
   
 ##  <a name="bkmk_publishreport"></a> Pour publier le rapport sur le serveur de rapports (facultatif)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48095293"
   
      Si vous voyez un message semblable à ce qui suit dans la fenêtre de sortie, c'est que le déploiement a été réalisé avec succès.  
   
-    > ------ Création démarrée : Projet : didacticiel, Configuration : débogage ------« Sales Orders.rdl » ignoré. Élément est à jour. Fin de la génération--0 erreur, 0 avertissement---début du déploiement : projet : tutorial, Configuration : débogage---déploiement vers http://\<nom du serveur > / /reportserverdeploying report '/ tutorial/Sales Orders'. Déployer terminée--0 erreur, 0 avertissement === générer : 1 a réussi ou mis à jour, 0 a échoué, 0 a été ignoré === déployer : 1 a réussi, 0 a échoué, 0 a été ignoré ===  
+    > ------ Création démarrée : Projet : tutorial, Configuration : débogage ------« Sales Orders.rdl » ignoré. L'élément est à jour.Fin de la génération -- 0 erreur, 0 avertissement------ Début du déploiement : Projet : tutorial, Configuration : Débogage---déploiement vers http://\<nom du serveur > / /reportserverdeploying report '/ tutorial/Sales Orders'. Fin du déploiement--0 erreur, 0 avertissement === générer : 1 réussi ou mis à jour, 0 échoué, 0 ignoré ==================== Déployer : 1 réussi, 0 échoué, 0 ignoré ==========  
   
      Si un message d'erreur semblable au suivant s'affiche, vérifiez que vous disposez d'autorisations sur le serveur de rapports et que vous avez démarré [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] avec des privilèges d'administrateur.  
   
@@ -139,12 +139,12 @@ ms.locfileid: "48095293"
   
      Accédez à l'URL du Gestionnaire de rapports, par exemple : `http://<server name>/reports`.  
   
-7.  Accédez au dossier qui contient le rapport et cliquez sur le nom du rapport `Sales Orders` pour afficher le rapport rendu dans le navigateur.  
+7.  Accédez au dossier qui contient le rapport et cliquez sur le nom du rapport `Sales Orders` afin de consulter le rapport rendu dans le navigateur.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Vous avez réalisé le didacticiel de création d'un rapport de tableau de base.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filtrer, regrouper et trier les données &#40;Générateur de rapports et SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

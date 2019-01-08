@@ -22,12 +22,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d2cf693a4f4c909ef66b647f3ddd644a9bda6a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067919"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360141"
 ---
 # <a name="feature-selection-data-mining"></a>Sélection des fonctionnalités (exploration de données)
   *Sélection des fonctionnalités* est un terme couramment utilisé dans l’exploration de données pour décrire les outils et techniques disponibles pour réduire les entrées à une taille gérable pour le traitement et l’analyse. Sélection de fonctionnalités implique non seulement *la réduction de cardinalité*, ce qui signifie que d’imposer une coupure aléatoire ou prédéfinie sur le nombre d’attributs pouvant être pris en compte lors de la création d’un modèle, mais également le choix des attributs, ce qui signifie que que l’analyste ou l’outil de modélisation activement sélectionne ou ignore les attributs en fonction de leur utilité pour l’analyse.  
@@ -43,9 +43,9 @@ ms.locfileid: "48067919"
  Si seules 50 de 500 colonnes de la source de données possèdent des informations utiles à la création d'un modèle, vous pouvez tout simplement les laisser hors du modèle, ou vous pouvez utiliser des techniques de sélection de fonctionnalités afin de découvrir automatiquement les meilleures fonctionnalités et exclure les valeurs qui sont statistiquement non significatives. La sélection des fonctionnalités permet à la fois d'éviter d'avoir trop de données qui présentent peu d'intérêt, ou de n'avoir pas assez de données de valeur.  
   
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Sélection des fonctionnalités pour l'exploration de données Analysis Services  
- En règle générale, la sélection des fonctionnalités est effectuée automatiquement dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], et chaque algorithme comporte un ensemble de techniques par défaut pour appliquer intelligemment la réduction de la fonctionnalité. La sélection des fonctionnalités est toujours effectuée avant l'apprentissage du modèle, afin de choisir automatiquement les attributs d'un dataset qui sont le plus susceptibles d'être utilisés dans le modèle. Toutefois, vous pouvez également définir manuellement des paramètres pour influencer le comportement de la sélection des fonctionnalités.  
+ Habituellement, la sélection des fonctionnalités est effectuée automatiquement dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], et chaque algorithme comporte un ensemble de techniques par défaut permettant d'appliquer intelligemment la réduction des fonctionnalités. La sélection des fonctionnalités est toujours effectuée avant l'apprentissage du modèle, afin de choisir automatiquement les attributs d'un dataset qui sont le plus susceptibles d'être utilisés dans le modèle. Toutefois, vous pouvez également définir manuellement des paramètres pour influencer le comportement de la sélection des fonctionnalités.  
   
- En général, la sélection des fonctionnalités calcule un score pour chaque attribut, puis retient uniquement les attributs qui ont les meilleurs scores. Vous pouvez également ajuster le seuil pour les scores les plus élevés. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs méthodes pour calculer les scores et la méthode exacte appliquée dans n’importe quel modèle dépend de ces facteurs :  
+ En général, la sélection des fonctionnalités calcule un score pour chaque attribut, puis retient uniquement les attributs qui ont les meilleurs scores. Vous pouvez également ajuster le seuil pour les scores les plus élevés. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs méthodes pour calculer les scores ; la méthode exacte appliquée dans un modèle dépend de ces facteurs :  
   
 -   Algorithme utilisé dans votre modèle  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48067919"
 #### <a name="bayesian-with-k2-prior"></a>Bayésien avec a priori K2  
  Analysis Services fournit deux scores de sélection des fonctionnalités qui sont basés sur les réseaux bayésiens. Un réseau bayésien est un graphique *dirigé* ou *acyclique* d’états et de transitions entre états. Cela signifie que certains états sont toujours antérieurs à l’état actuel, que certains états sont postérieurs et que le graphique ne se répète pas ou ne fait pas de boucle. Par définition, les réseaux bayésiens autorisent l'utilisation de connaissances antérieures. Toutefois, la question de savoir quels états antérieurs utiliser pour le calcul des probabilités des états ultérieurs est importante pour la conception, les performances et la précision de l'algorithme.  
   
- Développé par Cooper et Herskovits, l'algorithme K2 pour l'apprentissage à partir d'un réseau bayésien est couramment employé dans le cadre de l'exploration de données. Cet algorithme est évolutif et peut analyser plusieurs variables, mais il requiert le tri des variables utilisées comme entrée. Pour plus d’informations, consultez la documentation [Learning Bayesian Networks](http://go.microsoft.com/fwlink/?LinkId=105885) de Chickering, Geiger et Heckerman.  
+ Développé par Cooper et Herskovits, l'algorithme K2 pour l'apprentissage à partir d'un réseau bayésien est couramment employé dans le cadre de l'exploration de données. Cet algorithme est évolutif et peut analyser plusieurs variables, mais il requiert le tri des variables utilisées comme entrée. Pour plus d’informations, consultez la documentation [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885) de Chickering, Geiger et Heckerman.  
   
  Cette méthode de calcul de score est disponible pour les attributs discrets et discrétisés.  
   
@@ -99,10 +99,10 @@ ms.locfileid: "48067919"
   
  L'équivalent bayésien de Dirichlet avec a priori uniforme (BDEU) suppose un cas spécial de la distribution de Dirichlet dans laquelle une constante mathématique est utilisée pour créer une distribution fixe ou uniforme d'états antérieurs. Le score BDE suppose aussi l'équivalence de vraisemblance, ce qui signifie que les données ne sont pas censées faire la distinction entre des structures équivalentes. En d’autres termes, si le score pour If A Then B est le même que le score pour If B Then A, les structures ne peuvent pas être différenciées sur la base des données, et la causalité ne peut pas être déduite.  
   
- Pour plus d’informations sur les réseaux bayésiens et l’implémentation de ces méthodes de calcul de scores, consultez la documentation [Learning Bayesian Networks](http://go.microsoft.com/fwlink/?LinkId=105885).  
+ Pour plus d’informations sur les réseaux bayésiens et l’implémentation de ces méthodes de calcul de scores, consultez la documentation [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885).  
   
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Méthodes de sélection des fonctionnalités utilisées par les algorithmes Analysis Services  
- Le tableau suivant répertorie les algorithmes qui prennent en charge la sélection des fonctionnalités, les méthodes de sélection des fonctionnalités utilisées par l'algorithme et les paramètres à définir pour contrôler le comportement de la sélection des fonctionnalités :  
+ Le tableau suivant répertorie les algorithmes qui prennent en charge la sélection des fonctionnalités, les méthodes de sélection des fonctionnalités utilisées par l'algorithme et les paramètres à définir pour contrôler le comportement de la sélection des fonctionnalités :  
   
 |Algorithme|Méthode d'analyse|Commentaires|  
 |---------------|------------------------|--------------|  
@@ -130,6 +130,6 @@ ms.locfileid: "48067919"
  En plus de ces méthodes de sélection des fonctionnalités, vous pouvez améliorer la capacité de l’algorithme à identifier ou promouvoir des attributs explicites en définissant des *indicateurs de modélisation* sur le modèle ou en définissant des *indicateurs de distribution* sur la structure. Pour plus d’informations sur ces concepts, consultez [Indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md) et [Distributions de colonnes &#40;exploration de données&#41;](column-distributions-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Personnaliser les modèles et les structures d’exploration de données](customize-mining-models-and-structure.md)  
+ [Personnaliser les modèles et les structures d'exploration de données](customize-mining-models-and-structure.md)  
   
   

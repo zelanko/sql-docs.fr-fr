@@ -16,12 +16,12 @@ ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df78a4890658ec83a62eeccbce23d891d5afc56d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812101"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206205"
 ---
 # <a name="interface-conformance-levels"></a>Niveaux de conformité de l’interface
 L’objectif de l’audit consiste à informer l’application quelles fonctionnalités sont disponibles à ce dernier à partir du pilote. Un schéma audit basé sur les fonctions ne pas suffisamment à atteindre cet objectif. Dans ODBC 3. *x*, pilotes sont classées selon les fonctionnalités qu’ils possèdent. Prise en charge la fonctionnalité peut inclure la prise en charge de la fonction ; Il peut également inclure la prise en charge d’un champ de descripteur, un attribut d’instruction, une valeur « Y » pour un type d’informations retourné par **SQLGetInfo**, et ainsi de suite.  
@@ -36,7 +36,7 @@ L’objectif de l’audit consiste à informer l’application quelles fonctionn
   
  Il existe trois niveaux de conformité d’interface ODBC : Core, niveau 1 et niveau 2.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Ces niveaux de conformité des exigences différentes que les niveaux de conformité ODBC API du même nom dans ODBC 2 *.x*. En particulier, toutes les fonctionnalités implicitement par ODBC 2 *.x* conformité API niveau 1 font désormais partie du niveau de la conformité de l’interface Core. Par conséquent, de nombreux pilotes ODBC peuvent signaler de conformité de l’interface au niveau du noyau.  
   
  Cette section contient les rubriques suivantes.  

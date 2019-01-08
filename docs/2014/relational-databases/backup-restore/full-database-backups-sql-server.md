@@ -19,12 +19,12 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1b08652d94022aaad7219483e1d638e2e7686411
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bad28d9b10d09cbf08e3568d9f994c7d5b84dfda
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131199"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205378"
 ---
 # <a name="full-database-backups-sql-server"></a>Sauvegardes complètes de bases de données (SQL Server)
   Une sauvegarde complète de base de données permet de sauvegarder l'intégralité d'une base de données. Ce type de sauvegarde comprend une partie du journal des transactions afin que toute la base de données puisse être récupérée après la restauration d'une sauvegarde complète de la base de données. Les sauvegardes complètes de base de données représentent la base de données à l'issue de l'opération de sauvegarde.  
@@ -50,7 +50,7 @@ ms.locfileid: "48131199"
   
  ![Affiche le risque de perte du travail entre les sauvegardes de base de données](../../database-engine/media/bnr-rmsimple-1-fulldb-backups.gif "Affiche le risque de perte du travail entre les sauvegardes de base de données")  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>Exemple ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>Exemple ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  L'exemple ci-dessous illustre la création d'une sauvegarde complète de base de données à l'aide de WITH FORMAT afin de remplacer les sauvegardes existantes et créer un jeu de supports.  
   
 ```  
@@ -68,7 +68,7 @@ GO
   
  Pour plus d’informations sur la façon de créer des sauvegardes de journaux, consultez [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>Exemple ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>Exemple ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  L'exemple ci-dessous illustre la création d'une sauvegarde complète de base de données à l'aide de WITH FORMAT afin de remplacer les sauvegardes existantes et créer un jeu de supports. Puis, l'exemple sauvegarde le journal des transactions. Dans la réalité, vous seriez amené à effectuer une série de sauvegardes de fichier journal normales. Dans le cadre de cet exemple, l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est défini pour utiliser le mode de récupération complète.  
   
 ```  

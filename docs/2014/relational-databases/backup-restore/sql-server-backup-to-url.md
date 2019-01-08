@@ -10,12 +10,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8f91a410e5c1c6e16a6fc3e1da26f89893ac261b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3911ab34a01b2da971aa602df37c8c559ed6390
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065119"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359291"
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
   Cette rubrique présente les concepts, la configuration requise et les composants nécessaires pour utiliser le service de stockage d'objets blob Windows Azure comme destination de sauvegarde. Les fonctionnalités de sauvegarde et de restauration sont identiques ou similaires à l'utilisation de l'option DISK ou TAPE, à quelques différences près. Les différences, les exceptions notables et des exemples de code sont inclus dans cette rubrique.  
@@ -52,46 +52,46 @@ ms.locfileid: "48065119"
 -   Le compte d’utilisateur utilisé pour émettre les commandes BACKUP (sauvegarder) ou RESTORE (restaurer) doit figurer dans le rôle de base de données **db_backup operator** avec les autorisations **Modifier des informations d’identification** .  
   
 ###  <a name="intorkeyconcepts"></a> Présentation des principaux éléments et concepts  
- Les deux sections suivantes présentent le service de stockage Blob Windows Azure et le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants utilisés lors de la sauvegarde ou de restauration à partir du service de stockage d’objets Blob Windows Azure. Il est important de comprendre les composants et leur interaction pour effectuer une sauvegarde ou une restauration vers ou depuis le service de stockage d'objets blob Windows Azure.  
+ Les deux sections suivantes présentent le service de stockage d'objets blob Windows Azure, ainsi que les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisés lors de la sauvegarde vers ou la restauration depuis le service de stockage d'objets blob Windows Azure. Il est important de comprendre les composants et leur interaction pour effectuer une sauvegarde ou une restauration vers ou depuis le service de stockage d'objets blob Windows Azure.  
   
- La création d'un compte Windows Azure est la première étape de ce processus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise le **nom de compte de stockage Windows Azure** et son **clé d’accès** valeurs pour authentifier et écrire et lire les objets BLOB pour le service de stockage. Les informations d'identification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stockent ces informations et sont utilisées lors des opérations de sauvegarde ou de restauration. Pour connaître la procédure détaillée de création d'un compte de stockage et la procédure de restauration de base, consultez le [Didacticiel sur l'utilisation du service de stockage Windows Azure pour la sauvegarde et la restauration de SQL Server](http://go.microsoft.com/fwlink/?LinkId=271615).  
+ La création d'un compte Windows Azure est la première étape de ce processus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise le **nom de compte de stockage Windows Azure** et son **clé d’accès** valeurs pour authentifier et écrire et lire les objets BLOB pour le service de stockage. Les informations d'identification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stockent ces informations et sont utilisées lors des opérations de sauvegarde ou de restauration. Pour connaître la procédure détaillée de création d'un compte de stockage et la procédure de restauration de base, consultez le [Didacticiel sur l'utilisation du service de stockage Windows Azure pour la sauvegarde et la restauration de SQL Server](https://go.microsoft.com/fwlink/?LinkId=271615).  
   
  ![mappage de compte de stockage des informations d’identification sql](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "mappage du compte de stockage des informations d’identification sql")  
   
 ###  <a name="Blob"></a> Service de stockage Windows Azure Blob  
- **Compte de stockage :** le compte de stockage constitue le point de départ de tous les services de stockage. Pour accéder au service de stockage d'objets blob Windows Azure, commencez par créer un compte de stockage Windows Azure. Le **storage account name** et ses propriétés de **access key** sont requis pour s'authentifier auprès du service de stockage d'objets blob Windows Azure et de ses composants.  
+ **Compte de stockage :** le compte de stockage constitue le point de départ de tous les services de stockage. Pour accéder au service de stockage d'objets blob Windows Azure, commencez par créer un compte de stockage Windows Azure. Le **storage account name** et ses propriétés de **access key** sont requis pour s'authentifier auprès du service de stockage d'objets blob Windows Azure et de ses composants.  
   
- **Conteneur :** un conteneur regroupe un ensemble d'objets blob et peut stocker un nombre illimité d'objets blob. Pour écrire une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le service d'objets blob Windows Azure, vous devez avoir créé au moins le conteneur racine.  
+ **Conteneur :** un conteneur regroupe un ensemble d'objets blob et peut stocker un nombre illimité d'objets blob. Pour écrire une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le service d'objets blob Windows Azure, vous devez avoir créé au moins le conteneur racine.  
   
- **Objet blob :** fichier de tout type et de toute taille. Il existe deux types d'objets blob qui peuvent être enregistrés dans le service de stockage d'objets blob Windows Azure : les objets blob de blocs et les objets blob de pages. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la sauvegarde utilise des objets BLOB de pages en tant que type d’objet Blob. Objets BLOB est adressables en utilisant le format d’URL suivant : https://\<compte de stockage >.blob.core.windows.net/\<conteneur > /\<blob >  
+ **Objet BLOB :** fichier de tout type et de toute taille. Il existe deux types d'objets blob qui peuvent être enregistrés dans le service de stockage d'objets blob Windows Azure : les objets blob de blocs et les objets blob de pages. La sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des objets blob de pages en tant que type d'objet blob. Objets BLOB est adressables en utilisant le format d’URL suivant : https://\<compte de stockage >.blob.core.windows.net/\<conteneur > /\<blob >  
   
  ![Stockage Blob Azure](../../database-engine/media/backuptocloud-blobarchitecture.gif "Stockage Blob Azure")  
   
  Pour plus d'informations sur le service de stockage d'objets blob Windows Azure, consultez [Procédure d'utilisation du service de stockage d'objets blob Windows Azure](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).  
   
- Pour plus d'informations sur les objets blob de pages, consultez [Objets blob de blocs et objets blob de pages](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx).  
+ Pour plus d'informations sur les objets blob de pages, consultez [Objets blob de blocs et objets blob de pages](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx).  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
- **URL :** une URL spécifie un URI (Uniform Resource Identifier) vers un fichier de sauvegarde unique. L'URL est utilisée pour indiquer l'emplacement et le nom du fichier de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dans cette implémentation, la seule URL valide est celle qui pointe vers un objet blob de pages dans un compte de stockage Windows Azure. L'URL doit pointer vers un objet blob réel et pas un simple conteneur. Si l'objet blob n'existe pas, il est créé. Si un objet blob existant est spécifié, l'instruction BACKUP échoue, à moins que l'option « WITH FORMAT » ne soit spécifiée.  
+ **URL :** une URL spécifie un URI (Uniform Resource Identifier) pour un fichier de sauvegarde unique. L'URL est utilisée pour indiquer l'emplacement et le nom du fichier de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dans cette implémentation, la seule URL valide est celle qui pointe vers un objet blob de pages dans un compte de stockage Windows Azure. L'URL doit pointer vers un objet blob réel et pas un simple conteneur. Si l'objet blob n'existe pas, il est créé. Si un objet Blob existant est spécifié, la sauvegarde échoue, sauf si l’option « WITH FORMAT » est spécifiée.  
   
 > [!WARNING]  
 >  Si vous choisissez de copier et télécharger un fichier de sauvegarde dans le service de stockage d'objets blob Windows Azure, utilisez un objet blob de pages comme option de stockage. Les restaurations à partir d'objets blob de blocs ne sont pas prises en charge. Une restauration à partir d'un type d'objet blob de blocs échoue avec une erreur.  
   
  Voici un exemple de valeur d’URL : http[s]://ACCOUNTNAME.Blob.Core.Windows.NET/\<conteneur > /\<nomfichier.bak >. HTTPS n'est pas obligatoire, mais est recommandé.  
   
- **Informations d'identification :** les informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont des objets utilisés pour stocker les informations d'authentification requises pour la connexion à une ressource en dehors de SQL Server.  Ici, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processus de sauvegarde et restauration utilisent les informations d’identification pour s’authentifier sur le service de stockage d’objets Blob Windows Azure. Les informations d'identification contiennent le nom du compte de stockage et ses valeurs de **clé d'accès** . Une fois les informations d'identification créées, vous devez les spécifier dans l'option WITH CREDENTIAL lorsque vous publiez des instructions BACKUP/RESTORE. Pour plus d'informations sur l'affichage, la copie ou la régénération des **access keys**de compte de stockage, consultez [Afficher, copier et régénérer les clés d'accès d'un compte de stockage Windows Azure](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+ **Informations d’identification :** Les informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont des objets utilisés pour stocker les informations d'authentification requises pour la connexion à une ressource en dehors de SQL Server.  Ici, les processus de sauvegarde et de restauration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent les informations d'identification pour authentifier le service de stockage d'objets Blob de Windows Azure. Les informations d'identification contiennent le nom du compte de stockage et ses valeurs de **clé d'accès** . Une fois les informations d'identification créées, vous devez les spécifier dans l'option WITH CREDENTIAL lorsque vous publiez des instructions BACKUP/RESTORE. Pour plus d'informations sur l'affichage, la copie ou la régénération des **access keys**de compte de stockage, consultez [Afficher, copier et régénérer les clés d'accès d'un compte de stockage Windows Azure](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
- Pour obtenir des instructions étape par étape sur la création d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informations d’identification, consultez [créer une information d’identification](#credential) exemple plus loin dans cette rubrique.  
+ Pour obtenir des instructions détaillées sur la création d'informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez l'exemple [Create a Credential](#credential) plus loin dans cette rubrique.  
   
- Pour plus d’informations sur les informations d’identification en général, consultez [Informations d’identification](../security/authentication-access/credentials-database-engine.md).  
+ Pour plus d'informations sur les informations d'identification en général, consultez [Informations d'identification](../security/authentication-access/credentials-database-engine.md).  
   
- Pour plus d’informations sur d’autres exemples où les informations d’identification sont utilisées, consultez [créer un Proxy de l’Agent SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+ Pour obtenir plus d'informations et d'autres exemples d'utilisation des informations d'identification, consultez [Créer un proxy de SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 ###  <a name="limitations"></a> Limitations  
   
 -   La sauvegarde dans le stockage Premium n’est pas prise en charge.  
   
--   La taille de sauvegarde maximale prise en charge est de 1 To.  
+-   La taille de sauvegarde maximale prise en charge est de 1 To.  
   
 -   Publiez des instructions de sauvegarde ou de restauration à l'aide de TSQL, de SMO ou d'applets de commande PowerShell. La sauvegarde vers ou la restauration depuis le service de stockage d'objets blob Windows Azure à l'aide de l'Assistant de sauvegarde ou de restauration SQL Server Management Studio ne sont pas disponibles actuellement.  
   
@@ -111,26 +111,26 @@ ms.locfileid: "48065119"
   
     ```  
   
--   Spécification d’une taille de bloc avec `BACKUP` n’est pas pris en charge.  
+-   La spécification d'une taille de bloc avec `BACKUP` n'est pas prise en charge.  
   
 -   La spécification de `MAXTRANSFERSIZE` n'est pas prise en charge.  
   
 -   La spécification des options backupset `RETAINDAYS` et `EXPIREDATE` n'est pas prise en charge.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est soumis à une limite de 259 caractères pour le nom d'une unité de sauvegarde. BACKUP TO URL utilise 36 caractères pour les éléments requis utilisés pour spécifier l’URL « https://.blob.core.windows.net//.bak », ce qui laisse 223 caractères pour les noms de compte, de conteneur et d’objet blob réunis.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est soumis à une limite de 259 caractères pour le nom d'une unité de sauvegarde. BACKUP TO URL utilise 36 caractères pour les éléments requis utilisés pour spécifier l’URL « https://.blob.core.windows.net//.bak », ce qui laisse 223 caractères pour les noms de compte, de conteneur et d’objet blob réunis.  
   
 ###  <a name="Support"></a> Prise en charge des instructions de sauvegarde/restauration  
   
 |||||  
 |-|-|-|-|  
 |Instruction de sauvegarde/restauration|Pris en charge|Exceptions|Commentaires|  
-|BACKUP|√|BLOCKSIZE et MAXTRANSFERSIZE ne sont pas prises en charge.|Requiert la spécification de WITH CREDENTIAL|  
-|RESTORE|√||Requiert la spécification de WITH CREDENTIAL|  
-|RESTORE FILELISTONLY|√||Requiert la spécification de WITH CREDENTIAL|  
-|RESTORE HEADERONLY|√||Requiert la spécification de WITH CREDENTIAL|  
-|RESTORE LABELONLY|√||Requiert la spécification de WITH CREDENTIAL|  
-|RESTORE VERIFYONLY|√||Requiert la spécification de WITH CREDENTIAL|  
-|RESTORE REWINDONLY|−|||  
+|BACKUP|???|BLOCKSIZE et MAXTRANSFERSIZE ne sont pas prises en charge.|Requiert la spécification de WITH CREDENTIAL|  
+|RESTORE|???||Requiert la spécification de WITH CREDENTIAL|  
+|RESTORE FILELISTONLY|???||Requiert la spécification de WITH CREDENTIAL|  
+|RESTORE HEADERONLY|???||Requiert la spécification de WITH CREDENTIAL|  
+|RESTORE LABELONLY|???||Requiert la spécification de WITH CREDENTIAL|  
+|RESTORE VERIFYONLY|???||Requiert la spécification de WITH CREDENTIAL|  
+|RESTORE REWINDONLY|???|||  
   
  Pour plus d’informations sur la syntaxe et les instructions de sauvegarde, consultez [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -141,34 +141,34 @@ ms.locfileid: "48065119"
 |||||  
 |-|-|-|-|  
 |Argument|Pris en charge|Exception|Commentaires|  
-|DATABASE|√|||  
-|LOG|√|||  
+|DATABASE|???|||  
+|LOG|???|||  
 ||  
-|TO (URL)|√|Contrairement à DISK et TAPE, URL ne prend pas en charge la spécification ou la création d'un nom logique.|Cet argument est utilisé pour spécifier le chemin d'accès de l'URL du fichier de sauvegarde.|  
-|MIRROR TO|−|||  
+|TO (URL)|???|Contrairement à DISK et TAPE, URL ne prend pas en charge la spécification ou la création d'un nom logique.|Cet argument est utilisé pour spécifier le chemin d'accès de l'URL du fichier de sauvegarde.|  
+|MIRROR TO|???|||  
 |**WITH OPTIONS :**||||  
-|CREDENTIAL|√||WITH CREDENTIAL est pris en charge uniquement en cas d'utilisation de l'option BACKUP TO URL pour une sauvegarde dans le service de stockage d'objets blob Windows Azure.|  
-|DIFFERENTIAL|√|||  
-|COPY_ONLY|√|||  
-|COMPRESSION&#124;NO_COMPRESSION|√|||  
-|DESCRIPTION|√|||  
-|NAME|√|||  
-|EXPIREDATE &#124; RETAINDAYS|−|||  
-|NOINIT &#124; INIT|−||Cette option est ignorée si elle est utilisée.<br /><br /> L'ajout aux objets blob n'est pas possible. Pour remplacer une sauvegarde, utilisez l'argument FORMAT.|  
-|NOSKIP &#124; SKIP|−|||  
-|NOFORMAT &#124; FORMAT|√||Cette option est ignorée si elle est utilisée.<br /><br /> Une sauvegarde effectuée sur un objet blob existant échoue à moins que WITH FORMAT ne soit spécifié. L'objet blob existant est remplacé lorsque WITH FORMAT est spécifié.|  
-|MEDIADESCRIPTION|√|||  
-|MEDIANAME|√|||  
-|BLOCKSIZE|−|||  
-|BUFFERCOUNT|√|||  
-|MAXTRANSFERSIZE|−|||  
-|NO_CHECKSUM &#124; CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|STATS|√|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
-|NORECOVERY &#124; STANDBY|√|||  
-|NO_TRUNCATE|√|||  
+|CREDENTIAL|???||WITH CREDENTIAL est pris en charge uniquement en cas d'utilisation de l'option BACKUP TO URL pour une sauvegarde dans le service de stockage d'objets blob Windows Azure.|  
+|DIFFERENTIAL|???|||  
+|COPY_ONLY|???|||  
+|COMPRESSION&#124;NO_COMPRESSION|???|||  
+|DESCRIPTION|???|||  
+|NAME|???|||  
+|EXPIREDATE &#124; RETAINDAYS|???|||  
+|NOINIT &#124; INIT|???||Cette option est ignorée si elle est utilisée.<br /><br /> L'ajout aux objets blob n'est pas possible. Pour remplacer une sauvegarde, utilisez l'argument FORMAT.|  
+|NOSKIP &#124; SKIP|???|||  
+|NOFORMAT &#124; FORMAT|???||Cette option est ignorée si elle est utilisée.<br /><br /> Une sauvegarde effectuée sur un objet blob existant échoue à moins que WITH FORMAT ne soit spécifié. L'objet blob existant est remplacé lorsque WITH FORMAT est spécifié.|  
+|MEDIADESCRIPTION|???|||  
+|MEDIANAME|???|||  
+|BLOCKSIZE|???|||  
+|BUFFERCOUNT|???|||  
+|MAXTRANSFERSIZE|???|||  
+|NO_CHECKSUM &#124; CHECKSUM|???|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|???|||  
+|STATS|???|||  
+|REWIND &#124; NOREWIND|???|||  
+|UNLOAD &#124; NOUNLOAD|???|||  
+|NORECOVERY &#124; STANDBY|???|||  
+|NO_TRUNCATE|???|||  
   
  Pour plus d’informations sur les arguments de Backup, consultez [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -177,35 +177,35 @@ ms.locfileid: "48065119"
 |||||  
 |-|-|-|-|  
 |Argument|Pris en charge|Exceptions|Commentaires|  
-|DATABASE|√|||  
-|LOG|√|||  
-|FROM (URL)|√||L'argument FROM URL est utilisé pour spécifier le chemin d'accès de l'URL du fichier de sauvegarde.|  
+|DATABASE|???|||  
+|LOG|???|||  
+|FROM (URL)|???||L'argument FROM URL est utilisé pour spécifier le chemin d'accès de l'URL du fichier de sauvegarde.|  
 |**WITH Options:**||||  
-|CREDENTIAL|√||WITH CREDENTIAL est pris en charge uniquement en cas d'utilisation de l'option RESTORE FROM URL pour une restauration depuis le service de stockage d'objets blob Windows Azure.|  
-|PARTIAL|√|||  
-|RECOVERY &#124; NORECOVERY &#124; STANDBY|√|||  
-|LOADHISTORY|√|||  
-|MOVE|√|||  
-|REPLACE|√|||  
-|RESTART|√|||  
-|RESTRICTED_USER|√|||  
-|FILE|−|||  
-|PASSWORD|√|||  
-|MEDIANAME|√|||  
-|MEDIAPASSWORD|√|||  
-|BLOCKSIZE|√|||  
-|BUFFERCOUNT|−|||  
-|MAXTRANSFERSIZE|−|||  
-|CHECKSUM &#124; NO_CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|FILESTREAM|√|||  
-|STATS|√|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
-|KEEP_REPLICATION|√|||  
-|KEEP_CDC|√|||  
-|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|√|||  
-|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|√|||  
+|CREDENTIAL|???||WITH CREDENTIAL est pris en charge uniquement en cas d'utilisation de l'option RESTORE FROM URL pour une restauration depuis le service de stockage d'objets blob Windows Azure.|  
+|PARTIAL|???|||  
+|RECOVERY &#124; NORECOVERY &#124; STANDBY|???|||  
+|LOADHISTORY|???|||  
+|MOVE|???|||  
+|REPLACE|???|||  
+|RESTART|???|||  
+|RESTRICTED_USER|???|||  
+|FILE|???|||  
+|PASSWORD|???|||  
+|MEDIANAME|???|||  
+|MEDIAPASSWORD|???|||  
+|BLOCKSIZE|???|||  
+|BUFFERCOUNT|???|||  
+|MAXTRANSFERSIZE|???|||  
+|CHECKSUM &#124; NO_CHECKSUM|???|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|???|||  
+|FILESTREAM|???|||  
+|STATS|???|||  
+|REWIND &#124; NOREWIND|???|||  
+|UNLOAD &#124; NOUNLOAD|???|||  
+|KEEP_REPLICATION|???|||  
+|KEEP_CDC|???|||  
+|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|???|||  
+|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|???|||  
   
  Pour plus d’informations sur les arguments de Restore, consultez [Arguments RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
@@ -218,18 +218,18 @@ ms.locfileid: "48065119"
   
 2.  Sur la page Général, l'option **URL** permet de créer une sauvegarde dans le stockage Windows Azure. Lorsque vous sélectionnez cette option, les autres options activées sur cette page s'affichent :  
   
-    1.  **Nom du fichier :** nom du fichier de sauvegarde.  
+    1.  **Nom de fichier :** Nom du fichier de sauvegarde.  
   
-    2.  **Informations d'identification SQL :** spécifiez des informations d'identification SQL Server existantes, ou pour en créer des nouvelles, cliquez sur **Créer** à côté de la zone Informations d'identification SQL.  
+    2.  **Informations d’identification SQL :** Vous pouvez spécifier une information d’identification de serveur SQL existant ou que vous pouvez créer un nouveau en cliquant sur le **créer** en regard de la zone informations d’identification SQL.  
   
         > [!IMPORTANT]  
-        >  La boîte de dialogue qui s'ouvre lorsque vous cliquez sur **Créer** requiert un certificat de gestion ou le profil de publication de l'abonnement. SQL Server prend actuellement en charge la version 2.0 du profil de publication. Pour télécharger la version prise en charge du profil de publication, consultez [Télécharger le profil de publication 2.0](http://go.microsoft.com/fwlink/?LinkId=396421).  
+        >  La boîte de dialogue qui s'ouvre lorsque vous cliquez sur **Créer** requiert un certificat de gestion ou le profil de publication de l'abonnement. SQL Server prend actuellement en charge la version 2.0 du profil de publication. Pour télécharger la version prise en charge du profil de publication, consultez [Télécharger le profil de publication 2.0](https://go.microsoft.com/fwlink/?LinkId=396421).  
         >   
         >  Si vous n'avez pas accès au certificat de gestion ou au profil de publication, vous pouvez créer des informations d'identification SQL en spécifiant le nom du compte de stockage et les informations de clé d'accès à l'aide de Transact-SQL ou de SQL Server Management Studio. Consultez l'exemple de code dans la section [Créer des informations d'identification](#credential) pour créer des informations d'identification à l'aide de Transact-SQL. Vous pouvez également utiliser SQL Server Management Studio, depuis l'instance du moteur de base de données, et cliquer avec le bouton droit sur **Sécurité**, puis sélectionner **Nouveau**, puis **Informations d'identification**. Spécifiez le nom du compte de stockage pour **Identité** et la clé d'accès dans le champ **Mot de passe** .  
   
-    3.  **Conteneur de stockage Windows Azure :** nom du conteneur de stockage Windows Azure pour stocker les fichiers de sauvegarde.  
+    3.  **Conteneur de stockage Azure :** nom du conteneur de stockage Windows Azure pour stocker les fichiers de sauvegarde.  
   
-    4.  **Préfixe d'URL :** ce préfixe est généré automatiquement en utilisant les informations spécifiées dans les champs décrits dans les étapes précédentes. Si vous modifiez manuellement cette valeur, assurez-vous qu'elle correspond aux autres informations spécifiées précédemment. Par exemple, si vous modifiez l'URL de stockage, vérifiez que les informations d'identification SQL sont définies pour l'authentification auprès du même compte de stockage.  
+    4.  **Préfixe d'URL** ce préfixe est généré automatiquement en utilisant les informations spécifiées dans les champs décrits dans les étapes précédentes. Si vous modifiez manuellement cette valeur, assurez-vous qu'elle correspond aux autres informations spécifiées précédemment. Par exemple, si vous modifiez l'URL de stockage, vérifiez que les informations d'identification SQL sont définies pour l'authentification auprès du même compte de stockage.  
   
  Lorsque vous sélectionnez l'URL comme destination, certaines options de la page **Options de support** sont désactivées.  Les rubriques suivantes contiennent d'autres informations sur la boîte de dialogue Sauvegarder la base de données :  
   
@@ -242,7 +242,7 @@ ms.locfileid: "48065119"
  [Créer des informations d'identification - Authentification dans le stockage Azure](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> Sauvegarde SQL Server vers une URL à l'aide de l'Assistant Plan de maintenance  
- Comme pour la tâche de sauvegarde décrite précédemment, l'Assistant Plan de maintenance dans SQL Server Management Studio a été amélioré avec l'ajout de l'option **URL** aux options de destination, et d'autres objets de prise en charge nécessaires pour la sauvegarde dans le stockage Windows Azure, comme les informations d'identification SQL. Pour plus d’informations, consultez le **définir les tâches de sauvegarde** section [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
+ Comme pour la tâche de sauvegarde décrite précédemment, l'Assistant Plan de maintenance dans SQL Server Management Studio a été amélioré avec l'ajout de l'option **URL** aux options de destination, et d'autres objets de prise en charge nécessaires pour la sauvegarde dans le stockage Windows Azure, comme les informations d'identification SQL. Pour plus d'informations, consultez la section **Définir les tâches de sauvegarde** dans [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
   
 ##  <a name="RestoreSSMS"></a> Restauration à partir de stockage Windows Azure en utilisant SQL Server Management Studio  
  Si vous restaurez une base de données, l'option **URL** est incluse en tant qu'unité à partir de laquelle la restauration doit être effectuée. Les étapes suivantes décrivent des modifications de la tâche de restauration pour autoriser la restauration à partir du stockage Windows Azure :  
@@ -877,6 +877,6 @@ ms.locfileid: "48065119"
 ## <a name="see-also"></a>Voir aussi  
  [Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
- [Didacticiel : Sauvegarde et restauration SQL Server dans le service de stockage d'objets blob Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [Didacticiel : SQL Server Backup and Restore au Service de stockage Windows Azure Blob](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4158fd290b2a64ddf7e8f3a8fc9b566dd5602d4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4742d65ca25ecf656e442d03e1925cbe1bb518
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704367"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591780"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@objname=** ] **'***table***'**  
+ [  **@objname=** ] **'**_table_**'**  
  Table sur laquelle sont renvoyées les informations concernant les contraintes. La table spécifiée doit être locale par rapport à la base de données active. *table* est **nvarchar(776)**, sans valeur par défaut.  
   
- [  **@nomsg=**] **'***pas_de_message***'**  
+ [  **@nomsg=**] **'**_pas_de_message_**'**  
  Paramètre facultatif qui permet l'impression du nom de la table. *pas_de_message* est **varchar (5)**, avec une valeur par défaut **msg**. **nomsg** supprime l’impression.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -55,9 +55,9 @@ sp_helpconstraint [ @objname = ] 'table'
  **sp_helpconstraint** affiche une colonne indexée décroissante si elle est impliquée dans les clés primaires. Une colonne indexée descendante sera listée dans le jeu de résultats avec un signe moins (-) derrière son nom. Une colonne indexée ascendante (valeur par défaut) sera listée sous son seul nom.  
   
 ## <a name="remarks"></a>Notes  
- L’exécution de **sp_help *** table* toutes les informations sur la table spécifiée. Pour afficher uniquement les informations de contrainte, utilisez **sp_helpconstraint**.  
+ L’exécution de **sp_help**_table_ toutes les informations sur la table spécifiée. Pour afficher uniquement les informations de contrainte, utilisez **sp_helpconstraint**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

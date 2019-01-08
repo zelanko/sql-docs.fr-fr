@@ -1,30 +1,29 @@
 ---
-title: Change Data Capture Service pour Oracle d’Attunity | Microsoft Docs
+title: Service de capture de données modifiées pour Oracle par Attunity | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53eecca1c854e13c2302bf65814b1bc77259d2ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c8f07589862a78acf5716ec45635aebe7e370a0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154331"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769171"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Service de capture de données modifiées pour Oracle par Attunity
   Le service de capture de données modifiées pour Oracle est un service Windows qui analyse les journaux des transactions Oracle et capture les modifications des tables d'intérêt dans des tables de modifications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les tables de modifications SQL dans lesquelles les modifications capturées à partir d'Oracle sont stockées sont du même type que les tables de modifications utilisées dans les fonctionnalités de capture de données modifiées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] natif. Cela rend la consommation de ces modifications aussi simple que la consommation des modifications apportées aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="installation"></a>Installation  
- Le service de capture de données modifiées pour Oracle peut être installé sur un ordinateur Windows pris en charge doté d’un accès à la base de données Oracle source qui est capturée et à l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible où la base de données CDC cible réside. Le service de capture de données modifiées n'a pas besoin d'une installation locale de la base de données Oracle ou de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , uniquement de leurs clients pris en charge. Pour plus d'informations sur l'emplacement d'installation des composants de base de données requis, consultez **Composants requis pour la base de données** dans cette rubrique.  
+ Le service de capture de données modifiées pour Oracle peut être installé sur un ordinateur Windows pris en charge doté d'un accès à la base de données Oracle source qui est capturée et à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible où la base de données CDC cible réside. Le service de capture de données modifiées n'a pas besoin d'une installation locale de la base de données Oracle ou de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , uniquement de leurs clients pris en charge. Pour plus d'informations sur l'emplacement d'installation des composants de base de données requis, consultez **Composants requis pour la base de données** dans cette rubrique.  
   
- L'installation du service de capture de données modifiées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Oracle place l'interface de configuration du service et le programme de service dans l'emplacement sélectionné. Le service de capture de données modifiées pour Oracle est configuré séparément à l'aide de la console de configuration du service de capture de données modifiées Oracle. Pour plus d'informations sur la configuration du service de capture de données modifiées Oracle, consultez [Aide sur le service de capture de données modifiées pour Oracle par Attunity via la touche F1](change-data-capture-service-for-oracle-by-attunity-f1-help.md).  
+ L'installation du service de capture de données modifiées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Oracle place l'interface de configuration du service et le programme de service dans l'emplacement sélectionné. Le service de capture de données modifiées pour Oracle est configuré séparément à l'aide de la console de configuration du service de capture de données modifiées Oracle. Pour plus d'informations sur la configuration du service de capture de données modifiées Oracle, consultez [Change Data Capture Service for Oracle by Attunity F1 Help](change-data-capture-service-for-oracle-by-attunity-f1-help.md).  
   
  Pour installer le service de capture de données modifiées pour Oracle, exécutez manuellement **AttunityOracleCdcService.msi** à partir du support d'installation de SQL Server. Packages d’installation pour x86 et x64 se trouvent dans **.\Tools\AttunityCDCOracle\\**  sur le support d’installation de SQL Server.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "48154331"
   
 -   Windows Server 2012  
   
--   Windows Server 2008 R2 avec Service Pack 1  
+-   Windows Server 2008 R2 avec Service Pack 1  
   
 -   Windows Server 2008 32 bits (x86) et 64 bits (x64) avec Service Pack 2  
   
@@ -77,15 +76,15 @@ ms.locfileid: "48154331"
   
 ## <a name="in-this-documentation"></a>Dans cette documentation  
   
--   [Architecture système du service CDC pour Oracle par Attunity](change-data-capture-service-for-oracle-by-attunity-system-architecture.md)  
+-   [Architecture système du service de capture de données modifiées pour Oracle par Attunity](change-data-capture-service-for-oracle-by-attunity-system-architecture.md)  
   
--   [Le service CDC Oracle](the-oracle-cdc-service.md)  
+-   [Service de capture de données modifiées Oracle](the-oracle-cdc-service.md)  
   
 -   [Aide (F1) du service CDC pour Oracle par Attunity](change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
   
--   [Guide des procédures pour le service CDC pour Oracle par Attunity](change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
+-   [Service de capture de données modifiées pour Oracle par Attunity : rubrique Procédures](change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilisation du service CDC Oracle](working-with-the-oracle-cdc-service.md)  
   
   

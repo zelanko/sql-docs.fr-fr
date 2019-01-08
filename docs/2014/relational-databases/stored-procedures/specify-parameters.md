@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87180b692a613289fa8bbd22f6d605b0aa25cf6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a173b15546db7e2ceda571e617191fe4f0e84a4e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096389"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211838"
 ---
 # <a name="specify-parameters"></a>Spécifier les paramètres
   En spécifiant les paramètres de la procédure, les programmes appelants peuvent passer des valeurs dans le corps de la procédure. Ces valeurs peuvent être utilisées à plusieurs fins pendant l'exécution de la procédure. Les paramètres de la procédure peuvent également retourner des valeurs au programme appelant si le paramètre est marqué comme paramètre OUTPUT.  
@@ -62,10 +62,10 @@ GO
   
  En nommant explicitement les paramètres et en attribuant les valeurs appropriées à chaque paramètre dans un appel de procédure, il est possible de fournir les paramètres dans n'importe quel ordre. Par exemple, si la procédure **my_proc** attend trois paramètres nommés **\@first**, **\@second** et **\@third**, les valeurs qui lui sont transmises peuvent être assignées aux noms de paramètres, par exemple : `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
-> [!NOTE]  
+> [!NOTE]
 >  Si une valeur de paramètre est fournie sous la forme **/@parameter =***value*, tous les paramètres suivants doivent être fournis de cette manière. Si les valeurs des paramètres ne sont pas transmises sous la forme **\@parameter =***value*, elles doivent être indiquées dans le même ordre (de gauche à droite) que les paramètres listés dans l’instruction CREATE PROCEDURE.  
-  
-> [!WARNING]  
+> 
+> [!WARNING]
 >  Un paramètre transmis sous la forme **\@parameter =***value*, mais mal orthographié, générera une erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et empêchera l’exécution de la procédure.  
   
 ## <a name="specifying-parameter-data-types"></a>Spécification des types de données de paramètre  

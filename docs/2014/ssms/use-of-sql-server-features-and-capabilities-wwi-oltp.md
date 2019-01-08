@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - arguments [SQL Server Management Studio]
@@ -13,19 +13,19 @@ ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b712c37d064d9eb345642272d69e599438ca4cd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208204"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812411"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments pour outils externes
   Les arguments sont des variables pour lesquelles l'environnement Studio fournit des valeurs lorsque vous lancez un outil externe à partir du menu **Outils** . Des outils externes, tels que le Bloc-notes, peuvent être ajoutés au menu **Outils** via la boîte de dialogue **Outils externes** .  
   
  Le tableau ci-dessous répertorie les arguments pour les outils externes.  
   
-|Nom   |Argument|Description|  
+|Créer une vue d’abonnement|Argument|Description|  
 |----------|--------------|-----------------|  
 |**Chemin d'accès de l'élément**|$(ItemPath)|Nom complet du fichier source en cours (sous la forme lecteur + chemin d'accès + nom du fichier) ; vide si la fenêtre active n'est pas une fenêtre source.|  
 |**Répertoire de l'élément**|$(ItemDir)|Répertoire de la source en cours (sous la forme lecteur + chemin d'accès) ; vide si la fenêtre active n'est pas une fenêtre source.|  

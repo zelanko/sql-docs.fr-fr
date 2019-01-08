@@ -1,7 +1,8 @@
 ---
-title: 'Démarrage rapide : Se connecter et interroger SQL Server à l’aide d’Azure Data Studio | Microsoft Docs'
+title: 'Démarrage rapide : Se connecter et interroger SQL Server'
+titleSuffix: Azure Data Studio
 description: Ce démarrage rapide montre comment utiliser Azure Data Studio pour vous connecter à SQL Server et exécuter une requête
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 6ad52b466c15ad81515e954cf8fa3fa5a727100f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 2b7e251440fd8b0184e36e0e41c47d2ab0dcaf18
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356090"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030283"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Démarrage rapide : Se connecter et interroger à l’aide de SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Ce démarrage rapide montre comment utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter à SQL Server, puis utiliser les instructions Transact-SQL (T-SQL) pour créer le *TutorialDB* utilisé dans [!INCLUDE[name-sos](../includes/name-sos-short.md)] didacticiels.
@@ -43,11 +44,11 @@ Si vous n’avez pas accès à un serveur SQL, sélectionnez votre plateforme pa
 1. Cet article utilise *connexion SQL*, mais *l’authentification Windows* est pris en charge. Renseignez les champs comme suit :
  
     - **Nom du serveur :** localhost
-    - **Type d’authentification :** connexion SQL  
-    - **Nom d’utilisateur :** nom d’utilisateur pour le serveur SQL Server  
-    - **Mot de passe :** mot de passe pour le serveur SQL Server  
+    - **Type d’authentification :** Connexion SQL  
+    - **Nom d’utilisateur :** Nom d’utilisateur pour le serveur SQL Server  
+    - **Mot de passe :** Mot de passe pour le serveur SQL Server  
     - **Nom de la base de données :** laissez ce champ vide 
-    - **Groupe de serveurs :** \<par défaut\>  
+    - **Groupe de serveurs :** \<Default\>  
 
    ![Nouvel écran de connexion](media/quickstart-sql-server/new-connection-screen.png)
 

@@ -11,12 +11,12 @@ ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2854a9742a7d864a73624a4676b6c0778ee182a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66d64b8a96831adb0125d7f739095199e4ad3c6a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222739"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355094"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Type de connexion Analysis Services pour MDX (SSRS)
   Pour inclure des données d’un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ce type de source de données intégré est basé sur l'extension de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Vous pouvez récupérer les métadonnées relatives aux dimensions, hiérarchies, niveaux, indicateurs de performance clés (KPI), mesures et attributs d'un cube [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] afin de les utiliser comme données de rapport.  
@@ -32,7 +32,7 @@ ms.locfileid: "48222739"
 data source=<server name>;initial catalog=<database name>  
 ```  
   
- Pour obtenir d’autres exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ Pour obtenir d’autres exemples sur les chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
   
   
@@ -47,9 +47,9 @@ data source=<server name>;initial catalog=<database name>
   
 -   Utiliser un nom d'utilisateur et un mot de passe enregistrés.  
   
--   demander à l'utilisateur des informations d'identification ; Cette option prend uniquement en charge la sécurité intégrée de Windows.  
+-   demander à l'utilisateur des informations d'identification ; Cette option prend uniquement en charge la sécurité intégrée de Windows.  
   
--   Aucune information d'identification n'est requise. Pour utiliser cette option, vous devez avoir configuré le compte d'exécution sans assistance sur le serveur de rapports. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) dans la [documentation Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) sur msdn.microsoft.com.  
+-   Aucune information d'identification n'est requise. Pour utiliser cette option, vous devez avoir configuré le compte d'exécution sans assistance sur le serveur de rapports. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) dans la [documentation Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) sur msdn.microsoft.com.  
   
  Pour plus d’informations, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) ou [spécifier les informations d’identification dans le Générateur de rapports](../specify-credentials-in-report-builder.md).  
   
@@ -72,14 +72,14 @@ data source=<server name>;initial catalog=<database name>
   
  Au moment de la conception, exécutez la requête pour afficher un jeu de résultats. Les résultats de la requête sont automatiquement récupérés comme un ensemble de lignes aplati. Les colonnes dans le jeu de résultats d'une requête remplissent la collection de champs pour un dataset. Après avoir généré la requête, affichez la collection de champs de dataset générée à partir des métadonnées dans le volet des données de rapport. Lorsque le rapport s'exécute, les données réelles sont retournées à partir de la source de données externe.  
   
- L’extension pour le traitement des données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de champ de dataset étendues. Il s'agit des valeurs disponibles dans la source de données externe mais qui ne s'affichent pas dans le volet des données de rapport. Vous pouvez utiliser les propriétés de champ étendues prises en charge par le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] extension pour le traitement des données dans votre rapport via intégrés `Fields` collection. Pour les propriétés qui possèdent des valeurs dans la source de données, vous pouvez accéder à des valeurs de propriété prédéfinies telles que `FormattedValue`, `Color` ou `UniqueName`. Pour plus d’informations, consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+ L’extension pour le traitement des données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de champ de dataset étendues. Il s'agit des valeurs disponibles dans la source de données externe mais qui ne s'affichent pas dans le volet des données de rapport. Vous pouvez utiliser les propriétés de champ étendues prises en charge par l'extension pour le traitement des données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans votre rapport par le biais de la collection `Fields` intégrée. Pour les propriétés qui possèdent des valeurs dans la source de données, vous pouvez accéder à des valeurs de propriété prédéfinies telles que `FormattedValue`, `Color` ou `UniqueName`. Pour plus d’informations, consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
   
 ##  <a name="Parameters"></a> Paramètres  
  Pour inclure les paramètres de requête, créez un filtre dans la zone de filtre du concepteur de requêtes et marquez le filtre en tant que paramètre. Pour chaque filtre, un dataset est créé automatiquement afin de fournir les valeurs disponibles. Par défaut, ces datasets n'apparaissent pas dans le volet Données du rapport. Pour plus d’informations, consultez [Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services &#40;Générateur de rapports et SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) et [Afficher des datasets masqués pour les valeurs de paramètres des données multidimensionnelles &#40;Générateur de rapports et SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
- Par défaut, chaque paramètre de rapport a le type de données **Texte**. Après avoir créé les paramètres de rapport, vous devrez peut-être modifier les valeurs par défaut. Pour plus d’informations, consultez [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Par défaut, chaque paramètre de rapport a le type de données **Texte**. Après avoir créé les paramètres de rapport, vous devrez peut-être modifier les valeurs par défaut. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
   
@@ -88,7 +88,7 @@ data source=<server name>;initial catalog=<database name>
   
  Vous pouvez également récupérer les données d’un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir du type de source de données OLE DB. Pour plus d’informations, consultez [Type de connexion OLE DB &#40;SSRS&#41;](ole-db-connection-type-ssrs.md).  
   
- Pour plus d’informations sur la prise en charge des versions, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Pour plus d’informations sur la prise en charge des versions, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
   
@@ -107,10 +107,10 @@ data source=<server name>;initial catalog=<database name>
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs de dataset générée par la requête.  
   
- [Propriétés de champ étendues pour une Analysis Services de base de données &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)  
+ [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)  
  Fournit des informations sur les champs supplémentaires disponibles via le fournisseur de données XMLA.  
   
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
   
   

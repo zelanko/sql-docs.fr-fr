@@ -14,12 +14,12 @@ ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc9f7dadf5a395c8b0973566e03d4868f82b4863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45f1479d96838ce69a7bde35cd2a2fbd9c7e684d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087912"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373861"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>L'état de synchronisation des données d'une base de données de disponibilité n'est pas sain
     
@@ -36,7 +36,7 @@ ms.locfileid: "48087912"
  Cette stratégie vérifie l'état de synchronisation des données de la base de données de disponibilité (également appelée « réplica de base de données »). La stratégie se trouve dans un état non sain lorsque l'état de synchronisation de données est NOT SYNCHRONIZING ou que l'état du réplica de base de données à validation synchrone n'est pas SYNCHRONIZED.  
   
 > [!NOTE]  
->  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], vous trouverez des informations sur les causes et les solutions possibles dans la page [L’état de synchronisation des données d’une base de données de disponibilité n’est pas sain](http://go.microsoft.com/fwlink/p/?LinkId=220863) sur le wiki TechNet.  
+>  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], vous trouverez des informations sur les causes et les solutions possibles dans la page [L’état de synchronisation des données d’une base de données de disponibilité n’est pas sain](https://go.microsoft.com/fwlink/p/?LinkId=220863) sur le wiki TechNet.  
   
 ## <a name="possible-causes"></a>Causes possibles  
  Au moins une base de données de disponibilité sur le réplica a un état de synchronisation des données non sain. S'il s'agit d'un réplica de disponibilité en validation asynchrone, toutes les bases de données de disponibilité doivent être dans l'état SYNCHRONIZING. S'il s'agit d'un réplica de disponibilité à validation synchrone, toutes les bases de données de disponibilité doivent être dans l'état SYNCHRONIZED. Ce problème peut avoir les causes suivantes :  

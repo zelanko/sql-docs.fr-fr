@@ -11,18 +11,18 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 6e3d145290ac0fb416df91c99337d0e5dc2e30a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018674"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373221"
 ---
 # <a name="spatial-indexes-overview"></a>Vue d'ensemble des index spatiaux
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les données spatiales et les index spatiaux. Un *index spatial* est un type d'index étendu qui vous permet d'indexer une colonne spatiale. Une colonne spatiale est une colonne de table qui contient des données d'un type de données spatiales, tel que `geometry` ou `geography`.  
   
 > [!IMPORTANT]  
->  Pour obtenir une description détaillée et des exemples des fonctionnalités spatiales introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], notamment les fonctionnalités qui affectent les index spatiaux, téléchargez le livre blanc [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407)(Nouvelles fonctionnalités spatiales de SQL Server 2012).  
+>  Pour obtenir une description détaillée et des exemples des fonctionnalités spatiales introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], notamment les fonctionnalités qui affectent les index spatiaux, téléchargez le livre blanc [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(Nouvelles fonctionnalités spatiales de SQL Server 2012).  
   
 ##  <a name="about"></a> À propos des index spatiaux  
   
@@ -106,7 +106,7 @@ ms.locfileid: "51018674"
 #### <a name="deepest-cell-rule"></a>Règle de cellule la plus profonde  
  La règle de cellule la plus profonde exploite le fait que chaque cellule de niveau inférieur appartient à la cellule située au-dessus d'elle : une cellule de niveau 4 appartient à une cellule de niveau 3, une cellule de niveau 3 appartient à une cellule de niveau 2 et une cellule de niveau 2 appartient à une cellule de niveau 1. Par exemple, un objet qui appartient à la cellule 1.1.1.1 appartient également à la cellule 1.1.1, à la cellule 1.1 et à la cellule 1. La connaissance de telles relations de hiérarchie de cellule est intégrée au processeur de requêtes. Par conséquent, seules les cellules les plus profondes doivent être enregistrées dans l'index, ce qui réduit la quantité d'informations que l'index doit stocker.  
   
- Dans l'illustration suivante, un polygone en losange relativement petit est pavé. L'index utilise la limite de cellules par objet par défaut de 16, qui n'est pas atteinte pour ce petit objet. Par conséquent, le pavage continue jusqu'au niveau 4. Le polygone réside dans les cellules suivantes du niveau 1 au niveau 3 : 4, 4.4 et 4.4.10 et 4.4.14. Toutefois, avec la règle de cellule la plus profonde, le pavage compte uniquement les douze cellules de niveau 4 : 4.4.10.13-15 et 4.4.14.1-3, 4.4.14.5-7 et 4.4.14.9-11.  
+ Dans l'illustration suivante, un polygone en losange relativement petit est pavé. L'index utilise la limite de cellules par objet par défaut de 16, qui n'est pas atteinte pour ce petit objet. Par conséquent, le pavage continue jusqu'au niveau 4. Le polygone réside dans les cellules du niveau 1 au niveau 3 suivantes : 4, 4.4 et 4.4.10 et 4.4.14. Toutefois, avec la règle de cellule la plus profonde, le pavage compte uniquement les douze cellules de niveau 4 : 4.4.10.13-15 et 4.4.14.1-3, 4.4.14.5-7 et 4.4.14.9-11.  
   
  ![Optimisation de la cellule la plus profonde](../../database-engine/media/spndx-opt-deepest-cell.gif "Optimisation de la cellule la plus profonde")  
   
@@ -148,7 +148,7 @@ ms.locfileid: "51018674"
   
  ![Rectangle englobant affichant les coordonnées et la cellule 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Rectangle englobant affichant les coordonnées et la cellule 0.")  
   
- Un cadre englobant correspond à une partie des données spatiales d'une application. Le fait que le cadre englobant de l'index contienne toutes les données stockées dans la colonne spatiale ou uniquement une partie d'entre elles dépend de l'application. Seules les opérations calculées sur des objets qui sont entièrement à l'intérieur de la zone englobante tirent parti de l'index spatial. Par conséquent, pour profiter au plus d'un index spatial sur une colonne `geometry`, vous devez spécifier une zone englobante qui contient tous les objets ou la plupart d'entre eux.  
+ Un cadre englobant correspond à une partie des données spatiales d'une application. Le fait que le cadre englobant de l'index contienne toutes les données stockées dans la colonne spatiale ou uniquement une partie d'entre elles dépend de l'application. Seules les opérations calculées sur des objets qui sont entièrement à l'intérieur du cadre englobant tirent parti de l'index spatial. Par conséquent, pour profiter au plus d'un index spatial sur une colonne `geometry`, vous devez spécifier une zone englobante qui contient tous les objets ou la plupart d'entre eux.  
   
 > [!NOTE]  
 >  Les densités de grille d’un index spatial sont visibles dans les colonnes bounding_box_xmin, bounding_box_ymin, bounding_box_xmax et bounding_box_ymax de l’affichage catalogue [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) .  
@@ -179,7 +179,7 @@ ms.locfileid: "51018674"
 ##  <a name="methods"></a> Méthodes prises en charge par les index spatiaux  
   
 ###  <a name="geometry"></a> Méthodes géométriques prises en charge par les index spatiaux  
- Les index spatiaux prennent en charge les méthodes géométriques suivantes basées sur les ensembles sous certaines conditions : STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() et STWithin(). Pour être prises en charge par un index spatial, ces méthodes doivent être utilisées dans la clause WHERE ou JOIN ON d'une requête et elles doivent se produire dans un prédicat de la forme générale suivante :  
+ Les index spatiaux prennent en charge les méthodes géométriques suivantes sous certaines conditions : STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() et STWithin(). Pour être prises en charge par un index spatial, ces méthodes doivent être utilisées dans la clause WHERE ou JOIN ON d'une requête et elles doivent se produire dans un prédicat de la forme générale suivante :  
   
  *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
   
@@ -204,7 +204,7 @@ ms.locfileid: "51018674"
 -   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> Méthodes géographiques prises en charge par les index spatiaux  
- Sous certaines conditions, les index spatiaux prennent en charge les méthodes géographiques suivantes basées sur les ensembles : STIntersects(),STEquals(), and STDistance(). Pour être prises en charge par un index spatial, ces méthodes doivent être utilisées dans la clause WHERE d'une requête et elles doivent se produire dans un prédicat de la forme générale suivante :  
+ Sous certaines conditions, les index spatiaux prennent en charge les méthodes géographiques suivantes : Stintersects, and STDistance(). Pour être prises en charge par un index spatial, ces méthodes doivent être utilisées dans la clause WHERE d'une requête et elles doivent se produire dans un prédicat de la forme générale suivante :  
   
  *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
   

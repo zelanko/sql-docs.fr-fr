@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -26,12 +25,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c9d0d1885413e5931f495c6eb5cd711bc0a9106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111169"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823683"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitaire ssbdiagnose (Service Broker)
   L’utilitaire **ssbdiagnose** signale des problèmes rencontrés dans des conversations [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou dans la configuration des services [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Des vérifications de configuration peuvent réalisées pour deux services ou pour un seul. Les problèmes sont signalés soit dans la fenêtre d’invite de commandes par un texte explicite, soit dans un fichier XML mis en forme qui peut être redirigé vers un fichier ou un autre programme.  
@@ -92,7 +91,7 @@ ms.locfileid: "48111169"
   [ CONNECT TO <connectionoptions> ] [ ...n]  
   
 <connectionoptions> ::=  
-    [ –E | { -Ulogin_id [ -Ppassword ] } ]  
+    [ -E | { -Ulogin_id [ -Ppassword ] } ]  
   [ -Sserver_name[\instance_name] ]  
   [ -ddatabase_name ]  
   [ -llogin_timeout ]  
@@ -157,11 +156,11 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  Demande que la configuration du dialogue soit vérifiée pour le niveau de chiffrement spécifié :  
   
- **ON**: paramètre par défaut. La sécurité de dialogue complète est configurée. Des certificats ont été déployés des deux côtés du dialogue, une liaison de service distant est présente et l'instruction GRANT SEND du service cible a spécifié l'utilisateur initiateur.  
+ **ON**: Paramètre par défaut. La sécurité de dialogue complète est configurée. Des certificats ont été déployés des deux côtés du dialogue, une liaison de service distant est présente et l'instruction GRANT SEND du service cible a spécifié l'utilisateur initiateur.  
   
- **OFF**: aucune sécurité de dialogue n’est configurée. Aucun certificat n’a été déployé, aucune liaison de service distant n’a été créée, et l’instruction GRANT SEND du service initiateur a spécifié le rôle **public** .  
+ **DÉSACTIVER**: Aucune sécurité de la boîte de dialogue est configurée. Aucun certificat n’a été déployé, aucune liaison de service distant n’a été créée, et l’instruction GRANT SEND du service initiateur a spécifié le rôle **public** .  
   
- **ANONYMOUS**: la sécurité de dialogue anonyme est configurée. Un certificat a été déployé, la liaison de service distant a spécifié la clause ANONYMOUS, et l’instruction GRANT SEND du service cible a spécifié le rôle **public** .  
+ **ANONYME**: Sécurité du dialogue anonyme est configurée. Un certificat a été déployé, la liaison de service distant a spécifié la clause ANONYMOUS, et l’instruction GRANT SEND du service cible a spécifié le rôle **public** .  
   
  **RUNTIME**  
  Demande un rapport sur les problèmes à l'origine d'erreurs d'exécution pour une conversation [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Si ni **-NEW** ni **-ID** n’est spécifiée, **ssbdiagnose** surveille toutes les conversations dans toutes les bases de données spécifiées dans les options de connexion. Si l’option **-NEW** ou **-ID** est spécifiée, **ssbdiagnose** génère la liste des ID spécifiés dans les paramètres.  
@@ -206,7 +205,7 @@ WHERE database_id = DB_ID();
  **\<runtimeconnectionoptions>**  
  Spécifie les informations de connexion pour les bases de données contenant les services associés aux éléments de conversation qui sont surveillés. Si tous les services se trouvent dans la même base de données, vous ne devez spécifier qu’une seule clause **CONNECT TO** . Si les services se trouvent dans des bases de données séparées, vous devez fournir une clause **CONNECT TO** pour chaque base de données. Si **runtimeconnectionoptions** n’est pas spécifié, **ssbdiagnose** utilise les informations de connexion de **baseconnectionoptions**.  
   
- **–E**  
+ **-E**  
  Ouvrir une connexion par le biais de l’authentification Windows à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant votre compte Windows actuel comme ID de connexion. La connexion doit être membre du rôle serveur fixe **sysadmin** .  
   
  L'option -E ignore les paramètres d'utilisateur et de mot de passe des variables d'environnement SQLCMDUSER et SQLCMDPASSWORD.  
@@ -220,9 +219,9 @@ WHERE database_id = DB_ID();
   
  Si ni l’option **-E** ni l’option **-U** n’est spécifiée, **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDUSER. Si cette variable n’est pas définie non plus, **ssbdiagnose** essaie de se connecter en utilisant le mode d’authentification Windows sur la base du compte Windows de l’utilisateur qui exécute **ssbdiagnose**.  
   
- Si l’option **-U** est utilisée avec l’option **-E** , un message d’erreur est généré. Si l’option **–U** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
+ Si l’option **-U** est utilisée avec l’option **-E** , un message d’erreur est généré. Si l’option **-U** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
   
- **-P** *mot_de_passe*  
+ **-P** *mot de passe*  
  Spécifie le mot de passe de l’ID de connexion **-U** . Les mots de passe respectent la casse. Si vous utilisez l’option **-U** mais pas l’option **-P** , **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDPASSWORD. Si cette variable n’est pas définie non plus, **ssbdiagnose** invite l’utilisateur à entrer un mot de passe.  
   
 > [!IMPORTANT]  
@@ -231,7 +230,7 @@ WHERE database_id = DB_ID();
  Si l’option **-P** est spécifiée sans mot de passe, **ssbdiagnose** utilise le mot de passe par défaut (NULL).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md).  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Pour plus d’informations, consultez [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
  L'invite de mot de passe s'affiche en imprimant l'invite de commande sur la console, comme suit : `Password:`  
   
@@ -309,7 +308,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>Variables d'environnement sqlcmd  
  L’utilitaire **ssbdiagnose** prend en charge les variables d’environnement SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD et SQLCMDLOGINTIMOUT, qui sont également utilisées par l’utilitaire **sqlcmd** . Vous pouvez définir les variables d’environnement soit en utilisant l’invite de commandes SET, soit en utilisant la commande **setvar** dans des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutés à l’aide de **sqlcmd**. Pour plus d’informations sur la façon d’utiliser **setvar** dans **sqlcmd**, consultez [Utiliser sqlcmd avec des variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Dans chaque clause **connectionoptions** , la connexion spécifiée avec l’option **-E** ou **-U** doit être un membre du rôle serveur fixe **sysadmin** dans l’instance spécifiée dans **-S**.  
   
 ## <a name="examples"></a>Exemples  
@@ -330,7 +329,7 @@ WHERE database_id = DB_ID();
 ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target  
 ```  
   
-### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>B. Vérification de la configuration de deux services sur des ordinateurs distincts qui utilisent une seule connexion  
+### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>b. Vérification de la configuration de deux services sur des ordinateurs distincts qui utilisent une seule connexion  
  L'exemple suivant montre comment demander un rapport de configuration lorsque le service initiateur et le service cible se trouvent sur des ordinateurs distincts, mais sont accessibles en utilisant la même connexion via l'authentification Windows.  
   
 ```  

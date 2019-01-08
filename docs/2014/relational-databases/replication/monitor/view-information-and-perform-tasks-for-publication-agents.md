@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], viewing information
@@ -15,12 +14,12 @@ ms.assetid: 2a420da2-66f4-4650-9bdd-1992221ed3fd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d550440b876c392fd6e9a5e129685fc8b579939
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a92f56a6a9c68d984323ba8801755f87a1eaaec7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093349"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758031"
 ---
 # <a name="view-information-and-perform-tasks-for-the-agents-associated-with-a-publication-replication-monitor"></a>Afficher des informations et effectuer des tâches pour les agents associés à une publication (moniteur de réplication)
   Le moniteur de réplication fournit l'onglet **Agents** qui contient des informations sur les agents associés à la publication sélectionnée. L’agent de distribution et l’Agent de fusion sont associés à des abonnement (pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](view-information-and-perform-tasks-for-subscription-agents.md)).  

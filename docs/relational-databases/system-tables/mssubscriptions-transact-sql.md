@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSsubscriptions_TSQL
@@ -19,12 +18,12 @@ ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22a80f913566a65596d86bd08fce9ff9c7ee1570
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b0c5d53519b09c9f30ccdf7e973e25e5a06a6a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728857"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823593"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47728857"
 |**snapshot_seqno_flag**|**bit**|Indique la source du numéro de séquence de transaction de capture instantanée, où la valeur **1** signifie que **subscription_seqno** est le numéro de séquence de capture instantanée.|  
 |**independent_agent**|**bit**|Indique s'il existe un Agent de distribution autonome pour cette publication.|  
 |**subscription_time**|**datetime**|À usage interne uniquement|  
-|**loopback_detection**|**bit**|S'applique aux abonnements qui font partie d'une topologie de réplication transactionnelle bidirectionnelle. La détection de boucle détermine si l'Agent de distribution renvoie à l'Abonné les transactions émanant de ce dernier :<br /><br /> **1** = ne pas renvoyer.<br /><br /> **0** = renvoie les transactions.<br /><br /> Remarque : Cette colonne est pris en charge uniquement pour la compatibilité descendante avec la fonctionnalité de réplication bidirectionnelle de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Pour les versions ultérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez plutôt la fonctionnalité de réplication d'égal à égal. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|**loopback_detection**|**bit**|S'applique aux abonnements qui font partie d'une topologie de réplication transactionnelle bidirectionnelle. La détection de boucle détermine si l'Agent de distribution renvoie à l'Abonné les transactions émanant de ce dernier :<br /><br /> **1** = ne pas renvoyer.<br /><br /> **0** = renvoie les transactions.<br /><br /> Remarque : Cette colonne n'est prise en charge que dans un but de compatibilité ascendante avec la fonctionnalité de réplication bidirectionnelle de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Pour les versions ultérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez plutôt la fonctionnalité de réplication d'égal à égal. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
 |**agent_id**|**Int**|ID de l'Agent.|  
 |**update_mode**|**tinyint**|Type de mise à jour.|  
 |**publisher_seqno**|**varbinary(16)**|Numéro de séquence de la transaction au niveau du serveur de publication pour cet abonnement.|  

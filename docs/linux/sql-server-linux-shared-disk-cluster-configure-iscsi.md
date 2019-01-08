@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 519289337d35ebd0cc8d59d54e624d1dfa819792
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c73a91a461f78687d390e4ef620416325e7672df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676338"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524906"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurer l’instance de cluster de basculement - iSCSI - SQL Server sur Linux
 
@@ -93,7 +93,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
 6.  Vérifier les disques iSCSI attachés
 
     ```bash
-    sudo grep “Attached SCSI” /var/log/messages
+    sudo grep "Attached SCSI" /var/log/messages
     ```
     ![30-iSCSIattachedDisks][7]
 
@@ -187,7 +187,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
    *    Supprimez les fichiers à partir du répertoire de données SQL Server existant. Vous ne recevrez pas d’accusé de réception en cas de réussite.
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    Vérifiez que les fichiers ont été supprimés. L’illustration ci-dessous montre un exemple de la séquence entière de c à h.
@@ -274,7 +274,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     mkdir <FolderName>
     ```
 
-    \<Nom_dossier > est le nom du dossier. Le chemin du dossier complet doit être spécifié s'il n'est pas au bon emplacement. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
+    \<Nom_dossier > est le nom du dossier. Chemin d’accès complet du dossier doit être spécifié sinon dans l’emplacement approprié. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -337,7 +337,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
 14. Configurez le serveur de telle sorte que seul Pacemaker puisse activer le groupe de volumes.
 
     ```bash
-    sudo lvmconf --enable-halvm --services –startstopservices
+    sudo lvmconf --enable-halvm --services -startstopservices
     ```
  
 15. Générez une liste des groupes de volumes sur le serveur. Tout élément listé qui n’est pas le disque iSCSI est utilisé par le système, comme pour le disque du système d’exploitation.
@@ -367,7 +367,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
 
 18. Redémarrez le serveur.
 
-19. Sur un autre serveur qui participe à la FCI, effectuez les étapes 1 à 6. Ceci présente la cible iSCSI au serveur SQL Server. 
+19. Sur un autre serveur qui participe à l’instance FCI, effectuez les étapes 1 - 6. Ceci présente la cible iSCSI au serveur SQL Server. 
  
 20. Générez une liste des groupes de volumes sur le serveur. Elle doit afficher le groupe de volumes créé précédemment. 
 

@@ -1,21 +1,22 @@
 ---
-title: Configurer SQL Server groupe de disponibilité AlwaysOn pour la haute disponibilité sur Linux | Microsoft Docs
-description: ''
+title: Configurer SQL Server groupe de disponibilité AlwaysOn pour la haute disponibilité sur Linux
+titleSuffix: SQL Server
+description: En savoir plus sur la création d’un SQL Server toujours sur groupe de disponibilité (AG) pour la haute disponibilité sur Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 56a61a4bc319c06becc104db0bd846871a533d1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f88178450fb5ca19e52703ad02e29d107ca562a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621077"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201958"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurer SQL Server groupe de disponibilité AlwaysOn pour la haute disponibilité sur Linux
 
@@ -177,8 +178,8 @@ Exécutez **qu’une seule** des scripts suivants :
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
       ),
-      N'node2' WITH ( 
-         ENDPOINT_URL = N'tcp://node2:5022', 
+      N'node2' WITH ( 
+         ENDPOINT_URL = N'tcp://node2:5022', 
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
@@ -210,7 +211,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->Après avoir créé le groupe de disponibilité, vous devez configurer l’intégration avec une technologie de cluster comme Pacemaker pour la haute disponibilité. Pour une configuration à l’échelle en lecture à l’aide de groupes de disponibilité, en commençant par [!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)], configuration d’un cluster n’est pas requis.
+>Après avoir créé le groupe de disponibilité, vous devez configurer l’intégration avec une technologie de cluster comme Pacemaker pour la haute disponibilité. Pour une configuration à l’échelle en lecture à l’aide de groupes de disponibilité, en commençant par [!INCLUDE [SQL Server version](../includes/sssqlv14-md.md)], configuration d’un cluster n’est pas requis.
 
 Si vous avez suivi les étapes décrites dans ce document, vous avez un groupe de disponibilité n’est pas mis en cluster. L’étape suivante consiste à ajouter le cluster. Cette configuration est valide pour les scénarios d’équilibrage de charge/mise à l’échelle en lecture, il n’est pas terminée pour la haute disponibilité. Pour la haute disponibilité, vous devez ajouter le groupe de disponibilité en tant que ressource de cluster. Consultez [étapes suivantes](#next-steps) pour obtenir des instructions. 
 

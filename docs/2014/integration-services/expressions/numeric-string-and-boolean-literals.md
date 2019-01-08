@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - string literals
@@ -18,12 +17,12 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbbb6a94a8cf3182328c5aab73897feb345109a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8555d2789c7466f65fd17d90282b164a068674c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198835"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363901"
 ---
 # <a name="literals-ssis"></a>Littéraux (SSIS)
   Les expressions peuvent contenir des littéraux numériques, booléens et de chaîne. L'évaluateur d'expression prend en charge divers littéraux numériques tels que les entiers, les décimaux et les constantes en virgule flottante. L'évaluateur d'expression prend également en charge les suffixes longs et flottants, qui spécifient comment il doit gérer les valeurs, ainsi que la notation scientifique dans les littéraux numériques.  
@@ -57,10 +56,10 @@ ms.locfileid: "48198835"
 |------------------------|-----------------|  
 |{D}+{IS}|Littéral numérique intégral avec au moins un chiffre (D) et éventuellement le suffixe long et/ou le suffixe non signé (IS).  Exemples : 457, 785u, 986L et 7945ul.|  
 |{D}+{E}{FS}|Littéral numérique non intégral avec au moins un chiffre (D), la notation scientifique et le suffixe long ou flottant.  Exemples : 4E8l, 13e-2f et 5E+L.|  
-|{D}*"."{D}+{E}?{FS}|Littéral numérique non intégral avec une décimale, une fraction décimale d'au moins un chiffre (D), un exposant facultatif (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 6.45E3f, .89E-2l et 1.05E+7F.|  
-|{D}+"."{D}*{E}?{FS}|Littéral numérique non intégral avec au moins un chiffre significatif (D), une décimale, un exposant (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 1.E-4f, 4.6E6L et 8.365E+2f.|  
+|{D}*"."{D}+{E}?{FS}|Littéral numérique non intégral avec une décimale, une fraction décimale d'au moins un chiffre (D), un exposant facultatif (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 6,45E3f, ,89E-2l et 1,05E+7F.|  
+|{D}+"."{D}*{E}?{FS}|Littéral numérique non intégral avec au moins un chiffre significatif (D), une décimale, un exposant (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 1,E-4f, 4,6E6L et 8,365E+2f.|  
 |{D}*.{D}+|Littéral numérique non intégral avec précision et échelle. Il a une décimale et une fraction décimale d'au moins un chiffre (D). Ce littéral numérique est du type de données DT_NUMERIC.  Exemples : 0,9, 5,8 et 0,346.|  
-|{D}+.{D}*|Littéral numérique non intégral avec précision et échelle. Il a au moins un chiffre significatif (D) et une décimale. Ce littéral numérique est du type de données DT_NUMERIC.  Exemples : 6,0, 0,2 et 8,0.|  
+|{D}+.{D}*|Littéral numérique non intégral avec précision et échelle. Il a au moins un chiffre significatif (D) et une décimale. Ce littéral numérique est du type de données DT_NUMERIC.  Exemples : 6,, 0,2 et 8,0.|  
 |#{D}+|Identificateur de lignage. Il est composé du signe dièse ( # ) et d'au moins un chiffre (D). Exemples : #123.|  
 |0[xX]{H}+{uU}|Littéral numérique en notation hexadécimale. Il comprend un zéro, un « x » majuscule ou minuscule, au moins un « H » majuscule et, éventuellement, le suffixe non signé. Exemples : 0xFF0A et 0X000010000U.|  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48198835"
     |UL|DT_UI8|  
   
     > [!IMPORTANT]  
-    >  Si le suffixe long (« L » ou « l ») est absent, l'évaluateur d'expression mappe les valeurs signées avec le type de données DT_I4 et les valeurs non signées avec le type de données DT_UI4, même si la valeur dépasse le type de données.  
+    >  Si le suffixe long (« L » ou « l ») est absent, l'évaluateur d'expression mappe les valeurs signées avec le type de données DT_I4 et les valeurs non signées avec le type de données DT_UI4, même si la valeur dépasse le type de données.  
   
 -   Un littéral numérique qui comprend un exposant est converti vers le type de données DT_R4 ou DT_R8. Si l'expression comprend le suffixe long, elle est convertie vers le type de données DT_R8 ; si elle comprend le suffixe flottant, elle est convertie vers le type de données DT_R4.  
   
@@ -118,6 +117,6 @@ ms.locfileid: "48198835"
 >  Dans une expression, un littéral booléen doit être délimité par des espaces.  
   
 ## <a name="related-content"></a>Contenu associé  
- Article technique, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=217683), sur pragmaticworks.com  
+ Article technique, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), sur pragmaticworks.com  
   
   

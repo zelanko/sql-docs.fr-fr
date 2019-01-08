@@ -11,19 +11,19 @@ ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2d1807caf5b5ef2687121dd465e87eb55b9fd2df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14be04840683999430fc4bd1fd65ce35ea13eb2a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056209"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355481"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Éléments requis pour les didacticiels (Générateur de rapports)
   L'utilisation des didacticiels du Générateur de rapports suppose que vous puissiez afficher et enregistrer des rapports sur un serveur de rapports ou un site SharePoint intégré à un serveur de rapports. Pour les données, tous les didacticiels utilisent des requêtes littérales qui doivent être traitées par une instance de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
- Si vous n'avez pas accès à un serveur de rapports, un site de serveur de rapports ou une source de données, vous pouvez en apprendre plus sur le Générateur de rapports en générant un rapport hors connexion. Consultez [Didacticiel : créer un rapport de graphique rapide en mode hors connexion &#40;Générateur de rapports&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Si vous n'avez pas accès à un serveur de rapports, un site de serveur de rapports ou une source de données, vous pouvez en apprendre plus sur le Générateur de rapports en générant un rapport hors connexion. Consultez [didacticiel : Créer un rapport de graphique rapide en mode hors connexion &#40;Générateur de rapports&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour exécuter les didacticiels du Générateur de rapports, vous devez réunir les conditions suivantes :  
   
 -   Accédez au Générateur de rapports [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Vous pouvez exécuter le Générateur de rapports à l'aide de la version autonome ou la version ClickOnce du Générateur de rapports, disponible depuis le Gestionnaire de rapports ou un site SharePoint. Seule la première étape, l'ouverture du Générateur de rapports, est différente pour les versions ClickOnce.  
@@ -36,9 +36,9 @@ ms.locfileid: "48056209"
   
 -   Le nom d’un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] instance et les informations d’identification suffisantes pour l’accès en lecture seule aux bases de données. Les requêtes de dataset des didacticiels utilisent des données littérales, mais chaque requête doit être traitée par une instance de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] pour retourner les métadonnées nécessaires à un dataset de rapport. Par exemple, la chaîne de connexion suivante spécifie uniquement un serveur : `data source=<servername>`. Vous devez avoir un accès en lecture à la base de données par défaut qui vous est affectée par l'administrateur système qui vous accorde l'autorisation d'accès au serveur. Vous pouvez également spécifier une base de données, comme indiqué dans la chaîne de connexion suivante : `data source=<servername>;initial catalog=<database>`.  
   
--   Pour le didacticiel qui inclut une carte, le serveur de rapports doit être configuré pour prendre en charge les cartes Bing en tant qu'arrière-plan. Pour plus d’informations, consultez [planifier la prise en charge de rapport cartographique](plan-for-map-report-support.md) dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
+-   Pour le didacticiel qui inclut une carte, le serveur de rapports doit être configuré pour prendre en charge les cartes Bing en tant qu'arrière-plan. Pour plus d’informations, consultez [planifier la prise en charge de rapport cartographique](plan-for-map-report-support.md) dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [la documentation en ligne](https://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
   
--   Le didacticiel, [didacticiel : création d’une extraction et les rapports principal &#40;Générateur de rapports&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), utilise le dataset de démonstration Contoso business intelligence. Ce dataset se compose de l'entrepôt de données ContosoDW et de la base de données de traitement analytique en ligne (OLAP) Contoso_Retail. Les rapports que vous allez créer dans ce didacticiel récupèrent des données du cube Contoso Sales. Vous pouvez télécharger la base de données OLAP Contoso_Retail à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkID=191575). Il vous suffit de télécharger le fichier ContosoBIdemoABF.exe. Il contient la base de données OLAP.  
+-   Le didacticiel, [didacticiel : Création d’un rapport principal et l’extraction &#40;Générateur de rapports&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), utilise le dataset de démonstration Contoso business intelligence. Ce dataset se compose de l'entrepôt de données ContosoDW et de la base de données de traitement analytique en ligne (OLAP) Contoso_Retail. Les rapports que vous allez créer dans ce didacticiel récupèrent des données du cube Contoso Sales. Vous pouvez télécharger la base de données OLAP Contoso_Retail à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkID=191575). Il vous suffit de télécharger le fichier ContosoBIdemoABF.exe. Il contient la base de données OLAP.  
   
      L'autre fichier, ContosoBIdemoBAK.exe, concerne l'entrepôt de données ContosoDW, qui n'est pas utilisé dans ce didacticiel.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48056209"
   
      Vous devez accéder à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur laquelle installer la base de données OLAP.  
   
- L’administrateur de serveur de rapports doit vous accorder les autorisations nécessaires sur le serveur de rapports, configurer [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] emplacements des dossiers et de configurer les options de générateur de rapports par défaut. Pour plus d’informations, consultez [installation, désinstallation et prise en charge du Générateur de rapports](install-uninstall-and-report-builder-support.md).  
+ L’administrateur du serveur de rapports doit vous accorder les autorisations nécessaires sur le serveur de rapports, configurer les emplacements des dossiers [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] et configurer les options par défaut du Générateur de rapports. Pour plus d’informations, consultez [installation, désinstallation et prise en charge du Générateur de rapports](install-uninstall-and-report-builder-support.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiels &#40;Générateur de rapports&#41;](report-builder-tutorials.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/31/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -18,12 +17,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 42af9ddf36f60980ae1bdf2b6152e91159178467
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8592517c71651b457c660e1d73e683c1c5ed332
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137069"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813981"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "48137069"
   
  Pour activer les abonnements pouvant être mis à jour pour les publications transactionnelles, consultez [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md).  
   
- Pour créer des abonnements actualisables pour les publications transactionnelles, consultez [Create an Updatable Subscription à une Publication transactionnelle](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ Pour créer des abonnements pouvant être mis à jour pour les publications transactionnelles, consultez [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md).  
   
 ## <a name="switching-between-update-modes"></a>Basculement d'un mode de mise à jour à l'autre  
  Lorsque vous utilisez les abonnements pouvant être mis à jour, vous pouvez spécifier qu'un abonnement doit utiliser un mode de mise à jour puis basculer vers l'autre si l'application l'exige. Vous pouvez, par exemple, spécifier qu'un abonnement doit utiliser la mise à jour immédiate mais basculer vers la mise à jour en attente si un échec système entraîne une perte de la connectivité réseau.  
@@ -57,7 +56,7 @@ ms.locfileid: "48137069"
  **Pour basculer d'un mode de mise à jour vers un autre**  
   
  Pour basculer d'un mode à l'autre, vous devez activer la publication et l'abonnement pour les deux modes de mise à jour puis basculer d'un mode à l'autre, le cas échéant. Pour plus d'informations, consultez  
-[Basculer entre les modes de mise à jour d'un abonnement transactionnel pouvant être mis à jour](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+[Switch Between Update Modes for an Updatable Transactional Subscription](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Considérations sur l'utilisation des abonnements pouvant être mis à jour  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48137069"
   
 -   Il est impossible de republier des données.  
   
--   La réplication ajoute la colonne **msrepl_tran_version** aux tables publiées à des fins de suivi. En raison de cette colonne supplémentaire, toutes les `INSERT` instructions doivent inclure une liste de colonnes.  
+-   La réplication ajoute la colonne **msrepl_tran_version** aux tables publiées à des fins de suivi. Du fait de cette colonne supplémentaire, toutes les instructions `INSERT` doivent inclure une liste de colonnes.  
   
 -   Pour modifier le schéma dans une table d'une publication qui prend en charge les abonnements mis à jour, toutes les activités relatives à la table doivent être interrompues au niveau du serveur de publication et des abonnés et les modifications de données en attente doivent être propagées à tous les nœuds avant d'effectuer toute modification du schéma. De cette façon, vous êtes assuré que les transactions en cours n'entrent pas en conflit avec la modification de schéma en attente. Après la propagation des modifications de schéma à tous les nœuds, l'activité peut reprendre dans les tables publiées. Pour plus d’informations, consultez [Suspendre une topologie de réplication &#40;programmation Transact-SQL de la réplication&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
@@ -77,13 +76,13 @@ ms.locfileid: "48137069"
   
 -   Les mises à jour sur l'abonné sont propagées au serveur de publication même si un abonnement expire ou est inactif. Vérifiez que ces abonnements sont effectivement supprimés ou réinitialisés.  
   
--   Si `TIMESTAMP` ou `IDENTITY` colonnes sont utilisées et elles sont répliquées en tant que leurs types de base de données, les valeurs de ces colonnes ne doivent pas être mis à jour sur l’abonné.  
+-   Si des colonnes `TIMESTAMP` ou `IDENTITY` sont utilisées et répliquées en tant que types de données de base, les valeurs qu’elles contiennent ne doivent pas être mises à jour sur l’Abonné.  
   
--   Les abonnés ne peuvent pas mettre à jour ou insérer `text`, `ntext` ou `image` valeurs, car il n’est pas possible de lire à partir des tables insérées ou supprimées dans les déclencheurs de suivi des modifications de réplication. De même, les abonnés ne peuvent pas mettre à jour ou insérer `text` ou `image` des valeurs en utilisant `WRITETEXT` ou `UPDATETEXT` , car les données sont écrasées par le serveur de publication. Au lieu de cela, vous pouvez partitionner le `text` et `image` colonnes dans un distinct de table et modifier les deux tables dans une transaction.  
+-   Les Abonnés ne peuvent pas mettre à jour ou insérer des valeurs `text`, `ntext` ou `image`, car il est impossible de lire à partir des tables insérées ou supprimées dans les déclencheurs de suivi des modifications de réplication. De même, les Abonnés ne peuvent pas mettre à jour ou insérer de valeur `text` ou `image` à l’aide de `WRITETEXT` ou `UPDATETEXT`, car les données sont écrasées par le serveur de publication. En revanche, vous pouvez partitionner les colonnes `text` et `image` dans une table distincte et modifier les deux tables à l’intérieur d’une transaction.  
   
-     Pour mettre à jour des objets volumineux sur un abonné, utilisez les types de données `varchar(max)`, `nvarchar(max)`, `varbinary(max)` au lieu de `text`, `ntext`, et `image` types de données, respectivement.  
+     Pour mettre à jour des objets volumineux sur un Abonné, utilisez respectivement les types de données `varchar(max)`, `nvarchar(max)` et `varbinary(max)` au lieu des types de données `text`, `ntext` et `image`.  
   
--   Les mises à jour de clés uniques (y compris les clés primaires) générant des doublons (comme une mise à jour de type `UPDATE <column> SET <column> =<column>+1` ) ne sont pas autorisées et sont rejetées en raison d’une violation d’unicité. Il s’agit, car l’ensemble des mises à jour effectuées sur l’abonné sont propagées par la réplication en tant qu’individu `UPDATE` instructions pour chaque ligne concernée.  
+-   Les mises à jour de clés uniques (y compris les clés primaires) générant des doublons (comme une mise à jour de type `UPDATE <column> SET <column> =<column>+1` ) ne sont pas autorisées et sont rejetées en raison d’une violation d’unicité. En effet, les mises à jour de jeux appliquées sur l’Abonné sont propagées par la réplication en tant qu’instructions `UPDATE` individuelles pour chaque ligne concernée.  
   
 -   Si la base de données de l'abonné est partitionnée horizontalement et que des lignes de la partition existent sur l'abonné mais non sur le serveur de publication, l'abonné ne peut pas mettre à jour les lignes pré-existantes. Toute tentative de mise à jour de ces lignes renvoie un message d'erreur. Les lignes doivent être supprimées de la table puis réinsérées.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48137069"
   
 -   Si l’application exige la présence de déclencheurs sur l’Abonné, ceux-ci doivent être définis avec l’option `NOT FOR REPLICATION` sur le serveur de publication et l’Abonné. Cela garantit l'activation des déclencheurs pour la modification de données d'origine uniquement mais pas lors de la réplication de cette modification.  
   
-     Veillez à ce que le déclencheur défini par l'utilisateur ne s'active pas lorsque le déclencheur de réplication met à jour la table. Cela est accompli en appelant la procédure `sp_check_for_sync_trigger` dans le corps du déclencheur défini par l’utilisateur. Pour plus d’informations, consultez [sp_check_for_sync_trigger &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql).  
+     Veillez à ce que le déclencheur défini par l'utilisateur ne s'active pas lorsque le déclencheur de réplication met à jour la table. Pour ce faire, la procédure `sp_check_for_sync_trigger` doit être appelée dans le corps du déclencheur défini par l’utilisateur. Pour plus d’informations, consultez [sp_check_for_sync_trigger &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql).  
   
 ### <a name="immediate-updating"></a>Mise à jour immédiate  
   
@@ -107,11 +106,11 @@ ms.locfileid: "48137069"
   
 -   Lorsque la mise à jour en attente est utilisée, il est déconseillé d'effectuer des mises à jour sur les colonnes clés primaire car la clé primaire sert de localisateur d'enregistrement pour toutes les requêtes. Lorsque la stratégie de résolution de conflit prévoit que " l'abonné gagne ", les mises à jour de clés primaires doivent être effectuées avec précaution. Si des mises à jour de la clé primaire sont effectuées à la fois sur le serveur de publication et sur l'abonné, il en résultera deux lignes avec des clés primaires différentes.  
   
--   Pour les colonnes de type de données `SQL_VARIANT`: lorsque les données sont insérées ou mises à jour sur l’abonné, elles sont mappées de la façon suivante par l’Agent de lecture de file d’attente lorsqu’elles sont copiées à partir de l’abonné à la file d’attente :  
+-   Pour les colonnes de type de données `SQL_VARIANT` : quand des données sont insérées ou mises à jour sur l’abonné, elles sont mappées de la façon suivante par l’Agent de lecture de la file d’attente quand elles sont copiées de l’abonné vers la file d’attente :  
   
-    -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY`, et `SMALLMONEY` sont mappées aux `NUMERIC`.  
+    -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` et `SMALLMONEY` sont mappés à `NUMERIC`.  
   
-    -   `BINARY` et `VARBINARY` sont mappées aux `VARBINARY` données.  
+    -   `BINARY` et `VARBINARY` sont mappés aux données `VARBINARY`.  
   
 ### <a name="conflict-detection-and-resolution"></a>Détection et résolution des conflits  
   
@@ -124,7 +123,7 @@ ms.locfileid: "48137069"
     -   Si des confits sont prévisibles : vous ne devez pas utiliser des contraintes de clés étrangères sur le serveur de publication ou l'abonné si vous optez pour la résolution de conflit où l'abonné prime ; vous ne devez pas utiliser des contraintes de clés étrangères sur l'abonné si vous utilisez la résolution de conflit où le serveur de publication prime.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Réplication transactionnelle d’égal à égal](peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
  [Types de publication pour la réplication transactionnelle](publication-types-for-transactional-replication.md)   
  [Publier des données et des objets de base de données](../publish/publish-data-and-database-objects.md)   
  [S'abonner à des publications](../subscribe-to-publications.md)  

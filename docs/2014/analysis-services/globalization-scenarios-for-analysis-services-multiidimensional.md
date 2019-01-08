@@ -19,12 +19,12 @@ ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e88100d935898e69ac924ecb5a44ee562079e0dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45b0b733ccc6e42e1f4a63ba9c7a2f615d2b55eb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063099"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357874"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Scénarios de globalisation pour données multidimensionnelles Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stocke et manipule des données multilingues et les métadonnées dans les deux modèles de données tabulaires et multidimensionnels. Le stockage des données est en Unicode (UTF-16), dans des jeux de caractères qui utilisent l'encodage Unicode. Si vous chargez des données ANSI dans un modèle de données, les caractères sont stockés à l'aide de points de code équivalents Unicode.  
@@ -39,13 +39,13 @@ ms.locfileid: "48063099"
   
      Pour les modèles multidimensionnels uniquement, les légendes et les membres d'attributs peuvent être exprimés comme des traductions. Vous pouvez définir une ou plusieurs traductions, puis utiliser un identificateur de paramètres régionaux pour déterminer la traduction retournée au client. Pour plus d'informations, consultez [Fonctionnalités](#bkmk_features) plus loin dans cet article.  
   
--   Messages d’erreur, avertissement et d’information retournés à partir de la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] moteur (msmdsrv) sont traduits dans les 43 langues prises en charge par Office et Office 365. Aucune configuration n'est nécessaire pour obtenir les messages dans une langue spécifique. Les paramètres régionaux de l'application cliente déterminent quelles chaînes sont retournées.  
+-   Les messages d'erreur, d'avertissement et d'information retournés par le moteur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (msmdsrv) sont traduits dans les 43 langues prises en charge par Office et Office 365. Aucune configuration n'est requise pour obtenir les messages dans une langue spécifique. Les paramètres régionaux de l'application cliente déterminent quelles chaînes sont retournées.  
   
 -   Le fichier de configuration (msmdsrv.ini) et PowerShell AMO sont en anglais uniquement.  
   
 -   Les fichiers journaux contiendront un mélange de messages localisés et en anglais, en supposant que vous avez installé un module linguistique sur le serveur Windows qui exécute Analysis Services.  
   
--   La documentation et les outils, tels que [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] et [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], sont traduits dans les langues suivantes : allemand, chinois simplifié, chinois traditionnel, coréen, espagnol, français, italien, japonais, portugais (brésilien) et russe. Pour utiliser une version spécifique à la langue des outils, installez une version spécifique à la langue de SQL Server (par exemple, installez la version allemande de SQL Server pour obtenir Management Studio en allemand) ou exécutez le programme d’installation autonome dans la langue cible pour [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   La documentation et les outils, tels que [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] et [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], sont traduits dans les langues suivantes : chinois simplifié, chinois traditionnel, français, allemand, italien, japonais, coréen, portugais (Brésil), russe et espagnol. Pour utiliser une version des outils spécifique à une langue, installez une version de SQL Server spécifique à une langue (par exemple, installez la version allemande de SQL Server pour obtenir Management Studio en allemand) ou exécutez le programme d'installation autonome dans la langue cible pour [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
  Analysis Services vous permet de définir la langue, le classement et les traductions indépendamment dans toute la hiérarchie d'objets.  
   
@@ -53,16 +53,16 @@ ms.locfileid: "48063099"
   
 -   Un modèle de données fournit plusieurs légendes traduites pour que les noms et les valeurs des champs apparaissent dans la langue choisie par l'utilisateur. Pour les entreprises qui opèrent dans des pays bilingues comme le Canada, la Belgique ou la Suisse, la prise en charge de plusieurs langues dans les applications clientes et de serveur est une exigence de codage ordinaire. Ce scénario est possible grâce aux traductions et aux conversions monétaires. Voir [Fonctionnalités](#bkmk_features) ci-dessous pour plus d'informations et pour obtenir des liens.  
   
--   Les environnements de développement et de production sont géolocalisés dans différents pays. Il est de plus en plus courant de développer une solution dans un pays, puis de la déployer dans un autre. Savoir comment définir les propriétés de langue et de classement est essentiel si vous êtes chargé de la préparation d'une solution développée dans une langue et devant être déployée sur un serveur qui utilise un module linguistique différent. Définir ces propriétés vous permet de remplacer les valeurs par défaut héritées du système hôte d'origine. Pour plus d’informations, consultez la section [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) .  
+-   Les environnements de développement et de production sont géolocalisés dans différents pays. Il est de plus en plus courant de développer une solution dans un pays, puis de la déployer dans un autre. Savoir comment définir les propriétés de langue et de classement est essentiel si vous êtes chargé de la préparation d'une solution développée dans une langue et devant être déployée sur un serveur qui utilise un module linguistique différent. Définir ces propriétés vous permet de remplacer les valeurs par défaut héritées du système hôte d'origine. Pour plus d’informations, consultez la section [Langues et classements &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) .  
   
 ##  <a name="bkmk_features"></a> Fonctionnalités de création d’une solution multidimensionnelle globalisée  
  [!INCLUDE[applies](../includes/applies-md.md)] Modèles de données multidimensionnels uniquement  
   
- Au niveau du client, les applications globalisées qui consomment ou manipulent [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] données multidimensionnelles peuvent utiliser les fonctionnalités multilingues et multiculturelles dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
+ Au niveau du client, les applications globalisées qui consomment ou manipulent des données multidimensionnelles [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent utiliser les fonctionnalités multilingues et multiculturelles dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
 -   [Traductions &#40;Analysis Services&#41; ](translations-analysis-services.md) servent à incorporer plusieurs légendes pour un seul objet, où chaque chaîne traduite peut coexister avec autres traductions. Vous pouvez utiliser [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir les traductions pour la légende, la description et les types de comptes pour des cubes, des mesures, des dimensions et des attributs. Vous pouvez récupérer des données et des métadonnées à partir d'objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur lesquels des traductions ont été définies automatiquement en fournissant un identificateur local lors de la connexion à une instance d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-     Pour apprendre à utiliser cette fonctionnalité, consultez la [leçon 9 : définition de perspectives et de traductions](lesson-9-defining-perspectives-and-translations.md) du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+     Vous trouverez une leçon sur la façon d’utiliser cette fonctionnalité dans [leçon 9 : Définition de Perspectives et traductions](lesson-9-defining-perspectives-and-translations.md) de la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] didacticiel.  
   
 -   [Conversions monétaires &#40;Analysis Services&#41; ](currency-conversions-analysis-services.md) s’effectue via des scripts MDX spécialisés qui convertissent des mesures contenant des données monétaires. Vous pouvez utiliser l'Assistant Business Intelligence de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] pour générer un script MDX qui utilise une combinaison de données et de métadonnées issues de dimensions, d'attributs et de groupes de mesures pour convertir des mesures contenant des données monétaires.  
   
@@ -70,15 +70,15 @@ ms.locfileid: "48063099"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Langues et classements &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|Spécifiez la langue par défaut et le classement Windows pour une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vos choix affectent les données et les métadonnées gérées par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
-|[Traductions &#40;Analysis Services&#41;](translations-analysis-services.md)|Définir des traductions pour une [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données et les objets contenus dans la base de données. Cette rubrique explique comment [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] résout les demandes de données et de métadonnées traduites envoyées par les applications clientes.|  
+|[Langues et classements &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|Spécifiez la langue par défaut et le classement Windows pour une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vos choix affectent les données et les métadonnées gérées par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|[Traductions &#40;Analysis Services&#41;](translations-analysis-services.md)|Définissez des traductions pour une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et des objets contenus dans la base de données. Cette rubrique explique comment [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] résout les demandes de données et de métadonnées traduites envoyées par les applications clientes.|  
 |[Conversions monétaires &#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|Définissez une conversion monétaire à l'aide de l'Assistant Business Intelligence.|  
-|[Globalisation conseils et meilleures pratiques &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Passe en revue plusieurs pratiques de conception et de codage qui peuvent vous aider à éviter les problèmes liés aux données multilingues.|  
+|[Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Passe en revue plusieurs pratiques de conception et de codage qui peuvent vous aider à éviter les problèmes liés aux données multilingues.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Internationalisation pour les Applications Windows](/windows/desktop/Intl/international-support)   
- [Accédez au centre de développement](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Applications d’écriture Windows Store avec conception adaptative en fonction des paramètres régionaux](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Développement d’applications Windows universelles avec c# et XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Internationalisation pour les applications Windows](/windows/desktop/Intl/international-support)   
+ [Accédez au Centre de développement](https://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Écriture d’applications du Windows Store avec la conception adaptative en fonction des paramètres régionaux](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Développement d'applications Windows universelles avec C# et XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

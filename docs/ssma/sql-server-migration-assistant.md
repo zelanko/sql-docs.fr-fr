@@ -1,7 +1,7 @@
 ---
 title: SQL Server Migration Assistant | Microsoft Docs
 ms.custom: ''
-ms.date: 09/30/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -10,12 +10,12 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a90d7bd53433bd0db027787cdcd83f53b8227804
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
+ms.sourcegitcommit: d040bab6f826f0c37cd207a6c7cef04a8963c5d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668398"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031715"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistant de migration SQL Server
 Migration Assistant Microsoft SQL Server (SSMA) est un outil conçu pour automatiser la migration de base de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et SAP ASE.  
@@ -42,9 +42,10 @@ SSMA prennent en charge les versions suivantes de la cible.
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
+- SQL Server 2017 sur Windows et Linux
+- SQL Server 2019 sur Windows et Linux
 - Azure SQL Database
-- SQL Server 2017 sur Windows et Linux (version préliminaire)
-- ** Azure SQL Data Warehouse
+- L’entrepôt de données SQL Azure **
 
 ** Cette cible est pris en charge uniquement par SSMA pour Oracle.
  
@@ -60,7 +61,7 @@ SSMA prennent en charge les versions suivantes de la cible.
   
 -   **Aide produit** : pour accéder à la prise en charge du produit, lancez SSMA et sélectionnez le menu Aide ou appuyez sur la touche F1.  
   
--   **Forums des Communautés SQL Server** : poser une question dans la Communauté SQL Server  
+-   **Forums des Communautés SQL Server** -poser une question dans la Communauté SQL Server  
   
     -   [Communauté SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455) -groupes de discussion et forums qui sont gérés par la Communauté SQL Server. Ce site liste également les sources d’information de la communauté, telles que les blogs et les sites web.  
   
@@ -70,7 +71,7 @@ SSMA prennent en charge les versions suivantes de la cible.
   
 -   Support premier - si vous avez un contrat Premier, vous pouvez obtenir Premier prend en charge sur le [portail Premier Online](https://premier.microsoft.com/).  
   
--   Services – pour les partenaires de conseil assisté des migrations, accédez la [portail Partner](https://www.platformmodernization.org/Pages/default.aspx).  
+-   Services - pour partenaire de conseil assisté des migrations, accédez la [portail Partner](https://www.platformmodernization.org/Pages/default.aspx).  
   
 ## <a name="legal-notice-ssma"></a>Notice légale (SSMA)  
 Cette documentation, ainsi que les exemples d’applications qu’elle contient, est fournie à titre d’information uniquement et sans aucune garantie, expresse ou implicite. Les informations contenues dans cette documentation, notamment les URL et autres références à des sites web Internet, pourront faire l’objet de modifications sans préavis. L’utilisateur reconnaît assumer tous les risques liés à l’utilisation ou aux résultats de l’utilisation de cette documentation.  
@@ -81,7 +82,7 @@ Sauf mention contraire, les exemples de sociétés, d’organisations, de produi
   
 Les produits mentionnés dans cette documentation peuvent faire l’objet de brevets, de dépôts de brevets en cours, de marques, de droits d’auteur ou d’autres droits de propriété intellectuelle et industrielle de Microsoft. Sauf stipulation expresse contraire d’un contrat de licence écrit de Microsoft, la fourniture de cette documentation n’a pas pour effet de vous concéder une licence sur ces brevets, marques, ni de vous céder des droits d’auteur ou autres droits de propriété intellectuelle quels qu’ils soient.  
   
-© 2017 Microsoft Corporation. Tous droits réservés.  
+© Microsoft Corporation, aux 2019. Tous droits réservés.  
   
 Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System et WinFX sont soit des marques déposées de Microsoft Corporation, soit des marques de Microsoft Corporation aux États-Unis d’Amérique et/ou dans d’autres pays/régions.  
   
@@ -90,7 +91,7 @@ SAP NetWeaver est une marque déposée de SAP AG en Allemagne et dans plusieur
 Toutes les autres marques sont la propriété de leurs propriétaires respectifs.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Usage de la documentation pour le support et la mise à niveau de SQL Server  
-Le contenu qui se trouve dans la documentation de SQL Server est publié uniquement après avoir été suffisamment testé. La documentation du produit – documentation SQL Server en ligne, fichiers Lisez-moi, documents de problèmes connus et articles de la Base de connaissances – contient des informations sur les fonctions et fonctionnalités SQL Server qui sont assez fiables pour être utilisées par tous les clients. Ceci s’applique à la totalité de la documentation SQL Server, y compris aux fichiers Lisez-moi des versions et des service packs (dans la mesure où les fichiers Lisez-moi sont considérés comme des extensions de la documentation en ligne).  
+Le contenu qui se trouve dans la documentation de SQL Server est publié uniquement après avoir été suffisamment testé. Documentation du produit - documentation en ligne de SQL Server, fichiers Lisez-moi, documents relatifs aux problèmes connus et articles de la Base de connaissances - contient des informations sur les fonctionnalités de SQL Server qui est suffisamment robuste pour être sûr pour une utilisation générale par tous les clients. Ceci s’applique à la totalité de la documentation SQL Server, y compris aux fichiers Lisez-moi des versions et des service packs (dans la mesure où les fichiers Lisez-moi sont considérés comme des extensions de la documentation en ligne).  
   
 Il peut arriver qu’une fonctionnalité donnée ne doive pas être utilisée directement par les clients. Dans ce cas, elle n’est pas documentée. Le contenu de documentations ou sites web tiers n’est pas pris en charge par le support technique Microsoft et ne doit pas être utilisé dans des applications ou des bases de données de production, sauf si ladite fonctionnalité est également traitée dans la documentation SQL Server publiée par Microsoft.  
   

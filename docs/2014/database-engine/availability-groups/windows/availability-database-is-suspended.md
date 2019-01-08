@@ -14,12 +14,12 @@ ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20cc9df0fa7a52dfd92ea645eca289bd49860b97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063319"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355424"
 ---
 # <a name="availability-database-is-suspended"></a>La base de données de disponibilité est suspendue
     
@@ -36,7 +36,7 @@ ms.locfileid: "48063319"
  Cette stratégie vérifie l'état du déplacement des données de la base de données secondaire (également appelée « réplica de base de données secondaire »). La stratégie se trouve dans un état non sain lorsque le déplacement des données est suspendu. Autrement, l'état de la stratégie est sain.  
   
 > [!NOTE]  
->  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les informations sur les causes et les solutions possibles sont situées sous [La base de données de disponibilité est suspendue](http://go.microsoft.com/fwlink/p/?LinkId=220860) sur TechNet Wiki.  
+>  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les informations sur les causes et les solutions possibles sont situées sous [La base de données de disponibilité est suspendue](https://go.microsoft.com/fwlink/p/?LinkId=220860) sur TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Causes possibles  
  La synchronisation des données sur cette base de données de disponibilité peut avoir été suspendue pour les motifs suivants :  

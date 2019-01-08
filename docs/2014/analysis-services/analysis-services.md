@@ -19,12 +19,12 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2bcf7cb620a97578b921ca09d565ff2ef2fe77a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b18efaacb7ab891402e84b851735870c4c47e883
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080962"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360511"
 ---
 # <a name="analysis-services"></a>Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est un moteur de données analytiques en ligne utilisé dans des solutions de décisionnel (BI) et d'aide à la décision. Il fournit des données analytiques utilisées dans des rapports et des applications clientes tels qu'Excel, les rapports Reporting Services et d'autres outils BI tiers. Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], un flux de travail typique comprend la création d'un modèle de données OLAP ou tabulaires, le déploiement de ce modèle en tant que base de données vers une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], le traitement de la base de données en vue de son chargement et des données qu'elle contient, puis l'attribution d'autorisations d'accès aux données. Quand il est prêt, le modèle de données polyvalent est accessible depuis n'importe quelle application cliente prenant en charge [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en tant que source données.  
@@ -67,7 +67,7 @@ ms.locfileid: "48080962"
  [Didacticiels sur Analysis Services &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [Installation de SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [Guide du développeur &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
- [Centre de ressources SQL Server](http://go.microsoft.com/fwlink/?linkID=219676)   
- [SQLCat.com](http://go.microsoft.com/fwlink/?linkID=220963)  
+ [Centre de ressources SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)   
+ [SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   
   

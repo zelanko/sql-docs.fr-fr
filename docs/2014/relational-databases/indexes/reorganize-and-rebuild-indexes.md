@@ -30,12 +30,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 159dd55d8573af5b23dcb71c3393539fa8a0ac37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af52376ae4749d42c8d746a64518632e6a047591
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160129"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367731"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Réorganiser et reconstruire des index
   Cette rubrique explique comment réorganiser ou reconstruire un index fragmenté dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gère automatiquement des index lorsque des opérations d'insertion, de mise à jour ou de suppression sont effectuées sur les données sous-jacentes. Au fil des modifications, les informations figurant dans l'index sont éparpillées dans la base de données (fragmentée). La fragmentation intervient lorsque des index possèdent des pages dans lesquelles l'organisation logique (reposant sur la valeur de la clé) ne correspond pas à l'organisation physique dans le fichier de données. Une fragmentation importante des index peut diminuer les performances des requêtes et ralentir la vitesse de réponse de votre application.  
@@ -106,11 +106,11 @@ ms.locfileid: "48160129"
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>Pour vérifier la fragmentation d'un index  
   
-1.  Dans l'Explorateur d'objets, développez la base de données qui contient la table sur laquelle vous souhaitez vérifier une fragmentation d'index.  
+1.  Dans l’Explorateur d’objets, développez la base de données qui contient la table sur laquelle vous souhaitez vérifier une fragmentation d’index.  
   
 2.  Développez le dossier **Tables** .  
   
-3.  Développez la table sur laquelle vous souhaitez vérifier une fragmentation d'index.  
+3.  Développez la table sur laquelle vous souhaitez vérifier une fragmentation d’index.  
   
 4.  Développez le dossier **Index** .  
   
@@ -163,7 +163,7 @@ ms.locfileid: "48160129"
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>Pour vérifier la fragmentation d'un index  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -255,7 +255,7 @@ ms.locfileid: "48160129"
   
 #### <a name="to-reorganize-a-defragmented-index"></a>Pour réorganiser un index défragmenté  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -273,7 +273,7 @@ ms.locfileid: "48160129"
   
 #### <a name="to-reorganize-all-indexes-in-a-table"></a>Pour réorganiser tous les index d'une table  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -290,7 +290,7 @@ ms.locfileid: "48160129"
   
 #### <a name="to-rebuild-a-defragmented-index"></a>Pour reconstruire un index défragmenté  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -300,7 +300,7 @@ ms.locfileid: "48160129"
   
 #### <a name="to-rebuild-all-indexes-in-a-table"></a>Pour reconstruire tous les index d'une table  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -311,6 +311,6 @@ ms.locfileid: "48160129"
  Pour plus d’informations, consultez [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Meilleures pratiques de défragmentation d'index Microsoft SQL Server 2000](http://technet.microsoft.com/library/cc966523.aspx)  
+ [Meilleures pratiques de défragmentation d'index Microsoft SQL Server 2000](https://technet.microsoft.com/library/cc966523.aspx)  
   
   

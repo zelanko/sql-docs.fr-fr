@@ -1,24 +1,23 @@
 ---
-title: 'Étape 4 : Ajout d’une destination de fichier plat | Microsoft Docs'
+title: 'Étape 4 : Ajout d’une Destination de fichier plat | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a29d4953919644100b5863c3f4766895ea356c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c43885de9e2a6945a8a24263765df8ee8e26920a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075579"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823373"
 ---
-# <a name="step-4-adding-a-flat-file-destination"></a>Étape 4 : Ajout d'une destination de fichier plat
+# <a name="step-4-adding-a-flat-file-destination"></a>Étape 4 : Ajout d'une destination de fichier plat
   La sortie d'erreur de la transformation Lookup Currency Key réachemine vers la transformation Script toutes les lignes de données ayant échoué au cours de l'opération de recherche. Pour améliorer les informations recueillies sur les erreurs survenues, la transformation Script exécute un script chargé d'obtenir la description des erreurs.  
   
  Au cours de cette tâche, vous allez enregistrer toutes ces informations sur les lignes échouées dans un fichier délimité pour les traiter ultérieurement. Pour enregistrer les lignes ayant échoué, vous devez ajouter et configurer un gestionnaire de connexions de fichiers plats pour le fichier texte censé contenir les données sur les erreurs, ainsi qu'une destination de fichier plat. En définissant les propriétés du gestionnaire de connexions de fichier plat utilisé par la destination de fichier plat, vous pouvez spécifier la façon dont elle met en forme et écrit le fichier texte. Pour plus d'informations, consultez [Flat File Connection Manager](connection-manager/file-connection-manager.md) et [Flat File Destination](data-flow/flat-file-destination.md).  
@@ -47,7 +46,7 @@ ms.locfileid: "48075579"
   
 11. Dans le volet Options, cliquez sur **Colonnes**.  
   
-     Notez qu'en plus des colonnes du fichier de données source, trois nouvelles colonnes sont présentes : ErrorCode, ErrorColumn et ErrorDescription. Ces colonnes sont générées par la sortie d'erreur de la transformation Lookup Currency Key et par le script de la transformation Get Error Description. Vous pouvez les utiliser pour résoudre le problème à l'origine de l'échec de la ligne.  
+     Notez qu'en plus des colonnes du fichier de données source, trois nouvelles colonnes sont présentes : ErrorCode, ErrorColumn et ErrorDescription. Ces colonnes sont générées par la sortie d'erreur de la transformation Lookup Currency Key et par le script de la transformation Get Error Description. Vous pouvez les utiliser pour résoudre le problème à l'origine de l'échec de la ligne.  
   
 12. Cliquez sur **OK**.  
   
@@ -60,6 +59,6 @@ ms.locfileid: "48075579"
 15. Cliquez sur **OK**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Étape 5 : Test de la leçon 4 du Package du tutoriel](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+ [Étape 5 : Test de la leçon 4 du Package du didacticiel](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

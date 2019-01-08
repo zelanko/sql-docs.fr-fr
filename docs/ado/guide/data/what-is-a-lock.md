@@ -14,17 +14,17 @@ ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 981b2b5dc1f76d879b18e5569e7fb70dbece1538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 744ae9a9541b5c73d579e097f375b4141e771fce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813077"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501765"
 ---
 # <a name="what-is-a-lock"></a>Qu’est qu’un verrou ?
 Le verrouillage est le processus par lequel un SGBD limite l’accès à une ligne dans un environnement multi-utilisateur. Lorsqu’une ligne ou une colonne est verrouillée exclusivement, les autres utilisateurs ne sont pas autorisés à accéder aux données verrouillées jusqu'à ce que le verrou est libéré. Cela garantit que deux utilisateurs ne peuvent pas mettre à jour simultanément la même colonne dans une ligne.  
   
- Les verrous peuvent s’avérer très coûteuses du point de vue de la ressource et doivent être utilisés uniquement lorsque nécessaire pour préserver l’intégrité des données. Dans une base de données où des centaines voire des milliers d’utilisateurs essaie d’accéder à un enregistrement de chaque seconde, comme une base de données connectés à Internet, donc baisse des performances dans votre application.  
+ Les verrous peuvent s’avérer très coûteuses du point de vue de la ressource et doivent être utilisés uniquement lorsque nécessaire pour préserver l’intégrité des données. Dans une base de données où des centaines voire des milliers d’utilisateurs essaie d’accéder à un enregistrement de chaque seconde - comme une base de données connecté à Internet - inutiles donc baisse des performances dans votre application.  
   
  Vous pouvez contrôler la façon dont la source de données et la bibliothèque de curseurs ADO gérer l’accès concurrentiel en choisissant l’option de verrouillage appropriée.  
   

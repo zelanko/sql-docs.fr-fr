@@ -11,12 +11,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51d3206e4df57c42c0245e13757cdcac1686a313
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5dc6ccd51a1ce8c64ef301e7435ee9ce21879cb5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148404"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364101"
 ---
 # <a name="tabular-model-data-access"></a>Accès aux données de modèle tabulaire
   Les bases de données model tabulaires dans Analysis Services sont accessibles par la plupart des mêmes clients, interfaces et langues que vous utilisez pour récupérer les données ou les métadonnées d'un modèle multidimensionnel. Pour plus d’informations, consultez [Accès aux données de modèles multidimensionnels &#40;Analysis Services - Données multidimensionnelles &#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -24,10 +24,10 @@ ms.locfileid: "50148404"
  Cette rubrique décrit les clients, les langages de requête et les interfaces de programmation qui fonctionnent avec des modèles tabulaires.  
   
 ## <a name="clients"></a>Clients  
- Les applications clientes Microsoft suivantes prennent en charge les connexions natives aux bases de données model tabulaires de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Les applications clientes Microsoft suivantes prennent en charge les connexions natives aux bases de données model tabulaires de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ### <a name="excel"></a>Excel  
- Vous pouvez vous connecter aux bases de données model tabulaires Excel à l'aide des fonctionnalités de visualisation et d'analyse des données dans Excel pour travailler avec vos données. Pour accéder aux données, vous définissez une connexion de données Analysis Services, vous spécifiez un serveur qui s'exécute en mode serveur tabulaire, puis vous choisissez la base de données que vous souhaitez utiliser. Pour plus d'informations, consultez [Se connecter ou importer des données à partir de SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
+ Vous pouvez vous connecter aux bases de données model tabulaires Excel à l'aide des fonctionnalités de visualisation et d'analyse des données dans Excel pour travailler avec vos données. Pour accéder aux données, vous définissez une connexion de données Analysis Services, vous spécifiez un serveur qui s'exécute en mode serveur tabulaire, puis vous choisissez la base de données que vous souhaitez utiliser. Pour plus d'informations, consultez [Se connecter ou importer des données à partir de SQL Server Analysis Services](https://go.microsoft.com/fwlink/?linkID=215150).  
   
  Excel est également recommandé pour parcourir les modèles tabulaires dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. L'outil inclut une option **Analyser dans Excel** qui démarre une nouvelle instance Excel, crée un classeur Excel et ouvre une connexion de données entre le classeur et la base de données model d'espace de travail. Lorsque vous parcourez les données de modèle tabulaire dans Excel, sachez qu'Excel émet des requêtes sur le modèle à l'aide du client Tableau croisé dynamique Excel. Par conséquent, les opérations du classeur Excel provoquent l'envoi de requêtes MDX à la base de données d'espace de travail, et non de requêtes DAX. Si vous utilisez SQL Profiler ou un autre outil d'analyse pour surveiller les requêtes, vous verrez MDX et non DAX dans la trace de Profiler. Pour plus d’informations sur la fonctionnalité Analyser dans Excel, consultez [Analyser dans Excel &#40;SSAS Tabulaire&#41;](analyze-in-excel-ssas-tabular.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "50148404"
  Les requêtes qui sont envoyées par le client [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] au modèle sont émises en tant qu'instructions DAX, que vous pouvez surveiller en définissant une trace sur le modèle.  Le client envoie également une requête au serveur pour la définition de schéma initiale, qui est présentée en langage CSDL (Conceptual Schema Definition Language). Pour plus d’informations, consultez [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour gérer les instances qui hébergent des modèles tabulaires et pour interroger les métadonnées et les données qu'elles contiennent. Vous pouvez traiter des modèles ou les objets d'un modèle, créer et gérer des partitions et définir la sécurité qui peut être utilisée pour gérer l'accès aux données. Pour plus d'informations, consultez les rubriques suivantes :  
+ Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour gérer les instances qui hébergent des modèles tabulaires et pour interroger les métadonnées et les données qu'elles contiennent. Vous pouvez traiter des modèles ou les objets d'un modèle, créer et gérer des partitions et définir la sécurité qui peut être utilisée pour gérer l'accès aux données. Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

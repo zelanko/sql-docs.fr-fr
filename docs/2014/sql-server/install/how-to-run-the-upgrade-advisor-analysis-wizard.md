@@ -1,5 +1,5 @@
 ---
-title: 'Comment : exécuter l’Assistant analyse du Conseiller de mise à niveau | Microsoft Docs'
+title: 'Procédure : Exécutez l’Assistant analyse du Conseiller de mise à niveau | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0896639f1c088b3ead255758075075f3e397b47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49c8cd84ada68d4ac00b13567528abff72d13847
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065279"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207648"
 ---
-# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>Procédure : exécuter l'Assistant Analyse du Conseiller de mise à niveau
+# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>Procédure : Exécutez l’Assistant analyse du Conseiller de mise à niveau
   Vous démarrez l'Assistant Analyse du Conseiller de mise à niveau à partir de la page de démarrage du Conseiller de mise à niveau. Cette rubrique décrit comment exécuter l'Assistant Analyse du Conseiller de mise à niveau.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Lorsque vous exécutez l'Assistant Analyse du Conseiller de mise à niveau, le Conseiller de mise à niveau enregistre les rapports dans le dossier des rapports par défaut. Toutefois, la visionneuse de rapports affiche uniquement les cinq derniers rapports enregistrés. L’emplacement par défaut pour les rapports est Mes Documents\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Advisor\110\Reports mise à niveau.  
   
 ### <a name="to-run-the-upgrade-advisor-analysis-wizard"></a>Pour exécuter l’Assistant analyse du Conseiller de mise à niveau  
@@ -58,7 +58,7 @@ ms.locfileid: "48065279"
 8.  Lorsque l’analyse est terminée, cliquez sur **lancer le rapport** pour afficher les problèmes de mise à niveau détectés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment : lancer le Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [Comment : Lancer le Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
  [Exécutez le Conseiller de mise à niveau &#40;Interface utilisateur&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [Utilisation du Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   

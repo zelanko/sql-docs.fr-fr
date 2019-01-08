@@ -1,21 +1,21 @@
 ---
-title: Leçon 3 former et enregistrer un modèle à l’aide de R et T-SQL (SQL Server Machine Learning) | Microsoft Docs
-description: Didacticiel expliquant comment incorporer R dans SQL Server des procédures stockées et fonctions T-SQL
+title: Leçon 3 former et enregistrer un modèle à l’aide de R et T-SQL - SQL Server Machine Learning
+description: Didacticiel montrant comment former, sérialiser et enregistrer un modèle R à l’aide de SQL Server procédures stockées et fonctions T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 11/16/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 23387a6074f0c4a1dd6b4cb675b84f7aaced2a06
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f3abe58aac4d5920e64337f63a40dc8f87fb12d9
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033557"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645108"
 ---
-# <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>Leçon 3 : Former et enregistrer un modèle à l’aide de T-SQL
+# <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>Leçon 3 : Former et enregistrer un modèle à l’aide de T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article fait partie d’un didacticiel pour les développeurs SQL sur l’utilisation de R dans SQL Server.
@@ -30,8 +30,8 @@ Lors de l’appel R à partir de T-SQL, vous utilisez la procédure stockée sys
 
 2. Exécutez l’instruction suivante pour créer la procédure stockée **RxTrainLogitModel**. Cette procédure stockée définit les données d’entrée et utilise **rxLogit** de RevoScaleR pour créer un modèle de régression logistique.
 
-    ```SQL
-    CREATE PROCEDURE [dbo].[RxTrainLogitModel]
+    ```sql
+    CREATE PROCEDURE [dbo].[RxTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
     
     AS
     BEGIN
@@ -42,27 +42,24 @@ Lors de l’appel R à partir de T-SQL, vous utilisez la procédure stockée sys
         from nyctaxi_sample
         tablesample (70 percent) repeatable (98052)
     '
-      -- Insert the trained model into a database table
-      INSERT INTO nyc_taxi_models
+    
       EXEC sp_execute_external_script @language = N'R',
                                       @script = N'
-    
     ## Create model
     logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = InputDataSet)
     summary(logitObj)
     
-    ## Serialize model and put it in data frame
-    trained_model <- data.frame(model=as.raw(serialize(logitObj, NULL)));
+    ## Serialize model 
+    trained_model <- as.raw(serialize(logitObj, NULL));
     ',
       @input_data_1 = @inquery,
-      @output_data_1_name = N'trained_model'
-      ;
-    
+      @params = N'@trained_model varbinary(max) OUTPUT',
+      @trained_model = @trained_model OUTPUT; 
     END
     GO
     ```
 
-    -Pour vous assurer que des données sont restants pour tester le modèle, 70 % des données sont sélectionnées au hasard à partir de la table de données de taxi à des fins de formation.
+    - Pour vous assurer que des données sont restants pour tester le modèle, 70 % des données sont sélectionnées au hasard à partir de la table de données de taxi à des fins de formation.
 
     - La requête SELECT utilise la fonction scalaire personnalisée *fnCalculateDistance* pour calculer la distance directe entre les points de prise en charge et de dépose. les résultats de la requête sont stockés dans la variable d’entrée R par défaut, `InputDataset`.
   
@@ -70,32 +67,34 @@ Lors de l’appel R à partir de T-SQL, vous utilisez la procédure stockée sys
   
         La variable binaire _tipped_ est utilisée comme *étiquette* ou colonne de résultat, et le modèle est adapté à l’aide de ces colonnes de caractéristiques :  _passenger_count_, _trip_distance_, _trip_time_in_secs_et _direct_distance_.
   
-    -   Le modèle formé, enregistré dans la variable R `logitObj`, est sérialisé et placé dans une trame de données destinée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette sortie est insérée dans la table de base de données _nyc_taxi_models_, afin que vous puissiez l’utiliser pour des prédictions.
+    - Le modèle formé, enregistré dans la variable R `logitObj`, est sérialisé et retourné comme paramètre de sortie.
 
-## <a name="generate-the-r-model-using-the-stored-procedure"></a>Générer le modèle R à l’aide de la procédure stockée
+## <a name="train-and-deploy-the-r-model-using-the-stored-procedure"></a>Former et déployer le modèle R à l’aide de la procédure stockée
 
 Étant donné que la procédure stockée contenant déjà une définition des données d’entrée, vous n’avez pas besoin de fournir une requête d’entrée.
 
-1. Pour générer le modèle R, appelez la procédure stockée sans tous les autres paramètres :
+1. Pour former et déployer le modèle R, appelez la procédure stockée et l’insérer dans la table de base de données _nyc_taxi_models_, de sorte que vous pouvez l’utiliser pour des prédictions :
 
-    ```SQL
-    EXEC RxTrainLogitModel
+    ```sql
+    DECLARE @model VARBINARY(MAX);
+    EXEC RxTrainLogitModel @model OUTPUT;
+    INSERT INTO nyc_taxi_models (name, model) VALUES('RxTrainLogit_model', @model);
     ```
 
 2. Espion le **Messages** fenêtre de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour les messages éventuellement redirigés vers de R **stdout** flux, comme ce message : 
 
-    « Message (s) STDOUT du script externe : lignes lues : 1193025, Total des lignes traitées : 1193025, durée totale du segment : 0.093 secondes »
+    « Message (s) STDOUT du script externe : Lignes lues : 1193025, total des lignes traitées : 1193025, durée du segment total : 0.093 secondes »
 
     Vous pouvez également voir des messages spécifiques à la fonction en question, `rxLogit`, afficher les variables et de tester les mesures générées dans le cadre de la création de modèles.
 
 3.  Une fois l’instruction terminée, ouvrez la table *nyc_taxi_models*. Traitement des données et l’ajustement du modèle peuvent prendre un certain temps.
 
-    Vous pouvez voir qu’une nouvelle ligne a été ajoutée, avec le modèle sérialisé dans la colonne _model_.
+    Vous pouvez voir qu’une nouvelle ligne a été ajoutée, qui contient le modèle sérialisé dans la colonne _modèle_ et le nom du modèle **RxTrainLogit_model** dans la colonne _nom_.
 
-    ```
-    model
-    ------
-    0x580A00000002000302020....
+    ```sql
+    model                        name
+    ---------------------------- ------------------
+    0x580A00000002000302020....  RxTrainLogit_model
     ```
 
 Dans l’étape suivante, vous utiliserez le modèle formé pour générer des prédictions.
@@ -106,5 +105,5 @@ Dans l’étape suivante, vous utiliserez le modèle formé pour générer des p
 
 ## <a name="previous-lesson"></a>Leçon précédente
 
-[Leçon 2 : Créer des fonctionnalités de données à l’aide des fonctions R et T-SQL](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[Leçon 2 : Créer des caractéristiques de données à l’aide des fonctions R et T-SQL](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

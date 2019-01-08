@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergepublication
@@ -17,12 +16,12 @@ ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26c19d33b9834d2a8cdf1ee0b05530138c3fa006
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3328facfd0f19d6fa5f5f02a614c45cd22a79f76
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717927"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754122"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |enabled_for_internet|**Int**|Détermine si la publication est activée pour Internet. Si **1**, les fichiers de synchronisation pour la publication sont placés dans le `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` directory. L'utilisateur doit créer le répertoire FTP (File Transfer Protocol). Si **0**, la publication n’est pas activée pour l’accès Internet.|  
 |dynamic_filter|**Int**|Indique si un filtre de lignes paramétrable est utilisé. **0** signifie un filtre de lignes paramétrable n’est pas utilisé.|  
 |has_subscription|**bit**|Indique si la publication comporte des abonnements. **0** signifie qu’il n’y a actuellement aucun abonnement à cette publication.|  
-|snapshot_in_default_folder|**bit**|Spécifie si les fichiers d’instantanés sont stockés dans le dossier par défaut.<br /><br /> Si **1**, vous trouverez les fichiers d’instantanés dans le dossier par défaut.<br /><br /> Si **0**, fichiers d’instantané sont stockés dans l’emplacement secondaire spécifié par **alt_snapshot_folder**. Les emplacements secondaires peuvent se trouver sur un autre serveur, un lecteur réseau ou un support amovible (tel qu'un CD-ROM ou des disques amovibles). Vous pouvez également enregistrer les fichiers d'instantané sur un site FTP, pour permettre à l'Abonné de les extraire plus tard.<br /><br /> Remarque : Ce paramètre peut avoir la valeur true et néanmoins avoir un emplacement le **alt_snapshot_folder** paramètre. Cette combinaison spécifie que les fichiers d'instantané sont stockés à la fois dans l'emplacement par défaut et dans l'emplacement secondaire.|  
+|snapshot_in_default_folder|**bit**|Spécifie si les fichiers d’instantanés sont stockés dans le dossier par défaut.<br /><br /> Si **1**, vous trouverez les fichiers d’instantanés dans le dossier par défaut.<br /><br /> Si **0**, fichiers d’instantané sont stockés dans l’emplacement secondaire spécifié par **alt_snapshot_folder**. Les emplacements secondaires peuvent se trouver sur un autre serveur, un lecteur réseau ou un support amovible (tel qu'un CD-ROM ou des disques amovibles). Vous pouvez également enregistrer les fichiers d'instantané sur un site FTP, pour permettre à l'Abonné de les extraire plus tard.<br /><br /> Remarque : Ce paramètre peut avoir la valeur true et néanmoins avoir un emplacement le **alt_snapshot_folder** paramètre. Cette combinaison spécifie que les fichiers d'instantané sont stockés à la fois dans l'emplacement par défaut et dans l'emplacement secondaire.|  
 |alt_snapshot_folder|**nvarchar(255)**|Indique l'emplacement du dossier de remplacement pour l'instantané.|  
 |pre_snapshot_script|**nvarchar(255)**|Spécifie un pointeur vers un **.sql** scripts de fichier que l’Agent de fusion s’exécute avant tout de l’objet répliqué lors de l’application de l’instantané sur l’abonné.|  
 |post_snapshot_script|**nvarchar(255)**|Spécifie un pointeur vers un **.sql** fichier que l’Agent de fusion s’exécute après toutes les autres scripts et objet répliqués données ont été appliquées lors d’une synchronisation initiale.|  
@@ -94,7 +93,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar(255)**|Spécifie l'emplacement où l'Agent de fusion peut accéder aux fichiers d'instantanés lorsque l'instantané est envoyé via FTP.|  
 |ftp_login|**sysname**|Le nom d’utilisateur est utilisé pour se connecter au service FTP.|  
 |conflict_retention|**Int**|Indique la période de rétention, en jours, pendant laquelle les conflits sont conservés. Au terme du nombre de jours spécifié, la ligne en conflit est purgée de la table des conflits.|  
-|keep_partition_changes|**Int**|Indique si l'optimisation de la synchronisation intervient pour cette publication. **keep_partition_changes** a une valeur par défaut de **0**. La valeur **0** signifie que la synchronisation n’est pas optimisée, et les partitions envoyées à tous les abonnés sont vérifiées lors de la modification des données dans une partition.<br /><br /> **1** signifie que la synchronisation est optimisée et seuls les abonnés ayant des lignes dans la partition modifiée sont concernés.<br /><br /> Remarque : Par défaut, les publications de fusion utilisent des partitions précalculées, qui fournit un meilleur niveau d’optimisation que cette option. Pour plus d’informations, consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) et [optimiser les performances des filtres paramétrés avec des Partitions précalculées](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
+|keep_partition_changes|**Int**|Indique si l'optimisation de la synchronisation intervient pour cette publication. **keep_partition_changes** a une valeur par défaut de **0**. La valeur **0** signifie que la synchronisation n’est pas optimisée, et les partitions envoyées à tous les abonnés sont vérifiées lors de la modification des données dans une partition.<br /><br /> **1** signifie que la synchronisation est optimisée et seuls les abonnés ayant des lignes dans la partition modifiée sont concernés.<br /><br /> Remarque : Par défaut, les publications de fusion utilisent des partitions précalculées, ce qui offre un meilleur niveau d'optimisation que cette option. Pour plus d’informations, consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) et [optimiser les performances des filtres paramétrés avec des Partitions précalculées](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
 |allow_subscription_copy|**Int**|Spécifie si la possibilité de copier les bases de données d'abonnement qui s'abonnent à cette publication a été activée. La valeur **0** signifie que la copie n’est pas autorisée.|  
 |allow_synctoalternate|**Int**|Spécifie si un partenaire de synchronisation différent est autorisé pour se synchroniser avec le serveur de publication. La valeur **0** signifie un partenaire de synchronisation n’est pas autorisé.|  
 |validate_subscriber_info|**nvarchar(500)**|Donne la liste des fonctions utilisées pour extraire les informations d'Abonné et valider les critères de filtre de lignes paramétrable sur l'Abonné. Permet de vérifier la cohérence du partitionnement des informations avec chaque fusion.|  
@@ -122,7 +121,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>Notes  
  sp_helpmergepublication est utilisé dans la réplication de fusion.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les membres de la liste d'accès à la publication d'une publication peuvent exécuter sp_helpmergepublication pour cette publication. Les membres du rôle de base de données fixe db_owner de la base de données de publication peuvent exécuter sp_helpmergepublication pour obtenir des informations sur toutes les publications.  
   
 ## <a name="example"></a>Exemple  

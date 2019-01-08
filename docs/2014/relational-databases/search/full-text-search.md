@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: search
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
@@ -12,23 +12,23 @@ ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ef3beb381aa9cb5f6638920826d92bf01624e96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144189"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788641"
 ---
 # <a name="full-text-search"></a>Recherche en texte intégral
-  La recherche en texte intégral dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permet aux utilisateurs et aux applications d’exécuter des requêtes de texte intégral sur des données caractères dans des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Avant de pouvoir exécuter des requêtes de texte intégral sur une table, l'administrateur de base de données doit créer un index de recherche en texte intégral sur la table. L'index de recherche en texte intégral inclut une ou plusieurs colonnes de caractères dans la table. Ces colonnes peuvent être un des types de données suivants : `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, ou `varbinary(max)` et FILESTREAM. Chaque index de recherche en texte intégral indexe une ou plusieurs colonnes de la table, et chaque colonne peut utiliser une langue spécifique.  
+  La recherche en texte intégral dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permet aux utilisateurs et aux applications d’exécuter des requêtes de texte intégral sur des données caractères dans des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avant de pouvoir exécuter des requêtes de texte intégral sur une table, l'administrateur de base de données doit créer un index de recherche en texte intégral sur la table. L'index de recherche en texte intégral inclut une ou plusieurs colonnes de caractères dans la table. Les types de données de ces colonnes peuvent être `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` ou `varbinary(max)` et FILESTREAM. Chaque index de recherche en texte intégral indexe une ou plusieurs colonnes de la table, et chaque colonne peut utiliser une langue spécifique.  
   
  Les requêtes de texte intégral effectuent des recherches linguistiques sur des données texte dans des index de recherche en texte intégral, en traitant les mots et les expressions à partir des règles spécifiques d'une langue telle que l'anglais ou le japonais. Les requêtes de texte intégral peuvent inclure des mots et des expressions simples ou plusieurs formes d'un mot ou d'une expression. Une requête de texte intégral retourne tous les documents qui contiennent au moins une correspondance (ce que l’on appelle aussi *résultat*). Une correspondance se produit lorsqu'un document cible contient tous les termes spécifiés dans la requête de texte intégral et satisfait toutes les autres conditions de recherche, telles que la distance entre les correspondances.  
   
 > [!NOTE]  
->  Recherche en texte intégral est un composant facultatif de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur de base de données. Pour plus d’informations, consultez [installer SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).  
+>  La recherche en texte intégral est un composant facultatif du Moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [installer SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).  
   
 ##  <a name="benefits"></a> Que puis-je faire avec la recherche en texte intégral ?  
- La recherche en texte intégral s'applique à une large gamme de scénarios d'entreprise. Par exemple, les entreprises e-business peuvent l'utiliser pour rechercher des éléments sur un site Web, les cabinets d'avocats pour rechercher des antécédents dans des archives juridiques, et les départements des ressources humaines pour établir des correspondances entre des descriptions de poste et des curriculum vitæ stockés. Les principales tâches d'administration et de développement de la recherche en texte intégral sont identiques pour tous les scénarios d'entreprise. Toutefois, il est possible d'affiner l'index de recherche en texte intégral et les requêtes de texte intégral dans un scénario d'entreprise donné afin de répondre à des objectifs d'entreprise précis. Par exemple, pour une entreprise e-business, l'optimisation des performances sera peut-être plus importante que le classement des résultats, l'exactitude de rappel (nombre de correspondances existantes à être réellement retournées par une requête de texte intégral), ou la prise en charge de plusieurs langues. Pour un cabinet d'avocats, il sera par exemple essentiel de garantir une réponse à chaque contact (*rappel total* d'informations).  
+ Recherche en texte intégral n’est applicable à un large éventail de scénarios métier tels que e-entreprises-recherche d’éléments sur un site web ; loi entreprises-recherche d’historique des incidents dans un référentiel de données-legal ; ou les descriptions de travail mise en correspondance les départements des ressources humaines avec stockée reprend. Les principales tâches d'administration et de développement de la recherche en texte intégral sont identiques pour tous les scénarios d'entreprise. Toutefois, il est possible d'affiner l'index de recherche en texte intégral et les requêtes de texte intégral dans un scénario d'entreprise donné afin de répondre à des objectifs d'entreprise précis. Par exemple, pour une entreprise e-business, l'optimisation des performances sera peut-être plus importante que le classement des résultats, l'exactitude de rappel (nombre de correspondances existantes à être réellement retournées par une requête de texte intégral), ou la prise en charge de plusieurs langues. Pour un cabinet d'avocats, il sera par exemple essentiel de garantir une réponse à chaque contact (*rappel total* d'informations).  
   
  [Dans cette rubrique](#top)  
   
@@ -47,11 +47,11 @@ ms.locfileid: "48144189"
   
 -   Mots ou expressions utilisant des valeurs pondérées (*termes pondérés*)  
   
- Les requêtes de texte intégral ne respectent pas la casse. Par exemple, la recherche du terme « Aluminium » ou « aluminium » retourne les mêmes résultats.  
+ Les requêtes de texte intégral ne respectent pas la casse. Par exemple, la recherche du terme « Aluminium » ou « aluminium » retourne les mêmes résultats.  
   
  Les requêtes de texte intégral utilisent un ensemble réduit de prédicats [!INCLUDE[tsql](../../../includes/tsql-md.md)] (CONTAINS et FREETEXT) et de fonctions (CONTAINSTABLE et FREETEXTTABLE). Toutefois, les objectifs de la recherche pour un scénario d'entreprise donné influencent la structure des requêtes de texte intégral. Exemple :  
   
--   Entreprise e-business : rechercher un produit sur un site Web :  
+-   Entreprise e-business : rechercher un produit sur un site web :  
   
     ```  
     SELECT product_id   
@@ -62,7 +62,7 @@ ms.locfileid: "48144189"
     AND product_cost < 200 ;  
     ```  
   
--   Scénario de recrutement : rechercher des postulants à un emploi qui connaissent bien [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+-   Scénario de recrutement : rechercher des postulants à un emploi qui connaissent bien [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
     ```  
     SELECT candidate_name,SSN   
@@ -140,7 +140,7 @@ ms.locfileid: "48144189"
   
  Un traitement supplémentaire peut être effectué pour supprimer les mots vides et normaliser les jetons avant leur stockage dans l'index de recherche en texte intégral ou un fragment d'index.  
   
- À la fin d'une alimentation, une fusion finale est déclenchée ; les fragments d'index sont fusionnés entre eux dans un index de recherche en texte intégral. Il en résulte une amélioration des performances des requêtes dans la mesure où seul l'index principal doit être interrogé au lieu des fragments d'index ; par ailleurs, les statistiques de score sont plus appropriées pour un classement en fonction de la pertinence.  
+ À la fin d'une alimentation, une fusion finale est déclenchée ; les fragments d'index sont fusionnés entre eux dans un index de recherche en texte intégral. Il en résulte une amélioration des performances des requêtes dans la mesure où seul l'index principal doit être interrogé au lieu des fragments d'index ; par ailleurs, les statistiques de score sont plus appropriées pour un classement en fonction de la pertinence.  
   
  [Dans cette rubrique](#top)  
   
@@ -230,7 +230,7 @@ ms.locfileid: "48144189"
   
  [Dans cette rubrique](#top)  
   
-##  <a name="relcontent"></a> Contenu connexe  
+##  <a name="relcontent"></a> Contenu associé  
   
 -   [DDL, fonctions, procédures stockées et vues de recherche en texte intégral](../views/views.md)  
   

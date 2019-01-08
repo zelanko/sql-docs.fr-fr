@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - control flow [Integration Services], copying objects
@@ -16,12 +15,12 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43378e9129b40324144a2f20f2039f6f376fa39d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c1ebef7107ed58629502457bdc81bfe3e07f337
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200519"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805671"
 ---
 # <a name="copy-package-objects"></a>Copier des objets de packages
   Cette rubrique indique comment copier des éléments de flux de contrôle, des éléments de flux de données, ainsi que des gestionnaires de connexions dans un package ou entre des packages.  
@@ -37,7 +36,7 @@ ms.locfileid: "48200519"
 4.  Sélectionnez les éléments de flux de contrôle ou de flux de données à copier. Vous pouvez sélectionner des éléments un à la fois en appuyant sur la touche Maj et en cliquant sur l'élément, ou bien sélectionner des éléments en tant que groupe en faisant glisser le pointeur sur les éléments à sélectionner.  
   
     > [!IMPORTANT]  
-    >  Les contraintes de précédence et les chemins d'accès qui connectent des éléments ne sont pas sélectionnés automatiquement lorsque vous sélectionnez les deux éléments qu'ils connectent. Pour copier un flux de travail ordonné (segment d'un flux de contrôle ou d'un flux de données), veillez à copier également les contraintes de priorité et les chemins d'accès.  
+    >  Les contraintes de précédence et les chemins d'accès qui connectent des éléments ne sont pas sélectionnés automatiquement lorsque vous sélectionnez les deux éléments qu'ils connectent. Pour copier un flux de travail ordonné (segment d’un flux de contrôle ou d’un flux de données), veillez à copier également les contraintes de priorité et les chemins d’accès.  
   
 5.  Cliquez avec le bouton droit sur un élément sélectionné, puis cliquez sur **Copier**.  
   

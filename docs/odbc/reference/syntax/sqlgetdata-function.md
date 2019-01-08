@@ -20,16 +20,16 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70ee26274d101d1b18b00c83a89bd0c946da6742
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855813"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212448"
 ---
 # <a name="sqlgetdata-function"></a>Fonction SQLGetData
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ISO 92  
+ Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
   
  **Résumé**  
  **SQLGetData** récupère les données pour une seule colonne du jeu de résultats ou pour un seul paramètre après **SQLParamData** retourne SQL_PARAM_DATA_AVAILABLE. Elle peut être appelée plusieurs fois pour récupérer des données de longueur variable dans les parties.  
@@ -57,7 +57,7 @@ SQLRETURN SQLGetData(
  Pour récupérer les données de paramètre, il est l’ordinal du paramètre, qui commence à 1.  
   
  *TargetType*  
- [Entrée] L’identificateur de type du type de données C de la **TargetValuePtr* mémoire tampon. Pour obtenir la liste des types de données C valides et les identificateurs de type, consultez la [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) section annexe d : Types de données.  
+ [Entrée] L’identificateur de type du type de données C de la **TargetValuePtr* mémoire tampon. Pour obtenir la liste des types de données C valides et les identificateurs de type, consultez la [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) section dans l’annexe d : Types de données.  
   
  Si *TargetType* est SQL_ARD_TYPE, le pilotes utilise l’identificateur de type spécifié dans le champ SQL_DESC_CONCISE_TYPE de la ARD. Si *TargetType* est SQL_APD_TYPE, **SQLGetData** utilisera le même type de données C qui a été spécifié dans **SQLBindParameter**. Sinon, le type de données C est spécifié dans **SQLGetData** remplace le type de données C spécifié dans **SQLBindParameter**. Si elle est SQL_C_DEFAULT, le pilote sélectionne le type de données C par défaut en fonction du type de données SQL de la source.  
   
@@ -121,7 +121,7 @@ SQLRETURN SQLGetData(
 |HY090|Longueur de chaîne ou une mémoire tampon non valide|(DM) la valeur spécifiée pour l’argument *BufferLength* était inférieure à 0.<br /><br /> La valeur spécifiée pour l’argument *BufferLength* était inférieure à 4, le *Col_or_Param_Num* argument a été défini sur 0, et le pilote a été un ODBC 2 *.x* pilote.|  
 |HY109|Position de curseur non valide|Le curseur a été positionné (par **SQLSetPos**, **SQLFetch**, **SQLFetchScroll**, ou **SQLBulkOperations**) sur une ligne qui a été supprimée ou ne peut pas être récupérés.<br /><br /> Le curseur a été un curseur avant uniquement, et la taille de l’ensemble de lignes a été supérieure à un.|  
 |HY117|Connexion est suspendue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [SQLEndTran, fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Fonctionnalité optionnelle non implémentée|La source de données ou le pilote ne prend pas en charge l’utilisation de **SQLGetData** avec plusieurs lignes dans **SQLFetchScroll**. Cette description ne s’applique pas aux pilotes qui retournent SQL_GD_BLOCK masque de bits pour l’option SQL_GETDATA_EXTENSIONS dans **SQLGetInfo**.<br /><br /> La source de données ou le pilote ne prend pas en charge la conversion spécifiée par la combinaison de la *TargetType* argument et le type de données SQL de la colonne correspondante. Cette erreur s’applique uniquement lorsque le type de données SQL de la colonne a été mappé à un type de données spécifiques au pilote SQL.<br /><br /> Le pilote prend en charge uniquement ODBC 2 *.x*et l’argument *TargetType* était une des opérations suivantes :<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> et les types de données d’intervalle C répertoriés dans [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) annexe d : Types de données.<br /><br /> Le pilote prend uniquement en charge les versions ODBC avant 3,50 et l’argument *TargetType* a été SQL_C_GUID.|  
+|HYC00|Fonctionnalité optionnelle non implémentée|La source de données ou le pilote ne prend pas en charge l’utilisation de **SQLGetData** avec plusieurs lignes dans **SQLFetchScroll**. Cette description ne s’applique pas aux pilotes qui retournent SQL_GD_BLOCK masque de bits pour l’option SQL_GETDATA_EXTENSIONS dans **SQLGetInfo**.<br /><br /> La source de données ou le pilote ne prend pas en charge la conversion spécifiée par la combinaison de la *TargetType* argument et le type de données SQL de la colonne correspondante. Cette erreur s’applique uniquement lorsque le type de données SQL de la colonne a été mappé à un type de données spécifiques au pilote SQL.<br /><br /> Le pilote prend en charge uniquement ODBC 2 *.x*et l’argument *TargetType* était une des opérations suivantes :<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> et les types de données d’intervalle C répertoriés dans [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) dans l’annexe d : Types de données.<br /><br /> Le pilote prend uniquement en charge les versions ODBC avant 3,50 et l’argument *TargetType* a été SQL_C_GUID.|  
 |HYT01|Délai de connexion expiré|Le délai de connexion a expiré avant que la source de données a répondu à la demande. Le délai de connexion est défini via **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Pilote ne prend pas en charge cette fonction|(DM) le pilote correspondant à la *au paramètre StatementHandle* ne prend pas en charge la fonction.|  
 |IM017|L’interrogation est désactivée en mode de notification asynchrone|Chaque fois que le modèle de notification est utilisé, l’interrogation est désactivée.|  
@@ -153,11 +153,11 @@ SQLRETURN SQLGetData(
   
  Si le *TargetType* argument est un type de données d’intervalle, la précision de début d’intervalle par défaut (2) et la précision de secondes d’intervalle par défaut (6), comme défini dans les champs SQL_DESC_DATETIME_INTERVAL_PRECISION et SQL_DESC_PRECISION de le ARD, respectivement, sont utilisés pour les données. Si le *TargetType* argument est un type de données SQL_C_NUMERIC, la précision par défaut (définies par le pilote) et par défaut de la mise à l’échelle (0), comme défini dans les champs SQL_DESC_PRECISION et SQL_DESC_SCALE de la ARD, sont utilisé pour les données. Si la mise à l’échelle ni précision par défaut ne c'est-à-dire pas, l’application doit définir explicitement le champ de descripteur approprié par un appel à **SQLSetDescField** ou **SQLSetDescRec**. Il peut définir le champ SQL_DESC_CONCISE_TYPE à SQL_C_NUMERIC et appelez **SQLGetData** avec un *TargetType* argument de SQL_ARD_TYPE, ce qui provoque les valeurs de précision et l’échelle dans les champs de descripteur à utiliser.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Dans ODBC 2 *.x*, ensemble d’applications *TargetType* SQL_C_DATE, SQL_C_TIME ou SQL_C_TIMESTAMP pour indiquer que \* *TargetValuePtr* est une date, time, ou structure d’horodateur. Dans ODBC 3 *.x*, ensemble d’applications *TargetType* SQL_C_TYPE_DATE, SQL_C_TYPE_TIME ou SQL_C_TYPE_TIMESTAMP. Le Gestionnaire de pilotes rend les mappages appropriés si nécessaire, en sur la version de l’application et le pilote.  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>Récupération de données de longueur Variable en parties  
- **SQLGetData** peut être utilisé pour récupérer des données à partir d’une colonne qui contient les données de longueur variable dans les parties, autrement dit, lorsque l’identificateur du type de données SQL de la colonne est SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL_ WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY ou un identificateur propre au pilote pour un type de longueur variable.  
+ **SQLGetData** peut être utilisé pour récupérer des données à partir d’une colonne qui contient les données de longueur variable dans les parties - autrement dit, lorsque l’identificateur du type de données SQL de la colonne est SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL_ WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY ou un identificateur propre au pilote pour un type de longueur variable.  
   
  Pour récupérer des données à partir d’une colonne dans les parties, l’application appelle **SQLGetData** plusieurs fois de suite pour la même colonne. À chaque appel, **SQLGetData** retourne la partie suivante de données. C’est à l’application pour réassembler les parties, en prenant soin de supprimer le caractère null de terminaison à partir de parties intermédiaires des données de caractères. S’il existe plus de données à retourner ou pas suffisamment de tampon a été allouée pour le caractère de fin, **SQLGetData** retourne SQL_SUCCESS_WITH_INFO et SQLSTATE 01004 (données tronquées). Lorsqu’elle retourne la dernière partie des données, **SQLGetData** retourne SQL_SUCCESS. Ni SQL_NO_TOTAL ni égal à zéro peut être renvoyé sur le dernier appel valid pour récupérer des données à partir d’une colonne, parce que l’application puis n’aurait aucun moyen de savoir la quantité des données dans la mémoire tampon d’application est valide. Si **SQLGetData** est appelé après cela, il retourne SQL_NO_DATA. Pour plus d’informations, consultez la section suivante, « Récupération des données avec SQLGetData ».  
   
@@ -194,7 +194,7 @@ SQLRETURN SQLGetData(
   
 7.  Place la longueur des données dans \* *StrLen_or_IndPtr*. Si *StrLen_or_IndPtr* était un pointeur null, **SQLGetData** ne retourne pas la longueur.  
   
-    -   Pour les données binaires ou caractères, il s’agit la longueur des données après la conversion et avant la troncation en raison *BufferLength*. Si le pilote ne peut pas déterminer la longueur des données après la conversion, comme c’est parfois le cas avec les données de type long, il retourne SQL_SUCCESS_WITH_INFO et définit la longueur de SQL_NO_TOTAL. (Le dernier appel à **SQLGetData** doit toujours retourner la longueur des données, pas zéro ou SQL_NO_TOTAL.) Si les données ont été tronquées en raison de l’instruction SQL_ATTR_MAX_LENGTH attribut, la valeur de cet attribut, par opposition à la longueur réelle, est placé dans \* *StrLen_or_IndPtr*. Il s’agit, car cet attribut est conçu pour tronquer des données sur le serveur avant la conversion, le pilote n’a aucun moyen de déterminer quelles la longueur réelle est. Lorsque **SQLGetData** est appelée plusieurs fois de suite pour la même colonne, il s’agit de la longueur des données disponibles au début de l’appel actuel ; autrement dit, la longueur diminue avec chaque appel suivant.  
+    -   Pour les données binaires ou caractères, il s’agit la longueur des données après la conversion et avant la troncation en raison *BufferLength*. Si le pilote ne peut pas déterminer la longueur des données après la conversion, comme c’est parfois le cas avec les données de type long, il retourne SQL_SUCCESS_WITH_INFO et définit la longueur de SQL_NO_TOTAL. (Le dernier appel à **SQLGetData** doit toujours retourner la longueur des données, pas zéro ou SQL_NO_TOTAL.) Si les données ont été tronquées en raison de l’attribut d’instruction SQL_ATTR_MAX_LENGTH, la valeur de cet attribut - par opposition à la longueur réelle - est placée dans \* *StrLen_or_IndPtr*. Il s’agit, car cet attribut est conçu pour tronquer des données sur le serveur avant la conversion, le pilote n’a aucun moyen de déterminer quelles la longueur réelle est. Lorsque **SQLGetData** est appelée plusieurs fois de suite pour la même colonne, il s’agit de la longueur des données disponibles au début de l’appel actuel ; autrement dit, la longueur diminue avec chaque appel suivant.  
   
     -   Pour tous les autres types de données, il s’agit la longueur des données après la conversion ; Autrement dit, il est la taille du type auquel les données ont été converties.  
   

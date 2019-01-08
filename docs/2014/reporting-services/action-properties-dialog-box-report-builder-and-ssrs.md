@@ -34,12 +34,12 @@ ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ee4a1e9c6430cedb3d8bf34b2978e29c860685d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f68471e05ea1fd8e3b2680e81bd3e8512a2c79bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093629"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370651"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés relatives aux actions (Générateur de rapports et SSRS)
   Vous pouvez utiliser la boîte de dialogue **Action** pour activer les options de lien hypertexte pour un graphique, une jauge ou des éléments cartographiques prenant les liens en charge. Définissez une action afin qu'un utilisateur puisse cliquer sur le rapport et aller à une URL, à un rapport différent sur le même serveur de rapports ou sur un site SharePoint intégré à un serveur de rapports, ou encore à un emplacement différent dans le même rapport.  
@@ -61,7 +61,7 @@ ms.locfileid: "48093629"
   
  Pour un rapport publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL complète incluant l'extension de nom de fichier (.rdl). Par exemple, http://*\<Nom_serveur_sharepoint > /\<site >*  /documents/rapport1.rdl. Les chemins d'accès relatifs ne sont pas pris en charge.  
   
- Pour plus d’informations, consultez [Spécification de chemins d’accès à des éléments externes &#40;Générateur de rapports et SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) dans la [documentation du Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
+ Pour plus d’informations, consultez [Spécification de chemins d’accès à des éléments externes &#40;Générateur de rapports et SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) dans la [documentation du Générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
   
  **Utilisez ces paramètres pour exécuter le rapport**  
  Ajoutez une liste de paramètres à transmettre au rapport d'extraction. Les noms des paramètres doivent correspondre aux paramètres définis pour le rapport cible. Utilisez les boutons **Ajouter** et **Supprimer** pour ajouter et supprimer des paramètres. Utilisez les flèches de direction pour ordonner la liste de paramètres.  
@@ -106,6 +106,6 @@ ms.locfileid: "48093629"
  [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Ajouter un sous-rapport et des paramètres &#40;Générateur de rapports et SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
- [Tri interactif, explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
   

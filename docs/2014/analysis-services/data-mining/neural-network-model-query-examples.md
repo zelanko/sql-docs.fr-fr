@@ -15,12 +15,12 @@ ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ed0ba22087a12f08e7a951a89a7ca989bb6487f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7627a52322563a03881d138f6d3244d97cb8ca29
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110591"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372551"
 ---
 # <a name="neural-network-model-query-examples"></a>Exemples de requêtes de modèle de réseau neuronal
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, ou une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Par exemple, une requête de contenu pour un modèle de réseau neuronal peut extraire des métadonnées du modèle telles que le nombre de couches masquées. Une requête de prédiction peut également suggérer des classifications selon une entrée et fournir éventuellement des probabilités pour chaque classification.  
@@ -44,10 +44,10 @@ ms.locfileid: "48110591"
 ## <a name="finding-information-about-a-neural-network-model"></a>Recherche d'informations sur le modèle de réseau neuronal  
  Tous les modèles d'exploration de données exposent le contenu appris par l'algorithme en fonction d'un schéma standardisé : l'ensemble de lignes de schéma du modèle d'exploration de données. Cette information fournit des détails à propos du modèle et inclut les métadonnées de base, les structures découvertes dans l'analyse et les paramètres utilisés lors du traitement. Vous pouvez créer des requêtes sur le contenu du modèle en utilisant des instructions DMX (Data Mining Extension).  
   
-###  <a name="bkmk_Query1"></a> Exemple de requête 1 : obtention des métadonnées du modèle à l'aide de DMX  
+###  <a name="bkmk_Query1"></a> Exemple de requête 1 : Obtention des métadonnées du modèle avec DMX  
  La requête suivante retourne des métadonnées de base sur un modèle généré en utilisant l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network). Dans un modèle de réseau neuronal, le nœud parent du modèle contient uniquement le nom du modèle, le nom de la base de données dans laquelle le modèle est stocké et le nombre de nœuds enfants. Toutefois, le nœud des statistiques marginales (NODE_TYPE = 24) fournit à la fois ces métadonnées de base et des statistiques dérivées à propos des colonnes d'entrée utilisées dans le modèle.  
   
- L'exemple de requête suivant est basé sur le modèle d'exploration de données que vous créez dans le [didacticiel sur l'exploration de données intermédiaire](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md), nommé `Call Center Default NN`. Le modèle utilise des données d'un centre d'appels pour explorer les corrélations possibles entre le personnel et le nombre d'appels, les commandes et les problèmes. L'instruction DMX récupère des données à partir du nœud des statistiques marginales du modèle de réseau neuronal. La requête inclut le mot clé FLATTENED, parce que les statistiques d'attributs d'entrée dignes d'intérêt sont stockées dans une table imbriquée, NODE_DISTRIBUTION. Toutefois, si votre fournisseur de requêtes prend en charge les ensembles de lignes hiérarchiques, vous n'avez pas besoin d'utiliser le mot clé FLATTENED.  
+ L'exemple de requête suivant est basé sur le modèle d'exploration de données que vous créez dans le [didacticiel sur l'exploration de données intermédiaire](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md), nommé `Call Center Default NN`. Le modèle utilise des données d'un centre d'appels pour explorer les corrélations possibles entre le personnel et le nombre d'appels, les commandes et les problèmes. L'instruction DMX récupère des données à partir du nœud des statistiques marginales du modèle de réseau neuronal. La requête inclut le mot clé FLATTENED, parce que les statistiques d'attributs d'entrée dignes d'intérêt sont stockées dans une table imbriquée, NODE_DISTRIBUTION. Toutefois, si votre fournisseur de requêtes prend en charge les ensembles de lignes hiérarchiques, vous n'avez pas besoin d'utiliser le mot clé FLATTENED.  
   
 ```  
 SELECT FLATTENED MODEL_CATALOG, MODEL_NAME,   
@@ -64,14 +64,14 @@ WHERE NODE_TYPE = 24
   
  Résultats de l'exemple :  
   
-|MODEL_CATALOG|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|MODEL_CATALOG|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |--------------------|-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Manquant|0|0|1|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|< 64.7094100096|11|0.407407407|5|  
   
- Pour une définition de la signification des colonnes dans l’ensemble de lignes de schéma dans le contexte d’un modèle de réseau neuronal, consultez [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ Pour une définition de la signification des colonnes dans l’ensemble de lignes de schéma dans le contexte d’un modèle de réseau neuronal, consultez [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Query2"></a> Exemple de requête 2 : récupération des métadonnées du modèle de l'ensemble de lignes de schéma  
+###  <a name="bkmk_Query2"></a> Exemple de requête 2 : Récupération des métadonnées du modèle de l'ensemble de lignes de schéma  
  Vous pouvez obtenir les mêmes informations que celles retournées par une requête de contenu DMX en interrogeant l'ensemble de lignes de schéma d'exploration de données. Toutefois, l'ensemble de lignes de schéma fournit quelques colonnes supplémentaires, L'exemple de requête suivant retourne la date à laquelle le modèle a été créé, la date à laquelle il a été modifié et la date à laquelle il a été traité pour la dernière fois. La requête retourne également les colonnes prédictibles, qui ne sont pas aisément disponibles à partir du contenu du modèle, et les paramètres utilisés pour générer le modèle. Ces informations peuvent être utiles pour documenter le modèle.  
   
 ```  
@@ -90,7 +90,7 @@ WHERE MODEL_NAME = 'Call Center Default NN'
 |PREDICTION_ENTITY|Durée moyenne par problème,<br /><br /> Niveau de service,<br /><br /> Nombre de commandes|  
 |MINING_PARAMETERS|HOLDOUT_PERCENTAGE=30, HOLDOUT_SEED=0<br /><br /> MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_OUTPUT_ATTRIBUTES=255<br /><br /> MAXIMUM_STATES=100, SAMPLE_SIZE=10000, HIDDEN_NODE_RATIO=4|  
   
-###  <a name="bkmk_Query3"></a> Exemple de requête 3 : extraction des attributs d'entrée du modèle  
+###  <a name="bkmk_Query3"></a> Exemple de requête 3 : Récupération des attributs d'entrée du modèle  
  Vous pouvez récupérer les paires attribut-valeur d'entrée utilisées pour créer le modèle en interrogeant les nœuds enfants (NODE_TYPE = 20) de la couche d'entrée (NODE_TYPE = 18). La requête suivante retourne la liste des attributs d'entrée à partir des descriptions de nœuds.  
   
 ```  
@@ -140,7 +140,7 @@ WHERE NODE_TYPE = 21
 </NormContinuous>    
 ```  
   
-###  <a name="bkmk_Query4"></a> Exemple de requête 4 : extraction des poids de la couche masquée  
+###  <a name="bkmk_Query4"></a> Exemple de requête 4 : Récupération des poids de la couche masquée  
  Le contenu du modèle d'un modèle de réseau neuronal est structuré de manière à extraire facilement les détails relatifs à n'importe quel nœud du réseau. De plus, les nombres d'ID des nœuds fournissent des informations qui vous aident à identifier les relations entre les types de nœuds.  
   
  La requête suivante montre comment extraire les coefficients stockés sous un nœud particulier de la couche masquée. La couche masquée consiste en un nœud organisateur (NODE_TYPE = 19), qui contient uniquement les métadonnées, et plusieurs nœuds enfants (NODE_TYPE = 22), qui contiennent les coefficients pour les diverses combinaisons d'attributs et valeurs. Cette requête retourne uniquement les nœuds coefficient.  
@@ -179,7 +179,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ## <a name="using-a-neural-network-model-to-make-predictions"></a>Utilisation d'un modèle de réseau neuronal pour élaborer des prédictions  
  L'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) prend en charge à la fois la classification et la régression. Vous pouvez utiliser des fonctions de prédiction avec ces modèles pour fournir de nouvelles données et créer des prédictions singleton ou prédictions par lot.  
   
-###  <a name="bkmk_Query5"></a> Exemple de requête 5 : création d'une prédiction singleton  
+###  <a name="bkmk_Query5"></a> Exemple de requête 5 : Création d'une prédiction singleton  
  La façon la plus simple de générer une requête de prédiction sur un modèle de réseau neuronal est d'utiliser le Générateur de requêtes de prédiction, disponible sur l'onglet **Prédiction d'exploration de données** du Concepteur d'exploration de données dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez parcourir le modèle dans la Visionneuse de l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) pour filtrer des attributs présentant un intérêt et voir les tendances, puis basculer vers l'onglet **Prédiction d'exploration de données** pour créer une requête et prédire de nouvelles valeurs pour ces tendances.  
   
  Par exemple, vous pouvez parcourir le modèle de centre d'appels pour voir les corrélations entre les volumes de commandes et d'autres attributs. Pour ce faire, ouvrez le modèle dans la visionneuse et pour **entrée**, sélectionnez  **\<tous les >**.  Ensuite, pour **Sortie**, sélectionnez **Nombre de commandes**. Pour **Valeur 1,** sélectionnez la plage qui représente le plus de commandes et pour **Valeur 2**, sélectionnez la plage qui représente le moins de commandes. Vous pouvez ensuite voir d'un seul coup d'œil tous les attributs que le modèle met en corrélation avec le volume de commandes.  
@@ -199,12 +199,12 @@ NATURAL PREDICTION JOIN
   
 |Commandes prédites|Probabilité|  
 |----------------------|-----------------|  
-|364|0.9532…|  
+|364|0.9532...|  
   
  Le volume de ventes prédit est plus élevé que la plage actuelle de ventes pour mardi et la probabilité de la prédiction est très haute. Cependant, vous pouvez créer plusieurs prédictions à l'aide d'un processus par lot pour tester diverses hypothèses sur le modèle.  
   
 > [!NOTE]  
->  Les compléments d'exploration de données pour Excel 2007 fournissent des Assistants de régression logistique qui permettent de répondre facilement à des questions complexes, telles que le nombre d'opérateurs de niveau 2 qui seraient nécessaires pour améliorer le niveau de service afin d'atteindre un niveau cible pour une équipe spécifique. Les compléments d'exploration de données, qui peuvent être téléchargés gratuitement, incluent des Assistants basés sur l'algorithme MNN (Microsoft Neural Network) et/ou l'algorithme MLR (Microsoft Logistic Regression). Pour plus d’informations, consultez le site web [Data Mining Add-ins for Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790) (Compléments d’exploration de données SQL Server pour Office 2007).  
+>  Les compléments d'exploration de données pour Excel 2007 fournissent des Assistants de régression logistique qui permettent de répondre facilement à des questions complexes, telles que le nombre d'opérateurs de niveau 2 qui seraient nécessaires pour améliorer le niveau de service afin d'atteindre un niveau cible pour une équipe spécifique. Les compléments d'exploration de données, qui peuvent être téléchargés gratuitement, incluent des Assistants basés sur l'algorithme MNN (Microsoft Neural Network) et/ou l'algorithme MLR (Microsoft Logistic Regression). Pour plus d’informations, consultez le site web [Data Mining Add-ins for Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790) (Compléments d’exploration de données SQL Server pour Office 2007).  
   
 ## <a name="list-of-prediction-functions"></a>Liste des fonctions de prédiction  
  Tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] prennent en charge un ensemble commun de fonctions. Il n'existe aucune fonction de prédiction spécifique à l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, réseau neuronal de Microsoft). Toutefois, l'algorithme prend en charge les fonctions répertoriées dans le tableau suivant.  
@@ -223,9 +223,9 @@ NATURAL PREDICTION JOIN
  Pour la syntaxe de fonctions spécifiques, consultez [Fonctions DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de réseau neuronal de Microsoft](microsoft-neural-network-algorithm.md)   
- [Référence technique de Microsoft Neural Network algorithme](microsoft-neural-network-algorithm-technical-reference.md)   
- [Contenu du modèle pour les modèles de réseau neuronal d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Leçon 5 : Génération de réseau neuronal et modèles de régression logistique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Leçon 5 : Création de réseau neuronal et modèles de régression logistique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

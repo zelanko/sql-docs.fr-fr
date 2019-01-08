@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], size management
@@ -12,15 +12,15 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a681921eb1db363f8a2ddf7fc14836e0d9b781b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066759"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816611"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gérer la taille du fichier journal des transactions
-  Dans certains cas, il peut être utile réduire ou développer le fichier journal physique du journal des transactions de physiquement un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données. Cette rubrique contient des informations sur la façon de contrôler la taille d'un journal des transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , réduire le journal des transactions, ajouter ou agrandir un fichier journal de transactions, optimiser le taux de croissance du journal des transactions **tempdb** et contrôler la croissance d'un fichier journal de transactions.  
+  Dans certains cas, il peut être utile de réduire ou développer physiquement le fichier journal physique du journal des transactions d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette rubrique contient des informations sur la façon de contrôler la taille d'un journal des transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , réduire le journal des transactions, ajouter ou agrandir un fichier journal de transactions, optimiser le taux de croissance du journal des transactions **tempdb** et contrôler la croissance d'un fichier journal de transactions.  
   
   
 ##  <a name="MonitorSpaceUse"></a> Contrôler l’utilisation d’espace journal  
@@ -55,7 +55,7 @@ ms.locfileid: "48066759"
 -   [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (consultez les colonnes **size**, **max_size** et **growth** du ou des fichiers journaux.)  
   
 > [!NOTE]  
->  Il est possible de définir une réduction automatique des fichiers de la base de données et des fichiers journaux. Toutefois, nous vous déconseillons la réduction automatique, et la propriété de base de données `autoshrink` est définie par défaut par la valeur FALSE. Si `autoshrink` est définie par la valeur TRUE, la troncation automatique réduit la taille d'un fichier uniquement lorsque plus de 25 pour cent de son espace est inutilisé. Le fichier est réduit soit à la taille à laquelle seuls 25 % de ce dernier sont inutilisés soit à sa taille d'origine, selon la valeur la plus élevée. Pour plus d’informations sur la modification du paramètre de la `autoshrink` propriété, consultez [afficher ou modifier les propriétés d’une base de données](../databases/view-or-change-the-properties-of-a-database.md)— utilisez la **Auto Shrink** propriété sur le **Options**page — ou [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options), utilisez l’option AUTO_SHRINK.  
+>  Il est possible de définir une réduction automatique des fichiers de la base de données et des fichiers journaux. Toutefois, nous vous déconseillons la réduction automatique, et la propriété de base de données `autoshrink` est définie par défaut par la valeur FALSE. Si `autoshrink` est définie par la valeur TRUE, la troncation automatique réduit la taille d'un fichier uniquement lorsque plus de 25 pour cent de son espace est inutilisé. Le fichier est réduit soit à la taille à laquelle seuls 25 % de ce dernier sont inutilisés soit à sa taille d'origine, selon la valeur la plus élevée. Pour plus d’informations sur la modification du paramètre de la `autoshrink` propriété, consultez [afficher ou modifier les propriétés d’une base de données](../databases/view-or-change-the-properties-of-a-database.md)-utiliser le **Auto Shrink** propriété sur le **Options**page- ou [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-utilisez l’option AUTO_SHRINK.  
   
   
 ##  <a name="AddOrEnlarge"></a> Ajouter ou agrandir un fichier journal  

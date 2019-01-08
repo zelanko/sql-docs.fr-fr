@@ -17,19 +17,19 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b6837fdc076db7abfe4a085c2bb98201e1a298d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea6a5ef9a9ced2399ba5539f8117cc40e5c13db0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055259"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352031"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Fournit une gamme complète d’outils de prêts à l’emploi et des services pour vous aider à créer, déployer et gérer des rapports pour votre organisation. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] intègre des fonctionnalités de programmation qui vous permettent d'étendre et de personnaliser votre fonctionnalité de création de rapports.  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est une plateforme de création de rapports basée sur le serveur qui fournit des fonctionnalités complètes de création de rapports pour un large éventail de sources de données. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclut un jeu complet d’outils vous permettant de créer, gérer et livrer des rapports, ainsi que les API qui permettent aux développeurs d’intégrer ou d’étendre les données de traitement et des rapports dans des applications personnalisées. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] les outils fonctionnent au sein de la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] environnement et sont totalement intégrés aux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] outils et composants.  
   
- Avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vous pouvez créer des rapports de type interactif, tabulaire, graphique ou libre à partir de sources de données XML, relationnelles et multidimensionnelles. Les rapports peuvent inclure une visualisation complète des données, y compris des graphiques, des cartes et des graphiques sparkline. Vous pouvez publier des rapports, planifier leur traitement ou y accéder à la demande. Vous pouvez sélectionner divers formats d’affichage, exporter des rapports vers d'autres applications comme [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] et vous abonner à des rapports publiés. Les rapports que vous créez peuvent être consultés par le biais d'une connexion Internet ou en tant qu'application [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows ou site SharePoint. Vous pouvez également créer des alertes de données sur des rapports publiés sur un site SharePoint et recevoir des messages électroniques lorsque les données du rapport sont modifiées.  
+ Avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vous pouvez créer des rapports de type interactif, tabulaire, graphique ou libre à partir de sources de données XML, relationnelles et multidimensionnelles. Les rapports peuvent inclure une visualisation complète des données, y compris des graphiques, des cartes et des graphiques sparkline. Vous pouvez publier des rapports, planifier leur traitement ou y accéder à la demande. Vous pouvez sélectionner divers formats d’affichage, exporter des rapports vers d'autres applications comme [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]et vous abonner à des rapports publiés. Les rapports que vous créez peuvent être consultés par le biais d'une connexion Internet ou en tant qu'application [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows ou site SharePoint. Vous pouvez également créer des alertes de données sur des rapports publiés sur un site SharePoint et recevoir des messages électroniques lorsque les données du rapport sont modifiées.  
   
  Pour plus d’informations sur les nouvelles fonctionnalités de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [What ' s New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md).  
   
@@ -67,6 +67,6 @@ ms.locfileid: "48055259"
  ![Icône de dossier](media/hlp-16folder.gif "icône de dossier") [références relatives aux fonctionnalités &#40;Reporting Services&#41;](feature-reference-reporting-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Centre de ressources SQL Server](http://go.microsoft.com/fwlink/?linkID=219676)  
+ [Centre de ressources SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

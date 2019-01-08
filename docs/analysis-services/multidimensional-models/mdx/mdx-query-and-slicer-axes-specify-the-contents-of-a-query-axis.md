@@ -1,5 +1,5 @@
 ---
-title: Spécification du contenu d’un axe de requête (MDX) | Documents Microsoft
+title: Spécification du contenu d’un axe de requête (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bceafa9fb8ddd89162deca105404c317001a86bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 38a48fd99ae9a03599914a1dfdac0bf204301c4c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026806"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399572"
 ---
-# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>Requête MDX et les Axes de segment - spécifier le contenu d’un axe de requête
+# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>Axes de requête et de segment MDX - Spécifier le contenu d’un axe de requête
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Les axes de requête spécifient les bords d'un jeu de cellules retourné par une instruction SELECT MDX (Multidimensional Expressions). La spécification des bords d'un jeu de cellules vous permet de restreindre les données retournées qui sont visibles par le client.  
   
@@ -68,7 +68,7 @@ FROM [Adventure Works]
   
 ```  
   
- Le mot clé NON EMPTY, utilisé avant la définition du jeu, permet de supprimer facilement tous les tuples vides d'un axe. Par exemple, dans les exemples étudiés jusqu'à présent, il n'y a pas de données dans le cube à partir d'août 2004. Pour supprimer toutes les lignes de l'ensemble de cellules qui n'ont aucune donnée dans aucune colonne, ajoutez simplement NON EMPTY avant la définition du jeu sur l'axe des lignes, comme suit :  
+ Le mot clé NON EMPTY, utilisé avant la définition du jeu, permet de supprimer facilement tous les tuples vides d'un axe. Par exemple, dans les exemples que nous avons vu jusqu'à présent il aucune donnée dans le cube à partir d’août 2004 et versions ultérieures. Pour supprimer toutes les lignes de l'ensemble de cellules qui n'ont aucune donnée dans aucune colonne, ajoutez simplement NON EMPTY avant la définition du jeu sur l'axe des lignes, comme suit :  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -112,6 +112,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécification du contenu d’un axe de secteur & #40 ; MDX & #41 ;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Spécification du contenu d’un axe de secteur &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

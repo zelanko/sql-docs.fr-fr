@@ -15,12 +15,12 @@ ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26c645a134d962daff989e7f7a88b7ae9dcd67bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cb1fad6ffa7fcb8dcf1330079b12aa77f06705d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071459"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362761"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes MDX Analysis Services (Générateur de rapports)
   Le Générateur de rapports fournit un concepteur de requêtes graphique permettant de générer des requêtes MDX (Multidimensional Expression) pour une source de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Le concepteur de requêtes graphique MDX comporte deux modes : le mode Création et le mode Requête. Chaque mode fournit un volet Métadonnées à partir duquel vous pouvez faire glisser des membres de cubes sélectionnés pour créer une requête MDX qui récupère des données lors du traitement du rapport.  
@@ -58,7 +58,7 @@ ms.locfileid: "48071459"
  Pour spécifier vos propres propriétés supplémentaires, vous devez modifier manuellement la requête MDX en mode Requête.  
   
 > [!NOTE]  
->  Pour plus d'informations sur MDX et pour obtenir des informations d'ordre général sur le concepteur de requêtes MDX, consultez « Éditeur de requête MDX (Analysis Services - Données multidimensionnelles) » dans la [documentation en ligne de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335). Toutefois, pour qu'un rapport affiche les données d'une requête DMX, vous devez générer la requête à l'aide du concepteur de requêtes MDX fourni avec le Générateur de rapports. L'importation d'une requête .mdx à partir d'un fichier n'est pas prise en charge.  
+>  Pour plus d'informations sur MDX et pour obtenir des informations d'ordre général sur le concepteur de requêtes MDX, consultez « Éditeur de requête MDX (Analysis Services - Données multidimensionnelles) » dans la [documentation en ligne de SQL Server](https://go.microsoft.com/fwlink/?linkid=98335). Toutefois, pour qu'un rapport affiche les données d'une requête DMX, vous devez générer la requête à l'aide du concepteur de requêtes MDX fourni avec le Générateur de rapports. L'importation d'une requête .mdx à partir d'un fichier n'est pas prise en charge.  
   
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>Barre d'outils du Concepteur de requêtes graphique MDX en mode Création  
  La barre d'outils du Concepteur de requêtes fournit des boutons qui vous aident à concevoir des requêtes MDX à l'aide de l'interface graphique. Le tableau suivant répertorie ces boutons et leurs fonctions.  
@@ -69,11 +69,11 @@ ms.locfileid: "48071459"
 |**Importer**|Importe une requête existante à partir d'un fichier de définition de rapport (.rdl) sur le système de fichiers.|  
 |![Basculer vers l’affichage des requêtes DMX](../analysis-services/media/rsqdicon-commandtypemdx.gif "Basculer vers l’affichage des requêtes DMX")|Bascule vers le type de commande MDX.|  
 |![Actualiser les données du résultat](../analysis-services/media/rsqdicon-refresh.gif "Actualiser les données du résultat")|Actualise les métadonnées à partir de la source de données.|  
-|![Ajouter un membre calculé](../analysis-services/media/rsqdicon-addcalculatedmember.gif "ajouter un membre calculé")|Affiche la boîte de dialogue **Générateur de membres calculés** .|  
+|![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Affiche la boîte de dialogue **Générateur de membres calculés** .|  
 |![Bouton bascule pour afficher les cellules vides](../analysis-services/media/rsqdicon-showemptycells.gif "Bouton bascule pour afficher les cellules vides")|Affiche ou masque les cellules vides dans le volet Données. (Cela revient à utiliser la clause NON EMPTY dans MDX.)|  
 |![Exécuter automatiquement la requête](../analysis-services/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête")|Exécute automatiquement la requête et affiche le résultat chaque fois qu'une modification est effectuée. Les résultats s'affichent dans le volet Données.|  
 |![Bouton Afficher les agrégations](../analysis-services/media/rsqdicon-showaggregations.gif "Bouton Afficher les agrégations")|Affiche les agrégations dans le volet Données.|  
-|![Supprimer](../analysis-services/media/rsqdicon-delete.gif "supprimer")|Supprime de la requête la colonne sélectionnée dans le volet Données.|  
+|![Supprimer](../analysis-services/media/rsqdicon-delete.gif "Supprimer")|Supprime de la requête la colonne sélectionnée dans le volet Données.|  
 |![Icône de la boîte de dialogue Paramètres de la requête](../analysis-services/media/iconqueryparameter.gif "Icône de la boîte de dialogue Paramètres de la requête")|Affiche la boîte de dialogue **Paramètres de la requête** . Lorsque vous spécifiez des valeurs pour un paramètre de requête, un paramètre de rapport du même nom est automatiquement créé. Le paramètre de requête prend pour valeur une expression qui fait référence au paramètre de rapport.|  
 |![Bouton Préparer la requête](../analysis-services/media/rsqdicon-preparequery.gif "Bouton Préparer la requête")|Prépare la requête.|  
 |![Exécuter la requête](../analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche les résultats dans le volet Données.|  
@@ -107,7 +107,7 @@ ms.locfileid: "48071459"
   
 -   **Modifier en tant que texte**  
   
--   **Ajouter un membre calculé** (![ajouter un membre calculé](../analysis-services/media/rsqdicon-addcalculatedmember.gif "ajouter un membre calculé"))  
+-   **Ajouter un membre calculé** (![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **Afficher les cellules vides** (![Bouton bascule pour afficher les cellules vides](../analysis-services/media/rsqdicon-showemptycells.gif "Bouton bascule pour afficher les cellules vides"))  
   

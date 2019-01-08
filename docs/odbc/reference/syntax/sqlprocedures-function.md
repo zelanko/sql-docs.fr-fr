@@ -20,16 +20,16 @@ ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a044f3122f3f553e068d474901e52cce3eef1c9
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 260406eddd6caef88035376a764c3e140547e6c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120082"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204668"
 ---
 # <a name="sqlprocedures-function"></a>Fonction SQLProcedures
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ODBC  
+ Version introduite : Conformité aux normes 1.0 ODBC : ODBC  
   
  **Résumé**  
  **SQLProcedures** renvoie la liste des noms de procédures stockées dans une source de données spécifique. *Procédure* est un terme générique utilisé pour décrire un *objet exécutable*, ou une entité nommée qui peut être appelée à l’aide des paramètres d’entrée et de sortie. Pour plus d’informations sur les procédures, consultez le [procédures](../../../odbc/reference/develop-app/procedures-odbc.md).  
@@ -131,9 +131,9 @@ SQLRETURN SQLProcedures(
 |PROCEDURE_CAT (ODBC 2.0)|1|Varchar|Identificateur du catalogue de procédure ; NULL si non applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines procédures, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour ces procédures qui n’ont pas de catalogues.|  
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|Identificateur de schéma de procédure ; NULL si non applicable à la source de données. Si un pilote prend en charge les schémas pour certaines procédures, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour ces procédures qui n’ont pas de schémas.|  
 |NOM_PROCÉDURE (ODBC 2.0)|3|Varchar non NULL|Identificateur de la procédure.|  
-|NUM_INPUT_PARAMS (ODBC 2.0)|4|Néant|Réservé pour un usage ultérieur. Les applications ne doivent pas dépendre les données retournées dans ces colonnes de résultats.|  
-|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|Néant|Réservé pour un usage ultérieur. Les applications ne doivent pas dépendre les données retournées dans ces colonnes de résultats.|  
-|NUM_RESULT_SETS (ODBC 2.0)|6|Néant|Réservé pour un usage ultérieur. Les applications ne doivent pas dépendre les données retournées dans ces colonnes de résultats.|  
+|NUM_INPUT_PARAMS (ODBC 2.0)|4|N/A|Réservé pour un usage ultérieur. Les applications ne doivent pas dépendre les données retournées dans ces colonnes de résultats.|  
+|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|N/A|Réservé pour un usage ultérieur. Les applications ne doivent pas dépendre les données retournées dans ces colonnes de résultats.|  
+|NUM_RESULT_SETS (ODBC 2.0)|6|N/A|Réservé pour un usage ultérieur. Les applications ne doivent pas dépendre les données retournées dans ces colonnes de résultats.|  
 |REMARQUES (ODBC 2.0)|7|Varchar|Une description de la procédure.|  
 |PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|Définit le type de procédure :<br /><br /> SQL_PT_UNKNOWN : Il est impossible de déterminer si la procédure retourne une valeur.<br /><br /> SQL_PT_PROCEDURE : L’objet retourné est une procédure ; Autrement dit, il n’a pas une valeur de retour.<br /><br /> SQL_PT_FUNCTION : L’objet retourné est une fonction ; Autrement dit, il a une valeur de retour.|  
   

@@ -12,12 +12,12 @@ ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fcc0962d0d810b79a788e86aa987f3b54534a41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 934262fb9f5e1e67ebf475310518f924aebbc4c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196809"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351475"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>Référence du développeur pour SQL Server 2014
   Les fonctionnalités et technologies suivantes vous permettent de développer des applications qui accèdent aux données d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -25,7 +25,7 @@ ms.locfileid: "48196809"
 ## <a name="programming-reference-sections"></a>Sections du Guide de référence de programmation  
  ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [Common Language Runtime &#40;CLR&#41; Concepts de programmation d’intégration](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [XML natifs](http://technet.microsoft.com/library/ms191274.aspx)  
+ ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [XML natifs](https://technet.microsoft.com/library/ms191274.aspx)  
   
  ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [programmation de SQL Server Native Client](../relational-databases/native-client/sql-server-native-client-programming.md)  
   
@@ -62,10 +62,10 @@ ms.locfileid: "48196809"
 ## <a name="other-programming-resources"></a>Autres ressources de programmation  
  Le développement d'une application d'accès aux données peut nécessiter l'utilisation d'une ou de plusieurs des technologies suivantes :  
   
- [L’accès aux données dans Visual Studio](http://go.microsoft.com/fwlink/?LinkId=129902)  
+ [L’accès aux données dans Visual Studio](https://go.microsoft.com/fwlink/?LinkId=129902)  
   
- [Pilote SQL Server pour PHP](http://go.microsoft.com/fwlink/?LinkID=119889)  
+ [Pilote SQL Server pour PHP](https://go.microsoft.com/fwlink/?LinkID=119889)  
   
- [JDBC](http://go.microsoft.com/fwlink/?LinkId=129903)  
+ [JDBC](https://go.microsoft.com/fwlink/?LinkId=129903)  
   
   

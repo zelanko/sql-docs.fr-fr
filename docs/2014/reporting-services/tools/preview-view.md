@@ -15,18 +15,18 @@ ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 89bea23ea4add737dbd9edf9a02d147abb35adbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ac2aa3d352de78fae6c3d9613bef2df390e46fa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206769"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354028"
 ---
 # <a name="preview-view"></a>Vue Aperçu
   Utilisez la vue **Aperçu** pour afficher le rapport rendu. Lors de l'aperçu d'un rapport, le Générateur de rapports exécute le rapport localement et l'affiche dans la vue Aperçu. Dans le mode Aperçu, le rapport est traité dans sa totalité. Si le rapport contient une requête complexe ou une grande quantité de données, l'aperçu peut prendre plusieurs minutes à apparaître la première fois que vous l'affichez. Pour les modifications ultérieures apportées exclusivement à la mise en forme du rapport, l'aperçu utilise les données mises en cache.  
   
 > [!IMPORTANT]  
->  Lorsque [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] est exécuté en tant que RemoteApp, les rapports ne peuvent pas être affichés dans la vue **Aperçu** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Les programmes RemoteApp sont des programmes auxquels les services de bureau à distance peuvent accéder à distance. Pour plus d'informations, consultez le [Guide pas à pas de RemoteApp Terminal Services](http://technet.microsoft.com/library/cc730673\(WS.10\).aspx).  
+>  Lorsque [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] est exécuté en tant que RemoteApp, les rapports ne peuvent pas être affichés dans la vue **Aperçu** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Les programmes RemoteApp sont des programmes auxquels les services de bureau à distance peuvent accéder à distance. Pour plus d'informations, consultez le [Guide pas à pas de RemoteApp Terminal Services](https://technet.microsoft.com/library/cc730673\(WS.10\).aspx).  
   
 ## <a name="options"></a>Options  
  Utilisez la barre d'outils pour gérer les fonctions d'aperçu.  

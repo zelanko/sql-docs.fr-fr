@@ -16,12 +16,12 @@ ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09c8f5a510ca569f4dd24464abf176b2db772115
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228499"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439391"
 ---
 # <a name="legal-notice-for-documentation"></a>Notice légale pour documentation
   Ce document est fourni « en l'état ». Les informations et les opinions exprimées dans ce document, y compris les adresses URL et les autres références à des sites Internet, peuvent faire l'objet de modifications sans préavis. Vous assumez les risques liés à leur utilisation.  
@@ -37,8 +37,8 @@ ms.locfileid: "48228499"
   
  Un exemple présenté dans cette documentation sert principalement à illustrer un concept ou l’utilisation raisonnable d’une instruction ou d’une clause particulière. La plupart des exemples ne reprennent pas la totalité du code normalement utilisé dans un système en production puisque certaines parties de la validation des données et de la gestion des erreurs sont retirées pour mettre l’accent sur un concept ou une instruction particulière. Aucun support technique n’est disponible pour ces exemples, ni pour le code source fourni.  
   
- Dans certains cas, une fonctionnalité particulière de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] n'a pas été suffisamment testée ou développée, et n'est pas destinée à votre utilisation. De telles fonctionnalités se retrouvent alors sous forme d'espaces réservés. Par conséquent, certaines fonctionnalités incluses dans le logiciel ne sont pas documentées. Les fonctionnalités qui ne sont pas documentées ou qui sont incluses comme notation pour une utilisation interne de Microsoft ne sont pas destinées à votre utilisation et ne sont pas prises en charge par le support technique de Microsoft. Sauf spécification contraire de la documentation de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], le contenu tiers, y compris les problèmes qui résultent de son utilisation avec [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], n'est pas pris en charge par le support technique de Microsoft et peut également entraîner une perte des données. Le support technique de Microsoft n'assure pas la prise en charge des bases de données ou des applications qui exploitent ou utilisent les points d'entrée non documentés comme les API non documentées, notamment sans que la liste soit limitative, les éléments suivants : procédures stockées, procédures stockées étendues, fonctions, vues, tables, colonnes, propriétés ou métadonnées.  
+ Dans certains cas, une fonctionnalité particulière de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] n'a pas été suffisamment testée ou développée, et n'est pas destinée à votre utilisation. De telles fonctionnalités se retrouvent alors sous forme d'espaces réservés. Par conséquent, certaines fonctionnalités incluses dans le logiciel ne sont pas documentées. Les fonctionnalités qui ne sont pas documentées ou qui sont incluses comme notation pour une utilisation interne de Microsoft ne sont pas destinées à votre utilisation et ne sont pas prises en charge par le support technique de Microsoft. Sauf spécification contraire de la documentation de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , le contenu tiers, y compris les problèmes qui résultent de son utilisation avec [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], n'est pas pris en charge par le support technique de Microsoft et peut également entraîner une perte des données. Le support technique de Microsoft n'assure pas la prise en charge des bases de données ou des applications qui exploitent ou utilisent les points d'entrée non documentés comme les API non documentées, notamment sans que la liste soit limitative, les éléments suivants : procédures stockées, procédures stockées étendues, fonctions, vues, tables, colonnes, propriétés ou métadonnées.  
   
- Les mises à niveau de serveur et de base de données vers les versions ultérieures de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] pour les applications et les bases de données qui exploitent et utilisent des points d'entrée non documentés (qui peuvent ne pas fonctionner) ne sont pas prises en charge. Utilisation de SQL Server les fonctionnalités incluses dans Microsoft SQL Server qui ne sont pas documentés dans le [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] documentation destinée à votre utilisation ne sont pas prises en charge et peut provoquer une perte de données.  
+ Les mises à niveau de serveur et de base de données vers les versions ultérieures de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] pour les applications et les bases de données qui exploitent et utilisent des points d'entrée non documentés (qui peuvent ne pas fonctionner) ne sont pas prises en charge. L'utilisation des fonctionnalités SQL Server et de celles incluses dans Microsoft SQL Server sans être documentées dans la documentation [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] destinée à votre utilisation n'est pas prise en charge et peut provoquer une perte des données.  
   
   

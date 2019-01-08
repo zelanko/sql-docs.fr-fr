@@ -1,18 +1,20 @@
 ---
-title: Persistance des données avec SQL Server du cluster big data sur Kubernetes | Microsoft Docs
+title: Persistance des données sur Kubernetes
+titleSuffix: SQL Server 2019 big data clusters
 description: En savoir plus sur le fonctionne de la persistance des données dans un cluster de données volumineux de SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 100372f339f2d064e14b7882fdfb1a661b824cc6
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 75cf78e7c73ad61e5e28ed6f0707639899d8ec19
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221785"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207668"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistance des données avec un cluster volumineux de données SQL Server sur Kubernetes
 
@@ -23,8 +25,7 @@ ms.locfileid: "51221785"
 Le cluster de données volumineux de SQL Server consomme ces volumes persistants consiste à l’aide de [Classes de stockage](https://kubernetes.io/docs/concepts/storage/storage-classes/). Vous pouvez créer des classes de stockage différents pour différents types de stockage et les spécifier au moment du déploiement de cluster big data. Vous pouvez configurer la classe de stockage à utiliser dans quel but (pool). Cluster de données volumineux de SQL Server crée [les revendications de volume persistant](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) avec le nom de classe de stockage spécifié pour chaque pod qui nécessite des volumes persistants. Ensuite, elle monte l’ou les volumes persistant correspondant dans le pod.
 
 > [!NOTE]
-
-> Pour CTP 2.1, uniquement `ReadWriteOnce` mode d’accès pour l’ensemble du cluster est prise en charge.
+> Pour CTP 2.2, uniquement `ReadWriteOnce` mode d’accès pour l’ensemble du cluster est prise en charge.
 
 ## <a name="deployment-settings"></a>Paramètres de déploiement
 
@@ -65,7 +66,7 @@ Kubeadm n’est pas fourni avec une classe de stockage intégrée. Vous pouvez c
 
 Clusters locaux à l’évidence ne sont pas fournies avec n’importe quelle classe de stockage intégrée, par conséquent, vous devez configurer [volumes persistants](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)/[fournisseurs pour](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/) avance, puis utilisez le correspondantes classes de stockage au cours du déploiement de cluster de données volumineuses de SQL Server.
 
-# <a name="customize-storage-size-for-each-pool"></a>Personnaliser la taille de stockage pour chaque pool
+## <a name="customize-storage-size-for-each-pool"></a>Personnaliser la taille de stockage pour chaque pool
 Par défaut, la taille du volume persistant pour chacune des pods configurés dans le cluster est de 6 Go. Cela est configurable en définissant la variable d’environnement `STORAGE_SIZE` sur une autre valeur. Par exemple, vous pouvez exécuter de commande ci-dessous pour définir la valeur à 10 Go, avant d’exécuter le `mssqlctl create cluster command`.
 
 ```bash

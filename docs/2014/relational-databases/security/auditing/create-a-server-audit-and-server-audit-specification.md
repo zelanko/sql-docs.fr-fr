@@ -17,15 +17,15 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 03636c3eaf9d416d32f0143503625a7c71b8a254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab52d307d914e1f3f4b1e808b59999dcae96cccb
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219608"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979795"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Créer un audit du serveur et une spécification d'audit du serveur
-  Cette rubrique explique comment créer un audit de serveur et une spécification d'audit de serveur dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'*audit* d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou d'une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implique le suivi et l'enregistrement des événements qui se produisent sur le système. L’objet *Audit SQL Server* recueille une seule instance des actions et des groupes d’actions au niveau du serveur ou de la base de données à surveiller. L'audit s'effectue au niveau de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous pouvez exécuter plusieurs audits par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'objet *Spécification de l'audit du serveur* appartient à un audit. Vous pouvez créer une spécification d'audit de serveur par audit, car tous deux sont créés au niveau de la portée de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](sql-server-audit-database-engine.md).  
+  Cette rubrique explique comment créer un audit de serveur et une spécification d'audit de serveur dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'*audit* d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou d'une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implique le suivi et l'enregistrement des événements qui se produisent sur le système. L’objet *Audit SQL Server* recueille une seule instance des actions et des groupes d’actions au niveau du serveur ou de la base de données à surveiller. L'audit s'effectue au niveau de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous pouvez exécuter plusieurs audits par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'objet *Spécification de l'audit du serveur* appartient à un audit. Vous pouvez créer une spécification d'audit de serveur par audit, car tous deux sont créés au niveau de la portée de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](sql-server-audit-database-engine.md).  
   
  **Dans cette rubrique**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48219608"
   
 1.  Dans l'Explorateur d'objets, développez le dossier **Sécurité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Audits** et sélectionnez **Nouvel audit**.  
+2.  Cliquez avec le bouton droit sur le dossier **Audits** et sélectionnez **Nouvel audit...**.  
   
      Les options suivantes sont disponibles sur la page **Général** de la boîte de dialogue **Créer un audit** .  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48219608"
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Les opérations continuent. Les enregistrements d'audit ne sont pas conservés. L'audit poursuit sa tentative de consignation des événements et reprend les opérations d'enregistrement une fois la défaillance résolue. La sélection de l'option **Continuer** peut permettre l'exécution d'une activité non auditée susceptible d'enfreindre vos stratégies de sécurité. Sélectionnez cette option quand la poursuite de l’opération du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] est plus importante que la conservation d’un audit complet. Il s'agit de la sélection par défaut.  
   
      **Arrêter le serveur**  
-     Force un arrêt du serveur lorsque l'instance de serveur qui écrit dans la cible ne peut pas écrire de données dans la cible d'audit. La connexion qui émet cette commande doit avoir le `SHUTDOWN` autorisation. Si la connexion n'a pas cette autorisation, cette fonction échoue et un message d'erreur est généré. Aucun événement audité ne se produit. Sélectionnez cette option si une défaillance de l'audit risque de compromettre la sécurité ou l'intégrité du système.  
+     Force un arrêt du serveur lorsque l'instance de serveur qui écrit dans la cible ne peut pas écrire de données dans la cible d'audit. La connexion qui émet cette commande d'arrêt doit avoir l'autorisation `SHUTDOWN`. Si la connexion n'a pas cette autorisation, cette fonction échoue et un message d'erreur est généré. Aucun événement audité ne se produit. Sélectionnez cette option si une défaillance de l'audit risque de compromettre la sécurité ou l'intégrité du système.  
   
      **Faire échouer l'opération**  
      Lorsque l'audit de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne peut pas écrire dans le journal d'audit, cette option provoque l'échec des actions de base de données si celles-ci entraînent des événements audités. Aucun événement audité ne se produit. Les actions qui n'entraînent pas d'événements audités peuvent continuer. L'audit poursuit sa tentative de consignation des événements et reprend les opérations d'enregistrement une fois la défaillance résolue. Sélectionnez cette option quand la conservation d’un audit complet est plus importante que l’accès total au [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
@@ -94,8 +94,8 @@ ms.locfileid: "48219608"
      **Chemins d'accès au fichier**  
      Spécifie l’emplacement du dossier dans lequel les données d’audit sont écrites quand la **destination de l’audit** est un fichier.  
   
-     **Points de suspension (…)**  
-     Ouvre la boîte de dialogue **Rechercher un dossier –***nom_serveur* qui permet de spécifier un chemin de fichier ou de créer un dossier dans lequel écrire le fichier d’audit.  
+     **Points de suspension (...)**  
+     Ouvre le **localiser le dossier-*** nom_serveur* boîte de dialogue pour spécifier un chemin d’accès de fichier ou de créer un dossier dans lequel écrire le fichier d’audit.  
   
      **Limites maximales du fichier d'audit :**  
      **Fichiers de substitution maximale**  
@@ -124,7 +124,7 @@ ms.locfileid: "48219608"
   
 1.  Dans l'Explorateur d'objets, cliquez sur le signe plus pour développer le dossier **Sécurité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit du serveur** , puis sélectionnez **Nouvelle spécification de l’audit du serveur**.  
+2.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit du serveur**, puis sélectionnez **Nouvelle spécification de l’audit du serveur...**.  
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Créer la spécification de l'audit du serveur** .  
   
@@ -143,13 +143,13 @@ ms.locfileid: "48219608"
      **Nom de l’objet**  
      Nom de l'objet à auditer. Disponible uniquement pour les actions d'audit ; ne s'applique pas aux groupes d'audit.  
   
-     **Points de suspension (…)**  
+     **Points de suspension (...)**  
      Ouvre la boîte de dialogue **Sélectionner des objets** permettant de rechercher et sélectionner un objet disponible, en fonction du **Type d'action de l'audit**spécifié.  
   
      **Nom principal**  
      Compte par lequel filtrer l'audit pour l'objet audité.  
   
-     **Points de suspension (…)**  
+     **Points de suspension (...)**  
      Ouvre la boîte de dialogue **Sélectionner des objets** permettant de rechercher et sélectionner un objet disponible, en fonction du **Nom de l'objet**spécifié.  
   
 3.  Lorsque vous avez terminé, cliquez sur **OK**.  
@@ -165,25 +165,25 @@ ms.locfileid: "48219608"
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
-    -- Creates a server audit called "HIPPA_Audit" with a binary file as the target and no options.  
+    -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
         TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
     ```  
   
 #### <a name="to-create-a-server-audit-specification"></a>Pour créer une spécification d'audit de serveur  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
-    /*Creates a server audit specification called "HIPPA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPPA_Audit" created above.  
+    /*Creates a server audit specification called "HIPAA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPAA_Audit" created above.  
     */  
   
-    CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-    FOR SERVER AUDIT HIPPA_Audit  
+    CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+    FOR SERVER AUDIT HIPAA_Audit  
         ADD (FAILED_LOGIN_GROUP);  
     GO  
     -- Enables the audit.   

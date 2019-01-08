@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent, profiles
@@ -21,12 +20,12 @@ ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67a5355791ddb9043a5da65077ee5e531ab47da9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160369"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763321"
 ---
 # <a name="replication-agent-profiles"></a>Profils de l'Agent de réplication
   Quand la réplication est configurée, un ensemble de profils d'agent est installé sur le serveur de distribution. Un profil d'agent contient un ensemble de paramètres qui sont utilisés chaque fois qu'un agent s'exécute : pendant le processus de démarrage, chaque agent se connecte au service de distribution et interroge les paramètres situés dans son profil. Pour les abonnements de fusion utilisant la synchronisation Web, les profils sont téléchargés et stockés sur l'Abonné. En cas de modification du profil, le profil sur l'Abonné est mis à jour à l'exécution suivante de l'Agent de fusion. Pour plus d'informations sur la synchronisation Web, consultez [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  

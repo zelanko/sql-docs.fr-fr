@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
@@ -13,19 +12,19 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc83fa7dc0d9692456cf99f5a77d3723a137963f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40f234a7091d923dd08c943ca884d6075d953fb3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117004"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360885"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Choisir une destination (Assistant Importation et Exportation SQL Server)
   Utilisez le **choisir une Destination** page pour spécifier la destination des données que vous souhaitez copier.  
   
- Pour en savoir plus sur cet Assistant, consultez [SQL Server Assistant Importation et exportation](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant, ainsi que les autorisations requises pour exécuter l’Assistant avec succès, consultez [exécuter le SQL Server Assistant Importation et exportation](start-the-sql-server-import-and-export-wizard.md).  
+ Pour en savoir plus sur cet Assistant, consultez [Assistant Importation et Exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant, ainsi que les autorisations requises pour exécuter l’Assistant avec succès, consultez [exécuter le SQL Server Assistant Importation et exportation](start-the-sql-server-import-and-export-wizard.md).  
   
- L’objectif de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Importation et exportation consiste à copier des données à partir d’une source vers une destination. L'Assistant peut également créer une base de données de destination et des tables de destination à votre intention. Toutefois, si vous devez copier plusieurs tables ou bases de données, ou autres types d'objets de bases de données, vous devez plutôt utiliser l'Assistant Copie de base de données. Pour plus d'informations, consultez [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ La fonction de l'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est de copier des données d'une source vers une destination. L'Assistant peut également créer une base de données de destination et des tables de destination à votre intention. Toutefois, si vous devez copier plusieurs tables ou bases de données, ou autres types d'objets de bases de données, vous devez plutôt utiliser l'Assistant Copie de base de données. Pour plus d'informations, consultez [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="static-options"></a>Options statiques  
  **Destination**  
@@ -47,10 +46,10 @@ ms.locfileid: "48117004"
  Spécifiez si le package doit utiliser l'authentification Microsoft Windows pour la connexion à la base de données. L'authentification Windows est recommandée pour renforcer la sécurité.  
   
  **Utiliser l’authentification SQL Server**  
- Spécifiez si le package doit utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification pour vous connecter à la base de données. Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez fournir un nom d’utilisateur et un mot de passe.  
+ Spécifiez si le package doit utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion à la base de données. Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez fournir un nom d’utilisateur et un mot de passe.  
   
  **Nom d'utilisateur**  
- Spécifiez un nom d’utilisateur pour la connexion de base de données lorsque vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.  
+ Spécifiez un nom d'utilisateur pour la connexion à la base de données lorsque vous utilisez l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Mot de passe**  
  Tapez le mot de passe pour la connexion à la base de données quand vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -83,7 +82,7 @@ ms.locfileid: "48117004"
  **Format**  
  Permet de préciser la mise en forme à utiliser : délimitée, à largeur fixe ou en drapeau à droite.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Délimité|Les colonnes sont séparées par un délimiteur spécifié à la page **Colonnes** .|  
 |Largeur fixe|Les colonnes ont une largeur fixe.|  
@@ -110,7 +109,7 @@ ms.locfileid: "48117004"
  Permet de sélectionner la version d'Excel utilisée par le classeur de destination.  
   
 > [!NOTE]  
->  Lorsque vous exportez des données à un [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] destination, l’Assistant utilise le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] composant de Destination Excel. Pour plus d’informations sur certaines considérations sur l’utilisation et les problèmes connus, consultez [Destination Excel](../data-flow/excel-destination.md).  
+>  Lorsque vous exportez des données vers une destination [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] , l'Assistant utilise le composant de destination Excel [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations sur certaines considérations sur l’utilisation et les problèmes connus, consultez [Destination Excel](../data-flow/excel-destination.md).  
   
 ### <a name="destination--microsoft-access"></a>Destination = Microsoft Access  
   
@@ -130,6 +129,6 @@ ms.locfileid: "48117004"
  Fournissez le mot de passe utilisateur pour la connexion à la base de données lorsqu'un fichier d'informations d'un groupe de travail est associé à la base de données. Cependant, si la base de données est protégée par un seul mot de passe pour tous les utilisateurs, vous devez indiquer cette valeur dans la boîte de dialogue **Propriétés des liaisons de données** , à laquelle vous pouvez accéder à l'aide du bouton **Avancé** .  
   
  **Avancé**  
- Permet de spécifier les options avancées, telles que le mot de passe de la base de données ou un autre fichier d’informations de groupe de travail que celui défini par défaut, à l’aide de la boîte de dialogue **Propriétés des liaisons de données**. Pour plus d'informations sur les propriétés du fournisseur OLE DB, effectuez une recherche dans la section « Data Access » (en anglais) de [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553).  
+ Permet de spécifier les options avancées, telles que le mot de passe de la base de données ou un autre fichier d’informations de groupe de travail que celui défini par défaut, à l’aide de la boîte de dialogue **Propriétés des liaisons de données**. Pour plus d'informations sur les propriétés du fournisseur OLE DB, effectuez une recherche dans la section « Data Access » (en anglais) de [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
   

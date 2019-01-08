@@ -15,38 +15,38 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cce6109766d6eddff563287fa6a36adf187146d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24661690a0252b1018e2ddc52ba99a44cb5cedbe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595897"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207468"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge des types de données pour les améliorations de date et d’heure OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Cette rubrique fournit des informations sur les types OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) qui prennent en charge les types de données de date/heure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Cette rubrique fournit des informations sur OLE DB ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) qui prennent en charge les types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des types de données date/heure.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mappage de type de données dans les ensembles de lignes et les paramètres  
- OLE DB fournit deux nouveaux types de données pour prendre en charge les nouveaux types de serveurs : DBTYPE_DBTIME2 et DBTYPE_DBTIMESTAMPOFFSET. Le tableau ci-dessous illustre le mappage complet des types de serveurs :  
+ OLE DB fournit deux nouveaux types de données pour prendre en charge les nouveaux types de serveur : DBTYPE_DBTIME2 et DBTYPE_DBTIMESTAMPOFFSET. Le tableau ci-dessous illustre le mappage complet des types de serveurs :  
   
-|Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Type de données OLE DB|Valeur|  
+|Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Type de données OLE DB|Value|  
 |-----------------------------------------|----------------------|-----------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
-|Date|DBTYPE_DBDATE|133 (oledb.h)|  
+|date|DBTYPE_DBDATE|133 (oledb.h)|  
 |time|DBTYPE_DBTIME2|145 (sqlncli.h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
-## <a name="data-formats-strings-and-literals"></a>Formats de données : chaînes et littéraux  
+## <a name="data-formats-strings-and-literals"></a>Formats de données : Chaînes et littéraux  
   
 |Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Type de données OLE DB|Format de chaîne pour les conversions clientes|  
 |-----------------------------------------|----------------------|------------------------------------------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|'aaaa-mm-jj hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge jusqu'à trois chiffres de fractions de seconde pour le type Datetime.|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-jj hh:mm:ss'<br /><br /> Ce type de données possède une précision d'une minute. Le composant des secondes sera égal à zéro en sortie et arrondi par le serveur en entrée.|  
-|Date|DBTYPE_DBDATE|'aaaa-mm-jj'|  
+|date|DBTYPE_DBDATE|'aaaa-mm-jj'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
 |datetime2|DBTYPE_DBTIMESTAMP|'aaaa-mm-jj hh:mm:ss[.fffffff]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'aaaa-mm-jj hh:mm:ss[.fffffff] +/-hh:mm'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
@@ -61,7 +61,7 @@ ms.locfileid: "47595897"
   
  Une chaîne vide n'est pas un littéral de date et d'heure valide et ne représente pas une valeur NULL. Une tentative de convertir une chaîne vide en valeur de date ou d'heure provoque des erreurs avec SQLState 22018 et le message « Valeur de caractère non valide pour la spécification de la casse ».  
   
-## <a name="data-formats-data-structures"></a>Formats de données : structures de données  
+## <a name="data-formats-data-structures"></a>Formats de données : Structures de données  
  Dans les structures spécifiques à OLE DB décrites ci-dessous, OLE DB se conforme aux mêmes contraintes qu'ODBC. Celles-ci sont tirées du calendrier grégorien :  
   
 -   La plage des mois s'étend de 1 à 12.  
@@ -177,7 +177,7 @@ enum SQLVARENUM {
   
 |Type de données OLE DB (*wType*)|Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Remarques|  
 |----------------------------------|-----------------------------------------|-----------|  
-|DBTYPE_DBDATE|Date||  
+|DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client inspecte les membres *bScale* membre pour déterminer la précision en fractions de seconde.|  
 |DBTYPE_DBTIME2|**time**(p)|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client inspecte les membres *bScale* membre pour déterminer la précision en fractions de seconde.|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client inspecte les membres *bScale* membre pour déterminer la précision en fractions de seconde.|  

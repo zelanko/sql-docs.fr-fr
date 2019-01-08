@@ -13,24 +13,24 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19a151435ec23ae2e445d80e510c5bca7b066e04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b9a581a4f5331479c7dc5ed87fc5d213e8d465
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118713"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377351"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>Traiter les codes de retour et les paramètres de sortie (ODBC)
-  Les procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent avoir des codes de retour et des paramètres de sortie de type entier. Les codes de retour et les paramètres de sortie sont envoyés dans le dernier paquet du serveur et ne sont pas disponibles pour l’application tant que [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) retourne SQL_NO_DATA. Si une erreur est retournée à partir d’une procédure stockée, appelez SQLMoreResults à passer au résultat suivant jusqu'à ce que SQL_NO_DATA soit retourné.  
+  Les procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent avoir des codes de retour et des paramètres de sortie de type entier. Les codes de retour et paramètres de sortie sont envoyés dans le dernier paquet du serveur et ne sont pas disponibles pour l'application tant que [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) n'a pas retourné SQL_NO_DATA. Si une erreur est retournée à partir d’une procédure stockée, appelez SQLMoreResults à passer au résultat suivant jusqu'à ce que SQL_NO_DATA soit retourné.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Pour traiter des codes de retour et des paramètres de sortie  
   
 1.  Construisez une instruction SQL qui utilise la séquence d'échappement ODBC CALL. L'instruction doit utiliser des marqueurs de paramètre pour chaque paramètre d'entrée, d'entrée/sortie et de sortie et pour la valeur de retour de la procédure (le cas échéant).  
   
-2.  Appelez [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) pour chaque entrée, entrée/sortie et paramètre de sortie et pour connaître la procédure retourne la valeur (le cas échéant).  
+2.  Appelez [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) pour chaque paramètre d'entrée, d'entrée/sortie et de sortie et pour la valeur de retour de la procédure (le cas échéant).  
   
 3.  Exécutez l'instruction avec `SQLExecDirect`.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48118713"
 ## <a name="example"></a>Exemple  
  Cet exemple montre le traitement d'un code de retour et d'un paramètre de sortie. Cet exemple n'est pas pris en charge sur la plateforme IA64. Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  
   
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’accueil des [exemples et projets de communautés Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).) Cette source de données doit être basée sur le pilote ODBC fourni par le système d'exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).) Cette source de données doit être basée sur le pilote ODBC fourni par le système d'exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16e1e0d68cf8f5253d03fc6a8d2f36daaafca08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 046e1c9d97cf7f508fa69e67bfe7369e7186e137
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110119"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768461"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>Options Demande de profil de statistiques de colonnes (tâche de profilage des données)
   Utilisez le volet **Propriétés de la demande** de la page **Demandes de profil** pour définir les options de la **Demande de profil de statistiques de colonnes** sélectionnée dans le volet Demandes. Un profil de statistiques de colonnes répertorie des statistiques, telles que l'écart minimal, maximal, moyen et type pour les colonnes numériques et l'écart minimal et maximal pour les colonnes `datetime`. Ce profil peut vous aider à identifier des problèmes dans vos données, tels que des dates non valides. Par exemple, vous profilez une colonne de dates historiques et découvrez une date maximum dont l'échéance est à venir.  
@@ -71,7 +70,7 @@ ms.locfileid: "48110119"
  Tapez un nom descriptif pour identifier cette demande de profil. En règle générale, il n'est pas nécessaire de modifier la valeur générée automatiquement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de tâche de profilage des données &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de profilage de données &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,15 +18,15 @@ ms.assetid: 4907fe35-10ee-4f81-b924-fc419b1864d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0f36e74462b8237a3661748d137f67d3bad13ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1b7e1e49f6291063996f7d7b7b966da6a716c16
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194279"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794201"
 ---
 # <a name="view-conflict-information-for-merge-publications-replication-transact-sql-programming"></a>Afficher les informations relatives aux conflits pour les publications de fusion (programmation Transact-SQL de la réplication)
-  Lorsqu'un conflit est résolu dans une réplication de fusion, les données de la ligne perdante sont écrites dans une table de conflits. Ces données peuvent être affichées par programme en utilisant des procédures stockées de réplication. Pour plus d’informations, consultez [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+  Lorsqu'un conflit est résolu dans une réplication de fusion, les données de la ligne perdante sont écrites dans une table de conflits. Ces données peuvent être affichées par programme en utilisant des procédures stockées de réplication. Pour plus d’informations, consultez [Détection et résolution avancées des conflits de réplication de fusion](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ### <a name="to-view-conflict-information-and-losing-row-data-for-all-types-of-conflicts"></a>Pour afficher les informations relatives au conflit et les données de ligne perdante pour tous les types de conflits  
   
@@ -76,6 +75,6 @@ ms.locfileid: "48194279"
     -   Dans la base de données d'abonnement de l'Abonné, exécutez [sp_helpmergedeleteconflictrows](/sql/relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql). Spécifiez le nom de la table source (obtenue à l'étape 1) sur laquelle le conflit s'est produit pour **@source_object**. (Facultatif) Spécifiez une valeur pour **@publication** afin de limiter à une publication spécifique les informations sur les conflits retournées. Les informations sur les conflits de suppression stockées sur l'Abonné sont alors retournées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Détection et résolution des conflits de réplication de fusion avancée](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
+ [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

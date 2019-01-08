@@ -13,15 +13,15 @@ ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c8bbc2bb88747aee84be9eeff18fcae59df54d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c3b51408258b93f6585b46171793eb885a6d0d3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138746"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349569"
 ---
 # <a name="task-4-setting-domain-rules"></a>Tâche 4 : Définition de règles de domaine
-  Dans cette tâche, vous créez une règle pour le **adresse E-mail de Contact** afin de vérifier si l’adresse de messagerie se termine par **@adventure-works.com**. Consultez [création d’une règle de domaine](http://msdn.microsoft.com/library/hh510397.aspx) rubrique pour plus d’informations sur la page.  
+  Dans cette tâche, vous créez une règle pour le **adresse E-mail de Contact** afin de vérifier si l’adresse de messagerie se termine par **@adventure-works.com**. Consultez [création d’une règle de domaine](https://msdn.microsoft.com/library/hh510397.aspx) rubrique pour plus d’informations sur la page.  
   
 1.  Cliquez sur **adresse E-mail de Contact** dans le **liste des domaines**.  
   
@@ -62,6 +62,6 @@ ms.locfileid: "48138746"
 13. Cliquez sur **fermer** pour fermer la **tester une règle de domaine** boîte de dialogue.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 5 : Définition des relations basées sur des termes](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [Tâche 5 : Définition du terme en fonction des relations](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   

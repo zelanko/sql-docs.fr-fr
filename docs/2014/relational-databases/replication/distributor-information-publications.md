@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.Distributor.Publications.f1
@@ -13,12 +12,12 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60255543065843b4d1ebf10ff0c87532a2e9d0cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd30f38b35d844983ecb60ac8becf8f13f6c37f9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140298"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752281"
 ---
 # <a name="distributor-information-publications"></a>Informations du serveur de distribution, publications
   L'onglet **Publications** fournit des informations résumées pour toutes les publications sur le serveur de distribution sélectionné dans le volet gauche.  

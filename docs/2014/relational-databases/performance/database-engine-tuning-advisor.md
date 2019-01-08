@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.general.f1
@@ -13,14 +12,14 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8325e326ebcbf23a57e2362aa792b3076ec23922
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991172"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797481"
 ---
-# <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
+# <a name="database-engine-tuning-advisor"></a>Assistant Paramétrage du moteur de base de données
   L'Assistant Paramétrage du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] analyse les bases de données et émet des recommandations que vous pouvez utiliser pour optimiser les performances des requêtes. L'Assistant Paramétrage du moteur de base de données vous permet de sélectionner et de créer un ensemble optimal d'index, de vues indexées ou de partitions de table sans devoir être un expert familiarisé avec la structure de la base de données ou les mécanismes internes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez effectuer les tâches suivantes à l'aide de l'Assistant Paramétrage du moteur de base de données :  
   
 -   Résoudre les problèmes liés aux performances d'une requête de problème spécifique  
@@ -32,7 +31,7 @@ ms.locfileid: "49991172"
 -   Gérer l'espace de stockage  
   
 ## <a name="database-engine-tuning-advisor-benefits"></a>Avantages de l'Assistant Paramétrage du moteur de base de données  
- L'optimisation des performances des requêtes peut être difficile sans une compréhension complète de la structure de la base de données et des requêtes exécutées sur la base de données. L'Assistant Paramétrage du moteur de base de données peut simplifier cette tâche en analysant le cache du plan de requête actuel ou une charge de travail des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] que vous créez, puis en recommandant une conception physique appropriée. Pour les administrateurs de base de données plus avancés, l'Assistant Paramétrage du moteur de base de données expose un mécanisme puissant pour effectuer une analyse de simulation exploratoire des différentes alternatives de conception physique. L'Assistant Paramétrage du moteur de base de données peut fournir les informations suivantes :  
+ L'optimisation des performances des requêtes peut être difficile sans une compréhension complète de la structure de la base de données et des requêtes exécutées sur la base de données. L'Assistant Paramétrage du moteur de base de données peut simplifier cette tâche en analysant le cache du plan de requête actuel ou une charge de travail des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] que vous créez, puis en recommandant une conception physique appropriée. Pour les administrateurs de base de données plus avancés, l'Assistant Paramétrage du moteur de base de données expose un mécanisme puissant pour effectuer une analyse de simulation exploratoire des différentes alternatives de conception physique. L'Assistant Paramétrage du moteur de base de données peut fournir les informations suivantes :  
   
 -   recommander la meilleure combinaison d'index pour les bases de données, par l'utilisation de l'optimiseur de requête aux fins d'analyse des requêtes dans la charge de travail ;  
   

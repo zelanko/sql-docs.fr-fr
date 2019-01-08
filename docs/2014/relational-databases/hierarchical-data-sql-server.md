@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
@@ -18,12 +17,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab581202049b9dab362de4278950e0597cf5b3b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154752"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817561"
 ---
 # <a name="hierarchical-data-sql-server"></a>Données hiérarchiques (SQL Server)
   Intégrés `hierarchyid` type de données rend plus facile de stocker et interroger des données hiérarchiques. `hierarchyid` est optimisé pour représenter les arborescences, qui sont du type de données hiérarchiques le plus courant.  
@@ -43,11 +42,11 @@ ms.locfileid: "48154752"
  Le type de données [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) permet de créer des tables avec une structure hiérarchique ou de décrire la structure hiérarchique de données stockées à un autre emplacement. Utilisez les [fonctions hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) de [!INCLUDE[tsql](../includes/tsql-md.md)] pour interroger et gérer les données hiérarchiques.  
   
 ##  <a name="keyprops"></a> Propriétés principales de hierarchyid  
- Une valeur de la `hierarchyid` type de données représente une position dans une hiérarchie d’arborescence. Les valeurs de `hierarchyid` ont les propriétés suivantes :  
+ Une valeur du type de données `hierarchyid` représente une position dans une hiérarchie d'arborescence. Les valeurs de `hierarchyid` ont les propriétés suivantes :  
   
 -   Extrêmement compact  
   
-     Le nombre moyen de bits nécessaires pour représenter un nœud dans une arborescence avec *n* nœuds dépend de la sortance moyenne (nombre moyen d’enfants d’un nœud). Pour les petites sortances (de 0 à 7), la taille est d’environ 6\*logA*n* bits, où A est la sortance moyenne. Un nœud dans une hiérarchie d'organisation de 100 000 personnes avec une sortance moyenne de 6 niveaux prend approximativement 38 bits. Ce chiffre est arrondi à 40 bits, ou 5 octets, pour le stockage.  
+     Le nombre moyen de bits nécessaires pour représenter un nœud dans une arborescence avec *n* nœuds dépend de la sortance moyenne (nombre moyen d’enfants d’un nœud). Pour les petites sortances (de 0 à 7), la taille est d’environ 6\*logA*n* bits, où A est la sortance moyenne. Un nœud dans une hiérarchie d'organisation de 100 000 personnes avec une sortance moyenne de 6 niveaux prend approximativement 38 bits. Ce chiffre est arrondi à 40 bits, ou 5 octets, pour le stockage.  
   
 -   La comparaison est effectuée dans l'ordre à profondeur prioritaire  
   
@@ -63,9 +62,9 @@ ms.locfileid: "48154752"
   
 -   Une colonne de type `hierarchyid` ne représente pas automatiquement une arborescence. Il appartient à l'application de générer et d'assigner des valeurs `hierarchyid` de telle façon que la relation voulue entre les lignes soit reflétée dans les valeurs. Certaines applications peuvent avoir une colonne de type `hierarchyid` qui indique l'emplacement dans une hiérarchie définie dans une autre table.  
   
--   C’est à l’application pour gérer la concurrence en générant et en affectant `hierarchyid` valeurs. Rien ne garantit que les valeurs `hierarchyid` d'une colonne sont uniques, à moins que l'application utilise une contrainte de clé unique ou applique elle-même l'unicité selon sa propre logique.  
+-   Il appartient à l'application de gérer la concurrence en générant et en affectant des valeurs `hierarchyid` Rien ne garantit que les valeurs `hierarchyid` d'une colonne sont uniques, à moins que l'application utilise une contrainte de clé unique ou applique elle-même l'unicité selon sa propre logique.  
   
--   Relations hiérarchiques représentées par `hierarchyid` valeurs ne sont pas appliqués comme une relation de clé étrangère. Dans une relation hiérarchique, il est possible et parfois nécessaire que A ait un enfant B, puis que A soit supprimé, laissant B avec une relation à un enregistrement inexistant. Si ce comportement n'est pas acceptable, l'application doit rechercher des descendants avant de supprimer des parents.  
+-   Les relations hiérarchiques représentées par les valeurs `hierarchyid` ne sont pas appliquées de la même manière qu'une relation de clé étrangère. Dans une relation hiérarchique, il est possible et parfois nécessaire que A ait un enfant B, puis que A soit supprimé, laissant B avec une relation à un enregistrement inexistant. Si ce comportement n'est pas acceptable, l'application doit rechercher des descendants avant de supprimer des parents.  
   
   
 ##  <a name="alternatives"></a> Quand utiliser des alternatives à hierarchyid  
@@ -78,7 +77,7 @@ ms.locfileid: "48154752"
  `hierarchyid` est généralement supérieur à ces alternatives. Toutefois, il existe certaines situations spécifiques, détaillées ci-dessous, pour lesquelles ces alternatives peuvent s'avérer supérieures.  
   
 ### <a name="parentchild"></a>Parent/enfant  
- Lors de l'utilisation de l'approche de parent/enfant, chaque ligne contient une référence au parent. La table suivante définit une table classique qui est utilisée pour contenir les lignes parent et enfant dans une relation parent/enfant :  
+ Lors de l'utilisation de l'approche de parent/enfant, chaque ligne contient une référence au parent. La table suivante définit une table classique qui est utilisée pour contenir les lignes parent et enfant dans une relation parent/enfant :  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -95,17 +94,17 @@ GO
   
  Comparaison de parent/enfant et `hierarchyid` pour les opérations courantes  
   
--   Requêtes de sous-arborescence sont beaucoup plus rapides avec `hierarchyid`.  
+-   Les requêtes de sous-arborescence sont beaucoup plus rapides avec `hierarchyid`  
   
 -   Les requêtes de descendants directs sont légèrement plus lentes avec `hierarchyid`  
   
--   Déplacement de nœuds non terminaux est beaucoup plus lent avec `hierarchyid`.  
+-   Le déplacement de nœuds non terminaux est beaucoup plus lent avec `hierarchyid`.  
   
 -   L'insertion de nœuds non terminaux et l'insertion ou le déplacement de nœuds terminaux présentent la même complexité avec `hierarchyid`.  
   
- Il se peut que la relation parent/enfant soit supérieure si les conditions suivantes sont réunies :  
+ Il se peut que la relation parent/enfant soit supérieure si les conditions suivantes sont réunies :  
   
--   La taille de la clé est essentielle. Pour le même nombre de nœuds, un `hierarchyid` valeur est égale ou supérieure à une famille d’entiers (`smallint`, `int`, `bigint`) valeur. Cela ne constitue une raison à utiliser Parent/enfant dans de rares cas, étant donné que `hierarchyid` la localité de complexité des e/s et UC considérablement plus performants que les expressions de table communes requises lorsque vous utilisez une structure Parent/enfant.  
+-   La taille de la clé est essentielle. Pour le même nombre de nœuds, une valeur `hierarchyid` est égale ou supérieure à une valeur de famille d'entiers (`smallint`, `int`, `bigint`). Cela ne constitue une raison d'utiliser la relation parent/enfant que dans de rares cas, car la localité d'E/S et la complexité de l'UC de `hierarchyid` sont meilleures que celles des expressions de table communes requises lorsque vous utilisez une structure parent/enfant.  
   
 -   Les requêtes portent rarement sur plusieurs sections de la hiérarchie. En d'autres termes, les requêtes portent habituellement sur un seul point de la hiérarchie. Dans ces cas, la co-location n'est pas importante. Par exemple, parent/enfant est supérieur lorsque la table d'organisation est utilisée uniquement pour le traitement des salaires d'employés individuels.  
   
@@ -160,7 +159,7 @@ GO
   
      Dans un index à largeur prioritaire, tous les enfants directs d'un nœud sont colocalisés. Les index à largeur prioritaire sont par conséquent efficaces pour répondre aux requêtes sur les enfants immédiats, telle que « Rechercher tous les employés dont ce responsable est le supérieur direct ».  
   
- Le choix entre profondeur prioritaire, largeur prioritaire ou les deux, et la sélection de l'un d'eux comme clé de clustering (si nécessaire) dépend de l'importance relative des types de requêtes ci-dessus et de l'importance relative de SELECT par rapport aux opérations DML. Pour un exemple détaillé de stratégies d'indexation, consultez [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Le choix entre profondeur prioritaire, largeur prioritaire ou les deux, et la sélection de l'un d'eux comme clé de clustering (si nécessaire) dépend de l'importance relative des types de requêtes ci-dessus et de l'importance relative de SELECT par rapport aux opérations DML. Pour obtenir un exemple détaillé de stratégies d’indexation, consultez [didacticiel : À l’aide du Type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Création des index  
@@ -266,11 +265,11 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> Tâches associées  
   
 ###  <a name="migrating"></a> Migration de parent/enfant vers hierarchyid  
- La plupart des arborescences sont représentées à l'aide de parent/enfant. Le moyen le plus simple pour migrer à partir d’une structure Parent/enfant vers une table à l’aide `hierarchyid` consiste à utiliser une colonne ou une table temporaire pour suivre le nombre de nœuds à chaque niveau de la hiérarchie. Pour voir un exemple de migration de table parent/enfant, consultez la leçon 1 de [Didacticiel : utilisation du type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ La plupart des arborescences sont représentées à l'aide de parent/enfant. La méthode la plus simple pour effectuer une migration d'une structure parent/enfant vers une table à l'aide de `hierarchyid` consiste à utiliser une colonne ou une table temporaire pour conserver une trace du nombre de nœuds à chaque niveau de la hiérarchie. Pour obtenir un exemple de la migration d’une table Parent/enfant, consultez la leçon 1 du [didacticiel : À l’aide du Type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Gestion d'une arborescence à l'aide de hierarchyid  
- Bien qu’un `hierarchyid` colonne ne représente pas nécessairement une arborescence, une application peut facilement faire en sorte qu’il détecte.  
+ Bien qu'une colonne `hierarchyid` ne représente pas nécessairement une arborescence, une application peut facilement faire en sorte que ce soit le cas.  
   
 -   Lorsque vous générez de nouvelles valeurs, effectuez l'une des opérations suivantes :  
   
@@ -526,7 +525,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de méthodes de type de données hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Didacticiel : À l’aide du Type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

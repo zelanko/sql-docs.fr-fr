@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7da91677755f2d7e808165bdc8361864e15ac2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131749"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819331"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurer IIS 7 pour la synchronisation web
   Les procédures décrites dans cette rubrique vous guident dans le processus de configuration manuelle des services IIS ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services) version 7 et ultérieures pour une utilisation avec la synchronisation web en vue de la réplication de fusion. 
@@ -29,7 +28,7 @@ ms.locfileid: "48131749"
  L’ensemble du processus de configuration est présenté dans [Configurer la synchronisation web](configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Assurez-vous que votre application utilise uniquement [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou une version ultérieure et qu'aucune version antérieure de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] n'est installée sur le serveur IIS. Les versions antérieures du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] risquent de provoquer des erreurs, telles que : « Le format d'un message pendant la synchronisation Web n'était pas valide. Vérifiez que les composants de réplication sont correctement configurés sur le serveur Web ».  
+>  Assurez-vous que votre application utilise uniquement [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou une version ultérieure et qu'aucune version antérieure de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] n'est installée sur le serveur IIS. Les versions antérieures de la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] peut provoquer des erreurs, telles que : « Le format d'un message pendant la synchronisation Web n'était pas valide. Vérifiez que les composants de réplication sont correctement configurés sur le serveur Web ».  
   
  Pour utiliser la synchronisation Web, vous devez configurer IIS 7 en effectuant les étapes ci-dessous. Chaque étape est détaillée dans cette rubrique.  
   
@@ -113,7 +112,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
 ## <a name="configuring-secure-sockets-layer"></a>Configuration de SSL (Secure Sockets Layer)  
  Pour configurer SSL, spécifiez un certificat à utiliser par l'ordinateur exécutant IIS. La synchronisation Web pour la réplication de fusion prend en charge l'utilisation des certificats de serveur, mais pas celle des certificats clients. Pour configurer IIS pour le déploiement, vous devez d'abord obtenir un certificat auprès d'une Autorité de certification. Pour plus d'informations sur les certificats, consultez la documentation de IIS.  
   
- Après avoir installé le certificat, vous devez l'associer au site Web utilisé par la synchronisation Web. Pour le développement et les tests, vous pouvez spécifier un certificat auto-signé. IIS 7 peut créer un certificat automatiquement et l'enregistrer sur votre ordinateur.  
+ Après avoir installé le certificat, vous devez l'associer au site Web utilisé par la synchronisation Web. Pour le développement et les tests, vous pouvez spécifier un certificat auto-signé. IIS 7 peut créer un certificat automatiquement et l'enregistrer sur votre ordinateur.  
   
  La différence entre un déploiement pour la production et les procédures indiquées ici est que dans le cadre de tests de production et de préproduction, vous utiliseriez un certificat délivré par une autorité de certification au lieu d'un certificat auto-signé.  
   
@@ -175,11 +174,11 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
  Le compte utilisé pour l'écouteur de réplication SQL Server doit avoir les autorisations décrites dans la rubrique Sécurité de l'Agent de fusion, dans la section « Se connecter au serveur de publication ou au serveur de distribution ».  
   
- En résumé, le compte doit :  
+ En résumé, le compte doit :  
   
 -   être membre de la liste d'accès à la publication (PAL) ;  
   
--   être mappé à une connexion associée à un utilisateur enregistré dans la base de données de publication ;  
+-   être mappé à une connexion associée à un utilisateur enregistré dans la base de données de publication ;  
   
 -   être mappé à une connexion associée à un utilisateur enregistré dans la base de données de distribution ;  
   

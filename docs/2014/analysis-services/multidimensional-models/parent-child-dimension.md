@@ -21,15 +21,15 @@ ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d20b40f89aeea9c4131ecc921754b1f1140d352c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be08164b3e96f5995c5ed1b64edc83699c7d8b40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124289"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505560"
 ---
 # <a name="parent-child-hierarchy"></a>Hiérarchie parent-enfant
-  Une hiérarchie parent-enfant est une hiérarchie dans une dimension standard qui contient un attribut parent. Un attribut parent décrit une *relation d’auto-référencement*, ou *jointure réflexive*, dans une table de dimension principale. Les hiérarchies parent-enfant sont construites à partir d'un seul attribut parent. Un seul niveau est affecté à une hiérarchie parent-enfant parce que les niveaux présents dans la hiérarchie sont constitués à partir des relations parent-enfant entre les membres associés à l'attribut parent. La position d’un membre dans une hiérarchie parent-enfant est déterminée par le `KeyColumns` et `RootMemberIf` attribut des propriétés du parent, tandis que la position d’un membre d’un niveau est déterminée par le `OrderBy` propriété de l’attribut parent. Pour plus d’informations sur les propriétés d’attributs, consultez [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+  Une hiérarchie parent-enfant est une hiérarchie dans une dimension standard qui contient un attribut parent. Un attribut parent décrit une *relation d’auto-référencement*, ou *jointure réflexive*, dans une table de dimension principale. Les hiérarchies parent-enfant sont construites à partir d'un seul attribut parent. Un seul niveau est affecté à une hiérarchie parent-enfant parce que les niveaux présents dans la hiérarchie sont constitués à partir des relations parent-enfant entre les membres associés à l'attribut parent. La position d'un membre au sein d'une hiérarchie parent-enfant est déterminée par les propriétés `KeyColumns` et `RootMemberIf` de l'attribut parent, tandis que la position d'un membre au sein d'un niveau est déterminée par la propriété `OrderBy` de l'attribut parent. Pour plus d’informations sur les propriétés d’attributs, consultez [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
  À cause des relations parent-enfant existant entre les niveaux d'une hiérarchie parent-enfant, certains membres non-feuilles peuvent également avoir des données dérivées des sources de données sous-jacentes en plus des données agrégées des membres enfants.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48124289"
   
  Toutefois, les dimensions de type parent-enfant construisent les hiérarchies de type parent-enfant en analysant les données de la table de dimension principale et en évaluant les relations de type parent-enfant entre les enregistrements dans la table. Pour plus d’informations sur les hiérarchies parent-enfant, consultez [Hiérarchies utilisateur](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md).  
   
- Les hiérarchies parent-enfant ne dérivent pas les noms de leurs niveaux des attributs utilisés pour créer la hiérarchie. En effet, ces dimensions créent les noms de niveaux automatiquement en utilisant un modèle de nom, une expression de chaîne que vous pouvez spécifier au niveau de l'attribut parent qui contrôle la manière dont l'attribut génère la hiérarchie d'attribut. Pour plus d’informations sur la façon de définir le modèle de nom d’un attribut parent, consultez [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+ Les hiérarchies parent-enfant ne dérivent pas les noms de leurs niveaux des attributs utilisés pour créer la hiérarchie. Au lieu de cela, ces dimensions créent les noms de niveaux automatiquement en utilisant une expression de chaîne, un modèle d’affectation de noms, vous pouvez spécifier au niveau de l’attribut parent qui contrôle la façon dont l’attribut génère la hiérarchie d’attribut. Pour plus d’informations sur la façon de définir le modèle de nom d’un attribut parent, consultez [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
 ## <a name="data-members"></a>Données membres  
  En général, les membres feuilles d'une dimension contiennent des données directement dérivées des sources de données sous-jacentes, tandis que les membres non-feuilles contiennent des données dérivées d'agrégations effectuées sur les membres enfants.  
@@ -53,7 +53,7 @@ ms.locfileid: "48124289"
  Toutefois, les hiérarchies parent-enfant peuvent avoir certains membres non-feuilles dont les données sont dérivées des sources de données sous-jacentes, en plus des données agrégées des membres enfants. Pour ces membres non-feuilles d'une hiérarchie parent-enfant, il est possible de créer des membres enfants spéciaux générés par le système qui contiennent les données de la table de faits sous-jacente. Appelés *données membres*, ces membres enfants spéciaux contiennent une valeur directement associée à un membre non feuille et indépendante de la valeur résumée calculée à partir des descendants du membre non feuille. Pour plus d’informations sur les membres de données, consultez [Attributs dans des hiérarchies de type parent-enfant](parent-child-dimension-attributes.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs dans les hiérarchies Parent-enfant](parent-child-dimension-attributes.md)   
- [Propriétés de dimension d’une base de données](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
+ [Attributs dans des hiérarchies de type parent-enfant](parent-child-dimension-attributes.md)   
+ [Propriétés de dimension d'une base de données](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   
   

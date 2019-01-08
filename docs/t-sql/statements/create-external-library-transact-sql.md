@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
+ms.date: 12/07/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -19,22 +19,20 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8c6b8ea4467ddc09a08d21a337b1b5c8c44f34e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bd47fd06404dad6e6896d377e95de677a08c5ae3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538796"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205159"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-Charge des packages R vers une base de données à partir du chemin de fichier ou du flux d’octets spécifié.
+Charge des fichiers de package R vers une base de données à partir du chemin de fichier ou du flux d’octets spécifié. Cette instruction sert de mécanisme générique permettant à l’administrateur de base de données de charger des artefacts nécessaires pour tout nouveau runtime de langage externe (actuellement R uniquement) et plateformes de système d’exploitation pris en charge par [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
-Cette instruction sert de mécanisme générique permettant à l’administrateur de base de données de charger des artefacts nécessaires pour tout nouveau runtime de langage externe (R, Python, Java, etc.) et plateformes de système d’exploitation pris en charge par [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
-
-Actuellement, seul le langage R et la plateforme Windows sont pris en charge. La prise en charge de Python et de Linux est prévue pour une version ultérieure.
+Dans SQL Server 2017 et ses versions ultérieures, le langage R et la plateforme Windows sont pris en charge. La prise en charge de Python et de Linux est prévue pour une version ultérieure.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -94,7 +92,7 @@ Cette option est utile si vous devez créer une bibliothèque ou modifier une bi
 
 Spécifie la plateforme pour le contenu de la bibliothèque. La valeur par défaut est la plateforme hôte sur laquelle SQL Server est en cours d’exécution. Par conséquent, l’utilisateur n’a pas à spécifier la valeur. Elle est obligatoire dans le cas où plusieurs plateformes sont prises en charge, ou quand l’utilisateur a besoin de spécifier une autre plateforme. 
 
-Dans SQL Server 2017, Windows est la seule plateforme prise en charge.
+Actuellement, Windows est la seule plateforme prise en charge.
 
 ## <a name="remarks"></a>Notes 
 
@@ -129,7 +127,7 @@ EXEC sp_execute_external_script
 @script=N'library(customPackage)'
 ```
 
-### <a name="b-installing-packages-with-dependencies"></a>B. Installation de packages avec des dépendances
+### <a name="b-installing-packages-with-dependencies"></a>b. Installation de packages avec des dépendances
 
 Si le package que vous souhaitez installer a des dépendances, vous devez impérativement analyser les dépendances de premier niveau et de deuxième niveau, et vérifier que tous les packages nécessaires sont disponibles _avant_ d’essayer d’installer le package cible.
 

@@ -11,12 +11,12 @@ ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cf6098bdb439e1b8bb78f7d875e3d2b5517f4945
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df6517d7b714bcb33502da457720a13f9d5a3516
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218279"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375021"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Recherche, affichage et gestion des rapports (Générateur de rapports et SSRS)
   Le Générateur de rapports vous permet de parcourir les dossiers d'un serveur de rapports ou site SharePoint pour y rechercher des rapports, des sources de données partagées, des modèles et d'autres éléments de rapport connexes, ainsi que de parcourir votre ordinateur pour trouver des rapports en local. Pour faciliter la recherche de rapports, le Générateur de rapports gère une liste de serveurs et sites récemment utilisés, et fournit l'accès direct aux dossiers Bureau, Mes documents et Poste de travail dans le système de fichiers de votre ordinateur.  
@@ -28,7 +28,7 @@ ms.locfileid: "48218279"
   
  Pour rechercher un rapport sur un serveur de rapports ou le site SharePoint à partir du Générateur de rapports, vous devez fournir l'URL vers le serveur de rapports ou le site SharePoint. Lorsque vous installez le Générateur de rapports pour la première fois, vous pouvez spécifier l'URL à utiliser. Il s'agit du serveur ou site auquel le Générateur de rapports se connecte par défaut lorsque vous enregistrez ou ouvrez des rapports.  
   
- Un aperçu des rapports peut être affiché dans le Générateur de rapports et le Concepteur de rapports lorsque vous créez ou mettez à jour des rapports, et affiché et géré sur un serveur de rapports en utilisant le Gestionnaire de rapports ou sur un site SharePoint intégré avec Reporting Services à l'aide des fonctionnalités et outils SharePoint intégrés après la publication des rapports. Pour plus d’informations, consultez [aperçu des rapports dans le Générateur de rapports](previewing-reports-in-report-builder.md) et [aperçu des rapports](../reports/previewing-reports.md).  
+ Un aperçu des rapports peut être affiché dans le Générateur de rapports et le Concepteur de rapports lorsque vous créez ou mettez à jour des rapports, et affiché et géré sur un serveur de rapports en utilisant le Gestionnaire de rapports ou sur un site SharePoint intégré avec Reporting Services à l'aide des fonctionnalités et outils SharePoint intégrés après la publication des rapports. Pour plus d’informations, consultez [Aperçu des rapports dans le Générateur de rapports](previewing-reports-in-report-builder.md) et [Aperçu des rapports](../reports/previewing-reports.md).  
   
  Lorsque vous affichez un aperçu des rapports dans le Générateur de rapports et le Concepteur de rapports, ou que vous affichez des rapports dans le Gestionnaire de rapports ou sur un site SharePoint, les données sont actualisées et les rapports affichent les données actuelles de la source de données que le rapport utilise. Si vous souhaitez consulter un rapport sans actualiser ses données, vous pouvez utiliser l'historique de rapport et les données mises en cache avec les rapports publiés. Vous ne pouvez pas utiliser ces fonctionnalités lors de l'affichage d'un aperçu des rapports dans le Générateur de rapports et le Concepteur de rapports.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48218279"
   
  Pour rechercher des rapports sur un serveur de rapports, vous devez spécifier une URL pour le serveur de rapports et disposer des autorisations appropriées sur les dossiers afin de lire et d'enregistrer des éléments de rapports. Pour obtenir les autorisations et URL appropriées, contactez l'administrateur système du serveur de rapports.  
   
- Après avoir trouvé et ouvert le rapport dans le Générateur de rapports, vous pouvez en afficher un aperçu et apporter des modifications. Lorsque vous en affichez un aperçu, vous voyez les données actuelles. Pour plus d’informations, consultez [aperçu des rapports dans le Générateur de rapports](previewing-reports-in-report-builder.md).  
+ Après avoir trouvé et ouvert le rapport dans le Générateur de rapports, vous pouvez en afficher un aperçu et apporter des modifications. Lorsque vous en affichez un aperçu, vous voyez les données actuelles. Pour plus d'informations, consultez [Aperçu des rapports dans le Générateur de rapports](previewing-reports-in-report-builder.md).  
   
  Le Générateur de rapports peut vous aider pour les tâches suivantes :  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48218279"
   
  Certaines de ces tâches peuvent être effectuées pour vous par l'administrateur du serveur de rapports. Pour en savoir plus sur les tâches effectuées sur un serveur de rapports, consultez [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md).  
   
- Le Gestionnaire de rapports contient en général des dossiers, des rapports, des sources de données et des modèles de rapport, ainsi que le dossier Mes rapports. Le dossier Mes rapports est un espace de travail personnel où vous pouvez stocker et utiliser les rapports dont vous êtes propriétaire. Les autres dossiers du serveur de rapports sont publics et nécessitent généralement que les utilisateurs disposent d'autorisations avancées pour ajouter ou modifier du contenu. Vous pouvez créer des dossiers dans Mes rapports pour organiser davantage vos rapports. Pour plus d’informations, consultez [à l’aide de Mes rapports &#40;Générateur de rapports et SSRS&#41;](using-my-reports-report-builder-and-ssrs.md).  
+ Le Gestionnaire de rapports contient en général des dossiers, des rapports, des sources de données et des modèles de rapport, ainsi que le dossier Mes rapports. Le dossier Mes rapports est un espace de travail personnel où vous pouvez stocker et utiliser les rapports dont vous êtes propriétaire. Les autres dossiers du serveur de rapports sont publics et nécessitent généralement que les utilisateurs disposent d'autorisations avancées pour ajouter ou modifier du contenu. Vous pouvez créer des dossiers dans Mes rapports pour organiser davantage vos rapports. Pour plus d’informations, consultez [Utilisation du dossier Mes rapports &#40;Générateur de rapports et SSRS&#41;](using-my-reports-report-builder-and-ssrs.md).  
   
  Le Gestionnaire de rapports affiche les rapports dans la visionneuse HTML Reporting Services. La visionneuse HTML fournit une infrastructure pour l'affichage des rapports au format HTML et inclut une barre d'outils Rapports, une section de paramétrage, une section sur les informations d'identification et un explorateur de documents. La barre d'outils Rapports fournit les fonctions de navigation entre les pages, de zoom, d'actualisation, de recherche, d'exportation, d'impression et de flux de données. La barre d'outils Rapport apparaît également dans les fenêtres des navigateurs, en haut des rapports, lorsque vous accédez aux rapports au moyen d'une URL. La fonction d'impression est facultative et doit être activée par votre administrateur. Lorsqu'elle est disponible, l'icône Imprimante s'affiche dans la barre d'outils. Les illustrations suivantes montrent la barre d'outils Rapport dans une fenêtre du Gestionnaire de rapports et un agrandissement des fonctionnalités de la barre d'outils Rapport.  
   
@@ -81,7 +81,7 @@ Fenêtre Gestionnaire de rapports
  ![Barre d’outils Rapport](../media/htmlviewer-toolbar.gif "Barre d’outils Rapport")  
 Barre d'outils Rapports  
   
- Après avoir exécuté un rapport, vous pouvez l’exporter vers un autre format, tel que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel ou PDF. Vous pouvez également exporter le rapport à l'aide d'une extension de rendu de données, telle que l'extension CSV (Comma-Separated Value), puis utiliser le fichier de données CSV comme entrée pour une autre application. Pour plus d’informations sur l’exportation des rapports, consultez [exportation des rapports &#40;Générateur de rapports et SSRS&#41; ](export-reports-report-builder-and-ssrs.md) et [exporter un rapport dans un autre Type de fichier &#40;Générateur de rapports et SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
+ Après avoir exécuté un rapport, vous pouvez l'exporter sous un autre format, tel que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel ou PDF. Vous pouvez également exporter le rapport à l'aide d'une extension de rendu de données, telle que l'extension CSV (Comma-Separated Value), puis utiliser le fichier de données CSV comme entrée pour une autre application. Pour plus d’informations sur l’exportation des rapports, consultez [exportation des rapports &#40;Générateur de rapports et SSRS&#41; ](export-reports-report-builder-and-ssrs.md) et [exporter un rapport dans un autre Type de fichier &#40;Générateur de rapports et SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
  La méthode la plus simple pour sélectionner et exécuter un rapport consiste à ouvrir le Gestionnaire de rapports, puis à rechercher le rapport à afficher. Pour obtenir des instructions détaillées sur l’ouverture des rapports, consultez [Ouvrir et fermer un rapport &#40;Gestionnaire de rapports&#41;](../reports/open-and-close-a-report-report-manager.md).  
   
@@ -90,9 +90,9 @@ Barre d'outils Rapports
 ### <a name="refreshing-reports"></a>Actualisation des rapports  
  Les données des rapports changent fréquemment et vous pouvez actualiser le rapport pour afficher les données les plus récentes. Vous pouvez actualiser les données d'un rapport de trois façons différentes.  
   
-|Option|Résultats|  
+|Option|Résultat|  
 |------------|------------|  
-|Bouton**Actualiser** de la fenêtre du navigateur|Affiche le rapport stocké dans le cache de sessions. Un cache de session est créé lorsqu'un utilisateur ouvre un rapport. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise des sessions de navigateur pour assurer un affichage cohérent lorsqu’un rapport est ouvert.|  
+|Bouton**Actualiser** de la fenêtre du navigateur|Affiche le rapport stocké dans le cache de sessions. Un cache de session est créé lorsqu'un utilisateur ouvre un rapport. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise des sessions de navigateur pour assurer un affichage cohérent lorsqu'un rapport est ouvert.|  
 |![Bouton d’actualisation du navigateur sur la barre d’outils du rapport](../media/htmlviewer-refresh.GIF "Bouton d’actualisation du navigateur sur la barre d’outils du rapport")|Quand vous cliquez dans la barre d’outils Rapports sur le bouton **Actualiser** , le serveur de rapports réexécute la requête et met à jour les données du rapport si ce dernier s’exécute à la demande. Si le rapport est mis en cache ou s'il s'agit d'un instantané, la commande **Actualiser** permet d'afficher le rapport stocké dans la base de données du serveur de rapports.|  
 |Combinaison de touches CTRL+F5|Produit le même résultat qu'un clic sur le bouton **Actualiser** dans la barre d'outils Rapports.|  
   
@@ -105,7 +105,7 @@ Barre d'outils Rapports
   
  Pour accéder aux pages d'application, sélectionnez des actions spécifiques à l'élément dans un menu déroulant sur un rapport ou autre élément de serveur de rapports que vous avez ajouté précédemment à une bibliothèque SharePoint. Selon l'élément et vos autorisations, vous pouvez être également en mesure de créer des rapports dans le Générateur de rapports, de générer des modèles et de définir la sécurité des éléments de modèle.  
   
- Pour plus d’informations sur la technologie Reporting Services et SharePoint, consultez [Configuration et administration d’un serveur de rapports &#40;mode SharePoint de Reporting Services&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) dans la documentation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [en ligne](http://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
+ Pour plus d’informations sur la technologie Reporting Services et SharePoint, consultez [Configuration et administration d’un serveur de rapports &#40;mode SharePoint de Reporting Services&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) dans la documentation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [en ligne](https://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Recherche d'éléments de serveur de rapports sur un site SharePoint  
  Avant de pouvoir définir des propriétés, vous devez être en mesure de localiser l'élément. Les éléments de serveur de rapports sont toujours stockés dans des bibliothèques ou dans un dossier d'une bibliothèque.  
@@ -134,7 +134,7 @@ Barre d'outils Rapports
 
   
 ##  <a name="AboutUserSessions"></a> À propos des sessions utilisateur  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise des sessions de navigateur pour maintenir la cohérence lors de l’affichage des rapports. Les sessions sont basées sur des connexions navigateur et non sur des utilisateurs authentifiés. Une session est créée chaque fois qu'un utilisateur ouvre un rapport dans une nouvelle fenêtre de navigateur. Une fois qu'une session est établie dans un navigateur, vous pouvez continuer à utiliser la version du rapport qui a été ouvert au début de la session, même si le rapport est modifié sur le serveur de rapports. Par exemple, si vous ouvrez un rapport à 23h00 et que l'auteur du rapport republie le même rapport à 23h01, votre session contiendra, pendant la durée de la session, la version que vous avez ouverte.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise des sessions de navigateur pour assurer une certaine uniformité pendant l'affichage des rapports. Les sessions sont basées sur des connexions navigateur et non sur des utilisateurs authentifiés. Une session est créée chaque fois qu'un utilisateur ouvre un rapport dans une nouvelle fenêtre de navigateur. Une fois qu'une session est établie dans un navigateur, vous pouvez continuer à utiliser la version du rapport qui a été ouvert au début de la session, même si le rapport est modifié sur le serveur de rapports. Par exemple, si vous ouvrez un rapport à 23h00 et que l'auteur du rapport republie le même rapport à 23h01, votre session contiendra, pendant la durée de la session, la version que vous avez ouverte.  
   
  Si vous actualisez un rapport au cours de la même session en cliquant sur le bouton **Actualiser** du navigateur, la version de session d'origine du rapport s'affiche. Si vous actualisez un rapport à la demande en cliquant sur le bouton **Actualiser** dans la barre d’outils de rapport, le rapport est réexécuté et les nouvelles données, si elles existent, sont affichées.  
   
@@ -148,13 +148,13 @@ Barre d'outils Rapports
  [Recherche et affichage de rapports dans le Gestionnaire de rapports &#40;Générateur de rapports et SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
  Explique comment utiliser le Gestionnaire de rapports pour rechercher, afficher et gérer vos rapports.  
   
- [Recherche et affichage de rapports avec un navigateur &#40;Générateur de rapports et SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
+ [Recherche et affichage de rapports à l’aide d’un navigateur &#40;Générateur de rapports et SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  Explique comment utiliser une URL pour rechercher et afficher un rapport.  
   
- [Recherche de rapports et autres éléments &#40;Générateur de rapports et SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
+ [Recherche de rapports et d’autres éléments &#40;Générateur de rapports et SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
  Explique comment utiliser la fonctionnalité de recherche dans le Gestionnaire de rapports pour rechercher des éléments sur le serveur de rapports.  
   
- [À l’aide de Mes rapports &#40;Générateur de rapports et SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)  
+ [Utilisation du dossier Mes rapports &#40;Générateur de rapports et SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)  
  Explique comment utiliser le dossier Mes rapports comme espace de travail personnel pour stocker et utiliser les rapports dont vous êtes propriétaire.  
   
  [Aperçu des rapports dans le Générateur de rapports](previewing-reports-in-report-builder.md)  

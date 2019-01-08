@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - HAVING clause, query summary results
@@ -15,12 +15,12 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8671fb9fe3de95d4480f7f293668dd124d2cc3a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c14608a34c2df5a0e93fea985d8135a37d5ffa53
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127919"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795941"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Utiliser des colonnes dans des requêtes d'agrégation (Visual Database Tools)
   Quand vous créez des requêtes d’agrégation, le [Concepteur de requêtes et de vues](visual-database-tools.md) fait certaines suppositions afin de construire une requête valide. Par exemple, si vous créez une requête d'agrégation puis placez un marqueur de sortie sur une colonne de données, cette dernière est automatiquement intégrée à la clause GROUP BY par le Concepteur de requêtes et de vues pour éviter l'affichage accidentel du contenu d'une ligne individuelle dans une synthèse.  
@@ -55,7 +55,7 @@ ms.locfileid: "48127919"
     WHERE price > 10  
     ```  
   
--   Selon ce que vous décidez lorsque vous créez une condition de recherche impliquant une colonne également utilisée dans une clause GROUP BY ou dans une fonction d'agrégation, cette condition peut apparaître soit sous la forme d'une clause WHERE, soit sous la forme d'une clause HAVING. Par exemple, l'instruction suivante calcule le prix moyen des titres par éditeur, puis affiche la moyenne globale des prix pratiqués par les éditeurs dont le prix moyen est supérieur à 10 dollars :  
+-   Selon ce que vous décidez lorsque vous créez une condition de recherche impliquant une colonne également utilisée dans une clause GROUP BY ou dans une fonction d’agrégation, cette condition peut apparaître soit sous la forme d’une clause WHERE, soit sous la forme d’une clause HAVING. Par exemple, l'instruction suivante calcule le prix moyen des titres par éditeur, puis affiche la moyenne globale des prix pratiqués par les éditeurs dont le prix moyen est supérieur à 10 dollars :  
   
     ```  
     SELECT pub_id, AVG(price)  

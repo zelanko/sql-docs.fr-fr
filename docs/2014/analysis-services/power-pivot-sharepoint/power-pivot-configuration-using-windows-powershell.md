@@ -11,18 +11,18 @@ ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f61c87bdb1790b254ca024132d7ed1f90aa5e985
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3e0cdae7e9f57a7bfd62a3a0e947c43ced0b8c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164269"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530654"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>Configuration de PowerPivot à l'aide de Windows PowerShell
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] inclut des applets de commande Windows PowerShell que vous pouvez utiliser pour configurer une installation de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. La configuration complète d'une installation avec PowerShell requiert l'utilisation des applets de commande SharePoint et PowerPivot pour SharePoint. La majorité des configurations peut être effectuée avec un des outils de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour plus d’informations sur les outils, consultez [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] inclut des applets de commande Windows PowerShell que vous pouvez utiliser pour configurer une installation de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. La configuration complète d'une installation avec PowerShell requiert l'utilisation des applets de commande SharePoint et PowerPivot pour SharePoint. La majorité des configurations peut être effectuée avec un des outils de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour plus d'informations sur les outils, consultez [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  
   
 > [!IMPORTANT]  
->  Pour une batterie SharePoint 2010, SharePoint 2010 SP1 doit être installé avant de pouvoir configurer PowerPivot pour SharePoint, ou une batterie de serveurs SharePoint qui utilise un serveur de base de données [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Si vous n'avez pas encore installé le Service Pack, installez-le avant de commencer la configuration du serveur.  
+>  Pour une batterie SharePoint 2010, SharePoint 2010 SP1 doit être installé avant de pouvoir configurer PowerPivot pour SharePoint, ou une batterie de serveurs SharePoint qui utilise un serveur de base de données [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] . Si vous n'avez pas encore installé le Service Pack, installez-le avant de commencer la configuration du serveur.  
   
 ## <a name="benefits-of-configuring-powerpivot-for-sharepoint-using-powershell"></a>Avantages de la configuration de PowerPivot pour SharePoint à l'aide de PowerShell  
  Générez des fichiers de script Windows PowerShell (.ps1) pour automatiser les tâches de configuration. Cette approche est recommandée si vous avez besoin d'une installation à base de script et d'étapes de configuration que vous pouvez exécuter sur n'importe quel serveur. Vous pouvez avoir besoin d'un tel script dans le cadre d'un plan de récupération d'urgence afin de reconstruire un serveur en cas de défaillance matérielle.  
@@ -46,7 +46,7 @@ ms.locfileid: "48164269"
   
     -   17 applets de commande avec le serveur SQL Server 2012 Analysis Services configuré en mode SharePoint et SharePoint 2010.  
   
-     Si aucune commande n'est retournée dans la liste ou qu'un message d'erreur semblable à «`get-help could not find *powerpivot* in a help file in this session.`», consultez la section suivante de cette rubrique pour savoir comment activer les applets de commande PowerPivot sur le serveur.  
+     Si aucune commande n’est retourné dans la liste ou vous voyez un message d’erreur semblable à «`get-help could not find *powerpivot* in a help file in this session.`», consultez la section suivante dans cette rubrique pour obtenir des instructions sur l’activation des applets de commande PowerPivot sur le serveur.  
   
      Toutes les applets de commande intègrent un système d'aide en ligne. L'exemple suivant montre comment afficher l'aide en ligne pour l'applet de commande `New-PowerPivotServiceApplication` :  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48164269"
 2.  Exécutez la première applet de commande :  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      L'applet de commande retourne le nom de la solution, son ID, et Deployed=False. À l'étape suivante, vous déployez la solution.  
@@ -76,7 +76,7 @@ ms.locfileid: "48164269"
 3.  Exécutez la deuxième applet de commande pour déployer la solution :  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
 4.  Fermez la fenêtre. Rouvrez-la, à nouveau à l'aide de l'option **Exécuter en tant qu'administrateur** .  

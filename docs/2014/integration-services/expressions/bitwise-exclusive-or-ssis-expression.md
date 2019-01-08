@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ^ (bitwise exclusive OR operator)
@@ -14,12 +13,12 @@ ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb2a9c0ebdc6616940f09c2b8770dbefa6ca15e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d29154f00659680bbd0dd7106d65fe1e058ad7c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201269"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793601"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (OR exclusif au niveau du bit) (expression SSIS)
   Effectue une opération OR exclusive au niveau du bit avec deux valeurs entières. Cette fonction compare chaque bit de son premier opérande au bit correspondant de son second opérande. Si un bit a pour valeur 0 et que l'autre a pour valeur 1, le bit obtenu correspondant a pour valeur 1. Si les deux bits ont pour valeur 0 ou 1, le bit obtenu correspondant a pour valeur 0.  
@@ -94,9 +93,9 @@ ReorderPoint ^ SafetyStockLevel
  00000110  
   
 ## <a name="see-also"></a>Voir aussi  
- [&#124;&#124;&#40;OR logique&#41; &#40;SSIS Expression&#41;](logical-or-ssis-expression.md)   
- [&#124;&#40;Au niveau du bit OR inclusif&#41; &#40;SSIS Expression&#41;](bitwise-inclusive-or-ssis-expression.md)   
- [Opérateurs et associativité](operator-precedence-and-associativity.md)   
- [Opérateurs &#40;SSIS Expression&#41;](operators-ssis-expression.md)  
+ [&#124;&#124; &#40;OR logique&#41; &#40;expression SSIS&#41;](logical-or-ssis-expression.md)   
+ [&#124; &#40;opération OR inclusive au niveau du bit&#41; &#40;expression SSIS&#41;](bitwise-inclusive-or-ssis-expression.md)   
+ [Priorités et associativité des opérateurs](operator-precedence-and-associativity.md)   
+ [Opérateurs &#40;expression SSIS&#41;](operators-ssis-expression.md)  
   
   

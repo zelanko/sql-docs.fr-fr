@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_setdefaultdatatypemapping
@@ -17,17 +16,17 @@ ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1141ee71da9a16b50a9362e7c96272bdb12ebe4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c229fe6355e4fe463038dd7ef44d89217b0de77
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644337"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202228"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Marque un mappage de type de données existant entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestion SGBD (système) en tant que la valeur par défaut de base de données. Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données.  
+  Marque un mappage de type de données existant entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestion SGBD (système) en tant que la valeur par défaut de base de données. Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +61,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [ **@source_dbms**=] **'***source_dbms***'**  
  Nom du SGBD à partir duquel les types de données sont mappés. *source_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Base de données source au format [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Base de données Oracle source.|  
@@ -100,7 +99,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [ **@destination_dbms** =] **'***destination_dbms***'**  
  Nom du SGBD de destination. *destination_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destination.|  
 |**ORACLE**|Base de données Oracle de destination.|  
@@ -130,11 +129,11 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_setdefaultdatatypemapping** est utilisée dans tous les types de réplication entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SGBD.  
+ **sp_setdefaultdatatypemapping** est utilisée dans tous les types de réplication entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SGBD.  
   
  Les mappages de types de données par défaut s'appliquent à toutes les topologies de réplication qui comprennent le SGBD spécifié.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_setdefaultdatatypemapping**.  
   
 ## <a name="see-also"></a>Voir aussi  

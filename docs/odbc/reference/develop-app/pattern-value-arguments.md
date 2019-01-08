@@ -15,12 +15,12 @@ ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9e99ab1646d5a3aff79bad0af7e0b9ab418668e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792397"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208329"
 ---
 # <a name="pattern-value-arguments"></a>Arguments de valeur de modèle
 Certains arguments dans le catalogue des fonctions, telles que la *TableName* argument dans **SQLTables**, acceptez les modèles de recherche. Ces arguments acceptent des modèles de recherche si l’attribut d’instruction SQL_ATTR_METADATA_ID a la valeur SQL_FALSE ; ils sont des arguments d’identificateur qui n’acceptent pas d’un modèle de recherche si cet attribut a la valeur SQL_TRUE.  
@@ -44,7 +44,7 @@ Certains arguments dans le catalogue des fonctions, telles que la *TableName* ar
   
  Une attention particulière doit être prise pour échapper les caractères de modèle de recherche dans les arguments qui acceptent des modèles de recherche. Cela est particulièrement vrai pour le caractère de soulignement, qui est couramment utilisé dans les identificateurs. Une erreur courante dans les applications consiste à récupérer une valeur d’une fonction de catalogue et passe cette valeur à un argument de modèle de recherche dans une autre fonction de catalogue. Par exemple, une application récupère le nom de table MY_TABLE à partir du résultat défini pour **SQLTables** et la transmet à **SQLColumns** pour récupérer une liste de colonnes dans MY_TABLE. Au lieu d’obtenir les colonnes pour MY_TABLE, l’application obtiendra les colonnes pour toutes les tables qui correspondent au modèle de recherche MY_TABLE, tels que MY_TABLE, MY1TABLE, MY2TABLE et ainsi de suite.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2. *x* pilotes ne prennent pas en charge les modèles de recherche dans les *CatalogName* argument dans **SQLTables**. ODBC 3 *.x* pilotes acceptent les modèles de recherche dans cet argument si l’attribut d’environnement le paramètre version_odbc SQL_ATTR_ est défini à SQL_OV_ODBC3 ; ils n’acceptent pas les modèles de recherche dans cet argument si elle est définie sur SQL_OV_ODBC2.  
   
- En passant un pointeur null à un argument de modèle de recherche ne contraint pas la recherche pour cet argument ; Autrement dit, un pointeur null et le pourcentage de modèle de recherche (tous les caractères) sont équivalentes. Toutefois, une longueur de zéro recherche le modèle, autrement dit, un pointeur valide vers une chaîne de longueur zéro — correspond à uniquement la chaîne vide (« »).
+ En passant un pointeur null à un argument de modèle de recherche ne contraint pas la recherche pour cet argument ; Autrement dit, un pointeur null et le pourcentage de modèle de recherche (tous les caractères) sont équivalentes. Toutefois, un modèle de recherche de longueur nulle - autrement dit, un pointeur valide vers une chaîne de longueur zéro - correspond uniquement à la chaîne vide ( » »).

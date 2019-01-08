@@ -19,12 +19,12 @@ ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 246441fba2e72c95004baa3cdb75320b32648e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7160e4622cea397f7b300a1221797349107d38d5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154739"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369991"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Configurer un Pare-feu Windows pour l'accès au service SSIS
     
@@ -36,7 +36,7 @@ ms.locfileid: "48154739"
 > [!IMPORTANT]  
 >  Pour gérer des packages stockés sur un serveur distant, vous ne devez pas vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant. Pour plus d’informations, consultez [Configuring the Integration Services Service &#40;SSIS Service&#41;](configuring-the-integration-services-service-ssis-service.md).  
   
- Le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilise le protocole DCOM. Pour plus d’informations sur le fonctionnement du protocole DCOM à travers les pare-feu, consultez l’article «[Using Distributed COM with Firewalls](http://go.microsoft.com/fwlink/?LinkId=12490)» (Utilisation de Distributed COM avec des pare-feu) dans MSDN Library.  
+ Le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilise le protocole DCOM. Pour plus d’informations sur le fonctionnement du protocole DCOM à travers les pare-feu, consultez l’article «[Using Distributed COM with Firewalls](https://go.microsoft.com/fwlink/?LinkId=12490)» (Utilisation de Distributed COM avec des pare-feu) dans MSDN Library.  
   
  De nombreux systèmes de pare-feu sont disponibles. Si vous exécutez un pare-feu différent du pare-feu Windows (windowsfirewall), consultez la documentation de votre pare-feu pour obtenir des informations spécifiques au système utilisé.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48154739"
 5.  Dans la boîte de dialogue **Ajouter un port** , tapez **RPC(TCP/135)** ou un autre nom descriptif dans la zone **Nom**, tapez **135** dans la zone **Numéro de port** , puis sélectionnez **TCP**.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service utilise toujours le port 135. Vous ne pouvez pas spécifier un autre port.  
+    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Le service utilise toujours le port 135. Vous ne pouvez pas spécifier un autre port.  
   
 6.  Dans la boîte de dialogue **Ajouter un port** , vous pouvez éventuellement cliquer sur **Modifier l’étendue** pour modifier l’étendue par défaut.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48154739"
     >  Pour configurer le Pare-feu Windows, cette procédure utilise l’élément **Pare-feu Windows** dans le Panneau de configuration. L’élément **Pare-feu Windows** configure uniquement le pare-feu du profil d’emplacement réseau actuel. Toutefois, vous pouvez configurer également le Pare-feu Windows à l’aide de l’outil en ligne de commande **netsh** ou du composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console) appelé Pare-feu Windows avec fonctions avancées de sécurité. Pour plus d’informations sur ces outils, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration de l’intégration des Services Service &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)   
+ [Configuration du service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)   
  [Service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

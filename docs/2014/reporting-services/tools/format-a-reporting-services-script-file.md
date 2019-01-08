@@ -14,12 +14,12 @@ ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7e6cf79410e521490a7a2deadd02f5d1181b51fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd33fa4ddfe9f90d7041cf5f6d5b0a47da757a59
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063149"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350759"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Formater un fichier de script Reporting Services
   Un script [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est un fichier de code [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET, écrit par rapport au proxy développé sur le service WSDL (Web Service Description Langage), qui définit l'API SOAP Reporting Services. Un fichier de script est stocké comme fichier texte Unicode ou UTF-8 avec l'extension .rss.  
@@ -47,14 +47,14 @@ End Sub
 ```  
   
 > [!IMPORTANT]  
->  Les informations d'identification de l'utilisateur sont gérées par l'environnement de script et transmises à travers les arguments d'invite de commandes au moyen de RS.exe. Bien que vous puissiez utiliser la variable *rs* pour définir l’authentification du service web, nous vous recommandons d’utiliser l’environnement de script. Vous n'avez pas besoin d'authentifier le service Web dans le fichier de script lui-même. Pour plus d’informations sur l’authentification de l’environnement de script, consultez [utilitaire RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md).  
+>  Les informations d'identification de l'utilisateur sont gérées par l'environnement de script et transmises à travers les arguments d'invite de commandes au moyen de RS.exe. Bien que vous puissiez utiliser la variable *rs* pour définir l’authentification du service web, nous vous recommandons d’utiliser l’environnement de script. Vous n'avez pas besoin d'authentifier le service Web dans le fichier de script lui-même. Pour plus d’informations sur l’authentification de l’environnement de script, consultez [Utilitaire RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md).  
   
- Vous ne déclarez pas d'espaces de noms dans le fichier de script. Grâce à l’environnement de script, plusieurs espaces de noms [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sont disponibles : **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**et **System.IO**.  
+ Vous ne déclarez pas d'espaces de noms dans le fichier de script. L’environnement de script, plusieurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] espaces de noms à votre disposition : **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**, et **System.IO**.  
   
- Pour des exemples de scripts, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)(Exemples SQL Server Reporting Services).  
+ Pour des exemples de scripts, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)(Exemples SQL Server Reporting Services).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Service web Report Server](../report-server-web-service/report-server-web-service.md)   
+ [service Web Report Server](../report-server-web-service/report-server-web-service.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../technical-reference-ssrs.md)   
  [Utilitaire RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md)  
   

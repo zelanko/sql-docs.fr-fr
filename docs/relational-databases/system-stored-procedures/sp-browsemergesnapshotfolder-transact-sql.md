@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_browsemergesnapshotfolder
@@ -17,12 +16,12 @@ ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ed37e8a26a36cb528aaeda0b22f18e5dcb84baa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 378d7dc0a02d356cf505bb37007d7aa6b4033df8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851957"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818781"
 ---
 # <a name="spbrowsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
   
  **sp_browsemergesnapshotfolder** est utile pour déterminer le répertoire où les fichiers d’instantanés de fusion sont générés. Ce dossier/chemin et son contenu peuvent alors être copiés sur un support amovible, et l'instantané peut être utilisé pour synchroniser un abonnement à partir d'un emplacement d'instantané secondaire.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_browsemergesnapshotfolder**.  
   
 ## <a name="see-also"></a>Voir aussi  

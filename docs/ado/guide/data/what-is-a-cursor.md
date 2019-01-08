@@ -13,12 +13,12 @@ ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b58446a00300548b0b61defefb71d3207359787a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d5704a43e1ede850a225c4ec2b4df9a3563606b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770769"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540110"
 ---
 # <a name="what-is-a-cursor"></a>Qu’est qu’un curseur ?
 Les opérations réalisées dans une base de données relationnelle s'exécutent sur un ensemble complet de lignes. L'ensemble de lignes retourné par une instruction SELECT contient toutes les lignes satisfaisant aux conditions de la clause WHERE de l'instruction. Cet ensemble complet de lignes retournées par l'instruction est appelé ensemble de résultats. Applications, en particulier celles qui sont interactifs et en ligne, ne peut pas toujours fonctionner efficacement l’ensemble de résultats en tant qu’unité. Ces applications ont besoin d'un mécanisme leur permettant de travailler avec une seule ligne ou avec un petit bloc de lignes à la fois. Les curseurs sont une extension des ensembles de résultats et fournissent ce mécanisme.  
@@ -61,7 +61,7 @@ Les opérations réalisées dans une base de données relationnelle s'exécutent
   
  Les curseurs en lecture seule permettent aux utilisateurs de parcourir le jeu de résultats et les curseurs peuvent implémenter des mises à jour de la ligne en lecture/écriture. Les curseurs complexes peuvent être définis avec les jeux de clés qui pointent vers les lignes de table de base. Bien que certains curseurs sont en lecture seule vers l’avant, d’autres peuvent avancer et reculer et permettent une actualisation dynamique du jeu de résultats selon les modifications apportées par les autres applications à la base de données.  
   
- Pas toutes les applications doivent utiliser les curseurs de données access ou mise à jour. Certaines requêtes ne nécessitent pas de la mise à jour de ligne directe à l’aide d’un curseur. Les curseurs doivent être les dernier recours pour récupérer des données, puis vous devez choisir le curseur d’impact le plus possible. Lorsque vous créez un jeu de résultats en utilisant une procédure stockée, le jeu de résultats n’est pas modifiable à l’aide du curseur modifier ou mettre à jour les méthodes.  
+ Pas toutes les applications doivent utiliser les curseurs de données access ou mise à jour. Certaines requêtes ne nécessitent pas de la mise à jour de ligne directe à l’aide d’un curseur. Les curseurs doivent être les dernier recours pour récupérer des données- et, vous devez choisir le curseur d’impact le plus possible. Lorsque vous créez un jeu de résultats en utilisant une procédure stockée, le jeu de résultats n’est pas modifiable à l’aide du curseur modifier ou mettre à jour les méthodes.  
   
 ## <a name="concurrency"></a>Accès concurrentiel  
  Dans certaines applications multi-utilisateur, il est très important pour les données présentées à l’utilisateur final à être aussi actuelles que possible. Un exemple classique de ce système est un système de réservation de compagnies aériennes, où plusieurs utilisateurs peuvent être se disputent même siège sur un vol donné (et par conséquent, un enregistrement unique). Dans ce cas, la conception de l’application doit gérer des opérations simultanées sur un seul enregistrement.  

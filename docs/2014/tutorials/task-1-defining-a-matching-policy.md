@@ -13,15 +13,15 @@ ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a94030fdf0f4ef42e0253022913f06f109e4dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55739fd6cf7b6c395c2e7a66c3d80fad22607a83
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107439"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394192"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Tâche 1 : Définition d'une stratégie de correspondance
-  Dans cette tâche, vous allez créer une stratégie de correspondance contenant une règle. La règle aura une condition préalable : **ID du fournisseur**, ce qui signifie que les ID des fournisseurs doivent correspondre avant d’utiliser les autres domaines dans la règle. La règle utilise deux autres domaines : **Supplier Name** avec **similarité** la valeur **70 %** et **adresse E-mail de Contact** avec  **Similarité** la valeur **30 %**.  
+  Dans cette tâche, vous allez créer une stratégie de correspondance contenant une règle. La règle aura une condition préalable : **ID du fournisseur**, ce qui signifie que les ID des fournisseurs doivent correspondre avant d’utiliser les autres domaines dans la règle. La règle utilise deux autres domaines : **Nom du fournisseur** avec **similarité** la valeur **70 %** et **adresse E-mail de Contact** avec **similarité** la valeur **30 %**.  
   
 1.  Dans la page principale de **Client DQS**, cliquez sur **flèche droite** regard **fournisseurs** connaissances de base, puis sélectionnez **stratégie de correspondance**.  
   

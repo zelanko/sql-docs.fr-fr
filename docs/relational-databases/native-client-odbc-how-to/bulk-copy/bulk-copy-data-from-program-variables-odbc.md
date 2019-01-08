@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e01f9a772b306616c8ac2ca3763a01f820e7854
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d8d0d377cff846bcabac999667718c5696089971
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661148"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216048"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Copier en bloc des données à partir de variables de programme (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "51661148"
   
     -   Le nom d’un fichier de données pour recevoir les messages d’erreur de copie en bloc (spécifiez NULL si vous ne souhaitez pas un fichier de message).  
   
-    -   Direction de la copie : DB_IN de l'application vers la vue ou table ou DB_OUT vers l'application à partir de la table ou vue.  
+    -   La direction de la copie : DB_IN à partir de l’application à la vue ou la table ou la DB_OUT vers l’application à partir de la table ou vue.  
   
 5.  Appelez [bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) pour chaque colonne de la copie en bloc pour lier la colonne à une variable de programme.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "51661148"
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- Exécutez la première liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour créer des tables que l'exemple utilisera.  
+ Exécutez la première ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) liste pour créer des tables qui utilise l’exemple de code.  
   
  Compilez la deuxième liste de code (C++) avec odbc32.lib et odbcbcp.lib. Si vous avez effectué la génération avec MSBuild.exe, copiez Bcpfmt.fmt et Bcpodbc.bcp à partir du répertoire de projet dans le répertoire avec le fichier .exe, puis appelez le fichier .exe.  
   
- Exécutez la troisième liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour supprimer les tables que l'exemple a utilisées.  
+ Exécutez la troisième ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) liste pour supprimer les tables utilisé de l’exemple de code.  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  

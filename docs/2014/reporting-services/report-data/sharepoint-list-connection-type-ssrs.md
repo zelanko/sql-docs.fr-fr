@@ -11,12 +11,12 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09adbf8ca6fb16becd98b94c15f93052c003abb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d218103d5a8de6b10ad5b1981f13ac4526f59aee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116344"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358241"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Type de connexion de liste SharePoint (SSRS)
   Pour inclure des données d'une liste Microsoft SharePoint dans votre rapport, vous devez ajouter ou créer un dataset basé sur une source de données de rapport de type Liste Microsoft SharePoint. Il s'agit d'un type de source de données intégré basé sur l'extension de données Liste SharePoint Microsoft SQL Server Reporting Services. Utilisez ce type de source de données pour vous connecter à et récupérer des données de liste des sites [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 et [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
@@ -42,18 +42,18 @@ ms.locfileid: "48116344"
 ||Informations d'identification prises en charge|Mode d'authentification Windows classique|<sup>3</sup> authentification par revendications|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Liste SharePoint locale de batteries de serveurs|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|Oui|  
-||Stockage, invite, aucun (avec les informations d’identification Windows<sup>1</sup>)|Oui|non|  
+||Stockage, invite, aucun (avec les informations d'identification Windows<sup>1</sup>)|Oui|Non|  
 |Liste SharePoint distante|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|Ne<sup>2</sup>|  
-||Stockage, invite, aucun (avec les informations d’identification Windows<sup>1</sup>)|Oui|Ne<sup>2</sup>|  
+||Stockage, invite, aucun (avec les informations d'identification Windows<sup>1</sup>)|Oui|Ne<sup>2</sup>|  
   
  **tableau 2**  
   
 ||Informations d'identification prises en charge|Mode d'authentification Windows classique|<sup>3</sup> authentification par revendications|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Liste SharePoint locale de batteries de serveurs|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|Oui|  
-||Stockage, invite, aucun (avec les informations d’identification Windows<sup>1</sup>)|non|non|  
+||Stockage, invite, aucun (avec les informations d'identification Windows<sup>1</sup>)|Non|Non|  
 |Liste SharePoint distante|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|Ne<sup>2</sup>|  
-||Stockage, invite, aucun (avec les informations d’identification Windows<sup>1</sup>)|non|Ne<sup>2</sup>|  
+||Stockage, invite, aucun (avec les informations d'identification Windows<sup>1</sup>)|Non|Ne<sup>2</sup>|  
   
  <sup>1</sup> stocké et les informations d’identification invite avec informations d’identification non Windows n’est pas pris en charge.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48116344"
  **Informations d'identification non requises (ne pas utiliser d'informations d'identification) :**  
  Pour utiliser cette option, vous devez avoir configuré le compte d'exécution sans assistance sur le serveur de rapports. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
- Pour plus d'informations sur la prise en charge de l'authentification par revendications dans la pile Microsoft BI, consultez [Utilisation de l'authentification par revendications dans la pile Microsoft BI](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
+ Pour plus d'informations sur la prise en charge de l'authentification par revendications dans la pile Microsoft BI, consultez [Utilisation de l'authentification par revendications dans la pile Microsoft BI](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
  Pour plus d’informations, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md), [spécifier les informations d’identification dans le Générateur de rapports](../specify-credentials-in-report-builder.md), et [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -182,7 +182,7 @@ ms.locfileid: "48116344"
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs de dataset générée par la requête.  
   
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
@@ -12,15 +12,15 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d057ee45a14550b1ba56b9b15b9e7011e5238db1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143439"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798691"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Utiliser SQL Server Profiler pour créer un jeu d'éléments de collecte Trace SQL (SQL Server Management Studio)
-  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , vous pouvez exploiter les fonctions de trace côté serveur de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour exporter une définition de trace que vous pouvez utiliser afin de créer un jeu d’éléments de collecte qui utilise le type de collecteur Trace SQL générique. Ce processus se décompose en deux parties :  
+  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez exploiter les fonctions de trace côté serveur de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour exporter une définition de trace que vous pouvez utiliser afin de créer un jeu d’éléments de collecte qui utilise le type de collecteur Trace SQL générique. Ce processus se décompose en deux parties :  
   
 1.  Créer et exporter une trace [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48143439"
   
 3.  Faites défiler le script et effectuez les remplacements suivants, notés dans le texte de commentaire du script :  
   
-    -   Remplacez **SQLTrace Collection Set Name Here** par le nom que vous souhaitez utiliser pour le jeu d'éléments de collecte. Pour cet exemple, nommez le jeu de collections `SPROC_CollectionSet`.  
+    -   Remplacez **SQLTrace Collection Set Name Here** par le nom que vous souhaitez utiliser pour le jeu d'éléments de collecte. Pour cet exemple, nommez le jeu d’éléments de collecte `SPROC_CollectionSet`.  
   
-    -   Remplacez **SQLTrace Collection Item Name Here** par le nom que vous souhaitez utiliser pour l'élément de collecte. Pour cet exemple, nommez l’élément de collection `SPROC_Collection_Item`.  
+    -   Remplacez **SQLTrace Collection Item Name Here** par le nom que vous souhaitez utiliser pour l'élément de collecte. Pour cet exemple, nommez l’élément de collecte `SPROC_Collection_Item`.  
   
 4.  Cliquez sur **Exécuter** pour exécuter la requête et créer le jeu d'éléments de collecte.  
   

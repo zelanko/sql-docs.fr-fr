@@ -11,15 +11,15 @@ ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 62a5d85272aae56b7f54b780b863642b5ddac6d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 133f5db597dfd56464678c52273e576e3493f172
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102109"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210868"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
-  Configurez, réparez ou supprimez un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] avec les outils de Configuration PowerPivot.  
+  Configurez, réparez ou supprimez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] avec les outils de configuration de PowerPivot.  
   
  L'Assistant Installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2010 et un outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013. Cette rubrique décrit l'utilisation générale des outils et ce qui les différencie.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "48102109"
 -   Il n'y a aucune spécification de port TCP/IP à définir pour les outils de configuration, par conséquent vous n'avez pas besoin de configurer votre pare-feu pour les utiliser. L'outil de configuration suppose que les applications Web et les services partagés sont disponibles dans le cadre de la plateforme SharePoint. Vous devrez peut-être configurer votre pare-feu pour le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour plus d’informations, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ##  <a name="bkmk_twoversions"></a> Deux versions de l'outil de configuration  
- Le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Assistant Installation installe l’outil de Configuration de PowerPivot pour SharePoint 2010 et un outil de Configuration de PowerPivot pour SharePoint 2013.  
+ L'Assistant Installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe l'outil de configuration de PowerPivot pour SharePoint 2010 et un outil de configuration de PowerPivot pour SharePoint 2013.  
   
  Les outils ne peuvent être utilisés qu'avec une instance [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Ne les utilisez pas avec des installations de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
-|Nom   |Version prise en charge de SharePoint|Détails de la configuration|  
+|Créer une vue d’abonnement|Version prise en charge de SharePoint|Détails de la configuration|  
 |----------|-------------------------------------|----------------------------|  
 |Configuration de PowerPivot pour SharePoint 2013|SharePoint 2013|[Configurer ou réparer PowerPivot pour SharePoint 2013 &#40;outil de Configuration PowerPivot&#41;](configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
 |Outil de configuration de PowerPivot|SharePoint 2010 avec SharePoint 2010|[Configurer ou réparer PowerPivot pour SharePoint 2010 &#40;outil de Configuration PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md)|  
@@ -63,7 +63,7 @@ ms.locfileid: "48102109"
 |Configuration de PowerPivot pour SharePoint 2013|Outil de configuration de PowerPivot|  
 |--------------------------------------------------|-----------------------------------|  
 |La page principale est une nouvelle option pour **Serveur PowerPivot pour Excel Services**. L'option prend en charge la nouvelle architecture dans laquelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute à l'extérieur de la batterie de serveurs SharePoint. Vous pouvez configurer Excel Services afin d'utiliser un ou plusieurs serveurs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui s'exécutent en mode SharePoint.<br /><br /> ![Serveur PowerPivot dans le nouvel outil de configuration](../media/as-powerpivot-configtool-differences-new-mainpage.gif "serveur PowerPivot dans le nouvel outil de configuration")||  
-||L’outil 2010 comprend la page **inscrire SQL Server Analysis Services (PowerPivot) sur le serveur Local** pour configurer une instance locale de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Cette page ne fait pas partie de l'outil 2013 car il n'existe aucune instance locale de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> ![En tant que compte de service dans l’ancien outil de configuration](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "en tant que compte de service dans l’ancien outil de configuration")|  
+||L'outil 2010 inclut la page **Inscrire SQL Server Analysis Services (PowerPivot) sur le serveur local** pour configurer une instance locale de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Cette page ne fait pas partie de l'outil 2013 car il n'existe aucune instance locale de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> ![En tant que compte de service dans l’ancien outil de configuration](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "en tant que compte de service dans l’ancien outil de configuration")|  
 ||La page **Créer une application de service PowerPivot** comporte une option supplémentaire pour **Mettre les classeurs à niveau pour activer l'actualisation des données**. Cette option n'est pas disponible dans l'outil 2013.<br /><br /> ![mettre à niveau les classeurs dans l’ancien outil de configuration](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "mettre à niveau les classeurs dans l’ancien outil de configuration")|  
 |L'outil 2013 comprend une nouvelle page **Configurer les serveurs PowerPivot**. Cette page prend en charge la nouvelle architecture dans laquelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute à l'extérieur de la batterie de serveurs SharePoint. Par défaut, le nom du serveur entré dans la page principale dans la zone de texte **Serveur PowerPivot pour Excel Services**, est également répertorié dans **Configurer les serveurs PowerPivot**.<br /><br /> ![Inscrire PowerPivot serveurs nouvel outil de configuration](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "PowerPivot inscrire les serveurs nouvel outil de configuration")||  
 |L'outil 2013 comprend une nouvelle page **Inscrire le complément PowerPivot pour le suivi de l'utilisation d'Excel Services**. Excel Services dans SharePoint 2010 ne suit pas les données d'utilisation de PowerPivot.||  
@@ -82,9 +82,9 @@ ms.locfileid: "48102109"
   
 -   [Référence PowerShell pour PowerPivot pour SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
-> [!NOTE]  
+> [!NOTE]
 >  L'outil ne configure pas Reporting Services. Si vous ajoutez Reporting Services à votre environnement SharePoint, vous devez l'installer et le configurer séparément. Pour plus d'informations, consultez les documents suivants :  
->   
+> 
 >  -   [Installer Reporting Services SharePoint Mode for SharePoint 2013](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).  
 > -   [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48102109"
   
      ![Deux outils de configuration de PowerPivot](../media/as-powerpivot-configtools-bothicons.gif "Deux outils de configuration de PowerPivot")  
   
-     **Remarque :** les outils sont disponibles uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
+     **Remarque :** Les outils sont disponibles uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
   
 2.  Au démarrage, les outils de configuration vérifient l'état de votre installation et fournissent les tâches qui sont valides pour votre installation.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "48102109"
  Lorsque vous cliquez sur Exécuter, l'outil traite toutes les actions par lots. Bien que chaque action s'affiche en tant qu'élément distinct dans la liste des tâches, toutes les actions incluses dans la tâche sont traitées ensemble. Seules les actions qui réussissent un contrôle de validation sont traitées. Vous devrez peut-être ajouter ou modifier une partie des valeurs d'entrée pour réussir le contrôle de validation.  
   
 ## <a name="related-content"></a>Contenu associé  
- [Mettre à niveau PowerPivot pour SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) décrit le flux de travail qui met à niveau une installation existante qui se trouve déjà dans une batterie de serveurs.  
+ [Upgrade PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) Décrit le flux de travail qui met à niveau une installation existante dans une batterie de serveurs.  
   
- [Désinstaller PowerPivot pour SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) décrit le flux de travail qui supprime PowerPivot pour SharePoint services, des solutions et des pages d’application dans une batterie de serveurs.  
+ [Uninstall PowerPivot for SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) Décrit le flux de travail qui supprime des services PowerPivot pour SharePoint, des solutions et des pages d'application dans une batterie de serveurs.  
   
  [Configuration de PowerPivot à l’aide de Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   

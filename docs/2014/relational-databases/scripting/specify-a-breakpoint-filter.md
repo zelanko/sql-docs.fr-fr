@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.contraints
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09fd45e648833f2d46c258a1806e8c424634b514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e35da51b4af9e653fd6cdbad77704676941c49b3
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219569"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328709"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Spécifier un filtre de point d'arrêt
   Un filtre de point d'arrêt limite l'action du point d'arrêt uniquement aux ordinateurs, aux processus du système d'exploitation et aux threads spécifiés. Les filtres de point d'arrêt sont utilisés en général lors du débogage d'applications parallèles.  
@@ -40,15 +38,13 @@ ms.locfileid: "48219569"
   
     -   `MachineName` est l'ordinateur qui exécute l'instance du moteur de base de données.  
   
-    -   `ProcessID`, et `ProcessName` correspondent au processus de système d’exploitation qui exécute l’instance du moteur de base de données.  
+    -   `ProcessID` et `ProcessName` correspondent au processus de système d'exploitation qui exécute l'instance du moteur de base de données.  
   
-    -   `ThreadID` et `ThreadName` correspondent au thread de système d’exploitation en cours d’exécution le [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, procédure ou fonction dans l’instance du moteur de base de données.  
+    -   `ThreadID` et `ThreadName` correspondent au thread de système d'exploitation qui exécute le lot, la procédure ou la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] dans l'instance du moteur de base de données.  
   
 3.  Cliquez sur **OK** pour implémenter les modifications ou sur **Annuler** pour fermer sans appliquer les modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Spécifier une condition de point d'arrêt](specify-a-breakpoint-condition.md)   
  [Spécifier un nombre d'accès](specify-a-hit-count.md)   
- [Spécifier une action de point d’arrêt](specify-a-breakpoint-action.md)  
-  
-  
+ [Spécifier une action de point d'arrêt](specify-a-breakpoint-action.md)  

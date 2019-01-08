@@ -11,12 +11,12 @@ ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8b451134d621c8f151fa43ec4214317ab087918
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9bc74d7ac6c1e3fb826e2a1b3ebdc0122fd2720
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072730"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353774"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Stockage de chaîne et classement dans les modèles tabulaires
   Les chaînes (valeurs texte) sont stockées dans un format fortement compressé dans les modèles tabulaires ; en raison de cette compression, vous pouvez obtenir des résultats inattendus lorsque vous récupérez des chaînes entières ou partielles. En outre, comme les paramètres régionaux et les classements de chaîne sont hérités hiérarchiquement de l'objet parent le plus proche, si le langage de chaîne n'est pas défini explicitement, les paramètres régionaux et le classement du parent peuvent affecter la façon dont chaque chaîne est stockée et si la chaîne doit être unique ou combinée avec des chaînes semblables tel que le défini le classement parent.  
@@ -55,13 +55,13 @@ ms.locfileid: "48072730"
 |trEE|  
 |PlAnT|  
   
- Si vous utilisez la colonne, **Classification - anglais**, dans votre modèle, si vous affichez la classification des plantes vous ne verrez pas les valeurs d'origine, avec leurs différentes utilisations de majuscules et minuscules, mais uniquement la première instance. En effet, toutes les variantes de majuscules et minuscules de **tree** sont considérées comme équivalentes dans ce classement et ces paramètres régionaux ; par conséquent, une seule chaîne a été conservée et la première instance de cette chaîne qui est rencontrée par le système est celle qui est enregistrée.  
+ Si vous utilisez la colonne, **Classification - anglais**, dans votre modèle, si vous affichez la classification des plantes vous ne verrez pas les valeurs d’origine, avec leurs différentes utilisations de majuscules et minuscules, mais seule la première instance. En effet, toutes les variantes de majuscules et minuscules de **tree** sont considérées comme équivalentes dans ce classement et ces paramètres régionaux ; par conséquent, une seule chaîne a été conservée et la première instance de cette chaîne qui est rencontrée par le système est celle qui est enregistrée.  
   
 > [!WARNING]  
 >  Vous pouvez décider de définir la première chaîne à stocker, en fonction de ce que vous considérez correct, mais cette opération peut être très difficile à effectuer. Il n'existe aucun moyen simple de déterminer à l'avance quelle ligne doit être traitée en premier par le moteur, étant donné que toutes les valeurs sont considérées comme identiques. Au lieu de cela, si vous devez définir la valeur standard, vous devez nettoyer toutes vos chaînes avant de charger le modèle.  
   
 ## <a name="locale-and-collation-order"></a>Ordre des paramètres régionaux et de classement  
- Lors de la comparaison de chaînes (valeurs texte), ce qui définit l'équivalence est normalement l'aspect culturel de la façon dont ces chaînes sont interprétées. Dans certaines cultures un accent ou la mise en majuscules d'un caractère peut changer complètement la signification de la chaîne ; par conséquent, généralement ces différences sont prises en compte pour déterminer l'équivalence dans n'importe quelle langue ou région spécifique.  
+ Lors de la comparaison de chaînes (valeurs texte), ce qui définit l'équivalence est normalement l'aspect culturel de la façon dont ces chaînes sont interprétées. Dans certaines cultures un accent ou la mise en majuscules d'un caractère peut changer complètement la signification de la chaîne ; par conséquent, généralement ces différences sont prises en compte pour déterminer l'équivalence dans n'importe quelle langue ou région spécifique.  
   
  Généralement, lorsque vous utilisez votre ordinateur elle est déjà configurée pour correspondre à vos propres attentes culturelles et comportement linguistique, et les opérations de chaîne, telles que le tri et la comparaison des valeurs texte se comportent de la façon attendue. Les paramètres qui contrôlent le comportement spécifique à une langue sont définis par les **paramètres régionaux** dans Windows. Les applications lisent ces paramètres et modifient leur comportement en conséquence. Dans certains cas, une application peut avoir une fonctionnalité qui vous permet de modifier le comportement culturel de l'application ou la façon dont les chaînes sont comparées.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48072730"
   
 -   Le classement définit l'ordre des caractères et leur équivalence.  
   
- Il est important de noter qu'un identificateur de langue identifie non seulement une langue mais, également le pays ou la zone où la langue est utilisée. Chaque identificateur de langue a également une spécification de classement par défaut. Pour plus d'informations sur les identificateurs de langue, consultez [ID de paramètres régionaux assignés par Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). Vous pouvez utiliser la colonne LCID Dec pour obtenir l'ID correct en insérant manuellement une valeur. Pour plus d’informations sur le concept SQL des classements, consultez [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations). Pour plus d’informations sur les indicateurs de classement et les styles de comparaison pour les noms de classements Windows, consultez [Nom de classement Windows &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql). La rubrique [Nom du classement SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql) mappe les noms de classements Windows aux noms utilisés pour SQL.  
+ Il est important de noter qu'un identificateur de langue identifie non seulement une langue mais, également le pays ou la zone où la langue est utilisée. Chaque identificateur de langue a également une spécification de classement par défaut. Pour plus d'informations sur les identificateurs de langue, consultez [ID de paramètres régionaux assignés par Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx). Vous pouvez utiliser la colonne LCID Dec pour obtenir l'ID correct en insérant manuellement une valeur. Pour plus d’informations sur le concept SQL des classements, consultez [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations). Pour plus d’informations sur les indicateurs de classement et les styles de comparaison pour les noms de classements Windows, consultez [Nom de classement Windows &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql). La rubrique [Nom du classement SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql) mappe les noms de classements Windows aux noms utilisés pour SQL.  
   
  Une fois que votre base de données model tabulaire a été créée, tous les nouveaux objets du modèle héritent des attributs de langue et de classement des attributs de la base de données. Cela est vrai pour tous les objets. Le chemin d'accès d'héritage commence à l'objet, examine le parent pour trouver tous les attributs de langue et de classement à hériter, et si aucun attribut n'est trouvé, continue vers le haut et recherche les attributs de langue et de classement au niveau de la base de données. En d'autres termes, si vous ne spécifiez pas les attributs de langue et de classement pour un objet, par défaut, l'objet hérite les attributs de son parent plus proche.  
   

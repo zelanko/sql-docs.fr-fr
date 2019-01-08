@@ -1,5 +1,5 @@
 ---
-title: Analyser un modèle tabulaire dans Excel | Documents Microsoft
+title: Analyser un modèle tabulaire Analysis Services dans Excel | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b1db764052a9c3370554a6456dc005612a2e8b95
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a3cd28375a60dc2cbf7447068fde8c5a1c7dba07
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040656"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072226"
 ---
 # <a name="analyze-a-tabular-model-in-excel"></a>Analyser un modèle tabulaire dans Excel  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34040656"
   
          Les rôles de sécurité doivent être définis à l'aide du gestionnaire de rôles. Pour plus d’informations, consultez [créer et gérer les rôles](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
-3.  Pour utiliser une perspective, dans la zone de liste **Perspective**, sélectionnez une perspective.  
+3.  Pour utiliser une perspective, dans la zone de liste **Perspective** , sélectionnez une perspective.  
   
      Les perspectives (autres que celles par défaut) doivent être définies à l'aide de la boîte de dialogue Perspectives. Pour plus d’informations, consultez [créer et gérer des Perspectives](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md).  
   

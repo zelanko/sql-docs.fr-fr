@@ -15,12 +15,12 @@ ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3851ebeb72cc76ce6466d4456772ec13de48a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67633bcfad7c18679dae93de6e5541f3000a1ccc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065319"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363551"
 ---
 # <a name="get-help-sql-server-powershell"></a>Obtenir de l'aide sur SQL Server PowerShell
   Il existe plusieurs sources d'informations sur l'utilisation du fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour Windows PowerShell et des applets de commande. Cela inclut l'aide qui est disponible dans l'environnement Windows PowerShell.  
@@ -33,7 +33,7 @@ ms.locfileid: "48065319"
 ### <a name="help-in-the-windows-powershell-environment"></a>Aide dans l'environnement Windows PowerShell  
  Utilisez l’applet de commande **Get-Help** pour obtenir de l’aide dans l’environnement Windows PowerShell. **Get-Help** fournit l’aide de base pour le langage Windows PowerShell, ainsi que pour les différentes applets de commande et les divers fournisseurs disponibles dans Windows PowerShell.  
   
- Pour plus d’informations sur les moyens d’utiliser **Get-Help**, consultez [Obtention d’aide : Get-Help](http://go.microsoft.com/fwlink/?LinkId=102136).  
+ Pour plus d’informations sur les méthodes que vous pouvez utiliser **Get-Help**, consultez [Get-Help : Obtention d’aide](https://go.microsoft.com/fwlink/?LinkId=102136).  
   
 ### <a name="sql-server-powershell-provider-help"></a>Aide du fournisseur PowerShell SQL Server  
  Le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell implémente plusieurs dossiers sur un lecteur virtuel SQLSERVER, tels que les dossiers SQLSERVER:\SQL et SQLSERVER:\DAC. Chaque dossier est associé à l'un des modèles d'objet de gestion SQL Server. Vous pouvez répertorier les méthodes et les propriétés associées à chaque nœud dans un chemin d'accès SQL Server, mais vous ne pouvez pas obtenir de l'aide sur celles-ci dans l'environnement PowerShell. Pour obtenir un tableau des dossiers avec des liens à la référence de programmation associée, consultez [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md).  
@@ -62,16 +62,16 @@ ms.locfileid: "48065319"
 Get-Help Invoke-Sqlcmd  
   
 ## Get the full help.  
-Get-Help Invoke-Sqlcmd –Full  
+Get-Help Invoke-Sqlcmd -Full  
   
 ## Get the parameter descriptions.  
 Get-Help Invoke-Sqlcmd -Parameter *  
   
 ## Get the code examples.  
-Get-Help Invoke-Sqlcmd –Examples  
+Get-Help Invoke-Sqlcmd -Examples  
   
 ## Get the syntax diagram.  
-Get-Help Invoke-Sqlcmd –Syntax  
+Get-Help Invoke-Sqlcmd -Syntax  
 ```  
   
 ## <a name="get-a-list-of-providers"></a>Obtenir une liste de fournisseurs  
@@ -79,9 +79,9 @@ Get-Help Invoke-Sqlcmd –Syntax
   
 1.  Exécutez Get-Help en spécifiant la catégorie de fournisseur.  
   
- Pour plus d'informations sur l'obtention d'aide sur les fournisseurs dans Windows PowerShell, consultez [Drives and Providers](http://go.microsoft.com/fwlink/?LinkId=102137)(en anglais).  
+ Pour plus d'informations sur l'obtention d'aide sur les fournisseurs dans Windows PowerShell, consultez [Drives and Providers](https://go.microsoft.com/fwlink/?LinkId=102137)(en anglais).  
   
-### <a name="example-get-a-list-of-providers"></a>Exemple : obtenir une liste de fournisseurs  
+### <a name="example-get-a-list-of-providers"></a>Exemple : Obtenir une liste de fournisseurs  
  Le code suivant retourne la liste des fournisseurs actuellement activés dans votre session Windows PowerShell :  
   
 ```  
@@ -93,7 +93,7 @@ Get-Help -Category provider
   
 1.  Exécuter Get-Help en spécifiant le nom SQLServer  
   
-### <a name="example-get-sql-server-provider-help"></a>Exemple : obtenir de l'aide sur le fournisseur SQL Server  
+### <a name="example-get-sql-server-provider-help"></a>Exemple : Obtenir l’aide du fournisseur SQL Server  
  Cet exemple retourne des informations de base sur le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
 ```  
@@ -105,9 +105,9 @@ Get-Help SQLServer
   
 1.  Utilisez la commande CD pour passer à un nœud dans le chemin d'accès de SQL Server ou créez une variable ayant pour valeur cet emplacement.  
   
-2.  Exécutez l’applet de commande **Get-Member** avec le paramètre –Type défini sur Methods ou Properties.  
+2.  Exécutez le **Get-Member** applet de commande avec le paramètre - Type défini sur Methods ou Properties  
   
-### <a name="examples-listing-methods-and-properties"></a>Exemples : affichage de la liste des méthodes et des propriétés  
+### <a name="examples-listing-methods-and-properties"></a>Exemples : Affichage de la liste des méthodes et des propriétés  
  L'exemple suivant répertorie les méthodes prises en charge pour le nœud Bases de données :  
   
 ```  

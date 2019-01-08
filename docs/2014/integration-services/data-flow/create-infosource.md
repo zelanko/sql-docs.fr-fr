@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8a210c3b7fbc76f63861442cd7182fdfe1f31f36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f14f711dc8353a4314120fc9185fd2a027b67ab9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052759"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780071"
 ---
 # <a name="create-infosource"></a>Créer un InfoSource
   Utilisez la boîte de dialogue **Créer un InfoSource** pour créer un InfoSource. Pour créer l’InfoSource, utilisez la boîte de dialogue **Créer un InfoSource pour les données de transaction** ou **Créer un InfoSource pour les données maîtres** .  

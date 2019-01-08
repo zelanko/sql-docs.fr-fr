@@ -13,12 +13,12 @@ ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2758227de47509e62c9f7874c70bbcf30e01d364
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fdf98d461039c5c6fb4f25c8cdf543422e5a0a2c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191089"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359622"
 ---
 # <a name="service-broker-with-alwayson-availability-groups-sql-server"></a>Service Broker avec les groupes de disponibilité AlwaysOn (SQL Server)
   Cette rubrique contient des informations sur la configuration de Service Broker afin d'utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -74,7 +74,7 @@ ms.locfileid: "48191089"
     > [!NOTE]  
     >  Chaque base de données utilisateur qui englobe **msdb**contient par défaut l'itinéraire **AutoCreatedLocal**. Cet itinéraire, qui correspond à tous les noms de services et instances de broker, spécifie que le message doit être remis dans l'instance active. **AutoCreatedLocal** a une priorité plus faible que les itinéraires qui spécifient explicitement un service spécifique qui communique avec une instance distante.  
   
-     Pour plus d’informations sur la création des itinéraires, consultez [Exemples de routage Service Broker](http://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (dans la version [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] de la documentation en ligne) et [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql).  
+     Pour plus d’informations sur la création des itinéraires, consultez [Exemples de routage Service Broker](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (dans la version [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] de la documentation en ligne) et [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql).  
   
 ##  <a name="SendRemoteMessages"></a> Spécifications pour l'envoi de messages à un service distant dans un groupe de disponibilité  
   

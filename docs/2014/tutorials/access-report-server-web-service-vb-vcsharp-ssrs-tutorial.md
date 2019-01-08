@@ -17,12 +17,12 @@ ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb182247c06b4600a7c029e96dfb4066ee7c2a04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44a9bd204b352ee0ab891dceb65922cc877704c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167629"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366681"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Accès au service Web Report Server avec Visual Basic ou Visual C# (didacticiel SSRS)
   Ce didacticiel vous montre comment accéder à partir d’une application créée avec le service Web Report Server [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ou [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "48167629"
   
 -   Exécuter l'application console en mode débogage.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour exécuter ce didacticiel, vous devez disposer des éléments suivants :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -47,19 +47,19 @@ ms.locfileid: "48167629"
   
 -   Des autorisations suffisantes pour accéder au service Web Report Server de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l'ordinateur sur lequel se trouve le serveur de rapports.  
   
--   Un rapport installé sur le serveur de rapports. Ce didacticiel utilise l'exemple de rapport intitulé Company Sales. Pour plus d’informations sur les exemples de rapports, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+-   Un rapport installé sur le serveur de rapports. Ce didacticiel utilise l'exemple de rapport intitulé Company Sales. Pour plus d’informations sur les exemples de rapports, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 > [!NOTE]  
->  Les exemples ne sont pas installés automatiquement, mais peuvent l'être à tout moment. Pour plus d’informations sur les exemples, consultez [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887).  
+>  Les exemples ne sont pas installés automatiquement, mais peuvent l'être à tout moment. Pour plus d’informations sur les exemples, consultez [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
- **Durée estimée pour suivre le didacticiel :** 60 minutes  
+ **Durée estimée pour suivre le didacticiel :** 60 minutes  
   
 ## <a name="tasks"></a>Tâches  
- [Leçon 1 : Création du projet client du service web](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
+ [Leçon 1 : Création du projet de Client de Service Web](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
   
- [Leçon 2 : Ajout d’une référence web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
+ [Leçon 2 : Ajout d’une référence Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
   
- [Leçon 3 : Accès au service web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
+ [Leçon 3 : L’accès au Service Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   
  [Leçon 4 : Exécution de l’Application &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
   

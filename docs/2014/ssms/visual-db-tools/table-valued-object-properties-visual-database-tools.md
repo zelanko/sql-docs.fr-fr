@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.TVO
@@ -12,12 +12,12 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08686e3dd511d3336c94ab4b0aa96b43ce6d7007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c366cca32c8d441ff25f9688a841e2f0fac77a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129359"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775912"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propriétés de l'objet table (Visual Database Tools)
   Ces propriétés figurent dans la fenêtre Propriétés lorsque vous sélectionnez un objet table dans le **Concepteur de requêtes et de vues**. L'objet table peut être une vue, un synonyme, une table dérivée ou une fonction table. Sauf indication contraire, ces propriétés sont en lecture seule dans la fenêtre **Propriétés** .  
@@ -44,12 +44,12 @@ ms.locfileid: "48129359"
  Affiche l'alias de l'objet table sélectionné. Pour ajouter ou modifier un alias, tapez son nom dans le champ.  
   
  **Liste de colonnes**  
- Affiche les colonnes incluses dans l'objet table sélectionné. Pour les afficher dans une fenêtre distincte, cliquez sur Liste de colonnes, puis sur les points de suspension (…) à droite de la propriété.  
+ Affiche les colonnes incluses dans l'objet table sélectionné. Pour les afficher dans une fenêtre distincte, cliquez sur Liste de colonnes, puis sur le bouton de sélection (…) à droite de la propriété.  
   
  **Nom complet**  
  Affiche le nom de l'objet table sélectionné, notamment des informations supplémentaires telles que le schéma ou la source de données de l'objet.  
   
  **Liste de paramètres**  
- Affiche les paramètres définis pour l'objet table sélectionné. Pour définir une valeur pour les paramètres, cliquez sur Liste de paramètres, puis sur les points de suspension (…) à droite de la propriété. Dans la boîte de dialogue Paramètres de fonction, tapez les valeurs. Cette propriété est disponible uniquement lorsqu'une fonction table est sélectionnée.  
+ Affiche les paramètres définis pour l'objet table sélectionné. Si vous souhaitez définir une valeur pour les paramètres, cliquez sur Liste de paramètres, puis sur le bouton de sélection (…) à droite de la propriété. Dans la boîte de dialogue Paramètres de fonction, tapez les valeurs. Cette propriété est disponible uniquement lorsqu'une fonction table est sélectionnée.  
   
   

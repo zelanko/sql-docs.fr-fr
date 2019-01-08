@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], renaming
@@ -14,12 +13,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53a917074efc3ba8b966f795a619c2606e3a160b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8226ca15ed39dd6cc24c7235f54a047d2af86508
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055605"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783621"
 ---
 # <a name="rename-a-database"></a>Modifier le nom d'une base de données
   Cette rubrique explique comment renommer une base de données définie par l'utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le nom de la base de données peut contenir n'importe quel caractère conforme aux règles applicables aux identificateurs.  
@@ -38,7 +37,7 @@ ms.locfileid: "48055605"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [After renaming a database](#FollowUp)  
+-   **Suivi :**  [Après avoir renommé une base de données](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48055605"
   
 #### <a name="to-rename-a-database"></a>Pour renommer une base de données  
   
-1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis développez-la.  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis développez-la.  
   
 2.  Vérifiez que personne n’utilise la base de données, puis [configurez la base de données en mode mono-utilisateur](set-a-database-to-single-user-mode.md).  
   
@@ -82,7 +81,7 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a> Suivi : Après avoir renommé une base de données  
+##  <a name="FollowUp"></a> Suivi : Après avoir renommé une base de données  
  Après avoir renommé une base de données, sauvegardez la base de données **master** .  
   
 ## <a name="see-also"></a>Voir aussi  

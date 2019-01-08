@@ -20,16 +20,16 @@ ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c1c0c178fd1a448a86c5b5ce61fd12530eb4263
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9d0c756db7f84e6bcec46a61ef805f885f39d28
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646377"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214650"
 ---
 # <a name="sqlcancel-function"></a>SQLCancel, fonction
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ISO 92  
+ Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
   
  **Résumé**  
  **SQLCancel** annule le traitement sur une instruction.  
@@ -41,7 +41,7 @@ ms.locfileid: "47646377"
 ```  
   
 SQLRETURN SQLCancel(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -82,7 +82,7 @@ SQLRETURN SQLCancel(
 ## <a name="canceling-asynchronous-processing"></a>Annulation de traitement asynchrone  
  Une fois une application appelle une fonction de façon asynchrone, il appelle la fonction à plusieurs reprises pour déterminer si elle a terminé le traitement. Si le traitement de la fonction est toujours, elle retourne SQL_STILL_EXECUTING. Si la fonction a terminé le traitement, elle retourne un code différent.  
   
- Une fois que tout appel à la fonction qui retourne SQL_STILL_EXECUTING, une application peut appeler **SQLCancel** pour annuler la fonction. Si la demande d’annulation réussite, le pilote retourne SQL_SUCCESS. Ce message n’indique pas que la fonction a été réellement annulée ; Il indique que la demande d’annulation a été traitée. Quand ou si la fonction est en fait annulée est dépendant du pilote et la source de données. L’application doit continuer à appeler la fonction d’origine jusqu'à ce que le code de retour n’est pas SQL_STILL_EXECUTING. Si la fonction a été annulée avec succès, le code de retour est SQL_ERROR et SQLSTATE HY008 (opération annulée). Si la fonction terminé son traitement normal, le code de retour est SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO si la fonction a réussi ou SQL_ERROR et un SQLSTATE autre que HY008 (opération annulée) en cas d’échec de la fonction.  
+ Une fois que tout appel à la fonction qui retourne SQL_STILL_EXECUTING, une application peut appeler **SQLCancel** pour annuler la fonction. Si la demande d’annulation réussite, le pilote retourne SQL_SUCCESS. Ce message n’indique pas que la fonction a été réellement annulée ; Il indique que la demande d’annulation a été traitée. Quand ou si la fonction est en fait annulée est dépendant du pilote et dépend de la source de données. L’application doit continuer à appeler la fonction d’origine jusqu'à ce que le code de retour n’est pas SQL_STILL_EXECUTING. Si la fonction a été annulée avec succès, le code de retour est SQL_ERROR et SQLSTATE HY008 (opération annulée). Si la fonction terminé son traitement normal, le code de retour est SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO si la fonction a réussi ou SQL_ERROR et un SQLSTATE autre que HY008 (opération annulée) en cas d’échec de la fonction.  
   
 > [!NOTE]  
 >  Dans ODBC 3.5, un appel à **SQLCancel** lorsque aucun traitement n’est effectuée sur l’instruction n’est pas traitée comme **SQLFreeStmt** avec l’option SQL_CLOSE, mais a n’est sans effet. Pour fermer un curseur, une application doit appeler **SQLCloseCursor**, et non **SQLCancel**.  

@@ -1,24 +1,26 @@
 ---
-title: Comment déployer une application sur un cluster de données volumineux de SQL Server | Microsoft Docs
+title: Comment déployer une application
+titleSuffix: SQL Server 2019 big data clusters
 description: Déployer un script Python ou R en tant qu’application sur un cluster de données volumineux de SQL Server 2019 (version préliminaire).
 author: TheBharath
 ms.author: bharaths
 manager: craigg
-ms.date: 11/07/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: dd24b4379f50a5b974e7a0a90412d1e13bf6db22
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.custom: seodec18
+ms.openlocfilehash: cca0ac5e7b81318d95fbb133758fca83e1a0742e
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272557"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246405"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Comment déployer une application sur un cluster de données volumineux de SQL Server 2019 (version préliminaire)
 
 Cet article décrit comment déployer et gérer le script R et Python en tant qu’application à l’intérieur d’un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
 
-Les applications R et Python sont déployées et gérées avec le **mssqlctl-pre** utilitaire de ligne de commande qui est inclus dans les CTP 2.1. Cet article fournit des exemples montrant comment déployer ces scripts R et Python en tant qu’applications à partir de la ligne de commande.
+Les applications R et Python sont déployées et gérées avec le **mssqlctl-pre** utilitaire de ligne de commande qui est inclus dans les CTP 2.2. Cet article fournit des exemples montrant comment déployer ces scripts R et Python en tant qu’applications à partir de la ligne de commande.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -29,12 +31,12 @@ Vous devez disposer d’un cluster de données volumineuses de SQL Server 2019 c
 Le **mssqlctl-pre** utilitaire de ligne de commande est fourni pour afficher un aperçu de la fonctionnalité de déploiement d’application Python et R. Utilisez la commande suivante pour installer l’utilitaire :
 
 ```cmd
-pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctlpre
+pip install -r https://private-repo.microsoft.com/python/ctp-2.2/mssqlctlpre/mssqlctlpre.txt --trusted-host https://private-repo.microsoft.com
 ```
 
 ## <a name="capabilities"></a>Fonctions
 
-Dans CTP 2.1, que vous pouvez créer, supprimer, répertorier et exécuter une application R ou Python. Le tableau suivant décrit les commandes de déploiement d’application que vous pouvez utiliser avec **mssqlctl-pre**.
+Dans CTP 2.2, que vous pouvez créer, supprimer, répertorier et exécuter une application R ou Python. Le tableau suivant décrit les commandes de déploiement d’application que vous pouvez utiliser avec **mssqlctl-pre**.
 
 | Command | Description |
 |---|---|
@@ -54,15 +56,16 @@ Les sections suivantes décrivent ces commandes plus en détail.
 
 ## <a name="log-in"></a>Connectez-vous
 
-Avant de configurer des applications R et Python, tout d’abord vous connecter à votre serveur SQL Server en cluster big data avec le `mssqlctl-pre login` commande. Spécifiez l’adresse IP (externe) de la `service-proxy-lb` (par exemple : `https://ip-address:30777`), ainsi que le nom d’utilisateur et le mot de passe pour le cluster.
+Avant de configurer des applications R et Python, tout d’abord vous connecter à votre serveur SQL Server en cluster big data avec le `mssqlctl-pre login` commande. Spécifiez l’adresse IP externe de la `service-proxy-lb` ou `service-proxy-nodeport` services (par exemple : `https://ip-address:30777`), ainsi que le nom d’utilisateur et le mot de passe pour le cluster.
 
-Vous pouvez obtenir l’adresse IP du service de proxy-service-lb en exécutant cette commande dans une fenêtre bash ou cmd :
+Vous pouvez obtenir l’adresse IP de la **proxy-service-lb** ou **proxy-service-nodeport** service en exécutant cette commande dans une fenêtre bash ou cmd :
+
 ```bash 
 kubectl get svc service-proxy-lb -n <name of your cluster>
 ```
 
 ```bash
-mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb> -u <user-name> -p <password>
+mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb>:30777 -u <user-name> -p <password>
 ```
 
 ## <a name="create-an-app"></a>Créer une application

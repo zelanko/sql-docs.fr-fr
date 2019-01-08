@@ -1,5 +1,5 @@
 ---
-title: Colonnes calculées | Microsoft Docs
+title: Calculée des colonnes dans les modèles tabulaires Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e27c545e960c8c57178f099bfa99a7187795d959
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 087c30045fdee1e769471cb12188cf31b524c618
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982521"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072396"
 ---
 # <a name="calculated-columns"></a>Colonnes calculées
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "38982521"
   
 ```  
   
- Cette formule extrait le mois de la colonne StartDate. Elle calcule ensuite la valeur de fin du mois pour chaque ligne de la table. Le deuxième paramètre spécifie le nombre de mois avant ou après le mois indiqué dans StartDate ; dans cette cas, 0 signifie le même mois. Par exemple, si la valeur de la colonne StartDate est 1/6/2001, la valeur dans la colonne calculée sera 30/6/2001.  
+ Cette formule extrait le mois de la colonne StartDate. Elle calcule ensuite la valeur de fin du mois pour chaque ligne de la table. Le deuxième paramètre spécifie le nombre de mois avant ou après le mois indiqué dans StartDate ; dans cette cas, 0 signifie le même mois. Par exemple, si la valeur de la colonne StartDate est 1/6/2001, la valeur dans la colonne calculée sera 30/6/2001.  
   
 ##  <a name="bkmk_naming"></a> Naming a calculated column  
  Par défaut, les nouvelles colonnes calculées sont ajoutées à droite des autres colonnes d'une table, et le nom par défaut **CalculatedColumn1**, **CalculatedColumn2**, etc. est automatiquement affecté à la colonne. Vous pouvez également cliquer avec le bouton droit sur une colonne, puis sélectionner Insérer une colonne pour créer une nouvelle colonne entre deux colonnes existantes. Vous pouvez réorganiser les colonnes dans la même table en cliquant et en faisant glisser, et vous pouvez renommer des colonnes une fois créées ; toutefois, tenez compte des restrictions suivantes relatives aux modifications apportées aux colonnes calculées :  
@@ -74,7 +74,7 @@ ms.locfileid: "38982521"
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables et colonnes](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
- [Mesures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [mesures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Calculs](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
   
   

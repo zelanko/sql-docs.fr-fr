@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,19 +14,19 @@ ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d7099149b8725e03430a3d45bc2a6371c1dd1019
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf04a73d2ecc100ae5e9b41b5807aa25b05ba32a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136339"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761641"
 ---
 # <a name="lockreleased-event-class"></a>Classe d'événements Lock:Released
   La classe d'événements Lock:Released indique qu'un verrou sur une ressource (une page par exemple) a été débloqué.  
   
  Les classes d'événements Lock:Acquired et Lock:Released permettent de contrôler à quel moment des objets sont verrouillés, le type des verrous établis et la durée de maintien des verrous. Les verrous maintenus pendant de longues périodes peuvent causer des contentions et doivent être examinés. Par exemple, une application peut acquérir des verrous sur les lignes d'une table puis attendre la saisie de l'utilisateur. La saisie de l'utilisateur pouvant prendre du temps pour se produire, les verrous risquent de bloquer d'autres utilisateurs. Dans ce cas, l'application doit être modifiée pour effectuer des demandes de verrous uniquement lorsque cela est nécessaire et ne pas demander une saisie de l'utilisateur après avoir acquis des verrous.  
   
-## <a name="lock-released-event-class-data-columns"></a>Colonnes de données de la classe d'événements Lock: Released  
+## <a name="lock-released-event-class-data-columns"></a>Colonnes de la classe d'événements Lock:Released  
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -35,8 +34,8 @@ ms.locfileid: "48136339"
 |BinaryData|`image`|Identificateur de ressource du verrou.|2|Oui|  
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
 |DatabaseID|`int`|ID de la base de données dans laquelle le verrou a été débloqué. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
-|EventClass|`int`|Type d’événement = 23.|27|non|  
-|EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|non|  
+|EventClass|`int`|Type d’événement = 23.|27|Non|  
+|EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IntegerData2|`int`|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Oui|  
@@ -50,7 +49,7 @@ ms.locfileid: "48136339"
 |ObjectID2|`bigint`|ID de l'entité ou de l'objet associé, s'il est disponible et applicable.|56|Oui|  
 |OwnerID|`int`|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|Oui|  
 |RequestID|`int`|ID de la demande contenant l'instruction.|49|Oui|  
-|ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  

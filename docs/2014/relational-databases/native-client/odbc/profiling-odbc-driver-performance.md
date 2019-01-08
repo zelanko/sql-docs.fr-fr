@@ -19,12 +19,12 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8990539dcee3be8eb8101050a9f9f11d880fcd7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138669"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350389"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profilage des performances du pilote ODBC
   Le pilote ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client peut profiler deux types de données de performances :  
@@ -82,7 +82,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Nombre d'instructions SELECT traitées après SQL_PERF_START.|  
 |SQLSelectRows|Nombre de lignes sélectionnées après SQL_PERF_START.|  
 |Transactions|Nombre de transactions utilisateur après SQL_PERF_START, y compris les restaurations. Lorsqu'une application ODBC s'exécute avec SQL_AUTOCOMMIT_ON, chaque commande est considérée comme une transaction.|  
-|SQLPrepares|Nombre de [SQLPrepare, fonction](http://go.microsoft.com/fwlink/?LinkId=59360) appels après SQL_PERF_START.|  
+|SQLPrepares|Nombre de [SQLPrepare, fonction](https://go.microsoft.com/fwlink/?LinkId=59360) appels après SQL_PERF_START.|  
 |ExecDirects|Nombre de **SQLExecDirect** appels après SQL_PERF_START.|  
 |SQLExecutes|Nombre de **SQLExecute** appels après SQL_PERF_START.|  
 |CursorOpens|Nombre de fois où le pilote a ouvert un curseur côté serveur après SQL_PERF_START.|  

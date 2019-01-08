@@ -25,17 +25,17 @@ ms.assetid: 580cf0aa-7425-4d48-aa8d-128f5b488fcd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8ffd7b5ae8b07d38145df7891ca2fde027c651a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00f0a142c623535d07592de8992ede24ff1caa6d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128430"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353299"
 ---
 # <a name="filestore-properties"></a>FileStore, propriété
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés du serveur de cache de fichiers répertoriées dans les tableaux suivants. Toutes ces propriétés sont des propriétés avancées que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **S'applique à :** mode serveur multidimensionnel et tabulaire  
+ **S’applique à :** Mode serveur multidimensionnel et tabulaire  
   
 ## <a name="properties"></a>Properties  
  `MemoryLimit`  
@@ -55,7 +55,7 @@ ms.locfileid: "48128430"
   
  Sur les systèmes haut de gamme, en particulier ceux qui comportent d'importantes ressources de mémoire et plusieurs nœuds NUMA, il peut être avantageux d'utiliser l'accès aléatoire aux fichiers. En mode d'accès aléatoire, Windows ignore les opérations de mappage de page qui lisent des données à partir du disque dans le cache des fichiers système, réduisant ainsi le conflit dans le cache.  
   
- Vous devrez effectuer des tests de comparaison afin de déterminer si les performances de requête sont améliorées lorsque vous modifiez cette propriété. Pour connaître les meilleures pratiques concernant l'exécution de tests de comparaison, y compris l'effacement du cache et les erreurs courantes à éviter, consultez le document [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539). Pour plus d’informations sur les inconvénients de l’utilisation de cette propriété, consultez [ http://support.microsoft.com/kb/2549369 ](http://support.microsoft.com/kb/2549369).  
+ Vous devrez effectuer des tests de comparaison afin de déterminer si les performances de requête sont améliorées lorsque vous modifiez cette propriété. Pour connaître les meilleures pratiques concernant l'exécution de tests de comparaison, y compris l'effacement du cache et les erreurs courantes à éviter, consultez le document [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539). Pour plus d’informations sur les inconvénients de l’utilisation de cette propriété, consultez [ https://support.microsoft.com/kb/2549369 ](https://support.microsoft.com/kb/2549369).  
   
  Pour afficher ou modifier cette propriété dans Management Studio, activez la liste des propriétés avancées dans la page des propriétés du serveur. Vous pouvez également modifier la propriété dans le fichier msmdsrv.ini. Le redémarrage du serveur est recommandé après la définition de cette propriété ; sinon, les fichiers déjà ouverts vont continuer à être accessibles selon le mode précédent.  
   
@@ -80,6 +80,6 @@ ms.locfileid: "48128430"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les propriétés du serveur dans Analysis Services](server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

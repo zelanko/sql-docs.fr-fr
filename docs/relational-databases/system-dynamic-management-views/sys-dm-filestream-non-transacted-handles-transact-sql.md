@@ -19,12 +19,12 @@ ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fcd30c5935b2d99d98c4bce2d9895498c509154
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b25594feb96fe10f0a04ad0ab542fd582089759
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781467"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411626"
 ---
 # <a name="sysdmfilestreamnontransactedhandles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ ms.locfileid: "47781467"
 |correlation_thread_id|varbinary (8)|Contient un identificateur unique pour le thread d'où émane la demande.|  
 |file_context|varbinary (8)|Pointeur vers l'objet fichier utilisé par ce descripteur.|  
 |state|INT|État actuel du descripteur. Peut être actif, fermé ou supprimé.|  
-|state_desc|nvarchar(120)|« ACTIVE »<br />« CLOSED »,<br />« KILLED »|  
+|state_desc|nvarchar(120)|« ACTIF »,<br />« CLOSED »,<br />« SUPPRIMÉ »|  
 |current_workitem_type|INT|État dans lequel ce descripteur est actuellement traité.|  
-|current_workitem_type_desc|nvarchar(120)|« NoSetWorkItemType »<br />« FFtPreCreateWorkitem »<br />« FFtGetPhysicalFileNameWorkitem »<br />« FFtPostCreateWorkitem »<br />« FFtPreCleanupWorkitem »<br />« FFtPostCleanupWorkitem »<br />« FFtPreCloseWorkitem »<br />« FFtQueryDirectoryWorkItem »<br />« FFtQueryInfoWorkItem »<br />« FFtQueryVolumeInfoWorkItem »<br />« FFtSetInfoWorkitem »<br />« FFtWriteCompletionWorkitem »|  
+|current_workitem_type_desc|nvarchar(120)|« NoSetWorkItemType »,<br />« FFtPreCreateWorkitem »,<br />« FFtGetPhysicalFileNameWorkitem »,<br />« FFtPostCreateWorkitem »,<br />« FFtPreCleanupWorkitem »,<br />« FFtPostCleanupWorkitem »,<br />« FFtPreCloseWorkitem »,<br />« FFtQueryDirectoryWorkItem »,<br />« FFtQueryInfoWorkItem »,<br />« FFtQueryVolumeInfoWorkItem »,<br />« FFtSetInfoWorkitem »,<br />« FFtWriteCompletionWorkitem »|  
 |fcb_id|BIGINT|ID du bloc de contrôle de fichiers du FileTable.|  
 |item_id|varbinary(892)|ID d'élément d'un fichier ou répertoire. Peut être Null pour les descripteurs racine du serveur.|  
 |is_directory|bit|Il s'agit d'un répertoire.|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server destination
@@ -17,12 +16,12 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67e78121e3e55cb921da9e48618b67bc997dba28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24f0adb1564882697bf862407cda8dfaee44cd23
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201279"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791021"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Charger des données en masse à l'aide de la destination SQL Server
   Pour pouvoir ajouter et configurer une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le package doit inclure au moins une tâche de flux de données et une source de données.  
@@ -55,7 +54,7 @@ ms.locfileid: "48201279"
     > [!NOTE]  
     >  La destination mappe automatiquement les colonnes portant le même nom.  
   
-9. Cliquez sur **Avancé** et définissez les options de chargement en masse : **Conserver l’identité**, **Conserver les valeurs NULL**, **Verrou de table**, **Vérifier les contraintes**et **Exécuter les déclencheurs**.  
+9. Cliquez sur **avancé** et définissez les options de chargement en bloc : **Conserver l’identité**, **conserver les valeurs null**, **Table lock**, **contraintes Check**, et **exécutent des déclencheurs**.  
   
      Si vous le souhaitez, indiquez la première et la dernière ligne d'entrée à insérer, le nombre maximal d'erreurs avant arrêt de l'opération d'insertion et les colonnes sur lesquelles l'insertion est triée.  
   
@@ -67,9 +66,9 @@ ms.locfileid: "48201279"
 11. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Destination SQL Server](sql-server-destination.md)   
+ [SQL Server Destination](sql-server-destination.md)   
  [Transformations Integration Services](transformations/integration-services-transformations.md)   
- [Chemins Integration Services](integration-services-paths.md)   
+ [Chemins d'accès d'Integration Services](integration-services-paths.md)   
  [tâche de flux de données](../control-flow/data-flow-task.md)  
   
   

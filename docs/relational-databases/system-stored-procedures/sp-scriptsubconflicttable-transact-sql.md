@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_scriptsubconflicttable
@@ -17,12 +16,12 @@ ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 803037daf3490ba194a93b24aaef5af0807bd8da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33aa0ee68e649dbf1fd2d0fa7373cab64560fa5d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676807"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816201"
 ---
 # <a name="spscriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 ## <a name="remarks"></a>Notes  
  **sp_scriptsubconflicttable** est utilisé pour les abonnés disposant d’abonnements où l’instantané initial est appliqué manuellement. La table de conflits est une table facultative sur l'Abonné.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_scriptsubconflicttable**.  
   
 ## <a name="see-also"></a>Voir aussi  

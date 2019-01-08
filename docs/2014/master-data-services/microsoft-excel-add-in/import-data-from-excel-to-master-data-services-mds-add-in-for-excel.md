@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 02bd2846f4425a4849ab16170c76a55af16c2b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b24c20d468cadbe4f4c7268ac6696b366b792e4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130850"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214279"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>Publier des données d'Excel dans MDS (Complément MDS pour Excel)
   Dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], vous pouvez publier les données dans le référentiel MDS quand vous avez fini de travailler dans Excel et souhaitez enregistrer vos modifications afin que d’autres utilisateurs puissent y accéder.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   Lorsque vous publiez des modifications, les commentaires sur les cellules managées MDS sont supprimés.  
 > -   Une formule n'est pas prise en charge dans une cellule managée MDS. Une formule dans une cellule managée MDS est traitée comme valeur de texte.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48130850"
 >  Si vous ajoutez de nouveaux membres (lignes) dans votre feuille de calcul et vous n’arrivez pas à les publier correctement sur le référentiel MDS, il est possible que vous n’ayez pas l’autorisation **Mettre à jour** sur tous les attributs dans la feuille de calcul. Sur l'onglet **Révision** , dans le groupe **Modifications** , cliquez sur **Ôter la protection de la feuille** et réessayez de publier à nouveau.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Appliquer des règles d’entreprise &#40;complément MDS pour Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
+ [Appliquer des règles d’entreprise &#40;Complément MDS pour Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Publication de données &#40;complément MDS pour Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   

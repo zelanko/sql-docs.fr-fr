@@ -16,12 +16,12 @@ ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abb7c01b2495ad58c14ca7e2aefede233213f963
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694447"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506082"
 ---
 # <a name="decimal-digits"></a>Nombres décimaux
 Le *chiffres décimaux* de données decimal et numeric types est défini comme le nombre maximal de chiffres à droite de la virgule décimale, ou à l’échelle des données. Pour les colonnes de nombres à virgule flottante approximatifs ou de paramètres, l’échelle est non définie, car le nombre de chiffres à droite de la virgule décimale n’est pas fixe. Pour les données datetime ou interval qui contient un composant « secondes », les chiffres décimaux est défini comme le nombre de chiffres à droite de la virgule décimale dans le composant « secondes » des données.  
@@ -33,7 +33,7 @@ Le *chiffres décimaux* de données decimal et numeric types est défini comme l
 |Type SQL|Chiffres décimaux|  
 |--------------|--------------------|  
 |Tous les types caractères et binaires [a]|n/a|  
-|SQL_DECIMAL<br />SQL_NUMERIC|Le nombre défini de chiffres à droite de la virgule décimale. Par exemple, l’échelle d’une colonne définie en tant que NUMERIC(10,3) est 3. Cela peut être un nombre négatif pour prendre en charge le stockage de très grands nombres sans utiliser de notation exponentielle ; par exemple, « 12000 » peuvent être stockées en tant que « 12 » avec une échelle de – 3.|  
+|SQL_DECIMAL<br />SQL_NUMERIC|Le nombre défini de chiffres à droite de la virgule décimale. Par exemple, l’échelle d’une colonne définie en tant que NUMERIC(10,3) est 3. Cela peut être un nombre négatif pour prendre en charge le stockage de très grands nombres sans utiliser de notation exponentielle ; par exemple, « 12000 » peuvent être stockées en tant que « 12 » avec une échelle de -3.|  
 |Tous les types numériques exacts autres que SQL_DECIMAL et SQL_NUMERIC [a]|0|  
 |Tous les types de données approximatifs [a]|n/a|  
 |SQL_TYPE_DATE et tous les types d’intervalle avec aucun composant « secondes » [a]|n/a|  
@@ -44,7 +44,7 @@ Le *chiffres décimaux* de données decimal et numeric types est défini comme l
   
  Les valeurs retournées pour les chiffres décimaux ne correspondent pas aux valeurs dans n’importe quel champ de descripteur un. Les valeurs peuvent provenir de la SQL_DESC_SCALE ou le champ SQL_DESC_PRECISION, selon le type de données, comme indiqué dans le tableau suivant.  
   
-|Type SQL|Champ de descripteur correspondant à<br /><br /> chiffres décimaux|  
+|Type SQL|Champ de descripteur correspondant à<br /><br /> Chiffres décimaux|  
 |--------------|----------------------------------------------------------|  
 |Tous les types caractères et binaires|n/a|  
 |Tous les types numériques exacts|SCALE|  

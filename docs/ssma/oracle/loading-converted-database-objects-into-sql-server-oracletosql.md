@@ -13,12 +13,12 @@ ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: fa7e74d94fba34ebb3ae1e11ccaae308dd14e3e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d66d48591304d5481cb86c7418ed0ac27051db
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685257"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204938"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Chargement d’objets de base de données convertis dans SQL Server (OracleToSQL)
 Après avoir converti les schémas Oracle vers SQL Server, vous pouvez charger les objets de base de données qui en résulte dans SQL Server. Vous pouvez avoir créer les objets SSMA, ou vous pouvez générer un script les objets et exécuter les scripts vous-même. En outre, SSMA vous permet de mettre à jour des métadonnées de la cible avec le contenu réel de la base de données SQL Server.  
@@ -99,7 +99,7 @@ Vous pouvez exécuter un script ou des instructions individuelles, en [!INCLUDE[
   
 4.  Pour exécuter un ensemble d’instructions, les instructions select dans la fenêtre d’éditeur de requête, puis appuyez sur la **F5** clé.  
   
-Pour plus d’informations sur l’utilisation de l’éditeur de requête pour exécuter des scripts, consultez «[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] requête » dans la documentation en ligne de SQL Server.  
+Pour plus d’informations sur l’utilisation de l’éditeur de requête pour exécuter des scripts, consultez « [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] requête » dans la documentation en ligne de SQL Server.  
   
 Vous pouvez également exécuter des scripts à partir de la ligne de commande à l’aide de la **sqlcmd** utilitaire et à partir de l’Agent SQL Server. Pour plus d’informations sur **sqlcmd**, consultez « utilitaire sqlcmd » dans la documentation en ligne de SQL Server. Pour plus d’informations sur l’Agent SQL Server, consultez « Automating tâches administratives (Agent SQL Server) » dans la documentation en ligne de SQL Server.  
   

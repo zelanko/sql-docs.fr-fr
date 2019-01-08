@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - CHANGE_TRACKING_CLEANUP_VERSION
@@ -34,12 +33,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aef16266b62754884017528a9db6065ca824e4eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190639"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351704"
 ---
 # <a name="track-data-changes-sql-server"></a>Suivre les modifications de données (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit deux fonctionnalités qui suivent les modifications apportées aux données d'une base de données : [Capture de données modifiées](#Capture) et [Suivi des modifications](#Tracking). Ces fonctionnalités permettent aux applications de déterminer les modifications de DML (opérations d’insertion, de mise à jour et de suppression) apportées aux tables utilisateur dans une base de données. La capture de données modifiées et le suivi des modifications peuvent être activés sur la même base de données ; aucune attention particulière n'est requise. Pour les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que prennent en charge des modifications capture de données et le suivi des modifications, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -59,7 +58,7 @@ ms.locfileid: "48190639"
   
 -   Faible charge de traitement des opérations DML. Le suivi synchrone des modifications entraîne toujours une charge de traitement. Toutefois, le recours au suivi des modifications peut contribuer à réduire cette charge. La charge de traitement est souvent inférieure à celle qu'entraînent des solutions alternatives, en particulier lorsque celles-ci requièrent des déclencheurs d'utilisation.  
   
--   Le suivi des modifications est basé sur des transactions validées. L'ordre des modifications est basé sur l'heure de validation des transactions. Cela favorise l'obtention de résultats fiables lorsque sont impliquées des transactions longues ou qui se chevauchent. Solutions personnalisées qui utilisent `timestamp` valeurs doivent être conçues spécifiquement pour gérer ces scénarios.  
+-   Le suivi des modifications est basé sur des transactions validées. L'ordre des modifications est basé sur l'heure de validation des transactions. Cela favorise l'obtention de résultats fiables lorsque sont impliquées des transactions longues ou qui se chevauchent. Les solutions personnalisées qui utilisent des valeurs `timestamp` doivent être conçues spécifiquement pour gérer ces scénarios.  
   
 -   Les outils standard sont disponibles pour les opérations de configuration et de gestion. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit des instructions DDL standard, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], des affichages catalogue et des autorisations de sécurité.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "48190639"
 |**Modifications suivies**|||  
 |Modifications DML|Oui|Oui|  
 |**Informations suivies**|||  
-|Données historiques|Oui|non|  
+|Données historiques|Oui|Non|  
 |Si la colonne a été modifiée|Oui|Oui|  
 |Type DML|Oui|Oui|  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48190639"
  **Configuration et administration**  
  Pour activer ou désactiver des modifications capture de données pour une base de données, l’appelant de [sys.sp_cdc_enable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) ou [sys.sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)doit être un membre de serveur fixe `sysadmin` rôle. Activation et désactivation de capture de données modifiées au niveau de la table requiert que l’appelant de [sys.sp_cdc_enable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) et [sys.sp_cdc_disable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) soit être un membre du rôle sysadmin ou la base de données `database db_owner` rôle.  
   
- Utilisation des procédures stockées pour prendre en charge l’administration des travaux de capture de données modifiées est limitée aux membres du serveur `sysadmin` et du rôle de la `database db_owner` rôle.  
+ L'utilisation de procédures stockées pour prendre en charge l'administration des travaux de capture de données modifiées est limitée aux membres du rôle `sysadmin` serveur et du rôle `database db_owner`.  
   
  **Énumération des modifications et requêtes de métadonnées**  
  Pour accéder aux données modifiées associées à une instance de capture, l'utilisateur doit pouvoir accéder à toutes les colonnes capturées de la table source associée. De plus, si un rôle de régulation est spécifié lors de la création de l'instance de capture, l'appelant doit également être membre du rôle de régulation spécifié. Les autres fonctions de capture de données modifiées générales pour accéder aux métadonnées seront accessibles à tous les utilisateurs de base de données par le biais du rôle public, bien que l'accès aux métadonnées retournées soit en général également régulé par le biais de l'accès choisi aux tables sources sous-jacentes et par l'appartenance aux rôles de régulation définis.  
@@ -102,7 +101,7 @@ ms.locfileid: "48190639"
 |Type de colonne|Modifications capturées dans les tables de modifications|Limitations|  
 |--------------------|---------------------------------------|-----------------|  
 |Colonnes éparses|Oui|Ne prend pas en charge la capture des modifications lors de l'utilisation d'un jeu de colonnes.|  
-|Colonnes calculées|non|Les modifications apportées aux colonnes calculées ne sont pas suivies. La colonne apparaîtra dans la table de modifications avec le type approprié, mais aura une valeur NULL.|  
+|Colonnes calculées|Non|Les modifications apportées aux colonnes calculées ne sont pas suivies. La colonne apparaîtra dans la table de modifications avec le type approprié, mais aura une valeur NULL.|  
 |XML|Oui|Les modifications apportées aux éléments XML individuels ne sont pas suivies.|  
 |timestamp|Oui|Le type de données dans la table des modifications est converti en binaire.|  
 |types de données BLOB|Oui|L'image précédente de la colonne BLOB est stockée uniquement si la colonne elle-même est modifiée.|  
@@ -140,7 +139,7 @@ ms.locfileid: "48190639"
   
 -   Si une base de données est restaurée sur un autre serveur, par défaut, la capture de données modifiées est désactivée et toutes les métadonnées connexes sont supprimées.  
   
-     Pour conserver la capture de données modifiées, utilisez la `KEEP_CDC` option lors de la restauration de la base de données. Pour plus d'informations sur cette option, consultez [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
+     Pour conserver la fonction de capture de données modifiées, utilisez l'option `KEEP_CDC` lors de la restauration de la base de données. Pour plus d'informations sur cette option, consultez [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 -   Si une base de données est détachée puis attachée au même serveur ou à un autre serveur, la capture de données modifiées reste activée.  
   
@@ -154,7 +153,7 @@ ms.locfileid: "48190639"
   ##  <a name="Tracking"></a> Change Tracking  
  Le suivi des modifications capture le fait que des lignes d'une table ont été modifiées, mais ne capture pas les données modifiées. Cela permet aux applications de déterminer les lignes qui ont changé, les données de ligne les plus récentes étant obtenues directement à partir des tables utilisateur. Le suivi des modifications est par conséquent plus limité dans les questions historiques auxquelles il peut répondre, comparé à la capture de données modifiées. Toutefois, pour les applications qui ne requièrent pas d'informations historiques, la charge de stockage est largement inférieure puisque les données modifiées ne sont pas capturées. Un mécanisme de suivi synchrone est utilisé pour assurer le suivi des modifications. Ce mécanisme a été conçu pour imposer une charge minimale sur les opérations DML.  
   
- L'illustration suivante montre un scénario de synchronisation qui pourrait tirer parti du suivi des modifications. Dans ce scénario, une application requiert les informations suivantes : toutes les lignes de la table qui ont été modifiées depuis la dernière synchronisation de la table et uniquement les données de la ligne actuelle. Étant donné qu'un mécanisme synchrone est utilisé pour assurer le suivi des modifications, une application peut effectuer la synchronisation bidirectionnelle et détecter de manière fiable tout conflit pouvant survenir.  
+ L'illustration suivante montre un scénario de synchronisation qui pourrait tirer parti du suivi des modifications. Dans ce scénario, une application requiert les informations suivantes : toutes les lignes de la table qui ont été modifiées depuis la dernière synchronisation de la table et uniquement les données de la ligne actuelle. Étant donné qu'un mécanisme synchrone est utilisé pour assurer le suivi des modifications, une application peut effectuer la synchronisation bidirectionnelle et détecter de manière fiable tout conflit pouvant survenir.  
   
  ![Illustration conceptuelle du suivi des modifications](../../database-engine/media/cdcart2.gif "Illustration conceptuelle du suivi des modifications")  
   
@@ -167,9 +166,9 @@ ms.locfileid: "48190639"
   
      Décrit le suivi des modifications, fournit une vue d'ensemble de haut niveau du mode de fonctionnement du suivi des modifications et décrit la manière dont le suivi des modifications interagit avec d'autres fonctionnalités du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
--   [Centre de développement Microsoft Sync Framework](http://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Centre de développement Microsoft Sync Framework](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     Fournit une documentation complète pour [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] et [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. Dans la documentation relative à [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], la rubrique de procédure traitant de l’utilisation du suivi des modifications SQL Server contient des informations détaillées et des exemples de code.  
+     Fournit une documentation complète pour [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] et [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. Dans la documentation pour [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], la rubrique « Comment : Utilisez SQL Server suivi des modifications » contient des exemples de code et de plus d’informations détaillées.  
   
   
 ## <a name="related-tasks-required"></a>Tâches associées (obligatoires)  

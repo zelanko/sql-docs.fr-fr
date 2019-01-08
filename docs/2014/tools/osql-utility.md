@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -24,12 +23,12 @@ ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbf8009d078058e825360190b268c3cbb124bcdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33b7d8f60bfef89aef49733cf193f8aad2678ee7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123701"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808871"
 ---
 # <a name="osql-utility"></a>Utilitaire osql
   L'utilitaire **osql** permet de spécifier des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] , des procédures système, ainsi que des fichiers de script. Pour communiquer avec le serveur, cet utilitaire fait appel à ODBC.  
@@ -46,7 +45,7 @@ ms.locfileid: "48123701"
 [-L] |  
 [  
   {  
-     {-Ulogin_id [-Ppassword]} | –E }  
+     {-Ulogin_id [-Ppassword]} | -E }  
      [-Sserver_name[\instance_name]] [-Hwksta_name] [-ddb_name]  
      [-ltime_out] [-ttime_out] [-hheaders]  
      [-scol_separator] [-wcolumn_width] [-apacket_size]  
@@ -110,7 +109,7 @@ C:\>osql
  Spécifie le nombre de secondes accordées pour l'exécution d'une commande. Si aucune valeur *time_out* n’est spécifiée, les commandes n’ont pas de délai d’expiration.  
   
  **-h** *headers*  
- Spécifie le nombre de lignes à imprimer entre les en-têtes de colonne. Par défaut, les en-têtes ne sont imprimés qu'une fois pour chaque jeu de résultats d'une requête. Utilisez -1 pour indiquer qu'aucun titre ne sera imprimé. Si vous utilisez –1, ne laissez aucun espace entre le paramètre et sa valeur (**-h-1**, et non **-h -1**).  
+ Spécifie le nombre de lignes à imprimer entre les en-têtes de colonne. Par défaut, les en-têtes ne sont imprimés qu'une fois pour chaque jeu de résultats d'une requête. Utilisez -1 pour indiquer qu'aucun titre ne sera imprimé. Si -1 est utilisé, il ne doit y avoir aucun espace entre le paramètre et sa valeur (**-h-1**, et non **-h -1**).  
   
  **-s** *col_separator*  
  Spécification du caractère de séparation des colonnes, qui est par défaut un espace. Pour utiliser des caractères qui ont une signification particulière pour le système d’exploitation (par exemple, | ; & \< >), mettez-les entre guillemets doubles («).  
@@ -263,7 +262,7 @@ osql -E -i titles.qry -o titles.res
  Vous pouvez inclure des commentaires dans une instruction Transact-SQL soumise à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par **osql**. Il existe deux syntaxes de commentaires : -- et /*...\*/.  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>Utilisation d'EXIT pour retourner des résultats dans osql  
- Vous pouvez utiliser le résultat d'une instruction SELECT comme valeur retournée par **osql**. S'il est numérique, la dernière colonne de la dernière ligne de résultats est convertie en entier de 4 octets (entier long). MS-DOS transmet l'octet de poids faible au processus parent ou au niveau erreur du système d'exploitation. Windows transmet la totalité de l'entier de 4 octets. La syntaxe de cette commande est la suivante :  
+ Vous pouvez utiliser le résultat d'une instruction SELECT comme valeur retournée par **osql**. S'il est numérique, la dernière colonne de la dernière ligne de résultats est convertie en entier de 4 octets (entier long). MS-DOS transmet l'octet de poids faible au processus parent ou au niveau erreur du système d'exploitation. Windows transmet la totalité de l'entier de 4 octets. La syntaxe est :  
   
 ```  
 EXIT ( < query > )  
@@ -337,7 +336,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Commentaire &#40;MDX&#41;](/sql/mdx/comment-mdx)   
- [-- &#40;Comment&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)   
+ [-- &#40;Commentaire&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)   
  [CAST et CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)   
  [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)  
   

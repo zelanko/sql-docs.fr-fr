@@ -11,21 +11,21 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2e520e394ba98cc4dddb0057abde1598da352045
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61dfe7512f17b6c67c93d02d6b4a9e11164d6b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223349"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361691"
 ---
 # <a name="matrices-report-builder-and-ssrs"></a>Matrices (Générateur de rapports et SSRS)
   Utilisez une matrice pour afficher des données groupées et des informations récapitulatives. Vous pouvez regrouper des données en fonction de plusieurs champs ou expressions dans des groupes de lignes et de colonnes. Une matrice fournit des fonctionnalités similaires à celles des analyses croisées et des tableaux croisés dynamiques. À l'exécution, lorsque les données de rapport sont associées aux régions de données, une matrice se développe horizontalement et verticalement sur la page. Les valeurs des cellules de matrice sont des valeurs d'agrégat limitées à l'intersection des groupes de lignes et de colonnes auxquels la cellule appartient. Vous pouvez mettre en forme les lignes et les colonnes afin de mettre en surbrillance les données que vous souhaitez mettre en évidence. Vous pouvez également inclure des bascules d'extraction qui permettent initialement de masquer les données de détail ; l'utilisateur peut ensuite cliquer sur ces bascules pour afficher plus ou moins de détails, en fonction de ses besoins.  
   
  Vous pouvez enrichir votre conception initiale en développant une matrice en vue d'améliorer l'affichage pour l'utilisateur. Pour plus d’informations, consultez [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
- Pour une rapide prise en main des matrices, consultez [Didacticiel : création d’un rapport de matrice &#40;Générateur de rapports&#41;](../tutorial-creating-a-matrix-report-report-builder.md).  
+ Pour rapidement commencer à utiliser les matrices, consultez [didacticiel : Création d’un rapport de matrice &#40;Générateur de rapports&#41;](../tutorial-creating-a-matrix-report-report-builder.md).  
   
- Les exemples de rapports de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluent un certain nombre de rapports qui utilisent des matrices. Vous pouvez découvrir les matrices en explorant la définition de rapport d'un exemple de rapport dans le Générateur de rapports ou le Concepteur de rapports ou en affichant un aperçu du rapport rendu dans le Générateur de rapports ou le Concepteur de rapports. Pour plus d'informations sur le téléchargement des exemples de rapports, consultez [Exemples de produits (SSRS) Server Reporting Services](http://go.microsoft.com/fwlink/?LinkID=198283).  
+ Les exemples de rapports de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluent un certain nombre de rapports qui utilisent des matrices. Vous pouvez découvrir les matrices en explorant la définition de rapport d'un exemple de rapport dans le Générateur de rapports ou le Concepteur de rapports ou en affichant un aperçu du rapport rendu dans le Générateur de rapports ou le Concepteur de rapports. Pour plus d'informations sur le téléchargement des exemples de rapports, consultez [Exemples de produits (SSRS) Server Reporting Services](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -93,7 +93,7 @@ ms.locfileid: "48223349"
  Pour ajouter une colonne de total à un groupe de colonnes adjacent, cliquez dans la cellule de définition du groupe de colonnes et utilisez la commande **Ajouter un total** . Une nouvelle colonne statique est ajoutée à côté du groupe de colonnes, avec une somme agrégée par défaut pour chaque champ numérique des lignes existantes. Pour modifier l'expression, modifiez manuellement l'agrégat par défaut, par exemple, `Avg([Sales])`. Pour plus d’informations, consultez [Ajouter un total à un groupe ou à une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

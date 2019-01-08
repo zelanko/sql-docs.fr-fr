@@ -22,12 +22,12 @@ ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 54e8f172518d9e6513c1072d15debb32b2858d95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 817591cec64a4210c4cc573588be1b8ac6dfb8a7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158610"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358771"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>Attributs personnalisés pour les routines CLR
   Les attributs répertoriés peuvent être appliqués au common language runtime (CLR) routines, types définis par l’utilisateur et les agrégats définis par l’utilisateur qui sont inscrits dans [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]. Si l'attribut n'est pas appliqué, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise la valeur par défaut. Les attributs répertoriés sont définis dans l'espace de noms `Microsoft.SqlServer.Server`.  
@@ -35,37 +35,37 @@ ms.locfileid: "48158610"
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>Attribut SqlUserDefinedAggregate  
  L'attribut `SqlUserDefinedAggregate` indique que la méthode doit être inscrite en tant qu'agrégat défini par l'utilisateur. Chaque agrégat défini par l'utilisateur doit être annoté avec cet attribut.  
   
- Pour plus d’informations, consultez [SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626).  
+ Pour plus d’informations, consultez [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626).  
   
 ## <a name="the-sqlfunction-attribute"></a>Attribut SqlFunction  
  L'attribut `SqlFunction` indique que la méthode doit être inscrite en tant que fonction, avec les attributs de fonctions appropriés définis.  
   
- Pour plus d’informations, consultez [SqlFunctionAttribute](http://go.microsoft.com/fwlink/?LinkId=128019).  
+ Pour plus d’informations, consultez [SqlFunctionAttribute](https://go.microsoft.com/fwlink/?LinkId=128019).  
   
 ## <a name="the-sqlfacet-attribute"></a>Attribut SqlFacet  
  L'attribut `SqlFacet` est utilisé pour retourner des informations sur le type de retour d'une expression de type défini par l'utilisateur.  
   
- Pour plus d’informations, consultez [SqlFacetAttribute](http://go.microsoft.com/fwlink/?LinkId=128020).  
+ Pour plus d’informations, consultez [SqlFacetAttribute](https://go.microsoft.com/fwlink/?LinkId=128020).  
   
 ## <a name="the-sqlprocedure-attribute"></a>Attribut SqlProcedure  
  L'attribut `SqlProcedure` indique que la méthode doit être inscrite en tant que procédure stockée. Cet attribut est utilisé uniquement par Visual Studio pour inscrire automatiquement la méthode spécifiée en tant que procédure stockée ; il n'est pas utilisé par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Pour plus d’informations, consultez [SqlProcedureAttribute](http://go.microsoft.com/fwlink/?LinkId=128021).  
+ Pour plus d’informations, consultez [SqlProcedureAttribute](https://go.microsoft.com/fwlink/?LinkId=128021).  
   
 ## <a name="the-sqltrigger-attribute"></a>Attribut SqlTrigger  
  L'attribut `SqlTrigger` indique que la méthode doit être inscrite en tant que déclencheur.  
   
- Pour plus d’informations, consultez [SqlTriggerContext](http://go.microsoft.com/fwlink/?LinkId=128022) et [SqlTriggerAttribute](http://go.microsoft.com/fwlink/?LinkId=203898).  
+ Pour plus d’informations, consultez [SqlTriggerContext](https://go.microsoft.com/fwlink/?LinkId=128022) et [SqlTriggerAttribute](https://go.microsoft.com/fwlink/?LinkId=203898).  
   
 ## <a name="the-sqluserdefinedtypeattribute"></a>SqlUserDefinedTypeAttribute  
  Vous pouvez appliquer SqlUserDefinedTypeAttribute à une définition de classe dans l'assembly. Cela oblige [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à créer un type défini par l'utilisateur et lié à la définition de classe qui possède cet attribut personnalisé.  
   
- Pour plus d’informations, consultez [SqlUserDefinedTypeAttribute](http://go.microsoft.com/fwlink/?LinkId=128024).  
+ Pour plus d’informations, consultez [SqlUserDefinedTypeAttribute](https://go.microsoft.com/fwlink/?LinkId=128024).  
   
 ## <a name="the-sqlmethod-attribute"></a>Attribut SqlMethod  
  L'attribut `SqlMethod` est utilisé pour indiquer les propriétés de déterminisme et d'accès aux données d'une méthode ou d'une propriété sur un type défini par l'utilisateur.  
   
- Pour plus d’informations, consultez [SqlMethodAttribute](http://go.microsoft.com/fwlink/?LinkId=128025).  
+ Pour plus d’informations, consultez [SqlMethodAttribute](https://go.microsoft.com/fwlink/?LinkId=128025).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Agrégats CLR définis par l’utilisateur](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   

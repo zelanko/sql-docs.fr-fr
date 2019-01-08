@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1716b3b6e5794d8dbb8d9ee0195ed642db6df054
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 37c313484b2ee7ff87668cbfdd0b87ed52cdaf98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523972"
 ---
 # <a name="import-data-by-using-a-native-query"></a>Importer des données à l’aide d’une requête native
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
@@ -38,7 +38,7 @@ Si vous ne disposez pas d’une connexion à votre source de données, vous deve
 2. Dans **éditeur de requête**, cliquez sur **requête** > **nouvelle requête** > **requête vide**
 3. Dans la barre de formule, tapez
     ```
-    = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM …")
+    = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM ...")
     ```
 4. Pour créer une table, dans **requêtes**, avec le bouton droit de la requête, puis sélectionnez **créer une Table**. La nouvelle table aura le même nom que la requête.
 

@@ -8,8 +8,6 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 f1_keywords:
-- vsregularexpressionhelp
-- vs.regularexpressionhelp
 - vs.regularexpressionbuilder
 helpviewer_keywords:
 - regular expressions [SQL Server Management Studio]
@@ -19,19 +17,19 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2014aa68bee9e78477fb4ee9993053e13a33abe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9a265979af780b1df3eedf18c14fd822a2983b1
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077629"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328312"
 ---
 # <a name="search-text-with-regular-expressions"></a>Rechercher du texte avec des expressions régulières
   Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
   
 #### <a name="to-find-using-regular-expressions"></a>Pour effectuer une recherche à l'aide d'expressions régulières  
   
-1.  Pour pouvoir utiliser des expressions régulières dans le champ **Rechercher** pendant des opérations **Recherche rapide**, **Rechercher dans les fichiers**, **Remplacement rapide**ou **Remplacer dans les fichiers** , sélectionnez l’option **Utiliser** sous **Options de recherche**, puis choisissez **Expressions régulières**.  
+1.  Pour activer l’utilisation des expressions régulières dans le **rechercher** champ pendant **recherche rapide**, **rechercher dans les fichiers**, **remplacement rapide**, ou  **Remplacer dans les fichiers** opérations, sélectionnez le **utilisation** sous **Options de recherche** et choisissez **expressions régulières**.  
   
 2.  Le bouton triangulaire **Générateur d'expressions** situé en regard du champ **Rechercher** devient alors disponible. Cliquez sur ce bouton pour afficher la liste des expressions régulières les plus couramment utilisées. Lorsque vous choisissez un élément dans le Générateur d'expressions, il est inséré dans la chaîne **Rechercher** .  
   
@@ -66,7 +64,7 @@ ms.locfileid: "48077629"
 |----------------|------------|-----------------|  
 |Zéro ou plusieurs occurrences au minimum|@|Représente zéro ou plusieurs occurrences de l'expression précédente, en faisant correspondre le moins de caractères possible.|  
 |Une ou plusieurs occurrences au minimum|#|Représente au moins une occurrence de l'expression précédente, en faisant correspondre le moins de caractères possible.|  
-|Répétition n fois|^n|Représente n occurrences de l'expression précédente. Par exemple, [0-9]^4 représente toute séquence à 4 chiffres.|  
+|Répétition n fois|^n|Représente n occurrences de l'expression précédente. Par exemple, [0-9] ^ 4 correspond à n’importe quelle séquence à quatre chiffres.|  
 |Regroupement|()|Regroupe une sous-expression.|  
 |Énième texte avec balises|\n|Dans une expression **Rechercher ou Remplacer** , recherche la concordance du texte correspondant à la énième expression avec balises, où n désigne un chiffre compris entre 1 et 9.<br /><br /> Dans une expression **Remplacer** , \0 insère le texte correspondant à l’expression entière.|  
 |Champ justifié à droite|\\(w,n)|Dans une expression **Remplacer** , aligne à droite la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
@@ -136,5 +134,3 @@ ms.locfileid: "48077629"
 ## <a name="see-also"></a>Voir aussi  
  [Recherche et remplacement](search-and-replace.md)   
  [Rechercher du texte avec des caractères génériques](search-text-with-wildcards.md)  
-  
-  

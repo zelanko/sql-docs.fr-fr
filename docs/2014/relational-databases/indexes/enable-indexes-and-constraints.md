@@ -17,12 +17,12 @@ ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0f9f0130c90796efa8bc12f663fbe3ad32f19413
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d68f329aecdd1284bac311db4139470bba55e41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152619"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533142"
 ---
 # <a name="enable-indexes-and-constraints"></a>Activer les index et contraintes
   Cette rubrique explique comment activer un index désactivé dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lorsqu'un index est désactivé, il reste à l'état désactivé tant qu'il n'est pas reconstruit ou supprimé  

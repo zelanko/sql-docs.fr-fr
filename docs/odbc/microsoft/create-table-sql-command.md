@@ -13,12 +13,12 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1451ddc8ec43b1960ed6073fb836b05e8384bb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683008"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213498"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE, commande SQL
 Crée une table comportant les champs spécifiés.  
@@ -111,12 +111,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ```  
   
  CLÉ primaire *eExpression2* balise *TagName2*  
- Spécifie un index primaire à créer. *eExpression2* spécifie un champ ou une combinaison de champs dans la table. BALISE *TagName2 s*Spécifie le nom de la balise de l’index primaire qui est créé. Noms de balise d’index peuvent contenir jusqu'à 10 caractères.  
+ Spécifie un index primaire à créer. *eExpression2* spécifie un champ ou une combinaison de champs dans la table. BALISE *TagName2* Spécifie le nom de la balise de l’index primaire qui est créé. Noms de balise d’index peuvent contenir jusqu'à 10 caractères.  
   
  Comme une table peut avoir qu’un seul index primaire, vous ne peut pas inclure cette clause si vous avez déjà créé un index primaire pour un champ. Visual FoxPro génère une erreur si vous incluez plusieurs clauses de clé primaire dans CREATE TABLE.  
   
  UNIQUE *eExpression3*balise *TagName3*  
- Crée un index de candidat. *eExpression3* spécifie un champ ou une combinaison de champs dans la table. Toutefois, si vous avez créé un index principal avec une des options de la clé primaire, vous ne pouvez pas inclure le champ qui a été spécifié pour l’index primaire. BALISE *TagName3 s*spécifie un nom de balise pour la balise d’index de candidat qui est créé. Noms de balise d’index peuvent contenir jusqu'à 10 caractères.  
+ Crée un index de candidat. *eExpression3* spécifie un champ ou une combinaison de champs dans la table. Toutefois, si vous avez créé un index principal avec une des options de la clé primaire, vous ne pouvez pas inclure le champ qui a été spécifié pour l’index primaire. BALISE *TagName3* spécifie un nom de balise pour la balise d’index de candidat qui est créé. Noms de balise d’index peuvent contenir jusqu'à 10 caractères.  
   
  Une table peut avoir plusieurs index candidats.  
   

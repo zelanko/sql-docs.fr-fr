@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_startpublication_snapshot
@@ -17,12 +16,12 @@ ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f44d4edac88887d8869aa4a3885218733acd6fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50657e6a14f68ef297871001bc611f1d7cf9337b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660057"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211608"
 ---
 # <a name="spstartpublicationsnapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
  Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
  [  **@publisher=** ] **'***publisher***'**  
- Est le nom de non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut. Ne spécifiez pas ce paramètre pour un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Est le nom de non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut. Ne spécifiez pas ce paramètre pour un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -52,9 +51,9 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ## <a name="remarks"></a>Notes  
  **sp_startpublication_snapshot** est utilisé avec tous les types de réplication.  
   
- Pour un serveur de publication autre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette procédure stockée est exécutée sur la base de données de distribution du serveur de distribution.  
+ Pour un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication, cette procédure stockée est exécutée sur le serveur de distribution sur la base de données de distribution.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_startpublication_snapshot**.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -15,20 +15,20 @@ ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db5b4fcded48a711fc1c8e8c8ffdebdd36562282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12581756e6ffa7d77ba7dc3339c3f38c96962d4e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150299"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372904"
 ---
 # <a name="basic-data-mining-tutorial"></a>Didacticiel d’exploration de données de base
-  Bienvenue dans le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] didacticiel d’exploration de données de base de données. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un environnement intégré pour la création des modèles d’exploration de données et élaborer des prédictions. Dans ce didacticiel, vous allez réaliser un scénario pour une campagne de publipostage ciblé dans laquelle vous allez utiliser l'apprentissage automatique pour analyser et prédire le comportement d'achat des clients. Le didacticiel montre comment utiliser trois des algorithmes d'exploration de données les plus importants : clustering, arbres de décision et Naive Bayes. Vous allez également apprendre à analyser vos résultats à l’aide des visionneuses de modèle d’exploration de données et à créer des prédictions et des graphiques de précision en utilisant les outils d’exploration de données qui sont inclus dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La société fictive, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], est utilisée pour tous les exemples.  
+  Bienvenue dans le Didacticiel sur l'exploration de données de base [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un environnement intégré pour la création des modèles d’exploration de données et élaborer des prédictions. Dans ce didacticiel, vous allez réaliser un scénario pour une campagne de publipostage ciblé dans laquelle vous allez utiliser l'apprentissage automatique pour analyser et prédire le comportement d'achat des clients. Le didacticiel montre comment utiliser trois des algorithmes d'exploration de données les plus importants : clustering, arbres de décision et Naive Bayes. Vous allez également apprendre comment analyser vos résultats à l'aide des visionneuses de modèle d'exploration de données, puis à créer des prédictions et des graphiques d'analyse de précision à l'aide des outils d'exploration de données inclus dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La société fictive, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], est utilisée pour tous les exemples.  
   
  Lorsque vous êtes habitué à utiliser les outils d’exploration de données, nous recommandons de suivre également le [didacticiel d’exploration de données intermédiaire &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md). Les leçons illustrent l'utilisation des prévisions, de l'analyse du panier d'achat, des séries chronologiques, des modèles d'association, des tables imbriquées et du modèle Sequence Clustering.  
   
 ## <a name="tutorial-scenario"></a>Scénario du didacticiel  
- Dans ce didacticiel, vous êtes un employé de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] qui a été demandé d’en savoir plus sur les clients de la société en fonction des historiques d’achat et ensuite ces données d’historique pour effectuer des prédictions qui peuvent être utilisées dans marketing. La société n'a jamais effectué d'exploration de données auparavant. Vous devez donc créer spécifiquement une base de données pour l'exploration de données et définir plusieurs modèles d'exploration de données.  
+ Dans ce didacticiel, vous êtes un employé de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] qui est chargé d'en savoir plus sur les clients de la société en fonction des historiques d'achat. Vous devez ensuite, en fonction de ces données d'historique, effectuer des prédictions exploitables par le service marketing. La société n'a jamais effectué d'exploration de données auparavant. Vous devez donc créer spécifiquement une base de données pour l'exploration de données et définir plusieurs modèles d'exploration de données.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Ce didacticiel apprend à créer et à utiliser différents types de méthodes d'apprentissage automatique. Vous allez également apprendre comment créer une copie d'un modèle d'exploration de données, puis appliquer un filtre aux données d'entrée pour obtenir des résultats différents. Ensuite, comparez les résultats des deux modèles à l'aide d'un graphique de courbes d'élévation. Pour finir, vous allez utiliser l'extraction pour extraire des données supplémentaires de la structure d'exploration de données sous-jacente.  
@@ -44,12 +44,12 @@ ms.locfileid: "48150299"
  Ce didacticiel contient les leçons suivantes :  
   
  [Leçon 1 : Préparation de l’analyse des Services de base de données &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
- Au cours de cette leçon, vous allez apprendre à créer une nouvelle base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], à ajouter une source de données et une vue de source de données, ainsi qu'à préparer la nouvelle base de données qu'il sera possible d'utiliser avec l'exploration de données.  
+ Au cours de cette leçon, vous allez apprendre à créer une nouvelle base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , à ajouter une source de données et une vue de source de données, ainsi qu'à préparer la nouvelle base de données qu'il sera possible d'utiliser avec l'exploration de données.  
   
  [Leçon 2 : Création d’une Structure de publipostage ciblé &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
  Au cours de cette leçon, vous allez apprendre à créer une structure de modèle d'exploration de données qu'il sera possible d'utiliser dans un scénario de publipostage ciblé.  
   
- [Leçon 3 : Ajout et traitement des modèles](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Leçon 3 : Ajout et traitement des modèles](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  Dans cette leçon, vous apprendrez à ajouter des modèles à une structure. Les modèles que vous créez sont générés à l'aide des algorithmes suivants :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees  
@@ -67,23 +67,23 @@ ms.locfileid: "48150299"
  [Leçon 6 : Création et utilisation de prédictions &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
  Dans cette dernière leçon du didacticiel sur l'exploration de données de base, vous utilisez le modèle pour prédire quels clients sont les plus susceptibles d'acheter un vélo. Vous allez ensuite effectuer une extraction dans les cas sous-jacents pour obtenir des informations de contact.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Assurez-vous que les éléments suivants sont installés sur votre système :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en mode multidimensionnel  
   
--   La base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)].  
+-   La base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- Pour des raisons de sécurité, les bases de données exemples ne sont pas installées avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour installer les bases de données officielles pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitez le [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) page et sélectionnez [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ Pour des raisons de sécurité, les bases de données exemples ne sont pas installées avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour installer les bases de données officielles pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitez la page [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) (en anglais) et sélectionnez [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
 >  Lorsque vous suivez un didacticiel, vous pouvez trouver la navigation entre les étapes plus aisée en ajoutant les boutons **Rubrique suivante** et **Rubrique précédente** à la barre d'outils de la visionneuse de document.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Solutions d’exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
- [Tâches du modèle d’exploration de données et procédures](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Création et l’interrogation des modèles d’exploration de données avec DMX : didacticiels &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Tâches du modèle d'exploration de données et procédures](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Création et l’interrogation des modèles d’exploration de données avec DMX : Didacticiels &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

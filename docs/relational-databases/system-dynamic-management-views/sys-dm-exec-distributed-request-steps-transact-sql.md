@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccf2d3bc2b9bd40a141cae19a22ffde56ea16dd6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 27df857e8863272f2b502c4950b4cc36ad936978
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674298"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401954"
 ---
 # <a name="sysdmexecdistributedrequeststeps-transact-sql"></a>Sys.dm_exec_distributed_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51674298"
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**Int**|execution_id et step_index composent la clé pour cette vue. Id numérique unique associé à la demande.|Consultez les ID dans [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |step_index|**Int**|La position de cette étape dans la séquence d’étapes qui composent la demande.|0 pour (n-1) pour une demande avec n étapes.|  
-|operation_type|**nvarchar(128)**|Type de l’opération représentée par cette étape.|'MoveOperation','OnOperation','RandomIDOperation','RemoteOperation','ReturnOperation','ShuffleMoveOperation','TempTablePropertiesOperation','DropDiagnosticsNotifyOperation', ‘HadoopShuffleOperation', ‘HadoopBroadCastOperation', ‘HadoopRoundRobinOperation'|  
+|operation_type|**nvarchar(128)**|Type de l’opération représentée par cette étape.|'MoveOperation', 'OnOperation', 'RandomIDOperation', 'RemoteOperation', 'ReturnOperation', 'ShuffleMoveOperation', 'TempTablePropertiesOperation', 'DropDiagnosticsNotifyOperation', 'HadoopShuffleOperation', 'HadoopBroadCastOperation', 'HadoopRoundRobinOperation'|  
 |distribution_type|**nvarchar(32)**|Où l’étape s’exécute.|« AllComputeNodes «, » AllDistributions', « ComputeNode », « Distribution », « AllNodes », « SubsetNodes », « 'SubsetDistributions, » n’est pas spécifié ».|  
 |élément location_type|**nvarchar(32)**|Où l’étape s’exécute.|« Compute', 'Head' ou « DMS ». Toutes les étapes de déplacement des données affichent « DMS ».|  
 |status|**nvarchar(32)**|État de cette étape|« Attente », « Running », « Complète », « Échec », « UndoFailed », 'PendingCancel', 'annulée', 'Annuler', 'Abandonné'|  

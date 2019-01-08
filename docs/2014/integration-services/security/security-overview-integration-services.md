@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
@@ -21,12 +20,12 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6ee84e7cd1e8d652283eb758af7396257fecf7b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35376c36361bd7453ed925c8b0be5721aa120037
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228579"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761201"
 ---
 # <a name="security-overview-integration-services"></a>Vue d'ensemble de la sécurité (Integration Services)
   La sécurité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est constituée de plusieurs couches qui fournissent un environnement de sécurité complet et souple. Ces couches de sécurité incluent l’utilisation de signatures numériques, de propriétés de package, de rôles de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et d’autorisations de système d’exploitation. La plupart de ces fonctionnalités de sécurité se répartissent dans les catégories suivantes : identité et contrôle d'accès.  
@@ -95,13 +94,13 @@ ms.locfileid: "48228579"
 ## <a name="related-tasks"></a>Tâches associées  
  La liste suivante contient des liens vers les rubriques qui indiquent comment effectuer une tâche particulière relative à la sécurité.  
   
--   [Créer un rôle défini par l’utilisateur](../create-a-user-defined-role.md)  
+-   [Créer un rôle défini par l'utilisateur](../create-a-user-defined-role.md)  
   
--   [Affecter un rôle de lecture et d’écriture à un package](../assign-a-reader-and-writer-role-to-a-package.md)  
+-   [Affecter un rôle de lecture et d'écriture à un package](../assign-a-reader-and-writer-role-to-a-package.md)  
   
 -   [Implémenter une stratégie de signature en définissant une valeur du Registre](../implement-a-signing-policy-by-setting-a-registry-value.md)  
   
--   [Signer un package à l’aide d’un certificat numérique](../sign-a-package-by-using-a-digital-certificate.md)  
+-   [Signer un package à l'aide d'un certificat numérique](../sign-a-package-by-using-a-digital-certificate.md)  
   
 -   [Définir ou changer le niveau de protection des packages](../set-or-change-the-protection-level-of-packages.md)  
   

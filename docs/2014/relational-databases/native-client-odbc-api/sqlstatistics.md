@@ -14,18 +14,18 @@ ms.assetid: e60101ae-a5f5-432f-a32a-d8e6fb0cbde8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 604c87ed33720114590d0ffc5027f3022a8fb87a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 509205e0eeb2a913c8fdb4505961b8a3d4965529
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137865"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351067"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
   **SQLStatistics** peut être exécuté sur un curseur statique. Toute tentative d'exécution de **SQLStatistics** sur un curseur pouvant être mis à jour (curseur de jeu de clés ou curseur dynamique) retourne SQL_SUCCESS_WITH_INFO pour indiquer que le type de curseur a été modifié.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLStatistics, fonction](http://go.microsoft.com/fwlink/?LinkId=59372)   
+ [SQLStatistics, fonction](https://go.microsoft.com/fwlink/?LinkId=59372)   
  [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

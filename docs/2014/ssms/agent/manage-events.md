@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - event forwarding servers [SQL Server]
@@ -18,12 +18,12 @@ ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d1bbf304680611eca21f5d5baeb98a251f279e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193009"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812111"
 ---
 # <a name="manage-events"></a>Gérer les événements
   Vous pouvez transférer à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tous les messages d'événements qui correspondent à un niveau de gravité d'erreur ou le dépassent. Cette fonction est qualifiée de *transfert d'événements*. Le serveur de transfert est un serveur dédié qui peut également être un serveur maître. Le transfert d'événements permet de centraliser la gestion des alertes pour un groupe de serveurs, réduisant ainsi la charge de travail sur les serveurs à utilisation intense.  

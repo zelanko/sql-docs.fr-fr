@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: d255d242fa2f5b8615c06097620d7e85e0b895fd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b248578015e8d821c3c76314ecbbabdf75600a52
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659206"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160527"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Nouveautés de SQL Server sur Linux
 
@@ -34,7 +34,7 @@ Version préliminaire de SQL Server 2019 a été publié. Cet article ne couvre 
 - Prise en charge des chemins Linux natifs.
 - Prise en charge IPv6.
 - Prise en charge pour les fichiers de base de données sur NFS.
-- Chiffrement [Transparent Layer Security ](sql-server-linux-encrypted-connections.md) (TLS) activé.
+- Activé [Transport Layer Security](sql-server-linux-encrypted-connections.md) chiffrement (TLS).
 - [Authentification Active Directory](sql-server-linux-active-directory-authentication.md) activée.
 - [Fonctionnalité de groupes de disponibilité](sql-server-linux-availability-group-overview.md) pour la haute disponibilité.
 - Prise en charge de la [Recherche de texte intégral](sql-server-linux-setup-full-text-search.md)

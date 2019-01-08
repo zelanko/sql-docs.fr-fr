@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 140bd1e82540ab7f8869ae64173d7d5431ea9233
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 782745fa9957cd611aa875bec2f9b740b489f210
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774737"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202008"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Stratégies de prise en charge d’OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47774737"
   Cet article explique comment divers composants d’accès aux données peuvent être utilisés avec OLE DB Driver pour SQL Server.  
 
 ## <a name="server-support"></a>Prise en charge de serveur  
- OLE DB Driver pour SQL Server prend en charge les connexions à [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)],[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)], et [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+ OLE DB Driver pour SQL Server prend en charge les connexions à [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)], et [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ## <a name="supported-operating-system-versions"></a>Versions du système d'exploitation prises en charge  
  Le tableau suivant répertorie les systèmes d’exploitation prise en charge OLE DB Driver pour SQL Server.  

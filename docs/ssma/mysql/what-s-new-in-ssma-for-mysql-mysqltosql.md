@@ -10,12 +10,12 @@ ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d5b17e7b054552c96c6fb3ff861c22b4e87e394f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b927d9116424f1b471dc675189548e3c6a459569
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674827"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531758"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Nouveautés de SSMA pour MySQL (MySQLToSql)
 Cet article répertorie SSMA pour MySQL des modifications dans chaque version. 
@@ -189,7 +189,7 @@ La version de juillet 2010 de SSMA pour MySQL contient les fonctionnalités suiv
   
 4.  **Améliorations apportées à la Conversion de l’objet :**  
   
-    -   Conversion d’objets de la MySQL métabase – procédures, des fonctions, des vues, des déclencheurs et des instructions.  
+    -   Conversion d’objets de la MySQL métabase - procédures, des fonctions, des vues, des déclencheurs et des instructions.  
     -   Prise en charge limitée des Types de données spatiales dans les Tables.  
     -   Option permettant de convertir des fonctions de MySQL pour les procédures stockées SQL Server  
     -   Option pour appliquer le mappage de Modes SQL et le jeu de caractères lors de la Conversion de l’objet  
@@ -210,4 +210,4 @@ La version de janvier 2010 de SSMA pour MySQL était la version initiale. Elle c
   
 -   Prise en charge pour la migration vers les deux en local SQL Server et SQL Azure.  
   
--   **Instantané de la fonctionnalité :** migration de schéma et les données de Tables/index/contraintes MySQL.
+-   **Instantané de la fonctionnalité :** Migration de schéma et les données de Tables/index/contraintes MySQL.

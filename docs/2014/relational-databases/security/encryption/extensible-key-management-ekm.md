@@ -14,12 +14,12 @@ ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: a13deff4d15d38286c943ce080faf6bf7ce1ca55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42ec76542ffdf382c10c48cd107765d312ed1781
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111239"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375781"
 ---
 # <a name="extensible-key-management-ekm"></a>Gestion de clés extensible (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit des fonctions de chiffrement de données en même temps que la *gestion de clés extensible* (EKM, Extensible Key Management) à l’aide du fournisseur de *l’API Microsoft Cryptography* (MSCAPI) pour le chiffrement et la génération de clés. Les clés de chiffrement pour les données et le chiffrement à clé sont créés dans des conteneurs de clé transitoires, et ils doivent être exportés d'un fournisseur avant d'être stockés dans la base de données. Cette approche permet à la gestion des clés, qui comprend une hiérarchie de clé de chiffrement et une sauvegarde de clé, d'être gérée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "48111239"
   
  La gestion de clés extensible [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet aux fournisseurs tiers EKM/HSM d’enregistrer leurs modules dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Une fois enregistrés, les utilisateurs de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent utiliser les clés de chiffrement stockées dans les modules EKM. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut ainsi accéder aux fonctionnalités de chiffrement avancées offertes par ces modules, telles que le chiffrement et le déchiffrement en bloc, et les fonctions de gestion de clés, telles que le vieillissement de clé et la permutation de clé.  
   
- Quand vous exécutez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans une machine virtuelle Azure, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut utiliser des clés stockées dans [Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521401). Pour plus d’informations, consultez [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md).  
+ Quand vous exécutez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans une machine virtuelle Azure, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut utiliser des clés stockées dans [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401). Pour plus d’informations, consultez [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 ## <a name="ekm-configuration"></a>Configuration EKM  
  La gestion de clés extensible n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -105,8 +105,8 @@ GO
 |-------------------------|---------------|  
 |Chiffrement à clé symétrique|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
 |Chiffrement à clé asymétrique|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
-|EncryptByKey(key_guid, 'cleartext', …)|[ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
-|DecryptByKey(ciphertext, …)|[DECRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
+|EncryptByKey(key_guid, 'cleartext', ...)|[ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
+|DecryptByKey(ciphertext, ...)|[DECRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
 |EncryptByAsmKey(key_guid, 'cleartext')|[ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
 |DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
   

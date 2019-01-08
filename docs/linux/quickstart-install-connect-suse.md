@@ -1,5 +1,6 @@
 ---
-title: Prise en main de SQL Server sur SUSE Linux Enterprise Server | Microsoft Docs
+title: Prise en main de SQL Server sur SUSE Linux Enterprise Server
+titleSuffix: SQL Server
 description: Ce démarrage rapide montre comment installer SQL Server 2017 ou SQL Server 2019 sur SUSE Linux Enterprise Server puis créer et interroger une base de données avec sqlcmd.
 author: rothja
 ms.author: jroth
@@ -7,17 +8,17 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: e1ba97ce7b3499671f3c3bc840560e9dc7ab98c4
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: d73a1a3b75bbdce6604677464b6947c789bedbac
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269622"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160557"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur SUSE Linux Enterprise Server
+# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Démarrage rapide : Installer SQL Server et de créer une base de données sur SUSE Linux Enterprise Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -89,7 +90,7 @@ Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un t
    ```
 
    > [!TIP]
-   > Les éditions suivantes de SQL Server 2017 sont sous licence librement : Evaluation, Developer et Express.
+   > Les éditions suivantes de SQL Server 2017 sont librement concédée sous licence : Evaluation, Developer et Express.
 
    > [!NOTE]
    > Veillez à spécifier un mot de passe fort pour le compte d’administrateur système (longueur minimale de 8 caractères, incluant des majuscules et des minuscules, des chiffres et/ou des caractères spéciaux).

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing [SQL Server replication], Oracle publishing
@@ -17,12 +16,12 @@ ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ba97c517967b3a010379e82ee1f230af83c8a490
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 558ee09eeb4419bc354ff3ade9d6586877246b33
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214559"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762421"
 ---
 # <a name="oracle-publishing-overview"></a>Présentation de la publication Oracle
   À partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], vous pouvez inclure des serveurs de publication Oracle dans votre topologie de réplication, en partant d'Oracle version 9i. Les serveurs de publication peuvent être déployés sur tout matériel et système d'exploitation prenant en charge Oracle. La fonctionnalité s'appuie sur les solides fondations de la réplication d'instantané et de la réplication transactionnelle de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en fournissant des performances et une exploitabilité similaires.  
@@ -43,6 +42,6 @@ ms.locfileid: "48214559"
 ## <a name="see-also"></a>Voir aussi  
  [Configurer un serveur de publication Oracle](configure-an-oracle-publisher.md)   
  [Glossaire des termes de la publication Oracle](glossary-of-terms-for-oracle-publishing.md)   
- [Réplication de base de données hétérogène](heterogeneous-database-replication.md)  
+ [Heterogeneous Database Replication](heterogeneous-database-replication.md)  
   
   

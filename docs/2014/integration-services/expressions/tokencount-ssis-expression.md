@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4dc9070625ab85b80ebe7117adc9d010c291365
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d449e6245b779fd281fc9c8f047a9eb352d56846
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100649"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822763"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (expression SSIS)
   Retourne le nombre de jetons d'une chaîne qui contient des jetons séparés par les délimiteurs spécifiés.  
@@ -32,7 +31,7 @@ TOKENCOUNT(character_expression, delimiter_string)
  Chaîne qui contient des jetons séparés par des délimiteurs.  
   
  *delimiter_string*  
- Chaîne qui contient les caractères de délimitation. Par exemple, « ; , » contient trois caractères de délimitation : le point-virgule, un espace vide et une virgule.  
+ Chaîne qui contient les caractères de délimitation. Par exemple, « ; , » contient trois caractères de délimitation : le point-virgule, un espace vide et une virgule.  
   
 ## <a name="result-types"></a>Types de résultats  
  DT_I4  
@@ -51,13 +50,13 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   Vous pouvez utiliser des variables et des colonnes en tant qu'arguments pour cette expression.  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
- Dans l'exemple suivant, la fonction TOKENCOUNT retourne 3, car la chaîne contient trois jetons : « 01 », « 12 », « 2011 ».  
+ Dans l’exemple suivant, la fonction TOKENCOUNT retourne 3, car la chaîne contient trois jetons : « 01 », « 12 », « 2011 ».  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  
 ```  
   
- Dans l'exemple suivant, la fonction TOKENCOUNT retourne 4, car il existe quatre jetons (« a », « little », « white », « dog »).  
+ Dans l’exemple suivant, la fonction TOKENCOUNT retourne 4, car il existe quatre jetons (« a », « little », « white », « dog »).  
   
 ```  
 TOKENCOUNT("a little white dog"," ")  
@@ -69,7 +68,7 @@ TOKENCOUNT("a little white dog"," ")
 TOKENCOUNT("a little white dog","|")  
 ```  
   
- Dans l'exemple suivant, la fonction TOKENCOUNT retourne 4. La chaîne de délimitation de cet exemple contient 5 délimiteurs. La chaîne d'entrée contient 4 jetons : « a », « little », « white », « dog ».  
+ Dans l'exemple suivant, la fonction TOKENCOUNT retourne 4. La chaîne de délimitation de cet exemple contient 5 délimiteurs. La chaîne d’entrée contient 4 jetons : « a », « little », « white », « dog ».  
   
 ```  
 TOKENCOUNT("a:little|white dog","| ,.:")  
@@ -82,6 +81,6 @@ TOKENCOUNT("        a little white dog", " ")
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions &#40;SSIS Expression&#41;](functions-ssis-expression.md)  
+ [Fonctions &#40;expression SSIS&#41;](functions-ssis-expression.md)  
   
   

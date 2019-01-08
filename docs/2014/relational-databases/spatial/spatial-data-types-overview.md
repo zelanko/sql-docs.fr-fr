@@ -14,12 +14,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62512268f5c4ee98fc20a142d97bf870d74d9ce6
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8f792d128d8d75bdf39a2b04b104b827d74c7b63
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018204"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376421"
 ---
 # <a name="spatial-data-types-overview"></a>Présentation des types de données spatiales
   Il existe deux types de données spatiales. Le type de données `geometry` prend en charge les données planaires, ou euclidiennes (monde en deux dimensions). Le type de données `geometry` se conforme à la fois à la spécification Open Geospatial Consortium (OGC) Simple Features for SQL version 1.1.0. et à la norme SQL MM (norme ISO).  
@@ -27,7 +27,7 @@ ms.locfileid: "51018204"
  De plus, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge le type de données `geography`, qui stocke des données ellipsoïdes (monde sphérique), telles que des coordonnées GPS de latitude et de longitude.  
   
 > [!IMPORTANT]  
->  Pour obtenir une description détaillée et des exemples des nouvelles fonctionnalités spatiales dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], notamment les optimisations des types de données spatiales, téléchargez le livre blanc [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407)(Nouvelles fonctions spatiales dans SQL Server nom de code « Denali »).  
+>  Pour obtenir une description détaillée et des exemples des nouvelles fonctionnalités spatiales dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], notamment les optimisations des types de données spatiales, téléchargez le livre blanc [New Spatial Features in SQL Server Code-Named "Denali"](https://go.microsoft.com/fwlink/?LinkId=226407)(Nouvelles fonctions spatiales dans SQL Server nom de code « Denali »).  
   
 ##  <a name="objects"></a> Objets de données spatiales  
  Les types de données `geometry` et `geography` prennent en charge seize objets de données spatiales, ou types d'instances. Toutefois, seuls onze de ces types d’instances sont *instanciables*; vous pouvez créer et utiliser ces instances (ou les instancier) dans une base de données. Ces instances dérivent certaines propriétés de leurs types de données parents qui les distinguent comme `Points`, **LineStrings, CircularStrings**, `CompoundCurves`, `Polygons`, `CurvePolygons` ou en tant que plusieurs `geometry`ou `geography` instances dans un `GeometryCollection`. Le type `Geography` possède un type d'instance supplémentaire, `FullGlobe`.  
@@ -99,9 +99,9 @@ ms.locfileid: "51018204"
   
  Pour plus d'informations sur les spécifications OGC, reportez-vous aux sites Web suivants :  
   
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](http://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options (en anglais)](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
   
 ##  <a name="circular"></a> Segments d'arc de cercle  
@@ -137,7 +137,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
   
  Remarquez qu'une instance `CircularString` requiert sept points pour définir le triangle, alors qu'une instance `LineString` n'en requiert que quatre. La raison est qu'une instance `CircularString` stocke des segments d'arc de cercle et non des segments de ligne. Par conséquent, les côtés du triangle stockés dans l'instance `CircularString` sont ABC, CDE et EFA, alors que les côtés du triangle stockés dans l'instance `LineString` sont AC, CE et EA.  
   
- Prenez l'exemple de l'extrait de code suivant :  
+ Prenez l'exemple de l'extrait de code suivant :  
   
 ```tsql  
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);  
@@ -149,14 +149,14 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
   
 ```  
 LS LengthCS Length  
-5.65685…6.28318…  
+5.65685...6.28318...  
 ```  
   
  L’illustration suivante montre la façon dont chaque type est stocké (ligne rouge affiche `LineString``@g1`bleu ligne montre `CircularString``@g2`) :  
   
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4A4B-8560-50cdcf905b76")  
   
- Comme le montre l'illustration ci-dessus, les instances `CircularString` utilisent moins de points pour stocker des limites de courbe avec une précision supérieure que les instances `LineString`. Les instances `CircularString` conviennent particulièrement bien au stockage de limites qui sont linéaires comme un bloc d'agglomération carré. Les instances `LineString` conviennent particulièrement bien au stockage de limites qui sont linéaires comme un bloc d'agglomération carré.  
+ Comme le montre l'illustration ci-dessus, les instances `CircularString` utilisent moins de points pour stocker des limites de courbe avec une précision supérieure que les instances `LineString`. `CircularString` instances sont utiles pour stocker des limites circulaires, comme un rayon de recherche de vingt miles à partir d’un point spécifique. Les instances `LineString` conviennent particulièrement bien au stockage de limites qui sont linéaires comme un bloc d'agglomération carré.  
   
 ### <a name="linestring-and-compoundcurve-comparison"></a>Comparaison de LineString et de CompoundCurve  
  Les exemples de code suivants montrent comment stocker la même figure à l'aide des instances `LineString` et `CompoundCurve` :  

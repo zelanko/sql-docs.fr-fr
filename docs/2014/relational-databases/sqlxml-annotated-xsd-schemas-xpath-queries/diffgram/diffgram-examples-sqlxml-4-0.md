@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - DiffGrams [SQLXML], examples
@@ -17,12 +15,12 @@ ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73b134d4b2bb59373551129d1af62231d3401a5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed354e6b72f66908c12e1254738df75008659f8d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220619"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804531"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>Exemples de DiffGrams (SQLXML 4.0)
   Cette rubrique contient des exemples de DiffGrams qui réalisent des opérations d'insertion, de mise à jour et de suppression dans la base de données. Avant d'utiliser les exemples, notez les points suivants :  
@@ -128,7 +126,7 @@ ms.locfileid: "48220619"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  
@@ -143,7 +141,7 @@ ms.locfileid: "48220619"
   
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="b-inserting-a-record-by-using-a-diffgram"></a>B. Insertion d'un enregistrement à l'aide d'un DiffGram  
+## <a name="b-inserting-a-record-by-using-a-diffgram"></a>b. Insertion d'un enregistrement à l'aide d'un DiffGram  
  Dans cet exemple, le DiffGram insère un enregistrement dans la table Cust et un enregistrement dans la table Ord.  
   
 ```  
@@ -195,7 +193,7 @@ ms.locfileid: "48220619"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  
@@ -267,7 +265,7 @@ ms.locfileid: "48220619"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  
@@ -376,7 +374,7 @@ ms.locfileid: "48220619"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  

@@ -1,10 +1,10 @@
 ---
-title: 'Procédure pas à pas : ajouter et modifier un diagramme de base de données | Microsoft Docs'
+title: 'Procédure pas à pas : Ajouter et modifier un schéma de base de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
@@ -14,14 +14,14 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46333534aebb2991fe0dc3239264bc94f7ddb821
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195519"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822623"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajout et modification d’un diagramme de base de données
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajouter et modifier un diagramme de base de données
   Cette procédure pas à pas montre comment créer et modifier un diagramme de base de données et apporter des modifications à la base de données par l’intermédiaire du composant des diagrammes de base de données. Vous apprendrez à ajouter des tables aux schémas, à créer des relations entre les tables, créer des contraintes et des index sur des colonnes et modifier le niveau des informations qui s'affichent pour chaque table.  
   
 ## <a name="prerequisites"></a>Prérequis  
@@ -44,7 +44,7 @@ ms.locfileid: "48195519"
   
 3.  Cliquez avec le bouton droit sur le nœud Diagrammes de base de données et sélectionnez **Nouveau diagramme de base de données**.  
   
-     Si la base de données n’a pas les objets nécessaires pour créer des diagrammes, le message suivant s’affiche : **Cette base de données ne dispose pas d’au moins un des objets de prise en charge nécessaires pour la fonctionnalité de diagrammes de base de données. Voulez-vous les créer ?** Cliquez sur **Oui**.  
+     Si la base de données n'a pas les objets nécessaires pour créer des schémas, le message suivant s'affiche : **Cette base de données ne dispose pas d’au moins un des objets de prise en charge nécessaires pour la fonctionnalité de diagrammes de base de données. Voulez-vous les créer ?** Cliquez sur **Oui**.  
   
      La boîte de dialogue **Ajouter une table** s’affiche.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48195519"
   
 1.  Cliquez avec le bouton droit sur la table `Address` . Dans le menu contextuel, pointez sur **Vue Table**, puis cliquez sur **Standard**.  
   
-     La grille de table affiche trois colonnes : **Nom de la colonne**, **Type de données**et **Autoriser les valeurs NULL**.  
+     La grille de table affiche trois colonnes : **Nom de colonne**, **Type de données**, et **autoriser les valeurs null**.  
   
 2.  Cliquez avec le bouton droit sur la table `Address` , cliquez sur **Vue Table** et sélectionnez **Clés**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48195519"
   
 2.  Dans le **choisir un nom** boîte de dialogue, cliquez sur **OK** pour accepter le nom par défaut `Table1`.  
   
-     Une nouvelle grille de table s’affiche avec trois colonnes : **Nom de la colonne**, **Type de données**et **Autoriser les valeurs NULL**.  
+     Une nouvelle grille de table s'affiche avec trois colonnes : **Nom de colonne**, **Type de données**, et **autoriser les valeurs null**.  
   
 3.  Ajoutez les informations suivantes pour `Table1`:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48195519"
   
 2.  Faites glisser `T2col1` vers `T1col1`.  
   
-     Deux boîtes de dialogue apparaissent : **Relation de clé étrangère** en arrière-plan et **Tables et colonnes** au premier plan.  
+     Deux boîtes de dialogue apparaissent : **Relation de clé étrangère** en arrière-plan et **Tables et colonnes** au premier plan.  
   
 3.  Cliquez sur **OK** pour enregistrer la nouvelle relation.  
   

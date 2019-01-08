@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, upgrading
@@ -16,12 +15,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b6abc8e9e025bc24b4f456b58e0e9625e66b4b71
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072023"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365391"
 ---
 # <a name="upgrade-integration-services"></a>Mettre à niveau Integration Services
   Si [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] est installé sur votre ordinateur, vous pouvez effectuer une mise à niveau vers [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -36,16 +35,16 @@ ms.locfileid: "49072023"
 ## <a name="before-upgrading-integration-services"></a>Avant de procéder à la mise à niveau d'Integration Services  
  Nous vous avons recommandé d'exécuter le Conseiller de mise à niveau avant de procéder à la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Le Conseiller de mise à niveau signale des problèmes que vous pouvez rencontrer si vous effectuez une migration de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existants vers le nouveau format de package que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilise. Pour plus d'informations, consultez [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Prise en charge de la migration ou l’exécution de packages de Services DTS (Data Transformation) a été supprimé dans la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Les fonctionnalités DTS suivantes ne sont plus disponibles.  
->   
+> 
 >  -   Runtime DTS ;  
-> -   DTS API ;  
+> -   DTS API ;  
 > -   Assistant Migration de package pour la migration de packages DTS vers la prochaine version de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   Prise en charge de la maintenance des packages DTS dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   Tâche d'exécution de package DTS 2000 ;  
 > -   analyse du Conseiller de mise à niveau des packages DTS.  
->   
+> 
 >  Pour plus d’informations sur les autres fonctionnalités supprimées, consultez [fonctionnalités Integration Services abandonnées dans SQL Server 2014](../discontinued-integration-services-functionality-in-sql-server-2014.md).  
   
 ## <a name="upgrading-integration-services"></a>mise à niveau d'Integration Services  
@@ -66,7 +65,7 @@ ms.locfileid: "49072023"
  Lors d’une mise à niveau, vous pouvez mettre à niveau à la fois [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et [!INCLUDE[ssDE](../../includes/ssde-md.md)], mais vous pouvez également choisir de mettre à niveau uniquement [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou uniquement [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si vous mettez à niveau uniquement le [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] reste fonctionnel, mais vous n’avez pas les fonctionnalités de [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]. Si vous mettez uniquement à niveau [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] sera totalement fonctionnel, mais uniquement en mesure de stocker des packages dans le système de fichiers, à moins qu'une instance du [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] ne soit disponible sur un autre ordinateur.  
   
 ## <a name="upgrading-both-integration-services-and-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Mise à niveau d'Integration Services et du moteur de base de données vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- Cette section décrit les conséquences liées à l'exécution d'une mise à niveau qui obéit aux critères suivants :  
+ Cette section décrit les conséquences liées à l'exécution d'une mise à niveau qui obéit aux critères suivants :  
   
 -   Mise à niveau de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et d’une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -145,6 +144,6 @@ ms.locfileid: "49072023"
 -   Vous ne pouvez pas utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travaux de l’Agent sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ordinateurs pour exécuter [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages qui sont stockés dans l’instance mise à niveau de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="external-resources"></a>Ressources externes  
- Entrée de blog [Making your Existing Custom SSIS Extensions and Applications Work in Denali](http://go.microsoft.com/fwlink/?LinkId=238157), sur blogs.msdn.com.  
+ Entrée de blog [Faire fonctionner vos extensions et applications SSIS personnalisées existantes à Denali](https://go.microsoft.com/fwlink/?LinkId=238157), sur blogs.msdn.com.  
   
   

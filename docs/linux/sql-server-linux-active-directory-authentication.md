@@ -1,5 +1,6 @@
 ---
-title: Didacticiel sur l’authentification Active Directory pour SQL Server sur Linux | Microsoft Docs
+title: 'Didacticiel : Authentification Active Directory pour SQL Server sur Linux'
+titleSuffix: SQL Server
 description: Ce didacticiel fournit les étapes de configuration pour l’authentification AD pour SQL Server sur Linux.
 author: meet-bhagdev
 ms.date: 02/23/2018
@@ -7,18 +8,18 @@ ms.author: meetb
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: c641b6ee84ffd13e17bc540b3272ba9a95d74648
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 237924a1bc4309b4e4d686076d1e0862ea3afe92
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658493"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160599"
 ---
-# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Didacticiel : L’authentification utilisation d’Active Directory avec SQL Server sur Linux
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Didacticiel : Utiliser l’authentification Active Directory avec SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -230,7 +231,7 @@ Pour plus d’informations, consultez la documentation de Red Hat pour [découve
    ```
 
    > [!NOTE]
-   > SPN peuvent prendre plusieurs minutes pour se propager via votre domaine, en particulier si le domaine est grand. Si vous recevez l’erreur, « kvno : serveur introuvable dans la base de données Kerberos lors de l’obtention des informations d’identification pour MSSQLSvc /\*\*\<nom de domaine complet de l’ordinateur hôte\>\*\*:\* \* \<le port tcp\>\*\*\@CONTOSO.COM », veuillez patienter quelques minutes et essayez à nouveau.
+   > SPN peuvent prendre plusieurs minutes pour se propager via votre domaine, en particulier si le domaine est grand. Si vous recevez l’erreur, « kvno : Serveur introuvable dans la base de données Kerberos lors de l’obtention des informations d’identification pour MSSQLSvc /\*\*\<nom de domaine complet de l’ordinateur hôte\>\*\*:\* \* \< le port TCP\>\*\*\@CONTOSO.COM », veuillez patienter quelques minutes et essayez à nouveau.
 
 2. Créez un fichier keytab avec **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** pour l’utilisateur AD que vous avez créé à l’étape précédente. Lorsque vous y êtes invité, entrez le mot de passe pour ce compte AD.
 
@@ -339,9 +340,9 @@ Le paramètre de chaîne de connexion spécifique pour les clients à utiliser l
 
 * Authentification d’Active Directory à l’aide d’autres pilotes clients
 
-  * JDBC : [à l’aide de Kerberos intégrée d’authentification pour se connecter à SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
-  * ODBC : [à l’aide de l’authentification intégrée](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
-  * ADO.NET : [syntaxe de chaîne de connexion](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
+  * JDBC : [À l’aide de l’authentification intégrée Kerberos pour se connecter à SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
+  * ODBC : [Utilisation de l’authentification intégrée](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
+  * ADO.NET : [Syntaxe de chaîne de connexion](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
 
 ## <a name="performance-improvements"></a>Optimisation des performances
 Si vous remarquez que les recherches de compte Active Directory prennent un certain temps, et vous avez vérifié vous configuration AD est valide avec les étapes indiquées dans [utiliser l’authentification Active Directory avec SQL Server sur Linux via des fournisseurs tiers AD](sql-server-linux-active-directory-third-party-providers.md), vous pouvez ajouter le ci-dessous les lignes `/var/opt/mssql/mssql.conf` pour ignorer les appels SSSD et utiliser directement des appels LDAP.

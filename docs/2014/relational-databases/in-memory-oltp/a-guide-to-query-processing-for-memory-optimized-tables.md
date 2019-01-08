@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c0372c07edc32be23034a4c221e2480bd2047be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2393792341fdbc28bbc0f74657aa2f3cf54ee4d1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213079"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374821"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
   L'OLTP en mémoire introduit les tables optimisées en mémoire et les procédures stockées compilées en mode natif dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cet article présente le traitement des requêtes pour les tables mémoire optimisées et les procédures stockées compilées en mode natif.  
@@ -60,7 +60,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- Pour créer les plans de requête illustrés dans cet article, les deux tables ont été remplies avec les exemples de données tirés de la base de données Northwind, que vous pouvez télécharger sur [Exemples de bases de données Northwind et pubs pour SQL Server 2000](http://www.microsoft.com/download/details.aspx?id=23654).  
+ Pour créer les plans de requête illustrés dans cet article, les deux tables ont été remplies avec les exemples de données tirés de la base de données Northwind, que vous pouvez télécharger sur [Exemples de bases de données Northwind et pubs pour SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654).  
   
  La requête suivante joint les tables Customer et Order, et retourne l'ID de la commande et les informations client associées :  
   
@@ -79,9 +79,9 @@ Plan de requête pour joindre des tables sur disque.
   
 -   Les données de la table Order sont récupérées à l'aide de l'index non cluster sur la colonne CustomerID. Cet index contient la colonne CustomerID utilisée pour la jointure, et la colonne de clé primaire OrderID qui est retournée à l'utilisateur. Le retour de colonnes supplémentaires depuis la table Order nécessiterait des recherches dans l'index cluster de la table Order.  
   
--   L'opérateur logique `Inner Join` est implémenté par l'opérateur physique `Merge Join`. Les autres types de jointures physiques sont `Nested Loops` et `Hash Join`. Le `Merge Join` opérateur tire parti du fait que les deux index sont triés sur la colonne de jointure CustomerID.  
+-   L'opérateur logique `Inner Join` est implémenté par l'opérateur physique `Merge Join`. Les autres types de jointures physiques sont `Nested Loops` et `Hash Join`. L'opérateur `Merge Join` tire parti du fait que les deux index sont triés sur la colonne de jointure CustomerID.  
   
- Examinons une légère variante de cette requête, qui retourne toutes les lignes de la table Order, et plus seulement OrderID :  
+ Examinons une légère variante de cette requête, qui retourne toutes les lignes de la table Order, et plus seulement OrderID :  
   
 ```tsql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![Plan de requête d’une jointure hachée des tables sur disque.](../../database-engine/media/hekaton-query-plan-2.gif "Plan de requête d’une jointure hachée des tables sur disque.")  
 Plan de requête d'une jointure hachée des tables sur disque.  
   
- Dans cette requête, les lignes de la table Order sont récupérées à partir de l'index cluster. Le `Hash Match` opérateur physique est désormais utilisé pour le `Inner Join`. L’index cluster sur Order n’étant pas trié sur CustomerID et donc un `Merge Join` nécessite un opérateur de tri, ce qui affecte les performances. Notez le coût relatif de l'opérateur `Hash Match` (75 %) comparé au coût de l'opérateur `Merge Join` dans l'exemple précédent (46 %). L’optimiseur serait ont pris en compte la `Hash Match` opérateur également dans l’exemple précédent, mais ont conclu que le `Merge Join` opérateur fournirait de meilleures performances.  
+ Dans cette requête, les lignes de la table Order sont récupérées à partir de l'index cluster. L'opérateur physique `Hash Match` est maintenant utilisé pour `Inner Join`. L'index cluster sur Order n'étant pas trié sur CustomerID, `Merge Join` nécessite un opérateur de tri, ce qui affecte les performances. Notez le coût relatif de l'opérateur `Hash Match` (75 %) comparé au coût de l'opérateur `Merge Join` dans l'exemple précédent (46 %). L'optimiseur aurait pu utiliser l'opérateur `Hash Match` également dans l'exemple précédent, mais il a considéré que l'opérateur `Merge Join` fournirait de meilleures performances.  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Traitement des requêtes pour les tables sur disque  
  Le diagramme suivant représente le flux de traitement des requêtes dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour les requêtes ad hoc :  
@@ -117,9 +117,9 @@ Pipeline de traitement des requêtes SQL Server
  Pour le premier exemple de requête, le moteur d'exécution demande des lignes à l'index cluster sur la table Customer, et à l'index non cluster sur la table Order, à partir des méthodes d'accès. Les méthodes d'accès parcourent les structures d'index B-tree pour récupérer les lignes demandées. Dans ce cas, toutes les lignes sont récupérées lorsque le plan appelle des analyses d'index complètes.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Accès en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété aux tables optimisées en mémoire  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] Les lots ad hoc et procédures stockées sont également considérés comme du [!INCLUDE[tsql](../../../includes/tsql-md.md)]interprété. « Interprété » fait référence au fait que le plan de requête est interprété par le moteur d'exécution de requête pour chaque opérateur inclus dans le plan de requête. Le moteur d'exécution lit l'opérateur et ses paramètres, et effectue l'opération.  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)] Les lots ad hoc et procédures stockées sont également considérés comme du [!INCLUDE[tsql](../../../includes/tsql-md.md)]interprété. « Interprété » fait référence au fait que le plan de requête est interprété par le moteur d'exécution de requête pour chaque opérateur inclus dans le plan de requête. Le moteur d'exécution lit l'opérateur et ses paramètres, et effectue l'opération.  
   
- Le [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété peut être utilisé pour accéder aux tables optimisées en mémoire et sur disque. L'illustration suivante montre le traitement des requêtes pour l'accès en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété aux tables optimisées en mémoire :  
+ Le [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété peut être utilisé pour accéder aux tables optimisées en mémoire et sur disque. L'illustration suivante montre le traitement des requêtes pour l'accès en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété aux tables mémoire optimisées :  
   
  ![Pipeline de traitement des requêtes pour le TSQL interprété.](../../database-engine/media/hekaton-query-plan-4.gif "Pipeline de traitement des requêtes pour le TSQL interprété.")  
 Pipeline de traitement des requêtes pour l'accès en Transact-SQL interprété aux tables mémoire optimisées.  
@@ -170,7 +170,7 @@ Plan de requête pour joindre des tables mémoire optimisées.
   
     -   Les index cluster ne sont pas pris en charge avec les tables mémoire optimisées. À la place, chaque table mémoire optimisée doit avoir au moins un index non cluster et tous les index des tables mémoire optimisées accéder efficacement à toutes les colonnes de la table sans devoir les stocker dans l'index ou les référencer dans un index cluster.  
   
--   Ce plan contient un `Hash Match` plutôt qu'un `Merge Join`. Les index des tables Order et Customer sont des index de hachage, et ne sont donc pas triés. Un `Merge Join` nécessiterait des opérateurs de tri qui diminueraient les performances.  
+-   Ce plan contient un `Hash Match` plutôt qu'un `Merge Join`. Les index des tables Order et Customer sont des index de hachage, et ne sont donc pas triés. `Merge Join` nécessiterait des opérateurs de tri qui diminueraient les performances.  
   
 ## <a name="natively-compiled-stored-procedures"></a>procédures stockées compilées en mode natif  
  Les procédures stockées compilées en mode natif sont des procédures stockées en [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui sont compilées dans le code machine, au lieu d'être interprétées par le moteur d'exécution de requête. Le script suivant crée une procédure stockée compilée en mode natif qui exécute l'exemple de requête (dans la section Exemple de requête).  
@@ -203,9 +203,9 @@ END
  ![Procédures stockées compilées en mode natif.](../../database-engine/media/hekaton-query-plan-6.gif "Procédures stockées compilées en mode natif.")  
 Procédures stockées compilées en mode natif.  
   
- Le processus se présente comme suit :  
+ Le processus se présente comme suit :  
   
-1.  L’utilisateur émet une `CREATE PROCEDURE` instruction [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  L'utilisateur envoie une instruction `CREATE PROCEDURE` à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 2.  L'analyseur et l'algébriseur créent un flux de traitement pour la procédure, ainsi que les arborescences des requêtes [!INCLUDE[tsql](../../../includes/tsql-md.md)] dans la procédure stockée.  
   
@@ -226,7 +226,7 @@ Exécution de procédures stockées compilées en mode natif.
   
 2.  L'analyseur extrait le nom et les paramètres de la procédure stockée.  
   
-     Si l’instruction a été préparée, par exemple à l’aide de `sp_prep_exec`, l’analyseur n’a pas besoin d’extraire le nom de la procédure et les paramètres au moment de l’exécution.  
+     Si l'instruction a été préparée, par exemple via `sp_prep_exec`, l'analyseur n'a pas besoin d'extraire le nom de la procédure et les paramètres au moment de l'exécution.  
   
 3.  L'exécution de l'OLTP en mémoire recherche le point d'entrée de la DLL pour la procédure stockée.  
   
@@ -236,7 +236,7 @@ Exécution de procédures stockées compilées en mode natif.
   
  Les procédures stockées en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété sont compilées à la première exécution, contrairement aux procédures stockées compilées en mode natif, qui sont compilées lors de la création. Lorsque des procédures stockées interprétées sont compilées au moment de l'appel, les valeurs des paramètres fournis pour cet appel sont utilisées par l'optimiseur lors de la génération du plan d'exécution. Cette utilisation des paramètres lors de la compilation est appelée « détection des paramètres ».  
   
- La détection des paramètres n'est pas utilisée pour compiler des procédures stockées compilées en mode natif. Tous les paramètres de la procédure stockée sont considérés comme ayant des valeurs UNKNOWN. Comme les procédures stockées interprétées, procédures stockées compilées nativement également prise en charge la `OPTIMIZE FOR` indicateur. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
+ La détection des paramètres n'est pas utilisée pour compiler des procédures stockées compilées en mode natif. Tous les paramètres de la procédure stockée sont considérés comme ayant des valeurs UNKNOWN. À l'instar des procédures stockées interprétées, les procédures stockées compilées en mode natif prennent également en charge l'indicateur `OPTIMIZE FOR`. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Récupération d'un plan d'exécution de requêtes pour les procédures stockées compilées en mode natif  
  Vous pouvez récupérer le plan d’exécution de requêtes pour une procédure stockée compilée en mode natif en utilisant le **plan d’exécution estimé** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ou en utilisant l’option SHOWPLAN_XML dans [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Exemple :  
@@ -269,7 +269,7 @@ GO
 |Agrégation de flux|Notez que l'opérateur Hash Match n'est pas pris en charge pour l'agrégation. Par conséquent, toutes les agrégations dans les procédures stockées compilées en mode natif utilisent l'opérateur Stream Aggregate, même si le plan pour la même requête en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété utilise l'opérateur Hash Match.<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## <a name="column-statistics-and-joins"></a>Statistiques et jointures de colonne  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conserve les statistiques des valeurs des colonnes clés d’index pour vous aider à estimer le coût de certaines opérations, comme les analyses d’index et les recherches d’index. ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crée également des statistiques sur les colonnes clés qui ne sont pas des index si vous les créez explicitement ou si l'optimiseur de requête les crée en réponse à une requête avec un prédicat). La mesure principale de l'estimation de coût est le nombre de lignes traitées par un seul opérateur. Notez que pour les tables sur disque, le nombre de pages auxquelles un opérateur spécifique accède est important pour l'estimation du coût. Toutefois, comme le nombre de pages n'est pas important pour les tables mémoire optimisées (il est toujours de zéro), cette description se focalisera sur le nombre de lignes. L'estimation démarre avec les opérateurs de recherche d'index et d'analyse dans le plan, et est ensuite étendue pour inclure les autres opérateurs, comme l'opérateur de jointure. Le nombre estimé de lignes à traiter par un opérateur de jointure dépend de l'estimation des opérateurs d'index, de recherche et d'analyse sous-jacents. Pour l'accès [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété aux tables optimisées en mémoire, vous pouvez observer le plan d'exécution réel pour voir la différence entre le nombre de lignes estimé et le nombre de lignes réel pour les opérateurs du plan.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conserve les statistiques des valeurs des colonnes clés d’index pour vous aider à estimer le coût de certaines opérations, comme les analyses d’index et les recherches d’index. ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crée également des statistiques sur les colonnes clés d’index non si vous les créez explicitement ou si l’optimiseur de requête les crée en réponse à une requête avec un prédicat.) La mesure principale de l'estimation de coût est le nombre de lignes traitées par un seul opérateur. Notez que pour les tables sur disque, le nombre de pages auxquelles un opérateur spécifique accède est important pour l'estimation du coût. Toutefois, comme le nombre de pages n'est pas important pour les tables mémoire optimisées (il est toujours de zéro), cette description se focalisera sur le nombre de lignes. L'estimation démarre avec les opérateurs de recherche d'index et d'analyse dans le plan, et est ensuite étendue pour inclure les autres opérateurs, comme l'opérateur de jointure. Le nombre estimé de lignes à traiter par un opérateur de jointure dépend de l'estimation des opérateurs d'index, de recherche et d'analyse sous-jacents. Pour l'accès [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété aux tables optimisées en mémoire, vous pouvez observer le plan d'exécution réel pour voir la différence entre le nombre de lignes estimé et le nombre de lignes réel pour les opérateurs du plan.  
   
  Exemple de la figure 1 :  
   
@@ -300,7 +300,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   L'analyse complète d'un index sur IX_CustomerID a été remplacée par une recherche d'index. Cela a abouti à l'analyse de 5 lignes, au lieu des 830 lignes requises pour l'analyse complète de l'index.  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>Statistiques et cardinalité pour les tables mémoire optimisées  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conserve les statistiques au niveau des colonnes pour les tables optimisées en mémoire. En outre, le nombre réel de lignes de la table est conservé. Toutefois, contrairement aux tables sur disque, les statistiques des tables mémoire optimisées ne sont pas mises à jour automatiquement. Par conséquent, les statistiques doivent être mises à jour manuellement après des modifications significatives dans les tables. Pour plus d’informations, consultez [Statistiques pour les tables optimisées en mémoire](memory-optimized-tables.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conserve les statistiques des colonnes pour les tables mémoire optimisées. En outre, le nombre réel de lignes de la table est conservé. Toutefois, contrairement aux tables sur disque, les statistiques des tables mémoire optimisées ne sont pas mises à jour automatiquement. Par conséquent, les statistiques doivent être mises à jour manuellement après des modifications significatives dans les tables. Pour plus d’informations, consultez [Statistiques pour les tables optimisées en mémoire](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables optimisées en mémoire](memory-optimized-tables.md)  

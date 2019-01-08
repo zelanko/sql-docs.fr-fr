@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : création d’un rapport de matrice (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Création d’un rapport de matrice (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 659afc2b2d1536abcf34dad5a40a48efe0f17169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45e488f189cf9068531b927b1b28bfde621555da
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159499"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353394"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Didacticiel : création d'un rapport de matrice (Générateur de rapports)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Didacticiel : Création d’un rapport de matrice (Générateur de rapports)
   Ce didacticiel vous apprend comment créer un rapport de matrice de base reposant sur des exemples de données de vente. La matrice comporte des groupes de lignes et de colonnes imbriqués, ainsi qu'un groupe de colonnes adjacent. Vous apprendrez également comment mettre en forme les colonnes et faire pivoter le texte. L'illustration suivante montre un rapport similaire à celui que vous allez créer.  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
   
- Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport du Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [exemples de rapports Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=184851).  
+ Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport du Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [exemples de rapports Générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=184851).  
   
 ##  <a name="BackToTop"></a> Ce que vous allez apprendre  
  Dans ce didacticiel, vous apprendrez à :  
@@ -48,9 +48,9 @@ ms.locfileid: "48159499"
   
 1.  [Faire pivoter le texte zone de 270 degrés](#RotateTextBox)  
   
- Durée estimée pour effectuer le didacticiel : 20 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 20 minutes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="CreateMatrix"></a> 1. Créer un rapport de matrice et un dataset à partir de l'Assistant Nouveau tableau ou nouvelle matrice  
@@ -72,11 +72,11 @@ ms.locfileid: "48159499"
   
 4.  Dans la page **Choisir un dataset** , cliquez sur **Créer un dataset**.  
   
-5.  Cliquez sur **Suivant**.  
+5.  Cliquer sur **Suivant**.  
   
-6.  Sur le **choisir une connexion à une source de données** page, sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n'est disponible ou si vous n'avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations sur la création d’une source de données incorporée, consultez [didacticiel : création d’un rapport de Table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Sur le **choisir une connexion à une source de données** page, sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n'est disponible ou si vous n'avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations sur la création d’une source de données incorporée, consultez [didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-7.  Cliquez sur **Suivant**.  
+7.  Cliquer sur **Suivant**.  
   
 8.  Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48159499"
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity  
     ```  
   
-10. Cliquez sur **Suivant**.  
+10. Cliquer sur **Suivant**.  
   
 ##  <a name="Groups"></a> 2. Organiser les données et choisir la mise en page et le style à partir de l'Assistant Nouveau tableau ou nouvelle matrice  
  Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher les données. Le volet de visualisation de l'Assistant vous aide à visualiser le résultat du regroupement des données avant de terminer la conception de la matrice.  
@@ -146,7 +146,7 @@ ms.locfileid: "48159499"
   
      Les étapes 5 et 6 spécifient les données à afficher dans les cellules de données de la matrice.  
   
-7.  Cliquez sur **Suivant**.  
+7.  Cliquer sur **Suivant**.  
   
 8.  Dans la page Choisir la disposition, sous **Options**, vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
   
@@ -154,13 +154,13 @@ ms.locfileid: "48159499"
   
 10. Vérifiez que l’option **Développer/Réduire les groupes** est sélectionnée.  
   
-11. Cliquez sur **Suivant**.  
+11. Cliquer sur **Suivant**.  
   
 12. Dans la page Choisir un Style, dans le volet Styles, sélectionnez **ardoise**.  
   
 13. Cliquez sur **Terminer**.  
   
-     La matrice est ajoutée à l'aire de conception. Le volet Groupes de lignes affiche deux groupes de lignes : Territory et SalesDate. Le volet Groupes de colonnes affiche deux groupes de colonnes : Subcategory et Product. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+     La matrice est ajoutée à l'aire de conception. Le volet de groupes de lignes affiche deux groupes de lignes : Territory et SalesDate. Le volet groupes de colonnes affiche deux groupes de colonnes : SubCategory et Product. Les données de détail sont toutes les données récupérées par la requête de dataset.  
   
 14. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   

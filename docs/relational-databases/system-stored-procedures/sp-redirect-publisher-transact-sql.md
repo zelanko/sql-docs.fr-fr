@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_redirect_publisher_TSQL
@@ -17,12 +16,12 @@ ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2a6ecf88b7b41929644b78e04544e47f5f98b61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c04df4cb844faf42506c781607a220e98a7db17
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718767"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779111"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_redirect_publisher
   
  Si la base de données de publication sur le serveur de publication d’origine est supprimée d’un groupe de disponibilité sur le réplica principal, exécutez **sp_redirect_publisher** sans spécifier de valeur pour le *@redirected_publisher* paramètre à supprimer la redirection pour la paire serveur de publication/base de données. Pour plus d’informations sur la redirection du serveur de publication, consultez [maintenance une base de données de Publication AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’appelant doit être un membre de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe pour la base de données de distribution ou un membre d’une liste d’accès à une publication définie associé à la base de données du serveur de publication.  
   
 ## <a name="see-also"></a>Voir aussi  

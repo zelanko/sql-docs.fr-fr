@@ -1,20 +1,22 @@
 ---
-title: Qu’est un pool de calcul de clusters SQL données volumineuses ? | Microsoft Docs
-description: Cet article décrit le pool de calcul dans un cluster de données volumineux de SQL Server 2019.
+title: Quelles sont les pools de calcul ?
+titleSuffix: SQL Server 2019 big data clusters
+description: Cet article décrit le pool de calcul dans un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 6aa73c5881a4b6a17e190c26c15f97b3d8c79c14
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: f1e725580c98585ee86b401c0e8c12ea143cdab1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221795"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207718"
 ---
-# <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>Qu’est un pool de calcul de clusters SQL données volumineuses ?
+# <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>Quelles sont les pools de calcul dans un cluster de données volumineux de SQL Server 2019 ?
 
 Cet article décrit le rôle de *pools de calcul de SQL Server* dans un cluster de données volumineuses preview SQL Server 2019. Les pools de calcul fournissent la montée en puissance des ressources de calcul pour un cluster de données volumineux. Les sections suivantes décrivent l’architecture et les fonctionnalités d’un pool de calcul.
 
@@ -23,7 +25,7 @@ Cet article décrit le rôle de *pools de calcul de SQL Server* dans un cluster 
 Un pool de calcul est constitué d’un ou plusieurs pods en cours d’exécution dans Kubernetes de calcul. La création automatique et la gestion de ces blocs est coordonnée par le [instance principale de SQL Server](concept-master-instance.md). Chaque pod contient un ensemble de services de base et une instance du moteur de base de données SQL Server.
 
 > [!NOTE]
-> CTP 2.1 prend uniquement en charge un pool de calcul unique par cluster.
+> CTP 2.2 prend uniquement en charge un pool de calcul unique par cluster.
 
 ## <a name="scale-out-groups"></a>Groupes de scale-out
 

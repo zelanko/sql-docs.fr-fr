@@ -1,20 +1,22 @@
 ---
-title: Surveiller les clusters de données volumineuses de SQL Server (version préliminaire) avec le portail d’administration de cluster | Microsoft Docs
+title: Portail d’administration du cluster
+titleSuffix: SQL Server 2019 big data clusters
 description: Découvrez comment utiliser le portail d’administration de cluster pour surveiller les clusters de données volumineuses de SQL Server 2019 (version préliminaire).
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: eaff715d1fe29e1484dec7bde24de6bb16449458
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 46d2565ac90bfd007bbe0f3c9e8a2382ca5eeb74
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221465"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215535"
 ---
-# <a name="introduction-to-the-cluster-administration-portal"></a>Introduction au portail d’administration de cluster
+# <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Comment utiliser le portail d’administration de cluster pour surveiller un cluster de données volumineux de SQL Server
 
 Si vous souhaitez analyser ou résoudre les problèmes de votre cluster de données volumineux de SQL Server 2019 (version préliminaire), utilisez le portail d’administration de cluster.
 
@@ -29,10 +31,10 @@ Le portail d’administration de cluster vous permet de :
 
 Suivez le [Guide de démarrage rapide pour déployer votre cluster big data](quickstart-big-data-cluster-deploy.md) jusqu'à ce que vous arriviez à la **portail d’administration de cluster** section. Une fois que vous avez le cluster de données volumineux en cours d’exécution avec mssqlctl, suivez ces instructions :
 
-Une fois que le pod de contrôleur est en cours d’exécution, vous pouvez utiliser le portail d’administration de cluster pour surveiller le déploiement. Vous pouvez accéder au portail à l’aide de l’externe IP adresse et numéro de port pour le `service-proxy-lb` (par exemple : **https://\<ip-address\>: 30777**). Informations d’identification pour accéder au portail d’administration est les valeurs de `CONTROLLER_USERNAME` et `CONTROLLER_PASSWORD` variables d’environnement fournis ci-dessus.
+Une fois que le pod de contrôleur est en cours d’exécution, vous pouvez utiliser le portail d’administration de cluster pour surveiller le déploiement. Vous pouvez accéder au portail à l’aide de l’externe IP adresse et numéro de port pour le `service-proxy-lb` (par exemple : **https://\<ip-address\>: 30777/portail**). Informations d’identification pour accéder au portail d’administration est les valeurs de `CONTROLLER_USERNAME` et `CONTROLLER_PASSWORD` variables d’environnement fournis ci-dessus.
 
 > [!NOTE]
-> Pour CTP 2.1, il est un avertissement de sécurité lorsque vous accédez à la page web dans la mesure où il est à l’aide de certificats SSL générés automatiquement.
+> Pour CTP 2.2, il est un avertissement de sécurité lorsque vous accédez à la page web dans la mesure où il est à l’aide de certificats SSL générés automatiquement.
 
 ## <a name="overview"></a>Vue d'ensemble
 

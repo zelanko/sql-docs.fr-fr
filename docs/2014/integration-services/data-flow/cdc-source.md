@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
@@ -13,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bf104479ab03525ed648d73911931263206d07b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af2f56c92947cd8e210b8532cb6899c52486707e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063089"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349810"
 ---
 # <a name="cdc-source"></a>Source CDC
   La source CDC lit une plage de données modifiées dans les tables de modifications de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et apporte les modifications en aval aux autres composants SSIS.  
@@ -46,11 +45,11 @@ ms.locfileid: "48063089"
 ## <a name="error-handling"></a>Gestion des erreurs  
  la source CDC a une sortie d'erreur. La sortie d'erreur du composant contient les colonnes de sortie suivantes :  
   
--   **Code d’erreur**: la valeur est toujours -1.  
+-   **Code d’erreur**: La valeur est toujours -1.  
   
--   **Colonne d’erreur**: colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
+-   **Colonne d’erreur**: La colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
   
--   **Colonnes de ligne d’erreur**: données d’enregistrement à l’origine de l’erreur.  
+-   **Colonnes de ligne d’erreur**: Les données d’enregistrement qui provoque l’erreur.  
   
  Selon le comportement paramétré pour les erreurs, la source CDC prend en charge les erreurs de retour (conversion de données, troncation) qui se produisent pendant le processus d'extraction dans la sortie d'erreur. Pour plus d’informations, consultez [CDC Source Editor &#40;Error Output Page&#41;](../cdc-source-editor-error-output-page.md).  
   
@@ -98,11 +97,11 @@ use <cdc-enabled-database-name>
   
  Pour plus d’informations, consultez l’une des rubriques suivantes :  
   
--   [Éditeur de Source CDC &#40;Page Gestionnaire de connexions&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [Éditeur de Source CDC &#40;Page colonnes&#41;](../cdc-source-editor-columns-page.md)  
+-   [Éditeur de source CDC &#40;page Colonnes&#41;](../cdc-source-editor-columns-page.md)  
   
--   [Éditeur de Source CDC &#40;Page sortie d’erreur&#41;](../cdc-source-editor-error-output-page.md)  
+-   [Éditeur de source CDC &#40;page Sortie d’erreur&#41;](../cdc-source-editor-error-output-page.md)  
   
  La boîte de dialogue **Éditeur avancé** contient les propriétés qui peuvent être définies par programme.  
   
@@ -114,18 +113,18 @@ use <cdc-enabled-database-name>
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Éditeur de Source CDC &#40;Page Gestionnaire de connexions&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [Éditeur de Source CDC &#40;Page colonnes&#41;](../cdc-source-editor-columns-page.md)  
+-   [Éditeur de source CDC &#40;page Colonnes&#41;](../cdc-source-editor-columns-page.md)  
   
--   [Éditeur de Source CDC &#40;Page sortie d’erreur&#41;](../cdc-source-editor-error-output-page.md)  
+-   [Éditeur de source CDC &#40;page Sortie d’erreur&#41;](../cdc-source-editor-error-output-page.md)  
   
 -   [Propriétés personnalisées des sources CDC](cdc-source-custom-properties.md)  
   
--   [Extraire des données modifiées à l’aide de la source de capture de données modifiées](cdc-source.md)  
+-   [Extraire des données modifiées à l'aide de la source de capture de données modifiées](cdc-source.md)  
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Entrée de blog, [Processing Modes for the CDC Source](http://go.microsoft.com/fwlink/?LinkId=242541) (Modes de traitement pour la source CDC), sur mattmasson.com.  
+-   Entrée de blog, [Processing Modes for the CDC Source](https://go.microsoft.com/fwlink/?LinkId=242541) (Modes de traitement pour la source CDC), sur mattmasson.com.  
   
   
