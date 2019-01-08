@@ -14,15 +14,15 @@ ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0be194c8e730f1ef797d0db30ff9942735f51617
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f249bb13ece6382e96dfe953b1d3c1d96c7bf65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618897"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523692"
 ---
 # <a name="statement-handles"></a>Handles d’instruction
-Un *instruction* est plus facilement considérée comme une instruction SQL, tel que **sélectionnez \* à partir d’un employé**. Toutefois, une instruction est plus qu’une instruction SQL, il se compose de toutes les informations associées à cette instruction SQL, tels que des jeux de résultats créés par l’instruction et les paramètres utilisés dans l’exécution de l’instruction. Une instruction n’a même pas besoin d’avoir une instruction SQL définie par l’application. Par exemple, quand une fonction de catalogue comme **SQLTables** est exécutée sur une instruction, il s’exécute une instruction SQL prédéfinie qui retourne une liste de noms de table.  
+Un *instruction* est plus facilement considérée comme une instruction SQL, tel que **sélectionnez \* à partir d’un employé**. Toutefois, une instruction est plus qu’une instruction SQL : il se compose de toutes les informations associées à cette instruction SQL, tels que des jeux de résultats créés par l’instruction et les paramètres utilisés dans l’exécution de l’instruction. Une instruction n’a même pas besoin d’avoir une instruction SQL définie par l’application. Par exemple, quand une fonction de catalogue comme **SQLTables** est exécutée sur une instruction, il s’exécute une instruction SQL prédéfinie qui retourne une liste de noms de table.  
   
  Chaque instruction est identifiée par un descripteur d’instruction. Une instruction est associée à une connexion unique, et il peut y avoir plusieurs instructions sur cette connexion. Certains pilotes de limitent le nombre d’instructions actives, qu'elles prennent en charge ; option le SQL_MAX_CONCURRENT_ACTIVITIES **SQLGetInfo** Spécifie le nombre d’instructions actif un pilote prend en charge sur une seule connexion. Une instruction est définie comme étant *active* si elle contient des résultats en attente, où des résultats sont un jeu de résultats ou le nombre de lignes affectées par une **insérer**, **mise à jour**, ou **Supprimer** instruction ou les données sont envoyées avec plusieurs appels à **SQLPutData**.  
   

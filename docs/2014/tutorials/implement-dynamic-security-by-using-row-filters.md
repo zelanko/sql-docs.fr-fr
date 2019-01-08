@@ -11,23 +11,23 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fa34786d8d939581c5b8fecfb54103229a2a2c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c70d749a560ff5dcc39d36d84e8c9ff09b44894f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196579"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404194"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implémentation de la sécurité dynamique à l'aide des filtres de lignes
   Dans cette leçon supplémentaire, vous allez créer un rôle supplémentaire qui implémente la sécurité dynamique. La sécurité dynamique permet de définir la sécurité de niveau ligne en fonction du nom d'utilisateur ou de l'ID de connexion de l'utilisateur actuellement connecté. Pour plus d’informations, consultez [Rôles &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
   
  Pour implémenter la sécurité dynamique, vous devez ajouter une table à votre modèle qui contient les noms des utilisateurs Windows qui peuvent créer une connexion au modèle comme source de données et parcourir les objets de modèle et les données. Le modèle que vous allez créer à l'aide de ce didacticiel est dans le contexte d'Adventure Works Corp. Toutefois, pour pouvoir effectuer cette leçon, vous devez ajouter une table qui contient les utilisateurs de votre propre domaine. Vous n'aurez pas besoin de mots de passe pour les noms d'utilisateurs qui seront ajoutés. Pour créer une table Employee Security contenant un petit groupe d'utilisateurs de votre propre domaine, vous allez utiliser la fonctionnalité Coller pour coller les données à propos des employés à partir d'une feuille de calcul Excel. Dans la réalité, la table contenant les noms d'utilisateurs à ajouter à un modèle utiliserait une table provenant d'une base de données actuelle comme source de données (une table dimEmployee réelle, par exemple).  
   
- Pour implémenter la sécurité dynamique, vous allez utiliser deux nouvelles fonctions DAX : [fonction USERNAME &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) et [fonction LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). Ces fonctions, appliquées dans une formule de filtre de lignes, sont définies dans un nouveau rôle. Si vous utilisez la fonction LOOKUPVALUE, la formule spécifie une valeur à partir de la table Employee Security et la transmet ensuite à la fonction USERNAME, qui spécifie le nom d'utilisateur de l'utilisateur connecté à qui appartient ce rôle. L'utilisateur peut ensuite parcourir uniquement les données spécifiées par les filtres des lignes du rôle. Dans ce scénario, vous allez spécifier que les commerciaux peuvent uniquement parcourir les données de ventes Internet pour les secteurs de vente dont ils sont membres.  
+ Pour implémenter la sécurité dynamique, vous allez utiliser deux nouvelles fonctions DAX : [Fonction USERNAME &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) et [fonction LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). Ces fonctions, appliquées dans une formule de filtre de lignes, sont définies dans un nouveau rôle. Si vous utilisez la fonction LOOKUPVALUE, la formule spécifie une valeur à partir de la table Employee Security et la transmet ensuite à la fonction USERNAME, qui spécifie le nom d'utilisateur de l'utilisateur connecté à qui appartient ce rôle. L’utilisateur peut alors parcourir uniquement les données spécifiées par les filtres de lignes du rôle. Dans ce scénario, vous allez spécifier que les commerciaux peuvent uniquement parcourir les données de ventes Internet pour les secteurs de vente dont ils sont membres.  
   
  Pour pouvoir effectuer cette leçon supplémentaire, vous allez accomplir une succession de tâches. Les tâches qui sont propres à ce scénario de modèle tabulaire Adventure Works, et qui ne s'appliqueraient pas forcément à un scénario réel, sont identifiées en conséquence. Chaque tâche inclut des informations supplémentaires qui en décrivent l'objectif.  
   
- Durée estimée pour effectuer cette leçon : **30 minutes**  
+ Durée estimée pour effectuer cette leçon : **30 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
  Cette leçon supplémentaire fait partie d’un didacticiel de modélisation tabulaire, qui doit être suivi dans l’ordre. Avant d'effectuer les tâches de cette leçon supplémentaire, vous devez avoir terminé toutes les leçons précédentes.  
@@ -39,9 +39,9 @@ ms.locfileid: "48196579"
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur le menu **Modèle** , puis sur **Connexions existantes**.  
   
-2.  Dans la boîte de dialogue **Connexions existantes**, vérifiez que la connexion à la source de données **Adventure Works DB from SQL** est sélectionnée, puis cliquez sur **Ouvrir**.  
+2.  Dans la boîte de dialogue **Connexions existantes** , vérifiez que la connexion à la source de données **Adventure Works DB from SQL** est sélectionnée, puis cliquez sur **Ouvrir**.  
   
-     Si la boîte de dialogue Informations d'identification de l'emprunt d'identité s'affiche, tapez les informations d'identification d'emprunt d'identité que vous avez utilisées dans la leçon 2 : Ajouter des données.  
+     Si la boîte de dialogue informations d’identification d’emprunt d’identité s’affiche, tapez les informations d’identification d’emprunt d’identité que vous avez utilisé dans la leçon 2 : Ajouter des données.  
   
 3.  Dans la page **Choisir comment importer les données** , laissez **Sélectionner les données à importer dans une liste de tables et de vues** sélectionné, puis cliquez sur **Suivant**.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48196579"
      Notez que la propriété Active pour cette relation est False, ce qui signifie qu'elle est inactive. Cela est dû au fait que la table Internet Sales a déjà une autre relation active qui est utilisée dans les mesures.  
   
 ## <a name="hide-the-employee-security-table-from-client-applications"></a>Masquer la table Employee Security des applications clientes  
- Dans cette tâche, vous allez masquer la table Employee Security, afin qu'elle n'apparaisse pas dans la liste de champs d'une application cliente. Gardez bien à l'esprit que le fait de masquer une table ne la sécurise pas. Les utilisateurs peuvent toujours interroger les données de la table Employee Security s'ils savent comment faire. Afin de sécuriser les données de la table Employee Security, pour empêcher les utilisateurs d'interroger n'importe laquelle de ses données, vous devez appliquer un filtre dans une tâche ultérieure.  
+ Dans cette tâche, vous allez masquer la table Employee Security, empêchant de s’afficher dans la liste de champs d’une application cliente. Gardez bien à l'esprit que le fait de masquer une table ne la sécurise pas. Les utilisateurs peuvent toujours interroger les données de la table Employee Security s'ils savent comment faire. Afin de sécuriser les données de la table Employee Security, pour empêcher les utilisateurs d'interroger n'importe laquelle de ses données, vous devez appliquer un filtre dans une tâche ultérieure.  
   
 #### <a name="to-hide-the-employee-table-from-client-applications"></a>Pour masquer la table Employee Security des applications clientes  
   
@@ -131,7 +131,7 @@ ms.locfileid: "48196579"
  Dans cette tâche, vous allez créer un rôle d'utilisateur. Ce rôle inclut une définition de filtre de lignes dont les lignes de la table Sales Territory sont visibles aux utilisateurs. Le filtre est ensuite appliqué dans la direction de la relation un-à-plusieurs à toutes les autres tables associées à la table Sales Territory. Vous allez également appliquer un filtre simple qui empêche la table Employee Security d'être interrogée par tout utilisateur membre du rôle.  
   
 > [!NOTE]  
->  Le rôle Sales Employees by Territory que vous créez dans cette leçon autorise les membres à parcourir (ou à interroger) uniquement les données de ventes pour le secteur de vente auquel ils appartiennent. Si vous ajoutez un utilisateur comme membre au rôle Sales Employees by Territory et qu’il est également membre d’un rôle créé dans la [Leçon 12 : Créer des rôles](../analysis-services/lesson-11-create-roles.md), vous obtiendrez une combinaison des autorisations. Lorsqu'un utilisateur est membre de plusieurs rôles, les autorisations et les filtres de lignes définis pour chaque rôle se cumulent. Autrement dit, l'utilisateur aura plus d'autorisations déterminées par la combinaison des rôles.  
+>  Le rôle Sales Employees by Territory que vous créez dans cette leçon autorise les membres à parcourir (ou à interroger) uniquement les données de ventes pour le secteur de vente auquel ils appartiennent. Si vous ajoutez un utilisateur en tant que membre pour les employés des ventes par rôle Territory qui existe également comme un membre d’un rôle créé dans [leçon 12 : Créer des rôles](../analysis-services/lesson-11-create-roles.md), vous obtiendrez une combinaison d’autorisations. Lorsqu'un utilisateur est membre de plusieurs rôles, les autorisations et les filtres de lignes définis pour chaque rôle se cumulent. Autrement dit, l'utilisateur aura plus d'autorisations déterminées par la combinaison des rôles.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Pour créer un rôle d'utilisateur Sales Employees by Territory  
   

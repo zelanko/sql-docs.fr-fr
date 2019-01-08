@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server Management Studio], query associations
@@ -15,12 +15,12 @@ ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 635149ed13f94dfb4326654bda9f368a774a04f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f666bf30ebddbc173f6f23f13b1eca4c2d9024a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147749"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806551"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>Modifier la connexion associée à une requête
   Une requête peut être exécutée sur plusieurs serveurs différents ou bases de données en modifiant la connexion utilisée par la requête.  

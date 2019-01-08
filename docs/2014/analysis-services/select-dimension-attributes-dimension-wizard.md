@@ -13,12 +13,12 @@ ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6441ffd954beb6514badf55ced35239c61da0859
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7abb4560696dba21512066a7ff0ba3153ae2319a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218949"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508013"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Sélectionner les attributs de la dimension (Assistant Dimension)
   Utilisez la page **Sélectionner les attributs de la dimension** pour sélectionner et modifier les attributs de la dimension à créer.  
@@ -49,13 +49,13 @@ ms.locfileid: "48218949"
  **Activer la navigation**  
  Sélectionnez cette option pour permettre à l'utilisateur final de parcourir et de filtrer les attributs. L'option**Permettre la navigation** doit être sélectionnée pour l'attribut de clé. Pour les attributs non-clés, l’option **Permettre la navigation** n’est pas sélectionnée par défaut, ce qui implique que les attributs non-clés sont affichés uniquement comme propriétés de membre.  
   
- Dans la plupart des cas, l’attribut est activée ou non disponible pour la navigation en définissant le `AttributeHierarchyEnabled` propriété `True` ou `False`, respectivement. Toutefois, l'Assistant utilise des paramètres différents dans les trois cas suivants.  
+ Dans la plupart des cas, la navigation dans les attributs est activée ou désactivée en affectant respectivement la valeur `AttributeHierarchyEnabled` ou `True` à la propriété `False`. Toutefois, l'Assistant utilise des paramètres différents dans les trois cas suivants.  
   
 |Cas|Paramètres|  
 |----------|--------------|  
-|Une dimension contient une hiérarchie parent-enfant et l’option **Permettre la navigation** n’est pas sélectionnée.|L’Assistant conserve la `AttributeHierarchyEnabled` propriété définie sur `True`et définit le `AttributeHierarchyVisible` attribut `False` pour l’attribut clé.|  
+|Une dimension contient une hiérarchie parent-enfant et l’option **Permettre la navigation** n’est pas sélectionnée.|L'Assistant conserve la valeur `AttributeHierarchyEnabled` pour la propriété `True` et affecte la valeur `AttributeHierarchyVisible` à l'attribut `False` pour l'attribut de clé.|  
 |Une table dans une dimension contient une clé étrangère à une table qui n'est pas dans la dimension|L'Assistant sélectionne la clé étrangère comme attribut à inclure, mais ne sélectionne pas **Permettre la navigation**. Si vous conservez ces paramètres, la propriété `AttributeHiearchyEnabled` de l'attribut aura la valeur `True` et la propriété `AttributeHieararchyVisible` aura la valeur `False`.|  
-|Une dimension contient des tables en flocon accessibles via des colonnes clés étrangères qui acceptent la valeur NULL<br /><br /> —et—<br /><br /> L'option Permettre la navigation n'est pas sélectionnée pour l'attribut qui est basé sur la clé de la table en flocon|L’Assistant va créer le nouvel attribut qui a le `AttributeHiearchyEnabled` propriété définie sur `True`et le `AttributeHieararchyVisible` propriété définie sur `False`.|  
+|Une dimension contient des tables en flocon accessibles via des colonnes clés étrangères qui acceptent la valeur NULL<br /><br /> - et -<br /><br /> L'option Permettre la navigation n'est pas sélectionnée pour l'attribut qui est basé sur la clé de la table en flocon|L'Assistant créera le nouvel attribut dont la propriété `AttributeHiearchyEnabled` a la valeur `True` et dont la propriété `AttributeHieararchyVisible` a la valeur `False`.|  
   
  **Type d’attribut**  
  (Facultatif) Définissez le type de l'attribut. La valeur par défaut est **Regular**. Le type d'attribut apporte aux applications clientes des indications sur les informations que l'attribut peut contenir.  

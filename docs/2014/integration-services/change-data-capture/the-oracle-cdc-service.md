@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ffa8524e3bf7423d4712eb1539d2b2cece8a8a0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61c63b771b7314f12c709e080aa7db581306e523
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125969"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780243"
 ---
 # <a name="the-oracle-cdc-service"></a>Service de capture de données modifiées Oracle
   Le service de capture de données modifiées Oracle est un service Windows qui exécute le programme xdbcdcsvc.exe. Ce service peut être configuré pour exécuter plusieurs services Windows sur le même ordinateur, chacun avec un nom différent de service Windows. La création de plusieurs services Windows de capture de données modifiées Oracle sur un seul ordinateur est souvent réalisée pour obtenir une meilleure séparation entre eux, ou lorsque chacun d'eux doit fonctionner avec une autre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -94,7 +93,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
 -   [Utilisation du service CDC Oracle](the-oracle-cdc-service.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment gérer un Service de capture de données modifiées Local](how-to-manage-a-local-cdc-service.md)   
- [Gérer un service CDC Oracle](manage-an-oracle-cdc-service.md)  
+ [Procédure : gérer un service de capture de données modifiées local](how-to-manage-a-local-cdc-service.md)   
+ [Gérer un service de capture de données modifiées Oracle](manage-an-oracle-cdc-service.md)  
   
   

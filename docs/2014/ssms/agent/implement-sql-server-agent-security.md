@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, security
@@ -15,12 +15,12 @@ ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af4556f5acf21616ebfd94cf038b8f453263a34c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210799"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754231"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implémenter la sécurité de l'Agent SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent permet à l’administrateur de la base de données d’exécuter chaque étape de travail dans un contexte de sécurité qui a uniquement les autorisations requises pour effectuer cette étape, ce qui est déterminé par un proxy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour définir des autorisations pour une étape de travail particulière, créez un proxy possédant les autorisations requises, puis assignez ce proxy à l'étape de travail. Un proxy peut être spécifié pour plusieurs étapes de travail. Pour les étapes de travail qui requièrent les mêmes autorisations, vous utilisez le même proxy.  
@@ -57,21 +57,21 @@ ms.locfileid: "48210799"
   
 -   Ne spécifiez pas le compte administrateur NT en tant que compte de service ou compte proxy.  
   
--   Notez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont chacun accès aux ressources de l'autre. Les deux services partagent un espace de processus unique et l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un sysadmin sur le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Notez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont chacun accès aux ressources de l’autre. Les deux services partagent un espace de processus unique et l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un sysadmin sur le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Lorsque TSX est inscrit avec un MSX, le MSX sysadmin obtient le contrôle total sur l'instance TSX de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   ACE est une extension et ne peut pas s'appeler elle-même. ACE est appelé par le programme de chaînage ScenarioEngine.exe, également appelé Microsoft.SqlServer.Chainer.Setup.exe, ou peut être appelé par un autre processus hôte.  
   
--   ACE dépend des DLL de configuration suivantes détenues par SSDP, car ces API de DLL sont appelées par ACE :  
+-   ACE dépend des DLL de configuration suivantes détenues par SSDP, car ces API de DLL sont appelées par ACE :  
   
-    -   **SCO** – Microsoft.SqlServer.Configuration.Sco.dll, y compris les nouvelles validations SCO pour les comptes virtuels  
+    -   **SCO** - Microsoft.SqlServer.Configuration.Sco.dll, y compris les nouvelles validations SCO pour les comptes virtuels  
   
-    -   **Cluster** – Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **Cluster** - Microsoft.SqlServer.Configuration.Cluster.dll  
   
-    -   **SFC** – Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **SFC** - Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   
-    -   **Extension** – Microsoft.SqlServer.Configuration.ConfigExtension.dll  
+    -   **Extension** - Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rôles prédéfinis](../../reporting-services/security/role-definitions-predefined-roles.md)   

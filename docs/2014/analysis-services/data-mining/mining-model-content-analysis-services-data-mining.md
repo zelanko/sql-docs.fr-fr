@@ -21,12 +21,12 @@ ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 355bb7a964ae5b70dd0d8bd71f371766c25e413e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3a0cb21136253767f009cb19604c8a0ea7e4c71a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148004"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503405"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenu du modèle d’exploration de données (Analysis Services - Exploration de données)
   Après avoir conçu et traité un modèle d'exploration de données à l'aide de données provenant de la structure d'exploration de données sous-jacente, celui-ci est complet et présente un *contenu de modèle d'exploration de données*. Vous pouvez utiliser ce contenu pour faire des prédictions ou analyser vos données.  
@@ -143,7 +143,7 @@ ms.locfileid: "50148004"
 >  Certains modèles, tels que ceux créés par l'algorithme MNR (Microsoft Neural Network), contiennent aussi un type de nœud spécial qui fournit des statistiques descriptives sur les données d'apprentissage du modèle entier. Par définition, ces nœuds n'ont jamais de nœuds enfants.  
   
 ### <a name="node-distribution"></a>node distribution  
- La colonne NODE_DISTRIBUTION contient une table imbriquée qui fournit dans de nombreux nœuds des informations importantes et détaillées sur les modèles découverts par l'algorithme. Les statistiques exactes fournies dans cette table changent selon le type de modèle, la position du nœud dans l'arborescence, et si l'attribut prévisible est une valeur numérique continue ou une valeur discrète ; toutefois, elles peuvent inclure les valeurs minimales et maximales d'un attribut, les pondérations attribuées aux valeurs, le nombre de cas dans un nœud, les coefficients utilisés dans une formule de régression, et les mesures statistiques telles que l'écart type et la variance. Pour plus d'informations sur la manière d'interpréter la distribution de nœud, consultez la rubrique pour le type spécifique du type de modèle que vous utilisez.  
+ La colonne NODE_DISTRIBUTION contient une table imbriquée qui fournit dans de nombreux nœuds des informations importantes et détaillées sur les modèles découverts par l'algorithme. Les statistiques exactes fournies dans cette table changent selon le type de modèle, la position du nœud dans l'arborescence, et si l'attribut prévisible est une valeur numérique continue ou une valeur discrète ; toutefois, elles peuvent inclure les valeurs minimales et maximales d'un attribut, les pondérations attribuées aux valeurs, le nombre de cas dans un nœud, les coefficients utilisés dans une formule de régression, et les mesures statistiques telles que l'écart type et la variance. Pour plus d'informations sur la manière d'interpréter la distribution de nœud, consultez la rubrique pour le type spécifique du type de modèle que vous utilisez.  
   
 > [!NOTE]  
 >  La table NODE_DISTRIBUTION peut être vide, selon le type de nœud. Par exemple, certains nœuds servent uniquement à organiser une collection de nœuds enfants, et ce sont les nœuds enfants qui contiennent les statistiques détaillées.  
@@ -171,7 +171,7 @@ ms.locfileid: "50148004"
   
  Par exemple, dans un arbre de classification, la valeur de support indique le nombre de cas qui possèdent la combinaison d'attributs décrite.  
   
- Dans un arbre de décision, la somme de support à chaque niveau d'une arborescence est égale au support de son nœud parent. Par exemple, si un modèle qui contient 1200 cas est également divisé par genre, puis est sous-divisé par trois valeurs pour Revenu (Income) (Bas, Moyen et Élevé), les nœuds enfants du nœud (2), qui sont les nœuds (4), (5) et (6), sont toujours égaux au même nombre de cas que le nœud (2).  
+ Dans un arbre de décision, la somme de support à chaque niveau d'une arborescence est égale au support de son nœud parent. Par exemple, si un modèle qui contient 1200 cas est également divisé par genre, puis est sous-divisé par trois valeurs pour les nœuds de revenu-faible, moyen et élevé, l’enfant du nœud (2), qui sont des nœuds (4), (5) et (6), soit un total toujours le même nombre de cas en tant que nœud (2).  
   
 |ID de nœud et attributs de nœud|Nombre de supports|  
 |---------------------------------|-------------------|  
@@ -219,13 +219,13 @@ ms.locfileid: "50148004"
 |3|Continu|Indique que la valeur de l'attribut est une valeur numérique continue et par conséquent peut être représentée par une moyenne ainsi que la variance et l'écart type.|  
 |4|Discret|Indique une valeur, soit numérique, soit texte, traitée comme discrète.<br /><br /> **Remarque** Les valeurs discrètes peuvent être aussi manquantes ; toutefois, elles sont traitées différemment durant les calculs. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).|  
 |5|Discrétisé|Indique que l'attribut contient des valeurs numériques qui ont été discrétisées. La valeur sera une chaîne mise en forme qui décrit les compartiments de discrétisation.|  
-|6|Existant|Indique que l'attribut a des valeurs numériques continues et que les valeurs ont été fournies dans les données, au contraire des valeurs manquantes ou déduites.|  
+|6|Existing|Indique que l'attribut a des valeurs numériques continues et que les valeurs ont été fournies dans les données, au contraire des valeurs manquantes ou déduites.|  
 |7|Coefficient|Indique une valeur numérique qui représente un coefficient.<br /><br /> Un coefficient est une valeur appliquée lors du calcul de la valeur de la variable dépendante. Par exemple, si votre modèle crée une formule de régression qui prédit le revenu selon l’âge, le coefficient est utilisé dans la formule qui relie l'âge au revenu.|  
 |8|Gain du score|Indique une valeur numérique qui représente le gain de score pour un attribut.|  
 |9|Statistiques|Indique une valeur numérique qui représente une statistique pour un régresseur.|  
 |10|Nom unique de nœud|Indique que la valeur ne doit pas être traitée comme numérique ou chaîne, mais comme l'identificateur unique d'un autre nœud de contenu dans un modèle.<br /><br /> Par exemple, dans un modèle de réseau neuronal, les ID fournissent des pointeurs à partir des nœuds dans la couche de sortie vers les nœuds de la couche masquée, et des nœuds de la couche masquée vers les nœuds de la couche d'entrée.|  
 |11|Intercepter|Indique une valeur numérique qui représente l'interception dans une formule de régression.|  
-|12|Périodicité|Indique que la valeur dénote une structure périodique dans un modèle.<br /><br /> S'applique uniquement aux modèles de série chronologique qui contiennent un modèle ARIMA.<br /><br /> Remarque : l’algorithme MTS (Microsoft Time Series) détecte automatiquement des structures périodiques en fonction des données d’apprentissage. Par conséquent, les périodicités dans le modèle final peuvent inclure des valeurs de périodicité que vous n'avez pas fournies comme paramètre lors de la création du modèle.|  
+|12|Périodicité|Indique que la valeur dénote une structure périodique dans un modèle.<br /><br /> S'applique uniquement aux modèles de série chronologique qui contiennent un modèle ARIMA.<br /><br /> Remarque : L'algorithme MTS (Microsoft Time Series) détecte automatiquement des structures périodiques en fonction des données d'apprentissage. Par conséquent, les périodicités dans le modèle final peuvent inclure des valeurs de périodicité que vous n'avez pas fournies comme paramètre lors de la création du modèle.|  
 |13|Ordre autorégressif|Indique que la valeur représente le nombre de séries autorégressives.<br /><br /> S'applique aux modèles de série chronologique qui utilisent l'algorithme ARIMA.|  
 |14|Ordre des moyennes mobiles|Valeur qui représente le nombre de moyennes mobiles dans une série.<br /><br /> S'applique aux modèles de série chronologique qui utilisent l'algorithme ARIMA.|  
 |15|Ordre des différences|Indique que la valeur représente une valeur qui indique le nombre de fois où la série fait l'objet d'une différenciation.<br /><br /> S'applique aux modèles de série chronologique qui utilisent l'algorithme ARIMA.|  
@@ -249,9 +249,9 @@ ms.locfileid: "50148004"
   
 -   La**probabilité du nœud** est toujours inférieure ou égale à la **probabilité marginale**.  
   
- Par exemple, si l'alimentation de tous les clients dans un arbre de décision est répartie de manière égale par sexe (et aucune valeur ne manque), la probabilité des nœuds enfants doit être .5. Toutefois, supposons que chacun des nœuds pour le sexe est également divisé par niveaux de revenu, Élevé, Moyen, et Bas. Dans ce cas, le score MARGINAL_PROBABILITY pour chaque nœud enfant doit toujours être .33 mais la valeur NODE_PROBABILTY sera le produit de toutes les probabilités qui mènent à ce nœud et donc toujours inférieure à la valeur MARGINAL_PROBABILITY.  
+ Par exemple, si l'alimentation de tous les clients dans un arbre de décision est répartie de manière égale par sexe (et aucune valeur ne manque), la probabilité des nœuds enfants doit être .5. Toutefois, supposons que chacun des nœuds pour le sexe est également divisé par niveaux de revenu-élevé, moyen et faible. Dans ce cas, le score MARGINAL_PROBABILITY pour chaque nœud enfant doit toujours être .33 mais la valeur NODE_PROBABILTY sera le produit de toutes les probabilités qui mènent à ce nœud et donc toujours inférieure à la valeur MARGINAL_PROBABILITY.  
   
-|Niveau de nœud/attribut et valeur|Probabilité marginale|probabilité du nœud|  
+|Niveau de nœud/attribut et valeur|probabilité marginale|probabilité du nœud|  
 |----------------------------------------|--------------------------|----------------------|  
 |Racine du modèle<br /><br /> Tous les clients cibles|1|1|  
 |Clients cibles répartis par sexe|.5|.5|  
@@ -267,9 +267,9 @@ ms.locfileid: "50148004"
   
  La table suivante propose des liens vers des rubriques pour chaque type d'algorithme.  
   
--   **Rubriques de contenu de modèle :** Expliquent la signification de chaque type de nœud pour chaque type d'algorithme et fournissent des recommandations sur les nœuds les plus pertinents dans un type de modèle particulier.  
+-   **Rubriques de contenu de modèle :** Expliquent la signification de chaque type de nœud pour chaque type d’algorithme et fournissent des conseils sur les nœuds qui sont plus pertinents dans un type de modèle particulier.  
   
--   **Rubriques de requêtes :** Fournissent des exemples de requêtes par rapport à un type de modèle particulier et des recommandation sur la manière d'interpréter les résultats.  
+-   **Rubriques de requêtes :** Fournissent des exemples de requêtes par rapport à un type de modèle particulier et les conseils sur la façon d’interpréter les résultats.  
   
 |Type d'algorithme ou de modèle|model content|Interrogation des modèles d'exploration de données|  
 |-----------------------------|-------------------|----------------------------|  

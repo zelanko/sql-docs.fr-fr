@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing [SQL Server replication], stored procedure execution
@@ -15,15 +14,15 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8dcdd88d8ce974acda7363ba0a7b2199ca2dd2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195652"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763172"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publication de l'exécution de procédures stockées dans la réplication transactionnelle
-  Si vous avez une ou plusieurs procédures stockées qui s'exécutent sur le serveur de publication et qui affectent des tables publiées, vous pouvez envisager d'inclure ces procédures stockées dans votre publication en tant qu'articles d'exécution de procédure stockée. La définition de la procédure (l'instruction CREATE PROCEDURE) est répliquée vers l'Abonné quand l'abonnement est initialisé ; quand la procédure est exécutée sur le serveur de publication, la réplication exécute la procédure correspondante sur l'Abonné. Cela peut apporter des performances significativement meilleures dans les cas où de grosses opérations de traitement sont effectuées, car seule l'exécution de la procédure est répliquée, ce qui élimine la nécessité de répliquer les modifications individuelles pour chaque ligne. Supposons par exemple que vous créez la procédure stockée suivante dans la base de données de publication :  
+  Si vous avez une ou plusieurs procédures stockées qui s'exécutent sur le serveur de publication et qui affectent des tables publiées, vous pouvez envisager d'inclure ces procédures stockées dans votre publication en tant qu'articles d'exécution de procédure stockée. La définition de la procédure (l'instruction CREATE PROCEDURE) est répliquée vers l'Abonné quand l'abonnement est initialisé ; quand la procédure est exécutée sur le serveur de publication, la réplication exécute la procédure correspondante sur l'Abonné. Cela peut apporter des performances significativement meilleures dans les cas où de grosses opérations de traitement sont effectuées, car seule l'exécution de la procédure est répliquée, ce qui élimine la nécessité de répliquer les modifications individuelles pour chaque ligne. Supposons par exemple que vous créez la procédure stockée suivante dans la base de données de publication :  
   
 ```  
 CREATE PROC give_raise AS  

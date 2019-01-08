@@ -13,19 +13,19 @@ ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2119013c1c735c9b35a3790fedbf1ac114e9964a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 156bd83662b9b6fa42eb99e8e5810bb4fc71d51a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196857"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414847"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>Onglet Caractéristiques du cluster du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
   L'onglet **Caractéristiques du cluster** dans la **Visionneuse de l'algorithme MSC** (Microsoft Sequence Clustering) fournit une liste détaillée des caractéristiques qui définissent un cluster de séquence. Ces fonctionnalités peuvent inclure des paires attribut-valeur simples, ainsi que des transitions entre les états.  
   
  Utilisez cette vue d'un modèle Sequence Clustering pour explorer le contenu du cluster et consulter les séquences représentatives d'un cluster.  
   
- **Pour plus d’informations :** [Algorithme MSC (Microsoft Sequence Clustering)](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Pour plus d’informations :** [Algorithme Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la séquence de Microsoft Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l’Observateur**  
@@ -45,7 +45,7 @@ ms.locfileid: "48196857"
   
  Par exemple, dans un modèle Sequence Clustering basé sur l'analyse du panier d'achat, un cluster peut avoir comme principale caractéristique un client choisissant l'article de vente puis mettant fin à la transaction sans effectuer d'autres achats. Dans un modèle Sequence Clustering qui cherche à analyser les erreurs d'un serveur, les caractéristiques principales d'un cluster peuvent être une série d'événements d'erreurs de fréquence élevée.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Variable**|Cette colonne indique si la caractéristique est une valeur ou une transition.<br /><br /> Si la caractéristique est une valeur, le **Variable** colonne contient le nom d’attribut.<br /><br /> Si la caractéristique représente une transition d’état, le **Variable** colonne contient le texte « Transitions ».|  
 |**Valeurs**|La valeur de cette colonne dépend du fait que la caractéristique est une paire attribut-valeur simple, ou une transition d'état représentant une séquence commune d'éléments ou d'événements.<br /><br /> Si la caractéristique est une valeur, le **valeur** colonne contient l’état.<br /><br /> Si la caractéristique représente une transition d’état, le **valeur** colonne contient la description de la transition d’état.|  
@@ -53,7 +53,7 @@ ms.locfileid: "48196857"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)  
   
   

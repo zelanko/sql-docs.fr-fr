@@ -1,5 +1,5 @@
 ---
-title: TopPercent (MDX) | Documents Microsoft
+title: TopPercent (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d7de38f27d23fe11d0953553a8737a9e2f4e2db3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0093da0a4f69d8a1e4cf178959d28509eef15b75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743648"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532339"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -45,12 +45,12 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  Le **TopPercent** fonction calcule la somme de l’expression numérique spécifiée évaluée sur le jeu spécifié, en triant le jeu par ordre décroissant. Elle retourne ensuite les éléments dotés des valeurs les plus élevées et dont le pourcentage cumulé du total de la valeur additionnée correspond au moins au pourcentage indiqué. Enfin, elle retourne le plus petit sous-ensemble d'un jeu dont le total cumulé est égal au moins au pourcentage précisé. Les éléments retournés sont triés du plus grand au plus petit.  
   
 > [!WARNING]  
->  Si *Numeric_Expression* retourne une valeur négative puis **TopPercent** renvoie la ligne qu’un (1).  
+>  Si *Numeric_Expression* retourne une valeur négative puis **TopPercent** retourne la ligne qu’un (1).  
 >   
 >  Consultez le deuxième exemple pour une présentation détaillée de ce comportement.  
   
 > [!IMPORTANT]  
->  Comme le [BottomPercent](../mdx/bottompercent-mdx.md) (fonction), la **TopPercent** fonction respecte jamais la hiérarchie.  
+>  Comme le [BottomPercent](../mdx/bottompercent-mdx.md) (fonction), le **TopPercent** fonction respecte jamais la hiérarchie.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant retourne les villes les mieux classées représentant 10 % des ventes des revendeurs pour la catégorie Bike. Le résultat est trié par ordre décroissant, en commençant par la ville associé aux meilleures ventes.  
@@ -106,10 +106,10 @@ FROM [Adventure Works]
 ||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
-|46 bleu, de tourisme-2000|$321,027.03|$333,021.50|($11,994.47)|  
-|62 bleu, de tourisme-3000|$87,773.61|$100,133.52|($12,359.91)|  
-|…|…|…|…|  
-|46 jaune, de Touring-1000|$1,016,312.83|$1,234,454.27|($218,141.44)|  
+|46 bleu, Touring-2000|$321,027.03|$333,021.50|($11,994.47)|  
+|62 bleu, Touring-3000|$87,773.61|$100,133.52|($12,359.91)|  
+|...|...|...|...|  
+|46 jaune, Touring-1000|$1,016,312.83|$1,234,454.27|($218,141.44)|  
 |Touring-1000 Yellow, 60|$1,184,363.30|$1,443,407.51|($259,044.21)|  
   
  Maintenant, si vous deviez présenter les vélos les mieux classés représentant 100 % du profit, vous écririez la requête suivante :  
@@ -121,13 +121,13 @@ FROM [Adventure Works]
   
 ```  
   
- Notez que la requête demande cent pour cent (100 %) ; ce qui signifie que toutes les lignes doivent être retournées. Toutefois, étant donné que les valeurs négatives dans les *Numeric_Expression* , qu’une seule ligne est retournée.  
+ Notez que la requête demande cent pour cent (100 %) ; ce qui signifie que toutes les lignes doivent être retournées. Toutefois, étant donné que des valeurs négatives dans les *Numeric_Expression* , qu’une seule ligne est retournée.  
   
 ||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

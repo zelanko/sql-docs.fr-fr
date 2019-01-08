@@ -18,15 +18,15 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2647d65f91fff3c21a63a7b2e21dcd0d144e00c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189680"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525747"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Préparer manuellement une base de données secondaire pour un groupe de disponibilité (SQL Server)
-  Cette rubrique décrit comment préparer une base de données secondaire pour un groupe de disponibilité AlwaysOn dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou de PowerShell. La préparation d'une base de données secondaire s'effectue en deux étapes : (1) restauration d'une sauvegarde de base de données récente de la base de données primaire et des sauvegardes de journaux suivantes sur chaque instance de serveur qui héberge le réplica secondaire, à l'aide de RESTORE WITH NORECOVERY, et (2) attachement de la base de données restaurée au groupe de disponibilité.  
+  Cette rubrique explique comment préparer une base de données secondaire pour un groupe de disponibilité AlwaysOn dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell. Préparation de la base de données secondaire requiert deux étapes : (1) restauration d’une sauvegarde récente de la base de données de la base de données primaire et de sauvegardes de journaux suivantes sur chaque instance de serveur qui héberge le réplica secondaire, à l’aide de RESTORE WITH NORECOVERY et (2) attachement de la base de données restaurée au groupe de disponibilité.  
   
 > [!TIP]  
 >  Si vous disposez d'une configuration de copie des journaux de transaction, vous pouvez peut-être convertir la base de données principale pour la copie des journaux de transaction et une ou plusieurs de ses bases de données secondaires en base de données principale AlwaysOn et une ou plusieurs bases de données secondaires AlwaysOn. Pour plus d’informations, consultez [configuration requise pour la migration à partir de l’envoi de journaux aux groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
@@ -195,7 +195,7 @@ ms.locfileid: "48189680"
         > [!IMPORTANT]  
         >  Si les chemins d'accès des bases de données primaire et secondaire diffèrent, vous ne pouvez pas ajouter de fichier. La raison tient à la réception du journal pour l'opération d'ajout de fichier, puisque l'instance de serveur du réplica secondaire tente de placer le nouveau fichier dans le même chemin d'accès que celui utilisé par la base de données primaire.  
   
-         Par exemple, la commande ci-dessous restaure une sauvegarde d'une base de données primaire qui réside dans le répertoire de données de l'instance par défaut de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. La restauration de base de données doit déplacer la base de données dans le répertoire de données d’une instance distante de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] nommé (*AlwaysOn1*), qui héberge le réplica secondaire sur un autre nœud de cluster. Là, les données et les fichiers journaux sont restaurés dans le répertoire *C:\Program Files\Microsoft SQL Server\MSSQL12.ALWAYSON1\MSSQL\DATA* . L'opération de restauration utilise WITH NORECOVERY, afin de laisser la base de données secondaire dans la base de données de restauration.  
+         Par exemple, la commande ci-dessous restaure une sauvegarde d'une base de données primaire qui réside dans le répertoire de données de l'instance par défaut de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. L’opération de restauration de la base de données doit déplacer la base de données dans le répertoire de données d’une instance distante de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] nommée (*AlwaysOn1*), qui héberge le réplica secondaire sur un autre nœud de cluster. Là, les données et les fichiers journaux sont restaurés dans le répertoire *C:\Program Files\Microsoft SQL Server\MSSQL12.ALWAYSON1\MSSQL\DATA* . L'opération de restauration utilise WITH NORECOVERY, afin de laisser la base de données secondaire dans la base de données de restauration.  
   
         ```  
         RESTORE DATABASE MyDB1  
@@ -245,16 +245,16 @@ ms.locfileid: "48189680"
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour préparer une base de données secondaire**  
   
-1.  Si vous avez besoin créer une sauvegarde récente de la base de données primaire, remplacez le répertoire (`cd`) à l’instance de serveur qui héberge le réplica principal.  
+1.  Si vous devez créer une sauvegarde récente de la base de données primaire, accédez au répertoire (`cd`) de l'instance de serveur qui héberge le réplica principal.  
   
 2.  Utilisez l'applet de commande `Backup-SqlDatabase` pour créer chacune des sauvegardes.  
   
-3.  Accédez au répertoire (`cd`) à l’instance de serveur qui héberge le réplica secondaire.  
+3.  Remplacez le répertoire (`cd`) par l'instance de serveur qui héberge le réplica secondaire.  
   
 4.  Pour restaurer la base de données et les sauvegardes de journaux de chaque base de données primaire, utilisez l'applet de commande `restore-SqlDatabase`, en spécifiant le paramètre de restauration `NoRecovery`. Si les chemins d'accès de fichier diffèrent entre les ordinateurs qui hébergent le réplica principal et le réplica secondaire cible, utilisez également le paramètre de restauration `RelocateFile`.  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d’une applet de commande, utilisez le `Get-Help` applet de commande dans le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] environnement PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 5.  Pour terminer la configuration de la base de données secondaire, vous devez l'attacher au groupe de disponibilité. Pour plus d’informations, consultez [Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
@@ -273,11 +273,11 @@ Backup-SqlDatabase -Database "MyDB1" -BackupAction "Log" -BackupFile "\\share\ba
 # Restore database backup   
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
 # Restore log backup   
-Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery –ServerInstance "DestinationMachine\Instance"  
+Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
   
 ```  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir préparé une base de données secondaire  
+##  <a name="FollowUp"></a> Suivi : Après avoir préparé une base de données secondaire  
  Pour terminer la configuration de la base de données secondaire, attachez la base de données nouvellement restaurée au groupe de disponibilité. Pour plus d’informations, consultez [Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7d85b45ff292d4262393542909566b233de882d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074413"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781811"
 ---
 # <a name="table-element-for-schema-dta"></a>Table, élément pour les schémas (Assistant Paramétrage de base de données)
   Spécifie la table pour le paramétrage.  
@@ -52,8 +51,8 @@ ms.locfileid: "48074413"
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Élément de schéma pour la base de données &#40;DTA&#41;](schema-element-for-database-dta.md)|  
-|**Éléments enfants**|[Nom d’élément pour la Table &#40;DTA&#41;](name-element-for-table-dta.md)|  
+|**Élément parent**|[Schema, élément pour les bases de données &#40;Assistant Paramétrage de base de données&#41;](schema-element-for-database-dta.md)|  
+|**Éléments enfants**|[Name, élément pour les tables &#40;Assistant Paramétrage de base de données&#41;](name-element-for-table-dta.md)|  
   
 ## <a name="remarks"></a>Notes  
  Si vous ne spécifiez pas d'élément `Table`, l'Assistant Paramétrage du moteur de base de données suppose que toutes les tables sur la base de données spécifiée peuvent être paramétrées.  

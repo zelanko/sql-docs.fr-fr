@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Integration Services], tasks
@@ -27,12 +26,12 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a87a28e1e39959868b1a39c897b8b67716227466
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d840663c675452b137a57fedc56f623b430af6e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111839"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765641"
 ---
 # <a name="integration-services-tasks"></a>Tâches Integration Services
   Les tâches sont des éléments de flux de contrôle qui définissent des unités de travail qui sont exécutées dans un flux de contrôle de package. Un package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est composé d’une ou plusieurs tâches. Si le package contient plusieurs tâches, elles sont connectées et organisées dans le flux de contrôle par des contraintes de priorité.  
@@ -44,7 +43,7 @@ ms.locfileid: "48111839"
 ## <a name="types-of-tasks"></a>Types de tâches  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend les types de tâches suivants.  
   
- Tâche de flux de données  
+ tâche de flux de données  
  Tâche qui exécute les flux de données pour extraire les données, pour appliquer les transformations au niveau des colonnes et pour charger des données.  
   
  Tâches de préparation des données  
@@ -75,7 +74,7 @@ ms.locfileid: "48111839"
   
  Pour plus d’informations sur l’ajout d'une tâche à un package par programmation, consultez [Ajout de tâches par programme](../building-packages-programmatically/adding-tasks-programmatically.md).  
   
- Chaque tâche peut être configurée séparément à l’aide des boîtes de dialogue personnalisées du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou de la fenêtre Propriétés de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Un package peut contenir plusieurs tâches du même type — par exemple, six tâches d'exécution SQL — et chaque tâche peut être configurée différemment. Pour plus d’informations, consultez [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md).  
+ Chaque tâche peut être configurée séparément à l’aide des boîtes de dialogue personnalisées du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou de la fenêtre Propriétés de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Un package peut contenir plusieurs tâches du même type (par exemple, six tâches d’exécution SQL) et chaque tâche peut être configurée différemment. Pour plus d’informations, consultez [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md).  
   
 ## <a name="tasks-connections-and-groups"></a>Connexions et groupes des tâches  
  Si la tâche contient plusieurs tâches, elles sont connectées et organisées dans le flux de contrôle par des contraintes de priorité. Pour plus d’informations, consultez [Contraintes de précédence](precedence-constraints.md).  

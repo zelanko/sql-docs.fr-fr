@@ -15,12 +15,12 @@ ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e786f699209c384f9baecbbe23a24e2ed5e3611
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb5490f023a2529d102d9ca505092b7f2bc28fec
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118299"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513028"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Configurer les propriétés d'un projet Analysis Services (SSDT)
   Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est défini avec certaines propriétés par défaut qui ont une incidence sur la génération et sur le déploiement du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -38,7 +38,7 @@ ms.locfileid: "48118299"
 |Générer / Supprimer les mots de passe|True|Indique si les mots de passe connus seront supprimés des chaînes de connexion écrites dans le répertoire de sortie pendant le processus de génération. Les mots de passe sont supprimés pour renforcer la sécurité Si les mots de passe sont supprimés, vous devez les fournir lors du déploiement du projet pour permettre à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] d'accéder aux données sources.|  
 |Débogage / Démarrer l'objet|\<Objet actif actuel >|Indique si l'objet sera démarré lors du débogage.|  
 |Déploiement / Mode de déploiement|Déployer uniquement ce qui a changé|Par défaut, seules les modifications des objets du projet sont déployées (à condition qu'aucune autre modification n'ait été apportée directement aux objets en dehors du projet). Vous pouvez également choisir de déployer tous les objets du projet à chaque déploiement. Pour optimiser les performances, utilisez l'option Déployer uniquement ce qui a changé.|  
-|Déploiement / Option de traitement|Valeur par défaut|Par défaut, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] détermine le type de traitement nécessaire lorsque les modifications des objets sont déployées. Cette approche résulte en un temps de déploiement réduit. Cependant, vous pouvez également choisir d'effectuer un traitement complet ou aucun traitement à chaque déploiement.|  
+|Déploiement / Option de traitement|Par défaut|Par défaut, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] détermine le type de traitement nécessaire lorsque les modifications des objets sont déployées. Cette approche résulte en un temps de déploiement réduit. Cependant, vous pouvez également choisir d'effectuer un traitement complet ou aucun traitement à chaque déploiement.|  
 |Déploiement / Déploiement transactionnel|False|Par défaut, le déploiement des objets modifiés ou de tous les objets n'est pas transactionnel avec le traitement des objets déployés. Le déploiement peut réussir et être conservé même si le traitement échoue. Vous pouvez modifier cette valeur par défaut pour incorporer le déploiement et le traitement dans une seule transaction.|  
 |Déploiement / Serveur cible|localhost|Par défaut, les objets de base de données d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sont déployés dans l’instance par défaut d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur l’ordinateur local sur lequel vous utilisez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Modifiez cette valeur par défaut pour spécifier une instance nommée sur l'ordinateur local ou n'importe quelle autre instance sur un ordinateur distant sur lequel vous avez l'autorisation de créer des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |Déploiement / Base de données|\<nom du projet >|Par défaut, le nom de la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans laquelle les objets du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seront instanciés après le déploiement est le nom du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] au moment de sa définition. Modifiez cette propriété pour modifier le nom de la base de données sur l’instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] spécifiée par la propriété Server.|  
@@ -48,7 +48,7 @@ ms.locfileid: "48118299"
   
  Un projet est créé avec une seule configuration, appelée Développement. Vous pouvez créer d'autres configurations et passer de l'une à l'autre à l'aide du Gestionnaire de configuration.  
   
- Tant que d'autres configurations n'ont pas été créées, tous les développeurs utilisent cette configuration commune. Cependant, au cours des différentes phases de développement d'un projet, telles que le développement initial et le test d'un projet, les développeurs peuvent utiliser différentes sources de données et déployer le projet sur différents serveurs à des fins distinctes. Les configurations vous permettent de conserver ces différents paramètres dans différents fichiers de configuration.  
+ Tant que d'autres configurations n'ont pas été créées, tous les développeurs utilisent cette configuration commune. Toutefois, pendant les différentes phases de projet de développement - tels que pendant le développement initial et le test d’un projet - différents développeurs seront peut utiliser différentes sources de données et à déployer le projet sur différents serveurs à des fins différentes. Les configurations vous permettent de conserver ces différents paramètres dans différents fichiers de configuration.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Générer des projets Analysis Services &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   

@@ -1,5 +1,5 @@
 ---
-title: Haute disponibilité et extensibilité dans Analysis Services | Documents Microsoft
+title: Haute disponibilité et extensibilité dans Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700900"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439501"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Haute disponibilité et extensibilité dans Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "35700900"
  Les techniques permettant de rendre Analysis Services hautement disponible et évolutif sont sensiblement les mêmes pour tous les modes de serveur (multidimensionnel, tabulaire et mode intégré SharePoint). Sauf indication contraire, partez du principe que les informations présentes dans cet article s’appliquent à tous les modes.  
   
 ## <a name="key-points"></a>Points clés  
- Les techniques associées à la disponibilité et la mise à l’échelle étant différentes de celles du moteur de base de données relationnelle, un bref résumé des points clés permet de présenter clairement les techniques utilisées avec Analysis Services :  
+ Les techniques associées à la disponibilité et la mise à l’échelle étant différentes de celles du moteur de base de données relationnelle, un bref résumé des points clés permet de présenter clairement les techniques utilisées avec Analysis Services :  
   
 -   Analysis Services utilise les mécanismes de haute disponibilité et d’extensibilité intégrés dans la plateforme serveur Windows : équilibrage de la charge réseau (NLB), clustering de basculement Windows Server (WSFC), ou les deux.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "35700900"
   
  Bien que les instructions données dans l’article [Scale-out querying for Analysis Services using read-only databases](https://technet.microsoft.com/library/ff795582\(v=sql.100\).aspx) (Montée en charge des requêtes pour Analysis Services à l’aide de bases de données en lecture seule) datent de 2008, elles sont toujours valables. Les systèmes d’exploitation et le matériel des serveurs ont évolué, et les références à certaines plateformes et limites de processeur sont obsolètes, mais la technique de base d’utilisation des bases de données en lecture seule et en lecture-écriture pour de grands volumes de requêtes est inchangée.  
   
- L’approche peut être résumée comme suit :  
+ L’approche peut être résumée comme suit :  
   
 -   Utilisez un matériel et des instances d’Analysis Services dédiés pour traiter la base de données. Définissez la base de données sur lecture seule une fois le traitement terminé. Pour obtenir des instructions, consultez [Switch an Analysis Services database between ReadOnly and ReadWrite modes](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md) .  
   
@@ -96,13 +96,13 @@ ms.locfileid: "35700900"
 
 - Actif/actif n’est pas pris en charge pour l’instant. Actif/passif (basculement) est la seule configuration WSFC prise en charge pour Analysis Services.
 - En cas de mise en cluster d’Analysis Services, vérifiez que les nœuds participant au cluster s’exécutent sur du matériel identique ou très similaire, et que le contexte opérationnel de chaque nœud présente les mêmes caractéristiques : version du système d’exploitation et Service Packs, version d’Analysis Services et Service Packs (ou mises à jour cumulatives), ainsi que le mode serveur.
-- Évitez de réaffecter un nœud passif comme nœud actif d’une autre charge de travail. Tous les gains à court terme en matière d’utilisation de l’ordinateur sont perdus en cas de basculement réel si le nœud ne peut pas gérer les deux charges de travail.
+- Évitez de réaffecter un nœud passif comme nœud actif de charge de travail un autre. Tous les gains à court terme en matière d’utilisation de l’ordinateur sont perdus en cas de basculement réel si le nœud ne peut pas gérer les deux charges de travail.
  
- Des instructions détaillées et des informations générales pour le déploiement d’Analysis Services dans un cluster de basculement sont fournies dans le livre blanc [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx)(Comment mettre en cluster SQL Server Analysis Services). Bien que rédigées pour SQL Server 2012, ces instructions s’appliquent toujours aux versions plus récentes d’Analysis Services.  
+ Instructions détaillées et des informations générales pour le déploiement d’Analysis Services dans un cluster de basculement sont fournis dans ce livre blanc : [Mise en Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx). Bien que rédigées pour SQL Server 2012, ces instructions s’appliquent toujours aux versions plus récentes d’Analysis Services.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Synchroniser des base de données Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Forcer l’affinité NUMA pour les bases de données tabulaires Analysis Services](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
- [Une étude de cas Analysis Services : Utilisation des modèles tabulaires dans une Solution commerciale à grande échelle](https://msdn.microsoft.com/library/dn751533.aspx)  
+ [Forcing NUMA affinity for Analysis Services Tabular Databases (Forcer l’affinité NUMA pour les bases de données tabulaires Analysis Services)](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
+ [Une étude de cas Analysis Services : À l’aide de modèles tabulaires dans une Solution commerciale à grande échelle](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

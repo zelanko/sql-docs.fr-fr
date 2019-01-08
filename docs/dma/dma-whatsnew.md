@@ -14,12 +14,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 60145b2433d7b9d2b6cda4453e2d91599b865a86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643947"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410406"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Nouveautés de Data Migration Assistant
 Cet article répertorie les ajouts dans chaque version de Data Migration Assistant (DMA).
@@ -33,9 +33,9 @@ Le flux de travail d’évaluation vous permet de détecter les problèmes suiva
 
 - **Problèmes de compatibilité**. DMA identifie également les problèmes de compatibilité liés aux domaines suivants :
 
-    - Modifications avec rupture : les objets de schéma spécifique qui peuvent rompre la fonctionnalité de migration vers la base de données cible.  Nous recommandons de corriger ces objets de schéma après la migration de base de données.
-    - Changements de comportement : les objets de schéma signalées peuvent continuer à fonctionner, mais ils peuvent présenter un comportement différent, par exemple une dégradation des performances.
-    - Problèmes d’information : ces objets n’aura aucune incidence sur la migration, mais peut ont été déconseillés à partir de la fonctionnalité SQL Server libère.
+    - Modifications avec rupture :  Les objets de schéma spécifique qui peuvent rompre la fonctionnalité de migration vers la base de données cible.  Nous recommandons de corriger ces objets de schéma après la migration de base de données.
+    - Changements de comportement : Les objets de schéma signalées peuvent continuer à fonctionner, mais ils peuvent présenter un comportement différent, par exemple une dégradation des performances.
+    - Problèmes d’information :  Ces objets n’aura aucune incidence sur la migration, mais peuvent ont été déconseillés à partir de la fonctionnalité que SQL Server libère.
 
 Une fois l’évaluation terminée, utilisez notre [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) pour effectuer la migration de vos bases de données SQL Server vers Azure SQL Database Managed Instance.  DMS prend en charge les deux [hors connexion](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (une fois) et [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) migrations de base de données (-temps d’arrêt minimal) vers Azure SQL Database Managed Instance.
 

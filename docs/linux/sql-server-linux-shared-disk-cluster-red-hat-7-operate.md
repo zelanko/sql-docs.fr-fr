@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 4b41e3adeaab22a958e94e373762c57a6d613f6d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2967277ca109b9ee55221a7b12f5af891a5e45a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661264"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393573"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Fonctionnement du cluster de disque partagé de Red Hat Enterprise Linux pour SQL Server
 
@@ -142,10 +142,10 @@ Afficher les journaux de l’agent de ressource à `/var/log/cluster/corosync.lo
    ```
 
    > [!NOTE]
-   > Si vous utilisez un autre pare-feu qui n’intègre pas de configuration à haute disponibilité, les ports suivants doivent être ouverts pour permettre à Pacemaker de communiquer avec les autres nœuds du cluster.
+   > Si vous utilisez un autre pare-feu qui n’a pas une configuration de haute disponibilité intégrée, les ports suivants doivent être ouverts pour permettre à être en mesure de communiquer avec d’autres nœuds du cluster Pacemaker
    >
-   > * TCP : ports 2224, 3121, 21064
-   > * UDP : port 5405
+   > * TCP : Ports 2224, 3121, 21064
+   > * UDP : Port 5405
 
 1. Installez les packages Pacemaker sur le nouveau nœud.
 

@@ -1,7 +1,7 @@
 ---
 title: Sys.query_store_runtime_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48e9993ecacc1365f961255b99c24eb7f456e0d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b53020f747b84c824ae8cd816c3b7ba1975df80b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710847"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712430"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>Sys.query_store_runtime_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contient des informations sur les informations de statistiques d’exécution runtime pour la requête.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "47710847"
 |**runtime_stats_id**|**bigint**|Identificateur de la ligne représentant les statistiques d’exécution pour le **plan_id**, **execution_type** et **runtime_stats_interval_id**. Il est unique seulement pour les intervalles de statistiques de runtime passées. Pour l’intervalle actuellement actif il peut y avoir plusieurs lignes représentant des statistiques d’exécution pour le plan référencé par **plan_id**, avec le type d’exécution représenté par **execution_type**. En règle générale, une ligne représente les statistiques d’exécution qui sont vidés sur le disque, tandis que les autres (s) représentent l’état en mémoire. Par conséquent, pour obtenir l’état réel pour chaque intervalle vous avez besoin d’agréger les mesures, regroupement par **plan_id**, **execution_type** et **runtime_stats_interval_id**. |  
 |**plan_id**|**bigint**|Clé étrangère. Joint à [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Clé étrangère. Joint à [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
-|**execution_type**|**tinyint**|Détermine le type d’exécution de requête :<br /><br /> 0 – exécution normale (achevée correctement)<br /><br /> 3 – initié par le client annulé l’exécution<br /><br /> 4 - exception abandonnée de l’exécution|  
-|**execution_type_desc**|**nvarchar(128)**|Description textuelle du champ de type d’exécution :<br /><br /> 0 – standard<br /><br /> 3 – abandonnée<br /><br /> 4 - exception|  
+|**execution_type**|**tinyint**|Détermine le type d’exécution de requête :<br /><br /> 0 - exécution normale (achevée correctement)<br /><br /> 3 - initié par le client annulé l’exécution<br /><br /> 4 - exception abandonnée de l’exécution|  
+|**execution_type_desc**|**nvarchar(128)**|Description textuelle du champ de type d’exécution :<br /><br /> 0 - standard<br /><br /> 3 - abandonnée<br /><br /> 4 - exception|  
 |**first_execution_time**|**datetimeoffset**|Première heure d’exécution du plan de requête dans l’intervalle d’agrégation.|  
 |**last_execution_time**|**datetimeoffset**|Plan de la dernière exécution de la requête au sein de l’intervalle d’agrégation.|  
 |**count_executions**|**bigint**|Nombre total d’exécutions du plan de requête dans l’intervalle d’agrégation.|  
@@ -95,7 +95,7 @@ ms.locfileid: "47710847"
 |**max_log_bytes_used**|**bigint**|Nombre maximal d’octets dans le journal de base de données utilisé par le plan de requête, dans l’intervalle d’agrégation.  S’applique **uniquement à la base de données SQL Azure**.| 
 |**stdev_log_bytes_used**|**float**|Écart type du nombre d’octets dans le journal de base de données utilisé par un plan de requête, au sein de l’intervalle d’agrégation.  S’applique **uniquement à la base de données SQL Azure**.|
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite le **VIEW DATABASE STATE** autorisation.  
   
 ## <a name="see-also"></a>Voir aussi  

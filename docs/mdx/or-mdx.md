@@ -1,5 +1,5 @@
 ---
-title: OU (MDX) | Documents Microsoft
+title: OU (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 668e8f1955290c31ee63ca5b81fc5e9c286d54c4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ae6b6602d7968bb444dcf4838537bb000b97dd53
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742448"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418395"
 ---
 # <a name="or-mdx"></a>OR (MDX)
 
@@ -36,10 +36,10 @@ Expression1 OR Expression2
  Expression MDX valide qui retourne une valeur numérique.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Valeur booléenne qui retourne **true** si les deux arguments donnent comme résultat **true**; sinon, **false**.  
+ Une valeur booléenne qui retourne **true** si les deux arguments donnent comme résultat **true**; sinon, **false**.  
   
 ## <a name="remarks"></a>Notes  
- Le **ou** opérateur traite les deux arguments comme des valeurs booléennes (zéro, 0, comme **false**; sinon, **true**) avant que l’opérateur effectue la disjonction logique. Le tableau suivant illustre comment la **ou** opérateur effectue la disjonction logique.  
+ Le **ou** opérateur traite les deux arguments comme valeurs booléennes (zéro, 0, comme **false**; sinon, **true**) avant que l’opérateur effectue la disjonction logique. Le tableau suivant illustre comment la **ou** opérateur effectue la disjonction logique.  
   
 |*Expression1*|*Expression2*|Valeur de retour|  
 |-------------------|-------------------|------------------|  
@@ -49,7 +49,7 @@ Expression1 OR Expression2
 |**false**|**false**|**false**|  
   
 ## <a name="example"></a>Exemple  
- La requête suivante contient une mesure calculée qui retourne la chaîne « MARRIED OR MALE » si le membre actuel sur la hiérarchie Gender de la dimension Client est Male ou le membre actuel sur la hiérarchie Marital Status de la dimension Client est Married ; sinon, elle retourne la chaîne « UNMARRIED OR FEMALE ».  
+ La requête suivante contient une mesure calculée qui retourne la chaîne « MARRIED OR MALE » si le membre actuel sur la hiérarchie Gender de la dimension Customer est Male ou le membre actuel sur la hiérarchie Marital Status de la dimension Customer est Married ; Sinon, elle retourne la chaîne « UNMARRIED ou FEMALE ».  
   
 ```  
 WITH  

@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : configuration de la mise en miroir de bases de données à l’aide de certificats (Transact-SQL) | Microsoft Docs'
+title: 'Exemple : Configuration de base de données mise en miroir à l’aide de certificats (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e5afcf2441de59e233abb3f1d211e0f14e517a43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065699"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512178"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemple : configuration de la mise en miroir de bases de données à l'aide de certificats (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemple : Configuration de la mise en miroir de bases de données à l'aide de certificats (Transact-SQL)
   Cet exemple décrit toutes les étapes de création d'une session de mise en miroir de bases de données à l'aide de l'authentification basée sur les certificats. Les exemples de cette rubrique utilisent [!INCLUDE[tsql](../../includes/tsql-md.md)]. À moins que vous ne puissiez garantir la sécurité de votre réseau, il est recommandé d'utiliser le chiffrement pour les connexions de mise en miroir de bases de données.  
   
  Lors de la copie d'un certificat sur un autre système, utilisez une méthode de copie sécurisée. Veillez particulièrement à sécuriser tous vos certificats.  
@@ -32,7 +32,7 @@ ms.locfileid: "48065699"
   
  Le rôle principal initial est occupé par HOST_A, et le rôle miroir par HOST_B.  
   
- La configuration de la mise en miroir de bases de données à l'aide de certificats implique quatre étapes générales, dont les première, deuxième et quatrième sont illustrées par cet exemple. Ces étapes sont les suivantes :  
+ La configuration de la mise en miroir de bases de données à l’aide de certificats implique quatre étapes générales, dont les première, deuxième et quatrième sont illustrées par cet exemple. Ces étapes sont les suivantes :  
   
 1.  [Configuration des connexions sortantes](#ConfiguringOutboundConnections)  
   
@@ -222,7 +222,7 @@ ms.locfileid: "48065699"
 > [!IMPORTANT]  
 >  Si vous envisagez d'utiliser le mode haute sécurité avec basculement automatique, vous devez répéter les mêmes étapes pour configurer le témoin pour les connexions sortantes et entrantes. La configuration des connexions entrantes lorsqu'un serveur témoin est impliqué suppose de configurer les connexions et les utilisateurs du serveur témoin sur les deux serveurs partenaires, ainsi que les connexions et les utilisateurs des deux serveurs partenaires sur le serveur témoin.  
   
- Pour plus d’informations, consultez [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions entrantes &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md).  
+ Pour plus d’informations, consultez [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md).  
   
 ### <a name="creating-the-mirror-database"></a>Création de la base de données miroir  
  Pour plus d’informations sur la création d’une base de données miroir, consultez [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  

@@ -13,12 +13,12 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66389b5b2d171a5d006fcddcf28523790a411d68
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291765"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528018"
 ---
 # <a name="ado-glossary-terms"></a>Termes du glossaire ADO
 Cette rubrique définit les termes pertinents se rapportant à ADO.
@@ -74,7 +74,7 @@ Cette rubrique définit les termes pertinents se rapportant à ADO.
 
  COM (Component Object Model) un binaire standard qui permet aux objets d’interagir dans un environnement réseau, quel que soit le langage dans lequel elles ont été développées ou sur les ordinateurs qu’ils résident. Technologies basées sur COM incluent des contrôles ActiveX, l’automatisation et objets liés et incorporés (OLE). COM permet à un objet d’exposer ses fonctionnalités à d’autres composants et d’héberger des applications. Il définit comment l’objet expose lui-même et comment cette exposition fonctionne sur les processus et les réseaux. COM définit également le cycle de vie de l’objet.
 
- Fichier binaire du composant COM, telles que .dll, .ocx et certains fichiers .exe, qui prend en charge la norme COM pour fournir des objets. Ce fichier contient le code pour un ou plusieurs fabriques de classes, les classes COM, les mécanismes d’entrée de Registre, le code de chargement et ainsi de suite.
+ Fichier composant COM binaire - telles que .dll, .ocx et certains fichiers .exe - qui prend en charge la norme COM pour fournir des objets. Ce fichier contient le code pour un ou plusieurs fabriques de classes, les classes COM, les mécanismes d’entrée de Registre, le code de chargement et ainsi de suite.
 
  opérateur de comparaison un opérateur qui compare deux expressions et retourne une valeur booléenne.
 

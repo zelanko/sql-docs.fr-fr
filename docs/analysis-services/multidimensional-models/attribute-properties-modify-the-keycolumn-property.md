@@ -1,5 +1,5 @@
 ---
-title: Modifier la propriété KeyColumn d’un attribut | Documents Microsoft
+title: Modifier la propriété KeyColumn d’un attribut | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 278780dd8457a90a6ee2fba632216bd1697ec0f7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4415c5dba3382e636488ac94408f163c8e54dc6f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021486"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539032"
 ---
-# <a name="attribute-properties---modify-the-keycolumn-property"></a>Propriétés d’attribut - modifier la propriété KeyColumn
+# <a name="attribute-properties---modify-the-keycolumn-property"></a>Propriétés d’attribut - Modifier la propriété KeyColumn
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Vous pouvez modifier la propriété **KeyColumns** d'un attribut. Par exemple, vous souhaiterez peut-être spécifier une clé composite plutôt qu'une clé unique comme clé de l'attribut.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "34021486"
   
     -   Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur la dimension dans le dossier **Dimensions** , puis cliquez sur **Ouvrir** ou **Concepteur de vues**.  
   
-         —ou—  
+         -ou-  
   
     -   Dans le Concepteur de Cube, sur le **Structure de Cube** onglet, développez la dimension de cube dans le **Dimensions** volet et cliquez sur **modifier \<dimension >**.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "34021486"
 8.  Pour modifier l'ordre des colonnes clés, sélectionnez une colonne, puis cliquez le bouton **Haut** ou **Bas** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Référence des propriétés d'attribut de dimension](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

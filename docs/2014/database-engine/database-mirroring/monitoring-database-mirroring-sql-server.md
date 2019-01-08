@@ -13,12 +13,12 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9c74d39a74529845cc5eaaf0d47536c4a3c39f3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136779"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542909"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Surveillance de la mise en miroir de bases de données (SQL Server)
   Cette section présente le moniteur de mise en miroir de bases de données et les procédures stockées système **sp_dbmmonitor** ; par ailleurs, elle décrit le fonctionnement de la surveillance de la mise en miroir de bases de données (ainsi que du **travail du moniteur de mise en miroir de bases de données)** et récapitule les informations que vous pouvez surveiller en matière de sessions de mise en miroir de bases de données. De plus, cette section explique comment définir des seuils d'avertissement pour un jeu d'événements de mise en miroir de bases de données prédéfinis et comment configurer des alertes pour des événements de mise en miroir de bases de données.  
@@ -176,7 +176,7 @@ ms.locfileid: "48136779"
   
 -   Connexion témoin  
   
-     État de connexion du témoin. Les états possibles sont les suivants :  
+     État de connexion du témoin. Les états possibles sont les suivants :  
   
     -   Unknown  
   

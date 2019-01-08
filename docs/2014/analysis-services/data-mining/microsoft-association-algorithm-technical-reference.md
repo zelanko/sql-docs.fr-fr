@@ -21,12 +21,12 @@ ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d709a575ddde6fe9d3f31e7d8a50b8f6dec83a5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4389ab6f8cd2df0f744eca5b4552a4bb18723627
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146014"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524402"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Références techniques relatives à l’algorithme Microsoft Association
   L'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) est une implémentation simple de l'algorithme Apriori bien connu.  
@@ -77,7 +77,7 @@ ms.locfileid: "50146014"
  Vous pouvez modifier à tout moment les paramètres d'un modèle d'exploration de données à l'aide du Concepteur d'exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez également modifier les paramètres par programmation à l’aide de la <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> collection dans AMO, ou en utilisant le [MiningModels élément &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) dans XMLA. La table ci-dessous décrit chaque paramètre.  
   
 > [!NOTE]  
->  Vous ne pouvez pas modifier les paramètres dans un modèle existant à l’aide d’une instruction DMX ; vous devez spécifier les paramètres dans DMX CREATE MODEL ou ALTER STRUCTURE… ADD MODEL quand vous créez le modèle.  
+>  Vous ne pouvez pas modifier les paramètres dans un modèle existant à l’aide d’une instruction DMX ; Vous devez spécifier les paramètres dans le DMX CREATE MODEL ou ALTER STRUCTURE... ADD MODEL quand vous créez le modèle.  
   
  *MAXIMUM_ITEMSET_COUNT*  
  Spécifie le nombre maximal de jeux d'éléments à produire. Si aucun nombre n'est spécifié, la valeur par défaut est utilisée.  
@@ -90,7 +90,7 @@ ms.locfileid: "50146014"
  *MAXIMUM_ITEMSET_SIZE*  
  Spécifie le nombre maximal d'éléments autorisés dans un jeu d'éléments. Une valeur de 0 spécifie qu'il n'y a pas de limite quant à la taille du jeu d'éléments.  
   
- La valeur par défaut est 3.  
+ La valeur par défaut est 3.  
   
 > [!NOTE]  
 >  Le fait de réduire cette valeur peut potentiellement accélérer la création du modèle, son traitement étant arrêté une fois la limite atteinte.  
@@ -113,7 +113,7 @@ ms.locfileid: "50146014"
  *MINIMUM_PROBABILITY*  
  Spécifie la probabilité minimale qu'une règle ait la valeur True.  
   
- Par exemple, l'attribution de la valeur 0,5 spécifie que toute règle ayant une probabilité inférieure à 50 % ne peut pas être générée.  
+ Par exemple, l'attribution de la valeur 0,5 spécifie que toute règle ayant une probabilité inférieure à 50 % ne peut pas être générée.  
   
  La valeur par défaut est 0,4.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "50146014"
   
  S'applique à la colonne du modèle d'exploration de données.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Un modèle d'association doit contenir une colonne clé, des colonnes d'entrée et une colonne prédictible unique.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  

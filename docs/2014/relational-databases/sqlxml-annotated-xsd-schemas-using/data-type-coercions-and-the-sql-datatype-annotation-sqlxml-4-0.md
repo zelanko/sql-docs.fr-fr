@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapping data types [SQLXML]
@@ -23,12 +21,12 @@ ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ad0d88b04929be5bfcd67534ded2c72733441411
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7662587e1cffad5b111c747c0af2116991743296
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115799"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778411"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Forçages de type de données et annotation sql:datatype (SQLXML 4.0)
   Dans un schéma XSD, l'attribut `xsd:type` spécifie le type de données XSD d'un élément ou d'un attribut. Lorsqu'un schéma XSD est utilisé pour extraire des données de la base de données, le type de données spécifié est utilisé pour formater les données.  
@@ -191,7 +189,7 @@ ms.locfileid: "48115799"
 </Schema>  
 ```  
   
-### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B. Spécification du type de données SQL à l'aide de sql:datatype  
+### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>b. Spécification du type de données SQL à l'aide de sql:datatype  
  Pour obtenir un exemple fonctionnel, consultez l’exemple G dans [exemples de chargement en masse XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). Dans cet exemple, une valeur GUID qui inclut "{" et "}" fait l'objet d'un chargement en masse. Le schéma dans cet exemple spécifie `sql:datatype` pour identifier le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comme `uniqueidentifier`. Cet exemple montre quand `sql:datatype` doit être spécifié dans le schéma.  
   
   

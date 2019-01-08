@@ -17,12 +17,12 @@ ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3f0e4b7946c0e34e79940ac149ac9d3544d85d50
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 49f7c204dd5c8fd74c1e2fe1c1c57adb38e60d69
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661769"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524075"
 ---
 # <a name="xqueries-involving-order"></a>Requêtes XQuery impliquant un ordre
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ WHERE ProductModelID=7
   
 -   Le [fonction SQL :Column() (XQuery)](../xquery/xquery-extension-functions-sql-column.md) contient la valeur relationnelle dans le code XML qui est en cours de construction.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ManuStep ProdModelID="7" ProductModelName="HL Touring Frame">  
@@ -76,7 +76,7 @@ WHERE ProductModelID=7
               MachineHours="2"  LaborHours="1.75" LotSize="1">  
   <Steps>  
    <Step>Assemble all frame components following blueprint 1299.</Step>  
-     …  
+     ...  
   </Steps>  
  </Location>  
 </ManuStep>    
@@ -84,7 +84,7 @@ WHERE ProductModelID=7
   
  La requête précédente récupère uniquement les nœuds de texte. Si vous souhaitez que la totalité <`step`> élément retourné à la place, supprimez le **string()** fonction à partir de la requête :  
   
-### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Recherche des matières et outils utilisés sur le deuxième poste de travail au cours de la fabrication d'un produit  
+### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>b. Recherche des matières et outils utilisés sur le deuxième poste de travail au cours de la fabrication d'un produit  
  Pour un modèle de produit spécifique, la requête suivante récupère les outils et les matières utilisés sur le deuxième poste de travail dans l'ordre des postes de travail que comprend le processus de fabrication.  
   
 ```sql
@@ -120,7 +120,7 @@ where ProductModelID=7
   
 -   Elle utilise deux itérations FLWOR (for...return) : la première pour récupérer les outils et la deuxième pour récupérer les matières.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```xml
 <Location LocationID="10" SetupHours=".5"   
@@ -162,7 +162,7 @@ where ProductModelID=19
   
 -   La requête utilise une boucle FOR ... RETURN pour récupérer les descriptions des composants du modèle de produit. Le **position()** fonction est utilisée pour récupérer les deux premières caractéristiques.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```xml
 <ProductModel ProductModelID="19" ProductModelName="Mountain 100">  
@@ -205,7 +205,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```xml
 <Location LocationID="10" SetupHours=".5"   
@@ -235,7 +235,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```xml
 <LastTwoManuSteps>  

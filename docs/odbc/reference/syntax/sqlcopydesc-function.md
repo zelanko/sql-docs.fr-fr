@@ -20,16 +20,16 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e165ca48af3b634f1dcbe80c05c83f2c872d1b01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e91febb4b5b94b5a7f9df62347b4db5edcecf975
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642777"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202438"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc, fonction
 **Conformité**  
- Version introduite : Conformité des normes 3.0 de ODBC : ISO 92  
+ Version introduite : Conformité aux normes 3.0 de ODBC : ISO 92  
   
  **Résumé**  
  **SQLCopyDesc** copie les informations du descripteur à partir d’un descripteur handle vers un autre.  
@@ -39,8 +39,8 @@ ms.locfileid: "47642777"
 ```  
   
 SQLRETURN SQLCopyDesc(  
-     SQLHDESC     SourceDescHandle,  
-     SQLHDESC     TargetDescHandle);  
+     SQLHDESC     SourceDescHandle,  
+     SQLHDESC     TargetDescHandle);  
 ```  
   
 ## <a name="arguments"></a>Arguments  

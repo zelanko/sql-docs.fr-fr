@@ -11,12 +11,12 @@ ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4f0853eb502d810a693e4cc2872710a62c784268
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e84b6e148774fc9b48b6174fa8be87579290fec4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159399"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393412"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Installer PowerPivot à partir de l'invite de commandes
   Vous pouvez exécuter le programme d'installation depuis la ligne de commande pour installer SQL Server PowerPivot pour SharePoint. Vous devez inclure le paramètre de `/ROLE` dans votre commande et exclure le paramètre `/FEATURES`.  
@@ -37,7 +37,7 @@ ms.locfileid: "48159399"
   
  Ces deux rôles installent les fichiers d'application, de configuration et de déploiement qui permettent à un PowerPivot pour SharePoint de s'exécuter dans une batterie de serveurs SharePoint. La spécification de l'un ou l'autre rôle forcera le programme d'installation à vérifier les configurations matérielle et logicielle requises pour l'intégration SharePoint.  
   
- L'option batterie de serveurs existante suppose qu'une batterie de serveurs SharePoint est déjà en place. L'option nouvelle batterie de serveurs suppose la création d'une nouvelle batterie ; elle prend en charge l'ajout d'une instance de moteur de base de données dans la syntaxe de ligne de commande afin que vous puissiez utiliser l'instance du moteur de base de données comme serveur de base de données de la batterie de serveurs.  
+ L'option batterie de serveurs existante suppose qu'une batterie de serveurs SharePoint est déjà en place. La nouvelle option de batterie de serveurs suppose que vous allez créer une nouvelle batterie de serveurs ; Il prend en charge l’ajout d’une instance du moteur de base de données dans la syntaxe de ligne de commande afin que vous pouvez utiliser l’instance du moteur de base de données en tant que serveur de base de données de la batterie de serveurs.  
   
  Contrairement aux versions précédentes, toutes les tâches de configuration du serveur sont effectuées comme après l'installation. Si vous automatisez les étapes d'installation et de configuration, vous pouvez utiliser PowerShell pour configurer le serveur. Pour plus d’informations, consultez [Configuration de PowerPivot à l’aide de Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
   

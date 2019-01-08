@@ -18,12 +18,12 @@ ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22df70966fe1bac4f9a825a97c7998d6900af02a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ccf355df8a26136a72b48c4b81a1953d84d90186
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168099"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529643"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Créer un projet Analysis Services (SSDT)
   Vous pouvez définir un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à l’aide du modèle de projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou de l’Assistant Importation de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour lire le contenu d’une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si aucune solution n'est chargée actuellement dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la création d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée automatiquement une solution. Sinon, le nouveau projet de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sera ajouté à la solution existante. Meilleures pratiques pour un appel de développement de solutions afin de créer des projets distincts pour différents types de données d'application, à l'aide d'une seule solution si les projets sont liés. Par exemple, vous pouvez avoir une seule solution qui contient des projets distincts pour les packages Integration Services, les bases de données Analysis Services et les rapports Reporting Services qui sont tous utilisés par la même application de gestion.  
@@ -59,7 +59,7 @@ ms.locfileid: "48168099"
   
 5.  Pour ajouter le nouveau projet à la solution existante, dans la liste déroulante **Solution** , sélectionnez **Ajouter à la solution**.  
   
-     —ou—  
+     -ou-  
   
      Pour créer une solution, dans la liste déroulante **Solution** , sélectionnez **Créer une nouvelle solution**. Pour créer un dossier pour la nouvelle solution, sélectionnez **Créer le répertoire pour la solution**. Dans la zone de texte **Nom de solution**, tapez le nom de la nouvelle solution.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48168099"
 ||Structure d'exploration de données|Démarre l’Assistant Exploration de données pour ajouter une nouvelle structure d’exploration de données et le modèle d’exploration de données associé au projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer les propriétés de projet Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
+ [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
  [Générer des projets Analysis Services &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
  [Déployer des projets Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   

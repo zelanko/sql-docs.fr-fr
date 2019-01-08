@@ -17,15 +17,15 @@ ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42fc1d3880e01c435e7991fb5781d0f815a83db5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43c6ffd93020b1db1b90ad1768822075299d16b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612288"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527679"
 ---
 # <a name="database-access-architecture"></a>Architecture de l’accès aux bases de données
-L’une des questions dans le développement d’ODBC a été quelle partie de l’architecture d’accès de base de données afin de normaliser. Le code SQL décrits dans la section précédente des interfaces de programmation — embedded SQL, SQL modules et CLI — sont uniquement une partie de cette architecture. En fait, étant donné que ODBC a été principalement destiné à se connecter les applications basées sur les ordinateur personnel et ses grands systèmes SGBD, comportait également un nombre de composants réseau, certains d'entre eux peuvent être normalisé.  
+L’une des questions dans le développement d’ODBC a été quelle partie de l’architecture d’accès de base de données afin de normaliser. Les interfaces de programmation SQL décrit dans la section précédente - embedded SQL, les modules SQL et CLI - est uniquement une partie de cette architecture. En fait, étant donné que ODBC a été principalement destiné à se connecter les applications basées sur les ordinateur personnel et ses grands systèmes SGBD, comportait également un nombre de composants réseau, certains d'entre eux peuvent être normalisé.  
   
  Cette section contient les rubriques suivantes.  
   

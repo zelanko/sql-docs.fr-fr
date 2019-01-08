@@ -14,12 +14,12 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 80450865b72360068555cb1a25224a3ea503e5a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfbf2362b06abc254879d25c4f8e7b8e876a6737
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097579"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215858"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Passer un paramètre de rapport dans une URL
   Vous pouvez passer des paramètres de rapport à un rapport en les incluant dans une URL de rapport. Ces paramètres URL ne sont pas préfixés parce qu'ils sont directement passés au moteur de traitement des rapports.  
@@ -31,12 +31,12 @@ ms.locfileid: "48097579"
   
  Tous les paramètres de requête peuvent avoir des paramètres de rapport correspondants. Vous passez un paramètre de requête à un rapport en transmettant le paramètre de rapport correspondant. Pour plus d’informations, consultez [Générer une requête dans le Concepteur de requêtes relationnelles &#40;Générateur de rapports et SSRS&#41;](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Les paramètres de rapport respectent la casse.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Les paramètres de rapport respectent la casse et utilisent les caractères spéciaux suivants :  
->   
+> 
 >  -   Tout espace figurant dans la chaîne d'URL est remplacé par le caractère « % 20 », conformément aux normes d'encodage des URL.  
 > -   Un espace dans la partie Paramètre de l'URL est remplacé par un caractère Plus (+).  
 > -   Un point-virgule dans toute partie de la chaîne est remplacé par les caractères « %3A ».  
@@ -49,7 +49,7 @@ ms.locfileid: "48097579"
 parameter=value  
 ```  
   
- Par exemple, pour spécifier deux paramètres, « ReportMonth » et « ReportYear », définis dans un rapport, utilisez l'URL suivante pour un serveur de rapports en mode natif :  
+ Par exemple, pour spécifier deux paramètres, « ReportMonth » et « ReportYear », définis dans un rapport, utilisez l’URL suivante pour un serveur de rapports en mode natif :  
   
 ```  
 http://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
@@ -84,23 +84,23 @@ SalesOrderNumber:isnull=true
 ##  <a name="bkmk_examples"></a> Autres exemples  
  L'exemple d'URL suivante comprend des espaces et plusieurs paramètres  
   
--   Le nom de dossier « SQL Server User Education Team » comprend des espaces ; par conséquent, un « + » remplace chaque espace.  
+-   Le nom de dossier « SQL Server User Education Team » comprend des espaces ; par conséquent, un « + » remplace chaque espace.  
   
--   Le nom de rapport « team project report » comprend des espaces ; par conséquent, un « + » remplace chaque espace.  
+-   Le nom de rapport « team project report » comprend des espaces ; par conséquent, un « + » remplace chaque espace.  
   
--   Passe deux paramètres de « teamgrouping2 » avec la valeur « xgroup » et « teamgrouping1 » avec la valeur « ygroup ».  
+-   Passe deux paramètres : « teamgrouping2 » avec la valeur « xgroup » et « teamgrouping1 » avec la valeur « ygroup ».  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup  
 ```  
   
- L'exemple d'URL suivante comprend un paramètre à valeurs multiples nommé OrderID. Le format d'un paramètre à valeurs multiples consiste à répéter le nom du paramètre pour chaque valeur.  
+ L’exemple d’URL suivant comprend un paramètre à valeurs multiples nommé OrderID. Le format d'un paramètre à valeurs multiples consiste à répéter le nom du paramètre pour chaque valeur.  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- L’exemple d’URL suivant passe un seul paramètre de *SellStartDate* avec une valeur « 7/1/2005 » pour un serveur de rapports en mode natif.  
+ L’exemple d’URL suivant passe un seul paramètre *SellStartDate* avec la valeur « 7/1/2005 » pour un serveur de rapports en mode natif.  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
@@ -108,6 +108,6 @@ http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report
   
 ## <a name="see-also"></a>Voir aussi  
  [Accès URL &#40;SSRS&#41;](url-access-ssrs.md)   
- [Référence de paramètres d'accès URL](url-access-parameter-reference.md)  
+ [Référence de paramètre d'accès URL](url-access-parameter-reference.md)  
   
   

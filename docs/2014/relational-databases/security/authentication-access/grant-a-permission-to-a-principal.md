@@ -12,12 +12,12 @@ ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1e24250bfd313004b81a3d512a163963c070c08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17282ecfc0c6adbb1e4d1fc97f470371f90bd3f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126345"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520797"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Accorder une autorisation à un principal
   Cette rubrique explique comment accorder une autorisation à un principal dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -65,7 +65,7 @@ ms.locfileid: "48126345"
   
 4.  Cliquez avec le bouton droit sur une procédure stockée, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés de la procédure stockée -***nom_procédure_stockée*, sous Sélectionner une page, sélectionnez **Autorisations**. Utilisez cette page pour ajouter des utilisateurs ou des rôles à la procédure stockée et spécifier les autorisations dont disposeront ces utilisateurs ou rôles.  
+5.  Dans le **propriétés de la procédure stockée-*** nom_procédure_stockée* boîte de dialogue, sous sélectionner une page, sélectionnez **autorisations**. Utilisez cette page pour ajouter des utilisateurs ou des rôles à la procédure stockée et spécifier les autorisations dont disposeront ces utilisateurs ou rôles.  
   
 6.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48126345"
   
 #### <a name="to-grant-permission-to-a-principal"></a>Pour accorder une autorisation à un principal  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

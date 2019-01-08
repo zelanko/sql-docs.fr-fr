@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 49cf92537bf0289765dca7b3a04c76fe0bf50fd8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145304"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418700"
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>Propriétés de cellule MDX - utilisation des propriétés de cellule
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ SELECT [<axis_specification>
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|**ACTION_TYPE**|Masque binaire indiquant les types d'actions qui existent sur la cellule. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Remarque : les actions d’extraction des requêtes dont la clause Where contient un jeu ne sont pas comprises.|  
+|**ACTION_TYPE**|Masque binaire indiquant les types d'actions qui existent sur la cellule. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Remarque : Les actions d'extraction des requêtes dont la clause Where contient un jeu ne sont pas comprises.|  
 |**BACK_COLOR**|Couleur d’arrière-plan utilisée pour afficher la propriété **VALUE** ou **FORMATTED_VALUE**. Pour plus d’informations, consultez [Contenu de FORE_COLOR et BACK_COLOR &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |**CELL_ORDINAL**|Numéro ordinal de la cellule dans le jeu de données.|  
 |**FONT_FLAGS**|Masque de bits détaillant les effets sur la police. La valeur de cette propriété est le résultat d'une opération OU au niveau du bit sur une ou plusieurs des constantes suivantes :<br /><br /> **MDFF_BOLD** = 1<br /><br /> **MDFF_ITALIC** = 2<br /><br /> **MDFF_UNDERLINE** = 4<br /><br /> **MDFF_STRIKEOUT** = 8<br /><br /> <br /><br /> Par exemple, la valeur 5 représente la combinaison des effets gras (**MDFF_BOLD**) et souligné (**MDFF_UNDERLINE**).|  
@@ -62,7 +62,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_ENABLED_WITH_UPDATE** (0x00000002)   La cellule peut être mise à jour avec une instruction UPDATE. La mise à jour peut échouer si une cellule feuille non activée en écriture est mise à jour.|  
 ||**CELL_UPDATE_NOT_ENABLED_FORMULA** (0x10000001)   La cellule ne peut pas être mise à jour, car elle a un membre calculé parmi ses coordonnées ; elle a été récupérée avec un jeu dans la clause Where. Une cellule peut être mise à jour même si une formule affecte sa valeur (se trouve à un certain endroit sur le chemin d'agrégation) ou si une cellule calculée se trouve dessus. Dans ce scénario, la valeur finale de la cellule ne peut pas être la valeur mise à jour, car le calcul affectera le résultat.|  
 ||**CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE** (0x10000002)   La cellule ne peut pas être mise à jour, car les mesures de type non-somme (comptage, min, max, comptage de valeurs, semi-additives) ne peuvent pas être mises à jour.|  
-||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003)   La cellule ne peut pas être mise à jour, car elle n’existe pas en tant que telle à l’intersection d’une mesure et d’un membre de dimension sans rapport avec le groupe de mesures de la mesure.|  
+||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0 x 10000003) la cellule ne peut pas être mis à jour car la cellule n’existe pas comme il se trouve à l’intersection d’une mesure et un membre de dimension sans rapport avec groupe de mesures de la mesure.|  
 ||**CELL_UPDATE_NOT_ENABLED_SECURE** (0x10000005)   La cellule ne peut pas être mise à jour, car elle est sécurisée.|  
 ||**CELL_UPDATE_NOT_ENABLED_CALCLEVEL** (0x10000006)   Réservé pour un usage ultérieur.|  
 ||**CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE** (0x10000007)   La cellule ne peut pas être mise à jour pour des raisons internes.|  

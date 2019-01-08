@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - delayed durability
@@ -13,12 +13,12 @@ ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ff62ed93210521c9bc5499c5518edae7cf7d2ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e217aedd1c6d3b2c58d946ed455bf9398cd7798
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147162"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818351"
 ---
 # <a name="control-transaction-durability"></a>Contrôler la durabilité d'une transaction
   Les validations de transactions[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent avoir une durabilité complète, la durabilité par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une durabilité retardée (également appelée Validation différée).  
@@ -83,7 +83,7 @@ ms.locfileid: "48147162"
   
      Si une transaction à durabilité complète ou un sp_flush_log est validé avec succès, toutes les transactions à durabilité retardée déjà validées ont été rendues durables.  
   
- Le journal peut être périodiquement vidé sur le disque. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournit pas de garantie de durabilité autre que les transactions durables et sp_flush_log.  
+ Le journal peut être périodiquement vidé sur le disque. Cependant, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournit pas de garantie de durabilité autre que les transactions durables et sp_flush_log.  
   
 ## <a name="how-to-control-transaction-durability"></a>Procédure pour contrôler la durabilité d'une transaction  
   
@@ -91,19 +91,19 @@ ms.locfileid: "48147162"
  En tant qu'administrateur de base de données, vous pouvez contrôler si les utilisateurs peuvent utiliser la durabilité retardée des transactions sur une base de données avec l'instruction suivante. Vous devez définir le paramètre de durabilité retardée avec ALTER DATABASE.  
   
 ```tsql  
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
 ```  
   
  `DISABLED`  
  [Valeur par défaut] Avec ce paramètre, toutes les transactions qui sont validées sur la base de données ont une durabilité complète, quel que soit le paramètre de niveau de validation ([DELAYED_DURABILITY= ON | OFF]). Aucune modification ni recompilation de procédure stockée n'est nécessaire. Cela vous permet de vous assurer que les données ne sont jamais mises en danger par la durabilité retardée.  
   
  `ALLOWED`  
- Avec ce paramètre, la durabilité de chaque transaction est déterminée au niveau de la transaction – DELAYED_DURABILITY = { *OFF* | ON }. Pour plus d’informations, consultez [Contrôle au niveau du bloc atomique – Procédures stockées compilées en mode natif](control-transaction-durability.md#compiledproccontrol) et [Contrôle au niveau de la validation – Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol) .  
+ Avec ce paramètre, la durabilité de chaque transaction est déterminée au niveau de la transaction - DELAYED_DURABILITY = { *OFF* | ON }. Pour plus d’informations, consultez [Contrôle au niveau du bloc atomique - Procédures stockées compilées en mode natif](control-transaction-durability.md#compiledproccontrol) et [Contrôle au niveau de la validation - Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol).  
   
  `FORCED`  
  Avec ce paramètre, chaque transaction qui est validée sur la base de données a une durabilité retardée, même si la transaction spécifie une durabilité complète (DELAYED_DURABILITY = OFF) ou omette toute indication de durabilité. Ce paramètre est utile lorsque la durabilité retardée des transactions a un intérêt pour une base de données, mais que vous ne souhaitez pas modifier le code de l'application.  
   
-###  <a name="CompiledProcControl"></a> Contrôle au niveau du bloc atomique – Procédures stockées compilées en mode natif  
+###  <a name="CompiledProcControl"></a> Contrôle au niveau du bloc atomique - Procédures stockées compilées en mode natif  
  Le code suivant s'insère à l'intérieur du bloc atomique.  
   
 ```tsql  
@@ -119,26 +119,26 @@ DELAYED_DURABILITY = { OFF | ON }
  **Exemple de code :**  
   
 ```tsql  
-CREATE PROCEDURE <procedureName> …  
+CREATE PROCEDURE <procedureName> ...  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
 (  
     DELAYED_DURABILITY = ON,  
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
     LANGUAGE = N'English'  
-    …  
+    ...  
 )  
 END  
 ```  
   
-### <a name="table-1-durability-in-atomic-blocks"></a>Tableau 1 : durabilité dans les blocs atomiques  
+### <a name="table-1-durability-in-atomic-blocks"></a>Tableau 1 : durabilité dans les blocs atomiques  
   
 |Option de durabilité de bloc atomique|Aucune transaction existante|Transaction en cours (à durabilité complète ou retardée)|  
 |------------------------------------|-----------------------------|---------------------------------------------------------|  
 |`DELAYED_DURABILITY = OFF`|Le bloc atomique démarre une nouvelle transaction à durabilité complète.|Le bloc atomique crée un point d'enregistrement dans la transaction existante, puis démarre la nouvelle transaction.|  
 |`DELAYED_DURABILITY = ON`|Le bloc atomique démarre une nouvelle transaction à durabilité retardée.|Le bloc atomique crée un point d'enregistrement dans la transaction existante, puis démarre la nouvelle transaction.|  
   
-###  <a name="bkmk_T-SQLControl"></a> Contrôle au niveau de la validation (COMMIT) –[!INCLUDE[tsql](../../includes/tsql-md.md)]  
+###  <a name="bkmk_T-SQLControl"></a> Contrôle au niveau de la validation -[!INCLUDE[tsql](../../includes/tsql-md.md)]  
  La syntaxe de l'option COMMIT est étendue pour vous permettre de forcer la durabilité retardée des transactions. Si DELAYED_DURABILITY a la valeur DISABLED ou FORCED au niveau de la base de données (voir ci-dessus), cette option COMMIT est ignorée.  
   
 ```tsql  
@@ -157,10 +157,10 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 |Paramètre de validation (COMMIT)/Paramètre de base de données|DELAYED_DURABILITY = DISABLED|DELAYED_DURABILITY = ALLOWED|DELAYED_DURABILITY = FORCED|  
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
-|`DELAYED_DURABILITY = OFF` Transactions au niveau de la base de données.|La transaction a une durabilité complète.|La transaction a une durabilité complète.|La transaction a une durabilité retardée.|  
-|`DELAYED_DURABILITY = ON` Transactions au niveau de la base de données.|La transaction a une durabilité complète.|La transaction a une durabilité retardée.|La transaction a une durabilité retardée.|  
-|`DELAYED_DURABILITY = OFF` Cross-base de données ou de transaction distribuée.|La transaction a une durabilité complète.|La transaction a une durabilité complète.|La transaction a une durabilité complète.|  
-|`DELAYED_DURABILITY = ON` Cross-base de données ou de transaction distribuée.|La transaction a une durabilité complète.|La transaction a une durabilité complète.|La transaction a une durabilité complète.|  
+|Transactions au niveau de la base de données `DELAYED_DURABILITY = OFF`.|La transaction a une durabilité complète.|La transaction a une durabilité complète.|La transaction a une durabilité retardée.|  
+|Transactions au niveau de la base de données `DELAYED_DURABILITY = ON`.|La transaction a une durabilité complète.|La transaction a une durabilité retardée.|La transaction a une durabilité retardée.|  
+|Transaction distribuée ou de bases de données croisées `DELAYED_DURABILITY = OFF`.|La transaction a une durabilité complète.|La transaction a une durabilité complète.|La transaction a une durabilité complète.|  
+|Transaction distribuée ou de bases de données croisées `DELAYED_DURABILITY = ON`.|La transaction a une durabilité complète.|La transaction a une durabilité complète.|La transaction a une durabilité complète.|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>Procédure pour forcer le vidage du journal de transactions  
  Il existe deux moyens pour forcer le vidage du journal de transactions sur le disque.  

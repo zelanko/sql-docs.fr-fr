@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87a5be3dc726b86b1710dd45416404cf3899f4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 243207c6175f5604e7cc887bd7c67085e2d86291
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595697"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507641"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -80,14 +80,14 @@ sp_describe_parameter_encryption
 |**parameter_ordinal**|**Int**|ID de la ligne dans le jeu de résultats.|  
 |**parameter_name**|**sysname**|Nom d’un des paramètres spécifiés dans le  *\@params* argument.|  
 |**column_encryption_algorithm**|**tinyint**|Qui indique l’algorithme de chiffrement configuré pour la colonne, le paramètre correspond à du code. Les valeurs actuellement prises en charge sont : 2 pour **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
-|**column_encryption_type**|**tinyint**|Code indiquant le type de chiffrement configuré pour la colonne, le paramètre correspond à. Les valeurs prises en charge sont :<br /><br /> 0 – en texte brut (la colonne n’est pas chiffrée)<br /><br /> 1 – aléatoire de chiffrement<br /><br /> 2 – le chiffrement déterministe.|  
+|**column_encryption_type**|**tinyint**|Code indiquant le type de chiffrement configuré pour la colonne, le paramètre correspond à. Les valeurs prises en charge sont :<br /><br /> 0 - texte brut (la colonne n’est pas chiffrée)<br /><br /> 1 - aléatoire de chiffrement<br /><br /> 2 - le chiffrement déterministe.|  
 |**column_encryption_key_ordinal**|**Int**|Le code de la ligne dans le premier résultat défini. La ligne référencée décrit la clé de chiffrement de colonne configurée pour la colonne, le paramètre correspond à.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Numéro de version de l’algorithme de normalisation de type.|  
   
 ## <a name="remarks"></a>Notes  
  Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote du client, prise en charge Always Encrypted, appelle automatiquement **sp_describe_parameter_encryption** pour récupérer les métadonnées de chiffrement pour les requêtes paramétrables, émis par l’application. Par la suite, le pilote utilise les métadonnées de chiffrement pour chiffrer les valeurs des paramètres qui correspondent aux colonnes de base de données protégées avec Always Encrypted et remplace les valeurs de paramètre de texte en clair, soumis par l’application, avec le texte chiffré valeurs de paramètre, avant d’envoyer la requête au moteur de base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Exiger le **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** et **VIEW ANY COLUMN MASTER KEY DEFINITION** autorisations dans la base de données.  
   
 ## <a name="examples"></a>Exemples  

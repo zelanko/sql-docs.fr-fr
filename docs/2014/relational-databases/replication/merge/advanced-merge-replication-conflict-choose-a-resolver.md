@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - default conflict resolver
@@ -15,12 +14,12 @@ ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfd11a6f4e54fc835ac35e9d3864fe4190701448
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174962"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752251"
 ---
 # <a name="choose-a-resolver"></a>Choisir un résolveur
   Lors du choix d'un résolveur, considérez l'importance de la résolution des conflits dans votre application et si vous pouvez utiliser l'outil de résolution des conflits par défaut basé sur les priorités ou si vous devez utiliser un résolveur d'articles.  

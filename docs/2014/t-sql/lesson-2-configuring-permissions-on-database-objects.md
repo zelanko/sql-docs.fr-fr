@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 helpviewer_keywords:
 - database permissions
@@ -12,27 +12,27 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fbde3513577edc3a475c468e51e8e4c8a3eda52e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086576"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52746922"
 ---
-# <a name="lesson-2-configuring-permissions-on-database-objects"></a>Leçon 2 : Configuration des autorisations sur des objets de base de données
+# <a name="lesson-2-configuring-permissions-on-database-objects"></a>Leçon 2 : Configuration des autorisations sur des objets de base de données
   L'octroi à un utilisateur de l'accès à une base de données implique trois étapes. Commencez par créer une connexion. La connexion permet à l’utilisateur de se connecter au [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Puis, configurez la connexion en tant qu'utilisateur dans la base de données spécifiée. Enfin, accordez à cet utilisateur l'autorisation sur les objets de base de données. Cette leçon illustre ces trois étapes et vous montre comment créer une vue et une procédure stockée comme objet.  
   
  Cette leçon contient les rubriques suivantes :  
   
 -   [Création d'une connexion](lesson-2-1-creating-a-login.md)  
   
--   [Octroi de l’accès à une base de données](lesson-2-2-granting-access-to-a-database.md)  
+-   [Octroi de l'accès à une base de données](lesson-2-2-granting-access-to-a-database.md)  
   
 -   [Création des vues et des procédures stockées](lesson-2-3-creating-views-and-stored-procedures.md)  
   
 -   [Octroi de l’accès à un objet de base de données](lesson-2-4-granting-access-to-a-database-object.md)  
   
--   [Résumé : configuration des autorisations sur des objets de base de données](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
+-   [Résumé : Configuration des autorisations sur des objets de base de données](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Création d'une connexion](lesson-2-1-creating-a-login.md)  

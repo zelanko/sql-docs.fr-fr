@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - DAY function
@@ -14,12 +13,12 @@ ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 919b6f92cda6a533ac4918e3f7cc4496fdb23e52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d530819e235efd233df3247d2e85d7da8c2cf1d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198198"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805131"
 ---
 # <a name="day-ssis-expression"></a>DAY (expression SSIS)
   Renvoie un entier qui représente la partie jour d'une date.  
@@ -44,7 +43,7 @@ DAY(date)
  Un littéral de date doit être explicitement converti dans l'un des types de données date. Pour plus d’informations, consultez [Types de données Integration Services](../data-flow/integration-services-data-types.md).  
   
 > [!NOTE]  
->  La validation de l'expression échoue lorsqu'un littéral de date est explicitement converti en un des types de données de date suivants : DT_DBTIMESTAMPOFFSET et DT_DBTIMESTAMP2.  
+>  L’expression ne parvient pas à valider lorsqu’un littéral de date est explicitement converti à un des types de données de date suivants : DT_DBTIMESTAMPOFFSET et DT_DBTIMESTAMP2.  
   
  L'utilisation de la fonction DAY est plus directe mais équivalente à celle de la fonction DATEPART("Day", date).  
   
@@ -68,11 +67,11 @@ DAY(GETDATE())
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [DATEADD &#40;SSIS Expression&#41;](dateadd-ssis-expression.md)   
- [DATEDIFF &#40;SSIS Expression&#41;](datediff-ssis-expression.md)   
+ [DATEADD &#40;expression SSIS&#41;](dateadd-ssis-expression.md)   
+ [DATEDIFF &#40;expression SSIS&#41;](datediff-ssis-expression.md)   
  [DATEPART &#40;expression SSIS&#41;](datepart-ssis-expression.md)   
  [MONTH &#40;expression SSIS&#41;](month-ssis-expression.md)   
  [YEAR &#40;expression SSIS&#41;](year-ssis-expression.md)   
- [Fonctions &#40;SSIS Expression&#41;](functions-ssis-expression.md)  
+ [Fonctions &#40;expression SSIS&#41;](functions-ssis-expression.md)  
   
   

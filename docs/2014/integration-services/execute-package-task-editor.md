@@ -15,12 +15,12 @@ ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 468823b10b4b97fb2a4fe7fcd0a83f28af6fc5b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f750d134459b55e3d14772bf8b4c6db25b1ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119039"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504517"
 ---
 # <a name="execute-package-task-editor"></a>Éditeur de tâche d'exécution de package
   Utilisez l'Éditeur de tâche d'exécution de package pour configurer la tâche d'exécution de package. La tâche d'exécution de package étend les fonctionnalités d'entreprise de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en permettant à des packages d'exécuter d'autres packages au sein d'un flux de travail.  
@@ -59,7 +59,7 @@ ms.locfileid: "48119039"
 >  L’option **ReferenceType** est en lecture seule et est définie sur **Référence externe** si le projet qui contient le package n’a pas été converti en modèle de déploiement de projet. Pour plus d’informations sur la conversion, consultez [Déployer des projets sur le serveur Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
   
  **Mot de passe**  
- Si le package enfant s'avère protégé par un mot de passe, indiquez ce dernier ou cliquez sur le bouton représentant des points de suspension (…) afin de définir un nouveau mot de passe.  
+ Si le package enfant s’avère protégé par un mot de passe, indiquez ce dernier ou cliquez sur le bouton représentant des points de suspension (...) afin de définir un nouveau mot de passe.  
   
  `ExecuteOutOfProcess`  
  Spécifiez si le package enfant s'exécute dans le processus du package parent ou dans un processus distinct. Par défaut, la propriété ExecuteOutOfProcess de la tâche Exécuter le Package a la valeur `False`, et le package enfant s’exécute dans le même processus que le package parent. Si vous affectez la valeur `true` à cette propriété, le package enfant s'exécute dans un processus indépendant. Cela peut ralentir le lancement du package enfant. En outre, si vous avez défini la propriété sur `true`, vous ne pouvez pas déboguer le package dans une installation d'outils uniquement ; vous devez installer le produit [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Installer Integration Services](install-windows/install-integration-services.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "48119039"
  **Emplacement**  
  Sélectionnez l'emplacement du package enfant. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**SQL Server**|Définissez l'emplacement d'une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |**Système de fichiers**|Permet de définir l'emplacement du système de fichiers.|  
@@ -91,16 +91,16 @@ ms.locfileid: "48119039"
  **Connexion**  
  Sélectionnez un gestionnaire de connexions OLE DB dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md), [Configurer le gestionnaire de connexions OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md), [configurer le Gestionnaire de connexions OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
- Permet de saisir le nom du package enfant ou de cliquer sur le bouton représenté par des points de suspension (…) pour atteindre le package.  
+ Permet d’entrer le nom du package enfant ou de cliquer sur le bouton représenté par des points de suspension (...) pour atteindre le package.  
   
 #### <a name="location--file-system"></a>Emplacement = Système de fichiers  
  **Connexion**  
  Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions file](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  Permet d'afficher le nom du package.  

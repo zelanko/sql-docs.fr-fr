@@ -1,5 +1,5 @@
 ---
-title: Créer une relation | Documents Microsoft
+title: Créer une relation dans les modèles tabulaires Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d985f9985691005eaa84365dacd2a4072542c05b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7e9ee96a04aa6b023be51f8e1e8d913e26a7e2a8
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041073"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072096"
 ---
 # <a name="create-a-relationship"></a>Créer une relation 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

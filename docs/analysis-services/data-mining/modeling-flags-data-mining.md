@@ -1,5 +1,5 @@
 ---
-title: Indicateurs de modélisation (exploration de données) | Documents Microsoft
+title: Indicateurs de modélisation (exploration de données) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 32a7241fcea41af44e3e336d02c857f51d133208
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f644f882d1a252f678d868d3492b4aed4e11006f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017416"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531898"
 ---
 # <a name="modeling-flags-data-mining"></a>Indicateurs de modélisation (Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,16 +32,16 @@ ms.locfileid: "34017416"
  Indique que les valeurs de la colonne d'attribut ne doivent jamais contenir de valeur NULL. Une erreur est générée si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rencontre une valeur NULL pour la colonne d’attribut au cours du processus d’apprentissage du modèle.  
   
  **MODEL_EXISTENCE_ONLY**  
- Indique que la colonne sera considérée comme ayant deux états : **Missing** (manquant) et **Existing**(existant). Si la valeur est **NULL**, elle est considérée comme manquante (Missing). L'indicateur MODEL_EXISTENCE_ONLY est appliqué à l'attribut prédictible et est pris en charge par la plupart des algorithmes.  
+ Indique que la colonne sera considérée comme ayant deux états : **Manquant** et **existant**. Si la valeur est **NULL**, elle est considérée comme manquante (Missing). L'indicateur MODEL_EXISTENCE_ONLY est appliqué à l'attribut prédictible et est pris en charge par la plupart des algorithmes.  
   
- En effet, l’affectation de la valeur **True** à l’indicateur MODEL_EXISTENCE_ONLY modifie la représentation des valeurs pour qu’il n’y ait que deux états : **Missing** et **Existing**. Tous les états autres que Missing sont combinés dans une valeur **Existing** unique.  
+ En effet, en définissant l’indicateur MODEL_EXISTENCE_ONLY **True** modifie la représentation des valeurs telles qu’il existe seulement deux états : **Manquant** et **existant**. Tous les états autres que Missing sont combinés dans une valeur **Existing** unique.  
   
  En règle générale, cet indicateur de modélisation est utilisé dans des attributs pour lesquels l’état **NULL** a une signification implicite. En d’autres termes, le fait que la colonne ait une valeur peut revêtir plus d’importance que la valeur explicite de l’état **NOT NULL** . Par exemple, une colonne [DateContractSigned] peut être **NULL** si un contrat n’a jamais été signé et **NOT NULL** si le contrat a été signé. Ainsi, si le but du modèle est de prédire si un contrat doit être signé, vous pouvez utiliser l’indicateur MODEL_EXISTENCE_ONLY pour ignorer la valeur de date exacte dans les cas **NOT NULL** et faire uniquement la distinction entre les cas où un contrat est **Missing** et ceux où la valeur est **Existing**.  
   
 > [!NOTE]  
 >  L'état Missing est un état spécial utilisé par l'algorithme qui diffère de la valeur de texte « Manquant » dans une colonne. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
- **RÉGRESSEUR**  
+ **REGRESSOR**  
  Indique que la colonne est candidate pour être utilisée comme régresseur lors du traitement. Cet indicateur est défini sur une colonne de modèle d'exploration de données et ne peut être appliqué qu'à des colonnes dont le type de données numériques continues. Pour plus d’informations sur l’utilisation de cet indicateur, consultez la section [Utilisations de l’indicateur de modélisation REGRESSOR](#bkmk_UseRegressors)plus loin dans cette rubrique.  
   
 ## <a name="viewing-and-changing-modeling-flags"></a>Affichage et modification d'indicateurs de modélisation  
@@ -57,7 +57,7 @@ WHERE STRUCTURE_NAME = '<structure name>'
   
  Vous pouvez ajouter ou modifier les indicateurs de modélisation utilisés dans un modèle en utilisant le Concepteur d'exploration de données et en modifiant les propriétés des colonnes associées. De telles modifications requièrent que la structure ou le modèle soient à nouveau traités.  
   
- Vous pouvez spécifier des indicateurs de modélisation dans une nouvelle structure d'exploration de données ou un nouveau modèle d'exploration de données à l'aide de DMX, ou à l'aide de scripts AMO ou XMLA. Cependant, vous ne pouvez pas utiliser DMX pour modifier les indicateurs de modélisation utilisés dans un modèle et une structure d'exploration de données existants. Vous devez créer un modèle d’exploration de données en utilisant la syntaxe `ALTER MINING STRUCTURE….ADD MINING MODEL`.  
+ Vous pouvez spécifier des indicateurs de modélisation dans une nouvelle structure d'exploration de données ou un nouveau modèle d'exploration de données à l'aide de DMX, ou à l'aide de scripts AMO ou XMLA. Cependant, vous ne pouvez pas utiliser DMX pour modifier les indicateurs de modélisation utilisés dans un modèle et une structure d'exploration de données existants. Vous devez créer un modèle d’exploration de données en utilisant la syntaxe `ALTER MINING STRUCTURE....ADD MINING MODEL`.  
   
 ##  <a name="bkmk_UseRegressors"></a> Utilisations de l’indicateur de modélisation REGRESSOR  
  Lorsque vous définissez l'indicateur de modélisation REGRESSOR sur une colonne, vous indiquez à l'algorithme que la colonne contient des régresseurs potentiels. Les régresseurs actuellement utilisés dans le modèle sont déterminés par l'algorithme. Un régresseur potentiel peut être ignoré s'il ne modélise pas l'attribut prédictible.  
@@ -92,13 +92,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |Tâche|Rubrique|  
 |----------|-----------|  
-|Modifier les indicateurs de modélisation à l'aide du Concepteur d'exploration de données|[Afficher ou modifier la modélisation des indicateurs & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Modifier les indicateurs de modélisation à l'aide du Concepteur d'exploration de données|[Afficher ou modifier les indicateurs de modélisation &#40;Exploration de données&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |Fournir une indication à l'algorithme pour recommander des régresseurs potentiels|[Spécifier une colonne à utiliser comme régresseur dans un modèle](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Voir les indicateurs de modélisation pris en charge par des algorithmes spécifiques (dans la section Indicateurs de modélisation de la rubrique de référence correspondant à chaque algorithme)|[Algorithmes d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|Voir les indicateurs de modélisation pris en charge par des algorithmes spécifiques (dans la section Indicateurs de modélisation de la rubrique de référence correspondant à chaque algorithme)|[Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |En savoir plus sur les colonnes de structure d'exploration de données et les propriétés que vous pouvez définir dessus|[Colonnes de structure d'exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)|  
-|En savoir plus sur les colonnes du modèle d'exploration de données et les indicateurs de modélisation qui peuvent être appliqués au niveau du modèle|[Colonnes du modèle d’exploration de données](../../analysis-services/data-mining/mining-model-columns.md)|  
+|En savoir plus sur les colonnes du modèle d'exploration de données et les indicateurs de modélisation qui peuvent être appliqués au niveau du modèle|[Colonnes d’un modèle d’exploration de données](../../analysis-services/data-mining/mining-model-columns.md)|  
 |Voir la syntaxe à utiliser pour travailler avec des indicateurs de modélisation dans des instructions DMX|[Indicateurs de modélisation &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|Comprendre les valeurs manquantes et la façon de les utiliser|[Les valeurs manquantes & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
+|Comprendre les valeurs manquantes et la façon de les utiliser|[Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
 |En savoir plus sur la gestion des modèles et des structures, et sur la définition de propriétés d'utilisation|[Déplacement d'objets d'exploration de données](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   

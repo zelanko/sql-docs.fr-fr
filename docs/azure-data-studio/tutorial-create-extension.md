@@ -1,7 +1,8 @@
 ---
-title: 'Didacticiel : Créer une extension pour Azure Data Studio | Microsoft Docs'
-description: Ce didacticiel montre comment créer une extension pour Azure Data Studio.
-ms.custom: tools|sos
+title: 'Didacticiel : Créer une extension'
+titleSuffix: Azure Data Studio
+description: Ce didacticiel montre comment créer une extension pour ajouter des fonctionnalités personnalisées pour Azure Data Studio.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,16 +11,16 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: ae1605f1c99e4fa2a74c7f728f191baf5a8b9bf8
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356550"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030603"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>Didacticiel : Créer une extension d’Azure Data Studio
 
-Ce didacticiel montre comment créer une nouvelle extension Azure Data Studio. L’extension crée des combinaisons de touches SSMS familiers dans Azure Data Studio.
+Ce didacticiel montre comment créer une nouvelle extension Azure Data Studio. L’extension crée les combinaisons de touches courantes de SSMS dans Azure Data Studio.
 
 Au cours de ce didacticiel, vous découvrez comment :
 > [!div class="checklist"]
@@ -37,7 +38,7 @@ Azure Data Studio repose sur la même infrastructure en tant que Visual Studio C
 - [Node.js](https://nodejs.org) installé et disponible dans votre `$PATH`. Node.js inclut [npm](https://www.npmjs.com/), le Gestionnaire de Package Node.js, qui est utilisé pour installer le Générateur d’extension.
 - [Visual Studio Code](https://code.visualstudio.com) pour déboguer l’extension.
 - Azure données Studio [d’extension de débogage](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug).
-- Vérifiez que sqlops est dans votre chemin d’accès. Pour Windows, veillez à choisir la `Add to Path` option dans setup.exe. Pour Mac ou Linux, exécutez le *installer 'sqlops' commande dans le chemin d’accès* option.
+- Vérifiez `sqlops` est dans votre chemin d’accès. Pour Windows, veillez à choisir la `Add to Path` option dans setup.exe. Pour Mac ou Linux, exécutez le *installer 'sqlops' commande dans le chemin d’accès* option.
 - Extension de débogage de SQL Operations Studio (facultatif). Cela vous permet de tester votre extension sans avoir à empaqueter et installez-le dans Azure Data Studio.
 
 
@@ -66,19 +67,19 @@ Les étapes précédentes crée un nouveau dossier. Ouvrez le dossier dans Visua
 
 ### <a name="add-a-keyboard-shortcut"></a>Ajouter un raccourci clavier
 
-**Étape 1 : Rechercher les raccourcis à remplacer**
+**Étape 1 : Rechercher les raccourcis à remplacer**
 
 Maintenant que nous avons notre extension prête à l’emploi, ajoutez certains SSMS clavier raccourcis (ou combinaisons de touches) dans Azure Data Studio. J’ai utilisé [Fiche récapitulative de Andy Mallon](https://am2.co/2018/02/updated-cheat-sheet/) et liste de raccourcis clavier de RedGate d’inspiration.
 
 Les choses primordiales que j’ai vu manquantes ont été :
 
 - Exécuter une requête avec le plan d’exécution réel activé. Il s’agit de **Ctrl + M** dans SSMS et n’a pas une liaison dans Azure Data Studio.
-- Avoir **CTRL + MAJ + E** comme un moyen 2nd de l’exécution d’une requête. Commentaires de l’utilisateur indiquent que c’était manquant.
+- Avoir **CTRL + MAJ + E** en tant qu’un autre moyen d’une requête en cours d’exécution. Commentaires de l’utilisateur indiquent que c’était manquant.
 - Avoir **ALT + F1** exécuter `sp_help`. Nous avons ajouté cela dans Azure Data Studio, mais étant donné que cette liaison était déjà en cours d’utilisation, nous avons mappé à **ALT + F2** à la place.
 - Plein écran (**MAJ + ALT + ENTRÉE**).
 - **F8** pour afficher **Explorateur d’objets** / **affichage serveurs**.
 
-Il est facile de rechercher et remplacer ces combinaisons de touches. Exécutez *des raccourcis clavier Open* pour afficher le **raccourcis clavier** onglet dans Azure Data Studio, recherchez *requête* , puis choisissez **combinaison de touches de modification**. Une fois que vous avez terminé la modification de la combinaison de touches vous pouvez voir le mappage mis à jour dans le fichier keybindings.json (exécuter *des raccourcis clavier Open* pour l’afficher).
+Il est facile de rechercher et remplacer ces combinaisons de touches. Exécutez *Open raccourcis clavier* pour afficher le **raccourcis clavier** onglet dans Azure Data Studio, recherchez *requête* , puis choisissez **liaison modifier la clé**. Une fois que vous avez terminé à la modification de la combinaison de touches, vous pouvez voir le mappage mis à jour dans le fichier keybindings.json (exécuter *des raccourcis clavier Open* pour l’afficher).
 
 ![raccourcis clavier](./media/tutorial-create-extension/keyboard-shortcuts.png)
 
@@ -132,11 +133,11 @@ Sélectionnez **F5** pour lancer Azure Data Studio en mode débogage avec l’ex
 
 ![extension du test](./media/tutorial-create-extension/test-extension.png)
 
-Keymaps étant une des extensions plus rapides pour créer, votre nouvelle extension doit maintenant être correctement actif et prêt à partager.
+Mappages de clés sont une des extensions plus rapides pour créer, donc votre nouvelle extension doit maintenant être correctement actif et prêt à partager.
 
 ## <a name="package-your-extension"></a>Votre extension de package
 
-Pour partager avec d’autres utilisateurs, vous devez empaqueter l’extension dans un seul fichier. Cela peut être publié à la place de marché Azure Data Studio extension ou simplement partagé entre votre équipe ou de la Communauté. Pour ce faire, vous devez installer un autre package npm à partir de la ligne de commande :
+Pour partager avec d’autres utilisateurs, vous devez empaqueter l’extension dans un seul fichier. Cela peut être publié à la place de marché Azure Data Studio extension ou partagée par votre équipe ou de la Communauté. Pour ce faire, vous devez installer un autre package npm à partir de la ligne de commande :
 
 `npm install -g vsce`
 
@@ -164,7 +165,7 @@ La place de marché Azure Data Studio extension n’est pas totalement encore im
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans ce didacticiel, vous avez appris comment :
+Dans ce didacticiel, vous avez appris à :
 > [!div class="checklist"]
 > * Créez un projet d’extension
 > * Installer le Générateur d’extension

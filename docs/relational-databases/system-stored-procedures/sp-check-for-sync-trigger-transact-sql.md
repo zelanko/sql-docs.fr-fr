@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - filter_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d274e25b3a12a4fdd60c32365626bcb9ba912848
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ac0fe99f835dae638cb65b24e569857fb77b098
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628697"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759956"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  [ **@trigger_op =** ] '*trigger_output_parameters*' sortie  
  Spécifie si le paramètre de sortie doit renvoyer le type du déclencheur à partir duquel il est appelé. *trigger_output_parameters* est **char (10)** et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Ins**|Déclencheur INSERT.|  
 |**UPD**|Déclencheur UPDATE.|  
@@ -88,7 +87,7 @@ IF @retcode = 1
 RETURN  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  **sp_check_for_sync_trigger** procédure stockée peut être exécutée par tout utilisateur disposant des autorisations SELECT dans le [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vue système.  
   
 ## <a name="see-also"></a>Voir aussi  

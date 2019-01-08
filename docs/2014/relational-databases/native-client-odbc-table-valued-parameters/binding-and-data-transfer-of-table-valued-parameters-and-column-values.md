@@ -12,12 +12,12 @@ ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ff7549e5a892f6048d6f737382f489dd0bf2ab2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131611"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533985"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Liaison et transfert de données de paramètres table et de valeurs de colonnes
   Les paramètres table, comme d'autres paramètres, doivent être liés avant d'être passés au serveur. L’application lie les paramètres table de la même façon, il lie les autres paramètres : à l’aide de SQLBindParameter ou des appels équivalents à SQLSetDescField ou SQLSetDescRec. Le type de données serveur pour un paramètre table est SQL_SS_TABLE. Le type C peut être spécifié comme SQL_C_DEFAULT ou SQL_C_BINARY.  

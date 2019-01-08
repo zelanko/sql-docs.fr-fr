@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergesubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57e581985a4fcc5b7d1055748f87aed40c06a5a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ac79494bfb0d08503be6e138bce748596eb8165
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629627"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819064"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +43,22 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_publication_**'**  
  Nom de la publication à modifier. *publication* est **sysname**, avec NULL comme valeur par défaut. La publication doit déjà exister et respecter les règles applicables aux identificateurs.  
   
- [  **@subscriber=**] **'***abonné***'**  
+ [  **@subscriber=**] **'**_abonné_**'**  
  Nom de l'Abonné. *abonné* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@subscriber_db=**] **'***bd_abonné***'**  
+ [  **@subscriber_db=**] **'**_bd_abonné_**'**  
  Est le nom de la base de données d’abonnement. *bd_abonné*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@property=**] **'***propriété***'**  
+ [  **@property=**] **'**_propriété_**'**  
  Est la propriété à modifier pour la publication concernée. *propriété* est **sysname**, et peut prendre l’une des valeurs dans la table.  
   
- [  **@value=**] **'***valeur***'**  
+ [  **@value=**] **'**_valeur_**'**  
  Nouvelle valeur pour le texte spécifié *propriété*. *valeur* est **nvarchar (255)**, et peut prendre l’une des valeurs dans la table.  
   
-|Propriété|Valeur|Description|  
+|Propriété|Value|Description|  
 |--------------|-----------|-----------------|  
 |**description**||Description de cet abonnement de fusion.|  
 |**priority**||Est la priorité d’abonnement. La priorité est utilisée par le résolveur par défaut pour déterminer un gagnant lorsque des conflits sont détectés.|  
@@ -87,7 +86,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
  Après avoir modifié le nom de connexion ou le mot de passe d'un Agent, vous devez arrêter et redémarrer celui-ci avant que la modification prenne effet.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_changemergesubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -11,12 +11,12 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 60825f051b0e80cbd55ec36c5b3e49cf9838e77b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51f5315633939431bb6e8287773453e08de188a7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204879"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412026"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>Étendue des expressions pour les totaux, les agrégats et les collections intégrées (Générateur de rapports et SSRS)
   En écrivant des expressions, vous constaterez que le terme *étendue* est utilisé dans plusieurs contextes. L'étendue peut spécifier les données à utiliser pour l'évaluation d'une expression, le jeu de zones de texte dans une page rendue, le jeu des éléments de rapport qui peuvent être affichés ou masqués selon un élément de bascule. Vous verrez le terme *étendue* dans les rubriques relatives à une évaluation d'expression, une syntaxe de fonction d'agrégation, une visibilité conditionnelle et également dans les messages d'erreur liés à ces domaines. Utilisez les descriptions suivantes pour mieux différencier les significations du terme *étendue* qui s'appliquent :  
@@ -71,7 +71,7 @@ ms.locfileid: "48204879"
      L'expression suivante génère des années d'intervalle entre SellStartDate et LastReceiptDate. Ces champs sont compris dans deux datasets différents, DataSet1 et DataSet2. La [fonction First &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-first-function.md), qui est une fonction d’agrégation, renvoie la première valeur de SellStartDate dans DataSet1 et la première valeur de LastReceiptDate dans DataSet2.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **Étendue de domaine** Également appelée étendue de synchronisation. Type d'étendue de données qui s'applique à l'évaluation d'expression pour des régions de données imbriquées. L'étendue de domaine est utilisée pour spécifier des agrégats sur toutes les instances d'un groupe afin que les instances imbriquées puissent être facilement alignées et comparées. Par exemple, vous pouvez aligner la plage et la hauteur pour les graphiques sparkline incorporés dans une table afin que les valeurs s'alignent.  
@@ -158,20 +158,20 @@ ms.locfileid: "48204879"
 ##  <a name="Sort"></a> Spécification d'une expression de tri pour synchroniser l'ordre de tri  
  Lorsque vous ajoutez un bouton de tri interactif à une colonne de table, vous pouvez synchroniser le tri pour plusieurs éléments qui ont une étendue contenante commune. Par exemple, vous pouvez ajouter un bouton de tri à un en-tête de colonne dans une matrice et spécifier l'étendue contenante comme nom du dataset lié à la matrice. Lorsqu'un utilisateur clique sur le bouton de tri, non seulement les lignes de la matrice sont triées, mais les groupes de séries des graphiques liés au même dataset le sont également. De cette façon, toutes les régions de données qui dépendent de ce dataset peuvent être synchronisées pour afficher le même ordre de tri.  
   
- Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
   
   
 ##  <a name="Nulls"></a> Suppression de valeurs Null ou zéro dans une cellule  
- Pour de nombreux rapports, les calculs qui sont limités à des groupes peuvent créer plusieurs cellules ayant pour valeur zéro (0) ou Null. Pour clarifier votre rapport, ajoutez une expression visant à retourner des espaces vides lorsque la valeur d'agrégation est 0. Pour plus d’informations, consultez « Exemples de suppression de valeurs Null ou zéro » dans [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
+ Pour de nombreux rapports, les calculs qui sont limités à des groupes peuvent créer plusieurs cellules ayant pour valeur zéro (0) ou Null. Pour clarifier votre rapport, ajoutez une expression visant à retourner des espaces vides lorsque la valeur d'agrégation est 0. Pour plus d’informations, consultez « Exemples de suppression de valeurs Null ou zéro » dans [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
   
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)   
+ [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)   
  [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Listes &#40;Générateur de rapports et SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Mise en forme de texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e559bcf9f66980c6c4ecd7a753e49e21819da54d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 626ee1de57fdcecdf53d20263b1717df25480c40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696277"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532517"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (pilote Access)
 > [!NOTE]  
@@ -27,11 +27,11 @@ ms.locfileid: "47696277"
   
  **SQLGetInfo** prend en charge le type d’information SQL_FILE_USAGE. La valeur retournée est un entier 16 bits qui indique comment le pilote traite directement les fichiers dans une source de données :  
   
--   SQL_FILE_NOT_SUPPORTED : Le pilote n’est pas un pilote de niveau unique.  
+-   SQL_FILE_NOT_SUPPORTED - le pilote n’est pas un pilote de niveau unique.  
   
--   SQL_FILE_TABLE — Un pilote monocouches et traite les fichiers dans une source de données en tant que tables.  
+-   SQL_FILE_TABLE - un pilote monocouches et traite les fichiers dans une source de données en tant que tables.  
   
--   SQL_FILE_QUALIFIER — Un pilote à un niveau traite des fichiers dans une source de données en tant que qualificateur.  
+-   SQL_FILE_QUALIFIER - un pilote de niveau unique traite les fichiers dans une source de données en tant que qualificateur.  
   
  Le pilote ODBC retourne SQL_FILE_QUALIFIER, car chaque fichier est une base de données complète.  
   

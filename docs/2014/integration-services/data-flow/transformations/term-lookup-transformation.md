@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookuptrans.f1
@@ -21,12 +20,12 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e721fa24a987d0978c2c89f0c0fc81046c113560
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2286ba205d6ca12f025c8ac154b77a11e1754ff2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147399"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749871"
 ---
 # <a name="term-lookup-transformation"></a>transformation de recherche de terme
   La transformation de recherche de terme met en correspondance des termes extraits de texte d'une colonne d'entrée de transformation avec les termes d'une table de référence. Elle compte ensuite le nombre de fois où un terme de la table de recherche apparaît dans le dataset d'entrée, puis écrit ce nombre et le terme de la table de référence dans les colonnes de la sortie de la transformation. Cette transformation est utile pour créer une liste personnalisée de termes reposant sur le texte d'entrée et complétée de statistiques de fréquence.  
@@ -55,15 +54,15 @@ ms.locfileid: "48147399"
   
 -   Si le texte de la colonne d'entrée est une phrase nominale contenant des lemmes, seul le dernier mot de la phrase nominale est affecté par la normalisation. Par exemple, la version avec lemmes de *visites avec les médecins* est *visite avec les médecins*.  
   
- Lorsqu'un élément de recherche contient des termes débordant du cadre de référence, autrement dit si un sous-terme est trouvé dans plusieurs enregistrements de référence, la transformation de recherche de terme ne renvoie qu'un seul résultat de recherche. L'exemple suivant illustre le résultat trouvé lorsqu'un élément de recherche présente un sous-terme de chevauchement. Dans cet exemple, le sous-terme est *Windows*, que l’on retrouve dans deux termes de référence. Toutefois, la transformation ne retourne pas deux résultats, mais un seul terme de référence uniquement, *Windows*. Le second terme de référence, *Windows 7 Professionnel*, n’est pas retourné.  
+ Quand un élément de recherche contient des termes débordant du cadre de référence, autrement dit si un sous-terme est trouvé dans plusieurs enregistrements de référence, la transformation de recherche de terme ne retourne qu’un seul résultat de recherche. L'exemple suivant illustre le résultat trouvé lorsqu'un élément de recherche présente un sous-terme de chevauchement. Dans cet exemple, le sous-terme est *Windows*, que l’on retrouve dans deux termes de référence. Toutefois, la transformation ne retourne pas deux résultats, mais un seul terme de référence uniquement, *Windows*. Le second terme de référence, *Windows 7 Professionnel*, n’est pas retourné.  
   
-|Élément|Valeur|  
+|Élément|Value|  
 |----------|-----------|  
 |Terme entré|Windows 7 Professionnel|  
 |Termes de référence|Windows, Windows 7 Professionnel|  
 |Sortie|Windows|  
   
- La transformation de recherche de terme peut mettre en correspondance des noms et des phrases nominales contenant des caractères spéciaux. Les données de la table de référence peuvent inclure ces caractères. Les caractères spéciaux sont les suivants :%, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, et ‘.  
+ La transformation de recherche de terme peut mettre en correspondance des noms et des phrases nominales contenant des caractères spéciaux. Les données de la table de référence peuvent inclure ces caractères. Les caractères spéciaux sont les suivants : %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " et '.  
   
 ## <a name="data-types"></a>Types de données  
  La transformation de recherche de terme ne peut utiliser qu'une colonne contenant le type de données DT_WSTR ou DT_NTEXT. Si une colonne contient du texte, mais pas l'un de ces types de données, la transformation de conversion de données peut ajouter une colonne avec le type de données DT_WSTR ou DT_NTEXT au flux de données, puis copier les valeurs de la colonne dans cette nouvelle colonne. La sortie de la transformation de conversion de données peut ensuite être utilisée comme entrée de la transformation de recherche de terme. Pour plus d’informations, voir [Data Conversion Transformation](data-conversion-transformation.md).  
@@ -79,7 +78,7 @@ ms.locfileid: "48147399"
   
  Les colonnes de sortie de la transformation, dont la propriété InputColumnType a la valeur 0 ou 2, sont accompagnées de la propriété CustomLineageID, qui contient l’identificateur de lignage affecté à la colonne par un composant amont du flux de données.  
   
- La transformation de recherche de terme ajoute deux colonnes à la sortie de transformation, nommée par défaut `Term` et `Frequency`. `Term` contient un terme issu de la table de recherche et `Frequency` contient le nombre d'occurrences du terme de la table de référence dans le jeu de données d'entrée. Ces colonnes n’incluent pas la propriété CustomLineageID.  
+ La transformation de recherche de terme ajoute deux colonnes à la sortie de la transformation, dont les noms par défaut sont `Term` et `Frequency`. `Term` contient un terme issu de la table de recherche et `Frequency` contient le nombre d'occurrences du terme de la table de référence dans le jeu de données d'entrée. Ces colonnes n’incluent pas la propriété CustomLineageID.  
   
  La table de recherche doit être une table d'une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou Access. Si la sortie de la transformation d'extraction de terme est enregistrée dans une table, cette table peut être utilisée comme table de référence (sachant que les autres tables peuvent également être utilisées). Pour pouvoir utiliser la transformation de recherche de terme sur le texte de fichiers plats, de classeurs Excel ou d’autres sources, vous devez les importer dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou Access.  
   
@@ -95,11 +94,11 @@ ms.locfileid: "48147399"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation de recherche de terme**, cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de Transformation de recherche de terme &#40;onglet Table de référence&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [Éditeur de transformation de recherche de terme &#40;onglet Table de référence&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
--   [Éditeur de Transformation de recherche de terme &#40;onglet recherche de terme&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+-   [Éditeur de transformation de recherche de terme &#40;onglet Recherche de terme&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [Éditeur de Transformation de recherche de terme &#40;onglet Avancé&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [Éditeur de transformation de recherche de terme &#40;onglet Avancé&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   

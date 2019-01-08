@@ -14,12 +14,12 @@ ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f3e44d2891d9080b361d07d0bdcacfd0ad2ec39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05555f9f3b90cbf0eaae410a2b97dc31a0ed17d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209769"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393093"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>Spécification du contenu d'un axe de requête (MDX)
   Les axes de requête spécifient les bords d'un jeu de cellules retourné par une instruction SELECT MDX (Multidimensional Expressions). La spécification des bords d'un jeu de cellules vous permet de restreindre les données retournées qui sont visibles par le client.  
@@ -72,7 +72,7 @@ FROM [Adventure Works]
   
 ```  
   
- Le mot clé NON EMPTY, utilisé avant la définition du jeu, permet de supprimer facilement tous les tuples vides d'un axe. Par exemple, dans les exemples étudiés jusqu'à présent, il n'y a pas de données dans le cube à partir d'août 2004. Pour supprimer toutes les lignes de l'ensemble de cellules qui n'ont aucune donnée dans aucune colonne, ajoutez simplement NON EMPTY avant la définition du jeu sur l'axe des lignes, comme suit :  
+ Le mot clé NON EMPTY, utilisé avant la définition du jeu, permet de supprimer facilement tous les tuples vides d'un axe. Par exemple, dans les exemples que nous avons vu jusqu'à présent il aucune donnée dans le cube à partir d’août 2004 et versions ultérieures. Pour supprimer toutes les lignes de l'ensemble de cellules qui n'ont aucune donnée dans aucune colonne, ajoutez simplement NON EMPTY avant la définition du jeu sur l'axe des lignes, comme suit :  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  

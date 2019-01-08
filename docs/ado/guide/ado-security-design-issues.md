@@ -13,12 +13,12 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64f4a22d849572d6e32006dbe997dd134e5c2e0d
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: a879e05e5c2df68058d9351b217382366ae80a0d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293125"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532348"
 ---
 # <a name="ado-security-design-features"></a>Fonctionnalités de conception de sécurité ADO
 Les sections suivantes décrivent les fonctionnalités de conception de sécurité dans ActiveX Data Objects (ADO) 2.8 et versions ultérieures. Ces modifications ont été apportées dans ADO 2.8 pour améliorer la sécurité. ADO 6.0, qui est inclus dans Windows DAC 6.0 dans Windows Vista, est fonctionnellement équivalent à ADO 2.8, qui a été inclus dans MDAC 2.8 dans Windows XP et Windows Server 2003. Cette rubrique fournit des informations sur la façon de mieux sécuriser vos applications dans ADO 2.8 ou ultérieure.
@@ -66,7 +66,7 @@ Website, click OK, otherwise click Cancel.
 -   Si le site n’apparaît pas dans la liste de la zone Sites de confiance, le code est bloqué et l’accès à des fichiers locaux est refusé.
 
     > [!NOTE]
-    >  Dans ADO 2.8 et versions ultérieur, l’utilisateur n’est pas averti ou recommandé d’ajouter des sites à la liste de la zone Sites de confiance. Par conséquent, la gestion de la liste de Sites de confiance est la responsabilité de personnes déployez ou prenant en charge les applications basées sur le site Web qui requièrent l’accès au système de fichiers local.
+    >  Dans ADO 2.8 et versions ultérieur, l’utilisateur n’est pas averti ou recommandé d’ajouter des sites à la liste de la zone Sites de confiance. Par conséquent, la gestion de la liste de Sites de confiance est la responsabilité de ceux qui sont de déploiement ou de prise en charge des applications basées sur le site Web qui requièrent l’accès au système de fichiers local.
 
 ### <a name="access-blocked-to-the-activecommand-property-on-recordset-objects"></a>Accès bloqué à la propriété ActiveCommand sur les objets de jeu d’enregistrements
  Lors de l’exécution dans Internet Explorer, ADO 2.8 maintenant bloque l’accès à la [ActiveCommand](../../ado/reference/ado-api/activecommand-property-ado.md) propriété pour un actif **Recordset** de l’objet et retourne une erreur. L’erreur se produit même si la page provient d’un site Web enregistré dans la liste de Sites de confiance.

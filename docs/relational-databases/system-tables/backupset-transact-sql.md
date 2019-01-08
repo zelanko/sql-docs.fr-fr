@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b5bf5ce20678845111a1f410739674c50c7bb61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596158"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402848"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47596158"
 |**last_media_number**|**smallint**|Numéro du support qui est le dernier du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**catalog_family_number**|**tinyint**|Numéro de famille du support contenant le début du répertoire du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**catalog_media_number**|**smallint**|Numéro du support de sauvegardes contenant le début du répertoire du jeu de sauvegardes. Sa valeur peut être NULL.|  
-|**Position**|**Int**|Position du jeu de sauvegardes utilisée lors de la restauration pour localiser les fichiers et le jeu de sauvegardes appropriés. Sa valeur peut être NULL. Pour plus d’informations, consultez le fichier dans [sauvegarde &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**Int**|Position du jeu de sauvegardes utilisée lors de la restauration pour localiser les fichiers et le jeu de sauvegardes appropriés. Sa valeur peut être NULL. Pour plus d’informations, consultez le fichier dans [sauvegarde &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Date et heure d'expiration du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**software_vendor_id**|**Int**|Numéro d'identification du fournisseur du logiciel qui a écrit l'en-tête de support de sauvegardes Sa valeur peut être NULL.|  
 |**nom**|**nvarchar(128)**|Nom du jeu de sauvegardes. Sa valeur peut être NULL.|  
@@ -65,7 +65,7 @@ ms.locfileid: "47596158"
 |**database_creation_date**|**datetime**|Date et heure de création de la base de données. Sa valeur peut être NULL.|  
 |**backup_start_date**|**datetime**|Date et heure de début de la sauvegarde Sa valeur peut être NULL.|  
 |**backup_finish_date**|**datetime**|Date et heure de fin de la sauvegarde Sa valeur peut être NULL.|  
-|**type**|**char(1)**|Type de sauvegarde. Valeurs possibles :<br /><br /> D = Base de données<br /><br /> I = Base de données différentielle<br /><br /> L = Journal<br /><br /> F = Fichier ou groupe de fichiers<br /><br /> G =Fichier différentiel<br /><br /> P = Partiel<br /><br /> Q = Partielle différentielle<br /><br /> Sa valeur peut être NULL.|  
+|**type**|**char(1)**|Type de sauvegarde. Valeurs possibles :<br /><br /> D = Base de données<br /><br /> I = Base de données différentielle<br /><br /> L = Journal<br /><br /> F = Fichier ou groupe de fichiers<br /><br /> G =Fichier différentiel<br /><br /> P = Partiel<br /><br /> Q = Partielle différentielle<br /><br /> Sa valeur peut être NULL.|  
 |**sort_order**|**smallint**|Ordre de tri utilisé par le serveur effectuant la sauvegarde. Sa valeur peut être NULL. Pour plus d’informations sur les ordres de tri et les classements, consultez [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**code_page**|**smallint**|Page de codes du serveur effectuant la sauvegarde. Sa valeur peut être NULL. Pour plus d’informations sur les pages de codes, consultez [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**compatibility_level**|**tinyint**|Paramètres définissant le niveau de compatibilité de la base de données. Valeurs possibles :<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Sa valeur peut être NULL.<br /><br /> Pour plus d’informations sur les niveaux de compatibilité, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
@@ -100,7 +100,7 @@ ms.locfileid: "47596158"
 |**compressed_backup_size**|**Numeric(20,0)**|Nombre total d'octets de la sauvegarde stocké sur le disque.<br /><br /> Pour calculer le taux de compression, utilisez **compressed_backup_size** et **backup_size**.<br /><br /> Pendant une **msdb** mise à niveau, cette valeur est définie sur NULL. ce qui indique une sauvegarde non compressée.|  
 |**key_algorithm**|**nvarchar(32)**|Algorithme de chiffrement utilisé pour chiffrer la sauvegarde. La valeur NO_Encryption indique que la sauvegarde n'est pas chiffrée.|  
 |**encryptor_thumbprint**|**varbinary(20)**|Empreinte numérique du chiffreur pouvant être utilisé pour rechercher un certificat ou la clé asymétrique dans la base de données. Si la sauvegarde n'est pas chiffrée, cette valeur est NULL.|  
-|**encryptor_type**|**nvarchar(32)**|Type de chiffreur utilisé : certificat ou clé asymétrique . Si la sauvegarde n'est pas chiffrée, cette valeur est NULL.|  
+|**encryptor_type**|**nvarchar(32)**|Type de chiffreur utilisé : certificat ou clé asymétrique. . Si la sauvegarde n'est pas chiffrée, cette valeur est NULL.|  
   
 ## <a name="remarks"></a>Notes  
  RESTORE VERIFYONLY FROM *backup_device* avec LOADHISTORY remplit la colonne de la **backupmediaset** table avec les valeurs appropriées de l’en-tête de support de sauvegarde.  

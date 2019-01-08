@@ -20,12 +20,12 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b8b642797808b023e200f1f59ae162f09cea514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 061636210c76bace7ae483e277c624bb291cdeb8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780317"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509997"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "47780317"
 |**server_specification_id**|**Int**|ID de la **server_specification**.|  
 |**create_date**|**DateTime**|Date de création de la spécification d'audit du serveur.|  
 |**modified_date**|**DateTime**|Date de dernière modification de la spécification d'audit du serveur.|  
-|**is_state_enabled**|**tinyint**|État de la spécification d'audit :<br /><br /> 0 – DÉSACTIVÉE<br /><br /> 1 – ACTIVÉE|  
+|**is_state_enabled**|**tinyint**|État de la spécification d'audit :<br /><br /> 0 - DÉSACTIVÉ<br /><br /> 1 - ACTIVÉE|  
 |**audit_GUID**|**uniqueidentifier**|GUID de l'audit qui contient cette spécification. Utilisé pendant l'énumération des spécifications d'audit de serveur membres pendant le démarrage du serveur.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les principaux avec le **ALTER ANY SERVER AUDIT** ou **VIEW ANY DEFINITION** autorisation ont accès à cette vue de catalogue. En outre, le principal ne doit pas être refusé **VIEW ANY DEFINITION** autorisation.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

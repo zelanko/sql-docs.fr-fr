@@ -20,16 +20,16 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99d7f84f2153f57cc9bc392c22d79739deaf6b1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599617"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211988"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos, fonction
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ODBC  
+ Version introduite : Conformité aux normes 1.0 ODBC : ODBC  
   
  **Résumé**  
  **SQLSetPos** définit la position du curseur dans un ensemble de lignes et permet à une application pour actualiser les données dans l’ensemble de lignes ou mettre à jour ou supprimer des données dans le jeu de résultats.  
@@ -59,7 +59,7 @@ SQLRETURN SQLSetPos(
   
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
-> [!NOTE]  
+> [!NOTE]
 >  La valeur SQL_ADD pour la *opération* argument a été déconseillé pour ODBC 3 *.x*. ODBC 3. *x* pilotes doivent prendre en charge SQL_ADD pour la compatibilité descendante. Cette fonctionnalité a été remplacée par un appel à **SQLBulkOperations** avec un *opération* de SQL_ADD. Lorsqu’une application ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote, le Gestionnaire de pilotes est mappé à un appel à **SQLBulkOperations** avec un *opération* de SQL_ADD à **SQLSetPos** avec un  *Opération* de SQL_ADD.  
   
  Pour plus d’informations, consultez « Commentaires ».  
@@ -108,7 +108,7 @@ SQLRETURN SQLSetPos(
 |HY010|Erreur de séquence de fonction|(DM) une fonction de façon asynchrone en cours d’exécution a été appelée pour le handle de connexion qui est associé à la *au paramètre StatementHandle*. Cette fonction asynchrone était en cours d’exécution lorsque la fonction SQLSetPos a été appelée.<br /><br /> (DM) spécifié *au paramètre StatementHandle* n’était pas dans un état d’exécution. La fonction a été appelée sans préalablement appeler **SQLExecDirect**, **SQLExecute**, ou une fonction de catalogue.<br /><br /> (DM) une fonction de façon asynchrone en cours d’exécution (pas celui-ci) a été appelée pour le *au paramètre StatementHandle* et était en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** a été appelé pour le  *Au paramètre StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi de données pour tous les paramètres de data-at-execution ou les colonnes.<br /><br /> (DM) le pilote a été un ODBC 2. *x* pilote, et **SQLSetPos** a été appelé pour un *au paramètre StatementHandle* après **SQLFetch** a été appelée.|  
 |HY011|Attribut ne peut pas être défini maintenant|(DM) le pilote a été un ODBC 2. *x* pilote ; le SQL_ATTR_ROW_STATUS_PTR attribut d’instruction a été défini ; puis **SQLSetPos** a été appelé avant **SQLFetch**, **SQLFetchScroll**, ou **SQLExtendedFetch** a été appelée.|  
 |HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, probablement en raison de conditions de mémoire insuffisante.|  
-|HY090|Longueur de chaîne ou une mémoire tampon non valide|Le *opération* argument était SQL_UPDATE, une valeur de données était un pointeur null, et la valeur de longueur de colonne n’était pas 0, SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NULL_DATA, ou inférieure ou égale à SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Le *opération* argument était SQL_UPDATE ; une valeur de données n’était pas un pointeur null ; le type de données C a été SQL_C_BINARY ou SQL_C_CHAR ; et la valeur de longueur de colonne était inférieure à 0 mais pas égale à SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE , SQL_NTS ou SQL_NULL_DATA, ou inférieure ou égale à SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> La valeur dans une mémoire tampon de longueur / d’indicateur était SQL_DATA_AT_EXEC ; le type SQL a été SQL_LONGVARCHAR, SQL_LONGVARBINARY ou un type de données de spécifique à la source de données de type long ; et le type d’information SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo** a été « Y ».|  
+|HY090|Longueur de chaîne ou une mémoire tampon non valide|Le *opération* argument était SQL_UPDATE, une valeur de données était un pointeur null, et la valeur de longueur de colonne n’était pas 0, SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NULL_DATA, ou inférieure ou égale à SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Le *opération* argument était SQL_UPDATE ; une valeur de données n’était pas un pointeur null ; le type de données C a été SQL_C_BINARY ou SQL_C_CHAR ; et la valeur de longueur de colonne était inférieure à 0 mais pas égale à SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE , SQL_NTS ou SQL_NULL_DATA, ou inférieure ou égale à SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> La valeur dans une mémoire tampon de longueur / d’indicateur était SQL_DATA_AT_EXEC ; le type SQL a été SQL_LONGVARCHAR, SQL_LONGVARBINARY ou un type de données spécifiques à la source de données de type long ; et le type d’information SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo** a été « Y ».|  
 |HY092|Identificateur d’attribut non valide|(DM) la valeur spécifiée pour le *opération* argument n’est pas valide.<br /><br /> (DM) la valeur spécifiée pour le *LockType* argument n’est pas valide.<br /><br /> Le *opération* argument était SQL_UPDATE ou SQL_DELETE et l’attribut d’instruction SQL_ATTR_CONCURRENCY était SQL_ATTR_CONCUR_READ_ONLY.|  
 |HY107|Valeur de ligne hors limites|La valeur spécifiée pour l’argument *RowNumber* était supérieur au nombre de lignes dans l’ensemble de lignes.|  
 |HY109|Position de curseur non valide|Le curseur associé à la *au paramètre StatementHandle* a été défini en tant que type avant uniquement, donc le curseur n’a pas pu être positionné dans l’ensemble de lignes. Consultez la description de l’attribut SQL_ATTR_CURSOR_TYPE dans **SQLSetStmtAttr**.<br /><br /> Le *opération* argument était SQL_UPDATE, SQL_DELETE ou SQL_REFRESH, et la ligne identifiée par le *RowNumber* argument a été supprimé ou n’a pas été extraites.<br /><br /> (DM) le *RowNumber* argument était égale à 0 et le *opération* SQL_POSITION a été l’argument.<br /><br /> **SQLSetPos** a été appelée après **SQLBulkOperations** a été appelée et avant **SQLFetchScroll** ou **SQLFetch** a été appelée.|  
@@ -122,7 +122,7 @@ SQLRETURN SQLSetPos(
   
 ## <a name="comments"></a>Commentaires  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  Pour plus d’informations sur l’instruction stipule que **SQLSetPos** peut être appelée et ce qu’il doit faire pour assurer la compatibilité avec ODBC 2 *.x* applications, consultez [curseurs de bloc, curseurs avec défilement, et Compatibilité descendante](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
   
 ## <a name="rownumber-argument"></a>Argument RowNumber  
@@ -226,7 +226,7 @@ SQLRETURN SQLSetPos(
   
     -   Pour les colonnes de données en cours d’exécution, l’application place une valeur définie par l’application, comme le numéro de colonne, dans le  *\*TargetValuePtr* mémoire tampon. La valeur peut être utilisée ultérieurement pour identifier la colonne.  
   
-         L’application place le résultat de la SQL_LEN_DATA_AT_EXEC (*longueur*) macro dans le **StrLen_or_IndPtr* mémoire tampon. Si le type de données SQL de la colonne est SQL_LONGVARBINARY, SQL_LONGVARCHAR ou un type de données de spécifique à la source de données de type long et que le pilote retourne « Y » pour le type d’information SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo**, *longueur*  est le nombre d’octets de données à envoyer pour le paramètre ; sinon, il doit être une valeur non négative et est ignoré.  
+         L’application place le résultat de la SQL_LEN_DATA_AT_EXEC (*longueur*) macro dans le **StrLen_or_IndPtr* mémoire tampon. Si le type de données SQL de la colonne est SQL_LONGVARBINARY, SQL_LONGVARCHAR ou un type de données spécifiques à la source de données de type long et que le pilote retourne « Y » pour le type d’information SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo**, *longueur*  est le nombre d’octets de données à envoyer pour le paramètre ; sinon, il doit être une valeur non négative et est ignoré.  
   
 2.  Appels **SQLSetPos** avec la *opération* argument valeur SQL_UPDATE pour mettre à jour de la ligne de données.  
   

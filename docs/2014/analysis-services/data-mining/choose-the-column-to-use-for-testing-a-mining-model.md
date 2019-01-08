@@ -15,25 +15,25 @@ ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f8fcbac925be2910cba7110b96cc33b80a4092e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 340080271318073983b29abebeab85122993b489
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120829"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540250"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Choisir la colonne à utiliser pour tester un modèle d'exploration de données
   Avant de pouvoir mesurer la précision d'un modèle d'exploration de données, vous devez déterminer le résultat que vous voulez évaluer. La plupart des modèles d'exploration de données requièrent que vous choisissiez au moins une colonne à utiliser comme attribut prédictible lorsque vous créez le modèle. Par conséquent, lorsque vous testez la précision du modèle, vous devez généralement sélectionner cet attribut comme devant être testé.  
   
  La liste suivante décrit des points supplémentaires à prendre en considération pour choisir l'attribut prédictible à utiliser dans le test :  
   
--   Certains types de modèles d'exploration de données peuvent prédire plusieurs attributs, comme les réseaux neuronaux qui peuvent explorer les relations entre de nombreuses attributs.  
+-   Certains types de modèles d’exploration de données peuvent prédire plusieurs attributs, tels que les réseaux neuronaux, qui peuvent Explorer les relations entre de nombreuses attributs.  
   
--   D'autres types de modèles d'exploration de données, tels que les modèles de clustering, n'ont pas nécessairement un attribut prédictible. Les modèles de clustering ne peuvent être testés que s'ils ont un attribut prédictible.  
+-   Autres types de l’exploration des modèles, tels que les modèles de clustering-ne de pas nécessairement un attribut prédictible. Les modèles de clustering ne peuvent être testés que s'ils ont un attribut prédictible.  
   
 -   Créer un nuage de points ou mesurer la précision d'un modèle de régression requiert que vous choisissiez un attribut prédictible continu comme résultat. Dans ce cas, vous ne pouvez pas spécifier une valeur cible. Si vous créez autre chose qu’un nuage de points, la colonne de structure d’exploration de données sous-jacente doit également avoir un type de contenu **Discret** ou **Discrétisé**.  
   
--   Si vous choisissez un attribut discret comme résultat prédictible, vous pouvez également spécifier une valeur cible, ou vous pouvez laisser le champ **Prédire la valeur** vide. Si vous renseignez le champ **Prédire la valeur**, le graphique mesure uniquement l’efficacité du modèle dans la prédiction de la valeur cible. Si vous ne spécifiez pas de résultat cible, le modèle est mesuré pour sa précision dans la prédiction de tous les résultats.  
+-   Si vous choisissez un attribut discret comme résultat prédictible, vous pouvez également spécifier une valeur cible, ou vous pouvez laisser le champ **Prédire la valeur** vide. Si vous incluez un **prédire la valeur**, le graphique mesurera uniquement l’efficacité du modèle dans la prédiction de la valeur cible. Si vous ne spécifiez pas de résultat cible, le modèle est mesuré pour sa précision dans la prédiction de tous les résultats.  
   
 -   Si vous voulez inclure plusieurs modèles et les comparer dans un graphique d'analyse de précision unique, tous les modèles doivent utiliser la même colonne prédictible.  
   

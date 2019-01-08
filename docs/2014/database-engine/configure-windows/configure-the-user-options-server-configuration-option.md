@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - global default for all users [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9c418de267940942c99aae21bcf00118bb1ac36e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88cc979d7888a5844731c63ec96898572d31acc8
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172669"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641474"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurer l'option de configuration de serveur user options
   Cette rubrique explique comment configurer l'option de configuration de serveur **user options** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **user options** spécifie des valeurs par défaut globales pour tous les utilisateurs. Une liste d'options de traitement des requêtes par défaut est générée pour la durée d'une session de travail d'un utilisateur. L’option **user options** permet de modifier les valeurs par défaut des options SET (si les paramètres par défaut du serveur ne sont pas appropriés).  
@@ -41,7 +40,7 @@ ms.locfileid: "48172669"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l'option de configuration user options](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l’option de configuration user options](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48172669"
   
 -   Le tableau suivant répertorie et décrit les valeurs de configuration pour **user options**. Toutes les valeurs de configuration ne sont pas compatibles les unes avec les autres. Par exemple, il n'est pas possible de définir simultanément les valeurs ANSI_NULL_DFLT_ON et ANSI_NULL_DFLT_OFF.  
   
-    |Valeur|Configuration|Description|  
+    |Value|Configuration|Description|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|Contrôle les opérations de vérification des contraintes provisoires ou différées.|  
     |2|IMPLICIT_TRANSACTIONS|Pour les connexions à la bibliothèque réseau dblib, contrôle si une transaction est lancée implicitement lors de l'exécution d'une instruction. Le paramètre IMPLICIT_TRANSACTIONS n'a aucun effet sur les connexions ODBC ou OLEDB.|  
@@ -106,7 +105,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option de configuration user options  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option de configuration user options  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

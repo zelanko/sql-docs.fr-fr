@@ -11,12 +11,12 @@ ms.assetid: 5ac7ab80-9adf-4f65-abfa-fedf53b082b5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cacbc3b87a5c90841eee04093f6deceb235c2b7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 122ecf44095611d25065401972b8ccfefdae5fb8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119809"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394715"
 ---
 # <a name="rswindowsextendedprotectionscenario-property-wmi-msreportserverconfigurationsetting"></a>Propriété RSWindowsExtendedProtectionScenario (WMI MSReportServer_ConfigurationSetting)
   Retourne une valeur de chaîne indiquant le scénario de protection étendue que le serveur de rapports est configuré à autoriser.  
@@ -32,11 +32,11 @@ public string RSWindowsExtendedProtectionScenario;
 ```  
   
 ## <a name="remarks"></a>Notes  
- Retourne une valeur de chaîne indiquant le scénario de protection étendue que le serveur de rapports est configuré à autoriser. Si le serveur de rapports auquel le fournisseur WMI est connecté ne prend pas en charge la protection étendue, “” (chaîne vide) est retourné.  
+ Retourne une valeur de chaîne indiquant le scénario de protection étendue que le serveur de rapports est configuré à autoriser. Si le serveur de rapports auquel le fournisseur WMI est connecté ne prend pas en charge la protection étendue, "" (chaîne vide) est retourné.  
   
  La liste suivante affiche les valeurs valides :  
   
- `”Any | Proxy | Direct”`  
+ `"Any | Proxy | Direct"`  
   
 ## <a name="example-code"></a>Exemple de code  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  

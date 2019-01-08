@@ -1,5 +1,5 @@
 ---
-title: Appliquer un filtre à un modèle d’exploration de données | Documents Microsoft
+title: Appliquer un filtre à un modèle d’exploration de données | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a3e192718ed0e1c3597f4e0f76c951a96530c6c7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5430aa0125e621a574d8fb9cc6b28f6b73794b46
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014596"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519263"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Appliquer un filtre à un modèle d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Sélectionnez le modèle et cliquez avec le bouton droit pour ouvrir le menu contextuel.  
   
-     - ou -  
+     -ou-  
   
      Sélectionnez le modèle. Puis, dans le menu **Modèle d'exploration de données** , sélectionnez **Définir le filtre de modèle**.  
   
@@ -91,7 +91,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      Ce sont les seules conditions disponibles pour la table imbriquée dans la boîte de dialogue **Filtre de modèle** , car vous restreignez la table de cas uniquement aux cas qui contiennent une certaine valeur dans la table imbriquée. Vous allez définir la valeur pour la condition sur la table imbriquée lors de l'étape suivante.  
   
-4.  Cliquez sur la zone **Valeur**, puis sur le bouton **(…)** pour générer une expression.  
+4.  Cliquez sur le **valeur** , puis cliquez sur le **(...)**  bouton pour générer une expression.  
   
      Le  **\<nom > filtre** boîte de dialogue s’ouvre. Cette boîte de dialogue peut définir des conditions uniquement sur la table actuelle, qui est la table imbriquée dans ce cas.  
   
@@ -120,8 +120,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  Si vous modifiez manuellement quelque partie que ce soit d'une expression de filtre, la grille est alors désactivée et vous devez utiliser l'expression de filtre en mode édition de texte uniquement. Pour restaurer le mode de modification de grille, vous devez effacer l'expression de filtre et recommencer.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filtres pour les modèles d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Tâches liées aux modèles d’exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Supprimer un filtre d’un modèle d’exploration de données](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
+ [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Tâches du modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Supprimer un filtre d'un modèle d'exploration de données](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   

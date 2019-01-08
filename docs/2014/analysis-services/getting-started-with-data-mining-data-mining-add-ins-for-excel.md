@@ -11,12 +11,12 @@ ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c4fe81ed240f210157e450b6c54fe370e22bcb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b34ff1ef4f204b2c4a753366aa6e84f678c9ea8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094129"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397763"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Mise en route avec l'exploration de données (compléments d'exploration de données pour Excel)
   L'exploration de données est le processus de découverte des tendances au travers de données. L'exploration de données est un complément naturel du processus d'exploration et d'analyse de vos données via la BI traditionnelle. Les algorithmes d'ordinateur peuvent traiter de grandes quantités de données et dégager des tendances et des séquences qui resteraient autrement masquées.  
@@ -52,19 +52,19 @@ ms.locfileid: "48094129"
 ## <a name="define-your-goal"></a>Définir votre objectif  
  Avant de démarrer, prenez une minute pour penser à la question à laquelle vous voulez vraiment répondre. L'exploration est par elle même très éclairante, mais si vous souhaitez appliquer vos résultats aux nouvelles données, vous devez définir clairement ce vous attendez du modèle, et comment vous mesurerez son adéquation à vos objectifs.  
   
- Par exemple, plutôt que de vous fixer comme objectif de trouver de nouveaux clients, définissez-le plus concrètement, par exemple « Identifier les données démographiques des clients qui sont susceptibles d'acheter notre produit, avec une probabilité de 65 % au moins ».  
+ Par exemple, au lieu d’un objectif de « trouver de nouveaux clients », clarifier votre objectif plus concrètement, par exemple « identifier les caractéristiques démographiques des clients qui sont susceptibles d’acheter notre produit, avec une probabilité d’au moins de 65 % ».  
   
--   Votre dataset doit contenir au moins un attribut « résultat » que vous utiliserez pour l'apprentissage et la prédiction. Si vous n'avez pas cet attribut, vous pouvez étiqueter manuellement des données d'apprentissage, ou utiliser d'autres colonnes pour créer un proxy pour les résultats.  
+-   Votre jeu de données doit contenir au moins un attribut « résultat » que vous pouvez utiliser pour l’apprentissage et de prédiction. Si vous n'avez pas cet attribut, vous pouvez étiqueter manuellement des données d'apprentissage, ou utiliser d'autres colonnes pour créer un proxy pour les résultats.  
   
-     Par exemple, si vous voulez prédire les « meilleurs prospects », vous devez appliquer une certaine règle d'entreprise au préalable pour étiqueter les clients existants, afin que l'exploration de données puisse apprendre des exemples que vous fournissez.  
+     Par exemple, si vous souhaitez prédire les « meilleurs prospects », vous devez appliquer une règle d’entreprise au préalable pour étiqueter les clients existants, afin que l’exploration de données puisse apprendre des exemples que vous fournissez.  
   
 -   Si vous utilisez une valeur qui change au fil du temps et que vous souhaitez prédire des tendances futures, décidez de la granularité des résultats dont vous avez besoin. Souhaitez-vous des prédictions pour un mois, un jour ou un an ? Vos données doivent être analysées en utilisant les mêmes unités que vous voulez prédire.  
   
-     Avec les modèles cycliques, si vous n'obtenez pas de bons résultats avec les données quotidiennes, vous pouvez essayer avec des tranches de temps différentes, ou utiliser des jours de semaine, des mois, voire des jours fériés.  
+     Avec les modèles cycliques, si vous n’obtenez pas bons résultats avec des données quotidiennes, essayez tranches de temps différentes, ou à l’aide des jours de la semaine, mois ou voire des jours fériés.  
   
 -   Avant de lancer un assistant pour trouver de nouvelles corrélations, jetez encore un coup d'œil à vos données et déterminez quelles sortes de relations existantes peuvent être présentes dans le dataset. Existe-t-il des variables parasites ? Existe-t-il des doublons ou des proxys ?  
   
--   Quelles sont les mesures qui serviront à évaluer la réussite du modèle ? Comment saurez-vous que le modèle est suffisamment « perfectionné » ?  
+-   Quelles sont les mesures d’évaluation de la réussite du modèle ? Comment saurez-vous que le modèle est « suffisant » ?  
   
 -   Souhaitez-vous effectuer des prédictions à partir du modèle d'exploration de données ou seulement rechercher des tendances et associations intéressantes ?  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48094129"
   
  Prenez quelques minutes pour observer la distribution des valeurs, et identifier les problèmes éventuels tels que des valeurs manquantes ou des espaces réservés.  
   
- Si vous envisagez de procéder à l'exploration de données sur un jeu de données qui est tellement important ou complexe que vous ne pouvez pas l'analyser avec d'autres méthodes, envisagez éventuellement un échantillonnage ou une réduction des données.  
+ Si vous prévoyez d’effectuer l’exploration de données sur un jeu de données qui est tellement important ou complexe que vous n’a pas pu l’analyser avec d’autres méthodes, envisagez d’échantillonnage ou de réduction des données.  
   
 -   Comment sont distribuées les données ?  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48094129"
  [Exploration et nettoyage des données](exploring-and-cleaning-data.md)  
   
 ## <a name="validate-your-model"></a>Valider votre modèle  
- Lorsque vous exécutez un Assistant ou un outil, l'algorithme analyse le contenu des données et détermine si un modèle valide d'un point de vue statistique existe. Si l'algorithme ne trouve pas de modèles valides, vous recevrez un message d'erreur. Cependant, même si un modèle a été correctement créé, vous devrez le tester pour voir s'il valide vos hypothèses. Vous pouvez utiliser des outils tels que le [graphique de précision &#40;SQL Server Data Mining Add-ins&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) ou [la Validation croisée &#40;SQL Server Data Mining Add-ins&#41; ](cross-validation-sql-server-data-mining-add-ins.md) pour produire des statistiques mesures de qualité du modèle.  
+ Lorsque vous exécutez un Assistant ou un outil, l'algorithme analyse le contenu des données et détermine si un modèle valide d'un point de vue statistique existe. Si l’algorithme ne peut pas trouver de modèles valides, vous obtiendrez un message d’erreur. Toutefois, même si un modèle a été correctement créé, vous souhaitez tester le modèle pour voir s’il valide vos hypothèses. Vous pouvez utiliser des outils tels que le [graphique de précision &#40;SQL Server Data Mining Add-ins&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) ou [la Validation croisée &#40;SQL Server Data Mining Add-ins&#41; ](cross-validation-sql-server-data-mining-add-ins.md) pour produire des statistiques mesures de qualité du modèle.  
   
  Lorsque vous évaluez les résultats de votre premier modèle, posez-vous des questions telles que :  
   

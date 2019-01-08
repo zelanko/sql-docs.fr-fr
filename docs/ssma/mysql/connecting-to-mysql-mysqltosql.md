@@ -13,12 +13,12 @@ ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 638a79e5785c74a11cb2e424739c3d80959a4d40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 233b6824ef527a9ed4e7e02164a08e31e41f3699
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843077"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409500"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Connexion à MySQL (MySQLToSQL)
 Pour migrer des bases de données MySQL vers SQL Server ou SQL Azure, vous devez vous connecter à la base de données MySQL que vous souhaitez migrer. Lorsque vous vous connectez, SSMA Obtient les métadonnées relatives à tous les schémas de MySQL, puis l’affiche dans le volet Explorateur de métadonnées de MySQL. SSMA stocke des informations sur le serveur de base de données, mais ne stocke pas les mots de passe.  
@@ -62,9 +62,9 @@ Lorsque vous vous connectez à une base de données, SSMA lit les métadonnées 
   
     3.  Dans le **mot de passe** , entrez le mot de passe pour le nom d’utilisateur spécifié.  
   
-5.  **SSL :** si vous souhaitez vous connecter en toute sécurité à MySQL, servez-vous de Socket couche SSL (Secure) en vérifiant la **SSL** case à cocher.  
+5.  **SSL :** Si vous souhaitez vous connecter en toute sécurité à MySQL, servez-vous de Socket couche SSL (Secure) en vérifiant la **SSL** case à cocher.  
   
-6.  **Configurer :** il fournit une option pour configurer la connexion à MySQL via couche SSL (Secure Socket).  
+6.  **Configurer :** Il fournit une option pour configurer la connexion à MySQL via couche SSL (Secure Socket).  
   
     > [!NOTE]  
     > Pour activer **configurer**, SSL doit être défini sur **True**.  

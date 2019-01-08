@@ -1,5 +1,5 @@
 ---
-title: Définition et utilisation d’une Action d’extraction | Documents Microsoft
+title: Définition et utilisation d’une Action d’extraction | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45f35145b116f36280ff7d70ee820f4e333382aa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3b57c18d159c677fe10d99fbae1ea9e4bffbed9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018046"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507965"
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Leçon 8-1 : définition et utilisation d’une Action d’extraction
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,13 +31,13 @@ Dans les tâches de cette rubrique, vous définissez une action d'extraction pou
   
     L’image suivante montre l’onglet **Actions** du Concepteur de cube.  
   
-    ![Sous l’onglet Actions du Concepteur de Cube](../analysis-services/media/l8-action1.gif "sous l’onglet Actions du Concepteur de Cube")  
+    ![Onglet Actions du Concepteur de Cube](../analysis-services/media/l8-action1.gif "onglet Actions du Concepteur de Cube")  
   
 2.  Dans la barre d’outils de l’onglet **Actions** , cliquez sur le bouton **Nouvelle action d’extraction** .  
   
     Un modèle d'action vide apparaît dans le volet de visualisation.  
   
-    ![Modèle d’Action vide dans le volet d’informations](../analysis-services/media/l8-action2.gif "modèle d’Action vide dans le volet d’informations")  
+    ![Modèle d’Action vide dans le volet Affichage](../analysis-services/media/l8-action2.gif "modèle d’Action vide dans le volet d’informations")  
   
 3.  Dans la zone **Nom** , changez le nom de cette action en **Internet Sales Details Drillthrough Action**.  
   
@@ -55,7 +55,7 @@ Dans les tâches de cette rubrique, vous définissez une action d'extraction pou
   
 8.  Dans la zone **Lignes au maximum** , tapez **10**.  
   
-9. Dans la zone **Légende** , tapez **Drillthrough to Order Details…**.  
+9. Dans le **légende** , tapez **Drillthrough to Order Details...** .  
   
     Ces paramètres limitent le nombre de lignes retournées et spécifient la légende qui apparaît dans le menu de l'application cliente. L’image suivante montre ces paramètres dans la zone **Propriétés supplémentaires** .  
   

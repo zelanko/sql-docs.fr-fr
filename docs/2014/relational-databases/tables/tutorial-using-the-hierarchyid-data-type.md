@@ -1,11 +1,10 @@
 ---
-title: 'Didacticiel : utilisation du type de données hierarchyid | Microsoft Docs'
+title: 'Didacticiel : À l’aide du Type de données hierarchyid | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [hierarchyid]
@@ -14,26 +13,26 @@ ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62e139c1ac43784d15c0bd64f40acf6636a79e35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3718b45b69870969dae85b4eb1ad2e9e80adc85
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208440"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788756"
 ---
-# <a name="tutorial-using-the-hierarchyid-data-type"></a>Didacticiel : utilisation du type de données hierarchyid
+# <a name="tutorial-using-the-hierarchyid-data-type"></a>Didacticiel : Utilisation du type de données hierarchyid
   Ce didacticiel s'adresse aux utilisateurs familiers de [!INCLUDE[tsql](../../includes/tsql-md.md)], mais qui n'ont jamais utilisé le type de données `hierarchyid`.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Ce didacticiel est divisé en deux leçons :  
   
- [Leçon 1 : conversion d’une table en structure hiérarchique](lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
+ [Leçon 1 : Conversion d’une Table en une Structure hiérarchique](lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
  Dans cette leçon, vous prenez une table d'employés existante structurée en hiérarchie parent/enfant et vous déplacez les données dans une nouvelle table qui représente la hiérarchie en utilisant le type de données `hierarchyid`. Cette leçon requiert l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
- [Leçon 2 : création et gestion de données dans une table hiérarchique](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+ [Leçon 2 : Création et la gestion des données dans une Table hiérarchique](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
  Dans cette leçon, vous créez une table en utilisant le type de données `hierarchyid` pour représenter la structure de hiérarchie. Vous manipulez ensuite les données dans la table en utilisant les méthodes hiérarchiques.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Les programmes suivants doivent être installés sur votre système :  
   
 -   Toute édition de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure.  

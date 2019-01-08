@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.report.f1
@@ -18,12 +18,12 @@ ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e89d1e8032d52e49e85cca13d945fe76d341e18f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086879"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779021"
 ---
 # <a name="object-explorer-details-pane"></a>Volet Détails de l'Explorateur d'objets
   Détails de l'Explorateur d'objets, un composant de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], fournit une vue tabulaire de tous les objets se trouvant dans le serveur ainsi qu'une interface utilisateur pour les gérer. Les fonctionnalités de l’Explorateur d’objets varient légèrement en fonction du type de serveur. Il contient toutefois des fonctionnalités de développement pour les bases de données et des fonctionnalités de gestion pour tous les types de serveurs.  

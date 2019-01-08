@@ -20,16 +20,16 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22ccf063486df9a8afc810d4adeffeb96041a8b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826197"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203978"
 ---
 # <a name="sqlgetdiagfield-function"></a>Fonction SQLGetDiagField
 **Conformité**  
- Version introduite : Conformité des normes 3.0 de ODBC : ISO 92  
+ Version introduite : Conformité aux normes 3.0 de ODBC : ISO 92  
   
  **Résumé**  
  **SQLGetDiagField** retourne la valeur actuelle d’un champ d’un enregistrement de la structure de données de diagnostic (associé à un handle spécifié) qui contient des informations d’erreur, d’avertissement et d’état.  
@@ -102,11 +102,11 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_SUCCESS : La fonction retournée avec succès les informations de diagnostic.  
   
--   SQL_SUCCESS_WITH_INFO : \* *DiagInfoPtr* était trop petite pour contenir le champ de diagnostic demandé. Par conséquent, les données dans le champ de diagnostic a été tronquées. Pour déterminer qu’une troncation s’est produite, l’application doit comparer *BufferLength* au nombre réel d’octets disponibles, ce qui est écrite dans **StringLengthPtr*.  
+-   SQL_SUCCESS_WITH_INFO : \**DiagInfoPtr* était trop petite pour contenir le champ de diagnostic demandé. Par conséquent, les données dans le champ de diagnostic a été tronquées. Pour déterminer qu’une troncation s’est produite, l’application doit comparer *BufferLength* au nombre réel d’octets disponibles, ce qui est écrite dans **StringLengthPtr*.  
   
 -   SQL_INVALID_HANDLE : Le handle a indiqué par *HandleType* et *gérer* n’était pas un handle valide.  
   
--   SQL_ERROR : Un des éléments suivants s’est produit :  
+-   SQL_ERROR : Parmi les options suivantes s’est produite :  
   
     -   *Le DiagIdentifier* argument n’est pas une des valeurs valides.  
   
@@ -227,13 +227,13 @@ n-définition *|« CRÉER UN DOMAINE »|SQL_DIAG_CREATE_DOMAIN|
   
  S’il existe deux ou plusieurs enregistrements d’état, la séquence des enregistrements est déterminée par le numéro de ligne. Les règles suivantes s’appliquent à la détermination de la séquence des enregistrements de diagnostic en ligne :  
   
--   Les enregistrements qui ne correspondent pas à toutes les lignes apparaissent devant des enregistrements qui correspondent à une ligne particulière, car SQL_NO_ROW_NUMBER est défini comme étant -1.  
+-   Les enregistrements qui ne correspondent pas à toutes les lignes apparaissent devant des enregistrements qui correspondent à une ligne particulière, étant donné que SQL_NO_ROW_NUMBER est défini comme étant -1.  
   
--   Les enregistrements pour lesquels le nombre de lignes est inconnu apparaissent devant tous les autres enregistrements, étant donné que SQL_ROW_NUMBER_UNKNOWN est défini comme étant – 2.  
+-   Les enregistrements pour lesquels le nombre de lignes est inconnu apparaissent devant tous les autres enregistrements, étant donné que SQL_ROW_NUMBER_UNKNOWN est défini comme étant -2.  
   
 -   Pour tous les enregistrements qui se rapportent à des lignes spécifiques, les enregistrements sont triés par la valeur dans le champ SQL_DIAG_ROW_NUMBER. Toutes les erreurs et avertissements de la première ligne affectés sont répertoriés, et puis toutes les erreurs et avertissements de la prochaine ligne affectée et ainsi de suite.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Le 3 ODBC *.x* Gestionnaire de pilotes ne trie pas les enregistrements d’état dans la file d’attente diagnostic si 01 s 01 SQLSTATE (erreur de ligne) est retournée par un 2 ODBC *.x* pilote ou si 01 s 01 SQLSTATE (erreur de ligne) est retournée par une application ODBC 3 *.x* pilote lorsque **SQLExtendedFetch** est appelée ou **SQLSetPos** est appelée sur un curseur qui a été placé avec **SQLExtendedFetch** .  
   
  Dans chaque ligne, ou pour tous les enregistrements qui ne correspondent pas à une ligne ou pour lesquelles le nombre de lignes est inconnu, ou pour tous les enregistrements avec un nombre de lignes égal à SQL_NO_ROW_NUMBER, le premier enregistrement répertorié est déterminé à l’aide d’un ensemble de règles de tri. Après le premier enregistrement, l’ordre des enregistrements qui affectent une ligne n’est pas défini. Une application ne peut pas supposer que les erreurs précédent avertissements après le premier enregistrement. Applications doivent analyser la structure de données de diagnostic complet pour obtenir des informations complètes sur un appel à une fonction.  

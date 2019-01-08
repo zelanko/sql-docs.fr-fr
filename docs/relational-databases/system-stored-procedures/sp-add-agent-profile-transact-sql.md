@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_add_agent_profile
@@ -17,12 +16,12 @@ ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b5c6b2c03ff9956a58bf7da8426c87b692d5f879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edb5fc6c24ce8e59c82b35ac10e6dddb67adeaf4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670433"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752151"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +46,13 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
  [  **@profile_id=** ] *profile_id*  
  Numéro d'identification associé au profil nouvellement inséré. *profile_id* est **int** et est un paramètre OUTPUT facultatif. Si vous l'indiquez, la valeur définie est égale au numéro d'identification du nouveau profil.  
   
- [  **@profile_name=** ] **'***profile_name***'**  
+ [  **@profile_name=** ] **'**_profile_name_**'**  
  Nom du profil. *nom_profil* est **sysname**, sans valeur par défaut.  
   
- [  **@agent_type=** ] **'***agent_type***'**  
+ [  **@agent_type=** ] **'**_agent_type_**'**  
  Type d'agent de réplication. *agent_type* est **int**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Agent d'instantané|  
 |**2**|l'Agent de lecture du journal ;|  
@@ -66,7 +65,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
  **0** indique un profil de système. **1** indique un profil personnalisé. Seuls les profils personnalisés peuvent être créés à l’aide de cette procédure stockée ; Par conséquent, la seule valeur valide est **1**. Uniquement [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée des profils de système.  
   
- [  **@description=** ] **'***description***'**  
+ [  **@description=** ] **'**_description_**'**  
  Est une description du profil. *Description* est **nvarchar (3000)**, sans valeur par défaut.  
   
  [  **@default=** ] *par défaut*  
@@ -82,7 +81,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
  Lorsque **sp_add_agent_profile** est exécutée, une ligne est ajoutée pour le nouveau profil personnalisé dans le [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) table et les paramètres par défaut associé pour cela profil sont ajoutés à la [MSagent_parameters &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) table.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_add_agent_profile**.  
   
 ## <a name="see-also"></a>Voir aussi  

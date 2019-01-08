@@ -19,12 +19,12 @@ ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d2cee56a3aa15e00e2de72761eb872f6e297b680
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aff708a3455c98ae0671b4970cd654d54f7dda36
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067309"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399302"
 ---
 # <a name="setwindowsserviceidentity-method-wmi-msreportserverconfigurationsetting"></a>Méthode SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting)
   Fait en sorte que le service Windows Report Server s'exécute en tant qu'utilisateur Windows spécifié et accorde des autorisations de système de fichiers suffisantes à ce compte pour permettre au serveur de rapports de fonctionner.  
@@ -66,7 +66,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
   
  Le compte spécifié dans le *compte* paramètre nécessite `LogonAsService` droits dans Windows. La méthode accorde ce droit au compte spécifié.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

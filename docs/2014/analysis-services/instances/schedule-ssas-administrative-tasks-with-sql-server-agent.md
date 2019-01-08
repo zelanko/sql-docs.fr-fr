@@ -11,12 +11,12 @@ ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b76142fe806e7a294eb67e5e3d43cbf56713760
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cea836d49b46bd7931d7230d3d22824af9506961
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080349"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350868"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Planifier des tâches administratives SSAS avec SQL Server Agent
   Le service SQL Server Agent vous permet de planifier des tâches administratives [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à exécuter dans l’ordre et au moment que vous précisez. Les tâches planifiées vous aident à automatiser les processus qui s’exécutent selon des cycles réguliers ou prévisibles. Vous pouvez planifier l'exécution de tâches administratives, telles que le traitement de cubes, durant les périodes de faible activité. Vous pouvez également déterminer l'ordre dans lequel les tâches s'exécutent en créant des étapes de travail au sein d'un travail de l'Agent SQL Server. Par exemple, vous pouvez traiter un cube, puis effectuer une sauvegarde de ce cube.  
@@ -32,7 +32,7 @@ ms.locfileid: "48080349"
   
  Vous devez également disposer d'une base de données de test. Vous pouvez déployer l'exemple de base de données multidimensionnelle AdventureWorks ou un projet du didacticiel MDX Analysis Services dans cette procédure pas à pas. Pour plus d’informations, consultez [Installer les exemples de données et de projets pour le didacticiel sur la modélisation multidimensionnelle Analysis Services](../install-sample-data-and-projects.md).  
   
-## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Exemple 1 : traitement d'une dimension dans une tâche planifiée  
+## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Exemple 1 : Traitement d’une dimension dans une tâche planifiée  
  Cet exemple montre comment créer et planifier un travail qui traite une dimension.  
   
  Une tâche planifiée [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est un script XMLA imbriqué dans un travail de SQL Server Agent. Ce travail est planifié pour s'exécuter à une heure et une fréquence souhaitées. SQL Server Agent faisant partie de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous travaillez avec le Moteur de base de données et avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour créer et planifier une tâche administrative.  
@@ -54,7 +54,7 @@ ms.locfileid: "48080349"
      Cette étape copie le script XMLA dans le presse-papiers Windows. Vous pouvez laisser le script XMLA dans le presse-papiers ou le coller dans le Bloc-notes ou un éditeur de texte différent. Voici un exemple de script XMLA.  
   
     ```  
-    <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
      <Parallel>  
       <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
         <Object>  
@@ -106,7 +106,7 @@ ms.locfileid: "48080349"
   
 15. Lorsque le travail est terminé, cliquez sur **Fermer**.  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Exemple 2 : traitement par lots d'une dimension et d'une partition dans une tâche planifiée  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Exemple 2 : Traitement par lots une dimension et une partition dans une tâche planifiée  
  Les procédures de cet exemple montrent comment créer et planifier un travail qui traite par lots une dimension de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et en même temps traiter une partition de cube qui dépend de la dimension pour l'agrégation. Pour plus d’informations sur le traitement par lots des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Traitement par lots &#40;Analysis Services&#41;](../multidimensional-models/batch-processing-analysis-services.md).  
   
 ###  <a name="bkmk_BatchProcess"></a> Créer un script pour le traitement par lots d'une dimension et d'une partition dans un travail de SQL Server Agent  
@@ -156,7 +156,7 @@ ms.locfileid: "48080349"
      L'exemple suivant affiche le script XMLA modifié.  
   
     ```  
-    <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
      <Parallel>  
       <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
         <Object>  
@@ -224,6 +224,6 @@ ms.locfileid: "48080349"
   
 ## <a name="see-also"></a>Voir aussi  
  [Options et paramètres de traitement &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Script des tâches administratives dans Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Tâches d'administration à l'aide de scripts dans Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

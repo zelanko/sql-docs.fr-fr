@@ -20,12 +20,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2168e339fb6485035a2a1249dbf109a1560889a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a593812709e62a02645cdd0ce1ee2fa53461b4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168809"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540842"
 ---
 # <a name="create-indexes-with-included-columns"></a>Créer des index avec colonnes incluses
   Cette rubrique explique comment ajouter des colonnes incluses (ou non-clés) pour étendre les fonctionnalités des index non cluster dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'inclusion de colonnes non-clés permet de créer des index non-cluster qui couvrent davantage de requêtes. En effet, les colonnes non-clés présentent les avantages suivants :  
@@ -67,19 +67,19 @@ ms.locfileid: "48168809"
   
 -   Les colonnes non-clés peuvent uniquement être définies sur des index non cluster.  
   
--   Tous les types de données à l’exception `text`, `ntext`, et `image` peut être utilisé en tant que colonnes non-clés.  
+-   Tous les types de données, à l'exception de `text`, de `ntext` et de `image`, peuvent être utilisés en tant que colonnes non-clés.  
   
 -   Les colonnes calculées déterministes et précises ou imprécises peuvent être des colonnes non-clés. Pour plus d'informations, consultez [Indexes on Computed Columns](indexes-on-computed-columns.md).  
   
 -   Les colonnes calculées dérivées des types de données `image`, `ntext` et `text` peuvent être des colonnes non-clés tant que le type de données de la colonne calculée est autorisé en tant que colonne d'index non-clé.  
   
--   Les colonnes non-clés ne peuvent pas être supprimées d'une table, sauf si l'index de cette table est d'abord supprimé.  
+-   Les colonnes non-clés ne peuvent pas être supprimées d’une table, sauf si l’index de cette table est d’abord supprimé.  
   
 -   Les colonnes non-clés ne peuvent pas être modifiées, sauf pour effectuer les opérations suivantes :  
   
-    -   modifier la possibilité de valeur NULL de la colonne de NOT NULL à NULL ;  
+    -   modifier la possibilité de valeur NULL de la colonne de NOT NULL à NULL ;  
   
-    -   Augmentez la longueur de `varchar`, `nvarchar`, ou `varbinary` colonnes.  
+    -   augmenter la longueur des colonnes `varchar`, `nvarchar` ou `varbinary`.  
   
 ###  <a name="Security"></a> Sécurité  
   
@@ -96,17 +96,17 @@ ms.locfileid: "48168809"
   
 3.  Cliquez sur le signe plus (+) pour développer la table sur laquelle vous souhaitez créer un index avec des colonnes non-clés.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Indexes** , pointez sur **Nouvel index**, puis sélectionnez **Index non cluster…**.  
+4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...**.  
   
 5.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
-6.  Sous l'onglet **Colonnes de clés d'index** , cliquez sur **Ajouter…**.  
+6.  Sous l’onglet **Colonnes clés d’index**, cliquez sur **Ajouter…**.  
   
 7.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table*, cochez la ou les cases correspondant à la ou aux colonnes de table à ajouter à l’index.  
   
 8.  Cliquez sur **OK**.  
   
-9. Sous l'onglet **Colonnes incluses** , cliquez sur **Ajouter…**.  
+9. Sous l’onglet **Colonnes incluses**, cliquez sur **Ajouter...**.  
   
 10. Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table*, cochez la ou les cases de la ou des colonnes de table à ajouter à l’index en tant que colonnes non-clés.  
   

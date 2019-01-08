@@ -18,15 +18,15 @@ ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be63214fb07683f26fc4f03454d350afbbcf8cbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5319f3cd1cb7f06677bfe35eb19ba66f2dca4151
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779267"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947603"
 ---
 # <a name="spxmlremovedocument-transact-sql"></a>sp_xml_removedocument (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Supprime la représentation interne du document XML spécifié par le descripteur du document puis invalide le descripteur.  
   
@@ -49,7 +49,7 @@ sp_xml_removedocument hdoc
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou >0 (échec)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

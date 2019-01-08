@@ -16,15 +16,15 @@ ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a54054387a57d59470bae6d982b5ce700362f483
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635387"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528861"
 ---
 # <a name="data-buffer-type"></a>Type de tampon de données
-Le type de données C d’une mémoire tampon est spécifié par l’application. Avec une seule variable, cela se produit lorsque l’application alloue la variable. Avec mémoire générique, autrement dit, mémoire vers laquelle pointe un pointeur de type void, cela se produit lorsque l’application effectue un cast de la mémoire à un type particulier. Le pilote détecte ce type de deux manières :  
+Le type de données C d’une mémoire tampon est spécifié par l’application. Avec une seule variable, cela se produit lorsque l’application alloue la variable. Avec mémoire générique - autrement dit, mémoire vers laquelle pointe un pointeur de type void - cela se produit lorsque l’application effectue un cast de la mémoire à un type particulier. Le pilote détecte ce type de deux manières :  
   
 -   **Argument de type de mémoire tampon de données.** Mémoires tampons utilisées pour transférer des valeurs de paramètre et les données du jeu de résultats, telles que la mémoire tampon liée avec *TargetValuePtr* dans **SQLBindCol**, ont généralement un argument de type associé, tel que le  *TargetType* argument dans **SQLBindCol**. Dans cet argument, l’application transmet l’identificateur de type C qui correspond au type de la mémoire tampon. Par exemple, dans l’exemple suivant appel à **SQLBindCol**, la valeur SQL_C_TYPE_DATE indique au pilote qui la *Date* mémoire tampon est un SQL_DATE_STRUCT :  
   

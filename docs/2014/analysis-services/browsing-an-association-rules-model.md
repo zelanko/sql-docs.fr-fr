@@ -16,12 +16,12 @@ ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f5c441081c5e185494c693c44b5f7665529c9b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1259cc627ef53d8f5a201e42772a9dba390824cc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210439"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537183"
 ---
 # <a name="browsing-an-association-rules-model"></a>Exploration d'un modèle d'exploration de données Règles d'association
   Lorsque vous ouvrez un modèle d’association à l’aide **Parcourir**, le modèle est affiché dans une visionneuse interactive semblable à la visionneuse de règles d’Association dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  La visionneuse vous permet de voir d'un seul coup d'œil les éléments corrélés les uns aux autres, et d'afficher les règles que vous pouvez utiliser pour la prédiction ou pour formuler des recommandations.  
@@ -91,17 +91,17 @@ ms.locfileid: "48210439"
   
  *Probabilité* représente la fraction des cas dans le jeu de données qui contiennent la combinaison d’éléments cible. Probabilité est similaire au concept statistique de *confiance*et vous donne une indication de la probabilité du résultat d’une règle doit se produire. Vous pouvez modifier la valeur de **probabilité minimale** dans ce volet pour filtrer les règles qui sont affichés.  
   
- La valeur de **probabilité minimale** qui apparaît initialement est la valeur de seuil qui a été utilisée par l’algorithme lors de la génération du modèle. Lorsque le modèle est terminé, vous ne pouvez plus réduire cette valeur, mais vous pouvez l'augmenter pour afficher uniquement les éléments dont la probabilité est la plus élevée.  
+ La valeur de **probabilité minimale** qui apparaît initialement est la valeur de seuil qui a été utilisée par l’algorithme lors de la génération du modèle. Une fois le modèle terminé, vous ne pouvez pas réduire cette valeur, mais vous pouvez l’augmenter pour afficher uniquement les éléments de probabilité plus élevées.  
   
  *Importance* sert à mesurer l’utilité d’une règle. Une règle très courante peut être si omniprésente qu'elle n'a qu'une valeur d'information minime. Plus l'importance est élevée, plus la règle est utile pour prédire le résultat. Dans le [analyse de panier d’achat &#40;outils d’analyse de Table pour Excel&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md) outil, importance peut être combinée avec le prix des articles pour déterminer les paquets qui sont potentiellement plus utiles en termes de ventes.  
   
 ##### <a name="explore-the-rules-list"></a>Explorer la liste de règles  
   
-1.  Essayez de cliquer sur les en-têtes de colonne : **probabilité**, **Importance**, et **règle** — pour voir comment les données changent.  
+1.  Essayez de cliquer sur la colonne des en-têtes - **probabilité**, **Importance**, et **règle** : pour voir comment les données changent.  
   
 2.  Utilisez le **règle de filtre** option pour entrer des valeurs et de vous concentrer sur les règles ciblées.  
   
-     Par exemple, si vous souhaitez voir toutes les règles qui prédisent ce que les clients tendent à acheter avec des gants, tapez « gloves » dans la zone de texte et actualisez le volet.  
+     Par exemple, si vous souhaitez voir toutes les règles qui prédire quels clients sont susceptibles d’acheter avec des gants, tapez « gloves » dans la zone de texte et actualiser le volet.  
   
      L'option **Filtrer le jeu d'éléments** affiche également une liste des filtres que vous avez utilisés précédemment.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48210439"
   
 5.  Définir la valeur de la **lignes au Maximum** option à 100, puis cliquez sur **copier dans Excel**.  
   
-     Notez que le fait de modifier cette valeur n'a aucun effet sur la quantité de données dans le modèle ; cela contrôle simplement le nombre de lignes dans la liste d'affichage. Cette option est utile si vous travaillez sur de très grands modèles.  
+     Notez que la modification de cette valeur n’a aucun effet sur la quantité de données dans le modèle ; Cela contrôle simplement le nombre de lignes dans la liste d’affichage. Cette option est utile si vous travaillez sur de très grands modèles.  
   
  [Retour au début](#BKMK_ViewerTabs)  
   
@@ -124,13 +124,13 @@ ms.locfileid: "48210439"
   
 1.  Cliquez sur le **trouver** bouton et utiliser le **rechercher un nœud** boîte de dialogue permettant de taper un élément d’intérêt.  
   
-     Par exemple, entrez « gloves » et agrandissez le graphique dans la fenêtre pour voir aisément les résultats.  
+     Par exemple, tapez « gloves » et agrandissez le graphique dans la fenêtre afin que vous pouvez facilement voir les résultats.  
   
      Le nœud qui contient les éléments est mis en surbrillance tandis que les flèches qui pointent sur le nœud représentent les règles qui relient les éléments.  
   
-     La direction de la flèche indique la direction de la règle. Par exemple, si une personne qui achète des gants a également une probabilité d'acheter un gilet, la flèche partira du nœud « glove » et aboutira au nœud « vest ».  
+     La direction de la flèche indique la direction de la règle. Par exemple, si une personne qui achète des gants est également susceptible d’acheter un gilet, la flèche démarrer à partir du nœud « glove » et arrêter sur le nœud « vest ».  
   
-     Pour obtenir des statistiques supplémentaires sur cette règle, vous pouvez cliquer sur le **règles** onglet et recherchez une règle avec la description, « Glove - Existing » -> « Vest – Existing. »)  
+     Pour obtenir des statistiques supplémentaires sur cette règle, vous pouvez cliquer sur le **règles** onglet et recherchez une règle avec la description, « GANT - existant » -> « Vest - existante. »)  
   
 2.  Cliquez sur le curseur à gauche de la visionneuse et faites-le glisser.  
   
@@ -149,9 +149,9 @@ ms.locfileid: "48210439"
   
  Si vous souhaitez définir des paramètres avancés ou alter probabilité minimale et la prise en charge, utilisez le [Assistant associer &#40;Client d’exploration de données pour Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) Assistant, ou créez votre propre modèle avec le [ajouter le modèle à Structure &#40;des compléments d’exploration de données pour Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) option de modélisation.  
   
--   **Jeux d’éléments :** lorsque vous créez le modèle, vous pouvez également contrôler le nombre de jeux d’éléments qui est générés en affectant une valeur au paramètre MINIMUM_PROBABILITY. Ce paramètre est disponible dans la boîte de dialogue Paramètres d’algorithme.  
+-   **Jeux d’éléments :** Lors de la création du modèle, vous pouvez aussi contrôler le nombre de jeux d'éléments générés en affectant une valeur au paramètre MINIMUM_PROBABILITY. Ce paramètre est disponible dans la boîte de dialogue Paramètres d’algorithme.  
   
--   **Règles :** le [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme de règles d’Association utilise les valeurs de probabilité pour limiter le nombre de règles qui sont générés. Vous pouvez contrôler le nombre de règles en définissant les paramètres `MINIMUM_PROBABILITY` ou `MINIMUM _IMPORTANCE`.  
+-   **Règles :** L'algorithme MAR ([!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules) utilise les valeurs de probabilité pour limiter le nombre de règles générées. Vous pouvez contrôler le nombre de règles en définissant les paramètres `MINIMUM_PROBABILITY` ou `MINIMUM _IMPORTANCE`.  
   
  Pour plus d’informations sur la configuration des paramètres avancés, consultez [algorithmes d’exploration de données &#40;SQL Server Data Mining Add-ins&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md).  
   

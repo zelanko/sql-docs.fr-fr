@@ -10,15 +10,15 @@ ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ee69a982dd16d165be9a808cb923b342157b4cf0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a114e51ad6f2841cbd6368208bac6771e3b97ed0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163549"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392743"
 ---
 # <a name="modify-user-defined-functions"></a>Modifier les fonctions définies par l'utilisateur
-  Vous pouvez modifier les fonctions définies par l'utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le fait de modifier des fonctions définies par l'utilisateur comme décrit ci-dessous n'affecte pas les autorisations des fonctions et n'a aucune incidence sur les fonctions, les procédures stockées et les déclencheurs qui en dépendent.  
+  Vous pouvez modifier les fonctions définies par l'utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le fait de modifier des fonctions définies par l’utilisateur comme décrit ci-dessous n’affecte pas les autorisations des fonctions et n’a aucune incidence sur les fonctions, les procédures stockées et les déclencheurs qui en dépendent.  
   
  **Dans cette rubrique**  
   

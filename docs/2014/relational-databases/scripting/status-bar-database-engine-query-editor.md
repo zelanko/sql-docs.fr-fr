@@ -11,21 +11,21 @@ ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 133a21d00442859738ac6114847f68ab7bfb1564
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11b55e2faeb251f8c3a7ab5220d9716476e66639
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093429"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512080"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barre d'état (éditeur de requête du moteur de base de données)
   La barre d'état des fenêtres de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut être codée par couleur pour indiquer l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] auquel chaque fenêtre est connectée.  
   
-1.  **Avant de commencer :**  [Couleurs de la barre d'état](#StatusBarColors)  
+1.  **Avant de commencer :**  [Couleurs de la barre d’état](#StatusBarColors)  
   
-2.  **Pour définir une couleur d'état du serveur dans :**  [Explorateur d'objets](#SetOEServerColor), [Serveur inscrit](#SetRegServerColor)  
+2.  **Pour définir une couleur d’état de serveur :**  [Explorateur d’objets](#SetOEServerColor), [serveur inscrit](#SetRegServerColor)  
   
-3.  **Pour utiliser une couleur d'état :**  [Ouvrir un Éditeur de requête à l'aide d'une couleur de serveur](#OpenServerColor), [Ouvrir un Éditeur de requête en spécifiant une couleur d'état](#OpenSpecColor)  
+3.  **Pour utiliser une couleur d’état :**  [Ouvrez l’éditeur de requête à l’aide d’une couleur de serveur](#OpenServerColor), [ouvrir un éditeur de requête en spécifiant une couleur d’état](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> Couleurs de la barre d'état  
  Vous pouvez associer une couleur de barre d'état à un nœud serveur spécifique dans l' **Explorateur d'objets** ou dans **Serveurs inscrits**. Les couleurs peuvent être spécifiées uniquement pour des nœuds serveurs connectés à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], et non pour des nœuds serveurs pour d'autres technologies SQL Server. Vous pouvez également spécifier une couleur de barre d'état personnalisée chaque fois que vous connectez une nouvelle fenêtre de l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Vous pouvez ensuite ouvrir une fenêtre d'Éditeur de requête soit en utilisant la couleur d'état définie pour le nœud serveur, soit en spécifiant une couleur unique pour cette fenêtre d'éditeur.  
@@ -35,13 +35,13 @@ ms.locfileid: "48093429"
 ##  <a name="SetOEServerColor"></a> Définir la couleur d'état pour un serveur dans l'Explorateur d'objets  
  **Pour définir une couleur d'état de serveur dans l'Explorateur d'objets**  
   
-1.  Dans l' **Explorateur d'objets**, sélectionnez **Se connecter** , puis **Moteur de base de données**.  
+1.  Dans l’**Explorateur d’objets**, sélectionnez **Se connecter**, puis **Moteur de base de données...**.  
   
 2.  Dans la boîte de dialogue **Se connecter au serveur**, sélectionnez **Options >>**.  
   
 3.  Activez la case à cocher **Utiliser une couleur personnalisée** .  
   
-4.  Pour choisir la couleur, sélectionnez le bouton **Sélectionner** .  
+4.  Pour choisir la couleur, sélectionnez le bouton **Sélectionner...**.  
   
 5.  Sélectionnez une couleur de base ou personnalisée, puis cliquez sur OK.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "48093429"
 ##  <a name="SetRegServerColor"></a> Définir la couleur d'état pour un serveur inscrit  
  **Pour définir une couleur de serveur pour un serveur inscrit**  
   
-1.  Dans **Serveurs inscrits**, cliquez avec le bouton droit sur le nœud de serveur, puis sélectionnez **Propriétés**.  
+1.  Dans **Serveurs inscrits**, cliquez avec le bouton droit sur le nœud de serveur, puis sélectionnez **Propriétés...**.  
   
 2.  Dans la boîte de dialogue **Modifier les propriétés d'inscription du serveur** , sélectionnez l'onglet **Propriétés de connexion** .  
   
 3.  Activez la case à cocher **Utiliser une couleur personnalisée** .  
   
-4.  Pour choisir la couleur, sélectionnez le bouton **Sélectionner** .  
+4.  Pour choisir la couleur, sélectionnez le bouton **Sélectionner...**.  
   
 5.  Sélectionnez une couleur de base ou personnalisée, puis cliquez sur OK.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48093429"
   
 -   Activez la case à cocher **Utiliser une couleur personnalisée** .  
   
--   Pour choisir la couleur, sélectionnez le bouton **Sélectionner** .  
+-   Pour choisir la couleur, sélectionnez le bouton **Sélectionner...**.  
   
 -   Sélectionnez une couleur de base ou personnalisée, puis cliquez sur OK.  
   

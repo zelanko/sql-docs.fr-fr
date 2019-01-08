@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8e07af93050ec752a9cf26b56238269ca63aa9d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0e9f8894376712472c13479a32503954ad2694d7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660478"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506321"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -63,17 +63,17 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|Colonne de l'ID interne de document (DocId) qui correspond à la valeur de la clé.|  
-|Key|*|Valeur de la clé de texte intégral pour une table spécifiée.<br /><br /> Si aucune clé de texte intégral n'existe dans la table de mappage, un ensemble de lignes vide est retourné.|  
+|Touche|*|Valeur de la clé de texte intégral pour une table spécifiée.<br /><br /> Si aucune clé de texte intégral n'existe dans la table de mappage, un ensemble de lignes vide est retourné.|  
   
  <sup>*</sup> Le type de données pour la clé est identique au type de données de la colonne de clé de recherche en texte intégral dans la table de base.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette fonction est publique et ne requiert pas d'autorisation spéciale.  
   
 ## <a name="remarks"></a>Notes  
  Le tableau ci-dessous décrit l'impact de l'utilisation d'un, de deux ou de trois paramètres.  
   
-|Cette liste de paramètres…|Donne le résultat suivant...|  
+|Cette liste de paramètres...|A ce résultat...|  
 |--------------------------|----------------------|  
 |*table_id*|Lorsqu’elle est appelée avec uniquement le *table_id* , sp_fulltext_keymappings retourne toutes les valeurs de clé de recherche en texte intégral (Key) à partir de la table de base spécifiée, avec le DocId qui correspond à chaque clé. Cela inclut des clés qui sont en attente de suppression.<br /><br /> Cette fonction est utile pour la résolution de divers problèmes. Elle est particulièrement utile pour afficher le contenu d'index de recherche en texte intégral lorsque la clé de texte intégral sélectionnée n'est pas un type de données integer. Cela implique de joindre les résultats de sp_fulltext_keymappings avec les résultats de **sys.dm_fts_index_keywords_by_document**. Pour plus d’informations, consultez [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> En général, toutefois, nous vous recommandons, si possible, d'exécuter sp_fulltext_keymappings avec les paramètres qui spécifient une clé de de texte intégral spécifique ou DocId. C'est beaucoup plus efficace que retourner un mappage de clés entier, surtout pour une table très volumineuse pour laquelle le coût de performance lié au retour d'un mappage de clés entier peut être conséquent.|  
 |*table_id*, *docid*|Si seul le *table_id* et *docid* sont spécifiés, *docid* doit être non null et spécifier un DocId valide dans la table spécifiée. Cette fonction est utile pour isoler la clé de texte intégral personnalisée de la table de base qui correspond au DocId d'un index de recherche en texte intégral particulier.|  
@@ -117,7 +117,7 @@ GO
 |`3`|`3`|`3`|  
 |`4`|`4`|`4`|  
   
-### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>B. Obtention de la valeur DocId pour une valeur de clé spécifique  
+### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>b. Obtention de la valeur DocId pour une valeur de clé spécifique  
  L'exemple suivant utilise une instruction DECLARE pour créer une variable locale, `@table_id`, et lui assigner comme valeur l'ID de la table `ProductReview` . L’exemple exécute **sp_fulltext_keymappings** spécifiant `@table_id` pour le *table_id* paramètre, NULL pour le *docid* paramètre et 4 pour le *clé* paramètre.  
   
 > [!NOTE]  

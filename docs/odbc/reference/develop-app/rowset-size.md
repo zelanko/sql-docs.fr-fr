@@ -17,17 +17,17 @@ ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 132ee99180595dca5e203a6821c5f87aa616530d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54da54a63fb1234478a3161cd46e7143258d2d65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695217"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510592"
 ---
 # <a name="rowset-size"></a>Taille des ensembles de lignes
 Quelle taille d’ensemble de lignes à utiliser dépend de l’application. Applications basées sur l’écran suivent généralement une des deux stratégies. La première consiste à définir la taille de l’ensemble de lignes sur le nombre de lignes affichées sur l’écran ; Si l’utilisateur redimensionne l’écran, l’application modifie la taille de l’ensemble de lignes en conséquence. La seconde consiste à définir la taille de l’ensemble de lignes à un plus grand nombre, telle que 100, ce qui réduit le nombre d’appels à la source de données. L’application fait défiler localement dans l’ensemble de lignes lorsque cela est possible et extrait les nouvelles lignes uniquement lorsqu’il fait défiler en dehors de l’ensemble de lignes.  
   
- Autres applications, tels que des rapports, ont tendance à la valeur de la taille de l’ensemble de lignes le plus grand nombre de lignes que l’application peut en gérer, avec un plus grand ensemble de lignes, le réseau de la surcharge par ligne est parfois réduit. Exactement quelle un ensemble de lignes peut être dépend de la taille de chaque ligne et la quantité de mémoire disponible.  
+ Autres applications, tels que des rapports, ont tendance à la valeur de la taille de l’ensemble de lignes le plus grand nombre de lignes que l’application peut gérer raisonnablement - avec un plus grand ensemble de lignes, le réseau de la surcharge par ligne est parfois réduit. Exactement quelle un ensemble de lignes peut être dépend de la taille de chaque ligne et la quantité de mémoire disponible.  
   
  Taille de l’ensemble de lignes est définie par un appel à **SQLSetStmtAttr** avec un *attribut* argument de SQL_ATTR_ROW_ARRAY_SIZE. L’application peut modifier la taille de l’ensemble de lignes, lier le nouvel ensemble de lignes mémoires tampons (en appelant **SQLBindCol** ou en spécifiant un décalage de liaison) même après les lignes qui ont été extraites, ou les deux. Les conséquences de la modification de la taille de l’ensemble de lignes dépendent de la fonction :  
   

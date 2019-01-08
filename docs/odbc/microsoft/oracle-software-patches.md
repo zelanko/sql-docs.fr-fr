@@ -14,12 +14,12 @@ ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afd5a20d99692c1a623b13b53218f62c00cb218a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a4ac67e1a593cdfd7e67d789289bd1a5ece1467
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845917"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515314"
 ---
 # <a name="oracle-software-patches"></a>Correctifs logiciels Oracle
 > [!IMPORTANT]  
@@ -36,7 +36,7 @@ ms.locfileid: "47845917"
   
 2.  Accédez au répertoire suivant : /server/wgt_tech/server/windowsNT.  
   
-3.  Pour télécharger des correctifs les plus pertinents pour Windows 95, Windows 98 et Windows NT/Windows 2000, accédez au sous-répertoire de votre version d’Oracle : 7.3 ou 8.0. Les deux sous-répertoires sont /73patchsets et /80patchsets.  
+3.  Pour télécharger des correctifs les plus pertinents pour Windows 95, Windows 98 et Windows NT/Windows 2000, accédez au sous-répertoire de votre version d’Oracle - 7.3 ou 8.0. Les deux sous-répertoires sont /73patchsets et /80patchsets.  
   
 4.  Pour télécharger des correctifs pour la technologie de réseau d’Oracle, SQL * Net ou Net8, accédez au répertoire suivant : / réseau.  
   

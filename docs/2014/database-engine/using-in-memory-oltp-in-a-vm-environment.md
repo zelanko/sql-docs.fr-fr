@@ -10,15 +10,15 @@ ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad9e70e78229821197fdd80724d8e0924818bb30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103279"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408906"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>Utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle
-  La virtualisation de serveur vous permet de réduire les coûts d’exploitation et de capital informatique et d’optimiser l’efficacité informatique, grâce à des processus de configuration, de maintenance, de disponibilité, de sauvegarde et de récupération d’applications optimisés. Avec les progrès technologiques récents, les charges de travail de base de données complexes peuvent être consolidées plus aisément à l'aide de la virtualisation. Cette rubrique porte sur les meilleures pratiques relatives à l’utilisation de [!INCLUDE[hek_1](../includes/hek-1-md.md)] dans un environnement virtualisé.  
+  La virtualisation de serveur vous permet de réduire les coûts d’exploitation et de capital informatique et d’optimiser l’efficacité informatique, grâce à des processus de configuration, de maintenance, de disponibilité, de sauvegarde et de récupération d’applications optimisés. Avec les progrès technologiques récents, les charges de travail de base de données complexes peuvent être consolidées plus aisément à l'aide de la virtualisation. Cette rubrique porte sur les meilleures pratiques relatives à l’utilisation de [!INCLUDE[hek_1](../includes/hek-1-md.md)] dans un environnement virtualisé.  
   
 ##  <a name="bkmk_memoryPreAllocation"></a> Préallocation de mémoire  
  Pour la mémoire dans un environnement virtualisé, de meilleures performances et une prise en charge améliorée sont essentielles. Vous devez pouvoir allouer rapidement de la mémoire aux machines virtuelles en fonction des exigences (charges de pointe et creuses) et garantir que la mémoire n'est pas gaspillée. La fonctionnalité de mémoire dynamique d’Hyper-V augmente l’agilité de l’allocation et de la gestion de la mémoire entre les machines virtuelles exécutées sur un hôte.  
@@ -29,7 +29,7 @@ ms.locfileid: "48103279"
   
 -   Ne définissez pas la préallocation de mémoire sur une valeur trop élevée. Sinon, les autres processus ne disposeront pas de suffisamment de mémoire au moment où ils en ont besoin, ce qui peut entraîner une pagination de mémoire.  
   
- Si vous suivez les pratiques ci-dessus lorsque votre base de données possède présente des tables à mémoire optimisée, vous voyez que la tentative de récupération et restauration d’une base de données peut entraîner le blocage de la base de données à l’état « Récupération en attente », même si vous avez suffisamment de mémoire disponible pour la récupérer. En effet, au démarrage, [!INCLUDE[hek_2](../includes/hek-2-md.md)] met les données en mémoire plus rapidement que l’allocation de mémoire dynamique n’alloue la mémoire nécessaire à la base de données.  
+ Si vous suivez les pratiques ci-dessus pour une base de données avec des tables à mémoire optimisée, une tentative de récupération et de restauration d’une base de données peut entraîner le blocage de la base de données à l’état « Récupération en attente », même si vous avez suffisamment de mémoire disponible pour la récupérer. En effet, au démarrage, [!INCLUDE[hek_2](../includes/hek-2-md.md)] met les données en mémoire plus rapidement que l’allocation de mémoire dynamique n’alloue la mémoire nécessaire à la base de données.  
   
  **Résolution**  
   

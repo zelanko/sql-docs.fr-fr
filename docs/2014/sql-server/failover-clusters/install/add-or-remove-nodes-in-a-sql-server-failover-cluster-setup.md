@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - adding nodes
@@ -19,12 +18,12 @@ ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 111d5b219280537d72e21873091a591634b8afa8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b6298020c1aa39f2c5c319efa492f6832c301f9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082204"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751611"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server (programme d'installation)
   Utilisez cette procédure pour gérer les nœuds d'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existante.  
@@ -66,7 +65,7 @@ ms.locfileid: "48082204"
   
 8.  Dans la page Configuration du nœud de clusters, utilisez la zone de liste déroulante pour spécifier le nom de l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui sera modifiée pendant cette opération d'installation.  
   
-9. Dans la page Configuration du serveur — Comptes de service, spécifiez les comptes de connexion des services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez sélectionnées. Pour les installations de cluster de basculement, les informations de nom de compte et de type de démarrage seront préremplies dans cette page, en fonction des paramètres indiqués pour le nœud actif. Vous devez fournir des mots de passe pour chaque compte. Pour plus d’informations, consultez [Configuration du serveur - Comptes de service](../../install/server-configuration-service-accounts.md) et [Configurer les comptes de service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+9. Dans la page Configuration du serveur - Comptes de service, spécifiez les comptes de connexion des services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez sélectionnées. Pour les installations de cluster de basculement, les informations de nom de compte et de type de démarrage seront préremplies dans cette page, en fonction des paramètres indiqués pour le nœud actif. Vous devez fournir des mots de passe pour chaque compte. Pour plus d’informations, consultez [Configuration du serveur - Comptes de service](../../install/server-configuration-service-accounts.md) et [Configurer les comptes de service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Remarque relative à la sécurité** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   

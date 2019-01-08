@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b5234cf66bc5f829ab9d83c2642da14b5716161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4107e6c1f675f7fae78ca384c082ef12c2fa309b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735447"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406456"
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "47735447"
   
  Pour ajouter ou supprimer l’appartenance au rôle de serveur, utilisez le [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)instruction.  
   
-## <a name="permissions"></a>Permissions  
- Les connexions peuvent afficher leur propre appartenance au rôle de serveur et les principal_id des membres des rôles serveur fixes. Pour afficher tous les appartenance au rôle de serveur nécessite le **VIEW DEFINITION ON SERVER ROLE** autorisation ou l’appartenance dans le **securityadmin** rôle serveur fixe.  
+## <a name="permissions"></a>Autorisations  
+ Connexions peuvent afficher leur propre appartenance au rôle de serveur et les principal_id des membres de rôles serveur fixes. Pour afficher tous les appartenance au rôle de serveur nécessite le **VIEW DEFINITION ON SERVER ROLE** autorisation ou l’appartenance dans le **securityadmin** rôle serveur fixe.  
   
  Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

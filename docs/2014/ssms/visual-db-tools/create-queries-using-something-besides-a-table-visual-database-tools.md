@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], queries
@@ -13,12 +13,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c30244128ea15d010c9fe179b06424434325574d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159999"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768541"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Créer des requêtes qui utilisent autre chose qu'une table (Visual Database Tools)
   Pour écrire une requête d'extraction, il faut toujours formuler quelles sont les colonnes et les lignes à obtenir ainsi que le lieu où le processeur de requêtes trouve les données d'origine. En général, une table ou plusieurs tables jointes constituent les données d'origine. Mais la source des données ne se trouve pas forcément dans une table. Les données d'origine peuvent venir de vues, de requêtes, de synonymes ou de fonctions définies par l'utilisateur et retournant une table.  
@@ -136,7 +136,7 @@ FROM
 ## <a name="using-a-user-defined-function-in-place-of-a-table"></a>Utilisation d'une fonction définie par l'utilisateur à la place d'une table  
  Dans SQL Server 2000 ou une version ultérieure, vous pouvez créer une fonction définie par l'utilisateur et retournant une table. Ce type de fonction permet d'utiliser une logique complexe ou procédurale.  
   
- Par exemple, supposons que la table employee contienne une colonne supplémentaire, employee.manager_emp_id, et qu'il existe une clé étrangère entre manager_emp_id et employee.emp_id. Sur chaque ligne de la table employee, la colonne manager_emp_id indique le supérieur hiérarchique de l'employé. Plus précisément, elle indique l'ID d'employé du responsable hiérarchique. La fonction que vous créez pourra renvoyer une table contenant une ligne par employé dépendant d'un responsable hiérarchique dont vous préciserez le niveau. Appelons cette fonction fn_GetWholeTeam et prévoyons dans son design l'utilisation d'une variable d'entrée — l'ID d'employé du responsable de l'équipe à extraire.  
+ Par exemple, supposons que la table employee contienne une colonne supplémentaire, employee.manager_emp_id, et qu'il existe une clé étrangère entre manager_emp_id et employee.emp_id. Sur chaque ligne de la table employee, la colonne manager_emp_id indique le supérieur hiérarchique de l'employé. Plus précisément, elle indique l'ID d'employé du responsable hiérarchique. La fonction que vous créez pourra renvoyer une table contenant une ligne par employé dépendant d'un responsable hiérarchique dont vous préciserez le niveau. Appelons cette fonction fn_GetWholeTeam et prévoyons dans son design l’utilisation d’une variable d’entrée (l’ID d’employé du responsable de l’équipe à récupérer).  
   
  Il est possible d'écrire une requête utilisant la fonction fn_GetWholeTeam comme source de données. L'instruction SQL obtenue peut se présenter de la manière suivante :  
   

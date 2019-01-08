@@ -12,12 +12,12 @@ ms.assetid: bda1e452-397b-4757-82a4-181217361589
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c5cec8fb34b8605b7b31924f082a5178c6a78eeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7700a2d1da4349bd1bc652badc1c2cdd89dc6550
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147909"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510564"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Désactiver la compression sur une table ou un index
   Cette rubrique explique comment désactiver la compression sur une table ou un index dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -57,7 +57,7 @@ ms.locfileid: "48147909"
   
 1.  Dans l'Explorateur d'objets, développez la base de données contenant la table sur laquelle vous souhaitez désactiver la compression, puis développez le dossier **Tables** .  
   
-2.  Cliquez avec le bouton droit sur la table ou l’index sur lequel vous souhaitez désactiver la compression, pointez sur **Stockage** et sélectionnez **Gérer la compression…**.  
+2.  Cliquez avec le bouton droit sur la table ou l’index sur lequel vous souhaitez désactiver la compression, pointez sur **Stockage** et sélectionnez **Gérer la compression...**.  
   
 3.  Pour désactiver la compression sur un index, développez la table contenant l'index puis développez le dossier **Index** .  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48147909"
   
      Si vous sélectionnez **Planification**, cliquez sur **Modifier la planification**.  
   
-    1.  Dans la boîte de dialogue **Nouvelle planification du travail** , dans la zone **Nom** , entrez le nom de la planification du travail.  
+    1.  Dans la boîte de dialogue **Nouvelle planification du travail**, dans la zone **Nom**, entrez le nom de la planification du travail.  
   
     2.  Dans la liste **Type de planification** , sélectionnez le type de la planification :  
   
@@ -130,15 +130,15 @@ ms.locfileid: "48147909"
   
             -   Si vous sélectionnez **Mensuelle**, sélectionnez **Jour** ou **Le**.  
   
-                -   Si vous sélectionnez **Jour**, entrez la date du mois à laquelle vous souhaitez que la planification du travail s'exécute, ainsi que la fréquence de répétition de la planification du travail en mois. Par exemple, si vous souhaitez que la planification du travail s'exécute le 15 du mois un mois sur deux, sélectionnez **Jour** , puis entrez « 15 » dans la première zone et « 2 » dans la deuxième zone. Notez également que le nombre maximum autorisé dans la deuxième zone est « 99 ».  
+                -   Si vous sélectionnez **Jour**, entrez la date du mois à laquelle vous souhaitez que la planification du travail s'exécute, ainsi que la fréquence de répétition de la planification du travail en mois. Par exemple, si vous souhaitez que la planification du travail s’exécute le 15 du mois un mois sur deux, sélectionnez **Jour**, puis entrez « 15 » dans la première zone et « 2 » dans la deuxième zone. Notez que le nombre maximum autorisé dans la deuxième zone est « 99 ».  
   
-                -   Si vous sélectionnez **Le**, sélectionnez le jour spécifique de la semaine et du mois pendant lequel vous voulez que la planification du travail s'exécute et la fréquence à laquelle la planification du travail doit se répéter en mois. Par exemple, si vous souhaitez que la planification du travail s'exécute le dernier jour de la semaine un mois sur deux, sélectionnez **Jour**, puis **dernier** dans la première liste, **jour ouvrable** dans la deuxième liste et « 2 » dans la dernière zone. Vous pouvez également sélectionner **premier**, **deuxième**, **troisième**ou **quatrième**, ainsi que des jours de la semaine spécifiques (par exemple, dimanche ou mercredi) dans les deux premières listes. Notez également que le nombre maximum autorisé dans la dernière zone est « 99 ».  
+                -   Si vous sélectionnez **Le**, sélectionnez le jour spécifique de la semaine et du mois pendant lequel vous voulez que la planification du travail s'exécute et la fréquence à laquelle la planification du travail doit se répéter en mois. Par exemple, si vous souhaitez que la planification du travail s’exécute le dernier jour de la semaine un mois sur deux, sélectionnez **Jour**, puis **dernier** dans la première liste, **jour ouvrable** dans la deuxième liste et « 2 » dans la dernière zone. Vous pouvez également sélectionner **première**, **deuxième**, **troisième**, ou **quatrième**, ainsi que les jours de la semaine spécifiques (par exemple : Dimanche ou mercredi) dans les deux premières listes. Notez que le nombre maximum autorisé dans la dernière zone est « 99 ».  
   
         2.  Sous **Fréquence quotidienne**, spécifiez la fréquence à laquelle la planification du travail se répète le jour de son exécution :  
   
             -   Si vous sélectionnez **Une fois à**, entrez l'heure spécifique à laquelle la planification du travail doit s'exécuter dans la zone **Une fois à** . Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   
-            -   Si vous sélectionnez **Toutes les**, spécifiez la fréquence à laquelle la planification du travail s'exécute pendant la journée choisie sous **Fréquence**. Par exemple, si vous souhaitez que la planification du travail se répète toutes les 2 heures le jour d’exécution de la planification du travail, sélectionnez **Toutes les**, entrez « 2 » dans la première zone, puis sélectionnez **heure(s)** dans la liste. Dans cette liste, vous pouvez également sélectionner **minute(s)** et **seconde(s)**. Notez également que le nombre maximum autorisé dans la première zone est « 100 ».  
+            -   Si vous sélectionnez **Toutes les**, spécifiez la fréquence à laquelle la planification du travail s'exécute pendant la journée choisie sous **Fréquence**. Par exemple, si vous souhaitez que la planification du travail se répète toutes les 2 heures le jour d’exécution de la planification du travail, sélectionnez **Toutes les**, entrez « 2 » dans la première zone, puis sélectionnez **heure(s)** dans la liste. Dans cette liste, vous pouvez également sélectionner **minute(s)** et **seconde(s)**. Notez que le nombre maximum autorisé dans la première zone est « 100 ».  
   
                  Dans la zone **Début** , entrez l'heure à laquelle l'exécution de la planification du travail doit démarrer. Dans la zone **Fin** , entrez l'heure à laquelle la planification du travail doit s'arrêter. Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   
@@ -180,10 +180,10 @@ ms.locfileid: "48147909"
      Ouvre la boîte de dialogue **Enregistrer le rapport sous** .  
   
      **Copier le rapport dans le Presse-papiers**  
-     Copie les résultats du rapport de progression de l'Assistant dans le presse-papiers.  
+     Copie les résultats du rapport de progression de l’Assistant dans le Presse-papiers.  
   
      **Envoyer le rapport sous forme de courrier électronique**  
-     Copie les résultats du rapport de progression de l'Assistant dans un courrier électronique.  
+     Copie les résultats du rapport de progression de l’Assistant dans un e-mail.  
   
      Une fois terminé, cliquez sur **Fermer**.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "48147909"
   
 #### <a name="to-disable-compression-on-a-table"></a>Pour désactiver la compression sur une table  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "48147909"
   
 #### <a name="to-disable-compression-on-an-index"></a>Pour désactiver la compression sur un index  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

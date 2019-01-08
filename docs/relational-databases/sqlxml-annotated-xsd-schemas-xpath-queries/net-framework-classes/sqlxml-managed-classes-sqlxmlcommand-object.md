@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89ab6ca4f8b95f4f78b1f6c8b9e33fbd1a3fa138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3ae51af994665ac4234dc44e84fb5c2c405aa1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816277"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502564"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Classes managées SQLXML - Objet SqlXmlCommand
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47816277"
 public SqlXmlCommand(string cnString)  
 ```  
   
- Où `cnString` correspond à la chaîne de connexion ADO ou OLEDB qui identifie le serveur, la base de données et les informations de connexion — par exemple, `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
+ Où `cnString` est la chaîne de connexion ADO ou OLEDB qui identifie le serveur, base de données et les informations de connexion-par exemple, `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
   
  Dans la chaîne de connexion, le `Provider` doit être SQLOLEDB et le `Data Provider` ne doit pas être inclus dans la chaîne de fournisseur).  
   
@@ -109,7 +109,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Identifie le type de commande. Cette propriété est utilisée pour spécifier le type de commande que vous souhaitez exécuter. Les valeurs du tableau ci-dessous déterminent le type de la commande. Pour obtenir un exemple fonctionnel, consultez [l’accès à des fonctionnalités de SQLXML dans l’environnement .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SqlXmlCommandType.Sql|Exécute une commande SQL (par exemple, `SELECT * FROM Employees FOR XML AUTO`).|  
 |SqlXmlCommandType.XPath|Exécute une commande XPath (par exemple, `Employees[@EmployeeID=1]`).|  

@@ -1,24 +1,23 @@
 ---
-title: 'Étape 2 : Activation et configuration des configurations de package | Microsoft Docs'
+title: 'Étape 2 : Activation et configuration des Configurations de Package | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33516b6f47a3c4f33d001c225c5a1a60a9802f7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2895a40dbff1215f5f6b2b2d873069f41b1d315
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100800"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747961"
 ---
-# <a name="step-2-enabling-and-configuring-package-configurations"></a>Étape 2 : activation et configuration des configurations de package
+# <a name="step-2-enabling-and-configuring-package-configurations"></a>Étape 2 : Activation et configuration des configurations de package
   Au cours de cette tâche, vous allez convertir le projet en modèle de déploiement de package et activer les configurations du package à l'aide de l'Assistant Configuration de package. Vous allez utiliser cet Assistant pour générer un fichier de configuration XML qui contient les paramètres de configuration de la propriété `Directory` du conteneur de boucles Foreach. La valeur de la propriété Directory est fournie par la nouvelle variable de niveau package que vous pouvez mettre à jour au moment de l'exécution. De plus, vous allez remplir un nouveau dossier de données exemple à utiliser au cours du test.  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Pour créer une nouvelle variable de niveau package mappée à la propriété Directory  
@@ -40,11 +39,11 @@ ms.locfileid: "48100800"
   
 7.  Réaffichez l’onglet **Flux de contrôle** et double-cliquez sur le conteneur **Foreach File in Folder** .  
   
-8.  Dans la page **Collection** de **l’Éditeur de boucle Foreach**, cliquez sur **Expressions**, puis sur le bouton **(…)**.  
+8.  Dans la page **Collection** de l’**Éditeur de boucle Foreach**, cliquez sur **Expressions**, puis sur le bouton **(...)**.  
   
 9. Dans le **Éditeur d’Expressions de propriété**, cliquez dans le **propriété** liste, puis sélectionnez `Directory`.  
   
-10. Dans la zone **Expression** , cliquez sur le bouton **(…)**.  
+10. Dans la zone **Expression**, cliquez sur le bouton **(...)**.  
   
 11. Dans le **Générateur d’expressions**, développez le dossier Variables et faites glisser la variable **User::varFolderName** vers la zone **Expression** .  
   
@@ -106,6 +105,6 @@ ms.locfileid: "48100800"
 3.  Dans le `New Sample Data` dossier, collez les fichiers copiés.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 3 : Modification de la valeur de configuration de la propriété Directory](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [Étape 3 : Modification de la valeur de Configuration de propriété de répertoire](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   

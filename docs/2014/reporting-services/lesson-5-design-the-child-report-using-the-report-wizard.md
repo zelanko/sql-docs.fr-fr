@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 5 : concevoir le rapport enfant à l’aide de l’Assistant Rapport | Microsoft Docs'
+title: 'Leçon 5 : Concevoir le rapport enfant à l’aide de l’Assistant rapport | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1eb2cb7693110204767a627e54cd4248e7d1a7cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc993c0881eb4aeeddb18c8df0efad69dbba261e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166939"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418350"
 ---
-# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Leçon 5 : concevoir le rapport enfant à l'aide de l'Assistant Rapport
+# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Leçon 5 : Concevoir le rapport enfant à l’aide de l’Assistant rapport
   Après avoir créé une connexion de données et une table de données pour le rapport enfant, l'étape suivante consiste à concevoir le rapport enfant à l'aide de l'Assistant Rapport dans le Concepteur de rapports. Pour plus d’informations sur le Concepteur de rapports, consultez [Concevoir des rapports à l’aide du Concepteur de rapports &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ### <a name="to-design-the-child-report-using-the-report-wizard"></a>Pour concevoir le rapport enfant à l'aide de l'Assistant Rapport  
@@ -35,7 +35,7 @@ ms.locfileid: "48166939"
   
      La zone **Datasets disponibles** est automatiquement mise à jour avec l’objet DataTable que vous avez créé.  
   
-5.  Cliquez sur **Suivant**.  
+5.  Cliquer sur **Suivant**.  
   
 6.  Dans la page **Organiser les champs** , procédez comme suit :  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48166939"
   
 7.  Cliquez sur **suivant** à deux reprises, puis cliquez sur **Terminer** pour fermer la **Assistant rapport**.  
   
-     Vous venez de créer le fichier .rdlc. Le fichier s'ouvre dans le Concepteur de rapports. Le tableau matriciel que vous avez conçu est maintenant affiché dans l'aire de conception.  
+     Vous avez maintenant créé le fichier .rdlc. Le fichier s'ouvre dans le Concepteur de rapports. Le tableau matriciel que vous avez conçu est maintenant affiché dans l'aire de conception.  
   
 8.  Le fichier .rdlc étant ouvert, ajoutez un paramètre en procédant comme suit :  
   

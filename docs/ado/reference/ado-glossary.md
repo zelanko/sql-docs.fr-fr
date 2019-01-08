@@ -13,12 +13,12 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e60c8f979b52293e2320a1a84cecd17c83caaad4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b93ee4ab5b57414d8c8d640bc12a5ebbff882c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681727"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530387"
 ---
 # <a name="ado-glossary"></a>Glossaire ADO
 Cette rubrique définit les termes pertinents se rapportant à ADO.  
@@ -96,7 +96,7 @@ Cette rubrique définit les termes pertinents se rapportant à ADO.
  Norme binaire permettant aux objets d’interagir dans un environnement réseau, quel que soit le langage dans lequel elles ont été développées ou sur les ordinateurs qu’ils résident. Technologies basées sur COM incluent des contrôles ActiveX, l’automatisation et objets liés et incorporés (OLE). COM permet à un objet d’exposer ses fonctionnalités à d’autres composants et d’héberger des applications. Il définit comment l’objet expose lui-même et comment cette exposition fonctionne sur les processus et les réseaux. COM définit également le cycle de vie de l’objet.  
   
  Composant COM  
- Fichier binaire, telles que .dll, .ocx et certains fichiers .exe, qui prend en charge la norme COM pour fournir des objets. Ce fichier contient le code pour un ou plusieurs fabriques de classes, les classes COM, les mécanismes d’entrée de Registre, le code de chargement et ainsi de suite.  
+ Fichier binaire - telles que .dll, .ocx et certains fichiers .exe - qui prend en charge la norme COM pour fournir des objets. Ce fichier contient le code pour un ou plusieurs fabriques de classes, les classes COM, les mécanismes d’entrée de Registre, le code de chargement et ainsi de suite.  
   
  Opérateur de comparaison  
  Un opérateur qui compare deux expressions et retourne une valeur booléenne.  
@@ -187,7 +187,7 @@ Cette rubrique définit les termes pertinents se rapportant à ADO.
  ISAPI (Internet Server Application programmation Interface)  
  Un ensemble de fonctions pour les serveurs Internet, tel qu’un serveur de 2000 Windows NT® Server/Windows exécutant Microsoft® Internet Information Services (IIS).  
   
- Key  
+ Touche  
  Une ou plusieurs colonnes dans une table qui identifient de manière unique une ligne ; souvent utilisé pour indexer une table.  
   
 ## <a name="m"></a>M  

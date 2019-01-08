@@ -16,12 +16,12 @@ ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28ac9304ac49a210cfeafc564332828da0680dc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ba210106a7a4045c3dae43db3590e69a7c2c5ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178819"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515789"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Importer et exporter des packages (Service SSIS)
     
@@ -38,9 +38,9 @@ ms.locfileid: "48178819"
   
 -   Les dossiers dans le magasin de packages SSIS. Les deux dossiers par défaut sont appelés « Système de fichiers » et « MSDB ».  
   
--   La base de données msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   La base de données msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vous donne la possibilité d’importer et exporter des packages, et ce faisant modifier le format de stockage et l’emplacement des packages. Les fonctionnalités d’importation et d’exportation vous permettent d’ajouter des packages au système de fichiers, au magasin de packages ou à la base de données msdb, et de copier des packages d’un format de stockage vers un autre. Par exemple, les packages enregistrés dans msdb peuvent être copiés dans le système de fichiers et vice versa.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vous donne la possibilité d'importer et d'exporter des packages, et ce faisant, de modifier le format et l'emplacement de stockage des packages. Les fonctionnalités d’importation et d’exportation vous permettent d’ajouter des packages au système de fichiers, au magasin de packages ou à la base de données msdb, et de copier des packages d’un format de stockage vers un autre. Par exemple, les packages enregistrés dans msdb peuvent être copiés dans le système de fichiers et vice versa.  
   
  Vous pouvez aussi copier un package dans un format différent à l’aide de l’utilitaire d’invite de commandes **dtutil** (dtutil.exe). Pour plus d’informations, consultez [dtutil Utility](dtutil-utility.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48178819"
   
     -   Dans la zone **Type de serveur** , sélectionnez **Integration Services**.  
   
-    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir**, puis recherchez le serveur à utiliser.  
+    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir...>**, puis recherchez le serveur à utiliser.  
   
 3.  Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48178819"
   
 7.  Si vous le souhaitez, mettez à jour le nom du package.  
   
-8.  Pour mettre à jour le niveau de protection du package, cliquez sur le bouton Parcourir **(…)** et sélectionnez un niveau de protection différent dans la boîte de dialogue **Niveau de protection du package** . Si l'option **Chiffrer les données sensibles avec un mot de passe** ou **Chiffrer toutes les données avec un mot de passe** est sélectionnée, tapez un mot de passe et confirmez-le.  
+8.  Pour mettre à jour le niveau de protection du package, cliquez sur le bouton Parcourir **(...)** et sélectionnez un niveau de protection différent dans la boîte de dialogue **Niveau de protection du package** . Si l'option **Chiffrer les données sensibles avec un mot de passe** ou **Chiffrer toutes les données avec un mot de passe** est sélectionnée, tapez un mot de passe et confirmez-le.  
   
 9. Cliquez sur **OK** pour terminer l'importation.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48178819"
   
     -   Dans la zone **Type de serveur** , sélectionnez **Integration Services**.  
   
-    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir**, puis recherchez le serveur à utiliser.  
+    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir...>**, puis recherchez le serveur à utiliser.  
   
 3.  Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets**.  
   
@@ -119,21 +119,21 @@ ms.locfileid: "48178819"
   
     -   Pour exporter un package vers une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], sélectionnez l'option **SQL Server** , puis indiquez le serveur et sélectionnez le mode d'authentification. Si vous sélectionnez l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , indiquez un nom d'utilisateur et un mot de passe.  
   
-         Cliquez sur le bouton Parcourir **(…)**, puis développez le dossier **Packages SSIS** pour rechercher le dossier dans lequel enregistrer le package. Si vous le souhaitez, mettez à jour le nom par défaut du package, puis cliquez sur **OK**.  
+         Cliquez sur le bouton Parcourir **(...)**, puis développez le dossier **Packages SSIS** pour rechercher le dossier dans lequel enregistrer le package. Si vous le souhaitez, mettez à jour le nom par défaut du package, puis cliquez sur **OK**.  
   
     -   Pour exporter un package vers le système de fichiers, sélectionnez l'option **Système de fichiers** .  
   
-         Cliquez sur le bouton Parcourir **(…)** pour rechercher le dossier dans lequel exporter le package, tapez le nom du fichier de package, puis cliquez sur **Enregistrer**.  
+         Cliquez sur le bouton Parcourir **(...)** pour rechercher le dossier dans lequel exporter le package, tapez le nom du fichier de package, puis cliquez sur **Enregistrer**.  
   
     -   Pour exporter un package vers le magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] , sélectionnez l'option **Magasin de packages SSIS** , puis indiquez le serveur.  
   
-         Cliquez sur le bouton Parcourir **(…)**, développez le dossier **Packages SSIS** , puis sélectionnez le dossier dans lequel enregistrer le package. Si vous le souhaitez, entrez un nouveau nom pour le package dans la zone de texte **Nom du package** . [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+         Cliquez sur le bouton Parcourir **(...)**, développez le dossier **Packages SSIS**, puis sélectionnez le dossier dans lequel enregistrer le package. Si vous le souhaitez, entrez un nouveau nom pour le package dans la zone de texte **Nom du package** . [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Pour mettre à jour le niveau de protection du package, cliquez sur le bouton Parcourir **(…)** et sélectionnez un niveau de protection différent dans la boîte de dialogue **Niveau de protection du package**. Si l'option **Chiffrer les données sensibles avec un mot de passe** ou **Chiffrer toutes les données avec un mot de passe** est sélectionnée, tapez un mot de passe et confirmez-le.  
+7.  Pour mettre à jour le niveau de protection du package, cliquez sur le bouton Parcourir **(...)** et sélectionnez un niveau de protection différent dans la boîte de dialogue **Niveau de protection du package** . Si l'option **Chiffrer les données sensibles avec un mot de passe** ou **Chiffrer toutes les données avec un mot de passe** est sélectionnée, tapez un mot de passe et confirmez-le.  
   
 8.  Cliquez sur **OK** pour terminer l'exportation.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion des packages &#40;Service SSIS&#41;](service/package-management-ssis-service.md)  
+ [Gestion de packages &#40;Service SSIS&#41;](service/package-management-ssis-service.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145594"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391862"
 ---
 # <a name="impersonation-ssas-tabular"></a>Emprunt d'identité (SSAS Tabulaire)
   Cette rubrique explique aux créateurs de modèles tabulaires comment les informations d'identification d'ouverture de session sont utilisées par Analysis Services lors de la connexion à une source de données pour importer et traiter (actualiser) des données.  
@@ -38,7 +38,7 @@ ms.locfileid: "50145594"
   
  Les informations d'identification utilisées pour l'emprunt d'identité sont différentes des informations d'identification de l'utilisateur actuellement connecté. Les informations d'identification de l'utilisateur connecté sont utilisées pour des opérations côté client spécifiques lors de la création d'un modèle.  
   
- Il est important de comprendre comment les informations d'identification d'emprunt d'identité sont spécifiées et sécurisées, tout comme de connaître la différence entre les contextes d'utilisation des informations d'identification de l'utilisateur actuel et des autres informations d'identification.  
+ Il est important de comprendre comment les informations d’identification d’emprunt d’identité sont spécifiées et sécurisées ainsi que la différence entre les contextes dans lesquels l’analyseur lexical actuel ouvert une session de l’utilisateur ainsi que lorsque les autres informations d’identification sont utilisées.  
   
  **Présentation des informations d'identification côté serveur**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "50145594"
   
  De la même façon, pour les modèles existants qui ont déjà été créés, vous pouvez utiliser la boîte de dialogue **Modifier les propriétés de la table** pour afficher un aperçu et filtrer les données importées dans une table. Les fonctionnalités de filtre et d'aperçu décrites ici utilisent les mêmes fonctionnalités que la fonctionnalité **Afficher un aperçu et appliquer le filtre** dans la page **Sélectionner des tables et des vues** de l'Assistant Importation de table.  
   
- La fonctionnalité **Aperçu Afficher filtre** et les boîtes de dialogue **Propriétés de la table** et **Gestionnaire de partitions** correspondent à une opération *côté client* in-process ; en fait, cette opération est différente de l’opération de connexion de la source de données et d’extraction depuis la source de données, qui est une opération côté serveur. Les informations d'identification utilisées pour afficher un aperçu et filtrer des données sont les informations d'identification de l'utilisateur actuellement connecté. Les opérations côté client utilisent toujours les informations d'identification Windows de l'utilisateur actuel pour la connexion à la source de données.  
+ La fonctionnalité **Aperçu Afficher filtre** et les boîtes de dialogue **Propriétés de la table** et **Gestionnaire de partitions** correspondent à une opération *côté client* in-process ; en fait, cette opération est différente de l’opération de connexion de la source de données et d’extraction depuis la source de données, qui est une opération côté serveur. Les informations d'identification utilisées pour afficher un aperçu et filtrer des données sont les informations d'identification de l'utilisateur actuellement connecté. Des opérations côté client utilisent toujours des informations d’identification Windows de l’utilisateur actuel pour se connecter à la source de données.  
   
  Cette séparation des informations d’identification utilisées pour une opération côté serveur et pour une opération côté client peut créer une incohérence entre ce que l’utilisateur voit via la fonctionnalité **Aperçu Afficher filtre** ou la boîte de dialogue **Propriétés de la table** (opération côté client) et les données qui sont extraites lors d’une importation ou d’un traitement (opération côté serveur). Si les informations d'identification de l'utilisateur actuellement connecté et les informations d'identification d'emprunt d'identité spécifiées sont différentes, les données qui s'affichent dans la fonctionnalité **Afficher un aperçu et appliquer le filtre** ou la boîte de dialogue **Propriétés de la table** et les données extraites pendant une importation ou un traitement peuvent être différentes selon les informations d'identification requises par la source de données.  
   

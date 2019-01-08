@@ -15,12 +15,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59067479ebd57b8a26cf3de6ef243e0eb7072bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d4a8d29e27fae9b54a6060ec1be8f6c5a4163a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200949"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507269"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connecter des clients à une session de mise en miroir de bases de données (SQL Server)
   Pour établir une connexion avec une session de mise en miroir de bases de données, un client peut soit utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, soit le fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. S'ils sont configurés pour une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , ces deux fournisseurs d'accès aux données prennent pleinement en charge la mise en miroir de bases de données. Pour plus d'informations sur les éléments de programmation à prendre en compte pour l'utilisation d'une base de données mise en miroir, consultez [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Qui plus est, l'instance de serveur principal actuelle doit être disponible et la connexion du client doit avoir été créée dans l'instance de serveur. Pour plus d’informations, consultez [Dépanner des utilisateurs orphelins &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Les connexions clientes à une session de mise en miroir de base de données n'exigent pas l'intervention de l'instance de serveur témoin (le cas échéant).  
@@ -83,7 +83,7 @@ Network=dbnmpntw;
 >  Étant donné que le protocole des canaux nommés n'utilise pas l'algorithme de tentative de connexion TCP/IP, une tentative de connexion utilisant des canaux nommés risque, dans de nombreux cas, d'expirer avant de se connecter à une base de données mise en miroir.  
   
 #### <a name="server-attribute"></a>Attribut Server  
- La chaîne de connexion doit contenir un `Server` attribut qui fournit le nom de serveur partenaire initial, lequel doit identifier l’instance de serveur principal actuel.  
+ La chaîne de connexion doit contenir un attribut `Server` indiquant le nom du serveur partenaire initial, lequel doit identifier l'instance du serveur principal actuel.  
   
  La façon la plus simple d’identifier l’instance de serveur est de spécifier son nom : *<nom_serveur>*[**\\***<nom_instance_SQL_Server>*]. Exemple :  
   
@@ -126,7 +126,7 @@ Server=123.34.45.56,4724;
 |API|Mot clé pour l'attribut de partenaire de basculement|  
 |---------|--------------------------------------------|  
 |Fournisseur OLE DB|`FailoverPartner`|  
-|Pilote ODBC|`Failover_Partner`|  
+|Pilote ODBC|`Failover_Partner`|  
 |ActiveX Data Objects (ADO)|`Failover Partner`|  
   
  La façon la plus simple d’identifier l’instance de serveur consiste à utiliser son nom système : *<nom_serveur>*[**\\***<nom_instance_SQL_Server>*].  
@@ -137,7 +137,7 @@ Server=123.34.45.56,4724;
 >  Lorsque seul le nom du serveur partenaire initial est fourni, les développeurs d'applications n'ont rien à faire, ni aucun code à écrire, mis à part le code relatif à la reconnexion.  
   
 > [!NOTE]  
->  Développeurs d’applications de code managé fournissent le nom du partenaire de basculement dans le `ConnectionString` de la `SqlConnection` objet. Pour plus d'informations sur l'utilisation de cette chaîne de connexion, consultez « Database Mirroring Support in the .NET Framework Data Provider for SQL Server » (en anglais) dans la documentation ADO.NET qui fait partie du kit de développement logiciel (SDK) [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
+>  Les développeurs d'applications en code managé fournissent le nom du partenaire de basculement dans la propriété `ConnectionString` de l'objet `SqlConnection`. Pour plus d'informations sur l'utilisation de cette chaîne de connexion, consultez « Database Mirroring Support in the .NET Framework Data Provider for SQL Server » (en anglais) dans la documentation ADO.NET qui fait partie du kit de développement logiciel (SDK) [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 #### <a name="example-connection-string"></a>Exemple de chaîne de connexion  
  Par exemple, pour se connecter explicitement à l’aide de TCP/IP à la base de données **AdventureWorks** sur Partner_A ou sur Partner_B, une application cliente qui utilise le pilote ODBC peut fournir la chaîne de connexion suivante :  
@@ -192,7 +192,7 @@ Server=123.34.45.56,4724;
 )  
   
 ### <a name="retry-delays-during-failover"></a>Délais entre deux tentatives lors d'un basculement  
- Si un client tente de se connecter à un partenaire qui fait l'objet d'un basculement, le partenaire répond immédiatement qu'il est inactif. Dans ce cas, chaque nouvelle tentative de connexion est beaucoup plus brève que le délai imparti entre deux tentatives. Ceci signifie que de nombreux essais de connexion peuvent survenir avant l'expiration du délai de connexion. Pour éviter que les partenaires ne soient surchargés par une série rapide de tentatives de connexion lors d'un basculement, le fournisseur d'accès aux données ajoute un délai court entre deux tentatives après chaque cycle. La durée d'un délai entre deux tentatives est déterminée par l'algorithme de délai entre deux tentatives. Après le premier essai, le délai est de 100 millisecondes. Après chacun des trois essais suivants, le délai entre deux tentatives est multiplié par deux : 200, 400 et 800. Pour tous les essais ultérieurs, le délai entre deux tentatives est de 1 seconde tant que la tentative de connexion n'a pas réussi ou que le délai n'a pas expiré.  
+ Si un client tente de se connecter à un partenaire qui fait l'objet d'un basculement, le partenaire répond immédiatement qu'il est inactif. Dans ce cas, chaque nouvelle tentative de connexion est beaucoup plus brève que le délai imparti entre deux tentatives. Ceci signifie que de nombreux essais de connexion peuvent survenir avant l'expiration du délai de connexion. Pour éviter que les partenaires ne soient surchargés par une série rapide de tentatives de connexion lors d'un basculement, le fournisseur d'accès aux données ajoute un délai court entre deux tentatives après chaque cycle. La durée d'un délai entre deux tentatives est déterminée par l'algorithme de délai entre deux tentatives. Après le premier essai, le délai est de 100 millisecondes. Après chacun des trois essais suivants, le délai entre deux tentatives est multiplié par deux : 200, 400 et 800. Pour tous les essais ultérieurs, le délai entre deux tentatives est de 1 seconde tant que la tentative de connexion n'a pas réussi ou que le délai n'a pas expiré.  
   
 > [!NOTE]  
 >  Si l'instance de serveur n'est pas arrêtée, la demande de connexion échoue immédiatement.  

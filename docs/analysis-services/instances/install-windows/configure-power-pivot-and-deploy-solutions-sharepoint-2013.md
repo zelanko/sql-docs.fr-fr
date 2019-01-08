@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 271f2c50c38585e26053f88b2d372dae4b7345c6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 079988eb037ebeffbbbe6cae053e241518e41c81
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980021"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52420788"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Configurer PowerPivot et déployer des solutions (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,16 +29,16 @@ ms.locfileid: "38980021"
  Pour plus d’informations sur l’installation de l’outil de configuration de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013, consultez [Installer ou désinstaller le complément Power Pivot pour SharePoint &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Exécuter Configuration de PowerPivot pour SharePoint 2013  
- **Remarque :** l'Assistant Installation de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] installe deux outils de configuration différents pour [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Chacun d'eux prend en charge une version différente de SharePoint.  
+ **Remarque :** Le [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Assistant Installation installe deux outils de configuration différents pour [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Chacun d'eux prend en charge une version différente de SharePoint.  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Outil de configuration|SharePoint 2010 avec SharePoint 2010 Service Pack 1 (SP1)|  
   
- **Remarque :** pour effectuer les étapes suivantes, vous devez être administrateur de batterie de serveurs. Si un message d'erreur semblable au suivant s'affiche :  
+ **Remarque :** Pour effectuer les étapes suivantes, vous devez être un administrateur de batterie de serveurs. Si un message d'erreur semblable au suivant s'affiche :  
   
--   « L'utilisateur n'est pas un administrateur de batterie de serveurs. Traitez les échecs de validation et réessayez. »  
+-   « L’utilisateur n’est pas un administrateur de batterie de serveurs. Traitez les échecs de validation et réessayez. »  
   
  Connectez-vous avec le compte qui a installé SharePoint ou configurez le compte d'installation en tant qu'administrateur principal du site Administration centrale de SharePoint.  
   
@@ -50,17 +50,17 @@ ms.locfileid: "38980021"
   
 4.  Dans l'onglet **Paramètres** :  
   
-    1.  **Nom d'utilisateur de compte par défaut**: entrez un compte d'utilisateur de domaine pour le compte par défaut. Ce compte servira à approvisionner des services, notamment le pool d’applications du service [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Ne spécifiez pas un compte intégré tel que Service réseau ou Système local. L'outil bloque les configurations qui spécifient des comptes intégrés.  
+    1.  **Par défaut le nom d’utilisateur du compte**: Entrez un compte d’utilisateur de domaine pour le compte par défaut. Ce compte servira à approvisionner des services, notamment le pool d’applications du service [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Ne spécifiez pas un compte intégré tel que Service réseau ou Système local. L'outil bloque les configurations qui spécifient des comptes intégrés.  
   
-    2.  **Serveur de base de données**: vous pouvez utiliser le moteur de base de données SQL Server pris en charge pour la batterie de serveurs SharePoint.  
+    2.  **Serveur de base de données**: Vous pouvez utiliser le moteur de base de données SQL Server est prise en charge pour la batterie de serveurs SharePoint.  
   
-    3.  **Phrase secrète**: entrez une phrase secrète. Si vous créez une batterie de serveurs SharePoint, la phrase secrète est utilisée chaque fois que vous ajoutez un serveur ou une application à la batterie de serveurs SharePoint. Si la batterie existe déjà, entrez la phrase secrète qui vous permet d'ajouter une application de serveur à la batterie.  
+    3.  **Phrase secrète**: Entrez une phrase secrète. Si vous créez une batterie de serveurs SharePoint, la phrase secrète est utilisée chaque fois que vous ajoutez un serveur ou une application à la batterie de serveurs SharePoint. Si la batterie existe déjà, entrez la phrase secrète qui vous permet d'ajouter une application de serveur à la batterie.  
   
-    4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour services Excel**: entrez le nom d’un serveur en mode SharePoint pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Dans un déploiement sur un seul serveur, il est identique à celui du serveur de base de données. `[ServerName]\powerpivot`  
+    4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Serveur pour Excel Services**: Tapez le nom d’un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] serveur en mode SharePoint. Dans un déploiement sur un seul serveur, il est identique à celui du serveur de base de données. `[ServerName]\powerpivot`  
   
-    5.  Cliquez sur **Créer une collection de sites** dans la fenêtre de gauche. Notez l' **URL du site** afin de pouvoir y faire référence dans les étapes ultérieures. Si le serveur SharePoint n'est pas déjà configuré, l'Assistant de configuration définit par défaut l'application Web et les URL de collection de sites sur la racine de `http://[ServerName]`. Pour modifier les valeurs par défaut, examinez les pages suivantes dans la fenêtre de gauche : **Créer une application Web par défaut** et **Déployer une solution d'application Web**.  
+    5.  Cliquez sur **Créer une collection de sites** dans la fenêtre de gauche. Notez l' **URL du site** afin de pouvoir y faire référence dans les étapes ultérieures. Si le serveur SharePoint n'est pas déjà configuré, l'Assistant de configuration définit par défaut l'application Web et les URL de collection de sites sur la racine de `http://[ServerName]`. Pour modifier les valeurs par défaut passez en revue les pages suivantes dans la fenêtre de gauche : **Créer une application Web par défaut** et **déployer la Solution Application Web**  
   
-5.  Éventuellement, examinez les valeurs d'entrée restantes utilisées pour effectuer chaque action. Cliquez sur chaque action dans la fenêtre à gauche pour afficher et passer en revue les détails de l'action. Pour plus d’informations sur chacune d’elles, consultez la section Valeurs d’entrée utilisées pour configurer le serveur dans [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de PowerPivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) dans cette rubrique.  
+5.  Éventuellement, examinez les valeurs d'entrée restantes utilisées pour effectuer chaque action. Cliquez sur chaque action dans la fenêtre à gauche pour afficher et passer en revue les détails de l'action. Pour plus d’informations sur chacune d’elles, consultez la section « valeurs d’entrée utilisées pour configurer le serveur dans [configurer ou réparer Power Pivot pour SharePoint 2010 (outil de Configuration Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) dans cette rubrique.  
   
 6.  Éventuellement, supprimez toutes les actions que vous ne souhaitez pas traiter à ce stade. Par exemple, si vous souhaitez configurer le service Banque d'informations sécurisé ultérieurement, cliquez sur **Configurer le service Banque d'informations sécurisé**, puis désactivez la case à cocher **Inclure cette action dans la liste des tâches**.  
   

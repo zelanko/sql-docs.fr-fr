@@ -14,12 +14,12 @@ ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 882764275d2455f63cadaa4f72dbfd33b85fb833
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de3e5f300c5e0c955989d8282a3a1c000c615299
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052509"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533303"
 ---
 # <a name="technical-reference-database-engine"></a>Informations techniques de référence (moteur de base de données)
   Trouvez la documentation de référence de programmation relative aux outils, langages et à l'administration pour le [!INCLUDE[ssDE](../includes/ssde-md.md)] dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "48052509"
   
  [Utilitaire SqlLocalDB](../tools/sqllocaldb-utility.md)  
   
- [Plus…](../tools/command-prompt-utility-reference-database-engine.md)  
+ [Plus...](../tools/command-prompt-utility-reference-database-engine.md)  
   
  ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **applets de commande PowerShell du moteur de base de données**  
  [Invoke-PolicyEvaluation (applet de commande)](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  

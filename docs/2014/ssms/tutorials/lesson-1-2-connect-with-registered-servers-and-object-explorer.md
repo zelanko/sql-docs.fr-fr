@@ -10,12 +10,12 @@ ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 125e8ac5d6bf8cfc7696a207bb9a931c9099ba89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143609"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521309"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>Connexion avec le composant Serveurs inscrits et l'Explorateur d'objets
   Ce didacticiel montre l'utilisation des serveurs inscrits et de l'Explorateur d'objets.  
@@ -37,7 +37,7 @@ ms.locfileid: "48143609"
   
 5.  Dans la zone **Nom du serveur inscrit** , tapez [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-6.  Sous l’onglet **Propriétés de connexion**, dans la liste **Se connecter à la base de données**, sélectionnez **\<Parcourir le serveur…>**.  
+6.  Sur le **propriétés de connexion** sous l’onglet le **se connecter à la base de données** liste, sélectionnez  **\<parcourir le serveur... >**.  
   
 7.  Dans la boîte de dialogue **Rechercher les bases de données** , cliquez sur **Oui**.  
   

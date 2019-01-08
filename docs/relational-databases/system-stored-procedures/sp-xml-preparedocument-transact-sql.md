@@ -18,15 +18,15 @@ ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9b955f59cb1c7813be28c7edd46b32d0c8e44b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e89ebe73f7bee6f44df353afca515aca4cbbdcf2
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735467"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947619"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Lit le texte XML fourni en entrée, l'analyse à l'aide de l'analyseur MSXML (Msxmlsql.dll), puis fournit le document analysé dans un état exploitable. Ce document analysé est une représentation arborescente des différents nœuds du document XML : éléments, attributs, textes, commentaires, etc.  
   
@@ -77,7 +77,7 @@ OUTPUT
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou >0 (échec)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -108,7 +108,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 exec sp_xml_removedocument @hdoc;  
 ```  
   
-### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>B. Préparation d'une représentation interne pour un document XML correctement mis en forme avec un schéma DTD  
+### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>b. Préparation d'une représentation interne pour un document XML correctement mis en forme avec un schéma DTD  
  L'exemple suivant retourne un descripteur pour la représentation interne nouvellement créée du document XML fourni en entrée. La procédure stockée valide le document chargé sur le schéma DTD inclus dans le document. L'appel à `sp_xml_preparedocument` contient un mappage de préfixes d'espaces de noms par défaut.  
   
 ```  

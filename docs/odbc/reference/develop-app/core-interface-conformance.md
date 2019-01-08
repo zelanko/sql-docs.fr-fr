@@ -15,15 +15,15 @@ ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc3fc5502ee76cfd6aabb98eb719ca318026b73c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802459"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504591"
 ---
 # <a name="core-interface-conformance"></a>Conformité de l’interface principale
-Tous les pilotes ODBC doivent présenter au moins au niveau du noyau conformité de l’interface. Les fonctionnalités dans le niveau principal sont celles qui sont requises par les applications interopérables plus génériques, le pilote peut travailler avec ces applications. Les fonctionnalités du niveau Core correspondent également pour les fonctionnalités définies dans la spécification ISO CLI et les fonctionnalités obligatoires définies dans la spécification CLI de groupe ouvert. Un pilote ODBC d’interface conforme au niveau du noyau permet à l’application effectuer toutes les conditions suivantes :  
+Tous les pilotes ODBC doivent présenter au moins au niveau du noyau conformité de l’interface. Les fonctionnalités dans le niveau principal sont celles qui sont requises par les applications interopérables plus génériques, le pilote peut travailler avec ces applications. Les fonctionnalités du niveau Core correspondent également pour les fonctionnalités définies dans la spécification ISO CLI et les fonctionnalités obligatoires définies dans la spécification CLI de groupe ouvert. Un pilote ODBC de conforme à l’interface au niveau du noyau permet à l’application effectuer toutes les conditions suivantes :  
   
 -   Allouer et libérer tous les types de handles, en appelant **SQLAllocHandle** et **SQLFreeHandle**.  
   

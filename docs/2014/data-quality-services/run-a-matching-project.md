@@ -14,17 +14,17 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb23627ef869fdc4117297f43efd8ed8898820f9
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6c39c1c9651872a7e47070cfec400e77fa578a7f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031506"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512053"
 ---
 # <a name="run-a-matching-project"></a>Exécuter un projet de correspondance
   Cette rubrique décrit comment réaliser la correspondance de données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Le processus de correspondance identifie les clusters des enregistrements correspondants selon les règles de correspondance de la stratégie de correspondance, indique un enregistrement de chaque cluster en tant que survivant basé sur une règle de survivance, et exporte les résultats. DQS exécute le processus de correspondance, également appelé déduplication, dans un processus assisté par ordinateur, mais vous créez des règles de correspondance de manière interactive et sélectionnez la règle de survivance parmi plusieurs choix, afin de contrôler le processus de correspondance.  
   
- La correspondance est effectuée en trois étapes : un processus de mappage dans lequel vous identifiez la source de données et mappez les domaines à la source de données, un processus de correspondance dans lequel vous exécutez l'analyse de correspondance, et un processus de survivance et d'exportation dans lequel vous indiquez la règle de survivance et exportez les résultats de correspondance. Chacun de ces processus est exécuté sur une page distincte de l'Assistant de l'activité de correspondance, ce qui vous permet de vous déplacer dans les deux sens vers différentes pages, de réexécuter le processus et de fermer un processus de concordance spécifique, puis de retourner à la même étape du processus. DQS vous fournit des statistiques sur les données sources, les règles de correspondance et les résultats de correspondance qui vous permettent de prendre des décisions avisées sur la correspondance et d'affiner le processus de concordance.  
+ La correspondance est effectuée en trois étapes : un processus de mappage dans lequel vous identifiez la source de données et mappez les domaines à la source de données, un processus de correspondance dans lequel vous exécutez l'analyse de correspondance, et un processus de survivance et d'exportation dans lequel vous indiquez la règle de survivance et exportez les résultats de correspondance. Chacun de ces processus est exécuté sur une page distincte de l'Assistant de l'activité de correspondance, ce qui vous permet de vous déplacer dans les deux sens vers différentes pages, de réexécuter le processus et de fermer un processus de concordance spécifique, puis de retourner à la même étape du processus. DQS vous fournit des statistiques sur les données sources, les règles de correspondance et les résultats de correspondance qui vous permettent de prendre des décisions avisées sur la correspondance et d'affiner le processus de concordance.  
   
  Vous devez vous préparer à la correspondance en créant une stratégie de correspondance avec une ou plusieurs règles de correspondance, et en exécutant la stratégie sur des exemples de données. Le processus de projet de correspondance est distinct du processus de stratégie de correspondance, et une base de connaissances n'est pas remplie avec les connaissances de correspondance acquises à partir du projet de correspondance. Pour plus d'informations sur la création d'une stratégie de correspondance, consultez [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "51031506"
 ####  <a name="Permissions"></a> Permissions  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour exécuter un projet de correspondance.  
   
-##  <a name="StartingaMatchingProject"></a> Première étape : Démarrage d'un projet de correspondance  
+##  <a name="StartingaMatchingProject"></a> Première étape : Démarrage d'un projet de correspondance  
  Vous effectuez l'activité de correspondance dans un projet de qualité des données que vous créez dans l'application cliente DQS.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "51031506"
     > [!NOTE]  
     >  Vous pouvez mapper vos données source à un domaine DQS uniquement si le type de données source est pris en charge dans DQS et correspond au type de données du domaine DQS. Pour plus d'informations sur les types de données pris en charge dans DQS, consultez [Types de données SQL Server et SSIS pris en charge pour les domaines DQS](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Cliquez sur le contrôle **plus (+)** pour ajouter une ligne à la table Mappages ou sur le contrôle **moins (–)** pour en supprimer une.  
+4.  Cliquez sur le contrôle **plus (+)** pour ajouter une ligne à la table Mappages ou sur le contrôle **moins (-)** pour en supprimer une.  
   
 5.  Cliquez sur **Aperçu de la source de données** pour afficher les données de la table ou de la vue SQL Server que vous avez sélectionnée, ou de la feuille de calcul Excel que vous avez sélectionnée.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "51031506"
   
  La survivance est facultative. Vous pouvez exporter les résultats sans exécuter la survivance, auquel cas DQS utilise l'enregistrement pivot qui a été indiqué dans l'analyse de correspondance. Si plusieurs enregistrements dans un cluster sont conformes à la règle de survivance, le processus de survivance sélectionne l'ID d'enregistrement le plus bas parmi les enregistrements en conflit pour être le survivant. Vous pouvez exporter des survivants vers divers fichiers ou tables en utilisant différentes règles de survivance.  
   
-1.  Dans la page **Exporter** , sélectionnez la destination de l'exportation des données de correspondance dans **Type de destination**: **SQL Server**, **Fichier CSV**ou **Fichier Excel**.  
+1.  Sur le **exporter** page, sélectionnez la destination où vous souhaitez exporter les données correspondantes dans **Type de Destination**: **SQL Server**, **fichier CSV**, ou **un fichier Excel**.  
   
     > [!IMPORTANT]  
     >  Si vous utilisez une version 64 bits d'Excel, vous ne pouvez pas exporter les données correspondantes vers un fichier Excel : vous ne pouvez exporter que vers une base de données SQL Server ou un fichier .csv.  
@@ -121,9 +121,9 @@ ms.locfileid: "51031506"
   
      Les éléments suivants sont exportés pour les résultats de correspondance :  
   
-    -   Une liste de clusters et les enregistrements correspondants dans chaque cluster, y compris le nom de la règle et le score. L'enregistrement pivot est marqué comme « Pivot ». Les clusters s'affichent en premier dans la liste d'exportation.  
+    -   Une liste de clusters et les enregistrements correspondants dans chaque cluster, y compris le nom de la règle et le score. L’enregistrement pivot est marqué comme « Pivot ». Les clusters s'affichent en premier dans la liste d'exportation.  
   
-    -   Une liste des enregistrements sans correspondance, avec « NULL » dans les colonnes de score et de nom de la règle. Ces enregistrements sont ajoutés à la liste d'exportation après les clusters.  
+    -   Une liste des enregistrements sans correspondance, avec « NULL » dans les colonnes de score et de nom de la règle. Ces enregistrements sont ajoutés à la liste d'exportation après les clusters.  
   
      Les éléments suivants sont exportés pour les résultats de survivance :  
   
@@ -164,7 +164,7 @@ ms.locfileid: "51031506"
     > [!NOTE]  
     >  Si vous avez terminé un projet de correspondance et l'utilisez de nouveau, il utilise la base de connaissances en place lorsqu'il a été publié. Il n'utilise aucune modification que vous avez apportée à la base de connaissances depuis que vous avez terminé le projet. Pour utiliser ces modifications, ou une nouvelle base de connaissances, vous devez créer un projet de correspondance. En revanche, si vous avez créé, mais pas fini, un projet de correspondance, toutes les modifications que vous avez publiées dans la stratégie de correspondance sont utilisées si vous exécutez une correspondance dans le projet.  
   
-##  <a name="FollowUp"></a> Suivi : Après l'exécution d'un projet de correspondance  
+##  <a name="FollowUp"></a> Suivi : Après avoir exécuté un projet de correspondance  
  Après avoir exécuté un projet de correspondance, vous pouvez modifier la stratégie de correspondance dans la base de connaissances, puis créer et exécuter un autre projet de correspondance basé sur la stratégie de correspondance mise à jour. Pour plus d’informations, consultez [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Profiler"></a> Onglets Générateur de profils et Résultats  
@@ -175,30 +175,30 @@ ms.locfileid: "51031506"
   
  Les statistiques de la base de données source sont les suivantes :  
   
--   **Enregistrements**: nombre total d'enregistrements dans la base de données  
+-   **Enregistrements**: Nombre total d'enregistrements dans la base de données  
   
--   **Valeurs totales**: nombre total de valeurs dans les champs  
+-   **Nombre total de valeurs**: Le nombre total de valeurs dans les champs  
   
--   **Nouvelles valeurs**: nombre total de valeurs qui sont nouvelles depuis l'exécution précédente, et leur pourcentage par rapport à la totalité  
+-   **Nouvelles valeurs**: Le nombre total de valeurs qui sont nouvelles depuis l’exécution précédente et leur pourcentage de la totalité  
   
--   **Valeurs uniques**: nombre total de valeurs uniques dans les champs, et leur pourcentage par rapport à la totalité  
+-   **Valeurs uniques**: Le nombre total de valeurs uniques dans les champs et leur pourcentage de la totalité  
   
--   **Nouvelles valeurs uniques**: nombre total de valeurs uniques qui sont nouvelles dans les champs, et leur pourcentage par rapport à la totalité  
+-   **Nouvelles valeurs uniques**: Le nombre total de valeurs uniques qui sont nouvelles dans les champs et leur pourcentage de la totalité  
   
  Les statistiques de champ sont les suivantes :  
   
--   **Champ**: nom du champ qui a été inclus dans les mappages.  
+-   **Champ**: Nom du champ qui a été inclus dans les mappages.  
   
--   **Domaine**: nom du domaine qui a été mappé au champ.  
+-   **Domaine**: Nom de domaine qui a été mappé au champ.  
   
--   **Nouveau**: nombre de nouvelles correspondances trouvées et leur pourcentage par rapport au total  
+-   **Nouveau**: Le nombre de nouvelles correspondances trouvées et leur pourcentage du total  
   
--   **Unique**: nombre d'enregistrements uniques dans le champ et leur pourcentage par rapport au total  
+-   **Unique**: Le nombre d’enregistrements uniques dans le champ et leur pourcentage par rapport au total  
   
--   **Exhaustivité**: pourcentage d'achèvement de l'exécution de la règle.  
+-   **Exhaustivité**: Le pourcentage que l’exécution de règles est terminée.  
   
 ### <a name="matching-policy-notifications"></a>Notifications de stratégie de correspondance  
- Pour l'activité de stratégie de correspondance, les conditions suivantes génèrent des notifications :  
+ Pour l'activité de stratégie de correspondance, les conditions suivantes génèrent des notifications :  
   
 -   Le champ est vide dans tous les enregistrements ; il est recommandé de l'éliminer du mappage.  
   

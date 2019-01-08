@@ -1,5 +1,5 @@
 ---
-title: Créer un Cube à partir d’un modèle sans utiliser une vue de Source de données | Documents Microsoft
+title: Créer un Cube à partir d’un modèle sans utiliser une vue de Source de données | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 654278ee171666564771a3e620c903e598039a74
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 28f87d9cbe6dfa0bf41a0d0547e8da7bec5659bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025896"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521348"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Créer un cube a partir d'un modèle sans utiliser de vue de source de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34025896"
   
  La grille **Sélectionnez des mesures dans le modèle** et la grille **Ajoutez de nouvelles mesures** affichent des valeurs dans les colonnes décrites dans le tableau suivant. Vous pouvez cliquer sur une valeur dans l'une ou l'autre liste pour la modifier.  
   
-|Colonne|Description|  
+|colonne|Description|  
 |------------|-----------------|  
 |**Nom de la mesure**|Une valeur de cette colonne définit le nom d'une mesure dans le cube. Cliquez sur une valeur dans cette colonne pour taper un nom. Cliquez sur **Ajouter une nouvelle mesure** dans cette colonne pour créer une nouvelle mesure. Cette colonne définit la propriété **Name** de l’objet de mesure.|  
 |**Groupe de mesures**|Nom du groupe de mesures qui contient la mesure. Cliquez sur cette valeur pour effectuer votre choix ou tapez un nom. Si vous supprimez toutes les mesures qui appartiennent à un groupe de mesures particulier, le groupe de mesures est également supprimé. Cette colonne définit la propriété **Name** du groupe de mesures.|  
@@ -55,7 +55,7 @@ ms.locfileid: "34025896"
   
  La grille **Sélectionnez des dimensions dans le modèle** et la grille **Ajoutez de nouvelles dimensions** affichent des valeurs dans les colonnes décrites dans le tableau suivant. Vous pouvez cliquer sur une valeur dans l'une ou l'autre liste pour la modifier.  
   
-|Colonne|Description|  
+|colonne|Description|  
 |------------|-----------------|  
 |**Type**|Affiche le type de dimension pour une dimension de modèle. Cliquez sur cette cellule pour modifier le type d'une dimension. Cette colonne définit la propriété **Type** de l’objet de dimension.|  
 |**Nom**|Affiche le nom de la dimension. Cliquez sur cette cellule pour taper un nom différent. Cette valeur définit la propriété **Name** de l’objet de dimension.|  
@@ -82,7 +82,7 @@ ms.locfileid: "34025896"
 |Calendrier|Description|  
 |--------------|-----------------|  
 |Calendrier fiscal|Calendrier fiscal de 12 mois. Si vous sélectionnez ce calendrier, définissez le jour et le mois de début de l'exercice fiscal utilisé par votre organisation.|  
-|Calendrier de rapports (ou du marketing)|Calendrier de rapports de 12 mois qui contient deux mois de quatre semaines et un mois de cinq semaines sur un modèle récurrent de trois mois (trimestre). Si vous définissez ce calendrier, définissez le jour et le mois de départ et le modèle de trois mois de 4–4–5, 4–5–4 ou 5–4–4 semaines, où chaque chiffre correspond au nombre de semaines du mois.|  
+|Calendrier de rapports (ou du marketing)|Calendrier de rapports de 12 mois qui contient deux mois de quatre semaines et un mois de cinq semaines sur un modèle récurrent de trois mois (trimestre). Si vous sélectionnez ce calendrier, spécifiez le jour de début et le mois et le modèle de trois mois de 4-4-5, 4-5-4 ou 5-4-4 semaines, où chaque chiffre représente le nombre de semaines du mois.|  
 |Calendrier de fabrication|Calendrier qui utilise 13 périodes de quatre semaines, divisé en trois trimestres de quatre périodes et un trimestre de cinq périodes. Si vous sélectionnez ce calendrier, définissez la semaine initiale (entre 1 et 4), le mois de l'année de fabrication et le trimestre avec des périodes supplémentaires.|  
 |Calendrier ISO 8601|Calendrier standard de représentation de dates et d'heure ISO (International Organization for Standardization) (8601). Ce calendrier a un nombre intégral de semaines de sept jours. Pour éviter de fractionner une semaine, ce calendrier démarre une nouvelle année jusqu'à plusieurs jours avant ou après le 1er janvier.|  
   

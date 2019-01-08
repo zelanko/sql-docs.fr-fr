@@ -11,23 +11,23 @@ ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bdc6b3aa34ae3d2a75e78fe70862d3186c959f82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91d39b174a0febed1aa6fd57140412828adc843b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223309"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419012"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Navigation dans un modèle Naive Bayes
   Lorsque vous ouvrez un modèle Naïve Bayes avec **Parcourir**, le modèle est affiché dans une visionneuse interactive avec quatre volets différents. Utilisez la visionneuse pour explorer les corrélations et obtenez des informations sur le modèle et les données sous-jacentes.  
   
 -   [Réseau de dépendances](#bkmk_DepNet)  
   
--   [Profils d’attribut](#bkmk_AttProf)  
+-   [Profils d'attribut](#bkmk_AttProf)  
   
--   [Caractéristiques d’attribut](#bkmk_AttChar)  
+-   [Caractéristiques d'attribut](#bkmk_AttChar)  
   
--   [Discrimination d’attribut](#bkmk_AttDisc)  
+-   [Discrimination d'attribut](#bkmk_AttDisc)  
   
 ##  <a name="BKMK_Tabs"></a> Explorer le modèle  
  Le but de la visionneuse est de vous aider à explorer les interactions entre les attributs d'entrée et de sortie (entrées et variables dépendantes) qui ont été découvertes par le modèle [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes.  
@@ -57,7 +57,7 @@ ms.locfileid: "48223309"
   
  [Retour au début](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttProf"></a> Profils d’attribut  
+###  <a name="bkmk_AttProf"></a> Profils d'attribut  
  Le **profils d’attribut** windows vous donne une indication visuelle de la façon dont toutes les autres variables sont liés aux différents résultats.  
   
 ##### <a name="explore-the-profiles"></a>Explorer les profils  
@@ -74,7 +74,7 @@ ms.locfileid: "48223309"
   
  [Retour au début](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttChar"></a> Caractéristiques d’attribut  
+###  <a name="bkmk_AttChar"></a> Caractéristiques d'attribut  
  Le **caractéristiques d’attribut** vue est utile pour l’examen détaillé d’une variable de résultat particulier et des facteurs décisifs.  
   
  ![les attributs dans la visionneuse Naive Bayes](media/dm13-nb-viewer.gif "les attributs dans la visionneuse Naive Bayes")  
@@ -91,7 +91,7 @@ ms.locfileid: "48223309"
   
  [Retour au début](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttDisc"></a> Discrimination d’attribut  
+###  <a name="bkmk_AttDisc"></a> Discrimination d'attribut  
  Le **Discrimination d’attribut** affichage permet de comparer deux résultats, ou un résultat par rapport à tous les autres.  
   
  ![attribut de discrimination dans la visionneuse Naive Bayes](media/dm13-nb-attdisc.gif "attribut discrimination dans la visionneuse Naive Bayes")  

@@ -20,16 +20,16 @@ ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5092ae588c69c28fcfa243101b57f97da75e8681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab434e90f1b92911bfdfb9f66da67244e26ef776
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755317"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515954"
 ---
 # <a name="sqlbindcol-function"></a>Fonction SQLBindCol
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ISO 92  
+ Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
   
  **Résumé**  
  **SQLBindCol** lie des tampons de données d’application aux colonnes du jeu de résultats.  
@@ -52,10 +52,10 @@ SQLRETURN SQLBindCol(
  [Entrée] Descripteur d’instruction.  
   
  *ColumnNumber*  
- [Entrée] Nombre du résultat défini de colonne à lier. Les colonnes sont numérotées dans l’ordre croissant des colonnes à partir de 0, où la colonne 0 est la colonne de signet. Si les signets ne sont pas utilisés, autrement dit, l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS a la valeur SQL_UB_OFF, puis les numéros de colonne commencent à 1.  
+ [Entrée] Nombre du résultat défini de colonne à lier. Les colonnes sont numérotées dans l’ordre croissant des colonnes à partir de 0, où la colonne 0 est la colonne de signet. Si les signets ne sont pas utilisés, autrement dit, l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS a la valeur SQL_UB_OFF - numéros de colonne commencent à 1.  
   
  *TargetType*  
- [Entrée] L’identificateur du type de données C de la \* *TargetValuePtr* mémoire tampon. Lorsqu’il récupère des données à partir de la source de données avec **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, ou **SQLSetPos**, le pilote convertit les données de ce type ; Lorsqu’il envoie des données à la source de données avec **SQLBulkOperations** ou **SQLSetPos**, le pilote convertit les données à partir de ce type. Pour obtenir la liste des types de données C valides et les identificateurs de type, consultez la [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) section annexe d : Types de données.  
+ [Entrée] L’identificateur du type de données C de la \* *TargetValuePtr* mémoire tampon. Lorsqu’il récupère des données à partir de la source de données avec **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, ou **SQLSetPos**, le pilote convertit les données de ce type ; Lorsqu’il envoie des données à la source de données avec **SQLBulkOperations** ou **SQLSetPos**, le pilote convertit les données à partir de ce type. Pour obtenir la liste des types de données C valides et les identificateurs de type, consultez la [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) section dans l’annexe d : Types de données.  
   
  Si le *TargetType* argument est un type de données d’intervalle, la précision de début d’intervalle par défaut (2) et la précision de secondes d’intervalle par défaut (6), comme défini dans les champs SQL_DESC_DATETIME_INTERVAL_PRECISION et SQL_DESC_PRECISION de le ARD, respectivement, sont utilisés pour les données. Si le *TargetType* argument est SQL_C_NUMERIC, la précision par défaut (définies par le pilote) et par défaut de la mise à l’échelle (0), comme défini dans les champs SQL_DESC_PRECISION et SQL_DESC_SCALE de la ARD, sont utilisé pour les données. Si la mise à l’échelle ni précision par défaut ne c'est-à-dire pas, l’application doit définir explicitement le champ de descripteur approprié par un appel à **SQLSetDescField** ou **SQLSetDescRec**.  
   
@@ -126,7 +126,7 @@ SQLRETURN SQLBindCol(
 |HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, probablement en raison de conditions de mémoire insuffisante.|  
 |HY090|Longueur de chaîne ou une mémoire tampon non valide|(DM) la valeur spécifiée pour l’argument *BufferLength* était inférieure à 0.<br /><br /> (DM) le pilote a été un ODBC 2. *x* pilote, le *ColumnNumber* argument a été défini sur 0 et la valeur spécifiée pour l’argument *BufferLength* n’était pas égale à 4.|  
 |HY117|Connexion est suspendue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [SQLEndTran, fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Fonctionnalité optionnelle non implémentée|La source de données ou le pilote ne prend pas en charge la conversion spécifiée par la combinaison de la *TargetType* argument et le type de données spécifiques au pilote SQL de la colonne correspondante.<br /><br /> L’argument *ColumnNumber* était égale à 0 et le pilote ne prend pas en charge les signets.<br /><br /> Le pilote prend en charge uniquement ODBC 2. *x* et l’argument *TargetType* était une des opérations suivantes :<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> et les types de données d’intervalle C répertoriés dans [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) annexe d : Types de données.<br /><br /> Le pilote prend uniquement en charge les versions ODBC avant 3,50 et l’argument *TargetType* a été SQL_C_GUID.|  
+|HYC00|Fonctionnalité optionnelle non implémentée|La source de données ou le pilote ne prend pas en charge la conversion spécifiée par la combinaison de la *TargetType* argument et le type de données spécifiques au pilote SQL de la colonne correspondante.<br /><br /> L’argument *ColumnNumber* était égale à 0 et le pilote ne prend pas en charge les signets.<br /><br /> Le pilote prend en charge uniquement ODBC 2. *x* et l’argument *TargetType* était une des opérations suivantes :<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> et les types de données d’intervalle C répertoriés dans [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) dans l’annexe d : Types de données.<br /><br /> Le pilote prend uniquement en charge les versions ODBC avant 3,50 et l’argument *TargetType* a été SQL_C_GUID.|  
 |HYT01|Délai de connexion expiré|Le délai de connexion a expiré avant que la source de données a répondu à la demande. Le délai de connexion est défini via **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Pilote ne prend pas en charge cette fonction|Le pilote (DM) associé le *au paramètre StatementHandle* ne prend pas en charge la fonction.|  
   
@@ -144,7 +144,7 @@ SQLRETURN SQLBindCol(
 ## <a name="binding-columns"></a>Liaison de colonnes  
  Pour lier une colonne, une application appelle **SQLBindCol** et transmet le numéro de colonne, type, adresse et la longueur d’une mémoire tampon de données et l’adresse d’une mémoire tampon de longueur / d’indicateur. Pour plus d’informations sur la façon dont ces adresses sont utilisées, consultez « Adresses mémoire tampon », plus loin dans cette section. Pour plus d’informations sur les colonnes de liaison, consultez [à l’aide de SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
   
- L’utilisation de ces mémoires tampons est différée ; Autrement dit, l’application lie les dans **SQLBindCol** mais le pilote y accède à partir d’autres fonctions, à savoir **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, ou **SQLSetPos**. Il est responsable de l’application pour vous assurer que les pointeurs spécifié dans **SQLBindCol** restent valides tant que la liaison reste en vigueur. Si l’application autorise ces pointeurs deviennent non valides, par exemple, elle libère une mémoire tampon, puis appelle une fonction qui attend les soit valide, les conséquences sont non définis. Pour plus d’informations, consultez [tampons différées](../../../odbc/reference/develop-app/deferred-buffers.md).  
+ L’utilisation de ces mémoires tampons est différée ; Autrement dit, l’application lie les dans **SQLBindCol** mais le pilote y accède à partir d’autres fonctions, à savoir **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, ou **SQLSetPos**. Il est responsable de l’application pour vous assurer que les pointeurs spécifié dans **SQLBindCol** restent valides tant que la liaison reste en vigueur. Si l’application autorise ces pointeurs deviennent non valides, par exemple, il libère une mémoire tampon - et appelle ensuite une fonction qui attend les soit valide, les conséquences ne sont pas définis. Pour plus d’informations, consultez [tampons différées](../../../odbc/reference/develop-app/deferred-buffers.md).  
   
  La liaison reste en vigueur jusqu'à ce qu’elle est remplacée par une nouvelle liaison, la colonne est indépendante, ou l’instruction est libérée.  
   
@@ -232,7 +232,7 @@ SQLRETURN SQLBindCol(
 ## <a name="buffer-addresses"></a>Adresses de tampons  
  Le *adresse de la mémoire tampon* est l’adresse réelle de la mémoire tampon de données ou de longueur / d’indicateur. Le pilote calcule l’adresse du tampon juste avant qu’il écrit dans les mémoires tampons (par exemple, pendant le temps de récupération). Il est calculé à partir de la formule suivante, qui utilise les adresses spécifiées dans le *TargetValuePtr* et *StrLen_or_IndPtr* arguments, le décalage de la liaison et le numéro de ligne :  
   
- *Lié adresse* + *liaison décalage* + ((*numéro de ligne* – 1) x *taille de l’élément*)  
+ *Lié adresse* + *liaison décalage* + ((*numéro de ligne* - 1) x *taille de l’élément*)  
   
  où les variables de la formule sont définies comme décrit dans le tableau suivant.  
   

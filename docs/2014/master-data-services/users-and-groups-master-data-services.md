@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services]
@@ -16,12 +15,12 @@ ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 301b570ca52780222c97091db6b8fe6ec138e452
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: debbf9ef55412c2111acf777e3b428bcb250798b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154199"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814635"
 ---
 # <a name="users-and-groups-master-data-services"></a>Utilisateurs et groupes (Master Data Services)
   Pour accéder à l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , un utilisateur doit disposer d'un compte de domaine Windows ou d'un compte sur le serveur où [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] est installé. Pour accorder l'accès à [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , vous pouvez, au choix :  
@@ -35,7 +34,7 @@ ms.locfileid: "48154199"
   
  Pour agir dans la zone fonctionnelle **Explorateur** de l'interface utilisateur, le groupe ou l'utilisateur doit avoir accès à la zone fonctionnelle **Explorateur** et disposer d'une autorisation sur les objets modèle.  
   
- Si un utilisateur ou un groupe nécessite l'accès à d'autres zones fonctionnelles, l'utilisateur ou le groupe doit être un administrateur. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+ Si un utilisateur ou un groupe nécessite l'accès à d'autres zones fonctionnelles, l'utilisateur ou le groupe doit être un administrateur. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ## <a name="best-practice"></a>Bonne pratique  
  Pour simplifier l'administration, créez des groupes et affectez à chaque groupe l'autorisation sur des zones fonctionnelles et objets modèles. Vous pouvez ensuite ajouter et supprimer des utilisateurs dans les groupes sans accéder à l'interface utilisateur de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  

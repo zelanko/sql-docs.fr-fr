@@ -13,12 +13,12 @@ ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3200f4c83511f176c4d23af34f398a76047fe9a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701082"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523443"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Exécution asynchrone (méthode d’interrogation)
 Avant d’ODBC 3.8 et le Kit de développement logiciel de Windows 7, les opérations asynchrones étaient autorisées uniquement sur les fonctions de l’instruction. Pour plus d’informations, consultez le **l’exécution des opérations déclaration de façon asynchrone**, plus loin dans cette rubrique.  
@@ -135,9 +135,9 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 }  
 ```  
   
- Lorsqu’une application appelle une fonction permettant de déterminer si elle est en cours d’exécution en mode asynchrone, il doit utiliser le descripteur d’instruction d’origine. Il s’agit, car l’exécution asynchrone est suivie sur une base par instruction. L’application doit également fournir des valeurs valides pour les autres arguments, les arguments d’origine fera — pour passer outre dans le Gestionnaire de pilotes de vérification des erreurs. Toutefois, une fois le pilote vérifie le descripteur d’instruction et détermine que l’instruction s’exécute de façon asynchrone, il ignore tous les autres arguments.  
+ Lorsqu’une application appelle une fonction permettant de déterminer si elle est en cours d’exécution en mode asynchrone, il doit utiliser le descripteur d’instruction d’origine. Il s’agit, car l’exécution asynchrone est suivie sur une base par instruction. L’application doit également fournir des valeurs valides pour les autres arguments, les arguments d’origine fera - pour passer dans le Gestionnaire de pilotes de vérification des erreurs. Toutefois, une fois le pilote vérifie le descripteur d’instruction et détermine que l’instruction s’exécute de façon asynchrone, il ignore tous les autres arguments.  
   
- Pendant l’exécution de façon asynchrone une fonction, autrement dit, une fois que ce dernier a renvoyé SQL_STILL_EXECUTING et avant elle retourne un code différent, l’application peut l’annuler en appelant **SQLCancel** ou **SQLCancelHandle** avec le même descripteur d’instruction. Cela n’est pas garanti pour annuler l’exécution de fonction. Par exemple, la fonction peut avoir déjà été achevée. En outre, le code retourné par **SQLCancel** ou **SQLCancelHandle** indique uniquement si la tentative d’annulation de la fonction a réussi, pas si elle annulée en fait la fonction. Pour déterminer si la fonction a été annulée, l’application appelle la fonction à nouveau. Si la fonction a été annulée, elle retourne SQL_ERROR et SQLSTATE HY008 (opération annulée). Si la fonction n’a pas été annulée, elle retourne un autre code, tels que SQL_SUCCESS ou SQL_ERROR avec une valeur SQLSTATE sous différents SQL_STILL_EXECUTING.  
+ Pendant l’exécution de façon asynchrone - une fonction, autrement dit, une fois que ce dernier a renvoyé SQL_STILL_EXECUTING et avant de retourner un code différent - l’application peut annuler en appelant **SQLCancel** ou **SQLCancelHandle** avec le même descripteur d’instruction. Cela n’est pas garanti pour annuler l’exécution de fonction. Par exemple, la fonction peut avoir déjà été achevée. En outre, le code retourné par **SQLCancel** ou **SQLCancelHandle** indique uniquement si la tentative d’annulation de la fonction a réussi, pas si elle annulée en fait la fonction. Pour déterminer si la fonction a été annulée, l’application appelle la fonction à nouveau. Si la fonction a été annulée, elle retourne SQL_ERROR et SQLSTATE HY008 (opération annulée). Si la fonction n’a pas été annulée, elle retourne un autre code, tels que SQL_SUCCESS ou SQL_ERROR avec une valeur SQLSTATE sous différents SQL_STILL_EXECUTING.  
   
  Pour désactiver l’exécution asynchrone d’une instruction particulière lorsque le pilote prend en charge le traitement asynchrone au niveau instruction, l’application appelle **SQLSetStmtAttr** le SQL_ATTR_ASYNC_ENABLE de l’attribut et lui affecte la valeur SQL_ ASYNC_ENABLE_OFF. Si le pilote prend en charge le traitement asynchrone au niveau de la connexion, l’application appelle **SQLSetConnectAttr** pour définir SQL_ATTR_ASYNC_ENABLE to SQL_ASYNC_ENABLE_OFF, ce qui désactive l’exécution asynchrone de toutes les instructions sur la connexion.  
   

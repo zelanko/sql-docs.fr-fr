@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ef5b5b551d06281cef03dbfd68d5bea190126285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9be76f5f308213f905224de5ade9b604ec119c30
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674339"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514650"
 ---
 # <a name="sysdmpdwresourcewaits-transact-sql"></a>Sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47674339"
 |acquire_time|**datetime**|Heure à laquelle a été acquis le verrou ou une ressource.||  
 |state|**nvarchar(50)**|État de l’état d’attente.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |priority|**Int**|Priorité de l’élément en attente.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**Int**|Nombre d’emplacements de concurrence (32 max) réservé pour cette demande.|1 – pour SmallRC<br /><br /> 3 – pour MediumRC<br /><br /> 7 pour LargeRC<br /><br /> 22 – pour XLargeRC|  
+|concurrency_slots_used|**Int**|Nombre d’emplacements de concurrence (32 max) réservé pour cette demande.|1 - pour SmallRC<br /><br /> 3 - pour MediumRC<br /><br /> 7 pour LargeRC<br /><br /> 22 - pour XLargeRC|  
 |resource_class|**nvarchar(20)**|La classe de ressources pour cette demande.|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
   
 ## <a name="see-also"></a>Voir aussi  

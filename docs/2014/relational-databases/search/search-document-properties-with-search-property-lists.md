@@ -18,12 +18,12 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90f0d34d522f27fd29c0c1103076632c3cb4bbee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77cb1127b7dbb7b2a49e3bafcd0b3eccc45b92ed
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086839"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800374"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Rechercher les propriétés du document à l’aide des listes de propriétés de recherche
   Auparavant, les propriétés de document était indiscernables du contenu du corps du document. Cela limitait les requêtes de texte intégral aux recherches génériques sur les documents entiers. Maintenant, vous pouvez configurer un index de recherche en texte intégral pour prendre en charge la recherche portant sur des propriétés, telles que les propriétés Auteur et Titre, pour les types de documents pris en charge dans une colonne de données binaires `varbinary`, `varbinary(max)` (incluant `FILESTREAM`) ou `image`. Cette forme de recherche s'appelle *recherche de propriétés*.  
@@ -48,11 +48,11 @@ ms.locfileid: "48086839"
 ### <a name="indexing-of-registered-properties"></a>Indexation de propriétés inscrites  
  Une fois qu'un index de recherche en texte intégral est associé à une liste de propriétés de recherche, l'index doit être rempli à nouveau pour indexer les termes de recherche spécifiques à la propriété. Lors de l'indexation de texte intégral, le contenu de toutes les propriétés est stocké dans l'index de recherche en texte intégral avec les autres contenus. Toutefois, lors de l'indexation d'un terme de recherche présent dans une propriété enregistrée, l'indexeur de texte intégral stocke également l'ID de propriété interne correspondant au terme. En revanche, si une propriété n'est pas enregistrée, elle est stockée dans l'index de recherche en texte intégral comme si elle faisait partie du corps du document, et a la valeur zéro comme ID de propriété interne.  
   
- L'illustration suivante montre une vue logique de la façon dont les termes de recherche apparaissent dans un index de recherche en texte intégral associé à la liste de propriétés de recherche figurant dans l'illustration précédente. L'exemple de document Document 1 contient trois propriétés : Title, Author et Keywords, ainsi que le corps du document. Pour les propriétés Title et Keywords, spécifiées dans la liste de propriétés de recherche, des termes de recherche sont associés à leurs ID de propriété internes correspondants dans l'index de recherche en texte intégral. En revanche, le contenu de la propriété Author est indexé comme s'il faisait partie du corps du document. Cela signifie que l'inscription d'une propriété augmente un peu la taille de l'index de recherche en texte intégral, en fonction du volume du contenu stocké dans la propriété.  
+ L'illustration suivante montre une vue logique de la façon dont les termes de recherche apparaissent dans un index de recherche en texte intégral associé à la liste de propriétés de recherche figurant dans l'illustration précédente. L’exemple de document Document 1 contient trois propriétés : Title, Author et Keywords, ainsi que le corps du document. Pour les propriétés Title et Keywords, spécifiées dans la liste de propriétés de recherche, des termes de recherche sont associés à leurs ID de propriété internes correspondants dans l'index de recherche en texte intégral. En revanche, le contenu de la propriété Author est indexé comme s'il faisait partie du corps du document. Cela signifie que l'inscription d'une propriété augmente un peu la taille de l'index de recherche en texte intégral, en fonction du volume du contenu stocké dans la propriété.  
   
  ![Index de recherche en texte intégral qui utilise une liste de propriétés de recherche](../../database-engine/media/ifts-spl-and-fti.gif "Index de recherche en texte intégral qui utilise une liste de propriétés de recherche")  
   
- Les termes de recherche de la propriété Title (« Favorite », « Biking », et « Trails ») sont associés à l'ID de propriété interne 1, affecté à Title pour cet index. Les termes de recherche de la propriété Keywords (« biking » et « mountain ») sont associés à l'ID de propriété interne 2, affecté à Tags pour cet index. Pour les termes de recherche de la propriété Author (« Jane » et « Doe ») et les termes de recherche dans le corps du document, l'ID de propriété interne est 0. Notez que le terme « biking » est présent dans la propriété Title, dans la propriété Keywords (Tags) et dans le corps du document. Une recherche de propriété sur « biking » dans la propriété Title ou Keywords (Tags) retournerait ce document dans les résultats. Une requête de texte intégral générique sur « biking » retournerait également ce document, comme si l'index n'avait pas été configuré pour la recherche de propriétés. Une recherche de propriété sur « biking » dans la propriété Author ne retournerait pas ce document.  
+ Les termes recherchés de la propriété Title (« Favorite », « Biking » et « Trails ») sont associés à l’ID de propriété interne 1, affecté à Title pour cet index. Les termes recherchés de la propriété Keywords (« biking » et « mountain ») sont associés à l’ID de propriété interne 2, affecté à Tags pour cet index. Pour les termes recherchés de la propriété Author (« Jane » et « Doe ») et les termes recherchés dans le corps du document, l’ID de propriété interne est 0. Notez que le terme « biking » est présent dans la propriété Title, dans la propriété Keywords (Tags) et dans le corps du document. Une recherche de propriété sur « biking » dans la propriété Title ou Keywords (Tags) retournerait ce document dans les résultats. Une requête de texte intégral générique sur « biking » retournerait également ce document, comme si l'index n'avait pas été configuré pour la recherche de propriétés. Une recherche de propriété sur « biking » dans la propriété Author ne retournerait pas ce document.  
   
  Une requête de texte intégral de portée propriété utilise les ID de propriété internes enregistrés pour la liste de propriétés de recherche actuelle de l'index de recherche en texte intégral.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48086839"
 ##  <a name="impact"></a> Impact de l'activation de la recherche de propriétés  
  Configurer un index de recherche en texte intégral pour prendre en charge la recherche sur une ou plusieurs propriétés augmente quelque peu la taille de l'index, en fonction du nombre de propriétés spécifiées dans votre liste de propriétés de recherche et du contenu de chaque propriété.  
   
- En testant des corpus standard de Microsoft Word<sup>®</sup>, Excel<sup>®</sup>et PowerPoint<sup>®</sup> documents, nous avons configuré une recherche en texte intégral index pour indexer des propriétés de recherche. L'indexation de ces propriétés a augmenté la taille de l'index de recherche en texte intégral d'environ 5 pour cent. Nous estimons que cette augmentation de taille approximative correspondra à la plupart des corpus de documents. Toutefois, l'augmentation de la taille dépend finalement du volume des données de propriété dans un corpus de documents donné, par rapport au volume total des données.  
+ En testant des corpus standard de Microsoft Word<sup>?? </sup>, Excel<sup>?? </sup>et PowerPoint<sup>??</sup> documents, nous avons configuré une recherche en texte intégral index pour indexer des propriétés de recherche. L'indexation de ces propriétés a augmenté la taille de l'index de recherche en texte intégral d'environ 5 pour cent. Nous estimons que cette augmentation de taille approximative correspondra à la plupart des corpus de documents. Toutefois, l'augmentation de la taille dépend finalement du volume des données de propriété dans un corpus de documents donné, par rapport au volume total des données.  
   
   
   
@@ -115,7 +115,7 @@ ms.locfileid: "48086839"
   
      Le nom de propriété peut être l'un des suivants :  
   
-    -   Le nom canonique Windows de la propriété, tel que `System.Author` ou `System.Contact.HomeAddress`.  
+    -   Nom canonique Windows de la propriété, tel que `System.Author` ou `System.Contact.HomeAddress`.  
   
     -   Nom convivial dont les utilisateurs se souviennent facilement. Certaines propriétés sont associées à un nom convivial connu, comme « Auteur » ou « Adresse personnelle », mais vous pouvez spécifier le nom qui convient le mieux à vos utilisateurs.  
   

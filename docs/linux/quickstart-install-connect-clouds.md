@@ -1,30 +1,31 @@
 ---
-title: Prise en main de SQL Server dans le Cloud | Microsoft Docs
-description: Ce démarrage rapide montre comment exécuter le serveur SQL Server sur Linux dans le cloud de votre choix.
-author: annashres
-ms.author: annashres
+title: Bien démarrer avec SQL Server (sur Linux) dans le Cloud
+titleSuffix: SQL Server
+description: Ce démarrage rapide montre comment exécuter SQL Server sur Linux dans le cloud de votre choix.
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 8c7131f8b4fb9f9b326e2596d53332b9e6bf9248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c64c2ab3927c111b29f0bafa6745fbab2f7fd13
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682977"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160537"
 ---
-# <a name="quickstart-run-the-sql-server-in-the-cloud"></a>Démarrage rapide : Exécuter le serveur SQL Server dans le cloud
+# <a name="quickstart-run-sql-server-in-the-cloud"></a>Démarrage rapide : Exécuter SQL Server dans le cloud
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dans ce démarrage rapide, vous allez installer SQL Server sur Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) ou Ubuntu dans le cloud de votre choix. Accédez à [approvisionner une machine virtuelle de Linux SQL Server dans le portail Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) pour exécuter SQL Server sur Linux dans Azure.
 
-    > [!NOTE]
-    > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
+> [!NOTE]
+> Si vous choisissez d’exécuter une édition payante de SQL Server, vous devez utiliser votre propre licence (BYOL).
 
 ## <a name="amazon-web-services"></a>Amazon Web Services
 1.  Créer un AMI Linux avec au moins 2 Go de mémoire à partir de la place de marché 

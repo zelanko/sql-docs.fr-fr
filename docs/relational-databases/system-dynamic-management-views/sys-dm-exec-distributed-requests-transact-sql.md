@@ -23,19 +23,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c02ea165ceec8af546d092d955e9275dcc96b240
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 78604c723c4c19e68a6c29fd3113de3d69d36d44
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661185"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532794"
 ---
 # <a name="sysdmexecdistributedrequests-transact-sql"></a>Sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contient des informations sur toutes les demandes actuellement ou récemment active dans les requêtes PolyBase. Elle répertorie une ligne par/requête de la demande.  
   
- Basé sur session et demande l’ID, un utilisateur peut ensuite récupérer les requêtes distribuées réels générées de façon à être exécutée : via sys.dm_exec_distributed_requests. Par exemple, une requête impliquant SQL normales et les tables SQL externes sera être décomposée en différentes instructions/requêtes exécutées sur les différents nœuds de calcul. Pour suivre les étapes distribuées sur tous les nœuds de calcul, nous présentons un ID d’exécution 'global' qui peut être utilisé pour effectuer le suivi de toutes les opérations sur les nœuds de calcul associés à une requête particulière et l’opérateur, respectivement.  
+ Basé sur session et demande l’ID, un utilisateur peut ensuite récupérer les requêtes distribuées réels générées de façon à être exécutée - via sys.dm_exec_distributed_requests. Par exemple, une requête impliquant SQL normales et les tables SQL externes sera être décomposée en différentes instructions/requêtes exécutées sur les différents nœuds de calcul. Pour suivre les étapes distribuées sur tous les nœuds de calcul, nous présentons un ID d’exécution 'global' qui peut être utilisé pour effectuer le suivi de toutes les opérations sur les nœuds de calcul associés à une requête particulière et l’opérateur, respectivement.  
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  

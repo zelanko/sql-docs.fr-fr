@@ -8,17 +8,17 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 f1_keywords:
-- sql12.dts.designer.paramterwindow.f1
+- sql12.dts.designer.parameterwindow.f1
 ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12a896b305d15f33cf5fc1eb58562ca6b249ae63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75c36c5e061a10ec6fc5b2af17334d134a7bd9d2
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173999"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858634"
 ---
 # <a name="create-parameters"></a>Create Parameters
   Vous pouvez utiliser [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer les paramètres de projet et de package. Les procédures suivantes fournissent des instructions pas-à-pas pour créer les paramètres de package/projet.  
@@ -40,7 +40,7 @@ ms.locfileid: "48173999"
   
     |Propriété|Description|  
     |--------------|-----------------|  
-    |Nom   |Nom du paramètre.|  
+    |Créer une vue d’abonnement|Nom du paramètre.|  
     |Type de données|Type de données du paramètre.|  
     |Valeur par défaut|Valeur par défaut du paramètre affecté au moment de la conception. Cette valeur est aussi appelée « valeur de conception par défaut ».|  
     |Sensible|Les valeurs de paramètre sensibles sont chiffrées dans le catalogue et apparaissent sous la forme d'une valeur Null lorsqu'elles sont affichées avec Transact-SQL ou SQL Server Management Studio.|  
@@ -74,7 +74,7 @@ ms.locfileid: "48173999"
   
     |Propriété|Description|  
     |--------------|-----------------|  
-    |Nom   |Nom du paramètre.|  
+    |Créer une vue d’abonnement|Nom du paramètre.|  
     |Type de données|Type de données du paramètre.|  
     |Valeur par défaut|Valeur par défaut du paramètre affecté au moment de la conception. Cette valeur est aussi appelée « valeur de conception par défaut ».|  
     |Sensible|Les valeurs de paramètre sensibles sont chiffrées dans le catalogue et apparaissent sous la forme d'une valeur Null lorsqu'elles sont affichées avec Transact-SQL ou SQL Server Management Studio.|  

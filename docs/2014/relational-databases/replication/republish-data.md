@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - republishing data
@@ -15,12 +14,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 08b24f4f2c881424c6e6bb5c1a9fb1e4217b74eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 976520f5000d3a0f96ee3bdea25bcc9802939d36
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057049"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794191"
 ---
 # <a name="republish-data"></a>Republier des données
   Dans un modèle de republication, le serveur de publication envoie les données à un Abonné qui les retransmet ensuite à un nombre quelconque d'Abonnés. Cette méthode est utile lorsqu'un serveur de publication doit envoyer les données à des Abonnés via une liaison de communication lente ou coûteuse. S'il existe beaucoup d'Abonnés à l'extrémité distante de cette liaison, l'utilisation d'un serveur de republication permet de déplacer la totalité de la charge de distribution de ce côté de la liaison.  
@@ -46,7 +45,7 @@ ms.locfileid: "48057049"
   
  ![Republishing data](media/repl-06a.gif "Republishing data")  
   
- Tous les serveurs peuvent être à la fois serveur de publication et Abonné. Le diagramme suivant illustre l'exemple d'une publication d'une table située à Londres et qui doit être distribuée dans quatre villes aux États-Unis : Chicago, New York, San Diego et Seattle. Le serveur situé à New York a été sélectionné pour s'abonner à la table publiée sur le serveur londonien, car le site new-yorkais réunit les conditions suivantes :  
+ Tous les serveurs peuvent être à la fois serveur de publication et Abonné. Par exemple, considérez le diagramme suivant dans lequel une publication d’une table située à Londres et doit être distribuée dans quatre villes aux États-Unis : Chicago, New York, San Diego et Seattle. Le serveur situé à New York a été sélectionné pour s'abonner à la table publiée sur le serveur londonien, car le site new-yorkais réunit les conditions suivantes :  
   
 -   La liaison réseau de retour vers Londres est relativement fiable.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48057049"
 ## <a name="see-also"></a>Voir aussi  
  [Configurer la distribution](configure-distribution.md)   
  [Publier des données et des objets de base de données](publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [S’abonner aux Publications](subscribe-to-publications.md)   
  [Initialiser un abonnement](initialize-a-subscription.md)   
  [Synchroniser les données](synchronize-data.md)  
   

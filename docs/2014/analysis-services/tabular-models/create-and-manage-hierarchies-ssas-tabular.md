@@ -11,12 +11,12 @@ ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2544b53b1fabc94a8ab0801141349d5da7f891c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bda916232a3d1b0c46a4278def28ec3759e346d3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149629"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404884"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Créer et gérer des hiérarchies (SSAS Tabulaire)
   Les hiérarchies peuvent être créées et gérées dans le générateur de modèles, dans la vue de diagramme. Pour afficher le concepteur de modèles dans la Vue de diagramme, dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cliquez sur le menu **Modèle** , pointez sur **Vue du modèle**, puis cliquez sur **Vue de diagramme**.  
@@ -42,7 +42,7 @@ ms.locfileid: "48149629"
   
 2.  Tapez un nom pour la hiérarchie.  
   
- Vous pouvez faire glisser des colonnes supplémentaires dans le niveau parent de votre hiérarchie, lequel copie les colonnes. Placez le niveau enfant à l'endroit où vous souhaitez qu'il apparaisse dans la hiérarchie.  
+ Vous pouvez faire glisser des colonnes supplémentaires dans le niveau de votre hiérarchie parent, qui copie les colonnes. Placez le niveau enfant à l'endroit où vous souhaitez qu'il apparaisse dans la hiérarchie.  
   
 > [!NOTE]  
 >  La commande Créer une hiérarchie est désactivée dans le menu contextuel si vous sélectionnez plusieurs mesures avec une ou plusieurs colonnes, ou si vous sélectionnez des colonnes à partir de plusieurs tables.  
@@ -96,7 +96,7 @@ ms.locfileid: "48149629"
   
 ## <a name="see-also"></a>Voir aussi  
  [Générateur de modèles tabulaires &#40;SSAS tabulaire&#41;](../tabular-model-designer-ssas-tabular.md)   
- [Hiérarchies &#40;SSAS tabulaire&#41;](hierarchies-ssas-tabular.md)   
- [Mesures &#40;SSAS tabulaire&#41;](measures-ssas-tabular.md)  
+ [Hiérarchies &#40;SSAS Tabulaire&#41;](hierarchies-ssas-tabular.md)   
+ [Mesures &#40;SSAS Tabulaire&#41;](measures-ssas-tabular.md)  
   
   

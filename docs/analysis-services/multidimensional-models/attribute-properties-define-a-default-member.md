@@ -1,5 +1,5 @@
 ---
-title: Définir un membre par défaut | Documents Microsoft
+title: Définir un membre par défaut | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e112d0cfdd1e4558dcad1888531774357ce0102a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 10b5776a4d4be5f31522740c28a6142a7e213576
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020916"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516734"
 ---
-# <a name="attribute-properties---define-a-default-member"></a>Propriétés d’attribut : permet de définir un membre par défaut
+# <a name="attribute-properties---define-a-default-member"></a>Propriétés d’attribut - Définir un membre par défaut
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Le membre par défaut d'une hiérarchie d'attributs sert à évaluer les expressions lorsque la hiérarchie d'attributs n'est pas incluse dans une requête. Le membre par défaut est ignoré lorsqu'une requête inclut une hiérarchie d'attributs ou une hiérarchie d'utilisateurs contenant l'attribut qui source la hiérarchie d'attributs. Cela est dû au fait que le membre spécifié dans la requête est utilisé.  
   
@@ -34,11 +34,11 @@ ms.locfileid: "34020916"
   
  Le paramètre **DefaultMember** d’un attribut s’applique à chaque hiérarchie à laquelle participe l’attribut. Vous ne pouvez pas utiliser des paramètres différents pour des hiérarchies différentes dans une dimension. Par exemple, si le membre [1998] est le membre par défaut d'un attribut [Année], ce paramètre s'applique à toute hiérarchie dans la dimension. Dans ce cas, le paramètre **DefaultMember** ne peut pas être [1998] dans une hiérarchie et [1997] dans une autre hiérarchie.  
   
- Si vous définissez un membre par défaut pour un niveau particulier d'une hiérarchie qui ne s'agrège pas naturellement, vous devez définir des membres par défaut dans tous les niveaux au-dessus de ce niveau de la hiérarchie. Par exemple, dans la hiérarchie Pays–Climat, vous ne pouvez pas définir un membre par défaut pour Climat, sauf si vous définissez un membre par défaut pour Pays. La violation de cette règle provoque des erreurs lors du traitement des requêtes.  
+ Si vous définissez un membre par défaut pour un niveau particulier d'une hiérarchie qui ne s'agrège pas naturellement, vous devez définir des membres par défaut dans tous les niveaux au-dessus de ce niveau de la hiérarchie. Par exemple, dans la hiérarchie de pays-All-climat, vous ne pouvez pas définir un membre par défaut pour climat, sauf si vous définissez un membre par défaut pour pays. La violation de cette règle provoque des erreurs lors du traitement des requêtes.  
   
- Lorsque les niveaux d'une hiérarchie s'agrègent naturellement, vous pouvez définir un membre par défaut pour un attribut de la hiérarchie sans tenir compte des autres attributs de cette hiérarchie. Par exemple, dans la hiérarchie Pays–Région–Ville, vous pouvez définir un membre par défaut pour Ville, par exemple [Ville].[Paris] sans définir le membre par défaut de Région ou de Pays.  
+ Lorsque les niveaux d'une hiérarchie s'agrègent naturellement, vous pouvez définir un membre par défaut pour un attribut de la hiérarchie sans tenir compte des autres attributs de cette hiérarchie. Par exemple, dans la hiérarchie de pays-région-ville, vous pouvez définir un membre par défaut pour Ville, par exemple [Ville]. [Paris] sans définir le membre par défaut pour l’état ou pays.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer la & #40 ; Tous les & #41 ; Niveau de hiérarchies d’attributs](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurer le niveau &#40;Tous&#41; des hiérarchies d’attributs](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

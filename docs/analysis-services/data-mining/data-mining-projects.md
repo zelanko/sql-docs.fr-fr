@@ -1,5 +1,5 @@
 ---
-title: Projets d’exploration de données | Documents Microsoft
+title: Projets d’exploration de données | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1e7a4ea87642ba31693eeea6ea17bedb14c20a24
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 75e71b4a17aa74ecb33f0a0d8c195b2e60b0e5a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018956"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506929"
 ---
 # <a name="data-mining-projects"></a>Projets d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "34018956"
   
  Un projet d'exploration de données unique peut référencer plusieurs sources de données. Bien qu'un modèle d'exploration de données puisse utiliser une seule source de données à la fois, le projet peut avoir plusieurs dessin de modèles sur différentes sources de données.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge des données de nombreux fournisseurs externes et l'exploration de données SQL Server peut utiliser des données relationnelles et des données du cube comme source de données. Toutefois, si vous développez les deux types de projet (modèles basés sur des sources relationnelles et modèles basés sur des cubes OLAP) vous pouvez développer et gérer ces derniers dans des projets distincts.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge des données de nombreux fournisseurs externes et l'exploration de données SQL Server peut utiliser des données relationnelles et des données du cube comme source de données. Toutefois, si vous développez les deux types de projets-modèles basés sur des sources relationnelles et les modèles basés sur des cubes OLAP-vous pouvez développer et gérer ces derniers dans des projets distincts.  
   
 -   En général, les modèles basés sur un cube OLAP doivent être développés dans la solution de conception OLAP. En effet, les modèles basés sur un cube doivent traiter le cube pour mettre à jour les données. En règle générale, vous devez utiliser des données de cube uniquement lorsqu'il s'agit du moyen principal de stockage et d'accès aux données, ou lorsque vous avez besoin des agrégations, des dimensions et des attributs créés par le projet multidimensionnel.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "34018956"
 > [!WARNING]  
 >  Si vous souhaitez filtrer les données, vous pouvez effectuer cette opération dans la vue de source de données, mais vous pouvez également créer des filtres sur les données au niveau du modèle d'exploration de données. La définition de filtre étant stockée avec le modèle d'exploration de données, l'utilisation de filtres de modèle simplifie la détermination des données utilisées pour l'apprentissage du modèle. De plus, vous pouvez créer plusieurs modèles associés, avec différents critères de filtre. Pour plus d’informations, consultez [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
- Notez que la vue de source de données créée peut contenir des informations supplémentaires qui ne sont pas directement utilisées pour l'analyse. Par exemple, vous pouvez ajouter à votre vue de source de données des données utilisées pour le test, les prédictions ou l'extraction. Pour plus d’informations sur ces utilisations, consultez [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md) et [Extraction](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+ Notez que la vue de source de données créée peut contenir des informations supplémentaires qui ne sont pas directement utilisées pour l'analyse. Par exemple, vous pouvez ajouter à votre vue de source de données des données utilisées pour le test, les prédictions ou l'extraction. Pour plus d’informations sur ces utilisations, consultez [Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md) et [Extraction](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
   
 ###  <a name="bkmk_Structures"></a> Mining Structures  
@@ -187,7 +187,7 @@ ms.locfileid: "34018956"
   
  Notez que ces rapports et graphiques ne sont pas stockés avec le projet ou dans la base de données ssASnoversion, par conséquent si vous devez conserver ou dupliquer les résultats, vous devez les enregistrer ou créer un script à partir des objets en utilisant DMX ou AMO. Vous pouvez également utiliser des procédures stockées pour la validation croisée.  
   
- Pour plus d’informations, consultez [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
+ Pour plus d’informations, consultez [Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
   
 ###  <a name="bkmk_Predict"></a> Create Predictions  
@@ -197,7 +197,7 @@ ms.locfileid: "34018956"
   
   
 ##  <a name="bkmk_API"></a> Accès par programmation aux objets d'exploration de données  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]fournit plusieurs outils qui vous pouvez d’effectuer par programme des projets d’exploration de données et les objets qu’elles contiennent. Le langage DMX fournit des déclarations que vous pouvez utiliser pour créer des sources de données et des vues de source de données, et pour créer, effectuer l'apprentissage et utiliser des structures et des modèles d'exploration de données. Pour plus d’informations, consultez [Guide de référence du langage DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs outils que vous pouvez utiliser pour utiliser par programmation des projets d'exploration de données et les objets qu'ils contiennent. Le langage DMX fournit des déclarations que vous pouvez utiliser pour créer des sources de données et des vues de source de données, et pour créer, effectuer l'apprentissage et utiliser des structures et des modèles d'exploration de données. Pour plus d’informations, consultez [Guide de référence du langage DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
   
  Vous pouvez également effectuer ces tâches en utilisant ASSL (Analysis Services Scripting Language), ou en utilisant des objets AMO (Analysis Management Objects). Pour plus d’informations, consultez [Développement avec XMLA dans Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).  
   
@@ -207,17 +207,17 @@ ms.locfileid: "34018956"
   
 |Tâches|Rubriques|  
 |-----------|------------|  
-|Décrit la façon d'utiliser des colonnes de structure d'exploration de données|[Créer une Structure d’exploration de données relationnelles](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
-|Fournit des informations sur l'ajout de nouveaux modèles d'exploration de données et le traitement d'une structure et de modèles|[Ajouter des modèles d’exploration de données à une Structure & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
-|Fournit des liens vers des ressources qui vous permettent de personnaliser les algorithmes qui génèrent des modèles d'exploration de données|[Personnaliser la Structure et les modèles d’exploration de données](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
+|Décrit la façon d'utiliser des colonnes de structure d'exploration de données|[Créer une structure d’exploration de données relationnelle](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
+|Fournit des informations sur l'ajout de nouveaux modèles d'exploration de données et le traitement d'une structure et de modèles|[Ajouter des modèles d’exploration de données à une structure &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Fournit des liens vers des ressources qui vous permettent de personnaliser les algorithmes qui génèrent des modèles d'exploration de données|[Personnaliser les modèles et les structures d’exploration de données](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
 |Fournit des liens vers des informations sur chacune des visionneuses de modèles d'exploration de données|[Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
-|En savoir plus sur la création d'un graphique de courbes d'élévation, d'un graphique des bénéfices ou d'une matrice de classification, ou sur le test d'une structure d'exploration de données|[Test et Validation & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
-|En savoir plus sur les options de traitement et les autorisations|[Traitement des objets d’exploration de données](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
+|En savoir plus sur la création d'un graphique de courbes d'élévation, d'un graphique des bénéfices ou d'une matrice de classification, ou sur le test d'une structure d'exploration de données|[Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|En savoir plus sur les options de traitement et les autorisations|[Traitement des objets d'exploration de données](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
 |Fournit des informations supplémentaires sur Analysis Services|[Bases de données de modèle multidimensionnel ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur d’exploration de données](../../analysis-services/data-mining/data-mining-designer.md)   
- [Création de modèles multidimensionnels à l’aide des outils de données SQL Server & #40 ; SSDT & #41 ;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   
+ [Création de modèles multidimensionnels à l’aide des Outils de données SQL Server &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Base de données d’espace de travail](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

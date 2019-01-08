@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: search
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [full-text search]
@@ -14,24 +14,24 @@ ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63c53ddd93af33c966ae229c305d9f69367f1ceb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b39faa18a310a652b9a0b52c5c50c55060ab0f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129869"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799767"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>Fonctionnalités de la recherche en texte intégral déconseillées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités de la recherche en texte intégral déconseillées qui sont toujours disponibles dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
   
- Vous pouvez surveiller l’utilisation des fonctionnalités déconseillées à l’aide du compteur de performance Objet **SQL Server : fonctionnalités déconseillées** et des événements de suivi. Pour plus d’informations, consultez [Utiliser des objets SQL Server](../performance-monitor/use-sql-server-objects.md).  
+ Vous pouvez surveiller l’utilisation des fonctionnalités déconseillées à l’aide du compteur de performance Objet **SQL Server : fonctionnalités déconseillées** et des événements de suivi. Pour plus d’informations, consultez [Utilisation des objets SQL Server](../performance-monitor/use-sql-server-objects.md).  
   
 ## <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Fonctionnalités non prises en charge dans la prochaine version de SQL Server  
  Les fonctionnalités de recherche en texte intégral suivantes ne seront pas prises en charge dans la prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Fonctionnalité déconseillée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  
 |------------------------|-----------------|------------------|----------------|  
-|Propriété FULLTEXTCATALOGPROPERTY : LogSize|Aucun.|FULLTEXTCATALOGPROPERTY **('LogSize')**|211|  
+|Propriété FULLTEXTCATALOGPROPERTY : LogSize|Aucun.|FULLTEXTCATALOGPROPERTY **('LogSize')**|211|  
 |Propriété FULLTEXTSERVICEPROPERTY :<br /><br /> ConnectTimeout<br /><br /> DataTimeout|Aucun.|FULLTEXTSERVICEPROPERTY **('ConnectTimeout')**<br /><br /> FULLTEXTSERVICEPROPERTY **('DataTimeout'**)|210<br /><br /> 209|  
 |sp_fulltext_catalog|CREATE FULL CATALOG<br /><br /> ALTER FULLTEXT CATALOG<br /><br /> DROP FULLTEXT CATALOG|sp_fulltext_catalog|84|  
 |sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|CREATE FULL INDEX<br /><br /> ALTER FULLTEXT INDEX<br /><br /> DROP FULLTEXT INDEX|sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|86<br /><br /> 87<br /><br /> 85 %|  
@@ -48,9 +48,9 @@ ms.locfileid: "48129869"
   
 |Fonctionnalité déconseillée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  
 |------------------------|-----------------|------------------|----------------|  
-|Opérateur NEAR générique CONTAINS et CONTAINSTABLE :<br /><br /> {<terme_simple> &#124; <terme_préfixe>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<terme_simple> &#124; <terme_préfixe>} } [...*n*]<br /><br /> }|Opérateur NEAR personnalisé :<br /><br /> NEAR(<br /><br /> {   {<terme_simple> &#124; <terme_préfixe>} [ ,…*n* ]<br /><br /> &#124; ( {<terme_simple> &#124; <terme_préfixe>} [,…*n*] )<br /><br /> [,\<distance > [,\<ordre >]]<br /><br /> }<br /><br /> )<br /><br /> \<distance > :: = {*entier* &#124; **MAX**}<br /><br /> \<commande > :: = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|Opérateur NEAR générique CONTAINS et CONTAINSTABLE :<br /><br /> {<terme_simple> &#124; <terme_préfixe>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<terme_simple> &#124; <terme_préfixe>} } [...*n*]<br /><br /> }|Opérateur NEAR personnalisé :<br /><br /> NEAR(<br /><br /> {   {<terme_simple> &#124; <terme_préfixe>} [ ,...*n* ]<br /><br /> &#124; ( {<terme_simple> &#124; <terme_préfixe>} [,...*n*] )<br /><br /> [,\<distance > [,\<ordre >]]<br /><br /> }<br /><br /> )<br /><br /> \<distance > :: = {*entier* &#124; **MAX**}<br /><br /> \<commande > :: = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |Option CREATE FULLTEXT CATALOG :<br /><br /> IN PATH '*chemin_racine*'<br /><br /> ON FILEGROUP *filegroup*|Aucun.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Aucun.*|237<br /><br /> Aucun.<sup>*</sup>|  
-|Propriété DATABASEPROPERTYEX : IsFullTextEnabled|Aucun.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
+|Propriété DATABASEPROPERTYEX : IsFullTextEnabled|Aucun.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |Option sp_detach_db :<br /><br /> [ @keepfulltextindexfile = ] '*conserver_fichier_index_recherche_en_texte-intégral*'|Aucun.|sp_detach_db @keepfulltextindexfile|226|  
 |Valeurs d’action sp_fulltext_service : resource_usage n’a pas de fonction.|None|sp_fulltext_service @action=resource_usage|200|  
   

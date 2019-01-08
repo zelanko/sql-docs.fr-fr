@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Créer un nouveau projet de modèle tabulaire | Microsoft Docs'
+title: 'Leçon 1 : Créez un projet de modèle tabulaire | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 61ac5b1a0bac9647e6163a13afd0bce6b251ac03
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040857"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410775"
 ---
-# <a name="lesson-1-create-a-new-tabular-model-project"></a>Leçon 1 : Créer un projet de modèle tabulaire
+# <a name="lesson-1-create-a-new-tabular-model-project"></a>Leçon 1 : Créer un projet de modèle tabulaire
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Dans cette leçon, vous allez créer un nouveau projet de modèle tabulaire vide dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Une fois que votre projet est créé, vous pouvez commencer à ajouter des données à l'aide de l'Assistant Importation de table. Cette leçon vous présente également une brève introduction à l’environnement dans SSDT de création de modèle tabulaire.  
   
-Durée estimée pour effectuer cette leçon : **10 minutes**  
+Durée estimée pour effectuer cette leçon : **10 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
 Cette rubrique constitue la première leçon du didacticiel de conception de modèle tabulaire. Pour suivre cette leçon, vous devez disposer de la base de données exemple AdventureWorksDW installée sur une instance de SQL Server. Pour plus d’informations, consultez [modélisation tabulaire &#40;didacticiel Adventure Works&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
@@ -50,7 +50,7 @@ Cette rubrique constitue la première leçon du didacticiel de conception de mod
       
     Si vous ne voyez pas SQL Server 2016 RTM (1200) dans la zone de liste de niveau de compatibilité, vous n’utilisez pas la dernière version de SQL Server Data Tools. Pour obtenir la version la plus récente, consultez [Installer les outils de données SQL Server](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
 
-    Si vous utilisez la dernière version de SSDT, vous pouvez également choisir SQL Server 2017 (1400). Toutefois, pour la leçon 13 : déployer, vous aurez besoin d’un serveur SQL Server 2017 ou Azure pour déployer sur.
+    Si vous utilisez la dernière version de SSDT, vous pouvez également choisir SQL Server 2017 (1400). Toutefois, pour la leçon 13 : Déployer, vous aurez besoin d’un SQL Server 2017 ou le serveur Azure pour déployer sur.
       
     En sélectionnant un niveau de compatibilité est recommandée uniquement si vous envisagez de déployer votre modèle tabulaire terminé vers une autre instance d’Analysis Services exécutant une version antérieure de SQL Server. Espace de travail intégré n’est pas pris en charge pour les niveaux de compatibilité antérieurs. Pour en savoir plus, consultez [Niveau de compatibilité](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).   
   
@@ -87,7 +87,7 @@ Pour en savoir plus sur les différents types de projets de modèles tabulaires,
   
 
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
-Accédez à la leçon suivante : [leçon 2 : ajouter des données](../analysis-services/lesson-2-add-data.md).
+Accédez à la leçon suivante : [Leçon 2 : Ajouter des données](../analysis-services/lesson-2-add-data.md).
 
   
   

@@ -18,12 +18,12 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e20a7ebdffc8972a1c3d1449fd65d2560a1d71b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145239"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753081"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   Modifie les paramètres par défaut pour différents paramètres de contrôle pour une copie en bloc entre un fichier et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -68,7 +68,7 @@ iValue
  BCPFILECP  
  *iValue* contient le numéro de la page de codes pour le fichier de données. Vous pouvez spécifier le numéro de la page de codes, par exemple 1252 ou 850, ou l'une de ces valeurs :  
   
- BCPFILE_ACP : les données dans le fichier figurent dans la page de codes Microsoft Windows® du client.  
+ BCPFILE_ACP : les données dans le fichier se trouvent dans le Windows Microsoft ?? page de codes du client.  
   
  BCPFILE_OEMCP : les données dans le fichier figurent dans la page de codes OEM du client (valeur par défaut).  
   
@@ -102,7 +102,7 @@ iValue
  Lorsque *iValue* a la valeur TRUE, spécifie que les fonctions de copie en bloc insèrent des valeurs de données fournies pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonnes définies avec une contrainte d’identité. Le fichier d'entrée doit fournir des valeurs pour les colonnes d'identité. Si cela n'est pas défini, de nouvelles valeurs d'identités sont générées pour les lignes insérées. Toutes les données présentes dans le fichier pour les colonnes d'identité sont ignorées.  
   
  BCPKEEPNULLS  
- Spécifie si les valeurs de données vides dans le fichier sont converties en valeurs NULL dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque *iValue* a la valeur TRUE, valeurs vides seront converties en valeurs NULL dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. L'option par défaut consiste à convertir les valeurs vides en une valeur par défaut pour la colonne dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si une valeur par défaut existe.  
+ Spécifie si les valeurs de données vides dans le fichier sont converties en valeurs NULL dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lorsque *iValue* a la valeur TRUE, valeurs vides seront converties en valeurs NULL dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. L'option par défaut consiste à convertir les valeurs vides en une valeur par défaut pour la colonne dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si une valeur par défaut existe.  
   
  BCPLAST  
  Est la dernière ligne à copier. L'option par défaut consiste à copier toutes les lignes ; une valeur inférieure à 1 rétablit la valeur par défaut de cette option.  
@@ -120,7 +120,7 @@ iValue
  BCPODBC  
  Lorsque la valeur est TRUE, spécifie que **datetime** et **smalldatetime** valeurs enregistrées au format caractère utilisent le préfixe de séquence d’échappement ODBC timestamp et le suffixe. L'option BCPODBC s'applique uniquement à BCP_OUT.  
   
- Si la valeur est FALSE, un **datetime** valeur représentant le 1er janvier 1997 est convertie en une chaîne de caractères : 1997-01-01 00:00:00.000. Si TRUE, le même **datetime** la valeur est représentée en tant que : {ts ' 1997-01-01 00:00:00.000'}.  
+ Si la valeur est FALSE, un **datetime** valeur représentant le 1er janvier 1997 est convertie en une chaîne de caractères : 00:00:00.000 de 1997-01-01. Si TRUE, le même **datetime** la valeur est représentée en tant que : {ts ' 1997-01-01 00:00:00.000'}.  
   
  BCPROWCOUNT  
  Retourne le nombre de lignes affectées par l'opération BCP en cours (ou la dernière).  

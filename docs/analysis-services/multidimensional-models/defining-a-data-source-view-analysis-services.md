@@ -1,5 +1,5 @@
 ---
-title: Définition des données de Source de vue (Analysis Services) | Documents Microsoft
+title: Définition des données d’une Source de vue (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6966a0763146c9fd787be39d5be011704c048f66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 545204349cf895dd0592f1a2dcba66de4cb054ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025846"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523100"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Définition d'une vue de source de données (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Une vue de source de données contient le modèle logique du schéma utilisé par les objets multidimensionnels de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , autrement dit des cubes, des dimensions et des structures d’exploration de données. Une vue de source de données représente la définition, stockée au format XML, des métadonnées de ces éléments de schéma utilisés par le modèle UDM (Unified Dimensional Model) et par les structures d'exploration de données. Une vue de source de données :  
+  Une vue de source de données contient le modèle logique du schéma utilisé par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données multidimensionnelle objets à savoir les cubes, dimensions et les structures d’exploration de données. Une vue de source de données représente la définition, stockée au format XML, des métadonnées de ces éléments de schéma utilisés par le modèle UDM (Unified Dimensional Model) et par les structures d'exploration de données. Une vue de source de données :  
   
 -   contient les métadonnées représentant des objets sélectionnés à partir d'une ou de plusieurs sources de données sous-jacentes ou les métadonnées qui seront utilisées pour générer une banque de données relationnelles sous-jacente, si vous suivez l'approche verticale pour la génération du schéma ;  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34025846"
   
 4.  **Filtrer les objets disponibles**  
   
-     Si la liste des objets disponibles contient un grand nombre d'objets, vous pouvez réduire cette liste en appliquant un filtre simple qui spécifie une chaîne comme critère de sélection. Par exemple, si vous tapez **dbo** et que vous cliquez sur le bouton **Filtre** , seuls les éléments commençant par « dbo » s’affichent dans la liste **Objets disponibles** . Le filtre peut être une chaîne partielle (par exemple, « sal » retourne salaire et salle), mais il ne peut pas inclure plusieurs chaînes ou opérateurs.  
+     Si la liste des objets disponibles contient un grand nombre d'objets, vous pouvez réduire cette liste en appliquant un filtre simple qui spécifie une chaîne comme critère de sélection. Par exemple, si vous tapez **dbo** et que vous cliquez sur le bouton **Filtre** , seuls les éléments commençant par « dbo » s’affichent dans la liste **Objets disponibles** . Le filtre peut être une chaîne partielle (par exemple, « sal » retourne sales et salaire), mais il ne peut pas inclure plusieurs chaînes ou opérateurs.  
   
 5.  Pour les sources de données relationnelles qui n’ont aucune relation entre tables définie, une page **Correspondance de noms** apparaît afin que vous puissiez sélectionner la méthode de correspondance de noms appropriée. Pour plus d’informations, consultez la section [Spécifier des critères de correspondance de nom pour les relations](#bkmk_NameMatch) dans cette rubrique.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "34025846"
   
  L'Assistant Vue de source de données utilise votre réponse pour faire correspondre les noms de colonnes et créer des relations entre les différentes tables dans la vue DSV. Les critères que vous pouvez spécifier sont répertoriés dans le tableau suivant.  
   
-|Critères de correspondance de nom| Description|  
+|Critères de correspondance de nom|Description|  
 |----------------------------|-----------------|  
 |**Nom identique à la clé primaire**|Le nom de la colonne clé étrangère de la table source est le même que le nom de la colonne clé primaire de la table de destination. Par exemple, la colonne de clé étrangère `Order.CustomerID` correspond à la colonne clé primaire `Customer.CustomerID`.|  
 |**Nom identique à celui de la table de destination**|Le nom de la colonne clé étrangère de la table source est le même que le nom de la table de destination. Par exemple, la colonne de clé étrangère `Order.Customer` correspond à la colonne clé primaire `Customer.CustomerID`.|  
@@ -127,13 +127,13 @@ ms.locfileid: "34025846"
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajout ou suppression de tables ou de vues dans une vue de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [Définir des clés primaires logiques dans une vue de Source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [Définir des calculs nommés dans une vue de Source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [Définir des requêtes nommées dans une vue de Source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
- [Remplacer une Table ou une requête nommée dans une vue de Source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [Utiliser des diagrammes dans le Concepteur de vue de Source de données & #40 ; Analysis Services & #41 ;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [Explorer les données dans une vue de Source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
- [Supprimer une vue de Source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
+ [Définir des clés primaires logiques dans une vue de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [Définir des requêtes nommées dans une vue de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [Remplacer une table ou une requête nommée dans une vue de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [Utiliser des diagrammes dans un concepteur de vues de sources de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Explorer des données dans une vue de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
+ [Supprimer une vue de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
  [Actualiser le schéma dans une vue de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

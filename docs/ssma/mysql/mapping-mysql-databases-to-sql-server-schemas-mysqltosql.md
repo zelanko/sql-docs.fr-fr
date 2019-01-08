@@ -13,12 +13,12 @@ ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ba413a15f0d201ecaddadf83e353d28ee3010c50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40a3cf9db1248292d66d2a296c25c53ccfda002d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721947"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408706"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Mappage de bases de données MySQL à des schémas SQL Server (MySQLToSQL)
 Par défaut, SSMA pour MySQL migre tous les objets dans un schéma de MySQL vers un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou nommé pour le schéma de la base de données SQL Azure. Toutefois, vous pouvez personnaliser le mappage entre les schémas de MySQL et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou bases de données SQL Azure.  
@@ -57,7 +57,7 @@ Vous pouvez mapper la base de données source vers une base de données cible. P
   
 -   Mappage à SQL Azure  
   
-Vous pouvez mapper la base de données source vers la cible connectée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données ou à n’importe quel schéma dans la cible connectée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données. Si vous mappez la source de schéma à aucun schéma n’existent pas sous la base de données connectée cible, vous serez invité avec un message **« schéma n’existe pas dans les métadonnées de la cible. Il est créé pendant la synchronisation. Voulez-vous continuer ? »** Cliquez sur Oui.  
+Vous pouvez mapper la base de données source vers la cible connectée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données ou à n’importe quel schéma dans la cible connectée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données. Si vous mappez la source de schéma à aucun schéma n’existent pas sous la base de données connectée cible, vous serez invité avec un message **« schéma n’existe pas dans les métadonnées de la cible. Il est créé pendant la synchronisation. Voulez-vous continuer ? "** Cliquez sur Oui.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Retour à la base de données par défaut et le schéma  
 Si vous personnalisez le mappage entre un schéma de MySQL et un schéma de SQL Server, vous pouvez rétablir le mappage vers les valeurs par défaut.  

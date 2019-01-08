@@ -1,5 +1,5 @@
 ---
-title: 'Annexe e : les fonctions scalaires | Microsoft Docs'
+title: 'Annexe e : Fonctions scalaires | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94e33460d3c50363e96e90fb457467b8e5cda315
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631857"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540506"
 ---
-# <a name="appendix-e-scalar-functions"></a>Annexe E : Fonctions scalaires
+# <a name="appendix-e-scalar-functions"></a>Annexe e : Fonctions scalaires
 ODBC spécifie les types suivants de fonctions scalaires, des informations détaillées sur chacun de ces types de fonction fournis dans les sections correspondantes de cette annexe. Les descriptions fonction incluent la syntaxe associée.  
   
  Cette annexe contient les rubriques suivantes.  
@@ -39,7 +39,7 @@ ODBC spécifie les types suivants de fonctions scalaires, des informations déta
   
 -   [CAST (SQL-92), fonction](../../../odbc/reference/appendixes/sql-92-cast-function.md)  
   
- ODBC ne force pas un type de données pour les valeurs de retour à partir de fonctions scalaires, car les fonctions sont souvent spécifique à la source de données. Applications doivent utiliser la fonction scalaire CONVERT chaque fois que possible de forcer la conversion de type de données.  
+ ODBC ne force pas un type de données pour les valeurs de retour à partir de fonctions scalaires, car les fonctions sont souvent spécifiques à la source de données. Applications doivent utiliser la fonction scalaire CONVERT chaque fois que possible de forcer la conversion de type de données.  
   
 ## <a name="odbc-and-sql-92-scalar-functions"></a>Fonctions scalaires ODBC et SQL-92  
  Les tables dans cette annexe incluent des fonctions qui ont été ajoutées dans ODBC 3.0 pour les aligner avec SQL-92. Ces fonctions ajoutées pour un type particulier d’une fonction scalaire, tel que défini dans ODBC, sont indiquées dans chaque section.  

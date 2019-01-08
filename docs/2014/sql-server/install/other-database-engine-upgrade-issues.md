@@ -13,12 +13,12 @@ ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cbaa1d648b3de2cdd0b16d233db93bf52635b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176059"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321635"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Autres problèmes de mise à niveau du moteur de base de données
   Les problèmes de mise à niveau suivants ne peuvent pas être détectés par la version actuelle du Conseiller de mise à niveau. Passez en revue les problèmes répertoriés ci-dessous pour évaluer leur impact potentiel sur vos systèmes.  
@@ -64,7 +64,7 @@ ms.locfileid: "48176059"
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>La table cible de la clause OUTPUT INTO ne peut pas contenir de déclencheur défini  
- L'utilisation de la clause OUPUT INTO sur une table cible qui contient des déclencheurs activés n'est pas prise en charge.  
+ SORTIE dans une table cible lorsque la table comporte des déclencheurs activés n’est pas pris en charge.  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>Erreur de compilation des UDF lorsque la cible d'une clause OUTPUT INTO est une table  
  Les fonctions définies par l'utilisateur (UDF) ne permettent pas d'exécuter des actions qui modifient l'état des bases de données. Par exemple, une fonction définie par l'utilisateur ne peut exécuter aucune action DDL (CREATE/ALTER/DROP) ou DML (INSERT/UPDATE/DELETE) sur des objets, à l'exception des variables de table.  

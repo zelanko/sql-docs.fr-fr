@@ -15,17 +15,17 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b1406c93a798df2b19f49d3a83123221826d1bf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 549cae9b4e42866194f5a391bb7d5e111eb202ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170819"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395153"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Installation du mode SharePoint de Reporting Services (SharePoint 2010 et SharePoint 2013)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint est une collection de composants serveur qui fournissent la génération de rapports et de remise, basées sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] les produits SharePoint.  
   
- L'exécution de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint fournit [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] et les fonctionnalités d'alerte de données. Pour plus d’informations sur les fonctionnalités en mode SharePoint, consultez la section « Différences en matière de prise en charge et de comportement des fonctionnalités en fonction du mode de serveur » dans [Serveur de rapports Reporting Services](../reporting-services-report-server.md).  
+ L'exécution de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint fournit [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] et les fonctionnalités d'alerte de données. Pour plus d’informations sur les fonctionnalités en mode SharePoint, consultez la section « Fonctionnalité prise en charge et comportement différences en Mode serveur » dans [Reporting Services Report Server](../reporting-services-report-server.md)  
   
  Il existe deux installations fondamentales nécessaires pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint :  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48170819"
   
  Pour installer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], utilisez le support d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Pour obtenir des instructions sur les scénarios de déploiement avancés, consultez [liste de vérification de déploiement : Reporting Services, Power View et PowerPivot pour SharePoint](../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) et [liste de vérification de déploiement : installer Reporting Services dans un existant Batterie de serveurs SharePoint](../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md).  
+ Pour obtenir des instructions sur les scénarios de déploiement avancés, consultez [liste de vérification de déploiement : Reporting Services, Power View et PowerPivot pour SharePoint](../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) et [liste de vérification de déploiement : Installer Reporting Services dans une batterie de serveurs SharePoint existante](../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Prise en charge les combinaisons de SharePoint et Reporting Services serveur et complément &#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md)  
@@ -49,18 +49,18 @@ ms.locfileid: "48170819"
   
  [Où trouver le complément Reporting Services pour les produits SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [Ajouter un serveur de rapports supplémentaire à une batterie de serveurs &#40;SSRS Scale-out&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
+ [Ajouter un serveur de rapports supplémentaire à une batterie &#40;montée en puissance SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
  [Ajouter un serveur Web frontal Reporting Services supplémentaire à un pool](add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
- [Configurer la messagerie électronique pour l’Application de Service pour Reporting Services &#40;SharePoint 2010 et SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
+ [Configurer la messagerie électronique pour une application de service Reporting Services &#40;SharePoint 2010 et SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
   
  [Approvisionner les abonnements et les alertes pour les applications de service de SSRS](provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
  [Service de jeton de revendications vers Windows &#40;C2WTS&#41; et Reporting Services](../../sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Architecture et flux de travail des alertes de données](../reporting-services-data-alerts.md#AlertingWF)   
+ [Architecture des alertes de données et flux de travail](../reporting-services-data-alerts.md#AlertingWF)   
  [Gestionnaire des alertes de données pour les administrateurs d'alertes](../data-alert-manager-for-alerting-administrators.md)  
   
   

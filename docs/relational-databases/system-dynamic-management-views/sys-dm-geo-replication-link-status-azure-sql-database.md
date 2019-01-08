@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 57212bc80087e3f2227f90ab6fa16678df37517e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 251dcb7121b568444387a1e864294095a556b827
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809077"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396019"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "47809077"
 |rôle|**tinyint**|Rôle de géo-réplication, une des :<br /><br /> 0 = primary. Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.<br /><br /> 1 = la base de données secondaire.  Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.|  
 |role_desc|**nvarchar (256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Le type secondaire, un des suivants :<br /><br /> 0 ne = aucune direct connexions sont autorisées pour la base de données secondaire et la base de données n’est pas disponible pour un accès en lecture.<br /><br /> 2 = toutes les connexions sont autorisées pour la base de données dans la boucle repl secondaire ; application pour l’accès en lecture seule.|  
-|secondary_allow_connections_desc|**nvarchar (256)**|non<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar (256)**|Non<br /><br /> All|  
 |last_commit|**datetimeoffset**|L’heure de la dernière transaction validée dans la base de données. Si récupéré sur la base de données primaire, il indique la dernière heure de validation sur la base de données primaire. Si récupéré sur la base de données secondaire, cette propriété indique l’heure de la dernière validation sur la base de données secondaire. Si récupéré sur la base de données secondaire lorsque le réplica principal du lien de réplication est arrêté, il indique jusqu'à quel point la base de données secondaire a rattrapé.|
   
 > [!NOTE]  
 >  Si la relation de réplication est arrêtée en supprimant la base de données secondaire (section 4.2), la ligne pour cette base de données dans le **sys.dm_geo_replication_link_status** disparaît de la vue.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  N’importe quel compte avec l’autorisation de view_database_state peut interroger **sys.dm_geo_replication_link_status**.  
   
 ## <a name="example"></a>Exemple  

@@ -11,12 +11,12 @@ ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ed50f8107b1ee12109eedc904ef07c6a5342df7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c34694012a69285ee92fa90c58f293654c961890
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133549"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524188"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importer un projet d'exploration de données à l'aide de l'Assistant Importation d'Analysis Services
   Cette rubrique décrit la méthode de création d’un projet d’exploration de données en important les métadonnées d’un projet existant d’exploration de données sur un autre serveur, à l’aide du modèle **Importer à partir du serveur (Multidimensionnel et exploration de données)**, dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -24,7 +24,7 @@ ms.locfileid: "48133549"
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Importez des sources de données, des structures d'exploration de données et des modèles d'exploration de données d'un projet existant d'exploration de données  
  Quand vous utilisez le modèle **Importer à partir du serveur (Multidimensionnel et exploration de données)**, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crée un projet d’exploration de données, puis copie les métadonnées du projet d’exploration de données spécifié. Le nouveau projet contient les mêmes sources de données, vues de source de données, structures d'exploration de données et modèles d'exploration de données que la base de données ssASnoversion à partir de laquelle vous avez effectué l'importation. Toutefois, le projet ne peut pas être utilisé tant que certaines propriétés ne sont pas mises à jour et que les objets n'ont pas été traités comme suit :  
   
--   Les données elles-mêmes ne sont pas copiées du serveur source vers le nouveau projet d'exploration de données, seules les définitions des sources de données et des vues de source de données sont importées. Par conséquent, une fois l'importation terminée et les objets créés, vous devez remplir les objets avec les données par apprentissage des structures d'exploration de données et des modèles dépendants. Vous pouvez utiliser la commande **Traiter tout** dans le Concepteur d'exploration de données pour effectuer l'apprentissage des modèles et des structures.  
+-   Les données proprement dites ne sont pas copiées à partir du serveur source pour l’exploration de données nouveau projet uniquement que les définitions des sources de données et les vues de sources de données sont importées. Par conséquent, une fois l'importation terminée et les objets créés, vous devez remplir les objets avec les données par apprentissage des structures d'exploration de données et des modèles dépendants. Vous pouvez utiliser la commande **Traiter tout** dans le Concepteur d'exploration de données pour effectuer l'apprentissage des modèles et des structures.  
   
 -   Si vous importez un projet créé dans une version antérieure d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], la source de données peut utiliser les fournisseurs qui ne sont pas installés sur le serveur sur lequel vous importez le projet. Si vous rencontrez des erreurs lors du traitement des structures d’exploration de données importées, cliquez avec le bouton droit sur chaque source de données et sélectionnez **Ouvrir le concepteur** pour modifier la chaîne de connexion et vérifier les propriétés du fournisseur.  
   
@@ -53,13 +53,13 @@ ms.locfileid: "48133549"
     > [!WARNING]  
     >  Vous ne pouvez pas spécifier les objets que vous souhaitez importer ; lorsque vous choisissez une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante, tous les objets multidimensionnels et d'exploration de données sont importés.  
   
-     Cliquez sur **Suivant**.  
+     Cliquer sur **Suivant**.  
   
 5.  La page **Fin de l'Assistant**affiche la progression de l'opération d'importation. Vous ne pouvez pas annuler l'opération ou modifier les objets qui sont importés. Cliquez sur **Terminer** lorsque vous avez terminé.  
   
      Le nouveau projet est automatiquement ouvert à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés de projet &#40;SSAS tabulaire&#41;](../tabular-models/properties-ssas-tabular.md)  
+ [Propriétés de projet &#40;SSAS Tabulaire&#41;](../tabular-models/properties-ssas-tabular.md)  
   
   

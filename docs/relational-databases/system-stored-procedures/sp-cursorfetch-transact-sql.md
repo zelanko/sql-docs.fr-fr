@@ -18,12 +18,12 @@ ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43cf13284789fa599c3f2f7b8841d7fe54e3b2e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732123"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538853"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_cursorfetch cursor
  *FetchType*  
  Spécifie la mémoire tampon de curseur à extraire. *FetchType* est un paramètre optionnel qui requiert l’une des valeurs d’entrée entières suivantes.  
   
-|Valeur|Nom   |Description|  
+|Value|Créer une vue d’abonnement|Description|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Extrait la première mémoire tampon de *nrows* lignes. Si *nrows* est égal à 0, le curseur est positionné avant le jeu de résultats et ne retourne aucune ligne.|  
 |0x0002|NEXT|Extrait la mémoire tampon suivante de *nrows* lignes.|  
-|0x0004|PREV|Extrait la mémoire tampon précédente de *nrows* lignes.<br /><br /> Remarque : L’utilisation de PREV pour un curseur FORWARD_ONLY retourne un message d’erreur parce que FORWARD_ONLY prend uniquement en charge le défilement dans une seule direction.|  
-|0x0008|LAST|Extrait la dernière mémoire tampon de *nrows* lignes. Si *nrows* est égal à 0, le curseur est positionné après le jeu de résultats et ne retourne aucune ligne.<br /><br /> Remarque : À l’aide du dernier pour un curseur FORWARD_ONLY retourne un message d’erreur parce que FORWARD_ONLY prend uniquement en charge le défilement dans une seule direction.|  
-|0x10|ABSOLUTE|Extrait une mémoire tampon de *nrows* lignes en commençant par le *rownum* ligne.<br /><br /> Remarque : L’utilisation d’ABSOLUTE pour un curseur dynamique ou un curseur FORWARD_ONLY retourne un message d’erreur parce que FORWARD_ONLY prend uniquement en charge le défilement dans une seule direction.|  
-|0x20|RELATIVE|Extrait la mémoire tampon de *nrows* lignes en commençant par la ligne qui est spécifiée comme étant le *rownum* valeur des lignes à partir de la première ligne dans le bloc actuel. Dans ce cas *rownum* peut être un nombre négatif.<br /><br /> Remarque : L’utilisation de RELATIVE pour un curseur FORWARD_ONLY retourne un message d’erreur parce que FORWARD_ONLY prend uniquement en charge le défilement dans une seule direction.|  
+|0x0004|PREV|Extrait la mémoire tampon précédente de *nrows* lignes.<br /><br /> Remarque : L'utilisation de PREV pour un curseur FORWARD_ONLY retourne un message d'erreur parce que FORWARD_ONLY prend seulement en charge le défilement dans une direction.|  
+|0x0008|LAST|Extrait la dernière mémoire tampon de *nrows* lignes. Si *nrows* est égal à 0, le curseur est positionné après le jeu de résultats et ne retourne aucune ligne.<br /><br /> Remarque : L'utilisation de LAST pour un curseur FORWARD_ONLY retourne un message d'erreur parce que FORWARD_ONLY prend seulement en charge le défilement dans une direction.|  
+|0x10|ABSOLUTE|Extrait une mémoire tampon de *nrows* lignes en commençant par le *rownum* ligne.<br /><br /> Remarque : L'utilisation d'ABSOLUTE pour un curseur DYNAMIC ou un curseur FORWARD_ONLY retourne un message d'erreur parce que FORWARD_ONLY prend seulement en charge le défilement dans une direction.|  
+|0x20|RELATIVE|Extrait la mémoire tampon de *nrows* lignes en commençant par la ligne qui est spécifiée comme étant le *rownum* valeur des lignes à partir de la première ligne dans le bloc actuel. Dans ce cas *rownum* peut être un nombre négatif.<br /><br /> Remarque : L'utilisation de RELATIVE pour un curseur FORWARD_ONLY retourne un message d'erreur parce que FORWARD_ONLY prend seulement en charge le défilement dans une direction.|  
 |0x80|REFRESH|Remplit la mémoire tampon à partir de tables sous-jacentes.|  
 |0x100|INFO|Récupère des informations sur le curseur. Ces informations sont retournées à l’aide de la *rownum* et *nrows* paramètres. Par conséquent, lorsque l’INFO est spécifiée, *rownum* et *nrows* deviennent des paramètres de sortie.|  
 |0x200|PREV_NOADJUST|Est utilisée comme PREV. Toutefois, si les premiers résultats du jeu sont trouvés prématurément, les résultats peuvent varier.|  
@@ -80,7 +80,7 @@ sp_cursorfetch cursor
  Lorsque vous spécifiez la valeur de bit INFO, les valeurs qui peuvent être retournées sont affichées dans les tableaux suivants.  
   
 > [!NOTE]  
->  : Si aucune ligne n’est retourné, le contenu de la mémoire tampon reste inchangé.  
+>  :   Si aucune ligne n’est retourné, le contenu de la mémoire tampon reste inchangé.  
   
 |*\<ROWNUM >*|La valeur|  
 |------------------|------------|  
@@ -89,12 +89,12 @@ sp_cursorfetch cursor
 |Si le curseur est positionné après le jeu de résultats|-1|  
 |Pour les curseurs KEYSET et STATIC|Numéro de ligne absolu de la position actuelle dans le jeu de résultats|  
 |Pour les curseurs DYNAMIC|1|  
-|Pour ABSOLUTE|-1 retourne la dernière ligne dans un jeu.<br /><br /> -2 retourne la deuxième à la dernière ligne dans un jeu, et ainsi de suite.<br /><br /> Remarque : Si plusieurs lignes est demandée à extraire dans ce cas, les deux dernières lignes du jeu de résultats sont retournés.|  
+|Pour ABSOLUTE|-1 retourne la dernière ligne dans un jeu.<br /><br /> -2 retourne la deuxième à la dernière ligne dans un jeu, et ainsi de suite.<br /><br /> Remarque : Si plusieurs lignes doivent être extraites dans ce cas, les deux dernières lignes du jeu de résultats sont retournées.|  
   
 |*\<nRows >*|La valeur|  
 |-----------------|------------|  
 |Si le curseur n'est pas ouvert|0|  
-|Pour les curseurs KEYSET et STATIC|En général, taille du jeu de clés actuel.<br /><br /> **– m** si le curseur est en création asynchrone avec *m* lignes trouvées à ce stade.|  
+|Pour les curseurs KEYSET et STATIC|En général, taille du jeu de clés actuel.<br /><br /> **m -** si le curseur est en création asynchrone avec *m* lignes trouvées à ce stade.|  
 |Pour les curseurs DYNAMIC|-1|  
   
 ## <a name="remarks"></a>Notes  
@@ -134,16 +134,16 @@ sp_cursorfetch cursor
   
  L'une des valeurs affichées dans le tableau suivant est affectée au paramètre d'état RPC.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0|La procédure a été correctement exécutée.|  
 |0x0001|La procédure a échoué.|  
 |0x0002|Une extraction dans une direction négative a provoqué la définition de la position du curseur au début du jeu de résultats, alors que l'extraction aurait dû se situer logiquement avant les résultats.|  
 |0x10|Un curseur avance rapide a été fermé automatiquement.|  
   
- Les lignes sont retournées comme un jeu de résultats classique, à savoir format de colonne (0x2a), lignes (0xd1), suivi de l'indication de fin (0xfd). Les jetons de métadonnées sont envoyés sous le même format que celui spécifié pour sp_cursoropen, à savoir 0x81, 0xa5 et 0xa4 pour les utilisateurs SQL Server 7.0, et ainsi de suite. Les indicateurs d'état de ligne sont envoyés en tant que colonnes masquées, comme en mode BROWSE, à la fin de chaque ligne avec le rowstat du nom de la colonne et le type de données INT4. Cette colonne rowstat comporte l'une des valeurs affichées dans le tableau suivant.  
+ Les lignes sont retournées comme un jeu de résultats classique, à savoir format de colonne (0x2a), lignes (0xd1), suivi de l'indication de fin (0xfd). Jetons de métadonnées sont envoyés dans le même format que celui spécifié pour sp_cursoropen, autrement dit : 0 x 81, 0xa5 et 0xa4 pour les utilisateurs de SQL Server 7.0 et ainsi de suite. Les indicateurs d'état de ligne sont envoyés en tant que colonnes masquées, comme en mode BROWSE, à la fin de chaque ligne avec le rowstat du nom de la colonne et le type de données INT4. Cette colonne rowstat comporte l'une des valeurs affichées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  
@@ -173,7 +173,7 @@ row 6 contents
 > [!NOTE]  
 >  Il s'agit précisément du cas où le paramètre d'état RPC a la valeur 2.  
   
-### <a name="b-using-prevnoadjust-to-return-fewer-rows-than-prev"></a>B. Utilisation de PREV_NOADJUST pour retourner moins de lignes que PREV  
+### <a name="b-using-prevnoadjust-to-return-fewer-rows-than-prev"></a>b. Utilisation de PREV_NOADJUST pour retourner moins de lignes que PREV  
  PREV_NOADJUST n'inclut jamais aucune des lignes au niveau de la position de curseur actuelle ou après celle-ci dans le bloc des lignes qu'il retourne. Dans les cas où PREV retourne des lignes après la position actuelle, PREV_NOADJUST retourne moins de lignes que prévu dans *nrows*. La position actuelle dans l’exemple A plus haut, lorsque PREV est appliqué, sp_cursorfetch (h2, 4, 1, 5) extrait les lignes suivantes :  
   
 ```  

@@ -10,18 +10,18 @@ ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4b791f83342d02fb003a14f48861ae992ddc37df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190289"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408626"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sauvegarde d'une base de données avec des tables mémoire optimisées
   Les tables mémoire optimisées sont sauvegardées dans le cadre des sauvegardes de base de données normales. Pour les tables sur disque, la valeur CHECKSUM des paires de fichiers de données et delta est validée dans le cadre de la sauvegarde de base de données pour détecter la corruption du stockage.  
   
 > [!NOTE]  
->  Pendant une sauvegarde, si vous détectez une erreur CHECKSUM dans un ou plusieurs fichiers d'un groupe de fichiers mémoire optimisé, vous ne pourrez pas restaurer et redémarrer la base de données. Dans ce cas, vous devez restaurer votre base de données à l'aide de la dernière sauvegarde connue et fiable. Si vous ne disposez pas d'une sauvegarde, exportez des données des tables mémoire optimisées et des tables sur disque et rechargez-les après avoir supprimé et recréé la base de données.  
+>  Pendant une sauvegarde, si vous détectez une erreur CHECKSUM dans un ou plusieurs fichiers d'un groupe de fichiers mémoire optimisé, vous ne pourrez pas restaurer et redémarrer la base de données. Dans ce cas, vous devez restaurer votre base de données à l'aide de la dernière sauvegarde connue et fiable. Si vous ne disposez pas d’une sauvegarde, exportez les données des tables à mémoire optimisée et des tables sur disque, et rechargez-les après avoir supprimé et recréé la base de données.  
   
  Une sauvegarde complète d'une base de données avec une ou plusieurs tables mémoire optimisées comprend le stockage alloué pour les tables sur disque (le cas échéant), le journal des transactions actives, et les paires de fichiers de données et delta (également appelées des « paires de fichiers de point de contrôle ») pour les tables mémoire optimisées. Cependant, comme décrit dans [Durabilité pour les tables optimisées en mémoire](memory-optimized-tables.md), le stockage utilisé par les tables optimisées en mémoire peut être bien supérieur à sa taille en mémoire, et cela a une incidence sur la taille de la sauvegarde de base de données.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48190289"
   
  Le premier scénario de charge de travail concerne l'insertion (pour la plupart). Dans ce scénario, la plupart des fichiers de données auront l'état ACTIVE, seront totalement chargés et comporteront très peu de lignes supprimées. La taille de la sauvegarde de base de données sera proche de la taille des données en mémoire.  
   
- Le deuxième scénario de charge de travail concerne les opérations d'insertion, de suppression, et de mise à jour fréquentes : dans le pire des cas, chacune des paires de fichiers de point de contrôle est chargée à 50%, après avoir pris en compte les lignes supprimées. Par conséquent, la taille de la sauvegarde de base de données sera égale à au moins 2 fois la taille des données en mémoire. En outre, il y aura peu de paires de fichiers de point de contrôle dans l'état MERGE SOURCE et REQUIRED FOR BACKUP/HA susceptibles d'augmenter la taille de la sauvegarde de la base de données.  
+ Le second scénario de charge de travail correspond à des opérations fréquentes d'insertion, de suppression et de mise à jour : Dans le pire des cas, chacune des paires de fichiers de point de contrôle sont chargées, à 50 % après prise en compte les lignes supprimées. Par conséquent, la taille de la sauvegarde de base de données sera égale à au moins 2 fois la taille des données en mémoire. En outre, il y aura peu de paires de fichiers de point de contrôle dans l'état MERGE SOURCE et REQUIRED FOR BACKUP/HA susceptibles d'augmenter la taille de la sauvegarde de la base de données.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Sauvegardes différentielles de bases de données avec des tables mémoire optimisées  
  Le stockage des tables optimisées en mémoire comprend des données et des fichiers delta, comme décrit dans [Durabilité pour les tables optimisées en mémoire](memory-optimized-tables.md). La sauvegarde différentielle d'une base de données avec des tables mémoire optimisées contient les données suivantes :  
@@ -61,7 +61,7 @@ ms.locfileid: "48190289"
   
     -   Un fichier de données contient les nouvelles lignes insérées, et lorsqu'il est plein, il est fermé et marqué en lecture seule. Un fichier de données est sauvegardé uniquement s'il est fermé après la dernière sauvegarde complète de la base de données. La sauvegarde différentielle sauvegarde uniquement les fichiers de données contenant les lignes insérées depuis la dernière sauvegarde complète, excepté dans un scénario de mise à jour et suppression où il est possible que certaines lignes insérées soient déjà marquées pour le garbage collection, ou déjà nettoyées.  
   
-    -   Un fichier delta stocke les référence aux lignes de données supprimées. Étant donné qu'une transaction ultérieure peut supprimer une ligne, un fichier delta peut être modifié à tout moment au cours de sa durée de vie, et n'est jamais fermé. Un fichier delta est toujours sauvegardé. Les fichiers delta utilisent généralement moins de 10 % du stockage, par conséquent, ils ont un impact minime sur la taille de la sauvegarde différentielle.  
+    -   Un fichier delta stocke les référence aux lignes de données supprimées. Étant donné qu'une transaction ultérieure peut supprimer une ligne, un fichier delta peut être modifié à tout moment au cours de sa durée de vie, et n'est jamais fermé. Un fichier delta est toujours sauvegardé. Les fichiers delta utilisent généralement moins de 10 % du stockage, par conséquent, ils ont un impact minime sur la taille de la sauvegarde différentielle.  
   
  Si les tables mémoire optimisées représentent une partie significative de la taille de votre base de données, la sauvegarde différentielle peut considérablement réduire la taille de votre sauvegarde.  
   

@@ -10,18 +10,18 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6f109dcab6d7cf6280e15cdfb1bb2f5ad3b2f041
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: d8afb24373cf62d4b9f8696d9c2d9370ad665796
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018144"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352300"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   Un `CompoundCurve` est une collection de zéro ou plusieurs instances continues `CircularString` ou `LineString`, de type geometry ou geography.  
   
 > [!IMPORTANT]  
->  Pour obtenir une description détaillée et des exemples de nouvelles fonctionnalités spatiales dans cette version, y compris le `CompoundCurve` sous-type, téléchargez le livre blanc, [nouvelles fonctionnalités spatiales dans SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Pour obtenir une description détaillée et des exemples de nouvelles fonctionnalités spatiales dans cette version, y compris le `CompoundCurve` sous-type, téléchargez le livre blanc, [nouvelles fonctionnalités spatiales dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Une instance `CompoundCurve` vide peut être instanciée, mais pour qu'un `CompoundCurve` soit valide, il doit respecter les critères suivants :  
   
@@ -90,7 +90,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g1` n'est pas valide car la deuxième instance n'est pas une instance LineString valide. `@g2` n'est pas valide car l'instance `LineString` n'est pas valide. `@g3` n'est pas valide car l'instance `CircularString` n'est pas valide. Pour plus d’informations sur valide `CircularString` et `LineString` instances, consultez [CircularString](circularstring.md) et [LineString](linestring.md).  
+ `@g1` n’est pas valide car la deuxième instance n’est pas une instance LineString valide. `@g2` n'est pas valide car l'instance `LineString` n'est pas valide. `@g3` n'est pas valide car l'instance `CircularString` n'est pas valide. Pour plus d’informations sur valide `CircularString` et `LineString` instances, consultez [CircularString](circularstring.md) et [LineString](linestring.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -102,7 +102,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>B. Déclaration et instanciation d'une instance geometry à l'aide d'un CompoundCurve dans la même instruction  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>b. Déclaration et instanciation d'une instance geometry à l'aide d'un CompoundCurve dans la même instruction  
  L’exemple suivant indique comment déclarer et initialiser une instance `geometry` avec `CompoundCurve`dans la même instruction :  
   
 ```tsql  
@@ -137,7 +137,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- Cela produit la sortie suivante : 12.566370… qui équivaut à 4∏. L'instance `CompoundCurve` de l'exemple stocke un cercle avec un rayon de 2. Les deux exemples de code précédents n'ont pas eu à utiliser un `CompoundCurve`. Pour le premier exemple, une instance `LineString` aurait été plus simple et pour le deuxième exemple, une instance `CircularString` . Toutefois, l'exemple suivant montre en quoi un `CompoundCurve` constitue une meilleure solution.  
+ Ce code produit la sortie suivante : 12.566370 … qui est l’équivalent de 4 ???. L'instance `CompoundCurve` de l'exemple stocke un cercle avec un rayon de 2. Les deux exemples de code précédents n'ont pas eu à utiliser un `CompoundCurve`. Pour le premier exemple, une instance `LineString` aurait été plus simple et pour le deuxième exemple, une instance `CircularString` . Toutefois, l'exemple suivant montre en quoi un `CompoundCurve` constitue une meilleure solution.  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. Utilisation d'un CompoundCurve pour stocker un demi-cercle  
  L'exemple suivant utilise une instance `CompoundCurve` pour stocker un demi-cercle.  
@@ -179,11 +179,11 @@ SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amo
  La sortie est la suivante :  
   
 ```  
-Circle One11.940039…  
-Circle Two12.566370…  
+Circle One11.940039...  
+Circle Two12.566370...  
 ```  
   
- Le périmètre de Circle Two est approximativement de 4∏, ce qui correspond à la valeur réelle du périmètre. Toutefois, le périmètre de Circle One est exagérément inexact. L'instance `CompoundCurve` de Circle One stocke un segment d'arc de cercle (ABC) et deux segments de ligne (CD, DA). L'instance `CompoundCurve` doit stocker deux segments d'arc de cercle (ABC, CDA) pour définir un cercle. Une instance `LineString` définit le deuxième ensemble de points (4 2, 2 4, 0 2) dans l'instance `CompoundCurve` de Circle One. Vous devez déclarer de manière explicite une instance `CircularString` à l'intérieur d'un `CompoundCurve`.  
+ Le périmètre du cercle la deuxième est environ 4 ???, qui est la valeur réelle pour le périmètre. Toutefois, le périmètre de Circle One est exagérément inexact. L'instance `CompoundCurve` de Circle One stocke un segment d'arc de cercle (ABC) et deux segments de ligne (CD, DA). L'instance `CompoundCurve` doit stocker deux segments d'arc de cercle (ABC, CDA) pour définir un cercle. Une instance `LineString` définit le deuxième ensemble de points (4 2, 2 4, 0 2) dans l'instance `CompoundCurve` de Circle One. Vous devez déclarer de manière explicite une instance `CircularString` à l'intérieur d'un `CompoundCurve`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [STIsValid &#40;Type de données geometry&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)   

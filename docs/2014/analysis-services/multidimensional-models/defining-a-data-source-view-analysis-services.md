@@ -16,15 +16,15 @@ ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28d7dc1fe18ff942594b070074df853c196d98f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a19c663fe646c50a977b23e219580e3d7e280945
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150389"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502958"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Définition d'une vue de source de données (Analysis Services)
-  Une vue de source de données contient le modèle logique du schéma utilisé par les objets multidimensionnels de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , autrement dit des cubes, des dimensions et des structures d’exploration de données. Une vue de source de données représente la définition, stockée au format XML, des métadonnées de ces éléments de schéma utilisés par le modèle UDM (Unified Dimensional Model) et par les structures d'exploration de données. Une vue de source de données :  
+  Une vue de source de données contient le modèle logique du schéma utilisé par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données multidimensionnelle objets à savoir les cubes, dimensions et les structures d’exploration de données. Une vue de source de données représente la définition, stockée au format XML, des métadonnées de ces éléments de schéma utilisés par le modèle UDM (Unified Dimensional Model) et par les structures d'exploration de données. Une vue de source de données :  
   
 -   contient les métadonnées représentant des objets sélectionnés à partir d'une ou de plusieurs sources de données sous-jacentes ou les métadonnées qui seront utilisées pour générer une banque de données relationnelles sous-jacente, si vous suivez l'approche verticale pour la génération du schéma ;  
   
@@ -101,14 +101,14 @@ ms.locfileid: "48150389"
   
 4.  **Filtrer les objets disponibles**  
   
-     Si la liste des objets disponibles contient un grand nombre d'objets, vous pouvez réduire cette liste en appliquant un filtre simple qui spécifie une chaîne comme critère de sélection. Par exemple, si vous tapez **dbo** et que vous cliquez sur le bouton **Filtre** , seuls les éléments commençant par « dbo » s’affichent dans la liste **Objets disponibles** . Le filtre peut être une chaîne partielle (par exemple, « sal » retourne salaire et salle), mais il ne peut pas inclure plusieurs chaînes ou opérateurs.  
+     Si la liste des objets disponibles contient un grand nombre d'objets, vous pouvez réduire cette liste en appliquant un filtre simple qui spécifie une chaîne comme critère de sélection. Par exemple, si vous tapez **dbo** et que vous cliquez sur le bouton **Filtre** , seuls les éléments commençant par « dbo » s’affichent dans la liste **Objets disponibles** . Le filtre peut être une chaîne partielle (par exemple, « sal » retourne sales et salaire), mais il ne peut pas inclure plusieurs chaînes ou opérateurs.  
   
 5.  Pour les sources de données relationnelles qui n’ont aucune relation entre tables définie, une page **Correspondance de noms** apparaît afin que vous puissiez sélectionner la méthode de correspondance de noms appropriée. Pour plus d’informations, consultez la section [Spécifier des critères de correspondance de nom pour les relations](#bkmk_NameMatch) dans cette rubrique.  
   
 ##  <a name="bkmk_secondaryDS"></a> Ajouter une source de données secondaire  
  Lorsque vous définissez une vue de source de données qui contient des tables, des vues ou des colonnes de plusieurs sources de données, la première source de données à partir de laquelle vous ajoutez des objets à la vue de source de données est désignée comme étant la source de données primaire (vous ne pourrez pas la changer une fois qu'elle sera définie). Après avoir défini une vue de source de données reposant sur des objets d'une seule source de données, vous pouvez ajouter des objets d'autres sources de données.  
   
- Si un traitement OLAP ou une requête d’exploration de données nécessite des données à partir de plusieurs sources de données dans une requête unique, la source de données primaire doit prendre en charge les requêtes distantes à l’aide de `OpenRowset`. Il s’agit généralement d’une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, si vous créez une dimension OLAP qui contient des attributs liés aux colonnes de plusieurs sources de données, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] construit une requête `OpenRowset` pour peupler cette dimension lors du traitement. Toutefois, si un objet OLAP peut être rempli ou d’exploration de données requête peut être résolue à partir d’une source de données, puis un `OpenRowset` requête ne sera construite. Dans certaines situations, vous pourrez définir des relations d'attribut pour éviter la création d'une requête `OpenRowset`. Pour plus d’informations sur les relations d’attributs, consultez [Relations d’attributs](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Ajout ou suppression de tables ou de vues dans une vue de source de données &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) et [Définir des relations d’attributs](attribute-relationships-define.md).  
+ Si une requête de traitement analytique en ligne (OLAP) ou une requête d'exploration de données nécessite des données de plusieurs sources de données dans une seule requête, la source de données primaire doit prendre en charge les requêtes distantes à l'aide d'une requête `OpenRowset`. Il s’agit généralement d’une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, si vous créez une dimension OLAP qui contient des attributs liés aux colonnes de plusieurs sources de données, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] construit une requête `OpenRowset` pour peupler cette dimension lors du traitement. Cependant, si un objet OLAP peut être peuplé ou si une requête d'exploration de données peut être résolue depuis une seule source de données, aucune requête `OpenRowset` ne sera construite. Dans certaines situations, vous pourrez définir des relations d'attribut pour éviter la création d'une requête `OpenRowset`. Pour plus d’informations sur les relations d’attributs, consultez [Relations d’attributs](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Ajout ou suppression de tables ou de vues dans une vue de source de données &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) et [Définir des relations d’attributs](attribute-relationships-define.md).  
   
  Pour ajouter des tables et des colonnes d'une deuxième source de données, double-cliquez sur la vue DSV dans l'Explorateur de solutions afin de l'ouvrir dans le concepteur de vue de source de données, puis utilisez la boîte de dialogue Ajouter/supprimer des tables pour inclure des objets d'autres sources de données définies dans votre projet. Pour plus d’informations, consultez [Ajout ou suppression de tables ou de vues dans une vue de source de données &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
@@ -132,14 +132,14 @@ ms.locfileid: "48150389"
 >  Une fois que vous avez terminé l'exécution de l'Assistant Vue de source de données, vous pouvez ajouter ou supprimer des relations dans le volet Schéma du Concepteur de vue de source de données. Pour plus d’informations, consultez [Définir des relations logiques dans une vue de source de données &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajout ou suppression des Tables ou des vues de données de vue de Source &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [Définir des clés primaires logiques dans une vue de Source de données &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [Définir des calculs nommés dans une vue de Source de données &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [Définir des requêtes nommées dans une vue de Source de données &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   
- [Remplacer une Table ou une requête nommée dans une vue de Source de données &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [Utiliser des diagrammes dans le Concepteur de vue de Source de données &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [Explorer les données dans une vue de Source de données &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
- [Supprimer une vue de Source de données &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
- [Actualiser le schéma dans une vue de Source de données &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+ [Ajout ou suppression de tables ou de vues dans une vue de source de données &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
+ [Définir des clés primaires logiques dans une vue de source de données &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [Définir des requêtes nommées dans une vue de source de données &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [Remplacer une table ou une requête nommée dans une vue de source de données &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [Utiliser des diagrammes dans un concepteur de vues de sources de données &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Explorer des données dans une vue de source de données &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
+ [Supprimer une vue de source de données &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
+ [Actualiser le schéma dans une vue de source de données &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

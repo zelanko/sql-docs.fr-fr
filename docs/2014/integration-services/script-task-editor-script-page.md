@@ -15,12 +15,12 @@ ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ee7bb13e8a9fa4826297cd0c55b82881aee5296
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 959263ce45c5f15adab12625d8af10148d98dc22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198079"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520713"
 ---
 # <a name="script-task-editor-script-page"></a>Éditeur de tâche de script (page Script)
   Utilisez la page **Script** de la boîte de dialogue **Éditeur de tâche de script** pour définir les propriétés du script et vérifier les variables auxquelles le script peut accéder.  
@@ -44,13 +44,13 @@ ms.locfileid: "48198079"
  Si vous modifiez le nom de la méthode dans le projet VSTA, vous devez modifier la valeur de la propriété **EntryPoint** .  
   
  **ReadOnlyVariables**  
- Tapez une liste séparée par des virgules des variables en lecture seule accessibles au script ou cliquez sur le bouton de sélection (**…**) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
+ Tapez une liste séparée par des virgules des variables en lecture seule accessibles au script ou cliquez sur le bouton de sélection (**...**) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
   
 > [!NOTE]  
 >  Les noms des variables tiennent compte de la casse.  
   
  **ReadWriteVariables**  
- Tapez une liste séparée par des virgules des variables en lecture/écriture accessibles au script ou cliquez sur le bouton de sélection (**…**) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
+ Tapez une liste séparée par des virgules des variables en lecture/écriture accessibles au script ou cliquez sur le bouton de sélection (**...**) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
   
 > [!NOTE]  
 >  Les noms des variables tiennent compte de la casse.  
@@ -59,12 +59,12 @@ ms.locfileid: "48198079"
  Ouvre l'environnement de développement intégré VSTA dans lequel vous pouvez créer ou modifier le script.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Page Général](general-page-of-integration-services-designers-options.md)   
- [Éditeur de tâche de script &#40;Page Général&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
- [Page expressions](expressions/expressions-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [General Page](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de script &#40;page Général&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
+ [Page Expressions](expressions/expressions-page.md)   
  [Exemples de tâche de script](extending-packages-scripting-task-examples/script-task-examples.md)   
- [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
- [Ajouter, supprimer, modifier l’étendue d’une variable définie par l’utilisateur dans un package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
+ [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Ajouter, supprimer, modifier l'étendue de la variable définie par l'utilisateur dans un package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

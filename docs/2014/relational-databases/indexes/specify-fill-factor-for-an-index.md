@@ -13,12 +13,12 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d7fe5ffc867063d745a01ed12024acc536f8f634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb12dbcee56debfd88b4706ad69ac3ac2d04113a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188079"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398812"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Spécifier un facteur de remplissage pour un index
   Cette rubrique explique ce qu'est le facteur de remplissage et comment spécifier une valeur de facteur de remplissage sur un index dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -65,11 +65,11 @@ ms.locfileid: "48188079"
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>Pour spécifier un facteur de remplissage à l'aide du Concepteur de tables  
   
-1.  Dans l'Explorateur d'objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table pour laquelle vous souhaitez spécifier un facteur de remplissage d'index.  
+1.  Dans l’Explorateur d’objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table sur laquelle vous souhaitez spécifier un facteur de remplissage d’index.  
   
 2.  Cliquez sur le signe plus (+) pour développer le dossier **Tables** .  
   
-3.  Cliquez avec le bouton droit sur la table pour laquelle vous souhaitez spécifier un facteur de remplissage d’index et sélectionnez **Conception**.  
+3.  Cliquez avec le bouton droit sur la table sur laquelle vous souhaitez spécifier un facteur de remplissage d’index et sélectionnez **Conception**.  
   
 4.  Dans le menu **Concepteur de tables** , cliquez sur **Index/Clés**.  
   
@@ -83,11 +83,11 @@ ms.locfileid: "48188079"
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>Pour spécifier un facteur de remplissage dans un index à l'aide de l'Explorateur d'objets  
   
-1.  Dans l'Explorateur d'objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table pour laquelle vous souhaitez spécifier un facteur de remplissage d'index.  
+1.  Dans l’Explorateur d’objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table sur laquelle vous souhaitez spécifier un facteur de remplissage d’index.  
   
 2.  Cliquez sur le signe plus (+) pour développer le dossier **Tables** .  
   
-3.  Cliquez sur le signe plus (+) pour développer la table pour laquelle vous souhaitez spécifier un facteur de remplissage d'index.  
+3.  Cliquez sur le signe plus (+) pour développer la table sur laquelle vous souhaitez spécifier un facteur de remplissage d’index.  
   
 4.  Cliquez sur le signe plus (+) pour développer le dossier **Index** .  
   

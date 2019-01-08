@@ -12,12 +12,12 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 574614976a9d24f6c9cedbfede2fd5a150211416
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148428"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525795"
 ---
 # <a name="understanding-the-tabular-object-model"></a>Présentation du modèle d'objet tabulaire
   Un modèle tabulaire est une représentation logique de tables, de relations, de hiérarchies, de perspectives, de mesures, et de performance clés. Cette section présente l'implémentation interne à l'aide d'objets AMO. Consultez [développement avec Analysis Management Objects &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) si vous n’avez jamais utilisé AMO avant.  
@@ -57,7 +57,7 @@ ms.locfileid: "50148428"
   
  Consultez [la représentation sous forme de hiérarchie &#40;tabulaire&#41; ](tables-hierarchy-representation.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de hiérarchie.  
   
-### <a name="key-performance-indicator-kpi--representation"></a>Représentation d'un indicateur de performance clé (KPI)  
+### <a name="key-performance-indicator--kpi--representation"></a>Clé des performances - indicateur de performance clé-représentation d’un indicateur  
  Un KPI évalue la performance d'une valeur, définie par une mesure de base, par rapport à une valeur cible. En termes d'objets AMO, la représentation d'un KPI a une relation de mappage un-à-plusieurs. Un KPI est représenté par l'utilisation des objets AMO suivants : <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A>and <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> sont les principaux objets requis.  Il est important de noter que cela ne signifie pas que tous les objets contenus dans les objets AMO mentionnés précédemment peuvent être utilisés lors de la modélisation.  
   
 > [!NOTE]  

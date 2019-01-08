@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a7ec2e5b85d7868389bd1bde7aa2f279d1271a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3671b2fe3480869df4acf32b6e7b5003da1cd23e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163159"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758511"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-components"></a>Composants Microsoft Connector 1.1 pour SAP BW
   Cette section contient des rubriques qui décrivent les trois composants de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 pour SAP BW :  
@@ -31,13 +30,13 @@ ms.locfileid: "48163159"
 >  La documentation de Microsoft Connector 1.1 pour SAP BW suppose que vous êtes familiarisé avec l'environnement SAP Netweaver BW. Pour plus d'informations sur SAP Netweaver BW, ou sur la configuration des objets et des processus SAP Netweaver BW objets, consultez la documentation SAP.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Gestionnaire de connexions SAP BW](connection-manager/sap-bw-connection-manager.md)  
+ [SAP BW Connection Manager](connection-manager/sap-bw-connection-manager.md)  
  Décrit le gestionnaire de connexions SAP BW. Le gestionnaire de connexions connecte la source SAP BW ou la destination SAP BW à un système SAP Netweaver BW version 7.  
   
- [Source SAP BW](data-flow/sap-bw-source.md)  
+ [SAP BW Source](data-flow/sap-bw-source.md)  
  Décrit la source SAP BW qui vous permet d'extraire des données d'un système SAP Netweaver BW.  
   
- [Destination SAP BW](data-flow/sap-bw-destination.md)  
+ [SAP BW Destination](data-flow/sap-bw-destination.md)  
  Décrit la destination SAP BW qui vous permet de charger des données dans un système SAP Netweaver BW.  
   
   

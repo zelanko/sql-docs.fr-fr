@@ -16,12 +16,12 @@ ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b98c237b7cc8aaf58c177ee151e7a1398a4fd5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55bdeb41ed62fd727a6e5eb637734a67d21660fe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079709"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391231"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Procédure pas à pas de décision arborescence diagramme (compléments d’exploration de données)
   Si vous avez créé un modèle d'arbre de décision, vous pouvez créer un diagramme personnalisé dans Visio à l'aide de la forme Arbre de décision ou de la forme Réseau de dépendances. Cette rubrique décrit les personnalisations que vous pouvez effectuer à l’aide de la **arbre de décision** ces contrôles et la forme :  
@@ -55,7 +55,7 @@ ms.locfileid: "48079709"
   
 6.  Sur le **sélectionnez l’arbre de décision** page, choisissez une arborescence individuelle à afficher.  
   
-     Une arborescence modélise les interactions qui mènent à un résultat particulier que vous avez modelé ; par conséquent, même si votre modèle contient plusieurs résultats, vous ne pouvez afficher qu'une arborescence à la fois.  
+     Une arborescence modélise les interactions qui mènent à un résultat particulier que vous avez modelé ; Par conséquent, même si votre modèle contient plusieurs résultats, vous pouvez afficher qu’un seul arbre à la fois.  
   
 7.  Dans le **sélectionnez l’arbre de décision** boîte de dialogue, vous pouvez également définir ces options de rendu :  
   
@@ -109,7 +109,7 @@ ms.locfileid: "48079709"
   
 1.  Cliquez sur le **Add-Ins** ruban et afficher une barre d’outils personnalisées utilisées pour travailler avec des diagrammes d’exploration de données :  
   
-     **Mise en page**  
+     **Disposition**  
      Optimise la disposition de l'arborescence pour qu'elle tienne sur la page active.  
   
      **Redimensionner la Page**  

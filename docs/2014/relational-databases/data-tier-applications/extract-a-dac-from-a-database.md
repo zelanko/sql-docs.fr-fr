@@ -21,19 +21,19 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acf3974a9406e974f6d294584cb732c12b0718e7
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 7fc0aab989eb46b64ef6b9919f999ba13c4ef74f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815635"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527195"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extraire une DAC d'une base de données
   Utilisez **l’Assistant Extraire l’application de la couche Données** ou un script Windows PowerShell pour extraire un package d’application de la couche Données (DAC) d’une base de données SQL Server existante. Le processus d'extraction crée un fichier de package de DAC qui contient les définitions des objets de base de données et de leurs éléments associés au niveau de l'instance. Par exemple, un fichier de package DAC contient les tables de base de données, procédures stockées, vues, utilisateurs, ainsi que les connexions mappées aux utilisateurs de base de données.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Avant de commencer :**  [Limitations et Restrictions](#LimitationsRestrictions), [autorisations](#Permissions)  
   
--   **Pour extraire une DAC en utilisant :**  [L'Assistant Extraire l'application de la couche Données](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell)  
+-   **Pour extraire une DAC, à l’aide de :**  [L’Assistant Extraire l’Application de couche données](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  Vous pouvez extraire une DAC des bases de données qui résident sur les instances de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 (SP4) ou version ultérieure. Si le processus d'extraction est exécuté sur une base de données déployée à partir d'une DAC, seules les définitions des objets de la base de données sont extraites. Le processus ne référence pas la DAC enregistrée dans `msdb` (**master** dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Le processus d'extraction n'inscrit pas la définition de la DAC dans l'instance actuelle du moteur de base de données. Pour plus d'informations sur l'inscription d'une DAC, consultez [Register a Database As a DAC](register-a-database-as-a-dac.md).  

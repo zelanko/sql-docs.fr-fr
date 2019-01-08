@@ -14,12 +14,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8cd63693c18b380d328a33ed4f7f947991787313
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4c8bcf9fc52ef26837d32fa765472e0056469a2a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147844"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511325"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Règles d'attribution de noms aux objets (Analysis Services)
   Cette rubrique décrit les conventions d'attribution de noms aux objets, ainsi que les caractères et les mots réservés qui ne peuvent pas être utilisés dans un nom d'objet, dans le code ou dans un script dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "50147844"
   
  Les règles suivantes s'appliquent aux propriétés `Name` et `ID`.  
   
--   Les noms ne respectent pas la casse. Vous ne pouvez pas avoir un cube nommé « ventes » et un autre nommé « Ventes » dans la même base de données.  
+-   Les noms ne respectent pas la casse. Vous ne pouvez avoir un cube nommé « Ventes » et un autre nommé « Ventes » dans la même base de données.  
   
 -   Aucun espace de début ou de fin n'est autorisé dans un nom d'objet, bien que vous puissiez inclure des espaces dans un nom. Les espaces de début ou de fin sont tronqués implicitement. Cela s'applique à la fois à `Name` et à l'`ID` d'un objet.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "50147844"
   
  Le tableau ci-dessous répertorie les caractères non valides pour les objets spécifiques.  
   
-|Objet|Caractères non valides|  
+|Object|Caractères non valides|  
 |------------|------------------------|  
 |`Server`|Suivez les conventions d'attribution des noms de serveur Windows lorsque vous nommez un objet serveur. Pour plus d'informations, consultez [Conventions d'attribution des noms (Windows)](/windows/desktop/DNS/naming-conventions) .|  
 |`DataSource`|: / \ * &#124; ? « [] () {} <>|  
@@ -82,10 +82,10 @@ ms.locfileid: "50147844"
   
 |Mode serveur et niveau de compatibilité de la base de données|Caractères réservés autorisés ?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (toutes les versions)|non|  
-|Tabulaire - 1050|non|  
-|Tabulaire - 1100|non|  
-|Tabulaire – 1130 et ultérieur|Oui|  
+|MOLAP (toutes les versions)|Non|  
+|Tabulaire - 1050|Non|  
+|Tabulaire - 1100|Non|  
+|Tabulaire - 1130 et ultérieur|Oui|  
   
  Les bases de données peuvent avoir un ModelType par défaut. La valeur par défaut est équivalente à celle du mode multidimensionnel et ne prend donc pas en charge l'utilisation de caractères réservés dans les noms de colonnes.  
   

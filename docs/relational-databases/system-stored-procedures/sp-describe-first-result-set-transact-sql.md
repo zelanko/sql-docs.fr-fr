@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072063"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400632"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -69,7 +69,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit pas NULL**|Indique que la colonne est une colonne supplémentaire ajoutée à titre d'informations de navigation et qu'elle ne s'affiche pas réellement dans le jeu de résultats.|  
-|**column_ordinal**|**int non NULL**|Contient la position ordinale de la colonne dans le jeu de résultats. La position de la première colonne sera spécifiée comme 1.|  
+|**column_ordinal**|**int non NULL**|Contient la position ordinale de la colonne dans le jeu de résultats. Position de la première colonne sera spécifiée comme 1.|  
 |**nom**|**sysname NULL**|Contient le nom de la colonne si un nom peut être déterminé. Sinon, il contiendra NULL.|  
 |**is_nullable**|**bit pas NULL**|Contient la valeur 1 si la colonne autorise des valeurs NULL, 0 si la colonne n'autorise pas de valeurs NULL, et 1 s'il n'est pas possible de déterminer si la colonne autorise des valeurs NULL.|  
 |**system_type_id**|**int non NULL**|Contient le system_type_id du type de données de la colonne comme spécifié dans sys.types. Pour les types CLR, bien que la colonne system_type_name retourne NULL, cette colonne retournera la valeur 240.|  
@@ -155,7 +155,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set** ne prend pas en charge la récursivité indirecte.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation d’exécuter le \@tsql argument.  
   
 ## <a name="examples"></a>Exemples  
@@ -179,7 +179,7 @@ WHERE object_id = @id1'
 , @params = N'@id1 int'  
 ```  
   
-#### <a name="b-browse-mode-examples"></a>B. Exemples de modes de navigation  
+#### <a name="b-browse-mode-examples"></a>b. Exemples de modes de navigation  
  Les trois exemples suivants illustrent la principale différence entre les différents modes de navigation. Seules les colonnes appropriées ont été incluses dans les résultats de la requête.  
   
  L'exemple qui utilise 0 indique qu'aucune information est retournée.  
@@ -259,7 +259,7 @@ ELSE
     SELECT a FROM t2;  
 ```  
   
- Résultat : Erreur, types discordants (**int** et **smallint**).  
+ Résultat : Erreur, types discordants (**int** et **smallint**).  
   
 #### <a name="column-name-cannot-be-determined"></a>Le nom de colonne ne peut pas être déterminé  
  Les colonnes dans les premiers jeux de résultats possibles diffèrent de par la longueur pour le même type de longueur variable, la possibilité de valeur NULL et les noms de colonne :  
@@ -273,7 +273,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Résultat : \<nom de colonne inconnu > **varchar (20) NULL**  
+ Résultat : \<Nom de colonne inconnu > **varchar (20) NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Nom de colonne forcé à être identique par crénelage  
  Identique à l'exemple précédent, mais les colonnes ont le même nom via le crénelage de colonne.  
@@ -301,7 +301,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- Résultat : Erreur, types discordants (**varchar (10)** et **nvarchar (10)**).  
+ Résultat : Erreur, types discordants (**varchar (10)** et **nvarchar (10)**).  
   
 #### <a name="result-set-can-return-an-error"></a>Le jeu de résultats peut retourner une erreur  
  Le premier jeu de résultats est soit une erreur, soit un jeu de résultats.  
@@ -355,7 +355,7 @@ IF(1=1)
 EXEC(@SQL); '  
 ```  
   
- Résultat : Erreur. Le résultat n'est pas détectable en raison du SQL dynamique.  
+ Résultat : Erreur. Le résultat n'est pas détectable en raison du SQL dynamique.  
   
 #### <a name="result-set-specified-by-user"></a>Jeu de résultats spécifié par l'utilisateur  
  Le premier jeu de résultats est spécifié manuellement par l'utilisateur.  
@@ -373,7 +373,7 @@ EXEC(@SQL)
     ); '  
 ```  
   
- Résultat : Column1 **bigint non NULL**  
+ Résultat : Colonne1 **bigint non NULL**  
   
 #### <a name="error-caused-by-a-ambiguous-result-set"></a>Erreur provoquée par un jeu de résultats ambigu  
  Cet exemple suppose qu’une table nommée t1 dans le schéma par défaut s1 avec des colonnes à un autre utilisateur nommé user1 (un **int non NULL**).  
@@ -387,7 +387,7 @@ N'
 , @params = N'@p int'  
 ```  
   
- Résultat : Erreur. T1 peut être dbo.t1 ou s1.t1, chacun avec un nombre différent de colonnes.  
+ Résultat : Erreur. T1 peut être dbo.t1 ou s1.t1, chacun avec un nombre différent de colonnes.  
   
 #### <a name="result-even-with-ambiguous-result-set"></a>Résultat même avec un jeu de résultats ambigu  
  Utilisez les mêmes hypothèses que l'exemple précédent.  

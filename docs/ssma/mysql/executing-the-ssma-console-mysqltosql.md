@@ -18,12 +18,12 @@ ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fd560a17c10b5e076236195107d0a9154921422a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701807"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411256"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Exécution de la console SSMA (MySQLToSQL)
 Microsoft vous fournit un ensemble robuste de script de commandes de fichier pour exécuter et contrôler les activités SSMA.  
@@ -59,7 +59,7 @@ Les commandes de projet gèrent la création de projets, ouvrir, enregistrer et 
   
    overwrite-if-exists="<true/false>"   (optional)  
   
-   project-type==”<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>”   (optional)  
+   project-type=="<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>"   (optional)  
   
 />  
 ```  
@@ -94,7 +94,7 @@ Open-projet :
   
 **Commande**  
   
-projet de l’enregistrement : enregistre le projet de migration.  
+projet de l’enregistrement : Enregistre le projet de migration.  
   
 **Script**  
   
@@ -307,7 +307,7 @@ ou Gestionnaire de configuration
 ## <a name="migration--script-file-commands"></a>Commandes de fichier de Script de migration  
 Les commandes de Migration convertir le schéma de base de données cible au schéma source et migre les données vers le serveur cible.  
   
-La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreurs détaillées : résumé uniquement sur le nœud racine d’arborescence objet source.  
+La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreurs détaillées : Résumé uniquement sur le nœud racine d’arborescence objet source.  
   
 **Commande**  
   
@@ -402,7 +402,7 @@ migrer des données
 ```xml  
 <migrate-data  
   
-   write-summary-report-to="<file-name/folder-name>”  
+   write-summary-report-to="<file-name/folder-name>"  
   
    report-errors="true" verbose="true">  
   
@@ -429,7 +429,7 @@ ou Gestionnaire de configuration
   
    object-type="<object-category>"  
   
-   write-summary-report-to="<file-name/folder-name>”  
+   write-summary-report-to="<file-name/folder-name>"  
   
    report-errors="true" verbose="true"/>  
 ```  
@@ -463,7 +463,7 @@ Mappage de schéma de base de données source vers le schéma cible.
 Les commandes de la facilité de gestion permettent de synchroniser les objets de base de données cible avec la base de données source.  
   
 > [!NOTE]  
-> La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreurs détaillées : résumé uniquement sur le nœud racine d’arborescence objet source.  
+> La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreurs détaillées : Résumé uniquement sur le nœud racine d’arborescence objet source.  
   
 **Commande**  
   
@@ -593,7 +593,7 @@ ou Gestionnaire de configuration
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>Commandes de fichier de Script de génération script  
-Les commandes de génération du Script effectuent deux tâches : ils permettent d’enregistrer la sortie dans un fichier de script de console et enregistrer la sortie de T-SQL dans la console ou un fichier basé sur le paramètre que vous spécifiez.  
+Les commandes de génération du Script effectuent deux tâches : Ils permettent d’enregistrer la sortie dans un fichier de script de console et enregistrer la sortie de T-SQL dans la console ou un fichier basé sur le paramètre que vous spécifiez.  
   
 **Commande**  
   
@@ -626,7 +626,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
    object-type="<object-category>"  
   
-   destination="<file-name/folder-name>”  
+   destination="<file-name/folder-name>"  
   
    overwrite="<true/false>"   (optional)  
   
@@ -639,7 +639,7 @@ ou Gestionnaire de configuration
   
    metabase="<source/target>"  
   
-   destination="<file-name/folder-name>”  
+   destination="<file-name/folder-name>"  
   
       <metabase-object object-name="<object-name>"  
   

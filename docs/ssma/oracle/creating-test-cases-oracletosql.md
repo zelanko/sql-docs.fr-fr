@@ -12,18 +12,18 @@ ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 07b52a71d3f12455bacdd2e9789aadb5ed5967db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2c1bd3fea167a784d86f7e323566f73c3a01f86
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604677"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512948"
 ---
 # <a name="creating-test-cases-oracletosql"></a>Création de cas de test (OracleToSQL)
 Utilisez l’Assistant de cas de Test pour créer un test. Cet Assistant vous permet de créer des cas de test en choisissant testé et vérifié les objets et en spécifiant les paramètres de tests.  
   
 ## <a name="starting-the-test-case-wizard"></a>Démarrage de l’Assistant de cas de Test  
-Pour démarrer l’Assistant de cas de Test cliquez sur **nouveau cas de Test...** à partir de la **testeur** menu.  
+Pour démarrer l’Assistant de cas de Test cliquez sur **nouveau cas de Test...**  à partir de la **testeur** menu.  
   
 Au démarrage, l’Assistant recherche schéma SSMATESTER_ORACLE sur le serveur Oracle source. Il est le schéma d’extension testeur utilisé pour le stockage d’objets auxiliaires. Si l’Assistant de cas de Test ne peut pas trouver SSMATESTER_ORACLE, il affiche une fenêtre de boîte de dialogue qui propose de créer le schéma. (Cette situation se produit généralement lors de la première exécution de testeur de SSMA.)  
   

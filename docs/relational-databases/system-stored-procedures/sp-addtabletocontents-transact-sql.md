@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addtabletocontents_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3aa1013de0030a21152a38e11a3dcb0fe12a02bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ad6e8fe499e3ffe57a745cfb924bdc792938dd9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638237"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810941"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@table_name=**] **'***table_name***'**  
+ [  **@table_name=**] **'**_table_name_**'**  
  Est le nom de la table. *table_name* est **sysname**, sans valeur par défaut.  
   
- [  **@owner_name=**] **'***owner_name***'**  
+ [  **@owner_name=**] **'**_owner_name_**'**  
  Est le nom du propriétaire de la table. *owner_name* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@filter_clause=** ] **'***filter_clause***'**  
+ [  **@filter_clause=** ] **'**_filter_clause_**'**  
  Spécifie une clause de filtre qui contrôle les lignes des données récemment chargées à ajouter aux tables de suivi de fusion. *filter_clause* est **nvarchar (4000)**, avec NULL comme valeur par défaut. Si *filter_clause* est **null**, en bloc toutes les lignes chargées sont ajoutés.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -58,7 +57,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
   
  Les lignes dans le *table_name* sont désignés par leur **rowguidcol** et les références sont ajoutées aux tables de suivi de fusion. **sp_addtabletocontents** doit être utilisée après la copie des données dans une table qui est publiée à l’aide de la réplication de fusion en bloc. La procédure stockée commence le suivi des lignes qui ont été copiées et garantit que les nouvelles lignes seront incluses lors de la prochaine synchronisation.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addtabletocontents**.  
   
 ## <a name="see-also"></a>Voir aussi  

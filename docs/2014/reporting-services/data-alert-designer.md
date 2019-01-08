@@ -18,12 +18,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: da531e62f2067ff1ae217a313d1fdd0eb8ce24a7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 89f395d7456eaca66d2f225fd47e4cf957186fe2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120116"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518011"
 ---
 # <a name="data-alert-designer"></a>Concepteur d’alertes de données
   Vous pouvez créer et modifier les définitions d'alerte de données dans le Concepteur d'alertes de données. Une définition d'alerte est une collection de métadonnées, comprenant les données de rapport qui vous intéressent, les règles que les données de rapport doivent satisfaire pour créer des instances d'alerte de données et pour envoyer des messages d'alerte de données, les destinataires du message d'alerte, etc.  
@@ -76,9 +76,9 @@ ms.locfileid: "49120116"
 ### <a name="rules-and-clauses"></a>Règles et clauses  
  L'étendue des modifications apportées aux données et les règles de l'alerte définissent les modifications qui déclenchent l'alerte. Les types de modifications apportées aux données sont les suivants :  
   
--   **Au moins une donnée a**indique qu’au moins une valeur dans les données suit les règles spécifiées dans la condition.  
+-   **Au moins une donnée a** indique qu’au moins une valeur dans les données suit les règles spécifiées dans la condition.  
   
--   **Aucune donnée n’a**indique qu’aucune valeur ne suit les règles spécifiées dans la condition.  
+-   **Aucune donnée n’a** indique qu’aucune valeur ne suit les règles spécifiées dans la condition.  
   
  Une règle contient zéro, une, ou plusieurs clauses. Plusieurs règles sont combinées par l'opérateur logique AND. Une règle peut inclure plusieurs clauses combinées par l'opérateur OR si la colonne a le type de données de chaîne. Voici des règles de base qui utilisent une seule clause, plusieurs règles combinées à l'aide de l'opérateur AND et plusieurs règles ayant une ou plusieurs clauses OR.  
   
@@ -147,13 +147,13 @@ ms.locfileid: "49120116"
 ### <a name="schedule-settings"></a>Paramètres de planification  
  La planification que vous définissez pour l'alerte de données définit la périodicité d'envoi du message d'alerte et le début et la fin de l'envoi des messages d'alerte. Les modèles sont : une seule fois, toutes les minutes, une fois par jour et une fois par semaine. Bien qu'une alerte n'ait q'une seule planification possible, vous pouvez créer des périodicités complexes répondant à la plupart des exigences opérationnelles à l'aide de ces intervalles. Voici quelques exemples de périodicités communément utilisées dans les planifications :  
   
--   **Une fois par jour, tous les 10 jours** — Envoie une alerte une fois par jour, tous les 10 jours.  
+-   **Une fois par jour, tous les 10 jours** : envoie une alerte une fois par jour, tous les 10 jours.  
   
--   **Une fois par semaine, toutes les 2 semaines, le lundi** — Envoie une alerte toutes les deux semaines, uniquement le lundi.  
+-   **Une fois par semaine, toutes les 2 semaines, le lundi** : envoie une alerte toutes les deux semaines, uniquement le lundi.  
   
--   **Toutes les 12 heures** — Envoie une alerte toutes les 12 heures.  
+-   **Toutes les 12 heures** : envoie une alerte toutes les 12 heures.  
   
--   **Toutes les 30 minutes** — Envoie une alerte toutes les 30 minutes.  
+-   **Toutes les 30 minutes** : envoie une alerte toutes les 30 minutes.  
   
  La périodicité spécifie quand l'alerte est envoyée. Si les règles sont satisfaites au cours de l'intervalle spécifié par le modèle, l'alerte n'est envoyée qu'à la fil de l'intervalle.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "49120116"
  Pour plus d’informations sur la façon dont l’e-mail est généré, consultez [Alertes de données Reporting Services](../ssms/agent/alerts.md).  
   
 ##  <a name="CreateAlert"></a> Créer une définition d'alerte de données  
- Si vous avez accordé des autorisations permettant de consulter des éléments et de créer des alertes dans SharePoint, vous pouvez créer une définition d'alerte de données pour tout rapport que vous êtes autorisé à afficher, tant que le rapport utilise des informations d'identification stockées ou bien aucune information d'identification. Vous exécutez le rapport à partir d'une bibliothèque SharePoint. Les données que vous pouvez utiliser dans le Concepteur d'alertes de données proviennent du rapport. Si le rapport est paramétré, vous devrez peut-être exécuter le rapport à l’aide de différentes valeurs de paramètre pour garantir que les données qui vous intéressez s’affiche dans le rapport. Après avoir ouvert le rapport, cliquez sur l’option **Nouvelle alerte de données** dans le menu **Actions** de la barre d’outils Rapport pour ouvrir le Concepteur d’alertes de données. L'image suivante vous indique comment ouvrir le Concepteur d'alertes de données.  
+ Si vous avez accordé des autorisations permettant de consulter des éléments et de créer des alertes dans SharePoint, vous pouvez créer une définition d'alerte de données pour tout rapport que vous êtes autorisé à afficher, tant que le rapport utilise des informations d'identification stockées ou bien aucune information d'identification. Vous exécutez le rapport à partir d'une bibliothèque SharePoint. Les données que vous pouvez utiliser dans le Concepteur d'alertes de données proviennent du rapport. Si le rapport est paramétré, vous devrez peut-être exécuter le rapport en utilisant des valeurs de paramètre différentes pour vous assurer que les données qui vous intéressent s'affichent dans le rapport. Après avoir ouvert le rapport, cliquez sur l’option **Nouvelle alerte de données** dans le menu **Actions** de la barre d’outils Rapport pour ouvrir le Concepteur d’alertes de données. L'image suivante vous indique comment ouvrir le Concepteur d'alertes de données.  
   
  ![Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint](media/rs-openalertdesigneriw.gif "Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint")  
   

@@ -11,12 +11,12 @@ ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e0e98af473babc84863c8e0a1610107843ca76d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f69addfdda05b00ff1f322b526bb656c2c9b317
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128269"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518621"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Déployer des stratégies planifiées sur plusieurs instances
   En utilisant des serveurs inscrits, vous pouvez déployer des stratégies planifiées sur des serveurs gérés à partir d'un emplacement central. Vous pouvez déployer des stratégies planifiées à partir d'un groupe de serveurs locaux ou à partir d'un serveur de gestion centralisée.  
@@ -36,7 +36,7 @@ ms.locfileid: "48128269"
   
 -   Les instances sur lesquelles vous voulez déployer les stratégies planifiées doivent exécuter [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] ou version ultérieure. L'automation requiert que les stratégies soient stockées localement, ce qui n'est pas pris en charge sur les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
--   Les serveurs où vous souhaitez déployer les stratégies planifiées doivent être inscrits dans serveurs inscrits dans le le **groupes de serveurs locaux** ou **des serveurs d’administration centrale** nœud. Pour plus d'informations, consultez les rubriques suivantes :  
+-   Les serveurs où vous souhaitez déployer les stratégies planifiées doivent être inscrits dans serveurs inscrits dans le le **groupes de serveurs locaux** ou **des serveurs d’administration centrale** nœud. Pour plus d’informations, consultez les rubriques suivantes :  
   
     -   [Créer ou modifier un groupe de serveurs &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -90,11 +90,11 @@ ms.locfileid: "48128269"
     > [!NOTE]  
     >  Pour afficher les résultats d'évaluation après l'exécution d'une stratégie planifiée, ouvrez le journal Historique de la stratégie sur l'instance cible. Pour ouvrir le journal, avec le bouton droit **gestion des stratégies de**, puis cliquez sur **afficher l’historique**.  
   
-## <a name="summary"></a>Résumé  
+## <a name="summary"></a>Récapitulatif  
  Ce didacticiel vous a montré comment effectuer des évaluations à la demande et des évaluations planifiées des stratégies des meilleures pratiques sur une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="next"></a>Suivant  
- Ce didacticiel est terminé. Pour revenir au début, consultez [didacticiel : évaluation des meilleures pratiques par la gestion basée sur des](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
+ Ce didacticiel est terminé. Pour revenir au début, consultez [didacticiel : Évaluation des meilleures pratiques à l’aide de gestion basée sur la stratégie](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
   
  Pour afficher la liste de [!INCLUDE[ssDE](../includes/ssde-md.md)] didacticiels, cliquez sur [didacticiels sur le moteur de base de données](../relational-databases/database-engine-tutorials.md).  
   

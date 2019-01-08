@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - files [Integration Services], connections
@@ -16,19 +15,19 @@ ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa7bc6280afeb9bce7525afc3eb5eb19c73e4c01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc1f62f1e30b3fb49a66c16715cc6837e703425d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183909"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774161"
 ---
 # <a name="excel-connection-manager"></a>Gestionnaire de connexions Excel
   Un gestionnaire de connexions Excel permet à un package de se connecter à un fichier [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. La source et la destination Excel qui [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclure utiliser le Gestionnaire de connexions Excel.  
   
  Lorsque vous ajoutez un gestionnaire de connexions Excel à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions qui sera converti en connexion Excel au moment de l'exécution, définit les propriétés du gestionnaire de connexions et ajoute le gestionnaire de connexions à la collection `Connections` du package.  
   
- Le `ConnectionManagerType` propriété du Gestionnaire de connexions est définie sur `EXCEL`.  
+ La propriété `ConnectionManagerType` du gestionnaire de connexions a pour valeur `EXCEL`.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas vous connecter à un fichier Excel protégé par mot de passe.  
@@ -50,7 +49,7 @@ ms.locfileid: "48183909"
   
  Pour plus d’informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Éditeur du gestionnaire de connexions Excel](../excel-connection-manager-editor.md).  
   
- Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programmation](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../building-packages-programmatically/adding-connections-programmatically.md).  
   
  Pour plus d’informations sur le bouclage dans un groupe de fichiers Excel, consultez [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](../control-flow/foreach-loop-container.md).  
   

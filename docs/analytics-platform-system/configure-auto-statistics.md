@@ -10,18 +10,18 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 448c9de27422c01d68602c00945b1ea72bcddd61
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400912"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617959"
 ---
 # <a name="configure-auto-statistics"></a>Configurer automatiquement les statistiques
 
 Découvrez comment configurer Parallel Data Warehouse pour utiliser automatique des statistiques pour la création et la mise à jour automatiquement les statistiques.  Utiliser cette fonctionnalité pour améliorer les plans de requête et donc améliorer les performances des requêtes.
 
-**S’applique à :** APS (à partir de 2016-AU7)
+**S’applique à :** Points d’accès (à partir de 2016-AU7)
 
 ## <a name="what-are-statistics"></a>Quelles sont les statistiques ?
 Statistiques pour l’optimisation des requêtes sont des objets qui contiennent des informations statistiques sur la distribution des valeurs dans une ou plusieurs colonnes d’une table. L’optimiseur de requête utilise ces statistiques pour estimer la cardinalité, ou entraîne de nombre de lignes, dans la requête. Ces estimations de cardinalité permettent à l’optimiseur de requête créer un plan de requête de haute qualité. Par exemple, dans les points d’accès, les utilisations d’optimiseur de requête MPP estimations de cardinalité pour choisir de lecture aléatoire ou répliquer la plus petite des deux tables utilisées dans une clause join et ainsi améliorent les performances de requête.  Pour plus d’informations, consultez [statistiques](../relational-databases/statistics/statistics.md) et [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)

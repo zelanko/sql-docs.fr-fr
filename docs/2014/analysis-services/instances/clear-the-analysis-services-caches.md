@@ -11,12 +11,12 @@ ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74e98548349d073cf5f008c6015ce55ac3768acb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40b08c40b8b327ad26bb2974627e81000846a1b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067193"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350649"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Effacer les caches Analysis Services
   Analysis Services met en cache des données pour optimiser les performances des requêtes. Cette rubrique fournit des recommandations pour l'utilisation de la commande XMLA ClearCache en vue d'effacer des caches qui ont été créés en réponse à une requête MDX. Les effets de l'exécution de la commande ClearCache varient selon que vous utilisez un modèle tabulaire ou multidimensionnel.  
@@ -33,7 +33,7 @@ ms.locfileid: "48067193"
   
  L'exécution de la commande ClearCache efface également les caches en mémoire dans le moteur d'analyse en mémoire xVelocity (VertiPaq). Le moteur xVelocity gère un petit ensemble de résultats mis en cache. L'exécution de la commande ClearCache invalidera ces caches dans le moteur xVelocity.  
   
- Enfin, en cours d’exécution ClearCache supprimera également les données résiduelles reste en mémoire lorsqu’un modèle tabulaire est reconfiguré pour `DirectQuery` mode. Cela est particulièrement important si le modèle contient des données sensibles qui sont soumises à des contrôles étroits. Dans ce cas, l'exécution de la commande ClearCache est une mesure de précaution que vous pouvez prendre pour garantir que des données sensibles existent uniquement à l'emplacement prévu. L'effacement manuel du cache est nécessaire si vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour déployer le modèle et pour modifier le mode de requête. À l'inverse, l'utilisation de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour spécifier `DirectQuery` sur le modèle et les partitions permet d'effacer automatiquement le cache lorsque vous basculez le modèle pour utiliser ce mode de requête.  
+ Enfin, l'exécution de la commande ClearCache supprimera également les données résiduelles conservées dans la mémoire lorsqu'un modèle tabulaire est reconfiguré pour le mode `DirectQuery`. Cela est particulièrement important si le modèle contient des données sensibles qui sont soumises à des contrôles étroits. Dans ce cas, l'exécution de la commande ClearCache est une mesure de précaution que vous pouvez prendre pour garantir que des données sensibles existent uniquement à l'emplacement prévu. L'effacement manuel du cache est nécessaire si vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour déployer le modèle et pour modifier le mode de requête. À l'inverse, l'utilisation de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour spécifier `DirectQuery` sur le modèle et les partitions permet d'effacer automatiquement le cache lorsque vous basculez le modèle pour utiliser ce mode de requête.  
   
  Comparées aux recommandations pour effacer les caches de modèles multidimensionnels lors du test des performances, il n'y a aucune recommandation étendue pour effacer les caches de modèles tabulaires. Si vous ne gérer pas le déploiement d'un modèle tabulaire qui contient des données sensibles, il n'y a aucune tâche administrative spécifique qui demande d'effacer le cache.  
   
@@ -41,26 +41,26 @@ ms.locfileid: "48067193"
  Pour effacer le cache, utilisez XMLA et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez effacer le cache au niveau de la base de données, du cube, de la dimension, de la table ou du groupe de mesures. Les étapes suivantes pour effacer le cache au niveau de la base de données appliquent aux modèles MDX et aux modèles tabulaires.  
   
 > [!NOTE]  
->  Un test rigoureux des performances peut nécessiter une approche plus complète pour effacer le cache. Pour savoir comment vider les caches Analysis Services et du système de fichiers, consultez la section sur l'effacement des caches dans le [Guide des opérations SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?linkID=http://go.microsoft.com/fwlink/?LinkID=225539).  
+>  Un test rigoureux des performances peut nécessiter une approche plus complète pour effacer le cache. Pour savoir comment vider les caches Analysis Services et du système de fichiers, consultez la section sur l'effacement des caches dans le [Guide des opérations SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?linkID=https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Pour les modèles MDX et tabulaires, l'effacement de certains de ces caches peut être un processus en deux étapes qui consiste à invalider le cache lorsque la commande ClearCache s'exécute, puis à vider le cache lors de la réception de la requête suivante. Une réduction de la consommation de mémoire n'est évidente qu'après que le cache a été réellement vidé.  
   
  L'effacement du cache requiert la fourniture d'un identificateur d'objet à l'instruction `ClearCache` dans une requête XMLA. La première étape de cette rubrique explique comment obtenir un identificateur d'objet.  
   
-#### <a name="step-1-get-the-object-identifier"></a>Étape 1 : obtenir l'identificateur d'objet  
+#### <a name="step-1-get-the-object-identifier"></a>Étape 1 : Obtenir l’identificateur d’objet  
   
 1.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur un objet, sélectionnez **Propriétés**et copiez la valeur de la propriété ID dans le volet **Propriétés** . Cette approche fonctionne pour la base de données, le cube, la dimension ou la table.  
   
 2.  Pour obtenir l’ID d’un groupe de mesures, cliquez avec le bouton droit sur le groupe de mesures et sélectionnez **Générer un script du groupe de mesures en tant que**. Choisissez **Create** ou **Alter**, et envoyez la requête dans une fenêtre. L'ID du groupe de mesures sera visible dans la définition de l'objet. Copiez l'ID de la définition d'objet.  
   
-#### <a name="step-2-run-the-query"></a>Étape 2 : exécuter la requête  
+#### <a name="step-2-run-the-query"></a>Étape 2 : Exécutez la requête  
   
 1.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur une base de données, pointez sur **Nouvelle requête**, puis sélectionnez **XMLA**.  
   
-2.  Copiez l'exemple de code suivant dans une fenêtre de requête XMLA. Modification `DatabaseID` à l’ID de la base de données sur la connexion actuelle.  
+2.  Copiez l'exemple de code suivant dans une fenêtre de requête XMLA. Remplacez `DatabaseID` par l'ID de la base de données sur la connexion actuelle.  
   
     ```  
-    <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <ClearCache xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
       <Object>  
         <DatabaseID> Adventure Works DW Multidimensional</DatabaseID>  
       </Object>  
@@ -71,7 +71,7 @@ ms.locfileid: "48067193"
      Ou bien, vous pouvez spécifier un chemin d'accès d'un objet enfant, tel qu'un groupe de mesures, pour effacer le cache uniquement pour cet objet.  
   
     ```  
-    <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <ClearCache xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
       <Object>  
         <DatabaseID>Adventure Works DW Multidimensional</DatabaseID>  
             <CubeID>Adventure Works</CubeID>  
@@ -89,7 +89,7 @@ ms.locfileid: "48067193"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Script des tâches administratives dans Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
+ [Tâches d'administration à l'aide de scripts dans Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
  [Analyser une instance Analysis Services](monitor-an-analysis-services-instance.md)  
   
   

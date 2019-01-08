@@ -15,12 +15,12 @@ ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e2d83f77f8bb9227daab996e425d1880d1bfabd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 35e9da17a9c3980470cfd3dcbb22b4069afec640
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674412"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501751"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Configuration d’ODBC pour Visual FoxPro, boîte de dialogue
 Le **d’installation de ODBC Visual FoxPro** boîte de dialogue vous permet d’ajouter ou modifier une source de données Visual FoxPro.  
@@ -60,7 +60,7 @@ Le **d’installation de ODBC Visual FoxPro** boîte de dialogue vous permet d�
  Lorsque cette case à cocher est sélectionnée, le pilote s’ouvre à la base de données Visual FoxPro exclusivement lorsque vous accédez aux données à l’aide de la source de données. Autres utilisateurs ne peuvent pas accéder à la base de données ou les tables dans la base de données pendant que la base de données est ouverte en mode exclusif. Tables au sein de la base de données exclusivement ouvert sont ouverts en tant que partagé. Pour ouvrir une table exclusivement, utilisez le [définir exclusif](../../odbc/microsoft/set-exclusive-command.md) commande. Cette case à cocher est désactivée lorsque **type base de données** a la valeur **Free Table directory**.  
   
  **Null**  
- Détermine si les colonnes créées avec ALTER TABLE et CREATE TABLE autorisent les valeurs null. Si vous définissez sur Null, insertion – SQL insère une valeur null dans n’importe quelle colonne ne pas incluse dans une instruction INSERT – SQL... Clause de valeur. Une valeur vide est insérée si Null est désactivée (OFF). Vous pouvez également contrôler cette option dans une chaîne de connexion passée comme dans le code suivant :  
+ Détermine si les colonnes créées avec ALTER TABLE et CREATE TABLE autorisent les valeurs null. Si vous définissez sur Null, insertion - SQL insère une valeur null dans n’importe quelle colonne ne pas incluse dans une instruction INSERT - SQL... Clause de valeur. Une valeur vide est insérée si Null est désactivée (OFF). Vous pouvez également contrôler cette option dans une chaîne de connexion passée comme dans le code suivant :  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  

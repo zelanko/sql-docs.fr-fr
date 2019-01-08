@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9e55a9a6d7a432a145477bb4af92a0225d92c623
-ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
+ms.openlocfilehash: 7b4516470b1b55c697cbfee065dbf53c3187a6a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42703582"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526494"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Inscription du nom SPN pour une instance Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "42703582"
  [Inscription du nom SPN pour les instances SSAS à l'écoute sur des ports fixes](#bkmk_spnFixedPorts)  
   
 ##  <a name="bkmk_scnearios"></a> Circonstances dans lesquelles une inscription du SPN est requise  
- Toute connexion cliente qui spécifie « SSPI=Kerberos » dans la chaîne de connexion entraîne des conditions d'inscription du SPN pour une instance d'Analysis Services.  
+ Toute connexion cliente qui spécifie « SSPI = Kerberos » sur la connexion chaîne entraîne des conditions de l’inscription SPN pour une instance Analysis Services.  
   
  L'inscription du SPN est requise dans les cas suivants. Pour des informations plus détaillées, consultez [Configure Analysis Services for Kerberos constrained delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md).  
   
@@ -69,8 +69,8 @@ ms.locfileid: "42703582"
   
 |Élément|Description|  
 |-------------|-----------------|  
-|Classe de service|MSOLAPSvc.3 identifie le service en tant qu'instance Analysis Services. Le .3 est une référence à la version du protocole XMLA-over-TCP/IP utilisé dans des transmissions Analysis Services. Il n'a aucun rapport avec la version du produit. Par conséquent, MSOLAPSvc.3 est la classe de service correcte pour SQL Server 2005, 2008, 2008 R2, 2012 ou toute version ultérieure d'Analysis Services jusqu'à ce que le protocole lui-même soit modifié.|  
-|Host-name|Identifie l'ordinateur sur lequel s'exécute le service. Ce peut être un nom de domaine complet ou un nom NetBIOS. Vous devez inscrire un SPN pour les deux noms.<br /><br /> Lors de l'inscription d'un SPN pour le nom NetBIOS d'un serveur, veillez à utiliser `SetupSPN –S` pour éviter toute inscription en double. Il n'existe aucune garantie que les noms NetBIOS soient uniques dans une forêt ; en présence d'une inscription SPN en double, la connexion échoue.<br /><br /> Pour les clusters à charge équilibrée Analysis Services, le nom d'hôte doit être le nom virtuel affecté au cluster.<br /><br /> Ne créez jamais de nom SPN à l'aide de l'adresse IP. Kerberos utilise les fonctionnalités de résolution DNS du domaine. La spécification d'une adresse IP ignore cette fonctionnalité.|  
+|Classe de service|MSOLAPSvc.3 identifie le service en tant qu'instance Analysis Services. Le .3 est une référence à la version du protocole XMLA-over-TCP/IP utilisé dans des transmissions Analysis Services. Il n'a aucun rapport avec la version du produit. Par conséquent, MSOLAPSvc.3 est la classe de service correcte pour SQL Server 2005, 2008, 2008 R2, 2012 ou toute version ultérieure d'Analysis Services jusqu'à ce que le protocole lui-même soit modifié.|  
+|Host-name|Identifie l'ordinateur sur lequel s'exécute le service. Ce peut être un nom de domaine complet ou un nom NetBIOS. Vous devez inscrire un SPN pour les deux noms.<br /><br /> Lors de l'inscription d'un SPN pour le nom NetBIOS d'un serveur, veillez à utiliser `SetupSPN -S` pour éviter toute inscription en double. Il n'existe aucune garantie que les noms NetBIOS soient uniques dans une forêt ; en présence d'une inscription SPN en double, la connexion échoue.<br /><br /> Pour les clusters à charge équilibrée Analysis Services, le nom d'hôte doit être le nom virtuel affecté au cluster.<br /><br /> Ne créez jamais de nom SPN à l'aide de l'adresse IP. Kerberos utilise les fonctionnalités de résolution DNS du domaine. La spécification d'une adresse IP ignore cette fonctionnalité.|  
 |Port-number|Bien que le numéro de port fasse partie de la syntaxe de SPN, vous ne spécifiez jamais un numéro de port lors de l'inscription d'un nom SPN Analysis Services. Les deux-points (:), généralement utilisés pour fournir un numéro de port dans la syntaxe standard de SPN, permettent à Analysis Services de spécifier le nom de l'instance. Pour une instance d'Analysis Services, le port est supposé être le port par défaut (TCP 2383) ou un port affecté par le service SQL Server Browser (TCP 2382).|  
 |Instance-name|Analysis Services est un service réplicable qui peut être installé plusieurs fois sur le même ordinateur. Chaque instance est identifiée par son nom d'instance.<br /><br /> Le nom de l'instance est préfixé par un signe deux-points (:). Si l'on prend l'exemple d'un ordinateur hôte appelé SRV01 et d'une instance nommée SSAS-tabulaire, le SPN doit être SRV01:SSAS-tabulaire.<br /><br /> Notez que la syntaxe pour spécifier une instance nommée d'Analysis Services est différente de celle utilisée par d'autres instances de SQL Server. D'autres services utilisent une barre oblique inverse (\) pour ajouter le nom de l'instance dans un SPN.|  
 |Compte de service|Il s'agit du compte de démarrage du service Windows **MSSQLServerOLAPService** . Ce peut être un compte d'utilisateur de domaine Windows, un compte virtuel, un compte de service administré ou un compte intégré comme un SID par service, un NetworkService, ou un LocalSystem. Un compte d’utilisateur de domaine Windows peut être mise en forme en tant que domaine\utilisateur ou user@domain.|  
@@ -109,7 +109,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02
  Cet exemple illustre la syntaxe **setspn** pour une instance Analysis Services par défaut s’exécutant sous un compte d’utilisateur de domaine, **SSAS-Service**, dans le domaine AdventureWorks.  
   
 ```  
-Setspn –s msolapsvc.3/AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
+Setspn -s msolapsvc.3/AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
 ```  
   
 > [!TIP]  
@@ -143,13 +143,13 @@ Setspn -S MSOLAPDisco.3/AW-SRV01.AdventureWorks.com AW-SRV01
  **Syntaxe du SPN pour un cluster Analysis Services**  
   
 ```  
-Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>  
+Setspn -s msolapsvc.3/<virtualname.FQDN > <domain user account>  
 ```  
   
  N'oubliez pas que des nœuds dans un cluster Analysis Services sont requis pour utiliser le port par défaut (TCP 2383) et s'exécutent sous le même compte d'utilisateur de domaine afin que chaque nœud présente le même SID. Pour plus d'informations, consultez [Procédure de mise en cluster de SQL Server Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) .  
   
 ##  <a name="bkmk_spnHTTP"></a> Inscription du nom SPN pour les instances SSAS configurées pour l'accès HTTP  
- Selon les spécifications de la solution, vous pouvez avoir configuré Analysis Services pour l'accès HTTP. Si votre solution contient IIS en tant que composant de niveau intermédiaire et que l'authentification Kerberos est une condition de la solution, vous devrez peut-être inscrire manuellement un nom SPN pour IIS. Pour plus d’informations, consultez « Configurer les paramètres sur l’ordinateur qui exécute IIS » dans [Comment configurer SQL Server 2008 Analysis Services et SQL Server 2005 Analysis Services pour utiliser l’authentification Kerberos](http://support.microsoft.com/kb/917409).  
+ Selon les spécifications de la solution, vous pouvez avoir configuré Analysis Services pour l'accès HTTP. Si votre solution contient IIS en tant que composant de niveau intermédiaire et que l'authentification Kerberos est une condition de la solution, vous devrez peut-être inscrire manuellement un nom SPN pour IIS. Pour plus d’informations, consultez « Configurer les paramètres sur l’ordinateur exécutant IIS » dans [comment configurer SQL Server 2008 Analysis Services et SQL Server 2005 Analysis Services pour utiliser l’authentification Kerberos](http://support.microsoft.com/kb/917409).  
   
  En termes d'inscription du SPN pour l'instance Analysis Services, il n'existe aucune différence entre une instance configurée pour le protocole TCP ou HTTP. La connexion à Analysis Services depuis IIS, à l'aide de l'extension MSMDPUMP ISAPI, est toujours TCP.  
   
@@ -164,15 +164,15 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
 ## <a name="see-also"></a>Voir aussi  
  [Authentification et délégation d'identité Microsoft BI](http://go.microsoft.com/fwlink/?LinkID=286576)   
- [L’authentification mutuelle à l’aide de Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
+ [Authentification mutuelle à l'aide de Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Comment configurer SQL Server 2008 Analysis Services et SQL Server 2005 Analysis Services pour utiliser l’authentification Kerberos](http://support.microsoft.com/kb/917409)   
- [Noms de principal du service (SPN), syntaxe SetSPN (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [Le SPN utilisent et comment il obtient-il il ?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Noms de principaux du service (SPN), syntaxe SetSPN (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [What SPN do I use and how does it get there?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
- [Guide pas à pas de comptes de service](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
+ [Guide pas à pas des comptes de service](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
  [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Comment utiliser des noms principaux de service lorsque vous configurez les applications Web hébergées sur Internet Information Services](http://support.microsoft.com/kb/929650)   
+ [Comment utiliser des SPN quand vous configurez des applications web hébergées sur les services Internet (IIS)](http://support.microsoft.com/kb/929650)   
  [Quelles sont les nouveautés dans les comptes de service](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
- [Configurer l’authentification Kerberos pour les produits SharePoint 2010 (livre blanc)](http://technet.microsoft.com/library/ff829837.aspx)  
+ [Configurer l'authentification Kerberos pour les produits SharePoint 2010 (livre blanc)](http://technet.microsoft.com/library/ff829837.aspx)  
   
   

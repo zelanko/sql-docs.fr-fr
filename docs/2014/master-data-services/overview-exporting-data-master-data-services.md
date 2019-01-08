@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - exporting data [Master Data Services]
@@ -15,15 +14,15 @@ ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3e7a228062035772b9c394a246de0452f36239b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76a9133a013087d96f9acc102232b2340212d19f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158639"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758931"
 ---
 # <a name="exporting-data-master-data-services"></a>Exportation de données (Master Data Services)
-  Vous pouvez exporter [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] données à des systèmes d’abonnement en créant des vues d’abonnement. Tout système d'abonnement peut ensuite afficher les données publiées dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Pour plus d’informations sur les vues, consultez [Vues](../relational-databases/views/views.md).  
+  Vous pouvez exporter des données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vers des systèmes d'abonnement en créant des vues d'abonnement. Tout système d'abonnement peut ensuite afficher les données publiées dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Pour plus d’informations sur les vues, consultez [Vues](../relational-databases/views/views.md).  
   
 ## <a name="subscription-view-formats"></a>Formats de vue d'abonnement  
  Lorsque vous créez une vue dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous devez choisir un format dans un ensemble de formats de vue standard fournis par [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Vous pouvez utiliser ces formats pour créer des vues qui affichent :  

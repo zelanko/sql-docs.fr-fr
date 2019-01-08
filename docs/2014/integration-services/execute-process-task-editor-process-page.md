@@ -15,12 +15,12 @@ ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d98e80da1f311292daf3fa275c87e4db5f9cc2e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 62cd98e586e5bd57f846b0203aa41c6a3efd50bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100625"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530638"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
   Utilisez la page **Traiter** de la boîte de dialogue **Éditeur de tâche d'exécution de processus** pour configurer les options qui exécutent le processus. Ces options comprennent l'exécutable à lancer, son emplacement, les arguments de l'invite de commandes et les variables qui fournissent l'entrée et la sortie de capture.  
@@ -38,12 +38,12 @@ ms.locfileid: "48100625"
  Fournissez les arguments de l'invite de commandes.  
   
  **WorkingDirectory**  
- Tapez le chemin du dossier qui contient l’exécutable ou cliquez sur le bouton Parcourir **(...)** , puis recherchez le dossier.  
+ Tapez le chemin du dossier qui contient l’exécutable ou cliquez sur le bouton Parcourir **(...)**, puis recherchez le dossier.  
   
  **StandardInputVariable**  
  Sélectionnez une variable pour fournir l’entrée au processus ou cliquez sur \<**Nouvelle variable...**> pour en créer une :  
   
- **Rubriques connexes :**[ajouter une Variable  ](../../2014/integration-services/add-variable.md)  
+ **Rubriques connexes :**  [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
  Sélectionnez une variable pour capturer la sortie du processus ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
@@ -67,7 +67,7 @@ ms.locfileid: "48100625"
  Spécifiez le style de la fenêtre dans lequel le processus est exécuté.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

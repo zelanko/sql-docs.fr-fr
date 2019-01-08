@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledest.f1
@@ -19,12 +18,12 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 515f6ffe76b451b621ceded394a22483ce59b2cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ebcc0ff9c9c2baae93ac31258ff994b463fc3b0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188089"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753671"
 ---
 # <a name="raw-file-destination"></a>Destination de fichier brut
   La destination de fichier brut écrit des données brutes dans un fichier. Le format des données étant natif pour la destination, les données ne requièrent aucune traduction et peu d'analyse. Cela signifie que la destination de fichier brut peut écrire des données plus rapidement que d'autres destinations telles que les destinations de fichier plat et OLE DB.  
@@ -89,7 +88,7 @@ ms.locfileid: "48188089"
   
 -   1300, productE  
   
- Les nouvelles données sont ajoutées à la fin du fichier brut et les clés triées (PK) ne sont pas ordonnées. Par ailleurs, l'opération d'ajout n'a pas modifié les métadonnées du fichier (informations de tri). Si vous lisez le fichier à l'aide de la source de fichier brut, le composant indique que le fichier est toujours trié sur PK même si les données du fichier ne sont plus dans le bon ordre.  
+ Les nouvelles données sont ajoutées à la fin du fichier brut et les clés triées (PK) ne sont pas ordonnées. Par ailleurs, l’opération d’ajout n’a pas changé les métadonnées du fichier (informations de tri). Si vous lisez le fichier à l'aide de la source de fichier brut, le composant indique que le fichier est toujours trié sur PK même si les données du fichier ne sont plus dans le bon ordre.  
   
  Pour conserver les clés triées dans le bon ordre lors de l'ajout de données, concevez le flux de données du package comme suit :  
   

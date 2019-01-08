@@ -21,15 +21,15 @@ ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb169a7054a5b93bd923bc989baf95f5d9e22ce0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140339"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528439"
 ---
 # <a name="get-information-about-a-view"></a>Obtenir des informations au sujet d'une vue
-  Vous pouvez obtenir des informations sur la définition ou les propriétés d'une vue dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous devrez peut-être examiner la définition de la vue pour comprendre comment les données de celle-ci sont issues des tables source ou pour connaître les données définies par la vue.  
+  Vous pouvez obtenir des informations sur la définition ou les propriétés d’une vue dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous devrez peut-être examiner la définition de la vue pour comprendre comment les données de celle-ci sont issues des tables source ou pour connaître les données définies par la vue.  
   
 > [!IMPORTANT]  
 >  Si vous modifiez le nom d'un objet auquel une vue fait référence, vous devez modifier la vue pour que son texte reflète le nouveau nom de l'objet. Dès lors, avant de renommer un objet, affichez ses dépendances afin de déterminer si les vues sont affectées par la modification envisagée.  
@@ -109,7 +109,7 @@ ms.locfileid: "48140339"
      **(Nom)**  
      Nom de la vue actuelle.  
   
-     **Database Name**  
+     **Nom de la base de données**  
      Nom de la base de données contenant cette vue.  
   
      **Description**  
@@ -137,7 +137,7 @@ ms.locfileid: "48140339"
      Indique si toutes les colonnes sont retournées par la vue sélectionnée. Ce comportement est défini lorsque la vue est créée.  
   
      **Commentaire SQL**  
-     Affiche une description des instructions SQL. Pour afficher l’intégralité de la description, ou la modifier, cliquez sur la description, puis sur le bouton de sélection **(...)** situé à droite de la propriété. Vos commentaires peuvent contenir les noms des utilisateurs de la vue et le moment d'utilisation.  
+     Affiche une description des instructions SQL. Pour afficher l’intégralité de la description ou la modifier, cliquez sur la description, puis sur le bouton de sélection **(...)** situé à droite de la propriété. Vos commentaires peuvent contenir les noms des utilisateurs de la vue et le moment d'utilisation.  
   
      **Spécification Top**  
      Se développe pour afficher les propriétés **Top**, **Expression**, **Pourcentage**et **With Ties** .  
@@ -179,7 +179,7 @@ ms.locfileid: "48140339"
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Pour obtenir la définition et les propriétés d'une vue  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "48140339"
   
 #### <a name="to-get-the-dependencies-of-a-view"></a>Pour obtenir les dépendances d'une vue  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

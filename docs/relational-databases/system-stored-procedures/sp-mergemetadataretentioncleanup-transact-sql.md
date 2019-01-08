@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_mergemetadataretentioncleanup
@@ -17,12 +16,12 @@ ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c2724e50c620342a2ac95883357f2d524ed8768
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9158521710ec866955f5b028a2338f9c6f6ff0b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620919"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823153"
 ---
 # <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 > [!IMPORTANT]  
 >  S’il existe plusieurs publications sur une base de données, et l’une des publications utilise une période de rétention de publication infinie, en cours d’exécution **sp_mergemetadataretentioncleanup** ne nettoie pas la suivi de la modification de la réplication de fusion métadonnées de la base de données. C'est pour cette raison qu'il faut utiliser la période de rétention infinie avec prudence. Pour déterminer si une publication a une période de rétention infinie, exécutez [sp_helpmergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) le serveur de publication et notez toutes les publications dans le résultat défini avec une valeur de **0** pour **rétention**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **db_owner** fixe le rôle de base de données ou des utilisateurs dans la liste d’accès d’une base de données publiée peut exécuter **sp_mergemetadataretentioncleanup**.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -15,12 +15,12 @@ ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ac59cddb24d5e08e3b620c178f40e206460eb7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 833e2740e54f07701fb66a894bb5e4798c4a42e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835417"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516405"
 ---
 # <a name="parameter-markers"></a>Marqueurs de paramètres
 Conformément à la spécification SQL-92, une application ne peut pas placer des marqueurs de paramètres dans les emplacements suivants. Pour une liste plus complète, consultez la spécification de SQL-92.  
@@ -37,7 +37,7 @@ Conformément à la spécification SQL-92, une application ne peut pas placer de
   
 -   En tant que l’expression et la première valeur d’un **IN** opération  
   
--   Comme opérande d’un opérateur unaire + ou – opération  
+-   Comme opérande d’un opérateur unaire + ou - opération  
   
 -   Comme l’argument d’un *référence de jeu (fonction)*  
   

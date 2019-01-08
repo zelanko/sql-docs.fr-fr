@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variables.f1
@@ -15,22 +14,22 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2be1625093dfd89e59cef4731e61411f2c7e4b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b8541b0e590fe0fa6de9d577e69b7068fb2843d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158179"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206198"
 ---
 # <a name="variables-window"></a>Fenêtre Variables
   La fenêtre **Variables** permet de créer et de modifier les variables définies par l’utilisateur et d’afficher les variables système.  
   
- Par défaut, la fenêtre **Variables** se trouve sous la zone **Gestionnaires de connexions** du concepteur SSIS, dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Si vous ne voyez pas la fenêtre **Variables** , cliquez sur **Variables** dans le menu **SSIS** pour l'afficher.  
+ Par défaut, la fenêtre **Variables** se trouve sous la zone **Gestionnaires de connexions** du concepteur SSIS, dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Si vous ne voyez pas la fenêtre **Variables**, cliquez sur **Variables** dans le menu **SSIS** pour l’afficher.  
   
  Vous pouvez éventuellement afficher la fenêtre **Variables** en mappant la commande View.Variables avec une combinaison de clés de votre choix dans la page **Clavier** de la boîte de dialogue **Options** .  
   
-> [!NOTE]  
->  Les valeurs de la `Name` et `Namespace` propriétés doivent commencer par une lettre de l’alphabet, conformément à la convention Unicode Standard 2.0, ou un trait de soulignement (_). Les caractères suivants peuvent être des lettres ou des chiffres, conformément à la convention Unicode standard 2.0, ou un trait de soulignement (\_).  
+> [!NOTE]
+>  Les valeurs des propriétés `Name` et `Namespace` doivent commencer par une lettre, conformément à la convention Unicode Standard 2.0, ou par un trait de soulignement (_). Les caractères suivants peuvent être des lettres ou des chiffres, conformément à la convention Unicode standard 2.0, ou un trait de soulignement (\_).  
   
 ## <a name="options"></a>Options  
  **Ajouter une variable**  
@@ -39,7 +38,7 @@ ms.locfileid: "48158179"
  **Déplacer la variable**  
  Cliquez sur une variable dans la liste, puis cliquez sur **Déplacer la variable** pour modifier l’étendue de la variable. Dans la boîte de dialogue **Sélectionner une nouvelle étendue** , sélectionnez le package ou un conteneur, une tâche ou un gestionnaire d'événements dans le package pour modifier l'étendue de la variable.  
   
- Pour plus d’informations sur la portée des variables, consultez [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ Pour plus d’informations sur la portée des variables, consultez [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
  **Supprimer une variable**  
  Sélectionnez une variable dans la liste, puis cliquez sur **Supprimer une variable**.  
@@ -79,9 +78,9 @@ ms.locfileid: "48158179"
  Si vous affectez une expression à une variable, un marqueur spécial sous la forme d'une icône s'affiche en regard de la variable. Ce marqueur d'icône spécial s'affiche également en regard des gestionnaires de connexions et des tâches contenant des expressions.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
- [Utiliser des Variables dans des Packages](../../2014/integration-services/use-variables-in-packages.md)   
+ [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)   
  [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
- [Générer de fichiers de vidage pour l’exécution des packages](troubleshooting/generating-dump-files-for-package-execution.md)  
+ [Générer de fichiers de vidage pour l'exécution des packages](troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

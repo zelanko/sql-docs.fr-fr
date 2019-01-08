@@ -20,17 +20,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52bf96d8f53f875aacb0488d519157f6553f558a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 44df86f4862ba6e9892e611dabe143e251d9d3cc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677258"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533003"
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Renvoie une ligne pour chaque schéma de la base de données active. Pour récupérer des informations à partir de ces vues, spécifiez le nom qualifié complet de **INFORMATION_SCHEMA. *** nom_vue*. Pour récupérer des informations sur toutes les bases de données dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requête le [sys.databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vue de catalogue.  
+  Renvoie une ligne pour chaque schéma de la base de données active. Pour récupérer des informations à partir de ces vues, spécifiez le nom qualifié complet de **INFORMATION_SCHEMA.** _nom_vue_. Pour récupérer des informations sur toutes les bases de données dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requête le [sys.databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vue de catalogue.  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  

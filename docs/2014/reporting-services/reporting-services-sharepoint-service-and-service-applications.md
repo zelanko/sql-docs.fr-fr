@@ -11,15 +11,15 @@ ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 259422989645daef9160a011928134f437996cb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 582b6dea85eae5db3232de86f071a8606bfe36cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127929"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538522"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Services Reporting Services SharePoint et applications de service
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint repose sur l’architecture de service SharePoint et utilise un service SharePoint et l’autre pour de nombreuses applications de service. Lorsque vous créez une application de service, le service devient disponible et la base de données d'application de service est générée. Vous pouvez créer plusieurs applications de service Reporting Services mais une application de service est suffisante pour la plupart des scénarios de déploiement.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint repose sur l'architecture de service SharePoint et utilise un service SharePoint et l'une des nombreuses applications de service disponibles. Lorsque vous créez une application de service, le service devient disponible et la base de données d'application de service est générée. Vous pouvez créer plusieurs applications de service Reporting Services mais une application de service est suffisante pour la plupart des scénarios de déploiement.  
   
  Cette rubrique fournit les informations suivantes :  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48127929"
 -   [Tâches associées](#bkmk_related)  
   
 ##  <a name="bkmk_createapp"></a> Création d'une application de service Reporting Services  
- Vous pouvez utiliser l'Administration centrale de SharePoint ou les scripts PowerShell pour créer des applications de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Pour plus d’informations sur l’utilisation de l’Administration centrale de SharePoint, consultez la section « Créez une nouvelle application de service Reporting Services » dans [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md). Consultez la section PowerShell plus loin dans cette rubrique pour obtenir un exemple de script PowerShell permettant de créer des applications de service.  
+ Vous pouvez utiliser l'Administration centrale de SharePoint ou les scripts PowerShell pour créer des applications de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Pour plus d’informations sur l’utilisation de l’Administration centrale de SharePoint, consultez la section « Créer une application de service Reporting Services » dans [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md). Consultez la section PowerShell plus loin dans cette rubrique pour obtenir un exemple de script PowerShell permettant de créer des applications de service.  
   
 ##  <a name="bkmk_associations"></a> Modifier les associations de l'application de service avec un groupe de proxy  
  La nouvelle page de création d'une application de service contient la section **Association d'application Web**. Cette section vous permet d'associer l'application de service que vous créez. Utilisez la procédure suivante pour modifier l'association et assigner une configuration personnalisée à l'application de service. Le même processus général peut également être utilisé pour ajouter le proxy au groupe par défaut plutôt que modifier l'association à un groupe personnalisé de l'application de service.  
@@ -43,7 +43,7 @@ ms.locfileid: "48127929"
   
 2.  Dans la page des Associations de l'application de service, modifiez la vue en **Applications de service**.  
   
-3.  Recherchez et cliquez sur le nom de votre nouvelle [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] application de Service. Vous pourriez cliquer également sur la **valeur par défaut** du nom de groupe du proxy de l'application pour ajouter le proxy au groupe par défaut plutôt que compléter les étapes suivantes.  
+3.  Recherchez et cliquez sur le nom de votre nouvelle application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Vous pourriez cliquer également sur la **valeur par défaut** du nom de groupe du proxy de l'application pour ajouter le proxy au groupe par défaut plutôt que compléter les étapes suivantes.  
   
 4.  Sélectionnez **Personnalisé** dans la zone de sélection **Modifier le groupe de connexions suivant :**.  
   
@@ -64,19 +64,19 @@ ms.locfileid: "48127929"
 1.  Ajoutez l'objet de pool d'applications de votre nom de pool d'applications à une variable qui est passée dans l'action New.  
   
     ```  
-    $appPoolName = get-spserviceapplicationpool “<application pool name>”  
+    $appPoolName = get-spserviceapplicationpool "<application pool name>"  
     ```  
   
 2.  Créez l'application de service en lui attribuant le nom et le nom de pool d'applications que vous fournissez.  
   
     ```  
-    New-SPRSServiceApplication –Name ‘MyServiceApplication’ –ApplicationPool $appPoolName –DatabaseName ‘MyServiceApplicationDatabase’ –DatabaseServer ‘<Server Name>’  
+    New-SPRSServiceApplication -Name 'MyServiceApplication' -ApplicationPool $appPoolName -DatabaseName 'MyServiceApplicationDatabase' -DatabaseServer '<Server Name>'  
     ```  
   
 3.  Obtenez le nouvel objet d'application de service et dirigez l'objet dans le canal du nouvel applet de commande de proxy.  
   
     ```  
-    Get-SPRSServiceApplication –name MyServiceApplication | New-SPRSServiceApplicationProxy “MyServiceApplicationProxy”  
+    Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
 ##  <a name="bkmk_related"></a> Tâches associées  

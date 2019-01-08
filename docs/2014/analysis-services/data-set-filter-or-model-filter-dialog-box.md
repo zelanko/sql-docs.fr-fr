@@ -11,12 +11,12 @@ ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f88a82a1d59e9d41f9816b8fbc4e335ab2ad8c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 923467270901b91c35b40005c75207e7b1799194
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119299"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518970"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Boîte de dialogue Filtre de jeu de données ou Filtre de modèle
   Cette boîte de dialogue vous permet de générer les filtres que vous pouvez appliquer à un jeu de données.  Le jeu de données peut être un jeu de données externes utilisé pour le test ou il peut s'agir des données de cas d'un modèle d'exploration de données. Le nom de la boîte de dialogue change selon que le filtre concerne un jeu de données externes ou un modèle d'exploration de données.  
@@ -32,18 +32,18 @@ ms.locfileid: "48119299"
 > [!TIP]  
 >  Pour tester la précision sur un sous-ensemble des données d’apprentissage d’origine, vous pouvez ajouter la vue de source de données utilisée pour définir le jeu d’apprentissage en tant que données de test externes, puis ajouter des conditions dans la grille **Filtre de jeu de données**.  
   
- **Pour plus d’informations :** [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Pour plus d'informations, consultez :** [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Options  
  **Conditions**  
  Affiche des noms de table, suivis de noms de colonne avec des conditions.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**et/ou**|Choisissez un opérateur pour joindre plusieurs conditions.|  
 |**Colonne de Structure d’exploration de données**|Cliquez pour sélectionner une source de données, puis cliquez sur des lignes consécutives dans la grille pour ajouter des colonnes de la source de données.<br /><br /> La première ligne de la grille spécifie la vue de source de données. Une fois que vous avez sélectionné une vue de source de données, la zone **Colonne de la structure d’exploration de données** affiche une icône de table et le champ **Valeur** affiche la combinaison de tous les critères que vous avez définis pour cette source de données.<br /><br /> Une fois que vous avez sélectionné une source de données, la zone **Colonne de la structure d’exploration de données** propose une liste déroulante de colonnes individuelles contenues dans la source de données.|  
 |**Opérateur**|Sélectionnez un opérateur dans la liste.|  
-|**Valeur**|Pour les tables, le champ **Valeur** affiche la combinaison de tous les filtres appliqués à la source de données. Vous pouvez également cliquer sur le bouton de génération **(…)** situé à droite de la zone de texte pour ouvrir la boîte de dialogue **Filtre** et générer une condition.|  
+|**Valeur**|Pour les tables, le champ **Valeur** affiche la combinaison de tous les filtres appliqués à la source de données. Vous pouvez également cliquer sur la build **(...)**  situé à droite de la zone de texte pour ouvrir le **filtre** boîte de dialogue et générer une condition.|  
   
  **Expression**  
  Affiche l'ensemble de critères que vous avez définis à l'aide de la grille.  

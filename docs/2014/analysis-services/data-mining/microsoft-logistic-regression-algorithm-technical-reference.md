@@ -20,12 +20,12 @@ ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 856da25d126c93a370c7d028106df75124f5ec72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 157baeb7e5bd8fb53b2435f55e3e71c098632002
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094279"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518054"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Références techniques relatives à l’algorithme MLR (Microsoft Logistic Regression)
   L’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression) est une variante de l’algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network), où le paramètre *HIDDEN_NODE_RATIO* 0. Ce paramètre crée un modèle de réseau neuronal qui ne contient pas de couche masquée et qui, par conséquent, est équivalent à la régression logistique.  
@@ -47,25 +47,25 @@ ms.locfileid: "48094279"
 ### <a name="scoring-inputs"></a>Calcul de score des entrées  
  Dans le contexte d’un modèle de réseau neuronal ou de régression logistique, le*ing* désigne le processus de conversion des valeurs présentes dans les données d’un jeu de valeurs qui utilisent la même échelle et qui, par conséquent, peuvent être comparées les unes aux autres. Par exemple, supposons que les entrées pour la plage Income sont comprises entre de 0 à 100 000 et que celles pour [Number of Children] sont comprises entre 0 et 5. Ce processus de conversion vous permet de *score*, ou de comparer, l’importance de chaque entrée, quel que soit la différence des valeurs.  
   
- Pour chaque état qui apparaît dans le jeu d'apprentissage, le modèle génère une entrée. Pour les entrées discrètes ou discrétisées, une entrée supplémentaire est créée pour représenter l'état manquant s'il apparaît au moins une fois dans le jeu d'apprentissage. Pour les entrées continues, deux nœuds d'entrée sont créés au plus : un pour les valeurs manquantes, si elles sont présentes dans les données d'apprentissage, et une entrée pour toutes les valeurs existantes ou non Null. Chaque entrée est mis à l’échelle à un format numérique à l’aide de la méthode de normalisation z-score (x – μg) / StdDev.  
+ Pour chaque état qui apparaît dans le jeu d'apprentissage, le modèle génère une entrée. Pour les entrées discrètes ou discrétisées, une entrée supplémentaire est créée pour représenter l'état manquant s'il apparaît au moins une fois dans le jeu d'apprentissage. Pour les entrées continues, deux nœuds d'entrée sont créés au plus : un pour les valeurs manquantes, si elles sont présentes dans les données d'apprentissage, et une entrée pour toutes les valeurs existantes ou non Null. Chaque entrée est mis à l’échelle à un format numérique à l’aide de la méthode de normalisation z-score (x - μg) / StdDev.  
   
  Lors de la normalisation z-score, la moyenne (μ) et l'écart type sont obtenus sur le jeu d'apprentissage complet.  
   
  **Valeurs continues**  
   
- Valeur est présente : (X – μg) / σ / / X est la valeur réelle encodée)  
+ Valeur est présente :   (X-μ)/σ / / X est la valeur réelle encodée)  
   
  Valeur est absente : - μg/σ / / mu négatif divisé par sigma)  
   
  **Valeurs discrètes**  
   
- Μg = p – (probabilité antérieure d’un état)  
+ Μg = p - (probabilité antérieure d’un état)  
   
  StdDev = sqrt(p(1-p))  
   
- Valeur est présente : (1 – μg) / σ / / (1 moins mu) divisé par sigma)  
+ Valeur est présente :     (1-μ)/σ / / (1 moins mu) divisé par sigma)  
   
- Valeur est absente : (– μg) / σ / / mu négatif divisé par sigma)  
+ Valeur est absente : (-μg) / σ / / mu négatif divisé par sigma)  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>Présentation des coefficients de régression logistique  
  La documentation statistique présente différentes méthodes pour effectuer la régression logistique, mais une part importante de toutes ces méthodes évalue l'adéquation du modèle. Un grand nombre de statistiques adéquates ont été proposées, dont des rapports de cotes et des modèles de covariance. La méthode utilisée pour mesurer l'adéquation d'un modèle n'est pas traitée dans cette rubrique ; toutefois, vous pouvez récupérer la valeur des coefficients dans le modèle et les utiliser pour concevoir vos propres mesures d'adéquation.  
@@ -83,9 +83,9 @@ FROM <model name>.CONTENT
 WHERE NODE_TYPE = 23  
 ```  
   
- Pour chaque valeur de sortie, cette requête retourne les coefficients et un ID qui pointe en retour vers le nœud d'entrée associé. Elle retourne également une ligne qui contient la valeur de la sortie et de l'ordonnée à l'origine. Chaque entrée X a son propre coefficient (Ci), mais la table imbriquée contient également un coefficient « libre » (Co), calculé d'après la formule suivante :  
+ Pour chaque valeur de sortie, cette requête retourne les coefficients et un ID qui pointe en retour vers le nœud d'entrée associé. Elle retourne également une ligne qui contient la valeur de la sortie et de l'ordonnée à l'origine. Chaque entrée X a son propre coefficient (Ci), mais la table imbriquée contient également un coefficient « libre » (Co), calculé en fonction de la formule suivante :  
   
- F (X) = X1 * C1 + X2\*C2 +... + Xn\*Cn + X0  
+ F (x) = X1 * C1 + X2\*C2 +... + Xn\*Cn + X0  
   
  Activation : exp (F (X)) / (1 + exp (F (X)))  
   
@@ -113,7 +113,7 @@ WHERE NODE_TYPE = 23
  La valeur par défaut est 255.  
   
  MAXIMUM_OUTPUT_ATTRIBUTES  
- Spécifie le nombre d'attributs de sortie que l'algorithme peut traiter avant d'appeler la sélection des fonctionnalités. Attribuez à ce paramètre la valeur 0 pour désactiver la sélection des fonctionnalités.  
+ Spécifie le nombre d'attributs de sortie que l'algorithme peut traiter avant d'appeler la sélection des fonctionnalités. Attribuez à ce paramètre la valeur 0 pour désactiver la sélection des fonctionnalités.  
   
  La valeur par défaut est 255.  
   
@@ -142,7 +142,7 @@ WHERE NODE_TYPE = 23
   
  S'applique à la colonne de modèle d'exploration de données.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Un modèle de régression logistique doit contenir une colonne clé, des colonnes d'entrée et au moins une colonne prédictible.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
@@ -154,9 +154,9 @@ WHERE NODE_TYPE = 23
 |Attribut prédictible|Continu, Discret, Discrétisé|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de régression logistique de Microsoft](microsoft-logistic-regression-algorithm.md)   
+ [Algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm.md)   
  [Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)   
- [Contenu du modèle pour les modèles de régression logistique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm.md)  
   
   
