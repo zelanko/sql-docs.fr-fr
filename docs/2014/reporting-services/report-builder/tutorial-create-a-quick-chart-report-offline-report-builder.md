@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: da0f35362a329974f8044da21b125d545c7bb323
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 677469c2110bee76870e9f30ed470f894200d2ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091369"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527001"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
-  Dans ce didacticiel, vous allez créer un graphique à secteurs à l'aide d'un Assistant, puis le modifier quelque peu afin d'obtenir un petit aperçu des opérations réalisables. Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux méthodes aboutissent au même résultat, à savoir un graphique à secteurs semblable à celui de l'illustration suivante :  
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Didacticiel : Créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
+  Dans ce didacticiel, vous allez créer un graphique à secteurs à l'aide d'un Assistant, puis le modifier quelque peu afin d'obtenir un petit aperçu des opérations réalisables. Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux méthodes ont le même résultat, un graphique à secteurs comme celui de l’illustration suivante :  
   
  ![« Mon premier graphique à secteurs « à exécution afficher](../media/rs-my1stpierunview.gif "mon premier graphique à secteurs dans la vue de l’exécution")  
   
@@ -42,11 +42,11 @@ ms.locfileid: "48091369"
  [Créer le graphique à secteurs avec des données XML](#CreatePieChartXML)  
   
 ### <a name="using-a-transact-sql-query-that-contains-data-for-this-tutorial"></a>Utilisation d'une requête Transact-SQL qui contient les données de ce didacticiel  
- Vous pouvez copier une requête comprenant des données incluses à partir de cette rubrique et la coller dans l'Assistant. Vous aurez besoin du nom d’une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] et informations d’identification suffisantes pour l’accès en lecture seule aux bases de données. La requête de dataset du didacticiel utilise des données littérales, mais la requête doit être traitée par une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] pour retourner les métadonnées nécessaires à un dataset de rapport.  
+ Vous pouvez copier une requête comprenant des données incluses à partir de cette rubrique et la coller dans l'Assistant. Vous avez besoin du nom d'une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] et d'informations d'identification suffisantes pour accéder en lecture seule aux bases de données. La requête de dataset du didacticiel utilise des données littérales, mais la requête doit être traitée par une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] pour retourner les métadonnées nécessaires à un dataset de rapport.  
   
  L'avantage lié à l'utilisation de la requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] vient du fait que tous les autres didacticiels du Générateur de rapports utilisent la même méthode ; par conséquent, lorsque vous effectuerez d'autres didacticiels, vous saurez déjà quoi faire.  
   
- Le [!INCLUDE[tsql](../../../includes/tsql-md.md)] requête requiert quelques autres conditions préalables. Pour plus d’informations, voir [Éléments requis pour les didacticiels (Générateur de rapports)](../report-builder-tutorials.md).  
+ La requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] requiert quelques conditions préalables supplémentaires. Pour plus d’informations, voir [Éléments requis pour les didacticiels (Générateur de rapports)](../report-builder-tutorials.md).  
   
  [Créer le graphique à secteurs avec une requête Transact-SQL qui contient des données](#CreatePieQueryData)  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48091369"
   
 11. (Facultatif) Cliquez sur le bouton Exécuter (**!**) pour voir les données sur lesquelles votre graphique sera basé.  
   
-12. Cliquez sur **Suivant**.  
+12. Cliquer sur **Suivant**.  
   
 13. Dans la page **Choisir un type de graphique** , cliquez sur **Secteurs**, puis sur **Suivant**.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48091369"
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#TwoWays)  
   
-##  <a name="CreatePieQueryData"></a> Création du graphique à secteurs avec une [!INCLUDE[tsql](../../../includes/tsql-md.md)] requête  
+##  <a name="CreatePieQueryData"></a> Création du graphique à secteurs avec une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)]  
   
 #### <a name="to-create-the-pie-chart-with-a-includetsqlincludestsql-mdmd-query-that-contains-data"></a>Pour créer le graphique à secteurs avec une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui contient des données  
   
@@ -164,7 +164,7 @@ ms.locfileid: "48091369"
   
 8.  (Facultatif) Cliquez sur le bouton Exécuter (**!**) pour voir les données sur lesquelles votre graphique sera basé.  
   
-9. Cliquez sur **Suivant**.  
+9. Cliquer sur **Suivant**.  
   
 10. Dans la page **Choisir un type de graphique** , cliquez sur **Secteurs**, puis sur **Suivant**.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "48091369"
   
 3.  Type `#PERCENT{P0}` pour le **données de l’étiquette** option.  
   
-     Le `{P0}` vous donne le pourcentage sans décimales. Si vous tapez simplement `#PERCENT`, vos nombres comporteront deux décimales. `#PERCENT` est un mot clé qui effectue un calcul ou une fonction pour vous ; Il existe de nombreux autres.  
+     `{P0}` indique le pourcentage sans décimales. Si vous tapez simplement `#PERCENT`, vos chiffres comporteront deux décimales. `#PERCENT` est un mot clé qui effectue un calcul ou une fonction pour vous ; il en existe de nombreux autres.  
   
  Pour plus d’informations sur la personnalisation des étiquettes et légendes de graphique, voir [Afficher des valeurs en pourcentage dans un graphique à secteurs (Générateur de rapports et SSRS)](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) et [Modifier le texte d’un élément de légende (Générateur de rapports et SSRS)](../report-design/chart-legend-change-item-text-report-builder.md).  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48091369"
 ##  <a name="WhatsNext"></a> Étape suivante  
  Maintenant que vous avez créé votre premier rapport dans le Générateur de rapports, vous pouvez effectuer les autres didacticiels et commencer à créer des rapports à partir de vos propres données. Pour exécuter le Générateur de rapports, vous devez avoir l’autorisation d’accéder à vos sources de données, telles que des bases de données, avec un *chaîne de connexion*, ce qui permet de vous connecter à la source de données. Votre administrateur système sera en mesure de vous fournir les informations nécessaires.  
   
- Pour utiliser les autres didacticiels, vous avez besoin du nom d’une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] et informations d’identification suffisantes pour l’accès en lecture seule aux bases de données. Là encore, vous pouvez vous adresser à votre administrateur système.  
+ Pour utiliser les autres didacticiels, vous avez besoin du nom d'une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] et d'informations d'identification suffisantes pour accéder en lecture seule aux bases de données. Là encore, vous pouvez vous adresser à votre administrateur système.  
   
  Pour finir, afin d'enregistrer vos rapports sur un serveur de rapports ou un site SharePoint intégré à un serveur de rapports, il vous faut posséder l'URL et les autorisations nécessaires. Vous pouvez créer les rapports que vous créez directement à partir de votre ordinateur, mais les rapports procurent davantage de fonctionnalités lorsqu'ils sont exécutés à partir du serveur de rapports ou d'un site SharePoint. Vous devez disposer des autorisations nécessaires pour exécuter vos rapports (ou d'autres rapports) à partir du serveur de rapports ou du site SharePoint sur lequel ils sont publiés. Pour obtenir ces autorisations, contactez votre administrateur système.  
   

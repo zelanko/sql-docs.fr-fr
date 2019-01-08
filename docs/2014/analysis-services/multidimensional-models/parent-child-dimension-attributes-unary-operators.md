@@ -15,12 +15,12 @@ ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e69e7f66b633a218ad5a2fb77cd44047c9810ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ecd203bfce80ffe4c64dcf0ca274f7e50f6ff1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131604"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544395"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>Opérateurs unaires dans les dimensions parent-enfant
   Dans une dimension contenant une relation parent-enfant dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous spécifiez une colonne d’opérateur unaire (ou cumul personnalisé) qui détermine le cumul personnalisé de tous les membres non calculés de l’attribut parent. L'opérateur unaire est appliqué aux membres dès que les valeurs des membres parents sont évaluées. La propriété **UnaryOperatorColumn** définie sur un attribut parent (**Usage**=Parent) spécifie la colonne d’une table dans la vue de source de données qui contient les opérateurs unaires. Les valeurs des opérateurs de cumul personnalisé qui sont stockés dans cette colonne sont appliquées à chaque membre de l'attribut.  
@@ -34,7 +34,7 @@ ms.locfileid: "48131604"
 |Opérateurs unaires|Description|  
 |--------------------|-----------------|  
 |+ (signe plus)|La valeur du membre est ajoutée à la valeur d'agrégation des membres frères placés avant le membre. Ceci est l'opérateur par défaut si aucune colonne d'opérateur unaire n'est définie pour un attribut.|  
-|- (signe moins)|La valeur du membre est soustraite de la valeur d'agrégation des membres frères placés avant le membre.|  
+|-(signe moins)|La valeur du membre est soustraite de la valeur d'agrégation des membres frères placés avant le membre.|  
 |* (astérisque)|La valeur du membre est multipliée par la valeur d'agrégation des membres frères placés avant le membre.|  
 |/ (barre oblique)|La valeur du membre est divisée par la valeur d'agrégation des membres frères placés avant le membre.|  
 |~ (tilde)|La valeur du membre n'est pas prise en compte.|  
@@ -46,8 +46,8 @@ ms.locfileid: "48131604"
  Sous l’onglet **Navigateur** du Concepteur de dimensions, vous pouvez afficher les opérateurs unaires en regard de chaque membre d’une hiérarchie. Vous pouvez également modifier les opérateurs unaires lorsque vous utilisez une dimension activée en écriture. Si la dimension n'est pas activée en écriture, vous devez utiliser un outil pour modifier directement la source de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)   
- [Opérateurs de cumul personnalisés dans les Dimensions Parent-enfant](parent-child-dimension-attributes-custom-rollup-operators.md)   
- [Démarrer l’Assistant Business Intelligence dans le Concepteur de dimensions](database-dimensions-bi-wizard-in-dimension-designer.md)  
+ [Référence des propriétés d'attribut de dimension](dimension-attribute-properties-reference.md)   
+ [Opérateurs de cumul personnalisé dans les dimensions parent-enfant](parent-child-dimension-attributes-custom-rollup-operators.md)   
+ [Démarrer l'Assistant Business Intelligence dans le Concepteur de dimensions](database-dimensions-bi-wizard-in-dimension-designer.md)  
   
   

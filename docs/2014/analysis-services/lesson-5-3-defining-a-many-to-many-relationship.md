@@ -11,12 +11,12 @@ ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50997645272c5ec900a8a89a8da41a1da421ac5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c05e45f5641c2d325c5e7d05472e3881ee7c807
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105429"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531147"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Définition d’une relation plusieurs-à-plusieurs
   Lorsque vous définissez une dimension, chaque fait est joint généralement à un et un seul membre de dimension, tandis qu'un même membre de dimension peut être associé à plusieurs faits différents. Par exemple, chaque client peut avoir plusieurs commandes mais chaque commande se rapporte à un seul client. Dans la terminologie des bases de données relationnelles, on parle de *relation un-à-plusieurs*. Cependant, un seul fait peut parfois être joint à plusieurs membres de dimension. Dans la terminologie des bases de données relationnelles, on parle de *relation plusieurs-à-plusieurs*. Par exemple, l'achat d'un client peut être motivé par plusieurs raisons et un même motif d'achat peut être associé à plusieurs achats. Une table de jointure sert à définir les motifs de vente relatifs à chaque achat. Une dimension Sales Reason créée à partir de relations de ce type aura par conséquent plusieurs membres associés à une seule transaction de vente. Les dimensions plusieurs-à-plusieurs étendent le modèle dimensionnel au-delà du schéma en étoile classique et prend en charge les analyses complexes lorsque les dimensions ne sont pas reliées directement à une table de faits.  
@@ -26,7 +26,7 @@ ms.locfileid: "48105429"
  Dans une dimension plusieurs à plusieurs, les valeurs sont des sommes distinctes, ce qui signifie qu'elles ne s'agrègent pas plus d'une fois au membre Tous.  
   
 > [!NOTE]  
->  Afin de prendre en charge une relation de dimensions plusieurs-à-plusieurs, il est nécessaire de définir une relation clé primaire-clé étrangère dans la vue de source de données entre toutes les tables impliquées. Si vous ne procédez pas ainsi, vous ne pourrez pas sélectionner le groupe de mesures intermédiaire correct pour établir la relation sous l’onglet **Utilisation de la dimension** du Concepteur de cube.  
+>  Pour prendre en charge une relation de dimension plusieurs-à-plusieurs, une relation de clé étrangère-clé primaire doit être définie dans la vue de source de données entre toutes les tables qui sont impliquées. Si vous ne procédez pas ainsi, vous ne pourrez pas sélectionner le groupe de mesures intermédiaire correct pour établir la relation sous l’onglet **Utilisation de la dimension** du Concepteur de cube.  
   
  Pour plus d’informations, consultez [Relations de dimension](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)et [Définir une relation plusieurs à plusieurs et les propriétés d’une relation plusieurs à plusieurs](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48105429"
   
 5.  Dans la boîte de dialogue **Ajouter/supprimer des tables** , ajoutez la table **DimSalesReason** et la table **FactInternetSalesReason** à la liste **Objets inclus** , puis cliquez sur **OK**.  
   
-     Notez que les relations clé primaire-clé étrangère entre les tables impliquées sont établies automatiquement, car ces relations sont définies dans la base de données relationnelles sous-jacente. Si ces relations n'étaient pas définies dans la base de données relationnelles, il vous faudrait les définir dans la vue de source de données.  
+     Notez que les relations de clé étrangère-clé primaires entre les tables impliquées sont établies automatiquement, car ces relations sont définies dans la base de données relationnelle sous-jacente. Si ces relations n'étaient pas définies dans la base de données relationnelles, il vous faudrait les définir dans la vue de source de données.  
   
 6.  Dans le menu **Format** , pointez sur **Disposition automatique**, puis cliquez sur **Diagramme**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48105429"
   
 7.  Dans la liste **Colonne de nom** , sélectionnez **SalesReasonName**.  
   
-8.  Cliquez sur **Suivant**.  
+8.  Cliquer sur **Suivant**.  
   
 9. Dans la page **Sélectionner les attributs de la dimension** , l’attribut **Sales Reason Key** est sélectionné automatiquement car c’est l’attribut de clé. Sélectionnez la case à cocher en regard de la **Sales Reason Reason Type** d’attribut, remplacez son nom par `Sales Reason Type`, puis cliquez sur **suivant**.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "48105429"
  [Définition de la granularité des dimensions dans un groupe de mesures](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser des diagrammes dans le Concepteur de vue de Source de données &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Utiliser des diagrammes dans un concepteur de vues de sources de données &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [Relations de dimension](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Définir une relation plusieurs à plusieurs et les propriétés d’une relation plusieurs à plusieurs](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

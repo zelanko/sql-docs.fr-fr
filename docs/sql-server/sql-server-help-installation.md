@@ -10,12 +10,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 00db3d0ca027a0f188831281bb2c844b5bc8462d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514534"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202448"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Visionneuse d’aide et aide en mode hors connexion SQL Server
 
@@ -207,7 +207,7 @@ Quand vous appuyez sur F1, ou cliquez sur **Aide** ou l’icône **?** dans une 
 1. Pointez sur **Définir les préférences pour l’aide** dans le menu Aide, puis choisissez **Lancer dans le navigateur** ou **Lancer dans la visionneuse d’aide**. 
 2. Appuyez sur F1, ou cliquez sur **Aide** ou **?** dans les boîtes de dialogue là où ces options sont disponibles pour afficher les rubriques en ligne contextuelles dans l’environnement sélectionné.
 
->  [!NOTE]
+> [!NOTE]
 >  L’aide F1 fonctionne uniquement quand vous êtes connecté. Il n’existe aucune source hors connexion pour l’aide F1. 
 
 ## <a name="systems-without-internet-access"></a>Systèmes sans accès à Internet

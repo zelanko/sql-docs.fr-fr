@@ -17,12 +17,12 @@ ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b617305a8766ff94a699a054ac394be406dc7873
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057089"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420002"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Procédure pas à pas Diagramme de cluster (Compléments d'exploration de données)
   Une fois que vous avez créé un modèle de clustering, vous pouvez l’importer dans Visio à l’aide du **Cluster** mettre en forme, puis continuer de personnaliser et d’améliorer la disposition. Le **formes d’exploration de données pour Visio** incluent les contrôles personnalisés suivants pour l’utilisation des diagrammes d’exploration de données :  
@@ -73,9 +73,9 @@ ms.locfileid: "48057089"
   
 7.  Laissez l’option **nombre de lignes dans le graphique**, en tant que 5.  
   
-     Cette option ne modifie pas le nombre de clusters dans le modèle ; elle limite simplement le nombre d'attributs pouvant être affichés comme fonctionnalités de chaque cluster.  
+     Cette option ne change pas le nombre de clusters dans le modèle ; elle limite simplement le nombre d’attributs qui peuvent être affichées en tant que fonctionnalités de chaque cluster.  
   
-     Cependant, l'option joue le rôle de filtre sur les données du graphique ; vous ne pouvez donc pas augmenter le nombre d'éléments ultérieurement.  
+     Toutefois, l’option agit comme un filtre sur les données du graphique, donc vous ne pouvez pas augmenter le nombre d’éléments plus tard.  
   
 8.  Cliquez sur **Avancé**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48057089"
   
      ![Cliquez sur Avancé pour choisir les couleurs des formes](media/dm13-visio-clusteroptions-advanced.gif "cliquez sur Avancé pour choisir les couleurs des formes")  
   
-     **Conseil :** certaines couleurs peuvent être modifiées ultérieurement à l’aide de thèmes Visio et des contrôles d’édition de forme. Toutefois, les thèmes Visio remplaceront également certaines de ces sélections de couleurs ; par conséquent, nous recommandons de commencer par les couleurs par défaut et d'appliquer les modifications progressivement.  
+     **Conseil :** Certaines couleurs peuvent être modifiées ultérieurement à l’aide de thèmes Visio et des contrôles d’édition de forme. Toutefois, les thèmes Visio remplaceront également certaines de ces sélections de couleurs ; par conséquent, nous recommandons de commencer par les couleurs par défaut et d'appliquer les modifications progressivement.  
   
 9. Cliquez sur **Terminer** pour créer le graphique.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48057089"
   
 4.  Cliquez sur le **Add-Ins** ruban et afficher une barre d’outils personnalisées utilisées pour travailler avec des diagrammes d’exploration de données :  
   
-     **Mise en page**  
+     **Disposition**  
      Optimise la disposition des clusters pour qu'ils tiennent sur la page active.  
   
      **Redimensionner la Page**  
@@ -124,7 +124,7 @@ ms.locfileid: "48057089"
   
      Cependant, si vous appliquez une mise en forme spéciale autre que la valeur par défaut générée par l'Assistant, y compris certains arrière-plans, ces valeurs peuvent ne pas être visibles.  
   
-     **Curseur**  
+     **Slider**  
      Filtre les lignes entre les clusters. Le fait de déplacer le curseur vers le haut supprime toutes les associations, sauf les plus importantes.  
   
      **Ombrage**  

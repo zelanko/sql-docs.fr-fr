@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1eced8802504704506402d2ffb75609a096cb51a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40437cd27af345aff91314f07888c66e2bdff2d0
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689217"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321745"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,14 +66,13 @@ sp_addextendedproperty
  Les entrées valides sont ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE et NULL.  
   
 > [!IMPORTANT]  
->  La possibilité de spécifier USER comme type de niveau 0 dans une propriété étendue d'un objet de type de niveau 1 sera supprimée dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez à la place SCHEMA en tant que type de niveau 0. Par exemple, lorsque vous définissez une propriété étendue sur une table, spécifiez le schéma de la table au lieu d'un nom d'utilisateur. La possibilité de spécifier TYPE comme type de niveau 0 sera supprimée dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour TYPE, utilisez SCHEMA comme type de niveau 0 et TYPE comme type de niveau 1.  
+>  La possibilité de spécifier USER comme type de niveau 0 dans une propriété étendue d'un objet de type de niveau 1 sera supprimée dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez à la place SCHEMA en tant que type de niveau 0. Par exemple, lorsque vous définissez une propriété étendue sur une table, spécifiez le schéma de la table au lieu d'un nom d'utilisateur. La possibilité de spécifier TYPE comme type de niveau 0 sera supprimée dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour TYPE, utilisez SCHEMA comme type de niveau 0 et TYPE comme type de niveau 1.  
   
  [ @level0name=] {'*level0_object_name*'}  
  Nom du type d'objet de niveau 0 spécifié. *level0_object_name* est **sysname** avec NULL comme valeur par défaut.  
   
  [ @level1type=] {'*level1_object_type*'}  
- Type d'objet de niveau 1. *level1_object_type* est **varchar (128)**, avec NULL comme valeur par défaut. Les entrées valides sont AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION et NULL.  
-  
+ Type d'objet de niveau 1. *level1_object_type* est **varchar (128)**, avec NULL comme valeur par défaut. Les entrées valides sont agrégat, par défaut, fonction, nom de fichier logique, procédure, file d’attente, règle, séquence, SYNONYME, TABLE, TABLE_TYPE, TYPE, vue, COLLECTION de schémas XML et NULL.    
  [ @level1name=] {'*level1_object_name*'}  
  Nom du type d'objet de niveau 1 spécifié. *level1_object_name* est **sysname**, avec NULL comme valeur par défaut.  
   
@@ -87,7 +86,7 @@ sp_addextendedproperty
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Les objets d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont répartis sur trois niveaux (0, 1 et 2) pour la définition des propriétés étendues. Le niveau 0 est le plus élevé et est défini en tant qu'objets contenus dans l'étendue de la base de données. Les objets de niveau 1 figurent dans l'étendue du schéma ou de l'utilisateur tandis que les objets de niveau 2 se trouvent dans les objets de niveau 1. Vous pouvez définir des propriétés étendues pour les objets de tous ces niveaux.  
+ Pour la définition des propriétés étendues, les objets d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont répartis sur trois niveaux : 0, 1 et 2. Le niveau 0 est le plus élevé et est défini en tant qu'objets contenus dans l'étendue de la base de données. Les objets de niveau 1 figurent dans l'étendue du schéma ou de l'utilisateur tandis que les objets de niveau 2 se trouvent dans les objets de niveau 1. Vous pouvez définir des propriétés étendues pour les objets de tous ces niveaux.  
   
  Les références à un objet d'un niveau donné doivent être qualifiées par les noms des objets de niveau supérieur possédant ou contenant l'objet en question. Par exemple, lorsque vous ajoutez une propriété étendue à une colonne de table (niveau 2), vous devez également indiquer le nom de la table (niveau 1) qui contient la colonne et le schéma (niveau 0) qui contient la table.  
   
@@ -103,7 +102,7 @@ sp_addextendedproperty
 ## <a name="schema-vs-user"></a>Schéma ou  Utilisateur  
  Nous ne vous recommandons pas de spécifier l'argument USER comme type de niveau 0 lorsque vous appliquez une propriété étendue à un objet de base de données, car vous pourriez engendrer une ambiguïté de résolution de noms. Par exemple, supposez que l'utilisateur Marie détient deux schémas (Marie et MySchema) et que ceux-ci contiennent tous deux une table intitulée MyTable. Si Mary ajoute une propriété étendue à la table MyTable et spécifie  **@level0type = n’User '**,  **@level0name = Mary**, il n’est pas clairement à quelle table la propriété étendue est appliquée. Pour assurer la compatibilité descendante, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique la propriété étendue à la table contenue dans le schéma nommé Mary.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les membres des rôles de base de données fixes db_owner et db_ddladmin peuvent ajouter des propriétés étendues à n'importe quel objet, avec toutefois la restriction suivante : db_ddladmin ne peut pas ajouter de propriétés à la base de données elle-même, ni aux utilisateurs ou rôles.  
   
  Les utilisateurs peuvent ajouter des propriétés étendues à des objets qu'ils possèdent ou pour lesquels ils bénéficient d'autorisations ALTER ou CONTROL.  
@@ -122,7 +121,7 @@ EXEC sp_addextendedproperty
 @value = 'AdventureWorks2012 Sample OLTP Database';  
 ```  
   
-### <a name="b-adding-an-extended-property-to-a-column-in-a-table"></a>B. Ajout d'une propriété étendue à une colonne dans une table  
+### <a name="b-adding-an-extended-property-to-a-column-in-a-table"></a>b. Ajout d'une propriété étendue à une colonne dans une table  
  L'exemple suivant ajoute une propriété de légende à la colonne `PostalCode` dans la table `Address`.  
   
 ```  

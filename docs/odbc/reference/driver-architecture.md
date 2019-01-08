@@ -14,12 +14,12 @@ ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8e49b89d233880652f4b19879ff8e658bc4abe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b593c3bd8619f0fbba47357f312479c2cd14063b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628397"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527181"
 ---
 # <a name="driver-architecture"></a>Architecture des pilotes
 Architecture du pilote se divise en deux catégories, selon les instructions SQL de processus logiciel :  
@@ -28,9 +28,9 @@ Architecture du pilote se divise en deux catégories, selon les instructions SQL
   
 -   **Pilotes basés sur SGBD** le pilote accède aux données physiques via un moteur de base de données distincte. Dans ce cas le pilote traite uniquement les appels ODBC ; Il passe les instructions SQL au moteur de base de données pour traitement. Par exemple, Oracle pilotes sont basés sur SGBD, car Oracle a un moteur de base de données autonome qu'utilise le pilote. Où se trouve le moteur de base de données est immatériel. Il peut résider sur le même ordinateur que le pilote ou un autre ordinateur sur le réseau ; Il peut même être accessible via une passerelle.  
   
- Architecture du pilote est généralement utile pour les rédacteurs de pilotes ; Autrement dit, architecture de pilote généralement indifféremment à l’application. Toutefois, l’architecture peut affecter si une application peut utiliser SQL de SGBD spécifiques. Par exemple, Microsoft Access fournit un moteur de base de données autonome. Si un pilote Microsoft Access est basé sur des SGBD, il accède aux données via ce moteur, l’application peut passer les instructions SQL à Microsoft Access pour le moteur pour traitement.  
+ Architecture du pilote est généralement utile pour les rédacteurs de pilotes ; Autrement dit, architecture de pilote généralement indifféremment à l’application. Toutefois, l’architecture peut affecter si une application peut utiliser SQL de SGBD spécifiques. Par exemple, Microsoft Access fournit un moteur de base de données autonome. Si un pilote Microsoft Access est basé sur des SGBD, il accède aux données via ce moteur - l’application peut passer les instructions SQL de Microsoft Access pour le moteur pour traitement.  
   
- Toutefois, si le pilote est basé sur fichier, autrement dit, il contient un moteur de propriétaire qui accède directement au fichier .mdb de Microsoft® Access, toutes les tentatives de transmettre les instructions spécifiques à Microsoft Access SQL au moteur sont susceptibles d’entraîner des erreurs de syntaxe. La raison est que le moteur de propriétaire est susceptible d’implémenter uniquement ODBC SQL.  
+ Toutefois, si le pilote est basé sur fichier ; autrement dit, il contient un moteur de propriétaire qui accède au fichier Microsoft® Access .mdb directement - toutes les tentatives de transmettre les instructions spécifiques à Microsoft Access SQL au moteur sont susceptibles d’entraîner des erreurs de syntaxe. La raison est que le moteur de propriétaire est susceptible d’implémenter uniquement ODBC SQL.  
   
  Cette section contient les rubriques suivantes.  
   

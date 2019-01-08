@@ -16,12 +16,12 @@ ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b23083870b2f60e3d844d921705f4612ecc975f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b596612d711925687087a2263013fdf13a0c491e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079419"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418460"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>Requête (Compléments d'exploration de données SQL Server)
   ![Bouton modèle de requête, ruban Exploration de données](media/dmc-query.gif "bouton modèle de requête, ruban Exploration de données")  
@@ -30,7 +30,7 @@ ms.locfileid: "48079419"
   
  L'Assistant **Requête** propose également un éditeur avancé pour créer ou modifier des modèles d'exploration de données, pour générer des requêtes personnalisées ou pour utiliser des structures qui ne sont pas prises en charge dans les autres outils, tels que des datasets imbriqués.  
   
--   Utilisez l'éditeur de texte pour taper ou coller des données dans les instructions DMX (Data Mining Extensions) que vous avez créées à un autre endroit.  
+-   Utilisez l’éditeur de texte pour taper ou coller dans les instructions d’Extensions DMX (Data Mining) que vous avez créé un autre emplacement.  
   
 -   Utilisez le générateur de requêtes interactif pour composer une instruction DMX personnalisée à l'aide de modèles et de boîtes de dialogue.  
   
@@ -48,8 +48,8 @@ ms.locfileid: "48079419"
   
  Vous pouvez à tout moment cliquer sur **Avancé** pour basculer vers l' **Éditeur de requêtes avancé d'exploration de données**qui vous permet de contrôler davantage chaque partie de l'instruction DMX. Pour plus d’informations sur l’utilisation des outils de modification de requête avancés, consultez [éditeur de requête d’exploration de données données avancé](advanced-data-mining-query-editor.md).  
   
-### <a name="requirements"></a>Spécifications  
- Pour utiliser le **requête** Assistant, vous devez être connecté à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Qui plus est, le serveur doit contenir au moins un modèle d'exploration de données d'un type approprié. Si aucun modèle d'exploration de données n'est disponible, vous pouvez en créer un à l'aide des Assistants fournis dans le Client d'exploration de données pour Excel. Pour plus d’informations sur la création d’un nouveau mode d’exploration de données à l’aide d’un Assistant, consultez [création d’un modèle d’exploration de données](creating-a-data-mining-model.md).  
+### <a name="requirements"></a>Configuration requise  
+ Pour utiliser l'Assistant **Requête** , vous devez être connecté à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Qui plus est, le serveur doit contenir au moins un modèle d'exploration de données d'un type approprié. Si aucun modèle d'exploration de données n'est disponible, vous pouvez en créer un à l'aide des Assistants fournis dans le Client d'exploration de données pour Excel. Pour plus d’informations sur la création d’un nouveau mode d’exploration de données à l’aide d’un Assistant, consultez [création d’un modèle d’exploration de données](creating-a-data-mining-model.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Déploiement et mise à l’échelle des modèles d’exploration de données &#40;les données des compléments d’exploration de données pour Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   

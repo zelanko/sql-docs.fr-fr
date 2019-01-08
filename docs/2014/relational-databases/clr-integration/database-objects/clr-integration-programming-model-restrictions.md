@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a7b7dfcbd9d7cc7407ed33cc0ea00e93df839b93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187939"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509899"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrictions du modèle de programmation de l'intégration du CLR
   Quand vous créez une procédure stockée managée ou un autre objet de base de données managés, il existe certains contrôles de code effectués par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] effectue des contrôles sur l’assembly de code managé lorsqu’il est tout d’abord inscrit dans la base de données, à l’aide de la `CREATE ASSEMBLY` instruction et également lors de l’exécution. Le code managé est également vérifié pendant l'exécution, car dans un assembly il peut y avoir des chemins d'accès de code qui peuvent ne jamais être atteints pendant l'exécution.  Cela fournit la souplesse nécessaire pour inscrire notamment des assemblys tiers, afin qu'un assembly ne soit pas bloqué là où il y a du code « potentiellement dangereux » conçu pour s'exécuter dans un environnement client, mais ne soit jamais exécuté dans le CLR hébergé. Le code managé doit satisfaire les exigences varient selon que l’assembly est inscrit en tant que `SAFE`, `EXTERNAL_ACCESS`, ou `UNSAFE`, `SAFE` en cours les plus strictes et sont répertoriées ci-dessous.  
@@ -86,7 +86,7 @@ ms.locfileid: "48187939"
  Pendant l'exécution, les conditions suivantes sont vérifiées pour l'assembly de code. Si l'une de ces conditions est remplie, le code managé n'est pas autorisé à s'exécuter et une exception est levée.  
   
 ### <a name="unsafe"></a>UNSAFE  
- Le chargement d'un assembly, soit de manière explicite en appelant la méthode `System.Reflection.Assembly.Load()` à partir d'un tableau d'octets, soit de manière implicite par le biais de l'utilisation de l'espace de noms `Reflection.Emit`, n'est pas autorisé.  
+ Charger un assembly-soit explicitement en appelant le `System.Reflection.Assembly.Load()` (méthode) à partir d’un tableau d’octets, ou implicitement via l’utilisation de `Reflection.Emit` espace de noms-n’est pas autorisée.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Toutes les conditions `UNSAFE` sont vérifiées.  

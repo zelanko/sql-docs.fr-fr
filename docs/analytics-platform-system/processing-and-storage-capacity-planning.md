@@ -1,6 +1,6 @@
 ---
-title: Capacité de traitement et de stockage - système de plateforme d’Analytique | Documents Microsoft
-description: Vos exigences professionnelles de déterminer le nombre d’unités d’échelle de données et la taille des disques de nœud de calcul dont vous avez besoin dans votre solution de système de plateforme Analytique (APS).
+title: Capacité de stockage et traitement - Analytique Platform System | Microsoft Docs
+description: Besoins de votre entreprise déterminent le nombre d’unités d’échelle de données et la taille des disques de nœud de calcul dont vous avez besoin dans votre appliance Analytique Platform System (APS).
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,30 +9,30 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f552372ac108d219ad410b88ec9911ecaea63ab3
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 7188ace65e31d92cc5acfdc684457b219836d2d1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539599"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527801"
 ---
-# <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacité de traitement et de stockage dans le système de plateforme Analytique
-Vos exigences professionnelles de déterminer le nombre d’unités d’échelle de données et la taille des disques de nœud de calcul dont vous avez besoin dans votre solution de système de plateforme Analytique (APS). Utilisez ces calculs de traitement et de stockage pour guider la capacité de votre achat et les décisions de planification.  
+# <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacité de stockage et de traitement d’Analytique Platform System
+Besoins de votre entreprise déterminent le nombre d’unités d’échelle de données et la taille des disques de nœud de calcul dont vous avez besoin dans votre appliance Analytique Platform System (APS). Utilisez ces calculs de traitement et de stockage pour guider votre capacité d’achat et planification des décisions.  
   
   
-## <a name="section1"></a>Planification de la capacité de traitement  
-Performances des requêtes pour SQL Server Parallel Data Warehouse (PDW) dépendent fortement du nombre de cœurs de processeurs travaillant sur vos données en parallèle. Dans les limites, l’augmentation du parallélisme améliore les performances de requête de traitement parallèle massif (MPP). Même si la taille de vos données est relativement faible, la puissance du moteur de requête MPP est améliorée en ayant de parallélisme supérieur.  
+## <a name="section1"></a>Planification de capacité de traitement  
+Performances des requêtes pour SQL Server Parallel Data Warehouse (PDW) dépendent fortement du nombre de cœurs de processeur travailler sur vos données en parallèle. Dans les limites, l’augmentation du parallélisme améliore les performances de requête de traitement massivement parallèle (MPP). Même si la taille de vos données est relativement faible, la puissance du moteur de requête MPP est renforcée par avoir un meilleur parallélisme.  
   
-Par exemple, un matériel avec les nœuds de calcul 12 a 192 cœurs de processeur qui traitent de vos données en parallèle. C’est le degré de parallélisme 192 ! Un matériel avec les nœuds de calcul 56 a 896 cœurs fonctionnent tous en parallèle. Cet ordre de grandeur de parallélisme n’est pas réalisable sans MPP informatique.  
+Par exemple, un matériel avec 12 nœuds de calcul a 192 cœurs de processeur qui traitent de vos données en parallèle. C’est le degré de parallélisme 192 ! Une appliance dotée des nœuds de calcul 56 a 896 cœurs travaillent en parallèle. Cette grandeur de parallélisme n’est pas réalisable sans informatique MPP.  
   
-À mesure que le nombre de nœuds de calcul augmente, montée en puissance parallèle de l’application nécessite que l’ajout de plusieurs nœuds de calcul à la fois pour obtenir un avantage notable. Les fournisseurs de matériel prend en charge des configurations spécifiques uniquement des unités d’échelle de données pour vous assurer que l’avantage de la mise à l’échelle de l’application compense le coût de redistribuer les données entre plusieurs nœuds de calcul.  
+À mesure que le nombre de nœuds de calcul augmente, montée en charge l’appliance nécessite l’ajout de plusieurs nœuds de calcul à un moment pour obtenir un avantage notable. Fournisseurs de matériel prend en charge des configurations spécifiques uniquement à l’échelle des unités de données pour vous assurer que l’avantage de la mise à l’échelle de l’appliance compense le coût de redistribuer les données sur plusieurs nœuds de calcul.  
   
-### <a name="data-scale-unit-configuration-examples---hpe"></a>Exemples de configuration de l’unité d’échelle de données - HPE  
-Voici des exemples des configurations prises en charge HPE pour Uunits de mise à l’échelle de données. Ils peuvent être différentes des plus récente configurations prises en charge, mais sont fournis sous la forme d’un exemple montrant comment augmenter la capacité en environ 20 pour cent.  
+### <a name="data-scale-unit-configuration-examples---hpe"></a>Exemples de configuration d’unité d’échelle de données - HPE  
+Voici des exemples des configurations HPE pris en charge pour les données à l’échelle Uunits. Ils peuvent être différentes des plus récente configurations prises en charge, mais sont fournis sous la forme d’un exemple montrant comment augmenter la capacité en environ 20 pour cent.  
   
-Extension est le pourcentage de capacité de gain en augmentant la Uunits de mise à l’échelle de données à partir d’une ligne à la suivante. Par exemple, augmenter les unités d’échelle de données à partir de 6 à 8 donne une augmentation de 33 % des cœurs de processeur et de la mémoire.  Cela augmente l’espace disque qui n’est pas affichée dans cette table.  
+Majoration est le pourcentage de capacité de gain en augmentant la Uunits de mise à l’échelle de données à partir d’une ligne à la suivante. Par exemple, augmenter les unités d’échelle de données à partir de 6 à 8 donne une augmentation de 33 % des cœurs de processeur et mémoire.  Elle augmente également l’espace disque qui n’est pas indiqué dans cette table.  
   
-|Unités d’échelle de données|Nœuds de calcul|Cœurs de processeur|Mémoire (Go)|Extension|  
+|Unités d’échelle de données|Nœuds de calcul|Cœurs de processeur|Mémoire (Go)|Majoration|  
 |--------------------|-----------------|-------------|-----------------|----------|  
 |1|2|32|512|-|  
 |2|4|64|1024|100%|  
@@ -50,20 +50,20 @@ Extension est le pourcentage de capacité de gain en augmentant la Uunits de mis
   
 Explication :  
   
--   **Unités d’échelle de données** par appliance. Pour en savoir plus sur les unités d’échelle de données, consultez [Analytique plateforme composants matériels](hardware-components.md).  
+-   **Unités d’échelle de données** par appliance. Pour en savoir plus sur les unités d’échelle de données, consultez [composants matériel de système de plateforme Analytique](hardware-components.md).  
   
 -   **Nœuds de calcul** par appliance.  
   
--   **Cœurs de processeur** par appliance. Il y a 16 noyaux par nœud de calcul noyau par chaque paire de disque en miroir. Pour la structure de disque du nœud de calcul, consultez [Analytique plateforme composants matériels](hardware-components.md).  
+-   **Cœurs de processeur** par appliance. Il existe 16 noyaux par nœud de calcul, un seul cœur par chaque paire de disque en miroir. Pour la structure de disque du nœud de calcul, consultez [composants matériel de système de plateforme Analytique](hardware-components.md).  
   
--   **Mémoire** par appliance. Chaque cœur dispose de 256 Go de mémoire.  
+-   **Mémoire** par appliance. Chaque cœur a 256 Go de mémoire.  
   
-### <a name="data-scale-unit-configuration-examples--dell-quanta"></a>Échelle unité configuration exemples de données – Dell, Quanta  
-Voici des exemples des configurations Dell et Quanta pris en charge pour Uunits de mise à l’échelle de données. Ils peuvent être différentes des plus récente configurations prises en charge, mais sont fournis sous la forme d’un exemple montrant comment augmenter la capacité en environ 20 pour cent.  
+### <a name="data-scale-unit-configuration-examples---dell-quanta"></a>Mise à l’échelle unité configuration exemples de données - Dell, Quanta  
+Voici des exemples des configurations pour les données à l’échelle Uunits Dell et Quanta pris en charge. Ils peuvent être différentes des plus récente configurations prises en charge, mais sont fournis sous la forme d’un exemple montrant comment augmenter la capacité en environ 20 pour cent.  
   
-Extension est le pourcentage de capacité de gain en augmentant la Uunits de mise à l’échelle de données à partir d’une ligne à la suivante. Par exemple, augmenter les unités d’échelle de données à partir de 6 à 8 donne une augmentation de 33 % des cœurs de processeur et de la mémoire. Cela augmente l’espace disque qui n’est pas affichée dans cette table.  
+Majoration est le pourcentage de capacité de gain en augmentant la Uunits de mise à l’échelle de données à partir d’une ligne à la suivante. Par exemple, augmenter les unités d’échelle de données à partir de 6 à 8 donne une augmentation de 33 % des cœurs de processeur et mémoire. Elle augmente également l’espace disque qui n’est pas indiqué dans cette table.  
   
-|Unités d’échelle de données|Nœuds de calcul|Cœurs de processeur|Mémoire (Go)|Extension|  
+|Unités d’échelle de données|Nœuds de calcul|Cœurs de processeur|Mémoire (Go)|Majoration|  
 |--------------------|-----------------|-------------|-----------------|----------|  
 |1|3|48|768|-|  
 |2|6|96|1536|100%|  
@@ -79,30 +79,30 @@ Extension est le pourcentage de capacité de gain en augmentant la Uunits de mis
 |18|54|864|13,824|20%|  
   
 ## <a name="section2"></a>Planification de la capacité de stockage  
-Cette table estime que vous pouvez charger et stocker jusqu'à 6 plusieurs pétaoctets de données non compressées sur un dispositif de système de plateforme Analytique entièrement intégrée. 
+Cette table estime que vous pouvez charger et stocker jusqu'à 6 plusieurs pétaoctets de données non compressées sur une appliance Analytique Platform System entièrement intégrée. 
   
-|Fournisseur|Taille du lecteur|Nœud de par calcul de stockage physique des données|Nœuds de calcul maximales par rack|Stockage physique des données maximal par rack|Estimation du stockage de données maximal d’utilisateurs par rack|Racks maximales|Estimation de stockage de données maximal d’utilisateurs par appliance|  
+|fournisseur|Taille du lecteur|Nœud de par calcul de stockage de données physiques|Nombre maximal de nœuds de calcul par rack|Stockage de données maximal physiques par rack|Estimation du stockage de données maximal d’utilisateurs par rack|Racks maximales|Estimation du stockage de données maximal d’utilisateurs par appareil|  
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
-|HPE|1 TO|JUSQU'À 16 TO|8|128 TO|320 TO|7|2,240 TO|  
+|HPE|1 TO|16 TO|8|128 TO|320 TO|7|2,240 TO|  
 |HPE|2 TO|32 TO|8|256 TO|640 TO|7|4,480 TO|  
 |HPE|3 TO|48 TO|8|384 TO|960 TO|7|6,720 TO|  
-|DELL|1 TO|JUSQU'À 16 TO|9|144 TO|360 TO|6|2,160 TO|  
+|DELL|1 TO|16 TO|9|144 TO|360 TO|6|2,160 TO|  
 |DELL|2 TO|32 TO|9|288 TO|720 TO|6|4 320 TO|  
-|DELL|3 TO|48 TO|9|432 TO|1080 TO|6|6,480 TO|  
+|DELL|3 TO|48 TO|9|432 TO|TO-1 080 PIXELS|6|6,480 TO|  
   
 Explication :  
   
 -   **Taille du lecteur** est 1, 2 ou 3 To pour chaque fournisseur de matériel.  
   
--   **Stockage physique des données par le nœud de calcul** = (taille du lecteur) * (16 disques par nœud de calcul). Les disques en miroir ne sont pas inclus, car elles sont pour assurer la redondance.  
+-   **Stockage de données physiques par nœud de calcul** = (taille du lecteur) * (16 disques par nœud de calcul). Les disques en miroir ne sont pas inclus dans la mesure où ils sont pour la redondance.  
   
--   **Les nœuds de calcul maximal par rack** est spécifique au fournisseur de matériel.  
+-   **Les nœuds de calcul maximale par rack** est spécifique au fournisseur de matériel.  
   
--   **Stockage physique des données maximal par rack** = (stockage de données physiques par nœud de calcul) * (nombre maximal de nœuds de calcul par rack).  
+-   **Stockage de données maximal physiques par rack** = (stockage de données physiques par nœud de calcul) * (nombre maximal de nœuds de calcul par rack).  
   
--   **Estimée de stockage de données maximal d’utilisateurs par rack** = (stockage physique des données maximal par rack) * (5 pour un taux de compression 5:1) \* (50 % pour les journaux et tempDB). Il s’agit d’une estimation classique pour les données utilisateur non compressé qui peuvent être chargées et stockées sur l’appareil. Ceci est une estimation et n’est pas appliquée par le logiciel. Le stockage des données utilisateur réelle dépend de vos données et de votre configuration.  
+-   **Estimation du stockage de données maximal d’utilisateurs par rack** = (stockage physique des données maximale par rack) * (5 pour un taux de compression 5:1) \* (50 % pour les journaux et tempDB). Il s’agit de pessimiste pour les données utilisateur non compressé qui peuvent être chargées et stockées sur l’appliance. Ceci est une estimation et n’est pas appliquée par le logiciel. Le stockage des données utilisateur réel dépend de vos données et votre configuration.  
   
--   **Racks maximales** est spécifique à chaque fournisseur de matériel.  
+-   **Racks maximales** est propre à chaque fournisseur de matériel.  
   
--   **Estimation du stockage de données maximal par appliance** = (stockage de données maximal estimé par rack) * (racks Maximum). Il s’agit de la taille de total général des données utilisateur que vous pouvez charger et stocker sur un matériel totalement intégré pessimiste.  
+-   **Estimation du stockage de données maximal par appliance** = (stockage de données maximal estimé par rack) * (racks Maximum). Il s’agit de pessimiste de la taille de total général des données utilisateur que vous pouvez charger et stocker sur un matériel totalement intégré.  
   

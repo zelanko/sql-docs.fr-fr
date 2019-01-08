@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 42af33d78a13961b7a85ae408a3c693edf759e75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667988"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408866"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurer un cluster de disque partagé SLES pour SQL Server
 
@@ -102,7 +102,7 @@ Une autre option de stockage consiste à utiliser le partage de fichiers SMB :
 
 ### <a name="configure-an-nfs-server"></a>Configurer un serveur NFS
 
-Pour configurer un serveur NFS, consultez les étapes suivantes dans la documentation de SUSE : [configuration d’un serveur NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
+Pour configurer un serveur NFS, consultez les étapes suivantes dans la documentation de SUSE : [Configuration de serveur NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
 
 ### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>Configurer tous les nœuds de cluster pour vous connecter au stockage NFS partagé
 
@@ -123,7 +123,7 @@ Avant de configurer le client NFS pour monter le chemin d’accès des fichiers 
     - [Configuration des Clients](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
 
     > [!NOTE]
-    > Il est recommandé de suivre les meilleures pratiques et les recommandations en matière de stockage hautement disponible NFS de SUSE : [stockage NFS hautement disponible avec DRBD et Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
+    > Il est recommandé de suivre les meilleures pratiques et les recommandations en matière de stockage hautement disponible NFS de SUSE : [Stockage NFS hautement disponible avec DRBD et Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
 
 2. Vérifiez que SQL Server démarre correctement avec le nouveau chemin de fichier. Pour cela sur chaque nœud. À ce stade qu’un seul nœud doit exécuter SQL Server à la fois. Ils ne peuvent pas tous deux exécuter en même temps, car ils essaiera à la fois d’accéder aux fichiers de données simultanément (pour éviter le démarrage accidentellement de SQL Server sur les deux nœuds, une ressource de cluster de système de fichiers pour vous assurer que le partage n’est pas monté à deux reprises par les différents nœuds). Les commandes suivantes démarrer SQL Server, vérifiez l’état, puis arrêtez SQL Server.
 
@@ -196,8 +196,8 @@ Avant de configurer le client NFS pour monter le chemin d’accès des fichiers 
 
 Les étapes suivantes expliquent comment configurer la ressource de cluster pour SQL Server. Il existe deux paramètres que vous souhaitez personnaliser.
 
-- **Nom de la ressource SQL Server**: un nom pour la ressource SQL Server en cluster. 
-- **Valeur de délai d’attente**: la valeur de délai d’attente est la durée pendant laquelle le cluster attend pendant une ressource est mise en ligne. Pour SQL Server, il s’agit de l’heure que vous attendez de SQL Server à suivre pour mettre le `master` en ligne de base de données. 
+- **Nom de la ressource SQL Server**: Un nom pour la ressource SQL Server en cluster. 
+- **Valeur de délai d’attente**: La valeur de délai d’attente est la durée pendant laquelle le cluster attend pendant une ressource est mise en ligne. Pour SQL Server, il s’agit de l’heure que vous attendez de SQL Server à suivre pour mettre le `master` en ligne de base de données. 
 
 Mettre à jour les valeurs à partir du script suivant pour votre environnement. Exécuter sur un nœud pour configurer et démarrer le service en cluster.
 
@@ -248,7 +248,7 @@ Full list of resources:
 
 ## <a name="managing-cluster-resources"></a>La gestion des ressources de cluster
 
-Pour gérer vos ressources de cluster, consultez la rubrique SUSE suivante : [gestion des ressources de Cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+Pour gérer vos ressources de cluster, consultez la rubrique SUSE suivante : [La gestion des ressources de Cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
 ### <a name="manual-failover"></a>basculement manuel
 

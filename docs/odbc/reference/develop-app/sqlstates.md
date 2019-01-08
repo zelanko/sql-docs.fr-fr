@@ -14,12 +14,12 @@ ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6aa0875017c4b7a099af8da1c6f8eca105006aca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ad31d9fd07e0b9f7bdf633f8ed546331880787c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682947"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527730"
 ---
 # <a name="sqlstates"></a>Codes SQLSTATE
 SQLSTATE fournit des informations détaillées sur la cause d’un avertissement ou d’erreur. Le SQLSTATE dans ce manuel est basées sur celles que l'on trouve dans la spécification ISO/IEF CLI, bien que ces SQLSTATE qui commencent par messagerie instantanée est spécifiques à ODBC.  
@@ -28,7 +28,7 @@ SQLSTATE fournit des informations détaillées sur la cause d’un avertissement
   
 -   **Non-exhaustivité** bien que ce manuel répertorie un grand nombre d’erreurs et avertissements et les causes possibles pour ces erreurs et les avertissements, il n’est pas terminée et que vous sera probablement jamais ; les implémentations de pilote simplement varient trop. N’importe quel pilote donné ne renvoie tous les SQLSTATE répertoriées dans ce manuel et peuvent retourner SQLSTATE non répertoriés dans ce manuel.  
   
--   **Complexité** certains moteurs de base de données, les moteurs de base de données relationnelle en particulier, retourner littéralement des milliers d’erreurs et avertissements. Les pilotes de ces moteurs sont peu susceptibles de mapper l’ensemble de ces erreurs et avertissements à SQLSTATE en raison de l’effort impliqué, l’inexactness des mappages, la grande taille du code qui en résulte et la valeur faible du code qui en résulte, qui renvoie souvent de programmation erreurs qui ne doivent jamais se produire au moment de l’exécution. Par conséquent, les pilotes doivent être mappés autant d’erreurs et avertissements comme semble raisonnable et veillez à mapper ces erreurs et des avertissements dans la logique d’application peuvent être basées, par exemple SQLSTATE 01004 (données tronquées).  
+-   **Complexité** certains moteurs de base de données - moteurs de base de données relationnelle particulièrement - retournent littéralement des milliers d’erreurs et avertissements. Les pilotes de ces moteurs sont peu susceptibles de mapper l’ensemble de ces erreurs et avertissements à SQLSTATE en raison de l’effort impliqué, l’inexactness des mappages, la grande taille du code qui en résulte et la valeur faible du code qui en résulte, qui renvoie souvent de programmation erreurs qui ne doivent jamais se produire au moment de l’exécution. Par conséquent, les pilotes doivent être mappés autant d’erreurs et avertissements comme semble raisonnable et veillez à mapper ces erreurs et des avertissements dans la logique d’application peuvent être basées, par exemple SQLSTATE 01004 (données tronquées).  
   
  Étant donné que SQLSTATE n’est pas retournés fiable, la plupart des applications affiche simplement les à l’utilisateur, ainsi que leur message de diagnostic associé, qui est souvent adaptée à l’erreur spécifique ou d’avertissement qui s’est produite et le code d’erreur natif. Il est rarement aucune perte de fonctionnalité à effectuer, étant donné que les applications ne peuvent pas de base logique de programmation sur la plupart des SQLSTATE quand même. Par exemple, supposons que **SQLExecDirect** retourne SQLSTATE 42000 (syntaxe ou violation d’accès). Si l’instruction SQL qui a provoqué cette erreur est codé en dur ou générée par l’application, il s’agit d’une erreur de programmation et le code doit être corrigé. Si l’instruction SQL est entrée par l’utilisateur, il s’agit d’une erreur de l’utilisateur et l’application a fait tout ce qui est possible en informant l’utilisateur du problème.  
   

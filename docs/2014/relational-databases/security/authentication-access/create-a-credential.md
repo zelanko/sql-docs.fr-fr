@@ -14,12 +14,12 @@ ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c71098b580891ddb0c1975e429ede783856cf223
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab0560e0df37c80a82017e5f076af969931a79e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182909"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519030"
 ---
 # <a name="create-a-credential"></a>Create a Credential
   Cette rubrique explique comment créer des informations d'identification dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -61,13 +61,13 @@ ms.locfileid: "48182909"
   
 1.  Dans l’Explorateur d’objets, développez le dossier **Sécurité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Informations d’identification** et sélectionnez **Nouvelles informations d’identification…**.  
+2.  Cliquez avec le bouton droit sur le dossier **Informations d’identification** et sélectionnez **Nouvelles informations d’identification...**.  
   
 3.  Dans la boîte de dialogue **Nouvelles informations d'identification** , saisissez le nom des information d'identification dans la zone **Nom d'identification** .  
   
 4.  Dans la zone **Identité** , tapez le nom du compte utilisé pour les connexions sortantes (en quittant le contexte de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). En général, il s'agit d'un compte d'utilisateur Windows, mais l'identité peut être un autre type de compte.  
   
-     Vous pouvez aussi cliquer sur les points de suspension **(...)** pour ouvrir la boîte de dialogue **Sélectionner l’utilisateur ou le groupe** .  
+     Vous pouvez également cliquer sur les points de suspension **(...)** pour ouvrir la boîte de dialogue **Sélectionner un utilisateur ou un groupe**.  
   
 5.  Dans les zones **Mot de passe** et **Confirmer le mot de passe** , tapez le mot de passe du compte indiqué dans la zone **Identité** . Si **Identité** correspond à un compte d'utilisateur Windows, il s'agit du mot de passe Windows. Si le mot de passe n'est pas requis, la zone **Mot de passe** peut être vide.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48182909"
   
 ###  <a name="Credential"></a> Pour créer des informations d’identification  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

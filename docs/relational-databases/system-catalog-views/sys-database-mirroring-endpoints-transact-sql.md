@@ -23,12 +23,12 @@ ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4a791f5d47382e78ce9bbfe34d939cffc273515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa757203ba82794a0564e50c715134e502c6ac1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734597"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538079"
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ ms.locfileid: "47734597"
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**\<héritée de colonnes >**|—|Hérite des colonnes de **sys.endpoints** (pour plus d’informations, consultez [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
-|**rôle**|**tinyint**|Rôle de mise en miroir. Peut prendre l'une des valeurs suivantes :<br /><br /> **0** = none<br /><br /> **1** = partner<br /><br /> **2** = témoin<br /><br /> **3** = all<br /><br /> Remarque : Cette valeur est pertinente uniquement pour la mise en miroir de base de données.|  
-|**role_desc**|**nvarchar(60)**|Description du rôle de mise en miroir. Peut prendre l'une des valeurs suivantes :<br /><br /> **NONE**<br /><br /> **PARTENAIRE**<br /><br /> **TÉMOIN**<br /><br /> **ALL**<br /><br /> Remarque : Cette valeur est pertinente uniquement pour la mise en miroir de base de données.|  
+|**\<héritée de colonnes >**|-|Hérite des colonnes de **sys.endpoints** (pour plus d’informations, consultez [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
+|**rôle**|**tinyint**|Rôle de mise en miroir. Peut prendre l'une des valeurs suivantes :<br /><br /> **0** = none<br /><br /> **1** = partner<br /><br /> **2** = témoin<br /><br /> **3** = all<br /><br /> Remarque : Cette valeur est pertinente uniquement pour la mise en miroir de bases de données.|  
+|**role_desc**|**nvarchar(60)**|Description du rôle de mise en miroir. Peut prendre l'une des valeurs suivantes :<br /><br /> **NONE**<br /><br /> **PARTENAIRE**<br /><br /> **TÉMOIN**<br /><br /> **ALL**<br /><br /> Remarque : Cette valeur est pertinente uniquement pour la mise en miroir de bases de données.|  
 |**is_encryption_enabled**|**bit**|**1** signifie que le chiffrement est activé.<br /><br /> **0** signifie que le chiffrement est désactivé.|  
 |**connection_auth**|**tinyint**|Type d'authentification de connexion requis pour les connexions à ce point de terminaison. Peut prendre l'une des valeurs suivantes :<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -NÉGOCIER<br /><br /> **4** -CERTIFICAT<br /><br /> **5** -NTLM, DE CERTIFICAT<br /><br /> **6** -KERBEROS, LE CERTIFICAT<br /><br /> **7** -NEGOCIATE, CERTIFICAT<br /><br /> **8** -CERTIFICAT, NTLM<br /><br /> **9** -CERTIFICAT, KERBEROS<br /><br /> **10** -CERTIFICAT, NEGOTIATE|  
 |**connection_auth_desc**|**Nvarchar (60)**|Description du type d'authentification requis pour les connexions à ce point de terminaison. Peut prendre l'une des valeurs suivantes :<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  
 |**certificate_id**|**Int**|ID du certificat utilisé pour l'authentification, le cas échéant.<br /><br /> 0 = L'authentification Windows et utilisée.|  
-|**encryption_algorithm**|**tinyint**|Algorithme de chiffrement. Peut prendre l'une des valeurs suivantes :<br /><br /> **0** – NONE<br /><br /> **1** – RC4<br /><br /> **2** – AES<br /><br /> **3** : NONE, RC4<br /><br /> **4** : AUCUN, AES<br /><br /> **5** – RC4, AES<br /><br /> **6** – AES, RC4<br /><br /> **7** : NONE, RC4, AES<br /><br /> **8** : AUCUN, AES, RC4|  
+|**encryption_algorithm**|**tinyint**|Algorithme de chiffrement. Peut prendre l'une des valeurs suivantes :<br /><br /> **0** -AUCUN<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -NONE, RC4<br /><br /> **4** -AUCUN, AES<br /><br /> **5** -RC4, AES<br /><br /> **6** -AES, RC4<br /><br /> **7** -NONE, RC4, AES<br /><br /> **8** -AUCUN, AES, RC4|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Description de l'algorithme de chiffrement. Peut prendre l'une des valeurs suivantes :<br /><br /> Aucune<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
 ## <a name="remarks"></a>Notes  
@@ -55,7 +55,7 @@ ms.locfileid: "47734597"
 > [!NOTE]  
 >  L'algorithme RC4 est uniquement pris en charge pour des raisons de compatibilité descendante. Le nouveau matériel ne peut être chiffré à l'aide de RC4 ou de RC4_128 que lorsque la base de données se trouve dans le niveau de compatibilité 90 ou 100. (Non recommandé.) Utilisez à la place un algorithme plus récent, tel qu'un des algorithmes AES. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, le matériel chiffré à l’aide de RC4 ou RC4_128 peut être déchiffré dans n’importe quel niveau de compatibilité.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

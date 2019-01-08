@@ -16,12 +16,12 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1db5b5dcf8e1bf5c06882971d3bf3cd2e5a0309
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124899"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531581"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Créer des fonctions définies par l'utilisateur (moteur de base de données)
   Cette rubrique décrit comment créer une fonction définie par l'utilisateur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "48124899"
   
 -   Les fonctions définies par l'utilisateur ne peuvent pas renvoyer plusieurs jeux de résultats. Utilisez une procédure stockée si vous devez renvoyer plusieurs jeux de résultats.  
   
--   La gestion des erreurs est restreinte dans une fonction définie par l'utilisateur. Une fonction définie par l’utilisateur ne prend pas en charge TRY…CATCH, @ERROR ou RAISERROR.  
+-   La gestion des erreurs est restreinte dans une fonction définie par l'utilisateur. Une fonction UDF ne prend pas en charge TRY... CATCH, @ERROR ou RAISERROR.  
   
 -   Les fonctions définies par l'utilisateur ne peuvent pas appeler une procédure stockée, mais elles peuvent appeler une procédure stockée étendue.  
   

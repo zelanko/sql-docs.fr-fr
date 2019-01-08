@@ -11,12 +11,12 @@ ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a8d8a5238caa09d9b4a3d85d014b2891c3f427e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45acf7bef608bb23d697fc18381872f741cc2e21
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145909"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401364"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Exploration du modèle Decision Tree (Didacticiel sur l'exploration de données de base)
   L'algorithme MDT ([!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Tree) prédit quelles colonnes influencent la décision d'acheter un vélo en fonction des colonnes restantes dans le jeu d'apprentissage.  
@@ -101,7 +101,7 @@ ms.locfileid: "48145909"
  [Exploration du modèle de Clustering &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Onglet arbre de décision &#40;visionneuse de modèle d’exploration de données&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)   
  [Onglet réseau de dépendances &#40;visionneuse de modèle d’exploration de données&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)   
  [Explorer un modèle à l’aide de la visionneuse d’arborescences Microsoft](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  

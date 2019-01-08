@@ -13,15 +13,15 @@ ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ecf079c86362aeae78b7c9ceaad640b0ad1519c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db77de95e83e596a8a301fa65885ee640c742a71
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786957"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543561"
 ---
 # <a name="types-of-cursors-ado"></a>Types de curseurs (ADO)
-En règle générale, votre application doit utiliser le curseur de la plus simple qui fournit l’accès aux données requises. Toutes les caractéristiques supplémentaires au-delà de ses fonctions de base (avant uniquement, en lecture seule, statique, défilement, sans tampon) a un prix, dans la mémoire du client, de la charge réseau ou les performances. Dans de nombreux cas, les options de curseur par défaut génèrent un curseur plus complexe que votre application a réellement besoin.  
+En règle générale, votre application doit utiliser le curseur de la plus simple qui fournit l’accès aux données requises. Toutes les caractéristiques supplémentaires au-delà de ses fonctions de base (avant uniquement, en lecture seule, statique, défilement, sans tampon) a un prix - dans la mémoire du client, de la charge réseau ou les performances. Dans de nombreux cas, les options de curseur par défaut génèrent un curseur plus complexe que votre application a réellement besoin.  
   
  Votre choix du type de curseur dépend de comment votre application utilise le jeu de résultats et également de plusieurs considérations de conception, y compris la taille du jeu de résultats, le pourcentage des données susceptibles d’être utilisés, la sensibilité aux modifications de données et les performances de l’application configuration requise.  
   

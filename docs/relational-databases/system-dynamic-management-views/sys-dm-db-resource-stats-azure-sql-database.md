@@ -22,17 +22,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f00a7e8db9e5b91e5b722598c991c7a8dbc2e67c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbf31fb20ebab569e681cda717cb62ff5f973447
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596117"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396786"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (base de données Azure SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Retourne la consommation d’UC, e/s et la mémoire pour un [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] base de données. Il existe une ligne pour chaque période de 15 secondes, même s'il n'y a aucune activité dans la base de données. Les données historiques sont conservées pendant une heure.  
+  Retourne la consommation d'UC, d’E/S et de mémoire pour une base de données [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il existe une ligne pour chaque période de 15 secondes, même s'il n'y a aucune activité dans la base de données. Les données historiques sont conservées pendant une heure.  
   
 |Colonnes|Type de données|Description|  
 |-------------|---------------|-----------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "47596117"
 > [!TIP]  
 >  Pour plus d’informations sur ces limites et les niveaux de service, consultez les rubriques [niveaux de Service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) et [capacités et limites de Service](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue nécessite l'autorisation VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Notes  

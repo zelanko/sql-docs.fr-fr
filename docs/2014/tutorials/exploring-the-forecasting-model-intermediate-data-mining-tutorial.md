@@ -11,15 +11,15 @@ ms.assetid: 0a00f409-050f-4b92-9763-ba31a6aa3052
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ff9743774a9c05f4369cb2d24fde592bf011225
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d49bda5b1616a2052542b6047c1291dd64763e1d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150985"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401704"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Exploration du modèle de prévision (Didacticiel sur l'exploration de données intermédiaire)
-  Maintenant que vous avez créé le modèle de prévision d’exploration de données, vous pouvez explorer les résultats à l’aide de la **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données. Le [!INCLUDE[msCoName](../includes/msconame-md.md)] temps série visionneuse contient deux onglets : **graphiques** et **modèle**.  
+  Maintenant que vous avez créé le modèle de prévision d’exploration de données, vous pouvez explorer les résultats à l’aide de la **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données. La Visionneuse de l'algorithme MTS ([!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series) contient deux onglets : **Graphiques** et **modèle**.  
   
  En outre, vous pouvez utiliser la visionneuse générique d'arborescences Microsoft avec tous les modèles. Chaque vue présente une image légèrement différente des informations comprises dans le modèle de série chronologique.  
   
@@ -50,17 +50,17 @@ ms.locfileid: "48150985"
   
      Le graphique contient à présent uniquement les 6 lignes de série suivantes, afin que vous puissiez plus facilement comparer les tendances des vélos M200 et T1000.  
   
-    -   **M200 Europe : Quantity**  
+    -   **M200 Europe : Quantité**  
   
-    -   **M200 North America : quantité**  
+    -   **M200 North America : Quantité**  
   
-    -   **M200 Pacific : quantité**  
+    -   **M200 Pacific : Quantité**  
   
-    -   **T1000 Europe : Quantity**  
+    -   **T1000 Europe : Quantité**  
   
-    -   **T1000 North America : quantité**  
+    -   **T1000 North America : Quantité**  
   
-    -   **T1000 Pacific : quantité**  
+    -   **T1000 Pacific : Quantité**  
   
  ![Série de prédire la quantité M200 et T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "M200 et T1000 la quantité de prédiction de série")  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48150985"
   
 3.  Notez l'échelle de l'axe des X. Les modifications portant sur les données historiques et prédites sont toujours exprimées en pourcentage, mais les valeurs réelles sont ajustées automatiquement pour correspondre à toutes les valeurs présentées sur le graphique. Vous devez donc être vigilant lorsque vous comparez les modèles à ne pas compter uniquement sur les visuels. Pour obtenir exactement la valeur, ou le pourcentage d’augmentation et la valeur pour les prédictions, placez la souris sur la ligne en pointillés ou des lignes pleines, ou cliquez sur les lignes pour afficher les valeurs dans le **légende d’exploration de données**.  
   
-     **Conseil**: si le **légende d’exploration de données** n’est pas visible, basculez vers **modèle** afficher, avec le bouton droit n’importe quel nœud, puis sélectionnez **afficher la légende**.  
+     **Conseil**: Si le **légende d’exploration de données** n’est pas visible, basculez vers **modèle** afficher, avec le bouton droit n’importe quel nœud, puis sélectionnez **afficher la légende**.  
   
  Une fois ces tendances consultées, vous vous inquiétez du manque de données pour une partie de la série et vous vous demandez si vous pouvez obtenir des prédictions plus fiables en faisant la moyenne des ventes par modèle ou peut-être en calculant la moyenne des ventes par région. Vous allez explorer cette approche lors d'une leçon ultérieure de ce didacticiel.  
   
@@ -95,17 +95,17 @@ ms.locfileid: "48150985"
   
  Vous pouvez choisir la combinaison de la gamme de produits, région et mesures de ventes que vous souhaitez afficher en sélectionnant une série à partir de la **arborescence** liste déroulante de la **modèle** onglet.  
   
- Que pouvez-vous donc apprendre à partir de l'affichage du modèle sous forme d'arborescence ? Par exemple, comparons deux modèles, un qui dispose de plusieurs niveaux dans l'arborescence et un qui dispose d'un nœud unique.  
+ Que pouvez-vous donc apprendre à partir de l'affichage du modèle sous forme d'arborescence ? Par exemple, nous allons comparer deux modèles, un qui dispose de plusieurs niveaux dans l’arborescence et un qui a un seul nœud.  
   
 -   Lorsqu'un graphique d'arborescence contient un nœud unique, cela signifie que la tendance trouvée dans le modèle est principalement homogène avec le temps. Vous pouvez utiliser ce nœud unique, intitulé **tous les**, pour afficher la formule qui décrit la relation entre les variables d’entrée et le résultat.  
   
 -   Lorsqu'un graphique d'arbre pour une série chronologique a plusieurs branches, cela signifie que la série chronologique qui a été détectée est trop complexe pour être représentée sous la forme d'une équation unique. Au lieu de cela, le graphique d’arbre peut contenir plusieurs branches, chaque branche libellée avec les conditions qui ont provoqué l’arbre *fractionner*. Lorsque l'arborescence se fractionne, chaque branche représente un segment de temps différent, à l'intérieur duquel la tendance peut être décrite comme une équation unique.  
   
-     Par exemple, si vous examinez le graphique et que vous constatez une augmentation soudaine du volume des ventes à partir d’un jour de septembre et continue jusqu’aux fêtes, vous pouvez basculer vers le **modèle** pour afficher la date exacte dans laquelle la tendance a changé. Les branches de l'arborescence qui représentent « avant septembre » et « après septembre » contiendraient des formules différentes : une formule qui décrit mathématiquement les tendances des ventes jusqu'au fractionnement, et une autre formule qui décrit les tendances des ventes pour septembre jusqu'aux fêtes de fin d'année.  
+     Par exemple, si vous examinez le graphique et que vous constatez une augmentation soudaine du volume des ventes à partir d’un jour de septembre et continue jusqu’aux fêtes, vous pouvez basculer vers le **modèle** pour afficher la date exacte dans laquelle la tendance a changé. Les branches dans l’arborescence qui représentent « avant septembre » et « après septembre » contiendrait des formules différentes : une formule qui décrit mathématiquement les tendances des ventes jusqu’au fractionnement et une autre formule qui décrit les tendances des ventes pour septembre jusque les fêtes de fin d’année.  
   
 #### <a name="to-explore-the-decision-tree-for-a-time-series-model"></a>Pour explorer l'arbre de décision d'un modèle de série chronologique  
   
-1.  Dans le **arborescence** liste sur le **modèle** onglet de la visionneuse, sélectionnez le **T1000 Europe : quantité** série.  
+1.  Dans le **arborescence** liste sur le **modèle** onglet de la visionneuse, sélectionnez le **T1000 Europe : Quantité** série.  
   
      Cliquez sur le nœud intitulé **tous les**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48150985"
   
      Le **légende d’exploration de données** fournit les mêmes informations qui se trouve dans l’info-bulle. Si l'une de vos variables indépendantes est discrète, vous verrez également un histogramme indiquant la distribution des variables dans le nœud.  
   
-3.  Sélectionnez à présent une série chronologique différente à afficher. À l’aide de la **arborescence** liste sur le **modèle** onglet de la visionneuse, sélectionnez le **M200 North America : quantité** série.  
+3.  Sélectionnez à présent une série chronologique différente à afficher. À l’aide de la **arborescence** liste sur le **modèle** onglet de la visionneuse, sélectionnez le **M200 North America : Quantité** série.  
   
      Le graphique d’arbre contient maintenant une **tous les** nœud et deux nœuds enfants. En examinant les étiquettes situées sur les nœuds enfants, vous pouvez comprendre le degré de modification de la ligne de tendance.  
   
@@ -134,9 +134,9 @@ ms.locfileid: "48150985"
 ##  <a name="bkmk_Content"></a> (Facultatif) Visionneuse de l’arborescence de contenu générique  
  En plus de la visionneuse personnalisée pour la série chronologique, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit le **visionneuse de l’arborescence de contenu MicrosoftGeneric** pour une utilisation avec tous les modèles d’exploration de données. Cette visionneuse offre quelques avantages :  
   
--   **Visionneuse de série de temps Microsoft**: cette vue fusionne les résultats des deux algorithmes. Bien que vous puissiez afficher chaque série séparément, vous ne pouvez pas déterminer comment les résultats de chaque algorithme ont été combinés. De plus, dans cette vue, les info-bulles et la légende d'exploration de données affichent uniquement les statistiques les plus importantes.  
+-   **Microsoft Time Series visionneuse**: Cette vue fusionne les résultats des deux algorithmes. Bien que vous puissiez afficher chaque série séparément, vous ne pouvez pas déterminer comment les résultats de chaque algorithme ont été combinés. De plus, dans cette vue, les info-bulles et la légende d'exploration de données affichent uniquement les statistiques les plus importantes.  
   
--   **Visionneuse d’arborescence de contenu générique**: vous permet de parcourir et afficher toutes les séries de données qui ont été utilisés dans le modèle en même temps et si vous avez créé un mixte de modèle, les deux le ARIMA et les arbres ARTXP sont affichées dans le même graphique.  
+-   **Visionneuse de l’arborescence de contenu générique**: Vous permet de parcourir et afficher toutes les séries de données qui ont été utilisés dans le modèle en même temps et si vous avez créé un mixte de modèle, les deux le ARIMA et les arbres ARTXP sont affichées dans le même graphique.  
   
      Vous pouvez utiliser cette visionneuse pour obtenir toutes les statistiques des deux algorithmes, ainsi que les distributions des valeurs.  
   

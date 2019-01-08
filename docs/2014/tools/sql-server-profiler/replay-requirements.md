@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - event classes [SQL Server], replaying traces
@@ -16,12 +15,12 @@ ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 447792a89be970078fdfca3f1e79eadbcc25bbfe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b9da4b68bba6358ff473846fb710f8fa6454e5d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173669"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757701"
 ---
 # <a name="replay-requirements"></a>Conditions préalables à la relecture
   Pour relire les données de trace avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou Distributed Replay Utility, un jeu spécifique de classes et de colonnes d'événements doit être capturé dans la trace. Ces paramètres sont activés par défaut si le modèle de trace **TSQL_Replay** est utilisé pour configurer une trace utilisée ultérieurement pour la relecture. Cette rubrique décrit ces paramètres et d’autres configurations préalables à la relecture.  
@@ -124,7 +123,7 @@ ms.locfileid: "48173669"
  Pour savoir quelles autorisations sont nécessaires pour relire une trace, consultez [Autorisations nécessaires pour exécuter SQL Server Profiler](sql-server-profiler.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Relire une Table de Trace &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
+ [Relire une table de trace &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
  [Relire un fichier de trace &#40;SQL Server Profiler&#41;](replay-a-trace-file-sql-server-profiler.md)   
  [Informations de référence sur la classe d’événements SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_defaultdb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-defaultdb-transact-sql)   

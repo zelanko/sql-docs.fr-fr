@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 048929ec4ff58def3d392df3f326f31f98fe9d83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02db491e350de93aff1015583f71566af747c878
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205869"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780261"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Déployer un package de déploiement de modèle à l'aide de MDSModelDeploy
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], utilisez l'outil MDSModelDeploy pour déployer un package qui contient soit :  
@@ -37,9 +36,9 @@ ms.locfileid: "48205869"
   
 -   Un package de déploiement de modèle doit exister. Pour plus d’informations, consultez  [Créer un package de déploiement de modèle à l'aide de MDSModelDeploy](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
--   Vous devez être administrateur dans l'environnement où vous déployez le modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Vous devez être administrateur dans l'environnement où vous déployez le modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
--   Si vous mettez à jour un modèle avec des données, la version que vous déployez ne peut pas avoir l'état **Verrouillé** ou **Activé**.  
+-   Si vous mettez à jour un modèle avec des données, la version que vous déployez ne peut pas avoir l’état **Verrouillé** ou **Activé**.  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>Pour déployer un package de déploiement de modèle  
   
@@ -70,19 +69,19 @@ ms.locfileid: "48205869"
     -   Pour créer un modèle :  
   
         ```  
-        MDSModelDeploy deploynew –package PackageName -model ModelName -service ServiceName  
+        MDSModelDeploy deploynew -package PackageName -model ModelName -service ServiceName  
         ```  
   
     -   Pour créer un clone d'un modèle :  
   
         ```  
-        MDSModelDeploy deployclone –package PackageName  
+        MDSModelDeploy deployclone -package PackageName  
         ```  
   
     -   Pour mettre à jour un de modèle existant et ses données :  
   
         ```  
-        MDSModelDeploy deployupdate –package PackageName –version VersionName  
+        MDSModelDeploy deployupdate -package PackageName -version VersionName  
         ```  
   
     > [!IMPORTANT]  
@@ -90,7 +89,7 @@ ms.locfileid: "48205869"
   
      Où *PackageName* est le nom du fichier de package (.pkg), *ModelName* est le nom du nouveau modèle, *VersionName* est le nom de la version et *ServiceName* est le nom du service que vous avez retourné à l’étape précédente. Vérifiez que les noms de modèle et de version correspondent aux noms en respectant la casse.  
   
-6.  Lorsque le package est déployé, un message indiquant que l'opération de MDSModelDeploy est terminée s'affiche.  
+6.  Quand le package est déployé, un message indiquant que l’opération de MDSModelDeploy est terminée s’affiche.  
   
  **Remarques :**  
   

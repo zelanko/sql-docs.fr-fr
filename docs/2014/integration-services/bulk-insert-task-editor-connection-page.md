@@ -15,12 +15,12 @@ ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72b150ecf09dcf2c96c05ac690a366c6d2711586
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 047c5a572195520f194660753315fbe73ffe7c15
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226859"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523642"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Éditeur de tâche d'insertion en bloc (page Connexion)
   Utilisez la page **Connexion** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** pour définir la source et la destination de l'opération d'insertion en bloc et le format à utiliser.  
@@ -31,7 +31,7 @@ ms.locfileid: "48226859"
  **Connexion**  
  Sélectionnez un gestionnaire de connexions OLE DB dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour créer une connexion.  
   
- **Rubriques connexes :** [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md), [Configurer le gestionnaire de connexions OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md), [configurer le Gestionnaire de connexions OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **Table de destination**  
  Tapez le nom de la table de destination ou affichez ou sélectionnez une table ou une vue dans la liste.  
@@ -39,7 +39,7 @@ ms.locfileid: "48226859"
  **Format**  
  Sélectionnez la source du format de l'insertion en bloc. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Utiliser un fichier**|Sélectionnez un fichier contenant la spécification de format. Cette option affiche l'option dynamique **FormatFile**.|  
 |**Spécifier**|Spécifiez le format. Cette option affiche les options dynamiques `RowDelimiter` et `ColumnDelimiter`.|  
@@ -51,7 +51,7 @@ ms.locfileid: "48226859"
   
  Si vous accédez au fichier source en utilisant un gestionnaire de connexions de fichiers plats, la tâche d'insertion en bloc n'utilise pas le format défini dans le gestionnaire de connexions de fichiers plats. Elle utilise à la place le format spécifié dans un fichier de format, ou les valeurs des propriétés RowDelimiter et ColumnDelimiter de la tâche.  
   
- **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../2014/integration-services/file-connection-manager-editor.md), [Gestionnaire de connexions de fichiers plats](connection-manager/flat-file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Général&#41;](general-page-of-integration-services-designers-options.md), [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Colonnes&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md), [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Avancé&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions file](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md), [Flat File Connection Manager](connection-manager/flat-file-connection-manager.md), [Éditeur du Gestionnaire de connexions de fichiers plats &#40;Page Général&#41; ](general-page-of-integration-services-designers-options.md), [Éditeur du Gestionnaire de connexions de fichiers plats &#40;Page colonnes&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md), [Éditeur du Gestionnaire de connexions de fichiers plats &#40;Page avancé&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
  **Actualiser les tables**  
  Actualise la liste des tables et des vues.  
@@ -60,7 +60,7 @@ ms.locfileid: "48226859"
   
 ### <a name="format--use-file"></a>Format = Utiliser un fichier  
  **FormatFile**  
- Tapez le chemin du fichier de format ou cliquez sur le bouton avec des points de suspension **(…)** pour rechercher le fichier de format.  
+ Tapez le chemin du fichier de format ou cliquez sur le bouton avec des points de suspension **(...)** pour rechercher le fichier de format.  
   
 ### <a name="format--specify"></a>Format = Spécifier  
  `RowDelimiter`  
@@ -70,10 +70,10 @@ ms.locfileid: "48226859"
  Spécifiez le délimiteur de colonne dans le fichier source. La valeur par défaut est **Tab**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche d’insertion en bloc des &#40;Page Général&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
- [Éditeur de tâche d’insertion en bloc des &#40;Page Options&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
- [Page expressions](expressions/expressions-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de tâche d’insertion en bloc &#40;page Général&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
+ [Éditeur de tâche d’insertion en bloc &#40;page Options&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
+ [Page Expressions](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Flux de contrôle](control-flow/control-flow.md)  
   

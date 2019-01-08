@@ -14,17 +14,17 @@ ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01f456527d7be8a954fecdace730bd1f8e47936b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ba956d2e442c914ddc50f2f023f225252fb1295
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813047"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524486"
 ---
 # <a name="field-related-error-information"></a>Informations sur les erreurs liées aux champs
-Si une erreur est directement liée à un champ, par exemple, si les données sont manquantes ou si elle est de type incorrect pour le champ, vous pouvez récupérer plus d’informations sur la cause du problème en examinant le **champ** l’objet **état**  propriété. Cette propriété a été améliorée pour fournir des informations spécifiques sur le problème. Ainsi, par exemple, lorsqu’un appel à **UpdateBatch** échoue, la cause du problème peut être déterminé en examinant la **état** propriété de la **champs** dans chacune du concernés enregistrements. La propriété contient une des valeurs dans le **FieldStatusEnum** constante. Le tableau suivant contient les valeurs qui sont particulièrement intéressants lorsqu’une erreur se produit.  
+Si une erreur est directement liée à un champ, par exemple, si les données sont manquantes ou si elle est de type incorrect pour le champ - vous pouvez récupérer plus d’informations sur la cause du problème en examinant le **champ** l’objet **état**  propriété. Cette propriété a été améliorée pour fournir des informations spécifiques sur le problème. Ainsi, par exemple, lorsqu’un appel à **UpdateBatch** échoue, la cause du problème peut être déterminé en examinant la **état** propriété de la **champs** dans chacune du concernés enregistrements. La propriété contient une des valeurs dans le **FieldStatusEnum** constante. Le tableau suivant contient les valeurs qui sont particulièrement intéressants lorsqu’une erreur se produit.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|Indique que le champ ne peut pas être récupéré ou stocké sans perte de données.|  
 |**adFieldDataOverflow**|6|Indique que les données retournées par le fournisseur a dépassé le type de données du champ.|  

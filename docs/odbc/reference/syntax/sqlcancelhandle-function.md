@@ -15,18 +15,18 @@ ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a814b15255a485bf6fbc28ad31d4e789f8482447
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 655c3c76794b170b113442b14ae75cf977ac024c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662117"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391702"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle, fonction
 **Conformité**  
  Version introduite : ODBC 3.8  
   
- Conformité aux normes : aucun  
+ Conformité aux normes : None  
   
  Il est probable que la plupart des pilotes ODBC de 3,8 (et versions ultérieures) implémente cette fonction. Si un pilote n’effectue pas le cas, un appel à **SQLCancelHandle** avec une connexion gérer dans le *gérer* paramètre retourne SQL_ERROR avec SQLSTATE de IM001 et le message « pilote ne prend pas en charge cette fonction '' un appel pour **SQLCancelHandle** avec une instruction gérer en tant que le *gérer* paramètre sera mappé à un appel à **SQLCancel** par le Gestionnaire de pilotes et peuvent être traitées si le pilote implémente **SQLCancel**. Une application peut utiliser **SQLGetFunctions** pour déterminer si un pilote prend en charge **SQLCancelHandle**.  
   

@@ -18,12 +18,12 @@ ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 598a0dcfd221add02cf09297687cff17c897c4e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b127b3dac76663e77b7ce0fa4faa76a91628ccc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076539"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507774"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Utiliser des diagrammes dans un concepteur de vues de sources de données (Analysis Services)
   Un diagramme de vue de source de données (DSV) est une représentation visuelle des objets dans une vue DSV. Vous pouvez utiliser le diagramme en mode interactif pour ajouter, masquer, supprimer ou modifier des objets spécifiques. Vous pouvez également créer plusieurs diagramme sur la même vue DSV afin d'attirer l'attention sur un sous-ensemble des objets.  
@@ -47,7 +47,7 @@ ms.locfileid: "48076539"
   
  Pour créer un diagramme, cliquez avec le bouton droit n’importe où dans le volet **Bibliothèque de diagrammes** et cliquez sur **Nouveau diagramme**.  
   
- Lorsque vous définissez initialement une vue de source de données (DSV) dans un projet Analysis Services, toutes les tables et les vues ajoutées à la vue de source de données sont ajoutés à la \<toutes les Tables > diagramme. Ce diagramme s'affiche dans le volet Bibliothèque de diagrammes du Concepteur de vue de source de données. Les tables de ce diagramme (ainsi que leurs colonnes et relations) sont répertoriées dans le volet Tables et sont représentées graphiquement dans le volet des schémas. Toutefois, comme vous ajouter des tables, vues et requêtes nommées à la \<toutes les Tables > diagramme, le nombre d’objets dans ce diagramme rend difficile visualiser les relations, en particulier sous forme de plusieurs tables de faits sont ajoutées au diagramme et de dimension tables associées à plusieurs tables de faits.  
+ Lorsque vous définissez initialement une vue de source de données (DSV) dans un projet Analysis Services, toutes les tables et les vues ajoutées à la vue de source de données sont ajoutés à la \<toutes les Tables > diagramme. Ce diagramme s'affiche dans le volet Bibliothèque de diagrammes du Concepteur de vue de source de données. Les tables de ce diagramme (ainsi que leurs colonnes et relations) sont répertoriées dans le volet Tables et sont représentées graphiquement dans le volet des schémas. Toutefois, comme vous ajouter des tables, vues et requêtes nommées à la \<toutes les Tables > diagramme, le nombre d’objets dans ce diagramme rend difficile de visualiser les relations-en particulier en plusieurs tables de faits sont ajoutées au diagramme et de dimension tables associées à plusieurs tables de faits.  
   
  Pour faciliter la compréhension lorsque vous souhaitez uniquement consulter un sous-ensemble de tables dans la vue de source de données, vous pouvez définir des sous-diagrammes (appelés diagrammes) composés des sous-ensembles de tables, de vues et de requêtes nommées sélectionnés dans la vue de source de données. Vous pouvez utiliser des diagrammes pour grouper des éléments de la vue de source de données en fonction des besoins de votre société ou de votre solution.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "48076539"
   
      Pour centrer l’affichage d’une table déjà comprise dans le diagramme, sélectionnez-la dans le volet **Tables** .  
   
--   Localisateur de table dans le volet **Diagramme** . Le localisateur de table est une icône comportant quatre flèches qui se trouve à l’intersection des barres de défilement vertical et horizontal, dans l’angle inférieur droit du volet **Diagramme** . Il ouvre une représentation en miniature du diagramme en cours dans le volet Diagramme. Vous pouvez utiliser cette miniature pour changer la vue dans le volet Diagramme en sélectionnant un emplacement de votre choix dans le diagramme.  
+-   Localisateur de table dans **diagramme** volet, à savoir le localisateur de table est une icône de flèche de 4 voies située à l’intersection des barres de défilement verticale et horizontale dans le coin inférieur droit de la **diagramme** volet. Il ouvre une représentation en miniature du diagramme en cours dans le volet Diagramme. Vous pouvez utiliser cette miniature pour changer la vue dans le volet Diagramme en sélectionnant un emplacement de votre choix dans le diagramme.  
   
--   Utilisez la boîte de dialogue **Rechercher une table** , cliquez avec le bouton droit dans une zone ouverte du volet Diagramme et cliquez sur **Rechercher une table**. Sinon, cliquez sur la commande **Rechercher une table** dans la barre d’outils ou le menu **Vue de source de données** .  
+-   Utilisez le **rechercher une Table** boîte de dialogue zone-Right click dans une zone ouverte du volet Schéma et cliquez sur **rechercher une Table**. Sinon, cliquez sur la commande **Rechercher une table** dans la barre d’outils ou le menu **Vue de source de données** .  
   
      Vous pouvez taper des chaînes et des caractères génériques dans la zone Filtre pour afficher des sous-ensembles des tables du diagramme.  
   
@@ -91,6 +91,6 @@ ms.locfileid: "48076539"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md)   
- [Concepteur de vue de Source de données &#40;Analysis Services - données multidimensionnelles&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

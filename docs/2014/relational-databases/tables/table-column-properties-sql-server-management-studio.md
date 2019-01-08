@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65558
@@ -15,12 +14,12 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c5892e4824ae31bebe2b0f2047a52b751da025a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: a49bfc0da1b5e18a4ea486fa68834254bbe82882
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057756"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758581"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propriétés des colonnes de table (SQL Server Management Studio)
   Ces propriétés apparaissent dans le volet en bas du Concepteur de tables. Sauf indication contraire, vous pouvez modifier ces propriétés dans la fenêtre Propriétés lorsque la colonne est sélectionnée. Les **Propriétés des colonnes** peuvent être affichées par catégories ou par ordre alphabétique. Un grand nombre de propriétés apparaissent uniquement ou peuvent uniquement être modifiées pour certains types de données.  

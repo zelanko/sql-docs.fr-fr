@@ -16,12 +16,12 @@ ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7a4892ab57fc39f2888431b61e7b924496d9749f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f2f1f055974edc3625ed66a8d803358b8345494
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161843"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522172"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matrice de classification (Compléments d'exploration de données SQL Server)
   ![Bouton matrice de classification, ruban Exploration de données](media/dmc-cmatrix.gif "bouton matrice de Classification, ruban Exploration de données")  
@@ -31,7 +31,7 @@ ms.locfileid: "48161843"
  Dans ces compléments, utilisez le **matrice de Classification** Assistant pour sélectionner un modèle, spécifiez les données de test et puis générer une matrice de résultats.  
   
 ## <a name="how-to-read-a-classification-matrix"></a>Procédure : lire une matrice de classification  
- Supposons que votre objectif est de créer un programme de fidélisation des clients et d'affecter les clients aux catégories appropriées, afin que vous puissiez leur fournir un niveau approprié d'incitation. Vous avez implémenté trois niveaux pour le programme de récompense (bronze, argent et or) et les avez divulgué aux clients dans une phase de test. Vous avez également conçu un modèle qui analyse les clients et prédit les catégories correctes. Maintenant vous allez utiliser la matrice de classification sur les données de test pour déterminer la qualité du modèle est prédire l'offre correcte pour tous les clients.  
+ Supposons que votre objectif est de concevoir un programme de fidélisation des clients et affecter les clients aux catégories appropriées, afin que vous puissiez leur fournir le niveau approprié d’incitation. Vous avez implémenté trois niveaux pour le programme de récompense--bronze, argent et OR - et ces distribuée aux clients dans une phase d’évaluation. Vous avez également conçu un modèle qui analyse les clients et prédit les catégories correctes. Maintenant vous allez utiliser la matrice de classification sur les données de test pour déterminer la qualité du modèle est prédire l'offre correcte pour tous les clients.  
   
  La table de la matrice de classification vous indique combien de clients sont affectés à chaque catégorie selon le modèle, puis compare le résultat au nombre de clients qui se sont réellement inscrits pour chaque niveau de récompense.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48161843"
 |Bronze|**94.45 %**|15.18 %|1.70 %|  
 |Or|2.72 %|**84.82 %**|0.00%|  
 |Argent|1.84 %|0.00%|**93.80 %**|  
-|*Corriger*|*95.45 %*|*84.82 %*|*98.30 %*|  
+|*Correct*|*95.45 %*|*84.82 %*|*98.30 %*|  
 |*Mal classées*|*4.55 %*|*15.18 %*|*1.70 %*|  
   
 -   Chaque colonne indique les valeurs réelles dans le jeu de données de test.  
@@ -61,7 +61,7 @@ ms.locfileid: "48161843"
   
 3.  Sélectionnez la colonne pour laquelle vous souhaitez évaluer la précision. Vous pouvez choisir une seule colonne lorsque vous créez une matrice, mais la colonne peut avoir plusieurs valeurs.  
   
-     Conseil : Il peut être difficile d'interpréter une matrice de classification si votre colonne prédictible possède plusieurs colonnes à comparer.  
+     Conseil : Il peut être difficile d’interpréter une matrice de classification si votre colonne prédictible possède plusieurs colonnes à comparer.  
   
      Dans le **sélectionner des colonnes à prédire** page, vous pouvez également spécifier si vous souhaitez afficher le nombre de valeurs correctes et incorrectes, ou afficher un pourcentage.  
   
@@ -75,13 +75,13 @@ ms.locfileid: "48161843"
   
      L'Assistant crée un rapport contenant la matrice de classification ainsi que d'autres détails à propos de l'analyse. Ce rapport est enregistré en tant que table dans Excel, avec un résumé au-dessus du rapport qui indique combien de cas ont été prédits correctement et le nombre de prédictions incorrectes.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   
 -   Pour créer une matrice de classification, vous devez avoir accès à un modèle existant qui prend en charge les mesures de précision. Les modèles de prévision et les modèles d'association ne peuvent pas être mesurés à l'aide de cet outil.  
   
 -   Le modèle que vous mesurez doit prédire une valeur discrète ou qui a déjà été discrétisée.  
   
--   Si vous n'utilisez pas l'option permettant d'enregistrer un jeu de test avec votre structure ou modèle, vous devez obtenir un jeu de données d'entrée qui a le même nombre de colonnes, avec les types de données correspondants, comme ceux utilisés dans le modèle.  
+-   Si vous n’utilisez pas l’option pour enregistrer un jeu de test, ainsi que votre structure ou un modèle, vous devez obtenir un jeu de données d’entrée qui a essentiellement le même nombre de colonnes, avec mise en correspondance des types de données, comme ceux utilisés dans le modèle.  
   
 -   Le modèle d'exploration de données et les nouvelles données que vous utilisez à des fins de test doivent contenir au moins une colonne qui peut être prédite, et les colonnes doivent contenir le même type de données.  
   

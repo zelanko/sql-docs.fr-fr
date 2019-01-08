@@ -18,12 +18,12 @@ ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ab8c72a9b3b4dc3771705a1bccc89bb44a3905c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b99e16505cf6f7a08503a98f37ced7bedcdb12
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641737"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520814"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@loginame =** ] **'***connexion***'**  
+ [  **@loginame =** ] **'**_connexion_**'**  
  Est le nom de connexion. *connexion* est **sysname**, sans valeur par défaut. *connexion* peut être un existant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou un utilisateur de Windows ou un groupe.  
   
- [  **@language =** ] **'***langage***'**  
+ [  **@language =** ] **'**_langage_**'**  
  Est la langue par défaut du compte de connexion. *langage* est **sysname**, avec NULL comme valeur par défaut. *langage* doit être une langue valide sur le serveur. Si *langage* n’est pas spécifié, *langage* est définie sur la langue par défaut du serveur ; langue par défaut est définie par le **sp_configure** variable de configuration **langue par défaut**. Le changement de la langue par défaut du serveur n'affecte pas la langue par défaut des connexions existantes.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -62,7 +62,7 @@ sp_defaultlanguage [ @loginame = ] 'login'
   
  Pour plus d’informations sur les langues installées sur le serveur sont visibles dans le **sys.syslanguages** vue de catalogue.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY LOGIN.  
   
 ## <a name="examples"></a>Exemples  

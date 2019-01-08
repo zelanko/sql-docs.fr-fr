@@ -12,12 +12,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 550f4dbc3e733c3dee9fb200d85789931722e4f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5eaa6c702c02a3258ac66ec55081965d25a12a55
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214999"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541821"
 ---
 # <a name="create-views"></a>Créer des vues
   Vous pouvez créer des vues dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Une vue peut être utilisée aux fins suivantes :  
@@ -60,9 +60,9 @@ ms.locfileid: "48214999"
   
 1.  Dans l' **Explorateur d'objets**, développez la base de données dans laquelle vous souhaitez créer votre nouvelle vue.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Vues** , puis cliquez sur **Nouvelle vue**.  
+2.  Cliquez avec le bouton droit sur le dossier **Vues**, puis cliquez sur **Nouvelle vue...**.  
   
-3.  Dans la boîte de dialogue **Ajouter une table** , sélectionnez le ou les éléments que vous souhaitez inclure dans votre nouvelle vue dans l'un des onglets suivants : Tables, Vues, Fonctions et Synonymes.  
+3.  Dans le **ajouter une Table** boîte de dialogue, sélectionnez l’ou les éléments que vous souhaitez inclure dans votre nouvelle vue à partir d’un des onglets suivants : Tables, vues, fonctions et synonymes.  
   
 4.  Cliquez sur **Ajouter**, puis sur **Fermer**.  
   

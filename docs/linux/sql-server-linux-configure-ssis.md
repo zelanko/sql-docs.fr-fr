@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 957333697112105799d29aebecc3b3fcb049eb99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 600a40f0ff04d401cfddbdee0f214254b1d3f7a4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764967"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412506"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Configurer SQL Server Integration Services sur Linux avec ssis-conf
 
@@ -86,7 +86,7 @@ Enter the 25-character product key:
 
 La commande `telemetry` détermine si SSIS envoie des relevés de télémétrie à Microsoft.
 
-Pour les éditions gratuites (autrement dit, les éditions Express, Developer et Evaluation), le service de télémétrie est toujours activé. Si vous avez une édition gratuite, vous ne pouvez pas utiliser la commande `telemetry` pour désactiver la télémétrie.
+Pour les éditions gratuites (autrement dit, les éditions Express, Developer et Evaluation), le service de télémétrie est toujours activé. Si vous avez une édition gratuite, vous ne pouvez pas utiliser le `telemetry` commande pour désactiver la télémétrie.
 
 Entrez la commande suivante : `$ sudo /opt/ssis/bin/ssis-conf telemetry`.
 

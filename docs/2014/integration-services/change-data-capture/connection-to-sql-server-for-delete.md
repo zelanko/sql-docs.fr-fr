@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f347a4866a7b6566ae2f0759813ac99d7977f058
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b7c3b34f60f69a788c67022151dd90ddc9235e8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143809"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779951"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>Connexion à SQL Server pour la suppression
   Lorsqu’une connexion sans rôle de base de données qui inclut l’autorisation d’accès en écriture (par exemple le rôle **db_owner**) à la base de données MSXDBCDC tente de supprimer une instance Oracle CDC, la boîte de dialogue Connexion à SQL Server s’affiche.  
@@ -33,20 +32,20 @@ ms.locfileid: "48143809"
   
 -   **Authentification Windows**  
   
--   **Authentification SQL Server**: Si vous sélectionnez cette option, vous devez taper **l’identifiant** et le **mot de passe** de l’utilisateur dans l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous vous connectez.  
+-   **L’authentification SQL Server**: Si vous sélectionnez cette option, vous devez taper le **connexion** et **mot de passe** pour l’utilisateur dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous vous connectez à.  
   
  **Options**  
  Cliquez sur la flèche pour afficher les options disponibles à configurer. Vous pouvez choisir de conserver ces options avec leur valeur par défaut. Options disponibles :  
   
--   **Délai de connexion**: Tapez le délai (en secondes) pendant lequel le programme attend une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avant de générer une erreur de délai d’expiration. La valeur par défaut est **15**.  
+-   **Délai de connexion**: Tapez le délai (en secondes) le programme attend la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion soit établie avant de générer une erreur de délai d’attente. La valeur par défaut est **15**.  
   
--   **Délai d’exécution**: Tapez le délai (en secondes) pendant lequel le programme attend la fin d’exécution d’une commande SQL avant de générer une erreur de délai d’expiration. La valeur par défaut est **30**.  
+-   **Délai d’exécution**: Tapez le délai (en secondes) que le programme attend d’exécution de la commande SQL soit terminée avant de générer une erreur de délai d’attente. La valeur par défaut est **30**.  
   
--   **Chiffrer la connexion**: Sélectionnez **Chiffrer la connexion** pour garantir que la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] établie est chiffrée afin d’assurer la protection des données.  
+-   **Chiffrer la connexion**: Sélectionnez **chiffrer la connexion** pour vous assurer que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion établie est chiffrée pour garantir la confidentialité.  
   
--   **Avancé**: cliquez sur **Avancé** et tapez toutes les propriétés de connexion supplémentaires dans la boîte de dialogue Propriétés avancées de connexion, si nécessaire.  
+-   **Avancé** : Cliquez sur **Avancé** et tapez toutes les propriétés de connexion supplémentaires dans la boîte de dialogue Propriétés avancées de connexion, si nécessaire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Autorisations de connexion SQL Server nécessaires pour le service CDC](sql-server-connection-required-permissions-for-the-cdc-service.md)  
+ [Autorisations de connexion SQL Server requises pour le service de capture de données modifiées](sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
   

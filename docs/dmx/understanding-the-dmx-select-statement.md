@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720956a936127cf3fec82fabc4e140782fe2e0da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f76729b419fccf3d17e66ddd8ab00e8b54b1b264
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144834"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398072"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Présentation de l'instruction DMX Select
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "50144834"
   
      Dans ce cas, vous devez extraire la structure d'exploration de données, qui est votre domaine de données, puis rechercher les lignes individuelles dans les colonnes telles que Gender, Bike Buyer, et ainsi de suite.  
   
- **IMPORTANT :** tout ce qui est inclus dans la liste d’expressions ou dans le **où** clause doit provenir du domaine de données qui est défini par le **FROM** clause. Vous ne pouvez pas mélanger des domaines de données.  
+ **IMPORTANT :** Tout ce qui est inclus dans la liste d’expressions ou dans le **où** clause doit provenir du domaine de données qui est défini par le **FROM** clause. Vous ne pouvez pas mélanger des domaines de données.  
   
 ##  <a name="Select_Types"></a> Sélectionner les Types  
  La syntaxe de **sélectionnez** instruction prend en charge de nombreuses tâches différentes. Utilisez les modèles suivants pour effectuer ces tâches :  

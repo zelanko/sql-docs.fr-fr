@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6b838766e7a6d6bfb9a68bb832cd7a8feb3c9960
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: eec9e3e211c68b7f56fe6829a70064317b96e646
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696617"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519574"
 ---
 # <a name="determine-polling-frequency"></a>Déterminer la fréquence d’interrogation
 Cet article explique comment déterminer la fréquence d’interrogation pour les alertes de l’appliance Analytique Platform System.  
@@ -22,13 +22,13 @@ Cet article explique comment déterminer la fréquence d’interrogation pour le
 ## <a name="to-determine-the-polling-frequency"></a>Pour déterminer la fréquence d’interrogation  
 Dans la mesure où PDW ne prend pas en charge proactive notifications lorsque des alertes se produisent, la solution de surveillance doit interroger en permanence la DLL de l’appliance.  En interne, PDW interroge les composants à des intervalles différents :  
   
--   Cluster – 60 secondes  
+-   Cluster - 60 secondes  
   
--   Pulsation – 60 secondes  
+-   Pulsation - 60 secondes  
   
--   Tous les autres composants – 5 minutes  
+-   Tous les autres composants - cinq minutes  
   
--   Compteurs de performances – trois secondes  
+-   Compteurs de performances - trois secondes  
   
 Un intervalle commun à interroger pour les alertes, qui est également utilisé par System Center, est **toutes les 15 minutes**.  Évidemment, vous pouvez interroger plus ou moins fréquemment, mais il n’est pas recommandé d’interroger moins de toutes les six heures.  
   

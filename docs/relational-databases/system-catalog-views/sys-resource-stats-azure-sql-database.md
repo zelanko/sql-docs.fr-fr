@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 83ba28d09e32f043c58bdc1c63837f5b465312f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72945aca048d322ee03c8a1d88b76650ddd1db16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723487"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392692"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,12 +51,12 @@ ms.locfileid: "47723487"
 |max_worker_percent|**décimale (5,2)**|Nombre maximal d’ouvriers simultanés (demandes) en pourcentage de la limite de niveau de service de la base de données.<br /><br /> Valeur maximale est actuellement calculée pour l’intervalle de cinq minutes basée sur les échantillons de 15 secondes des nombres de travail simultanés.|  
 |max_session_percent|**décimale (5,2)**|Nombre maximal de sessions simultané en pourcentage de la limite de niveau de service de la base de données.<br /><br /> Valeur maximale est actuellement calculée pour l’intervalle de cinq minutes basée sur les échantillons de 15 secondes du nombre de sessions simultanées.|  
 |dtu_limit|**Int**|Base de données max DTU paramètre actuel de cette base de données pendant cet intervalle. |  
-|allocated_storage_in_megabytes|**float**|La quantité de mise en forme d’espace de fichier en Mo mis à disposition pour stocker les données de la base de données. Espace du fichier de mise en forme est également appelée espace de données alloué.  Pour plus d’informations, consultez : [gestion de l’espace de fichier dans la base de données SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|La quantité de mise en forme d’espace de fichier en Mo mis à disposition pour stocker les données de la base de données. Espace du fichier de mise en forme est également appelée espace de données alloué.  Pour plus d'informations, consultez : [Gestion de l’espace fichier dans la base de données SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  Pour plus d’informations sur ces limites et les niveaux de service, consultez les rubriques [niveaux de Service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  
     
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue est disponible pour tous les rôles d’utilisateur avec des autorisations pour se connecter à virtuel **master** base de données.  
   
 ## <a name="remarks"></a>Notes  

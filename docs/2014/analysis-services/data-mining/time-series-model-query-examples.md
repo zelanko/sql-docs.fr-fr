@@ -21,12 +21,12 @@ ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 729f50c43b277b6456d834e7706c026b36cddfae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4098a1b5eade3705e10ab609c47454564a18101d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067989"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511410"
 ---
 # <a name="time-series-model-query-examples"></a>Time Series Model Query Examples
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez soit créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, soit créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Par exemple, une requête de contenu pour un modèle de série chronologique peut fournir des détails supplémentaires sur les structures périodiques détectées, tandis qu'une requête de prédiction peut vous donner des prédictions pour les 5 à 10 tranches de temps suivantes. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
@@ -54,7 +54,7 @@ ms.locfileid: "48067989"
 ## <a name="getting-information-about-a-time-series-model"></a>Obtention d'informations sur un modèle de série chronologique  
  Une requête de contenu de modèle peut fournir des informations de base sur le modèle, telles que les paramètres qui ont été utilisés lors de la création du modèle et l'heure du dernier traitement du modèle. L'exemple suivant illustre la syntaxe de base pour l'interrogation du contenu du modèle à l'aide des ensembles de lignes de schéma d'exploration de données.  
   
-###  <a name="bkmk_Query1"></a> Exemple de requête 1 : extraction d'indications de périodicité pour le modèle  
+###  <a name="bkmk_Query1"></a> Exemple de requête 1 : Récupération d'indices de périodicité pour le modèle  
  Vous pouvez récupérer les périodicités qui ont été détectées dans la série chronologique en interrogeant l'arbre ARIMA ou l'arbre ARTXP. Toutefois, les périodicités dans le modèle terminé peuvent ne pas être les mêmes que les périodes que vous avez spécifiées comme indications lors de la création du modèle. Pour extraire les indications qui ont été fournies comme paramètres lors de la création du modèle, vous pouvez interroger l'ensemble de lignes de schéma du contenu du modèle d'exploration de données en utilisant l'instruction DMX suivante :  
   
 ```  
@@ -74,7 +74,7 @@ WHERE MODEL_NAME = '<model name>'
 > [!NOTE]  
 >  Pour une meilleure lisibilité, les résultats ont été tronqués ici.  
   
-###  <a name="bkmk_Query2"></a> Exemple de requête 2 : extraction de l'équation d'un modèle ARIMA  
+###  <a name="bkmk_Query2"></a> Exemple de requête 2 : Récupération de l'équation d'un modèle ARIMA  
  Vous pouvez extraire l'équation d'un modèle ARIMA en interrogeant tout nœud dans un arbre individuel. N'oubliez pas que chaque arbre d'un modèle ARIMA représente une périodicité différente et, s'il y a plusieurs séries de données, chaque série de données aura son propre ensemble d'arbres de périodicités. Par conséquent, pour extraire l'équation correspondant à une série de données spécifique, vous devez tout d'abord identifier l'arbre.  
   
  Par exemple, le préfixe TA vous indique que le nœud appartient à un arbre ARIMA, alors que le préfixe TS est utilisé pour les arbres ARTXP. Vous pouvez rechercher tous les arbres racine ARIMA en interrogeant le contenu du modèle pour les nœuds ayant une valeur NODE_TYPE de 27. Vous pouvez également utiliser la valeur de ATTRIBUTE_NAME pour rechercher le nœud racine ARIMA pour une série de données particulière. Cet exemple de requête recherche les nœuds ARIMA qui représentent les quantités vendues du modèle R250 dans la région Europe.  
@@ -100,13 +100,13 @@ WHERE NODE_NAME = 'TA00000007'
   
 |Équation abrégée|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24...|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
- Pour en savoir plus sur l’interprétation de ces informations, consultez [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Pour en savoir plus sur l’interprétation de ces informations, consultez [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Query3"></a> Exemple de requête 3 : récupération de l'équation d'un modèle ARTXP  
+###  <a name="bkmk_Query3"></a> Exemple de requête 3 : Récupération de l’équation d’un modèle ARTXP  
  Pour un modèle ARTXP, des informations différentes sont stockées à chaque niveau de l'arbre. Pour plus d’informations sur la structure d’un modèle ARTxp et sur l’interprétation de ces informations dans l’équation, consultez [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
  L'instruction DMX suivante extrait les informations de l'arbre ARTxp qui représente la quantité de ventes du modèle R250 en Europe.  
@@ -124,7 +124,7 @@ WHERE NODE_ATTRIBUTE_NAME = 'R250 Europe:Quantity'
 AND NODE_TYPE = 15  
 ```  
   
- Pour en savoir plus sur l’interprétation de ces informations, consultez [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Pour en savoir plus sur l’interprétation de ces informations, consultez [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions-on-a-time-series-model"></a>Création de prédictions sur un modèle de série chronologique  
  À compter de [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], vous pouvez ajouter de nouvelles données à un modèle de série chronologique et les incorporer automatiquement au modèle. Vous ajoutez de nouvelles données à un modèle d'exploration de données de série chronologique de l'une des deux manières suivantes :  
@@ -136,13 +136,13 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_ReplaceExtend"></a> Pour comprendre le comportement des opérations de remplacement et d'extension  
  Lorsque vous ajoutez de nouvelles données à un modèle de série chronologique, vous pouvez spécifier s'il faut étendre ou remplacer les données d'apprentissage :  
   
--   **Extension :** lorsque vous étendez une série de données, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajoute les nouvelles données à la fin des données d'apprentissage existantes. Le nombre de cas d'apprentissage augmente également.  
+-   **Étendre :** Lorsque vous étendez une série de données, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajoute les nouvelles données à la fin des données d’apprentissage existants. Le nombre de cas d'apprentissage augmente également.  
   
      L'extension des cas de modèle est utile pour mettre à jour continuellement le modèle avec de nouvelles données. Par exemple, si vous souhaitez que le jeu d'apprentissage grandisse au fil du temps, il suffit d'étendre le modèle.  
   
-     Pour étendre les données, vous créez un `PREDICTION JOIN` sur un modèle de série chronologique, spécifiez la source des nouvelles données et utiliser le `EXTEND_MODEL_CASES` argument.  
+     Pour étendre les données, vous créez une `PREDICTION JOIN` sur un modèle de série chronologique, vous spécifiez la source des nouvelles données et vous utilisez l'argument `EXTEND_MODEL_CASES`.  
   
--   **Replacement :** lorsque vous remplacez les données dans la série de données, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] conserve le modèle appris, mais utilise les nouvelles valeurs pour remplacer tout ou une partie des cas d'apprentissage existants. Par conséquent, la taille des données d'apprentissage ne change jamais, mais les cas eux-mêmes sont remplacés continuellement par des données plus récentes. Si vous fournissez suffisamment de nouvelles données, vous pouvez remplacer les données d'apprentissage par une série entièrement nouvelle.  
+-   **Remplacez :** Lorsque vous remplacez les données dans la série de données, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] conserve le modèle appris, mais utilise les nouvelles valeurs de données pour remplacer tout ou partie des cas d’apprentissage existants. Par conséquent, la taille des données d'apprentissage ne change jamais, mais les cas eux-mêmes sont remplacés continuellement par des données plus récentes. Si vous fournissez suffisamment de nouvelles données, vous pouvez remplacer les données d'apprentissage par une série entièrement nouvelle.  
   
      Le remplacement des cas de modèles s'avère utile lorsque vous souhaitez effectuer l'apprentissage d'un modèle sur un ensemble de cas, puis appliquer ce modèle à une série de données différente.  
   
@@ -179,7 +179,7 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_REPLACE"></a> Exécution de prédictions avec REPLACE_MODEL_CASES  
  Lorsque vous remplacez les cas dans un modèle, la taille du modèle reste identique mais [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] remplace les cas individuels dans le modèle. Ceci est utile pour les prédictions croisées et les scénarios dans lesquels la maintenance d'une taille de jeu de données d'apprentissage cohérente est importante.  
   
- Par exemple, l'un de vos magasins a des données de ventes insuffisantes. Vous pourriez créer un modèle général en faisant la moyenne des ventes pour tous les magasins dans une région particulière et former ensuite un modèle. Ensuite, pour effectuer des prédictions pour le magasin de données de ventes insuffisantes, vous créez un `PREDICTION JOIN` sur les nouvelles données de ventes pour simplement ce magasin. Dans ce cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] conserve les modèles dérivés du modèle régional, mais remplace les cas d'apprentissage existants par les données du magasin individuel. En conséquence, vos valeurs de prédiction seront plus proches des lignes de tendance pour le magasin individuel.  
+ Par exemple, l'un de vos magasins a des données de ventes insuffisantes. Vous pourriez créer un modèle général en faisant la moyenne des ventes pour tous les magasins dans une région particulière et former ensuite un modèle. Ensuite, pour effectuer des prédictions pour le magasin dont les données de ventes sont insuffisantes, vous créez une `PREDICTION JOIN` sur les nouvelles données de ventes uniquement pour ce magasin. Dans ce cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] conserve les modèles dérivés du modèle régional, mais remplace les cas d'apprentissage existants par les données du magasin individuel. En conséquence, vos valeurs de prédiction seront plus proches des lignes de tendance pour le magasin individuel.  
   
  Lorsque vous utilisez l'argument `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajoute continuellement de nouveaux cas à la fin de l'ensemble de cas et supprime un nombre correspondant au début de l'ensemble de cas. Si vous ajoutez davantage de nouvelles données qu'il n'en existait dans le jeu d'apprentissages d'origine, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ignore les données les plus anciennes. Si vous fournissez suffisamment de nouvelles valeurs, les prédictions peuvent être basées sur des données complètement nouvelles.  
   
@@ -210,7 +210,7 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |Fonction de prédiction|Utilisation|  
-|[Décalage &#40;DMX&#41;](/sql/dmx/lag-dmx)|Retourne un nombre de tranches de temps entre la date du cas en cours et la dernière date du jeu d'apprentissage.<br /><br /> En règle générale, cette fonction est utilisée pour identifier les cas d'apprentissage récents afin de vous permettre de récupérer des données détaillées sur les cas.|  
+|[Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)|Retourne un nombre de tranches de temps entre la date du cas en cours et la dernière date du jeu d'apprentissage.<br /><br /> En règle générale, cette fonction est utilisée pour identifier les cas d'apprentissage récents afin de vous permettre de récupérer des données détaillées sur les cas.|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Retourne l'ID de nœud pour la colonne prédictible spécifiée.<br /><br /> En règle générale, cette fonction est utilisée pour identifier le nœud qui a généré une valeur prédite particulière afin que vous puissiez examiner les cas associés au nœud ou récupérer l'équation et d'autres détails.|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Retourne l'écart type des prédictions dans la colonne prédictible spécifiée.<br /><br /> Cette fonction remplace l'argument INCLUDE_STATISTICS, qui n'est pas pris en charge pour les modèles de séries chronologiques.|  
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Retourne la variance des prédictions pour la colonne prédictible spécifiée.<br /><br /> Cette fonction remplace l'argument INCLUDE_STATISTICS, qui n'est pas pris en charge pour les modèles de séries chronologiques.|  
@@ -219,9 +219,9 @@ AND NODE_TYPE = 15
  Pour obtenir la liste des fonctions communes à tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)], consultez [Fonctions de prédiction générales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Pour en savoir plus sur la syntaxe de fonctions spécifiques, consultez [Informations de référence sur les fonctions DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes d’exploration de données](data-mining-queries.md)   
- [Algorithme de série chronologique de Microsoft](microsoft-time-series-algorithm.md)   
- [Référence technique de Microsoft Time Series algorithme](microsoft-time-series-algorithm-technical-reference.md)   
- [Contenu du modèle pour les modèles de série chronologique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Requêtes d'exploration de données](data-mining-queries.md)   
+ [Algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm.md)   
+ [Références techniques relatives à l'algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

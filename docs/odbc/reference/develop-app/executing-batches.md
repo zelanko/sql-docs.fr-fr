@@ -14,15 +14,15 @@ ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46b224e8167587c4e4860f171b132d23539143e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53e1afcc780ff06d1d453f94deac984163099444
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695030"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541220"
 ---
 # <a name="executing-batches"></a>Exécution de lots
-Avant qu’une application exécute un lot d’instructions, elle doit tout d’abord vérifier si elles sont prises en charge. Pour ce faire, l’application appelle **SQLGetInfo** avec les options SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS et SQL_PARAM_ARRAY_SELECTS. La première option retourne si le nombre de ligne – génération et le résultat : génération de l’ensemble des instructions sont pris en charge dans les lots explicites et de procédures, pendant les deux dernières options de retour d’informations sur la disponibilité des nombres de lignes et résultat définit dans paramétrable exécution.  
+Avant qu’une application exécute un lot d’instructions, elle doit tout d’abord vérifier si elles sont prises en charge. Pour ce faire, l’application appelle **SQLGetInfo** avec les options SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS et SQL_PARAM_ARRAY_SELECTS. La première option retourne si les générateurs de nombre de lignes et résultat instructions de génération de jeu sont prises en charge dans les lots explicites et de procédures, pendant les deux dernières options de retour d’informations sur la disponibilité des nombres de lignes et résultat définit dans paramétrées exécution.  
   
  Lots d’instructions sont exécutées via **SQLExecute** ou **SQLExecDirect**. Par exemple, l’appel suivant exécute un lot explicit d’instructions pour ouvrir une nouvelle commande.  
   

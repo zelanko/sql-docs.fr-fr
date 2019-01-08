@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 216b04e58d741d3c44cd187ba94eaac7ee791762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdb255570febc6d37bef824958c15422b6fae733
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837797"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503192"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |last_closed_checkpoint_ts|**bigint**|Horodatage du dernier point de contrôle fermé.|  
 |hardened_recovery_lsn|**numeric(38)**|Récupération démarre à partir de LSN.|  
 |hardened_root_file_guid|**uniqueidentifier**|GUID du fichier racine qui renforcés à la suite du dernier point de contrôle terminé.|  
-|hardened_root_file_watermark|**bigint**|**Interne uniquement**. La distance, il est valide pour lire le fichier racine jusqu'à (c’est un type pertinente en interne uniquement – appelé BSN).|  
+|hardened_root_file_watermark|**bigint**|**Interne uniquement**. La distance, il est valide pour lire le fichier racine jusqu'à (c’est un type pertinente en interne uniquement - appelé BSN).|  
 |hardened_truncation_lsn|**numeric(38)**|LSN du point de troncation.|  
 |log_bytes_since_last_close|**bigint**|Octets à partir du dernier fermer à la fin actuelle du journal.|  
 |time_since_last_close_in_ms|**bigint**|Heure depuis la dernière fermeture du point de contrôle.|  
@@ -104,7 +104,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |end_of_log_lsn|**numérique (38)**|Numéro séquentiel dans le journal à la fin du journal.|  
 |task_address|**varbinary(8)**|Adresse de SOS_Task. Jointure à sys.dm_os_tasks pour rechercher des informations supplémentaires.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW DATABASE STATE` sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

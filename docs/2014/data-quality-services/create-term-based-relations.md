@@ -12,17 +12,17 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eca92d02eac642f48e64c15217fd6b354790bb97
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 871c6acc823606a249f0886864a84300be7f9899
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030316"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396642"
 ---
 # <a name="create-term-based-relations"></a>Créer des relations à base de termes
-  Cette rubrique décrit comment créer des relations à base de termes pour un domaine dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Une relation à base de termes (TBR) vous permet d'effectuer une correction sur un terme qui fait partie d'une valeur d'un domaine. Plusieurs valeurs qui sont identiques à l'exception de l'orthographe d'une partie commune peuvent ainsi être considérées comme synonymes identiques. Par exemple, vous pouvez installer une relation à base de termes qui remplace le terme « Inc. » par « Incorporated ». Le terme « Inc. » est modifié chaque fois qu’il apparaît dans le domaine. Les instances de « Contoso, Inc. » sont remplacées par « Contoso, Incorporated », et les deux valeurs sont considérées comme des synonymes exacts.  
+  Cette rubrique décrit comment créer des relations à base de termes pour un domaine dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Une relation à base de termes (TBR) vous permet d'effectuer une correction sur un terme qui fait partie d'une valeur d'un domaine. Plusieurs valeurs qui sont identiques à l'exception de l'orthographe d'une partie commune peuvent ainsi être considérées comme synonymes identiques. Par exemple, vous pouvez installer une relation à base de termes qui remplace le terme « Inc. » par « Incorporated ». Le terme « Inc. » est modifié chaque fois qu’il apparaît dans le domaine. Les instances de « Contoso, Inc. » sont remplacées par « Contoso, Incorporated », et les deux valeurs sont considérées comme des synonymes exacts.  
   
- Pour utiliser les relations à base de termes, vous créez une liste de paires Valeur/Correct, telles que « Inc. » et « Incorporated », ou« Senior » et « Sr. ». L'utilisation d'une relation à base de termes vous permet de modifier un terme dans l'ensemble du domaine sans définir manuellement des valeurs de domaine en tant que synonymes. Vous pouvez spécifier qu'une valeur est corrigée même si la découverte des connaissances n'a pas découvert cette valeur précédemment. Si la transformation d'une relation à base de termes rend deux valeurs identiques, DQS crée une relation de synonyme entre elles (dans la découverte des connaissances) ou une relation de correction entre elles (dans la correction des données) ou une correspondance exacte (dans la correspondance).  
+ Pour utiliser les relations à base de termes, vous créez une liste de paires Valeur/Correct, telles que « Inc. » et « Incorporated », ou« Senior » et « Sr. ». L'utilisation d'une relation à base de termes vous permet de modifier un terme dans l'ensemble du domaine sans définir manuellement des valeurs de domaine en tant que synonymes. Vous pouvez spécifier qu'une valeur est corrigée même si la découverte des connaissances n'a pas découvert cette valeur précédemment. Si la transformation d'une relation à base de termes rend deux valeurs identiques, DQS crée une relation de synonyme entre elles (dans la découverte des connaissances) ou une relation de correction entre elles (dans la correction des données) ou une correspondance exacte (dans la correspondance).  
   
  La transformation de relations à base de termes et la transformation de symboles (où les caractères spéciaux sont remplacés par un espace ou la valeur null) sont toutes deux effectuées dans une étape de prétraitement avant analyse. Si l'analyse de domaine composite est demandée, elle sera effectuée avant les deux transformations, car l'analyse du séparateur requiert des symboles. D'autres opérations, telles que les règles de domaine et les modifications de valeurs de domaine, sont exécutées après les transformations. Pour qu'il y ait correspondance, les relations à base de termes sont appliquées aux données de la source avant l'activité correspondante, indépendamment du nettoyage.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "51030316"
   
     6.  Recherchez une valeur dans la table Relations en entrant un ou plusieurs chiffres dans la zone de texte **Rechercher** . Les correspondances exactes pour la chaîne sont mises en surbrillance. Utilisez les flèches haut et bas pour vous déplacer vers différentes instances de la chaîne dans la table.  
   
-    7.  **Vérificateur d'orthographe**: si une valeur dans la colonne **Valeur** ou **Corriger vers** comporte un trait de soulignement ondulé rouge, le vérificateur d'orthographe suggère une correction pour la valeur. Cliquez avec le bouton droit sur la valeur comportant un trait de soulignement, puis sélectionnez l'une des valeurs proposées par le vérificateur d'orthographe. Ou bien, vous pouvez cliquer sur **Ajouter** dans le menu contextuel pour utiliser la valeur d'origine. Pour plus d'informations, consultez [Utiliser le vérificateur d'orthographe DQS](../../2014/data-quality-services/use-the-dqs-speller.md) et [Définir les propriétés du domaine](../../2014/data-quality-services/set-domain-properties.md).  
+    7.  **Le vérificateur d’orthographe**: Si une valeur dans le **valeur** ou **corriger vers** colonne a un trait de soulignement ondulé rouge, le vérificateur d’orthographe suggère une correction de la valeur. Cliquez avec le bouton droit sur la valeur comportant un trait de soulignement, puis sélectionnez l'une des valeurs proposées par le vérificateur d'orthographe. Ou bien, vous pouvez cliquer sur **Ajouter** dans le menu contextuel pour utiliser la valeur d'origine. Pour plus d'informations, consultez [Utiliser le vérificateur d'orthographe DQS](../../2014/data-quality-services/use-the-dqs-speller.md) et [Définir les propriétés du domaine](../../2014/data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Pour utiliser le vérificateur d'orthographe, vous pouvez l'activer dans la page **Propriétés du domaine** ou, s'il est désactivé, dans la page **Propriétés du domaine** , vous pouvez cliquer sur l'icône **Activer/désactiver le vérificateur d'orthographe** dans la page **Relations à base de termes** pour l'activer sur cette page.  
@@ -99,7 +99,7 @@ ms.locfileid: "51030316"
   
 7.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après la création de relations à base de termes  
+##  <a name="FollowUp"></a> Suivi : Après avoir créé les Relations de base de termes  
  Après avoir créé les relations à base de termes, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Les hiérarchies irrégulières | Documents Microsoft
+title: Hiérarchies déséquilibrées | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c5eb53a8ae3ff25b7c0b4d390d9c5ffc896e542
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cf8844188330a408c29c8b959994637e097f7043
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529337"
 ---
-# <a name="user-defined-hierarchies---ragged-hierarchies"></a>Hiérarchies définies par l’utilisateur - hiérarchies irrégulières
+# <a name="user-defined-hierarchies---ragged-hierarchies"></a>Hiérarchies définies par l’utilisateur - Hiérarchies déséquilibrées
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Une hiérarchie déséquilibrée est une hiérarchie définie par l'utilisateur qui a un nombre de niveaux impair. Voici quelques exemples : un organigramme où un responsable hiérarchique a comme subordonnés directs des cadres du service et des non cadres, ou des hiérarchies avec des attributs Country-Region-City, où certaines villes n'ont pas d'état (State) ou de province (Province) parent, notamment Washington D.C., la Cité du Vatican ou New Dehli.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34023096"
   
 -   Créez une hiérarchie parent-enfant qui gère explicitement les membres de niveau. Pour une présentation de la technique, consultez [Hiérarchie déséquilibrée dans SSAS (billet de blog)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/). Pour plus d’informations dans la documentation en ligne, consultez [Dimensions parent-enfant](../../analysis-services/multidimensional-models/parent-child-dimension.md). Les inconvénients liés à la création d'une hiérarchie parent-enfant résident dans le fait que vous ne pouvez en avoir qu'une seule par dimension, ce qui entraîne généralement une baisse des performances lors du calcul des agrégations pour les membres intermédiaires.  
   
- Si votre dimension contient plusieurs hiérarchies déséquilibrées, vous devez utiliser la première approche, en définissant **HideMemberIf**. Les développeurs BI qui ont une expérience pratique des hiérarchies déséquilibrées vont plus loin et recommandent d'apporter des modifications supplémentaires aux tables de données physiques, en créant des tables distinctes pour chaque niveau. Consultez [Cube financier SSAS de Martin Mason Première partie a : Hiérarchies déséquilibrées (blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) pour plus de détails sur cette technique.  
+ Si votre dimension contient plusieurs hiérarchies déséquilibrées, vous devez utiliser la première approche, en définissant **HideMemberIf**. Les développeurs BI qui ont une expérience pratique des hiérarchies déséquilibrées vont plus loin et recommandent d'apporter des modifications supplémentaires aux tables de données physiques, en créant des tables distinctes pour chaque niveau. Consultez [les hiérarchies déséquilibrées-1 a de SSAS financiers Cube-partie (blog) de Martin Mason le](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) pour plus d’informations sur cette technique.  
   
 ##  <a name="bkmk_Hide"></a> Définition de HideMemberIf pour masquer les membres dans une hiérarchie normale  
  Dans la table d'une dimension déséquilibrée, les membres manquants peuvent être représentés de différentes manières. Les espaces réservés des cellules de table peuvent être des valeurs NULL ou des chaînes vides, ou bien la même valeur que leurs parents. La représentation des espaces réservés est déterminée par l'état d'espace réservé de membres enfants, conformément à la propriété **HideMemberIf** et la propriété de chaîne de connexion **MDX Compatibility** pour l'application cliente.  
@@ -52,9 +52,9 @@ ms.locfileid: "34023096"
   
 2.  Cliquez avec le bouton droit sur un membre de la hiérarchie et choisissez **Propriétés**. Affectez à la propriété **HideMemberIf** une des valeurs décrites ci-après.  
   
-    |Paramètre de HideMemberIf| Description|  
+    |Paramètre de HideMemberIf|Description|  
     |--------------------------|-----------------|  
-    |**Never**|Les membres de ce niveau ne sont jamais masqués. Ceci est la valeur par défaut.|  
+    |**Never**|Les membres de ce niveau ne sont jamais masqués. Valeur par défaut.|  
     |**OnlyChildWithNoName**|Un membre de ce niveau est masqué quand il est le seul enfant de son parent et qu'il a pour nom la valeur NULL ou une chaîne vide.|  
     |**OnlyChildWithParentName**|Un membre de ce niveau est masqué quand il est le seul enfant de son parent et qu'il porte le même nom que son parent.|  
     |**NoName**|Un membre de ce niveau est masqué lorsque son nom est vide.|  
@@ -63,7 +63,7 @@ ms.locfileid: "34023096"
 ##  <a name="bkmk_Mdx"></a> Définir la compatibilité MDX pour déterminer le mode de représentation des espaces réservés dans les applications clientes  
  Après avoir défini **HideMemberIf** sur un niveau de hiérarchie, vous devez également définir la propriété **MDX Compatibility** dans la chaîne de connexion envoyée par l'application cliente. La définition de **MDX Compatibility** détermine si **HideMemberIf** est utilisé.  
   
-|Paramètre de compatibilité MDX| Description|Utilisation|  
+|Paramètre de compatibilité MDX|Description|Utilisation|  
 |-------------------------------|-----------------|-----------|  
 |**1**|Afficher une valeur d'espace réservé.|Il s'agit de la valeur par défaut utilisée par Excel, SSDT et SSMS. Elle indique au serveur de retourner les valeurs d'espace réservé lors de l'exploration de niveaux vides dans une hiérarchie déséquilibrée. Si vous cliquez sur la valeur d'espace réservé, vous pouvez continuer à explorer le bas de la hiérarchie pour obtenir les nœuds enfants (feuille).<br /><br /> Excel possède la chaîne de connexion à Analysis Services, et affecte toujours la valeur 1 à **MDX Compatibility** pour chaque nouvelle connexion. Ce comportement préserve la compatibilité descendante.|  
 |**2**|Masquez une valeur d'espace réservé (valeur Null ou dupliquée du niveau parent), mais affichez d'autres niveaux et nœuds avec des valeurs pertinentes.|**MDX Compatibility**=2 est généralement considéré comme le paramètre privilégié pour les hiérarchies déséquilibrées. Un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et certaines applications clientes tierces peuvent rendre ce paramètre persistant.|  
@@ -72,6 +72,6 @@ ms.locfileid: "34023096"
  [Créer des hiérarchies définies par l'utilisateur](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Hiérarchies utilisateur](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Dimensions parent-enfant](../../analysis-services/multidimensional-models/parent-child-dimension.md)   
- [Propriétés de chaîne de connexion & #40 ; Analysis Services & #41 ;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Propriétés des chaînes de connexion &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

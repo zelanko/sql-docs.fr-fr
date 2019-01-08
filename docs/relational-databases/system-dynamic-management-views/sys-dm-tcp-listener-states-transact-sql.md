@@ -21,12 +21,12 @@ ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee55ca66cdddcc6fcb2a130bfd3427d210297aff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b69bfb4da1bf20a8d74f5adcda44e55954bbdf65
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806847"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409636"
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "47806847"
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**listener_id**|**Int**|ID interne de l'écouteur. N'accepte pas la valeur NULL.<br /><br /> Clé primaire.|  
+|**listener_id**|**Int**|ID interne de. l’écouteur N'accepte pas la valeur NULL.<br /><br /> Clé primaire.|  
 |**ip_address**|**nvarchar48**|Adresse IP d'écouteur en ligne et actuellement écoutée. Les adresses IPv4 et IPv6 sont autorisées. Si un écouteur possède les deux types d'adresses, ils sont répertoriés séparément. Un caractère générique IPv4 est affiché en tant que « 0.0.0.0 ». Un caractère générique IPv6 est affiché en tant que « :: ».<br /><br /> N'accepte pas la valeur NULL.|  
 |**is_ipv4**|**bit**|Type d'adresse IP<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**Int**|Numéro de port sur lequel l'écouteur écoute. N'accepte pas la valeur NULL.|  
 |**type**|**tinyint**|Type d'écouteur, un des suivants :<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = Mise en miroir de la base de données<br /><br /> N'accepte pas la valeur NULL.|  
 |**type_desc**|**nvarchar(20)**|Description de la **type**, l’un des :<br /><br /> TSQL<br /><br /> SERVICE_BROKER<br /><br /> DATABASE_MIRRORING<br /><br /> N'accepte pas la valeur NULL.|  
-|**state**|**tinyint**|État de l'écouteur du groupe de disponibilité, un des suivants :<br /><br /> 1 = En ligne. L'écouteur écoute et traite les demandes.<br /><br /> 2 = Redémarrage en attente. L'écouteur est hors connexion, en attente d'un redémarrage.<br /><br /> Si l'écouteur du groupe de disponibilité écoute sur le même port que l'instance de serveur, ces deux écouteurs ont toujours le même état.<br /><br /> N'accepte pas la valeur NULL.<br /><br /> Remarque : Les valeurs de cette colonne proviennent de l’objet TSD_listener. La colonne ne prend pas en charge un état hors connexion, car lorsque le TDS_listener est hors connexion, elle ne peut pas être interrogée pour l’état.|  
+|**state**|**tinyint**|État de l'écouteur du groupe de disponibilité, un des suivants :<br /><br /> 1 = En ligne. L'écouteur écoute et traite les demandes.<br /><br /> 2 = Redémarrage en attente. L'écouteur est hors connexion, en attente d'un redémarrage.<br /><br /> Si l'écouteur du groupe de disponibilité écoute sur le même port que l'instance de serveur, ces deux écouteurs ont toujours le même état.<br /><br /> N'accepte pas la valeur NULL.<br /><br /> Remarque : Les valeurs de cette colonne proviennent de l’objet TSD_listener. La colonne ne prend pas en charge un état hors connexion, car lorsque le TDS_listener est hors connexion, elle ne peut pas être interrogée pour l’état.|  
 |**state_desc**|**nvarchar(16)**|Description de **état**, l’un des :<br /><br /> ONLINE<br /><br /> PENDING_RESTART<br /><br /> N'accepte pas la valeur NULL.|  
 |**start_time**|**datetime**|Horodateur qui indique quand l'écouteur a été démarré. N'accepte pas la valeur NULL.|  
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

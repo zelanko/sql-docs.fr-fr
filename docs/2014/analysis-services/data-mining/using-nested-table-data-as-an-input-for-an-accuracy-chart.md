@@ -16,12 +16,12 @@ ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ffec1e01fd5e1c0c35a2088235cc2979a7694f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2cd9c01ada73773f826c8ff45c55687158480841
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196689"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518276"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Utilisation des données de table imbriquée comme entrée pour un graphique d'analyse de précision
   Si vous testez l'exactitude d'un modèle d'exploration de données en utilisant des données externes et que le modèle d'exploration de données contient des tables imbriquées, les données externes doivent également contenir une table de cas et une table imbriquée associée.  
@@ -44,7 +44,7 @@ ms.locfileid: "48196689"
   
 3.  Dans **Sélectionner le jeu de données à utiliser pour le graphique d’analyse de précision**, sélectionnez l’option **Spécifier un autre jeu de données**.  
   
-4.  Cliquez sur le bouton Parcourir **(…)** pour choisir le jeu de données externes dans une liste de vues de source de données sur le serveur actuel.  
+4.  Cliquez sur le bouton Parcourir **(...)**  pour choisir le jeu de données externes dans la liste des vues de sources de données sur le serveur actuel.  
   
 5.  Cliquez sur **Sélectionner la table de cas**. Dans la boîte de dialogue **Sélectionner une table** , sélectionnez la table dans la vue de source de données contenant les données de cas, puis cliquez sur **OK**.  
   

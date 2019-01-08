@@ -14,12 +14,12 @@ ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c9c10d013d6585208a5f30d98169d8eab71b75d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 423573c78c78cb97b83f8709e19a0bfd6d642645
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066669"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399432"
 ---
 # <a name="database-engine-configuration---user-instance"></a>Configuration du moteur de base de données – Instance utilisateur
   La page **Instance utilisateur** permet de générer une instance distincte du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour les utilisateurs sans autorisations d’administrateur, et d’ajouter des utilisateurs dans le rôle d’administrateur.  
@@ -28,7 +28,7 @@ ms.locfileid: "48066669"
  Activer les instances utilisateur  
  Par défaut, cette option est activée. Pour désactiver la fonction qui active les instances utilisateur, désactivez cette case à cocher.  
   
- L'instance utilisateur, également désignée comme instance enfant ou client, est une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est générée par l'instance parent (l'instance principale exécutée en tant que service, telle que [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) pour le compte d'un utilisateur. L'instance utilisateur s'exécute en tant que processus utilisateur dans le contexte de sécurité de cet utilisateur. L'instance utilisateur est isolée de l'instance parent et de toutes les autres instances utilisateur exécutées sur l'ordinateur. La fonction d'instance utilisateur est également appelée RANU (« Run As Normal User », exécution en mode utilisateur normal).  
+ L'instance utilisateur, également désignée comme instance enfant ou client, est une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est générée par l'instance parent (l'instance principale exécutée en tant que service, telle que [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) pour le compte d'un utilisateur. L'instance utilisateur s'exécute en tant que processus utilisateur dans le contexte de sécurité de cet utilisateur. L'instance utilisateur est isolée de l'instance parent et de toutes les autres instances utilisateur exécutées sur l'ordinateur. La fonction d’instance utilisateur est également appelée RANU (« Run As Normal User », exécution en mode utilisateur normal).  
   
 > [!NOTE]  
 >  Les connexions configurées en tant que membres du rôle serveur fixe **sysadmin** durant l’installation sont configurées en tant qu’administrateurs dans l’exemple de base de données. Si elles ne sont pas supprimées, elles sont membres du rôle serveur fixe **sysadmin** sur l’instance utilisateur.  

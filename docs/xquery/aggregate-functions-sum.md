@@ -16,12 +16,12 @@ ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8806b2c00a839e11d5d3ff7be1d4c3cbbdcc059c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f626eb9f5c1b654428175dc456910b183fe0c3c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662209"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420500"
 ---
 # <a name="aggregate-functions---sum"></a>Fonctions d’agrégation : sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ProductModelID Name                 TotalLaborHours
   
 -   Les séquences faisant intervenir plusieurs types dérivés de différents types de base ne sont pas prises en charge.  
   
--   L'expression sum((xs:double(“INF”), xs:double(“-INF”))) génère une erreur de domaine.  
+-   L’expression, xs :double("-INF"))) génère une erreur de domaine.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions XQuery impliquant le type de données xml](../xquery/xquery-functions-against-the-xml-data-type.md)  

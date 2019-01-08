@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 247b89dcacc30417d01160c490010909cfbf5cfd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839077"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413409"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne des informations sur toutes les requêtes qui ont demandé et sont en attente d’une allocation de mémoire ou ont reçu une allocation de mémoire. Les requêtes qui ne nécessitent pas une allocation de mémoire n’apparaîtront pas dans cette vue. Par exemple, trier et les opérations de jointure de hachage ont des allocations de mémoire pour l’exécution des requêtes, lors de requêtes sans un **ORDER BY** clause n’aura pas une mémoire accorder.  
   
- Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d'exposer ces informations, chaque ligne contenant des données qui n'appartient pas au locataire connecté est filtrée. En outre, les valeurs dans les colonnes **scheduler_id**, **wait_order**, **pool_id**, **group_id** sont filtrées ; la valeur de colonne est définie. avec la valeur NULL.  
+ Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d’exposer ces informations, chaque ligne qui contient les données qui n’appartient pas au locataire connecté est filtrée. En outre, les valeurs dans les colonnes **scheduler_id**, **wait_order**, **pool_id**, **group_id** sont filtrées ; la valeur de colonne est définie. avec la valeur NULL.  
   
 > [!NOTE]  
 > À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_exec_query_memory_grants**.  
@@ -53,7 +53,7 @@ ms.locfileid: "47839077"
 |**max_used_memory_kb**|**bigint**|Mémoire physique maximale utilisée jusqu'à ce moment, en kilo-octets.|  
 |**query_cost**|**float**|Coût estimé de la requête.|  
 |**timeout_sec**|**Int**|Délai d'expiration, en secondes, avant que cette requête abandonne la demande d'allocation de la mémoire.|  
-|**resource_semaphore_id**|**smallint**|ID non unique du sémaphore de ressource sur lequel attend cette requête.<br /><br /> **Remarque :** cet ID est unique dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Cette modification peut affecter l'exécution de la requête de résolution des problèmes. Pour plus d’informations, consultez la section « Remarques » plus loin dans cette rubrique.|  
+|**resource_semaphore_id**|**smallint**|ID non unique du sémaphore de ressource sur lequel attend cette requête.<br /><br /> **Remarque :** Cet ID est unique dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Cette modification peut affecter l'exécution de la requête de résolution des problèmes. Pour plus d’informations, consultez la section « Remarques » plus loin dans cette rubrique.|  
 |**queue_id**|**smallint**|ID de la file d'attente dans laquelle cette requête attend l'allocation de mémoire. NULL si la mémoire est déjà allouée.|  
 |**wait_order**|**Int**|Ordre séquentiel des requêtes en attente dans le texte spécifié **queue_id**. Cette valeur peut changer pour une requête donnée si d'autres requêtes bénéficient d'une allocation mémoire ou d'un délai d'attente. NULL si la mémoire est déjà allouée.|  
 |**is_next_candidate**|**bit**|Candidat pour l'allocation mémoire suivante.<br /><br /> 1 = Oui<br /><br /> 0 = Non<br /><br /> NULL = La mémoire est déjà allouée.|  
@@ -66,7 +66,7 @@ ms.locfileid: "47839077"
 |**ideal_memory_kb**|**bigint**|Taille de l'allocation mémoire, en kilo-octets (Ko) pour l'ajuster à la mémoire physique. Elle est basée sur l'estimation de la cardinalité.|  
 |**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   

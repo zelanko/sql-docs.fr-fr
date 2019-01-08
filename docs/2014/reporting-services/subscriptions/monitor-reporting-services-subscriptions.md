@@ -17,12 +17,12 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f36432352d7b8351e7ae51840906c0d00ff67d78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4959243f633702fb0f0afd9b2444ae65666ef680
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076299"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506958"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Analyser les abonnements Reportions Services
   Vous pouvez surveiller les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à partir de l'interface utilisateur, de Windows PowerShell ou des fichiers journaux. Les options de surveillance à votre disposition dépendent du mode de serveur de rapports que vous exécutez.  
@@ -62,14 +62,14 @@ ms.locfileid: "48076299"
 |Échec lors de l’écriture dans le fichier \<nom_fichier>: \<message>|Indique que la remise à l'emplacement du partage de fichiers a échoué ; ce message provient de l'extension de remise dans un partage de fichiers.|  
 |\<messages d’état personnalisés>|Messages d'état indiquant le succès ou l'échec de la remise. Ces messages proviennent des extensions de remise. Si vous utilisez une extension de remise tierce ou personnalisée, d'autres messages d'état peuvent apparaître.|  
   
- Les administrateurs de serveur de rapports peuvent également surveiller les abonnements standard en cours de traitement. Les abonnements pilotés par les données ne peuvent pas être analysés. Pour plus d’informations, consultez [gérer un processus en cours d’exécution](manage-a-running-process.md).  
+ Les administrateurs de serveur de rapports peuvent également surveiller les abonnements standard en cours de traitement. Les abonnements pilotés par les données ne peuvent pas être analysés. Pour plus d’informations, consultez [Gérer un processus en cours d’exécution](manage-a-running-process.md).  
   
  En cas d'échec de remise d'un abonnement (par exemple, si le serveur de messagerie est indisponible), l'extension de remise réessaye la remise. Un paramètre de configuration spécifie le nombre de tentatives qui seront effectuées. Par défaut, il n'y en a aucune. Dans certains cas, le rapport peut avoir été traité sans données (par exemple, si la source de données est hors connexion), auquel cas le texte à cet effet est fourni dans le corps du message.  
   
 ### <a name="native-mode-log-files"></a>Fichiers journaux en mode natif  
  Si une erreur se produit au cours de la remise, une entrée est inscrite dans le journal de trace du serveur de rapports.  
   
- Les administrateurs de serveur de rapports peuvent passer en revue les fichiers **reportserverservice_\*.log**pour déterminer l’état de remise des abonnements. Pour la remise par messagerie électronique, les fichiers journaux du serveur de rapports contiennent un enregistrement du traitement et des remises effectuées sur les comptes de messagerie spécifiques. Voici l'emplacement par défaut des fichiers journaux :  
+ Les administrateurs de serveur de rapports peuvent passer en revue les fichiers **reportserverservice_\*.log**pour déterminer l’état de remise des abonnements. Pour la remise par messagerie électronique, les fichiers journaux du serveur de rapports contiennent un enregistrement du traitement et des remises effectuées sur les comptes de messagerie spécifiques. Voici l'emplacement par défaut des fichiers journaux :  
   
  `C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\LogFiles`  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48076299"
   
  Voici un exemple de message d'erreur de fichier journal de trace lié aux abonnements :  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO : Initialisation de EnableExecutionLogging sur 'True' comme spécifié dans les propriétés du système Server.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **Erreur lors de l’envoi du message électronique**. Exception : System.Net.Mail.SmtpException: Le serveur SMTP requiert une connexion sécurisée ou le client n'était pas authentifié. La réponse du serveur était : 5.7.1 Le client n'était pas authentifié sur System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   bibliothèque ! WindowsService_7 ! b60 ! 05/20/2014-22 : 34:36 :: i INFO : Initialisation de EnableExecutionLogging sur 'True' comme spécifié dans le serveur système properties.emailextension ! WindowsService_7 ! b60 ! 05/20/2014-22 : 34:41 :: e ERROR : **Erreur d’envoi de courrier électronique**. Exception : System.Net.Mail.SmtpException: Le serveur SMTP requiert une connexion sécurisée ou le client n'était pas authentifié. La réponse du serveur était : 5.7.1 Le client n'était pas authentifié sur System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  Le fichier journal ne contient aucune information indiquant si le rapport a été ouvert ou si la remise a réussi. Une remise réussie signifie qu'aucune erreur n'a été générée par le processeur de planification et de livraison et que le serveur de rapports s'est connecté au serveur de messagerie. Si le message électronique a entraîné l'envoi d'un message d'erreur de non-remise dans la boîte aux lettres de l'utilisateur, cette information ne figurera pas dans le fichier journal. Pour plus d’informations sur les fichiers journaux, consultez [Fichiers journaux et sources de Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48076299"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Date|Traiter|Domaine|Catégorie|Level|Correlation|Message|  
-|5/21/2014 14:34:06:15|Pool d'applications : a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extension du courrier électronique service Web Report Server|Inattendu.|(vide)|**Erreur d'envoi de courrier électronique.** Exception : System.Net.Mail.SmtpException: boîte aux lettres non disponible. La réponse du serveur était : 5.7.1 Le client n'est pas autorisé à envoyer en tant que cet expéditeur sur System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) sur System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) sur System.Net.Mail.SmtpClient.Send(MailMessage message) sur Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|5/21/2014 14:34:06:15|Pool d'applications : a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extension du courrier électronique service Web Report Server|Inattendu.|(vide)|**Erreur d'envoi de courrier électronique.** Exception : System.Net.Mail.SmtpException: Boîte aux lettres non disponible. La réponse du serveur était : 5.7.1 Le client n'est pas autorisé à envoyer en tant que cet expéditeur sur System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) sur System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) sur System.Net.Mail.SmtpClient.Send(MailMessage message) sur Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> Utiliser PowerShell pour surveiller les abonnements  
  Pour obtenir des exemples de scripts PowerShell permettant de vérifier l'état des abonnements en mode natif ou SharePoint, voir [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement](manage-subscription-owners-and-run-subscription-powershell.md).  
@@ -121,7 +121,7 @@ ms.locfileid: "48076299"
  Lorsque certaines conditions entraînent l'inactivité de l'abonnement, celui-ci manifeste son état lorsque le serveur de rapports exécute l'abonnement. Si un abonnement doit remettre un rapport chaque vendredi à 02:00 et que l'extension de remise qu'il utilise a été désinstallée le lundi à 09:00, l'abonnement ne manifestera pas son état d'inactivité avant le vendredi à 02:00.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer et gérer des abonnements pour les serveurs de rapports en Mode natif](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   
   

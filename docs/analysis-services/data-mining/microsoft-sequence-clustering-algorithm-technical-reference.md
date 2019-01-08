@@ -1,5 +1,5 @@
 ---
-title: Microsoft Sequence Clustering techniques algorithme | Documents Microsoft
+title: Microsoft Sequence Clustering des références techniques relatives aux algorithmes | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cf5f652cc2cec77fdbcb488710886441788a0631
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016466"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418380"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MSC (Microsoft Sequence Clustering)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "34016466"
  La valeur par défaut est 64.  
   
  MAXIMUM_STATES  
- Spécifie le nombre maximal d'états pour un attribut non-séquence que l'algorithme prend en charge. Si le nombre d’états pour un attribut non-séquence est supérieur au nombre maximal d’états, l’algorithme emploie les états les plus utilisés de l’attribut et traite les autres états comme **Manquant**.  
+ Spécifie le nombre maximal d'états pour un attribut non-séquence que l'algorithme prend en charge. Si le nombre d’états pour un attribut non-séquence est supérieur au nombre maximal d’états, l’algorithme utilise les États les plus utilisés de l’attribut et traite les autres États **manquant**.  
   
  La valeur par défaut est 100.  
   
@@ -106,13 +106,13 @@ ms.locfileid: "34016466"
  S'applique à la colonne de structure d'exploration de données.  
   
  MODEL_EXISTENCE_ONLY  
- Signifie que la colonne sera considérée comme ayant deux états possibles : **Missing** et **Existing**. La valeur Null est traitée comme une valeur **Missing** .  
+ Signifie que la colonne sera considérée comme ayant deux états possibles : **Manquant** et **existant**. La valeur Null est traitée comme une valeur **Missing** .  
   
  S'applique à la colonne du modèle d'exploration de données.  
   
  Pour plus d’informations sur l’utilisation de valeurs manquantes dans les modèles d’exploration de données et pour savoir comment les valeurs manquantes affectent les scores de probabilité, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  La table de cas doit avoir une colonne d'ID de cas. La table de cas peut éventuellement contenir d'autres colonnes qui stockent des attributs  propos du cas.  
   
  L'algorithme MSC (Microsoft Sequence Clustering) requiert des informations de séquence, stockées en tant que table imbriquée. La table imbriquée doit avoir une seule colonne Key Sequence. Une colonne **Key Sequence** peut contenir tout type de données pouvant être triées, y compris les types de données de chaîne, mais la colonne doit contenir des valeurs uniques pour chaque cas. De plus, avant de traiter le modèle, vous devez vérifier que la table de cas et la table imbriquée sont toutes les deux triées par ordre croissant sur la clé qui associe les tables.  
@@ -123,7 +123,7 @@ ms.locfileid: "34016466"
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
  L'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering prend en charge les colonnes d'entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu utilisés dans un modèle d’exploration de données, consultez [Types de contenu &#40;exploration de données&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Colonne|Types de contenu|  
+|colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Continu, cyclique, discret, discrétisé, clé, séquence de clés, table et trié|  
 |Attribut prédictible|Continu, cyclique, discret, discrétisé, table et trié|  
@@ -137,8 +137,8 @@ ms.locfileid: "34016466"
 -   L'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering prend en charge l'extraction, l'utilisation de modèles d'exploration de données OLAP et l'utilisation de dimensions d'exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de Clustering de séquence & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

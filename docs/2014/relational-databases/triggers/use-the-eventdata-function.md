@@ -13,15 +13,15 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 184e6a3354069ae5a1ed0d6b7557f4b0ac3fa716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65103e99a6cba7d21daca85f3295135a43f435a5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222649"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776381"
 ---
 # <a name="use-the-eventdata-function"></a>Utiliser la fonction EVENTDATA
-  Les informations sur un événement qui lance un déclencheur DDL sont capturées à l'aide de la fonction EVENTDATA. Cette fonction retourne une valeur `xml`. Le schéma XML inclut des informations sur les éléments suivants :  
+  Les informations sur un événement qui lance un déclencheur DDL sont capturées à l'aide de la fonction EVENTDATA. Cette fonction retourne une valeur `xml`. Le schéma XML inclut des informations sur les éléments suivants :  
   
 -   l'heure de l'événement ;  
   
@@ -95,7 +95,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] comprenant l'événement.  
   
- Là encore, les deux derniers éléments sont capturés en utilisant XQuery sur le `xml` données générées par EVENTDATA.  
+ Là encore, les deux derniers éléments sont capturés en utilisant XQuery sur les données `xml` générées par EVENTDATA.  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,7 +125,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Pour retourner des données d'événement, nous vous recommandons d'utiliser la méthode XQuery `value()` à la place de la méthode `query()`. Le `query()` méthode retourne XML et séquence d’échappement perluète retour chariot et saut de ligne (CRLF) instances dans la sortie, tandis que le `value()` méthode restitue des instances CR/LF invisibles dans la sortie.  
+>  Pour retourner des données d'événement, nous vous recommandons d'utiliser la méthode XQuery `value()` à la place de la méthode `query()`. La méthode `query()` retourne des instances XML et CR/LF (retour chariot/saut de ligne) à échappement & dans les résultats, alors que la méthode `value()` rend les instances CR/LF invisibles dans le résultat.  
   
  L'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] fournit un exemple similaire de déclencheur DDL. Pour trouver cet exemple, accédez au dossier des déclencheurs de base de données à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ce dossier se trouve dans le dossier **Programmabilité** de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Cliquez avec le bouton droit sur **ddlDatabseTriggerLog** et sélectionnez **Générer un script du déclencheur de la base de données en tant que**. Par défaut, le déclencheur DDL **ddlDatabseTriggerLog** est désactivé.  
   

@@ -15,12 +15,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 525e3d131e5bb2e53d35faa73f1c4c579c59cbd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd2aad1cf57852c2b78db1128a972c0490a52a85
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091449"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416490"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Vue d'ensemble de l'architecture logique (Analysis Services - données multidimensionnelles)
   Analysis Services s'exécute en mode de déploiement du serveur qui détermine l'architecture de la mémoire et l'environnement d'exécution utilisés par différents types de modèles Analysis Services. Le mode serveur est déterminé lors de l'installation. **Mode multidimensionnel et exploration de données** prend en charge OLAP traditionnel et exploration de données. **En mode tabulaire** prend en charge les modèles tabulaires. **En mode intégré SharePoint** fait référence à une instance d’Analysis Services qui a été installé en tant que PowerPivot pour SharePoint, utilisé pour le chargement et l’interrogation de modèles de données Excel ou PowerPivot à l’intérieur d’un classeur.  
@@ -48,7 +48,7 @@ ms.locfileid: "48091449"
  Chaque objet de base de données contient un ou plusieurs objets de cube. Un cube est défini par ses mesures et ses dimensions. Les mesures et les dimensions d'un cube sont dérivées des tables et des vues de la vue de source de données sur laquelle est basé le cube ou qui est générée à partir des définitions des mesures et des dimensions.  
   
 ## <a name="object-inheritance"></a>Héritage d'objet  
- Le modèle objet ASSL contient de nombreux groupes d'éléments répétés. Par exemple, le groupe d'élément « `Dimensions` contient `Hierarchies` », définit la hiérarchie de dimension d'un élément. `Cubes` et `MeasureGroups` contiennent le groupe d'élément, « `Dimensions` contient `Hierarchies` ».  
+ Le modèle objet ASSL contient de nombreux groupes d'éléments répétés. Par exemple, le groupe d’éléments, «`Dimensions` contenir `Hierarchies`, « définit la hiérarchie de dimension d’un élément. `Cubes` et `MeasureGroups` contiennent le groupe d'élément, « `Dimensions` contient `Hierarchies` ».  
   
  Sauf en cas de remplacement explicite, un élément hérite les détails de ces groupes d'éléments répétés du niveau supérieur. Par exemple, les `Translations` pour un `CubeDimension` sont les mêmes que `Translations` pour son élément ancêtre `Cube`.  
   
@@ -126,6 +126,6 @@ ms.locfileid: "48091449"
  L'exemple présenté ici ne contient qu'une seule table de faits. Quand un cube a plusieurs tables de faits, les mesures de chaque table de faits sont organisées en groupes de mesures et un groupe de mesures est lié à un jeu de dimensions spécifique par des relations de dimension définies. Ces relations sont définies en spécifiant les tables participantes dans la vue de source de données et la granularité de la relation. **Rubrique connexe :**[relations de Dimension](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Bases de données Model multidimensionnelles &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
+ [Bases de données de modèle multidimensionnel &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
   
   

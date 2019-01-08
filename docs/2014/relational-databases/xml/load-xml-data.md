@@ -13,12 +13,12 @@ ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43c1286077b940516ca849fb3ad7ec847ba04ed5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50063c63ce7e541e997f23a4995620dc6d003823
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153669"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517123"
 ---
 # <a name="load-xml-data"></a>Charger des données XML
   Vous pouvez transférer des données XML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de plusieurs manières. Exemple :  
@@ -27,12 +27,12 @@ ms.locfileid: "48153669"
   
 -   Vous pouvez copier vos données en bloc à partir d’une autre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de bcp out, puis les insérer en bloc dans la base de données de version ultérieure à l’aide de bcp in.  
   
--   Si vous avez des données dans des colonnes relationnelles d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , créez une table avec une colonne [n]text et, éventuellement, une colonne de clé primaire pour un identificateur de ligne. Utilisez la programmation pour récupérer les données XML qui est généré au niveau du serveur avec FOR XML côté client et placez-les dans le `[n]text` colonne. Ensuite, utilisez les techniques citées précédemment pour transférer les données vers une base de données de version ultérieure. Vous pouvez choisir d’écrire directement le code XML dans une colonne XML de la base de données de version ultérieure.  
+-   Si vous avez des données dans des colonnes relationnelles d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , créez une table avec une colonne [n]text et, éventuellement, une colonne de clé primaire pour un identificateur de ligne. Utilisez la programmation côté client pour récupérer les données XML générées sur le serveur par la clause FOR XML et placez-les dans la colonne `[n]text`. Ensuite, utilisez les techniques citées précédemment pour transférer les données vers une base de données de version ultérieure. Vous pouvez choisir d’écrire directement le code XML dans une colonne XML de la base de données de version ultérieure.  
   
 ## <a name="bulk-loading-xml-data"></a>Chargement en masse de données XML  
  Vous pouvez charger en masse des données XML sur le serveur en utilisant les fonctions de chargement en masse de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comme bcp. OPENROWSET vous permet de charger des données dans une colonne XML à partir de fichiers. L'exemple suivant illustre ce comportement :  
   
-##### <a name="example-loading-xml-from-files"></a>Exemple : chargement de données XML à partir de fichiers  
+##### <a name="example-loading-xml-from-files"></a>Exemple : Chargement de données XML à partir de fichiers  
  Cet exemple montre comment insérer une ligne dans la table T. La valeur de la colonne XML est chargée à partir du fichier C:\MyFile\xmlfile.xml en tant que CLOB, et la colonne integer prend la valeur 10.  
   
 ```  
@@ -50,10 +50,10 @@ FROM    (SELECT *
   
 -   Si l'encodage ne se fait pas en Unicode et qu'il est implicite, du fait d'une page de codes source, la page de codes de la chaîne dans la base de données doit être identique (ou du moins compatible) aux points de code que vous souhaitez charger. Si nécessaire, utilisez COLLATE. Si aucune page de codes serveur de la sorte n'existe, vous devez ajouter une déclaration XML explicite mentionnant l'encodage correct.  
   
--   Pour utiliser un encodage explicite, utilisez la `varbinary()` tapez, qui n’a aucune interaction avec les pages de codes, ou utilisez un type de chaîne de la page de codes appropriée. Ensuite, assignez les données à une colonne, une variable ou un paramètre XML.  
+-   Pour utiliser un encodage explicite, utilisez le type `varbinary()`, qui n'a aucune interaction avec les pages de codes, ou utilisez un type chaîne de la page de codes appropriée. Ensuite, assignez les données à une colonne, une variable ou un paramètre XML.  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>Exemple : mention explicite d'un encodage  
- Supposez que vous avez un document XML, vcdoc, stocké au format `varchar(max)`, qui ne comporte aucune déclaration XML explicite. L’instruction suivante ajoute une déclaration XML mentionnant l’encodage « iso8859-1 », de concaténer le document XML, de convertir le résultat au `varbinary(max)` afin que la représentation en octets est conservée, puis enfin de le convertir au format XML. Ainsi, le processeur XML peut analyser les données conformément à l'encodage spécifié « iso8859-1 » et générer la représentation UTF-16 correspondante pour les valeurs de chaîne.  
+### <a name="example-explicitly-specifying-an-encoding"></a>Exemple : Spécifiant explicitement un encodage  
+ Supposez que vous avez un document XML, vcdoc, stocké au format `varchar(max)`, qui ne comporte aucune déclaration XML explicite. L'instruction ci-dessous permet d'ajouter une déclaration XML mentionnant l'encodage « iso8859-1 », de concaténer le document XML, de convertir le résultat au format `varbinary(max)` de façon à conserver la représentation en octets, puis enfin de le convertir au format XML. Ainsi, le processeur XML peut analyser les données conformément à l'encodage spécifié « iso8859-1 » et générer la représentation UTF-16 correspondante pour les valeurs de chaîne.  
   
 ```  
 SELECT CAST(   
@@ -66,7 +66,7 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
-  <xsd:schema …  
+  <xsd:schema ...  
 ```  
   
  Vous devez ensuite inclure un N pour transformer l'instance XML en une instance Unicode. Exemple :  
@@ -74,11 +74,11 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
 -- Assign XML instance to a variable.  
 DECLARE @X XML  
-SET @X = N'…'  
+SET @X = N'...'  
 -- Insert XML instance into an xml type column.  
-INSERT INTO T VALUES (N'…')  
+INSERT INTO T VALUES (N'...')  
 -- Create an XML schema collection  
-CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema … '  
+CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema ... '  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

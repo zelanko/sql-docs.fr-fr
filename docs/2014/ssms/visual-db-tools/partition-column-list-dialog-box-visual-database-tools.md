@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.partitioncolumnlist
@@ -12,12 +12,12 @@ ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9faa987b5cd7dc00cde0d691177c722bd73eaa26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227405"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767431"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Liste des colonnes, boîte de dialogue (Visual Database Tools)
   Si une table possède un schéma de partition associé, vous pouvez utiliser cette boîte de dialogue pour choisir la ou les colonnes auxquelles s'applique la fonction de partition. Cette fonction n'est utilisable que si le type de données de la colonne vers laquelle vous basculez est identique à celui de la colonne définie dans la fonction de partition.  

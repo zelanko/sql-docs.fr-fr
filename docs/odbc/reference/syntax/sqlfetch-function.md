@@ -20,16 +20,16 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d1e4c4462aa10a2d99e50e71d7b2e86fa4d8555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825937"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213088"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch, fonction
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ISO 92  
+ Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
   
  **Résumé**  
  **SQLFetch** extrait l’ensemble suivant de lignes de données du jeu de résultats et retourne les données pour toutes les colonnes liées.  
@@ -39,7 +39,7 @@ ms.locfileid: "47825937"
 ```  
   
 SQLRETURN SQLFetch(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -65,7 +65,7 @@ SQLRETURN SQLFetch(
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et de la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
 |22001|Données de chaîne droite tronquées|Un signet de longueur variable retourné pour une colonne a été tronqué.|  
 |22002|Variable indicateur requise mais non fournie|Données de type NULL a été récupérées dans une colonne dont la propriété *StrLen_or_IndPtr* définie par **SQLBindCol** (ou SQL_DESC_INDICATOR_PTR définie par **SQLSetDescField** ou  **SQLSetDescRec**) était un pointeur null.|  
-|22003|Valeur numérique hors limites|Retourner la valeur numérique en tant que numérique ou la chaîne pour une ou plusieurs colonnes dépendantes aurait entraîné la partie entière (par opposition à fractionnaire) du nombre à tronquer.<br /><br /> Pour plus d’informations, consultez [conversion des données à partir de SQL pour les Types de données C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) annexe d : Types de données.|  
+|22003|Valeur numérique hors limites|Retourner la valeur numérique en tant que numérique ou la chaîne pour une ou plusieurs colonnes dépendantes aurait entraîné la partie entière (par opposition à fractionnaire) du nombre à tronquer.<br /><br /> Pour plus d’informations, consultez [conversion des données à partir de SQL pour les Types de données C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) dans l’annexe d : Types de données.|  
 |22007|Format datetime non valide|Une colonne de type caractère dans le jeu de résultats a été liée à une date, d’une heure ou d’une structure d’horodateur C, et une valeur dans la colonne a été, respectivement, une date non valide, une heure ou un horodatage.|  
 |22012|Division par zéro|Une valeur à partir d’une expression arithmétique a été retournée, ce qui a entraîné de division par zéro.|  
 |22015|Dépassement du champ Intervalle|Affectation d’une valeur numérique exacte ou d’intervalle de type SQL à un type d’intervalle C a provoqué une perte de chiffres significatifs dans le champ Début.<br /><br /> Lors de la récupération des données à un type d’intervalle C, il n’a aucune représentation de la valeur du type SQL dans le type d’intervalle C.|  
@@ -93,12 +93,12 @@ SQLRETURN SQLFetch(
   
  Si un ODBC 3 *.x* application fonctionne avec un ODBC 2 *.x* pilote, le Gestionnaire de pilotes mappe **SQLFetch** appelle à **SQLExtendedFetch** pour un ODBC 2 *.x* pilote qui prend en charge **SQLExtendedFetch**. Si ODBC 2 *.x* pilote ne prend pas en charge **SQLExtendedFetch**, le Gestionnaire de pilotes mappe **SQLFetch** appelle à **SQLFetch** dans ODBC 2 *.x* pilote, ce qui peut récupérer qu’une seule ligne.  
   
- Pour plus d’informations, consultez [curseurs de bloc, curseurs avec défilement et compatibilité descendante](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) dans la section annexe g : pilote instructions pour la compatibilité descendante.  
+ Pour plus d’informations, consultez [curseurs de bloc, curseurs avec défilement et compatibilité descendante](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) dans g : annexe Instructions de pilote pour la compatibilité descendante.  
   
 ## <a name="positioning-the-cursor"></a>Positionnement du curseur  
  Lorsque le jeu de résultats est créé, le curseur est positionné avant le début du jeu de résultats. **SQLFetch** extrait l’ensemble de lignes suivant. Il est équivalent à l’appel **SQLFetchScroll** avec *FetchOrientation* SQL_FETCH_NEXT la valeur. Pour plus d’informations sur les curseurs, consultez [curseurs](../../../odbc/reference/develop-app/cursors.md) et [curseurs de bloc](../../../odbc/reference/develop-app/block-cursors.md).  
   
- L’attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE Spécifie le nombre de lignes dans l’ensemble de lignes. Si l’ensemble de lignes en cours d’extraction par **SQLFetch** chevauche la fin du jeu de résultats, **SQLFetch** retourne un ensemble de lignes partiel. Autrement dit, si S + R – 1 est supérieur à L, où S est la ligne de début de l’ensemble de lignes en cours d’extraction, R est la taille de l’ensemble de lignes et L est la dernière ligne du jeu de résultats, puis uniquement la première L – S + 1 lignes de l’ensemble de lignes sont valides. Les lignes restantes sont vides et auront un état de SQL_ROW_NOROW.  
+ L’attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE Spécifie le nombre de lignes dans l’ensemble de lignes. Si l’ensemble de lignes en cours d’extraction par **SQLFetch** chevauche la fin du jeu de résultats, **SQLFetch** retourne un ensemble de lignes partiel. Autrement dit, si S + R - 1 est supérieur à L, où S est la ligne de début de l’ensemble de lignes en cours d’extraction, R est la taille de l’ensemble de lignes et L est la dernière ligne du jeu de résultats, puis uniquement la première L - S + 1 lignes de l’ensemble de lignes sont valides. Les lignes restantes sont vides et auront un état de SQL_ROW_NOROW.  
   
  Après avoir **SQLFetch** est retournée, la ligne actuelle est la première ligne de l’ensemble de lignes.  
   
@@ -107,8 +107,8 @@ SQLRETURN SQLFetch(
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
 |Avant de démarrer|1|  
-|*CurrRowsetStart* \< =  *LastResultRow – la RowsetSize*[1]|*CurrRowsetStart* + *la RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow – la RowsetSize*[1]|Après la fin|  
+|*CurrRowsetStart* \< =  *LastResultRow - la RowsetSize*[1]|*CurrRowsetStart* + *la RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow - la RowsetSize*[1]|Après la fin|  
 |Après la fin|Après la fin|  
   
  [1] si la taille de l’ensemble de lignes est modifiée entre les extractions, il s’agit de la taille de l’ensemble de lignes qui a été utilisée avec l’extraction précédente.  

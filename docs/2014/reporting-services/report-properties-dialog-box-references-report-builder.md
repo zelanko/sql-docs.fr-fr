@@ -13,12 +13,12 @@ ms.assetid: 3414c857-8ea6-4fc4-a6d5-b4883c039efa
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6222a5bfb1efe52e2b35345e7bd6364676936b2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e6f4a3f590c196731ed186f95cf5dc4078a1fc0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104579"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504140"
 ---
 # <a name="report-properties-dialog-box-references-report-builder"></a>Boîte de dialogue Propriétés du rapport, Références (Générateur de rapports)
   Sélectionnez **Références** dans la boîte de dialogue **Propriétés du rapport** pour ajouter ou supprimer des références aux assemblys personnalisés ou externes et aux instances de classes personnalisées qui sont utilisées par des expressions dans la définition de rapport. Les assemblys personnalisés ne sont pas pris en charge en mode local dans le Générateur de rapports. Pour créer des rapports qui utilisent des assemblys personnalisés, utilisez le Concepteur de rapports dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -28,7 +28,7 @@ ms.locfileid: "48104579"
  Répertorie les assemblys référencés par le rapport. L'assembly doit être disponible sur l'ordinateur où est installé l'outil que vous utilisez pour concevoir le rapport, ainsi que sur le serveur de rapports. Le nom de la référence doit correspondre le contenu de  **\<CodeModule >** exactement les balises dans le fichier de langage de définition de rapport (.rdl).  
   
  **Ajouter**  
- Cliquez pour ajouter un assembly. Cliquez sur le bouton de sélection (...) pour ouvrir la boîte de dialogue **Ouvrir** et sélectionner les assemblys nécessaires pour effectuer le traitement du rapport et l’évaluation de l’expression.  
+ Cliquez pour ajouter un assembly. Cliquez sur le bouton points de suspension (...) pour ouvrir la **ouvrir** boîte de dialogue et sélectionner les assemblys nécessaires pour terminer l’évaluation de traitement et d’expression de rapport.  
   
  **Supprimer**  
  Pour supprimer une référence d’assembly de la liste, sélectionnez le nom de l’assembly, puis cliquez sur le bouton **Supprimer** .  
@@ -37,7 +37,7 @@ ms.locfileid: "48104579"
  Répertorie les instances de classes utilisées par le rapport. Cette liste de classes est utilisée uniquement par des membres d'instances, et non par des membres statiques.  
   
  **Ajouter**  
- Cliquez pour ajouter une référence de classe. Cliquez sur le bouton de sélection (...) pour ouvrir la boîte de dialogue **Ouvrir** et sélectionnez les classes nécessaires pour effectuer le traitement du rapport et l’évaluation de l’expression.  
+ Cliquez pour ajouter une référence de classe. Cliquez sur le bouton points de suspension (...) pour ouvrir la **ouvrir** boîte de dialogue et sélectionner les classes nécessaires pour terminer l’évaluation de traitement et d’expression de rapport.  
   
  **Supprimer**  
  Pour supprimer l’instance de classe, sélectionnez-la et cliquez sur le bouton **Supprimer** .  

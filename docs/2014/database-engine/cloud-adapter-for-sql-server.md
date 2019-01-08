@@ -14,12 +14,12 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 90bc2c9f6f268bf03904d768fd25b25b3ade3fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157989"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518255"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptateur de cloud pour SQL Server
   Le service Adaptateur de cloud est créé dans le cadre de la configuration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur une machine virtuelle Windows Azure. Il génère un certificat SSL auto-signé dans le cadre de sa première exécution, puis s’exécute en tant que compte **Système local** . Il génère un fichier de configuration utilisé pour sa configuration. L'adaptateur de cloud crée également une règle de Pare-feu Windows pour autoriser les connexions TCP entrantes sur le port 11435 par défaut.  
@@ -27,13 +27,13 @@ ms.locfileid: "48157989"
  L'adaptateur de cloud est un service sans état et synchrone qui reçoit les messages de l'instance sur site de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lorsque le service Adaptateur de cloud est arrêté, il arrête l'adaptateur de cloud d'accès à distance, dissocie le certificat SSL et désactive la règle de Pare-feu Windows.  
   
 ## <a name="cloud-adapter-requirements"></a>Configuration requise pour l'adaptateur de cloud  
- Notez la configuration requise pour installer, activer, puis exécuter l'adaptateur de cloud pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
+ Notez la configuration requise pour installer, activer, puis exécuter l'adaptateur de cloud pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   Adaptateur de cloud est pris en charge avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 et versions ultérieures. Sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012, l'adaptateur de cloud pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nécessite SQL Management Objects pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012.  
+-   L'adaptateur de cloud est pris en charge par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 et les versions ultérieures. Sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012, l'adaptateur de cloud pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nécessite SQL Management Objects pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012.  
   
 -   Le service Web Adaptateur de cloud s'exécute en tant que compte **Système local** et vérifie les informations d'identification du client avant d'exécuter les tâches. Informations d’identification fournies par le client doivent appartenir au compte d’utilisation qui est un membre de la variable locale **administrateurs** groupe sur l’ordinateur distant.  
   
--   L'adaptateur de cloud prend uniquement en charge l'Authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   L'adaptateur de cloud prend uniquement en charge l'Authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 -   L'adaptateur de cloud utilise le compte d'administrateur local d'ordinateur virtuel pour exécuter des commandes sur l'ordinateur local, et non pas un compte d'administrateur système.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48157989"
 ## <a name="cloud-adapter-configuration-settings"></a>Paramètres de configuration de l'adaptateur de cloud  
  Utilisez les informations de configuration d'adaptateur de cloud suivantes pour modifier les paramètres d'un adaptateur de cloud.  
   
--   **Chemin d’accès par défaut pour le fichier de configuration** – C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
+-   **Chemin d’accès par défaut pour le fichier de configuration** -C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
   
 -   **Paramètres du fichier de configuration** -  
   
@@ -62,9 +62,9 @@ ms.locfileid: "48157989"
   
     -   \</configuration >  
   
--   **Détails du certificat** – Le certificat présente les valeurs suivantes :  
+-   **Détails du certificat** -le certificat a les valeurs suivantes :  
   
-    -   Sujet – « CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft »  
+    -   Sujet - « CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft »  
   
     -   Le certificat doit disposer uniquement de l'utilisation améliorée de la clé d'authentification serveur activée.  
   
@@ -72,20 +72,20 @@ ms.locfileid: "48157989"
   
  **Valeurs du fichier de configuration**:  
   
-|Paramètre|Valeurs|Valeur par défaut|Commentaires|  
+|Paramètre|Valeurs|Par défaut|Commentaires|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|Si ce paramètre n'est pas spécifié, utilisez 11435.|  
 |WebServiceCertificate|Thumbprint|Vide|Si ce paramètre est vide, un nouveau certificat auto-signé est généré.|  
 |ExposeExceptionDetails|True/False|False||  
   
 ## <a name="cloud-adapter-troubleshooting"></a>Dépannage de l'adaptateur de cloud  
- Utilisez les informations suivantes pour dépanner l'adaptateur de cloud pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
+ Utilisez les informations suivantes pour dépanner l'adaptateur de cloud pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   **Gestion des erreurs et enregistrement** – Les erreurs et les messages d'état sont écrits dans le journal des événements des applications.  
+-   **Gestion des erreurs et journalisation** -erreurs et messages d’état sont écrits dans le journal des événements.  
   
--   **Suivi, événements** – Tous les événements sont écrits dans le journal des événements des applications.  
+-   **Suivi, événements** -tous les événements sont écrits dans le journal des événements.  
   
--   **Contrôle, configuration** – utilisez le fichier de configuration situé dans : C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
+-   **Contrôle, configuration** -utiliser le fichier de configuration situé dans :  C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
   
 |Error|ID d'erreur|Cause|Résolution|  
 |-----------|--------------|-----------|----------------|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
@@ -22,12 +21,12 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41762bb046e5b118d7802555c2b676378e81df7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d7ea5c6424283bd7b8aaa44f8a026ea18a9db30
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122839"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751121"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Gestionnaires d'événements Integration Services (SSIS)
   Lors de l'exécution, les exécutables (packages, conteneurs de boucles Foreach, conteneurs de boucles For, conteneurs de séquences et conteneurs d'hôtes de tâches) déclenchent des événements. Par exemple, un événement OnError se déclenche lorsqu'une erreur se produit. Vous pouvez créer des gestionnaires d'événements personnalisés pour ces événements afin d'étendre les fonctionnalités des packages et les rendre plus faciles à gérer au moment de l'exécution. Les gestionnaires d'événements peuvent réaliser des tâches comme les suivantes :  
@@ -46,7 +45,7 @@ ms.locfileid: "48122839"
   
  ![Package, boucle For, hôte de tâche et tâche d’exécution SQL](media/mw-dts-eventhandlerpkg.gif "Package, boucle For, hôte de tâche et tâche d’exécution SQL")  
   
- Seul le package possède un gestionnaire d'événements (pour son événement `OnError`). Si une erreur se produit lorsque la tâche d’exécution SQL s’exécute, le `OnError` Gestionnaire d’événements pour le package s’exécute. Le diagramme suivant illustre la séquence d’appels qui conduit le `OnError` Gestionnaire d’événements pour le package à exécuter.  
+ Seul le package possède un gestionnaire d'événements (pour son événement `OnError`). Si une erreur se produit pendant l'exécution de la tâche d'exécution SQL, le gestionnaire d'événements `OnError` du package s'exécute. Le diagramme qui suit montre la séquence d'appels qui conduit à l'exécution du gestionnaire d'événements `OnError` du package.  
   
  ![Flux de gestionnaire d’événements](media/mw-dts-eventhandlers.gif "Flux de gestionnaire d’événements")  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48122839"
 |**OnProgress**|Gestionnaire d’événements de l’événement **OnProgress** . Cet événement est déclenché par un exécutable lorsqu'une progression mesurable est réalisée par l'exécutable.|  
 |**OnQueryCancel**|Gestionnaire d’événements de l’événement **OnQueryCancel** . Cet événement est déclenché par un exécutable pour déterminer si son exécution doit s'arrêter.|  
 |**OnTaskFailed**|Gestionnaire d’événements de l’événement **OnTaskFailed** . Cet événement est déclenché par une tâche lorsqu'elle échoue.|  
-|**OnVariableValueChanged**|Gestionnaire d’événements de l’événement **OnVariableValueChanged** . Cet événement est déclenché par un exécutable lorsque la valeur d'une variable change. L'événement est déclenché par l'exécutable sur lequel la variable est définie. Cet événement n’est pas déclenché si vous définissez la **RaiseChangeEvent** propriété pour la variable à `False`. Pour plus d’informations, consultez [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).|  
+|**OnVariableValueChanged**|Gestionnaire d’événements de l’événement **OnVariableValueChanged** . Cet événement est déclenché par un exécutable lorsque la valeur d'une variable change. L'événement est déclenché par l'exécutable sur lequel la variable est définie. Cet événement n’est pas déclenché si vous définissez la **RaiseChangeEvent** propriété pour la variable à `False`. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).|  
 |**OnWarning**|Gestionnaire d’événements de l’événement **OnWarning** . Cet événement est déclenché par un exécutable lorsqu'un avertissement se produit.|  
   
 ## <a name="configuration-of-an-event-handler"></a>Configuration d'un gestionnaire d'événements  

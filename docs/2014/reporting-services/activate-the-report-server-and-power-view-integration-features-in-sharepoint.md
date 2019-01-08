@@ -11,23 +11,23 @@ ms.assetid: c7f64a54-c555-4d31-bf99-3abe57dc8626
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1ab486390e8da36d14d5aac1e1049a5836dd2be9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f31ea33f116cbabf1a808f30a9575ada43bae900
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081825"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392823"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Activer les fonctionnalités d'intégration Report Server et Power View dans SharePoint
   Les fonctionnalités de collection de sites de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sont généralement activées par défaut après l’installation du complément [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] pour les produits SharePoint. Dans certaines circonstances, vous devrez activer les fonctionnalités manuellement.  
   
- Si vous installez le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour les produits SharePoint 2010 après l'installation du produit SharePoint, la fonctionnalité d'intégration du serveur de rapports et la fonctionnalité d'intégration de vue de remplissage sont uniquement activées pour les collections de sites racine. Pour les autres collections de sites, vous devez activer manuellement les fonctionnalités. Par exemple, si vous avez une collection de sites **http://[my nom du serveur] /sites/ [nom de collection de sites]** vous devez activer manuellement le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] les fonctionnalités de collection de sites.  
+ Si vous installez le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour les produits SharePoint 2010 après l'installation du produit SharePoint, la fonctionnalité d'intégration du serveur de rapports et la fonctionnalité d'intégration de vue de remplissage sont uniquement activées pour les collections de sites racine. Pour les autres collections de sites, vous devez activer manuellement les fonctionnalités. Par exemple, si vous avez une collection de sites **http://[nom de mon serveur]/sites/[nom de collection de sites]** vous devez activer manuellement les fonctionnalités de collection de sites [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
- Lorsqu’il n’existe aucune collection de sites racine, le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complément journalise un message semblable au suivant.  
+ S’il n’y a pas de collection de sites racine, le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] enregistre un message semblable au suivant.  
   
- « L'application Web SharePoint 80 n'a pas de collection de sites racine »  
+ « L'application Web SharePoint 80 n'a pas de collection de sites racine »  
   
- Le message se trouve dans le journal d'installation du complément, nommé « RS_SP_#.log » où # est un nombre incrémenté. Le fichier journal se trouve dans le dossier Temp de l’utilisateur actuel, par exemple C:\Users\\[nom utilisateur]\AppData\Local\Temp. Pour plus d’informations sur les options de journalisation avec le complément, consultez [installer ou désinstaller le logiciel complément Reporting Services pour SharePoint &#40;SharePoint 2010 et SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ Le message se trouve dans le journal d’installation de complément, nommé « RS_SP_ # .log » où # est un numéro à incrémentation. Le fichier journal se trouve dans le dossier Temp de l’utilisateur actuel, par exemple C:\Users\\[nom utilisateur]\AppData\Local\Temp. Pour plus d’informations sur les options de journalisation avec le complément, consultez [installer ou désinstaller le logiciel complément Reporting Services pour SharePoint &#40;SharePoint 2010 et SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
  Dans cette rubrique :  
   

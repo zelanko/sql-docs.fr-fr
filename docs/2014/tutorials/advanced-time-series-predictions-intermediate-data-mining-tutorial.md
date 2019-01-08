@@ -11,12 +11,12 @@ ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f575a51d34bfaa6b8a4ca1a6200cf60f9d89a870
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a45d0bf0878b472e4979c00a5a38e8b01974a22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122739"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544331"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Prédictions de série chronologique avancées (Didacticiel intermédiaire sur l'exploration de données)
   Le modèle de prévision vous a appris que même si les ventes dans la plupart des régions suivent une tendance similaire, certaines régions et certains modèles, tels que le modèle M200 dans la région Pacific, présentent des tendances très différentes. Ceci n'est pas une surprise puisque vous savez que les différences entre les régions sont courantes et sont causées par de nombreux facteurs, notamment les promotions marketing, la création de rapports inexacts ou des événements géopolitiques.  
@@ -44,7 +44,7 @@ ms.locfileid: "48122739"
 ##  <a name="bkmk_newExtendData"></a> Création de nouvelles données de ventes étendues  
  Pour mettre à jour vos données de ventes, vous devez obtenir les derniers chiffres de vente. Les données qui viennent d'arriver de la région Pacific sont d'un intérêt particulier car cette région a lancé une promotion commerciale régionale pour attirer l'attention sur les nouveaux magasins et pour attiser la conscience de leurs produits.  
   
- Pour ce scénario, nous supposerons que les données ont été importées depuis un classeur Excel qui contient seulement trois mois de nouvelles données pour quelques régions. Vous allez créer une table des données à l'aide d'un script Transact-SQL, puis définir une vue de source de données à utiliser pour la prédiction.  
+ Pour ce scénario, nous supposons que les données ont été importées à partir d’un classeur Excel qui contient seulement trois mois de nouvelles données pour quelques régions. Vous allez créer une table pour les données à l’aide d’un script Transact-SQL, puis définir une vue de source de données à utiliser pour la prédiction.  
   
 #### <a name="create-the-table-with-new-sales-data"></a>Créez la table avec les nouvelles données de ventes  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48122739"
   
      **Source de données**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Sélectionner des Tables et vues**: sélectionnez la table que vous venez de créer, NewSalesData.  
+     **Sélectionner des Tables et vues**: Sélectionnez la table que vous venez de créer, NewSalesData.  
   
 3.  Cliquez sur **Terminer**.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48122739"
   
 2.  Dans la page d'accueil de l'Assistant, cliquez sur **Suivant**.  
   
-3.  Sur le **sélectionner une Source de données** , sélectionnez [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], puis cliquez sur **suivant**.  
+3.  Dans la page **Sélectionner une source de données** , sélectionnez [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], puis cliquez sur **Suivant**.  
   
-4.  Dans la page **Sélectionner des tables et des vues**, n'ajoutez aucune table, cliquez seulement sur **Suivant**.  
+4.  Dans la page, **sélectionner des Tables et vues**, n’ajoutez pas d’un clic, il suffit de tables **suivant**.  
   
 5.  Dans la page, **fin de l’Assistant**, tapez le nom `AllRegions`, puis cliquez sur **Terminer**.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48122739"
   
      **Source de données**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Sélectionner des tables et des vues**: ne sélectionnez pas de tables  
+     **Sélectionner des Tables et vues**: Ne sélectionnez pas de toutes les tables  
   
      **Nom** : `T1000 Pacific Region`  
   
@@ -165,7 +165,7 @@ ms.locfileid: "48122739"
   
      **Nom** : `T1000 Pacific Region`  
   
-     **Description**: **filtre`vTimeSeries`par région et modèle**  
+     **Description**: **Filtre`vTimeSeries`par région et modèle**  
   
 5.  Dans le volet Texte, tapez la requête suivante et cliquez sur OK :  
   
@@ -186,8 +186,8 @@ ms.locfileid: "48122739"
  [À l’aide des données mises à jour des prédictions de série chronologique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de série chronologique de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Référence technique de Microsoft Time Series algorithme](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+ [Références techniques relatives à l'algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Vues de sources de données dans les modèles multidimensionnels](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

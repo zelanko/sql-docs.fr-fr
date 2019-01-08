@@ -1,5 +1,5 @@
 ---
-title: StrToSet (MDX) | Documents Microsoft
+title: StrToSet (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7184dc872624f6589ec6e93911b39c9f8b4e4aa3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ee1e0cbeaa4e33be223e1b777ff243b5c3ef2d01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742978"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524412"
 ---
 # <a name="strtoset-mdx"></a>StrToSet (MDX)
 
 
-  Retourne le jeu spécifié par une chaîne au format MDX (Multidimensional Expressions).  
+  Retourne le jeu spécifié par une chaîne au format MDX Multidimensional Expressions.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,14 +35,14 @@ StrToSet(Set_Specification [,CONSTRAINED] )
 ## <a name="remarks"></a>Notes  
  Le **StrToSet** fonction retourne le jeu spécifié dans l’expression de chaîne. Le **StrToSet** fonction est généralement utilisée avec les fonctions définies par l’utilisateur pour retourner un jeu spécifié d’une fonction externe vers une instruction MDX, ou lorsqu’une requête MDX est paramétrable.  
   
--   Lorsque l’indicateur CONSTRAINED est utilisé, le jeu spécifié doit contenir les noms de membres qualifiés ou non qualifié ou un jeu de tuples contenant les noms de membres qualifiés ou comprise entourés les accolades {}. Cet indicateur est employé pour réduire les risques d'attaques par injection au travers de la chaîne spécifiée. Si une chaîne qui ne peut être directement résolue à des noms de membres qualifiés ou non qualifiés est fournie, l'erreur suivante s'affiche : restrictions imposées par l'indicateur CONSTRAINED dans la fonction STRTOSET n'ont pas été respectées. »  
+-   Lorsque l’indicateur CONSTRAINED est utilisé, le jeu spécifié doit contenir les noms de membres qualifiés ou ou un jeu de tuples contenant les noms de membres qualifiés ou placées entourés accolades {}. Cet indicateur est employé pour réduire les risques d'attaques par injection au travers de la chaîne spécifiée. Si une chaîne qui ne peut être directement résolue à des noms de membres qualifiés ou non qualifiés est fournie, l'erreur suivante s'affiche : « Les restrictions imposées par l'indicateur CONSTRAINED dans la fonction STRTOSET n'ont pas été respectées. »  
   
 -   Si l'indicateur CONSTRAINED n'est pas utilisé, vous pouvez résoudre le jeu spécifié à une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
 -   Pour mieux comprendre les différences entre jeux et membres, consultez Utilisation d'expressions de jeu et Utilisation d'expressions de membre.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant retourne le jeu de membres de la hiérarchie d’attribut State-Province à l’aide de la **StrToSet** (fonction). Le jeu spécifié fournit le qu'expression d’ensemble une expression MDX valide.  
+ L’exemple suivant retourne le jeu de membres de la hiérarchie d’attribut State-Province à l’aide de la **StrToSet** (fonction). Le jeu spécifié fournit qu'une ensemble MDX valide expression.  
   
 ```  
 SELECT StrToSet ('[Geography].[State-Province].Members')  
@@ -69,6 +69,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

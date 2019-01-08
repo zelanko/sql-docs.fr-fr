@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.results.f1
@@ -13,12 +13,12 @@ ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c304f672ddcead8ac2077f27d02b65033c4b1b77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143429"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762211"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Boîte de dialogue Vue détaillée des résultats
   Cette boîte de dialogue affiche les résultats d'évaluation de stratégie après l'exécution d'une stratégie lorsque vous ouvrez la boîte de dialogue **Évaluer les stratégies** et que vous cliquez sur **Afficher**. Cette boîte de dialogue est en lecture seule et vous aide à comprendre quelle partie d'une expression de propriété peut échouer.  

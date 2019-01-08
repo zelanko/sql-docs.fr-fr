@@ -22,12 +22,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2923591c64eceab59424ddaadaaa7f243f2f1575
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 8c3515610a0c833a17c78602ff48ed488b739ec5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906439"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542697"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Activer la compression sur une table ou un index
   Cette rubrique explique comment activer la compression sur une table ou un index dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "48906439"
   
 2.  Pour compresser un index, développez la table contenant l'index que vous souhaitez compresser, puis développez le dossier **Index** .  
   
-3.  Cliquez avec le bouton droit sur la table ou l’index à compresser, pointez sur **Stockage** et sélectionnez **Gérer la compression…**.  
+3.  Cliquez avec le bouton droit sur la table ou l’index à compresser, pointez sur **Stockage** et sélectionnez **Gérer la compression...**.  
   
 4.  Dans l'Assistant Compression de données, sur la page **Assistant Compression de données** , cliquez sur **Suivant**.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48906439"
   
      Si vous sélectionnez **Planification**, cliquez sur **Modifier la planification**.  
   
-    1.  Dans la boîte de dialogue **Nouvelle planification du travail** , dans la zone **Nom** , entrez le nom de la planification du travail.  
+    1.  Dans la boîte de dialogue **Nouvelle planification du travail**, dans la zone **Nom**, entrez le nom de la planification du travail.  
   
     2.  Dans la liste **Type de planification** , sélectionnez le type de la planification :  
   
@@ -140,15 +140,15 @@ ms.locfileid: "48906439"
   
             -   Si vous sélectionnez **Mensuelle**, sélectionnez **Jour** ou **Le**.  
   
-                -   Si vous sélectionnez **Jour**, entrez la date du mois à laquelle vous souhaitez que la planification du travail s'exécute, ainsi que la fréquence de répétition de la planification du travail en mois. Par exemple, si vous souhaitez que la planification du travail s'exécute le 15 du mois un mois sur deux, sélectionnez **Jour** , puis entrez « 15 » dans la première zone et « 2 » dans la deuxième zone. Notez également que le nombre maximum autorisé dans la deuxième zone est « 99 ».  
+                -   Si vous sélectionnez **Jour**, entrez la date du mois à laquelle vous souhaitez que la planification du travail s'exécute, ainsi que la fréquence de répétition de la planification du travail en mois. Par exemple, si vous souhaitez que la planification du travail s’exécute le 15 du mois un mois sur deux, sélectionnez **Jour**, puis entrez « 15 » dans la première zone et « 2 » dans la deuxième zone. Notez que le nombre maximum autorisé dans la deuxième zone est « 99 ».  
   
-                -   Si vous sélectionnez **Le**, sélectionnez le jour spécifique de la semaine et du mois pendant lequel vous voulez que la planification du travail s'exécute et la fréquence à laquelle la planification du travail doit se répéter en mois. Par exemple, si vous souhaitez que la planification du travail s'exécute le dernier jour de la semaine un mois sur deux, sélectionnez **Jour**, puis **dernier** dans la première liste, **jour ouvrable** dans la deuxième liste et « 2 » dans la dernière zone. Vous pouvez également sélectionner **premier**, **deuxième**, **troisième**ou **quatrième**, ainsi que des jours de la semaine spécifiques (par exemple, dimanche ou mercredi) dans les deux premières listes. Notez également que le nombre maximum autorisé dans la dernière zone est « 99 ».  
+                -   Si vous sélectionnez **Le**, sélectionnez le jour spécifique de la semaine et du mois pendant lequel vous voulez que la planification du travail s'exécute et la fréquence à laquelle la planification du travail doit se répéter en mois. Par exemple, si vous souhaitez que la planification du travail s’exécute le dernier jour de la semaine un mois sur deux, sélectionnez **Jour**, puis **dernier** dans la première liste, **jour ouvrable** dans la deuxième liste et « 2 » dans la dernière zone. Vous pouvez également sélectionner **première**, **deuxième**, **troisième**, ou **quatrième**, ainsi que les jours de la semaine spécifiques (par exemple : Dimanche ou mercredi) dans les deux premières listes. Notez que le nombre maximum autorisé dans la dernière zone est « 99 ».  
   
         2.  Sous **Fréquence quotidienne**, spécifiez la fréquence à laquelle la planification du travail se répète le jour de son exécution :  
   
             -   Si vous sélectionnez **Une fois à**, entrez l'heure spécifique à laquelle la planification du travail doit s'exécuter dans la zone **Une fois à** . Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   
-            -   Si vous sélectionnez **Toutes les**, spécifiez la fréquence à laquelle la planification du travail s'exécute pendant la journée choisie sous **Fréquence**. Par exemple, si vous souhaitez que la planification du travail se répète toutes les 2 heures le jour d’exécution de la planification du travail, sélectionnez **Toutes les**, entrez « 2 » dans la première zone, puis sélectionnez **heure(s)** dans la liste. Dans cette liste, vous pouvez également sélectionner **minute(s)** et **seconde(s)**. Notez également que le nombre maximum autorisé dans la première zone est « 100 ».  
+            -   Si vous sélectionnez **Toutes les**, spécifiez la fréquence à laquelle la planification du travail s'exécute pendant la journée choisie sous **Fréquence**. Par exemple, si vous souhaitez que la planification du travail se répète toutes les 2 heures le jour d’exécution de la planification du travail, sélectionnez **Toutes les**, entrez « 2 » dans la première zone, puis sélectionnez **heure(s)** dans la liste. Dans cette liste, vous pouvez également sélectionner **minute(s)** et **seconde(s)**. Notez que le nombre maximum autorisé dans la première zone est « 100 ».  
   
                  Dans la zone **Début** , entrez l'heure à laquelle l'exécution de la planification du travail doit démarrer. Dans la zone **Fin** , entrez l'heure à laquelle la planification du travail doit s'arrêter. Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   
@@ -190,10 +190,10 @@ ms.locfileid: "48906439"
      Ouvre la boîte de dialogue **Enregistrer le rapport sous** .  
   
      **Copier le rapport dans le Presse-papiers**  
-     Copie les résultats du rapport de progression de l'Assistant dans le presse-papiers.  
+     Copie les résultats du rapport de progression de l’Assistant dans le Presse-papiers.  
   
      **Envoyer le rapport sous forme de courrier électronique**  
-     Copie les résultats du rapport de progression de l'Assistant dans un courrier électronique.  
+     Copie les résultats du rapport de progression de l’Assistant dans un e-mail.  
   
      Une fois terminé, cliquez sur **Fermer**.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "48906439"
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Dans l'exemple, l'affichage catalogue `sys.indexes` est d'abord interrogé pour retourner le nom et l' `index_id` de chaque index de la table `Production.TransactionHistory` . Ensuite, il exécute la procédure stockée `sp_estimate_data_compression_savings` pour retourner la taille estimée de l’ID d’index spécifié, s’il s’agissait d’utiliser le paramètre de compression de PAGE. Enfin, l'exemple reconstruit ID d'index 2 (`IX_TransactionHistory_ProductID`), en spécifiant la compression PAGE.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Dans l'exemple, l'affichage catalogue `sys.indexes` est d'abord interrogé pour retourner le nom et l' `index_id` de chaque index de la table `Production.TransactionHistory` . La procédure stockée `sp_estimate_data_compression_savings` est ensuite exécutée pour retourner la taille estimée de l'ID d'index spécifié selon le paramètre de compression PAGE. Enfin, l'exemple reconstruit ID d'index 2 (`IX_TransactionHistory_ProductID`), en spécifiant la compression PAGE.  
   
     ```  
     USE AdventureWorks2012;   

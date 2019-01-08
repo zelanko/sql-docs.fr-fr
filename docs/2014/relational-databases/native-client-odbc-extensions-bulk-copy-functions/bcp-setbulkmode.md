@@ -12,12 +12,12 @@ ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c97466b6c216c83b133c666fa8c4134ca35005b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115099"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520511"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode vous permet de spécifier le format de colonne dans une opération de copie en bloc, définition de tous les attributs de colonne dans un seul appel de fonction.  
@@ -79,10 +79,10 @@ cbRow
   
 |property|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Spécifie le mode de sortie de caractères.<br /><br /> Correspond à l’option – c dans BCP. EXE et à bcp_setcolfmt avec `BCP_FMT_TYPE` propriété définie sur `SQLCHARACTER`.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Spécifie le mode de sortie Unicode.<br /><br /> Correspond à l’option – w dans BCP. EXE et bcp_setcolfmt avec `BCP_FMT_TYPE` propriété définie sur `SQLNCHAR`.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Spécifie des types natifs pour les types de non-caractères et Unicode pour les types de caractères.<br /><br /> Correspond à l’option – N dans BCP. EXE et bcp_setcolfmt avec `BCP_FMT_TYPE` propriété définie sur `SQLNCHAR` si le type de colonne est une chaîne (valeur par défaut si ce n’est pas une chaîne).|  
-|BCP_OUT_NATIVE_MODE|Spécifie les types de base de données natifs.<br /><br /> Correspond à l’option – n dans BCP. EXE et bcp_setcolfmt avec `BCP_FMT_TYPE` propriété la valeur par défaut.|  
+|BCP_OUT_CHARACTER_MODE|Spécifie le mode de sortie de caractères.<br /><br /> Correspond à l’option-c dans BCP. EXE et à bcp_setcolfmt avec `BCP_FMT_TYPE` propriété définie sur `SQLCHARACTER`.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Spécifie le mode de sortie Unicode.<br /><br /> Correspond à l’option -w dans BCP. EXE et bcp_setcolfmt avec `BCP_FMT_TYPE` propriété définie sur `SQLNCHAR`.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Spécifie des types natifs pour les types de non-caractères et Unicode pour les types de caractères.<br /><br /> Correspond à l’option -N dans BCP. EXE et bcp_setcolfmt avec `BCP_FMT_TYPE` propriété définie sur `SQLNCHAR` si le type de colonne est une chaîne (valeur par défaut si ce n’est pas une chaîne).|  
+|BCP_OUT_NATIVE_MODE|Spécifie les types de base de données natifs.<br /><br /> Correspond à l’option - n dans BCP. EXE et bcp_setcolfmt avec `BCP_FMT_TYPE` propriété la valeur par défaut.|  
   
  Vous ne devez pas utiliser bcp_setbulkmode avec une séquence d’appels de fonction qui inclut bcp_setcolfmt, bcp_control et bcp_readfmt. Par exemple, vous ne devez pas appeler bcp_control(BCPTEXTFILE) et bcp_setbulkmode.  
   
@@ -95,30 +95,30 @@ cbRow
  Séquence d'appels  
   
 ```  
-bcp_init(“table”, DB_IN);  
+bcp_init("table", DB_IN);  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_readfmt();  
 ```  
   
 ```  
 bcp_init(NULL, DB_OUT);  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_setcolfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_readfmt();  
 bcp_setcolfmt();  
@@ -128,18 +128,18 @@ bcp_setcolfmt();
 bcp_init(NULL, DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setbulkmode();  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_readfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_columns();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setcolfmt();  
 ```  

@@ -29,12 +29,12 @@ ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 118c20c16890edb50bdc19686da40c77b362c29d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51551dd92ee0cca193abd88041e4ad7cc183718a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217649"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521123"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   L’algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) utilise un réseau *perceptron multicouche* , également appelé *réseau à règle delta à rétropropagation*, qui peut comporter jusqu’à trois couches de neurones, ou *perceptrons*. une couche d'entrée, une couche masquée facultative et une couche de sortie.  
@@ -103,7 +103,7 @@ ms.locfileid: "48217649"
   
  **Valeurs discrètes**  
   
- Μg = p : probabilité antérieure d’un état  
+ Μg = p - probabilité antérieure d’un état  
   
  StdDev = sqrt(p(1-p))  
   
@@ -138,12 +138,12 @@ ms.locfileid: "48217649"
  HOLDOUT_SEED  
  Spécifie un nombre qui est utilisé en tant que valeur de départ du générateur de nombres pseudo-aléatoires lorsque l'algorithme détermine de façon aléatoire les données d'exclusion. Si ce paramètre a la valeur 0, l'algorithme génère la valeur de départ en fonction du nom du modèle d'exploration de données, afin de garantir que le contenu du modèle reste inchangé pendant le retraitement.  
   
- La valeur par défaut est 0 :  
+ La valeur par défaut est 0.  
   
  MAXIMUM_INPUT_ATTRIBUTES  
  Détermine le nombre maximal d'attributs d'entrée qui peuvent être fournis à l'algorithme et au-delà duquel la sélection des fonctionnalités est utilisée. La valeur 0 désactive la sélection des fonctionnalités pour les attributs d'entrée.  
   
- La valeur par défaut est 255.  
+ La valeur par défaut est 255.  
   
  MAXIMUM_OUTPUT_ATTRIBUTES  
  Détermine le nombre maximal d'attributs de sortie qui peuvent être fournis à l'algorithme et au-delà duquel la sélection des fonctionnalités est utilisée. La valeur 0 désactive la sélection des fonctionnalités pour les attributs de sortie.  
@@ -160,7 +160,7 @@ ms.locfileid: "48217649"
   
  En d'autres termes, si HOLDOUT_PERCENTAGE a la valeur 30, l'algorithme utilisera soit la valeur de ce paramètre, soit une valeur égale à 70 % du nombre total de cas, la plus petite valeur étant retenue.  
   
- La valeur par défaut est 10 000.  
+ La valeur par défaut est 10 000.  
   
 ### <a name="modeling-flags"></a>Indicateurs de modélisation  
  Les indicateurs de modélisation suivants sont pris en charge pour une utilisation avec l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network).  
@@ -187,7 +187,7 @@ ms.locfileid: "48217649"
  Log-normale  
  Indique que les valeurs de la colonne doivent être considérées comme étant distribuées selon la courbe *log-normale* , ce qui signifie que le logarithme des valeurs est distribué normalement.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Un modèle de réseau neuronal doit contenir au moins une colonne d'entrée et une colonne de sortie.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
@@ -202,8 +202,8 @@ ms.locfileid: "48217649"
 >  Les types de contenu Cyclique et Trié sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de réseau neuronal de Microsoft](microsoft-neural-network-algorithm.md)   
- [Contenu du modèle pour les modèles de réseau neuronal d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemples de requêtes de modèle de réseau neuronal](neural-network-model-query-examples.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Configurer l’utilisation de l’espace disque (PowerPivot pour SharePoint) | Documents Microsoft
+title: Configurer l’utilisation de l’espace disque (PowerPivot pour SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 24d96feb0e57bf0b1c62532cca63ddf07f96f21c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fa6090a675326db06491d54b82a6844363ee3e9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024746"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409196"
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Configurer l’utilisation de l’espace disque (PowerPivot pour SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34024746"
   
 -   [Quelles sont les nouveautés dans le Gestionnaire de ressources du serveur de fichiers](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
   
--   [Guide pas à pas de gestionnaire de ressources de serveur de fichiers pour Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Guide pas à pas de File Server Resource Manager pour Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
   
 -   [Définition des alertes d’espace disque faible sur Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34024746"
   
 3.  Dans Utilisation du disque, attribuez une valeur (en gigaoctets) pour **Espace disque total** pour définir la quantité maximale d’espace utilisé pour la mise en cache. La valeur par défaut est 0, ce qui permet à Analysis Services d'utiliser tout l'espace disque disponible.  
   
-4.  Dans Utilisation du disque, dans le paramètre **Supprimer les bases de données mises en cache au cours des « n » dernières heures** , spécifiez les critères utilisés dernièrement pour vider le cache lorsque l’espace disque atteint la limite maximale.  
+4.  Utilisation des disques, dans le **supprimer mises en cache des bases de données dans des « n » dernières heures** , à spécifier les critères utilisés dernièrement pour vider le cache lorsque l’espace disque atteint la limite maximale.  
   
      La valeur par défaut est de 4 heures, ce qui signifie que toutes les bases de données qui ont été inactives pendant 4 heures ou plus sont supprimées du système de fichiers. Les bases de données inactives mais toujours en mémoire sont déchargées, puis supprimées du système de fichiers.  
   

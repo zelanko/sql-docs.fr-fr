@@ -13,12 +13,12 @@ ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4034beae4e022379de1cb9cac83f982f512bdc7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbd151b0fa8682865e44615c22a9fdd7577014ea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688297"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405916"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Sélection et configuration des objets affectés (OracleToSQL)
 À cette page, vous pouvez sélectionner les tables et les clés étrangères, les modifications dans lequel doivent être comparées quand SSMA vérifie les résultats de l’exécution pour les objets choisi à l’étape précédente. En outre, vous pouvez personnaliser les paramètres de vérification.  
@@ -41,7 +41,7 @@ L’onglet de la Table contient la vue de grille de la table sélectionnée. La 
   
 -   Règle  
   
--   Valeur par défaut  
+-   Par défaut  
   
 -   Identité  
   
@@ -50,7 +50,7 @@ L’onglet de la Table contient la vue de grille de la table sélectionnée. La 
 ## <a name="sql"></a>SQL  
 Onglet SQL contient la table « créer » SQL de la table sélectionnée.  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Données  
 Onglet données affiche les données présentes dans la table sélectionnée.  
   
 ## <a name="properties"></a>Properties  

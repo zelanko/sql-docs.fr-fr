@@ -1,5 +1,5 @@
 ---
-title: 'Leçon supplémentaire du Analysis Services didacticiel : sécurité dynamique | Microsoft Docs'
+title: 'Analysis Services leçon supplémentaire du didacticiel : Sécurité dynamique | Microsoft Docs'
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: 15ff0eebd7cbbb0815544b18f0f042ef411a3657
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4abe105c2bb083ba4479d4d23418e0e73adce5f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084592"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398425"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>Leçon supplémentaire - Sécurité dynamique
 
@@ -24,11 +24,11 @@ Dans cette leçon supplémentaire, vous créez un rôle supplémentaire qui impl
   
 Pour implémenter la sécurité dynamique, vous ajoutez une table à votre modèle contenant les noms d’utilisateur des utilisateurs qui peuvent se connecter au modèle et parcourir les données et les objets de modèle. Le modèle que vous créez à l’aide de ce didacticiel est dans le contexte d’Adventure Works ; Toutefois, pour suivre cette leçon, vous devez ajouter une table contenant les utilisateurs de votre propre domaine. Il est inutile les mots de passe pour les noms d’utilisateur qui sont ajoutés. Pour créer une table EmployeeSecurity, avec un petit groupe d’utilisateurs de votre propre domaine, vous utilisez la fonctionnalité Coller, le collage des données d’employé à partir d’une feuille de calcul Excel. Dans un scénario réel, la table contenant les noms d’utilisateur serait généralement une table à partir d’une base de données en tant que source de données. par exemple, il s’agit d’une table DimEmployee réelle.  
   
-Pour implémenter la sécurité dynamique, vous utilisez deux fonctions DAX : [fonction USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) et [LOOKUPVALUE, fonction (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Ces fonctions, appliquées dans une formule de filtre de lignes, sont définies dans un nouveau rôle. À l’aide de la fonction LOOKUPVALUE, la formule spécifie une valeur à partir de la table EmployeeSecurity. La formule transmet ensuite cette valeur à la fonction USERNAME, qui spécifie le nom d’utilisateur de l’utilisateur connecté appartient à ce rôle. L'utilisateur peut ensuite parcourir uniquement les données spécifiées par les filtres des lignes du rôle. Dans ce scénario, vous spécifiez que les commerciaux peuvent parcourir uniquement les données de ventes Internet pour les secteurs de vente dans lequel ils sont membres.  
+Pour implémenter la sécurité dynamique, vous utilisez deux fonctions DAX : [Fonction USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) et [LOOKUPVALUE, fonction (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Ces fonctions, appliquées dans une formule de filtre de lignes, sont définies dans un nouveau rôle. À l’aide de la fonction LOOKUPVALUE, la formule spécifie une valeur à partir de la table EmployeeSecurity. La formule transmet ensuite cette valeur à la fonction USERNAME, qui spécifie le nom d’utilisateur de l’utilisateur connecté appartient à ce rôle. L’utilisateur peut alors parcourir uniquement les données spécifiées par les filtres de lignes du rôle. Dans ce scénario, vous spécifiez que les commerciaux peuvent parcourir uniquement les données de ventes Internet pour les secteurs de vente dans lequel ils sont membres.  
   
 Les tâches qui sont propres à ce scénario de modèle tabulaire Adventure Works, et qui ne s'appliqueraient pas forcément à un scénario réel, sont identifiées en conséquence. Chaque tâche inclut des informations supplémentaires qui en décrivent l'objectif.  
   
-Durée estimée pour effectuer cette leçon : **30 minutes**  
+Durée estimée pour effectuer cette leçon : **30 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
 
@@ -42,7 +42,7 @@ Pour implémenter la sécurité dynamique pour ce scénario Adventure Works, vou
   
 1.  Dans l’Explorateur de modèles tabulaires > **des Sources de données**, avec le bouton droit de votre connexion, puis cliquez sur **importer de nouvelles Tables**.  
 
-    Si la boîte de dialogue Informations d'identification de l'emprunt d'identité s'affiche, tapez les informations d'identification d'emprunt d'identité que vous avez utilisées dans la leçon 2 : Ajouter des données.
+    Si la boîte de dialogue informations d’identification d’emprunt d’identité s’affiche, tapez les informations d’identification d’emprunt d’identité que vous avez utilisé dans la leçon 2 : Ajouter des données.
   
 2.  Dans le navigateur, sélectionnez le **DimSalesTerritory** table, puis cliquez sur **OK**.    
   
@@ -116,7 +116,7 @@ Dans cette tâche, vous masquez la table EmployeeSecurity, empêchant de s’aff
 Dans cette tâche, vous créez un rôle d’utilisateur. Ce rôle inclut un filtre de lignes définissant les lignes de la table DimSalesTerritory sont visibles aux utilisateurs. Le filtre est ensuite appliqué dans la direction de la relation un-à-plusieurs à toutes les autres tables associées à DimSalesTerritory. Vous également appliquez un filtre qui sécurise la table EmployeeSecurity entière d’être interrogée par tout utilisateur qui est membre du rôle.  
   
 > [!NOTE]  
-> Le rôle Sales Employees by Territory que vous créez dans cette leçon autorise les membres à parcourir (ou à interroger) uniquement les données de ventes pour le secteur de vente auquel ils appartiennent. Si vous ajoutez un utilisateur en tant que membre pour les employés des ventes par rôle Territory qui existe également comme un membre d’un rôle créé dans [leçon 11 : créer des rôles](../tutorial-tabular-1400/as-lesson-11-create-roles.md), vous obtenez une combinaison d’autorisations. Lorsqu'un utilisateur est membre de plusieurs rôles, les autorisations et les filtres de lignes définis pour chaque rôle se cumulent. Autrement dit, l’utilisateur a des autorisations supérieures déterminées par la combinaison des rôles.  
+> Le rôle Sales Employees by Territory que vous créez dans cette leçon autorise les membres à parcourir (ou à interroger) uniquement les données de ventes pour le secteur de vente auquel ils appartiennent. Si vous ajoutez un utilisateur en tant que membre pour les employés des ventes par rôle Territory qui existe également comme un membre d’un rôle créé dans [leçon 11 : Créer des rôles](../tutorial-tabular-1400/as-lesson-11-create-roles.md), vous obtenez une combinaison d’autorisations. Lorsqu'un utilisateur est membre de plusieurs rôles, les autorisations et les filtres de lignes définis pour chaque rôle se cumulent. Autrement dit, l’utilisateur a des autorisations supérieures déterminées par la combinaison des rôles.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Pour créer un rôle d'utilisateur Sales Employees by Territory  
   
@@ -188,6 +188,6 @@ Dans cette tâche, vous utilisez la fonctionnalité analyser dans Excel dans SSD
   
 ## <a name="see-also"></a>Voir aussi  
 
-[Fonction USERNAME (DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
-[LOOKUPVALUE, fonction (DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
+[fonction USERNAME (DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
+[fonction LOOKUPVALUE (DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
 [Fonction CUSTOMDATA (DAX)](https://msdn.microsoft.com/library/hh213140.aspx)  

@@ -11,18 +11,18 @@ ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 815b50c8d687c1df76b9dc5de4b1fbe34f15f233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b7c23bec5925dbc33d2db7a547daf02f42a6cd7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120281"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419040"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Prédictions de série chronologique à l'aide des données de remplacement (Didacticiel intermédiaire sur l'exploration de données)
   Dans cette tâche, vous allez générer un nouveau modèle basé sur des données de ventes internationales. Ensuite, vous apprendrez à créer une requête de prédiction qui applique le modèle de ventes internationales à chacune des régions.  
   
 ## <a name="building-a-general-model"></a>Génération d'un modèle général  
- N'oubliez pas que votre analyse des résultats du modèle d'exploration de données d'origine a révélé des différences majeures entre les régions et entre certaines gammes de produits. Par exemple, les ventes en Amérique du Nord étaient élevées pour le modèle M200, tandis que les ventes du modèle T1000 étaient inférieures. Toutefois, l'analyse est compliquée par le fait que certaines séries ne contenaient pas beaucoup de données, ou que les données commençaient à un point différent dans le temps. Certaines données sont également manquantes.  
+ N'oubliez pas que votre analyse des résultats du modèle d'exploration de données d'origine a révélé des différences majeures entre les régions et entre certaines gammes de produits. Par exemple, les ventes en Amérique du Nord étaient élevées pour le modèle M200, tandis que les ventes du modèle T1000 étaient inférieures. Toutefois, l’analyse est compliquée par le fait que certaines séries ne contenaient pas de volume de données, ou données commençaient à un autre point dans le temps. Certaines données sont également manquantes.  
   
  ![Série de prédire la quantité M200 et T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "M200 et T1000 la quantité de prédiction de série")  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48120281"
   
 2.  Dans l'Assistant Exploration de données, effectuez les sélections suivantes :  
   
-    -   Algorithme : algorithme MTS (Microsoft Time Series)  
+    -   Algorithme : Microsoft Time Series  
   
     -   Utilisez la source de données que vous avez générée précédemment dans cette leçon avancée comme source pour le modèle. Consultez [avancé des prédictions de série chronologique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md).  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48120281"
   
     -   Choisissez les colonnes suivantes pour la clé de série et la clé de temps :  
   
-         Période de clé : ReportingDate  
+         Temps clé : ReportingDate  
   
-         Clé : région  
+         Clé : Région  
   
     -   Choisissez les colonnes suivantes pour `Input` et `Predict` :  
   

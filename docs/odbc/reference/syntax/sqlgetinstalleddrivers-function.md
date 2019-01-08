@@ -20,12 +20,12 @@ ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 093da37d061153013682772c3284e0afe88b7866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 173346c990e388935c800d76069f97ee9cf3f399
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618937"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212518"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>SQLGetInstalledDrivers, fonction
 **Conformité**  

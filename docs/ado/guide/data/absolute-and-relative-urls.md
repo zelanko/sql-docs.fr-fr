@@ -15,12 +15,12 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c00420d6bed0b49c6e136c82f03460dcaaea8a85
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604879"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541931"
 ---
 # <a name="absolute-and-relative-urls"></a>URL absolues et relatives
 Une URL spécifie l’emplacement d’une cible sur un ordinateur local ou en réseau. La cible peut être un fichier, répertoire, page HTML, image, programme et ainsi de suite *.*  
@@ -58,7 +58,7 @@ Une URL spécifie l’emplacement d’une cible sur un ordinateur local ou en r�
  Le contexte peut également être défini en ouvrant un **enregistrement** ou **Recordset** objet qui représente un répertoire, étant donné que ces objets ont déjà un implicitement ou explicitement déclaré **connexion**  objet qui spécifie le contexte.  
   
 ## <a name="scoped-operations"></a>Étendue des opérations  
- Le contexte définit également la portée, autrement dit, le répertoire et ses sous-répertoires qui peuvent participer aux opérations suivantes. Le **enregistrement** objet présente plusieurs méthodes délimitées qui opèrent sur un répertoire et tous ses sous-répertoires. Ces méthodes incluent [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), et [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
+ Le contexte définit également étendue-autrement dit, le répertoire et ses sous-répertoires qui peuvent participer aux opérations suivantes. Le **enregistrement** objet présente plusieurs méthodes délimitées qui opèrent sur un répertoire et tous ses sous-répertoires. Ces méthodes incluent [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), et [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
   
 ## <a name="relative-urls-as-command-text"></a>URL relatives sous forme de texte de commande  
  Vous pouvez spécifier une commande à exécuter sur la source de données en tapant une chaîne dans le *CommandText* paramètre de la **connexion** l’objet [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) (méthode) et dans le  *Source* paramètre de la **Recordset** l’objet [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) (méthode).  
