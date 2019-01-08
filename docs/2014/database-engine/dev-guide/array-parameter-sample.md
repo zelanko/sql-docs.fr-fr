@@ -12,15 +12,15 @@ ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed705d084bc1c6e5b8d06e4a68e4dbe77f67a2b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4eead93b1c2254ee9634ef5a05b1cd5d60ce079f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115649"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375381"
 ---
 # <a name="array-parameter-sample"></a>Exemple de paramètre tableau
-  Il est parfois utile de créer, de mettre à jour ou de supprimer un ensemble de lignes dans une base de données. Il existe plusieurs méthodes que vous pouvez utiliser dans ce but. L'une d'elles consiste à transmettre un tableau d'informations d'un client à une procédure stockée d'intégration CLR (Common Language Runtime) sur le serveur en utilisant un type de données d'intégration du CLR défini par l'utilisateur. La nature de tels types de données définis par l'utilisateur limite à 8000 octets le volume des données fournies au serveur. De ce fait, cette méthode n'est pas satisfaisante pour les données volumineuses ou complexes. Si les données manipulées sont simples et de petite taille, cette méthode peut s'avérer beaucoup plus efficace que l'appel d'une procédure stockée pour chaque ligne. En utilisant un tableau, l'ordre des données est préservé pour les applications où l'ordre a de l'importance. Cet exemple contient les éléments suivants :  
+  Il est parfois utile de créer, de mettre à jour ou de supprimer un ensemble de lignes dans une base de données. Il existe plusieurs méthodes que vous pouvez utiliser dans ce but. L'une d'elles consiste à transmettre un tableau d'informations d'un client à une procédure stockée d'intégration CLR (Common Language Runtime) sur le serveur en utilisant un type de données d'intégration du CLR défini par l'utilisateur. La nature de tels types de données définis par l'utilisateur limite à 8000 octets le volume des données fournies au serveur. De ce fait, cette méthode n'est pas satisfaisante pour les données volumineuses ou complexes. Si les données manipulées sont simples et de petite taille, cette méthode peut s'avérer beaucoup plus efficace que l'appel d'une procédure stockée pour chaque ligne. En utilisant un tableau, l'ordre des données est préservé pour les applications où l'ordre a de l'importance. Cet exemple contient les éléments suivants :  
   
 1.  Le type de données défini par l'utilisateur `ContactTypeNames` . Ce type de données renferme une liste des noms de type de contact souhaité.  
   
@@ -31,9 +31,9 @@ ms.locfileid: "48115649"
 ## <a name="prerequisites"></a>Prérequis  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](http://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
   
--   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   Le Kit de développement logiciel .NET Framework SDK 2.0 ou version ultérieure, ou Microsoft Visual Studio 2005 ou version ultérieure. Vous pouvez vous procurer gratuitement le Kit de développement logiciel .NET Framework SDK.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48115649"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer le CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer l'intégration du CLR, vous devez disposer de l'autorisation de niveau serveur `ALTER SETTINGS` qui est attribuée implicitement aux membres des rôles serveur fixes `sysadmin` et `serveradmin`.  
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48115649"
   
 5.  Dans c:\MySample, créez `Program.vb` (pour l'exemple Visual Basic) ou `Program.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
   
-6.  Localisez la ligne appropriée dans le programme de fichier (autour de la ligne 24) et remplacez `XXX` par le nom de votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+6.  Localisez la ligne appropriée dans le programme de fichier (autour de la ligne 24) et remplacez `XXX` par le nom de votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     -   `Dim connection As New SqlConnection("data source=XXX;initial catalog=AdventureWorks;Integrated Security=SSPI")`  
   

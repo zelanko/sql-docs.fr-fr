@@ -1,6 +1,6 @@
 ---
-title: Mettre à l’échelle de l’exécution simultanée de scripts externes dans SQL Server Machine Learning Services | Microsoft Docs
-description: Comment modifier le pool de comptes d’utilisateur pour mettre à l’échelle de SQL Server Machine Learning Services.
+title: Exécution simultanée de mise à l’échelle de scripts externes, SQL Server Machine Learning Services
+description: Configurer parallèle ou simultanée R et Python l’exécution du script dans un pool de comptes d’utilisateur à l’échelle de SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cc51f5034614de950f0c0f51b7a83425f1a30d3d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 9f32e51122df8d2d13d6eada726a1a5e9bea82f0
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419434"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596810"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>Exécution simultanée de mise à l’échelle de scripts externes dans SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,8 +21,6 @@ ms.locfileid: "49419434"
 Dans le cadre du processus d’installation de [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], un *pool de comptes d’utilisateurs* Windows est créé pour prendre en charge l’exécution de tâches par le service [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]. L’objectif de ces comptes de travail consiste à isoler l’exécution simultanée de scripts externes par différents utilisateurs SQL.
 
 Cet article décrit la configuration par défaut et la capacité pour les comptes de travail et comment modifier la configuration par défaut pour augmenter le nombre de l’exécution simultanée de scripts externes dans SQL Server Machine Learning Services.
-
-**S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="worker-account-group"></a>Groupe de comptes de travail
 
@@ -53,7 +51,7 @@ Les mots de passe associés à chaque compte d’utilisateur sont générés de 
 2. Double-cliquez sur le service SQL Server Launchpad et arrêtez-le s’il est en cours d’exécution.
 3.  Sous l’onglet **Service**, vérifiez que le mode de démarrage Automatique est sélectionné. Impossible de démarrer des scripts externes lorsque la zone de lancement n’est pas en cours d’exécution.
 4.  Cliquez sur l’onglet **Avancé** et, si nécessaire, modifiez le **Nombre d’utilisateurs externes**. Ce paramètre contrôle combien d’utilisateurs SQL peut exécuter script externe sessions simultanément. La valeur par défaut est 20 comptes. Le nombre maximal d’utilisateurs est 100.
-5. Vous pouvez éventuellement affecter à l’option **Réinitialiser le mot de passe des utilisateurs externes** la valeur _Oui_ si une stratégie exigeant le changement périodique des mots de passe est en place dans votre organisation. Cette opération regénère les mots de passe chiffrés que gère Launchpad pour les comptes d’utilisateurs. Pour plus d’informations, consultez [Appliquer la stratégie des mots de passe](#bkmk_EnforcePolicy).
+5. Vous pouvez éventuellement affecter à l’option **Réinitialiser le mot de passe des utilisateurs externes** la valeur _Oui_ si une stratégie exigeant le changement périodique des mots de passe est en place dans votre organisation. Cette opération regénère les mots de passe chiffrés que gère Launchpad pour les comptes d’utilisateurs. Pour plus d’informations, consultez [Appliquer la stratégie des mots de passe](../security/sql-server-launchpad-service-account.md#bkmk_EnforcePolicy).
 6.  Redémarrez le service Launchpad.
 
 ## <a name="managing-workloads"></a>La gestion des charges de travail
@@ -64,9 +62,11 @@ Lorsque le même utilisateur exécute simultanément plusieurs scripts externes,
 
 Le nombre de comptes de travail que vous pouvez prendre en charge et le nombre de sessions simultanées autorisées par n’importe quel utilisateur peut exécuter, est limitée uniquement par les ressources du serveur. En général, la mémoire est le premier goulot d’étranglement que vous rencontrez quand vous utilisez le runtime R.
 
-Les ressources qui peuvent être utilisées par les scripts Python ou R sont régies par SQL Server. Nous vous recommandons de surveiller l’utilisation des ressources à l’aide de vues de gestion dynamique de SQL Server, ou d’examiner les compteurs de performances sur l’objet de traitement Windows associé, puis d’ajuster l’utilisation de la mémoire du serveur en conséquence. Si vous avez SQL Server Enterprise Edition, vous pouvez allouer les ressources utilisées pour l’exécution de scripts externes en configurant un [pool de ressources externes](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md).
+Les ressources qui peuvent être utilisées par les scripts Python ou R sont régies par SQL Server. Nous vous recommandons de surveiller l’utilisation des ressources à l’aide de vues de gestion dynamique de SQL Server, ou d’examiner les compteurs de performances sur l’objet de traitement Windows associé, puis d’ajuster l’utilisation de la mémoire du serveur en conséquence. Si vous avez SQL Server Enterprise Edition, vous pouvez allouer les ressources utilisées pour l’exécution de scripts externes en configurant un [pool de ressources externes](how-to-create-a-resource-pool.md).
 
-Pour plus d’informations sur la gestion de machine learning de capacité de la tâche, consultez ces articles :
+## <a name="see-also"></a>Voir aussi
+
+Pour plus d’informations sur la configuration de capacité, consultez ces articles :
 
 - [Configuration de SQL Server pour R Services](../../advanced-analytics/r/sql-server-configuration-r-services.md)
 - [Étude de cas de performances pour R Services](../../advanced-analytics/r/performance-case-study-r-services.md)

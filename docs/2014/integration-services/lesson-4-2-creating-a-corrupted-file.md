@@ -1,24 +1,23 @@
 ---
-title: 'Étape 2 : Création d’un fichier endommagé | Microsoft Docs'
+title: 'Étape 2 : Création d’un fichier endommagé | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4134a1bc773a27c71eda472cb502e26cd22b152
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96690ca99a03c8e6d5cd8c6fefb9760ed3f6e71e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226599"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366811"
 ---
-# <a name="step-2-creating-a-corrupted-file"></a>Étape 2 : Création d'un fichier corrompu
+# <a name="step-2-creating-a-corrupted-file"></a>Étape 2 : Création d'un fichier corrompu
   Afin de démontrer l'utilisation des fonctions de configuration et de gestion des erreurs de transformation, vous allez devoir créer un exemple de fichier plat qui, lors de son traitement, entraîne l'échec d'un composant.  
   
  Au cours de cette tâche, vous allez créer une copie d'un fichier plat existant. Vous ouvrirez ensuite ce fichier dans le Bloc-notes et modifierez la colonne **CurrencyID** pour vous assurer qu'aucune correspondance ne peut être établie au cours de la recherche de transformations. Lors du traitement du nouveau fichier, l'échec de la recherche provoquera à son tour l'échec de la transformation Lookup Currency Key et, par conséquent, celui du reste du package. Une fois le fichier exemple corrompu créé, vous exécuterez le package pour examiner son échec.  
@@ -29,7 +28,7 @@ ms.locfileid: "48226599"
   
      Les exemples de données sont inclus dans les packages de leçons SSIS. Pour télécharger ces exemples de données et les packages de leçons, procédez comme suit.  
   
-    1.  Accédez à [Exemples de produits Integration Services](http://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Accédez à [Exemples de produits Integration Services](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
     2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48226599"
     >  Le nombre 27 désigne l'ID du composant. Cette valeur est attribuée lors de la création du flux de données ; la valeur définie dans votre package peut être différente.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Étape 3 : Ajout de la redirection de flux d’erreurs](lesson-4-3-adding-error-flow-redirection.md)  
+ [Étape 3 : Ajout de Redirection de flux d’erreurs](lesson-4-3-adding-error-flow-redirection.md)  
   
   

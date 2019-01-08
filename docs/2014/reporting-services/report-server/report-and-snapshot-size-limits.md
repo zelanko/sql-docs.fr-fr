@@ -18,20 +18,20 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6e60abee965bd78dd25c5db053bfbb679b153e4d
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 73e2eae28d1c906e065b205e5964081e52da6ac9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119325"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374121"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de taille des instantanés et des rapports
   Les administrateurs qui gèrent un déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent utiliser les informations figurant dans cette rubrique pour comprendre les limites de taille lorsque le rapport est publié sur un serveur de rapports, rendu lors de l'exécution et enregistré dans le système de fichiers. Cette rubrique fournit également des conseils pratiques expliquant comment mesurer la taille d'une base de données de serveur de rapports, et elle décrit l'incidence de la taille des instantanés sur les performances des serveurs.  
   
 ## <a name="maximum-size-for-published-reports-and-models"></a>Taille maximale des modèles et des rapports publiés  
- Sur le serveur de rapports, la taille des modèles et des rapports repose sur la taille des fichiers de définition de rapport (.rdl) et de modèle de rapport (.smdl) que vous publiez sur un serveur de rapports. Le serveur de rapports ne limite pas la taille du rapport ou du modèle que vous publiez. Toutefois, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impose une taille maximale pour les éléments qui sont publiés sur le serveur. La valeur par défaut est 4 mégaoctets (Mo). Si vous téléchargez ou publiez sur un serveur de rapports un fichier dont la taille est supérieure à cette limite, vous recevez une exception HTTP. Dans ce cas, vous pouvez modifier le paramétrage par défaut en augmentant la valeur de l'élément `maxRequestLength` dans le fichier Machine.config.  
+ Sur le serveur de rapports, la taille des modèles et des rapports repose sur la taille des fichiers de définition de rapport (.rdl) et de modèle de rapport (.smdl) que vous publiez sur un serveur de rapports. Le serveur de rapports ne limite pas la taille du rapport ou du modèle que vous publiez. Toutefois, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impose une taille maximale pour les éléments qui sont publiés sur le serveur. La valeur par défaut est 4 mégaoctets (Mo). Si vous téléchargez ou publiez sur un serveur de rapports un fichier dont la taille est supérieure à cette limite, vous recevez une exception HTTP. Dans ce cas, vous pouvez modifier le paramétrage par défaut en augmentant la valeur de l'élément `maxRequestLength` dans le fichier Machine.config.  
   
- Bien qu'un modèle de rapport puisse être très volumineux, la taille des définitions de rapport excède rarement 4 Mo. Le plus souvent, la taille d'un rapport se mesure en kilo-octets (Ko). Cependant, si vous incluez des images incorporées, l'encodage de ces images peut générer des définitions de rapports volumineuses qui dépassent la taille par défaut de 4 Mo.  
+ Bien qu'un modèle de rapport puisse être très volumineux, la taille des définitions de rapport excède rarement 4 Mo. Le plus souvent, la taille d'un rapport se mesure en kilo-octets (Ko). Cependant, si vous incluez des images incorporées, l'encodage de ces images peut générer des définitions de rapports volumineuses qui dépassent la taille par défaut de 4 Mo.  
   
  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impose une limite maximale aux fichiers publiés pour minimiser les attaques par déni de service lancées à l’encontre du serveur. L'augmentation de la valeur de la limite supérieure amoindrit une partie de la protection que cette limite fournit. Augmentez cette valeur uniquement si vous êtes certain que l'avantage de cette opération compense tout risque de sécurité éventuel.  
   
@@ -53,14 +53,14 @@ ms.locfileid: "49119325"
  La seule limite physique sur la taille du rapport s'applique lors du rendu au format Excel. Les feuilles de calcul ne peuvent pas contenir plus de 65 536 lignes ou 256 colonnes. D'autres formats de rendu ne sont pas soumis à ces limites, par conséquent, la taille est limitée uniquement par la quantité de ressources sur votre serveur. Pour plus d’informations sur les limites de fichier Excel, consultez [exporter un rapport dans un autre Type de fichier &#40;Générateur de rapports et SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Le traitement et le rendu d'un rapport sont opérés en mémoire. Si vous possédez des rapports volumineux ou un grand nombre d'utilisateurs, veillez à réaliser une planification de capacité pour vous assurer que vos utilisateurs sont satisfaits des performances de votre déploiement de serveur de rapports. Pour plus d'informations sur les outils et instructions disponibles, consultez les publications suivantes sur MSDN : [Planning for Scalability and Performance with Reporting Services](http://go.microsoft.com/fwlink/?LinkID=70650) et [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](http://go.microsoft.com/fwlink/?LinkID=77519)(en anglais).  
+>  Le traitement et le rendu d'un rapport sont opérés en mémoire. Si vous possédez des rapports volumineux ou un grand nombre d'utilisateurs, veillez à réaliser une planification de capacité pour vous assurer que vos utilisateurs sont satisfaits des performances de votre déploiement de serveur de rapports. Pour plus d'informations sur les outils et pour obtenir des instructions, consultez les publications suivantes sur MSDN : [Planning for Scalability and Performance with Reporting Services](https://go.microsoft.com/fwlink/?LinkID=70650) et [à l’aide de Visual Studio 2005 pour effectuer le test de charge sur un SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
 ## <a name="measuring-snapshot-storage"></a>Mesure du stockage des instantanés  
  La taille d'un instantané est directement proportionnelle à la quantité de données dans le rapport. Les instantanés sont généralement bien plus volumineux que les autres éléments stockés sur un serveur de rapports. Leur taille oscille généralement entre quelques mégaoctets et des dizaines de mégaoctets. Si vos rapports sont extrêmement volumineux, il est probable que les instantanés le seront encore plus. En fonction de la fréquence d'utilisation des instantanés et de la configuration de l'historique des rapports, la quantité d'espace disque nécessaire par la base de données du serveur de rapports peut augmenter rapidement en peu de temps.  
   
  Par défaut, les bases de données **reportserver** et **reportservertempdb** sont configurées pour permettre une croissance automatique. La taille d'une base de données peut augmenter automatiquement, mais elle ne peut en aucun cas diminuer automatiquement. Si la base de données **reportserver** dispose d'une capacité excédentaire car vous avez supprimé des instantanés, vous devez la réduire manuellement pour récupérer de l'espace sur le disque. De même, si la taille de la base de données **reportservertempdb** a augmenté pour gérer un volume anormalement élevé de rapports interactifs, l'allocation de l'espace disque restera à ce paramètre tant que vous ne l'aurez pas diminué.  
   
- Pour mesurer la taille des bases de données du serveur de rapports, vous pouvez exécuter les commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes. Si vous calculez régulièrement la taille totale des bases de données, vous pourrez évaluer avec justesse comment allouer au fur et à mesure de l'espace à la base de données du serveur de rapports. Les instructions suivantes mesurent la quantité d’espace actuellement utilisée (les instructions supposent que vous utilisez des noms de base de données par défaut) :  
+ Pour mesurer la taille des bases de données du serveur de rapports, vous pouvez exécuter les commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes. Si vous calculez régulièrement la taille totale des bases de données, vous pourrez évaluer avec justesse comment allouer au fur et à mesure de l'espace à la base de données du serveur de rapports. Les instructions suivantes mesurent la quantité d'espace actuellement utilisée (les instructions partent du principe que vous utilisez les noms de base de données par défaut) :  
   
 ```  
 USE ReportServer  

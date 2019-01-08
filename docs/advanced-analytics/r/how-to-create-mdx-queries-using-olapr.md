@@ -1,5 +1,6 @@
 ---
-title: Comment créer MDX des requêtes dans R à l’aide d’olapR dans SQL Server Machine Learning | Microsoft Docs
+title: Comment créer des requêtes MDX dans R à l’aide d’olapR - SQL Server Machine Learning Services
+description: Utiliser la bibliothèque de packages olapR dans SQL Server pour écrire des requêtes MDX dans le script de langage R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7fe2749e6f70522fbd010d5af78890dfe897426b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 77804e6499519309e7ade41cc7260d2356a56731
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696928"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432382"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Comment créer des requêtes MDX dans R à l’aide d’olapR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,9 +74,9 @@ Les opérations suivantes ne sont pas prises en charge :
 
 Les exemples suivants reposent sur le données mini-Data Warehouse et du cube projet d’AdventureWorks, étant donné que ce projet est largement disponible dans plusieurs versions, y compris les fichiers de sauvegarde qui peuvent facilement être restaurées à Analysis Services. Si vous n’avez pas un cube existant, obtenir un exemple de cube à l’aide d’une des options suivantes :
 
-+ Créer le cube qui est utilisé dans ces exemples en suivant le didacticiel Analysis Services jusqu'à la leçon 4 : [création d’un cube OLAP](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ Créer le cube qui est utilisé dans ces exemples en suivant le didacticiel Analysis Services jusqu'à la leçon 4 : [Création d’un cube OLAP](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
-+ Télécharger un cube existant en tant que sauvegarde et restaurez-la sur une instance d’Analysis Services. Par exemple, ce site propose un cube entièrement traité dans un format compressé : [SQL modèle multidimensionnel Adventure Works 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Extrayez le fichier et sa restauration sur votre instance SSAS. Pour plus d’informations, consultez [sauvegarde et restauration](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), ou [applet de commande Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
++ Télécharger un cube existant en tant que sauvegarde et restaurez-la sur une instance d’Analysis Services. Par exemple, ce site propose un cube entièrement traité dans un format compressé : [Adventure Works modèle multidimensionnel SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Extrayez le fichier et sa restauration sur votre instance SSAS. Pour plus d’informations, consultez [sauvegarde et restauration](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), ou [applet de commande Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 
 ### <a name="1-basic-mdx-with-slicer"></a>1. MDX de base avec segment
 

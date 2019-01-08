@@ -20,16 +20,16 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59199461d6a0d827cad043f0b6bdbe35d425815f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855917"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204558"
 ---
 # <a name="sqlendtran-function"></a>Fonction SQLEndTran
 **Conformité**  
- Version introduite : Conformité des normes 3.0 de ODBC : ISO 92  
+ Version introduite : Conformité aux normes 3.0 de ODBC : ISO 92  
   
  **Résumé**  
  **SQLEndTran** demande une opération commit ou rollback pour toutes les opérations actives sur toutes les instructions associées à une connexion. **SQLEndTran** peut également demander qu’une instruction commit ou rollback opération pour toutes les connexions associées à un environnement.  
@@ -132,13 +132,13 @@ SQLRETURN SQLEndTran(
   
 -   Le pilote n’a pas retourné un des messages suivants, qui confirmer que la transaction n’a pas terminé :  
   
-    -   25S03 : restauration de Transaction  
+    -   25S03 : Restauration de transaction  
   
     -   40001 : Échec de la sérialisation  
   
     -   40002 : contrainte d’intégrité  
   
-    -   HYC00 : Les fonctionnalité optionnelle non implémentée  
+    -   HYC00 : Fonctionnalité optionnelle non implémentée  
   
  Si **SQLEndTran** a été appelée sur un environnement handle et une de ses connexions remplies les conditions ci-dessus, toutes les connexions se connectant au même pilote seront placées dans l’état suspendu.  
   

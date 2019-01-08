@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
@@ -16,12 +15,12 @@ ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f7e1927d1b35c1f4a8e7b7aef8d8c3cbfaa0b33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128809"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362621"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Renommer une instance de cluster de basculement SQL Server
   Lorsqu'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fait partie d'un cluster de basculement, le processus permettant de renommer un serveur virtuel diffère du processus permettant de renommer une instance autonome. Pour plus d’informations, consultez [Renommer un ordinateur qui héberge une instance autonome de SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
@@ -45,7 +44,7 @@ ms.locfileid: "48128809"
 ## <a name="verify-the-renaming-operation"></a>Vérification de l'opération d'attribution d'un nom  
  Une fois qu'un serveur virtuel a été renommé, toute connexion qui utilisait l'ancien nom doit maintenant se connecter à l'aide du nouveau nom.  
   
- Pour vérifier que l’opération de renommage a abouti, sélectionnez les informations de `@@servername` ou `sys.servers`. La fonction `@@servername` retourne le nouveau nom de serveur virtuel et la table `sys.servers` affiche le nouveau nom de serveur virtuel. Pour vérifier que le processus de basculement fonctionne correctement avec le nouveau nom, l'utilisateur doit également essayer de faire basculer la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers les autres nœuds.  
+ Pour vérifier que l'opération de changement de nom a abouti, sélectionnez les informations de `@@servername` ou `sys.servers`. La fonction `@@servername` retourne le nouveau nom de serveur virtuel et la table `sys.servers` affiche le nouveau nom de serveur virtuel. Pour vérifier que le processus de basculement fonctionne correctement avec le nouveau nom, l'utilisateur doit également essayer de faire basculer la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers les autres nœuds.  
   
  Pour les connexions établies à partir d'un nœud du cluster, le nouveau nom peut être utilisé presque immédiatement. Toutefois, pour les connexions utilisant le nouveau nom à partir d'un ordinateur client, le nouveau nom ne peut être utilisé pour se connecter au serveur qu'une fois qu'il est visible à cet ordinateur client. La durée nécessaire à la propagation du nouveau nom sur le réseau peut aller de quelques secondes à quelques minutes, selon la configuration du réseau ; il faudra peut-être davantage de temps avant que l'ancien nom du serveur virtuel ne soit plus visible sur le réseau.  
   
@@ -58,25 +57,25 @@ ms.locfileid: "48128809"
     ```  
     ipconfig /flushdns  
     ipconfig /registerdns  
-    nbtstat –RR  
+    nbtstat -RR  
     ```  
   
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Éléments supplémentaires à prendre en considération après une opération Renommer  
  Après avoir renommé le nom réseau d'un cluster de basculement, nous devons vérifier et suivre les instructions suivantes pour que tous les scénarios dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent et [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]soient opérationnels.  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Une fois que vous avez changé le nom réseau d’une instance de cluster de basculement [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] à l’aide de l’outil Administrateur de cluster Windows, une opération de mise à niveau ou de désinstallation ultérieure peut échouer. Pour résoudre cette mise à jour du problème la **ClusterName** entrée de Registre suivant les instructions fournies dans la section Résolution de [cela](http://go.microsoft.com/fwlink/?LinkId=244002) (http://go.microsoft.com/fwlink/?LinkId=244002).  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Après avoir modifié le nom réseau d’un [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] instance à l’aide d’outil administrateur de Cluster Windows, la mise à niveau future du cluster de basculement ou opération de désinstallation peut échouer. Pour résoudre cette mise à jour du problème la **ClusterName** entrée de Registre suivant les instructions fournies dans la section Résolution de [cela](https://go.microsoft.com/fwlink/?LinkId=244002) (https://go.microsoft.com/fwlink/?LinkId=244002).  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent :** Effectuez des vérifications et les actions supplémentaires suivantes pour le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent :  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service de l’agent :** Vérifier et effectuer les actions supplémentaires suivantes pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Service :  
   
 -   Corrigez les paramètres de registre si l'Agent SQL est configuré pour le transfert d'événements. Pour plus d’informations, consultez [Désigner un serveur de transfert d’événements &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
--   Corrigez les noms d'instance du serveur maître (MSX) et des serveurs cibles (TSX) lorsque le nom réseau du cluster/des ordinateurs est modifié. Pour plus d'informations, consultez les rubriques suivantes :  
+-   Corrigez les noms d'instance du serveur maître (MSX) et des serveurs cibles (TSX) lorsque le nom réseau du cluster/des ordinateurs est modifié. Pour plus d’informations, consultez les rubriques suivantes :  
   
-    -   [Annuler l’inscription de plusieurs serveurs cibles dans un serveur maître](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [Annuler l'inscription de plusieurs serveurs cibles dans un serveur maître](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [Créer un environnement multi-serveur](../../../ssms/agent/create-a-multiserver-environment.md)  
   
--   Reconfigurez la copie des journaux de transaction afin que le nom de serveur mis à jour soit utilisé dans les journaux de sauvegarde et de restauration. Pour plus d'informations, consultez les rubriques suivantes :  
+-   Reconfigurez la copie des journaux de transaction afin que le nom de serveur mis à jour soit utilisé dans les journaux de sauvegarde et de restauration. Pour plus d’informations, consultez les rubriques suivantes :  
   
     -   [Configurer la copie des journaux de transaction &#40;Transact-SQL&#41;](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   

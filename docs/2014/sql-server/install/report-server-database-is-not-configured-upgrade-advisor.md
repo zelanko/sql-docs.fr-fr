@@ -13,12 +13,12 @@ ms.assetid: b964300c-b220-4244-9fa6-c0c6a57760f6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ad655c6ff2fd6452ce82d87189de02980385ca73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38c18c948ea8c30817bdeb49b00a2334b2fd3d4a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158379"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369451"
 ---
 # <a name="report-server-database-is-not-configured-upgrade-advisor"></a>La base de données du serveur de rapports n'est pas configurée (Conseiller de mise à niveau)
   La mise à niveau est bloquée en raison d'une configuration incomplète du serveur de rapports. La base de données du serveur de rapports n'est pas configurée.  
@@ -36,7 +36,7 @@ ms.locfileid: "48158379"
 ## <a name="corrective-action"></a>Action corrective  
  Si vous n'avez pas configuré la base de données du serveur de rapports, celui-ci n'est pas opérationnel et doit être supprimé avant la mise à niveau.  
   
- Pour plus d’informations sur la désinstallation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consultez [désinstaller Reporting Services 2012](http://technet.microsoft.com/library/hh479745.aspx\(v=sql.11\)). La rubrique explique comment désinstaller une version spécifique, les procédures des versions antérieures étant similaires.  
+ Pour plus d’informations sur la désinstallation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consultez [désinstaller Reporting Services 2012](https://technet.microsoft.com/library/hh479745.aspx\(v=sql.11\)). La rubrique explique comment désinstaller une version spécifique, les procédures des versions antérieures étant similaires.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de mise à niveau Reporting Services &#40;Conseiller de mise à niveau&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

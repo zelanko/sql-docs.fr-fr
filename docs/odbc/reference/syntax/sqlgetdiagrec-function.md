@@ -20,16 +20,16 @@ ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4606c9f525517d51312fc9a105076691dcda682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab81694fb0234a896a7e9fd09d338e8db43360eb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683023"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207508"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec, fonction
 **Conformité**  
- Version introduite : Conformité des normes 3.0 de ODBC : ISO 92  
+ Version introduite : Conformité aux normes 3.0 de ODBC : ISO 92  
   
  **Résumé**  
  **SQLGetDiagRec** retourne les valeurs actuelles de plusieurs champs d’un enregistrement de diagnostic qui contient des informations d’erreur, d’avertissement et d’état. Contrairement aux **SQLGetDiagField**, qui retourne un champ de diagnostic par appel, **SQLGetDiagRec** retourne plusieurs champs d’un enregistrement de diagnostic, y compris la valeur SQLSTATE, le code d’erreur natif, communément utilisés et le texte du message de diagnostic.  
@@ -100,7 +100,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_INVALID_HANDLE : Le handle a indiqué par *HandleType* et *gérer* n’était pas un handle valide.  
   
--   SQL_ERROR : Un des éléments suivants s’est produit :  
+-   SQL_ERROR : Parmi les options suivantes s’est produite :  
   
     -   *RecNumber* était négatif ou égal à 0.  
   

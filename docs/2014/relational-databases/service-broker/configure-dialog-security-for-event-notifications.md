@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
@@ -12,12 +12,12 @@ ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 754cec388eb6eb6ce30ae600b23a9397cc84f205
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191399"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359521"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurer la sécurité du dialogue pour les notifications d'événements
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] doit être configurée pour les notifications d'événements qui envoient des messages à un Service Broker résidant sur un serveur distant. La sécurité du dialogue doit être configurée manuellement conformément au modèle de sécurité totale du dialogue [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Le modèle de sécurité totale permet le chiffrement et le déchiffrement des messages échangés avec les serveurs distants. Même si les notifications d'événements sont envoyées dans une direction, les autres messages, comme les erreurs, sont retournés dans la direction opposée.  
@@ -28,11 +28,11 @@ ms.locfileid: "48191399"
 > [!IMPORTANT]  
 >  Tous les certificats doivent être créés avec des dates de début et des dates d'expiration valides.  
   
- **Étape 1 : établissez un numéro de port TCP et un nom de service cible.**  
+ **Étape 1 : Établir un nom de service TCP port numéro et la cible.**  
   
  Établissez le port TCP sur lequel le serveur source et le serveur cible recevront les messages. Vous devez également définir le nom du service cible.  
   
- **Étape 2 : configurez le chiffrement et le partage de certificats pour l'authentification de niveau base de données.**  
+ **Étape 2 : Configurez le chiffrement et partage de certificats pour l’authentification au niveau de la base de données.**  
   
  Exécutez les actions suivantes sur le serveur source et sur le serveur cible.  
   
@@ -45,27 +45,27 @@ ms.locfileid: "48191399"
 |[Sauvegardez le certificat](/sql/t-sql/statements/backup-certificate-transact-sql) dans un fichier accessible par le serveur cible.|Sauvegardez le certificat dans un fichier accessible par le serveur source.|  
 |[Créez un utilisateur](/sql/t-sql/statements/create-user-transact-sql), en spécifiant l'utilisateur de la base de données cible, ainsi que WITHOUT LOGIN. Cet utilisateur sera propriétaire du certificat de la base de données cible créé à partir du fichier de sauvegarde. Il n'est pas nécessaire que l'utilisateur soit mappé à une connexion, parce que le seul objectif de cet utilisateur est d'être propriétaire du certificat de la base de données cible, créé au cours de l'étape 3 suivante.|Créez un utilisateur, en spécifiant l'utilisateur de la base de données source, ainsi que WITHOUT LOGIN. Cet utilisateur sera propriétaire du certificat de la base de données source créé à partir du fichier de sauvegarde. Il n'est pas nécessaire que l'utilisateur soit mappé à une connexion, parce que le seul objectif de cet utilisateur est d'être propriétaire du certificat de la base de données source, créé au cours de l'étape 3 suivante.|  
   
- **Étape 3 : partagez les certificats et attribuez les autorisations pour l'authentification de niveau base de données.**  
+ **Étape 3 : Partagez les certificats et accorder des autorisations pour l’authentification au niveau de la base de données.**  
   
  Exécutez les actions suivantes sur le serveur source et sur le serveur cible.  
   
 |Serveur source|Serveur cible|  
 |-------------------|-------------------|  
 |[Créez un certificat](/sql/t-sql/statements/create-certificate-transact-sql) à partir du fichier de sauvegarde du certificat cible, en spécifiant comme propriétaire l'utilisateur de la base de données cible.|Créez un certificat à partir du fichier de sauvegarde du certificat source, en spécifiant comme propriétaire l'utilisateur de la base de données source.|  
-|[Attribuez l'autorisation](/sql/t-sql/statements/grant-transact-sql) de création de notification d'événement à l'utilisateur de la base de données source. Pour plus d’informations sur cette autorisation, consultez [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-notification-transact-sql).|Attribuez l'autorisation REFERENCES à l'utilisateur de la base de données cible sur le contrat existant de notifications d'événements [!INCLUDE[ssSB](../../includes/sssb-md.md)] : `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
+|[Attribuez l'autorisation](/sql/t-sql/statements/grant-transact-sql) de création de notification d'événement à l'utilisateur de la base de données source. Pour plus d’informations sur cette autorisation, consultez [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-notification-transact-sql).|Attribuez l'autorisation REFERENCES à l'utilisateur de la base de données cible sur le contrat existant de notifications d'événements [!INCLUDE[ssSB](../../includes/sssb-md.md)] : `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
 |[Créez une liaison de service distant](/sql/t-sql/statements/create-remote-service-binding-transact-sql) au service cible et spécifiez les informations d'identification de l'utilisateur de la base de données cible. Les liaisons de service distant garantissent que la clé public du certificat dont l'utilisateur de la base de données source est propriétaire authentifie les messages adressés au serveur cible.|[Attribuez](/sql/t-sql/statements/grant-transact-sql) les autorisations CREATE QUEUE, CREATE SERVICE et CREATE SCHEMA à l'utilisateur de la base de données cible.|  
 ||Si vous n'êtes pas déjà connecté à la base de données comme utilisateur de la base de données cible, connectez-vous maintenant.|  
 ||[Créez une file d'attente](/sql/t-sql/statements/create-queue-transact-sql) pour recevoir les messages de notification d'événement et [créez un service](/sql/t-sql/statements/create-service-transact-sql) de remise des messages.|  
 ||[Attribuez l'autorisation SEND](/sql/t-sql/statements/grant-transact-sql) sur le service cible à l'utilisateur de la base de données source.|  
 |Fournissez au serveur cible l'identificateur Service Broker de la base de données source. Vous pouvez obtenir cet identificateur en interrogeant la colonne **service_broker_guid** de l’affichage catalogue [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) . Pour une notification d’événement de niveau serveur, utilisez l’identificateur Service Broker de **msdb**.|Fournissez au serveur source l'identificateur Service Broker de la base de données cible.|  
   
- **Étape 4 : créez les itinéraires et configurez l'authentification de niveau serveur.**  
+ **Étape 4 : Création d’itinéraires et configurer l’authentification au niveau du serveur.**  
   
  Exécutez les actions suivantes sur le serveur source et sur le serveur cible.  
   
 |Serveur source|Serveur cible|  
 |-------------------|-------------------|  
-|[Créez un itinéraire](/sql/t-sql/statements/create-route-transact-sql) vers le service cible et spécifiez l’identificateur Service Broker de la base de données cible et le numéro de port TCP approuvé.|Créez un itinéraire vers le service source et spécifiez l'identificateur Service Broker de la base de données source et le numéro de port TCP approuvé. Pour spécifier le service source, utilisez le service fourni suivant : `http://schemas.microsoft.com/SQL/Notifications/EventNotificationService`.|  
+|[Créez un itinéraire](/sql/t-sql/statements/create-route-transact-sql) vers le service cible et spécifiez l’identificateur Service Broker de la base de données cible et le numéro de port TCP approuvé.|Créez un itinéraire vers le service source et spécifiez l'identificateur Service Broker de la base de données source et le numéro de port TCP approuvé. Pour spécifier le service source, utilisez le service fourni suivant : `https://schemas.microsoft.com/SQL/Notifications/EventNotificationService`.|  
 |Basculez vers la base de données **master** pour configurer l’authentification de niveau serveur.|Basculez vers la base de données **master** pour configurer l’authentification de niveau serveur.|  
 |S'il n'existe pas de clé principale pour la base de données **master** , [créez-la](/sql/t-sql/statements/create-master-key-transact-sql).|S'il n'existe pas de clé principale pour la base de données **master** , créez-la.|  
 |[Créez un certificat](/sql/t-sql/statements/create-certificate-transact-sql) qui authentifie la base de données.|Créez un certificat qui authentifie la base de données.|  
@@ -75,7 +75,7 @@ ms.locfileid: "48191399"
 |[Attribuez l'autorisation CONNECT](/sql/t-sql/statements/grant-transact-sql) sur le point de terminaison à la connexion authentificatrice cible.|Attribuez l'autorisation CONNECT sur le point de terminaison à la connexion authentificatrice source.|  
 |[Créez un utilisateur](/sql/t-sql/statements/create-user-transact-sql)et spécifiez la connexion authentificatrice cible.|Créez un utilisateur et spécifiez la connexion authentificatrice source.|  
   
- **Étape 5 : partagez les certificats d'authentification de niveau serveur et créez la notification d'événement.**  
+ **Étape 5 : Partagez les certificats pour l’authentification au niveau du serveur et créer la notification d’événement.**  
   
  Exécutez les actions suivantes sur le serveur source et sur le serveur cible.  
   

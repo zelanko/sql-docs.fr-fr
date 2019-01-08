@@ -4,25 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: install
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 956503602a4a9266427f7242097755f3ff6a7294
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 7e1459462b057dee39502805cc7746d7e0afa618
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019024"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366121"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Mettre à niveau PowerPivot pour SharePoint
   Cette rubrique résume les étapes nécessaires pour mettre à niveau un déploiement de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] vers [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Les étapes spécifiques dépendent de la version de SharePoint exécutée par votre environnement et incluent le complément PowerPivot pour SharePoint (**spPowerPivot.msi**).  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013.  
   
- Pour obtenir les notes de mise à jour, consultez [Notes de mise à jour pour SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
+ Pour obtenir les notes de mise à jour, consultez [Notes de mise à jour pour SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 
   
@@ -53,7 +53,7 @@ ms.locfileid: "51019024"
   
  **SharePoint 2010 :**  
   
--   Si l'installation existante exécute SharePoint 2010, installez SharePoint 2010 Service Pack 2 avant la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Pour plus d'informations, consultez [Service Pack 2 pour Microsoft SharePoint 2010](http://www.microsoft.com/download/details.aspx?id=39672). Utilisez la commande PowerShell `(Get-SPfarm).BuildVersion.ToString()` pour vérifier la version. Pour référencer la version de la build à la date de version finale, consultez [Numéros de build SharePoint 2010](http://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
+-   Si l'installation existante exécute SharePoint 2010, installez SharePoint 2010 Service Pack 2 avant la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Pour plus d'informations, consultez [Service Pack 2 pour Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Utilisez la commande PowerShell `(Get-SPfarm).BuildVersion.ToString()` pour vérifier la version. Pour référencer la version de la build à la date de version finale, consultez [Numéros de build SharePoint 2010](http://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
   
  
   
@@ -74,7 +74,7 @@ ms.locfileid: "51019024"
   
 2.  Redémarrez le serveur.  
   
-3.  Exécutez le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint (**spPowerPivot.msi**) sur chaque serveur de la batterie SharePoint 2013 pour installer les fournisseurs de données. Les serveurs sur lesquels vous avez exécuté l'Assistant Installation de SQL Server, qui permet également la mise à niveau des fournisseurs de données, font exception. Pour plus d’informations, consultez [télécharger Microsoft SQL Server 2014 PowerPivot pour Microsoft SharePoint 2013,](http://www.microsoft.com/download/details.aspx?id=40737) et [installer ou désinstaller le PowerPivot pour SharePoint Add-in &#40;SharePoint 2013&#41; ](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  Exécutez le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint (**spPowerPivot.msi**) sur chaque serveur de la batterie SharePoint 2013 pour installer les fournisseurs de données. Les serveurs sur lesquels vous avez exécuté l'Assistant Installation de SQL Server, qui permet également la mise à niveau des fournisseurs de données, font exception. Pour plus d’informations, consultez [télécharger Microsoft SQL Server 2014 PowerPivot pour Microsoft SharePoint 2013,](https://www.microsoft.com/download/details.aspx?id=40737) et [installer ou désinstaller le PowerPivot pour SharePoint Add-in &#40;SharePoint 2013&#41; ](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 4.  **Exécutez l'outil de configuration de PowerPivot pour SharePoint 2013** sur un des serveurs d'applications SharePoint pour configurer la batterie de serveurs SharePoint avec les fichiers de solution mis à jour installés par le complément. Vous ne pouvez pas utiliser l'Administration centrale SharePoint pour cette étape. Pour plus d'informations, consultez les documents suivants :  
   
@@ -86,7 +86,7 @@ ms.locfileid: "51019024"
   
          Dans le menu **Démarrer** , pointez sur **Tous les programmes**, puis sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **Outil de configuration de PowerPivot pour SharePoint 2013**. Notez que cet outil est répertorié uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
   
-    2.  Au démarrage, l'outil de configuration vérifie l'état de mise à niveau des solutions de solution de la batterie de serveurs PowerPivot et de l'application Web PowerPivot. Si des versions antérieures de ces solutions sont détectées, vous verrez le message « **De nouvelles versions des fichiers de solution PowerPivot ont été détectées. Sélectionnez l’option de mise à niveau appropriée pour mettre à niveau votre batterie de serveurs** ». Cliquez sur **OK** pour fermer le message de validation système.  
+    2.  Au démarrage, l'outil de configuration vérifie l'état de mise à niveau des solutions de solution de la batterie de serveurs PowerPivot et de l'application Web PowerPivot. Si des versions antérieures de ces solutions sont détectées, vous verrez le message «**des versions plus récentes des fichiers de solution PowerPivot ont été détectées. Sélectionnez l’option de mise à niveau appropriée pour mettre à niveau votre batterie de serveurs** ». Cliquez sur **OK** pour fermer le message de validation système.  
   
     3.  Cliquez sur **Mettre à niveau des fonctionnalités, des services, des applications et des solutions**, puis cliquez sur **OK**.  
   
@@ -103,11 +103,11 @@ ms.locfileid: "51019024"
         > [!IMPORTANT]  
         >  La première action, **Mettre à niveau une solution de batterie de serveurs**, doit toujours être traitée en premier. Elle inscrit les applets de commande PowerShell qui sont utilisées pour configurer le serveur. Si vous obtenez une erreur sur cette action, ne continuez pas. À la place, utilisez les informations fournies par l'erreur pour diagnostiquer et résoudre le problème avant de traiter des actions supplémentaires dans la liste des tâches.  
   
-    7.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Lorsque vous cliquez sur **Exécuter**, l’avertissement suivant apparaît, vous rappelant que les actions sont traitées en mode batch : « **Tous les paramètres de configuration marqués comme étant valides dans l’outil seront appliqués à la batterie de serveurs SharePoint. Voulez-vous continuer ?** ».  
+    7.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Lorsque vous cliquez sur **exécuter**, l’avertissement suivant s’affiche, vous rappelant que les actions sont traitées en mode batch : «**Tous les paramètres de configuration qui sont marqués comme étant valides dans l’outil seront appliqués à la batterie de serveurs SharePoint. Voulez-vous continuer ?**  ».  
   
     8.  Cliquez sur **OK** pour continuer.  
   
-    9. La mise à niveau des solutions et des fonctionnalités de la batterie de serveurs peut prendre plusieurs minutes. Pendant ce temps, les demandes de connexion pour les données PowerPivot **échouera** avec des erreurs similaires à «**Impossible d’actualiser les données**« ou »**une erreur s’est produite essaie d’effectuer l’action demandée. Réessayez** ». Une fois la mise à niveau terminée, le serveur devient disponible et ces erreurs ne se produiront plus.  
+    9. La mise à niveau des solutions et des fonctionnalités de la batterie de serveurs peut prendre plusieurs minutes. Pendant ce temps, les demandes de connexion pour les données PowerPivot **échouera** avec des erreurs similaires à «**Impossible d’actualiser les données**« ou »**une erreur s’est produite essaie d’effectuer l’action demandée. Réessayez**. » Une fois la mise à niveau terminée, le serveur devient disponible et ces erreurs ne se produiront plus.  
   
      Pour plus d'informations, consultez les documents suivants :  
   
@@ -128,7 +128,7 @@ ms.locfileid: "51019024"
   
  ![Mise à niveau de PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/media/as-powepivot-upgrade-flow-sharepoint2010.png "Mise à niveau de PowerPivot pour SharePoint 2010")  
   
-1.  Téléchargez le [Service Pack 2 pour Microsoft SharePoint 2010](http://www.microsoft.com/download/details.aspx?id=39672) et appliquez-le sur tous les serveurs de la batterie. Vérifiez que l'installation de SharePoint SP2 a réussi. Dans Administration centrale, dans la page Mise à niveau et migration, ouvrez la page Vérifier l'état d’installation du correctif et du produit pour afficher les messages d'état liés au SP2.  
+1.  Téléchargez le [Service Pack 2 pour Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672) et appliquez-le sur tous les serveurs de la batterie. Vérifiez que l'installation de SharePoint SP2 a réussi. Dans Administration centrale, dans la page Mise à niveau et migration, ouvrez la page Vérifier l'état d’installation du correctif et du produit pour afficher les messages d'état liés au SP2.  
   
 2.  Vérifiez que le service Windows Administration SharePoint 2010 est en cours d'exécution.  
   
@@ -156,17 +156,17 @@ ms.locfileid: "51019024"
   
     1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, cliquez sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Outil de configuration PowerPivot**. Notez que cet outil est répertorié uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
   
-    2.  Au démarrage, l'outil de configuration vérifie l'état de mise à niveau des solutions de solution de la batterie de serveurs PowerPivot et de l'application Web PowerPivot. Si des versions antérieures de ces solutions sont détectées, vous verrez le message « De nouvelles versions des fichiers de solution PowerPivot ont été détectées. Sélectionnez l'option de mise à niveau appropriée pour mettre à niveau votre batterie de serveurs. » Cliquez sur **OK** pour fermer le message.  
+    2.  Au démarrage, l'outil de configuration vérifie l'état de mise à niveau des solutions de solution de la batterie de serveurs PowerPivot et de l'application Web PowerPivot. Si des versions antérieures de ces solutions sont détectées, vous verrez le message « les versions plus récentes des fichiers de solution PowerPivot ont été détectées. Sélectionnez l’option de mise à niveau appropriée pour mettre à niveau votre batterie de serveurs ». Cliquez sur **OK** pour fermer le message.  
   
     3.  Cliquez sur **Mettre à niveau des fonctionnalités, des services, des applications et des solutions**, puis sur **OK** pour continuer.  
   
-    4.  L'avertissement suivant s'affiche : « Les classeurs du Tableau de bord de gestion PowerPivot sont sur le point d'être mis à niveau vers la dernière version. Les personnalisations apportées aux classeurs existants seront perdues. Voulez-vous continuer ? »  
+    4.  L'avertissement suivant s'affiche : « Les classeurs du tableau de bord de gestion PowerPivot sont sur le point d’être mis à niveau vers la dernière version. Les personnalisations apportées aux classeurs existants seront perdues. Voulez-vous continuer ? ».  
   
          Cet avertissement fait référence aux classeurs du tableau de bord de gestion PowerPivot qui rendent compte de l'activité d'actualisation des données. Si vous avez personnalisé ces classeurs, toutes les modifications que vous avez apportées à ces classeurs seront perdues lorsque des fichiers existants seront remplacés par des versions plus récentes.  
   
          Cliquez sur **Oui** pour remplacer les classeurs par les versions plus récentes. Sinon, cliquez sur **Non** pour revenir à la page d'accueil. Enregistrez les classeurs à un emplacement différent de sorte de disposer d'une copie, puis revenez à cette étape lorsque vous êtes prêt à continuer.  
   
-         Pour plus d'informations sur la personnalisation des classeurs utilisés dans le tableau de bord, consultez [Personnalisation du tableau de bord de gestion PowerPivot](http://go.microsoft.com/fwlink/?linkID=229639).  
+         Pour plus d'informations sur la personnalisation des classeurs utilisés dans le tableau de bord, consultez [Personnalisation du tableau de bord de gestion PowerPivot](https://go.microsoft.com/fwlink/?linkID=229639).  
   
     5.  Passez en revue les actions dans la liste des tâches et excluez celles que l'outil ne doit pas réaliser. Toutes les actions sont incluses par défaut. Pour supprimer une action, sélectionnez-la dans la liste des tâches, puis désactivez la case à cocher **Incluez cette action dans la liste des tâches** sur la page Paramètres.  
   
@@ -181,13 +181,13 @@ ms.locfileid: "51019024"
         > [!IMPORTANT]  
         >  La première action, **Mettre à niveau une solution de batterie de serveurs**, doit toujours être traitée en premier. Elle inscrit les applets de commande PowerShell qui sont utilisées pour configurer le serveur. Si vous obtenez une erreur sur cette action, ne continuez pas. À la place, utilisez les informations fournies par l'erreur pour diagnostiquer et résoudre le problème avant de traiter des actions supplémentaires dans la liste des tâches.  
   
-    8.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Lorsque vous cliquez sur **Exécuter**, l'avertissement suivant apparaît, vous rappelant que les actions sont traitées par lot : « Tous les paramètres de configuration marqués comme étant valides dans l'outil seront appliqués à la batterie de serveurs SharePoint. Voulez-vous continuer ? »  
+    8.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Lorsque vous cliquez sur **exécuter**, l’avertissement suivant s’affiche, vous rappelant que les actions sont traitées en mode batch : « Tous les paramètres de configuration qui sont marqués comme étant valides dans l’outil seront appliqués à la batterie de serveurs SharePoint. Voulez-vous continuer ? ».  
   
     9. Cliquez sur **OK** pour continuer.  
   
-    10. La mise à niveau des solutions et des fonctionnalités de la batterie de serveurs peut prendre plusieurs minutes. Pendant ce temps, les demandes de connexion concernant des données PowerPivot échoueront en raison d'erreurs telles que : « Impossible d'actualiser les données » ou « Une erreur s'est produite lors de l'exécution de l'action demandée. Réessayez. » Une fois la mise à niveau terminée, le serveur devient disponible et ces erreurs ne se produiront plus.  
+    10. La mise à niveau des solutions et des fonctionnalités de la batterie de serveurs peut prendre plusieurs minutes. Pendant ce temps, les demandes de connexion pour les données PowerPivot échoue avec des erreurs telles que : « Impossible d’actualiser les données » ou « une erreur s’est produite essaie d’effectuer l’action demandée. Réessayez. » Une fois la mise à niveau terminée, le serveur devient disponible et ces erreurs ne se produiront plus.  
   
-8.  **Répétez le processus** pour chaque service SQL Server Analysis Services (PowerPivot) dans la batterie de serveurs : le programme d’installation 1) exécutez SQL Server 2) exécutez l’outil de Configuration de PowerPivot.  
+8.  **Répétez le processus** pour chaque service SQL Server Analysis Services (PowerPivot) dans la batterie de serveurs : 1) Exécutez l’installation de SQL Server 2) Exécutez l'outil de configuration PowerPivot  
   
 9. Vérifiez que la mise à niveau a réussi en effectuant les étapes postérieures à la mise à niveau et en vérifiant la version des serveurs PowerPivot de la batterie. Pour plus d'informations, consultez [Post-upgrade verification tasks](#verify) dans cette rubrique et la section suivante :  
   
@@ -200,15 +200,15 @@ ms.locfileid: "51019024"
     1.  Démarrez SharePoint 2010 Management Shell en tant qu'administrateur, puis exécutez la commande suivante pour afficher les travaux dans la file d'attente :  
   
         ```  
-        Stsadm –o enumdeployments  
+        Stsadm -o enumdeployments  
         ```  
   
-    2.  Passez en revue les déploiements existants pour les informations suivantes : **Type** est déploiement ou rétraction **Fichier** est powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
+    2.  Passez en revue les déploiements existants pour les informations suivantes : **Type** est déploiement ou rétraction **fichier** correspond à powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
   
-    3.  Pour les déploiements ou les rétractions liés aux solutions PowerPivot, copiez la valeur GUID de **JobId** , puis collez-la dans la commande suivante (utilisez les commandes Marquer, Copier et Coller dans le menu Edition du shell afin de copier l'identifiant GUID) :  
+    3.  Pour les déploiements ou les rétractions liées aux solutions PowerPivot, copiez la valeur GUID de **JobId** et collez-la dans la commande suivante (utilisez les commandes marquer, copier et coller dans le menu Edition du Shell afin de copier le GUID) :  
   
         ```  
-        Stsadm –o canceldeployment –id “<GUID>”  
+        Stsadm -o canceldeployment -id "<GUID>"  
         ```  
   
     4.  Réexécutez la tâche dans l'outil de configuration en cliquant sur **Valider** suivi d' **Exécuter**.  

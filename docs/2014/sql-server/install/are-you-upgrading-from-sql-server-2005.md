@@ -11,17 +11,17 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f08906f5de609cfd1a520d397a41fe5bc0f36bc4
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 768d35d4cc2763ee055fc2bebfee3e954a64dc65
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099660"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350194"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Effectuez-vous une mise à niveau à partir de SQL Server 2005 ?
   La fin du support étendu pour SQL Server 2005 est une bonne raison d’effectuer une mise à niveau vers une version plus récente de SQL Server et vers Azure SQL Database. La mise à niveau vous permet de maintenir la sécurité et la conformité, d’atteindre des performances élevées et d’optimiser l’infrastructure de votre plateforme de données.  
   
- Pour plus d’informations, et pour obtenir les documents et les outils nécessaires pour planifier et automatiser la mise à niveau ou la migration, consultez [Fin du support de SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
+ Pour plus d’informations, et pour obtenir les documents et les outils nécessaires pour planifier et automatiser la mise à niveau ou la migration, consultez [Fin du support de SQL Server 2005](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
   
 ## <a name="why-upgrade"></a>Pourquoi effectuer une mise à niveau ?  
   
@@ -33,13 +33,13 @@ ms.locfileid: "50099660"
  ![Feuille de données sur la mise à niveau à partir de SQL Server 2005](../../../2014/sql-server/install/media/sqlserver2005eos.png "feuille de données sur la mise à niveau à partir de SQL Server 2005")  
   
 ## <a name="choose-your-upgrade-option"></a>Choisir votre option de mise à niveau  
- Si vous mettez à niveau des bases de données relationnelles à partir de SQL Server 2005, voici les options de stockage relationnel à votre disposition sur la plateforme Microsoft.  
+ Si vous mettez à niveau des bases de données relationnelles à partir de SQL Server 2005, voici les options pour le stockage relationnel sur la plate-forme Microsoft.  
   
  Pour une analyse plus complète de ces options, [cliquez ici](http://sql05upgrade.azurewebsites.net/).  
   
 |Option de stockage relationnel|Avantages|Autres facteurs à prendre en compte|  
 |-------------------------------|--------------|-------------------------------|  
-|**SQL Server local**<br /><br /> Envisagez cette option pour tous les types d’applications de base de données, des systèmes transactionnels aux entrepôts de données.<br /><br /> Pour plus d’informations, consultez [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/).|Dans la mesure où vous gérez le matériel et les logiciels, vous bénéficiez d’un contrôle optimal sur les fonctionnalités et l’évolutivité.<br /><br /> Si vous procédez à la mise à niveau à partir de SQL Server 2005, il s’agit de l’environnement le plus similaire.|L’investissement initial et les efforts de gestion continue sont les plus importants, car vous devez acheter, maintenir et gérer votre matériel et vos logiciels.|  
+|**SQL Server local**<br /><br /> Envisagez cette option pour tous les types d’applications de base de données, des systèmes transactionnels aux entrepôts de données.<br /><br /> Pour plus d’informations, consultez [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/).|Dans la mesure où vous gérez le matériel et les logiciels, vous bénéficiez d’un contrôle optimal sur les fonctionnalités et l’évolutivité.<br /><br /> Si vous mettez à niveau à partir de SQL Server 2005, il s’agit de l’environnement plus similaire.|L’investissement initial et les efforts de gestion continue sont les plus importants, car vous devez acheter, maintenir et gérer votre matériel et vos logiciels.|  
 |**SQL Server hébergé sur Azure Virtual Machines**<br /><br /> Envisagez cette option si vous souhaitez que les opérations suivantes.<br />-Avantages de la migration vers un environnement hébergé.<br />-Contrôler l’environnement d’exploitation.<br />-Ensemble de fonctionnalités familier de SQL Server.<br /><br /> Pour plus d’informations, consultez [SQL Server sur une vue d’ensemble de Machines virtuelles](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).<br /><br /> Pour plus d’informations sur la migration, consultez [Migration d’une base de données vers SQL Server sur une machine virtuelle Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/).|Vous pouvez effectuer rapidement le déploiement à partir d’une bibliothèque d’images de machine virtuelle.<br /><br /> Vous obtenez l’ensemble complet des fonctionnalités de SQL Server.<br /><br /> Vous économisez les coûts liés au matériel et au logiciel serveur. Votre consommation est facturée à l’heure.|Vous devez configurer et gérer SQL Server et le système d’exploitation.|  
 |**Service de base de données hébergé par Azure SQL Database**<br /><br /> Envisagez cette option si vous souhaitez une solution économique nécessitant moins d’efforts de maintenance.<br /><br /> Cette option convient particulièrement aux applications qui ne nécessitent pas une capacité constante ou qui doivent fournir un accès externe.<br /><br /> Pour plus d’informations, consultez [base de données SQL](https://azure.microsoft.com/services/sql-database/).<br /><br /> Pour plus d’informations sur la migration, consultez [migration d’une base de données SQL Server vers Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/).|Déploiement rapide et mise à l’échelle simplifiée.<br /><br /> Votre consommation est facturée à l’heure.<br /><br /> Le coût du service inclut non seulement le stockage, mais aussi des sauvegardes automatisées à haute disponibilité.|Azure SQL Database ne propose pas certaines fonctionnalités de SQL Server qui ne sont pas applicables à un environnement hébergé dans le cloud. Pour plus d’informations, consultez [Informations sur le langage Transact-SQL d’Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/).<br /><br /> Azure SQL Database limite également la taille des bases de données à 500 Go, contre 524 Po pour SQL Server.|  
   
@@ -58,11 +58,11 @@ ms.locfileid: "50099660"
   
 -   Découvrez comment planifier votre mise à niveau en lisant les séries de billets de blog suivantes de l’équipe SQL Server.  
   
-    -   [Planification d’une mise à niveau efficace de SQL Server 2005 : étape 1 sur 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
+    -   [Planification d’une mise à niveau efficace de SQL Server 2005 : Étape 1 sur 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
   
-    -   [Planification d’une mise à niveau efficace de SQL Server 2005 : étape 2 sur 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
+    -   [Planification d’une mise à niveau efficace de SQL Server 2005 : Étape 2 sur 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
   
-    -   [Planification d’une mise à niveau efficace de SQL Server 2005 : étape 3 sur 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
+    -   [Planification d’une mise à niveau efficace de SQL Server 2005 : Étape 3 sur 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
   
 -   Passez en revue les exigences et considérations sous [planification d’une Installation SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md), y compris le [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   
@@ -73,16 +73,16 @@ ms.locfileid: "50099660"
         > [!IMPORTANT]  
         >  Vous ne pouvez pas effectuer une mise à niveau sur place d’un serveur SQL Server 2005 vers un serveur SQL Server 2014. Vous devez installer SQL Server 2014, puis migrer vos bases de données SQL Server 2005 vers la nouvelle installation.  
   
-    -   Pour obtenir une version plus détaillée du « guide technique sur la mise à niveau » au format PDF, [cliquez ici](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf).  
+    -   Pour obtenir une version plus détaillée du « guide technique sur la mise à niveau » au format PDF, [cliquez ici](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf).  
   
--   Pour plus d’informations, et pour obtenir les documents et les outils nécessaires pour planifier et automatiser la mise à niveau ou la migration, consultez [Fin du support de SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
+-   Pour plus d’informations, et pour obtenir les documents et les outils nécessaires pour planifier et automatiser la mise à niveau ou la migration, consultez [Fin du support de SQL Server 2005](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
   
 ## <a name="get-sql-server-2014"></a>Obtenir SQL Server 2014  
  Pour télécharger une copie d’évaluation de SQL Server 2014, [cliquez ici](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2014).  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server 2014](http://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
- [Fin du support de SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
+ [SQL Server 2014](https://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
+ [Fin du support de SQL Server 2005](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
  [Mise à niveau à partir de SQL Server 2005 vers SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

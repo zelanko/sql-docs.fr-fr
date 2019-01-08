@@ -18,12 +18,12 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aca8858c65a900c085eba9d91461c4b3dc57b7fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 102e9122b93938b8e16d2e8714eed8d1372d21ad
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772977"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591523"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,22 +65,22 @@ sp_update_jobstep
  [  **@job_id =**] *job_id*  
  Numéro d'identification du travail auquel l'étape appartient. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut. Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@job_name =**] **'***nom_travail***'**  
+ [  **@job_name =**] **'**_nom_travail_**'**  
  Nom du travail auquel l'étape appartient. *job_name*est **sysname**, avec NULL comme valeur par défaut. Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
  [ **@step_id =**] *step_id*  
  Numéro d'identification de l'étape d'un travail à modifier. Il est impossible de modifier ce numéro. *l’argument id_étape*est **int**, sans valeur par défaut.  
   
- [  **@step_name =**] **'***nom_de_l***'**  
+ [  **@step_name =**] **'**_nom_de_l_**'**  
  Nouveau nom de l'étape. *nom_de_l*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@subsystem =**] **'***sous-système***'**  
+ [  **@subsystem =**] **'**_sous-système_**'**  
  Le sous-système utilisé par Microsoft SQL Server Agent pour exécuter *commande*. *sous-système* est **nvarchar (40)**, avec NULL comme valeur par défaut.  
   
- [  **@command =**] **'***commande***'**  
+ [  **@command =**] **'**_commande_**'**  
  L’exécution des commandes à exécuter via *sous-système*. *commande* est **nvarchar (max)**, avec NULL comme valeur par défaut.  
   
- [  **@additional_parameters =**] **'***paramètres***'**  
+ [  **@additional_parameters =**] **'**_paramètres_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@cmdexec_success_code =**] *code_succès*  
@@ -89,7 +89,7 @@ sp_update_jobstep
  [ **@on_success_action =**] *success_action*  
  L’action à effectuer si l’étape réussit. *action_succès* est **tinyint**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description (action)|  
+|Value|Description (action)|  
 |-----------|----------------------------|  
 |**1**|Quitter avec succès.|  
 |**2**|Sortie avec échec|  
@@ -102,7 +102,7 @@ sp_update_jobstep
  [  **@on_fail_action =**] *action_échec*  
  L’action à effectuer si l’étape échoue. *action_échec* est **tinyint**, avec NULL comme valeur par défaut et peut avoir une des valeurs suivantes.  
   
-|Valeur|Description (action)|  
+|Value|Description (action)|  
 |-----------|----------------------------|  
 |**1**|Quitter avec succès.|  
 |**2**|Sortie avec échec|  
@@ -112,13 +112,13 @@ sp_update_jobstep
  [  **@on_fail_step_id =**] *id_étape_échec*  
  Le numéro d’identification de l’étape du travail à exécuter si l’étape échoue et *action_échec* est **4**. *id_étape_échec* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@server =**] **'***server***»**  
+ [  **@server =**] **'**_server_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *serveur* est **nvarchar (128)**, avec NULL comme valeur par défaut.  
   
- [  **@database_name =**] **'***base de données***'**  
+ [  **@database_name =**] **'**_base de données_**'**  
  Nom de la base de données dans laquelle l'étape [!INCLUDE[tsql](../../includes/tsql-md.md)] doit être exécutée. *base de données*est **sysname**. Les noms placés entre crochets ([ ]) ne sont pas autorisés. La valeur par défaut est NULL.  
   
- [  **@database_user_name =**] **'***utilisateur***'**  
+ [  **@database_user_name =**] **'**_utilisateur_**'**  
  Nom du compte d'utilisateur à utiliser lors de l'exécution d'une étape [!INCLUDE[tsql](../../includes/tsql-md.md)]. *utilisateur*est **sysname**, avec NULL comme valeur par défaut.  
   
  [ **@retry_attempts =**] *retry_attempts*  
@@ -130,7 +130,7 @@ sp_update_jobstep
  [  **@os_run_priority =**] *priorité_exécution*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@output_file_name =**] **'***file_name***'**  
+ [  **@output_file_name =**] **'**_file_name_**'**  
  Nom du fichier dans lequel est enregistré le résultat de l'étape. *file_name* est **nvarchar (200)**, avec NULL comme valeur par défaut. Ce paramètre est valide uniquement avec les commandes fonctionnant dans les sous-systèmes [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CmdExec.  
   
  Pour définir nom_fichier_sortie NULL, vous devez définir *nom_fichier_sortie* sur une chaîne vide (' ') ou à une chaîne de caractères vides, mais vous ne pouvez pas utiliser le **CHAR(32)** (fonction). Vous pouvez par exemple définir cet argument avec une chaîne vide comme suit :  
@@ -140,7 +140,7 @@ sp_update_jobstep
  [  **@flags =**] *indicateurs*  
  Une option qui contrôle le comportement. *indicateurs* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0** (valeur par défaut)|Écrasement du fichier de sortie.|  
 |**2**|Ajout au fichier de sortie|  
@@ -151,7 +151,7 @@ sp_update_jobstep
  [ **@proxy_id**=] *proxy_id*  
  Numéro d'identification du proxy sous lequel s'exécute l'étape de travail. *proxy_id* est de type **int**, avec NULL comme valeur par défaut. Si aucun *proxy_id* est spécifié, aucun *proxy_name* est spécifié et aucune *user_name* est spécifié, l’étape de travail s’exécute en tant que compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
- [ **@proxy_name**=] **'***proxy_name***'**  
+ [ **@proxy_name**=] **'**_proxy_name_**'**  
  Nom du proxy sous lequel s'exécute l'étape de travail. *proxy_name* est de type **sysname**, avec NULL comme valeur par défaut. Si aucun *proxy_id* est spécifié, aucun *proxy_name* est spécifié et aucune *user_name* est spécifié, l’étape de travail s’exécute en tant que compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -162,7 +162,7 @@ sp_update_jobstep
   
  La mise à jour de l'étape d'un travail incrémente le numéro de version de ce travail.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  

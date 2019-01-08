@@ -10,12 +10,12 @@ ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5677e7f5dc7a5191b2d39e6100cafee1f38e86ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185449"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374571"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Détails de l'instance gérée (utilitaire SQL Server)
   Les informations de la vue Instances managées de l’Explorateur de l’utilitaire fournissent des données d’utilisation pour les instances individuelles de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], un historique d’utilisation du processeur, les détails de l’utilisation du stockage au niveau du fichier, et la possibilité d’afficher et de mettre à jour des seuils de stratégie. Les seuils de stratégie peuvent être contrôlés au niveau de l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , pour un ordinateur, pour les fichiers de base de données et les fichiers journaux, ainsi qu’au niveau des volumes de stockage. Vous pouvez également consulter les détails des propriétés des instances managées individuelles de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -68,17 +68,17 @@ ms.locfileid: "48185449"
   
 -   Édition de SQL Server :  
   
--   Cluster : (True ou False)  
+-   Cluster : (True ou False)  
   
 -   Répertoire de sauvegarde :  
   
 -   Classement :  
   
--   Respecter la casse : (True ou False)  
+-   En respectant la casse : (True ou False)  
   
--   Langue :  
+-   Langue :  
   
--   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
+-   Dernière heure signalée : Cette colonne indique la date locales du processeur et l’heure à l’aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
   
  Onglet Utilisation du processeur  
  L’onglet d’utilisation du processeur affiche côte à côte des graphiques de données d’historique pour l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et l’utilisation du processeur de l’ordinateur.  
@@ -96,7 +96,7 @@ ms.locfileid: "48185449"
 -   1 an, affiché par intervalles de 1 mois.  
   
  Onglet Utilisation du stockage  
- L'arborescence de l'onglet Utilisation du stockage affiche les détails de l'utilisation du stockage. Notez que les données temporelles affichent la date et l'heure locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
+ L'arborescence de l'onglet Utilisation du stockage affiche les détails de l'utilisation du stockage. Notez que les données temporelles affichent la date et l'heure locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
   
  L'affichage peut être regroupé par base de données ou par volume. Pour utiliser l’arborescence de la base de données, sélectionnez la case d’option **Base de données** dans la sélection **Regrouper les fichiers par** . Pour consulter l'état de l'utilisation du stockage pour des fichiers de base de données individuels, cliquez sur le signe plus en regard du nom d'une base de données dans l'arborescence. Les fichiers de base de données répertoriés incluent toutes les bases de données utilisateur et système qui appartiennent à l’instance managée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que vous avez sélectionnée en mode Liste.  
   
@@ -165,15 +165,15 @@ ms.locfileid: "48185449"
   
 -   Édition de SQL Server :  
   
--   Cluster : (True ou False)  
+-   Cluster : (True ou False)  
   
 -   Répertoire de sauvegarde :  
   
 -   Classement :  
   
--   Respecter la casse : (True ou False)  
+-   En respectant la casse : (True ou False)  
   
--   Langue :  
+-   Langue :  
   
 ## <a name="see-also"></a>Voir aussi  
  [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   

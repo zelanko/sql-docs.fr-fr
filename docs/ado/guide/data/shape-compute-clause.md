@@ -15,12 +15,12 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f47c18d4bef6930d45ceb8e2c7ebf3bfabb86640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b78abac5ccbade0b686176f432618b4abc35ccab
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797873"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201788"
 ---
 # <a name="shape-compute-clause"></a>Clause COMPUTE de la commande SHAPE
 Une clause COMPUTE de forme génère un parent **Recordset**, dont les colonnes sont constituées d’une référence à l’enfant **Recordset**; facultatif dont le contenu est chapitre, nouveau, ou des colonnes calculées, des colonnes ou le résultat de l’exécution des fonctions d’agrégation sur l’enfant **Recordset** précédemment finies ou **Recordset**; et toutes les colonnes à partir de l’enfant **Recordset** répertoriées dans facultatif par clause.  
@@ -65,7 +65,7 @@ SHAPE child-command [AS] child-alias
  Exemple :  
   
 ```  
-SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
+SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
  Quel que soit le parent **Recordset** est formée (à l’aide de calcul ou APPEND), il contiendra une colonne de chapitre qui sert à associer à un enfant **Recordset**. Si vous le souhaitez, le parent **Recordset** peuvent également contenir des colonnes contenant des agrégats (SUM, MIN, MAX et ainsi de suite) sur les lignes enfants. Le parent et l’enfant **Recordset** peuvent contenir des colonnes qui contiennent une expression sur la ligne dans le **Recordset**, ainsi que les colonnes qui sont nouveaux et initialement vide.  

@@ -11,12 +11,12 @@ ms.assetid: 404b31d5-27f4-4875-bd60-7b2b8613eb1b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61c81668f2bac2f25b75a6b58efb9e1b97da4144
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e8418bf91dff36a512db57c45f1d19ad18fde02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119649"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369011"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Didacticiel sur l'exploration de données intermédiaire (Analysis Services - Exploration de données)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit un environnement intégré pour créer et utiliser des modèles d’exploration de données. Vous pouvez facilement créer une liaison avec des sources de données, créer et tester plusieurs modèles sur les mêmes données et déployer des modèles à utiliser dans des analyses prédictives.  
@@ -34,13 +34,13 @@ ms.locfileid: "48119649"
 ## <a name="lesson-scenarios"></a>Scénarios des leçons  
  Suite au succès de votre campagne de publipostage ciblé, il vous a été demandé d'appliquer vos connaissances sur l'exploration de données afin de développer plusieurs nouveaux modèles à des fins de planification commerciale. Ces tâches sont les suivantes :  
   
--   **Prévisions :** vous allez créer un *série chronologique* modèle, afin de prévoir les ventes de produits dans différentes régions du monde. Vous allez développer des modèles individuels pour chaque région et découvrez comment utiliser *la prédiction croisée*.  
+-   **Prévisions :** Vous allez créer un *série chronologique* modèle, afin de prévoir les ventes de produits dans différentes régions du monde. Vous allez développer des modèles individuels pour chaque région et découvrez comment utiliser *la prédiction croisée*.  
   
--   **Analyse du panier :** vous allez créer un *modèle d’association*, pour analyser des regroupements de produits achetés lors de visites sur le [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] site de commerce électronique. Grâce à ce modèle de panier d'achat, vous pouvez recommander des produits aux clients.  
+-   **Analyse du panier :** Vous allez créer un *modèle d’association*, pour analyser des regroupements de produits achetés lors de visites sur le [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] site de commerce électronique. Grâce à ce modèle de panier d'achat, vous pouvez recommander des produits aux clients.  
   
--   **Analyse de séquence :** vous générez un *modèle sequence clustering*, pour analyser l’ordre dans lequel les clients achètent des produits. Grâce à ce modèle, vous pouvez planifier des modifications dans la conception du site Web ou de nouvelles offres de produits.  
+-   **Analyse de séquence :** Vous générez un *modèle sequence clustering*, pour analyser l’ordre dans lequel les clients achètent des produits. Grâce à ce modèle, vous pouvez planifier des modifications dans la conception du site Web ou de nouvelles offres de produits.  
   
--   **Analyse factorielle :** vous utilisez un *réseau neuronal* modèle pour Explorer les causes possibles de mauvaise qualité de service dans les données de centre d’appels. Selon les informations tirées du modèle préliminaire, vous allez créer un *modèle de régression logistique* pour prédire les stratégies possibles pour améliorer l’expérience client.  
+-   **Analyse des facteurs :** Vous utilisez un *réseau neuronal* modèle pour Explorer les causes possibles de mauvaise qualité de service dans les données de centre d’appels. Selon les informations tirées du modèle préliminaire, vous allez créer un *modèle de régression logistique* pour prédire les stratégies possibles pour améliorer l’expérience client.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Ce didacticiel vous apprend à créer et utiliser différents types d'algorithmes d'exploration de données. Ce didacticiel contient les leçons suivantes :  
@@ -59,10 +59,10 @@ ms.locfileid: "48119649"
  [Leçon 4 : Création d’un scénario Sequence Clustering &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
  Dans cette leçon, vous allez créer un modèle d'exploration de données qu'il sera possible d'utiliser dans un scénario Sequence Clustering. Vous apprendrez également à explorer des modèles d'exploration de données créés avec l'algorithme MSC ([!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering).  
   
- [Leçon 5 : Génération de réseau neuronal et modèles de régression logistique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Leçon 5 : Création de réseau neuronal et modèles de régression logistique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
  Dans cette leçon, vous allez créer plusieurs modèles d'exploration de données connexes, à l'aide des algorithmes MNN (Microsoft Neural Network) et MLR (Microsoft Logistic Regression). Vous apprendrez également à utiliser des vues de sources de données pour explorer les données sous-jacentes des modèles.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Assurez-vous que les éléments suivants sont installés sur votre système :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
@@ -71,10 +71,10 @@ ms.locfileid: "48119649"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec la base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- Pour des raisons de sécurité, les bases de données exemples ne sont pas installées par défaut. Pour installer les bases de données officielles pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitez le [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) page et sélectionnez la version appropriée de la base de données.  
+ Pour des raisons de sécurité, les bases de données exemples ne sont pas installées par défaut. Pour installer les bases de données officielles pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitez le [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) page et sélectionnez la version appropriée de la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Didacticiel d’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Didacticiel sur l'exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Didacticiel DMX Bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [Tutoriel DMX Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md)  
   

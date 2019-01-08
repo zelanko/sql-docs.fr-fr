@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS
@@ -19,19 +18,19 @@ ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ddf8bc6d8b6a37d0d397427c0ddd281cf13c998f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61456eddaf526d7afed27c39c22820456ce8382c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187379"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360941"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
   
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est une plateforme qui permet de créer des solutions de transformation de données et d’intégration de données au niveau de l’entreprise. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vous permet de résoudre des problèmes professionnels complexes en copiant ou en téléchargeant des fichiers, en envoyant des messages électroniques en réponse à des événements, en mettant à jour des entrepôts de données, en nettoyant et en explorant des données et en gérant des données et des objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les packages peuvent fonctionner en mode autonome ou de concert avec d'autres packages en réponse à des besoins professionnels complexes. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] peut extraire et transformer des données provenant d’une grande variété de sources, par exemple des fichiers de données XML, des fichiers plats et des sources de données relationnelles, puis charger les données dans une ou plusieurs destinations.<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut un ensemble étendu de tâches et de transformations intégrées, des outils pour construire des packages, et le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permettant d’exécuter et de gérer des packages. Vous pouvez utiliser les outils graphiques de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour créer des solutions sans écrire une seule ligne de code. Vous pouvez également programmer le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] étendu pour créer des packages par programmation, et coder des tâches personnalisées et d’autres objets de package.<br /><br /> **Parcourir le contenu par domaine**<br /> ![Icône de dossier petit fichier](media/filefolder-small.gif "icône dossier de petits fichiers") [quelles sont les nouveautés](what-s-new-in-integration-services-in-sql-server-2016.md)<br /><br /> ![Icône de dossier petit fichier](media/filefolder-small.gif "icône dossier de petits fichiers") [la compatibilité descendante](integration-services-backward-compatibility.md)<br /><br /> ![Icône de dossier petit fichier](media/filefolder-small.gif "icône dossier de petits fichiers") [fonctionnalités et tâches Integration Services](../../2014/integration-services/integration-services-features-and-tasks.md)<br /><br /> ![Icône de dossier petit fichier](media/filefolder-small.gif "icône dossier de petits fichiers") [informations techniques de référence](../../2014/integration-services/technical-reference-integration-services.md)  
   
- Présentation technique en ligne, [Enterprise Information Management (EIM) : associer SSIS, DQS et MDS](http://go.microsoft.com/fwlink/?LinkId=258672), sur channel9.msdn.com.  
+ Présentation technique en ligne, [Enterprise Information Management (EIM) : Associer SSIS, DQS et MDS](https://go.microsoft.com/fwlink/?LinkId=258672), sur channel9.msdn.com.  
   
-![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
   

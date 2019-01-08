@@ -1,5 +1,5 @@
 ---
-title: Installer R Server ou Machine Learning Server (autonome) à l’aide du programme d’installation de SQL Server | Microsoft Docs
+title: Installer R Server ou Machine Learning Server (autonome) à l’aide du programme d’installation de SQL Server - SQL Server Machine Learning
 description: Configurer un serveur d’apprentissage autonome non-instance-prenant en charge pour le développement R et Python à l’aide de revoscalepy, RevoScaleR, MicrosoftML et autres packages.
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 70fa652e876f1011bc2d74df56104671b33775b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a00a91564cff37669f92cdfb4cba04fb3ada26fd
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187489"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732056"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Installer Machine Learning Server (autonome) ou R Server (autonome) à l’aide du programme d’installation de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,14 +40,14 @@ Si vous avez installé une version antérieure, telles que SQL Server 2016 R Ser
 
 En règle générale, nous recommandons que vous traiter autonome installations de serveur et base de données du moteur dépendant des instances en tant que mutuellement exclusives afin d’éviter les conflits de ressources, mais si vous avez suffisamment de ressources, il n’existe aucune interdiction par rapport à l’installation de tous les deux sur le même ordinateur physique.
 
-Vous ne pouvez avoir qu’un serveur autonome sur l’ordinateur : SQL Server 2017 Machine Learning Server ou SQL Server 2016 R Server (autonome). Vous devez désinstaller manuellement une version avant d’installer une version différente.
+Vous ne pouvez avoir qu’un serveur autonome sur l’ordinateur : SQL Server 2017 Machine Learning Server ou SQL Server 2016 R Server (autonome). Veillez à désinstaller une version avant d’ajouter un nouveau.
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
 
  ###  <a name="install-patch-requirement"></a>Installer le correctif obligatoire 
 
-Pour SQL Server 2016 uniquement : Microsoft a identifié un problème avec la version spécifique des fichiers binaires Microsoft VC ++ 2013 Runtime qui sont installés en tant que composant requis par SQL Server. Si cette mise à jour des fichiers binaires du runtime VC n’est pas installée, SQL Server risque de rencontrer des problèmes de stabilité dans certains scénarios. Avant d’installer SQL Server, suivez les instructions données dans [Notes de publication de SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) pour voir si votre ordinateur nécessite un correctif pour les fichiers binaires du runtime VC.  
+Pour SQL Server 2016 uniquement : Microsoft a identifié un problème avec la version spécifique des fichiers binaires Microsoft VC++ 2013 Runtime qui sont installés en tant que composants requis par SQL Server. Si cette mise à jour des fichiers binaires du runtime VC n’est pas installée, SQL Server risque de rencontrer des problèmes de stabilité dans certains scénarios. Avant d’installer SQL Server, suivez les instructions données dans [Notes de publication de SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) pour voir si votre ordinateur nécessite un correctif pour les fichiers binaires du runtime VC.  
 ::: moniker-end
 
 ## <a name="get-the-installation-media"></a>Obtenir le média d’installation
@@ -73,7 +73,7 @@ Pour des installations locales, vous devez exécuter le programme d'installation
 
     - R et Python est sélectionnées par défaut. Vous pouvez désélectionner les deux langues, mais nous vous recommandons d’installer au moins une des langues prises en charge.
 
-     ![Installer Machine Learning Server (autonome)](media/2017setup-features-page-mlsvr-rpy.png "démarrer l’installation de Machine Learning Server (autonome)")
+     ![Choisissez les fonctionnalités de R ou Python](media/2017setup-features-page-mlsvr-rpy.png "démarrer l’installation de Machine Learning Server (autonome)")
     
     Toutes les autres options peuvent être ignorées. 
     
@@ -128,6 +128,21 @@ Pour des installations locales, vous devez exécuter le programme d'installation
 Lors de l’installation terminée, consultez [rapports personnalisés pour SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md) pour avec des erreurs ou avertissements, consultez [mise à niveau et installation FAQ - Services Machine Learning](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 ::: moniker-end
 
+## <a name="set-environment-variables"></a>Jeu de variables d’environnement
+
+Pour R fonctionnalité d’intégration uniquement, vous devez définir le **MKL_CBWR** variable d’environnement [résultat homogène](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) des calculs d’Intel Math Kernel Library (MKL).
+
+1. Dans le panneau de configuration, cliquez sur **système et sécurité** > **système** > **paramètres système avancés**  >   **Variables d’environnement**.
+
+2. Créer une nouvelle variable utilisateur ou système. 
+
+  + Nom de variable du jeu `MKL_CBWR`
+  + La valeur est la valeur de variable `AUTO`
+
+3. Redémarrez le serveur.
+
+<a name="install-path"></a>
+
 ### <a name="default-installation-folders"></a>Dossiers d’installation par défaut
 
 Pour le développement R et Python, il est courant d’avoir plusieurs versions sur le même ordinateur. Installé par le programme d’installation de SQL Server, la distribution de base est installée dans un dossier associé à la version de SQL Server que vous avez utilisé pour le programme d’installation.
@@ -148,7 +163,7 @@ Le tableau suivant répertorie les chemins d’accès pour les distributions de 
 
 Nous vous recommandons d’appliquer la mise à jour cumulative la plus récente pour le moteur de base de données et les composants d’apprentissage. Mises à jour cumulatives sont installées via le programme d’installation. 
 
-Sur les appareils connectés à internet, les mises à jour cumulatives sont appliqués en général via Windows Update, mais vous pouvez également utiliser les étapes ci-dessous pour les mises à jour contrôlés. Lorsque vous appliquez la mise à jour pour le moteur de base de données, le programme d’installation extrait les mises à jour cumulatives pour les fonctionnalités de R ou Python que vous avez installé sur le serveur autonome. 
+Sur les appareils connectés à internet, vous pouvez télécharger un exécutable à extraction automatique. Appliquer une mise à jour pour le moteur de base de données automatiquement extrait les mises à jour cumulatives pour les fonctionnalités existantes de R et Python. 
 
 Sur les serveurs hors connexion, des étapes supplémentaires sont nécessaires. Vous devez obtenir la mise à jour cumulative pour le moteur de base de données, ainsi que les fichiers CAB pour les fonctionnalités d’apprentissage automatique. Tous les fichiers doivent être transférés vers le serveur isolé et appliqués manuellement.
 
@@ -157,16 +172,20 @@ Sur les serveurs hors connexion, des étapes supplémentaires sont nécessaires.
   + Machine Learning Server (autonome) à partir de la version initiale de SQL Server 2017
   + R Server (autonome) à partir de la version initiale de SQL Server 2016, SQL Server 2016 Service Pack 1 ou SQL Server 2016 Service Pack 2
 
-2. Sur un dispositif connecté à internet, accédez à la liste de mise à jour cumulative pour votre version de SQL Server.
+2. Fermez toutes les sessions ouvertes R ou Python et d’arrêter tous les processus en cours d’exécution sur le système.
+
+3. Si vous avez activé Opérationnalisation à exécuter en tant que nœuds de site web et des nœuds de calcul pour les déploiements de service web, sauvegardez le **AppSettings.json** fichier par mesure de précaution. Application SQL Server 2017 CU13 ou versions ultérieures revises ce fichier, vous pouvez donc une copie de sauvegarde pour conserver la version d’origine.
+
+4. Sur un dispositif connecté à internet, cliquez sur le lien de mise à jour cumulative pour votre version de SQL Server.
 
   + [Mises à jour de SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
   + [Mises à jour de SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
 
-3. Téléchargez la dernière mise à jour cumulative. C’est un fichier exécutable.
+5. Téléchargez la dernière mise à jour cumulative. C’est un fichier exécutable.
 
-4. Sur un appareil connecté à internet, double-cliquez sur le fichier .exe pour exécuter le programme d’installation et de l’étape de l’Assistant pour accepter les termes du contrat de licence, passez en revue les fonctionnalités concernées et surveiller la progression jusqu'à la fin.
+6. Sur un appareil connecté à internet, double-cliquez sur le fichier .exe pour exécuter le programme d’installation et de l’étape de l’Assistant pour accepter les termes du contrat de licence, passez en revue les fonctionnalités concernées et surveiller la progression jusqu'à la fin.
 
-5. Sur un serveur sans connectivité internet :
+7. Sur un serveur sans connectivité internet :
 
    + Obtenir les fichiers CAB correspondants pour R et Python. Pour obtenir des liens de téléchargement, consultez [CAB télécharge les mises à jour cumulatives sur analytique en base de données de SQL Server instances](sql-ml-cab-downloads.md).
 
@@ -174,7 +193,7 @@ Sur les serveurs hors connexion, des étapes supplémentaires sont nécessaires.
 
    + Double-cliquez sur le fichier .exe pour exécuter le programme d’installation. Lorsque vous installez une mise à jour cumulatif sur un serveur sans connectivité internet, vous êtes invité à sélectionner l’emplacement des fichiers .cab pour R et Python.
 
-6. Après l’installation, sur un serveur pour lequel vous avez activé Opérationnalisation des nœuds de web et des nœuds de calcul, modifier **appsettings.json**, ajout d’une entrée « MMLResourcePath », directement sous « MMLNativePath » :
+8. Après l’installation, sur un serveur pour lequel vous avez activé Opérationnalisation des nœuds de web et des nœuds de calcul, modifier **AppSettings.json**, ajout d’une entrée « MMLResourcePath », directement sous « MMLNativePath » :
 
     ```json
     "ScorerParameters": {
@@ -183,7 +202,7 @@ Sur les serveurs hors connexion, des étapes supplémentaires sont nécessaires.
     }
     ```
 
-7. [Exécutez l’utilitaire d’administration CLI](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch) pour redémarrer le web et de nœuds de calcul. Pour plus d’étapes et la syntaxe, consultez [moniteur, de démarrage et d’arrêt web et de nœuds de calcul](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start).
+9. [Exécutez l’utilitaire d’administration CLI](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch) pour redémarrer le web et de nœuds de calcul. Pour plus d’étapes et la syntaxe, consultez [moniteur, de démarrage et d’arrêt web et de nœuds de calcul](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start).
 
 ## <a name="development-tools"></a>Outils de développement
 
@@ -194,13 +213,13 @@ Un IDE de développement n’est pas installé dans le cadre du programme d’in
 Aux développeurs R peuvent démarrer avec des exemples simples et apprendre les bases du fonctionne de R avec SQL Server. Pour votre prochaine étape, consultez les liens suivants :
 
 + [Didacticiel : Exécuter R dans T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Didacticiel : De base de données analytique pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Didacticiel : Analytique en base de données pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Les développeurs Python peuvent apprendre à utiliser Python avec SQL Server en suivant ces didacticiels :
 
-+ [Didacticiel : Exécuter Python dans T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Didacticiel : De base de données analytique pour les développeurs Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Didacticiel : Exécutez le code Python dans T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Didacticiel : Analytique en base de données pour les développeurs Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 ::: moniker-end
 
 Pour afficher des exemples d’apprentissage qui sont basées sur des scénarios réels, consultez [d’apprentissage didacticiels](../tutorials/machine-learning-services-tutorials.md).

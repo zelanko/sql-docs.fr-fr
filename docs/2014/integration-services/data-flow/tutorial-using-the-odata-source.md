@@ -1,24 +1,23 @@
 ---
-title: 'Didacticiel : Utilisation de la Source OData [SSIS] | Microsoft Docs'
+title: 'Didacticiel : À l’aide de la Source OData [SSIS] | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32d4e2f651fe4a080c1b75c4bd8c00ded7940bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 693eb9b33c753f1d87b4b5635e47de82ca7e4b59
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154999"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805151"
 ---
-# <a name="tutorial-using-the-odata-source-ssis"></a>Didacticiel : Utiliser la source OData [SSIS]
+# <a name="tutorial-using-the-odata-source-ssis"></a>Didacticiel : À l’aide de la Source OData [SSIS]
   Ce tutoriel vous guide dans le processus d’extraction de la collection **Employees** de l’exemple de service OData **Northwind** (http://services.odata.org/V3/Northwind/Northwind.svc/)), puis de son chargement dans un fichier plat.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Créer un projet Integration Services  
@@ -43,7 +42,7 @@ ms.locfileid: "48154999"
   
 4.  Double-cliquez sur le composant **Source OData** pour ouvrir la boîte de dialogue **Éditeur de source OData** .  
   
-5.  Cliquez sur **Nouveau…** pour ajouter un nouveau gestionnaire de connexions OData.  
+5.  Cliquez sur **Nouveau...** pour ajouter un nouveau gestionnaire de connexions OData.  
   
 6.  Entrez l'URL du service OData pour l' **Emplacement du document de service**. Il peut s'agir de l'URL qui renvoie au document de service, ou bien à un flux ou à une entité spécifique. Pour les besoins de ce didacticiel, tapez [ http://services.odata.org/V3/Northwind/Northwind.svc/ ](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   

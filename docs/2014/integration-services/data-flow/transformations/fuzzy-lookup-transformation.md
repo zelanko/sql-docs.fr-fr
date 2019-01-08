@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
@@ -31,18 +30,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53385dd40fa0b180fcc6994832faf5feffcdd8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a09abfe2d5370e9564dd3d081346c022cb2ca0d7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106395"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361961"
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformation de recherche floue
   La transformation de recherche floue effectue des tâches de nettoyage des données telles que la standardisation des données, la correction des données et la fourniture de données manquantes.  
   
 > [!NOTE]  
->  Pour plus d’informations sur la transformation de recherche floue, y compris les limitations en termes de performances et de mémoire, consultez le livre blanc, [Présentation des transformations Fuzzy Lookup (recherche approximative) et Fuzzy Grouping (regroupement approximatif) dans les services DTS (Data Transformation Services) de SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+>  Pour plus d’informations sur la transformation de recherche floue, y compris les limitations en termes de performances et de mémoire, consultez le livre blanc, [Présentation des transformations Fuzzy Lookup (recherche approximative) et Fuzzy Grouping (regroupement approximatif) dans les services DTS (Data Transformation Services) de SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
  La transformation de recherche floue diffère de la transformation de recherche par son utilisation de la correspondance approximative. La transformation de recherche utilise une équijointure pour localiser les enregistrements équivalents dans la table de référence. Elle retourne les enregistrements avec au moins un enregistrement correspondant et les enregistrements sans enregistrements correspondants. Par contre, la transformation de recherche floue utilise la correspondance floue pour renvoyer un ou plusieurs résultats dont la correspondance est proche dans la table de référence.  
   
@@ -127,11 +126,11 @@ ms.locfileid: "48106395"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation de recherche floue** , cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de Transformation de recherche floue &#40;onglet Table de référence&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Éditeur de transformation de recherche floue &#40;onglet Table de référence&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
--   [Éditeur de Transformation de recherche floue &#40;onglet colonnes&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
+-   [Éditeur de transformation de recherche floue &#40;onglet Colonnes&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
--   [Éditeur de Transformation de recherche floue &#40;onglet Avancé&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
+-   [Éditeur de transformation de recherche floue &#40;onglet Avancé&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   

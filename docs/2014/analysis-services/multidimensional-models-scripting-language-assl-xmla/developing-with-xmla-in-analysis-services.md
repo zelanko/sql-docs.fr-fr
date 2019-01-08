@@ -19,12 +19,12 @@ ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52c03994288a54db9057fcac7c121b08b806d8db
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bb3ed3080d27a5db2cadcc9ab2b47e9a66d95a62
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145564"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374471"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Développement avec XMLA dans Analysis Services
   XMLA (XML for Analysis) est un protocole XML basé sur SOAP (Simple Object Access Protocol) conçu spécifiquement pour offrir un accès universel à n'importe quelle source de données multidimensionnelle standard accessible via une connexion HTTP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise XMLA comme seul protocole pour communiquer avec les applications clientes. Fondamentalement, toutes les bibliothèques clientes prises en charge par Analysis Services formulent des demandes et des réponses XMLA.  
@@ -62,7 +62,7 @@ ms.locfileid: "50145564"
 ## <a name="namespace-and-schema"></a>Espace de noms et schéma  
   
 ### <a name="namespace"></a>Espace de noms  
- Le schéma défini dans cette spécification utilise l’espace de noms XML http://schemas.microsoft.com/AnalysisServices/2003/Engine et l’abréviation standard « DDL ».  
+ Le schéma défini dans cette spécification utilise l’espace de noms XML https://schemas.microsoft.com/AnalysisServices/2003/Engine et l’abréviation standard « DDL ».  
   
 ### <a name="schema"></a>schéma  
  La définition d'un schéma XSD (XML Schema definition language) pour le langage de définition d'objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] repose sur la définition des éléments et de la hiérarchie de schéma de cette section.  

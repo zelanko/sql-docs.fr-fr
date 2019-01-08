@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponentdetails.f1
@@ -18,12 +17,12 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8907bc0df08010b49bdfcb2a7f4b77ea646fbcf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5db2b6e6467dec58f6a8aa6e6bfc9f105073fbfe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084619"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818028"
 ---
 # <a name="script-component"></a>Composant Script
   Le composant Script héberge le script et permet à un package d'inclure du code de script personnalisé et de l'exécuter. Vous pouvez utiliser le composant Script dans des packages pour :  
@@ -91,17 +90,17 @@ ms.locfileid: "48084619"
 ### <a name="configuring-the-script-component-in-the-designer"></a>Configuration du composant Script dans le concepteur  
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation de script**, cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de Transformation de script &#40;Page de colonnes d’entrée&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [Éditeur de transformation de script &#40;page Colonnes d’entrée&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [Éditeur de Transformation de script &#40;entrées et de sorties de Page&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [Éditeur de transformation de script &#40;page Entrées et sorties&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [Éditeur de Transformation de script &#40;Page Script&#41;](../../script-transformation-editor-script-page.md)  
+-   [Éditeur de transformation de script &#40;page Script&#41;](../../script-transformation-editor-script-page.md)  
   
--   [Éditeur de Transformation de script &#40;Page gestionnaires de connexions&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [Éditeur de transformation de script &#40;page Gestionnaires de connexions&#41;](../../script-transformation-editor-connection-managers-page.md)  
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md)  
+-   [Définir les propriétés d'un composant de flux de données](../set-the-properties-of-a-data-flow-component.md)  
   
 ### <a name="configuring-the-script-component-programmatically"></a>Configuration du composant Script par programmation  
  Pour plus d’informations sur les propriétés définissables dans la fenêtre **Propriétés** ou par programmation, cliquez sur l’une des rubriques suivantes :  

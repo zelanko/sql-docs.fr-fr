@@ -18,12 +18,12 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c3ef9f2aa7ec6f5608e55f84efd35af25c1776a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0fc8552157e9864ed45306ec268fefb4eec87bf
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605177"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589943"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,32 +46,32 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@table_server =** ] **'***serveur_de_la_table***'**  
+ [  **@table_server =** ] **'**_serveur_de_la_table_**'**  
  Nom du serveur lié pour lequel sont retournées les informations de table. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
   
- [  **@pktab_name =** ] **'***l’argument nom_table_pk***'**  
+ [  **@pktab_name =** ] **'**_l’argument nom_table_pk_**'**  
  Nom de la table contenant une clé primaire. *l’argument nom_table_pk* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@pktab_schema =** ] **'***schéma_table_pk***'**  
+ [  **@pktab_schema =** ] **'**_schéma_table_pk_**'**  
  Nom du schéma contenant une clé primaire. *schéma_table_pk*est **sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il contient le nom du propriétaire.  
   
- [  **@pktab_catalog =** ] **'***l’argument catalogue_table_pk***'**  
+ [  **@pktab_catalog =** ] **'**_l’argument catalogue_table_pk_**'**  
  Nom du catalogue contenant une clé primaire. *l’argument catalogue_table_pk*est **sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il contient le nom de la base de données.  
   
- [  **@fktab_name =** ] **'***l’argument nom_table_fk***'**  
+ [  **@fktab_name =** ] **'**_l’argument nom_table_fk_**'**  
  Nom de la table contenant une clé étrangère. *l’argument nom_table_fk*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@fktab_schema =** ] **'***l’argument schema_table_fk***'**  
+ [  **@fktab_schema =** ] **'**_l’argument schema_table_fk_**'**  
  Nom du schéma contenant une clé étrangère. *l’argument schema_table_fk*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@fktab_catalog =** ] **'***l’argument catalogue_table_fk***'**  
+ [  **@fktab_catalog =** ] **'**_l’argument catalogue_table_fk_**'**  
  Nom du catalogue contenant une clé étrangère. *l’argument catalogue_table_fk*est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (*catalogue ***.*** schéma ***.*** table*), qui est représenté dans le jeu de résultats.  
+ Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_catalogue_**.** _schéma_**.** _table_), qui est représenté dans le jeu de résultats.  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -95,7 +95,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ## <a name="remarks"></a>Notes  
  **sp_foreignkeys** interroge l’ensemble de lignes Foreign_Keys contenu dans le **IDBSchemaRowset** interface du fournisseur OLE DB qui correspond à *serveur_de_la_table*. Le *table_name*, *table_schema*, *table_catalog*, et *colonne* paramètres sont passés à cette interface pour limiter les lignes retourné.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="examples"></a>Exemples  

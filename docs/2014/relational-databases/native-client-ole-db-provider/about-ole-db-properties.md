@@ -15,12 +15,12 @@ ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d02a551826912f69755e50c7dde039482595b54a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e7c010beaf3aefa4f73314d8576a066dca6a167
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123599"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366201"
 ---
 # <a name="about-ole-db-properties"></a>À propos des propriétés OLE DB
   Les consommateurs définissent des valeurs de propriétés afin de demander un comportement d'objet spécifique. Par exemple, ils utilisent des propriétés pour spécifier les interfaces à exposer par un ensemble de lignes. Ils obtiennent les valeurs de propriétés afin de déterminer les capacités d'un objet, tel qu'un ensemble de lignes, une session ou un objet source de données.  
@@ -47,6 +47,6 @@ ms.locfileid: "48123599"
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une Application de fournisseur SQL Server Native Client OLE DB](creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [Propriétés (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
+ [Propriétés (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

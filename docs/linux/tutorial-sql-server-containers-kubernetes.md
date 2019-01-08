@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 1053f3a11bed9efbf75d7270f677c9f226221a3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674195"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626319"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Déployer un conteneur de SQL Server dans Kubernetes avec Azure Kubernetes Services (AKS)
 
@@ -41,11 +41,11 @@ Dans le diagramme précédent, `mssql-server` est un conteneur dans un [pod](htt
 
 Dans le diagramme suivant, le `mssql-server` conteneur a échoué. Comme l’orchestrateur, Kubernetes garantit le nombre correct d’instances saines dans le réplica défini et crée un conteneur en fonction de la configuration. L’orchestrateur démarre un nouveau module sur le même nœud, et `mssql-server` se reconnecte à un même stockage persistant. Le service se connecte à la re-création `mssql-server`.
 
-![Diagramme du cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Diagramme du cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 Dans le diagramme suivant, le nœud qui héberge le `mssql-server` conteneur a échoué. L’orchestrateur démarre le pod de nouveau sur un autre nœud, et `mssql-server` se reconnecte à un même stockage persistant. Le service se connecte à la re-création `mssql-server`.
 
-![Diagramme du cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Diagramme du cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -174,13 +174,15 @@ Dans cette étape, créez un manifeste pour décrire le conteneur basé sur le s
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server:2017-latest
            ports:
            - containerPort: 1433
            env:
+           - name: MSSQL_PID
+             value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: SA_PASSWORD
+           - name: MSSQL_SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql
@@ -209,7 +211,7 @@ Dans cette étape, créez un manifeste pour décrire le conteneur basé sur le s
 
    Copiez le code précédent dans un nouveau fichier nommé `sqldeployment.yaml`. Mettre à jour les valeurs suivantes : 
 
-   * `value: "Developer"`: Définit le conteneur pour exécuter SQL Server Developer edition. Édition développeur n’est pas autorisée pour les données de production. Si le déploiement est pour la production, définissez l’édition appropriée (`Enterprise`, `Standard`, ou `Express`). 
+   * MSSQL_PID `value: "Developer"`: Définit le conteneur pour exécuter SQL Server Developer edition. Édition développeur n’est pas autorisée pour les données de production. Si le déploiement est pour la production, définissez l’édition appropriée (`Enterprise`, `Standard`, ou `Express`). 
 
       >[!NOTE]
       >Pour plus d’informations, consultez [comment obtenir la licence SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
@@ -253,7 +255,7 @@ Dans cette étape, créez un manifeste pour décrire le conteneur basé sur le s
    >[!NOTE]
    >Une fois le déploiement est créé, il peut prendre quelques minutes avant que le pod est visible. Le délai est parce que le cluster extrait la [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) image à partir du hub Docker. Une fois que l’image est extraite de la première fois, les déploiements suivants peuvent être plus rapides si le déploiement vers un nœud qui possède déjà l’image mis en cache sur ce dernier. 
 
-1. Vérifiez que les services sont en cours d’exécution. Exécutez la commande suivante :
+1. Vérifiez que les services sont en cours d’exécution. Exécutez la commande suivante :
 
    ```azurecli
    kubectl get services 
@@ -313,7 +315,7 @@ Pour vérifier la défaillance et récupération, vous pouvez supprimer le pod. 
 
 Kubernetes recrée automatiquement le pod pour récupérer une instance de SQL Server et vous connecter au stockage persistant. Utilisez `kubectl get pods` pour vérifier qu’un nouveau module est déployé. Utilisez `kubectl get services` pour vérifier que l’adresse IP pour le nouveau conteneur est le même. 
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Dans ce didacticiel, vous avez appris à déployer des conteneurs de SQL Server sur un cluster Kubernetes pour la haute disponibilité. 
 

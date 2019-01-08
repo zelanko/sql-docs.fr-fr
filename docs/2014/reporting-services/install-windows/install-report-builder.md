@@ -11,17 +11,17 @@ ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: eac4792762f96ce689d7b334a3b9584032f494de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 119fa4121e6f18d9592b60b6fcb8504a1228d848
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148859"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353923"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Installer la version autonome du Générateur de rapports (Générateur de rapports)
-  Vous pouvez installer le Générateur de rapports à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack via le [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=168472) ou un emplacement tel que les dossiers publics auxquels le ReportBuilder3_x86.msi, le Package du programme d’installation de Windows pour le Générateur de rapports, a été téléchargé.  
+  Vous pouvez installer le Générateur de rapports à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack via le [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=168472) ou un emplacement tel que les dossiers publics auxquels le ReportBuilder3_x86.msi, le Package du programme d’installation de Windows pour le Générateur de rapports, a été téléchargé.  
   
- Vous pouvez également effectuer une installation du Générateur de rapports à partir de la ligne de commande et spécifier des arguments afin de personnaliser l'installation. Outre les paramètres MSI standard intrinsèques, vous pouvez utiliser les paramètres personnalisés fournis par le Générateur de rapports : RBINSTALLDIR et REPORTSERVERURL. RBINSTALLDIR spécifie le dossier d'installation racine pour le Générateur de rapports. REPORTSERVERURL spécifie le serveur de rapports par défaut utilisé par le Générateur de rapports pour enregistrer des rapports.  
+ Vous pouvez également effectuer une installation du Générateur de rapports à partir de la ligne de commande et spécifier des arguments afin de personnaliser l'installation. Outre les paramètres MSI standard intrinsèques, vous pouvez utiliser les paramètres personnalisés qui fournit le Générateur de rapports : RBINSTALLDIR et REPORTSERVERURL. RBINSTALLDIR spécifie le dossier d'installation racine pour le Générateur de rapports. REPORTSERVERURL spécifie le serveur de rapports par défaut utilisé par le Générateur de rapports pour enregistrer des rapports.  
   
  Si vous souhaitez effectuer une installation totalement sans assistance, sans aucune interaction avec l’interface utilisateur, spécifiez l’option **/quiet** . Par défaut, l'indicateur d'option quiet supprime les erreurs d'installation. Il est par conséquent recommandé d’inclure l’option **/l** , qui spécifie l’enregistrement dans le journal, lorsque vous utilisez l’option quiet.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "48148859"
   
 ### <a name="to-install-report-builder-from-the-download-site"></a>Pour installer le Générateur de rapports à partir du site de téléchargement  
   
-1.  Accédez à [Générateur de rapports Microsoft SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=219138) et recherchez la section Générateur de rapports de la page Web.  
+1.  Accédez à [Générateur de rapports Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkID=219138) et recherchez la section Générateur de rapports de la page Web.  
   
 2.  Cliquez sur **X86 Package**.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "48148859"
   
 6.  Sur le **Bienvenue dans l’Assistant Installation** , cliquez sur **suivant**.  
   
-7.  Sur le **contrat de licence** page, lisez le contrat, puis sélectionnez le **J’accepte les termes du contrat de licence** option. Cliquez sur **Suivant**.  
+7.  Sur le **contrat de licence** page, lisez le contrat, puis sélectionnez le **J’accepte les termes du contrat de licence** option. Cliquer sur **Suivant**.  
   
-8.  Spécifiez votre nom et le nom de la société. Cliquez sur **Suivant**.  
+8.  Spécifiez votre nom et le nom de la société. Cliquer sur **Suivant**.  
   
-9. Sur le **sélection des fonctionnalités** page, cliquez éventuellement sur **Parcourir** ou **disque coût**. Cliquez sur **Suivant**.  
+9. Sur le **sélection des fonctionnalités** page, cliquez éventuellement sur **Parcourir** ou **disque coût**. Cliquer sur **Suivant**.  
   
     -   Cliquez sur **Parcourir** pour afficher l’emplacement par défaut du Générateur de rapports et de mettre à jour.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48148859"
         > [!NOTE]  
         >  Si l'espace disque libre sur un volume n'est pas suffisant, le volume est mis en surbrillance.  
   
-10. Dans la page **Serveur cible par défaut** , spécifiez éventuellement l'URL du serveur de rapports cible s'il est différent du serveur par défaut. Cliquez sur **Suivant**.  
+10. Dans la page **Serveur cible par défaut** , spécifiez éventuellement l'URL du serveur de rapports cible s'il est différent du serveur par défaut. Cliquer sur **Suivant**.  
   
     > [!NOTE]  
     >  Si vous prévoyez de travailler avec le Générateur de rapports lorsqu'il est connecté à un serveur de rapports, il est plus commode de spécifier l'URL du serveur à ce stade. Toutefois, vous pouvez également le faire à partir de la **Options** boîte de dialogue lorsque vous travaillez dans le Générateur de rapports.  
@@ -81,11 +81,11 @@ ms.locfileid: "48148859"
   
 3.  Sur le **Bienvenue dans l’Assistant Installation** , cliquez sur **suivant**.  
   
-4.  Sur le **contrat de licence** page, lisez le contrat, puis sélectionnez le **J’accepte les termes du contrat de licence** option. Cliquez sur **Suivant**.  
+4.  Sur le **contrat de licence** page, lisez le contrat, puis sélectionnez le **J’accepte les termes du contrat de licence** option. Cliquer sur **Suivant**.  
   
-5.  Spécifiez votre nom et le nom de la société. Cliquez sur **Suivant**.  
+5.  Spécifiez votre nom et le nom de la société. Cliquer sur **Suivant**.  
   
-6.  Sur le **sélection des fonctionnalités** page, cliquez éventuellement sur **Parcourir** ou **disque coût**. Cliquez sur **Suivant**.  
+6.  Sur le **sélection des fonctionnalités** page, cliquez éventuellement sur **Parcourir** ou **disque coût**. Cliquer sur **Suivant**.  
   
     -   Cliquez sur **Parcourir** pour afficher l’emplacement par défaut du Générateur de rapports et de mettre à jour.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48148859"
         > [!NOTE]  
         >  Si l'espace disque libre sur un volume n'est pas suffisant, le volume est mis en surbrillance.  
   
-7.  Dans la page **Serveur cible par défaut** , spécifiez éventuellement l'URL du serveur de rapports cible s'il est différent du serveur par défaut. Cliquez sur **Suivant**.  
+7.  Dans la page **Serveur cible par défaut** , spécifiez éventuellement l'URL du serveur de rapports cible s'il est différent du serveur par défaut. Cliquer sur **Suivant**.  
   
     > [!NOTE]  
     >  Si vous prévoyez de travailler avec le Générateur de rapports lorsqu'il est connecté à un serveur de rapports, il est plus commode de spécifier l'URL du serveur à ce stade. Toutefois, vous pouvez également le faire à partir de la **Options** boîte de dialogue lorsque vous travaillez dans le Générateur de rapports.  
@@ -106,7 +106,7 @@ ms.locfileid: "48148859"
   
 ### <a name="to-install-report-builder-from-the-command-line"></a>Pour installer le Générateur de rapports à partir de la ligne de commande  
   
-1.  Accédez à [Générateur de rapports Microsoft SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=219138) et recherchez la section Générateur de rapports.  
+1.  Accédez à [Générateur de rapports Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkID=219138) et recherchez la section Générateur de rapports.  
   
 2.  Cliquez sur **X86 Package**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48148859"
   
      `msiexec/i ReportBuilder3_.msi /option [value] [/option [value]]`  
   
-     Les deux options spécifiques à l'installation du Générateur de rapports sont : RBINSTALLDIR et REPORTSERVERURL. Il n'est pas obligatoire d'inclure ces arguments dans la ligne de commande. Voici la ligne de commande de base :  
+     Les deux options spécifiques à l’installation du Générateur de rapports sont : RBINSTALLDIR et REPORTSERVERURL. Il n'est pas obligatoire d'inclure ces arguments dans la ligne de commande. Voici la ligne de commande de base :  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   

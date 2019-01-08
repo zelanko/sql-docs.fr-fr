@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,12 +16,12 @@ ms.assetid: 249c19b5-af68-4433-80f6-337395176641
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f1ef0aec7e42bf78b1a4957d2fb357e9aead7798
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b86b68b0e7273a275c8dd1bd00fe99a7c462a27d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217489"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778401"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Catégorie d'événements Erreurs et avertissements (moteur de base de données)
   La catégorie d’événements **Erreurs et avertissements** contient des événements généraux d’erreurs et d’avertissements.  
@@ -32,7 +31,7 @@ ms.locfileid: "48217489"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Attention, classe d’événements](attention-event-class.md)|Indique qu’un événement **Attention** s’est produit.|  
-|[Background Job Error, classe d’événements](background-job-error-event-class.md)|Indique qu'un travail en arrière-plan s'est terminé anormalement.|  
+|[Classe d'événements Background Job Error](background-job-error-event-class.md)|Indique qu'un travail en arrière-plan s'est terminé anormalement.|  
 |[Classe d'événements Bitmap Warning](bitmap-warning-event-class.md)|Indique que le filtrage Bitmap a été désactivé dans une requête.|  
 |[Classe d'événements Blocked Process Report](blocked-process-report-event-class.md)|Indique qu'une tâche a été bloquée plus longtemps qu'une période spécifiée.|  
 |[CPU Threshold Exceeded, classe d’événements](cpu-threshold-exceeded-event-class.md)|Indique que Resource Governor détecte une requête qui dépasse le seuil de l'UC spécifié.|  

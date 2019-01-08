@@ -5,8 +5,7 @@ ms.date: 11/09/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergearticle_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b9a298cb35b21559e6f89c42c61ca606674b504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04a142b477749c9de20c4bac0d7cb17be243a359
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752267"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823143"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0 x 10**|Les autorisations au niveau de la table sont vérifiées dans le serveur de publication avant que les instructions INSERT effectuées sur l'Abonné ne soient appliquées dans le serveur de publication.|  
 ||**0 x 20**|Les autorisations au niveau de la table sont vérifiées dans le serveur de publication avant que les instructions UPDATE effectuées sur l'Abonné ne soient appliquées dans le serveur de publication.|  
 ||**0 x 40**|Les autorisations au niveau de la table sont vérifiées sur le serveur de publication avant que les instructions DELETE effectuées sur l'Abonné ne soient appliquées dans le serveur de publication.|  
-|**column_tracking**|**true**|Active le suivi au niveau de la colonne. S’applique uniquement à un article de table.<br /><br /> Remarque : Le suivi au niveau colonne ne peut pas être utilisé lorsque vous publiez des tables contenant plus de 246 colonnes.|  
+|**column_tracking**|**true**|Active le suivi au niveau de la colonne. S’applique uniquement à un article de table.<br /><br /> Remarque : Le suivi au niveau de la colonne ne peut pas être utilisé lorsque vous publiez des tables contenant plus de 246 colonnes.|  
 ||**false**|Désactive le suivi au niveau de la colonne et conserve la détection des conflits au niveau de la ligne. S’applique uniquement à un article de table.|  
 |**compensate_for_errors**|**true**|Des actions de compensation sont effectuées lorsque des erreurs se produisent au cours de la synchronisation. Pour plus d’informations, consultez [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 ||**false**|Les actions de compensation ne sont pas effectuées, ce qui est le comportement par défaut. Pour plus d’informations, consultez [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).<br /><br /> **\*\* Important \* \***  bien que les données des lignes affectées peuvent sembler être hors de convergence, dès que vous résolvez les erreurs, modifications peuvent être appliquées et les données convergent. Si la table source pour un article est déjà publiée dans une autre publication, la valeur de *compensate_for_errors* doivent être identiques pour les deux articles.|  
@@ -86,7 +85,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**partition_options**|**0**|Le filtrage de l'article est statique ou il ne produit pas un sous-ensemble unique de données pour chaque partition, c'est-à-dire une partition en « chevauchement ».|  
 ||**1**|Les partitions se chevauchent, et les mises à jour DML effectuées sur l'Abonné ne peuvent pas modifier la partition à laquelle une ligne appartient.|  
 ||**2**|Le filtrage de l'article produit des partitions qui ne se chevauchent pas, mais plusieurs abonnés peuvent recevoir la même partition.|  
-||**3**|Le filtrage de l'article produit des partitions qui ne se chevauchent pas et qui sont uniques pour chaque abonnement.<br /><br /> Remarque : Si vous spécifiez une valeur de **3** pour **partition_options**, il peut y avoir qu’un seul abonnement pour chaque partition de données de cet article. Si un deuxième abonnement est créé dans lequel le critère de filtrage du nouvel abonnement produit la même partition que l'abonnement existant, ce dernier est supprimé.|  
+||**3**|Le filtrage de l'article produit des partitions qui ne se chevauchent pas et qui sont uniques pour chaque abonnement.<br /><br /> Remarque : Si vous spécifiez une valeur de **3** pour **partition_options**, il peut y avoir qu’un seul abonnement pour chaque partition de données de cet article. Si un deuxième abonnement est créé dans lequel le critère de filtrage du nouvel abonnement produit la même partition que l'abonnement existant, ce dernier est supprimé.|  
 |**pre_creation_command**|**None**|Si la table existe déjà côté abonné, aucune action n'est effectuée.|  
 ||**delete**|Entraîne une suppression basée sur la clause WHERE dans le filtre de sous-ensemble.|  
 ||**DROP**|Supprime la table avant de la recréer.|  
@@ -150,7 +149,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0**|La signature numérique d'un outil de résolution personnalisé n'est pas vérifiée pour déterminer s'il provient d'une source approuvée.|  
 |NULL (par défaut)||Retourne la liste des valeurs prises en charge pour *propriété*.|  
   
- [  **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
  Signale que l'action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications apportées à l’article de fusion n’invalident pas l’instantané n’est pas valide. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur se produit et aucune modification n'est effectuée.  
@@ -241,12 +240,12 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_changemergearticle](../../relational-databases/replication/codesnippet/tsql/sp-changemergearticle-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_changemergearticle**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les propriétés de l’Article](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [Modifier les propriétés des publications et des articles](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Changer les propriétés des publications et des articles](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_dropmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   

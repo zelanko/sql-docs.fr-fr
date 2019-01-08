@@ -5,8 +5,7 @@ ms.date: 08/29/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changepublication
@@ -17,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e80f468f917a240981fc6e4c16df862d72084541
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670168"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209128"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +53,14 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  Le tableau ci-dessous décrit les propriétés modifiables de la publication et les limites liées aux valeurs de ces propriétés.  
   
-|Propriété|Valeur|Description|  
+|Propriété|Value|Description|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Les abonnements anonymes peuvent être créés pour la publication concernée, et *immediate_sync* doit également être **true**. Ne peut pas être modifiée pour les publications d'égal à égal.|  
 ||**false**|Il n'est pas possible de créer des abonnements anonymes pour la publication concernée. Ne peut pas être modifiée pour les publications d'égal à égal.|  
 |**allow_initialize_from_backup**|**true**|Les abonnés peuvent initialiser un abonnement à cette publication à partir d'une sauvegarde au lieu de le faire à partir d'un instantané initial. Cette propriété ne peut pas être modifiée pour non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 ||**false**|Les abonnés doivent utiliser l'instantané initial. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**allow_partition_switch**|**true**|Les instructions ALTER TABLE…SWITCH peuvent être exécutées sur la base de données publiée. Pour plus d’informations, consultez [Répliquer des tables et des index partitionnés](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-||**false**|Les instructions ALTER TABLE…SWITCH ne peuvent pas être exécutées sur la base de données publiée.|  
+|**allow_partition_switch**|**true**|ALTER TABLE... Instructions SWITCH peuvent être exécutées sur la base de données publiée. Pour plus d’informations, consultez [Répliquer des tables et des index partitionnés](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+||**false**|ALTER TABLE... Instructions SWITCH ne peut pas être exécutées sur la base de données publiée.|  
 |**allow_pull**|**true**|Les abonnements par extraction de données (pull) sont autorisés pour la publication concernée. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**false**|Les abonnements par extraction de données (pull) sont pas autorisés pour la publication concernée. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**allow_push**|**true**|Les abonnements par envoi de données (push) sont autorisés pour la publication concernée.|  
@@ -93,19 +92,19 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Les fichiers de synchronisation sont créés uniquement lors de nouveaux abonnements. Les Abonnés ne peuvent recevoir les fichiers de synchronisation après s'être abonnés qu'après le lancement et l'exécution de l'Agent d'instantané.|  
 |**independent_agent**|**true**|La publication a son propre Agent de distribution dédié.|  
 ||**false**|La publication utilise un Agent de distribution partagé, et chaque paire base de données de publication/base de données d'abonnement a un Agent partagé.|  
-|**p2p_continue_onconflict**|**true**|L'Agent de distribution continue à traiter les modifications lorsqu'un conflit est détecté.<br /> **Attention :** nous vous recommandons d’utiliser la valeur par défaut `FALSE`. Quand cette option est définie sur `TRUE`, l’Agent de Distribution tente de converger les données dans la topologie en appliquant la ligne en conflit à partir du nœud qui possède l’ID de donneur d’ordre le plus élevé. Cette méthode ne garantit pas la convergence. Vous devez vous assurer que la topologie est cohérente après la détection d'un conflit. Pour plus d'informations, consultez « Gestion des conflits » dans [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|**p2p_continue_onconflict**|**true**|L'Agent de distribution continue à traiter les modifications lorsqu'un conflit est détecté.<br /> **Attention :** Nous vous recommandons d’utiliser la valeur par défaut `FALSE`. Quand cette option est définie sur `TRUE`, l’Agent de Distribution tente de converger les données dans la topologie en appliquant la ligne en conflit à partir du nœud qui possède l’ID de donneur d’ordre le plus élevé. Cette méthode ne garantit pas la convergence. Vous devez vous assurer que la topologie est cohérente après la détection d'un conflit. Pour plus d'informations, consultez « Gestion des conflits » dans [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 ||**false**|L'Agent de distribution cesse de traiter les modifications lorsqu'un conflit est détecté.|  
 |**post_snapshot_script**||Spécifie l'emplacement d'un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)] que l'Agent de distribution exécute après l'application de tous les autres scripts et données d'objet répliqués au cours d'une synchronisation initiale.|  
 |**pre_snapshot_script**||Spécifie l'emplacement d'un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)] que l'Agent de distribution exécute avant l'application de tous les autres scripts et données d'objet répliqués au cours d'une synchronisation initiale.|  
 |**publish_to_ActiveDirectory**|**true**|Ce paramètre est déconseillé et il n'est pris en charge que pour la compatibilité descendante des scripts. Vous ne pouvez plus ajouter d'informations de publication à [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.|  
 ||**false**|Supprime les informations de publication d'Active Directory.|  
-|**queue_type**|**sql**|Utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les transactions. Cette propriété ne peut être modifiée qu'en l'absence d'abonnements actifs.<br /><br /> : La prise en charge à l’aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing a été arrêtée. La valeur **msmq** pour *valeur* entraîne une erreur.|  
+|**queue_type**|**sql**|Utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les transactions. Cette propriété ne peut être modifiée qu'en l'absence d'abonnements actifs.<br /><br /> Remarque : La prise en charge de l'utilisation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing a été arrêtée. La valeur **msmq** pour *valeur* entraîne une erreur.|  
 |**repl_freq**|**continue**|Publie la sortie de toutes les transactions enregistrées dans le journal.|  
 ||**Capture instantanée**|Publie uniquement les événements de synchronisation planifiés.|  
 |**replicate_ddl**|**1**|Les instructions DDL (Data Definition Language) exécutées sur le serveur de publication sont répliquées. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**0**|Les instructions DDL ne sont pas répliquées. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La réplication des modifications de schéma ne peut pas être désactivée lorsque la réplication d'égal à égal est utilisée.|  
-|**replicate_partition_switch**|**true**|Les instructions ALTER TABLE…SWITCH exécutées sur la base de données publiée doivent être répliquées sur les Abonnés. Cette option est valide uniquement si *allow_partition_switch* est définie sur TRUE. Pour plus d’informations, consultez [Répliquer des tables et des index partitionnés](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-||**false**|Les instructions ALTER TABLE…SWITCH ne doivent pas être répliquées sur les Abonnés.|  
+|**replicate_partition_switch**|**true**|ALTER TABLE... Instructions SWITCH qui sont exécutées sur la base de données publiée doivent être répliquées aux abonnés. Cette option est valide uniquement si *allow_partition_switch* est définie sur TRUE. Pour plus d’informations, consultez [Répliquer des tables et des index partitionnés](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+||**false**|ALTER TABLE... Instructions SWITCH ne doivent pas être répliquées aux abonnés.|  
 |**retention**||**int** représentant la période de rétention, en heures, pour l’activité d’abonnement. Si un abonnement n'est pas actif durant la période de rétention, il est supprimé.|  
 |**snapshot_in_defaultfolder**|**true**|Les fichiers d'instantané sont stockés dans le dossier d'instantané par défaut. Si *alt_snapshot_folder*est également spécifié, les fichiers d’instantanés sont stockés dans le par défaut et les autres emplacements.|  
 ||**false**|Fichiers d’instantané sont stockés dans l’emplacement secondaire spécifié par *alt_snapshot_folder*.|  
@@ -116,7 +115,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**simultanées**|Utilise la copie en bloc en mode natif de toutes les tables, mais ne verrouille pas les tables au cours de l'instantané. Non valide pour la réplication d'instantané.|  
 ||**concurrent_c**|Utilise la copie en bloc en mode caractère de toutes les tables, mais ne verrouille pas les tables au cours du processus de génération de l'instantané. Non valide pour la réplication d'instantané.|  
 |**ID de tâche**||Cette propriété est déconseillée et n'est plus prise en charge.|  
-|**allow_drop**|**true**|Permet de `DROP TABLE` DLL prennent en charge pour les articles qui font partie de la réplication transactionnelle. Version de la prise en charge minimale : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 ou version ultérieure et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 ou version ultérieure. Référence supplémentaire : [3170123 de la base de connaissances](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|Permet de `DROP TABLE` DLL prennent en charge pour les articles qui font partie de la réplication transactionnelle. Version prise en charge minimale : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 ou version ultérieure et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 ou version ultérieure. Référence supplémentaire : [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|Désactive `DROP TABLE` DLL prennent en charge pour les articles qui font partie de la réplication transactionnelle. Il s’agit du **par défaut** valeur de cette propriété.|
 |**NULL** (valeur par défaut)||Retourne la liste des valeurs prises en charge pour *propriété*.|  
   
@@ -132,7 +131,7 @@ Consultez la section Remarques pour connaître les propriétés dont la modifica
   - **1** indique que les modifications de l’article entraînent l’abonnement existant d’être réinitialisés et autorise la réinitialisation des abonnements se produise.  
   
 [ **@publisher** =] **'***publisher***'**  
- Spécifie un serveur de publication non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+ Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
   > [!NOTE]  
   >  *serveur de publication* ne doit pas être utilisé lors de la modification des propriétés de l’article sur un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
@@ -167,7 +166,7 @@ Objets de publication dans l’Active Directory à l’aide de la **publish_to_a
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_changepublication](../../relational-databases/replication/codesnippet/tsql/sp-changepublication-tra_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_changepublication**.  
   
 ## <a name="see-also"></a>Voir aussi  

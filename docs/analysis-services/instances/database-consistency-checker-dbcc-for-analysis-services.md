@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697009"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413086"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Vérificateur de cohérence de base de données (DBCC) pour Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   DBCC assure la validation de base de données à la demande pour les bases de données multidimensionnelles et tabulaires sur une instance Analysis Services. Vous pouvez exécuter DBCC dans une fenêtre de requête MDX ou XMLA dans SQL Server Management Studio (SSMS) et tracer la sortie DBCC dans SQL Server Profiler ou des sessions xEvent dans SSMS.  
-La commande prend une définition d’objet et retourne un jeu de résultats vide ou des informations d’erreur détaillées si l’objet est endommagé.   Dans cet article, vous allez apprendre à exécuter la commande, à interpréter les résultats et à traiter tous les problèmes qui surviennent.  
+La commande prend une définition d’objet et retourne un jeu de résultats vide ou des informations d’erreur détaillées si l’objet est endommagé.   Dans cet article, vous allez apprendre à exécuter la commande, interpréter les résultats et traiter tous les problèmes qui surviennent.  
   
  Pour les bases de données tabulaires, les vérifications de cohérence par DBCC sont équivalentes à la validation intégrée qui se produit automatiquement chaque fois que vous rechargez, synchronisez ou restaurez une base de données.  En revanche, les vérifications de cohérence pour les bases de données multidimensionnelles n’interviennent que quand vous exécutez DBCC à la demande.  
   
@@ -35,7 +35,7 @@ La commande prend une définition d’objet et retourne un jeu de résultats vid
  DBCC pour Analysis Services s’exécute sur toute base de données Analysis Services à n’importe quel niveau de compatibilité, tant que la base de données s’exécute sur une instance de SQL Server 2016. Vérifiez simplement que vous utilisez la syntaxe de commande appropriée pour chaque type de base de données.  
   
 > [!NOTE]  
->  Si vous connaissez [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), vous remarquerez rapidement que la portée de DBCC dans Analysis Services est beaucoup plus restreinte. DBCC dans Analysis Services est une commande unique dont les rapports portent exclusivement sur l’altération des données affectant la base de données ou des objets spécifiques. Si vous avez d’autres tâches à l’esprit, telles que la collecte d’informations, essayez d’utiliser des scripts PowerShell AMO ou XMLA à la place.
+>  Si vous êtes familiarisé avec [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), vous remarquerez rapidement que la portée de DBCC dans Analysis Services est beaucoup plus restreinte. DBCC dans Analysis Services est une commande unique dont les rapports portent exclusivement sur l’altération des données affectant la base de données ou des objets spécifiques. Si vous avez d’autres tâches à l’esprit, telles que la collecte d’informations, essayez d’utiliser des scripts PowerShell AMO ou XMLA à la place.
   
 ## <a name="permission-requirements"></a>Spécifications relatives aux autorisations  
  Vous devez être administrateur de serveur ou de base de données Analysis Services (membre du rôle serveur) pour exécuter la commande. Pour obtenir des instructions, consultez [Octroyer des autorisations de base de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) ou [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
@@ -72,7 +72,7 @@ La commande prend une définition d’objet et retourne un jeu de résultats vid
   
 ```  
   
- Pour exécuter DBCC sur des objets situés plus haut dans la chaîne d’objets, supprimez tout élément d’ID d’objet de niveau inférieur superflu :  
+ Pour exécuter DBCC sur des objets plus haut dans la chaîne d’objets, supprimer des éléments d’ID objet de niveau inférieur que vous n’avez pas besoin :  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -155,7 +155,7 @@ Execution complete
   
 ```  
   
-### <a name="trace-dbcc-output-in-sql-server-profiler-2016"></a>Tracer la sortie DBCC dans SQL Server Profiler 2016  
+### <a name="trace-dbcc-output-in-sql-server-profiler-2016"></a>Tracer la sortie DBCC dans SQL Server Profiler 2016  
  Vous pouvez afficher la sortie DBCC dans une trace Profiler qui inclut les événements des rapports de progression (Début du rapport de progression, Rapport de progression actuel, Fin du rapport de progression et Erreur du rapport de progression).  
   
 1.  Démarrez une trace. Pour obtenir de l’aide sur l’utilisation de SQL Server Profiler avec Analysis Services, consultez [Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md) .  
@@ -200,7 +200,7 @@ Execution complete
   
      Les messages d’erreur sont répertoriés ci-dessous.  
   
-## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>Référence : erreurs et vérifications de cohérence pour les bases de données multidimensionnelles  
+## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>Référence : Erreurs et vérifications de cohérence pour bases de données multidimensionnelles  
  Pour les bases de données multidimensionnelles, seuls les index de partition sont validés.  Pendant l’exécution, DBCC génère un index temporaire pour chaque partition et le compare à l’index persistant sur disque.  Créer un index temporaire requiert la lecture de toutes les données à partir des données de partition sur le disque, puis la conservation de l’index temporaire en mémoire en vue de la comparaison. Étant donné la charge de travail supplémentaire, votre serveur peut connaître un nombre élevé d’opérations d’E/S sur disque ou une consommation de mémoire significative pendant l’exécution d’une commande DBCC.  
   
  La détection de l’endommagement d’un index multidimensionnel inclut les vérifications suivantes. Les erreurs répertoriées dans ce tableau apparaissent dans les traces xEvent ou Profiler pour les échecs au niveau de l’objet.  
@@ -212,7 +212,7 @@ Execution complete
 |Index de partition|Valide les métadonnées.<br /><br /> Vérifie que chaque membre de l’index temporaire figure dans le fichier d’en-tête d’index pour le segment sur le disque.|Le segment de partition est endommagé.|  
 |Index de partition|Analyse les segments à la recherche d’altérations physiques.<br /><br /> Lit le fichier d’index sur disque pour chaque membre de l’index temporaire, et vérifie que la taille des enregistrements de l’index correspond et que les mêmes pages de données sont marquées comme ayant des enregistrements pour le membre actuel.|Le segment de partition est endommagé.|  
   
-## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>Référence : erreurs et vérifications de cohérence pour les bases de données tabulaires  
+## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>Référence : Vérifications de cohérence et les erreurs pour les bases de données tabulaires  
  Le tableau suivant présente la liste de toutes les vérifications de cohérence effectuées sur les objets tabulaires, ainsi que les erreurs qui sont déclenchées si la vérification indique un endommagement. Les erreurs répertoriées dans ce tableau apparaissent dans les traces xEvent ou Profiler pour les échecs au niveau de l’objet.  
   
 ||||  
@@ -233,7 +233,7 @@ Execution complete
 |colonne|Génère une erreur si l’encodage utilisé pour la colonne n’est pas défini sur une valeur connue.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
 |colonne|Vérifie si la colonne a été compressée par le moteur en mémoire ou non.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
 |colonne|Vérifie le type de compression sur la colonne pour les valeurs connues.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
-|colonne|Quand la « création de jetons » pour la colonne n’est pas définie sur une valeur connue, génère une erreur.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
+|colonne|Quand la « création de jetons » pour la colonne n’est pas définie sur une valeur connue, génère une erreur.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
 |colonne|Si la plage d’ID stockée pour un dictionnaire de données de colonnes ne correspond pas au nombre de valeurs dans le dictionnaire de données ou qu’elle se situe en dehors de la plage autorisée, génère une erreur.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du dictionnaire de données.|  
 |colonne|Vérifie que le nombre de segments de données pour une colonne correspond au nombre de segments de données pour la table à laquelle elle appartient.|La couche de stockage est endommagée. La collection de segments de la colonne '%{parent/}' est endommagée.|  
 |colonne|Vérifie que le nombre de partitions pour une colonne de données correspond au nombre de partitions pour le mappage de segments de données pour la colonne.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du mappage de segments.|  

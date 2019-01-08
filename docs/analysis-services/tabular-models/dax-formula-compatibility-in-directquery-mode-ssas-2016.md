@@ -1,5 +1,5 @@
 ---
-title: Compatibilité des formules DAX en mode DirectQuery | Microsoft Docs
+title: Compatibilité des formules DAX en mode DirectQuery de Services d’analyse | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4bcebbcf8702c2605d36df844f5db7c7b5699a22
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985381"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072716"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilité des formules DAX en mode DirectQuery 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -26,7 +26,7 @@ Pour les modèles tabulaires 1200 et versions ultérieures en mode DirectQuery, 
 
 ## <a name="dax-functions-in-directquery-mode"></a>Fonctions DAX en mode DirectQuery
 
-En bref, toutes les fonctions DAX sont prises en charge pour les modèles DirectQuery. Toutefois, certaines fonctions ne sont prises en charge pour tous les types de formule, et pas toutes les fonctions ont été optimisées pour les modèles DirectQuery. Pour simplifier, nous pouvons classer les fonctions DAX en deux catégories : les fonctions optimisées et les fonctions non optimisées. Examinons d’abord de plus près les fonctions optimisées.
+En bref, toutes les fonctions DAX sont prises en charge pour les modèles DirectQuery. Toutefois, certaines fonctions ne sont prises en charge pour tous les types de formule, et pas toutes les fonctions ont été optimisées pour les modèles DirectQuery. Niveau de base au plus, nous pouvons fournir des fonctions DAX en deux camps : Optimisés et Non optimisés. Examinons d’abord de plus près les fonctions optimisées.
 
 
 ### <a name="optimized-for-directquery"></a>Optimisées pour DirectQuery
@@ -78,16 +78,16 @@ Les comparaisons suivantes retournent toujours une erreur quand elles sont utili
 DAX est généralement plus indulgent avec les incompatibilités de type de données dans les modèles en mémoire, et tente d’effectuer une conversion de type implicite des valeurs jusqu’à deux fois, comme le décrit cette section. Toutefois, les formules envoyées à une banque de données relationnelle en mode DirectQuery sont évaluées plus strictement, selon les règles du moteur relationnel, et sont plus susceptibles d'échouer.  
   
 **Comparaisons de chaînes et de nombres**  
-EXEMPLE : `“2” < 3`  
+EXEMPLE : `"2" < 3`  
   
 La formule compare une chaîne de texte à un nombre. L’expression est **true** en mode DirectQuery et dans les modèles en mémoire.  
   
 Dans un modèle en mémoire, le résultat est **true** car les nombres sous forme de chaînes sont implicitement convertis en type de données numérique pour les comparaisons avec d’autres nombres. SQL effectue aussi un cast implicite des nombres sous forme de texte en nombres afin de les comparer aux types de données numériques.  
   
-Notez que cela représente une différence de comportement avec la première version de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], qui retourne **false**car le texte « 2 » est toujours considéré comme supérieur à n’importe quel nombre.  
+Notez que cela représente un changement de comportement à partir de la première version de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], qui retourne **false**, car le texte « 2 » est toujours être considéré comme supérieur à n’importe quel nombre.  
   
 **Comparaison de texte avec une valeur booléenne**  
-EXEMPLE : `“VERDADERO” = TRUE`  
+EXEMPLE : `"VERDADERO" = TRUE`  
   
 Cette expression compare une chaîne de texte avec une valeur booléenne. En général, pour les modèles DirectQuery ou en mémoire, la comparaison d'une valeur de chaîne avec une valeur booléenne provoque une erreur. Les seules exceptions à cette règle sont quand la chaîne contient le mot **true** ou le mot **false**; si la chaîne contient une de ces valeurs, une conversion en valeur booléenne est effectuée et la comparaison a lieu, donnant le résultat logique.  
   
@@ -107,7 +107,7 @@ Il n'existe aucune fonction cast telle que dans DAX, mais les casts implicites s
 -   Les valeurs booléennes sont toujours traitées comme des valeurs logiques dans les comparaisons et quand elles sont utilisées avec EXACT, AND, OR, &amp;&amp;||.  
   
 **Conversion d'une chaîne en valeur booléenne**  
-Dans les modèles en mémoire et DirectQuery, les conversions de type sont autorisées en valeurs booléennes seulement pour ces chaînes : **""** (chaîne vide), **"true"**, **"false"**; où la conversion de type d’une chaîne vide donne la valeur false.  
+Dans la mémoire et les modèles DirectQuery, les casts sont autorisés en valeurs booléennes de ces chaînes uniquement : **» «** (chaîne vide), **« true »**, **« false »**; où une chaîne vide casts de la valeur false.  
   
 Les conversions en type de données booléen d'une autre chaîne génèrent une erreur.  
   
@@ -120,7 +120,7 @@ Les modèles qui utilisent la banque de données en mémoire utilisent une plage
 Lors de la conversion de chaînes en valeurs non booléennes, le mode DirectQuery se comporte de la même manière que SQL Server. Pour plus d’informations, consultez [CAST et CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Conversion de nombres en chaîne non autorisée**  
-EXEMPLE : `CONCATENATE(102,”,345”)`  
+EXEMPLE : `CONCATENATE(102,",345")`  
   
 La conversion de nombres en chaînes n'est pas autorisée dans SQL Server.  
   
@@ -129,7 +129,7 @@ Cette formule retourne une erreur dans les modèles tabulaires et en mode Direct
 **Aucune prise en charge de deux tentatives de conversion dans DirectQuery**  
 Les modèles en mémoire tentent souvent une deuxième conversion lorsque la première échoue. Cela ne se produit jamais en mode DirectQuery.  
   
-EXEMPLE : `TODAY() + “13:14:15”`  
+EXEMPLE : `TODAY() + "13:14:15"`  
   
 Dans cette expression, le premier paramètre est de type **datetime** et le deuxième paramètre est de type **string**. Toutefois, les conversions en combinant les opérandes sont gérées différemment. DAX effectue une conversion de type implicite de **string** en **double**. Dans les modèles en mémoire, le moteur de formule tente de convertir le type directement en **double**et, si cette tentative échoue, il essaie de convertir la chaîne en **datetime**.  
   
@@ -154,11 +154,11 @@ Dans Transact-SQL, les opérations qui génèrent un dépassement de capacité n
 Toutefois, la même formule utilisée dans un modèle en mémoire retourne un entier sur huit octets. Cela est dû au fait que le moteur de formule ne recherche pas les dépassements de capacité numériques.  
   
 **Les fonctions LOG avec des espaces retournent des résultats différents**  
-SQL Server gère les valeurs Null et les espaces différemment du moteur xVelocity. Par conséquent, la formule suivante retourne une erreur en mode DirectQuery, mais retourne l’infini (–inf) dans le mode en mémoire.  
+SQL Server gère les valeurs Null et les espaces différemment du moteur xVelocity. Par conséquent, la formule suivante retourne une erreur en mode DirectQuery, mais retourne l’infini (-inf) en mode in-memory.  
   
 `EXAMPLE: LOG(blank())`  
   
-Les mêmes limitations s'appliquent aux autres fonctions logarithmiques : LOG10 et LN.  
+Les mêmes limitations s'appliquent aux autres fonctions logarithmiques : LOG10 et LN.  
   
 Pour plus d’informations sur le type de données **blank** dans DAX, consultez [Spécification de syntaxe DAX pour PowerPivot](https://msdn.microsoft.com/library/ee634217.aspx).  
   
@@ -190,9 +190,9 @@ Les formules dans un modèle tabulaire en mémoire sont soumises aux mêmes limi
   
 En général, étant donné que les plages de dates acceptées sont différentes pour Excel et SQL Server, les résultats peuvent être garantis pour correspondre uniquement lorsque les dates sont dans la plage de dates commune, qui compris les dates suivantes :  
   
--   Première date : 1er mars 1990  
+-   Première date : 1er mars 1990  
   
--   Dernière date : 31 décembre 9999  
+-   Dernière date : 31 décembre 9999  
   
 Si les dates utilisées dans les formules n'appartiennent pas à cette plage, la formule génère une erreur ou les résultats ne correspondent pas.  
   
@@ -251,7 +251,7 @@ En mode DirectQuery, si le résultat d’une opération arithmétique est de typ
   
 -   Minimum : -922337203685477,5808  
   
--   Maximum : 922337203685477,5807  
+-   Maximum :  922337203685477.5807  
   
 **Combinaison de types de données Currency et REAL**  
 EXEMPLE : `Currency sample 1`  
@@ -284,7 +284,7 @@ En général toutes les fonctions de manipulation de chaînes qui utilisent des 
 De plus, dans SQL Server, certaines fonctions de texte prennent en charge des arguments supplémentaires qui ne sont pas fournis dans Excel. Si la formule requiert l'argument manquant vous pouvez obtenir des résultats différents ou des erreurs dans le modèle en mémoire.  
   
 **Les opérations qui retournent un caractère en utilisant LEFT, RIGHT, etc., peuvent retourner le caractère correct mais avec une casse différente, ou aucun résultat**  
-EXEMPLE : `LEFT([“text”], 2)`  
+EXEMPLE : `LEFT(["text"], 2)`  
   
 En mode DirectQuery, la casse du caractère qui est retourné est toujours exactement la même que celle de la lettre stockée dans la base de données. Toutefois, le moteur xVelocity utilise un algorithme différent pour la compression et l'indexation des valeurs, afin d'améliorer les performances.  
   
@@ -293,7 +293,7 @@ Par défaut, le classement Latin1_General est utilisé, qui ne respecte pas la c
 Ce comportement s'applique également aux autres fonctions de texte, notamment RIGHT, MID, etc.  
   
 **La longueur de chaîne affecte les résultats**  
-EXEMPLE : `SEARCH(“within string”, “sample target  text”, 1, 1)`  
+EXEMPLE : `SEARCH("within string", "sample target  text", 1, 1)`  
   
 Si vous recherchez une chaîne à l'aide de la fonction SEARCH, et la chaîne cible est plus longue que la chaîne, le mode DirectQuery génère une erreur.  
   
@@ -306,23 +306,23 @@ Si la longueur de la chaîne de remplacement est supérieure à la longueur de l
 Dans les modèles en mémoire, la formule suit le comportement d'Excel, qui concatène la chaîne source et la chaîne de remplacement, qui retourne CACalifornia.  
   
 **TRIM implicite au milieu de chaînes**  
-EXEMPLE : `TRIM(“ A sample sentence with leading white space”)`  
+EXEMPLE : `TRIM(" A sample sentence with leading white space")`  
   
 Le mode DirectQuery convertit la fonction DAX TRIM en instruction SQL `LTRIM(RTRIM(<column>))`. Par conséquent, seuls les espaces de début et de fin sont supprimés.  
   
 En revanche, la même formule dans un modèle en mémoire supprime les espaces dans la chaîne, d'après le comportement d'Excel.  
   
 **RTRIM implicite avec l'utilisation de la fonction LEN**  
-EXEMPLE : `LEN(‘string_column’)`  
+EXEMPLE : `LEN('string_column')`  
   
 Comme SQL Server, le mode DirectQuery supprime automatiquement les espaces de fin des colonnes de chaîne : autrement dit, il effectue un RTRIM implicite. Par conséquent, les formules qui utilisent la fonction LEN peuvent retourner des valeurs différentes si la chaîne possède des espaces de fin.  
   
 **Le mode en mémoire prend en charge des paramètres supplémentaires pour SUBSTITUTE**  
-EXEMPLE : `SUBSTITUTE([Title],”Doctor”,”Dr.”)`  
+EXEMPLE : `SUBSTITUTE([Title],"Doctor","Dr.")`  
   
-EXEMPLE : `SUBSTITUTE([Title],”Doctor”,”Dr.”, 2)`  
+EXEMPLE : `SUBSTITUTE([Title],"Doctor","Dr.", 2)`  
   
-En mode DirectQuery, vous pouvez utiliser uniquement la version de cette fonction qui a trois (3) paramètres : une référence à une colonne, l'ancien texte et le nouveau texte. Si vous utilisez la deuxième formule, une erreur est générée.  
+En mode DirectQuery, vous pouvez utiliser uniquement la version de cette fonction qui a trois (3) paramètres : une référence à une colonne, l'ancien texte et le nouveau texte. Si vous utilisez la deuxième formule, une erreur est générée.  
   
 Dans les modèles en mémoire, vous pouvez utiliser un quatrième paramètre facultatif pour spécifier le nombre d'instances de la chaîne à remplacer. Par exemple, vous pouvez remplacer uniquement la deuxième instance, etc.  
   

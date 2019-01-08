@@ -1,6 +1,6 @@
 ---
-title: Installer de nouveaux packages de Python sur SQL Server Machine Learning | Microsoft Docs
-description: Ajouter de nouveaux packages de Python pour SQL Server 2017 Machine Learning Services (en base de données) et Machine Learning Server (autonome)
+title: Installer de nouveaux packages de langage Python - SQL Server Machine Learning
+description: Ajouter de nouveaux packages de Python pour SQL Server 2017 Machine Learning Services (en base de données) et Machine Learning Server (autonome).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/10/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4e7ad9382f1e85bd5f816065116b5a52c6745c8b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fc038f94fc24b8c0f795efc18c62acc1656877a7
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697639"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432312"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Installer de nouveaux packages de Python sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,13 +46,6 @@ Installation du package s’effectue par instance. Si vous avez plusieurs instan
 
 Le package est installé dans cet exemple est [CNTK](https://docs.microsoft.com/cognitive-toolkit/), une infrastructure pour l’apprentissage profond de Microsoft qui prend en charge la personnalisation, la formation et le partage des différents types de réseaux neuronaux.
 
-> [!TIP]
-> Besoin d’aide pour configurer vos outils Python ? Consultez ces blogs :
-> 
-> [Mise en route avec les Services Web de Python à l’aide de Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
-> 
-> [David Crook : Microsoft Cognitive Toolkit + VS Code](https://dacrook.com/cntk-vs-code-awesome/)
-
 ### <a name="step-1-download-the-windows-version-of-the-python-package"></a>Étape 1. Téléchargez la version Windows du package Python
 
 + Si vous installez les packages Python sur un serveur sans accès à internet, vous devez télécharger le fichier WHL vers un autre ordinateur et copiez-le sur le serveur.
@@ -64,7 +57,7 @@ Le package est installé dans cet exemple est [CNTK](https://docs.microsoft.com/
 > [!IMPORTANT]
 > Assurez-vous que vous obtenez la version Windows du package. Si le fichier se termine par .gz, il n’est probablement pas la bonne version.
 
-Cette page contient des téléchargements pour plusieurs plateformes et pour plusieurs versions de Python : [configurer CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
+Cette page contient des téléchargements pour plusieurs plateformes et pour plusieurs versions de Python : [Configurer CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
 ### <a name="step-2-open-a-python-command-prompt"></a>Étape 2. Ouvrez une invite de commande Python
 

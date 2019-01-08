@@ -11,12 +11,12 @@ ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94d1ea0bf396b8d839463fa648dffc3aacee9ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d212cf20e8701f9fc9af5266308f81873e6fc4c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080469"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541244"
 ---
 # <a name="exploring-and-cleaning-data"></a>Exploration et nettoyage des données
   La préparation des données est bien plus que le nettoyage des données. N'oubliez pas que la façon dont les données sont préparées affecte également la façon dont les résultats sont interprétés. La préparation des données implique les tâches suivantes :  
@@ -69,7 +69,7 @@ ms.locfileid: "48080469"
   
 -   Placez les données dans un conteneur, en créant des groupes pour représenter des plages de nombres.  
   
-     Par exemple, vous souhaiterez peut-être remplacer une colonne revenu de nombres avec des étiquettes telles que **Income – Moderate** et **revenus élevés**.  
+     Par exemple, vous souhaiterez peut-être remplacer une colonne revenu de nombres avec des étiquettes telles que **Income - modéré** et **Income - High**.  
   
 -   Réduisez les valeurs discrètes dans des catégories.  
   

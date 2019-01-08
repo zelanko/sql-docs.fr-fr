@@ -10,12 +10,12 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 396f26f617ec64aa1d2c46f4c4b600a824a2f278
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018934"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354941"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considérations relatives à l'installation de SQL Server à l'aide de SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep vous permet de préparer une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur et de terminer la configuration ultérieurement. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep implique un processus en deux étapes pour arriver à une instance autonome configurée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces étapes sont les suivantes :  
@@ -39,7 +39,7 @@ ms.locfileid: "51018934"
   
 -   En association avec l'outil de préparation système Windows (connu sous le nom de Windows SysPrep), vous pouvez créer une image du système d'exploitation comprenant les instances préparées non configurées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l'ordinateur source. Vous pouvez déployer ensuite l'image de système d'exploitation sur plusieurs ordinateurs. Une fois que vous avez terminé la configuration du système d'exploitation, vous pouvez configurer les instances préparées à l'aide de l'étape Finaliser l'image du programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     L'outil Windows SysPrep sert à préparer des images de système d'exploitation Windows. Il sert à capturer une image personnalisée du système d'exploitation pour le déploiement au sein d'une organisation. Pour plus d'informations sur SysPrep et ses utilisations, consultez l'article intitulé [Qu'est-ce que SysPrep ?](http://go.microsoft.com/fwlink/?LinkId=143546).  
+     L'outil Windows SysPrep sert à préparer des images de système d'exploitation Windows. Il sert à capturer une image personnalisée du système d'exploitation pour le déploiement au sein d'une organisation. Pour plus d'informations sur SysPrep et ses utilisations, consultez l'article intitulé [Qu'est-ce que SysPrep ?](https://go.microsoft.com/fwlink/?LinkId=143546).  
   
 ## <a name="installation-media-considerations"></a>Considérations relatives au support d'installation  
  Si vous utilisez une version complète de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tenez compte des éléments suivants :  

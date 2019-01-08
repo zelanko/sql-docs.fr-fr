@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_publication_validation
@@ -17,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f90e172030193cf3ae1209829aa58512cf56fd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608677"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591403"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +42,22 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [**@publication=**] **' *** publication »*  
+ [**@publication=**] **'**_publication »_  
  Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
  [**@rowcount_only=**] *rowcount_only*  
  Indique s'il faut ou non retourner uniquement le nombre de lignes de la table. *rowcount_only* est **smallint** et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**0**|Effectue une somme de contrôle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Remarque : Lorsqu’un article est filtré horizontalement, une opération du nombre de lignes est effectuée à la place une opération de somme de contrôle.|  
+|**0**|Effectue une somme de contrôle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Remarque : Lorsqu'un article est filtré horizontalement, l'opération de comptage de ligne est effectuée à la place de l'opération de somme de contrôle.|  
 |**1** (par défaut)|Effectue un contrôle du nombre de lignes uniquement.|  
-|**2**|Effectue un comptage du nombre de lignes et une somme de contrôle binaire.<br /><br /> Remarque : Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés version 7.0, seule la validation du nombre de lignes est effectuée.|  
+|**2**|Effectue un comptage du nombre de lignes et une somme de contrôle binaire.<br /><br /> Remarque : Pour les Abonnés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0, seule la validation du nombre de lignes est effectuée.|  
   
  [**@full_or_fast=**] *full_or_fast*  
  Méthode utilisée pour calculer le nombre de lignes. *full_or_fast* est **tinyint** et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0**|Effectue un comptage total à l'aide de COUNT(*).|  
 |**1**|Effectue un comptage de rapide **sysindexes.rows**. Le décompte de lignes [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) est beaucoup plus rapide que le décompte de lignes dans la table réelle. Toutefois, étant donné que [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) est tardivement mis à jour, le nombre de lignes peut être inexact.|  
@@ -67,8 +66,8 @@ sp_publication_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *shutdown_agent*  
  Indique si l'Agent de distribution doit se fermer immédiatement à la fin de la validation. *shutdown_agent* est **bits**, avec une valeur par défaut **0**. Si **0**, l’agent de réplication ne s’arrête pas. Si **1**, l’agent de réplication s’arrête après le dernier article est validé.  
   
- [ **@publisher** =] **'***publisher***'**  
- Spécifie un serveur de publication non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+ [ **@publisher** =] **'**_publisher_**'**  
+ Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé lors de la demande de validation sur un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
@@ -83,7 +82,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
  Si votre application comporte une mise à jour immédiate des abonnés, **sp_publication_validation** peut détecter des erreurs. **sp_publication_validation** calcule d’abord le nombre de lignes ou la somme de contrôle sur le serveur de publication, puis sur l’abonné. Étant donné que les déclencheurs à mise à jour immédiate peuvent propager une mise à jour de l'Abonné vers le serveur de publication une fois que le calcul du nombre de lignes ou de la somme de contrôle est terminé au niveau du serveur de publication, mais avant qu'il soit effectué au niveau de l'Abonné, les valeurs peuvent changer. Pour vous assurer que les valeurs pour l'Abonné et le serveur de publication ne changent pas au cours de la validation d'une publication, arrêtez le service Microsoft Distributed Transaction Coordinator (MS DTC) sur le serveur de publication durant cette validation.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_publication_validation**.  
   
 ## <a name="see-also"></a>Voir aussi  

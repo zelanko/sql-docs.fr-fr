@@ -11,12 +11,12 @@ ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 243c2ba1d998acd15f92e6e995d9390c7a32c84f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc5bf036d3d00033077ad0054572c0375b6b6f55
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105879"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366598"
 ---
 # <a name="plan-for-map-report-support"></a>Planifier la prise en charge de rapport cartographique
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] prend en charge les rapports cartographiques qui utilisent des sources de données spatiales. Les données spatiales peuvent provenir de bases de données SQL Server, de fichiers de formes ESRI ou de la Bibliothèque de cartes installée avec Reporting Services ou le Générateur de rapports. Une carte peut également afficher un arrière-plan de mosaïques Bing. Un auteur de rapport peut créer un rapport qui spécifie des données spatiales ou des mosaïques Bing comme dynamique et récupéré au moment de l'exécution ou comme statique et incorporé dans la définition de rapport.  
@@ -27,7 +27,7 @@ ms.locfileid: "48105879"
  Dans chaque rapport, les auteurs peuvent spécifier s'il faut utiliser une connexion SSL (Secure Sockets Layer) pour récupérer des mosaïques auprès du serveur de mosaïques. Pour ce faire, dans le volet Propriétés de la couche de mosaïques, ils doivent définir la propriété booléenne usesecureconnection la valeur à `true`.  
   
 > [!NOTE]  
->  Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
+>  Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](https://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
   
 ## <a name="report-design-recommendations"></a>Recommandations relatives à la conception des rapports  
  Une bonne conception pour les rapports cartographiques requiert que l'auteur de rapport évalue les compromis entre les données spatiales dynamiques et statiques et recherche un équilibre qui profite aux utilisateurs de rapport. Les éléments cartographiques incorporés peuvent augmenter considérablement la taille de la définition de rapport, mais ils réduisent le temps nécessaire pour afficher le rapport cartographique. Les éléments cartographiques dynamiques réduisent la taille de la définition de rapport, mais augmentent le temps requis pour traiter et afficher la carte. L'auteur de rapport doit rechercher l'équilibre correct entre ces différents facteurs.  
@@ -42,7 +42,7 @@ ms.locfileid: "48105879"
   
  Pour aider à réduire la taille des définitions de rapports qui ont des cartes, les auteurs de rapport peuvent utiliser une ou plusieurs des options suivantes :  
   
--   Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ajouter des sources de données spatiales qui sont des fichiers de forme ESRI au projet de serveur de rapports. Lorsque vous déployez le projet, les fichiers de forme ESRI sont publiés sur le serveur de rapports en plus du rapport. Lorsque l'auteur de rapport exécute l'Assistant Carte, il peut spécifier une source de données spatiales du projet Report Server et les éléments cartographiques ne sont pas incorporés par défaut dans les définitions de rapport.  
+-   À partir du Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ajoutez des sources de données spatiales qui sont des fichiers de forme ESRI au projet de serveur de rapports. Lorsque vous déployez le projet, les fichiers de forme ESRI sont publiés sur le serveur de rapports en plus du rapport. Lorsque l'auteur de rapport exécute l'Assistant Carte, il peut spécifier une source de données spatiales du projet Report Server et les éléments cartographiques ne sont pas incorporés par défaut dans les définitions de rapport.  
   
 -   À partir du Générateur de rapports, ajoutez des sources de données spatiales qui sont des fichiers de forme ESRI en sélectionnant des fichiers de forme du serveur de rapports. Lorsque l'auteur de rapport exécute l'Assistant Carte, il peut naviguer jusqu'à et sélectionner une source de données spatiales du serveur de rapports et les éléments cartographiques ne sont pas incorporés par défaut dans les définitions de rapport.  
   

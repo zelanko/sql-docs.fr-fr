@@ -1,6 +1,6 @@
 ---
-title: Extension de langage Java dans SQL Server 2019 | Microsoft Docs
-description: Exécuter du code Java sur SQL Server 2019 à l’aide de l’extension du langage Java.
+title: Exemple de Java et didacticiel pour SQL Server 2019 - SQL Server Machine Learning Services
+description: Exécutez l’exemple de code Java sur SQL Server 2019 pour apprendre les étapes pour l’utilisation de l’extension du langage Java avec les données de SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/24/2018
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf6fec32e28342e355b3393bb531ad1833d8af6b
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
+ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715318"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069054"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>Exemple de procédure SQL Server Java
 
@@ -226,7 +226,7 @@ L’arborescence entière doit disposer des autorisations, à partir de la racin
    + Cliquez sur **Types d’objets** et assurez-vous que *principes de sécurité intégrés* et *groupes* sont sélectionnés.
    + Cliquez sur **emplacements** pour sélectionner le nom de l’ordinateur local en haut de la liste.
 5. Entrez **SQLRUserGroup**, vérifiez le nom, puis cliquez sur OK pour ajouter le groupe.
-6. Entrez **tous les PACKAGES d’application**, vérifiez le nom, puis cliquez sur OK pour ajouter. Si le nom ne se résout pas, revisiter l’étape d’emplacements. Le SID est local sur votre ordinateur.
+6. Entrez **tous les PACKAGES D’APPLICATION**, vérifiez le nom, puis cliquez sur OK pour ajouter. Si le nom ne se résout pas, revisiter l’étape d’emplacements. Le SID est local sur votre ordinateur.
 
 Assurez-vous que les deux identités de sécurité ont des autorisations « Lecture et exécution » sur le dossier et un sous-dossier de « pkg ».
 

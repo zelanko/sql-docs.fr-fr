@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsynctriggers_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c69681e396065f1881ff9ea81468ef85c8b26da4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89a6a997fd272985bd60d0b5d574fea07463f54d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799717"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588284"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,46 +58,46 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@sub_table=**] **'***table_d***'**  
+ [  **@sub_table=**] **'**_sub_table_**'**  
  Nom de la table Subscriber. *table_d* est **sysname**, sans valeur par défaut.  
   
- [  **@sub_table_owner=**] **'***propriétaire_de_table_d***'**  
+ [  **@sub_table_owner=**] **'**_sub_table_owner_**'**  
  Nom du propriétaire de la table Subscriber. *propriétaire_de_table_d* est **sysname**, sans valeur par défaut.  
   
- [  **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_publisher_**'**  
  Est le nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  Nom de la base de données du serveur de publication. *publisher_db* est **sysname**, sans valeur par défaut. Si NULL est spécifié, la base de données active est utilisée.  
   
- [  **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_publication_**'**  
  Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@ins_proc=**] **'***proc_màj***'**  
+ [  **@ins_proc=**] **'**_proc_màj_**'**  
  Nom de la procédure stockée qui prend en charge les insertions de transactions synchrones sur le serveur de publication. *proc_màj* est **sysname**, sans valeur par défaut.  
   
- [  **@upd_proc=**] **'***Mise_à_j_proc***'**  
+ [  **@upd_proc=**] **'**_Mise_à_j_proc_**'**  
  Nom de la procédure stockée qui prend en charge les mises à jour de transactions synchrones sur le serveur de publication. *proc_màj* est **sysname**, sans valeur par défaut.  
   
- [  **@del_proc=**] **'***suppr_proc***'**  
+ [  **@del_proc=**] **'**_suppr_proc_**'**  
  Nom de la procédure stockée qui prend en charge les suppressions de transactions synchrones sur le serveur de publication. *proc_màj* est **sysname**, sans valeur par défaut.  
   
- [  **@cftproc =** ] **'***cftproc***'**  
+ [  **@cftproc =** ] **'**_cftproc_**'**  
  Nom de la procédure générée automatiquement utilisée par les publications qui autorisent la mise à jour en attente. *cftproc* est **sysname**, sans valeur par défaut. Pour les publications autorisant la mise à jour immédiate, cette valeur est NULL. Ce paramètre s'applique aux publications qui autorisent la mise à jour en attente (mise à jour en attente et mise à jour immédiate avec mise à jour en attente sous forme de basculement).  
   
- [  **@proc_owner =** ] **'***proc_owner***'**  
+ [  **@proc_owner =** ] **'**_proc_owner_**'**  
  Spécifie le compte utilisateur du serveur de publication sous lequel ont été créées toutes les procédures stockées générées automatiquement pour la publication avec mise à jour (en attente et/ou immédiate). *proc_owner* est **sysname** sans valeur par défaut.  
   
- [  **@identity_col=**] **'***identity_col***'**  
+ [  **@identity_col=**] **'**_identity_col_**'**  
  Nom de la colonne d'identité au niveau du serveur de publication. *identity_col* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@ts_col=**] **'***l’argument timestamp_col***'**  
+ [  **@ts_col=**] **'**_l’argument timestamp_col_**'**  
  Est le nom de la **timestamp** colonne sur le serveur de publication. *l’argument timestamp_col* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@filter_clause=**] **'***filter_clause***'**  
+ [  **@filter_clause=**] **'**_filter_clause_**'**  
  Clause de restriction (WHERE) qui définit un filtre horizontal. Lorsque vous entrez la clause de restriction, omettez le mot clé où. *filter_clause*est **nvarchar (4000)**, avec NULL comme valeur par défaut.  
   
- [  **@primary_key_bitmap =**] **'***bitmap_clé_primaire***'**  
+ [  **@primary_key_bitmap =**] **'**_bitmap_clé_primaire_**'**  
  Image bitmap des colonnes clés primaires dans la table. *bitmap_clé_primaire* est **varbinary (4000)**, sans valeur par défaut.  
   
  [  **@identity_support =** ] *identity_support*  
@@ -107,7 +106,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@independent_agent =** ] *independent_agent*  
  Indique s'il existe un Agent de distribution unique (Agent indépendant) pour cette publication ou bien un Agent de distribution par paire base de données de publication/base de données d'abonnement (Agent partagé). Cette valeur reflète la valeur de la propriété independent_agent de la publication définie sur le serveur de publication. *independent_agent* est un peu avec une valeur par défaut **0**. Si **0**, l’agent est un Agent partagé. Si **1**, l’agent est un agent indépendant.  
   
- [  **@distributor =** ] **'***distributeur***'**  
+ [  **@distributor =** ] **'**_distributeur_**'**  
  Est le nom du serveur de distribution. *serveur de distribution* est **sysname**, sans valeur par défaut.  
   
  [ **@pubversion**=] *pubversion*  
@@ -119,7 +118,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ## <a name="remarks"></a>Notes  
  **sp_addsynctriggers** est utilisé par l’Agent de Distribution dans le cadre de l’abonnement. Cette procédure stockée n'est généralement pas exécutée par les utilisateurs mais peut s'avérer utile s'ils doivent configurer manuellement un abonnement sans synchronisation.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addsynctriggers**.  
   
 ## <a name="see-also"></a>Voir aussi  

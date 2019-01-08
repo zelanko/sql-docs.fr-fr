@@ -11,12 +11,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d570104b705c55c926d3cf8e4c15af4111be29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a68fb27df3c1a00ca5b4cf615963d7d9ce4bf2d3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094449"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357165"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Concepts de Reporting Services (SSRS)
   Cette rubrique fournit un bref résumé des concepts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -58,7 +58,7 @@ ms.locfileid: "48094449"
  Sur un site SharePoint, utilisez la page d'administrateurs de site SharePoint pour gérer les autorisations d'accès sur les rapports et le contenu des sites en lien avec les rapports.  
   
  **Planifications**  
- Sur un serveur de rapports natif, il est possible de planifier des rapports, des datasets partagés et des abonnements, afin de récupérer des données et de remettre des rapports et des requêtes de datasets à des heures déterminées ou pendant des périodes de faible activité. Les planifications peuvent être exécutées une seule fois ou sur une base périodique à des heures, des jours, des semaines ou des mois déterminés. Pour plus d’informations, consultez [planifications](subscriptions/schedules.md).  
+ Sur un serveur de rapports natif, il est possible de planifier des rapports, des datasets partagés et des abonnements, afin de récupérer des données et de remettre des rapports et des requêtes de datasets à des heures déterminées ou pendant des périodes de faible activité. Les planifications peuvent être exécutées une seule fois ou sur une base périodique à des heures, des jours, des semaines ou des mois déterminés. Pour plus d'informations, consultez [Schedules](subscriptions/schedules.md).  
   
  **Abonnements et remises**  
  Un abonnement est une requête permanente de remise d'un rapport à une heure donnée ou en réponse à un événement, et dans un format de fichier d'application que vous définissez dans l'abonnement. Les abonnements offrent une alternative à l'exécution d'un rapport à la demande. La génération de rapports à la demande nécessite que vous sélectionniez le rapport chaque fois que vous souhaitez le consulter. En revanche, les abonnements peuvent être utilisés pour planifier et pour automatiser la remise d'un rapport. La remise s'effectue dans une boîte de réception de messagerie électronique ou dans un partage de fichiers. Pour plus d’informations, consultez [Abonnements et remise &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "48094449"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit une architecture extensible que vous pouvez utiliser pour personnaliser des solutions de rapport. Le serveur de rapports prend en charge les extensions d'authentification personnalisées, les extensions pour le traitement des données, les extensions pour le traitement des rapports, les extensions de rendu et les extensions de remise. De plus, les extensions qui sont à la disposition des utilisateurs sont configurables dans le fichier de configuration RSReportServer.config. Par exemple, vous pouvez limiter les formats d'exportation que la visionneuse de rapport est autorisée à utiliser. Les extensions de remise et de traitement des rapports sont facultatives, mais nécessaires si vous voulez prendre en charge la diffusion des rapports ou les contrôles personnalisés. Pour plus d’informations, consultez [Extensions &#40;SSRS&#41;](extensions-ssrs.md).  
   
  **Accès aux rapports**  
- L'accès à la demande permet aux utilisateurs de sélectionner des rapports à partir d'un outil d'affichage de rapports. Selon votre configuration de serveur de rapports, vous pouvez utiliser le Gestionnaire de rapports, un [!INCLUDE[msCoName](../includes/msconame-md.md)] WebPart SharePoint 2.0, une bibliothèque SharePoint lorsque [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est installé en mode intégré SharePoint, un contrôle ReportViewer incorporé ou un navigateur à l’aide d’URL accès. Pour plus d’informations sur l’accès aux rapports à la demande, consultez [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ L'accès à la demande permet aux utilisateurs de sélectionner des rapports à partir d'un outil d'affichage de rapports. En fonction de la configuration du serveur de rapports, il est possible d'utiliser le Gestionnaire de rapports, un composant WebPart SharePoint 2.0 [!INCLUDE[msCoName](../includes/msconame-md.md)] , une bibliothèque SharePoint lorsque [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est installé en mode intégré SharePoint, un contrôle ReportViewer incorporé ou un navigateur utilisant un accès URL. Pour plus d’informations sur l’accès aux rapports à la demande, consultez [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
  Les abonnements offrent une alternative à l'exécution d'un rapport à la demande. Pour plus d’informations, consultez [Abonnements et remise &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48094449"
  **Rapports et définitions de rapport**  
  **RDL.** Une définition de rapport est un fichier XML qui respecte une grammaire XML nommée RDL (Report Definition Language). Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vous créez une définition de rapport à l'aide d'un outil tel que le Générateur de rapports ou le Concepteur de rapports. Elle inclut des éléments qui définissent les connexions aux sources de données, les requêtes destinées à récupérer des données, des expressions, des paramètres, des images, des zones de texte et des tableaux, ainsi que de tous les autres éléments de mise en page utilisés lors de la création. Pour plus d’informations, consultez [Langage de définition de rapport &#40;SSRS, Report Definition Language&#41;](reports/report-definition-language-ssrs.md).  
   
- **RDLX.** Une définition de rapport dans RDLX est un fichier RDL avec les extensions internes qui permettent l'expérience de visualisation de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Pour plus d'informations, consultez [Vue d'ensemble de Power View](http://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
+ **RDLX.** Une définition de rapport dans RDLX est un fichier RDL avec les extensions internes qui permettent l'expérience de visualisation de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Pour plus d'informations, consultez [Vue d'ensemble de Power View](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
   
  **RDLC.** Le Concepteur de rapports Visual Studio produit des fichiers de définition de rapport client (.rdlc) au format XML à utiliser avec le contrôle ReportViewer.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48094449"
   
 -   **Datasets incorporés.** Les datasets incorporés sont définis dans un rapport unique et sont utilisés par un seul rapport.  
   
- Pour plus d’informations, consultez [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
  **Paramètres de rapport**  
  Les paramètres de rapport font partie d'une définition de rapport. Vous pouvez ajouter des paramètres à un rapport pour lier des rapports connexes, pour contrôler l'apparence d'un rapport, pour filtrer les données du rapport, ou pour limiter l'étendue d'un rapport à des utilisateurs ou des emplacements spécifiques. Lorsqu'un rapport est publié sur un serveur de rapports ou un site SharePoint natif, les paramètres de rapport sont enregistrés en tant qu'élément distinct du serveur de rapports. Les paramètres peuvent être gérés indépendamment de la définition de rapport. Pour créer plusieurs jeux de paramètres pour le même rapport, créez des *rapports liés*.  
@@ -221,6 +221,6 @@ Illustration du traitement d'un rapport
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités et tâches Reporting Services &#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)   
- [Reporting Services (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

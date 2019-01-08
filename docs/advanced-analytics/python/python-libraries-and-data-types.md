@@ -1,25 +1,24 @@
 ---
-title: Python bibliothèques et types de données dans SQL Server Machine Learning | Microsoft Docs
+title: Python-to-SQL des types de données - SQL Server Machine Learning
+description: Passez en revue les type de données implicites et explicites converstions entre Python et SQL Server dans la science des données et des solutions d’apprentissage.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 12/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 384c8c94bdef65e41af999848c9bac63fc0c8d40
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 9578f81146f0dab42e7a607b9e8ab410313958d4
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888365"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431974"
 ---
-# <a name="python-libraries-and-data-types"></a>Bibliothèques et types de données Python
+# <a name="data-type-mappings-between-python-and-sql-server"></a>Mappages de types de données entre Python et SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article décrit les bibliothèques Python qui sont inclus avec SQL Server Machine Learning Services (en base de données) et les installations (autonome).
-
-Cet article répertorie également les types de données non pris en charge, et répertorie les types de données qui peut être effectuée implicitement lorsque les données sont transmises entre Python et SQL Server.
+Pour les solutions de Python qui s’exécutent sur la fonctionnalité d’intégration de Python dans SQL Server Machine Learning Services, passez en revue la liste des types de données non pris en charge et les conversions de types de données qui peuvent être effectuées implicitement lorsque les données sont transmises entre Python et SQL Server.
 
 ## <a name="python-version"></a>Version de Python
 
@@ -27,7 +26,7 @@ Distribution de SQL Server 2017 Anaconda 4.2 et en Python 3.6.
 
 Un sous-ensemble des fonctionnalités de RevoScaleR (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees, peut-être quelques autres) est fourni à l’aide des API Python, à l’aide d’un nouveau package Python **revoscalepy**. Vous pouvez utiliser ce package fonctionne avec les données à l’aide des trames de données Pandas, les fichiers XDF ou les requêtes de données SQL.
 
-Pour plus d’informations, consultez [revoscalepy What ' s ?](what-is-revoscalepy.md).
+Pour plus d’informations, consultez [module revoscalepy dans SQL Server](ref-py-revoscalepy.md) et [revoscalepy de référence des fonctions](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
 
 Python prend en charge un nombre limité de types de données par rapport à SQL Server. Par conséquent, chaque fois que vous utilisez des données à partir de SQL Server dans les scripts Python, données peuvent être converties implicitement en un type de données compatible. Toutefois, souvent une conversion exacte ne peut pas être effectuée automatiquement, et une erreur est retournée.
 
@@ -54,5 +53,5 @@ Ce tableau répertorie les conversions implicites qui sont fournies. Autres type
 |**varchar(n)**|`str`|
 |**varchar(max)**|`str`|
 
-
+## <a name="see-also"></a>Voir aussi
 

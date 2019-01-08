@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87d446b5c65ff5e1660ea6bf6cb216b875416cd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73f5cdd35404617be9563c33574b09f825a2c7ad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080029"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801881"
 ---
 # <a name="testserver-element-dta"></a>TestServer, élément (Assistant Paramétrage de base de données)
   Spécifie le serveur de test à utiliser lors du paramétrage d'un serveur de production.  
@@ -41,13 +40,13 @@ ms.locfileid: "48080029"
 |--------------------|-----------------|  
 |**Type de données et longueur**|**string**, longueur illimitée.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Facultatif. Peut utiliser qu’une seule fois pour chaque `TuningOptions` élément.|  
+|**Occurrence**|Facultatif. Peut être utilisé une seule fois pour chaque élément `TuningOptions`.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[TuningOptions, élément &#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**Élément parent**|[Élément TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
 ## <a name="example"></a>Exemple  

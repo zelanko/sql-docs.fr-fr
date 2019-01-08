@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.f1
@@ -17,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af7dc60469f088f2023365f638666056bdf6e412
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5927cbe753cf0035c37f9a826c6bf89e9c963ae8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129134"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365771"
 ---
 # <a name="execute-package-task"></a>Tâche d'exécution de package
   La tâche d'exécution de package étend les fonctionnalités d'entreprise de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en permettant à des packages d'exécuter d'autres packages au sein d'un flux de travail.  
@@ -37,7 +36,7 @@ ms.locfileid: "48129134"
   
 -   Contrôle de la sécurité des packages. Les auteurs de package ont besoin d'accéder à une seule partie d'une solution multipackage. En séparant un package en plusieurs packages, vous pouvez fournir un niveau de sécurité plus élevé ; en effet, vous pouvez permettre à un auteur d'accéder aux seuls packages appropriés.  
   
- Un package qui exécute d'autres packages est généralement appelé « package parent », tandis que les packages exécutés par un flux de travail parent sont appelés « packages enfants ».  
+ Un package qui exécute d'autres packages est généralement appelé « package parent », tandis que les packages exécutés par un flux de travail parent sont appelés « packages enfants ».  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend des tâches qui effectuent des opérations de flux de travail, telles que l'exécution de fichiers de commandes, d'exécutables et de packages. Pour plus d'informations, consultez [Execute Process Task](execute-process-task.md).  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48129134"
   
  Dans d'autres situations, vous pouvez préférer que les packages parent et enfants échouent ensemble comme une même unité, ou bien éviter la charge de traitement supplémentaire d'un autre processus. Par exemple, si un processus enfant échoue et que les traitements ultérieurs du processus parent du package dépendent de la réussite du processus enfant, alors le package enfant doit s'exécuter dans le processus du package parent.  
   
- Par défaut, la propriété ExecuteOutOfProcess de la tâche Exécuter le Package a la valeur `False`, et le package enfant s’exécute dans le même processus que le package parent. Si vous affectez la valeur `True` à cette propriété, le package enfant s'exécute dans un processus indépendant. Cela peut ralentir le lancement du package enfant. En outre, si vous définissez la propriété sur `True`, vous ne pouvez pas déboguer le package dans une installation d’outils uniquement. Vous devez installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Installer Integration Services](../install-windows/install-integration-services.md).  
+ Par défaut, la propriété ExecuteOutOfProcess de la tâche Exécuter le Package a la valeur `False`, et le package enfant s’exécute dans le même processus que le package parent. Si vous affectez la valeur `True` à cette propriété, le package enfant s'exécute dans un processus indépendant. Cela peut ralentir le lancement du package enfant. En outre, si vous affectez la valeur `True` à la propriété, vous ne pouvez pas déboguer le package dans une installation d'outils uniquement. Vous devez installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Installer Integration Services](../install-windows/install-integration-services.md).  
   
 ## <a name="extending-transactions"></a>Extension des transactions  
  La transaction que le package parent utilise peut être étendue au package enfant ; par conséquent, le travail réalisé par les deux packages peut être validé ou annulé. Par exemple, les insertions dans une base de données effectuées par le package parent peuvent être validées ou annulées, en fonction de celles réalisées par le package enfant, et vice versa. Pour plus d'informations, consultez [Inherited Transactions](../inherited-transactions.md).  
@@ -98,27 +97,27 @@ ms.locfileid: "48129134"
  Pour plus d’informations, consultez [Utiliser les valeurs des variables et des paramètres dans un package enfant](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### <a name="accessing-parent-package-variables"></a>Accès aux variables de package parent  
- Les packages enfants peuvent accéder à des variables de package parent à l'aide de la tâche de script. Lorsque vous entrez le nom de la variable de package parent sur la page **Script** dans l' **Éditeur de tâche de script**, n'incluez pas **Utilisateur :** dans le nom de la variable. Sinon, le package enfant ne localise pas la variable lorsque vous exécutez le package parent. Pour plus d'informations sur l'utilisation de la tâche de Script pour accéder aux variables de package parent, consultez cette entrée de blog, [SSIS: Accessing variables in a parent package](http://go.microsoft.com/fwlink/?LinkId=257729), sur le site Web consultingblogs.emc.com.  
+ Les packages enfants peuvent accéder à des variables de package parent à l'aide de la tâche de script. Quand vous entrez le nom de la variable de package parent sur la page **Script** dans l’**Éditeur de tâche de script**, n’incluez pas **Utilisateur :** dans le nom de la variable. Sinon, le package enfant ne localise pas la variable quand vous exécutez le package parent. Pour plus d’informations sur l’utilisation de la tâche de Script pour accéder aux variables de package parent, consultez cette entrée de blog, [SSIS : L’accès aux variables dans un package parent](https://go.microsoft.com/fwlink/?LinkId=257729), sur le site Web consultingblogs.emc.com.  
   
 ## <a name="configuring-the-execute-package-task"></a>Configuration de la tâche d'exécution de package  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche d’exécution de package](../execute-package-task-editor.md)  
+-   [Execute Package Task Editor](../execute-package-task-editor.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Entrée de blog, [SSIS: Should you execute child packages in-process or out-of-process?](http://go.microsoft.com/fwlink/?LinkId=220819), sur le site Web consultingblogs.emc.com.  
+-   Entrée de blog, [SSIS : Doit s’exécuter des packages enfants in-process ou out-of-process ? ](https://go.microsoft.com/fwlink/?LinkId=220819), sur le site Web consultingblogs.emc.com.  
   
--   Entrée de blog, [SSIS: Accessing variables in a parent package](http://go.microsoft.com/fwlink/?LinkId=257729), sur le site Web consultingblogs.emc.com.  
+-   Entrée de blog, [SSIS : L’accès aux variables dans un package parent](https://go.microsoft.com/fwlink/?LinkId=257729), sur le site Web consultingblogs.emc.com.  
   
   

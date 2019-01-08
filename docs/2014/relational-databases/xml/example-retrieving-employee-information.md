@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : extraction d’informations sur les employés | Microsoft Docs'
+title: 'Exemple : Récupération des informations sur les employés | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b8a63758c6f2a3ebb9d04b02208266017f59ace
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5262c3697964cf82969669012afd8fb29a0b8e8e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064939"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812221"
 ---
-# <a name="example-retrieving-employee-information"></a>Exemple : extraction d'informations sur les employés
+# <a name="example-retrieving-employee-information"></a>Exemple : Récupération des informations sur les employés
   Cet exemple extrait un ID et un nom pour chaque employé. Dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , les ID des employés se trouvent dans la colonne BusinessEntityID de la table Employee. Les noms des employés figurent dans la table Person. La colonne BusinessEntityID peut être utilisée pour joindre les tables.  
   
  Supposons que vous souhaitez générer un document XML à l'aide de la transformation FOR XML EXPLICIT comme suit :  
   
 ```  
 <Employee EmpID="1" >  
-  <Name FName="Ken" LName="Sánchez" />  
+  <Name FName="Ken" LName="S??nchez" />  
 </Employee>  
 ...  
 ```  
@@ -83,11 +83,11 @@ ORDER BY [Employee!1!EmpID],[Name!2!FName]
 FOR XML EXPLICIT;  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
  `<Employee EmpID="1">`  
   
- `<Name FName="Ken" LName="Sánchez" />`  
+ `<Name FName="Ken" LName="S??nchez" />`  
   
  `</Employee>`  
   
@@ -109,7 +109,7 @@ FOR XML EXPLICIT;
   
  `1   NULL    1                NULL         NULL`  
   
- `2   1       1                Ken          Sánchez`  
+ `2   1       1                Ken          S??nchez`  
   
  `1   NULL    2                NULL         NULL`  
   

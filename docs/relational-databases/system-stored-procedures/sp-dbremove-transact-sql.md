@@ -18,12 +18,12 @@ ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b801980f6a9f7bc2fc434a9fac19e204bbc60cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffd0874e60d6a9b8ab89ade6e11fc504ac166a2c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655897"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530285"
 ---
 # <a name="spdbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@dbname=** ] **'***base de données***'**  
+ [  **@dbname=** ] **'**_base de données_**'**  
  Nom de la base de données à supprimer. *base de données* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@dropdev=** ] **'***dropdev***'**  
+ [  **@dropdev=** ] **'**_dropdev_**'**  
  Indicateur fourni pour une compatibilité ascendante seulement et actuellement ignoré. *dropdev* a la valeur **dropdev**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -55,7 +55,7 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ## <a name="result-sets"></a>Jeux de résultats  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

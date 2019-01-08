@@ -13,15 +13,15 @@ ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18ab1fb6986941355a89cb8075897de07fc9ff3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d804e3d2b7f851f8142f0e9c95158cb56ea521ed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175829"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371701"
 ---
-# <a name="task-7-creating-a-composite-domain"></a>Tâche 7 : Création d'une règle de domaine composite
-  Dans cette tâche, vous créez un domaine composite, **Validation d’adresses**, qui comprend **ligne d’adresse**, **Ville**, **état**et  **Code postal** domaines. Un domaine composite permet de définir une règle interdomaines qui implique plusieurs domaines. Un domaine composite présente d'autres avantages, notamment, il permet d'analyser une valeur de champ dans plusieurs domaines.  Par exemple, une valeur d'un champ Nom complet peut être analysée dans des domaines Prénom, Deuxième prénom et Nom de famille distincts. Dans ce didacticiel, vous allez uniquement définir une règle interdomaines. Consultez [gestion d’un domaine Composite](http://msdn.microsoft.com/library/hh510399.aspx) pour plus d’informations.  
+# <a name="task-7-creating-a-composite-domain"></a>Tâche 7 : Création d'un domaine composite
+  Dans cette tâche, vous créez un domaine composite, **Validation d’adresses**, qui comprend **ligne d’adresse**, **Ville**, **état**et  **Code postal** domaines. Un domaine composite permet de définir une règle interdomaines qui implique plusieurs domaines. Un domaine composite présente d'autres avantages, notamment, il permet d'analyser une valeur de champ dans plusieurs domaines.  Par exemple, une valeur d'un champ Nom complet peut être analysée dans des domaines Prénom, Deuxième prénom et Nom de famille distincts. Dans ce didacticiel, vous allez uniquement définir une règle interdomaines. Consultez [gestion d’un domaine Composite](https://msdn.microsoft.com/library/hh510399.aspx) pour plus d’informations.  
   
 1.  Dans le volet gauche, cliquez sur **créer un domaine composite** dans la barre d’outils.  
   
@@ -36,6 +36,6 @@ ms.locfileid: "48175829"
 4.  Cliquez sur **OK** pour fermer la boîte de dialogue.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 8 : Création d’une règle de domaine composite](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  
+ [Tâche 8 : Création d’une règle de domaine Composite](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  
   
   

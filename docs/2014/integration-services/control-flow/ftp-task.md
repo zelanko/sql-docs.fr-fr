@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.f1
@@ -15,12 +14,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ba03c8bcfad515fbe7a651822177ffa349dff25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cce297bd0a894a432cd05ae10c7b4a0689321bbd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079174"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805451"
 ---
 # <a name="ftp-task"></a>Tâche FTP
   La tâche FTP télécharge des fichiers de données et gère des répertoires sur les serveurs. Par exemple, un package peut télécharger des fichiers de données à partir d’un serveur distant ou d’un emplacement Internet dans le cadre d’un flux de travail de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Vous pouvez utiliser la tâche FTP aux fins suivantes :  
@@ -65,7 +64,7 @@ ms.locfileid: "48079174"
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
-|`FTPConnectingToServer`|Indique que la tâche a lancé une connexion au serveur FTP.|  
+|`FTPConnectingToServer`|Indique que la tâche a lancé une connexion au serveur FTP.|  
 |`FTPOperation`|Indique le démarrage et le type d'une opération FTP effectuée par la tâche.|  
   
 ## <a name="related-tasks"></a>Tâches associées  
@@ -76,8 +75,8 @@ ms.locfileid: "48079174"
  Pour plus d’informations sur la définition de ces propriétés par programmation, consultez <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de tâche FTP &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)   
- [Éditeur de tâche FTP &#40;Page de transfert de fichiers&#41;](../ftp-task-editor-file-transfer-page.md)   
+ [Éditeur de tâche FTP &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche FTP &#40;page Transfert de fichiers&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Tâches Integration Services](integration-services-tasks.md)   
  [Flux de contrôle](control-flow.md)  
   

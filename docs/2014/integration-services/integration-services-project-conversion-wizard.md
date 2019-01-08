@@ -13,12 +13,12 @@ ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c00c15a0f5e1c6bc45dbf1d19c216feb468e41fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 252d8c44921db82cc634e17e1628f72f18a066e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194909"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396363"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Assistant Conversion de projet Integration Services
   **L’Assistant Conversion de projet Integration Services** convertit un projet en modèle de déploiement de projet.  
@@ -187,7 +187,7 @@ ms.locfileid: "48194909"
  **Supprimer les configurations de tous les packages après la conversion**  
  Il est recommandé de supprimer toutes les configurations de projet en sélectionnant cette option.  
   
- Si vous ne sélectionnez pas cette option, seules les configurations que vous avez sélectionnées pour remplacement à l'aide de paramètres sont supprimées.  
+ Si vous ne sélectionnez pas cette option, seules les configurations que vous avez sélectionnées pour remplacement à l’aide de paramètres sont supprimées.  
   
 ##  <a name="createParameters"></a> Définir les options sur la page Créer des paramètres  
  Sélectionnez le nom et l'étendue du paramètre pour chaque propriété de configuration.  
@@ -222,7 +222,7 @@ ms.locfileid: "48194909"
 ##  <a name="review"></a> Définir les options de la page Vérifier  
  Utilisez la page **Vérifier** pour confirmer l’exactitude des options sélectionnées pour la conversion du projet.  
   
- **Previous**  
+ **Précédent**  
  Cliquez pour modifier une option.  
   
  **Convert**  

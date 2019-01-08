@@ -14,12 +14,12 @@ ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f33cf9021864e141b51c10d357fd53f379b3f567
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71ab6239172ea39a8adcee9ca017a5408079a8d5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217387"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357156"
 ---
 # <a name="data-driven-subscriptions"></a>abonnements pilotés par les données
   Un abonnement piloté par les données constitue un moyen d'utiliser des données d'abonnement dynamiques extraites à partir d'une source de données externe au moment de l'exécution. Un abonnement piloté par les données peut également utiliser du texte statique et des valeurs par défaut que vous spécifiez au moment de définir l'abonnement. Vous pouvez vous servir d'abonnements pilotés par les données pour effectuer les opérations suivantes :  
@@ -45,9 +45,9 @@ ms.locfileid: "48217387"
 ## <a name="requirements-for-using-data-driven-subscriptions"></a>Configuration requise pour utiliser les abonnements pilotés par les données  
  La fonctionnalité d'abonnement piloté par les données n'est pas disponible dans toutes les éditions. Des restrictions s'appliquent également dans le cadre des types de sources de données que vous pouvez utiliser pour extraire des données d'abonnement au moment de l'exécution. La liste ci-dessous fournit de plus amples informations sur les exigences requises :  
   
--   Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge la fonctionnalité d’abonnement piloté par les données, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge la fonctionnalité d’abonnement piloté par les données, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
--   Pour les données d'abonnement, choisissez une source de données capable de fournir des informations sur les schémas au serveur de rapports. Les données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les bases de données Oracle et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les données de package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les sources de données ODBC et les sources de données OLE DB sont des exemples de types de sources de données pris en charge. Pour plus d’informations sur les spécifications de source de données abonné, consultez [utiliser une Source de données externe pour les données d’abonné &#40;les abonnement piloté par les données&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
+-   Pour les données d'abonnement, choisissez une source de données capable de fournir des informations sur les schémas au serveur de rapports. Les données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les bases de données Oracle et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les données de package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les sources de données ODBC et les sources de données OLE DB sont des exemples de types de sources de données pris en charge. Pour plus d’informations sur les exigences relatives à la source de données des abonnés, consultez [Utiliser une source de données externe pour les données des abonnés &#40;abonnements pilotés par les données&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
 ## <a name="working-with-data-driven-subscriptions"></a>Utilisation des abonnements pilotés par les données  
  Les rubriques suivantes fournissent des informations supplémentaires sur les abonnements pilotés par les données.  
@@ -55,12 +55,12 @@ ms.locfileid: "48217387"
 |Rubriques|Description|  
 |------------|-----------------|  
 |[Créer, modifier et supprimer des abonnements pilotés par les données](data-driven-subscriptions.md)|Explique comment créer, modifier ou supprimer un abonnement piloté par les données.|  
-|[Utiliser une Source de données externe pour les données d’abonné &#40;abonnement piloté par les données&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Fournit des informations sur les sources de données que vous pouvez utiliser pour un abonnement piloté par les données.|  
+|[Utiliser une source de données externe pour les données des abonnés &#40;abonnements pilotés par les données&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Fournit des informations sur les sources de données que vous pouvez utiliser pour un abonnement piloté par les données.|  
 |[Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|Fournit des instructions pas à pas pour apprendre à créer un abonnement piloté par les données.|  
-|[La mise en cache des rapports &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)|Décrit comment utiliser le fournisseur de remise Null avec un abonnement piloté par les données pour précharger la mémoire cache.|  
+|[Mise en cache de rapports &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)|Décrit comment utiliser le fournisseur de remise Null avec un abonnement piloté par les données pour précharger la mémoire cache.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Abonnements et remises &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Abonnements et remise &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Page Créer un abonnement piloté par les données &#40;Gestionnaire de rapports&#41;](../create-data-driven-subscription-page-report-manager.md)   
  [Précharger le cache &#40;Gestionnaire de rapports&#41;](../report-server/preload-the-cache-report-manager.md)  
   

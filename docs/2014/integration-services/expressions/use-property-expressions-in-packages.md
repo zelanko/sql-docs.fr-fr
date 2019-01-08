@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -20,12 +19,12 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e14b518f8b644d9d1b2670e90bbf27b09faf049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a6dd870de31e6b3be65cac62cda84c3e9c9635c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085729"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373371"
 ---
 # <a name="use-property-expressions-in-packages"></a>Expressions de propriété dans des packages
   Une expression de propriété est une expression affectée à une propriété pour permettre la mise à jour dynamique de la propriété au moment de l'exécution. Par exemple, une expression de propriété peut mettre à jour la ligne À utilisée par une tâche Envoyer un message en insérant une adresse électronique qui est stockée dans une variable.  
@@ -53,10 +52,10 @@ ms.locfileid: "48085729"
   
  Une propriété ne peut utiliser qu'une expression de propriété et une expression de propriété ne peut s'appliquer qu'à une propriété. Cependant, vous pouvez générer plusieurs expressions de propriété identiques et les affecter à différentes propriétés.  
   
- Certaines propriétés sont définies à l'aide de valeurs provenant d'énumérateurs. Lorsque vous faites référence au membre d'énumérateur dans une expression de propriété, vous devez utiliser la valeur numérique équivalant au nom convivial du membre de l'énumérateur. Par exemple, si une expression de propriété définit le `LoggingMode` propriété, qui utilise une valeur de la `DTSLoggingMode` énumération, l’expression de propriété doit utiliser 0, 1 ou 2 plutôt que les noms conviviaux `Enabled`, `Disabled`, ou `UseParentSetting`. Pour plus d’informations, consultez la page [Constantes énumérées dans des expressions de propriété](enumerated-constants-in-property-expressions.md).  
+ Certaines propriétés sont définies à l'aide de valeurs provenant d'énumérateurs. Lorsque vous faites référence au membre d'énumérateur dans une expression de propriété, vous devez utiliser la valeur numérique équivalant au nom convivial du membre de l'énumérateur. Par exemple, si une expression de propriété définit la propriété `LoggingMode` qui utilise une valeur de l'énumération `DTSLoggingMode`, l'expression de la propriété doit utiliser 0, 1 ou 2 à la place des noms conviviaux `Enabled`, `Disabled` ou `UseParentSetting`. Pour plus d’informations, consultez la page [Constantes énumérées dans des expressions de propriété](enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Interface utilisateur de l'expression de propriété  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit un ensemble d’outils pour la création et la gestion d’expressions de propriété.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit un ensemble d'outils pour la création et la gestion d'expressions de propriété.  
   
 -   La page **Expressions** , trouvée dans les éditeurs personnalisés pour les tâches, le conteneur de boucles For et les conteneurs Foreach. La page **Expressions** vous permet de modifier des expressions et d'afficher une liste des expressions de propriété utilisées par une tâche, une boucle For ou une boucle Foreach.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48085729"
   
  ![Interface utilisateur pour les expressions de propriété](../media/ssis-propertyexpressionui.gif "Interface utilisateur pour les expressions de propriété")  
   
- Dans la fenêtre **Propriétés** et dans la page **Expressions** , cliquez sur le bouton de navigation **(…)** au niveau de la collection **Expressions** pour ouvrir la boîte de dialogue **Éditeur d’expressions de la propriété** . L'Éditeur d'expressions de la propriété permet de mapper une propriété à une expression et de taper une expression de propriété. Si vous souhaitez utiliser les outils d’expression graphique pour créer, puis valider l’expression, cliquez sur le bouton de navigation **(…)** au niveau de l’expression pour ouvrir la boîte de dialogue **Générateur d’expressions** , puis créez ou modifiez et éventuellement validez l’expression.  
+ Dans la fenêtre **Propriétés** et dans la page **Expressions**, cliquez sur le bouton de navigation **(...)** au niveau de la collection **Expressions** pour ouvrir la boîte de dialogue **Éditeur d’expressions de la propriété**. L'Éditeur d'expressions de la propriété permet de mapper une propriété à une expression et de taper une expression de propriété. Si vous souhaitez utiliser les outils d’expression graphique pour créer, puis valider l’expression, cliquez sur le bouton de navigation **(...)** au niveau de l’expression pour ouvrir la boîte de dialogue **Générateur d’expressions**, puis créez ou modifiez et éventuellement validez l’expression.  
   
  Vous pouvez également ouvrir la boîte de dialogue **Générateur d'expression** à partir de la boîte de dialogue **Éditeur d'expressions de la propriété** .  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48085729"
   
  Vous ne verrez donc pas les valeurs mises à jour des propriétés des objets du package qui utilisent des expressions de la propriété dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] tant que vous n'avez pas enregistré le package, exécuté le package ou rouvert le package après avoir ajouté des expressions de propriété.  
   
- Les expressions de propriété associées à différents types d'objets (gestionnaires de connexions, modules fournisseurs d'informations et énumérateurs) sont également chargées lorsque des méthodes spécifiques de ce type d'objet sont appelées. Par exemple, les propriétés des gestionnaires de connexions sont chargées avant que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ne crée une instance de la connexion.  
+ Les expressions de propriété associées à différents types d’objets (gestionnaires de connexions, modules fournisseurs d’informations et énumérateurs) sont également chargées quand des méthodes spécifiques de ce type d’objet sont appelées. Par exemple, les propriétés des gestionnaires de connexions sont chargées avant que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ne crée une instance de la connexion.  
   
  Les expressions de propriété sont chargées après le chargement des configurations de package. Par exemple, les variables sont d'abord mises à jour par leurs configurations, puis les expressions de propriété qui utilisent les variables sont évaluées et chargées. Cela signifie que les expressions de propriété utilisent toujours les valeurs de variables qui sont définies par des configurations.  
   
@@ -105,11 +104,11 @@ ms.locfileid: "48085729"
 |Énumérateurs Foreach|Après le chargement de configurations<br /><br /> Avant la validation<br /><br /> Avant l'exécution<br /><br /> Avant chaque énumération de la boucle|  
   
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>Utilisation d'expressions de propriété dans la boucle Foreach  
- Il est souvent utile d'implémenter une expression de propriété pour définir la valeur de la propriété `ConnectionString` des gestionnaires de connexions que les énumérateurs de boucles Foreach utilisent. Une fois que l’énumérateur a mappé sa valeur actuelle à une variable à chaque itération de la boucle, l’expression de propriété peut utiliser la valeur de cette variable pour mettre à jour la valeur de la `ConnectionString` propriété dynamiquement.  
+ Il est souvent utile d'implémenter une expression de propriété pour définir la valeur de la propriété `ConnectionString` des gestionnaires de connexions que les énumérateurs de boucles Foreach utilisent. Après que l’énumérateur a mappé sa valeur actuelle à une variable dans chaque itération de la boucle, l’expression de propriété peut utiliser la valeur de cette variable pour mettre à jour la valeur de la propriété `ConnectionString` de manière dynamique.  
   
- Si vous souhaitez utiliser des expressions de propriété avec la propriété `ConnectionString` des gestionnaires de connexions de fichiers, de fichiers multiples, de fichiers plats et de fichiers plats multiples qu'une boucle Foreach utilise, vous devez tenir compte de certains aspects. Un package peut être configuré pour exécuter plusieurs exécutables simultanément en attribuant à la propriété `MaxConcurrentExecutables` soit une valeur supérieure à 1, soit la valeur -1. La valeur -1 permet au nombre maximal d'exécutables exécutés simultanément d'être égal au nombre de processeurs plus deux. Pour éviter les conséquences négatives d'une exécution parallèle d'exécutables, la propriété `MaxConcurrentExecutables` doit avoir la valeur 1. Si `MaxConcurrentExecutables` n’est pas définie sur 1, la valeur de la `ConnectionString` propriété ne peut pas être garantie et les résultats sont imprévisibles.  
+ Si vous souhaitez utiliser des expressions de propriété avec la propriété `ConnectionString` des gestionnaires de connexions de fichiers, de fichiers multiples, de fichiers plats et de fichiers plats multiples qu'une boucle Foreach utilise, vous devez tenir compte de certains aspects. Un package peut être configuré pour exécuter plusieurs exécutables simultanément en attribuant à la propriété `MaxConcurrentExecutables` soit une valeur supérieure à 1, soit la valeur -1. La valeur -1 permet au nombre maximal d'exécutables exécutés simultanément d'être égal au nombre de processeurs plus deux. Pour éviter les conséquences négatives d'une exécution parallèle d'exécutables, la propriété `MaxConcurrentExecutables` doit avoir la valeur 1. Si `MaxConcurrentExecutables` n'a pas la valeur 1, la valeur de la propriété `ConnectionString` ne peut pas être garantie et les résultats sont imprévisibles.  
   
- Par exemple, imaginez une boucle Foreach qui énumère des fichiers dans un dossier, récupère les noms de fichiers, puis utilise une tâche d'exécution SQL pour insérer les noms de fichiers dans une table. Si `MaxConcurrentExecutables` n'a pas la valeur 1, des conflits d'écriture peuvent éventuellement survenir si les deux instances de la tâche d'exécution SQL tentent d'écrire simultanément dans la table.  
+ Par exemple, imaginez une boucle Foreach qui énumère des fichiers dans un dossier, récupère les noms de fichiers, puis utilise une tâche d'exécution SQL pour insérer les noms de fichiers dans une table. Si `MaxConcurrentExecutables` n'a pas la valeur 1, des conflits d'écriture peuvent éventuellement survenir si les deux instances de la tâche d'exécution SQL tentent d'écrire simultanément dans la table.  
   
 ## <a name="sample-property-expressions"></a>Exemples d'expressions de propriété  
  Les exemples d'expression suivants montrent comment utiliser les variables système, les opérateurs, les fonctions et les littéraux de chaîne dans les expressions de propriété.  
@@ -126,7 +125,7 @@ ms.locfileid: "48085729"
   
  Si le nom du package est EmailRowCountPP, s'il a été exécuté le 03/04/2005 et que la durée de l'exécution était de 9 secondes, l'expression s'évalue à la chaîne.  
   
- PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
+ PExpression-->Package : (EmailRowCountPP) Début : 3/4/2005 11:06:18 AM Durée : 9 secondes.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Expression de propriété pour le message d'un message électronique  
  L’expression de propriété suivante peut être utilisée pour définir la propriété MessageSource d’une tâche d’envoi de message. L'expression utilise une combinaison de littéraux de chaîne, de variables définies par l'utilisateur et l'opérateur de concaténation (+). Les variables définies par l’utilisateur sont appelées `nasdaqrawrows`, `nyserawrows`et `amexrawrows`. La chaîne "\n" indique un retour chariot.  
@@ -168,9 +167,9 @@ ms.locfileid: "48085729"
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   [Expression and Configuration Highlighter (projet CodePlex)](http://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [Expression and Configuration Highlighter (projet CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
--   Article technique, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  
+-   Article technique, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser des variables dans des packages](../use-variables-in-packages.md)  

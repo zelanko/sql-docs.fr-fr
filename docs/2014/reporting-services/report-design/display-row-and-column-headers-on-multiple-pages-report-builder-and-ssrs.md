@@ -11,12 +11,12 @@ ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 60bfb038d6712f44d6a0b5cd6cc57863f0f76ade
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 79565c22eab900eb152f8b5fa52748b3e5a09a16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48904979"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394250"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Afficher des en-têtes de ligne et de colonne sur plusieurs pages (Générateur de rapports et SSRS)
   Vous pouvez décider de répéter les en-têtes de ligne et de colonne sur chaque page pour une région de données de tableau matriciel qui couvre plusieurs pages. Une région de données de tableau matriciel peut être une table, une matrice ou une liste.  
@@ -25,7 +25,7 @@ ms.locfileid: "48904979"
   
  ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
- En-têtes de groupes de lignes et de colonnes sont créées automatiquement lorsque vous ajoutez des groupes à l’aide de l’Assistant nouveau tableau ou nouvelle matrice ou l’Assistant Nouveau graphique, en ajoutant des champs au volet regroupement ou à l’aide des menus contextuels. Si la région de données de tableau matriciel ne possède qu'un corps de tableau matriciel et aucun en-tête de groupe, les lignes et colonnes sont des membres du tableau matriciel.  
+ Les en-têtes de groupe de lignes et de colonnes sont créés automatiquement lorsque vous ajoutez des groupes à l'aide de l'Assistant Nouveau tableau ou nouvelle matrice ou de l'Assistant Nouveau graphique, en ajoutant des champs au volet Regroupement ou à l'aide des menus contextuels. Si la région de données de tableau matriciel ne possède qu'un corps de tableau matriciel et aucun en-tête de groupe, les lignes et colonnes sont des membres du tableau matriciel.  
   
  Pour les membres statiques, vous pouvez afficher les lignes supérieures adjacentes ou les colonnes latérales adjacentes sur plusieurs pages.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48904979"
   
 3.  Cliquez sur le membre statique correspondant au membre statique (ligne ou colonne) qui doit rester visible pendant le défilement. Le volet Propriétés affiche les propriétés du **membre du tableau matriciel** .  
   
-     Si vous ne voyez pas le volet propriétés, cliquez sur l'onglet de **Afficher** en haut de la fenêtre du Générateur de rapports puis cliquez sur **Propriétés**.  
+     Si vous ne voyez pas le volet Propriétés, cliquez sur l’onglet **Affichage** en haut de la fenêtre du Générateur de rapports, puis cliquez sur **Propriétés**.  
   
 4.  Dans le volet Propriétés, affectez à **RepeatOnNewPage** la valeur True.  
   

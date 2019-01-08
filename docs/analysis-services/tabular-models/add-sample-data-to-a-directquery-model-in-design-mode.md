@@ -1,5 +1,5 @@
 ---
-title: Ajoutez des exemples de données à un modèle DirectQuery en Mode Création | Documents Microsoft
+title: Ajoutez des exemples de données à un modèle Analysis Services DirectQuery en mode de conception | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ca4c4c2a00eed80e709602084cf5de427134977
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: db5ef518a715553b1eecbeeaf5a5ba248b365bf5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041633"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071536"
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Ajouter des exemples de données à un modèle DirectQuery en mode Création
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,17 +30,17 @@ Vous pouvez toutefois ajouter une plus petite quantité de données d’exemple 
 >  Vous pouvez toujours afficher un petit ensemble de lignes intégré pour chaque table, même en mode DirectQuery sur un modèle vide Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], cliquez sur **Table** > **Propriétés de la table** pour afficher le dataset de 50 lignes.  
   
 ## <a name="create-a-sample-partition"></a>Créer un exemple de partition
- Ces instructions sont pour les modèles tabulaires créé ou mis à niveau vers le niveau de compatibilité 1200 ou supérieur. Les modèles ayant des niveaux de compatibilité inférieurs utilisent des propriétés différentes pour obtenir des données mises en cache. Pour obtenir une description des propriété, consultez [Activer le mode DirectQuery dans SSMS](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) .  
+ Ces instructions sont adaptées aux modèles tabulaires créés au ou mis à niveau vers le niveau de compatibilité 1200 ou supérieur. Les modèles ayant des niveaux de compatibilité inférieurs utilisent des propriétés différentes pour obtenir des données mises en cache. Pour obtenir une description des propriété, consultez [Activer le mode DirectQuery dans SSMS](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) .  
   
 1.  Dans SQL Server Data Tools, dans le diagramme ou la vue de données, cliquez sur une table de faits pour ouvrir sa page de propriétés. Les tables de faits fournissent les mesures et les données numériques agrégées de votre modèle. Vous pouvez en avoir plusieurs.  
   
 2.  Cliquez sur **Table** > **Propriétés** pour ouvrir la boîte de dialogue Gestion des partitions.  
   
-    Notez la partition par défaut est **(requête directe) \<nom de table >**. Il s’agit de la vue complète des données. Ne supprimez pas cette partition. Cette partition sera utilisée lors du déploiement du modèle.  
+    Notez que la partition par défaut est **(requête directe) \<nom_table >**. Il s’agit de la vue complète des données. Ne supprimez pas cette partition. Cette partition sera utilisée lors du déploiement du modèle.  
   
 4.  Sélectionnez la partition, puis cliquez sur **Copier**.  
 
-    Cela crée une copie de la partition par défaut. Toutefois, cette copie contiendra les exemples de données que vous spécifiez dans une requête. Par exemple :
+    Cela crée une copie de la partition par défaut. Toutefois, cette copie contiendra les exemples de données que vous spécifiez dans une requête. Exemple :
   
      ![ssas_tabularproject_copypartition](../../analysis-services/tabular-models/media/ssas-tabularproject-copypartition.jpg "ssas_tabularproject_copypartition")  
   

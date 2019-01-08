@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 872d886f8e38d408b39387329f13c120d1dc5744
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9b405ee057e843f734310dbf134465d03575efc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152189"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364021"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>Implémenter une transformation de recherche en mode Cache complet à l'aide du gestionnaire de connexions du cache
   Vous pouvez configurer la transformation de recherche afin qu'elle utilise le mode Cache complet et un gestionnaire de connexions du cache. En mode Cache complet, le dataset de référence est chargé dans le cache avant l'exécution de la transformation de recherche.  
@@ -50,7 +49,7 @@ ms.locfileid: "48152189"
   
 -   Configurez les gestionnaires de connexions du cache des différents packages afin qu'ils utilisent le même fichier cache.  
   
- Pour plus d'informations, consultez les rubriques suivantes :  
+ Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Transformation du cache](../data-flow/transformations/cache-transform.md)  
   
@@ -58,11 +57,11 @@ ms.locfileid: "48152189"
   
 -   [Contraintes de précédence](../control-flow/precedence-constraints.md)  
   
--   [Tâche d’exécution de package](../control-flow/execute-package-task.md)  
+-   [Tâche d'exécution de package](../control-flow/execute-package-task.md)  
   
 -   [Conteneur de séquences](../control-flow/sequence-container.md)  
   
- Pour savoir comment implémenter la transformation de recherche en mode Cache complet à l’aide du gestionnaire de connexions du cache, consultez la vidéo [Procédure : implémenter une transformation de recherche en mode Cache complet (Vidéo liée à SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131031).  
+ Pour une vidéo qui montre comment implémenter une transformation de recherche en mode Cache complet à l’aide du Gestionnaire de connexions du Cache, consultez [Comment : Implémenter une Transformation de recherche en Mode Cache complet (vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Pour implémenter une transformation de recherche en mode Cache complet dans un seul package en utilisant le gestionnaire de connexions du cache et une source de données dans le flux de données  
   
@@ -281,7 +280,7 @@ ms.locfileid: "48152189"
 9. Exécutez le package.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Implémenter une transformation de recherche en mode Cache complet à l’aide du gestionnaire de connexions OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Implémenter une transformation de recherche en mode Cache complet à l'aide du gestionnaire de connexions OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implémenter une recherche en mode Aucun cache ou Cache partiel](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformations Integration Services](../data-flow/transformations/integration-services-transformations.md)  
   

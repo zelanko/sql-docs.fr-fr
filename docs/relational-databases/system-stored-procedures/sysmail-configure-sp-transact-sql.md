@@ -18,12 +18,12 @@ ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e44edb404d21e3be482bf83cf6db37a522cfa36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abe47df497b61d35c66bfebfb3ba5a75fad0e183
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594828"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588553"
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [**@parameter_name** =] **'***nom_paramètre***'**  
+ [**@parameter_name** =] **'**_nom_paramètre_**'**  
  Nom du paramètre à modifier.  
   
- [**@parameter_value** =] **'***parameter_value***'**  
+ [**@parameter_value** =] **'**_parameter_value_**'**  
  Nouvelle valeur du paramètre.  
   
- [**@description** =] **'***description***'**  
+ [**@description** =] **'**_description_**'**  
  Description du paramètre.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -73,7 +73,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
   
  La procédure stockée **sysmail_configure_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 80334de2-17c1-43c9-951e-21a9f864e9cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 946228116a33e57f118c1205bd2b4c24cb87441b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 247d422febda291c8ecc4ef2abeebe992b26dbd8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064529"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784871"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-designer"></a>Autorisations de connexion SQL Server requises pour le concepteur CDC
   La console du concepteur CDC nécessite des informations de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour effectuer ses tâches. Cette rubrique décrit les informations qui peuvent être fournies dans la boîte de dialogue **Connexion à SQL Server** pour configurer la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,7 +35,7 @@ ms.locfileid: "48064529"
 |Modifier la configuration et ajouter/supprimer des instances de capture.|`db_datareader` et `db_datawriter` sur MSXDBCDC<br /><br /> `db_owner` sur la base de données CDC associée|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accéder à la Console du concepteur CDC](access-the-cdc-designer-console.md)   
- [Connexion SQL Server pour la création d’une instance](sql-server-connection-for-instance-creation.md)  
+ [Accéder à la console du concepteur CDC](access-the-cdc-designer-console.md)   
+ [Connexion SQL Server pour la création d'une instance](sql-server-connection-for-instance-creation.md)  
   
   

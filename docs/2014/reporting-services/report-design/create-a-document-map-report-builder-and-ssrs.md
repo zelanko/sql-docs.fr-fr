@@ -11,17 +11,17 @@ ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 15ffda591bf3a27ff5599428abb63b652b61d8bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc01da68aeaa393631aca6146a41e6eb88ecb14e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073469"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376631"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Créer un explorateur de documents (Générateur de rapports et SSRS)
   Un explorateur de documents fournit un ensemble de liens de navigation permettant d'accéder aux éléments de rapport dans un rapport rendu. Lorsque vous visualisez un rapport qui comprend un explorateur de document, un volet latéral distinct apparaît en regard du rapport. L'utilisateur peut cliquer sur les liens de l'explorateur de documents pour accéder à la page du rapport qui affiche l'élément en question. Les sections et les groupes du rapport sont organisés en une hiérarchie de liens. Lorsque vous cliquez sur un de ses éléments, le rapport est actualisé de façon à afficher la zone du rapport correspondant à l'élément sélectionné.  
   
- Pour ajouter des liens dans l’Explorateur de documents, vous définissez le `DocumentMapLabel` propriété de l’élément de rapport au texte que vous créez ou une expression qui prend la valeur du texte que vous souhaitez afficher dans l’Explorateur de documents. Vous pouvez également ajouter à l'explorateur de documents des valeurs uniques pour un groupe de tables ou de matrices. Par exemple, pour un groupe se basant sur la couleur, chaque couleur unique est un lien vers la page du rapport qui affiche l'instance de groupe correspondant à cette couleur.  
+ Pour ajouter des liens à l'explorateur de documents, vous affectez à la propriété `DocumentMapLabel` de l'élément de rapport du texte que vous créez ou une expression dont le résultat est le texte que vous souhaitez afficher dans l'explorateur de documents. Vous pouvez également ajouter à l'explorateur de documents des valeurs uniques pour un groupe de tables ou de matrices. Par exemple, pour un groupe se basant sur la couleur, chaque couleur unique est un lien vers la page du rapport qui affiche l'instance de groupe correspondant à cette couleur.  
   
  Vous pouvez également créer une URL d’accès à un rapport qui remplace l’affichage de l’explorateur de documents, ce qui permet d’exécuter le rapport sans afficher l’explorateur de documents, puis cliquer sur le bouton **Afficher / masquer l’explorateur de documents** dans la barre d’outils de la visionneuse de rapports pour activer/désactiver l’affichage.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "48073469"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="DocMapRenderExtensions"></a> Explorateurs de document et extensions de rendu  
- L'explorateur de document est destiné à être utilisé dans l'extension de rendu HTML, par exemple dans l'Aperçu ou la Visionneuse de rapports. Les autres extensions de rendu articulent un explorateur de document différemment :  
+ L’explorateur de document est destiné à être utilisé dans l’extension de rendu HTML, par exemple dans l’Aperçu ou la Visionneuse de rapports. Les autres extensions de rendu articulent un explorateur de document différemment :  
   
 -   L'extension PDF restitue un plan de document sous la forme du volet Signets.  
   
@@ -113,9 +113,9 @@ ms.locfileid: "48073469"
 4.  Collez l'URL dans le Gestionnaire de rapports et appuyez sur ENTRÉE. Le rapport est exécuté et l'explorateur de documents est masqué.  
   
 > [!NOTE]  
->  Pour plus d'informations sur le téléchargement de ces exemples de rapports, consultez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Exemples de rapports du Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Pour plus d'informations sur le téléchargement de ces exemples de rapports, consultez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Exemples de rapports du Générateur de rapports et du Concepteur de rapports](https://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
->  Pour plus d'informations, consultez « Accès URL » dans la [documentation de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
+>  Pour plus d'informations, consultez « Accès URL » dans la [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
   
  
   

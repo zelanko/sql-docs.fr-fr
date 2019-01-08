@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8d334a319807692f099056f0f350c395ecbeeb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59650edbef55b7bb433c6003c9ddc0f203ca7c5e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120109"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780691"
 ---
 # <a name="index-element-dta"></a>Index, élément (Assistant Paramétrage de base de données)
   Contient les informations sur un index que vous souhaitez créer ou supprimer pour une configuration spécifiée par l'utilisateur.  
@@ -41,8 +40,8 @@ ms.locfileid: "48120109"
   
 |Attribut d'index|Type de données|Description|  
 |---------------------|---------------|-----------------|  
-|`Clustered`|`boolean`|Facultatif. Spécifie un index cluster. Défini sur « true » ou « false », par exemple :<br /><br /> `<Index Clustered="true">`<br /><br /> Par défaut, cet attribut est défini sur « false ».|  
-|`Unique`|`boolean`|Facultatif. Spécifie un index unique Défini sur « true » ou « false », par exemple :<br /><br /> `<Index Unique="true">`<br /><br /> Par défaut, cet attribut est défini sur « false ».|  
+|`Clustered`|`boolean`|Facultatif. Spécifie un index cluster. Défini sur « true » ou « false », par exemple :<br /><br /> `<Index Clustered="true">`<br /><br /> Par défaut, cet attribut est défini sur « false ».|  
+|`Unique`|`boolean`|Facultatif. Spécifie un index unique Défini sur « true » ou « false », par exemple :<br /><br /> `<Index Unique="true">`<br /><br /> Par défaut, cet attribut est défini sur « false ».|  
 |`Online`|`boolean`|Facultatif. Spécifie un index qui peut effectuer des opérations alors que le serveur est connecté, ce qui nécessite de l'espace disque temporaire. Défini sur « true » ou « false », par exemple :<br /><br /> `<Index Online="true">`<br /><br /> Par défaut, cet attribut est défini sur « false ».<br /><br /> Pour plus d'informations, consultez [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).|  
 |`IndexSizeInMB`|`double`|Facultatif. Spécifie la taille maximale, en mégaoctets, de l'index, par exemple :<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> Aucun paramètre par défaut.|  
 |`NumberOfRows`|`integer`|Facultatif. Simule différentes tailles d'index, ce qui simule différentes tailles de tables, par exemple :<br /><br /> `<Index NumberOfRows="3000">`<br /><br /> Aucun paramètre par défaut.|  
@@ -66,8 +65,8 @@ ms.locfileid: "48120109"
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Créer l’élément &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
-|**Éléments enfants**|[Nom d’élément pour l’Index &#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Élément de colonne pour les Index &#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> `PartitionColumn` élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> [Élément de groupe de fichiers pour les Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> `PercentUsage` élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
+|**Élément parent**|[Create, élément &#40;Assistant Paramétrage de base de données&#41;](create-element-dta.md)<br /><br /> `Drop` élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
+|**Éléments enfants**|[Name, élément pour les index &#40;Assistant Paramétrage de base de données&#41;](name-element-for-index-dta.md)<br /><br /> [Column, élément pour les index &#40;Assistant Paramétrage de base de données&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> `PartitionColumn` élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> [Filegroup, élément pour les index &#40;Assistant Paramétrage de base de données&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> `PercentUsage` élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
   
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez l’[Exemple de fichier d’entrée XML avec une configuration spécifiée par l’utilisateur &#40;Assistant Paramétrage de base de données&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

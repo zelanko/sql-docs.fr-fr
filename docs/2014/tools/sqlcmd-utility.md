@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -27,12 +26,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fe44b790fbf99811761041f4b81eeb3b48e96da
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d128085012c0ef3a9bc58b147f982a26d2c094b8
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641536"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591923"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   Le `sqlcmd` utilitaire vous permet d’entrer [!INCLUDE[tsql](../includes/tsql-md.md)] script, instructions et procédures système de fichiers à l’invite de commandes, dans **éditeur de requête** en mode SQLCMD, dans un fichier de script Windows ou dans une étape de travail de système d’exploitation (Cmd.exe) d’un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Travail de l’agent. Cet utilitaire utilise ODBC pour exécuter des traitements [!INCLUDE[tsql](../includes/tsql-md.md)].  
@@ -81,10 +80,10 @@ ms.locfileid: "51641536"
  **-C**  
  Ce commutateur est utilisé par le client pour le configurer afin d'approuver implicitement le certificat de serveur sans validation. Cette option est équivalente à l'option ADO.NET `TRUSTSERVERCERTIFICATE = true`.  
   
- **-d** *nom_base_de_données*  
+ **-d** _nom_base_de_données_  
  Problèmes un `USE` *db_name* instruction lorsque vous démarrez `sqlcmd`. Cette option définit la variable de script `sqlcmd` SQLCMDDBNAME. Celle-ci spécifie la base de données initiale. La valeur par défaut est la propriété de base de données par défaut de votre connexion. Si la base de données n'existe pas, un message d'erreur est généré et `sqlcmd` se termine.  
   
- **-l** *délai_d’attente_connexion*  
+ **-l** _délai_d’attente_connexion_  
  Spécifie le nombre de secondes au terme duquel une connexion `sqlcmd` au pilote ODBC expire lorsque vous tentez d'établir une connexion à un serveur. Cette option définit la variable de script `sqlcmd` SQLCMDLOGINTIMEOUT. Le délai d'attente par défaut pour la connexion à `sqlcmd` est de huit secondes. Le délai d'attente de la connexion doit être un nombre compris entre 0 et 65534. Si la valeur fournie n'est pas numérique ou n'est pas comprise dans cet intervalle, `sqlcmd` génère un message d'erreur. Une valeur de 0 spécifie un délai d'attente infini.  
   
  **-E**  
@@ -92,19 +91,19 @@ ms.locfileid: "51641536"
   
  L’option **-E** ignore les éventuels paramètres de variables d’environnement de nom d’utilisateur et de mot de passe, tels que SQLCMDPASSWORD. Si l’option **-E** est utilisée avec l’option **-U** ou **-P**, un message d’erreur est généré.  
   
- **-H** *nom_de_la_station_de_travail*  
+ **-H** _nom_de_la_station_de_travail_  
  Nom d'une station de travail. Cette option définit la variable de script `sqlcmd` SLCMDWORKSTATION. Le nom de la station de travail est indiqué dans la colonne **hostname**de l’affichage catalogue **sys.processes** et peut être retourné à l’aide de la procédure stockée **sp_who**. Si cette option n'est pas spécifiée, le nom de l'ordinateur actif est utilisé par défaut. Ce nom peut être utilisé pour identifier différentes sessions `sqlcmd`.  
   
- **-K** *application_intent*  
- Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur actuellement prise en charge est **ReadOnly**. Si **-K** n’est pas spécifié, l’utilitaire sqlcmd ne prend pas en charge la connectivité à un réplica secondaire dans un groupe de disponibilité AlwaysOn. Pour plus d’informations, consultez [secondaires actifs : réplicas secondaires lisibles](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ **-K** _application_intent_  
+ Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur actuellement prise en charge est **ReadOnly**. Si **-K** n’est pas spécifié, l’utilitaire sqlcmd ne prend pas en charge la connectivité à un réplica secondaire dans un groupe de disponibilité AlwaysOn. Pour plus d’informations, consultez [secondaires actifs : Réplicas secondaires lisibles](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  `-M` *multisubnet_failover*  
- Spécifiez toujours `-M` lors de la connexion à l'écouteur de groupe de disponibilité d'un groupe de disponibilité [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou d'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. `-M` fournit une détection plus rapide du serveur actif et une connexion à celui-ci. Si `–M` n'est pas spécifié, `-M` est désactivé. Pour plus d’informations sur [!INCLUDE[ssHADR](../includes/sshadr-md.md)], consultez [écouteurs de groupe de disponibilité, connectivité Client et basculement d’Application &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [la création et Configuration des groupes de disponibilité &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de basculement et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), et [secondaires actifs : réplicas secondaires lisibles ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
+ Spécifiez toujours `-M` lors de la connexion à l'écouteur de groupe de disponibilité d'un groupe de disponibilité [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou d'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. `-M` fournit une détection plus rapide du serveur actif et une connexion à celui-ci. Si `-M` n'est pas spécifié, `-M` est désactivé. Pour plus d’informations sur [!INCLUDE[ssHADR](../includes/sshadr-md.md)], consultez [écouteurs de groupe de disponibilité, connectivité Client et basculement d’Application &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [la création et Configuration des groupes de disponibilité &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de basculement et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), et [secondaires actifs : Réplicas secondaires lisibles](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
   
  **-N**  
  Ce commutateur est utilisé par le client pour demander une connexion chiffrée.  
   
- **-P** *password*  
+ **-P** _password_  
  Spécifie le mot de passe pour l'utilisateur. Les mots de passe respectent la casse. Si l’option-u est utilisée et la **-P** option n’est pas utilisée, et la variable d’environnement SQLCMDPASSWORD n’a pas été définie, `sqlcmd` invite l’utilisateur à un mot de passe. Si le **-P** option est utilisée à la fin de l’invite de commandes sans mot de passe `sqlcmd` utilise le mot de passe par défaut (NULL).  
   
 > [!IMPORTANT]  
@@ -136,19 +135,19 @@ ms.locfileid: "51641536"
   
  Si l’option **-P** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
   
- **S -** [*protocole*:]*server*[**\\***nom_instance*] [**, ***port*]  
+ **-S** [*protocole* :]*serveur*[**\\**_nom_instance_][**,**_port_]  
  Spécifie l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à laquelle établir une connexion. Cette option définit la variable de script `sqlcmd` SQLCMDSERVER.  
   
- Spécifiez *nom_serveur* pour vous connecter à l’instance par défaut du [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur cet ordinateur serveur. Spécifiez *nom_serveur* [**\\*** nom_instance* ] pour vous connecter à une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur ce serveur. Si aucun ordinateur serveur n'est spécifié, l'utilitaire `sqlcmd` se connecte à l'instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l'ordinateur local. Cette option est indispensable lorsque vous exécutez `sqlcmd` à partir d’un ordinateur distant sur le réseau.  
+ Spécifiez *nom_serveur* pour vous connecter à l’instance par défaut du [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur cet ordinateur serveur. Spécifiez *nom_serveur* [ **\\**_nom_instance_ ] pour vous connecter à une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur cet ordinateur serveur. Si aucun ordinateur serveur n'est spécifié, l'utilitaire `sqlcmd` se connecte à l'instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l'ordinateur local. Cette option est indispensable lorsque vous exécutez `sqlcmd` à partir d’un ordinateur distant sur le réseau.  
   
  *protocole* peut être `tcp` (TCP/IP), `lpc` (mémoire partagée), ou `np` (canaux nommés).  
   
- Si vous ne spécifiez pas un *nom_serveur* [**\\*** nom_instance* ] lorsque vous démarrez `sqlcmd`, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recherche et utilise la variable d’environnement SQLCMDSERVER.  
+ Si vous ne spécifiez pas un *nom_serveur* [ **\\** _nom_instance_ ] lorsque vous démarrez `sqlcmd`, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recherche et utilise le Variable d’environnement SQLCMDSERVER.  
   
 > [!NOTE]  
 >  La variable d'environnement OSQLSERVER a été conservée pour assurer une compatibilité descendante. La variable d’environnement SQLCMDSERVER est prioritaire sur la variable d’environnement OSQLSERVER ; Cela signifie que `sqlcmd` et **osql** peuvent être utilisés côté à l’autre sans interférence et les anciens scripts continuent à fonctionner.  
   
- **-U** *ID_connexion*  
+ **-U** _ID_connexion_  
  ID de connexion de l'utilisateur.  
   
 > [!NOTE]  
@@ -156,20 +155,20 @@ ms.locfileid: "51641536"
   
  Si ni le **- U** option ni le **-P** option est spécifiée, `sqlcmd` tente de se connecter à l’aide de [!INCLUDE[msCoName](../includes/msconame-md.md)] mode d’authentification Windows. L'authentification est basée sur le compte Windows de l'utilisateur exécutant `sqlcmd`.  
   
- Si l’option **-U** est utilisée avec l’option **-E** (décrite plus loin dans cette rubrique), un message d’erreur est généré. Si l’option **–U** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
+ Si l’option **-U** est utilisée avec l’option **-E** (décrite plus loin dans cette rubrique), un message d’erreur est généré. Si l’option **-U** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
   
- **-z** *nouveau_mot_de_passe*  
+ **-z** _nouveau_mot_de_passe_  
  Modifier le mot de passe :  
   
  `sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd`  
   
- **-Z** *nouveau_mot_de_passe*  
+ **-z** _nouveau_mot_de_passe_  
  Modifier le mot de passe et quitter :  
   
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **Options d’entrée/sortie**  
-  **-f** *codepage* | **i:***codepage*[**,o:***codepage*] | **o:***codepage*[**,i:*** codepage*]  
+  **-f** _page_de_codes_ | **i:**_page_de_codes_[**,o:**_page_de_codes_] | **o:**_page_de_codes_[**,i:**_page_de_codes_]  
  Spécifie les pages de codes d'entrée et de sortie. Le numéro de pages de codes est une valeur numérique spécifiant une page de codes Windows installée.  
   
  Règles de conversion des pages de code :  
@@ -184,7 +183,7 @@ ms.locfileid: "51641536"
   
  Entrez `chcp` à l’invite de commandes pour vérifier la page de codes de Cmd.exe.  
   
- **i -** *input_file*[**, *** input_file2*...]  
+ **-i** _fichier_entrée_[**,**_fichier_entrée2_...]  
  Identifie le fichier contenant un traitement d'instructions SQL ou des procédures stockées. Plusieurs fichiers peuvent être spécifiés, ils sont lus et traités dans l'ordre. N'utilisez pas d'espace entre les noms de fichiers. `sqlcmd` vérifie d'abord que tous les fichiers spécifiés existent. Si un ou plusieurs fichiers n'existent pas, `sqlcmd` se termine. Les options -i et -Q/-q s'excluent mutuellement.  
   
  Exemples de chemins :  
@@ -197,9 +196,9 @@ ms.locfileid: "51641536"
   
  Les chemins d'accès aux fichiers comportant des espaces doivent être placés entre guillemets.  
   
- Cette option peut être utilisée plusieurs fois : **-i***input_file* **-I***I input_file.*  
+ Cette option peut être utilisée plusieurs fois : **-i**_fichier_entrée_ **-I**_I fichier_entrée._  
   
- **-o** *output_file*  
+ **-o** _output_file_  
  Identifie le fichier recevant une sortie de `sqlcmd`.  
   
  Si **-u** est spécifié, le *fichier_sortie* est stocké au format Unicode. Si le nom de fichier n'est pas valide, un message d'erreur est généré et `sqlcmd` se termine. `sqlcmd` ne prend pas en charge l'écriture simultanée de plusieurs processus `sqlcmd` dans le même fichier. La sortie fichier sera endommagée ou incorrecte. Pour plus d’informations sur les formats de fichier, consultez le commutateur **-f** . Ce fichier sera créé s'il n'existe pas. Un fichier portant le même nom qui provient d'une session `sqlcmd` antérieure sera remplacé. Le fichier spécifié ici n'est pas le fichier **stdout** . Si un fichier **stdout** est spécifié, ce fichier ne sera pas utilisé.  
@@ -218,7 +217,7 @@ ms.locfileid: "51641536"
  Redirige la sortie des messages d’erreur à l’écran (**stderr**). Si vous n'indiquez aucun paramètre ou si vous spécifiez la valeur **0**, seuls les messages d'erreur dotés d'un degré de gravité égal ou supérieur à 11 sont redirigés. Si vous indiquez la valeur **1**, tous les messages émis, y compris PRINT, sont redirigés. Est sans effet si vous utilisez - o. Par défaut, les messages sont envoyés à **stdout**.  
   
  **-R**  
- Permet à `sqlcmd` de localiser les colonnes numérique, de devise, de date et heure extraites de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en fonction des paramètres régionaux du client. Par défaut, ces colonnes sont affichées à l'aide des paramètres régionaux du serveur.  
+ Entraîne `sqlcmd` à localiser numérique, devise, date et récupérées à partir des colonnes de temps [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] selon les paramètres régionaux du client. Par défaut, ces colonnes sont affichées à l'aide des paramètres régionaux du serveur.  
   
  **-u**  
  Spécifie le stockage de *fichier_sortie* au format Unicode, quel que soit le format de *fichier_entrée*.  
@@ -230,7 +229,7 @@ ms.locfileid: "51641536"
  **-I**  
  Attribue la valeur ON à l'option de connexion SET QUOTED_IDENTIFIER. La valeur OFF est choisie par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).  
   
- **-q"** *requête cmdline* **"**  
+ **-q"** _requête cmdline_ **"**  
  Exécute une requête au démarrage de `sqlcmd`, mais ne quitte pas `sqlcmd` au terme de l'exécution de la requête. Il est possible d'exécuter des requêtes séparées par plusieurs points-virgules. Placez la requête entre guillemets, comme dans l'exemple suivant.  
   
  À l'invite de commandes, tapez :  
@@ -244,7 +243,7 @@ ms.locfileid: "51641536"
   
  Si l'option `-b` est spécifiée avec cette option, `sqlcmd` se termine avec une erreur. L'option `-b` est traitée ultérieurement dans cette rubrique.  
   
- **-Q"** *requête cmdline* **"**  
+ **-Q"** _requête cmdline_ **"**  
  Exécute une requête lorsque `sqlcmd` démarre, puis quitte immédiatement `sqlcmd`. Il est possible d'exécuter des requêtes séparées par plusieurs points-virgules.  
   
  Placez la requête entre guillemets, comme dans l'exemple suivant.  
@@ -260,14 +259,14 @@ ms.locfileid: "51641536"
   
  Si l'option `-b` est spécifiée avec cette option, `sqlcmd` se termine avec une erreur. L'option `-b` est traitée ultérieurement dans cette rubrique.  
   
- **-t** *délai_expiration_requête*  
+ **-t** _délai_expiration_requête_  
  Spécifie le nombre de secondes accordées pour l'exécution d'une commande (ou une instruction SQL). Cette option définit la variable de script `sqlcmd` SQLCMDSTATTIMEOUT. Si une valeur *délai_expiration_requête* n’est pas spécifiée, la commande n’a pas de délai d’expiration. La valeur de *expiration**requête* doit être un nombre compris entre 1 et 65 534. Si la valeur fournie n'est pas numérique ou n'est pas comprise dans cet intervalle, `sqlcmd` génère un message d'erreur.  
   
 > [!NOTE]  
 >  La valeur de délai d’expiration réelle peut différer de quelques secondes de la valeur *délai_expiration* .  
   
- **-vvar =**  *valeur*[ **var =** *valeur*...]  
- Crée un `sqlcmd`variable de script qui peut être utilisé dans un `sqlcmd` script. Placez la valeur entre guillemets si elle contient des espaces. Vous pouvez spécifier plusieurs ***var***=**»*`values`*»** valeurs. Si l'une des valeurs spécifiées comporte des erreurs, `sqlcmd` génère un message d'erreur et se termine.  
+ **-vvar =** _valeur_[ **var =** _valeur_...]  
+ Crée un `sqlcmd`variable de script qui peut être utilisé dans un `sqlcmd` script. Placez la valeur entre guillemets si elle contient des espaces. Vous pouvez spécifier plusieurs  **_var_**=**»*`values`*»** valeurs. Si l'une des valeurs spécifiées comporte des erreurs, `sqlcmd` génère un message d'erreur et se termine.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -277,22 +276,22 @@ ms.locfileid: "51641536"
  Permet à `sqlcmd` d'ignorer les variables de script. Cela s’avère utile quand un script contient de nombreuses instructions INSERT pouvant contenir des chaînes dotées du même format que des variables régulières, par exemple $(*nom_variable*).  
   
  **Options relatives à la mise en forme**  
-  **-h** *headers*  
+  **-h** _headers_  
  Spécifie le nombre de lignes à imprimer entre les en-têtes de colonne. Par défaut, les en-têtes ne sont imprimés qu'une fois pour chaque jeu de résultats d'une requête. Cette option définit la variable de script `sqlcmd` SQLCMDHEADERS. Utilisez **-1** pour indiquer qu’aucun en-tête ne doit être imprimé. En présence d'une valeur non valide, `sqlcmd` génère un message d'erreur et se termine.  
   
  **-k** [**1** | **2**]  
  Supprime de la sortie tous les caractères de contrôle, par exemple les tabulations et les caractères de nouvelle ligne. Cela préserve la mise en forme des colonnes lorsque des données sont retournées. Si 1 est spécifié, chaque caractère de contrôle est remplacé par un espace. Si 2 est spécifié, les caractères de contrôle consécutifs sont remplacés par un espace. **-k** est identique à **-k1**.  
   
- **-s** *col_separator*  
+ **-s** _col_separator_  
  Spécifie le caractère de séparation des colonnes. Le caractère espace est utilisé par défaut. Cette option définit la variable de script `sqlcmd` SQLCMDCOLSEP. Pour utiliser des caractères ayant une signification spéciale pour le système d'exploitation, tels que le « et » commercial (&) ou le point-virgule (;), placez ce caractère entre guillemets ("). Le séparateur des colonnes peut être n'importe quel caractère 8 bits.  
   
- **-w** *column_width*  
+ **-w** _column_width_  
  Spécifie la largeur d'écran pour la sortie. Cette option définit la variable de script `sqlcmd` SQLCMDCOLWIDTH. La largeur de colonne doit être un nombre supérieur à 8 et inférieur à 65536. Si la largeur de colonne spécifiée ne tombe pas dans cette plage, `sqlcmd` génère un message d'erreur. La largeur par défaut est de 80 caractères. Lorsque la longueur d'une ligne de sortie est supérieure à la largeur de colonne spécifiée, elle revient à la ligne suivante.  
   
  **-W**  
  Cette option supprime les espaces à droite d'une colonne. Utilisez cette option avec l’option **-s** lors de la préparation de données à exporter dans une autre application. Elle ne peut pas être utilisée avec les options **-y** ou **-Y** .  
   
- **-y** *largeur_affichage_type_longueur_variable*  
+ **-y** _largeur_affichage_type_longueur_variable_  
  Définit la variable de script `sqlcmd` SQLCMDMAXVARTYPEWIDTH. La valeur par défaut est 256. Elle limite le nombre de caractères retournés pour les types de données de longueur variable importante :  
   
 -   `varchar(max)`  
@@ -318,7 +317,7 @@ ms.locfileid: "51641536"
 > [!IMPORTANT]  
 >  Utilisez l’option **-y 0** avec une extrême prudence, car elle peut créer de graves problèmes de performances sur le serveur et le réseau, en fonction de la taille des données retournées.  
   
- **-Y** *largeur_affichage_type_longueur_fixe*  
+ **-Y** _largeur_affichage_type_longueur_fixe_  
  Définit la variable de script `sqlcmd` SQLCMDMAXFIXEDTYPEWIDTH. La valeur par défaut est 0 (illimitée). Limite le nombre de caractères retournés pour les types de données suivants :  
   
 -   `char(` *n* `)`, où 1 < = n < = 8000  
@@ -339,7 +338,7 @@ ms.locfileid: "51641536"
   
  Si le script `sqlcmd` contient un commentaire incorrect, une erreur de syntaxe ou si une variable de script est manquante, la valeur ERRORLEVEL retournée est 1.  
   
- **-m** *error_level*  
+ **-m** _error_level_  
  Détermine les messages d’erreur envoyés à **stdout**. Les messages assortis d'un niveau de gravité supérieur ou égal à ce niveau sont envoyés. Quand cette valeur est égale à **-1**, tous les messages, notamment les messages d’information, sont envoyés. Les espaces ne sont pas autorisés entre **-m** et **-1**. Par exemple, **-m-1** est valide, mais **-m-1** ne l’est pas.  
   
  Cette option définit également la variable de script `sqlcmd` SQLCMDERRORLEVEL. La valeur par défaut de cette variable est 0.  
@@ -348,10 +347,10 @@ ms.locfileid: "51641536"
  Contrôle le niveau de gravité utilisé pour définir la variable ERRORLEVEL. Les messages d'erreur assortis de niveaux de gravité supérieurs ou égaux à cette valeur définissent ERRORLEVEL. Les valeurs inférieures à 0 sont signalées comme étant 0. La valeur de la variable ERRORLEVEL peut être testée au moyen de fichiers de commandes et CMD.  
   
  **Options diverses**  
-  **-a** *packet_size*  
+  **-a** _packet_size_  
  Demande un paquet d'une taille différente. Cette option définit la variable de script `sqlcmd` SQLCMDPACKETSIZE. *taille_paquet* doit être une valeur comprise entre 512 et 32767. La valeur par défaut est de 4096. Une plus grande taille de paquet peut améliorer les performances d'exécution des scripts comportant un grand nombre d'instructions SQL entre des commandes GO. Vous pouvez demander une taille de paquet plus élevée. Cependant, si la requête est refusée, `sqlcmd` adopte la taille de paquet par défaut du serveur comme taille de paquet.  
   
- **-c** *terminateur_traitement*  
+ **-c** _terminateur_traitement_  
  Spécifie le terminateur de traitement. Par défaut, il faut entrer la commande « GO » sur une ligne isolée pour terminer une commande et la soumettre à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Si vous modifiez de terminateur de traitement, n'utilisez ni les mots clé [!INCLUDE[tsql](../includes/tsql-md.md)] ni les caractères ayant une signification particulière pour le système d'exploitation, qu'ils soient ou non précédés d'une barre oblique inverse  
   
  **-L**[**c**]  
@@ -392,7 +391,7 @@ ms.locfileid: "51641536"
   
 -   **ED**  
   
--   **!!** *commande*  
+-   **!!** _commande_  
   
  Si l'option `-X` est spécifiée, elle empêche le passage des variables d'environnement à `sqlcmd`. Elle interdit également l'exécution du script de démarrage spécifié au moyen de la variable de script SQLCMDINI. Pour plus d’informations sur `sqlcmd` variables de script, consultez [utiliser sqlcmd avec des Variables de script](../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
@@ -428,7 +427,7 @@ ms.locfileid: "51641536"
   
 ## <a name="sqlcmd-scripting-variables"></a>Variables de script sqlcmd  
   
-|Variable|Commutateur associé|R/W (Lecture/écriture)|Valeur par défaut|  
+|Variable|Commutateur associé|R/W (Lecture/écriture)|Par défaut|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
@@ -436,7 +435,7 @@ ms.locfileid: "51641536"
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W (Lecture/écriture)|"8" (secondes)|  
-|SQLCMDSTATTIMEOUT|-t|R/W (Lecture/écriture)|"0" = Attendre indéfiniment|  
+|SQLCMDSTATTIMEOUT|-T|R/W (Lecture/écriture)|"0" = Attendre indéfiniment|  
 |SQLCMDHEADERS|-H|R/W (Lecture/écriture)|"0"|  
 |SQLCMDCOLSEP|-S|R/W (Lecture/écriture)|« »|  
 |SQLCMDCOLWIDTH|-w|R/W (Lecture/écriture)|"0"|  
@@ -505,7 +504,7 @@ ms.locfileid: "51641536"
   
  Les noms de variable ne respectent pas la casse.  
   
- Les variables de script peuvent être définies comme suit :  
+ Les variables de script peuvent être définies comme suit :  
   
 -   Implicitement à l'aide d'une option de ligne de commande. Par exemple, le **-l** option définit la SQLCMDLOGINTIMEOUT `sqlcmd` variable.  
   
@@ -532,7 +531,7 @@ ms.locfileid: "51641536"
   
  **Commandes de sortie**  
   **:Error**   
- ***\<***  *nom_fichier*  ***>|* STDERR|STDOUT**  
+ **_\<_** _nom de fichier_ **_>|_ STDERR | STDOUT**  
  Redirige l’ensemble de la sortie d’erreur dans le fichier spécifié par *nom_fichier*vers **stderr** ou vers **stdout**. La commande **Error** peut apparaître plusieurs fois dans un script. Par défaut, la sortie d'erreur est envoyée à **stderr**.  
   
  *nom de fichier*  
@@ -544,10 +543,10 @@ ms.locfileid: "51641536"
  **STDOUT**  
  Fait basculer la sortie d’erreur vers le flux **stdout** . Si cette destination a été redirigée, la cible de cette redirection reçoit la sortie d'erreur.  
   
- **:Out \<** *nom_fichier* **>**| **STDERR**| **STDOUT**  
+ **:Out \<** _nom_fichier_ **>**| **STDERR**| **STDOUT**  
  Crée et redirige l’ensemble des résultats de requête dans le fichier spécifié par *nom_fichier*vers **stderr** ou vers **stdout**. Par défaut, la sortie est envoyée à **stdout**. Si le fichier existe déjà, il est tronqué à zéro octet. La commande **Out** peut apparaître plusieurs fois dans un script.  
   
- **:Perftrace \<** *nom_fichier* **>**| **STDERR**| **STDOUT**  
+ **:Perftrace \<** _nom_fichier_ **>**| **STDERR**| **STDOUT**  
  Crée et redirige l’ensemble des informations de traces de performances dans le fichier spécifié par *nom_fichier*vers **stderr** ou vers **stdout**. Par défaut, la sortie de traces de performances est envoyée à **stdout**. Si le fichier existe déjà, il est tronqué à zéro octet. La commande **Perftrace** peut apparaître plusieurs fois dans un script.  
   
  **Commandes de contrôle d’exécution**  
@@ -562,7 +561,7 @@ ms.locfileid: "51641536"
  Provoque la fin de `sqlcmd`.  
   
  [**:**] **EXIT**[ **(*`statement`*)** ]  
- Vous permet d'utiliser le résultat d'une instruction SELECT comme valeur de retour de `sqlcmd`. S'il est numérique, la première colonne de la dernière ligne de résultats est convertie en un entier de 4 octets (entier long). MS-DOS transmet l'octet de poids faible au processus parent ou au niveau erreur du système d'exploitation. Windows 200x transmet la totalité de l'entier de 4 octets. La syntaxe de cette commande est la suivante :  
+ Vous permet d'utiliser le résultat d'une instruction SELECT comme valeur de retour de `sqlcmd`. S'il est numérique, la première colonne de la dernière ligne de résultats est convertie en un entier de 4 octets (entier long). MS-DOS transmet l'octet de poids faible au processus parent ou au niveau erreur du système d'exploitation. Windows 200x transmet la totalité de l'entier de 4 octets. La syntaxe est :  
   
  `:EXIT(query)`  
   
@@ -610,13 +609,13 @@ ms.locfileid: "51641536"
  GO indique la fin d'un traitement et l'exécution des commandes [!INCLUDE[tsql](../includes/tsql-md.md)] placées dans le cache. Lors de la spécification d'une valeur pour *count*, les instructions mises en mémoire cache sont exécutées *count* fois, comme un traitement unique.  
   
  **Commandes diverses**  
-  **:r \<** *filename* **>**  
+  **:r \<** _filename_ **>**  
  Analyse supplémentaire [!INCLUDE[tsql](../includes/tsql-md.md)] instructions et `sqlcmd` commandes à partir du fichier spécifié par **< *`filename`* >** dans le cache d’instruction.  
   
  Si le fichier contient des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] qui ne sont pas suivies par **GO**, vous devez entrer **GO** sur la ligne qui suit **:r**.  
   
 > [!NOTE]  
->  **\<** *nom de fichier* **>** est lu par rapport au répertoire de démarrage dans lequel `sqlcmd` a été exécuté.  
+>  **\<** _nom de fichier_ **>** est lu par rapport au répertoire de démarrage dans lequel `sqlcmd` a été exécuté.  
   
  Le fichier est lu et exécuté après la rencontre d'un terminateur de traitement. Vous pouvez émettre plusieurs commandes **:r** . Le fichier peut inclure une commande `sqlcmd`. Elle inclut le terminateur de traitement **GO**.  
   
@@ -626,7 +625,7 @@ ms.locfileid: "51641536"
  **:Serverlist**  
  Répertorie tous les serveurs configurés localement et les noms des serveurs émettant sur le réseau.  
   
- **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **: Connect** _nom_serveur_[**\\**_nom_instance_] [-l *délai d’attente*] [-U *user_ nom* [-P *mot de passe*]]  
  Établit une connexion à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ferme également la connexion actuelle.  
   
  Options de délai :  
@@ -673,7 +672,7 @@ ms.locfileid: "51641536"
   
 -   Si un fichier d'entrée situé sur un serveur distant est appelé à partir de `sqlcmd` sur un ordinateur local et s'il contient un chemin d'accès de fichier sur un lecteur tel que :out c:\OutputFile.txt, ce fichier de sortie sera créé sur l'ordinateur local et non sur le serveur distant.  
   
--   Chemins de fichier valides incluent : C:\\**<*`filename`*>**, \\ \\< Server\> \\ < partage$ >\\ **< *`filename`* >** et « dossier de C:\Some\\  **<  *`file name`*>**". Si le chemin d'accès comporte un espace, utilisez des guillemets.  
+-   Les chemins d'accès de fichier valides sont les suivants : C:\\**<*`filename`*>**, \\ \\< Server\>\\< partage$ >\\ **< *`filename`* >** et « dossier de C:\Some\\  **< *`file name`*>**". Si le chemin d'accès comporte un espace, utilisez des guillemets.  
   
 -   Chaque nouvelle session `sqlcmd` remplace les fichiers existants qui ont des noms identiques.  
   
@@ -690,7 +689,7 @@ ms.locfileid: "51641536"
   
  `GO`  
   
- Lorsque vous appuyez sur Entrée, le message d'information suivant s'imprime : « Le contexte de la base de données a été modifié et correspond à présent à 'AdventureWorks2012' ».  
+ Lorsque vous appuyez sur Entrée, le message d'information suivant s'affiche : « Contexte de base de données modifiées à 'AdventureWorks2012' ».  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Format de sortie des requêtes Transact-SQL  
  `sqlcmd` imprime tout d'abord un en-tête de colonne qui contient les noms de colonne spécifiés dans la liste de sélection. Les noms de colonne sont séparés avec le caractère SQLCMDCOLSEP. Par défaut, il s'agit d'un espace. Si le nom de colonne est plus court que la largeur de colonne, la sortie est complétée avec des espaces jusqu'à la colonne suivante.  
@@ -707,7 +706,7 @@ ms.locfileid: "51641536"
   
  `GO`  
   
- Lorsque vous appuyez sur entrée, le jeu de résultats suivant est retourné.  
+ Lorsque vous appuyez sur ENTRÉE, le jeu de résultats suivant est retourné.  
   
  `BusinessEntityID FirstName    LastName`  
   

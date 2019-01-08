@@ -13,15 +13,15 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e29e919d48c484788715512a9daaafef5bbde9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194139"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377491"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
-  Le collecteur de performances de transaction dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] vous aide à évaluer si l'OLTP en mémoire améliore les performances de votre application de base de données. Le rapport d'analyse des performances de transaction indique également le volume de travail nécessaire pour activer l'OLTP en mémoire dans votre application. Après avoir identifié une table sur disque pour la fonctionnalité OLTP en mémoire, utilisez le [Conseiller d’optimisation de la mémoire](memory-optimization-advisor.md)pour migrer la table. De même, le [Conseiller de compilation native](native-compilation-advisor.md) vous aide à déplacer une procédure stockée vers une procédure stockée compilée en mode natif.  
+  Le collecteur de performances de transaction dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] vous aide à vous évaluez si l’OLTP en mémoire améliore les performances de votre application de base de données. Le rapport d'analyse des performances de transaction indique également le volume de travail nécessaire pour activer l'OLTP en mémoire dans votre application. Après avoir identifié une table sur disque pour la fonctionnalité OLTP en mémoire, utilisez le [Conseiller d’optimisation de la mémoire](memory-optimization-advisor.md)pour migrer la table. De même, le [Conseiller de compilation native](native-compilation-advisor.md) vous aide à déplacer une procédure stockée vers une procédure stockée compilée en mode natif.  
   
  Cette rubrique explique comment :  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48194139"
   
 -   générer des rapports d'analyse des performances de transaction pour identifier les tables et les procédures stockées ayant un impact sur les performances.  
   
- Pour plus d’informations sur les méthodologies de migration, consultez [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)(OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration).  
+ Pour plus d’informations sur les méthodologies de migration, consultez [OLTP en mémoire - Modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  Le collecteur de performances et les rapports d'évaluation des performances de transaction vous aident à effectuer les tâches suivantes :  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48194139"
     > [!IMPORTANT]  
     >  Les performances d'un système de base de données dépendent de différents facteurs, tous ne pouvant pas être observés et mesurés par le collecteur de performances de transaction. Par conséquent, le rapport d'analyse des performances de transaction ne garantit pas que les gains de performances réels correspondront aux prédictions, si des prédictions sont faites.  
   
- Le collecteur de performances de transaction et la capacité à générer un rapport analyse de performances de transaction sont installés lorsque vous sélectionnez **outils de gestion — base** ou **outils de gestion — avancés** Lorsque vous installez [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ Le collecteur de performances de transaction et la capacité à générer un rapport analyse de performances de transaction sont installés lorsque vous sélectionnez **outils de gestion-Basic** ou **outils de gestion avancés** Lorsque vous installez [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ## <a name="best-practices"></a>Bonnes pratiques  
  Le flux de travail recommandé est illustré dans l'organigramme suivant. Les nœuds jaunes représentent les procédures facultatives :  
@@ -123,7 +123,7 @@ ms.locfileid: "48194139"
   
  Un collecteur de données peut être configuré sur un SQL Server 2012 ou une version ultérieure de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Vous avez besoin d'un proxy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent créé avec des informations d'identification correctes pour qu'un collecteur de données télécharge des données dans une base de données d'entrepôt de données de gestion sur une instance différente de celle où les transactions seront profilées. Pour activer un proxy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, vous devez d'abord créer des informations d'identification avec un nom de connexion spécifique au domaine. La connexion activée pour le domaine doit être membre du groupe `mdw_admin` pour la base de données de l'entrepôt de données de gestion. Consultez [Comment : créer une information d’identification (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) pour plus d’informations sur la création d’une information d’identification.  
+ Vous avez besoin d'un proxy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent créé avec des informations d'identification correctes pour qu'un collecteur de données télécharge des données dans une base de données d'entrepôt de données de gestion sur une instance différente de celle où les transactions seront profilées. Pour activer un proxy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, vous devez d'abord créer des informations d'identification avec un nom de connexion spécifique au domaine. La connexion activée pour le domaine doit être membre du groupe `mdw_admin` pour la base de données de l'entrepôt de données de gestion. Consultez [Comment : Créer une information d’identification (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) pour plus d’informations sur la création d’une information d’identification.  
   
  Pour configurer la collecte de données à télécharger vers une base de données de l'entrepôt de données de gestion sur une autre instance, procédez comme suit :  
   
@@ -186,13 +186,13 @@ ms.locfileid: "48194139"
   
 -   Section des statistiques de contention  
   
-     Cette section comprend un tableau indiquant la contention sur la table de base de données. Pour plus d’informations sur les verrous de base de données, consultez [Architecture du verrouillage](http://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). Les colonnes sont les suivantes :  
+     Cette section comprend un tableau indiquant la contention sur la table de base de données. Pour plus d’informations sur les verrous de base de données, consultez [Architecture du verrouillage](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). Les colonnes sont les suivantes :  
   
     -   Pourcentage du total des attentes. Pourcentage des attentes attribuables à un verrou interne et un verrou sur cette table de base de données par rapport à l'activité de la base de données. Plus ce pourcentage est élevé, plus la table est sollicitée par rapport aux autres tables de la base de données.  
   
-    -   Statistiques des verrous internes. Ces colonnes indiquent le nombre d'attentes attribuables à un verrou interne pour les requêtes impliquant cette table. Pour plus d’informations sur les verrous internes, consultez [verrouillage interne](http://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). Plus ce nombre est élevé, plus il y a de contention de verrous internes sur la table.  
+    -   Statistiques des verrous internes. Ces colonnes indiquent le nombre d'attentes attribuables à un verrou interne pour les requêtes impliquant cette table. Pour plus d’informations sur les verrous internes, consultez [verrouillage interne](https://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). Plus ce nombre est élevé, plus il y a de contention de verrous internes sur la table.  
   
-    -   Statistiques des verrous. Ce groupe de colonnes indique le nombre d'acquisitions et d'attentes attribuables à des verrous de page pour les requêtes de cette table. Pour plus d’informations sur les verrous, consultez [comprendre le verrouillage dans SQL Server](http://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Plus le nombre d'attentes est élevé, plus il y a de contention de verrous sur la table.  
+    -   Statistiques des verrous. Ce groupe de colonnes indique le nombre d'acquisitions et d'attentes attribuables à des verrous de page pour les requêtes de cette table. Pour plus d’informations sur les verrous, consultez [comprendre le verrouillage dans SQL Server](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Plus le nombre d'attentes est élevé, plus il y a de contention de verrous sur la table.  
   
 -   Section des difficultés de migration  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48194139"
   
     -   Durée totale d'exécution. Durée d'exécution totale de la procédure stockée pendant le profilage. Plus la différence entre ce chiffre et le temps processeur est élevée, moins le temps processeur est utilisé efficacement par la procédure stockée.  
   
-    -   Total des absences dans le cache. Nombre d'absences dans le cache (lectures depuis un stockage physique) causées par les exécutions de la procédure stockée pendant le profilage.  
+    -   Total des absences dans le cache. Nombre d’absences dans le cache (lectures depuis un stockage physique) causées par les exécutions de la procédure stockée pendant le profilage.  
   
     -   Nombre d'exécutions. Nombre de fois que la procédure stockée est exécutée pendant le profilage.  
   
