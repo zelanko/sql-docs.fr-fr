@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, system settings
@@ -14,12 +13,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a03d530c5dc6ca964d35df5ee67a932ddea3a6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e8f239afa5d26ee4a3d6d97a24f58a46f1e3334
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175379"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370201"
 ---
 # <a name="system-settings-master-data-services"></a>Paramètres système (Master Data Services)
   Vous pouvez configurer les paramètres système de l'ensemble des applications Web et services Web associés à une base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -79,7 +78,7 @@ ms.locfileid: "48175379"
   
 |Paramètre du Gestionnaire de configuration|Paramètre système|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Nombre de membres dans la hiérarchie par défaut**|**HierarchyChildNodeLimit**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , nombre maximal de membres affichés dans chaque nœud de la hiérarchie avant que **…plus…** ne s'affiche. Vous pouvez cliquer sur **…plus…** pour afficher le groupe de membres suivant. La valeur par défaut est de **50**.|  
+|**Nombre de membres dans la hiérarchie par défaut**|**HierarchyChildNodeLimit**|Dans la zone fonctionnelle **Explorateur** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], nombre maximal de membres affichés dans chaque nœud de la hiérarchie avant que **...plus...** ne s’affiche. Vous pouvez cliquer sur **...plus...** pour afficher le groupe de membres suivant. La valeur par défaut est de **50**.|  
 |**Afficher les noms dans la hiérarchie**|**ShowNamesInHierarchy**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , détermine le paramètre par défaut sélectionné lorsque vous affichez des hiérarchies.<br /><br /> La valeur par défaut est **Oui** ou **1**, ce qui indique que le nom et le code de chaque membre sont affichés. Remplacez-la par la valeur **Non** ou **2** pour afficher le code uniquement.|  
 |**Limite de la liste d'attributs basés sur un domaine**|**DBAListRowLimit**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. La valeur par défaut est de **50**. S'il existe plus de 50 membres, une boîte de dialogue permettant d'effectuer des recherches s'affiche à la place.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , niveau de ressemblance utilisé lors de l'utilisation des critères de filtre **Correspond à** . La valeur par défaut est de **0,3**. Définissez une valeur proche de **1** pour retourner une correspondance proche des critères de recherche. Définissez la valeur **1** pour une correspondance exacte.|  
@@ -107,8 +106,8 @@ ms.locfileid: "48175379"
 |**URL Master Data Manager pour les notifications**|**MDMRootURL**|URL de l’application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], utilisée dans le lien des notifications par e-mail, par exemple http://constoso/mds.|  
 |**Intervalle de notification par courrier électronique**|**NotificationInterval**|Fréquence à laquelle les notifications par courrier électronique sont envoyées (en secondes). La valeur par défaut est **120** secondes (2 minutes).|  
 |**Nombre de notifications dans un même message électronique**|**NotificationsPerEmail**|Nombre maximal de problèmes de validation qui sont répertoriés dans un seul message électronique de notification. Les problèmes supplémentaires, le cas échéant, ne sont pas inclus dans le message électronique, mais sont disponibles dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
-|**Format de courrier électronique par défaut**|**EmailFormat**|Format de toutes les notifications par courrier électronique. La valeur par défaut est **HTML** ou **1**. Le paramètre de base de données **2** indique **Texte**.<br /><br /> Remarque : vous pouvez remplacer cette valeur pour un utilisateur spécifique dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]en changeant et en enregistrant le **Format de courrier électronique** dans l’onglet **Général** de l’utilisateur.|  
-|**Expression régulière pour l'adresse de messagerie**|**EmailRegExPattern**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , expression régulière qui permet de valider l'adresse de messagerie entrée sous l'onglet **Général** de l’utilisateur. Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](http://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.|  
+|**Format de courrier électronique par défaut**|**EmailFormat**|Format de toutes les notifications par courrier électronique. La valeur par défaut est **HTML** ou **1**. Le paramètre de base de données **2** indique **Texte**.<br /><br /> Remarque : Vous pouvez remplacer cette valeur pour un utilisateur individuel dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], en changeant et en enregistrant le **format de courrier électronique** sur l’utilisateur **général** onglet.|  
+|**Expression régulière pour l'adresse de messagerie**|**EmailRegExPattern**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , expression régulière qui permet de valider l'adresse de messagerie entrée sous l'onglet **Général** de l’utilisateur. Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.|  
 |**Compte de messagerie de base de données**|**EmailProfilePrincipalAccount**|Affiche le compte de messagerie de base de données à utiliser lors de l'envoi de notifications par courrier électronique. Le profil par défaut est **mds_email_user**.|  
 |**Profil de messagerie de base de données**|**DatabaseMailProfile**|Profil de messagerie de base de données à utiliser lors de l'envoi de notifications par courrier électronique. La valeur par défaut est vide.|  
 ||**ValidationIssueHTML**|Au format HTML, texte du courrier électronique que les utilisateurs reçoivent lors de l'échec de la validation d'une règle d'entreprise.|  
@@ -146,6 +145,6 @@ ms.locfileid: "48175379"
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
 ## <a name="see-also"></a>Voir aussi  
- [La sécurité des objets de base de données &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
+ [Sécurité de l’objet de base de données &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
   
   

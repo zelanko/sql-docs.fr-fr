@@ -13,12 +13,12 @@ ms.assetid: e1ffb6d7-fbc5-4695-b538-cc2302d1a17d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e6f8fbd3ffbfcee4db212a22d4aef223450e41c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17723cfd2c1c694f21130e985b6bd65736f90236
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174459"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373932"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tâche 2 : Test et publication de la stratégie de correspondance
   Dans cette tâche, vous testez et publiez le **supprimer les fournisseurs en double** stratégie de correspondance.  
@@ -27,11 +27,11 @@ ms.locfileid: "48174459"
   
 2.  Examinez tous les enregistrements correspondants et leur score de correspondance dans la zone de liste. Un enregistrement qui a un **vert** icône associé est un doublon de l’enregistrement pivot qui le précède. Voici deux exemples :  
   
-    1.  L’enregistrement avec **ID d’enregistrement : 1000005** est une correspondance de l’enregistrement avec **Id d’enregistrement : 1000004** avec **Score : 100 %** , car les deux enregistrements ont les mêmes valeurs pour **SupplierID (condition préalable)**, **Supplier Name**, et **les colonnes ContactEmailAddress**. DQS choisit de façon aléatoire un enregistrement comme enregistrement pivot pour un cluster.  
+    1.  L'enregistrement **ID d'enregistrement : 1000005** est une correspondance de l’enregistrement avec **Id d’enregistrement : 1000004** avec **Score : 100 %** , car les deux enregistrements ont les mêmes valeurs pour **SupplierID (condition préalable)**, **Supplier Name**, et **les colonnes ContactEmailAddress**. DQS choisit de façon aléatoire un enregistrement comme enregistrement pivot pour un cluster.  
   
-    2.  L’enregistrement **1000023** est une correspondance de l’enregistrement **1000022** avec le score de correspondance : 93 % car les deux enregistrements ont les mêmes valeurs pour **SupplierID (condition préalable)** et  **Nom du fournisseur** colonnes, mais des valeurs différentes pour le **ContactEmailAddress** colonne.  
+    2.  L’enregistrement **1000023** est une correspondance de l’enregistrement **1000022** avec le score de correspondance : 93 % car les deux enregistrements ont les mêmes valeurs pour **SupplierID (condition préalable)** et **Supplier Name** colonnes, mais des valeurs différentes pour le **ContactEmailAddress** colonne.  
   
-    3.  Faites défiler vers le bas de la liste pour afficher les deux enregistrements avec les ID : **1000051** et **1000052**. Enregistrement **1000052** est considéré comme une correspondance avec un score **91 %** , car les deux enregistrements ont les mêmes valeurs pour le **SupplierID** et  **ContactEmailAddress** colonnes, mais des valeurs différentes pour le **Supplier Name** colonne.  
+    3.  Faites défiler la liste pour afficher les deux enregistrements avec les ID : **1000051** et **1000052**. Enregistrement **1000052** est considéré comme une correspondance avec un score **91 %** , car les deux enregistrements ont les mêmes valeurs pour le **SupplierID** et  **ContactEmailAddress** colonnes, mais des valeurs différentes pour le **Supplier Name** colonne.  
   
      ![Définition de stratégie - résultats de la stratégie](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-01.jpg "définition de stratégie - résultats de la stratégie")  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48174459"
   
 4.  Cliquez sur **fermer** pour fermer la **détails du Score de correspondance** boîte de dialogue.  
   
-5.  Cliquez sur **résultats de correspondance** onglet en bas de la page. Cet onglet fournit des informations telles que le nombre d'enregistrements avec correspondance, le nombre d'enregistrements sans correspondance, le nombre de clusters avec des enregistrements correspondants, la taille moyenne des clusters, la taille minimale, et la taille maximale des clusters. Consultez [créer une stratégie de correspondance](http://msdn.microsoft.com/library/hh270290.aspx) pour plus d’informations. Vous ne pouvez pas exporter les résultats de cette activité. Vous vous contentez ici de définir une stratégie de correspondance en utilisant l'échantillon de données pour tester les règles et la stratégie.  
+5.  Cliquez sur **résultats de correspondance** onglet en bas de la page. Cet onglet fournit des informations telles que le nombre d'enregistrements avec correspondance, le nombre d'enregistrements sans correspondance, le nombre de clusters avec des enregistrements correspondants, la taille moyenne des clusters, la taille minimale, et la taille maximale des clusters. Consultez [créer une stratégie de correspondance](https://msdn.microsoft.com/library/hh270290.aspx) pour plus d’informations. Vous ne pouvez pas exporter les résultats de cette activité. Vous vous contentez ici de définir une stratégie de correspondance en utilisant l'échantillon de données pour tester les règles et la stratégie.  
   
      ![Onglet des résultats de correspondance](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-03.jpg "onglet des résultats de correspondance")  
   
@@ -53,6 +53,6 @@ ms.locfileid: "48174459"
 7.  Dans la boîte de dialogue SQL Server Data Quality Services, cliquez sur **publier** et cliquez sur **OK** sur la boîte de message. À présent, vous avez défini la stratégie de correspondance est publiée dans le **fournisseurs** Base de connaissances. Vous pouvez utiliser la base de connaissances pour exécuter le processus de correspondance dans un fichier d'entrée afin d'identifier et supprimer les doublons.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 3 : Création et exécution d’un projet de qualité des données pour la mise en correspondance](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
+ [Tâche 3 : Création et exécution d’un projet de qualité des données pour la correspondance](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
   
   

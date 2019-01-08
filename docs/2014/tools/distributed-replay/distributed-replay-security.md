@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79e21716c4d484aa9dfba994bf1b970fedfe4235
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181399"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350823"
 ---
 # <a name="distributed-replay-security"></a>Sécurité Distributed Replay
   Avant d'installer et d'utiliser la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, vous devez vérifier les informations de sécurité importantes de cette rubrique. Cette rubrique décrit les étapes de configuration de la sécurité consécutives à l'installation requises pour pouvoir utiliser Distributed Replay. Elle inclut également des considérations importantes en ce qui concerne la protection des données et les étapes de suppression importantes.  
@@ -23,7 +23,7 @@ ms.locfileid: "48181399"
 ## <a name="user-and-service-accounts"></a>Comptes d'utilisateur et de service  
  Le tableau suivant décrit les comptes utilisés pour Distributed Replay. Après l'installation de Distributed Replay, vous devez affecter les principaux de sécurité qui seront exécutés sous les comptes de service du contrôleur et du client. Par conséquent, il est recommandé de configurer les comptes d'utilisateur de domaine correspondants avant d'installer les fonctionnalités de Distributed Replay.  
   
-|Compte d'utilisateur|Spécifications|  
+|Compte d'utilisateur|Configuration requise|  
 |------------------|------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|Peut être un compte d'utilisateur de domaine ou un compte d'utilisateur local. Si vous utilisez un compte d'utilisateur local, l'outil d'administration, le contrôleur et le client doivent tous s'exécuter sur le même ordinateur.<br /><br /> **\*\* Remarque relative à la sécurité \*\*** Il est préférable que le compte ne soit pas membre du groupe Administrateurs local dans Windows.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|Peut être un compte d'utilisateur de domaine ou un compte d'utilisateur local. Si vous utilisez un compte d'utilisateur local, le contrôleur, le clien, et la cible SQL Server doivent tous exécuter sur le même ordinateur.<br /><br /> **\*\* Remarque relative à la sécurité \*\*** Il est préférable que le compte ne soit pas membre du groupe Administrateurs local dans Windows.|  
@@ -70,7 +70,7 @@ ms.locfileid: "48181399"
   
  Procédez comme suit pour configurer les autorisations DCOM du contrôleur :  
   
-1.  **Ouvrez dcomcnfg.exe, le composant logiciel enfichable Services**: Il s’agit de l’outil utilisé pour configurer les autorisations DCOM.  
+1.  **Ouvrez dcomcnfg.exe, composant logiciel enfichable Services de composants**: Il s’agit de l’outil qui sert à configurer les autorisations DCOM.  
   
     1.  Sur l'ordinateur du contrôleur, cliquez sur **Démarrer**.  
   
@@ -78,9 +78,9 @@ ms.locfileid: "48181399"
   
     3.  Appuyez sur Entrée.  
   
-2.  **Configurez les autorisations DCOM au niveau de l’ordinateur**: Accordez les autorisations DCOM au niveau de l’ordinateur pour chaque compte répertorié dans le tableau suivant. Pour plus d’informations sur la définition des autorisations au niveau de l’ordinateur, consultez [Liste de vérification : gérer les applications DCOM](http://go.microsoft.com/fwlink/?LinkId=185842).  
+2.  **Configurer les autorisations DCOM à l’échelle de l’ordinateur**: Accordez les autorisations DCOM de l’ordinateur correspondantes pour chaque compte répertorié dans le tableau suivant. Pour plus d’informations sur la façon de définir des autorisations de niveau de l’ordinateur, consultez [liste de vérification : Gérer des Applications DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
-3.  **Configurez les autorisations DCOM spécifiques à l’application**: Accordez les autorisations DCOM spécifiques à l’application correspondantes pour chaque compte répertorié dans le tableau suivant. Le nom d'application DCOM pour le service du contrôleur est **DReplayController**. Pour plus d’informations sur la définition des autorisations spécifiques à l’application, consultez [Liste de vérification : gérer les applications DCOM](http://go.microsoft.com/fwlink/?LinkId=185842).  
+3.  **Configurer les autorisations DCOM spécifiques à l’application**: Accordez les autorisations DCOM spécifiques à l’application correspondantes pour chaque compte répertorié dans le tableau suivant. Le nom d'application DCOM pour le service du contrôleur est **DReplayController**. Pour plus d’informations sur la façon de définir des autorisations spécifiques à l’application, consultez [liste de vérification : Gérer des Applications DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
  Le tableau suivant décrit les autorisations DCOM requises pour le compte d'utilisateur interactif de l'outil d'administration et les comptes de service du client :  
   
@@ -108,12 +108,12 @@ ms.locfileid: "48181399"
   
 -   Membres du groupe Administrateurs local sur le contrôleur.  
   
--   Membres du groupe Administrateurs local sur les clients.  
+-   Membres du groupe Administrateurs local sur les clients.  
   
     > [!IMPORTANT]  
     >  Ces comptes ont entièrement accès à toutes les informations d'identification personnelle (PII) ou informations sensibles contenues dans la trace, l'intermédiaire, la distribution ou les fichiers de données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisés par Distributed Replay.  
   
- Nous vous recommandons d'appliquer les précautions de sécurité suivantes :  
+ Nous vous recommandons d'appliquer les précautions de sécurité suivantes :  
   
 -   Stockez les données de la trace d'entrée, les résultats de la trace de sortie et les fichiers de base de données dans un emplacement qui utilise le système de fichiers NTFS et appliquez les listes de contrôle d'accès (ACL) appropriées. Si nécessaire, chiffrez les données stockées sur l'ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sachez que les listes de contrôle d'accès (ACL) ne sont pas appliquées aux fichiers de trace, et qu'il n'y a pas de masque de données ni de codage. Vous devez supprimer ces fichiers rapidement après utilisation.  
   

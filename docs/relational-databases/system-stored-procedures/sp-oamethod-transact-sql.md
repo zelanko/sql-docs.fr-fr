@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b0e2e11dd905f48eaed16e0c083f11bde103a80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 525a66fa00981c4360295ee9c704102cd1224220
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704437"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591463"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_OAMethod objecttoken , methodname
  *MethodName*  
  Nom de la méthode de l'objet OLE à appeler.  
   
- *ReturnValue***sortie**  
+ _ReturnValue_**sortie**  
  Valeur renvoyée de la méthode de l'objet OLE. Si elle est spécifiée, il doit s'agir d'une variable locale du type de données approprié.  
   
  Si la méthode retourne une valeur unique, soit elle spécifie une variable locale pour *returnvalue*, qui retourne la méthode retourne la valeur dans la variable locale ou ne spécifiez pas *returnvalue*, qui retourne le méthode retourne une valeur au client comme un jeu de résultats d’une seule colonne et d’une ligne unique.  
@@ -65,17 +65,17 @@ sp_OAMethod objecttoken , methodname
   
 -   La méthode renvoie un tableau comme paramètre de sortie.  
   
- [  *@parametername*** =**] *paramètre*[ **sortie** ]  
+ [ _@parametername_ **=** ] *paramètre*[ **sortie** ]  
  Paramètre de la méthode. Si spécifié, *paramètre* doit être une valeur de type de données approprié.  
   
  Pour obtenir la valeur de retour d’un paramètre de sortie, *paramètre* doit être une variable locale du type de données approprié, et **sortie** doit être spécifié. Si un paramètre constant est spécifié, ou si **sortie** n’est pas spécifié, une renvoie la valeur à partir d’un paramètre de sortie est ignorée.  
   
- Si spécifié, *nom_paramètre* doit être le nom de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] paramètre nommé. Notez que  **@** *nom_paramètre*n’est pas un [!INCLUDE[tsql](../../includes/tsql-md.md)] variable locale. Le signe arobase (**@**) est supprimé, et *nom_paramètre*est passé à l’objet OLE en tant que le nom du paramètre. Tous les paramètres nommés doivent être spécifiés après tous les paramètres positionnels.  
+ Si spécifié, *nom_paramètre* doit être le nom de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] paramètre nommé. Notez que **@**_parametername_is pas un [!INCLUDE[tsql](../../includes/tsql-md.md)] variable locale. Le signe arobase (**@**) est supprimé, et *nom_paramètre*est passé à l’objet OLE en tant que le nom du paramètre. Tous les paramètres nommés doivent être spécifiés après tous les paramètres positionnels.  
   
  *n*  
  Marque de réservation indiquant que plusieurs paramètres peuvent être spécifiés.  
   
-> [!NOTE]  
+> [!NOTE]
 >  *@parametername* possible un paramètre nommé car il fait partie de la méthode spécifiée et est transmise à l’objet. Les autres paramètres pour cette procédure stockée sont spécifiés par position, et non par nom.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -106,7 +106,7 @@ sp_OAMethod objecttoken , methodname
 ## <a name="remarks"></a>Notes  
  Vous pouvez également utiliser **sp_OAMethod** pour obtenir une valeur de propriété.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
@@ -124,7 +124,7 @@ BEGIN
 END;  
 ```  
   
-### <a name="b-getting-a-property"></a>B. Obtention d'une propriété  
+### <a name="b-getting-a-property"></a>b. Obtention d'une propriété  
  L’exemple suivant obtient le `HostName` propriété (de l’élément précédemment créé **SQLServer** objet) et le stocke dans une variable locale.  
   
 ```  

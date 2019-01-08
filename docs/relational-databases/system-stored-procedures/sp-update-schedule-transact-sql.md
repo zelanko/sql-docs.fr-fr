@@ -18,12 +18,12 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fa647aabd7e2048c6f56e5518dde8a2edc12dde
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eeff4b38e3736241e0dd56729e42c5e7207f310f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661227"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591803"
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_update_schedule
  [  **@schedule_id =** ] *id_de_la_planification*  
  Identificateur de la planification à modifier. *id_de_la_planification* est **int**, sans valeur par défaut. Soit *id_de_la_planification* ou *nom_de_la_planification* doit être spécifié.  
   
- [  **@name =** ] **'***nom_de_la_planification***'**  
+ [  **@name =** ] **'**_nom_de_la_planification_**'**  
  Nom de la planification à modifier. *nom_de_la_planification*est **sysname**, sans valeur par défaut. Soit *id_de_la_planification* ou *nom_de_la_planification* doit être spécifié.  
   
  [ **@new_name**=] *nouveau_nom*  
@@ -71,7 +71,7 @@ sp_update_schedule
  [ **@freq_type =** ] *freq_type*  
  Valeur indiquant à quel moment un travail doit être exécuté. *freq_type*est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**4**|Tous les jours|  
@@ -97,7 +97,7 @@ sp_update_schedule
  [ **@freq_subday_type =** ] *freq_subday_type*  
  Spécifie les unités pour *freq_subday_interval **.* *freq_subday_type*est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description (unité)|  
+|Value|Description (unité)|  
 |-----------|--------------------------|  
 |**0x1**|À une heure spécifiée|  
 |**0x2**|Secondes|  
@@ -110,7 +110,7 @@ sp_update_schedule
  [ **@freq_relative_interval =** ] *freq_relative_interval*  
  Occurrence d’un travail de *freq_interval* chaque mois, si *freq_interval* est **32** (fréquence mensuelle relative). *freq_relative_interval*est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description (unité)|  
+|Value|Description (unité)|  
 |-----------|--------------------------|  
 |**1**|Première|  
 |**2**|Seconde|  
@@ -135,7 +135,7 @@ sp_update_schedule
  [  **@active_end_time =** ] *heure_fin_active*  
  L’heure sur n’importe quel jour entre *active_start_date* et *active_end_date* pour arrêter l’exécution d’un travail. *heure_fin_active*est **int**, avec une valeur par défaut **235959**, ce qui indique à 11:59:59 P.M. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
- [ **@owner_login_name**=] **'***owner_login_name***'**]  
+ [ **@owner_login_name**=] **'**_owner_login_name_**'**]  
  Nom du principal de serveur qui détient la planification. *owner_login_name* est **sysname**, avec NULL comme valeur par défaut, ce qui indique que la planification est détenue par le créateur.  
   
  [  **@automatic_post =**] *envoi_automatique*  
@@ -147,7 +147,7 @@ sp_update_schedule
 ## <a name="remarks"></a>Notes  
  Tous les travaux qui utilisent la planification utilisent immédiatement les nouveaux paramètres. Cependant, la modification d'une planification n'entraîne pas l'arrêt des travaux en cours d'exécution.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  

@@ -11,19 +11,19 @@ ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 898f21162e7ba546bd134b90a18eba5b7653edee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11df5fadc7ca525f62ec0109ec1a7f6b199205af
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123489"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349834"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Ajouter un graphique à un rapport (Générateur de rapports et SSRS)
   Lorsque vous souhaitez résumer des données sous un format visuel, utilisez une région de données de graphique. Il est important de choisir un type de graphique approprié au type des données que vous présentez. Cela affecte l'interprétation des données lorsqu'elles sont transformées en graphique. Pour plus d’informations, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  Le moyen le plus simple d'ajouter une région de données graphique à votre rapport consiste à exécuter l'Assistant Nouveau graphique. Cet Assistant propose des histogrammes, des graphiques à barres, des graphiques en courbes, des graphiques à secteurs et des graphiques en aires. Pour ces types de graphiques et d'autres, vous pouvez également ajouter un graphique manuellement.  
   
- Après avoir ajouté une région de données graphique à l’aire de conception, vous pouvez faire glisser des champs de dataset du rapport pour les données numériques et non numériques vers le volet Données du graphique du graphique. Cliquez sur le graphique pour afficher le volet Données du graphique avec ses trois zones : Groupes de séries, Groupes de catégories et Valeurs.  
+ Après avoir ajouté une région de données graphique à l’aire de conception, vous pouvez faire glisser des champs de dataset du rapport pour les données numériques et non numériques vers le volet Données du graphique du graphique. Cliquez sur le graphique pour afficher le volet données du graphique avec ses trois zones : Groupes de séries, les groupes de catégories et les valeurs.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -71,9 +71,9 @@ ms.locfileid: "48123489"
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Didacticiel : ajout d’un graphique à barres à un rapport (Générateur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Didacticiel : ajout d’un graphique à barres à un rapport (Concepteur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [Didacticiel : ajout d’un graphique à secteurs à un rapport (Générateur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [Didacticiel : ajout d’un graphique à secteurs à un rapport (Concepteur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Didacticiel : Ajout d’un graphique à barres à votre rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Didacticiel : Ajout d’un graphique à barres à un rapport (Concepteur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Didacticiel : Ajout d’un graphique à secteurs à votre rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Didacticiel : Ajout d’un graphique à secteurs à un rapport (Concepteur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

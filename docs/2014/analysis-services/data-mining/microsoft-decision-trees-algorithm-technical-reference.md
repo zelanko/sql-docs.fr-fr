@@ -21,12 +21,12 @@ ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74dd3b1548eae75da210259d81c711348da713f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e58f43c7004f94aeff81d9ac43a9c9c2804b184
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190579"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365401"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MDT (Microsoft Decision Trees)
   L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) est un algorithme hybride qui incorpore des méthodes différentes pour créer une arborescence et prend en charge plusieurs tâches analytiques, dont la régression, la classification et l'association. L'algorithme MDT (Microsoft Decision Trees) prend en charge la modélisation des attributs discrets et continus.  
@@ -34,7 +34,7 @@ ms.locfileid: "48190579"
  Cette rubrique explique l'implémentation de l'algorithme, décrit la façon de personnaliser le comportement de l'algorithme pour différentes tâches et fournit des liens vers des informations supplémentaires sur l'interrogation des modèles d'arbre de décision.  
   
 ## <a name="implementation-of-the-decision-trees-algorithm"></a>Implémentation de l'algorithme MDT (Microsoft Decision Trees)  
- L'algorithme MDT (Microsoft Decision Trees) applique l'approche bayésienne pour acquérir les modèles causaux d'interaction en obtenant des distributions ultérieures approximatives pour les modèles. Pour une explication détaillée de cette approche, consultez l'article sur le site Microsoft Research, par [Structure et apprentissage de paramètres](http://go.microsoft.com/fwlink/?LinkId=237640&clcid=0x409).  
+ L'algorithme MDT (Microsoft Decision Trees) applique l'approche bayésienne pour acquérir les modèles causaux d'interaction en obtenant des distributions ultérieures approximatives pour les modèles. Pour une explication détaillée de cette approche, consultez l'article sur le site Microsoft Research, par [Structure et apprentissage de paramètres](https://go.microsoft.com/fwlink/?LinkId=237640&clcid=0x409).  
   
  La méthodologie d'évaluation de la valeur d'information des *à priori* nécessaires pour l'apprentissage repose sur l' *équivalence de probabilité*. Cette hypothèse indique que les données ne doivent pas aider à discriminer des structures de réseau qui représentent autrement les mêmes assertions d'indépendance conditionnelle. Il est supposé que chaque cas a un réseau antérieur bayésien unique et une mesure unique de confiance pour ce réseau.  
   
@@ -58,10 +58,10 @@ ms.locfileid: "48190579"
   
  Lorsque l'attribut prédictible est un type de données numériques continues, la sélection des fonctionnalités est également appliquée aux sorties pour réduire le nombre possible de résultats et générer le modèle plus vite. Vous pouvez modifier le seuil pour la sélection des fonctionnalités et augmenter ou réduire ainsi le nombre de valeurs possibles en définissant le paramètre MAXIMUM_OUTPUT_ATTRIBUTES.  
   
- Pour une explication plus détaillée de la façon dont l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) utilise des colonnes prédictibles discrètes, consultez [Réseaux bayésiens : connaissance et données statistiques](http://go.microsoft.com/fwlink/?LinkId=45963). Pour plus d’informations sur le fonctionnement de l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) avec une colonne prédictible continue, consultez l’annexe disponible dans le document [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966).  
+ Pour obtenir une explication plus dont sur la façon dont [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme d’arbres de décision fonctionne avec les colonnes prédictibles discrètes, consultez [réseaux BAYÉSIENS : La combinaison de connaissance et données statistiques](https://go.microsoft.com/fwlink/?LinkId=45963). Pour plus d’informations sur le fonctionnement de l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) avec une colonne prédictible continue, consultez l’annexe disponible dans le document [Autoregressive Tree Models for Time-Series Analysis](https://go.microsoft.com/fwlink/?LinkId=45966).  
   
 ### <a name="scoring-methods-and-feature-selection"></a>Résultat des méthodes et sélection des fonctionnalités  
- L'algorithme MDT (Microsoft Decision Trees) offre trois formules pour définir le score du gain d'informations : l'entropie de Shannon, le réseau bayésien avec a priori K2 et le réseau bayésien de Dirichlet avec a priori uniforme. Les trois méthodes sont bien établies dans le champ d'exploration de données. Nous vous recommandons d'expérimenter des paramètres et des méthodes différents pour déterminer ceux qui fournissent les meilleurs résultats. Pour plus d'informations sur ces méthodes de calcul de score, consultez [Feature Selection](../../sql-server/install/feature-selection.md).  
+ L'algorithme MDT (Microsoft Decision Trees) offre trois formules pour définir le score du gain d'informations : l'entropie de Shannon, le réseau bayésien avec a priori K2 et le réseau bayésien de Dirichlet avec a priori uniforme. Les trois méthodes sont bien établies dans le champ d'exploration de données. Nous vous recommandons d'expérimenter des paramètres et des méthodes différents pour déterminer ceux qui fournissent les meilleurs résultats. Pour plus d'informations sur ces méthodes de calcul de score, consultez [Feature Selection](../../sql-server/install/feature-selection.md).  
   
  Tous les algorithmes d'exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilisent automatiquement la sélection des fonctionnalités pour améliorer l'analyse et réduire la charge de traitement. La méthode utilisée pour la sélection des fonctionnalités dépend de l'algorithme utilisé pour générer le modèle. Les paramètres d'algorithme qui contrôlent la sélection des fonctionnalités pour un modèle d'arbre de décision sont MAXIMUM_INPUT_ATTRIBUTES et MAXIMUM_OUTPUT.  
   
@@ -94,13 +94,13 @@ ms.locfileid: "48190579"
 -   Restreignez le nombre de valeurs discrètes pour tout attribut à 10 ou moins. Vous pouvez essayer de regrouper les valeurs de différentes façons dans les différents modèles.  
   
     > [!NOTE]  
-    >  Vous pouvez utiliser les outils d'exploration de données disponibles dans  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] pour visualiser la distribution de valeurs dans vos données et regrouper convenablement vos valeurs avant de commencer l'exploration de données. Pour plus d’informations, consultez [Tâche de profilage des données et visionneuse](../../integration-services/control-flow/data-profiling-task-and-viewer.md). Vous pouvez également utiliser les [compléments d’exploration de données pour Excel 2007](http://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51)pour explorer, regrouper et réétiqueter les données dans Microsoft Excel.  
+    >  Vous pouvez utiliser les outils d'exploration de données disponibles dans  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] pour visualiser la distribution de valeurs dans vos données et regrouper convenablement vos valeurs avant de commencer l'exploration de données. Pour plus d’informations, consultez [Tâche de profilage des données et visionneuse](../../integration-services/control-flow/data-profiling-task-and-viewer.md). Vous pouvez également utiliser les [compléments d’exploration de données pour Excel 2007](https://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51)pour explorer, regrouper et réétiqueter les données dans Microsoft Excel.  
   
 ## <a name="customizing-the-decision-trees-algorithm"></a>Personnalisation de l'algorithme MDT (Microsoft Decision Trees).  
  L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) prend en charge des paramètres qui affectent les performances et la précision du modèle d'exploration de données résultant. Vous pouvez également définir des indicateurs de modélisation sur les colonnes du modèle ou de la structure d'exploration de données pour contrôler le mode de traitement des données.  
   
 > [!NOTE]  
->  L'algorithme MDT est disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; toutefois, certains paramètres avancés permettant de personnaliser le comportement de l'algorithme MDT sont disponibles uniquement dans les éditions spécifiques de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  L'algorithme MDT est disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; toutefois, certains paramètres avancés permettant de personnaliser le comportement de l'algorithme MDT sont disponibles uniquement dans les éditions spécifiques de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### <a name="setting-algorithm-parameters"></a>Définition des paramètres de l'algorithme  
  Le tableau suivant décrit les paramètres que vous pouvez utiliser avec l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees).  
@@ -143,14 +143,14 @@ ms.locfileid: "48190579"
  *MINIMUM_SUPPORT*  
  Spécifie le nombre minimal de cas de nœud terminal requis pour générer un fractionnement dans l'arbre de décision.  
   
- La valeur par défaut est 10.  
+ La valeur par défaut est 10.  
   
  Vous devrez peut-être augmenter cette valeur si le dataset est très grand, pour éviter le surapprentissage.  
   
  *SCORE_METHOD*  
  Spécifie la méthode utilisée pour calculer le résultat de la division. Les options suivantes sont disponibles :  
   
-|ID|Nom   |  
+|ID|Créer une vue d’abonnement|  
 |--------|----------|  
 |1|Entropie|  
 |3|Bayésien avec a priori K2|  
@@ -163,11 +163,11 @@ ms.locfileid: "48190579"
  *SPLIT_METHOD*  
  Spécifie la méthode utilisée pour fractionner le nœud. Les options suivantes sont disponibles :  
   
-|ID|Nom   |  
+|ID|Créer une vue d’abonnement|  
 |--------|----------|  
-|1|**Binary:** Indique qu'indépendamment du nombre réel de valeurs pour l'attribut, l'arborescence doit être fractionnée en deux branches.|  
-|2|**Complete:** Indique que l'arborescence peut créer autant de divisions qu'il y a de valeurs d'attribut.|  
-|3|**Both:** Spécifie qu'Analysis Services peut déterminer si un fractionnement binaire ou complet doit être utilisé pour produire les meilleurs résultats.|  
+|1|**Binaire :** Indique que, quel que soit le nombre réel de valeurs pour l’attribut, l’arborescence doit être fractionnée en deux branches.|  
+|2|**Terminer :** Indique que l’arborescence peut créer autant de divisions qu’il existe des valeurs d’attribut.|  
+|3|**Les deux :** Spécifie qu’Analysis Services peut déterminer si un fractionnement binaire ou complet doit être utilisé pour produire les meilleurs résultats.|  
   
  La valeur par défaut est 3.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "48190579"
   
  Par exemple, si vous prédisez le comportement d'achat de vos clients en utilisant **Income** comme attribut et que vous définissez l'indicateur de modélisation REGRESSOR sur la colonne, l'algorithme essaie tout d'abord de faire tenir les valeurs **Income** en utilisant une formule de régression standard. Si l'écart est trop grand, la formule de régression est abandonnée et l'arbre est fractionné sur un autre attribut. L'algorithme MDT essaie ensuite de faire tenir un régresseur pour le revenu dans chacune des branches après le fractionnement.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Un modèle d'arbre de décision doit contenir une colonne clé, des colonnes d'entrée et au moins une colonne prédictible.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
@@ -203,8 +203,8 @@ ms.locfileid: "48190579"
 >  Les types de contenu Cyclique et Trié sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme d’arbres de décision de Microsoft](microsoft-decision-trees-algorithm.md)   
- [Exemples de requête de modèle d’arbre de décision](decision-trees-model-query-examples.md)   
- [Contenu pour les modèles d’arbre de décision du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm.md)   
+ [Exemples de requêtes de modèle d'arbre de décision](decision-trees-model-query-examples.md)   
+ [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

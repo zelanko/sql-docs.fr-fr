@@ -15,12 +15,12 @@ ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b271d597f9941e83e9ad8ce6993831a738108e7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 48bb00cba9a01029da31146f9e98e2ef8b3627d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147874"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362611"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite
   Il existe souvent des situations où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] souhaite modifier le mode lecture/écriture d'une base de données tabulaire ou multidimensionnelle. Ces situations sont souvent justifiées par des exigences opérationnelles, telles que le partage de la base de données au sein d'un pool de serveurs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour un plus grand confort de l'utilisateur.  
@@ -44,7 +44,7 @@ ms.locfileid: "50147874"
     > [!IMPORTANT]  
     >  Dès que la base de données est détachée, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ne peut plus vous aider à obtenir l'emplacement de base de données.  
   
-3.  Cliquez avec le bouton droit sur la base de données et choisissez **Détacher…**  
+3.  Avec le bouton droit de la base de données et sélectionnez **détachement...**  
   
 4.  Assignez un mot de passe à la base de données à détacher, puis cliquez sur **OK** pour exécuter la commande de détachement.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "50147874"
   
 6.  Cliquez sur le **bases de données** dossier et sélectionnez **attacher...**  
   
-7.  Dans la zone de texte **dossier** , tapez l'emplacement d'origine du dossier de base de données. Vous pouvez également utiliser le bouton Parcourir (**…**) pour rechercher le dossier de base de données.  
+7.  Dans la zone de texte **dossier** , tapez l'emplacement d'origine du dossier de base de données. Vous pouvez également utiliser le bouton Parcourir (**...** ) pour rechercher le dossier de base de données.  
   
 8.  Sélectionnez le mode lecture/écriture pour la base de données.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "50147874"
   
 4.  Copiez le modèle de script suivant pour XMLA :  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -155,11 +155,11 @@ ms.locfileid: "50147874"
   
 3.  Copiez le modèle de script suivant pour XMLA dans un nouvel onglet XMLA.  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003` `/engine` `">`)  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003` `/engine` `">`)  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

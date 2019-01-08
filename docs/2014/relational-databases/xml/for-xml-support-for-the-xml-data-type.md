@@ -13,15 +13,15 @@ ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a3a4cea6424f8bfb89207050719ec0db554fdd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 118a828a35aaee1ded4e91f3e5ded53ef6135a6a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130279"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355345"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Prise en charge de FOR XML pour le type de données XML
-  Si une requête FOR XML spécifie une colonne de `xml` type dans la clause SELECT, les valeurs de colonne sont mappées comme éléments dans le code XML retourné, quelle que soit la directive ELEMENTS. Toute déclaration XML dans la colonne de type `xml` n'est pas sérialisée.  
+  Si une requête FOR XML spécifie une colonne de type `xml` dans la clause SELECT, les valeurs de la colonne sont mappées comme éléments dans le code XML retourné, que vous spécifiiez ou non la directive ELEMENTS. Toute déclaration XML dans la colonne de type `xml` n'est pas sérialisée.  
   
  Par exemple, la requête suivante récupère des informations de contact client, telles que la `BusinessEntityID`, `FirstName`, et `LastName` colonnes et les numéros de téléphone à partir de la `AdditionalContactInfo` colonne de `xml` type.  
   
@@ -29,18 +29,18 @@ ms.locfileid: "48130279"
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ') AS PhoneNumber  
 FROM Person.Person  
 WHERE AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ')IS NOT NULL  
 FOR XML AUTO, TYPE;  
 ```  
   
- Étant donné que la requête ne spécifie pas la directive ELEMENTS, les valeurs de colonne sont retournées en tant qu’attributs, sauf pour les valeurs d’informations de contact supplémentaires récupérées à partir de la `xml` colonne de type. Celles-ci sont retournées en tant qu'éléments.  
+ La requête ne spécifiant pas la directive ELEMENTS, les valeurs de colonne sont retournées en tant qu'attributs, à l'exception des valeurs d'informations de contact supplémentaires récupérées à partir de la colonne de type `xml`. Celles-ci sont retournées en tant qu'éléments.  
   
  Voici le résultat partiel :  
   
@@ -48,9 +48,9 @@ FOR XML AUTO, TYPE;
   
  `<PhoneNumber>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
   
  `</PhoneNumber>`  
   
@@ -60,9 +60,9 @@ FOR XML AUTO, TYPE;
   
  `<PhoneNumber>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
   
  `</PhoneNumber>`  
   
@@ -75,12 +75,12 @@ FOR XML AUTO, TYPE;
   
 ```  
 SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ') AS PhoneNumber  
 FROM Person.Person  
 WHERE AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ')IS NOT NULL  
 FOR XML AUTO, TYPE;  
@@ -92,9 +92,9 @@ FOR XML AUTO, TYPE;
   
  `<MorePhoneNumbers>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
   
  `</MorePhoneNumbers>`  
   
@@ -104,9 +104,9 @@ FOR XML AUTO, TYPE;
   
  `<MorePhoneNumbers>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
   
  `</MorePhoneNumbers>`  
   
@@ -117,7 +117,7 @@ FOR XML AUTO, TYPE;
   
  Si vous spécifiez la directive ELEMENTS dans la requête, BusinessEntityID, LastName et FirstName seront retournés en tant qu'éléments dans le code XML résultant.  
   
- L’exemple suivant montre que la logique de traitement FOR XML ne sérialise aucune déclaration XML dans les données XML à partir d’un `xml` colonne de type :  
+ L'exemple suivant illustre le fait que la logique de traitement FOR XML ne sérialise aucune déclaration XML dans les données XML d'une colonne de type `xml` :  
   
 ```  
 create table t(i int, x xml)  
@@ -142,13 +142,13 @@ for xml auto;
 ```  
   
 ## <a name="returning-xml-from-a-user-defined-function"></a>Retour de code XML à partir d'une fonction définie par l'utilisateur  
- Il est possible d'utiliser des requêtes FOR XML pour retourner du code XML à partir d'une fonction définie par l'utilisateur qui retourne l'un des éléments suivants :  
+ Il est possible d'utiliser des requêtes FOR XML pour retourner du code XML à partir d'une fonction définie par l'utilisateur qui retourne l'un des éléments suivants :  
   
 -   une table avec une seule colonne de type `xml` ;  
   
--   Une instance de la `xml` type  
+-   une instance du type `xml` ;  
   
- Par exemple, la fonction définie par l’utilisateur suivante retourne une table avec une seule colonne de `xm`livre de type :  
+ Par exemple, la fonction suivante définie par l'utilisateur retourne une table avec une seule colonne de type `xm`l :  
   
 ```  
 USE AdventureWorks2012;  
@@ -170,7 +170,7 @@ declare namespace PD="http://www.adventure-works.com/schemas/products/descriptio
 END;  
 ```  
   
- Vous pouvez exécuter la fonction définie par l'utilisateur et interroger la table retournée par celle-ci. Dans cet exemple, le code XML retourné en interrogeant la table est affecté à un `xml` variable de type.  
+ Vous pouvez exécuter la fonction définie par l'utilisateur et interroger la table retournée par celle-ci. Dans cet exemple, le code XML retourné suite à l'interrogation de la table est assigné à une variable de type `xml`.  
   
 ```  
 declare @x xml;  

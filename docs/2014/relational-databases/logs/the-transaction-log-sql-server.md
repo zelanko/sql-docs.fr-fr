@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
@@ -14,15 +14,15 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f22f0ea25b141cf7ee5a3130153837dcf4a1132
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072889"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807011"
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
-  Chaque base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un journal des transactions qui enregistre toutes les transactions et les modifications apportées par chacune d’entre elles. Le journal des transactions doit être vidé régulièrement pour éviter qu'il ne soit saturé. Toutefois, certains facteurs peuvent retarder la troncation du journal. Par conséquent, il est important de surveiller la taille du journal. Certaines opérations peuvent faire l'objet d'une journalisation minimale afin de réduire leur impact sur la taille des journaux de transactions.  
+  Chaque base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède un journal des transactions qui enregistre toutes les transactions et les modifications apportées par chacune d'entre elles. Le journal des transactions doit être vidé régulièrement pour éviter qu'il ne soit saturé. Toutefois, certains facteurs peuvent retarder la troncation du journal. Par conséquent, il est important de surveiller la taille du journal. Certaines opérations peuvent faire l'objet d'une journalisation minimale afin de réduire leur impact sur la taille des journaux de transactions.  
   
  Le journal des transactions est un composant essentiel de la base de données et, en cas de défaillance du système, vous pouvez en avoir besoin pour rétablir la cohérence de la base de données. Le journal des transactions ne doit jamais être supprimé ni déplacé, à moins d'en avoir pleinement compris les conséquences.  
   
@@ -74,12 +74,12 @@ ms.locfileid: "48072889"
 > [!IMPORTANT]  
 >  Pour plus d’informations sur la façon de répondre à un journal des transactions saturé, consultez [Résoudre les problèmes liés à un journal des transactions saturé&#40;Erreur SQL Server 9002&#41;](troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
- La troncation du journal peut être retardée pour différents motifs. Le cas échéant, vous pouvez rechercher les raisons qui empêchent de tronquer le journal en interrogeant les colonnes **log_reuse_wait** et **log_reuse_wait_desc** de l’affichage catalogue [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) . Le tableau suivant décrit les valeurs possibles de ces colonnes.  
+ La troncation du journal peut être retardée pour différents motifs. Le cas échéant, vous pouvez rechercher les raisons qui empêchent de tronquer le journal en interrogeant les colonnes **log_reuse_wait** et **log_reuse_wait_desc** de l'affichage catalogue [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) . Le tableau suivant décrit les valeurs possibles de ces colonnes.  
   
 |Valeur log_reuse_wait|Valeur log_reuse_wait_desc|Description|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Il existe actuellement un ou plusieurs fichiers journaux virtuels réutilisables.|  
-|1|CHECKPOINT|Aucun point de contrôle n'est apparu depuis la dernière troncation du journal ou le début du journal n'est pas encore allé au-delà d'un fichier journal virtuel. (Tous les modes de récupération)<br /><br /> Il s'agit d'une raison courante de retarder la troncation du journal. Pour plus d’informations, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
+|1|CHECKPOINT|Aucun point de contrôle n'est apparu depuis la dernière troncation du journal ou le début du journal n'est pas encore allé au-delà d'un fichier journal virtuel. (Tous les modes de récupération)<br /><br /> Il s'agit d'une raison courante de retarder la troncation du journal. Pour plus d’informations, consultez [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|Une sauvegarde du journal est requise avant que le journal des transactions puisse être tronqué. (Mode de récupération complète ou mode de récupération utilisant les journaux de transactions uniquement)<br /><br /> Lorsque la sauvegarde de journal suivante est terminée, l'espace du journal peut devenir réutilisable.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|Une sauvegarde de données ou une restauration est en cours (tous les modes de récupération).<br /><br /> Si une sauvegarde des données empêche la troncation du journal, l'annulation de l'opération de sauvegarde peut résoudre le problème immédiat.|  
 |4|ACTIVE_TRANSACTION|Une transaction est active (tous les modes de récupération).<br /><br /> Une transaction longue peut exister au démarrage de la sauvegarde du fichier journal. Dans ce cas, libérer l'espace peut requérir une autre sauvegarde du fichier journal. Notez qu’un transactions longues empêchent la troncation de journal dans tous les modes de récupération, notamment le mode de récupération simple, sous lequel le journal des transactions est généralement tronqué sur chaque point de contrôle automatique.<br /><br /> Une transaction est différée. Une *transaction différée* est en fait une transaction active dont la restauration est bloquée à cause d'une ressource indisponible. Pour plus d’informations sur les causes des transactions différées et la manière de les faire sortir de l’état différé, consultez [Transactions différées &#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md). <br /><br />Les transactions à long terme peuvent également remplir le journal des transactions de tempdb. La base de données tempdb est implicitement utilisée par les transactions utilisateur pour les objets internes tels que les tables de travail pour le tri, les fichiers de travail pour le hachage, les tables de travail de curseur et la gestion de version de ligne. Même si la transaction utilisateur inclut la lecture seule des données (requêtes SELECT), les objets internes peuvent être créés et utilisés dans des transactions utilisateur. Ensuite, le journal des transactions tempdb peut être rempli.|  
@@ -88,12 +88,12 @@ ms.locfileid: "48072889"
 |7|DATABASE_SNAPSHOT_CREATION|Un instantané de base de données est créé. (Tous les modes de récupération)<br /><br /> Il s'agit d'une raison courante et habituellement brève du retard de la troncation du journal.|  
 |8|LOG_SCAN|Une analyse du journal se produit. (Tous les modes de récupération)<br /><br /> Il s'agit d'une raison courante et habituellement brève du retard de la troncation du journal.|  
 |9|AVAILABILITY_REPLICA|Un réplica secondaire d'un groupe de disponibilité applique les enregistrements du journal des transactions de cette base de données à une base de données secondaire associée. (Mode de récupération complète)<br /><br /> Pour plus d’informations, consultez [vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
-|10|—|Usage interne uniquement|  
-|11|—|Usage interne uniquement|  
-|12|—|Usage interne uniquement|  
+|10|-|Usage interne uniquement|  
+|11|-|Usage interne uniquement|  
+|12|-|Usage interne uniquement|  
 |13|OLDEST_PAGE|Si une base de données est configurée pour utiliser des points de contrôle indirects, la page la plus ancienne dans la base de données peut être plus ancienne que le LSN du point de contrôle. Dans ce cas, la page la plus ancienne peut retarder la troncation du journal. (Tous les modes de récupération)<br /><br /> Pour plus d’informations sur les points de contrôle indirects, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Cette valeur n'est pas utilisée actuellement.|  
-|16|XTP_CHECKPOINT|Lorsqu’une base de données a un groupe de fichiers optimisé en mémoire, le journal des transactions ne peut pas tronquer jusqu'à automatique [!INCLUDE[hek_2](../../includes/hek-2-md.md)] point de contrôle est déclenchée (ce qui se produit chaque 512 Mo de croissance du journal).<br /><br /> Remarque : Pour tronquer le journal des transactions avant de 512 Mo, déclencher la commande Checkpoint manuellement par rapport à la base de données en question.|  
+|16|XTP_CHECKPOINT|Quand une base de données possède un groupe de fichiers à mémoire optimisée, aucune troncation du journal des transactions ne peut avoir lieu avant le déclenchement du point de contrôle automatique [!INCLUDE[hek_2](../../includes/hek-2-md.md)] (ce qui se produit chaque fois que le journal croît de 512 Mo).<br /><br /> Remarque : Pour tronquer le journal des transactions avant qu’il n’atteigne 512 Mo, exécutez manuellement la commande Checkpoint sur la base de données en question.|  
   
 ##  <a name="MinimallyLogged"></a> Opérations qui peuvent être consignées  
  La*journalisation minimale* implique de ne journaliser que les informations obligatoires pour pouvoir récupérer la transaction sans prendre en charge la récupération jusqu’à une date et heure. Cette rubrique identifie les opérations qui sont journalisées au minimum en mode de récupération utilisant les journaux de transactions (ainsi qu'en mode de récupération simple, sauf lorsqu'une sauvegarde est en cours).  
@@ -135,7 +135,7 @@ ms.locfileid: "48072889"
     -   Reconstruction d'un nouveau segment de mémoire DROP INDEX (le cas échéant).  
   
         > [!NOTE]  
-        >  Désallocation d’index page pendant une [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) opération est toujours entièrement journalisée.  
+        >  La désallocation de pages d'index au cours d'une opération [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) est toujours entièrement journalisée.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
  `Managing the transaction log`  

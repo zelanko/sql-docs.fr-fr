@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4fdd0df76d4b61896abd3c0478472f20384b05c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64204c8eb91d17a266e10f0a2b7fb938a0148397
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153411"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779911"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>Procédure : créer et modifier un service de capture de données modifiées
   Ces procédures décrivent comment créer et modifier un service de capture de données modifiées Oracle dans la console de configuration du service de capture de données modifiées.  
@@ -62,7 +61,7 @@ ms.locfileid: "48153411"
 5.  Cliquez sur **OK** dans la boîte de dialogue Connexion à Oracle. Les deux boîtes de dialogue se ferment et le service est mis à jour et inscrit.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur de Capture de données modifiées pour Oracle par Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
- [Créer et modifier un service CDC Oracle](create-and-edit-an-oracle-cdc-service.md)  
+ [Concepteur de capture de données modifiées pour Oracle par Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Create and Edit an Oracle CDC Service](create-and-edit-an-oracle-cdc-service.md)  
   
   

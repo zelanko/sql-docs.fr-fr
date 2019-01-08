@@ -13,15 +13,15 @@ ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9e2f62236d844a6ded850f33207bad9da082ce62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75529b9880183a644abdbdce1f6174c375245ba2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177289"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355845"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Tâche 14 : Ajout d'une tâche d'exécution SQL au flux de contrôle pour exécuter la procédure stockée pour MDS
-  Après le chargement des données dans les tables intermédiaires de MDS, vous allez exécuter une procédure stockée associée à ces tables pour charger les données des tables intermédiaires vers les tables appropriées dans la base de données MDS. Cette procédure stockée nécessite deux paramètres : LogFlag et VersionName. LogFlag spécifie si les transactions sont journalisées pendant le processus intermédiaire et VersionName représente la version du modèle. Consultez [procédure stockée intermédiaire](http://msdn.microsoft.com/library/hh231028.aspx) rubrique pour plus d’informations.  
+  Après le chargement des données dans les tables intermédiaires de MDS, vous allez exécuter une procédure stockée associée à ces tables pour charger les données des tables intermédiaires vers les tables appropriées dans la base de données MDS. Cette procédure stockée nécessite deux paramètres requis : LogFlag et VersionName. LogFlag spécifie si les transactions sont journalisées pendant le processus intermédiaire et VersionName représente la version du modèle. Consultez [procédure stockée intermédiaire](https://msdn.microsoft.com/library/hh231028.aspx) rubrique pour plus d’informations.  
   
  Dans cette tâche, vous allez ajouter la tâche d'exécution SQL au flux de contrôle pour appeler la procédure stockée et charger les données intermédiaires dans les tables MDS appropriées.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48177289"
   
 5.  À l’aide de la **Variables** fenêtre, ajoutez deux nouvelles variables avec les paramètres suivants. Si vous ne voyez pas le **Variables** fenêtre, cliquez sur **SSIS** sur la barre de menus et cliquez sur **Variables**.  
   
-    |Nom   |Type de données|Valeur|  
+    |Créer une vue d’abonnement|Type de données|Value|  
     |----------|---------------|-----------|  
     |LogFlag|Int32|1|  
     |VersionName|String|VERSION_1|  
@@ -74,6 +74,6 @@ ms.locfileid: "48177289"
 15. Cliquez sur **OK** pour fermer la **Éditeur d’exécution SQL** boîte de dialogue.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 15 : Génération et exécution du projet SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)  
+ [Tâche 15 : Générer et exécuter le projet SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)  
   
   

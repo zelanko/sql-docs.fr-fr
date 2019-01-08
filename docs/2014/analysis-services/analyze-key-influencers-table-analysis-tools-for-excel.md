@@ -15,12 +15,12 @@ ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49dc66cfeb9b6d30abd98563b995bcbead0de5d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 672b68a1fda1013fc3ed46f9da1175ec038a8ffe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128773"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415556"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Analyser les facteurs d'influence clés (Outils d'analyse de table pour Excel)
   ![Bouton de facteurs d’influence clés analyser dans le ruban](media/tat-aki.gif "bouton analyser les facteurs d’influence clés du ruban")  
@@ -101,7 +101,7 @@ ms.locfileid: "48128773"
   
 -   Il crée un rapport décrivant les facteurs d'influence clés, classés par scores de confiance.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Si la colonne cible contient des valeurs numériques continues, l'outil segmente automatiquement les valeurs numériques dans des groupes. Ces regroupements représentent des clusters de cas possédant des caractéristiques similaires. Cependant, les valeurs numériques ne peuvent pas être divisées en groupes conviviaux. Par exemple, le rapport peut contenir un regroupement tel que «\<12.85701", tandis que les utilisateurs de rapports en général, consultez les regroupements qui utilisent des nombres entiers, tels que 10-19, 20-29 et ainsi de suite.  
   
  Si vous voulez regrouper vos données numériques d'une autre manière, vous devez segmenter les données comme vous le souhaitez avant de créer l'analyse. Par exemple, vous pouvez utiliser la [Réétiqueter](relabel-sql-server-data-mining-add-ins.md) outil dans le Client d’exploration de données pour Excel créer une nouvelle étiquette de regroupement dans une colonne distincte et ensuite utiliser cette nouvelle colonne dans l’analyse.  

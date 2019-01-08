@@ -17,12 +17,12 @@ ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4583337cf9908f266fe1a85510d4beaae5a5af65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 641a08567e990134d49d32ae7ebecaf7d2b8de5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714370"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533086"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item, propriété (objet Cellset d’ADO MD)
 Récupère une cellule à partir d’un [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) à l’aide de ses coordonnées.  
@@ -60,7 +60,7 @@ Cellset.Item ( Positions )Cellset ( Positions )
   
  La position ordinale est un nombre qui identifie de façon unique une cellule dans le **Cellset**. Conceptuellement, les cellules sont comptabilisées dans un **Cellset** comme si le **Cellset** ont été un *p*-tableau unidimensionnel, où *p* est le nombre d’axes. Les cellules sont traitées dans l'ordre ligne-champ. Voici la formule pour calculer le nombre ordinal d’une cellule :  
   
- Si des noms de membres sont passés comme des chaînes à **élément**, les membres doivent figurer dans l’ordre des identificateurs de l’axe numérique croissant. Au sein d’un axe, les membres doivent être répertoriés en ordre croissant d’imbrication, autrement dit, les membres de la dimension la plus éloignée vient en premier, suivie des dimensions. Chaque dimension doit être représentée par une chaîne séparée, et la liste de chaînes de membre doit être séparée par des virgules.  
+ Si des noms de membres sont passés comme des chaînes à **élément**, les membres doivent figurer dans l’ordre des identificateurs de l’axe numérique croissant. Au sein d’un axe, les membres doivent être répertoriés en ordre croissant d’imbrication : autrement dit, les membres de la dimension la plus éloignée vient en premier, suivie des dimensions. Chaque dimension doit être représentée par une chaîne séparée, et la liste de chaînes de membre doit être séparée par des virgules.  
   
 > [!NOTE]
 >  Extraction des cellules par nom de membre ne peut pas être pris en charge par votre fournisseur de données. Consultez la documentation de votre fournisseur pour plus d’informations.  

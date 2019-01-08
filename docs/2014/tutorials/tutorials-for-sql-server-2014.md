@@ -18,12 +18,12 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b3a2a4fb654603e783a50e46b212f746226132ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07ff9e3ed413b3cb73a4dbfb84bac6961acb1759
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194469"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368061"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Didacticiels pour SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] introduit de nombreuses nouvelles technologies et fonctionnalités.  
@@ -32,9 +32,9 @@ ms.locfileid: "48194469"
   
  Si vous utilisez un serveur [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , les fournisseurs de données [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] sont installés. Pour que les didacticiels fonctionnent, vous aurez besoin des exemples de bases de données [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] qui fonctionnent avec ces fournisseurs ou bien des fournisseurs de données [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] qui fonctionnent avec la version des exemples de bases de données [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] .  
   
--   Pour télécharger des exemples de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et les utiliser dans les didacticiels, accédez à [Exemples pour SQL Server](http://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) sur CodePlex.  
+-   Pour télécharger des exemples de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et les utiliser dans les didacticiels, accédez à [Exemples pour SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) sur CodePlex.  
   
--   Pour télécharger un classeur [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] et des rapports [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] à utiliser avec des didacticiels [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , accédez à [Fichiers image pour l'exemple de modèle HelloWorldPicnic dans PowerPivot et Power View](http://www.microsoft.com/download/details.aspx?id=26719).  
+-   Pour télécharger un classeur [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] et des rapports [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] à utiliser avec des didacticiels [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , accédez à [Fichiers image pour l'exemple de modèle HelloWorldPicnic dans PowerPivot et Power View](https://www.microsoft.com/download/details.aspx?id=26719).  
   
     > [!NOTE]  
     >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] est une fonctionnalité de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complément pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
@@ -43,7 +43,7 @@ ms.locfileid: "48194469"
   
 -   Pour télécharger les versions [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] des bases de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , accédez à [AdventureWorks pour SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) sur CodePlex.  
   
--   Pour afficher la liste des didacticiels sur [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , accédez à [Didacticiels](http://msdn.microsoft.com/library/ms167593.aspx) dans MSDN Library.  
+-   Pour afficher la liste des didacticiels sur [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , accédez à [Didacticiels](https://msdn.microsoft.com/library/ms167593.aspx) dans MSDN Library.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  Des didacticiels sont disponibles pour ces technologies [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] .  

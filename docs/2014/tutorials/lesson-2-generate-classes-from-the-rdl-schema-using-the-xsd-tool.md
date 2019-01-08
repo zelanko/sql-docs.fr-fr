@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Générer des Classes à partir du schéma RDL à l’aide de l’outil xsd | Microsoft Docs'
+title: 'Leçon 2 : Générer des Classes à partir du schéma RDL à l’aide de l’outil xsd | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: a81c87f1-7977-4b30-b6ac-b38b3e2b6398
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34c279f44df33bddf12b3fd9ec3e128514d1f50c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 818400a678b16f524e79da607a25775ad756ca5d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065979"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374491"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Leçon 2 : génération de classes à partir du schéma RDL à l'aide de l'outil xsd
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Leçon 2 : Génération de classes à partir du schéma RDL à l'aide de l'outil xsd
   Une fois que vous avez créé votre projet [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], l'étape suivante consiste à extraire une copie locale du schéma de la définition du rapport et à exécuter l'outil de définition du schéma XML (Xsd.exe).  
   
 ### <a name="to-generate-the-rdl-classes"></a>Pour générer les classes RDL  
@@ -26,7 +26,7 @@ ms.locfileid: "48065979"
 1.  Ouvrez une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer (ou un navigateur Web équivalent) et accédez à l’URL suivante :  
   
     ```  
-    http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition/ReportDefinition.xsd  
+    https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition/ReportDefinition.xsd  
     ```  
   
 2.  Une fois le schéma RDL a été ouvert dans le navigateur, accédez à la **fichier** menu, puis sélectionnez **Enregistrer sous**.  
@@ -53,7 +53,7 @@ ms.locfileid: "48065979"
     >  Une fois que vous avez ajouté le fichier ReportDefinition.xsd au projet que vous constaterez dans **l’Explorateur de solutions** que le fichier ReportDefinition.cs (.vb) n’est pas il. Pour afficher le fichier, cliquez sur le bouton Développer/Réduire en regard du fichier ReportDefinition.xsd.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- Dans la prochaine leçon, vous allez écrire du code pour charger une définition de rapport à partir d'un serveur de rapports à l'aide des classes que vous avez générées depuis le schéma RDL. Consultez [leçon 3 : charger une définition de rapport du serveur de rapports](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
+ Dans la prochaine leçon, vous allez écrire du code pour charger une définition de rapport à partir d'un serveur de rapports à l'aide des classes que vous avez générées depuis le schéma RDL. Consultez [leçon 3 : Charger une définition de rapport du serveur de rapports](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

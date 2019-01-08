@@ -17,12 +17,12 @@ ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 026c1bf822a6493c6605128582f7142178ad6776
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8713ed58df138efbaacd8f6ff4b5d31ef0708d85
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188259"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357312"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Conseils et meilleures pratiques en matière de globalisation (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Multidimensionnel uniquement  
@@ -50,7 +50,7 @@ ms.locfileid: "48188259"
   
  Le caractère espace est un « cas spécial », car il peut être représenté comme un jeu de caractères codé sur un octet (SBCS) ou sur deux octets (DBCS) au format Unicode. Dans le moteur relationnel, deux chaînes composées séparées par un espace (une en SBCS et l'autre en DBCS) sont considérées comme identiques. Dans Analysis Services, au cours du traitement, les deux mêmes chaînes composées ne sont pas identiques et la deuxième instance est signalée comme un doublon.  
   
- Pour plus d'informations et pour obtenir des suggestions de solutions de contournement, consultez [Les vides dans une chaîne Unicode sont traités différemment selon le classement](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
+ Pour plus d'informations et pour obtenir des suggestions de solutions de contournement, consultez [Les vides dans une chaîne Unicode sont traités différemment selon le classement](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
   
 ##  <a name="bkmk_recos"></a> Recommandations courantes en matière de classement  
  Analysis Services présente toujours la liste complète de toutes les langues et tous les classements disponibles. Il ne filtre pas les classements en fonction de la langue sélectionnée. Veillez à choisir une combinaison exploitable.  
@@ -69,9 +69,9 @@ ms.locfileid: "48188259"
   
      En République populaire de Chine et à Singapour, le Support technique Microsoft considère plutôt le Chinois simplifié avec Pinyin comme l'ordre de tri par défaut. Les classements recommandés sont Chinese_PRC (pour SQL Server 2000), Chinese_PRC_90 (pour SQL Server 2005) ou Chinese_Simplified_Pinyin_100 (pour SQL Server 2008 et versions ultérieures).  
   
-     À Taïwan, il est plus courant de voir le Chinois traditionnel avec l'ordre de tri recommandé basé sur le nombre de traits : Chinese_Taiwan_Stroke (pour SQL Server 2000), Chinese_Taiwan_Stroke_90 (pour SQL Server 2005) ou Chinese_Traditional_Stroke_Count_100 (pour SQL Server 2008 et versions ultérieures).  
+     À Taïwan, il est plus courant de voir le Chinois traditionnel avec l'ordre de tri recommandé basé sur le nombre de traits : Chinese_Taiwan_Stroke (pour SQL Server 2000), Chinese_Taiwan_Stroke_90 (pour SQL Server 2005) ou Chinese_Traditional_Stroke_Count_100 (pour SQL Server 2008 et versions ultérieures).  
   
-     Les autres régions (comme Macao (R.A.S.) et Macao) utilisent également le Chinois traditionnel. Pour les classements, à Macao (R.A.S.) il n'est pas rare de voir Chinese_Hong_Kong_Stroke_90 (sur SQL Server 2005). À Macao (R.A.S.), Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 et versions ultérieures) est utilisé relativement souvent.  
+     Les autres régions (comme Hong Kong (R.A.S.) et Macao (R.A.S.)) utilisent également le Chinois traditionnel. Pour les classements, à Macao (R.A.S.) il n'est pas rare de voir Chinese_Hong_Kong_Stroke_90 (sur SQL Server 2005). À Macao (R.A.S.), Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 et versions ultérieures) est utilisé relativement souvent.  
   
 -   Pour le japonais, le classement le plus courant est Japanese_CI_AS. Japanese_XJIS_100 est utilisé dans les installations prenant en charge [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213). On utilise généralement Japanese_BIN2 dans les projets de migration de données, avec des données provenant de plateformes non-Windows ou de sources de données autres que le moteur de base de données relationnelle de SQL Server.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48188259"
   
 |Script de langue|Respect de la casse|  
 |---------------------|----------------------|  
-|**Alphabet latin de base**|Les identificateurs d'objets exprimés dans le script Latin (les 26 lettres majuscules ou minuscules françaises) sont traités comme ne respectant pas la casse, quel que soit le classement. Par exemple, les ID d'objet suivants sont considérés comme identiques : 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. En interne, Analysis Services traite les caractères de la chaîne comme s'ils étaient tous en majuscule, puis il effectue une comparaison d'octets simple qui est indépendante de la langue.<br /><br /> Notez que seuls les 26 caractères sont affectés. S'il s'agit d'une langue d'Europe de l'Ouest qui utilise des caractères scandinaves, le caractère supplémentaire n'est pas mis en majuscule.|  
+|**Alphabet latin de base**|Les identificateurs d'objets exprimés dans le script Latin (les 26 lettres majuscules ou minuscules françaises) sont traités comme ne respectant pas la casse, quel que soit le classement. Par exemple, les ID d'objets suivants sont considérés comme identiques : 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. En interne, Analysis Services traite les caractères de la chaîne comme s'ils étaient tous en majuscule, puis il effectue une comparaison d'octets simple qui est indépendante de la langue.<br /><br /> Notez que seuls les 26 caractères sont affectés. S'il s'agit d'une langue d'Europe de l'Ouest qui utilise des caractères scandinaves, le caractère supplémentaire n'est pas mis en majuscule.|  
 |**Cyrillique, grec, copte, arménien**|Les identificateurs d'objets en script bicaméral non latin, tel que le cyrillique, respectent toujours la casse. Par exemple, Измерение et измерение sont considérés comme deux valeurs distinctes, même si la seule différence est la casse de la première lettre.|  
   
  **Impact du respect de la casse pour les identificateurs d'objets**  
@@ -140,7 +140,7 @@ ms.locfileid: "48188259"
   
 3.  **Utiliser des formats de date ISO pour les informations de date et d'heure universelles**  
   
-     Un [expert Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) fait la recommandation suivante : « J’utilise toujours le format de date ISO aaaa-mm-jj pour toutes les chaînes de date que je passe aux requêtes SQL ou MDX, car il est sans équivoque et fonctionne quels que soient les paramètres régionaux du serveur ou du client. Je pense que le serveur doit s'en remettre à ses paramètres régionaux lors de l'analyse d'un format de date ambigu, mais je pense également que si vous avez une option qui n'est pas ouverte à l'interprétation, mieux vaut choisir cela de toutes façons ».  
+     Un [expert Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) a cette recommandation : « J'utilise toujours le format de date ISO aaaa-mm-jj pour toutes les chaînes de date que je passe à des requêtes SQL ou MDX, car il est sans équivoque et fonctionne quels que soient les paramètres régionaux du serveur ou du client. Je pense que le serveur doit s'en remettre à ses paramètres régionaux lors de l'analyse d'un format de date ambigu, mais je pense également que si vous avez une option qui n'est pas ouverte à l'interprétation, mieux vaut choisir cela de toutes façons ».  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   

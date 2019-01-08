@@ -11,17 +11,17 @@ ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89a99ed7f3f38abba8eeaaf8b2f420106dbbe790
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58169ffcc696c87addee0417700ba131a71e12f0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198429"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363751"
 ---
 # <a name="log-operations-in-analysis-services"></a>Enregistrer les opérations dans Analysis Services
-  Une instance Analysis Services enregistre les notifications, erreurs et avertissements du serveur dans le fichier msmdsrv.log (un pour chaque instance que vous installez). Les administrateurs se réfèrent à ce fichier journal pour en savoir plus sur les événements ordinaires et extraordinaires. Dans les versions récentes, la journalisation a été améliorée pour inclure davantage d'informations. Désormais, les enregistrements de journaux incluent des informations sur la version et l'édition du produit, ainsi que sur des événements du processeur, de la mémoire, de la connectivité et de blocage. L'article [Améliorations apportées à la journalisation](http://support.microsoft.com/kb/2965035)fournit une liste de tous les changements.  
+  Une instance Analysis Services enregistrera les notifications du serveur, les erreurs et avertissements dans le fichier msmdsrv.log - un pour chaque instance que vous installez. Les administrateurs se réfèrent à ce fichier journal pour en savoir plus sur les événements ordinaires et extraordinaires. Dans les versions récentes, la journalisation a été améliorée pour inclure davantage d'informations. Désormais, les enregistrements de journaux incluent des informations sur la version et l'édition du produit, ainsi que sur des événements du processeur, de la mémoire, de la connectivité et de blocage. L'article [Améliorations apportées à la journalisation](https://support.microsoft.com/kb/2965035)fournit une liste de tous les changements.  
   
- En plus de la fonctionnalité de journalisation intégrée, de nombreux administrateurs et développeurs utilisent des outils fournis par la communauté Analysis Services pour recueillir des données sur les opérations du serveur, comme **ASTrace**. Pour obtenir des liens de téléchargement, consultez [Exemples de la communauté Microsoft SQL Server : Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) .  
+ En plus de la fonctionnalité de journalisation intégrée, de nombreux administrateurs et développeurs utilisent des outils fournis par la communauté Analysis Services pour recueillir des données sur les opérations du serveur, comme **ASTrace**. Consultez [exemples de la Communauté Microsoft SQL Server : Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) pour les liens de téléchargement.  
   
  Cette rubrique contient les sections suivantes :  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48198429"
 -   [Conseils et meilleures pratiques](#bkmk_tips)  
   
 > [!NOTE]  
->  Si vous recherchez des informations sur la journalisation, vous serez peut-être intéressé par les opérations de suivi qui montrent les détails de traitement et d'exécution de requêtes. Pour obtenir des informations sur les objets de trace pour le suivi ad hoc et maintenu (par exemple, l’audit de l’accès aux cubes), ainsi que des recommandations sur l’utilisation optimale de Flight Recorder, SQL Server Profiler et xEvents, consultez les liens accessibles dans cette page : [Analyser une instance Analysis Services](monitor-an-analysis-services-instance.md).  
+>  Si vous recherchez des informations sur la journalisation, vous serez peut-être intéressé par les opérations de suivi qui montrent les détails de traitement et d'exécution de requêtes. Pour obtenir des informations sur les objets de trace pour le suivi ad hoc et maintenu (par exemple l'audit de l'accès aux cubes), ainsi que des recommandations sur l'utilisation optimale de Flight Recorder, SQL Server Profiler et xEvents, consultez les liens accessibles via cette page : [Surveiller une Instance Analysis Services](monitor-an-analysis-services-instance.md).  
   
 ##  <a name="bkmk_location"></a> Emplacement et types de journaux  
  Analysis Services fournit les journaux décrits ci-dessous.  
@@ -46,10 +46,10 @@ ms.locfileid: "48198429"
 |Nom de fichier ou emplacement|Type|Utilisé pour|Activé par défaut|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Journal des erreurs|Surveillance de routine et dépannage de base|Oui|  
-|Table OlapQueryLog dans une base de données relationnelle|Journal des requêtes|Recueillir les entrées de l'Assistant Optimisation de l'utilisation|non|  
-|Fichiers SQLDmp\<guid > .mdmp fichiers|Blocages et exceptions|Dépannage approfondi|non|  
+|Table OlapQueryLog dans une base de données relationnelle|Journal des requêtes|Recueillir les entrées de l'Assistant Optimisation de l'utilisation|Non|  
+|Fichiers SQLDmp\<guid > .mdmp fichiers|Blocages et exceptions|Dépannage approfondi|Non|  
   
- Nous vous recommandons vivement de consulter le lien suivant pour accéder à des ressources supplémentaires non traitées dans la rubrique suivante, qui fournit des [conseils sur la collecte de données initiale depuis le support Microsoft](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
+ Nous vous recommandons vivement de consulter le lien suivant pour accéder à des ressources supplémentaires non traitées dans cette rubrique : [Conseils sur la collection données auprès du Support Microsoft initiale](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
 ##  <a name="bkmk_general"></a> Informations générales sur les paramètres de configuration des fichiers journaux  
  Vous trouverez des sections pour chaque journal dans le fichier de configuration de serveur msmdsrv.ini, qui se trouve dans le dossier Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config. Pour obtenir des instructions sur la modification du fichier, consultez [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) .  
@@ -63,9 +63,9 @@ ms.locfileid: "48198429"
   
  Ce fichier journal est vidé à chaque redémarrage du service. Dans les versions précédentes, les administrateurs redémarraient parfois le service dans le seul but de vider le fichier journal avant que sa taille ne devienne ingérable. Cela n'est plus nécessaire. Les paramètres de configuration, introduits dans SQL Server 2012 SP2 et versions ultérieures, vous permettent de contrôler la taille du fichier journal et son historique :  
   
--   `MaxFileSizeMB` spécifie la taille maximale (en mégaoctets) du fichier journal. La valeur par défaut est 256. Une valeur de remplacement valide doit être un entier positif. Lorsque `MaxFileSizeMB` est atteinte, Analysis Services renomme le fichier actuel msmdsrv {horodateur_actuel} .log et crée un nouveau fichier msmdsrv.log.  
+-   `MaxFileSizeMB` spécifie la taille maximale (en mégaoctets) du fichier journal. La valeur par défaut est 256. Une valeur de remplacement valide doit être un entier positif. Quand la valeur `MaxFileSizeMB` est atteinte, Analysis Services renomme le fichier actuel msmdsrv{horodateur_actuel}.log et crée un nouveau fichier msmdsrv.log.  
   
--   `MaxNumberFiles` Spécifie la conservation des anciens fichiers journaux. La valeur par défaut est 0 (option désactivée). Vous pouvez la modifier et affecter un entier positif pour conserver les versions du fichier journal. Lorsque `MaxNumberFiles` est atteinte, Analysis Services supprime le fichier avec l’horodateur le plus ancien dans son nom.  
+-   `MaxNumberFiles` Spécifie la conservation des anciens fichiers journaux. La valeur par défaut est 0 (option désactivée). Vous pouvez la modifier et affecter un entier positif pour conserver les versions du fichier journal. Quand la valeur `MaxNumberFiles` est atteinte, Analysis Services supprime le fichier ayant l'horodateur le plus ancien.  
   
  Pour utiliser ces paramètres, procédez comme suit :  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48198429"
   
  Laissez le journal des requêtes accumuler suffisamment de données pour l'Assistant Optimisation de l'utilisation. Si les volumes de requêtes sont cycliques, capturez suffisamment de trafic pour avoir un jeu de données représentatif. Pour obtenir des instructions sur la façon d'exécuter l'Assistant, consultez [Aide F1 sur l'Assistant Optimisation de l'utilisation](https://msdn.microsoft.com/library/ms189706.aspx) .  
   
- Pour en savoir plus sur la configuration du journal des requêtes, consultez [Configuration du journal des requêtes Analysis Services](http://technet.microsoft.com/library/Cc917676) . Bien que cet article soit assez ancien, la configuration du journal des requêtes n'a pas changé dans les dernières versions et les informations qu'il contient sont toujours valables.  
+ Pour en savoir plus sur la configuration du journal des requêtes, consultez [Configuration du journal des requêtes Analysis Services](https://technet.microsoft.com/library/Cc917676) . Bien que cet article soit assez ancien, la configuration du journal des requêtes n'a pas changé dans les dernières versions et les informations qu'il contient sont toujours valables.  
   
 ##  <a name="bkmk_mdmp"></a> Fichiers de vidage minimal (.mdmp)  
  Les fichiers de vidage capturent des données utilisées pour l'analyse des événements extraordinaires. Analysis Services génère automatiquement des vidages minimaux (.mdmp) en réponse à un blocage du serveur, à une exception et à certaines erreurs de configuration. Cette fonctionnalité est activée, mais n'envoie pas automatiquement de rapports d'incidents.  
@@ -149,11 +149,11 @@ ms.locfileid: "48198429"
   
  **Configurer les rapports d'incidents**  
   
- Sauf instruction contraire fournie par le support Microsoft, la plupart des administrateurs utilisent les paramètres par défaut. Cet article de base de connaissances est ancien, mais il fournit toujours des instructions sur la configuration des fichiers de vidage : [Comment faire pour configurer SQL Server 2005 Analysis Services pour générer des fichiers de vidage de mémoire](http://support.microsoft.com/kb/919711).  
+ Sauf instruction contraire fournie par le support Microsoft, la plupart des administrateurs utilisent les paramètres par défaut. Cet article plus ancien de la Base des connaissances fournit des instructions sur la façon de configurer les fichiers de vidage : [Comment configurer Analysis Services pour générer des fichiers de vidage de mémoire](https://support.microsoft.com/kb/919711).  
   
- Le paramètre le plus susceptibles d’être modifiés de configuration est le `CreateAndSendCrashReports` paramètre utilisé pour déterminer si un fichier de vidage de mémoire sera généré.  
+ Le paramètre de configuration le plus susceptible d'être modifié est le paramètre `CreateAndSendCrashReports` qui sert à déterminer si un fichier de vidage de la mémoire sera généré.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0|Désactive le fichier de vidage de la mémoire. Tous les autres paramètres dans la section Exceptions sont ignorés.|  
 |1|(Par défaut) Active mais n'envoie pas le fichier de vidage de la mémoire.|  
@@ -161,28 +161,28 @@ ms.locfileid: "48198429"
   
  `CrashReportsFolder` est l'emplacement des fichiers de vidage. Par défaut, un fichier .mdmp et les enregistrements de journaux associés se trouvent dans le dossier \Olap\Log.  
   
- `SQLDumperFlagsOn` est utilisé pour générer un vidage complet. Par défaut, les vidages complets ne sont pas activés. Vous pouvez définir cette propriété sur `0x34`.  
+ `SQLDumperFlagsOn` sert à générer un vidage complet. Par défaut, les vidages complets ne sont pas activés. Vous pouvez affecter la valeur `0x34` à cette propriété.  
   
  Les liens suivants fournissent des explications plus détaillées :  
   
--   [Exploration approfondie de SQL Server avec des minidumps](http://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
+-   [Exploration approfondie de SQL Server avec des minidumps](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
   
--   [Comment créer un fichier de vidage en mode utilisateur](http://support.microsoft.com/kb/931673)  
+-   [Comment créer un fichier de vidage en mode utilisateur](https://support.microsoft.com/kb/931673)  
   
--   [Comment utiliser l'utilitaire Sqldumper.exe pour générer un fichier de vidage dans SQL Server](http://support.microsoft.com/kb/917825)  
+-   [Comment utiliser l'utilitaire Sqldumper.exe pour générer un fichier de vidage dans SQL Server](https://support.microsoft.com/kb/917825)  
   
 ##  <a name="bkmk_tips"></a> Conseils et meilleures pratiques  
  Cette section est un récapitulatif des conseils mentionnés dans cet article.  
   
 -   Configurez le fichier msmdsrv.log pour contrôler la taille et le numéro du fichier journal msmdsrv. Les paramètres ne sont pas activés par défaut. Veillez à les ajouter comme étapes de post-installation. Consultez [Fichier journal du service MSMDSRV](#bkmk_msmdsrv) dans cette rubrique.  
   
--   Passez en revue ce billet de blog des membres du support technique Microsoft, qui porte sur la [collecte de données initiales](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx), pour découvrir les ressources qu’ils utilisent, et obtenir ainsi des informations sur les opérations du serveur.  
+-   Passez en revue ce billet de blog des membres du support technique Microsoft pour découvrir les ressources qu'ils utilisent et obtenir ainsi des informations sur les opérations du serveur : [Collecte de données initiale](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
--   Utilisez ASTrace2012 plutôt qu'un journal des requêtes pour savoir qui interroge les cubes. Le journal des requêtes sert généralement à fournir une entrée pour l'Assistant Optimisation de l'utilisation. Les données qu'il capture ne sont pas faciles à lire ou à interpréter. ASTrace2012 est un outil de la communauté, largement utilisé, qui capture les opérations de requêtes. Consultez [Exemples de la communauté Microsoft SQL Server : Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
+-   Utilisez ASTrace2012 plutôt qu'un journal des requêtes pour savoir qui interroge les cubes. Le journal des requêtes sert généralement à fournir une entrée pour l'Assistant Optimisation de l'utilisation. Les données qu'il capture ne sont pas faciles à lire ou à interpréter. ASTrace2012 est un outil de la communauté, largement utilisé, qui capture les opérations de requêtes. Consultez [exemples de la Communauté Microsoft SQL Server : Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion d’instances Analysis Services](analysis-services-instance-management.md)   
- [Introduction à la surveillance d’Analysis Services avec SQL Server Profiler](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
+ [Gestion d'instances Analysis Services](analysis-services-instance-management.md)   
+ [Introduction à la surveillance d’Analysis Services à l’aide de SQL Server Profiler](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Configurer les propriétés du serveur dans Analysis Services](../server-properties/server-properties-in-analysis-services.md)  
   
   
