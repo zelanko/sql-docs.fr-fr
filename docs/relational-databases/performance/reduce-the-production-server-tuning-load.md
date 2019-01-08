@@ -16,16 +16,16 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3f13c91afe570226a244497ce2387348d820944
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9f4373b5a73ff9dae8eadb96f2bea43832650d71
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663578"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353594"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Réduire la charge de paramétrage du serveur de production
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51663578"
   
      Pour paramétrer une charge de travail sur un serveur de test, vous devez utiliser un fichier d’entrée XML avec l’utilitaire de ligne de commande **dta** . Dans le fichier d’entrée XML, définissez le nom du serveur de test avec le sous-élément **TestServer** et définissez les valeurs des autres sous-éléments sous l’élément parent **TuningOptions** .  
   
-     Au cours du paramétrage, l'Assistant Paramétrage du moteur de base de données crée une base de données shell sur le serveur de test. Pour créer cette base de données shell et la paramétrer, l'Assistant Paramétrage du moteur de base de données envoie des appels au serveur de production :  
+     Au cours du paramétrage, l'Assistant Paramétrage du moteur de base de données crée une base de données shell sur le serveur de test. Pour créer cette base de données shell et la paramétrer, l'Assistant Paramétrage du moteur de base de données envoie des appels au serveur de production :  
   
     1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)] L’Assistant Paramétrage importe des métadonnées de la base de données de production pour tester la base de données shell du serveur de test. Les métadonnées incluent des tables, des index, des vues des procédures stockées, des déclencheurs vides, etc. Ceci permet aux requêtes de charge de travail de s'exécuter par rapport à la base de données shell du serveur de test.  
   

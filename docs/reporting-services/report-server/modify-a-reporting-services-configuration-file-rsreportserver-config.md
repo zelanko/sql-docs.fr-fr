@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 412cb586d306da13791a956a01a1a217d5fc0d7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54ca89e75da4bf5ce5d0666ec479b870deda2848
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758654"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202138"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke les paramètres des applications dans un jeu de fichiers de configuration. Le programme d'installation crée les fichiers de configuration de chaque instance du serveur de rapports que vous installez. Dans chaque fichier, les valeurs sont définies soit pendant l'installation, soit lorsque vous utilisez des outils et des applications pour configurer un serveur. Dans certains cas, vous devez modifier directement un fichier pour ajouter ou configurer des paramètres avancés. Les paramètres de configuration sont spécifiés soit comme des éléments, soit comme des attributs XML. Si le langage XML et les fichiers de configuration vous sont familiers, vous pouvez modifier les paramètres définissables par l'utilisateur dans un éditeur de texte ou de code.  
   
  Certains paramètres de configuration peuvent être définis uniquement à l'aide d'un outil. Les paramètres qui contiennent des valeurs chiffrées doivent être modifiés à l'aide de l'outil de configuration de Reporting Services, du programme d'installation ou de l'utilitaire de ligne de commande **rsconfig** . Vous devez être membre du groupe Administrateurs local pour exécuter ces outils.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Soyez prudent lorsque vous modifiez les fichiers de configuration. Si vous modifiez un paramètre réservé à un usage interne, vous risquez de désactiver votre installation. En règle générale, il est déconseillé de modifier les paramètres de configuration, sauf pour essayer de résoudre un problème spécifique. Pour plus d’informations sur les paramètres qui peuvent être modifiés en toute sécurité, consultez [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) ou [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md). Pour plus d’informations sur les fichiers de configuration, consultez la documentation du produit [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  Dans cette rubrique :  
@@ -103,7 +103,7 @@ ms.locfileid: "47758654"
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Fichier de configuration ReportingServicesService](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Déploiement d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
+ [Déploiement d'une extension pour le traitement des données](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Déploiement d’une extension de remise](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Déploiement d’une extension de rendu](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
  [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  

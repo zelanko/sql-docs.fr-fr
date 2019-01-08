@@ -18,12 +18,12 @@ ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8280e12c2fc0937fe85ccb8d6668e420540142b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88e3362c19ee7f1be6a7c1d5074267de7039f676
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831927"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589713"
 ---
 # <a name="secure-the-publisher"></a>Sécuriser le serveur de publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47831927"
  Cette dernière constitue le mécanisme principal assurant la sécurité des publications sur le serveur de publication. La liste d'accès à la publication fonctionne de manière similaire à une liste de contrôle d'accès [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Lorsque vous créez une publication, la réplication crée une liste d'accès aux publications pour cette première. Cette PAL peut être configurée pour contenir un ensemble de noms de connexions et de groupes disposant de l'autorisation d'accès à la publication. Lorsqu'un agent se connecte au serveur de publication ou de distribution et demande l'accès à une publication, les informations d'authentification figurant dans la PAL sont comparées aux informations de connexion fournies par l'agent. Ce processus permet d'assurer un niveau de sécurité supplémentaire vis-à-vis du serveur de publication en empêchant l'utilisation des informations de connexion du serveur de publication et du serveur de distribution par un outil client pouvant procéder à des modifications directement sur le serveur de publication.  
   
 > [!NOTE]  
->  La réplication crée un rôle sur le serveur de publication pour que chaque publication exige l'appartenance à la PAL. Le rôle a un nom de la forme **Msmerge_***\<ID_Publication>* pour la réplication de fusion et **MSReplPAL_***\<Id_base_de_données_publication>***_***\<ID_Publication>* pour la réplication transactionnelle et d’instantané.  
+>  La réplication crée un rôle sur le serveur de publication pour que chaque publication exige l'appartenance à la PAL. Le rôle a un nom sous la forme **Msmerge_**_\<ID_Publication>_ pour la réplication de fusion et **MSReplPAL_**_\<Id_base_de_données_publication>_**_**_\<ID_Publication>_ pour la réplication transactionnelle et d’instantané.  
   
  Par défaut, les connexions suivantes figurent dans la PAL : les membres du rôle serveur fixe **sysadmin** (au moment de la création de la publication) et le nom de connexion utilisé pour créer la publication. Par défaut, toutes les connexions qui sont membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** sur la base de données de publication peuvent s'abonner à une publication sans être explicitement ajoutées à la PAL.  
   
@@ -62,13 +62,13 @@ ms.locfileid: "47831927"
  Pour gérer la liste d’accès à la publication, consultez [Gérer des connexions dans la liste d’accès à la publication](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md).  
   
 ## <a name="snapshot-agent"></a>Agent d'instantané  
- Il y a un Agent d'instantané pour chaque publication. Pour plus d’informations, consultez [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+ Il y a un Agent d'instantané pour chaque publication. Pour plus d’informations, voir [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 ## <a name="ftp-snapshot-delivery"></a>Remise d'un instantané via FTP  
  Si vous spécifiez que les instantanés doivent être remis via un partage FTP plutôt qu'un partage UNC, vous devez spécifier une connexion et un mot de passe lors de la configuration de l'accès à FTP : Pour plus d’informations, consultez [Remettre un instantané via FTP](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 ## <a name="log-reader-agent"></a>Agent de lecture du journal  
- Il existe un Agent de lecture du journal pour chaque base de données publiée en vue de la réplication transactionnelle. Pour plus d’informations, consultez [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+ Il existe un Agent de lecture du journal pour chaque base de données publiée en vue de la réplication transactionnelle. Pour plus d’informations, voir [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 ## <a name="queue-reader-agent"></a>Agent de lecture de la file d'attente  
  Il existe un Agent de lecture de la file d'attente pour tous les serveurs de publication et les publications (qui permettent les abonnements avec mise à jour en attente) associés à un serveur de distribution donné. Pour plus d’informations, consultez [Activer les abonnements de mise à jour pour les publications transactionnelles](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md).  

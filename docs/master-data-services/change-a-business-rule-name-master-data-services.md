@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], changing name
@@ -14,12 +13,12 @@ ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0c6bff75be197b72f90a1fd9dcc102be90ba8938
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1aede5993fea74932e58e682e6efd89dec84671c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648827"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754631"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Modifier le nom d'une règle d'entreprise (Master Data Services)
 
@@ -59,6 +58,6 @@ ms.locfileid: "47648827"
 10. Dans la boîte de dialogue de confirmation, cliquez sur **OK**. La valeur de la colonne **État de la règle d’entreprise**est **Active**.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   
