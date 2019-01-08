@@ -19,12 +19,12 @@ ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f5640fb6ab982b924d4669663da5f82da91b1601
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05cc0d47053d8ddef0962c4aceee75e61b8b4b64
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056981"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372451"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>Hiérarchie des autorisations (moteur de base de données)
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] gère une collection hiérarchisée d’entités qui peuvent être sécurisées à l’aide d’autorisations. Ces entités sont appelées *éléments sécurisables*. Les éléments sécurisables les plus proéminents sont les serveurs et les bases de données, mais les autorisations discrètes peuvent être définies à un niveau beaucoup plus fin. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] règle les actions des principaux sur des éléments sécurisables en vérifiant que les autorisations appropriées leur ont été octroyées.  
@@ -34,7 +34,7 @@ ms.locfileid: "48056981"
  ![Diagramme de hiérarchies d’autorisations de moteur de base de données](../../database-engine/media/wj-security-layers.gif "Diagramme de hiérarchies d’autorisations de moteur de base de données")  
   
 ## <a name="chart-of-sql-server-permissions"></a>Graphique des autorisations SQL Server  
- Pour obtenir un graphique de la taille d’une affiche de toutes les autorisations du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] au format PDF, consultez [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ Pour obtenir un graphique de la taille d’une affiche de toutes les autorisations du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] au format PDF, consultez [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ## <a name="working-with-permissions"></a>Utilisation des autorisations  
  Les autorisations peuvent être gérées avec les requêtes GRANT, DENY et REVOKE [!INCLUDE[tsql](../../includes/tsql-md.md)] habituelles. Les informations sur les autorisations sont visibles dans les affichages catalogue [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) et [sys.database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) . Il existe également une assistance permettant d'obtenir des informations sur les autorisations à l'aide de fonctions intégrées.  

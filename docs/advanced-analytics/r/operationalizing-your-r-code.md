@@ -1,5 +1,6 @@
 ---
-title: Faire fonctionner le code R dans SQL Server Machine Learning Services | Microsoft Docs
+title: Faire fonctionner le code R à l’aide de procédures stockées - SQL Server Machine Learning Services
+description: Incorporer le code de langage R dans une procédure stockée SQL Server pour le rendre disponible à toute application cliente ayant un accès à une base de données SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 41da5cfe2e545bdcbc59f8d557afc599177c9d5e
-ms.sourcegitcommit: f083867f97bb740caa211ca37cb046641172b8c0
+ms.openlocfilehash: 3fc96e57fffb3e000a7e1a19887ed27651df9009
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38952462"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432182"
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>Faire fonctionner le code R (Machine Learning Services)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +43,7 @@ Bien sûr, il est plus facile si certaines optimisations sont effectuées au pr�
 
 + [Conversion de code R pour une utilisation dans R Services](converting-r-code-for-use-in-sql-server.md)
 
-+ [Génération d’un R de procédure stockée à l’aide de sqlrutils](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
++ [Utiliser des fonctions d’assistance de sqlrutils](ref-r-sqlrutils.md)
 
 ## <a name="integrate-r-and-python-with-applications"></a>Intégrer R et Python avec les applications
 

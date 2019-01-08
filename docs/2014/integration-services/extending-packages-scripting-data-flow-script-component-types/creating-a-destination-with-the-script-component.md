@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b20e44acf3decd8ff8daf83ce8b1f9607977e3c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8e785b02ad8121f7d2e292dee7375b3be104aeb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179099"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363932"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Création d'une destination à l'aide du composant Script
   Les composants de destination dans le flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permettent d'enregistrer des données provenant de sources et de transformations en amont dans une source de données. En principe, le composant de destination se connecte à la source de données via un gestionnaire de connexions existant.  
@@ -102,7 +100,7 @@ ms.locfileid: "48179099"
 ## <a name="examples"></a>Exemples  
  Les exemples suivants présentent le code requis dans la classe `ScriptMain` pour créer un composant de destination.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Ces exemples utilisent la **Person.Address** table dans le `AdventureWorks` exemple de base de données et transmettent ses première et quatrième colonnes, le **int * AddressID*** et **nvarchar (30) City**colonnes, via le flux de données. Les mêmes données sont utilisées dans les exemples de source, transformation et destination de cette section. Des conditions préalables et des hypothèses supplémentaires sont documentées pour chaque exemple.  
   
 ### <a name="adonet-destination-example"></a>Exemple de destination ADO.NET  
@@ -351,7 +349,7 @@ public class ScriptMain:
 }  
 ```  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une source à l’aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   

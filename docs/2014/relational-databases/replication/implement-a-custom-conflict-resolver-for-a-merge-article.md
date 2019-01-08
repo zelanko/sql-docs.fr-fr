@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,12 +16,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87a5abc4377007558787595a2d2368ca5e5c5bb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7e8d3f735a096eeaf60ecdb376d02d046112a25
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149469"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375361"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implémenter un outil personnalisé de résolution des conflits pour un article de fusion
   Cette rubrique décrit comment implémenter l'outil personnalisé de résolution des conflits pour un article de fusion dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou du [programme de résolution personnalisé COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
@@ -71,7 +70,7 @@ ms.locfileid: "48149469"
 2.  Exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), en spécifiant **@publication**, **@article**, en affectant la valeur **resolver_info** à **@property**et en spécifiant le nom de la procédure stockée qui implémente la logique de l'outil de résolution des conflits pour **@value**.  
   
 ##  <a name="COM"></a> Programme de résolution personnalisé basé sur COM  
- L'espace de noms <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implémente une interface qui vous permet d'écrire une logique métier complexe afin de gérer les événements et de résoudre les conflits qui se produisent au cours du processus de synchronisation de la réplication de fusion. Pour plus d’informations, voir [Implémenter un gestionnaire de logique métier pour un article de fusion](implement-a-business-logic-handler-for-a-merge-article.md). Vous pouvez également écrire votre propre logique métier personnalisée en code natif pour résoudre ces conflits. Cette logique est construite sous la forme d'un composant COM et compilée dans des bibliothèques de liens dynamiques (DLL) à l'aide de produits tels que [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Un outil de résolution des conflits personnalisé basé sur COM doit implémenter l'interface **ICustomResolver** , qui est conçue spécifiquement pour la résolution des conflits.  
+ L'espace de noms <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implémente une interface qui vous permet d'écrire une logique métier complexe afin de gérer les événements et de résoudre les conflits qui se produisent au cours du processus de synchronisation de la réplication de fusion. Pour plus d’informations, voir [Implémenter un gestionnaire de logique métier pour un article de fusion](implement-a-business-logic-handler-for-a-merge-article.md). Vous pouvez également écrire votre propre logique métier personnalisée en code natif pour résoudre ces conflits. Cette logique est construite sous la forme d'un composant COM et compilée dans des bibliothèques de liens dynamiques (DLL) à l'aide de produits tels que [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Un outil de résolution des conflits personnalisé basé sur COM doit implémenter l’interface **ICustomResolver**, qui est conçue spécifiquement pour la résolution des conflits.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>Pour créer et enregistrer un outil de résolution des conflits personnalisé  basé sur COM  
   
@@ -119,7 +118,7 @@ ms.locfileid: "48149469"
   
 #### <a name="viewing-a-sample-custom-resolver"></a>Affichage d'un exemple de programme de résolution personnalisé  
   
-1.  Un exemple est disponible dans les fichiers d'exemple de SQL Server 2000. Téléchargez **sql2000samples.cab** dans les [Exemples mis à jour pour SQL Server 2000 Service Pack 3](http://www.microsoft.com/download/details.aspx?id=8560). Huit fichiers sont téléchargés d'une taille de 6,9 Mo.  
+1.  Un exemple est disponible dans les fichiers d'exemple de SQL Server 2000. Téléchargez **sql2000samples.cab** dans les [Exemples mis à jour pour SQL Server 2000 Service Pack 3](https://www.microsoft.com/download/details.aspx?id=8560). Huit fichiers sont téléchargés d'une taille de 6,9 Mo.  
   
 2.  Extrayez les fichiers du fichier .cab compressé téléchargé.  
   

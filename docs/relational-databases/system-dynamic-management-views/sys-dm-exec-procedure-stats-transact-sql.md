@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9826f15be35c001f1b951f3b2a3750fa9aba925b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663390"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418683"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retourne les statistiques sur les performances des agrégats pour les procédures stockées mises en cache. La vue retourne une ligne pour chaque plan de procédure stockée mise en cache et la durée de vie de la ligne correspond à celle pendant laquelle la procédure stockée reste mise en cache. Lorsqu'une procédure stockée est supprimée du cache, la ligne correspondante est éliminée de cette vue. À ce stade, un événement de trace SQL de statistiques de performances est déclenché similaire à **sys.dm_exec_query_stats**.  
   
- Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d'exposer ces informations, chaque ligne contenant des données qui n'appartient pas au locataire connecté est filtrée.  
+ Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d’exposer ces informations, chaque ligne qui contient les données qui n’appartient pas au locataire connecté est filtrée.  
   
 > [!NOTE]
 > Une requête initiale de **sys.dm_exec_procedure_stats** peut produire des résultats inexacts s’il existe une charge de travail en cours d’exécution sur le serveur. Des résultats plus précis peuvent être déterminés en réexécutant la requête.  
@@ -72,15 +72,15 @@ ms.locfileid: "47663390"
 |**last_elapsed_time**|**bigint**|Le temps écoulé, en microsecondes, pour la dernière exécution de cette procédure stockée.|  
 |**min_elapsed_time**|**bigint**|Le temps minimal écoulé, en microsecondes, pour les différentes exécutions de cette procédure stockée.|  
 |**max_elapsed_time**|**bigint**|Le temps maximal écoulé, en microsecondes, pour les différentes exécutions de cette procédure stockée.|  
-|**total_spills**|**bigint**|Le nombre total de pages répandues par l’exécution de cette procédure stockée depuis sa compilation.<br /><br /> **S’applique aux**: compter [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|Le nombre de pages répandues la dernière exécution de la procédure stockée.<br /><br /> **S’applique aux**: compter [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|Le nombre minimal de pages par cette procédure stockée a été dispersées jamais en une seule exécution.<br /><br /> **S’applique aux**: compter [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|Le nombre maximal de pages par cette procédure stockée a été dispersées jamais en une seule exécution.<br /><br /> **S’applique aux**: compter [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_spills**|**bigint**|Le nombre total de pages répandues par l’exécution de cette procédure stockée depuis sa compilation.<br /><br /> **S’applique à** : En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Le nombre de pages répandues la dernière exécution de la procédure stockée.<br /><br /> **S’applique à** : En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|Le nombre minimal de pages par cette procédure stockée a été dispersées jamais en une seule exécution.<br /><br /> **S’applique à** : En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Le nombre maximal de pages par cette procédure stockée a été dispersées jamais en une seule exécution.<br /><br /> **S’applique à** : En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**Int**|L’identificateur pour le nœud se trouvant sur cette distribution.<br /><br />**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
  <sup>1</sup> pour les procédures stockées compilées en mode natif lors de la collecte de statistiques est activée, des temps de travail est collecté en millisecondes. Si la requête s'exécute en moins d'une milliseconde, la valeur est 0.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   

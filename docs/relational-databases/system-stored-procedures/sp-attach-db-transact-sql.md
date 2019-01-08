@@ -18,12 +18,12 @@ ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87093ee870549307e9395c013b2f8727f047ae4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b0a6fdf71643f438201aae39010f25d2e43d15c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811287"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588833"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@dbname=** ] **' *** dbnam* **'**  
+ [  **@dbname=** ] **'**_dbnam_ **'**  
  Nom de la base de données à attacher au serveur. Le nom doit être unique. *dbname* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@filename1=** ] **'***Nom_de_fichier_n***'**  
+ [  **@filename1=** ] **'**_Nom_de_fichier_n_**'**  
  Nom physique, y compris le chemin d'accès, d'un fichier de base de données. *Nom_de_fichier_n* est **nvarchar (260)**, avec NULL comme valeur par défaut. Jusqu'à 16 noms de fichier peuvent être spécifiés. Les noms de paramètre commencer à **@filename1** et augmentent jusqu'à **@filename16**. La liste des noms de fichiers doit comprendre au moins le fichier primaire. Le fichier primaire contient les tables système pointant vers d'autres fichiers dans la base de données. Elle doit aussi comprendre tous les fichiers qui ont été déplacés après que la base de données fut détachée.  
   
 > [!NOTE]  
@@ -85,7 +85,7 @@ sp_attach_db [ @dbname= ] 'dbname'
   
  Lorsqu'une base de données est attachée ou restaurée pour la première fois à une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données (chiffrée par la clé principale du service) n'est pas encore stockée sur le serveur. Vous devez utiliser l’instruction **OPEN MASTER KEY** pour déchiffrer la clé principale de la base de données. Une fois la clé principale de la base de données déchiffrée, vous avez la possibilité d’activer le déchiffrement automatique dans le futur en exécutant l’instruction **ALTER MASTER KEY REGENERATE** pour fournir au serveur une copie de la clé principale de la base de données chiffrée avec la clé principale du service. Lorsqu'une base de données a été mise à niveau à partir d'une version antérieure, la clé DMK doit être régénérée de façon à utiliser le nouvel algorithme AES. Pour plus d’informations sur la régénération de la clé DMK, consultez [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). La durée nécessaire pour régénérer la clé DMK à mettre à niveau vers AES dépend du nombre d'objets protégés par la clé DMK. La régénération de la clé DMK à mettre à niveau vers AES est nécessaire une seule fois et n'a aucune incidence sur les régénérations ultérieures effectuées dans le cadre d'une stratégie de rotation de clés.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour plus d’informations sur la gestion des autorisations lorsqu’une base de données est attaché, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  

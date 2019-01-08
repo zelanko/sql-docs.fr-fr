@@ -11,12 +11,12 @@ ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbeb44d09f9825a640bc849f4127751ef39aa72c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f96a4b976d338e7f005d0f731bac0b58f5798bb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118532"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401474"
 ---
 # <a name="powerpivot-health-rules---configure"></a>Règles d'intégrité de PowerPivot - Configurer
   PowerPivot pour SharePoint inclut des règles d'intégrité SharePoint qui vous aident à analyser et à résoudre les problèmes de disponibilité et de configuration du serveur. Les règles d'intégrité qui s'appliquent à PowerPivot pour SharePoint apparaissent dans la page Vérifier les définitions de règles.  
@@ -29,10 +29,10 @@ ms.locfileid: "48118532"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **Remarque :** les paramètres des règles d'intégrité sont configurés séparément pour l'instance de SQL Server Analysis Services et l'application de service PowerPivot. Suivez les instructions de cette rubrique pour configurer des règles d'intégrité pour chaque service. Pour un déploiement SharePoint 2013, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] utilise uniquement l'application de service. Par conséquent, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installe différents jeux de règles d'intégrité pour différentes versions de SharePoint. Consultez la colonne « version » dans la rubrique [référence de règles d’intégrité &#40;PowerPivot pour SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), ou vous pouvez exécuter la commande Windows PowerShell suivante pour voir les règles installées.  
+ **Remarque :** Les paramètres des règles d'intégrité sont configurés séparément pour l'instance de SQL Server Analysis Services et l'application de service PowerPivot. Suivez les instructions de cette rubrique pour configurer des règles d'intégrité pour chaque service. Pour un déploiement SharePoint 2013, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] utilise uniquement l'application de service. Par conséquent, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installe différents jeux de règles d'intégrité pour différentes versions de SharePoint. Consultez la colonne « version » dans la rubrique [référence de règles d’intégrité &#40;PowerPivot pour SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), ou vous pouvez exécuter la commande Windows PowerShell suivante pour voir les règles installées.  
   
 ```  
-Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
+Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
 ```  
   
  **Dans cette rubrique :**  
@@ -74,27 +74,27 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Allocation de ressources processeur insuffisante (la valeur par défaut est 80 %)  
      Cette règle d'intégrité est déclenchée si les ressources processeur utilisées par le processus serveur d'Analysis Services (msmdsrv.exe) sont supérieures ou égales à 80 % pendant une période de 4 heures (comme spécifié par le paramètre Intervalle de collecte des données).  
   
-     Ce paramètre de configuration correspond à la définition de règle suivante sur la page **Examiner les problèmes et solutions** : **PowerPivot : Analysis Services ne dispose pas de suffisamment de ressources processeur pour effectuer les opérations demandées.**  
+     Ce paramètre de configuration correspond à la définition de règle suivante sur le **examiner les problèmes et solutions** page : **PowerPivot : Analysis Services ne dispose pas de ressources processeur suffisantes pour effectuer les opérations demandées.**  
   
      Ressources processeur insuffisantes sur le système (la valeur par défaut est 90 %)  
      Cette règle d'intégrité est déclenchée si les ressources processeur pour le serveur sont inférieures ou égales à 90 % pendant une période de 4 heures (comme spécifié via le paramètre Intervalle de collecte des données). L'utilisation générale de l'UC est mesurée dans le cadre de l'algorithme d'équilibrage de charge basé sur l'intégrité qui surveille l'utilisation de l'UC pour mesurer l'intégrité du serveur.  
   
-     Ce paramètre de configuration correspond à la définition de règle suivante sur la page **Examiner les problèmes et solutions** : **PowerPivot : l'utilisation globale du processeur est trop élevée.**  
+     Ce paramètre de configuration correspond à la définition de règle suivante sur le **examiner les problèmes et solutions** page : **PowerPivot : Globale, l’utilisation du processeur est trop élevée.**  
   
      Seuil de mémoire insuffisante (la valeur par défaut est 5 %)  
      Sur un serveur d'applications SharePoint, une instance de SQL Server Analysis Services doit toujours avoir une quantité minimale de mémoire en réserve, toujours inutilisée. Étant donné que le fonctionnement du serveur est lié à la mémoire pour la plupart de ses opérations, celui-ci s'exécute mieux s'il n'atteint pas complètement la limite supérieure. Les 5 % de mémoire inutilisée sont calculés sous forme de pourcentage de la mémoire allouée à Analysis Services. Par exemple, si vous avez 200 Go de mémoire totale et qu'Analysis Services en utilise 80 % (soit 160 Go), les 5 % de mémoire inutilisée correspondent à 5 % de 160 Go (soit 8 Go).  
   
-     Ce paramètre de configuration correspond à la définition de règle suivante sur la page **Examiner les problèmes et solutions** : **PowerPivot : Analysis Services ne dispose pas de suffisamment de mémoire pour effectuer les opérations demandées.**  
+     Ce paramètre de configuration correspond à la définition de règle suivante sur le **examiner les problèmes et solutions** page : **PowerPivot : Analysis Services ne dispose pas de suffisamment de mémoire pour effectuer les opérations demandées.**  
   
      Nombre maximal de connexions (la valeur par défaut est 100)  
      Cette règle d'intégrité est déclenchée si le nombre de connexions à l'instance d'Analysis Services est supérieur ou égal à 100 connexions pendant une période de 4 heures (comme spécifié via le paramètre Intervalle de collecte des données). Cette valeur par défaut est arbitraire (elle n'est pas basée sur les spécifications matérielles de votre serveur ou sur l'activité des utilisateurs), vous pouvez donc augmenter ou diminuer la valeur en fonction de la capacité du serveur et de l'activité des utilisateurs dans votre environnement.  
   
-     Ce paramètre de configuration correspond à la définition de règle suivante sur la page **Examiner les problèmes et solutions** : **PowerPivot : le nombre élevé de connexions indique que davantage de serveurs devraient être déployés afin de pouvoir gérer la charge actuelle.**  
+     Ce paramètre de configuration correspond à la définition de règle suivante sur le **examiner les problèmes et solutions** page : **PowerPivot : Le nombre élevé de connexions indique que davantage de serveurs devrait être déployés pour gérer la charge actuelle.**  
   
      Espace disque insuffisant (la valeur par défaut est 5 %)  
      L'espace disque est utilisé pour mettre en cache les données PowerPivot chaque fois qu'une base de données est demandée. Cette règle vous permet de savoir quand l'espace disque est trop faible. Par défaut, cette règle d'intégrité est déclenchée lorsque l'espace disque est inférieur à 5 % sur le lecteur de disque où se trouve le dossier de sauvegarde. Pour plus d’informations sur l’utilisation du disque, consultez [utilisation de l’espace disque configurer &#40;PowerPivot pour SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md).  
   
-     Ce paramètre de configuration correspond à la définition de règle suivante sur la page **Examiner les problèmes et solutions** : **PowerPivot : il n'y a presque plus d'espace disponible sur le lecteur sur lequel se trouvent les données PowerPivot mises en cache.**  
+     Ce paramètre de configuration correspond à la définition de règle suivante sur le **examiner les problèmes et solutions** page : **PowerPivot : Espace disque est trop faible sur le lecteur où les données PowerPivot sont mis en cache.**  
   
      Intervalle de collecte des données (en heures)  
      Vous pouvez spécifier la période de collecte de données prise en compte pour calculer les valeurs utilisées pour déclencher des règles d'intégrité. Bien que le système soit surveillé en permanence, les seuils utilisés pour déclencher des avertissements de règle d'intégrité sont calculés à l'aide de données qui ont été générées pendant un intervalle prédéfini. L'intervalle par défaut est de 4 heures. Le serveur récupère les données système et d'utilisation collectées au cours des 4 heures précédentes pour évaluer le nombre de connexions utilisateur, l'utilisation de l'espace disque et les taux d'utilisation de l'UC et de la mémoire.  
@@ -116,17 +116,17 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Rapport chargements/connexions (la valeur par défaut est 20 %)  
      Cette règle d'intégrité est déclenchée si le nombre d'événements de chargement est élevé par rapport au nombre d'événements de connexion, et signale que le serveur est peut-être en train de décharger trop rapidement des bases de données, ou que les paramètres de réduction du cache sont trop stricts.  
   
-     Ce paramètre de configuration correspond à la définition de règle suivante sur la page **Examiner les problèmes et solutions** : **PowerPivot : le taux d'événements de chargement par rapport aux connexions est trop élevé.**  
+     Ce paramètre de configuration correspond à la définition de règle suivante sur le **examiner les problèmes et solutions** page : **PowerPivot : Le taux d’événements de chargement pour les connexions est trop élevé.**  
   
      Intervalle de collecte des données (la valeur par défaut est 4 heures)  
      Vous pouvez spécifier la période de collecte de données prise en compte pour calculer les valeurs utilisées pour déclencher des règles d'intégrité. Bien que le système soit surveillé en permanence, les seuils utilisés pour déclencher des avertissements de règle d'intégrité sont calculés à l'aide de données qui ont été générées pendant un intervalle prédéfini. L'intervalle par défaut est de 4 heures. Le serveur récupère les données système et d'utilisation collectées au cours des 4 heures précédentes pour évaluer le rapport chargement/connexion.  
   
      Recherche les mises à jour du fichier de gestion Dashboard.xlsx PowerPivot (la valeur par défaut est 5 jours)  
-     Le fichier de la gestion Dashboard.xlsx PowerPivot est une source de données utilisée par les rapports du Tableau de bord de gestion PowerPivot. Dans une configuration de serveur par défaut, le fichier .xlsx est actualisé quotidiennement, à l'aide des données d'utilisation collectées par SharePoint et le service système PowerPivot. Si le fichier n'est pas mis à jour, une règle d'intégrité le signale comme un problème. Par défaut, la règle est déclenchée si l'horodateur du fichier n'a pas changé pendant 5 jours.  
+     Le fichier de la gestion Dashboard.xlsx PowerPivot est une source de données utilisée par les rapports du Tableau de bord de gestion PowerPivot. Dans une configuration de serveur par défaut, le fichier .xlsx est actualisé quotidiennement, à l'aide des données d'utilisation collectées par SharePoint et le service système PowerPivot. Si le fichier n'est pas mis à jour, une règle d'intégrité le signale comme un problème. Par défaut, la règle est déclenchée si l'horodateur du fichier n'a pas changé pendant 5 jours.  
   
      Pour plus d’informations sur la collecte de données d’utilisation, consultez [Configure Usage Data Collection pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
-     Ce paramètre de configuration correspond à la définition de règle suivante sur la page **Examiner les problèmes et solutions** : **PowerPivot : les données d'utilisation ne sont pas mises à jour à la fréquence prévue.**  
+     Ce paramètre de configuration correspond à la définition de règle suivante sur le **examiner les problèmes et solutions** page : **PowerPivot : Données d’utilisation ne sont pas mise à jour à la fréquence prévue.**  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer l’espace disque &#40;PowerPivot pour SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)   

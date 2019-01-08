@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 94f887aa48a63fbc84e941e6259839bff1327bd3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984761"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544263"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Déployer des solutions Power Pivot sur SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,19 +26,19 @@ ms.locfileid: "38984761"
   
  Cette rubrique contient les sections suivantes :  
   
- [Condition préalable : vérifier que l'application Web utilise l'authentification en mode classique](#bkmk_classic)  
+ [Condition préalable : Vérifier que l’Application Web utilise l’authentification en Mode classique](#bkmk_classic)  
   
- [Étape 1 : déployer la solution de batterie de serveurs](#bkmk_farm)  
+ [Étape 1 : Déployer la Solution de batterie de serveurs](#bkmk_farm)  
   
- [Étape 2 : déployer la solution d’application Web Power Pivot sur l’Administration centrale](#deployCA)  
+ [Étape 2 : Déployer la Solution d’Application Web Power Pivot à l’Administration centrale](#deployCA)  
   
- [Étape 3 : déployer la solution d’application Web Power Pivot sur d’autres applications Web](#deployUI)  
+ [Étape 3 : Déployer la Solution d’Application Web Power Pivot pour d’autres Applications Web](#deployUI)  
   
  [Redéployer ou vous retirer la solution](#retract)  
   
  [À propos des solutions Power Pivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Condition préalable : vérifier que l'application Web utilise l'authentification en mode classique  
+##  <a name="bkmk_classic"></a> Condition préalable : Vérifier que l'application Web utilise l'authentification en mode classique  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint n’est pris en charge que pour les applications web qui utilisent l’authentification Windows en mode classique. Pour vérifier si l’application utilise le mode classique, exécutez l’applet de commande PowerShell suivante à partir de la **SharePoint 2010 Management Shell**, en remplaçant **http://\<nom de site de niveau supérieur >** avec le nom de votre site SharePoint :  
   
 ```  
@@ -47,7 +47,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  La valeur de retour devrait être **False**. Si la valeur est **True**, vous n’avez pas accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] avec cette application Web.  
   
-##  <a name="bkmk_farm"></a> Étape 1 : déployer la solution de batterie de serveurs  
+##  <a name="bkmk_farm"></a> Étape 1 : Déployer la Solution de batterie de serveurs  
  Cette section montre comment déployer des solutions à l’aide de PowerShell, mais vous pouvez également utiliser l’outil de configuration [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour effectuer cette tâche. Pour plus d’informations, consultez [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Cette tâche ne doit être effectuée qu’une seule fois, après l’installation de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint.  
@@ -57,7 +57,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 2.  Exécutez l'applet de commande suivante pour ajouter la solution de batterie de serveurs.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      L'applet de commande retourne le nom de la solution, son ID, et Deployed=False. À l'étape suivante, vous déploierez la solution.  
@@ -65,10 +65,10 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Exécutez l'applet de commande suivante pour déployer la solution de batterie de serveurs :  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> Étape 2 : déployer la solution d’application Web Power Pivot sur l’Administration centrale  
+##  <a name="deployCA"></a> Étape 2 : Déployer la Solution d’Application Web Power Pivot à l’Administration centrale  
  Après avoir déployé la solution de batterie de serveurs, vous devez déployer la solution d'application Web sur l'Administration centrale. Cette étape ajoute le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans l’Administration centrale.  
   
 1.  Ouvrez SharePoint 2010 Management Shell à l'aide de l'option **Exécuter en tant qu'administrateur** .  
@@ -82,7 +82,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Exécutez l'applet de commande suivante pour ajouter la solution de batterie de serveurs.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
      L'applet de commande retourne le nom de la solution, son ID, et Deployed=False. À l'étape suivante, vous déploierez la solution.  
@@ -95,7 +95,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Maintenant que la solution d'application Web est déployée sur l'Administration centrale, vous pouvez recourir à cette dernière pour effectuer toutes les étapes de configuration restantes.  
   
-##  <a name="deployUI"></a> Étape 3 : déployer la solution d’application Web Power Pivot sur d’autres applications Web  
+##  <a name="deployUI"></a> Étape 3 : Déployer la Solution d’Application Web Power Pivot pour d’autres Applications Web  
  Dans la tâche précédente, vous avez déployé Powerpivotwebapp.wsp sur l'Administration centrale. Dans cette section, vous allez déployer powerpivotwebapp.wsp sur chaque application Web existante qui prend en charge l’accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si vous ajoutez des applications Web supplémentaires par la suite, assurez-vous que vous répétez cette étape pour chacune de ces applications.  
   
 1.  Dans l'Administration centrale, sous Paramètres système, cliquez sur **Gérer les solutions de la batterie**.  

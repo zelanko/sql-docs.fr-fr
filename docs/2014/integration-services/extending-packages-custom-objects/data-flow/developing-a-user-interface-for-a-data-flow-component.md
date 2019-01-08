@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -24,12 +22,12 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca7b7f212c483dcb9437799fa9204979764efce8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7b40c30e870e7f2a945643dbaadb88e1880ad5b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129669"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362051"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Développement d'une interface utilisateur pour un composant de flux de données
   Les développeurs de composants peuvent fournir une interface utilisateur personnalisée pour un composant. Cette interface s'affiche dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] lors de la modification du composant. Grâce à l'implémentation d'une interface utilisateur personnalisée, vous êtes averti lorsque le composant est ajouté ou supprimé d'une tâche de flux de données, et lorsque de l'aide est demandée pour le composant.  
@@ -283,7 +281,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’un composant de flux de données personnalisé](creating-a-custom-data-flow-component.md)  

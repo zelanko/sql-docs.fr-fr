@@ -1,7 +1,7 @@
 ---
 title: Sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2018
+ms.date: 12/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 513b85aafb4cd25d55dfb40e37dabd6fc47b814f
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878192"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886884"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ Retourne des informations sur toutes les attentes subies par les threads qui se 
 |signal_wait_time_ms|**bigint**|Différence entre le moment où le thread qui attend a été signalé et le moment où il a commencé à s'exécuter.|  
 |pdw_node_id|**Int**|L’identificateur pour le nœud se trouvant sur cette distribution. <br/> **S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
@@ -168,8 +168,8 @@ Cette commande remet tous les compteurs à 0.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Se produit avec les plans de requête parallèles quand un thread de consommateur attend un thread de producteur envoyer des lignes. Il s’agit d’un composant normal de l’exécution de requêtes parallèles. <br /> **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Se produit avec les plans de requête parallèles lors de la synchronisation de l’itérateur d’exchange de processeur de requêtes et lors de la production et la consommation des lignes. Si l'attente est excessive et ne peut pas être réduite en ajustant la requête (en ajoutant des index, par exemple), pensez à affiner le seuil de coût pour le parallélisme ou à baisser le degré de parallélisme.<br /> **Remarque :** compter [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, et [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET fait référence uniquement à la synchronisation d’itérateur exchange de processeur de requêtes et à produire des lignes pour les threads de consommateur. Threads de consommateur sont suivies séparément dans le type d’attente CXCONSUMER.| 
+|CXCONSUMER |Se produit avec les plans de requête parallèles quand un thread de consommateur attend un thread de producteur envoyer des lignes. Il s’agit d’un composant normal de l’exécution de requêtes parallèles. <br /> **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |Se produit avec les plans de requête parallèles lors de la synchronisation de l’itérateur d’exchange de processeur de requêtes et lors de la production et la consommation des lignes. Si l'attente est excessive et ne peut pas être réduite en ajustant la requête (en ajoutant des index, par exemple), pensez à affiner le seuil de coût pour le parallélisme ou à baisser le degré de parallélisme.<br /> **Remarque :** En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, et [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET fait référence uniquement à la synchronisation d’itérateur exchange de processeur de requêtes et à produire des lignes pour les threads de consommateur. Threads de consommateur sont suivies séparément dans le type d’attente CXCONSUMER.| 
 |CXROWSET_SYNC |Se produit pendant une analyse de plage parallèle.| 
 |DAC_INIT |Se produit alors que la connexion administrateur dédiée est en cours d'initialisation.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -331,7 +331,7 @@ Cette commande remet tous les compteurs à 0.
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |Une tâche en arrière-plan attend la fin du démarrage d'une tâche en arrière-plan qui traite les notifications de clustering de basculement Windows Server. Usage interne uniquement., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |Une tâche en arrière-plan attend la fin d'une tâche en arrière-plan qui traite les notifications de clustering de basculement Windows Server. Usage interne uniquement., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_PARTNER_SYNC |Attente de contrôle d’accès concurrentiel sur la liste des partenaires., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HADR_READ_ALL_NETWORKS |En attente de l'obtention de l'accès en lecture ou en écriture à la liste des réseaux WSFC. À usage interne uniquement Remarque : Le moteur conserve une liste des réseaux WSFC qui est utilisée dans les vues de gestion dynamique (par exemple, sys.dm_hadr_cluster_networks) ou pour toujours sur Transact-SQL de valider les informations de réseau instructions faisant référence à WSFC. Cette liste est mise à jour au démarrage du moteur, liées de WSFC notifications et Always On redémarrage interne (par exemple, perte et regagnant le quorum WSFC). Les tâches sont généralement bloquées lorsqu'une mise à jour est en cours dans cette liste. , <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HADR_READ_ALL_NETWORKS |En attente de l'obtention de l'accès en lecture ou en écriture à la liste des réseaux WSFC. À usage interne uniquement Remarque : Le moteur conserve une liste des réseaux WSFC qui est utilisée dans les vues de gestion dynamique (par exemple, sys.dm_hadr_cluster_networks) ou pour toujours sur Transact-SQL de valider les informations de réseau instructions faisant référence à WSFC. Cette liste est mise à jour au démarrage du moteur, liées de WSFC notifications et Always On redémarrage interne (par exemple, perte et regagnant le quorum WSFC). Les tâches sont généralement bloquées lorsqu'une mise à jour est en cours dans cette liste. , <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |En attente de la connexion de la base de données secondaire à la base de données primaire avant d'effectuer la récupération. Il s’agit d’une attente prévue, qui peut se prolonger si la connexion vers le serveur principal est lente à établir., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |La récupération de base de données attend que la base de données secondaire termine la phase de rétablissement et d'initialisation afin de la ramener au point de journal commun avec la base de données primaire. Il s’agit une attente prévue après le basculement. Annuler progression permettre être suivie par le biais du Moniteur système de Windows (perfmon.exe) et les vues de gestion dynamique., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_REPLICAINFO_SYNC |En attente de contrôle d’accès concurrentiel mettre à jour l’état de réplica actuel., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -931,6 +931,7 @@ Cette commande remet tous les compteurs à 0.
 |VIA_ACCEPT |Se produit lorsqu'une connexion du fournisseur VIA (Virtual Interface Adapter) est terminée au cours du démarrage.| 
 |VIEW_DEFINITION_MUTEX |Se produit durant la synchronisation d'accès aux définitions des vues mises en cache.| 
 |WAIT_FOR_RESULTS |Se produit durant l'attente du déclenchement d'une notification de requête.| 
+|WAIT_ON_SYNC_STATISTICS_REFRESH |Se produit lors de l’attente pour mettre à jour des statistiques synchrones pour terminer avant la compilation de requête et l’exécution peut reprendre.<br /> **S’applique à** : À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XLOGREAD_SIGNAL |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

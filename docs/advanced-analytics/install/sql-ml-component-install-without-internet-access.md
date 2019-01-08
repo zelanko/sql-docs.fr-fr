@@ -1,6 +1,6 @@
 ---
-title: Installer les composants R et Python sans accès à internet d’apprentissage SQL Server | Microsoft Docs
-description: En mode hors connexion ou déconnecté Machine Learning R et Python le programme d’installation sur l’instance de SQL Server isolé.
+title: Installer les composants de Python sans accès à internet - SQL Server Machine Learning et de langage R
+description: En mode hors connexion ou déconnecté Machine Learning R et Python le programme d’installation sur isolé instance de SQL Server derrière un pare-feu réseau.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150545"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596990"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installer SQL Server d’apprentissage R et Python sur des ordinateurs sans accès à internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ Serveur Microsoft Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fw
 
 ## <a name="sql-server-2016-offline-install"></a>Installation hors connexion SQL Server 2016
 
-Analytique en base de données de SQL Server 2016 est R uniquement, avec deux fichiers CAB pour les packages de produit et de distribution Microsoft de R open source, respectivement. Commencez par installer l’une de ces versions : RTM, Service Pack 1, Service Pack 2. Une fois qu’une installation de base est en place, les mises à jour cumulatives peuvent être appliquées comme prochaine étape.
+Analytique en base de données de SQL Server 2016 est R uniquement, avec deux fichiers CAB pour les packages de produit et de distribution Microsoft de R open source, respectivement. Démarrez en installant l’une de ces versions : RTM, SERVICE PACK 1, SERVICE PACK 2. Une fois qu’une installation de base est en place, les mises à jour cumulatives peuvent être appliquées comme prochaine étape.
 
 Sur un ordinateur ayant une connexion internet, téléchargez les fichiers CAB utilisés par le programme d’installation pour installer la base de données analytique sur SQL Server 2016. 
 
@@ -121,11 +121,24 @@ Nous vous recommandons d’appliquer la mise à jour cumulative la plus récente
 
 6. Exécutez le programme d'installation. Acceptez les termes du contrat de licence et sur la page de sélection de fonctionnalités, passez en revue les fonctionnalités pour lesquelles les mises à jour cumulatives sont appliquées. Vous devez voir toutes les fonctionnalités installées pour l’instance actuelle, y compris les fonctionnalités d’apprentissage automatique.
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![Sélectionner des fonctionnalités à partir de l’arborescence de fonctionnalités](media/cumulative-update-feature-selection.png "liste des fonctionnalités")
 
 5. Suivez les instructions de l’Assistant en acceptant les termes du contrat de licence pour les distributions de R et Python. Pendant l’installation, vous êtes invité à choisir l’emplacement du dossier contenant les fichiers CAB mis à jour.
 
-## <a name="post-install-configuration"></a>Configuration de post-installation
+## <a name="set-environment-variables"></a>Jeu de variables d’environnement
+
+Pour R fonctionnalité d’intégration uniquement, vous devez définir le **MKL_CBWR** variable d’environnement [résultat homogène](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) des calculs d’Intel Math Kernel Library (MKL).
+
+1. Dans le panneau de configuration, cliquez sur **système et sécurité** > **système** > **paramètres système avancés**  >   **Variables d’environnement**.
+
+2. Créer une nouvelle variable utilisateur ou système. 
+
+  + Nom de variable du jeu `MKL_CBWR`
+  + La valeur est la valeur de variable `AUTO`
+
+Cette étape nécessite un redémarrage du serveur. Si vous êtes sur le point d’activer l’exécution du script, vous pouvez différez lors du redémarrage jusqu'à ce que tout le travail de configuration est terminée.
+
+## <a name="post-install-configuration"></a>Configuration consécutive à l’installation
 
 Une fois l’installation est terminée, redémarrez le service et puis configurez le serveur pour permettre l’exécution du script :
 

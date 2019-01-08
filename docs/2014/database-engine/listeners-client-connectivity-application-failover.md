@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3bf28d011f1b1387bfbf04358d4575232c768d6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dccbdee0e7db72a9946e92229d06dce519ca94a1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200329"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369871"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Écouteurs de groupe de disponibilité, connectivité client et basculement d’application (SQL Server)
   Cette rubrique contient des informations sur les éléments à prendre en compte en matière de connectivité client [!INCLUDE[ssHADR](../includes/sshadr-md.md)] et de fonctionnalité de basculement d'application.  
@@ -47,7 +47,7 @@ ms.locfileid: "48200329"
  Un écouteur de groupe de disponibilité est défini par les élément suivants :  
   
  Un nom DNS unique.  
- Ce nom est aussi appelé un nom de réseau virtuel (VNN). Les règles d'attribution de noms Active Directory pour les noms d'hôte DNS s'appliquent. Pour plus d'informations, consultez l'article [Conventions d'affectation de noms dans Active Directory pour les ordinateurs, les domaines, les sites et les unités d'organisation](http://support.microsoft.com/kb/909264) de la Base de connaissances.  
+ Ce nom est aussi appelé un nom de réseau virtuel (VNN). Les règles d'attribution de noms Active Directory pour les noms d'hôte DNS s'appliquent. Pour plus d'informations, consultez l'article [Conventions d'affectation de noms dans Active Directory pour les ordinateurs, les domaines, les sites et les unités d'organisation](https://support.microsoft.com/kb/909264) de la Base de connaissances.  
   
  Une ou plusieurs adresses IP virtuelles (VIP)  
  Les adresses IP virtuelles sont configurées pour un ou plusieurs sous-réseaux vers lesquels le groupe de disponibilité peut basculer.  
@@ -66,11 +66,11 @@ ms.locfileid: "48200329"
  Les configurations réseau hybrides et le recours au protocole DHCP sur plusieurs sous-réseaux ne sont pas pris en charge pour les écouteurs de groupe de disponibilité. Cela est dû au fait que, lorsqu'un basculement a lieu, une adresse IP dynamique peut expirer ou être libérée, ce qui compromet la haute disponibilité globale.  
   
 ###  <a name="SelectListenerPort"></a> Sélection d'un port d'écoute de groupe de disponibilité  
- Lors de la configuration d'un écouteur de groupe de disponibilité, vous devez indiquer un port.  Vous pouvez configurer le port par défaut sur 1433, afin de permettre de simplifier les chaînes de connexion du client. Si vous utilisez 1433, vous n'avez pas besoin d'indiquer un numéro de port dans une chaîne de connexion.   De plus, étant donné que chaque écouteur de groupe de disponibilité portera un nom de réseau virtuel distinct, chaque écouteur de groupe de disponibilité configuré sur un même WSFC pourra être configuré pour référencer le même port par défaut 1433.  
+ Lors de la configuration d'un écouteur de groupe de disponibilité, vous devez indiquer un port.  Vous pouvez configurer le port par défaut sur 1433, afin de permettre de simplifier les chaînes de connexion du client. Si vous utilisez 1433, vous n'avez pas besoin d'indiquer un numéro de port dans une chaîne de connexion.   De plus, étant donné que chaque écouteur de groupe de disponibilité portera un nom de réseau virtuel distinct, chaque écouteur de groupe de disponibilité configuré sur un même WSFC pourra être configuré pour référencer le même port par défaut 1433.  
   
  Vous pouvez également indiquer un port d'écoute non standard ; toutefois, cela signifie que vous devrez également spécifier explicitement un port cible dans votre chaîne de connexion lors de chaque connexion à l'écouteur de groupe de disponibilité.  Vous devrez également ouvrir l'autorisation sur le pare-feu pour le port non standard.  
   
- Si vous utilisez le port par défaut 1433 comme nom VNN de l'écouteur du groupe de disponibilité, vous devez toujours vérifier qu'aucun autre service sur le nœud de cluster n'utilise ce port ; dans le cas contraire, cela provoquerait un conflit de ports.  
+ Si vous utilisez le port par défaut 1433 comme nom VNN de l'écouteur du groupe de disponibilité, vous devez toujours vérifier qu'aucun autre service sur le nœud de cluster n'utilise ce port ; dans le cas contraire, cela provoquerait un conflit de ports.  
   
  Si l'une des instances de SQL Server écoute déjà sur le port TCP 1433 par l'intermédiaire de l'écouteur d'instance et qu'il n'existe aucun autre service (instances supplémentaires de SQL Server comprises) sur l'ordinateur écoutant sur le port 1433, cela ne provoque pas un conflit de ports avec l'écouteur du groupe de disponibilité.  Cela est dû au fait que l'écouteur du groupe de disponibilité peut partager le même port TCP au sein du même processus de service.  Toutefois, plusieurs instances de SQL Server (côte à côte) ne doivent pas être configurées pour écouter sur le même port.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48200329"
 Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI  
 ```  
   
- Vous pouvez néanmoins choisir de référencer directement l'instance du nom SQL Server des réplicas principaux ou secondaires au lieu d'utiliser le nom du serveur de l'écouteur du groupe de disponibilité ; toutefois, si vous choisissez d'agir ainsi, les nouvelles connexions ne seront plus dirigées automatiquement vers le réplica principal actuel.  Vous perdrez également l'avantage du routage en lecture seule.  
+ Vous pouvez néanmoins choisir de référencer directement l'instance du nom SQL Server des réplicas principaux ou secondaires au lieu d'utiliser le nom du serveur de l'écouteur du groupe de disponibilité ; toutefois, si vous choisissez d'agir ainsi, les nouvelles connexions ne seront plus dirigées automatiquement vers le réplica principal actuel.  Vous perdrez également l'avantage du routage en lecture seule.  
   
 ##  <a name="ConnectToSecondary"></a> Utilisation d'un écouteur pour se connecter à un réplica secondaire en lecture seule (routage en lecture seule)  
  Le*routage en lecture seule* fait référence à la capacité de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d’acheminer les connexions entrantes à un écouteur de groupe de disponibilité vers un réplica secondaire qui est configuré pour autoriser des charges de travail en lecture seule. Une connexion entrante faisant référence à un nom d'écouteur de groupe de disponibilité peut automatiquement être acheminée vers un réplica en lecture seule si les conditions suivantes sont réunies :  
@@ -108,9 +108,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 -   [Configurer le routage en lecture seule pour un groupe de disponibilité &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
 ###  <a name="ReadOnlyAppIntent"></a> Intention de l'application en lecture seule et routage en lecture seule  
- La propriété de chaîne de connexion de l'intention d'application exprime le souhait de l'application cliente d'être redirigée vers une version en lecture-écriture ou en lecture seule d'une base de données de groupe de disponibilité. Pour utiliser le routage en lecture seule, un client doit utiliser une intention d'application en lecture seule dans la chaîne de connexion pour la connexion à l'écouteur de groupe de disponibilité. Sans intention d'application en lecture seule, les connexions à l'écouteur de groupe de disponibilité sont dirigées vers la base de données sur le réplica principal.  
+ La propriété de chaîne de connexion de l’intention d’application exprime le souhait de l’application cliente d’être redirigée vers une version en lecture-écriture ou en lecture seule d’une base de données de groupe de disponibilité. Pour utiliser le routage en lecture seule, un client doit utiliser une intention d'application en lecture seule dans la chaîne de connexion pour la connexion à l'écouteur de groupe de disponibilité. Sans intention d'application en lecture seule, les connexions à l'écouteur de groupe de disponibilité sont dirigées vers la base de données sur le réplica principal.  
   
- L'attribut d'intention d'application est stocké dans la session du client lors de la connexion ; l'instance de SQL Server traite ensuite cette intention et détermine ce qu'il faut faire, selon la configuration du groupe de disponibilité et l'état en lecture-écriture actuel de la base de données cible dans le réplica secondaire.  
+ L’attribut d’intention d’application est stocké dans la session du client lors de la connexion. L’instance de SQL Server traite ensuite cette intention et détermine ce qu’il faut faire, selon la configuration du groupe de disponibilité et l’état en lecture-écriture actuel de la base de données cible dans le réplica secondaire.  
   
  Voici un exemple de chaîne de connexion pour le fournisseur ADO.NET (System.Data.SqlClient) qui indique l'intention d'application en lecture seule :  
   
@@ -124,7 +124,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  Notez que l'intention de l'application peut être envoyée depuis un pilote client vers une instance de bas niveau de SQL Server.  Dans ce cas, l'intention de l'application en lecture seule est ignorée et la connexion se déroule normalement.  
   
- Vous pouvez contourner le routage en lecture seule en ne définissant ne pas la propriété de connexion d’intention d’application `ReadOnly` (lors de l’absence de spécification, la valeur par défaut est `ReadWrite` lors de la connexion) ou en vous connectant directement à l’instance de réplica principal de SQL Server au lieu d’utiliser nom d’écouteur de groupe de disponibilité.  Le routage en lecture seule n'a pas lieu non plus si vous vous connectez directement à un réplica en lecture seule.  
+ Vous pouvez contourner le routage en lecture seule en ne définissant pas la propriété de connexion d'intention d'application avec la valeur `ReadOnly` (en l'absence de spécification, la valeur par défaut est `ReadWrite` pendant la connexion) ou en effectuant une connexion directe à l'instance du réplica principal de SQL Server au lieu d'utiliser le nom de l'écouteur du groupe de disponibilité.  Le routage en lecture seule n'a pas lieu non plus si vous vous connectez directement à un réplica en lecture seule.  
   
 ####  <a name="RelatedTasksApps"></a> Tâches associées  
   
@@ -149,15 +149,15 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 ##  <a name="CCBehaviorOnFailover"></a> Comportement des connexions clientes lors du basculement  
  Lorsqu'un basculement de groupe de disponibilité se produit, les connexions persistantes existantes au groupe de disponibilité prennent fin et le client doit établir une nouvelle connexion afin de continuer à utiliser la même base de données primaire ou base de données secondaire en lecture seule.  Lorsqu'un basculement se produit côté serveur, la connectivité au groupe de disponibilité peut échouer, forçant l'application cliente à réessayer une nouvelle connexion jusqu'à ce que le serveur principal soit entièrement remis en ligne.  
   
- Si le groupe de disponibilité revient en ligne pendant une tentative de connexion d'une application cliente, mais avant l'expiration du délai d'attente de connexion, le pilote client peut se connecter avec succès au cours de l'une de ses tentatives de reprise interne et aucune erreur ne sera visible dans l'application dans ce cas.  
+ Si le groupe de disponibilité revient en ligne pendant une tentative de connexion d’une application cliente, mais avant l’expiration du délai d’attente de connexion, le pilote client peut se connecter au cours de l’une de ses tentatives de reprise interne, auquel cas, aucune erreur n’est visible dans l’application.  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> Prise en charge de basculements de sous-réseaux multiples de groupe de disponibilité  
- Si vous utilisez des bibliothèques clientes qui prennent en charge l'option de connexion MultiSubnetFailover dans la chaîne de connexion, vous pouvez optimiser le basculement du groupe de disponibilité vers un sous-réseau différent en définissant MultiSubnetFailover sur « True » ou « Yes », selon la syntaxe du fournisseur que vous utilisez.  
+ Si vous utilisez des bibliothèques clientes qui prennent en charge l’option de connexion MultiSubnetFailover dans la chaîne de connexion, vous pouvez optimiser le basculement du groupe de disponibilité vers un sous-réseau différent en définissant MultiSubnetFailover sur « True » ou « Yes », selon la syntaxe du fournisseur que vous utilisez.  
   
 > [!NOTE]  
 >  Nous vous recommandons de définir ce paramètre à la fois pour les connexions à un seul ou à plusieurs sous-réseaux aux écouteurs de groupes de disponibilité et aux noms d'instance de cluster de basculement SQL Server.  L'activation de cette option ajoute des optimisations supplémentaires, même pour les scénarios de sous-réseau unique.  
   
- Le `MultiSubnetFailover` connexion option fonctionne uniquement avec le protocole réseau TCP et est uniquement pris en charge lors de la connexion à un écouteur de groupe de disponibilité et pour n’importe quel nom de réseau virtuel se connectant à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ L'option de connexion `MultiSubnetFailover` fonctionne uniquement avec le protocole réseau TCP et elle est prise en charge uniquement lors de la connexion à un écouteur de groupe de disponibilité et pour n'importe quel nom de réseau virtuel se connectant à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  Voici un exemple de chaîne de connexion du fournisseur ADO.NET (System.Data.SqlClient) qui permet le basculement de plusieurs sous-réseaux :  
   
@@ -165,7 +165,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
 ```  
   
- Le `MultiSubnetFailover` option de connexion doit être définie sur `True` même si le groupe de disponibilité s’étend sur un seul sous-réseau.  Cela vous permet de préconfigurer de nouveaux clients afin de prendre en charge la future couverture de sous-réseaux, sans recourir à de futures modifications de la chaîne de connexion du client. Par ailleurs, cela permet d'optimiser les performances de basculement pour les basculements au sein d'un seul sous-réseau.  Bien que le `MultiSubnetFailover` option de connexion n’est pas obligatoire, elle offre l’avantage d’un basculement de sous-réseau plus rapide.  Cela est dû au fait que le pilote client essaie d'ouvrir un socket TCP pour chaque adresse IP en parallèle associée au groupe de disponibilité.  Le pilote client attend une réponse correcte de la première adresse IP et, ceci fait, l'utilise pour la connexion.  
+ L'option de connexion `MultiSubnetFailover` doit être définie avec la valeur `True` même si le groupe de disponibilité s'étend sur un seul sous-réseau.  Cela vous permet de préconfigurer de nouveaux clients afin de prendre en charge la future couverture de sous-réseaux, sans recourir à de futures modifications de la chaîne de connexion du client. Par ailleurs, cela permet d'optimiser les performances de basculement pour les basculements au sein d'un seul sous-réseau.  Lorsque l'option de connexion `MultiSubnetFailover` n'est pas obligatoire, elle offre l'avantage d'un basculement de sous-réseau plus rapide.  Cela est dû au fait que le pilote client essaie d'ouvrir un socket TCP pour chaque adresse IP en parallèle associée au groupe de disponibilité.  Le pilote client attend une réponse correcte de la première adresse IP et, ceci fait, l'utilise pour la connexion.  
   
 ##  <a name="SSLcertificates"></a> Écouteurs de groupe de disponibilité et certificats SSL  
  Lors de la connexion à un écouteur de groupe de disponibilité, si les instances participantes de SQL Server utilisent des certificats SSL en même temps que le chiffrement de session, le pilote client de la connexion doit prendre en charge le nom SAN (Subject Alternate Name) dans le certificat SSL afin de forcer le chiffrement.  La prise en charge de pilotes SQL Server pour le nom SAN de certificat est planifiée pour ADO.NET (SqlClient), Microsoft JDBC et SQL Native Client (SNAC).  
@@ -206,11 +206,11 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Présentation de l'écouteur du groupe de disponibilité](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (blog de l'équipe SQL Server AlwaysOn)  
+-   [Présentation de l'écouteur du groupe de disponibilité](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (blog de l'équipe SQL Server AlwaysOn)  
   
--   [Blog de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog de l’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

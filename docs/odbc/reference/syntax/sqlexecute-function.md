@@ -20,16 +20,16 @@ ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df0021bf5b3ac905ddf63ede8d4dfd65710662aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad8aec58fea182c080d55217db94ea2cda08184b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789907"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590433"
 ---
 # <a name="sqlexecute-function"></a>SQLExecute, fonction
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ISO 92  
+ Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
   
  **Résumé**  
  **SQLExecute** exécute une instruction préparée, en utilisant les valeurs actuelles des variables de marqueur de paramètre si les marqueurs de paramètres existent dans l’instruction.  
@@ -39,7 +39,7 @@ ms.locfileid: "47789907"
 ```  
   
 SQLRETURN SQLExecute(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -77,7 +77,7 @@ SQLRETURN SQLExecute(
 |22015|Dépassement du champ Intervalle|*\*StatementText* contenait un paramètre numérique ou intervalle exact qui, lors de la convertir en un intervalle de type de données SQL, a entraîné une perte de chiffres significatifs.<br /><br /> *\*StatementText* contenait un paramètre d’intervalle avec plusieurs champs que, lorsque converti en un type de données numériques dans une colonne, n’avait aucune représentation dans le type de données numérique.<br /><br /> *\*StatementText* contenait des données de paramètre qui a été affectées à un intervalle de type SQL, et il n’existait aucune représentation de la valeur du type C dans l’intervalle de type SQL.<br /><br /> Affectation d’un paramètre d’entrée/sortie ou de sortie qui a une valeur numérique exacte ou un intervalle de type SQL à un type d’intervalle C a entraîné une perte de chiffres significatifs.<br /><br /> Lorsqu’un paramètre d’entrée/sortie ou de sortie a été affecté à une structure d’intervalle C, il n’a pas de représentation des données dans la structure de données d’intervalle.|  
 |22018|Valeur de caractère non valide pour la spécification de la casse|*\*StatementText* contenait un type C qui a une valeur numérique exact ou approximatif, une valeur datetime ou un type de données d’intervalle ; le type SQL de la colonne a un type de données caractère ; et la valeur dans la colonne n’est pas un littéral valid du type C lié.<br /><br /> Lorsqu’un paramètre d’entrée/sortie ou de sortie a été retourné, le type SQL était une valeur numérique exact ou approximatif, une valeur datetime ou un type de données d’intervalle ; le type C a été SQL_C_CHAR ; et la valeur dans la colonne n’est pas un littéral valid du type SQL dépendant.|  
 |22019|Caractère d’échappement non valide|L’instruction préparée associée *au paramètre StatementHandle* contenus un **comme** prédicat avec une **d’échappement** dans le **où** clause, et la longueur de ces caractères d’échappement **échappement** n’était pas égale à 1.|  
-|22025|Séquence d’échappement non valide|L’instruction préparée associée *au paramètre StatementHandle* contenus «**comme** *valeur de modèle* **échappement** *escape caractère*» dans le **où** clause et le caractère qui suit le caractère d’échappement dans la valeur de modèle n’est pas une « % » ou « _ ».|  
+|22025|Séquence d’échappement non valide|L’instruction préparée associée *au paramètre StatementHandle* contenus «**comme** _valeur de modèle_ **échappement** _escape caractère_» dans le **où** clause et le caractère qui suit le caractère d’échappement dans la valeur de modèle n’est pas une « % » ou « _ ».|  
 |23000|Violation de contrainte d’intégrité|L’instruction préparée associée à la *au paramètre StatementHandle* contient un paramètre. La valeur du paramètre était NULL pour une colonne définie comme NOT NULL dans la colonne de table associée, une valeur en double a été fournie pour une colonne obligée de contenir uniquement des valeurs uniques ou une autre contrainte d’intégrité a été violée.|  
 |24000|État de curseur non valide|Un curseur a été positionné sur le *au paramètre StatementHandle* par **SQLFetch** ou **SQLFetchScroll**. Cette erreur est retournée par le Gestionnaire de pilotes si **SQLFetch** ou **SQLFetchScroll** n’a pas retourné SQL_NO_DATA et est retourné par le pilote si **SQLFetch** ou **SQLFetchScroll** a retourné SQL_NO_DATA.<br /><br /> Un curseur a été ouvert sur le *au paramètre StatementHandle*.<br /><br /> L’instruction préparée associée à la *au paramètre StatementHandle* contenait une mise à jour positionnée ou delete statemen, t et le curseur est positionné avant le début du jeu de résultats ou après la fin du jeu de résultats.|  
 |40001|Échec de la sérialisation|La transaction a été annulée en raison d’un blocage de ressource avec une autre transaction.|  
@@ -89,7 +89,7 @@ SQLRETURN SQLExecute(
 |HY008|Opération annulée|Traitement asynchrone a été activé pour le *au paramètre StatementHandle*. La fonction a été appelée et avant qu’il exécutée avec succès, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *au paramètre StatementHandle*. La fonction a été appelée à nouveau sur le *au paramètre StatementHandle*.<br /><br /> La fonction a été appelée et avant qu’il exécutée avec succès, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *au paramètre StatementHandle* d’un thread différent dans un application multithread.|  
 |HY010|Erreur de séquence de fonction|(DM) une fonction de façon asynchrone en cours d’exécution a été appelée pour le handle de connexion qui est associé à la *au paramètre StatementHandle*. Cette fonction asynchrone était en cours d’exécution lorsque le **SQLExecute** fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** a été appelé pour le *au paramètre StatementHandle* et retourné SQL_PARAM_DATA_ DISPONIBLE. Cette fonction a été appelée avant que les données ont été récupérées pour tous les paramètres transmis en continu.<br /><br /> (DM) une fonction de façon asynchrone en cours d’exécution (pas celui-ci) a été appelée pour le *au paramètre StatementHandle* et était en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** a été appelé pour le  *Au paramètre StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi de données pour tous les paramètres de data-at-execution ou les colonnes.<br /><br /> (DM) le *au paramètre StatementHandle* n’était pas préparée.|  
 |HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, probablement en raison de conditions de mémoire insuffisante.|  
-|HY090|Longueur de chaîne ou une mémoire tampon non valide|Un paramètre défini avec **SQLBindParameter**, était un pointeur null, et la valeur de paramètre de longueur n’était pas 0, SQL_NULL_DATA, SQL_DATA_AT_EXEC, SQL_DEFAULT_PARAM, ou inférieure ou égale à SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Un paramètre défini avec **SQLBindParameter**, n’était pas un pointeur null ; le type de données C a été SQL_C_BINARY ou SQL_C_CHAR ; et la valeur de paramètre de longueur est inférieure à 0 mais n’était pas SQL_NTS, SQL_NULL_DATA, SQL_DEFAULT_PARAM ou SQL_DATA_ AT_EXEC, ou inférieure ou égale à SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Une valeur de longueur de paramètre lié par **SQLBindParameter** a été défini sur SQL_DATA_AT_EXEC ; le type SQL a été SQL_LONGVARCHAR, SQL_LONGVARBINARY, ou un type de données de spécifique à la source de données de type long ; et les informations de SQL_NEED_LONG_DATA_LEN Tapez dans **SQLGetInfo** a été « Y ».|  
+|HY090|Longueur de chaîne ou une mémoire tampon non valide|Un paramètre défini avec **SQLBindParameter**, était un pointeur null, et la valeur de paramètre de longueur n’était pas 0, SQL_NULL_DATA, SQL_DATA_AT_EXEC, SQL_DEFAULT_PARAM, ou inférieure ou égale à SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Un paramètre défini avec **SQLBindParameter**, n’était pas un pointeur null ; le type de données C a été SQL_C_BINARY ou SQL_C_CHAR ; et la valeur de paramètre de longueur est inférieure à 0 mais n’était pas SQL_NTS, SQL_NULL_DATA, SQL_DEFAULT_PARAM ou SQL_DATA_ AT_EXEC, ou inférieure ou égale à SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Une valeur de longueur de paramètre lié par **SQLBindParameter** a été défini sur SQL_DATA_AT_EXEC ; le type SQL a été SQL_LONGVARCHAR, SQL_LONGVARBINARY, ou un type de données spécifiques à la source de données de type long ; et les informations de SQL_NEED_LONG_DATA_LEN Tapez dans **SQLGetInfo** a été « Y ».|  
 |HY105|Type de paramètre non valide|La valeur spécifiée pour l’argument *InputOutputType* dans **SQLBindParameter** a été SQL_PARAM_OUTPUT, et le paramètre est un paramètre d’entrée.|  
 |HY109|Position de curseur non valide|L’instruction préparée a été une mise à jour positionnée ou une instruction delete, et le curseur a été positionné (par **SQLSetPos** ou **SQLFetchScroll**) sur une ligne qui a été supprimée ou ne peut pas être récupérée.|  
 |HY117|Connexion est suspendue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [SQLEndTran, fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -120,7 +120,7 @@ SQLRETURN SQLExecute(
  Si les signets sont activés et exécution d’une requête qui ne peut pas prendre en charge des signets, le pilote doit tenter de forcer l’environnement pour qu’il prend en charge des signets en modifiant une valeur d’attribut et en retournant SQLSTATE 01 s 02 (valeur d’Option modifiée). Si l’attribut ne peut pas être modifié, le pilote doit retourner SQLSTATE HY024 (valeur d’attribut non valide).  
   
 > [!NOTE]  
->  Lorsque vous utilisez le regroupement de connexions, une application ne doit pas exécuter les instructions SQL qui modifient la base de données ou le contexte de la base de données, telles que la **utilisation** *base de données* instruction dans SQL Server, ce qui change le catalogue utilisé par une source de données.  
+>  Lorsque vous utilisez le regroupement de connexions, une application ne doit pas exécuter les instructions SQL qui modifient la base de données ou le contexte de la base de données, telles que la **utilisation** _base de données_ instruction dans SQL Server, ce qui change le catalogue utilisé par une source de données.  
   
 ## <a name="code-example"></a>Exemple de code  
  Consultez [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md), [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md), et [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  

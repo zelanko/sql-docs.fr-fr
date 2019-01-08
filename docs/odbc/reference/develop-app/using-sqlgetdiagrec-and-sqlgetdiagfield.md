@@ -17,12 +17,12 @@ ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37fb095579fd173fd24a5df933e3e1a65edbeada
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1db402e7c015ef50ce47b5137e670d9f1836a326
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626037"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204698"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Utilisation de SQLGetDiagRec et de SQLGetDiagField
 Applications appellent **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer les informations de diagnostic. Ces fonctions acceptent un handle d’environnement, connexion, instruction ou descripteur et renvoient des diagnostics à partir de la fonction de ce descripteur de la dernière utilisation. Les tests de diagnostic enregistrées sur un handle spécifique sont ignorés quand une nouvelle fonction est appelée à l’aide de ce descripteur. Si la fonction a retourné plusieurs enregistrements de diagnostic, l’application appelle ces fonctions plusieurs fois ; le nombre total d’enregistrements d’état est récupéré en appelant **SQLGetDiagField** pour l’enregistrement d’en-tête (enregistrement 0) avec l’option SQL_DIAG_NUMBER.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,12 +21,12 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecec815644ab8650503f4a5f6c8ea3f4af5f10a2
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 36c49775535e6fbc6a4ed867279d1ae058a932a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460880"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356359"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codage et débogage du composant Script
   Dans le Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)], le composant Script propose deux modes : le mode Création des métadonnées et le mode Création du code. Lorsque vous ouvrez l’**Éditeur de transformation de script**, le composant entre en mode Création des métadonnées, dans lequel vous configurez des métadonnées et définissez les propriétés du composant. Après avoir défini les propriétés du composant Script et avoir configuré l'entrée et les sorties en mode Création des métadonnées, vous pouvez basculer vers le mode Création du code pour écrire votre script personnalisé. Pour plus d’informations sur le mode Création des métadonnées et le mode Création de code, consultez [Configuration du composant Script dans l’Éditeur de composant Script](configuring-the-script-component-in-the-script-component-editor.md).  
@@ -208,9 +206,9 @@ public class ScriptMain : UserComponent
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   Entrée de blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661), sur blogs.msdn.com.  
+-   Entrée de blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661), sur blogs.msdn.com.  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration du composant Script dans l’éditeur de composant de script](configuring-the-script-component-in-the-script-component-editor.md)  

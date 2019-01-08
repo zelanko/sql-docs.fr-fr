@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio Forum aux questions | Microsoft Docs
+title: Questions fréquentes (FAQ)
+titleSuffix: Azure Data Studio
 description: Forum aux questions (FAQ) sur Azure Data Studio.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b34723e800d3dc21928dcdbb5dc9871ecbbcdb5f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356350"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030330"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
 
@@ -48,7 +49,7 @@ Le code source pour Azure Data Studio et ses fournisseurs de données est dispon
 
 ## <a name="do-we-plan-to-open-source-ssms"></a>Nous prévoyons ouvrir la source de SSMS ?
 
-Non. Toutefois, nouvelle génération multios CLI et l’interface graphique utilisateur des outils sont open source. Par exemple, l’extension mssql pour Visual Studio Code, mssql-scripter et msql-CLI sont tous open source sur GitHub. Le code source pour Studo de données Azure est disponible sur GitHub.  
+Non. Toutefois, nouvelle génération multios CLI et l’interface graphique utilisateur des outils sont open source. Par exemple, l’extension mssql pour Visual Studio Code, mssql-scripter et msql-CLI sont tous open source sur GitHub. Le code source pour Azure Data Studio est disponible sur GitHub.  
 
 ## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>Maintenant qu’il y ait Azure Data Studio, Microsoft prévoit-elle de déconseiller SSMS et SSDT ? 
 
@@ -80,7 +81,7 @@ Non. En plus de la prochaine génération de multios et d’outils CLI et l’in
 
 ### <a name="shell-features"></a>Fonctionnalités du shell
 
-|Fonctionnalité|Studio de données Azure|SSMS|
+|Fonctionnalité|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Authentification dans Azure|Oui|Oui|
 |Tableau de bord|Oui| |
@@ -94,7 +95,7 @@ Non. En plus de la prochaine génération de multios et d’outils CLI et l’in
 |Volet de tâches|Oui||
 |Thèmes|Oui||
 |Mode foncé|Oui||
-|Explorateur de ressources Azure|Aperçu||
+|Explorateur de ressources Azure|Preview||
 |Assistant Générer des scripts||Oui
 |Importation/exportation DACPAC||Oui|
 |Propriétés des objets||Oui|
@@ -102,13 +103,13 @@ Non. En plus de la prochaine génération de multios et d’outils CLI et l’in
 
 ### <a name="query-editor"></a>Éditeur de requête
 
-|Fonctionnalité|Studio de données Azure|SSMS|
+|Fonctionnalité|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Visionneuse de graphique|Oui||
 |Exporter les résultats vers CSV, JSON, XLSX|Oui||
 |IntelliSense|Oui|Oui|
 |Extraits de code|Oui|Oui|
-|Afficher le Plan|Aperçu|Oui|
+|Afficher le Plan|Preview|Oui|
 |Statistiques du client||Oui|
 |Statistiques des requêtes actives||Oui|
 |Options de requête||Oui|
@@ -120,7 +121,7 @@ Non. En plus de la prochaine génération de multios et d’outils CLI et l’in
 
 ### <a name="operating-system-support"></a>Prise en charge du système d'exploitation
 
-|Fonctionnalité|Studio de données Azure|SSMS|
+|Fonctionnalité|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Windows|Oui|Oui|
 |macOS|Oui||
@@ -128,25 +129,25 @@ Non. En plus de la prochaine génération de multios et d’outils CLI et l’in
 
 ### <a name="data-engineering"></a>Ingénierie des données
 
-|Fonctionnalité|Studio de données Azure|SSMS|
+|Fonctionnalité|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Assistant de données externes|Aperçu||
-|Intégration de HDFS|Aperçu||
-|Ordinateurs portables|Aperçu||
+|Assistant de données externes|Preview||
+|Intégration de HDFS|Preview||
+|Notebooks|Preview||
 
 ### <a name="database-administration"></a>Administration de bases de données
 
-|Fonctionnalité|Studio de données Azure|SSMS|
+|Fonctionnalité|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Sauvegarde / restauration|Oui|Oui|
-|Importation de fichier plat|Aperçu|Oui|
-|Agent SQL|Aperçu|Oui|
-|SQL Profiler|Aperçu|Oui|
+|Importation de fichier plat|Preview|Oui|
+|Agent SQL|Preview|Oui|
+|SQL Profiler|Preview|Oui|
 |Always On||Oui|
 |Always Encrypted||Oui|
 |Assistant Copier des données||Oui|
 |Assistant Paramétrage de données||Oui|
-|Schémas de base de données||Oui|
+|Diagrammes de base de données||Oui|
 |Visionneuse de journal d’erreur||Oui|
 |Plans de maintenance||Oui|
 |Requête de plusieurs serveur||Oui|

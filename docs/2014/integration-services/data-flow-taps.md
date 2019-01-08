@@ -11,15 +11,15 @@ ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9ddd8c6de8574f10b131427cc4ff6fc8de8d5cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e807fad8929ccb087b9ba55615b235a2950cdb1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146469"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376781"
 ---
 # <a name="data-flow-taps"></a>Drainage des flux de données
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] introduit une nouvelle fonctionnalité qui vous permet d’ajouter un drainage de données sur un chemin d’accès du flux de données d’un package lors de l’exécution et diriger la sortie à partir du drainage de données vers un fichier externe. Pour utiliser cette fonctionnalité, vous devez déployer votre projet SSIS à l'aide du modèle de déploiement de projet sur un serveur SSIS. Après avoir déployé le package sur le serveur, vous devez exécuter des scripts T-SQL sur la base de données SSISDB pour ajouter des drainages de données avant d'exécuter le package. Voici un exemple de scénario :  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] introduit une nouvelle fonctionnalité qui vous permet d'ajouter un drainage des données au niveau du chemin d'accès d'un flux de données d'un package au moment de l'exécution et diriger la sortie à partir du drainage des données vers un fichier externe. Pour utiliser cette fonctionnalité, vous devez déployer votre projet SSIS à l'aide du modèle de déploiement de projet sur un serveur SSIS. Après avoir déployé le package sur le serveur, vous devez exécuter des scripts T-SQL sur la base de données SSISDB pour ajouter des drainages de données avant d'exécuter le package. Voici un exemple de scénario :  
   
 1.  Créez une instance d’exécution d’un package à l’aide de la procédure stockée [catalog.create_execution &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database).  
   
@@ -68,7 +68,7 @@ EXEC [SSISDB].[catalog].remove_data_tap @tap_id
 ```  
   
 ## <a name="listing-all-data-taps"></a>Création de la liste de tous les drainages de données  
- Vous pouvez également afficher la liste de tous les drainages de données à l'aide de l'affichage catalog.execution_data_taps. Cet exemple extrait les drainages de données pour une instance d'exécution de spécification (ID : 54).  
+ Vous pouvez également afficher la liste de tous les drainages de données à l'aide de l'affichage catalog.execution_data_taps. L’exemple suivant extrait les drainages de données pour une instance d’exécution de spécification (ID : 54).  
   
 ```  
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  
@@ -78,10 +78,10 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  Le fait d'activer le niveau de journalisation détaillée et d'ajouter des drainages de données augmente les opérations d'E/S effectuées par votre solution d'intégration de données. Par conséquent, il est recommandé d'ajouter des drainages de données uniquement à des fins de dépannage.  
   
 ## <a name="video"></a>Vidéo  
- Cette [vidéo sur TechNet](http://technet.microsoft.com/sqlserver/dn600163) montre comment ajouter/utiliser des drainages de données dans le catalogue SQL Server 2012 SSISDB qui permettent de déboguer des packages par programmation et de capturer les résultats partiels au moment de l’exécution. Elle explique également comment répertorier/supprimer ces drainages de données et les meilleures pratiques pour l'utilisation des drainages de données dans des packages SSIS.  
+ Cette [vidéo sur TechNet](https://technet.microsoft.com/sqlserver/dn600163) montre comment ajouter/utiliser des drainages de données dans le catalogue SQL Server 2012 SSISDB qui permettent de déboguer des packages par programmation et de capturer les résultats partiels au moment de l’exécution. Elle explique également comment répertorier/supprimer ces drainages de données et les meilleures pratiques pour l'utilisation des drainages de données dans des packages SSIS.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Débogage d’un flux de données](troubleshooting/debugging-data-flow.md)  
+ [Débogage d'un flux de données](troubleshooting/debugging-data-flow.md)  
   
  [Outils de dépannage pour l’exécution des packages](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

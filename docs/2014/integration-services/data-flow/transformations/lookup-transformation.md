@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
@@ -20,12 +19,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c4491baada6f3a378a1704608c4dd8427c526ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66c285e24c2a981464c93001c1df41f164e60b1e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229849"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353804"
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
   La transformation de recherche effectue des recherches en joignant des données de colonnes d'entrée à des colonnes d'un dataset de référence. Vous utilisez la recherche pour accéder à des informations supplémentaires dans une table associée se basant sur des valeurs dans des colonnes communes.  
@@ -130,15 +129,15 @@ ms.locfileid: "48229849"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Vidéo, [Procédure : implémenter une transformation de recherche en mode Cache complet](http://go.microsoft.com/fwlink/?LinkId=131031), sur msdn.microsoft.com  
+-   Vidéo, [Comment : Implémenter une Transformation de recherche en Mode Cache complet](https://go.microsoft.com/fwlink/?LinkId=131031), sur msdn.microsoft.com  
   
--   Billet de blog, [Best Practices for Using the Lookup Transformation Cache Modes](http://go.microsoft.com/fwlink/?LinkId=146623)(Bonnes pratiques pour l’utilisation des modes de cache de transformation de recherche), sur blogs.msdn.com  
+-   Billet de blog, [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)(Bonnes pratiques pour l’utilisation des modes de cache de transformation de recherche), sur blogs.msdn.com  
   
--   Billet de blog, [Lookup Pattern: Case Insensitive](http://go.microsoft.com/fwlink/?LinkId=157782)(Modèle de recherche : non-respect de la casse), sur blogs.msdn.com  
+-   Entrée de blog, [modèle de recherche : Casse](https://go.microsoft.com/fwlink/?LinkId=157782), sur blogs.msdn.com  
   
--   Exemple, [Lookup Transformation](http://go.microsoft.com/fwlink/?LinkId=267528)(Transformation de recherche), sur msftisprodsamples.codeplex.com.  
+-   Exemple, [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528)(Transformation de recherche), sur msftisprodsamples.codeplex.com.  
   
-     Pour plus d’informations sur l’installation d’exemples de produits et de bases de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , consultez [SQL Server Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=267527)(Exemples de produits SQL Server Integration Services).  
+     Pour plus d’informations sur l’installation d’exemples de produits et de bases de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , consultez [SQL Server Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=267527)(Exemples de produits SQL Server Integration Services).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Transformation de recherche floue](fuzzy-lookup-transformation.md)   

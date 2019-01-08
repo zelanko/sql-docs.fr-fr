@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd76a8be5622ede61d40802b9b6f3e586d3d7822
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbf1d34d801696861a1766d1fdca432037c94b11
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168799"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761311"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile (classe d'événements)
   La classe d’événements **CursorRecompile** décrit les événements de recompilation de curseur qui interviennent dans les curseurs de l’API. Les événements de recompilation de curseur surviennent lorsque le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] recompile un curseur Transact-SQL suite à une modification de schéma.  
@@ -35,8 +34,8 @@ ms.locfileid: "48168799"
 |**ClientProcessID**|**Int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
 |**DatabaseID**|**Int**|ID de la base de données spécifiée par l’instruction USE *database* ou ID de la base de données par défaut si aucune instruction USE *database*n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |**DatabaseName**|**nvarchar**|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
-|**EventClass**|**Int**|Type d’événement enregistré = 75|27|non|  
-|**EventSequence**|**Int**|Séquence de la classe d’événements **CursorRecompile** du lot.|51|non|  
+|**EventClass**|**Int**|Type d’événement enregistré = 75|27|Non|  
+|**EventSequence**|**Int**|Séquence de la classe d’événements **CursorRecompile** du lot.|51|Non|  
 |**GroupID**|**Int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**IsSystem**|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
@@ -45,7 +44,7 @@ ms.locfileid: "48168799"
 |**NTDomainName**|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |**NTUserName**|**nvarchar**|Nom d'utilisateur Windows.|6|Oui|  
 |**RequestID**|**Int**|Identificateur de demande qui a recompilé le curseur.|49|Oui|  
-|**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |**SPID**|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  

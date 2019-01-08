@@ -20,12 +20,12 @@ ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a8aa88e4a7eaea25a7c7114599d9b9cac601ab1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff0854e1252b4adc38c2c3d5f2022762fb3bd0f8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613847"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544123"
 ---
 # <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "47613847"
 
 |Nom de la colonne|Propriété|Description|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|BIGINT|Niveau de journalisation pour le cluster de basculement SQL Server. La journalisation détaillée peut être activée pour fournir des détails supplémentaires dans les journaux des erreurs à des fins de dépannage. Une des valeurs suivantes :<br /><br /> 0 – La journalisation est désactivée (valeur par défaut)<br /><br /> 1 - Erreurs uniquement<br /><br /> 2 – Erreurs et avertissements<br /><br /> Pour plus d’informations, consultez [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
+|VerboseLogging|BIGINT|Niveau de journalisation pour le cluster de basculement SQL Server. La journalisation détaillée peut être activée pour fournir des détails supplémentaires dans les journaux des erreurs à des fins de dépannage. Une des valeurs suivantes :<br /><br /> 0 - La journalisation est désactivée (valeur par défaut)<br /><br /> 1 - Erreurs uniquement<br /><br /> 2 - Erreurs et avertissements<br /><br /> Pour plus d’informations, consultez [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
 |SqlDumperDumpFlags|BIGINT|Les indicateurs de vidage SQLDumper déterminent le type de fichiers dump généré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le paramètre par défaut est 0.|  
 |SqlDumperDumpPath|nvarchar(260)|Emplacement où l'utilitaire SQLDumper génère les fichiers dump.|  
-|SqlDumperDumpTimeOut|BIGINT|Valeur du délai d'attente, en millisecondes, nécessaire à l'utilitaire SQLDumper pour générer un vidage en cas d'échec de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est 0 :|  
+|SqlDumperDumpTimeOut|BIGINT|Valeur du délai d'attente, en millisecondes, nécessaire à l'utilitaire SQLDumper pour générer un vidage en cas d'échec de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est 0.|  
 |FailureConditionLevel|BIGINT|Définit les conditions dans lesquelles le cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit échouer ou redémarrer. La valeur par défaut est 3. Pour obtenir une explication détaillée ou pour modifier les paramètres de propriété, consultez [configurer les paramètres de propriété FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).|  
 |HealthCheckTimeout|BIGINT|Valeur du délai d'attente qui définit la durée pendant laquelle la DLL de ressource du moteur de base de données SQL Server doit attendre les informations d'intégrité du serveur avant de considérer que l'instance de SQL Server ne répond pas. Valeur de délai d'attente, exprimée en millisecondes. Valeur par défaut est 60000. Pour plus d’informations ou pour modifier ce paramètre de propriété, consultez [configurer les paramètres de propriété HealthCheckTimeout](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert les autorisations VIEW SERVER STATE sur l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="examples"></a>Exemples  

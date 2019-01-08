@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
@@ -14,18 +14,18 @@ ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2209c8de9c65e5740b9a6ebdd62972c93596e396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104859"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768291"
 ---
 # <a name="manage-data-collection"></a>Gérer la collecte de données
   Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] procédures stockées et fonctions pour gérer différents aspects de la collecte de données, telles que l’activation ou désactivation de la collecte de données, modification d’une collection jeu configuration ou la consultation des données dans l’entrepôt de données de gestion .  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>Gérer la collecte de données à l'aide de SQL Server Management Studio  
- Vous pouvez effectuer les tâches suivantes liées au collecteur de données à l’aide de l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+ Vous pouvez effectuer les tâches suivantes liées au collecteur de données en utilisant l'Explorateur d'objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] :  
   
 -   [Configurer l’entrepôt de données de gestion &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48104859"
   
 -   [Activer ou désactiver la collecte de données](data-collection.md)  
   
--   [Démarrer ou arrêter un jeu d’éléments de collecte](start-or-stop-a-collection-set.md)  
+-   [Démarrer ou arrêter un jeu d'éléments de collecte](start-or-stop-a-collection-set.md)  
   
 -   [Créer un jeu d’éléments de collecte personnalisé qui utilise le type de collecteur Requête T-SQL générique &#40;Transact-SQL&#41;](create-custom-collection-set-generic-t-sql-query-collector-type.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48104859"
 > [!IMPORTANT]  
 >  Contrairement aux procédures stockées standard, les procédures stockées du collecteur de données utilisent des paramètres de type strict et elles ne prennent pas en charge la conversion automatique de type de données. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
   
- Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer et exécuter les exemples de code fourni. Pour plus d’informations, consultez [Explorateur d’objets](../../ssms/object/object-explorer.md). Vous pouvez également créer la requête dans n'importe quel éditeur et l'enregistrer dans un fichier texte avec une extension de nom de fichier .sql. Vous pouvez exécuter la requête à partir de l’invite de commandes de Windows à l’aide de la `sqlcmd` utilitaire. Pour plus d’informations, consultez [Utiliser l’utilitaire sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
+ Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer et exécuter les exemples de code qui sont fournis. Pour plus d’informations, consultez [Explorateur d’objets](../../ssms/object/object-explorer.md). Vous pouvez également créer la requête dans n'importe quel éditeur et l'enregistrer dans un fichier texte avec une extension de nom de fichier .sql. Vous pouvez exécuter la requête à partir de l'invite de commandes Windows, à l'aide de l'utilitaire `sqlcmd`. Pour plus d’informations, consultez [Utiliser l’utilitaire sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
   
 ### <a name="stored-procedures-and-views"></a>Procédures stockées et vues  
  **Utilisation du collecteur de données**  

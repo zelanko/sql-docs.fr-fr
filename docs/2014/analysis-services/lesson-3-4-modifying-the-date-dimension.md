@@ -11,12 +11,12 @@ ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6450b85b00906facfb291d8085d729474577bd32
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 77d37fff5b22e15656ef2eb76f33ada44572ba4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753576"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526109"
 ---
 # <a name="modifying-the-date-dimension"></a>Modification de la dimension Date
   Dans les tâches de cette rubrique, vous allez créer une hiérarchie définie par l'utilisateur et vous allez modifier les noms de membre affichés pour les attributs Date, Month, Calendar Quarter et Calendar Semester. Vous allez également définir des clés composites pour les attributs, contrôler l'ordre de tri des membres de dimension et définir les relations d'attributs.  
@@ -65,7 +65,7 @@ ms.locfileid: "50753576"
   
 3.  Si la fenêtre Propriétés n’est pas ouverte, ouvrez-la, puis cliquez sur le bouton **Masquer automatiquement** dans la barre de titre afin qu’elle reste ouverte.  
   
-4.  Cliquez sur le champ de propriété **NameColumn** en bas de la fenêtre, puis cliquez sur le bouton où figurent des points de suspension (**…**) pour ouvrir la boîte de dialogue **Colonne de nom** .  
+4.  Cliquez sur le **NameColumn** propriété champ vers le bas de la fenêtre, puis cliquez sur le bouton de navigation (**...** ) pour ouvrir la **colonne nom** boîte de dialogue.  
   
 5.  Sélectionnez `SimpleDate` en bas de la **colonne Source** liste, puis cliquez sur **OK**.  
   

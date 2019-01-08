@@ -1,5 +1,5 @@
 ---
-title: 'Résoudre les problèmes liés aux rapports : rapports cartographiques (Générateur de rapports et SSRS) | Microsoft Docs'
+title: 'Dépanner les rapports : Mapper des rapports (Générateur de rapports et SSRS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c4ac3f5504aef33661afd7c94cec2b63b0b64f0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c9a3adeb3e63c24aa7a78f5a44f1cd2692ce2b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197410"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375341"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Résoudre les problèmes liés aux rapports : rapports cartographiques (Générateur de rapports et SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Dépanner les rapports : Rapports cartographiques (Générateur de rapports et SSRS)
   Vous pouvez rencontrer des problèmes lorsque vous ajoutez une carte ou une couche à votre rapport, lorsque vous personnalisez une carte ou une couche existante de votre rapport, lorsque vous affichez l'aperçu d'une carte dans un rapport ou lorsque vous publiez un rapport contenant une carte. Utilisez cette rubrique pour vous aider à résoudre ces problèmes.  
   
 > [!NOTE]  
@@ -173,7 +173,7 @@ ms.locfileid: "48197410"
 -   Pour plus d’informations, consultez [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>Qu'est-ce que la valeur NaN sur l'échelle de couleurs ?  
- `NaN` représente une valeur non numérique. Les valeurs d'échelles de couleurs sont supposées être numériques. Vérifiez les paramètres de distribution et la valeur du texte de légende pour les règles associées à l'échelle de couleurs. Si vous avez créé des plages de distribution personnalisées, vérifiez que vous avez spécifié la limite inférieure sur la première plage et la limite supérieure sur la dernière plage.  
+ `NaN` signifie Non numérique (Not a Number). Les valeurs d'échelles de couleurs sont supposées être numériques. Vérifiez les paramètres de distribution et la valeur du texte de légende pour les règles associées à l'échelle de couleurs. Si vous avez créé des plages de distribution personnalisées, vérifiez que vous avez spécifié la limite inférieure sur la première plage et la limite supérieure sur la dernière plage.  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>Mon échelle de couleurs ne s'affiche pas lorsque j'exécute le rapport.  
  L'échelle de couleurs affiche des informations à l'intention de l'utilisateur lorsqu'une couche spécifie des règles de couleur pour les polygones, les lignes ou les points de l'ensemble de la couche ou pour les éléments cartographiques incorporés. Si aucun élément cartographique ne spécifie une règle de couleur, ou si les règles de couleur sont spécifiées à l'aide d'une légende plutôt que de l'échelle de couleurs, l'échelle de couleurs ne s'affiche pas dans le rapport rendu.  
@@ -194,7 +194,7 @@ ms.locfileid: "48197410"
   
 -   La projection cartographique doit être **Mercator**.  
   
--   Pour l'aperçu local, vous devez avoir accès à Internet. Pour un rapport exécuté à partir du serveur de rapports, celui-ci doit être configuré pour prendre en charge l'arrière-plan de mosaïques. Pour plus d'informations, consultez « Planification de la prise en charge des cartes » dans la [documentation de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) de la documentation en ligne de SQL Server.  
+-   Pour l'aperçu local, vous devez avoir accès à Internet. Pour un rapport exécuté à partir du serveur de rapports, celui-ci doit être configuré pour prendre en charge l'arrière-plan de mosaïques. Pour plus d'informations, consultez « Planification de la prise en charge des cartes » dans la [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) de la documentation en ligne de SQL Server.  
   
  Pour plus d’informations sur l’ajout d’une couche de vignettes, consultez [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

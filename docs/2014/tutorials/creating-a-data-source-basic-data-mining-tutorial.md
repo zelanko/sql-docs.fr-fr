@@ -11,18 +11,18 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f576ceb6b465dd8238972d29456300a01837df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e216aa5da4ef837da632ba83d4cf6e14edb40b1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128169"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376451"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Création d'une source de données (Didacticiel sur l'exploration de données de base)
   Un *source de données* est une connexion de données qui est enregistrée et gérée dans votre projet et déployée sur votre [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données. La source de données contient les noms du serveur et de la base de données où vos données sources résident, en plus des éventuelles propriétés de connexion requises.  
   
 > [!IMPORTANT]  
->  Le nom de la base de données est [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Si vous n’avez pas déjà installé cette base de données, consultez le [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) page.  
+>  Le nom de la base de données est [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Si vous n’avez pas déjà installé cette base de données, consultez le [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) page.  
   
 ### <a name="to-create-a-data-source"></a>Pour créer une source de données  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48128169"
   
 7.  Dans le **sélectionner ou entrer un nom de base de données** , sélectionnez [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] puis cliquez sur **OK**.  
   
-8.  Cliquez sur **Suivant**.  
+8.  Cliquer sur **Suivant**.  
   
 9. Sur le **les informations d’emprunt d’identité** , cliquez sur **utiliser le compte de service**, puis cliquez sur **suivant**.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48128169"
 ## <a name="see-also"></a>Voir aussi  
  [Créer une source de données &#40;SSAS Multidimensionnel&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Définition d’une Source de données](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [Définir les Options de l’emprunt d’identité &#40;SSAS - multidimensionnel&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
+ [Définir les options d’emprunt d’identité &#40;SSAS - Multidimensionnel&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
   
   

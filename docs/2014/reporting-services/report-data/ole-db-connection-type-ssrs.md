@@ -11,12 +11,12 @@ ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c06203ef29acacdc254e6518313e1a93b2aefcf5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cb3c7e8f9be785a93b29e453b5dfc727d747569
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192719"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369571"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Type de connexion OLE DB (SSRS)
   Pour inclure les données d'un fournisseur de données OLE DB, vous devez avoir un dataset basé sur une source de données de rapport de type OLE DB. Ce type de source de données intégré est basé sur l’extension pour le traitement des données OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -63,13 +63,13 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  Pour récupérer correctement les données de votre choix, vous devez spécifier une syntaxe de requête prise en charge par le fournisseur de données. La prise en charge des paramètres varie selon le fournisseur de données. Pour plus d'informations, consultez les rubriques spécifiques au fournisseur de données sélectionné. Exemple :  
   
--   [Fournisseur OLE DB de Analysis Services &#40;Analysis Services - données multidimensionnelles&#41;](../../analysis-services/dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
+-   [Fournisseur OLE DB Analysis Services &#40;Analysis Services – Données multidimensionnelles&#41;](../../analysis-services/dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
   
--   [Utilisation du fournisseur de données .NET Framework pour Oracle](http://go.microsoft.com/fwlink/?LinkId=112314)  
+-   [Utilisation du fournisseur de données .NET Framework pour Oracle](https://go.microsoft.com/fwlink/?LinkId=112314)  
   
 -   [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
- Pour plus d’informations sur les fournisseurs de données OLE DB spécifiques, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Pour plus d’informations sur les fournisseurs de données OLE DB spécifiques, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
   
@@ -99,7 +99,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs de dataset générée par la requête.  
   
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
   
  

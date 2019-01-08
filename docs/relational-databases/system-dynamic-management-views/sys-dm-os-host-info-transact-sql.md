@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55291c5cc30b9fe16d7bd259bab03677f6df45db
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 32ef1fff3b5309da587aacc2fca14099e6bf2cac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672948"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209548"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ Cette vue est similaire à [sys.dm_os_windows_info](../../relational-databases/s
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
 Le `SELECT` autorisation sur `sys.dm_os_host_info` est accordé à la `public` rôle par défaut. Si révoqué, nécessite `VIEW SERVER STATE` autorisation sur le serveur.   
  
->  [!CAUTION]
+> [!CAUTION]
 >  Depuis la version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3, [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] version 17 nécessite `SELECT` autorisation sur `sys.dm_os_host_info` pour vous connecter à [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Si `SELECT` autorisation est révoquée sur `public`, seuls les utilisateurs avec `VIEW SERVER STATE` autorisation peut se connecter avec la version la plus récente de SSMS. (Autres outils, tels que `sqlcmd.exe` peut se connecter sans `SELECT` autorisation sur `sys.dm_os_host_info`.)
 
   

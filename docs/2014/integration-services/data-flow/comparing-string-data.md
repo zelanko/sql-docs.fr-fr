@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing string data
@@ -17,12 +16,12 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 950456557177ed0e794aae92df14536ee524e36b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14a9cd4f9d37798aaabaf65ea2f2afe79c207e6e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100949"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359541"
 ---
 # <a name="comparing-string-data"></a>comparaison de données de chaînes
   Les comparaisons de chaînes représentent une partie importante des transformations réalisées par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]et peuvent également être utilisées pour l'évaluation d'expressions dans des variables et des expressions de propriétés. Ainsi, la transformation de tri peut comparer les valeurs d'un dataset afin de trier les données dans l'ordre croissant ou décroissant.  
@@ -41,7 +40,7 @@ ms.locfileid: "48100949"
 ## <a name="processing-during-string-comparison"></a>Traitement pendant la comparaison de chaînes  
  En fonction des données et de la configuration de la transformation, le traitement suivant peut être réalisé au cours de la comparaison de données chaînes :  
   
--   conversion des données au format Unicode. Si les données sources ne sont pas au format Unicode, elles sont automatiquement converties dans ce format avant la comparaison ;  
+-   conversion des données au format Unicode. Si les données sources ne sont pas au format Unicode, elles sont automatiquement converties dans ce format avant la comparaison ;  
   
 -   utilisation de paramètres régionaux afin d'appliquer des règles spécifiques à un pays pour interpréter la date, l'heure, les données décimales et l'ordre de tri ;  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48100949"
  Vous pouvez également spécifier des paramètres régionaux pour un gestionnaire de connexions de fichiers plats et un gestionnaire de connexions de fichiers plats multiples.  
   
 ## <a name="setting-comparison-options"></a>Définition des options de comparaison  
- Les paramètres régionaux déterminent les règles de base pour la comparaison de données chaînes. Ils indiquent par exemple la position de tri de chaque lettre dans l'alphabet. Cependant, ces règles ne suffisent pas toujours dans les comparaisons réalisées par certaines transformations et [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge un ensemble d'options de comparaison avancées extrapolant les règles de comparaison des paramètres régionaux. Ces options de comparaison sont définies au niveau de la colonne. Une de ces options de comparaison permet par exemple d'ignorer les caractères sans espace. Les signes diacritiques comme l'accent sont alors ignorés ce qui conduit à considérer « a » et « á » comme identiques dans les comparaisons.  
+ Les paramètres régionaux déterminent les règles de base pour la comparaison de données chaînes. Ils indiquent par exemple la position de tri de chaque lettre dans l'alphabet. Cependant, ces règles ne suffisent pas toujours dans les comparaisons réalisées par certaines transformations et [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge un ensemble d'options de comparaison avancées extrapolant les règles de comparaison des paramètres régionaux. Ces options de comparaison sont définies au niveau de la colonne. Une de ces options de comparaison permet par exemple d'ignorer les caractères sans espace. L’effet de cette option consiste à ignorer les signes diacritiques telles que le respect des accents, ce qui rend « a » et « å « identiques à des fins de comparaison.  
   
  Le tableau qui suit décrit les options de comparaison et un style de tri.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48100949"
  La balise de comparaison **FullySensitive** s'affiche dans la boîte de dialogue **Éditeur avancé** pour les transformations de regroupement probable et de recherche floue. Le fait de sélectionner l'indicateur de comparaison **FullySensitive** signifie que toutes les options de comparaison s'appliquent.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données d’Integration Services](integration-services-data-types.md)   
+ [Types de données d'Integration Services](integration-services-data-types.md)   
  [Analyse rapide](../fast-parse.md)   
  [Analyse standard](../standard-parse.md)  
   

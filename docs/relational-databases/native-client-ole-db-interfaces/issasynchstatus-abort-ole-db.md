@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f12cc39f6d3c3b507734d1c7750491aba15ea20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e105db14e9b22b34439050ae6e08d5094f397b17
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640407"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514576"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ HRESULT Abort(
  *eOperation*[in]  
  L'opération à abandonner. Elle doit avoir la valeur suivante :  
   
- DBASYNCHOP_OPEN : la demande d'annulation s'applique à l'ouverture ou au remplissage asynchrone d'un ensemble de lignes ou à l'initialisation asynchrone d'un objet source de données.  
+ DBASYNCHOP_OPEN-la demande d’annulation s’applique à l’ouverture asynchrone ou le remplissage d’un ensemble de lignes ou à l’initialisation asynchrone d’un objet de source de données.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  

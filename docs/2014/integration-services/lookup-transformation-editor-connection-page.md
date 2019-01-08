@@ -15,12 +15,12 @@ ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ecacc7fa89256cf5efb42ee792a08251a9af013
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37d42dde548394599cec00020a91383fde97e034
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063709"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371541"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>Éditeur de transformation de recherche (page Connexion)
   Utilisez la page **Connexion** de la boîte de dialogue **Éditeur de transformation de recherche** pour sélectionner un gestionnaire de connexions. Si vous sélectionnez un gestionnaire de connexions OLE DB, vous sélectionnez également une requête, une table ou une vue pour générer le dataset de référence.  
@@ -48,7 +48,7 @@ ms.locfileid: "48063709"
  Sélectionnez une table ou une vue existante dans la liste ou créez une table en cliquant sur **Nouveau**.  
   
 > [!NOTE]  
->  Si vous spécifiez une instruction SQL dans la page **Avancé** de l’ **Éditeur de transformation de recherche**, cette instruction SQL substitue et remplace le nom de table a sélectionné ici. Pour plus d’informations, consultez [Lookup Transformation Editor &#40;Advanced Page&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md).  
+>  Si vous spécifiez une instruction SQL dans la page **Avancé** de l’ **Éditeur de transformation de recherche**, cette instruction SQL substitue et remplace le nom de table a sélectionné ici. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Avancé&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md).  
   
  **Nouveau**  
  Utilisez la boîte de dialogue **Créer une table** pour créer une table.  
@@ -69,13 +69,13 @@ ms.locfileid: "48063709"
  Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Visualiser les résultats de la requête** . Cette option affiche jusqu'à 200 lignes.  
   
 ## <a name="external-resources"></a>Ressources externes  
- Entrée de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
+ Entrée de blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de Transformation de recherche &#40;Page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de transformation de recherche &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
  [Éditeur de transformation de recherche &#40;page Colonnes&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [Éditeur de Transformation de recherche &#40;Page avancé&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Éditeur de Transformation de recherche &#40;Page sortie d’erreur&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [Éditeur de transformation de recherche &#40;page Avancé&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [Transformation de recherche floue](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

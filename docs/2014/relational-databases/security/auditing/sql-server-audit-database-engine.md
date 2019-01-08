@@ -15,12 +15,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 36aeb6f1b8b2b90dce737e3e815b3385429e84f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175349"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373521"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
   L'*audit* d'une instance de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou d'une base de données individuelle implique le suivi et la journalisation des événements qui se produisent sur le [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. L'audit[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet de créer des audits de serveur, qui peuvent contenir des spécifications d'audit de serveur pour les événements de niveau serveur, ainsi que des spécifications d'audit de base de données pour les événements de niveau base de données. Les événements audités peuvent être écrits dans des journaux d'événements ou des fichiers d'audit.  
@@ -61,7 +61,7 @@ ms.locfileid: "48175349"
 > [!IMPORTANT]  
 >  Tout utilisateur authentifié peut lire et écrire dans le journal des événements d'applications de Windows. Celui-ci requiert des autorisations inférieures au journal des événements de sécurité de Windows et il est moins sécurisé.  
   
- L'écriture dans le journal de sécurité de Windows requiert l'ajout du compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à la stratégie **Générer des audits de sécurité** . Par défaut, les comptes Système Local, Service local et Service réseau font partie de cette stratégie. Ce paramètre peut être configuré à l'aide du composant logiciel enfichable de stratégie de sécurité (secpol.msc). En outre, la stratégie de sécurité **Auditer l'accès aux objets** doit être activée pour **Succès** et **Échec**. Ce paramètre peut être configuré à l'aide du composant logiciel enfichable de stratégie de sécurité (secpol.msc). Dans [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou Windows Server 2008, vous pouvez définir plus précise **application générée** stratégie à partir de la ligne de commande à l’aide du programme de stratégie d’audit (`AuditPol.exe)`. Pour plus d’informations sur les étapes permettant d’activer l’écriture dans le journal de sécurité de Windows, consultez [Écrire des événements d’audit SQL Server dans le journal de sécurité](write-sql-server-audit-events-to-the-security-log.md). Pour en savoir plus sur le programme Auditpol.exe, consultez l’article 921469 de la Base de connaissances : [Comment faire pour utiliser la stratégie de groupe pour configurer des paramètres d'audit de sécurité détaillés](http://support.microsoft.com/kb/921469/). Les journaux des événements de Windows sont communs à l'ensemble du système d'exploitation Windows. Pour plus d'informations sur les journaux des événements de Windows, consultez [Vue d'ensemble de l'observateur d'événements](http://go.microsoft.com/fwlink/?LinkId=101455). Si vous avez besoin d'autorisations plus précises sur l'audit, utilisez la cible de fichier binaire.  
+ L'écriture dans le journal de sécurité de Windows requiert l'ajout du compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à la stratégie **Générer des audits de sécurité** . Par défaut, les comptes Système Local, Service local et Service réseau font partie de cette stratégie. Ce paramètre peut être configuré à l'aide du composant logiciel enfichable de stratégie de sécurité (secpol.msc). En outre, la stratégie de sécurité **Auditer l'accès aux objets** doit être activée pour **Succès** et **Échec**. Ce paramètre peut être configuré à l'aide du composant logiciel enfichable de stratégie de sécurité (secpol.msc). Dans [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou Windows Server 2008, vous pouvez définir plus précise **application générée** stratégie à partir de la ligne de commande à l’aide du programme de stratégie d’audit (`AuditPol.exe)`. Pour plus d’informations sur les étapes permettant d’activer l’écriture dans le journal de sécurité de Windows, consultez [Écrire des événements d’audit SQL Server dans le journal de sécurité](write-sql-server-audit-events-to-the-security-log.md). Pour en savoir plus sur le programme Auditpol.exe, consultez l’article 921469 de la Base de connaissances : [Comment faire pour utiliser la stratégie de groupe pour configurer des paramètres d'audit de sécurité détaillés](https://support.microsoft.com/kb/921469/). Les journaux des événements de Windows sont communs à l'ensemble du système d'exploitation Windows. Pour plus d'informations sur les journaux des événements de Windows, consultez [Vue d'ensemble de l'observateur d'événements](https://go.microsoft.com/fwlink/?LinkId=101455). Si vous avez besoin d'autorisations plus précises sur l'audit, utilisez la cible de fichier binaire.  
   
  Lorsque vous enregistrez des informations d'audit dans un fichier, pour éviter toute falsification, vous pouvez limiter l'accès à l'emplacement du fichier des façons suivantes :  
   
@@ -77,9 +77,9 @@ ms.locfileid: "48175349"
   
  Si un administrateur d'audit copie le fichier à un autre emplacement (entre autres, à des fins d'archivage), les listes de contrôle d'accès du nouvel emplacement doivent disposer uniquement des autorisations suivantes :  
   
--   Administrateur d'audit – Lecture/Écriture  
+-   Administrateur d’audit - Lecture/Écriture  
   
--   Lecteur d'audit – Lecture  
+-   Lecteur d’audit - Lecture  
   
  Nous conseillons de générer des rapports d'audit à partir d'une instance distincte de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], telle une instance de [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], accessible uniquement aux administrateurs ou lecteurs d'audit. En utilisant une instance distincte du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] pour la création de rapports, vous pouvez mieux empêcher les utilisateurs non autorisés d'obtenir un accès à l'enregistrement d'audit.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "48175349"
  Pour plus d'informations, consultez [Créer un audit du serveur et une spécification d’audit du serveur](create-a-server-audit-and-server-audit-specification.md) et [Créer une spécification de l’audit du serveur et de la base de données](create-a-server-audit-and-database-audit-specification.md).  
   
 ## <a name="considerations"></a>Observations  
- En cas d'échec pendant le lancement de l'audit, le serveur ne démarre pas. Dans ce cas, vous pouvez démarrer le serveur en saisissant l’option **–f** sur la ligne de commande.  
+ En cas d'échec pendant le lancement de l'audit, le serveur ne démarre pas. Dans ce cas, vous pouvez démarrer le serveur en saisissant l’option **-f** sur la ligne de commande.  
   
- Lorsqu'un échec de l'audit provoque l'arrêt ou empêche le démarrage du serveur car l'instruction ON_FAILURE=SHUTDOWN est spécifiée pour l'audit, l'événement MSG_AUDIT_FORCED_SHUTDOWN est écrit dans le journal. Étant donné que l'arrêt se produit lors de la première rencontre de ce paramètre, l'événement est écrit une seule fois. Cet événement est écrit après le message d'échec d'audit qui provoque l'arrêt. Un administrateur peut contourner les arrêts provoqués par l’audit en démarrant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en mode mono-utilisateur, à l’aide de l’indicateur **–m** . Un démarrage en mode mono-utilisateur rétrograde les audits pour lesquels ON_FAILURE=SHUTDOWN est spécifié pour s'exécuter dans cette session comme ON_FAILURE=CONTINUE. Quand [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est démarré à l’aide de l’indicateur **-m** , le message MSG_AUDIT_SHUTDOWN_BYPASSED est écrit dans le journal des erreurs.  
+ Lorsqu'un échec de l'audit provoque l'arrêt ou empêche le démarrage du serveur car l'instruction ON_FAILURE=SHUTDOWN est spécifiée pour l'audit, l'événement MSG_AUDIT_FORCED_SHUTDOWN est écrit dans le journal. Étant donné que l'arrêt se produit lors de la première rencontre de ce paramètre, l'événement est écrit une seule fois. Cet événement est écrit après le message d'échec d'audit qui provoque l'arrêt. Un administrateur peut contourner les arrêts provoqués par l’audit en démarrant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en mode mono-utilisateur, à l’aide de l’indicateur **-m**. Un démarrage en mode mono-utilisateur rétrograde les audits pour lesquels ON_FAILURE=SHUTDOWN est spécifié pour s'exécuter dans cette session comme ON_FAILURE=CONTINUE. Quand [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est démarré à l’aide de l’indicateur **-m**, le message MSG_AUDIT_SHUTDOWN_BYPASSED est écrit dans le journal des erreurs.  
   
  Pour plus d’informations sur les options de démarrage de service, consultez [Options de démarrage du service moteur de base de données](../../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
@@ -164,7 +164,7 @@ ms.locfileid: "48175349"
 |[sys.server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|Contient des informations sur les détails (actions) d’une spécification de l’audit du serveur dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
 |[sys.server_file_audits](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)|Contient les informations détaillées des magasins à propos du type d'audit de fichier dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Chaque fonctionnalité et commande pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit a des spécifications d'autorisation individuelles.  
   
  Pour créer, modifier ou supprimer un audit du serveur ou une spécification de l'audit du serveur, les principaux du serveur requièrent l'autorisation ALTER ANY SERVER AUDIT ou CONTROL SERVER. Pour créer, modifier ou supprimer une spécification de l'audit de la base de données, les principaux de la base de données requièrent l'autorisation ALTER ANY DATABASE AUDIT, ou l'autorisation ALTER ou CONTROL sur la base de données. De plus, les principaux doivent soit avoir l'autorisation de se connecter à la base de données, soit disposer des autorisations ALTER ANY SERVER AUDIT ou CONTROL SERVER.  
@@ -213,7 +213,7 @@ ms.locfileid: "48175349"
  [Déclencheurs DDL](../../triggers/ddl-triggers.md)  
  Explique comment utiliser des déclencheurs DDL (Data Definition Language) pour effectuer le suivi des modifications de vos bases de données.  
   
- [Microsoft TechNet : SQL Server TechCenter : SQL Server 2005 – Sécurité et protection](http://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet : SQL Server TechCenter : Protection et sécurité de SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Fournit des informations à jour sur la sécurité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  

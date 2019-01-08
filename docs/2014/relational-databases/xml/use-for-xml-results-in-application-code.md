@@ -18,12 +18,12 @@ ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d19c14bcda351be4f061964132f00227d3fdd40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43b7fb86b7529de3629d07d294f0fd663b93561d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206069"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368671"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utiliser des résultats FOR XML dans le code de l'application
   En utilisant des clauses FOR XML avec des requêtes SQL, vous pouvez récupérer et même convertir les résultats de la requête en données XML. Dès lors que les résultats d'une requête FOR XML peuvent être utilisés dans le code de l'application XML, vous pouvez notamment effectuer les opérations suivantes :  
@@ -35,9 +35,9 @@ ms.locfileid: "48206069"
  Cette rubrique donne des exemples expliquant ces approches.  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Récupération des données FOR XML avec des îlots de données ADO et XML  
- ADO `Stream` ou les autres objets qui prennent en charge le modèle COM `IStream` interface, le Active Server Pages (ASP) `Request` et `Response` objets, peuvent être utilisés pour contenir les résultats lorsque vous travaillez avec des requêtes FOR XML.  
+ L'objet ADO `Stream` ainsi que d'autres objets prenant en charge l'interface COM `IStream`, tels que les objets Active Server Pages (ASP) `Request` et `Response`, peuvent servir à contenir les résultats en cas d'utilisation de requêtes FOR XML.  
   
- Par exemple, le code ASP suivant montre les résultats d’une `xml` colonne de type des données démographiques, dans la table Sales.Store de la base de données AdventureWorks. La requête recherche plus particulièrement la valeur d'instance de cette colonne pour la ligne où CustomerID est égal à 3.  
+ Le code ASP suivant, par exemple, montre les résultats d'une requête lancée sur la colonne de type `xml` Demographics de la table Sales.Store de la base de données AdventureWorks. La requête recherche plus particulièrement la valeur d'instance de cette colonne pour la ligne où CustomerID est égal à 3.  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -153,25 +153,25 @@ ms.locfileid: "48206069"
   
 ##### <a name="client-side-processing-of-xml-document-mydataisle"></a>Traitement côté client du document XML MyDataIsle  
   
--   **AnnualSales:** 1500000  
+-   **AnnualSales :** 1500000  
   
--   **AnnualRevenue:** 150000  
+-   **AnnualRevenue :** 150000  
   
--   **BankName:** Primary International  
+-   **Nom de la banque :** International principal  
   
--   **BusinessType:** OS  
+-   **BusinessType :** SYSTÈME D’EXPLOITATION  
   
--   **YearOpened:** 1974  
+-   **YearOpened :** 1974  
   
--   **Specialty:** Road  
+-   **Spécialisation :** Road  
   
--   **SquareFeet:** 38000  
+-   **SquareFeet :** 38000  
   
--   **Brands:** 3  
+-   **Marques :** 3  
   
--   **Internet:** DSL  
+-   **Internet :** DSL  
   
--   **NumberEmployees:** 40  
+-   **NumberEmployees :** 40  
   
  La boîte de message VBScript affichera ensuite le contenu original et non filtré de l'îlot de données XML qui a été renvoyé par les résultats de la requête FOR XML.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48206069"
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
   <Sales.Store>  
     <Demographics>  
-      <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+      <StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
         <AnnualSales>1500000</AnnualSales>  
         <AnnualRevenue>150000</AnnualRevenue>  
         <BankName>Primary International</BankName>  
@@ -201,13 +201,13 @@ ms.locfileid: "48206069"
   
  Dans cet exemple, les API gérées Microsoft .NET Framework sont chargées de renvoyer et de rendre les résultats de la requête FOR XML :  
   
-1.  `SqlConnection` est utilisé pour ouvrir une connexion à SQL Server, en fonction du contenu d’une variable de chaîne de connexion spécifiée strConn.  
+1.  `SqlConnection` est utilisé pour ouvrir une connexion à SQL Server en fonction du contenu d'une variable de chaîne de connexion spécifiée strConn.  
   
 2.  `SqlDataAdapter` est ensuite utilisé en tant qu'adaptateur de données et utilise la connexion SQL et une chaîne de requête SQL spécifiée pour exécuter la requête FOR XML.  
   
-3.  Après l’exécution de la requête, le `SqlDataAdapter.Fill` méthode est appelée et reçoit une instance d’un `DataSet,` MyDataSet, afin de remplir le jeu de données avec la sortie de la requête FOR XML.  
+3.  Une fois la requête exécutée, la méthode `SqlDataAdapter.Fill` est appelée et reçoit une instance d'un `DataSet,` MyDataSet, afin de remplir le dataset avec le résultat de la requête FOR XML.  
   
-4.  Le `DataSet.GetXml` méthode est ensuite appelée pour retourner les résultats de requête sous forme de chaîne qui peut être affiché dans la page HTML généré par le serveur.  
+4.  La méthode `DataSet.GetXml` est alors appelée pour renvoyer les résultats de la requête sous forme de chaîne à afficher dans la page HTML générée par le serveur.  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -284,7 +284,7 @@ Page Generated @ 3/11/2006 3:36:02 PM
   
 SqlConnection opened.  
   
-<Sales.Store><Demographics><StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
+<Sales.Store><Demographics><StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
   
 SqlConnection closed.  
 ```  

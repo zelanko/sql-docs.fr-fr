@@ -14,12 +14,12 @@ ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 653e29f8666f63cd4867b11b378ee8711f8b0508
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 642addb5ff03e17b5b36e7baa01ef87661a00b35
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606439"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589603"
 ---
 # <a name="handler-property-rds"></a>Handler, propriété (RDS)
 Indique le nom d’un programme de personnalisation côté serveur (gestionnaire) qui étend les fonctionnalités de la [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)et tous les paramètres utilisés par le *gestionnaire*.  
@@ -50,7 +50,7 @@ DataControl.Handler = String
   
  Le nom du gestionnaire par défaut est **MSDFMAP. Gestionnaire**, et son paramètre par défaut est un fichier de personnalisation nommé **MSDFMAP. INI**. Cette propriété permet d’appeler d’autres fichiers de personnalisation créés par votre administrateur de serveur.  
   
- L’alternative au paramètre la **gestionnaire** propriété consiste à spécifier un gestionnaire et des paramètres dans le [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriété ; autrement dit, « **Gestionnaire = *** handlerName, parameter1, parameter2,... ;* ".  
+ L’alternative au paramètre la **gestionnaire** propriété consiste à spécifier un gestionnaire et des paramètres dans le [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriété ; autrement dit, «**gestionnaire =** _handlerName, paramètre1, paramètre2,... ;_".  
   
 ## <a name="applies-to"></a>S'applique à  
  [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

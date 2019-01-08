@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,12 +21,12 @@ ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61513c44cf8e2dcc6449162fc042d828e762ffdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0a7316f78bcc26bfd8b939ab555519780af25df
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062104"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375661"
 ---
 # <a name="selecting-input-columns-programmatically"></a>Sélection de colonnes d'entrée par programme
   Après avoir connecté des composants par programme, sélectionnez les colonnes des composants en amont que vous transformerez ou passerez aux composants en aval. Si vous ne sélectionnez pas de colonnes d'entrée pour votre composant, le composant ne reçoit pas de lignes de la part de la tâche de flux de données.  
@@ -212,7 +210,7 @@ Module Module1
 End Module  
 ```  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Enregistrement d’un package par programmation](../building-packages-programmatically/saving-a-package-programmatically.md)  

@@ -1,22 +1,24 @@
 ---
-title: Qu’est le pool de stockage de clusters SQL Server données volumineuses ? | Microsoft Docs
+title: Qu’est le pool de stockage ?
+titleSuffix: SQL Server 2019 big data clusters
 description: Cet article décrit le pool de stockage dans un cluster de données volumineux de SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cbf9ff14ece1b33e1c271786bc96f0ac590b807e
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.custom: seodec18
+ms.openlocfilehash: c0f376066ad02e70576c59bfe13c6f77e4b72c09
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050751"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029953"
 ---
-# <a name="what-is-the-sql-server-big-data-clusters-storage-pool"></a>Qu’est le pool de stockage de clusters SQL Server données volumineuses ?
+# <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>Qu’est le pool de stockage (données volumineuses des clusters SQL Server 2019) ?
 
-Cet article décrit le rôle de la *pool de stockage de SQL Server* dans un cluster de données volumineuses preview SQL Server 2019. Les sections suivantes décrivent l’architecture et les fonctionnalités d’un pool de stockage SQL.
+Cet article décrit le rôle de la *pool de stockage de SQL Server* dans un cluster de données volumineuses de SQL Server 2019 (version préliminaire). Les sections suivantes décrivent l’architecture et les fonctionnalités d’un pool de stockage SQL.
 
 ## <a name="storage-pool-architecture"></a>Architecture du pool de stockage
 

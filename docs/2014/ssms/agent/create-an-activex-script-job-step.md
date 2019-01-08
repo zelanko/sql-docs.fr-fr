@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - ActiveX scripting jobs [SQL Server]
@@ -13,12 +13,12 @@ ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2cf6bf205ddbc16b698eac2ac9944c8569deaa68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca659230443301ed816dfb8adeffdd3b361cd5fc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122473"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786661"
 ---
 # <a name="create-an-activex-script-job-step"></a>Créer une étape de travail de script ActiveX
   Cette rubrique explique comment créer et définir une étape de travail de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui exécute un script ActiveX à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou SQL Server Management Objects.  
@@ -49,7 +49,7 @@ ms.locfileid: "48122473"
   
 #### <a name="to-create-an-activex-script-job-step"></a>Pour créer une étape de travail de script ActiveX  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
   
 2.  Développez **SQL Server Agent**, créez un travail ou cliquez avec le bouton droit de la souris sur un travail existant, puis cliquez sur **Propriétés**. Pour plus d'informations sur la création d'un travail, consultez [Création de travaux](create-jobs.md).  
   
@@ -104,6 +104,6 @@ ms.locfileid: "48122473"
 ##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
  **Pour créer une étape de travail de script ActiveX**  
   
- Utilisez la `JobStep` classe à l’aide d’un langage de programmation que vous choisissez, tel que Visual Basic, Visual c# ou PowerShell.  
+ Utilisez la classe `JobStep` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell.  
   
   

@@ -11,12 +11,12 @@ ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f12f91e51383607d9bbcb8dc8ce2807c71ee289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd6264834efbafe65bc323f0e7bd3f5eb7a0490e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149829"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370161"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Connexion à partir d'applications clientes (Analysis Services)
   Si vous débutez avec Analysis Services, utilisez les informations de cette rubrique pour vous connecter à une instance existante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'aide d'applications et d'outils courants. Cette rubrique explique également comment se connecter sous différentes identités d'utilisateur à des fins de test.  
@@ -35,7 +35,7 @@ ms.locfileid: "48149829"
   
 -   [Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Autoriser l’accès aux objets et aux opérations &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autorisation de l’accès à des objets et des opérations &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> Établir une connexion à l'aide de SQL Server Management Studio (SSMS)  
  Connectez-vous à Analysis Services dans SSMS afin de gérer des instances de serveur et des bases de données de manière interactive. Vous pouvez également exécuter des requêtes MDX ou XMLA afin d'effectuer des tâches administratives ou de récupérer des données. Contrairement à d'autres outils et applications qui chargent les bases de données uniquement lorsqu'une requête est envoyée, SSMS charge toutes les bases de données lorsque vous vous connectez au serveur, en supposant que vous avez l'autorisation d'afficher la base de données. Cela signifie que si vous avez de nombreuses bases de données tabulaires sur le serveur, elles sont toutes chargées dans la mémoire système lorsque vous vous connectez à l'aide de SSMS.  
@@ -50,7 +50,7 @@ ms.locfileid: "48149829"
   
      Pour une instance nommée, le nom du serveur doit être spécifié selon le format suivant : nom serveur\nom instance. ADV-SRV062\Finance constitue un exemple de cette convention d'affectation des noms pour un serveur dont le nom réseau est ADV-SRV062, et sur lequel Analysis Services a été installé en tant qu'instance nommée portant le nom Finance.  
   
-     Pour les serveurs déployés dans un cluster de basculement, connectez-vous à l'aide du nom réseau du cluster SSAS. Ce nom est spécifié pendant l'installation de SQL Server, comme **Nom réseau SQL Server**. Notez que si vous avez installé SSAS comme instance nommée sur un cluster de basculement Windows Server (WSFC), vous n'ajoutez jamais le nom de l'instance pour la connexion. Cette pratique est propre à SSAS ; en revanche, une instance nommée du moteur de base de données relationnelle cluster inclut le nom de l'instance. Par exemple, si vous avez installé SSAS et le moteur de base de données en tant qu'instance nommée (Contoso-Accounting) avec un nom réseau SQL Server SQL-CLU, vous vous connecteriez à SSAS en utilisant « SQL-CLU », et au moteur de base de données en tant que « SQL-CLU\Contoso-Accounting ». Consultez [Procédure : mettre en cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548) pour plus d'informations et des exemples.  
+     Pour les serveurs déployés dans un cluster de basculement, connectez-vous à l'aide du nom réseau du cluster SSAS. Ce nom est spécifié pendant l'installation de SQL Server, comme **Nom réseau SQL Server**. Notez que si vous avez installé SSAS comme instance nommée sur un cluster de basculement Windows Server (WSFC), vous n'ajoutez jamais le nom de l'instance pour la connexion. Cette pratique est propre à SSAS ; en revanche, une instance nommée du moteur de base de données relationnelle cluster inclut le nom de l'instance. Par exemple, si vous avez installé SSAS et le moteur de base de données en tant qu'instance nommée (Contoso-Accounting) avec un nom réseau SQL Server SQL-CLU, vous vous connecteriez à SSAS en utilisant « SQL-CLU », et au moteur de base de données en tant que « SQL-CLU\Contoso-Accounting ». Consultez [Procédure : mettre en cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548) pour plus d'informations et des exemples.  
   
      Pour les serveurs déployés dans un cluster d'équilibrage de la charge réseau, connectez-vous à l'aide du nom du serveur virtuel d'équilibrage de la charge réseau.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48149829"
   
      Évitez d'utiliser **Aucun**. Analysis Services ne vous permet de spécifier un nom d'utilisateur et un mot de passe dans la chaîne de connexion que si vous vous connectez à un serveur pour lequel l'accès HTTP a été configuré. De même, n'utilisez SSS que si vous savez déjà que l'ID de l'application cible SSS est mappé à un ensemble d'informations d'identification d'utilisateur Windows qui ont un accès utilisateur aux bases de données Analysis Services. Dans la plupart des scénarios, l'utilisation de l'option par défaut Authentification Windows constitue le meilleur choix pour une connexion Analysis Services à partir d'Excel.  
   
- Pour plus d'informations, consultez [Se connecter ou importer des données à partir de SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
+ Pour plus d'informations, consultez [Se connecter ou importer des données à partir de SQL Server Analysis Services](https://go.microsoft.com/fwlink/?linkID=215150).  
   
 ##  <a name="bkmk_SSDT"></a> Établir une connexion à l'aide de SQL Server Data Tools  
  SQL Server Data Tools est utilisé pour créer des solutions de décisionnel, notamment des modèles Analysis Services, des rapports Reporting Services et des packages SSIS. Pour générer des rapports ou des packages, vous devrez peut-être spécifier une connexion à Analysis Services.  
@@ -106,7 +106,7 @@ ms.locfileid: "48149829"
   
 1.  Démarrez **SQL Server Profiler** sur l'instance d'Analysis Services, puis démarrez une nouvelle trace.  
   
-2.  Dans sélection des événements, vérifiez que `Audit Login` et `Audit Logout` sont activés dans la section d’Audit de sécurité.  
+2.  Dans Sélection des événements, vérifiez que les événements `Audit Login` et `Audit Logout` sont activés dans la section Audit de sécurité.  
   
 3.  Connectez-vous à Analysis Services via un service d'application (tel que SharePoint ou Reporting Services) à partir d'un ordinateur client distant. L'événement Audit Login affiche l'identité de l'utilisateur qui se connecte à Analysis Services.  
   
@@ -126,12 +126,12 @@ ms.locfileid: "48149829"
   
  Autres ressources qui peuvent vous aider à résoudre les problèmes de connexion :  
   
- [Résolution des problèmes courants de connectivité dans les scénarios de connectivité de SQL Server 2005 Analysis Services](http://technet.microsoft.com/library/cc917670.aspx). Ce document date de quelques années, mais les informations et les méthodologies décrites sont toujours d'actualité.  
+ [Résolution des problèmes courants de connectivité dans les scénarios de connectivité de SQL Server 2005 Analysis Services](https://technet.microsoft.com/library/cc917670.aspx). Ce document date de quelques années, mais les informations et les méthodologies décrites sont toujours d'actualité.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Se connecter à Analysis Services](connect-to-analysis-services.md)   
- [Méthodologies d’authentification pris en charge par Analysis Services](authentication-methodologies-supported-by-analysis-services.md)   
- [L’emprunt d’identité &#40;SSAS tabulaire&#41;](../tabular-models/impersonation-ssas-tabular.md)   
- [Créer une Source de données &#40;SSAS multidimensionnel&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Méthodologies d'authentification prises en charge par Analysis Services](authentication-methodologies-supported-by-analysis-services.md)   
+ [Emprunt d’identité &#40;SSAS tabulaire&#41;](../tabular-models/impersonation-ssas-tabular.md)   
+ [Créer une source de données &#40;SSAS Multidimensionnel&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

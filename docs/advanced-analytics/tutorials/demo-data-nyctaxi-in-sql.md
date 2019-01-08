@@ -1,5 +1,5 @@
 ---
-title: Télécharger des données de démonstration NYC Taxi et de scripts pour embedded R et Python (SQL Server Machine Learning) | Microsoft Docs
+title: Télécharger des données de démonstration NYC Taxi et de scripts pour R et Python - SQL Server Machine Learning incorporés
 description: Instructions de téléchargement des exemples de données New York City taxi et de création d’une base de données. Données sont utilisées dans les didacticiels de langage R et SQL Server Python montrant comment incorporer un script dans les procédures stockées SQL Server et des fonctions T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea4651c76d0c8fbc14d22a51c7789d65a20b8484
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 25ac1b4884b0d12de9de59f44ba02ac9fec7e952
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701343"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645025"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Données de démonstration NYC Taxi pour les didacticiels de SQL Server Python et R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article explique comment configurer une base de données exemple constitué de données publiques à partir de la [taxis de New York City et de Limousines Commission](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Ces données sont utilisées dans les didacticiels plusieurs R et Python pour l’analytique en base de données sur SQL Server. Pour exécuter l’exemple de code plus rapidement, nous avons créé un échantillon représentatif de 1 % des données. Sur votre système, le fichier de sauvegarde de base de données est légèrement supérieure 90 Mo, fournissant des millions de 1.7 de lignes dans la table de données primaire.
+Cet article explique comment configurer une base de données exemple constitué de données publiques à partir de la [taxis de New York City et de Limousines Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Ces données sont utilisées dans les didacticiels plusieurs R et Python pour l’analytique en base de données sur SQL Server. Pour exécuter l’exemple de code plus rapidement, nous avons créé un échantillon représentatif de 1 % des données. Sur votre système, le fichier de sauvegarde de base de données est légèrement supérieure 90 Mo, fournissant des millions de 1.7 de lignes dans la table de données primaire.
 
 Pour effectuer cet exercice, vous devez disposer [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) ou un autre outil que vous pouvez restaurer un fichier de sauvegarde de base de données et exécuter des requêtes T-SQL.
 
@@ -57,7 +57,7 @@ Le tableau suivant récapitule les objets créés dans la base de données de d�
 
 |**Nom de l'objet**|**Type d'objet**|**Description**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | base de données | Crée une base de données et deux tables :<br /><br />table de dbo.nyctaxi_sample : contient le jeu de données NYC Taxi principal. Un index cluster columnstore est ajouté à la table pour améliorer les performances du stockage et des requêtes. L’exemple de 1 % du jeu de données NYC Taxi est insérée dans cette table.<br /><br />table de dbo.nyc_taxi_models : utilisée pour conserver le modèle d’analytique avancée formé.|
+|**NYCTaxi_Sample** | base de données | Crée une base de données et deux tables :<br /><br />table dbo.nyctaxi_sample : Contient le jeu de données NYC Taxi principal. Un index cluster columnstore est ajouté à la table pour améliorer les performances du stockage et des requêtes. L’exemple de 1 % du jeu de données NYC Taxi est insérée dans cette table.<br /><br />table de dbo.nyc_taxi_models : Utilisée pour conserver le modèle d’analytique avancée formé.|
 |**fnCalculateDistance** |fonction scalaire | Calcule la distance directe entre les emplacements de départ et d’arrivée. Cette fonction est utilisée dans [créer des caractéristiques de données](sqldev-create-data-features-using-t-sql.md), [former et enregistrer un modèle](sqldev-train-and-save-a-model-using-t-sql.md) et [Opérationnaliser le modèle R](sqldev-operationalize-the-model.md).|
 |**fnEngineerFeatures** |fonction table | Crée de nouvelles fonctionnalités de données d’apprentissage du modèle. Cette fonction est utilisée dans [créer des caractéristiques de données](sqldev-create-data-features-using-t-sql.md) et [Opérationnaliser le modèle R](sqldev-operationalize-the-model.md).|
 
@@ -88,7 +88,7 @@ La base de données contient 1.7 millions de lignes.
 
 3. Dans la base de données est un **nyctaxi_sample** table qui contient le jeu de données. La table a été optimisée pour les calculs de jeu avec l’ajout d’un [columnstore index](../../relational-databases/indexes/columnstore-indexes-overview.md). Exécutez cette instruction pour générer un résumé rapide sur la table.
 
-    ```SQL
+    ```sql
     SELECT DISTINCT [passenger_count]
         , ROUND (SUM ([fare_amount]),0) as TotalFares
         , ROUND (AVG ([fare_amount]),0) as AvgFares

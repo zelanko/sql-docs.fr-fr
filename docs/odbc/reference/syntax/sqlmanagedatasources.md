@@ -20,16 +20,16 @@ ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd3604b6de03d6344470758c4de14c15ad47e572
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f22fc952f0394f9e59ca8d67c76d0b00594b0759
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602677"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212424"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Conformité**  
- Version introduite : ODBC 2.0  
+ Version introduite : ODBC VERSION 2.0  
   
  **Résumé**  
  **SQLManageDataSources** affiche une boîte de dialogue avec laquelle les utilisateurs peuvent configurer, ajouter et supprimer des sources de données dans les informations système.  
@@ -39,7 +39,7 @@ ms.locfileid: "47602677"
 ```  
   
 BOOL SQLManageDataSources(  
-     HWND     hwnd);  
+     HWND     hwnd);  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -64,7 +64,7 @@ BOOL SQLManageDataSources(
   
  ![Boîte de dialogue Administrateur de sources de données ODBC](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
   
- La boîte de dialogue affiche les sources de données répertoriées dans les informations système sous trois onglets : **DSN utilisateur**, **DSN système**, et **fichier DSN**. Si l’utilisateur double-clique sur une source de données ou qu’il sélectionne une source de données et qu’il clique sur **configurer**, **SQLManageDataSources** appels **ConfigDSN** dans la DLL avec la ODBC_CONFIG_ le programme d’installation Option de source de données.  
+ La boîte de dialogue affiche les sources de données répertoriées dans les informations système sous trois onglets : **DSN utilisateur**, **système DSN**, et **fichier DSN**. Si l’utilisateur double-clique sur une source de données ou qu’il sélectionne une source de données et qu’il clique sur **configurer**, **SQLManageDataSources** appels **ConfigDSN** dans la DLL avec la ODBC_CONFIG_ le programme d’installation Option de source de données.  
   
  Si l’utilisateur clique sur **ajouter**, **SQLManageDataSources** affiche le **créer une nouvelle Source de données** boîte de dialogue, illustrée dans l’illustration suivante.  
   

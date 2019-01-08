@@ -14,20 +14,20 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb7cf0945eb15d0f741e5b5fcba6c6e28fbe4955
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660587"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530243"
 ---
 # <a name="ado-methods"></a>Méthodes ADO
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Crée un nouvel enregistrement pour être une mise à jour **Recordset** objet.|  
-|[Ajouter](../../../ado/reference/ado-api/append-method-ado.md)|Ajoute un objet à une collection. Si la collection est **champs**, un nouveau **champ** objet peut être créé avant d’être ajoutée à la collection.|  
+|[Append](../../../ado/reference/ado-api/append-method-ado.md)|Ajoute un objet à une collection. Si la collection est **champs**, un nouveau **champ** objet peut être créé avant d’être ajoutée à la collection.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Ajoute des données à un texte de grande taille ou les données binaires **champ**, ou à un **paramètre** objet.|  
-|[BeginTrans, CommitTrans et RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Gère le traitement des transactions dans un **connexion** de l’objet comme suit :<br /><br /> **BeginTrans** — commence une nouvelle transaction.<br /><br /> **CommitTrans** — enregistre les modifications et termine la transaction actuelle. Il peut également démarrer une nouvelle transaction.<br /><br /> **RollbackTrans** : annule les modifications et termine la transaction actuelle. Il peut également démarrer une nouvelle transaction.|  
+|[BeginTrans, CommitTrans et RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Gère le traitement des transactions dans un **connexion** de l’objet comme suit :<br /><br /> **BeginTrans** -commence une nouvelle transaction.<br /><br /> **CommitTrans** - enregistre toutes les modifications et termine la transaction actuelle. Il peut également démarrer une nouvelle transaction.<br /><br /> **RollbackTrans** - annule toutes les modifications et termine la transaction actuelle. Il peut également démarrer une nouvelle transaction.|  
 |[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|Annule l’exécution d’une attente, l’appel de méthode asynchrone.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Annule une mise à jour par lot en attente.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Annule toutes les modifications qui ont été apportées à la ligne actuelle ou nouvelle d’un **Recordset** objet, ou le **champs** collection d’un **enregistrement** objet, avant d’appeler le  **Mise à jour** (méthode).|  
@@ -63,7 +63,7 @@ ms.locfileid: "47660587"
 |[Open (Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)|Ouvre un **Stream** objet à manipuler des flux de données binaires ou texte.|  
 |[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)|Obtient les informations de schéma de base de données du fournisseur.|  
 |[put_OLEDBCommand, méthode](../../../ado/reference/ado-api/put-oledbcommand-method.md)|Cette méthode n’effectue aucune opération - elle retourne toujours S_OK.|  
-|[En lecture](../../../ado/reference/ado-api/read-method.md)|Lit un nombre spécifié d’octets à partir d’un **Stream** objet.|  
+|[Lecture](../../../ado/reference/ado-api/read-method.md)|Lit un nombre spécifié d’octets à partir d’un **Stream** objet.|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Lit un nombre spécifié de caractères à partir d’un texte **Stream** objet.|  
 |[Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md)|Met à jour les objets dans une collection afin de refléter les objets disponibles à partir d’et spécifiques au fournisseur.|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Met à jour les données dans un **Recordset** objet en exécutant à nouveau la requête sur laquelle repose l’objet.|  
@@ -74,7 +74,7 @@ ms.locfileid: "47660587"
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Définit la position de la fin du flux.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Ignore une ligne complète lors de la lecture d’un flux de texte.|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|Obtient des informations statistiques sur un flux ouvert.|  
-|[Prend en charge](../../../ado/reference/ado-api/supports-method.md)|Détermine si une certaine **Recordset** objet prend en charge un type particulier de fonctionnalité.|  
+|[Prise en charge](../../../ado/reference/ado-api/supports-method.md)|Détermine si une certaine **Recordset** objet prend en charge un type particulier de fonctionnalité.|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|Enregistre les modifications apportées à la ligne actuelle d’un **Recordset** objet, ou le **champs** collection d’un **enregistrement** objet.|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Écrit toutes les mises à jour par lot en attente sur le disque.|  
 |[écriture](../../../ado/reference/ado-api/write-method.md)|Écrit des données binaires à un **Stream** objet.|  
@@ -85,7 +85,7 @@ ms.locfileid: "47660587"
  [Collections ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Constantes énumérées ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Annexe b : erreurs ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Annexe b : Erreurs ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Événements ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Objets et interfaces ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   

@@ -18,12 +18,12 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b5124a091b59ec1669f5d77cbe989f780fee46c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7819e14ccfea387a83e88f7aff8c81541968e89a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738117"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589123"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  Est le jeton d’objet d’un objet OLE précédemment créé à l’aide de **sp_OACreate** ou sa valeur est NULL. Si *objecttoken* est spécifié, les informations d’erreur pour cet objet sont retournées. Si NULL est spécifié, les informations d'erreur sont renvoyées pour l'ensemble du traitement.  
   
- *source* **sortie**  
+ _source_ **sortie**  
  Source des informations d'erreur. Si spécifié, il doit être une variable locale **char**, **nchar**, **varchar**, ou **nvarchar** variable. Si nécessaire, la valeur renvoyée est tronquée pour s'adapter à la variable locale.  
   
- *Description* **sortie**  
+ _Description_ **sortie**  
  Est la description de l’erreur. Si spécifié, il doit être une variable locale **char**, **nchar**, **varchar**, ou **nvarchar** variable. Si nécessaire, la valeur renvoyée est tronquée pour s'adapter à la variable locale.  
   
- *HelpFile* **sortie**  
+ _HelpFile_ **sortie**  
  Fichier d'aide de l'objet OLE. Si spécifié, il doit être une variable locale **char**, **nchar**, **varchar**, ou **nvarchar** variable. Si nécessaire, la valeur renvoyée est tronquée pour s'adapter à la variable locale.  
   
- *HelpID* **sortie**  
+ _HelpID_ **sortie**  
  ID de contexte du fichier d'aide. Si spécifié, il doit être une variable locale **int** variable.  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ sp_OAGetErrorInfo [ objecttoken ]
   
  Pour plus d’informations sur le traitement des Codes de retour HRESULT, consultez [OLE Automation Codes de retour et les informations d’erreur](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

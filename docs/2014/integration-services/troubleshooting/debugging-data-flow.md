@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
@@ -17,12 +16,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdbf8626ec1eb50218d01b0eefd96cea2cba9dea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00ada7a047d323f143403b56632b8863d75e6ac2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108449"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792121"
 ---
 # <a name="debugging-data-flow"></a>Débogage d'un flux de données
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluent des fonctionnalités et des outils permettant de résoudre les problèmes des flux de données d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -40,7 +39,7 @@ ms.locfileid: "48108449"
   
  Une visionneuse de données peut afficher des données dans une grille. Dans une grille, vous sélectionnez les colonnes à afficher. Les valeurs des colonnes sélectionnées s'affichent sous forme de tableau.  
   
- Vous pouvez également inclure plusieurs visionneuses de données dans un chemin d'accès. Vous pouvez afficher les mêmes données dans différents formats ; par exemple créer un graphique et une grille des données, ou créer des visionneuses de données distinctes pour différentes colonnes de données.  
+ Vous pouvez également inclure plusieurs visionneuses de données dans un chemin d'accès. Vous pouvez afficher les mêmes données dans différents formats ; par exemple créer un graphique et une grille des données, ou créer des visionneuses de données distinctes pour différentes colonnes de données.  
   
  Quand vous ajoutez une visionneuse de données à un chemin, le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ajoute une icône de visionneuse de données sur l’aire de conception de l’onglet **Flux de données** , en regard du chemin. Les transformations acceptant les sorties multiples (telles que la transformation de fractionnement conditionnel) peuvent inclure une visionneuse de données sur chaque chemin d'accès.  
   

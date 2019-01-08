@@ -11,15 +11,15 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: fe57736160762f90f574f835673e55d19107fa15
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085475"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590183"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Exploration du modèle Sequence Clustering (Didacticiel intermédiaire sur l'exploration de données)
-  Maintenant que vous avez créé le **Sequence Clustering avec Region** modèle, vous pouvez le parcourir à l’aide de la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse de Clustering de séquence dans le **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données. Le [!INCLUDE[msCoName](../includes/msconame-md.md)] msc contient cinq onglets : **diagramme de Cluster**, **profils du Cluster**, **caractéristiques du Cluster**,  **ClusterDiscrimination**, et **Transitions d’état**. Pour plus d’informations sur l’utilisation de cette visionneuse, consultez [Explorer un modèle à l’aide de la séquence de Microsoft Cluster Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
+  Maintenant que vous avez créé le **Sequence Clustering avec Region** modèle, vous pouvez le parcourir à l’aide de la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse de Clustering de séquence dans le **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données. La visionneuse de l'algorithme MSC ([!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering) contient cinq onglets : **Diagramme de cluster**, **profils du Cluster**, **caractéristiques du Cluster**, **ClusterDiscrimination**, et **deTransitionsd’état**. Pour plus d’informations sur l’utilisation de cette visionneuse, consultez [Explorer un modèle à l’aide de la séquence de Microsoft Cluster Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
   
 -   [Onglet Diagramme de cluster](#bkmk_CDiagram)  
   
@@ -179,7 +179,7 @@ ms.locfileid: "49085475"
   
 1.  Dans le **Discrimination de Cluster** onglet, pour **Cluster 1**, sélectionnez `Pacific Cluster`.  
   
-     Par défaut, la sélection pour **Cluster 2** devient **complément de PST *** Cluster**.  
+     Par défaut, la sélection pour **Cluster 2** devient **complément de Pacific Cluster**.  
   
      L’attribut supérieur qui distingue `Pacific Cluster` correspond à la région à partir de tous les autres cas. La région est un attribut si fort pour le clustering qu'il masque d'autres attributs. Pour éviter cet effet, essayez de comparer plusieurs des clusters plus petits entre eux. Dans ce cas, la liste des attributs change et peut inclure plus de transitions entre les modèles.  
   

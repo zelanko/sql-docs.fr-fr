@@ -20,16 +20,16 @@ ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cca18bef15d57aa9d2cf97999939994a6c8c7934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662127"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588973"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName, fonction
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ISO 92  
+ Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
   
  **Résumé**  
  **SQLSetCursorName** associe un nom de curseur avec une instruction active. Si une application n’appelle pas **SQLSetCursorName**, le pilote génère des noms de curseur en fonction des besoins pour le traitement d’instruction SQL.  
@@ -78,7 +78,7 @@ SQLRETURN SQLSetCursorName(
 |IM001|Pilote ne prend pas en charge cette fonction|Le pilote (DM) associé le *au paramètre StatementHandle* ne prend pas en charge la fonction.|  
   
 ## <a name="comments"></a>Commentaires  
- Noms de curseurs sont utilisés uniquement dans la mise à jour positionnée et supprimer des instructions (par exemple, **mettre à jour** *nom de la table* ... **WHERE CURRENT OF** *nom de curseur*). Pour plus d’informations, consultez [positionné instructions Update et Delete](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Si l’application n’appelle pas **SQLSetCursorName** pour définir un nom de curseur, l’exécution d’une instruction de requête que le pilote génère un nom qui commence par les lettres SQL_CUR et ne dépasse pas de 18 caractères.  
+ Noms de curseurs sont utilisés uniquement dans la mise à jour positionnée et supprimer des instructions (par exemple, **mettre à jour** _nom de la table_ ... **WHERE CURRENT OF** _nom de curseur_). Pour plus d’informations, consultez [positionné instructions Update et Delete](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Si l’application n’appelle pas **SQLSetCursorName** pour définir un nom de curseur, l’exécution d’une instruction de requête que le pilote génère un nom qui commence par les lettres SQL_CUR et ne dépasse pas de 18 caractères.  
   
  Tous les noms de curseur dans la connexion doivent être uniques. La longueur maximale d’un nom de curseur est définie par le pilote. Pour une interopérabilité maximale, il est recommandé que les applications limitent les noms de curseur pour pas plus de 18 caractères. Dans ODBC 3 *.x*, si un nom de curseur est un identificateur entre guillemets, il est traité de la casse et il peut contenir des caractères que la syntaxe SQL n’autorise pas la traiterait spécialement, tels que des espaces ou des mots clés réservés. Si un nom de curseur doit être traité de la casse, elle doit être passée comme un identificateur entre guillemets.  
   

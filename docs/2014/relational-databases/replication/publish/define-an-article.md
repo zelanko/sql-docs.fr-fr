@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,12 +18,12 @@ ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a46975d15b9e1aecaabf704d34a749f157b1f74d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21ae1c8019617005bd87e426ec314f6237fdab38
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084929"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355974"
 ---
 # <a name="define-an-article"></a>Définir un article
   Cette rubrique explique comment définir un article dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou des objets RMO (Replication Management Objects).  
@@ -52,7 +51,7 @@ ms.locfileid: "48084929"
 -   Les noms d'article ne peuvent inclure aucun des caractères suivants : % , * , [ , ] , | , : , " , ? , «, \, /, \< , >. Si des objets de la base de données incluent l'un de ces caractères et que vous souhaitez les répliquer, vous devez spécifier un nom d'article qui est différent du nom d'objet.  
   
 ##  <a name="Security"></a> Sécurité  
- Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](http://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
+ Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](https://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Créez des publication et définissez des articles avec l'Assistant Nouvelle publication. Après avoir créé une publication, affichez et modifiez les propriétés de publication dans la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d’informations sur la création d’une publication à partir d’une base de données Oracle, consultez [Créer une publication à partir d’une base de données Oracle](create-a-publication-from-an-oracle-database.md).  
@@ -108,7 +107,7 @@ ms.locfileid: "48084929"
   
 2.  Pour filtrer horizontalement les lignes d'une table ou pour afficher un article, utilisez [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) pour définir la clause du filtre. Pour plus d'informations, voir [Définir et modifier un filtre de lignes statiques](define-and-modify-a-static-row-filter.md).  
   
-3.  Pour filtrer verticalement les colonnes d'une table ou afficher un article, utilisez [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql). Pour plus d’informations, voir [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+3.  Pour filtrer verticalement les colonnes d'une table ou afficher un article, utilisez [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql). Pour plus d'informations, voir [Définir et modifier un filtre de colonne](define-and-modify-a-column-filter.md).  
   
 4.  Exécutez [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) si l'article est filtré.  
   

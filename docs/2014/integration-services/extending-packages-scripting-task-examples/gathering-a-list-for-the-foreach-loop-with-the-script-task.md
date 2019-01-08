@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - Foreach Loop containers
@@ -17,12 +15,12 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a876962d68d081542c7c5032c1bf06a0e527fe4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 674ec4fc122c845b57026897aabe8816a6a585ef
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155049"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364041"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Création d'une liste pour la boucle Foreach à l'aide de la tâche de script
   L'énumérateur Foreach à partir d'une variable énumère les éléments d'une liste qui lui est transmise via une variable et effectue les mêmes tâches sur chaque élément. Vous pouvez utiliser le code personnalisé dans une tâche de script pour remplir une liste à cet effet. Pour plus d’informations sur l’énumérateur, consultez [Conteneur de boucles Foreach](../control-flow/foreach-loop-container.md).  
@@ -247,7 +245,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
     }  
 ```  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conteneur de boucles Foreach](../control-flow/foreach-loop-container.md)   

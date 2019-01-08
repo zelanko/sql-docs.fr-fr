@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - packages [Integration Services], connections
@@ -20,12 +18,12 @@ ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b8729ed71aae8b28fed527d72adb4cdd219faa1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27acd48dde09e606988fe4945d15d7737f08347d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152013"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373461"
 ---
 # <a name="developing-a-custom-connection-manager"></a>Développement d'un gestionnaire de connexions personnalisé
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilise des gestionnaires de connexions pour encapsuler les informations nécessaires pour se connecter à une source de données externe. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut divers gestionnaires de connexions qui prennent en charge les connexions aux sources de données les plus couramment utilisées, allant des bases de données d'entreprise aux fichiers texte et feuilles de calcul Excel. Si les gestionnaires de connexions et les sources de données externes pris en charge par [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ne répondent pas totalement à vos besoins, vous pouvez créer un gestionnaire de connexions personnalisé.  
@@ -76,6 +74,6 @@ ms.locfileid: "48152013"
  [Développement d’un composant de flux de données personnalisé](../data-flow/developing-a-custom-data-flow-component.md)  
  Explique comment programmer des sources, des transformations et des destinations de flux de données personnalisées.  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
   

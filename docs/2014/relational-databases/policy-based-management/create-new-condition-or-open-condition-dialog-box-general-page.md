@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.condition.f1
@@ -12,12 +12,12 @@ ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 61aeebb9b0a3fa815d39d57fc9bcf536a14324de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 296cdebc8a7a290cf8cdd848359ad776fa290c30
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085239"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798291"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>Boîte de dialogue Créer une nouvelle condition ou Ouvrir une condition, page Général
   Utilisez cette boîte de dialogue pour créer ou modifier une condition de la Gestion basée sur des stratégies. Une condition est une expression booléenne qui spécifie un jeu d'états autorisés d'une cible gérée de la Gestion basée sur des stratégies en ce qui concerne des facettes. Les propriétés qui peuvent être sélectionnées dans la zone **Expression/Champ** dépendent de la facette utilisée. Pour plus d’informations sur le rapport entre les conditions et les facettes et stratégies, consultez [Administrer des serveurs à l’aide de la Gestion basée sur des stratégies](administer-servers-by-using-policy-based-management.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "48085239"
  Sélectionnez un opérateur de comparaison pour cette expression. Les opérateurs sont les suivants : =, !=, >, >=, <, <=, [NOT]LIKE, [NOT]IN. Les opérateurs ne sont pas tous disponibles pour certaines propriétés.  
   
  **Valeur**  
- Paramètre de valeur pour cette expression. Les valeurs autorisées dépendent de la facette. Les valeurs peuvent être VRAI/FAUX, chaîne ou numérique. Les valeurs de chaîne doivent être placées entre guillemets simples, par exemple **'AdventureWorks'**. Les opérateurs ne sont pas tous disponibles pour certaines propriétés.  
+ Paramètre de valeur pour cette expression. Les valeurs autorisées dépendent de la facette. Les valeurs peuvent être VRAI/FAUX, chaîne ou numérique. Valeurs de chaîne doivent être placée entre guillemets simples, par exemple : **'AdventureWorks'**. Les opérateurs ne sont pas tous disponibles pour certaines propriétés.  
   
 ## <a name="group-clauses"></a>Regroupement de clauses  
  Les clauses peuvent être regroupées pour fonctionner comme une unité unique, distincte du reste de la requête, à l'instar de la mise entre parenthèses d'une expression dans une équation mathématique ou une instruction logique. Le regroupement de clauses est utile pour générer des requêtes complexes.  

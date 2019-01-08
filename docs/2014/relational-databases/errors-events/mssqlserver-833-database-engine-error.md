@@ -12,12 +12,12 @@ ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b827814c5cc6b8659f52c0ff07cde9c3600235a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38405f6bfe2744445abe9884350a703cbb0374cd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071619"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377521"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
     
@@ -54,6 +54,6 @@ ms.locfileid: "48071619"
 > [!NOTE]  
 >  L'accès au disque peut être ralenti par un antivirus. Pour augmenter la vitesse d'accès, excluez des analyses antivirus actives les fichiers de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont spécifiés dans le message d'erreur.  
   
- Pour plus d’informations sur les erreurs d’E/S, consultez [Concepts de base des E/S de Microsoft SQL Server, chapitre 2](http://go.microsoft.com/fwlink/?LinkId=69370) et l’article de la Base de connaissances disponible à l’adresse [http://support.microsoft.com/kb/897284/en-us](http://support.microsoft.com/kb/897284/en-us).  
+ Pour plus d’informations sur les erreurs d’E/S, consultez [Concepts de base des E/S de Microsoft SQL Server, chapitre 2](https://go.microsoft.com/fwlink/?LinkId=69370) et l’article de la Base de connaissances disponible à l’adresse [https://support.microsoft.com/kb/897284/en-us](https://support.microsoft.com/kb/897284/en-us).  
   
   

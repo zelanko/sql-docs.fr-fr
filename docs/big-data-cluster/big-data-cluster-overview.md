@@ -1,18 +1,20 @@
 ---
-title: Quelles sont les clusters SQL Server 2019 big data ? | Microsoft Docs
+title: Quelles sont les clusters de données volumineuses ?
+titleSuffix: SQL Server 2019 big data clusters
 description: En savoir plus sur les clusters de données volumineuses de SQL Server 2019 (version préliminaire) qui s’exécute sur Kubernetes et options de montée en puissance pour relationnelles et les données HDFS.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: e8cdfff0efe8164df7487b3ba2a5bee6cbf0b940
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 5a44fe9001b7a3bffb67cb3f213bed2ac1065970
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221705"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030043"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>Quelles sont les clusters SQL Server 2019 big data ?
 
@@ -75,13 +77,13 @@ Kubernetes est un orchestrateur de conteneur open source, ce qui peut mettre à 
 |--|--|
 | **Cluster** | Un cluster Kubernetes est un ensemble d’ordinateurs, appelés nœuds. Un nœud de contrôle du cluster et il est le nœud principal ; les nœuds restants sont des nœuds de travail. Le maître de Kubernetes est chargé de distribuer le travail entre les workers et pour surveiller l’intégrité du cluster. |
 | **Nœud** | Un nœud exécute des applications en conteneur. Il peut être un ordinateur physique ou une machine virtuelle. Un cluster Kubernetes peut contenir un mélange de nœuds de machine virtuelle et de la machine physiques. |
-| **POD** | Un pod est l’unité atomique de déploiement de Kubernetes. Un pod est un groupe logique d’un ou plusieurs conteneurs et des ressources associées, nécessaires pour exécuter une application. Chaque pod s’exécute sur un nœud ; un nœud peut exécuter une ou plusieurs pods. Le maître de Kubernetes affecte automatiquement des pods aux nœuds du cluster. |
+| **POD** | Un pod est l’unité atomique de déploiement de Kubernetes. Un pod est un groupe logique d’un ou plusieurs conteneurs- et associé les ressources nécessaires pour exécuter une application. Chaque pod s’exécute sur un nœud ; un nœud peut exécuter une ou plusieurs pods. Le maître de Kubernetes affecte automatiquement des pods aux nœuds du cluster. |
 
 Dans les clusters de données volumineuses de SQL Server, Kubernetes est responsable de l’état des clusters de données volumineuses de SQL Server ; Kubernetes génère et configure les nœuds de cluster, affecte des pods à nœuds et surveille l’intégrité du cluster.
 
 ### <a name="big-data-clusters-architecture"></a>architecture de clusters Big data
 
-Nœuds du cluster sont organisées en trois plans logiques : le plan de contrôle, le volet de calcul et le plan de données. Chaque plan a différentes responsabilités dans le cluster. Tous les nœuds Kubernetes dans un cluster de données volumineux de SQL Server héberge pods pour les composants au moins un plan.
+Nœuds du cluster sont organisées en trois plans logiques : le plan de contrôle, le plan de calcul et le plan de données. Chaque plan a différentes responsabilités dans le cluster. Tous les nœuds Kubernetes dans un cluster de données volumineux de SQL Server héberge pods pour les composants au moins un plan.
 
 ![Vue d’ensemble de l’architecture](media/big-data-cluster-overview/architecture-diagram-planes.png)
 
@@ -91,7 +93,7 @@ Le plan de contrôle fournit la gestion et la sécurité pour le cluster. Il con
 
 ### <a id="computeplane"></a> Plan de calcul
 
-Le plan de calcul fournit des ressources de calcul au cluster. Il contient des nœuds exécutant SQL Server sur Linux pods. Le nombre de pods dans le plan de calcul est divisées en *pools de calcul* pour spécifique des tâches de traitement. Un pool de calcul peut agir comme un [PolyBase](../relational-databases/polybase/polybase-guide.md) groupe de scale-out pour les requêtes distribuées sur différentes sources de données, comme HDFS, Oracle, MongoDB ou Teradata.
+Le plan de calcul fournit des ressources de calcul au cluster. Il contient des nœuds exécutant SQL Server sur Linux pods. Le nombre de pods dans le plan de calcul est divisées en *pools de calcul* pour spécifique des tâches de traitement. Un pool de calcul peut agir comme un [PolyBase](../relational-databases/polybase/polybase-guide.md) groupe de scale-out pour les requêtes distribuées sur différentes données sources, tels que HDFS, Oracle, MongoDB ou Teradata.
 
 ### <a id="dataplane"></a> Plan de données
 

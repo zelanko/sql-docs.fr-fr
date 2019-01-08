@@ -17,23 +17,23 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cbe56ab8f9665535837a1f50147ec64222a51e58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3af17b9ee12846fc89e406420fa6405cb59e0af3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049449"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367925"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Configurer le routage en lecture seule pour un groupe de disponibilité (SQL Server)
   Pour configurer un groupe de disponibilité AlwaysOn et prendre en charge le routage en lecture seule dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], vous pouvez utiliser [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell. Le *routage en lecture seule* fait référence à la capacité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’acheminer les demandes de connexion en lecture seule applicables à un [réplica secondaire lisible](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) AlwaysOn disponible (autrement dit, un réplica configuré pour autoriser des charges de travail en lecture seule quand il s’exécute sous le rôle secondaire). Pour prendre en charge le routage en lecture seule, le groupe de disponibilité doit posséder un [écouteur de groupe de disponibilité](../../listeners-client-connectivity-application-failover.md). Les clients en lecture seule doivent diriger leurs demandes de connexion à cet écouteur, et les chaînes de connexion du client doivent spécifier l'intention d'application « en lecture seule ». Autrement dit, il doit s’agir de *demandes de connexion d’intention de lecture*.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Pour plus d’informations sur la configuration d’un réplica secondaire lisible, consultez [Configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
-  
-
-  
-    > [!NOTE]  
-    >  Configuring read-only routing is not supported by [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+> 
+> 
+> 
+> [!NOTE]
+>  La configuration du routage en lecture seule n'est pas prise en charge par [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
 
   
@@ -51,7 +51,7 @@ ms.locfileid: "48049449"
   
 -   Pour chaque réplica secondaire lisible qui doit prendre en charge le routage en lecture seule, vous devez spécifier une *URL de routage en lecture seule*. Cette URL est effective uniquement lorsque le réplica local s'exécute sous le rôle secondaire. L'URL de routage en lecture seule doit être spécifiée par réplica, si nécessaire. Chaque URL de routage en lecture seule est utilisée pour acheminer les demandes de connexion d'intention de lecture vers un réplica secondaire lisible spécifique. En général, à chaque réplica secondaire lisible est affecté une URL de routage en lecture seule.  
   
-     Pour plus d'informations sur le calcul de l'URL de routage en lecture seule pour un réplica de disponibilité, consultez [Calcul de l'URL de routage en lecture seule pour AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx).  
+     Pour plus d’informations sur le calcul de l’URL de routage en lecture seule pour un réplica de disponibilité, consultez [Calcul de l’URL de routage en lecture seule pour AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx).  
   
 -   Pour chaque réplica de disponibilité qui doit prendre en charge le routage en lecture seule lorsqu'il est le réplica principal, vous devez spécifier une *liste de routage en lecture seule*. Une liste de routage en lecture seule donnée est effective uniquement lorsque le réplica local s'exécute sous le rôle principal. Cette liste doit être spécifiée par réplica, si nécessaire. En général, chaque liste de routage en lecture seule contient toutes les URL de routage en lecture seule, avec l'URL du réplica local à la fin de la liste.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48049449"
   
 ####  <a name="Permissions"></a> Permissions  
   
-|Tâche|Permissions|  
+|Tâche|Autorisations|  
 |----------|-----------------|  
 |Pour configurer des réplicas lors de la création d'un groupe de disponibilité|Requiert le rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.|  
 |Pour modifier un réplica de disponibilité :|Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.|  
@@ -96,7 +96,7 @@ ms.locfileid: "48049449"
   
          Dans une clause MODIFY REPLICA, ALLOW_CONNECTIONS est facultatif si le réplica est déjà configuré pour autoriser les connexions en lecture seule.  
   
-         Pour plus d'informations, consultez [Calcul de l'URL de routage en lecture seule pour AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx).  
+         Pour plus d'informations, consultez [Calcul de l'URL de routage en lecture seule pour AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx).  
   
     -   Pour configurer le routage en lecture seule pour le rôle principal, dans la clause ADD REPLICA ou MODIFY REPLICA WITH, spécifiez l'option PRIMARY_ROLE, comme suit :  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48049449"
         >  Vous devez définir le routage en lecture seule avant de configurer la liste de routage en lecture seule.  
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
- L'exemple suivant modifie deux réplicas de disponibilité d'un groupe de disponibilité existant, `AG1` pour prendre en charge le routage en lecture seule si un de ces réplicas détient actuellement le rôle principal. Pour identifier les instances de serveur qui hébergent le réplica de disponibilité, cet exemple spécifie les noms d'instance`COMPUTER01` et `COMPUTER02`.  
+ L'exemple suivant modifie deux réplicas de disponibilité d'un groupe de disponibilité existant, `AG1` pour prendre en charge le routage en lecture seule si un de ces réplicas détient actuellement le rôle principal. Pour identifier les instances de serveur qui hébergent le réplica de disponibilité, cet exemple spécifie les noms d’instance `COMPUTER01` et `COMPUTER02`.  
   
 ```  
 ALTER AVAILABILITY GROUP [AG1]  
@@ -150,7 +150,7 @@ GO
 > [!NOTE]  
 >  Pour obtenir un exemple de code, consultez [Exemple (PowerShell)](#PSExample), plus loin dans cette section.  
   
-1.  Définir par défaut (`cd`) à l’instance de serveur qui héberge le réplica principal.  
+1.  Définissez la valeur par défaut (`cd`) sur l'instance de serveur qui héberge le réplica principal.  
   
 2.  Lorsque vous ajoutez un réplica de disponibilité à un groupe de disponibilité, utilisez l'applet de commande `New-SqlAvailabilityReplica`. Lorsque vous modifiez un réplica de disponibilité existant, utilisez l'applet de commande `Set-SqlAvailabilityReplica`. Les paramètres pertinents sont les suivants :  
   
@@ -158,7 +158,7 @@ GO
   
          où *url* est le nom de domaine complet (FQDN) de la connectivité et le port à utiliser lors de l’acheminement vers le réplica pour les connexions en lecture seule. Par exemple :  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
-         Pour plus d'informations, consultez [Calcul de l'URL de routage en lecture seule pour AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx).  
+         Pour plus d'informations, consultez [Calcul de l'URL de routage en lecture seule pour AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx).  
   
     -   Pour configurer l’accès à la connexion pour le rôle principal, spécifiez **ReadonlyRoutingList »*`server`*»** [ **,**... *n* ], où *server* identifie une instance de serveur qui héberge un réplica secondaire en lecture seule dans le groupe de disponibilité. Par exemple :  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
@@ -166,7 +166,7 @@ GO
         >  Vous devez définir l'URL de routage en lecture seule d'un réplica avant de configurer sa liste de routage en lecture seule.  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d’une applet de commande, utilisez le `Get-Help` applet de commande dans le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] environnement PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
@@ -175,7 +175,7 @@ GO
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ###  <a name="PSExample"></a> Exemple (PowerShell)  
- L'exemple suivant configure le réplica principal et un réplica secondaire dans un groupe de disponibilité pour le routage en lecture seule. D'abord, l'exemple affecte une URL de routage en lecture seule à chaque réplica. Il définit ensuite la liste de routage en lecture seule sur le réplica principal. Les connexions avec la propriété « ReadOnly » définie dans la chaîne de connexion sont redirigées vers le réplica secondaire. Si ce réplica secondaire n'est pas accessible en lecture (comme déterminé par le paramètre `ConnectionModeInSecondaryRole`), la connexion sera renvoyée vers le réplica principal.  
+ L'exemple suivant configure le réplica principal et un réplica secondaire dans un groupe de disponibilité pour le routage en lecture seule. D'abord, l'exemple affecte une URL de routage en lecture seule à chaque réplica. Il définit ensuite la liste de routage en lecture seule sur le réplica principal. Les connexions avec la propriété « ReadOnly » définie dans la chaîne de connexion sont redirigées vers le réplica secondaire. Si ce réplica secondaire n'est pas accessible en lecture (comme déterminé par le paramètre `ConnectionModeInSecondaryRole`), la connexion sera renvoyée vers le réplica principal.  
   
 ```  
 Set-Location SQLSERVER:\SQL\PrimaryServer\default\AvailabilityGroups\MyAg  
@@ -187,7 +187,7 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingConnectionUrl "TCP://SecondaryServer.
 Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer" -InputObject $primaryReplica  
 ```  
   
-##  <a name="FollowUp"></a> Suivi : après la configuration du routage en lecture seule  
+##  <a name="FollowUp"></a> Suivi : après la configuration du routage en lecture seule  
  Une fois le réplica principal actuel et les réplicas secondaires lisibles configurés pour prendre en charge le routage en lecture seule dans les deux rôles, les réplicas secondaires lisibles peuvent recevoir des demandes de connexion d'intention de lecture des clients qui se connectent via l'écouteur du groupe de disponibilité.  
   
 > [!TIP]  
@@ -240,15 +240,15 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 -   **Blogs :**  
   
-     [Calcul de read_only_routing_url pour AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)  
+     [Calcul de read_only_routing_url pour AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)  
   
-     [Blogs de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Blogs de l’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](http://blogs.msdn.com/b/psssql/)  
+     [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Livres blancs :**  
   
-     [Livres blancs de Microsoft pour SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Livres blancs de Microsoft pour SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Livres blancs de l'équipe de consultants clients de SQL Server](http://sqlcat.com/)  
   

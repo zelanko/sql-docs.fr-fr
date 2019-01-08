@@ -14,17 +14,17 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd35a8bd0e2a9280d16614a3979dc2af05487e42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35f1ce877d6ed8a390bb6425a4d7f33a5d6947d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619607"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513993"
 ---
 # <a name="outer-joins"></a>Jointures externes
 ODBC prend en charge le SQL-92 left, syntaxe de jointure externe complète, droite et complète. Est la séquence d’échappement pour les jointures externes  
   
- **{JO** *externe-jointure ***}**  
+ **{JO** _jointure externe_**}**  
   
  où *jointure externe* est  
   
@@ -32,7 +32,7 @@ ODBC prend en charge le SQL-92 left, syntaxe de jointure externe complète, droi
   
  *référence de table* spécifie un nom de table, et *condition de recherche* spécifie la condition de jointure entre la *références de table*.  
   
- Une requête de jointure externe doit apparaître après le **FROM** mot clé et avant le **où** clause (le cas échéant). Pour plus d’informations sur la syntaxe complète, consultez [séquence d’échappement de jointure externe](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) dans l’annexe c : SQL grammaire.  
+ Une requête de jointure externe doit apparaître après le **FROM** mot clé et avant le **où** clause (le cas échéant). Pour plus d’informations sur la syntaxe complète, consultez [séquence d’échappement de jointure externe](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) dans l’annexe c : Grammaire SQL.  
   
  Par exemple, les instructions SQL suivantes créent le même jeu de résultats qui répertorie tous les clients et montre ce qui a des commandes en cours. La première instruction utilise la syntaxe de la séquence d’échappement. La deuxième instruction utilise la syntaxe native pour Oracle et n’est pas interopérable.  
   

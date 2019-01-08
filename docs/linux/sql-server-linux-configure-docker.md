@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 1a4b517374e19ab959a8c00b732d62643c32cff3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4078d2d660a2690983e34c6db024df3a93df97eb
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657983"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266060"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurer des images de conteneur de SQL Server sur Docker
 
@@ -46,11 +46,11 @@ Toute la documentation sur les images de conteneur SQL Server Linux pointer vers
 Par exemple, la commande suivante extrait le dernier conteneur de version préliminaire de SQL Server 2019 qui utilise RHEL :
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ::: moniker-end
@@ -253,7 +253,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 Cette technique vous permet également de partager et d’afficher les fichiers sur l’ordinateur hôte en dehors de Docker.
 
 > [!IMPORTANT]
-> Mappage de volume hôte pour Docker sur Mac avec SQL Server sur une image Linux n’est pas pris en charge pour l’instant. Utilisez à la place des conteneurs de volumes de données. Cette restriction est spécifique à la `/var/opt/mssql` directory. Lecture à partir d’un répertoire monté de fonctionne bien. Par exemple, vous pouvez monter un répertoire de l’hôte à l’aide de – v sur Mac et restaurer une sauvegarde à partir d’un fichier .bak qui réside sur l’ordinateur hôte.
+> Mappage de volume hôte pour Docker sur Mac avec SQL Server sur une image Linux n’est pas pris en charge pour l’instant. Utilisez à la place des conteneurs de volumes de données. Cette restriction est spécifique à la `/var/opt/mssql` directory. Lecture à partir d’un répertoire monté de fonctionne bien. Par exemple, vous pouvez monter un répertoire de l’hôte à l’aide de - v sur Mac et restaurer une sauvegarde à partir d’un fichier .bak qui réside sur l’ordinateur hôte.
 
 ### <a name="use-data-volume-containers"></a>Utiliser des conteneurs de volumes de données
 

@@ -16,12 +16,12 @@ ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 951fc38d89718a2c202d436c857e7b06f19de2ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0dea5d937c09d551faf0cc923ee3f36f258d708
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167169"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367561"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
   Vous pouvez configurer des informations d'identification stockées pour permettre à un serveur de rapports [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] d'accéder aux données externes d'un rapport. Les informations d'identification stockées sont utilisées si le rapport s'exécute sans assistance, par exemple dans le cas d'un abonnement [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] qui publie un rapport sous forme d'e-mail. Le serveur de rapports récupère et utilise les informations d'identification quand le traitement du rapport est planifié ou déclenché. Cette rubrique vous guide tout au long de la configuration des informations d'identification stockées pour les serveurs de rapports en mode natif et en mode SharePoint.  
@@ -43,11 +43,11 @@ ms.locfileid: "48167169"
 ##  <a name="bkmk_top"></a> Conditions requises en matière de stratégie de sécurité pour les informations d'identification stockées  
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Le compte que vous utilisez pour les informations d’identification stockées doit être configuré pour l’une des stratégies de sécurité suivantes sur le serveur de rapports. Il est recommandé de sélectionner la stratégie avec le niveau minimal d'autorisations dont vous avez besoin pour votre environnement.  
   
-1.  **Permettre l'ouverture d'une session locale**. Pour plus d'informations, consultez [Permettre l'ouverture d'une session locale](http://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
+1.  **Permettre l'ouverture d'une session locale**. Pour plus d'informations, consultez [Permettre l'ouverture d'une session locale](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
   
-2.  **Ouvrir une session en tant que tâche**. Pour plus d'informations, consultez [Ouvrir une session en tant que tâche](http://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
+2.  **Ouvrir une session en tant que tâche**. Pour plus d'informations, consultez [Ouvrir une session en tant que tâche](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
   
-3.  Pour obtenir des informations générales sur les stratégies, consultez [Modifier les paramètres de sécurité d'un objet de stratégie de groupe](http://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
+3.  Pour obtenir des informations générales sur les stratégies, consultez [Modifier les paramètres de sécurité d'un objet de stratégie de groupe](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> Configurer les informations d'identification stockées pour une source de données spécifique à un rapport (mode natif)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48167169"
   
 4.  Dans la liste **Type de source de données** , sélectionnez l'extension pour le traitement des données utilisée pour traiter les données de la source de données.  
   
-5.  Dans la zone **Chaîne de connexion**, spécifiez la chaîne de connexion utilisée par le serveur de rapports pour se connecter à la source de données. L’exemple suivant illustre une chaîne de connexion utilisée pour se connecter à la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] base de données :  
+5.  Dans la zone **Chaîne de connexion**, spécifiez la chaîne de connexion utilisée par le serveur de rapports pour se connecter à la source de données. L'exemple suivant illustre l'utilisation d'une chaîne de connexion pour se connecter à la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] :  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -87,7 +87,7 @@ ms.locfileid: "48167169"
   
 4.  Dans la liste **Type de source de données** , sélectionnez l'extension pour le traitement des données utilisée pour traiter les données de la source de données.  
   
-5.  Dans la zone **Chaîne de connexion**, spécifiez la chaîne de connexion utilisée par le serveur de rapports pour se connecter à la source de données. L’exemple suivant illustre une chaîne de connexion utilisée pour se connecter à la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] base de données :  
+5.  Dans la zone **Chaîne de connexion**, spécifiez la chaîne de connexion utilisée par le serveur de rapports pour se connecter à la source de données. L'exemple suivant illustre l'utilisation d'une chaîne de connexion pour se connecter à la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] :  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -162,7 +162,7 @@ ms.locfileid: "48167169"
 ## <a name="see-also"></a>Voir aussi  
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../../integration-services/connection-manager/data-sources.md)   
  [Configurer les propriétés de la source de données d’un rapport &#40;Gestionnaire de rapports&#41;](configure-data-source-properties-for-a-report-report-manager.md)   
- [Créer, supprimer ou modifier une Source de données partagée &#40;le Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Page des propriétés des sources de données &#40;Gestionnaire de rapports&#41;](../data-sources-properties-page-report-manager.md)   
  [Page Nouvelle source de données &#40;Gestionnaire de rapports&#41;](../new-data-source-page-report-manager.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Comment générer des prévisions et des prédictions à l’aide de modèles d’apprentissage automatique dans SQL Server | Microsoft Docs
+title: Générer des prévisions et des prédictions à l’aide de modèles d’apprentissage automatique - SQL Server Machine Learning Services
 description: Destiné à rxPredict ou sp_rxPredict pour calculer les scores en temps réel, ou prédire le T-SQL natif pour les prédictions de notation et de prévision dans R et Pythin dans SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 576a8b161c87270b0dcc40494cf0121a7b644fc4
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712471"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432502"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Comment générer des prévisions et des prédictions à l’aide de modèles d’apprentissage automatique dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ Le modèle doit être créé à l’aide d’une fonction prise en charge, puis 
 
 La signification des extensions C++ et le CLR est proximité au moteur de base de données elle-même. La langue native du moteur de base de données est en C++, ce qui signifie que les extensions écrites en C++ à exécuter avec moins de dépendances. En revanche, les extensions CLR dépendent de .NET Core. 
 
-Comme vous pouvez l’imaginer, prise en charge de la plateforme est affectée par ces environnements d’exécution. Extensions du moteur de base de données native exécuter n’importe quel endroit de la base de données relationnelle est pris en charge : Windows, Linux, Azure. Extensions CLR à l’exigence de .NET Core est actuellement Windows uniquement.
+Comme vous pouvez l’imaginer, prise en charge de la plateforme est affectée par ces environnements d’exécution. Extensions du moteur de base de données native exécuter n’importe quel endroit de que la base de données relationnelle est pris en charge : Windows, Linux, Azure. Extensions CLR à l’exigence de .NET Core est actuellement Windows uniquement.
 
 ## <a name="scoring-overview"></a>Vue d’ensemble de notation
 
@@ -99,7 +99,7 @@ Sérialisation d’un modèle dans un format binaire est utile, mais pas obligat
 Si vous utilisez le [serveur autonome](r-server-standalone.md) ou un [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), vous disposez d’autres options en plus des procédures stockées et fonctions T-SQL pour générer des prédictions rapidement. Le serveur autonome et le Machine Learning Server prennent en charge le concept d’un *service web* pour le déploiement de code. Vous pouvez les regrouper R ou Python préformés de modèle comme un service web, appelé au moment de l’exécution pour évaluer les nouvelles entrées de données. Pour plus d’informations, consultez ces articles :
 
 + [Quels sont les services web dans Machine Learning Server ?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
-+ [Nouveautés d’Opérationnalisation ?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [Nouveautés d’Opérationnalisation ?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
 + [Déployer un modèle Python comme un service web avec le Kit de développement logiciel modèle azureml gestion](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [Publier un bloc de code R ou d’un modèle en temps réel comme un nouveau service web](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [package mrsdeploy pour R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

@@ -11,12 +11,12 @@ ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e43bbb27fc94d9fc7a32fb95b90e0b4e2cd53bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2aa21825563ae94a46a7d9fcda6e52e966f12a9a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189319"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360251"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>Résoudre les problèmes liés aux parties de rapports (Générateur de rapports et SSRS)
   Ces conseils peuvent vous être utiles lors de l'utilisation de parties de rapports.  
@@ -27,7 +27,7 @@ ms.locfileid: "48189319"
  Pour connaître les autorisations dont vous et votre collègue disposez, demandez à l'administrateur du serveur de rapports.  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>Lorsque je recherche des parties de rapport que j'ai téléchargées sur un serveur SharePoint, je ne les voie pas. Pourquoi pas ?  
- Les parties de rapport que vous avez téléchargées manuellement dans une bibliothèque de documents SharePoint, au lieu de les publier à l'aide du Générateur de rapports, peuvent ne pas s'afficher dans la bibliothèque de parties de rapport. Il est possible que le serveur de rapports utilisé pour la recherche de bibliothèque doive être synchronisé avec le contenu de la bibliothèque de documents SharePoint. Pour plus d’informations, consultez [activer la fonctionnalité de synchronisation de fichier de serveur de rapports dans Administration centrale de SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
+ Les parties de rapport que vous avez téléchargées manuellement dans une bibliothèque de documents SharePoint, au lieu de les publier à l'aide du Générateur de rapports, peuvent ne pas s'afficher dans la bibliothèque de parties de rapport. Il est possible que le serveur de rapports utilisé pour la recherche de bibliothèque doive être synchronisé avec le contenu de la bibliothèque de documents SharePoint. Pour plus d’informations, consultez [activer la fonctionnalité de synchronisation de fichier de serveur de rapports dans Administration centrale de SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [la documentation en ligne](https://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>Pourquoi est-ce que d'autres personnes ne peuvent pas voir l'image dans leurs rapports ?  
  Si vous publiez une partie de rapport qui est un lien vers un fichier image, la partie de rapport est en fait juste un lien. Si d'autres personnes ne peuvent pas voir l'image lorsqu'elles ajoutent la partie de rapport d'image à leurs rapports, c'est peut-être parce qu'elles ne disposent pas d'autorisations pour l'image associée au lien.  
@@ -44,6 +44,6 @@ ms.locfileid: "48189319"
  Si des éléments de rapport ont une référence circulaire, vous ne serez pas en mesure de les publier comme parties de rapport. Par exemple, un élément de rapport pointe sur un dataset, qui pointe ensuite sur un paramètre. Le paramètre, à son tour, pointe aussi sur le dataset. Vous devrez d'abord supprimer l'une des références avant de pouvoir publier la partie de rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Parties de rapport &#40;Générateur de rapports et SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

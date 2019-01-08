@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.datapartitions.f1
@@ -13,12 +12,12 @@ ms.assetid: 5869edb7-d05f-495b-b828-b7fd5e828d20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df90abfc372d583269152a7cbfe8ab0d5bebf34d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91a11856c8cde6ed94ce2a954ae51c58e4aabf7f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211259"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752261"
 ---
 # <a name="publication-properties-data-partitions"></a>Propriétés de publication, Partitions de données
   La page **Partitions de données** de la boîte de dialogue **Propriétés de la publication** permet de définir des partitions de données pour les publications de fusion qui utilisent le filtrage paramétré. Après avoir défini les partitions, vous pouvez générer des instantanés pour fournir différents jeux de données initiaux pour différents abonnés en fonction des propriétés de connexion (connexion et/ou nom d'ordinateur) des abonnés. Vous pouvez également permettre aux abonnés de demander la distribution et la génération d'instantanés s'ils ne disposent pas d'un instantané pour leur partition lorsqu'ils se synchronisent pour la première fois. Pour plus d'informations, voir [Créer un instantané d'une publication de fusion avec des filtres paramétrés](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  

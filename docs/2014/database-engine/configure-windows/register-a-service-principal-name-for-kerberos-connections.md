@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SPNs
@@ -17,12 +16,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 671c496b98688433cf09b78bdeab4839142fe13c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcbe4835a333e6b1b1c0881ccd1833c4e5606639
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219249"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370411"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Inscrire un nom de principal du service pour les connexions Kerberos
   Pour utiliser l'authentification Kerberos avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les deux conditions suivantes doivent être remplies :  
@@ -41,7 +40,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ```  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** est un outil de diagnostic qui permet de dépanner les problèmes de connexion que rencontre Kerberos avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Gestionnaire de configuration de Microsoft Kerberos pour SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** est un outil de diagnostic qui permet de dépanner les problèmes de connexion que rencontre Kerberos avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Gestionnaire de configuration de Microsoft Kerberos pour SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 ##  <a name="Role"></a> Rôle du SPN dans l'authentification  
  Lorsqu'une application ouvre une connexion et utilise l'authentification Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client transmet le nom de l'ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le nom de l'instance et, éventuellement, un SPN. Si la connexion transmet un SPN, il est utilisé sans aucune modification.  
@@ -58,14 +57,14 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  L'Authentification Windows est la méthode recommandée pour authentifier les utilisateurs sur SQL Server. Les clients qui utilisent l'Authentification Windows sont authentifiés à l'aide de NTLM ou Kerberos. Dans un environnement Active Directory, l'authentification Kerberos est toujours tentée en premier. L'authentification Kerberos n'est pas disponible pour les clients [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] utilisant des canaux nommés.  
   
 ##  <a name="Permissions"></a> Permissions  
- Lorsque le service du [!INCLUDE[ssDE](../../includes/ssde-md.md)] démarre, il tente d'enregistrer le nom de principal du service (SPN). Si le compte qui démarre SQL Server n'a pas l'autorisation d'enregistrer un SPN dans les services de domaine Active Directory, cet appel échouera et un message d'avertissement sera consigné dans le journal des événements de l'application, ainsi que dans le journal des erreurs SQL Server. Pour inscrire le SPN, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit s'exécuter sous un compte intégré, tel que Système local (non recommandé) ou SERVICE RÉSEAU, ou sous un compte qui a l'autorisation d'inscrire un SPN, tel qu'un compte d'administrateur de domaine. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur le système d'exploitation  [!INCLUDE[win7](../../includes/win7-md.md)] ou  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , vous pouvez exécuter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide d'un compte virtuel ou d'un compte de service administré (MSA). Les comptes virtuels t de service administré peuvent inscrire un SPN. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne s’exécute pas sous l’un de ces comptes, le SPN n’est pas inscrit lors du démarrage et l’administrateur de domaine doit l’inscrire manuellement.  
+ Lorsque le service du [!INCLUDE[ssDE](../../includes/ssde-md.md)] démarre, il tente d'enregistrer le nom de principal du service (SPN). Si le compte qui démarre SQL Server n’a pas l’autorisation d’enregistrer un SPN dans les services de domaine Active Directory, cet appel échouera et un message d’avertissement sera consigné dans le journal des événements de l’application ainsi que dans le journal des erreurs SQL Server. Pour inscrire le SPN, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit s'exécuter sous un compte intégré, tel que Système local (non recommandé) ou SERVICE RÉSEAU, ou sous un compte qui a l'autorisation d'inscrire un SPN, tel qu'un compte d'administrateur de domaine. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur le système d'exploitation  [!INCLUDE[win7](../../includes/win7-md.md)] ou  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , vous pouvez exécuter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide d'un compte virtuel ou d'un compte de service administré (MSA). Les comptes virtuels et les comptes de service administré peuvent inscrire un SPN. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne s’exécute pas sous l’un de ces comptes, le SPN n’est pas inscrit lors du démarrage et l’administrateur de domaine doit l’inscrire manuellement.  
   
 > [!NOTE]  
 >  Lorsque le domaine Windows est configuré pour s'exécuter à un niveau fonctionnel inférieur à celui de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , le compte de service administré n'a pas les autorisations nécessaires pour inscrire le SPN pour le service du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Si l'authentification Kerberos est requise, l'administrateur de domaine doit inscrire manuellement les SPN [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le compte de service administré.  
   
- L’article de la Base de connaissances [How to use Kerberos authentication in SQL Server (Procédure d’utilisation de l’authentification Kerberos dans SQL Server)](http://support.microsoft.com/kb/319723)contient des informations sur la manière d’accorder une autorisation de lecture ou d’écriture à un SPN pour un compte qui n’est pas Administrateur de domaine.  
+ L’article de la Base de connaissances [How to use Kerberos authentication in SQL Server (Procédure d’utilisation de l’authentification Kerberos dans SQL Server)](https://support.microsoft.com/kb/319723)contient des informations sur la manière d’accorder une autorisation de lecture ou d’écriture à un SPN pour un compte qui n’est pas Administrateur de domaine.  
   
- Des informations supplémentaires sont disponibles dans l’article [How to Implement Kerberos Constrained Delegation with SQL Server 2008 (Procédure d’implémentation de la délégation contrainte Kerberos à l’aide de SQL Server 2008)](http://technet.microsoft.com/library/ee191523.aspx).  
+ Des informations supplémentaires sont disponibles dans l’article [How to Implement Kerberos Constrained Delegation with SQL Server 2008 (Procédure d’implémentation de la délégation contrainte Kerberos à l’aide de SQL Server 2008)](https://technet.microsoft.com/library/ee191523.aspx).  
   
 ##  <a name="Formats"></a> Formats de SPN  
  À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], le format des SPN est modifié afin de prendre en charge l'authentification Kerberos sur le protocole TCP/IP, les canaux nommés et la mémoire partagée. Les formats de SPN pris en charge pour les instances nommées et par défaut sont les suivants.  
@@ -111,7 +110,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Une intervention manuelle peut être requise pour inscrire ou annuler l'inscription du SPN si le compte de service ne possède pas les autorisations requises pour ces actions.  
   
 ##  <a name="Manual"></a> Inscription manuelle des SPN  
- Pour inscrire le SPN manuellement, l'administrateur doit utiliser l'outil Setspn.exe fourni avec les Outils de support de Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] . Pour plus d’informations, consultez l’article de la Base de connaissances [Outils de support de Windows Server 2003 Service Pack 1](http://support.microsoft.com/kb/892777) .  
+ Pour inscrire le SPN manuellement, l'administrateur doit utiliser l'outil Setspn.exe fourni avec les Outils de support de Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] . Pour plus d’informations, consultez l’article de la Base de connaissances [Outils de support de Windows Server 2003 Service Pack 1](https://support.microsoft.com/kb/892777) .  
   
  Setspn.exe est un outil de ligne de commande qui vous permet de lire, modifier et supprimer la propriété du répertoire des Noms de principaux du service (SPN). Cet outil vous permet également d'afficher les SPN actuels, de réinitialiser les SPN par défaut du compte et d'ajouter ou de supprimer des SPN supplémentaires.  
   
@@ -159,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |Scénario|Méthode d'authentification|  
 |--------------|---------------------------|  
-|Le SPN est mappé au compte de domaine, au compte virtuel, au compte de service administré ou au compte intégré approprié. Par exemple, Système local ou SERVICE RÉSEAU.<br /><br /> Remarque : Correct signifie que le compte mappé par le SPN inscrit est le compte que le service SQL Server s’exécute sous.|Les connexions locales utilisent NTLM, les connexions distantes utilisent Kerberos.|  
-|Le SPN est le compte de domaine, le compte virtuel, le compte de service administré ou le compte intégré approprié.<br /><br /> Remarque : Correct signifie que le compte mappé par le SPN inscrit est le compte que le service SQL Server s’exécute sous.|Les connexions locales utilisent NTLM, les connexions distantes utilisent Kerberos.|  
+|Le SPN est mappé au compte de domaine, au compte virtuel, au compte de service administré ou au compte intégré approprié. Par exemple, Système local ou SERVICE RÉSEAU.<br /><br /> Remarque : Correct signifie que le compte mappé par le SPN inscrit est le compte sous lequel s'exécute le service SQL Server.|Les connexions locales utilisent NTLM, les connexions distantes utilisent Kerberos.|  
+|Le SPN est le compte de domaine, le compte virtuel, le compte de service administré ou le compte intégré approprié.<br /><br /> Remarque : Correct signifie que le compte mappé par le SPN inscrit est le compte sous lequel s'exécute le service SQL Server.|Les connexions locales utilisent NTLM, les connexions distantes utilisent Kerberos.|  
 |Le SPN est mappé à un compte de domaine, un compte virtuel, un compte de service administré ou un compte intégré erroné.|L'authentification échoue.|  
 |La recherche du SPN échoue ou ne mappe pas à un compte de domaine, un compte virtuel, un compte de service administré ou un compte intégré correct, ou n'est pas un compte de domaine, un compte virtuel, un compte de service administré ou un compte intégré correct.|Les connexions locales et distantes utilisent NTLM.|  
   
@@ -176,6 +175,6 @@ WHERE session_id = @@SPID;
  [Noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [Noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   
  [Fonctionnalités de SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Gérer les problèmes d’authentification Kerberos dans un environnement Reporting Services](http://technet.microsoft.com/library/ff679930.aspx)  
+ [Gérer les problèmes d’authentification Kerberos dans un environnement Reporting Services](https://technet.microsoft.com/library/ff679930.aspx)  
   
   

@@ -17,12 +17,12 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9131bda927e123d3b718d9a769ef59efff157903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a93abdc2c20b2aabc9da09ce875817ab92789b8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111562"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350864"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
   Les performances de l'indexation de texte intégral et des requêtes de texte intégral sont influencées par les ressources matérielles telles que la mémoire, la vitesse du disque et de l'UC ainsi que l'architecture de l'ordinateur.  
@@ -64,14 +64,14 @@ ms.locfileid: "48111562"
   
 -   Mettez à jour les statistiques de la table de base à l'aide de l'instruction [UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql) . Le plus important est de mettre à jour les statistiques sur l'index cluster ou la clé de texte intégral pour un remplissage complet. De cette manière, un remplissage sur plusieurs plages peut générer les partitions adéquates sur la table.  
   
--   Créez un index secondaire sur un `timestamp` colonne si vous souhaitez améliorer les performances de l’alimentation incrémentielle.  
+-   Créez un index secondaire sur une colonne `timestamp` si vous souhaitez améliorer les performances de l'alimentation incrémentielle.  
   
 -   Avant d'effectuer une alimentation complète sur un ordinateur multiprocesseur de grande capacité, nous vous recommandons de limiter temporairement la taille du pool de mémoires tampons en définissant la valeur `max server memory` de manière à laisser suffisamment de mémoire au processus fdhost.exe et au système d'exploitation. Pour plus d'informations, consultez « Estimation des besoins en mémoire du processus hôte de démon de filtre (fdhost.exe) », plus loin dans cette rubrique.  
   
   
   
 ##  <a name="full"></a> Les performances des alimentations complètes de résolution des problèmes  
- Pour diagnostiquer les problèmes de performances, consultez les journaux d'analyse de texte intégral. Pour plus d’informations sur les journaux d’analyse, consultez [alimenter des index de recherche en texte intégral](../indexes/indexes.md).  
+ Pour diagnostiquer les problèmes de performances, consultez les journaux d'analyse de texte intégral. Pour plus d’informations sur les journaux d’analyse, consultez [Alimenter des index de recherche en texte intégral](../indexes/indexes.md).  
   
  Il est recommandé de suivre l'ordre de dépannage suivant si les performances des alimentations complètes ne sont pas satisfaisantes.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48111562"
  Durant une alimentation de texte intégral, fdhost.exe ou sqlservr.exe peuvent manquer partiellement ou complètement de mémoire. Si le journal d'analyse de texte intégral indique que fdhost.exe est souvent redémarré ou que le code d'erreur 8007008 est retourné, cela signifie que l'un de ces processus manque de mémoire. Si fdhost.exe produit des vidages, en particulier sur des ordinateurs multiprocesseurs de grande capacité, cela peut signifier qu'il manque de mémoire.  
   
 > [!NOTE]  
->  Pour obtenir des informations sur les mémoires tampons utilisées par une analyse de recherche en texte intégral, consultez [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql).  
+>  Pour plus d’informations sur les mémoires tampons utilisées par une analyse de texte intégral, consultez [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql).  
   
  Les causes possibles sont les suivantes :  
   
@@ -126,12 +126,12 @@ ms.locfileid: "48111562"
 > [!IMPORTANT]  
 >  Pour obtenir des informations essentielles sur les formules, consultez <sup>1</sup>, <sup>2</sup>, et <sup>3</sup>, ci-dessous.  
   
-|Plateforme|Estimation des besoins de mémoire de fdhost.exe en Mo —*F*<sup>1</sup>|Formule pour calculer max server memory :*M*<sup>2</sup>|  
+|Plateforme|Estimation des besoins de mémoire de fdhost.exe en Mo -*F*<sup>1</sup>|Formule de calcul de mémoire maximum du serveur -*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= minimum (** *T* **,** 2000 **) –*`F`*–** 500|  
-|x64|*F* **=** *nombre de plages d’analyse* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
+|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= minimum (** *T* **,** 2000 **)-*`F`* -**  500|  
+|x64|*F* **=** *nombre de plages d’analyse* **\*** 10 **\*** 8|*M* **=** *T* **-** *F* **-** 500|  
   
- <sup>1</sup> si plusieurs alimentations complètes sont en cours, calculez les besoins en mémoire de chaque fdhost.exe séparément, en tant que *F1*, *F2*, et ainsi de suite. Ensuite, calculez *M* comme *T***–** sigma **(***F*i**)**.  
+ <sup>1</sup> si plusieurs alimentations complètes sont en cours, calculez les besoins en mémoire de chaque fdhost.exe séparément, en tant que *F1*, *F2*, et ainsi de suite. Puis calculez *M* comme *T ***-** sigma **(***F*je**) **.  
   
  <sup>2</sup> 500 Mo est une estimation de la mémoire requise par d’autres processus dans le système. Si le système effectue un travail supplémentaire, augmentez cette valeur en conséquence.  
   
@@ -139,15 +139,15 @@ ms.locfileid: "48111562"
   
  **Exemple : Estimation des besoins en mémoire de fdhost.exe**  
   
- Cet exemple se rapporte à un ordinateur AMD64 avec 8 Go de mémoire vive (RAM) et 4 processeurs double cœur. Les premières estimations de calcul de la mémoire requise par fdhost.exe :*F*. Le nombre de plages d'analyse est `8`.  
+ Cet exemple se rapporte à un ordinateur AMD64 avec 8 Go de mémoire vive (RAM) et 4 processeurs double cœur. Les premières estimations de calcul de la mémoire requise par fdhost.exe : *F*. Le nombre de plages d'analyse est `8`.  
   
  `F = 8*10*8=640`  
   
- Le calcul suivant obtient la valeur optimale de `max server memory`—*M*. *L*a mémoire physique totale disponible sur ce système en Mo—*T*—est `8192`.  
+ Le calcul suivant obtient la valeur optimale de `max server memory` - *M*. *T*il mémoire physique totale disponible sur ce système en Mo -*T*-est `8192`.  
   
  `M = 8192-640-500=7052`  
   
- **Exemple : Configuration de mémoire maximum du serveur**  
+ **Exemple : Configuration mémoire maximum du serveur**  
   
  Cet exemple utilise le [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) et [reconfigurer](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions pour définir `max server memory` sur la valeur calculée pour *M* dans l’exemple précédent , `7052`:  
   
@@ -171,7 +171,7 @@ GO
   
 -   Temps d'attente élevé pour les pages  
   
-     Pour savoir si un délai d’attente de page est élevé, exécutez l’instruction suivante [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction :  
+     Pour savoir si un temps d'attente de page est élevé, exécutez l'instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante :  
   
     ```  
     Execute SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
@@ -203,7 +203,7 @@ GO
   
  Pour des raisons de sécurité, les filtres sont chargés par des processus hôtes de démon de filtre. Une instance de serveur utilise un processus multithread pour tous les filtres multithreads et un processus monothread pour tous les filtres monothreads. Lorsqu'un document qui utilise un filtre multithread contient un document incorporé qui utilise un filtre monothread, le Moteur d'indexation et de recherche en texte intégral lance un processus monothread pour le document incorporé. Par exemple, quand il rencontre un document Word qui contient un document PDF, le Moteur d’indexation et de recherche en texte intégral utilise le processus multithread pour le contenu Word et lance un processus monothread pour le contenu PDF. Toutefois, un filtre monothread peut ne pas fonctionner correctement dans cet environnement et peut déstabiliser le processus de filtrage. Dans certaines circonstances, lorsque ce type d'incorporation est courant, cette déstabilisation peut provoquer des blocages du processus de filtrage. Dans ce cas, le Moteur d'indexation et de recherche en texte intégral réachemine tout document ayant subi un échec (par exemple, un document Word avec du contenu PDF incorporé) vers le processus de filtrage monothread. Si le réacheminement a lieu fréquemment, il en résulte une détérioration des performances du processus d'indexation de texte intégral.  
   
- Pour contourner ce problème, marquez le filtre du document conteneur (Word dans le cas présent) en tant que filtre monothread. Vous pouvez modifier la valeur de Registre concernée pour marquer un filtre donné en tant que filtre monothread. Pour marquer un filtre en tant qu’un filtre monothread, vous devez définir le **ThreadingModel** valeur de Registre pour le filtre sur `Apartment Threaded`. Pour plus d’informations sur les threads uniques cloisonnés (STA), consultez le livre blanc intitulé [Présentation et utilisation des modèles de threads COM](http://go.microsoft.com/fwlink/?LinkId=209159).  
+ Pour contourner ce problème, marquez le filtre du document conteneur (Word dans le cas présent) en tant que filtre monothread. Vous pouvez modifier la valeur de Registre concernée pour marquer un filtre donné en tant que filtre monothread. Pour marquer un filtre en tant qu’un filtre monothread, vous devez définir le **ThreadingModel** valeur de Registre pour le filtre sur `Apartment Threaded`. Pour plus d’informations sur les threads uniques cloisonnés (STA), consultez le livre blanc intitulé [Présentation et utilisation des modèles de threads COM](https://go.microsoft.com/fwlink/?LinkId=209159).  
   
   
   

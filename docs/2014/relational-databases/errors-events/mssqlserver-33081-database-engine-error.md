@@ -12,12 +12,12 @@ ms.assetid: 839705e7-fa37-4c0d-9f3f-95a9eab98bcf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f064e36a5412612e73f3c6d60f0461a02d417f92
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 913be11caa9a76ee012571e5ee4b275826668330
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138399"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370121"
 ---
 # <a name="mssqlserver33081"></a>MSSQLSERVER_33081
     
@@ -41,7 +41,7 @@ WHERE ring_buffer_type = 'RING_BUFFER_SECURITY_ERROR';
 ```  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
- Pour examiner le problème, recherchez le code d’erreur Windows dans MSDN (http://msdn.microsoft.com/). Résolvez l'erreur, ou contactez le support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour plus d'informations. Si vous devez contacter les services de support technique, collectez les informations suivantes pour notre équipe d'assistance :  
+ Pour examiner le problème, recherchez le code d’erreur Windows dans MSDN (https://msdn.microsoft.com/). Résolvez l'erreur, ou contactez le support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour plus d'informations. Si vous devez contacter les services de support technique, collectez les informations suivantes pour notre équipe d'assistance :  
   
 -   Le journal des erreurs affichant l'erreur qui indique que le fournisseur de services de chiffrement n'a pas pu être chargé.  
   

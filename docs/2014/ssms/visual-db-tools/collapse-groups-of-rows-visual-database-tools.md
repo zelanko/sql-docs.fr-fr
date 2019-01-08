@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - group collapsing [SQL Server]
@@ -14,17 +14,17 @@ ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2f6b11b045e729e0f567bb4714b9a551706f7057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7f6cbc6b4150f2f951befcb70c1b09108de3b51
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182889"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788121"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Réduire des groupes de lignes (Visual Database Tools)
   Vous pouvez créer un résultat de requête dans lequel chaque ligne de résultat correspond à tout un groupe de lignes des données d'origine. La réduction de lignes donne les possibilités suivantes :  
   
--   **Élimination de lignes en double** Certaines requêtes donnent des ensembles de résultats faisant apparaître plusieurs lignes identiques. Par exemple, vous pouvez créer un ensemble de résultats où les lignes citent une ville et son état si un auteur quelconque y réside, mais si plusieurs auteurs résident dans la même ville, vous obtiendrez plusieurs lignes identiques. L'instruction SQL obtenue peut se présenter de la manière suivante :  
+-   **Élimination de lignes en double** Certaines requêtes donnent des ensembles de résultats faisant apparaître plusieurs lignes identiques. Par exemple, vous pouvez créer un jeu de résultats où les lignes citent une ville et son état si un auteur quelconque y réside. Si plusieurs auteurs résident dans la même ville, vous obtiendrez plusieurs lignes identiques. L'instruction SQL obtenue peut se présenter de la manière suivante :  
   
     ```  
     SELECT city, state  

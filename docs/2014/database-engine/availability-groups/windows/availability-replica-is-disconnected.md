@@ -14,12 +14,12 @@ ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ab17646913b217b877c09070affe65be49bf880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ead368dece8a0c1effd8f8ddc7ff5e5793e8350
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088949"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355523"
 ---
 # <a name="availability-replica-is-disconnected"></a>Le réplica de disponibilité est déconnecté
     
@@ -36,7 +36,7 @@ ms.locfileid: "48088949"
  Cette stratégie vérifie l'état de la connexion entre les réplicas de disponibilité. La stratégie se trouve dans un état non sain lorsque l'état de la connexion du réplica de disponibilité est DISCONNECTED. Autrement, l'état de la stratégie est sain.  
   
 > [!NOTE]  
->  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les informations sur les causes et les solutions possibles sont situées sous [Le réplica de disponibilité est déconnecté](http://go.microsoft.com/fwlink/p/?LinkId=220857) sur le Wiki TechNet.  
+>  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les informations sur les causes et les solutions possibles sont situées sous [Le réplica de disponibilité est déconnecté](https://go.microsoft.com/fwlink/p/?LinkId=220857) sur le Wiki TechNet.  
   
 ## <a name="possible-causes"></a>Causes possibles  
  Le réplica secondaire n'est pas connecté au réplica principal. L'état de la connexion est DISCONNECTED. Ce problème peut avoir les causes suivantes :  

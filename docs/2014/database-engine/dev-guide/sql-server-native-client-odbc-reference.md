@@ -17,19 +17,19 @@ ms.assetid: 06b7edee-8636-49d9-9b5c-2c710bf4fa2d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: edaddc413c972672beee3033b861b04dce92a180
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce534f3667aaa9c42b1fa12820d5bdbd20728b8b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125639"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371401"
 ---
 # <a name="sql-server-native-client-odbc-reference"></a>Référence SQL Server Native Client (ODBC)
   Open Database Connectivity (ODBC) est une interface de programmation d'applications Microsoft Win32 utilisée par les applications pour accéder aux données dans des sources de données ODBC.  
   
  La référence de pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ne documente pas tous les appels de fonction ODBC. Seules les fonctions qui ont des paramètres ou des comportements spécifiques au pilote en cas d'utilisation avec le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sont discutées.  
   
- Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est conforme avec la spécification ODBC 3.51. Pour obtenir une référence complète d’ODBC 3.51, téléchargez Microsoft Data Access Components SDK à partir de la [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173), ou afficher le [de référence du programmeur ODBC](http://go.microsoft.com/fwlink/?LinkId=45250) en ligne.  
+ Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est conforme avec la spécification ODBC 3.51. Pour obtenir une référence complète d’ODBC 3.51, téléchargez Microsoft Data Access Components SDK à partir de la [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173), ou afficher le [de référence du programmeur ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) en ligne.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

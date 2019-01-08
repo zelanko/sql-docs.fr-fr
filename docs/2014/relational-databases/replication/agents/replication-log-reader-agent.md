@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Log Reader Agent, executables
@@ -16,12 +15,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 892f89c0c2d3161b0df16ad9337237ce14bef159
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: fa69b87466d11c317e73a69454768b0f5396532f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226341"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800471"
 ---
 # <a name="replication-log-reader-agent"></a>Agent de lecture du journal des réplications
   L'Agent de lecture du journal des réplications est un fichier exécutable qui analyse le journal des transactions de chaque base de données configurée pour la réplication transactionnelle et qui copie les transactions devant être répliquées à partir du journal des transactions dans la base de données de distribution.  
@@ -103,7 +102,7 @@ ms.locfileid: "50226341"
 |**2**|Spécifie que le chiffrement SSL est utilisé et que le certificat est vérifié.|  
 
  > [!NOTE]  
- >  Un certificat SSL valide est défini avec un nom de domaine complet du serveur SQL. Pour l’agent pour se connecter avec succès lors de la définition - EncryptionLevel à 2, créer un alias sur le serveur SQL local. Le paramètre de nom de l’Alias doit être le nom du serveur et le paramètre « Serveur » doit être défini pour le nom qualifié complet de SQL Server.
+ >  Un certificat SSL valide est défini avec le nom de domaine complet de l’instance SQL Server. Pour que l’agent puisse se connecter lorsque vous définissez EncryptionLevel sur 2, créez un alias sur l’instance locale de SQL Server. Le paramètre « Nom de l’alias » doit correspondre au nom du serveur, et le paramètre « Serveur » doit être défini sur le nom complet de l’instance SQL Server.
  
  Pour plus d’informations, consultez [Vue d’ensemble de la sécurité &#40;réplication&#41;](../security/security-overview-replication.md).  
   
@@ -145,7 +144,7 @@ ms.locfileid: "50226341"
  **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  Spécifie si la sortie doit être en clair.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0**|Seuls les messages d'erreur sont imprimés.|  
 |**1**|Tous les messages du rapport de progression de l'agent sont imprimés.|  

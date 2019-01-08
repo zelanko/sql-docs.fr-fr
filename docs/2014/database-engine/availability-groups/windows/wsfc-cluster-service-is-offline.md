@@ -14,12 +14,12 @@ ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2fd89cf306116a0554366984f864c6f0f6020a20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cfab5de4cd3d171d4d8b7515e65b0a9cd117ac16
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126009"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377461"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>Le service de cluster WSFC est hors connexion
     
@@ -38,7 +38,7 @@ ms.locfileid: "48126009"
  L'état de la stratégie est sain lorsque l'état du cluster est Quorum normal.  
   
 > [!NOTE]  
->  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les informations sur les causes et les solutions possibles sont situées sous [Le service de cluster WSFC est hors connexion](http://go.microsoft.com/fwlink/p/?LinkId=220849) sur TechNet Wiki.  
+>  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les informations sur les causes et les solutions possibles sont situées sous [Le service de cluster WSFC est hors connexion](https://go.microsoft.com/fwlink/p/?LinkId=220849) sur TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Causes possibles  
  Ce problème peut être dû à un problème de service de cluster ou à la perte du quorum dans le cluster.  

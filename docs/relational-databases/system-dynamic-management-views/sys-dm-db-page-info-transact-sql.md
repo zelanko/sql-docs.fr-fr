@@ -20,12 +20,12 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adf5cc81979d8efe9426c082464cb7d7bba52c14
-ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
+ms.openlocfilehash: 37c334f5c5107b2716601916517e888d90164226
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150200"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732076"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>Sys.dm_db_page_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -118,11 +118,11 @@ Le `sys.dm_db_page_info` fonction de gestion dynamique retourne des informations
 `sys.dm_db_page_info` peut être utilisé à la place de la `DBCC PAGE` instruction dans nombreux cas, mais il retourne uniquement les page informations d’en-tête, pas le corps de la page. `DBCC PAGE` seront toujours utiles pour les cas d’usage où tout le contenu de la page est requis.
 
 ## <a name="using-in-conjunction-with-other-dmvs"></a>À utiliser avec d’autres vues de gestion dynamique
-Un des cas d’usage importants de `sys.dm_db_page_info` consiste à joindre avec d’autres vues de gestion dynamique qui exposent des informations sur la page.  Pour faciliter ce cas d’utilisation, une nouvelle colonne appelée `page_resource` a été ajoutée qui expose des informations de page dans un format hexadécimal de 8 octets. Cette colonne a été ajoutée à `sys.dm_exec_processes` et `sys.sysprocesses` et seront ajoutés à d’autres vues de gestion dynamique à l’avenir en fonction des besoins.
+Un des cas d’usage importants de `sys.dm_db_page_info` consiste à joindre avec d’autres vues de gestion dynamique qui exposent des informations sur la page.  Pour faciliter ce cas d’utilisation, une nouvelle colonne appelée `page_resource` a été ajoutée qui expose des informations de page dans un format hexadécimal de 8 octets. Cette colonne a été ajoutée à `sys.dm_exec_requests` et `sys.sysprocesses` et seront ajoutés à d’autres vues de gestion dynamique à l’avenir en fonction des besoins.
 
 Une nouvelle fonction, `sys.fn_PageResCracker`, prend la `page_resource` comme entrée et génère une seule ligne qui contienne `database_id`, `file_id` et `page_id`.  Cette fonction peut ensuite être utilisée pour faciliter les jointures entre `sys.dm_exec_requests` ou `sys.sysprocesses` et `sys.dm_db_page_info`.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -135,7 +135,7 @@ SELECT *
 FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 ```
 
-### <a name="b-using-sysdmdbpageinfo-with-other-dmvs"></a>B. À l’aide de sys.dm_db_page_info avec d’autres vues de gestion dynamique 
+### <a name="b-using-sysdmdbpageinfo-with-other-dmvs"></a>b. À l’aide de sys.dm_db_page_info avec d’autres vues de gestion dynamique 
 
 La requête suivante renvoie une ligne par `wait_resource` exposées par `sys.dm_exec_requests` lorsque la ligne contient une valeur non null `page_resource`
 

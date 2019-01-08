@@ -11,12 +11,12 @@ ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4a6c4af1938057652aa21ce8feef8671b2535f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f800d28a8c7e1440308761abc3d05c4d41995f00
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154099"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372121"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Spécifier des informations d’identification dans le Générateur de rapports
   Les informations d'identification permettent d'authentifier l'utilisateur qui tente de récupérer des données à partir d'une source de données. Le propriétaire de la source de données détermine le type d'informations d'identification à utiliser. Par exemple, un administrateur de base de données peut spécifier que l'utilisateur doit fournir un nom d'utilisateur et un mot de passe Windows.  
@@ -49,7 +49,7 @@ ms.locfileid: "48154099"
  Pour plus d’informations, consultez [Boîte de dialogue Propriétés de la source de données, Général &#40;Générateur de rapports&#41;](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md) et [Aperçu des rapports dans le Générateur de rapports](report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="types-of-credentials"></a>Types d'informations d'identification  
- Le type d'informations d'identification pris en charge par une source de données est spécifié par le propriétaire de la source de données. Par exemple, pour accéder à un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de données, vous devrez peut-être fournir un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nom d’utilisateur et mot de passe. Pour accéder à une autre source de données, vous devrez peut-être fournir un nom d'utilisateur et un mot de passe Windows. Il est possible que certaines sources de données ne requièrent pas d'informations d'identification.  
+ Le type d'informations d'identification pris en charge par une source de données est spécifié par le propriétaire de la source de données. Par exemple, vous devrez peut-être fournir un nom d'utilisateur de compte de connexion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et un mot de passe correspondant pour accéder à une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour accéder à une autre source de données, vous devrez peut-être fournir un nom d'utilisateur et un mot de passe Windows. Il est possible que certaines sources de données ne requièrent pas d'informations d'identification.  
   
 ### <a name="options-for-specifying-credentials"></a>Options de spécification des informations d'identification  
  Les options suivantes permettent de spécifier des informations d'identification pour une source de données :  
@@ -66,19 +66,19 @@ ms.locfileid: "48154099"
  Lorsque vous sélectionnez **Utiliser l'authentification Windows (sécurité intégrée)**, le jeton de sécurité de l'utilisateur actuel est passé à la source de données. Dans ce cas, l'utilisateur n'est pas invité à taper son nom d'utilisateur ou son mot de passe. En règle générale, cette option requiert l'activation des fonctionnalités de délégation. Si ces fonctionnalités ne sont pas activées, vous ne pouvez utiliser cette option que pour accéder à une source de données située sur le même ordinateur.  
   
 ### <a name="user-name-and-password-login"></a>Connexion à l'aide d'un nom d'utilisateur et d'un mot de passe  
- Lorsque vous sélectionnez **Utiliser ce nom d'utilisateur et ce mot de passe**, un nom d'utilisateur et un mot de passe doivent être fournis pour permettre l'accès à la source de données. Pour une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les informations d'identification peuvent correspondre à une connexion de base de données. Les informations d'identification sont passées à la source de données pour authentification.  
+ Lorsque vous sélectionnez **Utiliser ce nom d'utilisateur et ce mot de passe**, un nom d'utilisateur et un mot de passe doivent être fournis pour permettre l'accès à la source de données. Pour une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , les informations d'identification peuvent correspondre à une connexion de base de données. Les informations d'identification sont passées à la source de données pour authentification.  
   
 ### <a name="prompted-credentials"></a>Informations d'identification demandées par invite  
  Lorsque vous spécifiez l'invite des informations d'identification, chaque utilisateur qui accède au rapport doit entrer un nom d'utilisateur et un mot de passe pour récupérer les données. Cette option est recommandée pour les rapports qui contiennent des données confidentielles. Les informations d'identification demandées par invite peuvent correspondre à un compte de domaine Windows ou une connexion de base de données. Si le serveur de base de données ne reconnaît pas les informations d'identification que vous fournissez, ou si l'utilisateur spécifié n'a pas reçu l'autorisation de récupérer les données, la connexion échoue.  
   
 ### <a name="no-credentials"></a>Aucune information d'identification  
- Aucune information d'identification n'est requise pour cette source de données. Pour exécuter ce rapport sur le serveur de rapports, le compte d'exécution sans assistance doit être configuré. Pour plus d’informations, consultez [configurer le compte d’exécution sans assistance &#40;Gestionnaire de Configuration de SSRS&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) dans le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Aucune information d'identification n'est requise pour cette source de données. Pour exécuter ce rapport sur le serveur de rapports, le compte d'exécution sans assistance doit être configuré. Pour plus d’informations, consultez [configurer le compte d’exécution sans assistance &#40;Gestionnaire de Configuration de SSRS&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) dans le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [la documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer, désinstaller et prise en charge du Générateur de rapports](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
- [Incorporée et partagée des connexions de données ou Sources de données &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Boîte de dialogue, paramètres de Options de générateur de rapports &#40;Générateur de rapports&#41;](report-builder/set-default-options-for-report-builder.md)   
- [Connexions de données, Sources de données et chaînes de connexion dans le Générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   

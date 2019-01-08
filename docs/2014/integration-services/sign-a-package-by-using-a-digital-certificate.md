@@ -15,12 +15,12 @@ ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f0e98d0653bf73c96448291d4c25654cdf5ea753
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7a971b96de66cf766541b741c48f5477cf9db65
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177470"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350428"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Signer un package à l'aide d'un certificat numérique
   Cette rubrique décrit comment signer un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] à l'aide d'un certificat numérique. Vous pouvez utiliser une signature numérique avec d'autres paramètres pour empêcher le chargement et l'exécution d'un package non valide.  
@@ -33,11 +33,11 @@ ms.locfileid: "48177470"
   
     -   Obtenez un certificat à partir d'une autorité de certification commerciale publique qui émet des certificats.  
   
-    -   Obtenez un certificat à partir d'un serveur de certificats, qui permet à une organisation d'émettre des certificats de façon interne. Vous devez ajouter le certificat racine utilisé pour signer le certificat dans le magasin **Autorités de certification racines de confiance** . Pour ajouter le certificat racine, vous pouvez utiliser le composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console) Certificats. Pour plus d'informations, consultez la rubrique «[Services de certificats](http://go.microsoft.com/fwlink/?LinkId=100755)» dans MSDN Library (éventuellement en anglais).  
+    -   Obtenez un certificat à partir d'un serveur de certificats, qui permet à une organisation d'émettre des certificats de façon interne. Vous devez ajouter le certificat racine utilisé pour signer le certificat dans le magasin **Autorités de certification racines de confiance** . Pour ajouter le certificat racine, vous pouvez utiliser le composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console) Certificats. Pour plus d'informations, consultez la rubrique «[Services de certificats](https://go.microsoft.com/fwlink/?LinkId=100755)» dans MSDN Library (éventuellement en anglais).  
   
-    -   Créez votre propre certificat à des fins de test uniquement. L'outil de création de certificat Makecert.exe génère des certificats X.509 à des fins de tests. Pour plus d’informations, consultez la rubrique «[Outil Certificate Creation Tool (Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)» dans MSDN Library.  
+    -   Créez votre propre certificat à des fins de test uniquement. L'outil de création de certificat Makecert.exe génère des certificats X.509 à des fins de tests. Pour plus d’informations, consultez la rubrique «[Outil Certificate Creation Tool (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)» dans MSDN Library.  
   
-     Pour plus d'informations sur les certificats, recherchez le composant logiciel enfichable Certificats dans l'aide en ligne. Pour plus d'informations sur la façon de signer des ressources numériques, consultez la rubrique «[Signature et vérification de code à l'aide d'Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)» dans MSDN Library (éventuellement en anglais).  
+     Pour plus d'informations sur les certificats, recherchez le composant logiciel enfichable Certificats dans l'aide en ligne. Pour plus d'informations sur la façon de signer des ressources numériques, consultez la rubrique «[Signature et vérification de code à l'aide d'Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)» dans MSDN Library (éventuellement en anglais).  
   
 -   Assurez-vous que le certificat a été activé pour la signature de code. Pour déterminer si un certificat est activé pour la signature du code, examinez les propriétés du certificat dans le composant logiciel enfichable Certificats.  
   

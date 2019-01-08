@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 762c644690cb556ba316705f1e22e3673e811bf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ffa3e3508fef50491f20b47e13c12865cb5432d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077709"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363401"
 ---
 # <a name="overview-of-clr-integration"></a>Vue d'ensemble de l'intégration du CLR
   Le CLR (Common Language Runtime) est le cœur de Microsoft .NET Framework et fournit l'environnement d'exécution de la totalité du code .NET Framework. Le code qui s'exécute au sein du CLR est désigné sous le nom de code managé. Le CLR fournit divers fonctions et services requis pour l'exécution du programme, y compris la compilation juste-à-temps (JIT), l'allocation et la gestion de la mémoire, la mise en application de la cohérence des types, la gestion des exceptions, la gestion des threads et la sécurité.  Pour plus d'informations, consultez la documentation du Kit de développement (SDK) .NET Framework.  
@@ -56,7 +56,7 @@ ms.locfileid: "48077709"
  Les procédures stockées étendues peuvent être créées pour remplir une fonctionnalité inaccessible via les procédures stockées [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Toutefois, les procédures stockées étendues peuvent compromettre l'intégrité du processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], contrairement au code managé qui est soumis à une vérification pour être certain qu'il ne présente aucun risque. En outre, la gestion de la mémoire, la planification des threads et des fibres, et les services de synchronisation sont plus profondément intégrés entre le code managé du CLR et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Avec l'intégration du CLR, vous avez une solution plus sécurisée que les procédures stockées étendues pour écrire les procédures stockées qui vous sont nécessaires pour exécuter des tâches qui ne peuvent l'être dans [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Pour plus d’informations sur l’intégration du CLR et les procédures stockées étendues, consultez [performances d’intégration du CLR](clr-integration-architecture-performance.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installation du .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Installation du .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Architecture d’intégration du CLR](../../database-engine/dev-guide/architecture-of-clr-integration.md)   
  [Accès aux données à partir des objets de base de données CLR](data-access/data-access-from-clr-database-objects.md)   
  [Prise en main de l’intégration du CLR](database-objects/getting-started-with-clr-integration.md)  

@@ -5,8 +5,7 @@ ms.date: 03/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f19ad878499d9739745f29aa8c2f749fe2b3132
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41e5f03dbe8619ca2e00d70b2c569d90f75d2d2f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843377"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211279"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ sp_table_validation [ @table = ] 'table'
  [  **@full_or_fast=**] *full_or_fast*  
  Méthode utilisée pour calculer le nombre de lignes. *full_or_fast* est **tinyint**, avec une valeur par défaut **2**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0**|Effectue un comptage total à l'aide de COUNT(*).|  
 |**1**|Effectue un comptage de rapide **sysindexes.rows**. Le décompte de lignes **sysindexes** est beaucoup plus rapide que le décompte de lignes dans la table réelle. Toutefois, étant donné que **sysindexes** est tardivement mis à jour, le nombre de lignes peut être inexact.|  
@@ -98,9 +97,9 @@ sp_table_validation [ @table = ] 'table'
   
  Lors d'une somme de contrôle, la structure de la table doit être identique sur les deux serveurs ; les tables doivent posséder les mêmes colonnes, dans le même ordre, les mêmes types et longueurs de données et les mêmes conditions NULL/NOT NULL. Par exemple, si le serveur de publication a exécuté une instruction CREATE TABLE, puis une instruction ALTER TABLE pour ajouter des colonnes, mais que le script appliqué au niveau de l'Abonné est une simple CREATE TABLE, la structure n'est PAS la même. Si vous n’êtes pas certain que la structure des deux tables est identique, examinez [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) et confirmez que le décalage de chaque table est le même.  
   
- Valeurs à virgule flottante sont susceptibles de générer des différences de somme de contrôle si en mode caractère **bcp** a été utilisé, ce qui est le cas si la publication a non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés. Cela est dû à des erreurs mineures et inévitables de précision lors de la conversion vers le mode caractère et à partir de ce mode.  
+ Valeurs à virgule flottante sont susceptibles de générer des différences de somme de contrôle si en mode caractère **bcp** a été utilisé, ce qui est le cas si la publication a non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés. Cela est dû à des erreurs mineures et inévitables de précision lors de la conversion vers le mode caractère et à partir de ce mode.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter **sp_table_validation**, vous devez disposer des autorisations SELECT sur la table en cours de validation.  
   
 ## <a name="see-also"></a>Voir aussi  

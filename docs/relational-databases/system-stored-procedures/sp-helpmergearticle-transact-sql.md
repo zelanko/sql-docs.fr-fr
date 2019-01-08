@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergearticle
@@ -17,12 +16,12 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98c2d4b7c60ff3229e683d45a6b88ccebaa40c85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a103f309067b5e78024a1687c24bb37bf5c3a8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700777"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779751"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**lui**|**sysname**|Nom du propriétaire de la vue qui définit l'article publié.|  
 |**sync_object**|**sysname**|Nom de l'objet personnalisé utilisé pour établir les données initiales pour la partition.|  
 |**description**|**nvarchar(255)**|Description de l'article|  
-|**status**|**tinyint**|État de l'article, qui peut être l'un des suivants :<br /><br /> **1** = inactif<br /><br /> **2** = active<br /><br /> **5** = opération data definition language (DDL) en attente<br /><br /> **6** = opération DDL avec un instantané nouvellement généré<br /><br /> Remarque : Lorsqu’un article est réinitialisé, les valeurs de **5** et **6** sont modifiés en **2**.|  
+|**status**|**tinyint**|État de l'article, qui peut être l'un des suivants :<br /><br /> **1** = inactif<br /><br /> **2** = active<br /><br /> **5** = opération data definition language (DDL) en attente<br /><br /> **6** = opération DDL avec un instantané nouvellement généré<br /><br /> Remarque : Lorsqu’un article est réinitialisé, les valeurs de **5** et **6** sont modifiés en **2**.|  
 |**creation_script**|**nvarchar(255)**|Chemin d'accès et nom d'un script de schéma d'article facultatif utilisé pour créer l'article dans la base de données d'abonnement.|  
 |**conflict_table**|**nvarchar(270)**|Nom de la table stockant les conflits d'insertion ou de mise à jour.|  
 |**article_resolver**|**nvarchar(255)**|Outil de résolution personnalisé pour l'article|  
@@ -94,7 +93,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>Notes  
  **sp_helpmergearticle** est utilisé dans la réplication de fusion.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **db_owner** fixe du rôle de base de données dans la base de données de publication, le **replmonitor** du rôle dans la base de données de distribution ou de la liste d’accès à une publication peuvent exécuter **sp_helpmergearticle**.  
   
 ## <a name="example"></a>Exemple  

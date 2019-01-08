@@ -18,12 +18,12 @@ ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9e1ccaf9e000779485be93e476f9114817529a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137049"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525558"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Exploration d'un modèle Arbre de décision
   Lorsque vous ouvrez un modèle de classification avec **Parcourir**, le modèle est affiché dans une visionneuse d’arbre de décision interactive semblable à la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse d’arbres de décision dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La visionneuse affiche les résultats de la classification sous la forme d'un graphique qui est conçu pour mettre en évidence les critères qui différencient un groupe de données d'un autre. Vous pouvez également explorer des sous-ensembles individuels de l'arborescence et récupérer les données sous-jacentes.  
@@ -90,15 +90,15 @@ ms.locfileid: "48137049"
   
     -   Âge > = 32 et \< 53 et Yearly Income > = 26000 et enfants = 0  
   
-         Total des cas : 1150  
+         Nombre total de cas : 1150  
   
-         Probabilité d’acheter des vélos : 18 %  
+         Probabilité de l’acheteur de vélo : 18 %  
   
     -   Âge > = 32 et \< 53 et Yearly Income > = 26000 et enfants ne pas = 0 et Marital état = 'Single'  
   
-         Total des cas : 402  
+         Nombre total de cas : 402  
   
-         Probabilité d'acheter un vélo : 16 %  
+         Probabilité de l’acheteur de vélo : 16 %  
   
 7.  Modifiez la valeur de **arrière-plan** de **Oui** à **non** et voir comment le graphique change.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48137049"
   
 -   Si vos données peuvent être divisées en plusieurs séries, un modèle différent est créé pour chaque jeu de données à modéliser.  
   
--   Dans le modèle Exemples de données, il n'existe qu'un résultat prédictible, Bike Buyer. Mais supposez que vous disposiez d'informations indiquant si le client a acheté un plan de services et que vous souhaitiez prédire ces données également. Dans ce cas, vous placeriez ces données dans une colonne distincte et vous incluriez deux attributs prédictibles au modèle.  
+-   Dans l’exemple de modèle de données, il n'existe qu’un seul résultat prévisible - Bike Buyer - mais supposons que vous disposiez d’informations indiquant si le client a acheté un plan de service et souhaitiez prédire ces ainsi. Dans ce cas, vous placeriez ces données dans une colonne distincte et vous incluriez deux attributs prédictibles au modèle.  
   
      Cliquez sur le **histogramme** option, dans le coin supérieur gauche du volet de l’arbre de décision, pour modifier le nombre maximal d’États qui peuvent apparaître dans les histogrammes dans l’arborescence. Cette option est utile si l'attribut prévisible possède de nombreux états. Les états s'affichent dans un histogramme par ordre de fréquence de gauche à droite.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48137049"
   
     -   **Extraire le modèle**. Cette option permet d'obtenir les cas qui appartiennent au nœud sélectionné et de les enregistrer dans un tableau Excel. Vous obtenez uniquement les colonnes de données ayant été réellement utilisées lors de la génération du modèle.  
   
-    -   **Extraction des colonnes de Structure**. Cette option permet d'obtenir les cas qui appartiennent au nœud sélectionné et de les enregistrer dans un tableau Excel. Vous obtenez toutes les informations qui étaient disponibles dans les données sous-jacentes lorsque vous les avez générées, même celles d'une colonne qui n'ont pas été utilisées dans le modèle. Par exemple, vous avez peut-être exclu l'adresse et le code postal du client car ces champs ne sont pas utiles pour l'analyse, mais vous les avez laissés dans la structure.  
+    -   **Extraction des colonnes de Structure**. Cette option permet d'obtenir les cas qui appartiennent au nœud sélectionné et de les enregistrer dans un tableau Excel. Vous obtenez toutes les informations qui étaient disponibles dans sous-jacent lorsque vous les avez générées, même d’une colonne de données n’a pas été utilisées dans le modèle. Par exemple, vous avez peut-être exclu l'adresse et le code postal du client car ces champs ne sont pas utiles pour l'analyse, mais vous les avez laissés dans la structure.  
   
      Revenez dans Excel pour afficher vos données. La visionneuse Parcourir exécute une requête, enregistre les données dans un tableau dans une nouvelle feuille de calcul, puis étiquette les résultats.  
   

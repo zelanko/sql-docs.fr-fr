@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table creation [SQL Server], Visual Database Tools
@@ -13,18 +12,18 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 411599f503b13ed5f6000963da7b25cf73260e7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad54f13fbb939b9ac65f656f37bbba94560da829
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081049"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377431"
 ---
 # <a name="create-tables-database-engine"></a>Créer des tables (moteur de base de données)
   Vous pouvez créer une table, la nommer et l'ajouter à une base de données existante dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Si vous êtes connecté à une base de données SQL Azure, la nouvelle option de table lance un script de création de modèle de table. Modifiez les paramètres, puis exécutez le script pour créer une table. Pour plus d'informations, consultez [SQL Azure Overview (en anglais)](http://go.microsoft.com/fwlink/?LinkId=163948).  
+>  Si vous êtes connecté à une base de données SQL Azure, la nouvelle option de table lance un script de création de modèle de table. Modifiez les paramètres, puis exécutez le script pour créer une table. Pour plus d'informations, consultez [SQL Azure Overview (en anglais)](https://go.microsoft.com/fwlink/?LinkId=163948).  
   
  **Dans cette rubrique**  
   

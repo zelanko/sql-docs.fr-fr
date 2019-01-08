@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server]
@@ -22,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ed7ab99c94a2b6618a97d4e167344b0ca2cb0f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4649f6a5abd9726a1b01e3ed30d6cabf88aef9e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056330"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371821"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocoles réseau et bibliothèques réseau
   Un serveur peut être à l'écoute ou contrôler plusieurs protocoles réseau simultanément. Cependant, chaque protocole doit être configuré. Lorsqu'un protocole spécifique n'est pas configuré, le serveur ne peut pas se placer à l'écoute de ce protocole. Après l'installation, vous pouvez modifier ces configurations de protocole avec le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,16 +34,16 @@ ms.locfileid: "48056330"
 ## <a name="default-sql-server-network-configuration"></a>Configuration réseau par défaut de SQL Server  
  Une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configurée pour le port TCP/IP 1433 et le canal nommé \\\\.\pipe\sql\query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont configurées pour des ports dynamiques TCP, avec un numéro de port attribué par le système d'exploitation.  
   
- Si vous ne pouvez pas utiliser les adresses de port dynamiques (par exemple, lorsque des connexions d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent traverser un serveur pare-feu configuré pour passer des adresses de port spécifiques), sélectionnez un numéro de port non assigné. Les affectations de numéro de port sont gérées par l’IANA (Internet Assigned Numbers Authority) et sont listées dans [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844).  
+ Si vous ne pouvez pas utiliser les adresses de port dynamiques (par exemple, lorsque des connexions d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent traverser un serveur pare-feu configuré pour passer des adresses de port spécifiques), sélectionnez un numéro de port non assigné. Les affectations de numéro de port sont gérées par l’IANA (Internet Assigned Numbers Authority) et sont listées dans [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844).  
   
  Pour renforcer la sécurité, la connectivité réseau n'est pas entièrement activée lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé. Pour activer, désactiver et configurer les protocoles réseau une fois l'installation terminée, utilisez la zone Configuration du réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="server-message-block-protocol"></a>Protocole SMB  
  Les serveurs déployés dans le réseau de périmètre doivent avoir tous les protocoles inutilisés désactivés, y compris le protocole SMB (Server Message Block). Les serveurs Web et les serveurs DNS (Domain Name System) ne nécessitent pas SMB. Ce protocole doit être désactivé pour limiter le risque lié à l'énumération des utilisateurs.  
   
-> [!WARNING]  
+> [!WARNING]
 >  La désactivation du protocole SMB empêchera au service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Windows Cluster d'accéder au partage de fichiers distant. Ne désactivez pas SMB si vous effectuez l'une des opérations suivantes ou si vous planifiez de le faire :  
->   
+> 
 >  -   Utiliser le nœud de cluster Windows et le mode de quorum majoritaire du partage de fichiers.  
 > -   Spécifier un partage de fichiers SMB comme répertoire de données pendant l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 > -   Créer un fichier de base de données sur un partage de fichiers SMB.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
@@ -15,26 +14,26 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca646f4df2976d75ee6665731e5c5641bbb8d982
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176069"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372751"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurer IIS pour la synchronisation web
   Les procédures de cette rubrique constituent la deuxième étape de la configuration de la synchronisation Web pour la réplication de fusion. Cette étape est réalisée après l'activation d'une publication pour la synchronisation Web. Le processus de configuration est présenté dans [Configurer la synchronisation Web](configure-web-synchronization.md). Après avoir terminé les procédures de cette rubrique, poursuivez par la troisième étape, qui est la configuration d'un abonnement pour qu'il utilise la synchronisation Web. Cette troisième étape est décrite dans les rubriques suivantes :  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Guide pratique pour configurer un abonnement qui utilise la synchronisation web \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Comment : Configurer un abonnement pour utiliser la synchronisation Web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Programmation [!INCLUDE[tsql](../../includes/tsql-md.md)] de réplication. [Procédure : configurer un abonnement pour utiliser la synchronisation Web (programmation Transact-SQL de la réplication)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   Programmation de la réplication [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Comment : Configurer un abonnement pour utiliser la synchronisation Web (programmation Transact-SQL)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   Objets RMO. [Procédure : configurer un abonnement pour utiliser la synchronisation Web (programmation RMO)](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO : [Comment : Configurer un abonnement pour utiliser la synchronisation Web (programmation RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  La synchronisation Web utilise un ordinateur exécutant [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) pour synchroniser des abonnements par extraction de données (pull) avec des publications de fusion. IIS version 5.0, IIS version 6.0 et IIS version 7.0 sont pris en charge. L'Assistant Configuration de la synchronisation Web n'est pas pris en charge sur IIS version 7.0.  
   
 > [!IMPORTANT]  
->  Assurez-vous que votre application utilise uniquement [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou une version ultérieure et qu'aucune version antérieure de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] n'est installée sur le serveur IIS. Les versions antérieures de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] peuvent provoquer des erreurs. Il peut s'agir de l'erreur suivante : « Le format d'un message pendant la synchronisation Web n'était pas valide. Vérifiez que les composants de réplication sont correctement configurés sur le serveur Web. »  
+>  Assurez-vous que votre application utilise uniquement [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou une version ultérieure et qu'aucune version antérieure de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] n'est installée sur le serveur IIS. Les versions antérieures de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] peuvent provoquer des erreurs. Ces options en question sont les suivantes : « Le format d'un message pendant la synchronisation Web n'était pas valide. Vérifiez que les composants de réplication sont correctement configurés sur le serveur Web. »  
   
 > [!CAUTION]  
 >  N'utilisez pas WebSync et d'autres emplacements de dossier d'instantanés à la fois.  
@@ -83,7 +82,7 @@ ms.locfileid: "48176069"
   
 4.  Cliquez sur **OK**.  
   
- Si vous ne pouvez pas obtenir de certificat de serveur auprès d'une Autorité de certification, vous pouvez spécifier un certificat de test. Pour configurer IIS 6.0 à des fins de test, installez un certificat à l'aide de l'utilitaire SelfSSL. Cet utilitaire est présent dans le Kit de ressources techniques IIS 6.0. Vous pouvez télécharger les outils à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkId=30958). Pour IIS 5.0, visitez le site [Aide et Support Microsoft](http://go.microsoft.com/fwlink/?LinkId=46229).  
+ Si vous ne pouvez pas obtenir de certificat de serveur auprès d'une Autorité de certification, vous pouvez spécifier un certificat de test. Pour configurer IIS 6.0 à des fins de test, installez un certificat à l'aide de l'utilitaire SelfSSL. Cet utilitaire est présent dans le Kit de ressources techniques IIS 6.0. Vous pouvez télécharger les outils à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=30958). Pour IIS 5.0, visitez le site [Aide et Support Microsoft](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
 > [!NOTE]  
 >  Un certificat doit être associé à un site Web avant que ce dernier puisse utiliser SSL. SelfSSL associe automatiquement le certificat au site Web par défaut. Si vous avez déjà un certificat ou si vous installez plus tard un certificat d'une Autorité de certification, vous devez explicitement associer ce certificat au site Web utilisé par la synchronisation Web. Vérifiez qu'un seul certificat est associé au site Web utilisé pour synchroniser les abonnements. S'il y a plusieurs certificats, l'Abonné utilisera le premier site Web disponible.  
@@ -156,7 +155,7 @@ ms.locfileid: "48176069"
   
     1.  Dans la zone **Alias** , entrez un alias pour le répertoire virtuel.  
   
-    2.  Dans la zone **Chemin d'accès** , entrez un chemin d'accès au répertoire virtuel. Par exemple, si vous avez entré `websync1` dans le **Alias** , entrez `C:\Inetpub\wwwroot\websync1` dans le **chemin d’accès** boîte. Cliquez sur **Suivant**.  
+    2.  Dans la zone **Chemin d'accès** , entrez un chemin d'accès au répertoire virtuel. Par exemple, si vous avez entré `websync1` dans le **Alias** , entrez `C:\Inetpub\wwwroot\websync1` dans le **chemin d’accès** boîte. Cliquer sur **Suivant**.  
   
     3.  Dans les deux boîtes de dialogue, cliquez sur **Oui**. Ceci indique que vous souhaitez créer un nouveau dossier et copier la DLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISAPI (Internet Server API). .  
   
@@ -170,7 +169,7 @@ ms.locfileid: "48176069"
   
 8.  Sur la page **Accès à l'annuaire** :  
   
-    1.  Cliquez sur **Ajouter**puis, dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , ajoutez les comptes sous lesquels les Abonnés établiront des connexions à IIS. Ce sont les comptes que vous spécifiez sur la **informations sur le serveur Web** page de l’Assistant Nouvel abonnement ou en tant que la valeur de la [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) *@internet_login* paramètre.  
+    1.  Cliquez sur **Ajouter**puis, dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , ajoutez les comptes sous lesquels les Abonnés établiront des connexions à IIS. Il s’agit des comptes que vous spécifiez dans la page **Informations sur le serveur Web** de l’Assistant Nouvel abonnement ou via le paramètre [de](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)*@internet_login* .  
   
 9. Sur la page **Accès au partage de fichiers d'instantanés** , entrez le partage d'instantané. Les autorisations appropriées sont définies sur ce partage pour que les Abonnés puissent accéder aux fichiers d'instantanés. Pour plus d’informations sur les autorisations pour le partage, consultez [Sécuriser le dossier d’instantanés](security/secure-the-snapshot-folder.md).  
   
@@ -218,7 +217,7 @@ ms.locfileid: "48176069"
   
 #### <a name="to-configure-iis-authentication"></a>Pour configurer l'authentification IIS  
   
--   Quand des Abonnés se connectent à IIS, IIS doit les authentifier avant qu'ils puissent accéder aux ressources et aux processus. IIS offre trois types d'authentification : anonyme, de base et intégrée. L'authentification peut être appliquée au site Web tout entier ou au répertoire virtuel que vous avez créé.  
+-   Quand des Abonnés se connectent à IIS, IIS doit les authentifier avant qu'ils puissent accéder aux ressources et aux processus. IIS offre trois types d'authentification : anonyme, de base et intégrée. L'authentification peut être appliquée au site Web tout entier ou au répertoire virtuel que vous avez créé.  
   
      Nous vous recommandons d'utiliser l'authentification de base avec SSL. SSL est nécessaire quel que soit le type d'authentification utilisé. Pour plus d'informations sur la configuration de l'authentification, consultez la documentation de IIS.  
   

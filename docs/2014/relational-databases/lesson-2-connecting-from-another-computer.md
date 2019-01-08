@@ -1,24 +1,23 @@
 ---
-title: 'Leçon 2 : Connexion depuis un autre ordinateur | Microsoft Docs'
+title: 'Leçon 2 : Connexion à partir d’un autre ordinateur | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bb12113055da47358baf4c14403c4b95b433cf86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183209"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367191"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>Leçon 2 : Connexion depuis un autre ordinateur
+# <a name="lesson-2-connecting-from-another-computer"></a>Leçon 2 : Connexion depuis un autre ordinateur
   Pour une sécurité optimale, vous ne pouvez pas accéder au [!INCLUDE[ssDE](../includes/ssde-md.md)] des éditions Developer, Express et Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d'un autre ordinateur lors de sa première installation. Dans cette leçon, vous allez apprendre à activer les protocoles et à configurer les ports et le Pare-feu Windows pour la connexion à partir d'autres ordinateurs.  
   
  Cette leçon contient les tâches suivantes :  
@@ -58,7 +57,7 @@ ms.locfileid: "48183209"
  Pour une sécurité optimale, Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]et Windows 7 activent le Pare-feu Windows. Pour vous connecter à cette instance à partir d'un autre ordinateur, vous devez ouvrir un port de communication dans le pare-feu. L'instance par défaut du [!INCLUDE[ssDE](../includes/ssde-md.md)] écoute sur le port 1433 ; par conséquent, vous n'avez pas besoin de configurer un port fixe. Toutefois, les instances nommées incluant [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] sont à l'écoute sur des ports dynamiques. Avant d'ouvrir un port sur le pare-feu, vous devez configurer le [!INCLUDE[ssDE](../includes/ssde-md.md)] pour l'écoute sur un port spécifique appelé port fixe ou port statique ; le [!INCLUDE[ssDE](../includes/ssde-md.md)] peut également écouter sur un port différent à chaque démarrage. Pour plus d’informations sur les pare-feu, les paramètres par défaut du Pare-feu Windows et pour obtenir une description des ports TCP qui affectent le moteur de base de données, Analysis Services, Reporting Services et Integration Services, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
->  Les affectations de numéro de port sont gérées par l’IANA (Internet Assigned Numbers Authority) et sont listées dans [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844). Les numéros de ports attribués doivent être compris entre 49152 à 65535.  
+>  Les affectations de numéro de port sont gérées par l’IANA (Internet Assigned Numbers Authority) et sont listées dans [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844). Les numéros de ports attribués doivent être compris entre 49152 à 65535.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>Pour configurer SQL Server pour l'écoute sur un port spécifique  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48183209"
   
 3.  Dans la boîte de dialogue **Type de règle** , sélectionnez **Port**, puis cliquez sur **Suivant**.  
   
-4.  Dans la boîte de dialogue **Protocoles et ports** , sélectionnez **TCP**. Sélectionnez **Ports locaux spécifiques**, puis tapez le numéro de port de l'instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Tapez 1433 pour l'instance par défaut. Type `49172` si vous configurez une instance nommée et avez configuré un port fixe dans la tâche précédente. Cliquez sur **Suivant**.  
+4.  Dans la boîte de dialogue **Protocoles et ports** , sélectionnez **TCP**. Sélectionnez **Ports locaux spécifiques**, puis tapez le numéro de port de l'instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Tapez 1433 pour l'instance par défaut. Type `49172` si vous configurez une instance nommée et avez configuré un port fixe dans la tâche précédente. Cliquer sur **Suivant**.  
   
 5.  Dans la boîte de dialogue **Action** , sélectionnez **Autoriser la connexion**, puis cliquez sur **Suivant**.  
   
@@ -128,6 +127,6 @@ ms.locfileid: "48183209"
  Cette étape est la dernière de ce didacticiel sommaire sur les notions de connexion de base.  
   
 ## <a name="return-to-tutorials-portal"></a>Revenir au portail des didacticiels  
- [Didacticiel : mise en route du moteur de base de données](tutorial-getting-started-with-the-database-engine.md)  
+ [Didacticiel : Mise en route avec le moteur de base de données](tutorial-getting-started-with-the-database-engine.md)  
   
   

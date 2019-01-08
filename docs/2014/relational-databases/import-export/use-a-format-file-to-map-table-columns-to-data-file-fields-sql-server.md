@@ -13,12 +13,12 @@ ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a35a70da1dac3d6dd2ff5e37f696654960883810
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26db59ba5dbfc6f7be8d827a86dabb1cdd845d03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229019"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371531"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Utiliser un fichier de format pour mapper les colonnes d'une table aux champs d'un fichier de données (SQL Server)
   Il se peut que les champs d'un fichier de données ne soient pas dans le même ordre que les colonnes correspondantes présentes dans la table. Cette rubrique présente les fichiers de format XML et non-XML ayant été modifiés de sorte à accepter un fichier de données dont les champs sont organisés dans un ordre différent de celui des colonnes de la table correspondante. Le fichier de format modifié permet de mapper les champs de données sur les colonnes correspondantes de la table.  
@@ -100,7 +100,7 @@ GO
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -122,7 +122,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 >  Pour plus d’informations sur la syntaxe du schéma XML et pour d’autres exemples de fichiers de format XML, consultez [Fichiers de format XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### <a name="example"></a>Exemple  
- L'exemple suivant utilise le fournisseur d'ensemble de lignes en bloc `OPENROWSET` pour procéder à l'importation du fichier de données `myTestOrder-c.txt` vers l'exemple de table `myTestOrder` à l'aide du fichier de format XML `myTestOrder.xml` . L'instruction `INSERT… SELECT` spécifie la liste de colonnes de la liste de sélection.  
+ L'exemple suivant utilise le fournisseur d'ensemble de lignes en bloc `OPENROWSET` pour procéder à l'importation du fichier de données `myTestOrder-c.txt` vers l'exemple de table `myTestOrder` à l'aide du fichier de format XML `myTestOrder.xml` . L'instruction `INSERT... SELECT` spécifie la liste de colonnes de la liste de sélection.  
   
  Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], exécutez le code suivant :  
   

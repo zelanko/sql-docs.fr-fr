@@ -14,17 +14,17 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c93f9327adf0801898c45a541d935a4d3b34758c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c170fa1b302ccd0a1edec156b3b30429fc2daf8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161880"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365372"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Récupération d'urgence WSFC par le quorum forcé (SQL Server)
   L'échec du quorum est généralement dû à un problème systémique grave, à un échec de communication persistant ou à une mauvaise configuration impliquant plusieurs nœuds dans le cluster WSFC.  Une intervention manuelle est nécessaire pour la récupération d'une défaillance de quorum.  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **Avant de commencer :**  [Conditions préalables](#Prerequisites), [sécurité](#Security)  
   
 -   **Récupération d'urgence WSFC par le quorum forcé** [Récupération d'urgence WSFC par le quorum forcé](#Main)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48161880"
 > [!WARNING]  
 >  L'utilisateur doit bien connaître les concepts et les interactions du clustering de basculement Windows Server, des modèles de quorum WSFC, de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]et de la configuration de déploiement spécifique à l'environnement.  
 >   
->  Pour plus d’informations, consultez :  [Clustering de basculement Windows Server (WSFC) avec SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Modes de quorum WSFC et configuration de vote (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx).  
+>  Pour plus d'informations, consultez :  [Windows Server Clustering de basculement (WSFC) avec SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Modes de Quorum WSFC et Configuration de vote (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> Sécurité  
  L'utilisateur doit être un compte de domaine qui est membre du groupe Administrateurs local sur chaque nœud du cluster WSFC.  
@@ -65,7 +65,7 @@ ms.locfileid: "48161880"
   
      Sur ce nœud, forcez manuellement la mise en ligne du cluster à l'aide de la procédure de quorum forcé.  Pour réduire au minimum la perte de données, sélectionnez le dernier nœud qui hébergeait un réplica principal de groupe de disponibilité.  
   
-     Pour plus d'informations, consultez :  [Forcer un cluster WSFC à démarrer sans quorum](http://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
+     Pour plus d'informations, consultez :  [Forcer un cluster WSFC à démarrer sans quorum](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  L'application d'un quorum forcé bloque les contrôles de quorum sur l'ensemble du cluster jusqu'à ce que le cluster WSFC logique atteigne une majorité des votes et passe automatiquement à un mode d'opération de quorum standard.  
@@ -117,9 +117,9 @@ ms.locfileid: "48161880"
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Afficher les événements et journaux pour un cluster de basculement](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [Afficher les événements et journaux pour un cluster de basculement](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Applets de commande de cluster de basculement Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Applets de commande de cluster de basculement Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  

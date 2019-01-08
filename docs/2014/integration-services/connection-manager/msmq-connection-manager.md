@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], message queues
@@ -16,17 +15,17 @@ ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1501af4a26c0e039df3113a719a61e1e2c3f40a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 015488fc30b364b9f82086acb995df3967eb5b10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135039"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766851"
 ---
 # <a name="msmq-connection-manager"></a>Gestionnaire de connexions MSMQ
   Un gestionnaire de connexions MSMQ permet à un package de se connecter à une file d'attente de messages qui utilise Message Queuing (MSMQ). La tâche MSMQ incluse dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise un gestionnaire de connexions MSMQ.  
   
- Lorsque vous ajoutez un gestionnaire de connexions MSMQ à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée une connexion de gestionnaire qui sera converti en une connexion MSMQ au moment de l’exécution, définit des propriétés du Gestionnaire de la connexion et ajoute le Gestionnaire de connexions à la `Connections` collection sur le package. Le `ConnectionManagerType` propriété du Gestionnaire de connexions est définie sur `MSMQ`.  
+ Lorsque vous ajoutez un gestionnaire de connexions MSMQ à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions qui sera résolu en une connexion MSMQ au moment de l'exécution, définit les propriétés du gestionnaire de connexions et ajoute le gestionnaire de connexions à la collection `Connections` sur le package. La propriété `ConnectionManagerType` du gestionnaire de connexions a pour valeur `MSMQ`.  
   
  Vous pouvez configurer le gestionnaire de connexions MSMQ de plusieurs manières :  
   
@@ -48,10 +47,10 @@ ms.locfileid: "48135039"
   
  Pour plus d’informations sur les propriétés que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Éditeur du gestionnaire de connexions MSMQ](../msmq-connection-manager-editor.md).  
   
- Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programmation](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâche MSMQ](../control-flow/message-queue-task.md)   
- [Integration Services &#40;SSIS&#41; connexions](integration-services-ssis-connections.md)  
+ [Connexions Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97abb785026fa4709e08526e8fb033e97120c97f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efaadce1425de4468056f0df5e3d7106432ca804
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095939"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516097"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Éditeur de tâche MSMQ (page Envoyer)
   Utilisez la page **Envoyer** de la boîte de dialogue **Éditeur de tâche MSMQ** pour configurer une tâche MSMQ afin d'envoyer des messages depuis un package [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -43,7 +43,7 @@ ms.locfileid: "48095939"
  **MessageType**  
  Sélectionnez le type de message : Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Message de fichiers de données**|Le message est stocké dans un fichier. La sélection de cette valeur affiche l'option dynamique **DataFileMessage**.|  
 |**Message de type variable**|Le message est stocké dans une variable. Cette valeur affiche l'option dynamique **VariableMessage**.|  
@@ -53,22 +53,22 @@ ms.locfileid: "48095939"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = Message de fichiers de données  
  **DataFileMessage**  
- Tapez le chemin du fichier de données ou cliquez sur le bouton avec les points de suspension **(…)** et recherchez le fichier.  
+ Tapez le chemin du fichier de données ou cliquez sur le bouton avec les points de suspension **(...)** et recherchez le fichier.  
   
 ### <a name="messagetype--variable-message"></a>MessageType = Message de type variable  
  **VariableMessage**  
- Tapez les noms de variables ou cliquez sur les points de suspension **(…)** et sélectionnez les variables. Les variables sont séparées par des virgules.  
+ Tapez les noms de variables ou cliquez sur les points de suspension **(...)** et sélectionnez les variables. Les variables sont séparées par des virgules.  
   
- **Rubriques connexes :** Sélectionner des variables  
+ **Rubriques connexes :** Sélectionner des variables  
   
 ### <a name="messagetype--string-message"></a>MessageType = Message de type chaîne  
  **StringMessage**  
- Tapez le message de type chaîne ou cliquez sur les points de suspension **(…)** et entrez le message dans la boîte de dialogue **Entrer le message de type chaîne** .  
+ Tapez le message de type chaîne ou cliquez sur les points de suspension **(...)** et entrez le message dans la boîte de dialogue **Entrer le message de type chaîne** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche MSMQ &#40;Page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur de tâche MSMQ &#40;Page recevoir&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de tâche MSMQ &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche MSMQ &#40;page Recevoir&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

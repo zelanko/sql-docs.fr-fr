@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
@@ -25,12 +24,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f3254d3356caefcd7f9e15709702970a9b064e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 244efd95d67f36ae77efb15a6fa62684606db746
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050179"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369765"
 ---
 # <a name="integration-services-ssis-logging"></a>Journalisation d'Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient des modules fournisseur d'informations que vous pouvez utiliser pour implémenter la journalisation dans les packages, les conteneurs et les tâches. Avec la journalisation, vous pouvez capturer des informations d'exécution sur un package qui vous aideront à auditer et à résoudre les problèmes d'un package à chaque exécution. Un journal peut ainsi capturer le nom de l'opérateur ayant exécuté le package et l'heure à laquelle le package a débuté et s'est terminé.  
@@ -97,7 +96,7 @@ ms.locfileid: "48050179"
 |Opérateur|L'identité de l'utilisateur ayant lancé le package.|  
 |SourceName|Le nom du conteneur ou de la tâche dans laquelle l'événement du journal est survenu.|  
 |SourceID|L'identificateur unique du package ; la boucle Foreach, la boucle For ou le conteneur de séquences ; ou la tâche dans laquelle l'événement du journal est survenu.|  
-|ExecutionID|L'identificateur global unique (GUID) de l'instance d'exécution du package.<br /><br /> Remarque : l’exécution d’un package unique peut créer des entrées de journal avec des valeurs différentes pour l’élément ExecutionID. Par exemple, lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la phase de validation peut créer des entrées de journal avec un élément ExecutionID correspondant à [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Toutefois, la phase d'exécution peut créer des entrées de journal avec un élément ExecutionID correspondant à dtshost.exe. Autre exemple : lorsque vous exécutez un package qui contient des tâches d'exécution de package, chacune de ces tâches exécute un package enfant. Ces packages enfants peuvent créer des entrées de journal comportant un élément ExecutionID différent de celui des entrées de journal créées par le package parent.|  
+|ExecutionID|L'identificateur global unique (GUID) de l'instance d'exécution du package.<br /><br /> Remarque : L'exécution d'un package unique peut créer des entrées de journal avec des valeurs différentes pour l'élément ExecutionID. Par exemple, lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la phase de validation peut créer des entrées de journal avec un élément ExecutionID correspondant à [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Toutefois, la phase d'exécution peut créer des entrées de journal avec un élément ExecutionID correspondant à dtshost.exe. Autre exemple : lorsque vous exécutez un package qui contient des tâches d'exécution de package, chacune de ces tâches exécute un package enfant. Ces packages enfants peuvent créer des entrées de journal comportant un élément ExecutionID différent de celui des entrées de journal créées par le package parent.|  
 |MessageText|Un message associé à l'entrée de journal.|  
 |DataBytes|Un tableau d'octets spécifique à l'entrée du journal. La signification de ce champ varie en fonction de l'entrée du journal.|  
   
@@ -148,7 +147,7 @@ ms.locfileid: "48050179"
   
 1.  Activez le package et ses tâches pour la journalisation. La journalisation peut s'effectuer au niveau du package, du conteneur et de la tâche. Vous pouvez spécifier différents journaux pour les packages, conteneurs et tâches.  
   
-2.  Sélectionnez un module fournisseur d'informations et ajoutez un journal pour le package. Les journaux ne peuvent être créés qu'au niveau du package, et une tâche ou un conteneur doit utiliser un des journaux créés pour le package. Chaque journal est associé à l'un des modules fournisseurs d'informations suivants : fichier texte, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], journal des événements Windows ou fichier XML. Pour plus d’informations, consultez [Activer la journalisation des packages dans SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
+2.  Sélectionnez un module fournisseur d'informations et ajoutez un journal pour le package. Les journaux ne peuvent être créés qu'au niveau du package, et une tâche ou un conteneur doit utiliser un des journaux créés pour le package. Chaque journal est associé à l'un des modules fournisseurs d'informations suivants : fichier texte, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], journal des événements Windows ou fichier XML. Pour plus d’informations, consultez [Activer la journalisation des packages dans les outils de données SQL Server](../enable-package-logging-in-sql-server-data-tools.md).  
   
 3.  Sélectionnez les événements et les informations de schéma de journal pour chaque événement que vous voulez capturer dans le journal. Pour plus d’informations, consultez [Configurer la journalisation à l’aide d’un fichier de configuration enregistré](../configure-logging-by-using-a-saved-configuration-file.md).  
   
@@ -199,21 +198,21 @@ ms.locfileid: "48050179"
   
 -   La transformation de la colonne dérivée nommée « Calculate LineItemTotalCost » a passé 356 ms à exécuter des calculs sur les lignes entrantes.  
   
--   La transformation d'agrégation nommée "Sum Quantity and LineItemTotalCost" a passé un total de 220 ms (141 ms dans PrimeOutput et 79 ms dans ProcessInput) à effectuer des calculs et à passer les données à la transformation suivante.  
+-   La transformation d’agrégation nommée « Sum Quantity and LineItemTotalCost » a passé un total de 220 ms (141 ms dans PrimeOutput et 79 ms dans ProcessInput) à effectuer des calculs et à passer les données à la transformation suivante.  
   
 ## <a name="related-tasks"></a>Tâches associées  
  La liste suivante contient des liens vers les rubriques qui indiquent comment effectuer les tâches relatives à la fonctionnalité de journalisation.  
   
--   [Configurer les journaux SSIS, boîte de dialogue](../configure-ssis-logs-dialog-box.md)  
+-   [Boîte de dialogue Configurer les journaux SSIS](../configure-ssis-logs-dialog-box.md)  
   
--   [Activer la journalisation des packages dans SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md)  
+-   [Activer la journalisation des packages dans les outils de données SQL Server](../enable-package-logging-in-sql-server-data-tools.md)  
   
 -   [Activer la journalisation des exécutions de package sur le serveur SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md)  
   
--   [Afficher les entrées de journal dans la fenêtre Journaux d’événements](../view-log-entries-in-the-log-events-window.md)  
+-   [Afficher les entrées de journal dans la fenêtre Journaux d'événements](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- [Outil DTLoggedExec pour un enregistrement complet et détaillé (projet CodePlex)](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [Outil DTLoggedExec pour un enregistrement complet et détaillé (projet CodePlex)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher les entrées de journal dans la fenêtre Journaux d’événements](../view-log-entries-in-the-log-events-window.md)  

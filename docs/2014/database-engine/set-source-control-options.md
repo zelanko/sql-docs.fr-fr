@@ -16,12 +16,12 @@ ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f31c521c7e6bd8229af2a46d0e7a6e1443d3911
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101989"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589893"
 ---
 # <a name="set-source-control-options"></a>Définir les options du contrôle de code source
   Pour pouvoir bénéficier des fonctionnalités du contrôle de code source intégrées à [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], vous devez préalablement configurer les options du contrôle de code source relatives aux différents environnements dans lesquels vous travaillez.  
@@ -83,7 +83,7 @@ ms.locfileid: "48101989"
      Lorsque vous choisissez l'un de ces rôles, les options du contrôle de code source correspondantes sont automatiquement sélectionnées.  
   
      **Conserver les éléments en extraction lors de l’archivage**  
-     Spécifie que les éléments doivent rester extraits à votre niveau lorsque vous procédez à l'archivage d'éléments pour mettre à jour le magasin du contrôle de code source. Si vous souhaitez modifier cette option pour un archivage spécifique, cliquez sur le **Options** flèche dans le **archiver** boîte de dialogue, puis désactivez la **conserver *** extrait** case à cocher.  
+     Spécifie que les éléments doivent rester extraits à votre niveau lorsque vous procédez à l'archivage d'éléments pour mettre à jour le magasin du contrôle de code source. Si vous souhaitez modifier cette option pour un archivage spécifique, cliquez sur le **Options** flèche dans le **archiver** boîte de dialogue, puis désactivez la **conserver extraits** case à cocher.  
   
      **Éléments archivés**  
      Affiche une liste d'options qui spécifient comment [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] doit se comporter lorsque vous tentez de modifier un élément non extrait. Les tableaux suivants décrivent les options disponibles.  

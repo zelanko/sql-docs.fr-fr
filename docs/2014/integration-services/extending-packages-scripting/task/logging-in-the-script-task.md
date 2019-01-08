@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,12 +21,12 @@ ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 425f0bc7cfd35e33c19aff6fda6eab0d3fc7b72e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c46528a51f8dae36b2b47afe2086a6eac1b72428
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212608"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359501"
 ---
 # <a name="logging-in-the-script-task"></a>Journalisation dans la tâche de script
   L’utilisation de la journalisation dans les packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] vous permet d’enregistrer des informations détaillées sur l’avancement, les résultats et les problèmes d’exécution en enregistrant des événements prédéfinis ou des messages définis par l’utilisateur en vue d’une analyse ultérieure. La tâche de script peut utiliser la méthode <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> de l'objet `Dts` pour enregistrer des données définies par l'utilisateur. Si la journalisation est activée et que l’événement **ScriptTaskLogEntry** est sélectionné pour la journalisation sous l’onglet **Détails** de la boîte de dialogue **Configurer les journaux SSIS**, un seul appel à la méthode <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> stocke les informations sur l’événement dans tous les modules fournisseurs d’informations configurés pour la tâche.  
@@ -96,9 +94,9 @@ public class ScriptMain
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   Entrée de blog, [Logging custom events for Integration Services tasks](http://go.microsoft.com/fwlink/?LinkId=165644), sur dougbert.com.  
+-   Entrée de blog, [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=165644), sur dougbert.com.  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Journalisation Integration Services &#40;SSIS&#41;](../../performance/integration-services-ssis-logging.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmieventwatchertask.f1
@@ -16,12 +15,12 @@ ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb074ec8723eb0f8f35df5d32aaebe9122e1bfc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b76916940175e9a3b3acf7c157ffe05d2b2aebf8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203109"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351777"
 ---
 # <a name="wmi-event-watcher-task"></a>Tâche Observateur d'événement WMI
   La tâche Observateur d'événement WMI observe les événements WMI (Windows Management Instrumentation) à l'aide d'une requête d'événement WQL (Windows Management Instrumentation Query Language) pour spécifier les événements dignes d'intérêt. Vous pouvez utiliser la tâche Observateur d'événement WMI pour effectuer les opérations suivantes :  
@@ -39,7 +38,7 @@ ms.locfileid: "48203109"
 -   [Tâche Lecteur de données WMI](wmi-data-reader-task.md)  
   
 ## <a name="wql-queries"></a>Requêtes WQL  
- WQL est un dialecte de SQL avec des extensions qui permettent de prendre en charge la notification d'événement WMI et d'autres fonctionnalités spécifiques à WMI. Pour plus d’informations sur WQL, consultez la documentation Windows Management Instrumentation dans [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553).  
+ WQL est un dialecte de SQL avec des extensions qui permettent de prendre en charge la notification d'événement WMI et d'autres fonctionnalités spécifiques à WMI. Pour plus d'informations sur WQL, consultez la documentation Windows Management Instrumentation dans [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 > [!NOTE]  
 >  Les classes WMI varient d'une version de Windows à l'autre.  
@@ -92,15 +91,15 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche Observateur d’événement WMI &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche Observateur d’événement WMI &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche Observateur d’événement WMI &#40;Page d’Options de WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [Éditeur de tâche Observateur d’événement WMI &#40;page Options WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-wmi-event-watcher-task"></a>Configuration par programmation de la tâche Observateur d'événement WMI  
  Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  

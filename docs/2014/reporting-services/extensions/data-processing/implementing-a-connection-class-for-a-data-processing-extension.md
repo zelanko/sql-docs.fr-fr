@@ -16,12 +16,12 @@ ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: de221897b89a7afb1989cf8a74ab3eafbf58238c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afa72384d94b4a3c7c351d59110bd4ae692b8be9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080729"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367591"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implémentation d'une classe Connection pour une extension pour le traitement des données
   L’objet **Connection** représente une connexion de base de données ou une ressource similaire et représente le point de départ pour les utilisateurs d’une extension pour le traitement des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Il représente des connexions aux serveurs de base de données, bien que toute entité ayant un comportement similaire puisse être exposée comme un objet **Connection**.  
@@ -48,7 +48,7 @@ ms.locfileid: "48080729"
 > [!NOTE]  
 >  L'implémentation implicite de <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> nécessite d'implémenter les membres des interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> et <xref:Microsoft.ReportingServices.Interfaces.IExtension>.  
 >   
->  Pour un exemple d’implémentation de la classe **Connection**, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
+>  Pour un exemple d’implémentation de la classe **Connection**, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Extensions Reporting Services](../reporting-services-extensions.md)   

@@ -14,19 +14,19 @@ ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 915884866ce58346fa1257b6746c35b4f5cddc40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bf07f4e83cb58966b384a4bf0f523b7a1dd3881
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085319"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356337"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>Communication avec SQL Server (ODBC)
   Pour une application ODBC communiquer avec une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elle doit allouer d’environnement et de connexion gère et se connecter à la source de données. Après avoir établi une connexion, l'application peut envoyer des requêtes au serveur et traiter tous les jeux de résultats. Lorsque l'application a terminé d'utiliser la source de données, elle se déconnecte de la source de données et libère le handle de connexion. Lorsque l'application a libéré tous ses handles de connexion, elle libère le handle d'environnement.  
   
  Une application peut se connecter à un nombre quelconque de sources de données. L'application peut utiliser une combinaison de pilotes et de sources de données, le même pilote et une combinaison de sources de données, voire le même pilote et plusieurs connexions à la même source de données.  
   
- Vous pouvez télécharger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC Native Client exemples à partir de la [téléchargements SQL Server](http://go.microsoft.com/fwlink/?LinkId=62796) page sur MSDN.  
+ Vous pouvez télécharger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC Native Client exemples à partir de la [téléchargements SQL Server](https://go.microsoft.com/fwlink/?LinkId=62796) page sur MSDN.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

@@ -11,12 +11,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e5f21211b933bcf0327ba1dbf15703f354225550
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145894"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367751"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Services d'exploration de données et sources de données
   L'exploration de données requiert une connexion à une instance de SQL Server Analysis Services. Les données d’un cube ne sont pas nécessaires pour l’exploration de données et l’utilisation de sources relationnelles est recommandée. Toutefois, l’exploration de données utilise des composants fournis par le moteur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -89,7 +89,7 @@ ms.locfileid: "50145894"
  Vous pouvez également définir des propriétés qui vous permettent de régler le serveur et contrôler la sécurité pour l'utilisation des clients. Pour plus d’informations, consultez [Propriétés de fonctionnalité](../server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Pour plus d’informations sur la prise en charge des algorithmes de plug-in dans les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Pour plus d’informations sur la prise en charge des algorithmes de plug-in dans les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Accès par programmation aux objets d'exploration de données  
  Vous pouvez utiliser les modèles d'objet suivants pour créer une connexion à une base de données Analysis Services et utiliser des objets d'exploration de données :  

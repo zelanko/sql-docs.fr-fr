@@ -14,12 +14,12 @@ ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc3a6bd0929cf8f635247c532acead41a84b36a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2423a011e75d346d196ebe5ebac2597ac30914a1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133919"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374701"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>Certains réplicas synchrones ne sont pas synchronisés
     
@@ -36,7 +36,7 @@ ms.locfileid: "48133919"
  Cette stratégie détermine l'état de synchronisation des données de tous les réplicas de disponibilité et recherche les réplicas de disponibilité qui ne sont pas dans l'état de synchronisation escompté. La stratégie se trouve dans un état non sain lorsqu'aucun réplica asynchrone n'est dans un état SYNCHRONIZING et qu'un réplica synchrone n'est dans un état SYNCHRONIZED. Sinon, l'état de la stratégie est sain.  
   
 > [!NOTE]  
->  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les informations sur les causes et les solutions possibles sont situées sous [Certains réplicas synchrones ne sont pas synchronisés](http://go.microsoft.com/fwlink/p/?LinkId=220853) sur Wiki TechNet.  
+>  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les informations sur les causes et les solutions possibles sont situées sous [Certains réplicas synchrones ne sont pas synchronisés](https://go.microsoft.com/fwlink/p/?LinkId=220853) sur Wiki TechNet.  
   
 ## <a name="possible-causes"></a>Causes possibles  
  Dans ce groupe de disponibilité, au moins un réplica synchrone n'est pas synchronisé actuellement. L'état de synchronisation du réplica peut être SYNCHRONIZING ou NOT SYNCHRONIZING.  

@@ -12,12 +12,12 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8de3870fa115bf8d47917c5855a386e78214b644
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 824479a4fa58e171cee07a3187b85e5a1be94699
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211219"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350301"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>Créer un groupe de disponibilité (SQL Server PowerShell)
   Cette rubrique explique comment utiliser des applets de commande PowerShell pour créer et configurer un groupe de disponibilité AlwaysOn à l'aide de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un *groupe de disponibilité* définit un jeu de bases de données utilisateur qui basculent en tant qu'unité unique et un jeu de partenaires de basculement, appelés *réplicas de disponibilité*, qui prennent en charge le basculement.  
@@ -47,8 +47,8 @@ ms.locfileid: "48211219"
   
 |Tâche|Applets de commande PowerShell (le cas échéant) ou instruction Transact-SQL|Où effectuer la tâche**<sup>*</sup>**|  
 |----------|--------------------------------------------------------------------|-------------------------------------------|  
-|Créer le point de terminaison de mise en miroir de bases de données (une fois par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|`New-SqlHadrEndPoint`|Exécutez sur chaque instance de serveur dans laquelle le point de terminaison de mise en miroir de bases de données est manquant.<br /><br /> Remarque : Pour modifier un point de terminaison de mise en miroir de base de données existante, utilisez `Set-SqlHadrEndpoint`.|  
-|Créer un groupe de disponibilité|En premier lieu, utilisez l'applet de commande `New-SqlAvailabilityReplica` avec le paramètre `-AsTemplate` pour créer un objet réplica de disponibilité en mémoire pour chacun des deux réplicas de disponibilité que vous envisagez d'inclure dans le groupe de disponibilité.<br /><br /> Ensuite, créez le groupe de disponibilité à l’aide de la `New-SqlAvailabilityGroup` applet de commande et en référençant vos objets de réplica de disponibilité.|Exécutez sur l'instance de serveur qui hébergera le réplica principal initial.|  
+|Créer le point de terminaison de mise en miroir de bases de données (une fois par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|`New-SqlHadrEndPoint`|Exécutez sur chaque instance de serveur dans laquelle le point de terminaison de mise en miroir de bases de données est manquant.<br /><br /> Remarque : Pour modifier un point de terminaison de mise en miroir de bases de données existant, utilisez `Set-SqlHadrEndpoint`.|  
+|Créer un groupe de disponibilité|En premier lieu, utilisez l'applet de commande `New-SqlAvailabilityReplica` avec le paramètre `-AsTemplate` pour créer un objet réplica de disponibilité en mémoire pour chacun des deux réplicas de disponibilité que vous envisagez d'inclure dans le groupe de disponibilité.<br /><br /> Puis, créez le groupe de disponibilité en utilisant l'applet de commande `New-SqlAvailabilityGroup` et en référençant vos objets réplica de disponibilité.|Exécutez sur l'instance de serveur qui hébergera le réplica principal initial.|  
 |Joindre le réplica secondaire au groupe de disponibilité|`Join-SqlAvailabilityGroup`|Exécutez sur chaque instance de serveur qui héberge un réplica secondaire.|  
 |Préparer la base de données secondaire|`Backup-SqlDatabase` et `Restore-SqlDatabase`|Créez des sauvegardes sur l'instance de serveur qui héberge le réplica principal.<br /><br /> Restaurez les sauvegardes sur chaque instance de serveur qui héberge un réplica secondaire, à l'aide du paramètre de restauration `NoRecovery`. Si les chemins d'accès de fichier diffèrent entre les ordinateurs qui hébergent le réplica principal et le réplica secondaire cible, utilisez également le paramètre de restauration `RelocateFile`.|  
 |Démarrer la synchronisation des données en joignant chaque base de données secondaire au groupe de disponibilité|`Add-SqlAvailabilityDatabase`|Exécutez sur chaque instance de serveur qui héberge un réplica secondaire.|  
@@ -59,14 +59,14 @@ ms.locfileid: "48211219"
   
 -   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [Obtenir de l'aide sur SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell pour créer et configurer un groupe de disponibilité  
   
 > [!NOTE]  
->  Pour afficher la syntaxe et un exemple d’une applet de commande, utilisez le `Get-Help` applet de commande dans le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] environnement PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Pour afficher la syntaxe et un exemple d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
-1.  Accédez au répertoire (`cd`) à l’instance de serveur qui hébergera le réplica principal.  
+1.  Accédez au répertoire (`cd`) de l'instance de serveur qui héberge le réplica principal.  
   
 2.  Créez un objet réplica de disponibilité en mémoire pour le réplica principal.  
   
@@ -83,17 +83,17 @@ ms.locfileid: "48211219"
   
 7.  Joignez chaque nouvelle base de données secondaire au groupe de disponibilité. Pour plus d’informations, consultez [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-8.  Si vous le souhaitez, utiliser le Windows `dir` commande pour vérifier le contenu du nouveau groupe de disponibilité.  
+8.  Éventuellement, utilisez la commande `dir` Windows pour vérifier le contenu du nouveau groupe de disponibilité.  
   
 > [!NOTE]  
 >  Si les comptes de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des instances serveur s'exécutent sous des comptes utilisateur de domaine différents, sur chaque instance serveur, créez une connexion pour l'autre instance serveur et accordez l'autorisation CONNECT sur le point de terminaison de mise en miroir de bases de données local.  
   
-##  <a name="ExampleConfigureGroup"></a> Exemple : Utilisation de PowerShell pour créer un groupe de disponibilité  
+##  <a name="ExampleConfigureGroup"></a> Exemple : Utilisation de PowerShell pour créer un groupe de disponibilité  
  L'exemple PowerShell suivant crée et configure un groupe de disponibilité simple nommé `MyAG` avec deux réplicas de disponibilité et une base de données de disponibilité. L'exemple :  
   
 1.  Sauvegarde `MyDatabase` et son journal des transactions.  
   
-2.  Restaure `MyDatabase` et sa transaction se connecter à l’aide de la `-NoRecovery` option.  
+2.  Restaure `MyDatabase` et son journal des transactions, à l'aide de l'option `-NoRecovery`.  
   
 3.  Crée une représentation en mémoire du réplica principal, qui sera hébergée par l'instance locale de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (nommée `PrimaryComputer\Instance`).  
   
@@ -219,13 +219,13 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **Blogs :**  
   
-     [AlwaysON - HADRON Learning Series : Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON - HADRON Learning Series : Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Configuration AlwaysOn avec SQL Server PowerShell](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/configuring-alwayson-with-sql-server-powershell.aspx)  
+     [Configuration AlwaysOn avec SQL Server PowerShell](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/configuring-alwayson-with-sql-server-powershell.aspx)  
   
-     [Blogs de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Blogs de l’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](http://blogs.msdn.com/b/psssql/)  
+     [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Vidéos :**  
   
@@ -235,9 +235,9 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **Livres blancs :**  
   
-     [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Livres blancs de Microsoft pour SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Livres blancs de Microsoft pour SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Livres blancs de l'équipe de consultants clients de SQL Server](http://sqlcat.com/)  
   

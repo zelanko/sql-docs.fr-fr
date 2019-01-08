@@ -20,16 +20,16 @@ ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1bd012fc4f3d1e55c27a585600bff7f85459d469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47069f1003b9b3f9bddb1e8601b3b4284372ae7e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844357"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205188"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager, fonction
 **Conformité**  
- Version présenté : ODBC 1.0 : déconseillés dans Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 et versions ultérieures  
+ Version introduite : ODBC 1.0 : Déconseillées dans Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 et versions ultérieures  
   
  **Résumé**  
  **SQLInstallDriverManager** retourne le chemin d’accès du répertoire cible pour l’installation des composants principaux ODBC. Le programme appelant doit copier les fichiers du Gestionnaire de pilotes dans le répertoire cible.  
@@ -74,7 +74,7 @@ BOOL SQLInstallDriverManager(
   
  Si une version antérieure du Gestionnaire de pilotes a été précédemment installée par le programme d’installation d’application, les composants de base doivent être désinstallées et réinstallées, afin que le nombre d’utilisations de composant core n’est valide. **SQLRemoveDriverManager** doit tout d’abord être appelé pour décrémenter le décompte d’utilisation de composant. **SQLInstallDriverManager** doit être appelé pour incrémenter le décompte d’utilisation de composant. Le programme d’installation d’application doit remplacer les anciens fichiers de composant core avec les nouveaux fichiers. Le nombre de l’utilisation de fichiers restent les mêmes, et autres applications qui a utilisé les anciens fichiers de composant core version utilise désormais les fichiers de version plus récente.  
   
- Dans une nouvelle installation des composants principaux ODBC, pilotes et les traducteurs, le programme d’installation d’application doit appeler les fonctions suivantes dans la séquence : **SQLInstallDriverManager**, **SQLInstallDriverEx**, **SQLConfigDriver** (avec un *fréquents* de ODBC_INSTALL_DRIVER), puis **SQLInstallTranslatorEx**. Dans une désinstallation des composants principaux, des pilotes et des traducteurs, le programme d’installation d’application doit appeler les fonctions suivantes dans la séquence : **SQLRemoveTranslator**, **SQLRemoveDriver**, puis **SQLRemoveDriverManager**. Ces fonctions doivent être appelées dans cette séquence. Dans une mise à niveau de tous les composants, toutes les fonctions de désinstallation doivent être appelées dans la séquence et puis toutes les fonctions d’installation doivent être appelées dans la séquence.  
+ Dans une nouvelle installation des composants principaux ODBC, pilotes et les traducteurs, le programme d’installation d’application doit appeler les fonctions suivantes dans la séquence : **SQLInstallDriverManager**, **SQLInstallDriverEx**, **SQLConfigDriver** (avec un *fréquents* de ODBC_INSTALL_DRIVER), puis  **SQLInstallTranslatorEx**. Dans une désinstallation des composants principaux, des pilotes et des traducteurs, le programme d’installation d’application doit appeler les fonctions suivantes dans la séquence : **SQLRemoveTranslator**, **SQLRemoveDriver**, puis **SQLRemoveDriverManager**. Ces fonctions doivent être appelées dans cette séquence. Dans une mise à niveau de tous les composants, toutes les fonctions de désinstallation doivent être appelées dans la séquence et puis toutes les fonctions d’installation doivent être appelées dans la séquence.  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   

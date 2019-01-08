@@ -1,7 +1,8 @@
 ---
-title: Sauvegarder et restaurer une base de données à l’aide d’Azure Data Studio | Microsoft Docs
+title: Sauvegarder et restaurer une base de données
+titleSuffix: Azure Data Studio
 description: Découvrez comment sauvegarder et restaurer une base de données à l’aide d’Azure Data Studio
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2d9b4cbee5ab4da44961927809bf1fb4c771cc1
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 0e6025c59206f48fe6cf5cd5bf5182ea73090bbf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355910"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207128"
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Sauvegarde et restauration à l’aide [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Sauvegarde et restauration de bases de données à l’aide de [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Dans ce didacticiel, vous allez apprendre à utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour :
 > [!div class="checklist"]
@@ -33,10 +34,11 @@ Ce didacticiel requiert le serveur SQL Server *TutorialDB*. Pour créer le *Tuto
 
 - [Se connecter et interroger à l’aide de SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
+Ce didacticiel requiert la connexion à une base de données SQL Server. Base de données SQL Azure a automatisé des sauvegardes, Azure Data Studio ne pas effectuer de sauvegarde de base de données SQL Azure et de restauration. Pour plus d’informations, consultez [en savoir plus sur les sauvegardes automatiques de base de données SQL](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 
 ## <a name="backup-a-database"></a>Sauvegarde une base de données
 
-1. Ouvrez le tableau de bord de base de données TutorialDB (ouvrir le **serveurs** encadré (**CTRL + G**), développez **bases de données**, avec le bouton droit **TutorialDB**, Sélectionnez **gérer**). 
+1. Ouvrez le tableau de bord de base de données TutorialDB (ouvrir le **serveurs** encadré (**CTRL + G**), développez **bases de données**, avec le bouton droit **TutorialDB**, Sélectionnez **gérer**).
 
 2. Ouvrez le **Backup database** boîte de dialogue (cliquez sur **sauvegarde** sur le **tâches** widget).
 
@@ -79,7 +81,7 @@ Après avoir cliqué sur **sauvegarde**, le **Backup database** disparaît de la
    ![restauration](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 
 
-Dans ce didacticiel, vous avez appris comment :
+Dans ce didacticiel, vous avez appris à :
 > [!div class="checklist"]
 > * Sauvegarde une base de données 
 > * Afficher l’état de sauvegarde

@@ -16,12 +16,12 @@ ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4dd5b6f8a241d3173cdca8b03cce4fb9a373b8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34de23fca71f4dc7949a04a36323d19d35826fa9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196039"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359821"
 ---
 # <a name="database-dimension-properties"></a>Propriétés de dimension d'une base de données
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les caractéristiques d’une dimension sont définis par les métadonnées pour la dimension, selon les paramètres de diverses propriétés de dimension et des attributs ou des hiérarchies qui sont contenues par la dimension. Le tableau ci-dessous décrit les propriétés des dimensions dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "48196039"
 |`MiningModelID`|Contient l'identificateur du modèle d'exploration de données à laquelle la dimension d'exploration de données est associée. Cette propriété est applicable seulement si la dimension est une dimension de modèle d'exploration de données.|  
 |`Name`|Spécifie le nom de la dimension.|  
 |`ProactiveCaching`|Définit les paramètres de cache pro-actif pour la dimension.|  
-|`ProcessingGroup`|Spécifie le groupe de traitement. Les valeurs sont ByAttribute ou ByTable. Valeur par défaut est `ByAttribute`.|  
+|`ProcessingGroup`|Spécifie le groupe de traitement. Les valeurs sont ByAttribute ou ByTable. La valeur par défaut est `ByAttribute`.|  
 |`ProcessingMode`|Indique si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] doit créer les index et effectuer l'agrégation lors du traitement ou après celui-ci.|  
 |`ProcessingPriority`|Détermine la priorité de traitement de la dimension lors des opérations en arrière-plan, notamment le traitement en différé des agrégations, de l'indexation ou du clustering.|  
 |`Source`|Identifie la vue de source de données à laquelle la dimension est liée.|  
@@ -51,12 +51,12 @@ ms.locfileid: "48196039"
 |`WriteEnabled`|Indique si l'écriture différée de dimension est disponible (soumise à des autorisations de sécurité).|  
   
 > [!NOTE]  
->  Pour plus d’informations sur la définition des valeurs pour les propriétés ErrorConfiguration et UnknownMember lorsque vous travaillez avec des valeurs null et d’autres problèmes d’intégrité des données, consultez [gestion des problèmes d’intégrité des données dans Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Pour plus d’informations sur la définition des valeurs pour les propriétés ErrorConfiguration et UnknownMember lorsque vous travaillez avec des valeurs null et d’autres problèmes d’intégrité des données, consultez [gestion des problèmes d’intégrité des données dans Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs et hiérarchies d’attributs](attributes-and-attribute-hierarchies.md)   
+ [Attributs et hiérarchies d'attributs](attributes-and-attribute-hierarchies.md)   
  [Hiérarchies utilisateur](user-hierarchies.md)   
  [Relations de dimension](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

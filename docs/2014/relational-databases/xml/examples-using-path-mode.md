@@ -1,5 +1,5 @@
 ---
-title: 'Exemples : utilisation du mode PATH | Microsoft Docs'
+title: 'Exemples : Utilisation du Mode PATH | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec8edb82afec3c8437970c6d3b238b3f68172c46
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1384c2cd84505df59bc458274d0b33071e926f18
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054149"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365731"
 ---
-# <a name="examples-using-path-mode"></a>Exemples : utilisation du mode PATH
+# <a name="examples-using-path-mode"></a>Exemples : Utilisation du mode PATH
   Les exemples suivants montrent comment utiliser le mode PATH pour générer un document XML à partir d'une requête SELECT. Nombre de ces requêtes sont spécifiées par rapport aux documents XML des instructions de fabrication de bicyclettes stockés dans la colonne Instructions de la table ProductModel.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>Spécification d'une requête simple en mode PATH  
@@ -111,7 +111,7 @@ FOR XML PATH ('');
 GO  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<ProductModelID>122</ProductModelID>`  
   
@@ -135,7 +135,7 @@ FOR XML PATH ('ProductModelData');
 GO  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `< ProductModelData id="122">`  
   
@@ -186,12 +186,12 @@ GO
   
  `</Root>`  
   
- Outre l'ID et le nom du modèle de produit, la requête suivante extrait les emplacements des instructions de fabrication du modèle. Étant donné que la colonne Instructions est de `xml` type, le `query()` méthode de `xml` type de données est spécifié pour extraire l’emplacement.  
+ Outre l'ID et le nom du modèle de produit, la requête suivante extrait les emplacements des instructions de fabrication du modèle. Étant donné que la colonne Instructions est de type `xml`, la méthode `query()` de type de données `xml` est spécifiée pour extraire l'emplacement.  
   
 ```  
 SELECT ProductModelID AS "@id",  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ') AS ManuInstr  
 FROM Production.ProductModel  
@@ -210,7 +210,7 @@ GO
   
  `<ManuInstr>`  
   
- `<MI:Location xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
+ `<MI:Location xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
   
  `<MI:step>...</MI:step>...`  
   
@@ -232,7 +232,7 @@ GO
 WITH XMLNAMESPACES (  
    'uri1' AS ns1,    
    'uri2' AS ns2,  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' as MI)  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' as MI)  
 SELECT ProductModelID AS "ns1:ProductModelID",  
        Name           AS "ns1:Name",  
        Instructions.query('  
@@ -244,9 +244,9 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- Notez que le préfixe `MI` est également défini dans `WITH XMLNAMESPACES`. Par conséquent, le `query()` méthode de la `xml` type spécifié ne définit pas le préfixe dans le prologue de la requête. Voici le résultat obtenu :  
+ Notez que le préfixe `MI` est également défini dans `WITH XMLNAMESPACES`. Par conséquent, la méthode `query()` du type `xml` spécifié ne définit pas le préfixe dans le prologue de la requête. Voici le résultat obtenu :  
   
- `<ns1:root xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
+ `<ns1:root xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
  `<ns2:ProductInfo>`  
   
@@ -254,7 +254,7 @@ GO
   
  `<ns1:Name>HL Touring Frame</ns1:Name>`  
   
- `<MI:Location xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
+ `<MI:Location xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
   
  `LaborHours="2.5" LotSize="100" MachineHours="3" SetupHours="0.5" LocationID="10" xmlns="">`  
   
@@ -395,7 +395,7 @@ GO
   
  L'attribut `@xml:lang` ajouté à l'élément <`English`> est défini dans l'espace de noms xml prédéfini.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<Translation>`  
   
@@ -432,7 +432,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData'), root('root');  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<root xmlns="uri2" xmlns:ns1="uri1">`  
   

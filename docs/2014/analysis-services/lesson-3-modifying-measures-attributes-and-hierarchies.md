@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : Modification des mesures, des attributs et des hiérarchies | Microsoft Docs'
+title: 'Leçon 3 : Modification des mesures, attributs et hiérarchies | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f3a8d6ec71017071b77e45644972a5055b232fe0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01122ad03366af6c296046fb2bb91982f02385eb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140309"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377571"
 ---
-# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Leçon 3 : Modification des mesures, des attributs et des hiérarchies
+# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Leçon 3 : Modification des mesures, des attributs et des hiérarchies
   Après avoir défini votre cube initial, vous êtes prêt à améliorer son utilité et sa convivialité. Pour ce faire, ajoutez des hiérarchies qui prennent en charge la navigation et l'agrégation à différents niveaux, appliquez des formats à la mesure spécifique et définissez des calculs et des relations.  
   
 > [!NOTE]  
->  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](http://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projet de ce didacticiel.  
+>  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](https://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projet de ce didacticiel.  
   
  Cette leçon contient les tâches suivantes :  
   

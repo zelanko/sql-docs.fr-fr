@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,12 +21,12 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3665e22ca7e9fb4a04f3cfd46cb5f5af5025ab41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4de6b302a9ce490eaf203c3882ca20436857c858
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197569"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372001"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Développement d'une interface utilisateur pour une tâche personnalisée
   Le modèle objet [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit aux développeurs de tâches personnalisées la capacité de créer facilement une interface utilisateur personnalisée pour une tâche, qui peut ensuite être intégrée et affichée dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. L'interface utilisateur fournit des informations utiles dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] et aide les utilisateurs à configurer correctement les propriétés et les paramètres de la tâche personnalisée.  
@@ -199,7 +197,7 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une tâche personnalisée](creating-a-custom-task.md)   

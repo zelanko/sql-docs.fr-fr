@@ -13,12 +13,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7954c3050f07fd8c727a7f91c18bf343c9b69f2d
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: b9cea2592b0e1c65fd23ccbad6b8235077ed1f2f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018434"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376218"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurer SQL Server sur une installation Server Core
   Cette rubrique fournit des détails sur la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une installation Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. Reportez-vous aux sections suivantes :  
@@ -48,19 +48,19 @@ ms.locfileid: "51018434"
   
  Pour plus d'informations sur la configuration et la gestion d'une installation Server Core à distance, consultez les rubriques suivantes :  
   
--   [Windows Server 2008 R2 : Meilleures pratiques pour les déploiements Server Core](http://go.microsoft.com/fwlink/?LinkID=245957) ()http://go.microsoft.com/fwlink/?LinkID=245957)  
+-   [Windows Server 2008 R2 : Meilleures pratiques pour les déploiements Server Core](https://go.microsoft.com/fwlink/?LinkID=245957) ()https://go.microsoft.com/fwlink/?LinkID=245957)  
   
--   [Configuration d’une installation Server Core : vue d’ensemble](http://go.microsoft.com/fwlink/?LinkId=245958) ()http://go.microsoft.com/fwlink/?LinkId=245958)  
+-   [Configuration d’une installation Server Core : Vue d’ensemble](https://go.microsoft.com/fwlink/?LinkId=245958) ()https://go.microsoft.com/fwlink/?LinkId=245958)  
   
--   [Configuration d’une installation Server Core de Windows Server 2008 R2 avec Sconfig.cmd](http://go.microsoft.com/fwlink/?LinkId=245959) ()http://go.microsoft.com/fwlink/?LinkId=245959)  
+-   [Configuration d’une installation Server Core de Windows Server 2008 R2 avec Sconfig.cmd](https://go.microsoft.com/fwlink/?LinkId=245959) ()https://go.microsoft.com/fwlink/?LinkId=245959)  
   
--   [Installation d’un rôle de serveur sur un serveur exécutant une installation Server Core de Windows Server 2008 R2 : vue d’ensemble](http://go.microsoft.com/fwlink/?LinkId=245960) ()http://go.microsoft.com/fwlink/?LinkId=245960)  
+-   [Installation d’un rôle de serveur sur un serveur exécutant une installation Server Core de Windows Server 2008 R2 : Vue d’ensemble](https://go.microsoft.com/fwlink/?LinkId=245960) ()https://go.microsoft.com/fwlink/?LinkId=245960)  
   
--   [Installation des fonctionnalités de Windows sur un serveur exécutant une installation Server Core de Windows Server 2008 R2 : vue d’ensemble](http://go.microsoft.com/fwlink/?LinkId=245961) ()http://go.microsoft.com/fwlink/?LinkId=245961)  
+-   [Installation de fonctionnalités de Windows sur un serveur exécutant une installation Server Core de Windows Server 2008 R2 : Vue d’ensemble](https://go.microsoft.com/fwlink/?LinkId=245961) ()https://go.microsoft.com/fwlink/?LinkId=245961)  
   
--   [Gestion d’une installation Server Core : vue d’ensemble](http://go.microsoft.com/fwlink/?LinkId=245962) ()http://go.microsoft.com/fwlink/?LinkId=245962)  
+-   [Gestion d’une installation Server Core : Vue d’ensemble](https://go.microsoft.com/fwlink/?LinkId=245962) ()https://go.microsoft.com/fwlink/?LinkId=245962)  
   
--   [Administration d’une installation Server Core](http://go.microsoft.com/fwlink/?LinkId=245963) ()http://go.microsoft.com/fwlink/?LinkId=245963)  
+-   [Administration d’une installation Server Core](https://go.microsoft.com/fwlink/?LinkId=245963) ()https://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="BKMK_InstallSQLUpdates"></a> Installer les mises à jour de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Cette section fournit des informations sur l'installation des mises à jour de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur un ordinateur Windows Server Core. Il est recommandé que les clients évaluent et installent les dernières mises à jour de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en temps voulu pour s'assurer que les systèmes sont à jour avec des mises à jour de sécurité les plus récentes. Pour plus d’informations sur l’installation [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur un ordinateur Windows Server Core, consultez [installer SQL Server 2014 sur Server Core](install-sql-server-on-server-core.md).  
@@ -81,7 +81,7 @@ ms.locfileid: "51018434"
  Spécifiez les paramètres UpdateEnabled et UpdateSource pour inclure les dernières mises à jour du produit à l'installation principale. Reportez-vous à l'exemple suivant pour activer les mises à jour du produit pendant l'exécution du programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 ```tsql  
-Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource=”<SourcePath>” /IACCEPTSQLSERVERLICENSETERMS  
+Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource="<SourcePath>" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
 ###  <a name="bkmk_alreadyInstall"></a> Installation des mises à jour de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] après qu'il a déjà été installé  
@@ -150,7 +150,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enregistre votre modification. Ensuite, vous devez redémarrer manuellement le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela vous permet de choisir l'heure de redémarrage la plus adaptée aux besoins de l'entreprise. Lorsque le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redémarre, AlwaysOn est activé, et la propriété de serveur IsHadrEnabled a la valeur 1.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   Vous devez posséder les droits d'utilisateur appropriés, ou vous devez avoir l'autorisation appropriée sur l'ordinateur cible pour vous connecter à cet ordinateur.  
 > -   Le nom de l'ordinateur que vous gérez apparaît entre parenthèses en regard de Gestion d'ordinateur dans l'arborescence de la console.  
   
@@ -183,7 +183,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
  Effectuez les actions décrites ci-dessous pour configurer l'accès à distance d'une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui s'exécute sur [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1.  
   
 ### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Activer les connexions distantes sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Pour activer les connexions distantes, utilisez SQLCMD.exe localement et exécutez les instructions suivantes sur l'instance de Server Core :  
+ Pour activer les connexions distantes, utilisez SQLCMD.exe localement et exécutez les instructions suivantes sur l'instance de Server Core :  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
   
@@ -206,7 +206,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
  Pour créer des exceptions pour l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le Pare-feu Windows, suivez les étapes spécifiées dans [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Activer TCP/IP sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Le protocole TCP/IP peut être activé via Windows PowerShell pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Server Core. Procédez comme suit :  
+ Le protocole TCP/IP peut être activé via Windows PowerShell pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Server Core. Procédez comme suit :  
   
 1.  Sur un ordinateur qui exécute Windows Server 2008 R2 Server Core SP1, lancez le Gestionnaire des tâches.  
   
@@ -235,7 +235,7 @@ $Tcp
  Pour obtenir des détails supplémentaires sur [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], consultez [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md).  
   
 ##  <a name="BKMK_Auditing"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit  
- Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] à distance pour définir un audit. Une fois l'audit créé et activé, la cible reçoit des entrées. Pour plus d’informations sur la création et la gestion d’audits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [SQL Server Audit &#40Moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+ Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] à distance pour définir un audit. Une fois l'audit créé et activé, la cible reçoit des entrées. Pour plus d’informations sur la création et la gestion d’audits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [SQL Server Audit &#40;Moteur de base de données &#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 ##  <a name="BKMK_CMD"></a> Utilitaires de ligne de commande  
  Vous pouvez utiliser les utilitaires d'invite de commandes suivants pour écrire des opérations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur Server Core. Le tableau suivant contient la liste des utilitaires d'invite de commandes fournis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Server Core :  
@@ -256,7 +256,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Utiliser les outils de dépannage  
  Vous pouvez utiliser l’ [utilitaire SQLdiag](../../tools/sqldiag-utility.md) pour collecter des fichiers journaux et des fichiers de données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et depuis d’autres types de serveurs, mais aussi analyser vos serveurs au fil des jours ou trouver des solutions à des problèmes spécifiques les concernant. SQLdiag a été conçu pour accélérer et simplifier la collecte d'informations de diagnostic pour les services d'assistance Microsoft.  
   
- Vous pouvez lancer l'utilitaire dans l'invite de commandes d'administrateur sur Server Core, à l'aide de la syntaxe spécifiée dans la rubrique : [SQLdiag Utility](../../tools/sqldiag-utility.md).  
+ Vous pouvez lancer l'utilitaire dans l'invite de commandes d'administrateur sur Server Core, à l'aide de la syntaxe spécifiée dans la rubrique : [Utilitaire SQLdiag](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer SQL Server 2014 sur Server Core](install-sql-server-on-server-core.md)   

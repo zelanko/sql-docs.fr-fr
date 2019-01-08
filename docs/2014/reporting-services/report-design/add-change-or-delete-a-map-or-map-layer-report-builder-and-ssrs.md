@@ -28,12 +28,12 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 59a80fcb9fdbd758f1ca76e73d279cdc6b3810d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 619f96921f1fbbaf3d1eec8d2c89a25491b46180
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137625"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364771"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Ajouter, modifier ou supprimer une carte ou une couche (Générateur de rapports et SSRS)
   Une carte est un ensemble de couches. Lorsque vous ajoutez une carte à un rapport, vous définissez la première couche. Vous pouvez créer des couches supplémentaires à l'aide de l'Assistant Couche.  
@@ -57,7 +57,7 @@ ms.locfileid: "48137625"
   
  La zone de la vue cartographique est affichée au bas du volet Carte. Pour modifier le centre ou les options de zoom de la carte, utilisez les touches de direction pour ajuster le centre d'affichage et le curseur pour ajuster le niveau de zoom.  
   
- Pour plus d’informations sur les couches, consultez [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md).  
+ Pour plus d’informations sur les couches, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -82,7 +82,7 @@ ms.locfileid: "48137625"
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Dans la barre d’outils, cliquez sur le bouton **Ajouter une couche** puis, dans la liste déroulante, cliquez sur le type de couche que vous voulez ajouter : **Point**, **Ligne**ou **Polygone**.  
+2.  Dans la barre d’outils, cliquez sur le **ajouter une couche** bouton et dans la liste déroulante, cliquez sur le type de couche que vous souhaitez ajouter : **Point**, **ligne**, ou **polygone**.  
   
     > [!NOTE]  
     >  Bien qu'il soit possible d'ajouter une couche et de la configurer manuellement, nous vous recommandons d'utiliser l'Assistant Couche pour ajouter de nouvelles couches. Pour lancer l’Assistant à partir de la barre d’outils du volet Carte, cliquez sur le bouton de l’Assistant Couche (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
@@ -125,9 +125,9 @@ ms.locfileid: "48137625"
   
 1.  Sélectionnez **Général** dans la boîte de dialogue **Propriétés des points de la carte** pour modifier les options d’étiquette, d’info-bulle et de type de marqueur pour les éléments cartographiques suivants :  
   
-    -   Tous les points dynamiques ou incorporés sur une couche de points. Les règles de couleur, de taille et de type de marqueur relatives aux points remplacent ces options. Pour remplacer des options pour un point incorporé spécifique, utilisez le [carte Embedded Point boîte de dialogue Propriétés, marqueur](../map-embedded-point-properties-dialog-box-marker.md) page.  
+    -   Tous les points dynamiques ou incorporés sur une couche de points. Les règles de couleur, de taille et de type de marqueur relatives aux points remplacent ces options. Pour remplacer les options d’un point incorporé spécifique, utilisez la page [Boîte de dialogue Propriétés des points incorporés de la carte, Marqueur](../map-embedded-point-properties-dialog-box-marker.md) .  
   
-    -   Le point central de tous les polygones dynamiques ou incorporés sur une couche de polygones. Les règles de couleur, de taille et de type de marqueur relatives aux points centraux remplacent ces options. Pour remplacer les options d’un point central spécifique, utilisez la page [Boîte de dialogue Propriétés des points incorporés de la carte, Marqueur](../map-embedded-point-properties-dialog-box-marker.md).  
+    -   Le point central de tous les polygones dynamiques ou incorporés sur une couche de polygones. Les règles de couleur, de taille et de type de marqueur relatives aux points centraux remplacent ces options. Pour remplacer les options d’un point central spécifique, utilisez la page [Boîte de dialogue Propriétés des points incorporés de la carte, Marqueur](../map-embedded-point-properties-dialog-box-marker.md) .  
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48137625"
 4.  Dans **Nom de fichier**, tapez l’emplacement d’un fichier de forme ESRI ou cliquez sur **Parcourir** pour sélectionner un fichier de forme ESRI.  
   
     > [!NOTE]  
-    >  Si le fichier de forme se trouve sur votre ordinateur local, les données spatiales sont incorporées dans la définition de rapport. Pour récupérer les données dynamiquement lors du traitement du rapport, vous devez télécharger le fichier ESRI .shp et son fichier de support .dbf sur le serveur de rapports. Pour plus d’informations, consultez « Procédure : télécharger un fichier ou un rapport (Gestionnaire de rapports) » dans la [section Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) de la documentation en ligne SQL Server.  
+    >  Si le fichier de forme se trouve sur votre ordinateur local, les données spatiales sont incorporées dans la définition de rapport. Pour récupérer les données dynamiquement lors du traitement du rapport, vous devez télécharger le fichier ESRI .shp et son fichier de support .dbf sur le serveur de rapports. Pour plus d’informations, consultez « Comment : Télécharger un fichier ou un rapport (Gestionnaire de rapports) » dans le [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -190,7 +190,7 @@ ms.locfileid: "48137625"
 2.  Dans la barre d’outils, cliquez sur le bouton **Ajouter une couche** puis, dans la liste déroulante, cliquez sur **Couche de mosaïques**.  
   
     > [!NOTE]  
-    >  Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
+    >  Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](https://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
   
 3.  Cliquez avec le bouton droit sur la couche de mosaïques dans le volet Carte, puis sélectionnez **Propriétés des mosaïques**.  
   

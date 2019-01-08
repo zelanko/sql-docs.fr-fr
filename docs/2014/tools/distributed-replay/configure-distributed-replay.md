@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3619426117b6c1bcb17860b9d179716f22ff5c8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39f81a2e2d1762ac60ba34490844b123d3ae8fbe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122512"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376691"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
   Les détails de configuration de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Utility sont spécifiés dans les fichiers XML qui se trouvent sur Distributed Replay Controller, sur les clients et à l'emplacement où l'outil d'administration est installé. Il s'agit des fichiers suivants :  
@@ -28,7 +28,7 @@ ms.locfileid: "48122512"
   
 -   [Fichier de configuration de relecture](#ReplayConfig)  
   
-##  <a name="DReplayController"></a> Fichier de configuration du contrôleur : DReplayController.config  
+##  <a name="DReplayController"></a> Fichier de Configuration du contrôleur : DReplayController.config  
  Lorsque le service Distributed Replay Controller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre, il charge le niveau de journalisation à partir du fichier de configuration du contrôleur, `DReplayController.config`. Ce fichier se trouve dans le dossier où vous avez installé le service Distributed Replay Controller :  
   
  **\<chemin d’installation du contrôleur>\DReplayController.config**  
@@ -49,7 +49,7 @@ ms.locfileid: "48122512"
 </Options>  
 ```  
   
-##  <a name="DReplayClient"></a> Fichier de configuration client : DReplayClient.config  
+##  <a name="DReplayClient"></a> Fichier de Configuration du client : DReplayClient.config  
  Lorsque le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client démarre, il charge des paramètres de configuration à partir du fichier de configuration client, `DReplayClient.config`. Ce fichier se trouve sur chaque client, dans le dossier où vous avez installé le service Distributed Replay Client :  
   
  **\<chemin d’installation du client>\DReplayClient.config**  
@@ -76,7 +76,7 @@ ms.locfileid: "48122512"
 </Options>  
 ```  
   
-##  <a name="PreprocessConfig"></a> Fichier de configuration de prétraitement : DReplay.exe.preprocess.config  
+##  <a name="PreprocessConfig"></a> Fichier de Configuration de prétraitement : DReplay.exe.preprocess.config  
  Lorsque vous utilisez l'outil d'administration pour initialiser l'étape de prétraitement, l'outil d'administration charge les paramètres de prétraitement à partir du fichier de configuration de prétraitement, `DReplay.exe.preprocess.config`.  
   
  Utilisez le fichier de configuration par défaut ou le paramètre **-c** de l’outil d’administration pour spécifier l’emplacement d’un fichier de configuration de prétraitement modifié. Pour plus d’informations sur l’utilisation de l’option de prétraitement de l’outil d’administration, consultez [Option preprocess &#40;outil d’administration Distributed Replay&#41;](preprocess-option-distributed-replay-administration-tool.md).  
@@ -105,7 +105,7 @@ ms.locfileid: "48122512"
 </Options>  
 ```  
   
-##  <a name="ReplayConfig"></a> Fichier de configuration de la relecture : DReplay.exe.replay.config  
+##  <a name="ReplayConfig"></a> Fichier de Configuration de relecture : DReplay.exe.replay.config  
  Lorsque vous utilisez l'outil d'administration pour initialiser l'étape de relecture d'événement, l'outil d'administration charge les paramètres de relecture à partir du fichier de configuration de relecture, `DReplay.exe.replay.config`.  
   
  Utilisez le fichier de configuration par défaut ou le paramètre **-c** de l’outil d’administration pour spécifier l’emplacement d’un fichier de configuration de relecture modifié. Pour plus d’informations sur l’utilisation de l’option de relecture de l’outil d’administration, consultez [Option Replay &#40;outil d’administration Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
@@ -128,7 +128,7 @@ ms.locfileid: "48122512"
 |Échelle de temps de réflexion|`<ThinkTimeScale>`|Est utilisé pour mettre à l'échelle le temps de réflexion en mode simultané (stress).|Entier compris entre `0` et `100`.|Non. Par défaut, la valeur est `100`.|  
 |Utiliser le regroupement de connexions|`<UseConnectionPooling>`|Spécifie si le regroupement de connexions est activé sur chaque client Distributed Replay.|Oui &#124; Non|Oui. Par défaut, la valeur est `Yes`.|  
 |Délai du moniteur d'intégrité|`<HealthmonInterval>`|Indique à quelle fréquence exécuter le moniteur d'intégrité (en secondes).<br /><br /> Cette valeur est utilisée uniquement en mode de synchronisation.|Entier >= 1<br /><br /> (`-1` pour désactiver)|Non. Par défaut, la valeur est `60`.|  
-|Délai de requête|`<QueryTimeout>`|Spécifie la valeur du délai de requête, en secondes. Cette valeur n'est effective que jusqu'à ce que la première ligne soit retournée.|Entier >= 1<br /><br /> (`-1` pour désactiver)|Non. Par défaut, la valeur est `3600`.|  
+|Délai de requête|`<QueryTimeout>`|Spécifie la valeur du délai de requête, en secondes. Cette valeur n'est effective que jusqu'à ce que la première ligne soit retournée.|Entier >= 1<br /><br /> (`-1` pour désactiver)|Non. Par défaut, la valeur est `3600`.|  
 |Threads par client|`<ThreadsPerClient>`|Spécifie le nombre de threads de relecture à utiliser pour chaque client de relecture.|Entier compris entre `1` et `512`.|Non. Si non spécifié, Distributed Replay utilise une valeur de `255`.|  
   
 ### <a name="outputoptions-element"></a>\<OutputOptions > élément  
@@ -164,10 +164,10 @@ ms.locfileid: "48122512"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Options de ligne de l’outil d’administration &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Forum de SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Utilisation de Distributed Replay pour le test de charge de SQL Server – Partie 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Utilisation de Distributed Replay pour le test de charge de SQL Server – Partie 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Forum de SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Utilisation de Distributed Replay pour charger le Test de SQL Server - partie 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Utilisation de Distributed Replay pour le test de charge de SQL Server – Partie 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

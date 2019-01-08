@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: f214f05b-5f0b-4786-b2ad-b8b4b6e58d72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 982c85e919af9ab660032416262a3c8ec607e795
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a45e9b7cb639b0588750fc9b2a9b70a25cd7f0f9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132289"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356905"
 ---
 # <a name="keep-the-locks-configuration-option-default-value"></a>Conserver la valeur par défaut de l'option de configuration locks
   Cette règle vérifie la valeur de l'option de configuration locks (verrous). Cette option détermine le nombre maximal de verrous disponibles et limite ainsi la quantité de mémoire utilisée par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pour les verrous. La valeur par défaut 0 permet à [!INCLUDE[ssDE](../../includes/ssde-md.md)] d’allouer et de libérer des structures de verrous de manière dynamique en fonction des modifications de la configuration requise.  
@@ -38,7 +38,7 @@ EXEC sp_configure 'locks', 0;
   
  [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql)  
   
- [Article 271509 de la Base de connaissances Microsoft](http://go.microsoft.com/fwlink/?linkid=117788)  
+ [Article 271509 de la Base de connaissances Microsoft](https://go.microsoft.com/fwlink/?linkid=117788)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contrôler et appliquer les meilleures pratiques à l'aide de la Gestion basée sur des stratégies](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

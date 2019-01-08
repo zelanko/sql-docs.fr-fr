@@ -14,12 +14,12 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6bf6502b459cf8f81a3137d73402b73ab6b6e9c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05404740b18f28a4c47e791fd321af39be1b757f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182259"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367611"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>Résoudre des problèmes de configuration des groupes de disponibilité AlwaysOn (SQL Server)
   Cette rubrique fournit des informations pour vous aider à résoudre les problèmes courants de configuration des instances de serveur pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Problèmes courants de configuration : [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est désactivé, les comptes sont incorrectement configurés, le point de terminaison de mise en miroir de bases de données n'existe pas, le point de terminaison est inaccessible (erreur SQL Server 1418), l'accès réseau n'existe pas et échec d'une commande de jointure de base de données (erreur SQL Server 35250).  
@@ -133,11 +133,11 @@ ms.locfileid: "48182259"
 ||Sur...|Action|Commentaires|Lien|  
 |------|---------|------------|--------------|----------|  
 |![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Réplica principal actuel|Assurez-vous que l'écouteur du groupe de disponibilité est en ligne.|**Pour vérifier si l'écouteur en ligne :**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **Pour redémarrer un écouteur hors connexion :**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
-|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Réplica principal actuel|Vérifiez que l'option READ_ONLY_ROUTING_LIST contient uniquement les instances de serveur qui hébergent un réplica secondaire accessible en lecture.|**Pour identifier des réplicas secondaires accessibles en lecture :** sys.availability_replicas (colonne**secondary_role_allow_connections_desc** )<br /><br /> **Pour consulter une liste de routage en lecture seule :** sys.availability_read_only_routing_lists<br /><br /> **Pour modifier une liste de routage en lecture seule :** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
-|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque réplica de read_only_routing_list|Assurez-vous que le Pare-feu Windows ne bloque pas le port READ_ONLY_ROUTING_URL.|—|[Configurer un pare-feu Windows pour accéder au moteur de base de données](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
-|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque réplica de read_only_routing_list|Dans le gestionnaire de configuration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vérifiez que :<br /><br /> La connectivité à distance SQL Server est activée.<br /><br /> TCP/IP est activé<br /><br /> Les adresses IP sont configurées correctement.|—|[Afficher ou modifier des propriétés de serveur &#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Configurer un serveur pour écouter un port TCP spécifique &#40;SQL Server Configuration Manager&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque réplica de read_only_routing_list|Vérifiez que READ_ONLY_ROUTING_URL (TCP **://*`system-address`*: *** port*) contient le nom de domaine complet correct (FQDN) et le numéro de port.|—|[Calcul de read_only_routing_url pour AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
-|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Système client|Vérifiez que le pilote client prend en charge le routage en lecture seule.|—|[Connectivité Client AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md)|  
+|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Réplica principal actuel|Vérifiez que l'option READ_ONLY_ROUTING_LIST contient uniquement les instances de serveur qui hébergent un réplica secondaire accessible en lecture.|**Pour identifier des réplicas secondaires accessibles en lecture :** sys.availability_replicas (colonne**secondary_role_allow_connections_desc** )<br /><br /> **Pour consulter une liste de routage en lecture seule :** sys.availability_read_only_routing_lists<br /><br /> **Pour modifier une liste de routage en lecture seule :** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque réplica de read_only_routing_list|Assurez-vous que le Pare-feu Windows ne bloque pas le port READ_ONLY_ROUTING_URL.|-|[Configurer un pare-feu Windows pour accéder au moteur de base de données](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
+|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque réplica de read_only_routing_list|Dans le gestionnaire de configuration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vérifiez que :<br /><br /> La connectivité à distance SQL Server est activée.<br /><br /> TCP/IP est activé<br /><br /> Les adresses IP sont configurées correctement.|-|[Afficher ou modifier des propriétés de serveur &#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Configurer un serveur pour écouter un port TCP spécifique &#40;SQL Server Configuration Manager&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
+|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque réplica de read_only_routing_list|Vérifiez que READ_ONLY_ROUTING_URL (TCP **://*`system-address`*: *** port*) contient le nom de domaine complet correct (FQDN) et le numéro de port.|-|[Calcul de read_only_routing_url pour AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Système client|Vérifiez que le pilote client prend en charge le routage en lecture seule.|-|[Connectivité Client AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -157,11 +157,11 @@ ms.locfileid: "48182259"
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Afficher les événements et journaux pour un cluster de basculement](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [Afficher les événements et journaux pour un cluster de basculement](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Applets de commande de cluster de basculement Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Applets de commande de cluster de basculement Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [Blog de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog de l’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité du transport pour la mise en miroir de base de données et de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,12 +17,12 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f2b36eef7c358fde58316bafc06697c992f3918b
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: a702321888ad49a9ca5e3bea90abdde6924c8dc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461026"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360101"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configuration du composant Script dans l'éditeur de composant de script
   Avant d’écrire du code personnalisé dans le composant Script, vous devez sélectionner le type de composant de flux de données que vous souhaitez créer (source, transformation ou destination), puis configurer les métadonnées et propriétés du composant dans l’**Éditeur de transformation de script**.  
@@ -86,9 +84,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 > [!NOTE]  
 >  Lorsque le **éditeur de Transformation de Script** crée la première sortie, l’éditeur attribue le `SynchronousInputID` propriété de la sortie vers le `ID` de l’entrée du composant. Toutefois, lorsque l'éditeur crée les sorties suivantes, il attribue la valeur zéro aux propriétés `SynchronousInputID` de ces sorties.  
 >   
->  Si vous créez un composant à sorties synchrones, la propriété `SynchronousInputID` de chaque sortie doit avoir comme valeur l'`ID` de l'entrée du composant. Par conséquent, la valeur zéro de la propriété `SynchronousInputID` de chaque sortie créée par l'éditeur après la première sortie doit être remplacée par l'`ID` de l'entrée du composant.  
+>  Si vous créez un composant à sorties synchrones, chaque sortie doit avoir son `SynchronousInputID` propriété définie sur la `ID` de l’entrée du composant. Par conséquent, la valeur zéro de la propriété `SynchronousInputID` de chaque sortie créée par l'éditeur après la première sortie doit être remplacée par l'`ID` de l'entrée du composant.  
 >   
->  Si vous créez un composant à sorties asynchrones, la propriété `SynchronousInputID` de chaque sortie doit avoir la valeur zéro. Par conséquent, la valeur de la propriété `SynchronousInputID` de la première sortie, qui correspond à l'`ID` de l'entrée du composant, doit être remplacée par zéro.  
+>  Si vous créez un composant à sorties asynchrones, la propriété `SynchronousInputID` de chaque sortie doit avoir la valeur zéro. Par conséquent, la première sortie doit avoir son `SynchronousInputID` valeur a été remplacée par la `ID` de l’entrée du composant à zéro.  
   
  Pour obtenir un exemple de direction de lignes vers l’une des deux sorties synchrones dans le composant Script, consultez [Création d’une transformation synchrone à l’aide du composant Script](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md).  
   
@@ -128,7 +126,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  Pour plus d’informations, consultez [Connexion aux sources de données dans le composant Script](connecting-to-data-sources-in-the-script-component.md).  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Codage et débogage du composant Script](coding-and-debugging-the-script-component.md)  

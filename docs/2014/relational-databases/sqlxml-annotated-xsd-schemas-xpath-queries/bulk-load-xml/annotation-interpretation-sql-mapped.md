@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapped annotation
@@ -19,15 +17,15 @@ ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16d6d22d2bd37d6f826878a5abd0bc235c3de83a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14934b2b4c98b09a6596887dc2b4ced7ec04dd65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109099"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807271"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  Processus de chargement en masse XML le `sql:mapped` annotation dans le schéma XSD comme prévu : autrement dit, si le schéma de mappage spécifie `sql:mapped="false"` pour n’importe quel élément ou l’attribut, le chargement en masse XML ne tente pas stocker les données associées dans la colonne correspondante.  
+  Processus de chargement en masse XML le `sql:mapped` annotation dans le schéma XSD comme prévu que, si le schéma de mappage spécifie est `sql:mapped="false"` pour n’importe quel élément ou l’attribut, le chargement en masse XML ne tente pas stocker les données associées dans la colonne correspondante.  
   
  Le chargement en masse XML ignore les éléments et les attributs qui ne sont pas mappés (soit parce qu'ils ne sont pas décrits dans le schéma, soit parce qu'ils sont annotés dans le schéma XSD avec `sql:mapped="false"`). Toutes les données non mappées vont dans la colonne de dépassement de capacité, si une telle colonne est spécifiée à l'aide de `sql:overflow-field`.  
   
@@ -84,7 +82,7 @@ ms.locfileid: "48109099"
     </ROOT>  
     ```  
   
-4.  Pour exécuter le chargement en masse XML, enregistrez cet exemple [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) sous le nom Sample.vbs et exécutez-le :  
+4.  Pour exécuter le chargement en masse XML, enregistrez cet exemple [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) sous le nom Sample.vbs et exécutez-le :  
   
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  

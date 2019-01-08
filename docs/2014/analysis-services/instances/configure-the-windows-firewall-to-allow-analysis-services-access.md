@@ -15,12 +15,12 @@ ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9073dddaf2a992ae5b735a7884bfaaa278f9d049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c5066a27097bb0919a6d0af0ffa9ad1c53e8624
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068929"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371161"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services
   Une première étape essentielle pour mettre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] à disposition sur le réseau consiste à déterminer si vous devez débloquer des ports dans un pare-feu. La plupart des installations nécessitent la création d'au moins une règle de trafic entrant dans le pare-feu qui autorise les connexions à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "48068929"
   
 -   Pour [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, n'ouvrez pas les ports du Pare-feu Windows. En tant que complément de SharePoint, le service utilise les ports configurés pour SharePoint et établit uniquement des connexions locales à l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui charge et interroge les modèles de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
--   Pour les instances [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant sur des ordinateurs virtuels Windows Azure, utilisez d'autres instructions pour configurer l'accès au serveur. Consultez [Business Intelligence de SQL Server dans les ordinateurs virtuels Windows Azure](http://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
+-   Pour les instances [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant sur des ordinateurs virtuels Windows Azure, utilisez d'autres instructions pour configurer l'accès au serveur. Consultez [Business Intelligence de SQL Server dans les ordinateurs virtuels Windows Azure](https://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
   
  Bien que l’instance par défaut de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] écoute sur le port TCP 2383, vous pouvez configurer le serveur pour écouter sur un port fixe différent, la connexion au serveur au format suivant : \<nom_serveur > :\<numéro_port >.  
   
@@ -60,15 +60,15 @@ ms.locfileid: "48068929"
 ##  <a name="bkmk_checkport"></a> Vérifier les paramètres des ports et du pare-feu utilisés par Analysis Services  
  Sur les systèmes d'exploitation Microsoft Windows pris en charge par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le Pare-feu Windows est activé par défaut et bloque les connexions à distance. Vous devez ouvrir manuellement un port dans le Pare-feu pour autoriser les demandes entrantes à destination d'Analysis Services. Le programme d'installation de SQL Server n'effectue pas cette étape pour vous.  
   
- Le paramétrage des ports s'effectue dans le fichier msmdsrv.ini et dans SQL Server Management Studio, dans la page Propriétés générales d'une instance d'Analysis Services. Si `Port` est défini à un entier positif, le service écoute sur un port fixe. Si `Port` est définie sur 0, le service écoute sur le port 2383 s’il s’agit de l’instance par défaut ou sur un port affecté dynamiquement s’il est une instance nommée.  
+ Le paramétrage des ports s'effectue dans le fichier msmdsrv.ini et dans SQL Server Management Studio, dans la page Propriétés générales d'une instance d'Analysis Services. Si la valeur de `Port` est un entier positif, le service écoute un port fixe. Si la valeur de `Port` est 0, le service écoute le port 2383 s'il s'agit de l'instance par défaut ou un port affecté dynamiquement s'il s'agit d'une instance nommée.  
   
  Les affectations de ports dynamiques ne sont utilisées que par les instances nommées. Le service `MSOLAP$InstanceName` détermine le port à utiliser lorsqu'il démarre. Pour connaître le port qu'utilise effectivement une instance nommée, vous pouvez procéder comme suit :  
   
 -   Démarrer le Gestionnaire des tâches, puis **Services** pour obtenir le PID de le `MSOLAP$InstanceName`.  
   
--   Exécutez `netstat –ao –p TCP` à partir de la ligne de commande pour afficher les informations de port TCP relatives à ce PID.  
+-   Exécutez `netstat -ao -p TCP` à partir de la ligne de commande pour afficher les informations de port TCP relatives à ce PID.  
   
--   Vérifiez le port à l’aide de SQL Server Management Studio et connectez-vous à un serveur Analysis Services dans ce format : \<IPAddress > :\<numéro_port >.  
+-   Vérifier le port à l’aide de SQL Server Management Studio et connectez-vous à un serveur Analysis Services dans ce format : \<Adresse IP > :\<numéro_port >.  
   
  Bien qu'une application puisse être à l'écoute d'un port spécifique, les connexions échouent si un pare-feu bloque l'accès. Pour que des connexions atteignent une instance nommée d'Analysis Services, vous devez débloquer l'accès à msmdsrv.exe ou au port fixe du pare-feu sur lequel s'effectue l'écoute. Les sections suivantes de cette rubrique fournissent des instructions à cet effet.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48068929"
   
  Si vous ne pouvez pas utiliser le service SQL Server Browser, vous devez affecter un port fixe dans la chaîne de connexion, qui ignore la résolution des noms de domaine. En l'absence du service SQL Server Browser, toutes les connexions client doivent inclure le numéro de port dans la chaîne de connexion (par exemple, AW-SRV01:54321).  
   
- **Option n°1 : utilisez les affectations de port dynamiques et débloquez l'accès au service SQL Server Browser**  
+ **Option 1 : Utiliser les affectations de ports dynamiques et débloquez l’accès au service SQL Server Browser**  
   
  Les affectations de ports dynamiques pour les instances nommées d'Analysis Services sont établies par le service `MSOLAP$InstanceName` lorsqu'il démarre. Par défaut, le service revendique le premier numéro de port disponible qu'il trouve, et utilise un numéro de port différent chaque fois qu'il est redémarré.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "48068929"
   
 8.  Pour vérifier que les connexions distantes sont activées, ouvrez SQL Server Management Studio ou Excel sur un autre ordinateur et connectez-vous à Analysis Services en spécifiant le nom de réseau du serveur et le nom de l’instance au format suivant : \<nom_serveur > \\< nom_instance\>. Par exemple, sur un serveur nommé **AW-SRV01** avec une instance nommée **Finance**, le nom du serveur sera **AW-SRV01\Finance**.  
   
- **Option n°2 : utilisez un port fixe pour une instance nommée**  
+ **Option 2 : Utiliser un port fixe pour une instance nommée**  
   
  L'alternative consiste à désigner un port fixe et à débloquer l'accès à ce port. L'avantage de cette approche est qu'elle offre de plus grandes possibilités en termes d'audit si vous autorisez l'accès au fichier exécutable de programme. L'utilisation d'un port fixe est de ce fait l'approche recommandée pour accéder à toute instance Analysis Services.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "48068929"
   
 1.  Identifiez un port TCP/IP disponible à utiliser.  
   
-     Pour afficher la liste des ports réservés et enregistrés que vous ne devez pas utiliser, consultez les [numéros de port (IANA)](http://go.microsoft.com/fwlink/?LinkID=198469)(en anglais). Pour afficher la liste des ports déjà utilisés par votre système, ouvrez une fenêtre d'invite de commandes et tapez `netstat –a –p TCP` pour afficher la liste des ports TCP ouverts sur le système.  
+     Pour afficher la liste des ports réservés et enregistrés que vous ne devez pas utiliser, consultez les [numéros de port (IANA)](https://go.microsoft.com/fwlink/?LinkID=198469)(en anglais). Pour afficher la liste des ports déjà utilisés par votre système, ouvrez une fenêtre d'invite de commandes et tapez `netstat -a -p TCP` pour afficher la liste des ports TCP ouverts sur le système.  
   
 2.  Après avoir déterminé quel port utiliser, spécifiez-le en modifiant le paramètre de configuration `Port` dans le fichier msmdsrv.ini ou dans la page Propriétés générales d'une instance d'Analysis Services dans SQL Server Management Studio.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "48068929"
 5.  Vérifiez en vous connectant localement (dans Management Studio), puis à distance à partir d'une application cliente sur un autre ordinateur. Pour utiliser Management Studio, connectez-vous à une instance par défaut de Analysis Services en spécifiant un nom de serveur au format suivant : \<nom_serveur > :\<numéro_port >. Pour une instance nommée, spécifiez le nom du serveur en tant que \<nom_serveur >\\< nom_instance\>.  
   
 ##  <a name="bkmk_cluster"></a> Configuration de port pour un cluster Analysis Services  
- Un cluster de basculement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] écoute toujours sur le port TCP 2383, que vous l'ayez installé comme instance par défaut ou comme instance nommée. Les affectations de ports dynamiques ne sont pas utilisées par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lorsqu'il est installé sur un cluster de basculement Windows. Veillez à ouvrir le port TCP 2383 sur chaque nœud en exécutant [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans le cluster. Pour plus d'informations sur le clustering [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Procédure : mettre en cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ Un cluster de basculement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] écoute toujours sur le port TCP 2383, que vous l'ayez installé comme instance par défaut ou comme instance nommée. Les affectations de ports dynamiques ne sont pas utilisées par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lorsqu'il est installé sur un cluster de basculement Windows. Veillez à ouvrir le port TCP 2383 sur chaque nœud en exécutant [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans le cluster. Pour plus d'informations sur le clustering [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Procédure : mettre en cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ##  <a name="bkmk_powerpivot"></a> Configuration du port pour PowerPivot pour SharePoint  
  L'architecture du serveur pour [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est fondamentalement différente selon la version de SharePoint que vous utilisez.  
@@ -230,7 +230,7 @@ ms.locfileid: "48068929"
   
  **SharePoint 2010**  
   
- Si vous utilisez SharePoint 2010, il n'est pas nécessaire que vous ouvriez des ports dans le Pare-feu Windows. SharePoint ouvre les ports nécessaires, et les compléments, tels que PowerPivot pour SharePoint, fonctionnent dans l'environnement SharePoint. Dans une installation PowerPivot pour SharePoint 2010, le service système PowerPivot a l'usage exclusif de l'instance du service SQL Server Analysis Services (PowerPivot) local, qui est installée avec elle sur le même ordinateur. Il utilise des connexions locales, et non réseau, pour accéder au service du moteur Analysis Services qui charge, interroge et traite les données PowerPivot sur le serveur SharePoint. Les demandes de données PowerPivot aux applications clientes sont routées via les ports ouverts par le programme d'installation de SharePoint (en particulier, les règles de trafic entrant sont définies de façon à autoriser l'accès à SharePoint – 80, à l'Administration centrale de SharePoint v4, aux services Web SharePoint et à SPUserCodeV4). Étant donné que les services Web PowerPivot fonctionnent dans une batterie de serveurs SharePoint, les règles de pare-feu SharePoint suffisent pour l'accès à distance aux données PowerPivot d'une batterie de serveurs SharePoint.  
+ Si vous utilisez SharePoint 2010, il n'est pas nécessaire que vous ouvriez des ports dans le Pare-feu Windows. SharePoint ouvre les ports nécessaires, et les compléments, tels que PowerPivot pour SharePoint, fonctionnent dans l'environnement SharePoint. Dans une installation PowerPivot pour SharePoint 2010, le service système PowerPivot a l'usage exclusif de l'instance du service SQL Server Analysis Services (PowerPivot) local, qui est installée avec elle sur le même ordinateur. Il utilise des connexions locales, et non réseau, pour accéder au service du moteur Analysis Services qui charge, interroge et traite les données PowerPivot sur le serveur SharePoint. Pour demander des données PowerPivot à partir d’applications clientes, les demandes sont routées via les ports sont ouverts par le programme d’installation de SharePoint (en particulier, les règles de trafic entrant sont définies pour autoriser l’accès à SharePoint - 80, l’Administration centrale de SharePoint v4, les Services Web SharePoint et à SPUserCodeV4). Étant donné que les services Web PowerPivot fonctionnent dans une batterie de serveurs SharePoint, les règles de pare-feu SharePoint suffisent pour l'accès à distance aux données PowerPivot d'une batterie de serveurs SharePoint.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Service SQL Server Browser &#40;moteur de base de données et SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   

@@ -21,12 +21,12 @@ ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b79afdc8917e3a14055b8ada17cbd3d57a8c9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0979892b6770b9a9c2d0d9c4e8a0d734d873c085
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186409"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766041"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mappage de type de données dans les ensembles de lignes et les paramètres
   Dans les ensembles de lignes et en tant que valeurs de paramètre, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif représente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données à l’aide suivante OLE DB définis les types de données, signalés dans les fonctions **IColumnsInfo::GetColumnInfo** et  **ICommandWithParameters::GetParameterInfo**.  
@@ -68,7 +68,7 @@ ms.locfileid: "48186409"
  Les objets **sql_variant** peuvent contenir des données de n’importe quel type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sauf text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp et les types CLR (Common Language Runtime) du Microsoft .NET Framework définis par l’utilisateur. sql_variant ne peut pas être le type de données de base sous-jacent d'une instance de données sql_variant. Par exemple, la colonne peut contenir des valeurs **smallint** pour certaines lignes, des valeurs **float** pour d’autres lignes et des valeurs **char**/**nchar** dans le reste.  
   
 > [!NOTE]  
->  Le type de données **sql_variant** est similaire au type de données Variant dans Microsoft Visual Basic® et à DBTYPE_VARIANT, DBTYPE_SQLVARIANT dans OLE DB.  
+>  Le **sql_variant** type de données est similaire au type de données Variant dans Microsoft Visual Basic ?? et à DBTYPE_VARIANT, DBTYPE_SQLVARIANT dans OLEDB.  
   
  Quand des données **sql_variant** sont extraites en tant que DBTYPE_VARIANT, elles sont placées dans une structure VARIANT dans la mémoire tampon. Cependant, les sous-types dans la structure VARIANT peuvent ne pas être mappés aux sous-types définis dans le type de données **sql_variant**. Les données **sql_variant** doivent ensuite être extraites en tant que DBTYPE_SQLVARIANT pour que tous les sous-types correspondent.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48186409"
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|Type : VT_BOOL<br /><br /> Lecture/écriture : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : détermine si les données sont extraites en tant que DBTYPE_VARIANT ou DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE : le type de colonne est retourné en tant que DBTYPE_SQLVARIANT, auquel cas la mémoire tampon contient la structure SSVARIANT.<br /><br /> VARIANT_FALSE : le type de colonne est retourné en tant que DBTYPE_VARIANT et la mémoire tampon a la structure VARIANT.|  
+|SSPROP_ALLOWNATIVEVARIANT|Type : VT_BOOL<br /><br /> R/W (Lecture/écriture) : Lecture/Écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Détermine si les données sont extraites en tant que DBTYPE_VARIANT ou DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE : Type de colonne est retourné en tant que DBTYPE_SQLVARIANT dans lequel cas la mémoire tampon contiendra une structure SSVARIANT.<br /><br /> VARIANT_FALSE : Type de colonne est retourné en tant que DBTYPE_VARIANT et la mémoire tampon a la structure VARIANT.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Types de données &#40;OLE DB&#41;](data-types-ole-db.md)  

@@ -1,33 +1,32 @@
 ---
-title: 'Étape 2 : Ajout et configuration d’un gestionnaire de connexions de fichiers plats | Microsoft Docs'
+title: 'Étape 2 : Ajout et configuration d’un gestionnaire de connexions de fichier plat | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2d22c652ce63bfc3069756251ff554a5d13c186
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88ee64782479e0ffed967485372dea8eae775430
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197349"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362661"
 ---
-# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Étape 2 : ajout et configuration d'un gestionnaire de connexions de fichiers plats
+# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Étape 2 : Ajout et configuration d'un Gestionnaire de connexions de fichiers plats
   Dans cette tâche, vous ajoutez un gestionnaire de connexions de fichiers plats au package que vous venez de créer. Un gestionnaire de connexions de fichiers plats permet à un package d'extraire des données d'un fichier plat. Grâce à ce Gestionnaire, vous pouvez spécifier le nom et l'emplacement du fichier, les paramètres régionaux et la page de codes et enfin, le format du fichier, y compris les séparateurs de colonnes, à appliquer lorsque le package extrait les données du fichier plat. Par ailleurs, vous pouvez spécifier manuellement le type de données pour les colonnes individuelles ou utiliser la boîte de dialogue **Suggérer les types de colonnes** pour mapper automatiquement les colonnes de données extraites aux types de données [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Vous devez créer un nouveau gestionnaire de connexions de fichiers plats pour chaque format de fichier utilisé. Étant donné que ce didacticiel extrait des données à partir de plusieurs fichiers plats qui ont exactement le même format de données, il vous faudra ajouter et configurer un seul gestionnaire de connexions de fichiers plats uniquement pour votre package.  
   
  Pour les besoins de ce didacticiel, vous allez configurer les propriétés suivantes dans votre gestionnaire de connexions de fichiers plats :  
   
--   **Noms des colonnes :** étant donné que le fichier plat ne contient pas de noms de colonnes, le gestionnaire de connexions de fichiers plats crée des noms de colonnes par défaut. Ces noms par défaut ne servent pas à identifier ce que représente chaque colonne. Pour que ces noms par défaut soient plus significatifs, vous devez les remplacer par ceux qui correspondent à la table de faits dans laquelle les données du fichier plat doivent être chargées.  
+-   **Noms de colonnes :** Car le fichier plat ne dispose pas de noms de colonnes, le Gestionnaire de connexions de fichiers plats crée des noms de colonnes par défaut. Ces noms par défaut ne servent pas à identifier ce que représente chaque colonne. Pour que ces noms par défaut soient plus significatifs, vous devez les remplacer par ceux qui correspondent à la table de faits dans laquelle les données du fichier plat doivent être chargées.  
   
--   **Mappages des données :** les mappages des types de données que vous spécifiez pour le gestionnaire de connexions de fichiers plats sont utilisés par tous les composants des sources de données de fichiers plats qui font référence au Gestionnaire de connexions. Vous pouvez choisir de mapper les types de données manuellement en utilisant le gestionnaire de connexions de fichiers plats ou bien d’utiliser la boîte de dialogue **Suggérer les types de colonnes** . Dans ce didacticiel, vous visualisez les mappages suggérés dans la boîte de dialogue **Suggérer les types de colonnes** , puis vous créez manuellement les mappages nécessaires dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** .  
+-   **Mappages de données :** Les mappages de types de données que vous spécifiez pour le Gestionnaire de connexions de fichiers plats seront utilisés par tous les composants de source de données fichier plat qui référencent le Gestionnaire de connexions. Vous pouvez choisir de mapper les types de données manuellement en utilisant le gestionnaire de connexions de fichiers plats ou bien d’utiliser la boîte de dialogue **Suggérer les types de colonnes** . Dans ce didacticiel, vous visualisez les mappages suggérés dans la boîte de dialogue **Suggérer les types de colonnes** , puis vous créez manuellement les mappages nécessaires dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** .  
   
  Le gestionnaire de connexions de fichiers plats fournit des informations de paramètres régionaux sur le fichier de données. Si votre ordinateur n’est pas configuré pour l’utilisation des paramètres régionaux Anglais (États-Unis), vous devez définir des propriétés supplémentaires dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** .  
   
@@ -43,7 +42,7 @@ ms.locfileid: "48197349"
   
      Ces données exemple sont incluses dans les packages de leçons [!INCLUDE[ssIS](../includes/ssis-md.md)] . Pour télécharger ces exemples de données et les packages de leçons, procédez comme suit.  
   
-    1.  Accédez à [Exemples de produits Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Accédez à [Exemples de produits Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48197349"
     |----------------------|--------------------|------------------------|----------------------|  
     |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Date|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
      Le type de données suggéré pour le `CurrencyID` colonne n’est pas compatible avec le type de données du champ dans la table de destination. Étant donné que le type de données de `DimCurrency.CurrencyAlternateKey` est de type nchar (3), `CurrencyID` doit être modifié à partir de la chaîne [DT_STR] chaîne [DT_WSTR]. En outre, le champ `DimDate.FullDateAlternateKey` est défini comme un type de données date ; par conséquent, `CurrencyDate` doit être modifiée à partir de la date [DT_Date] en date de base de données [DT_DBDATE].  
@@ -100,7 +99,7 @@ ms.locfileid: "48197349"
 4.  Cliquez sur **OK**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 3 : Ajout et configuration d’un gestionnaire de connexions OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+ [Étape 3 : Ajout et configuration d’un gestionnaire de connexions OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flat File Connection Manager](connection-manager/file-connection-manager.md)   

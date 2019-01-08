@@ -15,12 +15,12 @@ ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b2840a8c4f756ce26c5e915af6860929354bae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58764334a6ee1902a09941e9fc9bb9723e517cdf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178459"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363841"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Planifier une actualisation des données (PowerPivot pour SharePoint)
   Vous pouvez planifier l'actualisation des données pour obtenir des mises à jour automatiques des données PowerPivot figurant dans un classeur Excel que vous avez publié sur un site SharePoint.  
@@ -47,7 +47,7 @@ ms.locfileid: "48178459"
   
  La source de données ne peut pas être un document Office ou une base de données Access. Office ne prend pas en charge l'utilisation des composants de connectivité des données Office dans un environnement serveur. Si votre classeur contient des données de ces sources, veillez à les supprimer de la liste des sources de données dans votre planification d'actualisation des données.  
   
- Le classeur doit être de version [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Si vous utilisez des classeurs créés dans la version précédente de PowerPivot pour Excel, l'actualisation des données de planification ne fonctionnera que lorsque vous aurez effectué la mise à niveau de la base de données vers la version la plus récente.  
+ Le classeur doit être de version [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] . Si vous utilisez des classeurs créés dans la version précédente de PowerPivot pour Excel, l'actualisation des données de planification ne fonctionnera que lorsque vous aurez effectué la mise à niveau de la base de données vers la version la plus récente.  
   
  Le classeur doit être archivé au moment où l'opération d'actualisation se termine. Un verrou sur le classeur est placé sur le fichier à la fin de l'actualisation des données, lorsque le fichier est enregistré, plutôt que lors du démarrage de l'actualisation.  
   
@@ -154,10 +154,10 @@ ms.locfileid: "48178459"
   
  Si un message d'état inattendu s'affiche (indiquant par exemple qu'une opération d'actualisation a échoué ou a été annulée), vous pouvez étudier le problème en vérifiant les autorisations et la disponibilité du serveur.  
   
- Examinez la page Résolution des problèmes d'actualisation des données PowerPivot sur le wiki TechNet pour obtenir de l'aide sur la résolution des problèmes d'actualisation des données. Pour plus d'informations, consultez [Résolution des problèmes d'actualisation des données PowerPivot](http://go.microsoft.com/fwlink/?LinkId=251594).  
+ Examinez la page Résolution des problèmes d'actualisation des données PowerPivot sur le wiki TechNet pour obtenir de l'aide sur la résolution des problèmes d'actualisation des données. Pour plus d'informations, consultez [Résolution des problèmes d'actualisation des données PowerPivot](https://go.microsoft.com/fwlink/?LinkId=251594).  
   
 > [!NOTE]  
->  Les administrateurs SharePoint peuvent vous aider à résoudre des problèmes d'actualisation des données en consultant les rapports d'actualisation des données consolidés dans le Tableau de bord de gestion PowerPivot dans l'Administration centrale. Pour plus d’informations, consultez [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
+>  Les administrateurs SharePoint peuvent vous aider à résoudre des problèmes d'actualisation des données en consultant les rapports d'actualisation des données consolidés dans le Tableau de bord de gestion PowerPivot dans l'Administration centrale. Pour plus d'informations, consultez [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Actualisation des données PowerPivot avec SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   

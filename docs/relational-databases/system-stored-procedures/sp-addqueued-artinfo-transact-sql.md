@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addqueued_artinfo
@@ -17,12 +16,12 @@ ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2e596ecc5e6470bbcc1a62684c1fd1a6533711d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c326a8e3a5fa2bd95f536d434ff9782952ba70d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770157"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590894"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,28 +50,28 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@artid=** ] **'***artid***'**  
+ [  **@artid=** ] **'**_artid_**'**  
  Nom de l'ID d'article. *artid* est **int**, sans valeur par défaut  
   
- [  **@article=**] **'***article***'**  
+ [  **@article=**] **'**_article_**'**  
  Nom de l'article à écrire. *article* est **sysname**, sans valeur par défaut  
   
- [  **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_publisher_**'**  
  Est le nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  Nom de la base de données du serveur de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
   
- [  **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_publication_**'**  
  Nom de la publication à écrire. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@dest_table=** ] *dest_table *****  
+ [  **@dest_table=** ] _' dest_table_**'**  
  Nom de la table de destination. *dest_table* est **sysname**, sans valeur par défaut.  
   
- [ **@owner =** ] **'***propriétaire***'**  
+ [ **@owner =** ] **'**_propriétaire_**'**  
  Est le propriétaire de l’abonnement. *propriétaire* est **sysname**, sans valeur par défaut.  
   
- [  **@cft_table=** ] **'***cft_table***'**  
+ [  **@cft_table=** ] **'**_cft_table_**'**  
  Nom de la table de conflits avec mise à jour en attente pour cet article. *cft_table*est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -83,7 +82,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
  [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) au lieu de **sp_addqueued_artinfo**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addqueued_artinfo**.  
   
 ## <a name="see-also"></a>Voir aussi  

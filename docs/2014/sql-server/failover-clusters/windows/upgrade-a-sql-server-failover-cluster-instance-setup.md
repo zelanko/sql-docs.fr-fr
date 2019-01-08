@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading clusters
@@ -17,12 +16,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906489"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363711"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Mettre à niveau une instance de cluster de basculement SQL Server (programme d'installation)
   Vous pouvez mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers un cluster de basculement [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] à l'aide de l'Assistant Installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou à partir de l'invite de commandes.  
@@ -46,11 +45,11 @@ ms.locfileid: "48906489"
   
 -   Pour garantir l'installation correcte du composant Visual Studio, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous oblige à installer une mise à jour. Le programme d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vérifie si cette la présence de cette mise à jour, puis vous demande de télécharger et d'installer la mise à jour avant de vous laisser poursuivre l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour éviter l'interruption pendant l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous pouvez télécharger et installer la mise à jour avant d'exécuter le programme d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , tel que décrit ci-dessous (ou installer toutes les mises à jour de .NET 3.5 SP1 disponibles sur Windows Update) :  
   
-     Si vous installez [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] sur un ordinateur avec le système d’exploitation Windows Server 2008 SP2, vous pouvez obtenir la mise à jour obligatoire à partir de [ici](http://go.microsoft.com/fwlink/?LinkId=198093)  
+     Si vous installez [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] sur un ordinateur avec le système d’exploitation Windows Server 2008 SP2, vous pouvez obtenir la mise à jour obligatoire à partir de [ici](https://go.microsoft.com/fwlink/?LinkId=198093)  
   
      Si vous installez [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] sur un ordinateur avec le système d'exploitation [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 ou [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] SP1, cette mise à jour est incluse.  
   
--   Le .NET Framework 3.5 SP1 n'est plus installé par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais il peut être requis lors de l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]. Pour plus d’informations, consultez les [notes de publication](http://go.microsoft.com/fwlink/?LinkId=296445) de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
+-   Le .NET Framework 3.5 SP1 n'est plus installé par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais il peut être requis lors de l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]. Pour plus d’informations, consultez les [notes de publication](https://go.microsoft.com/fwlink/?LinkId=296445) de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
   
 -   Dans le cas d'une installation locale, vous devez exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en qualité d'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui dispose des autorisations de lecture sur le partage distant.  
   
@@ -79,9 +78,9 @@ ms.locfileid: "48906489"
 ## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>Mise à niveau vers un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]  
  Il existe deux scénarios possibles pour les mises à niveau :  
   
-1.  Le cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configuré actuellement sur un seul sous-réseau. Vous devez d'abord mettre à niveau le cluster existant vers [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] en lançant le programme d'installation et en suivant le processus de mise à niveau. Après avoir terminé la mise à niveau du cluster de basculement existant, ajoutez un nœud qui se trouve sur un sous-réseau différent à l'aide de la fonctionnalité AddNode. Confirmez la modification de dépendance de ressource d'adresse IP en OR dans la page de configuration de réseau de clusters. Vous avez maintenant un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster de basculement est actuellement configuré sur un sous-réseau unique : Vous mettez d’abord à niveau le cluster existant vers [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] en lançant le programme d'installation et en suivant le processus de mise à niveau. Après avoir terminé la mise à niveau du cluster de basculement existant, ajoutez un nœud qui se trouve sur un sous-réseau différent à l'aide de la fonctionnalité AddNode. Confirmez la modification de dépendance de ressource d'adresse IP en OR dans la page de configuration de réseau de clusters. Vous avez maintenant un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-2.  Le cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configuré actuellement sur plusieurs sous-réseaux à l'aide de la technologie d'étirement V-LAN : vous devez d'abord mettre à niveau le cluster existant vers [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Comme la technologie d'étirement V-LAN configure un sous-réseau unique, la configuration réseau doit être modifiée pour inclure plusieurs sous-réseaux. La dépendance de ressource d'adresse IP doit être modifiée à l'aide de l'outil d'administration de cluster de basculement Windows et la dépendance IP doit être définie sur OR.  
+2.  Le cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configuré actuellement sur plusieurs sous-réseaux à l'aide de la technologie d'étirement V-LAN : Vous devez d’abord mettre à niveau le cluster existant vers [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Comme la technologie d'étirement V-LAN configure un sous-réseau unique, la configuration réseau doit être modifiée pour inclure plusieurs sous-réseaux. La dépendance de ressource d'adresse IP doit être modifiée à l'aide de l'outil d'administration de cluster de basculement Windows et la dépendance IP doit être définie sur OR.  
   
 ###  <a name="BestPractices"></a> Meilleures pratiques avant la mise à niveau un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cluster de basculement  
  Pour réduire le temps mort inattendu provoqué par un redémarrage, préinstallez le package de non-redémarrage pour le .NET Framework 4.0 sur tous les nœuds de cluster de basculement avant d'exécuter la mise à niveau sur les nœuds de cluster. Il est recommandé de respecter les étapes suivantes pour la préinstallation des composants requis :  

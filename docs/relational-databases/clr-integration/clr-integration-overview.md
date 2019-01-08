@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1231fc3c3f18711357ccf84daf06fb4821fa27a2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 96f64be7d380f2243945fb0b9a6c67244d7571cb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664929"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208908"
 ---
 # <a name="clr-integration---overview"></a>Intégration du CLR - Vue d’ensemble
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51664929"
   
  L'intégration du CLR offre la possibilité de meilleures performances. Pour plus d’informations, consultez [performances d’intégration du CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
  
->  [!WARNING]
+> [!WARNING]
 >  CLR utilise la sécurité d’accès du code (CAS) dans le .NET Framework, qui n’est plus pris en charge comme limite de sécurité. Un assembly CLR créé avec `PERMISSION_SET = SAFE` peut être en mesure d’accéder à des ressources système externes, d’appeler du code non managé et d’acquérir des privilèges sysadmin. À compter de [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], une option de `sp_configure` appelée `clr strict security` est introduite pour renforcer la sécurité des assemblys CLR. `clr strict security` est activée par défaut et traite les assemblys `SAFE` et `EXTERNAL_ACCESS` comme s’ils étaient marqués `UNSAFE`. L’option `clr strict security` peut être désactivée pour assurer une compatibilité descendante, mais ceci n’est pas recommandé. Microsoft recommande que tous les assemblys soient signés par un certificat ou une clé asymétrique avec une connexion correspondante à laquelle a été accordée l’autorisation `UNSAFE ASSEMBLY` dans la base de données master. Pour plus d’informations, consultez [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md). 
   
 ## <a name="choosing-between-transact-sql-and-managed-code"></a>Choix entre Transact-SQL et le code managé  

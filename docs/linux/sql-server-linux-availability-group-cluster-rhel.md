@@ -1,21 +1,22 @@
 ---
-title: Configurer un Cluster RHEL pour le groupe de disponibilité de SQL Server | Microsoft Docs
-description: ''
+title: Configurer un Cluster RHEL pour le groupe de disponibilité de SQL Server
+titleSuffix: SQL Server
+description: En savoir plus sur les clusters de groupe de disponibilité lors de l’exécution de Red Hat Enterprise Linux (RHEL)
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 06/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670818"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160596"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurer un Cluster RHEL pour le groupe de disponibilité de SQL Server
 
@@ -88,7 +89,7 @@ Chaque nœud du cluster doit avoir un abonnement approprié pour RHEL et l’ajo
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-Pour plus d’informations, consultez [clusters Pacemaker – l’Open Source, de haute disponibilité](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+Pour plus d’informations, consultez [clusters Pacemaker - Open Source pour la haute disponibilité](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
 
 Une fois que vous avez configuré l’abonnement, procédez comme suit pour configurer Pacemaker :
 
@@ -112,7 +113,7 @@ Pour plus d’informations sur STONITH et délimitation, consultez les articles 
 
 * [Clusters pacemaker à partir de zéro](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
 * [La délimitation et STONITH](https://clusterlabs.org/doc/crm_fencing.html)
-* [Module complémentaire de haute disponibilité de Red Hat avec Pacemaker : isolement](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [Module complémentaire de Red Hat haute disponibilité avec Pacemaker : Délimitation](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 Étant donné que le niveau de nœud clôtures configuration dépend largement de votre environnement, désactivez-la pour ce didacticiel (il peut être configuré ultérieurement). Le script suivant désactive la délimitation de niveau de nœud :
 

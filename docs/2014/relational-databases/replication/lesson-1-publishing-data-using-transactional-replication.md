@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Publication de données à l’aide de la réplication transactionnelle | Microsoft Docs'
+title: 'Leçon 1 : Publication des données à l’aide de la réplication transactionnelle | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 99a4e638ddacc5b112ef819826c3eae7f42c5078
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d75a44c44442917f61b52c7aa0f2e770dcdf5d83
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226589"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590563"
 ---
-# <a name="lesson-1-publishing-data-using-transactional-replication"></a>Leçon 1 : publication de données à l'aide de la réplication transactionnelle
+# <a name="lesson-1-publishing-data-using-transactional-replication"></a>Leçon 1 : Publication de données à l'aide de la réplication transactionnelle
   Dans cette leçon, vous créez une publication transactionnelle en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour publier un sous-ensemble filtré de la table **Product** de l’exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Vous allez aussi ajouter à la liste d'accès à la publication le compte de connexion SQL Server utilisée par l'Agent de distribution. Avant de commencer ce didacticiel, vous devez avoir terminé le didacticiel précédent, [Préparation du serveur à la réplication](tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Pour créer une publication et définir des articles  
@@ -35,7 +35,7 @@ ms.locfileid: "48226589"
   
 4.  Dans la page Type de publication, sélectionnez **Publication transactionnelle**, puis cliquez sur **Suivant**.  
   
-5.  Dans la page Articles, développez le nœud **Tables** , cochez la case **Product** , puis développez **Product** et décochez les cases **ListPrice** et **StandardCost** . Cliquez sur **Suivant**.  
+5.  Dans la page Articles, développez le nœud **Tables** , cochez la case **Product** , puis développez **Product** et décochez les cases **ListPrice** et **StandardCost** . Cliquer sur **Suivant**.  
   
 6.  Dans la page Filtrer les lignes de la table, cliquez sur **Ajouter**.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48226589"
   
 10. Dans la page Sécurité de l’agent, décochez la case **Utiliser les paramètres de sécurité de l’Agent d’instantané** .  
   
-11. Cliquez sur **Paramètres de sécurité** pour l’Agent d’instantané, entrez \<*nom_ordinateur>***\repl_snapshot** dans la zone **Compte de processus**, spécifiez le mot de passe du compte et cliquez sur **OK**.  
+11. Cliquez sur **Paramètres de sécurité** pour l’Agent d’instantané, entrez \<_nom_ordinateur>_**\repl_snapshot** dans la zone **Compte de processus**, spécifiez le mot de passe du compte et cliquez sur **OK**.  
   
 12. Répétez l’étape précédente pour définir repl_logreader comme compte de processus de l’Agent de lecture du journal, puis cliquez sur **Terminer**.  
   
@@ -77,10 +77,10 @@ ms.locfileid: "48226589"
   
 3.  Sélectionnez la page **Liste d’accès à la publication** , puis cliquez sur **Ajouter**.  
   
-4.  \Dans la boîte de dialogue **Ajouter un accès à une publication**, sélectionnez *nom_ordinateur>***\repl_distribution* et cliquez sur **OK**. Cliquez sur **OK**.  
+4.  \Dans la boîte de dialogue **Ajouter un accès à une publication**, sélectionnez _nom_ordinateur>_**\repl_distribution** et cliquez sur **OK**. Cliquez sur **OK**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez créé avec succès la publication transactionnelle. Ensuite, vous allez créer l'abonnement à cette publication. Consultez [Leçon 2 : Création d’un abonnement à la publication transactionnelle](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
+ Vous avez créé avec succès la publication transactionnelle. Ensuite, vous allez créer l'abonnement à cette publication. Consultez [leçon 2 : Création d’un abonnement à la Publication transactionnelle](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtrer des données publiées](publish/filter-published-data.md)   

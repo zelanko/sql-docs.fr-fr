@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - event tracing for windows target
@@ -15,19 +14,19 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64ae07c8f8ac258730ea5de04dd0e1f304b79bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175159"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355995"
 ---
 # <a name="event-tracing-for-windows-target"></a>suivi d'événements pour cible Windows
   Avant d'utiliser le suivi d'événements pour Windows (ETW) comme cible, il est recommandé d'avoir une connaissance pratique du Suivi d'événements pour Windows. Le suivi ETW est utilisé conjointement avec les Événements étendus ou en tant que consommateur d'événements des Événements étendus. Les liens externes suivants fournissent un point de départ pour obtenir des informations générales sur le suivi ETW :  
   
--   [Événements Windows](http://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Événements Windows](https://go.microsoft.com/fwlink/?LinkId=92380)  
   
--   [Améliorer le débogage et le réglage des performances à l'aide du suivi ETW](http://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [Améliorer le débogage et le réglage des performances à l'aide du suivi ETW](https://go.microsoft.com/fwlink/?LinkId=92381)  
   
  La cible du suivi ETW est une cible singleton, bien qu'elle puisse être ajoutée à plusieurs sessions. Si un événement est déclenché sur plusieurs sessions, l'événement sera propagé uniquement à la cible ETW une fois par occurrence de l'événement. Le moteur des Événements étendus est limité à une seule instance par processus.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48175159"
     > [!IMPORTANT]  
     >  Le chemin d'accès ne peut pas être modifié une fois la première session démarrée.  
   
--   Les fichiers MOF (Managed Object Format) se trouvent dans le dossier *\<chemin de votre installation>* \Microsoft SQL Server\Shared. Pour plus d'informations, consultez [Format d'objet managé](http://go.microsoft.com/fwlink/?LinkId=92851) sur MSDN.  
+-   Les fichiers MOF (Managed Object Format) se trouvent dans le dossier *\<chemin de votre installation>* \Microsoft SQL Server\Shared. Pour plus d'informations, consultez [Format d'objet managé](https://go.microsoft.com/fwlink/?LinkId=92851) sur MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Ajout de la cible à une session  
  Pour ajouter la cible ETW à une session Événements étendus lorsque vous créez ou modifiez une session d'événements, vous devez inclure l'instruction suivante :  

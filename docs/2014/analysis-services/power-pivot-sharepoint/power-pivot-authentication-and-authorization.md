@@ -11,12 +11,12 @@ ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc2118315b40ab89d19d562b364a0a0250f7f3c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f28da387576eee3d9619e4fc817485beb5c8662
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165749"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377859"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Authentification et autorisation PowerPivot
   Un déploiement PowerPivot pour SharePoint qui s'exécute dans une batterie de serveurs SharePoint 2010 utilise le sous-système d'authentification et le modèle d'autorisation fournis par les serveurs SharePoint. L'infrastructure de sécurité SharePoint s'étend au contenu et aux opérations PowerPivot, car l'ensemble du contenu relatif à PowerPivot est stocké dans des bases de données de contenu SharePoint et l'ensemble des opérations relatives à PowerPivot est effectué par des services partagés PowerPivot de la batterie de serveurs. Les utilisateurs qui demandent un classeur contenant des données PowerPivot sont authentifiés à l'aide d'une identité d'utilisateur SharePoint basée sur leur identité d'utilisateur Windows. Les autorisations d'affichage sur le classeur déterminent si la demande est accordée ou refusée.  
@@ -25,7 +25,7 @@ ms.locfileid: "48165749"
   
  Cliquez sur les liens suivants pour accéder à des sections spécifiques de cette rubrique :  
   
- [Authentification Windows à l’aide de la spécification de l’authentification en Mode classique](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [Authentification Windows à l'aide de la spécification de connexion en mode classique](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
  [Opérations PowerPivot nécessitant une autorisation de l’utilisateur](#UserConnections)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48165749"
 |Administrateur de batteries de serveurs ou de services|Installation, activation et configuration de services et d'applications.<br /><br /> Utilisation du tableau de bord de gestion PowerPivot et affichage des rapports d'administration.|  
 |Contrôle total|Activation de l'intégration des la fonctionnalités PowerPivot au niveau de la collection de sites.<br /><br /> Création d'une Galerie PowerPivot.<br /><br /> Création d'une bibliothèque de flux de données.|  
 |Collaboration|Ajout, modification, suppression et téléchargement de classeurs PowerPivot.<br /><br /> Configuration de l'actualisation des données.<br /><br /> Création de classeurs et rapports basés sur des classeurs PowerPivot sur un site SharePoint.<br /><br /> Création de documents de service de données dans une bibliothèque de flux de données|  
-|Lire|Accédez aux classeurs PowerPivot comme source de données externe, où l'URL du classeur est explicitement entrée dans une boîte de dialogue de connexion (par exemple, dans l'Assistant Connexion de données Excel).|  
+|Lire|Accéder aux classeurs PowerPivot comme source de données externe, où l’URL du classeur est explicitement entrée dans une boîte de dialogue de connexion (par exemple, dans l’Assistant de connexion de données d’Excel).|  
 |Vue seule|Affichage de classeurs PowerPivot.<br /><br /> Affichage de l'historique d'actualisation des données.<br /><br /> Connexion d'un classeur local à un classeur PowerPivot sur un site SharePoint pour réutiliser ses données d'une autre façon.<br /><br /> Téléchargement d'un instantané du classeur. L'instantané est une copie statique des données, sans segments, filtres, formules ou connexions de données. Le contenu de l'instantané est similaire à la copie de valeurs de cellules de la fenêtre de navigateur.|  
   
 ##  <a name="excel"></a> Considérations sur la sécurité Excel Services pour les classeurs PowerPivot  
@@ -115,6 +115,6 @@ ms.locfileid: "48165749"
  [Configurer les comptes de Service PowerPivot](configure-power-pivot-service-accounts.md)   
  [Configurer PowerPivot compte d’actualisation des données sans assistance &#40;PowerPivot pour SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
  [Créer un emplacement approuvé pour les sites PowerPivot dans l’Administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Architecture de sécurité PowerPivot](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [Architecture de sécurité PowerPivot](https://go.microsoft.com/fwlink/?linkID=220970)  
   
   

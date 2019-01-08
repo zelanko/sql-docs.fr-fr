@@ -18,17 +18,17 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cfa444356e2fbefe0e6fad2333b8e565257b3992
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192519"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359561"
 ---
 # <a name="securing-sql-server"></a>Sécurisation de SQL Server
   La sécurisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être vue comme une série d’étapes impliquant quatre domaines : la plateforme, l’authentification, les objets (notamment les données) et les applications qui accèdent au système. Les rubriques suivantes vous guideront tout au long des processus de création et de mise en place d'un plan de sécurité efficace.  
   
- Vous trouverez de plus amples informations sur la sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le site web de [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) . Cela inclut un guide de recommandations et une liste de contrôle de sécurité. Ce site contient également les informations et les téléchargements les plus récents sur les Service Packs.  
+ Vous trouverez de plus amples informations sur la sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le site web de [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) . Cela inclut un guide de recommandations et une liste de contrôle de sécurité. Ce site contient également les informations et les téléchargements les plus récents sur les Service Packs.  
   
 ## <a name="platform-and-network-security"></a>Sécurité de la plateforme et du réseau  
  La plateforme de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprend le matériel physique et les systèmes de mise en réseau qui permettent de connecter des clients aux serveurs de base de données, ainsi que les fichiers binaires utilisés pour traiter les demandes de base de données.  
@@ -50,7 +50,7 @@ ms.locfileid: "48192519"
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
 |Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
-|Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Configurer un Pare-feu Windows pour l’accès au service SSIS](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
+|Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Configurer un Pare-feu Windows pour l'accès au service SSIS](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
 |Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
 |Ouverture de ports spécifiques sur un pare-feu pour permettre l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurer le Pare-feu Windows pour autoriser l'accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Configuration de la prise en charge de la Protection étendue de l'authentification à l'aide de la liaison de canal et liaison de service|[Se connecter au moteur de base de données à l'aide de la protection étendue](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
@@ -76,7 +76,7 @@ ms.locfileid: "48192519"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fichiers programme|[Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les Service Packs et les mises à niveau offrent une sécurité accrue. Pour identifier les derniers Service Packs disponibles pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez le site web de [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les Service Packs et les mises à niveau offrent une sécurité accrue. Pour identifier les derniers Service Packs disponibles pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez le site web de [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) .  
   
  Vous pouvez utiliser le script ci-dessous pour déterminer quel Service Pack est installé sur le système.  
   
@@ -86,7 +86,7 @@ GO
 ```  
   
 ## <a name="principals-and-database-object-security"></a>Sécurité des principaux et des objets de base de données  
- Les principaux désignent les individus, les groupes et les processus auxquels l'accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a été accordé. Les « éléments sécurisables » sont le serveur, la base de données et les objets que contient la base de données. Chacun de ces éléments possède un ensemble d'autorisations que vous pouvez configurer pour réduire la surface d'exposition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le tableau ci-dessous contient des informations sur les principaux et les éléments sécurisables.  
+ Les principaux désignent les individus, les groupes et les processus auxquels l'accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a été accordé. Les « éléments sécurisables » sont le serveur, la base de données et les objets que contient la base de données. Chacun de ces éléments possède un ensemble d'autorisations que vous pouvez configurer pour réduire la surface d'exposition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le tableau ci-dessous contient des informations sur les principaux et les éléments sécurisables.  
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  

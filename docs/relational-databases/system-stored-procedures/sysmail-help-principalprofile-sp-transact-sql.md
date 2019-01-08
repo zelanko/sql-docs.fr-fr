@@ -18,12 +18,12 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04746f7694e4f3bef2a946398f0bc9d1e1808a3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d96a4c72996ab34b03706cc71f6b406344164685
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739327"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591623"
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
  [  **@principal_id=** ] *principal_id*  
  Est l’ID de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à répertorier. *principal_id* est **int**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* peut être spécifié.  
   
- [  **@principal_name=** ] **'***principal_name***'**  
+ [  **@principal_name=** ] **'**_principal_name_**'**  
  Est le nom de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à répertorier. *principal_name* est **sysname**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* peut être spécifié.  
   
  [  **@profile_id=** ] *profile_id*  
  Identificateur du profil pour l'association à répertorier. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* peut être spécifié.  
   
- [  **@profile_name=** ] **'***profile_name***'**  
+ [  **@profile_name=** ] **'**_profile_name_**'**  
  Nom du profil pour l'association à répertorier. *nom_profil* est **sysname**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* peut être spécifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -74,7 +74,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
  **sysmail_help_principalprofile_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
@@ -96,7 +96,7 @@ principal_id principal_name     profile_id  profile_name                   is_de
 5            danw               9           AdventureWorks Administrator   1  
 ```  
   
-### <a name="b-listing-information-for-all-associations"></a>B. Affichage d'une liste d'informations pour toutes les associations  
+### <a name="b-listing-information-for-all-associations"></a>b. Affichage d'une liste d'informations pour toutes les associations  
  L'exemple suivant illustre l'affichage d'une liste d'informations sur toutes les associations de l'instance.  
   
 ```  

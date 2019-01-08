@@ -22,17 +22,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5b4eb865c8c0498e72943c128ff0106638005166
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018334"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980045"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne des informations à partir d'un fichier d'audit créé par un audit du serveur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Retourne des informations à partir d'un fichier d'audit créé par un audit du serveur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -117,22 +117,22 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Id d’événement défini par utilisateur est passé en tant qu’argument à **sp_audit_write**. **NULL** pour des événements système (valeur par défaut) et différent de zéro pour l’événement défini par l’utilisateur. Pour plus d’informations, consultez [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Utilisé pour enregistrer toute information supplémentaire que l’utilisateur souhaite enregistrer dans |journal d’audit à l’aide de la **sp_audit_write** procédure stockée.|  
 |audit_schema_version |**Int** | |  
-|sequence_group_id |**varbinary** | **S’applique à**: SQL Server uniquement (à partir de 2016) |  
-|transaction_id |**bigint** | **S’applique à**: SQL Server uniquement (à partir de 2016) |  
-|client_ip |**nvarchar(128)** | **S’applique à**: Azure SQL DB + SQL Server (à partir de 2017) |  
-|application_name |**nvarchar(128)** | **S’applique à**: Azure SQL DB + SQL Server (à partir de 2017) |  
-|duration_milliseconds |**bigint** | **S’applique à**: base de données SQL Azure |  
-|response_rows |**bigint** | **S’applique à**: base de données SQL Azure |  
-|affected_rows |**bigint** | **S’applique à**: base de données SQL Azure |  
-|connection_id |GUID | **S’applique à**: base de données SQL Azure |
-|data_sensitivity_information |nvarchar(4000) | **S’applique à**: base de données SQL Azure |
+|sequence_group_id |**varbinary** | **S’applique à** : SQL Server uniquement (à partir de 2016) |  
+|transaction_id |**bigint** | **S’applique à** : SQL Server uniquement (à partir de 2016) |  
+|client_ip |**nvarchar(128)** | **S’applique à** : Azure SQL DB + SQL Server (à partir de 2017) |  
+|application_name |**nvarchar(128)** | **S’applique à** : Azure SQL DB + SQL Server (à partir de 2017) |  
+|duration_milliseconds |**bigint** | **S’applique à** : Base de données SQL Azure |  
+|response_rows |**bigint** | **S’applique à** : Base de données SQL Azure |  
+|affected_rows |**bigint** | **S’applique à** : Base de données SQL Azure |  
+|connection_id |GUID | **S’applique à** : Base de données SQL Azure |
+|data_sensitivity_information |nvarchar(4000) | **S’applique à** : Base de données SQL Azure |
   
 ## <a name="remarks"></a>Notes  
  Si le *file_pattern* argument passé à **fn_get_audit_file** fait référence à un chemin d’accès ou un fichier qui n’existe pas, ou si le fichier n’est pas un fichier d’audit, la **MSG_INVALID_AUDIT_FILE**message d’erreur est retourné.  
   
-## <a name="permissions"></a>Permissions  
- - **SQL Server**: requiert la **CONTROL SERVER** autorisation.  
- - **Base de données SQL Azure**: requiert la **CONTROL DATABASE** autorisation.     
+## <a name="permissions"></a>Autorisations  
+ - **SQL Server** : Requiert l’autorisation **CONTROL SERVER** .  
+ - **Base de données SQL Azure**: Nécessite le **CONTROL DATABASE** autorisation.     
     - Administrateurs de serveur peuvent accéder aux journaux d’audit de toutes les bases de données sur le serveur.
     - Serveur non administrateurs peuvent uniquement accéder journaux d’audit à partir de la base de données actuelle.
     - Objets BLOB qui ne répondent pas aux critères ci-dessus va être ignorées (une liste d’objets BLOB ignorée s’affichera dans le message de sortie de requête), et la fonction retournera journaux uniquement à partir d’objets BLOB pour lesquels l’accès est autorisé.  
@@ -141,10 +141,10 @@ fn_get_audit_file ( file_pattern,
 
 - **SQL Server**
 
-  Cet exemple lit à partir d'un fichier nommé `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`.  
+  Cet exemple lit à partir d'un fichier nommé `\\serverName\Audit\HIPAA_AUDIT.sqlaudit`.  
   
   ```  
-  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPAA_AUDIT.sqlaudit',default,default);  
   GO  
   ```  
 

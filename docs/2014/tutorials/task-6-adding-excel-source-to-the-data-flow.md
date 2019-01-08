@@ -13,14 +13,14 @@ ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f51d2f6f48263e764d73eb9fcd8ee0dcd27b26da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb79a52e8ce910425de44b5cf475400daa3f40aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071759"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356541"
 ---
-# <a name="task-6-adding-excel-source-to-the-data-flow"></a>Tâche 6 : Ajout d'une source Excel au flux de données
+# <a name="task-6-adding-excel-source-to-the-data-flow"></a>Tâche 6 : Ajout d'une source Excel au flux de données
   Dans cette tâche, vous allez ajouter une source Excel au flux de données pour lire les données des fournisseurs à partir du fichier Excel source. La source Excel extrait des données depuis des feuilles de calcul ou des plages dans des classeurs Microsoft Excel. Consultez la rubrique [Source Excel](../integration-services/data-flow/excel-source.md) pour plus de détails.  
   
 1.  Faites glisser la **Source Excel** depuis **Autres sources** dans **Boîte à outils SSIS** vers l'onglet **Flux de données** .  
@@ -45,9 +45,9 @@ ms.locfileid: "48071759"
   
 9. Cliquez sur **OK** pour fermer la boîte de dialogue.  
   
-10. Faites glisser la transformation **Nettoyage DQS** dans **Autres transformations** dans la **Boîte à outils SSIS** vers l'onglet **Flux de données** sous **Lire les données des fournisseurs à partir d'un fichier Excel**. La transformation de nettoyage DQS utilise Data Quality Services (DQS) pour corriger les données en appliquant des règles approuvées dans la base de connaissances. Cette transformation, au moment de l'exécution, crée un projet de nettoyage DQS sur le serveur DQS. Consultez la rubrique [Transformation de nettoyage DQS](http://msdn.microsoft.com/library/ee677619.aspx) pour plus de détails.  
+10. Faites glisser la transformation **Nettoyage DQS** dans **Autres transformations** dans la **Boîte à outils SSIS** vers l'onglet **Flux de données** sous **Lire les données des fournisseurs à partir d'un fichier Excel**. La transformation de nettoyage DQS utilise Data Quality Services (DQS) pour corriger les données en appliquant des règles approuvées dans la base de connaissances. Cette transformation, au moment de l'exécution, crée un projet de nettoyage DQS sur le serveur DQS. Consultez la rubrique [Transformation de nettoyage DQS](https://msdn.microsoft.com/library/ee677619.aspx) pour plus de détails.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 7 : Ajout d’une transformation de nettoyage DQS au flux de données](../integration-services/data-flow/data-flow.md)  
+ [Tâche 7 : Transformation de nettoyage de DQS ajout au flux de données](../integration-services/data-flow/data-flow.md)  
   
   

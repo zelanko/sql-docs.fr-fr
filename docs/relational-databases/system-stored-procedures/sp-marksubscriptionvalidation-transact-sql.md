@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_marksubscriptionvalidation
@@ -17,12 +16,12 @@ ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4d649403a04aa48475705059328656d81ae8597
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22b25d1a6c33d52bac27ba2735cd439732b6e9c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748907"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213558"
 ---
 # <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
  Nom de la base de données de destination. *destination_db* est **sysname**, sans valeur par défaut.  
   
  [  **@publisher=** ] **'***publisher***'**  
- Spécifie un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+ Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé pour une publication qui appartienne à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
@@ -63,13 +62,13 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ## <a name="remarks"></a>Notes  
  **sp_marksubscriptionvalidation** est utilisé dans la réplication transactionnelle.  
   
- **sp_marksubscriptionvalidation** ne prend pas en charge non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
+ **sp_marksubscriptionvalidation** ne prend pas en charge non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
   
- Pour les non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication, vous ne pouvez pas exécuter **sp_marksubscriptionvalidation** à partir d’une transaction explicite. Cela est dû au fait que les transactions explicites ne sont pas prises en charge sur la connexion du serveur lié utilisée pour accéder au serveur de publication.  
+ Pour les non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication, vous ne pouvez pas exécuter **sp_marksubscriptionvalidation** à partir d’une transaction explicite. Cela est dû au fait que les transactions explicites ne sont pas prises en charge sur la connexion du serveur lié utilisée pour accéder au serveur de publication.  
   
  **sp_marksubscriptionvalidation** doit être utilisé conjointement avec [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), en spécifiant la valeur de **1** pour  *subscription_level*et peut être utilisé avec d’autres appels à **sp_marksubscriptionvalidation** pour marquer la transaction actuellement ouverte pour d’autres abonnés.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_marksubscriptionvalidation**.  
   
 ## <a name="example"></a>Exemple  

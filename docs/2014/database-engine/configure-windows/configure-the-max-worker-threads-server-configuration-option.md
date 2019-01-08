@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - worker threads [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9df3cfbf232ae8d1401b38f88fa517f7b5be4536
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc0552791f64e39ec3dc83b419d6db6884106780
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188068"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368761"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurer l'option de configuration de serveur max worker threads
   Cette rubrique explique comment configurer l'option de configuration de serveur **max worker threads** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **max worker threads** configure le nombre de threads de travail disponibles pour les processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les services de thread natifs des systèmes d'exploitation pour qu'un ou plusieurs threads prennent en charge chaque réseau que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge simultanément, qu'un autre thread prenne en charge les points de contrôle de base de données et qu'un pool de threads gère tous les utilisateurs. La valeur par défaut de **Nombre maximum de threads de travail** est 0. Cela permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de configurer automatiquement le nombre de threads de travail au démarrage. Ce paramètre par défaut convient à la plupart des systèmes. Cependant, selon votre configuration système, l'attribution d'une valeur spécifique à l'option **Nombre maximum de threads de travail** permet parfois d'accroître les performances.  
@@ -40,7 +39,7 @@ ms.locfileid: "48188068"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l'option max worker threads](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l’option max worker threads](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48188068"
     |256 processeurs|8320|8576|  
   
     > [!NOTE]  
-    >  Pour obtenir des recommandations concernant l'utilisation de plus de 64 unités centrales, consultez [Recommandations pour l'exécution de SQL Server sur des ordinateurs comportant plus de 64 unités centrales](http://technet.microsoft.com/library/ee210547\(SQL.105\).aspx).  
+    >  Pour obtenir des recommandations concernant l'utilisation de plus de 64 unités centrales, consultez [Recommandations pour l'exécution de SQL Server sur des ordinateurs comportant plus de 64 unités centrales](https://technet.microsoft.com/library/ee210547\(SQL.105\).aspx).  
   
     > [!WARNING]  
     >  Nous vous recommandons d'utiliser 1 024 comme nombre maximal de threads de travail pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée sur un ordinateur 32 bits.  
@@ -144,7 +143,7 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option max worker threads  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option Nombre maximum de threads de travail  
  La modification prendra effet immédiatement, sans nécessiter le redémarrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  

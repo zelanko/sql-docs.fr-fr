@@ -18,12 +18,12 @@ ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 26a4fa63ea41e2e8933a0d7d11cc6b2100e85f54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be80ed76713788f81704609c4828e0a871ffdc7d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795047"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590103"
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,30 +45,30 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@server=** ] **'***server***»**  
+ [  **@server=** ] **'**_server_**'**  
  Nom du serveur lié à créer. *server* est de type **sysname**et n'a pas de valeur par défaut.  
   
- [  **@srvproduct=** ] **'***product_name***'**  
+ [  **@srvproduct=** ] **'**_product_name_**'**  
  Nom de produit de la source de données OLE DB à ajouter comme serveur lié. *product_name* est **nvarchar (** 128 **)**, avec NULL comme valeur par défaut. Si **SQL Server**, *provider_name*, *data_source*, *emplacement*, *provider_string*, et *catalogue* ne doivent pas être spécifiés.  
   
- [  **@provider=** ] **'***provider_name***'**  
+ [  **@provider=** ] **'**_provider_name_**'**  
  ID de programme unique (PROGID) du fournisseur OLE DB correspondant à la source de données. *provider_name* doit être unique pour le fournisseur OLE DB spécifié installé sur l’ordinateur actuel. *provider_name* est **nvarchar (** 128 **)**, avec une valeur par défaut NULL ; Toutefois, si *provider_name* est omis, SQLNCLI est utilisé. (L'utilisation de SQLNCLI et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous redirigera vers la version la plus récente du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.) Le fournisseur OLE DB doit être inscrit dans le Registre avec le PROGID spécifié.  
   
- [  **@datasrc=** ] **'***data_source***'**  
+ [  **@datasrc=** ] **'**_data_source_**'**  
  Nom de la source de données, tel qu'il est interprété par le fournisseur OLE DB. *data_source* est **nvarchar (** 4000 **)**. *data_source* est transmis comme propriété DBPROP_INIT_DATASOURCE pour initialiser le fournisseur OLE DB.  
   
- [  **@location=** ] **'***emplacement***'**  
+ [  **@location=** ] **'**_emplacement_**'**  
  Emplacement de la base de données, tel qu'il est interprété par le fournisseur OLE DB. *emplacement* est **nvarchar (** 4000 **)**, avec NULL comme valeur par défaut. *emplacement* est transmis comme propriété DBPROP_INIT_LOCATION pour initialiser le fournisseur OLE DB.  
   
- [  **@provstr=** ] **'***provider_string***'**  
+ [  **@provstr=** ] **'**_provider_string_**'**  
  Chaîne de connexion spécifique au fournisseur OLE DB identifiant une source de données unique. *provider_string* est **nvarchar (** 4000 **)**, avec NULL comme valeur par défaut. *l’argument provstr* est transmise à IDataInitialize ou défini comme propriété DBPROP_INIT_PROVIDERSTRING pour initialiser le fournisseur OLE DB.  
   
  Lorsque le serveur lié est créé par rapport à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, l’instance peut être spécifiée en utilisant le mot clé SERVER en tant que serveur =*nom_serveur*\\*instancename*pour spécifier une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *nom_serveur* est le nom de l’ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution, et *instancename* est le nom de l’instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle l’utilisateur est connecté.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Pour accéder à une base de données miroir, une chaîne de connexion doit contenir le nom de la base de données. Ce nom est nécessaire pour permettre au fournisseur d'accès aux données d'effectuer des tentatives de basculement. La base de données peut être spécifié dans le **@provstr** ou **@catalog** paramètre. Le cas échéant, la chaîne de connexion peut également fournir un nom de partenaire de basculement.  
   
- [  **@catalog=** ] **'***catalogue***'**  
+ [  **@catalog=** ] **'**_catalogue_**'**  
  Catalogue à utiliser lors de l'établissement d'une connexion au fournisseur OLE DB. *catalogue* est **sysname**, avec NULL comme valeur par défaut. *catalogue* est transmis comme propriété DBPROP_INIT_CATALOG pour initialiser le fournisseur OLE DB. Lorsque le serveur lié est défini sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le catalogue fait référence à la base de données par défaut sur laquelle le serveur lié est mappé.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -105,10 +105,10 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
  **sp_addlinkedserver** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
-> [!IMPORTANT]  
->  Quand un serveur lié est créé à l’aide de **sp_addlinkedserver**, un auto-mappage par défaut est ajouté pour toutes les connexions locales. Pour les fournisseurs non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentifiées peuvent accéder au fournisseur sous le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les administrateurs doivent envisager d'utiliser `sp_droplinkedsrvlogin <linkedserver_name>, NULL` pour supprimer le mappage global.  
+> [!IMPORTANT]
+>  Quand un serveur lié est créé à l’aide de **sp_addlinkedserver**, un auto-mappage par défaut est ajouté pour toutes les connexions locales. Pour les non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentifié connexions peuvent être en mesure d’accéder au fournisseur sous la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service. Les administrateurs doivent envisager d'utiliser `sp_droplinkedsrvlogin <linkedserver_name>, NULL` pour supprimer le mappage global.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Le `sp_addlinkedserver` instruction nécessite le `ALTER ANY LINKED SERVER` autorisation. (SSMS **nouveau serveur lié** boîte de dialogue est implémentée d’une manière qui nécessite l’appartenance dans le `sysadmin` rôle serveur fixe.)  
   
 ## <a name="examples"></a>Exemples  
@@ -135,7 +135,7 @@ EXEC sp_addlinkedserver
    @datasrc=N'S1\instance1';  
 ```  
   
-### <a name="b-using-the-microsoft-ole-db-provider-for-microsoft-access"></a>B. Utilisation du fournisseur Microsoft OLE DB pour Microsoft Access  
+### <a name="b-using-the-microsoft-ole-db-provider-for-microsoft-access"></a>b. Utilisation du fournisseur Microsoft OLE DB pour Microsoft Access  
  Le fournisseur Microsoft.Jet.OLEDB.4.0 se connecte aux bases de données Microsoft Access qui utilisent le format 2002-2003. L'exemple suivant crée un serveur lié nommé `SEATTLE Mktg`.  
   
 > [!NOTE]  
@@ -270,11 +270,11 @@ EXEC sp_addlinkedserver
 ### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premise-databases"></a>G. Ajouter [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] en tant que serveur lié pour une utilisation avec des requêtes distribuées dans les bases de données du cloud et locales  
  Ajoutez [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] en tant que serveur lié, puis utilisez-le avec des requêtes distribuées qui couvrent les bases de données du cloud et locales. Il s'agit d'un composant pour les solutions hybrides de base de données couvrant les réseaux d'entreprise locaux et le cloud Windows Azure.  
   
- La boîte du produit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient la fonctionnalité de requête distribuée, qui vous permet d'écrire des requêtes afin d'associer des données de sources locales et des données de sources distantes (y compris des données de sources de données autres que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) définies en tant que serveurs liés. Chaque [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (sauf le maître virtuel) peut être ajoutée en tant que serveur lié individuel, puis être utilisée directement dans vos applications de base de données comme toute autre base de données.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] boîte du produit contient la fonctionnalité de requête distribuée, ce qui vous permet d’écrire des requêtes pour combiner des données à partir de sources de données locales et les données à partir de sources distantes (y compris les données non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des sources de données) définis en tant que serveurs liés. Chaque [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (sauf le maître virtuel) peut être ajoutée en tant que serveur lié individuel, puis être utilisée directement dans vos applications de base de données comme toute autre base de données.  
   
  Les avantages de l'utilisation de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sont la simplicité de gestion, la haute disponibilité, l'extensibilité, l'utilisation d'un modèle de développement familier et un modèle de données relationnelles. La configuration de votre application de base de données détermine le mode d'utilisation de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] dans le cloud. Déplacez toutes les données à la fois vers [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], ou déplacez progressivement certaines de vos données et conservez les autres localement. Pour cette application de base de données hybride, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] peut maintenant être ajoutée en tant que serveurs liés et l'application de base de données peut publier des requêtes distribuées afin d'associer des données de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et de sources de données locales.  
   
- Voici un exemple simple expliquant comment se connecter à une [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] à l'aide de requêtes distribuées :  
+ Voici un exemple simple expliquant comment se connecter à un [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] à l’aide de requêtes distribuées :  
   
 ```  
 ------ Configure the linked server  

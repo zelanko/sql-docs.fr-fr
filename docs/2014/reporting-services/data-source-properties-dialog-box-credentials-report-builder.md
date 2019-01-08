@@ -13,12 +13,12 @@ ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18c950015de84ac6b4204e657dfd52f894b6bced
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21fad41528bfc47ae2b117db68e73320109c98be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207429"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374743"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Boîte de dialogue Propriétés de la source de données, Informations d'identification (Générateur de rapports)
   Sélectionnez **Informations d’identification** dans la boîte de dialogue **Propriétés de la source de données** pour afficher et modifier les informations d’identification pour se connecter à une source de données incorporée dans le rapport. Les informations d'identification que vous fournissez permettent d'accéder à la source de données pour afficher un aperçu des rapports. Pour plus d’informations sur les informations d’identification, consultez [Spécifier des informations d’identification dans le Générateur de rapports](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "48207429"
  Sélectionnez cette option pour utiliser l’authentification Windows.  
   
  **Utiliser ce nom d’utilisateur et le mot de passe**  
- Sélectionnez cette option pour fournir un nom d'utilisateur et un mot de passe spécifiques. Pour les sources de données incorporées : lorsque vous publiez un projet de serveur de rapports sur le serveur cible, le nom d'utilisateur et le mot de passe sont enregistrés sous la forme d'informations d'identification stockées pour la base de données. Si vous voulez utiliser le nom d'utilisateur et le mot de passe comme informations d'identification Windows, vous pouvez modifier les propriétés de la source de données partagée publiée sur le serveur cible. Pour plus d’informations, consultez [Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) dans la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de .  
+ Sélectionnez cette option pour fournir un nom d'utilisateur et un mot de passe spécifiques. Pour les sources de données incorporées : lorsque vous publiez un projet de serveur de rapports sur le serveur cible, le nom d'utilisateur et le mot de passe sont enregistrés sous la forme d'informations d'identification stockées pour la base de données. Si vous voulez utiliser le nom d'utilisateur et le mot de passe comme informations d'identification Windows, vous pouvez modifier les propriétés de la source de données partagée publiée sur le serveur cible. Pour plus d’informations, consultez [Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) dans la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de .  
   
  **Nom d'utilisateur**  
  Tapez un nom d’utilisateur pour la connexion à la source de données.  
@@ -47,7 +47,7 @@ ms.locfileid: "48207429"
   
  Dans certaines extensions de données, le compte d'exécution sans assistance doit être configuré sur le serveur de rapports.  
   
- Pour plus d’informations, consultez la rubrique relative au type de source de données correspondant dans [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) et [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]dans la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de .  
+ Pour plus d’informations, consultez la rubrique relative au type de source de données correspondant dans [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) et [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]dans la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   

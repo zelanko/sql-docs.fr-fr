@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da9dc2db66bd61bc89796d85cd7c83bb4fd035d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89f43904c528c37963a397de450271d1e581e507
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715993"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209919"
 ---
 # <a name="getting-started-in-smo"></a>Mise en route avec SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 Cette page fournit des liens vers des rubriques conçues pour vous aider à démarrer à l’aide de SQL Server Management Objects (SMO). Les rubriques répertoriées garde la hiérarchie d’objets SMO, l’écriture de programmes dans SMO, SMO différents langages de programmation et des tâches de programmation spécifiques.  
  
-##<a name="installing-smo"></a>Installation de SMO
+## <a name="installing-smo"></a>Installation de SMO
 [Installation de SMO](installing-smo.md) fournit des instructions pour l’installation et en référençant les assemblys SMO.
 
 ## <a name="object-model"></a>Modèle objet  

@@ -1,18 +1,20 @@
 ---
-title: Comment recevoir des données dans un pool de données SQL Server avec des travaux Spark | Microsoft Docs
+title: Recevoir des données avec des travaux Spark
+titleSuffix: SQL Server 2019 big data clusters
 description: Ce didacticiel montre comment recevoir des données dans le pool de données d’un cluster de données volumineuses de SQL Server 2019 (version préliminaire) à l’aide de travaux Spark dans Azure Data Studio.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 186de5e63663b9c5485cd0385ded816cafbc7c3d
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: d1780ae630231cd96e9424f4f541d921b1496e7d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221475"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432362"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Didacticiel : Recevoir des données dans un pool de données SQL Server avec des travaux Spark
 
@@ -30,17 +32,17 @@ Dans ce didacticiel, vous allez découvrir comment :
 
 ## <a id="prereqs"></a> Conditions préalables
 
-* [Déployer un cluster de données volumineuses sur Kubernetes](deployment-guidance.md).
-* [Installer Azure Data Studio et l’extension de SQL Server 2019](deploy-big-data-tools.md).
-* [Charger des exemples de données dans le cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Outils de données volumineuses](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **Extension de SQL Server 2019**
+- [Charger des exemples de données dans votre cluster de données volumineux](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Créer une table externe dans le pool de données
 
 Les étapes suivantes créent une table externe dans le pool de données nommé **web_clickstreams_spark_results**. Cette table peut ensuite servir en tant qu’emplacement de réception des données dans le cluster de données volumineuses.
 
-1. Dans Azure Data Studio, connectez-vous à l’instance principale de SQL Server de votre cluster big data. Pour plus d’informations, consultez [se connecter à l’instance principale de SQL Server](deploy-big-data-tools.md#master).
+1. Dans Azure Data Studio, connectez-vous à l’instance principale de SQL Server de votre cluster big data. Pour plus d’informations, consultez [se connecter à l’instance principale de SQL Server](connect-to-big-data-cluster.md#master).
 
 1. Double-cliquez sur la connexion dans le **serveurs** fenêtre pour afficher le tableau de bord du serveur pour l’instance principale de SQL Server. Sélectionnez **nouvelle requête**.
 
@@ -61,13 +63,13 @@ Les étapes suivantes créent une table externe dans le pool de données nommé 
       );
    ```
   
-1. Dans CTP 2.1, la création du pool de données est asynchrone, mais il n’existe aucun moyen de déterminer quand il se termine encore. Veuillez patienter deux minutes pour vous assurer que le pool de données est créé avant de continuer.
+1. Dans CTP 2.2, la création du pool de données est asynchrone, mais il n’existe aucun moyen de déterminer quand il se termine encore. Veuillez patienter deux minutes pour vous assurer que le pool de données est créé avant de continuer.
 
 ## <a name="start-a-spark-streaming-job"></a>Démarrer un travail de diffusion en continu de Spark
 
 L’étape suivante consiste à créer un travail qui charge les données de parcours web du pool de stockage (HDFS) de diffusion en continu de Spark dans la table externe que vous avez créé dans le pool de données.
 
-1. Dans Azure Data Studio, connectez-vous à la passerelle HDFS/Spark de votre cluster big data. Pour plus d’informations, consultez [se connecter à la passerelle HDFS/Spark](deploy-big-data-tools.md#hdfs).
+1. Dans Azure Data Studio, connectez-vous à la **passerelle HDFS/Spark** de votre cluster big data. Pour plus d’informations, consultez [se connecter à la passerelle HDFS/Spark](connect-to-big-data-cluster.md#hdfs).
 
 1. Double-cliquez sur la connexion de passerelle HDFS/Spark dans le **serveurs** fenêtre. Puis sélectionnez **nouveau travail Spark**.
 
@@ -81,10 +83,12 @@ L’étape suivante consiste à créer un travail qui charge les données de par
    /jar/mssql-spark-lib-assembly-1.0.jar
    ```
 
+1. Dans le **classe principale** , entrez `FileStreaming`.
+
 1. Dans le **Arguments** , entrez le texte suivant, en spécifiant le mot de passe à l’instance principale de SQL Server dans le `<your_password>` espace réservé. 
 
    ```text
-   mssql-master-pool-0.service-master-pool 1433 sa <your_password> sales web_clickstreams_spark_results hdfs:///clickstream_data csv false
+   --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
    ```
 
    Le tableau suivant décrit chaque argument :
@@ -100,6 +104,7 @@ L’étape suivante consiste à créer un travail qui charge les données de par
    | Répertoire source pour la diffusion en continu | Cela doit être un URI complet, tel que « hdfs : / / / clickstream_data » |
    | format d’entrée | Cela peut être « csv », « parquet » ou « json » |
    | Activer le point de contrôle | True ou False |
+   | délai d'expiration | durée d’exécution de la tâche pour en millisecondes avant de quitter |
 
 1. Appuyez sur **Submit** pour envoyer la tâche.
 
@@ -113,7 +118,7 @@ Les étapes suivantes montrent que le travail de diffusion en continu Spark char
 
    ![Historique des travaux de Spark](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
 
-1. Revenez à la fenêtre de requête d’instance principale de SQL Server que vous avez ouvert au début de ce didacticiel...
+1. Revenez à la fenêtre de requête d’instance principale de SQL Server que vous avez ouvert au début de ce didacticiel.
 
 1. Exécutez la requête suivante pour examiner les données ingérées.
 

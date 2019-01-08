@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 589d49a68a4234d52ed3a8ddcced08b2dfec37ad
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701727"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591137"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Envoyer des commentaires de télémétrie à Microsoft pour système de plateforme d’Analytique
 Analytique Platform System possède une fonctionnalité de télémétrie facultatif qui envoie des données de la Console d’administration à Microsoft. 
@@ -26,14 +26,14 @@ Analytique Platform System possède une fonctionnalité de télémétrie faculta
 Pour fournir la protection des données personnelles maximale, points d’accès est fourni sans activation de la télémétrie. Avant d’activer cette fonctionnalité, tout d’abord examiner la [déclaration de confidentialité de Microsoft Analytique Platform System](https://go.microsoft.com/fwlink/?LinkId=400902). Pour vous abonner, exécutez le script PowerShell décrit ci-dessous.  
   
 ## <a name="enable"></a>Activer la télémétrie  
-**Le transfert DNS :** envoyant des données de télémétrie à Microsoft requiert Analytique Platform System pour se connecter à internet via un redirecteur DNS. Pour activer cette fonctionnalité, vous devez activer la redirection DNS sur tous les hôtes et les charges de travail des machines virtuelles. Appeler le `Enable-RemoteMonitoring` avec la `SetupDnsForwarder` option pour configurer la redirection DNS et activer la télémétrie correctement. Appeler le `Enable-RemoteMonitoring` commande sans le `SetupDnsForwarder` option lors de la redirection DNS est déjà configurée et vous souhaitez uniquement activer l’analyse de pulsation.  
+**Transfert DNS :** Envoi de données de télémétrie à Microsoft requiert Analytique Platform System pour se connecter à internet via un redirecteur DNS. Pour activer cette fonctionnalité, vous devez activer la redirection DNS sur tous les hôtes et les charges de travail des machines virtuelles. Appeler le `Enable-RemoteMonitoring` avec la `SetupDnsForwarder` option pour configurer la redirection DNS et activer la télémétrie correctement. Appeler le `Enable-RemoteMonitoring` commande sans le `SetupDnsForwarder` option lors de la redirection DNS est déjà configurée et vous souhaitez uniquement activer l’analyse de pulsation.  
   
 > [!IMPORTANT]  
 > Activation du transfert de DNS, la connexion internet pour tous les hôtes et les charges de travail des machines virtuelles s’ouvre.  
   
 #### <a name="to-enable-feedback"></a>Pour activer les commentaires  
   
-1.  À l’aide d’un compte administrateur de domaine appliance, connectez-vous au nœud de contrôle (***appliance_domain *-CTL01**) et ouvrez une invite de commandes à l’aide de vos informations d’identification administrateur de Windows.  
+1.  À l’aide d’un compte administrateur de domaine appliance, connectez-vous au nœud de contrôle (<strong>*appliance_domain*-CTL01</strong>) et ouvrez une invite de commandes à l’aide de vos informations d’identification administrateur de Windows.  
   
 2.  Accédez au répertoire suivant : `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
@@ -83,7 +83,7 @@ Désactivation de la télémétrie s’arrête toutes les opérations qui commun
   
 #### <a name="to-disable-telemetry"></a>Pour désactiver la télémétrie  
   
-1.  À l’aide d’un compte administrateur de domaine appliance, connectez-vous au nœud de contrôle (***appliance_domain *-CTL01**) et ouvrez une fenêtre PowerShell avec des privilèges d’administrateur.  
+1.  À l’aide d’un compte administrateur de domaine appliance, connectez-vous au nœud de contrôle (<strong>*appliance_domain*-CTL01</strong>) et ouvrez une fenêtre PowerShell avec des privilèges d’administrateur.  
   
 2.  Accédez au répertoire suivant : `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   

@@ -1,5 +1,6 @@
 ---
-title: Créer un référentiel de package R local à l’aide de miniCRAN (SQL Server Machine Learning) | Microsoft Docs
+title: Créer un référentiel de package R local à l’aide de miniCRAN - SQL Server Machine Learning Services
+description: Utiliser miniCran pour détecter, assembler et installer les dépendances de package R dans un package unique consolidé.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ef84cc3c08f461745e30fa2ce65e468263ded18d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7dc2e286e6eb80fe1eef3e8b86ed1002a6344cfb
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699397"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431752"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Créer un référentiel de package R local à l’aide de miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,16 +33,16 @@ L’objectif de la création d’un référentiel de packages local consiste à 
 
 Référentiels de packages sont utiles dans ces scénarios :
 
-- **Sécurité**: R de nombreux utilisateurs ont l’habitude à télécharger et installer de nouveaux packages R à volonté, à partir de CRAN ou d’un de ses sites de mise en miroir. Toutefois, pour des raisons de sécurité, les serveurs de production en cours d’exécution [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] ne disposent généralement pas de connectivité internet.
+- **Sécurité**: Nombre d’utilisateurs R est habitué à télécharger et installer de nouveaux packages R à volonté, à partir de CRAN ou d’un de ses sites de mise en miroir. Toutefois, pour des raisons de sécurité, les serveurs de production en cours d’exécution [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ne disposent généralement pas de connectivité internet.
 
-- **Simplifier l’installation hors connexion**: pour installer le package à un serveur en mode hors connexion nécessite que vous téléchargez également toutes les dépendances de package, Using miniCRAN rend plus facile d’obtenir toutes les dépendances dans le format correct.
+- **Simplifier l’installation hors connexion**: Pour installer le package à un serveur en mode hors connexion nécessite que vous téléchargez également toutes les dépendances de package, Using miniCRAN rend plus facile d’obtenir toutes les dépendances dans le format correct.
 
     À l’aide de miniCRAN, vous pouvez éviter les erreurs de dépendance de package lors de la préparation des packages à installer avec le [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instruction.
 
-- **Amélioration de la gestion de version**: dans un environnement multi-utilisateur, il existe de bonnes raisons d’éviter sans restriction de l’installation de plusieurs versions de package sur le serveur. Utiliser un référentiel local pour fournir un ensemble cohérent de packages pour une utilisation par vos analystes. 
+- **Amélioration de la gestion de version**: Dans un environnement multi-utilisateur, il existe de bonnes raisons d’éviter sans restriction de l’installation de plusieurs versions de package sur le serveur. Utiliser un référentiel local pour fournir un ensemble cohérent de packages pour une utilisation par vos analystes. 
 
 > [!TIP]
-> Vous pouvez également utiliser miniCRAN pour préparer les packages à utiliser dans Azure Machine Learning. Pour plus d’informations, consultez ce billet de blog : [à l’aide de miniCRAN dans Azure ML, par Michele Usuelli](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
+> Vous pouvez également utiliser miniCRAN pour préparer les packages à utiliser dans Azure Machine Learning. Pour plus d’informations, consultez ce billet de blog : [À l’aide de miniCRAN dans Azure ML, par Michele Usuelli](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
 
 ## <a name="install-minicran"></a>Installer miniCRAN
 
@@ -99,7 +100,7 @@ Faire **pas** ajouter des dépendances à cette liste initiale. Le **igraph** pa
     makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3");
     ```
 
-   À partir de ces informations, le package miniCRAN crée la structure de dossiers, vous devez copier les packages à la [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] plus tard.
+   À partir de ces informations, le package miniCRAN crée la structure de dossiers, vous devez copier les packages à le [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] plus tard.
 
 À ce stade, vous devez avoir un dossier contenant les packages que vous avez besoin, et tous les packages supplémentaires qui ont été requis. Le chemin d’accès doit être similaire à cet exemple : C:\mylocalrepo\bin\windows\contrib\3.3 et il doivent contenir une collection de packages compressés. Ne pas décompresser les packages ou renommez tous les fichiers.
 

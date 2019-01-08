@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
@@ -15,17 +13,17 @@ ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: beadb88c8423c88ac7a412ca1f234694fb095665
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d01ee7aa96031b9019dc559611827806e7b118db
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216759"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376501"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Développement d'une interface utilisateur pour un gestionnaire de connexions personnalisé
   Après avoir remplacé l'implémentation des propriétés et méthodes de la classe de base afin de fournir vos fonctionnalités personnalisées, vous pouvez créer une interface utilisateur personnalisée pour votre gestionnaire de connexions. Si vous ne créez pas d'interface utilisateur personnalisée, les utilisateurs peuvent configurer votre gestionnaire de connexions uniquement en utilisant la fenêtre Propriétés.  
   
- Dans un projet d'interface utilisateur ou d'assembly personnalisé, vous avez normalement deux classes : une classe qui implémente l'objet <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> et le formulaire Windows qu'il affiche pour collecter des informations auprès de l'utilisateur.  
+ Dans un projet d’interface utilisateur ou d’assembly personnalisé, vous avez normalement deux classes : une classe qui implémente l’objet <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> et le formulaire Windows qu’il affiche pour collecter des informations auprès de l’utilisateur.  
   
 > [!IMPORTANT]  
 >  Après avoir signé et généré votre interface utilisateur personnalisée, puis l’avoir installée dans le Global Assembly Cache comme décrit dans [Codage d’un gestionnaire de connexions personnalisé](../building-deploying-and-debugging-custom-objects.md), n’oubliez pas de fournir le nom complet de cette classe dans la propriété <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> de la classe <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>.  
@@ -286,7 +284,7 @@ private void ConfigureControlsFromConnectionManager()
  }  
 ```  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’un gestionnaire de connexions personnalisé](creating-a-custom-connection-manager.md)   

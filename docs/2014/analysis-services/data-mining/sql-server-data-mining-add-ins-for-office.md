@@ -11,12 +11,12 @@ ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1f27a9834fb8a33ab98f9a8e7c6d309d10056484
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 3126726849b0f434eb0edb33c9f97cb227ca5b2e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099880"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357245"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Compléments d'exploration de données SQL Server pour Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Compléments d'exploration de données est un ensemble d'outils légers pour l'analyse prédictive qui vous permet d'utiliser les données dans Excel pour générer des modèles d'analyse pour la prédiction, les recommandations ou l'exploration.  
@@ -43,17 +43,17 @@ ms.locfileid: "50099880"
   
      Les utilisateurs expérimentés peuvent créer des requêtes personnalisées DMX à l’aide de l’ **Éditeur de requêtes avancé**par glisser-déplacer, ou automatiser les prédictions à l’aide d’Excel VBA.  
   
--   **Documenter et gérer.** Après avoir créé un jeu de données et généré des modèles, documentez votre travail et vos analyses en générant un résumé statistique des paramètres de données et du modèle.  
+-   **Documenter et gérer.** Une fois que vous avez créé un jeu de données et généré des modèles, documentez votre travail et vos analyses en générant un résumé statistique des données et modèle de paramètres.  
   
--   **Explorer et visualiser.** L'exploration de données n'est pas une activité qui peut être entièrement automatisée. Vous devez explorer et comprendre les résultats pour prendre des mesures explicites. Les compléments facilitent l'exploration en fournissant des visionneuses interactives dans Excel, des modèles Visio qui vous laissent personnaliser les diagrammes de modèle, et la possibilité d'exporter des graphiques et des tables pour Excel à des fins de filtrage ou de modification supplémentaire.  
+-   **Explorer et visualiser.** Exploration de données n’est pas une activité qui peut être entièrement automatisée : vous devez Explorer et comprendre les résultats pour prendre des mesures explicites. Les compléments facilitent l'exploration en fournissant des visionneuses interactives dans Excel, des modèles Visio qui vous laissent personnaliser les diagrammes de modèle, et la possibilité d'exporter des graphiques et des tables pour Excel à des fins de filtrage ou de modification supplémentaire.  
   
--   **Déployer et intégrer.** Lorsque vous avez créé un modèle utile, mettez votre modèle en production, en utilisant les outils de gestion pour exporter le modèle de votre serveur expérimental vers une autre instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Déployer et intégrer.** Lorsque vous avez créé un modèle utile, mettez votre modèle en production, en utilisant les outils de gestion pour exporter le modèle à partir de votre serveur expérimental vers une autre instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
      Vous pouvez également laisser le modèle sur le serveur où vous l'avez créé, mais actualisez les données d'apprentissage et exécutez des prédictions à l'aide d'Integration Services ou de scripts DMX.  
   
      Les utilisateurs avancés apprécieront la fonctionnalité de **trace** , qui permet d'afficher les instructions XMLA et DMX envoyées au serveur.  
   
-## <a name="getting-started"></a>Mise en route  
+## <a name="getting-started"></a>Prise en main  
  Consultez les rubriques suivantes pour en savoir plus sur les outils et sur l'installation :  
   
 -   [Client d’exploration de données pour Excel &#40;compléments d’exploration de données SQL Server&#41;](../data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
@@ -84,6 +84,6 @@ ms.locfileid: "50099880"
   
  Selon l'édition de SQL Server Analysis Services à laquelle vous vous connectez, certains algorithmes avancés peuvent ne pas être disponibles. Pour plus d'informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2014](https://msdn.microsoft.com/library/cc645993.aspx).  
   
- Pour plus d’informations avec l’installation, consultez cette page sur le centre de téléchargement : [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ Pour plus d’informations avec l’installation, consultez cette page sur le centre de téléchargement : [https://www.microsoft.com/download/details.aspx?id=29061](https://www.microsoft.com/download/details.aspx?id=29061)  
   
   

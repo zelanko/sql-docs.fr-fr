@@ -12,12 +12,12 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57fff62c09a23a416c3e65d7aa14604b4c513915
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21474aed83aac1fe86e2242b1238affa11ae64a0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062569"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373181"
 ---
 # <a name="process-results-odbc"></a>Traiter des résultats (ODBC)
     
@@ -29,7 +29,7 @@ ms.locfileid: "48062569"
   
 3.  Pour chaque ligne de l'ensemble de résultats :  
   
-    -   Appelez [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) pour obtenir la ligne suivante.  
+    -   Appelez [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) pour obtenir la ligne suivante.  
   
     -   Si les colonnes dépendantes sont utilisées, utilisez les données à présent disponibles dans les mémoires tampons des colonnes dépendantes.  
   
@@ -37,15 +37,15 @@ ms.locfileid: "48062569"
   
     -   Appelez plusieurs fois `SQLGetData` pour obtenir des données à partir d'une colonne text ou image.  
   
-4.  Quand [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) signale la fin du jeu de résultats en retournant SQL_NO_DATA, appelez [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) pour déterminer si un autre jeu de résultats est disponible.  
+4.  Quand [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) signale la fin du jeu de résultats en retournant SQL_NO_DATA, appelez [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) pour déterminer si un autre jeu de résultats est disponible.  
   
     -   S'il retourne SQL_SUCCESS, un autre jeu de résultats est disponible.  
   
     -   S'il retourne SQL_NO_DATA, aucun autre jeu de résultats n'est disponible.  
   
-    -   S’il retourne SQL_SUCCESS_WITH_INFO ou SQL_ERROR, appelez [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) pour déterminer si la sortie à partir d’une instruction PRINT ou RAISERROR est disponible.  
+    -   S’il retourne SQL_SUCCESS_WITH_INFO ou SQL_ERROR, appelez [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) pour déterminer si la sortie à partir d’une instruction PRINT ou RAISERROR est disponible.  
   
-         Si des paramètres d'instruction liés sont utilisés pour les paramètres de sortie ou la valeur de retour d'une procédure stockée, utilisez les données à présent disponibles dans les mémoires tampons de paramètres liés. Par ailleurs, quand des paramètres liés sont utilisés, chaque appel à [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) ou à [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) aura exécuté l’instruction SQL *S* fois, où *S* est le nombre d’éléments présents dans le tableau de paramètres liés. Cela signifie qu’il y aura *S* jeux de résultats à traiter, où chaque jeu de résultats comprend l’ensemble des jeux de résultats, des paramètres de sortie et des codes de retour habituellement retournés par une exécution unique de l’instruction SQL.  
+         Si des paramètres d'instruction liés sont utilisés pour les paramètres de sortie ou la valeur de retour d'une procédure stockée, utilisez les données à présent disponibles dans les mémoires tampons de paramètres liés. Par ailleurs, quand des paramètres liés sont utilisés, chaque appel à [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) ou à [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) aura exécuté l’instruction SQL *S* fois, où *S* est le nombre d’éléments présents dans le tableau de paramètres liés. Cela signifie qu’il y aura *S* jeux de résultats à traiter, où chaque jeu de résultats comprend l’ensemble des jeux de résultats, des paramètres de sortie et des codes de retour habituellement retournés par une exécution unique de l’instruction SQL.  
   
     > [!NOTE]  
     >  Lorsqu'un jeu de résultats contient des lignes calculées, chaque ligne calculée est rendue disponible comme un jeu de résultats distinct. Ces jeux de résultats calculés sont intercalés au sein des lignes normales et séparent les lignes normales en plusieurs jeux de résultats.  
@@ -55,7 +55,7 @@ ms.locfileid: "48062569"
 6.  Si un autre jeu de résultats est disponible, allez à l’étape 1.  
   
 > [!NOTE]  
->  Pour annuler le traitement d’un jeu de résultats avant que [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) ne retourne SQL_NO_DATA, appelez [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md).  
+>  Pour annuler le traitement d’un jeu de résultats avant que [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) ne retourne SQL_NO_DATA, appelez [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Traitement des rubriques de procédures de résultats &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  

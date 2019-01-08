@@ -1,6 +1,6 @@
 ---
-title: Installer de nouveaux packages R sur SQL Server Machine Learning Services | Microsoft Docs
-description: Ajouter de nouveaux packages R pour SQL Server 2016 R Services ou SQL Server 2017 Machine Learning Services (en base de données)
+title: Utilisation des gestionnaires de package R - Services de SQL Server Machine Learning
+description: Utiliser des commandes R standards comme install.packages pour ajouter de nouveaux packages R pour SQL Server 2016 R Services ou SQL Server 2017 Machine Learning Services (en base de données).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5eb14dde38f9ef7804c62adeaa3cdc1df0f5552b
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: a7ef1d63394da8bf084fabb93382ee565208e137
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864347"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432882"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Utiliser des gestionnaires de packages R pour installer des packages R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ Cette procédure utilise RGui, mais vous pouvez utiliser RTerm ou tout autre R d
 
 1. Cliquez sur RGui.exe, puis sélectionnez **exécuter en tant qu’administrateur**. Si vous n’avez pas les autorisations requises, contactez l’administrateur de base de données et fournir une liste des packages que vous avez besoin.
 
-1. À partir de la ligne de commande, si vous connaissez le nom du package, vous pouvez taper : `install.packages("the_package-name")` des guillemets doubles sont requis pour le nom du package.
+1. À partir de la ligne de commande, si vous connaissez le nom du package, vous pouvez taper : `install.packages("the_package-name")` Des guillemets doubles sont requis pour le nom du package.
 
 1. Lorsque vous êtes invité pour un site miroir, sélectionnez n’importe quel site qui convient à votre emplacement.
 

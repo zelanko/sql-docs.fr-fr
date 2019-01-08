@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.agentnameagentsecurity.f1
@@ -13,12 +12,12 @@ ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf4cb2b1eeff5b6e2235ea181cbeb32001f0849a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25dc706689ec136a5423de8051fecd3c6071d5bc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157769"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762381"
 ---
 # <a name="ltagentnamegt-agent-security"></a>Sécurité de l’agent &lt;nom_agent&gt;
   La page **\<Sécurité de l’agent <nom_agent>** permet de spécifier les comptes sous lesquels l’Agent de distribution (pour la réplication transactionnelle ou la réplication de capture instantanée) ou l’Agent de fusion (pour la réplication de fusion) s’exécutent et établissent les connexions aux ordinateurs d’une topologie de réplication. Pour plus d’informations sur les autorisations exigées par les agents et les bonnes pratiques en matière de sécurité de la réplication, consultez [Modèle de sécurité de l’Agent de réplication](security/replication-agent-security-model.md) et [Bonnes pratiques en matière de sécurité de la réplication](security/replication-security-best-practices.md).  
@@ -34,23 +33,23 @@ ms.locfileid: "48157769"
  **Connexion au serveur de distribution**  
  S'affiche pour les réplications d'instantané et transactionnelle. Le contexte dans lequel la connexion au serveur de distribution s'établit. Les connexions locales sont toujours établies en utilisant le contexte du compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows dans lequel s'exécute l'agent :  
   
--   Pour les abonnements par émission de données, la connexion locale est celle qui est établie au serveur de distribution, de sorte que ce champ affiche toujours : **Emprunter l’identité \<Domain>\\<Login\>** ou **Emprunter l’identité \<Computer>\\<Login\>** pour les abonnements par émission de données.  
+-   Pour les abonnements par envoi de données, la connexion locale est celle du serveur de distribution. Ce champ affiche donc toujours : **Emprunter l’identité '\<domaine >\\< connexion\>'** ou **emprunter l’identité '\<ordinateur >\\< connexion\>'** pour l’installation push abonnements.  
   
--   Pour les abonnements par extraction, la connexion peut également avoir lieu dans le contexte d'une connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le champ contient l’un des éléments suivants : **Utiliser la connexion \<Connexion>****, Emprunter l’identité \<Domaine>\\<Connexion\>** ou **Emprunter l’identité\<Ordinateur>\\<Connexion\>**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'établir toutes les connexions dans le contexte du compte Windows.  
+-   Pour les abonnements par extraction, la connexion peut également avoir lieu dans le contexte d'une connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les champs affichent : **Utiliser la connexion «\<connexion >'**, **emprunter l’identité '\<domaine >\\< connexion\>'** ou **emprunter l’identité '\<ordinateur >\\< connexion\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'établir toutes les connexions dans le contexte du compte Windows.  
   
  **Connexion au serveur de publication et serveur de distribution**  
  S'affiche pour la réplication de fusion. Le contexte des connexions aux serveurs de publication et de distribution s'établit. Les connexions locales sont toujours établies en utilisant le contexte du compte Windows dans lequel s'exécute l'agent :  
   
--   Pour les abonnements par émission de données, la connexion locale est celle qui est établie au serveur de publication et au serveur de distribution, de sorte que ce champ affiche toujours : **Emprunter l’identité \<Domain>\\<Login\>** ou **Emprunter l’identité \<Computer>\\<Login\>** pour les abonnements par émission de données.  
+-   Pour les abonnements par envoi de données, la connexion locale est celle des serveurs de publication et de distribution. Ce champ affiche donc toujours : **Emprunter l’identité '\<domaine >\\< connexion\>'** ou **emprunter l’identité '\<ordinateur >\\< connexion\>'** pour l’installation push abonnements.  
   
--   Pour les abonnements par extraction, la connexion peut également avoir lieu dans le contexte d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le champ contient l’un des éléments suivants : **Utiliser la connexion \<Connexion>****, Emprunter l’identité \<Domaine>\\<Connexion\>** ou **Emprunter l’identité\<Ordinateur>\\<Connexion\>**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'établir toutes les connexions dans le contexte du compte Windows.  
+-   Pour les abonnements par extraction, la connexion peut également avoir lieu dans le contexte d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les champs affichent : **Utiliser la connexion «\<connexion >'**, **emprunter l’identité '\<domaine >\\< connexion\>'** ou **emprunter l’identité '\<ordinateur >\\< connexion\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'établir toutes les connexions dans le contexte du compte Windows.  
   
  **Connexion à l'Abonné**  
  Le contexte dans lequel la connexion à l'abonné s'établit. Les connexions locales sont toujours établies en utilisant le contexte du compte Windows dans lequel s'exécute l'agent :  
   
--   Pour les abonnements par extraction, la connexion locale est celle qui est établie à l’Abonné, de sorte que ce champ affiche toujours : **Emprunter l’identité \<Domain>\\<Login\>** ou **Emprunter l’identité \<Computer>\\<Login\>** pour les abonnements par émission de données.  
+-   Pour les abonnements par extraction, la connexion locale est celle de l'abonné. Ce champ affiche donc toujours : **Emprunter l’identité '\<domaine >\\< connexion\>'** ou **emprunter l’identité '\<ordinateur >\\< connexion\>'** pour l’installation push abonnements.  
   
--   Pour les abonnements par émission de données, la connexion peut également avoir lieu dans le contexte d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le champ contient l’un des éléments suivants : **Utiliser la connexion \<Connexion>****, Emprunter l’identité \<Domaine>\\<Connexion\>** ou **Emprunter l’identité\<Ordinateur>\\<Connexion\>**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'établir toutes les connexions dans le contexte du compte Windows.  
+-   Pour les abonnements par émission de données, la connexion peut également avoir lieu dans le contexte d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les champs affichent : **Utiliser la connexion «\<connexion >'**, **emprunter l’identité '\<domaine >\\< connexion\>'** ou **emprunter l’identité '\<ordinateur >\\< connexion\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'établir toutes les connexions dans le contexte du compte Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les propriétés d’un abonnement par extraction](view-and-modify-pull-subscription-properties.md)   

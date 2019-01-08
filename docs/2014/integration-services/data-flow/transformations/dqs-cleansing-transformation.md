@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data correction
@@ -14,12 +13,12 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c597a99a0762efe2098696fe8d582d6a3c56f1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3642f15f60811d9a918c410ee2429084e63d74c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079049"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363581"
 ---
 # <a name="dqs-cleansing-transformation"></a>Transformation de nettoyage DQS
   La transformation de nettoyage DQS utilise les services Data Quality Services (DQS) pour corriger des données provenant d'une source de données connectée en appliquant des règles approuvées créées pour la source de données connectée ou une source de données similaire. Pour plus d'informations sur les règles de correction des données, consultez [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md). Pour plus d'informations sur DQS, consultez [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  
@@ -51,6 +50,6 @@ ms.locfileid: "48079049"
   
 -   [Gérer &#40;ouvrir, déverrouiller, renommer et supprimer des&#41; un projet de qualité des données](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)  
   
--   Article [Nettoyage de données complexes à l'aide des domaines composites](http://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx), sur social.technet.microsoft.com.  
+-   Article [Nettoyage de données complexes à l'aide des domaines composites](https://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx), sur social.technet.microsoft.com.  
   
   

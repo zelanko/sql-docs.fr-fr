@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -14,28 +13,28 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ac9a6a1b2d4107d420bab68659b6d05f25805a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067025"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371551"
 ---
 # <a name="what39s-new-database-engine"></a>Ce que&#39;s nouveau (moteur de base de données)
-  Cette nouvelle version du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] intègre de nouvelles fonctionnalités et des améliorations qui augmentent la puissance et la productivité des architectes, des développeurs et des administrateurs qui conçoivent, développent et maintiennent des systèmes de stockage de données. Vous trouverez ci-dessous les domaines d'amélioration du [!INCLUDE[ssDE](../includes/ssde-md.md)].  
+  Cette nouvelle version du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] intègre de nouvelles fonctionnalités et des améliorations qui augmentent la puissance et la productivité des architectes, des développeurs et des administrateurs qui conçoivent, développent et maintiennent des systèmes de stockage de données. Vous trouverez ci-dessous les domaines d'amélioration du [!INCLUDE[ssDE](../includes/ssde-md.md)] .  
   
 ##  <a name="Feature"></a> Améliorations de fonctionnalités de moteur de base de données  
   
 ###  <a name="MemoryOpt"></a> Tables optimisées en mémoire  
- L'OLTP en mémoire est un moteur de base de données mémoire optimisé intégré au moteur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'OLTP en mémoire est optimisé pour OLTP. Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
+ L'OLTP en mémoire est un moteur de base de données mémoire optimisé intégré au moteur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . L'OLTP en mémoire est optimisé pour OLTP. Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
  
   
 ###  <a name="DataFiles"></a> Fichiers de données SQL Server dans Windows Azure  
- [Fichiers de données SQL Server dans Windows Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) permet la prise en charge native pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fichiers stockés sous la forme d’objets BLOB Windows Azure de base de données. Cette fonctionnalité vous permet de créer une base de données dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécuté localement ou sur une machine virtuelle dans Windows Azure, avec un emplacement de stockage dédié pour vos données dans le Stockage Blob Windows Azure.  
+ [Fichiers de données SQL Server dans Windows Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) prend en charge en mode natif les fichiers de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stockés en tant qu'objets blob Windows Azure. Cette fonctionnalité vous permet de créer une base de données dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécuté localement ou sur une machine virtuelle dans Windows Azure, avec un emplacement de stockage dédié pour vos données dans le stockage Blob Windows Azure.  
   
   
 ###  <a name="AzureVM"></a> Héberger une base de données SQL Server dans une fenêtre de Machine virtuelle Azure  
- Utilisez le [déployer une base de données SQL Server à un ordinateur virtuel Windows Azure](http://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) Assistant pour héberger une base de données à partir d’une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans un ordinateur virtuel Windows Azure.  
+ Utilisez l'Assistant [Déployer une base de données SQL Server sur un ordinateur virtuel Windows Azure](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) pour héberger une base de données d'une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un ordinateur virtuel Windows Azure.  
   
   
 ###  <a name="Backup"></a> Sauvegarde et restauration avancées  
@@ -43,19 +42,19 @@ ms.locfileid: "48067025"
   
 -   **Sauvegarde SQL Server vers une URL**  
   
-     La fonctionnalité Sauvegarde [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers une URL a été présentée dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 et n'est prise en charge que par [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell et SMO. Dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], vous pouvez utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour effectuer des sauvegardes ou des restaurations à partir du service de stockage d'objets blob Windows Azure. La nouvelle option est disponible pour les tâches de sauvegarde et les plans de maintenance à la fois. Pour plus d’informations, consultez [à l’aide de la tâche de sauvegarde dans SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server Backup to URL Using Maintenance Plan Wizard](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz), et [restauration depuis le stockage Windows Azure à l’aide de SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
+     La fonctionnalité Sauvegarde [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers une URL a été présentée dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 et n'est prise en charge que par [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell et SMO. Dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] , vous pouvez utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour effectuer des sauvegardes ou des restaurations à partir du service de stockage d'objets blob Windows Azure. La nouvelle option est disponible pour les tâches de sauvegarde et les plans de maintenance à la fois. Pour plus d'informations, consultez [Using Backup Task in SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server Backup to URL Using Maintenance Plan Wizard](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)et [Restoring from Windows Azure storage Using SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
   
 -   **Sauvegarde managée SQL Server sur Microsoft Azure**  
   
-     Reposant sur la fonctionnalité Sauvegarde [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers une URL, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est un service fourni par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour gérer et planifier les sauvegardes de base de données et de journaux. Dans cette version, seule la sauvegarde vers le stockage Windows Azure est prise en charge. La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] peut être configurée au niveau de la base de données ou de l'instance, ce qui permet un contrôle granulaire au niveau de la base de données, et l'automatisation au niveau de l'instance. La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] peut être configurée sur les instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécutées localement et sur les instances [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécutées sur des ordinateurs virtuels Windows Azure. Elle est recommandée pour les instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécutées sur des ordinateurs virtuels Windows Azure. Pour plus d’informations, consultez [SQL Server Managed Backup pour Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
+     Reposant sur la fonctionnalité Sauvegarde [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers une URL, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est un service fourni par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour gérer et planifier les sauvegardes de base de données et de journaux. Dans cette version, seule la sauvegarde vers le stockage Windows Azure est prise en charge. La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] peut être configurée au niveau de la base de données ou de l'instance, ce qui permet un contrôle granulaire au niveau de la base de données, et l'automatisation au niveau de l'instance. La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] peut être configurée sur les instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécutées localement et sur les instances [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécutées sur des ordinateurs virtuels Windows Azure. Elle est recommandée pour les instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécutées sur des ordinateurs virtuels Windows Azure. Pour plus d'informations, consultez [SQL Server Managed  Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
 -   **Chiffrement des sauvegardes**  
   
-     Vous pouvez maintenant choisir de chiffrer le fichier de sauvegarde pendant l'opération de sauvegarde.  Plusieurs algorithmes de chiffrement sont pris en charge, dont AES 128, AES 192, AES 256, et Triple DES. Vous devez utiliser un certificat ou une clé asymétrique pour effectuer un chiffrement pendant une sauvegarde. Pour plus d’informations, consultez [chiffrement de sauvegarde](../relational-databases/backup-restore/backup-encryption.md).  
+     Vous pouvez maintenant choisir de chiffrer le fichier de sauvegarde pendant l'opération de sauvegarde.  Plusieurs algorithmes de chiffrement sont pris en charge, dont AES 128, AES 192, AES 256, et Triple DES. Vous devez utiliser un certificat ou une clé asymétrique pour effectuer un chiffrement pendant une sauvegarde. Pour plus d'informations, consultez [Chiffrement de sauvegarde](../relational-databases/backup-restore/backup-encryption.md).  
   
   
 ###  <a name="CE"></a> Nouvelle conception pour l’Estimation de cardinalité  
- La logique d’estimation de cardinalité, appelée estimateur de cardinalité, est remodelée dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] pour améliorer la qualité des plans de requête et par conséquent pour améliorer les performances de requête. Le nouvel estimateur de cardinalité incorpore des hypothèses et des algorithmes qui fonctionnent sur les charges de travail OLTP et de stockage de données modernes. Il repose sur la recherche détaillée des estimations de cardinalité sur les charges de travail modernes et sur nos connaissances acquises au cours des 15 dernières années sur l'amélioration de l'estimateur de cardinalité SQL Server. Les commentaires des clients indiquent que bien que la plupart des requêtes tirent parti des modifications ou demeurent inchangées, un petit nombre d'entre elles présente des régressions par rapport à l'estimateur de cardinalité précédent. Pour optimiser les performances et recommandations pour les tests, consultez [Estimation de cardinalité &#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md).  
+ La logique d'estimation de la cardinalité, appelée estimateur de cardinalité, est remodelée dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] afin d'améliorer la qualité des plans de requête, et par conséquent, améliorer les performances des requêtes. Le nouvel estimateur de cardinalité incorpore des hypothèses et des algorithmes qui fonctionnent sur les charges de travail OLTP et de stockage de données modernes. Il repose sur la recherche détaillée des estimations de cardinalité sur les charges de travail modernes et sur nos connaissances acquises au cours des 15 dernières années sur l'amélioration de l'estimateur de cardinalité SQL Server. Les commentaires des clients indiquent que bien que la plupart des requêtes tirent parti des modifications ou demeurent inchangées, un petit nombre d'entre elles présente des régressions par rapport à l'estimateur de cardinalité précédent. Pour optimiser les performances et recommandations pour les tests, consultez [Estimation de cardinalité &#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md).  
    
   
 ###  <a name="Durability"></a> Durabilité différée  
@@ -75,9 +74,9 @@ ms.locfileid: "48067025"
   
 -   Les instances de cluster de basculement utilisent maintenant les volumes partagés de cluster (CSV) comme disques partagés dans le cluster. Pour plus d’informations, consultez [toujours sur les Instances de Cluster basculement](../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
--   Une nouvelle fonction système, [sys.fn_hadr_is_primary_replica](/sql/relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql)et une vue de gestion dynamique, [sys.dm_io_cluster_valid_path_names](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql), est disponible.  
+-   Une nouvelle fonction système, [sys.fn_hadr_is_primary_replica](/sql/relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql), et une nouvelle vue de gestion dynamique (DMV), [sys.dm_io_cluster_valid_path_names](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql), sont disponible.  
   
--   Les vues DMV suivantes ont été améliorées et retournent maintenant informations FCI : [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql), et [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql).  
+-   Les vues de gestion dynamique suivantes ont été améliorées et retournent maintenant les informations de l'instance de cluster de basculement : [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql), et [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql).  
   
   
 ###  <a name="OIR"></a> Basculement de partition et l’indexation  
@@ -97,15 +96,15 @@ ms.locfileid: "48067025"
   
 -   **PLAN D’EXÉCUTION**  
   
-     SHOWPLAN affiche des informations à propos des index columnstore. Les propriétés **EstimatedExecutionMode** et **ActualExecutionMode** ont deux valeurs possibles : **Batch** ou **Row**.  La propriété **Storage** a deux valeurs possibles : **RowStore** et **ColumnStore**.  
+     SHOWPLAN affiche des informations à propos des index columnstore. Le **EstimatedExecutionMode** et **ActualExecutionMode** propriétés ont deux valeurs possibles : **Batch** ou **ligne**.  Le **stockage** propriété a deux valeurs possibles : **RowStore** et **ColumnStore**.  
   
 -   **Compression de données d’archivage**  
   
-     ALTER INDEX … REBUILD possède une nouvelle option de compression des données COLUMNSTORE_ARCHIVE qui compresse encore les partitions spécifiées d'un index columnstore. Utilisez cette option pour l'archivage ou dans d'autres situations qui nécessitent une plus petite taille de stockage des données et qui supportent un temps de stockage et de récupération plus long. Pour plus d’informations, consultez [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
+     ALTER INDEX ... REBUILD possède une nouvelle option de compression des données COLUMNSTORE_ARCHIVE qui compresse encore les partitions spécifiées d'un index columnstore. Utilisez cette option pour l'archivage ou dans d'autres situations qui nécessitent une plus petite taille de stockage des données et qui supportent un temps de stockage et de récupération plus long. Pour plus d’informations, consultez [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
    
   
 ###  <a name="Buffer"></a> Extension du Pool de mémoires tampons  
- Le [Extension du Pool de mémoires tampons](configure-windows/buffer-pool-extension.md) permet l’intégration transparente de disques SSD (SSD) comme extension vive non volatile (NvRAM) de mémoire dans le [!INCLUDE[ssDE](../includes/ssde-md.md)] pool pour améliorer considérablement le débit d’e/s de mémoires tampons.  
+ L'option [Extension du pool de mémoires tampons](configure-windows/buffer-pool-extension.md) permet l'intégration transparente de disques SSD en tant qu'extension NvRAM (nonvolatile random access memory) du pool de mémoires tampons du [!INCLUDE[ssDE](../includes/ssde-md.md)] pour améliorer considérablement le débit d'E/S.  
    
   
 ###  <a name="Stats"></a> Statistiques incrémentielles  
@@ -119,22 +118,22 @@ ms.locfileid: "48067025"
   
   
 ###  <a name="OnlineEvent"></a> Online Index Operation Event Class  
- Le rapport de progression de la classe d'événements d'opération d'index en ligne présente désormais deux nouvelles colonnes de données : **PartitionId** et **PartitionNumber**. Pour plus d’informations, consultez [Progress Report : Online Index Operation Event Class](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
+ Le rapport de progression de la classe d'événements d'opération d'index en ligne présente désormais deux nouvelles colonnes de données : **PartitionId** et **PartitionNumber**. Pour plus d’informations, consultez [Progress Report : Online Index Operation Event Class](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
   
   
 ###  <a name="Compat"></a> Niveau de compatibilité de base de données  
- Le niveau de compatibilité 90 n'est pas pris en charge dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Pour plus d’informations, consultez [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
+ Le niveau de compatibilité 90 n'est pas pris en charge dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Pour plus d’informations, consultez [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   
 ##  <a name="TSQL"></a> Améliorations de Transact-SQL  
   
 ### <a name="inline-specification-of-clustered-and-nonclustered"></a>Spécification incluse d'index CLUSTERED et NONCLUSTERED  
  La spécification incluse des index `CLUSTERED` et `NONCLUSTERED` n'est pas autorisée dans les tables sur disque. Créer une table contenant des index intégrés revient à émettre une instruction create table suivie des instructions `CREATE INDEX` correspondantes. Les colonnes incluses et les conditions de filtre ne sont pas prises en charge par les index intégrés.  
   
-### <a name="select--into"></a>SELECT … INTO  
- L'instruction `SELECT … INTO` est améliorée et peut maintenant se produire simultanément. Le niveau de compatibilité de la base de données doit être au moins 110.  
+### <a name="select--into"></a>SÉLECTIONNEZ... INTO  
+ L'instruction `SELECT ... INTO` est améliorée et peut maintenant se produire simultanément. Le niveau de compatibilité de la base de données doit être au moins 110.  
   
 ### <a name="includetsqlincludestsql-mdmd-enhancements-for-in-memory-oltp"></a>Améliorations [!INCLUDE[tsql](../includes/tsql-md.md)] pour l'OLTP en mémoire  
- Pour plus d’informations sur la [!INCLUDE[tsql](../includes/tsql-md.md)] modifications pour prendre en charge d’OLTP en mémoire, consultez [prise en charge de Transact-SQL pour OLTP en mémoire](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md).  
+ Pour plus d'informations sur les modifications [!INCLUDE[tsql](../includes/tsql-md.md)] pour la prise en charge de l'OLTP en mémoire, consultez [Transact-SQL Support for In-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md).  
   
   
 ##  <a name="SystemTable"></a> Améliorations des vues système  

@@ -16,12 +16,12 @@ ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 532a9ae9b44b300cb8d75ea0ea45d24ad5827887
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fd38d33bf0ed5d074fe2784dfba38348342df98
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114769"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359681"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Configuration du service Integration Services (Service SSIS)
     
@@ -123,7 +123,7 @@ La clé de Registre **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server
   
   
 > [!CAUTION]  
->  La modification incorrecte du Registre peut entraîner de graves problèmes et nécessiter la réinstallation du système d'exploitation. [!INCLUDE[msCoName](../includes/msconame-md.md)] ne peut pas garantir que les problèmes résultant d’une modification incorrecte du Registre peuvent être résolus. Avant de modifier le Registre, sauvegardez toutes vos données importantes. Pour plus d'informations sur la méthode de sauvegarde, de restauration et de modification du Registre, consultez l'article [!INCLUDE[msCoName](../includes/msconame-md.md)] Description du Registre de Microsoft Windows [de la Base de connaissances](http://support.microsoft.com/kb/256986).  
+>  La modification incorrecte du Registre peut entraîner de graves problèmes et nécessiter la réinstallation du système d'exploitation. [!INCLUDE[msCoName](../includes/msconame-md.md)] ne garantit pas que les problèmes résultant d'une modification incorrecte du Registre peuvent être résolus. Avant de modifier le Registre, sauvegardez toutes vos données importantes. Pour plus d'informations sur la méthode de sauvegarde, de restauration et de modification du Registre, consultez l'article [!INCLUDE[msCoName](../includes/msconame-md.md)] Description du Registre de Microsoft Windows [de la Base de connaissances](https://support.microsoft.com/kb/256986).  
   
  Lorsqu'il démarre, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] charge le fichier de configuration. Toute modification de l'entrée de Registre nécessite le redémarrage du service.  
   

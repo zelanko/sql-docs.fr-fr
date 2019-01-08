@@ -1,18 +1,20 @@
 ---
-title: Exécuter un exemple de notebook sur un cluster de données volumineuses de SQL Server 2019 | Microsoft Docs
+title: Exécuter un exemple de notebook | Microsoft Docs
+titleSuffix: SQL Server 2019 big data clusters
 description: Ce didacticiel montre comment vous pouvez charger une exécution d’un exemple de notebook Spark sur un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/17/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 811c94615f0d69886f0f538357529ad3125e2925
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 55d37969ec3e03a635e948cdafb73eb1922a1795
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644162"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432552"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>Didacticiel : Exécuter un exemple de notebook sur un cluster de données volumineuses de SQL Server 2019
 
@@ -23,11 +25,11 @@ Ce didacticiel montre comment charger et exécuter un notebook dans Azure Data S
 
 ## <a id="prereqs"></a> Conditions préalables
 
-* [Déployer un cluster de données volumineuses sur Kubernetes](deployment-guidance.md).
-* [Installer Azure Data Studio et l’extension de SQL Server 2019](deploy-big-data-tools.md).
-* [Charger des exemples de données dans le cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Outils de données volumineuses](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **Extension de SQL Server 2019**
+- [Charger des exemples de données dans votre cluster de données volumineux](tutorial-load-sample-data.md)
 
 ## <a name="download-the-sample-notebook-file"></a>Télécharger l’exemple de fichier de bloc-notes
 
@@ -47,7 +49,7 @@ Utilisez les instructions suivantes pour charger l’exemple de fichier de bloc-
 
 Les étapes suivantes montrent comment ouvrir le fichier de bloc-notes dans Azure Data Studio :
 
-1. Dans Azure Data Studio, connectez-vous à la passerelle HDFS/Spark de votre cluster big data. Pour plus d’informations, consultez [se connecter à la passerelle HDFS/Spark](deploy-big-data-tools.md#hdfs).
+1. Dans Azure Data Studio, connectez-vous à la passerelle HDFS/Spark de votre cluster big data. Pour plus d’informations, consultez [se connecter à la passerelle HDFS/Spark](connect-to-big-data-cluster.md#hdfs).
 
 1. Double-cliquez sur la connexion de passerelle HDFS/Spark dans le **serveurs** fenêtre. Puis sélectionnez **ouvrir le bloc-notes**.
 

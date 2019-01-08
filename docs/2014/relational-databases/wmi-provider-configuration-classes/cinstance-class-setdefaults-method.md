@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetDefaults Method (CInstance Class)
@@ -20,15 +18,15 @@ ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b242e76bb714088895048cb869473c23d2e4cb07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a105fd636c454ab236764611f1e57729ccad6ac
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080859"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357035"
 ---
 # <a name="setdefaults-method-cinstance-class"></a>Méthode SetDefaults (classe CInstance)
-  Définit toutes les valeurs par défaut pour l’instance de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client avec l’option permettant de remplacer les données existantes.  
+  Définit toutes les valeurs par défaut pour l'instance du client [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec la possibilité de remplacer les données existantes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,6 +55,6 @@ OverwriteAll
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

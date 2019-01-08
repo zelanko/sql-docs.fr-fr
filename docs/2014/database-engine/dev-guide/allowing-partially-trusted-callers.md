@@ -17,12 +17,12 @@ ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e79e83263ab498a86a82fcdc65d56f6f8910d497
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f16cadbb06d1d25000aefada172a783a5a19c79c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222961"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368101"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Autorisation d'appelants partiellement approuvés
   Le partage de bibliothèques de code est un scénario courant avec l'intégration du Common Language Runtime (CLR), dans lequel un assembly qui contient un type défini par l'utilisateur, une procédure stockée, une fonction définie par l'utilisateur, un agrégat défini par l'utilisateur, un déclencheur ou une classe utilitaire est souvent accédé par un autre assembly ou application. Les bibliothèques de code qui doivent être partagées par plusieurs applications doivent être signées avec un nom fort.  
@@ -62,7 +62,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  Cet exemple démontre également l'utilisation de l'attribut d'autorisation des appelants partiellement approuvés visant à indiquer que l'assembly ResultSet est une bibliothèque que vous pouvez appeler en toute sécurité à partir d'autres assemblys. Cette approche est un peu plus complexe mais beaucoup plus sûre que d'inscrire l'assembly appelant avec l'autorisation unsafe. Elle est plus sûre parce qu'en inscrivant l'assembly appelant en tant que safe, vous affectez de manière limitée les ressources en dehors du serveur et éviter d'endommager l'intégrité de ce dernier.  
   
- Les instructions de version pour cet exemple supposent que les fichiers de code source se trouvent dans un répertoire appelé c:\samples.  Si vous utilisez un autre répertoire, vous devrez modifier les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts nécessite également la base de données AdventureWorks. Vous pouvez télécharger la base de données AdventureWorks à partir de la [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) page d’accueil.  
+ Les instructions de version pour cet exemple supposent que les fichiers de code source se trouvent dans un répertoire appelé c:\samples.  Si vous utilisez un autre répertoire, vous devrez modifier les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts nécessite également la base de données AdventureWorks. Vous pouvez télécharger la base de données AdventureWorks à partir de la [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) page d’accueil.  
   
  Pour générer et exécuter l'exemple, collez la première liste de code dans un fichier appelé ResultSet.cs et compilez avec csc /target:library ResultSet.cs.  
   

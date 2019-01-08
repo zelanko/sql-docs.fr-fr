@@ -11,12 +11,12 @@ ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01142090276214f28e523dfc1c969747d5de60a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5311f08e9ec6b31fd0eabc1395baa31319eff64
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222239"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412206"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Test de la précision à l'aide de graphiques de courbes d'élévation (Didacticiel sur l'exploration de données de base)
   Sur le **graphique de précision d’exploration de données** onglet du Concepteur d’exploration de données, vous pouvez calculer le degré chacun de vos modèles effectue des prédictions et comparer les résultats de chaque modèle directement sur les résultats des autres modèles. Cette méthode de comparaison est appelée un *graphique de courbes d’élévation*. En général, la précision prédictive d'un modèle d'exploration de données se mesure par la finesse ou la précision de classification. Pour ce didacticiel, nous utiliserons le graphique de courbes d'élévation uniquement.  
@@ -47,7 +47,7 @@ ms.locfileid: "48222239"
   
      Pour utiliser une colonne en tant que le **nom de la colonne prédictible** dans un graphique de précision, les colonnes doivent avoir le type d’utilisation de `Predict` ou `Predict Only`. En outre, le type de contenu de la colonne cible doit être `Discrete` ou `Discretized`. En d'autres termes, vous ne pouvez pas utiliser le graphique de courbes d'élévation pour mesurer la précision par rapport à des valeurs numériques continues.  
   
--   Voulez-vous mesurer la précision générale du modèle, ou sa précision lors de la prédiction d'une valeur spécifique (notamment [Bike Buyer] = « Oui »)  
+-   Vous souhaitez mesurer la précision du modèle général ou sa précision dans la prédiction d’une valeur particulière (notamment [Bike Buyer] = 'Yes')  
   
 #### <a name="to-generate-the-lift-chart"></a>Pour générer le graphique de courbes d'élévation  
   

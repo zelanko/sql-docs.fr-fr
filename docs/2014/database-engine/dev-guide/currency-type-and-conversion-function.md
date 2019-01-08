@@ -12,12 +12,12 @@ ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12e5afd378f09a0fa7d624c6842e907211bc4212
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0119d51332dde13ae77a67fb82f293495a4fefdf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194729"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375141"
 ---
 # <a name="currency-type-and-conversion-function"></a>Type de devise et fonction de conversion
   Cet exemple crée un type de données Currency défini par l'utilisateur à l'aide de C#. Ce type de données défini par l'utilisateur encapsule un montant et une culture qui permet de déterminer la façon correcte d'exprimer le montant comme valeur monétaire dans la culture en question. Cet exemple fournit également une fonction de conversion monétaire qui retourne une instance du type de données Currency défini par l'utilisateur. Si la base de données AdventureWorks dispose d'un taux de conversion des dollars (USD) vers la devise associée à la culture spécifiée, la fonction de conversion retourne un type de données Currency défini par l'utilisateur avec le montant converti et une culture qui correspond à la culture demandée. Sinon, un type de données Currency défini par l'utilisateur est retourné avec le montant d'origine, qui doit être en USD, avec la culture `en-us`. Cet exemple montre également comment inscrire des méthodes CLR (Common Language Runtime) et des assemblys et annuler leur inscription à l'aide de Transact-SQL.  
@@ -28,9 +28,9 @@ ms.locfileid: "48194729"
 ## <a name="prerequisites"></a>Prérequis  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](http://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
   
--   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   Le Kit de développement logiciel .NET Framework SDK 2.0 ou version ultérieure, ou Microsoft Visual Studio 2005 ou version ultérieure. Vous pouvez vous procurer gratuitement le Kit de développement logiciel .NET Framework SDK.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "48194729"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer le CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer l'intégration du CLR, vous devez disposer de l'autorisation de niveau serveur `ALTER SETTINGS` qui est attribuée implicitement aux membres des rôles serveur fixes `sysadmin` et `serveradmin`.  
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
--   Si vous n’êtes pas administrateur de le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance que vous utilisez, vous devez demander un administrateur vous accorder **CreateAssembly** autorisation pour terminer l’installation.  
+-   Si vous n'êtes pas administrateur de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée, vous devez demander à un administrateur de vous accorder l'autorisation **CreateAssembly** pour terminer l'installation.  
   
 ## <a name="building-the-sample"></a>Génération de l'exemple  
   

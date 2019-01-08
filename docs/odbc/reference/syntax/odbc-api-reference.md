@@ -12,17 +12,17 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6553984255843cf940b48d745d4494522b357159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d56d6068b842256bd450844c7b163727e5d35f3d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680827"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525058"
 ---
 # <a name="odbc-api-reference"></a>Informations de référence sur l’API ODBC
 Les rubriques de cette section décrivent chaque fonction ODBC dans l’ordre alphabétique. Chaque fonction est définie comme une fonction de langage de programmation de C. Descriptions sont les suivantes :  
   
--   Fonction  
+-   Objectif  
   
 -   Version d’ODBC  
   
@@ -42,7 +42,7 @@ Les rubriques de cette section décrivent chaque fonction ODBC dans l’ordre al
   
 -   Références à des fonctions connexes  
   
- Le niveau de conformité standard CLI peut prendre l’une des opérations suivantes : ISO 92, Open Group, ODBC ou obsolète. Une fonction marquée comme conforme ISO 92 apparaît également dans Open Group version 1, Open Group étant un sur-ensemble pur de ISO 92. Une fonction marquée comme conforme Open groupe apparaît également dans ODBC 3. *x*, étant donné que ODBC 3. *x* est un sur-ensemble pur de Open Group version 1. Une fonction marquée comme conforme à ODBC apparaît dans aucune norme. Une fonction marquée comme déconseillée a été déconseillée dans ODBC 3. *x*.  
+ Le niveau de conformité CLI standard peut être une des opérations suivantes : 92 ISO, ouvrez le groupe, ODBC, ou obsolètes. Une fonction marquée comme conforme à ISO 92 apparaît également dans Open Group version 1, Open Group étant un sur-ensemble pur de ISO 92. Une fonction marquée comme conforme Open groupe apparaît également dans ODBC 3. *x*, étant donné que ODBC 3. *x* est un sur-ensemble pur de Open Group version 1. Une fonction marquée comme conforme à ODBC apparaît dans aucune norme. Une fonction marquée comme déconseillée a été déconseillée dans ODBC 3. *x*.  
   
  Gestion des informations de diagnostics est décrite dans le [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) description de fonction. Le texte associé aux valeurs SQLSTATE est inclus afin de fournir une description de la condition, mais n’est pas destiné à prescrire un texte spécifique.  
   

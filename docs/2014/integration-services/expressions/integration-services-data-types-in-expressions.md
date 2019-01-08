@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
@@ -14,12 +13,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9195d5fad08c8e6539419ba33eb64a840a4688d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80110c29ec1c576684c4ccd67bc0c3408e6250b3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194876"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363342"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Types de données Integration Services dans les expressions
   L'évaluateur d'expression utilise des types de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Lorsque des données entrent dans un flux de données d'un package [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , le moteur de flux de données convertit toutes les données de colonne vers un type de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] et les données de colonne utilisées par une expression ont déjà un type de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Les expressions utilisées dans les transformations de fractionnement conditionnel et de colonne dérivée peuvent référencer des colonnes car elles font partie d'un flux de données qui comprend des données de colonne.  
@@ -33,7 +32,7 @@ ms.locfileid: "48194876"
  Les expressions peuvent aussi comprendre des littéraux de chaîne, booléens et numériques. Pour plus d’informations sur la conversion des littéraux numériques vers des types de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] numériques, consultez [Littéraux &#40;SSIS&#41;](numeric-string-and-boolean-literals.md).  
   
 ## <a name="implicit-data-conversion"></a>Conversion de données implicite  
- Une conversion implicite d'un type de données se produit lorsque l'évaluateur d'expression convertit automatiquement les données d'un type de données vers un autre. Par exemple, si un `smallint` est comparée à une `int`, le `smallint` est implicitement converti en `int` avant la comparaison est effectuée.  
+ Une conversion implicite d'un type de données se produit lorsque l'évaluateur d'expression convertit automatiquement les données d'un type de données vers un autre. Par exemple, si un `smallint` est comparé à un `int`, le `smallint` est implicitement converti en `int` avant que la comparaison soit réalisée.  
   
  L'évaluateur d'expression ne peut pas effectuer la conversion implicite des données lorsque les arguments et les opérandes contiennent des types de données incompatibles. Par ailleurs, l'évaluateur d'expression ne peut pas convertir implicitement une valeur en une valeur booléenne. Les arguments et les opérandes doivent être donc être converties explicitement en utilisant l'opérateur de cast. Pour plus d’informations, consultez [Cast &#40;expression SSIS&#41;](cast-ssis-expression.md).  
   
@@ -46,25 +45,25 @@ ms.locfileid: "48194876"
  Les opérateurs comparent des chaînes, des dates, des valeurs booléennes et d'autres types de données. Avant qu'un opérateur ne compare deux valeurs, l'évaluateur d'expression effectue certaines conversions implicites. L'évaluateur d'expression convertit toujours les littéraux de chaîne vers le type de données DT_WSTR et les littéraux booléens vers le type de données DT_BOOL. L'évaluateur d'expression interprète toutes les valeurs entre guillemets comme des chaînes. Les littéraux numériques sont convertis vers l'un des types de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] numériques.  
   
 > [!NOTE]  
->  Les valeurs booléennes ne sont pas des nombres mais des valeurs logiques. Bien que les valeurs booléennes peuvent apparaître sous la forme de nombres dans certains environnements, elles ne sont pas stockées en tant que tels et divers langages de programmation les représentent de manière différente en tant que valeurs numériques, notamment les méthodes .NET Framework.  
+>  Les valeurs booléennes ne sont pas des nombres mais des valeurs logiques. Bien que les valeurs booléennes peuvent apparaître sous la forme de nombres dans certains environnements, elles ne sont pas stockées en tant que tels et divers langages de programmation les représentent de manière différente en tant que valeurs numériques, notamment les méthodes .NET Framework.  
 >   
->  Par exemple, les fonctions de conversion disponibles dans Visual Basic convertissent la valeur `True` en -1 ; toutefois, la méthode `System.Convert.ToInt32` du .NET Framework convertit `True` en +1. Le [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] langage d’Expression convertit `True` sur -1.  
+>  Par exemple, les fonctions de conversion disponibles dans Visual Basic convertissent la valeur `True` en -1 ; toutefois, la méthode `System.Convert.ToInt32` du .NET Framework convertit `True` en +1. Le langage d'expression [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] convertit `True` en -1.  
 >   
 >  Pour éviter des erreurs ou des résultats inattendus, n'écrivez pas de code fondé sur des valeurs numériques précises pour les valeurs `True` et `False`. Si possible, limitez l'utilisation de variables booléennes aux valeurs logiques pour lesquelles elles sont conçues.  
   
- Pour plus d'informations, consultez les rubriques suivantes :  
+ Pour plus d’informations, consultez les rubriques suivantes :  
   
--   [== &#40;Égal&#41; &#40;SSIS Expression&#41;](equal-ssis-expression.md)  
+-   [== &#40;Égal&#41; &#40;expression SSIS&#41;](equal-ssis-expression.md)  
   
 -   [\!= &#40;Non égal&#41; &#40;expression SSIS&#41;](unequal-ssis-expression.md)  
   
--   [&#62;&#40;Supérieur&#41; &#40;SSIS Expression&#41;](greater-than-ssis-expression.md)  
+-   [&#62; &#40;Supérieur à&#41; &#40;expression SSIS&#41;](greater-than-ssis-expression.md)  
   
--   [&#60;&#40;Inférieure à&#41; &#40;SSIS Expression&#41;](less-than-ssis-expression.md)  
+-   [&#60; &#40;Inférieur à&#41; &#40;expression SSIS&#41;](less-than-ssis-expression.md)  
   
--   [&#62;= &#40;Supérieur ou égal à&#41; &#40;SSIS Expression&#41;](greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;= &#40;Supérieur ou égal à&#41; &#40;expression SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;= &#40;Inférieure ou égale à&#41; &#40;SSIS Expression&#41;](less-than-or-equal-to-ssis-expression.md)  
+-   [&#60;= &#40;Inférieur ou égal à&#41; &#40;expression SSIS&#41;](less-than-or-equal-to-ssis-expression.md)  
   
  Une fonction qui utilise un seul argument retourne un résultat dont le type de données est celui de l'argument, sauf dans les cas suivants :  
   
@@ -93,7 +92,7 @@ ms.locfileid: "48194876"
   
 -   Les arguments transmis aux fonctions mathématiques doivent s'évaluer à un type de données numérique. Selon la fonction ou l'opération, un type de données numérique spécifique peut être requis. Par exemple, la fonction HEX requiert un entier signé ou non signé.  
   
--   Les arguments passés aux fonctions de chaîne doivent produire un type de données caractère : DT_STR ou DT_WSTR. Par exemple, UPPER("fleur"). Certaines fonctions de chaîne, telles que la fonction SUBSTRING, requièrent des arguments entiers supplémentaires pour définir la position de début et la longueur de la chaîne.  
+-   Les arguments transmis aux fonctions de chaîne doivent produire un type de données caractère : DT_STR ou DT_WSTR. Par exemple, UPPER("fleur"). Certaines fonctions de chaîne, telles que la fonction SUBSTRING, requièrent des arguments entiers supplémentaires pour définir la position de début et la longueur de la chaîne.  
   
 -   Les arguments transmis aux fonctions de date et d'heure doivent s'évaluer à une date valide. Par exemple, DAY(GETDATE()). Certaines fonctions, telles que la fonction DATEADD, requièrent un argument entier supplémentaire pour définir le nombre de jours qu'elles ajoutent à une date.  
   
@@ -106,8 +105,8 @@ ms.locfileid: "48194876"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Article technique, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=217683), sur pragmaticworks.com  
+-   Article technique, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), sur pragmaticworks.com  
   
--   Article technique, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  
+-   Article technique, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  
   
   

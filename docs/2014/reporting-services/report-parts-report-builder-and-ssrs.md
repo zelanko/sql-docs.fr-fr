@@ -13,12 +13,12 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 818d24b62366e463b4b5e9eca15ce9af70336176
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6114407d959a29944f01711b2446ce375f203b83
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098989"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366371"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Publication de parties de rapports (Générateur de rapports et SSRS)
   Les éléments de rapport tels que les tableaux, matrices, graphiques et images peuvent être publiés en tant que *parties de rapports*. Parties et éléments de rapport qui ont été publiés séparément sur un serveur de rapports et qui peuvent être réutilisés dans d'autres rapports. Les parties de rapports ont l'extension de fichier .rsc.  
@@ -27,7 +27,7 @@ ms.locfileid: "48098989"
   
  La partie de rapport que vous ajoutez à votre rapport gère une relation à l'instance de la partie de rapport sur le site ou serveur au moyen d'un ID unique. Après avoir ajouté des parties de rapport d'un site ou serveur à un rapport, vous pouvez les modifier, indépendamment de la partie de rapport d'origine sur le site ou serveur. Vous pouvez accepter les mises à jour que d'autres personnes ont apportées à la partie de rapport sur le site ou le serveur, et vous pouvez enregistrer à nouveau la partie de rapport modifiée sur le site ou le serveur, soit en ajoutant une nouvelle partie de rapport, soit en remplaçant la partie de rapport d'origine, si vous avez des autorisations suffisantes.  
   
- Pour commencer rapidement avec les parties de rapports, consultez les vidéos [parties de rapport de 3 de générateur de rapports dans SQL Server 2008 R2](http://technet.microsoft.com/edge/Video/ff711300) et [Comment : créer des rapports parties réutilisables avec SQL Server Report Builder](http://technet.microsoft.com/sqlserver/ff634166.aspx).  
+ Pour commencer rapidement avec les parties de rapports, consultez les vidéos [parties de rapport de 3 de générateur de rapports dans SQL Server 2008 R2](https://technet.microsoft.com/edge/Video/ff711300) et [procédure : Créer des parties de rapports réutilisables avec SQL Server Report Builder](https://technet.microsoft.com/sqlserver/ff634166.aspx).  
   
 ##  <a name="ComponentWorkflow"></a> Cycle de vie d'une partie de rapport  
  ![rs_ComponentCreation](media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -75,7 +75,7 @@ ms.locfileid: "48098989"
   
  Certaines parties de rapport peuvent contenir d'autres éléments de rapport. Par exemple, une table peut contenir un graphique, et un rectangle peut contenir une matrice et un graphique. Lorsque vous publiez un élément de rapport qui contient d'autres éléments de rapport, ils sont enregistrés en tant qu'unité. Les autres éléments de rapport sont enregistrés incorporés dans la partie de rapport de conteneur. Vous ne pouvez pas les mettre à jour séparément, et vous ne pouvez pas enregistrer les éléments dans le conteneur en tant que parties de rapport séparées.  
   
- Pour plus d’informations sur la publication de parties de rapports, consultez [publier et republier des parties de rapports &#40;Générateur de rapports et SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
+ Pour plus d’informations sur la publication de parties de rapports, consultez [Publier et republier des parties de rapports &#40;Générateur de rapports et SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
   
 ### <a name="modifying-report-part-metadata"></a>Modification des métadonnées de parties de rapport  
  Vous pouvez publier des parties de rapport avec les paramètres par défaut à un emplacement par défaut, ou vous pouvez enregistrer chaque partie de rapport à un emplacement différent et modifier les métadonnées, telles que le titre et la description.  
@@ -92,12 +92,12 @@ ms.locfileid: "48098989"
  La façon la plus facile de créer un rapport est d'ajouter une partie de rapport existante, comme une table ou un graphique, à votre rapport à partir de la bibliothèque de parties de rapport. Après l'avoir ajoutée à votre rapport, vous pouvez la modifier comme vous le souhaitez ou accepter les mises à jour du serveur. La modification de l'élément de rapport dans votre rapport n'affectera pas l'instance de la partie de rapport publiée sur le site ou serveur et ne rompra pas non plus la relation entre l'instance dans le rapport et sur le site ou serveur. Si vous avez des autorisations suffisantes, vous pouvez enregistrer à nouveau la copie mise à jour sur le site ou serveur. Si quelqu'un d'autre modifie la copie sur le site ou serveur, vous pouvez décider de garder votre copie telle quelle ou la mettre à jour pour qu'elle soit identique à celle du site ou serveur.  
   
 ### <a name="searching-for-report-parts"></a>Recherche de parties de rapport  
- Vous recherchez des parties de rapport à ajouter à votre rapport dans la bibliothèque de parties de rapport. Vous pouvez filtrer les parties de rapport en fonction de leur nom ou d'une partie de celui-ci, de leur créateur, de la personne qui a apporté la dernière modification ou du moment de cette dernière modification, de l'emplacement de stockage ou de leur type. Par exemple, vous pourriez rechercher tous les graphiques créés la semaine dernière par l'un de vos collègues.  
+ Vous recherchez des parties de rapport à ajouter à votre rapport dans la bibliothèque de parties de rapport. Vous pouvez filtrer les parties de rapport en fonction de leur nom ou d’une partie de celui-ci, de leur créateur, de la personne qui a apporté la dernière modification ou du moment où elle a été apportée, de leur emplacement de stockage ou de leur type. Par exemple, vous pourriez rechercher tous les graphiques créés la semaine dernière par l'un de vos collègues.  
   
- Vous pouvez afficher les résultats de la recherche sous la forme de miniatures ou d'une liste et les trier par nom, par dates de création et de modification, et par créateur. Pour plus d’informations, consultez [rechercher des parties de rapports et définir un dossier par défaut &#40;Générateur de rapports et SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
+ Vous pouvez afficher les résultats de la recherche sous la forme de miniatures ou d'une liste et les trier par nom, par dates de création et de modification, et par créateur. Pour plus d’informations, consultez [Rechercher des parties de rapports et définir un dossier par défaut &#40;Générateur de rapports et SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
   
 ### <a name="what-comes-with-a-report-part"></a>Éléments associés à une partie de rapport  
- Lorsque vous ajoutez une partie de rapport à votre rapport, vous ajoutez également tout ce qu'elle doit comporter pour fonctionner. Par exemple, tout objet qui affiche des données dépend d'un dataset, autrement dit, une requête et une connexion à une source de données. Elle peut également avoir un ou plusieurs paramètres. Tous les éléments dont elle dépend sont ses *dépendances*, et l’ensemble de ces éléments, ou les pointeurs vers ces derniers, sont inclus avec la partie de rapport du moment où vous l’ajoutez à votre rapport. Le dataset et les paramètres apparaissent dans le volet des données de rapport de votre rapport.  
+ Lorsque vous ajoutez une partie de rapport à votre rapport, vous ajoutez également tout ce qu'elle doit comporter pour fonctionner. Par exemple, tout objet qui affiche des données dépend d’un dataset, autrement dit, une requête et une connexion à une source de données. Elle peut également avoir un ou plusieurs paramètres. Tous les éléments dont elle dépend sont ses *dépendances*, et l’ensemble de ces éléments, ou les pointeurs vers ces derniers, sont inclus avec la partie de rapport du moment où vous l’ajoutez à votre rapport. Le dataset et les paramètres apparaissent dans le volet des données de rapport de votre rapport.  
   
  Le dataset pour la partie de rapport peut être incorporé dans la partie de rapport, ou il peut s'agir d'un dataset séparé et partagé vers lequel la partie de rapport pointe. S'il est incorporé dans la partie de rapport, vous êtes peut-être en mesure de le modifier. Dans le cas d'un dataset partagé, il s'agit d'un objet séparé pour lequel vous avez besoin d'autorisations. Pour plus d’informations sur les partagés et datasets incorporés, consultez [ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md).  
   
@@ -149,10 +149,10 @@ ms.locfileid: "48098989"
  [Recherchez les mises à jour ou désactiver les mises à jour &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Parties de rapports et jeux de données dans le Générateur de rapports](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Parties de rapports et datasets dans le Générateur de rapports](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Résoudre les problèmes de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [La gestion des parties de rapports](report-design/managing-report-parts.md)   
- [Parties Générateur de rapports 3 rapports dans SQL Server 2008 R2 (vidéo)](http://technet.microsoft.com/edge/Video/ff711300)   
- [Comment faire Des parties de rapports réutilisables créer avec SQL Server Report Builder (vidéo)](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
+ [Parties Générateur de rapports 3 rapports dans SQL Server 2008 R2 (vidéo)](https://technet.microsoft.com/edge/Video/ff711300)   
+ [Comment faire Créer des parties de rapports réutilisables avec le Générateur de rapports SQL Server (vidéo)](https://technet.microsoft.com/sqlserver/ff634166.aspx)  
   
   

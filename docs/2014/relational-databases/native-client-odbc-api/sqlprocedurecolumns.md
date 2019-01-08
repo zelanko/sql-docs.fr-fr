@@ -14,12 +14,12 @@ ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ddbc2d437ab41238b1c9426659522fb4d0ab3ada
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21c0a7248f2e8c5313678f503b239cdf44d16ea7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130089"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366251"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
   `SQLProcedureColumns` Retourne une ligne signalant les attributs de valeur de retour de tous les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des procédures stockées.  
@@ -28,7 +28,7 @@ ms.locfileid: "48130089"
   
  `SQLProcedureColumns` peut être exécuté sur un curseur côté serveur statique. Une tentative d'exécution de `SQLProcedureColumns` sur un curseur pouvant être mis à jour (dynamique ou jeu de clés) retourne SQL_SUCCESS_WITH_INFO, indiquant que le type de curseur a été modifié.  
   
- Le tableau suivant répertorie les colonnes retournées par le jeu de résultats et comment ils ont été étendues pour gérer le **udt** et **xml** des types de données via le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client :  
+ Le tableau suivant répertorie les colonnes retournées par le jeu de résultats et la façon dont elles ont été étendues pour gérer les types de données **udt** et **xml** via le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client :  
   
 |Nom de colonne|Description|  
 |-----------------|-----------------|  
@@ -62,12 +62,12 @@ ms.locfileid: "48130089"
   
  Les colonnes SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME sont disponibles dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures pour retourner, respectivement, le catalogue et le schéma des paramètres table. Ces colonnes sont remplies pour les paramètres table, et également pour les paramètres de type CLR défini par l'utilisateur. (Le schéma et les colonnes de catalogue existants pour les paramètres de type CLR défini par l'utilisateur ne sont pas affectées par ces fonctionnalités supplémentaires. Ils sont également renseignés pour préserver la compatibilité descendante).  
   
- En conformité avec la spécification ODBC, SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME apparaissent avant toutes les colonnes spécifiques aux pilotes ajoutées dans les précédentes versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et après toutes les colonnes mandatées par ODBC lui-même.  
+ En conformité avec la spécification ODBC, SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME apparaissent avant toutes les colonnes spécifiques aux pilotes ajoutées dans les précédentes versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et après toutes les colonnes mandatées par ODBC lui-même.  
   
  Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlprocedurecolumns-support-for-enhanced-date-and-time-features"></a>Prise en charge par SQLProcedureColumns des fonctionnalités de date et heure améliorées  
- Pour les valeurs retournées pour les types date/heure, consultez [métadonnées de catalogue](../native-client-odbc-date-time/metadata-catalog.md).  
+ Pour les valeurs retournées pour les types de date/heure, consultez [Catalog Metadata](../native-client-odbc-date-time/metadata-catalog.md).  
   
  Pour plus d’informations générales, consultez [améliorations Date / heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48130089"
  `SQLProcedureColumns` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLProcedureColumns (fonction)](http://go.microsoft.com/fwlink/?LinkId=59363)   
+ [SQLProcedureColumns (fonction)](https://go.microsoft.com/fwlink/?LinkId=59363)   
  [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

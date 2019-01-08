@@ -1,6 +1,6 @@
 ---
-title: Leçon 1 Explorer et visualiser des données à l’aide de R et T-SQL (SQL Server Machine Learning) | Microsoft Docs
-description: Didacticiel expliquant comment incorporer R dans SQL Server des procédures stockées et fonctions T-SQL
+title: Leçon 1 Explorer et visualiser des données à l’aide de R et T-SQL - SQL Server Machine Learning
+description: Didacticiel expliquant comment Explorer et visualiser les données de SQL Server à l’aide des fonctions R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f1ed29dec28ade852a58980eb236a251fd072afa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 36a904eeb4c7cde7d3a5356aff2029698e91f059
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032216"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645498"
 ---
-# <a name="lesson-1-explore-and-visualize-the-data"></a>Leçon 1 : Explorer et visualiser les données
+# <a name="lesson-1-explore-and-visualize-the-data"></a>Leçon 1 : Explorer et visualiser les données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article fait partie d’un didacticiel pour les développeurs SQL sur l’utilisation de R dans SQL Server.
@@ -38,7 +38,7 @@ Dans le jeu de données public d’origine, les identificateurs de taxis et les 
 
 **Identificateurs de taxis**
   
--   La colonne _medallion_ représente le numéro d’ID unique du taxi.
+-   Le _medallion_ colonne représente le numéro d’id unique du taxi.
   
 -   Le _hack\_licence_ colonne contient le numéro de licence du conducteur du taxi (anonyme).
   
@@ -67,7 +67,7 @@ Pour créer le tracé, utilisez [rxHistogram](https://docs.microsoft.com/machine
 
 2. Collez le script suivant pour créer une procédure stockée qui trace l’histogramme. Cet exemple est nommé **RPlotRxHistogram*.
 
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
@@ -108,7 +108,7 @@ La procédure stockée retourne l’image sous forme de flux de données varbina
   
 1.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], exécutez la commande suivante :
   
-    ```SQL
+    ```sql
     EXEC [dbo].[RxPlotHistogram]
     ```
   
@@ -119,7 +119,7 @@ La procédure stockée retourne l’image sous forme de flux de données varbina
   
 2.  Ouvrez une invite de commande PowerShell et exécutez la commande suivante, en fournissant le nom d’instance approprié, nom de la base de données, nom d’utilisateur et les informations d’identification en tant qu’arguments. Pour ceux qui utilisent des identités de Windows, vous pouvez remplacer **- U** et **-P** avec **-T**.
   
-     ```text
+     ```powershell
      bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
      ```
 
@@ -134,7 +134,7 @@ La procédure stockée retourne l’image sous forme de flux de données varbina
   
     -   Type **Y** si vous souhaitez enregistrer les paramètres de sortie pour une réutilisation ultérieure.
   
-    ```
+    ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
@@ -146,7 +146,7 @@ La procédure stockée retourne l’image sous forme de flux de données varbina
   
     **Résultats**
     
-    ```
+    ```powershell
     Starting copy...
     1 rows copied.
     Network packet size (bytes): 4096
@@ -170,7 +170,7 @@ Cette procédure stockée utilise le **hist.** fonction permettant de créer l�
 
 2. Collez le script suivant pour créer une procédure stockée qui trace l’histogramme. Cet exemple se nomme **RPlotHist** .
   
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
@@ -244,13 +244,13 @@ Cette procédure stockée utilise le **hist.** fonction permettant de créer l�
 
 Exécutez l’instruction suivante pour exporter les binaires de tracer les données aux formats de fichier JPEG et PDF.
 
-```SQL
+```sql
 EXEC RPlotHist
 ```
 
 **Résultats**
     
-```
+```sql
 STDOUT message(s) from external script:
 [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
 
@@ -279,7 +279,7 @@ Pour afficher le tracé, ouvrez le dossier de destination et examinez les fichie
 
 ## <a name="next-lesson"></a>Leçon suivante
 
-[Leçon 2 : Créer des fonctionnalités de données à l’aide de T-SQL](sqldev-create-data-features-using-t-sql.md)
+[Leçon 2 : Créer des caractéristiques de données à l’aide de T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Leçon précédente
 

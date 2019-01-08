@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
@@ -14,12 +13,12 @@ ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6228b3c146c91fa2990caf8f33b218dfbaf9c3f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93ddf45bc012cf7b7238d34ea084a23b67eb0801
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122549"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588294"
 ---
 # <a name="sqlps-utility"></a>sqlps (utilitaire)
   L'utilitaire `sqlps` démarre une session Windows PowerShell 2.0 avec les applets de commande et le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell chargés et inscrits. Vous pouvez entrer des scripts ou des commandes PowerShell qui utilisent les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell pour travailler avec des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et leurs objets.  
@@ -66,7 +65,7 @@ ms.locfileid: "48122549"
  **-**  
  **-Commande -** Spécifie que le `sqlps` utilitaire lire l’entrée de l’entrée standard.  
   
- *script_block* [ **-args***argument_array* ]  
+ *script_block* [ **-args**_argument_array_ ]  
  Spécifie un bloc de commandes PowerShell à exécuter ; le bloc doit être placé entre des accolades : {}. *Script_block* peut être spécifié uniquement lorsque le `sqlps` utilitaire est appelé depuis **PowerShell** ou un autre `sqlps` session de l’utilitaire. *argument_array* est un tableau de variables PowerShell contenant les arguments pour les commandes PowerShell de *script_block*.  
   
  *string* [ *command_parameters* ]  
@@ -96,9 +95,9 @@ ms.locfileid: "48122549"
   
 -   utiliser les chemins d'accès du fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour naviguer dans la hiérarchie des objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ;  
   
- Par défaut, le `sqlps` utilitaire s’exécute avec la stratégie d’exécution scripts **Restricted**. Cela empêche l'exécution de scripts PowerShell. Vous pouvez utiliser l’applet de commande **Set-ExecutionPolicy** pour activer l’exécution de scripts signés ou de tout type de script. Exécutez uniquement des scripts provenant de sources fiables et sécurisez tous les fichiers d'entrée et de sortie en utilisant les autorisations NTFS appropriées. Pour plus d'informations sur l'activation de scripts PowerShell, consultez [Exécution de scripts Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=103166).  
+ Par défaut, le `sqlps` utilitaire s’exécute avec la stratégie d’exécution scripts **Restricted**. Cela empêche l'exécution de scripts PowerShell. Vous pouvez utiliser l’applet de commande **Set-ExecutionPolicy** pour activer l’exécution de scripts signés ou de tout type de script. Exécutez uniquement des scripts provenant de sources fiables et sécurisez tous les fichiers d'entrée et de sortie en utilisant les autorisations NTFS appropriées. Pour plus d'informations sur l'activation de scripts PowerShell, consultez [Exécution de scripts Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=103166).  
   
- La version de la `sqlps` utilitaire dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] a été implémenté comme un minishell Windows PowerShell 1.0. Les mini-shells comportent certaines restrictions, comme le fait de ne pas autoriser les utilisateurs à charger des composants logiciels enfichables autres que ceux chargés par le mini-shell. Ces restrictions ne s'appliquent pas à la version [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et aux versions ultérieures de l'utilitaire, qui ont été modifiées pour utiliser le module `sqlps`.  
+ La version de l'utilitaire `sqlps` dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] a été implémentée en tant que mini-shell Windows PowerShell 1.0. Les mini-shells comportent certaines restrictions, comme le fait de ne pas autoriser les utilisateurs à charger des composants logiciels enfichables autres que ceux chargés par le mini-shell. Ces restrictions ne s'appliquent pas à la version [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et aux versions ultérieures de l'utilitaire, qui ont été modifiées pour utiliser le module `sqlps`.  
   
 ## <a name="examples"></a>Exemples  
  **A. Exécuter l’utilitaire sqlps en mode interactif par défaut, sans bannière de copyright**  

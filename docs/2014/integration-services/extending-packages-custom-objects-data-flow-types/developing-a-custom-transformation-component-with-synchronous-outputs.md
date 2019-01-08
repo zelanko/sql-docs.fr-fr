@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,12 +21,12 @@ ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cbdafae607bc9308bae20d7ffbef84ab7d9106f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bbf072b21411e89147863a790d6c5578b53182ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225302"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367601"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Développement d'un composant de transformation personnalisé à sorties synchrones
   Les composants de transformation à sorties synchrones reçoivent des lignes en provenance des composants en amont, puis lisent ou modifient les valeurs comprises dans les colonnes de ces lignes alors qu'ils transfèrent les lignes aux composants en aval. Ils peuvent également définir des colonnes de sortie supplémentaires dérivées des colonnes fournies par les composants en amont, mais ils n'ajoutent pas de lignes au flux de données. Pour plus d’informations sur la différence entre les composants synchrones et asynchrones, consultez [Présentation des transformations synchrones et asynchrones](../understanding-synchronous-and-asynchronous-transformations.md).  
@@ -125,7 +123,7 @@ End Class
  Étant donné que les restrictions sur les propriétés de type de données sont basées sur le type de données de la colonne de sortie, vous devez choisir le type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] correct lorsque vous utilisez des types managés. La classe de base fournit trois méthodes d'assistance, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> qui aident les développeurs de composants managés à sélectionner un type de données [!INCLUDE[ssIS](../../includes/ssis-md.md)] en fonction d'un type managé. Ces méthodes convertissent des types de données managées en types de données [!INCLUDE[ssIS](../../includes/ssis-md.md)], et vice versa.  
   
 ## <a name="run-time"></a>Moment de l'exécution  
- En général, l'implémentation de la partie exécution du composant se divise en deux tâches : localisation des colonnes d'entrée et de sortie du composant dans le tampon et lecture ou écriture des valeurs de ces colonnes dans les lignes du tampon entrantes.  
+ En général, l’implémentation de la partie exécution du composant se divise en deux tâches : localisation des colonnes d’entrée et de sortie du composant dans le tampon et lecture ou écriture des valeurs de ces colonnes dans les lignes du tampon entrantes.  
   
 ### <a name="locating-columns-in-the-buffer"></a>Localisation des colonnes dans le tampon  
  Le nombre de colonnes dans les tampons fournis à un composant pendant l'exécution dépassera probablement le nombre de colonnes dans les collections d'entrée ou de sortie du composant. Ce dépassement est dû au fait que chaque tampon contient toutes les colonnes de sortie définies dans les composants d'un flux de données. Pour garantir que les colonnes de tampon sont correctement mises en correspondance avec les colonnes d'entrée ou de sortie, les développeurs de composants doivent utiliser la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A>. Cette méthode localise une colonne dans le tampon spécifié par son ID de lignage. En général, les colonnes sont localisées pendant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> parce qu'il s'agit de la première méthode d'exécution où la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> devient disponible.  
@@ -323,7 +321,7 @@ Namespace Uppercase
 End Namespace  
 ```  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Développement d’un composant de transformation personnalisé avec des sorties asynchrones](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/12/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
@@ -14,12 +13,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f6a14942e60e38405fa24f9b49e7a4ca34d72991
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9acd3857115a2f6fc13e74d4129630286a27323
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225048"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356129"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Configurer SQL Server pour utiliser soft-NUMA (SQL Server)
 Les processeurs modernes disposent de nombreux noyaux par socket. Chaque socket est généralement représenté sous forme de nœud NUMA unique. Le moteur de base de données SQL Server partitionne plusieurs structures internes et threads de service de partitionnement par nœud NUMA. Avec les processeurs contenant 10 ou plusieurs noyaux par socket, à l’aide de logiciels NUMA (soft-NUMA) pour fractionner les nœuds NUMA matériels généralement augmente l’évolutivité et performances.   
@@ -39,7 +38,7 @@ La figure ci-dessous illustre le type d’informations concernant le soft-NUMA q
 
 ## <a name="manual-soft-numa"></a>Soft-NUMA manuel
   
-Pour configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour utiliser soft-NUMA manuellement, vous devez modifier le Registre pour ajouter un masque d’affinité de nœud configuration. Le masque soft-NUMA peut être établi comme entrée de Registre binaire, DWORD (hexadécimal ou décimal) ou QWORD (hexadécimal ou décimal). Pour configurer plus que les 32 premiers processeurs, utilisez des valeurs de Registre QWORD ou BINARY. (Les valeurs QWORD ne peuvent pas être utilisées avant [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].) Vous devez redémarrer le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour configurer soft-NUMA.  
+Pour configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour utiliser soft-NUMA manuellement, vous devez modifier le Registre pour ajouter un masque d’affinité de nœud configuration. Le masque soft-NUMA peut être établi comme entrée de Registre binaire, DWORD (hexadécimal ou décimal) ou QWORD (hexadécimal ou décimal). Pour configurer plus que les 32 premiers processeurs, utilisez des valeurs de Registre QWORD ou BINARY. (Les valeurs QWORD ne peuvent pas être utilisées avant [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].) Vous devez redémarrer le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour configurer soft-NUMA.  
   
 > [!TIP]  
 >  Les UC sont numérotées à partir de 0.  
@@ -56,7 +55,7 @@ Pour configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour u
   
  L'instance A, confrontée à des E/S importantes, possède maintenant deux threads d'E/S et un thread d'écriture différée, tandis que l'instance B, qui exécute des opérations nécessitant des ressources UC conséquentes, ne possède qu'un seul thread d'E/S et un seul thread d'écriture différée. Il est possible d'affecter des quantités de mémoire différentes aux instances, mais contrairement à l'accès NUMA matériel, elles reçoivent toutes deux la mémoire du même bloc mémoire du système d'exploitation et il n'existe pas d'affinité entre la mémoire et le processeur.  
   
- Le thread d'écriture différée est lié à la vue du système d'exploitation SQL des nœuds de mémoire NUMA physiques. Par conséquent, tout ce que le matériel présente sous la forme de nœuds NUMA physiques va correspondre au nombre de thread d'écriture différée qui sont créés. Pour plus d'informations, consultez [Fonctionnement : soft-NUMA, thread d'achèvement d'E/S, threads de travail d'écriture différée et nœuds de mémoire](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ Le thread d'écriture différée est lié à la vue du système d'exploitation SQL des nœuds de mémoire NUMA physiques. Par conséquent, tout ce que le matériel présente sous la forme de nœuds NUMA physiques va correspondre au nombre de thread d'écriture différée qui sont créés. Pour plus d’informations, consultez [fonctionnement : Soft-NUMA, Thread d’achèvement d’e/s, travailleurs de l’écriture différée et nœuds de mémoire](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]  
 >  Les clés de Registre **NUMA logiciel** ne sont pas copiées quand vous mettez à niveau une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -81,45 +80,45 @@ Pour configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour u
   
 -   À l'aide de l'Éditeur du Registre (regedit.exe), ajoutez les clés de Registre suivantes pour mapper le nœud soft-NUMA 0 aux UC 0 et 1, le nœud soft-NUMA 1 aux UC 2 et 3, et le nœud soft-NUMA 2 aux UC 4, 5, 6 et 7.  
   
-     Dans l’exemple suivant, supposons que vous disposiez d’un serveur DL580 G9 doté de 4 sockets (avec 18 noyaux par socket), chaque socket se trouvant dans son propre groupe de processeurs (« K-Group »). Vous pouvez créer une configuration soft-NUMA qui se présente comme suit (6 noyaux par nœud, 3 nœuds par groupe, 4 groupes).  
+     Dans l’exemple suivant, supposons que vous disposiez d’un serveur DL580 G9 doté de 4 sockets (avec 18 noyaux par socket), chaque socket se trouvant dans son propre groupe de processeurs (« K-Group »). Vous pouvez créer une configuration soft-NUMA qui se présente comme suit (6 noyaux par nœud, 3 nœuds par groupe, 4 groupes).  
   
     |Exemple pour un serveur [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] avec plusieurs « K-Groups »|Type|Nom de valeur|Données de valeur|  
     |------------------------------------------------------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|Grouper|0|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|Regrouper|0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node1|DWORD|CPUMask|0x0fc0|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node1|DWORD|Grouper|0|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node1|DWORD|Regrouper|0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node2|DWORD|CPUMask|0x3f000|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node2|DWORD|Grouper|0|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node2|DWORD|Regrouper|0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node3|DWORD|CPUMask|0x3F|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node3|DWORD|Grouper|1|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node3|DWORD|Regrouper|1|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node4|DWORD|CPUMask|0x0fc0|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node4|DWORD|Grouper|1|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node4|DWORD|Regrouper|1|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node5|DWORD|CPUMask|0x3f000|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node5|DWORD|Grouper|1|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node5|DWORD|Regrouper|1|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node6|DWORD|CPUMask|0x3F|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node6|DWORD|Grouper|2|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node6|DWORD|Regrouper|2|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node7|DWORD|CPUMask|0x0fc0|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node7|DWORD|Grouper|2|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node7|DWORD|Regrouper|2|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node8|DWORD|CPUMask|0x3f000|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node8|DWORD|Grouper|2|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node8|DWORD|Regrouper|2|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node9|DWORD|CPUMask|0x3F|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node9|DWORD|Grouper|3|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node9|DWORD|Regrouper|3|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node10|DWORD|CPUMask|0x0fc0|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node10|DWORD|Grouper|3|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node10|DWORD|Regrouper|3|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node11|DWORD|CPUMask|0x3f000|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node11|DWORD|Grouper|3|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node11|DWORD|Regrouper|3|  
   
      Autres exemples :  
   
     |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Type|Nom de valeur|Données de valeur|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|Grouper|0|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|Regrouper|0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node1|DWORD|Grouper|0|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node1|DWORD|Regrouper|0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node2|DWORD|Grouper|0|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node2|DWORD|Regrouper|0|  
   
     > [!TIP]  
     >  Pour spécifier les UC 60 à 63, utilisez une valeur QWORD de F000000000000000 ou une valeur BINARY de 1111000000000000000000000000000000000000000000000000000000000000.  
@@ -127,20 +126,20 @@ Pour configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour u
     |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Type|Nom de valeur|Données de valeur|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|Grouper|0|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|Regrouper|0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node1|DWORD|Grouper|0|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node1|DWORD|Regrouper|0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|Grouper|0|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|Regrouper|0|  
   
     |SQL Server 2008 R2|Type|Nom de valeur|Données de valeur|  
     |------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|Grouper|0|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|Regrouper|0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node1|DWORD|Grouper|0|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node1|DWORD|Regrouper|0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|Grouper|0|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|Regrouper|0|  
   
     |SQL Server 2008|Type|Nom de valeur|Données de valeur|  
     |---------------------|----------|----------------|----------------|  

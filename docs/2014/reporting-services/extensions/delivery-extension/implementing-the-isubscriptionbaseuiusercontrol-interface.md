@@ -16,12 +16,12 @@ ms.assetid: a1e9122c-aa0b-45de-b536-4f1202875ab1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7885f486ef19b0fa5424857bc03146f5d0b1c8bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f87046df4e41f40bc5de5f2a720247738841ff24
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220769"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376341"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface-for-a-delivery-extension"></a>Implémentation de l'interface ISubscriptionBaseUIUserControl pour une extension de remise
   Les extensions de remise [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] peuvent contenir une implémentation d'une interface utilisateur d'abonnement pour rassembler des informations spécifiques à l'extension dans le Gestionnaire de rapports. L'interface utilisateur est appelée lorsqu'un utilisateur crée un abonnement ou en modifie un. Lorsqu'un nouvel abonnement est créé, l'interface utilisateur affiche des valeurs par défaut appropriées et active des utilisateurs pour interagir avec le fournisseur de remise. Lorsqu'un abonnement est modifié, l'interface utilisateur est pré-remplie avec les informations dans l'abonnement actuel.  
@@ -35,7 +35,7 @@ ms.locfileid: "48220769"
   
  L'interface <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> étend <xref:Microsoft.ReportingServices.Interfaces.IExtension>. Votre contrôle utilisateur qui implémente <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> doit également hériter de **System.Web.UI.WebControls.WebControl**. Pour plus d’informations sur la classe **WebControl**, consultez votre Guide du développeur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- Pour un exemple d’utilisation de l’interface <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl>, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
+ Pour un exemple d’utilisation de l’interface <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl>, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémentation d’une extension de remise](implementing-a-delivery-extension.md)   

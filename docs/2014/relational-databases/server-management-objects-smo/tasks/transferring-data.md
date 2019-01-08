@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,19 +15,19 @@ ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3fa6ee3b25169e2dafe6ed7ad8380169dfe91d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49754be9b412f9cf6e7d660402527aed954a09fa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164739"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377671"
 ---
 # <a name="transferring-data"></a>Transfert de données
   La classe <xref:Microsoft.SqlServer.Management.Smo.Transfer> est une classe utilitaire qui fournit des outils pour transférer des objets et des données.  
   
  Les objets du schéma de base de données sont transférés en exécutant un script généré sur le serveur cible. Les données <xref:Microsoft.SqlServer.Management.Smo.Table> sont transférées avec un package DTS créé dynamiquement.  
   
- L'objet <xref:Microsoft.SqlServer.Management.Smo.Transfer> contient toutes les fonctionnalités des objets <xref:Microsoft.SqlServer.Management.Smo.Transfer> dans DMO, de même que des fonctionnalités [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supplémentaires. Toutefois, dans SMO dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], le <xref:Microsoft.SqlServer.Management.Smo.Transfer> objet utilise le [SQLBulkCopy](http://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API pour transférer des données. Par ailleurs, les méthodes et les propriétés utilisées pour effectuer les transferts de données résident sur l'objet <xref:Microsoft.SqlServer.Management.Smo.Transfer> et non sur l'objet <xref:Microsoft.SqlServer.Management.Smo.Database>. Le déplacement de fonctionnalités des classes d'instance vers les classes utilitaires est compatible avec un modèle objet plus léger car le code de tâches spécifiques est chargé uniquement lorsqu'il est requis.  
+ L'objet <xref:Microsoft.SqlServer.Management.Smo.Transfer> contient toutes les fonctionnalités des objets <xref:Microsoft.SqlServer.Management.Smo.Transfer> dans DMO, de même que des fonctionnalités [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supplémentaires. Toutefois, dans SMO dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], le <xref:Microsoft.SqlServer.Management.Smo.Transfer> objet utilise le [SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API pour transférer des données. Par ailleurs, les méthodes et les propriétés utilisées pour effectuer les transferts de données résident sur l'objet <xref:Microsoft.SqlServer.Management.Smo.Transfer> et non sur l'objet <xref:Microsoft.SqlServer.Management.Smo.Database>. Le déplacement de fonctionnalités des classes d'instance vers les classes utilitaires est compatible avec un modèle objet plus léger car le code de tâches spécifiques est chargé uniquement lorsqu'il est requis.  
   
  L'objet <xref:Microsoft.SqlServer.Management.Smo.Transfer> ne prend pas en charge les transferts de données vers une base de données cible dont un <xref:Microsoft.SqlServer.Management.Smo.Database.CompatibilityLevel%2A> est inférieur à la version de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.addpublisher.f1
@@ -15,12 +14,12 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df8cd5e81352bbf0389e56de741f383a4f40d477
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fc6041d3d33a7ddaaeb9fb11ff8582c70c7f080
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215379"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817491"
 ---
 # <a name="add-publisher"></a>Ajouter un serveur de publication
   La boîte de dialogue **Ajouter un serveur de publication** permet d'ajouter des serveurs de publication dans le volet de gauche du Moniteur de réplication. Après avoir ajouté un serveur de publication, sélectionnez le serveur de publication dans le volet de gauche pour afficher les informations sur ce dernier dans le volet de droite.  
@@ -37,7 +36,7 @@ ms.locfileid: "48215379"
   
      Connectez-vous au serveur de distribution [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associé au serveur de publication Oracle à l'aide de la boîte de dialogue **Se connecter au serveur** .  
   
--   **Spécifier un serveur de distribution et ajouter ses serveurs de publication…**  
+-   **Spécifier un serveur de distribution et ajouter ses serveurs de publication...**  
   
      Connectez-vous au serveur de distribution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associé à un ou plusieurs serveurs de publication à l'aide de la boîte de dialogue **Se connecter au serveur** .  
   
