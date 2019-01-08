@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 02053fed0f366945d08e0551d64aeb8a3ed6f33a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13678d9b3d522e65ff1f9e895020bb0fde020bef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619537"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751912"
 ---
 # <a name="security-master-data-services"></a>Sécurité (Master Data Services)
 
@@ -47,7 +46,7 @@ ms.locfileid: "47619537"
   
 -   (Facultatif) [Autorisations des membres de la hiérarchie](../master-data-services/hierarchy-member-permissions-master-data-services.md), qui déterminent les membres auxquels un utilisateur peut accéder, ainsi que le type d’accès (Lire, Mettre à jour et Supprimer) dont l’utilisateur dispose sur ces membres.  
   
- Lorsque vous affectez des autorisations à des attributs et des membres, ces autorisations se croisent et des règles déterminent leur ordre de priorité. Pour plus d’informations, consultez [Mode de détermination des autorisations &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md).  
+ Lorsque vous affectez des autorisations à des attributs et des membres, ces autorisations se croisent et des règles déterminent leur ordre de priorité. Pour plus d’informations, consultez [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md).  
   
 ## <a name="security-in-the-add-in-for-excel"></a>Sécurité du complément pour Excel  
  La sécurité définie dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] s'applique également à [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. Les utilisateurs peuvent uniquement afficher et utiliser les données pour lesquelles ils ont l'autorisation nécessaire. Les administrateurs peuvent effectuer les tâches d'administration.  
