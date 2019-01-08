@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c96e4313097edad2f04488401194ce0165a9f5c2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bfe7eb9b056dfcfb19ac6e4ab7d3f072b2bad1ad
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673008"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886914"
 ---
 # <a name="add-a-root-node-to-json-output-with-the-root-option-sql-server"></a>Ajouter un nœud racine à la sortie JSON avec l’option ROOT (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -154,10 +154,6 @@ SELECT TOP 5
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>En savoir plus sur JSON dans SQL Server et Azure SQL Database  
   
-### <a name="microsoft-blog-posts"></a>Billets de blog Microsoft  
-  
-Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez ces [billets de blog](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sur la prise en charge intégrée de JSON dans SQL Server et Azure SQL Database.  
-
 ### <a name="microsoft-videos"></a>Vidéos Microsoft
 
 Pour obtenir une présentation visuelle de la prise en charge intégrée de JSON dans SQL Server et Azure SQL Database, consultez les vidéos suivantes :
