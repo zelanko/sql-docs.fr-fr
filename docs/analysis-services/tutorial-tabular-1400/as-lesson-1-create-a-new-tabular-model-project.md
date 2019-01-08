@@ -1,5 +1,5 @@
 ---
-title: 'Leçon du didacticiel Analysis Services 1 : créer un nouveau projet de modèle tabulaire | Microsoft Docs'
+title: 'Analysis Services leçon du didacticiel 1 : Créez un projet de modèle tabulaire | Microsoft Docs'
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df9595071c60680db94a18dc373ce24f1f9b4ea5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9135df30afcec9bdae307d9b12aec6810baa98ec
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43108668"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417230"
 ---
 # <a name="create-a-tabular-model-project"></a>Créer un projet de modèle tabulaire
 
@@ -22,7 +22,7 @@ ms.locfileid: "43108668"
 
 Dans cette leçon, vous utilisez Visual Studio avec SQL Server Data Tools (SSDT) ou Visual Studio 2017 avec Microsoft Analysis Services projets VSIX pour créer un nouveau projet de modèle tabulaire au niveau de compatibilité 1400. Une fois votre nouveau projet est créé, vous pouvez commencer l’ajout de données et de création de votre modèle. Cette leçon vous présente brièvement le modèle tabulaire, environnement de création dans Visual Studio.  
   
-Durée estimée pour effectuer cette leçon : **10 minutes**  
+Durée estimée pour effectuer cette leçon : **10 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis
 

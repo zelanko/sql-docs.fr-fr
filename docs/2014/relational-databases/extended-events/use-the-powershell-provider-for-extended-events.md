@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
@@ -15,17 +14,17 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f500b1805d4af2e7b13ad74b439fff72d667060f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0a7393a3b0547d37c5f69f4e75915f8706acf12
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185079"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752841"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Utiliser le fournisseur PowerShell pour les événements étendus
   Vous pouvez gérer les Événements étendus de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fournisseur PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le sous-dossier XEvent est disponible sous le lecteur SQLSERVER. Vous pouvez accéder à ce dossier selon l'une des méthodes suivantes :  
   
--   À l’invite de commandes, tapez `sqlps`, puis appuyez sur ENTRÉE. Type `cd xevent`, puis appuyez sur ENTRÉE. À partir de là, vous pouvez utiliser la **cd** et `dir` commandes (ou **Set-Location** et **Get-Childitem** applets de commande) pour accéder au nom du serveur et nom de l’instance.  
+-   À l’invite de commandes, saisissez `sqlps`, puis appuyez sur ENTRÉE. Saisissez `cd xevent`, puis appuyez sur ENTRÉE. À partir de là, vous pouvez utiliser la **cd** et `dir` commandes (ou **Set-Location** et **Get-Childitem** applets de commande) pour accéder au nom du serveur et nom de l’instance.  
   
 -   Dans l’Explorateur d’objets, développez le nom de l’instance, développez **Gestion**, cliquez avec le bouton droit sur **Événements étendus**, puis cliquez sur **Démarrer PowerShell**. Cela démarre PowerShell selon le chemin d'accès suivant :  
   
@@ -49,9 +48,9 @@ ms.locfileid: "48185079"
   
 -   Les scripts doivent être enregistrés avec une extension .ps1.  
   
--   La stratégie d'exécution de PowerShell doit autoriser l'exécution du script. Pour définir la stratégie d’exécution, utilisez l’applet de commande **Set-Executionpolicy** . (Pour plus d’informations, tapez `get-help set-executionpolicy -detailed`, puis appuyez sur ENTRÉE.)  
+-   La stratégie d'exécution de PowerShell doit autoriser l'exécution du script. Pour définir la stratégie d’exécution, utilisez l’applet de commande **Set-Executionpolicy** . (Pour en savoir plus, saisissez `get-help set-executionpolicy -detailed` et appuyez sur ENTRÉE.)  
   
- Le script suivant crée une nouvelle session nommée « TestSession ».  
+ Le script suivant crée une nouvelle session nommée « TestSession ».  
   
 ```  
 #Script for creating a session.  

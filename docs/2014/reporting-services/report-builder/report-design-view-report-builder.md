@@ -22,12 +22,12 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4a1e17c424e4447e64d48bebbe25960aec165e5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b052ccbd1b91ea66f150dc0995eeeb33994a5e53
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225029"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439521"
 ---
 # <a name="report-design-view-report-builder"></a>Vue Conception de rapport (Générateur de rapports)
   La fenêtre du Générateur de rapports vise à vous permettre d'organiser facilement vos ressources de rapport et à générer rapidement les rapports dont vous avez besoin. L'aire de conception se trouve au centre de la fenêtre, avec au-dessus le ruban, à gauche le volet Données du rapport, en dessous le volet Regroupement et à droite le volet Propriétés, ainsi que la bibliothèque de parties de rapports. L'aire de conception est l'espace où vous ajoutez et organisez vos éléments de rapport. Le ruban organise les éléments de menu traditionnels en catégories faciles à repérer et à utiliser. Les volets vous permettent d'ajouter, de sélectionner et d'organiser vos ressources de rapport et de modifier les propriétés des éléments de rapport.  
@@ -37,7 +37,7 @@ ms.locfileid: "48225029"
 ##  <a name="Ribbon"></a> Ruban  
  Le ruban a été conçu pour vous permettre de trouver rapidement les commandes dont vous avez besoin pour effectuer une tâche. Les commandes sont organisées en groupes logiques, qui sont rassemblées sous des onglets. Chaque onglet concerne un type d'activité, par exemple l'insertion d'éléments de rapport ou la mise en forme de texte.  
   
- En mode création de rapport, le ruban est constitué des onglets suivants : Dossier de base, Insérer et Affichage. Si vous ne parvenez pas à trouver une tâche sur le ruban, certains groupes du ruban sont associés à une boîte de dialogue que vous pouvez ouvrir en cliquant sur la flèche située dans la partie inférieure droite du groupe. Vous ne pouvez pas réduire ou supprimer le ruban, ni le remplacer par des barres d'outils et des menus.  
+ En mode de création de rapports, le ruban est constitué des onglets suivants : Accueil, insérer et affichage. Si vous ne parvenez pas à trouver une tâche sur le ruban, certains groupes du ruban sont associés à une boîte de dialogue que vous pouvez ouvrir en cliquant sur la flèche située dans la partie inférieure droite du groupe. Vous ne pouvez pas réduire ou supprimer le ruban, ni le remplacer par des barres d'outils et des menus.  
   
  En mode exécution, le ruban a qu’un seul onglet, **exécuter**.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48225029"
   
  Pour plus d'informations sur les éléments du volet Données du rapport, consultez les rubriques suivantes :  
   
--   [Globals et les références des utilisateurs &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+-   [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
 -   [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48225029"
   
   
 ##  <a name="ReptPartGallery"></a> Bibliothèque de parties de rapports  
- La façon la plus simple de créer un rapport est de rechercher une partie de rapport existante, par exemple un tableau ou un graphique, sur le serveur de rapports ou un serveur de rapports intégré à un site SharePoint. Vous recherchez des parties de rapports à ajouter à votre rapport dans la bibliothèque de parties de rapports. Vous pouvez filtrer les parties de rapports en fonction de leur nom ou d'une partie de celui-ci, de leur créateur, de la personne qui a apporté la dernière modification ou du moment de cette dernière modification, de l'emplacement de stockage ou de leur type. Par exemple, vous pourriez rechercher tous les graphiques créés la semaine dernière par l'un de vos collègues.  
+ La façon la plus simple de créer un rapport est de rechercher une partie de rapport existante, par exemple un tableau ou un graphique, sur le serveur de rapports ou un serveur de rapports intégré à un site SharePoint. Vous recherchez des parties de rapports à ajouter à votre rapport dans la bibliothèque de parties de rapports. Vous pouvez filtrer les parties de rapport en fonction de leur nom ou d’une partie de celui-ci, de leur créateur, de la personne qui a apporté la dernière modification ou du moment où elle a été apportée, de leur emplacement de stockage ou de leur type. Par exemple, vous pourriez rechercher tous les graphiques créés la semaine dernière par l'un de vos collègues.  
   
 > [!NOTE]  
 >  Vous devez être connecté à un serveur pour afficher la bibliothèque de parties de rapports.  
@@ -131,11 +131,11 @@ ms.locfileid: "48225029"
  Pour afficher le volet Propriétés, sous l'onglet Affichage, dans le groupe Afficher/Masquer, cliquez sur Propriétés.  
   
 ### <a name="changing-property-values"></a>Modification des valeurs de propriété  
- Dans le Générateur de rapports, vous pouvez modifier les propriétés des éléments de rapport de plusieurs façons :  
+ Dans le Générateur de rapports, vous pouvez modifier les propriétés des éléments de rapport de plusieurs façons :  
   
 -   en cliquant sur des boutons et des listes dans le ruban ;  
   
--   en modifiant les paramètres dans les boîtes de dialogue ;  
+-   en modifiant les paramètres dans les boîtes de dialogue ;  
   
 -   en modifiant les valeurs de propriété dans le volet Propriétés.  
   
@@ -144,13 +144,13 @@ ms.locfileid: "48225029"
  En fonction de la propriété, vous pouvez définir une valeur de propriété dans une liste déroulante, taper la valeur ou cliquer sur `<Expression>` pour créer une expression.  
   
 ### <a name="changing-the-properties-pane-view"></a>Modification de l'affichage du volet Propriétés  
- Par défaut, les propriétés affichées dans le volet Propriétés sont classées en grandes catégories, par exemple Action, Bordure, Remplissage, Police et Général. Un ensemble de propriétés est associé à chaque catégorie. Par exemple, les propriétés suivantes sont répertoriées dans la catégorie Police : Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight et TextDecoration. Si vous préférez, vous pouvez classer toutes les propriétés répertoriées dans le volet par ordre alphabétique. Les catégories sont ainsi supprimées et toutes les propriétés sont classées par ordre alphabétique, quelle que soit la catégorie.  
+ Par défaut, les propriétés affichées dans le volet Propriétés sont classées en grandes catégories, par exemple Action, Bordure, Remplissage, Police et Général. Un ensemble de propriétés est associé à chaque catégorie. Par exemple, les propriétés suivantes sont répertoriées dans la catégorie de police : Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight et TextDecoration. Si vous préférez, vous pouvez classer toutes les propriétés répertoriées dans le volet par ordre alphabétique. Les catégories sont ainsi supprimées et toutes les propriétés sont classées par ordre alphabétique, quelle que soit la catégorie.  
   
- Trois boutons figurent en haut du volet Propriétés : Catégorie, Alphabétiser et Pages de propriétés. Cliquez sur les boutons Catégorie et Alphabétiser pour basculer entre les affichages du volet Propriétés. Cliquez sur le bouton **Pages de propriétés** pour ouvrir la boîte de dialogue des propriétés pour un élément de rapport sélectionné.  
+ Le volet Propriétés possède trois boutons en haut du volet : Catégorie, classer par ordre alphabétique et les Pages de propriétés. Cliquez sur les boutons Catégorie et Alphabétiser pour basculer entre les affichages du volet Propriétés. Cliquez sur le bouton **Pages de propriétés** pour ouvrir la boîte de dialogue des propriétés pour un élément de rapport sélectionné.  
   
   
 ##  <a name="GroupPane"></a> Volet de regroupement (Générateur de rapports)  
- Les groupes sont utilisés pour hiérarchiser vos données de rapport de façon visuelle et pour calculer des totaux. Vous pouvez afficher les groupes de lignes et de colonnes d'une région de données sur l'aire de conception et également dans le volet de regroupement. Le volet de regroupement comprend deux volets : Groupes de lignes et Groupes de colonnes. Lorsque vous sélectionnez une région de données, le volet de regroupement affiche tous les groupes de cette région de données sous forme de liste hiérarchique : les groupes enfants apparaissent en retrait sous leurs groupes parents.  
+ Les groupes sont utilisés pour hiérarchiser vos données de rapport de façon visuelle et pour calculer des totaux. Vous pouvez afficher les groupes de lignes et de colonnes d'une région de données sur l'aire de conception et également dans le volet de regroupement. Le volet de regroupement comporte deux volets : Groupes de lignes et groupes de colonnes. Lorsque vous sélectionnez une région de données, le volet de regroupement affiche tous les groupes au sein de cette région de données sous la forme d’une liste hiérarchique : Les groupes enfants apparaissent en retrait sous leurs groupes parents.  
   
  ![Volet de regroupement pour les groupes de lignes et de colonnes imbriqués](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Volet de regroupement pour les groupes de lignes et de colonnes imbriqués")  
   

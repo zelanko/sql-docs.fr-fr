@@ -1,5 +1,5 @@
 ---
-title: Appliquer des fonctions de prédiction à un modèle | Documents Microsoft
+title: Appliquer des fonctions de prédiction à un modèle | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7cd44eb2e5d5449283d1e222b854d065a72e15ca
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 192f55c8194bfb9b85b3e0bfad51d8261e45ab0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014876"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540658"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Appliquer des fonctions de prédiction à un modèle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "34014876"
     > [!WARNING]  
     >  Le Générateur de requêtes de prédiction ne valide pas l’instruction DMX tant que vous n’avez pas cliqué sur **Résultats**. Vous constaterez souvent que l'expression qui est produite par le générateur de requêtes n'est pas une instruction DMX valide. Les causes les plus courantes sont la référence à une colonne qui n'est pas liée à la colonne prédictible ou la tentative de prédire une colonne d'une table imbriquée, ce qui requiert une instruction sub-SELECT. À ce stade, vous pouvez basculer vers la vue DMX et continuer à modifier l'instruction.  
   
-### <a name="example-create-a-query-on-a-clustering-model"></a>Exemple : créer une requête sur un modèle de clustering  
+### <a name="example-create-a-query-on-a-clustering-model"></a>Exemple : Créer une requête sur un modèle de clustering  
   
 1.  Si aucun modèle de clustering n’est disponible pour générer cet exemple de requête, créez le modèle, [TM_Clustering], en utilisant le [Didacticiel sur l’exploration de données de base](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
@@ -120,7 +120,7 @@ ms.locfileid: "34014876"
     |----------------|--------------|-------------|-------------|  
     |0|Cluster 8|954|953.948638926372|  
   
- Si vous voulez ajouter d'autres clauses ailleurs dans l'instruction (par exemple, si vous voulez ajouter une clause WHERE), vous ne pouvez pas l'ajouter à l'aide de la grille ; vous devez d'abord basculer vers la vue DMX.  
+ Si vous souhaitez ajouter d’autres clauses ailleurs dans l’instruction-par exemple, si vous souhaitez ajouter une clause WHERE-vous ne pouvez pas l’ajouter à l’aide de la grille ; Vous devez tout d’abord basculer vers la vue DMX.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md)  

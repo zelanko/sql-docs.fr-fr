@@ -14,12 +14,12 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0e5a129fbd9a6dc9fbafd6b06fe5088d162ac9ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 876397aeab28f0d328e3fb80555bdae18699bb01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210849"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536971"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Vue d'ensemble du moniteur de mise en miroir de bases de données
   Si vous disposez des autorisations appropriées, vous pouvez utiliser le moniteur de mise en miroir de bases de données pour surveiller un sous-ensemble quelconque des bases de données mises en miroir sur une instance de serveur. La surveillance permet de vérifier si et comment les données circulent dans la session de mise en miroir de bases de données. Le moniteur de mise en miroir de bases de données permet de déterminer la cause d'une réduction du flux de données.  
@@ -32,7 +32,7 @@ ms.locfileid: "48210849"
   
 -   les derniers rôles connus de chaque partenaire (principal ou miroir).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour surveiller la mise en miroir de bases de données, vous devez être membre du rôle de serveur fixe **sysadmin** ou membre du rôle de base de données fixe **dbm_monitor** dans la base de données **msdb** sur l’instance de serveur. Si vous êtes membre de **sysadmin** ou **dbm_monitor** sur une seule des instances de serveur partenaire, le moniteur peut se connecter uniquement à ce partenaire ; il ne peut pas extraire d’informations de l’autre partenaire.  
   
  Si vous êtes uniquement membre de **dbm_monitor** sur une instance de serveur, vous disposez d’autorisations limitées sur cette instance de serveur. Vous pourrez afficher uniquement la ligne du dernier état. Si vous vous connectez à une instance de serveur en utilisant les autorisations **dbm_monitor** , le moniteur de mise en miroir de bases de données vous informe que vous disposez d’autorisations limitées.  
@@ -89,14 +89,14 @@ ms.locfileid: "48210849"
 |Command|Description|  
 |-------------|-----------------|  
 |**Inscrire la base de données mise en miroir**|Ouvre la boîte de dialogue **Inscrire la base de données mise en miroir** . Utilisez cette boîte de dialogue pour inscrire une ou plusieurs bases de données mises en miroir sur une instance de serveur donnée en ajoutant la ou les bases de données au moniteur de mise en miroir de bases de données. Lorsqu'une base de données est ajoutée, le moniteur de mise en miroir de bases de données met en cache localement des informations sur la base de données, ses partenaires et la connexion aux partenaires.|  
-|**Gérer les connexions des instances serveur**|Lorsque vous sélectionnez cette commande, la boîte de dialogue **Gérer les connexions serveur** s’ouvre. Vous pouvez alors choisir une instance de serveur pour laquelle vous souhaitez spécifier des informations d'identification qui seront utilisées par le moniteur lors de la connexion à un partenaire donné.<br /><br /> Pour modifier les informations d’identification pour un partenaire, recherchez l’entrée correspondante dans la grille **Instances de serveur** et cliquez sur **Modifier** dans cette ligne. La boîte de dialogue **Se connecter au serveur** s’ouvre avec le nom d’instance de serveur fixe, les contrôles d’informations d’identification étant initialisés sur la valeur actuelle mise en cache. Modifiez les informations d’authentification comme souhaité et cliquez sur **Se connecter**. Si les informations d’identification disposent des privilèges suffisants, la colonne **Se connecter avec** est mise à jour avec les nouvelles informations d’identification.|  
+|**Gérer les connexions des instances serveur...**|Lorsque vous sélectionnez cette commande, la boîte de dialogue **Gérer les connexions serveur** s’ouvre. Vous pouvez alors choisir une instance de serveur pour laquelle vous souhaitez spécifier des informations d'identification qui seront utilisées par le moniteur lors de la connexion à un partenaire donné.<br /><br /> Pour modifier les informations d’identification pour un partenaire, recherchez l’entrée correspondante dans la grille **Instances de serveur** et cliquez sur **Modifier** dans cette ligne. La boîte de dialogue **Se connecter au serveur** s’ouvre avec le nom d’instance de serveur fixe, les contrôles d’informations d’identification étant initialisés sur la valeur actuelle mise en cache. Modifiez les informations d’authentification comme souhaité et cliquez sur **Se connecter**. Si les informations d’identification disposent des privilèges suffisants, la colonne **Se connecter avec** est mise à jour avec les nouvelles informations d’identification.|  
   
  Si vous sélectionnez une base de données, le menu **Action** comprend également les commandes suivantes.  
   
 |Command|Description|  
 |-------------|-----------------|  
 |**Annuler l'inscription de cette base de données**|Supprime la base de données sélectionnée du moniteur de mise en miroir de bases de données.|  
-|**Définir les seuils d'avertissement**|Ouvre la boîte de dialogue **Définir les seuils d’avertissement** . Un administrateur système peut activer ou désactiver des avertissements pour la base de données sur chaque partenaire et modifier le seuil de chaque avertissement. Nous vous recommandons de définir un seuil pour un avertissement spécifique sur les deux partenaires, afin de vous assurer que l'avertissement persiste lors du basculement de la base de données. Le seuil approprié pour chaque partenaire dépend des capacités de performance du système du partenaire.<br /><br /> Un événement est écrit dans le journal des événements pour une performance uniquement si sa valeur est identique ou supérieure au seuil au moment de la mise à jour de la table d'état. Si une valeur maximale atteint momentanément le seuil entre des mises à jour d'état, cette valeur est ignorée.|  
+|**Définir les seuils d’avertissement...**|Ouvre la boîte de dialogue **Définir les seuils d’avertissement** . Un administrateur système peut activer ou désactiver des avertissements pour la base de données sur chaque partenaire et modifier le seuil de chaque avertissement. Nous vous recommandons de définir un seuil pour un avertissement spécifique sur les deux partenaires, afin de vous assurer que l'avertissement persiste lors du basculement de la base de données. Le seuil approprié pour chaque partenaire dépend des capacités de performance du système du partenaire.<br /><br /> Un événement est écrit dans le journal des événements pour une performance uniquement si sa valeur est identique ou supérieure au seuil au moment de la mise à jour de la table d'état. Si une valeur maximale atteint momentanément le seuil entre des mises à jour d'état, cette valeur est ignorée.|  
   
  **Pour contrôler la mise en miroir de bases de données à l'aide de SQL Server Management Studio**  
   

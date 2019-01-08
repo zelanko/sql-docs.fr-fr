@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
@@ -26,15 +25,15 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d47f2e7ce32ef77ec7188efbc7c09d053cf8208
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108689"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759111"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utiliser l'Assistant Copie de base de données
-  L'Assistant Copie de base de données vous permet de facilement déplacer ou copier des bases de données et leurs objets d'un serveur à un autre, sans nécessiter l'arrêt des serveurs. Vous pouvez également passer des bases de données à partir d’une précédente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. À l'aide de cet Assistant, vous pouvez d'effectuer les opérations suivantes :  
+  L'Assistant Copie de base de données vous permet de facilement déplacer ou copier des bases de données et leurs objets d'un serveur à un autre, sans nécessiter l'arrêt des serveurs. Vous pouvez également mettre à niveau les bases de données d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. À l'aide de cet Assistant, vous pouvez d'effectuer les opérations suivantes :  
   
 -   Choisir un serveur source et un serveur de destination.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48108689"
   
 -   **Suivi, après mise à niveau :**  
   
-     [Après la mise à niveau une base de données SQL Server](#FollowUp)  
+     [Après la mise à niveau d’une base de données SQL Server](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48108689"
   
 -   Si vous sélectionnez l'option **Déplacer** , l'Assistant supprime automatiquement la base de données source après avoir déplacé la base de données. L'Assistant Copie de base de données ne supprime pas une base de données source si vous sélectionnez l'option **Copier** .  
   
--   Si vous utilisez la méthode [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object pour déplacer le catalogue de texte intégral, vous devez de nouveau remplir l’index après le déplacement.  
+-   Si vous utilisez la méthode [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object pour déplacer le catalogue de texte intégral, vous devez de nouveau remplir l'index après le déplacement.  
   
 -   La méthode de détachement et d'attachement permet de détacher la base de données, de déplacer ou copier les fichiers .mdf, .ndf et .ldf de la base de données, puis de rattacher la base de données à son nouvel emplacement. En cas d'utilisation de la méthode de détachement et d'attachement, les sessions actives ne peuvent pas être attachées à la base de données en cours de déplacement ou de copie, ceci afin d'éviter une perte ou une incohérence des données. Si une session est active, l'Assistant Copie de base de données n'exécute pas l'opération de déplacement ou de copie. Dans le cas de la méthode [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object, les sessions actives sont autorisées car la base de données n'est jamais placée en mode hors connexion.  
   
@@ -108,7 +107,7 @@ ms.locfileid: "48108689"
   
 ##  <a name="Copy_Move"></a> Copier, déplacer ou mettre à niveau des bases de données  
   
-1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, développez **bases de données**, avec le bouton droit à une base de données, pointez sur **tâches**, puis cliquez sur **copie de base de données**.  
+1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l'Explorateur d'objets, développez **Bases de données**, cliquez avec le bouton droit sur une base de données, pointez sur **Tâches**, puis sélectionnez **Copier la base de données**.  
   
 2.  Sur la page **Sélectionnez un serveur source** , spécifiez le serveur sur lequel se trouve la base de données que vous souhaitez déplacer ou copier, puis entrez les informations de connexion. Une fois la méthode d'authentification sélectionnée et les informations de connexion entrées, cliquez sur **Suivant** afin d'établir la connexion au serveur source. Cette connexion reste active tout au long de la session.  
   
@@ -119,10 +118,10 @@ ms.locfileid: "48108689"
      Permettre à un utilisateur de se connecter via un compte d'utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
      **Utiliser l’authentification SQL Server**  
-     Autoriser un utilisateur à se connecter en fournissant un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom d’utilisateur de l’authentification et de mot de passe.  
+     Permettre à un utilisateur de se connecter en fournissant un nom d'utilisateur et un mot de passe d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Nom d'utilisateur**  
-     Entrez le nom d'utilisateur avec lequel se connecter. Cette option est disponible uniquement si vous avez choisi de vous connecter à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.  
+     Entrez le nom d'utilisateur avec lequel se connecter. Cette option est disponible uniquement si vous avez choisi la connexion avec l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Mot de passe**  
      Entrez le mot de passe utilisé avec la connexion. Cette option est uniquement disponible si vous avez choisi la connexion avec l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -142,13 +141,13 @@ ms.locfileid: "48108689"
      Permettre à un utilisateur de se connecter via un compte d'utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
      **Utiliser l’authentification SQL Server**  
-     Autoriser un utilisateur à se connecter en fournissant un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom d’utilisateur de l’authentification et de mot de passe.  
+     Permettre à un utilisateur de se connecter en fournissant un nom d'utilisateur et un mot de passe d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Nom d'utilisateur**  
-     Entrez le nom d'utilisateur avec lequel se connecter. Cette option est uniquement disponible si vous avez sélectionné [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.  
+     Entrez le nom d'utilisateur avec lequel se connecter. Cette option est disponible uniquement si vous avez sélectionné l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Mot de passe**  
-     Entrez le mot de passe utilisé avec la connexion. Cette option est uniquement disponible si vous avez sélectionné [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.  
+     Entrez le mot de passe utilisé avec la connexion. Cette option est disponible uniquement si vous avez sélectionné l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Suivant**  
      Connectez-vous au serveur et validez l'utilisateur. Ce processus vérifie si l'utilisateur dispose des autorisations répertoriées ci-dessus sur les ordinateurs sélectionnés.  
@@ -229,20 +228,20 @@ ms.locfileid: "48108689"
      **Emplacement du dossier**  
      Spécifiez l'emplacement des fichiers de base de données source sur le système de fichiers.  
   
-     Exemple : C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA  
+     Exemple : C:\Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\DATA  
   
      **Partage de fichier sur le serveur source**  
      Spécifiez l’emplacement des fichiers de base de données source sous la forme du chemin d'accès à un partage de fichiers.  
   
      Par exemple : «\\\\*nom_serveur*\C$\Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\Data  
   
-9. L’Assistant copie de base de données crée un [!INCLUDE[ssIS](../../includes/ssis-md.md)] package pour transférer la base de données à partir de la **configurer le Package** page, personnalisez le package si nécessaire.  
+9. L'Assistant Copie de base de données crée un package [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour transférer la base de données. Sur la page **Configurer le package** , personnalisez le package si nécessaire.  
   
      **Emplacement du package**  
-     Affiche l’emplacement auquel le [!INCLUDE[ssIS](../../includes/ssis-md.md)] package sera écrit.  
+     Affiche l’emplacement auquel le package [!INCLUDE[ssIS](../../includes/ssis-md.md)] sera écrit.  
   
      **Nom du package**  
-     Entrez un nom pour le [!INCLUDE[ssIS](../../includes/ssis-md.md)] package.  
+     Entrez le nom du package [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
      **Options du journal**  
      Précisez si les informations du journal doivent être stockées dans le journal des événements Windows ou dans un fichier texte.  
@@ -250,7 +249,7 @@ ms.locfileid: "48108689"
      **Chemin d'accès au fichier journal des erreurs**  
      Fournissez un chemin d'accès pour l'emplacement du fichier journal. Cette option est disponible uniquement si l'option Enregistrement dans un fichier texte est sélectionnée.  
   
-10. Sur la page **Planifier le package** , indiquez à quel moment vous voulez que l'opération de déplacement ou de copie commence. Si vous n’êtes pas un administrateur système, vous devez spécifier un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte Proxy de l’Agent qui a accès à la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sous-système d’exécution de Package (SSIS).  
+10. Sur la page **Planifier le package** , indiquez à quel moment vous voulez que l'opération de déplacement ou de copie commence. Si vous n'êtes pas administrateur système, vous devez spécifier un compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a accès au sous-système d'exécution du package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS).  
   
      **Run immediately**  
      Démarre l'opération de déplacement ou de copie une fois que vous avez appuyé sur **Suivant**.  
@@ -264,7 +263,7 @@ ms.locfileid: "48108689"
      **Compte proxy Integration Services**  
      Sélectionnez un compte proxy disponible. Pour planifier le transfert, l'utilisateur doit avoir à sa disposition au moins un compte proxy disposant des autorisations nécessaires pour accéder au sous-système **Exécution du package SQL Server Integration Services** .  
   
-     Pour créer un compte proxy pour [!INCLUDE[ssIS](../../includes/ssis-md.md)] l’exécution, dans l’Explorateur d’objets du package, développez **Agent SQL Server**, développez **proxys**, avec le bouton droit **l’exécution du Package SSIS**, puis cliquez sur **nouveau Proxy**.  
+     Pour créer un compte proxy pour l'exécution du package [!INCLUDE[ssIS](../../includes/ssis-md.md)] , dans l'Explorateur d'objets, développez **Agent SQL Server**puis **Proxies**, cliquez avec le bouton droit sur **Exécution du package SSIS**, puis cliquez sur **Nouveau proxy**.  
   
      Les membres du rôle serveur fixe **sysadmin** peuvent sélectionner le **Compte de service Agent SQL Server**, qui dispose des autorisations nécessaires.  
   
@@ -279,7 +278,7 @@ ms.locfileid: "48108689"
      **Boîte de**  
      Affiche les messages retournés par chaque étape.  
   
-##  <a name="FollowUp"></a> Suivi : Après la mise à niveau d'une base de données SQL Server  
+##  <a name="FollowUp"></a> Suivi : Après la mise à niveau d'une base de données SQL Server  
  Après avoir utilisé l'Assistant Copie de base de données pour mettre à niveau une base de données d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est immédiatement disponible et est automatiquement mise à niveau. Si la base de données comprend des index de recherche en texte intégral, la mise à niveau les importe, les réinitialise ou les reconstruit, selon le paramètre de la propriété de serveur **Option de mise à niveau des index de recherche en texte intégral** . Si l’option de mise à niveau est définie sur **Importer** ou **Reconstruire**, les index de recherche en texte intégral ne seront pas disponibles pendant la mise à niveau. Selon le volume de données indexé, l'importation peut prendre plusieurs heures et la reconstruction jusqu'à dix fois plus longtemps. Notez également que lorsque l’option de mise à niveau est **Importer**, si un catalogue de texte intégral n’est pas disponible, les index de recherche en texte intégral associés sont reconstruits. Pour plus d’informations sur l’affichage ou la modification du paramètre de la propriété **Option de mise à niveau des index de recherche en texte intégral** , consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité était à 90 dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  

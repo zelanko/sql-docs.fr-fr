@@ -11,12 +11,12 @@ ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 629494b298f9eacee0b7217522698897be401e04
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 866b32abbc7f7e754b11fd286dd0c35eeeb92165
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669890"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400693"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Utilisation de fonctionnalités de SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ WideWorldImporters est conçue pour présenter la plupart des principales foncti
 |Fonctionnalité de SQL Server|Utilisation de WideWorldImporters|
 |-----------------------------|---------------------|
 |Tables temporelles|Il existe de nombreuses tables temporelles, y compris toutes les tables de référence de style de recherche et les principales entités telles que StockItems, les clients et fournisseurs. À l’aide de tables temporelles permet de facilement suivre l’historique de ces entités.|
-|Appels AJAX pour JSON|L’application utilise fréquemment des appels AJAX pour interroger ces tables : personnes, les clients, les fournisseurs et StockItems. Les appels retournent des charges utiles JSON (par exemple, les données qui sont retournées sont formatées en tant que données JSON). Consultez, par exemple, la procédure stockée `Website.SearchForCustomers`.|
+|Appels AJAX pour JSON|L’application utilise fréquemment des appels AJAX pour interroger ces tables : Personnes, les clients, les fournisseurs et les StockItems. Les appels retournent des charges utiles JSON (par exemple, les données qui sont retournées sont formatées en tant que données JSON). Consultez, par exemple, la procédure stockée `Website.SearchForCustomers`.|
 |Sacs de propriété/valeur JSON|Un nombre de tables ont des colonnes qui contiennent des données JSON à étendre les données relationnelles dans le tableau. Par exemple, `Application.SystemParameters` possède une colonne pour les paramètres d’application et `Application.People` possède une colonne pour les préférences de l’enregistrement utilisateur. Ces tables utilisent un `nvarchar(max)` colonne pour enregistrer les données JSON, ainsi que d’une contrainte de validation à l’aide de la fonction intégrée `ISJSON` pour vous assurer de la colonne de valeurs sont des JSON valides.|
 |Sécurité au niveau des lignes (RLS)|Sécurité au niveau (lignes) est utilisé pour limiter l’accès à la table Customers, selon l’appartenance au rôle. Chaque secteur de vente a un rôle et un utilisateur. Pour voir comment cela fonctionne, utilisez le script correspondant dans l’exemple script.zip, ce qui fait partie de la [mise en production de l’exemple](https://go.microsoft.com/fwlink/?LinkID=800630).|
 |analytique opérationnelle en temps réel|(Version complète de la base de données) Les tables transactionnelles core `Sales.InvoiceLines` et `Sales.OrderLines` les deux ont un index columnstore non cluster pour prendre en charge une exécution efficace des requêtes analytiques dans la base de données transactionnelle avec un impact minimal sur la charge de travail opérationnelle. Exécution des transactions et analytique dans la même base de données est également appelé [traitement transactionnel/analytique hybride (HTAP)](https://wikipedia.org/wiki/Hybrid_Transactional/Analytical_Processing_(HTAP)). Pour voir comment cela fonctionne, utilisez le script correspondant dans l’exemple script.zip, ce qui fait partie de la [mise en production de l’exemple](https://go.microsoft.com/fwlink/?LinkID=800630).|

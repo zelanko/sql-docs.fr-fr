@@ -27,12 +27,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 089ced09d718b0716f0c19d4553e52ff02c3d505
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07aae4f4e619e38d41cd16a08e1e8f7267f5ed29
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665578"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533562"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Éditions et fonctionnalités prises en charge pour SQL Server 2017 sous Linux
 
@@ -58,7 +58,7 @@ Pour obtenir la liste des fonctionnalités de SQL Server non disponibles sur Lin
 |Édition de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Définition|  
 |---------------------------------------|----------------|  
 |Enterprise|L’offre premium, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition offre des fonctionnalités de centre de données haut de gamme complète avec l’activation de haut niveau de service pour les charges de travail critiques des performances très rapides.|  
-|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition propose une gestion de base de données pour les départements et les petites entreprises peuvent exécuter leurs applications et prend en charge des outils de développement courants pour locaux et cloud : activation de la gestion de base de données efficace avec des ressources informatiques minimales.|  
+|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition propose une gestion de base de données pour les départements et les petites entreprises peuvent exécuter leurs applications et prend en charge des outils de développement courants pour locaux et cloud - activation de la gestion de base de données efficace avec des ressources informatiques minimales.|  
 |Web|L'édition Web[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] est une option offrant un coût total de possession faible destinée aux hébergeurs Web et aux VAP Web, fournissant des fonctions évolutives, rentables et gérables aux propriétés Web à petite ou grande échelle.|  
 |Développeur|L'édition[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer permet aux développeurs de créer des applications basées sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il inclut toutes les fonctionnalités de l'édition Enterprise, mais sa licence permet uniquement de l'utiliser comme un système de développement et de test, et non comme un serveur de production. L'édition [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer est la solution idéale pour le développement et le test d'applications.|  
 |Express Edition|L’édition Express est une édition de base comprenant une base de données gratuite, idéale pour découvrir et créer des applications bureautiques et de petites applications serveur pilotées par les données. C'est la solution idéale pour les éditeurs de logiciels, les développeurs et les amateurs de création d'applications clientes. Si vous avez besoin de fonctionnalités de base de données plus évoluées, vous pouvez mettre à niveau de manière transparente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express vers des versions plus sophistiquées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
@@ -97,23 +97,23 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
   
 |Fonctionnalité|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
-|Envoi des journaux de transaction|Oui|Oui|Oui|non|  
-|Compression de sauvegarde|Oui|Oui|non|non| 
-|Instantané de base de données|Oui|non|non|non|
-|Instance de cluster de basculement Always On<sup>1</sup>|Oui|Oui|non|non| 
-|Groupes de disponibilité Always On<sup>2</sup>|Oui|non|non|non|
-|Groupes de disponibilité de base <sup>3</sup>|non|Oui|non|non|
-|Groupe de disponibilité à validation de réplica minimale|Oui|Oui|non|non|
-|Groupe de disponibilité sans cluster|Oui|Oui|non|non|
-|Restauration en ligne de pages et de fichiers|Oui|non|non|non|
-|Indexation en ligne|Oui|non|non|non|
-|Reconstructions d’index en ligne pouvant être reprises|Oui|non|non|non|
-|Modification de schéma en ligne|Oui|non|non|non|
-|Récupération rapide|Oui|non|non|non|
-|Sauvegardes en miroir|Oui|non|non|non|
-|Ajout de mémoire et de processeur à chaud|Oui|non|non|non|
-|Sauvegarde chiffrée|Oui|Oui|non|non|
-|Sauvegarde hybride vers Windows Azure (sauvegarde vers une URL)|Oui|Oui|non|non|
+|Envoi des journaux de transaction|Oui|Oui|Oui|Non|  
+|Compression de sauvegarde|Oui|Oui|Non|Non| 
+|Instantané de base de données|Oui|Non|Non|Non|
+|Instance de cluster de basculement Always On<sup>1</sup>|Oui|Oui|Non|Non| 
+|Groupes de disponibilité Always On<sup>2</sup>|Oui|Non|Non|Non|
+|Groupes de disponibilité de base <sup>3</sup>|Non|Oui|Non|Non|
+|Groupe de disponibilité à validation de réplica minimale|Oui|Oui|Non|Non|
+|Groupe de disponibilité sans cluster|Oui|Oui|Non|Non|
+|Restauration en ligne de pages et de fichiers|Oui|Non|Non|Non|
+|Indexation en ligne|Oui|Non|Non|Non|
+|Reconstructions d’index en ligne pouvant être reprises|Oui|Non|Non|Non|
+|Modification de schéma en ligne|Oui|Non|Non|Non|
+|Récupération rapide|Oui|Non|Non|Non|
+|Sauvegardes en miroir|Oui|Non|Non|Non|
+|Ajout de mémoire et de processeur à chaud|Oui|Non|Non|Non|
+|Sauvegarde chiffrée|Oui|Oui|Non|Non|
+|Sauvegarde hybride vers Windows Azure (sauvegarde vers une URL)|Oui|Oui|Non|Non|
   
 <sup>1</sup> sur Enterprise edition, le nombre de nœuds est au maximum du système d’exploitation. L’édition Standard prend en charge deux nœuds. 
 
@@ -127,19 +127,19 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |-------------|----------------|--------------|---------|------------------------| 
 |Columnstore <sup>1</sup>|Oui|Oui|Oui|Oui|  
 |Fichiers binaires LOB dans les index columnstore cluster|Oui|Oui|Oui|Oui|  
-|Reconstruction d’index columnstore non cluster en ligne|Oui|non|non|non|
+|Reconstruction d’index columnstore non cluster en ligne|Oui|Non|Non|Non|
 |OLTP en mémoire <sup>1</sup>|Oui|Oui|Oui|Oui|
 |Mémoire principale persistante|Oui|Oui|Oui|Oui|
 |Partitionnement des tables et des index|Oui|Oui|Oui|Oui|  
 |Compression des données|Oui|Oui|Oui|Oui|
-|gouverneur de ressources|Oui|non|non|non|  
-|Parallélisme de tables partitionnées|Oui|non|non|non|
-|Mémoire de pages de grande taille compatible NUMA et allocation de tableau de tampons|Oui|non|non|non|
-|Gouvernance des ressources d'E/S|Oui|non|non|non|  
+|gouverneur de ressources|Oui|Non|Non|Non|  
+|Parallélisme de tables partitionnées|Oui|Non|Non|Non|
+|Mémoire de pages de grande taille compatible NUMA et allocation de tableau de tampons|Oui|Non|Non|Non|
+|Gouvernance des ressources d'E/S|Oui|Non|Non|Non|  
 |Durabilité différée|Oui|Oui|Oui|Oui|
-|Paramétrage automatique|Oui|non|non|non|
-|Jointures adaptatives en mode batch|Oui|non|non|non|
-|Retour d’allocation de mémoire en mode batch|Oui|non|non|non|
+|Paramétrage automatique|Oui|Non|Non|Non|
+|Jointures adaptatives en mode batch|Oui|Non|Non|Non|
+|Retour d’allocation de mémoire en mode batch|Oui|Non|Non|Non|
 |Exécution entrelacée pour les fonctions table à instructions multiples|Oui|Oui|Oui|Oui|
 |Améliorations de l’insertion en bloc|Oui|Oui|Oui|Oui|
 
@@ -155,10 +155,10 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Masquage dynamique des données|Oui|Oui|Oui|Oui|   
 |Audit de base|Oui|Oui|Oui|Oui| 
 |Audit de granularité fine|Oui|Oui|Oui|Oui| 
-|Chiffrement transparent de base de données|Oui|non|non|non|   
+|Chiffrement transparent de base de données|Oui|Non|Non|Non|   
 |Rôles définis par l’utilisateur|Oui|Oui|Oui|Oui| 
 |Bases de données autonomes|Oui|Oui|Oui|Oui| 
-|Chiffrement des sauvegardes|Oui|Oui|non|non|  
+|Chiffrement des sauvegardes|Oui|Oui|Non|Non|  
 
 ##  <a name="RDBMSM"></a> Simplicité de gestion SGBDR  
   
@@ -167,17 +167,17 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Connexion administrateur dédiée|Oui|Oui|Oui|Oui avec indicateur de trace|Oui avec indicateur de trace|   
 |Prise en charge de scripts PowerShell|Oui|Oui|Oui|Oui| 
 |Prise en charge des opérations des composants d’application du niveau Données : extraction, déploiement, mise à niveau, suppression|Oui|Oui|Oui|Oui| 
-|Automation de stratégie (vérification selon la planification et sur modification)|Oui|Oui|Oui|non|non|   
-|Collecteur de données de performances|Oui|Oui|Oui|non|non| 
-|Rapports de performances standard|Oui|Oui|Oui|non|non| 
-|Repères de plan et gel de plan|Oui|Oui|Oui|non|non|   
+|Automation de stratégie (vérification selon la planification et sur modification)|Oui|Oui|Oui|Non|Non|   
+|Collecteur de données de performances|Oui|Oui|Oui|Non|Non| 
+|Rapports de performances standard|Oui|Oui|Oui|Non|Non| 
+|Repères de plan et gel de plan|Oui|Oui|Oui|Non|Non|   
 |Requête directe de vues d'index (à l'aide de l'indicateur NOEXPAND)|Oui|Oui|Oui|Oui| 
-|Maintenance automatique des vues indexées|Oui|Oui|Oui|non|non| 
-|Vues partitionnées distribuées|Oui|non|non|non| 
-|Opérations d'index parallèles|Oui|non|non|non|  
-|Utilisation automatique de vues indexées par l'optimiseur de requête|Oui|non|non|non| 
-|Vérifications de cohérence en parallèle|Oui|non|non|non| 
-|Point de contrôle de l’utilitaire SQL Server|Oui|non|non|non|    
+|Maintenance automatique des vues indexées|Oui|Oui|Oui|Non|Non| 
+|Vues partitionnées distribuées|Oui|Non|Non|Non| 
+|Opérations d'index parallèles|Oui|Non|Non|Non|  
+|Utilisation automatique de vues indexées par l'optimiseur de requête|Oui|Non|Non|Non| 
+|Vérifications de cohérence en parallèle|Oui|Non|Non|Non| 
+|Point de contrôle de l’utilitaire SQL Server|Oui|Non|Non|Non|    
 
 ##  <a name="Programmability"></a> Programmability  
   
@@ -191,10 +191,10 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Fonctions MERGE & UPSERT|Oui|Oui|Oui|Oui|   
 |Types de données de date et d'heure|Oui|Oui|Oui|Oui|  
 |Support d'internationalisation|Oui|Oui|Oui|Oui| 
-|Recherche sémantique et en texte intégral|Oui|Oui|Oui|Oui|non| 
-|Spécification d'une langue dans une requête|Oui|Oui|Oui|Oui|non|   
+|Recherche sémantique et en texte intégral|Oui|Oui|Oui|Oui|Non| 
+|Spécification d'une langue dans une requête|Oui|Oui|Oui|Oui|Non|   
 |Service Broker (messagerie)|Oui|Oui|Non (client uniquement)|Non (client uniquement)|Non (client uniquement)|   
-|Transact-SQL, points de terminaison|Oui|Oui|Oui|non|non| 
+|Transact-SQL, points de terminaison|Oui|Oui|Oui|Non|Non| 
 |Graphique|Oui|Oui|Oui|Oui|  
 
 

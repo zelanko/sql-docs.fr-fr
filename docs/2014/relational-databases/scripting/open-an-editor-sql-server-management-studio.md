@@ -11,12 +11,12 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9791e381b9233137055c680efb8bdfcad62929a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abfaedbc8eb415d00b1947fe36bef0a51716f536
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110699"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513009"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Ouvrir un éditeur (SQL Server Management Studio)
   Cette rubrique explique comment ouvrir l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ainsi que les éditeurs MDX, DMX et XML/A dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Une fois ouverte, chaque fenêtre d'éditeur s'affiche sous forme d'onglet dans le volet central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -27,10 +27,10 @@ ms.locfileid: "48110699"
 ### <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Si vous partagez des fichiers avec des utilisateurs d'autres sites qui utilisent des pages de codes distinctes, vous devez enregistrer votre fichier avec le code Unicode approprié afin d'éviter les erreurs de lecture du fichier. De même, lorsque vous enregistrez des fichiers pour UNIX ou Macintosh, assurez-vous de les enregistrer au format de document approprié. Dans le menu **Fichier** , cliquez sur **Enregistrer sous**, puis sur **Enregistrer avec encodage** en cliquant sur la flèche en regard du bouton **Enregistrer** , puis choisissez **Unix** ou **Macintosh** sous **Fins de ligne**.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Les opérations que vous réalisez dans un éditeur de codes sont soumises aux autorisations accordées au compte d'authentification que vous avez utilisé pour vous connecter. Par exemple, si vous ouvrez une fenêtre de l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de l'authentification Windows, vous ne pouvez pas exécuter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui font référence à des objets pour lesquels votre compte de connexion Windows ne dispose pas d'autorisation d'accès.  
   
-## <a name="how-to-open-editors"></a>Procédure : ouvrir les éditeurs  
+## <a name="how-to-open-editors"></a>Procédure : Ouvrir des éditeurs  
  Cette section explique comment ouvrir les différents éditeurs dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Utilisation du menu Fichier/Nouveau  
@@ -38,7 +38,7 @@ ms.locfileid: "48110699"
   
 -   **Requête avec la connexion actuelle** - Ouvre une nouvelle fenêtre d’éditeur du type associé à la connexion active dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La fenêtre de l'éditeur utilise les mêmes informations d'authentification que la connexion active. Par exemple, si vous sélectionnez une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans l’Explorateur d’objets, puis choisissez **Requête avec la connexion actuelle**, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre un Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui est connecté à la même instance en utilisant les mêmes informations d’identification.  
   
--   **Requête de moteur de base de données** - Ouvre un nouvel Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations requises pour vous connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Requête de moteur de base de données** - Ouvre un nouvel Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations nécessaires pour vous connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   **Requête MDX Analysis Services** - Ouvre un nouvel Éditeur de requête MDX [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations requises pour vous connecter à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48110699"
   
 -   **Nouvelle requête** - Ouvre une nouvelle fenêtre d’éditeur du type associé à la connexion active dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La fenêtre de l'éditeur utilise les mêmes informations d'authentification que la connexion active. Par exemple, si vous sélectionnez une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans l’Explorateur d’objets, puis cliquez sur **Nouvelle requête** , [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre un Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui est connecté à la même instance en utilisant les mêmes informations d’identification.  
   
--   **Requête de moteur de base de données** - Ouvre un nouvel Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations requises pour vous connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Requête de moteur de base de données** - Ouvre un nouvel Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations nécessaires pour vous connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   **Requête MDX Analysis Services** - Ouvre un nouvel Éditeur de requête MDX [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations requises pour vous connecter à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   

@@ -1,5 +1,5 @@
 ---
-title: Définition de jeux nommés | Documents Microsoft
+title: Définition de jeux nommés | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 705c263d425985d23c823eee9cdd550b5a44db1f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 19bdb9c165b5bfa6c8021fe596d9591e68d517ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018226"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507660"
 ---
-# <a name="lesson-6-2---defining-named-sets"></a>Leçon 6-2 - définition de jeux nommés
+# <a name="lesson-6-2---defining-named-sets"></a>Leçon 6-2 : définition de jeux nommés
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Un jeu nommé est une expression MDX (Multidimensional Expressions) qui retourne un ensemble de membres de dimension. Vous pouvez définir des jeux nommés et les enregistrer en tant que partie de la définition du cube ; vous pouvez aussi créer des jeux nommés dans des applications clientes. Vous créez des jeux nommés en combinant des données de cube, des opérateurs arithmétiques, des nombres et des fonctions. Les jeux nommés peuvent être employés par les utilisateurs dans des requêtes MDX dans des applications clientes. Ils peuvent aussi être utilisés pour définir des jeux dans des sous-cubes. Un sous-cube est une collection de jeux joints entre eux qui limite l'espace du cube au sous-espace défini pour les instructions suivantes. Définir un espace de cube limité est un des concepts fondamentaux des scripts MDX.  
@@ -68,7 +68,7 @@ Dans les tâches de cette rubrique, vous allez définir deux jeux nommés : un j
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-    À présent que vous avez défini le premier jeu pour l’expression d’ensemble Exists, vous êtes prêt à ajouter le second (le jeu de membres de la dimension Reseller contenant le plus grand nombre d’employés).  
+    Maintenant que vous avez défini le premier jeu pour l’Exists expression d’ensemble, vous êtes prêt à ajouter le second ensemble de l’ensemble de membres de la dimension Reseller contenant le plus grand nombre d’employés.  
   
 7.  Sous l'onglet **Métadonnées** du volet **Outils de calcul** , développez **Number of Employees** dans la dimension Reseller, développez **Members**, puis développez **All Resellers**.  
   
@@ -124,16 +124,16 @@ Dans les tâches de cette rubrique, vous allez définir deux jeux nommés : un j
   
     Notez que seuls le membre **Bike** de l'attribut **Category** et les membres des sous-catégories de **Bike** restent dans le cube. Cela est dû au fait que le jeu nommé **Core Products** est utilisé pour définir un sous-cube. Ce sous-cube limite les membres de l'attribut **Category** dans la dimension **Product** à l'intérieur du sous-cube à ceux qui sont membres du jeu nommé **Core Product** , comme le montre l'image suivante.  
   
-    ![Les membres du produit de base de jeu nommé](../analysis-services/media/l6-named-set-04.gif "jeu nommé de membres de produit de base")  
+    ![Jeu nommé de membres du produit Core](../analysis-services/media/l6-named-set-04.gif "jeu nommé de membres du noyau du produit")  
   
 7.  Dans le volet **Métadonnées** , développez **Reseller**, ajoutez **Large Resellers** à la zone de filtre.  
   
     Notez que la mesure Reseller Sales Amount dans le volet Données n'affiche les montants des ventes que pour les grands revendeurs de vélos. Observez également que le volet Filtre affiche maintenant les deux jeux nommés utilisés pour définir ce sous-cube particulier, comme le montre l'image suivante.  
   
-    ![Volet filtre contenant deux nommé définit](../analysis-services/media/l6-named-set-05.gif "volet filtre contenant deux nommé définit")  
+    ![Volet filtre contenant deux nommées définit](../analysis-services/media/l6-named-set-05.gif "définit volet filtre contenant deux nommées")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 7 : Définition d’indicateurs de Performance clés & #40 ; Indicateurs de performance clés & #41 ;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[Leçon 7 : Définition des indicateurs de Performance clés &#40;indicateurs de performance clés&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Calculs](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

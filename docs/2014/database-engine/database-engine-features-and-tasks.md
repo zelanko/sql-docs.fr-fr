@@ -14,15 +14,15 @@ ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 433d67076130747fe0baa3ba1b01592bbb9f5dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 880546e50479de28c8b3aa98bb0439e54bd594b9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131549"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524548"
 ---
 # <a name="database-engine-features-and-tasks"></a>Fonctionnalités et tâches du moteur de base de données
-  Recherchez les informations nécessaires à la création de bases de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], que vous soyez concepteur, développeur, analyste ou administrateur.  
+  Trouver des informations que tout le monde-concepteur, développeur, analyste ou administrateur-nécessaires à la création [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bases de données.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Instances du moteur de base de données &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  

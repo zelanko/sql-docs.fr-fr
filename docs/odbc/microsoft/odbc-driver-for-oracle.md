@@ -15,12 +15,12 @@ ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57f0713c6da777a7c338a3be888a43e72e287342
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4685d209d768bd3ff41c1c7367ef6cb6dcd45bcf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806727"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515104"
 ---
 # <a name="odbc-driver-for-oracle"></a>Pilote ODBC pour Oracle
 > [!IMPORTANT]  
@@ -34,7 +34,7 @@ ms.locfileid: "47806727"
   
  ![Pilote ODBC pour Oracle application&#47;architecture du pilote](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- Le pilote ODBC pour Oracle est conforme à l’API de la conformité au niveau 1 et niveau de conformité SQL standard. Il prend également en charge certaines fonctions dans les API de la conformité au niveau 2 et la majeure partie de la grammaire dans les niveaux de conformité Core et SQL étendue. Le pilote est conforme à ODBC 2.5 et prend en charge les systèmes 32 bits. Oracle 7.3 x est pris en charge entièrement ; Oracle8 prend en charge limitée. Le pilote ODBC pour Oracle ne prend pas en charge des nouveaux types de données Oracle8 : types de données Unicode, objets BLOB, CLOB, et ainsi de suite, ni prend-elle en charge nouveau modèle d’Oracle d’objet relationnel. Pour plus d’informations sur les types de données pris en charge, consultez [pris en charge les Types de données](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) dans ce guide.  
+ Le pilote ODBC pour Oracle est conforme à l’API de la conformité au niveau 1 et niveau de conformité SQL standard. Il prend également en charge certaines fonctions dans les API de la conformité au niveau 2 et la majeure partie de la grammaire dans les niveaux de conformité Core et SQL étendue. Le pilote est conforme à ODBC 2.5 et prend en charge les systèmes 32 bits. Oracle 7.3 x est pris en charge entièrement ; Oracle8 prend en charge limitée. Le pilote ODBC pour Oracle ne prend pas en charge des nouveaux types de données Oracle8 - Unicode des types de données, objets BLOB, CLOB et ainsi de suite - ni prend-elle en charge nouveau modèle d’Oracle d’objet relationnel. Pour plus d’informations sur les types de données pris en charge, consultez [pris en charge les Types de données](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) dans ce guide.  
   
  Pour accéder aux données Oracle, les composants suivants sont requis :  
   

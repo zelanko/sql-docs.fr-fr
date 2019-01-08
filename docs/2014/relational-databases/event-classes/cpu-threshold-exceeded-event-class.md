@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd85605f6f99563cd042e438e4ffd517a636d133
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176469"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770451"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>Classe d'événements CPU Threshold Exceeded
   La classe d'événements CPU Threshold Exceeded indique que Resource Governor détecte une requête qui dépasse le seuil de l'UC spécifié pour REQUEST_MAX_CPU_TIME_SEC.  
@@ -33,11 +32,11 @@ ms.locfileid: "48176469"
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |Unité centrale|`int`|Utilisation de l'UC en millisecondes.|18|Oui|  
-|EventClass|`int`|214|27|non|  
+|EventClass|`int`|214|27|Non|  
 |EventSubClass|`int`|Violation de la limite de l'UC.|21|Oui|  
 |GroupID|`int`|ID de groupe où la violation s'est produite.|66|Oui|  
 |OwnerID|`int`|SPID du processus qui a provoqué la violation.|58|Oui|  
-|SPID|`int`|ID du processus serveur qui déclenche cet événement.<br /><br /> Remarque : il peut être différent du SPID de l’utilisateur réel si un thread système valide l’utilisation de l’UC comme une tâche en arrière-plan.|12|Oui|  
+|SPID|`int`|ID du processus serveur qui déclenche cet événement.<br /><br /> Remarque : Il peut être différent du SPID de l'utilisateur réel si un thread système valide l'utilisation de l'UC comme une tâche en arrière-plan.|12|Oui|  
 |StartTime|`datetime`|Heure de déclenchement de cet événement.|14|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  

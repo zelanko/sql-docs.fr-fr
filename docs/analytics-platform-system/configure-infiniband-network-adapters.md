@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e0e0ed3aea02ae8a79d89871f6849b1cbf40c9d0
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169321"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518271"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurer des cartes réseau InfiniBand pour Analytique Platform System
 Décrit comment configurer les cartes réseau InfiniBand sur un serveur non-appliance client pour se connecter au nœud de contrôle sur Parallel Data Warehouse (PDW). Utilisez ces instructions pour la connectivité de base et pour la haute disponibilité, afin que les processus de chargement, sauvegarde et autres se connectent automatiquement au réseau InfiniBand actif.  
@@ -42,13 +42,13 @@ Après avoir configuré vos cartes de réseau InfiniBand, processus de client pe
   
 Par exemple, si votre nom de la région PDW est MyPDW et le nom de l’appliance est MyAPS, la spécification du serveur dwloader pour le chargement des données est une des opérations suivantes :  
   
--   `dwloader –S MYPDW-SQLCTL01.MyAPS.pdw.local`  
+-   `dwloader -S MYPDW-SQLCTL01.MyAPS.pdw.local`  
   
--   `dwloader –S MYPDW-SQLCTL01`  
+-   `dwloader -S MYPDW-SQLCTL01`  
   
 ## <a name="BeforeBegin"></a>Avant de commencer  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
 Vous avez besoin d’un compte de domaine appliance APS pour vous connecter au nœud AD01. Par exemple, F12345 * \Administrator.  
   
 Vous avez besoin d’un compte Windows sur le serveur client qui a l’autorisation de configurer les cartes réseau.  
@@ -61,7 +61,7 @@ Ces instructions supposent que le serveur client est déjà monté en rack et br
   
 Pour répondre aux besoins de votre entreprise, vous pouvez également joindre le serveur client pour votre propre groupe de travail non-appliance ou d’un domaine de Windows.  
   
-## <a name="Sec1"></a>Étape 1 : Obtenir l’appliance les paramètres de réseau InfiniBand  
+## <a name="Sec1"></a>Étape 1 : Obtenir des paramètres de réseau InfiniBand de l’appliance  
 *Pour obtenir des paramètres de réseau InfiniBand de l’appliance*  
   
 1.  Connectez-vous à l’appliance AD01 nœud en utilisant le compte appliance_domain\Administrator.  
@@ -161,7 +161,7 @@ Pour répondre aux besoins de votre entreprise, vous pouvez également joindre l
   
 1.  Dans la fenêtre Connexions réseau, avec le bouton droit sur l’un des emplacements réseau pour la carte Mellanox, puis sélectionnez Propriétés.  
   
-2.  Cliquez sur avancées... .  
+2.  Cliquez sur le bouton Avancé bouton.  
   
 3.  Dans la fenêtre Paramètres TCP/IP avancés, si l’ajouter ces Suffixes DNS (dans l’ordre) option n'est pas grisée, vérification de la zone appelée ajouter ces suffixes DNS (dans l’ordre) : sélectionnez le suffixe de domaine appliance et cliquez sur Ajouter... Le suffixe de domaine appliance est `appliance_domain.local`  
   

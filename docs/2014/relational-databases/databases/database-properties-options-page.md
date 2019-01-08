@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.options.f1
@@ -13,12 +12,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54c7a5361a411ff68456504962bbf62298f4ba9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062625"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774421"
 ---
 # <a name="database-properties-options-page"></a>Propriétés de la base de données (page Options)
   Utilisez cette page pour consulter ou modifier les options de la base de données sélectionnée. Pour plus d’informations sur les options disponibles sur cette page, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
@@ -28,7 +27,7 @@ ms.locfileid: "48062625"
  Spécifiez le classement de la base de données en le sélectionnant dans la liste. Pour plus d’informations, voir [Set or Change the Database Collation](../collations/set-or-change-the-database-collation.md).  
   
  **Mode de récupération**  
- Spécifiez l’un des modèles suivants pour la récupération de la base de données : **Complet**, **Journalisé en bloc**ou **Simple**. Pour plus d’informations sur les modes de récupération, consultez [Modes de récupération &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md).  
+ Spécifiez un des modèles suivants pour la récupération de la base de données : **Complète**, **Bulk-Logged**, ou **Simple**. Pour plus d’informations sur les modes de récupération, consultez [Modes de récupération &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md).  
   
  **Niveau de compatibilité**  
  Spécifiez la version la plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prise en charge par la base de données. Les valeurs possibles sont  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)** et **SQL Server 2008 (100)**. Lorsqu'une base de données SQL Server 2005 est mise à niveau vers SQL Server 2014, le niveau de compatibilité de cette base de données passe de 90 à 100.  Le niveau de compatibilité 90 n'est pas pris en charge dans SQL Server 2014. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
@@ -94,11 +93,11 @@ ms.locfileid: "48062625"
  Spécifiez le nom de répertoire pour les données FILESTREAM associées à la base de données sélectionnée.  
   
  **Accès FILESTREAM non transactionnel**  
- Spécifiez l’une des options suivantes pour l’accès non transactionnel via le système de fichiers aux données FILESTREAM stockées dans les FileTables : **OFF**, **READ_ONLY**ou **FULL**. Si FILESTREAM n'est pas activé sur le serveur, cette valeur est définie sur OFF et est désactivée. Pour plus d’informations, consultez [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
+ Spécifiez l’une des options suivantes pour l’accès non transactionnel via le système de fichiers aux données FILESTREAM stockées dans les FileTables : **DÉSACTIVER**, **READ_ONLY**, ou **complète**. Si FILESTREAM n'est pas activé sur le serveur, cette valeur est définie sur OFF et est désactivée. Pour plus d’informations, consultez [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Divers  
  **Valeur par défaut ANSI NULL**  
- Autorise les valeurs null pour tous les types de données définis par l’utilisateur ou les colonnes qui ne sont pas explicitement définies comme `NOT NULL` pendant un `CREATE TABLE` ou `ALTER TABLE` instruction (l’état par défaut). Pour plus d’informations, consultez [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) et [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql).  
+ Autorise les valeurs NULL pour tous les types de données définis par l'utilisateur ou les colonnes non explicitement définies comme `NOT NULL` au cours d'une instruction `CREATE TABLE` ou `ALTER TABLE` (l'état par défaut). Pour plus d’informations, consultez [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) et [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql).  
   
  **Valeurs ANSI NULL activées**  
  Spécifiez le comportement des opérateurs de comparaison Égal à (`=`) et Différent de (`<>`) lorsqu'ils sont utilisés avec des valeurs NULL. Les valeurs possibles sont `True` (activé) et `False` (désactivé). Si la valeur de cette option est `True`, toutes les comparaisons à une valeur NULL sont évaluées à inconnu (UNKNOWN). Lorsque `False`, les comparaisons de valeurs non-UNICODE à une valeur null sont `True` si les deux valeurs sont NULL. Pour plus d’informations, consultez [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql).  
@@ -146,7 +145,7 @@ ms.locfileid: "48062625"
   
  TRUSTWORTHY a la valeur `False` dès qu'une base de données est attachée au serveur.  
   
- L’approche recommandée pour l’accès aux ressources en dehors de la base de données dans un contexte d’emprunt d’identité consiste à utiliser des certificats et les signatures qu’ils sont apposés à le `Trustworthy` option.  
+ La stratégie recommandée pour accéder aux ressources situées en dehors de la base de données dans un contexte d'emprunt d'identité consiste à utiliser les certificats et les signatures tels qu'ils sont apposés à l'option `Trustworthy`.  
   
  Pour définir cette propriété, utilisez l'instruction ALTER DATABASE.  
   

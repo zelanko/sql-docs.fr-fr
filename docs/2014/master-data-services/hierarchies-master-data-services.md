@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 92aeef62aef03d0e80f1bc4486ff04fa600fcf09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af91e39bd3c338670906bb5dc50987bc0c413746
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206629"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780321"
 ---
 # <a name="hierarchies-master-data-services"></a>Hiérarchies (services de données de référence)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], une hiérarchie est une arborescence qui vous permet d'effectuer les opérations suivantes :  
@@ -70,7 +69,7 @@ ms.locfileid: "48206629"
   
 -   [Hiérarchies récursives &#40;Master Data Services&#41;](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [Hiérarchies avec un niveau supérieur explicite dérivées &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [Hiérarchies dérivées avec un niveau supérieur composé d’une hiérarchie explicite &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
 -   [Collections &#40;Master Data Services&#41;](collections-master-data-services.md)  
   

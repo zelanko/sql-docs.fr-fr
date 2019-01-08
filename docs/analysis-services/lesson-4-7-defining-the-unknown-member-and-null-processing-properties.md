@@ -1,5 +1,5 @@
 ---
-title: Définition des propriétés de traitement des valeurs Null et membre inconnu | Documents Microsoft
+title: Définition du membre inconnu et le traitement des propriétés des valeurs Null | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e39ac2042304b927d8270da57a88c4452ef79337
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 08e05c68bf69bcb7ca54d2f0920ee041aae3ca99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019576"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525919"
 ---
-# <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Leçon 4-7 : définition des propriétés de traitement des valeurs Null et membre inconnu
+# <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Leçon 4-7 : définition du membre inconnu et le traitement des propriétés des valeurs Null
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Lorsque [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] traite une dimension, toutes les valeurs distinctes des colonnes sous-jacentes dans les tables ou les vues de la vue de source de données remplissent les attributs de la dimension. Si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rencontre une valeur Null au cours du traitement, par défaut, elle convertit celle-ci en zéro pour des colonnes numériques ou en une chaîne vide pour des colonnes de type chaîne. Vous pouvez modifier les paramètres par défaut ou convertir les valeurs Null dans votre processus d’extraction, de transformation et de chargement (le cas échéant) de l’entrepôt de données relationnelles sous-jacent. Par ailleurs, vous pouvez faire en sorte que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] convertisse la valeur Null en une valeur désignée en configurant trois propriétés : les propriétés **UnknownMember** et **UnknownMemberName** pour la dimension, et la propriété **NullProcessing** pour l’attribut de clé de la dimension.  
@@ -60,7 +60,7 @@ Au cours des tâches de cette rubrique, vous allez ajouter les attributs de la c
   
     Ce niveau contient les composants d’assembly utilisés pour la création d’autres composants, en commençant par le produit **Adjustable Race** , comme le montre l’illustration suivante.  
   
-    ![Composants d’assemblage permet de créer d’autres composants](../analysis-services/media/l4-productdimensionerrorconfig-2.gif "composants d’assemblage permet de créer d’autres composants")  
+    ![Composants d’assemblage permet de créer d’autres composants](../analysis-services/media/l4-productdimensionerrorconfig-2.gif "composants d’Assembly utilisés pour créer d’autres composants")  
   
 ## <a name="defining-attributes-from-snowflaked-tables-and-a-product-category-user-defined-hierarchy"></a>Définition des attributs à partir des tables en flocons et d'une hiérarchie définie par l'utilisateur Product Category  
   
@@ -90,7 +90,7 @@ Au cours des tâches de cette rubrique, vous allez ajouter les attributs de la c
   
 9. Dans le volet **Attributs** , nommez ce nouvel attribut **Category**.  
   
-10. Dans la fenêtre de propriétés, cliquez dans le champ de propriété **NameColumn** , puis cliquez sur le bouton Parcourir (**.**) pour ouvrir la boîte de dialogue **Colonne de nom** .  
+10. Dans la fenêtre Propriétés, cliquez dans le **NameColumn** propriété champ, puis cliquez sur le bouton de navigation (**...** ) pour ouvrir la **colonne nom** boîte de dialogue.  
   
 11. Sélectionnez **EnglishProductCategoryName** dans la liste **Colonne source** , puis cliquez sur **OK**.  
   
@@ -98,11 +98,11 @@ Au cours des tâches de cette rubrique, vous allez ajouter les attributs de la c
   
 13. Dans le volet **Attributs** , nommez ce nouvel attribut **Subcategory**.  
   
-14. Dans la fenêtre de propriétés, cliquez dans le champ de propriété **NameColumn** puis cliquez sur le bouton Parcourir ( **...** ) pour ouvrir la boîte de dialogue **Colonne de nom** .  
+14. Dans la fenêtre Propriétés, cliquez dans le **NameColumn** propriété champ, puis cliquez sur le bouton de navigation **(...)**  bouton pour ouvrir la **colonne nom** boîte de dialogue.  
   
 15. Sélectionnez **EnglishProductSubcategoryName** dans la liste **Colonne source** , puis cliquez sur **OK**.  
   
-16. Créez une hiérarchie définie par l’utilisateur appelée **Product Categories** avec les niveaux suivants en commençant par le haut : **Category**, **Subcategory**et **Product Name**.  
+16. Créer une nouvelle hiérarchie définie par l’utilisateur appelée **catégories de produits** avec les niveaux suivants, dans l’ordre de haut en bas : **Catégorie**, **sous-catégorie**, et **Product Name**.  
   
 17. Spécifiez **All Products** comme valeur pour la propriété **AllMemberName** de la hiérarchie définie par l’utilisateur Product Categories.  
   
@@ -176,10 +176,10 @@ Pour modifier le comportement mentionné dans la tâche précédente, activez la
   
     Notez que tous les composants d’assembly apparaissent maintenant au niveau **Product Name** , comme le montre l’illustration suivante.  
   
-    ![Niveau de nom de produit affichant les composants d’assemblage](../analysis-services/media/l4-assemblycomponents-1.gif "au niveau du nom de produit affichant les composants d’assembly")  
+    ![Niveau de nom de produit affichant des composants d’assemblage](../analysis-services/media/l4-assemblycomponents-1.gif "niveau Product Name montrant des composants d’assembly")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 5 : Définition des relations entre les Dimensions et les groupes de mesures](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[Leçon 5 : Définition des relations entre des Dimensions et des groupes de mesures](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   
   

@@ -15,15 +15,15 @@ ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2071ec7d7c9a31a9da8982b583ef7618700db5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d75c374a7d9d57483dd56e34b51fcb6d89e1b52
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649317"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504091"
 ---
 # <a name="level-1-interface-conformance"></a>Conformité de l’interface - niveau 1
-Niveau de la conformité de l’interface de niveau 1 inclut les fonctionnalités de niveau de conformité Core interface ainsi que des fonctionnalités supplémentaires, telles que les transactions, qui sont généralement disponibles dans un SGBD relationnelle OLTP. Un pilote d’interface conforme de niveau 1 permet à l’application procédez comme suit, en plus des fonctionnalités dans le niveau de la conformité de l’interface Core :  
+Niveau de la conformité de l’interface de niveau 1 inclut les fonctionnalités de niveau de conformité Core interface ainsi que des fonctionnalités supplémentaires, telles que les transactions, qui sont généralement disponibles dans un SGBD relationnelle OLTP. Un pilote conforme à l’interface de niveau 1 permet à l’application procédez comme suit, en plus des fonctionnalités dans le niveau de la conformité de l’interface Core :  
   
 |||  
 |-|-|  
@@ -33,6 +33,6 @@ Niveau de la conformité de l’interface de niveau 1 inclut les fonctionnalité
 |104|Obtenir les clés primaires des tables, en appelant **SQLPrimaryKeys**.|  
 |105|Utiliser des procédures stockées, via la séquence d’échappement ODBC pour les appels de procédure et interroger le dictionnaire de données concernant les procédures stockées, en appelant **SQLProcedureColumns** et **SQLProcedures**. (Le processus par lequel les procédures sont créées et stockées sur la source de données est en dehors de la portée de ce document.)|  
 |106|Se connecter à une source de données en mode interactif en parcourant les serveurs disponibles, en appelant **SQLBrowseConnect**.|  
-|107|Utiliser les fonctions ODBC au lieu d’instructions SQL pour effectuer certaines opérations de base de données : **SQLSetPos** avec SQL_POSITION et SQL_REFRESH.|  
+|107|Utilisez les fonctions ODBC au lieu d’instructions SQL pour effectuer certaines opérations de base de données : **SQLSetPos** avec SQL_POSITION et SQL_REFRESH.|  
 |108|Accéder au contenu de plusieurs jeux de résultats générés par lots et procédures stockées, en appelant **SQLMoreResults**.|  
 |109|Délimiter les transactions s’étendant sur plusieurs fonctions ODBC, avec l’atomicité et la possibilité de spécifier SQL_ROLLBACK dans **SQLEndTran**.|

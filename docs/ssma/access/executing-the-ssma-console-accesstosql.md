@@ -10,12 +10,12 @@ ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 402416503f927f74dcb711ac3bffb3c901f10e79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737817"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408316"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Exécution de la Console SSMA (AccessToSQL)
 Microsoft vous offre un ensemble complet de commandes de fichier de script et les options de ligne de commande pour exécuter et contrôler les activités SSMA. Les sections suivantes détaillent les mêmes.  
@@ -25,7 +25,7 @@ Les commandes de projet gèrent la création de projets, ouvrir, enregistrer et 
   
 **Commande**  
   
-Créer-nouveau projet : crée un nouveau projet SSMA.  
+Créer-nouveau projet : Crée un nouveau projet SSMA.  
   
 **Script**  
   
@@ -62,7 +62,7 @@ Créer-nouveau projet : crée un nouveau projet SSMA.
   
   overwrite-if-exists="<true/false>"  
   
-  project-type=”<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>”  
+  project-type="<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>"  
   
 />  
 ```  
@@ -72,7 +72,7 @@ L’attribut « type de projet » est **sql-server-2008** par défaut.
   
 **Commande**  
   
-Open-projet : ouvre un projet existant.  
+Open-projet : Ouvre un projet existant.  
   
 **Script**  
   
@@ -91,11 +91,11 @@ Open-projet : ouvre un projet existant.
   
 />  
 ```  
-**Remarque :** application de Console SSMA pour Access prend en charge la compatibilité descendante. Vous ne pourrez pas ouvrir les projets créés par une version précédente de SSMA.  
+**Remarque :** Application de Console SSMA pour Access prend en charge la compatibilité descendante. Vous ne pourrez pas ouvrir les projets créés par une version précédente de SSMA.  
   
 **Commande**  
   
-projet de l’enregistrement : enregistre le projet de migration.  
+projet de l’enregistrement : Enregistre le projet de migration.  
   
 **Script**  
   
@@ -106,7 +106,7 @@ projet de l’enregistrement : enregistre le projet de migration.
 ```  
 **Commande**  
   
-projet-fermer : ferme le projet de migration.  
+projet de fermeture : Ferme le projet de migration.  
   
 **Script**  
   
@@ -149,7 +149,7 @@ Définition de serveur est récupérée à partir de l’attribut de nom défini
 ```  
 **Commande**  
   
-accès-base de données charge : permet de charger des fichiers de base de données access  
+accès-base de données charge : Permet de charger des fichiers de base de données access  
   
 **Script**  
   
@@ -325,7 +325,7 @@ ou Gestionnaire de configuration
 ## <a name="migration-script-file-commands"></a>Commandes de fichier de Script de migration  
 Les commandes de Migration convertir le schéma de base de données cible au schéma source et migre les données vers le serveur cible.  
   
-La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreurs détaillées : résumé uniquement sur le nœud racine d’arborescence objet source.  
+La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreurs détaillées : Résumé uniquement sur le nœud racine d’arborescence objet source.  
   
 **Commande**  
   
@@ -452,7 +452,7 @@ ou Gestionnaire de configuration
 ```  
 **Commande**  
   
-tables de lien : cette commande lie la table source (accès) à la table cible.  
+lien-tables : Cette commande lie la table source (accès) à la table cible.  
   
 **Script**  
   
@@ -478,7 +478,7 @@ ou Gestionnaire de configuration
 ```  
 **Commande**  
   
-tables dissocier : cette commande supprime la table source (accès) à partir de la table cible.  
+Dissocier-tables : Cette commande supprime la table source (accès) à partir de la table cible.  
   
 **Script**  
   
@@ -508,7 +508,7 @@ La commande de préparation de la Migration lance le mappage de schéma entre le
   
 **Commande**  
   
-schéma de mappage : mappage de schéma de base de données source vers le schéma cible.  
+schéma du mappage : Mappage de schéma de base de données source vers le schéma cible.  
   
 **Script**  
   
@@ -527,7 +527,7 @@ schéma de mappage : mappage de schéma de base de données source vers le sch�
 ## <a name="manageability-commands"></a>Commandes de la facilité de gestion  
 Les commandes de la facilité de gestion permettent de synchroniser les objets de base de données cible avec la base de données source.  
   
-La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreurs détaillées : résumé uniquement sur le nœud racine d’arborescence objet source.  
+La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreurs détaillées : Résumé uniquement sur le nœud racine d’arborescence objet source.  
   
 **Commande**  
   

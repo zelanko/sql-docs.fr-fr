@@ -1,5 +1,5 @@
 ---
-title: Sources de données et liaisons (SSAS multidimensionnel) | Documents Microsoft
+title: Sources de données et liaisons (SSAS multidimensionnel) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2461bbdc3707ed30e130aaa32e117f24f9fe379d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 76afbfcd2cd7668cfc65fc5078a1015ac33bc964
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025038"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529111"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Sources de données et liaisons (SSAS Multidimensionnel)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,14 +26,14 @@ ms.locfileid: "34025038"
   
  Le moyen d'exprimer la source de données varie en fonction du type de source de données. Par exemple, une source de données relationnelle se distingue par la chaîne de connexion. Pour plus d'informations sur les sources de données, consultez [Data Sources in Multidimensional Models](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md).  
   
- Indépendamment de la source de données utilisée, la vue de source de données (DSV, Data Source View) contient les métadonnées pour la source de données. Donc, les liaisons pour un cube ou d'autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sont exprimées en tant que liaisons à DSV. Ces liaisons peuvent inclure des liaisons à des objets logiques tels que des vues, des colonnes calculées et des relations qui n'existent pas physiquement dans la source de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajoute une colonne calculée qui encapsule l'expression dans l'élément DSV, puis lie la mesure OLAP correspondante à cette colonne dans la vue de source de données. Pour plus d'informations sur les vues de source de données (DSV), consultez [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+ Indépendamment de la source de données utilisée, la vue de source de données (DSV, Data Source View) contient les métadonnées pour la source de données. Donc, les liaisons pour un cube ou d'autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sont exprimées en tant que liaisons à DSV. Ces liaisons peuvent inclure des liaisons à des objets-objets logiques tels que les vues, les colonnes calculées et des relations qui n’existent pas physiquement dans la source de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajoute une colonne calculée qui encapsule l'expression dans l'élément DSV, puis lie la mesure OLAP correspondante à cette colonne dans la vue de source de données. Pour plus d'informations sur les vues de source de données (DSV), consultez [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Chaque objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se lie à la source de données d'une façon qui lui est propre. De plus, les liaisons de données pour ces objets et la définition de la source de données peuvent être insérées à la définition de l'objet lié aux données (par exemple, la dimension), ou fournies hors ligne, sous la forme d'un jeu séparé de définitions.  
   
 ## <a name="analysis-services-data-types"></a>Types de données Analysis Services  
  Les types de données utilisés dans les liaisons doivent correspondre aux types de données pris en charge par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les types de données suivants sont définis dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
-|Type de données Analysis Services| Description|  
+|Type de données Analysis Services|Description|  
 |---------------------------------|-----------------|  
 |BigInt|Entier signé de 64 bits. Ce type de données est mappé au type de données Int64 dans Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_I8 dans OLE DB.|  
 |Bool|Valeur booléenne. Ce type de données est mappé au type de données Boolean dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_BOOL dans OLE DB.|  
@@ -43,7 +43,7 @@ ms.locfileid: "34025038"
 |Entier|Entier signé de 32 bits. Ce type de données est mappé sur le type de données Int32 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_I4 dans OLE DB.|  
 |Unique|Nombre à virgule flottante simple précision compris entre -3.40E +38 et 3.40E +38. Ce type de données est mappé sur le type de données Single dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_R4 dans OLE DB.|  
 |SmallInt|Entier signé 16 bits. Ce type de données est mappé au type de données Int16 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_I2 dans OLE DB.|  
-|TinyInt|Entier signé 8 bits. Ce type de données est mappé au type de données SByte dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_I1 dans OLE DB.<br /><br /> Remarque : si une source de données contient des champs de type tinyint et que la propriété Auto-incrément est définie sur True, ils seront convertis en entiers dans la vue de source de données.|  
+|TinyInt|Entier signé 8 bits. Ce type de données est mappé au type de données SByte dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_I1 dans OLE DB.<br /><br /> Remarque : Si une source de données contient des champs de type tinyint et que la propriété AutoIncrément est définie sur True, ils seront convertis en entiers dans la vue de source de données.|  
 |UnsignedBigInt|Entier non signé 64 bits. Ce type de données est mappé sur le type de données UInt64 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_UI8 dans OLE DB.|  
 |UnsignedInt|Entier non signé 32 bits. Ce type de données est mappé sur le type de données UInt32 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_UI4 dans OLE DB.|  
 |UnsignedSmallInt|Entier non signé 16 bits. Ce type de données est mappé au type de données UInt16 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_UI2 dans OLE DB.|  
@@ -52,7 +52,7 @@ ms.locfileid: "34025038"
  Toutes les données reçues de la source de données sont converties selon le type [!INCLUDE[ssAS](../../includes/ssas-md.md)] spécifié dans la liaison (habituellement pendant le traitement). Une erreur est déclenchée si la conversion ne peut pas être effectuée (par exemple, de String en Int). [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] définit habituellement le type de données dans la liaison selon celui qui correspond le mieux au type de la source dans la source de données. Par exemple, les types SQL Date, DateTime, SmallDateTime, DateTime2, DateTimeOffset sont mappés sur le type Date [!INCLUDE[ssAS](../../includes/ssas-md.md)] , et le type SQL Time est mappé sur String.  
   
 ## <a name="bindings-for-dimensions"></a>Liaisons pour les dimensions  
- Chaque attribut d'une dimension est lié à une colonne dans un élément DSV. Tous les attributs d'une dimension doivent venir d'une source de données unique. Toutefois, les attributs peuvent être liés aux colonnes dans des tables différentes. Les relations entre les tables sont définies dans l'élément DSV. Dans le cas où plusieurs jeux de relations existeraient pour la même table, il peut être nécessaire d'introduire une requête nommée dans l'élément DSV pour qu'il agisse comme une table d'« alias ». Les expressions et les filtres sont définis dans l'élément DSV en utilisant des calculs nommés et des requêtes nommées.  
+ Chaque attribut d'une dimension est lié à une colonne dans un élément DSV. Tous les attributs d'une dimension doivent venir d'une source de données unique. Toutefois, les attributs peuvent être liés aux colonnes dans des tables différentes. Les relations entre les tables sont définies dans l'élément DSV. Dans le cas où il existe plus d’un jeu de relations à la même table, il peut être nécessaire d’introduire une requête nommée dans la vue DSV à agir en tant que tableau 'alias'. Les expressions et les filtres sont définis dans l'élément DSV en utilisant des calculs nommés et des requêtes nommées.  
   
 ## <a name="bindings-for-measuregroups-measures-and-partitions"></a>Liaisons pour MeasureGroups, les mesures et les partitions  
  Chaque groupe de mesures a les liaisons par défaut suivantes :  
@@ -145,18 +145,18 @@ ms.locfileid: "34025038"
   
  Les liaisons hors ligne sont spécifiées en incluant l’objet de collection **Bindings** facultatif avec la commande de traitement. La collection **Bindings** facultative contient les éléments suivants.  
   
-|Propriété|Cardinalité|Type| Description|  
+|Propriété|Cardinalité|Type|Description|  
 |--------------|-----------------|----------|-----------------|  
-|**Liaison**|0-n|**Binding**|Fournit une collection de nouvelles liaisons.|  
+|**Binding**|0-n|**Binding**|Fournit une collection de nouvelles liaisons.|  
 |**DataSource**|0-1|**DataSource**|Remplace l'élément **DataSource** du serveur qui aurait été utilisé.|  
 |**DataSourceView**|0-1|**DataSourceView**|Remplace l'élément **DataSourceView** du<br /><br /> serveur qui aurait été utilisé.|  
   
  Tous les éléments qui sont en rapport avec les liaisons hors-ligne sont facultatifs. Pour tous les éléments non spécifiés, ASSL utilise la spécification contenue dans le DDL de l'objet rendu persistant. La spécification de **DataSource** ou de **DataSourceView** dans la commande **Process** est facultative. Si **DataSource** ou **DataSourceView** sont spécifiés, ils ne sont pas instanciés et ne sont pas rendus persistants une fois la commande **Process** terminée.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Définition du type de liaison hors ligne  
- À l’intérieur de la collection **Bindings** hors ligne, ASSL prévoit une collection de liaisons pour les objets multiples, autorisant un élément **Binding**pour chacun. Chaque élément **Binding** a une référence d’objet étendue, qui est semblable à la référence d’objet mais qui peut également faire référence à des objets mineurs (par exemple, des attributs de dimension et des attributs de groupe de mesures). Cet objet prend la forme à deux dimensions typique de la **objet** élément **processus** commandes, sauf que la \< *objet*>\<*/objet*> balises ne sont pas présentes.  
+ À l’intérieur de la collection **Bindings** hors ligne, ASSL prévoit une collection de liaisons pour les objets multiples, autorisant un élément **Binding**pour chacun. Chaque élément **Binding** a une référence d’objet étendue, qui est semblable à la référence d’objet mais qui peut également faire référence à des objets mineurs (par exemple, des attributs de dimension et des attributs de groupe de mesures). Cet objet prend la forme à deux dimensions typique de la **objet** élément **processus** commandes, sauf que le \< *objet* > \< */Objet*> balises ne sont pas présents.  
   
- Chaque objet pour lequel la liaison est spécifiée est identifié par un élément XML sous la forme \< *objet*> ID (par exemple, **DimensionID**). Après avoir identifié l’objet aussi spécifiquement que possible sous la forme \< *objet*> ID, vous identifiez l’élément pour lequel la liaison est spécifiée, qui est généralement **Source**. Un scénario commun est celui où **Source** est une propriété de **DataItem**, ce qui est le cas pour les liaisons de colonne dans un attribut. Dans ce cas, vous ne spécifiez pas la balise **DataItem** ; au lieu de cela, vous spécifiez simplement la propriété **Source** , comme si elle était directement sur la colonne à lier.  
+ Chaque objet pour lequel la liaison est spécifiée est identifié par un élément XML sous la forme \< *objet*> ID (par exemple, **DimensionID**). Une fois que vous avez identifié l’objet aussi précisément que possible avec le formulaire \< *objet*> ID, vous identifiez l’élément pour lequel la liaison est spécifiée, qui est généralement **Source**. Un scénario commun est celui où **Source** est une propriété de **DataItem**, ce qui est le cas pour les liaisons de colonne dans un attribut. Dans ce cas, vous ne spécifiez pas la balise **DataItem** ; au lieu de cela, vous spécifiez simplement la propriété **Source** , comme si elle était directement sur la colonne à lier.  
   
  Les éléments**KeyColumns** sont identifiés par leur classement à l'intérieur de la collection **KeyColumns** . Ici, il n'est pas possible de spécifier, par exemple, uniquement la première et la troisième colonne clé d'un attribut, parce qu'il n'y a aucun moyen d'indiquer que la deuxième colonne clé doit être ignorée. Toutes les colonnes clés doivent être présentes dans la liaison hors-ligne pour un attribut de dimension.  
   

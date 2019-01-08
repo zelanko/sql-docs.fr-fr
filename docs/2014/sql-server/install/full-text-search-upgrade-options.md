@@ -14,17 +14,17 @@ ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9388ade07b8593ec06289141df0f013351f3f7f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abe169a69cd8c247ba74a24b8e80c3202fa2d5f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217939"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511315"
 ---
 # <a name="full-text-search-upgrade-options"></a>Options de mise à niveau de recherche en texte intégral
   Utilisez la page des options de mise à niveau de recherche en texte intégral de l'Assistant Installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour sélectionner l'option de mise à niveau de recherche en texte intégral à utiliser pour les bases de données que vous mettez actuellement à niveau.  
   
- Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , chaque index de recherche en texte intégral réside dans un catalogue de texte intégral qui appartient à un groupe de fichiers, a un chemin d'accès physique et est traité en tant que fichier de base de données. Un catalogue de texte intégral est en fait un concept logique – objet virtuel – qui renvoie à un groupe d'index de recherche en texte intégral. Par conséquent, un nouveau catalogue de texte intégral n'est pas traité en tant que fichier de base de données avec un chemin d'accès physique. Toutefois, un nouveau groupe de fichiers est créé sur le même disque pendant la mise à niveau de tout catalogue de texte intégral qui contient des fichiers de données. Cela maintient le comportement d'E/S de l'ancien disque après la mise à niveau. Tout index de recherche en texte intégral de ce catalogue est placé dans le nouveau groupe de fichiers si le chemin d'accès racine existe. Si l'ancien chemin de catalogue de texte intégral est non valide, la mise à niveau conserve l'index de recherche en texte intégral dans le même groupe de fichiers comme table de base ou, pour une table partitionnée, dans le groupe de fichiers principal.  
+ Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , chaque index de recherche en texte intégral réside dans un catalogue de texte intégral qui appartient à un groupe de fichiers, a un chemin d'accès physique et est traité en tant que fichier de base de données. Maintenant, un catalogue de texte intégral est un concept unique en son virtuel objet logique-qui fait référence à un groupe d’index de recherche en texte intégral. Par conséquent, un nouveau catalogue de texte intégral n'est pas traité en tant que fichier de base de données avec un chemin d'accès physique. Toutefois, un nouveau groupe de fichiers est créé sur le même disque pendant la mise à niveau de tout catalogue de texte intégral qui contient des fichiers de données. Cela maintient le comportement d'E/S de l'ancien disque après la mise à niveau. Tout index de recherche en texte intégral de ce catalogue est placé dans le nouveau groupe de fichiers si le chemin d'accès racine existe. Si l'ancien chemin de catalogue de texte intégral est non valide, la mise à niveau conserve l'index de recherche en texte intégral dans le même groupe de fichiers comme table de base ou, pour une table partitionnée, dans le groupe de fichiers principal.  
   
 ## <a name="options"></a>Options  
  Lorsque vous effectuez une mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], choisissez l'une des options de mise à niveau de texte intégral ci-dessous.  

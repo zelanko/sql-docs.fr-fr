@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a9d7d8e73dc61afc90485c0d5cd36b3bb009fda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b16deb7ed2bd43cc45966d27b79729897e76405c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658947"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532359"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>Sys.external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "47658947"
 |indicateur_fin_de_champ|**nvarchar(10)**|Pour format_type = DELIMITEDTEXT, c’est la marque de fin de champ.||  
 |string_delimiter|**nvarchar(10)**|Pour format_type = DELIMITEDTEXT, il s’agit du délimiteur de chaîne.||  
 |date_format|**nvarchar(50)**|Pour format_type = DELIMITEDTEXT, c’est la date défini par l’utilisateur et le format d’heure.||  
-|use_type_default|**bit**|Pour format_type = texte délimité par des, spécifie comment gérer les valeurs manquantes lorsque PolyBase est l’importation de données à partir de fichiers texte HDFS [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 – stocker des valeurs manquantes en tant que la chaîne « NULL ».<br /><br /> 1 : stocker les valeurs manquantes en tant que la valeur par défaut de la colonne.|  
+|use_type_default|**bit**|Pour format_type = texte délimité par des, spécifie comment gérer les valeurs manquantes lorsque PolyBase est l’importation de données à partir de fichiers texte HDFS [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 - stocker des valeurs manquantes en tant que la chaîne « NULL ».<br /><br /> 1 - stocker des valeurs manquantes en tant que la valeur par défaut de la colonne.|  
 |serde_method|**nvarchar(255)**|Pour format_type = RCFILE, c’est la méthode de sérialisation/désérialisation.||  
 |indicateur_fin_de_ligne|**nvarchar(10)**|Pour format_type = DELIMITEDTEXT, c’est la chaîne de caractère qui arrête chaque ligne dans le fichier Hadoop externe.|Toujours '\n'.|  
 |encodage|**nvarchar(10)**|Pour format_type = DELIMITEDTEXT, c’est la méthode d’encodage du fichier Hadoop externe.|Toujours 'UTF8'.|  
 |data_compression|**nvarchar(255)**|La méthode de compression de données pour les données externes.|Pour format_type = DELIMITEDTEXT :<br /><br /> -   'org.apache.hadoop.io.compress.DefaultCodec'<br />-   'org.apache.hadoop.io.compress.GzipCodec'<br /><br /> Pour format_type = RCFILE :<br /><br /> -   'org.apache.hadoop.io.compress.DefaultCodec'<br /><br /> Pour format_type = ORC :<br /><br /> -   'org.apache.hadoop.io.compress.DefaultCodec'<br />-   'org.apache.hadoop.io.compress.SnappyCodec'<br /><br /> Pour format_type = PARQUET :<br /><br /> -   'org.apache.hadoop.io.compress.GzipCodec'<br />-   'org.apache.hadoop.io.compress.SnappyCodec'|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  La visibilité des métadonnées dans les affichages catalogue est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

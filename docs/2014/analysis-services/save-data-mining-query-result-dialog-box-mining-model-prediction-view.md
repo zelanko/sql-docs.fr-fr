@@ -15,12 +15,12 @@ ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c4736083dedc6899a55e49926d1010ef39fc4444
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6b5c5f74ba8951bae27193b6796f09dcbdb8302
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090273"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511214"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>Boîte de dialogue Enregistrer le résultat de la requête d'exploration de données (vue Prévision de modèle d'exploration de données)
   Utilisez la boîte de dialogue **Enregistrer le résultat de la requête d'exploration de données** pour enregistrer les résultats d'une requête d'exploration de données dans une nouvelle table.  
@@ -40,7 +40,7 @@ ms.locfileid: "48090273"
  **Remplacer si existe**  
  Sélectionnez cette option pour remplacer une table existante portant le même nom.  
   
- Remplacer la table existante est nécessaire si l'une des conditions suivantes est vraie :  
+ Remplacer la table existante est nécessaire si l'une des conditions suivantes est vraie :  
   
 -   Vous avez ajouté des colonnes à la requête de prédiction.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48090273"
  **Ajouter à la vue DSV**  
  (Facultatif) Sélectionnez une vue de source de données contenue dans le projet si vous souhaitez ajouter la table à une source de données existante.  
   
- Cette option est utile si vous voulez conserver toutes les tables associées pour un modèle, telles que les données d'apprentissage, les données sources de prédiction et les résultats de la requête, dans la même source de données.  
+ Cette option est utile si vous souhaitez conserver toutes les tables associées pour un modèle, tels que les données d’apprentissage, de source de données de prédiction et de requête des résultats de la même source de données.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Générateur de requêtes de prédiction &#40;exploration de données&#41;](prediction-query-builder-data-mining.md)   

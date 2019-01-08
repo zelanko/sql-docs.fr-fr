@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], processing order
@@ -14,12 +13,12 @@ ms.assetid: d151e2c5-cf50-4cb3-a829-8f32455dbd66
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 569767e74c6666a68b41b5af9914a5a028522bc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb5506a4279ecd11c31d860f68d4c3736425298b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174049"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788531"
 ---
 # <a name="specify-the-processing-order-of-merge-articles"></a>Spécifier l'ordre de traitement d'articles de fusion
   À partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], il est possible de remplacer l'ordre de traitement par défaut des articles pour les publications de fusion. Ceci est utile par exemple si vous définissez une intégrité référentielle via des déclencheurs et que ces déclencheurs doivent s'exécuter dans un certain ordre.  

@@ -13,12 +13,12 @@ ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 279c83692b507c3031d3fbe638ad2e8dee4f591a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81be4bb3802888a8471308135775723c9ba0fd9e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184949"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419860"
 ---
 # <a name="configure-report-manager-native-mode"></a>Configurer le serveur de rapports (mode natif)
   Le Gestionnaire de rapports est une application Web frontale utilisée pour consulter des rapports, gérer le contenu d'un serveur de rapports et accorder aux utilisateurs l'accès à un serveur de rapports en mode natif. Le Gestionnaire de rapports est installé avec le service Web Report Server dans la même instance du serveur de rapports et est configuré si vous sélectionnez l'option **Installer la configuration par défaut en mode Natif** dans le programme d'installation. Vous pouvez également configurer le Gestionnaire de rapports après son installation. Cette rubrique fournit des informations sur les scénarios de configuration suivants du Gestionnaire de rapports :  
@@ -55,7 +55,7 @@ ms.locfileid: "48184949"
   
 -   Vous devez disposer d'un serveur de rapports doté d'une configuration minimale. Pour plus d’informations sur la configuration minimale d’un serveur de rapports, consultez [Configurer un serveur de rapports &#40;Reporting Services en mode natif&#41;](configure-a-report-server-reporting-services-native-mode.md).  
   
--   Votre serveur de rapports doit s'exécuter en mode natif. Vous ne pouvez pas utiliser le Gestionnaire de rapports avec un serveur de rapports configuré pour le mode intégré SharePoint. Dans SQL Server 2012, vous ne pouvez pas basculer un serveur de rapports d'un mode à un autre. Si vous souhaitez modifier le type de serveur de rapports que votre environnement utilise, vous devez installer le mode souhaité du serveur de rapports, puis copier ou déplacer les éléments de rapport vers le nouveau serveur de rapports. Ce processus est habituellement désigné sous le terme de « migration ». Les étapes nécessaires pour la migration dépendent du mode vers lequel vous effectuez la migration et de la version d'origine de la migration. Pour plus d'informations, consultez [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).  
+-   Votre serveur de rapports doit s'exécuter en mode natif. Vous ne pouvez pas utiliser le Gestionnaire de rapports avec un serveur de rapports configuré pour le mode intégré SharePoint. Dans SQL Server 2012, vous ne pouvez pas basculer un serveur de rapports d'un mode à un autre. Si vous souhaitez modifier le type de serveur de rapports que votre environnement utilise, vous devez installer le mode souhaité du serveur de rapports, puis copier ou déplacer les éléments de rapport vers le nouveau serveur de rapports. Ce processus est habituellement désigné sous le terme de « migration ». Les étapes nécessaires pour la migration dépendent du mode vers lequel vous effectuez la migration et de la version d'origine de la migration. Pour plus d'informations, consultez [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).  
   
 -   Internet Explorer 7.0 ou version ultérieure avec activation des scripts doit également être installé. Pour plus d’informations, consultez [planification pour Reporting Services et la prise en charge du navigateur Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48184949"
   
 1.  Ouvrez le fichier **RSReportServer.config** dans un éditeur de texte. Par défaut, celui-ci se trouve dans le dossier \Program Files\Microsoft SQL Server\MSRS12.\<*nom_instance*>\Reporting Services\ReportServer.  
   
-2.  Rechercher `ReportServerURL`.  
+2.  Recherchez `ReportServerURL`.  
   
 3.  Remplacez-le par l'URL de l'instance du serveur de rapports.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48184949"
   
     1.  Ouvrez RSReportServer.config dans un éditeur de texte. Par défaut, il se trouve dans \Program Files\Microsoft SQL Server\MSRS11. \< *instancename*> \Reporting.  
   
-    2.  Rechercher `ReportServerURL`.  
+    2.  Recherchez `ReportServerURL`.  
   
     3.  Remplacez-le par l'URL de l'instance distante du serveur de rapports.  
   
@@ -129,11 +129,11 @@ ms.locfileid: "48184949"
   
 7.  Ouvrez le Gestionnaire de rapports dans une fenêtre du navigateur. S'il est déjà ouvert, actualisez le navigateur pour vérifier que le Gestionnaire de rapports est connecté au serveur distant. Le contenu du serveur cible doit être affiché.  
   
-8.  Désactivez les fonctionnalités du serveur que vous n'utilisez pas :  
+8.  Désactivez les fonctionnalités du serveur que vous n'utilisez pas :  
   
-    -   Sur l’ordinateur Gestionnaire de rapports, désactivez `WebServiceAndHTTPAccessEnabled` et `ScheduleEventsAndReportDeliveryEnabled`.  
+    -   Sur l'ordinateur Gestionnaire de rapports, désactivez `WebServiceAndHTTPAccessEnabled` et `ScheduleEventsAndReportDeliveryEnabled`.  
   
-    -   Sur l’ordinateur serveur de rapports, désactivez `ReportManagerEnabled`.  
+    -   Sur l'ordinateur Serveur de rapports, désactivez `ReportManagerEnabled`.  
   
  Pour plus d’informations sur la désactivation des fonctionnalités, consultez la section [Activer ou désactiver les fonctionnalités Reporting Services](turn-reporting-services-features-on-or-off.md).  
   
@@ -172,14 +172,14 @@ ms.locfileid: "48184949"
  Pour plus d’informations sur la façon de modifier le fichier de configuration, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md). Pour plus d’informations sur la désactivation des fonctionnalités dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Activer ou désactiver les fonctionnalités Reporting Services](turn-reporting-services-features-on-or-off.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../report-manager-ssrs-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)   
  [Planification pour Reporting Services et la prise en charge du navigateur Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
- [Configurer une URL &#40;Gestionnaire de Configuration de SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Vérifier une Installation Reporting Services](../install-windows/verify-a-reporting-services-installation.md)   
- [Personnaliser des feuilles de Style pour la visionneuse HTML et le Gestionnaire de rapports](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
- [Activer ou désactiver les fonctionnalités de Services Reporting](turn-reporting-services-features-on-or-off.md)   
- [Gérer un serveur de rapports Reporting Services en Mode natif](manage-a-reporting-services-native-mode-report-server.md)   
+ [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Vérifier une installation de Reporting Services](../install-windows/verify-a-reporting-services-installation.md)   
+ [Personnaliser des feuilles de style pour la visionneuse HTML et pour le Gestionnaire de rapports](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
+ [Activer ou désactiver les fonctionnalités Reporting Services](turn-reporting-services-features-on-or-off.md)   
+ [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](manage-a-reporting-services-native-mode-report-server.md)   
  [Fichier de Configuration RSReportServer](rsreportserver-config-configuration-file.md)   
- [Configurer un serveur de rapports en Mode natif pour l’Administration locale &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+ [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   
   

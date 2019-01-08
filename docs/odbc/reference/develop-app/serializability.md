@@ -16,12 +16,12 @@ ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93f138988e0b01d6408a7aec96d09ceff65a6f5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e7972fb72607edca8c1599c2d028b073c184642
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757717"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518293"
 ---
 # <a name="serializability"></a>Sérialisabilité
 Dans l’idéal, les transactions doivent être *sérialisable*. Les transactions sont dits se situer sérialisable si les résultats de l’exécution de transactions simultanément sont les mêmes que les résultats de leur exécution en série : autrement dit, une après l’autre. N’importe quelle transaction s’exécute en premier, uniquement que le résultat ne reflète pas aucun mélange des transactions.  

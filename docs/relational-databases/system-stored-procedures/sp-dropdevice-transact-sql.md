@@ -19,12 +19,12 @@ ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 10b3eb7107af97e8c67491117a8e5542118ef00b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee0703a0dca2c6ba958f52dee0f8850ea2c8244e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598267"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536392"
 ---
 # <a name="spdropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@logicalname=** ] **'***appareil***'**  
+ [  **@logicalname=** ] **'**_appareil_**'**  
  Est le nom de l’unité de base de données ou d’une unité de sauvegarde logique comme indiqué dans **master.dbo.sysdevices.name**. *APPAREIL* est **sysname**, sans valeur par défaut.  
   
- [  **@delfile=** ] **'***delfile***'**  
+ [  **@delfile=** ] **'**_delfile_**'**  
  Spécifie si le fichier de l'unité de sauvegarde physique doit être supprimé. *delfile* est **varchar(7)**. S’il est spécifié en tant que **DELFILE**, le fichier de disque d’unité de sauvegarde physique est supprimé.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -57,7 +57,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 ## <a name="remarks"></a>Notes  
  **sp_dropdevice** ne peut pas être utilisé dans une transaction.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **diskadmin** .  
   
 ## <a name="examples"></a>Exemples  

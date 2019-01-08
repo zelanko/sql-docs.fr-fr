@@ -18,12 +18,12 @@ ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 192747d920f92681617d0dc19cc562e52e9c310e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1583f6de4938451b03eabfb7c9425120fa37f2fc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641712"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537833"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +46,19 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [  **@job_id =**] *job_id*  
  Numéro d'identification du travail à appliquer aux serveurs ou groupes de serveurs cibles spécifiés. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name =**] **'***nom_travail***'**  
+ [  **@job_name =**] **'**_nom_travail_**'**  
  Nom du travail à appliquer aux serveurs ou groupes de serveurs cibles associés spécifiés. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [ **@target_server_groups =**]  **'***target_server_groups***'**  
+ [  **@target_server_groups =**] **'**_groupes_serveurs_cibles_**'**  
  Liste référençant, entre virgules, les groupes de serveurs cibles auxquels le travail spécifié est appliqué. *groupes_serveurs_cibles* est **nvarchar (2048)**, avec NULL comme valeur par défaut.  
   
- [  **@target_servers=** ] **'***serveurs_cibles***'**  
+ [  **@target_servers=** ] **'**_serveurs_cibles_**'**  
  Liste référençant, entre virgules, les serveurs cibles auxquels le travail spécifié est appliqué. *serveurs_cibles*est **nvarchar (2048)**, avec NULL comme valeur par défaut.  
   
- [  **@operation=** ] **'***opération***'**  
+ [  **@operation=** ] **'**_opération_**'**  
  Indique si le travail spécifié doit être appliqué ou supprimé des serveurs ou groupes de serveurs cibles indiqués. *opération*est **varchar(7)**, avec une valeur par défaut de l’appliquer. Les opérations valides sont **appliquer** et **supprimer**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -67,7 +67,7 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Notes  
  **sp_apply_job_to_targets** fournit un moyen simple pour appliquer (ou supprimer) un travail à partir de plusieurs serveurs cibles, et est une alternative à l’appel **sp_add_jobserver** (ou **sp_delete_jobserver**) une fois pour chaque serveur cible est requis.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Profiler
@@ -17,12 +16,12 @@ ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d98c99721b5dc1ea970793e48d83bacd3940e9ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebe8924f46de15a3a34c0f49304c87a904919bdb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115579"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757651"
 ---
 # <a name="modify-trace-templates"></a>Modifier des modèles de trace
   Vous pouvez modifier les modèles enregistrés dans un fichier sur l'ordinateur local sur lequel le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] est en cours d'exécution. Vous pouvez également modifier les modèles dérivés de ces fichiers. Quand vous modifiez des modèles existants, vous modifiez leurs propriétés, telles que les classes d’événements et les colonnes de données, en suivant l’ordre de la définition initiale des propriétés, sous l’onglet **Sélection des événements** de la boîte de dialogue **Propriétés de la trace** . Les classes d'événements et les colonnes de données peuvent être ajoutées ou supprimées, et les filtres peuvent être modifiés. Une fois le modèle modifié, un modèle spécifique à l'utilisateur est créé et le modèle système initial demeure intact. Pour plus d’informations, consultez [Enregistrer des traces et des modèles de trace](save-traces-and-trace-templates.md).  
@@ -39,13 +38,13 @@ ms.locfileid: "48115579"
   
  **Pour modifier un modèle de trace**  
   
- [À l’aide de SQL Server Profiler](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
+ [Utilisation de SQL Server Profiler](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
   
  [Utilisation de Transact-SQL](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
   
  **Pour ajouter ou supprimer des événements dans un modèle de trace ou un fichier de trace**  
   
- [À l’aide de SQL Server Profiler](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+ [Utilisation de SQL Server Profiler](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
  [Utilisation de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

@@ -18,12 +18,12 @@ ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77be91eddebedcdad79f18dfd499cc26778560db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df563ae17a04d37d7d3ea667e79cf9de2c7d9a51
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198831"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407876"
 ---
 # <a name="customize-mining-models-and-structure"></a>Personnaliser les modèles et les structures d'exploration de données
   Après avoir sélectionné un algorithme qui répond aux besoins de votre entreprise, vous pouvez personnaliser le modèle d'exploration de données de plusieurs façons pour éventuellement améliorer les résultats.  
@@ -57,12 +57,12 @@ ms.locfileid: "48198831"
   
 -   Supprimer des colonnes qui possèdent de nombreuses valeurs uniques ou qui sont des données de référence réelles inutiles pour l'analyse, telles qu'une adresse ou un deuxième prénom.  
   
- Il n'est pas nécessaire de supprimer physiquement les colonnes de la structure d'exploration de données ; vous pouvez simplement marquer la colonne comme **Ignorer**. La colonne est supprimée du modèle d'exploration de données, mais elle peut encore être utilisée par d'autres modèles d'exploration de données dans la structure, ou référencée dans une requête d'extraction.  
+ Vous n’avez pas besoin de supprimer physiquement les colonnes de la structure d’exploration de données ; Vous pouvez simplement marquer la colonne en tant que **ignorer**. La colonne est supprimée du modèle d'exploration de données, mais elle peut encore être utilisée par d'autres modèles d'exploration de données dans la structure, ou référencée dans une requête d'extraction.  
   
 ### <a name="creating-aliases-for-model-columns"></a>Créer des alias pour des colonnes du modèle  
  Lorsque [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée le modèle d'exploration de données, il utilise les mêmes noms de colonnes que ceux de la structure d'exploration de données. Vous pouvez ajouter un alias à toute colonne du modèle d'exploration de données. Cela peut simplifier la compréhension du contenu ou de l'utilisation des colonnes, ou permettre de raccourcir les noms afin de simplifier la création de requêtes. Les alias sont également utiles lorsque vous souhaitez créer une copie d'une colonne et lui donner un nom descriptif.  
   
- Vous créez un alias en modifiant le `Name` propriété de la colonne du modèle d’exploration de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continue à utiliser le nom d’origine comme ID de la colonne et la nouvelle valeur que vous tapez pour `Name` devient l’alias de colonne et apparaît dans la grille dans les parenthèses situées à côté de l’utilisation des colonnes.  
+ Vous pouvez créer un alias en modifiant la propriété `Name` de la colonne du modèle d'exploration de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continue à utiliser le nom d’origine comme ID de la colonne et la nouvelle valeur que vous tapez pour `Name` devient l’alias de colonne et apparaît dans la grille dans les parenthèses situées à côté de l’utilisation des colonnes.  
   
  ![alias sur d’exploration de données des colonnes de modèle](../media/modelcolumnalias-income.gif "alias sur d’exploration de données des colonnes de modèle")  
   
@@ -86,8 +86,8 @@ ms.locfileid: "48198831"
 |-|-|  
 |[Algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm.md)|[Algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm.md)|  
 |[Algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm.md)|[Algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm.md)|  
-|[Algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm.md)|[Algorithme de régression logistique Microsoft](microsoft-logistic-regression-algorithm.md)|  
-|[Algorithme Microsoft Association](microsoft-association-algorithm.md)|[Algorithme de régression linéaire Microsoft](microsoft-linear-regression-algorithm.md)|  
+|[Algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm.md)|[Algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm.md)|  
+|[Algorithme Microsoft Association](microsoft-association-algorithm.md)|[Algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm.md)|  
 |[Algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm.md)||  
   
 ## <a name="customizing-algorithm-parameters"></a>Personnaliser les paramètres d'algorithme  
@@ -97,8 +97,8 @@ ms.locfileid: "48198831"
   
 |Nom de la propriété|S'applique à|  
 |-------------------|----------------|  
-|AUTO_DETECT_PERIODICITY|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  
-|CLUSTER_COUNT|[Informations techniques de référence sur l’algorithme Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
+|AUTO_DETECT_PERIODICITY|[Références techniques relatives à l'algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  
+|CLUSTER_COUNT|[Informations techniques de référence sur l’algorithme Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Références techniques relatives à l'algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |CLUSTER_SEED|[Informations techniques de référence sur l’algorithme Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Informations techniques de référence sur l’algorithme Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)|  
 |COMPLEXITY_PENALTY|[Informations techniques de référence sur l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  
@@ -107,34 +107,34 @@ ms.locfileid: "48198831"
 |HIDDEN_NODE_RATIO|[Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  
 |HISTORICAL_MODEL_GAP|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  
-|HOLDOUT_PERCENTAGE|[Informations techniques de référence sur l’algorithme Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Remarque : ce paramètre est différent de la valeur du pourcentage de données d’exclusion qui s’applique à une structure d’exploration de données.|  
-|HOLDOUT_SEED|[Informations techniques de référence sur l’algorithme Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Remarque : ce paramètre est différent de la valeur de départ de données d’exclusion qui s’applique à une structure d’exploration de données.|  
+|HOLDOUT_PERCENTAGE|[Références techniques relatives à l'algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Remarque : Ce paramètre est différent de la valeur du pourcentage d'exclusion qui s'applique à une structure d'exploration de données.|  
+|HOLDOUT_SEED|[Informations techniques de référence sur l’algorithme Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Remarque : Ce paramètre est différent de la valeur de départ d'exclusion qui s'applique à une structure d'exploration de données.|  
 |INSTABILITY_SENSITIVITY|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  
-|MAXIMUM_INPUT_ATTRIBUTES|[Informations techniques de référence sur l’algorithme Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)|  
+|MAXIMUM_INPUT_ATTRIBUTES|[Informations techniques de référence sur l’algorithme Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Références techniques relatives à l'algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_COUNT|[Informations techniques de référence sur l’algorithme Microsoft Association](microsoft-association-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_SIZE|[Informations techniques de référence sur l’algorithme Microsoft Association](microsoft-association-algorithm-technical-reference.md)|  
-|MAXIMUM_OUTPUT_ATTRIBUTES|[Informations techniques de référence sur l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md)|  
+|MAXIMUM_OUTPUT_ATTRIBUTES|[Informations techniques de référence sur l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)|  
 |MAXIMUM_SEQUENCE_STATES|[Informations techniques de référence sur l’algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |MAXIMUM_SERIES_VALUE|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  
 |MAXIMUM_STATES|[Informations techniques de référence sur l’algorithme Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |MAXIMUM_SUPPORT|[Informations techniques de référence sur l’algorithme Microsoft Association](microsoft-association-algorithm-technical-reference.md)|  
 |MINIMUM_IMPORTANCE|[Informations techniques de référence sur l’algorithme Microsoft Association](microsoft-association-algorithm-technical-reference.md)|  
-|MINIMUM_ITEMSET_SIZE|[Informations techniques de référence sur l’algorithme Microsoft Association](microsoft-association-algorithm-technical-reference.md)|  
+|MINIMUM_ITEMSET_SIZE|[Références techniques relatives à l'algorithme Microsoft Association](microsoft-association-algorithm-technical-reference.md)|  
 |MINIMUM_DEPENDENCY_PROBABILITY|[Informations techniques de référence sur l’algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm-technical-reference.md)|  
 |MINIMUM_PROBABILITY|[Informations techniques de référence sur l’algorithme Microsoft Association](microsoft-association-algorithm-technical-reference.md)|  
 |MINIMUM_SERIES_VALUE|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  
-|MINIMUM_SUPPORT|[Informations techniques de référence sur l’algorithme Microsoft Association](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  
+|MINIMUM_SUPPORT|[Informations techniques de référence sur l’algorithme Microsoft Association](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Références techniques relatives à l'algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  
 |MISSING_VALUE_SUBSTITUTION|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  
 |MODELLING_CARDINALITY|[Informations techniques de référence sur l’algorithme Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)|  
 |PERIODICITY_HINT|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  
 |PREDICTION_SMOOTHING|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  
 |SAMPLE_SIZE|[Informations techniques de référence sur l’algorithme Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md)|  
-|SCORE_METHOD|[Informations techniques de référence sur l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)|  
+|SCORE_METHOD|[Références techniques relatives à l'algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)|  
 |SPLIT_METHOD|[Informations techniques de référence sur l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)|  
 |STOPPING_TOLERANCE|[Informations techniques de référence sur l’algorithme Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algorithmes d’exploration de données &#40;Analysis Services – Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Architecture physique &#40;Analysis Services - Exploration de données&#41;](physical-architecture-analysis-services-data-mining.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Log Reader Agent, monitoring
@@ -22,12 +21,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d408644f56f097e3389dab51d8b8d10ccc8954cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95fbb61460c23ca0fedf0baec71aa21acaa50398
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218239"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786741"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Afficher l'état des publications et des abonnements dans le Moniteur de réplication
   Le moniteur de réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] présente des informations sur l'état des publications et des abonnements :  
@@ -54,11 +53,11 @@ ms.locfileid: "48218239"
   
  **Pour afficher l'état des publications et des abonnements**  
   
--   Moniteur de réplication : [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) et [Afficher des informations et exécuter des tâches pour un abonnement &#40;moniteur de réplication&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   Moniteur de réplication : [Afficher des informations et effectuer des tâches pour une Publication &#40;moniteur de réplication&#41; ](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) et [afficher des informations et effectuer des tâches pour un abonnement &#40;moniteur de réplication&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
   
  **Pour afficher des informations détaillées pour les agents**  
   
--   Moniteur de réplication : [Afficher des informations et exécuter des tâches pour les agents associés à un serveur de publication &#40;moniteur de réplication&#41;](view-information-and-perform-tasks-for-publication-agents.md) et [Afficher des informations et exécuter des tâches pour les agents associés à un abonnement &#40;moniteur de réplication&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
+-   Moniteur de réplication : [Afficher des informations et effectuer des tâches pour les Agents associés à une Publication &#40;moniteur de réplication&#41; ](view-information-and-perform-tasks-for-publication-agents.md) et [afficher des informations et effectuer des tâches pour les Agents associés à un abonnement &#40;réplication Moniteur&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="publication-status-values"></a>Valeurs d'état des publications  
  Le tableau suivant montre les valeurs d'état des publications et leurs icônes correspondantes dans l'ordre de la priorité.  
@@ -68,7 +67,7 @@ ms.locfileid: "48218239"
 |Error|![Icône d’interface utilisateur : erreur](../media/repl-icon-error.gif "Icône d’interface utilisateur : erreur")|  
 |Critique pour les performances|![Icône d’interface utilisateur : avertissement](../media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
 |Nouvelle tentative de la commande qui a échoué|![Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication](../media/repl-icon-retry.gif "Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication")|  
-|OK|aucun|  
+|OK|none|  
   
 ## <a name="subscription-status-values"></a>Valeurs d'état des abonnements  
  Les tableaux suivants montrent les valeurs d'état des abonnements et leurs icônes correspondantes dans l'ordre de la priorité. Un abonnement peut avoir deux états en même temps (par exemple, **Expire bientôt/Expiré** et **Nouvelle tentative de la commande qui a échoué**) ; l'état de haute priorité est affiché.  

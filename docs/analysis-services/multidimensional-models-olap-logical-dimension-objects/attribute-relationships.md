@@ -1,5 +1,5 @@
 ---
-title: Relations d’attributs | Documents Microsoft
+title: Relations d’attributs | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9035cc2c0d3308848b570ae6c157c9d70cd77cc9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f9eddac84f4db92770daa2bbf32b51597f84eb3f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022346"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542761"
 ---
 # <a name="attribute-relationships"></a>Relations d’attributs
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,23 +64,23 @@ ms.locfileid: "34022346"
   
 -   l'attribut City en tant que relation d'attribut de l'attribut Customer.  
   
- Pour parcourir les données dans le cube, vous pouvez également créer une hiérarchie définie par l’utilisateur qui ne représente pas une hiérarchie naturelle dans les données (qui est appelée un *ad hoc* ou *reporting* hiérarchie). Par exemple, vous pouvez créer une hiérarchie définie par l'utilisateur basée sur `{Age, Gender}`. Les utilisateurs ne voient aucune différence quant à la façon dont les deux hiérarchies se comportent, bien que la hiérarchie naturelle bénéficie de structures d'agrégation et d'indexation, qui sont cachées à l'utilisateur et qui représentent les relations naturelles de la source de données.  
+ Pour parcourir les données dans le cube, vous pouvez également créer une hiérarchie définie par l’utilisateur qui ne représente pas une hiérarchie naturelle dans les données (qui est appelée un *ad hoc* ou *reporting* hiérarchie). Par exemple, vous pouvez créer une hiérarchie définie par l'utilisateur basée sur `{Age, Gender}`. Les utilisateurs ne voient pas aucune différence dans la façon dont les deux hiérarchies se comportent, bien que la hiérarchie naturelle bénéficie d’agrégation et l’indexation des structures - masqués à partir de l’utilisateur : ce compte pour les relations naturelles de la source de données.  
   
- Le **SourceAttribute** propriété d’un niveau détermine l’attribut utilisé pour décrire le niveau. Le **KeyColumns** propriété sur l’attribut spécifie la colonne dans la vue de source de données qui fournit les membres. Le **NameColumn** propriété sur l’attribut peut spécifier un autre nom de colonne pour les membres.  
+ Le **SourceAttribute** propriété d’un niveau détermine l’attribut utilisé pour décrire le niveau. Le **KeyColumns** propriété sur l’attribut spécifie la colonne dans la vue de source de données qui fournit les membres. Le **NameColumn** propriété sur l’attribut peut spécifier une colonne de nom différent pour les membres.  
   
- Pour définir un niveau dans une hiérarchie définie par l’utilisateur à l’aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le **Concepteur de dimensions** vous permet de sélectionner un attribut de dimension, d’une colonne dans une table de dimension ou d’une colonne d’une table associée incluse dans la vue de source de données pour le cube. Pour plus d’informations sur la création de hiérarchies définies par l’utilisateur, consultez [pourquoi hiérarchies](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md).  
+ Pour définir un niveau dans une hiérarchie définie par l’utilisateur à l’aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le **Concepteur de dimensions** vous permet de sélectionner un attribut de dimension, une colonne dans une table de dimension ou une colonne d’une table associée incluse dans la vue de source de données pour le cube. Pour plus d’informations sur la création de hiérarchies définies par l’utilisateur, consultez [les hiérarchies définies par l’utilisateur](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md).  
   
- Dans Analysis Services, une hypothèse est généralement faite à propos du contenu des membres. Les membres feuilles n'ont pas de descendants et contiennent des données dérivées des sources de données sous-jacentes. Les membres non-feuilles ont des descendants et contiennent des données dérivées des agrégations effectuées sur les membres enfants. Dans les niveaux agrégés, les membres sont basés sur les agrégations des niveaux inférieurs. Par conséquent, lorsque le **IsAggregatable** est définie sur **False** sur un attribut source d’un niveau, aucun attribut agrégeable ne doit être ajoutée en tant que niveaux au-dessus de lui.  
+ Dans Analysis Services, une hypothèse est généralement faite à propos du contenu des membres. Les membres feuilles n'ont pas de descendants et contiennent des données dérivées des sources de données sous-jacentes. Les membres non-feuilles ont des descendants et contiennent des données dérivées des agrégations effectuées sur les membres enfants. Dans les niveaux agrégés, les membres sont basés sur les agrégations des niveaux inférieurs. Par conséquent, lorsque le **IsAggregatable** propriété est définie sur **False** sur un attribut source pour un niveau, aucun attribut agrégeable doit être ajouté en tant que niveaux au-dessus de lui.  
   
 ## <a name="defining-an-attribute-relationship"></a>Définition d'une relation d'attribut  
  La principale contrainte lorsque vous créez une relation d'attribut consiste à veiller à ce que l'attribut auquel la relation d'attribut fait référence ne dispose que d'une seule valeur pour chaque membre de l'attribut auquel la relation d'attribut appartient. Par exemple, si vous définissez une relation entre un attribut City (Ville) et un attribut State (État), chaque Ville ne peut être liée qu'à un seul État.  
   
 ## <a name="attribute-relationship-queries"></a>Requêtes de relations d'attributs  
- Vous pouvez utiliser des requêtes MDX pour récupérer des données de relations d’attributs, sous la forme de propriétés de membre, avec le **propriétés** (mot clé) de l’expression MDX **sélectionnez** instruction. Pour plus d’informations sur la façon d’utiliser MDX pour récupérer les propriétés de membre, consultez [à l’aide des propriétés de membre &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md).  
+ Vous pouvez utiliser des requêtes MDX pour récupérer des données à partir de relations d’attributs, sous la forme de propriétés de membre, avec le **propriétés** mot-clé du code MDX **sélectionnez** instruction. Pour plus d’informations sur la façon d’utiliser MDX pour récupérer les propriétés de membre, consultez [à l’aide des propriétés de membre &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs et hiérarchies d’attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Attributs et hiérarchies d'attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Référence des propriétés d’attribut de dimension](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [Hiérarchies utilisateur](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Propriétés de la hiérarchie utilisateur](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   

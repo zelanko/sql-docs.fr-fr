@@ -16,12 +16,12 @@ ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ead4e816049f6dcce6bfc560a60d8f8bafa9d61c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ffb78d301762f9b7edcb78a2ba062db6fe662f6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724687"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540023"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Fonctions de l’API du niveau principal (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -38,7 +38,7 @@ ms.locfileid: "47724687"
 |**SQLCancel**|Annule le traitement sur un descripteur d’instruction, hstmt. Dans certains cas, Oracle n’autorise pas l’annulation d’une instruction en cours d’exécution. Cela signifie qu’une instruction en cours d’exécution continue jusqu'à ce que Oracle termine le processus, moment auquel les résultats des instructions sont annulées par le pilote ODBC pour Oracle.|  
 |**SQLColAttributes**|Retourne des informations de descripteur pour une colonne dans un jeu de résultats. Informations de descripteur sont retournées comme une chaîne de caractères, une valeur de descripteur dépendant de 32 bits ou une valeur entière.|  
 |**SQLConnect**|Se connecte à une source de données. Pour utiliser l’authentification du système d’exploitation Oracle, spécifiez « / » comme le *szUID* paramètre et « » en tant que le *szAuthStr* paramètre.|  
-|**SQLDescribeCol**|Retourne le nom de type, précision, échelle et possibilité de valeur null de la colonne de résultat donné. **Remarque :****SQLDescribeCol** signale les colonnes calculées en tant que SQL_VARCHAR.  |  
+|**SQLDescribeCol**|Retourne le nom de type, précision, échelle et possibilité de valeur null de la colonne de résultat donné. **Remarque :**  **SQLDescribeCol** signale les colonnes calculées en tant que SQL_VARCHAR.|  
 |**SQLDisconnect**|Ferme une connexion. Si le regroupement de connexions est activé pour un environnement partagé et une application appelle **SQLDisconnect** sur une connexion dans cet environnement, la connexion est retournée au pool de connexions et est toujours disponible à d’autres composants à l’aide de le même environnement partagé.|  
 |**SQLError**|Retourne des informations d’erreur ou d’état sur la dernière erreur. Le pilote gère une pile ou une liste d’erreurs qui peuvent être retournées pour le *hstmt*, *pas*, et *henv* arguments, en fonction de la l’appel à **SQLError**  est effectuée. La file d’attente de l’erreur est vidé après chaque instruction. Généralement extrait un message d’erreur Oracle cas contraire elle est vide.|  
 |**SQLExecDirect**|Exécute une instruction SQL de nouvelle, non préparée. Le pilote utilise les valeurs actuelles des variables de marqueur de paramètre si tous les paramètres existent dans l’instruction. Si votre table, vue ou noms de champs contiennent des espaces, placez les noms à l’arrière guillemet marques. Par exemple, si votre base de données contient une table nommée *My Table* et le champ *mon champ*, placez chaque élément de l’identificateur comme suit :<br /><br /> Sélectionnez \`ma Table\`. \`Mon Field1\`, \`Ma Table\`.\` Mon Field2\` FROM \`ma Table »|  
@@ -50,7 +50,7 @@ ms.locfileid: "47724687"
 |**SQLGetCursorName**|Retourne le nom du curseur associé à la hstmt donné.|  
 |**SQLNumResultCols**|Retourne le nombre de colonnes dans un curseur de jeu de résultats.|  
 |**SQLPrepare**|Prépare une instruction SQL par la planification de l’optimiser et exécutez l’instruction. L’instruction SQL est compilée pour l’exécution par **SQLExecDirect**.<br /><br /> Si votre table, vue ou noms de champs contiennent des espaces, placez les noms à l’arrière guillemet marques. Par exemple, si votre base de données contient une table nommée *My Table* et le champ *mon champ*, placez chaque élément de l’identificateur comme suit :<br /><br /> Sélectionnez \`ma Table\`.\` Mon champ\` FROM \`ma Table »<br /><br /> Pour plus d’informations sur l’utilisation de jeux de résultats contenant des tableaux en tant que paramètres formels, consultez [retournant des paramètres de tableau à partir de procédures stockées](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
-|**SQLRowCount**|Oracle ne fournit pas un moyen de déterminer le nombre de lignes un jeu de résultats jusqu'à ce qu’une fois que vous lisez la dernière ligne, par conséquent, elle retourne −1.|  
+|**SQLRowCount**|Oracle ne fournit pas un moyen de déterminer le nombre de lignes un jeu de résultats jusqu'à ce qu’une fois que vous lisez la dernière ligne, par conséquent, elle retourne -1.|  
 |**SQLSetCursorName**|Associe un nom de curseur avec un descripteur d’instruction active, *hstmt*.|  
 |**SQLSetParam**|Remplacé par SQLBindParameter dans ODBC 2. *x*.|  
 |**SQLTransact**|Demande une opération commit ou rollback pour toutes les opérations actives sur tous les descripteurs d’instruction (hstmts) associés à une connexion, ou pour toutes les connexions associées le handle d’environnement, *henv*. Si une validation échoue en mode manuel, la transaction reste active ; Vous pouvez choisir de restaurer la transaction ou recommencez l’opération de validation. Si une opération de validation échoue en mode de transaction automatique, la transaction est restaurée automatiquement ; la transaction ne peut pas être inactive.|

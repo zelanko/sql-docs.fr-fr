@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating collections [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 386da4804e3153361e055fc11cff6dfc2352a473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c0e899ebc7180fdfbe234c893cb364d3f9d01ee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208839"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782351"
 ---
 # <a name="create-a-collection-master-data-services"></a>Créer une collection (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez une collection lorsque vous souhaitez créer des listes en 2D de membres feuille et de membres consolidés. Les collections n'ont pas besoin d'inclure tous les membres de l'entité.  
@@ -55,11 +54,11 @@ ms.locfileid: "48208839"
   
 ## <a name="next-steps"></a>Étapes suivantes  
   
--   [Ajouter des membres à une Collection &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
+-   [Ajouter des membres à une collection &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)   
- [Supprimer un membre ou une Collection &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
+ [Supprimer un membre ou une collection &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [Créer une hiérarchie explicite &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
   

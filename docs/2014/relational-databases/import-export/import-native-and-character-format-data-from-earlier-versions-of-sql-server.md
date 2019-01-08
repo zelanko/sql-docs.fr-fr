@@ -15,12 +15,12 @@ ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 866e84844c563f1289a23a598cbd980d9b3bc432
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a87863d3046de695e489e83ec46eb073a7f4761c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169585"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531594"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importer des données au format natif et caractère à partir de versions antérieures de SQL Server
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez utiliser la commande **bcp** pour importer des données au format natif et caractère à partir de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , à l’aide du commutateur **-V** . Le commutateur **-V** entraîne l’utilisation par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] des types de données à partir de la version antérieure spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et le format du fichier de données est identique à celui de cette version antérieure.  
@@ -51,8 +51,8 @@ ms.locfileid: "48169585"
   
  <sup>1</sup> UDT indique un type défini par l’utilisateur.  
   
-## <a name="exporting-using-v-80"></a>Exportation à l'aide de –V 80  
- Lorsque vous exportez des données en bloc à l’aide de la **– V80** basculer, `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML, et les données UDT en mode natif sont stockées avec un préfixe de 4 octets, comme `text`, `image`et `ntext`données, plutôt que par un préfixe de 8 octets, qui est la valeur par défaut pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.  
+## <a name="exporting-using--v-80"></a>Exportation à l’aide de -V 80  
+ Lorsque vous exportez des données en bloc à l’aide de la **-V80** basculer, `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML, et les données UDT en mode natif sont stockées avec un préfixe de 4 octets, comme `text`, `image`et `ntext`données, plutôt que par un préfixe de 8 octets, qui est la valeur par défaut pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.  
   
 ## <a name="copying-date-values"></a>Copie de valeurs de date  
  **bcp** utilise l’API de copie en bloc ODBC. Par conséquent, pour importer des valeurs de date dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** utilise le format de date ODBC (*yyyy-mm-dd hh:mm:ss*[*.f...*]).  
@@ -60,7 +60,7 @@ ms.locfileid: "48169585"
  Le **bcp** commande exporte des fichiers de données de format de caractère à l’aide du format par défaut ODBC pour `datetime` et `smalldatetime` valeurs. Par exemple, une colonne `datetime` contenant la date `12 Aug 1998` est copiée en bloc dans un fichier de données en tant que chaîne de caractères `1998-08-12 00:00:00.000`.  
   
 > [!IMPORTANT]  
->  Lors de l’importation de données dans un `smalldatetime` champ à l’aide de **bcp**, vérifiez que la valeur des secondes est 00.000 ; sinon l’opération échouera. Le `smalldatetime` type de données contient uniquement des valeurs à la minute la plus proche. BULK INSERT et INSERT ... SELECT * FROM OPENROWSET(BULK...) n'échoueront pas dans ce cas, mais tronqueront la valeur des secondes.  
+>  Lors de l’importation de données dans un `smalldatetime` champ à l’aide de **bcp**, vérifiez que la valeur des secondes est 00.000 ; sinon l’opération échouera. Le type de données `smalldatetime` ne conserve que les valeurs à la minute la plus proche. BULK INSERT et INSERT ... SELECT * FROM OPENROWSET(BULK...) n'échoueront pas dans ce cas, mais tronqueront la valeur des secondes.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
  **Pour utiliser des formats de données pour l'importation ou l'exportation en bloc**  

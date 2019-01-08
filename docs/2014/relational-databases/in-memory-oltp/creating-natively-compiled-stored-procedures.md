@@ -10,15 +10,15 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 72c72dc551aa31dc22def397fb38fe09793478ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22530fafb9c41ec7bee87c43589f6eaba0fa3f70
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084509"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712460"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Création de procédures stockées compilées en mode natif
-  Les procédures stockées compilées en mode natif n'implémentent pas la surface d'exposition totale de programmabilité et de requête [!INCLUDE[tsql](../../includes/tsql-md.md)] . Certaines constructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ne peuvent pas être utilisées dans des procédures stockées compilées en mode natif. Pour plus d’informations, consultez [constructions prises en charge dans Natively Compiled Stored Procedures](..\in-memory-oltp\supported-features-for-natively-compiled-t-sql-modules.md).  
+  Les procédures stockées compilées en mode natif n'implémentent pas la surface d'exposition totale de programmabilité et de requête [!INCLUDE[tsql](../../includes/tsql-md.md)] . Certaines constructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ne peuvent pas être utilisées dans des procédures stockées compilées en mode natif. Pour plus d’informations, consultez [constructions prises en charge dans Natively Compiled Stored Procedures](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
  À l'inverse, plusieurs fonctionnalités [!INCLUDE[tsql](../../includes/tsql-md.md)] ne sont prises en charge que pour les procédures stockées compilées en mode natif :  
   
@@ -51,15 +51,15 @@ end
 go  
 ```  
   
- Dans l’exemple de code, `NATIVE_COMPILATION` indique que ce [!INCLUDE[tsql](../../includes/tsql-md.md)] procédure stockée est une procédure stockée compilée en mode natif. Les options suivantes sont requises :  
+ Dans l'exemple de code, `NATIVE_COMPILATION` indique que cette procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] est une procédure stockée compilée en mode natif. Les options suivantes sont requises :  
   
 |Option|Description|  
 |------------|-----------------|  
-|`SCHEMABINDING`|Les procédures stockées compilées en mode natif doivent être liés au schéma des objets référencés. Cela signifie que la table référencée par la procédure ne peut pas être supprimée. Tables référencées dans la procédure doivent inclure leur nom de schéma et les caractères génériques (\*) ne sont pas autorisés dans les requêtes. `SCHEMABINDING` est uniquement pris en charge pour les procédures stockées compilées en mode natif dans cette version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|`SCHEMABINDING`|Les procédures stockées compilées en mode natif doivent être liés au schéma des objets référencés. Cela signifie que la table référencée par la procédure ne peut pas être supprimée. Tables référencées dans la procédure doivent inclure leur nom de schéma et les caractères génériques (\*) ne sont pas autorisés dans les requêtes. `SCHEMABINDING` est uniquement prise en charge pour les procédures stockées compilées en mode natif dans cette version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |`EXECUTE AS`|Les procédures stockées compilées en mode natif ne prennent pas en charge `EXECUTE AS CALLER`, qui est le contexte d'exécution par défaut. Par conséquent, vous devez spécifier le contexte d'exécution. Les options `EXECUTE AS OWNER`, `EXECUTE AS` *utilisateur*, et `EXECUTE AS SELF` sont pris en charge.|  
 |`BEGIN ATOMIC`|Le corps d'une procédure stockée compilée en mode natif doit être un bloc Atomic. Les blocs Atomic garantissent l'exécution atomique de la procédure stockée. Si la procédure est appelée en dehors du contexte d'une transaction active, elle démarre une nouvelle transaction, qui valide la transaction à la fin du bloc Atomic. Deux options sont obligatoires pour les blocs Atomic dans les procédures stockées compilées en mode natif :<br /><br /> `TRANSACTION ISOLATION LEVEL` . Consultez [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md) pour les niveaux d’isolation pris en charge.<br /><br /> `LANGUAGE` . Le langage de la procédure stockée doit être défini sur l'un des langages ou des alias de langage disponibles.|  
   
- En ce qui concerne `EXECUTE AS` et les connexions Windows, une erreur peut se produire en raison de l'emprunt d'identité effectué via `EXECUTE AS`. Si un compte d'utilisateur utilise l'authentification Windows, il doit y avoir une confiance totale entre le compte de service utilisé pour l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et le domaine de la connexion Windows. S'il n'y a pas de confiance totale, le message d'erreur suivant est retourné lorsque vous créez une procédure stockée compilée en mode natif : Message 15404, Impossible d'obtenir des informations sur le groupe Windows NT/utilisateur « nom d'utilisateur », code d'erreur 0x5.  
+ En ce qui concerne `EXECUTE AS` et les connexions Windows, une erreur peut se produire en raison de l'emprunt d'identité effectué via `EXECUTE AS`. Si un compte d'utilisateur utilise l'authentification Windows, il doit y avoir une confiance totale entre le compte de service utilisé pour l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et le domaine de la connexion Windows. S’il n’est pas une confiance totale, le message d’erreur suivant est retourné lors de la création d’un compilées en mode natif de la procédure stockée : Message 15404, Impossible d’obtenir des informations sur Windows NT utilisateur ou le groupe « username », code d’erreur 0 x 5.  
   
  Pour résoudre cette erreur, utilisez une des opérations suivantes :  
   

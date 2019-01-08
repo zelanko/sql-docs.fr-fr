@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a46478b31feb3a15a260ae2cd1598ae18f605c2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8df088a088a68d91668978bef5761cc2b5b543f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107749"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779891"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Présentation de la console du concepteur de capture de données modifiées
   Cette section décrit les procédures d'installation du concepteur de capture de données modifiées pour Oracle par Attunity.  
@@ -40,11 +39,11 @@ ms.locfileid: "48107749"
   
  **Base de données Oracle**  
   
--   Oracle Database 10g Version 2 : 10.2.0.1-10.2.0.5 (ensemble de correctifs à partir d'avril 2010)  
+-   Oracle Database 10g version 2 : 10.2.0.1-10.2.0.5 (patchset depuis avril 2010)  
   
--   Oracle Database 11g Version 1 : 11.1.0.6-11.1.0.7 (ensemble de correctifs à partir de septembre 2008)  
+-   Oracle Database 11g version 1 : 11.1.0.6-11.1.0.7 (patchset à compter de septembre 2008)  
   
--   Oracle Database 11g Version 2 : 11.2.0.1-11.2.0.3 (ensemble de correctifs à partir de septembre 2011)  
+-   Oracle Database 11g Release 2 : 11.2.0.1-11.2.0.3 (patchset à partir de septembre 2011)  
   
  **Base de données SQL Server**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48107749"
   
 -   Client Oracle 11.x  
   
- **Remarque**: vous devez utiliser la version 32 bits ou 64 bits de ce logiciel en fonction de la version de la console du Concepteur de capture de données modifiées Oracle installée.  
+ **Remarque**: Vous devez utiliser la version 32 bits ou 64 bits de ce logiciel en fonction de la version de la console du Concepteur de capture de données modifiées Oracle installée.  
   
  La console du concepteur de capture de données modifiées Oracle utilise le fournisseur Oracle ODBC pour communiquer avec la base de données Oracle source.  
   

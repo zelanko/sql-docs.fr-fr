@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.wb.templates.f1
@@ -19,15 +19,15 @@ ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cba129b4c9de133d4c1c2283b5d163a16e191c47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42e52d92d993627129f79f215fa536001f44538d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225589"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821864"
 ---
 # <a name="template-explorer"></a>Explorateur de modèles
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose divers modèles. Les modèles sont des fichiers réutilisables contenant des scripts SQL qui peuvent vous aider à créer des objets dans une base de données. À la première ouverture de l'Explorateur de modèles, une copie des modèles est placée dans le dossier de l'utilisateur dans C:\Utilisateur, sous AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose divers modèles. Les modèles sont des fichiers réutilisables contenant des scripts SQL qui peuvent vous aider à créer des objets dans une base de données. La première ouverture de l’Explorateur de modèles, une copie des modèles sont placés dans le dossier de l’utilisateur dans C:\Users, sous AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates.  
   
  Vous pouvez parcourir les modèles disponibles dans l'Explorateur de modèles, puis ouvrir un modèle pour incorporer code dans une fenêtre d'éditeur de code. Vous pouvez également créer des modèles personnalisés.  
   

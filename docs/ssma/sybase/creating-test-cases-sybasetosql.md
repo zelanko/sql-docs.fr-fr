@@ -12,18 +12,18 @@ ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 95a6724ab836fb3dddb54fadc82821ad68f29e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3fd443ff2ad58aa503fac2960016cb55f35b8a7f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746357"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514941"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>Création de cas de test (SybaseToSQL)
 Utilisez l’Assistant de cas de Test pour créer un test. Cet Assistant vous permet de créer des cas de test en choisissant testé et vérifié les objets et en spécifiant les paramètres de tests.  
   
 ## <a name="starting-the-test-case-wizard"></a>Démarrage de l’Assistant de cas de Test  
-Pour démarrer l’Assistant de cas de Test cliquez sur **nouveau cas de Test...** à partir de la **testeur** menu.  
+Pour démarrer l’Assistant de cas de Test cliquez sur **nouveau cas de Test...**  à partir de la **testeur** menu.  
   
 Au démarrage, l’Assistant recherche ssmatester2005db de base de données ou ssmatester2008db (selon le type de projet) sur le serveur de Sybase source. Il est le schéma d’extension testeur utilisé pour le stockage d’objets auxiliaires. Si l’Assistant de cas de Test ne peut pas trouver ssmatester2005db ou ssmatester2008db, il affiche une fenêtre de boîte de dialogue qui envisage de créer la base de données extension testeur. (Cette situation se produit généralement lors de la première exécution de testeur de SSMA.)  
   

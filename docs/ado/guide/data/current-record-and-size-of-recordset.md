@@ -14,12 +14,12 @@ ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a72bb27e95da931fac146fe6bc827b71cdb8460
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bde55939e974c6c879dcd126fac863ef0a866487
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828617"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520648"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Enregistrement actif et taille du recordset
 Cette section décrit comment localiser la position actuelle du curseur dans l’exemple **Recordset** dans [exemple de Code JScript pour retourner un jeu d’enregistrements](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
@@ -30,7 +30,7 @@ Cette section décrit comment localiser la position actuelle du curseur dans l�
 ## <a name="size-of-recordset"></a>Taille du jeu d’enregistrements  
  Pour connaître la taille d’un **Recordset** d’objet, obtenir la valeur de la **sur Recordset.RecordCount** propriété. Cette valeur est un entier long qui indique le nombre d’enregistrements dans le **Recordset**. Si le jeu de données est retourné à partir du fournisseur OLE DB pour Microsoft SQL Server, cette valeur indique le nombre de lignes retournées. Lire le **RecordCount** propriété sur un fermé **Recordset** provoque une erreur.  
   
- Si le nombre d’enregistrements ne peut pas être déterminé, la valeur de la propriété est – 1.  
+ Si le nombre d’enregistrements ne peut pas être déterminé, la valeur de la propriété est -1.  
   
  La valeur de la **RecordCount** propriété dépend également des capacités du fournisseur et le type de curseur utilisé. Un curseur avant uniquement, la valeur est -1. Pour un curseur statique ou jeu de clés, la valeur est le nombre réel d’enregistrements renvoyés dans le **Recordset** objet. Pour un curseur dynamique, la valeur est -1 ou le nombre réel d’enregistrements, en fonction de la source de données.  
   

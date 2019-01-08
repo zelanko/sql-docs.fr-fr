@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], permissions
@@ -17,12 +16,12 @@ ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 683fce95bca8a2e08b893031d88c46d8fe5de590
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bed2868b74087cd0e4c119ada7e29f0c5db73ce5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176079"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754601"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Autorisations nécessaires pour exécuter SQL Server Profiler
   Par défaut, l'exécution du [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] exige les mêmes autorisations utilisateur que les procédures stockées Transact-SQL utilisées pour créer des traces. Pour exécuter le [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], les utilisateurs doivent disposer de l'autorisation ALTER TRACE. Pour plus d’informations, consultez [Autorisations de serveur GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-permissions-transact-sql).  
@@ -33,7 +32,7 @@ ms.locfileid: "48176079"
 ## <a name="permissions-used-to-replay-traces"></a>Autorisations utilisées pour relire des traces  
  La relecture de traces exige également que l'utilisateur qui effectue cette opération dispose de l'autorisation ALTER TRACE.  
   
- Cependant, lors de la relecture, [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] utilise la commande EXECUTE AS si un événement Audit Login est rencontré dans la trace en cours de relecture. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] utilise la commande EXECUTE AS pour emprunter l'identité de l'utilisateur associé à l'événement de connexion.  
+ Cependant, lors de la relecture, [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] utilise la commande EXECUTE AS si un événement Audit Login est rencontré dans la trace en cours de relecture. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] utilise la commande EXECUTE AS pour emprunter l’identité de l’utilisateur associé à l’événement de connexion.  
   
  Si [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] rencontre un événement de connexion dans la trace en cours de relecture, les contrôles des autorisations suivants sont effectués :  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48176079"
   
 2.  Un événement de connexion pour Utilisateur2 est rencontré dans la trace relue.  
   
-3.  Le [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] utilise la commande EXECUTE AS pour emprunter l'identité de l'Utilisateur2.  
+3.  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] utilise la commande EXECUTE AS pour emprunter l’identité de l’Utilisateur2.  
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’authentifier l’Utilisateur2, et selon les résultats, une des actions suivantes se produit :  
   
@@ -67,9 +66,9 @@ ms.locfileid: "48176079"
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de SQL Server Profiler &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   
- [Relire des Traces](replay-traces.md)   
- [Créer une Trace &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
- [Relire une Table de Trace &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
+ [Relire des traces](replay-traces.md)   
+ [Créer une trace &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
+ [Relire une table de trace &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
  [Relire un fichier de trace &#40;SQL Server Profiler&#41;](replay-a-trace-file-sql-server-profiler.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.table.tablerecreatenosave.f1
@@ -12,12 +12,12 @@ ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a7b7de396360fe029ad1b19ce06d628f6128dc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5540fd90b71bd75336cf9fc094926c1f643d56e9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206609"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768971"
 ---
 # <a name="save-not-permitted-dialog-box"></a>Enregistrer (non autorisé), boîte de dialogue
   La boîte de dialogue **Enregistrer** (non autorisé) vous prévient que l’enregistrement des modifications n’est pas autorisé car les modifications que vous avez apportées nécessitent la suppression et la recréation des tables répertoriées.  

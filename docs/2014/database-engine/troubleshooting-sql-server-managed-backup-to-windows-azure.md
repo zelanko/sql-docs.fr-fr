@@ -10,12 +10,12 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4feb316cf43524fa84734d85bf62631833e26d0
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120066"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522534"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Dépannage de la sauvegarde managée de SQL Server sur Microsoft Azure
   Cette rubrique décrit les tâches et les outils que vous pouvez utiliser pour résoudre les erreurs qui peuvent se produire lors des opérations de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
@@ -23,7 +23,7 @@ ms.locfileid: "49120066"
 ## <a name="overview"></a>Vue d'ensemble  
  La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] comprend des contrôles intégrés et des étapes de dépannage, par conséquent, la plupart des défaillances internes sont prises en charge par le processus de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] lui-même.  
   
- C'est par exemple le cas lorsqu'un fichier de sauvegarde est supprimé et entraîne la rupture de la séquence de journaux de transactions consécutifs en affectant la récupérabilité. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] identifie la rupture de la séquence de journaux de transactions et planifie une sauvegarde à effectuer immédiatement. Toutefois, nous vous recommandons de surveiller l'état et de résoudre les erreurs qui nécessitent une intervention manuelle.  
+ Exemple de ce genre de cas est une suppression d’un fichier de sauvegarde entraîne la rupture du journal chaîner affectant la récupérabilité - [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] identifie la rupture de la chaîne de journalisation et de planifier une sauvegarde à effectuer immédiatement. Toutefois, nous vous recommandons de surveiller l'état et de résoudre les erreurs qui nécessitent une intervention manuelle.  
   
  La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] enregistre les événements et les erreurs à l'aide de procédures stockées système, de vues système et d'événements étendus. Les vues et les procédures stockées système fournissent les informations de configuration de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], l'état des sauvegardes planifiées, ainsi que les erreurs capturées par les événements étendus. La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] utilise les événements étendus pour capturer les erreurs qui doivent être résolues. En plus d'enregistrer les événements, les stratégies SQL Server Smart Admin fournissent l'état d'intégrité utilisé par le travail de notification par courrier électronique pour notifier les erreurs et les problèmes. Pour plus d’informations, consultez [moniteur sauvegarde managée SQL Server sur Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
@@ -42,29 +42,29 @@ ms.locfileid: "49120066"
 ### <a name="common-causes-of-errors"></a>Causes courantes d'erreur  
  Voici une liste des causes courantes aboutissant à un échec :  
   
-1.  **Modifications apportées aux informations d’identification SQL :** si le nom de l’information d’identification utilisé par [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est modifié ou si elle est supprimée, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ne sera pas en mesure d’effectuer des sauvegardes. La modification doit être appliquées aux paramètres de configuration de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
+1.  **Modifications apportées aux informations d’identification SQL :** Si le nom de l’information d’identification utilisé par [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est modifié ou si elle est supprimée, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ne sera pas en mesure d’effectuer des sauvegardes. La modification doit être appliquées aux paramètres de configuration de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
-2.  **Modifications apportées aux valeurs de clé de l’accès de stockage :** si les valeurs de clé de stockage sont modifiées pour le compte Windows Azure, mais les informations d’identification SQL n’est pas mis à jour avec les nouvelles valeurs, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] échoue lors de l’authentification pour le stockage et ne parvient pas à la sauvegarde bases de données configurées pour utiliser ce compte.  
+2.  **Modifications apportées aux valeurs de clé de l’accès de stockage :** Si les valeurs de clé de stockage sont modifiées pour le compte Windows Azure, mais les informations d’identification SQL n’est pas mis à jour avec les nouvelles valeurs, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] échoue lors de l’authentification pour le stockage, et ne parvient pas à des bases de données de sauvegarde est configuré pour utiliser ce compte.  
   
-3.  **Modifications apportées à un compte de stockage Windows Azure :** suppression ou modification du nom de compte de stockage sans provoquent modifications correspondantes apportées à l’information d’identification SQL [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] échoue et aucune sauvegarde ne va être retirée. Si vous supprimez un compte de stockage, assurez-vous que les bases de données sont reconfigurées avec des informations de compte de stockage valides. Si un compte de stockage est renommé ou les valeurs de clé sont modifiées, vérifiez que ces changements sont répercutés dans les informations d'identification SQL utilisées par la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
+3.  **Modifications apportées au compte de stockage Azure de Windows :** Supprimer ou renommer le compte de stockage sans provoquent modifications correspondantes apportées à l’information d’identification SQL [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] échoue et aucune sauvegarde ne va être retirée. Si vous supprimez un compte de stockage, assurez-vous que les bases de données sont reconfigurées avec des informations de compte de stockage valides. Si un compte de stockage est renommé ou les valeurs de clé sont modifiées, vérifiez que ces changements sont répercutés dans les informations d'identification SQL utilisées par la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
-4.  **Changements apportés aux propriétés de la base de données :** changements apportés aux modèles de récupération ou modification du nom peut provoquer des sauvegardes échouent.  
+4.  **Modifications apportées aux propriétés de la base de données :** Changements apportés aux modèles de récupération ou modification du nom peut provoquer des sauvegardes échouent.  
   
-5.  **Modifications apportées au mode de récupération :** si le mode de récupération de la base de données est modifié de simple de complet ou journalisé en bloc, sauvegardes s’arrêtent, et les bases de données va être ignorées par [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Pour plus d’informations, consultez [SQL Server Managed Backup pour Windows Azure : interopérabilité et Coexistence](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
+5.  **Modifications apportées au mode de récupération :** Si le mode de récupération de la base de données est modifié de simple de complet ou journalisé en bloc, sauvegardes s’arrêtent, et les bases de données va être ignorées par [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Pour plus d’informations, consultez [SQL Server Managed Backup pour Windows Azure : Interopérabilité et Coexistence](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
 ### <a name="most-common-error-messages-and-solutions"></a>Messages d'erreur courants et solutions  
   
 1.  **Erreurs lors de l’activation ou la configuration [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     Erreur : « Impossible d'accéder à l'URL de stockage… Fournissez une SQL informations d’identification valides... » : Vous pouvez voir cela et autres erreurs similaires qui fait référence aux informations d’identification SQL.  Dans ce cas, passez en revue le nom de l’information d’identification SQL que vous avez fourni, ainsi que les informations stockées dans les informations d’identification SQL : le nom de compte de stockage et la clé d’accès de stockage et assurez-vous qu’ils sont en cours et valide.  
+     Erreur : " Échec de l’accès à l’URL de stockage... Fournissez un valide informations d’identification SQL... » : Vous pouvez voir cela et autres erreurs similaires qui fait référence aux informations d’identification SQL.  Dans ce cas, passez en revue le nom de l’information d’identification SQL que vous avez fourni, ainsi que les informations stockées dans les informations d’identification SQL - le nom de compte de stockage et la clé d’accès de stockage et assurez-vous qu’ils sont en cours et valide.  
   
-     Erreur : »... Impossible de configurer la base de données … car il s’agit d’une base de données système » : vous verrez cette erreur si vous essayez d’activer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données système.  La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ne prend pas en charge les bases de données système.  Pour configurer la sauvegarde d'une base de données système, utilisez d'autres technologies de sauvegarde SQL Server, comme les plans de maintenance.  
+     Erreur : «... ne peut pas configurer la base de données … car il s’agit d’une base de données système » : Vous obtiendrez cette erreur si vous essayez d’activer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données système.  La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ne prend pas en charge les bases de données système.  Pour configurer la sauvegarde d'une base de données système, utilisez d'autres technologies de sauvegarde SQL Server, comme les plans de maintenance.  
   
-     Erreur : «... Fournissez une période de rétention... » : Vous pouvez voir des erreurs concernant la période de rétention si vous le n'avez pas spécifié une période de rétention pour l’instance ou la base de données lorsque vous configurez ces valeurs pour la première fois. Vous verrez également cette erreur si vous avez utilisé une valeur non comprise dans la plage 1 à 30. Les valeurs autorisées pour la période de rétention sont un nombre compris entre 1 et 30.  
+     Erreur : «... Fournissez une période de rétention... » : Vous pouvez voir des erreurs concernant la période de rétention si vous le n'avez pas spécifié une période de rétention pour l’instance ou la base de données lorsque vous configurez ces valeurs pour la première fois. Vous verrez également cette erreur si vous avez utilisé une valeur non comprise dans la plage 1 à 30. Les valeurs autorisées pour la période de rétention sont un nombre compris entre 1 et 30.  
   
 2.  **Erreurs de Notification de courrier électronique :**  
   
-     Erreur : « la messagerie de base de données n'est pas activée... » – Vous verrez cette erreur si vous activez les notifications par courrier électronique, mais la messagerie de base de données n’est pas configurée sur l’instance. Vous devez configurer la messagerie de base de données sur l'instance pour recevoir une notification de l'état d'intégrité de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Pour plus d’informations sur la façon d’activer la messagerie de base de données, consultez [configurer la messagerie de base de données](../relational-databases/database-mail/configure-database-mail.md). Vous devez également permettre à SQL Server Agent d'utiliser la messagerie de base de données pour les notifications. Pour plus d’informations, consultez [avant de commencer](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
+     Erreur : « La messagerie de base de données n’est pas activée de... » : vous verrez cette erreur si vous activez les notifications par courrier électronique, mais la messagerie de base de données n’est pas configurée sur l’instance. Vous devez configurer la messagerie de base de données sur l'instance pour recevoir une notification de l'état d'intégrité de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Pour plus d’informations sur la façon d’activer la messagerie de base de données, consultez [configurer la messagerie de base de données](../relational-databases/database-mail/configure-database-mail.md). Vous devez également permettre à SQL Server Agent d'utiliser la messagerie de base de données pour les notifications. Pour plus d’informations, consultez [avant de commencer](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
   
      Voici une liste de numéros d'erreur que vous pouvez voir, qui sont associés aux notifications par message électronique :  
   
@@ -72,13 +72,13 @@ ms.locfileid: "49120066"
   
     -   Numéro d’erreur : 45210  
   
-    -   ErrorNumber : 45211  
+    -   Numéro d’erreur : 45211  
   
 3.  **Erreurs de connectivité :**  
   
-    -   **Erreurs liées à la connectivité SQL :** ces erreurs se produisent lorsqu’il existe des problèmes de connexion à une instance de SQL Server. Les événements étendus exposent ces types d'erreurs via le canal d'administration. Voici deux événements étendus que vous pouvez voir pour les erreurs relatives à ce type de problème de connectivité :  
+    -   **Erreurs liées à la connectivité SQL :** Ces erreurs se produisent lorsqu’il existe des problèmes de connexion à une instance de SQL Server. Les événements étendus exposent ces types d'erreurs via le canal d'administration. Voici deux événements étendus que vous pouvez voir pour les erreurs relatives à ce type de problème de connectivité :  
   
-         FileRetentionAdminXEvent avec l'event_type = SqlError. Pour les détails de cette erreur, observez l'error_code, l'error_message et le stack_trace de cet événement. L'error_code est le numéro d'erreur de SqlException.  
+         FileRetentionAdminXEvent avec l'event_type = SqlError. Pour les détails de cette erreur, observez l'error_code, l'error_message et le stack_trace de cet événement. L’error_code est le numéro d’erreur de SqlException.  
   
          SmartBackupAdminXevent avec les messages/préfixes de message suivants :  
   
@@ -101,7 +101,7 @@ ms.locfileid: "49120066"
 ### <a name="troubleshooting-system-issues"></a>Dépannage des problèmes du système  
  Voici des scénarios d'un problème avec le système (SQL Server, SQL Server Agent) et ses effets sur [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] :  
   
--   **Sqlservr.exe ne répond plus ou s’arrête lorsque [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est en cours d’exécution :** si SQL Server cesse de fonctionner, s’arrête l’Agent SQL, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] également s’arrête et les événements sont consignés dans le fichier SQL Agent.out.  
+-   **Sqlservr.exe ne répond plus ou s’arrête lorsque [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est en cours d’exécution :** Si SQL Server cesse de fonctionner, l’Agent SQL s’arrête, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] également s’arrête et les événements sont consignés dans le fichier SQL Agent.out.  
   
      Si SQL Server ne répond plus, des événements sont consignés dans le canal d'administration.  Exemple du journal des événements :  
   

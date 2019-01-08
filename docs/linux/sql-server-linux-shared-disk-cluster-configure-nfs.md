@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 63ebce5a8e78829cbdad8dede0be7cb9285c7c37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 672e6142ee7196115ba10309e6ac5ef7aa7d151f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788455"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507032"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configuration d’instance de cluster de basculement - NFS - SQL Server sur Linux
 
@@ -101,7 +101,7 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
    * Supprimez les fichiers à partir du répertoire de données SQL Server existant. Vous ne recevrez pas d’accusé de réception en cas de réussite.
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    * Vérifiez que les fichiers ont été supprimés. 
@@ -110,7 +110,7 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
     ls /var/opt/mssql/data
     ```
     
-   * Tapez exit pour revenir à l’utilisateur racine.
+   * Tapez exit pour revenir à l’utilisateur "root".
 
    * Montez le partage NFS dans le dossier de données SQL Server. Vous ne recevrez pas d’accusé de réception en cas de réussite.
 
@@ -200,7 +200,7 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
     mkdir <FolderName>
     ```
 
-    \<Nom_dossier > est le nom du dossier. Le chemin du dossier complet doit être spécifié s'il n'est pas au bon emplacement. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
+    \<Nom_dossier > est le nom du dossier. Chemin d’accès complet du dossier doit être spécifié sinon dans l’emplacement approprié. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -226,7 +226,7 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
   
    * Tapez exit pour ne plus plus être super utilisateur.
 
-   * Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, changer le contexte vers elle, vérifiez que l’option les fichiers existent au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
+   * Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, changer le contexte vers cette base, et vérifier que les fichiers existent bien au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez aussi utiliser SSMS.
 
     ![15-createtestdatabase][4]
  

@@ -16,12 +16,12 @@ ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ce5f68df0b543fb4c461fb34921ce2ee32a3357
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfae5c36cd05f7122645479980517b14bd2c328d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116239"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529092"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>Créer une copie d'un modèle d'exploration de données
   La création d'une copie d'un modèle d'exploration de données est utile lorsque vous souhaitez créer rapidement plusieurs modèles d'exploration de données basés sur les mêmes données. Après avoir copié le modèle, vous pouvez ensuite changer la copie du modèle en modifiant des paramètres ou en ajoutant un filtre.  
@@ -38,7 +38,7 @@ ms.locfileid: "48116239"
   
 3.  Sélectionnez le modèle et cliquez avec le bouton droit pour ouvrir le menu contextuel.  
   
-     - ou -  
+     -ou-  
   
      Sélectionnez le modèle. Dans le menu **Modèle d’exploration de données** , sélectionnez **Nouveau modèle d’exploration de données**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48116239"
   
 1.  Sélectionnez le modèle d'exploration de données.  
   
-2.  Dans la fenêtre **Propriétés** , cliquez dans la zone de texte de la propriété **Filter** , puis sur le bouton de génération **(…)** .  
+2.  Dans le **propriétés** fenêtre, cliquez sur la zone de texte pour le **filtre** propriété, puis cliquez sur la build **(...)**  bouton.  
   
 3.  Modifiez les conditions de filtre.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48116239"
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)   
- [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
- [Supprimer un filtre d’un modèle d’exploration de données](delete-a-filter-from-a-mining-model.md)  
+ [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
+ [Supprimer un filtre d'un modèle d'exploration de données](delete-a-filter-from-a-mining-model.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 72089aad9a38c488b36fdb65cc94060d70c6482c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f89a84f8e003063883d711f8908ac619d50e93df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104759"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398668"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Définir les options de traitement (Reporting Services en mode intégré SharePoint)
   Vous pouvez définir des options de traitement sur un rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour déterminer le moment où le traitement des données a lieu. Vous pouvez également définir une valeur d'expiration pour le traitement des rapports, ainsi que des options qui déterminent si l'historique du rapport en cours est activé.  
@@ -31,7 +31,7 @@ ms.locfileid: "48104759"
 -   L'historique de rapport est un ensemble de copies d'un rapport ayant fait l'objet d'une exécution précédente. Vous pouvez utiliser l'historique de rapport pour conserver un enregistrement d'un rapport dans le temps. L'historique de rapport ne convient pas aux rapports contenant des données confidentielles ou des données personnelles. Pour cette raison, l'historique de rapport peut inclure uniquement les rapports qui interrogent une source de données à l'aide d'un ensemble unique d'informations d'identification (soit stockées, soit utilisées pour l'exécution de rapport sans assistance) qui sont mises à la disposition de tous les utilisateurs qui exécutent un rapport.  
   
     > [!NOTE]  
-    >  L'intégration de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] avec SharePoint utilise les fonctionnalités de gestion du contenu extrait et archivé de SharePoint pour enregistrer les mises à jour des types de contenu de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Cela inclut la création d'instantanés de rapports. Par conséquent, si vous avez activé le contrôle de version sur une bibliothèque de documents, vous verrez la version actualisée du rapport lorsqu'une nouvelle capture instantanée d'historique de rapport est créée. Il s'agit d'un effet secondaire de la mise à jour des captures d'instantanés. Lorsqu'un instantané est mis à jour, la propriété LastExecution du rapport est modifiée, ce qui modifie la version du rapport.  
+    >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] avec SharePoint utilise les fonctionnalités de gestion du contenu extrait et archivé de SharePoint pour enregistrer les mises à jour des types de contenu de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Cela inclut la création d'instantanés de rapports. Par conséquent, si vous avez activé le contrôle de version sur une bibliothèque de documents, vous verrez la version actualisée du rapport lorsqu'une nouvelle capture instantanée d'historique de rapport est créée. Il s'agit d'un effet secondaire de la mise à jour des captures d'instantanés. Lorsqu'un instantané est mis à jour, la propriété LastExecution du rapport est modifiée, ce qui modifie la version du rapport.  
   
 -   Vous pouvez spécifier des valeurs de délai d'attente pour fixer des limites à l'utilisation des ressources système.  
   
@@ -103,11 +103,11 @@ ms.locfileid: "48104759"
   
 ##  <a name="bkmk_set_database_timeout"></a> Définir le délai d'attente de base de données  
   
-1.  Utilisez Windows PowerShell pour définir le délai d'attente de base de données sur un serveur de rapports SharePoint. Pour plus d’informations, consultez le « obtenir et définir les propriétés de la base de données Reporting Service Application » section de [applets de commande PowerShell pour Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+1.  Utilisez Windows PowerShell pour définir le délai d'attente de base de données sur un serveur de rapports SharePoint. Pour plus d’informations, consultez la section Obtenir et définir les propriétés de la base de données d’application Reporting Services de l’article [Applets de commande PowerShell pour le mode SharePoint de Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les propriétés de traitement de rapport](report-server/set-report-processing-properties.md)   
+ [Définir les propriétés de traitement d'un rapport](report-server/set-report-processing-properties.md)   
  [Mise en cache de rapports &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
- [Définition des valeurs de délai d’attente pour traitement des rapports et jeu de données partagée &#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Définition des valeurs de délai d’attente pour le traitement d’un rapport et d’un dataset partagé &#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

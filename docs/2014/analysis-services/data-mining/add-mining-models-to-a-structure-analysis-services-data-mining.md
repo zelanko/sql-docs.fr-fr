@@ -15,12 +15,12 @@ ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c47b8d7d33626fbba240611f31b1c064e6b91c7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06a5b4261ecde623dc8c31c7b8045042513a8da2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218599"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509973"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Ajouter des modèles d'exploration de données à une structure (Analysis Services - Exploration de données)
   Une structure d'exploration de données est destinée à prendre en charge plusieurs modèles d'exploration de données. Par conséquent, une fois l'exécution de l'Assistant terminée, vous pouvez ouvrir la structure et ajouter de nouveaux modèles d'exploration de données. Chaque fois que vous créez un modèle, vous pouvez utiliser un algorithme différent, modifier les paramètres, ou appliquer des filtres pour utiliser un autre sous-ensemble des données.  
@@ -29,7 +29,7 @@ ms.locfileid: "48218599"
  Lorsque vous utilisez l'Assistant Exploration de données pour créer un nouveau modèle d'exploration de données, par défaut, vous devez toujours d'abord créer une structure d'exploration de données. L'Assistant vous donne ensuite la possibilité d'ajouter un modèle d'exploration de données initial à la structure. Toutefois, vous n'êtes pas obligé de créer un modèle immédiatement après. Si vous créez uniquement la structure, vous n'avez pas besoin de prendre de décision concernant la colonne à utiliser comme attribut prédictible ou la façon d'utiliser les données dans un modèle particulier. Il vous suffit de définir la structure de données générale que vous souhaitez utiliser ultérieurement. Par la suite, vous pouvez utiliser le [Concepteur d’exploration de données](data-mining-designer.md) pour ajouter de nouveaux modèles d’exploration de données basés sur la structure.  
   
 > [!NOTE]  
->  Dans DMX, l'instruction CREATE MINING MODEL commence par le modèle d'exploration de données. Autrement dit, vous définissez votre choix de modèle d'exploration de données, et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère automatiquement la structure sous-jacente. Par la suite, vous pouvez continuer à ajouter de nouveaux modèles d’exploration de données à cette structure à l’aide de l’instruction ALTER STRUCTURE… ADD MODEL.  
+>  Dans DMX, l'instruction CREATE MINING MODEL commence par le modèle d'exploration de données. Autrement dit, vous définissez votre choix de modèle d'exploration de données, et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère automatiquement la structure sous-jacente. Plus tard, vous pouvez continuer à ajouter de nouveaux modèles d’exploration de données à cette structure, à l’aide de l’instruction ALTER STRUCTURE... ADD MODEL.  
   
 ## <a name="choosing-an-algorithm"></a>Choix d'un algorithme  
  Lorsque vous ajoutez un nouveau modèle à une structure existante, la première chose à faire est de sélectionner un algorithme d'exploration de données à utiliser dans ce modèle. Le choix de l'algorithme est important car chaque algorithme effectue un type d'analyse différent et a des exigences différentes.  
@@ -60,8 +60,8 @@ ms.locfileid: "48218599"
   
 ## <a name="see-also"></a>Voir aussi  
  [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
- [Créer une Structure d’exploration de données relationnelles](create-a-relational-mining-structure.md)   
- [Propriétés du modèle d’exploration de données](mining-model-properties.md)   
- [Colonnes d’un modèle d’exploration de données](mining-model-columns.md)  
+ [Créer une structure d'exploration de données relationnelle](create-a-relational-mining-structure.md)   
+ [Propriétés du modèle d'exploration de données](mining-model-properties.md)   
+ [Colonnes d'un modèle d'exploration de données](mining-model-columns.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8936d7c79538f4cb609f9208c6bd458369093076
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: e1d7b619cb711938f07ae7902dc1b9544adc5890
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460924"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512290"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Définition de la granularité des dimensions dans un groupe de mesures
   Les utilisateurs peuvent souhaiter dimensionner des données de faits avec des granularités ou spécificités différentes pour diverses raisons. Prenons l'exemple d'un scénario dans lequel les données de ventes des revendeurs ou des ventes Internet sont enregistrées quotidiennement tandis que les données relatives aux quotas de ventes n'existent qu'au niveau du mois ou du trimestre. Dans un scénario de ce type, les utilisateurs souhaiteront que la dimension de temps ait une granularité ou un niveau de détail différent pour chaque table de faits. S'il est possible de définir une nouvelle dimension de base de données comme dimension de temps avec une granularité différente, la méthode qui fait appel à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]est plus simple.  
@@ -141,7 +141,7 @@ ms.locfileid: "49460924"
   
 10. Cliquez sur **OK**.  
   
-11. Cliquez sur la cellule à l’intersection de la dimension **Sales Territory** et du groupe de mesures **Sales Quotas 1** , puis cliquez sur le bouton Parcourir (**…**). La boîte de dialogue **Définir une relation** s’affiche.  
+11. Cliquez sur la cellule à l’intersection de la **Sales Territory** dimension et le **Sales Quotas 1** groupe de mesures, puis cliquez sur le bouton Parcourir (**...** ). La boîte de dialogue **Définir une relation** s’affiche.  
   
 12. Dans la liste **Sélectionnez un type de relation** , sélectionnez **Référence**.  
   
@@ -221,7 +221,7 @@ ms.locfileid: "49460924"
      ![Groupe de mesures Sales Quota dimensionné correctement](../../2014/tutorials/media/l5-granularity-7.gif "groupe de mesures Sales Quota dimensionné correctement")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 6 : Définition de calculs](lesson-6-defining-calculations.md)  
+ [Leçon 6 : Définition de calculs](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Relations de dimension](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

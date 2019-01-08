@@ -16,12 +16,12 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 606b5273619e0f88503abeadaf6d463f6f16d3c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188399"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539748"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)
   Dans le cas de champs de données de type caractère, des caractères facultatifs de fin vous permettent d'indiquer la fin de chaque champ inclus dans un fichier de données par un *indicateur de fin de champ* et la fin de chaque ligne par un *indicateur de fin de ligne*. Les caractères de fin constituent un moyen d'indiquer à des programmes en cours de lecture du fichier de données la fin d'un champ ou d'une ligne et le début du suivant.  
@@ -40,7 +40,7 @@ ms.locfileid: "48188399"
 |Barre oblique inverse<sup>1</sup>|\\\|  
 |Marque de fin null (indicateur de fin)<sup>2</sup>|\0|  
 |Tout caractère imprimable (les caractères de contrôle ne le sont pas, sauf les valeurs NULL, tabulation, saut de ligne et retour chariot)|(*, A, t, l, etc.)|  
-|Une chaîne de 10 caractères imprimables maximum, y compris certains ou tous les indicateurs de fin énumérés précédemment|(\*\*\t\*\*, fin, !!!!!!!!!!, \t—\n, etc.)|  
+|Une chaîne de 10 caractères imprimables maximum, y compris certains ou tous les indicateurs de fin énumérés précédemment|(**\t\*\*, fin, !!!!!!!!!!, \t-\n, etc.)|  
   
  <sup>1</sup> uniquement le t, n, r, les caractères 0 et '\0' fonctionnent avec le caractère d’échappement barre oblique inverse pour générer un caractère de contrôle.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "48188399"
   
          `Enter field terminator [none]:`  
   
-         généralement, cette valeur par défaut convient. Toutefois, pour `char` ou `nchar` champs de données, consultez la sous-section suivante, « Instructions pour les indicateurs de fin à l’aide ». Pour obtenir un exemple illustrant cette invite en contexte, consultez [Spécifier des formats de données pour la compatibilité lors de l’utilisation de bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+         généralement, cette valeur par défaut convient. Dans le cas des champs de données de type `char` ou `nchar`, consultez cependant la sous-section « Instructions pour l'utilisation d'indicateurs de fin ». Pour obtenir un exemple illustrant cette invite en contexte, consultez [Spécifier des formats de données pour la compatibilité lors de l’utilisation de bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
         > [!NOTE]  
         >  Après avoir indiqué de façon interactive tous les champs d’une commande **bcp**, cette dernière vous demande de sauvegarder vos réponses dans un fichier de format autre que XML pour chacun des champs fournis. Pour plus d’informations sur les fichiers de format non-XML, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Instructions pour l'utilisation d'indicateurs de fin  
- Dans certaines situations, une marque de fin est utile pour un `char` ou `nchar` champ de données. Exemple :  
+ Dans certains cas, un indicateur de fin s'avère utile pour les champs de données de type `char` ou `nchar`. Exemple :  
   
 -   pour une colonne de données qui contient une valeur Null dans un fichier de données qui sera importé dans un programme qui ne comprend pas les informations de longueur de préfixe ;  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48188399"
   
  La commande **bcp** contient les commutateurs suivants.  
   
-|Commutateur|Description|  
+|Basculer|Description|  
 |------------|-----------------|  
 |**-c**|Chargement des champs de données en tant que données sous forme de caractères.|  
 |**-t** `,`|Virgule (,) servant d'indicateur de fin de champ.|  
@@ -164,7 +164,7 @@ GO
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
-#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Utilisation de BULK INSERT pour spécifier de façon interactive les terminateurs  
+#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>b. Utilisation de BULK INSERT pour spécifier de façon interactive les terminateurs  
  L'exemple suivant importe en bloc le fichier de données `Department-c-t.txt` par le biais de l'instruction `BULK INSERT` en utilisant les qualificateurs répertoriés dans le tableau suivant.  
   
 |Option|Attribute|  

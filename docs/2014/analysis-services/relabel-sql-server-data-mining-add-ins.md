@@ -15,12 +15,12 @@ ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd98b0225caad7d6cd723e462eca031750d96d6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74e2322416ec06c36a7834f35581ed611480b6e6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049029"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414606"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>Réétiqueter (Compléments d'exploration de données SQL Server)
   ![Icône Office 13 pour l’outil Réétiqueter](media/dm13-relabel.gif "icône Office 13 pour l’outil Réétiqueter")  
@@ -53,7 +53,7 @@ ms.locfileid: "48049029"
   
 5.  Tapez une nouvelle valeur dans la ligne sous **Nouvelles étiquettes**. Vous pouvez également choisir une valeur dans la liste de valeurs existantes. À mesure que vous entrez des nouvelles valeurs, elles sont disponibles en vue de leur réutilisation.  
   
-6.  Lorsque vous avez entré suffisamment de lignes, cliquez sur **Suivant**, puis dans la page **Sélectionner la destination** , sélectionnez où vous allez enregistrer les données réétiquetées.  
+6.  Lorsque vous avez entré suffisamment de lignes, cliquez sur **suivant**, puis, dans le **sélectionner la Destination** page, sélectionnez où vous allez enregistrer les données réétiquetées.  
   
     -   **Ajouter en tant que nouvelle colonne à la feuille de calcul en cours**  
   

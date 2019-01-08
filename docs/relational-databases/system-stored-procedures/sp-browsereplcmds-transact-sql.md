@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_browsereplcmds_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e3884ba1d35a488319ee9ba32e584450b300eda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5356ebc173e435595315badf9a3c2abe224d186b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670477"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802381"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +45,19 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@xact_seqno_start =**] **'***xact_seqno_start***'**  
+ [  **@xact_seqno_start =**] **'**_xact_seqno_start_**'**  
  Spécifie le plus petit numéro de séquence exact à retourner. *xact_seqno_start* est **nchar (22)**, avec 0 x 00000000000000000000 comme valeur par défaut.  
   
- [  **@xact_seqno_end =**] **'***xact_seqno_end***'**  
+ [  **@xact_seqno_end =**] **'**_xact_seqno_end_**'**  
  Spécifie le plus grand numéro de séquence exact à retourner. *xact_seqno_end* est **nchar (22)**, avec 0xFFFFFFFFFFFFFFFFFFFF comme valeur par défaut.  
   
- [  **@originator_id =**] **'***originator_id***'**  
+ [  **@originator_id =**] **'**_originator_id_**'**  
  Spécifie si les commandes avec la valeur *originator_id* sont retournés. *originator_id* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@publisher_database_id =**] **'***publisher_database_id***'**  
+ [  **@publisher_database_id =**] **'**_publisher_database_id_**'**  
  Spécifie si les commandes avec la valeur *publisher_database_id* sont retournés. *publisher_database_id* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@article_id =**] **'***article_id***'**  
+ [  **@article_id =**] **'**_article_id_**'**  
  Spécifie si les commandes avec la valeur *article_id* sont retournés. *article_id* est **int**, avec NULL comme valeur par défaut.  
   
  [  **@command_id =**] *command_id*  
@@ -95,7 +94,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ## <a name="remarks"></a>Notes  
  **sp_browsereplcmds** est utilisé dans la réplication transactionnelle.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou membres de la **db_owner** ou **replmonitor** des rôles de base de données fixe sur la base de données de distribution peuvent exécuter **sp_browsereplcmds**.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -18,12 +18,12 @@ ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a328e2b7af2fb1e743c81e23a0f80e7530f3810
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0bf91af4556694ea032dccd8d502e4480fc4c750
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146004"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540143"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Modèles d'exploration de données (Analysis Services - Exploration de données)
   Un *modèle d’exploration de données* est créé en appliquant un algorithme aux données, mais c’est plus qu’un algorithme ou qu’un conteneur de métadonnées : il s’agit d’un jeu de données, de statistiques et de modèles qui peuvent être appliqués à de nouvelles données pour générer des prédictions et pour effectuer des inférences sur les relations.  
@@ -49,11 +49,11 @@ ms.locfileid: "50146004"
   
  ![modèle contient des métadonnées, des modèles et des liaisons](../media/dmcon-modelarch2.gif "modèle contient des métadonnées, des modèles et des liaisons")  
   
- Les métadonnées indiquent le nom du modèle et le serveur où il est stocké, ainsi qu'une définition du modèle, y compris les colonnes de la structure d'exploration de données utilisées pour créer le modèle, les définitions des filtres éventuels appliqués lors du traitement du modèle et l'algorithme utilisé pour analyser les données. Tous ces choix, les colonnes de données et leurs types de données, les filtres et l'algorithme, ont une influence importante sur les résultats de l'analyse.  
+ Les métadonnées indiquent le nom du modèle et le serveur où il est stocké, ainsi qu'une définition du modèle, y compris les colonnes de la structure d'exploration de données utilisées pour créer le modèle, les définitions des filtres éventuels appliqués lors du traitement du modèle et l'algorithme utilisé pour analyser les données. Toutes les colonnes de ces choix ; les données et leurs types de données, des filtres et algorithme ont une influence sur les résultats d’analyse.  
   
  Par exemple, vous pouvez utiliser les mêmes données pour créer plusieurs modèles, en utilisant éventuellement un algorithme de clustering, un algorithme d'arbre de décision et un algorithme Naïve Bayes. Chaque type de modèle crée un ensemble différent de modèles, de jeux d'éléments, de règles ou de formules, que vous pouvez utiliser pour faire des prédictions. Généralement, chaque algorithme analyse les données d’une manière différente afin que le *contenu* du modèle résultant soit également organisé en différentes structures. Dans un type de modèle, les données et les modèles peuvent être regroupés en *clusters*; dans un autre type de modèle, les données peuvent être organisées en arborescences et en branches, ainsi que selon les règles qui les divisent et les définissent.  
   
- Le modèle est également affecté par les données sur lesquelles vous effectuez l'apprentissage : même les modèles qualifiés sur la même structure d'exploration de données peuvent donner des résultats différents si vous filtrez les données différemment ou utilisez différentes valeurs de départ durant l'analyse. Toutefois, les données réelles ne sont pas stockées dans le modèle ; seules les statistiques sommaires sont stockées, les données réelles résidant dans la structure d'exploration de données. Si vous avez créé des filtres sur les données lors de l'apprentissage du modèle, les définitions de filtre sont également enregistrées avec l'objet de modèle.  
+ Le modèle est également affecté par les données sur lesquelles vous effectuez l'apprentissage : même les modèles qualifiés sur la même structure d'exploration de données peuvent donner des résultats différents si vous filtrez les données différemment ou utilisez différentes valeurs de départ durant l'analyse. Toutefois, les données réelles ne sont pas stockées dans le modèle uniquement des statistiques de synthèse sont stockées, avec les données réelles résidant dans la structure d’exploration de données. Si vous avez créé des filtres sur les données lors de l'apprentissage du modèle, les définitions de filtre sont également enregistrées avec l'objet de modèle.  
   
  Le modèle contient un jeu de liaisons, qui renvoient aux données mises en cache dans la structure d'exploration de données. Si les données ont été mises en cache dans la structure et n'ont pas été effacées après leur traitement, ces liaisons permettent d'extraire des résultats les cas les prenant en charge. Toutefois, les données réelles sont stockées dans le cache de la structure, et non dans le modèle.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "50146004"
   
 -   Sélectionnez l'algorithme le mieux adapté à la tâche analytique.  
   
--   Choisissez les colonnes de la structure à utiliser dans le modèle, puis spécifiez comment elles doivent être utiliser : quelle colonne contient les résultats que vous souhaitez prédire, quelles colonnes servent d'entrée uniquement, etc.  
+-   Choisissez les colonnes de la structure à utiliser dans le modèle, puis spécifiez comment ils doivent être une colonne utilisée, ce qui contient le résultat à prédire, quelles colonnes servent d’entrée uniquement, et ainsi de suite.  
   
 -   Facultativement, définition des paramètres pour régler avec précision le traitement par l'algorithme.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "50146004"
   
 -   Une instruction A DMX ALTER STRUCTURE ADD MODEL peut être utilisée pour ajouter un nouveau modèle d'exploration de données à une structure existante. Utilisez cette méthode si vous souhaitez essayer différents modèles basés sur le même jeu de données.  
   
- Vous pouvez également créer par programmation des modèles d'exploration de données, avec AMO ou XML/A, ou en utilisant d'autres clients, tels que le Client d'exploration de données pour Excel. Pour plus d'informations, consultez les rubriques suivantes :  
+ Vous pouvez également créer par programmation des modèles d'exploration de données, avec AMO ou XML/A, ou en utilisant d'autres clients, tels que le Client d'exploration de données pour Excel. Pour plus d’informations, consultez les rubriques suivantes :  
   
  [Architecture du modèle d'exploration de données](#bkmk_mdlArch)  
   

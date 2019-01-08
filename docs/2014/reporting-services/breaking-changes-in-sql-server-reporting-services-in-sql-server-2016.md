@@ -15,12 +15,12 @@ ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1bc91211f646129ca0686ae5d8bffe2371ba0a57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: adf846eaa23b7be875605fd5d1cc93811fce9e3f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076119"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537329"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Modifications importantes de SQL Server Reporting Services dans SQL Server 2014
   Cette rubrique décrit les changements importants apportés à [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Ces modifications peuvent interrompre les applications, scripts ou fonctionnalités fondés sur les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Vous pouvez rencontrer ces problèmes lorsque vous effectuez une mise à niveau, ou dans les scripts ou les rapports personnalisés. Pour plus d'informations, consultez [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "48076119"
 -   [SQL Server 2008 R2 Reporting Services des modifications avec rupture](#bkmk_kj)  
   
 ##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Modifications avec rupture de Reporting Services  
- Il y a aucune [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modifications avec rupture dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ Il n'y a pas de modifications avec rupture dans les fonctionnalités [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ##  <a name="bkmk_rc0"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Modifications avec rupture de Reporting Services  
   
@@ -43,14 +43,14 @@ ms.locfileid: "48076119"
   
  `http://<Server name>/ReportServer`  
   
- Vous devez maintenant inclure le site SharePoint dans le chemin d'accès de l'URL. Par exemple, si votre nom du site est «`videos`» et utilise le préfixe «`sites`», l'URL devrait être semblable à ce qui suit :  
+ Vous devez maintenant inclure le site SharePoint dans le chemin d'accès de l'URL. Par exemple, si le nom de votre site est «`videos`» et utilisé la '`sites`' préfixe, l’URL ressemblerait à ce qui suit :  
   
  `http://<Server Name>/sites/videos/_vti_bin/ReportServer`  
   
 ### <a name="changes-to-sharepoint-mode-command-line-installation"></a>Modifications à l'installation de ligne de commande en mode SharePoint  
  Le paramètre d'entrée **/RSINSTALLMODE** fonctionne uniquement avec les installations en mode natif, et non pour les installations en mode SharePoint. Par exemple, ce qui suit n’est pas pris en charge dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/rsinstallmode = « DefaultSharePointMode »**. Au lieu de ce paramètre d'entrée, utilisez **/RSSHPINSTALLMODE="DefaultSharePointMode"**.  
   
- L'instruction suivante est un exemple d'une commande d'installation complète et d’un jeu de paramètres : **setup /ACTION=install /FEATURES=SQL,RS /InstanceName=Denali_INST1 …./RSSHPINSTALLMODE="DefaultSharePointMode"**  
+ L’instruction suivante est un exemple d’un ensemble de commande et paramètre de terminer l’installation : **setup/action = install/Features = SQL, RS/InstanceName = Denali_INST1 … / rsshpinstallmode = « DefaultSharePointMode »**  
   
  Pour plus d’informations sur les installations de ligne de commande, consultez [invite de commandes de Reporting Services SharePoint Mode d’Installation et en Mode natif](install-windows/install-reporting-services-at-the-command-prompt.md).  
   
@@ -59,23 +59,23 @@ ms.locfileid: "48076119"
   
  Ces modifications concernent la liste suivante de composants et de flux de travail :  
   
--   Applications personnalisées qui utilisent le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournisseur WMI pour [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint.  
+-   Applications personnalisées qui utilisent le fournisseur WMI [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint.  
   
--   Le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], rskeymgmt.exe et rsconfig.exe. Au lieu d’utiliser ces utilitaires pour la configuration de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] mode SharePoint, utilisez l’Administration centrale de SharePoint et PowerShell.  
+-   Le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , rskeymgmt.exe et rsconfig.exe. Au lieu d'utiliser ces utilitaires pour la configuration du mode SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , utilisez l'Administration centrale de SharePoint et PowerShell.  
   
--   SQL Server Management Studio : Les clients ne peuvent pas faire référence à un serveur avec la syntaxe similaire à <nom_ordinateur>/<nom_instance>. À compter de la version [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], la méthode recommandée consistait à utiliser une URL de site SharePoint. Par exemple, **http://<sharepoint_server>/<sharePoint_site&gt ;**. En commençant par [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], URL d’un site SharePoint est la seule syntaxe prise en charge.  
+-   SQL Server Management Studio : Les clients ne peuvent pas faire référence à un serveur avec une syntaxe telle que <nom_ordinateur>/<nom_instance>. À compter de la version [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , la méthode recommandée consistait à utiliser une URL de site SharePoint. Par exemple, **http://<sharepoint_server>/<sharePoint_site&gt ;**. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], une URL de site SharePoint est la seule syntaxe prise en charge.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>Le générateur de modèles de rapport est disponible dans les outils de données SQL Server  
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] n’est plus prend en charge les projets de modèle de rapport. Le générateur de modèles de rapport n'est pas disponible dans [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Vous ne pouvez pas créer de nouveaux projets de modèle de rapport ou ouvrir des projets existants dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et vous ne pouvez pas créer ou mettre à jour des modèles de rapport. Pour mettre à jour des modèles de rapport, vous pouvez utiliser [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou des outils précédents. Vous pouvez continuer à utiliser les modèles de rapport comme sources de données dans les rapports créés à l'aide d'outils [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] tels que le Générateur de rapports et le Concepteur de rapports. Le Concepteur de requêtes que vous utilisez pour créer des requêtes pour extraire des données de rapport à partir de modèles de rapport continue à être disponibles dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ne prend plus en charge les projets de modèle de rapport. Le générateur de modèles de rapport n'est pas disponible dans [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Vous ne pouvez pas créer de nouveaux projets de modèle de rapport ni ouvrir des projets existants dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et vous ne pouvez pas créer ou mettre à jour des modèles de rapport. Pour mettre à jour des modèles de rapport, vous pouvez utiliser [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou des outils précédents. Vous pouvez continuer à utiliser les modèles de rapport comme sources de données dans les rapports créés à l'aide d'outils [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] tels que le Générateur de rapports et le Concepteur de rapports. Le concepteur de requêtes que vous utilisez pour créer des requêtes et extraire des données de rapport à partir de modèles de rapport est toujours disponible dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_kj"></a> SQL Server 2008 R2 Reporting Services des modifications avec rupture  
- Cette section décrit les changements essentiels dans [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ Cette section décrit les changements essentiels apportés à [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 > [!NOTE]  
 >  SQL Server 2008 R2 étant une mise à niveau de version secondaire de SQL Server 2008, nous vous recommandons d'examiner également le contenu de la section SQL Server 2008.  
   
 ### <a name="expanded-csv-data-renderer"></a>Amélioration du rendu des données CSV  
- Dans [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], le fichier CSV inclut des données de graphique et jauge. Les applications qui dépendent d'une structure antérieure des fichiers CSV ne fonctionnent plus en raison de l'ajout de colonnes supplémentaires pour les graphiques et les jauges.  
+ Dans [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], le fichier CSV inclut des données graphiques et de jauge. Les applications qui dépendent d'une structure antérieure des fichiers CSV ne fonctionnent plus en raison de l'ajout de colonnes supplémentaires pour les graphiques et les jauges.  
   
  Pour plus d’informations, consultez [Exportation vers un fichier CSV &#40;Générateur de rapports et SSRS&#41;](report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
   

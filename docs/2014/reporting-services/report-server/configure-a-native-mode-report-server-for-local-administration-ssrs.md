@@ -18,12 +18,12 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: be2f6f67182a9dd3dbc5866fa8690e5dcd018445
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9dc5d0ae36feb5801f026f0fca77683004e23b3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189069"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400542"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurer un serveur de rapports en mode natif pour l'administration locale (SSRS)
   Le déploiement d'un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur l'un des systèmes d'exploitation suivants requiert davantage d'étapes de configuration si vous souhaitez administrer l'instance du serveur de rapports localement. Cette rubrique explique comment configurer le serveur de rapports pour l'administration locale. Si vous n’avez pas encore installé ou configuré le serveur de rapports, consultez [installer SQL Server 2014 à partir de l’Assistant Installation &#40;le programme d’installation&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) et [gérer un serveur Reporting Services Native Mode rapport](manage-a-reporting-services-native-mode-report-server.md).  
@@ -119,7 +119,7 @@ ms.locfileid: "48189069"
 2.  Cliquez sur **Paramètres du site** dans l'angle supérieur de la page d'accueil.  
   
     > [!TIP]  
-    >  **Remarque :** si vous ne voyez pas l’option **Paramètre du site** , fermez et rouvrez votre navigateur et accédez au gestionnaire de rapports avec des privilèges d’administrateur.  
+    >  **Remarque :** Si vous ne voyez pas le **paramètres du Site** option, fermez et rouvrez votre navigateur et accédez au Gestionnaire de rapports avec des privilèges d’administrateur.  
   
 3.  Cliquez sur **Sécurité**.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "48189069"
   
 -   Lorsque vous tentez de déployer des éléments de rapport sur le serveur de rapports local, vous voyez un message d'erreur similaire au suivant dans la fenêtre **Liste d'erreurs** :  
   
-    -   Les autorisations accordées à l’utilisateur « Domaine\\<nom utilisateur\> » sont insuffisantes pour vous permettre d’accomplir cette opération.  
+    -   Les autorisations accordées à l’utilisateur « Domaine\\<nom utilisateur\> » sont insuffisantes pour effectuer cette opération.  
   
  **Pour exécuter avec des autorisations élevées chaque fois que vous ouvrez SSDT :**  
   
@@ -184,9 +184,9 @@ ms.locfileid: "48189069"
 -   Consultez les sections [Paramètres du dossier du gestionnaire de rapports](#bkmk_configure_folder_settings) et [Paramètres du site du gestionnaire de rapports](#bkmk_configure_site_settings) plus haut dans cette rubrique.  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> Informations supplémentaires  
- Une étape de configuration supplémentaire et courante pour l'administration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste à ouvrir le port 80 dans le Pare-feu Windows pour autoriser l'accès à l'ordinateur du serveur de rapports. Pour obtenir des instructions, consultez [configurer un pare-feu pour accéder au serveur de rapports](configure-a-firewall-for-report-server-access.md).  
+ Une étape de configuration supplémentaire et courante pour l'administration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste à ouvrir le port 80 dans le Pare-feu Windows pour autoriser l'accès à l'ordinateur du serveur de rapports. Pour obtenir des instructions, consultez [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer un serveur de rapports Reporting Services en mode natif](manage-a-reporting-services-native-mode-report-server.md)  
+ [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](manage-a-reporting-services-native-mode-report-server.md)  
   
   

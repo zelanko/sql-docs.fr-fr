@@ -1,7 +1,7 @@
 ---
 title: Sys.query_store_query (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7fc3462eae5ca53d1c1b0b2ef4ad65c9579569e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4b428c87da7180869cb3b0c51f4a8fb118a351
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726787"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711850"
 ---
 # <a name="sysquerystorequery-transact-sql"></a>Sys.query_store_query (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contient des informations sur la requête et ses associés globale agrégée statistiques d’exécution.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47726787"
 |**batch_sql_handle**|**varbinary(64)**|ID du lot instruction la requête fait partie de. Rempli uniquement si la requête fait référence à des tables temporaires ou des variables de table.|  
 |**query_hash**|**binary(8)**|Hachage MD5 de la requête individuelle, en fonction de l’arborescence logique de requête. Inclut des indicateurs d’optimiseur.|  
 |**is_internal_query**|**bit**|La requête a été générée en interne.|  
-|**query_parameterization_type**|**tinyint**|Type de paramétrage :<br /><br /> 0 – aucun<br /><br /> 1 – utilisateur<br /><br /> 2 – simple<br /><br /> 3 – forcé|  
+|**query_parameterization_type**|**tinyint**|Type de paramétrage :<br /><br /> 0 - aucun<br /><br /> 1 - utilisateur<br /><br /> 2 - simple<br /><br /> 3 - forcé|  
 |**query_parameterization_type_desc**|**nvarchar(60)**|Texte de description pour le type de paramétrage.|  
 |**initial_compile_start_time**|**datetimeoffset**|Heure de début de la compilation.|  
 |**last_compile_start_time**|**datetimeoffset**|Heure de début de la compilation.|  
@@ -67,7 +67,7 @@ ms.locfileid: "47726787"
 |**max_compile_memory_kb**|**bigint**|Compiler des statistiques de la mémoire.|  
 |**is_clouddb_internal_query**|**bit**|Toujours 0 dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en local.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite le **VIEW DATABASE STATE** autorisation.  
   
 ## <a name="see-also"></a>Voir aussi  

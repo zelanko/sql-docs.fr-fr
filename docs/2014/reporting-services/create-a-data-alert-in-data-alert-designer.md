@@ -11,12 +11,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 02e1222b289d4cb081335a3575b0e1948fb37728
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 5e70f08293132f570ddb0663db7944ecb4bba497
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071843"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507973"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Créer une alerte de données dans le Concepteur d’alertes
   Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'alertes de données. Après les avoir enregistrées, vous pouvez les rouvrir, les modifier, puis les enregistrer de nouveau dans le Concepteur d'alertes de données. Pour plus d’informations sur la modification des définitions d’alerte, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md) et [Modifier une alerte de données dans le Concepteur d’alertes](edit-a-data-alert-in-alert-designer.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "49071843"
   
      Le nom par défaut de la définition d'alerte est le nom du rapport. Les noms des définitions d'alerte ne sont pas nécessairement uniques ; par conséquent, ils peuvent être difficiles à distinguer lorsque vous consulterez ultérieurement la liste de vos alertes dans le Gestionnaire des alertes de données. Il est recommandé d'utiliser des noms explicites et uniques pour vos définitions d'alerte.  
   
-6.  Éventuellement, modifiez l’option de données par défaut à partir de **toutes les données dans le flux de données ont** à **aucune donnée dans le flux de données a**.  
+6.  Éventuellement, modifiez l’option des données par défaut en remplaçant l’option **toutes les données dans le flux de données ont** par l’option **aucune donnée dans le flux de données n’a**.  
   
 7.  Cliquez sur **Ajouter une règle**.  
   
@@ -65,21 +65,21 @@ ms.locfileid: "49071843"
   
      Selon le type de données de la colonne sélectionnée, des opérateurs de comparaison différents apparaissent. Si la colonne a un type de données « date », l'icône du calendrier s'affiche en regard de la valeur de seuil pour la règle. Vous pouvez entrer des données en cliquant sur une date dans le calendrier ou en tapant la date.  
   
-     Le Concepteur d’alertes de données fournit deux modes de comparaison : **Mode de saisie de valeur** et **Mode de sélection de champ**. Le mode par défaut est **Mode de saisie de valeur**. Vous pouvez ajouter des clauses OR uniquement quand vous travaillez en **Mode de saisie de valeur** et vous utilisez la comparaison **is** .  
+     Concepteur d’alertes de données fournit deux modes de comparaison : **Mode de saisie de valeur** et **en Mode de sélection de champ**. Le mode par défaut est **Mode de saisie de valeur**. Vous pouvez ajouter des clauses OR uniquement quand vous travaillez en **Mode de saisie de valeur** et vous utilisez la comparaison **is** .  
   
 9. Pour ajouter une clause OR, cliquez sur la flèche vers le bas, puis sur **Mode de saisie de valeur**.  
   
 10. Tapez la valeur de comparaison.  
   
-11. Éventuellement, recliquez sur le bouton de sélection **(…)** .  
+11. Vous pouvez éventuellement cliquer à nouveau sur le bouton de sélection **(...)**.  
   
-     Les points de suspension **(…)** apparaissent sur la ligne qui contient la première clause.  
+     Les points de suspension **(...)** apparaissent sur la ligne qui contient la première clause.  
   
      La clause OR est ajoutée au-dessous et dans la règle AND.  
   
 12. Éventuellement, cliquez sur la flèche vers le bas, sélectionnez **Mode de sélection de champ**, puis sélectionnez une colonne dans la liste.  
   
-     Vous remarquerez que les points de suspension **(…)** qui vous permettent d’ajouter des clauses OR ont disparu.  
+     Vous remarquerez que les points de suspension **(...)** qui vous permettent d’ajouter des clauses OR ont disparu.  
   
 13. Éventuellement, recliquez sur **Ajouter une règle** pour ajouter des règles supplémentaires.  
   

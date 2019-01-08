@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f489fba4c9ea113cffd608b496d04448399481a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4bf6fac03eab1e096c0ac5dc63285c11bd3f114
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191579"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754471"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet, élément (Assistant Paramétrage de base de données)
   Contient les structures PDS (index ou vues indexées) que vous aimeriez que l'Assistant Paramétrage du moteur de base de données utilise durant l'analyse.  
@@ -42,13 +41,13 @@ ms.locfileid: "48191579"
 |**Type de données et longueur**|`string`, aucune longueur maximale.|  
 |**Valeurs autorisées**|**IDX_IV**<br /> Index et vues indexées.<br /><br /> **IDX**<br /> Index uniquement.<br /><br /> **IV**<br /> Vues indexées uniquement.<br /><br /> **NCL_IDX**<br /> Index non-cluster uniquement.<br /><br /> Utilisez une de ces valeurs avec cet élément.|  
 |**Valeur par défaut**|**IDX**|  
-|**Occurrence**|Obligatoire une fois pour chaque élément `TuningOptions`, excepté si l'élément `DropOnlyMode` est utilisé. Si `DropOnlyMode` est utilisé, vous ne pouvez pas utiliser `FeatureSet`. Ces éléments s'excluent mutuellement.|  
+|**Occurrence**|Obligatoire une fois pour chaque élément `TuningOptions`, excepté si l'élément `DropOnlyMode` est utilisé. Si l'élément `DropOnlyMode` est utilisé, vous ne pouvez pas utiliser l'élément `FeatureSet`. Ces éléments s'excluent mutuellement.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[TuningOptions, élément &#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**Élément parent**|[Élément TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
 ## <a name="example"></a>Exemple  

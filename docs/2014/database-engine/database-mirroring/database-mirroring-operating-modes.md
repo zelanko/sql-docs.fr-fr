@@ -12,12 +12,12 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0e26b2a9b172b477094de5f624b5e1948b3673a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: debec2f4cf7e62552d82ee7a0f87a2a359f4aa34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188579"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542933"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modes de fonctionnement de la mise en miroir de bases de données
   Cette rubrique décrit les modes d'opération synchrones et asynchrones des sessions de mise en miroir de bases de données.  
@@ -37,7 +37,7 @@ ms.locfileid: "48188579"
  La session de mise en miroir de bases de données s'exécute de façon synchrone et, éventuellement, utilise un témoin, ainsi que le serveur principal et le serveur miroir.  
   
  Sécurité des transactions  
- Propriété de base de données spécifique de la mise en miroir qui permet de déterminer si une session de mise en miroir de bases de données opère de manière synchrone ou asynchrone. Il existe deux niveaux de sécurité : FULL (complète) et OFF (désactivée).  
+ Propriété de base de données spécifique de la mise en miroir qui permet de déterminer si une session de mise en miroir de bases de données opère de manière synchrone ou asynchrone. Il existe deux niveaux de sécurité : FULL (complète) et OFF (désactivée).  
   
  Témoin  
  À utiliser uniquement avec le mode haute sécurité. Il s'agit d'une instance facultative de SQL Server qui active le serveur miroir pour déterminer s'il est nécessaire d'initier un basculement automatique. Contrairement aux deux autres partenaires de basculement, le témoin ne dessert pas la base de données. La prise en charge du basculement automatique est le seul rôle rempli par le témoin.  
@@ -48,7 +48,7 @@ ms.locfileid: "48188579"
 > [!NOTE]  
 >  La plupart des éditions de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prennent uniquement en charge la mise en miroir de bases de données synchrone (« niveau complet sécurité uniquement »). Pour plus d’informations sur les éditions qui prennent en charge la mise en miroir de base de données, consultez « Haute disponibilité (AlwaysOn) » dans [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Si la sécurité des transactions est désactivée (OFF), la session de mise en miroir de bases de données fonctionne de manière asynchrone. Le fonctionnement asynchrone ne prend en charge qu'un mode d'opération : le mode hautes performances. Ce mode améliore les performances au détriment de la haute disponibilité. Le mode hautes performances utilise uniquement le serveur principal et le serveur miroir. Les problèmes survenant sur le serveur miroir n'ont jamais d'impact sur le serveur principal. En cas de perte du serveur principal, la base de données miroir est marquée comme DISCONNECTED, mais est disponible en état de secours semi-automatique.  
+ Si la sécurité des transactions est désactivée (OFF), la session de mise en miroir de bases de données fonctionne de manière asynchrone. Le fonctionnement asynchrone ne prend en charge qu’un seul mode d’opération : le mode hautes performances. Ce mode améliore les performances au détriment de la haute disponibilité. Le mode hautes performances utilise uniquement le serveur principal et le serveur miroir. Les problèmes survenant sur le serveur miroir n'ont jamais d'impact sur le serveur principal. En cas de perte du serveur principal, la base de données miroir est marquée comme DISCONNECTED, mais est disponible en état de secours semi-automatique.  
   
  Le mode hautes performances prend en charge une seule forme de basculement de rôle : le service forcé (avec perte de données possible), qui utilise le serveur miroir comme un serveur de secours semi-automatique. Le service forcé est l'une des réponses possibles à la défaillance du serveur principal. Comme une perte de données est possible, vous devez envisager d'autres alternatives avant de forcer le service sur le miroir. Pour plus d'informations, consultez [Réponse à la défaillance du principal](#WhenPrincipalFails), plus loin dans cette rubrique.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48188579"
 -   Si le serveur principal est perdu, forcer le service sur le serveur miroir exige que le serveur miroir soit connecté au témoin.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les types de quorums, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+>  Pour plus d’informations sur les types de quorums, consultez [Quorum : Comment un témoin sur la disponibilité de base de données &#40;mise en miroir de base de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="WhenPrincipalFails"></a> Réponse à la défaillance du principal  
  Si le principal se bloque, le propriétaire de la base de données dispose des options suivantes :  
@@ -146,7 +146,7 @@ ms.locfileid: "48188579"
   
  Contrairement aux deux autres, le témoin ne dessert pas la base de données. Le témoin prend simplement en charge le basculement automatique en vérifiant que le serveur principal est activé et qu'il fonctionne. Le serveur miroir lance le basculement automatique uniquement si le miroir et le témoin restent connectés l'un à l'autre après que tous les deux aient été déconnectés du serveur principal.  
   
- Lorsque vous définissez un témoin, la session nécessite un *quorum*, c'est-à-dire une relation entre au moins deux instances de serveur qui permet de rendre disponible la base de données. Pour plus d’informations, consultez [Témoin de mise en miroir de base de données](database-mirroring-witness.md) et [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Lorsque vous définissez un témoin, la session nécessite un *quorum*, c’est-à-dire une relation entre au moins deux instances de serveur qui permet de rendre disponible la base de données. Pour plus d’informations, consultez [témoin de mise en miroir de base de données](database-mirroring-witness.md) et [Quorum : Comment un témoin sur la disponibilité de base de données &#40;mise en miroir de base de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  Le basculement automatique nécessite les conditions suivantes :  
   
@@ -208,7 +208,7 @@ ms.locfileid: "48188579"
   
 -   Lorsque le témoin existe mais n'est pas connecté à un partenaire, il apparaît à l'état UNKNOWN (inconnu) ou DISCONNECTED (déconnecté) par rapport au partenaire. Dans ce cas, le témoin ne dispose d'aucun quorum avec ce partenaire et la base de données devient indisponible si les partenaires ne sont pas connectés entre eux.  
   
- Pour plus d’informations sur les quorums, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Pour plus d’informations sur le quorum, consultez [Quorum : Comment un témoin sur la disponibilité de base de données &#40;mise en miroir de base de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  L’état de chaque témoin d’une instance de serveur est enregistré dans la vue de catalogue **sys.database_mirroring** au niveau des colonnes **mirroring_witness_state** et **mirroring_witness_state_desc**. Pour plus d’informations, consultez [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
@@ -222,7 +222,7 @@ ms.locfileid: "48188579"
   
  <sup>1</sup> si le témoin est déconnecté, nous vous recommandons de définir WITNESS à OFF jusqu'à ce que l’instance de serveur témoin devienne disponible.  
   
- <sup>2</sup> si un témoin est présent en mode hautes performances, le témoin ne participe pas la session. Cependant, pour rendre la base de données disponible, deux au moins des instances du serveur doivent rester connectées. Par conséquent, nous vous recommandons de conserver la propriété WITNESS défini à OFF dans les sessions en mode hautes performances. Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ <sup>2</sup> si un témoin est présent en mode hautes performances, le témoin ne participe pas la session. Cependant, pour rendre la base de données disponible, deux au moins des instances du serveur doivent rester connectées. Par conséquent, nous vous recommandons de conserver la propriété WITNESS défini à OFF dans les sessions en mode hautes performances. Pour plus d’informations, consultez [Quorum : Comment un témoin sur la disponibilité de base de données &#40;mise en miroir de base de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="ViewWitness"></a> Affichage du paramètre de sécurité et de l'état du témoin  
  Pour afficher le paramètre de sécurité et l’état du témoin d’une base de données, utilisez la vue de catalogue **sys.database_mirroring** . Les colonnes les plus pertinentes sont les suivantes :  

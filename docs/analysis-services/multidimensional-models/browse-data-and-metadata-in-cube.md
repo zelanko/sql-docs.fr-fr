@@ -1,5 +1,5 @@
 ---
-title: Parcourir les données et métadonnées de Cube | Documents Microsoft
+title: Parcourir les données et métadonnées de Cube | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7bd1940a21407375015e6b732ab129653bff01e6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fda788cecbad21a73186b96a6c360ceeae3948e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022606"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537277"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Parcourir les données et métadonnées de cube
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34022606"
   
  Avant de parcourir un cube, vous devez le traiter et vous y reconnecter. Une fois le traitement terminé, ouvrez l'onglet **Navigateur** du Concepteur de cube. Cliquez sur le bouton Reconnecter dans la barre d'outils pour actualiser la connexion.  
   
- L'onglet **Navigateur** comporte trois volets, le volet des métadonnées, le volet de filtre et le volet de données. Utilisez le volet Métadonnées pour examiner la structure du cube dans le format d'arborescence. Utilisez le volet Filtre en haut de l'onglet **Navigateur** pour définir tout sous-cube auquel vous souhaitez accéder. Utilisez le volet Données pour afficher le jeu de résultats et explorer les hiérarchies de dimension.  
+ Le **navigateur** onglet comporte trois volets : le volet métadonnées, le volet de filtre et le volet des données. Utilisez le volet Métadonnées pour examiner la structure du cube dans le format d'arborescence. Utilisez le volet Filtre en haut de l'onglet **Navigateur** pour définir tout sous-cube auquel vous souhaitez accéder. Utilisez le volet Données pour afficher le jeu de résultats et explorer les hiérarchies de dimension.  
   
 ## <a name="setting-up-the-browser"></a>Configuration du navigateur  
  Pour préparer l'exploration d'un cube, vous pouvez spécifier une perspective ou une traduction à utiliser. Vous ajoutez des mesures et des dimensions au volet Données et spécifiez tous les filtres dans le volet Filtre.  
@@ -57,7 +57,7 @@ ms.locfileid: "34022606"
   
      \- ou -  
   
--   Dans le **Dimension** colonne de la **filtre** volet, cliquez sur  **\<sélectionner une dimension >** et sélectionnez une dimension dans la liste, puis cliquez sur  **\<sélectionnez hiérarchie >** dans les **hiérarchie** colonne et sélectionnez une hiérarchie dans la liste.  
+-   Dans le **Dimension** colonne de la **filtre** volet, cliquez sur  **\<sélectionner une dimension >** et sélectionnez une dimension dans la liste, puis cliquez sur  **\<Sélectionnez hiérarchie >** dans le **hiérarchie** colonne et sélectionnez une hiérarchie dans la liste.  
   
  Après avoir spécifié la hiérarchie, spécifiez l'opérateur et l'expression de filtre. Le tableau suivant décrit les opérateurs et les expressions de filtre.  
   

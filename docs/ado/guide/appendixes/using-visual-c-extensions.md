@@ -16,12 +16,12 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aeae626f924776092bc8f6652e716747768b689c
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350523"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544183"
 ---
 # <a name="visual-c-extensions"></a>Extensions Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>L’Interface IADORecordBinding
@@ -34,7 +34,7 @@ ms.locfileid: "51350523"
 ## <a name="binding-entries"></a>Entrées de liaison
  Les Extensions Visual C++ pour ADO mappent les champs d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet à des variables C/C++. La définition d’un mappage entre un champ et une variable est appelé un *liaison d’entrée*. Les macros fournissent des entrées de liaison pour les données numériques, de longueur fixe et de longueur variable. Les entrées de liaison et les variables C/C++ sont déclarées dans une classe dérivée de la classe d’Extensions Visual C++, **CADORecordBinding**. Le **CADORecordBinding** classe est définie en interne par les macros d’entrée de liaison.
 
- ADO mappe en interne les paramètres de ces macros à OLE DB **DBBINDING** structurer et crée un OLE DB **accesseur** objet pour gérer le déplacement et la conversion des données entre les champs et les variables. OLE DB définit les données comme composé de trois parties : un *tampon* où les données sont stockées ; un *état* qui indique si un champ a été stocké dans la mémoire tampon, ou comment la variable doit être restaurée à le champ ; et le *longueur* des données. (Consultez [l’obtention et définition des données (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)dans la référence du programmeur OLE DB, pour plus d’informations.)
+ ADO mappe en interne les paramètres de ces macros à OLE DB **DBBINDING** structurer et crée un OLE DB **accesseur** objet pour gérer le déplacement et la conversion des données entre les champs et les variables. OLE DB définit les données comme composé de trois parties : Un *tampon* où les données sont stockées ; un *état* qui indique si un champ a été stocké dans la mémoire tampon, ou comment la variable doit être restaurée vers le champ ; et le *longueur* des données. (Consultez [l’obtention et définition des données (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)dans la référence du programmeur OLE DB, pour plus d’informations.)
 
 ## <a name="header-file"></a>Fichier d’en-tête
  Inclure le fichier suivant dans votre application afin d’utiliser les Extensions Visual C++ pour ADO :
@@ -129,7 +129,7 @@ Update(CADORecordBinding *binding)
 
  Lors de la définition de données, *état* peut être défini sur **adFldNull** pour indiquer le **Recordset** champ doit être défini avec la valeur null.
 
-|Constante|Valeur|Description|
+|Constante|Value|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Une valeur de champ non null a été retournée.|
 |**adFldBadAccessor**|1|Liaison n’était pas valide.|
@@ -139,7 +139,7 @@ Update(CADORecordBinding *binding)
 |**adFldSignMismatch**|5|Valeur est signée et le type de données de variable n’est pas signé.|
 |**adFldDataOverFlow**|6|Valeur est supérieure à pourraient être stockées dans le type de données de variable.|
 |**adFldCantCreate**|7|Type de colonne inconnu et champ déjà ouvert.|
-|**adFldUnavailable**|8|Valeur du champ n’a pas pu être déterminée, par exemple, sur un nouveau champ non assigné sans valeur par défaut.|
+|**adFldUnavailable**|8|Valeur du champ n’a pas pu être déterminé-, par exemple sur un nouveau champ non assigné sans valeur par défaut.|
 |**adFldPermissionDenied**|9|Lors de la mise à jour, aucune autorisation pour écrire des données.|
 |**adFldIntegrityViolation**|10|Lors de la mise à jour, la valeur du champ enfreint l’intégrité de la colonne.|
 |**adFldSchemaViolation**|11|Lors de la mise à jour, la valeur du champ violerait schéma de colonne.|

@@ -18,18 +18,18 @@ ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28f7fb52cb4babdce6e90452f40d81ba643466ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 953563285d3c62a8523079a604cf607f2e0edf62
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767757"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526860"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Ajout et modification de sources de données via la configuration
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, utilisez le pilote ODBC fourni par Oracle.  
   
- Une source de données identifie un chemin d’accès aux données qui peuvent inclure une bibliothèque réseau, serveur, base de données et d’autres attributs, dans ce cas, la source de données est le chemin d’accès à une base de données Oracle. Pour vous connecter à une source de données, le Gestionnaire de pilotes vérifie le Registre Windows pour les informations de connexion spécifique.  
+ Une source de données identifie un chemin d’accès aux données qui peuvent inclure une bibliothèque réseau, serveur, base de données et d’autres attributs : dans ce cas, la source de données est le chemin d’accès à une base de données Oracle. Pour vous connecter à une source de données, le Gestionnaire de pilotes vérifie le Registre Windows pour les informations de connexion spécifique.  
   
  L’entrée de Registre créée par l’administrateur de Source de données ODBC est utilisée par les pilotes ODBC et de gestionnaire de pilotes ODBC. Cette entrée contient des informations sur chaque source de données et son pilote associé. Avant de vous connecter à une source de données, ses informations de connexion doivent être ajoutées au Registre.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "47767757"
   
 1.  Cliquez sur make d’Options plus spécifications sur le pilote ODBC pour le programme d’installation Oracle :  
   
-    -   **Traduction** , cliquez sur Sélectionner pour choisir un convertisseur de données chargées. La valeur par défaut est \<pas de convertisseur >.  
+    -   **Traduction** -cliquez sur Sélectionner pour choisir un convertisseur de données chargées. La valeur par défaut est \<pas de convertisseur >.  
   
-    -   **Performances** — les remarques inclure dans les fonctions de catalogue case à cocher spécifie si le pilote retourne les colonnes de notes pour la [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) jeu de résultats. Le pilote ODBC pour Oracle fournit un accès plus rapide lorsque cette valeur n’est pas définie.  
+    -   **Performances** -le notes incluent dans les fonctions de catalogue case à cocher spécifie si le pilote retourne les colonnes de notes pour la [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) jeu de résultats. Le pilote ODBC pour Oracle fournit un accès plus rapide lorsque cette valeur n’est pas définie.  
   
          Les synonymes à inclure dans des colonnes SQL case à cocher spécifie si le pilote retourne des informations de colonne. **Taille de mémoire tampon** spécifie la taille, en octets, allouée pour recevoir les données extraites. Le pilote optimise l’extraction de sorte qu’une opération d’extraction à partir du serveur Oracle retourne suffisamment de lignes pour remplir une mémoire tampon de la taille spécifiée. Valeurs plus élevées ont tendance à augmenter les performances lors de la récupération d’une grande quantité de données.  
   
-    -   **Personnalisation** — l’appliquer Standard ODBC DayOfWeek case à cocher spécifie si le jeu de résultats est conforme au format jour de la semaine spécifié ODBC (dimanche = 1 ; Samedi = 7). Si cette case à cocher est désactivée, la valeur de Oracle spécifiques est retournée.  
+    -   **Personnalisation** -l’appliquer Standard ODBC DayOfWeek case à cocher spécifie si le jeu de résultats est conforme au format jour de la semaine spécifié ODBC (dimanche = 1 ; Samedi = 7). Si cette case à cocher est désactivée, la valeur de Oracle spécifiques est retournée.  
   
          La fonction SQLDescribeCol **retourne toujours une valeur pour la précision** case à cocher spécifie si le pilote doit retourner une valeur différente de zéro pour le *cbColDef* argument de **SQLDescribeCol**. Cet attribut de chaîne de connexion s’applique uniquement aux colonnes où il n’y a aucune mise à l’échelle définie par Oracle, tel que calculé numériques colonnes et les colonnes définies en tant que nombre sans mise à l’échelle ni précision. Un **SQLDescribeCol** appeler retourne 130 pour la précision lorsque Oracle ne fournit pas ces informations. Si cette case à cocher est désactivée, le pilote retourne 0 pour ces types de colonnes.  
   

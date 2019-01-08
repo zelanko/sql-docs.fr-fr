@@ -14,12 +14,12 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d5eadf38bcdb7573cf19941535182e2cc8f87f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fc706cd372f4bee0c9449b15de6d070240141bd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111499"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414786"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Créer, modifier et supprimer les abonnements standard (Reporting Services en mode natif)
   L'abonnement standard est un abonnement créé par des utilisateurs individuels qui souhaitent recevoir des rapports par messagerie électronique ou dans un dossier partagé. Ce type d'abonnement est toujours défini en fonction du rapport sur lequel il est basé.  
@@ -27,7 +27,7 @@ ms.locfileid: "48111499"
  Un utilisateur qui crée un abonnement en est le propriétaire. Chaque utilisateur peut modifier ou supprimer les abonnements qu'il possède.  
   
 > [!NOTE]  
->  En commençant par [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vous pouvez transférer la propriété d’un abonnement par programmation. Aucune interface utilisateur ne permet de transférer la propriété des abonnements. Pour plus d’informations, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  Depuis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez transférer par programme la propriété d'un abonnement. Aucune interface utilisateur ne permet de transférer la propriété des abonnements. Pour plus d'informations, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  Suivant les paramètres du fichier de configuration **RSReportServer.config** , les utilisateurs ont la possibilité d'ajouter des utilisateurs supplémentaires à un abonnement. Un responsable peut ainsi ajouter les adresses de messagerie de ses subordonnés directs pour qu'ils reçoivent une copie du rapport. La prise en charge de ceci varie selon que le champ À : est visible ou non lors de la définition d'abonnements individuels. Pour plus d’informations, consultez [configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48111499"
   
 -   Si vous souhaitez utiliser la remise par partage de fichiers, le dossier cible doit avoir été défini. Pour plus d’informations, consultez [configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
- Pour que vous puissiez vous abonner à un rapport, la source de données du rapport doit être configurée pour utiliser des informations d'identification stockées ou aucune information d'identification. Pour plus d’informations, consultez [Store les informations d’identification dans une Source de données Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). Si aucune information d'identification n'est utilisée, le bouton **Nouvel abonnement** n'est pas disponible.  
+ Pour que vous puissiez vous abonner à un rapport, la source de données du rapport doit être configurée pour utiliser des informations d'identification stockées ou aucune information d'identification. Pour plus d’informations, consultez [Stocker les informations d’identification dans une source de données Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). Si aucune information d'identification n'est utilisée, le bouton **Nouvel abonnement** n'est pas disponible.  
   
  Cette rubrique n'explique pas comment créer un abonnement piloté par les données. Pour obtenir des instructions sur la création d’un abonnement piloté par les données, consultez [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) ou recherchez la page d’informations relatives à la création d’un abonnement piloté par les données dans l’aide en ligne du Gestionnaire de rapports.  
   
@@ -173,11 +173,11 @@ ms.locfileid: "48111499"
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches et autorisations](../security/tasks-and-permissions.md)   
- [Créer et gérer des abonnements pour les serveurs de rapports en Mode SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Créer et gérer des abonnements pour les serveurs de rapports en Mode natif](../create-manage-subscriptions-native-mode-report-servers.md)   
- [Abonnements pilotés par les données](data-driven-subscriptions.md)   
- [Abonnements et remises &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../report-manager-ssrs-native-mode.md)   
+ [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
+ [Abonnements et remise &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)   
  [Utiliser Mes abonnements](use-my-subscriptions-native-mode-report-server.md)  
   
   

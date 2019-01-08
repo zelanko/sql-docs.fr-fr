@@ -10,20 +10,20 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f1a2840fbdf8fbafae3b4a8e17c200c32d4da65f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 00144c51e60b72fe043443d2a9c8d1d51a6cb8da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669778"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542062"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Création de fichiers de la valeur de la Variable (AccessToSQL)
-Un fichier de valeurs de Variable est un fichier XML contenant les valeurs de paramètre des commandes qui changent fréquemment sur les migrations de serveurs (par exemple, le nom du serveur source ou destination). En cas d’un grand nombre de migrations de base de données, plusieurs fichiers de variables pour stocker la valeur de chaque serveur source sont créés et référencés dans un fichier de script principal avec la **– v** passer à la ligne de commande. Ce comportement permet de conserver des valeurs statiques dans quelques fichiers de script avec les valeurs des variables dans plusieurs fichiers de variables.  
+Un fichier de valeurs de Variable est un fichier XML contenant les valeurs de paramètre des commandes qui changent fréquemment sur les migrations de serveurs (par exemple, le nom du serveur source ou destination). En cas d’un grand nombre de migrations de base de données, plusieurs fichiers de variables pour stocker la valeur de chaque serveur source sont créés et référencés dans un fichier de script principal avec la **- v** passer à la ligne de commande. Ce comportement permet de conserver des valeurs statiques dans quelques fichiers de script avec les valeurs des variables dans plusieurs fichiers de variables.  
   
 > [!NOTE]  
 > -  Les noms de variables ont le préfixe et suffixe avec le symbole $ (dollar). Si une variable n’est pas attribuée une valeur dans le fichier de la valeur de la variable, une erreur lors de l’analyse du fichier de script se produit, se traduisant par bloquées le processus d’exécution de console.  
 > -  Le caractère d’échappement **$** est **$$**. Si la valeur d’une valeur d’un paramètre de variable ou statique contient un **$** symbole (dollar), puis **$$** doit être spécifié pour le traiter comme un caractère au lieu d’une variable.  
-> -  À des fins de facilité de maintenance, les variables peuvent être déclarées à l’intérieur `‘variable-group’` éléments pour une séparation logique entre les variables définies par l’utilisateur.  Utilisation de cet élément n’est pas obligatoire.  
+> -  À des fins de facilité de maintenance, les variables peuvent être déclarées à l’intérieur `'variable-group'` éléments pour une séparation logique entre les variables définies par l’utilisateur.  Utilisation de cet élément n’est pas obligatoire.  
   
 **Exemples :**  
   

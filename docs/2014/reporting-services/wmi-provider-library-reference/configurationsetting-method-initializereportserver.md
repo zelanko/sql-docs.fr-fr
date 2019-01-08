@@ -19,12 +19,12 @@ ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 31276958172d94e72c7b6970728bfac968f678aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 97ace7573ff30891e2b54196204cdfdd4b56b3c9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114329"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402134"
 ---
 # <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>Méthode InitializeReportServer (WMI MSReportServer_ConfigurationSetting)
   Initialise l'instance du service de rapports spécifiée.  
@@ -63,7 +63,7 @@ public void InitializeReportServer(string InstallationID,
   
  Si le serveur de rapports [IsInitialized](configurationsetting-property-isinitialized.md) propriété est définie sur `true` lorsque la méthode InitializeReportServer est appelée, la méthode aboutit sans essayer de chiffrer la clé de chiffrement.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

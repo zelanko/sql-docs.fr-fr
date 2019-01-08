@@ -1,5 +1,5 @@
 ---
-title: Conventions ASSL XML | Documents Microsoft
+title: Conventions ASSL XML | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e7bdc53ee4e85ee0ad782985744b3722ade6fd14
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c357efe4636c1b502cdb57305b9072907d4b2e98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023446"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532067"
 ---
 # <a name="assl-xml-conventions"></a>Conventions ASSL XML
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "34023446"
   
  Pour représenter la hiérarchie d'objets, ASSL utilise les conventions XML suivantes :  
   
--   Tous les objets et propriétés sont représentés en tant qu'éléments, à l'exception des attributs XML standard tels que « xml:lang ».  
+-   Tous les objets et propriétés sont représentées en tant qu’éléments, à l’exception des attributs XML standard tels que « XML : lang ».  
   
--   Les noms d’éléments et les valeurs d’énumération suivent la convention d’affectation de noms Microsoft .NET Framework de Pascal sans traits de soulignement de casse.  
+-   Les noms d’éléments et les valeurs d’énumération suivent la convention d’affectation de noms Microsoft .NET Framework de Pascal sans traits de soulignement de mise en majuscules.  
   
 -   La casse de toutes les valeurs est préservée. Les valeurs des énumérations respectent également la casse.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "34023446"
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34023446"
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34023446"
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -107,10 +107,10 @@ ms.locfileid: "34023446"
  Analysis Services utilise les types de données XSD (XML Schema definition language) standard suivants :  
   
  **Int**  
- Valeur entière comprise entre -231 et 231 – 1.  
+ Valeur entière comprise entre-231 et 231-1.  
   
  **Long**  
- Valeur entière comprise entre -263 et 263 – 1.  
+ Valeur entière dans la plage de -263 et 263-1.  
   
  **String**  
  Valeur de chaîne conforme aux règles globales suivantes :  
@@ -124,7 +124,7 @@ ms.locfileid: "34023446"
  **Nom** et **ID** propriétés ont des limitations spéciales sur les caractères valides dans les éléments de chaîne. Pour plus d’informations sur **nom** et **ID** conventions, consultez [objets ASSL et caractéristiques des objets](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
  **DateTime**  
- A **DateTime** structure à partir de .NET Framework. A **DateTime** ne peut pas être NULL. La date la plus basse prise en charge par le **DataTime** type de données est le 1er janvier 1601, qui est disponible pour les programmeurs en tant que **DateTime.MinValue**. La date la plus bas pris en charge indique qu’un **DateTime** valeur est manquante.  
+ Un **DateTime** structure à partir de .NET Framework. Un **DateTime** valeur ne peut pas être NULL. La date la plus basse pris en charge par le **DataTime** type de données est le 1er janvier 1601, qui est disponible pour les programmeurs en tant que **DateTime.MinValue**. La date la plus basse pris en charge indique qu’un **DateTime** valeur est manquante.  
   
  **Booléen**  
  Énumération constituée de seulement deux valeurs, telles que {true, false} ou {0, 1}.  
@@ -137,7 +137,7 @@ ms.locfileid: "34023446"
 |**Booléen**|False|  
 |**String**|"" (chaîne vide)|  
 |**Entier** ou **Long**|0 (zéro)|  
-|**horodateur**|12:00:00 AM, 1/1/0001 (correspondant à un .NET Frameworks **System.DateTime** avec 0 battement)|  
+|**Horodatage**|12:00:00 AM, 1/1/0001 (correspondant à un .NET Framework **System.DateTime** avec 0 battement)|  
   
  Un élément qui est présent mais vide est considéré comme ayant une valeur de chaîne null, et non la valeur par défaut.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "34023446"
   
 -   Il n'est pas possible de déterminer par programme si la propriété d'un objet enfant a été définie directement sur l'objet enfant ou héritée.  
   
- Certains éléments possèdent des valeurs par défaut définies qui s'appliquent lorsque ces éléments sont manquants. Par exemple, le **Dimension** dans le fragment XML suivant, les éléments sont équivalents bien qu’un **Dimension** élément contient un **Visible** l’élément, mais l’autre **Dimension** n’est pas le cas de l’élément.  
+ Certains éléments possèdent des valeurs par défaut définies qui s'appliquent lorsque ces éléments sont manquants. Par exemple, le **Dimension** dans le fragment XML suivant, les éléments sont équivalents bien qu’un **Dimension** élément contient un **Visible** élément, mais les autres  **Dimension** n’est pas le cas de l’élément.  
   
  `<Dimension>`  
   

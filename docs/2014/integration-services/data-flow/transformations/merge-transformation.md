@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergetrans.f1
@@ -19,12 +18,12 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6125dbd164065afc0ee808bb77a4e2544606ef8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 322caa6b9be17e860afaa1e3526a3590df049820
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226629"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790951"
 ---
 # <a name="merge-transformation"></a>transformation de fusion
   La transformation de fusion combine deux datasets triés en un seul datasets. Les lignes de chaque ensemble de données sont insérées dans la sortie en fonction des valeurs de leurs colonnes clés.  
@@ -74,7 +73,7 @@ ms.locfileid: "48226629"
   
 ## <a name="see-also"></a>Voir aussi  
  [Transformation de jointure de fusion](merge-join-transformation.md)   
- [Union All Transformation](union-all-transformation.md)   
+ [Transformation d'union totale](union-all-transformation.md)   
  [Flux de données](../data-flow.md)   
  [Transformations Integration Services](integration-services-transformations.md)  
   

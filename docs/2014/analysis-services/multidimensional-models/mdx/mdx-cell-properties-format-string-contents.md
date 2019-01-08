@@ -17,20 +17,20 @@ ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8226f0d065620db27ca1046500c89360613d9eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7035fb90d9cc84743fc484e020efd6a19a217a4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052265"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512786"
 ---
 # <a name="formatstring-contents-mdx"></a>Contenu de FORMAT_STRING (MDX)
-  Le `FORMAT_STRING` formats de propriété de cellule la `VALUE` propriété de cellule, la création de la valeur pour le `FORMATTED_VALUE` propriété de cellule. Le `FORMAT_STRING` propriété de cellule gère les valeurs brutes chaîne et numérique, appliquant une expression de format par rapport à la valeur à retourner une valeur mise en forme pour le `FORMATTED_VALUE` propriété de cellule. Les tableaux suivants détaillent la syntaxe et les caractères de mise en forme utilisés pour traiter les valeurs de type chaîne et numérique.  
+  La propriété de cellule `FORMAT_STRING` met en forme la propriété de cellule `VALUE`, en créant la valeur de la propriété de cellule `FORMATTED_VALUE`. La propriété de cellule `FORMAT_STRING`, qui traite les valeurs brutes de types chaîne et numérique, applique une expression de format à la valeur afin de retourner une valeur mise en forme pour la propriété de cellule `FORMATTED_VALUE`. Les tableaux suivants détaillent la syntaxe et les caractères de mise en forme utilisés pour traiter les valeurs de type chaîne et numérique.  
   
 ## <a name="string-values"></a>Valeurs de type chaîne  
  Une expression de format pour une chaîne peut posséder une section, ou deux sections séparées par un point-virgule (;).  
   
-|Utilisation|Résultats|  
+|Utilisation|Résultat|  
 |-----------|------------|  
 |Une section|La mise en forme s'applique à toutes les valeurs de type chaîne.|  
 |Deux sections|La première section s'applique aux données de type chaîne tandis que la seconde s'applique aux valeurs NULL et aux chaînes de longueur zéro ("").|  
@@ -48,7 +48,7 @@ ms.locfileid: "48052265"
 ## <a name="numeric-values"></a>Valeurs numériques  
  Pour les nombres, une expression de format définie par l'utilisateur peut posséder de une à quatre sections, séparées par des points-virgules. Si l'argument de format contient l'un des formats numériques nommés, une seule section est autorisée.  
   
-|Utilisation|Résultats|  
+|Utilisation|Résultat|  
 |-----------|------------|  
 |Une section|L'expression de format s'applique à toutes les valeurs.|  
 |Deux sections|La première section s'applique aux valeurs positives et aux zéros, et la seconde aux valeurs négatives.|  
@@ -74,14 +74,14 @@ ms.locfileid: "48052265"
 |None|Affiche le nombre sans mise en forme.|  
 |**0**|Représente un espace réservé de chiffre qui affiche un chiffre ou zéro (0).<br /><br /> Si le nombre possède un chiffre là où figure le zéro dans la chaîne de format, la valeur mise en forme affiche ce chiffre. Sinon, zéro est affiché à la place.<br /><br /> Si le nombre contient moins de chiffres que de zéros (de part et d'autre du séparateur décimal) dans l'expression de format, la valeur mise en forme affiche des zéros non significatifs ou à droite.<br /><br /> Si le nombre contient davantage de chiffres à droite du séparateur décimal qu'il n'y a de zéros à droite du séparateur décimal dans l'expression de format, la valeur mise en forme arrondit le nombre à autant de positions décimales qu'il y a de zéros.<br /><br /> Si le nombre comporte davantage de chiffres à gauche du séparateur décimal qu'il n'y a de zéros à gauche du séparateur décimal dans l'expression de format, la valeur mise en forme affiche les chiffres supplémentaires sans modification.|  
 |**#**|Représente un espace réservé de chiffre qui affiche un chiffre ou rien.<br /><br /> Si l’expression a un chiffre à la position où le signe dièse (**#**) apparaît dans la chaîne de format, la valeur mise en forme affiche ce chiffre. Sinon, rien n'est affiché à la place.<br /><br /> L’espace réservé du signe dièse (**#**) fonctionne comme l’espace réservé du chiffre zéro (**0**), à la différence qu’aucun zéro non significatif de début et de fin n’est affiché si le nombre a un nombre de chiffres inférieur ou égal au nombre de caractères **#** de l’un ou l’autre côté du séparateur décimal dans l’expression de format.|  
-|**.**|Représente un espace réservé de décimale qui détermine le nombre de chiffres affichés à gauche et à droite du séparateur décimal.<br /><br /> Si l’expression de format contient seulement des signes dièse (**#**) à gauche du point (**.**), les nombres inférieurs à 1 commencent par un séparateur décimal. Pour afficher un zéro non significatif avec des nombres fractionnaires, utilisez zéro (0) comme premier espace réservé de chiffre à gauche du séparateur décimal.<br /><br /> Le caractère effectivement utilisé comme séparateur décimal dans le résultat mis en forme dépend du format numérique reconnu par votre système.<br /><br /> Remarque : dans certains paramètres régionaux, une virgule est utilisée comme séparateur décimal.|  
+|**.**|Représente un espace réservé de décimale qui détermine le nombre de chiffres affichés à gauche et à droite du séparateur décimal.<br /><br /> Si l’expression de format contient seulement des signes dièse (**#**) à gauche du point (**.**), les nombres inférieurs à 1 commencent par un séparateur décimal. Pour afficher un zéro non significatif avec des nombres fractionnaires, utilisez zéro (0) comme premier espace réservé de chiffre à gauche du séparateur décimal.<br /><br /> Le caractère effectivement utilisé comme séparateur décimal dans le résultat mis en forme dépend du format numérique reconnu par votre système.<br /><br /> Remarque : Dans certains paramètres régionaux, une virgule est utilisée comme séparateur décimal.|  
 |**%**|Représente un espace réservé de pourcentage. L'expression est multipliée par 100. Le caractère de pourcentage (**%**) est inséré à la position où le pourcentage s’affiche dans la chaîne de format.|  
-|**,**|Représente un séparateur de milliers qui sépare les milliers des centaines dans un nombre possédant quatre chiffres ou plus à gauche du séparateur décimal.<br /><br /> L’utilisation standard du séparateur de milliers est spécifiée si le format contient un séparateur de milliers entouré par des espaces réservés de chiffres (**0** ou **#**).<br /><br /> La présence de deux séparateurs des milliers contigus, ou d'un séparateur des milliers juste à gauche du séparateur décimal (qu'une décimale soit ou non spécifiée), signifie « changer l'échelle du nombre en le divisant par 1 000, en l'arrondissant le cas échéant ». Par exemple, vous pouvez utiliser la chaîne de format «**##0**,, » pour représenter 100 millions par 100. Les nombres inférieurs à 1 million sont affichés sous forme de 0. Deux séparateurs des milliers adjacents dans toute position autre qu'immédiatement à gauche du séparateur décimal sont traités comme spécifiant l'utilisation d'un séparateur des milliers.<br /><br /> Le caractère effectivement utilisé comme séparateur des milliers dans le résultat mis en forme dépend du format numérique reconnu par votre système.<br /><br /> Remarque : dans certains paramètres régionaux, un point est utilisé comme séparateur de milliers.|  
-|**:**|Représente un séparateur horaire qui sépare les heures, les minutes et les secondes lors de la mise en forme de valeurs horaires.<br /><br /> Remarque : dans certains paramètres régionaux, d’autres caractères peuvent être utilisés comme séparateurs d’heure.<br /><br /> Le caractère réel utilisé comme séparateur d'heure dans le résultat mis en forme est déterminé par les paramètres système de votre ordinateur.|  
-|**/**|Représente un séparateur de date qui sépare le jour, le mois et l'année lorsque les valeurs de date sont mises en forme.<br /><br /> Le caractère réel utilisé comme séparateur de date dans le résultat mis en forme est déterminé par les paramètres système de votre ordinateur.<br /><br /> Remarque : dans certains paramètres régionaux, d’autres caractères peuvent être utilisés comme séparateurs de date.|  
+|**,**|Représente un séparateur de milliers qui sépare les milliers des centaines dans un nombre possédant quatre chiffres ou plus à gauche du séparateur décimal.<br /><br /> L’utilisation standard du séparateur de milliers est spécifiée si le format contient un séparateur de milliers entouré par des espaces réservés de chiffres (**0** ou **#**).<br /><br /> La présence de deux séparateurs des milliers contigus, ou d'un séparateur des milliers juste à gauche du séparateur décimal (qu'une décimale soit ou non spécifiée), signifie « changer l'échelle du nombre en le divisant par 1 000, en l'arrondissant le cas échéant ». Par exemple, vous pouvez utiliser la chaîne de format «**##0**,, » pour représenter 100 millions par 100. Les nombres inférieurs à 1 million sont affichés sous forme de 0. Deux séparateurs des milliers adjacents dans toute position autre qu'immédiatement à gauche du séparateur décimal sont traités comme spécifiant l'utilisation d'un séparateur des milliers.<br /><br /> Le caractère effectivement utilisé comme séparateur des milliers dans le résultat mis en forme dépend du format numérique reconnu par votre système.<br /><br /> Remarque : Dans certains paramètres régionaux, un point est utilisé comme séparateur des milliers.|  
+|**:**|Représente un séparateur horaire qui sépare les heures, les minutes et les secondes lors de la mise en forme de valeurs horaires.<br /><br /> Remarque : Dans certains paramètres régionaux, les autres caractères peuvent être utilisés comme séparateur horaire.<br /><br /> Le caractère réel utilisé comme séparateur d'heure dans le résultat mis en forme est déterminé par les paramètres système de votre ordinateur.|  
+|**/**|Représente un séparateur de date qui sépare le jour, le mois et l'année lorsque les valeurs de date sont mises en forme.<br /><br /> Le caractère réel utilisé comme séparateur de date dans le résultat mis en forme est déterminé par les paramètres système de votre ordinateur.<br /><br /> Remarque : Dans certains paramètres régionaux, d'autres caractères peuvent être utilisés comme séparateurs de date.|  
 |**E- E+ e- e+**|Représente le format scientifique.<br /><br /> Si l’expression de format contient au moins un espace réservé de chiffre (**0** ou **#**) à droite de **E-**, **E+**, **e-** ou **e+**, la valeur mise en forme affiche le nombre dans le format scientifique, et E ou e est inséré entre le nombre et son exposant. Le nombre d'espaces réservés à des chiffres à droite détermine le nombre de chiffres dans l'exposant. Utilisez **E-** ou **e-** pour insérer un signe moins à côté des exposants négatifs. Utilisez **E+** ou **e+** pour insérer un signe moins à côté des exposants négatifs et un signe plus à côté des exposants positifs.|  
 |**- + $ ( )**|Affiche un caractère littéral.<br /><br /> Pour afficher un caractère autre que ceux répertoriés, faites-le précéder d’une barre oblique inverse (**\\**) ou placez-le entre guillemets doubles (**" "**).|  
-|**\\**|Affiche le prochain caractère de la chaîne de format.<br /><br /> Pour afficher un caractère ayant une signification spéciale en tant que caractère littéral, faites-le précéder d’une barre oblique inverse (**\\**). La barre oblique inverse elle-même n'est pas affichée. L'utilisation d'une barre oblique inverse équivaut à mettre le caractère suivant entre des guillemets doubles. Pour afficher une barre oblique inverse, utilisez deux barres obliques inverses (**\\\\**). Exemples de caractères ne pouvant pas être affichés comme caractères littéraux :<br /><br /> les caractères de mise en forme de date et d’heure –**a**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y**, **/** et **:**<br /><br /> les caractères de mise en forme numérique –**#**, **0**, **%**, **E**, **e**, **virgule**et **point**<br /><br /> les caractères de mise en forme de chaîne –**@**, **&**, **\<**, **>** et **!**|  
+|**\\**|Affiche le prochain caractère de la chaîne de format.<br /><br /> Pour afficher un caractère ayant une signification spéciale en tant que caractère littéral, faites-le précéder d’une barre oblique inverse (**\\**). La barre oblique inverse elle-même n'est pas affichée. L'utilisation d'une barre oblique inverse équivaut à mettre le caractère suivant entre des guillemets doubles. Pour afficher une barre oblique inverse, utilisez deux barres obliques inverses (**\\\\**). Exemples de caractères ne pouvant pas être affichés comme caractères littéraux :<br /><br /> Les caractères mise en forme de date et heure de mise en forme -**un**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y** , **/**, et **:**<br /><br /> Les caractères mise en forme numérique -**#**, **0**, **%**, **E**, **e**, **virgules**, et **période**<br /><br /> Les caractères mise en forme de chaîne -**@**, **&**, **\<**, **>**, et **!**|  
 |**"ABC"**|Affiche la chaîne placée entre les guillemets doubles (**" "**).<br /><br /> Pour codifier l’insertion d’une chaîne dans le format, placez le texte entre Chr(**34**). (Le code de caractère pour un guillemet double est **34**.)|  
   
 ### <a name="named-numeric-formats"></a>Formats numériques nommés  
@@ -104,37 +104,37 @@ ms.locfileid: "48052265"
   
 |Caractère|Description|  
 |---------------|-----------------|  
-|**:**|Représente un séparateur horaire qui sépare les heures, les minutes et les secondes lors de la mise en forme de valeurs horaires.<br /><br /> Le caractère réel utilisé comme séparateur d'heure dans le résultat mis en forme est déterminé par les paramètres système de votre ordinateur.<br /><br /> Remarque : dans certains paramètres régionaux, d’autres caractères peuvent être utilisés comme séparateurs d’heure.|  
-|**/**|Représente un séparateur de date qui sépare le jour, le mois et l'année lorsque les valeurs de date sont mises en forme.<br /><br /> Le caractère réel utilisé comme séparateur de date dans le résultat mis en forme est déterminé par les paramètres système de votre ordinateur.<br /><br /> Remarque : dans certains paramètres régionaux, d’autres caractères peuvent être utilisés pour représenter le séparateur de date.|  
+|**:**|Représente un séparateur horaire qui sépare les heures, les minutes et les secondes lors de la mise en forme de valeurs horaires.<br /><br /> Le caractère réel utilisé comme séparateur d'heure dans le résultat mis en forme est déterminé par les paramètres système de votre ordinateur.<br /><br /> Remarque : Dans certains paramètres régionaux, d'autres caractères peuvent être utilisés comme séparateurs d'heure.|  
+|**/**|Représente un séparateur de date qui sépare le jour, le mois et l'année lorsque les valeurs de date sont mises en forme.<br /><br /> Le caractère réel utilisé comme séparateur de date dans le résultat mis en forme est déterminé par les paramètres système de votre ordinateur.<br /><br /> Remarque : Dans certains paramètres régionaux, les autres caractères peuvent être utilisés pour représenter le séparateur de date|  
 |**C**|Affiche, dans l'ordre, la date sous la forme **ddddd** et l'heure sous la forme **ttttt**.<br /><br /> Affiche uniquement les informations de date si le numéro de série de la date ne comporte pas de partie fractionnaire. Affiche uniquement les informations d'heure s'il n'y a pas de partie entière.|  
-|**d**|Affiche le jour sous la forme d'un nombre sans zéro non significatif (de 1 à 31).|  
-|**jj**|Affiche le jour sous la forme d'un nombre comprenant au besoin un zéro non significatif (de 01 à 31).|  
-|**ddd**|Affiche le jour sous forme abrégée (dim–sam).|  
-|**dddd**|Affiche le jour sous forme non abrégée (dimanche–samedi).|  
+|**d**|Affiche le jour sous la forme d’un nombre sans zéro non significatif (de 1 à 31).|  
+|**jj**|Affiche le jour sous la forme d’un nombre avec un zéro non significatif (de 01 à 31).|  
+|**ddd**|Affiche le jour sous forme abrégée (Dim à SAM).|  
+|**dddd**|Affiche le jour sous forme non abrégée (dimanche à samedi).|  
 |**ddddd**|Affiche la date complète (jour, mois et année), d'après le format de date abrégée défini sur votre système.<br /><br /> Pour Microsoft Windows, le format de date abrégée par défaut est **j/m/aa**.|  
 |**dddddd**|Affiche un numéro de série de date complète (jour, mois et année), d'après le format de date complète défini sur votre système.<br /><br /> Pour Windows, le format de date complète par défaut est **mmmm dd, yyyy**.|  
 |**w**|Affiche le jour de la semaine sous la forme d'un nombre (de 1 pour dimanche à 7 pour samedi).|  
-|**ww**|Affiche la semaine de l'année sous la forme d'un nombre (de 1 à 54).|  
-|**m**|Affiche le mois sous la forme d'un nombre sans zéro non significatif (de 1 à 12).<br /><br /> Si **m** suit immédiatement **h** ou **hh**, les minutes sont affichées au lieu du mois.|  
-|**mm**|Affiche le mois sous la forme d'un nombre comprenant au besoin un zéro non significatif (de 01 à 12).<br /><br /> Si **m** suit immédiatement **h** ou **hh**, les minutes sont affichées au lieu du mois.|  
-|**mmm**|Affiche le mois sous forme abrégée (jan–déc).|  
-|**mmmm**|Affiche le mois sous forme non abrégée (janvier–décembre).|  
-|**q**|Affiche le trimestre de l'année sous la forme d'un nombre (de 1 à 4).|  
-|**y**|Affiche le jour de l'année sous la forme d'un nombre (de 1 à 366).|  
-|**yy**|Affiche l'année sous la forme d'un nombre à deux chiffres (de 00 à 99).|  
-|**aaaa**|Affiche l'année sous la forme d'un nombre à quatre chiffres (de 100 à 9999).|  
-|**h**|Affiche l'heure sous la forme d'un nombre sans zéro non significatif (de 0 à 23).|  
-|**hh**|Affiche l'heure sous la forme d'un nombre comprenant au besoin des zéros non significatifs (de 00 à 23).|  
-|**n**|Affiche les minutes sous la forme d'un nombre sans zéro non significatif (de 0 à 59).|  
-|**nn**|Affiche les minutes sous la forme d'un nombre comprenant au besoin des zéros non significatifs (de 00 à 59).|  
-|**s**|Affiche les secondes sous la forme d'un nombre sans zéro non significatif (de 0 à 59).|  
-|**ss**|Affiche les secondes sous la forme d'un nombre comprenant au besoin des zéros non significatifs (de 00 à 59).|  
+|**ww**|Affiche la semaine de l’année sous la forme d’un nombre (1-54).|  
+|**m**|Affiche le mois sous la forme d’un nombre sans zéro non significatif (de 1 à 12).<br /><br /> Si **m** suit immédiatement **h** ou **hh**, les minutes sont affichées au lieu du mois.|  
+|**mm**|Affiche le mois sous la forme d’un nombre avec un zéro non significatif (de 01 à 12).<br /><br /> Si **m** suit immédiatement **h** ou **hh**, les minutes sont affichées au lieu du mois.|  
+|**mmm**|Affiche le mois sous forme abrégée (Jan à Dec).|  
+|**mmmm**|Affiche le mois sous forme non abrégée (janvier à décembre).|  
+|**q**|Affiche le trimestre de l’année sous la forme d’un nombre (1-4).|  
+|**y**|Affiche le jour de l’année sous la forme d’un nombre (1 à 366).|  
+|**yy**|Affiche l’année sous la forme d’un nombre à deux chiffres (de 00 à 99).|  
+|**aaaa**|Affiche l’année sous la forme d’un nombre à quatre chiffres (100-9999).|  
+|**h**|Affiche l’heure sous la forme d’un nombre sans zéros non significatifs (0-23).|  
+|**hh**|Affiche l’heure sous la forme d’un nombre avec des zéros non significatifs (de 00 à 23).|  
+|**n**|Affiche la minute sous la forme d’un nombre sans zéro non significatif (0-59).|  
+|**nn**|Affiche la minute sous la forme d’un nombre avec des zéros non significatifs (de 00 à 59).|  
+|**s**|Affiche la seconde sous la forme d’un nombre sans zéro non significatif (0-59).|  
+|**ss**|Affiche la seconde sous la forme d’un nombre avec des zéros non significatifs (de 00 à 59).|  
 |**t t t t t**|Affiche l'heure complète (heures, minutes et secondes), dans une mise en forme qui reprend le séparateur horaire défini dans les paramètres horaires de votre système.<br /><br /> Un zéro non significatif apparaît si l'option du zéro non significatif est sélectionnée et si l'heure est antérieure à 10:00, dans le cycle A.M. ou P.M. cycle. Par exemple, 09:59.<br /><br /> Pour Windows, le format d'heure par défaut est **h:mm:ss**.|  
-|**AM/PM**|Affiche **AM** en majuscules avec toute heure comprise entre minuit et midi et **PM** en majuscules avec toute heure comprise entre midi et minuit.<br /><br /> Remarque : utilise le format d’horloge sur 12 heures.|  
-|**am/pm**|Affiche **am** en minuscules avec toute heure comprise entre minuit et midi, et **pm** en minuscules avec toute heure comprise entre midi et minuit.<br /><br /> Remarque : utilise le format d’horloge sur 12 heures.|  
-|**A/P**|Affiche un **A** majuscule avec toute heure comprise entre minuit et midi et **P** majuscule avec toute heure comprise entre midi et minuit.<br /><br /> Remarque : utilise le format d’horloge sur 12 heures.|  
-|**a/p**|Affiche un **a** minuscule avec toute heure comprise entre minuit et midi, et **p** minuscule avec toute heure comprise entre midi et minuit.<br /><br /> Remarque : utilise le format d’horloge sur 12 heures.|  
-|**AMPM**|Affiche la constante de chaîne AM telle qu'elle est définie par votre système avec toute heure comprise entre minuit et midi, et la constante de chaîne PM telle qu'elle est définie par votre système avec toute heure comprise entre midi et minuit.<br /><br /> Remarque : utilise le format d’horloge sur 12 heures.<br /><br /> **AMPM** peut être exprimé en majuscules ou en minuscules, mais la casse de la chaîne affichée correspond à la définition de la chaîne dans les paramètres de votre système.<br /><br /> Pour Windows, le format par défaut est **AM/PM**.|  
+|**AM/PM**|Affiche **AM** en majuscules avec toute heure comprise entre minuit et midi et **PM** en majuscules avec toute heure comprise entre midi et minuit.<br /><br /> Remarque : Utilise le format d'horloge sur 12 heures.|  
+|**am/pm**|Affiche **am** en minuscules avec toute heure comprise entre minuit et midi, et **pm** en minuscules avec toute heure comprise entre midi et minuit.<br /><br /> Remarque : Utilise le format d'horloge sur 12 heures.|  
+|**A/P**|Affiche un **A** majuscule avec toute heure comprise entre minuit et midi et **P** majuscule avec toute heure comprise entre midi et minuit.<br /><br /> Remarque : Utilise le format d'horloge sur 12 heures.|  
+|**a/p**|Affiche un **a** minuscule avec toute heure comprise entre minuit et midi, et **p** minuscule avec toute heure comprise entre midi et minuit.<br /><br /> Remarque : Utilise le format d'horloge sur 12 heures.|  
+|**AMPM**|Affiche la constante de chaîne AM telle qu'elle est définie par votre système avec toute heure comprise entre minuit et midi, et la constante de chaîne PM telle qu'elle est définie par votre système avec toute heure comprise entre midi et minuit.<br /><br /> Remarque : Utilise le format d'horloge sur 12 heures.<br /><br /> **AMPM** peut être exprimé en majuscules ou en minuscules, mais la casse de la chaîne affichée correspond à la définition de la chaîne dans les paramètres de votre système.<br /><br /> Pour Windows, le format par défaut est **AM/PM**.|  
   
 ### <a name="named-date-formats"></a>Formats de date nommés  
  Le tableau suivant identifie les noms de formats de date et d'heure prédéfinis :  
@@ -151,8 +151,8 @@ ms.locfileid: "48052265"
   
 ## <a name="see-also"></a>Voir aussi  
  [LANGUAGE et FORMAT_STRING sur FORMATED_VALUE](mdx-cell-properties-formatted-value-property.md)   
- [À l’aide des propriétés de cellule &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
- [Création et utilisation des valeurs de propriété &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
- [Principes de base de requête MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Utilisation des propriétés de cellule &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
+ [Création et utilisation de valeurs de propriétés &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

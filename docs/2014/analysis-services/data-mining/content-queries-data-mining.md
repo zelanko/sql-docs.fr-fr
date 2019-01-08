@@ -11,12 +11,12 @@ ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc6f7db4783f1fc828c183c76563a6fed42ab2ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b500821dff03210d63007ef4831f93327b5e6bdb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209809"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530513"
 ---
 # <a name="content-queries-data-mining"></a>Requêtes de contenu (Exploration de données)
   Une requête de contenu est une façon d'extraire des informations sur les statistiques internes et la structure du modèle d'exploration de données. Parfois, une requête de contenu peut fournir des détails qui ne sont pas aisément disponibles dans la visionneuse. Vous pouvez également utiliser les résultats d'une requête de contenu pour extraire des informations par programme pour d'autres utilisations.  
@@ -135,7 +135,7 @@ ms.locfileid: "48209809"
   
  Certains exemples sont fournis dans cette section pour montrer comment le choix de l'algorithme affecte le type d'informations stockées dans le modèle. Pour plus d’informations sur le contenu du modèle d’exploration de données et sur le contenu spécifique à chaque type de modèle, consultez [Contenu du modèle d’exploration de données &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Assoc"></a> Exemple 1 : requête de contenu sur un modèle d'association  
+###  <a name="bkmk_Assoc"></a> Exemple 1 : Requête de contenu sur un modèle d'association  
  L'instruction, `SELECT FROM <model>.CONTENT`, retourne différents types d'informations, selon le type de modèle que vous interrogez. Pour un modèle d'association, le *type de nœud*constitue une information clé. Les nœuds sont comme des conteneurs pour les informations dans le contenu du modèle. Dans un modèle d'association, les nœuds qui représentent des règles ont une valeur NODE_TYPE de 8, tandis que les nœuds qui représentent des jeux d'éléments ont une valeur NODE_TYPE de 7.  
   
  Ainsi, la requête suivante retourne les 10 premiers jeux d’éléments, classés par prise en charge (classement par défaut).  
@@ -145,7 +145,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- La requête suivante est générée sur la base de ces informations. La requête suivante retourne trois colonnes : l'ID du nœud, la règle complète et le produit dans la partie droite du jeu d'éléments, c'est-à-dire le produit prédit pour être associé à d'autres produits dans le cadre d'un jeu d'éléments.  
+ La requête suivante est générée sur la base de ces informations. La requête retourne trois colonnes : l’ID du nœud, la règle complète et le produit sur le côté droit de l’ensemble d’éléments-autrement dit, le produit qui est prédite à associer à d’autres produits dans le cadre d’un jeu d’éléments.  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -167,7 +167,7 @@ ORDER BY NODE_SUPPORT DESC
   
  Pour obtenir plus d’exemples, consultez [Exemples de requête de modèle d’association](association-model-query-examples.md).  
   
-###  <a name="bkmk_DecTree"></a> Exemple 2 : requête de contenu sur un modèle d'arbre de décision  
+###  <a name="bkmk_DecTree"></a> Exemple 2 : Requête de contenu sur un modèle d'arbre de décision  
  Un modèle d'arbre de décision peut être utilisé pour la prédiction ainsi que pour la classification.  Dans cet exemple, on suppose que vous utilisez le modèle pour prédire un résultat, mais vous souhaitez également découvrir quels facteurs ou règles peuvent être utilisés pour classer les résultats.  
   
  Dans un modèle d'arbre de décision, les nœuds sont utilisés pour représenter des arbres et des nœuds terminaux. La légende de chaque nœud contient la description du chemin d'accès au résultat. Par conséquent, pour tracer le chemin d'accès d'un résultat particulier, vous devez identifier le nœud qui le contient, et obtenir des détails relatifs à ce nœud.  
@@ -197,7 +197,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
  Pour plus d'informations sur l'utilisation des ensembles de lignes hiérarchiques, consultez la spécification OLEDB sur MSDN.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Présentation de l’instruction DMX Select](/sql/dmx/understanding-the-dmx-select-statement)   
+ [Présentation de l'instruction DMX Select](/sql/dmx/understanding-the-dmx-select-statement)   
  [Requêtes d’exploration de données](data-mining-queries.md)  
   
   

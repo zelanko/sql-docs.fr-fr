@@ -14,24 +14,24 @@ ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be4bab2d37570dab0bc3e6048b999330ddebb7f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61871299c35df0495932f1b149fe99ab858edaa5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142799"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524875"
 ---
 # <a name="integration-services-features-and-tasks"></a>Fonctionnalités et tâches Integration Services
-  Trouvez des informations dont — concepteur, développeur, analyste ou administrateur — a besoin pour créer et développer [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. Apprenez ensuite à intégrer ces packages dans vos applications et sites Web.  
+  Trouver des informations que tout le monde-concepteur, développeur, analyste ou administrateur-a besoin pour créer et développer [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. Apprenez ensuite à intégrer ces packages dans vos applications et sites Web.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Integration Services &#40;SSIS&#41; et environnements de Studio](integration-services-ssis-development-and-management-tools.md)  
   
  [Packages Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
   
- [Integration Services &#40;SSIS&#41; connexions](connection-manager/integration-services-ssis-connections.md)  
+ [Connexions Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md)  
   
- [Integration Services &#40;SSIS&#41; projets](integration-services-ssis-projects-and-solutions.md)  
+ [Projets Integration Services &#40;SSIS&#41;](integration-services-ssis-projects-and-solutions.md)  
   
  [Integration Services &#40;SSIS&#41; paramètres](integration-services-ssis-package-and-project-parameters.md)  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48142799"
   
  [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)  
   
- [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)  
+ [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
- [Integration Services &#40;SSIS&#41; gestionnaires d’événements](integration-services-ssis-event-handlers.md)  
+ [Gestionnaires d’événements Integration Services &#40;SSIS&#41](integration-services-ssis-event-handlers.md)  
   
  [Service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)  
   

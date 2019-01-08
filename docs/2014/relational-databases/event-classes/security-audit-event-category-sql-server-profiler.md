@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,12 +16,12 @@ ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cef812c3473ce2089f1fd5f7dc8e6204e787e570
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f2f854c7a6dbd0d1ab569f87bf053a5b9f45058
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123499"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761501"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Audit de sécurité, catégorie d'événements (SQL Server Profiler)
   La catégorie d’événements d’ **audit de sécurité** contient, comme son nom l’indique, les événements liés à l’activité d’audit de la sécurité.  
@@ -42,7 +41,7 @@ ms.locfileid: "48123499"
 |[Classe d'événements Audit Broker Login](audit-broker-login-event-class.md)|Crée un rapport de messages d'audit associés à la sécurité de transport Service Broker.|  
 |[Classe d'événements Audit Change Audit](audit-change-audit-event-class.md)|Indique qu'une modification de trace d'audit a été effectuée.|  
 |[Classe d'événements Audit Change Database Owner](audit-change-database-owner-event-class.md)|Indique que les autorisations de modification du propriétaire d'une base de données ont été vérifiées.|  
-|[Audit Database Management, classe d’événements](audit-database-management-event-class.md)|Indique qu'une base de données a été créée, modifiée ou supprimée.|  
+|[Classe d'événements Audit Database Management](audit-database-management-event-class.md)|Indique qu'une base de données a été créée, modifiée ou supprimée.|  
 |[Audit Database Mirroring Login, classe d'événements](audit-database-mirroring-login-event-class.md)|Crée un rapport de messages d'audit associés à la sécurité de transport de la mise en miroir de bases de données.|  
 |[Classe d'événements Audit Database Object Access](audit-database-object-access-event-class.md)|Indique qu'un objet de base de données tel qu'un schéma, a été utilisé.|  
 |[Classe d'événements Audit Database Object GDR](audit-database-object-gdr-event-class.md)|Indique qu'un événement GDR pour un objet de base de données s'est produit.|  
@@ -52,9 +51,9 @@ ms.locfileid: "48123499"
 |[Classe d'événements Audit Database Principal Impersonation](audit-database-principal-impersonation-event-class.md)|Indique qu'un emprunt d'identité s'est produit dans l'étendue de la base de données.|  
 |[Classe d'événements Audit Database Principal Management](audit-database-principal-management-event-class.md)|Indique que des principaux ont été créés, modifiés ou supprimés d'une base de données.|  
 |[Classe d'événements Audit Database Scope GDR](audit-database-scope-gdr-event-class.md)|Indique qu’un événement GRANT, REVOKE ou DENY a été émis pour une autorisation relative aux instructions par un utilisateur dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Audit DBCC, classe d’événements](audit-dbcc-event-class.md)|Indique qu'une commande DBCC a été émise.|  
+|[Classe d'événements Audit DBCC](audit-dbcc-event-class.md)|Indique qu'une commande DBCC a été émise.|  
 |[Audit Fulltext, classe d'événements](audit-fulltext-event-class.md)|Indique qu'un événement de texte intégral s'est produit.|  
-|[Audit Login Change Password, classe d’événements](audit-login-change-password-event-class.md)|Indique qu'un utilisateur a modifié son mot de passe d'ouverture de session [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Classe d'événements Audit Login Change Password](audit-login-change-password-event-class.md)|Indique qu'un utilisateur a modifié son mot de passe d'ouverture de session [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Classe d'événements Audit Login Change Property](audit-login-change-property-event-class.md)|Indique que la procédure **sp_defaultdb**, **sp_defaultlanguage**ou ALTER LOGIN a été utilisée pour modifier une propriété d’une connexion.|  
 |[Classe d'événements Audit Login](audit-login-event-class.md)|Indique qu'un utilisateur s'est connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Classe d'événements Audit Login Failed](audit-login-failed-event-class.md)|Indique qu'un utilisateur a tenté de se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et a échoué.|  

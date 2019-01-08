@@ -10,15 +10,15 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3471abb7a551de576dfdf01de2a5fcf980b60527
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061269"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509228"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimer les besoins en mémoire des tables mémoire optimisées
-  Si vous créez une table [!INCLUDE[hek_2](../../includes/hek-2-md.md)] optimisée en mémoire ou migrez une table existante basée sur disque vers une table optimisée en mémoire, il est important d'estimer avec justesse les besoins en mémoire de chaque table, de façon à configurer le serveur avec suffisamment de mémoire. Cette section explique comment estimer la quantité de mémoire nécessaire pour accueillir les données d'une table mémoire optimisée.  
+  Si vous créez un nouveau [!INCLUDE[hek_2](../../includes/hek-2-md.md)] table mémoire optimisée ou migrez une table existante basée sur disque à une table optimisée en mémoire, il est important d’estimer avec justesse les besoins en mémoire de chaque table, vous pouvez configurer le serveur avec suffisamment de façon mémoire. Cette section explique comment estimer la quantité de mémoire nécessaire pour accueillir les données d'une table mémoire optimisée.  
   
  Si vous envisagez d’effectuer une migration à partir de tables sur disque vers des tables optimisées en mémoire, avant de poursuivre la lecture de cette rubrique, consultez [Déterminer si une table ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) pour obtenir des conseils sur les tables les plus judicieuses à faire migrer. Toutes les rubriques sous [Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md) fournissent des conseils sur la migration à partir de tables sur disque vers des tables optimisées en mémoire.  
   
@@ -77,12 +77,12 @@ GO
   
  **Mémoire pour les lignes de la table**  
   
- Selon les calculs ci-dessus, la taille de chaque ligne de la table mémoire optimisée est de 24 + 32 + 200, ou 256 octets.  Étant donné qu'il y a 5 millions de lignes, la table consommera 5 000 000 * 256 octets, ou 1 280 000 000 octets (soit environ 1,28 Go).  
+ Selon les calculs ci-dessus, la taille de chaque ligne de la table mémoire optimisée est de 24 + 32 + 200, ou 256 octets.  Étant donné qu’il y a 5 millions de lignes, la table consommera 5 000 000 * 256 octets, ou 1 280 000 000 octets (soit environ 1,28 Go).  
   
 ##  <a name="bkmk_IndexMeemory"></a> Mémoire pour les index  
  **Mémoire pour chaque index de hachage**  
   
- Chaque index de hachage est un tableau de hachage de pointeurs d'adresse 8 octets.  La taille du tableau est déterminée par le nombre de valeurs d'index uniques pour cet index – par exemple, le nombre de valeurs uniques Col2 est un bon point de départ pour la taille du tableau de t1c2_index. Un tableau de hachage qui est trop grand gaspille de la mémoire.  Un tableau de hachage qui est trop petit ralentit les performances, car il y a trop de collisions par valeurs d'index qui hachent au même index.  
+ Chaque index de hachage est un tableau de hachage de pointeurs d'adresse 8 octets.  La taille du tableau est mieux déterminée par le nombre de valeurs d’index uniques pour cet index, par exemple le nombre de valeurs uniques Col2 est un bon point de départ pour la taille du tableau de t1c2_index. Un tableau de hachage qui est trop grand gaspille de la mémoire.  Un tableau de hachage qui est trop petit ralentit les performances, car il y a trop de collisions par valeurs d'index qui hachent au même index.  
   
  Les index de hachage exécutent des recherches d'égalité rapides, notamment :  
   
@@ -115,7 +115,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  Pour plus d’informations sur le fonctionnement des index de hachage dans les tables optimisées en mémoire [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , consultez [Index de hachage](../../database-engine/hash-indexes.md).  
   
- **Remarque :** vous ne pouvez pas modifier la taille de tableau des index de hachage à la volée. Pour modifier la taille du tableau d'index de hachage, vous devez supprimer la table, modifier la valeur bucket_count et recréer la table.  
+ **Remarque :** vous ne pouvez pas modifier la taille du tableau d'index de hachage à la volée. Pour modifier la taille du tableau d'index de hachage, vous devez supprimer la table, modifier la valeur bucket_count et recréer la table.  
   
  **Définition de la taille de tableau des index de hachage**  
   

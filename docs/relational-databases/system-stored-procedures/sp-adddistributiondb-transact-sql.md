@@ -5,8 +5,7 @@ ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddistributiondb_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2ba920af692d85cbe8df1df69169fcde01a5c78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c55e0f8d7c2e102b18f7c17fb263c8f76658ede
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610117"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765801"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +57,19 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@database=**] *base de données »*  
  Nom de la base de données de distribution à créer. *base de données* est **sysname**, sans valeur par défaut. Si la base de données spécifiée existe déjà et n'est pas déjà marquée comme base de données de distribution, les objets nécessaires à l'activation de la distribution sont installés ; la base de données est également marquée comme base de données de distribution. Si la base de données spécifiée est déjà activée comme base de données de distribution, une erreur est renvoyée.  
   
- [  **@data_folder=**] **' *** argument dossier_de_données '*  
+ [  **@data_folder=**] **'**_argument dossier_de_données '_  
  Nom du répertoire utilisé pour stocker le fichier de données de la base de données de distribution. *argument dossier_de_données* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si sa valeur est NULL, le répertoire de données de cette instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé, par exemple `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
   
- [  **@data_file=**] **'***data_file***'**  
+ [  **@data_file=**] **'**_data_file_**'**  
  Nom du fichier de base de données. *data_file* est **nvarchar (255)**, avec une valeur par défaut **base de données**. Si la valeur est NULL, la procédure stockée crée un nom de fichier en utilisant le nom de la base de données.  
   
  [  **@data_file_size=**] *taille_du_fichier_de_données*  
  Taille initiale du fichier de données en mégaoctets (MB). *taille_du_fichier_de_données je*s **int**, avec une valeur par défaut de 5 Mo.  
   
- [  **@log_folder=**] **'***dossier_journal***'**  
+ [  **@log_folder=**] **'**_dossier_journal_**'**  
  Est le nom du répertoire du fichier journal de base de données. *dossier_journal* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si sa valeur est NULL, le répertoire de données de cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé, par exemple `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
   
- [  **@log_file=**] **'***fichier_journal***'**  
+ [  **@log_file=**] **'**_fichier_journal_**'**  
  Est le nom du fichier journal. *fichier_journal* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si la valeur est NULL, la procédure stockée crée un nom de fichier en utilisant le nom de la base de données.  
   
  [  **@log_file_size=**] *log_file_size*  
@@ -88,16 +87,16 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@security_mode=**] *security_mode*  
  Mode de sécurité à utiliser lors de la connexion à un serveur de distribution. *security_mode* est **int**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification ; **1** Spécifie l’authentification intégrée Windows.  
   
- [  **@login=**] **'***connexion***'**  
+ [  **@login=**] **'**_connexion_**'**  
  Nom de connexion utilisé lors de la connexion au serveur de distribution pour créer la base de données de distribution. Cela est nécessaire si *security_mode* a la valeur **0**. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@password=**] **'***mot de passe***'**  
+ [  **@password=**] **'**_mot de passe_**'**  
  Mot de passe utilisé lors de la connexion au serveur de distribution. Cela est nécessaire si *security_mode* a la valeur **0**. *mot de passe* est **sysname**, avec NULL comme valeur par défaut.  
   
  [  **@createmode=**] *createmode*  
  *createmode* est **int**, avec une valeur par défaut 1, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** (par défaut)|CRÉER une base de données ou utiliser l’existant de base de données, puis appliquer **instdist.sql** fichier à créer des objets de réplication dans la base de données de distribution.|  
@@ -179,7 +178,7 @@ GO
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_adddistributiondb**.  
   
 ## <a name="see-also"></a>Voir aussi  

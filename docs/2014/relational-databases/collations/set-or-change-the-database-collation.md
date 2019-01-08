@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - collations [SQL Server], database
@@ -14,12 +13,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c554ec2d49e9e03c3381a54b8c834514bd16e34
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa7359fc1436cfbb4222dcc63f9bb700720bf3cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071909"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772561"
 ---
 # <a name="set-or-change-the-database-collation"></a>Définir ou changer le classement de la base de données
   Cette rubrique explique comment définir et modifier le classement de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si aucun classement n'est spécifié, celui du serveur est utilisé.  
@@ -58,7 +57,7 @@ ms.locfileid: "48071909"
   
     -   Tous les paramètres `char`, `varchar`, `text`, `nchar`, `nvarchar`, ou `ntext` existants et les valeurs de retour scalaires destinés aux procédures stockées et aux fonctions définies par l'utilisateur sont modifiés en fonction du nouveau classement.  
   
-    -   Le `char`, `varchar`, `text`, `nchar`, `nvarchar`, ou `ntext` les types de données système et tous les types de données définis par l’utilisateur en fonction de ces types de données système sont modifiés pour le nouveau classement par défaut.  
+    -   Les types de données système `char`, `varchar`, `text`, `nchar`, `nvarchar`, ou `ntext` et tous les types de données définis par l'utilisateur sur la base de ces types de données système sont modifiés en fonction du nouveau classement par défaut.  
   
 -   Vous pouvez modifier le classement de tous les objets créés dans une base de données utilisateur à l'aide de la clause COLLATE de l'instruction [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) . Cette instruction ne modifie pas le classement des colonnes dans les tables définies par l'utilisateur existantes. Celles-ci peuvent être modifiées à l'aide de la clause COLLECT de l'instruction [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).  
   

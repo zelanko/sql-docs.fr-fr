@@ -1,5 +1,5 @@
 ---
-title: 'Annexe b : tableaux des transitions d’état ODBC | Microsoft Docs'
+title: 'Annexe B : Tableaux des transitions d’état ODBC | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55fb40d6aa9b235837c761cf1362374d5c77d96d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646217"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541060"
 ---
-# <a name="appendix-b-odbc-state-transition-tables"></a>Annexe B : Tableaux des transitions d’état ODBC
-Les tableaux de cette annexe montrent comment les fonctions ODBC provoquent des transitions de l’environnement, connexion, instruction et les États de descripteur. L’état de l’environnement, une connexion, une instruction ou une descripteur détermine généralement lorsque les fonctions qui utilisent le type correspondant de handle (environnement, connexion, instruction ou descripteur) peuvent être appelées. Les États de l’environnement, connexion, l’instruction et descripteur se chevauchent à peu près comme indiqué dans les illustrations suivantes. Par exemple, le chevauchement exact de connexion indique C5 et C6 instruction États et que s1 via S12 est la source de données, dans la mesure où les transactions commencent à des moments différents sur différentes sources de données, et dépend de l’état de descripteur D1i (implicitement allouée descripteur) sur l’état de l’instruction à laquelle le descripteur est associé, tout état D1e (explicitement allouée descripteur) est indépendante de l’état de n’importe quelle instruction. Pour obtenir une description de chaque état, consultez [Transitions d’environnement](../../../odbc/reference/appendixes/environment-transitions.md), [connexion Transitions](../../../odbc/reference/appendixes/connection-transitions.md), [Transitions d’instruction](../../../odbc/reference/appendixes/statement-transitions.md), et [Transitions de descripteur ](../../../odbc/reference/appendixes/descriptor-transitions.md), plus loin dans cette annexe.  
+# <a name="appendix-b-odbc-state-transition-tables"></a>Annexe B : Tableaux des transitions d’état ODBC
+Les tableaux de cette annexe montrent comment les fonctions ODBC provoquent des transitions de l’environnement, connexion, instruction et les États de descripteur. L’état de l’environnement, une connexion, une instruction ou une descripteur détermine généralement lorsque les fonctions qui utilisent le type correspondant de handle (environnement, connexion, instruction ou descripteur) peuvent être appelées. Les États de l’environnement, connexion, l’instruction et descripteur se chevauchent à peu près comme indiqué dans les illustrations suivantes. Par exemple, le chevauchement exact de connexion indique C5 et C6 instruction États et que s1 via S12 donnée dépend de la source, dans la mesure où les transactions commencent à des moments différents sur différentes sources de données, et dépend de l’état de descripteur D1i (implicitement allouée descripteur) sur l’état de l’instruction à laquelle le descripteur est associé, tout état D1e (explicitement allouée descripteur) est indépendante de l’état de n’importe quelle instruction. Pour obtenir une description de chaque état, consultez [Transitions d’environnement](../../../odbc/reference/appendixes/environment-transitions.md), [connexion Transitions](../../../odbc/reference/appendixes/connection-transitions.md), [Transitions d’instruction](../../../odbc/reference/appendixes/statement-transitions.md), et [Transitions de descripteur ](../../../odbc/reference/appendixes/descriptor-transitions.md), plus loin dans cette annexe.  
   
  Les États de l’environnement et de connexion se chevauchent comme suit :  
   
@@ -43,17 +43,18 @@ Les tableaux de cette annexe montrent comment les fonctions ODBC provoquent des 
   
  Chaque entrée dans une table de transition peut prendre la valeur de l’une des valeurs suivantes :  
   
--   **--** : L’état est inchangé après l’exécution de la fonction.  
+-   **--** -L’état est inchangé après l’exécution de la fonction.  
   
 -   **E**  
-     ***n*** , **C*n***, **S*n***, ou **D*n*** : l’état de l’environnement, connexion, instruction ou descripteur se déplace vers le état spécifié.  
+
+     **_n_**  , **C_n_**, **S_n_**, ou **D_n_** -l’état de l’environnement, connexion, instruction ou descripteur se déplace vers l’état spécifié.  
+ 
+-   **(IH)**  -Un handle non valide a été passé à la fonction. Si le handle a été un handle null ou un handle valide d’un type incorrect - par exemple, un handle de connexion a été passé lorsqu’un descripteur d’instruction a été nécessaire : la fonction ne retourne SQL_INVALID_HANDLE ; Sinon, le comportement est indéfini et probablement irrécupérable. Cette erreur apparaît uniquement lorsqu’il est le résultat n’est possible de l’appel de la fonction dans l’état spécifié. Cette erreur ne modifie pas l’état et est toujours détectée par le Gestionnaire de pilotes, comme indiqué par les parenthèses.  
   
--   **(INCLUENT)** : Un handle non valide a été passé à la fonction. Si le handle a été un handle null ou un handle valide d’un type incorrect, par exemple, un handle de connexion a été passé lorsqu’un descripteur d’instruction était requis, la fonction retourne SQL_INVALID_HANDLE ; Sinon, le comportement est indéfini et probablement irrécupérable. Cette erreur apparaît uniquement lorsqu’il est le résultat n’est possible de l’appel de la fonction dans l’état spécifié. Cette erreur ne modifie pas l’état et est toujours détectée par le Gestionnaire de pilotes, comme indiqué par les parenthèses.  
-  
--   **NS** : état suivant. La transition de l’instruction est la même que si l’instruction n’avait pas subi les États asynchrones. Par exemple, une instruction qui crée un jeu de résultats passe à l’état S11 à partir de l’état S1, car **SQLExecDirect** retourné SQL_STILL_EXECUTING. La notation NS dans un état S11 signifie que les transitions de l’instruction sont les mêmes que celles d’une instruction dans un état S1 qui crée un jeu de résultats. Si **SQLExecDirect** retourne une erreur, l’instruction reste en état S1 ; si elle réussit, l’instruction se déplace vers l’état S5 ; si elle a besoin de données, l’instruction se déplace vers l’état S8 ; et si elle est en cours d’exécution, il reste dans un état S11.  
-  
--   ***XXXXX*** ou **(*XXXXX*)** — un SQLSTATE qui est lié à la table de transition. SQLSTATE détectée par le Gestionnaire de pilotes est placés entre parenthèses. La fonction a renvoyé SQL_ERROR et la valeur SQLSTATE spécifiée, mais l’état ne change pas. Par exemple, si **SQLExecute** est appelée avant **SQLPrepare**, elle retourne SQLSTATE HY010 (erreur de séquence de fonction).  
-  
+-   **NS** -état suivant. La transition de l’instruction est la même que si l’instruction n’avait pas subi les États asynchrones. Par exemple, une instruction qui crée un jeu de résultats passe à l’état S11 à partir de l’état S1, car **SQLExecDirect** retourné SQL_STILL_EXECUTING. La notation NS dans un état S11 signifie que les transitions de l’instruction sont les mêmes que celles d’une instruction dans un état S1 qui crée un jeu de résultats. Si **SQLExecDirect** retourne une erreur, l’instruction reste en état S1 ; si elle réussit, l’instruction se déplace vers l’état S5 ; si elle a besoin de données, l’instruction se déplace vers l’état S8 ; et si elle est en cours d’exécution, il reste dans un état S11.  
+
+-   **_XXXXX_**  ou **(*XXXXX*)** : SQLSTATE est liée à la table de transition. SQLSTATE détectée par le Gestionnaire de pilotes est placés entre parenthèses. La fonction a renvoyé SQL_ERROR et la valeur SQLSTATE spécifiée, mais l’état ne change pas. Par exemple, si **SQLExecute** est appelée avant **SQLPrepare**, elle retourne SQLSTATE HY010 (erreur de séquence de fonction).  
+
 > [!NOTE]  
 >  Les tables n’affichent pas les erreurs sans rapport avec les tables de transition qui ne changent pas l’état. Par exemple, lorsque **SQLAllocHandle** est appelée dans l’état de l’environnement E1 et retourne SQLSTATE HY001 (erreur d’allocation de mémoire), l’environnement reste dans un état E1 ; cela n’est pas affiché dans la table de transitions d’environnement pour  **SQLAllocHandle**.  
   

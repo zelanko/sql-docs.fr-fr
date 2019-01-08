@@ -10,12 +10,12 @@ ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1302a354255c6b98a46cd2c1aef234fe3f1c5f67
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 4d8fd1e95d3058f9375a109a27effee24335e840
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029257"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410066"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Nettoyer les données dans un domaine composite
   Cette rubrique fournit des informations sur le nettoyage des domaines composites dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine composite comprend plusieurs domaines uniques et est mappé à un champ de données qui comprend plusieurs termes connexes. Les différents domaines dans un domaine composite doivent avoir un espace commun de connaissance. Pour plus d'informations sur les domaines composites, consultez [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -36,9 +36,9 @@ ms.locfileid: "51029257"
 ##  <a name="CDCorrection"></a> Correction des données à l'aide de règles entre domaines définitives  
  Les règles entre domaines dans le domaine composite vous permettent de créer des règles qui indiquent la relation entre différents domaines dans un domaine composite. Les règles entre domaines sont prises en considération lorsque vous exécutez l'activité de nettoyage sur vos données sources impliquant des domaines composites. Outre l'information concernant la validité d'une règle entre domaines, la règle entre domaines *Then* définitive, **La valeur est égale à**, corrige également les données pendant l'activité de nettoyage.  
   
- Prenons l'exemple suivant : il existe un domaine composite, Product, avec trois domaines individuels : ProductName, CompanyName et ProductVersion. Créez la règle entre domaines définitive suivante :  
+ Prenons l’exemple suivant : il existe un domaine composite, produit, avec trois domaines individuels : ProductName, CompanyName et ProductVersion. Créez la règle entre domaines définitive suivante :  
   
- SI la valeur « CompanyName » du domaine contient *Microsoft* , que la valeur « ProductName » du domaine est égale à *Office* et que la valeur « ProductVersion » est égale à *2010* , ALORS la valeur « ProductName » du domaine est égale à *Microsoft Office 2010*.  
+ SI la valeur « CompanyName » du domaine contient *Microsoft*, que la valeur « ProductName » du domaine est égale à *Office* et que la valeur « ProductVersion » est égale à *2010*, ALORS la valeur « ProductName » du domaine est égale à *Microsoft Office 2010*.  
   
  Lorsque cette règle entre domaines s'exécute, les données sources (ProductName) sont remplacées par ce qui suit après l'activité de nettoyage :  
   
@@ -54,7 +54,7 @@ ms.locfileid: "51029257"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Lorsque vous testez la règle entre domaines *Then* définitive, **La valeur est égale à**, la boîte de dialogue **Tester la règle de domaine composite** contient une nouvelle colonne, **Corriger vers**, qui affiche les données correctes. Dans un projet de qualité des données de nettoyage, cette règle entre domaines définitive modifie les données avec un niveau de confiance de 100 % et la colonne **Raison** affiche le message suivant : Corrigé par la règle «*\<Nom de la règle entre domaines>*. Pour plus d'informations sur les règles entre domaines, consultez [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
+ Lorsque vous testez la règle entre domaines *Then* définitive, **La valeur est égale à**, la boîte de dialogue **Tester la règle de domaine composite** contient une nouvelle colonne, **Corriger vers**, qui affiche les données correctes. Dans un projet de qualité des données nettoyage, cette règle entre domaines définitive modifie les données en toute confiance de 100 % et le **raison** colonne affiche le message suivant : Corrigé par la règle «*\<nom de la règle de Cross-Domain >*'. Pour plus d'informations sur les règles entre domaines, consultez [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  La règle entre domaines définitive ne fonctionne pas pour les domaines composites joints au service de données de référence.  
@@ -64,6 +64,6 @@ ms.locfileid: "51029257"
   
  Le profilage fournira probablement des statistiques de précision fiables pour les domaines composites, car vous pouvez mesurer la précision de plusieurs colonnes ensemble. Comme la valeur de ces données se trouve dans l'agrégation composite, vous pouvez mesurer la précision avec un domaine composite.  
   
- Pour plus d’informations sur le profilage des données pendant l’activité de nettoyage, consultez [Statistiques du Générateur de profils](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Profiler) dans [Nettoyer des données à l’aide de la base de connaissances DQS &#40 ;interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
+ Pour plus d’informations sur le profilage des données pendant l’activité de nettoyage, consultez [Statistiques du Générateur de profils](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Profiler) dans [Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
   

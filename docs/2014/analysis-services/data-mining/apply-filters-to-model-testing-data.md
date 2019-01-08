@@ -15,12 +15,12 @@ ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eeb95d0fb8d1e89fe5c2dc66362641c96f2230af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 967de27eb9bc1f191b138e8b5962b04c145fe191
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114435"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510747"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Appliquer des filtres aux données de test du modèle
   Quand vous spécifiez une source de données externe à utiliser pour tester un modèle, vous pouvez éventuellement appliquer un filtre pour restreindre les données d’entrée. Par exemple, vous pouvez tester le modèle spécifiquement pour les prédictions sur des clients dans une certaine plage de revenus.  
@@ -47,7 +47,7 @@ ms.locfileid: "48114435"
   
  Pour déterminer si un modèle contient un filtre prédéfini qui peut affecter les résultats, vous pouvez rechercher la propriété **Filtre** dans le volet **Propriété** , ou vous pouvez interroger le modèle à l’aide des ensembles de lignes de schéma d’exploration de données. Par exemple, la requête suivante retourne le texte de filtre pour le modèle spécifié :  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  Si vous souhaitez supprimer le filtre d'un modèle d'exploration de données existant, ou modifier les conditions de filtre, vous devez retraiter le modèle d'exploration de données.  
@@ -62,7 +62,7 @@ ms.locfileid: "48114435"
   
 3.  Sous l’onglet **Sélection d’entrée** , sous **Sélectionner le jeu de données à utiliser pour le graphique d’analyse de précision**, sélectionnez l’option **Spécifier un autre jeu de données**.  
   
-4.  Cliquez sur le bouton Parcourir **(…)** pour ouvrir une boîte de dialogue et choisir le jeu de données externes.  
+4.  Cliquez sur le bouton Parcourir **(...)**  pour ouvrir une boîte de dialogue et choisir le jeu de données externes.  
   
 5.  Choisissez la table de cas, et ajoutez une table imbriquée si nécessaire. Mappez les colonnes du modèle aux colonnes du jeu de données externes selon les besoins. Fermez la boîte de dialogue **Spécifier le mappage des colonnes** pour enregistrer la définition de table source.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48114435"
   
 9. Cliquez sur la zone de texte **et/ou** et sélectionnez un opérateur logique pour définir la manière dont les conditions multiples sont combinées.  
   
-10. Éventuellement, cliquez sur le bouton Parcourir **(…)** sur la droite de la zone de texte **Valeur** pour ouvrir la boîte de dialogue **Filtre** et définir des conditions sur la table imbriquée ou sur les différentes colonnes de table de cas.  
+10. Si vous le souhaitez, cliquez sur le bouton Parcourir **(...)**  à droite de la **valeur** zone de texte pour ouvrir le **filtre** boîte de dialogue zone et de définir des conditions sur la table imbriquée ou sur les colonnes de table de cas individuels.  
   
 11. Vérifiez que les conditions de filtrage complétées sont correctes en affichant le texte dans le volet **Expression** .  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48114435"
   
 ## <a name="see-also"></a>Voir aussi  
  [Choisir et mapper les données de test du modèle](choose-and-map-model-testing-data.md)   
- [À l’aide de Table des données imbriquée comme entrée pour un graphique de précision](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
- [Choisir un type de graphique d’analyse de précision et définir des options de graphique](choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [Utilisation des données de table imbriquée comme entrée pour un graphique d'analyse de précision](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [Choisir un type de graphique d'analyse de précision et définir des options de graphique](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

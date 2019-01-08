@@ -15,12 +15,12 @@ ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46b6f5d7e6af3726558f5cee72f00ff06e13ab89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15a3efd678d7b1f055daebc31d71d4044ad19eef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812055"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503895"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Définition des options de mise en pools des connexions ODBC
 Le regroupement de connexions permet à une application d’utiliser une connexion à partir d’un pool de connexions que vous n’avez pas besoin d’être rétablies à chaque utilisation. Vous pouvez utiliser la **le regroupement de connexions** onglet de la **administrateur de sources de données ODBC** boîte de dialogue pour activer et désactiver l’analyse des performances. Double-cliquez sur un nom de pilote pour définir la période de délai d’attente de connexion.  
@@ -36,7 +36,7 @@ Le regroupement de connexions permet à une application d’utiliser une connexi
 |-------------|----------------|  
 |Compteur de disque dur de connexion ODBC par seconde|Le nombre de connexions par seconde qui sont envoyées au serveur. La première fois que votre environnement comporte une charge importante, ce compteur vont monter très rapidement. Après quelques secondes, elle sera remise à zéro. Il s’agit de la situation normale lorsque le regroupement de connexions fonctionne. Lorsque les connexions au serveur ont été établies, elles seront utilisées et placés dans le pool pour une réutilisation.|  
 |ODBC dur déconnecter compteur par seconde|Le nombre de disques durs déconnexions par seconde émis vers le serveur. Il s’agit des connexions vers le serveur qui sont publiées par le regroupement de connexions. Cette valeur augmente à partir de zéro lorsque vous arrêtez tous les clients sur le système et les connexions commencent à expirer.|  
-|Compteur de connexion de manière réversible ODBC par seconde|Le nombre de connexions satisfaits par le pool par seconde, en d’autres termes, les connexions à partir de ce pool qui ont été transmises aux utilisateurs. Ce compteur indique si le regroupement fonctionne. En fonction de la charge sur votre serveur, il n’est pas rare pour cette option pour afficher les connexions de manière réversible de 40 à 60 par seconde.|  
+|Compteur de connexion de manière réversible ODBC par seconde|Le nombre de connexions satisfaits par le pool par seconde dans autres mots, le pool de connexions de celui qui ont été délivrée aux utilisateurs. Ce compteur indique si le regroupement fonctionne. En fonction de la charge sur votre serveur, il n’est pas rare pour cette option pour afficher les connexions de manière réversible de 40 à 60 par seconde.|  
 |Compteur de déconnexion de manière réversible ODBC par seconde|Le nombre de déconnexions par seconde émis par les applications. Lorsque l’application libère ou se déconnecte, la connexion est placée dans le pool.|  
 |Compteur de connexion Active actuelle ODBC|Le nombre de connexions dans le pool qui sont actuellement en cours d’utilisation.|  
 |Compteur de connexion libre cours ODBC|Le nombre actuel de connexions libres disponibles dans le pool. Il s’agit des connexions actives qui sont disponibles pour utilisation.|  

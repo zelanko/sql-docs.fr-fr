@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergefilter
@@ -17,12 +16,12 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72d29fca659426075f4c7ee07f82ac6507fc0709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31ada2bfb184e24011ee91dde82fc9abfb319320
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595208"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777911"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=** ] **'***publication***'**  
+ [  **@publication=** ] **'**_publication_**'**  
  Nom de la publication dans laquelle le filtre de fusion est ajouté. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@article=** ] **'***article***'**  
+ [  **@article=** ] **'**_article_**'**  
  Nom de l'article dans lequel le filtre de fusion est ajouté. *article* est **sysname**, sans valeur par défaut.  
   
- [  **@filtername=** ] **'***filtername***'**  
+ [  **@filtername=** ] **'**_filtername_**'**  
  Nom du filtre. *FilterName* est un paramètre obligatoire. *FilterName*est **sysname**, sans valeur par défaut.  
   
- [  **@join_articlename=** ] **'***join_articlename***'**  
+ [  **@join_articlename=** ] **'**_join_articlename_**'**  
  Nom de l’article parent auquel l’article enfant, spécifié par *article*, doit être joint à l’aide de la clause de jointure spécifiée par *join_filterclause*, afin de déterminer les lignes dans l’article enfant qui répondent aux le critère de filtre du filtre de fusion. *join_articlename* est **sysname**, sans valeur par défaut. L’article doit figurer dans la publication donnée par *publication*.  
   
  [  **@join_filterclause=** ] *join_filterclause*  
@@ -85,7 +84,7 @@ sp_addmergefilter [ @publication = ] 'publication'
  [  **@filter_type=** ] *filter_type*  
  Spécifie le type de filtre à ajouter. *filter_type* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Filtre de jointure uniquement. Requis pour prendre en charge [!INCLUDE[ssEW](../../includes/ssew-md.md)] abonnés.|  
 |**2**|Uniquement relation logique.|  
@@ -114,13 +113,13 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_addmergefilter](../../relational-databases/replication/codesnippet/tsql/sp-addmergefilter-transa_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addmergefilter**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Définir et modifier un filtre de jointure entre des articles de fusion](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
+ [Filtres de jointure](../../relational-databases/replication/merge/join-filters.md)   
  [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   

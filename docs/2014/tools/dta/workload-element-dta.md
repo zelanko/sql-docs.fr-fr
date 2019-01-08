@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bc86764dce10dfad5c25ca7a1bd7f3d2bc519c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087299"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759792"
 ---
 # <a name="workload-element-dta"></a>Workload, élément (Assistant Paramétrage de base de données)
   Spécifie la charge de travail à utiliser pour une session de paramétrage.  
@@ -48,12 +47,12 @@ ms.locfileid: "48087299"
 |Relation|Éléments|  
 |------------------|--------------|  
 |**Élément parent**|[Démarrer et utiliser l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**Éléments enfants**|[Élément de fichiers &#40;DTA&#41;](file-element-dta.md)<br /><br /> [Élément de base de données pour la charge de travail &#40;DTA&#41;](database-element-for-workload-dta.md)<br /><br /> [Élément EventString &#40;DTA&#41;](eventstring-element-dta.md)|  
+|**Éléments enfants**|[Élément File &#40;Assistant Paramétrage de base de données&#41;](file-element-dta.md)<br /><br /> [Élément Database &#40;Assistant Paramétrage de base de données&#41;](database-element-for-workload-dta.md)<br /><br /> [Élément EventString &#40;Assistant Paramétrage de base de données&#41;](eventstring-element-dta.md)|  
   
 ## <a name="remarks"></a>Notes  
  Une charge de travail est un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui s'exécute sur une ou plusieurs bases de données que vous souhaitez paramétrer. L'Assistant Paramétrage du moteur de base de données peut utiliser des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , des fichiers de trace et des tables de trace en tant que charges de travail.  
   
- Si vous spécifiez une charge de travail dans un fichier d'entrée XML et une charge de travail dans une ligne de commande avec l'outil **dta** , la charge de travail spécifiée dans la ligne de commande est utilisée pour le paramétrage. Toutes les options de paramétrage de la ligne de commande remplacent celles spécifiées dans un fichier d'entrée XML. Une seule exception : configuration spécifiée par l'utilisateur entrée dans le mode évaluation dans le fichier d'entrée XML. Par exemple, si une configuration est entrée dans le `Configuration` élément du fichier d’entrée XML et le `EvaluateConfiguration` élément est également spécifié comme l’une des options de paramétrage, les options de paramétrage spécifiées dans le fichier d’entrée XML remplacent toute option de paramétrage saisie dans la ligne de commande.  
+ Si vous spécifiez une charge de travail dans un fichier d'entrée XML et une charge de travail dans une ligne de commande avec l'outil **dta** , la charge de travail spécifiée dans la ligne de commande est utilisée pour le paramétrage. Toutes les options de paramétrage de la ligne de commande remplacent celles spécifiées dans un fichier d'entrée XML. Une seule exception : configuration spécifiée par l'utilisateur entrée dans le mode évaluation dans le fichier d'entrée XML. Par exemple, si une configuration est entrée dans l'élément `Configuration` du fichier d'entrée XML et que l'élément `EvaluateConfiguration` est également configuré en tant qu'une des options de paramétrage, les options de paramétrage spécifiées dans le fichier d'entrée remplacent toute option de paramétrage saisie dans la ligne de commande.  
   
  Une charge de travail doit être spécifiée pour chaque session de paramétrage.  
   

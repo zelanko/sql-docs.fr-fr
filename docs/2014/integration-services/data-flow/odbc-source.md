@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.f1
@@ -13,12 +12,12 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2238676493cce8a732055dea853e7368fe817865
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b928b54236929238c404597f4ba1eeeddb427ccc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054359"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790641"
 ---
 # <a name="odbc-source"></a>Source ODBC
   La source ODBC extrait les données d'une base de données compatible ODBC à l'aide d'une table de base de données, d'une vue ou d'une instruction SQL.  
@@ -38,9 +37,9 @@ ms.locfileid: "48054359"
 ## <a name="error-handling"></a>Gestion des erreurs  
  La source ODBC a une sortie d'erreur. La sortie d'erreur du composant contient les colonnes de sortie suivantes :  
   
--   **Code d’erreur**: numéro qui correspond à l’erreur actuelle. Consultez la documentation de la base de données ODBC que vous utilisez pour obtenir une liste d'erreurs. Pour obtenir la liste des codes d'erreur SSIS, consultez le Guide de référence des erreurs et des événements SSIS.  
+-   **Code d’erreur**: Le numéro qui correspond à l’erreur actuelle. Consultez la documentation de la base de données ODBC que vous utilisez pour obtenir une liste d'erreurs. Pour obtenir la liste des codes d'erreur SSIS, consultez le Guide de référence des erreurs et des événements SSIS.  
   
--   **Colonne d’erreur**: colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
+-   **Colonne d’erreur**: La colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
   
 -   Colonnes de données de sortie standard.  
   
@@ -52,9 +51,9 @@ ms.locfileid: "48054359"
 ## <a name="extract-options"></a>Options d'extraction  
  La source ODBC s’exécute en mode **Lot** ou **Ligne par ligne** . Le mode utilisé est déterminé par la propriété **FetchMethod** . La liste suivante décrit les différents modes.  
   
--   **Lot**: les composants tentent d’utiliser la méthode de récupération la plus efficace en fonction des capacités perçues du fournisseur ODBC. Pour la plupart des fournisseurs ODBC modernes, il s’agit de SQLFetchScroll avec une liaison de table (où la taille de la table est déterminée par la propriété **BatchSize** ). Si vous sélectionnez **Lot** et que le fournisseur ne prend pas en charge cette méthode, la destination ODBC bascule automatiquement en mode **Ligne par ligne** .  
+-   **Batch**: Le composant tente d’utiliser la méthode de récupération la plus efficace en fonction des capacités perçues du fournisseur ODBC. Pour la plupart des fournisseurs ODBC modernes, il s’agit de SQLFetchScroll avec une liaison de table (où la taille de la table est déterminée par la propriété **BatchSize** ). Si vous sélectionnez **Lot** et que le fournisseur ne prend pas en charge cette méthode, la destination ODBC bascule automatiquement en mode **Ligne par ligne** .  
   
--   **Ligne par ligne**: le composant utilise SQLFetch pour extraire les lignes une par une.  
+-   **Ligne par ligne**: Le composant utilise SQLFetch pour extraire les lignes une par une.  
   
  Pour plus d’informations sur la propriété **FetchMethod** , consultez [Propriétés personnalisées des sources ODBC](odbc-source-custom-properties.md).  
   
@@ -71,11 +70,11 @@ ms.locfileid: "48054359"
   
  Pour plus d’informations, consultez l’une des rubriques suivantes :  
   
--   [Éditeur de Source ODBC &#40;Page Gestionnaire de connexions&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [Éditeur de source ODBC &#40;page Gestionnaire de connexions&#41;](../odbc-source-editor-connection-manager-page.md)  
   
--   [Éditeur de Source ODBC &#40;Page colonnes&#41;](../odbc-source-editor-columns-page.md)  
+-   [Éditeur de source ODBC &#40;page Colonnes&#41;](../odbc-source-editor-columns-page.md)  
   
--   [Éditeur de Source ODBC &#40;Page sortie d’erreur&#41;](../odbc-source-editor-error-output-page.md)  
+-   [Éditeur de source ODBC &#40;page Sortie d’erreur&#41;](../odbc-source-editor-error-output-page.md)  
   
  La boîte de dialogue **Éditeur avancé** contient les propriétés qui peuvent être définies par programme.  
   
@@ -87,13 +86,13 @@ ms.locfileid: "48054359"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Éditeur de Source ODBC &#40;Page sortie d’erreur&#41;](../odbc-source-editor-error-output-page.md)  
+-   [Éditeur de source ODBC &#40;page Sortie d’erreur&#41;](../odbc-source-editor-error-output-page.md)  
   
--   [Éditeur de Source ODBC &#40;Page colonnes&#41;](../odbc-source-editor-columns-page.md)  
+-   [Éditeur de source ODBC &#40;page Colonnes&#41;](../odbc-source-editor-columns-page.md)  
   
--   [Éditeur de Source ODBC &#40;Page Gestionnaire de connexions&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [Éditeur de source ODBC &#40;page Gestionnaire de connexions&#41;](../odbc-source-editor-connection-manager-page.md)  
   
--   [Extraire des données à l’aide de la source ODBC](odbc-source.md)  
+-   [Extraire des données à l'aide de la source ODBC](odbc-source.md)  
   
 -   [Propriétés personnalisées des sources ODBC](odbc-source-custom-properties.md)  
   

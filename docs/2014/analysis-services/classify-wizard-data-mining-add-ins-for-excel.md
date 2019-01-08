@@ -14,12 +14,12 @@ ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae0e86016d21e33507544747a44e5fc48b273ae2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9109f47ba1173c115234f9040445fb110e3f0e3c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094119"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419680"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Assistant Classification (Compléments d'exploration de données pour Excel)
   ![Assistant classification dans le ruban Exploration de données](media/dmc-classify.gif "Assistant classification dans le ruban Exploration de données")  
@@ -34,7 +34,7 @@ ms.locfileid: "48094119"
   
 2.  Dans le **sélectionner les données Source** page, choisissez les données à analyser.  
   
-     L'Assistant prend en charge plusieurs types de données : tables Excel, plages Excel et sources de données externes. Les données externes peuvent être ajoutées à Excel, ou bien vous pouvez choisir un ensemble de tables ou vues dans une source de données Analysis Services. Vous pouvez également ajouter des tables et changer les colonnes pour créer une source de données ad hoc.  
+     Cet Assistant prend en charge plusieurs types de données : Tables Excel, plages Excel et sources de données externes. Les données externes peuvent être ajoutées à Excel, ou bien vous pouvez choisir un ensemble de tables ou vues dans une source de données Analysis Services. Vous pouvez également ajouter des tables et changer les colonnes pour créer une source de données ad hoc.  
   
 3.  Sur le **Classification** page, choisissez la colonne que vous souhaitez classer.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48094119"
   
  [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Pour utiliser le **classifier** Assistant, vous devez être connecté à un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données. Pour plus d’informations sur la création d’une connexion, consultez [se connecter à la Source de données &#40;Client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Voir aussi  

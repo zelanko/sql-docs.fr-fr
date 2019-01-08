@@ -11,12 +11,12 @@ ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9d81920e9e14dc745813795bcf98eb1d9ebdf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f83e13aa6ed85293bf20b006ad6c5c8e9a9a62f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051402"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545378"
 ---
 # <a name="install-distributed-replay-setup"></a>Installer Distributed Replay (programme d'installation)
   Installer les fonctionnalités [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay avec l’Assistant Installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Pour décider de l'emplacement où installer ces fonctionnalités, tenez compte des éléments suivants :  
@@ -49,7 +49,7 @@ ms.locfileid: "48051402"
   
  En supposant que vous utilisez les emplacements de fichiers et l'installation par défaut, le répertoire de base se trouve dans C:\Program Files\Microsoft SQL Server. Dans ce répertoire, les emplacements d'installation des binaires et des assemblys sont les suivants :  
   
--   Sur un système 32 bits :  
+-   Sur un système 32 bits :  
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Outils  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48051402"
   
      Les comptes de groupe (locaux ou de domaine) et autres comptes intégrés (comme Tout le monde) ne sont pas acceptés.  
   
-8.  Éventuellement, cliquez sur le bouton de sélection (…) pour modifier le chemin d'accès au répertoire des fonctionnalités partagées.  
+8.  Si vous le souhaitez, cliquez sur le bouton de sélection (...) pour modifier le chemin d’accès du répertoire de fonctionnalité partagée.  
   
     1.  Sur les ordinateurs 32 bits, le chemin d’installation par défaut est **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
@@ -134,8 +134,8 @@ ms.locfileid: "48051402"
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Conditions préalables de relecture distribuée](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Distributed Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)   
  [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurer Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

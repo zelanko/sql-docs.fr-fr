@@ -17,12 +17,12 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 35ef352eda0d712098ce0453caccf4bc2422b4b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52f677c99b72de5a4342d534bddcd216027e4e0d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122619"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540910"
 ---
 # <a name="create-unique-indexes"></a>Créer des index uniques
   Cette rubrique explique comment créer un index unique sur une table dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un index unique garantit que la clé d'index ne contient aucune valeur dupliquée et que, par conséquent, chaque ligne de la table est unique d'une certaine manière. Il n'existe pas de différence notable entre la création d'une contrainte UNIQUE et la création d'un index unique indépendant de toute contrainte. La validation des données se produit d'une manière similaire et l'optimiseur de requête ne fait aucune distinction entre un index unique créé à partir d'une contrainte et un index unique créé manuellement. Toutefois, la création d'une contrainte UNIQUE sur la colonne permet de clarifier l'objectif de l'index. Pour plus d'informations sur les contraintes UNIQUE, consultez [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
@@ -112,7 +112,7 @@ ms.locfileid: "48122619"
   
 7.  Dans la grille principale, sous **(Général)**, sélectionnez **Type** puis choisissez **Index** dans la liste.  
   
-8.  Sélectionnez **Colonnes**, puis cliquez sur le bouton de sélection **(…)**.  
+8.  Sélectionnez **Colonnes**, puis cliquez sur les points de suspension **(…)**.  
   
 9. Dans la boîte de dialogue **Colonnes d'index** , sous **Nom de la colonne**, sélectionnez les colonnes que vous souhaitez indexer. Vous pouvez sélectionner jusqu'à 16 colonnes. Si vous souhaitez que les performances soient optimales, évitez d'en sélectionner plus de deux par index. Pour chaque colonne sélectionnée, vous pouvez indiquer si l'index organise ses valeurs en ordre croissant ou décroissant.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "48122619"
   
 11. Dans la grille, sous **(Général)**, sélectionnez **Est unique** , puis choisissez **Oui** dans la liste.  
   
-12. Facultatif : Dans la grille principale, sous **Concepteur de tables**, sélectionnez **Ignorer les clés dupliquées** , puis choisissez **Oui** dans la liste. Effectuez cette opération si vous souhaitez ignorer les tentatives d'ajout de données qui créeraient une clé dupliquée dans l'index unique.  
+12. Facultatif : Dans la grille principale, sous **Concepteur de tables**, sélectionnez **ignorer les clés dupliquées** , puis **Oui** dans la liste. Effectuez cette opération si vous souhaitez ignorer les tentatives d'ajout de données qui créeraient une clé dupliquée dans l'index unique.  
   
 13. Cliquez sur **Fermer**.  
   
@@ -134,13 +134,13 @@ ms.locfileid: "48122619"
   
 3.  Développez la table sur laquelle vous souhaitez créer un index unique.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Index** , pointez sur **Nouvel index**, puis sélectionnez **Index non cluster**.  
+4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...**.  
   
 5.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
 6.  Activez la case à cocher **Unique** .  
   
-7.  Sous **Colonnes clés d'index**, cliquez sur **Ajouter…**.  
+7.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…**.  
   
 8.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table*, cochez la ou les cases correspondant à la ou aux colonnes de table à ajouter à l’index unique.  
   

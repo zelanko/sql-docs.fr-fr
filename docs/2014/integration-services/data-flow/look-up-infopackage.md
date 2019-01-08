@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c571dc5e2cd9d831136f70251d04a807cd654dcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28cc4183a651fb1e9c52f10d4d518bc94d684cad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147859"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749504"
 ---
 # <a name="look-up-infopackage"></a>Rechercher un InfoPackage
   Utilisez la boîte de dialogue **Rechercher un InfoPackage** pour rechercher un InfoPackage qui est défini dans le système SAP Netweaver BW. Lorsque la liste d'InfoPackages apparaît, sélectionnez l'InfoPackage de votre choix. La destination remplira les options associées à l'aide des valeurs requises.  
@@ -60,7 +59,7 @@ ms.locfileid: "48147859"
  **Type**  
  Affiche le type de l'InfoPackage. Le tableau suivant répertorie les valeurs possibles pour le type.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Trans.|Données de transaction.|  
 |Attr.|Données d'attribut.|  
@@ -78,7 +77,7 @@ ms.locfileid: "48147859"
  Lorsque la liste d'InfoPackages apparaît, sélectionnez l'InfoPackage de votre choix. La destination remplira les options associées à l'aide des valeurs requises.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de Destination SAP BW &#40;Page Gestionnaire de connexions&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [Éditeur de destination SAP BW &#40;page Gestionnaire de connexions&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [Aide (F1) sur Microsoft Connector 1.1 pour SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

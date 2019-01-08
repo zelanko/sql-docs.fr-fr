@@ -10,12 +10,12 @@ ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 46d91efa1451749d8d1cce2b1a8cf361cc30986a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6965d67b6dae484b3fa72f215446682f9aa6760c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737307"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394872"
 ---
 # <a name="sql-modes-mysqltosql"></a>Modes SQL (MySQLToSQL)
 SSMA pour MySQL peut fonctionner dans différents Modes SQL et applique ces modes différemment pour différents clients.  
@@ -24,11 +24,11 @@ Modes de définissent la syntaxe SQL que MySQL doit prendre en charge, et le gen
   
 ## <a name="sql-modes-grid"></a>Grille de Modes SQL :  
   
--   Grille de Modes SQL au niveau racine contient les colonnes suivantes : **nom du Mode SQL**, **chargé les Modes SQL**, et **efficace Modes SQL**.  
+-   Grille de Modes SQL au niveau racine contient les colonnes suivantes : **Nom du Mode SQL**, **chargé de Modes SQL**, et **Modes SQL efficace**.  
   
--   Grille de Modes SQL sur les bases de données catégorie, base de données, Table catégorie, catégorie d’instructions, catégorie de vues, table, vue, fonctions, procédures, UDF et niveau de l’objet événement contient les colonnes suivantes : **nom du Mode SQL**,  **Héritée de Modes SQL**, et **Modes SQL efficace**.  
+-   Grille de Modes SQL sur les bases de données catégorie, base de données, Table catégorie, catégorie d’instructions, catégorie de vues, table, vue, fonctions, procédures, UDF et niveau de l’objet événement contient les colonnes suivantes : **Nom du Mode SQL**, **héritée de Modes SQL**, et **Modes SQL efficace**.  
   
--   Grille de Modes SQL au niveau de la procédure stockée, fonction stockée et déclencheur contient les colonnes suivantes : **nom du Mode SQL**, **les Modes SQL d’origine**, et **efficace Modes SQL**.  
+-   Grille de Modes SQL au niveau de la procédure stockée, fonction stockée et déclencheur contient les colonnes suivantes : **Nom du Mode SQL**, **les Modes SQL d’origine**, et **Modes SQL efficace**.  
   
 > [!NOTE]  
 > Modes de groupe seront affichera en gras, sous la colonne 'Nom de Mode SQL'.  

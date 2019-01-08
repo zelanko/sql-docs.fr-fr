@@ -1,5 +1,5 @@
 ---
-title: Représentation (tabulaire) indicateur de Performance de la clé | Documents Microsoft
+title: Clé de représentation d’indicateur de Performance (tabulaire) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3a536272f6e41e3aaf1abe6404139b67e0e558f0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 690c82c020f509e7dec816ca64a11dc2828ad4cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039660"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513980"
 ---
-# <a name="tables---key-performance-indicator-representation"></a>Tables - représentation d’indicateur de Performance clé
+# <a name="tables---key-performance-indicator-representation"></a>Tables - Représentation d’un indicateur de performance clé
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Un KPI évalue la performance d'une valeur, définie par une mesure de base, par rapport à une valeur cible.  
   
 ## <a name="key-performance-indicator-representation"></a>Représentation d'un indicateur de performance clé  
- Dans les modèles d'objet tabulaire, un indicateur de performance clé (KPI) est une mesure comprenant des informations supplémentaires pour afficher graphiquement l'application cliente. Un KPI comprend généralement des informations sur l'objectif visé, l'état de la mesure par rapport à l'objectif et des informations destinées à l'outil client pour afficher graphiquement l'état.  
+ Dans l’objet tabulaire Modélise un indicateur de performance clés - kpi-est une mesure avec des informations supplémentaires pour l’application cliente pour l’afficher sous forme graphique. Un KPI comprend généralement des informations sur l'objectif visé, l'état de la mesure par rapport à l'objectif et des informations destinées à l'outil client pour afficher graphiquement l'état.  
   
 ### <a name="key-performance-indicator-in-amo"></a>Indicateur de performance clé dans AMO  
  Lorsque vous utilisez AMO pour gérer un KPI de modèle tabulaire il n'y a pas de correspondance d'objet un-à-un, l'objet AMO <xref:Microsoft.AnalysisServices.Kpi> n'est pas utilisée à cet effet ; dans AMO, pour les modèles tabulaires, un KPI est représenté par la série d'objets créés dans un des éléments de la collection <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> et de la collection <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A>.  
@@ -221,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>Exemple AMO2Tabular  
- Pour comprendre comment utiliser AMO pour créer et manipuler des indicateurs de Performance clé des représentations, consultez le code source de la AMO pour exemple sous forme de tableau. plus précisément, archivez le fichier source suivant : AddKPIs.cs. L'exemple est disponible sur Codeplex. Remarque importante à propos du code : le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques.  
+ Pour savoir comment utiliser AMO pour créer et manipuler des représentations d'indicateur de performance clé, consultez le code source de l'exemple Objets AMO vers objets tabulaires ; plus précisément, archivez le fichier source suivant : AddKPIs.cs. L'exemple est disponible sur Codeplex. Remarque importante à propos du code : le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques.  
   
   

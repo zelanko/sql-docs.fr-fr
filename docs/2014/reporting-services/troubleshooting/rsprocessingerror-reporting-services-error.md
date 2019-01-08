@@ -13,12 +13,12 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68a2b5b9a48523193f263ae0bba1c8eaddc186c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be7e09d5254efc35761b267655a8949e4b09173d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207319"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403613"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erreur Reporting Services
     
@@ -56,7 +56,7 @@ ms.locfileid: "48207319"
   
 -   Un paramètre dont la propriété Nullable pour `False` a détecté une valeur null dans le paramètre.  
   
--   Une expression pour la propriété Hidden d’une région de données contient une erreur : la référence d’objet n’est pas définie à une instance d’un objet.  
+-   Une expression pour la propriété Hidden d’une région de données contient une erreur : référence d'objet non définie sur une instance d'un objet.  
   
 -   Une expression contenait un appel de fonction non valide ou une erreur de syntaxe.  
   
@@ -76,18 +76,18 @@ ms.locfileid: "48207319"
 -   Si vous êtes connecté en tant qu’administrateur local sur le serveur de rapports, recherchez `ReportProcessingException`dans le fichier journal. Les entrées du journal contiennent des informations supplémentaires. Le fichier journal du serveur de rapports se trouve généralement à l’emplacement suivant : \<*lecteur*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*horodatage*.log. Pour plus d’informations, consultez [Fichiers journaux et sources de Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>Échec du chargement de l'assembly hôte d'expressions  
- Les assemblys personnalisés doivent être signés par un nom fort et disposer de l’attribut AllowPartiallyTrustedCallers. Pour plus d’informations, consultez [à l’aide d’assemblys personnalisés avec des rapports](../custom-assemblies/using-custom-assemblies-with-reports.md) et [présentation des stratégies de sécurité](../extensions/secure-development/understanding-security-policies.md).  
+ Les assemblys personnalisés doivent être signés par un nom fort et disposer de l’attribut AllowPartiallyTrustedCallers. Pour plus d’informations, consultez [Utilisation d’assemblys personnalisés avec des rapports](../custom-assemblies/using-custom-assemblies-with-reports.md) et [Présentation des stratégies de sécurité](../extensions/secure-development/understanding-security-policies.md).  
   
 ### <a name="a-built-in-global-name-does-not-exist"></a>Un nom global intégré n'existe pas  
  Vérifiez l'orthographe dans les expressions. Les noms de paramètres, de globales et de champs respectent la casse. Dans l'expression source de l'erreur, vérifiez que le nom existe réellement dans le rapport et qu'il est correctement orthographié. Pour plus d’informations, consultez [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### <a name="parameter-properties-and-null"></a>Propriétés de paramètre et valeur NULL  
- Un paramètre à valeurs multiples ne peut pas contenir la valeur NULL. Pour plus d’informations, consultez [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Un paramètre à valeurs multiples ne peut pas contenir la valeur NULL. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Le rapport principal avec le sous-rapport n'a pas pu être traité  
- Un rapport avec des sous-rapports doit être traité par la même version du processeur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lors de la mise à niveau de rapports vers la version actuelle du schéma de la définition de rapport, le rapport principal et les sous-rapports peuvent ou non ne pas être mis à jour en même temps. Si la version d'un rapport et de ses sous-rapports n'est pas compatible, le message suivant est affiché : « Le sous-rapport n'a pas pu être traité ».  
+ Un rapport avec des sous-rapports doit être traité par la même version du processeur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lors de la mise à niveau de rapports vers la version actuelle du schéma de la définition de rapport, le rapport principal et les sous-rapports peuvent ou non ne pas être mis à jour en même temps. Si la version entre un rapport et ses sous-rapports n'est pas compatible, le message suivant est affiché : « Le sous-rapport n'a pas pu être traité ».  
   
- Vous devez modifier le rapport principal ou les sous-rapports pour que tous les rapports puissent être traités par la même version du processeur de rapports. Pour plus d’informations sur la raison pour laquelle un rapport ne parvient pas à mettre à niveau, consultez [Upgrade Reports](../install-windows/upgrade-reports.md).  
+ Vous devez modifier le rapport principal ou les sous-rapports pour que tous les rapports puissent être traités par la même version du processeur de rapports. Pour plus d’informations sur la cause de l’échec de la mise à niveau d’un rapport, consultez [Mettre à niveau des rapports](../install-windows/upgrade-reports.md).  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>Vérifier que les appels de fonction sont des appels de fonction Visual Basic et non SQL  
  Vous pouvez utiliser des fonctions SQL dans le texte des requêtes sur une base de données relationnelle. Vous ne pouvez pas utiliser de fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] dans le texte de requête.  
@@ -105,14 +105,14 @@ ms.locfileid: "48207319"
   
 -   Échec de l’évaluation de *\<nom de propriété>*. Il fait référence à un champ de dataset qui contient une erreur : *\<>*.  
   
- Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 ### <a name="invalid-or-conflicting-scope-specification-in-an-aggregate-function-call"></a>Spécification d'étendue non valide et incompatible dans un appel de fonction d'agrégation  
  Lorsque vous incluez des appels de fonction d'agrégation à une expression dans une cellule de tableau matriciel, le processeur de rapports évalue l'expression dans l'étendue des groupes intimes auxquels la cellule appartient.  
   
  Vous pouvez également passer le nom d'une étendue spécifique à une fonction d'agrégation. L'étendue peut faire référence au nom d'un dataset, une région de données ou le nom d'une étendue plus élevée dans la hiérarchie de données. Cela s'applique aux messages suivants :  
   
--   L’étendue « *\<nom_étendue>*  » de l’élément *\<type_élément_rapport>* '*\<nom_élément_rapport>*' n’est pas valide. L'étendue doit être l'étendue actuelle ou doit se trouver dans l'étendue actuelle.  
+-   L’étendue « *\<nom_étendue>*  » de l’élément *\<type_élément_rapport>* « *\<nom_élément_rapport>*  » n’est pas valide. L'étendue doit être l'étendue actuelle ou doit se trouver dans l'étendue actuelle.  
   
 -   L’expression de la propriété *\<nom_propriété* de l’objet *\<type_élément_rapport>* '*\<nom_élément_rapport>*' possède un paramètre d’étendue qui n’est pas valide pour une fonction d’agrégation. Le paramètre d'étendue doit être défini sur une constante de chaîne qui est égale au nom d'un groupe conteneur, au nom d'une région de données conteneur, ou au nom d'un dataset.  
   
@@ -127,12 +127,12 @@ ms.locfileid: "48207319"
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Filtres couramment utilisés &#40;Générateur de rapports et SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Références à la Collection Parameters &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Références à la collection Parameters &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

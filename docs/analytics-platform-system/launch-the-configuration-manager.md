@@ -1,6 +1,6 @@
 ---
-title: Lancer le Gestionnaire de Configuration - système de plateforme Analytique | Documents Microsoft
-description: Instructions pour lancer l’outil de Configuration Manager pour le matériel de système de plateforme Analytique.
+title: Lancez le Gestionnaire de Configuration - Analytique Platform System | Microsoft Docs
+description: Instructions pour lancer l’outil de Configuration Manager pour l’appliance Analytique Platform System.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,23 +9,23 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d2e7a726386aa64d04f87f30cd22328900b1e5cd
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 087360981a7c31de6980755cfee4f98f88f48a15
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31544781"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502453"
 ---
-# <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Lancez le Gestionnaire de Configuration dans le système de plateforme Analytique
-Cette rubrique fournit des instructions pour lancer le **Configuration Manager** pour le matériel de système de plateforme Analytique.  
+# <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Lancez le Gestionnaire de Configuration d’Analytique Platform System
+Cette rubrique fournit des instructions pour lancer le **Configuration Manager** pour l’appliance Analytique Platform System.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-### <a name="prerequisites"></a>Configuration requise  
-Le système de plateforme Analytique**Configuration Manager** peut uniquement être exécutée par l’administrateur de domaine d’application. Pour exécuter cet outil, vous devez le mot de passe pour l’administrateur de domaine d’application. Pour créer d’autres administrateurs de points d’accès, consultez [créer un administrateur de domaine APS &#40;APS&#41;](create-an-aps-domain-administrator-aps.md).  
+### <a name="prerequisites"></a>Prérequis  
+Le système de plateforme Analytique**Configuration Manager** peut uniquement être exécuté par l’administrateur de domaine d’appliance. Pour exécuter cet outil, vous devez le mot de passe pour l’administrateur de domaine d’application. Pour créer des administrateurs de points d’accès supplémentaires, consultez [créer un administrateur de domaine APS &#40;APS&#41;](create-an-aps-domain-administrator-aps.md).  
   
-## <a name="Accessing"></a>Lancer l’outil de Configuration Manager  
-Pour exécuter le Gestionnaire de Configuration, utilisez Bureau à distance pour se connecter au nœud de contrôle de PDW (***PDW_region *-CTL01**) nœud et vous connecter en tant que * appliance_domain ***\Administrator**. Lors du démarrage de la **Configuration Manager** de programme, utilisez la **exécuter en tant qu’administrateur** option pour vous assurer que vos informations d’identification d’administrateur sont utilisées.  
+## <a name="Accessing"></a>Lancez l’outil de Configuration Manager  
+Pour exécuter le Gestionnaire de Configuration, utilisez Bureau à distance pour se connecter au nœud de contrôle de PDW (**_PDW_region_-CTL01**) nœud et connectez-vous en tant que _appliance_domain_ **\Administrator**. Lors du démarrage de la **Configuration Manager** du programme, utilisez la **exécuter en tant qu’administrateur** option pour vous assurer que vos informations d’identification administrateur sont utilisées.  
   
 #### <a name="to-launch-from-a-browser-window"></a>Lancement à partir d’une fenêtre de navigateur  
   
@@ -48,5 +48,5 @@ Pour fermer et quitter **Configuration Manager**, cliquez sur **quitter** dans l
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
 ## <a name="see-also"></a>Voir aussi  
-[Contrôler le matériel à l’aide de la Console d’administration &#40;Analytique plate-forme système&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+[Surveiller l’Appliance à l’aide de la Console d’administration &#40;Analytique Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

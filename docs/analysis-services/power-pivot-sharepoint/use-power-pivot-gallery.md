@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a2eb7bfae0c4fcbc82995c120ef588fdfd4710af
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 03752c2f1d7259f29f634473efdfe570c55b89ee
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980582"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405394"
 ---
 # <a name="use-power-pivot-gallery"></a>Utiliser la galerie PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "38980582"
 >  La Galerie PowerPivot requiert Microsoft Silverlight.  Le navigateur Microsoft Edge ne prend pas en charge Silverlight.   
 > Pour afficher le contenu de la bibliothèque dans Edge, cliquez sur l’onglet **Bibliothèque** dans la Galerie PowerPivot, puis définissez l’affichage de la bibliothèque de documents sur **Tous les documents**.    
 > Pour modifier l’affichage par défaut, cliquez sur l’onglet **Bibliothèque** , puis sur Modifier l’affichage. Cliquez sur Définir cet affichage comme affichage par défaut, puis sur OK pour enregistrer l’affichage par défaut.  
->  Pour plus d'informations sur les composants pris en charge par Edge, consultez le billet du blog Windows intitulé [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Pour plus d’informations sur les prend en charge de Edge, consultez le blog de Windows, [un saut dans le passé, partie 2 : L’adieu à ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  Pour obtenir la liste complète des prérequis, consultez [Create and Customize Power Pivot Gallery](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md).  
   
@@ -68,13 +68,13 @@ ms.locfileid: "38980582"
   
 1.  Enregistrez le fichier.  
   
-2.  1.  **Excel 2010 :** dans le menu Fichier, cliquez sur **Enregistrer​​ et envoyer**.  
+2.  1.  **Excel 2010 :** Dans le menu fichier, cliquez sur **enregistrer et envoyer**.  
   
     2.  Cliquez sur **Enregistrer dans SharePoint**.  
   
     3.  Cliquez sur **Options de publication** si vous souhaitez utiliser les options Excel Services pour sélectionner des feuilles ou paramètres individuels que vous souhaitez publier. Par exemple, l'onglet Paramètres dans Options Excel Services vous permet de choisir les découpages qui apparaissent dans le classeur publié.  
   
-    1.  **Excel 2013 :**  dans le menu Fichier, cliquez sur **Enregistrer**.  
+    1.  **Excel 2013 :**  Dans le menu fichier, cliquez sur **enregistrer**.  
   
     2.  Cliquez sur **Options du Mode Navigateur** si vous souhaitez utiliser les options Excel Services pour sélectionner des feuilles ou paramètres individuels que vous souhaitez publier. Par exemple, l'onglet Paramètres dans Options Excel Services vous permet de choisir les découpages qui apparaissent dans le classeur publié.  
   
@@ -153,16 +153,16 @@ ms.locfileid: "38980582"
 ### <a name="document-type-is-not-supported"></a>Le type de document n'est pas pris en charge.  
  Le type de contenu **Document de Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** n’est pas pris en charge. Si vous activez le type de contenu **Document de Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** pour une bibliothèque de documents et que vous tentez de créer un document de ce type, un message d’erreur similaire à l’un des suivants s’affiche :  
   
--   Le « nouveau document » nécessite une application et un navigateur Web compatibles avec Microsoft SharePoint Foundation. Pour ajouter un document dans cette bibliothèque de documents, cliquez sur le bouton « Télécharger un document ».  
+-   « Nouveau Document » nécessite un navigateur de l’application et web compatible avec Microsoft Sharepoint Foundation. Pour ajouter un document à cette bibliothèque de documents, cliquez sur le bouton Télécharger un Document.  
   
--   « L'adresse Internet 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' n'est pas valide. » Microsoft Excel ne peut pas accéder au fichier 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. Plusieurs raisons sont possibles :  
+-   « L’adresse Internet ' http://[server name] / testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' n’est pas valide. » » Microsoft Excel ne peut pas accéder au fichier ' http://[server name] / testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. Plusieurs raisons sont possibles :  
   
  Le type de contenu **Document de Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** n’est pas automatiquement ajouté aux bibliothèques de documents. Ce problème ne se produit pas, sauf si vous activez manuellement le type de contenu non pris en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Supprimer la galerie PowerPivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
- [Créez et personnalisez la galerie PowerPivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [Create and Customize Power Pivot Gallery](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
  [Planifier une actualisation des données (PowerPivot pour SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   

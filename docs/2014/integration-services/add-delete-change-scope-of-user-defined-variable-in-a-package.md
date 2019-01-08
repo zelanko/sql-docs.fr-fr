@@ -13,19 +13,19 @@ ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: abc9f00432128750e4b61e971038bbc32dd85e86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e19b832bc3d7ebf1f883633491b309971cf2938e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125699"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398302"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Ajouter, supprimer, modifier l'étendue de la variable définie par l'utilisateur dans un package
   Les procédures suivantes expliquent comment ajouter, supprimer et modifier l’étendue d’une variable définie par l’utilisateur dans un package, à l’aide de la fenêtre **Variables**.  
   
- Pour plus d’informations sur la portée des variables, consultez [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ Pour plus d’informations sur la portée des variables, consultez [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit également des variables système qui rendent disponibles les informations système en cours d’exécution et peuvent être utilisées dans des conteneurs tels que les packages et les gestionnaires d’événements. Vous ne pouvez pas supprimer des variables système.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit également des variables système qui rendent disponibles les informations système au moment de l'exécution, pour être utilisées dans des conteneurs tels que des packages et des gestionnaires d'événements. Vous ne pouvez pas supprimer des variables système.  
   
 ### <a name="to-add-a-variable"></a>Pour ajouter une variable  
   
@@ -84,8 +84,8 @@ ms.locfileid: "48125699"
 6.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
- [Utiliser des Variables dans des Packages](../../2014/integration-services/use-variables-in-packages.md)   
+ [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)   
  [Définir les propriétés d’une Variable définie par l’utilisateur](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [Utiliser les valeurs des variables et des paramètres dans un package enfant](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
   

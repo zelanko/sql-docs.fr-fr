@@ -11,12 +11,12 @@ ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e701bb22a2350d90fdaf4ab461aa70063eab97b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f3f982eeee9abc016575b8acd068b8ef2e7450f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120959"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408176"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Déployer des projets sur le serveur Integration Services
   Dans la version actuelle d’[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vous pouvez déployer vos projets sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vous permet de gérer les packages, d'exécuter les packages et de configurer les valeurs d'exécution des packages à l'aide d'environnements.  
@@ -26,11 +26,11 @@ ms.locfileid: "48120959"
 > [!NOTE]  
 >  À l’instar des versions antérieures d’ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], la version actuelle vous permet aussi de déployer vos packages sur une instance de SQL Server et d’utiliser le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour exécuter et gérer les packages. Utilisez le modèle de déploiement de package. Pour plus d’informations, consultez [déploiement de Package &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
   
- Pour déployer un projet sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], effectuez les tâches suivantes :  
+ Pour déployer un projet sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , effectuez les tâches suivantes :  
   
-1.  Créez un catalogue SSISDB, si vous ne l'avez pas encore fait. Pour plus d’informations, consultez [Créer le catalogue SSIS](catalog/ssis-catalog.md).  
+1.  Créez un catalogue SSISDB, si vous ne l’avez pas encore fait. Pour plus d’informations, consultez [Créer le catalogue SSIS](catalog/ssis-catalog.md).  
   
-2.  Convertissez le projet en modèle de déploiement de projet en exécutant **l’Assistant Conversion de projet Integration Services** . Pour plus d’informations, consultez les instructions ci-dessous : [Pour convertir un projet en modèle de déploiement de projet](#convert).  
+2.  Convertissez le projet en modèle de déploiement de projet en exécutant **l’Assistant Conversion de projet Integration Services** . Pour plus d’informations, consultez les instructions ci-dessous : [Pour convertir un projet pour le modèle de déploiement de projet](#convert)  
   
     -   Si vous avez créé le projet dans [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)], par défaut, le projet utilise le modèle de déploiement de projet.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "48120959"
   
      Pour plus d’informations sur la mise à niveau des packages, consultez [Mettre à niveau des packages Integration Services](install-windows/upgrade-integration-services-packages.md) et [Mettre à niveau des packages Integration Services à l’aide de l’Assistant Mise à niveau de packages SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Déployez le projet sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez les instructions ci-dessous : [Pour déployer un projet sur le serveur Integration Services](#deploy).  
+3.  Déployez le projet sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez les instructions ci-dessous : [Pour déployer un projet sur le serveur Integration Services](#deploy).  
   
 4.  (Facultatif) Créez un environnement pour le projet déployé. Pour plus d’informations, consultez [Créer et mapper un environnement serveur](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
 ##  <a name="convert"></a> Pour convertir un projet en modèle de déploiement de projet  
   
-1.  Ouvrez le projet dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], puis dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Convertir en modèle de déploiement de projet**.  
+1.  Ouvrez le projet dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]puis, dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet et cliquez sur **Convertir en modèle de déploiement de projet**.  
   
      -ou-  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48120959"
   
      -ou-  
   
-     Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], développez le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  **SSISDB** nœud dans l’Explorateur d’objets, puis recherchez le dossier de projets pour le projet que vous souhaitez déployer. Cliquez avec le bouton droit sur le dossier des **projets** , puis cliquez sur **Déployer le projet**.  
+     Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], développez le nœud [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] > **SSISDB** dans l’Explorateur d’objets, puis recherchez le dossier du projet que vous souhaitez déployer. Cliquez avec le bouton droit sur le dossier des **projets** , puis cliquez sur **Déployer le projet**.  
   
      -ou-  
   

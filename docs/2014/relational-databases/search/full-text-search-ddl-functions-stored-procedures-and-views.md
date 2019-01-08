@@ -10,12 +10,12 @@ ms.assetid: 98c36715-4195-482e-a4a3-d93ff65b75f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63fe1debc88ef1ce66571bc048cd104f93871aa1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ae1c272603e410a45e9e6c4d51dab23d34c46a0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226119"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517392"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>DDL, fonctions, procédures stockées et vues de recherche en texte intégral
   Répertorie les instructions Transact-SQL et les objets de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge la recherche en texte intégral, y compris la fonctionnalité de recherche de propriété.  
@@ -88,7 +88,7 @@ ms.locfileid: "48226119"
   
 -   [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)  
   
-##  <a name="cat"></a> Vues du système – Affichages catalogue  
+##  <a name="cat"></a> Vues système - Affichages catalogue  
   
 -   [sys.fulltext_catalogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql)  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48226119"
   
 -   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
-##  <a name="dmv"></a> Vues du système – Vues de gestion dynamique  
+##  <a name="dmv"></a> Vues système – Vues de gestion dynamique  
   
 -   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
   

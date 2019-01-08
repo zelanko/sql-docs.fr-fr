@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
@@ -14,12 +13,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19e99799eac66823d8b243470eb5540c94e22708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180659"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760591"
 ---
 # <a name="use-column-sets"></a>Utiliser des jeux de colonnes
   Les tables qui utilisent des colonnes éparses peuvent désigner un jeu de colonnes pour retourner toutes les colonnes éparses dans la table. Un jeu de colonnes est une représentation XML non typée qui combine toutes les colonnes éparses d'une table dans une sortie structurée. Un jeu de colonnes est semblable à une colonne calculée, dans la mesure où le jeu de colonnes n'est pas stocké physiquement dans la table. Un jeu de colonnes diffère d'une colonne calculée, dans le sens où le jeu de colonnes est peut être mis à jour directement.  
@@ -94,7 +93,7 @@ ms.locfileid: "48180659"
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>Insertion ou modification de données dans un jeu de colonnes  
  La manipulation des données d'une colonne éparse peut s'effectuer en utilisant le nom de chaque colonne ou en faisant référence au nom du jeu de colonnes et en spécifiant les valeurs du jeu de colonnes à l'aide du format XML du jeu de colonnes. Les colonnes éparses peuvent apparaître dans n'importe quel ordre dans la colonne XML.  
   
- Lorsque les valeurs de colonnes éparses sont insérées ou mises à jour à l’aide de l’ensemble de la colonne XML, les valeurs qui sont insérées dans les colonnes éparses sous-jacentes sont converties implicitement à partir de la `xml` type de données. Dans le cas des colonnes numériques, une valeur vierge dans le XML pour la colonne numérique est convertie en chaîne vide. Cela provoque l'insertion d'un zéro dans la colonne numérique, comme illustré dans l'exemple suivant.  
+ Lorsque des valeurs de colonnes éparses sont insérées ou mises à jour à l'aide du jeu de colonnes XML, les valeurs insérées dans les colonnes éparses sous-jacentes sont converties implicitement à partir du type de données `xml`. Dans le cas des colonnes numériques, une valeur vierge dans le XML pour la colonne numérique est convertie en chaîne vide. Cela provoque l'insertion d'un zéro dans la colonne numérique, comme illustré dans l'exemple suivant.  
   
 ```  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
@@ -108,7 +107,7 @@ GO
  Dans cet exemple, aucune valeur n'a été spécifiée pour le `i`de colonne, mais la valeur `0` a été insérée.  
   
 ## <a name="using-the-sqlvariant-data-type"></a>Utilisation du Type de données sql_variant  
- Le `sql_variant` type date peut stocker plusieurs types de données différents, tels que `int`, `char`, et `date`. Les jeux de colonnes retournent les informations de type de données telles que l'échelle, la précision et les informations relatives aux paramètres régionaux associées à une valeur `sql_variant` sous la forme d'attributs dans la colonne XML générée. Si vous essayez de fournir ces attributs dans une instruction XML générée de manière personnalisée en tant qu'entrée pour une opération d'insertion ou de mise à jour sur un jeu de colonnes, certains de ces attributs sont requis et une valeur par défaut est assignée à certains d'entre eux. Le tableau suivant répertorie les types de données et les valeurs par défaut générées par le serveur lorsque la valeur n'est pas fournie.  
+ Le type de données `sql_variant` peut stocker plusieurs types de données différents, tels que `int`, `char` et `date`. Les jeux de colonnes retournent les informations de type de données telles que l'échelle, la précision et les informations relatives aux paramètres régionaux associées à une valeur `sql_variant` sous la forme d'attributs dans la colonne XML générée. Si vous essayez de fournir ces attributs dans une instruction XML générée de manière personnalisée en tant qu'entrée pour une opération d'insertion ou de mise à jour sur un jeu de colonnes, certains de ces attributs sont requis et une valeur par défaut est assignée à certains d'entre eux. Le tableau suivant répertorie les types de données et les valeurs par défaut générées par le serveur lorsque la valeur n'est pas fournie.  
   
 |Type de données|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longueur maximale|Précision|Échelle|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
@@ -161,7 +160,7 @@ CREATE TABLE DocumentStoreWithColumnSet
 GO  
 ```  
   
-### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. Insertion de données dans une table en utilisant les noms des colonnes éparses  
+### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>b. Insertion de données dans une table en utilisant les noms des colonnes éparses  
  Les exemples suivants insèrent deux lignes dans la table créée dans l'exemple A. Les exemples utilisent les noms des colonnes éparses et ne font pas référence au jeu de colonnes.  
   
 ```  
