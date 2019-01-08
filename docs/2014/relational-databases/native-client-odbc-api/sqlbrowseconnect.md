@@ -14,12 +14,12 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5300285872c0c03ce25410ba0bfd636c7ccf6bca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208520"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352682"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect** utilise des mots clés qui peuvent être classés en trois niveaux d’informations de connexion. Pour chaque mot clé, le tableau suivant indique si une liste de valeurs valides est retournée et si le mot clé est facultatif.  
@@ -28,18 +28,18 @@ ms.locfileid: "48208520"
   
 |Mot clé|Liste retournée ?|Facultatif ?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|Néant|non|Nom de la source de données retournée par **SQLDataSources**. Le mot clé DSN ne peut pas être utilisé si le mot clé DRIVER est utilisé.|  
-|DRIVER|Néant|non|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom du pilote ODBC Native Client est {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Le mot clé DRIVER ne peut pas être utilisé si le mot clé DSN est utilisé.|  
+|DSN|N/A|Non|Nom de la source de données retournée par **SQLDataSources**. Le mot clé DSN ne peut pas être utilisé si le mot clé DRIVER est utilisé.|  
+|DRIVER|N/A|Non|Microsoft ?? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nom du pilote ODBC du Client natif est {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Le mot clé DRIVER ne peut pas être utilisé si le mot clé DSN est utilisé.|  
   
 ## <a name="level-2"></a>Niveau 2  
   
 |Mot clé|Liste retournée ?|Facultatif ?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Oui|non|Nom du serveur sur le réseau sur lequel la source de données réside. Le terme « local » peut être entré en tant que serveur, auquel cas une copie locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être utilisée, même lorsqu'il s'agit d'une version hors réseau.|  
-|UID|non|Oui|ID de connexion d'utilisateur.|  
-|PWD|non|Oui (dépend de l'utilisateur)|Mot de passe spécifié par l'utilisateur.|  
-|APP|non|Oui|Nom de l’application qui appelle **SQLBrowseConnect**.|  
-|WSID|non|Oui|ID de station de travail. En général, il s'agit du nom réseau de l'ordinateur sur lequel l'application s'exécute.|  
+|SERVER|Oui|Non|Nom du serveur sur le réseau sur lequel la source de données réside. Le terme « local » peut être entré en tant que serveur, auquel cas une copie locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être utilisée, même lorsqu'il s'agit d'une version hors réseau.|  
+|UID|Non|Oui|ID de connexion d'utilisateur.|  
+|PWD|Non|Oui (dépend de l'utilisateur)|Mot de passe spécifié par l'utilisateur.|  
+|APP|Non|Oui|Nom de l’application qui appelle **SQLBrowseConnect**.|  
+|WSID|Non|Oui|ID de station de travail. En général, il s'agit du nom réseau de l'ordinateur sur lequel l'application s'exécute.|  
   
 ## <a name="level-3"></a>Niveau 3  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48208520"
 |SQL_COPT_SS_BROWSE_CACHE_DATA documenté.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonction SQLBrowseConnect](http://go.microsoft.com/fwlink/?LinkId=59329)   
+ [Fonction SQLBrowseConnect](https://go.microsoft.com/fwlink/?LinkId=59329)   
  [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

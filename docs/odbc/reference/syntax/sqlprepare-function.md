@@ -20,16 +20,16 @@ ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d64f536b88d3b6fd8f10fc36b75cd3395c818af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e4c15cfe0d82fc4b68115c029334fa7d3ec7410
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814977"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590281"
 ---
 # <a name="sqlprepare-function"></a>Fonction SQLPrepare
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ISO 92  
+ Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
   
  **Résumé**  
  **SQLPrepare** prépare une chaîne SQL pour l’exécution.  
@@ -69,7 +69,7 @@ SQLRETURN SQLPrepare(
 |21S02|Degré de la table dérivée ne correspond pas à la liste des colonnes|\**StatementText* contenait un **CREATE VIEW** instruction et le nombre de noms spécifié n’est pas le même niveau que la table dérivée définie par la spécification de requête.|  
 |22018|Valeur de caractère non valide pour la spécification de la casse|**StatementText* contenait une instruction SQL qui contenait un littéral ou un paramètre, et la valeur n’est pas compatible avec le type de données de la colonne de table associée.|  
 |22019|Caractère d’échappement non valide|L’argument *StatementText* contenus un **comme** prédicat avec une **échappement** dans le **où** clause et la longueur de la séquence d’échappement caractère suivant **d’échappement** n’était pas égale à 1.|  
-|22025|Séquence d’échappement non valide|L’argument *StatementText* contenus «**comme** *valeur de modèle* **échappement** *decaractèred’échappement*» dans le **où** clause et le caractère qui suit le caractère d’échappement dans la valeur de modèle qui n’est ni « % », ni « _ ».|  
+|22025|Séquence d’échappement non valide|L’argument *StatementText* contenus «**comme** _valeur de modèle_ **échappement** _decaractèred’échappement_» dans le **où** clause et le caractère qui suit le caractère d’échappement dans la valeur de modèle qui n’est ni « % », ni « _ ».|  
 |24000|État de curseur non valide|(DM) un curseur a été ouvert sur le *au paramètre StatementHandle*, et **SQLFetch** ou **SQLFetchScroll** avait été appelée.<br /><br /> Un curseur a été ouvert sur le *au paramètre StatementHandle*, mais **SQLFetch** ou **SQLFetchScroll** n’avait pas été appelée.|  
 |34000|Nom de curseur non valide|\**StatementText* contenait un positionnées **supprimer** ou un positionnées **mise à jour**, et le curseur référencé par l’instruction en cours de préparation n’est pas ouvert.|  
 |3D000|Nom de catalogue non valide|Le nom de catalogue spécifié dans *StatementText* n’était pas valide.|  
@@ -102,7 +102,7 @@ SQLRETURN SQLPrepare(
 > [!NOTE]  
 >  Si une application utilise **SQLPrepare** pour préparer et **SQLExecute** pour soumettre un **valider** ou **ROLLBACK** instruction, il ne sera pas interopérabilité entre les produits de SGBD. Pour valider ou restaurer une transaction, appelez **SQLEndTran**.  
   
- Le pilote peut modifier l’instruction pour utiliser le formulaire de session SQL utilisée par la source de données puis l’envoyer à la source de données pour la préparation. En particulier, le pilote modifie les séquences d’échappement utilisées pour définir la syntaxe SQL pour certaines fonctionnalités. (Pour obtenir une description de la syntaxe d’instruction SQL, consultez [les séquences d’échappement dans ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) et [annexe c : SQL grammaire](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).) Pour le pilote, un descripteur d’instruction est similaire à un identificateur de l’instruction dans le code SQL incorporé. Si la source de données prend en charge les identificateurs de l’instruction, le pilote peut envoyer un identificateur de l’instruction et les valeurs de paramètre à la source de données.  
+ Le pilote peut modifier l’instruction pour utiliser le formulaire de session SQL utilisée par la source de données puis l’envoyer à la source de données pour la préparation. En particulier, le pilote modifie les séquences d’échappement utilisées pour définir la syntaxe SQL pour certaines fonctionnalités. (Pour obtenir une description de la syntaxe d’instruction SQL, consultez [les séquences d’échappement dans ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) et [annexe c : Grammaire SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).) Pour le pilote, un descripteur d’instruction est similaire à un identificateur de l’instruction dans le code SQL incorporé. Si la source de données prend en charge les identificateurs de l’instruction, le pilote peut envoyer un identificateur de l’instruction et les valeurs de paramètre à la source de données.  
   
  Une fois une instruction est préparée, l’application utilise le descripteur d’instruction pour faire référence à l’instruction dans les appels de fonction ultérieurs. L’instruction préparée associée au handle d’instruction peut être réexécutée en appelant **SQLExecute** jusqu'à ce que l’application libère l’instruction avec un appel à **SQLFreeStmt** avec l’option SQL_DROP ou jusqu'à ce que le descripteur d’instruction est utilisé dans un appel à **SQLPrepare**, **SQLExecDirect**, ou l’une des fonctions de catalogue (**SQLColumns**,  **SQLTables**, et ainsi de suite). Une fois que l’application prépare une instruction, il peut demander des informations sur le format du jeu de résultats. Pour certaines implémentations, appelant **SQLDescribeCol** ou **SQLDescribeParam** après **SQLPrepare** peut ne pas être aussi efficace que l’appel de la fonction après **SQLExecute** ou **SQLExecDirect**.  
   

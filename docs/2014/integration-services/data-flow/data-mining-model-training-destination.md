@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingmodeltrainingdest.f1
@@ -18,12 +17,12 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdef0e0ed6de3bf527a5b87bc05a12e1bc6ace5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47c43a668ba9d418ea93b9367edb110980720d1c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068956"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781161"
 ---
 # <a name="data-mining-model-training-destination"></a>Destination d’apprentissage du modèle d’exploration de données
   La destination d'apprentissage du modèle d'exploration de données exerce les modèles d'exploration de données en transmettant les données que la destination reçoit par le biais des algorithmes de modèles d'exploration de données. Plusieurs modèles d'exploration de données peuvent faire l'objet d'un apprentissage par une même destination si les modèles sont construits sur la même structure d'exploration des données. Pour plus d’informations, consultez [Colonnes de structure d’exploration de données](../../analysis-services/data-mining/mining-structure-columns.md) et [Colonnes d’un modèle d’exploration de données](../../analysis-services/data-mining/mining-model-columns.md).  
@@ -42,16 +41,16 @@ ms.locfileid: "48068956"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur d’apprentissage du modèle d’exploration de données**, cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur d’apprentissage du modèle d’exploration de données données &#40;onglet Connexion&#41;](../data-mining-model-training-editor-connection-tab.md)  
+-   [Éditeur d’apprentissage du modèle d’exploration de données &#40;onglet Connexion&#41;](../data-mining-model-training-editor-connection-tab.md)  
   
--   [Éditeur d’apprentissage du modèle d’exploration de données données &#40;onglet colonnes&#41;](../data-mining-model-training-editor-columns-tab.md)  
+-   [Éditeur d’apprentissage du modèle d’exploration de données &#40;onglet Colonnes&#41;](../data-mining-model-training-editor-columns-tab.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](../common-properties.md)  
   
--   [Propriétés personnalisées de la destination d’apprentissage du modèle d’exploration de données](data-mining-model-training-destination-custom-properties.md)  
+-   [Propriétés personnalisées de la destination d'apprentissage du modèle d'exploration de données](data-mining-model-training-destination-custom-properties.md)  
   
- Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la définition des propriétés, consultez [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md).  
   
   

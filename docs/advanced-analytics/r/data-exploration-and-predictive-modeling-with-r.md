@@ -1,5 +1,5 @@
 ---
-title: Exploration des données et modélisation prédictive avec R dans SQL Server Machine Learning | Microsoft Docs
+title: Exploration des données et modélisation prédictive avec R - Services de SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 60a899de027f2e9de591a70971dbee3f4300d87d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c6c0e07f48dee271fee61bc59b47f49683ff8832
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984711"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432342"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Exploration des données et modélisation prédictive avec R dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article décrit les améliorations apportées au processus de science des données qui sont possibles grâce à l’intégration avec SQL Server.
 
-S’applique à : SQL Server 2016 R Services, Services SQL Server 2017 Machine calculateur
+S'applique à : SQL Server 2016 R Services, Services SQL Server 2017 Machine calculateur
 
 ## <a name="the-data-science-process"></a>Le processus de science des données
 
@@ -30,7 +30,7 @@ Toutefois, cette approche présente plusieurs inconvénients, qui possèdent ent
 + Le déplacement des données peuvent être lent, inefficace ou non sécurisé
 + R lui-même présente des limitations de performances et de mise à l’échelle
 
-Ces inconvénients deviennent plus évidents lorsque vous avez besoin de déplacer et d’analyser de grandes quantités de données ou d’utiliser des jeux de données plus grands que la mémoire disponible de votre ordinateur.
+Ces inconvénients deviennent plus évidents lorsque vous avez besoin de déplacer et analyser de grandes quantités de données, ou utiliser des jeux de données qui ne tiennent pas dans la mémoire disponible sur votre ordinateur.
 
 Le nouveau, évolutives et les fonctions R incluses avec [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] vous aider à relever ces défis. 
 
@@ -62,15 +62,15 @@ Outre les bibliothèques R propriétaires inclus avec l’apprentissage de Micro
   
      Pour plus d’informations sur ces packages et leur utilisation, consultez [What ' s RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction) et [bien démarrer avec RevoPemaR](https://msdn.microsoft.com/microsoft-r/pemar-getting-started). 
 
-+ **MicrosoftML** contient une collection d’algorithmes d’apprentissage automatique hautement optimisée et les transformations de données à partir de l’équipe de science des données de Microsoft. La plupart des algorithmes sont également utilisés dans Azure Machine Learning. Pour plus d’informations, consultez [à l’aide du MicrosoftML Package](../../advanced-analytics/using-the-microsoftml-package.md).
++ **MicrosoftML** contient une collection d’algorithmes d’apprentissage automatique hautement optimisée et les transformations de données à partir de l’équipe de science des données de Microsoft. La plupart des algorithmes sont également utilisés dans Azure Machine Learning. Pour plus d’informations, consultez [MicrosoftML dans SQL Server](ref-r-microsoftml.md).
 
 ### <a name="r-development-tools"></a>Outils de développement R
 
 Lorsque vous développez votre solution R, veillez à télécharger Microsoft R Client. Ce téléchargement gratuit comprend les bibliothèques nécessaires pour prendre en charge les contextes de calcul distants et alorithms évolutive :
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] :** distribution du runtime R et ensemble de packages, tels que la bibliothèque Intel Math Kernel Library, qui améliore les performances des opérations standard de R.  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** Une distribution du runtime R et un ensemble de packages, tels que Intel math kernel library, qui améliore les performances des opérations R standard.  
   
-+ **RevoScaleR :** package R qui permet de transférer (pushing) des calculs à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]. Il inclut également un ensemble de fonctions R courantes qui ont été repensées pour offrir de meilleures performances et une plus grande scalabilité. Le préfixe **rx** identifie ces fonctions améliorées. Il inclut aussi des fournisseurs de données améliorées pour diverses sources. Ces fonctions ont le préfixe **Rx**.
++ **RevoScaleR :** Un package R qui vous permet de transmettre des calculs à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)] . Il inclut également un ensemble de fonctions R courantes qui ont été repensées pour offrir de meilleures performances et une plus grande scalabilité. Le préfixe **rx** identifie ces fonctions améliorées. Il inclut aussi des fournisseurs de données améliorées pour diverses sources. Ces fonctions ont le préfixe **Rx**.
 
 Vous pouvez utiliser n’importe quel éditeur de code basé sur Windows qui prend en charge R, tel que [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] ou RStudio. Le téléchargement de [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] inclut également des outils en ligne de commande courants pour R, comme RGui.exe.
 
@@ -103,4 +103,4 @@ En général, le processus de déploiement commence par nettoyer votre script af
 
 [Comparaison des fonctions Base R et ScaleR](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 
-[Fonctions ScaleR pour travailler avec des données SQL Server](../../advanced-analytics/r/scaler-functions-for-working-with-sql-server-data.md)
+[Bibliothèque RevoScaleR dans SQL Server](ref-r-revoscaler.md)

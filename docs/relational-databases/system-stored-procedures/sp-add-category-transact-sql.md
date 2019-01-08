@@ -18,12 +18,12 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 047b936bf608be86407c93860078758d43ebbb2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 295f29b86e53a8d58622e4c79c1b36734acdbe3e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792065"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591013"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,25 +43,25 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@class =** ] **'***classe***'**  
+ [  **@class =** ] **'**_classe_**'**  
  Classe de la catégorie à ajouter. *classe* est **varchar(8)** avec une valeur par défaut du travail, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |JOB|Ajoute une catégorie de travail.|  
 |ALERT|Ajoute une catégorie d'alertes.|  
 |OPERATOR|Ajoute une catégorie d'opérateurs.|  
   
- [  **@type =** ] **'***type***'**  
+ [  **@type =** ] **'**_type_**'**  
  Type de catégorie à ajouter. *type* est **varchar(12)**, avec une valeur par défaut **LOCAL**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |LOCAL|Catégorie de travaux locaux.|  
 |PLUSIEURS SERVEURS|Une catégorie de travaux multiserveur.|  
 |Aucune|Une catégorie pour une classe différente de JOB **.**|  
   
- [  **@name =** ] **'***nom***'**  
+ [  **@name =** ] **'**_nom_**'**  
  Nom de la catégorie à ajouter. Le nom doit être unique dans la classe spécifiée. *nom* est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -73,7 +73,7 @@ sp_add_category
 ## <a name="remarks"></a>Notes  
  **sp_add_category** doit être exécuté à partir de la **msdb** base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_add_category**.  
   
 ## <a name="examples"></a>Exemples  

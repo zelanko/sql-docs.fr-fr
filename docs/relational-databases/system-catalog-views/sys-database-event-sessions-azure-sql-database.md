@@ -12,19 +12,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d65fc1f1ac1620e97e60fe2a6558c23abefde0ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99b5523be4e0c798d9707886df36f9dcba184412
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856316"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213598"
 ---
 # <a name="sysdatabaseeventsessions-azure-sql-database"></a>sys.database_event_sessions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Répertorie toutes les définitions de session d’événements qui existent dans la base de données actuelle dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-> [!NOTE]  
+> [!NOTE]
 >  L’affichage catalogue similaire nommée `sys.server_event_sessions` s’applique uniquement aux [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ||  
@@ -45,7 +45,7 @@ ms.locfileid: "47856316"
 |track_causality|**bit**|Activer ou désactiver le suivi de causalité. Si cette option a la valeur 1 (ON), le suivi est activé et les événements associés de différentes connexions au serveur peuvent être corrélés. Le paramètre par défaut est 0 (OFF). N'accepte pas la valeur NULL.|  
 |startup_state|**bit**|Cette valeur détermine si la session est lancée automatiquement au démarrage du serveur. La valeur par défaut est 0. N'accepte pas la valeur NULL. Les valeurs suivantes sont possibles :<br /><br /> 0 (OFF). La session ne se lance pas au démarrage du serveur.<br /><br /> 1 (ON). La session d'événements se lance au démarrage du serveur.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
   

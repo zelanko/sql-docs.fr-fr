@@ -15,15 +15,15 @@ ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 20bf707508b8ae5cc8ad7a491d45d151eb806f1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e65ae16a2297c0f54f16e31e770623c8edd80639
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229829"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376801"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliothèques de classes d'éléments de rapport personnalisés
-  Les éléments de rapport personnalisés utilisent des classes de l'espace de noms `Microsoft.ReportDesigner`. Les classes utilisées pour implémenter un élément de rapport personnalisé peuvent être divisées en deux catégories principales : les classes uniques conçues pour prendre en charge l'infrastructure d'éléments de rapport personnalisés et les classes wrapper managées qui encapsulent les fonctionnalités d'éléments RDL (Report Definition Language) pertinents. Pour un exemple de code montrant comment utiliser ces classes, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
+  Les éléments de rapport personnalisés utilisent des classes de l'espace de noms `Microsoft.ReportDesigner`. Les classes utilisées pour implémenter un élément de rapport personnalisé peuvent être divisées en deux catégories principales : les classes uniques conçues pour prendre en charge l'infrastructure d'éléments de rapport personnalisés et les classes wrapper managées qui encapsulent les fonctionnalités d'éléments RDL (Report Definition Language) pertinents. Pour un exemple de code montrant comment utiliser ces classes, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
 ## <a name="custom-report-item-infrastructure-classes"></a>Classes d'infrastructure d'éléments de rapport personnalisés  
  Les classes suivantes sont utilisées pour implémenter un élément de rapport personnalisé.  
@@ -48,8 +48,8 @@ ms.locfileid: "48229829"
 |`AltReportItem`|Objet de remplacement d'élément de rapport, à utiliser lorsque le contrôle DTC de l'élément de rapport personnalisé n'est pas pris en charge.|  
 |`Style`|Propriétés de style destinées à l'élément de rapport personnalisé.|  
 |`Adornment`|Fenêtre d'ornement utilisée pour modifier de manière interactive le contrôle.|  
-|`Site`|Le `ISite` du composant.|  
-|`DesignerVerbCollection`|Tableau de verbes personnalisés destinés au menu contextuel du contrôle.|  
+|`Site`|`ISite` du composant.|  
+|`DesignerVerbCollection`|Tableau de verbes personnalisés pour le menu contextuel du contrôle.|  
   
 #### <a name="public-methods"></a>M&#233;thodes publiques  
   

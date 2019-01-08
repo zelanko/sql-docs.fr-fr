@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledest.f1
@@ -18,12 +17,12 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9cc425ca170a8b6619bead023f76b163e698aab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed4cb484f89d44ed31b4c82a9e1349dfab925dac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058789"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761751"
 ---
 # <a name="flat-file-destination"></a>Destination de fichier plat
   La destination de fichier plat écrit des données dans un fichier texte. Le fichier texte peut se présenter dans un format délimité, à largeur fixe, à largeur fixe avec séparateur de ligne ou en drapeau à droite.  
@@ -45,9 +44,9 @@ ms.locfileid: "48058789"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source de fichier plat**, cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de Destination de fichiers plats &#40;Page Gestionnaire de connexions&#41;](../flat-file-destination-editor-connection-manager-page.md)  
+-   [Éditeur de destination de fichier plat &#40;page Gestionnaire de connexions&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [Éditeur de Destination de fichiers plats &#40;Page mappages&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [Éditeur de destination de fichier plat &#40;page Mappages&#41;](../flat-file-destination-editor-mappings-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   

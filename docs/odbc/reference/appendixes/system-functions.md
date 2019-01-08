@@ -14,12 +14,12 @@ ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 048db455419d2b74658b758f3a3c525b02bf37f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5870cb445d7afd098aba32ffd9be7a88c048bae5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811407"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591513"
 ---
 # <a name="system-functions"></a>Fonctions système
 Le tableau suivant répertorie les fonctions système qui sont incluses dans le jeu de fonction scalaire ODBC. En appelant **SQLGetInfo** avec un *d’informations, tapez* de SQL_SYSTEM_FUNCTIONS, une application peut déterminer les fonctions système sont prises en charge par un pilote.  
@@ -33,5 +33,5 @@ Le tableau suivant répertorie les fonctions système qui sont incluses dans le 
 |Fonction|Description|  
 |--------------|-----------------|  
 |**(DE BASE DE DONNÉES)** (ODBC 1.0)|Retourne le nom de la base de données correspondant au descripteur de connexion. (Le nom de la base de données est également disponible en appelant **SQLGetConnectOption** avec l’option de connexion SQL_CURRENT_QUALIFIER.)|  
-|**IFNULL (** *exp*,*valeur ***)** (ODBC version 1.0)|Si *exp* a la valeur null, *valeur* est retourné. Si *exp* n’est pas null, *exp* est retourné. L’ou les types de données possibles *valeur* doit être compatible avec le type de données *exp*.|  
+|**IFNULL (** _exp_,_valeur_**)** (ODBC version 1.0)|Si *exp* a la valeur null, *valeur* est retourné. Si *exp* n’est pas null, *exp* est retourné. L’ou les types de données possibles *valeur* doit être compatible avec le type de données *exp*.|  
 |**UTILISATEUR ()** (ODBC 1.0)|Retourne le nom d’utilisateur dans le SGBD. (Le nom d’utilisateur est également disponible par le biais de **SQLGetInfo** en spécifiant le type d’informations : SQL_USER_NAME.) Cela peut être différent du nom de connexion.|

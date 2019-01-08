@@ -11,12 +11,12 @@ ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 606d597bd539da9e50b1c0452d9126e2f4671731
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054369"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371311"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Sources de données prises en charge (SSAS Tabulaire)
   Cette rubrique décrit les types de sources de données qui peuvent être utilisées avec les modèles tabulaires.  
@@ -36,9 +36,9 @@ ms.locfileid: "48054369"
 |-|-|-|-|  
 |Source|Versions|Type de fichier|Fournisseurs <sup>1</sup>|  
 |Bases de données Access|Microsoft Access 2003, 2007, 2010.|.accdb ou .mdb|Fournisseur OLE DB ACE 14|  
-|Bases de données relationnelles SQL Server|Microsoft SQL Server 2005, 2008, 2008 R2 ; SQL Server 2012, Microsoft SQL Azure Database <sup>2</sup>|(non applicable)|Fournisseur OLE DB pour SQL Server<br /><br /> Fournisseur OLE DB SQL Server Native Client<br /><br /> Fournisseur OLE DB SQL Server Native Client 10.0<br /><br /> Fournisseur de données .NET Framework pour SQL Client|  
+|Bases de données relationnelles SQL Server|Microsoft SQL Server 2005, 2008, 2008 R2 ; SQL Server 2012, Microsoft SQL Azure Database <sup>2</sup>|(non applicable)|Fournisseur OLE DB pour SQL Server<br /><br /> Fournisseur OLE DB SQL Server Native Client<br /><br /> Fournisseur OLE DB SQL Server Native Client 10.0<br /><br /> Fournisseur de données .NET Framework pour SQL Client|  
 |SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|2008 R2|(non applicable)|Fournisseur OLE DB pour SQL Server PDW|  
-|Bases de données relationnelles Oracle|Oracle 9i, 10g, 11g.|(non applicable)|Fournisseur OLE DB Oracle<br /><br /> Fournisseur de données .NET Framework pour client Oracle<br /><br /> Fournisseur de données .NET Framework pour SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
+|Bases de données relationnelles Oracle|Oracle 9i, 10g, 11g.|(non applicable)|Fournisseur OLE DB Oracle<br /><br /> Fournisseur de données .NET Framework pour client Oracle<br /><br /> Fournisseur de données .NET Framework pour SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Bases de données relationnelles Teradata|Teradata V2R6, V12|(non applicable)|Fournisseur OLE DB TDOLEDB<br /><br /> Fournisseur de données .Net pour Teradata|  
 |Bases de données relationnelles Informix||(non applicable)|Fournisseur OLE DB Informix|  
 |Bases de données relationnelles IBM DB2|8.1|(non applicable)|DB2OLEDB|  
@@ -53,9 +53,9 @@ ms.locfileid: "48054369"
   
  <sup>1</sup> vous pouvez également utiliser le fournisseur OLE DB pour ODBC.  
   
- <sup>2</sup> pour plus d’informations sur SQL Azure, consultez le site web [SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> pour plus d’informations sur SQL Azure, consultez le site web [SQL Azure](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> pour plus d’informations sur SQL Server PDW, consultez le site web [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> pour plus d’informations sur SQL Server PDW, consultez le site web [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
  <sup>4</sup> dans certains cas, l’utilisation du fournisseur OLE DB MSDAORA peut entraîner des erreurs de connexion, en particulier avec les versions plus récentes d’Oracle. Si vous rencontrez des erreurs, nous vous recommandons d'utiliser l'un des autres fournisseurs répertoriés pour Oracle.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48054369"
 4.  Les fournisseurs OLE DB peuvent parfois offrir de meilleures performances pour des données à grande échelle. Quand vient le moment de faire votre choix parmi différents fournisseurs pour la même source de données, il est conseillé d'essayer en premier le fournisseur OLE DB.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sources de données &#40;SSAS tabulaire&#41;](../data-sources-ssas-tabular.md)   
- [Importer des données &#40;SSAS tabulaire&#41;](../import-data-ssas-tabular.md)  
+ [Sources de données &#40;SSAS Tabulaire&#41;](../data-sources-ssas-tabular.md)   
+ [Importer des données &#40;SSAS Tabulaire&#41;](../import-data-ssas-tabular.md)  
   
   

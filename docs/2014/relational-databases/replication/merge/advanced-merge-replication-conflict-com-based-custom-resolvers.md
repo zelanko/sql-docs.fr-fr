@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8519b2e1a54854fc90ffbcf9253a9f4007538cea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae66ab14a058f5fd6cfef462ddcc1c83c5a9cfe3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217579"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823521"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   Les programmes de résolution personnalisés offrent une plus grande souplesse que le mécanisme de résolution par défaut et ils peuvent implémenter la logique métier requise par les applications utilisant les données répliquées. Un programme de résolution personnalisé COM est une bibliothèque de liens dynamiques (DLL) qui implémente l'interface **ICustomResolver** , ses méthodes et ses propriétés, ainsi que d'autres interfaces de prise en charge et définitions de types conçues spécifiquement pour la résolution de conflits.  
@@ -39,10 +38,10 @@ ms.locfileid: "48217579"
   
  Un programme de résolution personnalisé est spécifié pour un article mais pas pour l'intégralité d'une publication. Le même programme de résolution peut être spécifié avec plusieurs articles mais la logique des programmes de résolution personnalisés est souvent propre à une table donnée. Si la table utilisée dans l'article est modifiée après la création d'un programme de résolution (par exemple, attribution d'un nouveau nom à une colonne intervenant dans la résolution du conflit), il se peut que le programme de résolution personnalisé doive être modifié et recompilé.  
   
- Pour spécifier un programme de résolution personnalisé, consultez [Specify a Merge Article Resolver](../publish/specify-a-merge-article-resolver.md).  
+ Pour spécifier un programme de résolution personnalisé, consultez [Spécifier un programme de résolution d'articles de fusion](../publish/specify-a-merge-article-resolver.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Microsoft COM-Based Resolvers](advanced-merge-replication-conflict-com-based-resolvers.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Détection et résolution des conflits de réplication de fusion avancée](advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Microsoft-programmes de résolution COM](advanced-merge-replication-conflict-com-based-resolvers.md)  
   
   

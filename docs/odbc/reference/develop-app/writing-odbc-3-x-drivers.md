@@ -16,99 +16,99 @@ ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77a94c7505b5ab221fee4896e91f9b26850669df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f548e1496ce45d9fdb4677fd9659de349e5c5cc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795649"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518548"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Écriture de pilotes ODBC 3.x
 Le tableau suivant présente la prise en charge de la fonction dans un ODBC 3. *x* pilote et une application ODBC et le mappage effectuée par le Gestionnaire de pilotes lorsque les fonctions sont appelées par rapport à un ODBC 3. *x* pilote.  
   
 |Fonction|Pris en charge<br /><br /> par un<br /><br /> ODBC 3. *x*<br /><br /> pilote ?|Pris en charge<br /><br /> par un<br /><br /> ODBC 3. *x*<br /><br /> application ?|Mappé/prise en charge<br /><br /> par le ODBC 3. *x*<br /><br /> Gestionnaire de pilotes à<br /><br /> un ODBC 3. *x* pilote ?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|non|Aucun [1]|Oui|  
-|**SQLAllocEnv**|non|Aucun [1]|Oui|  
-|**SQLAllocHandle**|Oui|Oui|non|  
-|**SQLAllocStmt**|non|Aucun [1]|Oui|  
-|**SQLBindCol**|Oui|Oui|non|  
-|**SQLBindParam**|non|Oui [2]|Oui|  
-|**SQLBindParameter**|Oui|Oui|non|  
-|**SQLBrowseConnect**|Oui|Oui|non|  
-|**SQLBulkOperations**|Oui|Oui|non|  
-|**SQLCancel**|Oui|Oui|non|  
-|**SQLCloseCursor**|Oui|Oui|non|  
-|**SQLColAttribute**|Oui|Oui|non|  
-|**SQLColAttributes**|Aucun [3]|non|Oui|  
-|**SQLColumnPrivileges**|Oui|Oui|non|  
-|**SQLColumns**|Oui|Oui|non|  
-|**SQLConnect**|Oui|Oui|non|  
+|**SQLAllocConnect**|Non|Aucun [1]|Oui|  
+|**SQLAllocEnv**|Non|Aucun [1]|Oui|  
+|**SQLAllocHandle**|Oui|Oui|Non|  
+|**SQLAllocStmt**|Non|Aucun [1]|Oui|  
+|**SQLBindCol**|Oui|Oui|Non|  
+|**SQLBindParam**|Non|Oui [2]|Oui|  
+|**SQLBindParameter**|Oui|Oui|Non|  
+|**SQLBrowseConnect**|Oui|Oui|Non|  
+|**SQLBulkOperations**|Oui|Oui|Non|  
+|**SQLCancel**|Oui|Oui|Non|  
+|**SQLCloseCursor**|Oui|Oui|Non|  
+|**SQLColAttribute**|Oui|Oui|Non|  
+|**SQLColAttributes**|Aucun [3]|Non|Oui|  
+|**SQLColumnPrivileges**|Oui|Oui|Non|  
+|**SQLColumns**|Oui|Oui|Non|  
+|**SQLConnect**|Oui|Oui|Non|  
 |**SQLCopyDesc**|Oui|Oui|Oui [4]|  
-|**SQLDataSources**|non|Oui|Oui|  
-|**SQLDescribeCol**|Oui|Oui|non|  
-|**SQLDescribeParam**|Oui|Oui|non|  
-|**SQLDisconnect**|Oui|Oui|non|  
-|**SQLDriverConnect**|Oui|Oui|non|  
-|**SQLDrivers**|non|Oui|Oui|  
-|**SQLEndTran**|Oui|Oui|non|  
-|**SQLError**|non|Aucun [1]|Oui|  
-|**SQLExecDirect**|Oui|Oui|non|  
-|**SQLExecute**|Oui|Oui|non|  
-|**SQLExtendedFetch**|Oui|non|non|  
-|**SQLFetch**|Oui|Oui|non|  
-|**SQLFetchScroll**|Oui|Oui|non|  
-|**SQLForeignKeys**|Oui|Oui|non|  
-|**SQLFreeConnect**|non|Oui [1]|Oui|  
-|**SQLFreeEnv**|non|Oui [1]|Oui|  
-|**SQLFreeHandle**|Oui|Oui|non|  
-|**SQLFreeStmt**|Oui|Oui|non|  
-|**SQLGetConnectAttr**|Oui|Oui|non|  
+|**SQLDataSources**|Non|Oui|Oui|  
+|**SQLDescribeCol**|Oui|Oui|Non|  
+|**SQLDescribeParam**|Oui|Oui|Non|  
+|**SQLDisconnect**|Oui|Oui|Non|  
+|**SQLDriverConnect**|Oui|Oui|Non|  
+|**SQLDrivers**|Non|Oui|Oui|  
+|**SQLEndTran**|Oui|Oui|Non|  
+|**SQLError**|Non|Aucun [1]|Oui|  
+|**SQLExecDirect**|Oui|Oui|Non|  
+|**SQLExecute**|Oui|Oui|Non|  
+|**SQLExtendedFetch**|Oui|Non|Non|  
+|**SQLFetch**|Oui|Oui|Non|  
+|**SQLFetchScroll**|Oui|Oui|Non|  
+|**SQLForeignKeys**|Oui|Oui|Non|  
+|**SQLFreeConnect**|Non|Oui [1]|Oui|  
+|**SQLFreeEnv**|Non|Oui [1]|Oui|  
+|**SQLFreeHandle**|Oui|Oui|Non|  
+|**SQLFreeStmt**|Oui|Oui|Non|  
+|**SQLGetConnectAttr**|Oui|Oui|Non|  
 |**SQLGetConnectOption**|Aucun [5]|Aucun [1]|Oui|  
-|**SQLGetCursorName**|Oui|Oui|non|  
-|**SQLGetData**|Oui|Oui|non|  
-|**SQLGetDescField**|Oui|Oui|non|  
-|**SQLGetDescRec**|Oui|Oui|non|  
-|**SQLGetDiagField**|Oui|Oui|non|  
-|**SQLGetDiagRec**|Oui|Oui|non|  
-|**SQLGetEnvAttr**|Oui|Oui|non|  
+|**SQLGetCursorName**|Oui|Oui|Non|  
+|**SQLGetData**|Oui|Oui|Non|  
+|**SQLGetDescField**|Oui|Oui|Non|  
+|**SQLGetDescRec**|Oui|Oui|Non|  
+|**SQLGetDiagField**|Oui|Oui|Non|  
+|**SQLGetDiagRec**|Oui|Oui|Non|  
+|**SQLGetEnvAttr**|Oui|Oui|Non|  
 |**SQLGetFunctions**|Aucun [6]|Oui|Oui|  
-|**SQLGetInfo**|Oui|Oui|non|  
-|**SQLGetStmtAttr**|Oui|Oui|non|  
+|**SQLGetInfo**|Oui|Oui|Non|  
+|**SQLGetStmtAttr**|Oui|Oui|Non|  
 |**SQLGetStmtOption**|Aucun [5]|Aucun [1]|Oui|  
-|**SQLGetTypeInfo**|Oui|Oui|non|  
-|**SQLMoreResults**|Oui|Oui|non|  
-|**SQLNativeSql**|Oui|Oui|non|  
-|**SQLNumParams**|Oui|Oui|non|  
-|**SQLNumResultCols**|Oui|Oui|non|  
-|**SQLParamData**|Oui|Oui|non|  
-|**SQLParamOptions**|non|non|Oui|  
-|**SQLPrepare**|Oui|Oui|non|  
-|**SQLPrimaryKeys**|Oui|Oui|non|  
-|**SQLProcedureColumns**|Oui|Oui|non|  
-|**SQLProcedures**|Oui|Oui|non|  
-|**SQLPutData**|Oui|Oui|non|  
-|**SQLRowCount**|Oui|Oui|non|  
-|**SQLSetConnectAttr**|Oui|Oui|non|  
+|**SQLGetTypeInfo**|Oui|Oui|Non|  
+|**SQLMoreResults**|Oui|Oui|Non|  
+|**SQLNativeSql**|Oui|Oui|Non|  
+|**SQLNumParams**|Oui|Oui|Non|  
+|**SQLNumResultCols**|Oui|Oui|Non|  
+|**SQLParamData**|Oui|Oui|Non|  
+|**SQLParamOptions**|Non|Non|Oui|  
+|**SQLPrepare**|Oui|Oui|Non|  
+|**SQLPrimaryKeys**|Oui|Oui|Non|  
+|**SQLProcedureColumns**|Oui|Oui|Non|  
+|**SQLProcedures**|Oui|Oui|Non|  
+|**SQLPutData**|Oui|Oui|Non|  
+|**SQLRowCount**|Oui|Oui|Non|  
+|**SQLSetConnectAttr**|Oui|Oui|Non|  
 |**SQLSetConnectOption**|Aucun [5]|Aucun [1]|Oui|  
-|**SQLSetCursorName**|Oui|Oui|non|  
-|**SQLSetDescField**|Oui|Oui|non|  
-|**SQLSetDescRec**|Oui|Oui|non|  
-|**SQLSetEnvAttr**|Oui|Oui|non|  
-|**SQLSetPos**|Oui|Oui|non|  
-|**SQLSetParam**|non|non|Oui|  
-|**SQLSetScrollOption**|Oui|Oui|non|  
-|**SQLSetStmtAttr**|Oui|Oui|non|  
+|**SQLSetCursorName**|Oui|Oui|Non|  
+|**SQLSetDescField**|Oui|Oui|Non|  
+|**SQLSetDescRec**|Oui|Oui|Non|  
+|**SQLSetEnvAttr**|Oui|Oui|Non|  
+|**SQLSetPos**|Oui|Oui|Non|  
+|**SQLSetParam**|Non|Non|Oui|  
+|**SQLSetScrollOption**|Oui|Oui|Non|  
+|**SQLSetStmtAttr**|Oui|Oui|Non|  
 |**SQLSetStmtOption**|Aucun [5]|Aucun [1]|Oui|  
-|**SQLSpecialColumns**|Oui|Oui|non|  
-|**SQLStatistics**|Oui|Oui|non|  
-|**SQLTablePrivileges**|Oui|Oui|non|  
-|**SQLTables**|Oui|Oui|non|  
-|**SQLTransact**|non|Aucun [1]|Oui|  
+|**SQLSpecialColumns**|Oui|Oui|Non|  
+|**SQLStatistics**|Oui|Oui|Non|  
+|**SQLTablePrivileges**|Oui|Oui|Non|  
+|**SQLTables**|Oui|Oui|Non|  
+|**SQLTransact**|Non|Aucun [1]|Oui|  
   
- [1], cette fonction est déconseillée dans ODBC 3. *x*. ODBC 3. *x* applications ne doivent pas utiliser cette fonction. Toutefois, une application compatible avec ISO CLI, ou le Open Group peut appeler cette fonction.  
+ [1], cette fonction est déconseillée dans ODBC 3. *x*. ODBC 3. *x* applications ne doivent pas utiliser cette fonction. Toutefois, un Open Group ou l’application conforme à ISO CLI peut appeler cette fonction.  
   
- [2] ODBC 3. *x* les applications doivent utiliser **SQLBindParameter** au lieu de **SQLBindParam**. Toutefois, une application compatible avec ISO CLI, ou le Open Group peut appeler cette fonction.  
+ [2] ODBC 3. *x* les applications doivent utiliser **SQLBindParameter** au lieu de **SQLBindParam**. Toutefois, un Open Group ou l’application conforme à ISO CLI peut appeler cette fonction.  
   
  [3] les rédacteurs de pilotes sont à noter que ODBC 2. *x* SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE et SQL_COLUMN_LENGTH doivent être pris en charge avec des attributs de colonne **SQLColAttribute**.  
   

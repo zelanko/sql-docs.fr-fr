@@ -10,17 +10,17 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 640a1af48b83474cbeb331268fd4cf1ab808995b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155959"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357074"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Mise à niveau et mise à jour des serveurs de groupes de disponibilité avec un temps mort minimal et perte de données
   Lorsque de la mise à jour ou de la mise à niveau d'instances de serveur de SQL Server 2012 vers un Service Pack ou une version plus récente, réduisez le temps mort d'un groupe de disponibilité à un seul basculement manuel en effectuant une mise à jour ou une mise à niveau séquentielle. En ce qui concerne la mise à niveau des versions de SQL Server, cette mise à niveau s'appelle une mise à niveau propagée. En ce qui concerne la mise à jour de la version actuelle de SQL Server avec les correctifs ou les Service Pack, cette mise à jour s'appelle une mise à jour propagée.  
   
- Cette rubrique limite la discussion aux mises à niveau/mises à jour de SQL Server. Pour le système d’exploitation mises à niveau/mises à jour fonctionnant sur les instances de SQL Server hautement disponible, consultez [Cross-cluster Migration de groupes de disponibilité AlwaysOn pour les mises à niveau du système d’exploitation](http://msdn.microsoft.com/library/jj873730.aspx)  
+ Cette rubrique limite la discussion aux mises à niveau/mises à jour de SQL Server. Pour le système d’exploitation mises à niveau/mises à jour fonctionnant sur les instances de SQL Server hautement disponible, consultez [Cross-cluster Migration de groupes de disponibilité AlwaysOn pour les mises à niveau du système d’exploitation](https://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>Meilleures pratiques pour la mise à niveau/mise à jour propagée de groupes de disponibilité AlwaysOn  
  Appliquez les meilleures pratiques suivantes lorsque vous effectuez la mise à niveau/mise à jour du serveur afin de réduire le temps mort et la perte de données de vos groupes de disponibilité :  
@@ -115,9 +115,9 @@ ms.locfileid: "48155959"
   
 |Groupe de disponibilité|Nœud1|Nœud2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1|Principal|||  
-|AG2||Principal||  
-|AG3|||Principal|  
+|AG1|Principale|||  
+|AG2||Principale||  
+|AG3|||Principale|  
   
  Il peut s'avérer nécessaire d'effectuer une mise à niveau/mise à jour propagée à charge équilibrée dans l'ordre suivant :  
   
@@ -139,9 +139,9 @@ ms.locfileid: "48155959"
   
 |Groupe de disponibilité|Nœud1|Nœud2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1||Principal||  
-|AG2|Principal|||  
-|AG3|||Principal|  
+|AG1||Principale||  
+|AG2|Principale|||  
+|AG3|||Principale|  
   
  Le chemin d'accès de la mise à niveau/mise à jour varie selon votre implémentation, ainsi que le temps mort pour=vant être rencontré par les applications clientes.  
   

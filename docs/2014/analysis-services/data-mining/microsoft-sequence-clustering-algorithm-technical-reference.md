@@ -17,12 +17,12 @@ ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d0e9e49a61bef168af2703e83d027feec1d9daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 176bbc3f3078619541e14e21d03271d90f4c4c19
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060429"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367761"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MSC (Microsoft Sequence Clustering)
   L'algorithme MSC (Microsoft Sequence Clustering) est un algorithme hybride qui utilise l'analyse en chaîne de Markov pour identifier les séquences ordonnées et associe les résultats de cette analyse aux techniques de clustering pour générer des clusters basés sur les séquences et les autres attributs du modèle. Cette rubrique décrit l'implémentation de l'algorithme, la personnalisation de l'algorithme et les besoins spéciaux pour les modèles Sequence Clustering.  
@@ -90,12 +90,12 @@ ms.locfileid: "48060429"
  MINIMUM_SUPPORT  
  Spécifie le nombre minimal de cas requis pour la prise en charge un attribut en vue de créer un cluster.  
   
- La valeur par défaut est 10.  
+ La valeur par défaut est 10.  
   
  MAXIMUM_SEQUENCE_STATES  
  Spécifie le nombre maximal d'états qu'une séquence peut posséder.  
   
- Si cette valeur est supérieure à 100, l'algorithme peut créer un modèle qui ne fournit pas d'informations significatives.  
+ Si cette valeur est supérieure à 100, l'algorithme peut créer un modèle qui ne fournit pas d'informations significatives.  
   
  La valeur par défaut est 64.  
   
@@ -113,16 +113,16 @@ ms.locfileid: "48060429"
  S'applique à la colonne de structure d'exploration de données.  
   
  MODEL_EXISTENCE_ONLY  
- Signifie que la colonne sera considérée comme ayant deux états possibles : `Missing` et `Existing`. Une valeur null est traitée comme un `Missing` valeur.  
+ Signifie que la colonne sera considérée comme ayant deux états possibles : `Missing` et `Existing`. La valeur Null est traitée comme une valeur `Missing`.  
   
  S'applique à la colonne du modèle d'exploration de données.  
   
  Pour plus d’informations sur l’utilisation de valeurs manquantes dans les modèles d’exploration de données et pour savoir comment les valeurs manquantes affectent les scores de probabilité, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  La table de cas doit avoir une colonne d'ID de cas. La table de cas peut éventuellement contenir d'autres colonnes qui stockent des attributs  propos du cas.  
   
- L'algorithme MSC (Microsoft Sequence Clustering) requiert des informations de séquence, stockées en tant que table imbriquée. La table imbriquée doit avoir une seule colonne Key Sequence. Un `Key Sequence` colonne peut contenir n’importe quel type de données qui peuvent être triées, y compris les types de données de chaîne, mais la colonne doit contenir des valeurs uniques pour chaque cas. De plus, avant de traiter le modèle, vous devez vérifier que la table de cas et la table imbriquée sont toutes les deux triées par ordre croissant sur la clé qui associe les tables.  
+ L'algorithme MSC (Microsoft Sequence Clustering) requiert des informations de séquence, stockées en tant que table imbriquée. La table imbriquée doit avoir une seule colonne Key Sequence. Une colonne `Key Sequence` peut contenir tout type de données pouvant être triées, y compris les types de données de chaîne, mais la colonne doit contenir des valeurs uniques pour chaque cas. De plus, avant de traiter le modèle, vous devez vérifier que la table de cas et la table imbriquée sont toutes les deux triées par ordre croissant sur la clé qui associe les tables.  
   
 > [!NOTE]  
 >  Si vous créez un modèle qui utilise l'algorithme Microsost Sequence mais n'utilise pas de colonne de séquence, le modèle résultant ne contient pas de séquences, mais groupe simplement des cas selon d'autres attributs inclus dans le modèle.  
@@ -137,15 +137,15 @@ ms.locfileid: "48060429"
   
 ## <a name="remarks"></a>Notes  
   
--   Utilisez la fonction [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) pour la prédiction des séquences. Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge la prédiction de séquence, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Utilisez la fonction [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) pour la prédiction des séquences. Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge la prédiction de séquence, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering ne prend pas en charge l’utilisation du langage PMML (Predictive Model Markup Language) pour créer des modèles d’exploration de données.  
   
 -   L'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering prend en charge l'extraction, l'utilisation de modèles d'exploration de données OLAP et l'utilisation de dimensions d'exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de Clustering de séquence de Microsoft](microsoft-sequence-clustering-algorithm.md)   
- [Modèle Sequence Clustering Model Query Examples](clustering-model-query-examples.md)   
- [Le contenu du modèle Sequence Clustering des modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+ [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)   
+ [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

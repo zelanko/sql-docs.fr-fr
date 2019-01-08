@@ -16,12 +16,12 @@ ms.assetid: a6841cc2-ca13-4b1c-9343-9e4d54312c3a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e834cb85458b7fd0e265e5077500ebc4dec5f45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df68b9ee1e778d0523b63d69bd010022b6f6f219
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095409"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589863"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Installation du Conseiller de mise à niveau à partir de l'invite de commandes
   Vous pouvez installer le Conseiller de mise à niveau à l'aide de l'Assistant Installation ou à partir de l'invite de commandes. L'invite de commandes vous permet d'effectuer des installations automatisées et sans assistance.  
@@ -36,7 +36,7 @@ ms.locfileid: "48095409"
 |Argument|Description|  
 |--------------|-----------------|  
 |/q [n&#124;b&#124;r&#124;f]|Définit le niveau de l'interface utilisateur (UI) :<br /><br /> n = aucune interface utilisateur<br /><br /> b = interface utilisateur de base (progression uniquement, aucune invite)<br /><br /> r = interface utilisateur réduite (boîte de dialogue à la fin de l'installation)<br /><br /> f = interface utilisateur complète|  
-|/L|Spécifie les options du fichier journal. Pour enregistrer tous les messages dans *nom_fichier_journal*, utilisez **-L\*v *** nom_fichier_journal*. Pour enregistrer uniquement les messages d’erreur, utilisez `-Le` *nom_fichier_journal*.|  
+|/L|Spécifie les options du fichier journal. Pour enregistrer tous les messages dans *nom_fichier_journal*, utilisez **-L\*v**_nom_fichier_journal_. Pour enregistrer uniquement les messages d’erreur, utilisez `-Le` *nom_fichier_journal*.|  
 |ADDLOCAL = ALL&AMP;#124; SUPPRIMER = ALL&AMP;#124;REINSTALL = ALL|Spécifie que le Conseiller de mise à niveau doit être installé (ADDLOCAL), supprimé (REMOVE) ou réinstallé (REINSTALL).|  
 |UAINSTALLDIR=path|Installe le Conseiller de mise à niveau à l'emplacement spécifié par le chemin d'accès.|  
   

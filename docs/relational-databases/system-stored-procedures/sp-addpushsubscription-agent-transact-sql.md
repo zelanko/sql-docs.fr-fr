@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpushsubscription_agent_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f037d88ed536cf3fecc0b658dcba3f62d1e1bd47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e438e8584312964d3d16651cb5551a4fb949597d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832317"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209801"
 ---
 # <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -110,7 +109,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [  **@frequency_type =** ] *frequency_type*  
  Fréquence de planification de l'Agent de distribution. *frequency_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|À la demande|  
@@ -130,7 +129,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  Date de l'Agent de distribution. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (par défaut)|Première|  
 |**2**|Seconde|  
@@ -144,7 +143,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [  **@frequency_subday =** ] *frequency_subday*  
  Fréquence de replanification nécessaire pendant la période définie. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
@@ -188,19 +187,19 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
  [  **@subscriber_provider=** ] **'***subscriber_provider***'**  
- Est l’unique identificateur programmatique (PROGID) avec lequel le fournisseur OLE DB pour le non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données est inscrite. *subscriber_provider* est **sysname**, avec NULL comme valeur par défaut. *subscriber_provider* doit être unique pour le fournisseur OLE DB installé sur le serveur de distribution. *subscriber_provider* est uniquement prise en charge non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
+ Est l’unique identificateur programmatique (PROGID) avec lequel le fournisseur OLE DB pour le non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données est inscrite. *subscriber_provider* est **sysname**, avec NULL comme valeur par défaut. *subscriber_provider* doit être unique pour le fournisseur OLE DB installé sur le serveur de distribution. *subscriber_provider* est uniquement prise en charge non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
   
  [  **@subscriber_datasrc=** ] **'***subscriber_datasrc***'**  
- Est le nom de la source de données comme interprété par le fournisseur OLE DB. *subscriber_datasrc* est **nvarchar (4000)**, avec NULL comme valeur par défaut. *subscriber_datasrc* est transmis comme propriété DBPROP_INIT_DATASOURCE pour initialiser le fournisseur OLE DB. *subscriber_datasrc* est uniquement prise en charge non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
+ Est le nom de la source de données comme interprété par le fournisseur OLE DB. *subscriber_datasrc* est **nvarchar (4000)**, avec NULL comme valeur par défaut. *subscriber_datasrc* est transmis comme propriété DBPROP_INIT_DATASOURCE pour initialiser le fournisseur OLE DB. *subscriber_datasrc* est uniquement prise en charge non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
   
  [  **@subscriber_location=** ] **'***subscriber_location***'**  
- Est l’emplacement de la base de données comme interprété par le fournisseur OLE DB. *subscriber_location* est **nvarchar (4000)**, avec NULL comme valeur par défaut. *subscriber_location* est transmis comme propriété DBPROP_INIT_LOCATION pour initialiser le fournisseur OLE DB. *subscriber_location* est uniquement prise en charge non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
+ Est l’emplacement de la base de données comme interprété par le fournisseur OLE DB. *subscriber_location* est **nvarchar (4000)**, avec NULL comme valeur par défaut. *subscriber_location* est transmis comme propriété DBPROP_INIT_LOCATION pour initialiser le fournisseur OLE DB. *subscriber_location* est uniquement prise en charge non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
   
  [  **@subscriber_provider_string=** ] **'***subscriber_provider_string***'**  
- Chaîne de connexion propre au fournisseur OLE DB qui identifie la source de données. *subscriber_provider_string* est **nvarchar (4000)**, avec NULL comme valeur par défaut. *subscriber_provider_string* est passé à IDataInitialize ou défini comme propriété DBPROP_INIT_PROVIDERSTRING pour initialiser le fournisseur OLE DB. *subscriber_provider_string* est uniquement prise en charge non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
+ Chaîne de connexion propre au fournisseur OLE DB qui identifie la source de données. *subscriber_provider_string* est **nvarchar (4000)**, avec NULL comme valeur par défaut. *subscriber_provider_string* est passé à IDataInitialize ou défini comme propriété DBPROP_INIT_PROVIDERSTRING pour initialiser le fournisseur OLE DB. *subscriber_provider_string* est uniquement prise en charge non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
   
  [  **@subscriber_catalog=** ] **'***subscriber_catalog***'**  
- Catalogue à utiliser lors d’une connexion au fournisseur OLE DB. *subscriber_catalog* est **sysname**, avec NULL comme valeur par défaut. *subscriber_catalog* est transmis comme propriété DBPROP_INIT_CATALOG pour initialiser le fournisseur OLE DB. *subscriber_catalog* est uniquement prise en charge non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
+ Catalogue à utiliser lors d’une connexion au fournisseur OLE DB. *subscriber_catalog* est **sysname**, avec NULL comme valeur par défaut. *subscriber_catalog* est transmis comme propriété DBPROP_INIT_CATALOG pour initialiser le fournisseur OLE DB. *subscriber_catalog* est uniquement prise en charge non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -211,13 +210,13 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addpushsubscription-a_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addpushsubscription_agent**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Créer un abonnement pour un abonné non-SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [S’abonner aux Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   

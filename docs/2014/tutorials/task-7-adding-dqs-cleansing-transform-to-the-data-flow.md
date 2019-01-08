@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 7 : Ajout d’une transformation au flux de données de nettoyage DQS | Microsoft Docs'
+title: 'Tâche 7 : Ajout de transformation au flux de données de nettoyage DQS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63af147462b9414bd85d0a301e908df4c774c7b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaa36e392046abca935a1b67c4ee459a8b15939e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138195"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376871"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Tâche 7 : Ajout d'une transformation de nettoyage DQS au flux de données
-  Dans cette tâche, vous allez ajouter la transformation de nettoyage DQS au flux de données pour nettoyer les données des fournisseurs d'entrée à l'aide de DQS. Consultez **[transformation de nettoyage DQS](http://msdn.microsoft.com/library/ee677619.aspx)** pour plus d’informations sur la transformation.  
+  Dans cette tâche, vous allez ajouter la transformation de nettoyage DQS au flux de données pour nettoyer les données des fournisseurs d'entrée à l'aide de DQS. Consultez **[transformation de nettoyage DQS](https://msdn.microsoft.com/library/ee677619.aspx)** pour plus d’informations sur la transformation.  
   
 1.  Avec le bouton droit **nettoyage DQS** dans le **de flux de données** onglet, puis cliquez sur **renommer**. Type **nettoyer les données des fournisseurs**, puis appuyez sur **entrée**.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48138195"
 12. Cliquez sur **OK** pour fermer la **éditeur de Transformation de nettoyage DQS** boîte de dialogue.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 8 : Ajout de la transformation de fractionnement conditionnel pour fractionner la sortie du nettoyage](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [Tâche 8 : Ajout d’une transformation de fractionnement conditionnel pour fractionner la sortie du nettoyage](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : insérer des lignes dans la colonne de géographie (ODBC) | Microsoft Docs'
+title: 'Procédure : Insérer des lignes dans la colonne de géographie (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24785ff7f4b708b615280231b13a86009aeaebb0
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: cc99a6dc997dd5cad589784446235a2ea1011d7d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753457"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206278"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procédure : insérer des lignes dans la colonne de géographie (ODBC)
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procédure : Insérer des lignes dans la colonne de géographie (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Cet exemple insère deux lignes dans une table avec une colonne de type geography à partir d'une entrée WKB (Well-Known Binary) à l'aide de 2 liaisons différentes (SQLCCHAR et SQLCBINARY). Il sélectionne ensuite une ligne de cette table et utilise ::STAsText() pour l'afficher. La représentation WKB est 0x01010000000700ECFAD03A4C4001008000B5DF07C0 et l'application se charge de l'impression sur la console : POINT(56.4595 -2.9842).  
+  Cet exemple insère deux lignes dans une table avec une colonne de type geography à partir d'une entrée WKB (Well-Known Binary) à l'aide de 2 liaisons différentes (SQLCCHAR et SQLCBINARY). Il sélectionne ensuite une ligne de cette table et utilise :: STAsText() pour l’afficher. Le WKB est 0x01010000000700ECFAD03A4C4001008000B5DF07C0 et l’application imprime sur la console : POINT (56.4595-2.9842).  
   
  Cet exemple ne requiert pas de source de données ODBC, mais s'exécute par défaut sur l'instance locale de SQL Server.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "50753457"
  Pour plus d’informations sur le stockage spatial, consultez [données spatiales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Exemple  
- La première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crée une table utilisée par cet exemple.  
+ Le premier ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) liste de code crée une table utilisée par cet exemple.  
   
  Compilez la deuxième liste de code (C++) avec odbc32.lib et user32.lib. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "50753457"
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- La troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) supprime la table utilisée par cet exemple.  
+ Le troisième ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) du code supprime la table utilisée par cet exemple.  
   
 ```sql
 use tempdb  

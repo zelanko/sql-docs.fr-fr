@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -29,12 +28,12 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0b69773070201021390926e6da1a7fdd20d8fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137282"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813911"
 ---
 # <a name="programmatically-monitor-replication"></a>Surveiller la réplication par programmation
   Le moniteur de réplication est un outil graphique permettant d'analyser une topologie de réplication. Vous pouvez accéder par programmation aux mêmes données d'analyse en utilisant les procédures stockées de réplication [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou les objets RMO (Replication Management Objects). Ces objets permettent de programmer les tâches suivantes :  
@@ -81,7 +80,7 @@ ms.locfileid: "48137282"
   
 2.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql). Spécifiez une valeur **Session_id** de l'étape 1 pour **@session_id**. Les informations d'analyse détaillées sur la session sont ainsi affichées.  
   
-3.  Répétez l'étape 2 pour chaque session digne d'intérêt.  
+3.  Répétez l'étape 2 pour chaque session digne d'intérêt.  
   
 #### <a name="to-monitor-merge-agent-sessions-for-pull-subscriptions-from-the-subscriber"></a>Pour analyser les sessions de l'Agent de fusion pour les abonnements par extraction de l'Abonné  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48137282"
   
 2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor> et définissez les propriétés <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publisher%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publication%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.PublisherDB%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.SubscriberDB%2A> de l'abonnement, puis attribuez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> la valeur <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée dans l'étape 1.  
   
-3.  Appelez l'une des méthodes suivantes pour retourner les informations sur les sessions de l'Agent de fusion de cet abonnement :  
+3.  Appelez l'une des méthodes suivantes pour retourner les informations sur les sessions de l'Agent de fusion de cet abonnement :  
   
     -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionsSummary%2A> - retourne un tableau d'objets <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> avec des informations sur les cinq dernières sessions au plus de l'Agent de fusion. Notez la valeur <xref:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId%2A> pour toutes les sessions dignes d'intérêt.  
   
@@ -173,7 +172,7 @@ ms.locfileid: "48137282"
   
 2.  Récupérez un objet <xref:Microsoft.SqlServer.Replication.PublisherMonitor> par l'un ou l'autre de ces moyens.  
   
-    -   Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Définissez la propriété <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> pour le serveur de publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec le <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé au cours de l'étape 1. Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, le nom du serveur de publication a été défini de manière incorrecte ou de la publication n’existe pas.  
+    -   Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Définissez la propriété <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> pour le serveur de publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec le <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé au cours de l'étape 1. Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, le nom du serveur de publication n'a pas été correctement défini ou la publication n'existe pas.  
   
     -   Depuis le <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> accessible au moyen de la propriété <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> d'un objet <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> existant.  
   
@@ -267,15 +266,15 @@ ms.locfileid: "48137282"
   
     -   *metricID* - une valeur <xref:System.Int32> qui représente le seuil d'analyse métrique de la table suivante :  
   
-        |Valeur|Description|  
+        |Value|Description|  
         |-----------|-----------------|  
-        |1|`expiration` -supervise l’expiration imminente des abonnements aux publications transactionnelles.|  
-        |2|`latency` -contrôle les performances des abonnements aux publications transactionnelles.|  
-        |4|`mergeexpiration` -supervise l’expiration imminente des abonnements aux publications de fusion.|  
-        |5|`mergeslowrunduration` -contrôle la durée des synchronisations de fusion sur les connexions lentes (accès à distance).|  
-        |6|`mergefastrunduration` -contrôle la durée des synchronisations de fusion sur les connexions haut débit (LAN).|  
+        |1|`expiration` : contrôle l'expiration imminente des abonnements aux publications transactionnelles.|  
+        |2|`latency` : contrôle les performances des abonnements aux publications transactionnelles.|  
+        |4|`mergeexpiration` : contrôle l'expiration imminente des abonnements aux publications de fusion.|  
+        |5|`mergeslowrunduration` : contrôle la durée des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).|  
+        |6|`mergefastrunduration` : contrôle la durée des synchronisations de fusion sur les connexions haut débit (LAN).|  
         |7|`mergefastrunspeed` - supervise le taux de synchronisation des synchronisations de fusion sur des connexions à bande passante élevée (LAN).|  
-        |8|`mergeslowrunspeed` -supervise le taux de synchronisation des synchronisations de fusion sur les connexions lentes (accès à distance).|  
+        |8|`mergeslowrunspeed` : contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions lentes (accès distant).|  
   
     -   *enable* - <xref:System.Boolean> qui indique si le métrique est activé pour la publication.  
   

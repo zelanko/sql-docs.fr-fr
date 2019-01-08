@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
@@ -12,18 +12,18 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7198118f9eadbf58bab83727ed45899f5fd2a0df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09f3cf66d28a70eecd82adde490d02b521fd80ed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167669"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374401"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Utiliser des rapports personnalisés avec les propriétés des nœuds de l'Explorateur d'objets
   Vous pouvez exécuter des rapports personnalisés dans le contexte d'un nœud de l'Explorateur d'objets si les rapports personnalisés font référence aux paramètres de rapport de ce nœud. Un rapport peut ainsi exploiter le contexte actuel (par exemple, la base de données actuelle ou un objet de serveur ou de base de données).  
   
 ## <a name="report-samples"></a>Exemples de rapports  
- [Des exemples de rapports](http://go.microsoft.com/fwlink/?LinkId=81792), notamment les rapports standard créés par [!INCLUDE[msCoName](../../includes/msconame-md.md)], peuvent être téléchargés. Vous pouvez modifier ces exemples à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ [Des exemples de rapports](https://go.microsoft.com/fwlink/?LinkId=81792), notamment les rapports standard créés par [!INCLUDE[msCoName](../../includes/msconame-md.md)], peuvent être téléchargés. Vous pouvez modifier ces exemples à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="object-explorer-node-report-parameters"></a>Paramètres de rapport des nœuds de l'Explorateur d'objets  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48167669"
   
  `<?xml version="1.0" encoding="utf-8"?>`  
   
- `<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">`  
+ `<Report xmlns="https://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="https://schemas.microsoft.com/SQLServer/reporting/reportdesigner">`  
   
  `<ReportParameters>`  
   
