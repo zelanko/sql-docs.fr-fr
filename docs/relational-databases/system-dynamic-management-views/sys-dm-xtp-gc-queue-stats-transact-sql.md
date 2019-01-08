@@ -19,12 +19,12 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7bb836b93a48317ad6573cace0546cb90fa9f370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 189d6c83eee8caa891585f051d4ee66f4d22e44f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603717"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413739"
 ---
 # <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47603717"
   
  Le thread garbage collection principal (le thread inactif) trace les lignes mises à jour, supprimées et insérées de toutes les transactions terminées depuis la dernière invocation du thread de garbage collection principal. Lorsque le thread de garbage collection s'exécute, il détermine si l'horodateur de la transaction active la plus ancienne a changé. Si la transaction active la plus ancienne a changé, alors le thread inactif empile les éléments de travail (par segments de 16 lignes) pour les transactions dont les jeux d'écritures ne sont plus requis. Par exemple, si vous supprimez 1 024 lignes, vous verrez 64 éléments de travail de garbage collection en file d'attente, chacun contenant 16 lignes supprimées.  Après qu'une transaction utilisateur est validée, elle sélectionne tous les éléments empilés de son planificateur. S'il n'y a pas d'éléments empilés sur le planificateur, elle recherche des éléments sur toutes les files d'attente dans le nœud NUMA.  
   
- Vous pouvez déterminer si le garbage collection libère de la mémoire pour les lignes supprimées en exécutant sys.dm_xtp_gc_queue_stats pour voir si le travail empilé est traité. Si les entrées dans current_queue_depth ne sont pas en cours de traitement ou si aucun nouvel élément de travail n’est en cours ajouté à current_queue_depth ne, il s’agit d’une indication que le garbage collection ne libère pas de mémoire. Par exemple, le garbage collection ne peut pas s'exécuter s'il existe une transaction longue.  
+ Vous pouvez déterminer si le garbage collection libère de la mémoire pour les lignes supprimées en exécutant sys.dm_xtp_gc_queue_stats pour voir si le travail empilé est traité. Si les entrées dans current_queue_depth ne sont pas en cours de traitement ou si aucun nouvel élément de travail n’est en cours ajouté à current_queue_depth ne, il s’agit d’une indication que le garbage collection ne libère pas de mémoire. Par exemple, le garbage collection ne peut pas être effectué s’il existe une transaction à long terme.  
   
  Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47603717"
 |maximum_queue_depth|**bigint**|Profondeur maximale de cette file d'attente.|  
 |last_service_ticks|**bigint**|Cycles de l'UC au moment où la file d'attente a été traitée pour la dernière fois.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW SERVER STATE.  
   
 ## <a name="user-scenario"></a>Scénario d'utilisateur  

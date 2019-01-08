@@ -20,12 +20,12 @@ ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0375d2254a742149215d5e3328510d598f0fea3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d7efc9df277f609bf53ffb49f2253a937f45a4b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134790"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394462"
 ---
 # <a name="creating-a-data-mining-model"></a>Création d'un modèle d'exploration de données
   Modélisation des données est l’étape d’exploration de données où vous générez des modèles et les tendances en appliquant *algorithmes* aux données. Ultérieurement, utilisez ces séquences pour l'analyse, ou pour faire des prédictions.  
@@ -116,7 +116,7 @@ ms.locfileid: "48134790"
   
  [Calcul de prédiction &#40;outils d’analyse de Table pour Excel&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-goal-seek-analyze"></a>Scénario : valeur cible (Analyse)  
+## <a name="scenario-goal-seek-analyze"></a>Scénario : La valeur cible (analyse)  
  Dans le **valeur cible** outil, vous spécifiez une valeur cible et l’outil identifie les facteurs sous-jacents qui doivent changer pour atteindre cette cible. Par exemple, si vous savez que vous devez augmenter la satisfaction des appels de 20 %, demandez au modèle de prédire les facteurs qui doivent changer pour obtenir cet objectif.  
   
  Le **valeur cible** outil utilise l’algorithme Microsoft Logistic Regression.  
@@ -125,7 +125,7 @@ ms.locfileid: "48134790"
   
  [Scénario valeur cible &#40;outils d’analyse de Table pour Excel&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-what-if-scenario-analyze"></a>Scénario : Scénario (Analyse)  
+## <a name="scenario-what-if-scenario-analyze"></a>Scénario : Scénario (analyse)  
  Le **analyse de scénarios** outil complète la **valeur cible** outil. Avec cet outil, vous entrez la valeur que vous souhaitez modifier, puis le modèle prédit si cette modification est suffisante pour obtenir les résultats souhaités. Par exemple, demandez au modèle de déterminer si l'ajout d'un opérateur augmenterait la satisfaction des clients d'un point.  
   
  Le **What If** outil utilise l’algorithme Microsoft Logistic Regression.  

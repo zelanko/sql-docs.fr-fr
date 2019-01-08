@@ -13,15 +13,15 @@ ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd373f8080878a69200706a7d53d2dd92f9ad160
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dde3d1c12dd4f5b037d24030ae9ec96ae9f97dd0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134111"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405144"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>Créer et gérer les indicateurs de performance clés (SSAS Tabulaire)
-  Cette rubrique décrit comment créer, modifier ou supprimer un indicateur de performance clé (KPI) dans un modèle tabulaire. Pour créer un indicateur de performance clé (KPI), sélectionnez une mesure qui donne la valeur de base de l'indicateur de performance clé. Utilisez ensuite la boîte de dialogue Indicateur de performance clé pour sélectionner une seconde mesure ou une valeur absolue qui prend une valeur cible. Vous pourrez ensuite définir des seuils d'état qui mesurent les performances entre les mesures de base et cible.  
+  Cette rubrique décrit comment créer, modifier ou supprimer un indicateur de performance clé (KPI) dans un modèle tabulaire. Pour créer un KPI, vous sélectionnez une mesure qui prend la valeur de la valeur de Base de l’indicateur de performance clé. Utilisez ensuite la boîte de dialogue Indicateur de performance clé pour sélectionner une seconde mesure ou une valeur absolue qui prend une valeur cible. Vous pourrez ensuite définir des seuils d'état qui mesurent les performances entre les mesures de base et cible.  
   
  Cette rubrique inclut les tâches suivantes :  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48134111"
 5.  Cliquez sur **Descriptions**, puis tapez une description du KPI, de la valeur, de l’état et de la cible.  
   
 > [!TIP]  
->  Vous pouvez utiliser la fonctionnalité Analyser dans Excel pour tester votre indicateur de performance clé. Pour plus d’informations, consultez [Analyser dans Excel &#40;SSAS Tabulaire&#41;](analyze-in-excel-ssas-tabular.md).  
+>  Vous pouvez utiliser la fonctionnalité Analyser dans Excel pour tester votre indicateur de performance clé. Pour plus d'informations, consultez la section [Analyser dans Excel &#40;SSAS Tabulaire&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ###  <a name="bkmk_edit_KPI"></a> Pour modifier un KPI  
   
@@ -84,8 +84,8 @@ ms.locfileid: "48134111"
 |Tendance|Alt+T|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Indicateurs de performance clés &#40;SSAS tabulaire&#41;](kpis-ssas-tabular.md)   
- [Mesures &#40;SSAS tabulaire&#41;](measures-ssas-tabular.md)   
- [Créer et gérer des mesures &#40;SSAS tabulaire&#41;](create-and-manage-measures-ssas-tabular.md)  
+ [Indicateurs de performance clés &#40;SSAS Tabulaire&#41;](kpis-ssas-tabular.md)   
+ [Mesures &#40;SSAS Tabulaire&#41;](measures-ssas-tabular.md)   
+ [Créer et gérer des mesures &#40;SSAS Tabulaire&#41;](create-and-manage-measures-ssas-tabular.md)  
   
   

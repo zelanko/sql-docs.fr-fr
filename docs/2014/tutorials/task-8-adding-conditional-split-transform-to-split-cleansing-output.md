@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 8 : Ajout conditionnel fractionner la transformation pour fractionner la sortie de nettoyage | Microsoft Docs'
+title: 'Tâche 8 : Ajout conditionnel fractionner transformation pour fractionner la sortie de nettoyage | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e43f90743b2449b4be99a0169a061f76fdcf3fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa9f529e286951aab08bb2d29f8dcc06f837e8c2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084589"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408962"
 ---
 # <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Tâche 8 : Ajout de la transformation de fractionnement conditionnel pour fractionner la sortie du nettoyage
   Dans cette tâche, vous allez ajouter une transformation de fractionnement conditionnel au flux de données. La transformation de fractionnement conditionnel peut acheminer les lignes vers différentes sorties, suivant le contenu des données. Pour ce didacticiel, vous utilisez le **état de l’enregistrement** colonne de sortie à partir de la transformation de nettoyage DQS. Vous téléchargerez uniquement les enregistrements corrects ou corrigés sur le serveur MDS. Par conséquent vous permet de vérifier si le **état de l’enregistrement** est **Correct** ou **corrigés**et combiner les enregistrements avant de les télécharger dans MDS.  
@@ -48,6 +48,6 @@ ms.locfileid: "48084589"
 10. Cliquez sur **OK** pour fermer la **éditeur de Transformation de fractionnement conditionnel** boîte de dialogue.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 9 : Ajout d’une transformation d’union totale pour combiner des enregistrements corrects et corrigés](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
+ [Tâche 9 : Ajout d’une Union tous les transformation pour combiner les enregistrements corrects et corrigés](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
   
   

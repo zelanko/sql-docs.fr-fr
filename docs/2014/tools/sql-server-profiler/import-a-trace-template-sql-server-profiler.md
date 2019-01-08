@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
@@ -15,12 +14,12 @@ ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f30cbda0310738983f695fd84a251957f941a9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b87822c99f9c3398f5a2dcda1725025895979d15
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213029"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765031"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>Importer un modèle de trace (SQL Server Profiler)
   Cette rubrique décrit l'importation d'un modèle de trace (fichier .tdf) au moyen du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "48213029"
      Le fichier est ajouté aux modèles disponibles dans la liste **Utiliser le modèle** de la boîte de dialogue **Propriétés de la trace** . La chaîne **(utilisateur)** figure à la fin du nom des modèles définis par l’utilisateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un modèle de Trace &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [Créer un modèle de trace &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [Modifier un modèle de trace &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [Dériver un modèle à partir d’une trace en cours d’exécution &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Dériver un modèle à partir d’un fichier de trace ou d’une table de trace &#40;SQL Server Profiler&#41;](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
