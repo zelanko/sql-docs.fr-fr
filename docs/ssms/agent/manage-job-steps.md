@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 43fe7c85f87c0022db14cb7553d4771385017096
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1b904d0040645beb3abc625ab9c9ccb46cc7d80b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699068"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211588"
 ---
 # <a name="manage-job-steps"></a>Gérer les étapes de travail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ Lorsque vous utilisez un programme exécutable ou une commande du système d'exp
   
 -   le code de sortie du processus renvoyé en cas de succès de la commande ;  
   
--   Commande à exécuter. S'il s'agit d'exécuter une commande du système d'exploitation, vous spécifiez simplement la commande elle-même. Dans le cas d’un programme externe, il s’agit du nom du programme et des arguments à transmettre au programme, par exemple : **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   Commande à exécuter. S'il s'agit d'exécuter une commande du système d'exploitation, vous spécifiez simplement la commande elle-même. Dans le cas d'un programme externe, il s'agit du nom du programme et des arguments à transmettre au programme, par exemple : **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     > Vous devez indiquer le chemin d'accès complet au fichier exécutable si ce dernier ne réside pas dans un répertoire spécifié dans le chemin système ou le chemin d'accès de l'utilisateur sous le nom duquel l'étape de travail est exécutée.  
@@ -112,7 +112,7 @@ Le sous-système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent
   
 ## <a name="activex-scripting-job-steps"></a>Étapes de travail ActiveX Scripting  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > L’étape de travail de scripts ActiveX sera supprimé de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.  
   
 Lorsque vous créez une étape de travail ActiveX Scripting, vous devez :  

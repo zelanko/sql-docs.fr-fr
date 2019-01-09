@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e73aa99ec25e1cdf084dc2a5f7a8dfa4c08f6c90
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: c7765138f3ff4fd1ef31b6d3a606d427020c376d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018634"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979825"
 ---
 # <a name="linestring"></a>LineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51018634"
   
  ![Exemples d’instances LineString géométriques](../../relational-databases/spatial/media/linestring.gif "Exemples d’instances LineString géométriques")  
   
- Comme indiqué par l'illustration :  
+Comme indiqué par l'illustration :  
   
 -   La Figure 1 représente une instance **LineString** simple et non fermée.  
   
@@ -41,69 +41,69 @@ ms.locfileid: "51018634"
 -   La Figure 4 représente une instance **LineString** fermée et non simple ; il ne s’agit par conséquent pas d’un anneau.  
   
 ### <a name="accepted-instances"></a>Instances acceptées  
- Les instances **LineString** acceptées peuvent être introduites dans une variable geometry, mais elles peuvent ne pas être des instances **LineString** valides. Pour qu’une instance **LineString** soit acceptée, elle doit répondre aux critères suivants. L'instance doit être formée d'au moins deux points ou être vide. Les instances LineString suivantes sont acceptées.  
+Les instances **LineString** acceptées peuvent être introduites dans une variable geometry, mais elles peuvent ne pas être des instances **LineString** valides. Pour qu’une instance **LineString** soit acceptée, elle doit répondre aux critères suivants. L'instance doit être formée d'au moins deux points ou être vide. Les instances LineString suivantes sont acceptées.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING EMPTY';  
 DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';  
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';  
 ```  
   
- `@g3` montre qu’une instance **LineString** peut être acceptée, mais non valide.  
+`@g3` montre qu’une instance **LineString** peut être acceptée, mais non valide.  
   
- L’instance **LineString** suivante n’est pas acceptée. Elle lèvera une `System.FormatException`.  
+L’instance **LineString** suivante n’est pas acceptée. Elle lèvera une `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>Instances valides  
- Pour qu’une instance **LineString** soit valide, elle doit répondre aux critères ci-dessous.  
+Pour qu’une instance **LineString** soit valide, elle doit répondre aux critères ci-dessous.  
   
 1.  L’instance **LineString** doit être acceptée.  
-  
 2.  Si une instance **LineString** n’est pas vide, elle doit contenir au moins deux points distincts.  
-  
 3.  L’instance **LineString** ne peut pas se chevaucher sur un intervalle de plusieurs points consécutifs.  
   
- Les instances **LineString** suivantes sont valides.  
+Les instances **LineString** suivantes sont valides.  
   
-```  
+```sql  
 DECLARE @g1 geometry= 'LINESTRING EMPTY';  
 DECLARE @g2 geometry= 'LINESTRING(1 1, 3 3)';  
 DECLARE @g3 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0)';  
 DECLARE @g4 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
-  
 ```  
   
- Les instances **LineString** suivantes ne sont pas valides.  
+Les instances **LineString** suivantes ne sont pas valides.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  
 DECLARE @g2 geometry = 'LINESTRING(1 1, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
 > [!WARNING]  
->  La détection de chevauchements d’instances **LineString** se base sur des calculs en virgule flottante, qui ne sont pas exacts.  
+> La détection de chevauchements d’instances **LineString** se base sur des calculs en virgule flottante, qui ne sont pas exacts.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant montre comment créer une instance `geometry``LineString` avec trois points et un SRID égal à 0 :  
+### <a name="example-a"></a>Exemple A.    
+L’exemple suivant montre comment créer une instance `geometry``LineString` avec trois points et un SRID égal à 0 :  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1, 2 4, 3 9)', 0);  
 ```  
   
- Chaque point dans l'instance `LineString` peut contenir des valeurs Z (élévation) et M (mesure). Cet exemple ajoute des valeurs M à l'instance `LineString` créée dans l'exemple ci-dessus. M et Z peuvent être des valeurs NULL.  
+### <a name="example-b"></a>Exemple B.   
+Chaque point dans l'instance `LineString` peut contenir des valeurs Z (élévation) et M (mesure). Cet exemple ajoute des valeurs M à l'instance `LineString` créée dans l'exemple ci-dessus. M et Z peuvent être des valeurs NULL.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NULL 24.5)', 0);  
 ```  
   
- L'exemple suivant montre comment créer une instance `geometry LineString` avec deux points identiques. Un appel à `IsValid` indique que l’instance **LineString** n’est pas valide et un appel à `MakeValid` convertira l’instance **LineString** en **Point**.  
+### <a name="example-c"></a>Exemple C.   
+L'exemple suivant montre comment créer une instance `geometry LineString` avec deux points identiques. Un appel à `IsValid` indique que l’instance **LineString** n’est pas valide et un appel à `MakeValid` convertira l’instance **LineString** en **Point**.  
   
 ```sql  
 DECLARE @g geometry  
@@ -118,11 +118,10 @@ ELSE
      SET @g = @g.MakeValid();  
      SELECT @g.ToString() + ' is a valid Point.';    
   END  
-  
 ```  
   
- L'extrait de code ci-dessus retournera les éléments suivants :  
-  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```  
 LINESTRING(1 3, 1 3) is not a valid LineString  
 POINT(1 3) is a valid Point.  

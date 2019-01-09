@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e89c598b31da3bd8aef755dec49a18bb820afd5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 60e05754e43056e3f71d4abccb1d8af91c650684
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698825"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212118"
 ---
 # <a name="operators"></a>Opérateurs
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Chaque opérateur doit avoir un nom. Les noms des opérateurs doivent être uniq
 ### <a name="contact-information"></a>Informations de contact  
 Les informations de contact d'un opérateur définissent la façon dont l'opérateur est notifié. Les opérateurs peuvent être avertis par e-mail, par radiomessagerie ou par la commande **net send** :  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Les options du récepteur de radiomessagerie et **net send** seront supprimées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans une version future de [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement.  
   
 -   **Notification par courrier électronique**  

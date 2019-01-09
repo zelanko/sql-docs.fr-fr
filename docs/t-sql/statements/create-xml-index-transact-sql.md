@@ -28,12 +28,12 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0aa0261ebd896f8f7c8291d24f79a51b99e80bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eaf2a4e5deb782533b945e85209c6ed7f2200db
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760547"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202608"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -194,7 +194,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  Une opération d'index hors connexion qui crée, reconstruit ou supprime un index XML acquiert un verrou Sch-M (Modification du schéma) sur la table. Cela empêche tous les utilisateurs d'accéder à la table sous-jacente pendant la durée de l'opération.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Les opérations d'index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
@@ -234,7 +234,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  Pour plus d’informations, consultez [Configurer des opérations d’index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Les opérations d’index parallèles ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="remarks"></a>Notes   
@@ -265,7 +265,7 @@ CREATE PRIMARY XML INDEX PXML_ProductModel_CatalogDescription
 GO  
 ```  
   
-### <a name="b-creating-a-secondary-xml-index"></a>B. Création d’un index XML secondaire  
+### <a name="b-creating-a-secondary-xml-index"></a>b. Création d’un index XML secondaire  
  L'exemple suivant crée un index XML secondaire sur la colonne `CatalogDescription` de la table `Production.ProductModel`.  
   
 ```sql  

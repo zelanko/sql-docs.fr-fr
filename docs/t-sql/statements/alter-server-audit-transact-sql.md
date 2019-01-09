@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9176be66c987d3ff4f7cdf09ac8dd70fc1447273
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba07558d4b85fabf1388f2fcafd26b3638b80f79
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411856"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979855"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ Force l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-changing-a-server-audit-name"></a>A. Modification du nom d'un audit du serveur  
- L'exemple suivant remplace le nom de l'audit du serveur `HIPPA_Audit` par `HIPAA_Audit_Old`.  
+ L'exemple suivant remplace le nom de l'audit du serveur `HIPAA_Audit` par `HIPAA_Audit_Old`.  
   
 ```  
 USE master  
@@ -167,8 +167,8 @@ WITH (STATE = ON);
 GO  
 ```  
   
-### <a name="b-changing-a-server-audit-target"></a>B. Modification de la cible d'un audit du serveur  
- L'exemple suivant attribue à l'audit du serveur nommé `HIPPA_Audit` un fichier comme cible.  
+### <a name="b-changing-a-server-audit-target"></a>b. Modification de la cible d'un audit du serveur  
+ L'exemple suivant attribue à l'audit du serveur nommé `HIPAA_Audit` un fichier comme cible.  
   
 ```  
 USE master  
