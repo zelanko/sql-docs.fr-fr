@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio utilisateur et les paramètres de l’espace de travail | Microsoft Docs
-description: Comment modifier les utilisateurs de Studio de données Azure et les paramètres de l’espace de travail.
-ms.custom: tools|sos
+title: Paramètres des utilisateurs et espace de travail
+titleSuffix: Azure Data Studio
+description: Comment personnaliser un Studio de données Azure en modifiant les paramètres des utilisateurs et espace de travail.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 34eea8db6295903ccdd99d7d73b143fb6fed02ec
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6bf09159c8b7384a835a06bfafe744ea2f90f0c2
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355950"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030503"
 ---
-# <a name="user-and-workspace-settings"></a>Paramètres des utilisateurs et espace de travail
+# <a name="modify-user-and-workspace-settings"></a>Modifier les paramètres des utilisateurs et espace de travail
 
 Il est facile de configurer [!INCLUDE[name-sos](../includes/name-sos-short.md)] à votre guise via les paramètres. Presque toutes les parties de [!INCLUDE[name-sos](../includes/name-sos-short.md)]d’éditeur, l’interface utilisateur et comportement fonctionnel comporte des options que vous pouvez modifier.
 
@@ -30,7 +31,7 @@ Il est facile de configurer [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
 
 La commande de menu **fichier** > **préférences** > **paramètres** (**Code**  >  **Préférences** > **paramètres** sur Mac) fournit le point d’entrée pour configurer les paramètres utilisateur et l’espace de travail. Vous sont fournis avec une liste de paramètres par défaut. Copier les paramètres que vous souhaitez modifier appropriés `settings.json` fichier. Les onglets à droite vous permettent de basculer rapidement entre les fichiers de paramètres utilisateur et l’espace de travail.
 
-Vous pouvez également ouvrir les paramètres utilisateur et l’espace de travail à partir de la **Palette de commandes** (**Ctrl + Maj + P**) avec **préférences : ouvrir les paramètres utilisateur** et  **Préférences : Ouvrir les espace de travail paramètres** ou utilisez le raccourci clavier (**Ctrl +,**).
+Vous pouvez également ouvrir les paramètres utilisateur et l’espace de travail à partir de la **Palette de commandes** (**Ctrl + Maj + P**) avec **préférences : Ouvrez les paramètres utilisateur** et **préférences : Ouvrir les paramètres de l’espace de travail** ou utilisez le raccourci clavier (**Ctrl +,**).
 
 L’exemple suivant désactive les numéros de ligne dans l’éditeur et configure les lignes de code pour être mises en retrait automatiquement.
 
@@ -38,7 +39,7 @@ L’exemple suivant désactive les numéros de ligne dans l’éditeur et config
 
 Modifications apportées aux paramètres sont rechargées par [!INCLUDE[name-sos](../includes/name-sos-short.md)] après avoir modifié `settings.json` est enregistré.
 
->**Remarque :** paramètres de l’espace de travail sont utiles pour le partage des paramètres spécifiques au projet dans une équipe.
+>**Remarque :** Paramètres de l’espace de travail sont utiles pour le partage des paramètres spécifiques au projet dans une équipe.
 
 ## <a name="settings-file-locations"></a>Emplacements des fichiers de paramètres
 

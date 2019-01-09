@@ -11,15 +11,17 @@ items:
     href: quickstart-big-data-cluster-deploy.md
 - name: Didacticiels
   items:
-  - name: 1_Interroger des données HDFS
+  - name: 1_Charger l’exemple de données
+    href: tutorial-load-sample-data.md
+  - name: 2_Interroger les données HDFS
     href: tutorial-query-hdfs-storage-pool.md
-  - name: 2_Interroger des données Oracle
+  - name: 3_Interroger les données Oracle
     href: tutorial-query-oracle.md
-  - name: 3_Charger un pool de données avec SQL
+  - name: 4_Charger un pool de données avec SQL
     href: tutorial-data-pool-ingest-sql.md
-  - name: 4_Charger un pool de données avec Spark
+  - name: 5_Charger un pool de données avec Spark
     href: tutorial-data-pool-ingest-spark.md
-  - name: 5_Exécuter un bloc-notes Spark
+  - name: 6_Exécuter un bloc-notes Spark
     href: tutorial-notebook-spark.md
 - name: Concepts
   items:
@@ -37,24 +39,32 @@ items:
     href: concept-data-persistence.md
   - name: Sécurité
     href: concept-security.md
-- name: Guides de procédures
+- name: Guides pratiques
   items:
   - name: Install
     items:
-    - name: Conseils pour le déploiement
-      href: deployment-guidance.md
-    - name: Déployer sur Minikube
-      href: deploy-on-minikube.md
-    - name: Déployer sur AKS
-      href: deploy-on-aks.md
-    - name: Déployer avec Kubeadm
-      href: deploy-with-kubeadm.md
-    - name: Se connecter avec Azure Data Studio
-      href: deploy-big-data-tools.md
+    - name: Déployer des clusters de Big Data
+      items:
+      - name: Conseils pour le déploiement
+        href: deployment-guidance.md
+      - name: Déployer sur Minikube
+        href: deploy-on-minikube.md
+      - name: Déployer sur AKS
+        href: deploy-on-aks.md
+      - name: Déployer avec Kubeadm
+        href: deploy-with-kubeadm.md
+    - name: Installer des outils
+      items:
+      - name: Installer des outils de Big Data
+        href: deploy-big-data-tools.md
+      - name: Installer mssqlctl
+        href: deploy-install-mssqlctl.md
   - name: Virtualisation de données
     items:
-    - name: Virtualiser des données externes
+    - name: Virtualiser les données relationnelles
       href: ../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+    - name: Virtualiser les données CSV
+      href: ../relational-databases/polybase/data-virtualization-csv.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
   - name: Ingestion de données
     items:
     - name: Charger des données avec curl
@@ -73,6 +83,8 @@ items:
       href: export-model-with-spark-mleap.md
   - name: Gérer le cluster Big Data de SQL Server
     items:
+    - name: Se connecter à un cluster de Big Data
+      href: connect-to-big-data-cluster.md
     - name: Portail d’administration du cluster
       href: cluster-admin-portal.md
     - name: Résolution des problèmes Kubernetes
@@ -97,9 +109,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: Demander l’accès à des clusters Big Data
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: fa4a5b29c4a4ebb3cb879de4a390effb76002ae9
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 3580372dfac82485e6c64bbb3d5b517ee34ede4a
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221615"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53595800"

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - accMsDes
@@ -13,12 +12,12 @@ ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 899fb8b6a98832533ec62011bb42ed249c96dbd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a1a46e47dc7c40bf3747c4be55290a02bf6d9d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066439"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770851"
 ---
 # <a name="access-the-cdc-designer-console"></a>Accéder à la console du concepteur CDC
   Vous pouvez accéder à la console du concepteur CDC à partir de l'ordinateur sur lequel vous avez installé la console. Pour plus d'informations sur l'installation, consultez Installation.  
@@ -37,7 +36,7 @@ ms.locfileid: "48066439"
   
 -   **Authentification Windows**  
   
--   **Authentification SQL Server**: Si vous sélectionnez cette option, vous devez taper **l’identifiant** et le **mot de passe** de l’utilisateur dans l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous vous connectez.  
+-   **L’authentification SQL Server**: Si vous sélectionnez cette option, vous devez taper le **connexion** et **mot de passe** pour l’utilisateur dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous vous connectez à.  
   
  La connexion doit avoir un rôle de base de données qui permet l'accès à la base de données MSXCDCDB. Il est recommandé que la connexion ait également accès à toutes les bases de données supplémentaires qui sont utilisées, sinon l'utilisateur ne pourra pas afficher les données de ces bases de données.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48066439"
  Tapez le délai (en secondes) pendant lequel le service Windows de capture de données modifiées Oracle attend l'exécution d'une commande avant expiration. La valeur par défaut est **30**.  
   
  **Chiffrer la connexion**  
- Sélectionnez **Chiffrer la connexion** pour la communication entre le service de capture de données modifiées Oracle et l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible à l’aide d’une connexion chiffrée.**Avancé**: cliquez sur **Avancé** et tapez toutes les propriétés de connexion supplémentaires dans la boîte de dialogue Propriétés avancées de connexion, si nécessaire.  
+ Sélectionnez **chiffrer la connexion** pour la communication entre le Service de capture de données modifiées Oracle et la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance à l’aide d’une connexion chiffrée. **Advanced**: Cliquez sur **Avancé** et tapez toutes les propriétés de connexion supplémentaires dans la boîte de dialogue Propriétés avancées de connexion, si nécessaire.  
   
  **Avancé**  
  Cliquez sur **Avancé** et tapez toutes les propriétés de connexion supplémentaires dans la boîte de dialogue Propriétés avancées de connexion, si nécessaire.  
@@ -59,6 +58,6 @@ ms.locfileid: "48066439"
  Pour plus d’informations sur la boîte de dialogue Propriétés avancées de connexion, consultez [Propriétés avancées de connexion](advanced-connection-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Autorisations de connexion SQL Server nécessaires pour le concepteur CDC](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+ [Autorisations de connexion SQL Server requises pour le concepteur CDC](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], alternate folder locations
@@ -15,12 +14,12 @@ ms.assetid: 437553b0-19df-4522-8f27-06b5bc747c69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: adcf3258d01d8c6a25a35ae5f802c0a475a6e7bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: ff65f1f4d5042e3b7c401a47e7c9df795dd681b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133680"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777863"
 ---
 # <a name="alternate-snapshot-folder-locations"></a>Autres emplacements du dossier d'instantané
   Les autres emplacements d'instantané vous permettent de stocker les fichiers d'instantanés dans un lieu autre que l'emplacement par défaut (généralement, sur le serveur de distribution), ou s'ajoutent à cet emplacement par défaut. Il peut s'agir d'un autre serveur, d'un lecteur réseau ou d'un support amovible tel qu'un CD-ROM ou un disque.  
@@ -37,9 +36,9 @@ ms.locfileid: "48133680"
   
  **Pour spécifier un autre emplacement d'instantané**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Spécifier un autre emplacement de dossier d’instantané &#40;SQL Server Management Studio&#41;](publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md) 
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Spécifier un autre emplacement de dossier d’instantané &#40;SQL Server Management Studio&#41;](publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md) 
   
--   Programmation [!INCLUDE[tsql](../../includes/tsql-md.md)] de la réplication : [Configurer les propriétés d’instantané &#40;programmation Transact-SQL de la réplication&#41;](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
+-   Programmation de la réplication [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Configurer les propriétés d’instantané &#40;programmation Transact-SQL de la réplication&#41;](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Initialiser un abonnement avec un instantané](initialize-a-subscription-with-a-snapshot.md)   

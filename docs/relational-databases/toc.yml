@@ -15,7 +15,7 @@ items:
       href: ../relational-databases/collations/collation-and-unicode-support.md
     - name: Bases de données +
       href: ../relational-databases/databases/databases.md
-    - name: Graphes +
+    - name: Graphe SQL +
       href: ../relational-databases/graphs/sql-graph-overview.md
     - name: Données hiérarchiques
       href: hierarchical-data-sql-server.md
@@ -108,6 +108,8 @@ items:
     items:
     - name: Gérer
       items:
+      - name: Utilitaire SQL Server +
+        href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
       - name: Administrer plusieurs serveurs à l'aide de serveurs de gestion centralisée
         href: administer-multiple-servers-using-central-management-servers.md
       - name: Gestionnaire de configuration
@@ -122,6 +124,8 @@ items:
         href: ../relational-databases/maintenance-plans/maintenance-plans.md
       - name: Gestion basée sur des stratégies +
         href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
+      - name: Gestion des journaux de transactions +
+        href: ../relational-databases/logs/log-file-viewer.md
     - name: Moniteur
       items:
       - name: Collecte de données +
@@ -176,9 +180,9 @@ items:
   - name: Mise en route du moteur de base de données
     href: tutorial-getting-started-with-the-database-engine.md
     items:
-    - name: 'Leçon 1 : Connexion au moteur de base de données'
+    - name: 'Leçon 1 : Connexion au moteur de base de données'
       href: lesson-1-connecting-to-the-database-engine.md
-    - name: 'Leçon 2 : Connexion depuis un autre ordinateur'
+    - name: 'Leçon 2 : Connexion depuis un autre ordinateur'
       href: lesson-2-connecting-from-another-computer.md
   - name: Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure
     href: tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
@@ -210,9 +214,9 @@ items:
     href: ../relational-databases/system-tables/system-tables-transact-sql.md
   - name: Vues système +
     href: ../relational-databases/system-views/replication-views-transact-sql.md
-ms.openlocfilehash: 63116a51771db804d7e0a30dac73f24934c29c51
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 38de54db48c48ee439c3ff737f93dad8974cd228
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439751"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328879"

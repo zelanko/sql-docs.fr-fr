@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], about synchronization
@@ -22,12 +21,12 @@ ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c417fb90dd4467fe6fb79ea9bfaf812c414326d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 6e367cc0a02e446bf915c01e5a3d846ba02dcc8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128669"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781941"
 ---
 # <a name="synchronize-data"></a>Synchroniser les données
   La synchronisation des données est le processus de propagation des modifications de données et de schéma entre le serveur de publication et les abonnés après l'application de l'instantané initial sur les abonnés. La synchronisation peut se produire :  
@@ -58,9 +57,9 @@ ms.locfileid: "48128669"
   
  **Pour afficher et résoudre les conflits de synchronisation**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Afficher et résoudre les conflits de données pour les publications de fusion &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Afficher et résoudre les conflits de données pour les publications de fusion &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ## <a name="executing-code-during-synchronization"></a>Exécution de code pendant la synchronisation  
  La réplication prend en charge deux méthodes d'exécution de code pendant la synchronisation :  

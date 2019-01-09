@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - conflict resolution [SQL Server replication], queued updating subscriptions
@@ -17,12 +16,12 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46d54056a60b2059bed038ddb8de3c83941ff38c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 1c07d35024358961b1d438d6a0b53cc764bbc479
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085639"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781231"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   Étant donné que les abonnements mis à jour en attente permettent d'apporter des modifications aux mêmes données à différents emplacements, des conflits sont susceptibles de se produire lors de la synchronisation des données sur le serveur de publication. La réplication détecte les éventuels conflits lors de la synchronisation des modifications avec le serveur de publication et les résout à l'aide de la stratégie de résolution que vous avez sélectionnée lors de la création de la publication. Les conflits suivants peuvent se produire :  
@@ -55,13 +54,13 @@ ms.locfileid: "48085639"
   
  **Pour définir la stratégie de résolution des conflits de mise à jour en attente**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [Définir des options de résolution des conflits de mise à jour en attente &#40;SQL Server Management Studio&#41;](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Définir des options de résolution des conflits de mise à jour en attente &#40;SQL Server Management Studio&#41;](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
--   Programmation Transact-SQL de la réplication : [Activer les abonnements pouvant être mis à jour pour les publications transactionnelles](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   Programmation Transact-SQL de la réplication : [Activer les abonnements de mise à jour pour les publications transactionnelles](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **Pour afficher les conflits de données**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### <a name="publisher-wins"></a>L'éditeur gagne  
  Lorsque la résolution de conflit appliquée est « Le serveur de publication gagne », la cohérence transactionnelle est conservée dans les données situées sur le serveur de publication. La transaction en conflit est annulée sur l'abonné qui l'a initialisée.  

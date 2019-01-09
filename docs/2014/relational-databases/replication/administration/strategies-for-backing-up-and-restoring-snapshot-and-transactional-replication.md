@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - backups [SQL Server replication], snapshot replication
@@ -21,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43f5005c9b03772e8e8e23c3b3e06ea912683362
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229989"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823513"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d'instantané
   Lors de la conception d'une stratégie de sauvegarde et de restauration de la réplication transactionnelle et d'instantané, vous devez identifier :  
@@ -72,7 +71,7 @@ ms.locfileid: "48229989"
   
  **Pour définir l'option sync with backup**  
   
--   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)]de la réplication : [Activer les sauvegardes coordonnées pour la réplication transactionnelle &#40;programmation Transact-SQL de la réplication&#41;.](enable-coordinated-backups-for-transactional-replication.md)  
+-   Programmation de la réplication [!INCLUDE[tsql](../../../includes/tsql-md.md)] : [Activer les sauvegardes coordonnées pour la réplication transactionnelle &#40;programmation Transact-SQL de la réplication&#41;](enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Restauration des bases de données concernées par la réplication  
  Il est possible de restaurer toutes les bases de données d'une topologie de réplication s'il existe des sauvegardes récentes et si vous respectez la procédure indiquée. Les étapes de restauration de la base de données de publication dépendent du type de réplication et des options utilisées, ce qui n'est pas le cas pour toutes les autres bases de données.  
@@ -92,7 +91,7 @@ ms.locfileid: "48229989"
   
  La restauration des bases de données **msdb** et **master** , également décrite dans cette section, est identique pour les quatre types.  
   
-#### <a name="publication-database-snapshot-replication"></a>Base de données de publication : réplication d'instantané  
+#### <a name="publication-database-snapshot-replication"></a>Base de données de publication : Réplication d'instantané  
   
 1.  Restaurez la dernière sauvegarde de la base de données de publication. Passez à l’étape 2.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48229989"
   
      Pour plus d’informations sur la suppression de la réplication, consultez [sp_removedbreplication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql).  
   
-#### <a name="publication-database-read-only-transactional-replication"></a>Base de données de publication : réplication transactionnelle en lecture seule  
+#### <a name="publication-database-read-only-transactional-replication"></a>Base de données de publication : réplication transactionnelle en lecture seule  
   
 1.  Restaurez la dernière sauvegarde de la base de données de publication. Passez à l’étape 2.  
   
@@ -110,7 +109,7 @@ ms.locfileid: "48229989"
   
      Si l'option est activée, la requête `SELECT DATABASEPROPERTYEX('<PublicationDatabaseName>', 'IsSyncWithBackup')` retourne la valeur 1.  
   
-3.  La sauvegarde restaurée est-elle complète et à jour ? Si elle contient la configuration la plus récente de tous les abonnements et publications, la restauration est alors terminée. Sinon, passez à l’étape 4.  
+3.  La sauvegarde restaurée est-elle complète et à jour ? Si elle contient la configuration la plus récente de tous les abonnements et publications, la restauration est alors terminée. Sinon, passez à l’étape 4.  
   
 4.  Les informations de configuration dans la base de données de publication restaurée ne sont pas à jour. Par conséquent, vous devez vous assurer que les Abonnés ont toutes les commandes en attente dans la base de données de distribution, puis supprimer et recréer la configuration de la réplication.  
   
@@ -149,9 +148,9 @@ ms.locfileid: "48229989"
   
          Pour plus d'informations sur la manière de spécifier que l'Abonné possède déjà les données, consultez [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Base de données de publication : réplication transactionnelle avec des abonnements mis à jour  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Base de données de publication : réplication transactionnelle avec des abonnements mis à jour  
   
-1.  Restaurez la dernière sauvegarde de la base de données de publication. Passez à l’étape 2.  
+1.  Restaurez la dernière sauvegarde de la base de données de publication. Passez à l’étape 2.  
   
 2.  Exécutez l'Agent de distribution jusqu'à ce que tous les Abonnés soient synchronisés avec les commandes non traitées dans la base de données de distribution. Vérifiez que toutes les commandes sont remises aux Abonnés via l'onglet **Commandes non distribuées** du moniteur de réplication ou en interrogeant la vue [MSdistribution_status](/sql/relational-databases/system-views/msdistribution-status-transact-sql) de la base de données de distribution. Passez à l’étape 3.  
   
@@ -183,7 +182,7 @@ ms.locfileid: "48229989"
   
          Pour plus d'informations sur la manière de spécifier que l'Abonné possède déjà les données, consultez [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Base de données de publication : réplication transactionnelle d'égal à égal  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Base de données de publication : Peer-to-Peer Transactional Replication  
  Dans les étapes suivantes, les bases de données de publication **A**, **B**et **C** font partie d'une topologie de réplication transactionnelle d'égal à égal. Les bases de données **A** et **C** sont en ligne et fonctionnent correctement tandis que la base de données **B** doit être restaurée. Le processus décrit ici, surtout les étapes 7, 10 et 11, est très similaire à celui requis pour ajouter un nœud à une topologie d'égal à égal. Le moyen le plus simple pour effectuer ces étapes consiste à utiliser l'Assistant Configurer la topologie d'égal à égal. Toutefois, vous pouvez également utiliser des procédures stockées.  
   
 1.  Exécutez les Agents de distribution pour synchroniser les abonnements sur les bases de données **A** et **C**. Passez à l’étape 2.  
@@ -322,7 +321,7 @@ ms.locfileid: "48229989"
   
 2.  Restaurez la dernière sauvegarde de la base de données d'abonnement. Passez à l’étape 3.  
   
-3.  Si la base de données d'abonnement contient uniquement des abonnements par émission de données, allez à étape 4. Si la base de données d'abonnement contient des abonnements par extraction, posez-vous les questions suivantes : les informations d'abonnement sont-elles à jour ? La base de données inclut-elle toutes les tables et options définies au moment de la défaillance ? Si tel est le cas, passez à l’étape 4. Si non, réinitialisez l'abonnement. La récupération est terminée.  
+3.  Si la base de données d'abonnement contient uniquement des abonnements par émission de données, allez à étape 4. Si la base de données d’abonnement contient des abonnements par extraction, posez-vous les questions suivantes : Les informations d’abonnement est en cours ? La base de données inclut-elle toutes les tables et options définies au moment de la défaillance ? Si tel est le cas, passez à l’étape 4. Si non, réinitialisez l'abonnement. La récupération est terminée.  
   
 4.  Pour synchroniser l'Abonné, exécutez l'Agent de distribution. La récupération est terminée.  
   
@@ -351,7 +350,7 @@ ms.locfileid: "48229989"
  [Sauvegarder et restaurer des bases de données répliquées](back-up-and-restore-replicated-databases.md)   
  [Configurer la distribution](../configure-distribution.md)   
  [Publier des données et des objets de base de données](../publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](../subscribe-to-publications.md)   
+ [S’abonner aux Publications](../subscribe-to-publications.md)   
  [Initialiser un abonnement](../initialize-a-subscription.md)   
  [Synchroniser les données](../synchronize-data.md)  
   

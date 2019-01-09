@@ -109,7 +109,7 @@ items:
       href: analysis-services-tutorial-scenario.md
     - name: Installer les exemples de données et de projets pour le tutoriel sur la modélisation multidimensionnelle Analysis Services
       href: install-sample-data-and-projects.md
-    - name: 'Leçon 1 : Définition d’une vue de source de données dans un projet Analysis Services'
+    - name: 'Leçon 1 : Définition d’une vue de source de données dans un projet Analysis Services'
       href: lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
       items:
       - name: 'Leçon 1-1 : Création d’un projet Analysis Services'
@@ -120,7 +120,7 @@ items:
         href: lesson-1-3-defining-a-data-source-view.md
       - name: 'Leçon 1-4 : Modification des noms de tables par défaut'
         href: lesson-1-4-modifying-default-table-names.md
-    - name: 'Leçon 2 : Définition et déploiement d’un cube'
+    - name: 'Leçon 2 : Définition et déploiement d’un cube'
       href: lesson-2-defining-and-deploying-a-cube.md
       items:
       - name: 'Leçon 2-1 : Définition d’une dimension'
@@ -135,7 +135,7 @@ items:
         href: lesson-2-5-deploying-an-analysis-services-project.md
       - name: 'Leçon 2-6 : Exploration du cube'
         href: lesson-2-6-browsing-the-cube.md
-    - name: 'Leçon 3 : Modification des mesures, des attributs et des hiérarchies'
+    - name: 'Leçon 3 : Modification des mesures, des attributs et des hiérarchies'
       href: lesson-3-modifying-measures-attributes-and-hierarchies.md
       items:
       - name: 'Leçon 3-1 : Modification des mesures'
@@ -148,7 +148,7 @@ items:
         href: lesson-3-4-modifying-the-date-dimension.md
       - name: 'Leçon 3-5 : Exploration du cube déployé'
         href: lesson-3-5-browsing-the-deployed-cube.md
-    - name: 'Leçon 4 : Définition des attributs avancés et des propriétés de dimension'
+    - name: 'Leçon 4 : Définition des propriétés d’attribut et de dimension avancées'
       href: lesson-4-defining-advanced-attribute-and-dimension-properties.md
       items:
       - name: 'Leçon 4-1 : Utilisation d’une version modifiée du projet du tutoriel Analysis Services'
@@ -162,10 +162,10 @@ items:
       - name: 'Leçon 4-5 : Tri des membres d’attribut sur la base d’un attribut secondaire'
         href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
       - name: 'Leçon 4-6 : Spécification des relations d’attribut dans une hiérarchie définie par l’utilisateur'
-        href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
+        href: lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
       - name: 'Leçon 4-7 : Définition du membre inconnu et des propriétés de traitement Null'
         href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
-    - name: 'Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures'
+    - name: 'Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures'
       href: lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
       items:
       - name: 'Leçon 5-1 : Définition d’une relation référencée'
@@ -176,31 +176,31 @@ items:
         href: lesson-5-3-defining-a-many-to-many-relationship.md
       - name: 'Leçon 5-4 : Définition de la granularité des dimensions dans un groupe de mesures'
         href: lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
-    - name: 'Leçon 6 : Définition de calculs'
+    - name: 'Leçon 6 : Définition des calculs'
       href: lesson-6-defining-calculations.md
       items:
       - name: 'Leçon 6-1 : Définition des membres calculés'
         href: lesson-6-1-defining-calculated-members.md
       - name: 'Leçon 6-2 : Définition de jeux nommés'
         href: lesson-6-2-defining-named-sets.md
-    - name: "Leçon 7 : Définition d'indicateurs de performance clés"
+    - name: "Leçon 7 : Définition d'indicateurs de performance clés"
       href: lesson-7-defining-key-performance-indicators-kpis.md
       items:
       - name: 'Leçon 7-1 : Définition et exploration d’indicateurs de performance clés'
         href: lesson-7-1-defining-and-browsing-kpis.md
-    - name: 'Leçon 8 : Définition des actions'
+    - name: 'Leçon 8 : Définition des actions'
       href: lesson-8-defining-actions.md
       items:
       - name: 'Leçon 8-1 : Définition et utilisation d’une action d’extraction'
         href: lesson-8-1-defining-and-using-a-drillthrough-action.md
-    - name: 'Leçon 9 : Définition de perspectives et de traductions'
+    - name: 'Leçon 9 : Définition des perspectives et des traductions'
       href: lesson-9-defining-perspectives-and-translations.md
       items:
       - name: 'Leçon 9-1 : Définition et exploration de perspectives'
         href: lesson-9-1-defining-and-browsing-perspectives.md
       - name: 'Leçon 9-2 : Définition et exploration de traductions'
         href: lesson-9-2-defining-and-browsing-translations.md
-    - name: 'Leçon 10 : Définition de rôles d’administration'
+    - name: 'Leçon 10 : Définition des rôles administratifs'
       href: lesson-10-defining-administrative-roles.md
       items:
       - name: 'Leçon 10 : Attribution de l’autorisation de traiter la base de données'
@@ -489,8 +489,6 @@ items:
           href: ./multidimensional-models/set-data-source-properties-ssas-multidimensional.md
         - name: Définir les options d'emprunt d'identité pour une connexion à la source de données
           href: ./multidimensional-models/set-impersonation-options-ssas-multidimensional.md
-        - name: Programmation de modèle multidimensionnel
-          href: ./multidimensional-models/multidimensional-model-programming.md
       - name: Vues de source de données
         href: ./multidimensional-models/data-source-views-in-multidimensional-models.md
         items:
@@ -707,7 +705,7 @@ items:
           href: ./multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md
       - name: Indicateurs de performance clés
         href: ./multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md
-      - name: Actions
+      - name: Vue d’ensemble des actions
         href: ./multidimensional-models/actions-in-multidimensional-models.md
         items:
         - name: Actions
@@ -1308,7 +1306,7 @@ items:
     - name: Références relatives aux erreurs et aux événements (PowerPivot pour SharePoint)
       href: ./power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md
       items:
-      - name: "Une erreur s'est produite lors de la tentative de connexion à la source de données externe. Échec de l’actualisation des connexions suivantes : données PowerPivot"
+      - name: "Une erreur s'est produite lors de la tentative de connexion à la source de données externe. Les connexions suivantes n'ont pas pu s'actualiser : Données Power Pivot"
         href: ./power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
       - name: Impossible de charger le fichier ou l’assembly Microsoft.Data.Services
         href: ./power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
@@ -1316,7 +1314,7 @@ items:
         href: ./power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
       - name: Le chemin d'accès à la connexion de données dans le classeur pointe vers un fichier sur le lecteur local, ou est un URI non valide
         href: ./power-pivot-sharepoint/the-data-connection-path-is-invalid.md
-      - name: "La connexion de données utilise l'authentification Windows, et les informations d'identification utilisateur n'ont pas pu être déléguées. Échec de l’actualisation des connexions suivantes : données PowerPivot"
+      - name: "La connexion de données utilise l'authentification Windows, et les informations d'identification utilisateur n'ont pas pu être déléguées. Les connexions suivantes n'ont pas pu s'actualiser : Données Power Pivot"
         href: ./power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
       - name: "Les fonctionnalités suivantes ne sont pas prises en charge par Excel Services et risquent de ne pas s'afficher ou de ne s'afficher que partiellement : les commentaires, les formes ou d'autres objets"
         href: ./power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
@@ -1357,6 +1355,7 @@ items:
       - name: Propriétés de sécurité
         href: ./server-properties/security-properties.md
       - name: Propriétés du pool de threads
+        href: ./server-properties/thread-pool-properties.md
     - name: Surveiller Analysis Services
       items:
       - name: Outils de supervision
@@ -1418,8 +1417,6 @@ items:
         href: https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
       - name: Objets AMO (Analysis Management Objects)
         href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
-      - name: Ensembles de lignes de schéma
-        href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
     - name: Tabulaire 1103 et inférieur
       items:
       - name: Programmation de modèles tabulaires pour les niveaux de compatibilité 1103 et inférieurs
@@ -1430,8 +1427,6 @@ items:
         href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
       - name: IMDEmbeddedData, interface
         href: ./tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
-      - name: Ensembles de lignes de schéma
-        href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
       - name: Représentation
         items:
         - name: Représentation de la connexion (tabulaire)
@@ -1463,11 +1458,9 @@ items:
     - name: Programmation de modèles multidimensionnels
       href: ./multidimensional-models/multidimensional-model-programming.md
     - name: Objets AMO (Analysis Management Objects)
-      href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
+      href: https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo
     - name: ASSL (Analysis Services Scripting Language)
       href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-    - name: Ensembles de lignes de schéma
-      href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
     - name: XML for Analysis (XMLA)
       href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
     - name: ADOMD.NET
@@ -1530,9 +1523,9 @@ items:
     href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: Événements de trace
     href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
-ms.openlocfilehash: feee35408dd9439862dce7ca043184bf2d9fd05f
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: ee7868cfee9c8f087ffd43959ccfa7f30b643b7e
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302912"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53786000"

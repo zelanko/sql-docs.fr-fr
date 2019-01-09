@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_convert
@@ -22,12 +20,12 @@ ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5849e92ff2ac64d22e87e041d38c4c1339ca4f2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6bc430354ca8ef220caed882f1f8c7942b44d158
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076729"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350936"
 ---
 # <a name="srvconvert-extended-stored-procedure-api"></a>srv_convert (API de procédure stockée étendue)
     
@@ -114,7 +112,7 @@ destlen
 -   Une erreur de syntaxe s'est produite lors de la conversion d'une chaîne de caractères en un type de données numérique.  
   
 > [!IMPORTANT]  
->  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Voir aussi  
  [srv_setutype &#40;API de procédure stockée étendue&#41;](srv-setutype-extended-stored-procedure-api.md)   

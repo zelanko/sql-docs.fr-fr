@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
@@ -24,12 +23,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49f3c4a66c38b339c87b79a30d42bf643f03d730
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112745"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782841"
 ---
 # <a name="configure-web-synchronization"></a>Configurer la synchronisation Web
   L'option de synchronisation Web de la réplication de fusion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet de répliquer les données à l'aide du protocole HTTPS sur Internet. Pour utiliser la synchronisation Web, vous devez d'abord effectuer les actions de configuration suivantes :  
@@ -56,7 +55,7 @@ ms.locfileid: "48112745"
   
 -   être membre de la liste d'accès à la publication (PAL) ;  
   
--   être mappé à une connexion associée à un utilisateur enregistré dans la base de données de publication ;  
+-   être mappé à une connexion associée à un utilisateur enregistré dans la base de données de publication ;  
   
 -   être mappé à une connexion associée à un utilisateur enregistré dans la base de données de distribution ;  
   
@@ -76,9 +75,9 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
  **Pour configurer IIS pour la synchronisation Web**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Configurer IIS pour la synchronisation web](configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configurer IIS pour la synchronisation web](configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Configurer IIS 7 pour la synchronisation web](configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configurer IIS 7 pour la synchronisation web](configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>Création d'un domaine privé Web  
  L'écouteur de réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge deux opérations de synchronisation simultanées par thread. Si cette limite est dépassée, l'écouteur de réplication risque de cesser de répondre. Le nombre de threads alloués à replisapi.dll est déterminé par la propriété Nombre maximal de processus de travail du pool d'applications. Par défaut, cette propriété a la valeur 1.  
@@ -125,7 +124,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 -   Si vous répliquez d'importants volumes de données, vous pouvez être amené à ajuster la taille de lot de l'Agent de fusion.  
   
- La taille de lot pour la réplication de fusion est mesurée en *générations*, lesquelles sont des collections de modifications par article. Le nombre de générations dans un lot est spécifié à l’aide de –`DownloadGenerationsPerBatch` et –`UploadGenerationsPerBatch` paramètres de l’Agent de fusion. Pour plus d’informations, voir [Replication Merge Agent](agents/replication-merge-agent.md).  
+ La taille de lot pour la réplication de fusion est mesurée en *générations*, lesquelles sont des collections de modifications par article. Le nombre de générations dans un lot est spécifié à l’aide de la -`DownloadGenerationsPerBatch` et -`UploadGenerationsPerBatch` paramètres de l’Agent de fusion. Pour plus d’informations, voir [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  Pour d'importants volumes de données, spécifiez un petit nombre pour chaque paramètre de traitement par lot. Nous vous recommandons de commencer avec une valeur de 10, puis d'ajuster cette valeur selon les besoins et les performances des applications. En général, ces paramètres sont spécifiés dans un profil d'agent. Pour plus d'informations sur ces profils, consultez [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
