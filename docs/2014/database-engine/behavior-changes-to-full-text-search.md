@@ -14,12 +14,12 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461014"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508866"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Changements de comportement pour la recherche en texte intégral
   Cette rubrique décrit les changements de comportement de la recherche en texte intégral. Les modifications de comportement affectent le mode de fonctionnement ou d'interaction des fonctionnalités dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] par rapport aux versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "49461014"
 |**Terme**|**Résultats avec l’analyseur lexical précédent et le Générateur de formes dérivées**|**Résultats avec les nouveaux analyseur lexical et Générateur de formes dérivées**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
 |jěˊÿqℭžl<br /><br /> *(où les termes du contrat n’est pas des caractères anglais valides)*|'jěˊÿqℭžl'|je yq zl|  
-|table's|table’s<br /><br /> table|table’s|  
+|table's|table's<br /><br /> table|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v-z *(où v et z sont des mots parasites)*|*(aucun résultat)*|v-z|  
 |$100 000 USD|100 $<br /><br /> 000<br /><br /> nn000<br /><br /> nn100$<br /><br /> usd|$100 000 USD<br /><br /> nn100000usd|  
@@ -79,7 +79,7 @@ ms.locfileid: "49461014"
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>Changements de comportement dans la recherche en texte intégral dans SQL Server 2008  
  Dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et versions ultérieures, le moteur de recherche en texte intégral est intégré comme un service de base de données dans la base de données relationnelle en tant que partie de l’infrastructure de moteur de requête et le stockage serveur. La nouvelle architecture de recherche en texte intégral réalise les objectifs suivants :  
   
--   Stockage et gestion intégrés — recherche en texte intégral est maintenant intégrée directement avec les fonctionnalités inhérentes de stockage et la gestion de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], et le service MSFTESQL n’existe plus.  
+-   Stockage intégré et recherche en texte intégral-management est désormais intégré directement avec les fonctionnalités inhérentes de stockage et la gestion de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], et le service MSFTESQL n’existe plus.  
   
     -   Les index de recherche en texte intégral sont stockés dans les groupes de fichiers de la base de données, et non dans le système de fichiers. Les opérations d'administration sur une base de données, telles que la création d'une sauvegarde, affectent automatiquement les index de recherche en texte intégral.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "49461014"
         > [!NOTE]  
         >  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] Les instructions DDL qui spécifient des catalogues de texte intégral fonctionnent correctement.  
   
--   Traitement de requêtes intégré — Le nouveau processeur de requêtes de recherche en texte intégral fait partie du moteur de base de données et est pleinement intégré avec le processeur de requêtes SQL Server. Cela signifie que l'optimiseur de requête reconnaît les prédicats de requête de texte intégral et les exécute automatiquement aussi efficacement que possible.  
+-   Requête intégrée traitement, à savoir le processeur de requêtes de recherche en texte intégral nouveau fait partie du moteur de base de données et est entièrement intégré au processeur de requête SQL Server. Cela signifie que l'optimiseur de requête reconnaît les prédicats de requête de texte intégral et les exécute automatiquement aussi efficacement que possible.  
   
--   Administration et résolution des problèmes améliorées — La recherche en texte intégral intégrée fournit des outils pour vous aider à analyser des structures de recherche telles que l'index de recherche en texte intégral, le résultat d'un analyseur lexical donné, la configuration de mot vide, etc.  
+-   Administration améliorée et intégré à la résolution des problèmes de recherche de texte intégral fournit des outils pour vous aider à analyser les structures de recherche telles que l’index de recherche en texte intégral, la sortie d’un analyseur lexical donné, configuration d’un mot vide et ainsi de suite.  
   
 -   Les mots vides et les listes de mots vides ont remplacé les mots parasites et les fichiers de mots parasites. Une liste de mots vides est un objet de base de données qui facilite les tâches gestion des mots vides et améliore l'intégrité entre instances de serveur différentes et environnements. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   

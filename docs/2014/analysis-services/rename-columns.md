@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : Renommer des colonnes | Microsoft Docs'
+title: 'Leçon 3 : Renommer des colonnes | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0037d13dd84f3db8243252717fad1d59fd380bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 056f386db58f01f663cc04e82ce04e0c6c6597a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152955"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416690"
 ---
-# <a name="lesson-3-rename-columns"></a>Leçon 3 : Renommer des colonnes
+# <a name="lesson-3-rename-columns"></a>Leçon 3 : Renommer des colonnes
   Dans cette leçon, vous allez renommer plusieurs colonnes dans chaque table que vous avez importée. En renommant les colonnes, elles seront plus faciles à identifier et à parcourir dans le concepteur de modèles mais aussi via les champs de sélection dans une application cliente. Pour plus d’informations, consultez [Renommer une table ou une colonne &#40;SSAS Tabulaire&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
   
 > [!IMPORTANT]  
 >  Renommer des colonnes n'est pas nécessaire pour effectuer ce didacticiel ; toutefois, les leçons restantes, en particulier celles qui incluent la création de relations et la création de colonnes calculées et de mesures à l'aide de formules DAX, font référence aux noms conviviaux de colonnes décrits dans cette leçon. Si vous choisissez de ne pas renommer les colonnes, vous devez modifier les formules DAX dans les leçons 5, 6, et 7 pour utiliser les noms de colonne source d'origine fournis dans cette leçon.  
   
- Durée estimée pour effectuer cette leçon : **20 minutes**  
+ Durée estimée pour effectuer cette leçon : **20 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 2 : Ajouter des données](lesson-2-add-data.md).  
+ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 2 : Ajouter des données](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Renommer des colonnes  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48152955"
 2.  Double-cliquez sur le **CustomerKey** colonne nom, puis tapez `Customer  Id`, puis appuyez sur ENTRÉE.  
   
     > [!TIP]  
-    >  Vous pouvez également renommer une colonne dans la propriété **Nom de la colonne** dans la fenêtre **Propriétés** de la colonne, ou dans la vue du diagramme.  
+    >  Vous pouvez également renommer une colonne dans la **nom de colonne** propriété dans la colonne **propriétés** fenêtre, ou dans la vue de diagramme.  
   
 3.  Renommez les colonnes restantes dans la table **Customer** , ainsi que les colonnes dans les autres tables, en remplaçant le nom de la source par le nom convivial :  
   
@@ -172,6 +172,6 @@ ms.locfileid: "48152955"
     |ShipDate|Ship Date|  
   
 ## <a name="next-step"></a>Étape suivante  
- Pour poursuivre l’étude de ce didacticiel, passez à la [Leçon 4 : Marquer en tant que table de dates](lesson-3-mark-as-date-table.md).  
+ Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 4 : Marquer en tant que Table de dates](lesson-3-mark-as-date-table.md).  
   
   

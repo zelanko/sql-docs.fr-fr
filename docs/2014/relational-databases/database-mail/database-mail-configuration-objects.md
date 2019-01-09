@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlimail.manageexistingaccount.f1
@@ -33,15 +32,15 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a42886a0477c6844b2e59d439cd9748adcaa4b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089669"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772633"
 ---
 # <a name="database-mail-configuration-objects"></a>Objets de configuration de la messagerie de base de données
-  La messagerie de base de données fournit deux objets de configuration : les objets de configuration de base de données vous permettent de configurer les paramètres que la messagerie de base de données doit utiliser lors de l'envoi d'un message électronique à partir de votre application de base de données ou Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Messagerie de base de données fournit deux objets de configuration : Les objets de configuration de base de données offrent un moyen de vous permettent de configurer les paramètres de cette base de données que la messagerie doit utiliser lors de l’envoi d’un message électronique à partir de votre application de base de données ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   Comptes de messagerie de base de données  
   
@@ -59,11 +58,11 @@ ms.locfileid: "48089669"
   
  Une messagerie de base de données accepte trois méthodes d'authentification pour communiquer avec un serveur SMTP :  
   
--   Authentification Windows : la messagerie de base de données utilise les informations d’identification du compte de service Windows du [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] pour l’authentification sur le serveur SMTP.  
+-   Authentification Windows : La messagerie de base de données utilise les informations d'identification du compte de service Windows du [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] pour l'authentification sur le serveur SMTP.  
   
--   Authentification de base : la messagerie de base de données utilise le nom d'utilisateur et le mot de passe spécifiés pour s'authentifier sur le serveur SMTP.  
+-   Authentification de base :  La messagerie de base de données utilise le nom d'utilisateur et le mot de passe spécifiés pour s'authentifier sur le serveur SMTP.  
   
--   Authentification anonyme : utilisez cette option lorsque le serveur SMTP ne nécessite pas d'authentification.  La messagerie de base de données n'utilise pas d'informations d'identification pour s'authentifier sur le serveur SMTP.  
+-   Authentification anonyme :  Le serveur SMTP ne demande aucune authentification.  La messagerie de base de données n'utilise pas d'informations d'identification pour s'authentifier sur le serveur SMTP.  
   
  Les informations de compte sont stockées dans la base de données **msdb** . Chaque compte comprend les informations suivantes :  
   
@@ -128,14 +127,14 @@ ms.locfileid: "48089669"
   
 ### <a name="database-mail-settings"></a>Paramètres de messagerie de base de données  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql)|Modifie les paramètres de configuration de la messagerie de base de données.|  
 |[sysmail_help_configure_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql)|Affiche les paramètres de configuration pour la messagerie de base de données.|  
   
 ### <a name="accounts-and-profiles"></a>Comptes et profils  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql)|Ajoute un compte de messagerie dans un profil de messagerie de base de données.|  
 |[sysmail_delete_account_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql)|Supprime un compte de messagerie de base de données.|  
@@ -150,7 +149,7 @@ ms.locfileid: "48089669"
   
 ### <a name="security"></a>Sécurité  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql)|Autorise un principal de la base de données à utiliser un profil de messagerie de base de données.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql)|Supprime l'autorisation d'utiliser un profil de messagerie de base de données public ou privé accordée à un utilisateur de base de données.|  
@@ -159,7 +158,7 @@ ms.locfileid: "48089669"
   
 ### <a name="system-state"></a>État du système  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql)|Démarre le programme externe de messagerie de base de données et la file d'attente du Service Broker SQL associé.|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql)|Arrête le programme externe de messagerie de base de données et la file d'attente du Service Broker SQL associé.|  

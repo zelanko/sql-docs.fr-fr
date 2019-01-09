@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed73e9e97c34ad1bd1d3aa4e0d37a351cbac0703
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798037"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617622"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogue de base de données WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -161,7 +161,7 @@ Le `Reports` et `PowerBI` schémas sont conçus pour reporting services et à de
 
 Voici les procédures utilisées par une application cliente, par exemple un serveur Web frontal.
 
-|Procédure|Fonction|
+|Procédure|Objectif|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|Permet à une personne (à partir de `Application.People`) d’accéder au site Web.|
 |ChangePassword|Modifie un mot de passe (pour les utilisateurs qui n’utilisent pas de mécanismes d’authentification externe).|
@@ -183,11 +183,11 @@ Les procédures stockées dans ce schéma sont utilisées par le processus ETL. 
 
 Simule une charge de travail qui insère les ventes et les achats. La procédure stockée principale est `PopulateDataToCurrentDate`, qui est utilisé pour insérer des exemples de données jusqu'à la date actuelle.
 
-|Procédure|Fonction|
+|Procédure|Objectif|
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|Recrée les procédures nécessaires pour les données de simulation de charge. Cela est nécessaire pour mettre les données jusqu'à la date actuelle.|
 |Configuration_RemoveDataLoadSimulationProcedures|Cette opération supprime les procédures à nouveau une fois la simulation de données est terminée.|
-|DeactiveTemporalTablesBeforeDataLoad|Supprime la nature temporelle de toutes les tables temporelles et, le cas échéant, s’applique un déclencheur afin que peut être modifié comme si elles ont été appliquées à une date antérieure que ne l’autorisent les tables temporelles sys.|
+|DeactivateTemporalTablesBeforeDataLoad|Supprime la nature temporelle de toutes les tables temporelles et, le cas échéant, s’applique un déclencheur afin que peut être modifié comme si elles ont été appliquées à une date antérieure que ne l’autorisent les tables temporelles sys.|
 |PopulateDataToCurrentDate|Utilisé pour importer les données jusqu'à la date actuelle. Doit être exécutée avant les autres options de configuration après la restauration de la base de données à partir d’une sauvegarde initiale.|
 |ReactivateTemporalTablesAfterDataLoad|Rétablit les tables temporelles, y compris la vérification de cohérence des données. (Supprime les déclencheurs associés).|
 
@@ -196,7 +196,7 @@ Simule une charge de travail qui insère les ventes et les achats. La procédure
 
 Ces procédures sont utilisées pour configurer l’exemple. Ils sont utilisés pour appliquer les fonctionnalités de l’édition enterprise à la version Édition standard de l’exemple et également ajouter l’audit et l’indexation de texte intégral.
 
-|Procédure|Fonction|
+|Procédure|Objectif|
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|Ajoute un membre à un rôle si le membre n’est pas déjà dans le rôle|
 |Configuration_ApplyAuditing|Ajoute l’audit. L’audit du serveur est appliquée pour les bases de données standard edition ; l’audit de base de données supplémentaire est ajouté pour enterprise edition.|
@@ -215,7 +215,7 @@ Ces procédures sont utilisées pour configurer l’exemple. Ils sont utilisés 
 
 Procédures pour configurer les séquences dans la base de données.
 
-|Procédure|Fonction|
+|Procédure|Objectif|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Appelle la procédure ReseedSequenceBeyondTableValue pour toutes les séquences.|
 |ReseedSequenceBeyondTableValue|Utilisé pour repositionner la valeur de la séquence suivante au-delà de la valeur dans une table qui utilise la même séquence. (Par exemple, un DBCC CHECKIDENT pour équivalent de colonnes d’identité pour les séquences, mais potentiellement plusieurs tables).|

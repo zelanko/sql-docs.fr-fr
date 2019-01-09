@@ -11,12 +11,12 @@ ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebaafa4b25c4bd4847af24a36462e15d04d7774a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 792e3e8eb7e27f41aa03523d93dba02379213a17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147999"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372971"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Création de prédictions pour les modèles de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
   Maintenant que vous en savez plus sur les interactions entre les équipes, le nombre d'opérateurs, les appels et le niveau de service, vous êtes prêt à créer des requêtes de prédiction qui peuvent être utilisées dans l'analyse commerciale et la planification. Vous allez d'abord créer des prédictions sur le modèle exploratoire afin de tester des hypothèses. Ensuite, vous allez créer des prédictions en bloc en utilisant le modèle de régression logistique.  
@@ -175,18 +175,18 @@ ms.locfileid: "48147999"
   
 |Équipe, salaire et jour|Qualité prédite du service avec le temps de réponse moyen actuel|Qualité prédite du service avec réduction de 90 pour cent de temps de réponse|Qualité prédite du service à 80 pour cent de réduction du temps de réponse|  
 |--------------------------|------------------------------------------------------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------|  
-|Congé AM|0.165|0.05|0.05|  
-|Congé PM1|0.05|0.05|0.05|  
-|Congé Minuit|0.165|0.05|0.05|  
+|Congé AM|0.165|0,05|0,05|  
+|Congé PM1|0,05|0,05|0,05|  
+|Congé Minuit|0.165|0,05|0,05|  
   
  Vous pouvez créer diverses autres requêtes de prédiction sur ce modèle. Par exemple, vous pourrez prédire le nombre d’opérateurs est nécessaire pour répondre à un certain niveau de service ou pour répondre à un certain nombre d’appels entrants. Étant donné que vous pouvez inclure plusieurs sorties dans un modèle de régression logistique, il est facile de faire des essais avec différentes variables indépendantes et sorties sans qu'il soit nécessaire de créer de nombreux modèles distincts.  
   
 ## <a name="remarks"></a>Notes  
  Les données d’exploration de données des compléments pour Excel 2007 fournissent des Assistants de régression logistique qui permettent de facilement répondre aux questions complexes, telles que les opérateurs de niveau 2 combien seraient nécessaire pour améliorer le niveau de service à un niveau cible pour une équipe spécifique. Les compléments d'exploration de données, qui peuvent être téléchargés gratuitement, incluent des Assistants basés sur l'algorithme MNN (Microsoft Neural Network) ou l'algorithme MLR (Microsoft Logistic Regression). Pour plus d'informations, consultez les liens suivants :  
   
--   [SQL Server 2005 Data Mining Add-Ins pour Office 2007](http://www.microsoft.com/sql/technologies/dm/addins.mspx): la valeur cible et que se passe-t-il si analyse de scénario  
+-   [SQL Server 2005 Data Mining Add-Ins pour Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): Analyse de scénarios de valeurs cibles et de scénarios divers  
   
--   [SQL Server 2008 Data Mining Add-Ins pour Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790): valeur cible de l’analyse de scénario, que se passe-t-il si l’analyse de scénario et calcul de prédiction  
+-   [SQL Server 2008 Data Mining Add-Ins pour Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): Analyse de scénarios de valeurs cibles, analyse de scénarios divers et calcul de prédiction  
   
 ## <a name="conclusion"></a>Conclusion  
  Vous avez appris à créer, à personnaliser et à interpréter des modèles d'exploration de données basés sur l'algorithme MNN (Microsoft Neural Network) et sur l'algorithme MLR (Microsoft Logistic Regression). Ces types de modèles élaborés permettent une diversité presque infinie d'analyses ; ils peuvent, par conséquent, être complexes et difficiles à maîtriser.  
@@ -194,9 +194,9 @@ ms.locfileid: "48147999"
  Toutefois, ces algorithmes peuvent s'itérer par le biais de plusieurs combinaisons de facteurs et identifier automatiquement les corrélations les plus fortes en fournissant la prise en charge statistique des analyses qui seraient très difficiles à identifier par l'exploration manuelle des données à l'aide de Transact-SQL ou même de PowerPivot.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples de requête de modèle de régression logistique](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
- [Algorithme de régression logistique de Microsoft](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Algorithme de réseau neuronal de Microsoft](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Exemples de requêtes de modèle de régression logistique](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
+ [Algorithme MLR (Microsoft Logistic Regression)](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Exemples de requêtes de modèle de réseau neuronal](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

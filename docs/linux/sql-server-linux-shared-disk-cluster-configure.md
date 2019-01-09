@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 322160591d1e4ce741459e3a338bca30b0ea1603
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 87bffa2c93442aabc2dd6f193373e024466ecea6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085465"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397101"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurer l’instance de cluster de basculement - SQL Server sur Linux (RHEL)
 
@@ -43,7 +43,7 @@ Pour terminer le scénario de bout en bout suivant, vous avez besoin de deux ord
 
 La première étape consiste à configurer le système d’exploitation sur les nœuds de cluster. Sur chaque nœud du cluster, configurer une distribution linux. Utilisez la distribution et la version même sur les deux nœuds. Utilisez une ou l’autre des distributions suivantes :
     
-* RHEL avec un abonnement valide pour le module complémentaire de haute disponibilité
+*  RHEL avec un abonnement valide pour le module complémentaire de haute disponibilité
 
 ## <a name="install-and-configure-sql-server"></a>Installer et configurer SQL Server
 
@@ -131,10 +131,10 @@ Vous devez fournir un stockage accessible aux deux nœuds. Vous pouvez utiliser 
    sudo firewall-cmd --reload
    ```
 
-   > Si vous utilisez un autre pare-feu qui n’intègre pas de configuration à haute disponibilité, les ports suivants doivent être ouverts pour permettre à Pacemaker de communiquer avec les autres nœuds du cluster.
+   > Si vous utilisez un autre pare-feu qui n’a pas une configuration de haute disponibilité intégrée, les ports suivants doivent être ouverts pour permettre à être en mesure de communiquer avec d’autres nœuds du cluster Pacemaker
    >
-   > * TCP : ports 2224, 3121, 21064
-   > * UDP : port 5405
+   > * TCP : Ports 2224, 3121, 21064
+   > * UDP : Port 5405
 
 1. Installez les packages Pacemaker sur chaque nœud.
 
@@ -277,7 +277,7 @@ Cet exemple crée une instance FCI dans le groupe NewLinFCIGrp. Le nom du groupe
 |**Red Hat Enterprise Linux with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-sles-configure.md)
 -->
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Dans ce didacticiel vous avez effectué les tâches suivantes.
 

@@ -1,6 +1,6 @@
 ---
-title: Quelles sont les nouveautés d’Analytique Platform System – un entrepôt de données de la montée en puissance
-description: Voir quelles sont les nouveautés dans Microsoft® Analytique Platform System, une appliance de montée en puissance en local qui héberge MPP SQL Server Parallel Data Warehouse.
+title: Quelles sont les nouveautés d’Analytique Platform System - un entrepôt de données de la montée en puissance
+description: Voir quelles sont les nouveautés dans Microsoft Analytique Platform System, une appliance de montée en puissance en local qui héberge MPP SQL Server Parallel Data Warehouse.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,25 +9,41 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ffad259ca0de75ad2eb4b7fc6f51614f1c4dea9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5467362b32733e6ef10036bf9b45d38fe3150a1e
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700357"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626353"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quelles sont les nouveautés d’Analytique Platform System, un entrepôt de données MPP montée en puissance
-Consultez les nouveautés introduite dans les dernières mises à jour de matériel pour Microsoft® Analytique Platform System (APS). APS est une appliance de montée en puissance en local qui héberge MPP SQL Server Parallel Data Warehouse. 
+Consultez les nouveautés introduite dans les dernières mises à jour de matériel pour Microsoft Analytique Platform System (APS). APS est une appliance de montée en puissance en local qui héberge MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.3"></a>
+## <a name="aps-cu73"></a>APS CU7.3
+Date de publication - décembre 2018
+
+### <a name="common-subexpression-elimination"></a>Élimination de sous-expressions communes
+APS CU7.3 améliore les performances de requête avec élimination de sous-expressions communes dans l’optimiseur de requête SQL. L’amélioration améliore les requêtes de deux manières. Le premier, c’est la capacité à identifier et éliminer ces expressions permettent de réduire le temps de compilation SQL. L’avantage de la deuxième et le plus important est les opérations de déplacement de données pour ces sous-expressions redondantes sont éliminées ainsi les temps d’exécution de requêtes devient plus rapide. Vous pouvez trouver une explication détaillée de cette fonctionnalité [ici](common-sub-expression-elimination.md).
+
+### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Connecteur APS Informatica pour Informatica 10.2.0 publié
+Nous avons publié une nouvelle version des connecteurs d’Informatica pour les points d’accès qui fonctionne avec Informatica version 10.2.0. Les nouveaux connecteurs peuvent être téléchargées à partir de [site de téléchargement](https://www.microsoft.com/download/details.aspx?id=57472).
+
+#### <a name="supported-versions"></a>Versions prises en charge
+| Version de points d’accès | Informatica PowerCenter | Pilote |
+|:---|:---|:---|
+| APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
+| APS 2016 et versions ultérieures | 10.2.0 | SQL Server Native Client 11.x |
+
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2
 Date de publication : octobre 2018
 
 ### <a name="support-for-tls-12"></a>Prise en charge de TLS 1.2
-APS CU7.2 prend en charge TLS 1.2. Ordinateur client pour les points d’accès et des points d’accès des communications intra-nœud peuvent désormais être définie pour communiquer uniquement via TLS 1.2. Outils tels que SSDT, SSIS et Dwloader installé sur les ordinateurs clients qui sont configurés pour communiquer uniquement via TLS 1.2 peuvent maintenant vous connecter aux points d’accès à l’aide de TLS 1.2. Par défaut, les points d’accès prendra en charge toutes les versions TLS (1.0, 1.1 et 1.2) pour la compatibilité descendante. Si vous souhaitez définir votre appliance APS pour stictly utiliser TLS 1.2, vous pouvez le faire en modifiant les paramètres du Registre. 
+APS CU7.2 prend en charge TLS 1.2. Ordinateur client pour les points d’accès et des points d’accès des communications intra-nœud peuvent désormais être définie pour communiquer uniquement via TLS 1.2. Outils tels que SSDT, SSIS et Dwloader installé sur les ordinateurs clients qui sont configurés pour communiquer uniquement via TLS 1.2 peuvent maintenant vous connecter aux points d’accès à l’aide de TLS 1.2. Par défaut, les points d’accès prendra en charge toutes les versions TLS (1.0, 1.1 et 1.2) pour la compatibilité descendante. Si vous souhaitez définir votre appliance APS strictement utiliser TLS 1.2, vous pouvez le faire en modifiant les paramètres du Registre. 
 
-Consultez [configuration TLS 1.2 sur APS](configure-tls12-aps.md) pour plus d’informations.
+Pour plus d’informations, consultez [configuration TLS 1.2 sur APS](configure-tls12-aps.md).
 
 ### <a name="hadoop-encryption-zone-support-for-polybase"></a>Zone de chiffrement Hadoop prise en charge de PolyBase
 PolyBase peut désormais communiquer aux zones de chiffrement Hadoop. Consultez les modifications de configuration de points d’accès qui sont nécessaires dans [configurer la sécurité de Hadoop](polybase-configure-hadoop-security.md#encryptionzone).
@@ -101,9 +117,9 @@ APS 2016 est une condition préalable à la mise à niveau vers AU7. Nouvelles f
 APS AU7 crée et met à jour les statistiques automatiquement, par défaut. Pour mettre à jour les paramètres de statistiques, les administrateurs peuvent utiliser un nouvel élément de menu de commutateur de fonctionnalité dans le [Configuration Manager](appliance-configuration.md#CMTasks). Le [commutateur de fonctionnalité](appliance-feature-switch.md) contrôle l’auto-create, la mise à jour automatique et le comportement de mise à jour asynchrone des statistiques. Vous pouvez également mettre à jour les paramètres de statistiques avec le [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) instruction.
 
 ### <a name="t-sql"></a>T-SQL
-Sélectionnez @var est désormais pris en charge. Pour plus d’informations, consultez [variable locale Sélectionnez] (/ sql/t-sql/language-elements/select-local-variable-transact-sql) 
+Sélectionnez @var est désormais pris en charge. Pour plus d’informations, consultez [sélectionner la variable locale](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-Indicateurs de requête HASH et ordre de groupe sont désormais pris en charge. Pour plus d’informations, consultez [Hints(Transact-SQL) - requête] (/ / t-sql/requêtes/indicateurs-transact-sql-requête sql)
+Indicateurs de requête HASH et ordre de groupe sont désormais pris en charge. Pour plus d’informations, consultez [Hints(Transact-SQL) - requête ](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>Commutateur de fonctionnalité
 APS AU7 introduit le commutateur de fonctionnalité dans [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled et DmsProcessStopMessageTimeoutInSeconds sont désormais des options configurables qui peuvent être modifiées par les administrateurs.

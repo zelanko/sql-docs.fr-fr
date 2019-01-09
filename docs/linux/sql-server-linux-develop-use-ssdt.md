@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 2053e338bf14d11f25e6e12b3d6c5aee6b8e636e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 874fd8948d4098e9003fb2c54e1feb8b5cbbe4e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033576"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750361"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Utiliser Visual Studio pour créer des bases de données pour SQL Server sur Linux
 
@@ -99,7 +99,7 @@ SQL Server sur Linux est pris en charge par SSDT version 17.0 RC ou version ult�
 
 5. Vérifiez l’état de la publication dans la fenêtre **opérations des outils de données**.
 
-6. Cliquez sur **Afficher le résultat** ou sur **Afficher le script** pour voir les détails du résultat de la publication de la base de données sur votre serveur SQL Server sur Linux.
+6. Cliquez sur **afficher les résultats** ou **afficher le Script** pour afficher les détails de la base de données à publier les résultats sur votre serveur SQL Server sur Linux.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
@@ -107,12 +107,12 @@ Vous avez créé une base de données sur l'instance SQL Server sur Linux et vou
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Si vous débutez avec T-SQL, consultez [Didacticiel : écriture d'instructions Transact-SQL] et [Référence Transact-SQL (moteur de base de données)].
+Si vous débutez avec T-SQL, consultez [didacticiel : Écriture d’instructions Transact-SQL] et [référence Transact-SQL (moteur de base de données)].
 
 Pour plus d’informations sur le développement d’une base de données avec les outils de données SQL, consultez [Documents MSDN SSDT]
 
 [Téléchargez et installez Visual Studio]:https://www.visualstudio.com/downloads/
-[Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
+[Download and Install SSDT]:https://aka.ms/ssdt-download
 [Documents MSDN SSDT]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[Didacticiel : écriture d'instructions Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
+[Didacticiel : Écriture d’instructions Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
 [Référence Transact-SQL (moteur de base de données)]:https://msdn.microsoft.com/library/bb510741.aspx

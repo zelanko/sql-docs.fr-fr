@@ -11,12 +11,12 @@ ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f5e41f1dac0c9c0048b5751439209e17e289f4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178129"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365011"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Utiliser des flux de données (PowerPivot pour SharePoint)
   Les flux de données comportent un ou plusieurs flux de données générés à partir d'une source de données en ligne et transmis en continu à un document ou une application de destination. Si vous utilisez PowerPivot pour Excel, les flux peuvent vous aider à obtenir des données d'entreprise ou données métier à partir de sources de données arbitraires et qui s'affichent dans la fenêtre PowerPivot dans votre classeur Excel 2010. Après avoir importé un flux dans un classeur, vous pouvez y faire référence ultérieurement dans toute opération d'actualisation des données que vous planifiez sur un serveur SharePoint.  
@@ -38,7 +38,7 @@ ms.locfileid: "48178129"
 ##  <a name="prereq"></a> Conditions préalables  
  Vous devez disposer de PowerPivot pour Excel pour importer un flux de données dans Excel 2010.  
   
- Vous devez disposer d'un service Web ou d'un service de données qui fournit des données au format Atom 1.0. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et SharePoint 2010 peuvent fournir des données à ce format.  
+ Vous devez disposer d'un service Web ou d'un service de données qui fournit des données au format Atom 1.0.  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et SharePoint 2010 peuvent fournir des données à ce format.  
   
  Avant de pouvoir exporter une liste SharePoint sous forme de flux de données, vous devez installer ADO.NET Data Services sur le serveur SharePoint. Pour plus d’informations, voir [Installation d’ADO.NET Data Services pour prendre en charge les exportations de flux de données des listes SharePoint](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48178129"
 ##  <a name="rsreport"></a> Créer un flux de données à partir d'un rapport Reporting Services  
  Si vous avez un déploiement de SQL Server 2008 R2 Reporting Services, vous pouvez utiliser la nouvelle extension de rendu Atom pour générer un flux de données à partir d'un rapport existant. Pour de meilleurs résultats, Excel 2010 avec PowerPivot pour Excel doit être installé sur votre station de travail. L'application cliente PowerPivot est lancée en réponse à l'exportation du flux, et ajoute et met automatiquement en relation les tables et colonnes à mesure qu'elles sont transmises.  
   
- Pour obtenir des instructions sur l’exportation d’un flux de données à partir d’un rapport, consultez [Générer des flux de données à partir d’un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) dans le [fichier d’aide du Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=154494).  
+ Pour obtenir des instructions sur l’exportation d’un flux de données à partir d’un rapport, consultez [Générer des flux de données à partir d’un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) dans le [fichier d’aide du Générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=154494).  
   
 > [!NOTE]  
 >  Pour configurer une planification périodique d'actualisation des données qui réimporte les données de rapport dans un classeur PowerPivot publié dans une bibliothèque SharePoint, le serveur de rapports doit être configuré pour l'intégration SharePoint. Pour plus d’informations sur l’utilisation de PowerPivot pour SharePoint et Reporting Services ensemble, consultez [Configuration et Administration d’un serveur de rapports &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  

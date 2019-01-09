@@ -11,18 +11,18 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: edc7a43485acd7c0e2d1c4a914867d8de9d1bc19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a9bad2db754aca80d6cf1501a0c178f694e9210
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094059"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362231"
 ---
-# <a name="lesson-9-defining-perspectives-and-translations"></a>Leçon 9 : Définition de perspectives et de traductions
+# <a name="lesson-9-defining-perspectives-and-translations"></a>Leçon 9 : Définition de perspectives et de traductions
   Dans cette leçon, vous apprenez à définir des perspectives et des traductions. Les perspectives servent à réduire l'apparente complexité d'un cube, et les traductions permettent aux utilisateurs d'afficher les métadonnées de cube dans la langue de leur choix.  
   
 > [!NOTE]  
->  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](http://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projet de ce didacticiel.  
+>  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](https://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projet de ce didacticiel.  
   
  Cette leçon contient les tâches suivantes :  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48094059"
  Dans cette tâche, vous définissez et parcourez des traductions de métadonnées spécifiques dans certaines langues.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 10 : Définition de rôles d’administration](lesson-10-defining-administrative-roles.md)  
+ [Leçon 10 : Définition de rôles administratifs](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario du didacticiel Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)   

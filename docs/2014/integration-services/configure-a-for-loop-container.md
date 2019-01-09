@@ -14,17 +14,17 @@ ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2adcb3e79e3733b5fb8151bfa7f65e7bebb4d910
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a88ca178770bb3326202b603318be30119b2febe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126161"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350846"
 ---
 # <a name="configure-a-for-loop-container"></a>Configurer un conteneur de boucles For
   Cette procédure décrit comment configurer un conteneur de boucles For à l’aide de la boîte de dialogue **Éditeur de boucle For**.  
   
- Pour obtenir un exemple de conteneur de boucles For, consultez [SSIS Loops that do not fail](http://go.microsoft.com/fwlink/?LinkId=240295) sur le site bimonkey.com.  
+ Pour obtenir un exemple de conteneur de boucles For, consultez [SSIS Loops that do not fail](https://go.microsoft.com/fwlink/?LinkId=240295) sur le site bimonkey.com.  
   
 ### <a name="to-configure-the-for-loop-container"></a>Pour configurer le conteneur de boucles For  
   
@@ -48,6 +48,6 @@ ms.locfileid: "48126161"
 ## <a name="see-also"></a>Voir aussi  
  [Conteneur de boucles for](control-flow/for-loop-container.md)   
  [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
- [Utilisation d’expressions de propriété dans des packages](expressions/use-property-expressions-in-packages.md)  
+ [Expressions de propriété dans des packages](expressions/use-property-expressions-in-packages.md)  
   
   

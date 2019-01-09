@@ -19,12 +19,12 @@ ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e4d13fb24ad337ed6395e8529f4067d8acd2a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bf5ca4c2e27f366a6f5ded97f9a9aa5213db122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140639"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361071"
 ---
 # <a name="create-package-configurations"></a>Créer des configurations de package
   Vous pouvez créer des configurations de package à l'aide de la boîte de dialogue **Bibliothèque des configurations du package** et de l'Assistant Configuration de package. Pour accéder à ces outils, cliquez sur **Configurations du package** dans le menu **SSIS** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -111,14 +111,14 @@ ms.locfileid: "48140639"
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   Article technique, [Présentation des configurations de packages Integration Services.](http://go.microsoft.com/fwlink/?LinkId=165643), sur msdn.microsoft.com  
+-   Article technique, [Présentation des configurations de packages Integration Services.](https://go.microsoft.com/fwlink/?LinkId=165643), sur msdn.microsoft.com  
   
--   Entrée de blog, [création de packages dans le code – Package Configurations](http://go.microsoft.com/fwlink/?LinkId=217663), sur www.sqlis.com.  
+-   Entrée de blog, [création de packages dans le code - Configurations de Package](https://go.microsoft.com/fwlink/?LinkId=217663), sur www.sqlis.com.  
   
--   Entrée de blog, [API Sample – Programmatically add a configuration file to a package](http://go.microsoft.com/fwlink/?LinkId=217664), sur blogs.msdn.com.  
+-   Entrée de blog, [exemple API - ajouter par programmation un fichier de configuration à un package](https://go.microsoft.com/fwlink/?LinkId=217664), sur blogs.msdn.com.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurations de package](../../2014/integration-services/package-configurations.md)   
+ [Configurations du package](../../2014/integration-services/package-configurations.md)   
  [Déploiement du package &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
  [Utilisation de variables par programmation](building-packages-programmatically/working-with-variables-programmatically.md)  
   

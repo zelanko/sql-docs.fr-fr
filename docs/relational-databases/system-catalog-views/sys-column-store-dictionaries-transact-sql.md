@@ -20,12 +20,12 @@ ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dbcd828ea886bd1c83b327cae9a49bca4668ef15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd497326f278dcc01b4fa81a0e64da6a93cbe8cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617897"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518815"
 ---
 # <a name="syscolumnstoredictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "47617897"
 |**column_id**|**Int**|ID de la colonne columnstore en commençant par 1. La première colonne a ID = 1, la deuxième colonne a ID = 2, etc.|  
 |**dictionary_id**|**Int**|Il peut y avoir deux types de dictionnaires : globales et locales, associés à un segment de colonne. Un dictionary_id 0 représente le dictionnaire global qui est partagé entre tous les segments de colonne (une pour chaque groupe de lignes) pour cette colonne.|  
 |**version**|**Int**|Version du format de dictionnaire.|  
-|**type**|**Int**|Type de dictionnaire :<br /><br /> 1 – dictionnaire de hachage contenant **int** valeurs<br /><br /> 2 – Non utilisé<br /><br /> 3 – Dictionnaire de hachage contenant des valeurs de chaîne<br /><br /> 4 – hachage dictionnaire contenant **float** valeurs<br /><br /> Pour plus d’informations sur les dictionnaires, consultez [Guide des index Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
+|**type**|**Int**|Type de dictionnaire :<br /><br /> 1 - dictionnaire de hachage contenant **int** valeurs<br /><br /> 2 - non utilisé<br /><br /> 3 - dictionnaire de hachage contenant des valeurs de chaîne<br /><br /> 4 - dictionnaire de hachage contenant **float** valeurs<br /><br /> Pour plus d’informations sur les dictionnaires, consultez [Guide des index Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
 |**last_id**|**Int**|Le dernier ID de données dans le dictionnaire.|  
 |**entry_count**|**bigint**|Nombre d'entrées dans le dictionnaire.|  
 |**on_disc_size**|**bigint**|Taille du dictionnaire en octets.|  
 |**partition_id**|**bigint**|Indique l'ID de partition. Unique dans une base de données.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Toutes les colonnes requièrent au moins l'autorisation VIEW DEFINITION sur la table. Les colonnes suivantes retournent null à moins que l’utilisateur ait également **sélectionnez** autorisation : last_id, entry_count, data_ptr.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

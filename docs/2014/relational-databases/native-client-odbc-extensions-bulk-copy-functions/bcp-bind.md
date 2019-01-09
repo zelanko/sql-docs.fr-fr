@@ -18,12 +18,12 @@ ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7fe566c7547dc4e0755762d37764cd8b5bc50b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 027800860166b511b0a548313de30b3d237d9930
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069729"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513801"
 ---
 # <a name="bcpbind"></a>bcp_bind
   Lie les données d'une variable de programme à une colonne de table pour une copie en bloc dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -146,7 +146,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>Notes  
  Utilisez **bcp_bind** pour un moyen rapide et efficace copier des données à partir d’une variable de programme dans une table de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Appelez [bcp_init](bcp-init.md) avant d’appeler cette fonction ou toute autre fonction de copie en bloc. Appel **bcp_init** définit le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la table cible pour la copie en bloc. Lors de l’appel **bcp_init** pour une utilisation avec **bcp_bind** et [bcp_sendrow](bcp-sendrow.md), le **bcp_init** *szDataFile*paramètre, qui indique le fichier de données est définie sur NULL ; le **bcp_init *** eDirection* paramètre a la valeur DB_IN.  
+ Appelez [bcp_init](bcp-init.md) avant d’appeler cette fonction ou toute autre fonction de copie en bloc. Appel **bcp_init** définit le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la table cible pour la copie en bloc. Lors de l’appel **bcp_init** pour une utilisation avec **bcp_bind** et [bcp_sendrow](bcp-sendrow.md), le **bcp_init** *szDataFile*paramètre, qui indique le fichier de données est définie sur NULL ; le **bcp_init**_eDirection_ paramètre a la valeur DB_IN.  
   
  Rendre un distinct **bcp_bind** appeler pour chaque colonne dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table dans laquelle vous souhaitez copier. Après le nécessaire **bcp_bind** appels ont été apportées, puis appelez **bcp_sendrow** pour envoyer une ligne de données à partir de vos variables de programme à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La reliaison des colonnes n'est pas prise en charge.  
   

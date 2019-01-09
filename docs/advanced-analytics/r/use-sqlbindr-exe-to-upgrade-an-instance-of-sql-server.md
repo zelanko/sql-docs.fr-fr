@@ -1,5 +1,5 @@
 ---
-title: Mettre à niveau les composants R et Python dans les instances de SQL Server (Machine Learning Services) | Microsoft Docs
+title: Mettre à niveau les composants R et Python - SQL Server Machine Learning Services
 description: Mise à niveau R et Python dans SQL Server 2016 Services ou SQL Server 2017 Machine Learning Services à l’aide de sqlbindr.exe pour lier à Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2677885719c0b9a54a39b1609a0c2652728820f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 897f83e7272a47428d696802adf79ff816805486
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078889"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645448"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Mettre à niveau machine learning (R et Python) des composants dans les instances SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +28,7 @@ Liaison est un processus d’installation qui remplace le contenu de vos dossier
 
 Avec composants mis à jour est fourni à un commutateur dans les modèles de maintenance. Au lieu du [cycle de vie de produit SQL Server](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017), avec [mises à jour cumulatives de SQL Server](https://support.microsoft.com/help/4047329/sql-server-2017-build-versions), vos mises à jour de service est désormais conforme à la [prise en charge de la chronologie de l’ordinateur & Microsoft R Server Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) sur le [cycle de vie moderne](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 
-À l’exception des versions des composants et les mises à jour de service, liaison ne modifie pas les notions de base de votre installation : intégration de R et Python fait toujours partie d’une instance de moteur de base de données, Gestionnaire de licences n’est pas affecté (aucun coût supplémentaire associé aux liaisons) et SQL Stratégies de prise en charge de Server contiennent pour le moteur de base de données. Le reste de cet article explique le mécanisme de liaison et son fonctionnement pour chaque version de SQL Server.
+À l’exception des versions des composants et les mises à jour de service, liaison ne modifie pas les notions de base de votre installation : Intégration de R et Python fait toujours partie d’une instance de moteur de base de données, Gestionnaire de licences n’est pas affecté (aucun coût supplémentaire associé aux liaisons) et les stratégies de prise en charge de SQL Server contiennent toujours pour le moteur de base de données. Le reste de cet article explique le mécanisme de liaison et son fonctionnement pour chaque version de SQL Server.
 
 > [!NOTE]
 > Liaison s’applique aux instances (en base de données) uniquement qui sont liés aux instances de SQL Server. Liaison n’est pas pertinente pour une installation (autonome).
@@ -109,7 +109,7 @@ Le programme d’installation de Microsoft Machine Learning détecte les fonctio
 
 1. Vérifier la version de base de R et les packages RevoScaleR pour vérifier les versions existantes sont inférieurs à ceux de ce que vous envisagez de les remplacer par. Pour SQL Server 2016 R Services, package de Base de R est 3.2.2 et RevoScaleR est 8.0.3.
 
-    ```SQL
+    ```sql
     EXECUTE sp_execute_external_script
     @language=N'R'
     ,@script = N'str(OutputDataSet);
@@ -139,7 +139,7 @@ Le programme d’installation de Microsoft Machine Learning détecte les fonctio
 
    Sur la droite, sélectionnez la case à cocher en regard du nom d’instance. Si aucune instance n’est répertorié, vous avez une combinaison incompatible. Si vous ne sélectionnez pas une instance, une nouvelle installation autonome de Machine Learning Server est créée, et les bibliothèques de SQL Server sont identiques. Si vous ne pouvez pas sélectionner une instance, il ne peut pas être à [SP1 CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1). 
 
-    ![Assistant Installation de Microsoft Machine Learning Server](media/mls-931-installer-mssql13.png)
+    ![Configurer l’étape d’installation](media/mls-931-installer-mssql13.png)
 
 1. Sur le **contrat de licence** page, sélectionnez **J’accepte les termes** pour accepter les termes du contrat de licence pour Machine Learning Server. 
 
@@ -159,7 +159,7 @@ Si la mise à niveau échoue, vérifiez [codes d’erreur SqlBindR](#sqlbindr-er
 
 Revérifier la version de R et RevoScaleR pour confirmer que les versions plus récentes. Utilisez la console R distribuée avec les packages R dans votre instance du moteur de base de données pour obtenir des informations de package :
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
 @language=N'R'
 ,@script = N'str(OutputDataSet);
@@ -226,13 +226,13 @@ Une fois que vous exécutez Microsoft Machine Learning Server, un utilitaire de 
 
 Vous pouvez restaurer une instance liée à une installation initiale des composants R et Python, établie par le programme d’installation de SQL Server. Il existe trois parties pour le retour à la maintenance de SQL Server.
 
-+ [Étape 1 : Supprimer la liaison à partir de Microsoft Machine Learning Server](#step-1-unbind)
-+ [Étape 2 : Restaurer l’instance de l’état d’origine](#step-2-restore)
-+ [Étape 3 : Réinstallation des packages que vous avez ajouté à l’installation](#step-3-reinstall-packages)
++ [Étape 1 : Annuler la liaison à partir de Microsoft Machine Learning Server](#step-1-unbind)
++ [Étape 2 : Restauration de l’instance de l’état d’origine](#step-2-restore)
++ [Étape 3 : Réinstaller les packages que vous avez ajouté à l’installation](#step-3-reinstall-packages)
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>Étape 1 : supprimer la liaison
+### <a name="step-1-unbind"></a>Étape 1 : Séparer
 
 Vous avez deux options pour annuler la liaison : ré-exécutez de nouveau le programme d’installation ou d’utiliser l’utilitaire de ligne de commande SqlBindR.
 
@@ -265,7 +265,7 @@ Il s’agit plus de travail, mais vous pouvez également désinstaller complète
 
 <a name="step-3-reinstall-packages"></a> 
 
-### <a name="step-3-add-any-third-party-packages"></a>Étape 3 : Ajouter des packages tiers
+### <a name="step-3-add-any-third-party-packages"></a>Étape 3 : Ajouter tous les packages tiers
 
 Vous avez peut-être ajouté des autres packages tiers ou open source à votre bibliothèque de package. Dans la mesure où en inversant la liaison bascule à l’emplacement de la bibliothèque de package par défaut, vous devez réinstaller les packages à la bibliothèque R et Python est maintenant à l’aide. Pour plus d’informations, consultez [par défaut des packages](installing-and-managing-r-packages.md), [installer de nouveaux packages R](install-additional-r-packages-on-sql-server.md), et [installer de nouveaux packages Python](../python/install-additional-python-packages-on-sql-server.md).
 
@@ -277,13 +277,13 @@ Vous avez peut-être ajouté des autres packages tiers ou open source à votre b
 
 ### <a name="parameters"></a>Paramètres
 
-|Nom   |Description|
+|Créer une vue d’abonnement|Description|
 |------|------|
 |*list*| Affiche une liste de tous les ID d’instances de bases de données SQL sur l’ordinateur actuel|
 |*bind*| Met à niveau l’instance de base de données SQL spécifiée vers la version la plus récente de R Server, et garantit que l’instance obtient automatiquement les mises à niveau ultérieures de R Server|
 |*unbind*|Désinstalle la version la plus récente de R Server de l’instance de base de données SQL spécifiée, et empêche les mises à niveau ultérieures de R Server d’affecter l’instance|
 
-<a name="sqlbinder-error-codes"><a/>
+<a name="sqlbindr-error-codes"><a/>
 
 ## <a name="binding-errors"></a>Erreurs de liaison
 

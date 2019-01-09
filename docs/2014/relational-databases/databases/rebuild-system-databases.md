@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
@@ -16,12 +15,12 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9cca83a20c7559a8b7192fd345b559226c9c7d57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135499"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749401"
 ---
 # <a name="rebuild-system-databases"></a>Reconstruire des bases de données système
   Les bases de données système doivent être reconstruites pour résoudre des problèmes d’altération dans les bases de données système [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md)ou [resource](resource-database.md) ou pour modifier le classement au niveau du serveur par défaut. Cette rubrique fournit des instructions détaillées sur la reconstruction des bases de données système dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -105,8 +104,8 @@ ms.locfileid: "48135499"
     |/QUIET ou /Q|Spécifie que le programme d'installation doit s'exécuter sans interface utilisateur.|  
     |/ACTION=REBUILDDATABASE|Spécifie que le programme d'installation doit recréer les bases de données système.|  
     |/INSTANCENAME=*Nom_Instance*|Représente le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour l'instance par défaut, entrez MSSQLSERVER.|  
-    |/SQLSYSADMINACCOUNTS=*comptes*|Spécifie les groupes de Windows ou des comptes individuels à ajouter à la `sysadmin` rôle serveur fixe. Lorsque vous spécifiez plusieurs comptes, utilisez l'espace comme séparateur. Par exemple, entrez **BUILTIN\Administrateurs MonDomaine\MonUtilisateur**. Lorsque vous spécifiez un compte qui contient un espace vide dans son nom, placez le compte entre guillemets doubles. Par exemple, entrez `NT AUTHORITY\SYSTEM`.|  
-    |[ /SAPWD=*MotDePasseFort* ]|Spécifie le mot de passe pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` compte. Ce paramètre est requis si l’instance utilise le mode Authentification mixte (authentification[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows).<br /><br /> **\*\* Note de sécurité \* \***  le `sa` compte est bien connu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte et il est souvent la cible par des utilisateurs malveillants. Il est très important que vous utilisiez un mot de passe fort pour le `sa` connexion.<br /><br /> Ne spécifiez pas ce paramètre pour le mode Authentification Windows.|  
+    |/SQLSYSADMINACCOUNTS=*comptes*|Spécifie les comptes de groupes Windows ou les comptes individuels à ajouter au rôle serveur fixe `sysadmin`. Lorsque vous spécifiez plusieurs comptes, utilisez l'espace comme séparateur. Par exemple, entrez **BUILTIN\Administrateurs MonDomaine\MonUtilisateur**. Lorsque vous spécifiez un compte qui contient un espace vide dans son nom, placez le compte entre guillemets doubles. Par exemple, entrez `NT AUTHORITY\SYSTEM`.|  
+    |[ /SAPWD=*MotDePasseFort* ]|Spécifie le mot de passe pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` compte. Ce paramètre est requis si l’instance utilise le mode Authentification mixte (authentification[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows).<br /><br /> **\*\* Note de sécurité \* \***  le `sa` compte est bien connu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte et il est souvent la cible par des utilisateurs malveillants. Il est par conséquent essentiel d'utiliser un mot de passe fort pour la connexion `sa`.<br /><br /> Ne spécifiez pas ce paramètre pour le mode Authentification Windows.|  
     |[ /SQLCOLLATION=*NomClassement* ]|Spécifie un nouveau classement au niveau du serveur. Ce paramètre est facultatif. S'il n'est pas spécifié, c'est le classement actuel du serveur qui est utilisé.<br /><br /> **\*\* Important \* \***  modification du classement au niveau du serveur ne modifie pas le classement de bases de données utilisateur existantes. En revanche, les bases de données utilisateur qui seront créées utiliseront le nouveau classement par défaut.<br /><br /> Pour plus d’informations, consultez [Définir ou modifier le classement du serveur](../collations/set-or-change-the-server-collation.md).|  
   
 3.  Lorsque le programme d'installation a terminé la reconstruction des bases de données système, il revient à l'invite de commandes sans afficher de message. Examinez le fichier journal Summary.txt pour vérifier que le processus s'est correctement déroulé. Ce fichier se trouve à l'emplacement C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Logs.  
@@ -157,7 +156,7 @@ ms.locfileid: "48135499"
   
 2.  Démarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la ligne de commande à l'aide de la commande : `NET START MSSQLSERVER /T3608`  
   
-     Pour plus d’informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Pour plus d'informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Dans une autre fenêtre de ligne de commande, détachez le `msdb` base de données en exécutant la commande suivante, en remplaçant  *\<nom_serveur >* avec l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
@@ -178,7 +177,7 @@ ms.locfileid: "48135499"
 10. Sauvegarde le `msdb` base de données.  
   
 ##  <a name="Troubleshoot"></a> Corriger les erreurs liées à la reconstruction  
- Les erreurs de syntaxe et autres erreurs d'exécution sont affichées dans la fenêtre d'invite de commandes. Vérifiez que l'instruction Setup ne comporte pas les erreurs de syntaxe suivantes :  
+ Les erreurs de syntaxe et autres erreurs d'exécution sont affichées dans la fenêtre d'invite de commandes. Vérifiez que l'instruction Setup ne comporte pas les erreurs de syntaxe suivantes :  
   
 -   Barre oblique (/) manquante devant chaque nom de paramètre.  
   

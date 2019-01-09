@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - sort attributes [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9ed22ac35505515bfd1f4f1863bb55c59f70bef
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 6f20391528b56bedca42e62ff9ae1f54111f3604
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460594"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751531"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Trier des données pour les transformations de fusion et de jointure de fusion
   Dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], les transformations de fusion et de jointure de fusion nécessitent des données triées pour leurs entrées. Les données d'entrée doivent être triés physiquement et les options de tri doivent être définies sur les sorties et les colonnes de sortie dans la source ou dans la transformation amont. Si les options de tri indiquent que les données sont triées alors qu'elles ne le sont pas en réalité, les résultats de l'opération de fusion ou de jointure de fusion sont imprévisibles.  
@@ -39,7 +38,7 @@ ms.locfileid: "49460594"
   
      La transformation de tri utilise le classement Windows pour trier les valeurs de chaîne.  
   
-     —ou—  
+     -ou-  
   
 -   Utilisez l'opérateur Transact-SQL CAST pour commencer par effectuer un cast des valeurs `varchar` en valeurs `nvarchar`, puis utilisez la clause Transact-SQL ORDER BY pour trier les données.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "49460594"
     >  Vous ne pouvez pas utiliser la clause ORDER BY seule parce qu'elle utilise un classement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour trier les valeurs de chaîne. L’utilisation du classement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut générer un ordre de tri différent du classement Windows, la transformation de fusion ou de jointure de fusion pouvant alors générer des résultats inattendus.  
   
 ## <a name="setting-sort-options-on-the-data"></a>Définition d'options de tri sur les données  
- Deux propriétés de tri importantes doivent être définies pour la source ou la transformation amont qui fournit des données aux transformations de fusion et de jointure de fusion :  
+ Deux propriétés de tri importantes doivent être définies pour la source ou la transformation amont qui fournit des données aux transformations de fusion et de jointure de fusion :  
   
 -   La propriété `IsSorted` de la sortie qui indique si les données ont été triées. Cette propriété doit avoir la valeur `True`.  
   

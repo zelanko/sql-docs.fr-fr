@@ -1,5 +1,5 @@
 ---
-title: Performances pour SQL Server R Services - résultats et ressources | Microsoft Docs
+title: Performances pour SQL Server R Services - résultats et les ressources - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 81176a5a63b0cd8319d985ef72889a5c972fac63
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3ee5a1d2c656ef420c410c75333546ab8fbf539c
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697497"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645468"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Performances pour R Services : résultats et des ressources
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,11 +26,11 @@ Les études de cas deux avions des objectifs différents :
 
 Cette rubrique répertorie les résultats détaillés de la première étude de cas. Pour le deuxième étude de cas, un résumé décrit les conclusions globales. À la fin de cette rubrique sont des liens vers tous les scripts et les exemples de données et les ressources utilisées par les auteurs d’origine.
 
-## <a name="performance-case-study-airline-dataset"></a>Étude de cas de performances : jeu de données de compagnies aériennes
+## <a name="performance-case-study-airline-dataset"></a>Étude de cas de performances : Jeu de données de compagnies aériennes
 
 Cette étude de cas par l’équipe de développement SQL Server R Services testé les effets de différentes optimisations. Un modèle unique rxLogit a été créé et notation effectuées sur le jeu de données de compagnies aériennes. Optimisations ont été appliquées lors de la formation et la notation des processus afin d’évaluer les conséquences individuels.
 
-- Github : [exemples de données et les scripts](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning) pour l’étude des optimisations de SQL Server
+- Github : [Exemples de données et les scripts](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning) pour l’étude des optimisations de SQL Server
 
 ### <a name="test-methods"></a>Méthodes de test
 
@@ -62,7 +62,7 @@ Par exemple, les résultats suivants sont les heures à partir d’un test uniqu
 
 **Exemple de minutage**
 
-```
+```text
 Running IntCol Test. Using airlineWithIntCol table.
 run 1 took 3.66 seconds
 run 2 took 3.44 seconds
@@ -90,7 +90,7 @@ Cette section compare avant et après les résultats pour chacun des tests.
 
 Le premier test par rapport à l’utilisation de la compression et une table en colonnes pour réduire la taille des données.
 
-| Nom de la table            | Lignes     | Réservé   | data       | index_size | Inutilisé  | % gagné (réservé) |
+| Nom de la table            | Lignes     | Réservé   | Données       | index_size | Inutilisé  | % gagné (réservé) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10 000 000 | 2 978 816 Ko | 2 972 160 Ko | 6 128 Ko    | 528 Ko  | 0                   |
 | *airlineWithPageComp* | 10 000 000 | 625 784 Ko  | 623 744 Ko  | 1 352 Ko    | 688 Ko  | 79 %                 |
@@ -273,7 +273,7 @@ Les résultats de test indiquent l’heure d’enregistrement du modèle et le t
 
 Chargement d’un modèle formé à partir d’une table est clairement plus rapide pour réaliser une prédiction. Nous vous recommandons d’éviter création du modèle et l’exécution dans le même script de notation.
 
-## <a name="case-study-optimization-for-the-resume-matching-task"></a>Étude de cas : optimisation de la tâche de mise en correspondance de reprise
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>Étude de cas : Optimisation de la tâche de mise en correspondance de reprise
 
 Le modèle de mise en correspondance de reprise a été développé par le scientifique des données de Microsoft Ke Huang pour tester les performances du code R dans SQL Server et en procédant comme c’est le cas aide données scientifiques créer évolutives, solutions au niveau de l’entreprise.
 
@@ -347,11 +347,11 @@ Formez de grands modèles ou de score par lots volumineux, la surcharge peut êt
 
 Voici des liens vers plus d’informations, les outils et les scripts utilisés dans le développement de ces tests.
 
-+ Test des scripts et des liens vers les données de performances : [exemples de données et des scripts pour l’étude des optimisations de SQL Server](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
++ Tests des scripts et des liens vers les données de performances : [Exemples de données et des scripts pour l’étude des optimisations de SQL Server](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
 
-+ L’article décrivant la solution de mise en correspondance de reprise : [info-bulle de l’optimisation et astuces pour SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
++ Article décrivant la solution de mise en correspondance de reprise : [Info-bulle de l’optimisation et astuces pour SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ Les scripts utilisés dans l’optimisation de SQL pour la solution de mise en correspondance de reprise : [référentiel GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ Scripts utilisés dans l’optimisation de SQL pour la solution de mise en correspondance de reprise : [Référentiel GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
 
 ### <a name="learn-about-windows-server-management"></a>En savoir plus sur la gestion de Windows server
 
@@ -365,11 +365,11 @@ Voici des liens vers plus d’informations, les outils et les scripts utilisés 
 
 ### <a name="learn-about-sql-server-optimizations"></a>En savoir plus sur les optimisations de SQL Server
 
-+ [Réorganiser et reconstruire des index](../../relational-databases\indexes\reorganize-and-rebuild-indexes.md)
++ [Réorganiser et reconstruire des index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
 + [Introduction aux tables optimisées en mémoire](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
 
-+ [Démonstration : Optimisation des performances de l’OLTP en mémoire](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ [Démonstration : Amélioration des performances de l’OLTP en mémoire](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
 
 + [Compression de données](../../relational-databases/data-compression/data-compression.md)
 
@@ -400,7 +400,7 @@ Voici des liens vers plus d’informations, les outils et les scripts utilisés 
 
 ## <a name="other-articles-in-this-series"></a>Autres articles de cette série
 
-[Performances de paramétrage pour R – introduction](sql-server-r-services-performance-tuning.md)
+[Performances optimisation pour R - introduction](sql-server-r-services-performance-tuning.md)
 
 [Optimisation des performances pour R - configuration de SQL Server](sql-server-configuration-r-services.md)
 
