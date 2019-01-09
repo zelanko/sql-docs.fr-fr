@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.toolboxcommon.F1
@@ -15,24 +14,24 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b87a11d0f18f8a9d8ade8690f6d4a0b6b4a420b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dec02ad946483f74b25a3b1ae514a20e1abc4523
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217849"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372011"
 ---
 # <a name="ssis-toolbox"></a>Boîte à outils SSIS
   Tous les composants installés sur l’ordinateur local, y compris les composants tiers générés pour SQL Server 2008 et 2008 R2, apparaissent maintenant automatiquement dans la nouvelle **boîte à outils SSIS**. Lorsque vous installez des composants additionnels, cliquez avec le bouton droit dans la boîte à outils, puis cliquez sur **Boîte à outils Actualiser** pour ajouter les composants.  
   
- Vous pouvez facilement accéder à des informations sur un composant de la boîte à outils, en cliquant sur le composant pour afficher la description en bas de la boîte à outils. Cliquez sur le bouton d'aide à côté de la description pour afficher la rubrique de la documentation en ligne. Pour certains composants, vous pouvez également accéder à des exemples qui montrent comment configurer et utiliser les composants. Ces exemples sont disponibles sur [MSDN](http://go.microsoft.com/fwlink/?LinkId=259189). Pour accéder aux exemples depuis la **Boîte à outils SSIS**, cliquez sur le lien **Rechercher des exemples** qui apparaît sous la description.  
+ Vous pouvez facilement accéder à des informations sur un composant de la boîte à outils, en cliquant sur le composant pour afficher la description en bas de la boîte à outils. Cliquez sur le bouton d'aide à côté de la description pour afficher la rubrique de la documentation en ligne. Pour certains composants, vous pouvez également accéder à des exemples qui montrent comment configurer et utiliser les composants. Ces exemples sont disponibles sur [MSDN](https://go.microsoft.com/fwlink/?LinkId=259189). Pour accéder aux exemples depuis la **Boîte à outils SSIS**, cliquez sur le lien **Rechercher des exemples** qui apparaît sous la description.  
   
 > [!NOTE]  
 >  Contrairement aux versions précédentes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vous ne pouvez pas supprimer les composants installés de la boîte à outils.  
   
  Dans la **boîte à outils SSIS**, le flux de contrôle et les composants de flux de données sont organisés en catégories.  Vous pouvez développer et réduire des catégories pour afficher et vous pouvez modifier l'organisation des composants en fonction de vos préférences.  Vous pouvez restaurer l’organisation par défaut en cliquant avec le bouton droit dans la boîte à outils, puis en cliquant sur **Restaurer les valeurs par défaut de la boîte à outils**.  
   
- Les catégories **Favoris** et **Commun** apparaissent dans la boîte à outils lorsque vous sélectionnez les onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d'événements** . La catégorie **Autres tâches** apparaît dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de contrôle** ou l'onglet **Gestionnaires d'événements** . Les catégories **Autres transformations**, **Autres sources**et **Autres destinations** apparaissent dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de données** .  
+ Les catégories **Favoris** et **Commun** apparaissent dans la boîte à outils lorsque vous sélectionnez les onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d'événements** . La catégorie **Autres tâches** apparaît dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de contrôle** ou l'onglet **Gestionnaires d'événements** . Les catégories Autres transformations, **Autres sources**et **Autres destinations** apparaissent dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de données** .  
   
  Lorsque vous créez un projet SSIS ou ouvrez un projet existant, la **boîte à outils SSIS** est automatiquement affichée. Vous pouvez également ouvrir la boîte à outils en cliquant sur le bouton de la boîte à outils situé dans l'angle supérieur droit de l'aire de conception du package.  
   

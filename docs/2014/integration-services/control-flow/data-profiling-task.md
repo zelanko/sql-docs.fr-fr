@@ -74,7 +74,7 @@ ms.locfileid: "53369961"
 |Profil|Types de données valides*|  
 |-------------|------------------------|  
 |ColumnStatisticsProfile|Colonnes de type numérique ou de type `datetime` (`mean` et `stddev` ne sont pas disponibles pour une colonne `datetime`)|  
-|ColumnNullRatioProfile|Toutes les colonnes*|  
+|ColumnNullRatioProfile|Toutes les colonnes**|  
 |ColumnValueDistributionProfile|Colonnes de types `integer`, `char` et `datetime`|  
 |ColumnLengthDistributionProfile|Colonnes de type `char`|  
 |ColumnPatternProfile|Colonnes de type `char`|  

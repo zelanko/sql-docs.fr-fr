@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - process nodes [SQL Server Profiler]
@@ -20,19 +19,19 @@ ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb04d2fd2b0587863d59d90a4fff7f949c108ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176579"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780681"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analyser des blocages à l'aide de SQL Server Profiler
   Utilisez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour identifier la cause d'un interblocage. Un interblocage se produit quand il y a une dépendance cyclique entre au moins deux threads ou processus pour un jeu de ressources dans SQL Server. Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]vous permet de créer une trace qui enregistre, relit et affiche les événements de blocage dans le cadre d'une analyse.  
   
  Pour tracer les événements de blocage, ajoutez la classe d’événements **Deadlock graph** à une trace. Cette classe d’événements remplit la colonne de données **TextData** dans la trace avec des données XML relatives aux processus et objets impliqués dans le blocage. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] peut extraire le document XML dans un fichier XML de blocages (.xdl) que vous pouvez afficher ultérieurement dans SQL Server Management Studio. Vous pouvez configurer le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de manière à extraire les événements **Deadlock graph** vers un fichier unique contenant tous les événements **Deadlock graph** , ou bien vers des fichiers distincts. Cette extraction peut être réalisée de l'une des manières suivantes :  
   
--   Au moment de la configuration de la trace, à l’aide de l’onglet **Paramètres d’extraction des événements** . Cet onglet n’apparaît que si vous sélectionnez l’événement **Deadlock graph** sous l’onglet **Sélection des événements** .  
+-   Au moment de la configuration de la trace, à l’aide de l’onglet **Paramètres d’extraction des événements** . Cet onglet n’apparaît que si vous sélectionnez l’événement Deadlock graph sous l’onglet **Sélection des événements** .  
   
 -   À l’aide de l’option **Extraire les événements SQL Server** du menu **Fichier** .  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48176579"
  Objet de base de données ; par exemple, une table, un index ou une ligne.  
   
  Arête  
- Relation entre un processus et une ressource. Un `request` edge se produit lorsqu’un processus attend une ressource. Un `owner` edge se produit lorsqu’une ressource attend un processus. Le mode de verrouillage est inclus dans la description des arêtes. Par exemple, **Mode: X**.  
+ Relation entre un processus et une ressource. Une arête `request` se produit lorsqu'un processus attend une ressource. Une arête `owner` se produit lorsqu'une ressource attend un processus. Le mode de verrouillage est inclus dans la description des arêtes. Par exemple, **Mode : X**.  
   
 ## <a name="deadlock-process-node"></a>Nœud de processus de blocage  
  Dans un graphique WAITFOR, le nœud de processus contient des informations sur le processus. Le tableau suivant décrit les composants d'un processus.  

@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fe561dcba4a0cff5b58ef7810b27f30b1c95e228
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: MT
+ms.openlocfilehash: 5fafd1a86686b7609a8b6e0241c05cc858f2dc41
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906299"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409696"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services dans les outils de données SQL Server (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] est un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] environnement avec les fonctions améliorées conçues spécifiquement pour les solutions décisionnelles. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] est inclus dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -49,7 +49,7 @@ ms.locfileid: "48906299"
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenêtres et volets du Concepteur de rapports  
- Concepteur prend en charge deux vues de rapport : **conception** pour définir les données de rapport et la disposition du rapport, et **aperçu** affiche un rendu du rapport. Chaque mode vous permet d'afficher plusieurs fenêtres pour vous aider à concevoir un rapport ou générer son rendu.  
+ Le Concepteur de rapports prend en charge deux modes : **Conception** pour définir les données de rapport et la disposition du rapport, et **aperçu** affiche un rendu du rapport. Chaque mode vous permet d'afficher plusieurs fenêtres pour vous aider à concevoir un rapport ou générer son rendu.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Données du rapport, volet  
  Le volet des données de rapport affiche des champs intégrés, des sources de données, des datasets, des collections de champs, des paramètres de rapport et des images.  
@@ -62,7 +62,7 @@ ms.locfileid: "48906299"
   
 -   **Datasets** Chaque dataset comprend une requête qui spécifie les données à extraire de la source de données. Développez le dataset pour afficher la collection de champs définie par la requête du dataset.  
   
-     Dans certains concepteurs de requêtes pour les datasets multidimensionnels, vous pouvez spécifier des filtres dans le volet des filtres et indiquer s'il faut créer des paramètres de rapport. Si vous spécifiez l'option de paramètre de rapport, un dataset particulier est créé automatiquement pour remplir la liste des valeurs valides du paramètre.  Par défaut, le dataset n'apparaît pas dans le volet des données de rapport. Pour plus d’informations, consultez [Afficher des datasets masqués pour les valeurs de paramètres des données multidimensionnelles &#40;Générateur de rapports et SSRS&#41;](../report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
+     Dans certains concepteurs de requêtes pour les datasets multidimensionnels, vous pouvez spécifier des filtres dans le volet des filtres et indiquer s'il faut créer des paramètres de rapport. Si vous spécifiez l’option de paramètre de rapport, un dataset particulier est créé automatiquement pour remplir la liste des valeurs valides du paramètre.  Par défaut, le dataset n'apparaît pas dans le volet des données de rapport. Pour plus d’informations, consultez [Afficher des datasets masqués pour les valeurs de paramètres des données multidimensionnelles &#40;Générateur de rapports et SSRS&#41;](../report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
 -   **Paramètres de rapport** La liste des paramètres de rapport. Les paramètres peuvent être créés manuellement ou automatiquement lorsqu'une requête de dataset comprend des paramètres de requête.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "48906299"
   
 -   **Propriétés du rapport** Sélectionnez cette option pour ouvrir la boîte de dialogue **Propriétés du rapport** . Dans cette boîte de dialogue, vous pouvez affecter les propriétés générales du rapport, telles que le nom de l'auteur et l'espacement de la grille, et définir des propriétés pour sa mise en page, notamment le nombre de colonnes et la taille de la page. Vous pouvez également inclure du code personnalisé, des références à des assemblys et à des classes, ainsi que les noms d'éléments de sortie des données, des transformations de données et des schémas de données.  
   
--   **Vue** Basculez entre les deux onglets du Concepteur de rapports : Conception et aperçu.  
+-   **Vue** basculer entre les deux onglets du Concepteur de rapports : Conception et aperçu.  
   
 -   **En-tête de page** Ajoutez ou supprimez un en-tête de page dans le rapport. Lorsque vous supprimez un en-tête de page, tous les éléments qu'il contient sont supprimés.  
   

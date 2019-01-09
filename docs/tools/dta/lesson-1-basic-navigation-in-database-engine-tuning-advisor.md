@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données | Microsoft Docs'
+title: 'Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee0b1c221c3bdb18ec9b79339e9dd55cb4eed93e
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: d41c8a3dcc995849fa62ea9a06703d915298eeac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071803"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201778"
 ---
-# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Leçon 1 : navigation de base dans l'Assistant Paramétrage du moteur de base de données
+# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Leçon 1 : Navigation de base dans l'Assistant Paramétrage du moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 L'Assistant Paramétrage du moteur de base de données fournit une interface graphique utilisateur qui permet d'afficher des sessions de paramétrage et des rapports de recommandations de paramétrage. Cette leçon explique comment démarrer cet outil et comment configurer l'affichage. À la fin de la leçon vous connaîtrez les différentes façons de démarrer cet outil et de configurer son affichage pour l'adapter aux tâches de paramétrage que vous effectuez régulièrement.  
 
@@ -33,7 +33,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l�
 - Téléchargez les [exemples de bases de données AdventureWorks2017.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)
 
 
-Les instructions de restauration des bases de données dans SSMS se trouvent ici : [Restaurer une base de données.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+Instructions de restauration des bases de données dans SSMS se trouvent ici : Restaurer une base de données
 
   >[!NOTE]
   > Ce didacticiel est destiné à un utilisateur familiarisé avec l’utilisation de SQL Server Management Studio et les tâches d’administration de base de données. 
@@ -62,7 +62,7 @@ Lorsque l'Assistant Paramétrage du moteur de base de données s'ouvre pour la p
   
 -   Le volet droit contient les onglets **Général** et **Options de paramétrage** . Ces onglets permettent de définir votre session de paramétrage du moteur de base de données. Sous l’onglet **Général** , vous pouvez taper le nom de votre session de paramétrage, spécifier le fichier de charge de travail ou la table à utiliser, et sélectionner les bases de données et les tables à paramétrer au cours de cette session. Une charge de travail est un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui s'exécute sur une ou plusieurs bases de données que vous souhaitez paramétrer. L'Assistant Paramétrage du moteur de base de données utilise des fichiers de trace et des tables de trace, des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] ou des fichiers XML comme entrée de charge de travail pour le paramétrage des bases de données. Sous l’onglet **Options de paramétrage** , vous pouvez sélectionner les structures de création de base de données physiques (index ou vues indexées) et la stratégie de partitionnement que l’Assistant Paramétrage du moteur de base de données doit prendre en compte au cours de son analyse. Dans cet onglet, vous pouvez également spécifier la durée maximale pendant laquelle l'Assistant Paramétrage du moteur de base de données paramètre une charge de travail. La durée par défaut est d'une heure.  
   
-> [!NOTE]  
+> [!NOTE]
 > L’Assistant Paramétrage du moteur de base de données peut accepter les fichiers XML comme entrée quand un script [!INCLUDE[tsql](../../includes/tsql-md.md)] est importé à partir de l’Éditeur de requête [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Pour plus d’informations, consultez la section sur le lancement de l’Assistant Paramétrage du moteur de base de données à partir de l’Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans [Démarrer et utiliser l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ## <a name="configure-tool-options-and-layout"></a>Configurer la mise en page et les options de l’outil 
@@ -86,7 +86,7 @@ Lorsque l'Assistant Paramétrage du moteur de base de données s'ouvre pour la p
     -   Par défaut, l'option **Demander avant d'arrêter l'analyse de la session** est activée pour éviter d'arrêter accidentellement une session de paramétrage avant que l'Assistant Paramétrage du moteur de base de données n'ait terminé d'analyser une charge de travail.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 2 : Utilisation de l’Assistant Paramétrage du moteur de base de données](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Leçon 2 : Utilisation de l'Assistant Paramétrage du moteur de base de données](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - sa account
@@ -15,12 +14,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7dada71a017f37969f94382e23cd07ad75dd356
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119786"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641560"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Se connecter à SQL Server lorsque les administrateurs système n'y ont plus accès
   Cette rubrique explique comment avoir à nouveau accès à [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en tant qu’administrateur système. Un administrateur système peut perdre l'accès à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'une des raisons suivantes :  
@@ -66,7 +65,7 @@ ms.locfileid: "49119786"
   
 6.  Cliquez sur `OK`et après le message de redémarrage, le bouton droit sur votre serveur, puis cliquez sur **redémarrer**.  
   
-7.  Après le redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , votre serveur passe en mode mono-utilisateur. Assurez-vous que l’option [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent n’est pas en cours d’exécution. S'il est démarré, il utilise votre unique connexion.  
+7.  Après le redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , votre serveur passe en mode mono-utilisateur. Vérifiez que l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas en cours d’exécution. S'il est démarré, il utilise votre unique connexion.  
   
 8.  Sur l'écran de démarrage de Windows 8, cliquez avec le bouton droit sur l'icône de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Au bas de l'écran, sélectionnez **Exécuter en tant qu'administrateur**. (Cette opération transfère vos informations d'identification d'administrateur à SSMS.)  
   

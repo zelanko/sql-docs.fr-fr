@@ -11,17 +11,17 @@ ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c242dc17e07f90c0bedae4b67f0b4891ff4a5d50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b66614a40176a0c6ee0ac4b0b9283fc0415ecc1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174739"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530676"
 ---
 # <a name="defining-a-fact-relationship"></a>Définition d'une relation de faits
   Les utilisateurs souhaitent parfois pouvoir dimensionner des mesures par élément de données se trouvant dans la table de faits ou exécuter des requêtes sur la table de faits pour obtenir des informations spécifiques connexes supplémentaires, telles que des numéros de factures ou de bons de commande associés à des ventes spécifiques. Quand vous définissez une dimension basée sur un élément de table de faits de ce type, la dimension est appelée *dimension de fait*. Les dimensions de fait sont aussi appelées dimensions dégénérées. Les dimensions de fait servent à regrouper des lignes connexes de la table de faits, par exemple toutes les lignes concernant un numéro de facture particulier. Bien qu'il soit possible de stocker cette information dans une table de dimensions distincte dans la base de données relationnelles, la création d'une table de dimensions distincte pour cette information n'offre aucun avantage, car la table de dimensions augmente à la même vitesse que la table de faits et le seul résultat obtenu est la duplication des données et une plus grande complexité, ce qui est inutile.  
   
- Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez déterminer s'il est nécessaire de dupliquer les données des dimensions de fait dans la structure de dimensions MOLAP pour augmenter les performances des requêtes ou s'il est nécessaire de définir les dimensions de fait en tant que dimensions ROLAP pour gagner de l'espace de stockage aux dépens des performances des requêtes. Lorsque vous stockez une dimension avec le mode de stockage MOLAP, tous les membres de dimension sont stockés dans l'instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans une structure MOLAP avec un taux de compression élevé et sont aussi stockés dans les partitions du groupe de mesures. Lorsque vous stockez une dimension avec un mode de stockage ROLAP, seule la définition de la dimension est stockée dans la structure MOLAP ; les requêtes sont exécutées sur les membres de la dimension à partir de la table de faits relationnelle sous-jacente. Le mode de stockage approprié se choisit en fonction de la fréquence à laquelle les requêtes sont exécutées sur la dimension de fait, du nombre de lignes retournées par une requête classique, de la performance de la requête et enfin, du coût de traitement. Pour définir une dimension ROLAP, il n'est pas nécessaire que tous les cubes qui utilisent la dimension soient également stockés avec le mode de stockage ROLAP. Le mode de stockage pour chaque dimension peut être configuré indépendamment.  
+ Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez déterminer s'il est nécessaire de dupliquer les données des dimensions de fait dans la structure de dimensions MOLAP pour augmenter les performances des requêtes ou s'il est nécessaire de définir les dimensions de fait en tant que dimensions ROLAP pour gagner de l'espace de stockage aux dépens des performances des requêtes. Lorsque vous stockez une dimension avec le mode de stockage MOLAP, tous les membres de dimension sont stockés dans l'instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans une structure MOLAP avec un taux de compression élevé et sont aussi stockés dans les partitions du groupe de mesures. Lorsque vous stockez une dimension avec le mode de stockage ROLAP, seule la définition de la dimension est stockée dans le MOLAP, les membres de la dimension de la structure sont interrogés à partir de la table de faits relationnelle sous-jacente au moment de la requête. Le mode de stockage approprié se choisit en fonction de la fréquence à laquelle les requêtes sont exécutées sur la dimension de fait, du nombre de lignes retournées par une requête classique, de la performance de la requête et enfin, du coût de traitement. Pour définir une dimension ROLAP, il n'est pas nécessaire que tous les cubes qui utilisent la dimension soient également stockés avec le mode de stockage ROLAP. Le mode de stockage pour chaque dimension peut être configuré indépendamment.  
   
  Lorsque vous définissez une dimension de fait, vous pouvez définir la relation entre cette dimension et le groupe de mesures comme étant une relation de faits. Les contraintes suivantes s'appliquent aux relations de faits :  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48174739"
   
 7.  Dans la liste **Colonne de nom** , sélectionnez **SalesOrderLineNumber**.  
   
-8.  Cliquez sur **Suivant**.  
+8.  Cliquer sur **Suivant**.  
   
 9. Dans la page **Sélectionner les tables associées** , décochez les cases à côté de toutes les tables, puis cliquez sur **Suivant**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48174739"
   
 14. Dans le **attributs** volet du Concepteur de dimensions pour la **Internet Sales Order Details** dimension, sélectionnez **Sales Order Number**, puis modifiez le  **Nom** propriété dans la fenêtre des propriétés `Item Description.`  
   
-15. Dans la cellule de propriété **NameColumn** , cliquez sur le bouton Parcourir **(...)**. Dans la boîte de dialogue **Colonne de nom** , sélectionnez **Product** dans la liste **Table source** , sélectionnez **EnglishProductName** comme **Colonne source**, puis cliquez sur **OK**.  
+15. Dans le **NameColumn** propriété de cellule, cliquez sur le bouton Parcourir **(...)** . Dans la boîte de dialogue Colonne de nom , sélectionnez Product dans la liste **Table source** , sélectionnez **EnglishProductName** comme **Colonne source**, puis cliquez sur **OK**.  
   
 16. Ajoutez l’attribut **Sales Order Number** à la dimension. Pour cela, faites glisser la colonne **SalesOrderNumber** de la table **InternetSales** du volet **Vue de source de données** vers le volet **Attributs** .  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48174739"
   
      Notez que la dimension de cube **Internet Sales Order Details** est configurée automatiquement avec une relation de faits, comme le montre l’icône unique.  
   
-2.  À l’intersection du groupe de mesures**Internet Sales**et de la dimension **Internet Sales Order Details,** cliquez sur le bouton ( **…** ) dans la cellule **Item Description** pour vérifier les propriétés de la relation de faits.  
+2.  Cliquez sur le bouton Parcourir (**...** ) dans le **Item Description** cellule, à l’intersection de la **Internet Sales** groupe de mesures et les **Internet Sales Order Details** , une dimension à Passez en revue les propriétés de relation de faits.  
   
      La boîte de dialogue **Définir une relation** s’affiche. Notez que vous ne pouvez pas configurer les propriétés.  
   
