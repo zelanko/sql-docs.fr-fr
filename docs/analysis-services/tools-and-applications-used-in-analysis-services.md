@@ -1,5 +1,5 @@
 ---
-title: Outils et applications utilisés dans Analysis Services | Documents Microsoft
+title: Outils et applications utilisés dans Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e2ff1808739eff4aed9ad34bef5d512f7539b7a6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8d3ecb5de4c70c09bc367b9008f5d62c6a23faef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041790"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210070"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Outils et applications utilisés dans Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,20 +28,20 @@ ms.locfileid: "34041790"
   
  Les modèles présentent un paramètre de niveau de compatibilité qui détermine les fonctionnalités disponibles et la version d’Analysis Services exécutant le modèle.  Si vous pouvez spécifier qu'un niveau de compatibilité donné est déterminée en partie par le Générateur de modèles.  
   
- Modèles tabulaires qui utilisent les fonctionnalités les plus récentes, telles que les fichiers BIM en format JSON tabulaire et bidirectionnelles du filtrage croisé, doivent être créés ou mis à niveau au niveau de compatibilité 1200 ou supérieur.  
+ Les modèles tabulaires à l’aide des fonctionnalités les plus récentes, telles que les fichiers BIM au format JSON tabulaire et bidirectionnelle du filtrage croisé, doivent être créés ou mis à niveau au niveau de compatibilité 1200 ou supérieur.  
   
- Si vous avez besoin d’un niveau de compatibilité inférieur, peut-être parce que vous voulez déployer un modèle sur une version antérieure d’Analysis Services, vous pouvez toujours utiliser le Concepteur de modèle dans SSDT. Les versions plus récentes de l’outil prend en charge la création d’un type de modèle (tabulaire ou multidimensionnel), au niveau de compatibilité.   
+ Si vous avez besoin d’un niveau de compatibilité inférieur, peut-être parce que vous souhaitez déployer un modèle sur une version antérieure d’Analysis Services, vous pouvez toujours utiliser le Concepteur de modèle dans SSDT. Les versions plus récentes de l’outil prend en charge la création d’un type de modèle (tabulaire ou multidimensionnel), n’importe quel niveau de compatibilité.   
 
 ## <a name="administrative-tools"></a>Outils d'administration  
   
- SQL Server Management Studio (SSMS) est l’outil d’administration principal pour toutes les fonctionnalités de SQL Server, y compris Analysis Services. SSMS est un téléchargement web gratuit mis à jour tous les mois. 
+ SQL Server Management Studio (SSMS) est l’outil d’administration principal pour toutes les fonctionnalités de SQL Server, notamment Analysis Services. SSMS est un téléchargement web gratuit mis à jour tous les mois. 
   
 **[Télécharger SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)** 
   
- SSMS comprend les événements étendus (xEvents), qui fournit une alternative légère aux traces du Générateur de profils SQL Server utilisé pour l’activité d’analyse et de diagnostic des problèmes sur SQL Server 2016 et serveurs Azure Analysis Services. Pour en savoir plus, consultez [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) .  
+ SSMS inclut les événements étendus (xEvents), fournissant une alternative légère aux traces de SQL Server Profiler utilisées pour l’activité d’analyse et diagnostic des problèmes sur SQL Server 2016 et les serveurs Azure Analysis Services. Pour en savoir plus, consultez [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) .  
   
 ### <a name="sql-server-profiler"></a>SQL Server Profiler  
- Bien qu’il soit officiellement conseillé d’utiliser les événements xEvents à la place, SQL Server Profiler offre une méthode familière pour surveiller les connexions, l’exécution des requêtes MDX et les autres opérations de serveur. SQL Server Profiler est installé par défaut. Il peut s’avérer avec les applications SQL Server sur les applications dans Windows.  
+ Bien qu’il soit officiellement conseillé d’utiliser les événements xEvents à la place, SQL Server Profiler offre une méthode familière pour surveiller les connexions, l’exécution des requêtes MDX et les autres opérations de serveur. SQL Server Profiler est installé par défaut. Vous pouvez vous retrouver avec les applications de SQL Server sur les applications dans Windows.  
   
 ### <a name="powershell"></a>PowerShell  
  Vous pouvez utiliser des commandes PowerShell pour effectuer de nombreuses tâches d'administration. Consultez [référence PowerShell](../analysis-services/powershell/analysis-services-powershell-reference.md) pour plus d’informations.  

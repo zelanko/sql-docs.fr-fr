@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_pfield
@@ -22,12 +20,12 @@ ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6243ceb9d96c5cb3c681aea8832ba35f45e80703
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170080"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353853"
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (API de procédure stockée étendue)
     
@@ -60,7 +58,7 @@ len
  *field*  
  Spécifie des données sur la connexion à retourner.  
   
-|Valeur|Valeur renvoyée|  
+|Value|Valeur renvoyée|  
 |-----------|-------------|  
 |SRV_APPLNAME|Nom d'application fourni par le client au moment d'établir la connexion.|  
 |SRV_BCPFLAG|Indicateur possédant la valeur TRUE si le client prépare une opération de copie en bloc ou la valeur FALSE dans le cas contraire.|  
@@ -89,6 +87,6 @@ len
  Pointeur vers une chaîne terminée par le caractère NULL contenant la valeur actuelle du champ spécifié dans la structure SRV_PROC. Si le champ est vide, un pointeur valide vers une chaîne vide est retourné et *len* contient la valeur 0. Si le champ est inconnu, la valeur NULL est retournée et *len* contient la valeur -1.  
   
 > [!IMPORTANT]  
->  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d’informations sur cet examen et sur les tests de sécurité, consultez le site [TechCenter sur la sécurité](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d’informations sur cet examen et sur les tests de sécurité, consultez le site [TechCenter sur la sécurité](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   
