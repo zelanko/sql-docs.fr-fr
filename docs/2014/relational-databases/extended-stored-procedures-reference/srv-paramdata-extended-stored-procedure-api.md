@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_paramdata
@@ -22,12 +20,12 @@ ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 90ef2956d169cc9591102ab945b0545ab1b325b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151929"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357567"
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (API de procédure stockée étendue)
     
@@ -64,14 +62,14 @@ n
   
 |Nouveaux types de données|Longueur de données d'entrée|  
 |--------------------|-----------------------|  
-|BITN|**NULL :** VP, NULL<br /><br /> **ZERO :** VP, NULL<br /><br /> **>=255 :** N/A<br /><br /> **<255 :** N/A|  
-|BIGVARCHAR|**NULL :** NULL, N/A<br /><br /> **ZERO :** VP, NULL<br /><br /> **>=255 :** VP, 255 caractères<br /><br /> **<255 :** VP, données réelles|  
-|BIGCHAR|**NULL :** NULL, N/A<br /><br /> **ZERO :** VP, 255 espaces<br /><br /> **>=255 :** VP, 255 caractères<br /><br /> **<255 :** VP, données réelles + remplissage (jusqu’à 255)|  
-|BIGBINARY|**NULL :** NULL, N/A<br /><br /> **ZERO :** VP, 255 0x00<br /><br /> **>=255 :** VP, 255 octets<br /><br /> **<255 :** VP, données réelles + remplissage (jusqu’à 255)|  
-|BIGVARBINARY|**NULL :** NULL, N/A<br /><br /> **ZERO :** VP, 0x00<br /><br /> **>=255 :** VP, 255 octets<br /><br /> **<255 :** VP, données réelles|  
-|NCHAR|**NULL :** NULL, N/A<br /><br /> **ZERO :** VP, 255 espaces<br /><br /> **>=255 :** VP, 255 caractères<br /><br /> **<255 :** VP, données réelles + remplissage (jusqu’à 255)|  
-|NVARCHAR|**NULL :** NULL, N/A<br /><br /> **ZERO :** VP, NULL<br /><br /> **>=255 :** VP, 255 caractères<br /><br /> **<255 :** VP, données réelles|  
-|NTEXT|**NULL :** N/A<br /><br /> **ZERO :** N/A<br /><br /> **>=255 :** N/A<br /><br /> **\<255 :** N/A|  
+|BITN|**NULL :** VP, NULL<br /><br /> **ZÉRO :** VP, NULL<br /><br /> **> = 255 :** N/A<br /><br /> **< 255 :** N/A|  
+|BIGVARCHAR|**NULL :** NULL, N/A<br /><br /> **ZÉRO :** VP, NULL<br /><br /> **> = 255 :** VP, 255 caractères<br /><br /> **< 255 :** VP, données réelles|  
+|BIGCHAR|**NULL :** NULL, N/A<br /><br /> **ZÉRO :** VP, 255 espaces<br /><br /> **> = 255 :** VP, 255 caractères<br /><br /> **< 255 :** VP, données réelles + remplissage (jusqu'à 255)|  
+|BIGBINARY|**NULL :** NULL, N/A<br /><br /> **ZÉRO :** VP, 255 0 X 00<br /><br /> **> = 255 :** VP, 255 octets<br /><br /> **< 255 :** VP, données réelles + remplissage (jusqu'à 255)|  
+|BIGVARBINARY|**NULL :** NULL, N/A<br /><br /> **ZÉRO :** VP, 0 X 00<br /><br /> **> = 255 :** VP, 255 octets<br /><br /> **< 255 :** VP, données réelles|  
+|NCHAR|**NULL :** NULL, N/A<br /><br /> **ZÉRO :** VP, 255 espaces<br /><br /> **> = 255 :** VP, 255 caractères<br /><br /> **< 255 :** VP, données réelles + remplissage (jusqu'à 255)|  
+|NVARCHAR|**NULL :** NULL, N/A<br /><br /> **ZÉRO :** VP, NULL<br /><br /> **> = 255 :** VP, 255 caractères<br /><br /> **< 255 :** VP, données réelles|  
+|NTEXT|**NULL :** N/A<br /><br /> **ZÉRO :** N/A<br /><br /> **> = 255 :** N/A<br /><br /> **\<255 :** N/A|  
   
  \*   Les données ne se terminent pas par le caractère NULL ; aucun avertissement n’est émis en cas de troncation de données >255 caractères.  
   
@@ -81,7 +79,7 @@ n
  Lorsqu'un appel de procédure stockée distante est effectué avec des paramètres, ceux-ci peuvent être passés par nom ou par position (sans nom). Si l'appel de procédure stockée distante est effectué avec certains paramètres passés par nom et certains passés par position, une erreur se produit. Si une erreur se produit, le gestionnaire SRV_RPC est tout de même appelé, mais il apparaît comme s’il n’y avait aucun paramètre et **srv_rpcparams** retourne 0.  
   
 > [!IMPORTANT]  
->  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Voir aussi  
  [srv_rpcparams &#40;API de procédure stockée étendue&#41;](srv-rpcparams-extended-stored-procedure-api.md)  

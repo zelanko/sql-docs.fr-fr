@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, initializing
@@ -15,12 +14,12 @@ ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7680a62293bd9a15b12e0a979be22c33220af4b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107809"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811981"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialiser un abonnement transactionnel sans instantané
   Par défaut, un abonnement à une publication transactionnelle est initialisé avec un instantané, lequel est généré par l'Agent d'instantané et appliqué par l'Agent de distribution. Dans certains scénarios, comme ceux impliquant de volumineux datasets initiaux, il est préférable d'initialiser un abonnement à l'aide d'une autre méthode. Autres méthodes d'initialisation d'un abonné :  
@@ -45,7 +44,7 @@ ms.locfileid: "48107809"
   
  Pour initialiser un abonnement avec une sauvegarde, vous devez d'abord activer l'option lorsque vous créez une publication, puis spécifier des valeurs pour plusieurs options lorsque vous créez un abonnement. Les publications peuvent être activées par le biais de l'Assistant Nouvelle publication ou par programme. Cependant, les valeurs requises pour les options d'abonnement ne peuvent être spécifiées que par programme.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Activer l’initialisation avec une sauvegarde pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](enable-initialization-with-backup-for-transactional-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Activer l’initialisation avec une sauvegarde pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](enable-initialization-with-backup-for-transactional-publications.md)  
   
 -   Programmation Transact-SQL de la réplication : [Initialiser un abonnement transactionnel à partir d’une sauvegarde &#40;programmation Transact-SQL de la réplication&#41;](initialize-a-transactional-subscription-from-a-backup.md)  
   
@@ -75,6 +74,6 @@ ms.locfileid: "48107809"
  Pour initialiser un abonnement avec une méthode de remplacement, consultez [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Initialiser un abonnement](initialize-a-subscription.md)  
+ [Initialize a Subscription](initialize-a-subscription.md)  
   
   

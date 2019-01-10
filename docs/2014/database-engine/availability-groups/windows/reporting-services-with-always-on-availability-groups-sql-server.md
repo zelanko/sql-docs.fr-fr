@@ -13,30 +13,30 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 657f808d28c8b3a6a1c8964dccb5959a67c9cb47
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 8fef73519d067218a152e35bad2db9e1bae3372c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120216"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370222"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services avec les groupes de disponibilité AlwaysOn (SQL Server)
   Cette rubrique contient des informations sur la configuration de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en vue d'une utilisation avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (groupes de disponibilité) dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Les trois possibilités d'utilisation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sont les bases de données pour les sources de données de rapport, les bases de données de serveur de rapports et la conception de rapports. Les fonctionnalités prises en charge et la configuration requise diffèrent dans les trois cas.  
   
  L'un des principaux avantages d'utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec des sources de données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] réside dans l'exploitation de réplicas secondaires accessibles en lecture en tant que source de données de rapports tandis que, dans le même temps, les réplicas secondaires permettent le basculement vers une base de données principale.  
   
- Pour des informations générales sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Forum aux questions sur AlwaysOn pour SQL Server 2012 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768).  
+ Pour des informations générales sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Forum aux questions sur AlwaysOn pour SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
   
    
   
 ##  <a name="bkmk_requirements"></a> Conditions d’utilisation de Reporting Services et les groupes de disponibilité AlwaysOn  
  Pour utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vous devez télécharger et installer un correctif pour .Net 3.5 SP1. Ce correctif ajoute une prise en charge au client SQL concernant les fonctionnalités de groupes de disponibilité et la prise en charge des propriétés de chaîne de connexion **ApplicationIntent** et **MultiSubnetFailover**. Si ce correctif n'est pas installé sur chaque ordinateur qui héberge un serveur de rapports, les utilisateurs qui essaient d'afficher un aperçu des rapports recevront un message d'erreur similaire à celui ci-dessous et ce message sera enregistré dans le fichier journal de traces du serveur de rapports :  
   
-> **Message d'erreur :** « Mot clé non pris en charge : applicationintent. »  
+> **Message d’erreur :** « Mot clé non pris en charge ': applicationintent. »  
   
- Ce message s'affiche lorsque vous incluez l'une des propriétés [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans la chaîne de connexion [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , mais que le serveur ne reconnaît pas cette propriété. Le message d'erreur indiqué s'affiche lorsque vous cliquez sur le bouton « Tester la connexion » dans les interfaces utilisateur [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et lorsque vous affichez un aperçu du rapport si des erreurs distantes sont activées sur les serveurs de rapports.  
+ Ce message s'affiche lorsque vous incluez l'une des propriétés [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans la chaîne de connexion [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , mais que le serveur ne reconnaît pas cette propriété. Le message d’erreur indiqué s’affiche lorsque vous cliquez sur le bouton « Tester la connexion » dans les interfaces utilisateur [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et lorsque vous affichez un aperçu du rapport si des erreurs distantes sont activées sur les serveurs de rapports.  
   
- Pour plus d'informations sur le correctif requis, consultez l' [article 2654347A de la base de connaissance : Le correctif introduit la prise en charge des fonctionnalités AlwaysOn de SQL Server 2012 vers .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkId=242896).  
+ Pour plus d'informations sur le correctif requis, consultez l' [article 2654347A de la base de connaissance : Le correctif introduit la prise en charge des fonctionnalités AlwaysOn de SQL Server 2012 vers .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkId=242896).  
   
  Pour obtenir des informations sur les autres conditions préalables requises pour les [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -64,11 +64,11 @@ ms.locfileid: "49120216"
   
  La manière dont vos rapports ont été créés et publiés détermine l'endroit où vous allez modifier la chaîne de connexion :  
   
--   **Mode natif :** utilisez le Gestionnaire de rapports pour les sources de données partagées et les rapports qui sont déjà publiés sur un serveur de rapports en mode natif.  
+-   **Mode natif :** Utilisez le Gestionnaire de rapports pour les sources de données partagées et les rapports qui sont déjà publiés sur un serveur de rapports en mode natif.  
   
--   **Mode SharePoint :** utilisez les pages de configuration de SharePoint dans les bibliothèques de documents pour les rapports qui sont déjà publiés sur un serveur SharePoint.  
+-   **Mode SharePoint :** Utilisez les pages de configuration de SharePoint dans les bibliothèques de documents pour les rapports qui sont déjà publiés sur un serveur SharePoint.  
   
--   **Conception de rappouts :** [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)] ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new repouts. Pour plus d'informations, consultez la section « Conception de rapports », plus loin dans cette rubrique.  
+-   **Conception de rappouts :** [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)] ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new repouts. Pour plus d’informations, consultez la section « Conception de rapports », plus loin dans cette rubrique.  
   
  **Ressources supplémentaires :**  
   
@@ -78,13 +78,13 @@ ms.locfileid: "49120216"
   
 -   Pour plus d’informations sur les écouteurs de groupe de disponibilité, consultez [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
   
- **Observations :** les réplicas secondaires subissent généralement un retard lors de la réception de modifications de données à partir du réplica principal. Les facteurs suivants peuvent avoir une influence sur la latence de mise à jour entre les réplicas principal et secondaires :  
+ **Éléments à prendre en considération :** Les réplicas secondaires subissent généralement un retard lors de la réception de modifications de données à partir du réplica principal. Les facteurs suivants peuvent avoir une influence sur la latence de mise à jour entre les réplicas principal et secondaires :  
   
 -   Nombre de réplicas secondaires. Le retard s'accentue avec chaque réplica secondaire ajouté à la configuration.  
   
 -   Emplacement géographique et distance entre les réplicas principal et secondaires. Par exemple, le retard est généralement plus important si les réplicas secondaires se trouvent dans un centre de données différent, par comparaison à ceux situés dans le même bâtiment que le réplica principal.  
   
--   Configuration du mode de disponibilité pour chaque réplica. Le mode de disponibilité détermine si le réplica principal attend, pour valider des transactions sur une base de données, qu'un réplica secondaire donné ait écrit la transaction sur le disque. Pour plus d’informations, consultez la section « Modes de disponibilité » de la rubrique [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
+-   Configuration du mode de disponibilité pour chaque réplica. Le mode de disponibilité détermine si le réplica principal attend, pour valider des transactions sur une base de données, qu'un réplica secondaire donné ait écrit la transaction sur le disque. Pour plus d’informations, consultez la section « Modes de disponibilité » de [vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
  Lors de l'utilisation d'un réplica secondaire en lecture seule en tant que source de données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , il est important de veiller à ce que la latence de mise à jour des données corresponde aux besoins des utilisateurs de rapports.  
   
@@ -93,9 +93,9 @@ ms.locfileid: "49120216"
   
 -   **Aperçu local :** [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)] et de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 et de support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
--   **Aperçu en mode distant ou serveur :** si, après avoir publié des rapports sur le serveur de rapports ou utilisé l'aperçu dans [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)], vous voyez une erreur similaire à celle qui suit, cela signifie que vous affichez un aperçu des rapports sur le serveur de rapports et que le correctif .Net Framework 3.5 SP1 pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] n'a pas été installé sur le serveur de rapports.  
+-   **Aperçu en mode distant ou serveur :** Si, après avoir publié des rapports sur le serveur de rapports ou utilisé l'aperçu dans [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)], vous voyez une erreur similaire à celle qui suit, cela signifie que vous affichez un aperçu des rapports sur le serveur de rapports et que le correctif .NET Framework 3.5 SP1 pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] n'a pas été installé sur le serveur de rapports.  
   
-> **Message d'erreur :** « Mot clé non pris en charge : applicationintent. »  
+> **Message d’erreur :** « Mot clé non pris en charge ': applicationintent. »  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Bases de données de serveur de rapports et groupes de disponibilité  
  Reporting Services offre une prise en charge limitée concernant l'utilisation de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec des bases de données de serveur de rapports. Les bases de données de serveur de rapports peuvent être configurées dans les groupes de disponibilité afin de les intégrer à un réplica ; toutefois, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] n'utilisera pas automatiquement un réplica différent pour les bases de données de serveur de rapports en cas de basculement.  
@@ -122,12 +122,12 @@ ms.locfileid: "49120216"
   
 -   ReportServerTempDB  
   
- Le mode natif ne prend pas en charge et n'utilise pas les bases de données d'alerte et les fonctionnalités qui y sont associées. Pour configurer les serveurs de rapports en mode natif, faites appel au Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . En mode SharePoint, configurez le nom de la base de données de l'application de service pour qu'il corresponde au nom du « point d'accès client » que vous avez créé dans le cadre de la configuration de SharePoint. Pour plus d’informations sur la configuration de SharePoint avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Configurer et gérer des groupes de disponibilité SQL Server pour le serveur SharePoint (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165).  
+ Le mode natif ne prend pas en charge et n'utilise pas les bases de données d'alerte et les fonctionnalités qui y sont associées. Pour configurer les serveurs de rapports en mode natif, faites appel au Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Pour le mode SharePoint, vous configurez nom de base de données de l’application de service par le nom de « point d’accès client » que vous avez créé dans le cadre de la configuration de SharePoint. Pour plus d’informations sur la configuration de SharePoint avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Configurer et gérer des groupes de disponibilité SQL Server pour le serveur SharePoint (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Les serveurs de rapports en mode SharePoint utilisent un processus de synchronisation entre les bases de données d'application de service [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et les bases de données de contenu SharePoint. Il est important de conserver les bases de données de serveur de rapports et les bases de données de contenu ensemble. Pensez à les configurer dans les mêmes groupes de disponibilité afin qu'elles soient basculées et récupérées en tant qu'ensemble. Examinez le cas suivant :  
->   
->  -   Restauration ou le basculement vers une copie de la base de données de contenu qui n’a pas reçu la même récentes mises à jour de la base de données de serveur de rapports a reçu.  
+> 
+>  -   Vous effectuez la restauration ou le basculement vers une copie des la base de données de contenu qui n'a pas reçu les mêmes mises à jour récentes que celles reçues par la base de données de serveur de rapports.  
 > -   Le processus de synchronisation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] détecte les différences entre la liste des éléments dans la base de données de contenu et celle des bases de données de serveur de rapports.  
 > -   Le processus de synchronisation supprime ou met à jour les éléments dans la base de données de contenu.  
   
@@ -136,11 +136,11 @@ ms.locfileid: "49120216"
   
 -   Créez votre groupe de disponibilité et configurez un *nom DNS de l'écouteur*.  
   
--   **Réplica principal :** configurez les bases de données de serveur de rapports afin qu'elles fassent partie d'un groupe de disponibilité unique et créez un réplica principal incluant toutes les bases de données de serveur de rapports.  
+-   **Réplica principal :** configurez les bases de données de serveur de rapports afin qu'elles fassent partie d'un groupe de disponibilité unique et créez un réplica principal incluant toutes les bases de données de serveur de rapports.  
   
--   **Réplicas secondaires :** créez un ou plusieurs réplicas secondaires. La méthode la plus courante pour copier les bases de données à partir du réplica principal vers le ou les réplicas secondaires consiste à restaurer les bases de données sur chaque réplica secondaire à l'aide de « RESTORE WITH NORECOVERY ». Pour plus d’informations sur la création de réplicas secondaires et la vérification du bon fonctionnement de la synchronisation des données, consultez [Démarrer un mouvement de données sur une base de données secondaire AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+-   **Réplicas secondaires :** Créez un ou plusieurs réplicas secondaires. La méthode la plus courante pour copier les bases de données à partir du réplica principal vers le ou les réplicas secondaires consiste à restaurer les bases de données sur chaque réplica secondaire à l’aide de « RESTORE WITH NORECOVERY ». Pour plus d’informations sur la création de réplicas secondaires et la vérification du bon fonctionnement de la synchronisation des données, consultez [Démarrer un mouvement de données sur une base de données secondaire AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
--   **Informations d'identification de serveur de rapports :** vous devez créer les informations d'identification appropriées de serveur de rapports sur les réplicas secondaires que vous avez créés sur le réplica principal. La procédure exacte varie selon le type d'authentification que vous utilisez dans votre environnement [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ; compte de service Windows [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], compte d'utilisateur Windows ou authentification SQL Server. Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+-   **Informations d’identification du serveur de rapports :** Vous devez créer les informations d'identification appropriées de serveur de rapports sur les réplicas secondaires que vous avez créés sur le réplica principal. La procédure exacte varie selon le type d'authentification que vous utilisez dans votre environnement [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ; compte de service Windows [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], compte d'utilisateur Windows ou authentification SQL Server. Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 -   Mettez à jour la connexion à la base de données pour utiliser le nom DNS de l'écouteur. Pour les serveurs de rapports en mode natif, remplacez **Nom de la base de données du serveur de rapports** dans le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . En mode SharePoint, remplacez le **nom du serveur de base de données** pour les applications de service [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   

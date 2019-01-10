@@ -14,22 +14,22 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a6d6197cb525ba4ad395da590ea113bdd0a1f0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5089aaa229f77c6f0012f4ceae0d5d1b17a9c11a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220339"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792261"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
-  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les requêtes de recherche en texte intégral peuvent rechercher des synonymes des termes de contrat spécifié par l’utilisateur via l’utilisation d’un dictionnaire des synonymes. Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *dictionnaire des synonymes* définit un jeu de synonymes pour une langue spécifique. Les administrateurs système peuvent définir deux formes de synonymes : les jeux d'expansion et les jeux de remplacement. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données. Mise en correspondance du dictionnaire des synonymes intervient pour toutes les [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) et [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) requêtes et pour les [CONTAINS](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) qui interroge Spécifiez la clause FORMSOF THESAURUS.  
+  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les requêtes de texte intégral peuvent rechercher les synonymes des termes spécifiés par l'utilisateur grâce à un dictionnaire des synonymes. Un *dictionnaire des synonymes* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit un jeu de synonymes pour une langue spécifique. Les administrateurs système peuvent définir deux formes de synonymes : les jeux d'expansion et les jeux de remplacement. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données. La mise en correspondance avec le dictionnaire des synonymes intervient pour toutes les requêtes [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) et [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) et pour les requêtes [CONTAINS](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) qui spécifient la clause FORMSOF THESAURUS.  
   
 ##  <a name="tasks"></a> Tâches de base pour la configuration d’un fichier de dictionnaire des synonymes  
- Pour que vos requêtes de recherche en texte intégral sur votre instance de serveur puissent rechercher les synonymes dans une langue donnée, vous devez au préalable définir des mappages de dictionnaire des synonymes pour cette langue. Chaque dictionnaire des synonymes doit être configuré manuellement de façon à définir les éléments suivants :  
+ Pour que vos requêtes de recherche en texte intégral sur votre instance de serveur puissent rechercher les synonymes dans une langue donnée, vous devez au préalable définir des mappages de dictionnaire des synonymes pour cette langue. Chaque dictionnaire des synonymes doit être configuré manuellement de façon à définir les éléments suivants :  
   
 -   Paramètre de signes diacritiques  
   
-     Pour un dictionnaire des synonymes donné, tous les modèles de recherche respectent ou non les signes diacritiques, par exemple le tilde (**~**), l’accent aigu (**´**) ou le tréma (**¨**), autrement dit ils *respectent les accents* ou *ne respectent pas les accents*. Par exemple, supposez que vous spécifiez le remplacement du modèle « café » par d'autres modèles dans une requête de texte intégral. Si le dictionnaire des synonymes ne tient pas compte des accents, la recherche en texte intégral remplace les modèles « café » et « cafe ». Si le dictionnaire des synonymes tient compte des accents, la recherche en texte intégral remplace seulement le modèle « café ». Par défaut, un dictionnaire des synonymes ne tient pas compte des accents.  
+     Pour un dictionnaire des synonymes donné, tous les modèles de recherche sont sensibles ou insensibles aux signes diacritiques comme un tilde (**~**), marque d’accent aigu (**??** ), ou des trémas (**??** ) (autrement dit, *especter les accents* ou *respect des accents, non-respect de*). Par exemple, supposons que vous spécifiez le modèle « caf ?? » à remplacer par d’autres modèles dans une requête de recherche en texte intégral. Si le dictionnaire des synonymes sont non-respect des accents, recherche en texte intégral remplace le modèles « caf ?? » et « CAFE ». Si le dictionnaire des synonymes respecte les accents, recherche en texte intégral remplace seulement le modèle « caf ?? ». Par défaut, un dictionnaire des synonymes ne tient pas compte des accents.  
   
 -   Jeu d'expansion  
   
@@ -107,13 +107,13 @@ ms.locfileid: "48220339"
   
   
 ##  <a name="structure"></a> Présentation de la Structure d’un fichier de dictionnaire des synonymes  
- Chaque fichier de dictionnaire des synonymes définit un conteneur XML dont l’ID est `Microsoft Search Thesaurus`et un commentaire, `<!--` . `-->`, qui contient un exemple de dictionnaire des synonymes. Le dictionnaire des synonymes sont défini dans un \<dictionnaire des synonymes > élément qui contient des exemples des éléments enfants qui définissent le paramètre de signes diacritiques, les jeux d’expansion et les jeux de remplacement, comme suit :  
+ Chaque fichier de dictionnaire des synonymes définit un conteneur XML dont l’ID est `Microsoft Search Thesaurus` et un commentaire, `<!--` ... `-->`, qui contient un exemple de dictionnaire des synonymes. Le dictionnaire des synonymes sont défini dans un \<dictionnaire des synonymes > élément qui contient des exemples des éléments enfants qui définissent le paramètre de signes diacritiques, les jeux d’expansion et les jeux de remplacement, comme suit :  
   
 -   Structure XML du paramètre de signes diacritiques  
   
      Le paramètre de signes diacritiques d'un dictionnaire des synonymes est spécifié dans un élément <diacritics_sensitive> unique. Cet élément contient une valeur entière qui contrôle le respect des accents, comme suit :  
   
-    |Paramètre de signes diacritiques|Valeur|XML|  
+    |Paramètre de signes diacritiques|Value|XML|  
     |------------------------|-----------|---------|  
     |ne respectent pas les accents|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
     |respectent les accents|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
@@ -214,7 +214,7 @@ ms.locfileid: "48220339"
   
 1.  Ouvrez le fichier de dictionnaire des synonymes dans le Bloc-notes.  
   
-2.  Si vous modifiez le fichier de dictionnaire des synonymes pour la première fois, supprimez les lignes de commentaires suivantes au début et à la fin du fichier :  
+2.  Si vous modifiez le fichier de dictionnaire des synonymes pour la première fois, supprimez les lignes de commentaires suivantes au début et à la fin du fichier :  
   
     ```  
     <!--Commented out  
