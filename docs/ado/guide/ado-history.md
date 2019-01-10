@@ -15,7 +15,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00a1ff652e3f1463d37e2cd5457965968b4ba4c
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47709557"
@@ -32,10 +32,10 @@ Cette rubrique répertorie les nouvelles fonctionnalités introduites par chaque
  *Accès de disque dur n’est pas autorisé en dehors d’une zone de confiance.*
 Dans les sites non approuvés qui implique de script entre domaines, les opérations suivantes sont désactivées : **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, et **Recordset.Open**, utilisé conjointement avec le **adCmdFile** indicateur ou avec le fournisseur Microsoft OLE DB persistance (MSPersist).
 
- **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *, et* **Stream.LoadFromFile***fonctionnent sur les fichiers physiques uniquement.* 
+ **Recordset.Open** *,* **Recordset.Save** *,* **Stream.SaveToFile** *, et* **Stream.LoadFromFile** *fonctionnent sur les fichiers physiques uniquement.*
 Ces méthodes maintenant vérifier que les descripteurs de fichiers pointent vers les fichiers physiques uniquement.
 
- **Recordset.ActiveCommand***retourne une erreur lorsqu’elle est appelée à partir d’une page HTML/ASP.* 
+ **Recordset.ActiveCommand** *retourne une erreur lorsqu’elle est appelée à partir d’une page HTML/ASP.*
 Cela empêche le **commande** objet à partir de l’utilisation abusive.
 
  *Le nombre de***Recordsets***retourné par imbriquée***forme***commande a une limite supérieure.* 
