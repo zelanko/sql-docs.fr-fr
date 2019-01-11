@@ -3,21 +3,24 @@ title: Documentation sur les extensions de Machine Learning et de programmation 
 description: R et Python dans SQL Server, avec intégration de la modélisation pour la science des données et d’algorithmes de Machine Learning pour l’analyse des données d’entreprise à grande échelle.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/10/2018
+ms.date: 01/09/2019
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 498a73df26b516856fefe411f5d29bdac8076139
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 7eb5083f17ab08f19b689b3550f979f88495f604
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596540"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206245"
 ---
+# <a name="sql-server-machine-learning"></a>SQL Server Machine Learning
+
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-# <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>Documentation sur les extensions de Machine Learning et de programmation SQL Server
+
+## <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>Documentation sur les extensions de Machine Learning et de programmation SQL Server
 
 Découvrez comment utiliser des bibliothèques externes et les langages R et Python sur des données relationnelles résidentes avec nos guides de démarrage rapide, nos tutoriels et nos articles pratiques. Les bibliothèques R et Python du [Machine Learning SQL Server](what-is-sql-server-machine-learning.md) incluent des distributions de base, des modèles pour la science des données, des algorithmes de Machine Learning et des fonctions pour conduire des analytiques hautes performances à grande échelle, sans devoir transférer les données sur le réseau. 
 
@@ -31,7 +34,8 @@ Dans SQL Server 2019, l’exécution du code Java utilise le même framework d�
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sql-server-2017"
-# <a name="sql-server-machine-learning-r-and-python-documentation"></a>Documentation de Python et R pour SQL Server Machine Learning
+
+## <a name="sql-server-machine-learning-r-and-python-documentation"></a>Documentation de Python et R pour SQL Server Machine Learning
 
 Découvrez comment utiliser des bibliothèques externes et les langages R et Python sur des données relationnelles résidentes avec nos guides de démarrage rapide, nos tutoriels et nos articles pratiques. Les bibliothèques R et Python du [Machine Learning SQL Server](what-is-sql-server-machine-learning.md) incluent des distributions de base, des modèles pour la science des données, des algorithmes de Machine Learning et des fonctions pour conduire des analytiques hautes performances à grande échelle, sans devoir transférer les données sur le réseau. 
 
