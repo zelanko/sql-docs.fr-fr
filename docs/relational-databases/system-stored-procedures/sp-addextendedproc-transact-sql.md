@@ -18,12 +18,12 @@ ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c66f3ac4395e3985d6881ddb085db1d9a71c366
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23c97002d5400d3794bed23fea4fb4eb05efd7f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713217"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133009"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@functname =** ] **'***procédure***'**  
+ [  **@functname =** ] **'**_procédure_**'**  
  Nom de la fonction à appeler dans la bibliothèque de liens dynamique (DLL). *procédure* est **nvarchar (517)**, sans valeur par défaut. *procédure* peut éventuellement inclure le nom du propriétaire sous la forme *propriétaire_fonction*.  
   
- [  **@dllname =** ] **'***dll***'**  
+ [  **@dllname =** ] **'**_dll_**'**  
  Nom de la DLL qui contient la fonction. *DLL* est **varchar (255)**, sans valeur par défaut. Il est recommandé de spécifier le chemin complet d'accès à la DLL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -66,7 +66,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 > [!IMPORTANT]  
 >  Les DLL existantes qui n'ont pas été inscrites avec leur chemin complet ne fonctionneront plus après une mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour corriger le problème, utilisez **sp_dropextendedproc** pour annuler l’inscription de la DLL, puis inscrivez-la avec **sp_addextendedproc**, en spécifiant le chemin d’accès complet.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_addextendedproc**.  
   
 ## <a name="examples"></a>Exemples  

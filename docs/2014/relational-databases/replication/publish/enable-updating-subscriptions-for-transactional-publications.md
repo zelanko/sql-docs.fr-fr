@@ -14,12 +14,12 @@ ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2998ac4c51ea4ea7b289e4ef769acf0f3991f53
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 963fe86b0d5939c82bffb9c07d5adacbadadba89
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784891"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135949"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Activer les abonnements pouvant être mis à jour pour les publications transactionnelles
   Cette rubrique explique comment activer les abonnements de mise à jour pour les publications transactionnelles dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "52784891"
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Activez la mise à jour d'abonnements pour les publications transactionnelles dans la page **Type de publication** de l'Assistant Nouvelle publication. Pour plus d’informations sur l’utilisation de cet Assistant, consultez [Créer une publication](create-a-publication.md). Vous ne pouvez pas activer la mise à jour des abonnements une fois qu'une publication est créée.  
   
- Pour utiliser les abonnements mis à jour, vous devez aussi configurer des options dans l'Assistant Nouvel abonnement. Pour plus d’informations, consultez [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md).  
+ Pour utiliser les abonnements mis à jour, vous devez aussi configurer des options dans l'Assistant Nouvel abonnement. Pour plus d’informations, consultez [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 #### <a name="to-enable-updating-subscriptions"></a>Pour activer les abonnements mis à jour  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52784891"
   
 4.  Ajoutez des articles à la publication. Pour plus d'informations, voir [Define an Article](define-an-article.md).  
   
-5.  Au niveau de l'Abonné, créez un abonnement avec mise à jour à cette publication. Pour plus d'informations, voir [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](../create-updatable-subscription-transactional-publication-transact-sql.md).  
+5.  Au niveau de l'Abonné, créez un abonnement avec mise à jour à cette publication. Pour plus d'informations, voir [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 #### <a name="to-create-a-publication-that-supports-queued-updating-subscriptions"></a>Pour créer une publication qui prend en charge les abonnements avec mise à jour en file d'attente  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52784891"
   
 5.  Ajoutez des articles à la publication. Pour plus d'informations, voir [Define an Article](define-an-article.md).  
   
-6.  Au niveau de l'Abonné, créez un abonnement avec mise à jour à cette publication. Pour plus d'informations, voir [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](../create-updatable-subscription-transactional-publication-transact-sql.md).  
+6.  Au niveau de l'Abonné, créez un abonnement avec mise à jour à cette publication. Pour plus d'informations, voir [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 #### <a name="to-change-the-conflict-policy-for-a-publication-that-allows-queued-updating-subscriptions"></a>Pour modifier la stratégie de conflit pour une publication qui autorise les abonnements avec mise à jour en file d'attente  
   
@@ -105,11 +105,11 @@ ms.locfileid: "52784891"
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir des options de résolution des conflits de mise à jour en attente &#40;SQL Server Management Studio&#41;](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   
- [Types de publication pour la réplication transactionnelle](../transactional/publication-types-for-transactional-replication.md)   
+ [Définir des options de résolution des conflits de mise à jour en attente &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Types de publication pour la réplication transactionnelle](../transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Utiliser sqlcmd avec des variables de script](../../scripting/sqlcmd-use-with-scripting-variables.md)  
   

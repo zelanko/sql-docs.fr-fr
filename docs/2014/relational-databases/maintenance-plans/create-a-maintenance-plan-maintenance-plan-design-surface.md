@@ -12,12 +12,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 151a7e847d50a84c34eb07f55e5bd4d8e20dcc4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775791"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132784"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Créer un plan de maintenance (aire de conception de plan de maintenance)
   Cette rubrique explique comment créer un plan de maintenance de serveur unique ou multiserveur à l'aide de l'aire de conception de plan de maintenance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L' **Assistant Plan de maintenance** est conseillé pour créer des plans de maintenance de base, tandis que l'aire de conception permet d'utiliser un flux de travail optimisé.  
@@ -55,7 +55,7 @@ ms.locfileid: "52775791"
   
 3.  Cliquez avec le bouton droit sur le dossier **Plans de maintenance** et sélectionnez **Nouveau plan de maintenance**.  
   
-4.  Dans la boîte de dialogue **Nouveau plan de maintenance** , dans la zone **Nom** , tapez un nom pour le plan, puis cliquez sur **OK**. Vous ouvrez ainsi la boîte à outils et l’aire *nom_plan_maintenance* **[Conception]** avec le sous-plan **Sous-plan_1** créé dans la grille principale.  
+4.  Dans la boîte de dialogue **Nouveau plan de maintenance** , dans la zone **Nom** , tapez un nom pour le plan, puis cliquez sur **OK**. Vous ouvrez ainsi la boîte à outils et l’aire _nom_plan_maintenance_ **[Conception]** avec le sous-plan **Sous-plan_1** créé dans la grille principale.  
   
      Les options suivantes sont disponibles dans l'en-tête de l'aire de conception.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "52775791"
   
         1.  Si vous sélectionnez **Générer un rapport de fichier texte**, sélectionnez **Créer un nouveau fichier** ou **Ajouter au fichier**.  
   
-        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Ou bien, cliquez sur le bouton de sélection **(...)**  et sélectionnez le chemin d’accès pour le nom de fichier ou dossier à partir de la **localiser le dossier-*** nom_serveur* ou **rechercher les fichiers de base de données-*** nom_serveur* boîtes de dialogue.  
+        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Ou bien, cliquez sur le bouton de sélection **(...)**  et sélectionnez le chemin d’accès au nom de dossier ou un fichier dans le **localiser le dossier -**_nom_serveur_ ou **rechercher les fichiers de base de données -**_nom_serveur_  boîtes de dialogue.  
   
         3.  Si vous sélectionnez **Envoyer le rapport à un destinataire de messagerie**, dans la liste **Opérateur d'agent** , sélectionnez le destinataire du rapport envoyé par messagerie électronique.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "52775791"
   
 12. Pour consulter les résultats dans la visionneuse du fichier journal, dans **l’Explorateur d’objets**, cliquez avec le bouton droit sur le dossier **Plans de maintenance** ou sur le plan de maintenance spécifique et sélectionnez **Afficher l’historique**.  
   
-     Les options suivantes sont disponibles sur le **visionneuse du fichier journal-*** nom_serveur* boîte de dialogue.  
+     Les options suivantes sont disponibles sur le **visionneuse du fichier journal -**_nom_serveur_ boîte de dialogue.  
   
      **Charger le journal**  
      Ouvre une boîte de dialogue dans laquelle vous pouvez spécifier un fichier journal à charger.  

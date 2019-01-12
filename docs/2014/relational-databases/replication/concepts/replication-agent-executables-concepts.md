@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - programming interfaces [SQL Server replication]
@@ -16,12 +16,12 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26d4399d453519f317ff64b4a2d70ae6f7e98d3d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 451b7ca4cc06269f116c62be2ef7f01f0e33abd2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757091"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132709"
 ---
 # <a name="replication-agent-executables-concepts"></a>Concepts des exécutables de l'agent de réplication
   Il est possible de contrôler par programme les agents de réplication de différentes manières :  
@@ -47,7 +47,7 @@ ms.locfileid: "52757091"
  Lorsque vous appelez des agents de réplication, vous pouvez utiliser des profils de performances pour transmettre automatiquement un jeu défini de paramètres au fichier exécutable de l'agent. Pour plus d'informations, voir [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants décrivent comment appeler les agents de réplication à partir de l'invite de commandes. Il est également possible d'appeler les agents de réplication au moyen de Replication Management Objects. Pour plus d’informations, consultez [Synchroniser des abonnements &#40;réplication&#41;](../synchronize-subscriptions-replication.md).  
+ Les exemples suivants décrivent comment appeler les agents de réplication à partir de l'invite de commandes. Il est également possible d'appeler les agents de réplication au moyen de Replication Management Objects. Pour plus d’informations, consultez [Synchroniser des abonnements &#40;réplication&#41;](../synchronize-data.md).  
   
 > [!NOTE]  
 >  Les sauts de ligne figurant dans ces exemples ont été ajoutés afin d'améliorer la lisibilité. Dans un fichier de commandes, les commandes doivent figurer sur une seule ligne.  

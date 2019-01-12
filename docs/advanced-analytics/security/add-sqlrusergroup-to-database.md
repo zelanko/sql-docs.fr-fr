@@ -1,6 +1,6 @@
 ---
-title: Ajouter SQLRUserGroup comme un utilisateur de base de données - SQL Server Machine Learning Services
-description: Pour les connexions de bouclage à l’aide de l’authentification implicite, ajouter SQLRUserGroup comme un utilisateur de base de données afin qu’un compte de travail permettre se connecter au serveur, pour la conversion d’identité à l’utilisateur appelant.
+title: Ajouter SQLRUserGroup comme une connexion SQL Server - Machine Learning Services SQL Server
+description: Pour les connexions de bouclage à l’aide de l’authentification implicite, ajouter SQLRUserGroup comme une connexion SQL Server afin qu’un compte de travail permettre se connecter au serveur, pour la conversion d’identité à l’utilisateur appelant.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: abd0745126a4f2a23cf559500b93d2fa53fa2cf9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 0bc84a7a4cfae14ea19491c42e828d0a93cdfba7
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432352"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143419"
 ---
-# <a name="add-sqlrusergroup-as-a-database-user"></a>Ajouter SQLRUserGroup comme utilisateur de base de données
+# <a name="add-sqlrusergroup-as-a-sql-server-login"></a>Ajouter SQLRUserGroup comme une connexion SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Créez une connexion de base de données pour [SQLRUserGroup](../concepts/security.md#sqlrusergroup) lorsqu’un [connexion de retour de boucle](../../advanced-analytics/concepts/security.md#implied-authentication) dans votre script spécifie une *connexion approuvée*et l’identité utilisée pour exécuter un objet contient votre code est un compte d’utilisateur Windows.
+Créez une connexion SQL Server pour [SQLRUserGroup](../concepts/security.md#sqlrusergroup) lorsqu’un [connexion de retour de boucle](../../advanced-analytics/concepts/security.md#implied-authentication) dans votre script spécifie une *connexion approuvée*et l’identité utilisée pour exécuter un objet contient votre code est un compte d’utilisateur Windows.
 
 Approuvé les connexions sont celles ayant `Trusted_Connection=True` dans la chaîne de connexion. Lorsque SQL Server reçoit une requête spécifiant une connexion approuvée, il vérifie si l’identité de l’utilisateur Windows actuel dispose d’une connexion. Pour l’exécution sous un compte de travail des processus externes (tels que MSSQLSERVER01 de **SQLRUserGroup**), la demande échoue, car ces comptes n’ont pas un compte de connexion par défaut.
 

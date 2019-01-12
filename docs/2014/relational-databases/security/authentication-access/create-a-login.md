@@ -22,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c9ff712cb5915493f1ff285421bfe3edc8d7981f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374761"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131589"
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
   Cette rubrique explique comment créer un compte de connexion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un compte de connexion est l'identité de la personne ou du processus qui se connecte à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -146,7 +146,7 @@ ms.locfileid: "53374761"
  La page **Mappage de l'utilisateur** répertorie toutes les bases de données possibles et les appartenances de rôle de base de données sur ces bases de données qui peuvent être appliquées à la connexion. Les bases de données sélectionnées déterminent les appartenances aux rôles disponibles pour la connexion. Les options suivantes sont disponibles sur cette page :  
   
  **Utilisateurs mappés à cette connexion**  
- Sélectionnez les bases de données auxquelles cette connexion peut accéder. Lorsque vous sélectionnez une base de données, ses rôles de base de données valides s’affichent dans le volet **Appartenance au rôle de base de données pour :** *nom_base_de_données* .  
+ Sélectionnez les bases de données auxquelles cette connexion peut accéder. Lorsque vous sélectionnez une base de données, ses rôles de base de données valides s’affichent dans le volet **Appartenance au rôle de base de données pour :** _nom_base_de_données_ .  
   
  **Carte**  
  Autorise la connexion à accéder aux bases de données répertoriées au-dessous.  
@@ -160,10 +160,10 @@ ms.locfileid: "53374761"
  **Schéma par défaut**  
  Spécifie le schéma par défaut de l'utilisateur. Lors de la création d'un utilisateur, son schéma par défaut est **dbo**. Il est possible de spécifier un schéma par défaut qui n'existe pas encore. Vous ne pouvez pas spécifier de schéma par défaut pour un utilisateur mappé sur un groupe Windows, un certificat ou une clé asymétrique.  
   
- **Compte Invité activé pour :**  *nom_base_de_données*  
+ **Guest account enabled for:**  _database_name_  
  Attribut en lecture seule indiquant si le compte Invité est activé sur la base de données sélectionnée. Utilisez la page **État** de la boîte de dialogue **Propriétés de la connexion** du compte Invité pour activer ou désactiver le compte Invité.  
   
- **Appartenance au rôle de base de données pour :**  *nom_base_de_données*  
+ **Database role membership for:**  _database_name_  
  Sélectionnez les rôles pour l'utilisateur dans la base de données spécifiée. Tous les utilisateurs sont membres du rôle **public** de chaque base de données et ne peuvent pas être supprimés. Pour plus d’informations sur les rôles de base de données, consultez [Rôles au niveau de la base de données](database-level-roles.md).  
   
 ### <a name="securables"></a>Éléments sécurisables  
@@ -176,10 +176,10 @@ ms.locfileid: "53374761"
   
 1.  Cliquez sur **Rechercher**.  
   
-2.  Dans le **ajouter des objets** boîte de dialogue, sélectionnez une des options suivantes : **Objets spécifiques...** , **Tous les objets des types...** , ou **le serveur *** nom_serveur*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Dans le **ajouter des objets** boîte de dialogue, sélectionnez une des options suivantes : **Objets spécifiques...** , **Tous les objets des types...** , ou **le serveur**_nom_serveur_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  En sélectionnant **le serveur *** nom_serveur* remplit automatiquement la grille supérieure avec tous les objets sécurisables de ce serveur.  
+    >  La sélection de l’option **Le serveur**_nom_serveur_ remplit automatiquement la grille supérieure avec tous les objets sécurisables de ce serveur.  
   
 3.  Si vous sélectionnez **Objets spécifiques…**  :  
   

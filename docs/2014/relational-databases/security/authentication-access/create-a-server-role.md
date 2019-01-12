@@ -16,12 +16,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 05314fe18f555d4d2d3cca161a3b770ec85b4256
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532132"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133289"
 ---
 # <a name="create-a-server-role"></a>Créer un rôle serveur
   Cette rubrique explique comment créer un rôle de serveur dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "52532132"
   
 3.  Cliquez avec le bouton droit sur le dossier **Rôles de serveur**, puis sélectionnez **Nouveau rôle de serveur...**.  
   
-4.  Dans le **nouveau rôle de serveur-*** nom_rôle_serveur* boîte de dialogue le **général** page, entrez un nom pour le nouveau rôle de serveur dans le **nom du rôle serveur** boîte.  
+4.  Dans le **nouveau rôle de serveur -**_nom_rôle_serveur_ boîte de dialogue le **général** page, entrez un nom pour le nouveau rôle de serveur dans le **nom du rôle serveur**boîte.  
   
 5.  Dans la zone **Propriétaire** , entrez le nom du principal de serveur qui détiendra le nouveau rôle. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la connexion au serveur ou le rôle de serveur**.  
   

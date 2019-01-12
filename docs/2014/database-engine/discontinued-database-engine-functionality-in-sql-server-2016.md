@@ -33,12 +33,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 27eb70cb687553b11fefae423a7544609836c5c8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357021"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132612"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Fonctionnalités du moteur de base de données supprimées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités du [!INCLUDE[ssDE](../includes/ssde-md.md)] qui ne sont plus disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -75,7 +75,7 @@ ms.locfileid: "53357021"
 |Tables système|sys.database_principal_aliases|Utilisez des rôles à la place d'alias.|  
 |Transact-SQL|`RAISERROR` dans le format `RAISERROR integer 'string'` est supprimé.|Réécrivez l’instruction à l’aide de cours **RAISERROR (…)**  syntaxe.|  
 |Syntaxe Transact-SQL|`COMPUTE / COMPUTE BY`|Utilisez `ROLLUP`.|  
-|Syntaxe Transact-SQL|Utilisation de **\* =** et **=\***|Utilisez la syntaxe de jointure ANSI. Pour plus d’informations, consultez [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Syntaxe Transact-SQL|Utilisation de **\* =** et **=&#42;**|Utilisez la syntaxe de jointure ANSI. Pour plus d’informations, consultez [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Remplacé par événement database_file_size_change database_file_size_change<br /><br /> événement database_file_size_change<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Modifications supplémentaires de XEvent**  

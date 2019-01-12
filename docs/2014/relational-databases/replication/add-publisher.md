@@ -1,5 +1,5 @@
 ---
-title: Ajouter un serveur de publication | Microsoft Docs
+title: Boîte de dialogue « Ajouter un serveur de publication »
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fc6041d3d33a7ddaaeb9fb11ff8582c70c7f080
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817491"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133299"
 ---
-# <a name="add-publisher"></a>Ajouter un serveur de publication
+# <a name="sql-server-replication-add-publisher-dialog-box"></a>Boîte de dialogue « Ajouter le serveur de publication » de la réplication SQL Server 
   La boîte de dialogue **Ajouter un serveur de publication** permet d'ajouter des serveurs de publication dans le volet de gauche du Moniteur de réplication. Après avoir ajouté un serveur de publication, sélectionnez le serveur de publication dans le volet de gauche pour afficher les informations sur ce dernier dans le volet de droite.  
   
 ## <a name="options"></a>Options  

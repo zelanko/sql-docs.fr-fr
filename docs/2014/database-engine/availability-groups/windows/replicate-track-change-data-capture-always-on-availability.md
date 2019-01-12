@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50328c814b23f9df33a0524bae1758afecd3f5f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091259"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134089"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Réplication, suivi des modifications, capture de données modifiées et groupes de disponibilité AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La réplication, la capture de données modifiées (CDC) et le suivi des modifications (CT) sont pris en charge sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aide à fournir des fonctionnalités haute disponibilité et de récupération de base de données supplémentaires.  
@@ -191,9 +191,9 @@ ms.locfileid: "48091259"
   
 -   Lors de l'utilisation de la réplication de fusion, si la base de données de publication se trouve dans un groupe de disponibilité :  
   
-    -   Abonnement par émission de données : le serveur de publication et le serveur de distribution doivent exécuter au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Abonnement par émission de données : le serveur de publication et le serveur de distribution doivent exécuter au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Abonnement par extraction de données : le serveur de publication, le serveur de distribution et les bases de données de l'abonné doivent s'exécuter sur au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Cela est dû au fait que l'Agent de fusion sur l'abonné doit comprendre la façon dont un groupe de disponibilité peut basculer sur son serveur secondaire.  
+    -   Abonnement par extraction : le serveur de publication, le serveur de distribution et les bases de données de l'abonné doivent s'exécuter sur au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Cela est dû au fait que l'Agent de fusion sur l'abonné doit comprendre la façon dont un groupe de disponibilité peut basculer sur son serveur secondaire.  
   
 -   Le placement de la base de données de distribution sur un groupe de disponibilité n'est pas pris en charge.  
   
@@ -205,10 +205,10 @@ ms.locfileid: "48091259"
 |||||  
 |-|-|-|-|  
 ||**Serveur de publication**|**Serveur de distribution** <sup>3</sup>|**Abonné**|  
-|**Transactionnelle**|Oui<sup>1</sup>|non|Oui<sup>2</sup>|  
-|**P2P**|non|non|non|  
-|**Fusion**|Oui|non|Oui<sup>2</sup>|  
-|**Snapshot**|Oui|non|Oui<sup>2</sup>|  
+|**Transactionnelle**|Oui<sup>1</sup>|Non|Oui<sup>2</sup>|  
+|**P2P**|Non|Non|Non|  
+|**Fusion**|Oui|Non|Oui<sup>2</sup>|  
+|**Snapshot**|Oui|Non|Oui<sup>2</sup>|  
   
  <sup>1</sup> n’inclut pas de prise en charge pour la réplication transactionnelle bidirectionnelle et réciproque.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "48091259"
   
 -   [Maintenance d’une base de données de Publication AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Administration &#40;réplication&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Administration de réplication Forum aux questions](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   

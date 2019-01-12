@@ -16,15 +16,15 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d26bb248705ddce8932264701fbb7b9c09f64fcb
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018594"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132399"
 ---
 # <a name="upgrade-replicated-databases"></a>Mettre à niveau des bases de données répliquées
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la mise à niveau des bases de données répliquées à partir des versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; il n'est pas nécessaire d'interrompre l'activité des autres nœuds lorsqu'un nœud est en cours de mise à niveau. Prenez soin de respecter les règles relatives aux versions qui sont prises en charge dans une topologie :  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la mise à niveau des bases de données répliquées à partir des versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; il n'est pas nécessaire d'interrompre l'activité des autres nœuds lorsqu'un nœud est en cours de mise à niveau. Prenez soin de respecter les règles relatives aux versions qui sont prises en charge dans une topologie :  
   
 -   Toute version convient pour le serveur de distribution dès lors qu'elle est égale ou supérieure à celle du serveur de publication (en général, l'instance du serveur de distribution est la même que celle du serveur de publication).  
   
@@ -40,7 +40,7 @@ ms.locfileid: "51018594"
 >  Cette rubrique est disponible dans la documentation d'aide du programme d'installation et dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les liens vers des rubriques qui s'affichent en gras dans la documentation d'aide du programme d'installation font référence à des rubriques qui sont exclusivement disponibles dans la documentation en ligne.  
   
 ## <a name="run-the-log-reader-agent-for-transactional-replication-before-upgrade"></a>Exécuter l'Agent de lecture du journal pour la réplication transactionnelle avant la mise à niveau  
- Avant d'effectuer la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous devez vous assurer que toutes les transactions validées de tables publiées ont été traitées par l'Agent de lecture du journal. Pour vous assurer que toutes les transactions ont été traitées, effectuez les étapes suivantes pour chaque base de données qui contient des publications transactionnelles :  
+ Avant d'effectuer la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous devez vous assurer que toutes les transactions validées de tables publiées ont été traitées par l'Agent de lecture du journal. Pour vous assurer que toutes les transactions ont été traitées, effectuez les étapes suivantes pour chaque base de données qui contient des publications transactionnelles :  
   
 1.  Assurez-vous que l'Agent de lecture du journal s'exécute pour la base de données. Par défaut, cet agent s'exécute en permanence.  
   
@@ -89,9 +89,8 @@ ms.locfileid: "51018594"
  Pour vous assurer que les paramètres de réplication sont conservés lorsque vous restaurez la sauvegarde d'une base de données répliquée à partir d'une version précédente : effectuez la restauration vers un serveur et une base de données du même nom que le serveur et la base de données à l'origine de la sauvegarde.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration &#40;réplication&#41;](../../relational-databases/replication/administration/administration-replication.md)   
+ [Administration de réplication Forum aux questions](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Compatibilité descendante de la réplication](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
- [Nouveautés &#40;Réplication&#41;](../../../2014/relational-databases/replication/what-s-new-replication.md)   
  [Mises à niveau de la version et de l'édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Mise à niveau vers SQL Server 2014](upgrade-sql-server.md)  
   

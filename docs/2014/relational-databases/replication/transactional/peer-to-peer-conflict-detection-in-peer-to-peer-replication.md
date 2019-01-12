@@ -13,12 +13,12 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03a7640f95242538d01c8f135a005729b15042b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813965"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135444"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Détection de conflit dans la réplication d'égal à égal
   La réplication transactionnelle d'égal à égal vous permet d'insérer, de mettre à jour et de supprimer des données sur un nœud quelconque dans une topologie, puis de propager les modifications aux autres nœuds. Comme vous pouvez modifier des données sur un nœud quelconque, les modifications de données sur des nœuds différents peuvent être en conflit les unes avec les autres. Si une ligne est modifiée au niveau de plusieurs nœuds, elle peut provoquer un conflit, voire la perte de la mise à jour, lorsque la ligne est propagée à d'autres nœuds.  
@@ -26,7 +26,7 @@ ms.locfileid: "52813965"
  Dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] et les versions ultérieures, la réplication d'égal à égal propose une option permettant d'activer la détection des conflits dans une topologie d'égal à égal. Cette option permet d'éviter les problèmes causés par des conflits non détectés, notamment le comportement incohérent des applications et la perte d'une mise à jour. Lorsque cette option est activée, par défaut, une modification en conflit est traitée comme une erreur critique qui provoque l'échec de l'Agent de distribution. En cas de conflit, la topologie reste dans un état incohérent jusqu'à la résolution du conflit et jusqu'au rétablissement de la cohérence des données dans la topologie.  
   
 > [!NOTE]  
->  Pour éviter l'incohérence potentielle des données, faites-en sorte d'éviter les conflits dans une topologie d'égal à égal, même si la détection des conflits est activée. Afin de garantir que les opérations d'écriture pour une ligne particulière soient réalisées au niveau d'un seul nœud, les applications qui accèdent aux données et les modifient doivent partitionner les opérations d'insertion, de mise à jour et de suppression. Ce partitionnement garantit que les modifications apportées à une ligne donnée provenant d'un nœud sont synchronisées sur tous les autres nœuds de la topologie avant que cette ligne soit modifiée par un autre nœud. Si une application requiert des fonctionnalités avancées de détection et de résolution des conflits, utilisez la réplication de fusion. Pour plus d’informations, consultez [Réplication de fusion](../merge/merge-replication.md) et [Détecter et résoudre des conflits de réplication de fusion](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+>  Pour éviter l'incohérence potentielle des données, faites-en sorte d'éviter les conflits dans une topologie d'égal à égal, même si la détection des conflits est activée. Afin de garantir que les opérations d'écriture pour une ligne particulière soient réalisées au niveau d'un seul nœud, les applications qui accèdent aux données et les modifient doivent partitionner les opérations d'insertion, de mise à jour et de suppression. Ce partitionnement garantit que les modifications apportées à une ligne donnée provenant d'un nœud sont synchronisées sur tous les autres nœuds de la topologie avant que cette ligne soit modifiée par un autre nœud. Si une application requiert des fonctionnalités avancées de détection et de résolution des conflits, utilisez la réplication de fusion. Pour plus d’informations, consultez [Réplication de fusion](../merge/merge-replication.md) et [Détecter et résoudre des conflits de réplication de fusion](../merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ## <a name="understanding-conflicts-and-conflict-detection"></a>Description des conflits et de la détection de conflit  
  Dans une base de données unique, les modifications apportées à une même ligne par des applications différentes ne provoquent pas de conflit. Cela est dû au fait que les transactions sont sérialisées et que des verrous sont utilisés pour traiter des modifications simultanées. Dans un système distribué asynchrone, tel que la réplication d'égal à égal, les transactions agissent indépendamment sur chaque nœud et aucun mécanisme ne sérialise les transactions sur plusieurs nœuds. Il est possible d'utiliser un protocole semblable à une validation en deux phases, mais cela affecte considérablement les performances.  
@@ -92,7 +92,7 @@ ms.locfileid: "52813965"
   
     3.  Vérifiez les conflits détectés en utilisant l'outil de résolution des conflits et déterminez les lignes qui étaient impliquées, le type de conflit et le vainqueur. Le conflit est résolu en fonction de la valeur de l'ID d'appelant que vous avez spécifiée pendant la configuration : la ligne provenant du nœud avec l'ID le plus élevé remporte le conflit. Pour plus d’informations, consultez [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   
-    4.  Exécutez une validation pour garantir que les lignes en conflit ont convergé correctement. Pour plus d’informations, consultez [Valider des données répliquées](../validate-replicated-data.md).  
+    4.  Exécutez une validation pour garantir que les lignes en conflit ont convergé correctement. Pour plus d’informations, consultez [Valider des données répliquées](../validate-data-at-the-subscriber.md).  
   
         > [!NOTE]  
         >  Si les données ne sont pas cohérentes après cette étape, vous devez mettre à jour manuellement les lignes sur le nœud qui a la priorité la plus élevée, puis propager les modifications à partir de ce nœud. S'il n'y a plus de modifications en conflit dans la topologie, tous les nœuds bénéficieront d'un état cohérent.  

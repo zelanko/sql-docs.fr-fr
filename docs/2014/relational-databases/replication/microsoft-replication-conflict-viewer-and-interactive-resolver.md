@@ -13,12 +13,12 @@ ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7fc36ac66702da23f2baf2c8003486bd00ec8bf3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e0cce16636e8f3be542b926170c905353602d95e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780922"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135909"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Outil de résolution des conflits de réplication de Microsoft et Résolveur interactif
   Cette section contient des informations sur l'Outil de résolution des conflits de réplication pour la réplication de fusion et la réplication transactionnelle, et sur le Résolveur interactif pour la réplication de fusion :  
@@ -36,7 +36,7 @@ ms.locfileid: "52780922"
  [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
  [Détection et résolution avancées des conflits de réplication de fusion](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Détection de conflit dans la réplication d’égal à égal](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Détection et résolution des conflits de mise à jour en attente](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
- [Référence des propriétés &#40;réplication&#41;](properties-reference-replication.md)  
+ [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
+
   
   

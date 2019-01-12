@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2f08fa101e2a53696e58f15413ec08c301a9e890
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9eca631440e92f946513429ddb43d3212a109984
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596942"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131939"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @loginame **=** ] **'***connexion***'**  
+ [ @loginame **=** ] **'**_connexion_**'**  
  Nom d'une connexion à supprimer du rôle serveur fixe. *connexion* est **sysname**, sans valeur par défaut. *connexion* doit exister.  
   
- [ @rolename **=** ] **'***rôle***'**  
+ [ @rolename **=** ] **'**_rôle_**'**  
  Nom d'un rôle serveur. *rôle* est **sysname**, avec NULL comme valeur par défaut. *rôle* doit être une des valeurs suivantes :  
   
 -   sysadmin  
@@ -74,7 +74,7 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
   
  sp_dropsrvrolemember ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance au rôle serveur fixé, ou les deux autorisations ALTER ANY LOGIN sur le serveur et à partir de laquelle le membre est en cours de suppression du rôle sysadmin.  
   
 ## <a name="examples"></a>Exemples  

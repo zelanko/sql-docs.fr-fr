@@ -3,7 +3,7 @@ title: Notes de publication et le journal des modifications
 titleSuffix: Azure Data Studio
 description: Notes de publication Azure Data Studio
 ms.custom: seodec18
-ms.date: 11/06/2018
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22542b42aff4b6d2d37e4a7342395d154d16dc95
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030343"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143659"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure dernières notes de Studio de données et journal des modifications
 
-**[Téléchargez la version de novembre !](download.md)**
+**[Téléchargez la version de janvier !](download.md)**
+
+
+## <a name="january-2019-january-release"></a>Janvier 2019 (version de janvier)
+
+date de publication : 09 janvier 2019  
+Version : 1.3.8
+
+- Ajouter un nouveau programme d’installation utilisateur pour Windows. Contrairement au programme d’installation de système existant, le nouveau programme d’installation de l’utilisateur ne nécessite pas de privilèges d’administrateur. Cela permet également une expérience de mise à niveau plus facile pour les administrateurs non-Windows.
+- Prise en charge de l’authentification Active Directory Azure.
+- Annonce de Idera SQL DM Performance Insights (version préliminaire).
+- La prise en charge de l’Assistant Création d’applications de couche données dans l’extension de SQL Server Import.
+- Mettre à jour vers la [extension de la version préliminaire de SQL Server 2019](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- Améliorations de SQL Server Profiler.
+- Résultats de la diffusion en continu pour les grandes requêtes (version préliminaire).
+- Extensions de la Communauté : sp_executesql to sql et de la nouvelle base de données.
+- Résolu [bogues et problèmes](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1).
+
+Pour plus d’informations, consultez le [journal des modifications](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), et [versions](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="november-2018-november-release"></a>Novembre 2018 (version de novembre)
 
@@ -35,6 +53,7 @@ Version : 1.2.4
 - Service des outils SQL mise à niveau vers.Net Core 2,2 Preview 3 (pour une éventuelle prise en charge AAD)
 
 ### <a name="bug-fixes"></a>Correctifs de bogues
+
 - Corriger [émettre #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Connexion perdue à la base de données SQL Azure
 - Corriger [émettre #2914](https://github.com/Microsoft/azuredatastudio/issues/2914): Nœud de la base de données « Argument non valide » exception de l’Explorateur d’objets en expansion
 - Corriger [émettre #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): Les messages de plusieurs lignes s’affichent correctement dans les résultats de la requête
@@ -44,8 +63,6 @@ Version : 1.2.4
 - Corriger [émettre #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Ajouter une interface de ligne de commande pour la connexion à un serveur SQL Server
 - Corriger [émettre #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): Ajouter la prise en charge du thème query plan
 - ...
-
-Pour plus d’informations, consultez le [journal des modifications](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), et [versions](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="october-2018-october-release"></a>Octobre 2018 (version d’octobre)
 
@@ -146,7 +163,7 @@ Le *version préliminaire publique d’août* se concentre sur les correctifs de
 - Corriger [émettre #2129](https://github.com/Microsoft/azuredatastudio/pull/2129): Enregistrer la position de défilement de données de modification lors de la commutation des onglets.
 - Corriger [émettre #2152](https://github.com/Microsoft/azuredatastudio/issues/2152): Indicateur de ligne de la grille de résultats basé sur zéro.
 
-## <a name="known-issues"></a>Problèmes connus
+### <a name="known-issues"></a>Problèmes connus
 
 - [Problème #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) enregistrer comme Excel uniquement enregistre première ligne de données
 - [Problème #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): Impossible de se connecter sur Ubuntu 16.04 to SQL dans un conteneur

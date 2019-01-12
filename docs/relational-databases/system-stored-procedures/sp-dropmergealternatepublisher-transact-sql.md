@@ -16,12 +16,12 @@ ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1cc29de8227cab3fc9045e7d98d9453146965008
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 722a8092a799695be0ab5e4f6925cd7416b7c1b9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773851"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134719"
 ---
 # <a name="spdropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,22 +38,22 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_publisher_**'**  
  Nom du serveur de publication actuel. *serveur de publication*est **sysname**, sans valeur par défaut.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  Nom de la base de données de publication active. *publisher_db*est **sysname**, sans valeur par défaut.  
   
- [  **@publication =**] **'***publication***'**  
+ [  **@publication =**] **'**_publication_**'**  
  Nom de la publication actuelle. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@alternate_publisher=**] **'***alternate_publisher***'**  
+ [  **@alternate_publisher=**] **'**_alternate_publisher_**'**  
  Nom du serveur de publication de remplacement à supprimer en tant que partenaire de synchronisation de substitution. *alternate_publisher*est **sysname**, sans valeur par défaut.  
   
- [  **@alternate_publisher_db=**] **'***alternate_publisher_db***'**  
+ [  **@alternate_publisher_db=**] **'**_alternate_publisher_db_**'**  
  Nom de la base de données de publication à supprimer en tant que base de données de publication du partenaire de synchronisation de substitution. *alternate_publisher_db*est **sysname**, sans valeur par défaut.  
   
- [  **@alternate_publication=**] **'***alternate_publication***'**  
+ [  **@alternate_publication=**] **'**_alternate_publication_**'**  
  Nom de la publication à supprimer en tant que publication du partenaire de synchronisation de substitution. *alternate_publication*est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

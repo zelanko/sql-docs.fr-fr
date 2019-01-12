@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 149bcdddd5388c9c68a9d2d96c5474903104757d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f0cb0110e6f2cc047ca5db5f2813b250567573fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508024"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132139"
 ---
 # <a name="referentialconstraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "52508024"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la contrainte.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la contrainte.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la contrainte.<br /><br /> **&#42;&#42;Important &#42; &#42;**  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**CONSTRAINT_NAME**|**sysname**|Nom de la contrainte.|  
 |**UNIQUE_CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|Identificateur de la contrainte unique.|  
-|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la contrainte UNIQUE.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la contrainte UNIQUE.<br /><br /> **&#42;&#42;Important &#42; &#42;**  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**UNIQUE_CONSTRAINT_NAME**|**sysname**|Contrainte UNIQUE.|  
 |**MATCH_OPTION**|**varchar (** 7 **)**|Conditions référentielles de correspondance de contraintes. Renvoie toujours la valeur SIMPLE. Signifie qu'aucune correspondance n'est définie. La condition est considérée comme correspondante si l'une des conditions suivantes est réalisée :<br /><br /> au moins une valeur de la colonne clé étrangère est NULL ;<br /><br /> toutes les valeurs de la colonne clé étrangère ne comportent pas la valeur NULL, et une ligne de la table de clé primaire contient la même clé.|  
 |**UPDATE_RULE**|**varchar (** 11 **)**|Action entreprise lorsqu’une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction viole l’intégrité référentielle est définie par cette contrainte. Retourne l'une des valeurs suivantes : <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> Si NO ACTION est spécifié sur une instruction ON UPDATE de cette contrainte, la mise à jour de la clé primaire référencée dans la contrainte n'est pas propagée vers la clé étrangère. Si une telle mise à jour enfreint l'intégrité référentielle car au moins une clé étrangère contient la même valeur, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'apporte aucune modification aux tables parentes et de référence. Par ailleurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur.<br /><br /> Si CASCADE est spécifié sur une instruction ON UPDATE de cette contrainte, toute modification de valeur de la clé primaire est automatiquement propagée vers la valeur de la clé étrangère.|  

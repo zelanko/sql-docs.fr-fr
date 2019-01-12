@@ -1,6 +1,6 @@
 ---
 title: Compatibilité descendante de SQL Server Analysis Services 2017 | Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 29fb46b02e887ceebde293383fda99cbd3ed42be
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 411fa78bada76c79d4a869d68c94abf752b8466a
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072426"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185075"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Compatibilité descendante de Analysis Services (2017 SQL)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53072426"
 Cet article décrit les modifications apportées dans la disponibilité des fonctionnalités et de comportement entre la version actuelle et la version précédente.
 
 ## <a name="deprecated-features"></a>Fonctionnalités dépréciées
-Un *fonctionnalité déconseillée* seront abandonnés à partir du produit dans une version ultérieure, mais est toujours pris en charge et inclus dans la version actuelle pour assurer la compatibilité descendante. Il est recommandé de que vous interrompre l’utilisation des fonctionnalités déconseillées dans les projets nouveaux ou existants pour assurer la compatibilité avec les versions ultérieures.
+Un *fonctionnalité déconseillée* seront abandonnés à partir du produit dans une version ultérieure, mais est toujours pris en charge et inclus dans la version actuelle pour assurer la compatibilité descendante. Il est recommandé de que vous interrompre l’utilisation des fonctionnalités déconseillées dans les projets nouveaux ou existants pour assurer la compatibilité avec les versions ultérieures. Documentation n’est pas mise à jour pour les fonctionnalités déconseillées.
 
 Les fonctionnalités suivantes sont déconseillées dans cette version :
   

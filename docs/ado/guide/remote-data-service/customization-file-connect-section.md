@@ -14,12 +14,12 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9b891d4c8196dbac8fd7e557abc17f15bafbe0f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 627bbbafd272b6bb7682b776132445041207f8e1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545219"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133329"
 ---
 # <a name="customization-file-connect-section"></a>Fichier de personnalisation, section connect
 Le comportement par défaut du gestionnaire consiste à refuser toutes les connexions. Le **connecter** section indique les exceptions à ce comportement. Par exemple, si tous les **connecter** sections sont absents ou vides, puis par défaut aucune connexion n’a pu être établie.  
@@ -57,11 +57,11 @@ connectionString
 |Élément|Description|  
 |----------|-----------------|  
 |**Se connecter**|Une chaîne littérale qui indique qu’il est une entrée de chaîne de connexion.|  
-|***connectionString***|Chaîne qui remplace la chaîne de connexion client global.|  
+|**_ConnectionString_**|Chaîne qui remplace la chaîne de connexion client global.|  
 |**Accès**|Une chaîne littérale qui indique qu’il est une entrée d’accès.|  
-|***accessRight***|L’un des droits d’accès suivants :<br /><br /> -   **NoAccess** -utilisateur ne peut pas accéder à la source de données.<br />-   **ReadOnly** -l’utilisateur peut lire la source de données.<br />-   **Lecture/écriture** -utilisateur capable de lire ou écrire dans la source de données.|  
+|**_accessRight_**|L’un des droits d’accès suivants :<br /><br /> -   **NoAccess** -utilisateur ne peut pas accéder à la source de données.<br />-   **ReadOnly** -l’utilisateur peut lire la source de données.<br />-   **Lecture/écriture** -utilisateur capable de lire ou écrire dans la source de données.|  
   
- Si vous souhaitez autoriser toute connexion (en le désactivant, le comportement du gestionnaire par défaut), définissez l’entrée d’accès le **connecter par défaut** section à `Access=ReadWrite`et supprimez ou commentez à n’importe quel autre **connecter** *identificateur* section.  
+ Si vous souhaitez autoriser toute connexion (en le désactivant, le comportement du gestionnaire par défaut), définissez l’entrée d’accès le **connecter par défaut** section à `Access=ReadWrite`et supprimez ou commentez à n’importe quel autre **connecter** _identificateur_ section.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichier de personnalisation, Section de journaux](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   

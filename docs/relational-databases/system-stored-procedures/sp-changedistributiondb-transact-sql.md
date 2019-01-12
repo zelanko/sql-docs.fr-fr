@@ -16,12 +16,12 @@ ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f38ef40a1e64544d077f30031fe128070cef2fd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 031fc14eba8cdea8cdbff41d18d6e6ab6bc42a68
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819201"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133849"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@database=**] **'***base de données***'**  
+ [  **@database=**] **'**_base de données_**'**  
  Est le nom de la base de données de distribution. *base de données* est **sysname**, sans valeur par défaut.  
   
- [  **@property=**] **'***propriété***'**  
+ [  **@property=**] **'**_propriété_**'**  
  Propriété à modifier pour la base de données concernée. *propriété* est **sysname**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
@@ -53,7 +53,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**rétention_de_distribution_minimale**|Période de rétention de distribution minimale.|  
 |NULL (par défaut)|Tous disponibles *propriété* valeurs sont imprimées.|  
   
- [  **@value=**] **'***valeur***'**  
+ [  **@value=**] **'**_valeur_**'**  
  Est la nouvelle valeur pour la propriété spécifiée. *valeur* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

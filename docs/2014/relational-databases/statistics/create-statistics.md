@@ -18,12 +18,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3128828bd26e6d2755f30748c23873538b8a7649
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527725"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133469"
 ---
 # <a name="create-statistics"></a>Créer des statistiques
   Vous pouvez créer des statistiques d'optimisation de requête sur une ou plusieurs colonnes d'une table ou d'une vue indexée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour la plupart des requêtes, l'optimiseur de requête génère déjà les statistiques utiles à un plan de requête de haute qualité ; dans certains cas, vous devez créer des statistiques supplémentaires.  
@@ -69,7 +69,7 @@ ms.locfileid: "52527725"
   
 4.  Cliquez avec le bouton droit sur le dossier **Statistiques** et sélectionnez **Nouvelles statistiques...**.  
   
-     Les propriétés suivantes s’affichent dans la page **Général** de la boîte de dialogue **Nouvelles statistiques sur la table***nom_table*.  
+     Les propriétés suivantes s’affichent dans la page **Général** dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom_table_ .  
   
      **Nom de la table**  
      Affiche le nom de la table décrite par les statistiques.  
@@ -113,12 +113,12 @@ ms.locfileid: "52527725"
      **Mettre à jour les statistiques pour ces colonnes**  
      Activez cette option pour mettre à jour les statistiques lors de la fermeture de la boîte de dialogue.  
   
-     La propriété suivante s’affiche dans la page **Filtre** de la boîte de dialogue **Nouvelles statistiques sur la table***nom_table*.  
+     Les propriétés suivantes s’affichent dans la page **Filtre** dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom_table_ .  
   
      **Expression de filtre**  
      Définit quelles lignes de données inclure dans les statistiques filtrées. Par exemple : `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Dans la boîte de dialogue **Nouvelles statistiques sur la table***nom_table*, dans la page **Général**, cliquez sur **Ajouter**.  
+5.  Dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom_table_ , dans la page **Général** , cliquez sur **Ajouter**.  
   
      Les propriétés suivantes s'affichent dans la boîte de dialogue **Sélectionner les colonnes** . Ces informations sont en lecture seule.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "52527725"
   
 6.  Dans la boîte de dialogue **Sélectionner les colonnes** , activez la ou les cases à cocher de chaque colonne pour laquelle vous voulez créer une statistique, puis cliquez sur **OK**.  
   
-7.  Dans la boîte de dialogue **Nouvelles statistiques sur la table***nom_table*, cliquez sur **OK**.  
+7.  Dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom_table_ , cliquez sur **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

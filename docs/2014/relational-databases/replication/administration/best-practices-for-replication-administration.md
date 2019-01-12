@@ -13,12 +13,12 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823305"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134732"
 ---
 # <a name="best-practices-for-replication-administration"></a>Bonnes pratiques en matière d’administration de la réplication
   Après avoir configuré la réplication, il est important de comprendre en quoi consiste l'administration d'une topologie de réplication. Cette rubrique fournit des indications de base sur les méthodes conseillées dans un certain nombre de domaines, avec des liens sur chaque domaine pour plus d'informations. En plus de suivre les indications suivantes sur les méthodes conseillées présentées dans cette rubrique, il est conseillé de lire la rubrique du forum aux questions afin de vous familiariser avec les questions et les problèmes les plus courants : [Forum aux Questions sur les administrateurs de réplication](frequently-asked-questions-for-replication-administrators.md).  
@@ -121,7 +121,7 @@ ms.locfileid: "52823305"
 ## <a name="validate-data-periodically"></a>Valider périodiquement les données  
  La validation n'est pas requise par la réplication, elle est néanmoins recommandée pour valider périodiquement la réplication transactionnelle et la réplication de fusion. La validation vous permet de vérifier que les données sur l'Abonné correspondent à celles du serveur de publication. Une validation réussie indique qu'à un moment donné, tous les modifications provenant du serveur de publication ont été répliquées sur l'Abonné (et de l'Abonné sur le serveur de publication si les mises à jour sont prises en charge sur l'Abonné) et que les deux bases de données sont synchronisées.  
   
- Il est recommandé d'effectuer la validation en fonction de la planification de sauvegarde de la base de données de publication. Par exemple, si la base de données de publication est sauvegardée intégralement une fois par semaine, la validation peut être exécutée une fois par semaine quand la sauvegarde est terminée. Pour plus d’informations, consultez [Valider des données répliquées](../validate-replicated-data.md).  
+ Il est recommandé d'effectuer la validation en fonction de la planification de sauvegarde de la base de données de publication. Par exemple, si la base de données de publication est sauvegardée intégralement une fois par semaine, la validation peut être exécutée une fois par semaine quand la sauvegarde est terminée. Pour plus d’informations, consultez [Valider des données répliquées](../validate-data-at-the-subscriber.md).  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>Utiliser les profils de l'Agent pour modifier les paramètres de l'Agent si nécessaire  
  Les profils de l'Agent représentent une méthode pratique de configuration des paramètres de l'Agent de réplication. Les paramètres peuvent également être spécifiés sur la ligne de commande de l'Agent, mais il est généralement plus judicieux d'utiliser un profil de l'Agent prédéfini ou de créer un nouveau profil si vous devez modifier la valeur d'un paramètre. Par exemple, si vous utilisez la réplication de fusion et qu'un abonné passe d'une connexion haut débit à une connexion d'accès à distance, envisagez d'utiliser le profil de **liaison lente** pour l'Agent de fusion ; l'ensemble des paramètres de ce profil est mieux adapté à la liaison de communications lentes. Pour plus d'informations, voir [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
@@ -148,6 +148,6 @@ ms.locfileid: "52823305"
  Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration &#40;réplication&#41;](administration-replication.md)  
+ [Administration de réplication Forum aux questions](frequently-asked-questions-for-replication-administrators.md)  
   
   

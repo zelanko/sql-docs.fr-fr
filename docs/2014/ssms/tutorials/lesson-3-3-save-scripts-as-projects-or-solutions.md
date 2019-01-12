@@ -10,12 +10,12 @@ ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d64724108630e64ecfd654367180a6603aabe3e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125945"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134829"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>Enregistrer des scripts sous forme de projets ou de solutions
   Les développeurs familiarisés avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio seront heureux de pouvoir utiliser l'Explorateur de solutions dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Les scripts sur lesquels votre activité est basée peuvent être groupés en projets de scripts et ces projets être gérés ensemble sous la forme d'une solution. Lorsque les scripts sont placés dans des projets de scripts et des solutions, il est possible de les ouvrir en groupe ou de les enregistrer ensemble dans un produit de contrôle du code source tel que Visual SourceSafe. Les projets de scripts contiennent les informations de connexion pour que les scripts puissent s'exécuter correctement et peuvent inclure des fichiers non script tels que des fichiers texte.  
@@ -58,11 +58,11 @@ ms.locfileid: "48125945"
     > [!NOTE]  
     >  Si vous avez besoin de davantage d'espace pour taper votre requête, appuyez sur Maj+Alt+Entrée pour afficher un plein écran.  
   
-11. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur **SQLQuery1**et choisissez **Renommer**. Tapez **Check Workorders****.sql** comme nouveau nom de la requête et appuyez sur Entrée.  
+11. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur **SQLQuery1**et choisissez **Renommer**. Type **Check Workorders.sql** comme nouveau nom pour la requête et appuyez sur ENTRÉE.  
   
 12. Pour enregistrer votre solution et votre projet de scripts, dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Résumé : Solutions et projets de script](lesson-3-4-summary-solutions-and-script-projects.md)  
+ [Résumé : Solutions et projets de Script](lesson-3-4-summary-solutions-and-script-projects.md)  
   
   

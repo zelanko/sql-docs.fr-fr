@@ -14,12 +14,12 @@ ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0f9161e0b083afe8a57c396ba9d6e1db68755c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b33cfe47cebba4c24c90ad41ce1b218192d128f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799601"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135959"
 ---
 # <a name="validate-all-subscriptions"></a>Valider tous les abonnements
   La boîte de dialogue **Valider tous les abonnements** permet d'indiquer que tous les abonnements à une publication de fusion doivent être validés lors de la prochaine exécution de l'Agent de fusion de chaque abonnement. Le résultat de la validation figure dans le Moniteur de réplication. Pour plus d’informations, voir [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
@@ -34,6 +34,6 @@ ms.locfileid: "52799601"
  Outre le comptage des lignes sur le serveur de publication et sur l'Abonné, une somme de contrôle de toutes les données est calculée à l'aide de l'algorithme de somme de contrôle binaire. Si le nombre de lignes est erroné, la somme de contrôle n'est pas effectuée. Cette option n'est pas valide pour [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Valider des données répliquées](validate-replicated-data.md)  
+ [Valider des données répliquées](validate-data-at-the-subscriber.md)  
   
   
