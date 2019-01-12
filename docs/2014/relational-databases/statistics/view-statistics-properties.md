@@ -15,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 343ba03f20d059763f4b1122aac80e0af80fc2ae
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415636"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54099964"
 ---
 # <a name="view-statistics-properties"></a>Afficher les propriétés des statistiques
   Vous pouvez afficher les statistiques d'optimisation de la requête actuelle pour une table ou une vue indexée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les objets de statistiques incluent un en-tête contenant des métadonnées sur les statistiques, un histogramme indiquant la distribution des valeurs dans la première colonne clé de l'objet des statistiques, et un vecteur de densité destiné à mesurer la corrélation entre les colonnes. Pour plus d’informations sur les histogrammes et les vecteurs de densité, consultez [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).  
@@ -58,9 +58,9 @@ ms.locfileid: "52415636"
   
 5.  Cliquez avec le bouton droit sur l’objet Statistiques dont vous voulez afficher les propriétés, puis sélectionnez **Propriétés**.  
   
-6.  Dans la boîte de dialogue **Propriétés des statistiques -** *nom_statistiques* , dans le volet **Sélectionner une page** , sélectionnez **Détails**.  
+6.  Dans la boîte de dialogue **Propriétés des statistiques -** _nom_statistiques_ , dans le volet **Sélectionner une page** , sélectionnez **Détails**.  
   
-     Les propriétés suivantes s’affichent dans la page **Détails** dans la boîte de dialogue **Propriétés des statistiques -** *nom_statistiques* .  
+     Les propriétés suivantes s’affichent dans la page **Détails** dans la boîte de dialogue **Propriétés des statistiques -** _nom_statistiques_ .  
   
      **Nom de la table**  
      Affiche le nom de la table décrite par les statistiques.  
