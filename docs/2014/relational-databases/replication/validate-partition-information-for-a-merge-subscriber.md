@@ -14,12 +14,12 @@ ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a95d55aa0d2722719f799af9f69f6a3b3c14689
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3bada5fc49dc344510164260330699b60a3288cc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805851"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127569"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>Valider des informations de partition pour un Abonné de fusion
   Quand vous définissez un filtre de lignes paramétrable pour une publication de fusion, vous utilisez une fonction qui référence des informations de l'Abonné, telles que son nom de connexion. Par défaut, la réplication valide les informations de l'Abonné sur la base de cette fonction avant chaque synchronisation et si un instantané est appliqué à l'Abonné. Le processus de validation vérifie que ces données sont partitionnées correctement pour chaque Abonné. Le fonctionnement de la validation est contrôlé par la propriété de publication **validate_subscriber_info**, qui peut être modifiée à l’aide de [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) ou sur la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication**. Pour plus d'informations sur la modification des propriétés d'une publication, consultez [Afficher et modifier les propriétés d’une publication](publish/view-and-modify-publication-properties.md).  
@@ -34,9 +34,9 @@ ms.locfileid: "52805851"
  Quand l'Agent de fusion valide une partition, en plus de valider la partition relativement aux valeurs renvoyées par toutes les fonctions utilisées dans les expressions de filtrage, l'agent vérifie également si l'instantané a été généré avant des modifications qui l'invalident, par exemple des opérations de nettoyage des métadonnées ou des modifications de schéma. Si un instantané partitionné est trop ancien, l'Agent de fusion renvoie une erreur et vous devez régénérer un instantané partitionné pour cet Abonné sur la base d'un instantané normal en cours.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration &#40;réplication&#41;](administration/administration-replication.md)   
- [Bonnes pratiques en matière d’administration de la réplication](administration/best-practices-for-replication-administration.md)   
+ [Administration de réplication Forum aux questions](administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
  [Réinitialiser des abonnements](reinitialize-subscriptions.md)   
- [Valider des données répliquées](validate-replicated-data.md)  
+ [Valider des données répliquées](validate-data-at-the-subscriber.md)  
   
   

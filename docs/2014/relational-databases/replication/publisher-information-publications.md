@@ -1,5 +1,5 @@
 ---
-title: Informations sur le serveur de distribution, Publications | Microsoft Docs
+title: Boîte de dialogue « Informations sur l’éditeur » réplication SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8614db7bd44f6ba5de8826215aed8cf123e86488
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 344b899905e844312ee6e5a66455fc2fa14b446f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812171"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128909"
 ---
-# <a name="publisher-information-publications"></a>Informations sur le serveur de publication, Publications
+# <a name="sql-server-replication-publisher-information-dialog-box"></a>Boîte de dialogue « Informations sur l’éditeur » réplication SQL Server
   L'onglet **Publications** fournit des informations résumées pour toutes les publications sur le serveur de publication sélectionné dans le volet gauche.  
   
 ## <a name="options"></a>Options  
@@ -84,7 +84,7 @@ ms.locfileid: "52812171"
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer le Moniteur de réplication](monitor/start-the-replication-monitor.md)   
- [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [Moniteur de réplication](monitoring-replication.md)  
+ [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Surveillance de la réplication](monitoring-replication.md)  
   
   

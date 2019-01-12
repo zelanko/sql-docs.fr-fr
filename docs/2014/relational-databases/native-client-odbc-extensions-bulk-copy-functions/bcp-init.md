@@ -18,12 +18,12 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13bafcd55e2e6cf95dec92e5ad2feeda20dde8f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125469"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131169"
 ---
 # <a name="bcpinit"></a>bcp_init
   Initialise l'opération de copie en bloc.  
@@ -60,7 +60,7 @@ eDirection
   
  Si *eDirection* est DB_OUT, *szTable* peut également être le nom d’une vue de base de données.  
   
- Si *eDirection* est DB_OUT et qu’une instruction SELECT est spécifiée à l’aide de [bcp_control](bcp-control.md) avant [bcp_exec](bcp-exec.md) est appelée, **bcp_init *** szTable*doit être définie sur NULL.  
+ Si *eDirection* est DB_OUT et qu’une instruction SELECT est spécifiée à l’aide de [bcp_control](bcp-control.md) avant [bcp_exec](bcp-exec.md) est appelée, **bcp_init** _szTable_ doit être définie sur NULL.  
   
  *szDataFile*  
  Nom du fichier utilisateur depuis ou vers lequel s'effectue la copie. Si les données sont en cours copiées directement à partir de variables à l’aide de [bcp_sendrow](bcp-sendrow.md), affectez la valeur *szDataFile* avec la valeur NULL.  

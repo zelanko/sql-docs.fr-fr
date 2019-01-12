@@ -16,12 +16,12 @@ ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31958069ae54e1b94291cfb220f669f25100afe3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a05845955116454ae23b2cd97e25250dbb1e6331
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759871"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124089"
 ---
 # <a name="spdroppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_droppublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=** ] **'***publication***'**  
+ [  **@publication=** ] **'**_publication_**'**  
  Nom de la publication à supprimer. *publication* est **sysname**, sans valeur par défaut. Si **tous les** est spécifié, toutes les publications sont supprimées à partir de la base de données de publication, à l’exception de ceux dont les abonnements.  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  

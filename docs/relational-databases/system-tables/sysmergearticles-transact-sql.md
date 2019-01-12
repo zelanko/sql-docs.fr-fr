@@ -18,12 +18,12 @@ ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4834ebec21b69d000a84c6d4fdd5c615f2ca833e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 53bf75f0c153012eb60188f354ac9ac775ce1b26
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757011"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128234"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52757011"
 |**fast_multicol_updateproc**|**bit**|Spécifie si l'Agent de fusion est activé pour appliquer des modifications à plusieurs colonnes d'une même ligne à partir d'une seule instruction UPDATE.<br /><br /> **0** = émet une instruction UPDATE distincte pour chaque colonne modifiée.<br /><br /> **1** = émet une instruction UPDATE qui provoque la mise à jour de plusieurs colonnes dans une instruction.|  
 |**check_permissions**|**Int**|Bitmap des autorisations de niveau table, qui est vérifiée lorsque l'Agent de fusion applique les modifications au serveur de publication. *check_permissions* peut avoir une des valeurs suivantes :<br /><br /> **0 x 00 =** autorisations ne sont pas vérifiées.<br /><br /> **0 x 10 =** autorisations sont vérifiées sur le serveur de publication avant de pouvoir télécharger les insertions effectuées sur l’abonné.<br /><br /> **0 x 20 =** autorisations sont vérifiées sur le serveur de publication avant de pouvoir télécharger les mises à jour effectuées sur l’abonné.<br /><br /> **0 x 40 =** autorisations sont vérifiées sur le serveur de publication avant DELETE exécutées sur l’abonné puissent être téléchargées.|  
 |**maxversion_at_cleanup**|**Int**|Génération la plus élevée pour laquelle les métadonnées sont nettoyées.|  
-|**processing_order**|**Int**|Indique l’ordre de traitement des articles dans une publication de fusion ; sachant que la valeur **0** indiqué que l’article n’est pas ordonné, et les articles sont traités dans l’ordre à partir de la valeur la plus basse à la plus élevée. Si deux articles ont la même valeur, ils sont traités simultanément. Pour plus d’informations, consultez [Spécifier l’ordre de traitement d’articles de fusion](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).|  
+|**processing_order**|**Int**|Indique l’ordre de traitement des articles dans une publication de fusion ; sachant que la valeur **0** indiqué que l’article n’est pas ordonné, et les articles sont traités dans l’ordre à partir de la valeur la plus basse à la plus élevée. Si deux articles ont la même valeur, ils sont traités simultanément. Pour plus d’informations, consultez [propriétés de spécifier la réplication de fusion](../../relational-databases/replication/merge/specify-merge-replication-properties.md).|  
 |**upload_options**|**tinyint**|Définit des restrictions sur les mises à jour effectuées sur un Abonné ayant un abonnement client. Peut avoir une des valeurs suivantes.<br /><br /> **0** = il n’existe aucune restriction sur les mises à jour effectuées sur un abonné avec un abonnement client ; toutes les modifications sont téléchargées sur le serveur de publication.<br /><br /> **1** = les modifications sont autorisées sur un abonné disposant d’un abonnement client, mais elles ne sont pas téléchargées sur le serveur de publication.<br /><br /> **2** = les modifications ne sont pas autorisées sur un abonné avec un abonnement client.<br /><br /> Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).|  
 |**published_in_tran_pub**|**bit**|Indique qu'un article d'une publication de fusion est également publié dans une publication transactionnelle.<br /><br /> **0** = l’article n’est pas publié dans un article transactionnel.<br /><br /> **1** = l’article est également publié dans un article transactionnel.|  
 |**légère**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

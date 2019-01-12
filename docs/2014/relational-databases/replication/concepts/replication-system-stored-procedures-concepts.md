@@ -4,7 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology:
+- docset-sql-devref
+- replication
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -18,12 +20,12 @@ ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3dd555fcf00cc452ee1d27b62c496c3a1621db67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 58ea6e365d16e4487a1f24700a7731ed96e04914
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792151"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128049"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Concepts liés aux procédures stockées système de réplication
   Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'accès par programme à toutes les fonctionnalités d'une topologie de réplication configurables par l'utilisateur est opéré par les procédures stockées système. Bien que les procédures stockées puissent être exécutées individuellement à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de l'utilitaire en ligne de commande sqlcmd, il peut être judicieux d'écrire des fichiers de script [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui peuvent être exécutés pour effectuer une séquence logique de tâches de réplication.  

@@ -16,12 +16,12 @@ ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ffb78d301762f9b7edcb78a2ba062db6fe662f6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f2ada1011096eb8275f9059e531cfc0fcc1af58c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540023"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126169"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Fonctions de l’API du niveau principal (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -38,7 +38,7 @@ ms.locfileid: "52540023"
 |**SQLCancel**|Annule le traitement sur un descripteur d’instruction, hstmt. Dans certains cas, Oracle n’autorise pas l’annulation d’une instruction en cours d’exécution. Cela signifie qu’une instruction en cours d’exécution continue jusqu'à ce que Oracle termine le processus, moment auquel les résultats des instructions sont annulées par le pilote ODBC pour Oracle.|  
 |**SQLColAttributes**|Retourne des informations de descripteur pour une colonne dans un jeu de résultats. Informations de descripteur sont retournées comme une chaîne de caractères, une valeur de descripteur dépendant de 32 bits ou une valeur entière.|  
 |**SQLConnect**|Se connecte à une source de données. Pour utiliser l’authentification du système d’exploitation Oracle, spécifiez « / » comme le *szUID* paramètre et « » en tant que le *szAuthStr* paramètre.|  
-|**SQLDescribeCol**|Retourne le nom de type, précision, échelle et possibilité de valeur null de la colonne de résultat donné. **Remarque :**  **SQLDescribeCol** signale les colonnes calculées en tant que SQL_VARCHAR.|  
+|**SQLDescribeCol**|Retourne le nom de type, précision, échelle et possibilité de valeur null de la colonne de résultat donné. **Remarque :  SQLDescribeCol** signale les colonnes calculées en tant que SQL_VARCHAR.|  
 |**SQLDisconnect**|Ferme une connexion. Si le regroupement de connexions est activé pour un environnement partagé et une application appelle **SQLDisconnect** sur une connexion dans cet environnement, la connexion est retournée au pool de connexions et est toujours disponible à d’autres composants à l’aide de le même environnement partagé.|  
 |**SQLError**|Retourne des informations d’erreur ou d’état sur la dernière erreur. Le pilote gère une pile ou une liste d’erreurs qui peuvent être retournées pour le *hstmt*, *pas*, et *henv* arguments, en fonction de la l’appel à **SQLError**  est effectuée. La file d’attente de l’erreur est vidé après chaque instruction. Généralement extrait un message d’erreur Oracle cas contraire elle est vide.|  
 |**SQLExecDirect**|Exécute une instruction SQL de nouvelle, non préparée. Le pilote utilise les valeurs actuelles des variables de marqueur de paramètre si tous les paramètres existent dans l’instruction. Si votre table, vue ou noms de champs contiennent des espaces, placez les noms à l’arrière guillemet marques. Par exemple, si votre base de données contient une table nommée *My Table* et le champ *mon champ*, placez chaque élément de l’identificateur comme suit :<br /><br /> Sélectionnez \`ma Table\`. \`Mon Field1\`, \`Ma Table\`.\` Mon Field2\` FROM \`ma Table »|  

@@ -16,12 +16,12 @@ ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 410a852ed1535a219208a62b7d0b45849333cb49
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e4612c7b20e448eecbd6c83a3d09d0796dcff542
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818991"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126258"
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_publication_**'**  
  Nom de la publication dans laquelle le travail d'instantané de données filtrées est supprimé. *publication* est **sysname**, sans valeur par défaut.  
   
- [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname***'**  
+ [ **@dynamic_snapshot_jobname**=] **'**_dynamic_snapshot_jobname_**'**  
  Nom du travail d'instantané de données filtrées qui va être supprimé. *dynamic_snapshot_jobname*est de type sysname, et si elle n’est pas fournis de valeurs par défaut à toute tâche nom est associé *dynamic_snapshot_jobid*.  
   
- [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid**=] **'**_dynamic_snapshot_jobid_**'**  
  Identificateur du travail d'instantané de données filtrées qui va être supprimé. *dynamic_snapshot_jobid*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  

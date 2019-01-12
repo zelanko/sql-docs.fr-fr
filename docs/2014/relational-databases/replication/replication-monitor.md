@@ -14,12 +14,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 780c4913a75b6014c43c407f05181ef93eddb594
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fcb3a7ccfc5e0b5da01d3976f3c9f13e06df7ee7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813964"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124429"
 ---
 # <a name="replication-monitor"></a>Moniteur de réplication
   Cette section de la documentation contient des informations sur le Moniteur de réplication. Les pages et les boîtes de dialogue affichées dans le moniteur diffèrent en fonction du type de réplication et de la version [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contrôlée.  
@@ -30,16 +30,8 @@ ms.locfileid: "52813964"
   
 -   [Paramètres du serveur de distribution](distributor-settings.md)  
   
--   [Informations du serveur de distribution, publications](distributor-information-publications.md)  
-  
--   [Informations sur le serveur de distribution, liste de suivi des abonnements &#40;Publication transactionnelle, SQL Server 2005 et version ultérieure&#41;](distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [Informations sur le serveur de distribution, liste de suivi des abonnements &#40;Publication de fusion, SQL Server 2005 et version ultérieure&#41;](distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [Informations sur le serveur de distribution, liste de suivi des abonnements &#40;Publication d’instantanés, SQL Server 2005 et version ultérieure&#41;](distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [Informations du serveur de distribution, agents](distributor-information-agents.md)  
-  
+-   [Informations sur le serveur de distribution, Publications](distributor-information-publications.md)  
+
 -   [Paramètres du serveur de publication](publisher-settings.md)  
   
 -   [Informations sur le serveur de publication, onglet Publications](publisher-information-publications.md)  
@@ -80,8 +72,6 @@ ms.locfileid: "52813964"
   
 -   [Abonnement, Historique de synchronisation &#40;Abonnement de fusion, SQL Server 2005 et version ultérieure&#41;](subscription-synchronization-history.md)  
   
--   [Abonnement, Historique de synchronisation &#40;Abonnement de fusion, SQL Server 2000&#41;](subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
-  
 -   [Abonnement, Historique du serveur de distribution vers l’Abonné &#40;Abonnement aux instantanés&#41;](subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
 -   [Agent de lecture du journal](log-reader-agent.md)  
@@ -95,8 +85,7 @@ ms.locfileid: "52813964"
 -   [Trier les colonnes](sort-columns.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrer le moniteur de réplication](monitor/start-the-replication-monitor.md)   
+ [Démarrer le Moniteur de réplication](monitor/start-the-replication-monitor.md)   
  [Surveillance de la réplication](monitoring-replication.md)   
- [Référence des propriétés &#40;réplication&#41;](properties-reference-replication.md)  
   
   

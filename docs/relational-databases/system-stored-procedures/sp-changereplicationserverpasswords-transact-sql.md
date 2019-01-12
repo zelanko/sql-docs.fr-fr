@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 073577731fba32e092307ebd7c86eb5904c38a05
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760232"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125709"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification  
   
- [ **@login** =] **'***connexion***'**  
+ [ **@login** =] **'**_connexion_**'**  
  Nom du compte Windows ou de la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cours de modification. *connexion* est **nvarchar (257)**, sans valeur par défaut  
   
- [ **@password** =] **'***mot de passe***'**  
+ [ **@password** =] **'**_mot de passe_**'**  
  Nouveau mot de passe à stocker pour spécifié *connexion*. *mot de passe* est **sysname**, sans valeur par défaut.  
   
 > [!NOTE]  
 >  Après avoir modifié un mot de passe de réplication, vous devez arrêter puis redémarrer chaque Agent qui utilise ce mot de passe afin que les modifications apportées prennent effet.  
   
- [ **@server** =] **'***server***»**  
+ [ **@server** =] **'**_server_**'**  
  Connexion serveur pour laquelle le mot de passe stocké est en cours de changement. *serveur* est **sysname**, et peut prendre l’une des valeurs suivantes :  
   
 |Value|Description|  

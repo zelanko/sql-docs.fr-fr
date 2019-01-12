@@ -18,12 +18,12 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa4b07c3a7c27546990f1b5a1a25fd4f7d0da83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eae9eeceec6d32ca616244f2ebd77f96d23e614
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725037"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124149"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_dropmessage [ @msgnum = ] message_number
  [  **@msgnum =** ] *message_number*  
  Numéro du message à supprimer. *message_number* doit être un message défini par l’utilisateur qui a un numéro de message supérieur à 50000. *message_number* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@lang =** ] **'***langage***'**  
+ [  **@lang =** ] **'**_langage_**'**  
  Langue du message à supprimer. Si **tous les** est spécifié, toutes les versions linguistiques de *message_number* sont supprimés. *langage* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -53,7 +53,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="result-sets"></a>Jeux de résultats  
  Aucun.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **sysadmin** et **serveradmin** rôles serveur fixes.  
   
 ## <a name="remarks"></a>Notes  
@@ -70,7 +70,7 @@ GO
 EXEC sp_dropmessage 50001;  
 ```  
   
-### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>B. Suppression d'un message défini par l'utilisateur qui comprend une version localisée  
+### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>b. Suppression d'un message défini par l'utilisateur qui comprend une version localisée  
  L'exemple suivant supprime un message défini par l'utilisateur (numéro `60000`) qui comprend une version localisée du message.  
   
 ```  

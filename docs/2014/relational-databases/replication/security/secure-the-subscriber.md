@@ -14,12 +14,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b15344c41bcfe8f43606683dc2e94f848bdb5923
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780081"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125424"
 ---
 # <a name="secure-the-subscriber"></a>Sécuriser l'abonné
   Les Agents de fusion et les Agents de distribution se connectent à l'Abonné. Ces connexions peuvent être effectuées dans le contexte d'un nom de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou d'un nom de connexion Windows. Il est important de fournir un nom de connexion approprié à ces agents tout en respectant le principe consistant à attribuer les droits nécessaires minimaux et à protéger aussi le stockage de tous les mots de passe. Pour des informations sur les autorisations requises pour chaque agent, consultez [Replication Agent Security Model](replication-agent-security-model.md).  
@@ -50,10 +50,10 @@ ms.locfileid: "52780081"
 > [!IMPORTANT]  
 >  Pour spécifier des informations de connexion, utilisez la procédure stockée [sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql). Vous pouvez également utiliser la page **Nom d'accès aux abonnements pouvant être mis à jour** de l'Assistant Nouvel abonnement qui appelle **sp_link_publication**. Dans certaines conditions, cette procédure stockée peut échouer si l'Abonné exécute [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Service Pack 1 (SP1) ou une version ultérieure, et que le serveur de publication exécute une version antérieure. Si la procédure stockée échoue dans ce scénario, mettez à niveau le serveur de publication vers [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] SP1 ou une version ultérieure.  
   
- Pour plus d’informations, consultez [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](../create-updatable-subscription-transactional-publication-transact-sql.md) et [Afficher et modifier les paramètres de sécurité de la réplication](view-and-modify-replication-security-settings.md).  
+ Pour plus d’informations, consultez [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](../publish/create-an-updatable-subscription-to-a-transactional-publication.md) et [Afficher et modifier les paramètres de sécurité de la réplication](view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  Le compte spécifié pour la connexion doit uniquement avoir l'autorisation d'insérer, de mettre à jour et de supprimer des données sur les vues créées par la réplication dans la base de données de publication. Il ne doit pas bénéficier d'autres autorisations. Octroyez des autorisations sur les vues de la base de données de publication qui sont mentionnées dans le panneau **syncobj_***\<Nombre_hexadécimal>* pour le compte que vous avez configuré pour chaque abonné.  
+>  Le compte spécifié pour la connexion doit uniquement avoir l'autorisation d'insérer, de mettre à jour et de supprimer des données sur les vues créées par la réplication dans la base de données de publication. Il ne doit pas bénéficier d'autres autorisations. Octroyez des autorisations sur les vues de la base de données de publication qui sont mentionnées dans le panneau **syncobj_**_\<Nombre_hexadécimal>_ pour le compte que vous avez configuré pour chaque abonné.  
   
 ## <a name="queued-updating-subscriptions"></a>Abonnements mis à jour en attente  
  Quand vous configurez des abonnements mis à jour en attente, il faut garder à l'esprit deux points relatifs à la sécurité :  
@@ -76,6 +76,6 @@ ms.locfileid: "52780081"
 ## <a name="see-also"></a>Voir aussi  
  [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Sécurité et protection &#40;réplication&#41;](security-and-protection-replication.md)  
+ [Sécurité de la réplication SQL Server](view-and-modify-replication-security-settings.md)  
   
   

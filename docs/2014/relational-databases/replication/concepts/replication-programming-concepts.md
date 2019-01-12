@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - replication [SQL Server], planning
@@ -14,12 +14,12 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3d66c7950a5d610a50ca6bce84f4b973c4ec9983
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789002"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129139"
 ---
 # <a name="replication-programming-concepts"></a>Concepts de programmation en matière de réplication
   Avant de développer une application qui utilise des fonctionnalités de réplication, vous devez effectuer les opérations de planification générales indiquées ci-dessous :  
@@ -81,9 +81,9 @@ ms.locfileid: "52789002"
   
  Les rubriques suivantes contiennent des informations sur la sécurité :  
   
--   [Sécurité et protection &#40;réplication&#41;](../security/security-and-protection-replication.md)  
+-   [Sécurité de la réplication SQL Server](../security/view-and-modify-replication-security-settings.md)  
   
--   [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+-   [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
 ## <a name="choosing-a-development-environment"></a>Choix d'un environnement de développement  
  Lorsque vous développez une application de réplication, trois environnements de développement de base doivent être pris en compte. Chaque environnement de développement a accès aux mêmes fonctionnalités de réplication, à quelques exceptions près. Il est possible de développer des applications de réplication dans chacun des environnements suivants.  

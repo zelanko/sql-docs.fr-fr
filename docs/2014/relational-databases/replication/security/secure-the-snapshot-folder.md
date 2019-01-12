@@ -12,12 +12,12 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb3aa18f17219f46bc5ce6f3d25af7d4bd29c4d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f3612a8b2006978a8098a406a6557d6c9f0f1f7f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753951"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127799"
 ---
 # <a name="secure-the-snapshot-folder"></a>Sécuriser le dossier d'instantanés
   Le dossier d'instantané est un répertoire qui stocke les fichiers d'instantanés ; il vous est recommandé de dédier ce dossier au stockage des instantanés. Accordez à l'Agent d'instantané l'autorisation d'écriture sur ce dossier, et assurez-vous que l'autorisation de lecture n'est accordée qu'au compte Windows qu'utilise l'Agent de fusion ou l'Agent de distribution lorsqu'il accède à ce dossier. Pour accéder à un dossier d'instantané situé sur un ordinateur distant, le compte Windows associé à l'Agent doit être un compte de domaine.  
@@ -54,7 +54,7 @@ ms.locfileid: "52753951"
  [Autres emplacements du dossier d’instantanés](../alternate-snapshot-folder-locations.md)   
  [Initialiser un abonnement avec un instantané](../initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Sécurité et protection &#40;Réplication&#41;](security-and-protection-replication.md)   
+ [Sécurité de la réplication SQL Server](view-and-modify-replication-security-settings.md)   
  [Transférer des instantanés via FTP](../transfer-snapshots-through-ftp.md)  
   
   

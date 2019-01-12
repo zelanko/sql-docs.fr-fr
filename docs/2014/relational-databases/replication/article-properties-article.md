@@ -14,12 +14,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c426781f52a513cca1e90e5f83eac7feab79fdaf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785221"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124989"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriétés de l’article - &lt;Article&gt;
   La boîte de dialogue **Propriétés de l'article** est accessible depuis l'Assistant Nouvelle publication et la boîte de dialogue **Propriétés de la publication** . Elle permet d'afficher et de définir les propriétés de tous les types d'articles. Certaines propriétés peuvent être définies uniquement lors de la création de la publication, et d'autres uniquement si la publication n'a pas d'abonnements actifs. Les propriétés qui ne peuvent pas être définies s'affichent en lecture seule.  
@@ -121,7 +121,7 @@ ms.locfileid: "52785221"
   
 ### <a name="resolver-tab"></a>Onglet Résolveur  
  **Utiliser le résolveur par défaut**  
- Si vous sélectionnez le résolveur par défaut, les conflits sont résolus en fonction de la priorité affectée à chaque abonné ou de la première modification écrite sur le serveur de publication, selon le type d'abonnement utilisé. Pour plus d’informations, consulter [Détecter et résoudre des conflits de réplication de fusion](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+ Si vous sélectionnez le résolveur par défaut, les conflits sont résolus en fonction de la priorité affectée à chaque abonné ou de la première modification écrite sur le serveur de publication, selon le type d'abonnement utilisé. Pour plus d’informations, consulter [Détecter et résoudre des conflits de réplication de fusion](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Utiliser un résolveur personnalisé (inscrit sur le serveur de distribution)**  
  Si vous décidez d'utiliser un résolveur d'article (fourni par [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou que vous avez écrit), vous devez sélectionner un résolveur dans la zone de liste. Pour plus d’informations, voir [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  

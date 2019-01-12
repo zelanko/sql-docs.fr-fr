@@ -12,26 +12,21 @@ ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19faa0690069d6c16be7591547f4a242ac2469fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805578"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128389"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>Exécuter des travaux de maintenance de réplication (SQL Server Management Studio)
   Les travaux de maintenance de la réplication sont les suivants :  
   
--   **Réinitialiser les abonnements présentant des erreurs de validation de données**  
-  
--   **Nettoyage de l'historique de l'agent : distribution**  
-  
--   **Actualisateur d'analyse de réplication pour la distribution.**  
-  
--   **Contrôle des agents de réplication**  
-  
--   **Nettoyage de la distribution : distribution**  
-  
+-   **Réinitialiser les abonnements présentant des erreurs de validation de données**
+-   **Nettoyage de l'historique de l'agent : distribution**
+-   **Actualisateur d'analyse de réplication pour la distribution.**
+-   **Contrôle des agents de réplication**
+-   **Nettoyage de la distribution : distribution**
 -   **Nettoyage de l'abonnement expiré**  
   
  Démarrez et arrêtez ces travaux à partir du dossier **Travaux** de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et à partir de l'onglet **Travaux communs** du moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../monitor/start-the-replication-monitor.md). Affichez et modifiez les propriétés de chaque travail dans la boîte de dialogue **Propriétés du travail - \<Travail>**, disponible à partir du même dossier et du même onglet.  
@@ -74,7 +69,7 @@ ms.locfileid: "52805578"
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Administration de l’Agent de réplication](../agents/replication-agent-administration.md)  
   
   

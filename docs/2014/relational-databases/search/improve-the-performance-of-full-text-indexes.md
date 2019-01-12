@@ -17,12 +17,12 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a93abdc2c20b2aabc9da09ce875817ab92789b8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 88629dc1457d148b4a8e01537e35f2f5ccfbbdb3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350864"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128611"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
   Les performances de l'indexation de texte intégral et des requêtes de texte intégral sont influencées par les ressources matérielles telles que la mémoire, la vitesse du disque et de l'UC ainsi que l'architecture de l'ordinateur.  
@@ -128,10 +128,10 @@ ms.locfileid: "53350864"
   
 |Plateforme|Estimation des besoins de mémoire de fdhost.exe en Mo -*F*<sup>1</sup>|Formule de calcul de mémoire maximum du serveur -*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= minimum (** *T* **,** 2000 **)-*`F`* -**  500|  
-|x64|*F* **=** *nombre de plages d’analyse* **\*** 10 **\*** 8|*M* **=** *T* **-** *F* **-** 500|  
+|x86|_F_ **=** _nombre de plages d’analyse_ **&#42;** 50|_M_ **= minimum (** _T_ **,** 2000 **)-*`F`* -**  500|  
+|x64|_F_ **=** _nombre de plages d’analyse_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup> si plusieurs alimentations complètes sont en cours, calculez les besoins en mémoire de chaque fdhost.exe séparément, en tant que *F1*, *F2*, et ainsi de suite. Puis calculez *M* comme *T ***-** sigma **(***F*je**) **.  
+ <sup>1</sup> si plusieurs alimentations complètes sont en cours, calculez les besoins en mémoire de chaque fdhost.exe séparément, en tant que *F1*, *F2*, et ainsi de suite. Ensuite, calculez *M* comme _T_**-** sigma **(**_F_i **)**.  
   
  <sup>2</sup> 500 Mo est une estimation de la mémoire requise par d’autres processus dans le système. Si le système effectue un travail supplémentaire, augmentez cette valeur en conséquence.  
   

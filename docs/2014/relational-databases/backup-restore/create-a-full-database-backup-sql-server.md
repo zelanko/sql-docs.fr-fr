@@ -15,12 +15,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e1daefbc5625aaf034a9be9218a59daf5286cc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f432950cadf2b30b84dc00fd900737bfe21f81b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094022"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124889"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Créer une sauvegarde complète de base de données (SQL Server)
   Cette rubrique explique comment créer une sauvegarde de base de données complète dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de PowerShell.  
@@ -69,7 +69,7 @@ ms.locfileid: "48094022"
 ###  <a name="Security"></a> Sécurité  
  TRUSTWORTHY a la valeur OFF pour une sauvegarde de base de données. Pour plus d’informations sur la façon d’affecter la valeur ON à TRUSTWORTHY, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
- À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] le `PASSWORD` et `MEDIAPASSWORD` options sont suspendues pour la création de sauvegardes. Vous pouvez toujours restaurer les sauvegardes créées avec des mots de passe.  
+ À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les options `PASSWORD` et `MEDIAPASSWORD` sont supprimées pour la création de sauvegardes. Vous pouvez toujours restaurer les sauvegardes créées avec des mots de passe.  
   
 ####  <a name="Permissions"></a> Permissions  
  Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** .  
@@ -191,7 +191,7 @@ ms.locfileid: "48094022"
     |Option|Description|  
     |------------|-----------------|  
     |*database*|Base de données à sauvegarder|  
-    |*unité_sauvegarde* [ **,**...*n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
+    |*unité_sauvegarde* [ **,**...*n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> { DISK &#124; TAPE } **=**_nom_unité_sauvegarde_physique_<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
     |WITH *options_with* [ **,**...*o* ]|Spécifie éventuellement une ou plusieurs options supplémentaires, *o*. Pour obtenir des informations de base sur les options, consultez l'étape 2.|  
   
 2.  Spécifiez éventuellement une ou plusieurs options WITH. Quelques options WITH de base sont décrites ici. Pour plus d’informations sur toutes les options WITH, consultez [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
@@ -204,10 +204,10 @@ ms.locfileid: "48094022"
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          Dans SQL Server 2014 ou les versions ultérieures, spécifiez l'algorithme de chiffrement à utiliser, ainsi que le certificat ou la clé asymétrique pour sécuriser le chiffrement.  
   
-         DESCRIPTION **=** { **'*`text`*'** | **@*** variable_texte* }  
+         DESCRIPTION **=** { **'*`text`*'** | **@**_text_ variable_ }  
          Spécifie le texte au format libre servant à décrire le jeu de sauvegarde. La chaîne peut compter jusqu'à 255 caractères.  
   
-         NAME **=** { *backup_set_name* | **@***backup_set_name_var* }  
+         NAME **=** { *nom_jeu_sauvegarde* | **@**_var_nom_jeu_sauvegarde_ }  
          Spécifie le nom du jeu de sauvegarde. Les noms peuvent contenir jusqu'à 128 caractères. Si l'option NAME n'est pas spécifiée, le nom reste vide.  
   
     -   Options WITH de base relatives au jeu de sauvegarde :  
@@ -216,7 +216,7 @@ ms.locfileid: "48094022"
   
          Une autre méthode pour formater le support de sauvegarde consiste à utiliser l'option FORMAT :  
   
-         FORMAT [ **,** MEDIANAME**=** { *nom_support* | **@***variable_nom_support* } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@***variable_texte* } ]  
+         FORMAT [ **,** MEDIANAME**=** { *nom_support* | **@**_variable_nom_support_ } ] [ **,** MEDIADESCRIPTION **=** { *texte* | **@**_variable_texte_ } ]  
          Utilisez la clause FORMAT si vous utilisez le support pour la première fois ou si vous souhaitez écraser toutes les données existantes. Assignez éventuellement un nom et une description au nouveau support.  
   
         > [!IMPORTANT]  
@@ -238,7 +238,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### <a name="b-backing-up-to-a-tape-device"></a>B. Sauvegarde sur un périphérique à bandes  
+#### <a name="b-backing-up-to-a-tape-device"></a>b. Sauvegarde sur un périphérique à bandes  
  L'exemple suivant sauvegarde la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]complète sur bande, en ajoutant la sauvegarde aux sauvegardes précédentes.  
   
 ```tsql  
@@ -272,7 +272,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
   
-1.  Utilisez le `Backup-SqlDatabase` applet de commande. Pour indiquer explicitement qu’il s’agit d’une sauvegarde complète de base de données, spécifiez la **- BackupAction** paramètre avec sa valeur par défaut, `Database`. Ce paramètre est facultatif pour les sauvegardes complètes de base de données.  
+1.  Utilisez l'applet de commande `Backup-SqlDatabase`. Pour indiquer explicitement qu’il s’agit d’une sauvegarde complète de base de données, spécifiez la **- BackupAction** paramètre avec sa valeur par défaut, `Database`. Ce paramètre est facultatif pour les sauvegardes complètes de base de données.  
   
      L'exemple suivant crée une sauvegarde complète de la base de données `MyDB` à l'emplacement de sauvegarde par défaut de l'instance de serveur `Computer\Instance`. Cet exemple spécifie, de manière facultative, `-BackupAction Database`.  
   

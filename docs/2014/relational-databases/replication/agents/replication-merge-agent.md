@@ -15,12 +15,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d3b323be70911881b99f055503d12bb6b79988d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762821"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129539"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   L'Agent de fusion de réplication est un fichier exécutable d'utilitaire qui applique l'instantané initial contenu dans les tables de base de données aux Abonnés. Il fusionne également les modifications de données incrémentielles ayant eu lieu sur le serveur de publication après la création de l'instantané initial, puis harmonise les conflits soit en fonction des règles que vous configurez, soit à l'aide d'un programme de résolution personnalisé que vous créez.  
@@ -109,55 +109,55 @@ ms.locfileid: "52762821"
  **-?**  
  Imprime tous les paramètres disponibles.  
   
- **-Publisher** *server_name*[**\\***instance_name*]  
- Nom du serveur de publication. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez *server_name***\\***instance_name* pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ Nom du serveur de publication. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_**\\**_instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** _publisher_database_  
  Nom de la base de données du serveur de publication.  
   
- **-Publication** *publication*  
+ **-Publication** _publication_  
  Nom de la publication. Ce paramètre est uniquement valide si la publication est configurée de telle sorte qu'un instantané soit toujours disponible pour les nouveaux abonnements ou les abonnements réinitialisés.  
   
- **-Subscriber** *server_name*[**\\***instance_name*]  
- Nom de l'Abonné. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez *server_name***\\***instance_name* pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
+ **-Subscriber** _server_name_[**\\**_instance_name_]  
+ Nom de l'Abonné. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_**\\**_instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
   
- **-SubscriberDB** *subscriber_database*  
+ **-SubscriberDB** _subscriber_database_  
  Nom de la base de données de l'Abonné.  
   
- **-AltSnapshotFolder** *alt_snapshot_folder_path*  
+ **-AltSnapshotFolder** _alt_snapshot_folder_path_  
  Chemin d'accès au dossier contenant l'instantané initial pour un abonnement.  
   
  **-Continuous**  
  Spécifie si l'agent tente d'interroger les transactions répliquées de manière continue. S'il est spécifié, l'Agent interroge les transactions répliquées de la source à des fréquences d'interrogation définies, même s'il n'y a pas de transactions en attente.  
   
- **-DestThreads** *number_of_destination_threads*  
+ **-DestThreads** _number_of_destination_threads_  
  Spécifie le nombre de threads de destination utilisés par l'Agent de fusion pour appliquer les modifications à la destination. La destination est le serveur de publication au cours du téléchargement ascendant et l'Abonné au cours du téléchargement descendant. La valeur par défaut est 4.  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  Chemin d'accès du fichier de définition d'agent. Un fichier de définition d'agent contient des arguments d'invite de commandes pour l'agent. Le contenu du fichier est analysé en tant que fichier exécutable. Utilisez des guillemets doubles (") pour spécifier des valeurs d'argument qui contiennent des caractères arbitraires.  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
- Nom du serveur de distribution. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez *server_name***\\***instance_name* pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Pour la distribution du serveur de distribution (transmission de type push), le nom a comme valeur par défaut l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur l'ordinateur local.  
+ **-Distributor** _server_name_[**\\**_instance_name_]  
+ Nom du serveur de distribution. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_**\\**_instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Pour la distribution du serveur de distribution (transmission de type push), le nom a comme valeur par défaut l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur l'ordinateur local.  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** _distributor_login_  
  Nom de connexion du serveur de distribution.  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  Mot de passe du serveur de distribution.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  Spécifie le mode de sécurité du serveur de distribution. La valeur **0** indique le mode d'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (par défaut), tandis que la valeur **1** indique le mode d'authentification Windows.  
   
- **-DownloadGenerationsPerBatch** *download_generations_per_batch*  
+ **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
  Nombre de générations à traiter dans un lot unique lors du téléchargement des modifications du serveur de publication vers l'Abonné. Une génération est définie comme un groupe logique de modifications par article. La valeur par défaut pour un lien de communication fiable est 100. La valeur par défaut pour un lien de communication non fiable est 10.  
   
- **-DownloadReadChangesPerBatch** *download_read_changes_per_batch*  
+ **-DownloadReadChangesPerBatch** _download_read_changes_per_batch_  
  Nombre de modifications à lire dans un lot unique lors du téléchargement des modifications du serveur de publication vers l'Abonné. La valeur par défaut est 100.  
   
- **-DownloadWriteChangesPerBatch** *download_write_changes_per_batch*  
+ **-DownloadWriteChangesPerBatch** _download_write_changes_per_batch_  
  Nombre de modifications à appliquer dans un lot unique lors du téléchargement des modifications du serveur de publication vers l'Abonné. La valeur par défaut est 100.  
   
- **-DynamicSnapshotLocation** *dynamic_snapshot_location*  
+ **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  Emplacement des fichiers d'instantanés de données filtrées lorsque la publication utilise des filtres de lignes paramétrables.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
@@ -172,7 +172,7 @@ ms.locfileid: "52762821"
  > [!NOTE]  
  >  Un certificat SSL valide est défini avec le nom de domaine complet de l’instance SQL Server. Pour que l’agent puisse se connecter lorsque vous définissez EncryptionLevel sur 2, créez un alias sur l’instance locale de SQL Server. Le paramètre « Nom de l’alias » doit correspondre au nom du serveur, et le paramètre « Serveur » doit être défini sur le nom complet de l’instance SQL Server.
   
- Pour plus d’informations, consultez [Vue d’ensemble de la sécurité &#40;réplication&#41;](../security/security-overview-replication.md).  
+ Pour plus d’informations, consultez [sécurité de réplication SQL Server](../security/view-and-modify-replication-security-settings.md).  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
@@ -205,16 +205,16 @@ ms.locfileid: "52762821"
 |**1**|Force la convergence pour toutes les générations.|  
 |**2**|Force la convergence pour toutes les générations et corrige les lignages endommagés. Lorsque vous spécifiez cette valeur, indiquez à quel niveau les lignages doivent être corrigés : le serveur de publication, l'Abonné ou bien les deux.|  
   
- **-FtpAddress** *ftp_address*  
+ **-FtpAddress** _ftp_address_  
  Adresse réseau du service FTP du serveur de distribution. S'il n'est pas spécifié, **Distributor** est utilisé.  
   
- **-FtpPassword** *ftp_password*  
+ **-FtpPassword** _ftp_password_  
  Mot de passe de l'utilisateur utilisé pour la connexion au service FTP.  
   
- **-FtpPort** *ftp_port*  
+ **-FtpPort** _ftp_port_  
  Numéro de port du service FTP du serveur de distribution. S'il n'est pas spécifié, le numéro de port par défaut pour le service FTP (21) est utilisé.  
   
- **-FtpUserName** *ftp_user_name*  
+ **-FtpUserName** _ftp_user_name_  
  Nom d'utilisateur utilisé pour la connexion au service FTP. S'il n'est pas spécifié, anonymous est utilisé.  
   
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
@@ -227,16 +227,16 @@ ms.locfileid: "52762821"
 |**2**|Valeur par défaut. Journalise les détails incrémentiels de session à chaque état de session et les détails de session au niveau de l'article, y compris le pourcentage accompli, ainsi que le dernier message d'état de l'agent, les derniers détails de session et les erreurs éventuelles. Les messages de l'état de l'agent sont également journalisés.|  
 |**3**|Identique à **-HistoryVerboseLevel** = **2**, à la différence qu'un nombre plus important de messages de progression de l'agent sont journalisés.|  
   
- **-Hostname** *host_name*  
+ **-Hostname** _host_name_  
  Nom de réseau de l'ordinateur local. La valeur par défaut est le nom de l'ordinateur local.  
   
  **-InteractiveResolution** [**0**|**1**]  
  Spécifie si la résolution de conflit interactive est utilisée lorsqu'un conflit se produit pendant la synchronisation. La valeur par défaut est **0**, indiquant que la résolution de conflit interactive n'est pas utilisée.  
   
- **-InternetLogin** *internet_login*  
+ **-InternetLogin** _internet_login_  
  Spécifie le nom de connexion utilisé lors de la connexion à une DLL ISAPI d'écoute de réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui nécessite une authentification.  
   
- **-InternetPassword** *internet_password*  
+ **-InternetPassword** _internet_password_  
  Spécifie le mot de passe utilisé lors de la connexion à une DLL ISAPI d'écoute de réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui nécessite une authentification.  
   
  **-InternetProxyLogin**  *internet_proxy_login*  
@@ -251,36 +251,36 @@ ms.locfileid: "52762821"
  **-InternetSecurityMode** [**0**|**1**]  
  Spécifie le mode de sécurité IIS utilisé lors de la connexion au serveur Web pendant la synchronisation Web. La valeur **0** indique l'authentification de base, tandis que la valeur **1** indique l'authentification intégrée Windows (par défaut).  
   
- **-InternetTimeout** *internet_timeout*  
+ **-InternetTimeout** _internet_timeout_  
  Nombre de secondes avant l'expiration d'une connexion à la DLL ISAPI d'écoute de réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- **-InternetURL** *internet_url*  
+ **-InternetURL** _internet_url_  
  Spécifie l'URL utilisée pour la connexion à la DLL ISAPI d'écoute de réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Cette propriété doit être spécifiée.  
   
- **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
+ **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  Durée en secondes au terme de laquelle le thread d'historique doit vérifier si l'une des connexions existantes attend une réponse du serveur. Vous pouvez réduire cette valeur pour éviter que l'agent de vérification ne marque l'Agent de fusion comme suspect lors de l'exécution d'un lot de longue durée. La valeur par défaut est **300** secondes.  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** _login_time_out_seconds_  
  Nombre de secondes avant l'expiration de la connexion. La valeur par défaut est **15** secondes.  
   
- **-MakeGenerationInterval** *make_generation_interval_seconds*  
+ **-MakeGenerationInterval** _make_generation_interval_seconds_  
  Délai en secondes entre les créations des générations, ou lots de modifications, à télécharger vers le client. La valeur par défaut est **1** seconde.  
   
  Makegeneration est le processus qui prépare les modifications du serveur de publication à télécharger vers les abonnés et peut constituer un goulot d'étranglement lors des téléchargements. Si le processus makegeneration s'est déjà exécuté dans l'intervalle spécifié par **-MakeGenerationInterval**, le processus est ignoré pour la session de synchronisation actuelle. Cela peut profiter à la concurrence de synchronisation et s'avère particulièrement utile si les abonnés ne pensent pas télécharger les modifications.  
   
- **-MaxBcpThreads** *number_of_threads*  
+ **-MaxBcpThreads** _number_of_threads_  
  Spécifie le nombre d'opérations de copie en bloc pouvant être effectuées en parallèle. Le nombre maximal de threads et de connexions ODBC pouvant exister simultanément est, en privilégiant la valeur la plus petite, **MaxBcpThreads** ou le nombre de demandes de copie en bloc qui apparaissent dans la table système **sysmergeschemachange** dans la base de données de publication. **MaxBcpThreads** doit avoir une valeur supérieure à 0 et n'a aucune limite supérieure codée en dur. La valeur par défaut est **1**.  
   
- **-MaxDownloadChanges** *number_of_download_changes*  
+ **-MaxDownloadChanges** _number_of_download_changes_  
  Spécifie le nombre maximal de lignes modifiées qui doivent être téléchargées du serveur de publication vers l'Abonné. Le nombre de lignes téléchargées peut être supérieur au nombre maximal spécifié. Cela est dû au fait que des générations complètes sont traitées et que des threads de destination parallèles peuvent s'exécuter, chacun traitant au moins 100 modifications lors du premier passage. Par défaut, toutes les modifications qui sont prêtes à être téléchargées sont envoyées.  
   
- **-MaxUploadChanges** *number_of_upload_changes*  
+ **-MaxUploadChanges** _number_of_upload_changes_  
  Spécifie le nombre maximal de lignes modifiées qui doivent être téléchargées de l'Abonné au serveur de publication. Le nombre de lignes téléchargées peut être supérieur au nombre maximal spécifié. Cela est dû au fait que des générations complètes sont traitées et que des threads de destination parallèles peuvent s'exécuter, chacun traitant au moins 100 modifications lors du premier passage. Par défaut, toutes les modifications qui sont prêtes à être téléchargées sont envoyées.  
   
  **-MetadataRetentionCleanup** [**0**|**1**]  
  Spécifie si des métadonnées sont supprimées de [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql), [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql), [MSmerge_past_partition_mappings](/sql/relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql)et de [MSmerge_current_partition_mappings](/sql/relational-databases/system-tables/msmerge-current-partition-mappings) en fonction de la période de rétention de publication. La valeur par défaut est **1**, indiquant que le nettoyage doit se produire. La valeur **0** indique que le nettoyage ne doit pas avoir lieu automatiquement.  
   
- **-Output** *output_path_and_file_name*  
+ **-Output** _output_path_and_file_name_  
  Chemin d'accès du fichier de sortie de l'agent. Si le nom du fichier n'est pas spécifié, la sortie est envoyée à la console. Si le nom de fichier spécifié existe, la sortie est ajoutée au fichier.  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
@@ -292,34 +292,34 @@ ms.locfileid: "52762821"
  **-PacketSize**  
  Taille du paquet en octets. La valeur par défaut est 4 096 octets.  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** _polling_interval_  
  Fréquence, en secondes, le serveur de publication ou l'Abonné est interrogé pour obtenir les modifications de données. La valeur par défaut est 60 secondes.  
   
- **-ProfileName** *profile_name*  
+ **-ProfileName** _profile_name_  
  Spécifie un profil d'agent à utiliser pour les paramètres d'agent. Si **ProfileName** a la valeur NULL, le profil d'agent est désactivé. Si **ProfileName** n'est pas spécifié, le profil par défaut du type d'agent est utilisé. Pour plus d’informations, consultez [Profils de l’Agent de réplication](replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
+ **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
  Spécifie l'instance du partenaire de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participant à une session de mise en miroir de bases de données avec la base de données de publication. Pour plus d’informations, consultez [Mise en miroir de bases de données et réplication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
- **-PublisherLogin** *publisher_login*  
+ **-PublisherLogin** _publisher_login_  
  Nom de connexion du serveur de publication. Si **PublisherSecurityMode** a la valeur **0** (pour l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), ce paramètre doit être spécifié.  
   
- **-PublisherPassword** *publisher_password*  
+ **-PublisherPassword** _publisher_password_  
  Mot de passe du serveur de publication. Si **PublisherSecurityMode** a la valeur **0** (pour l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), ce paramètre doit être spécifié.  
   
  **-PublisherSecurityMode** [**0**|**1**]  
  Spécifie le mode de sécurité du serveur de publication. La valeur **0** indique le mode d'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (par défaut), tandis que la valeur **1** indique le mode d'authentification Windows.  
   
- **-QueryTimeOut** *query_time_out_seconds*  
+ **-QueryTimeOut** _query_time_out_seconds_  
  Nombre de secondes avant l'expiration de la requête. La valeur par défaut est 300 secondes. L'Agent de fusion utilise également la valeur de `QueryTimeout` pour déterminer combien de temps il doit attendre la génération d'un instantané partitionné lorsque cette valeur est supérieure à 1 800.  
   
- **-SrcThreads** *number_of_source_threads*  
+ **-SrcThreads** _number_of_source_threads_  
  Spécifie le nombre de threads source utilisés par l'Agent de fusion pour énumérer les modifications de la source. La source est l'Abonné au cours du téléchargement ascendant et le serveur de publication au cours du téléchargement descendant. La valeur par défaut est **3**.  
   
- **-StartQueueTimeout** *start_queue_timeout_seconds*  
+ **-StartQueueTimeout** _start_queue_timeout_seconds_  
  Durée maximale en secondes de l'attente de l'Agent de fusion lorsque le nombre de processus de fusion simultanés en cours d'exécution a atteint la limite définie par la propriété **@max_concurrent_merge** de **sp_addmergepublication**. Si le nombre maximal de secondes est atteint et que l'Agent de fusion attend toujours, celui-ci se ferme. La valeur 0 signifie que l'Agent attend indéfiniment, bien qu'il soit possible de l'annuler.  
   
- **-SubscriberDatabasePath** *subscriber_database_path*  
+ **-SubscriberDatabasePath** _subscriber_database_path_  
  Chemin d'accès à la base de données Jet (fichier .mdb) si **SubscriberType** a la valeur **2** (autorise une connexion à une base de données Jet sans nom de la source de données ODBC).  
   
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
@@ -335,10 +335,10 @@ ms.locfileid: "52762821"
 > [!NOTE]  
 >  Lorsque vous utilisez les valeurs **2** et **3**, le chemin d'accès à la base de données pour l'Abonné doit être spécifié dans l'option **SubscriberDatabasePath** .  
   
- **-SubscriberLogin** *subscriber_login*  
+ **-SubscriberLogin** _subscriber_login_  
  Nom de connexion de l'Abonné. Si **SubscriberSecurityMode** a la valeur **0** (pour l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), ce paramètre doit être spécifié.  
   
- **-SubscriberPassword** *subscriber_password*  
+ **-SubscriberPassword** _subscriber_password_  
  Mot de passe de l'Abonné. Si **SubscriberSecurityMode** a la valeur **0** (pour l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), ce paramètre doit être spécifié.  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
@@ -356,13 +356,13 @@ ms.locfileid: "52762821"
  **-SyncToAlternate** [ **0|1**]  
  Spécifie si l'Agent de fusion se synchronise avec un Abonné ou un autre serveur de publication. La valeur **1** indique qu'il s'agit d'un autre serveur de publication. La valeur par défaut est **0**.  
   
- **-UploadGenerationsPerBatch** *upload_generations_per_batch*  
+ **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  Nombre de générations à traiter dans un lot unique lors du téléchargement des modifications de l'Abonné au serveur de publication. Une génération est définie comme un groupe logique de modifications par article. La valeur par défaut pour un lien de communication fiable est **100**. La valeur par défaut pour un lien de communication non fiable est **1**.  
   
- **-UploadReadChangesPerBatch** *upload_read_changes_per_batch*  
+ **-UploadReadChangesPerBatch** _upload_read_changes_per_batch_  
  Nombre de modifications à lire dans un lot unique lors du téléchargement des modifications de l'Abonné au serveur de publication. La valeur par défaut est **100**.  
   
- **-UploadWriteChangesPerBatch** *upload_write_changes_per_batch*  
+ **-UploadWriteChangesPerBatch** _upload_write_changes_per_batch_  
  Nombre de modifications à appliquer dans un lot unique lors du téléchargement des modifications de l'Abonné au serveur de publication. La valeur par défaut est **100**.  
   
  **-UseInprocLoader**  
@@ -379,9 +379,9 @@ ms.locfileid: "52762821"
 |**3**|Validation du nombre de lignes et de la somme de contrôle binaire.|  
   
 > [!NOTE]  
->  Une validation utilisant la somme de contrôle binaire ou la somme de contrôle peut signaler de façon incorrecte un échec si les types de données sont différents entre l'Abonné et le serveur de publication. Pour plus d’informations, consultez la section « Considérations sur la validation des données » dans la rubrique [Valider des données répliquées](../validate-replicated-data.md).  
+>  Une validation utilisant la somme de contrôle binaire ou la somme de contrôle peut signaler de façon incorrecte un échec si les types de données sont différents entre l'Abonné et le serveur de publication. Pour plus d’informations, consultez la section « Considérations sur la validation des données » dans la rubrique [Valider des données répliquées](../validate-data-at-the-subscriber.md).  
   
- **-ValidateInterval** *validate_interval*  
+ **-ValidateInterval** _validate_interval_  
  Fréquence, en minutes, de validation de l'abonnement en mode continu. La valeur par défaut est **60** minutes.  
   
 ## <a name="remarks"></a>Notes  

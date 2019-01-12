@@ -23,15 +23,15 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 13466b4d9d5cc497830906f144e95f044442e318
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197309"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129889"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Jeux de supports, familles de supports et jeux de sauvegarde (SQL Server)
-  Cette rubrique présente la terminologie de base des supports de sauvegarde propre aux sauvegardes et restaurations dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette rubrique s'adresse aux lecteurs qui font leurs premiers pas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette rubrique décrit le format utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les supports de sauvegarde, la correspondance entre le support de sauvegarde et les unités de sauvegarde, l'organisation des sauvegardes sur le support de sauvegarde, et plusieurs considérations relatives aux jeux de supports et aux familles de supports. La rubrique décrit également les étapes de l'initialisation ou la mise en forme du support de sauvegarde avant de l'utiliser pour la première fois ou de remplacer un jeu de supports ancien par un nouveau, comment remplacer d'anciens jeux de sauvegarde dans un jeu de supports, et comment ajouter de nouveaux jeux de sauvegarde à un jeu de supports.  
+  Cette rubrique présente la terminologie de base des supports de sauvegarde propre aux sauvegardes et restaurations dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette rubrique s'adresse aux lecteurs qui font leurs premiers pas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette rubrique décrit le format utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les supports de sauvegarde, la correspondance entre le support de sauvegarde et les unités de sauvegarde, l'organisation des sauvegardes sur le support de sauvegarde, et plusieurs considérations relatives aux jeux de supports et aux familles de supports. La rubrique décrit également les étapes de l'initialisation ou la mise en forme du support de sauvegarde avant de l'utiliser pour la première fois ou de remplacer un jeu de supports ancien par un nouveau, comment remplacer d'anciens jeux de sauvegarde dans un jeu de supports, et comment ajouter de nouveaux jeux de sauvegarde à un jeu de supports.  
   
 > [!NOTE]  
 >  Pour plus d’informations sur la sauvegarde de SQL Server pour le service de stockage d’objets Blob Windows Azure, consultez, [Sauvegarde et restauration SQL Server avec le service de stockage d'objets blob Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "48197309"
   
   
 ##  <a name="OvMediaSetsFamiliesBackupSets"></a> Vue d’ensemble des jeux de supports, familles de supports et jeux de sauvegarde  
- Les sauvegardes d'un ou de plusieurs supports de sauvegarde constituent un seul jeu de supports. Un *support de sauvegarde* est un ensemble ordonné de *supports de sauvegarde*, de bandes, de fichiers ou d'objets blob Windows Azure auxquels une ou plusieurs opérations ont été appliquées en utilisant un type et un nombre fixe d'unités de sauvegarde. Un support de sauvegarde donné utilise les lecteurs de bande, ou les lecteurs de disques ou les objets blob Windows Azure, mais pas une combinaison des deux ou plus. Par exemple, les unités de sauvegarde associées à un support de sauvegarde peuvent être les trois lecteurs de bandes `\\.\TAPE0`, `\\.\TAPE1`et `\\.\TAPE2`. Ce support de sauvegarde contient uniquement des bandes, en commençant avec au minimum trois bandes (une par lecteur). Le type et le nombre d'unités de sauvegarde sont établis lors de la création d'un support de sauvegarde ; il n'est pas possible de les modifier. Cependant, si nécessaire, il est possible de remplacer entre les opérations de sauvegarde et de restauration une unité donnée par une unité du même type.  
+ Les sauvegardes d'un ou de plusieurs supports de sauvegarde constituent un seul jeu de supports. Un *support de sauvegarde* est un ensemble ordonné de *supports de sauvegarde*, de bandes, de fichiers ou d'objets blob Windows Azure auxquels une ou plusieurs opérations ont été appliquées en utilisant un type et un nombre fixe d'unités de sauvegarde. Un support de sauvegarde donné utilise les lecteurs de bande, ou les lecteurs de disques ou les objets blob Windows Azure, mais pas une combinaison des deux ou plus. Par exemple, les unités de sauvegarde associées à un support de sauvegarde peuvent être les trois lecteurs de bandes `\\.\TAPE0`, `\\.\TAPE1`et `\\.\TAPE2`. Ce support de sauvegarde contient uniquement des bandes, en commençant avec au minimum trois bandes (une par lecteur). Le type et le nombre d'unités de sauvegarde sont établis lors de la création d'un support de sauvegarde ; il n'est pas possible de les modifier. Cependant, si nécessaire, il est possible de remplacer entre les opérations de sauvegarde et de restauration une unité donnée par une unité du même type.  
   
  Un jeu de supports est créé sur le support de sauvegarde en formatant le support au cours d'une opération de sauvegarde. Pour plus d'informations, consultez [Création d'un jeu de supports](#CreatingMediaSet), plus loin dans cette rubrique. Après le formatage, chaque fichier ou bande contient un en-tête de support pour le jeu de supports et est prêt à recevoir le contenu de la sauvegarde. Lorsque l'en-tête est en place, l'opération de sauvegarde se poursuit pour sauvegarder les données spécifiées sur le support de sauvegarde de toutes les unités de sauvegarde spécifiées pour l'opération.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48197309"
 #### <a name="the-media-header"></a>En-tête de support  
  Chaque volume de support de sauvegarde (fichier sur disque ou bande) contient un en-tête de support créé par la première opération de sauvegarde qui utilise la bande (ou le disque). Cet en-tête reste intact jusqu'à ce que le support soit reformaté.  
   
- L'en-tête de support contient toutes les informations indispensables à l'identification du support (fichier sur disque ou bande) et son emplacement dans la famille de supports à laquelle il appartient. Les informations indiquent les éléments suivants :  
+ L'en-tête de support contient toutes les informations indispensables à l'identification du support (fichier sur disque ou bande) et son emplacement dans la famille de supports à laquelle il appartient. Les informations indiquent les éléments suivants :  
   
 -   Nom du support.  
   
@@ -99,14 +99,14 @@ ms.locfileid: "48197309"
   
 -   Date et heure de création de l'étiquette.  
   
--   Nombre de miroirs dans le jeu (1 à 4) ; 1 indique une unité non mise en miroir.  
+-   Nombre de miroirs dans le jeu (1 à 4) ; 1 indique une unité non mise en miroir.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] peut traiter des supports formatés par des versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]antérieures.  
   
 ### <a name="backup-sets"></a>Jeux de sauvegarde  
  Une sauvegarde réussie ajoute un seul *jeu de sauvegarde* au jeu de supports. Le jeu de sauvegarde est décrit selon le support de sauvegarde auquel appartient la sauvegarde. Si le support de sauvegarde se compose d'une seule famille de supports, celle-ci contient tout le jeu de sauvegarde. Si le support de sauvegarde se compose de plusieurs familles de supports, le jeu de sauvegarde est réparti entre elles. Sur chaque support, le jeu de sauvegarde contient un en-tête qui le décrit.  
   
- L’exemple suivant montre un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction qui crée un jeu de supports nommé `MyAdvWorks_MediaSet_1` pour le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] à l’aide de trois lecteurs de bandes comme unités de sauvegarde de base de données :  
+ L'exemple suivant illustre une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui crée un support de sauvegarde nommé `MyAdvWorks_MediaSet_1` pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en utilisant trois lecteurs de bandes comme unités de sauvegarde :  
   
 ```  
 BACKUP DATABASE AdventureWorks2012  
@@ -140,7 +140,7 @@ WITH
   
  ![Deuxième jeu de sauvegarde réparti sur 3 bandes de supports de sauvegarde](../../database-engine/media/bnr-mediaset-appendedto.gif "Deuxième jeu de sauvegarde réparti sur 3 bandes de supports de sauvegarde")  
   
- Au cours de la restauration de sauvegardes, vous pouvez utiliser l'option FILE pour spécifier les sauvegardes à utiliser. L’exemple suivant illustre l’utilisation des clauses FILE **=***numéro_fichier_jeu_sauvegardes* lors de la restauration d’une sauvegarde complète de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] suivie d’une sauvegarde différentielle sur le même jeu de supports. Le jeu de supports fait appel à trois bandes de sauvegardes qui figurent sur les lecteurs de bande `\\.\tape0`, `tape1`, et `tape2`.  
+ Au cours de la restauration de sauvegardes, vous pouvez utiliser l'option FILE pour spécifier les sauvegardes à utiliser. L’exemple suivant illustre l’utilisation des clauses FILE **=**_backup_set_file_number_ lors de la restauration d’une sauvegarde complète de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] suivie d’une sauvegarde différentielle sur le même jeu de supports. Le jeu de supports fait appel à trois bandes de sauvegardes qui figurent sur les lecteurs de bande `\\.\tape0`, `tape1`, et `tape2`.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
@@ -219,7 +219,7 @@ GO
  Pour les en-têtes de bande, il peut être judicieux de les laisser en place. Pour les supports de sauvegarde sur disque, seuls les fichiers utilisés par les unités de sauvegarde spécifiées dans l'opération de sauvegarde sont remplacés. Les autres fichiers du disque ne sont pas concernés. Lors du remplacement des sauvegardes, l'en-tête de support existant est conservé et la nouvelle sauvegarde est créée comme étant la première sauvegarde sur l'unité de sauvegarde. S'il n'existe pas d'en-tête, un en-tête de support valide avec un nom et une description de support est automatiquement écrit. Si l'en-tête de support existant n'est pas valide, l'opération de sauvegarde s'arrête. Si le support est vide, le nouvel en-tête de support est généré avec les options éventuelles MEDIANAME, MEDIAPASSWORD et MEDIADESCRIPTION.  
   
 > [!IMPORTANT]  
->  À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], l’option MEDIAPASSWORD est suspendue pour la création de sauvegardes. Toutefois, vous pouvez toujours restaurer les sauvegardes créées avec les mots de passe.  
+>  À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], l'option MEDIAPASSWORD est suspendue pour la création de sauvegardes. Toutefois, vous pouvez toujours restaurer les sauvegardes créées avec les mots de passe.  
   
  Un support de sauvegarde n'est pas remplacé lorsque l'une des conditions ci-dessous est remplie :  
   

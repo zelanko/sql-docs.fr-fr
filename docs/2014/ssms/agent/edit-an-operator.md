@@ -15,12 +15,12 @@ ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c037aedf4fa3199be658999f676731875e0b785
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9ee3228eea9970563540be9bc6a4c3b9a3677112
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764201"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127589"
 ---
 # <a name="edit-an-operator"></a>Modifier un opérateur
   Cette rubrique explique comment modifier la disponibilité d'un opérateur pour recevoir des notifications et leurs adresses d'envoi par courrier électronique, récepteur de radiomessagerie et réseau dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "52764201"
   
 4.  Cliquez avec le bouton droit sur l’opérateur que vous souhaitez modifier, puis sélectionnez **Propriétés**.  
   
-     Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue *Propriétés de***nom_opérateur**, consultez :  
+     Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue _Propriétés de_**nom_opérateur** , consultez :  
   
     -   [Propriétés de l’opérateur et opérateur New &#40;Page Général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

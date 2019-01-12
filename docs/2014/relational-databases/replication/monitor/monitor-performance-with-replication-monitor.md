@@ -19,12 +19,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c84d808b84a70ae9d70eff308351ff1e7f3df8e0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e69b1d6ca838334c36ff94037473e5fda45cce43
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815571"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126419"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Analyser les performances avec le Moniteur de réplication
   Le moniteur de réplication de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet d'analyser les performances de la réplication transactionnelle et de la réplication de fusion via les fonctionnalités suivantes :  
@@ -85,16 +85,16 @@ ms.locfileid: "52815571"
     |---------------|----------|----------|----------|  
     |151+%|76 - 150 %|26 - 75 %|0 - 25 %|  
   
- Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour un abonnement &#40;moniteur de réplication&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
+ Pour plus d’informations sur l’affichage des informations d’abonnement, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>Déterminer la latence avec des jetons de suivi  
  La réplication transactionnelle vous permet de mesurer la latence dans un système en insérant un jeton (une petite quantité de données) dans le journal des transactions de la base de données de publication et en enregistrant le temps qu'il met pour arriver au serveur de distribution et aux Abonnés. Le jeton vous permet aussi de détecter si des données n'atteignent par le serveur de distribution ou l'Abonné. Pour plus d’informations, voir [Mesurer la latence et valider les connexions pour la réplication transactionnelle](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>Afficher les performances de synchronisation détaillées pour la réplication de fusion  
- Pour la réplication de fusion, le moniteur de réplication affiche des statistiques détaillées pour chaque article traité lors de la synchronisation, notamment la quantité de temps passé dans chaque phase du traitement (chargement des modifications, téléchargement des modifications, etc.). Il peut être utile d'identifier les tables spécifiques qui provoquent les ralentissements ; il s'agit du meilleur observatoire pour résoudre les problèmes de performance avec les abonnements de fusion. Pour plus d’informations sur l’affichage de statistiques détaillées, consultez [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
+ Pour la réplication de fusion, le moniteur de réplication affiche des statistiques détaillées pour chaque article traité lors de la synchronisation, notamment la quantité de temps passé dans chaque phase du traitement (chargement des modifications, téléchargement des modifications, etc.). Il peut être utile d'identifier les tables spécifiques qui provoquent les ralentissements ; il s'agit du meilleur observatoire pour résoudre les problèmes de performance avec les abonnements de fusion. Pour plus d’informations sur l’affichage des statistiques détaillées, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>Afficher les transactions et les temps de remise pour la réplication transactionnelle  
- Pour la réplication transactionnelle, le moniteur de réplication affiche des informations sur le nombre de transactions dans la base de données de distribution qui n'ont pas encore été distribuées à un Abonné et sur le temps estimé pour distribuer ces transactions. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
+ Pour la réplication transactionnelle, le moniteur de réplication affiche des informations sur le nombre de transactions dans la base de données de distribution qui n'ont pas encore été distribuées à un Abonné et sur le temps estimé pour distribuer ces transactions. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveillance de la réplication](../monitoring-replication.md)   

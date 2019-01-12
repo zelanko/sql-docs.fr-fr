@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f06c0b7395ce61a52cae17e9cbc6429cdd6b9eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d08f754022ae28cfce074978bfdd8c3f79ba71a6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728387"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128409"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@rulename=**] **'***règle***'**  
+ [  **@rulename=**] **'**_règle_**'**  
  Nom d'une règle créée par l'instruction CREATE RULE. *règle* est **nvarchar(776)**, sans valeur par défaut.  
   
- [  **@objname=**] **'***object_name***'**  
+ [  **@objname=**] **'**_object_name_**'**  
  Table ou colonne, ou bien type de données d'alias auquel la règle doit être liée. Une règle ne peut pas être liée à un type **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, à un type CLR défini par l’utilisateur, ou à une colonne **timestamp**. Enfin, une règle ne peut pas être liée à une colonne calculée.  
   
  *object_name* est **nvarchar(776)** sans valeur par défaut. Si *object_name* est un nom d’une seule partie, il est résolu comme un type de données alias. S'il s'agit d'un nom en deux ou trois parties, il est d'abord résolu en tant que table et colonne. Si la résolution échoue, il est résolu en tant que type de données d'alias. Par défaut, les colonnes existantes du type de données alias héritent *règle* , sauf si une règle a été liée directement à la colonne.  
@@ -60,7 +60,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  Les règles créées sur des expressions utilisant des types de données d'alias peuvent être liées à des colonnes ou des types de données d'alias, mais ne peuvent pas être compilées lorsqu'elles sont référencées. Évitez d'utiliser des règles créées sur des types de données d'alias.  
   
- [  **@futureonly=** ] **'***futureonly_flag***'**  
+ [  **@futureonly=** ] **'**_futureonly_flag_**'**  
  S'utilise seulement pour lier une règle à un type de données d'alias. *indicateur_à_venir* est **varchar(15)** avec NULL comme valeur par défaut. Ce paramètre lorsque la valeur **futureonly** empêche les colonnes existantes d’un type de données d’alias d’hériter de la nouvelle règle. Si *futureonly_flag* est NULL, la nouvelle règle est liée à toute colonne du type de données alias qui n’a aucune règle ou qui sont à l’aide de la règle existante du type de données alias.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -75,7 +75,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
   
  Lorsque vous liez une règle à une colonne, l’information correspondante est ajoutée à la **sys.columns** table. Lorsque vous liez une règle à un type de données alias, l’information correspondante est ajoutée à la **sys.types** table.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour lier une règle à une colonne de table, une autorisation ALTER est nécessaire sur la table. Pour lier une règle à un type de données d'alias, il est nécessaire de disposer d'une autorisation CONTROL sur le type de données d'alias ou d'une autorisation ALTER sur le schéma auquel le type appartient.  
   
 ## <a name="examples"></a>Exemples  
@@ -89,7 +89,7 @@ GO
 EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. Liaison d'une règle à un type de données d'alias  
+### <a name="b-binding-a-rule-to-an-alias-data-type"></a>b. Liaison d'une règle à un type de données d'alias  
  En supposant l'existence d'une règle nommée `rule_ssn` et d'un type de données d'alias nommé `ssn`, cet exemple lie `rule_ssn` à `ssn`. Toutes les colonnes créées par une instruction CREATE TABLE avec le type de données `ssn` héritent de la règle `rule_ssn`. Les colonnes existantes de type `ssn` héritent également la `rule_ssn` règle, sauf si **futureonly** est spécifiée pour *futureonly_flag*, ou `ssn` dispose d’une règle directement liée. Les règles liées à des colonnes ont toujours priorité sur les règles liées à des types de données.  
   
 ```  

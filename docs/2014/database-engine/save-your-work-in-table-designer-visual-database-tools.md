@@ -14,12 +14,12 @@ ms.assetid: 676e4a9a-be75-44d2-b011-6e7fb921de4a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56da0e1bff6811885a2008a0881d52583c24c1ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b6b705f887e0df06684d33fc7be26aa73ff4048
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090291"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130799"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>Enregistrer votre travail dans le Concepteur de tables (Visual Database Tools)
   Vous pouvez enregistrer les modifications dans les tables qui sont ouvertes dans le Concepteur de tables.  
@@ -28,7 +28,7 @@ ms.locfileid: "48090291"
   
 1.  Cliquez n'importe où dans le Concepteur de tables.  
   
-2.  À partir de la **fichier** menu, choisissez **enregistrer *** tablename*.  
+2.  Dans le menu **Fichier** , choisissez **Enregistrer**_nom de la table_.  
   
 3.  Dans la boîte de dialogue **Enregistrer** , cliquez sur **Oui** pour mettre à jour la base de données.  
   

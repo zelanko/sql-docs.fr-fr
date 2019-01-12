@@ -17,12 +17,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8592517c71651b457c660e1d73e683c1c5ed332
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813981"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126429"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52813981"
   
  Pour activer les abonnements pouvant être mis à jour pour les publications transactionnelles, consultez [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md).  
   
- Pour créer des abonnements pouvant être mis à jour pour les publications transactionnelles, consultez [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md).  
+ Pour créer des abonnements pouvant être mis à jour pour les publications transactionnelles, consultez [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 ## <a name="switching-between-update-modes"></a>Basculement d'un mode de mise à jour à l'autre  
  Lorsque vous utilisez les abonnements pouvant être mis à jour, vous pouvez spécifier qu'un abonnement doit utiliser un mode de mise à jour puis basculer vers l'autre si l'application l'exige. Vous pouvez, par exemple, spécifier qu'un abonnement doit utiliser la mise à jour immédiate mais basculer vers la mise à jour en attente si un échec système entraîne une perte de la connectivité réseau.  
@@ -124,7 +124,7 @@ ms.locfileid: "52813981"
   
 ## <a name="see-also"></a>Voir aussi  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
- [Types de publication pour la réplication transactionnelle](publication-types-for-transactional-replication.md)   
+ [Réplication transactionnelle](transactional-replication.md)   
  [Publier des données et des objets de base de données](../publish/publish-data-and-database-objects.md)   
  [S'abonner à des publications](../subscribe-to-publications.md)  
   

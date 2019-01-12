@@ -1,5 +1,5 @@
 ---
-title: Déboguer un gestionnaire de logique métier (programmation de la réplication) | Microsoft Docs
+title: Déboguer un gestionnaire de logique métier | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 019ff508b10859cae2388636e9189292b498e251
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761511"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128759"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Déboguer un gestionnaire de logique métier (programmation de la réplication)
   Utilisez un gestionnaire de logique métier pour appeler une logique métier personnalisée lorsqu'un abonnement de fusion est synchronisé. Pour plus d’informations, consultez [Exécuter la logique pendant la synchronisation de fusion](merge/execute-business-logic-during-merge-synchronization.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "52761511"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>Pour déboguer un gestionnaire de logique métier sur un ordinateur local  
   
-1.  Configurez la publication et la distribution, créez une publication et créez un abonnement à la publication. Pour plus d’informations, consultez [Configurer la publication et la distribution](configure-publishing-and-distribution.md) et [Créer, modifier et supprimer des publications et des articles &#40;réplication&#41;](publish/create-modify-and-delete-publications-and-articles-replication.md).  
+1.  Configurez la publication et la distribution, créez une publication et créez un abonnement à la publication. Pour plus d’informations, consultez [Configure Publishing and Distribution](configure-publishing-and-distribution.md) et [créer une Publication](publish/create-a-publication.md).  
   
 2.  Créez et inscrivez un gestionnaire de logique métier. Pour plus d’informations, voir [Implémenter un gestionnaire de logique métier pour un article de fusion](implement-a-business-logic-handler-for-a-merge-article.md).  
   

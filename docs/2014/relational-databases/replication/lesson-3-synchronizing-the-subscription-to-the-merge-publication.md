@@ -1,11 +1,10 @@
 ---
-title: 'Leçon 3 : Synchronisation de l’abonnement et de la publication de fusion | Microsoft Docs'
+title: 'Leçon 3 : Synchronisation de l’abonnement à la Publication de fusion | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,15 +12,15 @@ ms.assetid: 49008384-2c55-4080-a890-9bceb40e4d6d
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 8e382a5c39d67d4c38052bc2b52e0018d1233b3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 847b833d793d3b572b44bcb77903c534300109b7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207399"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128469"
 ---
-# <a name="lesson-3-synchronizing-the-subscription-to-the-merge-publication"></a>Leçon 3 : Synchronisation de l'abonnement et de la publication de fusion
-  Dans cette leçon, vous allez démarrer l'Agent de fusion pour initialiser l'abonnement à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous allez également utiliser cette procédure pour effectuer la synchronisation avec le serveur de publication. Pour effectuer cette leçon, vous devez avoir terminé la leçon précédente, [Leçon 2 : Création d’un abonnement à la publication de fusion](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
+# <a name="lesson-3-synchronizing-the-subscription-to-the-merge-publication"></a>Leçon 3 : Synchronisation de l'abonnement et de la publication de fusion
+  Dans cette leçon, vous allez démarrer l'Agent de fusion pour initialiser l'abonnement à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous allez également utiliser cette procédure pour effectuer la synchronisation avec le serveur de publication. Cette leçon requiert que vous avez terminé la leçon précédente, [leçon 2 : Création d’un abonnement à la Publication de fusion](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
 ### <a name="to-start-synchronization-and-initialize-the-subscription"></a>Pour démarrer la synchronisation et initialiser l'abonnement  
   
@@ -34,7 +33,7 @@ ms.locfileid: "48207399"
 ## <a name="next-steps"></a>Étapes suivantes  
  Vous avez exécuté avec succès l'Agent de fusion dans le but de démarrer la synchronisation et d'initialiser l'abonnement. Vous pouvez aussi insérer, mettre à jour ou supprimer les données des tables **SalesOrderHeader** ou **SalesOrderDetail** sur le serveur de publication ou l’Abonné, répéter cette procédure quand la connexion réseau est disponible pour synchroniser les données entre le serveur de publication et l’Abonné, puis interroger les tables **SalesOrderHeader** ou **SalesOrderDetail** de l’autre serveur pour visualiser les modifications répliquées.  
   
- Ainsi s'achève le didacticiel sur la réplication des données avec les clients mobiles. Pour obtenir un didacticiel similaire utilisant la réplication transactionnelle, consultez [Didacticiel : Réplication de données entre serveurs connectés en permanence](tutorial-replicating-data-between-continuously-connected-servers.md).  
+ Ainsi s'achève le didacticiel sur la réplication des données avec les clients mobiles. Pour un didacticiel similaire utilisant la réplication transactionnelle, consultez [didacticiel : Réplication en continu de données entre serveurs connectés](tutorial-replicating-data-between-continuously-connected-servers.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Initialiser un abonnement avec un instantané](initialize-a-subscription-with-a-snapshot.md)   

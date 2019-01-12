@@ -14,12 +14,12 @@ ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5925e277b6e1585612147918b469427e4aa92968
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 744e7a10c9c4dcd776d58b6234749f2be5aa1479
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395782"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127839"
 ---
 # <a name="rename-indexes"></a>Renommer des index
   Cette rubrique explique comment renommer un index dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le changement du nom d'un index remplace le nom actuel de l'index par le nouveau nom fourni. Le nom spécifié doit être unique dans la table ou la vue. Par exemple, deux tables peuvent contenir un index nommé **XPK_1**, mais la même table ne peut pas avoir deux index nommés **XPK_1**. Vous ne pouvez pas créer un index dont le nom est le même qu'un index désactivé existant. Le changement du nom d'un index ne provoque pas sa reconstruction.  
@@ -66,7 +66,7 @@ ms.locfileid: "52395782"
   
 7.  Cliquez sur **Fermer**.  
   
-8.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_table*.  
+8.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
   
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>Pour renommer un index à l'aide de l'Explorateur d'objets  
   

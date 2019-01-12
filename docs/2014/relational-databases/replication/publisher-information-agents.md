@@ -12,12 +12,12 @@ ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 266c839fbaf899af4f882c9ae858303f8cd7eac3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9094fcbbede4c9bb6bac283129ed20ea4e3e910b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771431"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127320"
 ---
 # <a name="publisher-information-agents"></a>Informations sur le serveur de publication, Agents
   L'onglet **Agents** affiche des informations sur les agents et les travaux de maintenance associés au serveur de publication :  
@@ -196,8 +196,7 @@ ms.locfileid: "52771431"
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer le Moniteur de réplication](monitor/start-the-replication-monitor.md)   
- [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Surveillance de la réplication](monitoring-replication.md)  
   
   

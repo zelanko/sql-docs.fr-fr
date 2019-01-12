@@ -21,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 465e43422616d5d0202bf31959fab5f56c4f35d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 71bd15f01cc69371765c4af17fb184ce28481f65
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806251"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129279"
 ---
 # <a name="enhance-general-replication-performance"></a>Améliorer les performances générales de la réplication
   Vous pouvez améliorer les performances globales de tous les types de réplication de votre application et de votre réseau à l'aide des indications décrites dans cette rubrique :  
@@ -76,7 +76,7 @@ ms.locfileid: "52806251"
   
     -   Dans le cas d'une réplication de fusion, il peut être plus efficace d'utiliser des gestionnaires de logique métier. Pour plus d’informations, consultez [Exécuter la logique métier pendant la synchronisation de fusion](../merge/execute-business-logic-during-merge-synchronization.md).  
   
-     Si vous utilisez des déclencheurs pour conserver l'intégrité référentielle dans les tables publiées pour la réplication de fusion, indiquez l'ordre de traitement des tables afin de réduire le nombre de tentatives nécessaires à l'Agent de fusion. Pour plus d’informations, consultez [Spécifier l’ordre de traitement d’articles de fusion](../merge/specify-the-processing-order-of-merge-articles.md).  
+     Si vous utilisez des déclencheurs pour conserver l'intégrité référentielle dans les tables publiées pour la réplication de fusion, indiquez l'ordre de traitement des tables afin de réduire le nombre de tentatives nécessaires à l'Agent de fusion. Pour plus d’informations, consultez [propriétés de spécifier la réplication de fusion](../publish/specify-merge-replication-properties.md).  
   
 -   Limitez l'utilisation des types de données d'objets volumineux (LOB).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52806251"
   
      Lorsque des quantités importantes de modifications doivent être envoyées aux abonnés, la réinitialisation de ces derniers à partir d'un nouvel instantané peut s'avérer plus rapide que l'utilisation de la réplication pour déplacer chaque modification. Pour plus d’informations, consultez [Réinitialiser des abonnements](../reinitialize-subscriptions.md).  
   
-     Pour la réplication transactionnelle, le moniteur de réplication affiche des informations sur l'onglet **Commandes non distribuées** sur : le nombre de transactions dans la base de données de distribution qui n'ont pas encore été distribuées à un Abonné ; et sur le temps estimé pour distribuer ces transactions. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Pour la réplication transactionnelle, le moniteur de réplication affiche des informations sur l'onglet **Commandes non distribuées** sur : le nombre de transactions dans la base de données de distribution qui n'ont pas encore été distribuées à un Abonné ; et sur le temps estimé pour distribuer ces transactions. Pour plus d’informations, consultez [ afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="snapshot-considerations"></a>Considérations sur les instantanés  
   

@@ -14,12 +14,12 @@ ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c45dc872cd75640f244c55863cdbace607812a38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 873a16f8e6dcc73b4f2b3da5727d49207252ca63
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815341"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124279"
 ---
 # <a name="compressed-snapshots"></a>Instantanés compressés
   Vous pouvez choisir de compresser des fichiers d'instantanés lorsque vous transférez des instantanés sur un réseau lent ou lorsque vous les enregistrez sur un support amovible et que l'instantané non compressé est trop volumineux pour le support. Dans ces cas-là, la compression est utile mais il faut savoir qu'elle augmente le temps nécessaire à la génération et à l'application de l'instantané.  
@@ -33,7 +33,7 @@ ms.locfileid: "52815341"
   
  **Pour compresser et remettre des fichiers d'instantanés**  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Compresser des fichiers d’instantanés &#40;SQL Server Management Studio&#41;](publish/compress-snapshot-files-sql-server-management-studio.md)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Compresser des fichiers d’instantanés &#40;SQL Server Management Studio&#41;](snapshot-options.md#compress-snapshot-files)  
   
 -   Programmation de la réplication [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Configurer les propriétés d’instantané &#40;programmation Transact-SQL de la réplication&#41;](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   

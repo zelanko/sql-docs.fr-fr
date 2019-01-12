@@ -13,12 +13,12 @@ ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 803acc60555c996a0556e456b8d31753506b43ab
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e6e3ecc4b125d226fc2cdf6dbe241e0ce017eae6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205788"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126689"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>Définir un filtre de trace (Transact-SQL)
   Cette rubrique explique comment utiliser des procédures stockées pour créer un filtre qui n'extrait que les informations requises lors d'un événement en cours de traçage.  
@@ -30,7 +30,7 @@ ms.locfileid: "53205788"
 2.  Exécutez **sp_trace_setfilter** pour configurer le type d’informations extraites pour l’événement dont vous voulez suivre la trace.  
   
 > [!IMPORTANT]
->  Contrairement aux procédures stockées standard, les paramètres de toutes les procédures stockées [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (**sp_trace_* xx***) sont strictement typés et ne prennent pas en charge la conversion automatique des types de données. Si ces paramètres ne sont pas appelés avec des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée renvoie une erreur.  
+>  Contrairement aux procédures stockées standard, les paramètres de tous les [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] des procédures stockées (<strong>sp_trace_*xx*</strong>) sont strictement typés et ne prennent pas en charge la conversion automatique. Si ces paramètres ne sont pas appelés avec des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée renvoie une erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtrer une trace](../../relational-databases/sql-trace/filter-a-trace.md)   

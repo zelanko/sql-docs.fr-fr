@@ -18,12 +18,12 @@ ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8978c40141d0cd6031b9569ab0daa945666e7e85
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8d951cff1b59be87bb8e8dc3d33b6fab50cdb87d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415156"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130589"
 ---
 # <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ ms.locfileid: "52415156"
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@ db_name =** ] **'***db_name***'**  
+ [ **@ db_name =** ] **'**_db_name_**'**  
  Nom de la base de données sur laquelle l'index XML sélectif doit être activé ou désactivé. Si *db_name* est NULL, la base de données en cours est supposé.  
   
- [  **@action =** ] **'***action***'**  
+ [  **@action =** ] **'**_action_**'**  
  Détermine s'il faut activer ou désactiver l'index. Si une valeur autre que 'on', 'true', 'off' ou 'false' est passée, une erreur sera déclenchée.  
   
 ```  

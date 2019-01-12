@@ -16,12 +16,12 @@ ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab783933dd060c23019db5a7c16e9734e59bb140
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0e21e07cb9c81b65cccafda2e938057cd16f96b4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802281"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124409"
 ---
 # <a name="spvupgradereplication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,27 +42,27 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@login=**] **'***connexion***'**  
+ [  **@login=**] **'**_connexion_**'**  
  Nom de connexion de l'administrateur système à utiliser lors de la création d'objets système dans la base de données de distribution. *login* est de type **sysname**, avec NULL comme valeur par défaut. Ce paramètre n’est pas obligatoire si *security_mode* a la valeur **1**, qui est l’authentification Windows.  
   
 > [!NOTE]  
 >  Ce paramètre est ignoré lorsque vous effectuez une mise à niveau vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.  
   
- [  **@password=**] **'***mot de passe***'**  
+ [  **@password=**] **'**_mot de passe_**'**  
  Est le mot de passe administrateur système à utiliser lors de la création d’objets système dans la base de données de Distribution. *mot de passe* est **sysname**, avec une valeur par défaut **''** (chaîne vide). Ce paramètre n’est pas obligatoire si *security_mode* a la valeur **1**, qui est l’authentification Windows.  
   
 > [!NOTE]  
 >  Ce paramètre est ignoré lorsque vous mettez à niveau vers SQL [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.  
   
- [  **@ver_old=**] **'***old_version***'**  
+ [  **@ver_old=**] **'**_old_version_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  Cette procédure stockée est déconseillée et sera supprimée dans les prochaines versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [  **@force_remove=**] **'***force_removal***'**  
+ [  **@force_remove=**] **'**_force_removal_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@security_mode=**] **'***security_mode***'**  
+ [  **@security_mode=**] **'**_security_mode_**'**  
  Mode de sécurité de connexion à utiliser lors de la création d'objets système dans la base de données de distribution. *security_mode* est **bits** avec une valeur par défaut **0**. Si **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification est utilisée. Si **1**, l’authentification Windows est utilisée.  
   
 > [!NOTE]  
@@ -79,6 +79,6 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [Valider des données répliquées](../../relational-databases/replication/validate-replicated-data.md)  
+ [Valider des données répliquées](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

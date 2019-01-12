@@ -12,12 +12,12 @@ ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41927fa4008731c1ff047189735a5e8a50d6165a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751211"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127179"
 ---
 # <a name="add-objects"></a>Ajouter des objets
   Permet de limiter les boîtes de dialogue de sélection d'objets aux types d'objets que vous souhaitez afficher.  
@@ -29,7 +29,7 @@ ms.locfileid: "52751211"
  **Tous les objets correspondant aux types**  
  Ouvre la boîte de dialogue **Sélectionner les types d’objets** pour vous permettre de spécifier le type d’objets à inclure dans la liste sous-jacente.  
   
- **Le serveur***\<nom_serveur >*  
+ **Le serveur**_\<nom_serveur >_  
  Ajoute tous les objets appropriés sur le serveur spécifié. Cette option apparaît uniquement quand vous passez par une boîte de dialogue de niveau serveur, par exemple la boîte de dialogue **Nouvelle connexion** .  
   
  **Tous les objets appartenant au schéma**  

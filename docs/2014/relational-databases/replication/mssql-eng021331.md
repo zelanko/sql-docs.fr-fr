@@ -12,12 +12,12 @@ ms.assetid: 9acd75d9-fda1-44cd-ba17-20295ad53ea0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26e0f33ef996f47fe4be2b3be034111187033f94
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 63becb9b07114b6e0ae0589664ae80d82f8babb2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753761"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126179"
 ---
 # <a name="mssqleng021331"></a>MSSQL_ENG021331
     
@@ -39,7 +39,7 @@ ms.locfileid: "52753761"
  Vérifiez que le chemin d'accès correct a été spécifié pour le dossier d'instantané et que le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur le serveur de publication a des autorisations suffisantes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier l’emplacement par défaut des instantanés &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md)   
+ [Spécifier l’emplacement d’instantanés par défaut](snapshot-options.md#snapshot-folder-locations)   
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](errors-and-events-reference-replication.md)   
  [Initialiser un abonnement transactionnel sans instantané](initialize-a-transactional-subscription-without-a-snapshot.md)  
   

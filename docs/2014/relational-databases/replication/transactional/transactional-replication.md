@@ -13,41 +13,25 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cd024310b00338749147b56e3b63a09fbd515de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 9a6099a43713ebbcfdc65aec43aabcca95fe5e0b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814011"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127679"
 ---
 # <a name="transactional-replication"></a>Réplication transactionnelle
   La réplication transactionnelle commence en général avec l'instantané des objets et des données de la base de données de publication. Dès que l'instantané initial est effectué, les changements de données et les modifications de schémas effectués ensuite au niveau du serveur de publication sont en général transmis à l'Abonné à mesure qu'ils se produisent (presque en temps réel). Les changements de données sont appliqués à l'Abonné dans le même ordre et dans les mêmes limites de transaction que sur le serveur de publication ; c'est pourquoi, dans une publication, la cohérence des transactions est garantie.  
   
  La réplication transactionnelle est en général utilisée dans les environnements serveur à serveur, et convient pour chacun des cas suivants :  
   
--   Vous souhaitez propager les modifications incrémentielles vers les abonnés, au fur et à mesure qu'elles s'exécutent.  
-  
--   L'application requiert une latence faible entre le moment où des modifications sont effectuées sur le serveur de publication et celui où les modifications arrivent sur l'Abonné.  
-  
--   L'application requiert l'accès aux états intermédiaires des données. Par exemple, si une ligne change cinq fois, la réplication transactionnelle permet à une application de répondre à chaque modification (par exemple activer un déclencheur), et pas simplement au résultat final des modifications de la ligne.  
-  
--   Le serveur de publication a un volume très élevé d'activités d'insertion, de mise à jour et de suppression.  
-  
+-   Vous souhaitez propager les modifications incrémentielles vers les abonnés, au fur et à mesure qu'elles s'exécutent.    
+-   L'application requiert une latence faible entre le moment où des modifications sont effectuées sur le serveur de publication et celui où les modifications arrivent sur l'Abonné.    
+-   L'application requiert l'accès aux états intermédiaires des données. Par exemple, si une ligne change cinq fois, la réplication transactionnelle permet à une application de répondre à chaque modification (par exemple activer un déclencheur), et pas simplement au résultat final des modifications de la ligne.    
+-   Le serveur de publication a un volume très élevé d'activités d'insertion, de mise à jour et de suppression.    
 -   Le serveur de publication ou l'Abonné est une base de données non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Oracle par exemple.  
   
  Par défaut, les Abonnés à des publications transactionnelles doivent être traités en lecture seule, parce que les changements ne sont pas propagés vers le serveur de publication. Cependant, la réplication transactionnelle n'offre pas d'options qui permettent des mises à jour sur l'Abonné.  
-  
- **Dans cette rubrique**  
-  
- [Fonctionnement de la réplication transactionnelle](#HowWorks)  
-  
- [Jeu de données initial](#Dataset)  
-  
- [Agent d'instantané](#SnapshotAgent)  
-  
- [l'Agent de lecture du journal ;](#LogReaderAgent)  
-  
- [Agent de distribution](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> Fonctionnement de la réplication transactionnelle  
  La réplication transactionnelle est effectuée par l'Agent d'instantané, l'Agent de lecture du journal et l'Agent de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'Agent d'instantané prépare les fichiers d'instantanés contenant les schémas ainsi que les données des tables et des objets de base de données publiés, stocke les fichiers dans le dossier d'instantanés, et enregistre les travaux de synchronisation dans la base de données de distribution sur le serveur de distribution.  
@@ -82,5 +66,17 @@ ms.locfileid: "52814011"
   
 ##  <a name="DistributionAgent"></a> Agent de distribution  
  Cet agent s'exécute généralement sur le serveur de distribution pour les abonnements par envoi de données et sur l'Abonné pour les abonnements par extraction. L'Agent déplace les transactions de la base de données de distribution vers l'Abonné. Si un abonnement est marqué pour validation, l'Agent de distribution vérifie également si les données correspondent entre le serveur de publication et l'Abonné.  
+
+## <a name="publication-types"></a>Types de publication
+
+  
+La réplication transactionnelle propose quatre types de publication :  
+  
+|Type de publication|Description|  
+|----------------------|-----------------|  
+|Publication transactionnelle standard|Adaptée aux topologies dans lesquelles toutes les données de l'Abonné sont en lecture seule (la réplication transactionnelle ne l'applique pas sur l'Abonné).<br /><br /> Les publications transactionnelles standard sont créées par défaut lorsque vous utilisez Transact-SQL ou Replication Management Objects. Lorsque vous utilisez l'Assistant Nouvelle publication, elles sont créées par la sélection de l'option **Publication transactionnelle** dans la page **Type de publication** .<br /><br /> Pour plus d’informations sur la création de publications, consultez [Publier des données et des objets de base de données](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
+|Publication transactionnelle avec abonnements pouvant être mis à jour|Les caractéristiques de ce type de publication sont les suivantes :<br /><br /> -Chaque emplacement possède des données identiques, avec un seul éditeur et un abonné. <br /> -Il est possible de mettre à jour des lignes sur l’abonné<br /> -Cette topologie convient mieux aux environnements serveur exigeant une haute disponibilité et évolutivité de lecture.<br /><br />Pour plus d’informations, consultez [Updatable Subscriptions](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
+|Topologie d’égal à égal|Les caractéristiques de ce type de publication sont les suivantes :<br /> -Chaque emplacement possède des données identiques et agit comme un serveur de publication et l’abonné.<br /> -La même ligne peut être modifiée uniquement à un emplacement à la fois.<br /> -Prend en charge [la détection de conflit](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />-Cette topologie convient mieux aux environnements serveur exigeant une haute disponibilité et évolutivité de lecture.<br /><br />Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|Réplication transactionnelle bidirectionnelle|Les caractéristiques de ce type de publication sont les suivantes :<br />Réplication bidirectionnelle est similaire à la réplication d’égal à égal, toutefois, il ne fournit pas de résolution des conflits. En outre, la réplication bidirectionnelle est limitée à 2 serveurs. <br /><br /> Pour plus d’informations, consultez [la réplication transactionnelle bidirectionnelle](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   
   

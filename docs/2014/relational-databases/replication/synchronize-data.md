@@ -21,12 +21,12 @@ ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e367cc0a02e446bf915c01e5a3d846ba02dcc8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 15f4d85d117b5af09b0f67ef788364be6adad810
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781941"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128559"
 ---
 # <a name="synchronize-data"></a>Synchroniser les données
   La synchronisation des données est le processus de propagation des modifications de données et de schéma entre le serveur de publication et les abonnés après l'application de l'instantané initial sur les abonnés. La synchronisation peut se produire :  
@@ -69,6 +69,6 @@ ms.locfileid: "52781941"
 -   Les gestionnaires de logique métier sont pris en charge par la réplication de fusion. Vous pouvez, à l'aide de l'infrastructure du gestionnaire de logique métier, écrire un assembly de code managé qui est appelé pendant le processus de synchronisation de fusion. L'assembly comprend une logique métier qui peut répondre à un certain nombre de conditions au cours de la synchronisation : les modifications de données, les conflits et les erreurs. Pour plus d’informations, consultez [Exécuter la logique métier lors de la synchronisation de fusion](merge/execute-business-logic-during-merge-synchronization.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Détecter et résoudre les conflits de réplication de fusion](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
+ [Détecter et résoudre les conflits de réplication de fusion](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

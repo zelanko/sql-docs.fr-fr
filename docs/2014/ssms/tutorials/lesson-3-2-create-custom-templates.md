@@ -14,12 +14,12 @@ ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e94112325267cf65329d825f46a30f3ed9c50450
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215579"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127249"
 ---
 # <a name="create-custom-templates"></a>Créer des modèles personnalisés
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est fourni avec des modèles pour de nombreuses tâches communes, mais le réel intérêt des modèles réside dans la possibilité de créer un modèle personnalisé pour les scripts complexes qui doivent être créés souvent. Au cours de cet exercice pratique, vous allez créer un script simple avec quelques paramètres, mais les modèles peuvent être utiles également pour les scripts longs et répétitifs.  
@@ -67,7 +67,7 @@ ms.locfileid: "48215579"
   
 10. Dans l’Éditeur de requête, tapez **EXECUTE dbo.WorkOrdersForBlade**et appuyez sur F5 pour exécuter la requête. Vérifiez si le volet **Résultats** affiche la liste des bons de travaux pour les lames.  
   
-11. Modifiez le script du modèle (le script à l’étape 7) en remplaçant le nom du produit Blade par le paramètre ***< * product_name**, `nvarchar(50)`, **nom*> ***, en quatre endroits.  
+11. Modifiez le script du modèle (le script à l’étape 7) en remplaçant le nom du produit Blade par le paramètre  <strong>*<* product_name</strong>, `nvarchar(50)`, <strong>nom*>*</strong> , en quatre endroits.  
   
     > [!NOTE]  
     >  Les paramètres nécessitent trois éléments : le nom du paramètre à remplacer, le type de données du paramètre et une valeur par défaut pour le paramètre.  

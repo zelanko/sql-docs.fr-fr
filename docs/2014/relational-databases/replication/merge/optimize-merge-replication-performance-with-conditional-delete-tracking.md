@@ -14,12 +14,12 @@ ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec91a27daf01a77cc9c1916db36d80de4864964f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752701"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128975"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Optimiser les performances de la réplication de fusion avec le suivi conditionnel des suppressions
     
@@ -46,7 +46,7 @@ ms.locfileid: "52752701"
   
  **Pour spécifier que les suppressions ne doivent pas être suivies**  
   
--   Programmation de la réplication [!INCLUDE[tsql](../../../includes/tsql-md.md)] : [Indiquer que les suppressions ne doivent pas être suivies pour les articles de fusion &#40;programmation Transact-SQL de la réplication&#41;](../publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
+-   Programmation de la réplication [!INCLUDE[tsql](../../../includes/tsql-md.md)] : [Indiquer que les suppressions ne doivent pas être suivies pour les articles de fusion &#40;programmation Transact-SQL de la réplication&#41;](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Options d’articles pour la réplication de fusion](article-options-for-merge-replication.md)   

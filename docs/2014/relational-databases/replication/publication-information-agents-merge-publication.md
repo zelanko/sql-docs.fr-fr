@@ -12,12 +12,12 @@ ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7695411fd842aed0116073c4ac4a7b51e60b49fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 46a2e9e332899c8d48fb762e153a926c99bb9e61
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749085"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124029"
 ---
 # <a name="publication-information-agents-merge-publication"></a>Informations de publication, Agents (Publication de fusion)
   L'onglet **Agents** contient des informations résumées sur l'Agent d'instantané de la publication sélectionnée.  
@@ -47,7 +47,7 @@ ms.locfileid: "52749085"
 -   Terminé  
   
  **Agent**  
- L'Agent d'instantané. Il s'agit du seul Agent associé à une publication de fusion. L'Agent de fusion est associé aux abonnements à cette publication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement &#40;Moniteur de réplication&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ L'Agent d'instantané. Il s'agit du seul Agent associé à une publication de fusion. L'Agent de fusion est associé aux abonnements à cette publication. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Dernière heure de début**  
  Heure du dernier démarrage de l'Agent.  
@@ -60,8 +60,7 @@ ms.locfileid: "52749085"
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer le Moniteur de réplication](monitor/start-the-replication-monitor.md)   
- [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Surveillance de la réplication](monitoring-replication.md)  
   
   

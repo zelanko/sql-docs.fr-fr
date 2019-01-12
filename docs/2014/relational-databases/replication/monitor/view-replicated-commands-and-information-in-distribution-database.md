@@ -17,12 +17,12 @@ ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87cb1034499afe331f78278b43986528a78d9674
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2bff82764256eebb02141bf2e1fafd86dce026e4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758071"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125769"
 ---
 # <a name="view-replicated-commands-and-other-information-in-the-distribution-database-replication-transact-sql-programming"></a>Afficher les commandes répliquées et autres informations dans la base de données de distribution (programmation Transact-SQL de la réplication)
   Lors de l'utilisation de la réplication transactionnelle, les commandes de transaction sont stockées dans la base de données de distribution jusqu'à ce que l'Agent de distribution les propage sur tous les Abonnés ou qu'un Agent de distribution sur l'Abonné extrait les modifications. Ces commandes en attente dans la base de données de distribution peuvent être affichées par programmation à l'aide de procédures stockées de réplication. Pour plus d’informations, consultez [Procédures stockées de réplication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql).  
@@ -38,6 +38,6 @@ ms.locfileid: "52758071"
 2.  Sur la base de données de distribution du serveur de distribution, exécutez [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql). (Facultatif) Spécifiez l'ID d'article de l'étape 2 pour **@article_id**. (Facultatif) Spécifiez l'ID de la base de données de publication pour **@publisher_database_id**, qui peut être obtenu à partir de la colonne **database_id** de l'affichage catalogue [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Surveiller la réplication par programmation](monitoring-replication-overview.md)  
+ [Surveiller la réplication par programmation](../monitoring-replication.md)  
   
   

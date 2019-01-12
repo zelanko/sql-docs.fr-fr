@@ -12,12 +12,12 @@ ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e82c71834a2d41a7620f549bc6335fa15df84bf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813991"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125379"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>Didacticiel : Préparation du serveur à la réplication
   Il importe de prévoir la sécurité avant de configurer la topologie de réplication. Ce didacticiel vous explique comment sécuriser au mieux une topologie de réplication et configurer la distribution, première étape de la réplication des données. Ce didacticiel doit être effectué avant les autres didacticiels.  
@@ -49,6 +49,6 @@ ms.locfileid: "52813991"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer la distribution](configure-distribution.md)   
- [Sécurité et protection &#40;réplication&#41;](security/security-and-protection-replication.md)  
+ [Sécurité de la réplication SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   

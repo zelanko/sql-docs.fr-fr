@@ -12,12 +12,12 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2983889b79f30c18c6b6ae1ad22d614629b37654
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: ed11d8f045315130fb0d9155607625659f2b8052
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778101"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125589"
 ---
 # <a name="replication-monitor-main-page"></a>Moniteur de réplication, Page principale
   Le Moniteur de réplication permet de suivre l'état et les performances des publications et des abonnements dans une topologie de réplication. Les rubriques suivantes fournissent plus d'informations :  
@@ -28,17 +28,9 @@ ms.locfileid: "52778101"
   
 -   Pour plus d'informations sur les tâches qui peuvent être exécutées dans le Moniteur de réplication, consultez les rubriques suivantes :  
   
-    -   [Actualiser des données dans le Moniteur de réplication](monitor/refresh-data-in-replication-monitor.md)  
+    -   [Actualiser des données dans le moniteur de réplication](monitor/refresh-data-in-replication-monitor.md)  
   
-    -   [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
-  
-    -   [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
-  
-    -   [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)  
-  
-    -   [Afficher des informations et exécuter des tâches relatives à un abonnement &#40;moniteur de réplication&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
-  
-    -   [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement &#40;moniteur de réplication&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
+    -   [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md) 
   
     -   [Mesurer la latence et valider les connexions pour la réplication transactionnelle](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

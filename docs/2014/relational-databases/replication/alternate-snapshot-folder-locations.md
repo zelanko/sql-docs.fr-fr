@@ -14,12 +14,12 @@ ms.assetid: 437553b0-19df-4522-8f27-06b5bc747c69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ff65f1f4d5042e3b7c401a47e7c9df795dd681b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: c86e79928bdadb129ed0aa591e4bd035ffe22c1c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777863"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128999"
 ---
 # <a name="alternate-snapshot-folder-locations"></a>Autres emplacements du dossier d'instantané
   Les autres emplacements d'instantané vous permettent de stocker les fichiers d'instantanés dans un lieu autre que l'emplacement par défaut (généralement, sur le serveur de distribution), ou s'ajoutent à cet emplacement par défaut. Il peut s'agir d'un autre serveur, d'un lecteur réseau ou d'un support amovible tel qu'un CD-ROM ou un disque.  
@@ -36,7 +36,7 @@ ms.locfileid: "52777863"
   
  **Pour spécifier un autre emplacement d'instantané**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Spécifier un autre emplacement de dossier d’instantané &#40;SQL Server Management Studio&#41;](publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md) 
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Spécifiez un emplacement de dossier d’instantanés de remplacement](snapshot-options.md#snapshot-folder-locations) 
   
 -   Programmation de la réplication [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Configurer les propriétés d’instantané &#40;programmation Transact-SQL de la réplication&#41;](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   

@@ -13,12 +13,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef9bda4b8eeff394e44ba696e228b121015960b9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774351"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125649"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Rétablir une base de données dans l'état d'un instantané de base de données
   Si les données d'une base de données en ligne sont endommagées, dans certains cas, rétablir la base de données dans l'état d'un instantané précédant le problème peut être une bonne solution plutôt que de restaurer la base de données à partir d'une sauvegarde. Par exemple, rétablir une base de données peut être utile pour annuler une grave erreur de l'utilisateur, telle que la suppression d'une table. Toutefois, toutes les modifications apportées depuis la création de l'instantané sont perdues.  
@@ -99,7 +99,7 @@ ms.locfileid: "52774351"
   
      Une opération de restauration nécessite des autorisations RESTORE DATABASE sur la base de données source. Pour restaurer la base de données, utilisez l'instruction Transact-SQL suivante :  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
+     RESTORE DATABASE *nom_base_de_données* FROM DATABASE_SNAPSHOT **=**_nom_instantané_base_de_données_  
   
      Où *nom_base_de_données* est la base de données source et *nom_instantané_base_de_données* le nom de l’instantané auquel vous souhaitez rétablir la base de données. Notez que dans cette instruction, vous devez spécifier un nom d'instantané et non un périphérique de sauvegarde.  
   

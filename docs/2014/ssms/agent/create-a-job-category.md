@@ -14,12 +14,12 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3254ae226a0ac955f2cf5b2f39077853ebf3e057
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d904f82c793acf6135f600e1ed5392bda96e1bb8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762781"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130849"
 ---
 # <a name="create-a-job-category"></a>Créer une catégorie de travaux
   Cette rubrique explique comment créer une catégorie de travaux dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects.  
@@ -48,7 +48,7 @@ ms.locfileid: "52762781"
   
 3.  Cliquez avec le bouton droit sur le dossier **Travaux** et sélectionnez **Gérer les catégories de travaux**.  
   
-4.  Dans la boîte de dialogue *Gérer les catégories de travaux***nom_serveur*, cliquez sur **Ajouter**.  
+4.  Dans la boîte de dialogue **Gérer les catégories de travaux**_nom_serveur_ , cliquez sur **Ajouter**.  
   
 5.  Dans la nouvelle boîte de dialogue, dans la zone **Nom** , entrez un nom pour la nouvelle catégorie de travaux.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52762781"
   
 7.  Cliquez sur **OK**.  
   
-8.  Dans la boîte de dialogue **Gérer les catégories de travaux***nom_serveur*, cliquez sur **Actualiser** pour garantir que la nouvelle catégorie de travaux est bien active. Si tout se présente comme prévu, fermez cette boîte de dialogue.  
+8.  Dans la boîte de dialogue **Gérer les catégories de travaux**_nom_serveur_ , cliquez sur **Actualiser** pour vous assurer que la nouvelle catégorie de travaux est active. Si tout se présente comme prévu, fermez cette boîte de dialogue.  
   
  Pour plus d’informations sur ces boîtes de dialogue, consultez [les catégories de travaux : Gérer les catégories de travaux](job-categories-manage-job-categories.md) et [nouvelle catégorie de travaux et les propriétés des catégories de travail](job-categories-properties-new-job-category.md).  
   

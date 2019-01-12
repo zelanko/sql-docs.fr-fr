@@ -14,12 +14,12 @@ ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a3125ef66a88b8d7c47324e67b1a263581a925d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1e63cee642738036933b0a1e2a9da6b48192fba9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788721"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124169"
 ---
 # <a name="snapshot-agent-security"></a>Sécurité de l'Agent d'instantané
   La boîte de dialogue **Sécurité de l'Agent d'instantané** permet de définir :  
@@ -55,7 +55,7 @@ ms.locfileid: "52788721"
  Le compte Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour la connexion doit être au moins un membre du rôle de base de données fixe **db_owner** dans la base de données de publication.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer les comptes de connexion et les mots de passe dans la réplication](security/manage-logins-and-passwords-in-replication.md)   
+ [Gérer les comptes de connexion et les mots de passe dans la réplication](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Modèle de sécurité de l’Agent de réplication](security/replication-agent-security-model.md)   
  [Vue d’ensemble des agents de réplication](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  

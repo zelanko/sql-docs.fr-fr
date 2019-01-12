@@ -10,12 +10,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367191"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127209"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Leçon 2 : Connexion depuis un autre ordinateur
   Pour une sécurité optimale, vous ne pouvez pas accéder au [!INCLUDE[ssDE](../includes/ssde-md.md)] des éditions Developer, Express et Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d'un autre ordinateur lors de sa première installation. Dans cette leçon, vous allez apprendre à activer les protocoles et à configurer les ports et le Pare-feu Windows pour la connexion à partir d'autres ordinateurs.  
@@ -44,7 +44,7 @@ ms.locfileid: "53367191"
     > [!NOTE]  
     >  Il est possible que les options 32 bits et 64 bits soient toutes deux disponibles.  
   
-2.  Dans **Gestionnaire de Configuration SQL Server**, développez **Configuration du réseau SQL Server**, puis cliquez sur **protocoles pour**  *\<InstanceName >*.  
+2.  Dans **Gestionnaire de Configuration SQL Server**, développez **Configuration du réseau SQL Server**, puis cliquez sur **protocoles pour**  _\<InstanceName >_.  
   
      L’instance par défaut (instance sans nom) est répertoriée sous **MSSQLSERVER**. Si vous avez installé une instance nommée, le nom que vous indiquez est répertorié. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] est installé en tant que **SQLEXPRESS**, sauf si vous avez changé le nom lors de l'installation.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "53367191"
   
 2.  Dans la boîte de dialogue **Se connecter au serveur** , confirmez **Moteur de base de données** dans la zone **Type de serveur** .  
   
-3.  Dans la zone **Nom du serveur** , tapez **tcp:** pour spécifier le protocole, suivi du nom d'ordinateur, d'une virgule et du numéro de port. Pour vous connecter à l’instance par défaut, l’utilisation du port 1433 est implicite et n’a pas besoin d’être précisée. Ainsi, tapez **tcp:***<nom_ordinateur>*. Dans notre exemple d’instance nommée, tapez **tcp:***<nom_ordinateur>***,49172**.  
+3.  Dans la zone **Nom du serveur** , tapez **tcp:** pour spécifier le protocole, suivi du nom d'ordinateur, d'une virgule et du numéro de port. Pour vous connecter à l’instance par défaut, l’utilisation du port 1433 est implicite et n’a pas besoin d’être précisée. Ainsi, tapez **tcp:**_<nom_ordinateur>_. Dans notre exemple d’instance nommée, tapez **tcp:**_<nom_ordinateur>_**,49172**.  
   
     > [!NOTE]  
     >  Si vous omettez **tcp:** dans la zone **Nom du serveur** , le client essaie tous les protocoles activés, dans l’ordre spécifié dans sa configuration.  

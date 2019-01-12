@@ -17,12 +17,12 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 786ede341e899acf2831c5c3e0a6204d3a80b1b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 791c5955cae2b1e7fec4575f43400ced245dcef5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791943"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124119"
 ---
 # <a name="debugging-control-flow"></a>Débogage du flux de contrôle
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluent des fonctionnalités et des outils permettant de résoudre les problèmes du flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -50,7 +50,7 @@ ms.locfileid: "52791943"
 |Lorsque la tâche ou le conteneur reçoit l'événement `OnTaskFailed`.|Appelée par l'hôte de la tâche lorsqu'il échoue.|  
 |Lorsque la tâche ou le conteneur reçoit l'événement `OnProgress`.|Appelée pour mettre à jour la progression de l'exécution de la tâche.|  
 |Lorsque la tâche ou le conteneur reçoit l'événement `OnQueryCancel`.|Appelée à tout moment du traitement de la tâche lorsque vous pouvez annuler l'exécution de la tâche.|  
-|Lorsque la tâche ou le conteneur reçoit l'événement `OnVariableValueChanged`.|Appelée par le runtime [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] lorsque la valeur d'une variable change. L’événement RaiseChangeEvent de la variable doit être définie sur `true` pour déclencher cet événement.<br /><br /> **\*\* Avertissement ** \*\*** La variable associée à ce point d’arrêt doit être définie dans l’étendue du **conteneur** . Si la variable est définie dans l'étendue du package, le point d'arrêt n'obtient pas de correspondance.|  
+|Lorsque la tâche ou le conteneur reçoit l'événement `OnVariableValueChanged`.|Appelée par le runtime [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] lorsque la valeur d'une variable change. L’événement RaiseChangeEvent de la variable doit être définie sur `true` pour déclencher cet événement.<br /><br /> **&#42;&#42;Avertissement &#42; &#42;**  la variable associée à ce point d’arrêt doit être définie dans le **conteneur** étendue. Si la variable est définie dans l'étendue du package, le point d'arrêt n'obtient pas de correspondance.|  
 |Lorsque la tâche ou le conteneur reçoit l'événement `OnCustomEvent`.|Appelée par les tâches pour déclencher des événements personnalisés définis par la tâche.|  
   
  Outre les conditions d'arrêt disponibles pour toutes les tâches et tous les conteneurs, certaines tâches et certains conteneurs proposent des conditions d'arrêt spéciales permettant de définir des points d'arrêt. Vous pouvez ainsi activer une condition d'arrêt sur le conteneur de boucles For définissant un point d'arrêt qui suspend l'exécution au début de chaque itération de la boucle.  

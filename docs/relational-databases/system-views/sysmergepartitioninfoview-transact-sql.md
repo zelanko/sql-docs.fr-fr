@@ -18,12 +18,12 @@ ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f39591079377dcfc1f357e582474f034a004af6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 46700bb94749269eb56e60cade035fdf4c8f388c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816311"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124681"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52816311"
 |**fast_multicol_updateproc**|**bit**|Spécifie si l'Agent de fusion est activé pour appliquer des modifications à plusieurs colonnes d'une même ligne à partir d'une seule instruction UPDATE.<br /><br /> **0** = émet une instruction UPDATE distincte pour chaque colonne modifiée.<br /><br /> **1** = émis à l’instruction UPDATE qui provoque la mise à jour de plusieurs colonnes dans une instruction.|  
 |**check_permissions**|**Int**|L’image bitmap des autorisations au niveau des tables qui seront vérifiées lorsque l’Agent de fusion applique les modifications au serveur de publication. *check_permissions* peut avoir une des valeurs suivantes :<br /><br /> **0 x 00** = les autorisations ne sont pas vérifiées.<br /><br /> **0 x 10** = des vérifications d’autorisations sur le serveur de publication avant que les insertions sont exécutées sur l’abonné puissent être téléchargées.<br /><br /> **0 x 20** = les autorisations sont vérifiées sur le serveur de publication avant de pouvoir télécharger les mises à jour effectuées sur l’abonné.<br /><br /> **0 x 40** = les autorisations sont vérifiées sur le serveur de publication avant que DELETE exécutées sur l’abonné puissent être téléchargées.|  
 |**maxversion_at_cleanup**|**Int**|Génération maximale faisant l'objet d'un nettoyage lors de la prochaine exécution de l'Agent de fusion.|  
-|**processing_order**|**Int**|Indique l’ordre de traitement des articles dans une publication de fusion ; sachant que la valeur **0** indique que l’article n’est pas ordonné, et les articles sont traités dans l’ordre à partir de la valeur la plus basse à la plus élevée. Si deux articles ont la même valeur, ils sont traités simultanément. Pour plus d’informations, consultez [Spécifier l’ordre de traitement d’articles de fusion](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).|  
+|**processing_order**|**Int**|Indique l’ordre de traitement des articles dans une publication de fusion ; sachant que la valeur **0** indique que l’article n’est pas ordonné, et les articles sont traités dans l’ordre à partir de la valeur la plus basse à la plus élevée. Si deux articles ont la même valeur, ils sont traités simultanément. Pour plus d’informations, consultez [propriétés de spécifier la réplication de fusion](../../relational-databases/replication/merge/specify-merge-replication-properties.md).|  
 |**upload_options**|**tinyint**|Indique si des modifications peuvent être effectuées sur l'Abonné ou téléchargés à partir de l'Abonné ; peut prendre l'une des valeurs suivantes :<br /><br /> **0** = il n’existe aucune restriction sur les mises à jour effectuées sur l’abonné ; toutes les modifications sont téléchargées sur le serveur de publication.<br /><br /> **1** = les modifications sont autorisées sur l’abonné, mais elles ne sont pas téléchargées sur le serveur de publication.<br /><br /> **2** = les modifications ne sont pas autorisées sur l’abonné.|  
 |**published_in_tran_pub**|**bit**|Indique qu'un article d'une publication de fusion est également publié dans une publication transactionnelle.<br /><br /> **0** = l’article n’est pas publié dans un article transactionnel.<br /><br /> **1** = l’article est également publié dans un article transactionnel.|  
 |**légère**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

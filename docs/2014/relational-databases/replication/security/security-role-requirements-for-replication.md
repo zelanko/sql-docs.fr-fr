@@ -13,12 +13,12 @@ ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dea87fd8144863d8098c88ee9e038cebda0b0060
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 52eed41a8b44147c13ed8dbc63dbda46ed625f51
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816651"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129799"
 ---
 # <a name="security-role-requirements-for-replication"></a>Rôles de sécurité nécessaires pour la réplication
   La réplication limite les actions spécifiques qu'un utilisateur peut réaliser, en fonction des rôles mappés à sa connexion d'accès. La réplication a attribué certaines autorisations au rôle serveur fixe **sysadmin** , au rôle de base de données fixe **db_owner** ainsi qu'aux connexions d'accès de la liste d'accès aux publications.  
@@ -51,6 +51,6 @@ ms.locfileid: "52816651"
   
 ## <a name="see-also"></a>Voir aussi  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Sécurité et protection &#40;réplication&#41;](security-and-protection-replication.md)  
+ [Sécurité de la réplication SQL Server](view-and-modify-replication-security-settings.md)  
   
   

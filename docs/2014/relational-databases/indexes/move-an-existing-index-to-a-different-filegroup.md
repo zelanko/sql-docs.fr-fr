@@ -16,12 +16,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6fa11684cc9f35eb662ca41c731f11887e1bce32
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534044"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127919"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Déplacer un index existant dans un autre groupe de fichiers
   Cette rubrique explique comment déplacer un index existant d'un groupe de fichiers à un autre à l'aide de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -73,7 +73,7 @@ ms.locfileid: "52534044"
   
 8.  Cliquez sur **Fermer**.  
   
-9. Dans le menu **Fichier**, sélectionnez **Enregistrer***nom_table*.  
+9. Dans le menu **Fichier** , sélectionnez **Enregistrer**_nom_table_.  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>Pour placer un index existant dans un autre groupe de fichiers dans l'Explorateur d'objets  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52534044"
   
 8.  Cliquez sur **OK**.  
   
- Les informations suivantes sont disponibles dans la page **Stockage** de la boîte de dialogue **Propriétés de l’index -** *nom_index* :  
+ Les informations suivantes sont disponibles dans la page **Stockage** de la boîte de dialogue **Propriétés de l’index -** _nom_index_ :  
   
  **Groupe de fichiers**  
  Stocke l'index dans le groupe de fichiers spécifié. La liste répertorie uniquement les groupes de fichiers standard (row). Le groupe de fichiers PRIMARY de la base de données est sélectionné par défaut dans la liste.  

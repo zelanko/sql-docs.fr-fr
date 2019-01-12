@@ -10,12 +10,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2409c993aad299551dcaf97e11c99fe032a96f1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0ee585f9773858848f213b3eeef6e995aedfb53f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800661"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127769"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Abonnés de réplication sur des tables optimisées en mémoire
   Les tables agissant comme des abonnés de réplication transactionnelle, à l'exclusion de la réplication transactionnelle d'égal à égal, peuvent être configurées en tant que tables mémoire optimisées. Les autres configurations de réplication ne sont pas compatibles avec les tables mémoire optimisées.  
@@ -317,6 +317,6 @@ GO
  La clé primaire d'une table mémoire optimisée ne peut pas être mise à jour. Pour répliquer une mise à jour de clé primaire sur un abonné, modifiez la procédure stockée de mise à jour pour fournir la mise à jour en tant que paire d'opérations de suppression et insertion.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités et tâches de réplication](replication-features-and-tasks.md)  
+ [Réplication SQL Server](sql-server-replication.md)  
   
   

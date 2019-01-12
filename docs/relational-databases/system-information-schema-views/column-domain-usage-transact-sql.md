@@ -20,27 +20,27 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b6cabea9289eefb0427395c2531d37df4abbe34
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b26f4644c7c922b58f884352ce52b3c572f469f6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663349"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127419"
 ---
 # <a name="columndomainusage-transact-sql"></a>COLUMN_DOMAIN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Renvoie une ligne pour chaque colonne de la base actuelle ayant des données de type alias. Cette vue de schémas d'informations renvoie des informations sur les objets pour lesquels l'utilisateur actuel dispose d'autorisations.  
   
- Pour récupérer des informations à partir de ces vues, spécifiez le nom qualifié complet de **INFORMATION_SCHEMA. *** nom_vue*.  
+ Pour récupérer des informations à partir de ces vues, spécifiez le nom qualifié complet de **INFORMATION_SCHEMA.** _nom_vue_.  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|Base de données dans laquelle réside le type de données alias.|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient le type de données alias.<br /><br /> **\*\* Important \* \***  n’utilisez pas de vues INFORMATION_SCHEMA pour déterminer le schéma d’un type de données. La seule méthode fiable pour rechercher le schéma d'un type est d'utiliser la fonction TYPEPROPERTY.|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient le type de données alias.<br /><br /> **&#42;&#42;Important &#42; &#42;**  n’utilisez pas de vues INFORMATION_SCHEMA pour déterminer le schéma d’un type de données. La seule méthode fiable pour rechercher le schéma d'un type est d'utiliser la fonction TYPEPROPERTY.|  
 |**NOM_DOMAINE**|**sysname**|Type de données alias.|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la table.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Propriétaire de la table.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Propriétaire de la table.<br /><br /> **&#42;&#42;Important &#42; &#42;**  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**TABLE_NAME**|**sysname**|Base de données où le type de données alias est utilisé.|  
 |**COLUMN_NAME**|**sysname**|Colonne utilisant le type de données alias.|  
   

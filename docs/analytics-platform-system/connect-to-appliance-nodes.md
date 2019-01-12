@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f57719bae769a75d704454af03af82689715644d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e8c61bebd6265d25e2c3fe0a14516e986f3ee414
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506301"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124443"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Se connecter aux nœuds d’appliance d’Analytique Platform System
 Cet article explique les différentes façons de se connecter à chaque nœud dans l’appliance Analytique Platform System.  
@@ -30,7 +30,7 @@ Chacun des nœuds d’appliance est accessible directement uniquement dans les s
 |||  
 |-|-|  
 |**Nœud**|**Scénarios d’accès**|  
-|Nœud de contrôle|Utilisez un navigateur web pour accéder à la Console d’administration, qui s’exécute sur le nœud de contrôle. Pour plus d’informations, consultez [surveiller l’Appliance à l’aide de la Console d’administration &#40;Analytique Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Tous les outils et les applications clientes se connectent au nœud de contrôle, même si la connexion est utilise Ethernet ou InfiniBand.<br /><br />Pour configurer une connexion Ethernet au nœud de contrôle, utilisez l’adresse IP de Cluster du nœud contrôle et le port **17001**. Par exemple, « 192.168.0.1,17001 ».<br /><br />Pour configurer une connexion InfiniBand au nœud de contrôle, utilisez ***appliance_domain *-SQLCTL01** et le port **17001**. À l’aide de ***appliance_domain *-SQLCTL01**, le serveur DNS se connecte à votre serveur au réseau InfiniBand actif. Pour configurer votre serveur non-appliance pour l’utiliser, consultez [configurer des cartes réseau InfiniBand](configure-infiniband-network-adapters.md).<br /><br />L’administrateur de l’appliance se connecte au nœud de contrôle pour effectuer des opérations de gestion. Par exemple, l’administrateur de l’appliance effectue les opérations suivantes à partir du nœud de contrôle :<br /><br />Configurer le système de plateforme d’Analytique avec le **dwconfig.exe** outil de configuration.|  
+|Nœud de contrôle|Utilisez un navigateur web pour accéder à la Console d’administration, qui s’exécute sur le nœud de contrôle. Pour plus d’informations, consultez [surveiller l’Appliance à l’aide de la Console d’administration &#40;Analytique Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Tous les outils et les applications clientes se connectent au nœud de contrôle, même si la connexion est utilise Ethernet ou InfiniBand.<br /><br />Pour configurer une connexion Ethernet au nœud de contrôle, utilisez l’adresse IP de Cluster du nœud contrôle et le port **17001**. Par exemple, « 192.168.0.1,17001 ».<br /><br />Pour configurer une connexion InfiniBand au nœud de contrôle, utilisez  <strong>*appliance_domain*-SQLCTL01</strong> et le port **17001**. À l’aide de  <strong>*appliance_domain*-SQLCTL01</strong>, le serveur DNS se connecte à votre serveur au réseau InfiniBand actif. Pour configurer votre serveur non-appliance pour l’utiliser, consultez [configurer des cartes réseau InfiniBand](configure-infiniband-network-adapters.md).<br /><br />L’administrateur de l’appliance se connecte au nœud de contrôle pour effectuer des opérations de gestion. Par exemple, l’administrateur de l’appliance effectue les opérations suivantes à partir du nœud de contrôle :<br /><br />Configurer le système de plateforme d’Analytique avec le **dwconfig.exe** outil de configuration.|  
 |Nœud de calcul|Calcul des connexions de nœud sont dirigées par le nœud de contrôle. Les adresses IP des nœuds de calcul ne sont jamais entrés dans les commandes de l’application en tant que paramètres.<br /><br />Pour le chargement, sauvegarde, copie de Table distante et Hadoop, SQL Server PDW envoyer ou recevoir des données directement en parallèle entre les nœuds de calcul et les serveurs non-appliance nœuds. Ces applications se connectent avec SQL Server PDW en vous connectant au nœud de contrôle, et le nœud de contrôle dirige ensuite SQL Server PDW pour établir la communication entre les nœuds de calcul et le serveur non-appliance.<br /><br />Par exemple, ces opérations de transfert de données se produisent en parallèle avec des connexions directes aux nœuds de calcul :<br /><br />Charger à partir du serveur de chargement dans SQL Server PDW.<br /><br />Sauvegarder une base de données depuis SQL Server PDW vers le serveur de sauvegarde.<br /><br />Restauration d’une base de données à partir du serveur de sauvegarde SQL Server PDW.<br /><br />Interrogation des données Hadoop à partir de SQL Server PDW.<br /><br />Exportation de données à partir de SQL Server PDW vers une table Hadoop externe.<br /><br />Copie d’une table SQL Server PDW pour une base de données SQL Server SMP distant.|  
   
 ## <a name="connecting-to-the-ethernet-and-infiniband-networks"></a>Connexion à la carte Ethernet et les réseaux InfiniBand  

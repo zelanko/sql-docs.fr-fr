@@ -14,12 +14,12 @@ ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b499f06254a482deea2c90f2fc570b8bb7c9d43e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5feb29337ccd0ee79cd1b6f98187cc6fdb52a942
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516752"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130669"
 ---
 # <a name="customization-file-userlist-section"></a>Fichier de personnalisation, section UserList
 Le **userlist** section se rapporte à la **connecter** section avec la même *identificateur* paramètre.  
@@ -32,13 +32,13 @@ Le **userlist** section se rapporte à la **connecter** section avec la même *i
 ## <a name="syntax"></a>Syntaxe  
  Une entrée d’accès utilisateur est au format :  
   
- *Nom d’utilisateur* **=**   
- ***accessRights***  
+ _Nom d’utilisateur_ **=**   
+ **_accessRights_**  
   
 |Élément|Description|  
 |----------|-----------------|  
 |*userName*|Le *nom d’utilisateur* de la personne utilisant cette connexion. Noms d’utilisateur valides sont établies avec IIS **Service Manager** boîte de dialogue.|  
-|***accessRights***|L’un des droits d’accès suivants :<br /><br /> -   **NoAccess** -utilisateur ne peut pas accéder à la source de données.<br />-   **ReadOnly** -l’utilisateur peut lire la source de données.<br />-   **Lecture/écriture** -utilisateur capable de lire ou écrire dans la source de données.|  
+|**_accessRights_**|L’un des droits d’accès suivants :<br /><br /> -   **NoAccess** -utilisateur ne peut pas accéder à la source de données.<br />-   **ReadOnly** -l’utilisateur peut lire la source de données.<br />-   **Lecture/écriture** -utilisateur capable de lire ou écrire dans la source de données.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichier de personnalisation, Section Connect](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

@@ -18,12 +18,12 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f3f2dbe576fe95f89588354785b64bf444eb27b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 542cf5a0960e967d2bebb3889af0f03656004472
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661848"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124559"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Expressions  SequenceType (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  Si le **?** indicateur d’occurrence n’est pas spécifié, `sequence of` renvoie True uniquement lorsque le `Expression` type correspond la `Type` spécifié et `Expression` retourne un singleton.  
   
- **Remarque** le symbole plus (**+**) et l’astérisque (**\***) indicateurs d’occurrence ne sont pas pris en charge dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Remarque** le symbole plus (**+**) et l’astérisque (**&#42;**) indicateurs d’occurrence ne sont pas pris en charge dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Les exemples suivants illustrent l’utilisation de la**instance de** opérateur XQuery.  
   
@@ -401,7 +401,7 @@ select @x.query('xs:date("2000-01-01Z")')
     go  
     ```  
   
-     Voici le résultat obtenu :  
+     Voici le résultat obtenu :  
   
     ```  
     <a>2002-05-25Z</a>  

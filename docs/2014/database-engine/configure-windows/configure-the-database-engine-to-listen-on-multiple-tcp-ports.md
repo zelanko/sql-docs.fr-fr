@@ -18,12 +18,12 @@ ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5d5195e3c1d7e3b7164eba42ec142adb76a66fc1
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640120"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124189"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP
   Cette rubrique explique comment configurer le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour écouter sur plusieurs ports TCP dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide du Gestionnaire de configuration SQL Server. Lorsque TCP/IP est activé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le [!INCLUDE[ssDE](../../includes/ssde-md.md)] écoute les connexions entrantes sur un point de connexion composé d'une adresse IP et d'un numéro de port TCP. Les procédures suivantes créent un point de terminaison TDS (Tabular Data Stream, flux de données tabulaires), afin que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute sur un port TCP supplémentaire.  
@@ -74,9 +74,9 @@ ms.locfileid: "52640120"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>Pour configurer le moteur de base de données SQL Server de manière à écouter sur un port TCP supplémentaire  
   
-1.  Dans le Gestionnaire de configuration SQL Server, développez **Configuration du réseau SQL Server**, puis cliquez sur *Protocoles pour***<nom_instance>*.  
+1.  Dans le Gestionnaire de configuration SQL Server, développez **Configuration du réseau SQL Server**, puis cliquez sur **Protocoles pour**_<nom_instance>_.  
   
-2.  Développez **Protocoles pour***<nom_instance>*, puis cliquez sur **TCP/IP**.  
+2.  Développez **Protocoles pour**_<nom_instance>_, puis cliquez sur **TCP/IP**.  
   
 3.  Dans le volet droit, cliquez avec le bouton droit sur chaque adresse IP désactivée à activer, puis cliquez sur **Activer**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "52640120"
   
 6.  Dans le volet gauche, cliquez sur **Services SQL Server**.  
   
-7.  Dans le volet droit, cliquez avec le bouton droit sur **<nom_instance>***SQL Server*, puis cliquez sur **Redémarrer**.  
+7.  Dans le volet droit, cliquez avec le bouton droit sur **<nom_instance>**_SQL Server_, puis cliquez sur **Redémarrer**.  
   
      Lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] redémarre, le journal des erreurs répertorie les ports sur lesquels [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est à l'écoute.  
   

@@ -16,12 +16,12 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36188e2faa578c0c4ef2a89b32e00d474366d32d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 00c5b4b94bc0a4347991944ccaa7898e75f244f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212432"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130689"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,20 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=** ] **'***publication***'**  
+ [  **@publication=** ] **'**_publication_**'**  
  Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@scriptfile=** ] **'***scriptfile***'**  
+ [  **@scriptfile=** ] **'**_scriptfile_**'**  
  Chemin d'accès complet au fichier de script SQL. *ScriptFile* est **nvarchar (4000)**, sans valeur par défaut.  
   
- [  **@skiperror=** ] **'***skiperror***'**  
+ [  **@skiperror=** ] **'**_skiperror_**'**  
  Indique si l'Agent de distribution ou de fusion doit s'arrêter lorsqu'une erreur se produit au cours du traitement du script. *SkipError* est **bits**, avec 0 comme valeur par défaut.  
   
  **0** = l’agent s’arrête.  
   
  **1** = l’agent continue le script et ignore l’erreur.  
   
- [  **@publisher=** ] **'***publisher***'**  
+ [  **@publisher=** ] **'**_publisher_**'**  
  Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
