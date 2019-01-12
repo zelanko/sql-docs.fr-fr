@@ -16,12 +16,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 06b97ac4bf58b933f55c4b53bfeacfbc9a736f28
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516220"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126159"
 ---
 # <a name="create-clustered-indexes"></a>Créer des index cluster
   Vous pouvez créer des index cluster sur les tables dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. À quelques exceptions près, chaque table doit posséder un index cluster. Outre le fait qu'il améliore les performances des requêtes, un index cluster peut être reconstruit ou réorganisé à la demande pour contrôler la fragmentation de la table. Un index cluster peut également être créé sur une vue. (Les index cluster sont définis dans la rubrique [Description des index cluster et non-cluster](clustered-and-nonclustered-indexes-described.md).)  
@@ -86,7 +86,7 @@ ms.locfileid: "52516220"
   
 4.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…**.  
   
-5.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table*, cochez la case de la colonne de la table à ajouter à l’index cluster.  
+5.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de**_nom_table_ , cochez la case de la colonne de la table à ajouter à l’index cluster.  
   
 6.  Cliquez sur **OK**.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "52516220"
   
 9. Cliquez sur **Fermer**.  
   
-10. Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_table*.  
+10. Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

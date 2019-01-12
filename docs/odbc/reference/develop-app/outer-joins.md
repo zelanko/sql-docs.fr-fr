@@ -14,12 +14,12 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35f1ce877d6ed8a390bb6425a4d7f33a5d6947d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 827dd531eda338f4fd297a4420ed144d46a613ff
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513993"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135709"
 ---
 # <a name="outer-joins"></a>Jointures externes
 ODBC prend en charge le SQL-92 left, syntaxe de jointure externe complète, droite et complète. Est la séquence d’échappement pour les jointures externes  
@@ -28,7 +28,7 @@ ODBC prend en charge le SQL-92 left, syntaxe de jointure externe complète, droi
   
  où *jointure externe* est  
   
- *référence de table* {**gauche &#124; droite &#124; complète} jointure externe** {*référence de table* &#124; *jointure externe*} **ON**  *condition de recherche*  
+ *référence de table* {**gauche &#124; droite &#124; complète} jointure externe** {*référence de table* &#124; *jointure externe*} **ON**  _condition de recherche_  
   
  *référence de table* spécifie un nom de table, et *condition de recherche* spécifie la condition de jointure entre la *références de table*.  
   

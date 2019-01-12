@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 732d0bc450c23413fb31c7336e93dbf3dc785bec
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7602e03864a736c6011142fd56c3e6129efcb718
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662778"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143269"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51662778"
   
 ||  
 |-|  
-|**S’applique aux**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 et les versions ultérieures.|  
+|**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 et les versions ultérieures.|  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -35,11 +35,11 @@ ms.locfileid: "51662778"
 |event_package_guid|**uniqueidentifier**|GUID pour le package contenant l'événement. N'accepte pas la valeur NULL.|  
 |event_predicate|**nvarchar(2048)**|Représentation XML de l'arborescence prédicat qui est appliquée à l'événement. Autorise la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalités de la relation  
-À compter de 2015-07-13, « sys.dm_xe_objects » est un de ces DMV des événements étendus qui ne contiennent pas « _database » dans leur nom. Pas une faute de frappe ou dans la colonne de droite de la table suivante. Le nom est le même dans Microsoft SQL Server et de la base de données SQL Azure. GeneMi.  
+À compter de 2015-07-13, « sys.dm_xe_objects » est un de ces DMV des événements étendus qui ne contiennent pas « _database » dans leur nom. Pas une faute de frappe ou dans la colonne de droite de la table suivante. Le nom est le même dans Microsoft SQL Server et de la base de données SQL Azure.  
   
 |From|Pour|Relation|  
 |--------|------|----------------|  

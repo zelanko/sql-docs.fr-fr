@@ -16,12 +16,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e723c42dd41c21abb2c11059b8706a098f7fcfd9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353341"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135539"
 ---
 # <a name="create-a-push-subscription"></a>Créer un abonnement par émission (push)
   Cette rubrique explique comment créer un abonnement par émission de données (push) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Pour plus d’informations sur la création d’un abonnement par émission de données pour un Abonné non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Créer un abonnement pour un Abonné non-SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md).  
@@ -93,7 +93,7 @@ ms.locfileid: "53353341"
   
     -   Si la valeur de **allow_push** est **0**, exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), en spécifiant **allow_push** pour **@property** et `true` pour **@value**.  
   
-2.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Spécifiez **@publication**, de **@subscriber** et **@destination_db**. Spécifiez la valeur **push** pour **@subscription_type**. Pour plus d’informations sur la façon de mettre à jour des abonnements, consultez [Create an Updatable Subscription à une Publication transactionnelle](create-updatable-subscription-transactional-publication-transact-sql.md)  
+2.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Spécifiez **@publication**, de **@subscriber** et **@destination_db**. Spécifiez la valeur **push** pour **@subscription_type**. Pour plus d’informations sur la façon de mettre à jour des abonnements, consultez [Create an Updatable Subscription à une Publication transactionnelle](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 3.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Spécifiez les éléments suivants :  
   

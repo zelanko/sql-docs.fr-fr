@@ -15,12 +15,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7d4a8d29e27fae9b54a6060ec1be8f6c5a4163a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507269"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132539"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connecter des clients à une session de mise en miroir de bases de données (SQL Server)
   Pour établir une connexion avec une session de mise en miroir de bases de données, un client peut soit utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, soit le fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. S'ils sont configurés pour une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , ces deux fournisseurs d'accès aux données prennent pleinement en charge la mise en miroir de bases de données. Pour plus d'informations sur les éléments de programmation à prendre en compte pour l'utilisation d'une base de données mise en miroir, consultez [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Qui plus est, l'instance de serveur principal actuelle doit être disponible et la connexion du client doit avoir été créée dans l'instance de serveur. Pour plus d’informations, consultez [Dépanner des utilisateurs orphelins &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Les connexions clientes à une session de mise en miroir de base de données n'exigent pas l'intervention de l'instance de serveur témoin (le cas échéant).  
@@ -85,7 +85,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Attribut Server  
  La chaîne de connexion doit contenir un attribut `Server` indiquant le nom du serveur partenaire initial, lequel doit identifier l'instance du serveur principal actuel.  
   
- La façon la plus simple d’identifier l’instance de serveur est de spécifier son nom : *<nom_serveur>*[**\\***<nom_instance_SQL_Server>*]. Exemple :  
+ La façon la plus simple d’identifier l’instance de serveur consiste à spécifier son nom : *<nom_serveur>*[**\\**_<nom_instance_SQL_Server>_]. Par exemple :  
   
  `Server=Partner_A;`  
   
@@ -129,7 +129,7 @@ Server=123.34.45.56,4724;
 |Pilote ODBC|`Failover_Partner`|  
 |ActiveX Data Objects (ADO)|`Failover Partner`|  
   
- La façon la plus simple d’identifier l’instance de serveur consiste à utiliser son nom système : *<nom_serveur>*[**\\***<nom_instance_SQL_Server>*].  
+ La façon la plus simple d’identifier l’instance de serveur consiste à employer son nom système : *<nom_serveur>*[**\\**_<nom_instance_SQL_Server>_].  
   
  Sinon, l'adresse IP et le numéro de port peuvent être fournis dans l'attribut `Failover Partner`. Si la tentative de connexion initiale échoue au cours de la première connexion à la base de données, la tentative de connexion au partenaire de basculement ne sera pas tributaire de DNS et de SQL Server Browser. Une fois qu'une connexion est établie, le nom du partenaire de basculement sera remplacé par le nom du partenaire de basculement, si bien qu'en cas de basculement, les connexions redirigées feront appel à DNS et à SQL Server Browser.  
   
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  Le délai entre deux tentatives est calculé au moyen de la formule suivante :  
   
- *RetryTime* **=** *PreviousRetryTime* **+(** 0.08 **\****LoginTimeout***)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+ (** 0,08 **&#42;**  _LoginTimeout_**)**  
   
  Où *PreviousRetryTime* a la valeur 0 au départ.  
   
@@ -174,10 +174,10 @@ Server=123.34.45.56,4724;
   
 |Arrondi|Calcul de*RetryTime* |Délai entre chaque tentative|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(** 0,08 **\*** 15 **)**|1,2 secondes|  
-|2|1,2 **+(** 0,08 **\*** 15 **)**|2,4 secondes|  
-|3|2,4 **+(** 0,08 **\*** 15 **)**|3,6 secondes|  
-|4|3,6 **+(** 0,08 **\*** 15 **)**|4,8 secondes|  
+|1|0 **+ (** 0,08 **&#42;** 15 **)**|1,2 secondes|  
+|2|1.2 **+ (** 0,08 **&#42;** 15 **)**|2,4 secondes|  
+|3|2.4 **+ (** 0,08 **&#42;** 15 **)**|3,6 secondes|  
+|4|3.6 **+ (** 0,08 **&#42;** 15 **)**|4,8 secondes|   
   
  Le tableau suivant illustre ces délais pour les tentatives de connexion successives, lesquelles excèdent toutes le délai d'expiration.  
   

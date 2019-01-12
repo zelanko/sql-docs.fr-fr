@@ -16,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5cdd5f3b4c4c1dd8ddac0df34423834c3b09b839
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209128"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131239"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication =** ] **'***publication***'**  
+ [  **@publication =** ] **'**_publication_**'**  
  Nom de la publication. *publication* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@property =** ] **'***propriété***'**  
+ [  **@property =** ] **'**_propriété_**'**  
  Propriété de publication à modifier. *propriété* est **nvarchar (255)**.  
   
- [  **@value =** ] **'***valeur***'**  
+ [  **@value =** ] **'**_valeur_**'**  
  Nouvelle valeur de la propriété. *valeur* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
   
  Le tableau ci-dessous décrit les propriétés modifiables de la publication et les limites liées aux valeurs de ces propriétés.  
@@ -130,7 +130,7 @@ Consultez la section Remarques pour connaître les propriétés dont la modifica
   - **0** Spécifie que les modifications de l’article n’invalident pas l’abonnement à réinitialiser. Si la procédure stockée détecte que la modification nécessite la réinitialisation des abonnements existants, une erreur se produit et aucune modification n'est effectuée.  
   - **1** indique que les modifications de l’article entraînent l’abonnement existant d’être réinitialisés et autorise la réinitialisation des abonnements se produise.  
   
-[ **@publisher** =] **'***publisher***'**  
+[ **@publisher** =] **'**_publisher_**'**  
  Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
   > [!NOTE]  

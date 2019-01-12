@@ -18,12 +18,12 @@ ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 172602fcaff2764256c9aa7b3e660c2400abdfd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06198932c654bf7e8d855b4a008b3de3401dda1c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596447"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131509"
 ---
 # <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@rolename =** ] **'***rôle***'**  
+ [  **@rolename =** ] **'**_rôle_**'**  
  Est le nom du rôle d’application. *rôle* est **sysname**, sans valeur par défaut. *rôle* doit exister dans la base de données actuelle.  
   
- [  **@newpwd =** ] **'***mot de passe***'**  
+ [  **@newpwd =** ] **'**_mot de passe_**'**  
  Nouveau mot de passe du rôle d'application. *mot de passe* est **sysname**, sans valeur par défaut. *mot de passe* ne peut pas être NULL.  
   
 > [!IMPORTANT]  
@@ -58,7 +58,7 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ## <a name="remarks"></a>Notes  
  **sp_approlepassword** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY APPLICATION ROLE sur la base de données.  
   
 ## <a name="examples"></a>Exemples  

@@ -16,12 +16,12 @@ ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee501c8e576363fd4a4bc15883ca322490d60908
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150769"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132389"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Exécution du Conseiller de mise à niveau (Invite de commandes)
   Utilisez le **UpgradeAdvisorWizardCmd** utilitaire pour exécuter le Conseiller de mise à niveau à partir de l’invite de commandes. Vous pouvez choisir de recevoir les résultats dans le format XML ou dans un fichier dont les valeurs sont séparées par des virgules.  
@@ -43,7 +43,7 @@ where <server_info> is any combination of the following:
  **-?**  
  Affiche la syntaxe de la commande.  
   
- **-ConfigFile** *nom de fichier*  
+ **-ConfigFile** _nom de fichier_  
  Est le nom de chemin d’accès et le nom de fichier d’un fichier XML qui contient les paramètres à utiliser lorsque vous exécutez le **UpgradeAdvisorWizardCmd** utilitaire.  
   
  *< détails_serveur >*  
@@ -51,22 +51,22 @@ where <server_info> is any combination of the following:
   
  *< détails_serveur >* peut être n’importe quelle combinaison des quatre arguments suivants :  
   
- **-Serveur** *nom_serveur*  
+ **-Serveur** _nom_serveur_  
  Spécifie le nom de l'ordinateur à analyser. Il peut s'agir de l'ordinateur local , qui correspond à la valeur par défaut, ou d'un ordinateur distant.  
   
- **-Instance** *nom_instance*  
+ **-Instance** _nom_instance_  
  Spécifie le nom de l'instance à analyser. Il n’y a pas de valeur par défaut. Si vous ne spécifiez pas ce paramètre, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’est pas analysé. La valeur d'une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est MSSQLSERVER. Pour une instance nommée, utilisez le nom de l'instance.  
   
- **-ASInstance***nom_instance_as*   
+ **-ASInstance**_nom_instance_as_   
  Spécifie le nom de l'instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à analyser. Il n’y a pas de valeur par défaut. Si vous ne spécifiez pas cette valeur, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n'est pas analysé. La valeur d'une instance par défaut d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est MSSQLServerOLAPService. Pour une instance nommée, utilisez le nom de l'instance.  
   
- **-RSInstance***nom_instance_rs*   
+ **-RSInstance**_nom_instance_rs_   
  Spécifie le nom de l'instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à analyser. Il n’y a pas de valeur par défaut. Si vous ne spécifiez pas cette valeur, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas analysé. La valeur d'une instance par défaut de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est ReportServer. Pour une instance nommée, utilisez le nom de l'instance.  
   
- **-SqlUser** *login_id*  
+ **-SqlUser** _login_id_  
  Si vous recourez à l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette valeur est le compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que le Conseiller de mise à niveau utilise pour se connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous ne spécifiez pas de compte de connexion, l'authentification Windows permet de se connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **-SqlPassword** *mot de passe*  
+ **-SqlPassword** _mot de passe_  
  Si vous utilisez le **- SqlUser** argument, utilisez cet argument pour spécifier le mot de passe pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.  
   
  **-CSV**  
@@ -75,7 +75,7 @@ where <server_info> is any combination of the following:
 ## <a name="return-values"></a>Valeurs de retour  
  Le tableau suivant montre les valeurs que **UpgradeAdvisorWizardCmd** retourne.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0|Analyse réussie, aucun problème de mise à niveau détecté.|  
 |entier positif|Analyse réussie, problèmes de mise à niveau détectés.|  
@@ -137,11 +137,11 @@ where <server_info> is any combination of the following:
 |`BatchFile`|Spécifie un fichier de commandes à analyser. Peut concerner plusieurs fichiers.|Obligatoire une ou plusieurs fois si l'élément `BatchFiles` est présent. Il n’y a pas de valeur par défaut.|  
 |`BatchSeparator`|Spécifie le délimiteur de lot utilisé dans les fichiers de commandes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Facultatif une fois par `SQLServer` élément. La valeur par défaut est GO.|  
 |`AnalysisServices`|Contient les paramètres d'analyse d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Facultatif une fois par fichier de configuration. S'il n'est pas spécifié, les bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne sont pas analysées.|  
-|`ASInstance`|Spécifie le nom d’une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Obligatoire une fois par `AnalysisServices` élément. Il n’y a pas de valeur par défaut.|  
+|`ASInstance`|Spécifie le nom d’une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Obligatoire une fois par élément `AnalysisServices`. Il n’y a pas de valeur par défaut.|  
 |`Databases` de l'élément `Analysis Services`|Contient une liste de bases de données à analyser.|Facultatif une fois par `AnalysisServices` élément. Si cet élément n'est pas présent, toutes les bases de données de l'instance sont analysées.|  
 |`Database` de l'élément `AnalysisServices`|Spécifie le nom d'une base de données à analyser.|Obligatoire une ou plusieurs fois si l'élément `Databases` est présent. Si un élément `Database` contient la valeur "*", toutes les bases de données de l'instance sont analysées. Il n’y a pas de valeur par défaut.|  
 |`ReportingServices`|Spécifie d'exécuter l'analyse sur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Facultatif une fois par fichier de configuration. S'il n'est pas spécifié, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas analysé.|  
-|`RSInstance`|Spécifie le nom d’une instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Obligatoire une fois par `ReportingServices` élément. Il n’y a pas de valeur par défaut.|  
+|`RSInstance`|Spécifie le nom d’une instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Obligatoire une fois par élément `ReportingServices`. Il n’y a pas de valeur par défaut.|  
 |`IntegrationServices`|Contient des paramètres d’analyse de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Facultatif une fois par fichier de configuration. S'il n'est pas spécifié, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n'est pas analysé.|  
 |`PackagePath`|Spécifie le chemin d'accès d'un jeu de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Facultatif une fois par `IntegrationServices` élément. Si cet élément n’est pas présent, une analyse se produit sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance et non en externe des packages stockés sont analysés. Il n’y a pas de valeur par défaut.|  
   
@@ -154,7 +154,7 @@ where <server_info> is any combination of the following:
 UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"  
 ```  
   
-### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>B. Exécuter le Conseiller de mise à niveau à l'aide des paramètres de configuration par défaut  
+### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>b. Exécuter le Conseiller de mise à niveau à l'aide des paramètres de configuration par défaut  
  L'exemple suivant indique comment exécuter le Conseiller de mise à niveau à partir de l'invite de commandes en utilisant des paramètres de configuration par défaut et l'authentification Windows.  
   
 ```  

@@ -15,12 +15,12 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b3d2581f2f086f8db5f9408502185c132a5866af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ef528fb128c81de1d2be07196dfe2a20ceaebba4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513223"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135079"
 ---
 # <a name="modify-views"></a>Modifier des vues
   Après avoir défini une vue, vous pouvez modifier sa définition dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sans la supprimer ni être obligé de la recréer à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -70,7 +70,7 @@ ms.locfileid: "52513223"
   
     3.  Cliquez avec le bouton droit sur la barre de titre de la table que vous souhaitez supprimer et sélectionnez **Supprimer**.  
   
-4.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_vue*.  
+4.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom de la vue_.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

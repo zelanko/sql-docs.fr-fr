@@ -15,22 +15,19 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d1bdc1f39e7e8e40b75b02bcb258f23ee411a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757480"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131909"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Stratégies de sauvegarde et de restauration de la réplication de fusion
   Pour la réplication de fusion, effectuez régulièrement des sauvegardes des bases de données suivantes :  
   
--   La base de données de publication au niveau du serveur de publication  
-  
--   La base de données de distribution au niveau du serveur de distribution  
-  
--   La base de données d'abonnement sur chaque Abonné  
-  
+-   La base de données de publication au niveau du serveur de publication   
+-   La base de données de distribution au niveau du serveur de distribution    
+-   La base de données d'abonnement sur chaque Abonné    
 -   Bases de données système **master** et **msdb** sur le serveur de publication, sur le serveur de distribution et sur tous les Abonnés. Il est recommandé de sauvegarder ces bases de données en même temps, ainsi que la base de données de réplication appropriée. Par exemple, sauvegardez les bases de données **master** et **msdb** au niveau du serveur de publication en même temps que la base de données de publication. Si la base de données de publication est restaurée, vérifiez que les bases de données **master** et **msdb** sont cohérentes avec la base de données de publication en termes de configuration de la réplication et de paramètres.  
   
  Si vous effectuez des sauvegardes régulières des journaux, toutes les modifications liées à la réplication doivent être capturées dans les sauvegardes des journaux. Si vous n'effectuez pas de sauvegardes des journaux, une sauvegarde doit être effectuée si un paramètre concernant la réplication est modifié. Pour en savoir plus, voir [Actions courantes nécessitant une sauvegarde mise à jour](common-actions-requiring-an-updated-backup.md).  

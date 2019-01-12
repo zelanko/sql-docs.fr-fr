@@ -14,12 +14,12 @@ ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e35b5020eef6b7a884a0490d882c82e2775c8952
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3142a78fcf3a2413e43b1a7598b5d3b282aba1c7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805781"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127669"
 ---
 # <a name="subscriber-properties"></a>Propriétés de l'abonné
   La boîte de dialogue **Propriétés de l'Abonné** contient des informations relatives aux versions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutées par l'Abonné et antérieures à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -39,8 +39,8 @@ ms.locfileid: "52805781"
  Inclut des informations relatives à l'abonné et au type d'abonné.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](view-and-modify-distributor-and-publisher-properties.md)   
- [Référence des propriétés &#40;réplication&#41;](properties-reference-replication.md)   
+ [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](view-and-modify-distributor-and-publisher-properties.md)   
+
  [S'abonner à des publications](subscribe-to-publications.md)  
   
   

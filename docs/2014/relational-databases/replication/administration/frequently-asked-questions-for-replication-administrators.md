@@ -13,12 +13,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6fa90f7732b504000696ad2977ae465b392ff565
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748722"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125850"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Questions fréquentes (FAQ) pour les administrateurs de la réplication
   Les questions et réponses suivantes fournissent des indications sur une variété de tâches auxquelles les administrateurs de bases de données répliquées sont confrontés.  
@@ -42,9 +42,9 @@ ms.locfileid: "52748722"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>Quand un abonnement est-il disponible, quand la base de données d'abonnement peut-elle être utilisée ?  
  Un abonnement est disponible après que l'instantané ait été appliqué à la base de données d'abonnement. Bien que la base de données d'abonnement soit accessible avant, il est conseillé de ne pas l'utiliser tant que l'instantané n'a pas été appliqué. Utilisez le Moniteur de réplication pour vérifier l'état de génération et d'application d'instantané :  
   
--   L'instantané est généré par l'Agent d'instantané. Affichez l'état de génération de l'instantané sur l'onglet **Agents** pour une publication du moniteur de réplication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+-   L'instantané est généré par l'Agent d'instantané. Affichez l'état de génération de l'instantané sur l'onglet **Agents** pour une publication du moniteur de réplication. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
--   L'instantané est appliqué par l'Agent de distribution ou par l'Agent de fusion. Affichez l'état d'application d'instantané sur la page **Agent de distribution** ou **Agent de fusion** du Moniteur de réplication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+-   L'instantané est appliqué par l'Agent de distribution ou par l'Agent de fusion. Affichez l'état d'application d'instantané sur la page **Agent de distribution** ou **Agent de fusion** du Moniteur de réplication. 
   
 ### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>Que se passe-t-il si l’Agent d'instantané n’a pas terminé lorsque l’Agent de distribution ou l'Agent de fusion démarre ?  
  Cela n'entraînera aucune erreur si l'Agent de distribution ou l'Agent de fusion s'exécute en même temps que l'Agent d'instantané. Vous devez cependant prendre en compte les éléments suivants :  
@@ -94,7 +94,7 @@ ms.locfileid: "52748722"
  Ces informations sont disponibles via [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]et plusieurs procédures stockées de réplication. Pour plus d’informations, voir [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md).  
   
 ### <a name="does-replication-encrypt-data"></a>La réplication chiffre-t-elle les données ?  
- Non. La réplication ne chiffre pas les données stockées dans la base de données ou transférées sur le réseau. Pour plus d’informations, consultez la section « Chiffrement » de la rubrique [Vue d’ensemble de la sécurité &#40;réplication&#41;](../security/security-overview-replication.md).  
+ Non. La réplication ne chiffre pas les données stockées dans la base de données ou transférées sur le réseau. Pour plus d’informations, consultez la section « Chiffrement » de la rubrique [sécurité de réplication SQL Server](../security/view-and-modify-replication-security-settings.md).  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>Comment puis-je répliquer des données via Internet ?  
  Vous pouvez répliquer des données via Internet en utilisant :  
@@ -140,7 +140,7 @@ ms.locfileid: "52748722"
   
 -   Exécutez les instructions GRANT directement sur la base de données d'abonnement.  
   
--   Utilisez un script après l'instantané pour exécuter les instructions. Pour plus d’informations, consultez [Exécuter des scripts avant et après l’application de l’instantané](../execute-scripts-before-and-after-the-snapshot-is-applied.md).  
+-   Utilisez un script après l'instantané pour exécuter les instructions. Pour plus d’informations, consultez [Exécuter des scripts avant et après l’application de l’instantané](../snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).  
   
 -   Utilisez la procédure stockée [sp_addscriptexec](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql) pour exécuter les instructions.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "52748722"
  Oui. Il existe de nombreuses règles spécifiques pour les bases de données impliquées dans une réplication. Pour plus d’informations, consultez [Sauvegarder et restaurer des bases de données répliquées](back-up-and-restore-replicated-databases.md).  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>La réplication affecte-t-elle la taille du journal des transactions ?  
- La réplication de fusion et la réplication d'instantané n'affectent pas la taille du journal des transactions, contrairement à la réplication transactionnelle. Si une base de données comprend une ou plusieurs publications transactionnelles, le journal n'est pas tronqué tant que toutes les transactions relatives aux publications n'ont pas été remises à la base de données de distribution. Si la taille du journal des transactions devient trop importante et que l'Agent de lecture du journal s'exécute de manière planifiée, envisagez de réduire l'intervalle entre les exécutions. Ou, définissez-le pour qu'il s'exécute en mode continu. S'il est paramétré pour s'exécuter en mode continu (par défaut), vérifiez qu'il fonctionne. Pour plus d’informations sur la vérification de l’état de l’Agent de lecture du journal, consultez [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+ La réplication de fusion et la réplication d'instantané n'affectent pas la taille du journal des transactions, contrairement à la réplication transactionnelle. Si une base de données comprend une ou plusieurs publications transactionnelles, le journal n'est pas tronqué tant que toutes les transactions relatives aux publications n'ont pas été remises à la base de données de distribution. Si la taille du journal des transactions devient trop importante et que l'Agent de lecture du journal s'exécute de manière planifiée, envisagez de réduire l'intervalle entre les exécutions. Ou, définissez-le pour qu'il s'exécute en mode continu. S'il est paramétré pour s'exécuter en mode continu (par défaut), vérifiez qu'il fonctionne. Pour plus d’informations sur la vérification de l’état de l’Agent de lecture du journal, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  De plus, si vous avez défini l'option « sync with backup » sur la base de données de publication ou la base de données de distribution, le journal des transactions n'est pas tronqué tant que toutes les transactions ne sont pas sauvegardées. Si la taille du journal des transactions devient trop importante et que cette option est définie, envisagez de réduire l'intervalle entre les enregistrements du journal des transactions. Pour plus d’informations sur la sauvegarde et la restauration des bases de données impliquées dans la réplication transactionnelle, consultez [Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d’instantané](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
@@ -189,7 +189,7 @@ ms.locfileid: "52748722"
 ## <a name="replication-maintenance"></a>Maintenance de réplication  
   
 ### <a name="how-do-i-determine-if-the-data-at-subscribers-is-synchronized-with-data-at-the-publisher"></a>Comment puis-je déterminer si les données sur les abonnés sont synchronisées avec celles du serveur de publication ?  
- Utilisez la validation. La validation fournit un rapport sur la synchronisation ou non de l'Abonné avec le serveur de publication. Pour plus d’informations, consultez [Valider des données répliquées](../validate-replicated-data.md). La validation ne fournit pas d'informations sur les lignes non correctement synchronisées, à l'inverse de l'utilitaire [tablediff utility](../../../tools/tablediff-utility.md) .  
+ Utilisez la validation. La validation fournit un rapport sur la synchronisation ou non de l'Abonné avec le serveur de publication. Pour plus d’informations, consultez [Valider des données répliquées](../validate-data-at-the-subscriber.md). La validation ne fournit pas d'informations sur les lignes non correctement synchronisées, à l'inverse de l'utilitaire [tablediff utility](../../../tools/tablediff-utility.md) .  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>Comment puis-je ajouter une table à une publication existante ?  
  Il n'est pas nécessaire d'arrêter l'activité sur les bases de données de publication ou d'abonnement pour ajouter une table (ou un autre objet). Ajoutez une table à une publication par le biais de la boîte de dialogue **Propriétés de la publication - \<Publication>** ou des procédures stockées [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) et [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Pour plus d’informations, consultez [Ajouter et supprimer des articles de publications existantes](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
@@ -207,7 +207,7 @@ ms.locfileid: "52748722"
  Les actions nécessaires à la suppression de la réplication d'une base de données varient suivant que la base de données ait servi de base de données de publication, de base de données d'abonnement, ou des deux à la fois.  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>Comment puis-je déterminer s'il existe des transactions ou des lignes à répliquer ?  
- Pour la réplication transactionnelle, utilisez les procédures stockées ou l'onglet **Commandes non distribuées** du Moniteur de réplication. Pour plus d’informations, consultez [Afficher les commandes répliquées et d’autres informations dans la base de données de distribution &#40;programmation Transact-SQL de la réplication&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) et [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement &#40;moniteur de réplication&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Pour la réplication transactionnelle, utilisez les procédures stockées ou l'onglet **Commandes non distribuées** du Moniteur de réplication. Pour plus d’informations, consultez [afficher les commandes répliquées et autres informations dans la base de données de Distribution &#40;programmation Transact-SQL de la réplication&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) et [afficher des informations et effectuer des tâches à l’aide Moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Pour la réplication de fusion, utilisez la procédure stockée **sp_showpendingchanges**. Pour plus d’informations, consultez [sp_showpendingchanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql).  
   
@@ -218,7 +218,7 @@ ms.locfileid: "52748722"
   
 -   Délai estimé de distribution des commandes à l'Abonné. Si cette valeur est supérieure au délai nécessaire pour générer et appliquer un instantané à l'Abonné, réinitialisez l'Abonné. Pour plus d’informations, consultez [Réinitialiser des abonnements](../reinitialize-subscriptions.md).  
   
- Pour plus d’informations, consultez [sp_replmonitorsubscriptionpendingcmds (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql) et [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement (moniteur de réplication)](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Pour plus d’informations, consultez [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql) et [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="replication-and-other-database-features"></a>Réplication et autres fonctionnalités de base de données  
   
@@ -229,7 +229,7 @@ ms.locfileid: "52748722"
  Oui. Aucune règle spécifique n'est nécessaire car toutes les données sont stockées sur un ensemble de disques sur le cluster.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration &#40;réplication&#41;](administration-replication.md)   
+ [Administration de réplication Forum aux questions](frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   
   

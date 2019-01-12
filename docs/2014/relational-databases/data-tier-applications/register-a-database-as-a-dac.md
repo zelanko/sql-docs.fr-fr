@@ -20,12 +20,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0411281173339c46eb629dc6aad757337b3c41c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761449"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129417"
 ---
 # <a name="register-a-database-as-a-dac"></a>Inscrire une base de données en tant que DAC
   Utilisez le **Assistant d’Application de couche données inscrire** ou un Windows script PowerShell pour générer une définition d’application (DAC) de couche données qui décrit les objets d’une base de données existante et inscrivez la définition de DAC dans le `msdb` base de données système (**master** dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
@@ -101,7 +101,7 @@ ms.locfileid: "52761449"
  **Annuler** : termine l’Assistant sans inscrire la DAC.  
   
 ### <a name="validating-objects"></a>Validation d'objets  
- **Vérification de**  *Nom_schéma* **.** *Nom_objet* **.** - Affiche une barre de progression au fur et à mesure que l'Assistant vérifie les dépendances des objets récupérés, et vérifie que ces objets sont tous valides pour une DAC. *nom_schéma ***.*** nom_objet* identifie l’objet en cours de vérification.  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Affiche une barre de progression au fur et à mesure que l'Assistant vérifie les dépendances des objets récupérés, et vérifie que ces objets sont tous valides pour une DAC. _SchemaName_**.**_ObjectName_ identifient quel objet est vérifié actuellement.  
   
  **\< Précédent** -vous renvoie à la **définir les propriétés** page pour modifier vos entrées.  
   

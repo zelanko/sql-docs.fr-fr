@@ -13,12 +13,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3141146842bd568336033073f07b41c636129ee7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543579"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130479"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Mise en miroir de bases de données et réplication (SQL Server)
   La mise en miroir des bases de données peut avoir lieu en parallèle à la réplication afin d'améliorer la disponibilité de la base de données de publication. La mise en miroir des bases de données consiste à avoir deux exemplaires d'une même base de données qui résident généralement sur des ordinateurs différents. À un moment donné précis, les clients ne peuvent accéder qu'à un seul exemplaire de la base de données. Cet exemplaire s'appelle la base de données principale. Les mises à jour apportées par les clients sur la base de données principale sont appliquées à l'autre exemplaire de la base de données, appelé base de données miroir. La mise en miroir consiste à répercuter dans la base de données miroir chaque insertion, mise à jour ou suppression apportée à la base de données principale.  
@@ -161,7 +161,7 @@ ms.locfileid: "52543579"
 |Mode haute sécurité sans basculement automatique|Toutes les transactions validées sont renforcées sur le disque dur du miroir. L'Agent de lecture du journal ne réplique que les transactions renforcées du miroir. Si le miroir n'est pas disponible, le principal empêche toute autre activité dans la base de données. L'Agent de lecture du journal n'a plus aucune transaction à répliquer.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités et tâches de réplication](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [Réplication SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [Copie des journaux de transaction et réplication &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

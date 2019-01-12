@@ -16,12 +16,12 @@ ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caaf907b0db55306ebd341ed727174f3531c947f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 21d0ea34f3521333976ce00a3f5b823c3fcb816a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777735"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129299"
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,31 +46,31 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_publisher_**'**  
  Nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  Nom de la base de données de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
   
- [  **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_publication_**'**  
  Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@alternate_publisher=**] **'***alternate_synchronization_partner***'**  
+ [  **@alternate_publisher=**] **'**_alternate_synchronization_partner_**'**  
  Est le nom de l’autre serveur de publication. *alternate_synchronization_partner* est **sysname**, sans valeur par défaut.  
   
- [  **@alternate_publisher_db=**] **'***alternate_publisher_db***'**  
+ [  **@alternate_publisher_db=**] **'**_alternate_publisher_db_**'**  
  Nom de la base de données de publication sur le serveur de publication de remplacement. *alternate_publisher_db* est **sysname**, sans valeur par défaut.  
   
- [  **@alternate_publication=**] **'***alternate_synchronization_partner***'**  
+ [  **@alternate_publication=**] **'**_alternate_synchronization_partner_**'**  
  Nom de la publication sur le partenaire de synchronisation de remplacement. *alternate_synchronization_partner* est **sysname**, sans valeur par défaut.  
   
- [  **@alternate_distributor=**] **'***alternate_distributor***'**  
+ [  **@alternate_distributor=**] **'**_alternate_distributor_**'**  
  Nom du serveur de distribution pour le partenaire de synchronisation de remplacement. *alternate_distributor* est **sysname**, sans valeur par défaut.  
   
- [  **@friendly_name=**] **'***nom_convivial***'**  
+ [  **@friendly_name=**] **'**_friendly_name_**'**  
  Nom d'affichage permettant d'identifier l'association du serveur de publication, de la publication et du serveur de distribution constituant un partenaire de synchronisation secondaire. *nom_convivial* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
   
- [  **@reserved=**] **'***réservé***'**  
+ [  **@reserved=**] **'**_réservé_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

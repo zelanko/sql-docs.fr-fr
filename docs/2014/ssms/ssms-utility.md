@@ -16,12 +16,12 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20b6109b5622fb78366ab24886b991185c8dbc76
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: edb7ea682ebef5d99cee7a248681be80fc433312
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777811"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100454"
 ---
 # <a name="ssms-utility"></a>Utilitaire Ssms
   L’utilitaire **Ssms**ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Si cela est spécifié, **Ssms** établit également une connexion à un serveur et ouvre des requêtes, des scripts, des fichiers, des projets et des solutions.  
@@ -51,16 +51,16 @@ ms.locfileid: "52777811"
  *solutionfile*  
  Spécifie une solution à ouvrir. Le paramètre doit contenir le chemin d'accès complet au fichier de solution.  
   
- [**-S** *nom_serveur*]  
+ [**-S** _nom_serveur_]  
  Nom du serveur  
   
- [**-d** *nom_base_de_données*]  
+ [**-d** _nom_base_de_données_]  
  Nom de la base de données  
   
- [**-U** *nom_d_utilisateur*]  
+ [**-U** _nom_d_utilisateur_]  
  Nom d'utilisateur lors d'une connexion avec l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
- [**-P** *mot de passe*]  
+ [**-P** _mot de passe_]  
  Mot de passe lors d'une connexion avec l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  [**-E**]  
@@ -69,7 +69,7 @@ ms.locfileid: "52777811"
  [**-nosplash**]  
  Empêche [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] d'afficher le graphique de l'écran de démarrage lors de l'ouverture. Utilisez cette option lors d'une connexion à l'ordinateur exécutant [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] au moyen des services Terminal Server sur une connexion dotée d'une bande passante limitée. Cet argument ne respecte pas la casse et peut apparaître avant ou après d'autres arguments  
   
- [**-log***[filename]?*]  
+ [**-log**_[nom_fichier]?_]  
  Consigne l'activité de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] dans le fichier spécifié à des fins de dépannage  
   
  [**-?**]  

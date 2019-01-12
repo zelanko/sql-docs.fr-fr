@@ -16,12 +16,12 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d96dd15857847e739600f087fa63b2c34453d27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 78328463828b3c4a93b72ddc8790df13677dee81
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816041"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125369"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_publication_**'**  
  Nom de la publication dans laquelle il faut supprimer un article. *publication*est **sysname**, sans valeur par défaut.  
   
- [  **@article=**] **'***article***'**  
+ [  **@article=**] **'**_article_**'**  
  Nom de l'article à supprimer dans la publication spécifiée. *article*est **sysname**, sans valeur par défaut. Si **tous les**, tous les articles existants dans la publication de fusion spécifiée sont supprimés. Même si *article* est **tous les**, la publication doit toujours être supprimée séparément à partir de l’article.  
   
  [  **@ignore_distributor=**] *ignore_distributor*  

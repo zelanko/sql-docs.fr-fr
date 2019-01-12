@@ -21,12 +21,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95fbb61460c23ca0fedf0baec71aa21acaa50398
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786741"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123929"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Afficher l'état des publications et des abonnements dans le Moniteur de réplication
   Le moniteur de réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] présente des informations sur l'état des publications et des abonnements :  
@@ -53,11 +53,8 @@ ms.locfileid: "52786741"
   
  **Pour afficher l'état des publications et des abonnements**  
   
--   Moniteur de réplication : [Afficher des informations et effectuer des tâches pour une Publication &#40;moniteur de réplication&#41; ](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) et [afficher des informations et effectuer des tâches pour un abonnement &#40;moniteur de réplication&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   Moniteur de réplication : [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).
   
- **Pour afficher des informations détaillées pour les agents**  
-  
--   Moniteur de réplication : [Afficher des informations et effectuer des tâches pour les Agents associés à une Publication &#40;moniteur de réplication&#41; ](view-information-and-perform-tasks-for-publication-agents.md) et [afficher des informations et effectuer des tâches pour les Agents associés à un abonnement &#40;réplication Moniteur&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="publication-status-values"></a>Valeurs d'état des publications  
  Le tableau suivant montre les valeurs d'état des publications et leurs icônes correspondantes dans l'ordre de la priorité.  

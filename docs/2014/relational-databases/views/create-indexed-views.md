@@ -17,12 +17,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 056675637b181340dc27e7f09698a0ac439dfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164599"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131809"
 ---
 # <a name="create-indexed-views"></a>Créer des vues indexées
   Cette rubrique explique comment créer une vue indexée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le premier index créé sur une vue doit être un index cluster unique. Après avoir créé l'index cluster unique, vous pouvez créer davantage d'index non cluster. La création d'un index cluster unique sur une vue améliore les performances des requêtes, car la vue est stockée dans la base de données au même titre qu'une table avec un index cluster. L'optimiseur de requête peut utiliser des vues indexées pour accélérer l'exécution des requêtes. Il n'est pas nécessaire de référencer la vue dans la requête pour que l'optimiseur envisage d'utiliser cette vue.  
@@ -55,7 +55,7 @@ ms.locfileid: "48164599"
   
 -   L'optimiseur de requête utilise la vue indexée pour générer le plan de requête.  
   
-    |Options SET|Valeur requise|Valeur de serveur par défaut|Valeur par défaut<br /><br /> Valeur OLE DB et ODBC|Valeur par défaut<br /><br /> Valeur DB-Library|  
+    |Options SET|Valeur requise|Valeur de serveur par défaut|Par défaut<br /><br /> Valeur OLE DB et ODBC|Valeur par défaut<br /><br /> Valeur DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -86,11 +86,11 @@ ms.locfileid: "48164599"
   
 -   Lorsque vous créez l'index, l'option IGNORE_DUP_KEY doit avoir la valeur OFF (valeur par défaut).  
   
--   Les tables doivent être référencées par des noms en deux parties, *schéma ***.*** nom_table*, dans la définition de la vue.  
+-   Les tables doivent être référencées par des noms en deux parties, _schéma_**.**_nom_table_ , dans la définition de la vue.  
   
 -   Les fonctions définies par l'utilisateur référencées dans la vue doivent avoir été créées avec l'option WITH SCHEMABINDING.  
   
--   Toutes les fonctions définies par l’utilisateur référencées dans la vue doivent être référencées par des noms en deux parties, *schéma ***.*** fonction*.  
+-   Toutes les fonctions définies par l’utilisateur référencées dans la vue doivent être référencées par des noms en deux parties, _schéma_**.**_fonction_.  
   
 -   La propriété d'accès aux données d'une fonction définie par l'utilisateur doit avoir la valeur NO SQL, et la propriété d'accès externe doit avoir la valeur NO.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "48164599"
 -   Si la définition de la vue contient une clause GROUP BY, la clé de l'index cluster unique peut référencer seulement les colonnes définies dans la clause GROUP BY.  
   
 ###  <a name="Recommendations"></a> Recommandations  
- Si vous faites référence aux littéraux de chaîne `datetime` et `smalldatetime` au sein de vues indexées, il est recommandé de convertir explicitement le littéral en type date souhaité à l'aide d'un style de format de date déterministe. Pour obtenir la liste des styles de formats de date qui sont déterministes, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Expressions qui impliquent une conversion implicite de chaînes de caractères à `datetime` ou `smalldatetime` sont considérées comme non déterministes. Cela est dû au fait que les résultats dépendent des paramètres LANGUAGE et DATEFORMAT de la session serveur. Par exemple, les résultats de l'expression `CONVERT (datetime, '30 listopad 1996', 113)` dépendent du paramètre LANGUAGE, car la chaîne '`listopad`' désigne des mois différents selon la langue. De même, dans l'expression `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprète la chaîne `'2000-12-01'` en fonction du paramètre DATEFORMAT.  
+ Si vous faites référence aux littéraux de chaîne `datetime` et `smalldatetime` au sein de vues indexées, il est recommandé de convertir explicitement le littéral en type date souhaité à l'aide d'un style de format de date déterministe. Pour obtenir la liste des styles de formats de date qui sont déterministes, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Les expressions qui impliquent une conversion implicite de chaînes de caractères en `datetime` ou en `smalldatetime` sont considérées comme non déterministes. Cela est dû au fait que les résultats dépendent des paramètres LANGUAGE et DATEFORMAT de la session serveur. Par exemple, les résultats de l'expression `CONVERT (datetime, '30 listopad 1996', 113)` dépendent du paramètre LANGUAGE, car la chaîne '`listopad`' désigne des mois différents selon la langue. De même, dans l'expression `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprète la chaîne `'2000-12-01'` en fonction du paramètre DATEFORMAT.  
   
  La conversion implicite de données caractères non-Unicode entre les classements est également considérée comme non déterministe.  
   

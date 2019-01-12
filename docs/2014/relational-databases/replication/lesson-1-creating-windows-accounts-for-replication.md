@@ -1,11 +1,10 @@
 ---
-title: 'Leçon 1 : Création de comptes Windows pour la réplication | Microsoft Docs'
+title: 'Leçon 1 : Windows de création de comptes pour la réplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -14,14 +13,14 @@ ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0269a82d4ef11e53c41d7b288797064e0f3abd16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095569"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127454"
 ---
-# <a name="lesson-1-creating-windows-accounts-for-replication"></a>Leçon 1 : Création de comptes Windows pour la réplication
+# <a name="lesson-1-creating-windows-accounts-for-replication"></a>Leçon 1 : Création de comptes Windows pour la réplication
   Dans cette leçon, vous allez créer des comptes Windows pour exécuter les agents de réplication. Vous allez créer un compte Windows distinct sur le serveur local pour les agents suivants :  
   
 |Agent|Emplacement|Nom du compte|  
@@ -63,7 +62,7 @@ ms.locfileid: "48095569"
 6.  Cliquez sur **Fermer**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez créé avec succès les comptes Windows des agents de réplication. Ensuite, vous allez configurer le dossier d'instantanés. Voir [Leçon 2 : Préparation du dossier d’instantanés](lesson-2-preparing-the-snapshot-folder.md).  
+ Vous avez créé avec succès les comptes Windows des agents de réplication. Ensuite, vous allez configurer le dossier d'instantanés. Consultez [leçon 2 : Préparation du dossier d’instantané](lesson-2-preparing-the-snapshot-folder.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation des Agents de réplication](agents/replication-agents-overview.md)  

@@ -5,162 +5,239 @@ description: Procédure pas à pas un déploiement de clusters SQL Server 2019 d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 12/17/2018
 ms.topic: quickstart
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f5ddd80eaf29db657c42eec5c84c8485e8b0d8b6
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: 39c79c39c04d64656b83004425d476896cbc75db
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531154"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241700"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)
 
-Dans ce démarrage rapide, vous allez déployer un cluster de données volumineuses de SQL Server 2019 (version préliminaire) sur AKS dans une configuration par défaut appropriée pour les environnements de développement/test.
+Dans ce démarrage rapide, vous utilisez un exemple de script de déploiement pour déployer le cluster de données volumineux SQL Server 2019 (version préliminaire) pour Azure Kubernetes Service (AKS). 
 
-> [!NOTE]
-> AKS est simplement un emplacement à l’hôte Kubernetes. Les clusters de données volumineuses peuvent être déployés dans Kubernetes, quel que soit l’infrastructure sous-jacente. Pour plus d’informations, consultez [comment déployer des données volumineuses de SQL Server clusters sur Kubernetes](deployment-guidance.md).
+> [!TIP]
+> ACS n'est qu’une seule option pour l’hébergement de Kubernetes pour votre cluster de données volumineux. Pour en savoir plus sur les autres options de déploiement, ainsi que la manière dont les options pour personnaliser le déploiement, consultez [comment déployer des données volumineuses de SQL Server clusters sur Kubernetes](deployment-guidance.md).
 
-En plus d’une instance SQL principale, le cluster comprend un seul pool instance de calcul, une instance de pool de données et deux instances de pool de stockage. Données sont conservées à l’aide de volumes persistants Kubernetes utilisant des classes de stockage par défaut AKS. Pour personnaliser davantage votre configuration, consultez les variables d’environnement dans le [déploiement](deployment-guidance.md).
-
-Si vous préférez exécuter un script pour créer votre cluster AKS et installer un cluster de données volumineux en même temps, consultez [déployer un serveur SQL Server sur Azure Kubernetes Service (ACS) de cluster de données volumineuses](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+Le déploiement de cluster de données volumineuses par défaut utilisé ici se compose d’une instance SQL principale, instance de pool d’un calcul, deux instances de pool de données et deux instances de pool de stockage. Données sont conservées à l’aide de volumes persistants Kubernetes qui utilisent les classes de stockage par défaut AKS. La configuration par défaut utilisée dans ce démarrage rapide est adaptée aux environnements de développement/test.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## <a name="prerequisites"></a>Prérequis
 
-Ce démarrage rapide nécessite que vous avez déjà configuré un cluster AKS avec une version 1.10 d’edgeos minimale. Pour plus d’informations, consultez le [déployer sur AKS](deploy-on-aks.md) guide.
-
-- [Outils de données volumineuses de SQL Server 2019](deploy-big-data-tools.md):
+- Un abonnement Azure.
+- [Outils de Big data](deploy-big-data-tools.md):
+   - **mssqlctl**
+   - **kubectl**
    - **Azure Data Studio**
    - **Extension de SQL Server 2019**
-   - **kubectl**
-   - **mssqlctl**
+   - **Azure CLI**
 
-## <a name="verify-aks-configuration"></a>Vérifier la configuration d’ACS
+## <a name="log-in-to-your-azure-account"></a>Connectez-vous à votre compte Azure
 
-Une fois que vous avez le cluster AKS déployé, vous pouvez exécuter la commande kubectl pour afficher la configuration de cluster ci-dessous. Assurez-vous que kubectl pointe vers le contexte de cluster correct.
+Le script utilise Azure CLI pour automatiser la création d’un cluster AKS. Avant d’exécuter le script, vous devez vous connecter à votre compte Azure avec Azure CLI au moins une fois. Exécutez la commande suivante à partir d’une invite de commandes.
 
-```bash
-kubectl config view
+```
+az login
 ```
 
-## <a name="define-environment-variables"></a>Définir des variables d’environnement
+## <a name="download-the-deployment-script"></a>Télécharger le script de déploiement
 
-Définition des variables d’environnement requises pour le déploiement de cluster de données volumineux légèrement diffère selon que vous utilisez un client Windows ou Linux/Mac OS.  Choisissez les étapes ci-dessous, selon le système d’exploitation que vous utilisez.
+Ce démarrage rapide automatise la création du cluster big data sur AKS à l’aide d’un script python **déployer-sql-big-data-aks.py**. Si vous avez déjà installé python pour **mssqlctl**, vous devez être en mesure d’exécuter le script avec succès dans ce démarrage rapide. 
 
-Avant de continuer, notez les instructions importantes suivantes :
+Dans une invite de l’interpréteur de commandes Windows PowerShell ou Linux, exécutez la commande suivante pour télécharger le script de déploiement à partir de GitHub.
 
-- Dans le [fenêtre de commande](https://docs.microsoft.com/visualstudio/ide/reference/command-window), guillemets doubles sont inclus dans les variables d’environnement. Si vous utilisez des guillemets pour encapsuler un mot de passe, les guillemets sont inclus dans le mot de passe.
-- Dans bash, les guillemets ne sont pas inclus dans la variable. Nos exemples utilisent des guillemets doubles `"`.
-- Vous pouvez définir les variables d’environnement le mot de passe à comme vous le souhaitez, mais assurez-vous qu’ils sont suffisamment complexes et n’utilisent pas le `!`, `&`, ou `'` caractères.
-- Le `sa` compte est un administrateur système sur l’instance principale de SQL Server qui est créé pendant l’installation. Une fois le conteneur SQL Server créé, la variable d’environnement `MSSQL_SA_PASSWORD` que vous avez spécifiée peut être découverte en exécutant `echo $MSSQL_SA_PASSWORD` dans le conteneur. Pour des raisons de sécurité, vous devez modifier votre `sa` mot de passe conformément aux bonnes pratiques documentées [ici](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
-
-Initialiser les variables d’environnement suivantes.  Ils sont requis pour le déploiement d’un cluster de données volumineuses :
-
-### <a name="windows"></a>Windows
-
-À l’aide d’une fenêtre de commande (et pas PowerShell), configurer les variables d’environnement suivantes :
-
-```cmd
-SET ACCEPT_EULA=Y
-SET CLUSTER_PLATFORM=aks
-
-SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
-SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
-SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
-SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
-
-SET DOCKER_REGISTRY=private-repo.microsoft.com
-SET DOCKER_REPOSITORY=mssql-private-preview
-SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
-SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
-SET DOCKER_PRIVATE_REGISTRY="1"
+```
+curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/aks/deploy-sql-big-data-aks.py"
 ```
 
-### <a name="linuxmacos"></a>Linux/Mac OS
+## <a name="run-the-deployment-script"></a>Exécutez le script de déploiement
 
-Initialiser les variables d’environnement suivantes :
+Utilisez les étapes suivantes pour exécuter le script de déploiement. Ce script crée un service AKS dans Azure et puis déployer un cluster de données volumineuses de SQL Server 2019 sur AKS. Vous pouvez également modifier le script avec d’autres [variables d’environnement](deployment-guidance.md#env) pour créer un déploiement personnalisé.
 
-```bash
-export ACCEPT_EULA="Y"
-export CLUSTER_PLATFORM="aks"
+1. Exécutez le script avec la commande suivante :
 
-export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
-export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
-export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
-export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
+   ```
+   python deploy-sql-big-data-aks.py
+   ```
 
-export DOCKER_REGISTRY="private-repo.microsoft.com"
-export DOCKER_REPOSITORY="mssql-private-preview"
-export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
-export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
-export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
-export DOCKER_PRIVATE_REGISTRY="1"
+   > [!NOTE]
+   > Si vous avez python3 et python2 sur votre ordinateur client et dans le chemin d’accès, vous devez exécuter la commande à l’aide de python3 : `python3 deploy-sql-big-data-aks.py`.
+
+1. Lorsque vous y êtes invité, entrez les informations suivantes :
+
+   | Value | Description |
+   |---|---|
+   | **ID d’abonnement Azure** | ID d’abonnement Azure à utiliser pour AKS. Vous pouvez répertorier tous vos abonnements et leurs ID en exécutant `az account list` à partir d’une autre ligne de commande. |
+   | **Groupe de ressources Azure** | Le nom de groupe de ressources Azure pour créer le cluster AKS. |
+   | **Nom d’utilisateur docker** | Le nom d’utilisateur Docker fourni dans le cadre de la version préliminaire publique limitée. |
+   | **Mot de passe docker** | Le mot de passe Docker fourni dans le cadre de la version préliminaire publique limitée. |
+   | **Région Azure** | La région Azure pour le nouveau cluster AKS (par défaut **westus**). |
+   | **Taille de machine** | Le [taille de la machine](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) à utiliser pour les nœuds du cluster AKS (par défaut **Standard_L4s**). |
+   | **Nœuds de travail** | Le nombre de nœuds de travail dans le cluster AKS (par défaut **3**). |
+   | **Nom du cluster** | Le nom de cluster AKS et le cluster de données volumineux. Le nom de votre cluster doit être uniquement des caractères alphanumériques minuscules et sans espaces. (par défaut **sqlbigdata**). |
+   | **Mot de passe** | Mot de passe pour le contrôleur, une passerelle HDFS/Spark et une instance principale (par défaut **MySQLBigData2019**). |
+   | **Utilisateur du contrôleur** | Nom d’utilisateur pour l’utilisateur du contrôleur (par défaut : **administrateur**). |
+
+   > [!IMPORTANT]
+   > Chaque revendication de volume persistant dans le cluster nécessite un disque attaché. Actuellement, cluster big data nécessite 21 revendications de volume persistant. Lorsque vous choisissez une taille de machine virtuelle et le nombre de nœuds, assurez-vous que le nombre total de disques pouvant être connectés entre les nœuds est supérieure ou égale à 21. Par exemple, le [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) taille de l’ordinateur prend en charge 16 disques attachés, trois nœuds signifie que les 48 disques peuvent être attachés.
+
+   > [!NOTE]
+   > Le `sa` compte est un administrateur système sur l’instance principale de SQL Server qui est créé pendant l’installation. Après avoir créé le déploiement, la `MSSQL_SA_PASSWORD` variable d’environnement est détectable en exécutant `echo $MSSQL_SA_PASSWORD` dans le conteneur de l’instance principale. Pour des raisons de sécurité, vous devez modifier votre `sa` mot de passe sur l’instance principale après le déploiement. Pour plus d’informations, consultez [modifier le mot de passe SA](../linux/quickstart-install-connect-docker.md#sapassword).
+
+1. Le script démarre en créant un cluster ACS en utilisant les paramètres que vous avez spécifié. Cette étape prend plusieurs minutes.
+
+   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
+
+## <a name="monitor-the-status"></a>Surveiller l’état
+
+Une fois le script crée le cluster AKS, il se poursuit pour définir les variables d’environnement nécessaires avec les paramètres que vous avez spécifié précédemment. Il appelle ensuite **mssqlctl** pour déployer le cluster de données volumineuses sur AKS.
+
+La fenêtre de commande client affiche l’état du déploiement. Pendant le processus de déploiement, vous devez voir une série de messages où il attend que le pod de contrôleur :
+
+```output
+2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
 ```
 
-> [!NOTE]
-> Pendant la préversion publique limitée, les informations d’identification de Docker pour télécharger les images de cluster de données volumineuses de SQL Server sont fournies pour chaque client par Microsoft. Pour demander l’accès, vous devez inscrire [ici](https://aka.ms/eapsignup)et spécifiez votre intérêt pour essayer les clusters de données volumineuses de SQL Server.
+Au bout de 10 à 20 minutes, vous devez averti que le pod de contrôleur est en cours d’exécution :
 
-## <a name="deploy-a-big-data-cluster"></a>Déployer un cluster de données volumineuses
-
-Pour déployer un cluster de données volumineuses de SQL Server 2019 CTP 2.2 sur votre cluster Kubernetes, exécutez la commande suivante :
-
-```bash
-mssqlctl create cluster <your-cluster-name>
+```output
+2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
 ```
 
-> [!NOTE]
-> Le nom de votre cluster doit être uniquement alphanumériques minuscules, sans espaces. Tous les artefacts de Kubernetes pour le cluster de données volumineuses seront créées dans un espace de noms avec le même nom que le cluster de nom spécifié.
+> [!IMPORTANT]
+> La totalité du déploiement peut prendre beaucoup de temps en raison du temps nécessaire pour télécharger les images de conteneur pour les composants du cluster de données volumineuses. Toutefois, il ne doit pas prendre plusieurs heures. Si vous rencontrez des problèmes avec votre déploiement, consultez le [la résolution des problèmes de déploiement](deployment-guidance.md#troubleshoot) section de l’article de conseils de déploiement.
 
-La fenêtre de commande ou l’interpréteur de commandes retourne l’état du déploiement. Vous pouvez également vérifier l’état du déploiement en exécutant ces commandes dans une fenêtre cmd différents :
+## <a name="inspect-the-cluster"></a>Inspecter le cluster
 
-```bash
-kubectl get all -n <your-cluster-name>
-kubectl get pods -n <your-cluster-name>
-kubectl get svc -n <your-cluster-name>
-```
+À tout moment au cours du déploiement, vous pouvez utiliser kubectl ou le portail d’Administration de Cluster pour inspecter l’état et les détails sur le cluster de données volumineux en cours d’exécution.
 
-Vous pouvez voir un état et configuration pour chaque pod plus granulaire en exécutant :
-```bash
-kubectl describe pod <pod name> -n <your-cluster-name>
-```
+### <a name="use-kubectl"></a>Utiliser kubectl
+
+Ouvrez une nouvelle fenêtre de commande à utiliser **kubectl** pendant le processus de déploiement.
+
+1. Exécutez la commande suivante pour obtenir un résumé de l’état de l’ensemble du cluster :
+
+   ```
+   kubectl get all -n <your-cluster-name>
+   ```
+
+1. Vérifiez que les services kubernetes et leurs points de terminaison internes et externes par le code suivant **kubectl** commande :
+
+   ```
+   kubectl get svc -n <your-cluster-name>
+   ```
+
+1. Vous pouvez également examiner l’état des pods kubernetes avec la commande suivante :
+
+   ```
+   kubectl get pods -n <your-cluster-name>
+   ```
+
+1. Découvrez plus d’informations sur un pod spécifique avec la commande suivante :
+
+   ```
+   kubectl describe pod <pod name> -n <your-cluster-name>
+   ```
 
 > [!TIP]
-> Pour plus d’informations sur la façon de surveiller et dépanner un déploiement, consultez le [la résolution des problèmes de déploiement](deployment-guidance.md#troubleshoot) section de l’article de conseils de déploiement.
+> Pour plus d’informations sur comment surveiller et résoudre les problèmes d’un déploiement, consultez le [la résolution des problèmes de déploiement](deployment-guidance.md#troubleshoot) section de l’article de conseils de déploiement.
 
-## <a name="open-the-cluster-administration-portal"></a>Ouvrez le portail d’Administration de Cluster
+### <a name="use-the-cluster-administration-portal"></a>Utilisez le portail d’Administration de Cluster
 
-Une fois que le pod de contrôleur est en cours d’exécution, vous pouvez utiliser le portail d’Administration de Cluster pour surveiller le déploiement. Vous pouvez accéder au portail à l’aide de l’externe IP adresse et numéro de port pour le `service-proxy-lb` (par exemple : **https://\<ip-address\>: 30777/portail**). Informations d’identification pour accéder au portail d’administration est les valeurs de `CONTROLLER_USERNAME` et `CONTROLLER_PASSWORD` variables d’environnement fournis ci-dessus.
+Une fois que le pod de contrôleur est en cours d’exécution, vous pouvez également utiliser le portail d’Administration de Cluster pour surveiller le déploiement. Vous pouvez accéder au portail à l’aide de l’externe IP adresse et numéro de port pour le `service-proxy-lb` (par exemple : **https://\<ip-address\>: 30777/portail**). Les informations d’identification utilisées pour se connecter au portail correspondent aux valeurs pour **utilisateur du contrôleur** et **mot de passe** que vous avez spécifié dans le script de déploiement.
 
-Vous pouvez obtenir l’adresse IP du service de proxy-service-lb en exécutant cette commande dans une fenêtre bash ou cmd :
+Vous pouvez obtenir l’adresse IP de la **proxy-service-lb** service en exécutant cette commande dans une fenêtre bash ou cmd :
 
 ```bash
 kubectl get svc service-proxy-lb -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> Vous verrez un avertissement de sécurité lorsque vous accédez à la page web dans la mesure où nous utilisons des certificats SSL générés automatiquement. Dans les futures versions, nous fournirons la capacité de fournir vos propres certificats auto-signés.
+> Dans CTP 2.2, vous verrez un avertissement de sécurité lorsque vous accédez à la page web, car les clusters de données volumineuses est actuellement à l’aide de certificats SSL générés automatiquement. En outre, dans CTP 2.2, il n’affiche pas l’état de l’instance principale de SQL Server.
 
-## <a name="connect-to-the-big-data-cluster"></a>Connectez-vous au cluster big data
+## <a name="connect-to-the-cluster"></a>Connectez-vous au cluster
 
-Une fois le script de déploiement terminée, vous pouvez obtenir l’adresse IP de l’instance principale de SQL Server et les points de terminaison Spark/HDFS à l’aide de la procédure décrite ci-dessous. Tous les points de terminaison de cluster sont affichés dans la section points de terminaison de Service dans le portail d’Administration de Cluster ainsi qu’à faciliter la référence.
+Une fois le script de déploiement, la sortie vous informe de réussite :
 
-Azure fournit le service de l’équilibreur de charge Azure pour AKS. Exécutez la commande dans une cmd suivante ou bash fenêtre :
-
-```bash
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
+```output
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-Recherchez le **External-IP** valeur assignée aux services. Se connecter à l’instance principale de SQL Server à l’aide de l’adresse IP pour le `endpoint-master-pool` au port 31433 (Ex :  **\<ip-address\>, 31433**) et pour le point de terminaison cluster de données SQL Server à l’aide de l’IP externe pour le `service-security-lb` service.   Que le point de terminaison de cluster big data est où vous pouvez interagir avec HDFS et envoyer des travaux Spark via Knox.
+Le cluster de données volumineux de SQL Server est désormais déployé sur AKS. Vous pouvez maintenant utiliser Azure Data Studio pour vous connecter à l’instance principale de SQL Server et les points de terminaison HDFS/Spark à l’aide d’Azure Data Studio.
+
+### <a id="master"></a> Instance principale
+
+L’instance principale de SQL Server est une instance de SQL Server traditionnelle contenant les bases de données relationnelles SQL Server. Les étapes suivantes décrivent comment vous connecter à l’instance principale à l’aide d’Azure Data Studio.
+
+1. À partir de la ligne de commande, recherchez l’adresse IP de votre instance principale avec la commande suivante :
+
+   ```
+   kubectl get svc endpoint-master-pool -n <your-cluster-name>
+   ```
+
+1. Dans Azure Data Studio, appuyez sur **F1** > **nouvelle connexion**.
+
+1. Dans **type de connexion**, sélectionnez **Microsoft SQL Server**.
+
+1. Tapez l’adresse IP de l’instance principale de SQL Server dans **nom_serveur** (par exemple : **\<Adresse IP\>, 31433**).
+
+1. Entrez un nom de connexion SQL **nom d’utilisateur** (`SA`) et **mot de passe** (mot de passe que vous avez entré dans le script de déploiement).
+
+1. Modifier la cible **nom de la base de données** à un de vos bases de données relationnelles.
+
+   ![Se connecter à l’instance principale](./media/quickstart-big-data-cluster-deploy/connect-to-cluster.png)
+
+1. Appuyez sur **Connect**et le **tableau de bord Server** doit apparaître.
+
+### <a id="hdfs"></a> Passerelle HDFS/Spark
+
+Le **passerelle HDFS/Spark** vous permet de se connecter pour pouvoir fonctionner avec le pool de stockage HDFS et à exécuter des tâches Spark. Les étapes suivantes décrivent comment vous connecter avec Azure Data Studio.
+
+1. À partir de la ligne de commande, recherchez l’adresse IP de votre passerelle HDFS/Spark avec la commande suivante :
+
+   ```
+   kubectl get svc service-security-lb -n <your-cluster-name>
+   ```
+ 
+1. Dans Azure Data Studio, appuyez sur **F1** > **nouvelle connexion**.
+
+1. Dans **type de connexion**, sélectionnez **cluster de données volumineux de SQL Server**.
+   
+   > [!TIP]
+   > Si vous ne voyez pas le **cluster de données volumineux de SQL Server** connexion type, assurez-vous que vous avez installé le [extension de SQL Server 2019](../azure-data-studio/sql-server-2019-extension.md) et que vous avez redémarré Azure Data Studio après l’extension terminée l’installation.
+
+1. Tapez l’adresse IP du cluster big data dans **nom_serveur** (ne spécifiez pas de port).
+
+1. Entrez `root` pour le **utilisateur** et spécifiez le **mot de passe** à votre cluster big data que vous avez entré dans le script de déploiement.
+
+   ![Se connecter à HDFS/Spark passerelle](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
+
+1. Appuyez sur **Connect**et le **tableau de bord Server** doit apparaître.
+
+## <a name="clean-up"></a>Nettoyer
+
+Si vous testez des clusters de données volumineuses de SQL Server dans Azure, vous devez supprimer le cluster AKS lorsque terminée pour éviter des frais inattendus. Ne supprimez pas le cluster si vous envisagez de continuer à l’utiliser.
+
+> [!WARNING]
+> Les étapes suivantes renverse le cluster AKS, ce qui supprime également le cluster de données volumineuses SQL Server. Si vous avez les bases de données ou les données HDFS que vous souhaitez conserver, sauvegardez ces données avant de supprimer le cluster.
+
+Exécutez la commande Azure CLI suivante pour supprimer le cluster de données volumineux et le service ACS dans Azure (remplacez `<resource group name>` avec la **groupe de ressources Azure** vous avez spécifié dans le script de déploiement) :
+
+```azurecli
+az group delete -n <resource group name>
+```
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Maintenant que le cluster de données volumineuses de SQL Server est déployé, essayez certaines des nouvelles fonctionnalités :
+Maintenant que le cluster de données volumineuses de SQL Server est déployé, vous pouvez charger des exemples de données et explorez les didacticiels :
 
 > [!div class="nextstepaction"]
-> [Comment utiliser des blocs-notes en version préliminaire de SQL Server 2019](notebooks-guidance.md)
+> [Didacticiel : Charger des exemples de données dans un cluster de données volumineux de SQL Server 2019](tutorial-load-sample-data.md)

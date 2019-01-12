@@ -15,12 +15,12 @@ ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7485f840682c6bc8f8140aae6376431ad92442a0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 43347190c53331d0a30ba0f29d795cce981eec34
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815411"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135629"
 ---
 # <a name="interactive-conflict-resolution"></a>Interactive Conflict Resolution
   La réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] propose un programme de résolution interactif qui vous permet de résoudre manuellement des conflits au cours d'une synchronisation à la demande dans le Gestionnaire de synchronisation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Activé lors de l'exécution, le résolveur interactif est une interface graphique qui affiche des données pour chaque ligne conflictuelle et qui propose les options nécessaires à la consultation et à la modification de ces données, permettant ainsi de résoudre chaque conflit individuellement.  
@@ -35,7 +35,7 @@ ms.locfileid: "52815411"
   
  Pour utiliser le résolveur interactif, la résolution interactive doit être activée pour chaque article et abonnement qui l'exige. Une fois qu'il est activé pour un ou plusieurs articles et abonnements, le résolveur interactif est utilisé lorsqu'un conflit est détecté durant une synchronisation de fusion.  
   
- Pour utiliser le programme de résolution interactif, consultez [Spécifier la résolution interactive des conflits pour les articles de fusion](../publish/specify-interactive-conflict-resolution-for-merge-articles.md) et [Synchroniser un abonnement à l’aide du Gestionnaires de synchronisation Windows &#40;Gestionnaire de synchronisation Windows&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md).  
+ Pour utiliser le programme de résolution interactif, consultez [Spécifier la résolution interactive des conflits pour les articles de fusion](..//publish/specify-merge-replication-properties.md#interactive-conflict-resolution) et [Synchroniser un abonnement à l’aide du Gestionnaires de synchronisation Windows &#40;Gestionnaire de synchronisation Windows&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)  

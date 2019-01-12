@@ -1,6 +1,6 @@
 ---
 title: Concepts d’exploration de données | Microsoft Docs
-ms.date: 05/01/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: data-mining
@@ -9,22 +9,26 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6dc15187198b5355d9e6f5a2171e57d52406e839
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 161ba42729a21bd3794cf380c745380f8f7ed59c
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982001"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185135"
 ---
 # <a name="data-mining-concepts"></a>Concepts d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+> [!IMPORTANT]
+> Exploration de données est déconseillée dans SQL Server Analysis Services 2017. Documentation n’est pas mise à jour pour les fonctionnalités déconseillées. Pour plus d’informations, consultez [compatibilité descendante Analysis Services (SQL 2017)](../analysis-services-backward-compatibility-sql2017.md).
+
   L'exploration de données est un processus de recherche d'informations utilisables à partir de jeux de données de grande taille. L'exploration de données utilise l’analyse mathématique pour dégager les motifs et les tendances existant dans les données. En général, ces motifs ne peuvent pas être trouvés par l’exploration de données traditionnelle parce que les relations sont trop complexes ou parce que la quantité de données est trop importante.  
   
  Ces motifs et tendances peuvent être collectés et définis en tant que *modèle d'exploration de données*. Les modèles d'exploration de données peuvent être appliqués à des scénarios spécifiques, tels que :  
   
--   **Prévisions**: estimation des ventes, prédiction des charges du serveur ou du temps mort de serveur  
+-   **Prévision**: estimation des ventes, prédiction des charges du serveur ou du temps d'arrêt du serveur  
   
--   **Risque et probabilité**: choix des meilleurs clients pour des publipostages ciblés, détermination du seuil de rentabilité probable pour les scénarios à risque, affectation de probabilités aux diagnostics ou à d’autres résultats  
+-   **Risque et probabilité**: choix des meilleurs clients pour des publipostages ciblés, détermination du seuil de rentabilité probable pour les scénarios à risque, affectation de probabilités aux diagnostics ou à d'autres résultats  
   
 -   **Recommandations**: identification des produits susceptibles d'être vendus ensemble, génération de recommandations  
   
@@ -164,6 +168,6 @@ ms.locfileid: "38982001"
   
 ## <a name="see-also"></a>Voir aussi  
  [Solutions d'exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Outils d’exploration de données](../../analysis-services/data-mining/data-mining-tools.md)  
+ [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)  
   
   

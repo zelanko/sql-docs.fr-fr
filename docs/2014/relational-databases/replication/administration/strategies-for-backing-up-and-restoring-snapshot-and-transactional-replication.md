@@ -20,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823513"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125229"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d'instantané
   Lors de la conception d'une stratégie de sauvegarde et de restauration de la réplication transactionnelle et d'instantané, vous devez identifier :  
@@ -117,7 +117,7 @@ ms.locfileid: "52823513"
   
          Pour plus d’informations sur l’exécution de l’Agent de distribution, consultez [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) ou [Concepts des exécutables de l’Agent de réplication](../concepts/replication-agent-executables-concepts.md).  
   
-         Pour plus d’informations sur la vérification des commandes, consultez [Afficher les commandes répliquées et autres informations dans la base de données de distribution &#40;Programmation Transact-SQL de la réplication&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) et [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Pour plus d’informations sur la vérification des commandes, consultez [afficher les commandes répliquées et autres informations dans la base de données de Distribution &#40;programmation Transact-SQL de la réplication&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) et [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Supprimez la configuration de la réplication sur le serveur de publication, le serveur de distribution et les Abonnés, puis recréez la configuration. Lorsque vous recréez les abonnements, spécifiez que l'Abonné possède déjà les données. La restauration est terminée.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "52823513"
   
          Pour plus d’informations sur l’exécution de l’Agent de distribution, consultez [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) ou [Concepts des exécutables de l’Agent de réplication](../concepts/replication-agent-executables-concepts.md).  
   
-         Pour plus d’informations sur la vérification des commandes, consultez [Afficher les commandes répliquées et autres informations dans la base de données de distribution &#40;Programmation Transact-SQL de la réplication&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) et [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Pour plus d’informations sur la vérification des commandes, consultez [afficher les commandes répliquées et autres informations dans la base de données de Distribution &#40;programmation Transact-SQL de la réplication&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) et [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Utilisez l' [utilitaire tablediff](../../../tools/tablediff-utility.md) ou un autre outil pour synchroniser manuellement le serveur de publication avec l'Abonné. Cela vous permet de récupérer les données de la base de données d'abonnement qui ne se trouvaient pas dans la sauvegarde de la base de données de publication. Passez à l'étape c.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "52823513"
   
      Pour plus d’informations sur l’exécution de l’Agent de distribution, consultez [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) ou [Concepts des exécutables de l’Agent de réplication](../concepts/replication-agent-executables-concepts.md).  
   
-     Pour plus d’informations sur la vérification des commandes, consultez [Afficher les commandes répliquées et autres informations dans la base de données de distribution &#40;Programmation Transact-SQL de la réplication&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) et [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Pour plus d’informations sur la vérification des commandes, consultez [afficher les commandes répliquées et autres informations dans la base de données de Distribution &#40;programmation Transact-SQL de la réplication&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) et [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Si vous utilisez les abonnements mis à jour en attente, connectez-vous à chaque Abonné et supprimez toutes les lignes de la table [MSreplication_queue &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-queue-transact-sql) dans la base de données d’abonnement. Passez à l’étape 4.  
   
@@ -285,7 +285,7 @@ ms.locfileid: "52823513"
   
     2.  Marquez toutes les publications pour validation. Réinitialisez tous les abonnements qui n'ont pas pu être validés. La récupération est terminée.  
   
-         Pour plus d'informations sur la validation, consultez [Validate Replicated Data](../validate-replicated-data.md). Pour plus d’informations sur la réinitialisation, consultez [Réinitialiser des abonnements](../reinitialize-subscriptions.md).  
+         Pour plus d'informations sur la validation, consultez [Validate Replicated Data](../validate-data-at-the-subscriber.md). Pour plus d’informations sur la réinitialisation, consultez [Réinitialiser des abonnements](../reinitialize-subscriptions.md).  
   
 #### <a name="msdb-database-distributor"></a>Base de données msdb (serveur de distribution)  
   
@@ -301,7 +301,7 @@ ms.locfileid: "52823513"
   
 4.  Marquez toutes les publications pour validation. Réinitialisez tous les abonnements qui n'ont pas pu être validés. La récupération est terminée.  
   
-     Pour plus d'informations sur la validation, consultez [Validate Replicated Data](../validate-replicated-data.md). Pour plus d’informations sur la réinitialisation, consultez [Réinitialiser des abonnements](../reinitialize-subscriptions.md).  
+     Pour plus d'informations sur la validation, consultez [Validate Replicated Data](../validate-data-at-the-subscriber.md). Pour plus d’informations sur la réinitialisation, consultez [Réinitialiser des abonnements](../reinitialize-subscriptions.md).  
   
 #### <a name="master-database-distributor"></a>Base de données master (serveur de distribution)  
   
