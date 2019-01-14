@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5fafd1a86686b7609a8b6e0241c05cc858f2dc41
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: df8e06b5de6824ee33fb8e923411ecf3e24e2ca9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409696"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125139"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services dans les outils de données SQL Server (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] est un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] environnement avec les fonctions améliorées conçues spécifiquement pour les solutions décisionnelles. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] est inclus dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "52409696"
 ##  <a name="bkmk_ReportServerProjects"></a> Projets Report Server  
  Lorsque vous installez [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les modèles de projet suivants sont disponibles dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]:  
   
--   **Projet Report Server.** Lorsque vous sélectionnez un projet Report Server, le Concepteur de rapports s'ouvre. Un projet Report Server est un modèle de projets Business Intelligence installé par [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] et disponible dans la boîte de dialogue **Nouveaux projets** . Pour plus d’information, consultez [Ajouter un nouveau rapport ou un rapport existant à un projet de rapport &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Les propriétés du projet Report Server s’appliquent à tous les rapports et à toutes les sources de données partagées au sein d’un projet [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Ces propriétés incluent l'URL du serveur de rapports et les noms des dossiers des rapports et des sources de données partagées. Pour afficher les propriétés actuelles du projet, ouvrez la boîte de dialogue **Pages de propriétés du projet** . Pour ouvrir cette boîte de dialogue, dans le **projet** menu, cliquez sur  *\<nom_projet >* **propriétés**.  
+-   **Projet Report Server.** Lorsque vous sélectionnez un projet Report Server, le Concepteur de rapports s'ouvre. Un projet Report Server est un modèle de projets Business Intelligence installé par [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] et disponible dans la boîte de dialogue **Nouveaux projets** . Pour plus d’information, consultez [Ajouter un nouveau rapport ou un rapport existant à un projet de rapport &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Les propriétés du projet Report Server s’appliquent à tous les rapports et à toutes les sources de données partagées au sein d’un projet [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Ces propriétés incluent l'URL du serveur de rapports et les noms des dossiers des rapports et des sources de données partagées. Pour afficher les propriétés actuelles du projet, ouvrez la boîte de dialogue **Pages de propriétés du projet** . Pour ouvrir cette boîte de dialogue, dans le **projet** menu, cliquez sur  _\<nom_projet >_ **propriétés**.  
   
 -   **Assistant Projet Report Server.** Lorsque vous sélectionnez l'Assistant Projet Report Server, un projet de serveur de rapports est automatiquement créé et l'Assistant Rapport s'ouvre. Dans l'Assistant, pour créer un rapport, suivez les instructions de chaque page pour créer une chaîne de connexion dans une source de données, définir les informations d'identification de la source de données, créer une requête, ajouter une région de données de table ou de matrice, spécifier des données de rapport et des groupes, choisir une police et un style de couleur, publier le rapport sur un serveur de rapports et afficher un aperçu local du rapport. Après avoir créé un rapport au moyen de l'Assistant, vous pouvez modifier les données du rapport et le Concepteur de rapports à l'aide de l'outil Concepteur de rapports dans le projet Report Server.  
   
@@ -252,7 +252,7 @@ ms.locfileid: "52409696"
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
   
 ##  <a name="bkmk_SourceControl"></a> contrôle de code source ;  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] peut intégrer des plug-ins de source. Utilisez les pages Projets et Solutions de la boîte de dialogue Options** pour spécifier le plug-in et configurer les paramètres.  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] peut intégrer des plug-ins de source. Utilisez les pages Projets et Solutions de la boîte de dialogue **Options** pour spécifier le plug-in et configurer les paramètres.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modèles de rapports personnalisés  
  Pour utiliser des rapports personnalisés comme modèles pour de nouveaux rapports, il suffit de les copier dans le dossier ReportProject sur l'ordinateur sur lequel [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] est installé. Par défaut, ce dossier se trouve dans \<lecteur > : \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject. Lorsque vous ajoutez un nouvel élément au projet de rapport, votre rapport personnalisé s'affiche dans le volet Modèles.  
