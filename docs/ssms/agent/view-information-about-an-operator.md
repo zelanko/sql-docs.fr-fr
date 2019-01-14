@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 58abfa4ff4add4415b71a536b0c9aeb1f6a9f472
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0ce920c169e2a3e64be1c6aa02841305b64378ee
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702557"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256394"
 ---
 # <a name="view-information-about-an-operator"></a>Afficher des informations relatives à un opérateur
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de ba
   
 4.  Cliquez avec le bouton droit sur l’opérateur à afficher, puis sélectionnez **Propriétés**.  
   
-    Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue *Propriétés de***nom_opérateur**, consultez :  
+    Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue _Propriétés_**nom_opérateur** , consultez :  
   
     -   [Propriétés des opérateurs - Nouvel opérateur &#40;page Général&#41;$$$](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

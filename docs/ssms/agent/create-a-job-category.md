@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2e0de2004ce2b3e9c91988bfc08fa0fea2074435
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c7dbc000d71d7d2cda2d299de476346103f2d2a6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701949"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134309"
 ---
 # <a name="create-a-job-category"></a>Créer une catégorie de travaux
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Cette rubrique explique comment créer une catégorie de travaux dans [!INCLUDE[
 Les catégories multiserveurs n'existent que sur un serveur maître. Il n’y a qu’une seule catégorie de travaux par défaut disponible sur un serveur maître : [**N’appartenant à aucune catégorie (Multiserveurs)**]. Lors du téléchargement d'un travail multiserveur, sa catégorie passe à **Travaux de MSX** sur le serveur cible.  
   
 ### <a name="Security"></a>Sécurité  
-Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
   
@@ -67,7 +67,7 @@ Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../
   
 3.  Cliquez avec le bouton droit sur le dossier **Travaux** et sélectionnez **Gérer les catégories de travaux**.  
   
-4.  Dans la boîte de dialogue *Gérer les catégories de travaux***nom_serveur*, cliquez sur **Ajouter**.  
+4.  Dans la boîte de dialogue **Gérer les catégories de travaux**_nom_serveur_ , cliquez sur **Ajouter**.  
   
 5.  Dans la nouvelle boîte de dialogue, dans la zone **Nom** , entrez un nom pour la nouvelle catégorie de travaux.  
   
@@ -75,7 +75,7 @@ Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../
   
 7.  Cliquez sur **OK**.  
   
-8.  Dans la boîte de dialogue **Gérer les catégories de travaux***nom_serveur*, cliquez sur **Actualiser** pour garantir que la nouvelle catégorie de travaux est bien active. Si tout se présente comme prévu, fermez cette boîte de dialogue.  
+8.  Dans la boîte de dialogue **Gérer les catégories de travaux**_nom_serveur_ , cliquez sur **Actualiser** pour vous assurer que la nouvelle catégorie de travaux est active. Si tout se présente comme prévu, fermez cette boîte de dialogue.  
   
 Pour plus d’informations sur ces boîtes de dialogue, consultez [Catégories de travaux - Gérer les catégories de travaux](../../ssms/agent/job-categories-manage-job-categories.md) et [Propriétés des catégories de travaux - Nouvelle catégorie de travaux](../../ssms/agent/job-categories-properties-new-job-category.md).  
   
