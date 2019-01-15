@@ -18,12 +18,12 @@ ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 083a4ccb00c834fba4f250aa1a2063b76ad9bd86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f8e1433d9157aed6a933d5117417be1a4fcc1c79
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407626"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133744"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Exécuter la logique métier lors de la synchronisation de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52407626"
   
 -   Référence de l'interface de programmation d'applications (API) : <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   Instructions sur l’implémentation d’un gestionnaire de logique métier : [Implémenter un gestionnaire de logique métier pour un article de fusion](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+-   Instructions sur l'implémentation d'un gestionnaire de logique métier : [Implémenter un gestionnaire de logique métier pour un article de fusion](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>Utilisations des gestionnaires de logique métier  
  Le processus de synchronisation de fusion peut appeler les gestionnaires de logique métier pour effectuer les opérations suivantes :  
@@ -50,7 +50,7 @@ ms.locfileid: "52407626"
   
 -   Refuser les données  
   
-     Cette option est utile dans le cas d'applications qui ne veulent pas propager des modifications vers un Abonné spécifique ou à partir de celui-ci. Ainsi, un administrateur peut éliminer les insertions qui n’appartiennent pas à la partition de l’Abonné ou éventuellement rejeter des suppressions effectuées au niveau d’un Abonné. Une application qui refuse une commande entrée sur l'Abonné pour indisponibilité de stock en est un autre exemple.  
+     Cette option est utile dans le cas d'applications qui ne veulent pas propager des modifications vers un Abonné spécifique ou à partir de celui-ci. Ainsi, un administrateur peut éliminer les insertions qui n'appartiennent pas à la partition de l'Abonné ou éventuellement rejeter des suppressions effectuées au niveau d'un Abonné. Une application qui refuse une commande entrée sur l'Abonné pour indisponibilité de stock en est un autre exemple.  
   
 -   Accepter les données  
   

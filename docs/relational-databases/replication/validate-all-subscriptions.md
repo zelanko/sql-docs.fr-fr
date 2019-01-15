@@ -15,12 +15,12 @@ ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09f60a9bb0a550dd91a2006be408bb25d2df42a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 849bd9e2d6c76f58e38b8f854d31686cef0ccfec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686820"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134889"
 ---
 # <a name="validate-all-subscriptions"></a>Valider tous les abonnements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,6 +36,6 @@ ms.locfileid: "47686820"
  Outre le comptage des lignes sur le serveur de publication et sur l'Abonné, une somme de contrôle de toutes les données est calculée à l'aide de l'algorithme de somme de contrôle binaire. Si le nombre de lignes est erroné, la somme de contrôle n'est pas effectuée. Cette option n'est pas valide pour [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## <a name="see-also"></a> Voir aussi  
- [Valider des données répliquées](../../relational-databases/replication/validate-replicated-data.md)  
+ [Valider des données répliquées](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

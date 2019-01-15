@@ -22,12 +22,12 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9d8b702172a66918bd5fe6a101ddf07b05f6484
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7c7c3b925b018ea7f212693b5de02fb43b425bc4
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677888"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256964"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ FOR XML RAW, ELEMENTS XSINIL
  Voici le résultat obtenu :  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
   <ns1:ProductID>316</ns1:ProductID>  
   <ns1:Name>Blade</ns1:Name>  
   <ns1:Color xsi:nil="true" />  
@@ -181,7 +181,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- Seul le préfixe d'espace de noms xml peut être utilisé sans qu'il soit défini explicitement dans WITH XMLNAMESPACES, comme l'illustre la requête en mode PATH ci-dessous. En outre, si le préfixe est déclaré, il doit être lié à l’espace de noms https://www.w3.org/XML/1998/namespace. Les noms spécifiés dans la clause SELECT font référence au préfixe d'espace de noms xml qui n'est pas défini explicitement à l'aide de WITH XMLNAMESPACES.  
+ Seul le préfixe d'espace de noms xml peut être utilisé sans qu'il soit défini explicitement dans WITH XMLNAMESPACES, comme l'illustre la requête en mode PATH ci-dessous. En outre, si le préfixe est déclaré, il doit être lié à l’espace de noms http://www.w3.org/XML/1998/namespace. Les noms spécifiés dans la clause SELECT font référence au préfixe d'espace de noms xml qui n'est pas défini explicitement à l'aide de WITH XMLNAMESPACES.  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  

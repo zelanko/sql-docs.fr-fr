@@ -5,7 +5,7 @@ ms.date: 11/08/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 dev_langs:
 - VB
@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6a42f77b21e8b06fc9795caac7064368af436bb4
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672628"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299706"
 ---
 # <a name="replication-management-objects-concepts"></a>Concepts liés à Replication Management Objects
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "51672628"
  [Configurer la distribution](../../../relational-databases/replication/configure-distribution.md)  
  Les rubriques de cette section indiquent comment utiliser RMO pour configurer la publication et la distribution.  
   
- [Créer, modifier et supprimer des publications et des articles &#40;réplication&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
  Les rubriques de cette section indiquent comment utiliser RMO pour créer, supprimer et modifier des publications et des articles.  
   
  [S'abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md)  
  Les rubriques de cette section indiquent comment utiliser RMO pour créer, supprimer et modifier des abonnements.  
   
- [Sécuriser une topologie de réplication](../../../relational-databases/replication/security/secure-a-replication-topology.md)  
+ [Sécuriser une topologie de réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
  Les rubriques de cette section indiquent comment utiliser RMO pour afficher et modifier des paramètres de sécurité.  
   
- [Synchroniser des abonnements &#40;réplication&#41;](../../../relational-databases/replication/synchronize-subscriptions-replication.md)  
+ [Synchroniser des abonnements &#40;réplication&#41;](../../../relational-databases/replication/synchronize-data.md)  
  Les rubriques de cette section indiquent comment synchroniser des abonnements.  
   
- [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
  Les rubriques de cette section indiquent comment analyser par programme une topologie de réplication.  
   
 ## <a name="introduction-to-rmo-programming"></a>Présentation de la programmation RMO  

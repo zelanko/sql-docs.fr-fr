@@ -13,12 +13,12 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca169dc94a2f3fcbe6165bbbe1c69de158f9835f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 787e3c18581339de78a5f4fcd653967566f85ece
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719007"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124659"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Architecture de la sécurité pour la synchronisation web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47719007"
 |Compte de service Windows pour l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Gestionnaire de configuration[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
 |Application indépendante|L'Agent de fusion est exécuté dans le contexte de l'utilisateur Windows qui exécute l'application.|  
   
-## <a name="b-connection-to-the-subscriber"></a>B. Connexion à l'Abonné  
+## <a name="b-connection-to-the-subscriber"></a>b. Connexion à l'Abonné  
  L'Agent de fusion se connecte à l'Abonné à l'aide de l'authentification Windows ou de l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'utilisateur Windows ou la connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spécifié doit être associé à un utilisateur de base de données membre du rôle de base de données fixe **dbowner** dans la base de données d'abonnement.  
   
 > [!NOTE]  
@@ -105,7 +105,7 @@ ms.locfileid: "47719007"
 |L'authentification[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est utilisée si l'une des conditions suivantes est spécifiée :<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: valeur **0** pour le paramètre **@distributor_security_mode** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   Objets RMO : valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> pour <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br />-   Ligne de commande de l’Agent de fusion : valeur **0** pour **-DistributorSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: paramètres **@distributor_login** et **@distributor_password** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> Objets RMO : <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> et <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> Ligne de commande de l'Agent de fusion : **-DistributorLogin** et **-DistributorPassword**.|  
   
 ## <a name="g-connection-to-an-ftp-server"></a>G. Connexion à un serveur FTP  
- Spécifiez un utilisateur Windows pour cette connexion uniquement si vous allez télécharger des fichiers d'instantanés à partir d'un serveur FTP au lieu d'un emplacement UNC vers l'ordinateur exécutant IIS avant d'appliquer l'instantané à l'Abonné. Pour plus d’informations, consultez [Transférer des instantanés via FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+ Spécifiez un utilisateur Windows pour cette connexion uniquement si vous allez télécharger des fichiers d'instantanés à partir d'un serveur FTP au lieu d'un emplacement UNC vers l'ordinateur exécutant IIS avant d'appliquer l'instantané à l'Abonné. Pour plus d’informations, consultez [Transférer des instantanés via FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md).  
   
 |Type d'authentification|Emplacement de spécification de l'authentification|  
 |----------------------------|-------------------------------------------|  
@@ -139,6 +139,6 @@ ms.locfileid: "47719007"
   
 ## <a name="see-also"></a> Voir aussi  
  [Configurer la synchronisation web](../../../relational-databases/replication/configure-web-synchronization.md)   
- [Agent de fusion de réplication](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+ [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
   

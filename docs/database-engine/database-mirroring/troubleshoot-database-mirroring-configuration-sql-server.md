@@ -16,12 +16,12 @@ ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b5fbe0702ee25e39103c43cd689b49b563db49bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 714481541ee0060759aff3533add80d04ceebc8b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736567"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257184"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Résoudre les problèmes de configuration de mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47736567"
 |[Accès réseau](#NetworkAccess)|Traite de l'exigence selon laquelle chaque instance de serveur doit être autorisée à accéder aux ports de l'autre instance ou des autres instances de serveur par le biais du protocole TCP.|  
 |[Préparation de la base de données miroir](#MirrorDbPrep)|Résume les conditions requises pour la préparation de la base de données miroir afin de permettre le démarrage de la mise en miroir.|  
 |[Échec d'opération de création de fichier](#FailedCreateFileOp)|Décrit comment réagir à un échec d'opération de création de fichier.|  
-|[Démarrage de la mise en miroir à l'aide de Transact-SQL](#StartDbm)|Décrit l’ordre requis pour les instructions ALTER DATABASE *nom_base_de_données* SET PARTNER **='***serveur_partenaire***'**.|  
+|[Démarrage de la mise en miroir à l'aide de Transact-SQL](#StartDbm)|Décrit l’ordre requis pour les instructions ALTER DATABASE *nom_base_de_données* SET PARTNER **='**_serveur_partenaire_**'** .|  
 |[Transactions entre bases de données](#CrossDbTxns)|Un basculement automatique peut entraîner une résolution automatique et éventuellement incorrecte des transactions incertaines. Pour cette raison, la mise en miroir de bases de données ne prend pas en charge les transactions entre bases de données.|  
   
 ##  <a name="Accounts"></a> Accounts  
@@ -133,7 +133,7 @@ ms.locfileid: "47736567"
 ##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  Pour pouvoir ajouter un fichier sans compromettre une session de mise en miroir, il est nécessaire que le chemin d'accès au fichier existe sur les deux serveurs. Par conséquent, si vous déplacez des fichiers de base de données lors de la création de la base de données miroir, une opération d'ajout de fichier ultérieure peut échouer sur la base de données miroir et entraîner la suspension de la mise en miroir.  
   
- Pour corriger le problème :  
+ Pour corriger le problème :  
   
 1.  Le propriétaire de la base de données doit supprimer la session de mise en miroir et restaurer une sauvegarde complète du groupe de fichiers qui contient le fichier ajouté.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "47736567"
  Pour plus d’informations, consultez [Suppression de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [Préparer une base de données miroir pour la mise en miroir&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) ou [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="StartDbm"></a> Démarrage de la mise en miroir à l'aide de Transact-SQL  
- L’ordre dans lequel les instructions ALTER DATABASE *nom_base_de_données* SET PARTNER **='***serveur_partenaire***'** sont émises est très important.  
+ L’ordre dans lequel les instructions ALTER DATABASE *nom_base_de_données* SET PARTNER **='**_serveur_partenaire_**'** sont émises est très important.  
   
 1.  La première instruction doit être exécutée sur le serveur miroir. Lorsque cette instruction est exécutée, le serveur miroir n'essaie pas de contacter d'autre instance de serveur. Au lieu de cela, le serveur miroir indique à sa base de données de patienter que le serveur miroir soit contacté par le serveur principal.  
   

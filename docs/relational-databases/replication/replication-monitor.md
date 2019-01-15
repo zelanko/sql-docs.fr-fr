@@ -15,12 +15,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 397604c04c71b662a36cb5bf39f7aaa99c600a05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9646f61d6cb8d9a277f08711dc8326f34064c5ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799467"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124599"
 ---
 # <a name="replication-monitor"></a>Moniteur de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +32,7 @@ ms.locfileid: "47799467"
   
 -   [Paramètres du serveur de distribution](../../relational-databases/replication/distributor-settings.md)  
   
--   [Informations du serveur de distribution, publications](../../relational-databases/replication/distributor-information-publications.md)  
-  
--   [Informations sur le serveur de distribution, liste de suivi des abonnements &#40;Publication transactionnelle, SQL Server 2005 et version ultérieure&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [Informations sur le serveur de distribution, liste de suivi des abonnements &#40;Publication de fusion, SQL Server 2005 et version ultérieure&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [Informations sur le serveur de distribution, liste de suivi des abonnements &#40;Publication d’instantanés, SQL Server 2005 et version ultérieure&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [Informations du serveur de distribution, agents](../../relational-databases/replication/distributor-information-agents.md)  
+-   [Informations sur le serveur de distribution, Publications](../../relational-databases/replication/distributor-information-publications.md)  
   
 -   [Paramètres du serveur de publication](../../relational-databases/replication/publisher-settings.md)  
   
@@ -68,8 +60,7 @@ ms.locfileid: "47799467"
   
 -   [Informations de publication, Agents &#40;Publication transactionnelle&#41;](../../relational-databases/replication/publication-information-agents-transactional-publication.md)  
   
--   [Informations de publication, Agents &#40;Publication de fusion&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)  
-  
+-   [Informations de publication, Agents &#40;Publication de fusion&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)    
 -   [Informations de publication, Agents &#40;Publication d’instantanés&#41;](../../relational-databases/replication/publication-information-agents-snapshot-publication.md)  
   
 -   [Informations de publication, jetons de suivi &#40;publication transactionnelle, SQL Server 2005 et ultérieur&#41;](../../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md)  
@@ -81,8 +72,6 @@ ms.locfileid: "47799467"
 -   [Abonnement, Historique du serveur de distribution vers l’Abonné &#40;Abonnement transactionnel&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md)  
   
 -   [Abonnement, Historique de synchronisation &#40;Abonnement de fusion, SQL Server 2005 et version ultérieure&#41;](../../relational-databases/replication/subscription-synchronization-history.md)  
-  
--   [Abonnement, Historique de synchronisation &#40;Abonnement de fusion, SQL Server 2000&#41;](../../relational-databases/replication/subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
   
 -   [Abonnement, Historique du serveur de distribution vers l’Abonné &#40;Abonnement aux instantanés&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
@@ -98,7 +87,6 @@ ms.locfileid: "47799467"
   
 ## <a name="see-also"></a> Voir aussi  
  [Démarrer le moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Référence des propriétés &#40;réplication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

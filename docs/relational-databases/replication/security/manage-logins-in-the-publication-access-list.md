@@ -17,12 +17,12 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef0a5be55fe1e3e50fb5b4b69a8ba6bfb620dc36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d0c686bcc52732f1fa25a4e4b4b83b776bb8633
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756377"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124329"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Gérer des connexions dans la liste d'accès à la publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47756377"
 ## <a name="see-also"></a> Voir aussi  
  [Gérer des connexions dans la liste d'accès à la publication](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   
  [Modèle de sécurité de l’Agent de réplication](../../../relational-databases/replication/security/replication-agent-security-model.md)   
- [Sécuriser une topologie de réplication](../../../relational-databases/replication/security/secure-a-replication-topology.md)   
+ [Sécuriser une topologie de réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Sécuriser le serveur de publication](../../../relational-databases/replication/security/secure-the-publisher.md)  
   
   

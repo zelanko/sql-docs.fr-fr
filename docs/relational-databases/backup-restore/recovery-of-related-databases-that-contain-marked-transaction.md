@@ -23,12 +23,12 @@ ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b0ad92c9bf7596bb30dce4adf912fb1a9aa468a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a548fe7327c6e3c8ac4febca3db442490c983058
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678217"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131699"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Récupération de bases de données associées contenant une transaction marquée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,11 +63,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Syntaxe Transact-SQL permettant de réaliser une récupération jusqu'à une marque  
  Quand vous ciblez une transaction marquée à l’aide d’une instruction[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), vous pouvez utiliser l’une des clauses suivantes pour vous arrêter à la marque ou juste avant celle-ci :  
   
--   Utilisez la clause WITH STOPATMARK = **'***<nom_marque>***'** pour spécifier que la transaction marquée est le point de récupération.  
+-   Utilisez la clause WITH STOPATMARK = **'**_<nom_marque>_**'** pour spécifier que la transaction marquée est le point de récupération.  
   
      L'option STOPATMARK effectue une restauration par progression jusqu'à la marque et inclut la transaction marquée dans cette restauration.  
   
--   Utilisez la clause WITH STOPBEFOREMARK = **'***<nom_marque>***'** pour spécifier que l’enregistrement de journal situé juste avant la marque est le point de récupération.  
+-   Utilisez la clause WITH STOPBEFOREMARK = **'**_<nom_marque>_**'** pour spécifier que l’enregistrement de journal situé juste avant la marque est le point de récupération.  
   
      L'option STOPBEFOREMARK effectue une restauration par progression jusqu'à la marque et exclut la transaction marquée de cette restauration.  
   

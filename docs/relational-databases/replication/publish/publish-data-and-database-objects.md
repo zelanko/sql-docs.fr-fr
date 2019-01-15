@@ -42,12 +42,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9d1acf8774331ca5e789d9c8d9c50e05a6a3b1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e0f959c6bc5a34fe2c2a3aec08f87f1e703749cf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523074"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129009"
 ---
 # <a name="publish-data-and-database-objects"></a>Publier des données et des objets de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "52523074"
 |---------------------|--------------------------------------------------------|-----------------------|  
 |Tables|X|X|  
 |Tables partitionnées|X|X|  
-|Procédures stockées - Définition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|X|  
-|Procédures stockées - Exécution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|non|  
+|Procédures stockées – Définition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|X|  
+|Procédures stockées – Exécution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|non|  
 |Vues|X|X|  
 |Vues indexées|X|X|  
 |Vues indexées comme des tables|X|non|  
@@ -71,36 +71,22 @@ ms.locfileid: "52523074"
 ## <a name="creating-publications"></a>Création de publications  
  Pour créer une publication, vous fournissez les informations suivantes :  
   
--   Le serveur de distribution.  
-  
--   L'emplacement des fichiers d'instantanés.  
-  
--   La base de données de publication.  
-  
--   Le type de publication à créer (instantané, transactionnelle, transactionnelle avec abonnements pouvant être mis à jour ou fusion).  
-  
--   les données et les objets de base de données (articles) à inclure à la publication ;  
-  
--   Filtres de lignes statiques et filtres de colonnes statiques pour tous les types de publications, et filtres de lignes paramétrés et filtres de jointure pour les publications de fusion.  
-  
--   La planification de l'Agent d'instantané.  
-  
--   les comptes sous lesquels les agents suivants s'exécutent : l'Agent d'instantané pour toutes les publications, l'Agent de lecture du journal pour toutes les publications transactionnelles et l'Agent de lecture de la file d'attente pour les publications transactionnelles qui autorisent la mise à jour des abonnements ;  
-  
+-   Le serveur de distribution.    
+-   L'emplacement des fichiers d'instantanés.    
+-   La base de données de publication.    
+-   Le type de publication à créer (instantané, transactionnelle, transactionnelle avec abonnements pouvant être mis à jour ou fusion).    
+-   les données et les objets de base de données (articles) à inclure à la publication ;   
+-   Filtres de lignes statiques et filtres de colonnes statiques pour tous les types de publications, et filtres de lignes paramétrés et filtres de jointure pour les publications de fusion.   
+-   La planification de l'Agent d'instantané.    
+-   les comptes sous lesquels les agents suivants s'exécutent : l'Agent d'instantané pour toutes les publications, l'Agent de lecture du journal pour toutes les publications transactionnelles et l'Agent de lecture de la file d'attente pour les publications transactionnelles qui autorisent la mise à jour des abonnements ;    
 -   Nom et description de la publication.  
   
- Pour plus d'informations sur la manière de travailler avec des publications, consultez les rubriques suivantes :  
-  
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
-  
--   [Définir un article](../../../relational-databases/replication/publish/define-an-article.md)  
-  
--   [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
-  
--   [Afficher et modifier les propriétés d’un article](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
-  
--   [Supprimer une publication](../../../relational-databases/replication/publish/delete-a-publication.md)  
-  
+ Pour plus d'informations sur la manière de travailler avec des publications, consultez les rubriques suivantes :    
+-   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [Définir un article](../../../relational-databases/replication/publish/define-an-article.md)    
+-   [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
+-   [Afficher et modifier les propriétés d’un article](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
+-   [Supprimer une publication](../../../relational-databases/replication/publish/delete-a-publication.md)    
 -   [Supprimer un article](../../../relational-databases/replication/publish/delete-an-article.md)  
   
 > [!NOTE]  
@@ -109,12 +95,9 @@ ms.locfileid: "52523074"
 ## <a name="publishing-tables"></a>Publication de tables  
  L'objet le plus couramment publié est une table. Les liens suivants donnent des informations supplémentaires sur les éléments relatifs à la publication des tables :  
   
--   [Filtrer des données publiées](../../../relational-databases/replication/publish/filter-published-data.md)  
-  
--   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
-  
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
+-   [Filtrer des données publiées](../../../relational-databases/replication/publish/filter-published-data.md)    
+-   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
+-   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  Lors de la publication d'une table pour la réplication, vous pouvez spécifier les objets de schéma qui doivent être copiés vers l'Abonné, tels que l'intégrité référentielle déclarée (contraintes de clé primaire, contraintes référentielles, contraintes uniques), des index, des déclencheurs DML utilisateur (des déclencheurs DDL qui ne peuvent pas être répliqués), des propriétés étendues et des classements. Les propriétés étendues sont répliquées uniquement dans la synchronisation initiale entre le serveur de publication et l'Abonné. Si vous ajoutez ou modifiez une propriété étendue après la synchronisation initiale, la modification n'est pas répliquée.  
@@ -125,7 +108,7 @@ ms.locfileid: "52523074"
  La réplication prend en charge la publication de tables et d'index partitionnés. Le niveau de prise en charge dépend du type de réplication utilisé, ainsi que des options que vous spécifiez pour la publication et les articles associés aux tables partitionnées. Pour plus d’informations, consultez [Répliquer des tables et des index partitionnés](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
   
 ## <a name="publishing-stored-procedures"></a>Publication de procédures stockées  
- Tous les types de réplication vous permettent de répliquer des définitions de procédure stockée : l'instruction CREATE PROCEDURE est copiée sur chaque Abonné. Dans le cas de procédures stockées CLR (Common Language Runtime), l'assembly associé est également copié. Les modifications des procédures sont répliquées vers les Abonnés ; les modifications des assemblys associés ne le sont pas.  
+ Tous les types de réplication vous permettent de répliquer des définitions de procédure stockée : l'instruction CREATE PROCEDURE est copiée sur chaque Abonné. Dans le cas de procédures stockées CLR (Common Language Runtime), l'assembly associé est également copié. Les modifications des procédures sont répliquées vers les Abonnés ; les modifications des assemblys associés ne le sont pas.  
   
  En plus de répliquer la définition d'une procédure stockée, la réplication transactionnelle vous permet de répliquer l'exécution des procédures stockées. Ceci est particulièrement utile lors de la réplication des résultats de procédures stockées de maintenance qui affectent de gros volumes de données. Pour plus d’informations, consultez [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
@@ -189,7 +172,7 @@ ms.locfileid: "52523074"
 -   Les fonctions contenant l'indicateur **NOEXPAND** sur des vues indexées ne peuvent pas être publiées dans la même publication que les tables référencées et les vues d'index, en raison de l'ordre dans lequel l'agent de distribution les livre. Pour contourner ce problème, placez la création de la table et de la vue indexée dans une première publication, puis ajoutez les fonctions contenant l'indicateur **NOEXPAND** sur les vues indexées à une seconde publication que vous publierez à la fin de la première publication. Ou bien, créez des scripts pour ces fonctions et exécutez-les à l'aide du paramètre *@post_snapshot_script* de **sp_addpublication**.  
   
 ### <a name="schemas-and-object-ownership"></a>Schémas et propriété des objets  
- La réplication fonctionne par défaut de la façon suivante dans l'Assistant Nouvelle publication quant aux schémas et à la propriété des objets :  
+ La réplication fonctionne par défaut de la façon suivante dans l'Assistant Nouvelle publication quant aux schémas et à la propriété des objets :  
   
 -   Pour les articles de publications de fusion d'un niveau de compatibilité de 90 ou supérieur, les publications d'instantané et les publications transactionnelles : par défaut, le propriétaire de l'objet sur l'Abonné est le même que le propriétaire de l'objet correspondant sur le serveur de publication. Si les schémas propriétaires des objets n'existent pas sur l'Abonné, ils sont créés automatiquement.  
   
@@ -199,7 +182,7 @@ ms.locfileid: "52523074"
   
 -   Pour les articles de publications utilisant les instantanés en mode caractère (utilisées pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et les abonnés [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ) : le propriétaire est laissé vide par défaut. Le propriétaire prend les valeurs par défaut du propriétaire associé au compte utilisé par l'Agent de distribution ou l'Agent de fusion pour se connecter à l'Abonné.  
   
- Le propriétaire de l’objet peut être changé par le biais de la boîte de dialogue **Propriétés de l’article - \<***Article***>** et les procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Définir un article](../../../relational-databases/replication/publish/define-an-article.md) et [Afficher et modifier les propriétés d’un article](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Le propriétaire de l’objet peut être modifié par le biais de la boîte de dialogue **Propriétés de l’article - \<**_Article_**>** et les procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Définir un article](../../../relational-databases/replication/publish/define-an-article.md) et [Afficher et modifier les propriétés d’un article](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Publication de données sur les Abonnés exécutant des versions antérieures de SQL Server  
   

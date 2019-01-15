@@ -28,12 +28,12 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fa09a229b3cff08f452417a89bbc2ba357a502b0
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 52e2d08a629a2e7272a409f0e84ab9b79299649b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191015"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132129"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Spécifie le nombre de valeurs fournies par *boundary_value*, dans la limite de 14 999. Le nombre de partitions créées est égal à *n* + 1. Il n'est pas nécessaire que les valeurs soient recensées dans l'ordre. Si les valeurs ne sont pas dans l'ordre, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] les trie, crée la fonction et affiche un message d'avertissement indiquant qu'elles ne sont pas fournies dans l'ordre. Le moteur de base de données retourne une erreur si *n* comprend des valeurs dupliquées.  
   
  **LEFT** | RIGHT  
- Spécifie à quel côté de chaque intervalle de valeur limite, gauche ou droite, appartient *boundary_value* [ **,***...n* ] quand les valeurs de l’intervalle sont triées par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans l’ordre croissant, de la gauche vers la droite. Si cet argument n'est pas spécifié, la valeur par défaut est LEFT.  
+ Spécifie à quel côté de chaque intervalle de valeur limite, gauche ou droite, appartient *boundary_value* [ **,**_...n_ ] quand les valeurs de l’intervalle sont triées par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans l’ordre croissant, de la gauche vers la droite. Si cet argument n'est pas spécifié, la valeur par défaut est LEFT.  
   
 ## <a name="remarks"></a>Notes   
  L'étendue d'une fonction de partition est limitée à la base de données dans laquelle elle est créée. Dans la base de données, les fonctions de partition résident dans un espace de noms indépendant des autres fonctions.  
@@ -106,8 +106,8 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 |---------------|-------|-------|-------|-------|  
 |**Valeurs**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
-### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. Création d'une fonction de partition RANGE RIGHT sur une colonne de type int  
- La fonction de partition suivante utilise pour *boundary_value* [ **,***...n* ] les mêmes valeurs que l’exemple précédent, mais elle spécifie RANGE RIGHT.  
+### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>b. Création d'une fonction de partition RANGE RIGHT sur une colonne de type int  
+ La fonction de partition suivante utilise pour *boundary_value* [ **,**_...n_ ] les mêmes valeurs que l’exemple précédent, mais elle spécifie RANGE RIGHT.  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  

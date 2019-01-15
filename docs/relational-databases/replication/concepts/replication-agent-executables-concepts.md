@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - programming interfaces [SQL Server replication]
@@ -17,12 +17,12 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ead289095f53693a7e6a487fa2a07a7c94df6219
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f02932eff39003f318d2324cce85e51e54a4a77
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791817"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299116"
 ---
 # <a name="replication-agent-executables-concepts"></a>Concepts des exécutables de l'agent de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47791817"
   
 -   [Agent de lecture du journal des réplications](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Agent de fusion de réplication](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
 -   [Agent de lecture de la file d’attente de réplication](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47791817"
  Lorsque vous appelez des agents de réplication, vous pouvez utiliser des profils de performances pour transmettre automatiquement un jeu défini de paramètres au fichier exécutable de l'agent. Pour plus d'informations, voir [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants décrivent comment appeler les agents de réplication à partir de l'invite de commandes. Il est également possible d'appeler les agents de réplication au moyen de Replication Management Objects. Pour plus d’informations, consultez [Synchroniser des abonnements &#40;réplication&#41;](../../../relational-databases/replication/synchronize-subscriptions-replication.md).  
+ Les exemples suivants décrivent comment appeler les agents de réplication à partir de l'invite de commandes. Il est également possible d'appeler les agents de réplication au moyen de Replication Management Objects. Pour plus d’informations, consultez [Synchroniser des abonnements &#40;réplication&#41;](../../../relational-databases/replication/synchronize-data.md).  
   
 > [!NOTE]  
 >  Les sauts de ligne figurant dans ces exemples ont été ajoutés afin d'améliorer la lisibilité. Dans un fichier de commandes, les commandes doivent figurer sur une seule ligne.  

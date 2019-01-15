@@ -31,12 +31,12 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3ef067f78e6ff7e1358a89ab210ae8c701625b14
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f26eace7208ce0ec251707a34e964f718fcc1d09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543827"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124789"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **@** *dialog_handle*  
+ **@** _dialog_handle_  
  Variable utilisée pour stocker le handle de dialogue généré par le système pour le nouveau dialogue retourné par l'instruction BEGIN DIALOG CONVERSATION. La variable doit être de type **uniqueidentifier**.  
   
  FROM SERVICE *initiator_service_name*  
@@ -139,7 +139,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
    ON CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
-### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>B. Début d'un dialogue avec une durée de vie explicite  
+### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>b. Début d'un dialogue avec une durée de vie explicite  
  L'exemple suivant commence une conversation et stocke l'identificateur du dialogue dans `@dialog_handle`. Le service `//Adventure-Works.com/ExpenseClient` est l'initiateur du dialogue et le service `//Adventure-Works.com/Expenses` est la cible du dialogue. Le dialogue respecte le contrat `//Adventure-Works.com/Expenses/ExpenseSubmission`. Si le dialogue n'est pas fermé par la commande END CONVERSATION dans les `60` secondes, Service Broker met fin au dialogue en signalant une erreur.  
   
 ```  

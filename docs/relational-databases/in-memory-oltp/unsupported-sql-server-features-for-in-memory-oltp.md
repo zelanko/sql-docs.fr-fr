@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51485f1d1bbe120b42371c9d04a9d4576ac8d0d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba432d722bcd6f9df6c797d361a53e0b6dc6dff9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391542"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254957"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s
 
 |Bases de données|Autorisé|Description|  
 |---------------|-------------|-----------------|  
-| Bases de données utilisateur, **model** et **msdb**. | non | Dans la plupart des cas, les requêtes et transactions de bases de données croisées ne sont *pas* prises en charge.<br /><br />Une requête ne peut pas accéder à d’autres bases de données si la requête utilise une table à mémoire optimisée ou une procédure stockée compilée en mode natif. Cette restriction s’applique aux transactions aussi bien qu’aux requêtes.<br /><br />Les exceptions sont les bases de données système **tempdb** et **MASTER**. La base de données **MASTER** est ici accessible en lecture seule. |
+| Bases de données utilisateur, **model** et **msdb**. | Non | Dans la plupart des cas, les requêtes et transactions de bases de données croisées ne sont *pas* prises en charge.<br /><br />Une requête ne peut pas accéder à d’autres bases de données si la requête utilise une table à mémoire optimisée ou une procédure stockée compilée en mode natif. Cette restriction s’applique aux transactions aussi bien qu’aux requêtes.<br /><br />Les exceptions sont les bases de données système **tempdb** et **MASTER**. La base de données **MASTER** est ici accessible en lecture seule. |
 | Base de données **Resource**, **tempdb** | Oui | Dans une transaction qui traite les objets OLTP en mémoire, les bases de données système **Resource** et **tempdb** peuvent être utilisées sans restriction.
 
 
@@ -64,8 +64,8 @@ Les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s
   
 - Curseurs de jeu de clés et dynamiques sur les requêtes qui accèdent aux tables à mémoire optimisée. Ces curseurs sont dégradés en statique et en lecture seule.  
   
-- L’utilisation de **MERGE INTO** *cible* , où *cible* est une table à mémoire optimisée, n’est pas prise en charge.
-    - **MERGE USING** *source* est pris en charge pour les tables à mémoire optimisée.  
+- L’utilisation de **MERGE INTO** _cible_ , où *cible* est une table à mémoire optimisée, n’est pas prise en charge.
+    - **MERGE USING** _source_ est pris en charge pour les tables à mémoire optimisée.  
   
 - Le type de données ROWVERSION (TIMESTAMP) n’est pas pris en charge. Pour plus d’informations, consultez [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).
   

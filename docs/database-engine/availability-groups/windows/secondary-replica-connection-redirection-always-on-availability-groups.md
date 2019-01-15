@@ -1,7 +1,7 @@
 ---
 title: Redirection de connexion en lecture/écriture depuis un réplica secondaire SQL Server vers le réplica principal (groupes de disponibilité Always On) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -18,14 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a811fdb21d6c0c1d702c067f255ece3c2b183b9c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600524"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206305"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Redirection de connexion en lecture/écriture depuis un réplica secondaire vers le réplica principal (groupes de disponibilité Always On)
+
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 permet désormais la *redirection de connexion en lecture/écriture depuis un réplica secondaire vers le réplica principal* pour les groupes de disponibilité AlwaysOn. La redirection de connexion en lecture/écriture est disponible pour toutes les plateformes de système d’exploitation. Elle permet de rediriger les connexions d’applications clientes vers le réplica principal, quel que soit le serveur cible spécifié dans la chaîne de connexion. 
@@ -53,8 +54,8 @@ Pour configurer la redirection des connexions en lecture/écriture, définissez 
 
 Dans [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], `READ_WRITE_ROUTING_URL` a été ajouté aux spécifications `<add_replica_option>`. Consultez les rubriques suivantes : 
 
-* [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md)
-* [ALTER AVAILABILITY GROUP](../../../t-sql\statements\alter-availability-group-transact-sql.md)
+* [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
+* [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
 ### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) non défini (par défaut) 
@@ -156,7 +157,8 @@ Dans le diagramme suivant, le réplica principal a fait l’objet d’un bascule
 
 Si l’instance de SQL Server qui est spécifiée dans la chaîne de connexion n’est pas disponible (en cas de panne), la connexion échoue, quel que soit le rôle que joue le réplica sur le serveur cible. Pour éviter les temps d’arrêt prolongés du service, configurez un autre `FailoverPartner` dans la chaîne de connexion. L’application doit implémenter une logique de nouvelle tentative puisque les réplicas principaux et secondaires seront hors connexion pendant le basculement. Pour plus d’informations sur les chaînes de connexion, consultez [SqlConnection.ConnectionString, propriété](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a> Voir aussi
+
 [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  
 [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   

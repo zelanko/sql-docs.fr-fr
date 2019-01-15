@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 627aea0126031dc747472861ac186e600dcfaaf6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5b2f6defed7ad897f3464aec1b8b99391a2b9149
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202388"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126449"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurer la base de données de distribution de réplication dans un groupe de disponibilité AlwaysOn
 
@@ -48,7 +48,7 @@ Une fois qu’une base de données de distribution du groupe de disponibilité a
 - Ajout ou suppression de nœuds dans un groupe de disponibilité de base de données de distribution existant
 - Un serveur de distribution peut comprendre plusieurs bases de données de distribution. Chaque base de données de distribution peut se trouver dans son propre groupe de disponibilité et n’être comprise dans aucun groupe de disponibilité. Plusieurs bases de données de distribution peuvent partager un même groupe de disponibilité.
 - Le serveur de publication et le serveur de distribution doivent se trouver sur des instances distinctes de SQL Server.
-- Si l’écouteur du groupe de disponibilité qui héberge la base de données de distribution est configuré pour utiliser un port non défini par défaut, il est nécessaire de configurer un alias pour l’écouteur et le port non défini par défaut. Cet alias doit être créé sur tous les réplicas de serveurs de publication, de serveurs de distribution et d’abonnés (pour les abonnés exécutés en mode par extraction). 
+- Si l’écouteur du groupe de disponibilité qui héberge la base de données de distribution est configuré pour utiliser un port non défini par défaut, il est nécessaire de configurer un alias pour l’écouteur et le port non défini par défaut.
 
 ## <a name="limitations-or-exclusions"></a>Limitations ou exclusions
 
@@ -236,7 +236,7 @@ Cet exemple supprime un serveur de distribution du groupe de disponibilité d’
 
 ## <a name="remove-a-publisher-from-distribution-database-ag"></a>Supprimer un serveur de publication du groupe de disponibilité de base de données de distribution
 
-Cet exemple supprime un serveur de publication du groupe de disponibilité de base de données de distribution actuel d’un serveur de distribution, sans que les autres serveurs de publication servis par ce groupe de disponibilité ne soient affectés. Dans cet exemple, la configuration existante est constituée d’une base de données située dans un groupe de disponibilité. DIST1, DIST2 et DIST3 sont les serveurs de distribution, `distribution` est la base de données de distribution du groupe de disponibilité (AG), et PUB1 et PUB2 correspondent aux serveurs de publication servis par la base de données `distribution`. L’exemple supprime PUB1 de ces serveurs de distribution.
+Cet exemple supprime un serveur de publication du groupe de disponibilité de base de données de distribution du serveur de distribution actuel, sans que les autres serveurs de publication servis par ce groupe de disponibilité ne soient pas affectés. Dans cet exemple, la configuration existante est constituée d’une base de données située dans un groupe de disponibilité. DIST1, DIST2 et DIST3 sont les serveurs de distribution, `distribution` est la base de données de distribution du groupe de disponibilité (AG), et PUB1 et PUB2 correspondent aux serveurs de publication servis par la base de données `distribution`. L’exemple supprime PUB1 de ces serveurs de distribution.
 
 ### <a name="publisher-workflow"></a>Flux de travail du serveur de publication
 

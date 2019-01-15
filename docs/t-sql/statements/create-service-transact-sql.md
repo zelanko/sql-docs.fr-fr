@@ -22,12 +22,12 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1a4d4cbb310251bfe6abed7a44dfb5c8514c369c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcd52d1f45b1f1b29777cae26e65660887302e92
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739037"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131919"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ CREATE SERVICE service_name
  AUTHORIZATION *owner_name*  
  Définit le propriétaire du service comme étant l'utilisateur ou le rôle de la base de données spécifié. Quand l’utilisateur actuel est **dbo** ou **sa**, l’argument *owner_name* peut être le nom de n’importe quel utilisateur ou rôle valide. Sinon, *owner_name* doit être le nom de l’utilisateur actuel, le nom d’un utilisateur pour lequel l’utilisateur actuel a l’autorisation IMPERSONATE ou le nom d’un rôle auquel appartient l’utilisateur actuel.  
   
- ON QUEUE [ *schema_name***.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  Spécifie la file d'attente qui reçoit les messages pour le service. Cette file d'attente doit exister dans la même base de données que celle du service. Si aucun argument *schema_name* n’est fourni, le schéma est le schéma par défaut de l’utilisateur qui exécute l’instruction.  
   
  *contract_name*  
@@ -91,7 +91,7 @@ CREATE SERVICE [//Adventure-Works.com/Expenses]
     ([//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-### <a name="b-creating-a-service-with-multiple-contracts"></a>B. Création d'un service avec plusieurs contrats  
+### <a name="b-creating-a-service-with-multiple-contracts"></a>b. Création d'un service avec plusieurs contrats  
  L'exemple suivant crée le service `//Adventure-Works.com/Expenses` dans la file d'attente `ExpenseQueue`. Les dialogues qui ciblent ce service doivent respecter le contrat `//Adventure-Works.com/Expenses/ExpenseSubmission` ou le contrat `//Adventure-Works.com/Expenses/ExpenseProcessing`.  
   
 ```  

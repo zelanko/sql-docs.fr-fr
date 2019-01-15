@@ -17,12 +17,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae91aeb2cf31e7855f4f6caa7c1b916c3ef1a968
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9395b0437c61bc0d680a701aae72e4df53c19cb4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503500"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129579"
 ---
 # <a name="create-a-pull-subscription"></a>Créer un abonnement par extraction de données (pull)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,9 +119,9 @@ ms.locfileid: "52503500"
   
 2.  Sur l’Abonné, exécutez [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Spécifiez **@publisher**, de **@publisher_db**, de **@publication**et les paramètres suivants :  
   
-    -   **@subscriber_type** : spécifiez **local** pour un abonnement client et **global** pour un abonnement serveur.  
+    -   **@subscriber_type** – specify **local** pour un abonnement client et **global** pour un abonnement serveur.  
   
-    -   **@subscription_priority** : spécifiez la priorité de l’abonnement (de **0,00** à **99,99**). Ceci est requis uniquement pour un abonnement serveur.  
+    -   **@subscription_priority** – Spécifiez la priorité de l'abonnement (de**0,00** à **99,99**). Ceci est requis uniquement pour un abonnement serveur.  
   
          Pour plus d’informations, consultez [Détection et résolution avancées des conflits de réplication de fusion](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
@@ -279,7 +279,7 @@ GO
   
 6.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription> .  
   
-7.  Définissez les propriétés suivantes des abonnements :  
+7.  Définissez les propriétés suivantes des abonnements :  
   
     -   La <xref:Microsoft.SqlServer.Management.Common.ServerConnection> à l'Abonné créée à l'étape 1 pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
@@ -311,7 +311,7 @@ GO
   
 1.  Créez des connexions à la fois à l'Abonné et au serveur de publication au moyen de la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> en utilisant la connexion au serveur de publication de l'étape 1. Spécifiez <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>et <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> en utilisant la connexion au serveur de publication de l'étape 1. Spécifiez <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>et <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si cette méthode retourne **false**, les propriétés spécifiées à l'étape 2 sont incorrectes ou la publication n'existe pas sur le serveur.  
   
@@ -321,7 +321,7 @@ GO
   
 6.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription> .  
   
-7.  Définissez les propriétés suivantes des abonnements :  
+7.  Définissez les propriétés suivantes des abonnements :  
   
     -   La <xref:Microsoft.SqlServer.Management.Common.ServerConnection> à l'Abonné créée à l'étape 1 pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   

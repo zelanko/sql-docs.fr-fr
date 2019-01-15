@@ -1,7 +1,7 @@
 ---
 title: Index columnstore - Performances des requêtes | Microsoft Docs
 ms.custom: ''
-ms.date: 12/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe14cc4f52fe0606fd68613736d91fd48bf87f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dddb1ee5aaeab9a741cfe0a09bea2a93b786c57e
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637139"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255276"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Index columnstore - Performances des requêtes
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Les index columnstore sont conçus pour rendre le traitement des requêtes beaucoup plus rapide. Les recommandations suivantes vous permettront d’atteindre les performances attendues.    
@@ -60,7 +61,7 @@ ms.locfileid: "47637139"
     
 -   Les index columnstore compressent les données par colonne plutôt que par ligne. C’est ce qui permet d’atteindre des taux de compression élevés et de diminuer le volume des données stockées sur le disque. Chaque colonne est compressée et stockée séparément.  Les données d’une colonne ont toujours le même type et ont souvent des valeurs similaires. Les méthodes de compression de données offrent des taux de compression particulièrement élevés en présence de valeurs similaires.    
     
--   Par exemple, dans une table de faits qui stocke les adresses de clients et qui contient une colonne « pays », le nombre total de valeurs possibles est inférieur à 200. Certaines de ces valeurs sont répétées de nombreuses fois. Si la table de faits contient 100 millions de lignes, les données de la colonne « pays » peuvent être fortement compressées et nécessitent donc très peu de stockage. La compression par ligne ne fonctionne pas sur le même principe de similarité des valeurs de colonne. Elle utilise plus d’octets pour compresser les valeurs de la colonne « pays ».    
+-   Par exemple, dans une table de faits qui stocke les adresses de clients et qui contient une colonne « pays », le nombre total de valeurs possibles est inférieur à 200. Certaines de ces valeurs sont répétées de nombreuses fois. Si la table de faits contient 100 millions de lignes, les données de la colonne « pays » peuvent être fortement compressées et nécessitent donc très peu de stockage. La compression par ligne ne fonctionne pas sur le même principe de similarité des valeurs de colonne. Elle utilise plus d’octets pour compresser les valeurs de la colonne « pays ».    
     
 ### <a name="column-elimination"></a>Élimination de colonne    
  Avec les index columnstore, les colonnes qui ne sont pas utiles pour le résultat d’une requête ne sont pas lues. Cette fonction, appelée élimination de colonne, réduit également les E/S nécessaires pour l’exécution d’une requête et améliore ainsi les performances de requête.    
@@ -141,11 +142,11 @@ FROM FactResellerSalesXL_CCI
 ```    
     
 ### <a name="string-predicate-pushdown"></a>Prédicats de chaîne en mode Push    
-Quand vous créez un schéma d’entrepôt de données, le modèle de schéma recommandé est un schéma en étoile ou en flocon contenant une ou plusieurs tables de faits et de nombreuses tables de dimension. La [table de faits](https://en.wikipedia.org/wiki/Fact_table) stocke les mesures ou transactions d’entreprise et la [table de dimension](https://en.wikipedia.org/wiki/Dimension_table) stocke les dimensions sur lesquelles doit porter l’analyse des faits.    
+Quand vous créez un schéma d’entrepôt de données, le modèle de schéma recommandé est un schéma en étoile ou en flocon contenant une ou plusieurs tables de faits et de nombreuses tables de dimension. La [table de faits](https://wikipedia.org/wiki/Fact_table) stocke les mesures ou transactions d’entreprise et la [table de dimension](https://wikipedia.org/wiki/Dimension_table) stocke les dimensions sur lesquelles doit porter l’analyse des faits.    
     
 Par exemple, un fait est un enregistrement représentant la vente d’un produit particulier dans une région spécifique, tandis que la dimension représente un ensemble de régions, produits, etc. Les tables de faits et de dimension sont associées par une relation de clé primaire/étrangère. Les requêtes analytiques les plus courantes associent une ou plusieurs tables de dimensions avec la table de faits.    
     
-Prenons l’exemple d’une table de dimension `Products`. `ProductCode` est une clé primaire classique qui est généralement représentée par un type de données string. Pour améliorer les performances des requêtes, il est recommandé de créer une clé de substitution, généralement une colonne de type integer, pour faire référence à la ligne dans la table de dimension à partir de la table de faits.    
+Prenons l’exemple d’une table de dimension `Products`. `ProductCode` est une clé primaire classique qui est généralement représentée par un type de données string. Pour améliorer les performances des requêtes, il est recommandé de créer une clé de substitution, généralement une colonne de type integer, pour faire référence à la ligne dans la table de dimension à partir de la table de faits.    
     
 L’index columnstore offre de très bonnes performances pour l’exécution de requêtes analytiques avec des jointures/prédicats impliquant des clés numériques ou entières. Toutefois, pour beaucoup de charges de travail client, l’utilisation de colonnes de type string associant des tables de faits/dimension, les performances de requête avec l’index columnstore n’étaient pas aussi bonnes. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] améliore considérablement les performances des requêtes analytiques sur des colonnes de type string en transmettant en mode Push les prédicats avec les colonnes string vers le nœud SCAN.    
     
