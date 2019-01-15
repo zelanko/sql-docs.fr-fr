@@ -75,7 +75,7 @@ ms.locfileid: "51640686"
 |Profil|Types de données valides*|  
 |-------------|------------------------|  
 |ColumnStatisticsProfile|Colonnes de type numérique ou **datetime** (pas de **mean** et **stddev** pour la colonne **datetime** )|  
-|ColumnNullRatioProfile|Toutes les colonnes*|  
+|ColumnNullRatioProfile|Toutes les colonnes**|  
 |ColumnValueDistributionProfile|Colonnes de type **entier** , **char** et **datetime**|  
 |ColumnLengthDistributionProfile|Colonnes de type **char**|  
 |ColumnPatternProfile|Colonnes de type **char**|  
