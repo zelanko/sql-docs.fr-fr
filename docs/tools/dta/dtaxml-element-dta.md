@@ -15,12 +15,12 @@ ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a99b2d366368a88925344cc54470bef7ba25152a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c4894cf7cbee04a039bf13eb07a0e05fea59c053
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671568"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255394"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML, élément (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51671568"
 ```  
   
 <DTAXML   
-    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"   
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/dta">  
     ...code removed here...  
 </DTAXML>  
@@ -41,7 +41,7 @@ ms.locfileid: "51671568"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|**xmlns:xsi**|Obligatoire. Identifie l'espace de noms de l'instance du schéma XML. Les attributs de cet espace de noms servent à référencer le schéma qui est utilisé pour valider le fichier XML de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Valeur requise : [https://www.w3.org/2001/XMLSchema-instance](https://www.w3.org/2001/XMLSchema-instance)|  
+|**xmlns:xsi**|Obligatoire. Identifie l'espace de noms de l'instance du schéma XML. Les attributs de cet espace de noms servent à référencer le schéma qui est utilisé pour valider le fichier XML de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Valeur requise : [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
 |**xmlns**|Obligatoire. Identifie l'espace de noms de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Si vous modifiez le fichier XML de l'Assistant Paramétrage du moteur de base de données à l'aide de l'éditeur XML dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cette valeur est utilisée par l'aide obtenue par la touche F1 et l'aide dynamique pour rechercher les rubriques de référence dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Valeur obligatoire :<br /><br /> [Database Engine Tuning Advisor XML Schema](https://go.microsoft.com/fwlink/?LinkId=43100) Namespace|  
   
 ## <a name="element-characteristics"></a>Caractéristiques de l'élément  
@@ -56,7 +56,7 @@ ms.locfileid: "51671568"
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|Aucun|  
+|**Élément parent**|None|  
 |**Éléments enfants**|[DTAInput, élément &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)<br /><br /> **DTAOutput**, élément (consultez l’article [Database Engine Tuning Advisor XML schema](https://schemas.microsoft.com/sqlserver/) pour plus d’informations)|  
   
 ## <a name="remarks"></a>Notes   
