@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36d70b56432fee62d157bb8e6cf192d906e84bc3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519337"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135579"
 ---
 # <a name="configure-web-synchronization"></a>Configurer la synchronisation Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "52519337"
   
 -   être membre de la liste d'accès à la publication (PAL) ;  
   
--   être mappé à une connexion associée à un utilisateur enregistré dans la base de données de publication ;  
+-   être mappé à une connexion associée à un utilisateur enregistré dans la base de données de publication ;  
   
 -   être mappé à une connexion associée à un utilisateur enregistré dans la base de données de distribution ;  
   
@@ -87,9 +87,9 @@ ms.locfileid: "52519337"
   
  **Pour configurer IIS pour la synchronisation Web**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Configurer IIS pour la synchronisation web](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configurer IIS pour la synchronisation web](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Configurer IIS 7 pour la synchronisation web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configurer IIS 7 pour la synchronisation web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>Création d'un domaine privé Web  
  L'écouteur de réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge deux opérations de synchronisation simultanées par thread. Si cette limite est dépassée, l'écouteur de réplication risque de cesser de répondre. Le nombre de threads alloués à replisapi.dll est déterminé par la propriété Nombre maximal de processus de travail du pool d'applications. Par défaut, cette propriété a la valeur 1.  
@@ -136,7 +136,7 @@ ms.locfileid: "52519337"
   
 -   Si vous répliquez d'importants volumes de données, vous pouvez être amené à ajuster la taille de lot de l'Agent de fusion.  
   
- La taille de lot pour la réplication de fusion est mesurée en *générations*, lesquelles sont des collections de modifications par article. Le nombre de générations dans un lot est spécifié à l’aide des paramètres -**DownloadGenerationsPerBatch** et -**UploadGenerationsPerBatch** de l’Agent de fusion. Pour plus d’informations, voir [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ La taille de lot pour la réplication de fusion est mesurée en *générations*, lesquelles sont des collections de modifications par article. Le nombre de générations dans un lot est spécifié à l’aide des paramètres –**DownloadGenerationsPerBatch** et –**UploadGenerationsPerBatch** de l’Agent de fusion. Pour plus d’informations, voir [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  Pour d'importants volumes de données, spécifiez un petit nombre pour chaque paramètre de traitement par lot. Nous vous recommandons de commencer avec une valeur de 10, puis d'ajuster cette valeur selon les besoins et les performances des applications. En général, ces paramètres sont spécifiés dans un profil d'agent. Pour plus d'informations sur ces profils, consultez [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -162,7 +162,7 @@ ms.locfileid: "52519337"
   
 -   Le compte sous lequel s'exécute l'écouteur de réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll) est également le compte qui se connecte au serveur de publication et au serveur de distribution lors de la synchronisation. Ce compte doit être mappé à un compte de connexion SQL sur le serveur de publication et le serveur de distribution. Pour plus d’informations, consultez la section « Définition des autorisations pour l’écouteur de réplication SQL Server » dans la rubrique [Configurer IIS pour la synchronisation Web](../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
   
--   Vous pouvez utiliser FTP pour remettre l'instantané du serveur de publication à l'ordinateur exécutant IIS. L'instantané est toujours remis de l'ordinateur exécutant IIS à l'Abonné au moyen du protocole HTTPS. Pour plus d’informations, consultez [Transférer des instantanés via FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+-   Vous pouvez utiliser FTP pour remettre l'instantané du serveur de publication à l'ordinateur exécutant IIS. L'instantané est toujours remis de l'ordinateur exécutant IIS à l'Abonné au moyen du protocole HTTPS. Pour plus d’informations, consultez [Transférer des instantanés via FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 -   Si les serveurs de la topologie de réplication se trouvent derrière un pare-feu, vous devrez peut-être ouvrir les ports dans le pare-feu afin d'activer la synchronisation Web.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "52519337"
   
     -   L'ordinateur chargé d'exécuter IIS se connecte généralement au serveur de publication ou au serveur de distribution via le port 1433 (instance par défaut). Lorsque le serveur de publication ou le serveur de distribution correspond à une instance nommée sur un serveur avec une autre instance par défaut, le système utilise habituellement le port 1500 pour se connecter à l'instance nommée.  
   
-    -   Si l'ordinateur exécutant IIS est séparé du serveur de distribution par un pare-feu et si un partage FTP est employé pour la remise des instantanés, vous devez ouvrir les ports utilisés pour le partage FTP. Pour plus d’informations, consultez [Transférer des instantanés via FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   Si l'ordinateur exécutant IIS est séparé du serveur de distribution par un pare-feu et si un partage FTP est employé pour la remise des instantanés, vous devez ouvrir les ports utilisés pour le partage FTP. Pour plus d’informations, consultez [Transférer des instantanés via FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 > [!IMPORTANT]  
 >  L'ouverture de ports dans votre pare-feu peut exposer votre serveur à des attaques malveillantes. Assurez-vous de comprendre le fonctionnement des systèmes de pare-feu avant d'ouvrir des ports. Pour plus d'informations, consultez [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
