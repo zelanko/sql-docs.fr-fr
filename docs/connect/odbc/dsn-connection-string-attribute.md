@@ -1,37 +1,35 @@
 ---
-title: Chaînes de connexion et la source de données les mots clés et les attributs utilisés dans le pilote ODBC pour SQL Server | Microsoft Docs
+title: Chaînes de connexion et la source de données des mots clés pour le pilote ODBC - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 11/07/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
+ms.reviewer: MightyPen
 ms.author: v-jizho2
+author: karinazhou
 manager: craigg
-ms.openlocfilehash: a5c75876771efbc87eb30c368fb5246e12c60707
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 0dedb58cf0a9825625027e363db20a56f06839dd
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512858"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306236"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Attributs et mots clés de chaîne de connexion et DSN
 
 Cette page répertorie les mots clés des chaînes de connexion et les sources de données et les attributs de connexion de SQLSetConnectAttr et SQLGetConnectAttr, disponible dans le pilote ODBC pour SQL Server.
 
-
-
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Mots clés de chaîne de connexion/DSN et les attributs de connexion pris en charge
 
-Le tableau suivant répertorie les mots clés disponibles et les attributs de chaque plateforme (L: Linux ; M : Mac ; W : Windows). Cliquez sur le mot clé ou un attribut pour plus d’informations.
+Le tableau suivant répertorie les mots clés disponibles et les attributs de chaque plateforme (l : Linux ; LECTEUR M: Mac ; W : Windows : Cliquez sur le mot clé ou un attribut pour plus d’informations.
 
-| Mot clé de chaîne de connexion / DSN | Attribut de connexion | Plateforme | 
+| Mot clé de chaîne de connexion / DSN | Attribut de connexion | Plateforme |
 |-|-|-|
 | [Addr](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | DANS LA LMW |
 | [Adresse](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | DANS LA LMW |
-| [AnsiNPW](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) |  [SQL_COPT_SS_ANSI_NPW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssansinpw) | DANS LA LMW |
+| [AnsiNPW](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ANSI_NPW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssansinpw) | DANS LA LMW |
 | [APP](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | DANS LA LMW |
 | [ApplicationIntent](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_APPLICATION_INTENT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssapplicationintent) | DANS LA LMW |
 | [AttachDBFileName](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ATTACHDBFILENAME](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssattachdbfilename) | DANS LA LMW |
@@ -39,7 +37,7 @@ Le tableau suivant répertorie les mots clés disponibles et les attributs de ch
 | [AutoTranslate](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_TRANSLATE](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstranslate) | DANS LA LMW |
 | [ColumnEncryption](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sqlcoptsscolumnencryption) | [SQL_COPT_SS_COLUMN_ENCRYPTION](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sqlcoptsscolumnencryption) | DANS LA LMW |
 | [ConnectRetryCount](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
-| [ConnectRetryInterval](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
+| [ConnectRetryInterval](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_INTERVAL](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
 | [Sauvegarde de la base de données](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | DANS LA LMW |
 | [Description](../../connect/odbc/dsn-connection-string-attribute.md#description) | | DANS LA LMW |
 | [Driver](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | DANS LA LMW |
@@ -67,7 +65,7 @@ Le tableau suivant répertorie les mots clés disponibles et les attributs de ch
 | [ServerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_SERVER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | DANS LA LMW |
 | [StatsLog_On](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdata) | W |
 | [StatsLogFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA_LOG](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalog) | W |
-| [transparentNetworkIPResolution](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sqlcoptsstnir) | [SQL_COPT_SS_TNIR](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sqlcoptsstnir) | DANS LA LMW |
+| [TransparentNetworkIPResolution](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sqlcoptsstnir) | [SQL_COPT_SS_TNIR](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sqlcoptsstnir) | DANS LA LMW |
 | [Trusted_Connection](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_INTEGRATED_SECURITY](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssintegratedsecurity) | DANS LA LMW |
 | [TrustServerCertificate](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_TRUST_SERVER_CERTIFICATE](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstrustservercertificate) | DANS LA LMW |
 | [UID](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | DANS LA LMW |
@@ -75,7 +73,7 @@ Le tableau suivant répertorie les mots clés disponibles et les attributs de ch
 | [WSID](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | DANS LA LMW |
 | | [SQL_ATTR_ACCESS_MODE](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_ACCESS_MODE) | DANS LA LMW |
 | | [SQL_ATTR_ASYNC_DBC_EVENT](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
-| | [SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE N'](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
+| | [SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
 | | [SQL_ATTR_ASYNC_DBC_PCALLBACK](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
 | | [SQL_ATTR_ASYNC_DBC_PCONTEXT](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
 | | [SQL_ATTR_ASYNC_ENABLE](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
@@ -103,7 +101,7 @@ Le tableau suivant répertorie les mots clés disponibles et les attributs de ch
 | | [SQL_COPT_SS_BROWSE_SERVER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbrowseserver) | DANS LA LMW |
 | | [SQL_COPT_SS_CEKEYSTOREDATA](dsn-connection-string-attribute.md#sqlcoptsscekeystoredata) | DANS LA LMW |
 | | [SQL_COPT_SS_CEKEYSTOREPROVIDER](dsn-connection-string-attribute.md#sqlcoptsscekeystoreprovider) | DANS LA LMW |
-| | [SQL_COPT_SS_CLIENT_CONNECTION_ID](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md#sqlcoptssclientconnectionid) | DANS LA LMW |
+| | [SQL_COPT_SS_CLIENT_CONNECTION_ID](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) | DANS LA LMW |
 | | [SQL_COPT_SS_CONCAT_NULL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconcatnull) | DANS LA LMW |
 | | [SQL_COPT_SS_CONNECTION_DEAD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconnectiondead) | DANS LA LMW |
 | | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | W |
@@ -180,7 +178,7 @@ Tente de la fonctionnalité de résolution d’adresses IP réseau Transparent, 
 | Valeur de mot clé | Valeur d'attribut| Description |
 |-|-|-|
 |Oui|SQL_IS_ON|(Par défaut) Active la résolution transparente d’adresses IP réseau.|
-|non|SQL_IS_OFF|Désactive la résolution d’adresses IP réseau transparente.|
+|Non|SQL_IS_OFF|Désactive la résolution d’adresses IP réseau transparente.|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
 
@@ -188,7 +186,7 @@ Contrôle l’utilisation de SET FMTONLY pour les métadonnées lors de la conne
 
 | Valeur de mot clé | Description |
 |-|-|
-|non|(Valeur par défaut) Utiliser sp_describe_first_result_set pour les métadonnées si elle est disponible. |
+|Non|(Valeur par défaut) Utiliser sp_describe_first_result_set pour les métadonnées si elle est disponible. |
 |Oui| Utilisez SET FMTONLY pour les métadonnées. |
 
 ### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN

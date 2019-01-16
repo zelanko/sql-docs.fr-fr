@@ -11,12 +11,12 @@ ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46285d61f38619ed8dff835faee266e5a76f591d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 709ee04eaaf35501cedae0e61d93cfe6e3b55210
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511158"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125939"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Option replay (outil d'administration Distributed Replay)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +36,12 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- **-m** *controller*  
+ **-m** _controller_  
  Spécifie le nom de l'ordinateur du contrôleur. Vous pouvez utiliser «`localhost`» ou «`.`» pour désigner l'ordinateur local.  
   
  Si le paramètre **-m** n’est pas spécifié, l’ordinateur local est utilisé.  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  Spécifie le répertoire du contrôleur où sera stocké le fichier intermédiaire. Le paramètre **-d** est obligatoire.  
   
  Les conditions suivantes s'appliquent :  
@@ -57,9 +57,9 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
  **-o**  
  Capture l'activité de relecture des clients et la sauvegarde dans un fichier de trace de résultats dans le chemin d'accès spécifié par l'élément `<ResultDirectory>` , dans le fichier de configuration client `DReplayClient.xml`.  
   
- Lorsque le paramètre **–o** n’est pas spécifié, le fichier de trace de résultats n’est pas généré. La sortie de console retourne les informations de résumé à la fin de la relecture, mais aucune autre statistique de relecture n'est disponible.  
+ Lorsque le paramètre **-o** n’est pas spécifié, le fichier de trace de résultats n’est pas généré. La sortie de console retourne les informations de résumé à la fin de la relecture, mais aucune autre statistique de relecture n'est disponible.  
   
- **-s** *target_server*  
+ **-s** _target_server_  
  Spécifie l'instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec laquelle la charge de travail distribuée doit être relue. Vous devez spécifier ce paramètre au format **nom_serveur[\nom_instance]**.  
   
  Vous ne pouvez pas utiliser «`localhost`» ou «`.`» comme serveur cible.  
@@ -68,18 +68,18 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  Si le paramètre **-s** est utilisé, l’élément `<Server>` dans la section `<ReplayOptions>` du fichier de configuration de relecture est ignoré.  
   
- **-w** *clients*  
+ **-w** _clients_  
  Ce paramètre obligatoire est une liste de valeurs séparées par des virgules (sans espaces) qui spécifie les noms d'ordinateur des clients qui doivent participer à la relecture distribuée. Les adresses IP ne sont pas autorisées. Sachez que les clients doivent être déjà enregistrés avec le contrôleur.  
   
 > [!NOTE]  
 >  Chaque client s'inscrit avec le contrôleur spécifié dans le fichier de configuration client lors du démarrage du service client.  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  C'est le chemin d'accès complet du fichier de configuration de relecture ; il est utilisé pour spécifier l'emplacement du fichier lorsqu'il est stocké à un autre emplacement.  
   
  Le paramètre **-c** n’est pas obligatoire si vous voulez utiliser les valeurs par défaut du fichier de configuration de relecture `DReplay.exe.replay.config`.  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  Spécifie la fréquence (en secondes) à laquelle afficher l'état.  
   
  Si **-f** n’est pas spécifié, l’intervalle par défaut est de 30 secondes.  
@@ -91,7 +91,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
 -   Le paramètre **-d** spécifie l’emplacement du fichier intermédiaire sur le contrôleur, `c:\WorkingDir`.  
   
--   Le paramètre **-o** spécifie que chaque client spécifié capture l’activité de relecture et l’enregistre dans un fichier de trace de résultats. Remarque : l'élément `<ResultTrace>` dans le fichier de configuration peut être utilisé pour spécifier si le nombre de lignes et le jeu de résultats doivent être enregistrés.  
+-   Le paramètre **-o** spécifie que chaque client spécifié capture l’activité de relecture et l’enregistre dans un fichier de trace de résultats. Remarque : L'élément `<ResultTrace>` dans le fichier de configuration peut être utilisé pour spécifier si le nombre de lignes et le jeu de résultats doivent être enregistrés.  
   
 -   Le paramètre **-w** spécifie que les ordinateurs `client1` à `client4` participent en tant que clients à la relecture distribuée.  
   

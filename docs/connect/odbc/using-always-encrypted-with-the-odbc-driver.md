@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f91ba6d5e7120f26c4ce4f8572eea779cdddebfc
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506827"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226686"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation d’Always Encrypted avec ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -286,7 +286,7 @@ Cette section décrit les outils intégrés d’optimisation des performances da
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Contrôle des allers-retours en vue de la récupération des métadonnées pour les paramètres de requête
 
-Si Always Encrypted est activé pour une connexion, le pilote appelle par défaut [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) pour chaque requête paramétrable, en passant l’instruction de requête (sans valeurs de paramètre) à SQL Server. Cette procédure stockée analyse l’instruction de requête afin de déterminer si tous les paramètres doivent être chiffrés et si tel est le cas, retourne les informations relatives au chiffrement pour chaque paramètre permettre au pilote de les chiffrer. Ce comportement garantit un haut niveau de transparence à l’application cliente : l’application (et le développeur d’applications) sont inutile de connaître les requêtes qui accèdent à des colonnes chiffrées, tant que les valeurs ciblant des colonnes chiffrées sont passées à le pilote dans paramètres.
+Si Always Encrypted est activé pour une connexion, le pilote appelle par défaut [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) pour chaque requête paramétrable, en passant l’instruction de requête (sans valeurs de paramètre) à SQL Server. Cette procédure stockée analyse l’instruction de requête afin de déterminer si tous les paramètres doivent être chiffrés et si tel est le cas, retourne les informations relatives au chiffrement pour chaque paramètre permettre au pilote de les chiffrer. Ce comportement garantit un haut niveau de transparence à l’application cliente : L’application et le développeur d’applications n’ont pas besoin de connaître les requêtes qui accèdent à des colonnes chiffrées, tant que les valeurs ciblant des colonnes chiffrées sont passées au pilote dans les paramètres.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Par instruction Always Encrypted comportement
 
@@ -347,7 +347,7 @@ Pour obtenir la valeur de texte en clair de l’un ECEK, le pilote obtient d’a
 
 Le pilote ODBC pour SQL Server est fourni avec les fournisseurs de magasin de clés intégrés suivants :
 
-| Nom    | Description | Nom du fournisseur (métadonnées) |Disponibilité|
+| Créer une vue d’abonnement | Description | Nom du fournisseur (métadonnées) |Disponibilité|
 |:---|:---|:---|:---|
 |Coffre de clé Azure |Clés de magasins CMK dans un coffre de clés Azure | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Magasin de certificats Windows|Stocke les clés CMK localement dans le magasin de clés de Windows| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -538,7 +538,7 @@ Les paramètres ne peuvent pas cibler les colonnes **money** et **smallmoney**, 
 
 ## <a name="bulk-copy-of-encrypted-columns"></a>Copie en bloc de colonnes chiffrées
 
-Les [fonctions de copie en bloc SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) et l’utilitaire **bcp** sont pris en charge avec Always Encrypted depuis la version 17 du pilote ODBC pour SQL Server. Le texte en clair (chiffré lors de l’insertion et déchiffré lors de la récupération) et le texte chiffré (transféré textuellement) peuvent être insérés et récupérés à l’aide des API de copie en bloc (bcp_*) et de l’utilitaire **bcp**.
+Les [fonctions de copie en bloc SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) et l’utilitaire **bcp** sont pris en charge avec Always Encrypted depuis la version 17 du pilote ODBC pour SQL Server. Le texte en clair (chiffré lors de l’insertion et déchiffré lors de la récupération) et le texte chiffré (transféré textuellement) peuvent être insérés et récupérés à l’aide des API de copie en bloc (bcp_&#42;) et de l’utilitaire **bcp**.
 
 - Pour récupérer du texte chiffré au format varbinary(max) (par exemple, pour le chargement en masse dans une autre base de données), connectez-vous sans l’option `ColumnEncryption` (ou en lui donnant la valeur `Disabled`) et effectuez une opération BCP OUT.
 
@@ -546,7 +546,7 @@ Les [fonctions de copie en bloc SQL](../../relational-databases/native-client-od
 
 - Pour insérer du texte chiffré au format varbinary(max) (tel qu’il a été récupéré ci-dessus, par exemple), donnez la valeur TRUE à l’option `BCPMODIFYENCRYPTED` et effectuez une opération BCP IN. Pour que les données résultantes soient déchiffrables, la clé CEK de la colonne de destination doit être la même que celle avec laquelle le texte chiffré a été obtenu à l’origine.
 
-Lorsque vous utilisez le **bcp** utilitaire : pour contrôler la `ColumnEncryption` configuration, utilisez l’option -D et spécifier une source de données contenant la valeur souhaitée. Pour insérer du texte chiffré, vérifiez le `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` de l’utilisateur est activée.
+Lorsque vous utilisez le **bcp** utilitaire : Pour contrôler la `ColumnEncryption` configuration, utilisez l’option -D et spécifier une source de données contenant la valeur souhaitée. Pour insérer du texte chiffré, vérifiez le `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` de l’utilisateur est activée.
 
 Le tableau suivant fournit un résumé des actions lorsqu’il fonctionne sur une colonne chiffrée :
 
@@ -567,7 +567,7 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 
 ### <a name="connection-string-keywords"></a>Mots clés de chaîne de connexion
 
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |`ColumnEncryption`|Valeurs acceptées sont `Enabled` / `Disabled`.<br>`Enabled` : active la fonctionnalité Always Encrypted pour la connexion.<br>`Disabled` : désactive la fonctionnalité Always Encrypted pour la connexion. <br><br>La valeur par défaut est `Disabled`.|  
 |`KeyStoreAuthentication` | Valeurs valides : `KeyVaultPassword`, `KeyVaultClientSecret` |
@@ -576,7 +576,7 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 
 ### <a name="connection-attributes"></a>Attributs de connexion
 
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Précédant la connexion|`SQL_COLUMN_ENCRYPTION_DISABLE` (0)--désactiver Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1)--activer le chiffrement intégral|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Post-connexion|[Valeur] Tentative de chargement CEKeystoreProvider<br>[Get] Retourner un nom CEKeystoreProvider|
@@ -586,7 +586,7 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 
 ### <a name="statement-attributes"></a>Attributs d'instruction
 
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0)--always Encrypted est désactivé pour l’instruction <br>`SQL_CE_RESULTSETONLY` (1)--uniquement le déchiffrement. Jeux de résultats et valeurs de retour sont déchiffrées et les paramètres ne sont pas chiffrés. <br>`SQL_CE_ENABLED` (3)--always Encrypted est activé et utilisé pour les paramètres et les résultats|
 

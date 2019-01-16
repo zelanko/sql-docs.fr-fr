@@ -13,12 +13,12 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f56669ce6fdb9bdc71017afa351e0f2b31f0b9d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8e4179324ec6b194e0e60e4d9715ec24c1c4f835
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508050"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100754"
 ---
 # <a name="sqllogship-application"></a>Application sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,25 +34,25 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **-server** *instance_name*  
+ **-server** _instance_name_  
  Spécifie l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] où va s'exécuter l'opération. L'instance de serveur à spécifier dépend du type de l'opération d'envoi de journaux spécifié. Pour **-backup**, *instance_name* doit correspondre au nom du serveur principal dans une configuration d’envoi de journaux. Pour **-copy** ou **-restore**, *instance_name* doit correspondre au nom d’un serveur secondaire dans une configuration d’envoi de journaux.  
   
- **-backup** *primary_id*  
+ **-backup** _primary_id_  
  Effectue une opération de sauvegarde pour la base de données principale dont l’ID principal est spécifié par *primary_id*. Vous pouvez obtenir cet ID en le sélectionnant dans la table système [log_shipping_primary_databases](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md) ou en utilisant la procédure stockée [sp_help_log_shipping_primary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md) .  
   
  L'opération de sauvegarde crée la sauvegarde du journal dans le répertoire de sauvegarde. L'application **sqllogship** nettoie ensuite les anciens fichiers de sauvegarde en fonction de la durée de rétention des fichiers. Puis, l'application enregistre l'historique de l'opération de sauvegarde sur le serveur principal et le serveur moniteur. Enfin, l’application exécute [sp_cleanup_log_shipping_history](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)qui nettoie les anciennes informations d’historique en fonction de la période de rétention.  
   
- **-copy** *secondary_id*  
+ **-copy** _secondary_id_  
  Effectue une opération de copie afin de copier des sauvegardes du serveur secondaire spécifié pour la ou les bases de données secondaires dont l’ID secondaire est spécifié par *secondary_id*. Vous pouvez obtenir cet ID en le sélectionnant dans la table système [log_shipping_secondary](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md) ou en utilisant la procédure stockée [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) .  
   
  L'opération copie les fichiers de sauvegarde du répertoire de sauvegarde vers le répertoire de destination. L'application **sqllogship** enregistre ensuite l'historique de l'opération de copie sur le serveur secondaire et le serveur moniteur.  
   
- **-restore** *secondary_id*  
+ **-restore** _secondary_id_  
  Effectue une opération de restauration sur le serveur secondaire spécifié pour la ou les bases de données secondaires dont l’ID secondaire est spécifié par *secondary_id*. Vous pouvez obtenir cet ID à l’aide de la procédure stockée **sp_help_log_shipping_secondary_database** .  
   
  Les fichiers de sauvegarde du répertoire de destination créés après le point de restauration le plus récent sont restaurés dans la ou les bases de données secondaires. L'application **sqllogship** nettoie ensuite les anciens fichiers de sauvegarde en fonction de la durée de rétention des fichiers. Puis, l'application enregistre l'historique de l'opération de restauration sur le serveur secondaire et le serveur moniteur. Enfin, l’application exécute **sp_cleanup_log_shipping_history**qui nettoie les anciennes informations d’historique en fonction de la période de rétention.  
   
- **–verboselevel** *level*  
+ **-verboselevel** _level_  
  Spécifie le niveau des messages ajoutés à l'historique d'envoi des journaux. *level* est l'un des entiers suivants :  
   
 |level|Description|  
@@ -63,10 +63,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |**3**|Envoie en sortie des messages de gestion des erreurs, d'avertissement et d'information. Il s'agit de la valeur par défaut.|  
 |4|Envoie en sortie tous les messages de traçage et de débogage.|  
   
- **–logintimeout** *timeout_value*  
+ **-logintimeout** _timeout_value_  
  Spécifie le délai accordé pour se connecter à l'instance de serveur avant l'expiration de la tentative. La valeur par défaut est 15 secondes. *timeout_value* a la valeur **int**_._  
   
- **-querytimeout** *timeout_value*  
+ **-querytimeout** _timeout_value_  
  Spécifie le délai alloué au démarrage de l'opération spécifiée avant l'expiration de la tentative. Le paramètre par défaut est l'absence de délai d'attente. *timeout_value* a la valeur **int**_._  
   
 ## <a name="remarks"></a>Notes   
