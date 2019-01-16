@@ -15,12 +15,12 @@ ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c07b0bb4659f9b1b05573bf952842486f9ec72e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: db4df94d04a27df5715abe4bf5e4947850c687e4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420450"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125839"
 ---
 # <a name="connecting-to-sql-server"></a>Connexion à SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,7 +32,7 @@ Cette rubrique explique comment créer une connexion à une base de données [!I
 Consultez [DSN et les mots clés de chaîne de connexion et les attributs](../../../connect/odbc/dsn-connection-string-attribute.md) pour tous les mots clés de chaîne de connexion et les attributs pris en charge sur Mac et Linux
 
 > [!IMPORTANT]  
-> Quand vous vous connectez à une base de données qui utilise la mise en miroir de bases de données (qui a un partenaire de basculement), ne spécifiez pas le nom de la base de données dans la chaîne de connexion. Envoyez plutôt une commande **use***database_name* pour vous connecter à la base de données avant l’exécution de vos requêtes.  
+> Quand vous vous connectez à une base de données qui utilise la mise en miroir de bases de données (qui a un partenaire de basculement), ne spécifiez pas le nom de la base de données dans la chaîne de connexion. Envoyez plutôt une commande **use**_database_name_ pour vous connecter à la base de données avant l’exécution de vos requêtes.  
   
 La valeur passée à la **pilote** mot clé peut prendre l’une des opérations suivantes :  
   
@@ -53,12 +53,12 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-Vous pouvez éventuellement spécifier le protocole et le port à connecter au serveur. Par exemple, **Server = tcp :***nom_serveur***, 12345**. Notez que le seul protocole pris en charge par les pilotes Linux et macOS est `tcp`.
+Vous pouvez éventuellement spécifier le protocole et le port à connecter au serveur. Par exemple, **Server = tcp :**_nom_serveur_**, 12345**. Notez que le seul protocole pris en charge par les pilotes Linux et macOS est `tcp`.
 
 Pour vous connecter à une instance nommée sur un port statique, utilisez <b>Server=</b>*servername*,**port_number**. La connexion à un port dynamique n’est pas prise en charge.  
 
 Éventuellement, vous pouvez ajouter les informations de nom de source de données à un fichier de modèle, puis exécuter la commande suivante pour l’ajouter à `~/.odbc.ini` :
- - **ODBCINST -i --s-f** *template_file*  
+ - **odbcinst -i -s -f** _template_file_  
  
 Vous pouvez vérifier que votre pilote fonctionne à l’aide de `isql` pour tester la connexion, ou vous pouvez utiliser cette commande :
  - **master.INFORMATION_SCHEMA.TABLES bcp out -S de fichier OutFile.dat <server> - U <name> - P <password>**  
@@ -72,7 +72,7 @@ Pour plus d’informations, consultez [chiffrement des connexions à SQL Server]
 
 Quels que soient les paramètres pour **Encrypt** et **TrustServerCertificate**, les informations d’identification de connexion serveur (nom d’utilisateur et mot de passe) sont toujours chiffrées. Le tableau suivant montre l’effet des paramètres **Encrypt** et **TrustServerCertificate** .  
 
-||**TrustServerCertificate = non**|**TrustServerCertificate = yes**|  
+||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|Le certificat de serveur n’est pas vérifié.<br /><br />Les données envoyées entre le client et le serveur ne sont pas chiffrées.|Le certificat de serveur n’est pas vérifié.<br /><br />Les données envoyées entre le client et le serveur ne sont pas chiffrées.|  
 |**Encrypt=yes**|Le certificat de serveur est vérifié.<br /><br />Les données envoyées entre le client et le serveur sont chiffrées.<br /><br />Le nom (ou l’adresse IP) indiqué dans un nom commun sujet ou un autre nom de l’objet dans un certificat SSL [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit correspondre exactement au nom (ou à l’adresse IP) du serveur spécifié dans la chaîne de connexion.|Le certificat de serveur n’est pas vérifié.<br /><br />Les données envoyées entre le client et le serveur sont chiffrées.|  
@@ -89,9 +89,9 @@ Le protocole SSL utilise la bibliothèque OpenSSL. Le tableau suivant présente 
 |------------|---------------------------|--------------------------------------------|
 |Debian 9|1.1.0|/etc/ssl/certs|
 |8.71 Debian |1.0.1|/etc/ssl/certs|
-|macOS 10.13|1.0.2|/usr/local/etc/OpenSSL/Certs|
-|macOS 10.12|1.0.2|/usr/local/etc/OpenSSL/Certs|
-|OS X 10.11|1.0.2|/usr/local/etc/OpenSSL/Certs|
+|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
+|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
+|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
 |SUSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|
