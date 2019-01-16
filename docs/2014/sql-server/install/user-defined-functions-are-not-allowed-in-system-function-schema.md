@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a91275eadeebd6b996774363ab279eddc76f0f75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b7c21521fbdd4a4e80ed196c67c72f790341f020
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540006"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254274"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>Les fonctions définies par l'utilisateur ne sont pas autorisées dans system_function_schema
   Le Conseiller de mise à niveau a détecté des fonctions définies par l’utilisateur qui sont détenues par l’utilisateur non documenté **system_function_schema**. Vous ne pouvez pas créer une fonction système définie par l'utilisateur en spécifiant cet utilisateur. Le **system_function_schema** nom d’utilisateur n’existe pas, et l’ID d’utilisateur qui est associé à ce nom (UID = 4) est réservé pour le **sys** schéma et est limité à un usage interne uniquement.  
@@ -55,7 +55,7 @@ ms.locfileid: "52540006"
   
 4.  Remplacez les références à **system_function_schema** avec **dbo** dans tous les scripts qui contiennent des instructions DDL de fonctions définies par l’utilisateur.  
   
-5.  Modifier des scripts qui appellent ces fonctions pour utiliser soit le nom en deux parties dbo **. *** nom_fonction*, ou le nom en trois parties *database_name ***.** dbo.* nom_fonction *.  
+5.  Modifiez les scripts qui appellent ces fonctions pour l’utilisation des dbo de nom en deux parties **.** _function_name_, ou le nom en trois parties _database_name_**.** dbo. *nom_fonction*.  
   
  Pour plus d'informations, consultez les rubriques suivantes dans la documentation en ligne de SQL Server :  
   

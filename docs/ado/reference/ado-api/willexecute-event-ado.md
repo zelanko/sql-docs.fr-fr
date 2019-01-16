@@ -17,12 +17,12 @@ ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec725dfdcfb7ad0b37c6fc1d3cbff0c56b315a46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 234a0eeba57958063a6f2eedb8510486df8a53a0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623487"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255502"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute, événement (ADO)
 Le **WillExecute** événement est appelé juste avant l’exécution d’une commande en attente sur une connexion.  
@@ -65,7 +65,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **WillExecute** vous permet d’examiner et modifier les paramètres d’exécution en attente. Cet événement peut retourner une demande d’annulation de la commande en attente.  
   
 > [!NOTE]
->  Si la source de l’original pour un **commande** est un flux de données spécifié par le [CommandStream propriété (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) propriété, en affectant une nouvelle chaîne à la **WillExecute *** Source* paramètre modifie la source de la **commande**. Le **CommandStream** propriété est effacée et [CommandText propriété (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété sera actualisée avec la nouvelle source. Le flux d’origine spécifié par **CommandStream** seront publiés et ne sont pas accessibles.  
+>  Si la source de l’original pour un **commande** est un flux de données spécifié par le [CommandStream propriété (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) propriété, en affectant une nouvelle chaîne à la **WillExecute** _Source_ paramètre modifie la source de la **commande**. Le **CommandStream** propriété est effacée et [CommandText propriété (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété sera actualisée avec la nouvelle source. Le flux d’origine spécifié par **CommandStream** seront publiés et ne sont pas accessibles.  
   
  Si le dialecte de la nouvelle chaîne source diffère de la configuration d’origine de la [Dialect, propriété](../../../ado/reference/ado-api/dialect-property.md) propriété (qui correspondait à la **CommandStream**), le dialecte correct doit être spécifié en définissant le **dialecte** propriété de l’objet de commande référencé par *pCommand*.  
   

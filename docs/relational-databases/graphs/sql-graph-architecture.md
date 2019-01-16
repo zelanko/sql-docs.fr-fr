@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512804"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300186"
 ---
 # <a name="sql-graph-architecture"></a>Graphique de l’Architecture SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ Figure 2 montre comment les tables de nœuds et d’arêtes sont stockées dans 
 
 ![tables de personne amis](../../relational-databases/graphs/media/person-friends-tables.png "nœud Person et amis des tables de périphérie")   
 
-Figure 2 : Nœuds et arêtes de représentation sous forme de table
+Figure 2 : Représentation sous forme de table nœuds et d’arêtes
 
 
 
@@ -97,23 +97,25 @@ Le tableau suivant répertorie les valeurs valides pour `graph_type` colonne
 
 `sys.columns` stocke également des informations sur les colonnes implicites créées dans les tables de nœuds ou d’arêtes. Informations suivantes peuvent être récupérées à partir de sys.columns, toutefois, les utilisateurs ne peuvent pas sélectionner ces colonnes à partir d’une table de nœuds ou d’arêtes. 
 
-Colonnes implicites dans une table de nœuds  
-|Nom de la colonne    |Type de données  |is_hidden  |Commentaire  |
-|---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |interne `graph_id` colonne  |
-|$node_id_\<hex_string > |NVARCHAR   |0  |Nœud externe `node_id` colonne  |
+Colonnes implicites dans une table de nœuds
 
-Colonnes implicites dans un tableau de bord  
 |Nom de la colonne    |Type de données  |is_hidden  |Commentaire  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |interne `graph_id` colonne  |
-|$edge_id_\<hex_string > |NVARCHAR   |0  |externe `edge_id` colonne  |
+|$node_id_\<hex_string> |NVARCHAR   |0  |Nœud externe `node_id` colonne  |
+
+Colonnes implicites dans un tableau de bord
+
+|Nom de la colonne    |Type de données  |is_hidden  |Commentaire  |
+|---  |---|---|---  |
+|graph_id_\<hex_string> |bigint |1  |interne `graph_id` colonne  |
+|$edge_id_\<hex_string> |NVARCHAR   |0  |externe `edge_id` colonne  |
 |from_obj_id_\<hex_string>  |INT    |1  |interne à partir du nœud `object_id`  |
 |from_id_\<hex_string>  |bigint |1  |interne à partir du nœud `graph_id`  |
-|$from_id_\<hex_string > |NVARCHAR   |0  |externe à partir du nœud `node_id`  |
+|$from_id_\<hex_string> |NVARCHAR   |0  |externe à partir du nœud `node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |interne au nœud `object_id`  |
 |to_id_\<hex_string>    |bigint |1  |interne au nœud `graph_id`  |
-|$to_id_\<hex_string >   |NVARCHAR   |0  |externe au nœud `node_id`  |
+|$to_id_\<hex_string>   |NVARCHAR   |0  |externe au nœud `node_id`  |
  
 ### <a name="system-functions"></a>Fonctions système
 Les fonctions intégrées suivantes sont ajoutées. Ces fonctionnalités aideront les utilisateurs extraire des informations à partir des colonnes générées. Notez que, ces méthodes ne validera pas l’entrée de l’utilisateur. Si l’utilisateur spécifie un non valide `sys.node_id` la méthode extraire la partie appropriée et renvoyez-le. Par exemple, OBJECT_ID_FROM_NODE_ID prendra un `$node_id` comme entrée et retourne l’object_id de la table, ce nœud appartient. 
@@ -138,7 +140,7 @@ Découvrez le [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introdui
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` est désormais étendue pour prendre en charge la création d’une table en tant que nœud ou AS EDGE. Notez que le tableau de bord peut ou ne peut pas avoir tous les attributs définis par l’utilisateur.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Les tables de nœuds et d’arêtes peuvent être modifiées de la même façon qu’une table relationnelle, en utilisant le `ALTER TABLE`. Les utilisateurs peuvent ajouter ou modifier les colonnes définies par l’utilisateur, les index ou contraintes. Toutefois, comme la modification des colonnes graphiques internes, `$node_id` ou `$edge_id`, entraîne une erreur.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Les utilisateurs peuvent créer des index sur les pseudo colonnes et les colonnes définies par l’utilisateur dans les tables de nœuds et d’arêtes. Tous les types d’index sont pris en charge, y compris les index columnstore en cluster et non-cluster.  |
-|CRÉER DES CONTRAINTES D’ARÊTE    |[Les contraintes d’arête &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Les utilisateurs peuvent maintenant créer les contraintes d’arête sur des tableaux de bord pour appliquer la sémantique spécifique et également de maintenir l’intégrité des données  |
+|CRÉER DES CONTRAINTES D’ARÊTE    |[EDGE CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Les utilisateurs peuvent maintenant créer les contraintes d’arête sur des tableaux de bord pour appliquer la sémantique spécifique et également de maintenir l’intégrité des données  |
 |DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Les tables de nœuds et d’arêtes peuvent être supprimés de la même façon qu’une table relationnelle, en utilisant le `DROP TABLE`. Toutefois, dans cette version, il n’existe aucune contrainte pour s’assurer qu’aucun bords ne pointent vers un nœud supprimé et suppression en cascade des bords, après la suppression d’un nœud ou d’une table de nœud n’est pas pris en charge. Il est recommandé que si une table de nœud est supprimée, les utilisateurs déposer des bords connectés aux nœuds de cette table de nœud manuellement pour maintenir l’intégrité du graphique.  |
 
 
@@ -155,7 +157,7 @@ Découvrez le [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introdui
 |Tâche   |Article connexe  |Remarques
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Nœuds et les bords sont stockées en interne en tant que tables, par conséquent, la plupart des opérations prises en charge sur une table dans SQL Server ou de la base de données SQL Azure est pris en charge sur les tables de nœuds et d’arêtes  |
-|MATCH  | [CORRESPONDANCE &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|CORRESPONDANCE intégré est introduit pour prendre en charge les critères spéciaux et traversée par le biais du graphique.  |
+|MATCH  | [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|CORRESPONDANCE intégré est introduit pour prendre en charge les critères spéciaux et traversée par le biais du graphique.  |
 
 
 

@@ -18,12 +18,12 @@ ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a6b08e90fafccca3c64b13132b9cf9e248fdee7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17fe4fd7edad9df6bccace9d301516ae7683edf3
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663770"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255664"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@loginame =** ] **'***connexion***'**  
+ [ **@loginame =** ] **'**_login_**'**  
  Nom de l'utilisateur ou du groupe Windows à ajouter. L’utilisateur de Windows ou le groupe doit être qualifié avec un nom de domaine Windows sous la forme *domaine*\\*utilisateur*. *connexion* est **sysname**, sans valeur par défaut.  
   
- [  **@logintype =** ] **'***logintype***'**  
+ [ **@logintype =** ] **'**_logintype_**'**  
  Niveau de sécurité du nom de connexion auquel l'accès est accordé. *le LoginType* est **varchar (5)**, avec NULL comme valeur par défaut. Uniquement **administrateur** peut être spécifié. Si **administrateur** est spécifié, *connexion* a accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et ajouté en tant que membre de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -55,7 +55,7 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ## <a name="remarks"></a>Notes  
  **xp_grantlogin** est maintenant un système de procédure stockée au lieu une procédure stockée étendue. **xp_grantlogin** appels **sp_grantlogin** et **sp_addsrvrolemember**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **securityadmin** rôle serveur fixe. Lorsque vous modifiez le *logintype*, nécessite l’appartenance dans le **sysadmin** rôle serveur fixe.  
   
 ## <a name="see-also"></a>Voir aussi  

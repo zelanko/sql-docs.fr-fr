@@ -18,14 +18,18 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b0f1add0f2d249922f00fc1b16d5da12bb903faf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6fb2354720b334d69f7d5e05977c82c3807fd109
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524986"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300076"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Mapper des paramètres de requête à des variables dans une tâche d'exécution SQL
+
+  > [!div class="nextstepaction"]
+  > [Partagez vos commentaires sur la Table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
+
   Cette rubrique décrit la façon d'utiliser une instruction SQL paramétrable dans la tâche d'exécution SQL et de créer des mappages entre des variables et les paramètres de l'instruction SQL.  
   
  Pour en savoir plus sur la tâche d’exécution SQL, les marqueurs de paramètres et les noms de paramètres que vous utilisez avec différents types de connexions, consultez [Tâche d’exécution de requêtes SQL](control-flow/execute-sql-task.md) et [Paramètres et codes de retour dans la tâche d’exécution SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  

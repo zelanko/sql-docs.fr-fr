@@ -14,19 +14,19 @@ ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 482139f8aa3dc42bbd17593b58fcc8510f1fc9a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7edd3b3cacd097380b5d14ad55ed115ff93cf072
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713837"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255704"
 ---
 # <a name="required-providers-for-data-shaping"></a>Fournisseurs nécessaires pour la mise en forme des données
 Mise en forme des données nécessite généralement deux fournisseurs. Le fournisseur de services, [Data Shaping Service pour OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), fournit les données de mise en forme des fonctionnalités et un fournisseur de données, tels que le fournisseur OLE DB pour SQL Server, fournit les lignes de données pour remplir la forme [Recordset ](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  Le nom du fournisseur de services (MSDataShape) peut être spécifié comme valeur de la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet [fournisseur](../../../ado/reference/ado-api/provider-property-ado.md) propriété ou le mot de clé de chaîne de connexion « fournisseur = MSDataShape ; ».  
   
- Le nom du fournisseur de données peut être spécifié comme valeur de la **fournisseur de données** propriété dynamique, qui est ajoutée à la **connexion** objet [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection par le Service de mise en forme des données pour OLE DB ou le mot de clé de chaîne de connexion « **fournisseur de données = *** fournisseur*».  
+ Le nom du fournisseur de données peut être spécifié comme valeur de la **fournisseur de données** propriété dynamique, qui est ajoutée à la **connexion** objet [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection par le Service de mise en forme des données pour OLE DB ou le mot de clé de chaîne de connexion «**fournisseur de données =**_fournisseur_».  
   
  Aucun fournisseur de données n’est requis si le **Recordset** n’est pas remplie (par exemple, comme dans un fabriqués **Recordset** où les colonnes sont créées avec le nouveau mot clé). Dans ce cas, spécifiez «**fournisseur de données =** none ; ».  
   

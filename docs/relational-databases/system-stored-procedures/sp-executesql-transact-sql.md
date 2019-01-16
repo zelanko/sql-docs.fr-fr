@@ -20,15 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4561ff563bf04322c290571cf9df3a94f8faf5d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2018d96233a1dea6f4b2d7cfa612f19df878610f
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668308"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300026"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Partagez vos commentaires sur la Table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
   Exécute un lot ou une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)], réutilisable plusieurs fois ou créé dynamiquement. L'instruction ou le traitement d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peut contenir des paramètres incorporés.  
   
@@ -50,7 +53,7 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ \@stmt =] *instruction*  
+ [ \@stmt= ] *statement*  
  Est une chaîne Unicode contenant un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot. \@stmt doit être une constante Unicode ou une variable Unicode. L'utilisation d'expressions Unicode plus complexes (comme la concaténation de deux chaînes avec l'opérateur +) n'est pas autorisée. L'utilisation de constantes de caractères n'est pas autorisée. Si une constante Unicode est spécifiée, elle doit porter le préfixe avec un **N**. Par exemple, la constante Unicode **ne sp_who'** est valide, mais la constante caractère **'sp_who'** n’est pas. La taille de la chaîne n'est limitée que par la quantité de mémoire disponible sur le serveur de base de données. Sur les serveurs 64 bits, la taille de la chaîne est limitée à 2 Go, la taille maximale de **nvarchar (max)**.  
   
 > [!NOTE]  
@@ -61,7 +64,7 @@ sp_executesql [ @stmt = ] statement
  [ \@params =] N'\@*nom_paramètre ** data_type* [,... *n* ] '  
  Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans \@stmt. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique les définitions de paramètres supplémentaires. Chaque paramètre spécifié dans \@stmtmust être défini dans \@params. Si le [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot de \@stmt ne contient-elle pas de paramètres, \@params n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
   
- [ \@param1 =] '*value1*'  
+ [ \@param1= ] '*value1*'  
  Valeur du premier paramètre qui est défini dans la chaîne de paramètres. Cette valeur peut être une constante ou une variable Unicode. Il doit y avoir une valeur de paramètre fournie pour chaque paramètre inclus dans \@stmt. Les valeurs ne sont pas requis lorsque la [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot de \@stmt n’a aucun paramètre.  
   
  [ OUT | OUTPUT ]  
@@ -135,7 +138,7 @@ SELECT @max_title;
   
 -   Le paramètre de type entier est spécifié dans son format d'origine. La conversion en Unicode n'est pas nécessaire.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
@@ -151,7 +154,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
-### <a name="b-executing-a-dynamically-built-string"></a>B. Exécution d'une chaîne créée dynamiquement  
+### <a name="b-executing-a-dynamically-built-string"></a>b. Exécution d'une chaîne créée dynamiquement  
  L'exemple suivant illustre l'utilisation de `sp_executesql` pour exécuter une chaîne créée dynamiquement. La procédure stockée proposée sert à l'insertion de données dans un ensemble de tables utilisées pour partitionner les données commerciales d'une année. Il existe une table par mois de l'année, d'après le format suivant :  
   
 ```  

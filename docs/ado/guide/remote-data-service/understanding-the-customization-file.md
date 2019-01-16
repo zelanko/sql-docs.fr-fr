@@ -13,12 +13,12 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31d486f24d9c06926462be856d9102a9a457bb7b
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558716"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256384"
 ---
 # <a name="understanding-the-customization-file"></a>Présentation du fichier de personnalisation
 Chaque en-tête de section dans le fichier de personnalisation se compose de crochets (**[]**) contenant un type et un paramètre. Les quatre types de section sont indiquées par les chaînes littérales **connecter**, **sql**, **userlist**, ou **journaux**. Le paramètre est la chaîne littérale, la valeur par défaut, un identificateur spécifié par l’utilisateur ou rien du tout.  
@@ -47,15 +47,15 @@ identifier
 |**connect**|Une chaîne littérale qui modifie une chaîne de connexion.|  
 |**sql**|Une chaîne littérale qui modifie une chaîne de commande.|  
 |**userlist**|Une chaîne littérale qui modifie les droits d’accès d’un utilisateur spécifique.|  
-|**Journaux**|Une chaîne littérale qui spécifie un fichier journal de l’enregistrement d’erreurs opérationnelles.|  
+|**logs**|Une chaîne littérale qui spécifie un fichier journal de l’enregistrement d’erreurs opérationnelles.|  
 |**default**|Une chaîne littérale qui est utilisée si aucun identificateur n’est spécifié ou trouvé.|  
-|*Identificateur*|Chaîne qui correspond à une chaîne dans le **connecter** ou **commande** chaîne.<br /><br /> -Utilisez cette section si l’en-tête de section contient **connecter** et la chaîne d’identificateur se trouve dans la chaîne de connexion.<br />-Utilisez cette section si l’en-tête de section contient **sql** et la chaîne d’identificateur se trouve dans la chaîne de commande.<br />-Utilisez cette section si l’en-tête de section contient **userlist** et la chaîne de l’identificateur correspond à un **connecter** identificateur de section.|  
+|*identifier*|Chaîne qui correspond à une chaîne dans le **connecter** ou **commande** chaîne.<br /><br /> -Utilisez cette section si l’en-tête de section contient **connecter** et la chaîne d’identificateur se trouve dans la chaîne de connexion.<br />-Utilisez cette section si l’en-tête de section contient **sql** et la chaîne d’identificateur se trouve dans la chaîne de commande.<br />-Utilisez cette section si l’en-tête de section contient **userlist** et la chaîne de l’identificateur correspond à un **connecter** identificateur de section.|  
   
  Le **DataFactory** appelle le gestionnaire, en passant les paramètres client. Le gestionnaire recherche les chaînes entières dans les paramètres client qui correspondent aux identificateurs dans les en-têtes de la section appropriée. Si une correspondance est trouvée, le contenu de cette section est appliqué au paramètre du client.  
   
  Une section particulière est utilisée dans les circonstances suivantes :  
   
--   Un **se connecter** section est utilisée si la valeur du client de connexion mot clé de chaîne, « **Source de données = *** valeur*», correspond à un **connecter** identificateur section *.*  
+-   A **connecter** section est utilisée si la valeur du client de connexion mot clé de chaîne, «**Source de données =**_valeur_», correspond à un **connecter** identificateur de la section *.*  
   
 -   Un **sql** section est utilisée si la chaîne de commande client contient une chaîne qui correspond à un **sql** identificateur de section.  
   

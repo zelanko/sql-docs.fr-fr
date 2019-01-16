@@ -11,16 +11,20 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4f8861d8d7104b536abbf14a7629218c46e577e
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: d7e9cd2130487a0ac50d6aa55a8a2e0f9cf9e80c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143059"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298716"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Téléchargez et installez Azure Data Studio
 
+  > [!div class="nextstepaction"]
+  > [Partagez vos commentaires sur la Table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
+
 [!INCLUDE[name-sos](../includes/name-sos.md)] s’exécute sur Windows, macOS et Linux.
+
 
 Téléchargez et installez la dernière version, le *version de janvier*:
 
@@ -31,7 +35,7 @@ Téléchargez et installez la dernière version, le *version de janvier*:
 |:---|:---|:---|:---|
 |Windows|[Programme d’installation de l’utilisateur (recommandé)](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[Programme d’installation du système](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2050146)|09 janvier 2019 |1.3.8|
 |macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2049981)|09 janvier 2019 |1.3.8|
-|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|09 janvier 2019 |1.3.8|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|09 janvier 2019 |1.3.8|
 
 Pour plus d’informations sur la dernière version, consultez le [notes de version](release-notes.md).
 
@@ -69,7 +73,7 @@ Le programme d’installation de l’utilisateur est recommandée, car il ne né
 ## <a name="get-azure-data-studio-for-linux"></a>Obtenir un Studio de données Azure pour Linux
 
 1. Télécharger [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour Linux à l’aide d’un des programmes d’installation ou de l’archive tar.gz :
-    - [.DEB](https://go.microsoft.com/fwlink/?linkid=2050157)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2050157)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)
 1. Pour extraire le fichier et le lancement [!INCLUDE[name-sos](../includes/name-sos-short.md)], ouvrez une nouvelle fenêtre de Terminal et tapez les commandes suivantes :
@@ -190,7 +194,7 @@ Si vous souhaitez déplacer vos paramètres personnalisés, les raccourcis clavi
 
 2. Cliquez sur le **paramètres utilisateur** onglet en haut et cliquez sur **révéler dans l’Explorateur**
 
-   ![révéler dans l’Explorateur](./media/download/reveal-in-explorer.png)
+   ![reveal-in-explorer](./media/download/reveal-in-explorer.png)
 
 3. Copiez tous les fichiers dans ce dossier et enregistrez dans un facile à trouver un emplacement sur votre disque local, comme votre dossier Documents.
 

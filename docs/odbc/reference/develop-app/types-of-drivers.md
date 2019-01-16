@@ -16,18 +16,18 @@ ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f619c519bd5ec6a3ebb3567fc39e73d63e8b68f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 445fe3a0b87e6ad8e35dbc585981d874f8e357bf
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619687"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256954"
 ---
 # <a name="types-of-drivers"></a>Types de pilotes
 Pilotes ODBC peuvent être classés comme suit :  
   
 -   **32 bits ODBC 2.**  
-     ***x* pilote** pilote de 32 bits qui :  
+     **_x_ pilote** pilote de 32 bits qui :  
   
     -   Exporte uniquement les 2 d’ODBC *.x* fonctions.  
   

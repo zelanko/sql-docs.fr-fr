@@ -16,12 +16,12 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1b34c2b88c8e1906438f706143fcf6ec966026d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997591"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257044"
 ---
 # <a name="visual-c-ado-programming"></a>Programmation ADO Visual C++
 La référence d’API ADO décrit les fonctionnalités de l’application interface de programmation ADO (API) à l’aide d’une syntaxe similaire à Microsoft Visual Basic. Bien qu’elle s’adresse à tous les utilisateurs, les programmeurs ADO utilisent divers langages tels que Visual Basic, Visual C++ (avec et sans le **#import** directive) et Visual J ++ (avec le package de la classe ADO/WFC).  
@@ -74,6 +74,7 @@ variable = objectPtr->GetProperty;  // get property value
  Par exemple, le **commande** objet **ActiveConnection** propriété est déclarée avec une syntaxe alternative pour **obtenir**_ActiveConnection_et **PutRef**_ActiveConnection_. Le **PutRef**-syntaxe est un bon choix, car dans la pratique, vous devez généralement placer une ouverture **connexion** objet (autrement dit, un **connexion** pointeur d’objet) dans ce propriété. En revanche, le **Recordset** objet a **obtenir**-, **Put**-, et **PutRef**_ActiveConnection_opérations, mais aucune autre syntaxe.  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>Collections, la méthode GetItem et la propriété d’élément  
+
  ADO définit plusieurs collections, notamment **champs**, **paramètres**, **propriétés**, et **erreurs**. Dans Visual C++, le **GetItem (_index_)** méthode retourne un membre de la collection. *Index* est un **Variant**, dont la valeur est soit un index numérique du membre dans la collection, soit une chaîne contenant le nom du membre.  
   
  Le **__declspec(property...)**  directive de compilateur déclare le **élément** une autre syntaxe pour chaque collection de la propriété de fondamentale **élémentaire GetItem()** (méthode). La syntaxe alternative utilise des crochets et ressemble à une référence de tableau. En règle générale, les deux formes de ressembler à ce qui suit :  

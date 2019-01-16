@@ -13,12 +13,12 @@ ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f794267904ec1c84595b4b627722a1ca935c15a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2330703450e42e8ddf9bfeed536dd3649d65edf8
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211008"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255684"
 ---
 # <a name="xml-persistence-format"></a>Format de persistance XML
 ADO utilise l’encodage UTF-8 pour le flux de données XML.  
@@ -67,7 +67,7 @@ xmlns:z="#RowsetSchema">
   
  Le schéma montre les déclarations d’espaces de noms, de la section de schéma et de la section de données. La section de schéma contient des définitions de ligne, n° messager, CompanyName et téléphone.  
   
- Définitions de schéma est conforme à la [spécification W3C XML-Data](https://www.w3.org/TR/1998/NOTE-XML-data/) et peut être entièrement validé (bien que la validation ne se produira pas dans Internet Explorer 5). XML-Data est actuellement le seul format de schéma pour la persistance de jeu d’enregistrements.  
+ Définitions de schéma est conforme à la [spécification W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/) et peut être entièrement validé (bien que la validation ne se produira pas dans Internet Explorer 5). XML-Data est actuellement le seul format de schéma pour la persistance de jeu d’enregistrements.  
   
  La section de données a trois lignes contenant des informations à leur sujet. Pour un ensemble de lignes vide, la section de données peut être vide, mais le \<rs : données > balises doivent être présents. Sans données, vous pouvez écrire la balise simplement \<rs : data / >. N’importe quelle balise précédé de « rs » indique qu’il est dans l’espace de noms défini par urn : schemas-microsoft-rowset.  
   

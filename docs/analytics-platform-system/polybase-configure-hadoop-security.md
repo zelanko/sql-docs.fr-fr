@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df7e0492c73d213efb08c1bfb25a2c87e2550374
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c916fef2b70333c2d5bc89fec5c86d61482cdba7
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700287"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256434"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Configuration et sécurité de PolyBase pour Hadoop
 
@@ -120,7 +120,7 @@ Notez que nous avons ajouté la propriété mapreduce.application.classpath. Dan
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <!-- Put site-specific property overrides in this file. -->
-<configuration xmlns:xi="https://www.w3.org/2001/XInclude">
+<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
    <property>
      <name>mapred.min.split.size</name>
        <value>1073741824</value>
@@ -167,14 +167,14 @@ Pour vous connecter à un Hadoop sécurisé par Kerberos à l’aide de MIT KDC 
    |**#**|**Fichier de configuration**|**Clé de configuration**|**Action**|  
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|Spécifiez le nom d’hôte KDC. Par exemple : kerberos.votre-domaine.com.|  
-   |2|core-site.xml|polybase.kerberos.realm|Spécifiez le domaine Kerberos. Par exemple : VOTRE-DOMAINE.COM|  
-   |3|core-site.xml|hadoop.security.authentication|Recherchez la configuration côté Hadoop et copiez-la sur l’ordinateur SQL Server. Par exemple : KERBEROS<br></br>**Note de sécurité :** KERBEROS doit être écrit en majuscules. Dans le cas contraire, il pourrait ne pas être activé.|   
+   |2|core-site.xml|polybase.kerberos.realm|Spécifiez le domaine Kerberos. Exemple : VOTRE-DOMAINE.COM|  
+   |3|core-site.xml|hadoop.security.authentication|Recherchez la configuration côté Hadoop et copiez-la sur l’ordinateur SQL Server. Exemple : KERBEROS<br></br>**Note de sécurité :** KERBEROS doit être écrit en majuscules. Dans le cas contraire, il pourrait ne pas être activé.|   
    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Recherchez la configuration côté Hadoop et copiez-la sur l’ordinateur SQL Server. Par exemple : hdfs/_HOST@YOUR-REALM.COM|  
    |5|mapred-site.xml|mapreduce.jobhistory.principal|Recherchez la configuration côté Hadoop et copiez-la sur l’ordinateur SQL Server. Par exemple : mapred/_HOST@YOUR-REALM.COM|  
-   |6|mapred-site.xml|mapreduce.jobhistory.address|Recherchez la configuration côté Hadoop et copiez-la sur l’ordinateur SQL Server. Par exemple : 10.193.26.174:10020|  
+   |6|mapred-site.xml|mapreduce.jobhistory.address|Recherchez la configuration côté Hadoop et copiez-la sur l’ordinateur SQL Server. Exemple : 10.193.26.174:10020|  
    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Recherchez la configuration côté Hadoop et copiez-la sur l’ordinateur SQL Server. Par exemple : yarn/_HOST@YOUR-REALM.COM|  
 
-**Core-site.Xml**
+**core-site.xml**
 ```xml
 <property>
   <name>polybase.kerberos.realm</name>
@@ -190,7 +190,7 @@ Pour vous connecter à un Hadoop sécurisé par Kerberos à l’aide de MIT KDC 
 </property>
 ```
 
-**hdfs-site.Xml**
+**hdfs-site.xml**
 ```xml
 <property>
   <name>dfs.namenode.kerberos.principal</name>
@@ -223,7 +223,7 @@ Pour vous connecter à un Hadoop sécurisé par Kerberos à l’aide de MIT KDC 
 ## <a id="encryptionzone"></a> Programme d’installation de Zone de chiffrement Hadoop
 Si vous utilisez Hadoop zone de chiffrement modifier core-site.XML et hdfs-site.XML comme suit. Fournissez l’adresse ip où le service KMS s’exécute avec le numéro de port correspondant. Le port par défaut pour KMS sur CDH est 16 000.
 
-**Core-site.Xml**
+**core-site.xml**
 ```xml
 <property>
   <name>hadoop.security.key.provider.path</name>
@@ -231,7 +231,7 @@ Si vous utilisez Hadoop zone de chiffrement modifier core-site.XML et hdfs-site.
 </property>
 ```
 
-**hdfs-site.Xml**
+**hdfs-site.xml**
 ```xml
 <property>
   <name>dfs.encryption.key.provider.uri</name>

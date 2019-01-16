@@ -16,12 +16,12 @@ ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a2c5164c884f2611267e22d62bc2d83bc8cfac0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 80bb427800f57ddaa07e5e53f21b03df9e8317d3
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659698"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255524"
 ---
 # <a name="functions-on-sequences---id"></a>Fonctions sur les séquences : id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ fn:id($arg as xs:IDREF*) as element()*
 -- go  
   
 create xml schema collection SC as  
-'<schema xmlns="https://www.w3.org/2001/XMLSchema" xmlns:e="emp" targetNamespace="emp">  
+'<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="emp" targetNamespace="emp">  
             <element name="employees" type="e:EmployeesType"/>  
             <complexType name="EmployeesType">  
                  <sequence>  
@@ -98,7 +98,7 @@ Go
   
  La requête renvoie la valeur « Dave », ce qui indique que Dave est le supérieur hiérarchique de Joe.  
   
-### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. Récupération des éléments en fonction de la valeur de l'attribut IDREFS OrderList  
+### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>b. Récupération des éléments en fonction de la valeur de l'attribut IDREFS OrderList  
  Dans l'exemple suivant, l'attribut OrderList de l'élément <`Customer`> est un attribut de type IDREFS. Il répertorie les ID de commande se rapportant à un client particulier. Pour chaque ID de commande, il existe un enfant de l'élément <`Order`> sous l'élément <`Customer`> fournissant la valeur de la commande.  
   
  L'expression de la requête, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, récupère la première valeur de la liste IDREFS pour le premier client. Cette valeur est ensuite passée à la **id()** (fonction). La fonction recherche ensuite le <`Order`> élément dont valeur de l’attribut OrderID correspond à l’entrée de la **id()** (fonction).  
@@ -107,7 +107,7 @@ Go
 drop xml schema collection SC  
 go  
 create xml schema collection SC as  
-'<schema xmlns="https://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
+'<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
             <element name="Customers" type="Customers:CustomersType"/>  
             <complexType name="CustomersType">  
                         <sequence>  

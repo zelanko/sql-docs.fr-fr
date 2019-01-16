@@ -17,26 +17,26 @@ ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 461b9ea2196fed61587b1a9e20cc21feced258da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78505f010706a39e5278d50219dd4504e33dd67c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535050"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254864"
 ---
 # <a name="types-of-events"></a>Types d’événements
 Il existe deux types d’événements. « Événements will », appelés avant le début d’une opération, comportent généralement de « Est » dans leurs noms - par exemple, **WillChangeRecordset** ou **WillConnect**. Les événements qui sont appelées après un événement a été effectué généralement incluent par exemple, « Complète » dans leurs noms - **RecordChangeComplete** ou **ConnectComplete**. Exceptions existent - comme **InfoMessage** - mais elles se produisent une fois l’opération associée terminée.  
   
 ## <a name="will-events"></a>Sont des événements  
- Gestionnaires d’événements appelés avant le démarrage de l’opération vous offre la possibilité d’examiner ou modifier les paramètres d’opération, puis annuler l’opération ou lui permettre d’effectuer. Ces routines de gestionnaire d’événements ont généralement des noms au format **sera*événement ***.  
+ Gestionnaires d’événements appelés avant le démarrage de l’opération vous offre la possibilité d’examiner ou modifier les paramètres d’opération, puis annuler l’opération ou lui permettre d’effectuer. Ces routines de gestionnaire d’événements ont généralement des noms au format <strong>sera*événement*</strong>.  
   
 ## <a name="complete-events"></a>Événements de fin  
- Gestionnaires d’événements appelés après qu’une opération se termine peuvent avertir votre application qu’une opération est terminée. Tel un gestionnaire d’événements est également averti quand un gestionnaire d’événements Will annule une opération en attente. Ces routines de gestionnaire d’événements ont généralement des noms au format ***événement * Terminer**.  
+ Gestionnaires d’événements appelés après qu’une opération se termine peuvent avertir votre application qu’une opération est terminée. Tel un gestionnaire d’événements est également averti quand un gestionnaire d’événements Will annule une opération en attente. Ces routines de gestionnaire d’événements ont généralement des noms au format  <strong>*événement*Terminer</strong>.  
   
  Va et événements de fin sont généralement utilisées par paires.  
   
 ## <a name="other-events"></a>Autres événements  
- Les autres gestionnaires d’événements - autrement dit, les événements dont les noms ne sont pas sous la forme **sera * événement*** ou ***événement * terminé** -sont appelées uniquement après une opération se termine. Ces événements sont **déconnexion**, **EndOfRecordset**, et **InfoMessage**.  
+ Les autres gestionnaires d’événements - autrement dit, les événements dont les noms ne sont pas sous la forme <strong>sera*événement*</strong>  ou  <strong>*événement*Terminer</strong> -sont appelées uniquement après une opération se termine. Ces événements sont **déconnexion**, **EndOfRecordset**, et **InfoMessage**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Résumé du Gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)   

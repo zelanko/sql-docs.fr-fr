@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55741ddbf71eaff963e25c8e087c3cff31389409
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7578df8d31dadba739bb2de58a8568f6ba55d7e4
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670497"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256094"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Spécification de relations à l'aide de sql:relationship (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,13 +59,13 @@ ms.locfileid: "51670497"
  **Parent**  
  Spécifie la relation parente (table). Il s'agit d'un attribut facultatif ; si l'attribut n'est pas spécifié, le nom de la table parente est obtenu à partir des informations contenues dans la hiérarchie enfant du document. Si le schéma spécifie deux hiérarchies parent-enfant qui utilisent la même  **\<SQL : Relationship >** , mais les éléments parents différents, vous ne spécifiez pas l’attribut parent dans  **\<sql : relation >**. Ces informations sont obtenues à partir de la hiérarchie du schéma.  
   
- **clé de parent**  
+ **parent-key**  
  Spécifie la clé parente du parent. Si la clé parente est composée de plusieurs colonnes, les valeurs sont spécifiées en étant séparées par un espace. Il existe un mappage de position entre les valeurs spécifiées pour la clé multicolonne et pour la clé enfant correspondante.  
   
- **Enfant**  
+ **Child**  
  Spécifie la relation enfant (table).  
   
- **clé de l’enfant**  
+ **child-key**  
  Spécifie la clé enfant de l'enfant faisant référence à la clé parente du parent. Si la clé enfant est composée de plusieurs attributs (colonnes), les valeurs de child-key sont spécifiées en étant séparées par un espace. Il existe un mappage de position entre les valeurs spécifiées pour la clé multicolonne et pour la clé parente correspondante.  
   
  **Inverse**  
@@ -86,7 +86,7 @@ ms.locfileid: "51670497"
  Le  **\<relation >** élément identifie CustomerID dans la table Sales.SalesOrderHeader comme clé étrangère qui fait référence à la clé primaire CustomerID dans la table Sales.Customer. Par conséquent, les commandes qui appartiennent à un client apparaissent en tant qu’élément enfant de qui  **\<client >** élément.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -121,7 +121,7 @@ ms.locfileid: "51670497"
  Voici le schéma modifié dans lequel une relation sans nom est spécifiée :  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   
   <xsd:element name="Customer" sql:relation="Sales.Customer"  type="CustomerType" />  
@@ -187,7 +187,7 @@ ms.locfileid: "51670497"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-a-relationship-chain"></a>B. Spécification d'une chaîne de relation  
+### <a name="b-specifying-a-relationship-chain"></a>b. Spécification d'une chaîne de relation  
  Pour cet exemple, vous souhaitez obtenir le document XML suivant à l'aide des données provenant de la base de données AdventureWorks :  
   
 ```  
@@ -201,12 +201,12 @@ ms.locfileid: "51670497"
   
  Pour chaque commande dans la table Sales.SalesOrderHeader, le document XML comporte une  **\<ordre >** élément. Et chaque  **\<ordre >** élément possède une liste de  **\<produit >** éléments enfants, un pour chaque produit demandé dans l’ordre.  
   
- Pour spécifier un schéma XSD qui produit cette hiérarchie, vous devez indiquer deux relations : OrderOD et ODProduct. La relation OrderOD spécifie la relation parent-enfant entre les tables Sales.SalesOrderHeader et Sales.SalesOrderDetail. La relation ODProduct spécifie la relation entre les tables Sales.SalesOrderDetail et Production.Product.  
+ Pour spécifier un schéma XSD qui produit cette hiérarchie, vous devez spécifier deux relations : OrderOD et ODProduct. La relation OrderOD spécifie la relation parent-enfant entre les tables Sales.SalesOrderHeader et Sales.SalesOrderDetail. La relation ODProduct spécifie la relation entre les tables Sales.SalesOrderDetail et Production.Product.  
   
  Dans le schéma suivant, le **msdata : Relationship** annotation sur le  **\<produit >** élément spécifie deux valeurs : OrderOD et ODProduct. L'ordre dans lequel ces valeurs sont spécifiées est important.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -244,7 +244,7 @@ ms.locfileid: "51670497"
  Au lieu de spécifier une relation nommée, vous pouvez spécifier une relation anonyme. Dans ce cas, le contenu entier du  **\<annotation >**...  **\</annotation >**, qui décrit les deux relations, apparaissent sous la forme d’un élément enfant de  **\<produit >**.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   
   <xsd:element name="Order" msdata:relation="Sales.SalesOrderHeader"   
@@ -323,7 +323,7 @@ ms.locfileid: "51670497"
  Le schéma dans cet exemple inclut un \<client > élément avec un \<CustomerID > élément enfant et un attribut OrderIDList de type IDREFS. Le \<client > élément est mappé à la table Sales.Customer dans la base de données AdventureWorks. Par défaut, la portée de ce mappage s’applique à tous les éléments enfants ou des attributs, sauf si **SQL : relation** est spécifié sur l’élément ou attribut enfant, auquel cas, la relation de clé de clé primaire/étrangère appropriée doit être défini à l’aide du \<relation > élément. Et l’élément enfant ou un attribut qui spécifie l’autre table à l’aide de la **relation** annotation, doit également spécifier le **relation** annotation.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -392,7 +392,7 @@ ms.locfileid: "51670497"
  Le  **\<ordre >** élément inclut le  **\<OrderDetail >** élément enfant. **\<SQL : Relationship >** est spécifié sur  **\<OrderDetail >** élément enfant, par conséquent, les détails relatifs à une commande apparaissent en tant qu’éléments enfants de ce **\<commande >** élément.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -496,7 +496,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
  La vue XML suivante a la  **\<Emp1 >** et  **\<Emp2 >** éléments de mappage de tables à la Sales.Emp1 et Sales.Emp2 :  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

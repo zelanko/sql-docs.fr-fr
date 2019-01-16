@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82151259ece037991602c6dc0bb10a0c1fbf803e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e431283b9438b6b566f03632b35a84afa4d4e8e2
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673888"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256984"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Masquage d'éléments et d'attributs à l'aide de sql:hide
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "51673888"
  Le  **\<Person.Contact >** élément est de type complexe et, par conséquent, est mappé à la table du même nom (mappage par défaut). Tous les attributs de  **\<Person.Contact >** élément sont de type simple et mapper aux colonnes portant le même nom dans la Person.Contacttable dans la base de données AdventureWorks. Dans le schéma, le **SQL : Hide** annotation est spécifiée sur le **ContactID** attribut. Lorsqu’une requête XPath est spécifiée contre ce schéma, le **ContactID** n’est pas retourné dans le document XML.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -95,7 +95,7 @@ ms.locfileid: "51673888"
  Lorsque **SQL : Hide** est spécifiée sur un élément, l’élément et ses attributs ou les éléments enfants n’apparaissent pas dans le document XML qui est généré. Voici un autre schéma XSD dans lequel **SQL : Hide** est spécifié sur le  **\<OD >** élément :  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3b36e720cc390311c851eef55d09a74cc5e5d6ad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d26de5c86485e6e7a2c6a11b8528c55c8ce92229
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503276"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300086"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation avec le DMA
 
@@ -35,6 +35,7 @@ La procédure détaillée ci-dessous vous aider à utiliser l’Assistant Migrat
     - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 ou version ultérieure.
     - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 ou version ultérieure.
     - [Power BI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
+    - [Modules Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Téléchargez et extrayez :
     - Le [modèle DMA rapports Power BI](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
     - Le [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip).

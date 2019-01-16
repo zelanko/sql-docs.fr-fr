@@ -19,12 +19,12 @@ ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c430e43fbb8f48968e96a027becf1abccf63e2f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed8c11a7d5f333a086482d2882a6aef7a97370e3
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658478"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256974"
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,25 +45,25 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@collector_type_uid =** ] **'***collector_type_uid***'**  
+ [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
  Est le GUID pour le type de collecteur. *collector_type_uid* est **uniqueidentifier**, et si sa valeur est NULL, il sera automatiquement créée et retournée en tant que sortie.  
   
  [  **@name =** ] **'***nom***'**  
  Nom du type de collecteur. *nom* est **sysname** et doit être spécifié.  
   
- [  **@parameter_schema =** ] **'***parameter_schema***'**  
+ [ **@parameter_schema =** ] **'***parameter_schema***'**  
  Schéma XML pour ce type de collecteur. *parameter_schema* est **xml** et peut être requis par certains types de collecteurs. S'il n'est pas requis, cet argument peut avoir la valeur NULL.  
   
- [  **@collection_package_id =** ] *collection_package_id*  
+ [ **@collection_package_id =** ] *collection_package_id*  
  Identificateur unique local qui pointe vers le package de collection [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilisé par le jeu d'éléments de collecte. *collection_package_id* est **uniqueidentifer** et est obligatoire. Pour obtenir la valeur de *collection_package_id*, interrogez la vue de système dbo.syscollector_collector_types dans la base de données msdb.  
   
- [  **@upload_package_id =** ] *upload_package_id*  
+ [ **@upload_package_id =** ] *upload_package_id*  
  Identificateur unique local qui pointe vers le package de téléchargement [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilisé par le jeu d'éléments de collecte. *upload_package_id* est **uniqueidentifier** et est obligatoire. Pour obtenir la valeur de *upload_package_id*, interrogez la vue de système dbo.syscollector_collector_types dans la base de données msdb.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **dc_admin** (avec autorisation EXECUTE) rôle fixe de base de données.  
   
 ## <a name="example"></a>Exemple  
@@ -76,7 +76,7 @@ EXEC sp_syscollector_update_collector_type
 @collector_type_uid = '302E93D1-3424-4BE7-AA8E-84813ECF2419',  
 @name = 'Generic T-SQL Query Collector Type',  
 @parameter_schema = '<?xml version="1.0" encoding="utf-8"?>  
-<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
   <xs:element name="TSQLQueryCollector">  
 <xs:complexType>  
   <xs:sequence>  

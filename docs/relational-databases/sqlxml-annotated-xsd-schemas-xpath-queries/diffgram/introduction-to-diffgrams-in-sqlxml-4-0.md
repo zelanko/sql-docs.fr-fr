@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 567c4b6054623fad160dc17378e2a4a680fc4c8e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 12746eec96373e5d5a66206081408fbe2d0d3544
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669508"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255824"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>Introduction aux DiffGrams dans SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51669508"
 <diffgr:diffgram   
          xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"  
          xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"  
-         xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
    <DataInstance>  
       ...  
    </DataInstance>  
@@ -53,10 +53,10 @@ ms.locfileid: "51669508"
  **\<DataInstance>**  
  Le nom de cet élément, **DataInstance**, est utilisé à des fins d’explication dans cette documentation. Par exemple, si le DiffGram était généré à partir d’un jeu de données dans le .NET Framework, la valeur de la **nom** propriété du jeu de données serait être utilisée comme nom de cet élément. Ce bloc contient toutes les données pertinentes après la modification, y compris éventuellement les données qui n'ont pas été modifiées. La logique de traitement du DiffGram ignore les éléments de ce bloc pour lequel le **diffgr : HasChanges** attribut n’est pas spécifié.  
   
- **\<diffgr : avant >**  
+ **\<diffgr:before>**  
  Ce bloc facultatif contient les instances (éléments) de l'enregistrement d'origine qui doivent être mises à jour ou supprimées. Tables de la base de données en cours de modification (mise à jour ou supprimées) par le DiffGram doivent apparaître en tant qu’éléments de niveau supérieur dans le  **\<avant >** bloc.  
   
- **\<diffgr : Errors >**  
+ **\<diffgr:errors>**  
  Ce bloc facultatif est ignoré par la logique de traitement DiffGram.  
   
 ## <a name="diffgram-annotations"></a>Annotations DiffGram  

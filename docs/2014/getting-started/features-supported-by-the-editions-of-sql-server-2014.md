@@ -17,17 +17,21 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcf2d5924e160f38c9b00b564a8ae94b6f8705c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 23ba1fdda2ce951834c221cdd58d39a034a5b3ff
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358001"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300586"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Fonctionnalités prises en charge par les éditions de SQL Server 2014
-  Cette rubrique fournit des détails sur les fonctionnalités prises en charge par les différentes éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
-  
-> **Remarque :** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est disponible dans une version d’évaluation pour une période d’essai de 180 jours. Pour plus d’informations, consultez le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](https://go.microsoft.com/fwlink/?LinkId=190955).  
+
+  > [!div class="nextstepaction"]
+  > [Partagez vos commentaires sur la Table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
+
+  Cette rubrique fournit des détails sur les fonctionnalités prises en charge par les différentes éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. 
+
+ > **Remarque :** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est disponible dans une version d’évaluation pour une période d’essai de 180 jours. Pour plus d’informations, consultez le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](https://go.microsoft.com/fwlink/?LinkId=190955).  
 > 
 > **REMARQUE :** Pour les fonctionnalités prises en charge par les éditions Evaluation Edition et Developer Edition, consultez le jeu de fonctionnalités [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise.  
   

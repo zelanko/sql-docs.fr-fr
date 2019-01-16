@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7ebacf5f60b8decf10a4030884544ba7abe776d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7deb5fc8da17c597b22cb4e2e3e689191de2533b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662711"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255914"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Forçages de type de données et annotation sql:datatype (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "51662711"
   
 |Type de données SQL Server|Type de données XSD|  
 |--------------------------|-------------------|  
-|**bigint**|**Long**|  
+|**bigint**|**long**|  
 |**binaire**|**base64Binary**|  
 |**bit**|**boolean**|  
 |**char**|**chaîne**|  
@@ -104,7 +104,7 @@ ms.locfileid: "51662711"
  Cet exemple montre comment un fichier XSD **date** type qui est spécifié à l’aide de la **xsd : type** attribut dans le schéma affecte le document XML résultant. Le schéma fournit une vue XML de la table Sales.SalesOrderHeader dans la base de données AdventureWorks.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Order" sql:relation="Sales.SalesOrderHeader">  
      <xsd:complexType>  
@@ -192,7 +192,7 @@ ms.locfileid: "51662711"
 </Schema>  
 ```  
   
-### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B. Spécification du type de données SQL à l'aide de sql:datatype  
+### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>b. Spécification du type de données SQL à l'aide de sql:datatype  
  Pour obtenir un exemple fonctionnel, consultez l’exemple G dans [exemples de chargement en masse XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). Dans cet exemple, une valeur GUID qui inclut "{" et "}" fait l'objet d'un chargement en masse. Spécifie le schéma dans cet exemple **SQL : DataType** pour identifier le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de type de données en tant que **uniqueidentifier**. Cet exemple montre quand **SQL : DataType** doit être spécifié dans le schéma.  
   
   
