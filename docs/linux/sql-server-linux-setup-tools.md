@@ -225,7 +225,7 @@ Pour installer manuellement ces packages, utilisez les étapes suivantes :
 
 1. **Déplacez les packages téléchargés sur votre ordinateur Linux**. Si vous avez utilisé un autre ordinateur pour télécharger les packages, une façon de déplacer les packages vers l’ordinateur Linux est d'utiliser la commande **scp**.
 
-1. Installez **et les packages**mssql-tools**et**msodbc **.   Si vous obtenez des erreurs de dépendance, ignorez-les jusqu'à l’étape suivante.
+1. **Installer les packages et**: installer le **mssql-tools** et **msodbc** packages. Si vous obtenez des erreurs de dépendance, ignorez-les jusqu'à l’étape suivante.
 
     | Plateforme | Commandes d’installation de package |
     |-----|-----|

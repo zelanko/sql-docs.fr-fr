@@ -1,4 +1,5 @@
-- name: Vue d’ensemble
+items:
+- name: Vue d'ensemble
   href: xml-transact-sql.md
 - name: xml_schema_namespace
   href: xml-schema-namespace.md
@@ -7,26 +8,32 @@
 - name: Langage de modification de données XML (XML DML)
   href: xml-data-modification-language-xml-dml.md
   items:
-    - name: insert (XML DML)
-      href: insert-xml-dml.md
-    - name: delete (DML XML)
-      href: delete-xml-dml.md
-    - name: replace value of (XML DML)
-      href: replace-value-of-xml-dml.md
+  - name: insert (XML DML)
+    href: insert-xml-dml.md
+  - name: delete (DML XML)
+    href: delete-xml-dml.md
+  - name: replace value of (XML DML)
+    href: replace-value-of-xml-dml.md
 - name: Méthodes des types de données xml
   href: xml-data-type-methods.md
   items:
-    - name: Méthode query() (type de données xml)
-      href: query-method-xml-data-type.md
-    - name: 'value(), méthode (Type de données xml)'
-      href: value-method-xml-data-type.md
-    - name: Méthode exist() (type de données xml)
-      href: exist-method-xml-data-type.md
-    - name: Méthode modify() (type de données xml)
-      href: modify-method-xml-data-type.md
-    - name: Méthode nodes() (type de données xml)
-      href: nodes-method-xml-data-type.md
-    - name: Liaison de données relationnelles dans des données XML
-      href: binding-relational-data-inside-xml-data.md
-    - name: Instructions pour l'utilisation des méthodes de type de données XML
-      href: guidelines-for-using-xml-data-type-methods.md
+  - name: Méthode query() (type de données xml)
+    href: query-method-xml-data-type.md
+  - name: value(), méthode (Type de données xml)
+    href: value-method-xml-data-type.md
+  - name: Méthode exist() (type de données xml)
+    href: exist-method-xml-data-type.md
+  - name: Méthode modify() (type de données xml)
+    href: modify-method-xml-data-type.md
+  - name: Méthode nodes() (type de données xml)
+    href: nodes-method-xml-data-type.md
+  - name: Liaison de données relationnelles dans des données XML
+    href: binding-relational-data-inside-xml-data.md
+  - name: Instructions pour l'utilisation des méthodes de type de données XML
+    href: guidelines-for-using-xml-data-type-methods.md
+ms.openlocfilehash: 490c7a808f6cd3a52f4635ba376a32f92dc47189
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361349"
