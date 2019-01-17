@@ -5,8 +5,7 @@ ms.date: 02/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: quickstart
 keywords:
 - découvrez sql
@@ -14,12 +13,12 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 96c174676d00e646191aa3620b2e0a884b44616b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c38c1ee94399023fd3ac529a1f7d9cf914f5130f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695807"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809441"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Découvrez SQL Server Master Data Services
 
@@ -37,7 +36,7 @@ ms.locfileid: "51695807"
 ## <a name="samples"></a>Exemples  
 * Pour plus d’informations sur la manière dont vous pouvez structurer les données dans [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] à l’aide de modèles, d’entités et de hiérarchies, essayez les exemples de modèles qui sont inclus lorsque vous installez [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Pour obtenir des instructions sur le déploiement des exemples, consultez [Déployer les exemples de modèles et de données](../master-data-services/master-data-services-installation-and-configuration.md#deploySample).   
   
-    Pour plus d’informations sur les mises à jour des exemples de modèles de [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] , consultez [Exemples SQL Server : packages de déploiement de modèles](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+    Pour plus d’informations sur les mises à jour des exemples de modèles de [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)], consultez [Exemples SQL Server : Packages de déploiement de modèle (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
 * Essayez les exemples d’application console C# MDS inclus avec les exemples SQL Server qui vous montrent comment personnaliser la manière dont vous et vos utilisateurs interagissent avec [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Vous pouvez télécharger les exemples SQL Server sous forme de fichier .zip à partir de ce [référentiel GitHub](https://github.com/Microsoft/sql-server-samples).  
   

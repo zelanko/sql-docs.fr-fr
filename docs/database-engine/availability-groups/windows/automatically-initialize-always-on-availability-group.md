@@ -1,6 +1,7 @@
 ---
-title: Initialiser automatiquement un groupe de disponibilité Always On | Microsoft Docs
-ms.custom: ''
+title: Utiliser l’amorçage automatique pour initialiser un groupe de disponibilité
+description: Créez automatiquement des réplicas secondaires pour chaque base de données dans un groupe de disponibilité Always On à l’aide de l’amorçage automatique.
+ms.custom: seodec18
 ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd3f0d0c7b8fe29f6ad64cb5d006d2d8917b6cce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b6197649ed7548919a8659977c3b3550429840f9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413656"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207528"
 ---
-# <a name="automatically-initialize-always-on-availability-group"></a>Initialiser automatiquement le groupe de disponibilité Always On
+# <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>Utiliser l’amorçage automatique pour initialiser un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2016 propose un amorçage automatique des groupes de disponibilité. Quand vous créez un groupe de disponibilité par amorçage automatique, SQL Server crée automatiquement les réplicas secondaires de chaque base de données du groupe. Vous n’avez plus besoin de sauvegarder ni de restaurer manuellement les réplicas secondaires. Pour activer l’amorçage automatique, créez le groupe de disponibilité avec T-SQL ou utilisez la dernière version de SQL Server Management Studio.
@@ -216,7 +217,7 @@ GO
 
 Le tableau suivant répertorie les événements étendus liés à l’amorçage automatique : 
 
-| Nom    | Description|
+| Créer une vue d’abonnement | Description|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  Message de demande d’amorçage.
 |hadr_physical_seeding_backup_state_change |    Modification d’état côté sauvegarde d’amorçage physique.

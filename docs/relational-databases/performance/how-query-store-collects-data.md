@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: c2e84a286cb4fa59c25426e9b1e8e8506fb51d91
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711071"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370541"
 ---
 # <a name="how-query-store-collects-data"></a>Comment le magasin de requêtes collecte les données
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52711071"
 |**sys.query_store_query**|Les entrées de requête qui sont suivies et forcées séparément dans le magasin de requêtes. Un même texte de requête peut produire plusieurs entrées de requête s’il est exécuté sous différents paramètres de contexte ou à l’extérieur/à l’intérieur de différents modules [!INCLUDE[tsql](../../includes/tsql-md.md)] (procédures stockées, déclencheurs, etc.).|  
 |**sys.query_store_plan**|Présente le plan estimé pour la requête avec les statistiques de compilation. Un plan stocké est équivalent à ce que vous pourriez obtenir avec `SET SHOWPLAN_XML ON`.|  
 |**sys.query_store_runtime_stats_interval**|Le magasin de requêtes divise le temps en périodes générées automatiquement (intervalles) et stocke les statistiques agrégées sur cet intervalle pour chaque plan exécuté. La taille de l’intervalle est contrôlée par l’option de configuration Intervalle de collecte des statistiques (dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) ou `INTERVAL_LENGTH_MINUTES` à l’aide des [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
-|**sys.query_store_runtime_stats**|Statistiques d'exécution agrégées pour les plans exécutés. Toutes les métriques capturées sont exprimées sous forme de 4 fonctions statistiques : Moyenne, Minimum, Maximum et Écart type.|  
+|**sys.query_store_runtime_stats**|Statistiques d'exécution agrégées pour les plans exécutés. Toutes les métriques capturées sont exprimées sous la forme de quatre fonctions statistiques : Moyenne, Minimum, Maximum et Écart type.|  
   
  Pour plus d’informations sur les affichages du Magasin des requêtes, consultez la section **Affichages, fonctions et procédures associés** de [Analyse des performances à l’aide du magasin de requêtes](monitoring-performance-by-using-the-query-store.md).  
   

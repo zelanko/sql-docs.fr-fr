@@ -6,8 +6,7 @@ ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: douglasl
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSTASK.F1
@@ -15,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 3060dd1fa3a46f64b34658a1c8ebccbc4155526c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 1b324d4aa115a08c1c13b1680176022cab343daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641746"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808461"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Tâche Azure Data Lake Analytics
 
@@ -68,7 +67,7 @@ La configuration des travaux spécifie les propriétés de soumission des travau
 
 - **JobName :** nom du travail U-SQL. 
 - **AnalyticsUnits :** nombre d’unités analytiques du travail U-SQL.
-- **Priority :** priorité du travail U-SQL. Vous pouvez le définir entre 0 et 1000. Plus le nombre est faible, plus la priorité est haute.
+- **Priority :** priorité du travail U-SQL. Vous pouvez le définir entre 0 et 1000. Plus le nombre est faible, plus la priorité est haute.
 - **RuntimeVersion :** version du runtime Data Lake Analytics du travail U-SQL. Valeur par défaut : « default ». En général, il n’est pas nécessaire de modifier cette propriété.
 - **Synchronous :** valeur booléenne indiquant si la tâche attend ou non la fin de l’exécution du travail. Si la valeur est définie sur true, la tâche est marquée en tant que **réussie** une fois le travail terminé. Si la valeur est définie sur false, la tâche est marquée en tant que **réussie** une fois la phase de préparation du travail terminée.
 
@@ -83,7 +82,7 @@ La configuration des travaux spécifie les propriétés de soumission des travau
 
 Sur la page **Mappage des paramètres** de la boîte de dialogue **Éditeur de tâches Azure Data Lake Analytics**, mappez les variables avec les paramètres (variables U-SQL) dans le script U-SQL.
 
-- **Nom de la variable :** après avoir ajouté un mappage des paramètres en sélectionnant **Ajouter**, sélectionnez un système ou une variable définie par l’utilisateur dans la liste. Vous pouvez également sélectionner <**Nouvelle variable...** > pour ajouter une nouvelle variable avec la boîte de dialogue **Ajouter une Variable**. Pour des informations connexes, consultez [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md).  
+- **Nom de la variable :** après avoir ajouté un mappage des paramètres en sélectionnant **Ajouter**, sélectionnez une variable système ou définie par l’utilisateur dans la liste. Vous pouvez également sélectionner <**Nouvelle variable...** > pour ajouter une nouvelle variable avec la boîte de dialogue **Ajouter une Variable**. Pour des informations connexes, consultez [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md).  
 
 - **Nom du paramètre :** nom de paramètre/variable dans le script U-SQL. Vérifiez que le nom du paramètre commence par le signe \@, comme \@Param1. 
 
@@ -121,8 +120,8 @@ Notez que les chemins d’accès d’entrée et de sortie sont définis dans les
 
 |Nom de la variable|Nom du paramètre|
 |-------------|--------------|
-|User: Variable1|\@entrée|
-|User: Variable2|\@sortie| 
+|Utilisateur : Variable1|\@entrée|
+|Utilisateur : Variable2|\@sortie| 
 
 ## <a name="expression-page-configuration"></a>Configuration de la page Expression
 

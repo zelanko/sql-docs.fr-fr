@@ -13,12 +13,12 @@ ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3b590fa12fb2168a80c320068facb979702cd4fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbeeb28aced36cf1d80b2a6c4efeba3c614385c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853917"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209988"
 ---
 # <a name="restore-database-options-page"></a>Restaurer la base de données (page Options)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47853917"
  Pour modifier des aspects du comportement de l’opération de restauration, utilisez les options du volet **Options de restauration** .  
   
  **Remplacer la base de données existante [WITH REPLACE]**  
- L’opération de restauration remplacera les fichiers de toute base de données qui utilise actuellement le nom de base de données que vous spécifiez dans le champ **Restaurer sur**de la page [Général](../../relational-databases/backup-restore/restore-database-general-page.md) de la boîte de dialogue **Restaurer la base de données** . Les fichiers de la base de données existante seront remplacés même si vous restaurez des sauvegardes à partir d'une base de données différente vers le nom de base de données existant. L’activation de cette option revient à utiliser l’option REPLACE dans une instruction [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ L’opération de restauration remplacera les fichiers de toute base de données qui utilise actuellement le nom de base de données que vous spécifiez dans le champ **Restaurer sur**de la page [Général](../../relational-databases/backup-restore/restore-database-general-page.md) de la boîte de dialogue **Restaurer la base de données** . Les fichiers de la base de données existante seront remplacés même si vous restaurez des sauvegardes à partir d'une base de données différente vers le nom de base de données existant. L’activation de cette option revient à utiliser l’option REPLACE dans une instruction [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ( [!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
 >  Utilisez cette option uniquement après un examen attentif. Pour plus d’informations, consultez [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "47853917"
  Pour déterminer l’état de la base de données après l’opération de restauration, vous devez sélectionner l’une des options du volet **État de récupération** .  
   
  **RESTORE WITH RECOVERY**  
- Récupère la base de données après avoir restauré la base de données finale sélectionnée dans la grille **Jeux de sauvegarde à restaurer**de la [page Général](../../relational-databases/backup-restore/restore-database-general-page.md). Il s’agit de l’option par défaut. Elle revient à spécifier WITH RECOVERY dans une instruction [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Récupère la base de données après avoir restauré la base de données finale sélectionnée dans la grille **Jeux de sauvegarde à restaurer**de la [page Général](../../relational-databases/backup-restore/restore-database-general-page.md). Il s’agit de l’option par défaut. Elle revient à spécifier WITH RECOVERY dans une instruction [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ( [!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!NOTE]  
 >  Avec le mode de restauration complète ou le mode de récupération utilisant les journaux de transactions, choisissez cette option si vous restaurez tous les fichiers journaux maintenant.  

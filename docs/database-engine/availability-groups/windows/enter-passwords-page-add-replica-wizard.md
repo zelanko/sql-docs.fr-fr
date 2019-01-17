@@ -1,6 +1,7 @@
 ---
-title: Page Entrer les mots de passe (Assistant Ajouter un réplica) | Microsoft Docs
-ms.custom: ''
+title: Page Entrer les mots de passe (Assistant Ajouter un réplica) pour les groupes de disponibilité
+description: Description des propriétés disponibles dans la page « Entrer les mots de passe » de l’Assistant « Ajouter un réplica » dans SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11b171ef067bd5abdc29d306421b956792f1a55b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7472049d96abf98f55dcc90486012b33ba13ba66
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790577"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215040"
 ---
-# <a name="enter-passwords-page-add-replica-wizard"></a>Page Entrer les mots de passe (Assistant Ajouter un réplica)
+# <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Page Entrer les mots de passe (Assistant Ajouter un réplica) pour les groupes de disponibilités Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique d’aide décrit les options de la page **Entrer les mots de passe** . Cette rubrique s’applique à [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

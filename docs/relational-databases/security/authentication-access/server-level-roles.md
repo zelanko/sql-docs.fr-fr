@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2466e5b1cff9efb055d348a7e72729fa5208156
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5225b335cc028397f63cb930b07e8781ce0d8454
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661328"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213708"
 ---
 # <a name="server-level-roles"></a>Rôles de niveau serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "51661328"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit neuf rôles serveur fixes. Les autorisations accordées aux rôles serveur fixes (à l’exception de **public**) ne peuvent pas être changées. Depuis [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], il est possible de créer des rôles serveur définis par l'utilisateur et de leur ajouter des autorisations au niveau du serveur.  
   
- Vous pouvez ajouter des principaux au niveau du serveur (connexions[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , comptes et groupes Windows) à des rôles serveur. Chaque membre d'un rôle serveur fixe peut ajouter des connexions à ce rôle. Les membres de rôles serveur définis par l'utilisateur ne peuvent pas ajouter d'autres principaux de serveur à ces rôles.  
->  [!NOTE]
+ Vous pouvez ajouter des principaux au niveau du serveur (connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], comptes et groupes Windows) à des rôles serveur. Chaque membre d'un rôle serveur fixe peut ajouter des connexions à ce rôle. Les membres de rôles serveur définis par l'utilisateur ne peuvent pas ajouter d'autres principaux de serveur à ces rôles.  
+> [!NOTE]
 >  Les autorisations de niveau serveur ne sont pas disponibles dans SQL Database ou SQL Data Warehouse. Pour plus d’informations sur SQL Database, consultez [Contrôle et octroi de l’accès à la base de données](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
   
 ## <a name="fixed-server-level-roles"></a>Rôles serveur fixes  
@@ -51,7 +51,7 @@ ms.locfileid: "51661328"
 |------------------------------|-----------------|  
 |**sysadmin**|Les membres du rôle serveur fixe **sysadmin** peuvent effectuer n’importe quelle activité sur le serveur.|  
 |**serveradmin**|Les membres du rôle serveur fixe **serveradmin** peuvent modifier les options de configuration à l’échelle du serveur et arrêter le serveur.|  
-|**securityadmin**|Les membres du rôle serveur fixe **securityadmin** gèrent les connexions et leurs propriétés. Ils peuvent attribuer des autorisations `GRANT`, `DENY` et `REVOKE` au niveau du serveur. Ils peuvent également attribuer des autorisations `GRANT`, `DENY` et `REVOKE` au niveau de la base de données, s’ils ont accès à une base de données. En outre, ils peuvent réinitialiser les mots de passe pour les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **IMPORTANT :** La possibilité d’octroyer l’accès au [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et de configurer des autorisations utilisateur permet à l’administrateur de sécurité d’affecter la plupart des autorisations du serveur. Le rôle **securityadmin** doit être traité comme équivalent au rôle **sysadmin** .|  
+|**securityadmin**|Les membres du rôle serveur fixe **securityadmin** gèrent les connexions et leurs propriétés. Ils peuvent attribuer des autorisations `GRANT`, `DENY` et `REVOKE` au niveau du serveur. Ils peuvent également attribuer des autorisations `GRANT`, `DENY` et `REVOKE` au niveau de la base de données, s’ils ont accès à une base de données. En outre, ils peuvent réinitialiser les mots de passe pour les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **IMPORTANT :** La possibilité d'octroyer l'accès au [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et de configurer des autorisations utilisateur permet à l'administrateur de sécurité d'affecter la plupart des autorisations du serveur. Le rôle **securityadmin** doit être traité comme équivalent au rôle **sysadmin** .|  
 |**processadmin**|Les membres du rôle serveur fixe **processadmin** peuvent mettre fin aux processus en cours d’exécution dans une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |**setupadmin**|Les membres du rôle serveur fixe **setupadmin** peuvent ajouter et supprimer des serveurs liés à l’aide d’instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)]. (L’appartenance au rôle **sysadmin** est nécessaire pour utiliser [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
 |**bulkadmin**|Les membres du rôle serveur fixe **bulkadmin** peuvent exécuter l’instruction `BULK INSERT`.|  

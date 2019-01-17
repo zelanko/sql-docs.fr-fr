@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d86215287683e9ff8ab3c7c01f410ff8b2fd0896
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8f096065d690044fdda42f71ebb0c423801b41bb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031958"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212689"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protection étendue de l'authentification avec Reporting Services
 
@@ -35,12 +35,12 @@ SSRS prend en charge et applique la protection étendue qui a été activée dan
   
  Les problèmes courants qui se produisent à cause des modifications des paramètres de protection étendue ou de paramètres mal configurés ne décrivent pas les messages d'erreur ou les boîtes de dialogue habituelles. Les problèmes sur la configuration et la compatibilité de la protection étendue aboutissent à des échecs et des erreurs d'authentification dans les journaux de trace [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Certaines technologies d'accès aux données peuvent ne pas prendre en charge la protection étendue. Une technologie d'accès aux données est utilisée pour se connecter aux sources de données SQL Server et à la base de données du catalogue [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'échec d'une technologie d'accès aux données dans la prise en charge de la protection étendue a les conséquences suivantes sur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
->   
+> 
 >  -   La protection étendue ne peut être activée sur le serveur SQL Server qui exécute la base de données du catalogue [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et le serveur de rapports ne parvient pas à se connecter à la base de données de catalogue et renvoie des erreurs d'authentification.  
 > -   Les serveurs SQL Server utilisés comme sources de données de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne peuvent bénéficier de la protection étendue ou essayant, par le biais du serveur de rapports, de se connecter à la source de données de rapport échouent et retournent des erreurs d'authentification.  
->   
+> 
 >  La documentation pour une technologie d'accès aux données doit disposer d'informations sur la prise en charge de la protection étendue.  
   
 ### <a name="upgrade"></a>UPGRADE  
@@ -112,8 +112,8 @@ SSRS prend en charge et applique la protection étendue qui a été activée dan
   
 |Paramètre|Description|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|Indique le niveau d'application de la protection étendue. Les valeurs valides sont :<br /><br /> **Off**: valeur par défaut. Indique l’absence de vérification de la liaison de canal ou de service.<br /><br /> **Allow** prend en charge la protection étendue, mais ne l’impose pas.  Spécifie les points suivants :<br /><br /> -La protection étendue est appliquée aux applications clientes qui s’exécutent sur les systèmes d’exploitation prenant en charge la protection étendue. La manière dont la protection s’applique dépend du paramètre **RsWindowsExtendedProtectionScenario**.<br /><br /> -L’authentification est autorisée pour les applications fonctionnant sur des systèmes d’exploitation qui ne prennent pas en charge la protection étendue.<br /><br /> **Require** spécifie les points suivants :<br /><br /> -La protection étendue est appliquée aux applications clientes qui s’exécutent sur les systèmes d’exploitation prenant en charge la protection étendue.<br /><br /> -L’authentification **n’est pas** autorisée pour les applications fonctionnant sur des systèmes d’exploitation qui ne prennent pas en charge la protection étendue.|  
-|**RsWindowsExtendedProtectionScenario**|Indique les formes de protection étendue validées : liaison de canal, liaison de service ou les deux à la fois. Les valeurs valides sont :<br /><br /> **Proxy**: valeur par défaut. Spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’un jeton de liaison de canal est présent.<br /><br /> -La liaison de service est appliquée.<br /><br /> **Any** spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate, ainsi qu’une liaison de canal, ne sont pas obligatoires.<br /><br /> -La liaison de service est appliquée.<br /><br /> **Direct** spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’il existe un jeton de liaison de canal et une connexion SSL au service actuel, et lorsque le jeton de liaison de canal pour la connexion SSL correspond à celui du jeton NTLM, Kerberos ou Negotiate.<br /><br /> -La liaison de service n’est pas appliquée.<br /><br /> <br /><br /> Remarque : le paramètre **RsWindowsExtendedProtectionScenario** est ignoré si **RsWindowsExtendedProtectionLevel** est défini sur **OFF**.|  
+|**RSWindowsExtendedProtectionLevel**|Indique le niveau d'application de la protection étendue. Les valeurs valides sont :<br /><br /> **Off** : Valeur par défaut. Indique l’absence de vérification de la liaison de canal ou de service.<br /><br /> **Allow** prend en charge la protection étendue, mais ne l’impose pas.  Spécifie les points suivants :<br /><br /> -La protection étendue est appliquée aux applications clientes qui s’exécutent sur les systèmes d’exploitation prenant en charge la protection étendue. La manière dont la protection s’applique dépend du paramètre **RsWindowsExtendedProtectionScenario**.<br /><br /> -L’authentification est autorisée pour les applications fonctionnant sur des systèmes d’exploitation qui ne prennent pas en charge la protection étendue.<br /><br /> **Require** spécifie les points suivants :<br /><br /> -La protection étendue est appliquée aux applications clientes qui s’exécutent sur les systèmes d’exploitation prenant en charge la protection étendue.<br /><br /> -L’authentification **n’est pas** autorisée pour les applications fonctionnant sur des systèmes d’exploitation qui ne prennent pas en charge la protection étendue.|  
+|**RsWindowsExtendedProtectionScenario**|Spécifie quelles formes de protection étendue sont validées : Liaison de canal, liaisons de service ou les deux. Les valeurs valides sont :<br /><br /> **Proxy** : Valeur par défaut. Spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’un jeton de liaison de canal est présent.<br /><br /> -La liaison de service est appliquée.<br /><br /> **Any** spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate, ainsi qu’une liaison de canal, ne sont pas obligatoires.<br /><br /> -La liaison de service est appliquée.<br /><br /> **Direct** spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’il existe un jeton de liaison de canal et une connexion SSL au service actuel, et lorsque le jeton de liaison de canal pour la connexion SSL correspond à celui du jeton NTLM, Kerberos ou Negotiate.<br /><br /> -La liaison de service n’est pas appliquée.<br /><br /> <br /><br /> Remarque : Le paramètre **RsWindowsExtendedProtectionScenario** est ignoré si **RsWindowsExtendedProtectionLevel** est défini sur **OFF**.|  
   
  Exemples d'entrées dans le fichier de configuration **rsreportserver.config** :  
   
@@ -166,7 +166,7 @@ SSRS prend en charge et applique la protection étendue qui a été activée dan
 [Se connecter au moteur de base de données à l'aide de la protection étendue](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
 [Extended Protection for Authentication Overview (en anglais)](https://go.microsoft.com/fwlink/?LinkID=177943)   
 [Integrated Windows Authentication with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=179922)   
-[Microsoft Security Advisory: Extended protection for authentication (en anglais)](https://go.microsoft.com/fwlink/?LinkId=179923)   
+[Avis de sécurité Microsoft : Protection étendue de l’authentification](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Méthode SetExtendedProtectionSettings &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

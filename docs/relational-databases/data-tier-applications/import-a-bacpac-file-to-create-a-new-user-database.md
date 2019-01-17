@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c92dc9aad30134f0d9b8b834798a416fb610e142
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 405e15aca972d600a566ca08ea85445291c8ec2a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521242"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590683"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "52521242"
 2.  L'importation copie en bloc les données du fichier d'exportation.  
   
 ## <a name="sql-server-utility"></a>Utilitaire SQL Server  
- Si vous importez une DAC dans une instance gérée du moteur de base de données, la DAC importée est incorporée dans l'utilitaire SQL Server lorsque le jeu d'éléments de collecte de l'utilitaire est envoyé de l'instance au point de contrôle de l'utilitaire. La DAC est ensuite présente dans le nœud **Applications de la couche Données déployées** de l’ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Applications de la couche Données déployées** details page.  
+ Si vous importez une DAC dans une instance du moteur de base de données, la DAC importée est incorporée dans l’Utilitaire SQL Server quand le jeu d’éléments de collecte de l’utilitaire est envoyé de l’instance au point de contrôle de l’utilitaire. La DAC sera ensuite présente dans le nœud **Applications de la couche Données déployées** dans l’ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Applications de la couche Données déployées** details page.  
   
 ## <a name="database-options-and-settings"></a>Options et paramètres de bases de données  
  Par défaut, la base de données créée pendant l'importation aura tous les paramètres par défaut de l'instruction CREATE DATABASE, mais le classement de base de données et le niveau de compatibilité sont définis en fonction des valeurs définies dans le fichier d'exportation DAC. Un fichier d'exportation DAC utilise les valeurs de la base de données d'origine.  
@@ -59,7 +59,7 @@ ms.locfileid: "52521242"
  Nous vous recommandons de ne pas importer de fichier d'exportation DAC provenant de sources inconnues ou non approuvées. De tels fichiers peuvent contenir du code malveillant susceptible d'exécuter un code Transact-SQL indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d'utiliser un fichier d'exportation provenant d'une source inconnue ou non approuvée, décompressez la DAC et vérifiez le code, par exemple les procédures stockées ou un autre code défini par l'utilisateur. Pour plus d’informations sur la façon de procéder à ces vérifications, consultez [Valider un package DAC](validate-a-dac-package.md).  
   
 ## <a name="security"></a>Sécurité  
- Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un fichier d'exportation DAC sans mot de passe. Lorsque le fichier est importé, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l'aide d'une connexion qui possède l'autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l'utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
+ Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un fichier d'exportation DAC sans mot de passe. Lorsque le fichier est importé, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l’aide d’une connexion qui possède l’autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l’utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
   
 ## <a name="permissions"></a>Permissions  
  Une DAC ne peut être importée que par les membres des rôles serveur fixes **sysadmin** ou **serveradmin** , ou par les connexions figurant dans le rôle serveur fixe **dbcreator** et disposant d'autorisations ALTER ANY LOGIN. Le compte d’administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré nommé **sa** peut également importer une DAC. L'importation d'une DAC avec des connexions à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiert l'appartenance aux rôles loginmanager ou serveradmin. L'importation d'une DAC sans connexions à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiert l'appartenance aux rôles dbmanager ou serveradmin.  
@@ -101,9 +101,9 @@ ms.locfileid: "52521242"
   
 -   **Importer à partir du disque local** : cliquez sur **Parcourir...** pour explorer l’ordinateur local, ou entrez le chemin d’accès dans la zone réservée à cet effet. Le chemin d'accès doit inclure un nom de fichier et l'extension .bacpac.  
   
--   **Importer à partir d’Azure** : importe un fichier BACPAC à partir d’un conteneur Microsoft Azure. Vous devez vous connecter à un conteneur Microsoft Azure afin de valider cette option. Notez que cette option requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Le fichier temporaire est créé à l'emplacement spécifié et reste à cet endroit une fois l'opération terminée.  
+-   **Importer à partir d’Azure** : importe un fichier BACPAC à partir d’un conteneur Microsoft Azure. Vous devez vous connecter à un conteneur Microsoft Azure afin de valider cette option. Notez que l’option Importer à partir d’Azure requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Le fichier temporaire est créé à l'emplacement spécifié et reste à cet endroit une fois l'opération terminée.  
   
-     Lorsque vous parcourez Azure, vous pouvez basculer entre les conteneurs au sein d’un seul compte. Vous devez spécifier un seul fichier .bacpac pour continuer l'opération d'importation. Notez que vous pouvez trier les colonnes par **Nom**, **Taille**ou **Date de modification**.  
+     Lorsque vous parcourez Azure, vous pouvez basculer entre les conteneurs au sein d’un seul compte. Vous devez spécifier un seul fichier .bacpac pour continuer l'opération d'importation. Vous pouvez trier les colonnes par **Nom**, **Taille**ou **Date de modification**.  
   
      Pour continuer, spécifiez le fichier .bacpac à importer, puis cliquez sur **Ouvrir**.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "52521242"
  **Base de données SQL Azure :**  
   
  - **[Importer un fichier BACPAC pour créer une nouvelle base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)** fournit des instructions étape par étape relatives à l’utilisation du portail Azure, de PowerShell, de SSMS ou de SqlPackage.  
- - Consultez **[Options et performances de la base de données SQL : comprendre ce qui est disponible dans chaque niveau de service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** pour obtenir plus de détails sur les différents niveaux de service.  
+ - Consultez **[Options et performances de la base de données SQL : comprendre ce qui est disponible dans chaque niveau de service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** pour obtenir plus de détails sur les différents niveaux de service.  
 
 ### <a name="validation-page"></a>Page Validation  
  Utilisez cette page pour passer en revue tous les problèmes qui empêchent l'opération. Pour continuer, résolvez les problèmes bloquants, puis cliquez sur **Réexécuter la validation** pour vous assurer que la validation est réussie.  

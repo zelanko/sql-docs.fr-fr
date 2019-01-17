@@ -1,8 +1,8 @@
 ---
-title: Amorçage automatique pour les réplicas secondaires (SQL Server) | Microsoft Docs
-description: Utilisez l’amorçage automatique pour initialiser les réplicas secondaires.
+title: Utiliser l’amorçage automatique pour initialiser un réplica secondaire dans un groupe de disponibilité
+description: Utilisez l’amorçage automatique pour initialiser les réplicas secondaires dans un groupe de disponibilité Always On à l’aide de SQL 2016 ou version ultérieure.
 services: data-lake-analytics
-ms.custom: ''
+ms.custom: seodec18
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +14,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506689"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306166"
 ---
-# <a name="automatic-seeding-for-secondary-replicas"></a>Amorçage automatique pour les réplicas secondaires
+# <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Utiliser l’amorçage automatique pour initialiser un réplica secondaire dans un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dans SQL Server 2012 et 2014, la seule façon d’initialiser un réplica secondaire dans un groupe de disponibilité SQL Server Always On est d’utiliser la sauvegarde, la copie et la restauration. SQL Server 2016 introduit une nouvelle fonctionnalité pour initialiser un réplica secondaire : l’*amorçage automatique*. L’amorçage automatique utilise le transport de flux de journaux pour transmettre en continu la sauvegarde à l’aide de VDI vers le réplica secondaire pour chaque base de données du groupe de disponibilité, en utilisant les points de terminaison configurés. Cette nouvelle fonctionnalité peut être utilisée lors de la création initiale d’un groupe de disponibilité ou quand une base de données lui est ajoutée. L’amorçage automatique est disponible dans toutes les éditions de SQL Server prenant en charge les groupes de disponibilité Always On et peut être utilisé avec les groupes de disponibilité traditionnels et les [groupes de disponibilité distribués](distributed-availability-groups.md).
@@ -207,7 +207,7 @@ L’amorçage automatique ajoute de nouveaux événements étendus pour le suivi
 Par exemple, le script suivant crée une session d’événements étendus qui capture les événements liés à l’amorçage automatique.
 
 ```sql
-CREATE EVENT SESSION [AG_autoseed] ON SERVER 
+CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
     ADD EVENT sqlserver.hadr_db_manager_seeding_request_msg,
@@ -240,7 +240,7 @@ GO
 
 Le tableau suivant répertorie les événements étendus relatifs à l’amorçage automatique.
 
-|Nom   |Description|
+|Créer une vue d’abonnement|Description|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Message de demande d’amorçage.|
 |hadr_physical_seeding_backup_state_change|Modification d’état côté sauvegarde d’amorçage physique.|

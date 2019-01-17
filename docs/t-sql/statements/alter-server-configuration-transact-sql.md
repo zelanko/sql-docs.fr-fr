@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 52149ae289f0cea89ff31a501acaaf8d0c7cbd3e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 352cd03017b33247c66f7eb0090cd79d0d5cd532
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545621"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980095"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ SQLDUMPEREDUMPFLAGS
  Valeur du délai d'attente, en millisecondes, de l'utilitaire SQLDumper pour générer un vidage en cas d'échec de SQL Server. La valeur par défaut est 0, ce qui signifie qu'il n'existe aucune limite de temps pour procéder au vidage. Pour plus d’informations, consultez [l’article de la base de connaissances consacré à l’utilitaire SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
- Conditions dans lesquelles l'instance de cluster de basculement SQL Server doit basculer ou redémarrer. La valeur par défaut est 3, ce qui signifie que la ressource SQL Server procèdera au basculement ou au redémarrage lors d'erreurs de serveur critiques. Pour plus d’informations sur ce niveau de condition d’échec et sur d’autres niveaux, consultez [Configurer les paramètres de propriété FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
+ Conditions dans lesquelles l’instance de cluster de basculement SQL Server doit basculer ou redémarrer. La valeur par défaut est 3, ce qui signifie que la ressource SQL Server procèdera au basculement ou au redémarrage lors d'erreurs de serveur critiques. Pour plus d’informations sur ce niveau de condition d’échec et sur d’autres niveaux, consultez [Configurer les paramètres de propriété FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
   
  HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }  
  Valeur du délai d'attente qui définit la durée pendant laquelle la DLL de ressource du moteur de base de données SQL Server doit attendre les informations d'intégrité du serveur avant de considérer que l'instance de SQL Server ne répond pas. Valeur de délai d'attente, exprimée en millisecondes. La valeur par défaut est 60 000 millisecondes (60 secondes).  
@@ -196,7 +196,7 @@ SQLDUMPEREDUMPFLAGS
  Pour identifier le cluster de destination, spécifiez l'une des valeurs suivantes :  
   
  *windows_cluster*  
- Nom netwirj d’un cluster WSFC. Vous pouvez spécifier le nom court ou le nom de domaine complet. Pour rechercher l'adresse IP cible d'un nom court, ALTER SERVER CONFIGURATION utilise la résolution DNS. Dans certains cas, un nom court peut entraîner quelques confusions, et DNS peut retourner une adresse IP incorrecte. Par conséquent, nous vous recommandons de spécifier le nom de domaine complet.  
+ Nom réseau d’un cluster WSFC. Vous pouvez spécifier le nom court ou le nom de domaine complet. Pour rechercher l'adresse IP cible d'un nom court, ALTER SERVER CONFIGURATION utilise la résolution DNS. Dans certains cas, un nom court peut entraîner quelques confusions, et DNS peut retourner une adresse IP incorrecte. Par conséquent, nous vous recommandons de spécifier le nom de domaine complet.  
   
   > [!NOTE] 
   > La migration entre clusters à l’aide de ce paramètre n’est plus prise en charge. Pour effectuer une migration entre clusters, utilisez un groupe de disponibilité distribué ou toute autre méthode, par exemple une copie des journaux de transaction. 
@@ -237,14 +237,14 @@ SQLDUMPEREDUMPFLAGS
  OFF  
  Désactive le partitionnement logiciel automatique des nœuds NUMA matériels volumineux en nœuds NUMA plus petits. La modification de la valeur active nécessite un redémarrage du moteur de base de données.  
 
-> [!WARNING]  
+> [!WARNING]
 > Il existe des problèmes connus avec le comportement de l’instruction ALTER SERVER CONFIGURATION avec l’option SOFT NUMA et l’Agent SQL Server.  Voici la séquence d’opérations recommandée :  
 > 1) Arrêtez l’instance de SQL Server Agent.  
-> 2) Exécutez votre option ALTER SERVER CONFGURATION  SOFT NUMA.  
+> 2) Exécutez votre option ALTER SERVER CONFIGURATION  SOFT NUMA.  
 > 3) Redémarrez l’instance de SQL Server.  
 > 4) Démarrez l’instance de SQL Server Agent.  
   
-**Informations supplémentaires :** Si une commande ALTER SERVER CONFIGURATION avec SET SOFTNUMA est exécutée avant que le service SQL Server soit redémarré, alors, quand le service SQL Server Agent est arrêté, il exécute une commande T-SQL RECONFIGURE qui restaure les paramètres SOFTNUMA en vigueur avant l’exécution d’ALTER SERVER CONFIGURATION. 
+**Informations supplémentaires :** Si une commande ALTER SERVER CONFIGURATION avec SET SOFTNUMA est exécutée avant que le service SQL Server soit redémarré, alors, quand le service SQL Server Agent est arrêté, il exécute une commande T-SQL RECONFIGURE qui restaure les paramètres SOFTNUMA en vigueur avant l’exécution d’ALTER SERVER CONFIGURATION. 
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Cette instruction ne nécessite pas un redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sauf spécification contraire. Dans le cas d'une instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elle ne requiert pas un redémarrage de la ressource de cluster [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -255,7 +255,7 @@ SQLDUMPEREDUMPFLAGS
 ## <a name="permissions"></a>Permissions  
  Requiert des autorisations ALTER SETTINGS pour l'option d'affinité de processus. Requiert des autorisations ALTER SETTINGS et VIEW SERVER STATE pour les options de propriété de cluster de basculement et de journal de diagnostics, et des autorisations CONTROL SERVER pour l'option de contexte de cluster HADR.  
   
- Nécessite l'autorisation ALTER SERVER STATE pour l'option d'entension du pool de mémoires tampons.  
+ Nécessite l’autorisation ALTER SERVER STATE pour l’option d’extension du pool de mémoires tampons.  
   
  La DLL de ressource du [!INCLUDE[ssDE](../../includes/ssde-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sous le compte Système local. Par conséquent, le compte Système local doit disposer d'un accès en lecture et en écriture au chemin d'accès spécifié dans l'option de journal de diagnostics.  
   
@@ -272,10 +272,10 @@ SQLDUMPEREDUMPFLAGS
 ###  <a name="Affinity"></a> Définition de l’affinité de processus  
  Les exemples de cette section montrent comment définir l'affinité de processus sur les unités centrales et les nœuds NUMA. Dans les exemples suivants, on part de l'hypothèse que le serveur contient 256 unités centrales qui sont réparties dans quatre groupes de 16 nœuds NUMA chacun. Les threads ne sont attribués à aucun nœud NUMA ou UC.  
   
--   Groupe 0 : nœuds NUMA 0 à 3, unités centrales 0 à 63  
--   Groupe 1 : nœuds NUMA 4 à 7, unités centrales 64 à 127  
--   Groupe 2 : nœuds NUMA 8 à 12, unités centrales 128 à 191  
--   Groupe 3 : nœuds NUMA 13 à 16, unités centrales 192 à 255  
+-   Groupe 0 : nœuds NUMA 0 à 3, UC 0 à 63  
+-   Groupe 1 : nœuds NUMA 4 à 7, UC 64 à 127  
+-   Groupe 2 : nœuds NUMA 8 à 12, UC 128 à 191  
+-   Groupe 3 : nœuds NUMA 13 à 16, UC 192 à 255  
   
 #### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>A. Définition de l'affinité sur toutes les unités centrales dans les groupes 0 et 2  
  L'exemple suivant définit l'affinité sur toutes les unités centrales dans les groupes 0 et 2.  
@@ -285,7 +285,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=0 TO 63, 128 TO 191;  
 ```  
   
-#### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>B. Définition de l'affinité sur toutes les unités centrales dans les nœuds NUMA 0 et 7  
+#### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>b. Définition de l'affinité sur toutes les unités centrales dans les nœuds NUMA 0 et 7  
  L'exemple suivant définit l'affinité UC sur les nœuds `0` et `7` uniquement.  
   
 ```  
@@ -329,7 +329,7 @@ SET PROCESS AFFINITY CPU=AUTO;
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-#### <a name="b-stopping-diagnostic-logging"></a>B. Fin de la journalisation des diagnostics  
+#### <a name="b-stopping-diagnostic-logging"></a>b. Fin de la journalisation des diagnostics  
  L'exemple suivant met fin à la journalisation des données de diagnostics.  
   
 ```  
@@ -387,7 +387,7 @@ SET BUFFER POOL EXTENSION ON
     (FILENAME = 'F:\SSDCACHE\Example.BPE', SIZE = 50 GB);  
 ```  
   
-#### <a name="b-modifying-buffer-pool-extension-parameters"></a>B. Modifier les paramètres de l'extension du pool de mémoires tampons  
+#### <a name="b-modifying-buffer-pool-extension-parameters"></a>b. Modifier les paramètres de l'extension du pool de mémoires tampons  
  L'exemple suivant modifie la taille du fichier d'extension du pool de mémoires tampons. L'option d'extension du pool de mémoires tampons doit être désactivée avant de modifier les paramètres.  
   
 ```  

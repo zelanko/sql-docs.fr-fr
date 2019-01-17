@@ -22,15 +22,15 @@ ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 640a4b22ca8bec9f12778cae94d31de77c9cbe7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91c5694868c7e57182b8295e5bac793ee8698a50
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789137"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951591"
 ---
 # <a name="originallogin-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Renvoie le nom de la connexion qui s'est connectée à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez utiliser cette fonction pour renvoyer l'identité de la connexion d'origine dans les sessions où il y a un grand nombre de changements de contexte implicites ou explicites.  
   
@@ -48,11 +48,13 @@ ORIGINAL_LOGIN( )
   
 ## <a name="remarks"></a>Notes   
  Cette fonction peut s'avérer utile pour auditer l'identité du contexte de connexion d'origine. Alors que les fonctions telles que [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) et [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) renvoient le contexte d’exécution actuel, ORIGINAL_LOGIN renvoie l’identité de la première connexion à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la session.  
-  
- Renvoie la valeur NULL sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ 
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant change le contexte d'exécution de la session actuelle de l'appelant des instructions vers `login1`. Les fonctions `SUSER_SNAME` et `ORIGINAL_LOGIN` sont utilisées pour renvoyer l'utilisateur de la session actuelle (l'utilisateur vers lequel le contexte a été basculé) et le compte de connexion d'origine.  
+ L'exemple suivant change le contexte d'exécution de la session actuelle de l'appelant des instructions vers `login1`. Les fonctions `SUSER_SNAME` et `ORIGINAL_LOGIN` sont utilisées pour renvoyer l'utilisateur de la session actuelle (l'utilisateur vers lequel le contexte a été basculé) et le compte de connexion d'origine. 
+ 
+  >[!NOTE]
+  > Bien que la fonction ORIGINAL_LOGIN soit prise en charge sur Azure SQL Database, le script suivant échoue, car *Execute as LOGIN* n’est pas pris en charge sur Azure SQL Database. 
   
 ```  
 USE AdventureWorks2012;  

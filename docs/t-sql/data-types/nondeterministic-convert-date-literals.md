@@ -13,12 +13,12 @@ ms.author: mikeray
 ms.reviewer: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7412b6ee9ad3b551fb91200c7d3f45f3287f6780
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 4ca2837780145af3c7f4428c446215ed3510bc50
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52255651"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783361"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversion non déterministe de chaînes de date littérale en valeurs DATE
 
@@ -28,7 +28,7 @@ Vous contrôlez ces conversions non déterministes en prenant en considération 
 
 
 
-## <a name="set-language-example-month-name-in-polish"></a>Exemple pour SET LANGUAGE : nom du mois en polonais
+## <a name="set-language-example-month-name-in-polish"></a>Exemple avec SET LANGUAGE : Nom de mois en polonais
 
 - `SET LANGUAGE Polish;`
 
@@ -75,7 +75,7 @@ Si au lieu de cela, le format **mdy** a été spécifié, la même chaîne « 0
 
 Et si le format **ymd** (amj) a été spécifié, aucune garantie ne peut être donnée quant au résultat. La valeur numérique « 2018 » est trop grande pour être un jour.
 <!--
-The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team??
+The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team?
 -->
 
 #### <a name="specific-countries"></a>Pays spécifiques
@@ -124,8 +124,8 @@ Dans l’exemple de code précédent, le dernier exemple montre une non-correspo
 
 Notre article documentant CAST et CONVERT liste les codes explicites que vous pouvez utiliser avec la fonction CONVERT pour contrôler _de façon déterministe_ les conversions de date. L’article concerné a chaque mois un nombre de visualisations de page parmi les plus élevés.
 
-- [CAST et CONVERT (Transact-SQL) : styles de date et d’heure](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
-- [CAST et CONVERT (Transact-SQL) : certaines conversions de date/heure sont non déterministes](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
+- [CAST et CONVERT (Transact-SQL) : Styles de date et d’heure](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
+- [CAST et CONVERT (Transact-SQL) : Certaines conversions de date/heure sont non déterministes](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
 
 
 
@@ -137,7 +137,7 @@ Dans SQL Server 2000, le niveau de compatibilité était de 80. Pour les paramè
 
 #### <a name="unicode"></a>Unicode
 
-<!-- The next live sentence needs an explanatory example!  N'??'.
+<!-- The next live sentence needs an explanatory example!  N'somethingHere?'.
 -->
 La conversion de données caractères non-Unicode entre les classements est également considérée comme non déterministe.
 

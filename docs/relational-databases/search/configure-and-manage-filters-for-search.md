@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87b18963f7b512d2fa395d53406528a2d813b364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba65abd869322574cd2047be5066aad4b1c30767
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739697"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53552951"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurer et gérer des filtres pour la recherche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,12 +40,16 @@ Des documents binaires peuvent être stockés dans une colonne **varbinary(max)*
 
 ## <a name="installed-filters"></a>Filtres installés 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe ses propres filtres XML et HTML. De plus, tous les filtres des formats propriétaires [!INCLUDE[msCoName](../../includes/msconame-md.md)] (.doc, .xdoc, .ppt, etc.) qui sont déjà installés sur le système d’exploitation sont également chargés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour identifier les filtres actuellement chargés sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez la procédure stockée [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) , comme suit :  
-  
+
 ```sql
 EXEC sp_help_fulltext_system_components 'filter';   
 ```  
+
+> [!NOTE]
+> Même avec la dernière version d’Office Filter Pack qui prend en charge le format .xlsx, SQL Server ne prend pas en charge les feuilles de calcul Open XML strict.  Aucune erreur ne s’affichera, mais SQL Server ne parviendra pas à indexer le contenu des feuilles de calcul Open XML strict.
+
 ## <a name="non-microsoft-filters"></a>Filtres non-Microsoft
-Toutefois, avant de pouvoir utiliser des filtres pour des formats non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] , vous devez les charger manuellement dans l’instance de serveur. Pour plus d’informations sur l’installation de filtres supplémentaires, consultez [Afficher ou modifier des filtres et des analyseurs lexicaux inscrits](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
+Toutefois, avant de pouvoir utiliser des filtres pour les formats non-[!INCLUDE[msCoName](../../includes/msconame-md.md)], vous devez les charger manuellement dans l’instance de serveur. Pour plus d’informations sur l’installation de filtres supplémentaires, consultez [Afficher ou modifier des filtres et des analyseurs lexicaux inscrits](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
   
 ## <a name="see-also"></a> Voir aussi  

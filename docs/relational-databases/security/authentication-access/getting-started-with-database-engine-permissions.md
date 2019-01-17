@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 23ed71d50fc84c743f5574a3e3e96852b2e9bd21
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410856"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202658"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Prise en main des autorisations du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -229,11 +229,11 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Next Steps  
  Les rubriques suivantes vous aideront à démarrer :  
   
--   [Didacticiel : Mise en route du moteur de base de données](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Création d’une base de données &#40;didacticiel&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
+-   [Didacticiel : Bien démarrer avec le moteur de base de données](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Création d’une base de données &#40;tutoriel&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
   
--   [Didacticiel : SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+-   [Didacticiel : SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
--   [Didacticiel : écriture d'instructions Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
+-   [Didacticiel : Écriture d’instructions Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a> Voir aussi  
  [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

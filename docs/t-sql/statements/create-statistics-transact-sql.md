@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae5faf4c861de4849289fe8752633caca0347976
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0bf6e2b9a678d1406e2b9beb8cdda09d3ef704e6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523286"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209930"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
         [ [ FULLSCAN   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
-            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
+            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
         [ [ , ] INCREMENTAL = { ON | OFF } ] 
@@ -197,7 +197,7 @@ CREATE STATISTICS statistics_name
 **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 MAXDOP = *max_degree_of_parallelism*  
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Remplace l’option de configuration **max degree of parallelism** pendant la durée de l’opération statistique. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
   
@@ -255,7 +255,7 @@ CREATE STATISTICS ContactMail1
     WITH SAMPLE 5 PERCENT;  
 ```  
   
-### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>B. Utilisation de CREATE STATISTICS avec FULLSCAN et NORECOMPUTE  
+### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>b. Utilisation de CREATE STATISTICS avec FULLSCAN et NORECOMPUTE  
  L'exemple suivant crée les statistiques `ContactMail2` pour toutes les lignes des colonnes `BusinessEntityID` et `EmailPromotion` de la table `Contact` et désactive le recalcul automatique des statistiques.  
   
 ```sql  
@@ -290,11 +290,11 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. Utilisation de CREATE STATISTICS avec FULLSCAN et PERSIST_SAMPLE_PERCENT  
  L’exemple suivant crée les statistiques `ContactMail2` pour toutes les lignes des colonnes `BusinessEntityID` et `EmailPromotion` de la table `Contact`, et définit un pourcentage d’échantillonnage égal à 100 pour toutes les mises à jour ultérieures qui ne spécifient pas explicitement un pourcentage d’échantillonnage.  
-  
+  
 ```sql  
 CREATE STATISTICS NamePurchase  
-    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
-    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
+    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
+    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
 ```  
   
 ### Examples using AdventureWorksDW database. 

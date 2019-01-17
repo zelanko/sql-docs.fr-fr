@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b9d49756a4edb78fcda40f4c4d86bfbb299904d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b69d261470a674ef6a90a5bef9e0db7aebfbb44a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543500"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205578"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ Pipeline de traitement des requêtes SQL Server
  Pour le premier exemple de requête, le moteur d'exécution demande des lignes à l'index cluster sur la table Customer, et à l'index non cluster sur la table Order, à partir des méthodes d'accès. Les méthodes d'accès parcourent les structures d'index B-tree pour récupérer les lignes demandées. Dans ce cas, toutes les lignes sont récupérées lorsque le plan appelle des analyses d'index complètes.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété aux tables mémoire optimisées  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Les lots ad hoc et procédures stockées sont également considérés comme du [!INCLUDE[tsql](../../includes/tsql-md.md)]interprété. « Interprété » fait référence au fait que le plan de requête est interprété par le moteur d'exécution de requête pour chaque opérateur inclus dans le plan de requête. Le moteur d'exécution lit l'opérateur et ses paramètres, et effectue l'opération.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Les lots ad hoc et procédures stockées sont également considérés comme du [!INCLUDE[tsql](../../includes/tsql-md.md)]interprété. « Interprété » fait référence au fait que le plan de requête est interprété par le moteur d'exécution de requête pour chaque opérateur inclus dans le plan de requête. Le moteur d'exécution lit l'opérateur et ses paramètres, et effectue l'opération.  
   
  Le [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété peut être utilisé pour accéder aux tables mémoire optimisées et sur disque. L'illustration suivante montre le traitement des requêtes pour l'accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété aux tables mémoire optimisées :  
   
@@ -273,7 +273,7 @@ GO
 |Agrégation de flux|`SELECT count(CustomerID) FROM dbo.Customer`|Notez que l'opérateur Hash Match n'est pas pris en charge pour l'agrégation. Par conséquent, toutes les agrégations dans les procédures stockées compilées en mode natif utilisent l'opérateur Stream Aggregate, même si le plan pour la même requête en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété utilise l'opérateur Hash Match.|  
   
 ## <a name="column-statistics-and-joins"></a>Statistiques et jointures de colonne  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve les statistiques des valeurs des colonnes clés d’index pour vous aider à estimer le coût de certaines opérations, comme les analyses d’index et les recherches d’index. ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée également des statistiques sur les colonnes clés qui ne sont pas des index si vous les créez explicitement ou si l'optimiseur de requête les crée en réponse à une requête avec un prédicat). La mesure principale de l'estimation de coût est le nombre de lignes traitées par un seul opérateur. Notez que pour les tables sur disque, le nombre de pages auxquelles un opérateur spécifique accède est important pour l'estimation du coût. Toutefois, comme le nombre de pages n'est pas important pour les tables mémoire optimisées (il est toujours de zéro), cette description se focalisera sur le nombre de lignes. L'estimation démarre avec les opérateurs de recherche d'index et d'analyse dans le plan, et est ensuite étendue pour inclure les autres opérateurs, comme l'opérateur de jointure. Le nombre estimé de lignes à traiter par un opérateur de jointure dépend de l'estimation des opérateurs d'index, de recherche et d'analyse sous-jacents. Pour l'accès [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété aux tables mémoire optimisées, vous pouvez observer le plan d'exécution réel pour voir la différence entre le nombre de lignes estimé et le nombre de lignes réel pour les opérateurs du plan.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve les statistiques des valeurs des colonnes clés d’index pour vous aider à estimer le coût de certaines opérations, comme les analyses d’index et les recherches d’index. ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée également des statistiques sur les colonnes clés qui ne sont pas des index si vous les créez explicitement ou si l’optimiseur de requête les crée en réponse à une requête avec un prédicat). La mesure principale de l'estimation de coût est le nombre de lignes traitées par un seul opérateur. Notez que pour les tables sur disque, le nombre de pages auxquelles un opérateur spécifique accède est important pour l'estimation du coût. Toutefois, comme le nombre de pages n'est pas important pour les tables mémoire optimisées (il est toujours de zéro), cette description se focalisera sur le nombre de lignes. L'estimation démarre avec les opérateurs de recherche d'index et d'analyse dans le plan, et est ensuite étendue pour inclure les autres opérateurs, comme l'opérateur de jointure. Le nombre estimé de lignes à traiter par un opérateur de jointure dépend de l'estimation des opérateurs d'index, de recherche et d'analyse sous-jacents. Pour l'accès [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété aux tables mémoire optimisées, vous pouvez observer le plan d'exécution réel pour voir la différence entre le nombre de lignes estimé et le nombre de lignes réel pour les opérateurs du plan.  
   
  Exemple de la figure 1 :  
   

@@ -14,27 +14,27 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c491a67b55db4a730db2bb7fcd8977162657e516
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 853f3c26f729db2256ad859174eeef16d4698453
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410906"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531074"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Résoudre les problèmes de connexion au moteur de base de données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Il s’agit d’une liste exhaustive de techniques de dépannage à utiliser quand vous ne pouvez pas vous connecter au moteur de base de données SQL Server. Ces étapes ne sont pas dans l’ordre des problèmes les plus probables que vous connaissez peut-être déjà. Ces étapes sont classées dans l’ordre des problèmes les plus simples aux plus complexes. Ces étapes supposent que vous vous connectez à SQL Server à partir d’un autre ordinateur à l’aide du protocole TCP/IP, ce qui est le cas le plus courant. Ces étapes concernent SQL Server 2016 avec les applications clientes et SQL Server exécutant Windows 10 ; cependant les étapes s’appliquent généralement à d’autres versions de SQL Server et d’autres systèmes d’exploitation avec seulement quelques modifications.
 
-Ces instructions sont particulièrement utiles lors de la résolution de l’erreur de «**connexion au serveur**», qui peut être le numéro d’erreur 11001 (ou 53), gravité : 20, état : 0, et des messages d’erreur tels que :
+Ces instructions sont particulièrement utiles lors de la résolution de l’erreur de « **connexion au serveur** », qui peut être le numéro d’erreur : 11001 (ou 53), gravité : 20, état : 0, et des messages d’erreur tels que :
 
 *   « Une erreur liée au réseau ou spécifique à l’instance s’est produite lors de l’établissement d’une connexion à SQL Server. Le serveur est introuvable ou n'est pas accessible. Vérifiez que le nom de l'instance est correct et que SQL Server est configuré pour autoriser les connexions distantes. " 
 
-*   « (fournisseur : Fournisseur de canaux nommés, erreur : 40 - Impossible d’ouvrir une connexion à SQL Server) (Microsoft SQL Server, erreur : 53) » ou « (fournisseur : Fournisseur TCP, erreur : 0 - Hôte inconnu.) (Microsoft SQL Server, erreur : 11001) » 
+*   « (fournisseur : Fournisseur de canaux nommés, erreur : 40 - Impossible d’ouvrir une connexion à SQL Server) (Microsoft SQL Server, erreur : 53) » ou « (fournisseur : Fournisseur TCP, erreur : 0 - Hôte inconnu.) (Microsoft SQL Server, erreur : 11001) » 
 
 Cette erreur signifie généralement que l’ordinateur SQL Server est introuvable ou que le numéro de port TCP est inconnu, n’est pas correct ou est bloqué par un pare-feu.
 
->  [!TIP]
+> [!TIP]
 >  Une page de résolution interactive est disponible à partir des services de support technique de [!INCLUDE[msCoName_md](../../includes/msconame-md.md)] sur [Solving Connectivity errors to SQL Server](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server).
 
 ### <a name="not-included"></a>Non inclus
@@ -64,8 +64,8 @@ Tout d’abord, vous devez collecter des informations de base sur le moteur de b
     2.  Dans la visionneuse du journal, cliquez sur le bouton **Filtrer** dans la barre d’outils. Dans la zone **Le message contient du texte** , tapez **Le serveur écoute sur**, cliquez sur **Appliquer le filtre**, puis sur **OK**.
     3.  Un message similaire à **Le serveur écoute sur [ ’tout’ \<ipv4> 1433]** doit s’afficher. Ce message indique que cette instance de SQL Server écoute sur toutes les adresses IP de cet ordinateur (pour le protocole IP version 4) et écoute le port TCP 1433. (Le port TCP 1433 est généralement le port utilisé par le moteur de base de données. Une seule instance de SQL Server pouvant utiliser un port, certaines instances doivent utiliser d’autres numéros de port si plusieurs instances de SQL Server sont installées.) Notez le numéro de port utilisé par l’instance de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] auquel vous essayez de vous connecter. 
 
-    >    [!NOTE] 
-    >    L’adresse IP 127.0.0.1 est probablement répertoriée. Elle est appelée adresse de carte de bouclage et ne peut être connectée qu’à des processus sur le même ordinateur. Elle peut être utile pour la résolution des problèmes, mais vous ne pouvez pas l’utiliser pour vous connecter à partir d’un autre ordinateur.
+    > [!NOTE] 
+    > L’adresse IP 127.0.0.1 est probablement répertoriée. Elle est appelée adresse de carte de bouclage et ne peut être connectée qu’à des processus sur le même ordinateur. Elle peut être utile pour la résolution des problèmes, mais vous ne pouvez pas l’utiliser pour vous connecter à partir d’un autre ordinateur.
 
 ## <a name="enable-protocols"></a>Activer les protocoles
 
@@ -98,20 +98,20 @@ Avant de résoudre un problème de connexion à partir d’un autre ordinateur, 
 |Instance par défaut|Nom de l’ordinateur|ACCNT27|
 |Instance nommée|Nom de l’ordinateur\nom de l’instance|ACCNT27\PAYROLL|
 
->  [!NOTE] 
+> [!NOTE]
 >  Lorsque vous vous connectez à un serveur SQL Server à partir d’une application cliente sur le même ordinateur, le protocole de mémoire partagée est utilisé. La mémoire partagée étant un type de canal nommé local, des erreurs relatives aux canaux se produisent parfois.
 
 Si vous recevez une erreur à ce stade, vous devez la résoudre avant de continuer. Il existe de nombreuses sources de problèmes possibles. Votre connexion peut être refusée. Votre base de données par défaut peut-être absente.
 
->    [!NOTE] 
+> [!NOTE]
 >    Certains messages d’erreur transmis au client intentionnellement ne donnent pas suffisamment d’informations pour résoudre le problème. Il s’agit d’une fonctionnalité de sécurité pour éviter de fournir à un attaquant des informations sur SQL Server. Pour afficher les informations complètes sur l’erreur, consultez le journal des erreurs SQL Server. Les détails y sont fournis. Si vous recevez l’erreur **18456 Échec de la connexion pour l’utilisateur**, la rubrique de la documentation en ligne [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contient des informations supplémentaires sur les codes d’erreur. En outre, le blog d’Aaron Bertrand comprend une liste très complète des codes d’erreur à la page [Troubleshooting Error 18456](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx). Vous pouvez afficher le journal des erreurs avec SSMS (si vous pouvez vous connecter), dans la section Gestion de l’Explorateur d’objets. Sinon, vous pouvez afficher le journal des erreurs avec le programme Bloc-notes de Windows. L’emplacement par défaut varie en fonction de votre version et peut être modifié pendant l’installation. L’emplacement par défaut pour [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] est `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
 4.   Si vous pouvez vous connecter à l’aide de la mémoire partagée, testez la connexion à l’aide de TCP. Vous pouvez forcer une connexion TCP en spécifiant **tcp:** avant le nom. Exemple :
 
 |Connexion à :|Type :|Exemple :|
 |-----------------|---------------|-----------------|
-|Instance par défaut|tcp:Nom de l’ordinateur|tcp:ACCNT27|
-|Instance nommée|tcp: Nom de l’ordinateur\nom de l’instance|tcp:ACCNT27\PAYROLL|
+|Instance par défaut|tcp: Nom de l’ordinateur|tcp:ACCNT27|
+|Instance nommée|tcp: Nom de l’ordinateur/nom de l’instance|tcp:ACCNT27\PAYROLL|
   
 Si vous pouvez vous connecter avec la mémoire partagée mais pas avec TCP, vous devez corriger le problème TCP. La cause la plus probable est que TCP n’est pas activé. Pour activer TCP, consultez la procédure **Activer les protocoles** ci-dessus.
 
@@ -144,7 +144,7 @@ Ces deux problèmes sont liés au service SQL Server Browser, qui fournit le num
   * Démarrez le service SQL Server Browser. Revenez à la section **Collecte des informations sur l’instance de SQL Server**, section 1.d.
   * Le service SQL Server Browser est bloqué par le pare-feu. Ouvrez le port UDP 1434 dans le pare-feu. Revenez à la section **Ouverture d’un port dans le pare-feu**. (Assurez-vous ouvrez un port UDP, et non un port TCP. Ces derniers sont différents.)
   * Les informations du port UDP 1434 sont bloquées par un routeur. Les communications UDP (protocole UDP) ne sont pas conçues pour passer par des routeurs. Cela empêche le réseau d’être rempli par un trafic de faible priorité. Vous pouvez peut-être configurer votre routeur pour transférer le trafic UDP, ou vous pouvez choisir de toujours fournir le numéro de port quand vous vous connectez.
-  * Si l’ordinateur client utilise Windows 7 ou Windows Server 2008 (ou un système d’exploitation plus récent), le trafic UDP peut être supprimé par le système d’exploitation client, car la réponse du serveur est retournée à partir d’une adresse IP différente de celle de la requête. Il s’agit d’une fonctionnalité de sécurité qui bloque le « mappage de source libre ». Pour plus d’informations, consultez la section **Adresses IP de serveurs multiples** de la rubrique de la documentation en ligne [Dépannage : expiration du délai d’attente](https://msdn.microsoft.com/library/ms190181.aspx). Il s’agit d’un article de SQL Server 2008 R2, mais les principes s’appliquent toujours. Vous pouvez peut-être configurer le client pour utiliser l’adresse IP correcte, ou vous pouvez choisir de toujours fournir le numéro de port quand vous vous connectez.
+  * Si l’ordinateur client utilise Windows 7 ou Windows Server 2008 (ou un système d’exploitation plus récent), le trafic UDP peut être supprimé par le système d’exploitation client, car la réponse du serveur est retournée à partir d’une adresse IP différente de celle de la requête. Il s’agit d’une fonctionnalité de sécurité qui bloque le « mappage de source libre ». Pour plus d’informations, consultez la section **Adresses IP de serveurs multiples** de la rubrique de la documentation en ligne [Dépannage : expiration du délai d’attente](https://msdn.microsoft.com/library/ms190181.aspx). Il s’agit d’un article de SQL Server 2008 R2, mais les principes s’appliquent toujours. Vous pouvez peut-être configurer le client pour utiliser l’adresse IP correcte, ou vous pouvez choisir de toujours fournir le numéro de port quand vous vous connectez.
      
 3. Une fois que vous pouvez vous connecter à l’aide de l’adresse IP (ou de l’adresse IP et du nom de l’instance pour une instance nommée), essayez de vous connecter en utilisant le nom de l’ordinateur (ou le nom de l’ordinateur et le nom de l’instance pour une instance nommée). Placez `tcp:` devant le nom de l’ordinateur pour forcer une connexion TCP/IP. Par exemple, pour l’instance par défaut sur un ordinateur nommé `ACCNT27`utilisez `tcp:ACCNT27` . Pour une instance nommée appelée `PAYROLL`sur cet ordinateur, utilisez `tcp:ACCNT27\PAYROLL` . Si vous pouvez vous connecter à l’aide de l’adresse IP, mais pas avec le nom de l’ordinateur, vous avez un problème de résolution de noms. Revenez à la section **Test de la connectivité TCP/IP**, section 4.
 

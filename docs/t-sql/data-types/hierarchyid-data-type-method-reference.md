@@ -19,12 +19,12 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6bba3aa9dd92086fa887e92c5c5efc3379f419fd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 51d4b6c9e19f334946657205de6cdc8c6ce593ec
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702949"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980025"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Référence de méthodes de type de données hierarchyid
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Le type de données **hierarchyid** est un type de données système de longueur
 Une valeur du type de données **hierarchyid** représente une position dans une hiérarchie d'arborescence. Les valeurs de **hierarchyid** ont les propriétés suivantes :
   
 -   Extrêmement compact  
-     Le nombre moyen de bits nécessaires pour représenter un nœud dans une arborescence avec *n* nœuds dépend de la sortance moyenne (nombre moyen d’enfants d’un nœud). Pour les petites sortances (de 0 à 7), la taille est d’environ 6\*logA*n* bits, où A est la sortance moyenne. Un nœud dans une hiérarchie d'organisation de 100 000 personnes avec une sortance moyenne de 6 niveaux prend approximativement 38 bits. Ce chiffre est arrondi à 40 bits, ou 5 octets, pour le stockage.  
+     Le nombre moyen de bits nécessaires pour représenter un nœud dans une arborescence avec *n* nœuds dépend de la sortance moyenne (nombre moyen d’enfants d’un nœud). Pour les petites sortances (de 0 à 7), la taille est d’environ 6\*logA*n* bits, où A est la sortance moyenne. Un nœud dans une hiérarchie d'organisation de 100 000 personnes avec une sortance moyenne de 6 niveaux prend approximativement 38 bits. Ce chiffre est arrondi à 40 bits, ou 5 octets, pour le stockage.  
 -   La comparaison est effectuée dans l'ordre à profondeur prioritaire  
      Étant donné deux valeurs **hierarchyid** **a** et **b**, **a<b** signifie que a se situe avant b dans un parcours à profondeur prioritaire de l’arborescence. Les index sur les types de données **hierarchyid** sont dans l’ordre à profondeur prioritaire, et les nœuds proches les uns des autres dans un parcours à profondeur prioritaire sont stockés les uns à côté des autres. Par exemple, les enfants d'un enregistrement sont stockés à côté de cet enregistrement. Pour plus d’informations, consultez [Données hiérarchiques &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).  
 -   Prise en charge des insertions et suppressions arbitraires  
@@ -75,8 +75,8 @@ Si un type d'utilisateur avec un nom en conflit existe pendant la mise à niveau
 Les colonnes de type **hierarchyid** peuvent être utilisées sur une table répliquée. La configuration requise pour votre application varie si la réplication est unidirectionnelle ou bidirectionnelle, et selon les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont utilisées.
   
 ### <a name="one-directional-replication"></a>Réplication unidirectionnelle
-La réplication unidirectionnelle inclut les réplications d'instantanés, transactionnelle et de fusion dans laquelle les modifications ne sont pas apportées au niveau de l'abonné. Le fonctionnement des colonnes **hierachyid** avec la réplication unidirectionnelle dépend de la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée par l’abonné.
--   Un serveur de publication [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] peut répliquer des colonnes **hierachyid** vers un abonné [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sans considération spéciale.  
+La réplication unidirectionnelle inclut les réplications d'instantanés, transactionnelle et de fusion dans laquelle les modifications ne sont pas apportées au niveau de l'abonné. Le fonctionnement des colonnes **hierarchyid** avec la réplication unidirectionnelle dépend de la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée par l’abonné.
+-   Un serveur de publication [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] peut répliquer des colonnes **hierarchyid** vers un abonné [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sans considération spéciale.  
 -   Un serveur de publication [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] doit convertir les colonnes **hierarchyid** pour les répliquer vers un abonné qui exécute [!INCLUDE[ssEW](../../includes/ssew-md.md)] ou une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] et les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prennent pas en charge les colonnes **hierarchyid**. Si vous utilisez l'une de ces versions, vous pouvez encore répliquer des données vers un abonné. Pour ce faire, vous devez définir une option de schéma ou le niveau de compatibilité de la publication (pour la réplication de fusion) afin que la colonne puisse être convertie en un type de données compatible.  
   
 Le filtrage de colonne est pris en charge dans ces deux scénarios. Cela inclut l’exclusion des colonnes **hierarchyid**. Le filtrage de ligne est pris en charge tant que le filtre n’inclut pas de colonne **hierarchyid**.

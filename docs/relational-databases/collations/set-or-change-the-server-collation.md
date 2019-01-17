@@ -1,9 +1,9 @@
 ---
 title: Définir ou changer le classement du serveur | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/03/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: carlrab
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,47 +13,61 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a251cfbd29cde861409e4f4e04d1dc0cd95bd37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 231cc69c164e9ac4d91477710f959b073420c08e
+ms.sourcegitcommit: 4df7db58095384152195039d91a01d2bee6bd07d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664897"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52954393"
 ---
 # <a name="set-or-change-the-server-collation"></a>Définir ou changer le classement du serveur
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Le classement du serveur agit en tant que classement par défaut pour toutes les bases de données système installées avec l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ainsi que pour toute base de données utilisateur nouvellement créée. Le classement du serveur est spécifié au cours de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  Le classement du serveur agit en tant que classement par défaut pour toutes les bases de données système installées avec l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ainsi que pour toute base de données utilisateur nouvellement créée. Vous devez choisir avec soin le classement au niveau du serveur, car il affecte :
+ - Les règles de tri et de comparaison dans `=`, `JOIN`, `ORDER BY` et d’autres opérateurs qui comparent les données textuelles.
+ - Le classement des colonnes `CHAR`, `VARCHAR`, `NCHAR` et `NVARCHAR` dans les vues système, les fonctions système et les objets dans TempDB (par exemple, les tables temporaires).
+ - Les noms des variables, des curseurs et des étiquettes `GOTO`. Les variables @pi et @PI sont considérées comme différentes si le classement au niveau du serveur respecte la casse et comme identiques si le classement au niveau du serveur respecte la casse.
   
-## <a name="changing-the-server-collation"></a>Modification du classement du serveur  
+## <a name="setting-the-server-collation-in-sql-server"></a>Définition du classement du serveur dans SQL Server
+
+  Le classement du serveur est spécifié au cours de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le classement par défaut au niveau du serveur est **SQL_Latin1_General_CP1_CI_AS**. Les classements Unicode seulement ne peuvent pas être spécifiés comme classement au niveau du serveur. Pour plus d’informations, consultez [Configuration du serveur - Classement](/sql/sql-server/install/server-configuration-collation.md).
+  
+## <a name="changing-the-server-collation-in-sql-server"></a>Changement du classement du serveur dans SQL Server
+
  La modification du classement du serveur par défaut pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut s'avérer une opération complexe et implique les étapes suivantes :  
   
--   Vérifiez que vous disposez de toutes les informations ou de tous les scripts nécessaires pour recréer vos bases de données utilisateur et les objets qu'elles contiennent.  
+- Vérifiez que vous disposez de toutes les informations ou de tous les scripts nécessaires pour recréer vos bases de données utilisateur et les objets qu'elles contiennent.  
   
--   Exportez toutes vos données à l’aide d’un outil tel que l’[utilitaire bcp](../../tools/bcp-utility.md). Pour plus d’informations, consultez [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+- Exportez toutes vos données à l’aide d’un outil tel que l’[utilitaire bcp](../../tools/bcp-utility.md). Pour plus d’informations, consultez [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
--   Supprimez toutes les bases de données utilisateur.  
+- Supprimez toutes les bases de données utilisateur.  
   
--   Recréez la base de données MASTER en spécifiant le nouveau classement dans la propriété SQLCOLLATION de la commande **setup** . Exemple :  
+- Recréez la base de données MASTER en spécifiant le nouveau classement dans la propriété SQLCOLLATION de la commande **setup** . Exemple :  
   
-    ```  
-    Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName   
-    /SQLSYSADMINACCOUNTS=accounts /[ SAPWD= StrongPassword ]   
+    ```sql  
+    Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName
+    /SQLSYSADMINACCOUNTS=accounts /[ SAPWD= StrongPassword ]
     /SQLCOLLATION=CollationName  
     ```  
   
      Pour plus d’informations, consultez [Reconstruire des bases de données système](../../relational-databases/databases/rebuild-system-databases.md).  
   
--   Créez toutes les bases de données et tous les objets qu'elles contiennent.  
+- Créez toutes les bases de données et tous les objets qu'elles contiennent.  
   
--   Importez toutes vos données.  
+- Importez toutes vos données.  
   
 > [!NOTE]  
->  Au lieu de changer le classement par défaut d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez spécifier un classement par défaut pour chaque nouvelle base de données que vous créez.  
+> Au lieu de changer le classement par défaut d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez spécifier un classement par défaut pour chaque nouvelle base de données que vous créez.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="setting-the-server-collation-in-managed-instance"></a>Définition du classement du serveur dans Managed Instance
+
+Le classement du serveur dans Azure SQL Managed Instance (préversion) peut être spécifié quand l’instance est créée (uniquement avec PowerShell). Le classement par défaut au niveau du serveur est **SQL_Latin1_General_CP1_CI_AS**. Les classements Unicode seulement et les nouveaux classements UTF-8 ne peuvent pas être spécifiés comme classement au niveau du serveur.
+Pour obtenir un modèle de script montrant comment définir le classement au niveau du serveur dans Azure SQL Database Managed Instance, consultez [Définir le classement Managed Instance à l’aide du modèle Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template). Si vous migrez des bases de données depuis SQL Server vers Managed Instance, vérifiez le classement du serveur dans le serveur SQL Server source à l’aide de la fonction `SERVERPROPERTY(N'Collation')`, puis créez une instance Managed Instance qui correspond au classement de votre serveur SQL Server. La migration d’une base de données depuis SQL Server vers Managed Instance sans mise en correspondance des classements au niveau du serveur peut entraîner plusieurs erreurs inattendues dans les requêtes. Vous ne pouvez pas changer le classement au niveau du serveur sur l’instance Managed Instance existante.
+
+## <a name="see-also"></a> Voir aussi
+
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)   
  [Définir ou modifier le classement de la base de données](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [Définir ou modifier le classement des colonnes](../../relational-databases/collations/set-or-change-the-column-collation.md)   
  [Reconstruire des bases de données système](../../relational-databases/databases/rebuild-system-databases.md)  
-  
-  
+ 

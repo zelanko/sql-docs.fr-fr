@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ee7b41d2c6e4584bd2dd48dec09fbe71b5150d13
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6f73b9d5160989537de72192774bbd7c0157fa29
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696777"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979675"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorisations : GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -127,7 +127,7 @@ REVOKE
  Une autorisation implicite peut également être héritée d’une autorisation parente ou de couverture. Par exemple, l’autorisation **UPDATE** sur une table peut être héritée si vous avez l’autorisation **UPDATE** sur le schéma qui contient la table ou l’autorisation **CONTROL** sur la table.  
   
 ### <a name="ownership-chaining"></a>Chaînage des propriétés  
- Quand plusieurs objets de base de données accèdent les uns aux autres de façon séquentielle, la séquence est appelée *chaîne*. Bien que de telles chaînes n'existent pas indépendamment les unes des autres, lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parcourt les liens d'une chaîne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] évalue les autorisations sur les objets constitutifs différemment de ce qu'il ferait s'il accédait aux objets séparément. Le chaînage des propriétés a des implication importantes sur la gestion de la sécurité. Pour plus d’informations sur les chaînes de propriétés, consultez [Chaînes de propriétés](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) et [Tutoriel : Chaînes de propriétés et changement de contexte](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
+ Quand plusieurs objets de base de données accèdent les uns aux autres de façon séquentielle, la séquence est appelée *chaîne*. Bien que de telles chaînes n'existent pas indépendamment les unes des autres, lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parcourt les liens d'une chaîne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] évalue les autorisations sur les objets constitutifs différemment de ce qu'il ferait s'il accédait aux objets séparément. Le chaînage des propriétés a des implication importantes sur la gestion de la sécurité. Pour plus d’informations sur les chaînes de propriétés, consultez [Chaînes de propriétés](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) et [Tutoriel : Chaînes de propriétés et changement de contexte](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
   
 ## <a name="permission-list"></a>Liste d’autorisations  
   
@@ -276,7 +276,7 @@ GRANT CONTROL SERVER TO [Ted];
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
-### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. Accord d’une autorisation de niveau serveur à une connexion  
+### <a name="b-granting-a-server-level-permission-to-a-login"></a>b. Accord d’une autorisation de niveau serveur à une connexion  
  L’exemple suivant accorde une autorisation de niveau serveur sur une connexion à un principal de serveur (une autre connexion).  
   
 ```  

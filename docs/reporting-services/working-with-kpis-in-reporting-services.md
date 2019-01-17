@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9612cb4cf45ec71bb511750bab9a84914a0e7f5
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: b1960771504184706bf21e9746a4fa3c784aad3b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712490"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212421"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Utilisation des indicateurs de performance clés dans Reporting Services
 
@@ -32,7 +32,7 @@ En utilisant les indicateurs de performance clés dans SQL Server Reporting Serv
 ## <a name="creating-a-dataset"></a>Création d’un dataset  
 Un indicateur de performance clé utilise uniquement la première ligne de données issue d’un dataset partagé. Assurez-vous que les données que vous souhaitez utiliser se trouvent sur cette première ligne. Pour créer un dataset partagé, vous pouvez utiliser le Générateur de rapports ou SQL Server Data Tools.  
   
-> **Remarque**: le dataset ne doit pas nécessairement être dans le même dossier que l’indicateur de performance clé.  
+> **Remarque**: Le dataset ne doit pas nécessairement être dans le même dossier que l’indicateur de performance clé.  
   
 ## <a name="placement-of-kpis"></a>Positionnement des indicateurs de performance clés  
   
@@ -58,9 +58,9 @@ Vous pouvez assigner des valeurs statiques ou utiliser les données issues d’u
 |État|Valeur numérique utilisée pour déterminer la couleur de vignette de l’indicateur de performance clé. Les valeurs valides sont 1 (vert), 0 (orange) et -1 (rouge).|  
 |Ensemble de tendances|Valeurs numériques séparées par des virgules utilisées pour la visualisation de graphique. Ceci peut également être défini sur une colonne d’un dataset avec des valeurs qui représentent la tendance.|  
   
-> **Avertissement**: bien que vous pouvez utiliser la valeur texte pour le champ **État** au moment de la conception, vous devez utiliser la valeur numérique en cas d’actualisation d’un dataset. Si vous actualisez un dataset avec la valeur texte, au lieu de la valeur numérique, cela peut endommager les indicateurs de performance clés sur votre serveur.  
-  
-> **Remarque** : les champs **Valeur**, **Objectif** et **État** peuvent uniquement choisir une valeur à partir de la première ligne du résultat d’un dataset. Toutefois, le champ **Ensemble de tendances** peut choisir la colonne qui reflète la tendance.  
+> **Avertissement** : Bien que vous puissiez utiliser la valeur texte pour le champ **État** au moment de la conception, vous devez utiliser la valeur numérique en cas d’actualisation d’un dataset. Si vous actualisez un dataset avec la valeur texte, au lieu de la valeur numérique, cela peut endommager les indicateurs de performance clés sur votre serveur.  
+> 
+> **Remarque**: La valeur des champs **Valeur**, **Objectif** et **État** peut être choisie seulement dans la première ligne du résultat d’un dataset. Toutefois, le champ **Ensemble de tendances** peut choisir la colonne qui reflète la tendance.  
   
 Procédez comme suit pour utiliser les données d’un dataset partagé.  
   

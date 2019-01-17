@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2736c3cf0d8373b80a41277a6b80b4b12b0ecd3a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8e5c839f8c5005e3f02129e36023db53f70f4a20
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510704"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590303"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "52510704"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Mise en miroir de bases de données et SQL Server Audit  
  Une base de données qui possède une spécification d'audit définie et qui utilise la mise en miroir de bases de données inclut la spécification de l'audit de la base de données. Pour fonctionner correctement sur l'instance SQL en miroir, les éléments suivants doivent être configurés :  
   
--   Le serveur miroir doit avoir un audit avec le même GUID afin de permettre à la spécification de l'audit de la base de données d'écrire des enregistrements d'audit. La commande CREATE AUDIT WITH GUID**=***\<GUID_de_l’audit_de_serveur_source*> permet d’obtenir cette configuration.  
+-   Le serveur miroir doit avoir un audit avec le même GUID afin de permettre à la spécification de l'audit de la base de données d'écrire des enregistrements d'audit. La commande CREATE AUDIT WITH GUID**=**_\<GUID_de_l’audit_de_serveur_source_> permet d’obtenir cette configuration.  
   
 -   Si la cible est un fichier binaire, le compte de service de serveur miroir doit avoir des autorisations appropriées pour l'emplacement où le journal d'audit est écrit.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "52510704"
  [Déclencheurs DDL](../../../relational-databases/triggers/ddl-triggers.md)  
  Explique comment utiliser des déclencheurs DDL (Data Definition Language) pour effectuer le suivi des modifications de vos bases de données.  
   
- [Microsoft TechNet : SQL Server TechCenter : SQL Server 2005 – Sécurité et protection](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet - TechCenter SQL Server : Sécurité et protection SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Fournit des informations à jour sur la sécurité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a> Voir aussi  

@@ -11,12 +11,12 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9e2237473024a75227ff7ec7838849618cdf54d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14a4ff6a2af3182e8e62a019993d39a6470caf37
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663458"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205117"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Supprimer des fichiers blob de sauvegarde avec des baux actifs
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "51663458"
     > [!TIP]  
     >  SQL Server génère un ID de bail pour établir un accès exclusif pendant l'opération de restauration. L'ID de bail de la restauration est BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-3.  **Supprimer l’objet blob :** Pour supprimer un objet blob avec un bail actif, vous devez d’abord résilier le bail.  
+3.  **Supprimer l’objet blob :** pour supprimer un objet blob avec un bail actif, vous devez d’abord résilier le bail.  
   
 ###  <a name="Code_Example"></a> Exemple de script PowerShell  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Si vous exécutez PowerShell 2.0, vous pouvez rencontrer des problèmes lors du chargement de l'assembly Microsoft WindowsAzure.Storage.dll. Nous vous recommandons de mettre à niveau [Powershell](https://docs.microsoft.com/powershell/) pour résoudre le problème. Vous pouvez également utiliser la solution de contournement suivante pour PowerShell 2.0 :  
->   
+> 
 >  -   Créez ou modifiez le fichier powershell.exe.config pour charger les assemblies .NET 2.0 et .NET 4.0 au moment de l'exécution avec les informations suivantes :  
->   
+> 
 >     ```  
 >     \<?xml version="1.0"?>   
 >     <configuration>   
@@ -55,7 +55,7 @@ ms.locfileid: "51663458"
 >             <supportedRuntime version="v2.0.50727"/>   
 >         </startup>   
 >     </configuration>  
->   
+> 
 >     ```  
   
  L’exemple de script suivant identifie les objets blob avec des baux actifs, puis résilie ces baux. Il montre également comment filtrer les identificateurs de bail de la version.  

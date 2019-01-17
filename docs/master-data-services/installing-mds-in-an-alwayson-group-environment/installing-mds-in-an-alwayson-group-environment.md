@@ -11,19 +11,19 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27ffbf76d0841479b10b515e0a66f14c8b6bfee3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395677"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215818"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Haute disponibilité et récupération d’urgence pour Master Data Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-**Résumé :** Cet article décrit une solution pour Master Data Services (MDS) hébergé sur une configuration de groupe de disponibilité AlwaysOn. L’article décrit comment installer et configurer SQL 2016 Master Data Services sur un groupe de disponibilité SQL 2016 AlwaysOn. L’objectif principal de cette solution est d’améliorer la haute disponibilité et la récupération d’urgence des données du serveur principal MDS hébergées sur une base de données SQL Server.
+**Résumé :** Cet article décrit une solution pour MDS (Master Data Services) hébergé sur une configuration de groupe de disponibilité Always On. L’article décrit comment installer et configurer SQL 2016 Master Data Services sur un groupe de disponibilité SQL 2016 AlwaysOn. L’objectif principal de cette solution est d’améliorer la haute disponibilité et la récupération d’urgence des données du serveur principal MDS hébergées sur une base de données SQL Server.
 
 ## <a name="introduction"></a>Introduction
 
@@ -156,8 +156,8 @@ Une fois la fonctionnalité WSFC installée sur toutes les instances, vous pouve
 7.  Dans la page **Résumé**, recherchez les éventuels messages d’avertissement ou d’erreur.
 
     Vous devez corriger les erreurs. En revanche, les avertissements ne correspondent pas nécessairement à des problèmes. Un message d’avertissement signifie que « l’élément testé répond éventuellement aux exigences, mais que vous devez vérifier quelque chose ». Par exemple, la figure 7 présente un avertissement « Valider la latence de l’accès au disque », éventuellement lié au fait que le disque est temporairement occupé à d’autres tâches ; vous pouvez ignorer cet avertissement. Pour plus de détails, vous devez consulter la documentation en ligne de chaque avertissement et message d’erreur. Voir figure 7.
- 
-![Assistant Validation d’une configuration, page Validation](media/Fig6_ValidationTests.png)
+ 
+    ![Assistant Validation d’une configuration, page Validation](media/Fig6_ValidationTests.png)
 
     Figure 6
 
@@ -187,7 +187,7 @@ Remarques :
 
 -   La fonctionnalité WSFC n’est peut-être pas disponible dans toutes les éditions de Windows Server. Vérifiez que votre édition a cette fonctionnalité.
 
--   Vérifiez que vous disposez des autorisations appropriées pour configurer le cluster WSFC dans Active Directory. Pour plus d’informations, consultez [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (Guide pas à pas des clusters de basculement : configurer des comptes dans Active Directory).
+-   Vérifiez que vous disposez des autorisations appropriées pour configurer le cluster WSFC dans Active Directory. En cas de problème, consultez [Guide pas à pas des clusters de basculement : Configuration des comptes dans Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx).
 
 Pour plus d’informations sur le cluster WSFC, consultez [Failover Clusters](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx) (Clusters de basculement).
 
@@ -313,7 +313,7 @@ Un groupe de disponibilité ne peut être créé que sur des bases de données e
 
     **Basculement automatique** : quand le réplica principal est arrêté et que le basculement automatique est activé, le groupe de disponibilité bascule automatiquement vers son réplica secondaire. Cette option ne peut être activée que sur les réplicas avec validations synchrones.
 
-    **Secondaire accessible en lecture** : par défaut, les utilisateurs ne peuvent se connecter à aucun réplica secondaire. Cette option permet aux utilisateurs de se connecter au réplica secondaire avec un accès en lecture seule.
+    **Secondaire accessible en lecture :** par défaut, les utilisateurs ne peuvent se connecter à aucun réplica secondaire. Cette option permet aux utilisateurs de se connecter au réplica secondaire avec un accès en lecture seule.
 
 8.  Dans la page **Spécifier les réplicas**, cliquez sur l’onglet **Écouteur**, puis effectuez la procédure suivante. Voir figure 18.
 
@@ -358,7 +358,7 @@ Un groupe de disponibilité ne peut être créé que sur des bases de données e
 
 3.  Cliquez sur **Basculer** pour effectuer un basculement vers un réplica synchrone et un réplica asynchrone. Vous vérifiez ainsi que le basculement se déroule correctement.
 
- La configuration du groupe de disponibilité AlwaysOn est terminée.
+ La configuration du groupe de disponibilité AlwaysOn est terminée.
 
 Pour plus d’informations sur le groupe de disponibilité AlwaysOn, consultez [Groupes de disponibilité AlwaysOn SQL Server 2016](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
 

@@ -1,6 +1,7 @@
 ---
-title: Groupe de disponibilité - Assistant Ajout d’une base de données à un groupe | Microsoft Docs
-ms.custom: ''
+title: Ajouter une base de données à un groupe de disponibilité avec « l’Assistant Groupe de disponibilité »
+description: Ajoutez une base de données à un groupe de disponibilité Always On à l’aide de « l’Assistant Groupe de disponibilité » dans SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,34 +16,26 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25bea0c614d55774207692ab275917d7ecdcab2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32a8945392df4d45dd6904a3921d2cbc770a4674
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724247"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211568"
 ---
-# <a name="availability-group---add-database-to-group-wizard"></a>Groupe de disponibilité - Assistant Ajout d’une base de données à un groupe
+# <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>Ajouter une base de données à un groupe de disponibilité Always On avec « l’Assistant Groupe de disponibilité »
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Utilisez l’Assistant Ajouter une base de données au groupe de disponibilité pour ajouter une ou plusieurs bases de données à un groupe de disponibilité Always On existant.  
   
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation de [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou de PowerShell pour ajouter une base de données, consultez [Ajouter une base de données à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md).  
   
- **Dans cette rubrique :**  
-  
--   **Avant de commencer :**  
-  
-     [Conditions préalables requises et restrictions](#Prerequisites)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour ajouter une base de données, utilisez :**  [Assistant Ajouter une base de données au groupe de disponibilité (SQL Server Management Studio)](#SSMSProcedure)  
+
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Si vous n’avez jamais ajouté de base de données à un groupe de disponibilité, consultez la section « Bases de données de disponibilité » dans [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Conditions préalables requises, restrictions et recommandations  
+##  <a name="Prerequisites"></a> Conditions préalables requises, restrictions et recommandations  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal actuel.  
   
@@ -56,13 +49,11 @@ ms.locfileid: "47724247"
   
      Si vous ne pouvez pas utiliser l'Assistant pour effectuer la synchronisation des données initiale complète, vous devez préparer vos bases de données secondaires manuellement. Vous pouvez le faire avant ou après l'exécution de l'Assistant. Pour plus d’informations, consultez [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de l'Assistant Ajouter une base de données au groupe de disponibilité (SQL Server Management Studio)  
- **Pour utiliser l'Assistant Ajouter une base de données au groupe de disponibilité**  
+##  <a name="use-the-new-availability-group-wizard"></a>Utiliser l’Assistant « Nouveau groupe de disponibilité »
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal du groupe de disponibilité et développez l'arborescence du serveur.  
   
@@ -99,7 +90,7 @@ ms.locfileid: "47724247"
   
 6.  Sur la page **Se connecter à des réplicas secondaires existants** , si les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité pour ce groupe de disponibilité sont toutes exécutées en tant que service dans le même compte d'utilisateur, cliquez sur **Se connecter à tous**. Si l'une des instances de serveur s'exécute en tant que service sous des comptes différents, cliquez sur le bouton **Se connecter** individuel figurant à droite du nom de chaque instance de serveur.  
   
-     Pour plus d’informations, consultez [Se connecter à la page à des réplicas secondaires existants &#40;Assistant Ajout de réplica : Assistant Ajout de bases de données&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
+     Pour plus d’informations, consultez la [page Se connecter à des réplicas secondaires existants &#40;Assistant Ajout de réplica : Assistant Ajout de bases de données&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
   
 7.  La page **Validation** vérifie si les valeurs que vous avez spécifiées dans cet Assistant répondent aux exigences de l'Assistant Nouveau groupe de disponibilité. Pour effectuer un changement, vous pouvez cliquer sur **Précédent** pour revenir à une page antérieure de l'assistant pour modifier une ou plusieurs valeurs. Cliquez sur **Suivant** pour revenir à la page **Validation**, puis cliquez sur **Réexécuter la validation**.  
   

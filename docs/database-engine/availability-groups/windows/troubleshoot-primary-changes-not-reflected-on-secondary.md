@@ -1,6 +1,7 @@
 ---
-title: 'Dépanner : les changements sur le réplica principal ne sont pas répercutés sur le réplica secondaire (groupes de disponibilité Always On - SQL Server) | Microsoft Docs'
-ms.custom: ag-guide
+title: Déterminer pourquoi les changements ne sont pas visibles sur le réplica secondaire dans un groupe de disponibilité - SQL Server
+ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
+ms.custom: ag-guide,seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3604871a67e4d5f642015eab07ca11e301ae286c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feed1ad23a72ef00d264994373e0ef23f4d1c8bd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803083"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203478"
 ---
-# <a name="troubleshoot-changes-on-the-primary-replica-are-not-reflected-on-the-secondary-replica"></a>Dépanner : les changements sur le réplica principal ne sont pas répercutés sur le réplica secondaire
+# <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Déterminer pourquoi les changements apportés au réplica principal ne sont pas répercutés sur le réplica secondaire dans un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L’application cliente mène à bien une mise à jour sur le réplica principal, mais l’exécution d’une requête sur le réplica secondaire montre que le changement n’a pas été répercuté. Ce cas part du principe que l’état de synchronisation de votre disponibilité est sain. La plupart du temps, ce problème se résout tout seul en quelques minutes.  
   

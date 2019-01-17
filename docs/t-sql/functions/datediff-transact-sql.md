@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 12/13/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -32,12 +32,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40e1027474bc84f3e30862ee43a61b3d199e8549
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 9af12ecd407504e4f04327260ccb446d395c7c9f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970460"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432702"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -96,9 +96,9 @@ Consultez *startdate*.
   
 ## <a name="return-value"></a>Valeur retournée  
   
--   Chaque *datepart* spécifique et les abréviations pour ce *datepart* retournent la même valeur.  
+Chaque *datepart* spécifique et les abréviations pour ce *datepart* retournent la même valeur.  
   
-Si une valeur de retour est hors limites pour **int** (-2 147 483 648 à +2 147 483 647), `DATEDIFF` retourne une erreur.  Pour **millisecond**, la différence maximale entre *startdate* et *enddate* est de 24 jours, 20 heures, 31 minutes et 23,647 secondes. Pour **second**, la différence maximale est de 68 ans.
+Si une valeur de retour est hors limites pour **int** (-2 147 483 648 à +2 147 483 647), `DATEDIFF` retourne une erreur.  Pour **millisecond**, la différence maximale entre *startdate* et *enddate* est de 24 jours, 20 heures, 31 minutes et 23,647 secondes. Pour **seconde**, la différence maximale est de 68 ans, 19 jours, 3 heures, 14 minutes et 7 secondes.
   
 Si *startdate* et *enddate* se voient tous les deux assigner uniquement une valeur d’heure et que *datepart* n’est pas un *datepart* d’heure, `DATEDIFF` retourne 0.
   
@@ -106,12 +106,12 @@ Si *startdate* et *enddate* se voient tous les deux assigner uniquement une vale
   
 Dans la mesure où [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) n’offre qu’une précision à la minute, les secondes et millisecondes ont toujours la valeur 0 dans la valeur de retour quand vous utilisez une valeur *smalldatetime* pour *startdate* ou **enddate**.
   
-Si seule une valeur d’heure est assignée à une variable d’un type de données date, `DATEDIFF` affecte à la partie date manquante la valeur par défaut : 1900-01-01. Si seule une valeur de date est assignée à une variable d’un type de données date ou heure, `DATEDIFF` affecte à la partie heure manquante la valeur par défaut : 00:00:00. Si *startdate* ou *enddate* a uniquement une partie heure et que l’autre a uniquement une partie date, `DATEDIFF` affecte aux parties heure et date manquantes les valeurs par défaut.
+Si seule une valeur d’heure est affectée à une variable d’un type de données date, `DATEDIFF` définit la partie date manquante sur la valeur par défaut :`1900-01-01`. Si seule une valeur de date est affectée à une variable d’un type de données date ou heure, `DATEDIFF` définit la partie heure manquante sur la valeur par défaut : `00:00:00`. Si *startdate* ou *enddate* a uniquement une partie heure et que l’autre a uniquement une partie date, `DATEDIFF` affecte aux parties heure et date manquantes les valeurs par défaut.
   
 Si *startdate* et *enddate* ont des types de données date différents et que l’un a plus de parties heure ou une meilleure précision en fractions de seconde que l’autre, `DATEDIFF` affecte aux parties manquantes de l’autre la valeur 0.
   
 ## <a name="datepart-boundaries"></a>Limites de datepart  
-Les instructions suivantes ont les mêmes valeurs *startdate* et *enddate*. Ces dates sont adjacentes et ont une différence horaire de 0,0000001 seconde. La différence entre les *startdate* et *endate* dans chaque instruction traverse une limite d’heure ou de calendrier de son *datepart*. Chaque instruction retourne 1. Si *startdate* et *enddate* ont des valeurs d’année différentes, mais les mêmes valeurs de semaine de calendrier, `DATEDIFF` retourne 0 pour *datepart* **week**.
+Les instructions suivantes ont les mêmes valeurs *startdate* et *enddate*. Ces dates sont adjacentes et ont une différence d’une microseconde (0,0000001 seconde). La différence entre les *startdate* et *endate* dans chaque instruction traverse une limite d’heure ou de calendrier de son *datepart*. Chaque instruction retourne 1. Si *startdate* et *enddate* ont des valeurs d’année différentes, mais les mêmes valeurs de semaine de calendrier, `DATEDIFF` retourne 0 pour *datepart* **week**.
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -127,11 +127,13 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 ```
   
 ## <a name="remarks"></a>Notes   
-Utilisez `DATEDIFF` dans les clauses SELECT, <list>WHERE, HAVING, GROUP BY et ORDER BY.
+Utilisez `DATEDIFF` dans les clauses `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` et `ORDER BY`.
   
 `DATEDIFF` caste implicitement les littéraux de chaîne en type **datetime2**. Cela signifie que `DATEDIFF` ne prend pas en charge le format YDM quand la date est passée comme chaîne. Vous devez caster explicitement la chaîne en type **datetime** ou **smalldatetime** pour utiliser le format AJM.
   
-La spécification de SET DATEFIRST n’a aucun effet sur `DATEDIFF`. `DATEDIFF` utilise toujours Dimanche comme premier jour de la semaine pour que la fonction soit déterministe.
+La spécification de `SET DATEFIRST` n’a pas d’effet sur `DATEDIFF`. `DATEDIFF` utilise toujours Dimanche comme premier jour de la semaine pour que la fonction soit déterministe.
+
+`DATEDIFF` peut dépasser la capacité avec une précision d’une **minute** ou plus si la différence entre *enddate* et *startdate* retourne une valeur qui est hors limites pour **int **.
   
 ## <a name="examples"></a>Exemples  
 Ces exemples utilisent différents types d’expressions comme arguments pour les paramètres *startdate* et *enddate*.
@@ -151,7 +153,7 @@ SELECT DATEDIFF(day, startDate, endDate) AS 'Duration'
 -- Returns: 1  
 ```  
   
-### <a name="b-specifying-user-defined-variables-for-startdate-and-enddate"></a>B. Spécification de variables définies par l'utilisateur pour les dates de début et de fin  
+### <a name="b-specifying-user-defined-variables-for-startdate-and-enddate"></a>b. Spécification de variables définies par l'utilisateur pour les dates de début et de fin  
 Dans cet exemple, les variables définies par l’utilisateur font office d’arguments pour *startdate* et *enddate*.
   
 ```sql
@@ -237,11 +239,71 @@ FROM Sales.SalesOrderDetail sod
 WHERE soh.SalesOrderID IN(43659, 58918);  
 GO  
 ```  
+
+### <a name="i-finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>I. Recherche de la différence entre des dates startdate et enddate sous forme de chaînes de parties de date
+
+```sql
+DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
+DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
+
+SET @date1 = '1900-01-01 00:00:00.000'
+SET @date2 = '2018-12-12 07:08:01.123'
+
+SELECT @years = DATEDIFF(yy, @date1, @date2)
+IF DATEADD(yy, -@years, @date2) < @date1 
+SELECT @years = @years-1
+SET @date2 = DATEADD(yy, -@years, @date2)
+
+SELECT @months = DATEDIFF(mm, @date1, @date2)
+IF DATEADD(mm, -@months, @date2) < @date1 
+SELECT @months=@months-1
+SET @date2= DATEADD(mm, -@months, @date2)
+
+SELECT @days=DATEDIFF(dd, @date1, @date2)
+IF DATEADD(dd, -@days, @date2) < @date1 
+SELECT @days=@days-1
+SET @date2= DATEADD(dd, -@days, @date2)
+
+SELECT @hours=DATEDIFF(hh, @date1, @date2)
+IF DATEADD(hh, -@hours, @date2) < @date1 
+SELECT @hours=@hours-1
+SET @date2= DATEADD(hh, -@hours, @date2)
+
+SELECT @minutes=DATEDIFF(mi, @date1, @date2)
+IF DATEADD(mi, -@minutes, @date2) < @date1 
+SELECT @minutes=@minutes-1
+SET @date2= DATEADD(mi, -@minutes, @date2)
+
+SELECT @seconds=DATEDIFF(s, @date1, @date2)
+IF DATEADD(s, -@seconds, @date2) < @date1 
+SELECT @seconds=@seconds-1
+SET @date2= DATEADD(s, -@seconds, @date2)
+
+SELECT @milliseconds=DATEDIFF(ms, @date1, @date2)
+
+SELECT @result= ISNULL(CAST(NULLIF(@years,0) AS VARCHAR(10)) + ' years,','')
+     + ISNULL(' ' + CAST(NULLIF(@months,0) AS VARCHAR(10)) + ' months,','')    
+     + ISNULL(' ' + CAST(NULLIF(@days,0) AS VARCHAR(10)) + ' days,','')
+     + ISNULL(' ' + CAST(NULLIF(@hours,0) AS VARCHAR(10)) + ' hours,','')
+     + ISNULL(' ' + CAST(@minutes AS VARCHAR(10)) + ' minutes and','')
+     + ISNULL(' ' + CAST(@seconds AS VARCHAR(10)) 
+          + CASE WHEN @milliseconds > 0 THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
+               ELSE '' END 
+          + ' seconds','')
+
+SELECT @result
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] 
+
+```
+118 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
+```
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Ces exemples utilisent différents types d’expressions comme arguments pour les paramètres *startdate* et *enddate*.
   
-### <a name="i-specifying-columns-for-startdate-and-enddate"></a>I. Spécification de colonnes pour les dates de début et de fin  
+### <a name="j-specifying-columns-for-startdate-and-enddate"></a>J. Spécification de colonnes pour les dates de début et de fin  
 Cet exemple calcule le nombre de limites de jour qui sont traversées entre les dates de deux colonnes dans une table.
   
 ```sql
@@ -256,7 +318,7 @@ SELECT TOP(1) DATEDIFF(day, startDate, endDate) AS Duration
 -- Returns: 1  
 ```  
   
-### <a name="j-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>J. Spécification de sous-requêtes scalaires et de fonctions scalaires pour les dates de début et de fin  
+### <a name="k-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>K. Spécification de sous-requêtes scalaires et de fonctions scalaires pour les dates de début et de fin  
 Cet exemple utilise des sous-requêtes et des fonctions scalaires comme arguments pour *startdate* et *enddate*.
   
 ```sql
@@ -268,7 +330,7 @@ FROM dbo.DimEmployee;
   
 ```  
   
-### <a name="k-specifying-constants-for-startdate-and-enddate"></a>K. Spécification de constantes pour les dates de début et de fin  
+### <a name="l-specifying-constants-for-startdate-and-enddate"></a>L. Spécification de constantes pour les dates de début et de fin  
 Cet exemple suivant des constantes à caractères comme arguments pour *startdate* et *enddate*.
   
 ```sql
@@ -279,7 +341,7 @@ SELECT TOP(1) DATEDIFF(day,
     '2007-05-08 09:53:01.0376635') FROM DimCustomer;  
 ```  
   
-### <a name="l-specifying-ranking-functions-for-startdate"></a>L. Spécification de fonctions de classement pour la date de début  
+### <a name="m-specifying-ranking-functions-for-startdate"></a>M. Spécification de fonctions de classement pour la date de début  
 Cet exemple utilise une fonction de classement comme argument pour *startdate*.
   
 ```sql
@@ -291,7 +353,7 @@ SELECT FirstName, LastName,
 FROM dbo.DimEmployee;  
 ```  
   
-### <a name="m-specifying-an-aggregate-window-function-for-startdate"></a>M. Spécification d'une fonction d'agrégation pour la date de début  
+### <a name="n-specifying-an-aggregate-window-function-for-startdate"></a>N. Spécification d'une fonction d'agrégation pour la date de début  
 Cet exemple utilise une fonction d’agrégation comme argument pour *startdate*.
   
 ```sql
@@ -307,6 +369,3 @@ FROM dbo.DimEmployee
 [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md)  
 [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
-  
-
-

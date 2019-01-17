@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 3b9b0e74eebe3a1cf86af9e3bf8a9a8d4e58495b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711200"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372481"
 ---
 # <a name="query-store-usage-scenarios"></a>Scénarios d’utilisation du Magasin des requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,12 +45,12 @@ ms.locfileid: "52711200"
   
  ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
- Pour obtenir une description détaillée du scénario, reportez-vous au blog [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) .  
+ Pour une description détaillée du scénario, reportez-vous au blog [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>Identifier et paramétrer les principales requêtes consommatrices de ressources  
  Même si votre charge de travail peut générer des milliers de requêtes, seules quelques-unes d’entre elles utilisent généralement la plupart des ressources système et, par conséquent, nécessitent une attention particulière. Parmi les principales requêtes consommatrices de ressources, vous trouvez généralement les requêtes qui ont fait l’objet d’une régression ou celles qui peuvent être améliorées avec un paramétrage supplémentaire.  
   
- La façon la plus simple de commencer l’exploration consiste à ouvrir **Principales requêtes consommatrices de ressources** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. L’interface utilisateur est divisée en trois volets : un histogramme représentant les principales requêtes consommatrices de ressources (à gauche), un résumé du plan pour la requête sélectionnée (à droite) et un plan de requête visuel pour le plan sélectionné (en bas). Cliquez sur le bouton **Configurer** pour contrôler le nombre de requêtes que vous voulez analyser et l’intervalle de temps digne d’intérêt. Par ailleurs, vous pouvez choisir entre différentes dimensions de consommation de ressources (durée, processeur, mémoire, E/S, nombre d’exécutions) et la ligne de base (Moyenne, Min, Max, Total, Écart type).  
+ La façon la plus simple de commencer l’exploration consiste à ouvrir **Principales requêtes consommatrices de ressources** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. L’interface utilisateur est divisée en trois volets : un histogramme représentant les principales requêtes consommatrices de ressources (à gauche), un résumé du plan pour la requête sélectionnée (à droite) et un plan de requête visuel pour le plan sélectionné (en bas). Cliquez sur le bouton **Configurer** pour contrôler le nombre de requêtes que vous voulez analyser et l’intervalle de temps digne d’intérêt. Par ailleurs, vous pouvez choisir entre différentes dimensions de consommation de ressources (durée, processeur, mémoire, E/S, nombre d’exécutions) et la ligne de base (Moyenne, Min, Max, Total, Écart type).  
   
  ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
@@ -162,7 +162,7 @@ En général, cette situation se produit si votre application génère des requ�
   
 Si vous contrôlez le code d’application, vous pouvez envisager de récrire la couche d’accès aux données pour utiliser des procédures stockées ou des requêtes paramétrables. Toutefois, il est possible d’améliorer considérablement cette situation sans apporter de modifications à l’application en forçant le paramétrage des requêtes pour l’ensemble de la base de données (toutes les requêtes) ou pour les modèles de requête individuels avec la même valeur query_hash.  
   
-L’approche avec des modèles de requête individuels requiert la création d’un repère de plan :  
+L’approche avec des modèles de requête individuels requiert la création d’un repère de plan :  
   
 ```sql  
 --Apply plan guide for the selected query template 

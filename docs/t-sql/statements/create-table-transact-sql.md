@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a74cdb7827351c6616a7d37ad3deb80a068a375c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394520"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980385"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -390,10 +390,10 @@ column_name <data_type>
   
  ON {*partition_scheme* | *filegroup* | **"** default **"**} peut également être spécifié dans une contrainte PRIMARY KEY ou UNIQUE. Ces contraintes créent des index. Si *filegroup* est spécifié, l’index est stocké dans le groupe de fichiers nommé. Si **"** default **"** est spécifié, ou si ON n’est pas spécifié du tout, l’index est stocké dans le même groupe de fichiers que la table. Si la contrainte PRIMARY KEY ou UNIQUE crée un index cluster, les pages de données de la table sont stockées dans le même groupe de fichiers que l'index. Si CLUSTERED est spécifié ou la contrainte crée un index cluster d’une autre manière, et qu’une valeur *partition_scheme* est spécifiée qui diffère des valeurs *partition_scheme* ou *filegroup* de la définition de table, ou vice versa, seule la définition de la contrainte sera honorée et l’autre sera ignorée.  
   
-> [!NOTE]  
+> [!NOTE]
 >  L'élément « default » n'est pas un mot clé dans ce contexte. Il s’agit de l’identificateur du groupe de fichiers par défaut et il doit être délimité, comme dans ON **"** default **"** ou ON **[** default **]**. Si **"** default **"** est spécifié, l’option QUOTED_IDENTIFIER doit être ON pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Après avoir créé une table partitionnée, pensez à affecter à l'option LOCK_ESCALATION de la table la valeur AUTO. Cela peut améliorer la concurrence en permettant l'escalade des verrous au niveau de la partition (HoBT) plutôt que de la table. Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
  TEXTIMAGE_ON { *filegroup*| **"** default **"** }  
@@ -401,12 +401,12 @@ column_name <data_type>
   
  TEXTIMAGE_ON n'est pas autorisé s'il n'y a pas de colonne de valeur élevée dans la table. TEXTIMAGE_ON ne peut pas être spécifié si *partition_scheme* est spécifié. Si **"** default **"** est spécifié, ou si TEXTIMAGE_ON n’est pas spécifié du tout, les colonnes de valeur élevée sont stockées dans le groupe de fichiers par défaut. Le stockage de données de colonnes de valeur élevée tel que spécifié dans CREATE TABLE ne peut plus être modifié ultérieurement.  
 
-> [!NOTE]  
+> [!NOTE]
 > Varchar(max), nvarchar(max), varbinary(max), xml et les valeurs UDT volumineuses sont stockées directement dans la ligne de données, jusqu’à une limite de 8000 octets et tant que la valeur peut être contenue dans l’enregistrement. Si la valeur ne tient pas dans l’enregistrement, un pointeur est stocké dans la ligne et le reste est stocké hors de la ligne dans l’espace de stockage LOB. La valeur par défaut est 0.
-TEXTIMAGE_ON change uniquement l’emplacement de l’espace de stockage LOB. Il n’a pas d’impact sur le moment où les données sont stockées dans la ligne. Utilisez l’option hors ligne des types valeur volumineux de sp_tableoption pour stocker la valeur LOB entière hors de la ligne. 
-
-
-> [!NOTE]  
+> TEXTIMAGE_ON change uniquement l’emplacement de l’espace de stockage LOB. Il n’a pas d’impact sur le moment où les données sont stockées dans la ligne. Utilisez l’option hors ligne des types valeur volumineux de sp_tableoption pour stocker la valeur LOB entière hors de la ligne. 
+> 
+> 
+> [!NOTE]
 >  L'élément « default » n'est pas un mot clé dans ce contexte. Il représente l’identificateur du groupe de fichiers par défaut et doit être délimité, par exemple de la manière suivante : TEXTIMAGE_ON **"** default **"** ou TEXTIMAGE_ON **[** default **]**. Si **"** default **"** est spécifié, l’option QUOTED_IDENTIFIER doit être ON pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } 
@@ -618,7 +618,7 @@ Indique qu’il faut créer un index sur la table. Il peut s’agir d’un index
  Lorsque l'attribut de stockage FILESTREAM est spécifié pour une colonne, toutes les valeurs de cette colonne sont stockées dans un conteneur de données FILESTREAM sur le système de fichiers.  
   
  COLLATE *collation_name*  
- Indique le classement de la colonne. Le nom du classement peut être un nom de classement Windows ou un nom de classement SQL. *collation_name* s’applique uniquement aux colonnes des types de données **char**, **varchar**, **texte**, **nchar**,  **nvarchar** et **ntext**. Si cette valeur n'est pas spécifiée, la colonne reçoit le classement du type de données utilisateur, si son type de données est un type de données utilisateur, ou le classement par défaut de la base de données.  
+ Indique le classement de la colonne. Le nom du classement peut être un nom de classement Windows ou un nom de classement SQL. *collation_name* s’applique uniquement aux colonnes des types de données **char**, **varchar**, **texte**, **nchar**, ** nvarchar** et **ntext**. Si cette valeur n'est pas spécifiée, la colonne reçoit le classement du type de données utilisateur, si son type de données est un type de données utilisateur, ou le classement par défaut de la base de données.  
   
  Pour plus d’informations sur les noms de classements Windows et SQL, consultez [Nom de classement Windows](../../t-sql/statements/windows-collation-name-transact-sql.md) et [Nom de classement SQL](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
@@ -706,7 +706,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  L'action ON UPDATE CASCADE, SET NULL ou SET DEFAULT ne peut pas être définie si le déclencheur ON UPDATE de l'option INSTEAD OF existe déjà dans la table en cours de modification.  
   
- Par exemple, dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], la table **ProductVendor** a une relation référentielle avec la table **Vendor**. La clé étrangère **ProductVendor.BusinessEntity** référence la clé primaire **Vendor.BusinessEntityID**.  
+ Par exemple, dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], la table **ProductVendor** a une relation référentielle avec la table **Vendor** : la clé étrangère **ProductVendor.BusinessEntity** référence la clé primaire **Vendor.BusinessEntityID**.  
   
  Si une instruction UPDATE est exécutée sur une ligne de la table **Vendor** et qu’une action ON UPDATE CASCADE est spécifiée pour **ProductVendor.BusinessEntityID**, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] vérifie la présence de lignes dépendantes dans la table **ProductVendor**. Le cas échéant, les lignes dépendantes détectées dans la table **ProductVendor** sont mises à jour, ainsi que la ligne référencée dans la table **Vendor**.  
   
@@ -797,7 +797,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
 -   Spécifiez des numéros de partition pour plusieurs partitions individuelles séparées par des virgules, par exemple : ON PARTITIONS (1, 5).  
   
--   Spécifiez à la fois des plages et des partitions individuelles, par exemple : ON PARTITIONS (2, 4, 6 TO 8).  
+-   Spécifiez à la fois des plages et des partitions individuelles, par exemple : ON PARTITIONS (2, 4, 6 TO 8)  
   
  `<range>` peut être spécifié sous la forme de numéros de partitions séparés par le mot TO, par exemple : ON PARTITIONS (6 TO 8).  
   
@@ -916,7 +916,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MIGRATION_STATE = { OUTBOUND |  INBOUND | PAUSED }  
    
-**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], et Azure SQL . 
+**S’applique à **: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], et Azure SQL . 
   
 -   Spécifiez `OUTBOUND` pour migrer des données de SQL Server vers Azure.  
   
@@ -930,7 +930,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
    
 **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Azure SQL Database Managed Instance ne prend pas en charge les tables à mémoire optimisée. 
   
- La valeur ON indique que la table est à mémoire optimisée. Les tables à mémoire optimisée font partie de la fonctionnalité OLTP en mémoire, qui sert à optimisé les performances de traitement des transactions. Pour bien démarrer avec OLTP en mémoire, consultez [Démarrage rapide 1 : technologies OLTP en mémoire pour accélérer les performances Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Pour plus d’informations sur les tables à mémoire optimisée, consultez [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ La valeur ON indique que la table est à mémoire optimisée. Les tables à mémoire optimisée font partie de la fonctionnalité OLTP en mémoire, qui sert à optimisé les performances de traitement des transactions. Pour bien démarrer avec OLTP en mémoire, consultez [Démarrage rapide 1 : technologies OLTP en mémoire pour accélérer les performances Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Pour plus d’informations sur les tables à mémoire optimisée, consultez [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  La valeur par défaut OFF indique qu’il s’agit d’une table sur disque.  
   
@@ -957,7 +957,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
    
 **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
-Vous pouvez spécifier les index de table et de colonne dans le cadre de l’instruction CREATE TABLE. Pour plus d’informations sur l’ajout et la suppression d’index sur des tables à mémoire optimisée, consultez [Modification des tables à mémoire optimisée](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).
+Vous pouvez spécifier les index de table et de colonne dans le cadre de l’instruction CREATE TABLE. Pour plus d’informations sur l’ajout et la suppression d’index sur des tables à mémoire optimisée, consultez : [Modification des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
   
  HASH  
    
@@ -1229,7 +1229,7 @@ SELECT * FROM tempdb.sys.database_files
 |type CLR défini par l'utilisateur|La possibilité de valeur NULL est déterminée en fonction de la définition de la colonne.|  
 |Type de données fourni par le système|Si le type de données fourni par le système ne possède qu'une option, il a priorité. Les types de données **timestamp** doivent être NOT NULL. Lorsque les paramètres de session ont pour valeur ON en utilisant SET :<br />**ANSI_NULL_DFLT_ON** = ON, NULL est affecté.  <br />**ANSI_NULL_DFLT_OFF** = ON, NOT NULL est affecté.<br /><br /> Lorsque les paramètres de base de données sont configurés en utilisant ALTER DATABASE :<br />**ANSI_NULL_DEFAULT_ON** = ON, NULL est affecté.  <br />**ANSI_NULL_DEFAULT_OFF** = ON, NOT NULL est affecté.<br /><br /> Pour voir le paramètre de la base de données pour ANSI_NULL_DEFAULT, utilisez la vue de catalogue **sys.databases**.|  
   
- Si aucune des options ANSI_NULL_DFLT n'est définie pour la session et si la base de données est définie avec les valeurs par défaut (ANSI_NULL_DEFAULT étant OFF), la valeur par défaut, NOT NULL, est affectée.  
+ Si aucune des options ANSI_NULL_DFLT n’est définie pour la session et si la base de données est définie avec les valeurs par défaut (ANSI_NULL_DEFAULT est OFF), la valeur par défaut, NOT NULL, est affectée.  
   
  La possibilité de valeurs NULL dans les colonnes calculées est déterminée automatiquement par le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour rechercher si les valeurs NULL sont acceptées ou non par ce type de colonne, utilisez la fonction COLUMNPROPERTY avec la propriété **AllowsNull**.  
   
@@ -1262,7 +1262,7 @@ CREATE TABLE dbo.Employee (EmployeeID int
 PRIMARY KEY CLUSTERED);  
 ```  
   
-### <a name="b-using-foreign-key-constraints"></a>B. Utilisation des contraintes FOREIGN KEY  
+### <a name="b-using-foreign-key-constraints"></a>b. Utilisation des contraintes FOREIGN KEY  
  Une contrainte FOREIGN KEY sert à référencer une autre table. Les clés étrangères peuvent être des clés à colonne unique ou sur plusieurs colonnes. Cet exemple montre une contrainte FOREIGN KEY à colonne unique dans la table `SalesOrderHeader` qui fait référence à la table `SalesPerson`. Seule la clause REFERENCES est obligatoire pour une contrainte FOREIGN KEY à colonne unique.  
   
 ```sql  
@@ -1438,7 +1438,7 @@ CREATE TABLE dbo.mylogintable
 ```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
-    EmployeeId int NOT NULL PRIMARY KEY,  
+     EmployeeId int NOT NULL PRIMARY KEY  
     ,Photo varbinary(max) FILESTREAM NULL  
     ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL  
         UNIQUE DEFAULT NEWID()  

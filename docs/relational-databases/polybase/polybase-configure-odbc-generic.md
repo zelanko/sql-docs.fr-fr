@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 414c9650a1ae933e6e472ab09a26e6d26ae503fd
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 98e06e3199d4ce8750a4a5956aec6d97c141b33b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49947408"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214254"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurer PolyBase pour accéder à des données externes dans SQL Server
 
@@ -33,13 +33,13 @@ Commencez par télécharger et installer le pilote ODBC de la source de données
 
 ![Groupes de scale-out PolyBase](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
-  > **IMPORTANT !**
-  >
-  > Pour améliorer les performances des requêtes, vérifiez que le regroupement des connexions est activé pour le pilote. Vous pouvez activer cette option sous « Administrateur de sources de données ODBC ».
-
+> **IMPORTANT !**
+> 
+> Pour améliorer les performances des requêtes, vérifiez que le regroupement des connexions est activé pour le pilote. Vous pouvez activer cette option sous « Administrateur de sources de données ODBC ».
+> 
 > **Remarque**
 > 
->Le nom du pilote (entouré ci-dessus) doit être spécifié lors de la création de la source de données externe (étape 3 ci-dessous).
+> Le nom du pilote (entouré ci-dessus) doit être spécifié lors de la création de la source de données externe (étape 3 ci-dessous).
 
 ## <a name="create-an-external-table"></a>Créer une table externe
 
@@ -114,7 +114,7 @@ Ces objets vont être créés dans cette section :
      );
       ```
 
-1. **Facultatif :** Créez des statistiques sur une table externe.
+1. **Facultatif :** Créez des statistiques sur une table externe.
 
     Pour des performances de requêtes optimales, nous vous recommandons de créer des statistiques sur les colonnes de table externe, en particulier celles utilisées pour les jointures, les filtres et les agrégats.
 

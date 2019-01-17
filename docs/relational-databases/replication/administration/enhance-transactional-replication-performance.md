@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5c17d05b00c711c311e41ac98add0e6fd549f58
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67f22e0608493ba3f33144c8d97b9cb275a5c506
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535763"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207088"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Améliorer les performances de la réplication transactionnelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "52535763"
   
      Le fait de configurer les agents afin qu'ils s'exécutent en mode continu au lieu de planifier de fréquentes exécutions (par exemple, toutes les minutes) permet d'améliorer les performances de la réplication, car l'Agent n'a pas besoin de démarrer et de s'arrêter. Lorsque vous configurez l'Agent de distribution pour qu'il s'exécute en mode continu, les modifications sont diffusées avec une faible latence aux autres serveurs de la topologie qui sont connectés. Pour plus d'informations, consultez :  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [Spécifier des planifications de synchronisation](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Spécifier des planifications de synchronisation](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Paramètres de l'Agent de distribution et de l'Agent de lecture du journal  
 Les paramètres de profil de l’Agent sont souvent ajustés de manière à augmenter le débit de l’Agent de lecture du journal et de l’Agent de Distribution avec des systèmes OLTP à fort trafic. 
@@ -142,11 +142,11 @@ Cet exemple aboutit à un état dans lequel aucune session n’exécute leurs co
 
 Vous remarquerez peut-être les tendances suivantes dans les compteurs de performances de l’Agent de distribution pendant ce délai d’expiration de la requête : 
 
-- La valeur du compteur de performances **Serveur de distribution : commandes livrées/s** est toujours 0.
-- La valeur du compteur de performances **Serveur de distribution : transactions livrées/s** est toujours 0.
-- Le compteur de performances **Serveur de distribution : latence de livraison** indique une augmentation de la valeur jusqu’à ce que l’interblocage de thread soit résolu.
+- La valeur du compteur de performances **Serveur de distribution : commandes livrées/s** est toujours 0.
+- La valeur du compteur de performances **Serveur de distribution : transactions livrées/s** est toujours 0.
+- Le compteur de performances **Serveur de distribution : latence de livraison** indique une augmentation de la valeur jusqu’à ce que l’interblocage de thread soit résolu.
 
-La rubrique « Agent de distribution de réplication » dans la documentation en ligne de SQL Server contient la description suivante du paramètre *SubscriptionStreams* : « Si l’une des connexions ne parvient pas à s’exécuter ou à valider, toutes les connexions abandonnent le lot actuel et l’agent utilise un seul flux pour retenter les lots ayant échoué ».
+La rubrique « Agent de distribution de réplication » de la documentation en ligne de SQL Server contient la description suivante pour le paramètre *SubscriptionStreams* : « Si l’une des connexions ne réussit pas à s’exécuter ou n’est pas validée, toutes les connexions abandonneront le lot actuel, et l’Agent utilisera un flux unique pour une nouvelle tentative sur les lots ayant échoué. ».
 
 L’Agent de distribution utilise une session pour retenter le lot qui n’a pas pu être appliqué. Une fois que l’Agent de distribution applique correctement le lot, il reprend l’utilisation de plusieurs sessions sans avoir à redémarrer.
 
@@ -156,7 +156,7 @@ L’Agent de distribution utilise une session pour retenter le lot qui n’a pas
 La validation d'un ensemble de transactions comporte une charge fixe ; en validant un grand nombre de transactions moins fréquemment, la charge est répartie sur un volume de données plus important.  L’augmentation de CommitBatchSize (jusqu’à 200) a des chances d’améliorer les performances, car les transactions validées auprès de l’abonné sont plus nombreuses. Cependant, l'avantage obtenu par l'augmentation de ce paramètre disparaît car le coût d'application des modifications est lié à d'autres facteurs, comme l'E/S maximum du disque contenant le journal. Il y a par ailleurs un inconvénient à prendre en compte : en cas de défaillance entraînant le redémarrage de l’Agent de distribution, celui-ci doit se restaurer et réappliquer un grand nombre de transactions. Sur les réseaux non fiables, il peut résulter d’une valeur moins élevée une baisse des défaillances et une diminution du nombre de transactions à restaurer et à réappliquer en cas de défaillance.  
   
 
-##<a name="see-more"></a>En savoir plus
+## <a name="see-more"></a>En savoir plus
   
 [Utiliser des profils d’agent de réplication](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [Afficher et modifier des paramètres d’invite de commandes d’un Agent de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  

@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 46e55bfb8e233be504018207886f60cd4fb448f6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cd06451150d655d7173025ecdaf7bc4247a22da1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532190"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206178"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Éditions et fonctionnalités prises en charge de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ Pour obtenir les notes de publication les plus récentes et des informations sur
 ### <a name="try-sql-server"></a>Essayez SQL Server !    
     
 > [![Télécharger à partir du Centre d’évaluation](../analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Télécharger SQL Server 2016 à partir du Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
-    
+> 
 > ![Petite machine virtuelle Azure](../analysis-services/media/azure-virtual-machine-small.png) **[Faites tourner une machine virtuelle sur laquelle SQL Server 2016 est déjà installé](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Éditions de[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]   
@@ -75,7 +75,7 @@ Pour obtenir les notes de publication les plus récentes et des informations sur
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>Utilisation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec un serveur Internet  
  Sur un serveur Internet, comme un serveur exécutant les services Internet (IIS), vous installez généralement les outils clients [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les outils clients comprennent les composants de connectivité clients utilisés par une application qui se connecte à une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-> **REMARQUE :**  bien que vous puissiez installer une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un ordinateur exécutant les services Internet (IIS), ceci ne se fait en général que pour des sites web de petite taille qui ne possèdent qu’un seul ordinateur serveur. La plupart des sites Web disposent de leur système IIS de niveau intermédiaire sur un serveur ou sur un cluster de serveurs, et de leurs bases de données sur un serveur distinct ou sur une fédération distincte de serveurs.  
+> **REMARQUE :**  Bien que vous puissiez installer une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un ordinateur exécutant les services Internet (IIS), ceci ne se fait en général que pour des sites Web de petite taille qui ne possèdent qu'un seul ordinateur serveur. La plupart des sites Web disposent de leur système IIS de niveau intermédiaire sur un serveur ou sur un cluster de serveurs, et de leurs bases de données sur un serveur distinct ou sur une fédération distincte de serveurs.  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>Utilisation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec des applications client/serveur  
  Vous pouvez installer uniquement les composants clients de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un ordinateur exécutant des applications client/serveur qui se connectent directement à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Une installation de composants clients est également un bon choix si vous administrez une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un serveur de base de données ou si vous prévoyez de développer des applications [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -125,7 +125,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Mémoire maximale du pool de mémoires tampons par instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Maximum du système d’exploitation|128 Go|64 Go|1410 Mo|1410 Mo|
 |Mémoire maximale du cache de segments columnstore par instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go<sup>2</sup>| 16 Go<sup>2</sup>| 352 Mo<sup>2</sup>| 352 Mo<sup>2</sup>|  
 |Taille maximale des données optimisées en mémoire par base de données dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go<sup>2</sup>| 16 Go<sup>2</sup>| 352 Mo<sup>2</sup>| 352 Mo<sup>2</sup>|  
-|Mémoire maximale utilisée par instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Maximum du système d’exploitation|Tabulaire : 16 Go<br /><br /> MOLAP : 64 Go|Néant|Néant|Néant|  
+|Mémoire maximale utilisée par instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Maximum du système d’exploitation|Tabulaire : 16 Go<br /><br /> MOLAP : 64 Go|Néant|Néant|Néant|  
 |Mémoire maximale utilisée par instance de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Maximum du système d’exploitation|64 Go|64 Go|4 Go|Néant|
 |Taille maximale de la base de données relationnelle|524 Po|524 Po|524 Po|10 GB|10 GB|  
   
@@ -138,22 +138,22 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Prise en charge de Server Core <sup>1</sup>|Oui|Oui|Oui|Oui|Oui|  
-|Copie des journaux de transaction|Oui|Oui|Oui|non|non|  
+|Copie des journaux de transaction|Oui|Oui|Oui|Non|Non|  
 |Mise en miroir de bases de données|Oui|Oui<br /><br /> Sécurité complète uniquement|Témoin uniquement|Témoin uniquement|Témoin uniquement| 
-|Compression de sauvegarde|Oui|Oui|non|non|non| 
+|Compression de sauvegarde|Oui|Oui|Non|Non|Non| 
 |Instantané de base de données|Oui|Oui <sup>3</sup>|Oui <sup>3</sup>|Oui <sup>3</sup>|Oui <sup>3</sup>|
-|Instances de cluster de basculement Always On|Oui<br /><br /> Le nombre de nœuds correspond au maximum du système d’exploitation|Oui<br /><br /> Prise en charge de 2 nœuds|non|non|non|  
-|Groupes de disponibilité Always On|Oui<br /><br /> Jusqu’à 8 réplicas secondaires, notamment 2 réplicas secondaires synchrones|non|non|non|non|
-|Groupes de disponibilité de base <sup>2</sup>|non|Oui<br /><br /> Prise en charge de 2 nœuds|non|non|non|
-|Restauration en ligne de pages et de fichiers|Oui|non|non|non|non|
-|Indexation en ligne|Oui|non|non|non|non|
-|Modification de schéma en ligne|Oui|non|non|non|non|
-|Récupération rapide|Oui|non|non|non|non|
-|Sauvegardes en miroir|Oui|non|non|non|non|
-|Ajout de mémoire et de processeur à chaud|Oui|non|non|non|non|
+|Instances de cluster de basculement Always On|Oui<br /><br /> Le nombre de nœuds correspond au maximum du système d’exploitation|Oui<br /><br /> Prise en charge de 2 nœuds|Non|Non|Non|  
+|Groupes de disponibilité Always On|Oui<br /><br /> Jusqu’à 8 réplicas secondaires, notamment 2 réplicas secondaires synchrones|Non|Non|Non|Non|
+|Groupes de disponibilité de base <sup>2</sup>|Non|Oui<br /><br /> Prise en charge de 2 nœuds|Non|Non|Non|
+|Restauration en ligne de pages et de fichiers|Oui|Non|Non|Non|Non|
+|Indexation en ligne|Oui|Non|Non|Non|Non|
+|Modification de schéma en ligne|Oui|Non|Non|Non|Non|
+|Récupération rapide|Oui|Non|Non|Non|Non|
+|Sauvegardes en miroir|Oui|Non|Non|Non|Non|
+|Ajout de mémoire et de processeur à chaud|Oui|Non|Non|Non|Non|
 |Assistant de récupération de base de données|Oui|Oui|Oui|Oui|Oui|
-|Sauvegarde chiffrée|Oui|Oui|non|non|non|
-|Sauvegarde hybride vers Windows Azure (sauvegarde vers une URL)|Oui|Oui|non|non|non|  
+|Sauvegarde chiffrée|Oui|Oui|Non|Non|Non|
+|Sauvegarde hybride vers Windows Azure (sauvegarde vers une URL)|Oui|Oui|Non|Non|Non|  
   
  <sup>1</sup> Pour plus d’informations sur l’installation de SQL Server sur Server Core, consultez [Installer SQL Server sur Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
@@ -172,12 +172,12 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Prise en charge de plusieurs instances|50|50|50|50|50|
 |Partitionnement des tables et des index|Oui|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|  
 |Compression des données|Oui|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|
-|gouverneur de ressources|Oui|non|non|non|non|  
-|Parallélisme de tables partitionnées|Oui|non|non|non|non|
+|gouverneur de ressources|Oui|Non|Non|Non|Non|  
+|Parallélisme de tables partitionnées|Oui|Non|Non|Non|Non|
 |Plusieurs conteneurs Filestream|Oui|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|
-|Mémoire de pages de grande taille compatible NUMA et allocation de tableau de tampons|Oui|non|non|non|non|
-|Buffer Pool Extension|Oui|Oui|non|non|non|
-|Gouvernance des ressources d'E/S|Oui|non|non|non|non|  
+|Mémoire de pages de grande taille compatible NUMA et allocation de tableau de tampons|Oui|Non|Non|Non|Non|
+|Buffer Pool Extension|Oui|Oui|Non|Non|Non|
+|Gouvernance des ressources d'E/S|Oui|Non|Non|Non|Non|  
 |Durabilité différée|Oui|Oui|Oui|Oui|Oui|
 
 <sup>1</sup> La taille des données OLTP en mémoire et le cache de segments columnstore sont limités à la quantité de mémoire spécifiée par l’édition dans la section Limites d’échelle. Le Nombre maximal de degrés de parallélisme est limité. Le nombre de degrés de parallélisme maximal pour la création d’un index est limité à 2 pour l’Édition Standard et à 1 pour les éditions Web et Express. Ceci fait référence aux index columnstore créés sur des tables basées sur des disques et des tables à mémoire optimisée.
@@ -194,26 +194,26 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Masquage dynamique des données|Oui|Oui|Oui <sup>1</sup>|Oui <sup>1</sup>|Oui <sup>1</sup>|   
 |Audit de base|Oui|Oui|Oui|Oui|Oui| 
 |Audit de granularité fine|Oui|Oui <sup>1</sup>|Oui <sup>1</sup>|Oui <sup>1</sup>|Oui <sup>1</sup>| 
-|Chiffrement transparent de base de données|Oui|non|non|non|non|   
-|Gestion de clés extensible|Oui|non|non|non|non| 
+|Chiffrement transparent de base de données|Oui|Non|Non|Non|Non|   
+|Gestion de clés extensible|Oui|Non|Non|Non|Non| 
 |Rôles définis par l’utilisateur|Oui|Oui|Oui|Oui|Oui| 
 |Bases de données autonomes|Oui|Oui|Oui|Oui|Oui| 
-|Chiffrement des sauvegardes|Oui|Oui|non|non|non|  
+|Chiffrement des sauvegardes|Oui|Oui|Non|Non|Non|  
 
 <sup>1</sup> S’applique à [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1.  
 ##  <a name="Replication"></a> Replication  
   
 |Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Abonnés hétérogènes|Oui|Oui|non|non|non|  
+|Abonnés hétérogènes|Oui|Oui|Non|Non|Non|  
 |Réplication de fusion|Oui|Oui|Oui (abonné uniquement)|Oui (abonné uniquement)|Oui (abonné uniquement)|   
-|Publication Oracle|Oui|non|non|non|non| 
-|Réplication transactionnelle d’égal à égal|Oui|non|non|non|non|   
+|Publication Oracle|Oui|Non|Non|Non|Non| 
+|Réplication transactionnelle d’égal à égal|Oui|Non|Non|Non|Non|   
 |Réplication d'instantané|Oui|Oui|Oui (abonné uniquement)|Oui (abonné uniquement)|Oui (abonné uniquement)|   
 |Suivi des modifications SQL Server|Oui|Oui|Oui|Oui|Oui| 
 |Réplication transactionnelle|Oui|Oui|Oui (abonné uniquement)|Oui (abonné uniquement)|Oui (abonné uniquement)|   
-|Réplication transactionnelle vers Azure|Oui|Oui|non|non|non|   
-|Abonnement pouvant être mis à jour à la réplication transactionnelle|Oui|non|non|non|non|  
+|Réplication transactionnelle vers Azure|Oui|Oui|Non|Non|Non|   
+|Abonnement pouvant être mis à jour à la réplication transactionnelle|Oui|Non|Non|Non|Non|  
   
 ##  <a name="SSMS"></a> Management Tools  
   
@@ -222,13 +222,13 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Objets de gestion SQL (SMO)|Oui|Oui|Oui|Oui|Oui|  
 |Gestionnaire de configuration SQL|Oui|Oui|Oui|Oui|Oui|   
 |SQL CMD (outil d'invite de commandes)|Oui|Oui|Oui|Oui|Oui|      
-|Distributed Replay - Outil d’administration|Oui|Oui|Oui|Oui|non|  
-|Distribute Replay - Client|Oui|Oui|Oui|non|non|  
-|Distributed Replay - Contrôleur|Oui (jusqu’à 16 clients)|Oui (1 client)|Oui (1 client)|non|non|   
+|Distributed Replay - Outil d’administration|Oui|Oui|Oui|Oui|Non|  
+|Distribute Replay - Client|Oui|Oui|Oui|Non|Non|  
+|Distributed Replay - Contrôleur|Oui (jusqu’à 16 clients)|Oui (1 client)|Oui (1 client)|Non|Non|   
 |SQL Profiler|Oui|Oui|Non <sup>1</sup>|Non <sup>1</sup>|Non <sup>1</sup>|  
-|SQL Server Agent|Oui|Oui|Oui|non|non| 
-|Pack d'administration Microsoft System Center Operations Manager|Oui|Oui|Oui|non|non|  
-|Assistant Paramétrage de base de données (DTA)|Oui|Oui <sup>2</sup>|Oui <sup>2</sup>|non|non|      
+|SQL Server Agent|Oui|Oui|Oui|Non|Non| 
+|Pack d'administration Microsoft System Center Operations Manager|Oui|Oui|Oui|Non|Non|  
+|Assistant Paramétrage de base de données (DTA)|Oui|Oui <sup>2</sup>|Oui <sup>2</sup>|Non|Non|      
   
  <sup>1</sup> SQL Server Web, SQL Server Express, SQL Server Express with Tools et SQL Server Express with Advanced Services peuvent être profilés à l’aide de SQL Server Standard et SQL Server Entreprise.  
   
@@ -238,25 +238,25 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
   
 |Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Instances utilisateur|non|non|non|Oui|Oui| 
-|LocalDB|non|non|non|Oui|non| 
+|Instances utilisateur|Non|Non|Non|Oui|Oui| 
+|LocalDB|Non|Non|Non|Oui|Non| 
 |Connexion administrateur dédiée|Oui|Oui|Oui|Oui avec indicateur de trace|Oui avec indicateur de trace|   
 |Prise en charge de scripts PowerShell|Oui|Oui|Oui|Oui|Oui| 
 |Prise en charge de SysPrep <sup>1</sup>|Oui|Oui|Oui|Oui|Oui| 
 |Prise en charge des opérations des composants d’application du niveau Données : extraction, déploiement, mise à niveau, suppression|Oui|Oui|Oui|Oui|Oui| 
-|Automation de stratégie (vérification selon la planification et sur modification)|Oui|Oui|Oui|non|non|   
-|Collecteur de données de performances|Oui|Oui|Oui|non|non| 
-|Possibilité d’inscription en tant qu’instance managée dans le cadre de la gestion de plusieurs instances|Oui|Oui|Oui|non|non|   
-|Rapports de performances standard|Oui|Oui|Oui|non|non| 
-|Repères de plan et gel de plan relatif|Oui|Oui|Oui|non|non|   
+|Automation de stratégie (vérification selon la planification et sur modification)|Oui|Oui|Oui|Non|Non|   
+|Collecteur de données de performances|Oui|Oui|Oui|Non|Non| 
+|Possibilité d’inscription en tant qu’instance managée dans le cadre de la gestion de plusieurs instances|Oui|Oui|Oui|Non|Non|   
+|Rapports de performances standard|Oui|Oui|Oui|Non|Non| 
+|Repères de plan et gel de plan relatif|Oui|Oui|Oui|Non|Non|   
 |Requête directe de vues d'index (à l'aide de l'indicateur NOEXPAND)|Oui|Oui|Oui|Oui|Oui| 
-|Maintenance automatique des vues indexées|Oui|Oui|Oui|non|non| 
-|Vues partitionnées distribuées|Oui|non|non|non|non| 
-|Opérations d'index parallèles|Oui|non|non|non|non|  
-|Utilisation automatique de vues indexées par l'optimiseur de requête|Oui|non|non|non|non| 
-|Vérifications de cohérence parallèles|Oui|non|non|non|non| 
-|Point de contrôle de l’utilitaire SQL Server|Oui|non|non|non|non|    
-|Extension du pool de mémoires tampons|Oui|Oui|non|non|non| 
+|Maintenance automatique des vues indexées|Oui|Oui|Oui|Non|Non| 
+|Vues partitionnées distribuées|Oui|Non|Non|Non|Non| 
+|Opérations d'index parallèles|Oui|Non|Non|Non|Non|  
+|Utilisation automatique de vues indexées par l'optimiseur de requête|Oui|Non|Non|Non|Non| 
+|Vérifications de cohérence parallèles|Oui|Non|Non|Non|Non| 
+|Point de contrôle de l’utilitaire SQL Server|Oui|Non|Non|Non|Non|    
+|Extension du pool de mémoires tampons|Oui|Oui|Non|Non|Non| 
   
  <sup>1</sup> Pour plus d’informations, consultez [Considérations relatives à l’installation de SQL Server à l’aide de SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
@@ -268,18 +268,18 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Intégration de Microsoft Visual Studio|Oui|Oui|Oui|Oui|Oui| 
 |Intellisense (Transact-SQL et MDX)|Oui|Oui|Oui|Oui|Oui| 
-|Outils de données SQL Server (SSDT)|Oui|Oui|Oui|Oui|non|    
-|Outils de conception, de modification et de débogage MDX|Oui|Oui|non|non|non|   
+|Outils de données SQL Server (SSDT)|Oui|Oui|Oui|Oui|Non|    
+|Outils de conception, de modification et de débogage MDX|Oui|Oui|Non|Non|Non|   
   
 ##  <a name="Programmability"></a> Programmability  
   
 |Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Intégration R de base|Oui|Oui|Oui|Oui|non|   
-|Intégration R avancée|Oui|non|non|non|non| 
-|R Server (autonome)|Oui|non|non|non|non|   
+|Intégration R de base|Oui|Oui|Oui|Oui|Non|   
+|Intégration R avancée|Oui|Non|Non|Non|Non| 
+|R Server (autonome)|Oui|Non|Non|Non|Non|   
 |Nœud de calcul PolyBase|Oui|Oui <sup>1</sup>|Oui <sup>1</sup>, <sup>2</sup>|Oui <sup>1</sup>, <sup>2</sup>|Oui <sup>1</sup>, <sup>2</sup>| 
-|Nœud principal PolyBase|Oui|non|non|non|non| 
+|Nœud principal PolyBase|Oui|Non|Non|Non|Non| 
 |JSON|Oui|Oui|Oui|Oui|Oui|   
 |Magasin de requêtes|Oui|Oui|Oui|Oui|Oui|   
 |Temporal|Oui|Oui|Oui|Oui|Oui|   
@@ -291,10 +291,10 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |FileTable|Oui|Oui|Oui|Oui|Oui| 
 |Types de données de date et d'heure|Oui|Oui|Oui|Oui|Oui|  
 |Support d'internationalisation|Oui|Oui|Oui|Oui|Oui| 
-|Recherche sémantique et en texte intégral|Oui|Oui|Oui|Oui|non| 
-|Spécification d'une langue dans une requête|Oui|Oui|Oui|Oui|non|   
+|Recherche sémantique et en texte intégral|Oui|Oui|Oui|Oui|Non| 
+|Spécification d'une langue dans une requête|Oui|Oui|Oui|Oui|Non|   
 |Service Broker (messagerie)|Oui|Oui|Non (client uniquement)|Non (client uniquement)|Non (client uniquement)|   
-|Transact-SQL, points de terminaison|Oui|Oui|Oui|non|non| 
+|Transact-SQL, points de terminaison|Oui|Oui|Oui|Non|Non| 
 
 <sup>1</sup> La montée en puissance parallèle avec plusieurs nœuds de calcul nécessite un nœud principal.
 
@@ -312,13 +312,13 @@ Pour plus d’informations sur les fonctionnalités Integration Services (SSIS) 
   
 |Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Création de cubes sans une base de données|Oui|Oui|non|non|non |   
-|Génération automatique de la mise en lots et du schéma d'entrepôt de données|Oui|Oui|non|non|non| 
-|Capture des données modifiées|Oui|Oui <sup>1</sup>|non|non|non| 
-|Optimisations de requêtes de jointure en étoile|Oui|non|non|non|non| 
-|Configuration en lecture seule évolutive d'Analysis Services|Oui|non|non|non|non| 
-|Traitement des requêtes parallèles sur les tables et les index partitionnés|Oui|non|non|non|non|   
-|Agrégation globale des traitements|Oui|non|non|non|non| 
+|Création de cubes sans une base de données|Oui|Oui|Non|Non|Non |   
+|Génération automatique de la mise en lots et du schéma d'entrepôt de données|Oui|Oui|Non|Non|Non| 
+|Capture des données modifiées|Oui|Oui <sup>1</sup>|Non|Non|Non| 
+|Optimisations de requêtes de jointure en étoile|Oui|Non|Non|Non|Non| 
+|Configuration en lecture seule évolutive d'Analysis Services|Oui|Non|Non|Non|Non| 
+|Traitement des requêtes parallèles sur les tables et les index partitionnés|Oui|Non|Non|Non|Non|   
+|Agrégation globale des traitements|Oui|Non|Non|Non|Non| 
 
 <sup>1</sup> S’applique à [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] SP1.  
 ##  <a name="SSAS"></a> Analysis Services  
@@ -363,14 +363,14 @@ Pour plus d’informations sur les fonctionnalités de client Business Intellige
 |Nom de la fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Assistant Migration|Oui|Oui|Oui|Oui|Oui|   
-|Messagerie de base de données|Oui|Oui|Oui|non|non| 
+|Messagerie de base de données|Oui|Oui|Oui|Non|Non| 
   
 ##  <a name="Other"></a> Other Components  
   
 |Nom de la fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|non|non| 
-|StreamInsight HA|StreamInsight Premium Edition|non|non|non|non|   
+|StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|Non|Non| 
+|StreamInsight HA|StreamInsight Premium Edition|Non|Non|Non|Non|   
   
 > [![Télécharger SSMS](../analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Télécharger la dernière version de SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**      
   

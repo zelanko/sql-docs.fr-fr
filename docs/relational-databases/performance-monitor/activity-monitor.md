@@ -5,26 +5,26 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server]
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 533838b933cbe41e868f921bee6eafe14df44def
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 540774d3b6e41bdadc4f7e9cb06a8302f29f7ff5
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158017"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380380"
 ---
 # <a name="activity-monitor"></a>Moniteur d'activité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Le Moniteur d'activité affiche des informations sur les processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sur la façon dont ces processus affectent l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Le Moniteur d’activité est une fenêtre de document à onglets comportant les volets suivants, qui peuvent être développés ou réduits : **Vue d’ensemble**, **Tâches utilisateur actives**, **Attentes de ressources**, **E/S du fichier de données**et **Requêtes coûteuses récentes**. Lorsqu'un volet est développé, le Moniteur d'activité interroge l'instance pour obtenir des informations. Lorsqu'un volet est réduit, toutes les activités d'interrogation cessent pour ce volet. Vous pouvez développer en même temps un ou plusieurs volets pour afficher différents types d’activité sur l’instance.  
+ Le moniteur d’activité est une fenêtre de document à onglets, qui comprend les volets extensibles et réductibles suivants : **Vue d’ensemble**, **Tâches utilisateur actives**, **Attentes de ressources**, **E/S du fichier de données** et **Requêtes coûteuses récentes**. Lorsqu'un volet est développé, le Moniteur d'activité interroge l'instance pour obtenir des informations. Lorsqu'un volet est réduit, toutes les activités d'interrogation cessent pour ce volet. Vous pouvez développer en même temps un ou plusieurs volets pour afficher différents types d’activité sur l’instance.  
  
  ## <a name="customize-columns"></a>Personnaliser les colonnes 
  Pour les colonnes incluses dans les volets **Tâches utilisateur actives**, **Attentes de ressources**, **E/S du fichier de données**et **Requêtes coûteuses récentes** , personnalisez l’affichage comme suit :  

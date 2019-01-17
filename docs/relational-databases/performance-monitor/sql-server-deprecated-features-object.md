@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fcb107c5ae7a22fa2705fda0580e0284940f694
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523345"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380690"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objet Deprecated Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ Le tableau suivant décrit l’objet de performance **Deprecated Features** .
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Des références à la fonctionnalité déconseillée sys.numbered_procedure_parameters ont été rencontrées. Ne pas utiliser. Se produit une fois par compilation.|  
 |numbered_procedures|Des références à la fonctionnalité déconseillée sys.numbered_procedures ont été rencontrées. Ne pas utiliser. Se produit une fois par compilation.|  
-|Ancien style RAISEERROR|La syntaxe RAISERROR déconseillée (Format : RAISERROR entier chaîne) a été rencontrée. Réécrivez l'instruction en utilisant la syntaxe RAISERROR actuelle. Se produit une fois par compilation.|  
+|Ancien style RAISEERROR|La syntaxe RAISERROR dépréciée (Format : chaîne d’entier RAISERROR) a été rencontrée. Réécrivez l'instruction en utilisant la syntaxe RAISERROR actuelle. Se produit une fois par compilation.|  
 |OLEDB pour les connexions ad hoc|Le fournisseur SQLOLEDB n'est pas pris en charge. Utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour les connexions ad hoc.|  
 |PERMISSIONS|Des références à la fonction intrinsèque PERMISSIONS ont été rencontrées. Interrogez à la place sys.fn_my_permissions. Se produit une fois par requête.|  
 |ProcNums|La syntaxe déconseillée ProcNums a été rencontrée. Réécrivez les instructions de manière à supprimer ces références. Se produit une fois par compilation.|  
@@ -173,7 +173,7 @@ Le tableau suivant décrit l’objet de performance **Deprecated Features** .
 |sp_configure 'ft notify bandwidth (min)'|L'option ft notify bandwidth (min) de sp_configure a été rencontrée. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_configure 'locks'|L'option locks de sp_configure a été rencontrée. Les verrous ne peuvent plus être configurés. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_configure 'open objects'|L'option open objects de sp_configure a été rencontrée. Le nombre d'objets ouverts ne peut plus être configuré. Ne pas utiliser. Se produit une fois par requête.|  
-|sp_configure "priority boost"|L'option renforcement de priorité de sp_configure a été rencontrée. Ne pas utiliser. Se produit une fois par requête. Utilisez plutôt l’option start /high … program.exe de Windows.|  
+|sp_configure "priority boost"|L'option renforcement de priorité de sp_configure a été rencontrée. Ne pas utiliser. Se produit une fois par requête. Utilisez à la place l’option start /high … program.exe de Windows.|  
 |sp_configure 'remote proc trans'|L'option remote proc trans de sp_configure a été rencontrée. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_configure 'set working set size'|L'option set working set size de sp_configure a été rencontrée. La taille de la plage de travail ne peut plus être configurée. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_control_dbmasterkey_password|La procédure stockée sp_control_dbmasterkey_password ne vérifie pas s'il existe une clé principale. Cette opération est autorisée à des fins de compatibilité descendante, mais affiche un avertissement. Ce comportement est déconseillé. Dans une version ultérieure, la clé principale doit exister et le mot de passe utilisé dans la procédure stockée sp_control_dbmasterkey_password doit être identique à un des mots de passe utilisés pour chiffrer la clé principale de la base de données.|  

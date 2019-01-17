@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712117"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328969"
 ---
 # <a name="best-practice-with-the-query-store"></a>Bonnes pratiques relatives au magasin de requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -48,7 +48,7 @@ Les paramètres par défaut sont assez bons pour démarrer, mais vous devez surv
   
  Voici les recommandations à suivre pour définir les valeurs des paramètres :  
   
- **Taille maximale (Mo) :** indique la limite de l’espace de données qu’occupera le magasin de requêtes à l’intérieur de votre base de données. Paramètre le plus important, il affecte directement le mode d’opération du magasin de requêtes.  
+ **Taille maximale (Mo) :** indique l’espace maximal qu’occupera le magasin des requêtes à l’intérieur de votre base de données. Paramètre le plus important, il affecte directement le mode d’opération du magasin de requêtes.  
   
  Pendant que le magasin de requêtes collecte requêtes, plans d’exécution et autres statistiques, sa taille dans la base de données croît jusqu’à ce que cette limite soit atteinte. Quand cela se produit, le magasin de requêtes change automatiquement de mode d’opération pour passer en lecture seule et cesse de collecter les nouvelles données, ce qui signifie que l’analyse de vos performances n’est plus précise.  
   
@@ -70,7 +70,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- **Intervalle de vidange de données :** définit la fréquence en secondes de conservation sur le disque des statistiques d’exécution collectées (la valeur par défaut est de 900 secondes, soit 15 minutes). Utilisez une valeur plus élevée si votre charge de travail ne génère pas de grandes quantités de requêtes et de plans différents, ou si vous pouvez supporter une durée de conservation des données plus élevée avant un arrêt de la base de données. 
+ **Intervalle de vidage des données :** définit la fréquence en secondes de conservation sur le disque des statistiques d’exécution collectées (la valeur par défaut est de 900 secondes, soit 15 minutes). Utilisez une valeur plus élevée si votre charge de travail ne génère pas de grandes quantités de requêtes et de plans différents, ou si vous pouvez supporter une durée de conservation des données plus élevée avant un arrêt de la base de données. 
  
 > [!NOTE]
 > L’indicateur de trace 7745 empêchera l’écriture sur le disque des données du Magasin des requêtes en cas de commande d’arrêt ou de basculement. Pour plus d’informations, consultez la section [Utiliser des indicateurs de trace sur des serveurs critiques pour améliorer la récupération d’urgence](#Recovery).
@@ -82,14 +82,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
 ```  
 
- **Intervalle de collecte des statistiques :** définit le niveau de granularité des statistiques d’exécution collectées (la valeur par défaut est 60 minutes). Envisagez d’utiliser une valeur inférieure si vous avez besoin d’une granularité plus fine ou une durée inférieure pour détecter et atténuer les problèmes, mais gardez à l’esprit que cela a un effet direct sur la taille des données du magasin de requêtes. Pour attribuer une valeur différente au paramètre Intervalle de collecte des statistiques, utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
+ **Intervalle de collecte des statistiques :** définit le niveau de granularité des statistiques d’exécution collectées (la valeur par défaut est de 60 minutes). Envisagez d’utiliser une valeur inférieure si vous avez besoin d’une granularité plus fine ou une durée inférieure pour détecter et atténuer les problèmes, mais gardez à l’esprit que cela a un effet direct sur la taille des données du magasin de requêtes. Pour attribuer une valeur différente au paramètre Intervalle de collecte des statistiques, utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
- **Seuil de requêtes périmées (jours) :** stratégie de nettoyage basé sur la durée qui permet de contrôler la période de rétention des statistiques d’exécution persistantes et des requêtes inactives.  
+ **Seuil des requêtes périmées (jour) :** stratégie de nettoyage basée sur la durée qui permet de contrôler la période de conservation des statistiques d’exécution persistantes et des requêtes inactives.  
 Par défaut, le magasin de requêtes est configuré pour conserver les données pendant 30 jours, ce qui est peut-être inutilement long pour votre scénario.  
   
  Évitez de conserver les données d’historique que vous ne prévoyez pas d’utiliser. Cela réduira les passages à l’état lecture seule. La taille des données du magasin de requêtes et le temps de détection et d’atténuation des problèmes seront plus prévisibles. Utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou le script suivant pour configurer la stratégie de nettoyage basée sur la durée :  
@@ -99,7 +99,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
- **Mode de nettoyage basé sur la taille :** indique si le nettoyage de données automatique aura lieu dès que la taille des données du magasin de requêtes s’approchera de la limite.  
+ **Mode de nettoyage basé sur la taille :** indique si le nettoyage de données automatique aura lieu dès que la taille des données du magasin des requêtes s’approchera de la limite.  
   
  Il est vivement recommandé d’activer le nettoyage basée sur la taille de sorte que le magasin de requêtes s’exécute toujours en mode lecture-écriture et collecte les données les plus récentes.  
   
@@ -108,7 +108,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
   
- **Mode de capture du magasin de requêtes :** spécifie la stratégie de capture de requêtes du magasin de requêtes.  
+ **Mode de capture du magasin des requêtes :** spécifie la stratégie de capture des requêtes du magasin des requêtes.  
   
 -   **Tout** : capture toutes les requêtes. Il s'agit de l'option par défaut.  
   
@@ -159,7 +159,7 @@ Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanst
 |Statistiques d’attente des requêtes|Analysez les catégories d’attente qui sont les plus actives dans une base de données, et les requêtes qui contribuent le plus à la catégorie d’attente sélectionnée.<br />Utilisez cette vue pour analyser les statistiques d’attente et identifier les requêtes susceptibles d’avoir un impact sur l’expérience utilisateur dans vos applications.<br /><br />**S’applique à :** à compter de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |Requêtes suivies|Suivez l’exécution des requêtes les plus importantes en temps réel. En règle générale, vous utilisez cette vue quand certaines de vos requêtes sont soumises à des plans forcés et que vous voulez vérifier que les performances des requêtes sont stables.|
   
-> [!TIP]  
+> [!TIP]
 > Pour savoir comment identifier les principales requêtes consommatrices de ressources et corriger celles qui ont régressé en raison d’un changement de plan à l’aide de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], consultez les blogs @Azure sur le [magasin de requêtes](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
  Quand vous identifiez une requête dont les performances ne sont pas optimales, votre action dépend de la nature du problème.  
@@ -168,7 +168,7 @@ Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanst
   
      ![magasin de requêtes-forcer le plan](../../relational-databases/performance/media/query-store-force-plan.png "magasin de requêtes-forcer le plan")  
 
-> [!NOTE]  
+> [!NOTE]
 > Le graphique ci-dessus peut présenter des formes différentes pour des plans de requête spécifiques, avec les significations suivantes pour chaque état possible :<br />  
 > |Graphique à base de formes|Signification|  
 > |-------------------|-------------|
@@ -222,7 +222,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
   
- À titre préventif, prenez les mesures suivantes :  
+ À titre préventif, prenez les mesures suivantes :  
   
 -   Vous pouvez prévenir les changements discrets du mode d’opération en appliquant les bonnes pratiques. Si vous vérifiez que la taille du magasin de requêtes est toujours inférieure à la valeur maximale autorisée, vous réduirez considérablement les chances de passer en mode lecture seule. Activez la stratégie basée sur la taille comme indiqué dans la section [Configurer le magasin de requêtes](#Configure) pour que le magasin de requêtes nettoie automatiquement les données quand la taille s’approche de la limite.  
   
@@ -274,7 +274,7 @@ FROM sys.database_query_store_options;
 |------------------------|--------------|  
 |All|Analysez minutieusement votre charge de travail, c’est-à-dire toutes les formes de requêtes, leur fréquence d’exécution et les autres statistiques.<br /><br /> Identifiez les nouvelles requêtes dans votre charge de travail.<br /><br /> Déterminez si des requêtes ad hoc sont utilisées pour identifier les possibilités de paramétrage utilisateur ou automatique.|  
 |Auto|Concentrez-vous sur les requêtes pertinentes et exploitables, c’est-à-dire les requêtes qui s’exécutent régulièrement ou qui consomment beaucoup de ressources.|  
-|Aucun|Vous avez déjà capturé le jeu de requêtes que vous vouliez surveiller dans le runtime et souhaitez éliminer les confusions que pourraient provoquer les autres requêtes.<br /><br /> L’option Aucun(e) est adaptée aux environnements de test et d’évaluation.<br /><br /> Elle est aussi appropriée pour les éditeurs de logiciels qui proposent le magasin de requêtes avec une configuration destinée à surveiller la charge de travail de leur application.<br /><br /> Cette option doit être utilisée avec précaution, car vous risquez de ne pas pouvoir suivre et optimiser les nouvelles requêtes importantes. Évitez d’utiliser l’option Aucun(e) sauf si l’un de vos scénarios l’exige.|  
+|None|Vous avez déjà capturé le jeu de requêtes que vous vouliez surveiller dans le runtime et souhaitez éliminer les confusions que pourraient provoquer les autres requêtes.<br /><br /> L’option Aucun(e) est adaptée aux environnements de test et d’évaluation.<br /><br /> Elle est aussi appropriée pour les éditeurs de logiciels qui proposent le magasin de requêtes avec une configuration destinée à surveiller la charge de travail de leur application.<br /><br /> Cette option doit être utilisée avec précaution, car vous risquez de ne pas pouvoir suivre et optimiser les nouvelles requêtes importantes. Évitez d’utiliser l’option Aucun(e) sauf si l’un de vos scénarios l’exige.|  
   
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>Conserver les données les plus pertinentes dans le magasin des requêtes  
  Configurez le magasin de requêtes de sorte qu’il ne contienne que les données pertinentes. Ainsi, il s’exécutera toujours en offrant une excellente expérience de résolution des problèmes tout en ayant un impact minime sur votre charge de travail normale.  

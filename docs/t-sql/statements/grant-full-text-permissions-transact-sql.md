@@ -19,12 +19,12 @@ ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4222a9175e9c5ae1b813d87d67fcc8a34170249a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13cb528700007174c20c5c6881b64a9c4282f036
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714437"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589414"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT - Autorisations relatives au texte intégral (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ GRANT permission [ ,...n ] ON
  *permission*  
  Nom d'une autorisation. Les mappages valides des autorisations des éléments sécurisables sont décrits dans la section « Notes », plus loin dans cette rubrique.  
   
- ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
  Indique le catalogue de texte intégral pour lequel l'autorisation est accordée. Le qualificateur d’étendue **::** est obligatoire.  
   
- ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
  Indique la liste de mots vides de texte intégral pour laquelle l'autorisation est accordée. Le qualificateur d’étendue **::** est obligatoire.  
   
  *database_principal*  
@@ -65,7 +65,7 @@ GRANT permission [ ,...n ] ON
   
 -   d'un utilisateur de base de données ;  
 -   d'un rôle de base de données ;  
--   d'un rôle d'application ;  
+-   d'un rôle d'application ;  
 -   d'un utilisateur de base de données mappé sur une connexion Windows ;  
 -   d'un utilisateur de base de données mappé sur un groupe Windows ;  
 -   d'un utilisateur de base de données mappé sur un certificat ;  
@@ -80,7 +80,7 @@ AS *granting_principal*
   
 -   d'un utilisateur de base de données ;  
 -   d'un rôle de base de données ;  
--   d'un rôle d'application ;  
+-   d'un rôle d'application ;  
 -   d'un utilisateur de base de données mappé sur une connexion Windows ;  
 -   d'un utilisateur de base de données mappé sur un groupe Windows ;  
 -   d'un utilisateur de base de données mappé sur un certificat ;  
@@ -142,7 +142,7 @@ GRANT CONTROL
     TO Ted ;  
 ```  
   
-### <a name="b-granting-permissions-to-a-stoplist"></a>B. Octroi d'autorisations à une liste de mots vides  
+### <a name="b-granting-permissions-to-a-stoplist"></a>b. Octroi d'autorisations à une liste de mots vides  
  L'exemple suivant accorde à `Mary` l'autorisation `VIEW DEFINITION` pour la liste de mots vides de texte intégral `ProductStoplist`.  
   
 ```  

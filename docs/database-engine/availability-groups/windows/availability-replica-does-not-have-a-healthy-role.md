@@ -1,6 +1,7 @@
 ---
-title: Le réplica de disponibilité n’a pas un rôle sain | Microsoft Docs
-ms.custom: ''
+title: Le réplica de disponibilité n’a pas un rôle sain pour un groupe de disponibilité
+description: Identifiez les raisons possibles pour lesquelles un réplica n’a pas un rôle sain dans un groupe de disponibilité Always On.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aec1a0cc2b6a5f12dce1d8c49c7d2c1b26771e00
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9d072fc8664163e5b2a0a175a90cb0c13fe3495e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602819"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204268"
 ---
-# <a name="availability-replica-does-not-have-a-healthy-role"></a>Le réplica de disponibilité n'a pas un rôle sain
+# <a name="availability-replica-does-not-have-a-healthy-role-for-an-always-on-availability-group"></a>Le réplica de disponibilité n’a pas un rôle sain pour un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Introduction  
@@ -42,7 +43,7 @@ ms.locfileid: "51602819"
 ## <a name="possible-causes"></a>Causes possibles  
  Le rôle de ce réplica de disponibilité n'est pas sain. Le réplica n'a pas le rôle principal ou secondaire.  
   
-## <a name="possible-solution-informationstilltocome"></a>Solution possible : Information_à_venir  
+## <a name="possible-solution-informationstilltocome"></a>Solution possible : Information_still_to_come  
   
 ## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

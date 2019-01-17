@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61a876ec35e7cd11b8ac127606bb2e4e7c2c6e2c
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 16fa50a7e3dc6b6b2ee86dfcd79f0aa311d9071d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018214"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978876"
 ---
 # <a name="point"></a>Point
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,21 +32,24 @@ ms.locfileid: "51018214"
  Le type Point pour le type de données geometry représente un emplacement unique où *X* et *Y* désignent respectivement les coordonnées X et Y du point généré. Le*SRID* représente l’ID de référence spatiale de l’instance **geometry** à retourner.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée une instance `geometry Point`qui représente le point (3, 4) avec un SRID de 0.  
+### <a name="example-a"></a>Exemple A.
+L’exemple suivant crée une instance `geometry Point`qui représente le point (3, 4) avec un SRID de 0.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT (3 4)', 0);  
 ```  
   
- L’exemple suivant crée une instance `geometry``Point` qui représente le point (3, 4) avec une valeur Z (élévation) de 7, une valeur M (mesure) de 2,5 et le SRID par défaut de 0.  
+### <a name="example-b"></a>Exemple B.
+L’exemple suivant crée une instance `geometry``Point` qui représente le point (3, 4) avec une valeur Z (élévation) de 7, une valeur M (mesure) de 2,5 et le SRID par défaut de 0.  
   
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POINT(3 4 7 2.5)');  
 ```  
   
- Le dernier exemple retourne les valeurs X, Y, Z et M pour l’instance `geometry``Point` .  
+### <a name="example-c"></a>Exemple C.
+L’exemple suivant retourne les valeurs X, Y, Z et M pour l’instance `geometry``Point`.  
   
 ```  
 SELECT @g.STX;  
@@ -55,7 +58,8 @@ SELECT @g.Z;
 SELECT @g.M;  
 ```  
   
- Les valeurs Z et M peuvent être spécifiées explicitement comme NULL, comme illustré dans l'exemple suivant.  
+### <a name="example-d"></a>Exemple D.
+Les valeurs Z et M peuvent être spécifiées explicitement comme NULL, comme illustré dans l'exemple suivant.  
   
 ```  
 DECLARE @g geometry;  

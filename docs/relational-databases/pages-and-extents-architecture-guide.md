@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cef241919f29225ee7c6384a7466fc69bc9391ed
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571438"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748481"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guide d’architecture des pages et des étendues
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -155,7 +155,7 @@ Les pages IAM sont allouées au fur et à mesure des besoins pour chaque unité 
  
 Pages IAM liées dans une chaîne par unité d’allocation. Une page IAM possède un en-tête indiquant l’étendue de départ de la plage d’étendues mappée par la page IAM. La page IAM contient aussi une grande image dans laquelle chaque bit représente une étendue. Le premier bit représente la première étendue de la plage, le second la deuxième étendue, et ainsi de suite. Si un bit est égal à 0, l'étendue qu'il représente n'est pas allouée à l'unité d'allocation possédant la page IAM. Si un bit est égal à 1, l'étendue qu'il représente est allouée à l'unité d'allocation possédant la page IAM.
 
-Quand le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] a besoin d’insérer une nouvelle ligne et qu’il n’y a pas de place sur la page active, il a recours aux pages IAM et PFS pour rechercher une page à allouer ou, pour un segment ou une page de texte/image, une page suffisamment grande pour accueillir la ligne. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les pages IAM pour rechercher les étendues allouées à l’unité d’allocation. Pour chaque étendue, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] recherche les pages PFS afin de vérifier si l’une d’elles peut être utilisée. Chaque page IAM et PFS couvre de nombreuses pages de données de sorte qu'il y a peu de pages IAM et PFS dans une base de données. C'est pourquoi elles se trouvent en général dans la mémoire du pool de mémoires tampons de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], d'où il est possible de les rechercher plus rapidement. Pour les index, le point d'insertion d'une nouvelle ligne est défini par la clé d'index. Dans ce cas, la recherche précédemment décrite ne se produit pas.
+Quand le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] a besoin d’insérer une nouvelle ligne et qu’il n’y a pas de place sur la page active, il a recours aux pages IAM et PFS pour rechercher une page à allouer ou, pour un segment ou une page de texte/image, une page suffisamment grande pour accueillir la ligne. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les pages IAM pour rechercher les étendues allouées à l’unité d’allocation. Pour chaque étendue, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] recherche les pages PFS afin de vérifier si l’une d’elles peut être utilisée. Chaque page IAM et PFS couvre de nombreuses pages de données de sorte qu'il y a peu de pages IAM et PFS dans une base de données. C'est pourquoi elles se trouvent en général dans la mémoire du pool de mémoires tampons de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], d'où il est possible de les rechercher plus rapidement. Pour les index, le point d’insertion d’une nouvelle ligne est défini par la clé d’index, mais quand une nouvelle page est nécessaire, le processus décrite précédemment se produit.
 
 Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] n’alloue une nouvelle étendue à une unité d’allocation que s’il ne trouve pas rapidement une page suffisamment grande dans une étendue existante pour accueillir la ligne à insérer. 
 

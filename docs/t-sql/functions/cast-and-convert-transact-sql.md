@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 267e1c145a6a67976f1d057c0c98186f192f9247
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 513ccaf7c50b7ca08d6651d516a4b5265d86d7fe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191069"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210779"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST et CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "52191069"
 
 Ces fonctions convertissent une expression d’un type de données en un autre.  
 
-**Exemple :** Changer le type de données d’entrée
+**Exemple :** Changer le type de données d’entrée
 
 **Cast**
 ```sql  
@@ -103,7 +103,7 @@ Retourne *expression* traduite en *data_type*.
 ## <a name="date-and-time-styles"></a>Styles de date et d'heure  
 Quand *expression* est un type de données de date ou d’heure, *style* peut prendre l’une des valeurs indiquées dans le tableau suivant. Les autres valeurs sont traitées comme étant 0. À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les seuls styles pris en charge lors de la conversion des types de date et d’heure en **datetimeoffset** sont 0 ou 1. Tous les autres styles de conversion retournent l'erreur 9809.
   
->  [!NOTE]  
+> [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le format de date dans le style arabe à l’aide de l’algorithme koweitien.
   
 |Sans siècle (aa) (<sup>1</sup>)|Avec siècle (aaaa)|Standard|Entrée/sortie (<sup>3</sup>)|  
@@ -125,7 +125,7 @@ Quand *expression* est un type de données de date ou d’heure, *style* peut pr
 |**14**|**114**|-|hh:mi:ss:mmm(24h)|  
 |-|**20** ou **120** (<sup>2</sup>)|ODBC canonique|aaaa-mm-jj hh:mi:ss (24h)|  
 |-|**21** ou **121** (<sup>2</sup>)|Valeur par défaut canonique ODBC (avec millisecondes) pour time, date, datetime2, et datetimeoffset|aaaa-mm-jj hh:mi:ss.mmm (24h)|  
-|-|**126** (<sup>4</sup>)|ISO8601|aaaa-mm-jjThh:mi:ss.mmm (sans espace)<br /><br /> Remarque : Pour une valeur en millisecondes (mmm) égale à 0, la valeur de fraction décimale n’est pas affichée. Par exemple, la valeur « 2012-11-07T18:26:20.000 » est affichée comme « 2012-11-07T18:26:20 ».|  
+|-|**126** (<sup>4</sup>)|ISO8601|aaaa-mm-jjThh:mi:ss.mmm (sans espace)<br /><br /> Remarque : Pour une valeur en millisecondes (mmm) égale à 0, la valeur de la fraction décimale n’est pas affichée. Par exemple, la valeur « 2012-11-07T18:26:20.000 » est affichée comme « 2012-11-07T18:26:20 ».|  
 |-|**127**(<sup>6, 7</sup>)|ISO8601 avec fuseau horaire Z.|aaaa-mm-jjThh:mi:ss.mmmZ (sans espace)<br /><br /> Remarque : Pour une valeur en millisecondes (mmm) égale à 0, la valeur décimale n’est pas affichée. Par exemple, la valeur « 2012-11-07T18:26:20.000 » est affichée comme « 2012-11-07T18:26:20 ».|  
 |-|**130** (<sup>1,</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|jj mois aaaa hh:mi:ss:mmmAM<br /><br /> Dans ce style, **mois** correspond à une représentation Unicode Hijri à plusieurs jetons du nom complet du mois. Cette valeur n’est pas retournée correctement sur les installations en anglais américain par défaut de SSMS.|  
 |-|**131** (<sup>2</sup>)|Hijri (<sup>5</sup>)|jj/mm/yyyy hh:mi:ss:mmmAM|  
@@ -177,7 +177,7 @@ Quand *expression* est un type **xml**, *style* peut prendre l’une des valeurs
   
 |Valeur|Sortie|  
 |---|---|
-|**0** (valeur par défaut)|Utilisez le comportement d’analyse par défaut permettant de supprimer les espaces non significatifs et n’autorisant pas de sous-ensemble DTD interne.<br /><br />**Remarque :** Si vous effectuez une conversion vers le type de données **xml**, les espaces non significatifs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont gérés différemment de ceux dans XML 1.0. Pour plus d’informations, consultez [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md).|  
+|**0** (valeur par défaut)|Utilisez le comportement d’analyse par défaut permettant de supprimer les espaces non significatifs et n’autorisant pas de sous-ensemble DTD interne.<br /><br />**Remarque :** Quand vous effectuez une conversion vers le type de données **xml**, les espaces non significatifs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont gérés différemment de ceux dans XML 1.0. Pour plus d’informations, consultez [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md).|  
 |**1**|Maintien des espaces non significatifs. Ce paramètre de style définit la gestion par défaut de **xml:space** pour correspondre au comportement de **xml:space="preserve"**.|  
 |**2**|Activation du traitement limité de sous-ensembles DTD internes.<br /><br /> Si cette option est activée, le serveur peut utiliser les informations suivantes fournies dans un sous-ensemble DTD interne afin de procéder à des opérations d’analyse autres que celles de validation des données.<br /><br />   - Les valeurs par défaut concernant les attributs sont alors appliquées<br />   - Les références à des entités internes sont résolues et développées<br />   - Le modèle de contenu DTD fait ensuite l’objet d’une vérification syntaxique<br /><br /> L’analyseur ignore les sous-ensembles DTD externes. Il n’évalue pas non plus la déclaration des balises XML au niveau de l’attribut **standalone** pour vérifier s’il a la valeur **yes** ou **no**. Il analyse cependant l’instance XML comme s’il s’agissait d’un document autonome.|  
 |**3**|Maintien des espaces non significatifs et activation du traitement limité de sous-ensembles DTD internes.|  
@@ -368,7 +368,7 @@ WHERE CONVERT(int, ListPrice) LIKE '3%';
 GO  
 ```  
   
-### <a name="b-using-cast-with-arithmetic-operators"></a>B. Utilisation de CAST avec des opérateurs arithmétiques  
+### <a name="b-using-cast-with-arithmetic-operators"></a>b. Utilisation de CAST avec des opérateurs arithmétiques  
 Cet exemple illustre le calcul effectué sur une colonne unique (intitulée `Computed`) où le total des ventes de l’année en cours (`SalesYTD`) est divisé par le pourcentage de commission (dont la valeur se trouve dans `CommissionPCT`). Cette valeur est arrondie au nombre entier le plus proche, puis convertie en type de données `int`.
   
 ```sql

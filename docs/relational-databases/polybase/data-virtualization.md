@@ -1,22 +1,22 @@
 ---
 title: Virtualiser des données externes dans SQL Server 2019 CTP 2.0 | Microsoft Docs
-description: ''
+description: Cette page détaille les étapes d’utilisation de l’Assistant Création d’une table externe pour des sources de données relationnelles.
 author: Abiola
 ms.author: aboke
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f09da2ec6d40f45bfe756fcfe648fd54fd5db6fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a8f5f55dfa0a569ec88542f819e30d21889997e3
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416870"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596670"
 ---
-# <a name="use-the-data-external-table-wizard-with-external-tables"></a>Utiliser l’Assistant Table de données externe avec des tables externes
+# <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Utiliser l’Assistant Table externe avec des sources de données relationnelles
 
 Un des principaux scénarios pour SQL Server 2019 CTP 2.0 est la possibilité de virtualiser des données. Ce processus permet aux données de rester à leur emplacement d’origine. Vous pouvez *virtualiser* les données dans une instance de SQL Server, ce qui vous permet de les interroger comme n’importe quelle autre table dans SQL Server. Ce processus réduit la nécessité de recourir à des processus ETL. Il est possible grâce à l’utilisation de connecteurs PolyBase. Pour plus d’informations sur la virtualisation des données, consultez [Bien démarrer avec PolyBase](polybase-guide.md).
 

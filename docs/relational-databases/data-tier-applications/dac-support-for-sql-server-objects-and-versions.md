@@ -13,15 +13,15 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec1a3488a8b28054f211e4d68dc329371e4cfb6b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 34f30a8eb8a2d894b1de0a62f5151956c80f5653
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513200"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588723"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Prise en charge DAC pour les objets et versions SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Une application de la couche Données (DAC) prend en charge les objets du [!INCLUDE[ssDE](../../includes/ssde-md.md)] les plus couramment utilisés.  
   
  **Dans cette rubrique**  
@@ -30,7 +30,7 @@ ms.locfileid: "52513200"
 > [!IMPORTANT]
 > Cet article est valide pour SQL Server 2012, mais pas pour SQL Server 2014 ou ultérieur.
 > Pour des articles sur les applications de niveau données sur SQL 2012 et antérieur, consultez les liens suivants :
->
+> 
 > - https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ee240739(v=sql.105)
 > - https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh753459(v=sql.110)
 
@@ -48,20 +48,20 @@ ms.locfileid: "52513200"
   
 |||  
 |-|-|  
-|DATABASE ROLE|FUNCTION : table incluse|  
-|FUNCTION : table à instructions multiples|FUNCTION : scalaire|  
-|INDEX : cluster|INDEX : non-cluster|  
-|INDEX : spatial|INDEX : unique|  
-|LOGIN|Permissions|  
+|DATABASE ROLE|FUNCTION : fonctions table incluse|  
+|FUNCTION : Fonction table à instructions multiples|FUNCTION : Scalaire|  
+|INDEX : Cluster|INDEX : Non cluster|  
+|INDEX : Spatial|INDEX : Unique|  
+|Connexion|Permissions|  
 |Appartenances aux rôles|SCHEMA|  
-|Statistiques|PROCÉDURE STOCKÉE : Transact-SQL|  
-|Synonymes|TABLE : contrainte de validation|  
-|TABLE : classement|TABLE : colonne, notamment les colonnes calculées|  
-|TABLE : contrainte, par défaut|TABLE : contrainte, clé étrangère|  
-|TABLE : contrainte, index|TABLE : contrainte, clé primaire|  
-|TABLE : contrainte, unique|TRIGGER : DML|  
-|TYPE : HIERARCHYID, GEOMETRY, GEOGRAPHY|TYPE : type de données défini par l'utilisateur|  
-|TYPE : type de table défini par l'utilisateur|USER|  
+|Statistiques|STORED PROCEDURE : Transact-SQL|  
+|Synonymes|TABLE : Contrainte CHECK|  
+|TABLE : Classement|TABLE : colonne, notamment les colonnes calculées|  
+|TABLE : contrainte, par défaut|TABLE : contrainte, clé étrangère|  
+|TABLE : contrainte, index|TABLE : contrainte, clé primaire|  
+|TABLE : contrainte, unique|TRIGGER : DML|  
+|TYPE : HIERARCHYID, GEOMETRY, GEOGRAPHY|TYPE : type de données défini par l’utilisateur|  
+|TYPE : type de table défini par l’utilisateur|Utilisateur|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> Prise en charge de l'application de la couche Données par les versions de SQL Server  
@@ -90,34 +90,34 @@ ms.locfileid: "52513200"
  Un package DAC ou un fichier d'exportation créé avec une version de DAC Framework peut être traité par toute version ultérieure du DAC Framework. Par exemple, un package DAC extrait à l'aide des outils clients de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] peut être déployé à l'aide de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 ou des outils clients d'une version supérieure.  
   
 ##  <a name="DeploymentLimitations"></a> Limitations lors du déploiement de données  
- Notez les limitations de fidélité dans le moteur de déploiement de données du DAC Framework dans SQL Server 2012 SP1. Les limitations s'appliquent aux actions suivantes du DAC Framework : déployer ou publier un fichier .dacpac, et importer un fichier .bacpac.  
+ Notez les limitations de fidélité dans le moteur de déploiement de données du DAC Framework dans SQL Server 2012 SP1. Les limitations s'appliquent aux actions suivantes du DAC Framework : déployer ou publier un fichier .dacpac, et importer un fichier .bacpac.  
   
-1.  La perte des métadonnées de certaines conditions et types de base dans les colonnes sql_variant. Dans les cas affectés, un avertissement avec le message suivant s’affiche :  **Certaines propriétés sur certains types de données utilisés dans une colonne sql_variant ne sont pas conservées lorsqu’elles sont déployées par le DAC Framework.**  
+1.  La perte des métadonnées de certaines conditions et types de base dans les colonnes sql_variant. Dans les cas affectés, un avertissement avec le message suivant s’affiche :  **Certaines propriétés sur certains types de données utilisés dans une colonne sql_variant ne sont pas conservées lorsqu’elles sont déployées par le DAC Framework.**  
   
-    -   Types de base MONEY, SMALLMONEY, NUMERIC, DECIMAL : la précision n'est pas conservée.  
+    -   Types de base MONEY, SMALLMONEY, NUMERIC, DECIMAL :  la précision n’est pas conservée.  
   
         -   Types de base de DECIMAL/NUMERIC avec une précision de 38 : les métadonnées sql_variant « TotalBytes » sont toujours définies sur 21.  
   
-    -   Tous les types de base de texte : le classement par défaut de la base de données est appliqué à l'ensemble du texte.  
+    -   Tous les types de base de texte :  le classement par défaut de la base de données est appliqué à l’ensemble du texte.  
   
-    -   Types de base BINARY : la propriété de longueur maximale n'est pas conservée.  
+    -   Types de base BINARY :  la propriété de longueur maximale n’est pas conservée.  
   
-    -   Types de base TIME, DATETIMEOFFSET : la précision est toujours définie à 7.  
+    -   Types de base TIME, DATETIMEOFFSET :  la précision est toujours définie à 7.  
   
-2.  Perte de données dans les colonnes sql_variant. Dans le cas affecté, un avertissement avec le message suivant s'affiche : **Des données seront perdues si une valeur dans une colonne sql_variant DATETIME2 avec une échelle supérieure à 3 est déployée par le DAC Framework. La valeur DATETIME2 est limitée à une échelle égale à 3 pendant le déploiement.**  
+2.  Perte de données dans les colonnes sql_variant. Dans le cas affecté, un avertissement avec le message suivant s’affiche :  **Des données seront perdues si une valeur dans une colonne sql_variant DATETIME2 avec une échelle supérieure à 3 est déployée par le DAC Framework. La valeur DATETIME2 est limitée à une échelle égale à 3 pendant le déploiement.**  
   
     -   Type de base DATETIME2 avec une échelle supérieure à 3 : l'échelle est limitée pour être égale à 3.  
   
-3.  L'opération de déploiement échoue dans les cas suivants dans les colonnes sql_variant. Dans les cas affectés, une boîte de dialogue contenant le message suivant s'affiche :  **L'opération a échoué en raison des limitations de données dans le DAC Framework.**  
+3.  L'opération de déploiement échoue dans les cas suivants dans les colonnes sql_variant. Dans les cas affectés, une boîte de dialogue contenant le message suivant s’affiche :  **L’opération a échoué en raison des limitations de données dans le DAC Framework.**  
   
-    -   Types de base DATETIME2, SMALLDATETIME et DATE : si la valeur se trouve hors de la plage DATETIME (par exemple, l’année est antérieure à 1753).  
+    -   Types de base DATETIME2, SMALLDATETIME et DATE :  si la valeur se trouve hors de la plage DATETIME (par exemple, l’année est antérieure à 1753).  
   
     -   Type de base DECIMAL, NUMERIC : lorsque la précision de la valeur est supérieure à 28.  
   
 ##  <a name="Considerations"></a> Considérations supplémentaires concernant les actions de déploiement  
  Notez les points suivants pour les actions de déploiement de données DAC Framework :  
   
--   **Extraction/exportation** : pour les actions qui utilisent le DAC Framework dans le but de créer un package à partir d’une base de données (par exemple, extraire un fichier .dacpac, exporter un fichier .bacpac), ces restrictions ne s’appliquent pas. Les données du package sont une représentation haute fidélité des données dans la base de données source. Si l'une de ces conditions est présente dans le package, le journal d'extraction/exportation contient un résumé des problèmes au moyen des messages indiqués ci-dessus. Permet d'avertir l'utilisateur des problèmes potentiels de déploiement de données avec le package qu'ils ont créé. L'utilisateur voit également le message de synthèse suivant dans le journal : **Ces limitations n'affectent pas la fiabilité des types de données et des valeurs stockées dans le package DAC créé par le DAC Framework ; elles s'appliquent uniquement aux types de données et valeurs résultant du déploiement d'un package DAC dans une base de données. Pour plus d’informations sur les données affectées et la façon de contourner cette limitation, consultez** [cette rubrique](https://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Extraction/exportation** : pour les actions qui utilisent le DAC Framework dans le but de créer un package à partir d’une base de données (par exemple, extraire un fichier .dacpac, exporter un fichier .bacpac), ces restrictions ne s’appliquent pas. Les données du package sont une représentation haute fidélité des données dans la base de données source. Si l'une de ces conditions est présente dans le package, le journal d'extraction/exportation contient un résumé des problèmes au moyen des messages indiqués ci-dessus. Permet d'avertir l'utilisateur des problèmes potentiels de déploiement de données avec le package qu'ils ont créé. L’utilisateur voit également le message de synthèse suivant dans le journal :  **Ces limitations n’affectent pas la fidélité des types et valeurs de données stockés dans le package DAC créé par le DAC Framework ; elles ne s’appliquent qu’aux types et valeurs de données résultant du déploiement d’un package DAC dans une base de données. Pour plus d’informations sur les données affectées et la façon de contourner cette limitation, consultez** [cette rubrique](https://go.microsoft.com/fwlink/?LinkId=267086).  
   
 -   **Déploiement/publication/importation** : pour les actions qui utilisent le DAC Framework dans le but de déployer un package dans une base de données, par exemple pour déployer ou publier un fichier .dacpac et importer un fichier .bacpac, ces limitations s’appliquent. Les données qui donnent la base de données cible ne doivent pas contenir une représentation haute fidélité des données du package. Le journal de déploiement/importation contient un message, indiqué ci-dessus, pour chaque instance dans laquelle le problème est rencontré. L’opération est bloquée par les erreurs (consultez la catégorie 3 ci-dessus), mais se poursuit avec les autres avertissements.  
   

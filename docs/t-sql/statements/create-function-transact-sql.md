@@ -41,12 +41,12 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 008707aee498d5c63f1ef8a2d67e7166bf7eb4f4
-ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
+ms.openlocfilehash: f2b1ef643fe1d19b0df1ed4efd3b4802789006eb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51818515"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206188"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>Arguments
 *OR ALTER*  
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Modifie, de manière conditionnelle, la fonction uniquement si elle existe déjà. 
  
@@ -373,7 +373,7 @@ Dans un exemple classique, pour MyFood.DLL, dans lequel tous les types sont dans
  *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Définit le type de données de la table pour une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)]. La déclaration de table comprend des définitions de colonne et des contraintes de colonne ou de table. La table est toujours placée dans le groupe de fichiers primaire.  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([en préversion dans certaines régions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([en préversion dans certaines régions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Définit les types de données de table pour une fonction CLR. La déclaration de table ne comprend que des types de données et des noms de colonne. La table est toujours placée dans le groupe de fichiers primaire.  
   
@@ -675,11 +675,11 @@ La clause `ORDER` ne garantit pas des résultats ordonnés quand une requête SE
 > Pour plus d’exemples et des considérations relatives aux performances sur les fonctions définies par l’utilisateur, consultez [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
 
 ### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>A. Utilisation d'une fonction scalaire définie par l'utilisateur calculant la semaine ISO  
- L'exemple suivant crée la fonction définie par l'utilisateur `ISOweek`. Cette fonction contient un argument date et calcule le numéro de semaine ISO. Pour que ce calcul puisse être correctement réalisé, `SET DATEFIRST 1` doit être appelée avant la fonction.  
+ L'exemple suivant crée la fonction définie par l'utilisateur `ISOweek`. Cette fonction prend un argument date et calcule le numéro de semaine ISO. Pour que ce calcul puisse être correctement réalisé, `SET DATEFIRST 1` doit être appelée avant la fonction.  
   
  L’exemple illustre également l’utilisation de la clause [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) pour indiquer le contexte de sécurité dans lequel une procédure stockée peut être exécutée. Dans l'exemple, l'option `CALLER` spécifie que la procédure sera exécutée dans le contexte de l'utilisateur qui l'appelle. Les autres options que vous pouvez spécifier sont `SELF`, `OWNER` et *user_name*.  
   
- Voici l'appel de la fonction. `DATEFIRST` a la valeur `1`.  
+ Voici l'appel de la fonction. Notez que `DATEFIRST` a la valeur `1`.  
   
 ```sql
 CREATE FUNCTION dbo.ISOweek (@DATE datetime)  
@@ -713,7 +713,7 @@ ISO Week
 52  
 ```  
   
-### <a name="b-creating-an-inline-table-valued-function"></a>B. Création d'une fonction table incluse  
+### <a name="b-creating-an-inline-table-valued-function"></a>b. Création d'une fonction table incluse  
  L'exemple suivant retourne une fonction table incluse dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Pour chaque produit vendu au magasin, il retourne trois colonnes : `ProductID`, `Name` et l’agrégat des totaux annuels par magasin sous `YTD Total`.  
   
 ```sql  

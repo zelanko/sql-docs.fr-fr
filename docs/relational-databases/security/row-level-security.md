@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ec86bf23a2fdf951da6d64f934ce8f62f6b3cb5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f1f0e5180c03a033cd854aba9f3261e5a89960f5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409896"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210429"
 ---
 # <a name="row-level-security"></a>Sécurité au niveau des lignes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52409896"
   
  L’accès aux données au niveau des lignes dans une table est restreint par un prédicat de sécurité défini en tant que fonction table incluse. La fonction est ensuite appelée et appliquée par une stratégie de sécurité. Pour les prédicats de filtre, l’application n’est pas consciente des lignes qui sont filtrées à partir du jeu de résultats. Si toutes les lignes sont filtrées, un jeu de valeurs null est retourné. Pour les prédicats BLOCK, toutes les opérations qui violent le prédicat échouent avec une erreur.  
   
- Les prédicats de filtre sont appliqués lors de la lecture des données de la table de base, et ils affectent toutes les opérations get : **SELECT**, **DELETE** (l’utilisateur ne peut pas supprimer des lignes filtrées) et **UPDATE** (l’utilisateur ne peut pas mettre à jour des lignes filtrées, bien qu’il soit possible de mettre à jour les lignes de sorte qu’elles soient filtrées par la suite). Les prédicats BLOCK affectent toutes les opérations d’écriture.  
+ Les prédicats de filtre sont appliqués lors de la lecture des données de la table de base, et ils affectant toutes les opérations get : **SELECT**, **DELETE** (l’utilisateur ne peut pas supprimer des lignes filtrées) et **UPDATE** (l’utilisateur ne peut pas mettre à jour des lignes filtrées, bien qu’il soit possible de mettre à jour des lignes de sorte qu’elles soient filtrées par la suite). Les prédicats BLOCK affectent toutes les opérations d’écriture.  
   
 -   Les prédicats AFTER INSERT et AFTER UPDATE peuvent empêcher les utilisateurs de mettre à jour des lignes avec des valeurs qui violent le prédicat.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "52409896"
   
 -   La définition de plusieurs stratégies de sécurité actives contenant des prédicats sans chevauchement réussit.  
   
- Les prédicats de filtre se comportent comme suit :  
+ Les prédicats de filtre se comportent comme suit :  
   
 -   Définir une stratégie de sécurité qui filtre les lignes d'une table. L'application ignore que des lignes sont filtrées pour les opérations **SELECT**, **UPDATE** et **DELETE**, y compris dans les cas où la totalité des lignes sont filtrées. L'application peut insérer (**INSERT**) des lignes quelconques, qu'il soit prévu ou non de les filtrer lors de toute autre opération.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52409896"
   
 -   Les prédicats BLOCK pour l’opération UPDATE sont divisés en opérations distinctes pour BEFORE et AFTER. Vous ne pouvez donc pas, par exemple, bloquer des utilisateurs en les empêchant de mettre à jour une ligne pour obtenir une valeur supérieure à la valeur actuelle. Si ce type de logique est requis, vous devez utiliser des déclencheurs avec les tables intermédiaires DELETED et INSERTED pour référencer ensemble les valeurs anciennes et nouvelles.  
   
--   L’optimiseur ne vérifie pas un prédicat BLOCK AFTER UPDATE si aucune des colonnes utilisées par la fonction de prédicat n’a été modifiée. Par exemple : Alice ne doit pas pouvoir modifier un salaire en lui attribuant une valeur supérieure à 100 000, mais elle doit pouvoir modifier l’adresse d’un employé dont le salaire est déjà supérieur à 100 000 (car il viole déjà le prédicat).  
+-   L’optimiseur ne vérifie pas un prédicat BLOCK AFTER UPDATE si aucune des colonnes utilisées par la fonction de prédicat n’a été modifiée. Exemple : Alice ne doit pas pouvoir modifier un salaire en lui attribuant une valeur supérieure à 100 000, mais elle doit pouvoir modifier l’adresse d’un employé dont le salaire est déjà supérieur à 100 000 (car cela enfreint déjà le prédicat).  
   
 -   Aucune modification n’a été apportée aux API bulk, y compris à BULK INSERT. Cela signifie que les prédicats BLOCK AFTER INSERT s’appliquent aux opérations d’insertion en bloc comme s’il s’agissait d’opérations d’insertion standard.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "52409896"
   
 -   Évitez d'utiliser les jointures de table excessives dans les fonctions de prédicat pour optimiser les performances.  
   
- Évitez toute logique de prédicat dépendant d’ [options SET](../../t-sql/statements/set-statements-transact-sql.md)spécifiques de la session : s’il est peu probable qu’elles soient utilisées dans des applications pratiques, les fonctions de prédicat dont la logique dépend de certaines options **SET** spécifiques de la session peuvent entraîner des fuites d’informations si des utilisateurs sont en mesure d’exécuter des requêtes arbitraires. Par exemple, une fonction de prédicat qui convertit implicitement une chaîne en **datetime** pourrait filtrer des lignes différentes, selon l’option **SET DATEFORMAT** définie pour la session active. En règle générale, les fonctions de prédicat doivent respecter les règles suivantes :  
+ Évitez toute logique de prédicat dépendant d’[options SET](../../t-sql/statements/set-statements-transact-sql.md) propres à la session : s’il est peu probable qu’elles soient utilisées dans des applications pratiques, les fonctions de prédicat dont la logique dépend de certaines options **SET** propres à la session peuvent entraîner des fuites d’informations si des utilisateurs sont en mesure d’exécuter des requêtes arbitraires. Par exemple, une fonction de prédicat qui convertit implicitement une chaîne en **datetime** pourrait filtrer des lignes différentes, selon l’option **SET DATEFORMAT** définie pour la session active. En règle générale, les fonctions de prédicat doivent respecter les règles suivantes :  
   
 -   Les fonctions de prédicat ne doivent pas convertir implicitement des chaînes de caractères en **date**, **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**, ou inversement, car ces conversions sont affectées par les options [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) et [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md). Utilisez plutôt la fonction **CONVERT** , et spécifiez explicitement le paramètre de style.  
   
@@ -142,10 +142,10 @@ ms.locfileid: "52409896"
 -   Les fonctions de prédicat ne doivent pas comparer des chaînes concaténées à **NULL**, car ce comportement est affecté par l’option [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
    
   
-##  <a name="SecNote"></a> Note de sécurité : Attaques côté canal  
- **Gestionnaire de stratégie de sécurité malveillant :** Il est important d’observer qu’un gestionnaire de stratégie de sécurité malveillant, disposant d’autorisations suffisantes pour créer une stratégie de sécurité sur une colonne sensible, et qui est autorisé à créer ou à modifier des fonctions table incluses, pourrait agir en collusion avec un autre utilisateur ayant des autorisations select sur une table pour effectuer une exfiltration de données en créant à des fins malveillantes des fonctions table incluses destinées à utiliser des attaques par canal auxiliaire pour déduire des données. Ces attaques nécessitent une collusion (ou des autorisations excessives accordées à un utilisateur malveillant) et probablement plusieurs itérations de modification de la stratégie (nécessitant l'autorisation de supprimer le prédicat pour rompre la liaison de schéma), de modification des fonctions table inline et d'exécution répétée d'instructions select sur la table cible. Nous vous recommandons vivement de limiter les autorisations au strict nécessaire et de surveiller toute activité suspecte, telle que la modification permanente des stratégies et des fonctions table inline associées à la sécurité au niveau des lignes.  
+##  <a name="SecNote"></a> Remarque relative à la sécurité : Attaques côté canal  
+ **Gestionnaire de stratégie de sécurité malveillant :** il est important d’observer qu’un gestionnaire de stratégie de sécurité malveillant, avec les autorisations suffisantes pour créer une stratégie de sécurité sur une colonne sensible, et qui dispose de l’autorisation de créer ou modifier des fonctions table inline, peut s’entendre avec un autre utilisateur ayant les autorisations select sur une table pour effectuer une exfiltration des données en créant à des fins malveillantes des fonctions table inline destinées à déclencher des attaques côté canal pour en déduire des données. Ces attaques nécessitent une collusion (ou des autorisations excessives accordées à un utilisateur malveillant) et probablement plusieurs itérations de modification de la stratégie (nécessitant l'autorisation de supprimer le prédicat pour rompre la liaison de schéma), de modification des fonctions table inline et d'exécution répétée d'instructions select sur la table cible. Nous vous recommandons vivement de limiter les autorisations au strict nécessaire et de surveiller toute activité suspecte, telle que la modification permanente des stratégies et des fonctions table inline associées à la sécurité au niveau des lignes.  
   
- **Requêtes élaborées avec soin :** il est possible de provoquer des fuites d’informations via l’utilisation de requêtes élaborées avec soin. Par exemple, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permettrait à un utilisateur malveillant de savoir que le salaire de John Doe est 100 000 $. Même s'il existe un prédicat de sécurité en vigueur pour empêcher un utilisateur malveillant d'interroger directement le salaire d'autres personnes, l'utilisateur peut déterminer si la requête retourne une exception de division par zéro.  
+ **Requêtes élaborées avec soin :** Il est possible de provoquer des fuites d'informations via l'utilisation de requêtes élaborées avec soin. Par exemple, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permettrait à un utilisateur malveillant de savoir que le salaire de John Doe est 100 000 $. Même s'il existe un prédicat de sécurité en vigueur pour empêcher un utilisateur malveillant d'interroger directement le salaire d'autres personnes, l'utilisateur peut déterminer si la requête retourne une exception de division par zéro.  
    
   
 ##  <a name="Limitations"></a> Compatibilité entre fonctionnalités  
@@ -165,7 +165,7 @@ ms.locfileid: "52409896"
   
 -   **Suivi des modifications** Le suivi des modifications peut entraîner une fuite de la clé primaire de lignes qui devraient être filtrées pour les utilisateurs disposant d’autorisations **SELECT** et **VIEW CHANGE TRACKING** . La fuite n’a pas trait aux valeurs de données réelles, mais uniquement à la survenance d’une mise à jour, d’une insertion ou d’une suppression dans une colonne A pour la ligne contenant une clé primaire B. Cela peut être problématique si la clé primaire contient un élément confidentiel tel un numéro de sécurité sociale. Toutefois, dans la pratique, cette fonction **CHANGETABLE** est presque toujours jointe à la table d’origine afin d’obtenir les données les plus récentes.  
   
--   **Recherche en texte intégral** Un gain de performances est attendu pour des requêtes utilisant les fonctions de recherche en texte intégral et de recherche sémantique ci-après, en raison d’une jointure supplémentaire introduite pour appliquer la sécurité au niveau des lignes et éviter la fuite les clés primaires de lignes qui devraient être filtrées : **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
+-   **Recherche en texte intégral** Un gain de performances est attendu pour des requêtes utilisant les fonctions de recherche en texte intégral et de recherche sémantique ci-après, en raison d’une jointure supplémentaire introduite pour appliquer la sécurité au niveau des lignes et éviter la fuite des clés primaires de lignes qui devraient être filtrées : **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
   
 -   **Index columnstore** La sécurité au niveau des lignes est compatible avec les index columnstore tant cluster que non cluster. Toutefois, étant donné que la sécurité au niveau des lignes s’applique à une fonction, l’optimiseur peut modifier le plan de requête de façon à ne pas utiliser le mode batch.  
   

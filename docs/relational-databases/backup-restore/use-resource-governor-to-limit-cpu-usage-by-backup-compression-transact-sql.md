@@ -17,12 +17,12 @@ ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6ea2daec0d2926588e80ade4a5e41cc602da58b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3094df3f5fff3a0dbeb70573236432202420224
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649357"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210538"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utiliser le gouverneur de ressources pour limiter l'utilisation de l'UC par compression de sauvegarde (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47649357"
 ##  <a name="setup_login_and_user"></a> Configuration d'une connexion et d'un utilisateur pour les opérations de priorité basse  
  Le scénario de cette rubrique requiert une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de priorité basse et un utilisateur. Le nom d'utilisateur sera utilisé pour classifier des sessions exécutées dans la connexion et pour les router vers un groupe de charge de travail de Resource Governor qui limite l'utilisation de l'UC.  
   
- La procédure ci-dessous décrit les étapes nécessaires à la configuration d'une connexion et d'un utilisateur à cette fin. Elle est suivie d'un exemple [!INCLUDE[tsql](../../includes/tsql-md.md)] , « Exemple A : configuration d'une connexion et d'un utilisateur (Transact-SQL) ».  
+ La procédure ci-dessous décrit les étapes nécessaires à la configuration d’une connexion et d’un utilisateur à cette fin. Elle est suivie d’un exemple [!INCLUDE[tsql](../../includes/tsql-md.md)], « Exemple A : configuration d’une connexion et d’un utilisateur (Transact-SQL) ».  
   
 ### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>Pour configurer une connexion et un utilisateur de base de données afin de classifier des sessions  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47649357"
   
      Pour plus d’informations, consultez [GRANT – octroi d’autorisations de principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md).  
   
-### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Exemple A : configuration d'une connexion et d'un utilisateur (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Exemple A : configuration d’une connexion et d’un utilisateur (Transact-SQL)  
  L'exemple ci-dessous est pertinent uniquement si vous choisissez de créer une connexion et un utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour des sauvegardes de priorité basse. Vous avez également la possibilité d'utiliser une connexion et un utilisateur existants, le cas échéant.  
   
 > [!IMPORTANT]  
@@ -186,7 +186,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>Exemple B : configuration de Resource Governor (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>Exemple B : configuration de Resource Governor (Transact-SQL)  
  L'exemple ci-dessous effectue les étapes qui suivent dans une transaction unique.  
   
 1.  Il crée le pool de ressources `pMAX_CPU_PERCENT_20` .  
@@ -200,7 +200,7 @@ GO
  Après avoir validé la transaction, l'exemple applique les modifications de configuration demandées dans les instructions ALTER WORKLOAD GROUP ou ALTER RESOURCE POOL.  
   
 > [!IMPORTANT]  
->  L’exemple suivant utilise le nom d’utilisateur de l’exemple d’utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] créé dans « Exemple A : configuration d’une connexion et d’un utilisateur (Transact-SQL) », *domaine_nom*`\MAX_CPU`. Remplacez-le par le nom de l'utilisateur de la connexion que vous projetez d'utiliser pour créer les sauvegardes compressées de priorité basse.  
+>  L’exemple suivant utilise le nom d’utilisateur de l’exemple d’utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] créé dans « Exemple A : configuration d’une connexion et d’un utilisateur (Transact-SQL) », *nom_domaine*`\MAX_CPU`. Remplacez-le par le nom de l'utilisateur de la connexion que vous projetez d'utiliser pour créer les sauvegardes compressées de priorité basse.  
   
 ```sql  
 -- Configure Resource Governor.  
@@ -262,9 +262,9 @@ GO
  [&#91;Haut&#93;](#Top)  
   
 ##  <a name="creating_compressed_backup"></a> Compression de sauvegardes dans une session à utilisation maximale de l'UC limitée  
- Pour créer une sauvegarde compressée dans une session à utilisation maximale de l'UC limitée, connectez-vous en tant que l'utilisateur spécifié dans votre fonction classifieur. Dans votre commande de sauvegarde, spécifiez WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) ou sélectionnez **Compresser la sauvegarde** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Pour créer une sauvegarde de base de données compressée, consultez [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+ Pour créer une sauvegarde compressée dans une session à utilisation maximale de l'UC limitée, connectez-vous en tant que l'utilisateur spécifié dans votre fonction classifieur. Dans votre commande de sauvegarde, spécifiez WITH COMPRESSION ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) ou sélectionnez **Compresser la sauvegarde** ( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Pour créer une sauvegarde de base de données compressée, consultez [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
-### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Exemple C : création d'une sauvegarde compressée (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Exemple C : création d’une sauvegarde compressée (Transact-SQL)  
  L’exemple [BACKUP](../../t-sql/statements/backup-transact-sql.md) suivant crée une sauvegarde complète compressée de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] dans un fichier de sauvegarde récemment formaté, `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
 ```sql  

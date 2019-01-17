@@ -13,12 +13,12 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 001ca15788a47a4089739b10f884ef9a81dfa2d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d89e15ed8b14c9866e9ad217a973272480eb26c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681687"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204818"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Enregistrer le package SSIS (Assistant Importation et Exportation SQL Server)
   Si vous avez indiqué dans la page **Enregistrer et exécuter le package** que vous souhaitiez enregistrer vos paramètres sous la forme d’un package SQL Server Integration Service (SSIS), l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche l’option **Enregistrer le package SSIS**. Cette page vous permet de spécifier d’autres options pour l’enregistrement du package créé par l’Assistant.  
@@ -40,7 +40,7 @@ La capture d’écran suivante montre la première partie de la page **Enregistr
  Permet de décrire le package. En guise de bonne pratique, il est recommandé de décrire la fonction du package de façon à le documenter et à en faciliter la gestion.  
   
  **Cible**  
- Destination ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou système de fichiers) que vous avez définie préalablement pour le package. Si vous voulez enregistrer le package vers une autre destination, revenez à la page **Enregistrer et exécuter le package** .
+ Destination ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou système de fichiers) que vous avez définie préalablement pour le package. Si vous voulez enregistrer le package vers une autre destination, revenez à la page **Enregistrer et exécuter le package** .
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>Capture d’écran : Enregistrer le package dans SQL Server
 

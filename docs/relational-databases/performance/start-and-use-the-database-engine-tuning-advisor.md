@@ -16,15 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 926b099e6cadadb130717159188f2fcc87dbc218
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 749f94658d03828b30de3b328df1abfc8c932d43
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517672"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351065"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -454,7 +454,7 @@ database_name.owner_name.table_name
  Incluez uniquement des recommandations relatives à l'ajout de vues indexées. Les index cluster et non-cluster ne sont pas concernés par les recommandations.  
   
  **Inclure les index filtrés**  
- Incluez des recommandations relatives à l'ajout d'index filtrés. Cette option est disponible si vous sélectionnez l'une des structures de conception physique courantes suivantes : **Index et vues indexées**, **Index**ou **Index non cluster**.  
+ Incluez des recommandations relatives à l'ajout d'index filtrés. Cette option est disponible si vous sélectionnez l’une de ces structures d’étude de réalisation : **Index et vues indexées**, **Index** ou **Index non-cluster**.  
   
  **Index**  
  Incluez uniquement des recommandations relatives à l'ajout d'index cluster et non-cluster. Les vues indexées ne sont pas concernées par les recommandations.  

@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 95ca303d9bed86f92cbd58776d4a24c4d92cce2a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 99e11038cbc7315ff485177f9270e6f0fba74142
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398200"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823693"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Déployer un package de déploiement de modèle à l'aide de MDSModelDeploy
 
@@ -98,7 +97,7 @@ ms.locfileid: "52398200"
   
  **Remarques :**  
   
--   Si une vue d’abonnement dans le package a le même nom qu’une vue d’abonnement dans un modèle existant, l’avertissement suivant s’affiche : **La vue d’abonnement du système de déploiement a été renommée** . La vue est alors créée en tant que *modelname.subscriptionviewname*. Si ce nom existe déjà, la vue d'abonnement n'est pas créée.  
+-   Si une vue d’abonnement dans le package a le même nom qu’une vue d’abonnement dans un modèle existant, l’avertissement suivant s’affiche : **La vue d’abonnement du système de déploiement a été renommée** et la vue est créée en tant que *modelname.subscriptionviewname*. Si ce nom existe déjà, la vue d'abonnement n'est pas créée.  
   
 -   Le processus de déploiement comporte quatre étapes :  
   

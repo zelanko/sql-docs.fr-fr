@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: f5d0da7fb7b4515875b456eac380a6f5e0588e55
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cd332393a0d605f2ae0e519e6a449fe49bff3477
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420430"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215768"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD
     
 REPAIR_ALLOW_DATA_LOSS  
  Tente de réparer toutes les erreurs signalées. Ces réparations peuvent entraîner des pertes de données.  
-    
+    
 > [!WARNING]
 > L’option REPAIR_ALLOW_DATA_LOSS est une fonctionnalité prise en charge, mais il ne s’agit pas toujours nécessairement de la meilleure option pour qu’une base de données soit dans un état physiquement cohérent. En cas de réussite, l'option REPAIR_ALLOW_DATA_LOSS peut entraîner une perte de données. En fait, elle peut entraîner une perte de données supérieure à celle que vous pourriez constater si un utilisateur restaurait la base de données à partir de la dernière bonne sauvegarde. 
 >
@@ -125,7 +125,7 @@ ALL_ERRORMSGS
  Affiche toutes les erreurs signalées par objet. Tous les messages d'erreur sont affichés par défaut. La spécification ou non de cette option n'a aucun effet. Les messages d’erreur sont triés par ID d’objet, à l’exception des messages générés à partir de la [base de données tempdb](../../relational-databases/databases/tempdb-database.md).     
 
 EXTENDED_LOGICAL_CHECKS  
- Si le niveau de compatibilité est égal à 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) ou supérieur, effectue des vérifications de cohérence logique sur une vue indexée, des index XML et des index spatiaux, là où il est présent.  
+ Si le niveau de compatibilité est 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) ou supérieur, effectue des vérifications de cohérence logique sur une vue indexée, des index XML et des index spatiaux, là où ils sont présents.  
  Pour plus d’informations, consultez *Exécution de vérifications de cohérence logique sur des index* dans la section [Notes](#remarks), plus loin dans cette rubrique.  
     
 NO_INFOMSGS  
@@ -133,7 +133,7 @@ NO_INFOMSGS
     
 TABLOCK  
  Génère des verrouillages par DBCC CHECKDB au lieu d'utiliser un instantané de base de données interne. Cette opération comprend un verrou exclusif sur la base de données. TABLOCK accélère l'exécution de DBCC CHECKDB sur une base de données dont la charge est importante, tout en diminuant la concurrence disponible dans cette dernière pendant l'exécution de DBCC CHECKDB.  
-    
+    
 > [!IMPORTANT] 
 > TABLOCK limite les vérifications effectuées ; DBCC CHECKCATALOG n'est pas exécuté sur la base de données et les données [!INCLUDE[ssSB](../../includes/sssb-md.md)] ne sont pas validées.
     
@@ -155,14 +155,14 @@ Cet argument implique toujours NO_INFOMSGS et n’est autorisé avec aucune des 
 DATA_PURITY  
  Génère la vérification de la base de données par DBCC CHECKDB pour les valeurs de colonnes qui ne sont pas valides ou hors limites. Par exemple, DBCC CHECKDB détecte des colonnes dont les dates et les heures sont supérieures ou inférieures à la plage acceptable pour le type de données **datetime**. Cette commande identifie aussi des colonnes de type **decimal** ou numeric approximatif avec des valeurs d’échelle ou de précision qui ne sont pas valides.  
  Les vérifications d'intégrité sur la base colonne-valeur sont activées par défaut et ne nécessitent pas l'option DATA_PURITY. Pour les bases de données mises à niveau à partir des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les vérifications sur la base colonne-valeur ne sont pas activées par défaut tant que la commande DBCC CHECKDB WITH DATA_PURITY n'est pas exécutée sans erreur sur cette base de données. Ensuite, DBCC CHECKDB vérifie l'intégrité sur la base colonne-valeur par défaut. Pour plus d'informations sur les incidences sur CHECKDB suite à une mise à niveau de la base de données à partir de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la section Notes, plus loin dans cette rubrique.  
-    
+    
 > [!WARNING]
 > Si PHYSICAL_ONLY est spécifié, l'intégrité des colonnes n'est pas vérifiée.
     
- Les erreurs de validation signalées par cette option ne peuvent pas être corrigées à l'aide des options de réparation DBCC. Pour plus d’informations sur la correction manuelle de ces erreurs, consultez l’article 923247 de la Base de connaissances Microsoft : [Dépannage de l’erreur DBCC 2570 dans SQL Server 2005 et versions ultérieures](https://support.microsoft.com/kb/923247).  
+ Les erreurs de validation signalées par cette option ne peuvent pas être corrigées à l'aide des options de réparation DBCC. Pour des informations sur la correction manuelle de ces erreurs, consultez l’article 923247 (en anglais) de la Base de connaissances : [Dépannage d’erreur DBCC 2570 dans SQL Server 2005 et versions ultérieures](https://support.microsoft.com/kb/923247).  
     
  MAXDOP  
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
     
  Remplace l’option de configuration **max degree of parallelism** de **sp_configure** pour l’instruction. MAXDOP peut dépasser la valeur configurée avec sp_configure. Si MAXDOP dépasse la valeur configurée avec Resource Governor, le [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] utilise la valeur MAXDOP de Resource Governor, décrite dans [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). Toutes les règles sémantiques utilisées avec l'option de configuration max degree of parallelism sont applicables lorsque vous utilisez l'indicateur de requête MAXDOP. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  
@@ -196,7 +196,7 @@ Ces vérifications de cohérence logique effectuent une vérification croisée d
 DBCC CHECKDB utilise un instantané de base de données interne pour la cohérence transactionnelle nécessaire à la réalisation de ces vérifications. Ceci évite les problèmes de blocage et d'accès simultané lors de l'exécution de ces commandes. Pour plus d’informations, consultez [Afficher la taille du fichier partiellement alloué d’un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) et la section Utilisation de l’instantané de base de données interne DBCC dans [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md). Si vous ne pouvez créer aucun instantané ou si TABLOCK est spécifié, la commande DBCC CHECKDB acquiert des verrous pour obtenir la cohérence requise. Dans ce cas, un verrou de base de données exclusif est requis pour effectuer les vérifications d'allocation, tandis que des verrous de table partagés sont nécessaires pour effectuer les vérifications de table.
 DBCC CHECKDB échoue quand il est exécuté sur une base de données master s’il n’est pas possible de créer d’instantané de base de données interne.
 L’exécution de la commande DBCC CHECKDB sur tempdb ne procède à aucune allocation et ne vérifie aucun catalogue. Elle doit acquérir des verrous de table partagés pour vérifier ces tables. En effet, pour des raisons de performances, les instantanés de base de données ne sont pas disponibles sur tempdb. Cela signifie que la cohérence transactionnelle requise ne peut pas être obtenue.
-Dans Microsoft SQL Server 2012 ou une version antérieure de SQL Server, vous pouvez rencontrer des messages d’erreur quand vous exécutez la commande DBCC CHECKDB pour une base de données dont les fichiers sont situés sur un volume au format ReFS. Pour plus d’informations, consultez l’article 2974455 de la Base de connaissances Microsoft : [Comportement de DBCC CHECKDB quand la base de données SQL Server se trouve sur un volume ReFS](https://support.microsoft.com/kb/2974455).    
+Dans Microsoft SQL Server 2012 ou une version antérieure de SQL Server, vous pouvez rencontrer des messages d’erreur quand vous exécutez la commande DBCC CHECKDB pour une base de données dont les fichiers sont situés sur un volume au format ReFS. Pour plus d’informations, consultez l’article 2974455 de la Base de connaissances : [Comportement de DBCC CHECKDB quand la base de données SQL Server se trouve sur un volume ReFS.](https://support.microsoft.com/kb/2974455)    
     
 ## <a name="checking-and-repairing-filestream-data"></a>Vérification et réparation des données FILESTREAM    
 Quand FILESTREAM est activé pour une base de données et une table, vous pouvez éventuellement stocker des objets BLOB(Binary Large Object) **varbinary(max)** dans le système de fichiers. Lorsque vous utilisez DBCC CHECKDB sur une base de données qui stocke des objets BLOB dans le système de fichiers, DBCC vérifie la cohérence au niveau du lien entre le système de fichiers et la base de données.
@@ -267,7 +267,7 @@ L'exécution de la commande DBCC CHECKDB avec l'option REPAIR_ALLOW_DATA_LOSS pe
 -   Tables de métadonnées de réplication. Pour les actions effectuées par le processus CHECKDB afin de réparer les tables de métadonnées de réplication corrompues, la réplication doit être supprimée puis reconfigurée.    
     
 Si vous devez exécuter la commande DBCC CHECKDB avec l'option REPAIR_ALLOW_DATA_LOSS sur une base de données utilisateur ou de distribution :
-1.  Suspendez le système : arrêtez l'activité sur la base de données et toutes les autres bases de données appartenant à la topologie de réplication, puis tentez de synchroniser tous les nœuds. Pour plus d’informations, consultez [Suspendre une topologie de réplication &#40;programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).    
+1.  Suspendez le système : Arrêtez l'activité sur la base de données et toutes les autres bases de données appartenant à la topologie de réplication, puis tentez de synchroniser tous les nœuds. Pour plus d’informations, consultez [Suspendre une topologie de réplication &#40;programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).    
 1.  Exécutez DBCC CHECKDB.    
 1.  Si le rapport DBCC CHECKDB inclut des réparations pour des tables de la base de données de distribution ou des tables de métadonnées de réplication dans une base de données utilisateur, supprimez et reconfigurez la réplication. Pour plus d’informations, consultez [Désactiver la publication et la distribution](../../relational-databases/replication/disable-publishing-and-distribution.md).    
 1.  Si le rapport DBCC CHECKDB inclut des réparations pour des tables répliquées, procédez à une validation des données pour déterminer s'il existe des différences entre les données de la base de données de publication et celles de la base de données d'abonnement.    
@@ -382,7 +382,7 @@ DBCC CHECKDB (AdventureWorks2012, NOINDEX);
 GO    
 ```    
     
-### <a name="b-checking-the-current-database-suppressing-informational-messages"></a>B. Vérification de la base de données actuelle et suppression des messages d'information    
+### <a name="b-checking-the-current-database-suppressing-informational-messages"></a>b. Vérification de la base de données actuelle et suppression des messages d'information    
 L'exemple suivant vérifie la base de données actuelle et supprime tous les messages d'information.
     
 ```sql    

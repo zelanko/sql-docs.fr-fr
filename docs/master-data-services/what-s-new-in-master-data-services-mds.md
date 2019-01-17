@@ -5,19 +5,18 @@ ms.date: 07/08/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 657308bcf378b6e35a360a2c6ad39a807c03e086
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d83bf40c6f5621f694f4ca6a5251dfb148c29ddf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392339"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764601"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Nouveautés de Master Data Services (MDS)
 
@@ -82,7 +81,7 @@ ms.locfileid: "52392339"
   
  Un utilisateur peut désormais se voir attribuer explicitement l’autorisation d’administrateur au niveau du modèle. Cela signifie que si des autorisations sont attribuées par la suite à l’utilisateur dans la sous-arborescence de modèle, par exemple au niveau de l’entité, il ne perd pas cette autorisation d’administrateur.  
   
- Dans cette version de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], nous proposons d’autres niveaux d’autorisations en introduisant de nouvelles autorisations (lecture, création, mise à jour et suppression). Par exemple, un utilisateur qui dispose seulement de l’autorisation de mise à jour peut désormais mettre à jour les données de référence sans créer ni supprimer les données. Quand vous attribuez à un utilisateur l’autorisation de création, de mise à jour ou de suppression, il bénéficie automatiquement de l’autorisation de lecture. Vous pouvez aussi combiner les autorisations de lecture, de création, de mise à jour et de suppression.  
+ Dans cette version de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], nous proposons d’autres niveaux d’autorisations en introduisant les nouvelles autorisations suivantes : Lire, Créer, Mettre à jour et Supprimer. Par exemple, un utilisateur qui dispose seulement de l’autorisation de mise à jour peut désormais mettre à jour les données de référence sans créer ni supprimer les données. Quand vous attribuez à un utilisateur l’autorisation de création, de mise à jour ou de suppression, il bénéficie automatiquement de l’autorisation de lecture. Vous pouvez aussi combiner les autorisations de lecture, de création, de mise à jour et de suppression.  
   
  Quand vous procédez à une mise à niveau vers [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les anciennes autorisations sont transformées en nouvelles autorisations, comme indiqué dans le tableau suivant.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "52392339"
 |L’utilisateur qui installe à l’origine [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] dispose de l’autorisation d’administrateur du serveur.|L’utilisateur dispose de l’autorisation de la fonction Super utilisateur.|  
 |L’utilisation dispose d’autorisations de mise à jour au niveau du modèle et aucune autorisation dans la sous-arborescence de modèle. Il est donc implicitement un administrateur de modèle.|L’utilisateur dispose d’autorisations d’administrateur explicites au niveau du modèle.|  
 |L’utilisateur dispose d’autorisations de lecture seule.|L’utilisateur dispose d’autorisations d’accès en lecture.|  
-|L’utilisateur dispose d’autorisations de mise à jour.|L’utilisateur dispose de l’ensemble des quatre autorisations d’accès : création, mise à jour, suppression et lecture.|  
+|L’utilisateur dispose d’autorisations de mise à jour.|L’utilisateur dispose des quatre autorisations d’accès : Créer, Mettre à jour, Supprimer et Lire.|  
 |L’utilisateur dispose d’autorisations de refus.|L’utilisateur dispose d’autorisations de refus.|  
   
  Pour plus d’informations sur les autorisations, consultez l’article [Sécurité (Master Data Services)](../master-data-services/security-master-data-services.md).  
@@ -229,7 +228,7 @@ ms.locfileid: "52392339"
    
  **Exemples de packages de déploiement de modèle mis à jour**  
   
- Les exemples de packages ont été mis à jour pour prendre en charge de nouveaux scénarios. Pour plus d’informations, consultez l’article [Exemples : packages de déploiement de modèles (Master Data Services)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ Les exemples de packages ont été mis à jour pour prendre en charge de nouveaux scénarios. Pour plus d’informations, consultez [Exemples SQL Server : Packages de déploiement de modèle (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Master Data Services et fonctionnalités de Services de qualité de données pris en charge par les éditions de SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  

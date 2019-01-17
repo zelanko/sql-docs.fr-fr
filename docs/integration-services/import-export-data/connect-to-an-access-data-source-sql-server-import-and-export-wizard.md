@@ -11,12 +11,12 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c49ec9733634d0b8eb5f6523eb6fd7f416b5f408
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb847f12e7b9a508d880033da7e66a426b757791
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829467"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202638"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données Access (Assistant Importation et Exportation SQL Server)
 Cette rubrique décrit comment se connecter à une source de données **Microsoft Access** à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server.
@@ -46,8 +46,8 @@ La liste de fournisseurs de données peut contenir plusieurs entrées pour Micro
  **Nom de fichier**  
 Spécifiez le chemin et le nom de fichier du fichier Access. Par exemple, **C:\\MyData.mdb** pour un fichier sur l’ordinateur local ou **\\\\Sales\\Database\\Northwind.mdb** pour un fichier sur un partage réseau. Ou cliquez sur **Parcourir**. 
 
- >   [!NOTE] 
- > Si vous cliquez sur **Parcourir** pour localiser le fichier Access, la boîte de dialogue **Ouvrir** filtre les fichiers pour n’afficher par défaut que les fichiers dans l’ancien format et portant l’ancienne extension de fichier .MDB. Toutefois, le fournisseur de données peut également ouvrir des fichiers dans le nouveau format et portant la nouvelle extension de fichier .ACCDB.
+> [!NOTE]
+> Si vous cliquez sur **Parcourir** pour localiser le fichier Access, la boîte de dialogue **Ouvrir** filtre les fichiers pour n’afficher par défaut que les fichiers dans l’ancien format et portant l’ancienne extension de fichier .MDB. Toutefois, le fournisseur de données peut également ouvrir des fichiers dans le nouveau format et portant la nouvelle extension de fichier .ACCDB.
   
  **Parcourir**  
  Permet de rechercher le fichier de la base de données à l’aide de la boîte de dialogue **Ouvrir**.  
@@ -70,7 +70,7 @@ Si vous ne voyez pas Access dans la liste des sources de données, utilisez-vous
 > Pour utiliser la version 64 bits de l’Assistant Importation et Exportation SQL Server, vous devez installer SQL Server. SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) sont des applications 32 bits qui installent uniquement des fichiers 32 bits, notamment la version 32 bits de l’Assistant.
 
 ## <a name="officeDownloads"></a>Se procurer les fichiers nécessaires pour se connecter à Access  
-Vous devrez peut-être télécharger les composants de connectivité pour les sources de données Microsoft Office, notamment Access et Excel, s’ils ne sont pas déjà installés. Téléchargez la dernière version des composants de connectivité pour les fichiers Excel et Access ici : [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
+Vous devrez peut-être télécharger les composants de connectivité pour les sources de données Microsoft Office, notamment Access et Excel, s’ils ne sont pas déjà installés. Téléchargez la dernière version des composants de connectivité pour les fichiers Excel et Access ici : [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
   
 La dernière version des composants peut ouvrir des fichiers créés dans des versions antérieures d’Access.
 

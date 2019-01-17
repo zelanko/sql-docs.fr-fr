@@ -14,12 +14,12 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ecfa60f4b28d72e20d6f6b112d4739be793daaa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e29fe0deaaba673136ee1e1f135e61a8f2b402e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657257"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212088"
 ---
 # <a name="back-up-database-media-options-page"></a>Sauvegarder la base de données (page Options de support)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "47657257"
  **Sauvegarder la fin du journal et laisser la base de données dans l'état de restauration**  
  Sauvegarder la fin du journal et laisser la base de données dans l'état de restauration. Crée une *sauvegarde de la fin du journal*, incluant les journaux n’ayant pas encore été sauvegardés (journal actif), généralement en guise de préparation à la restauration d’une base de données. La base de données est inaccessible aux utilisateurs tant qu'elle n'a pas été restaurée dans son intégralité.  
   
- La sélection de cette option revient à spécifier WITH NO_TRUNCATE, NORECOVERY dans une instruction [BACKUP](../../t-sql/statements/backup-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Pour plus d’informations, consultez [Sauvegardes de la fin du journal &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+ La sélection de cette option revient à spécifier WITH NO_TRUNCATE, NORECOVERY dans une instruction [BACKUP](../../t-sql/statements/backup-transact-sql.md) ( [!INCLUDE[tsql](../../includes/tsql-md.md)]). Pour plus d’informations, consultez [Sauvegardes de la fin du journal &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
 ### <a name="tape-drive"></a>Lecteur de bande  
  Les options du volet **Lecteur de bande** contrôlent la gestion des bandes durant l’opération de sauvegarde. Ces options sont activées uniquement si **Bande** a été sélectionné dans le volet **Destination** de la page [Général](../../relational-databases/backup-restore/back-up-database-general-page.md) de la boîte de dialogue **Sauvegarder la base de données**.  

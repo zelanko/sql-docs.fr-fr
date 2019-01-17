@@ -14,12 +14,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f99cba0597faad9da7250097f1ca8e866bd00e21
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 7d04286e2b8703e7d06a9913b421f69a94234b25
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560426"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591053"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Rétablir une base de données dans l'état d'un instantané de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51560426"
   
      [Sécurité](#Security)  
   
--   **Pour rétablir une base de données dans l’état d’un instantané de base de données à l’aide de :**  [Transact-SQL](#TsqlProcedure)  
+-   **Pour rétablir une base de données dans l’état d’un instantané de base de données, avec :**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -101,7 +101,7 @@ ms.locfileid: "51560426"
   
      Une opération de restauration nécessite des autorisations RESTORE DATABASE sur la base de données source. Pour restaurer la base de données, utilisez l'instruction Transact-SQL suivante :  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
+     RESTORE DATABASE *nom_base_de_données* FROM DATABASE_SNAPSHOT **=**_nom_instantané_base_de_données_  
   
      Où *nom_base_de_données* est la base de données source et *nom_instantané_base_de_données* le nom de l’instantané auquel vous souhaitez rétablir la base de données. Notez que dans cette instruction, vous devez spécifier un nom d'instantané et non un périphérique de sauvegarde.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "51560426"
   
 -   A. [Rétablissement d'un instantané sur la base de données AdventureWorks](#Reverting_AW)  
   
--   B. [Rétablissement d'un instantané sur la base de données Sales (Ventes)](#Reverting_Sales)  
+-   b. [Rétablissement d'un instantané sur la base de données Sales (Ventes)](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. Rétablissement d'un instantané sur la base de données AdventureWorks  
  L'exemple suivant part du principe qu'un seul instantané existe actuellement sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Pour l’exemple qui crée l’instantané auquel la base de données est ici rétablie, consultez [Créer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  

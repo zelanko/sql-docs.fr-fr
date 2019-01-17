@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e89d2803fda21563b69bb2ba658df2f9a8f0bef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7a06414a9ca09ecfd02438827cbee6645ca381ae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545451"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215385"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL) 
 
@@ -306,7 +306,7 @@ Vous pouvez déterminer l'état de cette option en consultant la colonne is_auto
 > [!NOTE]  
 >  La mise en miroir de bases de données exige AUTO_CLOSE OFF.  
   
-Si la base de données a la valeur AUTOCLOSE = ON, une opération qui initialise un arrêt de la base de données automatique efface le cache du plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette opération entraîne la recompilation de tous les plans d'exécution ultérieurs et peut entraîner une baisse temporaire et brutale des performances des requêtes. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 et ultérieur, pour chaque mémoire cache effacée dans le cache de plan, le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d'information suivant : « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a rencontré %d occurrence(s) de vidages de mémoire cache pour la mémoire cache '%s' (partie du cache du plan) en raison d'opérations de maintenance ou de reconfiguration de base de données ». Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.  
+Si la base de données a la valeur AUTOCLOSE = ON, une opération qui initialise un arrêt de la base de données automatique efface le cache du plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette opération entraîne la recompilation de tous les plans d'exécution ultérieurs et peut entraîner une baisse temporaire et brutale des performances des requêtes. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 et versions ultérieures, pour chaque mémoire cache effacée dans le cache de plan, le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d’information suivant : « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a rencontré %d occurrence(s) de vidages de mémoire cache pour la mémoire cache '%s' (partie du cache du plan) en raison d’opérations de maintenance ou de reconfiguration de base de données ». Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.  
  
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }  
 ON  
@@ -332,7 +332,7 @@ Les fichiers de base de données peuvent faire l'objet d'une réduction périodi
   
 Les fichiers de données et les fichiers journaux peuvent être automatiquement réduits. AUTO_SHRINK ne réduit la taille du journal des transactions que si le mode de récupération SIMPLE est défini pour la base de données ou si le journal est sauvegardé. Si la valeur OFF est définie, les fichiers de base de données ne sont pas réduits automatiquement lors des vérifications périodiques de l'espace inutilisé.  
   
-L'option AUTO_SHRINK provoque un compactage dès qu'un fichier comprend plus de 25 % d'espace inutilisé. Le fichier est compacté à une taille laissant 25 % d'espace inutilisé ou à sa taille initiale au moment de sa création, selon la valeur la plus élevée.  
+L'option AUTO_SHRINK provoque un compactage dès qu'un fichier comprend plus de 25 % d'espace inutilisé. Le fichier est compacté à une taille laissant 25 % d'espace inutilisé ou à sa taille initiale au moment de sa création, selon la valeur la plus élevée.  
   
 Vous ne pouvez pas compacter une base de données en lecture seule.  
   
@@ -393,7 +393,7 @@ Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] signale les régressions des p
 
 **\<change_tracking_option> ::=**  
   
-**S’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
+**S’applique à ** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
   
 Contrôle les options de suivi des modifications. Vous pouvez activer le suivi des modifications, définir des options, modifier des options et désactiver le suivi des modifications. Vous trouverez des exemples dans la section Exemples plus loin dans cet article.  
   
@@ -510,7 +510,7 @@ EMERGENCY
 La base de données est marquée READ_ONLY, la journalisation est désactivée et l'accès est restreint aux membres du rôle serveur fixe sysadmin. EMERGENCY est principalement utilisé à des fins de dépannage. Par exemple, une base de données marquée comme suspecte en raison d'un fichier journal corrompu peut se voir affecté l'état EMERGENCY. L'administrateur système peut alors accéder en lecture seule à la base de données. Seuls les membres du rôle serveur fixe sysadmin peuvent définir l'état EMERGENCY pour une base de données.  
   
 > [!NOTE]  
-> **Autorisations :** L’autorisation ALTER DATABASE pour la base de données d’objet est nécessaire pour faire passer une base de données à l’état hors connexion ou urgence. L'autorisation ALTER ANY DATABASE au niveau serveur est requise pour faire passer en ligne une base de données hors connexion.  
+> **Autorisations :** l'autorisation ALTER DATABASE pour la base de données d'objet est requise pour faire passer une base de données à l'état hors connexion ou d'urgence. L'autorisation ALTER ANY DATABASE au niveau serveur est requise pour faire passer en ligne une base de données hors connexion.  
   
 Vous pouvez déterminer l’état de cette option en consultant les colonnes state et state_desc de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou la propriété Status de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md). Pour plus d'informations, consultez [Database States](../../relational-databases/databases/database-states.md).  
   
@@ -668,7 +668,7 @@ Voir [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sq
   
 **\<mixed_page_allocation_option> ::=**  
   
-**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
   
 MIXED_PAGE_ALLOCATION { OFF | ON } contrôle si la base de données peut créer des pages initiales à l’aide d’une extension mixte pour les huit premières pages d’une table ou d’un index.  
  
@@ -695,7 +695,7 @@ Vous pouvez déterminer la valeur actuelle de cette option en consultant la colo
   
 **\<query_store_options> ::=**  
   
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
 Contrôle si le magasin de requête est activé dans la base de données, ainsi que la suppression du contenu du magasin de requête. Pour plus d’informations, consultez [Scénarios d’utilisation du magasin des requêtes](../../relational-databases/performance/query-store-usage-scenarios.md). 
@@ -1037,7 +1037,7 @@ QUOTED_IDENTIFIER { ON | OFF }
 ON  
 Des guillemets doubles peuvent être utilisés pour entourer des identificateurs délimités.  
   
-Toutes les chaînes délimitées par des guillemets doubles sont considérées comme des identificateurs d'objet. Les identificateurs entre guillemets n'ont pas à respecter les règles [!INCLUDE[tsql](../../includes/tsql-md.md)] propres aux identificateurs. Ils peuvent être des mots clés et contenir des caractères généralement interdits dans les identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si un guillemet simple (') fait partie de la chaîne littérale, il pourra être représenté par un guillemet double ('').  
+Toutes les chaînes délimitées par des guillemets doubles sont considérées comme des identificateurs d'objet. Les identificateurs entre guillemets n'ont pas à respecter les règles [!INCLUDE[tsql](../../includes/tsql-md.md)] propres aux identificateurs. Ils peuvent être des mots clés et contenir des caractères généralement interdits dans les identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)] . Si un guillemet simple (') fait partie de la chaîne littérale, il pourra être représenté par un guillemet double ('').  
   
 OFF  
 Les identificateurs ne peuvent figurer entre guillemets et doivent respecter toutes les règles [!INCLUDE[tsql](../../includes/tsql-md.md)] en matière d'identificateurs. Les chaînes littérales peuvent être délimitées par des guillemets simples ou doubles.  
@@ -1119,21 +1119,21 @@ Toutes les options de base de données n’utilisent pas la clause WITH \<termin
 |\<db_user_access_option>|Oui|Oui|  
 |\<db_update_option>|Oui|Oui|  
 |\<delayed_durability_option>|Oui|Oui|  
-|\<external_access_option>|Oui|non|  
-|\<cursor_option>|Oui|non|  
-|\<auto_option>|Oui|non|  
-|\<sql_option>|Oui|non|  
-|\<recovery_option>|Oui|non|  
-|\<target_recovery_time_option>|non|Oui|  
-|\<database_mirroring_option>|non|non|  
-|ALLOW_SNAPSHOT_ISOLATION|non|non|  
-|READ_COMMITTED_SNAPSHOT|non|Oui|  
+|\<external_access_option>|Oui|Non|  
+|\<cursor_option>|Oui|Non|  
+|\<auto_option>|Oui|Non|  
+|\<sql_option>|Oui|Non|  
+|\<recovery_option>|Oui|Non|  
+|\<target_recovery_time_option>|Non|Oui|  
+|\<database_mirroring_option>|Non|Non|  
+|ALLOW_SNAPSHOT_ISOLATION|Non|Non|  
+|READ_COMMITTED_SNAPSHOT|Non|Oui|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Oui|Oui|  
-|\<service_broker_option>|Oui|non|  
+|\<service_broker_option>|Oui|Non|  
 |DATE_CORRELATION_OPTIMIZATION|Oui|Oui|  
 |\<parameterization_option>|Oui|Oui|  
 |\<change_tracking_option>|Oui|Oui|  
-|\<db_encryption_option>|Oui|non|  
+|\<db_encryption_option>|Oui|Non|  
   
 Le cache de plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est effacé par la configuration d'une des options suivantes :  
   
@@ -1154,7 +1154,7 @@ Le cache de procédures est également vidé dans les scénarios suivants.
 - Vous restaurez une sauvegarde de base de données.  
 -   Vous détachez une base de données.  
   
-Cette opération entraîne la recompilation de tous les plans d'exécution ultérieurs et peut entraîner une baisse temporaire et brutale des performances des requêtes. Pour chaque mémoire cache effacée dans le cache de plan, le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d'information suivant : « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a rencontré %d occurrence(s) de vidages de mémoire cache pour la mémoire cache '%s' (partie du cache du plan) en raison d'opérations de maintenance ou de reconfiguration de base de données ». Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.  
+Cette opération entraîne la recompilation de tous les plans d'exécution ultérieurs et peut entraîner une baisse temporaire et brutale des performances des requêtes. Pour chaque mémoire cache effacée dans le cache de plan, le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d’information suivant : « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a rencontré %d occurrence(s) de vidages de mémoire cache pour la mémoire cache ’%s’ (partie du cache du plan) en raison d’opérations de maintenance ou de reconfiguration de base de données ». Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -1170,7 +1170,7 @@ GO
   
 ```  
   
-### <a name="b-setting-the-database-to-readonly"></a>B. Paramétrage de la base de données avec READ_ONLY  
+### <a name="b-setting-the-database-to-readonly"></a>b. Paramétrage de la base de données avec READ_ONLY  
 Pour modifier l'état d'une base de données ou d'un groupe de fichiers en spécifiant READ_ONLY ou READ_WRITE, vous avez besoin d'un accès exclusif à la base de données. L'exemple ci-dessous illustre le basculement de la base de données en mode `SINGLE_USER` pour obtenir l'accès exclusif. L'exemple affecte ensuite à la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] l'état `READ_ONLY` et rend à tous les utilisateurs l'accès à la base de données.  
   
 > [!NOTE]  
@@ -1234,7 +1234,7 @@ ALTER DATABASE AdventureWorks2012
 SET CHANGE_TRACKING (CHANGE_RETENTION = 3 DAYS);  
 ```  
   
-L'exemple ci-dessous illustre comment désactiver le suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+L'exemple ci-dessous illustre comment désactiver le suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
@@ -1242,7 +1242,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>E. Activation du magasin de requête  
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 L'exemple suivant active le magasin de requête et configure les paramètres de stockage des requêtes.  
   
@@ -1454,7 +1454,7 @@ Les fichiers de base de données peuvent faire l'objet d'une réduction périodi
   
 Les fichiers de données et les fichiers journaux peuvent être automatiquement réduits. AUTO_SHRINK ne réduit la taille du journal des transactions que si le mode de récupération SIMPLE est défini pour la base de données ou si le journal est sauvegardé. Si la valeur OFF est définie, les fichiers de base de données ne sont pas réduits automatiquement lors des vérifications périodiques de l'espace inutilisé.  
   
-L'option AUTO_SHRINK provoque un compactage dès qu'un fichier comprend plus de 25 % d'espace inutilisé. Le fichier est compacté à une taille laissant 25 % d'espace inutilisé ou à sa taille initiale au moment de sa création, selon la valeur la plus élevée.  
+L'option AUTO_SHRINK provoque un compactage dès qu'un fichier comprend plus de 25 % d'espace inutilisé. Le fichier est compacté à une taille laissant 25 % d'espace inutilisé ou à sa taille initiale au moment de sa création, selon la valeur la plus élevée.  
   
 Vous ne pouvez pas compacter une base de données en lecture seule.  
   
@@ -1870,7 +1870,7 @@ QUOTED_IDENTIFIER { ON | OFF }
 ON  
 Des guillemets doubles peuvent être utilisés pour entourer des identificateurs délimités.  
   
-Toutes les chaînes délimitées par des guillemets doubles sont considérées comme des identificateurs d'objet. Les identificateurs entre guillemets n'ont pas à respecter les règles [!INCLUDE[tsql](../../includes/tsql-md.md)] propres aux identificateurs. Ils peuvent être des mots clés et contenir des caractères généralement interdits dans les identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si un guillemet simple (') fait partie de la chaîne littérale, il pourra être représenté par un guillemet double ('').  
+Toutes les chaînes délimitées par des guillemets doubles sont considérées comme des identificateurs d'objet. Les identificateurs entre guillemets n'ont pas à respecter les règles [!INCLUDE[tsql](../../includes/tsql-md.md)] propres aux identificateurs. Ils peuvent être des mots clés et contenir des caractères généralement interdits dans les identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)] . Si un guillemet simple (') fait partie de la chaîne littérale, il pourra être représenté par un guillemet double ('').  
   
 OFF  
 Les identificateurs ne peuvent figurer entre guillemets et doivent respecter toutes les règles [!INCLUDE[tsql](../../includes/tsql-md.md)] en matière d'identificateurs. Les chaînes littérales peuvent être délimitées par des guillemets simples ou doubles.  
@@ -1946,20 +1946,20 @@ Toutes les options de base de données n’utilisent pas la clause WITH \<termin
   
 |Catégorie d'options|Peut être spécifiée avec d'autres options|Peut utiliser la clause WITH \<termination>|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<auto_option>|Oui|non|  
+|\<auto_option>|Oui|Non|  
 |\<change_tracking_option>|Oui|Oui|  
-|\<cursor_option>|Oui|non|  
-|\<db_encryption_option>|Oui|non|  
+|\<cursor_option>|Oui|Non|  
+|\<db_encryption_option>|Oui|Non|  
 |\<db_update_option>|Oui|Oui|  
 |\<db_user_access_option>|Oui|Oui|  
 |\<delayed_durability_option>|Oui|Oui|  
 |\<parameterization_option>|Oui|Oui|  
-|ALLOW_SNAPSHOT_ISOLATION|non|non|  
-|READ_COMMITTED_SNAPSHOT|non|Oui|  
+|ALLOW_SNAPSHOT_ISOLATION|Non|Non|  
+|READ_COMMITTED_SNAPSHOT|Non|Oui|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Oui|Oui|  
 |DATE_CORRELATION_OPTIMIZATION|Oui|Oui|  
-|\<sql_option>|Oui|non|  
-|\<target_recovery_time_option>|non|Oui|  
+|\<sql_option>|Oui|Non|  
+|\<target_recovery_time_option>|Non|Oui|  
   
 ## <a name="examples"></a>Exemples  
   
@@ -1981,7 +1981,7 @@ GO
   
 ```  
   
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Activation de l'isolement d'instantané sur une base de données  
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>b. Activation de l'isolement d'instantané sur une base de données  
 L'exemple ci-dessous illustre l'activation de l'option d'infrastructure d'isolement d'instantané pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
@@ -2225,7 +2225,7 @@ Les fichiers de base de données peuvent faire l'objet d'une réduction périodi
   
 Les fichiers de données et les fichiers journaux peuvent être automatiquement réduits. AUTO_SHRINK ne réduit la taille du journal des transactions que si le mode de récupération SIMPLE est défini pour la base de données ou si le journal est sauvegardé. Si la valeur OFF est définie, les fichiers de base de données ne sont pas réduits automatiquement lors des vérifications périodiques de l'espace inutilisé.  
   
-L'option AUTO_SHRINK provoque un compactage dès qu'un fichier comprend plus de 25 % d'espace inutilisé. Le fichier est compacté à une taille laissant 25 % d'espace inutilisé ou à sa taille initiale au moment de sa création, selon la valeur la plus élevée.  
+L'option AUTO_SHRINK provoque un compactage dès qu'un fichier comprend plus de 25 % d'espace inutilisé. Le fichier est compacté à une taille laissant 25 % d'espace inutilisé ou à sa taille initiale au moment de sa création, selon la valeur la plus élevée.  
   
 Vous ne pouvez pas compacter une base de données en lecture seule.  
   
@@ -2598,7 +2598,7 @@ QUOTED_IDENTIFIER { ON | OFF }
 ON  
 Des guillemets doubles peuvent être utilisés pour entourer des identificateurs délimités.  
   
-Toutes les chaînes délimitées par des guillemets doubles sont considérées comme des identificateurs d'objet. Les identificateurs entre guillemets n'ont pas à respecter les règles [!INCLUDE[tsql](../../includes/tsql-md.md)] propres aux identificateurs. Ils peuvent être des mots clés et contenir des caractères généralement interdits dans les identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si un guillemet simple (') fait partie de la chaîne littérale, il pourra être représenté par un guillemet double ('').  
+Toutes les chaînes délimitées par des guillemets doubles sont considérées comme des identificateurs d'objet. Les identificateurs entre guillemets n'ont pas à respecter les règles [!INCLUDE[tsql](../../includes/tsql-md.md)] propres aux identificateurs. Ils peuvent être des mots clés et contenir des caractères généralement interdits dans les identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)] . Si un guillemet simple (') fait partie de la chaîne littérale, il pourra être représenté par un guillemet double ('').  
   
 OFF  
 Les identificateurs ne peuvent figurer entre guillemets et doivent respecter toutes les règles [!INCLUDE[tsql](../../includes/tsql-md.md)] en matière d'identificateurs. Les chaînes littérales peuvent être délimitées par des guillemets simples ou doubles.  
@@ -2683,7 +2683,7 @@ GO
   
 ```  
   
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Activation de l'isolement d'instantané sur une base de données  
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>b. Activation de l'isolement d'instantané sur une base de données  
 L'exemple ci-dessous illustre l'activation de l'option d'infrastructure d'isolement d'instantané pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  

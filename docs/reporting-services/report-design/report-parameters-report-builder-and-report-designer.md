@@ -1,9 +1,11 @@
 ---
 title: Paramètres de rapport (Générateur de rapports et Concepteur de rapports) | Microsoft Docs
-ms.date: 10/17/2016
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
+description: Cette rubrique décrit les utilisations courantes des paramètres de rapport Reporting Services, les propriétés que vous pouvez définir, et bien d’autres aspects.
+ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
@@ -15,26 +17,25 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa92c44ff8410049e32ba7ddba2c90fcd07c2821
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 55104192e2a6ac738ca5b99365fd90b74d40430b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032078"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215020"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Paramètres de rapport (Générateur de rapports et Concepteur de rapports)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)], [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint et en mode natif
+
   Cette rubrique décrit les utilisations courantes des paramètres de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les propriétés que vous pouvez définir, et bien d’autres aspects. Les paramètres de rapport vous permettent de contrôler les données du rapport, d'interconnecter les rapports associés et de varier la présentation des rapports. Vous pouvez utiliser les paramètres de rapport dans les rapports paginés que vous créez dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] et dans le Concepteur de rapports, ainsi que dans les rapports mobiles que vous créez dans [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. En savoir plus sur les [Concepts de paramètres de rapport](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
-  
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], mode SharePoint et mode natif de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
-  
- Pour essayer d’ajouter vous-même un paramètre à un rapport, consultez [Didacticiel : Ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
+ 
+Pour essayer d’ajouter vous-même un paramètre à un rapport, consultez [Tutoriel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
     
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> Utilisations courantes des paramètres  
  Voici quelques-unes des utilisations les plus courantes des paramètres.  
   
- **Contrôler les données des rapports paginés et mobiles**  
+**Contrôler les données des rapports paginés et mobiles**  
   
 -   Filtrez les données d’un rapport paginé au niveau de la source de données en écrivant des requêtes de jeu de données qui comportent des variables.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "50032078"
   
 -   Permettez aux utilisateurs de spécifier des valeurs pour personnaliser les données d’un rapport paginé. Par exemple, fournissez deux paramètres pour la date de début et la date de fin des données de ventes.  
   
- **Connecter des rapports associés**  
+**Connecter des rapports associés**  
   
 -   Utilisez des paramètres pour associer des rapports principaux à des rapports d'extraction, des sous-rapports et des rapports liés. Lorsque vous concevez un ensemble de rapports, vous pouvez élaborer chaque rapport pour obtenir des réponses à certaines questions. Chaque rapport peut offrir une vue différente ou un niveau de détail différent pour des informations connexes. Pour fournir un ensemble de rapports reliés entre eux, créez des paramètres pour les données associées sur les rapports cibles.  
   
@@ -52,7 +53,7 @@ ms.locfileid: "50032078"
   
 -   Personnalisez des ensembles de paramètres pour plusieurs utilisateurs. Créez deux rapports liés basés sur un état des ventes sur le serveur de rapports. L'un des rapports liés utilise des valeurs de paramètres prédéfinies pour les commerciaux et l'autre rapport lié utilise des valeurs de paramètres prédéfinies pour les responsables commerciaux. Les deux rapports utilisent la même définition de rapport.  
   
- **Varier la présentation des rapports**  
+**Varier la présentation des rapports**  
   
 -   Envoyez des commandes à un serveur de rapports via une demande d'URL, pour personnaliser l'affichage d'un rapport. Pour plus d’informations, consultez [Accès URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) et [Passer un paramètre de rapport dans une URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
@@ -105,9 +106,9 @@ ms.locfileid: "50032078"
   
  Pour plus d'informations, consultez [Requête de dataset](#bkmk_Dataset_Parameters) dans cette rubrique.  
   
- **Créer manuellement un paramètre**  
+**Créer manuellement un paramètre**  
   
- Créez manuellement un paramètre à partir du volet des données de rapport. Vous pouvez configurer des paramètres de rapport afin qu'un utilisateur puisse entrer de manière interactive des valeurs dans le but de personnaliser le contenu ou l'apparence d'un rapport. Vous pouvez également configurer des paramètres de rapport afin qu'un utilisateur ne puisse pas modifier les valeurs préconfigurées.  
+Créez manuellement un paramètre à partir du volet des données de rapport. Vous pouvez configurer des paramètres de rapport afin qu'un utilisateur puisse entrer de manière interactive des valeurs dans le but de personnaliser le contenu ou l'apparence d'un rapport. Vous pouvez également configurer des paramètres de rapport afin qu'un utilisateur ne puisse pas modifier les valeurs préconfigurées.  
   
 > [!NOTE]  
 >  Les paramètres sont gérés indépendamment sur le serveur ; par conséquent, si vous republiez un rapport principal avec de nouveaux paramètres, les paramètres existants du rapport ne sont pas remplacés.  
@@ -139,7 +140,7 @@ ms.locfileid: "50032078"
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|Nom   |Tapez un nom de paramètre qui respecte la casse. Le nom doit commencer par une lettre et contenir des lettres, des chiffres, un trait de soulignement (_). Le nom ne peut pas contenir d'espace. Les noms des paramètres générés automatiquement correspondent au paramètre dans la requête du dataset. Par défaut, les paramètres créés manuellement sont similaires à ReportParameter1.|  
+|Créer une vue d’abonnement|Tapez un nom de paramètre qui respecte la casse. Le nom doit commencer par une lettre et contenir des lettres, des chiffres, un trait de soulignement (_). Le nom ne peut pas contenir d'espace. Les noms des paramètres générés automatiquement correspondent au paramètre dans la requête du dataset. Par défaut, les paramètres créés manuellement sont similaires à ReportParameter1.|  
 |Demander|Texte qui apparaît en regard du paramètre dans la barre d'outils de la visionneuse de rapports.|  
 |Type de données|Un paramètre de rapport doit avoir l'un des types de données suivants :<br /><br /> **Boolean**. L'utilisateur sélectionne True ou False à l'aide d'une case d'option.<br /><br /> **DateTime**. L'utilisateur sélectionne une date à l'aide d'un contrôle calendrier.<br /><br /> **Entier**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> **Float**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> **Texte**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> Notez que lorsque des valeurs disponibles sont définies pour un paramètre, l’utilisateur peut les sélectionner dans une liste déroulante, même quand le type de données est **DateTime**.<br /><br /> Pour plus d'informations sur les types de données de rapport, consultez [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
 |Autoriser une valeur vide|Sélectionnez cette option si la valeur du paramètre peut être une chaîne ou une valeur vide.<br /><br /> Si vous spécifiez les valeurs valides d'un paramètre et si vous souhaitez qu'une valeur vide soit l'une des valeurs valides, vous devez l'inclure dans les valeurs que vous spécifiez. La sélection de cette option n'inclut pas automatiquement une valeur vide dans les valeurs disponibles.|  
@@ -211,33 +212,12 @@ ms.locfileid: "50032078"
 >  Si un paramètre de rapport n'est pas lié à un paramètre de dataset et les valeurs de paramètre sont incluses dans le rapport, l'utilisateur d'un rapport peut taper la syntaxe de l'expression ou une URL dans la valeur de paramètre et rendre le rapport au format Excel ou HTML. Si un autre utilisateur affiche ensuite le rapport et clique sur le contenu du paramètre de rendu, celui-ci peut exécuter accidentellement le lien ou le script malveillant.  
 >   
 >  Pour réduire le risque d'exécution accidentelle de scripts malveillants, ouvrez les rapports rendus uniquement à partir de sources approuvées. Pour plus d’informations sur la sécurisation des rapports, consultez [Sécurisation des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md).  
-  
-##  <a name="bkmk_How_To_Topics"></a> Rubriques de procédures  
- Cette section répertorie les procédures qui vous indiquent pas à pas comment utiliser les paramètres et les filtres.  
-  
--   [Ajouter, modifier ou supprimer un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [Ajouter, modifier ou supprimer les valeurs disponibles d’un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)  
-  
--   [Ajouter, modifier ou supprimer les valeurs par défaut d’un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)  
-  
--   [Modifier l’ordre d’un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [Ajouter des paramètres en cascade à un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
-  
--   [Ajouter un filtre à un dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
--   [Ajouter un sous-rapport et des paramètres &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
-  
--   [Personnaliser le volet Paramètres dans un rapport &#40;Générateur de rapports&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)  
-  
 
 ##  <a name="bkmk_Related_Topics"></a> Sections connexes  
- [Configuration de paramètres de rapport SSRS (quiz)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
+
+ [Didacticiel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
- [Didacticiel : Ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
-  
-[Concepts de paramètres de rapport](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
+[Concepts de paramètres d’un rapport](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
  [Exemples de rapports (Générateur de rapports et SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

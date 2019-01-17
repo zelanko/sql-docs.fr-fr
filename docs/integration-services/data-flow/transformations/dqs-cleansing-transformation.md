@@ -17,12 +17,12 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c36cd11c60c3558e6b050de17a517d9feb968d32
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a8749700b557852b9807d28ee7cae2295504fa24
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638627"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979985"
 ---
 # <a name="dqs-cleansing-transformation"></a>Transformation de nettoyage DQS
   La transformation de nettoyage DQS utilise les services Data Quality Services (DQS) pour corriger des données provenant d'une source de données connectée en appliquant des règles approuvées créées pour la source de données connectée ou une source de données similaire. Pour plus d'informations sur les règles de correction des données, consultez [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md). Pour plus d'informations sur DQS, consultez [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  
@@ -88,7 +88,7 @@ ms.locfileid: "51638627"
  Sélectionnez une base de connaissances DQS existante pour la source de données connectée. Pour plus d’informations sur la base de connaissances DQS, consultez [Bases de connaissances et domaines DQS](../../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Chiffrer la connexion**  
- Spécifiez s’il faut chiffrer la connexion, afin de chiffrer le transfert des données entre le serveur DQS et [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
+ Spécifiez s’il convient de chiffrer la connexion afin de chiffrer le transfert des données entre le serveur DQS et [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
  **Champs disponibles**  
  Répertorie les champs disponibles pour la base de connaissances sélectionnée. Il existe deux types de champs : domaines uniques, et domaines composés qui contiennent au moins deux domaines uniques.  

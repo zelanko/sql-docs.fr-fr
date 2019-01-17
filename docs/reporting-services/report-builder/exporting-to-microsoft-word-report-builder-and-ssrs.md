@@ -1,23 +1,25 @@
 ---
 title: Exportation vers Microsoft Word (Générateur de rapports et SSRS) | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
+description: L’extension de rendu Word effectue le rendu des rapports paginés au format  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Il s'agit du format Office Open XML.
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e8bae0c0ef770acf460840abcc0989f8cdf4324e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393333"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202418"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportation vers Microsoft Word (Générateur de rapports et SSRS)
 
-  L’extension de rendu Word effectue le rendu des rapports paginés au format  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Il s'agit du format Office Open XML.  
+  L’extension de rendu Word effectue le rendu des rapports paginés au format Microsoft Word (.docx). Il s'agit du format Office Open XML.  
   
  Le type de contenu des fichiers générés par ce convertisseur est **application/vnd.openxmlformats-officedocument.wordprocessingml.document** et l’extension de fichier est .docx.  
   
@@ -54,7 +56,7 @@ ms.locfileid: "52393333"
 |Propriétés des éléments de rapport|Description|  
 |-------------------------------|-----------------|  
 |Report Title (titre du rapport)|Titre|  
-|Report.Author|Auteur|  
+|Report.Author|Author|  
 |Report.Description|Commentaires|  
   
 ##  <a name="ReportHeadersFooters"></a> En-têtes et pieds de page  
@@ -70,9 +72,9 @@ ms.locfileid: "52393333"
   
  Cela se produit parce que le convertisseur Word analyse le rapport et recherche les champs pertinents à la pagination tels que **PageNumber** et **TotalPages** et ne gère que des références simples, sans appels à une fonction. Dans ce cas, l'expression appelle la fonction **ToString** . Les deux expressions suivantes sont équivalentes et permettent d’obtenir le résultat escompté quand vous prévisualisez le rapport dans le Générateur de rapports ou le Concepteur de rapports, ou restituez le rapport publié dans un portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou une bibliothèque SharePoint. Toutefois, le convertisseur Word analyse uniquement la seconde expression et restitue les numéros de page corrects.  
   
--   **Expression complexe :**  l'expression est `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Expression complexe :**  L’expression est `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Expression avec séquence de texte :** Texte **Montant moyen des ventes**, et expression,  `=Avg(Fields!YTDPurchase.Value, "Sales)`, et texte, **Numéro de page**, et expression `=Globals!PageNumber`  
+-   **Expression avec séquences de texte :** Texte, **Montant moyen des ventes** et expression, `=Avg(Fields!YTDPurchase.Value, "Sales)`, et texte, **Numéro de Page** et expression `=Globals!PageNumber`  
   
  Pour éviter ce problème, utilisez plusieurs séquences de texte plutôt qu'une expression complexe lorsque vous utilisez des expressions dans les pieds de page et les en-têtes. Les deux expressions suivantes sont équivalentes. La première est une expression complexe, la seconde utilise des séquences de texte. Le convertisseur Word analyse uniquement la seconde expression avec succès.  
   

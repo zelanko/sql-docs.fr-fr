@@ -1,6 +1,7 @@
 ---
-title: CLUSTER.LOG (groupes de disponibilité Always On) (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Générer et analyser le fichier CLUSTER.LOG pour un groupe de disponibilité
+description: 'Explique comment générer et analyser le journal de cluster pour un groupe de disponibilité Always On. '
+ms.custom: ag-guide, seodec18
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 77ea53441472625fe419a322054eb5300a78e4c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bfb0b56bba45d5e4622076f1d38bec2f4aca97a3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531496"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211728"
 ---
-# <a name="clusterlog-always-on-availability-groups"></a>CLUSTER.LOG (groupes de disponibilité Always On)
+# <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Générer et analyser le fichier CLUSTER.LOG pour un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En tant que ressource de cluster de basculement, certaines interactions externes entre SQL Server, le cluster du service WSFC (Windows Server Failover Cluster) et la DLL de ressource SQL Server (hadrres.dll) ne peuvent pas faire l’objet d’un monitoring dans SQL Server. Le journal WSFC, CLUSTER.LOG, peut diagnostiquer des problèmes dans le cluster WSFC ou la DLL de ressource SQL Server.  
   
@@ -61,9 +62,9 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 |Identificateur|Source|Exemple de CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
-|Messages dotés des préfixes `[RES]` et `[hadrag]`|hadrres.dll (DLL de ressource Always On)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Offline request.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server Availability Group \<ag>: `[hadrag]` Lease Thread terminated<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Free SQL statement<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Disconnect from SQL Server|  
+|Messages dotés des préfixes `[RES]` et `[hadrag]`|hadrres.dll (DLL de ressource Always On)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Offline request.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] SQL Server Availability Group \<ag>: `[hadrag]` Lease Thread terminated<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Free SQL statement<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Disconnect from SQL Server|  
 |Messages dotés du préfixe `[RHS]`|RHS.EXE (Sous-système d’hébergement de ressources, processus hôte de hadrres.dll)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] Resource ag has come offline. RHS is about to report resource status to RCM.|  
-|Messages dotés du préfixe `[RCM]`|Moniteur de contrôle de ressource (service de cluster)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: Bringing group ’ag’ offline first...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
+|Messages dotés du préfixe `[RCM]`|Moniteur de contrôle de ressource (service de cluster)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO [RCM] rcm::RcmGroup::Move: Bringing group 'ag' offline first...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
 |RcmApi/ClusAPI|Appel d’API, ce qui signifie plus ou moins que SQL Server demande l’action|000011d0.00000f80::2011/08/05-13:47:42.465 INFO  [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  
   
 ## <a name="debug-always-on-resource-dll-in-isolation"></a>Déboguer la DLL de ressource Always On en mode isolation  
@@ -71,7 +72,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  Pour isoler un groupe de disponibilité des autres DLL de ressource de cluster, notamment d’autres groupes de disponibilité, effectuez les étapes suivantes afin d’exécuter hadrres.dll dans un processus rhs.exe distinct :  
   
-1.  Ouvrez **l’Éditeur du Registre** et accédez à la clé suivante : HKEY_LOCAL_MACHINE\Cluster\Resources. Cette clé contient les clés de toutes les ressources, chacune d’elles ayant un GUID différent.  
+1.  Ouvrez l’**Éditeur du Registre**, puis accédez à la clé suivante : HKEY_LOCAL_MACHINE\Cluster\Resources. Cette clé contient les clés de toutes les ressources, chacune d’elles ayant un GUID différent.  
   
 2.  Recherchez la clé de ressource dont la valeur **Nom** correspond au nom de votre groupe de disponibilité.  
   

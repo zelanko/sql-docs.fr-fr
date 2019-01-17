@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 833775d4ab032724eb76f80ed51b2548d29bd875
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fdb2e2dc081bce539bf2671e14993281d2415b98
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701750"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206228"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51701750"
   
  L'instruction DROP INDEX ne s'applique pas aux index créés en définissant des contraintes PRIMARY KEY ou UNIQUE. Pour supprimer la contrainte et l’index correspondant, utilisez [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) avec la clause DROP CONSTRAINT.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  La syntaxe définie dans `<drop_backward_compatible_index>` sera supprimée dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette syntaxe dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt la syntaxe spécifiée sous `<drop_relational_or_xml_index>`. Les index XML ne peuvent pas être supprimés à l'aide d'une syntaxe à compatibilité descendante.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -115,7 +115,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
 ## <a name="arguments"></a>Arguments  
  *IF EXISTS*  
- **S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Supprime, de manière conditionnelle, l’index uniquement s’il existe déjà.  
   
@@ -202,7 +202,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  **"** default **"**  
  Spécifie l'emplacement par défaut de la table résultante.  
   
-> [!NOTE]  
+> [!NOTE]
 >  L'élément « default » n'est pas un mot clé dans ce contexte. Il s’agit d’un identificateur du groupe de fichiers par défaut qui doit être délimité, comme dans MOVE TO **"** default **"** or MOVE TO **[** default **]**. Si **"** default **"** est spécifié, l’option QUOTED_IDENTIFIER doit être ON pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** }  
@@ -221,7 +221,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  **"** default **"**  
  Spécifie l'emplacement par défaut des données FILESTREAM.  
   
-> [!NOTE]  
+> [!NOTE]
 >  L'élément « default » n'est pas un mot clé dans ce contexte. Il s’agit d’un identificateur du groupe de fichiers par défaut qui doit être délimité, comme dans MOVE TO **"** default **"** or MOVE TO **[** default **]**. Si "default" est spécifié, l'option QUOTED_IDENTIFIER doit être activée (ON) pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ## <a name="remarks"></a>Notes   
@@ -238,7 +238,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  Des index peuvent parfois être supprimés et recréés pour réorganiser ou reconstruire l'index, par exemple pour appliquer un nouveau taux de remplissage ou pour réorganiser les données après un chargement en masse. Pour ce faire, l’utilisation de [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) est plus efficace, en particulier pour les index clusters. ALTER INDEX REBUILD possède des optimisations permettant d'éviter la surcharge liée à la reconstruction des index non cluster.  
   
 ## <a name="using-options-with-drop-index"></a>Utilisations d'options avec DROP INDEX  
- Vous pouvez définir les options d'index suivantes lorsque vous supprimez un index cluster : MAXDOP, ONLINE et MOVE TO.  
+ Vous pouvez définir les options d'index suivantes lorsque vous supprimez un index cluster : MAXDOP, ONLINE, et MOVE TO.  
   
  Utilisez MOVE TO pour supprimer l'index cluster et déplacer la table résultante vers un autre groupe de fichiers ou schéma de partition dans une transaction unique.  
   
@@ -284,7 +284,7 @@ DROP INDEX IX_ProductVendor_BusinessEntityID
 GO  
 ```  
   
-### <a name="b-dropping-multiple-indexes"></a>B. Suppression de plusieurs index  
+### <a name="b-dropping-multiple-indexes"></a>b. Suppression de plusieurs index  
  L'exemple suivant supprime deux index en une seule transaction dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

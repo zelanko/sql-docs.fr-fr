@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 374b59460313afaaeb670c8926f215580f7d11de
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e0be6a45826744aa15707691d545abaf1a4c2411
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534383"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212058"
 ---
 # <a name="change-data-capture-ssis"></a>Capture de données modifiées (SSIS)
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la capture de données modifiées constitue une solution efficace au défi de l'optimisation des chargements incrémentiels de tables sources vers des mini-Data Warehouses et des entrepôts de données.  
@@ -29,7 +29,7 @@ ms.locfileid: "52534383"
   
  La fonction de capture des modifications de données de [!INCLUDE[ssDE](../../includes/ssde-md.md)] capture les activités d’insertion, de mise à jour et de suppression appliquées aux tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et rend les détails des modifications disponibles dans un format relationnel simple à utiliser. Les tables de modifications utilisées par la capture de données modifiées contiennent des colonnes qui reflètent la structure de colonne des tables sources suivies, ainsi que les métadonnées nécessaires à la compréhension des modifications effectuées ligne par ligne.  
   
-> [!NOTE]  
+> [!NOTE]
 >  La capture des modifications de données n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="how-change-data-capture-works-in-integration-services"></a>Fonctionnement de la capture de données modifiées dans Integration Services  
@@ -48,47 +48,47 @@ ms.locfileid: "52534383"
   
      Pour calculer ces valeurs, utilisez une tâche d’exécution de requêtes SQL ou des expressions [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec des fonctions **datetime** . Vous stockez ensuite ces points de terminaison dans des variables de package pour une utilisation ultérieure dans le package.  
   
-     **Pour plus d’informations, consultez** [Spécifier un intervalle de données modifiées](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
+     **Pour plus d'informations, consultez :** [Spécifier un intervalle de données modifiées](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
   
 -   Déterminer si les données modifiées pour l'intervalle sélectionné sont prêtes. Cette étape est nécessaire car le processus de capture asynchrone n'a peut-être pas encore atteint le point de terminaison sélectionné.  
   
      Pour déterminer si les données sont prêtes, commencez si nécessaire par un conteneur de boucles For pour différer l'exécution, jusqu'à ce que les données modifiées pour l'intervalle sélectionné soient prêtes. Dans le conteneur de boucles, utilisez une tâche d'exécution SQL pour interroger les tables de mappage du temps gérées par la capture de données modifiées. Utilisez ensuite une tâche de script qui appelle la méthode **Thread.Sleep** ou une autre tâche d’exécution SQL avec une instruction **WAITFOR** pour différer temporairement l’exécution du package si nécessaire. Utilisez éventuellement une autre tâche de script pour enregistrer une condition d'erreur ou un délai d'attente.  
   
-     **Pour plus d’informations, consultez** [Déterminer si les données modifiées sont prêtes](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
+     **Pour plus d'informations, consultez :** [Déterminer si les données modifiées sont prêtes](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 -   Préparer la chaîne de requête qui sera utilisée pour rechercher les données modifiées.  
   
      Utilisez une tâche de script ou une tâche d'exécution SQL pour assembler l'instruction SQL qui sera utilisée pour rechercher les modifications.  
   
-     **Pour plus d’informations, consultez** [Préparer la recherche des données modifiées](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+     **Pour plus d'informations, consultez :** [Préparer la recherche des données modifiées](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
- **Étape 2 : Configuration de la requête pour rechercher les données modifiées**  
+ **Étape 2 : Configuration de la requête pour rechercher les données modifiées**  
  Créez la fonction table qui recherchera les données.  
   
  Utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour développer et enregistrer la requête.  
   
- **Pour plus d’informations, consultez** [Récupérer et comprendre les données modifiées](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+ **Pour plus d'informations, consultez :** [Récupérer et comprendre les données modifiées](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
- **Étape 3 : Conception du flux de données**  
+ **Étape 3 : Conception du flux de données**  
  Dans le flux de données du package, les tâches suivantes doivent être définies :  
   
 -   Récupérer les données modifiées des tables de modifications.  
   
      Pour récupérer les données, utilisez un composant source pour interroger les tables de modifications à propos des modifications qui se situent dans l'intervalle sélectionné. La source appelle une fonction table Transact-SQL que vous aurez créée précédemment.  
   
-     **Pour plus d’informations, consultez** [Récupérer et comprendre les données modifiées](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+     **Pour plus d'informations, consultez :** [Récupérer et comprendre les données modifiées](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
 -   Fractionner les modifications en insertions, mises à jour et suppressions à des fins de traitement.  
   
      Pour fractionner les modifications, utilisez une transformation de fractionnement conditionnel pour diriger les insertions, les mises à jour et les suppressions vers les différentes sorties pour un traitement approprié.  
   
-     **Pour plus d’informations, consultez** [Traiter les insertions, les mises à jour et les suppressions](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
+     **Pour plus d'informations, consultez :** [Traiter les insertions, les mises à jour et les suppressions](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
 -   Appliquer les insertions, les suppressions et les mises à jour à la destination.  
   
      Pour appliquer les modifications à la destination, utilisez un composant de destination pour appliquer les insertions à la destination. Ensuite, utilisez des transformations de commande OLE DB avec des instructions UPDATE et DELETE paramétrables pour appliquer les mises à jour et les suppressions à la destination. Vous pouvez également appliquer les mises à jour et les suppressions en utilisant des composants de destination pour enregistrer les lignes dan des tables temporaires. Ensuite, utilisez des tâches d'exécution SQL pour effectuer les opérations de mise à jour en bloc et de suppression en bloc sur la destination à partir des tables temporaires.  
   
-     **Pour plus d’informations, consultez** [Appliquer des modifications à la destination](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
+     **Pour plus d'informations, consultez :** [Appliquer les modifications à la destination](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 ### <a name="change-data-from-multiple-tables"></a>Données modifiées en provenance de plusieurs tables  
  Le processus exposé précédemment fait référence à un chargement incrémentiel à partir d'une table unique. Pour effectuer un chargement incrémentiel à partir de plusieurs tables, le processus d'ensemble est le même. Toutefois, la conception du package doit être modifié pour prendre en charge le traitement de plusieurs tables. Pour plus d’informations sur la création d’un package qui effectue un chargement incrémentiel à partir de plusieurs tables, consultez [Exécuter un chargement incrémentiel de plusieurs table](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md).  

@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f6ee77ac0a4fc91f9a182c1d893d39d599228da4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d4370a2f60a17ee126be5940ec69dbdfc5a03d4f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524595"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980315"
 ---
 # <a name="restore-statements-transact-sql"></a>Instructions RESTORE (Transact-SQL)
 Restaure les sauvegardes des bases de données SQL réalisées à l’aide de la commande BACKUP. 
@@ -167,7 +167,7 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
    } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
-Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
+Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seamless restore experience for all the three devices.  
 <files_or_filegroups>::=   
 {   
    FILE = { logical_file_name_in_backup | @logical_file_name_in_backup_var }   
@@ -342,7 +342,7 @@ La commande RESTORE n'est pas autorisée dans une transaction explicite ou impli
   
 La restauration d’une base de données **master** endommagée s’effectue selon une procédure spéciale. Pour plus d’informations, consultez [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
-La restauration d'une base de données efface le cache de plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette opération entraîne la recompilation de tous les plans d'exécution ultérieurs et peut entraîner une baisse temporaire et brutale des performances des requêtes. Pour chaque mémoire cache effacée dans le cache de plan, le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d'information suivant : « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a rencontré %d occurrence(s) de vidages de mémoire cache pour la mémoire cache '%s' (partie du cache du plan) en raison d'opérations de maintenance ou de reconfiguration de base de données ». Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.  
+La restauration d'une base de données efface le cache de plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette opération entraîne la recompilation de tous les plans d'exécution ultérieurs et peut entraîner une baisse temporaire et brutale des performances des requêtes. Pour chaque mémoire cache effacée dans le cache de plan, le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d’information suivant : « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a rencontré %d occurrence(s) de vidages de mémoire cache pour la mémoire cache ’%s’ (partie du cache du plan) en raison d’opérations de maintenance ou de reconfiguration de base de données ». Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.  
   
 Pour restaurer une base de données de disponibilité, restaurez d'abord la base de données en tant qu'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis ajoutez la base de données au groupe de disponibilité.  
 
@@ -428,7 +428,7 @@ Tous les exemples partent du principe qu'une sauvegarde complète de la base de 
 Parmi les exemples d'instruction RESTORE, citons :  
   
 - A. [Restauration d’une base de données complète](#restoring_full_db)  
-- B. [Restauration de sauvegardes complètes et différentielles d’une base de données](#restoring_full_n_differential_db_backups)  
+- b. [Restauration de sauvegardes complètes et différentielles d’une base de données](#restoring_full_n_differential_db_backups)  
 - C. [Restauration d’une base de données en utilisant la syntaxe RESTART](#restoring_db_using_RESTART)  
 - D. [Restauration d’une base de données et déplacement des fichiers](#restoring_db_n_move_files)  
 - E. [Copie d’une base de données en utilisant BACKUP et RESTORE](#copying_db_using_bnr)  
@@ -960,7 +960,7 @@ RESTORE DATABASE SalesInvoices2013
 FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';  
 ```  
   
-### <a name="b-restore-a-full-and-differential-backup"></a>B. Restaurer une sauvegarde complète et différentielle  
+### <a name="b-restore-a-full-and-differential-backup"></a>b. Restaurer une sauvegarde complète et différentielle  
 L’exemple suivant restaure une sauvegarde complète, puis une sauvegarde différentielle dans la base de données SalesInvoices2013.  
   
 La sauvegarde complète de la base de données est restaurée à partir de la sauvegarde complète, qui est stockée dans le répertoire « \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full ». Si la restauration aboutit, la sauvegarde différentielle est restaurée dans la base de données SalesInvoices2013.  La sauvegarde différentielle est stockée dans le répertoire « \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff ».  

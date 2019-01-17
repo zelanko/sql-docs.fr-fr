@@ -11,19 +11,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10532564d2310ad3b8eaf28c2693bafb423d81a2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b621fa1c1b21e6b1131c65524675c3da9890e6ac
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658841"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980155"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Un **CurvePolygon** est une surface topologiquement fermée définie par un anneau englobant extérieur et zéro ou plusieurs anneaux intérieurs.  
   
 > [!IMPORTANT]  
->  Pour obtenir une description détaillée et des exemples des fonctionnalités spatiales introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], y compris le sous-type **CurvePolygon** , téléchargez le livre blanc [Nouvelles fonctionnalités spatiales dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+> Pour obtenir une description détaillée et des exemples des fonctionnalités spatiales introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], y compris le sous-type **CurvePolygon** , téléchargez le livre blanc [Nouvelles fonctionnalités spatiales dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Les critères suivants définissent les attributs d'une instance **CurvePolygon** :  
   
@@ -31,7 +31,7 @@ ms.locfileid: "51658841"
   
 -   L'intérieur de l'instance **CurvePolygon** désigne l'espace situé entre l'anneau extérieur et tous les anneaux intérieurs.  
   
- Une instance **CurvePolygon** diffère d'une instance **Polygon** en cela qu'une instance **CurvePolygon** peut contenir les segments d'arc de cercle suivants : **CircularString** et **CompoundCurve**.  
+ Une instance **CurvePolygon** diffère d’une instance **Polygon** en cela qu’une instance **CurvePolygon** peut contenir les segments d’arc de cercle suivants : **CircularString** et **CompoundCurve**.  
   
 ## <a name="compoundcurve-instances"></a>Instances CompoundCurve  
  L'illustration ci-dessous montre des figures de **CurvePolygon** valides :  
@@ -46,11 +46,11 @@ ms.locfileid: "51658841"
 3.  Le point de début et le point de fin ont les mêmes coordonnées X et Y.  
   
     > [!NOTE]  
-    >  Les valeurs Z et M sont ignorées.  
+    > Les valeurs Z et M sont ignorées.  
   
- L'exemple suivant illustre des instances **CurvePolygon** acceptées.  
+L'exemple suivant illustre des instances **CurvePolygon** acceptées.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0, 0 0))';  
 DECLARE @g3 geometry = 'CURVEPOLYGON((0 0 1, 0 0 2, 0 0 3, 0 0 3))'  
@@ -58,67 +58,57 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` est accepté bien que les points de début et de fin aient des valeurs Z différentes, car les valeurs Z sont ignorées. `@g5` est accepté même si l’instance de type **geography** n’est pas valide.  
+`@g3` est accepté bien que les points de début et de fin aient des valeurs Z différentes, car les valeurs Z sont ignorées. `@g5` est accepté même si l’instance de type **geography** n’est pas valide.  
   
- Les exemples suivants lèvent une `System.FormatException`.  
+Les exemples suivants lèvent une `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON((0 5, 0 0, 0 0, 0 0))';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';  
 ```  
   
- `@g1` n'est pas accepté parce que les points de début et de fin n'ont pas la même valeur Y. `@g2` n'est pas accepté car la boucle n'a pas assez de points.  
+`@g1` n'est pas accepté parce que les points de début et de fin n'ont pas la même valeur Y. `@g2` n'est pas accepté car la boucle n'a pas assez de points.  
   
 ### <a name="valid-instances"></a>Instances valides  
- Pour qu'une instance **CurvePolygon** soit valide, les anneaux extérieur et intérieur doivent répondre aux critères suivants :  
+Pour qu'une instance **CurvePolygon** soit valide, les anneaux extérieur et intérieur doivent répondre aux critères suivants :  
   
 1.  Ils peuvent se toucher uniquement à des points de tangentes uniques.  
-  
 2.  Ils ne peuvent pas se croiser l'un l'autre.  
-  
 3.  Chaque anneau doit contenir au moins quatre points.  
-  
 4.  Chaque anneau doit être un type de courbe acceptable.  
   
- Les instances**CurvePolygon** doivent également répondre à des critères spécifiques, selon qu'il s'agisse de types de données **geometry** ou **geography** .  
+Les instances**CurvePolygon** doivent également répondre à des critères spécifiques, selon qu'il s'agisse de types de données **geometry** ou **geography** .  
   
 #### <a name="geometry-data-type"></a>Type de données geometry  
- Une instance **geometryCurvePolygon** valide doit avoir les attributs suivants :  
+Une instance **geometryCurvePolygon** valide doit avoir les attributs suivants :  
   
 1.  Tous les anneaux intérieurs doivent être contenus dans l'anneau extérieur.  
-  
 2.  Elle peut contenir plusieurs anneaux intérieurs, mais un anneau intérieur ne peut pas contenir un autre anneau intérieur.  
-  
 3.  Aucun anneau ne peut se croiser lui-même ni croiser un autre anneau.  
-  
 4.  Les anneaux ne peuvent se toucher qu'à des points de tangentes uniques (nombre de points où le contact des anneaux doit être fini).  
-  
 5.  L'intérieur du polygone doit être connecté.  
   
- L’exemple suivant montre des instances **geometryCurvePolygon** valides.  
+L’exemple suivant montre des instances **geometryCurvePolygon** valides.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
- Les instances CurvePolygon ont les mêmes règles de validité que les instances Polygon, à l'exception près que les instances CurvePolygon peuvent accepter les nouveaux types de segment d'arc de cercle. Pour obtenir davantage d'exemples d'instances valides ou non valides, consultez [Polygon](../../relational-databases/spatial/polygon.md).  
+Les instances CurvePolygon ont les mêmes règles de validité que les instances Polygon, à l'exception près que les instances CurvePolygon peuvent accepter les nouveaux types de segment d'arc de cercle. Pour obtenir davantage d'exemples d'instances valides ou non valides, consultez [Polygon](../../relational-databases/spatial/polygon.md).  
   
 #### <a name="geography-data-type"></a>Type de données geography  
- Une instance **geographyCurvePolygon** valide doit avoir les attributs suivants :  
+Une instance **geographyCurvePolygon** valide doit avoir les attributs suivants :  
   
 1.  L'intérieur du polygone est connecté à l'aide de la règle gauche.  
-  
 2.  Aucun anneau ne peut se croiser lui-même ni croiser un autre anneau.  
-  
 3.  Les anneaux ne peuvent se toucher qu'à des points de tangentes uniques (nombre de points où le contact des anneaux doit être fini).  
-  
 4.  L'intérieur du polygone doit être connecté.  
   
- L'exemple suivant montre une instance geography CurvePolygon valide.  
+L'exemple suivant montre une instance geography CurvePolygon valide.  
   
-```  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON((-122.3 47, 122.3 47, 125.7 49, 121 38, -122.3 47))';  
 SELECT @g.STIsValid();  
 ```  
@@ -133,7 +123,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. Déclaration et instanciation d'une instance geometry avec un CurvePolygon dans la même instruction  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>b. Déclaration et instanciation d'une instance geometry avec un CurvePolygon dans la même instruction  
  Cet extrait de code indique comment déclarer et initialiser une instance geometry avec un **CurvePolygon** dans la même instruction :  
   
 ```sql  
@@ -182,7 +172,7 @@ IF @g2.STIsValid() = 1
 SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;  
 ```  
   
- @g1 et @g2 utilisent tous les deux le même anneau englobant extérieur (un cercle avec un rayon de 5) et un carré comme anneau intérieur.  Toutefois, l’instance @g1 est valide, mais l’instance @g2 n’est pas valide.  La raison pour laquelle @g2 n’est pas valide est que l’anneau intérieur fractionne l’espace intérieur englobé par l’anneau extérieur en quatre régions distinctes.  Le dessin suivant montre ce qui s'est produit :  
+ `@g1` et `@g2` utilisent tous les deux le même anneau englobant extérieur (un cercle avec un rayon de 5) et un carré comme anneau intérieur.  Toutefois, l’instance `@g1` est valide, mais l’instance `@g2` n’est pas valide. La raison pour laquelle @g2 n’est pas valide est que l’anneau intérieur fractionne l’espace intérieur englobé par l’anneau extérieur en quatre régions distinctes. Le dessin suivant montre ce qui s'est produit :  
   
 ## <a name="see-also"></a> Voir aussi  
  [Polygon](../../relational-databases/spatial/polygon.md)   

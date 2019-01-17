@@ -1,7 +1,7 @@
 ---
 title: CREATE USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/28/2017
+ms.date: 12/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,25 +30,25 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 533622016967deef4f1fbcb4ead0c17975910899
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a06f59cc72fef384ad68833a3729c862eaa679ea
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618087"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202559"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Ajoute un utilisateur à la base de données active. Onze types d’utilisateurs sont répertoriés ci-dessous avec un exemple de la syntaxe la plus basique :  
+  Ajoute un utilisateur à la base de données active. Douze types d’utilisateurs sont répertoriés ci-dessous avec un exemple de la syntaxe la plus basique :  
   
-**Utilisateurs basés sur les comptes de connexion dans Master** Il s’agit du type d’utilisateur le plus courant.  
+**Utilisateurs basés sur les comptes de connexion dans Master** : il s’agit du type d’utilisateur le plus courant.  
   
 -   Utilisateur basé sur un compte de connexion basé sur un compte Windows Active Directory. `CREATE USER [Contoso\Fritz];`     
 -   Utilisateur basé sur un compte de connexion basé sur un groupe Windows. `CREATE USER [Contoso\Sales];`   
 -   Utilisateur basé sur un compte de connexion utilisant l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `CREATE USER Mary;`  
   
-**Utilisateurs qui s’authentifient auprès de la base de données** Recommandé pour accroître la portabilité de votre base de données.  
+**Utilisateurs qui s’authentifient auprès de la base de données** : recommandé pour accroître la portabilité de votre base de données.  
  Toujours autorisé dans [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Autorisé uniquement dans une base de données autonome dans [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
 -   Utilisateur basé sur un utilisateur Windows qui ne dispose d'aucun compte de connexion. `CREATE USER [Contoso\Fritz];`    
@@ -63,7 +63,7 @@ ms.locfileid: "47618087"
   
 -   Utilisateur basé sur un groupe Windows qui ne dispose pas de compte de connexion, mais qui peut se connecter au [!INCLUDE[ssDE](../../includes/ssde-md.md)] via l’appartenance à un autre groupe Windows. `CREATE USER [Contoso\Fritz];`  
   
-**Utilisateurs qui ne peuvent pas s’authentifier** Ces utilisateurs ne peuvent pas se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Utilisateurs qui ne peuvent pas s’authentifier** : ces utilisateurs ne peuvent pas se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 -   Utilisateur sans compte de connexion. Impossible de se connecter, mais peut se voir accorder des autorisations. `CREATE USER CustomApp WITHOUT LOGIN;`    
 -   Utilisateur basé sur un certificat. Impossible de se connecter, mais peut se voir accorder des autorisations et peut signer des modules. `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
@@ -74,7 +74,7 @@ ms.locfileid: "47618087"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database Managed Instance
   
 -- Syntax Users based on logins in master  
 CREATE USER user_name   
@@ -84,7 +84,7 @@ CREATE USER user_name
     [ WITH <limited_options_list> [ ,... ] ]   
 [ ; ]  
   
---Users that authenticate at the database  
+-- Users that authenticate at the database  
 CREATE USER   
     {  
       windows_principal [ WITH <options_list> [ ,... ] ]  
@@ -95,7 +95,7 @@ CREATE USER
   
  [ ; ]  
   
---Users based on Windows principals that connect through Windows group logins  
+-- Users based on Windows principals that connect through Windows group logins  
 CREATE USER   
     {   
           windows_principal [ { FOR | FROM } LOGIN windows_principal ]  
@@ -104,7 +104,7 @@ CREATE USER
     [ WITH <limited_options_list> [ ,... ] ]   
 [ ; ]  
   
---Users that cannot authenticate   
+-- Users that cannot authenticate   
 CREATE USER user_name   
     {  
          WITHOUT LOGIN [ WITH <limited_options_list> [ ,... ] ]  
@@ -125,8 +125,23 @@ CREATE USER user_name
   
 -- SQL Database syntax when connected to a federation member  
 CREATE USER user_name  
-[;]  
-```  
+[;]
+
+-- Syntax for users based on Azure AD logins for Azure SQL Database Managed Instance
+CREATE USER user_name   
+    [   { FOR | FROM } LOGIN login_name  ]  
+    | FROM EXTERNAL PROVIDER
+    [ WITH <limited_options_list> [ ,... ] ]   
+[ ; ]  
+
+<limited_options_list> ::=  
+      DEFAULT_SCHEMA = schema_name 
+    | DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }   
+    | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ] ] 
+```
+
+> [!IMPORTANT]
+> Les connexions AD Azure pour SQL Database Managed Instance sont en **préversion publique**.
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -162,7 +177,7 @@ CREATE USER user_name
  Spécifie le nom qui identifie l'utilisateur dans cette base de données. *user_name* est de type **sysname**. Il peut comporter jusqu'à 128 caractères. Lors de la création d'un utilisateur basé sur un principal Windows, le nom du principal Windows devient le nom d'utilisateur sauf si un autre nom d'utilisateur est spécifié.  
   
  LOGIN *login_name*  
- Spécifie le compte de connexion pour lequel l'utilisateur de base de données est créé. *login_name* doit être un compte de connexion valide sur le serveur. Peut être un compte de connexion basé sur un principal Windows (utilisateur ou groupe), ou un compte de connexion utilisant l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque ce compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accède à la base de données, il prend le nom et l'ID de l'utilisateur de base de données que vous créez. Quand vous créez un compte de connexion mappé à partir d’un principal Windows, utilisez le format **[**_\<nom_domaine\>_**\\**_\<nom_connexion\>_**]**. Pour obtenir des exemples, consultez [Résumé de syntaxe](#SyntaxSummary).  
+ Spécifie le compte de connexion pour lequel l'utilisateur de base de données est créé. *login_name* doit être un compte de connexion valide sur le serveur. Peut être un compte de connexion basé sur un principal Windows (utilisateur ou groupe), ou un compte de connexion utilisant l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quand ce compte de connexion SQL Server accède à la base de données, il prend le nom et l’ID de l’utilisateur de base de données que vous créez. Quand vous créez un compte de connexion mappé à partir d’un principal Windows, utilisez le format **[**_\<nom_domaine\>_**\\**_\<nom_connexion\>_**]**. Pour obtenir des exemples, consultez [Résumé de syntaxe](#SyntaxSummary).  
   
  Si l'instruction CREATE USER est la seule instruction d'un lot SQL, Microsoft Azure SQL Database prend en charge la clause WITH LOGIN. Si l'instruction CREATE USER n'est pas la seule instruction d'un lot SQL ou est exécutée en SQL dynamique, la clause WITH LOGIN n'est pas prise en charge.  
   
@@ -170,12 +185,12 @@ CREATE USER user_name
  Spécifie le premier schéma que le serveur doit interroger pour résoudre les noms des objets associés à cet utilisateur de base de données.  
   
  '*windows_principal*'  
- Spécifie le principal Windows pour lequel l'utilisateur de la base de données est créé. *windows_principal* peut être un utilisateur Windows ou un groupe Windows. L’utilisateur est créé même si le *windows_principal* ne dispose pas de compte de connexion. Lors de la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si *windows_principal* ne dispose pas de compte de connexion, le principal Windows doit s’authentifier auprès du [!INCLUDE[ssDE](../../includes/ssde-md.md)] via l’appartenance à un groupe Windows qui dispose d’un compte de connexion, ou la chaîne de connexion doit spécifier la base de données autonome comme catalogue initial. Quand vous créez un utilisateur à partir d’un principal Windows, utilisez le format **[**_\<nom_domaine\>_**\\**_\<nom_connexion\>_**]**. Pour obtenir des exemples, consultez [Résumé de syntaxe](#SyntaxSummary). Les utilisateurs basés sur des utilisateurs Active Directory sont limités aux noms de moins de 21 caractères.    
+ Spécifie le principal Windows pour lequel l'utilisateur de la base de données est créé. *windows_principal* peut être un utilisateur Windows ou un groupe Windows. L’utilisateur est créé même si le *windows_principal* ne dispose pas de compte de connexion. Lors de la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si *windows_principal* ne dispose pas de compte de connexion, le principal Windows doit s’authentifier auprès du [!INCLUDE[ssDE](../../includes/ssde-md.md)] via l’appartenance à un groupe Windows qui dispose d’un compte de connexion, ou la chaîne de connexion doit spécifier la base de données autonome comme catalogue initial. Quand vous créez un utilisateur à partir d’un principal Windows, utilisez le format **[**_\<nom_domaine\>_**\\**_\<nom_connexion\>_**]**. Pour obtenir des exemples, consultez [Résumé de syntaxe](#SyntaxSummary). Les utilisateurs basés sur des utilisateurs Active Directory sont limités aux noms de moins de 21 caractères.
   
  '*Azure_Active_Directory_principal*'  
  **S’applique à** : [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
   
- Spécifie le principal Azure Active Directory pour lequel l’utilisateur de la base de données est créé. *Azure_Active_Directory_principal* peut être un utilisateur Azure Active Directory ou un groupe Azure Active Directory. (Les utilisateurs Azure Active Directory ne peuvent pas avoir de comptes de connexion d’authentification Windows [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ; seuls les utilisateurs de base de données le peuvent.) La chaîne de connexion doit spécifier la base de données autonome comme catalogue initial. 
+ Spécifie le principal Azure Active Directory pour lequel l’utilisateur de la base de données est créé. *Azure_Active_Directory_principal* peut être un utilisateur Azure Active Directory, un groupe Azure Active Directory ou une application Azure Active Directory. (Les utilisateurs Azure Active Directory ne peuvent pas avoir de comptes de connexion d’authentification Windows [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ; seuls les utilisateurs de base de données le peuvent.) La chaîne de connexion doit spécifier la base de données autonome comme catalogue initial.
 
  Pour les utilisateurs, vous utilisez l’alias complet de leur principal de domaine.   
  
@@ -218,10 +233,10 @@ DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*
 SID = *sid*  
  **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- S'applique uniquement aux utilisateurs munis de mots de passe (authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) dans une base de données autonome. Spécifie le SID du nouvel utilisateur de base de données. Si cette option n'est pas sélectionnée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attribue automatiquement un SID. Utilisez le paramètre SID pour créer des utilisateurs dans plusieurs bases de données qui ont la même identité (SID). Cela s’avère utile lors de la création d’utilisateurs dans plusieurs bases de données pour la préparation du basculement AlwaysOn. Pour déterminer le SID d’un utilisateur, interrogez sys.database_principals.  
+ S’applique uniquement aux utilisateurs munis de mots de passe (authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) dans une base de données autonome. Spécifie le SID du nouvel utilisateur de base de données. Si cette option n'est pas sélectionnée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attribue automatiquement un SID. Utilisez le paramètre SID pour créer des utilisateurs dans plusieurs bases de données qui ont la même identité (SID). Cela s’avère utile lors de la création d’utilisateurs dans plusieurs bases de données pour la préparation du basculement AlwaysOn. Pour déterminer le SID d’un utilisateur, interrogez sys.database_principals.  
   
-ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]  
- **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
+ **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Supprime les contrôles de métadonnées de chiffrement sur le serveur dans les opérations de copie en bloc. Cela permet à l’utilisateur de copier en bloc des données chiffrées entre des tables ou des bases de données, sans déchiffrer les données. La valeur par défaut est OFF.  
   
@@ -243,7 +258,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]
   
  La clause WITHOUT LOGIN crée un utilisateur qui n'est pas mappé à un compte de connexion SQL Server. Il peut se connecter à d'autres bases de données en tant qu'invité. Les autorisations peuvent être attribuées à cet utilisateur sans compte de connexion et lorsque le contexte de sécurité est modifié en utilisateur sans compte de connexion, les utilisateurs d'origine reçoivent les autorisations de l'utilisateur sans compte de connexion. Consultez l’exemple [D. Création et utilisation d’un utilisateur sans compte de connexion](#withoutLogin).  
   
- Seuls les utilisateurs mappés à des principaux Windows peuvent contenir la barre oblique inverse (**\\**).  
+ Seuls les utilisateurs mappés à des principaux Windows peuvent contenir la barre oblique inverse (**\\**).
   
  Vous ne pouvez pas utiliser CREATE USER pour créer un utilisateur invité, car ce dernier existe déjà dans toutes les bases de données. Vous pouvez activer l'utilisateur invité en lui accordant l'autorisation CONNECT comme suit :  
   
@@ -252,7 +267,15 @@ GRANT CONNECT TO guest;
 GO  
 ```  
   
- Les informations relatives aux utilisateurs de base de données sont consultables dans la vue de catalogue [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
+ Les informations relatives aux utilisateurs de base de données sont consultables dans la vue de catalogue [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).
+
+Une nouvelle extension de syntaxe, **FROM EXTERNAL PROVIDER**, est disponible pour la création de connexions Azure AD au niveau du serveur dans SQL Database Managed Instance. Les connexions AD Azure permettent de mapper des principaux Azure AD au niveau de la base de données à des connexions Azure AD au niveau du serveur. Pour créer un utilisateur Azure AD à partir d’une connexion Azure AD, utilisez la syntaxe suivante :
+
+`CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
+
+Quand vous créez l’utilisateur dans la base de données SQL Database Managed Instance, le login_name doit correspondre à une connexion Azure AD existante, sinon l’utilisation de la clause **FROM EXTERNAL PROVIDER** ne fera que créer un utilisateur Azure AD sans connexion dans la base de données master. Par exemple, cette commande crée un utilisateur contenu :
+
+`CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
 ##  <a name="SyntaxSummary"></a> Résumé de syntaxe  
  **Utilisateurs basés sur des comptes de connexion dans Master**  
@@ -306,7 +329,7 @@ GO
 -   `CREATE USER KEYUSER FROM ASYMMETRIC KEY SecureKey`  
   
 ## <a name="security"></a>Sécurité  
- La création d'un utilisateur accorde l'accès à une base de données, mais n'accorde pas automatiquement l'accès aux objets d'une base de données. Après avoir créé un utilisateur, les actions communes consistent à ajouter des utilisateurs aux rôles de base de données qui ont l'autorisation d'accéder aux objets de base de données ou d'octroyer des autorisations relatives aux objets à l'utilisateur. Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
+ La création d'un utilisateur accorde l'accès à une base de données, mais n'accorde pas automatiquement l'accès aux objets d'une base de données. Après la création d’un utilisateur, les actions communes consistent à ajouter des utilisateurs aux rôles de base de données qui ont l’autorisation d’accéder aux objets de base de données ou d’octroyer des autorisations relatives aux objets à l’utilisateur. Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
 ### <a name="special-considerations-for-contained-databases"></a>Considérations spéciales pour les bases de données autonomes  
  Lors de la connexion à une base de données autonome, si l'utilisateur ne dispose pas de compte de connexion dans la base de données **master**, la chaîne de connexion doit inclure le nom de base de données autonome comme catalogue initial. Le paramètre de catalogue initial est toujours requis pour un utilisateur de base de données autonome avec mot de passe.  
@@ -338,7 +361,7 @@ CREATE USER AbolrousHazem FOR LOGIN AbolrousHazem;
 GO   
 ```  
   
-### <a name="b-creating-a-database-user-with-a-default-schema"></a>B. Création d'un utilisateur de base de données avec un schéma par défaut  
+### <a name="b-creating-a-database-user-with-a-default-schema"></a>b. Création d'un utilisateur de base de données avec un schéma par défaut  
  L'exemple suivant crée d'abord une connexion serveur nommée `WanidaBenshoof` avec un mot de passe, puis crée un utilisateur de base de données correspondant nommé `Wanida` avec le schéma par défaut `Marketing`.  
   
 ```  
@@ -439,8 +462,44 @@ CREATE USER [Chin]
 WITH   
       DEFAULT_SCHEMA = dbo  
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
-```  
-  
+```
+
+### <a name="i-create-an-azure-ad-user-from-an-azure-ad-login-in-sql-database-managed-instance"></a>I. Créer un utilisateur Azure AD à partir d’une connexion Azure AD dans SQL Database Managed Instance
+
+ Pour créer un utilisateur Azure AD à partir d’une connexion Azure AD, utilisez la syntaxe suivante.
+
+ Connectez-vous à votre Managed Instance avec une connexion Azure AD détentrice du rôle `sysadmin`. Le code suivant crée un utilisateur Azure AD bob@contoso.com à partir de la connexion bob@contoso.com. Cette connexion a été créée dans l’exemple [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account).
+
+```sql
+CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
+GO
+```
+
+> [!IMPORTANT]
+> Quand vous créez un **USER** à partir d’une connexion Azure AD, spécifiez un *user_name* identique au *login_name* de **LOGIN**.
+
+La création d’un utilisateur Azure AD en tant que groupe à partir d’une connexion Azure AD qui est un groupe est une opération prise en charge.
+
+```sql
+CREATE USER [AAD group] FROM LOGIN [AAD group];
+GO
+```
+
+Vous pouvez également créer un utilisateur Azure AD à partir d’une connexion Azure AD qui est un groupe.
+
+```sql
+CREATE USER [bob@contoso.com] FROM LOGIN [AAD group];
+GO
+```
+
+### <a name="j-create-an-azure-ad-user-without-an-aad-login-for-the-database"></a>J. Créer un utilisateur Azure AD sans connexion AAD pour la base de données
+
+La syntaxe suivante permet de créer un utilisateur Azure AD bob@contoso.com, dans la base de données SQL Database Managed Instance (utilisateur contenu) :
+
+```sql
+CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;
+GO
+```
 
 ## <a name="next-steps"></a>Étapes suivantes  
 Une fois l’utilisateur créé, envisagez d’ajouter l’utilisateur à un rôle de base de données à l’aide de l’instruction [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md).  

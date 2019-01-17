@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d647102d72b9ec3dc03e0887dbc1b9abe60a3308
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7dae0b33b2b3a9100aada7505e61f3e75f8bf66c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703817"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980478"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -484,18 +484,18 @@ WITH
  Dans cet exemple, les données seront triées dans les partitions suivantes :  
   
 -   Partition 1 : col <= 10   
--   Partition 2 : 10 < col <= 20   
--   Partition 3 : 20 < col <= 30   
--   Partition 4 : 30 < col <= 40   
--   Partition 5 : 40 < col  
+-   Partition 2 : 10 < col <= 20   
+-   Partition 3 : 20 < col <= 30   
+-   Partition 4 : 30 < col <= 40   
+-   Partition 5 : 40 < col  
   
  Si cette même table était partitionnée avec RANGE RIGHT au lieu de RANGE LEFT (par défaut), les données seraient triées dans les partitions suivantes :  
   
 -   Partition 1 : col < 10  
--   Partition 2 : 10 <= col < 20   
--   Partition 3 : 20 <= col < 30    
--   Partition 4 : 30 <= col < 40   
--   Partition 5 : 40 <= col  
+-   Partition 2 : 10 <= col < 20   
+-   Partition 3 : 20 <= col < 30    
+-   Partition 4 : 30 <= col < 40   
+-   Partition 5 : 40 <= col  
   
 ### <a name="OnePartition"></a> I. Créer une table partitionnée à une partition  
  L’exemple suivant crée une table partitionnée à une partition. Aucune valeur limite n’y étant spécifiée, elle contient une seule partition.  

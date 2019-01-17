@@ -14,20 +14,20 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6fd8dc38147cd3053aaf1720f9c3b30ea0ac512
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: e75565d69b2a5a1ac2cf5d6a9d512fffbcf768f5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810355"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590723"
 ---
 # <a name="unpack-a-dac-package"></a>Décompresser un package DAC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Utilisez la boîte de dialogue Décompresser une application de la couche Données pour décompresser les scripts et les fichiers d'un package d'application de la couche Données (DAC). Les scripts et les fichiers sont placés dans un dossier où ils peuvent être examinés avant que le package soit utilisé pour déployer la DAC dans un système de production. Le contenu d'une DAC peut également être comparé avec le contenu d'un autre package décompressé dans un autre dossier.  
   
 1.  **Avant de commencer :**  [Sécurité](#Security)  
   
-2.  **Pour décompresser une DAC, à l'aide de la boîte de dialogue**  [Décompresser une application de la couche Données](#UnpackDACDial), [Examen du contenu d'un package DAC](#ExamDACPack)  
+2.  **Pour décompresser une DAC, à l’aide de la**  [boîte de dialogue Décompresser une application de la couche Données](#UnpackDACDial), [Examen du contenu d’un package DAC](#ExamDACPack)  
   
 ##  <a name="Security"></a> Sécurité  
  Nous vous recommandons de ne pas déployer un package DAC provenant de sources inconnues ou non approuvées. Ces DAC peuvent contenir du code malveillant susceptible d'exécuter un code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d'utiliser une DAC provenant d'une source inconnue ou non approuvée, déployez-la sur une instance de test isolée du [!INCLUDE[ssDE](../../includes/ssde-md.md)], décompressez la DAC et examinez le code, par exemple les procédures stockées ou autre code défini par l'utilisateur.  

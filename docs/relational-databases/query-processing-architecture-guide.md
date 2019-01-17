@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542522"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591883"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ Les exemples suivants illustrent les plans d’exécution qui sont supprimés du
 * Un plan d'exécution est fréquemment référencé de sorte que son coût n'est jamais égal à zéro. Le plan reste dans le cache du plan et n’est pas supprimé tant qu’il n’y a pas de sollicitation de la mémoire et que le coût actuel n’est pas égal à zéro.
 * Un plan d'exécution ad hoc est inséré ; il n'est plus référencé tant que la mémoire n'est pas sollicitée de manière élevée. Dans la mesure où les plans d’exécution ad hoc sont initialisés avec un coût actuel égal à zéro, quand le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] examine le plan d’exécution, il constate que le coût actuel est égal à zéro et supprime le plan du cache du plan. Le plan d’exécution ad hoc reste dans le cache du plan avec un coût actuel égal à zéro en l’absence de sollicitation de la mémoire.
 
-Pour supprimer manuellement un seul plan ou l’ensemble des plans du cache, utilisez [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).
+Pour supprimer manuellement un seul plan ou l’ensemble des plans du cache, utilisez [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). À compter de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], utilisez l’instruction `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` pour effacer le cache (du plan) de procédure pour la base de données dans l’étendue.
 
 ### <a name="recompiling-execution-plans"></a>Recompilation des plans d'exécution
 
@@ -572,7 +572,7 @@ En outre, les clauses de requête suivantes ne sont pas paramétrables. Notez qu
 Le paramétrage est effectué au niveau des instructions Transact-SQL individuelles. En d'autres termes, les instructions individuelles d'un traitement sont paramétrables. Une fois la compilation terminée, la requête paramétrable est exécutée dans le contexte du traitement pour lequel elle a été initialement soumise. Dans le cas d’un plan d’exécution mis en cache, vous pouvez déterminer si la requête a été paramétrée en référençant la colonne sql de la vue de gestion dynamique sys.syscacheobjects. Si la requête est paramétrable, les noms et les types de données des paramètres sont spécifiés avant le texte du lot soumis dans cette colonne, par exemple, (\@1 tinyint).
 
 > [!NOTE]
-> Les noms des paramètres sont arbitraires. Les utilisateurs et les applications ne doivent par conséquent pas se fier à un ordre particulier d'affectation des noms. En outre, les éléments suivants peuvent varier dans les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les mises à niveau des Service Packs : les noms des paramètres, le choix des littéraux paramétrés et l’espacement dans le texte paramétré.
+> Les noms des paramètres sont arbitraires. Les utilisateurs et les applications ne doivent par conséquent pas se fier à un ordre particulier d'affectation des noms. En outre, les éléments suivants peuvent varier entre les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les mises à niveau du Service Pack : Les noms des paramètres, le choix des littéraux paramétrés et l'espacement dans le texte paramétré.
 
 #### <a name="data-types-of-parameters"></a>Types de données des paramètres
 

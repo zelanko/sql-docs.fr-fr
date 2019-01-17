@@ -13,24 +13,24 @@ ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 876e6cc23bd5b4063c977de44af05c2e43ee002d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: df8cd54cdf13941044ae4f72f8781e4532fc5c51
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672838"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588943"
 ---
 # <a name="monitor-data-tier-applications"></a>Analyser les applications de la couche Données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Une application de la couche Données (DAC) peut être analysée à partir de l’ **Explorateur de l’utilitaire** et de l’ **Explorateur d’objets** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), avec les vues et les tables système. De plus, tous les objets dans la base de données contenue dans la DAC peuvent être analysés à l'aide des techniques d'analyse de [!INCLUDE[ssDE](../../includes/ssde-md.md)] et de base de données standard.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
- Si vous déployez une DAC dans une instance gérée du [!INCLUDE[ssDE](../../includes/ssde-md.md)], les informations sur la DAC déployée sont incorporées dans l'utilitaire SQL Server lorsque le jeu d'éléments de collecte de l'utilitaire est envoyé de l'instance au point de contrôle de l'utilitaire. Vous pouvez ensuite afficher les informations intégrité de base sur la DAC à l'aide de **l'Explorateur de l'utilitaire** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ Si vous déployez une DAC dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], les informations sur la DAC déployée sont incorporées dans l’Utilitaire SQL Server quand le jeu d’éléments de collecte de l’utilitaire est envoyé de l’instance au point de contrôle de l’utilitaire. Vous pouvez ensuite afficher les informations intégrité de base sur la DAC à l'aide de **l'Explorateur de l'utilitaire** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  L' **Explorateur d'objets** de SSMS affiche les informations de configuration de base sur chaque DAC déployée sur une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], que l'instance soit gérée ou non dans l'utilitaire SQL Server. En outre, la base de données associée à une DAC déployée peut être analysée à l'aide des mêmes procédures d'analyse que celles employées pour toute base de données.  
   
 ## <a name="using-the-sql-server-utility"></a>Utilisation de l'utilitaire SQL Server  
- La page de détails **Applications de la couche de données déployées** dans l’ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** displays a dashboard that reports the resource utilization of all DACs that have been deployed to managed instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le volet supérieur de la page des détails répertorie chaque DAC déployée avec des indicateurs visuels qui signalent si leur utilisation du processeur et des ressources de fichiers se situe hors des stratégies définies pour l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous sélectionnez une DAC en mode Liste, des détails supplémentaires sont affichés sous les onglets dans le volet inférieur de la page. Pour plus d’informations sur les informations présentées dans la page de détails, consultez [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ La page de détails **Applications de la couche de données déployées** dans l’**Explorateur de l’utilitaire** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] affiche un tableau de bord qui indique l’utilisation des ressources de toutes les DAC déployées sur des instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le volet supérieur de la page des détails répertorie chaque DAC déployée avec des indicateurs visuels qui signalent si leur utilisation du processeur et des ressources de fichiers se situe hors des stratégies définies pour l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous sélectionnez une DAC en mode Liste, des détails supplémentaires sont affichés sous les onglets dans le volet inférieur de la page. Pour plus d’informations sur les informations présentées dans la page de détails, consultez [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
   
  Après avoir utilisé la page des détails **Applications de la couche Données déployées** pour identifier rapidement toutes les DAC qui utilisent trop ou pas assez leurs ressources matérielles, vous pouvez élaborer des plans pour traiter tous les problèmes. Plusieurs DAC qui n'utilisent pas pleinement leurs ressources matérielles actuelles pourraient être consolidées en un serveur unique, ce qui libérerait certains des serveurs pour d'autres utilisations. Si une DAC utilise trop les ressources sur son serveur en cours, elle peut être déplacée vers un plus grand serveur ou d'autres ressources peuvent être ajoutées au serveur en cours.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "51672838"
  Les informations de la page des détails **Applications de la couche Données déployées** proviennent des données dans l’entrepôt de données de gestion de l’utilitaire, qui recueille par défaut les données toutes les 15 minutes. L'intervalle peut également être adapté à l'aide de la page des détails **Administration de l'utilitaire** .  
   
 ## <a name="using-object-explorer"></a>Utilisation de l'Explorateur d'objets  
- L' **Explorateur d'objets** SSMS affiche les informations de configuration de base sur chaque DAC déployée vers une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cela inclut à la fois les instances gérées inscrites dans l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les instances autonomes qui ne peuvent pas être affichées dans l’ **Explorateur de l’utilitaire**.  
+ L' **Explorateur d'objets** SSMS affiche les informations de configuration de base sur chaque DAC déployée vers une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cela inclut à la fois les instances inscrites dans l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les instances autonomes qui ne peuvent pas être affichées dans l’**Explorateur de l’utilitaire**.  
   
  Pour consulter les détails d'une DAC déployée vers une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   

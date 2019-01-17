@@ -13,12 +13,12 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e03624a7db0cc28a15a92e9cc1ffff98e9cf4514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227f488e3393352ae083576676b7934b722b0ce9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648203"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203718"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Connexion à une base de données source Oracle
   La page Source Oracle permet de fournir les informations nécessaires pour la connexion à la base de données source Oracle. L'instance de capture de données modifiées lit les journaux de restauration par progression de la base de données Oracle à laquelle vous êtes connecté.  
@@ -35,13 +35,13 @@ ms.locfileid: "47648203"
  **Authentification pour l'exploration de données de journaux Oracle**  
  Pour entrer les informations d'identification de l'utilisateur de la base de données Oracle qui est autorisé à explorer les données de journaux, sélectionnez l'une des options suivantes :  
   
--   **Authentification Windows**: sélectionnez cette option pour utiliser les informations d'identification actuelles de domaine Windows. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.  
+-   **Authentification Windows** : sélectionnez cette option pour utiliser les informations d’identification actuelles de domaine Windows. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.  
   
--   **Authentification Oracle**: si vous sélectionnez cette option, vous devez taper le **Nom d'utilisateur** et le **Mot de passe** de l'utilisateur dans la base de données Oracle à laquelle vous êtes connecté.  
+-   **Authentification Oracle** : si vous sélectionnez cette option, vous devez taper le **Nom d’utilisateur** et le **Mot de passe** de l’utilisateur dans la base de données Oracle à laquelle vous vous connectez.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Un utilisateur doit avoir les privilèges suivants dans la base de données Oracle de façon à être un utilisateur d'exploration de données de journaux.  
->   
+> 
 >  -   SELECT sur \<tout_table_capturée>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE sur DBMS_LOGMNR  
@@ -55,7 +55,7 @@ ms.locfileid: "47648203"
 > -   SELECT sur ALL OBJECTS  
 > -   SELECT sur DBA OBJECTS  
 > -   SELECT sur ALL TABLES  
->   
+> 
 >  Si l'un de ces privilèges ne peut pas être accordé à V$xxx, alors accordez-les à V_S$xxx.  
   
  **Tester la connexion**  
@@ -68,6 +68,6 @@ ms.locfileid: "47648203"
   
 ## <a name="see-also"></a> Voir aussi  
  [Procédure : créer l'instance SQL Server de base de données de modifications](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Modifier les propriétés d’une instance](../../integration-services/change-data-capture/edit-instance-properties.md)  
+ [Modifier les propriétés d'instance](../../integration-services/change-data-capture/edit-instance-properties.md)  
   
   

@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbedfe588a66e166f46e9240db65689a2b2a6459
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8d2029680262934370479ef2c4ec81792a821f1d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700344"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359661"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,9 +82,9 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  Le comportement de READ COMMITTED dépend de la valeur affectée à l'option de base de données READ_COMMITTED_SNAPSHOT :  
   
--   Si l'option READ_COMMITTED_SNAPSHOT a la valeur OFF (valeur par défaut), le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise des verrous partagés pour empêcher d'autres transactions de modifier des lignes pendant que la transaction active exécute une opération de lecture. Les verrous partagés empêchent également l'instruction de lire des lignes modifiées par d'autres transactions, tant que celles-ci ne sont pas terminées. Le type du verrou partagé détermine quand il sera levé. Les verrous de ligne sont levés avant que la ligne suivante ne soit traitée. Les verrous de page sont levés quand la page suivante est lue et les verrous de table sont levés quand l’exécution de l’instruction se termine.  
+-   Si l’option READ_COMMITTED_SNAPSHOT a la valeur OFF (valeur par défaut sur SQL Server), le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise des verrous partagés pour empêcher d’autres transactions de modifier des lignes pendant que la transaction active exécute une opération de lecture. Les verrous partagés empêchent également l'instruction de lire des lignes modifiées par d'autres transactions, tant que celles-ci ne sont pas terminées. Le type du verrou partagé détermine quand il sera levé. Les verrous de ligne sont levés avant que la ligne suivante ne soit traitée. Les verrous de page sont levés quand la page suivante est lue et les verrous de table sont levés quand l’exécution de l’instruction se termine.  
   
--   Si READ_COMMITTED_SNAPSHOT a la valeur ON, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise le contrôle de version de ligne pour présenter à chaque instruction un instantané cohérent des données (du point de vue transactionnel) telles qu'elles étaient au début de l'instruction. Les verrous ne sont pas utilisés pour protéger les données des mises à jour par d'autres transactions.
+-   Si READ_COMMITTED_SNAPSHOT a la valeur ON (valeur par défaut sur SQL Azure Database), le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise le contrôle de version de ligne pour présenter à chaque instruction un instantané cohérent des données (du point de vue transactionnel) telles qu’elles étaient au début de l’instruction. Les verrous ne sont pas utilisés pour protéger les données des mises à jour par d'autres transactions.
 
 > [!IMPORTANT]  
 > Le choix d'un niveau d'isolation n'a aucune influence sur les verrous acquis pour protéger les modifications de données. Une transaction acquiert toujours un verrou exclusif sur les données qu'elle modifie et garde celui-ci jusqu'à ce qu'elle ait terminé son travail, indépendamment du niveau d'isolation défini pour elle. De plus, une mise à jour effectuée au niveau d’isolation READ_COMMITTED utilise des verrous de mise à jour sur les lignes de données sélectionnées, tandis qu’une mise à jour apportée au niveau d’isolation SNAPSHOT utilise des versions de ligne pour sélectionner les lignes à mettre à jour. Dans le cas des opérations de lecture, le niveau d'isolation d'une transaction définit principalement son niveau de protection contre les effets des modifications apportées par les autres transactions. Pour plus d’informations, consultez [Guide du verrouillage des transactions et de la gestion de versions de ligne](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).

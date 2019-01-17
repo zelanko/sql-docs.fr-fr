@@ -11,12 +11,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22365cc7a483b285f583268856a979a694eeabab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7b77ef114e1af3ec0d8c7a7268ae5f9b892196fe
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537267"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886924"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importer des documents JSON dans SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,8 +121,6 @@ FROM 'data/product.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
-Pour plus d’informations et pour obtenir un exemple d’utilisation d’OPENROWSET, consultez [Chargement de fichiers de Stockage Blob Azure vers Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/).
-
 ## <a name="parse-json-documents-into-rows-and-columns"></a>Analyser des documents JSON dans des lignes et des colonnes
 Au lieu de lire un fichier JSON entier en tant que valeur unique, vous pouvez l’analyser et retourner les livres figurant dans le fichier, ainsi que leurs propriétés, dans des lignes et des colonnes. L’exemple suivant utilise un fichier JSON provenant de [ce site](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) et contenant une liste de livres.
 
@@ -158,11 +156,11 @@ SELECT book.*
 
 Dans cet exemple, OPENROWSET(BULK) lit le contenu du fichier et transmet ce contenu à la fonction OPENJSON avec un schéma défini pour la sortie. OPENJSON établit une correspondance avec les propriétés dans les objets JSON en utilisant des noms de colonnes. Par exemple, la propriété `price` est retournée en tant que colonne `price` et convertie vers le type de données float. Voici les résultats :
 
-|Id|Nom   |price|pages_i|Author
+|Id|Créer une vue d’abonnement|price|pages_i|Author
 |---|---|---|---|---|
 978-0641723445|The Lightning Thief|12.5|384|Rick Riordan| 
 978-1423103349|The Sea of Monsters|6.49|304|Rick Riordan| 
-978-1857995879|Sophie’s World : The Greek Philosophers|3.07|64|Jostein Gaarder| 
+978-1857995879|Sophie’s World: The Greek Philosophers|3.07|64|Jostein Gaarder| 
 978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless|
 ||||||
 
@@ -170,10 +168,6 @@ Vous pouvez maintenant retourner cette à l’utilisateur, ou charger les donné
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>En savoir plus sur JSON dans SQL Server et Azure SQL Database  
   
-### <a name="microsoft-blog-posts"></a>Billets de blog Microsoft  
-  
-Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez ces [billets de blog](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sur la prise en charge intégrée de JSON dans SQL Server et Azure SQL Database.  
-
 ### <a name="microsoft-videos"></a>Vidéos Microsoft
 
 Pour obtenir une présentation visuelle de la prise en charge intégrée de JSON dans SQL Server et Azure SQL Database, consultez les vidéos suivantes :

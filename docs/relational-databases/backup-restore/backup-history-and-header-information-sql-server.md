@@ -34,12 +34,12 @@ ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e8c19200923dc21e3000263095438a65b63a019a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 840b6e513e5a1c1cd9408134ced29ac3c22464c5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684737"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202618"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Historique de sauvegarde et informations d'en-tête (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "47684737"
  Pour plus d’informations, consultez [Comparaison des informations d’en-tête de support et d’en-tête de sauvegarde](#CompareMediaHeaderBackupHeader), plus loin dans cette rubrique.  
   
 ##  <a name="BackupHeader"></a> Informations d'en-tête de sauvegarde  
- L'affichage de l'en-tête de sauvegarde présente les informations relatives à tous les jeux de sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , qui se trouvent sur le support. Les informations qui sont affichées comprennent les types de périphériques de sauvegardes utilisés, les types de sauvegarde (par exemple base de données, transaction, fichier ou base de données différentielle) et les informations de date/heure de début et de fin de sauvegarde. Ces informations sont utiles lorsque vous devez déterminer le jeu de sauvegarde à restaurer sur la bande ou les sauvegardes contenues sur le support.  
+ L’affichage de l’en-tête de sauvegarde présente les informations relatives à tous les jeux de sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui se trouvent sur le support. Les informations qui sont affichées comprennent les types de périphériques de sauvegardes utilisés, les types de sauvegarde (par exemple base de données, transaction, fichier ou base de données différentielle) et les informations de date/heure de début et de fin de sauvegarde. Ces informations sont utiles lorsque vous devez déterminer le jeu de sauvegarde à restaurer sur la bande ou les sauvegardes contenues sur le support.  
   
 > [!NOTE]  
 >  L'affichage des informations d'en-tête de sauvegarde peut prendre du temps pour les bandes de grande capacité car la totalité du support doit être balayée pour pouvoir afficher les informations concernant chaque sauvegarde du support.  

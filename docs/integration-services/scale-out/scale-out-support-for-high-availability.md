@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: f9572368002a0aef7b02d615701baefb0fd6708b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4e3429a52d24b9bb9fbb0de18c1687cfdaa76d30
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638143"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246738"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Prise en charge de Scale Out pour la haute disponibilité
 
@@ -97,7 +97,7 @@ Sur les machines virtuelles Azure, cette opération de configuration nécessite 
 
 1.  Vous devez configurer un domaine Azure. Le clustering de basculement Windows Server nécessite que tous les ordinateurs du cluster soient membres du même domaine. Pour plus d’informations, consultez [Activer Azure Active Directory Domain Services à l’aide du portail Azure](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
 
-2. Vous devez configurer un équilibreur de charge Azure. Cette opération est obligatoire pour l’écouteur du groupe de disponibilité. Pour plus d’informations, consultez [Tutoriel : équilibrer la charge du trafic interne vers les machines virtuelles avec un équilibreur de charge de base à l’aide du portail Azure](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
+2. Vous devez configurer un équilibreur de charge Azure. Cette opération est obligatoire pour l’écouteur du groupe de disponibilité. Pour plus d’informations, consultez [Tutoriel : équilibrer la charge du trafic interne vers les machines virtuelles avec un équilibreur de charge de base à l’aide du portail Azure](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Mettre à jour l’adresse Scale Out Master dans SSISDB
 
@@ -107,7 +107,7 @@ Sur l’instance SQL Server principale, exécutez la procédure stockée `[catal
 
 Maintenant, vous pouvez ajouter des Scale Out Workers avec [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md). Entrez `[SQL Server Availability Group Listener DNS name],[Port]` dans la page de connexion.
 
-# <a name="upgrade-scale-out-in-high-availability-environment"></a>Mettre à niveau Scale Out dans un environnement à haute disponibilité
+## <a name="upgrade-scale-out-in-high-availability-environment"></a>Mettre à niveau Scale Out dans un environnement à haute disponibilité
 Pour mettre à niveau Scale Out dans un environnement à haute disponibilité, suivez les [étapes de mise à niveau d’Always On pour le catalogue SSIS](../catalog/ssis-catalog.md#Upgrade), mettez à niveau Scale Out Master et Scale Out Worker sur chaque ordinateur, puis recréez le rôle du cluster de basculement Windows Server à l’étape 7 ci-dessus avec la nouvelle version du service Scale Out Master.
 
 ## <a name="next-steps"></a>Étapes suivantes

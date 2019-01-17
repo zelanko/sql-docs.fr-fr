@@ -11,12 +11,12 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fedebfb082639114ec068f80db436af7b8a035b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7ef52db1ccafaeaf9539974032da3622b23838c4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672798"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787091"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Activer la sauvegarde managée SQL Server sur Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "51672798"
   
 #### <a name="create-the-azure-blob-container"></a>Création du conteneur Azure Blob  
   
-1.  **Inscrivez-vous à Azure :** Si vous avez déjà un abonnement Azure, passez à l'étape suivante. Sinon, vous pouvez commencer avec une [version d’évaluation gratuite](https://azure.microsoft.com/pricing/free-trial/) ou explorer les [options d’achat](https://azure.microsoft.com/pricing/purchase-options/).  
+1.  **Inscrivez-vous à Azure :** Si vous avez déjà un abonnement Azure, passez à l’étape suivante. Sinon, vous pouvez commencer avec une [version d’évaluation gratuite](https://azure.microsoft.com/pricing/free-trial/) ou explorer les [options d’achat](https://azure.microsoft.com/pricing/purchase-options/).  
   
-2.  **Créez un compte de stockage Azure :** Si vous avez déjà un compte de stockage, passez à l'étape suivante. Sinon, vous pouvez utiliser le [Portail de gestion Azure](https://manage.windowsazure.com/) ou Azure PowerShell pour créer le compte de stockage. La commande `New-AzureStorageAccount` suivante crée un compte de stockage nommé `managedbackupstorage` dans la région États-Unis de l'Est.  
+2.  **Créez un compte de stockage Azure :** Si vous avez déjà un compte de stockage, passez à l’étape suivante. Sinon, vous pouvez utiliser le [Portail de gestion Azure](https://manage.windowsazure.com/) ou Azure PowerShell pour créer le compte de stockage. La commande `New-AzureStorageAccount` suivante crée un compte de stockage nommé `managedbackupstorage` dans la région États-Unis de l'Est.  
   
     ```powershell  
     New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
@@ -41,19 +41,27 @@ ms.locfileid: "51672798"
   
      Pour plus d'informations sur les comptes de stockage, consultez [À propos des comptes de stockage Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   
-3.  **Créez un conteneur d'objets blob pour les fichiers de sauvegarde :** Vous pouvez créer un conteneur d'objets blob dans le portail de gestion Azure ou Azure PowerShell. La commande `New-AzureStorageContainer` suivante crée un conteneur d’objets blob nommé `backupcontainer` dans le compte de stockage `managedbackupstorage` .  
+3.  **Créez un conteneur d’objets blob pour les fichiers de sauvegarde :** Vous pouvez créer un conteneur d’objets blob dans le portail de gestion Azure ou avec Azure PowerShell. La commande `New-AzureStorageContainer` suivante crée un conteneur d’objets blob nommé `backupcontainer` dans le compte de stockage `managedbackupstorage` .  
   
     ```powershell  
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary  
     New-AzureStorageContainer -Name backupcontainer -Context $context  
     ```  
   
-4.  **Générer une signature d’accès partagé (SAP) :** Pour accéder au conteneur, vous devez créer une SAP. Cela peut être effectué dans certains outils, par code et dans Azure PowerShell. La commande `New-AzureStorageContainerSASToken` suivante crée le jeton SAP pour le conteneur d’objets blob `backupcontainer` qui expire dans un an.  
+4.  **Générez une signature d’accès partagé (SAP) :** Pour accéder au conteneur, vous devez créer une SAP. Cela peut être effectué dans certains outils, par code et dans Azure PowerShell. La commande `New-AzureStorageContainerSASToken` suivante crée le jeton SAP pour le conteneur d’objets blob `backupcontainer` qui expire dans un an.  
   
     ```powershell  
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
     New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
     ```  
+    Dans le cas d’AzureRM, utilisez la commande suivante :
+       ```powershell
+    Connect-AzureRmAccount
+    Set-AzureRmContext -SubscriptionId "YOURSUBSCRIPTIONID"
+    $StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
+    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
+    New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
+   ```  
   
      La sortie de cette commande contient l'URL du conteneur et le jeton SAP. Par exemple :  
   
@@ -68,11 +76,11 @@ ms.locfileid: "51672798"
     |**URL du conteneur :**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
     |**Jeton SAS :**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
   
-     Enregistrez l’URL du conteneur et le SAS pour les utiliser lors de la création d’informations d’identification SQL. Pour plus d’informations sur SAS, consultez [Signatures d’accès partagé, partie 1 : présentation du modèle SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+     Enregistrez l’URL du conteneur et le SAS pour les utiliser lors de la création d’informations d’identification SQL. Pour plus d’informations sur SAP, consultez [Signatures d’accès partagé, partie 1 : présentation du modèle SAP](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>Activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
-1.  **Créez des informations d'identification SQL pour l'URL de SAS :** Utilisez le jeton SAS pour créer des informations d'identification SQL pour l'URL du conteneur d'objets blob. Dans SQL Server Management Studio, utilisez la requête Transact-SQL suivante pour créer les informations d'identification pour l'URL de votre conteneur d'objets blob sur la base de l'exemple suivant :  
+1.  **Créez des informations d’identification SQL pour l’URL SAP :** Utilisez le jeton SAP pour créer des informations d’identification SQL pour l’URL du conteneur d’objets blob. Dans SQL Server Management Studio, utilisez la requête Transact-SQL suivante pour créer les informations d'identification pour l'URL de votre conteneur d'objets blob sur la base de l'exemple suivant :  
   
     ```sql  
     CREATE CREDENTIAL [https://managedbackupstorage.blob.core.windows.net/backupcontainer]   
@@ -80,11 +88,11 @@ ms.locfileid: "51672798"
     SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
     ```  
   
-2.  **Vérifiez que le service SQL Server Agent est démarré et exécuté** . Démarrez SQL Server Agent s'il n'est pas exécuté actuellement.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nécessite l'exécution de SQL Server Agent sur l'instance pour effectuer les opérations de sauvegarde.  Vous pouvez configurer l'exécution automatique de SQL Server Agent, pour vous assurer que les opérations de sauvegarde se déroulent régulièrement.  
+2.  **Vérifiez que le service SQL Server Agent est démarré et exécuté :** Démarrez SQL Server Agent s’il n’est pas exécuté actuellement.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nécessite l'exécution de SQL Server Agent sur l'instance pour effectuer les opérations de sauvegarde.  Vous pouvez configurer l'exécution automatique de SQL Server Agent, pour vous assurer que les opérations de sauvegarde se déroulent régulièrement.  
   
-3.  **Déterminez la période de rétention** . Indiquez la période de rétention souhaitée pour les fichiers de sauvegarde. La période de rétention est spécifiée en jours, sur une plage de 1 à 30.  
+3.  **Déterminez la période de rétention :** Période de rétention en jours des fichiers de sauvegarde. La période de rétention est spécifiée en jours, sur une plage de 1 à 30.  
   
-4.  **Enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** démarrez SQL Server Management Studio et connectez-vous à l’instance de SQL Server cible. Dans la fenêtre de requête, exécutez l'instruction suivante après avoir modifié les valeurs du nom de la base de données, de l’URL du conteneur et de la période de rétention selon vos besoins.  
+4.  **Activez et configurez la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** Démarrez SQL Server Management Studio et connectez-vous à l’instance SQL Server cible. Dans la fenêtre de requête, exécutez l'instruction suivante après avoir modifié les valeurs du nom de la base de données, de l’URL du conteneur et de la période de rétention selon vos besoins.  
   
     > [!IMPORTANT]  
     >  Pour activer la gestion de sauvegarde au niveau de l’instance, spécifiez `NULL` pour le paramètre `database_name` .  
@@ -102,7 +110,7 @@ ms.locfileid: "51672798"
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est maintenant activée sur la base de données spécifiée. Un délai de 15 minutes au maximum peut être nécessaire pour le démarrage des opérations de sauvegarde sur la base de données.  
   
-5.  **Passez en revue la configuration par défaut des événements étendus :** passez en revue les paramètres des événements étendus en exécutant l’instruction Transact-SQL suivante.  
+5.  **Passez en revue la configuration par défaut des événements étendus :** Vérifiez les paramètres des événements étendus en exécutant l'instruction Transact-SQL suivante :  
   
     ```  
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
@@ -114,9 +122,9 @@ ms.locfileid: "51672798"
   
     1.  Configurez la messagerie de base de données si elle n'est pas déjà activée sur l'instance. Pour plus d'informations, consultez [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   
-    2.  Configurez la notification SQL Server Agent afin qu'elle utilise la messagerie de base de données. Pour plus d'informations, consultez [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
+    2.  Configurez la notification SQL Server Agent afin qu'elle utilise la messagerie de base de données. Pour plus d’informations, consultez [Configurer la messagerie de SQL Server Agent en vue de l’utilisation de la messagerie de base de données](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Activez les notifications par courrier électronique afin de recevoir les erreurs de sauvegarde et les avertissements :** dans la fenêtre de requête, exécutez les instructions Transact-SQL suivantes :  
+    3.  **Activez les notifications par e-mail afin de recevoir les erreurs de sauvegarde et les avertissements :** Dans la fenêtre de requête, exécutez les instructions Transact-SQL suivantes :  
   
         ```  
         EXEC msdb.managed_backup.sp_set_parameter  
@@ -125,9 +133,9 @@ ms.locfileid: "51672798"
   
         ```  
   
-7.  **Affichez les fichiers de sauvegarde dans le compte de stockage Microsoft Azure** . Connectez-vous au compte de stockage depuis SQL Server Management Studio ou depuis le Portail de gestion Azure. Vous verrez les fichiers de sauvegarde dans le conteneur que vous avez spécifié. Notez que vous pourrez voir aussi une base de données et une sauvegarde de journal 5 minutes après l’activation de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la base de données.  
+7.  **Affichez les fichiers de sauvegarde dans le compte de stockage Microsoft Azure :** Connectez-vous au compte de stockage depuis SQL Server Management Studio ou le portail de gestion Azure. Vous verrez les fichiers de sauvegarde dans le conteneur que vous avez spécifié. Notez que vous pourrez voir aussi une base de données et une sauvegarde de journal 5 minutes après l’activation de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la base de données.  
   
-8.  **Surveillez l’état d’intégrité :**  vous pouvez le surveiller au moyen des notifications par courrier électronique configurées précédemment, ou en surveillant activement les événements enregistrés. Voici quelques exemples d'instructions Transact SQL utilisées pour afficher les événements :  
+8.  **Supervisez l’état d’intégrité :**  Vous pouvez le superviser au moyen des notifications par e-mail configurées précédemment, ou en supervisant activement les événements enregistrés. Voici quelques exemples d'instructions Transact SQL utilisées pour afficher les événements :  
   
     ```  
     --  view all admin events  

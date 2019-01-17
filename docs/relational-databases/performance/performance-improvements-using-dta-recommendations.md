@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor, performance improvements
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 7cfadca5d9bbdeecf582c5cff67b499dc1172297
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a0f114c9e2783c8989a2bb4682d488eaea087814
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545361"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369981"
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>Optimisation des performances à l’aide des recommandations DTA
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ L’Assistant Paramétrage du moteur de base de données (DTA), à compter de SQ
 
 Pour démontrer les avantages des recommandations de l’Assistant DTA sur les performances de charge de travail, nous avons expérimenté plusieurs charges de travail client réelles. Pour chaque charge de travail client, nous avons laissé l’Assistant DTA analyser les requêtes individuelles, ainsi que la charge de travail complète des requêtes. Nous considérons trois possibilités :
   
-  1. **ColumnStore uniquement** : générer uniquement des index columnstore pour toutes les tables sans utiliser l’Assistant DTA. 
+  1. **Columnstore uniquement** : générer uniquement des index columnstore pour toutes les tables sans utiliser l’Assistant DTA. 
   2. **DTA (rowstore uniquement)**  : exécuter l’Assistant DTA avec l’option permettant de recommander les index rowstore uniquement.
   3. **DTA (rowstore + columnstore)**  : exécuter l’Assistant DTA avec l’option permettant de recommander à la fois les index rowstore et columnstore.  
    
@@ -43,7 +43,7 @@ Dans chaque cas, nous avons ensuite implémenté les index recommandés. Nous si
 
 **Besoin en conceptions physiques mixtes** : premier ensemble de barres correspondant à la requête 1 du client 1. L’Assistant DTA (rowstore + columnstore) recommande un ensemble de quatre index columnstore et de six index rowstore, ce qui entraîne un temps processeur 2,5 – 4 fois plus faible que celui pour l’index columnstore uniquement et DTA (rowstore uniquement). Cela montre les avantages des conceptions physiques mixtes comprenant des index rowstore et columnstore *même pour une seule requête*. 
 
-**Efficacité des recommandations d’index rowstore** : les deuxième et troisième ensembles de barres (correspondants à la requête 2 du client 1 et à la requête 1 du client 2) sont des cas où les requêtes ont des prédicats de filtre sélectifs qui tirent parti des index rowstore appropriés. Pour ces deux requêtes, l’Assistant DTA (rowstore uniquement) et l’Assistant DTA (rowstore + columnstore) recommandent des index rowstore uniquement. Ces exemples illustrent également que même si l’Assistant DTA est appelé avec l’option permettant de recommander des index columnstore, son approche basée sur les coûts garantit qu’il recommande un index columnstore uniquement si la charge de travail peut en fait en bénéficier.
+**Efficacité des recommandations d’index rowstore** : les deuxième et troisième ensembles de barres (correspondant à la requête 2 du client 1 et à la requête 1 du client 2) sont des cas où les requêtes ont des prédicats de filtre sélectifs qui tirent parti des index rowstore appropriés. Pour ces deux requêtes, l’Assistant DTA (rowstore uniquement) et l’Assistant DTA (rowstore + columnstore) recommandent des index rowstore uniquement. Ces exemples illustrent également que même si l’Assistant DTA est appelé avec l’option permettant de recommander des index columnstore, son approche basée sur les coûts garantit qu’il recommande un index columnstore uniquement si la charge de travail peut en fait en bénéficier.
 
 **Efficacité des recommandations d’index columnstore** : le quatrième ensemble de barres correspondant à la requête 2 du client 2 représente un cas où la requête analyse de grandes tables qui tireraient parti des index columnstore. L’Assistant DTA (rowstore uniquement) génère une recommandation dont le temps processeur est supérieur à celui correspondant à des index columnstore présents. L’Assistant DTA (rowstore + columnstore) recommande des index columnstore appropriés, correspondant à la performance d’exécution de requête de l’option columnstore uniquement.
 

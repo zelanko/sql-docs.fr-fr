@@ -15,12 +15,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7d5a8b82d60dcd4c2fae13af02310767e10700cd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640196"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205838"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Nouveautés d’Integration Services dans SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -180,7 +180,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
   
 -   API MOM (Management Object Model)  
   
- Pour plus d’informations, consultez [Déployer des projets et des packages Integration Services (SSIS)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
+ Pour plus d’informations, consultez [Déployer des projets et des packages Integration Services (SSIS)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
 
 ####  <a name="encrypted"></a> Prise en charge de la fonctionnalité Always Encrypted dans le catalogue SSIS  
  SSIS prend déjà en charge la fonctionnalité de chiffrement intégral dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez les billets de blog suivants.  
@@ -200,7 +200,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
  Le nouveau niveau de journalisation **RuntimeLineage** dans le catalogue SSIS permet de collecter les données nécessaires pour le suivi des informations de lignage dans le flux de données. Vous pouvez analyser ces informations de lignage pour mapper la relation de lignage entre différentes tâches. Les éditeurs de logiciels indépendants et les développeurs peuvent créer des outils de mappage de lignage personnalisés à l’aide de ces informations. 
 
 ####  <a name="CustomLogging"></a> Nouveau niveau de journalisation personnalisé dans le catalogue SSIS  
- Dans les versions antérieures du catalogue SSIS, vous pouvez choisir l’un des quatre niveaux de journalisation intégrés ( **None, Basic, Performance ou Verbose**) quand vous exécutez un package. SQL Server 2016 ajoute le niveau de journalisation **RuntimeLineage**. En outre, vous pouvez désormais créer et enregistrer plusieurs niveaux de journalisation personnalisés dans le catalogue SSIS, et choisir le niveau de journalisation à utiliser chaque fois que vous exécutez un package. Pour chaque niveau de journalisation personnalisé, sélectionnez uniquement les statistiques et les événements à capturer. Vous pouvez éventuellement inclure le contexte de l’événement pour voir les valeurs des variables, les chaînes de connexion et les propriétés de la tâche. Pour plus d’informations, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
+ Les versions antérieures du catalogue SSIS vous permettent de choisir l’un des quatre niveaux de journalisation intégrés quand vous exécutez un package : **None, Basic, Performance ou Verbose**. SQL Server 2016 ajoute le niveau de journalisation **RuntimeLineage**. En outre, vous pouvez désormais créer et enregistrer plusieurs niveaux de journalisation personnalisés dans le catalogue SSIS, et choisir le niveau de journalisation à utiliser chaque fois que vous exécutez un package. Pour chaque niveau de journalisation personnalisé, sélectionnez uniquement les statistiques et les événements à capturer. Vous pouvez éventuellement inclure le contexte de l’événement pour voir les valeurs des variables, les chaînes de connexion et les propriétés de la tâche. Pour plus d’informations, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="ErrorColumn"></a> Noms de colonnes pour les erreurs contenues dans le flux de données  
  Lorsque vous redirigez les lignes contenant des erreurs vers une sortie d'erreur dans le flux de données, la sortie contient un identificateur numérique pour la colonne dans laquelle l'erreur s'est produite, mais n'affiche pas le nom de la colonne. Il existe désormais plusieurs façons de rechercher ou d’afficher le nom de la colonne dans laquelle l’erreur s’est produite.  
@@ -213,7 +213,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
   
 -   Dans le composant Script ou un composant de flux de données personnalisé, appelez la nouvelle méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> de l’interface IDTSComponentMetadata100.  
   
- Pour plus d’informations sur cette amélioration, consultez le billet de blog suivant écrit par le développeur SSIS Bo Fan : [Error Column Improvements for SSIS Data Flow (Améliorations de la colonne d’erreur pour le flux de données SSIS)](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx).  
+ Pour plus d’informations sur cette amélioration, consultez le billet de blog suivant écrit par le développeur SSIS Bo Fan : [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx).  
   
 > [!NOTE]  
 >  (Cette prise en charge a été étendue dans les versions ultérieures. Pour plus d’informations, consultez [Prise en charge étendue des noms de la colonne d’erreur](#getidstring) et [Nouvelle interface IDTSComponentMetaData130 dans l’API](#CMD130).)  
@@ -326,7 +326,7 @@ La dernière version du Feature Pack Azure inclut la tâche de chargement Azure 
    
  ![Propriété TargetServerVersion dans la boîte de dialogue Propriétés du projet](../integration-services/media/targetserverversion2.png "Propriété TargetServerVersion dans la boîte de dialogue Propriétés du projet")  
 
->   [!IMPORTANT]
+> [!IMPORTANT]
 > Si vous développez des extensions personnalisées pour SSIS, consultez [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) (Prise en charge du multi-ciblage dans vos composants personnalisés) et [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)(Préparer vos extensions personnalisées SSIS pour utiliser la prise en charge de plusieurs versions de SSDT 2015 pour SQL Server 2016).  
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>Amélioration de l’expérience de gestion dans SQL Server Management Studio

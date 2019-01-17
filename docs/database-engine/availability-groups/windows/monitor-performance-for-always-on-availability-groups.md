@@ -1,6 +1,7 @@
 ---
-title: Monitorer les performances des groupes de disponibilité Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Surveiller les performances pour les groupes de disponibilité
+description: Cet article décrit le processus de synchronisation, montre comment calculer certaines métriques clés et fournit des liens vers des scénarios courants de résolution de problèmes de performances.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2f9b3fb8ce55a57a7609aacd685ef56952b6811e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601149"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203349"
 ---
-# <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorer les performances des groupes de disponibilité Always On
+# <a name="monitor-performance-for-always-on-availability-groups"></a>Superviser les performances des groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   La partie performance des groupes de disponibilité Always On est essentielle au respect du SLA (contrat de niveau de service) pour vos bases de données critiques. Le fait de comprendre comment les groupes de disponibilité envoient les journaux aux réplicas secondaires peut vous aider à estimer le RTO (objectif de temps de récupération) et le RPO (objectif de point de récupération) de votre implémentation de disponibilité et à identifier les goulots d’étranglement dans les groupes ou réplicas de disponibilité peu performants. Cet article décrit le processus de synchronisation, montre comment calculer certaines métriques clés et fournit des liens vers des scénarios courants de résolution de problèmes de performances.  
   
@@ -67,7 +68,7 @@ ms.locfileid: "51601149"
   
  Outre les portes de contrôle de flux, un autre facteur peut empêcher l’envoi des messages de journal. La synchronisation des réplicas garantit que les messages sont envoyés et appliqués dans l’ordre des LSN (numéros séquentiels dans le journal). Avant l’envoi d’un message de journal, son LSN fait également l’objet d’un contrôle par rapport au LSN avec l’accusé de réception le plus bas pour vérifier qu’il est inférieur à l’un des seuils (selon le type de message). Si l’intervalle entre les deux LSN est supérieur au seuil, les messages ne sont pas envoyés. Quand l’intervalle est à nouveau sous le seuil, les messages sont envoyés.  
   
- Deux compteurs de performances utiles, [SQL Server:Availability Replica > Flow control/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) et [SQL Server:Availability Replica > Flow Control Time (ms/sec)](~/relational-databases/performance-monitor/sql-server-availability-replica.md), vous montrent, dans la dernière seconde écoulée, le nombre de fois qu’un contrôle de flux a été activé et le temps passé à attendre le contrôle de flux. Plus le temps d’attente est élevé sur le contrôle de flux, plus le RPO est élevé. Pour plus d’informations sur les types de problèmes pouvant provoquer un temps d’attente élevé sur le contrôle de flux, consultez [Dépanner : dépassement de RPO du groupe de disponibilité](troubleshoot-availability-group-exceeded-rpo.md).  
+ Deux compteurs de performances utiles, [SQL Server:Availability Replica > Flow control/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) et [SQL Server:Availability Replica > Flow Control Time (ms/sec)](~/relational-databases/performance-monitor/sql-server-availability-replica.md), vous montrent, dans la dernière seconde écoulée, le nombre de fois qu’un contrôle de flux a été activé et le temps passé à attendre le contrôle de flux. Plus le temps d’attente est élevé sur le contrôle de flux, plus le RPO est élevé. Pour plus d’informations sur les types de problèmes pouvant provoquer un temps d’attente élevé sur le contrôle de flux, consultez [Dépanner : Dépassement de RPO du groupe de disponibilité](troubleshoot-availability-group-exceeded-rpo.md).  
   
 ##  <a name="estimating-failover-time-rto"></a>Estimation du temps de basculement (RTO)  
  Le RTO dans votre SLA dépend du temps de basculement de votre implémentation Always On à un moment donné. Il peut être calculé à l’aide de la formule suivante :  
@@ -135,7 +136,7 @@ Pour la base de données primaire, le **last_commit_time** est l’heure à laqu
 ### <a name="performance-counters-used-in-rtorpo-formulas"></a>Compteurs de performances utilisés dans les formules RTO/RPO
 
 - **redo_queue_size** (Ko) [*utilisé dans le RTO*] : la taille de la file d’attente de restauration par progression est la taille des journaux de transactions entre ses **last_received_lsn** et **last_redone_lsn**. **last_received_lsn** est l’ID de bloc du journal qui identifie le point jusqu’auquel tous les blocs du journal ont été reçus par le réplica secondaire qui héberge cette base de données secondaire. **Last_redone_lsn** est le numéro séquentiel dans le journal du dernier enregistrement du journal qui a été restauré par progression sur la base de données secondaire. En fonction de ces deux valeurs, nous pouvons trouver les ID du bloc de journal de début (**last_received_lsn**) et du bloc de journal de fin (**last_redone_lsn**). L’espace entre ces deux blocs de journal peut alors représenter combien de blocs de journal de transactions n’ont pas encore été restaurés par progression. C’est mesuré en kilo-octets (Ko).
--  **redo_rate** (Ko/s) [*utilisé dans le RTO*] : valeur d’accumulation qui représente à un moment du temps écoulé, la part du journal des transactions (Ko) qui a été restaurée par progression sur la base de données secondaire en kilo-octets (Ko)/seconde. 
+-  **redo_rate** (Ko/s) [*utilisé dans le RTO*] : valeur cumulative qui représente, à un moment du temps écoulé, la part du journal des transactions (Ko) qui a été restaurée par progression dans la base de données secondaire en kilo-octets par seconde (Ko/s). 
 - **last_commit_time** (Datetime) [*utilisé dans le RPO*] : pour la base de données primaire, **last_commit_time** est l’heure à laquelle la dernière transaction a été validée. Pour la base de données secondaire, le **last_commit_time** est l’heure de la dernière validation de la transaction sur la base de données primaire qui a également été confirmée sur la base de données secondaire. Étant donné que cette valeur sur la base de données secondaire doit être synchronisée avec la même valeur que celle sur la base de données primaire, tout écart entre ces deux valeurs est l’estimation de la perte de données (RPO).  
  
 ## <a name="estimate-rto-and-rpo-using-dmvs"></a>Estimer le RTO et le RPO à l’aide de vues DMV
@@ -328,7 +329,7 @@ Il est possible d’interroger les vues DMV [sys.dm_hadr_database_replica_states
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>Supervision du RTO et du RPO  
- Cette section montre comment monitorer les métriques RTO et RPO des groupes de disponibilité. Cette démonstration est similaire au didacticiel relatif à l’interface graphique utilisateur présenté dans [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
+ Cette section montre comment monitorer les métriques RTO et RPO des groupes de disponibilité. Cette démonstration est similaire au tutoriel de l’interface graphique utilisateur présenté dans [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Modèle d’intégrité Always On Partie 2 : Extension du modèle d’intégrité).  
   
  Les éléments de calcul du temps de basculement et du risque de perte de données dans [Estimation du temps de basculement (RTO)](#BKMK_RTO) et [Estimation du risque de perte de données (RPO)](#BKMK_RPO) sont proposés sous forme de métriques dans la facette de gestion de stratégie **État du réplica de base de données** (consultez [Afficher les facettes de gestion basée sur des stratégies sur un objet SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Vous pouvez monitorer ces deux métriques selon une planification et recevoir une alerte quand elles dépassent le RTO et le RPO, respectivement.  
   
@@ -358,7 +359,7 @@ Pour créer les stratégies, suivez les instructions ci-dessous sur toutes les i
   
     -   **Nom** : `RTO`  
   
-    -   **Facette** : **État du réplica de base de données**  
+    -   **Facette** : **État du réplica de base de données**  
   
     -   **Champ** : `Add(@EstimatedRecoveryTime, 60)`  
   
@@ -372,7 +373,7 @@ Pour créer les stratégies, suivez les instructions ci-dessous sur toutes les i
   
     -   **Nom** : `RPO`  
   
-    -   **Facette** : **État du réplica de base de données**  
+    -   **Facette** : **État du réplica de base de données**  
   
     -   **Champ** : `@EstimatedDataLoss`  
   
@@ -386,7 +387,7 @@ Pour créer les stratégies, suivez les instructions ci-dessous sur toutes les i
   
     -   **Nom** : `IsPrimaryReplica`  
   
-    -   **Facette** : **Groupe de disponibilité**  
+    -   **Facette** : **Groupe de disponibilité**  
   
     -   **Champ** : `@LocalReplicaRole`  
   
@@ -404,25 +405,25 @@ Pour créer les stratégies, suivez les instructions ci-dessous sur toutes les i
   
         -   **Vérifier la condition** : `RTO`  
   
-        -   **Par rapport aux cibles** : **Chaque DatabaseReplicaState** dans **IsPrimaryReplica AvailabilityGroup**  
+        -   **Par rapport aux cibles** : **Chaque DatabaseReplicaState** dans **IsPrimaryReplica AvailabilityGroup**  
   
              Ce paramètre garantit que la stratégie est évaluée uniquement sur les groupes de disponibilité pour lesquels le réplica de disponibilité local est le réplica principal.  
   
-        -   **Mode d’évaluation** : **Selon la planification**  
+        -   **Mode d’évaluation** : **Selon planification**  
   
-        -   **Planification** : **CollectorSchedule_Every_5min**  
+        -   **Planification** : **CollectorSchedule_Every_5min**  
   
         -   **Activé** : **Sélectionné**  
   
     -   Page **Description** :  
   
-        -   **Catégorie** : **Avertissements de base de données de disponibilité**  
+        -   **Catégorie** : **Avertissements de base de données de disponibilité**  
   
              Ce paramètre permet d’afficher les résultats de l’évaluation de la stratégie dans le tableau de bord Always On.  
   
-        -   **Description** : **Le réplica actuel a un RTO supérieur à 10 minutes, avec pour hypothèse une surcharge de 1 minute pour la découverte et le basculement. Vous devez examiner immédiatement les problèmes de performances sur l’instance de serveur respective.**  
+        -   **Description** : **Le réplica actuel a un RTO supérieur à 10 minutes, avec pour hypothèse une surcharge de 1 minute pour la détection et le basculement. Vous devez examiner immédiatement les problèmes de performances sur l’instance de serveur respective.**  
   
-        -   **Texte à afficher** : **RTO dépassé !**  
+        -   **Texte à afficher** : **RTO dépassé !**  
   
 8.  Créez une deuxième [stratégie de gestion basée sur la stratégie](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md) à l’aide des spécifications suivantes :  
   
@@ -432,21 +433,21 @@ Pour créer les stratégies, suivez les instructions ci-dessous sur toutes les i
   
         -   **Vérifier la condition** : `RPO`  
   
-        -   **Par rapport aux cibles** : **Chaque DatabaseReplicaState** dans **IsPrimaryReplica AvailabilityGroup**  
+        -   **Par rapport aux cibles** : **Chaque DatabaseReplicaState** dans **IsPrimaryReplica AvailabilityGroup**  
   
-        -   **Mode d’évaluation** : **Selon la planification**  
+        -   **Mode d’évaluation** : **Selon planification**  
   
-        -   **Planification** : **CollectorSchedule_Every_30min**  
+        -   **Planification** : **CollectorSchedule_Every_30min**  
   
         -   **Activé** : **Sélectionné**  
   
     -   Page **Description** :  
   
-        -   **Catégorie** : **Avertissements de base de données de disponibilité**  
+        -   **Catégorie** : **Avertissements de base de données de disponibilité**  
   
-        -   **Description** : **La base de données de disponibilité a dépassé votre RPO de 1 heure. Vous devez immédiatement examiner les problèmes de performances sur les réplicas de disponibilité.**  
+        -   **Description** : **La base de données de disponibilité a dépassé votre RPO de 1 heure. Vous devez immédiatement examiner les problèmes de performances sur les réplicas de disponibilité.**  
   
-        -   **Texte à afficher** : **RPO dépassé !**  
+        -   **Texte à afficher** : **RPO dépassé !**  
   
  Quand vous avez terminé, deux travaux SQL Server Agent sont créés, un pour chaque planification d’évaluation de stratégie. Le nom de ces travaux doit commencer par **syspolicy_check_schedule**.  
   
@@ -457,9 +458,9 @@ Pour créer les stratégies, suivez les instructions ci-dessous sur toutes les i
   
 |Scénario|Description|  
 |--------------|-----------------|  
-|[Dépanner : dépassement de RTO du groupe de disponibilité](troubleshoot-availability-group-exceeded-rto.md)|Après un basculement automatique ou un basculement manuel planifié sans perte de données, le temps de basculement dépasse votre RTO. Vous pouvez aussi constater que votre estimation du temps de basculement d’un réplica secondaire avec validation synchrone (par exemple, un partenaire de basculement automatique) dépasse votre RTO.|  
-|[Dépanner : dépassement de RPO du groupe de disponibilité](troubleshoot-availability-group-exceeded-rpo.md)|À l’issue d’un basculement manuel forcé, la perte de données est supérieure à votre RPO. Vous pouvez aussi constater que votre calcul de la perte de données potentielle d’un réplica secondaire avec validation asynchrone dépasse votre RPO.|  
-|[Dépanner : les changements sur le réplica principal ne sont pas répercutés sur le réplica secondaire](troubleshoot-primary-changes-not-reflected-on-secondary.md)|L’application cliente mène à bien une mise à jour sur le réplica principal, mais l’exécution d’une requête sur le réplica secondaire montre que le changement n’a pas été répercuté.|  
+|[Dépanner : Dépassement de RTO du groupe de disponibilité](troubleshoot-availability-group-exceeded-rto.md)|Après un basculement automatique ou un basculement manuel planifié sans perte de données, le temps de basculement dépasse votre RTO. Vous pouvez aussi constater que votre estimation du temps de basculement d’un réplica secondaire avec validation synchrone (par exemple, un partenaire de basculement automatique) dépasse votre RTO.|  
+|[Dépanner : Dépassement de RPO du groupe de disponibilité](troubleshoot-availability-group-exceeded-rpo.md)|À l’issue d’un basculement manuel forcé, la perte de données est supérieure à votre RPO. Vous pouvez aussi constater que votre calcul de la perte de données potentielle d’un réplica secondaire avec validation asynchrone dépasse votre RPO.|  
+|[Dépanner : Les changements sur le réplica principal ne sont pas répercutés sur le réplica secondaire](troubleshoot-primary-changes-not-reflected-on-secondary.md)|L’application cliente mène à bien une mise à jour sur le réplica principal, mais l’exécution d’une requête sur le réplica secondaire montre que le changement n’a pas été répercuté.|  
   
 ##  <a name="BKMK_XEVENTS"></a> Événements étendus utiles  
  Les événements étendus suivants sont utiles dans le cadre de la résolution des problèmes liés aux réplicas dans l’état **Synchronisation**.  

@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d12db3ef11d3dc4d658b7126319ea53ddf12a91f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a6cc6dcb53bb7c535db570bbaa68db0673a83879
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535362"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531114"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configurer Always Encrypted à l’aide de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ SSMS ne prend pas en charge la séparation des rôles entre ceux qui gèrent la 
 
 [L’Assistant Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md) est un outil puissant qui vous permet de définir la configuration de chiffrement souhaitée pour les colonnes de base de données sélectionnées. Selon la configuration actuelle d’Always Encrypted et la configuration cible souhaitée, l’Assistant peut chiffrer une colonne, la déchiffrer (supprimer le chiffrement) ou la rechiffrer (par exemple, à l’aide d’une nouvelle clé de chiffrement de colonne ou d’un type de chiffrement qui est différent du type actuel, configuré pour la colonne). Plusieurs colonnes peuvent être configurées avec une seule exécution de l’Assistant.
 
-Si vous n’avez mis en service aucune clé pour Always Encrypted, l’Assistant les génère automatiquement pour vous. Il vous suffit de sélectionner un magasin de clés pour votre clé principale de colonne : magasin de certificats Windows ou Azure Key Vault. L’Assistant génère automatiquement des noms pour les clés et leurs objets de métadonnées dans la base de données. Si vous avez besoin de davantage de contrôle sur le mode de mise en service des clés (et de plus de possibilités pour un magasin de clés contenant une clé principale de colonne), vous pouvez utiliser les boîtes de dialogue **Nouvelle clé principale de colonne** et **Nouvelle clé de chiffrement de colonne** (décrites ci-dessous) pour mettre en service les clés avant de démarrer l’Assistant. Dans l’Assistant Always Encrypted, vous pouvez ensuite choisir la clé de chiffrement de colonne existante.
+Si vous n’avez mis en service aucune clé pour Always Encrypted, l’Assistant les génère automatiquement pour vous. Il suffit de choisir un magasin de clés pour votre clé principale de colonne : Magasin de certificats Windows ou Azure Key Vault. L’Assistant génère automatiquement des noms pour les clés et leurs objets de métadonnées dans la base de données. Si vous avez besoin de davantage de contrôle sur le mode de mise en service des clés (et de plus de possibilités pour un magasin de clés contenant une clé principale de colonne), vous pouvez utiliser les boîtes de dialogue **Nouvelle clé principale de colonne** et **Nouvelle clé de chiffrement de colonne** (décrites ci-dessous) pour mettre en service les clés avant de démarrer l’Assistant. Dans l’Assistant Always Encrypted, vous pouvez ensuite choisir la clé de chiffrement de colonne existante.
 
 Pour plus d’informations sur l’utilisation de l’Assistant, consultez  [Assistant Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md).
 
@@ -77,8 +77,8 @@ Pour exécuter une requête qui envoie une valeur ciblant une colonne chiffrée,
 1.  Veillez à ce que la fonctionnalité Always Encrypted soit activée pour la connexion de base de données de la fenêtre de l’éditeur de requête à partir de laquelle vous exécutez votre requête `SELECT` . Cela indiquera au fournisseur de données .NET Framework pour SQL Server (utilisé par SSMS) de chiffrer des variables Transact-SQL paramétrées (voir ci-dessous) ciblant des colonnes chiffrées. Consultez la section ci-dessous [Activation et désactivation d’Always Encrypted pour une base de données](#en-dis) .   
 2.  Assurez-vous que vous pouvez accéder à toutes les clés principales de colonne configurées pour les colonnes chiffrées. Par exemple, si votre clé principale de colonne est un certificat, vous devez vous assurer que le certificat est déployé sur l’ordinateur sur lequel SSMS est en cours d’exécution. Ou, si votre clé principale de colonne est une clé stockée dans Azure Key Vault, vous devez vous assurer que vous êtes autorisé à accéder à la clé (vous serez peut-être également invité à vous connecter à Azure.)   
 3.  Vérifiez que le paramétrage pour Always Encrypted est activé pour la fenêtre de l’éditeur de requête. (Nécessite au moins SSMS version 17.0.) Déclarez une variable Transact-SQL et initialisez-la avec une valeur à envoyer (insert, update ou filter by) à la base de données. Voir la section [Paramétrage pour Always Encrypted](#param) ci-dessous pour plus d’informations.   
-    >   [!NOTE]
-    >   Étant donné que la prise en charge d’Always Encrypted est un sous-ensemble limité de conversions de type, dans de nombreux cas, il est nécessaire que ce type de variable Transact-SQL soit identique au type de colonne de base de données ciblée.   
+    > [!NOTE]
+    > Étant donné que la prise en charge d’Always Encrypted est un sous-ensemble limité de conversions de type, dans de nombreux cas, il est nécessaire que ce type de variable Transact-SQL soit identique au type de colonne de base de données ciblée.   
 4.  Exécutez votre requête d’envoi de la valeur de la variable Transact-SQL à la base de données. SSMS convertira la variable à un paramètre de requête et chiffrera sa valeur avant de l’envoyer à la base de données.   
 
 *Exemple*   
@@ -94,13 +94,13 @@ L’activation d’Always Encrypted pour une connexion de base de données indiq
 Pour activer Always Encrypted pour une connexion de base de données, spécifiez `Column Encryption Setting=Enabled` dans l’onglet **Propriétés supplémentaires** de la boîte de dialogue **Se connecter au serveur** .    
 Pour désactiver Always Encrypted pour une connexion de base de données, spécifiez `Column Encryption Setting=Disabled` ou supprimez simplement le paramètre **Paramètre de chiffrement de colonne** dans l’onglet **Propriétés supplémentaires** de la boîte de dialogue **Se connecter au serveur** (sa valeur par défaut est **Désactivé**).   
 
->  [!TIP] 
->  Pour activer/désactiver Always Encrypted pour une fenêtre de l’éditeur de requête existante :   
->  1.   Cliquez avec le bouton droit n’importe où dans la fenêtre de l’éditeur de requête.
->  2.   Sélectionnez **Connexion** > **Modifier la connexion...**, 
->  3.   Cliquez sur **Options** >>,
->  4.   Sélectionnez l’onglet **Propriétés supplémentaires** et saisissez `Column Encryption Setting=Enabled` (pour activer le comportement Always Encrypted) ou supprimez le paramètre (pour désactiver le comportement Always Encrypted).   
->  5.   Cliquez sur **Se connecter**.   
+> [!TIP]
+> Pour activer/désactiver Always Encrypted pour une fenêtre de l’éditeur de requête existante :   
+> 1.    Cliquez avec le bouton droit n’importe où dans la fenêtre de l’éditeur de requête.
+> 2.    Sélectionnez **Connexion** > **Modifier la connexion...**, 
+> 3.    Cliquez sur **Options** >>,
+> 4.    Sélectionnez l’onglet **Propriétés supplémentaires** et saisissez `Column Encryption Setting=Enabled` (pour activer le comportement Always Encrypted) ou supprimez le paramètre (pour désactiver le comportement Always Encrypted).   
+> 5.    Cliquez sur **Se connecter**.   
    
 ### <a name="param"></a>Paramétrage pour Always Encrypted   
  
@@ -134,8 +134,8 @@ Pour activer/désactiver le paramétrage d’Always Encrypted pour de prochaines
 5.  Cliquez sur **OK**.   
 
 Si vous exécutez une requête dans une fenêtre de l’éditeur de requête qui utilise une connexion de base de données avec Always Enabled activé, mais que le paramétrage n’est pas activé pour la fenêtre de l’éditeur de requête, vous serez invité à l’activer.   
->   [!NOTE]   
->   Le paramétrage d’Always Encrypted fonctionne uniquement dans les fenêtres de l’éditeur de requête qui utilisent des connexions de base de données avec Always Encrypted activé (voir [Activation et désactivation d’Always Encrypted pour une base de données](#en-dis)). Aucune variable Transact-SQL n’est paramétrée si la fenêtre d’éditeur de requête utilise une connexion de base de données sans Always Encrypted activé.   
+> [!NOTE]
+> Le paramétrage d’Always Encrypted fonctionne uniquement dans les fenêtres de l’éditeur de requête qui utilisent des connexions de base de données avec Always Encrypted activé (voir [Activation et désactivation d’Always Encrypted pour une base de données](#en-dis)). Aucune variable Transact-SQL n’est paramétrée si la fenêtre d’éditeur de requête utilise une connexion de base de données sans Always Encrypted activé.   
 
 #### <a name="how-parameterization-for-always-encrypted-works"></a>Fonctionnement du paramétrage d’Always Encrypted   
 
@@ -173,7 +173,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio utilise la technologie Intellisense pour vous indiquer quelles variables peuvent être paramétrées avec succès et quelles tentatives de paramétrage échouent (et pourquoi).   
 
-Une déclaration de variable pouvant être paramétrée avec succès est marquée avec un trait de soulignement d’avertissement dans l’éditeur de requête. Si vous placez le curseur sur une instruction de déclaration marquée avec un trait de soulignement d’avertissement, vous verrez les résultats du processus de paramétrage, y compris les valeurs des propriétés clés de l’objet [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) résultant (sur lequel la variable est mappée) : [SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), [Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx), [Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx), [Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx)et [SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx). Vous pouvez également voir la liste complète de toutes les variables correctement paramétrées dans l’onglet **Avertissement** de l’affichage **Liste d’erreurs** . Pour ouvrir l’affichage **Liste d’erreurs** , sélectionnez **Affichage** à partir du menu principal, puis sélectionnez **Liste d’erreurs**.    
+Une déclaration de variable pouvant être paramétrée avec succès est marquée avec un trait de soulignement d’avertissement dans l’éditeur de requête. Si vous placez le curseur sur une instruction de déclaration marquée avec un trait de soulignement d’avertissement, vous verrez les résultats du processus de paramétrage, y compris les valeurs des propriétés clés de l’objet [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) résultant (sur lequel la variable est mappée) : [SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), [Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx), [Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx), [Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx), [SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx). Vous pouvez également voir la liste complète de toutes les variables correctement paramétrées dans l’onglet **Avertissement** de l’affichage **Liste d’erreurs** . Pour ouvrir l’affichage **Liste d’erreurs** , sélectionnez **Affichage** à partir du menu principal, puis sélectionnez **Liste d’erreurs**.    
 
 Si SQL Server Management Studio a tenté de paramétrer une variable, mais que le paramétrage a échoué, la déclaration de la variable sera marquée avec un soulignement d’erreur. Si vous placez le curseur sur l’instruction de déclaration marquée avec un soulignement d’erreur, vous obtiendrez des informations sur l’erreur. Vous pouvez également voir la liste complète des erreurs de paramétrage pour toutes les variables dans l’onglet **Erreur** de l’affichage **Liste d’erreurs** . Pour ouvrir l’affichage **Liste d’erreurs** , sélectionnez **Affichage** à partir du menu principal, puis sélectionnez **Liste d’erreurs**.   
 
@@ -185,8 +185,8 @@ Un autre exemple ci-dessous montre deux variables qui répondent aux conditions 
  
 ![always-encrypted-error](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
  
->   [!NOTE]
->   Étant donné que Always Encrypted prend en charge un sous-ensemble limité de conversions de type, dans de nombreux cas, il est nécessaire que le type de données d’une variable Transact-SQL soit identique au type de colonne de base de données ciblée. Par exemple, en supposant que le type de la colonne `SSN` dans la `Patients` table est `char(11)`, la requête ci-après échoue, dans la mesure où le type de la variable `@SSN` ( `nchar(11)`), ne correspond pas au type de la colonne.   
+> [!NOTE]
+> Étant donné que Always Encrypted prend en charge un sous-ensemble limité de conversions de type, dans de nombreux cas, il est nécessaire que le type de données d’une variable Transact-SQL soit identique au type de colonne de base de données ciblée. Par exemple, en supposant que le type de la colonne `SSN` dans la `Patients` table est `char(11)`, la requête ci-après échoue, dans la mesure où le type de la variable `@SSN` ( `nchar(11)`), ne correspond pas au type de la colonne.   
 
 ```sql
 DECLARE @SSN nchar(11) = '795-73-9838'
@@ -202,8 +202,8 @@ WHERE [SSN] = @SSN;
     encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
     column_encryption_key_database_name = 'Clinic') are incompatible in the equal to operator.
 
->   [!NOTE]
->   Sans paramétrage, la requête entière, y compris les conversions de type, est traitée à l’intérieur de SQL Server/Azure SQL Database. Avec un paramétrage activé, certaines conversions de type sont effectuées par .NET Framework au sein de SQL Server Management Studio. En raison des différences entre le système .NET Framework et le système SQL Server (par exemple, précision différente de certains types, comme float), une requête exécutée avec paramétrage activé peut produire des résultats différents de ceux d’une requête exécutée sans paramétrage activé. 
+> [!NOTE]
+> Sans paramétrage, la requête entière, y compris les conversions de type, est traitée à l’intérieur de SQL Server/Azure SQL Database. Avec un paramétrage activé, certaines conversions de type sont effectuées par .NET Framework au sein de SQL Server Management Studio. En raison des différences entre le système .NET Framework et le système SQL Server (par exemple, précision différente de certains types, comme float), une requête exécutée avec paramétrage activé peut produire des résultats différents de ceux d’une requête exécutée sans paramétrage activé. 
 
 #### <a name="permissions"></a>Permissions      
 
@@ -232,8 +232,8 @@ La boîte de dialogue **Nouvelle clé principale de colonne** vous permet de gé
     - **Fournisseur du magasin de clés (CNG)**  : indique un magasin de clés qui est accessible via un fournisseur KSP qui implémente l’API CNG (Cryptography Next Generation). En règle générale, ce type de magasin est un module de sécurité matériel. Après avoir sélectionné cette option, vous devez choisir un fournisseur KSP. Le**fournisseur de stockage de clés des logiciels Microsoft** est sélectionné par défaut. Si vous souhaitez utiliser une clé principale de colonne stockée dans un module de sécurité matériel, sélectionnez un fournisseur KSP pour votre appareil (il doit être installé et configuré sur l’ordinateur avant d’ouvrir la boîte de dialogue).
     -   **Fournisseur de services de chiffrement (CAPI)** : magasin de clés qui est accessible via un fournisseur de services de chiffrement (CSP) qui implémente l’API de chiffrement (CAPI). En règle générale, un tel magasin est un module de sécurité matériel. Après avoir sélectionné cette option, vous devez choisir un fournisseur CSP.  Si vous souhaitez utiliser une clé principale de colonne stockée dans un module de sécurité matériel, sélectionnez un fournisseur CSP pour votre appareil (il doit être installé et configuré sur l’ordinateur avant d’ouvrir la boîte de dialogue).
     
-    >   [!NOTE]
-    >   CAPI étant une API déconseillée, l’option Fournisseur de services de chiffrement (CAPI) est désactivée par défaut. Vous pouvez l’activer en créant la valeur DWORD Fournisseur CAPI activé sous la clé **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** dans le Registre Windows et en lui affectant la valeur 1. Vous devez utiliser CNG au lieu de CAPI, sauf si votre magasin de clés ne prend pas en charge CNG.
+    > [!NOTE]
+    > CAPI étant une API déconseillée, l’option Fournisseur de services de chiffrement (CAPI) est désactivée par défaut. Vous pouvez l’activer en créant la valeur DWORD Fournisseur CAPI activé sous la clé **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** dans le Registre Windows et en lui affectant la valeur 1. Vous devez utiliser CNG au lieu de CAPI, sauf si votre magasin de clés ne prend pas en charge CNG.
    
     Pour plus d’informations sur les magasins de clés ci-dessus, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
@@ -273,11 +273,11 @@ Pour plus d’informations, consultez [Créer et stocker des clés principales d
 
 La permutation d’une clé principale de colonne est le processus de remplacement d’une clé principale de colonne existante par une nouvelle clé principale de colonne. Vous devrez peut-être permuter une clé si elle a été compromise, ou pour vous conformer aux stratégies ou aux réglementations de conformité de votre organisation qui régissent la permutation périodique des clés de chiffrement. Une permutation des clés principales de colonne implique le déchiffrement de clés de chiffrement de colonne qui sont protégées avec la clé principale de colonne active, leur rechiffrement à l’aide de la nouvelle clé principale de colonne et la mise à jour des métadonnées de clé. Pour plus d’informations, consultez [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 
-**Étape 1: Configurer une nouvelle clé principale de colonne**
+**Étape 1 : Provisionner une nouvelle clé principale de colonne**
 
 Mettez en service une nouvelle clé principale de colonne, en suivant les étapes décrites dans la section Mise en service des clés principales de colonne ci-dessus.
 
-**Étape 2 : Chiffrer les clés de chiffrement de colonne avec la nouvelle clé principale de colonne**
+**Étape 2 : Chiffrer les clés de chiffrement de colonne avec la nouvelle clé principale de colonne**
 
 Une clé principale de colonne protège généralement une ou plusieurs clés de chiffrement de colonne. Chaque clé de chiffrement de colonne a une valeur chiffrée, stockée dans la base de données, qui est le produit du chiffrement de la clé de chiffrement de colonne avec la clé principale de colonne.
 Dans cette étape, chiffrez chacune des clés de chiffrement de colonne qui sont protégées par la clé principale de colonne que vous permutez avec la nouvelle clé principale de colonne, puis stockez la nouvelle valeur chiffrée dans la base de données. Par conséquent, chaque clé de chiffrement de colonne affectée par la permutation comporte deux valeurs chiffrées : une valeur chiffrée avec la clé principale de colonne existante et une nouvelle valeur chiffrée avec la nouvelle clé principale de colonne.
@@ -293,7 +293,7 @@ SQL Server Management Studio obtient les métadonnées des clés de chiffrement 
 > [!NOTE]
 > Vérifiez qu’aucune des clés de chiffrement de colonne, chiffrées avec l’ancienne clé principale de colonne, n’est chiffrée avec toute autre clé principale de colonne. En d’autres termes, chaque clé de chiffrement de colonne affectée par la permutation doit avoir précisément une valeur chiffrée dans la base de données. Si une clé de chiffrement de colonne concernée a plusieurs valeurs chiffrées, vous devez supprimer les valeurs superflues avant de passer à la permutation (consultez *l’étape 4* sur la suppression d’une valeur chiffrée d’une clé de chiffrement de colonne).
 
-**Étape 3: Configurer vos applications avec la nouvelle clé principale de colonne**
+**Étape 3 : Configurer vos applications avec la nouvelle clé principale de colonne**
 
 Dans cette étape, vous devez vérifier que toutes vos applications clientes qui interrogent des colonnes de base de données protégées par la clé principale de colonne en permutation (c’est-à-dire les colonnes de base de données chiffrées avec une clé de chiffrement de colonne elle-même chiffrée avec la clé principale de colonne en permutation) peuvent accéder à la nouvelle clé principale de colonne. Cette étape dépend du type de magasin de clés dans lequel est stockée votre nouvelle clé principale de colonne. Exemple :
 - Si la nouvelle clé principale de colonne est un certificat stocké dans le magasin de certificats Windows, vous devez déployer le certificat au même emplacement de magasin de certificats (*Utilisateur actuel* ou *Ordinateur local*) en tant qu’emplacement spécifié dans le chemin d’accès à la clé de votre clé principale de colonne dans la base de données. L’application doit être en mesure d’accéder au certificat :
@@ -306,7 +306,7 @@ Pour plus d’informations, consultez [Créer et stocker des clés principales d
 > [!NOTE]
 > À ce stade de la permutation, l’ancienne clé principale de colonne et la nouvelle clé principale de colonne sont valides et peuvent être utilisées pour accéder aux données.
 
-**Étape 4 : Nettoyer les valeurs clés de chiffrement de colonne chiffrées avec l’ancienne clé principale de colonne**
+**Étape 4 : Nettoyer les valeurs clés de chiffrement de colonne chiffrées avec l’ancienne clé principale de colonne**
 
 Après avoir configuré toutes vos applications pour utiliser la nouvelle clé principale de colonne, supprimez de la base de données les valeurs des clés de chiffrement de colonne chiffrées avec *l’ancienne* clé principale de colonne. La suppression des anciennes valeurs garantit que vous êtes prêt pour la permutation suivante (rappelez-vous que chaque clé de chiffrement de colonne, protégée par une clé principale de colonne à permuter, doit avoir précisément une valeur chiffrée).
 
@@ -322,7 +322,7 @@ Une autre raison de nettoyer l’ancienne valeur avant l’archivage ou la suppr
 
 SQL Server Management Studio émet des instructions [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) pour supprimer les valeurs chiffrées des clés de chiffrement de colonne chiffrées avec l’ancienne clé principale de colonne.
 
-**Étape 5 : Supprimer les métadonnées de votre ancienne clé principale de colonne**
+**Étape 5 : Supprimer les métadonnées de votre ancienne clé principale de colonne**
 
 Si vous choisissez de supprimer la définition de l’ancienne clé principale de colonne de la base de données, procédez comme suit. 
 1.  Dans **l’Explorateur d’objets**, accédez au dossier **Sécurité>Clés Always Encrypted>Clés principales de colonne**, puis recherchez l’ancienne clé principale de colonne à supprimer de la base de données.
@@ -361,15 +361,15 @@ Pour permuter une clé de chiffrement de colonne, utilisez l’Assistant Always 
 1.  Ouvrez l’Assistant pour votre base de données : cliquez avec le bouton droit sur votre base de données, pointez sur **Tâches**, puis cliquez sur **Chiffrer les colonnes**.
 2.  Examinez la page **Introduction** , puis cliquez sur **Suivant**.
 3.  Dans la page **Sélection de la colonne** , développez les tables et recherchez toutes les colonnes à remplacer qui sont actuellement chiffrés avec l’ancienne clé de chiffrement de colonne.
-4.  Pour chaque colonne chiffrée avec l’ancienne clé de chiffrement de colonne, affectez à **Clé de chiffrement** une nouvelle clé générée automatiquement. **Remarque :** Vous pouvez également créer une clé de chiffrement de colonne avant d’exécuter l’Assistant ; consultez la section *Provisionnement des clés de chiffrement de colonne* ci-dessus.
-5.  Dans la page **Configuration de la clé principale** , sélectionnez un emplacement pour stocker la nouvelle clé et une source de clé principale, puis cliquez sur **Suivant**. **Remarque :** Si vous utilisez une clé de chiffrement de colonne existante (et non générée automatiquement), aucune action ne doit être effectuée dans cette page.
+4.  Pour chaque colonne chiffrée avec l’ancienne clé de chiffrement de colonne, affectez à **Clé de chiffrement** une nouvelle clé générée automatiquement. **Remarque :** Vous pouvez également créer une clé de chiffrement de colonne avant d’exécuter l’Assistant. Consultez la section *Provisionnement des clés de chiffrement de colonne* ci-dessus.
+5.  Dans la page **Configuration de la clé principale** , sélectionnez un emplacement pour stocker la nouvelle clé et une source de clé principale, puis cliquez sur **Suivant**. **Remarque :** Si vous utilisez une clé de chiffrement de colonne existante (et non générée automatiquement), aucune action ne doit être effectuée dans cette page.
 6.  Dans la page **Validation**, indiquez si vous souhaitez exécuter le script immédiatement ou créer un script PowerShell, puis cliquez sur **Suivant**.
 7.  Dans la page **Résumé** , passez en revue les options que vous avez sélectionnées, puis cliquez sur **Terminer** et fermez l’Assistant à la fin.
 8.  Dans **l’Explorateur d’objets**, accédez au dossier **Sécurité/Clés Always Encrypted/Clés de chiffrement de colonne** , puis recherchez l’ancienne clé de chiffrement de colonne à supprimer de la base de données. Cliquez avec le bouton droit sur la clé et sélectionnez **Supprimer**.
 
 ### <a name="permissions"></a>Permissions
 
-La permutation d’une clé de chiffrement de colonne nécessite les autorisations relatives à la base de données suivantes : **ALTER ANY COLUMN MASTER KEY** : obligatoire si vous utilisez une nouvelle clé de chiffrement de colonne générée automatiquement (une clé principale de colonne et ses métadonnées sont également générées).
+La permutation d’une clé de chiffrement de colonne nécessite les autorisations de base de données suivantes : **ALTER ANY COLUMN MASTER KEY** : obligatoire si vous utilisez une nouvelle clé de chiffrement de colonne générée automatiquement (une clé principale de colonne et ses métadonnées sont également générées).
 **ALTER ANY COLUMN ENCRYPTION KEY** : obligatoire pour ajouter des métadonnées pour la nouvelle clé de chiffrement de colonne.
 **VIEW ANY COLUMN MASTER KEY DEFINITION** : obligatoire pour accéder aux métadonnées des clés principales de colonne et les lire.
 **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** : obligatoire pour accéder aux métadonnées des clés de chiffrement de colonne et les lire.

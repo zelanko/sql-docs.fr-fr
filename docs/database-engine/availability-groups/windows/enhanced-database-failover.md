@@ -1,6 +1,7 @@
 ---
-title: Ajouter le basculement de base de données amélioré à un groupe de disponibilité (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Activer le basculement de base de données amélioré pour un groupe de disponibilité
+description: Étapes à suivre pour activer le basculement de base de données amélioré, qui déclenche un basculement si une base de données dans un groupe de disponibilité Always On n’est plus en mesure d’écrire des transactions.
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: mikeray
@@ -13,14 +14,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 181ebdbd2b9d14876b8990bbf8d7b4da768acf39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dee39cb437011c5e894eb54df91c7282db5fe08
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706137"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211658"
 ---
-# <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Ajouter le basculement de base de données amélioré à un groupe de disponibilité (SQL Server)
+# <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Activer le basculement de base de données amélioré vers une base de données membre d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dans SQL Server 2012 et 2014, si une base de données membre d’un groupe de disponibilité sur le réplica principal perd la possibilité d’écrire des transactions, elle ne déclenche pas de basculement même si les réplicas sont synchronisés et configurés pour le basculement automatique.

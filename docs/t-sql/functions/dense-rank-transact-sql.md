@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39fc8df8126858b6114297a1c8bfb75bd5340850
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 311e6ee0e470aa01933967c648c0f8e5c3ac503e
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668097"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979431"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,8 +98,8 @@ ProductID   Name                               LocationID Quantity Rank
   
 ```  
   
-### <a name="b-ranking-all-rows-in-a-result-set"></a>B. Classement de toutes les lignes dans un jeu de résultats  
-L’exemple suivant retourne les dix principaux employés classés en fonction de leur salaire. Étant donné que l’instruction `SELECT` n’a pas spécifié de clause `PARTITION BY`, la fonction `DENSE_RANK` a été appliquée à toutes les lignes du jeu de résultats.  
+### <a name="b-ranking-all-rows-in-a-result-set"></a>b. Classement de toutes les lignes dans un jeu de résultats  
+L’exemple suivant retourne les dix principaux employés classés en fonction de leur salaire. Comme l’instruction `SELECT` n’a pas spécifié de clause `PARTITION BY`, la fonction `DENSE_RANK` a été appliquée à toutes les lignes du jeu de résultats.  
   
 ```  
 USE AdventureWorks2012;  
@@ -175,7 +175,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D. Classement des lignes dans une partition  
+### <a name="d-ranking-rows-within-a-partition"></a>D : Classement des lignes d'une partition  
 L’exemple suivant classe les commerciaux de chaque secteur de vente en fonction de leurs ventes totales. `DENSE_RANK` partitionne l’ensemble de lignes par `SalesTerritoryGroup` et trie le jeu de résultats par `SalesAmountQuota`.  
   
 ```  

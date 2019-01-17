@@ -19,12 +19,12 @@ ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b413d8948d671b0b3717df94db8cf18ecada004
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 770568bcf8d6a89b350b9cd04ef3ff6cb10a015f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701457"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980365"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ SELECT @myDoc;
   
  Veuillez noter que la cible de la mise à jour doit être, tout au plus, un seul nœud explicitement spécifié dans l'expression de chemin d'accès par l'ajout de « [1] » à la fin de l'expression.  
   
-### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>B. Utilisation de l'expression if pour déterminer la valeur de remplacement  
+### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>b. Utilisation de l'expression if pour déterminer la valeur de remplacement  
  Vous pouvez spécifier l’expression **if** dans Expression2 de l’instruction DML XML **replace value of**, comme dans l’exemple ci-dessous. Expression1 identifie l'attribut LaborHours du premier centre de travail comme étant la valeur à mettre à jour. Expression2 utilise une expression **if** pour déterminer la nouvelle valeur de l’attribut LaborHours.  
   
 ```  

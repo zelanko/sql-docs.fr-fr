@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22a4907e0eec995839648371a14022a3f9c94d78
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504510"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266080"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Nouveautés du moteur de base de données - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -268,7 +268,7 @@ Dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la gestion de sauvegarde SQ
 
 -   Pendant l’installation, vous pouvez configurer le nombre de fichiers de base de données tempdb, la taille initiale, la croissance automatique et le positionnement des répertoires à l’aide du nouveau contrôle d’entrée de l’interface utilisateur figurant dans la section Configuration du moteur de base de données - TempDB de l’Assistant Installation de SQL Server.
 
--   La taille initiale par défaut est de 8 Mo et la croissance automatique par défaut est de 64 Mo.
+-   La taille initiale par défaut est de 8 Mo et la croissance automatique par défaut est de 64 Mo.
 
 -   Vous pouvez spécifier plusieurs volumes pour les fichiers de base de données tempdb. Si plusieurs répertoires sont spécifiés, les fichiers de données tempdb sont répartis entre les répertoires selon le principe du tourniquet (round robin).
 
@@ -319,11 +319,11 @@ De nombreuses améliorations ont été apportées pour prendre en charge les fon
 - Les fonctions [COMPRESS &#40;Transact-SQL&#41;](../t-sql/functions/compress-transact-sql.md) et [DECOMPRESS &#40;Transact-SQL&#41;](../t-sql/functions/decompress-transact-sql.md) convertissent des valeurs vers et depuis l’algorithme GZIP.
 - Les fonctions [DATEDIFF_BIG &#40;Transact-SQL&#41;](../t-sql/functions/datediff-big-transact-sql.md) et [AT TIME ZONE &#40;Transact-SQL&#41;](../t-sql/queries/at-time-zone-transact-sql.md) et la vue [sys.time_zone_info &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) sont ajoutées pour prendre en charge les interactions de date et d’heure.
 - Il est désormais possible de créer des informations d’identification au niveau de la base de données (en plus des informations d’identification au niveau du serveur précédemment disponibles). Pour plus d’informations, consultez [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-database-scoped-credential-transact-sql.md).
-- Huit nouvelles propriétés sont ajoutées à [SERVERPROPERTY &#40;Transact-SQL&#41;](../t-sql/functions/serverproperty-transact-sql.md) : InstanceDefaultDataPath, InstanceDefaultLogPath, ProductBuild, ProductBuildType, ProductMajorVersion, ProductMinorVersion, ProductUpdateLevel et ProductUpdateReference.
+- Huit nouvelles propriétés sont ajoutées à [SERVERPROPERTY &#40;Transact-SQL&#41;](../t-sql/functions/serverproperty-transact-sql.md) : InstanceDefaultDataPath, InstanceDefaultLogPath, ProductBuild, ProductBuildType, ProductMajorVersion, ProductMinorVersion, ProductUpdateLevel et ProductUpdateReference.
 - La longueur d’entrée maximale de 8 000 octets pour la fonction [HASHBYTES &#40;Transact-SQL&#41;](../t-sql/functions/hashbytes-transact-sql.md) est supprimée.
 - Les nouvelles fonctions de chaîne [STRING_SPLIT &#40;Transact-SQL&#41;](../t-sql/functions/string-split-transact-sql.md) et [STRING_ESCAPE &#40;Transact-SQL&#41;](../t-sql/functions/string-escape-transact-sql.md) sont ajoutées.
-- Options de croissance automatique : l’indicateur de trace 1117 est remplacé par les options AUTOGROW_SINGLE_FILE et AUTOGROW_ALL_FILES d’ALTER DATABASE. L’indicateur de trace 1117 n’a aucun effet. Pour plus d’informations, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) et la nouvelle colonne is_autogrow_all_files de [sys.filegroups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md).
-- Allocation d’extensions mixtes : lors de l’allocation par défaut des 8 premières pages d’un objet dans le cadre de bases de données utilisateur, les extensions de pages mixtes sont remplacées par des extensions uniformes. L’indicateur de suivi 1118 est remplacé par l’option SET MIXED_PAGE_ALLOCATION d’ALTER DATABASE. L’indicateur de suivi 1118 n’a aucun effet. Pour plus d’informations, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md) et la nouvelle colonne `is_mixed_page_allocation_on` de [sys.databases &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
+- Options de croissance automatique : l’indicateur de trace 1117 est remplacé par les options AUTOGROW_SINGLE_FILE et AUTOGROW_ALL_FILES d’ALTER DATABASE. L’indicateur de trace 1117 n’a aucun effet. Pour plus d’informations, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) et la nouvelle colonne is_autogrow_all_files de [sys.filegroups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md).
+- Allocation d’extensions mixtes : lors de l’allocation par défaut des 8 premières pages d’un objet dans le cadre de bases de données utilisateur, les extensions de pages mixtes sont remplacées par des extensions uniformes. L’indicateur de suivi 1118 est remplacé par l’option SET MIXED_PAGE_ALLOCATION d’ALTER DATABASE. L’indicateur de suivi 1118 n’a aucun effet. Pour plus d’informations, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md) et la nouvelle colonne `is_mixed_page_allocation_on` de [sys.databases &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 ### <a name="transact-sql-improvements-for-natively-compiled-modules"></a>Améliorations de Transact-SQL pour les modules compilés en mode natif
 
@@ -438,10 +438,8 @@ L’amorçage direct permet de répliquer automatiquement un réplica secondaire
 Télécharger la dernière version de [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] prend en charge ADAL (Active Directory Authentication Library), actuellement en développement, pour établir une connexion à Microsoft Azure. Cette technologie remplace l’authentification basée sur les certificats utilisée dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
-- L’installation de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exige l’installation préalable de .NET 4.6. Quand [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est installé, le programme d’installation installe automatiquement le .NET 4.6.
 - Une nouvelle option de grille de résultats de requête conserve les caractères de retour chariot/saut de ligne lors de la copie ou de l’enregistrement de texte à partir de la grille de résultats. Vous pouvez définir cette option dans le menu Outils/Options.
 - Les outils d’administration SQL Server ne sont plus installés à partir de l’arborescence de fonctionnalités principales ; pour plus d’informations, consultez [Installer les outils d’administration SQL Server avec SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
-- L’installation de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exige l’installation préalable du .NET 4.6.1. Quand [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est installé, le programme d’installation installe automatiquement le .NET 4.6.1.
 
 ### <a name="upgrade-advisor"></a>Conseiller de mise à niveau
 SQL Server 2016 Upgrade Advisor Preview est un outil autonome qui permet aux utilisateurs de versions antérieures d’exécuter un ensemble de règles de mise à niveau sur leur base de données SQL Server. Les utilisateurs peuvent ainsi identifier les modifications avec rupture, les changements de comportement et les fonctionnalités déconseillées, mais aussi recevoir de l’aide sur l’adoption des nouvelles fonctionnalités telles que Stretch Database.

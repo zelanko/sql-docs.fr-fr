@@ -1,6 +1,7 @@
 ---
-title: Effectuer un basculement manuel planifié d'un groupe de disponibilité (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Effectuer un basculement manuel planifié d’un groupe de disponibilité
+description: Cette rubrique explique comment effectuer un basculement manuel planifié d’un groupe de disponibilité Always On.
+ms.custom: seodec18
 ms.date: 10/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -15,16 +16,16 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b19d83a07e083598689595120b30857eea127ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d632a45f81658612c7c6f37e4de6dc535551fee4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854057"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212158"
 ---
-# <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Effectuer un basculement manuel planifié d'un groupe de disponibilité (SQL Server)
+# <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Effectuer un basculement manuel planifié d’un groupe de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Cette rubrique explique comment effectuer un basculement manuel sans perte de données (*basculement manuel planifié*) sur un groupe de disponibilité AlwaysOn à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Un basculement manuel planifié, comme un basculement de groupe de disponibilité AlwaysOn, transfère le rôle principal à un réplica secondaire. En même temps, le basculement transfère l’ancien réplica principal sur le rôle secondaire.  
+Cette rubrique explique comment effectuer un basculement manuel sans perte de données ( *basculement manuel planifié*) sur un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Un basculement manuel planifié, comme un basculement de groupe de disponibilité AlwaysOn, transfère le rôle principal à un réplica secondaire. En même temps, le basculement transfère l’ancien réplica principal sur le rôle secondaire.  
   
 Un basculement manuel planifié est pris en charge seulement quand le réplica principal et le réplica secondaire cible s’exécutent en mode de validation synchrone et sont synchronisés. Il conserve toutes les données dans les bases de données secondaires qui sont jointes au groupe de disponibilité sur le réplica secondaire cible. Une fois que le réplica principal précédent transfère le rôle secondaire, ses bases de données deviennent des bases de données secondaires. Puis, elles commencent à se synchroniser avec les nouvelles bases de données primaires. Une fois que toutes ont passé à l'état SYNCHRONIZED, le nouveau réplica secondaire devient éligible pour servir de cible d'un futur basculement manuel planifié.  
   
@@ -107,7 +108,7 @@ Un basculement manuel planifié est pris en charge seulement quand le réplica p
     -   [Fournisseur SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
     -   [Obtenir de l’aide pour SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
 
-##  <a name="FollowUp"></a> Suivi : Après avoir basculé manuellement un groupe de disponibilité 
+##  <a name="FollowUp"></a> Suivi : Après avoir basculé manuellement un groupe de disponibilité 
  Si vous avez effectué le basculement en dehors de [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] du groupe de disponibilité, ajustez les votes de quorum des nœuds du clustering de basculement Windows Server afin de refléter la nouvelle configuration du groupe de disponibilité. Pour plus d’informations, consultez [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
 
 <a name = "ReadScaleOutOnly"><a/>

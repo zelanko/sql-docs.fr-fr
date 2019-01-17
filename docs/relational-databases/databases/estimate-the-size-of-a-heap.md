@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62f34e574559c1d8685bb254200bed93c6c0a7e5
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559246"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591763"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimer la taille d’un segment de mémoire
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "51559246"
   
 1.  Déterminez le nombre de lignes que contiendra la table :  
   
-     ***Num_Rows***  = nombre de lignes de la table  
+     **_Num_Rows_** = nombre de lignes de la table  
   
 2.  Spécifiez le nombre de colonnes de longueur fixe et variable et calculez l'espace nécessaire à leur stockage :  
   
      Calculez l'espace que chacun de ces groupes de colonnes occupe dans la ligne de données. La taille d'une colonne dépend du type des données et de la longueur spécifiée.  
   
-     ***Num_Cols***  = nombre total de colonnes (de longueur fixe et variable)  
+     **_Num_Cols_** = nombre total de colonnes (de longueur fixe et variable)  
   
-     ***Fixed_Data_Size***  = taille totale en octets de toutes les colonnes de longueur fixe  
+     **_Fixed_Data_Size_** = taille totale en octets de toutes les colonnes de longueur fixe  
   
-     ***Num_Variable_Cols***  = nombre de colonnes de longueur variable  
+     **_Num_Variable_Cols_** = nombre de colonnes de longueur variable  
   
-     ***Max_Var_Size***  = taille maximale en octets de toutes les colonnes de longueur variable  
+     **_Max_Var_Size_** = taille maximale en octets de toutes les colonnes de longueur variable  
   
 3.  Une partie de la ligne, connue sous le nom de bitmap NULL, est réservée pour gérer la possibilité de valeur NULL de la colonne. Calculez sa taille :  
   
-     ***Null_Bitmap***  = 2 + ((***Num_Cols*** + 7) / 8)  
+     **_Null_Bitmap_** = 2 + ((**_Num_Cols_** + 7) / 8)  
   
      Seule la partie entière de l'expression doit être utilisée. Omettez le reste.  
   
@@ -55,36 +55,36 @@ ms.locfileid: "51559246"
   
      En présence de colonnes de longueur variable dans la table, déterminez l'espace utilisé pour stocker les colonnes dans la ligne au moyen de la formule suivante :  
   
-     ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
+     **_Variable_Data_Size_** = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
-     Les octets ajoutés à ***Max_Var_Size*** servent à assurer le suivi de chaque colonne de longueur variable. Il est supposé, lorsque vous utilisez cette formule, que toutes les colonnes de longueur variable sont entièrement remplies. Si vous pensez qu’un pourcentage inférieur de l’espace de stockage des colonnes de longueur variable sera utilisé, vous pouvez ajuster la valeur de ***Max_Var_Size*** en fonction de ce pourcentage pour obtenir une estimation plus précise de la taille globale de la table.  
+     Les octets ajoutés à **_Max_Var_Size_** servent à assurer le suivi de chaque colonne de longueur variable. Il est supposé, lorsque vous utilisez cette formule, que toutes les colonnes de longueur variable sont entièrement remplies. Si vous pensez qu’un pourcentage inférieur de l’espace de stockage des colonnes de longueur variable sera utilisé, vous pouvez ajuster la valeur de **_Max_Var_Size_** en fonction de ce pourcentage pour obtenir une estimation plus précise de la taille globale de la table.  
   
     > [!NOTE]  
-    >  Vous pouvez combiner des colonnes **varchar**, **nvarchar**, **varbinary**ou **sql_variant** qui provoquent le dépassement de la largeur totale de la table définie au-delà de 8 060 octets. La longueur de chacune de ces colonnes doit toujours être inférieure à la limite de 8 000 octets pour une colonne **varchar**, **nvarchar,****varbinary**ou **sql_variant** . Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table.  
+    >  Vous pouvez combiner des colonnes **varchar**, **nvarchar**, **varbinary**ou **sql_variant** qui provoquent le dépassement de la largeur totale de la table définie au-delà de 8 060 octets. La longueur de chacune de ces colonnes doit toujours être inférieure à la limite de 8 000 octets pour une colonne **varchar**, **nvarchar, varbinary** ou **sql_variant**. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table.  
   
-     En l’absence de toute colonne de longueur variable, attribuez la valeur 0 à ***Variable_Data_Size*** .  
+     En l’absence de toute colonne de longueur variable, attribuez la valeur 0 à **_Variable_Data_Size_**.  
   
 5.  Calculez la taille totale de la ligne :  
   
-     ***Row_Size***  = ***Fixed_Data_Size*** + ***Variable_Data_Size*** + ***Null_Bitmap*** + 4  
+     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
   
      La valeur 4 dans la formule correspond à l'espace réservé à l'en-tête de la ligne de données.  
   
 6.  Calculez le nombre de lignes par page (8 096 octets disponibles par page) :  
   
-     ***Rows_Per_Page***  = 8096 / (***Row_Size*** + 2)  
+     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
   
      Comme les lignes ne peuvent pas être fractionnées sur plusieurs pages de données, arrondissez le nombre de lignes par page à la ligne entière inférieure. La valeur 2 dans la formule correspond à l'entrée de la ligne dans le tableau d'emplacements de la page.  
   
 7.  Calculez ensuite le nombre de pages de données requises pour le stockage de toutes les lignes :  
   
-     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
+     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
   
      Le nombre de pages de données estimé doit être arrondi à la page entière la plus proche.  
   
 8.  Calculez la quantité d'espace nécessaire pour le stockage des données dans le segment de mémoire (8 192 octets par page) :  
   
-     Taille du segment de mémoire (octets) = 8192 x ***Num_Pages***  
+     Taille du segment de mémoire (octets) = 8192 x **_Num_Pages_**  
   
  Ce calcul ne tient pas compte des éléments suivants :  
   

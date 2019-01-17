@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2348a0ba8aa1fa0c3c01a1d59867a14abb4579f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9b2fad9fc09736a335e8fc5797cda836f907191
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808007"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210968"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,8 +123,8 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  Ce comportement est nécessaire pour permettre aux utilisateurs basés sur des groupes Windows de créer et de posséder des objets. Il peut cependant entraîner la création involontaire de schémas et d'utilisateurs. Pour éviter la création implicite d'utilisateurs et de schémas, dans la mesure du possible vous devez créer de manière explicite des principaux de base de données et assigner un schéma par défaut. Vous pouvez également déclarer de manière explicite un schéma existant lors de la création d'objets dans une base de données, à l'aide de noms d'objets en deux ou trois parties.  
 
->  [!NOTE]
->  La création implicite d’un utilisateur Azure Active Directory n’est pas possible sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Étant donné que la création d’un utilisateur Azure AD à partir du fournisseur externe doit vérifier l’état des utilisateurs dans l’annuaire AAD, la création de l’utilisateur échoue avec l’erreur 2760 : **Le nom de schéma spécifié « \<user_name@domain> » n’existe pas ou vous n’avez pas l’autorisation de l’utiliser.** Puis avec l’erreur 2759 : **Échec de CREATE SCHEMA en raison d’erreurs antérieures.** Pour contourner ces erreurs, créez d’abord l’utilisateur Azure AD à partir du fournisseur externe, puis réexécutez l’instruction de création de l’objet.
+> [!NOTE]
+>  La création implicite d’un utilisateur Azure Active Directory n’est pas possible sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Étant donné que la création d’un utilisateur Azure AD à partir du fournisseur externe doit vérifier l’état des utilisateurs dans l’annuaire AAD, la création de l’utilisateur échoue avec l’erreur 2760 : **Le nom de schéma spécifié « \<user_name@domain> » n’existe pas ou vous n’avez pas l’autorisation de l’utiliser.** Puis avec l’erreur 2759 : **Échec de CREATE SCHEMA en raison d’erreurs antérieures.** Pour contourner ces erreurs, créez d’abord l’utilisateur Azure AD à partir du fournisseur externe, puis réexécutez l’instruction de création de l’objet.
  
   
 ## <a name="deprecation-notice"></a>Note relative à la suppression de fonctionnalités  
@@ -157,7 +157,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. Création d’un schéma et d’une table dans le schéma  
+### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>b. Création d’un schéma et d’une table dans le schéma  
  L’exemple suivant crée un schéma `Sales`, puis une table `Sales.Region` dans ce schéma.  
   
 ```  

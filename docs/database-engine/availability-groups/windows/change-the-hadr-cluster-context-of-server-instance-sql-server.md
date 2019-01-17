@@ -1,6 +1,7 @@
 ---
-title: Changer le contexte de cluster HADR de l’instance de serveur (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Changer le cluster qui gère les métadonnées pour les réplicas dans un groupe de disponibilité
+description: Quand vous effectuez une migration entre clusters, changez le cluster qui gère les métadonnées pour les réplicas de disponibilité dans un groupe de disponibilité Always On en changeant le contexte de cluster HADR d’une instance de SQL Server.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 940fc70407c6a4131719818bbbc87049c93fab6b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605700"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202128"
 ---
-# <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Changer le contexte de cluster HADR de l'instance de serveur (SQL Server)
+# <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Changer le cluster qui gère les métadonnées pour les réplicas dans un groupe de disponibilité Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -39,9 +40,9 @@ ms.locfileid: "51605700"
   
      [Sécurité](#Security)  
   
--   **Pour basculer le contexte de cluster d’un réplica de disponibilité, utilisez :**  [Transact-SQL](#TsqlProcedure)  
+-   **Pour basculer le contexte de cluster d’un réplica de disponibilité, utilisez :**  [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [après le basculement du contexte de cluster d’un réplica de disponibilité](#FollowUp)  
+-   **Suivi :**  [Après le basculement du contexte de cluster d’un réplica de disponibilité](#FollowUp)  
   
 -   [Tâches associées](#RelatedTasks)  
   
@@ -133,7 +134,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
 ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;  
 ```  
   
-##  <a name="FollowUp"></a> Suivi : après le basculement du contexte de cluster d'un réplica de disponibilité  
+##  <a name="FollowUp"></a> Suivi : Après le basculement du contexte de cluster d'un réplica de disponibilité  
  Le nouveau contexte de cluster HADR prend effet immédiatement, sans redémarrer l'instance de serveur. Le paramètre de contexte de cluster HADR est un paramètre persistant au niveau de l'instance qui demeure inchangé si l'instance de serveur redémarre.  
   
  Confirmez le nouveau contexte de cluster HADR en interrogeant la vue de gestion dynamique [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md) , comme suit :  
@@ -168,7 +169,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [Articles techniques SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a> Voir aussi  
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

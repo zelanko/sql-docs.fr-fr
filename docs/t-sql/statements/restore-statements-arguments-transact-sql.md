@@ -16,12 +16,12 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2d80647230c13b31ca9e5ae540798609fc93f527
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78dfe43617d9a519b479e53abbabcf311d726b1d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527400"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980515"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instructions RESTORE – Arguments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } En général, sp
   
  \<backup_device> [ **,**...*n* ] Spécifie les unités de sauvegarde logiques ou physiques à utiliser pour l’opération de restauration.  
   
- **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  \<backup_device>::= Spécifie une unité de sauvegarde logique ou physique à utiliser pour l’opération de sauvegarde, comme suit :  
   
@@ -246,9 +246,9 @@ MOVE **'**_logical\_file\_name\_in\_backup_**'** TO **'**_operating\_system\_fil
  Pour plus d’informations, consultez [Copier des bases de données avec la sauvegarde et la restauration](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 CREDENTIAL  
- **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY ](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 CU2 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Utilisé uniquement pour la restauration d’une sauvegarde à partir du service de stockage Microsoft Blob Azure.  
   
@@ -312,7 +312,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  Ces options s'appliquent à l'ensemble du support de sauvegarde.  
   
  MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_}  
- **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY ](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Indique le nom du support. S'il est fourni, le nom du support doit correspondre au nom des volumes de sauvegarde ; sinon, l'opération de restauration prend fin. En l'absence de nom de support dans l'instruction RESTORE, aucun contrôle n'a lieu pour vérifier la correspondance des noms de support sur les volumes de sauvegarde.  
   
@@ -320,7 +320,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 >  L'emploi cohérent de noms de support dans les opérations de sauvegarde et de restauration offre une garantie supplémentaire de sécurité lors du choix des supports de restauration.  
   
  MEDIAPASSWORD **=** { *mediapassword* | **@**_mediapassword\_variable_ }  
- **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY ](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Fournit le mot de passe du support de sauvegarde. Un mot de passe de jeu de supports est une chaîne de caractères.  
   
@@ -363,7 +363,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  Ces options vous permettent de déterminer si les sommes de contrôle de sauvegarde sont activées pour l’opération de restauration et si l’opération doit s’arrêter en présence d’une erreur.    
   
  { CHECKSUM | NO_CHECKSUM }  
- **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY ](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Le comportement par défaut consiste à vérifier des sommes de contrôle si elles sont présentes et à poursuivre sans vérification si elles ne le sont pas.  
   
@@ -381,7 +381,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  Désactive explicitement la validation de sommes de contrôle par l'opération de restauration.  
   
  { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR }  
- **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY ](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  STOP_ON_ERROR  
  Spécifie que l'opération de restauration s'arrête à la première erreur rencontrée. Il s'agit du comportement par défaut pour RESTORE, sauf pour VERIFYONLY qui possède CONTINUE_AFTER_ERROR par défaut.  
@@ -416,7 +416,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  Ces options sont utilisées uniquement pour les périphériques À BANDES. Si vous n'utilisez pas un périphérique à bandes, ces options sont ignorées.  
   
  REWIND  
- **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY ](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libère et rembobine la bande. REWIND est le paramètre par défaut.  
   
@@ -433,7 +433,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 >  Si vous utilisez NOREWIND, l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve la propriété du lecteur de bande jusqu’à ce qu’une instruction BACKUP ou RESTORE s’exécutant dans le même processus utilise l’option REWIND ou UNLOAD ou jusqu’à l’arrêt de l’instance du serveur. Le fait de maintenir la bande ouverte empêche les autres processus d'y accéder. Pour savoir comment afficher la liste des bandes ouvertes et comment les fermer, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
  { **UNLOAD** | NOUNLOAD }  
- **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Ces options sont utilisées uniquement pour les périphériques À BANDES. Si vous n'utilisez pas un périphérique à bandes, ces options sont ignorées.  
   
@@ -570,14 +570,14 @@ Utilisez KEEP_REPLICATION quand vous couplez la réplication à la copie des jou
 |---------------|-----------------------------------------|  
 |RESTORE|Le numéro par défaut du fichier de jeu de sauvegarde est 1. Seule une option FILE de jeu de sauvegarde est autorisée dans une instruction RESTORE. Il est important de spécifier les jeux de sauvegarde dans l'ordre.|  
 |RESTORE FILELISTONLY|Le numéro par défaut du fichier de jeu de sauvegarde est 1.|  
-|RESTORE HEADERONLY|Par défaut, tous les jeux de sauvegarde du support sont traités. L’ensemble de résultats RESTORE HEADERONLY retourne des informations sur chaque jeu de sauvegarde, notamment sa **Position** dans le support de sauvegarde. Pour obtenir des informations sur un jeu de sauvegarde donné, indiquez sa position en guise de valeur de *backup_set_file_number* de l’option FILE.<br /><br /> Remarque : Dans le cas d’un support de bande, RESTORE HEADER ne traite que les jeux de sauvegarde présents sur la bande chargée.|  
+|RESTORE HEADERONLY|Par défaut, tous les jeux de sauvegarde du support sont traités. L’ensemble de résultats RESTORE HEADERONLY retourne des informations sur chaque jeu de sauvegarde, notamment sa **Position** dans le support de sauvegarde. Pour obtenir des informations sur un jeu de sauvegarde donné, indiquez sa position en guise de valeur de *backup_set_file_number* de l’option FILE.<br /><br /> Remarque : Dans le cas d'un support de bande, RESTORE HEADER ne traite que les jeux de sauvegarde figurant sur la bande chargée.|  
 |RESTORE VERIFYONLY|La valeur par défaut de *backup_set_file_number* est 1.|  
   
 > [!NOTE]  
 >  L’option FILE qui permet de spécifier un jeu de sauvegarde n’a aucun rapport avec l’option FILE qui permet de spécifier un fichier de base de données, FILE **=** { *logical_file_name_in_backup* | **@**_logical\_file\_name\_in\_backup\_var_ }.  
   
 ## <a name="summary-of-support-for-with-options"></a>Résumé de prise en charge des options WITH  
- Les options WITH suivantes sont prises en charge uniquement par l’instruction RESTORE : BLOCKSIZE, BUFFERCOUNT, MAXTRANSFERSIZE, PARTIAL, KEEP_REPLICATION, { RECOVERY | NORECOVERY | STANDBY }, REPLACE, RESTART, RESTRICTED_USER et { STOPAT | STOPATMARK | STOPBEFOREMARK }  
+ Les options WITH suivantes sont prises en charge uniquement par l'instruction RESTORE : BLOCKSIZE, BUFFERCOUNT, MAXTRANSFERSIZE, PARTIAL, KEEP_REPLICATION, { RECOVERY | NORECOVERY | STANDBY }, REPLACE, RESTART, RESTRICTED_USER et { STOPAT | STOPATMARK | STOPBEFOREMARK }  
   
 > [!NOTE]  
 >  L'option PARTIAL est uniquement prise en charge par RESTORE DATABASE.  

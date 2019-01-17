@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS | Microsoft Docs'
+title: 'Didacticiel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS | Microsoft Docs'
 ms.custom: ''
 ms.date: 10/04/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90a9b797862db65187d991bb6961cdfd0bda8959
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523551"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046579"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutoriel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS
+# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Didacticiel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Ce tutoriel vous apprend à bien démarrer avec [Always Encrypted avec enclaves sécurisées](encryption/always-encrypted-enclaves.md). Il vous montre comment :
@@ -122,7 +122,8 @@ Dans cette étape, vous allez configurer l’ordinateur SQL Server comme hôte S
 7. Sur l’ordinateur SQL Server, exécutez la commande suivante dans une console Windows PowerShell avec élévation de privilèges pour indiquer à l’ordinateur SQL Server où attester. Veillez à spécifier l’adresse IP ou le nom DNS de votre ordinateur SGH. 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl https://<IP address or DNS name>/Attestation -KeyProtectionServerUrl https://<IP address or DNS name>/KeyProtection/  
+   # use http, and not https
+   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
    ```
 
 Le résultat de la commande ci-dessus doit indiquer AttestationStatus = Passed.
@@ -221,7 +222,7 @@ Dans cette étape, vous allez créer une base de données avec des exemples de d
     GO
     ```
 
-## <a name="step-5-provision-enclave-enabled-keys"></a>Étape 5 Provisionner des clés prenant en charge les enclaves
+## <a name="step-5-provision-enclave-enabled-keys"></a>Étape 5 : Approvisionner des clés prenant en charge les enclaves
 
 Dans cette étape, vous allez créer une clé principale de colonne et une clé de chiffrement de colonne qui permettent les calculs d’enclave.
 
@@ -245,7 +246,7 @@ Dans cette étape, vous allez créer une clé principale de colonne et une clé 
     3. Dans le menu déroulant **Clé principale de colonne**, sélectionnez la clé principale de colonne que vous avez créée aux étapes précédentes.
     4. Sélectionnez **OK**.
 
-## <a name="step-6-encrypt-some-columns-in-place"></a>Étape 6 : Chiffrer des colonnes sur place
+## <a name="step-6-encrypt-some-columns-in-place"></a>Étape 6 : Chiffrer des colonnes sur place
 
 Dans cette étape, vous allez chiffrer les données stockées dans les colonnes SSN et Salary à l’intérieur de l’enclave côté serveur, puis vous testerez ensuite une requête SELECT sur les données.
 

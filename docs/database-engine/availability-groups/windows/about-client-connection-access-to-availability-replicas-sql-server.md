@@ -1,6 +1,7 @@
 ---
-title: À propos de l’accès de la connexion client aux réplicas de disponibilité (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Types de connexions clientes aux réplicas dans un groupe de disponibilité
+description: Découvrez les différents types de connexions que les clients peuvent établir avec le réplica principal ou le réplica secondaire d’un groupe de disponibilité Always On dans SQL Server.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32bde72d793ac8c703c6a57fc4fe36ff5fd30d67
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6c8dbd61179ab89833c96657eb6107ced45c4528
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602669"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206488"
 ---
-# <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>À propos de l'accès de la connexion client aux réplicas de disponibilité (SQL Server)
+# <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Types de connexions clientes aux réplicas dans un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Dans un groupe de disponibilité Always On, vous pouvez configurer un ou plusieurs réplicas de disponibilité pour autoriser les connexions en lecture seule lors d’une exécution sous le rôle secondaire (autrement dit, avec une exécution en tant que réplica secondaire). Vous pouvez également configurer chaque réplica de disponibilité afin d'autoriser ou exclure les connexions en lecture seule lors d'une exécution sous le rôle principal (autrement dit, avec une exécution comme réplica principal).  
   
@@ -34,18 +35,6 @@ ms.locfileid: "51602669"
   
 > [!NOTE]  
 >  Pour plus d’informations sur l’écouteur de groupe de disponibilité, qui traite les demandes de connexion des clients, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
-  
- **Dans cette rubrique :**  
-  
--   [Types d'accès à la connexion pris en charge par le rôle secondaire](#ConnectAccessForSecondary)  
-  
--   [Types d'accès à la connexion pris en charge par le rôle principal](#ConnectAccessForPrimary)  
-  
--   [Comment la configuration d'accès à la connexion affecte la connectivité client](#HowConnectionAccessAffectsConnectivity)  
-  
--   [Tâches associées](#RelatedTasks)  
-  
--   [Contenu connexe](#RelatedContent)  
   
 ##  <a name="ConnectAccessForSecondary"></a> Types d'accès à la connexion pris en charge par le rôle secondaire  
  Le rôle secondaire prend en charge trois méthodes pour les connexions clientes, comme suit :  
@@ -98,8 +87,8 @@ ms.locfileid: "51602669"
   
 |Réplica|Mode de validation|Rôle initial|Accès à la connexion pour le rôle secondaire|Accès à la connexion pour le rôle principal|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|Synchrone|Principal|Aucun|Lecture-écriture|  
-|Replica2|Synchrone|Secondary|Aucun|Lecture-écriture|  
+|Replica1|Synchrone|Principal|None|Lecture-écriture|  
+|Replica2|Synchrone|Secondary|None|Lecture-écriture|  
 |Replica3|Asynchrone|Secondary|Intention de lecture uniquement|Lecture-écriture|  
 |Replica4|Asynchrone|Secondary|Intention de lecture uniquement|Lecture-écriture|  
   
@@ -121,7 +110,7 @@ ms.locfileid: "51602669"
   
 -   [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

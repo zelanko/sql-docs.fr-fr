@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e36a66564564bb468592df491e12d97a87d5dc4b
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: fd046f665745ca9456acb6a2c30e28ff9a6fc082
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711500"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626398"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Surveillance des performances à l’aide du magasin de requêtes
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   La fonctionnalité de magasin de requêtes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous fournit des informations sur le choix de plan de requête et sur les performances. Elle simplifie la résolution des problèmes de performances en vous permettant de trouver rapidement les différences de performances provoquées par des changements de plan de requête. Le magasin de requête capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de révision. Elle sépare les données en périodes, ce qui vous permet de voir les modèles d'utilisation de base de données et de comprendre à quel moment les changements de plan de requête ont eu lieu sur le serveur. Vous pouvez configurer le magasin de requêtes à l’aide de l’option [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
   
@@ -105,7 +105,7 @@ Après avoir activé le Magasin des requêtes, actualisez la partie de la base d
   
 ![Arborescence du Magasin des requêtes SQL Server 2016 dans l’Explorateur d’objets SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Arborescence du Magasin des requêtes SQL Server 2016 dans l’Explorateur d’objets SSMS")   ![Arborescence du Magasin des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Arborescence du Magasin des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS") 
   
-Sélectionnez **Requêtes régressées** pour ouvrir le volet **Requêtes régressées** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le volet Requêtes régressées affiche les requêtes et les plans du magasin de requêtes. Utilisez les zones de liste déroulante en haut pour filtrer les requêtes en fonction de différents critères : **Durée (ms)** (par défaut), Temps processeur (ms), Lectures logiques (Ko), Écritures logique (Ko), Lectures physiques (Ko), Temps CLR (ms), DOP, Consommation de mémoire (Ko), Nombre de lignes, Mémoire utilisée par la journalisation (Ko), Mémoire utilisée par la base de données temporaire (Ko) et Temps d’attente (ms).  
+Sélectionnez **Requêtes régressées** pour ouvrir le volet **Requêtes régressées** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le volet Requêtes régressées affiche les requêtes et les plans du magasin de requêtes. Utilisez les listes déroulantes situées en haut du volet pour filtrer les requêtes selon différents critères : **Durée (ms)** (par défaut), Temps processeur (ms), Lectures logiques (Ko), Écritures logiques (Ko), Lectures physiques (Ko), Temps CLR (ms), DOP, Consommation de mémoire (Ko), Nombre de lignes, Mémoire utilisée par la journalisation (Ko), Mémoire utilisée par la base de données temporaire (Ko) et Temps d’attente (ms).  
 Sélectionnez un plan pour afficher le plan de requête sous forme graphique. Des boutons sont disponibles pour afficher la requête source, forcer et désactiver l’application forcée d’un plan de requête, basculer entre les formats de grille et de graphique, comparer des plans sélectionnés (si plusieurs plans sont sélectionnés) et actualiser l’affichage.  
   
 ![Requêtes régressées SQL Server 2016 dans l’Explorateur d’objets SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Requêtes régressées SQL Server 2016 dans l’Explorateur d’objets SSMS")  
@@ -239,7 +239,7 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
 ```  
   
  > [!NOTE]
- > Les valeurs arbitraires ne sont pas autorisées pour `INTERVAL_LENGTH_MINUTES`. Utilisez l’une des valeurs suivantes : 1, 5, 10, 15, 30, 60 ou 1440 minutes.  
+ > Les valeurs arbitraires ne sont pas autorisées pour `INTERVAL_LENGTH_MINUTES`. Utilisez l’une des valeurs suivantes : 1, 5, 10, 15, 30, 60 ou 1 440 minutes.  
   
  La nouvelle valeur de l’intervalle est exposée par le biais de l’affichage **sys.database_query_store_options** .  
   

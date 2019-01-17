@@ -1,20 +1,21 @@
 ---
 title: Développer avec les API REST pour Reporting Services | Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-ms.date: 05/25/2018
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: developer
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d4872ffea819c23ca27ec0d01e4709a231f95cf5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.custom: seodec18
+ms.date: 12/12/2018
+ms.openlocfilehash: 498432a84d523c597d7c7c52c151dce003047ba2
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514401"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328553"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Développer avec les API REST pour Reporting Services
 
@@ -32,10 +33,10 @@ Une paire demande/réponse d’API REST peut être divisée en cinq composants :
 
 * **L’URI de demande**, qui se compose de : `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. Bien que l’URI de demande soit inclus dans l’en-tête de message de la demande, nous l’appelons séparément ici, car la plupart des langages ou des frameworks vous obligent à le transmettre séparément du message de demande.
 
-    * Schéma d’URI : indique le protocole utilisé pour transmettre la demande. Par exemple, `http` ou `https`.
-    * Hôte de l’URI : spécifie le nom de domaine ou l’adresse IP du serveur où le point de terminaison de service REST est hébergé, tel que `myserver.contoso.com`.
-    * Chemin de la ressource : spécifie la ressource ou la collection de ressources, qui peut inclure plusieurs segments utilisés par le service pour déterminer la sélection de ces ressources. Par exemple : `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` peut être utilisé pour obtenir les propriétés spécifiées pour le CatalogItem.
-    * Chaîne de requête (facultative) : fournit des paramètres simples supplémentaires, tels que la version de l’API ou les critères de sélection des ressources.
+    * Schéma d’URI : Indique le protocole utilisé pour transmettre la demande. Par exemple, `http` ou `https`.
+    * Hôte d’URI : Spécifie le nom de domaine ou l’adresse IP du serveur où le point de terminaison du service REST est hébergé, comme `myserver.contoso.com`.
+    * Chemin de la ressource : Spécifie la ressource ou la collection de ressources, qui peut inclure plusieurs segments utilisés par le service pour déterminer la sélection de ces ressources. Par exemple : `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` peut être utilisé pour obtenir les propriétés spécifiées pour le CatalogItem.
+    * Chaîne de requête (facultatif) : Fournit des paramètres simples supplémentaires, comme la version de l’API ou les critères de sélection des ressources.
 
 * Champs d’en-tête du message de requête HTTP :
 

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], creating models
@@ -15,12 +14,12 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f21bdeceed35e7eb680d5dd1c2b74863e3a29dbb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f08318c5dbd42137b7c818e5bb4b0a3d1e34fae8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398781"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748831"
 ---
 # <a name="create-a-model-master-data-services"></a>Créer un modèle (Master Data Services)
 
@@ -57,21 +56,21 @@ ms.locfileid: "52398781"
   
  Pour chaque modèle créé, une ligne comportant huit colonnes est ajoutée à la grille. Ces huit colonnes sont les suivantes :  
   
--   **État**: l’état du modèle. Quand vous cliquez sur le bouton **Enregistrer le modèle**, l’image ![Mise à jour](../master-data-services/media/mds-model-status-updating.png "Mise à jour") s’affiche, ce qui signifie que le modèle est en cours de mise à jour. En cas d’erreur pendant la création ou la modification d’un modèle, l’image ![Erreur](../master-data-services/media/mds-model-status-error.png "Erreur") apparaît. Dans le cas contraire, le statut est OK et l’image ![OK](../master-data-services/media/mds-model-status-ok.png "OK") apparaît.  
+-   **État** : état du modèle. Quand vous cliquez sur le bouton **Enregistrer le modèle**, l’image ![Mise à jour](../master-data-services/media/mds-model-status-updating.png "Mise à jour") s’affiche, ce qui signifie que le modèle est en cours de mise à jour. En cas d’erreur pendant la création ou la modification d’un modèle, l’image ![Erreur](../master-data-services/media/mds-model-status-error.png "Erreur") apparaît. Dans le cas contraire, le statut est OK et l’image ![OK](../master-data-services/media/mds-model-status-ok.png "OK") apparaît.  
   
--   **Nom**: le nom du modèle.  
+-   **Nom**: Nom du modèle.  
   
--   **Description**: la description du modèle.  
+-   **Description** : description du modèle.  
   
--   **Nombre de jours de rétention du journal**: le nombre de jours de conservation du journal pour le modèle.  
+-   **Nombre de jours de rétention du journal** : nombre de jours de conservation du journal pour le modèle.  
   
--   **Créé par**: le nom de l’utilisateur qui a créé le modèle.  
+-   **Créé par** : nom de l’utilisateur qui a créé le modèle.  
   
--   **Date et heure de création**: la date et l’heure de création du modèle.  
+-   **Date et heure de création** : date et heure de création du modèle.  
   
--   **Mis à jour par**: le nom de l’utilisateur qui a effectué la dernière mise à jour du modèle.  
+-   **Mis à jour par** : nom de l’utilisateur qui a effectué la dernière mise à jour du modèle.  
   
--   **Date et heure de mise à jour**: la date et l’heure de dernière mise à jour du modèle.  
+-   **Date et heure de mise à jour** : date et heure de la dernière mise à jour du modèle.  
   
 ## <a name="next-steps"></a>Next Steps  
   

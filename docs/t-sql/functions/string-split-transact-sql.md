@@ -18,15 +18,15 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fb13510e4894e3f2bc77293a1f4aac0b186f1f0
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 93386da795d7e993c0d23c70625290cc8901d8bc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586252"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589973"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 > [!div class="nextstepaction"]
 > [Participez à l’amélioration de la documentation SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
@@ -98,10 +98,10 @@ WHERE RTRIM(value) <> '';
   
 STRING_SPLIT retourne une chaîne vide si aucun élément ne figure entre les séparateurs. La condition RTRIM(value) <> '' supprime les jetons vides.  
   
-### <a name="b-split-comma-separated-value-string-in-a-column"></a>B. Diviser une chaîne de valeurs séparées par des virgules dans une colonne  
+### <a name="b-split-comma-separated-value-string-in-a-column"></a>b. Diviser une chaîne de valeurs séparées par des virgules dans une colonne  
 La table de produits a une colonne avec une liste de balises séparées par des virgules, illustrée dans l’exemple suivant :  
   
-|ProductId|Nom   |Balises|  
+|ProductId|Créer une vue d’abonnement|Balises|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -117,7 +117,7 @@ FROM Product
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|Nom   |valeur|  
+|ProductId|Créer une vue d’abonnement|valeur|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
 |1|Full-Finger Gloves|road|  
@@ -126,6 +126,9 @@ FROM Product
 |2|LL Headset|bike|  
 |3|HL Mountain Frame|bike|  
 |3|HL Mountain Frame|mountain|  
+
+  >[!NOTE]
+  > L’ordre de la sortie peut varier, car il n’est _pas_ garanti que l’ordre corresponde à l’ordre des sous-chaînes dans la chaîne d’entrée.
   
 ### <a name="c-aggregation-by-values"></a>C. Agrégation par valeurs  
 Les utilisateurs doivent créer un rapport qui indique le nombre de produits pour chaque balise, classés par nombre de produits, afin de filtrer uniquement les balises avec plus de deux produits.  
@@ -153,12 +156,11 @@ WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));
 Recherchez les produits avec deux balises spécifiées (clothing et road) :  
   
 ```sql  
-  
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE EXISTS (SELECT *  
     FROM STRING_SPLIT(Tags, ',')  
-    WHERE value IN ('clothing', 'road');  
+    WHERE value IN ('clothing', 'road'));  
 ```  
   
 ### <a name="e-find-rows-by-list-of-values"></a>E. Rechercher des lignes par liste de valeurs  

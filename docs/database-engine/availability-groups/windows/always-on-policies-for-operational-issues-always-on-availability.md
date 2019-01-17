@@ -1,6 +1,7 @@
 ---
-title: Stratégies Always On pour les problèmes opérationnels - Disponibilité Always On | Microsoft Docs
-ms.custom: ''
+title: Gestion basée sur des stratégies pour les problèmes opérationnels avec des groupes de disponibilité
+description: Le modèle d’intégrité des groupes de disponibilité Always On évalue un ensemble de stratégies de gestion basées sur des stratégies prédéfinies. Vous pouvez les utiliser pour afficher l’intégrité d’un groupe de disponibilité et de ses réplicas et bases de données dans SQL Server.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,31 +14,18 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 330a9169fb1177686ffc95a530b5e068ed98e4e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601676"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214168"
 ---
-# <a name="always-on-policies-for-operational-issues---always-on-availability"></a>Stratégies Always On pour les problèmes opérationnels - Disponibilité Always On
+# <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Gestion basée sur des stratégies pour les problèmes opérationnels avec des groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Le modèle d'intégrité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] évalue un ensemble de stratégies de gestion basées sur des stratégies prédéfinies. Vous pouvez les utiliser pour afficher l'intégrité d'un groupe de disponibilité AlwaysOn et de ses réplicas de disponibilité et bases de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  Le modèle d’intégrité des groupes de disponibilité Always On évalue un ensemble de stratégies de gestion basées sur des stratégies prédéfinies. Vous pouvez les utiliser pour afficher l’intégrité d’un groupe de disponibilité et de ses réplicas de disponibilité et bases de données dans SQL Server.  
   
- **Dans cette rubrique :**  
-  
--   [Termes et définitions](#TermsAndDefinitions)  
-  
--   [Stratégies prédéfinies et problèmes rencontrés](#Always OnPBM)  
-  
--   [Tableau de bord Always On](#Dashboard)  
-  
--   [Extension du modèle d’intégrité Always On](#ExtendHealthModel)  
-  
--   [Tâches associées](#RelatedTasks)  
-  
--   [Contenu connexe](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> Termes et définitions  
  Stratégies prédéfinies Always On  
@@ -78,7 +66,7 @@ ms.locfileid: "51601676"
 |État de la jointure de la base de données de disponibilité|[La base de données secondaire n’est pas jointe](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Avertissement|Base de données de disponibilité|  
 |État de synchronisation des données de la base de données de disponibilité|[L’état de synchronisation des données de la base de données de disponibilité n’est pas sain](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Avertissement|Base de données de disponibilité|  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **\*** Pour les stratégies Always On, les noms de catégorie sont utilisés comme identificateurs. Modifier le nom d’une catégorie Always On compromettrait sa fonctionnalité d’évaluation de l’intégrité. Par conséquent, ne modifiez pas les noms des catégories Always On.  
   
 ##  <a name="Dashboard"></a> Tableau de bord Always On  
@@ -99,7 +87,7 @@ ms.locfileid: "51601676"
 ##  <a name="ExtendHealthModel"></a> Extension du modèle d’intégrité Always On  
  L'extension du modèle d'intégrité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] consiste à créer vos propres stratégies définies par l'utilisateur et à les placer dans certaines catégories en fonction du type d'objet surveillé.  Après que vous avez modifié quelques paramètres, le tableau de bord Always On évalue automatiquement vos propres stratégies définies par l’utilisateur, ainsi que les stratégies prédéfinies Always On.  
   
- Une stratégie définie par l’utilisateur peut utiliser les facettes PBM disponibles, notamment celles utilisées par les stratégies prédéfinies Always On (consultez [Stratégies prédéfinies et problèmes rencontrés](#Always OnPBM), plus haut dans cette rubrique). La facette serveur fournit les propriétés suivantes pour l’analyse de l’intégrité de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] : (**IsHadrEnabled** et **HadrManagerStatus**). La facette serveur fournit également les propriétés des stratégies suivantes pour l’analyse de la configuration du cluster WSFC : **ClusterQuorumType**et **ClusterQuorumState**.  
+ Une stratégie définie par l’utilisateur peut utiliser les facettes PBM disponibles, notamment celles utilisées par les stratégies prédéfinies Always On (consultez [Stratégies prédéfinies et problèmes rencontrés](#Always OnPBM), plus haut dans cette rubrique). La facette serveur fournit les propriétés suivantes pour la supervision de l’intégrité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] : (**IsHadrEnabled** et **HadrManagerStatus**). La facette serveur fournit également les propriétés des stratégies suivantes pour la supervision de la configuration du cluster WSFC : **ClusterQuorumType** et **ClusterQuorumState**.  
   
  Pour plus d’informations, consultez l’article du blog de l’équipe de SQL Server Always On intitulé [The Always On Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) (Modèle d’intégrité Always On Partie 2 - Extension du modèle d’intégrité).  
   

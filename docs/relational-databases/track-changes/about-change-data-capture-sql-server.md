@@ -1,6 +1,6 @@
 ---
 title: À propos de la capture de données modifiées (SQL Server) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5fc24683d4272a4e93ac7d1e30581fa202588e1e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d8c51d95fe74171fe9b90c439c34ea37700419b2
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402744"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991872"
 ---
 # <a name="about-change-data-capture-sql-server"></a>À propos de la capture de données modifiées (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   La capture de données modifiées enregistre les activités d'insertion, de mise à jour et de suppression appliquées à une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elle rend disponibles les détails des modifications dans un format relationnel simple à utiliser. Les informations sur les colonnes et les métadonnées nécessaires à l'application des modifications à un environnement cible sont capturées pour les lignes modifiées et stockées dans des tables de modification qui reflètent la structure de colonne des tables sources suivies. Des fonctions table sont fournies afin de procurer aux consommateurs un accès systématique aux données modifiées.  
   
  Les consommateurs de données auxquels s'adresse cette technologie sont par exemple les applications d'extraction, de transformation et de chargement (ETL). Une application ETL charge de façon incrémentielle les données modifiées à partir de tables sources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un entrepôt de données ou un mini-Data Warehouse. Même si la représentation des tables sources dans l'entrepôt de données doit refléter les modifications apportées aux tables sources, une technologie de bout en bout qui actualise un réplica de la source n'est pas appropriée. Au lieu de cela, il faut un flux de données modifiées fiable, structuré de sorte que les consommateurs puissent l'appliquer aux différentes représentations cibles des données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apporte cette technologie.  
@@ -44,7 +44,7 @@ ms.locfileid: "52402744"
   
  Chaque opération d'insertion ou de suppression appliquée à une table source apparaît comme une ligne unique dans la table de modifications. Les colonnes de données de la ligne qui résulte d'une opération d'insertion contiennent les valeurs de colonne après l'insertion. Les colonnes de données de la ligne qui résulte d'une opération de suppression contiennent les valeurs de colonne avant la suppression. Une opération de mise à jour requiert une entrée de ligne pour identifier les valeurs de colonne avant la mise à jour et une deuxième entrée de ligne pour identifier les valeurs de colonne après la mise à jour.  
   
- Chaque ligne d'une table de modifications contient également des métadonnées supplémentaires permettant d'interpréter l'activité de changement. La colonne __$start_lsn identifie le numéro séquentiel dans le journal de validation affecté à la modification. Ce numéro identifie les modifications qui ont été validées dans la même transaction et il ordonne ces transactions. La colonne \_\_$seqval peut être utilisée pour ordonner davantage de modifications qui ont lieu dans la même transaction. La colonne \_\_$operation enregistre l’opération associée à la modification : 1 = suppression, 2 = insertion, 3 = mise à jour (image avant) et 4 = mise à jour (image après). La colonne \_\_$update_mask est un masque de bits variable avec un bit défini pour chaque colonne capturée. Pour les entrées d'insertion et de suppression, tous les bits du masque de mise à jour sont toujours définis. Toutefois, pour les lignes de mise à jour, seuls les bits correspondant aux colonnes modifiées sont définis.  
+ Chaque ligne d'une table de modifications contient également des métadonnées supplémentaires permettant d'interpréter l'activité de changement. La colonne __$start_lsn identifie le numéro séquentiel dans le journal de validation affecté à la modification. Ce numéro identifie les modifications qui ont été validées dans la même transaction et il ordonne ces transactions. La colonne \_\_$seqval peut être utilisée pour ordonner davantage de modifications qui ont lieu dans la même transaction. La colonne \_\_$operation enregistre l’opération qui est associée à la modification : 1 = supprimer, 2 = insérer, 3 = mettre à jour (avant l’image) et 4 = mettre à jour (après l’image). La colonne \_\_$update_mask est un masque de bits variable avec un bit défini pour chaque colonne capturée. Pour les entrées d'insertion et de suppression, tous les bits du masque de mise à jour sont toujours définis. Toutefois, pour les lignes de mise à jour, seuls les bits correspondant aux colonnes modifiées sont définis.  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>Intervalle de validité de capture de données modifiées pour une base de données  
  L'intervalle de validité de capture de données modifiées pour une base de données est la durée pendant laquelle les données modifiées sont disponibles pour les instances de capture. L'intervalle de validité commence lorsque la première instance de capture est créée pour une table de base de données et il se poursuit jusqu'au moment présent.  

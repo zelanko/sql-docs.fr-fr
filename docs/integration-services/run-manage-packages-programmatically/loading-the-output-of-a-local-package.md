@@ -17,18 +17,21 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4229a8ddbd899ea8709cdc537f2d9383f9043179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ec5e67b6a2f593f2869cf72fa2983305e084f8d
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697517"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414154"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Chargement de la sortie d'un package local
   Les applications clientes peuvent lire la sortie des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quand la sortie est enregistrée dans les destinations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via [!INCLUDE[vstecado](../../includes/vstecado-md.md)], ou quand la sortie est enregistrée dans une destination de fichier plat à l’aide des classes présentes dans l’espace de noms **System.IO**. Toutefois, une application cliente peut également lire directement la sortie d'un package dans la mémoire, sans avoir besoin d'étape intermédiaire pour rendre les données persistantes. La clé de cette solution est l’espace de noms **Microsoft.SqlServer.Dts.DtsClient**, qui contient des implémentations spécialisées des interfaces **IDbConnection**, **IDbCommand** et **IDbDataParameter** à partir de l’espace de noms **System.Data**. L’assembly Microsoft.SqlServer.Dts.DtsClient.dll est installé par défaut dans **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
-  
+
+> [!IMPORTANT]
+> La procédure décrite dans cet article, qui utilise la bibliothèque `DtsClient`, fonctionne uniquement pour les packages déployés avec le modèle de déploiement de package (autrement dit, avec l’option `/SQL`, `/DTS` ou `/File`). Cette procédure ne fonctionne pas pour les packages déployés avec le modèle de déploiement de serveur (autrement dit, avec l’option `/ISServer`). Pour consommer la sortie d’un package local déployé avec le modèle de déploiement de serveur (autrement dit, avec l’option `/ISServer`), utilisez le composant [Data Streaming Destination](../data-flow/data-streaming-destination.md) au lieu de la procédure décrite dans cet article.
+
 > [!NOTE]  
->  Conformément à la procédure décrite dans cette rubrique, la propriété DelayValidation de la tâche de flux de données et de tous les objets parents doit avoir la valeur par défaut **False**.  
+> Conformément à la procédure décrite dans cette rubrique, la propriété DelayValidation de la tâche de flux de données et de tous les objets parents doit avoir la valeur par défaut **False**.
   
 ## <a name="description"></a>Description  
  Cette procédure montre comment développer une application cliente en code managé qui charge directement la sortie d'un package avec une destination DataReader à partir de la mémoire. Les étapes résumées ici sont illustrées dans l'exemple de code qui suit.  

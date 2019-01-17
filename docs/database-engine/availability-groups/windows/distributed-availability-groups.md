@@ -1,6 +1,7 @@
 ---
-title: Groupes de disponibilité distribués (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Que sont les groupes de disponibilité distribués ?
+description: Un groupe de disponibilité distribué est un type spécial de groupe de disponibilité qui englobe deux groupes de disponibilité distincts. Les groupes de disponibilité qui participent à un groupe de disponibilité distribué n’ont pas besoin de se trouver au même emplacement.
+ms.custom: seodec18
 ms.date: 07/31/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ebc3dfd0534deb313725ab646da26f770d0f99cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1aaf988a3b9a869aba5ef30c6aac739a6349c70e
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534453"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53381030"
 ---
 # <a name="distributed-availability-groups"></a>Groupes de disponibilité distribués
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,9 @@ Pour que le réplica principal d’AG 2 accepte les insertions, les mises à jou
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>Exigences des version et éditions de SQL Server pour les groupes de disponibilité distribués
 
-Les groupes de disponibilité distribués ne fonctionnent qu’avec les groupes de disponibilité qui sont créés avec la même version principale de SQL Server. Par exemple, tous les groupes de disponibilité qui participent à un groupe de disponibilité distribué doivent être créés avec SQL Server 2016. Étant donné que la fonctionnalité de groupes de disponibilité distribués n’existe pas dans SQL Server 2012 ou 2014, les groupes de disponibilité qui ont été créés dans ces versions ne peuvent pas participer à des groupes de disponibilité distribués. 
+Les groupes de disponibilité distribués dans SQL Server 2017 ou version ultérieure peuvent combiner des versions principales de SQL Server dans le même groupe de disponibilité distribué. Le groupe de disponibilité contenant le réplica principal en lecture/écriture peut être d’une version identique ou antérieure aux autres groupes de disponibilité membres du groupe de disponibilité distribué. Les autres groupes de disponibilité peuvent être de la même version ou d’une version ultérieure. Ce scénario s’applique aux opérations de mise à niveau et de migration. Par exemple, si le groupe de disponibilité qui contient le réplica principal en lecture/écriture est SQL Server 2016, mais que vous souhaitez effectuer une mise à niveau ou une migration vers SQL Server 2017 ou une version ultérieure, l’autre groupe de disponibilité membre du groupe de disponibilité distribué peut être configuré avec SQL Server 2017.
+
+Étant donné que la fonctionnalité de groupes de disponibilité distribués n’existe pas dans SQL Server 2012 ou 2014, les groupes de disponibilité qui ont été créés dans ces versions ne peuvent pas participer à des groupes de disponibilité distribués. 
 
 > [!NOTE]
 > Les groupes de disponibilité distribués ne peuvent pas être configurés avec l’édition Standard ou une combinaison de l’édition Standard et de l’édition Enterprise.
@@ -85,7 +88,7 @@ Les clusters WSFC individuels et leurs groupes de disponibilité correspondants 
 * Un seul des clusters WSFC est joint à un domaine.
 * Aucun des clusters WSFC n’est joint à un domaine.
 
-Si les deux clusters WSFC sont joints au même domaine (domaines non approuvés), aucune opération particulière n’est nécessaire de votre part quand vous créez le groupe de disponibilité distribué. Pour les groupes de disponibilité et les clusters WSFC qui ne sont pas joints au même domaine, utilisez des certificats pour que le groupe de disponibilité distribué fonctionne, à l’image de la création d’un groupe de disponibilité pour un groupe de disponibilité indépendant du domaine. Pour savoir comment configurer des certificats pour un groupe de disponibilité distribué, suivez les étapes 3 à 13 de la section [Créer un groupe de disponibilité indépendant du domaine](domain-independent-availability-groups.md#create-a-domain-independent-availability-group).
+Si les deux clusters WSFC sont joints au même domaine (domaines non approuvés), aucune opération particulière n’est nécessaire de votre part quand vous créez le groupe de disponibilité distribué. Pour les groupes de disponibilité et les clusters WSFC qui ne sont pas joints au même domaine, utilisez des certificats pour que le groupe de disponibilité distribué fonctionne, à l’image de la création d’un groupe de disponibilité pour un groupe de disponibilité indépendant du domaine. Pour savoir comment configurer des certificats pour un groupe de disponibilité distribué, suivez les étapes 3 à 13 de la section [Créer un groupe de disponibilité indépendant du domaine](domain-independent-availability-groups.md).
 
 Dans le cas d’un groupe de disponibilité distribué, le réplica principal de chaque groupe de disponibilité sous-jacent doit disposer des certificats des autres réplicas principaux. Si vous avez déjà des points de terminaison qui n’utilisent pas de certificats, reconfigurez ces points de terminaison à l’aide de l’instruction [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) afin de refléter l’utilisation de certificats.
 
@@ -138,7 +141,7 @@ En d’autres termes, un réplica principal peut participer à deux groupes de d
 
 ![Augmentation de la taille des instances des lectures avec des groupes de disponibilité distribués](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-Dans la figure suivante, AG 1 fait office de réplica principal pour deux groupes de disponibilité distribués : le groupe de disponibilité distribué AG 1 (composé d’AG 1 et AG 2) et le groupe de disponibilité distribué AG 2 (composé d’AG 1 et AG 3).
+Dans la figure suivante, le groupe de disponibilité AG 1 est le réplica principal pour deux groupes de disponibilité distribués différents : le groupe de disponibilité distribué AG 1 (composé d’AG 1 et d’AG 2) et le groupe de disponibilité distribué AG 2 (composé d’AG 1 et d’AG 3).
 
 
 ![Autre exemple d’augmentation de la taille des instances des lectures avec des groupes de disponibilité distribués]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)

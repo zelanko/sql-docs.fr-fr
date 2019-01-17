@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b29291d808b643f9ac66491ae200d6169eb5232a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697325"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589633"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **@** *local_variable*  
+ **@** _local_variable_  
  Nom d’une variable de tout type sauf **cursor**, **text**, **ntext**, **image** ou **table**. Les noms de variables doivent commencer par une arobase (**@**). Les noms de variables doivent être conformes aux règles des [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
  *property_name*  
@@ -86,10 +86,10 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  { **.** | **::** }  
  Définit la méthode d'un type CLR défini par l'utilisateur. Pour une méthode d’instance (non statique), utilisez un point (**.**). Pour une méthode statique, utilisez deux fois un deux-points (**::**). Pour appeler une méthode, une propriété ou un champ de type CLR défini par l'utilisateur, vous devez avoir l'autorisation EXECUTE sur le type.  
   
- *method_name* **(** *argument* [ **,**... *n* ] **)**  
+ _method_name_ **(** _argument_ [ **,**... *n* ] **)**  
  Méthode de type défini par l'utilisateur qui utilise un ou plusieurs arguments pour modifier l'état d'une instance d'un type. Les méthodes statiques doivent être publiques.  
   
- **@** *SQLCLR_local_variable*  
+ **@** _SQLCLR_local_variable_  
  Variable dont le type se trouve dans un assembly. Pour plus d’informations, consultez [Concepts de programmation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  *mutator_method*  
@@ -127,7 +127,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Spécifie que l'instruction SET contient une déclaration de curseur.  
   
  SCROLL  
- Indique que le curseur prend en charge toutes les options d'extraction : FIRST, LAST, NEXT, PRIOR, RELATIVE et ABSOLUTE. SCROLL ne peut pas être spécifié lorsque FAST_FORWARD est également spécifié.  
+ Indique que le curseur prend en charge toutes les options d'extraction : FIRST, LAST, NEXT, PRIOR, RELATIVE, et ABSOLUTE. SCROLL ne peut pas être spécifié lorsque FAST_FORWARD est également spécifié.  
   
  FORWARD_ONLY  
  Spécifie que le curseur gère uniquement l'option FETCH NEXT. Le curseur peut être extrait dans une seule direction, de la première à la dernière ligne. Lorsque FORWARD_ONLY est spécifié sans le mot clé STATIC, KEYSET ou DYNAMIC, le curseur est implémenté sous la forme DYNAMIC. Si vous ne spécifiez ni FORWARD_ONLY ni SCROLL, FORWARD_ONLY est choisi par défaut, sauf si les mots clés STATIC, KEYSET ou DYNAMIC sont spécifiés. Pour les curseurs STATIC, KEYSET et DYNAMIC, SCROLL est la valeur par défaut.  
@@ -178,7 +178,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  Les variables peuvent être utilisées uniquement dans les expressions et pas dans les noms d'objets ni les mots clés. Pour créer des instructions dynamiques [!INCLUDE[tsql](../../includes/tsql-md.md)], utilisez EXECUTE.  
   
- Les règles de syntaxe de SET **@***cursor_variable* n’incluent pas les mots clés LOCAL et GLOBAL. Lorsque la syntaxe SET **@***cursor_variable* = CURSOR... est utilisée, le curseur GLOBAL ou LOCAL est créé, selon la configuration de l’option de base de données default to local cursor.  
+ Les règles de syntaxe de **@**_cursor_variable_ n’incluent pas les mots clés LOCAL et GLOBAL. Quand la syntaxe SET **@**_cursor_variable_ = CURSOR... est utilisée, le curseur GLOBAL ou LOCAL est créé, en fonction de la configuration de l’option de base de données default to local cursor.  
   
  Les variables de curseurs sont toujours locales, même lorsqu'elles font référence à un curseur global. Dans ce cas, le curseur comporte à la fois une référence de curseur global et de curseur local. Pour plus d'informations, consultez l'exemple C.  
   
@@ -189,7 +189,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  N'utilisez pas de variable dans une instruction INSERT pour concaténer les valeurs (c'est-à-dire, pour calculer des valeurs agrégées). Ceci peut engendrer des résultats de requête inattendus. Le motif en est que certaines expressions dans la liste SELECT (y compris les attributions) peuvent être exécutées plusieurs fois pour chaque ligne de sortie. Pour plus d’informations, consultez [cet article de la Base de connaissances](https://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Permissions  
- Nécessite l'appartenance au rôle public. Tous les utilisateurs peuvent utiliser SET **@***local_variable*.  
+ Nécessite l'appartenance au rôle public. Tous les utilisateurs peuvent utiliser SET **@**_local_variable_.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -203,7 +203,7 @@ SELECT @myvar;
 GO  
 ```  
   
-### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>B. Utilisation d'une variable locale ayant reçu une valeur avec SET dans une instruction SELECT  
+### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>b. Utilisation d'une variable locale ayant reçu une valeur avec SET dans une instruction SELECT  
  L'exemple suivant crée la variable locale `@state` et utilise cette variable locale dans une instruction `SELECT` pour rechercher le nom et le prénom de tous les employés qui résident dans l'État de l'`Oregon`.  
   
 ```  

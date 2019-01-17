@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 23e50b94464d252431d153c9d68247cbff410b7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9619bca36ec488fdd5e25b5b9eb9a82370d7049
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597048"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754671"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Créer une vue d’abonnement pour exporter des données (Master Data Services)
 
@@ -70,7 +69,7 @@ ms.locfileid: "47597048"
 |colonne|Description|  
 |------------|-----------------|  
 |État|État de la vue.<br /><br /> Quand vous cliquez sur **Enregistrer**, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que la vue est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’une vue, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
-|Nom   |Nom de la vue d’abonnement.|  
+|Créer une vue d’abonnement|Nom de la vue d’abonnement.|  
 |Modèle|Nom du modèle.|  
 |Options de version|Nom de la version.|  
 |Version|Nom de l’indicateur de version.|  
@@ -82,16 +81,16 @@ ms.locfileid: "47597048"
   
  Lorsque vous cliquez sur une vue, les informations ci-après s’affichent.  
   
--   **Créée par**: nom de l’utilisateur ayant créé la vue.  
+-   **Créé par** : nom de l’utilisateur qui a créé la vue.  
   
--   **Le**: date et heure de création de la vue.  
+-   **Le** : date et heure de création de la vue.  
   
--   **Mise à jour par**: nom de l’utilisateur ayant effectué la dernière mise à jour de la vue.  
+-   **Mis à jour par** : nom de l’utilisateur qui a effectué la dernière mise à jour de la vue.  
   
--   **Le**: date et heure de la dernière mise à jour de la vue.  
+-   **Le** : date et heure de la dernière mise à jour de la vue.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
+ [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Supprimer une vue d’abonnement &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [Créer un indicateur de version &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   

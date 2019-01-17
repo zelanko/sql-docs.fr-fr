@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3a6cee6ac23c38521d0c500aef5fd4a77495c43
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 90f1ff1b99dbc5880909fb8387fc1b82d9b32df8
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018424"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979015"
 ---
 # <a name="polygon"></a>Polygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "51018424"
 ## <a name="polygon-instances"></a>Instances Polygon  
  Une instance **Polygon** peut être formée à partir d’un anneau qui possède au moins trois points distincts. Une instance **Polygon** peut également être vide.  
   
- Les anneaux extérieurs et intérieurs d’un **polygone** définissent sa limite. L’espace dans les anneaux définit l’intérieur du **polygone**.  
+Les anneaux extérieurs et intérieurs d’un **polygone** définissent sa limite. L’espace dans les anneaux définit l’intérieur du **polygone**.  
   
- L’illustration suivante montre des exemples d’instances **Polygon** .  
+L’illustration suivante montre des exemples d’instances **Polygon** .  
   
  ![Exemples d’instances Polygon géométriques](../../relational-databases/spatial/media/polygon.gif "Exemples d’instances Polygon géométriques")  
   
- Comme indiqué par l'illustration :  
+Comme indiqué par l'illustration :  
   
 1.  La Figure 1 est une instance **Polygon** dont la limite est définie par un anneau extérieur.  
   
@@ -46,20 +46,17 @@ ms.locfileid: "51018424"
  Les instances **Polygon** acceptées sont des instances qui peuvent être stockées dans une variable **geometry** ou **geography** sans lever d’exception. Les instances **Polygon** suivantes sont acceptées :  
   
 -   Instance **Polygon** vide  
-  
 -   Instance **Polygon** qui a un anneau extérieur acceptable et zéro ou plusieurs anneaux intérieurs acceptables  
   
- Les critères suivants sont nécessaires pour qu'un anneau soit acceptable.  
+Les critères suivants sont nécessaires pour qu'un anneau soit acceptable.  
   
 -   L’instance **LineString** doit être acceptée.  
-  
 -   L’instance **LineString** doit avoir au moins quatre points.  
-  
 -   Les points de début et de fin de l’instance **LineString** doivent être les mêmes.  
   
- L’exemple suivant illustre des instances **Polygon** acceptées.  
+L’exemple suivant illustre des instances **Polygon** acceptées.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'POLYGON EMPTY';  
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 1))';  
 DECLARE @g3 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 3 3, 0 3, 0 0))';  
@@ -67,18 +64,18 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- Comme le montrent `@g4` et `@g5` , une instance **Polygon** acceptée peut ne pas être une instance **Polygon** valide. `@g5` montre également qu’une instance Polygon doit contenir uniquement un anneau avec quatre points quelconques à accepter.  
+Comme le montrent `@g4` et `@g5` , une instance **Polygon** acceptée peut ne pas être une instance **Polygon** valide. `@g5` montre également qu’une instance Polygon doit contenir uniquement un anneau avec quatre points quelconques à accepter.  
   
- Les exemples suivants lèvent une `System.FormatException` parce que les instances **Polygon** ne sont pas acceptées.  
+Les exemples suivants lèvent une `System.FormatException` parce que les instances **Polygon** ne sont pas acceptées.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';  
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';  
 ```  
   
- `@g1` n’est pas accepté, car l’instance **LineString** pour l’anneau extérieur ne contient pas assez de points. `@g2` n’est pas accepté, car le point de départ de l’instance **LineString** de l’anneau extérieur n’est pas identique au point de fin. L'exemple suivant a un anneau extérieur acceptable, mais l'anneau intérieur n'est pas acceptable. Cela lève également une `System.FormatException`.  
+`@g1` n’est pas accepté, car l’instance **LineString** pour l’anneau extérieur ne contient pas assez de points. `@g2` n’est pas accepté, car le point de départ de l’instance **LineString** de l’anneau extérieur n’est pas identique au point de fin. L'exemple suivant a un anneau extérieur acceptable, mais l'anneau intérieur n'est pas acceptable. Cela lève également une `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
 ```  
   
@@ -87,7 +84,7 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
   
  L’exemple suivant montre des instances **Polygon** valides.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20))';  
 DECLARE @g2 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0))';  
 DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0), (-10 0, 0 10, -5 -10, -10 0))';  
@@ -96,7 +93,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
  `@g3` est valide parce que les deux anneaux intérieurs se touchent à un point unique et ne se croisent pas l’un l’autre. L'exemple suivant montre des instances `Polygon` qui ne sont pas valides.  
   
-```  
+```sql   
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  
 DECLARE @g2 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0), (5 0, 1 5, 1 -5, 5 0))';  
 DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0), (-10 0, 0 10, 0 -10, -10 0))';  
@@ -109,34 +106,39 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
  `@g1` n’est pas valide, car la boucle interne touche l’anneau intérieur à deux endroits. `@g2` n’est pas valide, car le deuxième anneau intérieur est à l’intérieur du premier anneau intérieur. `@g3` n’est pas valide, car les deux anneaux intérieurs se touchent au niveau de plusieurs points consécutifs. `@g4` n’est pas valide, car les parties intérieures des deux anneaux intérieurs se chevauchent. `@g5` n’est pas valide, car l’anneau extérieur n’est pas le premier anneau. `@g6` n’est pas valide, car la boucle n’a pas au moins trois points distincts.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée une instance `geometry``Polygon` simple avec un trou et un SRID 10.  
+### <a name="example-a"></a>Exemple A.  
+L’exemple suivant crée une instance `geometry``Polygon` simple avec un trou et un SRID 10.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STPolyFromText('POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))', 10);  
 ```  
   
- Une instance non valide peut être entrée et convertie en une instance `geometry` valide. Dans l'exemple suivant d'un `Polygon`, les anneaux intérieurs et extérieurs se chevauchent et l'instance n'est pas valide.  
+
+### <a name="example-b"></a>Exemple B.   
+Une instance qui n’est pas valide peut être entrée et convertie en instance `geometry` valide. Dans l'exemple suivant d'un `Polygon`, les anneaux intérieurs et extérieurs se chevauchent et l'instance n'est pas valide.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POLYGON((1 0, 0 1, 1 2, 2 1, 1 0), (2 0, 1 1, 2 2, 3 1, 2 0))');  
 ```  
   
- Dans l'exemple suivant, l'instance non valide est rendue valide avec `MakeValid()`.  
+### <a name="example-c"></a>Exemple C.  
+Dans l'exemple suivant, l'instance non valide est rendue valide avec `MakeValid()`.  
   
-```  
+```sql  
 SET @g = @g.MakeValid();  
 SELECT @g.ToString();  
 ```  
   
- L'instance `geometry` retournée par l'exemple ci-dessus est un `MultiPolygon`.  
+L'instance `geometry` retournée par l'exemple ci-dessus est un `MultiPolygon`.  
   
-```  
+```sql  
 MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1, 1.5 1.5, 1 2, 0 1, 1 0)))  
 ```  
   
- Voici un autre exemple de conversion d'une instance non valide en instance geometry valide. Dans l'exemple suivant, l'instance `Polygon` a été créée à l'aide de trois points qui sont exactement les mêmes :  
+### <a name="example-d"></a>Exemple D.  
+Il s’agit d’un autre exemple de conversion d’une instance non valide en instance geometry valide. Dans l'exemple suivant, l'instance `Polygon` a été créée à l'aide de trois points qui sont exactement les mêmes :  
   
 ```sql  
 DECLARE @g geometry  
@@ -145,7 +147,7 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()  
 ```  
   
- L'instance geometry retourné ci-dessus est un `Point(1 3)`.  Si le `Polygon` donné est `POLYGON((1 3, 1 5, 1 3, 1 3))` , alors `MakeValid()` retourne `LINESTRING(1 3, 1 5)`.  
+L'instance geometry retourné ci-dessus est un `Point(1 3)`.  Si le `Polygon` donné est `POLYGON((1 3, 1 5, 1 3, 1 3))` , alors `MakeValid()` retourne `LINESTRING(1 3, 1 5)`.  
   
 ## <a name="see-also"></a> Voir aussi  
  [STArea &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   

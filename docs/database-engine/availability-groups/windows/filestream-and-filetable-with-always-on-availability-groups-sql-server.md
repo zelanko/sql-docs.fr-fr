@@ -1,6 +1,7 @@
 ---
-title: FILESTREAM et FileTable avec groupes de disponibilité Always On (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Utiliser FILESTREAM et FileTable avec les groupes de disponibilité
+description: Étapes à suivre pour utiliser FILESTREAM ou FileTable avec des bases de données membres d’un groupe de disponibilité Always On.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 51d808592db74aff5144f4fe453fe36a2bd4beb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f27403dcce14e657915abe3d8a98f886dd7cc9a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613497"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214860"
 ---
-# <a name="filestream-and-filetable-with-always-on-availability-groups-sql-server"></a>FILESTREAM et FileTable avec groupes de disponibilité Always On (SQL Server)
+# <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>Utiliser FILESTREAM et FileTable avec les groupes de disponibilité Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -59,7 +60,7 @@ ms.locfileid: "47613497"
   
 -   Vous ajoutez une base de données qui contient des données FILESTREAM à un groupe de disponibilité Always On sur le réplica primaire. Dans ce cas, le partage `\\<computer_name>\<filestream_share_name>` existe déjà. Le partage `\\<VNN>\<filestream_share_name>` est créé.  
   
--   Vous activez FILESTREAM pour l'accès en continu des E/S de fichier sur un réplica primaire qui possède des groupes de disponibilité. Les partages suivants sont créés :  
+-   Vous activez FILESTREAM pour l'accès en continu des E/S de fichier sur un réplica primaire qui possède des groupes de disponibilité. Les partages suivants sont créés :  
   
     1.  `\\<computer_name>\<filestream_share_name>`  
   

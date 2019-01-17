@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 91709818cad0609fda4c624f9bd7585af0c9eea9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 53a3a9b85b0f125e2c0ceb4cf882bbb86a962619
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712605"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213448"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Journal des modifications de SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ Pour des publications détaillées sur les nouveautés et les modifications, con
 
 ## <a name="ssdt-for-visual-studio-2017-1582"></a>SSDT pour Visual Studio 2017 (15.8.2)
 Numéro de build : 14.0.16182.0  
-Date de publication : 5 novembre 2018  
+Date de publication : 5 novembre 2018  
 
 ### <a name="whats-new"></a>Nouveautés
 **SSIS :**
@@ -43,7 +43,7 @@ Correction d’un problème faisant en sorte que le déploiement d’un projet S
 
 ## <a name="ssdt-for-visual-studio-2017-1581"></a>SSDT pour Visual Studio 2017 (15.8.1)
 Numéro de build : 14.0.16179.0  
-Date de publication : 27 septembre 2018  
+Date de publication : 27 septembre 2018  
 
 ### <a name="whats-new"></a>Nouveautés
 
@@ -61,7 +61,7 @@ Date de publication : 27 septembre 2018
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT pour Visual Studio 2017 (15.8)
 Numéro de build : 14.0.16174.0  
-Date de publication : 5 septembre 2018  
+Date de publication : 5 septembre 2018  
 
 ### <a name="whats-new"></a>Nouveautés
 
@@ -85,7 +85,7 @@ Date de publication : 5 septembre 2018
 
 ## <a name="ssdt-for-visual-studio-2017-1571"></a>SSDT pour Visual Studio 2017 (15.7.1)
 Numéro de build : 14.0.16167.0  
-Date de publication : 2 juillet 2018  
+Date de publication : 2 juillet 2018  
   
 ### <a name="whats-new"></a>Nouveautés
 
@@ -107,8 +107,8 @@ Date de publication : 2 juillet 2018
 
 
 ## <a name="ssdt-for-visual-studio-2017-1570"></a>SSDT pour Visual Studio 2017 (15.7.0)
-Numéro de build : 14.0.16165.0  
-Date de publication : 4 juin 2018  
+Numéro de build : 14.0.16165.0  
+Date de publication : 4 juin 2018  
   
 ### <a name="whats-new"></a>Nouveautés
 
@@ -132,7 +132,7 @@ Date de publication : 4 juin 2018
 
 ## <a name="ssdt-for-visual-studio-2017-1560"></a>SSDT pour Visual Studio 2017 (15.6.0)
 Numéro de build : 14.0.16162.0  
-Date de sortie : 10 avril 2018
+Date de publication : 10 avril 2018
   
 ### <a name="whats-new"></a>Nouveautés
 
@@ -184,19 +184,19 @@ Numéro de build : 14.0.16156.0
 
 
 ## <a name="ssdt-for-visual-studio-2017-1551"></a>SSDT pour Visual Studio 2017 (15.5.1)
-Numéro de build : 14.0.16148.0
+Numéro de build : 14.0.16148.0
   
 ### <a name="whats-new"></a>Nouveautés
 
 Visual Studio 2017 (15.5.1) est la même version que la version 15.5.0 à l’exception des résolutions de bogues suivantes appliquées au programme d’installation :
 
 1.  Résolution d’un problème qui entraîne le blocage du programme d’installation lors de la post-installation de SQL Server Integration Services.
-2.  Résolution d’un problème qui entraîne l’échec de l’installation avec le message d’erreur suivant : « L’opération de métafichier demandée n’est pas prise en charge (0x800707D3) ».
+2.  Résolution d’un problème qui entraîne l’échec de l’installation avec le message d’erreur suivant : « L’opération de métafichier demandée n’est pas prise en charge (0x800707D3) ».
 
 En plus de ces deux résolutions de bogues, les détails suivants pour 15.5.0 s’appliquent toujours à 15.5.1
 
 ## <a name="ssdt-for-visual-studio-2017-1550"></a>SSDT pour Visual Studio 2017 (15.5.0)
-Numéro de build : 14.0.16146.0
+Numéro de build : 14.0.16146.0
   
 ### <a name="whats-new"></a>Nouveautés
 
@@ -223,7 +223,7 @@ SSDT pour Visual Studio 2017 (15.5.0) qui était en préversion est désormais e
 
 
 ## <a name="ssdt-174-for-visual-studio-2015"></a>SSDT 17.4 pour Visual Studio 2015
-Numéro de build : 14.0.61712.050
+Numéro de build : 14.0.61712.050
 
 ### <a name="whats-new"></a>Nouveautés
 
@@ -271,7 +271,7 @@ Numéro de build : 14.0.61712.050
 
 
 ## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>SSDT pour Visual Studio 2017 (préversion 15.4.0)
-Numéro de build : 14.0.16134.0
+Numéro de build : 14.0.16134.0
   
 ### <a name="whats-new"></a>Nouveautés
 
@@ -360,7 +360,7 @@ Numéro de build : 14.0.61709.290
 - Correction d’un problème qui pouvait exceptionnellement provoquer un incident quand le curseur de la souris quittait la barre de formule tabulaire.
 - Correction d’un problème dans la boîte de dialogue Modifier les propriétés de la table qui entraînait la modification incorrecte du nom de la table source à la suite de la modification du nom de table, ce qui générait une erreur inattendue.
 - Correction d’un incident qui pouvait se produire dans Visual Studio 2017 lors d’une tentative d’appel de Tester la sécurité du cube dans le concepteur de l’onglet Données des cellules du concepteur de rôles dans les projets multidimensionnels.
-- Les propriétés SSDT ne sont pas modifiables pour les sources de données tabulaires.
+- SSDT : Les propriétés ne sont pas modifiables pour les sources de données tabulaires.
 - Correction d’un problème qui pouvait empêcher le bon fonctionnement des builds MSBuild et DevEnv dans certains cas avec des fichiers de solution.
 - Nette amélioration des performances au moment de la validation des modifications de modèle (modifications DAX pour les mesures, les colonnes calculées) pour les modèles tabulaires contenant des métadonnées volumineuses.
 - Correction de plusieurs problèmes avec l’utilisation de Power Query pour importer des données dans des modèles tabulaires de niveau de compatibilité 1400.
@@ -494,7 +494,7 @@ Numéro de build : 14.0.61704.140
 **Projets de base de données :**
 - La modification d’un index cluster sur une vue ne bloque plus le déploiement.
 - Les chaînes de comparaison de schéma relatives au chiffrement des colonnes utilisent désormais le nom approprié au lieu du nom de l’instance.   
-- Ajout d’une nouvelle option de ligne de commande à SqlPackage: ModelFilePath.  Ceci permet aux utilisateurs avancés de spécifier un fichier model.xml externe pour les opérations d’importation, de publication et de script.   
+- Ajout d’une nouvelle option de ligne de commande à SqlPackage : ModelFilePath.  Ceci permet aux utilisateurs avancés de spécifier un fichier model.xml externe pour les opérations d’importation, de publication et de script.   
 - L’API DacFx a été étendue pour prendre en charge l’authentification universelle Azure AD et l’authentification multifacteur
 
 **Projets IS :**
@@ -531,18 +531,18 @@ Numéro de build : 14.0.61704.140
 **Projets AS :**
 - Correction de la priorité du modèle pour les projets BI pour qu’ils ne s’affichent plus en haut des catégories Nouveaux projets dans VS
 - Correction d’un incident VS susceptible de survenir rarement lors de l’ouverture de la solution SSIS, SSAS ou SSRS
-- Tabulaire : Améliorations et correctifs de performances pour l’analyse et la barre de formules DAX.
-- Tabulaire : L’Explorateur de modèles tabulaires ne sera plus visible si aucun projet tabulaire SSAS n’est ouvert.
-- Multidimensionnel : Résolution d’un problème où la boîte de dialogue de traitement était inutilisable sur les machines avec écran haute résolution.
-- Tabulaire : Résolution d’un problème d’erreur de SSDT à l’ouverture de projets BI quand SSMS est déjà ouvert. [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
-- Tabulaire : Résolution d’un problème où les hiérarchies n’étaient pas correctement enregistrées dans le fichier BIM dans un modèle 1103. [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
-- Tabulaire : Résolution d’un problème où le mode Espace de travail intégré était autorisé sur les ordinateurs 32 bits alors qu’il n’est pas pris en charge.
-- Tabulaire : Résolution d’un problème où le fait de cliquer sur quoi que ce soit en mode de semi-sélection (par exemple en tapant une expression DAX mais en cliquant sur une mesure) peut provoquer des blocages.
-- Tabulaire : Résolution d’un problème où l’Assistant Déploiement réinitialisait la propriété .Name du modèle à « Modèle ». [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- Tabulaire : Améliorations et correctifs de performances pour l’analyse et la barre de formules DAX.
+- Tabulaire : L’Explorateur de modèles tabulaires ne sera plus visible si aucun projet tabulaire SSAS n’est ouvert.
+- Multidimensionnel: Résolution d’un problème où la boîte de dialogue de traitement était inutilisable sur les machines avec écran haute résolution.
+- Tabulaire : Résolution d’un problème d’erreur de SSDT à l’ouverture de projets BI quand SSMS est déjà ouvert. [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- Tabulaire : Résolution d’un problème où les hiérarchies n’étaient pas correctement enregistrées dans le fichier BIM dans un modèle 1103. [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- Tabulaire : Résolution d’un problème où le mode Espace de travail intégré était autorisé sur les ordinateurs 32 bits alors qu’il n’est pas pris en charge.
+- Tabulaire : Résolution d’un problème où le fait de cliquer sur quoi que ce soit en mode de semi-sélection (par exemple en tapant une expression DAX mais en cliquant sur une mesure) pouvait provoquer des blocages.
+- Tabulaire : Résolution d’un problème où l’Assistant Déploiement réinitialisait la propriété .Name du modèle sur « Model ». [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
 - Tabulaire : Correction d’un problème où la sélection d’une hiérarchie dans TME affichait des propriétés même si la vue Diagramme n’était pas sélectionnée.
-- Tabulaire : Résolution d’un problème où l’opération coller dans la barre de formule DAX collait les images ou d’autres contenus au lieu du texte lors d’une opération coller à partir de certaines applications.
-- Tabulaire : Résolution d’un problème où certains anciens modèles dans 1103 ne pouvaient pas être ouverts en raison de la présence de mesures avec une définition spécifique.
-- Tabulaire : Résolution d’un problème où les sessions XEvent ne pouvaient pas être supprimées.
+- Tabulaire : Résolution d’un problème où l’opération Coller dans la barre de formule DAX collait les images ou d’autres contenus au lieu du texte lors d’une opération Coller à partir de certaines applications.
+- Tabulaire : Résolution d’un problème où certains anciens modèles dans 1103 ne pouvaient pas être ouverts en raison de la présence de mesures avec une définition spécifique.
+- Tabulaire : Résolution d’un problème où les sessions XEvent ne pouvaient pas être supprimées.
 - Correction d’un problème lié à l’échec de la tentative de génération de fichiers « smproj » avec devenv.com
 - Correction d’un problème lié à la finalisation trop fréquente des modifications de texte lors de l’utilisation de l’éditeur IME coréen dans les titres d’onglet de feuille de modèle tabulaire AS
 - Correction d’un problème lié au dysfonctionnement de la fonction intellisense pour l’affichage de colonnes d’autres tables
@@ -586,11 +586,11 @@ Numéro de build : 14.0.61704.140
 - Correction du problème lié à l’accès de DeploymentContributors au modèle public, sans que le schéma de sauvegarde ait été initialisé [Problème de Github](https://github.com/Microsoft/DACExtensions/issues/8)
 - Correctif temporel DacFx pour le positionnement de FILEGROUP
 - Correction de l’erreur « Référence non résolue » pour les synonymes externes. 
-- Always Encrypted : le chiffrement en ligne ne désactive pas le suivi des modifications lors de l’annulation et ne fonctionne pas correctement si le suivi des modifications n’a pas été désactivé avant le démarrage du chiffrement
+- Always Encrypted : Le chiffrement en ligne ne désactive pas le suivi des changements lors de l’annulation et ne fonctionne pas correctement si le suivi des changements n’a pas été désactivé avant le démarrage du chiffrement
 
 
 ## <a name="ssdt-165-for-visual-studio-2015-supports-up-to-sql-server-2016"></a>SSDT 16.5 pour Visual Studio 2015 (prend en charge jusqu’à SQL Server 2016)
-Date de publication : 20 octobre 2016
+Déclenché : 20 octobre 2016
 
 Numéro de build : 14.0.61021.0
 
@@ -629,11 +629,11 @@ Dans DacFx, deux nouvelles API ont été ajoutées : DacServices.Publish() et D
 DacServices service = new DacServices(connectionString);
 using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
 var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
 // Call publish and receive deployment script & report in the results
@@ -678,14 +678,14 @@ Pour plus d’informations, lisez le [billet du blog Analysis Services](https://
 
 **Integration Services**
 
-* Correction du bogue Connect  [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks) : déplacer plusieurs tâches du package Integration Services
+* Correction du bogue Connect [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks) : Déplacer plusieurs tâches du package Integration Services
 
 
 
 
 
 ## <a name="ssdt-164-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.4 pour Visual Studio 2015 (pour SQL Server 2016)
-Date de publication : 20 septembre 2016
+Déclenché : 20 septembre 2016
 
 Numéro de build : 14.0.60918
 
@@ -704,7 +704,7 @@ Le modèle tabulaire SSDT comprend désormais une instance SSAS interne qu’il 
 - [Problème Connect 1026648](https://connect.microsoft.com/SQLServer/feedback/details/1026648) : IsPersistedNullable est différent dans la comparaison de SSDT
 - [Problème Connect 2054735](https://connect.microsoft.com/SQLServer/feedback/details/2054735) : L’identité est réinitialisée lors de l’importation d’un fichier BACPAC
 - [Problème Connect 2900167](https://connect.microsoft.com/SQLServer/feedback/details/2900167) : L’exécution de tests unitaires SSDT laisse des fichiers temporaires
-- [Problème Connect 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712) : Rupture de compatibilité descendante - AppLocal et Nugetization
+- [Problème Connect 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712) : Rupture de compatibilité descendante - AppLocal et Nugetization
 
 **Analysis Services & Reporting Services**
 
@@ -725,15 +725,15 @@ Le modèle tabulaire SSDT comprend désormais une instance SSAS interne qu’il 
 
 
 ## <a name="ssdt-163-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.3 pour Visual Studio 2015 (pour SQL Server 2016)
-Date de publication : 15 août 2016
+Déclenché : 15 août 2016
 
-Numéro de build de : 14.0.60812.0  
+Numéro de build : 14.0.60812.0  
 
 **Nouveautés**
 
-- **Gestion et numérotation des versions :** Les versions sont maintenant nommées avec des chiffres et non plus avec des mois. Cette initiative s’inscrit dans la nouvelle politique SSMS et simplifie les cas où plusieurs versions ou correctifs sont publiés au cours d’un même mois. Cette version est la 16.3, autrement dit la troisième mise à jour après la publication de la version RTM. Les correctifs seront numérotés 16.3.1 et ainsi de suite jusqu’à notre prochaine mise à jour (prévue le mois prochain) qui sera la version 16.4.
-- **Analysis Services - Explorateur de modèles tabulaires :** L’Explorateur de modèles tabulaires vous permet de naviguer facilement dans les différents objets de métadonnées d’un modèle, tels que les sources de données, les tables, les mesures et les relations. Il est implémenté comme fenêtre d’outils distincte que vous pouvez afficher en ouvrant le menu Affichage dans Visual Studio, en pointant sur Autres fenêtres, puis en cliquant sur Explorateur de modèles tabulaires. L’Explorateur de modèles tabulaires s’affiche par défaut dans la zone Explorateur de solutions sous un onglet distinct. L’Explorateur de modèles tabulaires organise les objets de métadonnées dans une arborescence qui ressemble beaucoup au schéma d’un modèle tabulaire 1200 et propose beaucoup d’autres nouvelles fonctionnalités.
-- **Outils de base de données - Always Encrypted** : Cette version propose de nouvelles boîtes de dialogue de [gestion des clés Always Encrypted](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) permettant de facilement ajouter des clés principales de colonne ou des clés de chiffrement de colonne à votre projet de base de données ou une base de données active dans l’Explorateur d’objets SQL Server. Cette version prend en charge les certificats dans le magasin de certificats Windows. Dans les versions à venir, Azure Key Vault et les fournisseurs CNG seront pris en charge.
+- **Gestion et numérotation des versions :** Les versions sont maintenant nommées avec des chiffres, et non plus avec des mois. Cette initiative s’inscrit dans la nouvelle politique SSMS et simplifie les cas où plusieurs versions ou correctifs sont publiés au cours d’un même mois. Cette version est la 16.3, autrement dit la troisième mise à jour après la publication de la version RTM. Les correctifs seront numérotés 16.3.1 et ainsi de suite jusqu’à notre prochaine mise à jour (prévue le mois prochain) qui sera la version 16.4.
+- **Analysis Services - Explorateur de modèles tabulaires :** L’Explorateur de modèles tabulaires vous permet de naviguer facilement dans les différents objets de métadonnées d’un modèle, tels que les sources de données, les tables, les mesures et les relations. Il est implémenté comme fenêtre d’outils distincte que vous pouvez afficher en ouvrant le menu Affichage dans Visual Studio, en pointant sur Autres fenêtres, puis en cliquant sur Explorateur de modèles tabulaires. L’Explorateur de modèles tabulaires s’affiche par défaut dans la zone Explorateur de solutions sous un onglet distinct. L’Explorateur de modèles tabulaires organise les objets de métadonnées dans une arborescence qui ressemble beaucoup au schéma d’un modèle tabulaire 1200 et propose beaucoup d’autres nouvelles fonctionnalités.
+- **Outils de base de données - Always Encrypted** :  Cette version propose de nouvelles boîtes de dialogue de [gestion des clés Always Encrypted](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) permettant de facilement ajouter des clés principales de colonne ou des clés de chiffrement de colonne à votre projet de base de données ou une base de données active dans l’Explorateur d’objets SQL Server. Cette version prend en charge les certificats dans le magasin de certificats Windows. Dans les versions à venir, Azure Key Vault et les fournisseurs CNG seront pris en charge.
     - Quand vous créez une clé principale de colonne ou une clé de chiffrement de colonne, vous pouvez constater que les modifications ne sont pas immédiatement répercutées dans l’Explorateur d’objets SQL Server après avoir cliqué sur Mettre à jour la base de données. Pour contourner ce problème, actualisez le nœud de base de données dans l’Explorateur d’objets SQL Server.
     - Si vous essayez de chiffrer une colonne dans une table contenant des données à partir de l’Explorateur d’objets SQL Server, vous risquez d’échouer. Actuellement, cette fonctionnalité est prise en charge uniquement dans les projets de base de données SSDT et SSMS. La prise en charge de l’Explorateur d’objets SQL Server est prévue dans une version ultérieure.
 
@@ -765,14 +765,14 @@ Numéro de build de : 14.0.60812.0
  
   
 ## <a name="ssdt-july-for-visual-studio-2015-for-sql-server-2016"></a>SSDT de juillet pour Visual Studio 2015 (pour SQL Server 2016)  
-Date de publication : 30 juin 2016  
+Déclenché : 30 juin 2016  
   
 Numéro de build : 14.0.60629.0  
   
 **Nouveautés**  
-* **Prise en charge d’Always Encrypted :** Pour les bases de données qui contiennent des colonnes Always Encrypted, cette version prend en charge Always Encrypted via nos API principales et notre outil de ligne de commande (SqlPackage.exe). Vous pouvez créer et publier des projets de base de données avec prise en charge complète de toutes les fonctionnalités Always Encrypted.  
+* **Prise en charge d’Always Encrypted :** Pour les bases de données qui contiennent des colonnes Always Encrypted, cette version prend en charge Always Encrypted par le biais de nos API principales et de notre outil en ligne de commande (SqlPackage.exe). Vous pouvez créer et publier des projets de base de données avec prise en charge complète de toutes les fonctionnalités Always Encrypted.  
 * **Prise en charge améliorée des tables temporelles :** Expérience simplifiée avec suppression de la liaison des tables temporelles avant les changements, puis rétablissement de la liaison une fois les changements apportés. Cela signifie que les tables temporelles ont une parité avec d’autres types de table (standard, en mémoire) en terme d’opérations prises en charge. 
-* **Modifications de SqlPackage.exe et de l’installation :** Modifications en vue d’isoler SSDT du moteur SQL Server et des mises à jour SSMS. Pour plus d’informations, consultez [Changes to SSDT and SqlPackage.exe installation and updates](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/).
+* **Changements de SqlPackage.exe et de l’installation :** Changements en vue d’isoler SSDT du moteur SQL Server et des mises à jour SSMS. Pour plus d’informations, consultez [Changes to SSDT and SqlPackage.exe installation and updates](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/).
 
  
 
@@ -808,7 +808,7 @@ Numéro de build : 14.0.60629.0
     
 
 ## <a name="ssdt-june-for-visual-studio-2015-for-sql-server-2016"></a>SSDT de juin pour Visual Studio 2015 (pour SQL Server 2016)  
-Date de publication : 1 juin 2016  
+Déclenché : 1er juin 2016  
   
 Numéro de build : 14.0.60525.0 
 

@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42247b11f00524ba08dd74f41f11da35fdcb2026
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2a4eb946a9b851342b1f997f2b491b0b0708138c
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530353"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306276"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ ms.locfileid: "52530353"
   
  Cet indicateur de requête interdit virtuellement l'utilisation directe de vues indexées et d'index sur des vues indexées dans le plan de requête.  
   
- La vue indexée n’est pas développée seulement si la vue est directement référencée dans la partie SELECT de la requête et si WITH (NOEXPAND) ou WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) ) est spécifié. Pour plus d’informations sur l’indicateur de requête WITH (NOEXPAND), consultez [FROM](../../t-sql/queries/from-transact-sql.md).  
+ La vue indexée n’est pas développée seulement si la vue est directement référencée dans la partie SELECT de la requête et si WITH (NOEXPAND) ou WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) ) est spécifié. Pour plus d’informations sur l’indicateur de requête NOEXPAND, consultez [Utilisation de NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
   
  Seules les vues dans la partie SELECT des instructions, y compris celles figurant dans les instructions INSERT, UPDATE, MERGE et DELETE, sont affectées par l'indicateur.  
   
@@ -296,7 +296,7 @@ ms.locfileid: "52530353"
   > Si vous activez la collecte de l’événement étendu query_post_execution_showplan, cette opération ajoutera l’infrastructure de profilage standard à chaque requête qui est en cours d’exécution sur le serveur et pourra, par conséquent, affecter les performances globales du serveur.      
   > Si vous activez la collection de l’événement étendu *query_thread_profile* pour utiliser l’infrastructure à profilage léger à la place, la performance sera beaucoup plus faible, mais les performances globales du serveur seront quand même affectées.       
   > Si vous activez l’événement étendu query_plan_profile, cela activera uniquement l’infrastructure de profilage léger pour une requête exécutée avec le QUERY_PLAN_PROFILE et, par conséquent, n’affectera pas d’autres charges de travail sur le serveur. Utilisez cet indicateur pour profiler une requête spécifique sans affecter d’autres parties de la charge de travail du serveur.
-  > Pour en savoir plus sur le profilage léger, consultez [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+  > Pour en savoir plus sur le profilage léger, consultez [Infrastructure du profilage de requête](../../relational-databases/performance/query-profiling-infrastructure.md).
  
 Vous pouvez obtenir la liste de tous les noms d’indicateur USE HINT pris en charge en effectuant une requête sur la vue de gestion dynamique [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
 
@@ -359,7 +359,7 @@ OPTION (MERGE JOIN);
 GO    
 ```  
   
-### <a name="b-using-optimize-for"></a>B. Utilisation de OPTIMIZE FOR  
+### <a name="b-using-optimize-for"></a>b. Utilisation de OPTIMIZE FOR  
  L’exemple suivant indique à l’optimiseur de requête d’utiliser la valeur `'Seattle'` pour la variable locale `@city_name`, mais aussi d’utiliser des données statistiques pour déterminer la valeur de la variable locale `@postal_code` lors de l’optimisation de la requête. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
@@ -521,7 +521,7 @@ GO
 ```  
   
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. Spécification d'indicateurs de table affectant la sémantique  
- L'exemple suivant contient deux indicateurs de table dans la requête : NOLOCK, qui affecte la sémantique, et INDEX, qui n'affecte pas la sémantique. Pour préserver la sémantique de la requête, l'indicateur NOLOCK est spécifié dans la clause OPTIONS du repère de plan. Outre l'indicateur NOLOCK, les indicateurs INDEX et FORCESEEK sont spécifiés et remplacent l'indicateur INDEX n'affectant pas la sémantique dans la requête lorsque l'instruction est compilée et optimisée. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ L'exemple suivant contient deux indicateurs de table dans la requête : NOLOCK, qui affecte la sémantique et INDEX, qui n'affecte pas la sémantique. Pour préserver la sémantique de la requête, l'indicateur NOLOCK est spécifié dans la clause OPTIONS du repère de plan. Outre l'indicateur NOLOCK, les indicateurs INDEX et FORCESEEK sont spécifiés et remplacent l'indicateur INDEX n'affectant pas la sémantique dans la requête lorsque l'instruction est compilée et optimisée. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
 EXEC sp_create_plan_guide   

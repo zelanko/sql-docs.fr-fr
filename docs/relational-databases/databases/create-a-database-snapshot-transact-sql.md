@@ -13,12 +13,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a418de7f83355fedfed135665f699f62714572dc
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 6e09eae93b2b6a2f7c50dfc2d65370a23dc8d55d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560316"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205938"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Créer un instantané de base de données (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,19 +40,19 @@ ms.locfileid: "51560316"
 
 - La base de données source ne doit pas comporter de groupe de fichiers MEMORY_OPTIMIZED_DATA. Pour plus d’informations, consultez la page [Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 > Pour plus d’informations sur d’autres considérations importantes, consultez [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)+.  
   
 ##  <a name="Recommendations"></a> Recommandations  
  Cette section présente les recommandations suivantes :  
   
--   [Recommandation : Dénomination des instantanés de base de données](#Naming)  
+-   [Bonne pratique : Dénomination des instantanés de base de données](#Naming)  
   
--   [Recommandation : Limitation du nombre d'instantanés de base de données](#Limiting_Number)  
+-   [Bonne pratique : Limitation du nombre d’instantanés de base de données](#Limiting_Number)  
   
--   [Recommandation : Connexions clientes à un instantané de base de données](#Client_Connections)  
+-   [Bonne pratique : Connexions clientes à un instantané de base de données](#Client_Connections)  
   
-####  <a name="Naming"></a> Recommandation : Dénomination des instantanés de base de données  
+####  <a name="Naming"></a> Bonne pratique : Dénomination des instantanés de base de données  
  Avant de créer des instantanés, il est important de déterminer comment ils seront nommés. Chaque instantané de base de données nécessite un nom de base de données unique. Pour faciliter l'administration, le nom de l'instantané peut intégrer des informations identifiant la base de données, telles que :  
   
 -   Nom de la base de données source.  
@@ -77,13 +77,13 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-#### <a name="Limiting_Number"></a> Recommandation : Limitation du nombre d'instantanés de base de données  
+#### <a name="Limiting_Number"></a> Bonne pratique : Limitation du nombre d'instantanés de base de données  
  La création d'une série d'instantanés dans le temps fournit des instantanés consécutifs de la base de données source. Chaque instantané est conservé jusqu'à ce qu'il soit explicitement supprimé. Chaque instantané continuant à grandir au fur et à mesure que les pages d'origine sont mises à jour, vous voudrez peut-être conserver de l'espace disque en supprimant un instantané plus ancien après en avoir créé un nouveau.  
   
 
 **Remarque** Pour revenir à une capture instantanée de base de données, vous devez supprimer toutes les autres captures instantanées de cette base de données.  
   
-####  <a name="Client_Connections"></a> Recommandation : Connexions clientes à un instantané de base de données  
+####  <a name="Client_Connections"></a> Bonne pratique : Connexions clientes à un instantané de base de données  
  Pour utiliser un instantané de base de données, les clients ont besoin de savoir où il se trouve. Les utilisateurs peuvent lire un instantané de base de données pendant qu'un autre instantané est créé ou supprimé. Cependant, lorsque vous substituez un nouvel instantané de base de données à un instantané existant, vous devez rediriger les clients vers le nouvel instantané. Les utilisateurs peuvent se connecter manuellement à un instantané de base de données à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cependant, pour prendre en charge un environnement de production, vous devez créer une solution de programmation qui dirige de façon transparente les clients écrivant des rapports vers le dernier instantané de la base de données.  
   
 
@@ -126,11 +126,11 @@ AdventureWorks_snapshot_evening
 > [!NOTE]  
 >  L'extension `.ss` utilisée dans les exemples est arbitraire.  
   
- Cette section contient les exemples suivants :  
+ Cette section contient les exemples suivants :  
   
 -   A. [Création d'un instantané sur la base de données AdventureWorks](#Creating_on_AW)  
   
--   B. [Création d'un instantané sur la base de données Sales (Ventes)](#Creating_on_Sales)  
+-   b. [Création d'un instantané sur la base de données Sales (Ventes)](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. Création d'un instantané sur la base de données AdventureWorks  
  Cet exemple montre comment créer un instantané de base de données sur la base de données `AdventureWorks` . Le nom de l'instantané, `AdventureWorks_dbss_1800`, et le nom de son fichier partiellement alloué, `AdventureWorks_data_1800.ss`, précisent l'heure de création, 6H00 du soir (18 heures).  

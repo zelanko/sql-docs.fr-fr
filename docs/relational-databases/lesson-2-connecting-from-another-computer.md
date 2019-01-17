@@ -11,14 +11,14 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 675379c6c182ad72ecdeefe09423fe981cf67b41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d08fe92b865076a330f0272f8b3fde81f17a8854
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520523"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589233"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>Leçon 2 : Connexion depuis un autre ordinateur
+# <a name="lesson-2-connecting-from-another-computer"></a>Leçon 2 : Connexion depuis un autre ordinateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Pour une sécurité optimale, vous ne pouvez pas accéder au [!INCLUDE[ssDE](../includes/ssde-md.md)] des éditions Developer, Express et Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d'un autre ordinateur lors de sa première installation. Dans cette leçon, vous allez apprendre à activer les protocoles et à configurer les ports et le Pare-feu Windows pour la connexion à partir d'autres ordinateurs.  
   
@@ -56,7 +56,7 @@ Si vous prévoyez de vous connecter au [!INCLUDE[ssDE](../includes/ssde-md.md)] 
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, puis cliquez sur **Protocoles pour** *<InstanceName>*.  
+2.  Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, puis cliquez sur **Protocoles pour** _<InstanceName>_.  
   
     L’instance par défaut (instance sans nom) est répertoriée sous **MSSQLSERVER**. Si vous avez installé une instance nommée, le nom que vous indiquez est répertorié. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] est installé en tant que **SQLEXPRESS**, sauf si vous avez changé le nom lors de l'installation.  
   
@@ -139,6 +139,6 @@ Pour utiliser le service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
 Cette étape est la dernière de ce didacticiel sommaire sur les notions de connexion de base.  
   
 ## <a name="return-to-tutorials-portal"></a>Revenir au portail des didacticiels  
-[Didacticiel : mise en route du moteur de base de données](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+[Didacticiel : Bien démarrer avec le moteur de base de données](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
 

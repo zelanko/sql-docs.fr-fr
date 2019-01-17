@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 801cdcf393ebadb9c0fd287fdd97e65cad87c284
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4cc82fcdd1324ae8596d83d6a8911973a98ae569
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533009"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980335"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,9 +51,9 @@ Définit une date dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 |Précision|Un jour|  
 |Valeur par défaut|1900-01-01<br /><br /> Cette valeur est utilisée pour la partie date ajoutée pour la conversion implicite de **time** en **datetime2** ou **datetimeoffset**.|  
 |Calendrier|Grégorien|  
-|Précision à la fraction de seconde définie par l'utilisateur|non|  
-|Prise en charge et conservation du décalage de fuseau horaire|non|  
-|Prise en charge de l'heure d'été|non|  
+|Précision à la fraction de seconde définie par l'utilisateur|Non|  
+|Prise en charge et conservation du décalage de fuseau horaire|Non|  
+|Prise en charge de l'heure d'été|Non|  
   
 ## <a name="supported-string-literal-formats-for-date"></a>Formats de littéraux de chaîne pris en charge pour date
 Les tableaux suivants affichent les formats de littéraux de chaîne valides pour le type de données **date**.
@@ -83,7 +83,7 @@ Les tableaux suivants affichent les formats de littéraux de chaîne valides pou
 |aaaa-mm-jjTZD|Spécifiquement pris en charge pour une utilisation XML/SOAP.<br /><br /> TZD est l'indicateur de fuseau horaire (Z ou +hh:mm ou -hh:mm) :<br /><br /> -   hh:mm représente le décalage de fuseau horaire. hh comprend deux chiffres, entre 0 et 14, qui représentent le nombre d'heures dans le décalage de fuseau horaire.<br />-   MM comprend deux chiffres, entre 0 et 59, qui représentent le nombre de minutes supplémentaires dans le décalage de fuseau horaire.<br />-   + (plus) ou - (moins) est le signe obligatoire du décalage de fuseau horaire. Cela indique si le décalage de fuseau horaire est ajouté au temps universel coordonné ou soustrait de celui-ci pour obtenir l'heure locale. La plage valide du décalage de fuseau horaire se situe entre -14:00 et +14:00.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformité ANSI et ISO 8601  
-**date** est conforme à la définition de la norme SQL ANSI pour le calendrier grégorien : « NOTE 85 - Les types de données Datetime autorisent le stockage des dates au format grégorien dans la plage 0001-01-01 CE à 9999-12-31 CE ».
+**date** est conforme à la définition de la norme SQL ANSI pour le calendrier grégorien : « NOTE 85 - Les types de données Datetime autorisent le stockage des dates au format grégorien dans la plage 0001-01-01 CE à 9999–12–31 CE. »
   
 Le format de littéral de chaîne par défaut (utilisé pour les clients de bas niveau) s'alignera avec le format standard SQL qui est défini comme AAAA-MM-JJ. Ce format est le même que la définition ISO 8601 pour DATE.
   
@@ -124,7 +124,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-Dans le cas d’une conversion en **smalldatetime**, quand la valeur **date** est comprise dans la plage d’une valeur [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), le composant date est copié et le composant heure est défini sur 00:00:00.000. Quand la valeur **date** est située en dehors de la plage d’une valeur **smalldatetime**, le message d’erreur 242 est généré : « La conversion d’un type de données date en type de données smalldatetime a créé une valeur hors limites » ; et la valeur **smalldatetime** est définie sur Null. Le code suivant montre les résultats de la conversion d'une valeur `date` en valeur `smalldatetime`.
+Dans le cas d’une conversion en **smalldatetime**, quand la valeur **date** est comprise dans la plage d’une valeur [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), le composant date est copié et le composant heure est défini sur 00:00:00.000. Quand la valeur **date** est en dehors de la plage d’une valeur **smalldatetime**, le message d’erreur 242 est généré : « La conversion d’un type de données date en type de données smalldatetime a créé une valeur hors limites », et la valeur **smalldatetime** est définie sur NULL. Le code suivant montre les résultats de la conversion d'une valeur `date` en valeur `smalldatetime`.
   
 ```sql
 DECLARE @date date= '1912-10-25';  

@@ -37,12 +37,12 @@ ms.assetid: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: fe1fef76dd083d5b464bd2021aebb0e74e695543
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 51acbbb1bac63084a26abb68f461880df1409578
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703917"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204808"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -206,15 +206,15 @@ Les messages suivants sont un exemple des messages enregistrés dans le journal 
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>A. Création d’un clone de base de données qui inclut un schéma, des statistiques et un magasin des requêtes 
-L’exemple suivant crée un clone de la base de données AdventureWorks qui inclut un schéma, des statistiques et des données du magasin des requêtes ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et versions ultérieures)
+L’exemple suivant crée un clone de la base de données AdventureWorks qui inclut un schéma, des statistiques et des données du magasin des requêtes ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et ultérieur)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);    
 GO 
 ```  
   
-### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>B. Création d’un clone de schéma uniquement d’une base de données sans statistiques 
-L’exemple suivant crée un clone de la base de données AdventureWorks qui n’inclut pas de statistiques ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 et versions ultérieures)
+### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>b. Création d’un clone de schéma uniquement d’une base de données sans statistiques 
+L’exemple suivant crée un clone de la base de données AdventureWorks qui n’inclut pas de statistiques ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 et ultérieur)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS;    
@@ -222,7 +222,7 @@ GO
 ```  
 
 ### <a name="c-creating-a-schema-only-clone-of-a-database-without-statistics-and-query-store"></a>C. Création d’un clone de schéma uniquement d’une base de données sans statistiques ni magasin des requêtes 
-L’exemple suivant crée un clone de la base de données AdventureWorks qui n’inclut pas de statistiques ni de données du magasin des requêtes ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et versions ultérieures)
+L’exemple suivant crée un clone de la base de données AdventureWorks qui n’inclut pas de statistiques ni de données du magasin des requêtes ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et ultérieur)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS, NO_QUERYSTORE;    
@@ -230,7 +230,7 @@ GO
 ```  
 
 ### <a name="d-creating-a-clone-of-a-database-that-is-verified-for-production-use"></a>D. Création d’un clone de base de données qui est vérifié pour une utilisation en production
-L’exemple suivant crée un clone de schéma uniquement de la base de données AdventureWorks sans statistiques ni données du magasin des requêtes qui est vérifié pour une utilisation comme base de données de production ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et versions ultérieures).
+L’exemple suivant crée un clone de schéma uniquement de la base de données AdventureWorks, sans statistiques ni données du magasin des requêtes, qui est vérifié pour une utilisation comme base de données de production ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et ultérieur).
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB;    
@@ -238,7 +238,7 @@ GO
 ```  
   
 ### <a name="e-creating-a-clone-of-a-database-that-is-verified-for-production-use-that-includes-a-backup-of-the-cloned-database"></a>E. Création d’un clone de base de données qui est vérifié pour une utilisation en production qui inclut une sauvegarde de la base de données clonée
-L’exemple suivant crée un clone de schéma uniquement de la base de données AdventureWorks sans statistiques ni données du magasin des requêtes qui est vérifié pour une utilisation comme base de données de production.  Une sauvegarde vérifiée de la base de données clonée est aussi créée ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et versions ultérieures).
+L’exemple suivant crée un clone de schéma uniquement de la base de données AdventureWorks sans statistiques ni données du magasin des requêtes qui est vérifié pour une utilisation comme base de données de production.  Une sauvegarde vérifiée de la base de données clonée est également créée ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et ultérieur).
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB, BACKUP_CLONEDB;    

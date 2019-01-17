@@ -37,12 +37,12 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bbde02754a5cfe9d1a164f025b7442e12167802
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b866f40fddcd5fa12082c296036492ec894d2989
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713367"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306266"
 ---
 # <a name="hints-transact-sql---table"></a>Indicateurs (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,6 @@ ms.locfileid: "47713367"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,9 +126,9 @@ WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]
 À quelques exceptions près, les indicateurs de table sont pris en charge dans la clause FROM uniquement lorsque les indicateurs sont spécifiés à l'aide du mot clé WITH. En outre, les indicateurs de table doivent être spécifiés avec des parenthèses.  
   
 > [!IMPORTANT]  
->  L'omission du mot clé WITH est une fonctionnalité déconseillée : [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> L'omission du mot clé WITH est une fonctionnalité déconseillée : [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-Les indicateurs de table suivants sont autorisés avec et sans le mot clé WITH : NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT et NOEXPAND. Lorsque ces indicateurs de table sont spécifiés sans le mot clé WITH, ils doivent être définis seuls. Exemple :  
+Les indicateurs de table suivants sont autorisés avec et sans le mot clé WITH : NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT, et NOEXPAND. Lorsque ces indicateurs de table sont spécifiés sans le mot clé WITH, ils doivent être définis seuls. Exemple :  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -147,7 +146,7 @@ Nous vous recommandons d'utiliser des virgules entre les indicateurs de table.
 >  La séparation des indicateurs par des espaces à la place de virgules est une fonctionnalité déconseillée : [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
-Spécifie qu'aucune vue indexée n'est étendue pour permettre d'accéder aux tables sous-jacentes lorsque l'optimiseur de requête traite la requête. L'optimiseur de requête traite la vue comme une table avec un index cluster. NOEXPAND s'applique uniquement aux vues indexées. Pour plus d'informations, consultez la section Notes.  
+Spécifie qu'aucune vue indexée n'est étendue pour permettre d'accéder aux tables sous-jacentes lorsque l'optimiseur de requête traite la requête. L'optimiseur de requête traite la vue comme une table avec un index cluster. NOEXPAND s'applique uniquement aux vues indexées. Pour plus d’informations, consultez [Utilisation de NOEXPAND](#using-noexpand).  
   
 INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
 La syntaxe INDEX() spécifie les noms ou les ID d'un ou de plusieurs index qui seront utilisés par l'optimiseur de requête lors du traitement de l'instruction. L'autre syntaxe INDEX = spécifie une seule valeur d'index. Un seul indicateur d'index par table peut être spécifié.  
@@ -157,7 +156,7 @@ S'il existe un index cluster, INDEX(0) force l'analyse de ce dernier, tandis que
  Si plusieurs index sont utilisés dans une seule liste d'indicateurs, les doublons sont ignorés et les autres index répertoriés sont utilisés pour récupérer les lignes de la table. L'ordre des index dans l'indicateur d'index est très important. Un indicateur associé à plusieurs index met également en œuvre l'opérateur logique AND et l'optimiseur de requête applique autant de conditions que possible sur chaque index accessible. Si la collection d'index avec indicateur n'inclut pas toutes les colonnes référencées par la requête, une extraction est effectuée pour récupérer les colonnes restantes après que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] SQL Server a récupéré toutes les colonnes indexées.  
   
 > [!NOTE]  
->  Lorsqu'une option d'index faisant référence à plusieurs index est utilisée sur la table de faits dans une jointure en étoile, l'optimiseur de requête ignore l'option d'index et retourne un message d'avertissement. De même, la réunion logique d'index n'est pas autorisée pour une table avec une option d'index spécifiée.  
+> Lorsqu'une option d'index faisant référence à plusieurs index est utilisée sur la table de faits dans une jointure en étoile, l'optimiseur de requête ignore l'option d'index et retourne un message d'avertissement. De même, la réunion logique d'index n'est pas autorisée pour une table avec une option d'index spécifiée.  
   
  Le nombre maximal d'index dans l'indicateur de table est de 250 index non cluster.  
   
@@ -167,9 +166,9 @@ Applicable uniquement dans une instruction INSERT quand l’option BULK est util
  Indique que la ou les valeurs d'identité figurant dans le fichier de données importé doivent être utilisées dans la colonne d'identité. Si KEEPIDENTITY n'est pas spécifié, les valeurs d'identité de cette colonne sont vérifiées mais pas importées, et l'optimiseur de requête affecte automatiquement des valeurs uniques en fonction d'une valeur initiale et d'un incrément spécifié lors de la création de la table.  
   
 > [!IMPORTANT]  
->  Si le fichier de données ne contient pas de valeurs pour la colonne d'identité de la table ou de la vue, et que cette colonne n'est pas la dernière colonne de la table, vous devez ignorer cette colonne. Pour plus d’informations, consultez [Utiliser un fichier de format pour ignorer un champ de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). Si une colonne d’identité est ignorée, l’optimiseur de requête assigne automatiquement des valeurs uniques pour la colonne d’identité dans les lignes de table importées.  
+> Si le fichier de données ne contient pas de valeurs pour la colonne d'identité de la table ou de la vue, et que cette colonne n'est pas la dernière colonne de la table, vous devez ignorer cette colonne. Pour plus d’informations, consultez [Utiliser un fichier de format pour ignorer un champ de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). Si une colonne d’identité est ignorée, l’optimiseur de requête assigne automatiquement des valeurs uniques pour la colonne d’identité dans les lignes de table importées.  
   
-Pour un exemple d'utilisation de cet indicateur dans une instruction INSERT ... SELECT * FROM OPENROWSET(BULK...), consultez [Conserver des valeurs d’identité lors de l’importation de données en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
+Pour obtenir un exemple qui utilise cet indicateur dans une instruction `INSERT ... SELECT * FROM OPENROWSET(BULK...)`, consultez [Conserver des valeurs d’identité lors de l’importation de données en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
   
 Pour plus d’informations sur la vérification de la valeur d’identité d’une table, consultez [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
   
@@ -221,9 +220,9 @@ Lorsque FORCESEEK est spécifié avec des paramètres d’index, les instruction
 -   Pour les index partitionnés, la colonne de partitionnement implicitement ajoutée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être spécifiée dans l'indicateur FORCESEEK.  
   
 > [!CAUTION]  
-> Le fait de spécifier FORCESEEK avec des paramètres limite davantage le nombre de plans qui peuvent être considérés par l'optimiseur que le fait de spécifier FORCESEEK sans paramètre. Cela peut provoquer une erreur « Impossible de générer le plan » dans davantage de cas. Dans une version ultérieure, il se peut que des modifications internes de l'optimiseur autorisent la prise en considération de davantage de plans.  
+> Le fait de spécifier FORCESEEK avec des paramètres limite davantage le nombre de plans qui peuvent être considérés par l'optimiseur que le fait de spécifier FORCESEEK sans paramètre. Cela peut provoquer une erreur `Plan cannot be generated` dans plusieurs cas. Dans une version ultérieure, il se peut que des modifications internes de l’optimiseur de requête autorisent la prise en considération de davantage de plans.  
   
-FORCESCAN **S’applique à** : de [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+FORCESCAN **S’applique à** : [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 Indique que l’optimiseur de requête doit utiliser uniquement une opération d’analyse d’index comme chemin d’accès à la table ou la vue référencée. L'indicateur FORCESCAN peut être utile pour les requêtes dans lesquelles l'optimiseur sous-estime le nombre de lignes affectées et choisit une opération de recherche plutôt qu'une opération d'analyse. Dans ce cas, la quantité de mémoire allouée pour l'opération est trop faible, ce qui nuit aux performances des requêtes.  
   
 FORCESCAN peut être spécifié avec ou sans indicateur INDEX. Lorsqu'il est associé à un indicateur d'index (`INDEX = index_name, FORCESCAN`), l'optimiseur de requête considère uniquement les chemins d'accès d'analyse dans l'index spécifié lors de l'accès à la table référencée. FORCESCAN peut être spécifié avec l'indicateur d'index INDEX(0) pour forcer une opération d'analyse de table sur la table de base.  
@@ -366,7 +365,7 @@ Les indicateurs de verrou ROWLOCK, UPDLOCK et XLOCK qui acquièrent des verrous 
 Si une table contient des colonnes calculées qui sont traitées par des expressions ou des fonctions ayant accès à des colonnes dans d'autres tables, les indicateurs de table ne sont pas utilisés sur ces dernières et ne sont pas propagés. Par exemple, l'indicateur de table NOLOCK est spécifié dans une table de la requête. Cette table possède des colonnes calculées par une combinaison d'expressions et de fonctions qui accèdent à des colonnes dans une autre table. Les tables référencées par les expressions et les fonctions n'utilisent pas l'indicateur de table NOLOCK lors de l'accès à ces dernières.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas plus d'un indicateur de table dans chacun des groupes suivants pour chaque table de la clause FROM :  
--   indicateurs de granularité : PAGLOCK, NOLOCK, READCOMMITTEDLOCK, ROWLOCK, TABLOCK ou TABLOCKX ;  
+-   indicateurs de granularité : PAGLOCK, NOLOCK, READCOMMITTEDLOCK, ROWLOCK, TABLOCK ou TABLOCKX.  
 -   indicateurs de niveau d'isolation : HOLDLOCK, NOLOCK, READCOMMITTED, REPEATABLEREAD, SERIALIZABLE.  
   
 ## <a name="filtered-index-hints"></a>Indicateurs d'index filtré  
@@ -408,7 +407,7 @@ Toutefois, pour que l'optimiseur prenne en considération les vues indexées pou
   
  En outre, l'option NUMERIC_ROUNDABORT doit être désactivée (OFF).  
   
- Pour contraindre l'optimiseur à utiliser un index pour une vue indexée, spécifiez l'option NOEXPAND. Cet indicateur peut être utilisé uniquement si la vue est également nommée dans la requête. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournit pas d'indicateur pour imposer l'utilisation d'une vue indexée particulière dans une requête qui ne nomme pas directement la vue dans la clause FROM ; toutefois, l'optimiseur de requête admet l'utilisation de vues indexées même si elles ne sont pas référencées directement dans la requête.  
+ Pour contraindre l'optimiseur à utiliser un index pour une vue indexée, spécifiez l'option NOEXPAND. Cet indicateur peut être utilisé uniquement si la vue est également nommée dans la requête. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournit pas d'indicateur pour imposer l'utilisation d'une vue indexée particulière dans une requête qui ne nomme pas directement la vue dans la clause FROM ; toutefois, l'optimiseur de requête admet l'utilisation de vues indexées même si elles ne sont pas référencées directement dans la requête. SQL Server crée automatiquement des statistiques sur une vue indexée uniquement quand un indicateur de table NOEXPAND est utilisé. L’omission de cet indicateur peut entraîner l’affichage d’avertissements de plan d’exécution concernant des statistiques manquantes, qui ne peuvent pas être résolus en créant manuellement des statistiques. Lors de l’optimisation de requête, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les statistiques d’affichage qui ont été créées automatiquement ou manuellement quand la requête référence directement la vue et que l’indicateur NOEXPAND est utilisé.    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Utilisation d'un indicateur de table comme indicateur de requête  
  Un *indicateur de table* peut également être spécifié comme indicateur de requête avec la clause OPTION (TABLE HINT). Nous vous recommandons d’utiliser un indicateur de table comme indicateur de requête uniquement dans le contexte d’un [repère de plan](../../relational-databases/performance/plan-guides.md). Pour les requêtes ad hoc, spécifiez ces indicateurs uniquement comme indicateurs de table. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
@@ -429,7 +428,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>B. Utilisation de l'indicateur FORCESEEK pour spécifier une opération de recherche d'index  
+### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>b. Utilisation de l'indicateur FORCESEEK pour spécifier une opération de recherche d'index  
  L'exemple ci-dessous utilise l'indicateur FORCESEEK sans spécifier d'index pour forcer l'optimiseur de requête à effectuer une opération de recherche d'index sur la table `Sales.SalesOrderDetail` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql

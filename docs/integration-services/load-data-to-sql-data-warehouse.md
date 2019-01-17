@@ -5,19 +5,18 @@ documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
-ms.devlang: NA
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 2ae5eb35be423a7b0dedc85d9c7cd589f75c781e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e7a2ecb3d432579fdbffee9a5cec0d776d4f4596
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395562"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732086"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Charger des données dans Azure SQL Data Warehouse avec SSIS (SQL Server Integration Services)
 
@@ -96,7 +95,7 @@ Pour plus de contrôle, vous pouvez créer manuellement un package qui émule le
 
 1. Utilisez la tâche de chargement d'objet blob Azure pour effectuer une copie intermédiaire des données dans Stockage Blob Azure. Pour obtenir la tâche de chargement d’objets blob Azure, téléchargez [Microsoft SQL Server Integration Services Feature Pack pour Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
-2. Ensuite, utilisez la tâche SSIS d’exécution de requêtes SQL pour lancer un script PolyBase qui charge les données dans SQL Data Warehouse. Pour obtenir un exemple qui charge des données de Stockage Blob Azure vers SQL Data Warehouse (mais pas avec SSIS), consultez [Tutoriel : Charger des données sur Azure SQL Data Warehouse](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
+2. Ensuite, utilisez la tâche SSIS d’exécution de requêtes SQL pour lancer un script PolyBase qui charge les données dans SQL Data Warehouse. Pour obtenir un exemple qui charge des données de Stockage Blob Azure vers SQL Data Warehouse (mais pas avec SSIS), consultez [Tutoriel : Charger des données sur Azure SQL Data Warehouse](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
 
 ## <a name="option-2---use-a-source-and-destination"></a>Option 2 : Utiliser une source et une destination
 

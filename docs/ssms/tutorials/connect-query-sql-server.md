@@ -11,14 +11,14 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: baa4f703e4c76722dcecb729299e6ff416784f75
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 274e91c482ada16847cb2b2e704ac9d953567d7d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970381"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328589"
 ---
-# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutoriel : Se connecter à une instance SQL Server et l’interroger en utilisant SQL Server Management Studio
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Didacticiel : Se connecter à une instance SQL Server et l’interroger en utilisant SQL Server Management Studio
 
 > [!div class="nextstepaction"]
 > [Participez à l’amélioration de la documentation SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
@@ -40,8 +40,8 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d�
 - Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Si vous n’avez pas accès à une instance SQL Server, sélectionnez votre plateforme parmi les liens suivants. Si vous choisissez l’authentification SQL, utilisez vos informations d’identification de connexion SQL Server.
-- **Windows** : [Téléchargez SQL Server 2017 Édition Développeur](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS** : [Téléchargez SQL Server 2017 sur Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+- **Windows** : [Télécharger SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS** : [Télécharger SQL Server 2017 sur Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 
 ## <a name="connect-to-a-sql-server-instance"></a>Se connecter à une instance de SQL Server
@@ -66,12 +66,12 @@ Si vous n’avez pas accès à une instance SQL Server, sélectionnez votre plat
 ### <a name="examples-of-successful-connections"></a>Exemples de connexions réussies
 Pour vérifier que votre connexion au serveur SQL Server a réussi, développez et explorez les objets dans l’**Explorateur d’objets**. Ces objets varient en fonction du type de serveur auquel vous êtes connecté. 
 
-- Connexion à un serveur SQL Server local (dans ce cas, NODE5\SQL2016ST) : ![Connexion à un serveur local](media/connect-query-sql-server/connect-on-prem.png)
+- Connexion à un serveur SQL Server local ; dans le cas présent, NODE5\SQL2016ST : ![Connexion à un serveur local](media/connect-query-sql-server/connect-on-prem.png)
 
-- Connexion à SQL Azure DB (dans ce cas, msftestserver.database.windows.net : ![Connexion à une base de données SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
+- Connexion à SQL Azure DB ; dans le cas présent, msftestserver.database.windows.net : ![Connexion à une base de données SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
 
   >[!NOTE]
-  > Dans ce tutoriel, vous avez utilisé précédemment l’*authentification Windows* pour vous connecter à votre serveur SQL Server local, mais cette méthode n’est pas prise en charge par SQL Azure DB. De ce fait, c’est l’authentification SQL qui est utilisée dans cette image pour établir une connexion à la base de données SQL Azure DB. Pour plus d’informations, consultez [Authentification locale SQL](../../relational-databases/security/choose-an-authentication-mode.md) et [Authentification SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
+  > Dans ce tutoriel, vous avez utilisé précédemment l’*authentification Windows* pour vous connecter à votre serveur SQL Server local, mais cette méthode n’est pas prise en charge pour SQL Azure DB. De ce fait, c’est l’authentification SQL qui est utilisée dans cette image pour établir une connexion à la base de données SQL Azure DB. Pour plus d’informations, consultez [Authentification locale SQL](../../relational-databases/security/choose-an-authentication-mode.md) et [Authentification SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
 
 ## <a name="create-a-database"></a>création d'une base de données ;
 Créez une base de données appelée TutorialDB en procédant comme suit : 

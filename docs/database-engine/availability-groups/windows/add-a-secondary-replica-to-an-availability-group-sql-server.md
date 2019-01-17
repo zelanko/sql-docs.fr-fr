@@ -1,6 +1,7 @@
 ---
-title: Ajouter un réplica secondaire à un groupe de disponibilité (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Ajouter un réplica secondaire à un groupe de disponibilité
+description: Découvrez comment ajouter un réplica secondaire à un groupe de disponibilité Always On à l’aide de Transact-SQL (T-SQL), de PowerShell ou de l’Assistant Groupe de disponibilité dans SQL Server Management Studio (SSMS).
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,35 +14,17 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 834e84ea62e9cfa7b6398d67e2b59ba011d21979
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ffebb3bc39d15f52aeda8e2deed54c49e011df4e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512331"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213008"
 ---
-# <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>Ajouter un réplica secondaire à un groupe de disponibilité (SQL Server)
+# <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>Ajouter un réplica secondaire à un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment ajouter un réplica secondaire à un groupe de disponibilité Always On existant à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
-  
--   **Avant de commencer :**  
-  
-     [Conditions préalables requises et restrictions](#PrerequisitesRestrictions)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour ajouter un réplica, utilisez :**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Suivi :**  [Après avoir ajouté un réplica secondaire](#FollowUp)  
-  
-## <a name="before-you-begin"></a>Avant de commencer  
- Nous vous recommandons fortement de lire cette section avant d'essayer de créer votre premier groupe de disponibilité.  
+
   
 ##  <a name="PrerequisitesRestrictions"></a> Conditions préalables requises et restrictions  
   
@@ -122,7 +105,7 @@ ms.locfileid: "52512331"
   
 -   [Fournisseur SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir ajouté un réplica secondaire  
+##  <a name="FollowUp"></a> Suivi : Après avoir ajouté un réplica secondaire  
  Pour ajouter un réplica pour un groupe de disponibilité existant, vous devez effectuer les étapes suivantes :  
   
 1.  Connectez-vous à l'instance de serveur qui va héberger le nouveau réplica secondaire.  

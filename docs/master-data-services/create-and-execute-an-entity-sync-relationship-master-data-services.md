@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 95bf478ba6bb44194f5713a16d0c87b067487551
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4c4ae12021930ba447c3cb01a9830907fb3153
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854623"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822913"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Créer et exécuter une relation de synchronisation d’entités (Master Data Services)
 
@@ -110,17 +109,17 @@ ms.locfileid: "47854623"
 |Heure de la dernière tentative|Affiche l’heure de la dernière tentative de synchronisation.|  
 |Heure de la dernière tentative réussie|Affiche l’heure de la dernière tentative de synchronisation réussie.|  
   
- Lorsque vous cliquez sur un index, les informations suivantes s'affichent.  
+ Lorsque vous cliquez sur un index, les informations suivantes s’affichent.  
   
--   **Erreur de la dernière tentative**: affiche les informations d'erreur de la dernière tentative de synchronisation.  
+-   **Erreur de la dernière tentative** : affiche les informations d’erreur de la dernière tentative de synchronisation.  
   
--   **Créée par**: nom de l’utilisateur qui a créé la synchronisation.  
+-   **Créé par** : nom de l’utilisateur qui a créé la synchronisation.  
   
--   **Le**: date et heure de création de la synchronisation.  
+-   **Le** : date et heure de création de la synchronisation.  
   
--   **Mise à jour par**: nom de l’utilisateur qui a mis à jour la synchronisation en dernier.  
+-   **Mis à jour par** : nom de l’utilisateur qui a effectué la dernière mise à jour de la synchronisation.  
   
--   **Le**: date et heure de la dernière mise à jour de la synchronisation.  
+-   **Le** : date et heure de la dernière mise à jour de la synchronisation.  
   
 ## <a name="next-steps"></a>Next Steps  
  [Modifier et supprimer une relation de synchronisation d’entités &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  

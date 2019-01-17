@@ -26,20 +26,20 @@ ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: eafe617f4586863dba9bed75a14cee2623cb54e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cebd9e5b52e2aa80308e266858da014b13f267c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821537"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206728"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 L'instruction DBCC OPENTRAN aide à identifier les transactions actives qui peuvent empêcher la troncation du journal. Elle affiche les informations relatives à la transaction active la plus ancienne et aux transactions répliquées distribuées et non distribuées les plus anciennes, le cas échéant, dans le journal des transactions de la base de données spécifiée. Les résultats ne sont affichés que s'il existe une transaction active dans le journal ou si la base de données contient des informations de réplication. Un message d'information est affiché s'il n'y a pas de transactions actives dans le journal.
   
-> [!NOTE]  
->  L'instruction DBCC OPENTRAN n'est pas prise en charge pour les serveurs de publication non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> [!NOTE]
+>  DBCC OPENTRAN n’est pas pris en charge pour les serveurs de publication autres que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -113,7 +113,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 > [!NOTE]  
 >  Le résultat « UID (ID d'utilisateur) » est sans signification et sera supprimé dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="b-specifying-the-with-tableresults-option"></a>B. Utilisation de l'option WITH TABLERESULTS  
+### <a name="b-specifying-the-with-tableresults-option"></a>b. Utilisation de l'option WITH TABLERESULTS  
 L'exemple suivant charge les résultats de la commande DBCC OPENTRAN dans une table temporaire.
   
 ```sql  

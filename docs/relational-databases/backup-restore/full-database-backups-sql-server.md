@@ -20,12 +20,12 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f20b2f1b29c6ba175237e2e4f47cb5cf6fa0a610
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 066bd086fcbe9b69cc49821651302cd2102cd671
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771828"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214088"
 ---
 # <a name="full-database-backups-sql-server"></a>Sauvegardes complètes de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47771828"
   
  ![Affiche le risque de perte du travail entre les sauvegardes de base de données](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Affiche le risque de perte du travail entre les sauvegardes de base de données")  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>Exemple ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>Exemple ( [!INCLUDE[tsql](../../includes/tsql-md.md)])  
  L'exemple ci-dessous illustre la création d'une sauvegarde complète de base de données à l'aide de WITH FORMAT afin de remplacer les sauvegardes existantes et créer un jeu de supports.  
   
 ```  
@@ -70,7 +70,7 @@ GO
   
  Pour plus d’informations sur la façon de créer des sauvegardes de journaux, consultez [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>Exemple ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>Exemple ( [!INCLUDE[tsql](../../includes/tsql-md.md)])  
  L'exemple ci-dessous illustre la création d'une sauvegarde complète de base de données à l'aide de WITH FORMAT afin de remplacer les sauvegardes existantes et créer un jeu de supports. Puis, l'exemple sauvegarde le journal des transactions. Dans la réalité, vous seriez amené à effectuer une série de sauvegardes de fichier journal normales. Dans le cadre de cet exemple, l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est défini pour utiliser le mode de récupération complète.  
   
 ```  

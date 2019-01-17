@@ -23,12 +23,12 @@ ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 0090be5f985354d4cec29add4d008deea6cac068
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f71e53eb00f994bd68c9be92e1783f79e65470f4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698767"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215868"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ Reconstruit un ou plusieurs index pour une table d'une base de données spécifi
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez à la place [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).  
   
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -103,7 +103,7 @@ DBCC DBREINDEX ('HumanResources.Employee', PK_Employee_BusinessEntityID,80);
 GO  
 ```  
   
-### <a name="b-rebuilding-all-indexes"></a>B. Reconstruction de tous les index  
+### <a name="b-rebuilding-all-indexes"></a>b. Reconstruction de tous les index  
 Dans l'exemple suivant, tous les index de la table `Employee` de `AdventureWorks` sont reconstruits avec un facteur de remplissage de `70`.
   
 ```sql

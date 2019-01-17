@@ -15,19 +15,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d4a037898aaa022b7db5d6bf55f4a6dfb08988c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5ef89fc257782f7977efbee371a40e188893bc7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734607"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216058"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Détermination des autorisations effectives du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Cet article explique comment déterminer les détenteurs d’autorisations sur différents objets dans le moteur de base de données SQL Server. SQL Server met en œuvre deux systèmes d’autorisations pour ce moteur de base de données. Un ancien système de rôles fixes dispose d’autorisations pré-configurées. Depuis SQL Server 2005, un système plus flexible et plus précis est disponible. (Les informations contenues dans cet article s’appliquent à SQL Server, à partir de 2005. Quelques types d’autorisations ne sont pas disponibles dans certaines versions de SQL Server.)
 
->  [!IMPORTANT] 
+> [!IMPORTANT]
 >  * Les autorisations effectives représentent l’agrégat des deux systèmes d’autorisations. 
 >  * Les refus d’autorisation se substituent aux octrois d’autorisation. 
 >  * Si un utilisateur est membre du rôle serveur fixe sysadmin, les autorisations ne sont pas vérifiées, et les refus d’accès ne sont donc pas appliqués. 
@@ -51,24 +51,24 @@ Cet article explique comment déterminer les détenteurs d’autorisations sur d
 ## <a name="older-fixed-role-permission-system"></a>Ancien système d’autorisations de rôle fixe
 
 Il est impossible de modifier les rôles serveur et base de données fixes qui disposent d’autorisations pré-configurées. Pour déterminer qui est membre d’un rôle serveur fixe, exécutez la requête suivante :    
->  [!NOTE] 
+> [!NOTE]
 >  Ne s’applique pas à SQL Database ni à SQL Data Warehouse, où les autorisations de niveau serveur ne sont pas disponibles. La colonne `is_fixed_role` de `sys.server_principals` a été ajoutée dans SQL Server 2012. Elle n’est pas nécessaire pour les versions antérieures de SQL Server.  
-```sql
-SELECT SP1.name AS ServerRoleName, 
- isnull (SP2.name, 'No members') AS LoginName   
- FROM sys.server_role_members AS SRM
- RIGHT OUTER JOIN sys.server_principals AS SP1
-   ON SRM.role_principal_id = SP1.principal_id
- LEFT OUTER JOIN sys.server_principals AS SP2
-   ON SRM.member_principal_id = SP2.principal_id
- WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
- ORDER BY SP1.name;
+> ```sql
+> SELECT SP1.name AS ServerRoleName, 
+>  isnull (SP2.name, 'No members') AS LoginName   
+>  FROM sys.server_role_members AS SRM
+>  RIGHT OUTER JOIN sys.server_principals AS SP1
+>    ON SRM.role_principal_id = SP1.principal_id
+>  LEFT OUTER JOIN sys.server_principals AS SP2
+>    ON SRM.member_principal_id = SP2.principal_id
+>  WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
+>  ORDER BY SP1.name;
 ```
->  [!NOTE] 
->  * Toutes les connexions sont membres du rôle public et il est impossible de les supprimer. 
->  * Cette requête vérifie les tables dans la base de données master, mais elle peut être exécutée dans n’importe quelle base de données du produit local. 
+> [!NOTE]
+>  * All logins are members of the public role and cannot be removed. 
+>  * This query checks tables in the master database but it can be executed in any database for the on premises product. 
 
-Pour déterminer qui est membre d’un rôle base de données fixe, exécutez la requête suivante dans chaque base de données.
+To determine who is a member of a fixed database role, execute the following query in each database.
 ```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
@@ -106,22 +106,22 @@ N’oubliez pas qu’un utilisateur Windows peut être membre de plusieurs group
 ### <a name="server-permissions"></a>Autorisations de serveur
 
 La requête suivante retourne la liste des autorisations qui ont été accordées ou refusées au niveau serveur. Vous devez exécuter cette requête dans la base de données master.   
->  [!NOTE] 
+> [!NOTE]
 >  Les autorisations de niveau serveur ne peuvent pas être accordées ou faire l’objet d’une requête sur la base de données SQL ou SQL Data Warehouse.   
-```sql
-SELECT pr.type_desc, pr.name, 
- isnull (pe.state_desc, 'No permission statements') AS state_desc, 
- isnull (pe.permission_name, 'No permission statements') AS permission_name 
- FROM sys.server_principals AS pr
- LEFT OUTER JOIN sys.server_permissions AS pe
-   ON pr.principal_id = pe.grantee_principal_id
- WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
- ORDER BY pr.name, type_desc;
+> ```sql
+> SELECT pr.type_desc, pr.name, 
+>  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
+>  isnull (pe.permission_name, 'No permission statements') AS permission_name 
+>  FROM sys.server_principals AS pr
+>  LEFT OUTER JOIN sys.server_permissions AS pe
+>    ON pr.principal_id = pe.grantee_principal_id
+>  WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
+>  ORDER BY pr.name, type_desc;
 ```
 
-### <a name="database-permissions"></a>Autorisations de base de données
+### Database Permissions
 
-La requête suivante retourne la liste des autorisations qui ont été accordées ou refusées au niveau base de données. Vous devez exécuter cette requête dans chaque base de données.   
+The following query returns a list of the permissions that have been granted or denied at the database level. This query should be executed in each database.   
 ```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
@@ -156,6 +156,6 @@ Pour obtenir des détails sur la syntaxe, consultez [HAS_PERMS_BY_NAME](../../..
 
 ## <a name="see-also"></a>Voir aussi :
 
-[Bien démarrer avec les autorisations du moteur de base de données](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
-[Didacticiel : Mise en route du moteur de base de données](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
+[Prise en main des autorisations du moteur de base de données](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
+[Didacticiel : Bien démarrer avec le moteur de base de données](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
 

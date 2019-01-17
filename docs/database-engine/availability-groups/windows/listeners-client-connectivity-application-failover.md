@@ -1,6 +1,7 @@
 ---
-title: Écouteurs, connectivité client et basculement d'application | Microsoft Docs
-ms.custom: ''
+title: Se connecter à un écouteur de groupe de disponibilité
+description: Contient des informations sur la connexion à un écouteur de groupe de disponibilité Always On, avant et après un basculement.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b02b430acbc2fc56942e1c7287ea1c7e4527ccc4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 23321c9c8208cf4a78909ab5cedcd921184f7b0b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408886"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214700"
 ---
-# <a name="listeners-client-connectivity-application-failover"></a>Écouteurs, connectivité client et basculement d'application
+# <a name="connect-to-an-always-on-availability-group-listener"></a>Se connecter à un écouteur de groupe de disponibilité Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique contient des informations sur les éléments à prendre en compte en matière de connectivité client [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et de fonctionnalité de basculement d'application.  
   
@@ -95,11 +96,11 @@ ms.locfileid: "52408886"
  Les configurations réseau hybrides et le recours au protocole DHCP sur plusieurs sous-réseaux ne sont pas pris en charge pour les écouteurs de groupe de disponibilité. Cela est dû au fait que, lorsqu'un basculement a lieu, une adresse IP dynamique peut expirer ou être libérée, ce qui compromet la haute disponibilité globale.  
   
 ###  <a name="SelectListenerPort"></a> Sélection d'un port d'écoute de groupe de disponibilité  
- Lors de la configuration d'un écouteur de groupe de disponibilité, vous devez indiquer un port.  Vous pouvez configurer le port par défaut sur 1433, afin de permettre de simplifier les chaînes de connexion du client. Si vous utilisez 1433, vous n'avez pas besoin d'indiquer un numéro de port dans une chaîne de connexion.   De plus, étant donné que chaque écouteur de groupe de disponibilité portera un nom de réseau virtuel distinct, chaque écouteur de groupe de disponibilité configuré sur un même WSFC pourra être configuré pour référencer le même port par défaut 1433.  
+ Lors de la configuration d'un écouteur de groupe de disponibilité, vous devez indiquer un port.  Vous pouvez configurer le port par défaut sur 1433, afin de permettre de simplifier les chaînes de connexion du client. Si vous utilisez 1433, vous n'avez pas besoin d'indiquer un numéro de port dans une chaîne de connexion.   De plus, étant donné que chaque écouteur de groupe de disponibilité portera un nom de réseau virtuel distinct, chaque écouteur de groupe de disponibilité configuré sur un même WSFC pourra être configuré pour référencer le même port par défaut 1433.  
   
  Vous pouvez également indiquer un port d'écoute non standard ; toutefois, cela signifie que vous devrez également spécifier explicitement un port cible dans votre chaîne de connexion lors de chaque connexion à l'écouteur de groupe de disponibilité.  Vous devrez également ouvrir l'autorisation sur le pare-feu pour le port non standard.  
   
- Si vous utilisez le port par défaut 1433 comme nom VNN de l'écouteur du groupe de disponibilité, vous devez toujours vérifier qu'aucun autre service sur le nœud de cluster n'utilise ce port ; dans le cas contraire, cela provoquerait un conflit de ports.  
+ Si vous utilisez le port par défaut 1433 comme nom VNN de l'écouteur du groupe de disponibilité, vous devez toujours vérifier qu'aucun autre service sur le nœud de cluster n'utilise ce port ; dans le cas contraire, cela provoquerait un conflit de ports.  
   
  Si l'une des instances de SQL Server écoute déjà sur le port TCP 1433 par l'intermédiaire de l'écouteur d'instance et qu'il n'existe aucun autre service (instances supplémentaires de SQL Server comprises) sur l'ordinateur écoutant sur le port 1433, cela ne provoque pas un conflit de ports avec l'écouteur du groupe de disponibilité.  Cela est dû au fait que l'écouteur du groupe de disponibilité peut partager le même port TCP au sein du même processus de service.  Toutefois, plusieurs instances de SQL Server (côte à côte) ne doivent pas être configurées pour écouter sur le même port.  
   
@@ -110,7 +111,7 @@ ms.locfileid: "52408886"
 Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI  
 ```  
   
- Vous pouvez néanmoins choisir de référencer directement l'instance du nom SQL Server des réplicas principaux ou secondaires au lieu d'utiliser le nom du serveur de l'écouteur du groupe de disponibilité ; toutefois, si vous choisissez d'agir ainsi, les nouvelles connexions ne seront plus dirigées automatiquement vers le réplica principal actuel.  Vous perdrez également l'avantage du routage en lecture seule.  
+ Vous pouvez néanmoins choisir de référencer directement l'instance du nom SQL Server des réplicas principaux ou secondaires au lieu d'utiliser le nom du serveur de l'écouteur du groupe de disponibilité ; toutefois, si vous choisissez d'agir ainsi, les nouvelles connexions ne seront plus dirigées automatiquement vers le réplica principal actuel.  Vous perdrez également l'avantage du routage en lecture seule.  
   
 ##  <a name="ConnectToSecondary"></a> Utilisation d'un écouteur pour se connecter à un réplica secondaire en lecture seule (routage en lecture seule)  
  Le*routage en lecture seule* fait référence à la capacité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’acheminer les connexions entrantes à un écouteur de groupe de disponibilité vers un réplica secondaire qui est configuré pour autoriser des charges de travail en lecture seule. Une connexion entrante faisant référence à un nom d'écouteur de groupe de disponibilité peut automatiquement être acheminée vers un réplica en lecture seule si les conditions suivantes sont réunies :  
@@ -241,13 +242,13 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [Présentation de l’écouteur du groupe de disponibilité](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (blog de l’équipe SQL Server Always On)  
   
--   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Connectivité client Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)   
  [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Secondaires actifs : réplicas secondaires lisibles &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Secondaires actifs : Réplicas secondaires lisibles &#40;groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   

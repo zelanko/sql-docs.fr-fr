@@ -1,6 +1,7 @@
 ---
-title: Utiliser l’Assistant Ajouter un réplica au groupe de disponibilité (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Ajouter un réplica à un groupe de disponibilité à l’aide de l’Assistant dans SSMS - SQL Server
+ms.description: Add a replica to an Always On availability group using the wizard found in SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d97f8773de23631a56106daba729e1b629bd0dd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 152d4b274fe2e966a30ffe09ba2939ba4cafef39
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768328"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202478"
 ---
-# <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Utiliser l'Assistant Ajouter un réplica au groupe de disponibilité (SQL Server Management Studio)
+# <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>Ajouter un réplica à un groupe de disponibilité Always On à l’aide de l’Assistant Groupe de disponibilité dans SQL Server Management
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Utilisez l’**Assistant Ajouter un réplica au groupe de disponibilité** pour ajouter un nouveau réplica secondaire à un groupe de disponibilité AlwaysOn existant.  
   
@@ -72,14 +73,14 @@ ms.locfileid: "47768328"
   
 3.  Cliquez avec le bouton droit sur le groupe de disponibilité auquel vous ajoutez un réplica secondaire, puis sélectionnez la commande **Ajouter un réplica** . Cela permet de lancer l'Assistant Ajouter un réplica au groupe de disponibilité.  
   
-4.  Sur la page **Se connecter à des réplicas secondaires existants** , connectez-vous à chaque réplica secondaire du groupe de disponibilité. Pour plus d’informations, consultez [Se connecter à des réplicas secondaires existants &#40;Assistant Ajout de réplica : Assistant Ajout de bases de données&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
+4.  Sur la page **Se connecter à des réplicas secondaires existants** , connectez-vous à chaque réplica secondaire du groupe de disponibilité. Pour plus d’informations, consultez la [page Se connecter à des réplicas secondaires existants &#40;Assistant Ajout de réplica : Assistant Ajout de bases de données&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
   
-5.  Sur la page **Spécifier les réplicas** , spécifiez et configurez un ou plusieurs réplicas secondaires pour le groupe de disponibilité. Cette page contient trois onglets. Le tableau suivant présente ces onglets. Pour plus d’informations, consultez [Page Spécifier les réplicas &#40;Assistant Nouveau groupe de disponibilité : Assistant Ajout de réplica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
+5.  Sur la page **Spécifier les réplicas** , spécifiez et configurez un ou plusieurs réplicas secondaires pour le groupe de disponibilité. Cette page contient trois onglets. Le tableau suivant présente ces onglets. Pour plus d’informations, consultez la [page Spécifier les réplicas &#40;Assistant Nouveau groupe de disponibilité : Assistant Ajout de réplica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
     |Onglet|Brève description|  
     |---------|-----------------------|  
     |**Réplicas**|Cet onglet vous permet de spécifier chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergera un nouveau réplica secondaire.|  
-    |**Points de terminaison**|Utilisez cet onglet pour vérifier le point de terminaison de mise en miroir de bases de données existant, le cas échéant, pour chaque nouveau réplica secondaire. Si ce point de terminaison manque sur une instance de serveur dont les comptes de service utilisent l'authentification Windows, l'Assistant tente de créer le point de terminaison automatiquement.<br /><br /> <br /><br /> Remarque : si une instance de serveur s’exécute sous un compte d’utilisateur qui n’appartient pas au domaine, vous devez apporter une modification manuelle à votre instance de serveur avant de pouvoir continuer dans l’Assistant. Pour plus d'informations, consultez [Conditions préalables requises](#Prerequisites), plus haut dans cette rubrique.|  
+    |**Points de terminaison**|Utilisez cet onglet pour vérifier le point de terminaison de mise en miroir de bases de données existant, le cas échéant, pour chaque nouveau réplica secondaire. Si ce point de terminaison manque sur une instance de serveur dont les comptes de service utilisent l'authentification Windows, l'Assistant tente de créer le point de terminaison automatiquement.<br /><br /> <br /><br /> Remarque : Si une instance de serveur s'exécute sous un compte d'utilisateur qui n'appartient pas au domaine, vous devez apporter une modification manuelle à votre instance de serveur avant de pouvoir continuer dans l'Assistant. Pour plus d'informations, consultez [Conditions préalables requises](#Prerequisites), plus haut dans cette rubrique.|  
     |**Préférences de sauvegarde**|Utilisez cet onglet pour spécifier vos préférences de sauvegarde pour le groupe de disponibilité dans son ensemble, si vous souhaitez modifier le paramètre actuel, et pour indiquer vos priorités de sauvegarde pour les différents réplicas de disponibilité.|  
   
 6.  Si les réplicas sélectionnés contiennent des bases de données comportant une clé principale de base de données, entrez les mots de passe pour les clés principales de base de données dans la colonne **Mot de passe**. La colonne **État** indique **Mot de passe requis** pour les bases de données qui comportent une clé principale de base de données. L’option **Suivant** est grisée jusqu’à ce que le mot de passe correct soit entré dans la colonne **Mot de passe**. Après avoir entré les mots de passe, cliquez sur **Actualiser**. Si les mots de passe entrés sont corrects, la colonne État indique **Mot de passe entré** et **Suivant** devient disponible.  
@@ -118,7 +119,7 @@ ms.locfileid: "47768328"
      À la fin de l'Assistant, cliquez sur **Fermer** pour le quitter.  
   
 > [!IMPORTANT]  
->  Après avoir ajouté un réplica, consultez la section « Suivi : après avoir ajouté un réplica » dans [Ajouter un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
+>  Après avoir ajouté un réplica, consultez la section « Suivi : Après avoir ajouté un réplica » dans [Ajouter un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   

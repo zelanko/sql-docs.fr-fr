@@ -22,12 +22,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6810231163d1674893e55624f333cd023bd95c47
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b0c36e72558423b91a6adb8c8ae11e942c301446
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666188"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205668"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Collections de schémas XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -165,7 +165,7 @@ ms.locfileid: "51666188"
   
  La fonction intégrée **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, produit une instance de type de données **xml** . Cette instance contient des fragments de schéma XML pour les schémas qui sont contenus dans une collection de schémas XML, à l'exception des schémas XML prédéfinis.  
   
- Pour répertorier le contenu d'une collection de schémas XML, vous pouvez au choix :  
+ Pour répertorier le contenu d'une collection de schémas XML, vous pouvez au choix :  
   
 -   écrire des requêtes Transact-SQL sur les affichages catalogue appropriés pour les collections de schémas XML ;  
   
@@ -173,7 +173,7 @@ ms.locfileid: "51666188"
   
  Ces méthodes sont illustrées dans les exemples ci-après.  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Exemple : énumération des espaces de noms XML dans une collection de schémas XML  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Exemple : Énumération des espaces de noms XML dans une collection de schémas XML  
  Utilisez la requête suivante pour la collection de schémas XML « myCollection » :  
   
 ```  
@@ -183,7 +183,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Exemple : énumération du contenu d'une collection de schémas XML  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Exemple : Énumération du contenu d’une collection de schémas XML  
  L'instruction suivante énumère le contenu de la collection de schémas XML « myCollection » dans le schéma relationnel, dbo.  
   
 ```  
@@ -192,8 +192,8 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  Les schémas XML individuels de la collection peuvent être obtenus sous forme d’instances de type **xml** en spécifiant l’espace de noms cible comme troisième argument de **XML_SCHEMA_NAMESPACE()**. Cela est illustré par l'exemple suivant.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemple : extraction d'un schéma spécifique d'une collection de schémas XML  
- L’instruction suivante extrait le schéma XML dont l’espace de noms cible est « https://www.microsoft.com/books » de la collection de schémas XML « myCollection » dans le schéma relationnel, dbo.  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemple : Extraction d’un schéma spécifique d’une collection de schémas XML  
+ L’instruction suivante extrait le schéma XML dont l’espace de noms cible est « <https://www.microsoft.com/books> » de la collection de schémas XML « myCollection » dans le schéma relationnel, dbo.  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
@@ -201,7 +201,7 @@ N'https://www.microsoft.com/books')
 ```  
   
 ### <a name="querying-xml-schemas"></a>Interrogation des schémas XML  
- Vous pouvez interroger les schémas XML que vous avez chargés dans les collections de schémas XML en procédant ainsi :  
+ Vous pouvez interroger les schémas XML que vous avez chargés dans les collections de schémas XML en procédant ainsi :  
   
 -   Écrivez des requêtes Transact-SQL sur les affichages catalogue appropriés pour les espaces de noms de schémas XML.  
   

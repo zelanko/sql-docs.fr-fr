@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8023d29ccdf04ff46b995e1f698bb54a905df5d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5023d29379ab254e85c38e0b9e0b6ae3c8772133
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503625"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590763"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Constructions Transact-SQL non prises en charge par l’OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52503625"
 ## <a name="databases-that-use-in-memory-oltp"></a>Bases de données qui utilisent OLTP en mémoire  
  Le tableau suivant répertorie les fonctionnalités [!INCLUDE[tsql](../../includes/tsql-md.md)] non prises en charge, ainsi que les mots clés qui peuvent apparaître dans le texte du message d’une erreur impliquant une base de données OLTP en mémoire. Ce tableau indique également la résolution de l’erreur.  
   
-|Type|Nom   |Résolution|  
+|Type|Créer une vue d’abonnement|Résolution|  
 |----------|----------|----------------|  
 |Option|AUTO_CLOSE|L'option de base de données AUTO_CLOSE=ON n'est pas prise en charge par les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.|  
 |Option|ATTACH_REBUILD_LOG|L'option de base de données CREATE ATTACH_REBUILD_LOG n'est pas prise en charge par les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.|  
@@ -50,7 +50,7 @@ ms.locfileid: "52503625"
 ## <a name="memory-optimized-tables"></a>Tables optimisées en mémoire  
  Le tableau suivant répertorie les fonctionnalités [!INCLUDE[tsql](../../includes/tsql-md.md)] non prises en charge, ainsi que les mots clés qui peuvent apparaître dans le texte du message d’une erreur impliquant une table optimisée en mémoire. Ce tableau indique également la résolution de l’erreur.  
   
-|Type|Nom   |Résolution|  
+|Type|Créer une vue d’abonnement|Résolution|  
 |----------|----------|----------------|  
 |Fonctionnalité|ON|Les tables optimisées en mémoire ne peuvent pas être placées sur un groupe de fichiers ou un schéma de partition. Supprimez la clause ON de l'instruction **CREATE TABLE** .<br /><br /> Toutes les tables optimisées en mémoire sont associées à un groupe de fichiers/données optimisé en mémoire.|  
 |Type de données|*Nom du type de données*|Le type de données spécifié n'est pas pris en charge. Remplacez le type par un des types de données pris en charge. Pour plus d’informations, consultez [Types de données pris en charge pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
@@ -68,8 +68,8 @@ ms.locfileid: "52503625"
 |Opération|Mettre à jour les colonnes clés primaires|Les colonnes clés primaires des tables mémoire optimisées et les types de table ne peuvent pas être mis à jour. Si la clé primaire doit être mise à jour, supprimez l'ancienne ligne et insérez la nouvelle ligne avec la clé primaire mise à jour.|  
 |Opération|CREATE INDEX|Les index sur les tables mémoire optimisées doivent être spécifiés avec l’instruction **CREATE TABLE** ou l’instruction **ALTER TABLE** .|  
 |Opération|CREATE FULLTEXT INDEX|Les index de recherche en texte intégral ne sont pas pris en charge pour les tables mémoire optimisées.|  
-|Opération|modification de schéma|Les tables à mémoire optimisée et les procédures stockées compilées en mode natif ne prennent pas en charge certaines modifications de schéma :<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] et SQL Server (à partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]) : les opérations ALTER TABLE, ALTER PROCEDURE et sp_rename sont prises en charge. Les autres modifications de schéma, telles que l’ajout des propriétés étendues, ne sont pas prises en charge.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] : les opérations ALTER TABLE et ALTER PROCEDURE sont prises en charge. Les autres modifications de schéma, telles que sp_rename, ne sont pas prises en charge.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] : les modifications de schéma ne sont pas prises en charge. Pour modifier la définition d’une table à mémoire optimisée ou d’une procédure stockée compilée en mode natif, supprimez l’objet, puis recréez-le avec la définition souhaitée.| 
-|Opération|TRUNCATE TABLE|L'opération TRUNCATE n'est pas prise en charge pour les tables mémoire optimisées. Pour supprimer toutes les lignes d’une table, supprimez toutes les lignes en utilisant **DELETE FROM***table* ou supprimez la table et recréez-la.|  
+|Opération|modification de schéma|Les tables à mémoire optimisée et les procédures stockées compilées en mode natif ne prennent pas en charge certaines modifications de schéma :<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] et SQL Server à compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] : les opérations ALTER TABLE, ALTER PROCEDURE et sp_rename sont prises en charge. Les autres modifications de schéma, telles que l’ajout des propriétés étendues, ne sont pas prises en charge.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: les opérations ALTER TABLE et ALTER PROCEDURE sont prises en charge. Les autres modifications de schéma, telles que sp_rename, ne sont pas prises en charge.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] : les modifications de schéma ne sont pas prises en charge. Pour modifier la définition d’une table à mémoire optimisée ou d’une procédure stockée compilée en mode natif, supprimez l’objet, puis recréez-le avec la définition souhaitée.| 
+|Opération|TRUNCATE TABLE|L'opération TRUNCATE n'est pas prise en charge pour les tables mémoire optimisées. Pour supprimer toutes les lignes d’une table, supprimez toutes les lignes en utilisant **DELETE FROM**_table_ ou supprimez la table et recréez-la.|  
 |Opération|ALTER AUTHORIZATION|La modification du propriétaire d'une table mémoire optimisée ou d'une procédure stockée compilée en mode natif existante n'est pas prise en charge. Supprimez ou recréez la table ou la procédure pour modifier la propriété.|  
 |Opération|ALTER SCHEMA|Il n’est pas possible de transférer le schéma d’une table à mémoire optimisée ou d’une procédure stockée compilée en mode natif existantes vers un autre schéma. Pour changer de schéma, supprimez, puis recréez l’objet.|  
 |Opération|DBCC CHECKTABLE|DBCC CHECKTABLE n’est pas pris en charge par les tables à mémoire optimisée. Pour vérifier l’intégrité des fichiers de point de contrôle sur disque, effectuez une sauvegarde du groupe de fichiers MEMORY_OPTIMIZED_DATA.|  
@@ -81,7 +81,7 @@ ms.locfileid: "52503625"
 ## <a name="indexes-on-memory-optimized-tables"></a>Index sur des tables optimisées en mémoire  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent s'afficher dans le texte d'un message d'erreur qui implique un index sur une table optimisée en mémoire, ainsi que l'action corrective à entreprendre pour résoudre l'erreur.  
   
-|Type|Nom   |Résolution|  
+|Type|Créer une vue d’abonnement|Résolution|  
 |----------|----------|----------------|  
 |Fonctionnalité|Index filtré|Les index filtrés ne sont pris en charge avec les tables optimisées en mémoire. Omettez la clause **WHERE** de la spécification d'index.|  
 |Fonctionnalité|Colonnes incluses|La spécification de colonnes incluses n'est pas nécessaire pour les tables mémoire optimisées. Toutes les colonnes de la table mémoire optimisée sont incluses implicitement dans chaque index mémoire optimisé.|  
@@ -91,7 +91,7 @@ ms.locfileid: "52503625"
 ## <a name="nonclustered-hash-indexes"></a>Index de hachage non cluster  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent s'afficher dans le texte d'un message d'erreur qui implique un index de hachage non cluster, ainsi que l'action corrective à entreprendre pour résoudre l'erreur.  
   
-|Type|Nom   |Résolution|  
+|Type|Créer une vue d’abonnement|Résolution|  
 |----------|----------|----------------|  
 |Option|ASC/DESC|Les index de hachage non cluster ne sont pas ordonnés. Supprimez les mots clés **ASC** et **DESC** de la spécification de clé d'index.|  
   
@@ -104,11 +104,11 @@ ms.locfileid: "52503625"
 |Fonctionnalité|Curseurs|Les curseurs ne sont pas pris en charge sur ou dans les procédures stockées compilées en mode natif.<br /><br /> Lors de l'exécution de la procédure à partir du client, utilisez RPC plutôt que l'API de curseur. Avec ODBC, évitez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] . **EXECUTE**, et spécifiez directement le nom de la procédure à la place.<br /><br /> Lors de l'exécution de la procédure à partir d'une autre procédure stockée ou d'un lot [!INCLUDE[tsql](../../includes/tsql-md.md)] , évitez d'utiliser un curseur avec la procédure stockée compilée en mode natif.<br /><br /> Lors de la création d’une procédure stockée compilée en mode natif, plutôt que d’utiliser un curseur, utilisez une logique basée sur un ensemble ou une boucle **WHILE** .|  
 |Fonctionnalité|Valeurs par défaut non constantes des paramètres|Lors de l'utilisation des valeurs par défaut avec des paramètres sur les procédures stockées compilées en mode natif, les valeurs doivent être constantes. Supprimez les caractères génériques des déclarations de paramètre.|  
 |Fonctionnalité|EXTERNAL|Les procédures stockées CLR ne peuvent pas être compilées en mode natif. Supprimez la clause AS EXTERNAL ou l'option NATIVE_COMPILATION de l'instruction CREATE PROCEDURE.|  
-|Fonctionnalité|Procédures stockées numérotées|Les procédures stockées compilées en mode natif ne peuvent pas être numérotées. Supprimez le **;***numéro* de l’instruction **CREATE PROCEDURE**.|  
+|Fonctionnalité|Procédures stockées numérotées|Les procédures stockées compilées en mode natif ne peuvent pas être numérotées. Supprimez le **;**_numéro_ de l’instruction **CREATE PROCEDURE** .|  
 |Fonctionnalité|Instructions INSERT ... VALUES multilignes|Impossible d'insérer plusieurs lignes en utilisant la même instruction **INSERT** dans une procédure stockée compilée en mode natif. Créez des instructions **INSERT** pour chaque ligne.|  
 |Fonctionnalité|Expressions de table communes|Les expressions de table communes ne sont pas prises en charge dans les procédures stockées compilées en mode natif. Réécrire la requête.|  
 |Fonctionnalité|COMPUTE|La clause **COMPUTE** n'est pas prise en charge. Supprimez-la de la requête.|  
-|Fonctionnalité|SELECT INTO|La clause **INTO** n'est pas prise en charge avec l'instruction **SELECT** . Réécrivez la requête ainsi : **INSERT INTO** *Table* **SELECT**.|  
+|Fonctionnalité|SELECT INTO|La clause **INTO** n'est pas prise en charge avec l'instruction **SELECT** . Réécrivez la requête ainsi : **INSERT INTO** _Table_ **SELECT**.|  
 |Fonctionnalité|liste de colonnes d'insertion incomplète|En général, les instructions INSERT doivent spécifier des valeurs pour toutes les colonnes de la table.<br /><br /> Toutefois, nous prenons en charge les contraintes DEFAULT et les colonnes IDENTITY(1,1) sur les tables optimisées en mémoire. Ces colonnes peuvent être (et c’est une obligation dans le cas des colonnes IDENTITY) omises de la liste des colonnes INSERT.|  
 |Fonctionnalité|*Fonction*|Certaines fonctions intégrées ne sont pas prises en charge dans les procédures stockées compilées en mode natif. Supprimez la fonction rejetée de la procédure stockée. Pour plus d’informations sur les fonctions intégrées prises en charge, consultez<br />[Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md), ou<br />[Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Fonctionnalité|CASE|**S’applique à** : [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] et SQL Server à partir de [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Les expressions **CASE** ne sont pas prises en charge dans les requêtes des procédures stockées compilées en mode natif. Créez des requêtes pour chaque cas. Pour plus d’informations, consultez [Implémentation d’une expression CASE dans une procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] et SQL Server (à partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]) prennent en charge les expressions CASE.|  
@@ -180,7 +180,7 @@ ms.locfileid: "52503625"
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transactions qui accèdent aux tables mémoire optimisées  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent s'afficher dans le texte d'un message d'erreur qui implique des transactions qui accèdent aux tables mémoire optimisées, ainsi que l'action corrective à entreprendre pour résoudre l'erreur.  
   
-|Type|Nom   |Résolution|  
+|Type|Créer une vue d’abonnement|Résolution|  
 |----------|----------|----------------|  
 |Fonctionnalité|point d'enregistrement|La création de points de sauvegarde dans des transactions qui accèdent aux tables mémoire optimisées n'est pas prise en charge.|  
 |Fonctionnalité|transaction liée|Les sessions liées ne peuvent pas participer dans des transactions qui accèdent aux tables mémoire optimisées. Ne liez pas la session avant d'exécuter la procédure.|  

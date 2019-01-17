@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ecd7626e28faae1626809e6f45141c93dd4021e3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 48e1ef4a027c3bd62818bb85fd0218e033e620da
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404514"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203878"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -250,8 +250,8 @@ Spécifie l'unité de sauvegarde logique ou physique à utiliser pour l'opérati
 { *logical_device_name* | **@**_logical\_device\_name\_var_ } **S’applique à :** SQL Server   
 Nom logique de l'unité de sauvegarde dans laquelle la base de données est sauvegardée. Le nom logique doit se conformer aux règles en vigueur pour les identificateurs. Fourni comme variable (@*logical_device_name_var*), le nom de l’unité de sauvegarde peut être spécifié sous la forme d’une constante de chaîne (@_logical\_device\_name\_var_**=** logical backup device name) ou d’une variable de type chaîne de caractères, sauf pour les types de données **ntext** ou **text**.  
   
-{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' } **S’applique à** : DISK, TAPE et URL s’appliquent à SQL Server. 
-Spécifie un fichier sur disque ou support à bandes, ou un service de stockage Blob Microsoft Azure. Le format d’URL est utilisé pour créer des sauvegardes dans le service de stockage Microsoft Azure. Pour plus d’informations et d’exemples, consultez [Sauvegarde et restauration SQL Server avec le service de stockage Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Pour obtenir un tutoriel, consultez [Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Microsoft Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
+{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' } **S’applique à :** DISK, TAPE et URL s’appliquent à SQL Server. 
+Spécifie un fichier sur disque ou support à bandes, ou un service de stockage Blob Microsoft Azure. Le format d’URL est utilisé pour créer des sauvegardes dans le service de stockage Microsoft Azure. Pour plus d’informations et d’exemples, consultez [Sauvegarde et restauration SQL Server avec le service de stockage Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Pour suivre un tutoriel, consultez [Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
 
 > [!NOTE] 
 > L’unité de disque NUL supprime toutes les informations qui lui sont envoyées et ne devrait être utilisée qu’à des fins de test. À ne pas utiliser en production.
@@ -259,7 +259,7 @@ Spécifie un fichier sur disque ou support à bandes, ou un service de stockage 
 > [!IMPORTANT]  
 > De [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vous ne pouvez sauvegarder que sur une seule unité de disque lorsque vous effectuez une sauvegarde vers une URL. Pour effectuer une sauvegarde sur plusieurs unités lorsque vous sauvegardez vers une URL, vous devez utiliser [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ainsi que des jetons de signature d’accès partagé. Pour obtenir des exemples de signatures d’accès partagé, consultez [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) et [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
-**L’URL s’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**URL s’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 Une unité de disque n'est pas tenue d'exister pour pouvoir être spécifiée dans une instruction BACKUP. Si l'unité physique existe et si l'option INIT n'est pas spécifiée dans l'instruction BACKUP, la sauvegarde est ajoutée à l'unité.  
  
@@ -295,10 +295,10 @@ Espace réservé indiquant qu'une instruction BACKUP peut contenir jusqu'à troi
 Spécifie les options à utiliser avec une opération de sauvegarde.  
   
 CREDENTIAL  
-**S’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
 S’utilise uniquement lors de la création d’une sauvegarde dans le service de stockage Blob Microsoft Azure.  
   
-FILE_SNAPSHOT **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+FILE_SNAPSHOT **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Utilisé pour créer un instantané Azure des fichiers de base de données lorsque tous les fichiers de base de données SQL Server sont stockés à l’aide du service Azure Blob Storage. Pour plus d’informations, consultez [Fichiers de données SQL Server dans Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). La sauvegarde d’instantanés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée des instantanés Azure des fichiers de base de données (données et fichiers journaux) dont l’état est cohérent. Un ensemble cohérent d’instantanés Azure constitue une sauvegarde, qui est enregistrée dans le fichier de sauvegarde. La seule différence entre `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` et `BACKUP LOG TO URL WITH FILE_SNAPSHOT` est que ce dernier tronque le journal des transactions. Avec la sauvegarde d’instantanés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une fois effectuée la sauvegarde complète initiale dont a besoin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour établir la chaîne de sauvegarde, seule une sauvegarde de fichier journal est nécessaire pour restaurer une base de données vers le point dans le temps correspondant à la sauvegarde de fichier journal. En outre, seules deux sauvegardes de fichier journal sont nécessaires pour restaurer une base de données vers un point dans le temps situé entre les deux sauvegardes de fichier journal.  
     
@@ -771,7 +771,7 @@ Des problèmes de propriété et d'autorisations sur le fichier physique de l'un
 Cette section contient les exemples suivants :  
   
 - A. [Sauvegarde d'une base de données complète](#backing_up_db)  
-- B. [Sauvegarde de la base de données et du journal](#backing_up_db_and_log)  
+- b. [Sauvegarde de la base de données et du journal](#backing_up_db_and_log)  
 - C. [Création d’une sauvegarde de fichiers complète à partir de groupes de fichiers secondaires](#full_file_backup)  
 - D. [Création d’une sauvegarde de fichiers différentielle à partir de groupes de fichiers secondaires](#differential_file_backup)  
 - E. [Création et sauvegarde sur un support de sauvegarde miroir d’une seule famille](#create_single_family_mirrored_media_set)  
@@ -1308,7 +1308,7 @@ Pour créer une sauvegarde, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] doit d
 EXEC sp_pdw_add_network_credentials 'xxx.xxx.xxx.xxx', 'domain1\backupuser', '*****';  
 ```  
   
-### <a name="b-remove-network-credentials-for-the-backup-location"></a>B. Supprimer les informations d’identification réseau pour l’emplacement de sauvegarde  
+### <a name="b-remove-network-credentials-for-the-backup-location"></a>b. Supprimer les informations d’identification réseau pour l’emplacement de sauvegarde  
 L’exemple suivant montre comment supprimer de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] les informations d’identification d’un utilisateur de domaine.  
   
 ```sql  

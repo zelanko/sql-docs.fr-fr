@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor, Query Store
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 5ebd403911b6247964c5f512e45ce64e72290578
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 439967d45e74b0069d3064af64393151f9efc735
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302432"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376601"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Paramétrage d’une base de données à l’aide d’une charge de travail du magasin de requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ Dans l’interface graphique utilisateur de l’Assistant Paramétrage du moteur
 À partir de la ligne de commande (dta.exe), choisissez l’option  **-iq** pour sélectionner la charge de travail dans le magasin de requêtes. 
 
 Deux options supplémentaires, disponibles par l’intermédiaire de la ligne de commande, vous permettent de paramétrer le comportement de l’Assistant Paramétrage du moteur de base de données lors de la sélection de la charge de travail à partir du magasin de requêtes. Ces options ne sont pas disponibles par l’intermédiaire de l’interface graphique utilisateur :
-  1. **Nombre d’événements de charge de travail à paramétrer** : cette option, spécifiée à l’aide de l’argument de ligne de commande  **-n**, permet à l’utilisateur de contrôler le nombre d’événements du Magasin des requêtes qui sont paramétrés. Par défaut, l’Assistant Paramétrage du moteur de base de données utilise la valeur 1000 pour cette option. L’Assistant Paramétrage du moteur de base de données choisit toujours les événements les plus coûteux par durée totale. 
+  1. **Nombre d’événements de charge de travail à paramétrer** : cette option, spécifiée à l’aide de l’argument de ligne de commande  **-n**, permet à l’utilisateur de contrôler le nombre d’événements du magasin des requêtes qui sont paramétrés. Par défaut, l’Assistant Paramétrage du moteur de base de données utilise la valeur 1000 pour cette option. L’Assistant Paramétrage du moteur de base de données choisit toujours les événements les plus coûteux par durée totale. 
   
-  2. **Fenêtres temps des événements à paramétrer** : le Magasin des requêtes pouvant contenir des requêtes qui ont été exécutées il y a longtemps, cette option permet à l’utilisateur de spécifier une fenêtre de temps écoulé (en heures) avant laquelle une requête doit avoir été exécutée pour être prise en compte par l’Assistant Paramétrage du moteur de base de données pour le paramétrage. Cette option est spécifiée à l’aide de l’argument de ligne de commande  **-je**. 
+  2. **Fenêtres temps des événements à paramétrer** : le magasin des requêtes pouvant contenir des requêtes qui ont été exécutées il y a longtemps, cette option permet à l’utilisateur de spécifier une fenêtre de temps écoulé (en heures) avant laquelle une requête doit avoir été exécutée pour être prise en compte par l’Assistant Paramétrage du moteur de base de données pour le paramétrage. Cette option est spécifiée à l’aide de l’argument de ligne de commande  **-je**. 
 
 Pour plus d’informations, consultez [Utilitaire dta](../../tools/dta/dta-utility.md).
 
@@ -48,5 +48,5 @@ La différence entre les options Magasin de requêtes et Cache du plan est que l
 ## <a name="see-also"></a> Voir aussi  
 [Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)     
 [Didacticiel : Assistant Paramétrage du moteur de base de données](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
-[Comment le magasin de requêtes collecte les données](../../relational-databases/performance/how-query-store-collects-data.md)     
+[Comment le Magasin des requêtes collecte les données](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Bonnes pratiques en matière de magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)

@@ -39,12 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ab6a40f49ce64e4e157c4eacccb59b6135ed4ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5e69a2ebd97a554620914ffba5ea20c6a08aa21
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520846"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980325"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -327,7 +327,7 @@ GO
   
  Si l’instruction UPDATE peut modifier plusieurs lignes en mettant à jour la clé de clustering et une ou plusieurs colonnes **text**, **ntext** ou **image**, la mise à jour de ces colonnes est partiellement exécutée en remplaçant toutes ces valeurs.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Les types de données **ntext**, **text** et **image** seront supprimés dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces types de données dans un nouveau développement. Prévoyez de modifier les applications qui les utilisent actuellement. Utilisez plutôt les types de données [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)et [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Mise à jour des données de valeurs élevées  
@@ -497,7 +497,7 @@ UPDATE Person.Address
 SET ModifiedDate = GETDATE();  
 ```  
   
-#### <a name="b-updating-multiple-columns"></a>B. Mise à jour de plusieurs colonnes  
+#### <a name="b-updating-multiple-columns"></a>b. Mise à jour de plusieurs colonnes  
  L'exemple suivant met à jour les valeurs dans les colonnes `Bonus`, `CommissionPct` et `SalesQuota` pour toutes les lignes de la table `SalesPerson`.  
   
 ```sql  
@@ -546,7 +546,7 @@ GO
 ```  
   
 #### <a name="e-using-the-with-commontableexpression-clause"></a>E. Utilisation de la clause WITH common_table_expression  
- L'exemple suivant met à jour la valeur `PerAssemnblyQty` pour l'ensemble des parties et des composants utilisés directement ou indirectement pour créer `ProductAssemblyID 800`. L’expression de table commune retourne une liste hiérarchique des parties utilisées directement pour générer `ProductAssemblyID 800` et des parties utilisées pour générer ces composants, et ainsi de suite. Seules les lignes renvoyées par l'expression de table commune récursive sont modifiées.  
+ L'exemple suivant met à jour la valeur `PerAssemblyQty` pour l'ensemble des parties et des composants utilisés directement ou indirectement pour créer `ProductAssemblyID 800`. L’expression de table commune retourne une liste hiérarchique des parties utilisées directement pour générer `ProductAssemblyID 800` et des parties utilisées pour générer ces composants, et ainsi de suite. Seules les lignes renvoyées par l'expression de table commune récursive sont modifiées.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -762,7 +762,7 @@ GO
  Les exemples présentés dans cette section montrent comment mettre à jour des lignes dans une table cible distante en utilisant un [serveur lié](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ou une [fonction d’ensemble de lignes](../../t-sql/functions/rowset-functions-transact-sql.md) pour référencer la table distante.  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. Mise à jour de données dans une table distante en utilisant un serveur lié  
- L'exemple suivant met à jour une table sur un serveur distant. L’exemple commence par créer un lien vers la source de données distante en utilisant [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Le nom du serveur lié, `MyLinkServer`, est ensuite spécifié dans un nom d'objet en quatre parties qui se présente sous la forme server.catalog.schema.object. Notez que vous devez spécifier un nom de serveur valide pour `@datasrc`.  
+ L'exemple suivant met à jour une table sur un serveur distant. L’exemple commence par créer un lien vers la source de données distante en utilisant [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Le nom du serveur lié, `MyLinkedServer`, est ensuite spécifié dans un nom d'objet en quatre parties qui se présente sous la forme server.catalog.schema.object. Notez que vous devez spécifier un nom de serveur valide pour `@datasrc`.  
   
 ```sql  
 USE master;  
@@ -770,7 +770,7 @@ GO
 -- Create a link to the remote data source.   
 -- Specify a valid server name for @datasrc as 'server_name' or 'server_nameinstance_name'.  
   
-EXEC sp_addlinkedserver @server = N'MyLinkServer',  
+EXEC sp_addlinkedserver @server = N'MyLinkedServer',  
     @srvproduct = N' ',  
     @provider = N'SQLNCLI10',   
     @datasrc = N'<server name>',  
@@ -781,7 +781,7 @@ GO
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-UPDATE MyLinkServer.AdventureWorks2012.HumanResources.Department  
+UPDATE MyLinkedServer.AdventureWorks2012.HumanResources.Department  
 SET GroupName = N'Public Relations'  
 WHERE DepartmentID = 4;  
 ```  
@@ -790,18 +790,18 @@ WHERE DepartmentID = 4;
  L’exemple suivant met à jour une ligne dans une table distante en spécifiant la fonction d’ensemble de lignes [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). Le nom de serveur lié créé dans l'exemple précédent est utilisé dans cet exemple.  
   
 ```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
+UPDATE OPENQUERY (MyLinkedServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
 SET GroupName = 'Sales and Marketing';  
 ```  
   
 #### <a name="q-updating-data-in-a-remote-table-by-using-the-opendatasource-function"></a>Q. Mise à jour de données dans une table distante en utilisant la fonction OPENDATASOURCE  
- L’exemple suivant insère une ligne dans une table distante en spécifiant la fonction d’ensemble de lignes [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Spécifiez un nom de serveur valide pour la source de données en utilisant le format *server_name* ou *server_name\instance_name*. Vous devrez peut-être configurer l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les requêtes distribuées appropriées. Pour plus d’informations, consultez la page [Option de configuration du serveur : requêtes distribuées ad hoc](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
-  
-```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
-SET GroupName = 'Sales and Marketing';  
-```  
-  
+ L’exemple suivant met à jour une ligne dans une table distante en spécifiant la fonction d’ensemble de lignes [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Spécifiez un nom de serveur valide pour la source de données en utilisant le format *server_name* ou *server_name\instance_name*. Vous devrez peut-être configurer l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les requêtes distribuées appropriées. Pour plus d’informations, consultez la page [Option de configuration du serveur : requêtes distribuées ad hoc](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
+
+```sql
+UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=SSPI').AdventureWorks2012.HumanResources.Department
+SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
+```
+
 ###  <a name="LOBValues"></a> Mise à jour de types de données Large Object (LOB)  
  Les exemples de cette section illustrent des méthodes de mise à jour de valeurs dans les colonnes définies avec les types de données LOB.  
   

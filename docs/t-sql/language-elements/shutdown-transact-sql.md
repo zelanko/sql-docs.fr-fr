@@ -22,12 +22,12 @@ ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98a5cdb6b02cda84424cb305a4ecc63e38056bdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 602c8f5d1cded1c5d19c520087ceac1b9c9124d5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797267"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591893"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,11 +63,11 @@ SHUTDOWN [ WITH NOWAIT ]
   
  Les outils et méthodes suivants peuvent également être utilisés pour arrêter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chacun d'entre eux génère un point de contrôle dans toutes les bases de données. Vous pouvez vider les données validées du cache de données et arrêter le serveur :  
   
--   à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;  
+-   À l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   En exécutant **net stop mssqlserver** à partir d’une invite de commandes pour une instance par défaut, ou en exécutant **net stop mssql$***instancename* à partir d’une invite de commandes pour une instance nommée.  
+-   En exécutant **net stop mssqlserver** à partir d’une invite de commandes pour une instance par défaut, ou en exécutant **net stop mssql$**_nom_instance_ à partir d’une invite de commandes pour une instance nommée.  
   
--   à l'aide des Services du Panneau de configuration ;  
+-   À l'aide des Services du Panneau de configuration.  
   
  Si **sqlservr.exe** a été lancé à partir d’une invite de commandes, appuyez sur Ctrl+C pour arrêter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sachez toutefois que Ctrl+C ne génère pas de point de contrôle.  
   

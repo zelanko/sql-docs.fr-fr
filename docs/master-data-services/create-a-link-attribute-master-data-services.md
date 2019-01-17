@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating link attributes
@@ -15,12 +14,12 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1f309ad8d7842b678fa47ed5786023b0bb042b63
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4bcd5917c6215fc263283fb5d66269fab6645fb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703149"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779201"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Créer un attribut de lien (Master Data Services)
 
@@ -46,7 +45,7 @@ ms.locfileid: "51703149"
 |colonne|Description|  
 |------------|-----------------|  
 |État|État de l’attribut.<br /><br /> Quand vous cliquez sur Enregistrer, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que l’attribut est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’un attribut, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
-|Nom   |Nom de l'attribut.|  
+|Créer une vue d’abonnement|Nom de l'attribut.|  
 |Nom complet|Nom de l’attribut.|  
 |Description|Description de l’attribut.|  
 |Largeur d’affichage en pixels|Largeur de l’attribut.|  
@@ -55,13 +54,13 @@ ms.locfileid: "51703149"
   
  Quand vous cliquez sur un attribut, les informations suivantes s’affichent.  
   
--   **Créé par**: nom de l’utilisateur qui a créé l’attribut.  
+-   **Créé par** : nom de l’utilisateur qui a créé l’attribut.  
   
--   **Le**: date et heure de création de l’attribut.  
+-   **Le** : date et heure de création de l’attribut.  
   
 -   **Mis à jour par**: nom du dernier utilisateur qui a mis à jour l’attribut.  
   
--   **Le**: date et heure de la dernière mise à jour de l’attribut.  
+-   **Le** : date et heure de la dernière mise à jour de l’attribut.  
   
 ### <a name="to-create-a-link-attribute"></a>Pour créer un attribut de lien  
   

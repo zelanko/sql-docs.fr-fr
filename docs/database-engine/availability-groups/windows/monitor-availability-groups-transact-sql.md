@@ -1,6 +1,7 @@
 ---
-title: Surveiller des groupes de disponibilité (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Superviser les groupes de disponibilité à l’aide de Transact-SQL (T-SQL)
+description: Description de la supervision des groupes de disponibilité Always On à l’aide de Transact-SQL (T-SQL).
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51b67b193847ea554052d26ac55c8e9b7919478f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d14cb0b60074ce7cd2c11c80817ec5f0043651a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832357"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209428"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Surveiller des groupes de disponibilité (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "47832357"
  [SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md) (fonction)  
  Retourne des informations de propriété de serveur indiquant si [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est activé et, si tel est le cas, s'il a démarré sur l'instance de serveur.  
   
- **Noms de colonne :** IsHadrEnabled, HadrManagerStatus  
+ **Noms de colonne :** IsHadrEnabled, HadrManagerStatus  
   
 ##  <a name="WSFC"></a> Surveillance des groupes de disponibilité sur le cluster WSFC  
  Pour surveiller le cluster WSFC (clustering de basculement Windows Server) qui héberge une instance de serveur locale activée pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], utilisez les vues suivantes :  
@@ -188,7 +189,7 @@ ms.locfileid: "47832357"
 >  L'emplacement du réplica principal constitue la source d'autorité pour un groupe de disponibilité.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les compteurs de performances [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pour les bases de données de disponibilité (l’objet de performances **SQLServer:Database Replica** ), consultez [SQL Server, réplica de base de données](../../../relational-databases/performance-monitor/sql-server-database-replica.md). De plus, pour surveiller l’activité des journaux des transactions sur des bases de données de disponibilité, utilisez les compteurs suivants de l’objet de performance **SQLServer:Databases** : **Temps d’attente de vidage du journal (ms)**, **Vidages du journal/s**, **Journaliser les absences dans le cache/s du pool**, **Journaliser les lectures du disque/s du pool**et **Journaliser les requêtes/s du pool**. Pour plus d’informations, voir [SQL Server, objet Databases](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Pour plus d’informations sur les compteurs de performances [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pour les bases de données de disponibilité (l’objet de performances **SQLServer:Database Replica** ), consultez [SQL Server, réplica de base de données](../../../relational-databases/performance-monitor/sql-server-database-replica.md). De plus, pour superviser l’activité des journaux des transactions sur des bases de données de disponibilité, utilisez les compteurs suivants de l’objet de performance **SQLServer:Databases** : **Temps d’attente de vidage du journal (ms)**, **Vidages du journal/s**, **Journaliser les absences dans le cache/s du pool**, **Journaliser les lectures du disque/s du pool** et **Journaliser les requêtes/s du pool**. Pour plus d’informations, voir [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Surveillance des écouteurs de groupe de disponibilité  
  Pour surveiller les écouteurs de groupe de disponibilité sur les sous-réseaux du cluster WSFC, utilisez les vues suivantes :  

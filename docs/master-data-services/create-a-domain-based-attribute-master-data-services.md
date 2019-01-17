@@ -5,8 +5,7 @@ ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], creating
@@ -16,12 +15,12 @@ ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1752fd6736ef8900c22054dfa8f7ec6799d981fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23fe106f296860d121d7315daf669855c792b64d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685917"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759211"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Créer un attribut basé sur un domaine (Master Data Services)
 
@@ -46,7 +45,7 @@ ms.locfileid: "47685917"
 |colonne|Description|  
 |------------|-----------------|  
 |État|État de l’attribut.<br /><br /> Quand vous cliquez sur Enregistrer, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que l’attribut est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’un attribut, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
-|Nom   |Nom de l'attribut.|  
+|Créer une vue d’abonnement|Nom de l'attribut.|  
 |Nom complet|Nom de l’attribut.|  
 |Description|Description de l’attribut.|  
 |Largeur d’affichage en pixels|Largeur de l’attribut.|  
@@ -55,13 +54,13 @@ ms.locfileid: "47685917"
   
  Quand vous cliquez sur un attribut, les informations suivantes s’affichent.  
   
--   **Créé par**: nom de l’utilisateur qui a créé l’attribut.  
+-   **Créé par** : nom de l’utilisateur qui a créé l’attribut.  
   
--   **Le**: date et heure de création de l’attribut.  
+-   **Le** : date et heure de création de l’attribut.  
   
 -   **Mis à jour par**: nom du dernier utilisateur qui a mis à jour l’attribut.  
   
--   **Le**: date et heure de la dernière mise à jour de l’attribut.  
+-   **Le** : date et heure de la dernière mise à jour de l’attribut.  
   
 ### <a name="to-create-a-domain-based-attribute"></a>Pour créer un attribut basé sur un domaine  
   
@@ -104,7 +103,7 @@ ms.locfileid: "47685917"
 ## <a name="see-also"></a> Voir aussi  
  [Attributs basés sur un domaine &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
  [Créer une hiérarchie dérivée &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [Changer le nom d’un attribut et un type de données &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Modifier le nom d’un attribut et un type de données &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Supprimer un attribut &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   

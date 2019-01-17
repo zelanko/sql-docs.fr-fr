@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 47d911c6a05af96d042211f98b5365230dd57084
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d89d70b7aae73acd965f053a993432c62878351f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525201"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979645"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configurer SQL Server pour envoyer des commentaires à Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ Les clients d’entreprise peuvent configurer les paramètres de stratégie de g
     
     Nom de l'entrée de Registre = CustomerFeedback
     
-    Type d’entrée DWORD : 0 pour accepter ; 1 pour refuser
+    Type d'entrée DWORD : 0 pour refuser ; 1 pour accepter
     
     {InstanceID} fait référence au type d’instance et à l’instance, comme dans les exemples suivants :
 
@@ -91,18 +91,18 @@ Les clients d’entreprise peuvent configurer les paramètres de stratégie de g
     
     Nom de l'entrée de Registre = CustomerFeedback
     
-    Type d’entrée DWORD : 0 pour accepter ; 1 pour refuser
+    Type d'entrée DWORD : 0 pour refuser ; 1 pour accepter
 
 > [!NOTE]
 > {Major Version} fait référence à la version de SQL Server, par exemple, 140 pour SQL Server 2017
 
-- Pour SQL Server Management Studio :
+- Pour SQL Server Management Studio 17 :
   
-    Subkey = HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\140
+    Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0
 
-    Nom de l'entrée de Registre = CustomerFeedback
+    RegEntry name = UserFeedbackOptIn
 
-    Type d’entrée DWORD : 0 pour accepter ; 1 pour refuser
+    Type d'entrée DWORD : 0 pour refuser ; 1 pour accepter
 
     De plus, SSMS 17.x est basé sur l’interpréteur de commandes (shell) Visual Studio 2015, et l’installation de Visual Studio active les commentaires client par défaut.  
 
@@ -114,6 +114,13 @@ Les clients d’entreprise peuvent configurer les paramètres de stratégie de g
 
     La stratégie de groupe basée sur le Registre pour ces sous-clés de Registre est respectée par la collecte des données d’utilisation de SQL Server 2017.
 
+- Pour SQL Server Management Studio 18 :
+    
+    Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell
+
+    RegEntry name = UserFeedbackOptIn
+
+    Type d'entrée DWORD : 0 pour refuser ; 1 pour accepter
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>Définir des sous-clés de Registre pour la collecte des vidages sur incident
 
 De façon similaire au comportement d’une version antérieure de SQL Server, les clients SQL Server Enterprise 2017 peuvent configurer les paramètres de stratégie de groupe sur le serveur afin d’accepter ou de refuser la collecte des vidages sur incident. Pour cela, il leur faut configurer une stratégie basée sur le Registre. Voici les clés de Registre et les paramètres adéquats : 
@@ -124,7 +131,7 @@ De façon similaire au comportement d’une version antérieure de SQL Server, l
 
     Nom RegEntry = EnableErrorReporting
 
-    Type d’entrée DWORD : 0 pour accepter ; 1 pour refuser
+    Type d'entrée DWORD : 0 pour refuser ; 1 pour accepter
  
     {InstanceID} fait référence au type d’instance et à l’instance, comme dans les exemples suivants : 
 
@@ -139,7 +146,7 @@ De façon similaire au comportement d’une version antérieure de SQL Server, l
 
     Nom RegEntry = EnableErrorReporting
 
-    Type d’entrée DWORD : 0 pour accepter ; 1 pour refuser
+    Type d'entrée DWORD : 0 pour refuser ; 1 pour accepter
 
 > [!NOTE]
 > {Major Version} fait référence à la version de SQL Server. Par exemple, « 140 » fait référence à SQL Server 2017.

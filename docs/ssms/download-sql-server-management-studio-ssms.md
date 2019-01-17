@@ -1,7 +1,7 @@
 ---
 title: Télécharger SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/22/2018
+ms.date: 12/19/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: efc8c7ec6408e2f6c5fe7fb2262d581e82c4b1b9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: f186989b4b6edad18333bd93cc89a69c65c2a977
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712080"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590023"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,7 +43,7 @@ Utilisez SQL Server Management Studio (SSMS) pour interroger, concevoir et gére
 
 **SSMS est gratuit !**
 
-**[La préversion publique 5 de SSMS 18.0 est maintenant disponible](#ssms-180-preview-5). Il s’agit de la dernière génération de *SQL Server Management Studio*, qui offre une prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
+**[La préversion publique 6 de SSMS 18.0, maintenant disponible](#ssms-180-preview-6), est la dernière génération de *SQL Server Management Studio* et offre une prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9.1 est la version en disponibilité générale actuelle de SSMS
 
@@ -54,12 +54,12 @@ Utilisez SQL Server Management Studio (SSMS) pour interroger, concevoir et gére
 
 - Numéro de version : 17.9.1<br>
 - Numéro de build : 14.0.17289.0<br>
-- Date de publication : 21 novembre 2018
+- Date de publication : 21 novembre 2018
 
 ### <a name="available-languages-ssms-1791"></a>Langues disponibles (SSMS 17.9.1)
 
 > [!NOTE]
-> Les versions non anglaises localisées de SSMS 17.x nécessitent la [mise à jour de sécurité KB 2862966](https://support.microsoft.com/kb/2862966) si l’installation est effectuée sur : Windows 8, Windows 7, Windows Server 2012 et Windows Server 2008 R2.
+> Les versions non anglaises localisées de SSMS 17.x nécessitent la [mise à jour de sécurité KB 2862966](https://support.microsoft.com/kb/2862966) si l’installation est effectuée sur : Windows 8, Windows 7, Windows Server 2012 et Windows Server 2008 R2.
 
 [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
@@ -76,19 +76,19 @@ Pour plus d’informations sur SSMS 17.9.1, consultez le [journal des modificat
   * Vérifiez que toutes les dernières mises à jour du système d’exploitation sont installées sur l’ordinateur.
   * Les actions indiquées sont généralement nécessaires une seule fois. Dans certains cas, un redémarrage est nécessaire pendant les mises à niveau supplémentaires appliquées à la même version principale de SSMS. Pour les mises à niveau mineures, tous les prérequis de SSMS sont déjà installés sur l’ordinateur.
 
-## <a name="ssms-180-preview-5"></a>SSMS 18.0 (préversion 5)
+## <a name="ssms-180-preview-6"></a>SSMS 18.0 (préversion 6)
 
-**La préversion publique 5 de SSMS 18.0, maintenant disponible, est la dernière génération de *SQL Server Management Studio* et offre une prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
+**La préversion publique 6 de SSMS 18.0, maintenant disponible, est la dernière génération de *SQL Server Management Studio* et offre une prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-**[![télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 18.0 (préversion 5)](https://go.microsoft.com/fwlink/?linkid=2041155)**
+**[![télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 18.0 (préversion 6)](https://go.microsoft.com/fwlink/?linkid=2052501)**
 
-La *préversion 5* est la deuxième préversion publique de SSMS 18.0. Si vous avez une préversion de SSMS 18.0 précédente installée, désinstallez-la avant d’installer la préversion 5 de SSMS 18.0.
+La *préversion 6* est la dernière préversion publique de SSMS 18.0. Si une préversion précédente de SSMS 18.0 est installée, désinstallez-la avant d’installer la préversion 6 de SSMS 18.0.
 
 **Informations sur la version**
 
-- Numéro de version : 18.0 (préversion 5)<br>
-- Numéro de build : 15.0.18068.0<br>
-- Date de publication : 15 novembre 2018
+- Numéro de version : 18.0 (préversion 6)<br>
+- Numéro de build : 15.0.18075.0<br>
+- Date de publication : 18 décembre 2018
 
 Si vous avez des commentaires ou des suggestions, ou si vous souhaitez signaler des problèmes, la meilleure façon de contacter l’équipe SSMS est de passer par [UserVoice](https://aka.ms/sqlfeedback).
 
@@ -97,34 +97,34 @@ L’installation de SSMS 18.x ne met pas à niveau ni ne remplace les versions�
 Si un ordinateur contient des installations côte à côte de SSMS, vérifiez que vous démarrez la version adaptée à vos besoins spécifiques. La version la plus récente s’intitule *Microsoft SQL Server Management Studio 18* :
  
 
-## <a name="available-languages-ssms-180-preview-5"></a>Langues disponibles (préversion 5 de SSMS 18.0)
+## <a name="available-languages-ssms-180-preview-6"></a>Langues disponibles (préversion 6 de SSMS 18.0)
 
 Cette version de SSMS peut être installée dans les langues suivantes :
 
-SQL Server Management Studio 18.0 (préversion 5) :<br>
-[Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x40a)
+SQL Server Management Studio 18.0 (préversion 6) :<br>
+[Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x40a)
 
 Package de mise à niveau de SQL Server Management Studio 18.0 (met à niveau vers 18.0) :<br>
-Aucune option de mise à niveau n’est disponible à l’heure actuelle. Si vous avez une préversion de SSMS 18.0 précédente installée, désinstallez-la avant d’installer la préversion 5 de SSMS 18.0.
+Aucune option de mise à niveau n’est disponible à l’heure actuelle. Si une préversion précédente de SSMS 18.0 est installée, désinstallez-la avant d’installer la préversion 6 de SSMS 18.0.
 
 > [!NOTE]
 > Le module SQL Server PowerShell est une installation distincte que vous pouvez effectuer via PowerShell Gallery. Pour plus d'informations, consultez la page [Télécharger le module SQL Server PowerShell](download-sql-server-ps-module.md).
 
 
-## <a name="new-in-this-release-ssms-180-preview-5"></a>Nouveautés de cette version (préversion 5 de SSMS 18.0)
+## <a name="new-in-this-release-ssms-180-preview-6"></a>Nouveautés de cette version (préversion 6 de SSMS 18.0)
 
-SSMS 18.0 (préversion 5) est la dernière version de SQL Server Management Studio. La génération 18.x de SSMS prend en charge presque tous les composants de SQL Server 2008 à la préversion de SQL Server 2019.
+SSMS 18.0 (préversion 6) est la dernière version de SQL Server Management Studio. La génération 18.x de SSMS prend en charge presque tous les composants de SQL Server 2008 à la préversion de SQL Server 2019.
 
 Pour plus d’informations sur les nouveautés de cette version, consultez [le journal des modifications SSMS](sql-server-management-studio-changelog-ssms.md).
 
 
-## <a name="supported-sql-offerings-ssms-180-preview-5"></a>Produits SQL pris en charge (préversion 5 de SSMS 18.0)
+## <a name="supported-sql-offerings-ssms-180-preview-6"></a>Offres SQL prises en charge (préversion 6 de SSMS 18.0)
 
 * Cette version de SSMS fonctionne avec toutes les [versions prises en charge de SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) et offre le meilleur niveau de prise en charge pour une utilisation des dernières fonctionnalités cloud d’Azure SQL Database et Azure SQL Data Warehouse.
 * Par ailleurs, SSMS 18.x peut être installé côte à côte avec SSMS 17.x, SSMS 16.x ou SSMS SQL Server 2014 et versions antérieures.
 * SQL Server Integration Services (SSIS) : SSMS version 17.x ou ultérieure ne prend pas en charge la connexion au service SQL Server Integration Services hérité. Pour vous connecter à une version antérieure du service Integration Services hérité, utilisez la version de SSMS alignée sur la version de SQL Server. Par exemple, utilisez SSMS 16.x pour vous connecter au service SQL Server 2016 Integration Services hérité. SSMS 17.x et SSMS 16.x peuvent être installés côte à côte sur le même ordinateur. Depuis la version de SQL Server 2012, la base de données du catalogue SSIS, SSISDB, est la méthode recommandée pour stocker, gérer, exécuter et surveiller des packages Integration Services. Pour plus d’informations, consultez [Catalogue SSIS](../integration-services/catalog/ssis-catalog.md).
 
-## <a name="supported-operating-systems-ssms-180-preview-5"></a>Systèmes d’exploitation pris en charge (préversion 5 de SSMS 18.0)
+## <a name="supported-operating-systems-ssms-180-preview-6"></a>Systèmes d’exploitation pris en charge (préversion 6 de SSMS 18.0)
 
 Cette version de SSMS prend en charge les plateformes 64 bits suivantes quand elle est utilisée avec le dernier Service Pack :
 
@@ -142,9 +142,9 @@ Cette version de SSMS prend en charge les plateformes 64 bits suivantes quand 
 
 
 
-## <a name="release-notes-ssms-180-preview-5"></a>Notes de publication (préversion 5 de SSMS 18.0)
+## <a name="release-notes-ssms-180-preview-6"></a>Notes de publication (préversion 6 de SSMS 18.0)
 
-Voici une liste de problèmes généralement rencontrés avec la préversion 5 de SSMS 18.0 :
+Les problèmes connus de la préversion 6 de SSMS 18.0 sont les suivants :
 
 SSMS
 
@@ -165,7 +165,7 @@ SSMS
 
 ## <a name="see-also"></a> Voir aussi
 
-- [Didacticiel : SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
+- [Didacticiel : SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [Documentation de SQL Server Management Studio](sql-server-management-studio-ssms.md)
 - [Service Packs et mises à jour supplémentaires](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [Télécharger SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md)

@@ -1,6 +1,7 @@
 ---
-title: Événements étendus des groupes de disponibilité Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Configurer les événements étendus pour les groupes de disponibilité
+description: SQL Server définit des événements étendus qui sont spécifiques aux groupes de disponibilité Always On. Vous pouvez monitorer ces événements étendus dans une session pour mieux diagnostiquer la cause racine d’un problème lié à un groupe de disponibilité.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b33f51b741d9bb97882fb2662111833bb4937a0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413196"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207568"
 ---
-# <a name="always-on-availability-groups-extended-events"></a>Événements étendus des groupes de disponibilité Always On
+# <a name="configure-extended-events-for-always-on-availability-groups"></a>Configurer les événements étendus pour les groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL Server définit des événements étendus qui sont spécifiques aux groupes de disponibilité Always On. Vous pouvez monitorer ces événements étendus dans une session pour mieux diagnostiquer la cause racine d’un problème lié à un groupe de disponibilité. Vous pouvez afficher les événements étendus des groupes de disponibilité à l’aide de la requête suivante :  
   
@@ -80,7 +81,7 @@ Pour plus d’informations sur certains des événements couverts par alwayson_h
   
  [availability_replica_manager_state](#BKMK_availability_replica_manager_state)  
   
- [error_reported (1480) : changement du rôle de réplica de base de données](#BKMK_error_reported_1480)  
+ [error_reported (1480) : Le rôle de réplica de base de données a changé](#BKMK_error_reported_1480)  
   
 ###  <a name="BKMK_availability_replica_state_change "></a> availability_replica_state_change  
  Se produit en cas de changement de l’état d’un réplica de disponibilité. La création d’un groupe de disponibilité ou la participation à un réplica de disponibilité peut déclencher cet événement. Il est utile pour diagnostiquer les échecs de basculement automatique. Il peut également être utilisé pour suivre les étapes de basculement.  
@@ -89,13 +90,13 @@ Pour plus d’informations sur certains des événements couverts par alwayson_h
   
 |colonne|Description|  
 |------------|-----------------|  
-|Nom   |availability_replica_state_change|  
+|Créer une vue d’abonnement|availability_replica_state_change|  
 |Catégorie|alwayson|  
 |Channel|Opérationnels|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
-|Nom   |Type_name|Description|  
+|Créer une vue d’abonnement|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité.|  
@@ -120,13 +121,13 @@ GO
   
 |colonne|Description|  
 |------------|-----------------|  
-|Nom   |availability_group_lease_expired|  
+|Créer une vue d’abonnement|availability_group_lease_expired|  
 |Catégorie|alwayson|  
 |Channel|Opérationnels|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
-|Nom   |Type_name|Description|  
+|Créer une vue d’abonnement|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité.|  
@@ -146,7 +147,7 @@ GO
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
 |Catégorie|alwayson|  
@@ -154,7 +155,7 @@ GO
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
-|Nom   |Type_name|Description|  
+|Créer une vue d’abonnement|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité.|  
@@ -185,7 +186,7 @@ GO
   
 |colonne|Description|  
 |------------|-----------------|  
-|Nom   |error_reported<br /><br /> numéros à filtrer : 35201, 35202, 35206, 35204, 35207, 9642, 9666, 9691, 9692, 9693, 28034, 28036, 28080, 28091, 33309|  
+|Créer une vue d’abonnement|error_reported<br /><br /> numéros à filtrer : 35201, 35202, 35206, 35204, 35207, 9642, 9666, 9691, 9692, 9693, 28034, 28036, 28080, 28091, 33309|  
 |Catégorie|erreurs|  
 |Channel|Administratifs|  
   
@@ -248,7 +249,7 @@ GO
   
 |colonne|Description|  
 |------------|-----------------|  
-|Nom   |data_movement_suspend_resume|  
+|Créer une vue d’abonnement|data_movement_suspend_resume|  
 |Catégorie|Alwayson|  
 |Channel|Opérationnels|  
   
@@ -256,7 +257,7 @@ GO
   
 ||||  
 |-|-|-|  
-|Nom   |Type_name|Description|  
+|Créer une vue d’abonnement|Type_name|Description|  
 |availability_group_id|guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité (le cas échéant).|  
 |availability_replica_id|guid|ID du réplica de disponibilité.|  
@@ -291,18 +292,18 @@ GO
   
 |colonne|Description|  
 |------------|-----------------|  
-|Nom   |alwayson_ddl_execution|  
+|Créer une vue d’abonnement|alwayson_ddl_execution|  
 |Catégorie|alwayson|  
 |Channel|Analytiques|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
-|Nom   |Type_name|Description|  
+|Créer une vue d’abonnement|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité.|  
-|ddl_action|alwayson_ddl_action|Indique le type d’action DDL : CREATE, ALTER ou DROP.|  
-|ddl_phase|ddl_opcode|Indique la phase de l’opération DDL : BEGIN, COMMIT ou ROLLBACK.|  
+|ddl_action|alwayson_ddl_action|Indique le type d’action DDL : CREATE, ALTER ou DROP.|  
+|ddl_phase|ddl_opcode|Indique la phase de l’opération DDL : BEGIN, COMMIT ou ROLLBACK.|  
 |.|unicode_string|Texte de l’instruction exécutée.|  
   
 #### <a name="alwaysonhealth-session-definition"></a>Définition de la session alwayson_health  
@@ -324,13 +325,13 @@ GO
   
 |colonne|Description|  
 |------------|-----------------|  
-|Nom   |availability_replica_manager_state_change|  
+|Créer une vue d’abonnement|availability_replica_manager_state_change|  
 |Catégorie|alwayson|  
 |Channel|Opérationnels|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
-|Nom   |Type_name|Description|  
+|Créer une vue d’abonnement|Type_name|Description|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|État actuel du gestionnaire de réplicas de disponibilité.<br /><br /> En ligne<br /><br /> Hors connexion<br /><br /> WaitingForClusterCommunication|  
   
@@ -348,14 +349,14 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_error_reported_1480"></a>error_reported (1480) : changement du rôle de réplica de base de données  
+###  <a name="BKMK_error_reported_1480"></a> error_reported (1480) : Le rôle de réplica de base de données a changé  
  Cet événement error_reported filtré se produit de façon asynchrone après un changement de rôle de réplica de disponibilité. Il indique la base de données de disponibilité qui ne parvient pas à changer son rôle attendu durant le processus de basculement.  
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
 |colonne|Description|  
 |------------|-----------------|  
-|Nom   |error_reported<br /><br /> Numéro d’erreur 1480 : La base de données REPLICATION_TYPE_MSG « DATABASE_NAME » change les rôles de « OLD_ROLE » en « NEW_ROLE » en raison de REASON_MSG|  
+|Créer une vue d’abonnement|error_reported<br /><br /> Numéro d’erreur 1480 : La base de données REPLICATION_TYPE_MSG « DATABASE_NAME » change les rôles de « OLD_ROLE » en « NEW_ROLE » en raison de REASON_MSG|  
 |Catégorie|erreurs|  
 |Channel|Administratifs|  
   

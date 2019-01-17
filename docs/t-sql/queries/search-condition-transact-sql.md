@@ -38,12 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ef9f5377ffef172436d7e84164a20f1d92a9a325
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699797"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979515"
 ---
 # <a name="search-condition-transact-sql"></a>Condition de recherche (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -190,7 +190,7 @@ ms.locfileid: "51699797"
  Définit la recherche d'une expression, selon que cette dernière est incluse ou non dans une liste. L'expression de recherche peut être une constante ou un nom de colonne ; par ailleurs, la liste peut être un ensemble de constantes ou, plus généralement, une sous-requête. Mettez la liste des valeurs entre parenthèses. Pour plus d’informations, consultez [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md).  
   
  *subquery*  
- Peut être considéré comme une instruction SELECT restreinte et est similaire à \<query_expresssion> dans l’instruction SELECT. La clause ORDER BY et le mot clé INTO ne sont pas autorisés. Pour plus d’informations, consultez [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ Peut être considéré comme une instruction SELECT restreinte et est similaire à \<query_expression> dans l’instruction SELECT. La clause ORDER BY et le mot clé INTO ne sont pas autorisés. Pour plus d’informations, consultez [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
  ALL  
  Utilisé avec un opérateur de comparaison et une sous-requête. Retourne TRUE pour \<predicate> si toutes les valeurs récupérées pour la sous-requête satisfont à la comparaison. Retourne FALSE si certaines valeurs ne satisfont pas à la comparaison ou si la sous-requête ne retourne aucune ligne à l’instruction externe. Pour plus d’informations, consultez [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).  
@@ -217,7 +217,7 @@ FROM Production.ProductPhoto
 WHERE LargePhotoFileName LIKE '%greena_%' ESCAPE 'a' ;  
 ```  
   
-### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>B. Utilisation de la syntaxe WHERE et LIKE avec des données Unicode  
+### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>b. Utilisation de la syntaxe WHERE et LIKE avec des données Unicode  
  Cet exemple utilise la clause `WHERE` pour récupérer l'adresse postale de toutes les sociétés qui se trouvent hors des États-Unis (`US`) et dans une ville dont le nom commence par `Pa`.  
   
 ```  

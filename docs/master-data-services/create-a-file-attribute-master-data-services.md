@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating file attributes [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: de33b9191f38c862d8f5092f9801795fc791ddb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aec5467169b75e22e599c30dbacddaf31acbd58c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720747"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747872"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Créer un attribut de fichier (Master Data Services)
 
@@ -43,7 +42,7 @@ ms.locfileid: "47720747"
 |colonne|Description|  
 |------------|-----------------|  
 |État|État de l’attribut.<br /><br /> Quand vous cliquez sur Enregistrer, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que l’attribut est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’un attribut, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
-|Nom   |Nom de l'attribut.|  
+|Créer une vue d’abonnement|Nom de l'attribut.|  
 |Nom complet|Nom de l’attribut.|  
 |Description|Description de l’attribut.|  
 |Largeur d’affichage en pixels|Largeur de l’attribut.|  
@@ -52,13 +51,13 @@ ms.locfileid: "47720747"
   
  Quand vous cliquez sur un attribut, les informations suivantes s’affichent.  
   
--   **Créé par**: nom de l’utilisateur qui a créé l’attribut.  
+-   **Créé par** : nom de l’utilisateur qui a créé l’attribut.  
   
--   **Le**: date et heure de création de l’attribut.  
+-   **Le** : date et heure de création de l’attribut.  
   
 -   **Mis à jour par**: nom du dernier utilisateur qui a mis à jour l’attribut.  
   
--   **Le**: date et heure de la dernière mise à jour de l’attribut.  
+-   **Le** : date et heure de la dernière mise à jour de l’attribut.  
   
 ### <a name="to-create-a-file-attribute"></a>Pour créer un attribut de fichier  
   

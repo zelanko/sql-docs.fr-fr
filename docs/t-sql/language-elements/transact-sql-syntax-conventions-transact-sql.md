@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd93fef0add8f773a1acac0635c13f59d8bd5cab
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b85685dd15e6eb7dd2350bdeda5befb28959c281
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700967"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202798"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Conventions de la syntaxe Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -111,9 +111,9 @@ La plupart des exemples de code figurant dans le Guide de référence [!INCLUDE[
 De nombreux exemples de code font précéder les constantes de chaînes de caractères Unicode de la lettre **N**. Sans le préfixe **N**, la chaîne est convertie en page de codes par défaut de la base de données. Cette page risque de ne pas reconnaître certains caractères.  
   
 ## <a name="applies-to-references"></a>Informations de référence de type « S'applique à »  
-Les informations de référence sur [!INCLUDE[tsql](../../includes/tsql-md.md)] comprennent des articles sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (entre [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
+Les informations de référence sur [!INCLUDE[tsql](../../includes/tsql-md.md)] comprennent des articles sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
 
-En haut de chaque article se trouve une section indiquant les produits qui prennent en charge le sujet de l’article. Si un produit est omis, alors la fonctionnalité décrite par l’article n’est pas disponible dans ce produit. Par exemple, les groupes de disponibilité ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. L’article **CREATE AVAILABILITY GROUP** indique qu’il s’applique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (entre [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), car il ne s’applique pas à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+En haut de chaque article se trouve une section indiquant les produits qui prennent en charge le sujet de l’article. Si un produit est omis, alors la fonctionnalité décrite par l’article n’est pas disponible dans ce produit. Par exemple, les groupes de disponibilité ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. L’article **CREATE AVAILABILITY GROUP** indique qu’il s’applique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), car il ne s’applique pas à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Dans certains cas, le sujet général de l’article peut être utilisé dans un produit, mais tous les arguments ne sont pas pris en charge. Par exemple, les utilisateurs de base de données autonome ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. L’instruction **CREATE USER** peut être utilisée dans tous les produits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais la syntaxe **WITH PASSWORD** ne peut pas être utilisée avec les versions plus anciennes. Dans ce cas, des sections **S’applique à** supplémentaires sont insérées dans les descriptions des arguments appropriés dans le corps de l’article.  
   

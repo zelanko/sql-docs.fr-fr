@@ -23,12 +23,12 @@ ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0ba43b04bc5c77d060fd2f8edda25d8a925a2856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1e6db73f4acea3654e8cffe8699df08f3f8d2c7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602287"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980085"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE Statements - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ FROM <backup_device> [ ,...n ]
  Nom logique, qui doit respecter les règles applicables aux identificateurs, de l'unité de sauvegarde créée par **sp_addumpdevice** et à partir de laquelle est restaurée la base de données. S’il est fourni comme variable (**@**_logical\_backup\_device\_name\_var_), le nom de l’unité de sauvegarde peut être spécifié sous la forme d’une constante de chaîne (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) ou d’une variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.  
   
  {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- Permet la restauration de sauvegardes à partir de l'unité de disque ou de bande spécifiée. Les types de périphérique de disque et de bande doivent être spécifiés avec le nom de l’unité (par exemple, le chemin complet et le nom de fichier) : DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' ou TAPE = '\\\\.\TAPE0'. S’il est spécifié comme variable (**@**_physical\_backup\_device\_name\_var_), le nom de l’unité de sauvegarde peut être spécifié sous la forme d’une constante de chaîne (**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*') ou d’une variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.  
+ Permet la restauration de sauvegardes à partir de l'unité de disque ou de bande spécifiée. Les types d'unité DISK et TAPE doivent être spécifiés avec le nom réel de l'unité (par exemple, le chemin complet et le nom de fichier). DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' ou TAPE = '\\\\.\TAPE0'. S’il est spécifié comme variable (**@**_physical\_backup\_device\_name\_var_), le nom de l’unité de sauvegarde peut être spécifié sous la forme d’une constante de chaîne (**@**_physical\_backup\_device\_name\_var_ = ’*physcial_backup_device_name*’) ou d’une variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.  
   
  Si vous utilisez un serveur réseau pourvu d'un nom UNC (qui doit contenir le nom de l'ordinateur), spécifiez le type d'unité DISK. Pour plus d’informations sur l’utilisation de noms UNC, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   

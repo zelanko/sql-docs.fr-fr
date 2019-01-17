@@ -1,7 +1,7 @@
 ---
 title: Options de fichiers et de groupes de fichiers ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1191ae28c9683a89d06830c942a22941fccfb943
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5a91f7bf27dea953cde7186262c8b28b2cd0cf7e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403555"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53329012"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Options de fichiers et de groupes de fichiers ALTER DATABASE (Transact-SQL) 
 
@@ -144,8 +144,8 @@ Supprime la description du fichier logique d'une instance de [!INCLUDE[ssNoVersi
 *logical_file_name*  
 Nom logique utilisé pour référencer le fichier dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-> [!WARNING]  
-> Vous pouvez supprimer un fichier de base de données qui est associé à des sauvegardes `FILE_SNAPSHOT`, mais les instantanés associés ne sont pas supprimés pour éviter l’invalidation des sauvegardes qui font référence au fichier de base de données. Le fichier est tronqué, mais il n’est pas supprimé physiquement afin de conserver les sauvegardes FILE_SNAPSHOT. Pour plus d’informations, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+> [!WARNING]
+> Vous pouvez supprimer un fichier de base de données qui est associé à des sauvegardes `FILE_SNAPSHOT`, mais les instantanés associés ne sont pas supprimés pour éviter l’invalidation des sauvegardes qui font référence au fichier de base de données. Le fichier est tronqué, mais il n’est pas supprimé physiquement afin de conserver les sauvegardes FILE_SNAPSHOT. Pour plus d’informations, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 MODIFY FILE  
 Spécifie le fichier à modifier. Vous pouvez modifier une seule propriété \<filespec> à la fois. La clause NAME doit toujours être spécifiée dans \<filespec> pour identifier le fichier à modifier. Si vous définissez l'option SIZE, la nouvelle taille doit être supérieure à la taille actuelle du fichier.  
@@ -294,7 +294,7 @@ Spécifie que le groupe de fichiers stocke des objets BLOB (binary large objects
   
 CONTAINS MEMORY_OPTIMIZED_DATA  
 
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
 Spécifie que le groupe de fichiers stocke des données mémoire optimisées dans le système de fichiers. Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Un seul groupe de fichiers `MEMORY_OPTIMIZED_DATA` est autorisé par base de données. Pour créer des tables mémoire optimisées, le groupe de fichiers ne peut pas être vide. Il doit y avoir au moins un fichier. *filegroup_name* fait référence à un chemin. Le chemin d'accès jusqu'au dernier dossier doit exister, et le dernier dossier ne doit pas exister.  
  
@@ -316,13 +316,13 @@ NAME = *new_filegroup_name*
 Change le nom du groupe de fichiers en *new_filegroup_name*.  
   
 AUTOGROW_SINGLE_FILE  
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
 Quand un fichier du groupe de fichiers atteint le seuil de croissance automatique, seule sa taille augmente. Il s'agit du paramètre par défaut.  
   
 AUTOGROW_ALL_FILES  
 
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
 Quand un fichier du groupe de fichiers atteint le seuil de croissance automatique, la taille de tous les fichiers augmente. 
 
@@ -341,15 +341,15 @@ Précise que le groupe de fichiers est en mode lecture seule. La mise à jour de
 - Le compactage de la base de données est impossible.  
 - Tout verrouillage est impossible dans les bases de données en lecture seule, ce qui améliore les performances des requêtes.  
   
-> [!NOTE]  
+> [!NOTE]
 > Le mot clé `READONLY` sera supprimé dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d’utiliser `READONLY` dans les nouveaux développements et prévoyez de modifier les applications qui utilisent actuellement `READONLY`. Utilisez à la place `READ_ONLY` .  
   
 READ_WRITE | READWRITE  
 Spécifie que le groupe a l'option READ_WRITE. Les objets du groupe de fichiers peuvent être mis à jour. Pour modifier cet état, vous devez bénéficier d'un accès exclusif à la base de données. Pour plus d'informations, consultez la clause SINGLE_USER.  
   
-> [!NOTE]  
+> [!NOTE]
 > Le mot clé `READWRITE` sera supprimé dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d’utiliser `READWRITE` dans les nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent `READWRITE` actuellement pour qu’elles utilisent `READ_WRITE` à la place.  
-  
+> 
 > [!TIP]
 > Vous pouvez déterminer l’état de ces options en consultant la colonne **is_read_only** de la vue de catalogue **sys.databases** ou la propriété **Updateability** de la fonction `DATABASEPROPERTYEX`.  
   
@@ -428,7 +428,7 @@ ADD FILE
 GO  
 ```  
   
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Ajout d'un groupe de deux fichiers à une base de données  
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Ajout d'un groupe de deux fichiers à une base de données  
 L'exemple suivant crée le groupe de fichiers `Test1FG1` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] et ajoute deux fichiers de 5 Mo au groupe de fichiers.  
   
 ```sql  
@@ -887,13 +887,13 @@ Précise que le groupe de fichiers est en mode lecture seule. La mise à jour de
 - Le compactage de la base de données est impossible.  
 - Tout verrouillage est impossible dans les bases de données en lecture seule, ce qui améliore les performances des requêtes.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Le mot clé READONLY sera supprimé dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser READONLY dans le développement de nouvelles applications et prévoyez de modifier celles qui utilisent actuellement READONLY. Utilisez à la place READ_ONLY.  
   
 READ_WRITE | READWRITE  
 Spécifie que le groupe a l'option READ_WRITE. Les objets du groupe de fichiers peuvent être mis à jour. Pour modifier cet état, vous devez bénéficier d'un accès exclusif à la base de données. Pour plus d'informations, consultez la clause SINGLE_USER.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Le mot clé `READWRITE` sera supprimé dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d’utiliser `READWRITE` dans les nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent `READWRITE` actuellement pour qu’elles utilisent `READ_WRITE` à la place.  
   
 Vous pouvez déterminer l’état de ces options en consultant la colonne **is_read_only** de la vue de catalogue **sys.databases** ou la propriété **Updateability** de la fonction `DATABASEPROPERTYEX`.  
@@ -925,7 +925,7 @@ GO
   
 ```  
   
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Ajout d'un groupe de deux fichiers à une base de données  
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Ajout d'un groupe de deux fichiers à une base de données  
 L'exemple suivant crée le groupe de fichiers `Test1FG1` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] et ajoute deux fichiers de 5 Mo au groupe de fichiers.  
   
 ```sql  
@@ -1092,5 +1092,6 @@ GO
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
-[Groupe de fichiers à mémoire optimisée](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) 
+[Groupe de fichiers à mémoire optimisée](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)
 
+::: moniker-end

@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3375af07fc7231321c96c2aa03d95dbbdc6709f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 51e75f21dbaa518e344ec8c43fc8c9a087cea959
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506414"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980005"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -151,15 +151,15 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 LOCATION = \<chemin_emplacement> **HADOOP**    
 Pour HADOOP, spécifie l’URI (Uniform Resource Indicator) d’un cluster Hadoop.  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
-NameNode_URI : Nom ou adresse IP de l’ordinateur du Namenode du cluster Hadoop.  
-port : Port de l’IPC du Namenode. Indiqué par le paramètre de configuration fs.default.name dans Hadoop. Si la valeur n’est pas spécifiée, 8020 est utilisé par défaut.  
+NameNode_URI : nom ou adresse IP de l’ordinateur du Namenode du cluster Hadoop.  
+port : port de l’IPC du Namenode. Indiqué par le paramètre de configuration fs.default.name dans Hadoop. Si la valeur n’est pas spécifiée, 8020 est utilisé par défaut.  
 Exemple : `LOCATION = 'hdfs://10.10.10.10:8020'`
 
 Pour le stockage d’objets blob Azure avec Hadoop, spécifie l’URI pour la connexion au stockage d’objets blob Azure.  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
-wasb[s] : Spécifie le protocole de stockage d’objets blob Azure. Le [s] est facultatif et spécifie une connexion SSL sécurisée ; les données envoyées à partir de SQL Server sont chiffrées de façon sécurisée via le protocole SSL. Nous vous recommandons vivement d’utiliser 'wasbs' au lieu de 'wasb'. Notez que l’emplacement peut utiliser asv[s] au lieu de wasb[s]. La syntaxe asv[s] est dépréciée et sera supprimée dans une prochaine version.  
-conteneur : Spécifie le nom du conteneur de stockage d’objets blob Azure. Pour spécifier le conteneur racine d’un compte de stockage de domaine, utilisez le nom de domaine au lieu du nom de conteneur. Les conteneurs racines sont en lecture seule, donc les données ne peuvent pas être réécrites sur le conteneur.  
-nom_compte : Nom de domaine complet (FQDN) du compte de stockage Azure.  
+wasb[s] : spécifie le protocole de stockage d’objets blob Azure. Le [s] est facultatif et spécifie une connexion SSL sécurisée ; les données envoyées à partir de SQL Server sont chiffrées de façon sécurisée via le protocole SSL. Nous vous recommandons vivement d’utiliser 'wasbs' au lieu de 'wasb'. Notez que l’emplacement peut utiliser asv[s] au lieu de wasb[s]. La syntaxe asv[s] est dépréciée et sera supprimée dans une prochaine version.  
+container : spécifie le nom du conteneur de stockage d’objets blob Azure. Pour spécifier le conteneur racine d’un compte de stockage de domaine, utilisez le nom de domaine au lieu du nom de conteneur. Les conteneurs racines sont en lecture seule, donc les données ne peuvent pas être réécrites sur le conteneur.  
+account_name : nom de domaine complet (FQDN) du compte Stockage Azure.  
 Exemple : `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
 Pour Azure Data Lake Store, l’emplacement spécifie l’URI pour la connexion à votre instance Azure Data Lake Store.
@@ -208,7 +208,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 Pour un tutoriel détaillé sur le SGBDR, consultez [Prise en main des requêtes de bases de données croisées (partitionnement vertical)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
 
 **BLOB_STORAGE**   
-Ce type est utilisé uniquement pour les opérations en bloc uniquement, `LOCATION` doit être valide dans l’URL vers le stockage d’objets blob Azure et le conteneur. Ne placez pas **/**, le nom du fichier ou les paramètres de signature d’accès partagé à la fin de l’URL `LOCATION`. `CREADENTIAL` est requis si l’objet blob n’est pas public. Exemple : 
+Ce type est utilisé uniquement pour les opérations en bloc uniquement, `LOCATION` doit être valide dans l’URL vers le stockage d’objets blob Azure et le conteneur. Ne placez pas **/**, le nom du fichier ou les paramètres de signature d’accès partagé à la fin de l’URL `LOCATION`. `CREDENTIAL` est requis si l’objet blob n’est pas public. Exemple : 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH (  TYPE = BLOB_STORAGE, 
@@ -343,7 +343,7 @@ WITH (
 
 ```  
   
-### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. Créer une source de données externe pour faire référence à Hadoop avec pushdown activé  
+### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>b. Créer une source de données externe pour faire référence à Hadoop avec pushdown activé  
 Spécifiez l’option RESOURCE_MANAGER_LOCATION pour activer le pushdown de calcul sur Hadoop pour des requêtes PolyBase. Une fois activé, PolyBase utilise une décision basée sur les coûts pour déterminer si le calcul de la requête doit être poussé vers Hadoop ou si toutes les données doivent être déplacées pour traiter la requête dans SQL Server.
   
 ```sql  
@@ -401,7 +401,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 );
 ```
 
-## <a name="examples-azure-sql-database"></a>Exemples : Azure SQL Database
+## <a name="examples-azure-sql-database"></a>Exemples : Azure SQL Database
 
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. Créer une source de données externe de Gestionnaire de cartes de partitions
 Pour créer une source de données externe pour faire référence à SHARD_MAP_MANAGER, spécifiez le nom du serveur logique qui héberge le Gestionnaire de cartes de partitions dans Azure SQL Database ou une base de données SQL Server sur une machine virtuelle Azure.
@@ -442,10 +442,10 @@ WITH (
 );
 ```
 
-## <a name="examples-azure-sql-data-warehouse"></a>Exemples : Azure SQL Data Warehouse
+## <a name="examples-azure-sql-data-warehouse"></a>Exemples : Azure SQL Data Warehouse.
 
 ### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Créer une source de données externe pour faire référence à Azure Data Lake Store
-La connectivité Azure Data Lake Store est basée sur votre URI ADLS et le principal de service de votre application Azure Active directory. Vous trouverez la documentation sur la création de cette application dans [Authentification auprès de Data Lake Store à l’aide d’Azure Active Directory](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
+La connectivité Azure Data Lake Store est basée sur votre URI ADLS et le principal de service de votre application Azure Active Directory. Vous trouverez la documentation sur la création de cette application dans [Authentification auprès de Data Lake Store à l’aide d’Azure Active Directory](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -465,7 +465,7 @@ WITH (TYPE = HADOOP,
 
 
 
-## <a name="examples-parallel-data-warehouse"></a>Exemples : Parallel Data Warehouse
+## <a name="examples-parallel-data-warehouse"></a>Exemples : Parallel Data Warehouse
 
 ### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. Créer une source de données externe pour faire référence à Hadoop avec pushdown activé
 Spécifiez l’option JOB_TRACKER_LOCATION pour activer le calcul du pushdown sur Hadoop pour des requêtes PolyBase. Une fois activé, PolyBase utilise une décision basée sur les coûts pour déterminer si le calcul de la requête doit être poussé vers Hadoop ou si toutes les données doivent être déplacées pour traiter la requête dans SQL Server. 
@@ -491,7 +491,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 );
 ```
 
-## <a name="examples-bulk-operations"></a>Exemples : Opérations en bloc   
+## <a name="examples-bulk-operations"></a>Exemples : opérations en bloc   
 ### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Créer une source de données externe pour les opérations en bloc de récupération de données dans le stockage Blob Azure   
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
 Utilisez la source de données suivante pour les opérations en bloc à l’aide de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ou [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). L'identifiant utilisé doit être créé en utilisant `SHARED ACCESS SIGNATURE` comme identité, ne doit pas avoir le premier `?` dans le jeton SAS, doit avoir au moins les droits de lecture sur le fichier à charger (par exemple `srt=o&sp=r`), et la période d'expiration doit être valide (toutes les dates sont en heure UTC). Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   

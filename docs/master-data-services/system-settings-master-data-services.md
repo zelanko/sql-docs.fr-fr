@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, system settings
@@ -15,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f58c276968fd88b64ef5c48995eafbc553e14987
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
+ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507284"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738115"
 ---
 # <a name="system-settings-master-data-services"></a>Paramètres système (Master Data Services)
 
@@ -78,7 +77,7 @@ ms.locfileid: "52507284"
 |**Journaliser toutes les transactions intermédiaires**|**StagingTransactionLogging**|S'applique à SQL Server 2008 R2 uniquement. Détermine s'il convient ou non de journaliser les transactions lorsque des enregistrements de mise en lots sont chargés dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . La valeur par défaut est **Désactivé** ou **2**. Remplacez-la par la valeur **Activé** ou **1** pour activer la journalisation.|  
 |**Intervalle de lot intermédiaire**|**StagingBatchInterval**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , intervalle (en secondes) entre la sélection de **Démarrer les lots** et le traitement de votre lot. La valeur par défaut est **60** secondes (1 minute).|  
   
- Pour plus d’informations, consultez [Présentation : Importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ Pour plus d’informations, consultez [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 ##  <a name="Explorer"></a> Paramètres de l'explorateur  
   
@@ -113,7 +112,7 @@ ms.locfileid: "52507284"
 |**URL Master Data Manager pour les notifications**|**MDMRootURL**|URL de l’application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], utilisée dans le lien des notifications par e-mail, par exemple `https://constoso/mds`.|  
 |**Intervalle de notification par courrier électronique**|**NotificationInterval**|Fréquence à laquelle les notifications par courrier électronique sont envoyées (en secondes). La valeur par défaut est **120** secondes (2 minutes).|  
 |**Nombre de notifications dans un même message électronique**|**NotificationsPerEmail**|Nombre maximal de problèmes de validation qui sont répertoriés dans un seul message électronique de notification. Les problèmes supplémentaires, le cas échéant, ne sont pas inclus dans le message électronique, mais sont disponibles dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
-|**Format de courrier électronique par défaut**|**EmailFormat**|Format de toutes les notifications par courrier électronique. La valeur par défaut est **HTML** ou **1**. Le paramètre de base de données **2** indique **Texte**.<br /><br /> Remarque : vous pouvez remplacer cette valeur pour un utilisateur spécifique dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]en changeant et en enregistrant le **Format de courrier électronique** dans l’onglet **Général** de l’utilisateur.|  
+|**Format de courrier électronique par défaut**|**EmailFormat**|Format de toutes les notifications par courrier électronique. La valeur par défaut est **HTML** ou **1**. Le paramètre de base de données **2** indique **Texte**.<br /><br /> Remarque : Vous pouvez remplacer cette valeur pour un utilisateur individuel dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] en changeant et en enregistrant le **Format de courrier électronique** sous l’onglet **Général** de l’utilisateur.|  
 |**Expression régulière pour l'adresse de messagerie**|**EmailRegExPattern**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , expression régulière qui permet de valider l'adresse de messagerie entrée sous l'onglet **Général** de l’utilisateur. Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.|  
 |**Compte de messagerie de base de données**|**EmailProfilePrincipalAccount**|Affiche le compte de messagerie de base de données à utiliser lors de l'envoi de notifications par courrier électronique. Le profil par défaut est **mds_email_user**.|  
 |**Profil de messagerie de base de données**|**DatabaseMailProfile**|Profil de messagerie de base de données à utiliser lors de l'envoi de notifications par courrier électronique. La valeur par défaut est vide.|  
@@ -129,6 +128,11 @@ ms.locfileid: "52507284"
 |Paramètre du Gestionnaire de configuration|Paramètre système|Description|  
 |-----------------------------------|--------------------|-----------------|  
 ||**SecurityMemberProcessInterval**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , fréquence à laquelle les autorisations d'accès définies sous l'onglet **Membres de hiérarchie** sont appliquées (en secondes). La valeur par défaut est **3 600** secondes (60 minutes).|  
+
+##  <a name="Performance"></a> Paramètres de performances  
+|Paramètre du Gestionnaire de configuration|Paramètre système|Description|  
+|-----------------------------------|--------------------|-----------------|  
+|**Enable performance improvement setting** (Activer le paramètre d’amélioration des performances)|**PerformanceImprovementEnable**|Par défaut, nous activons ce paramètre (**valeur 1**) qui permet que la page associée aux autorisations de charge obtienne de bonnes performances. Toutefois, dans ce cas, la création/modification d’entités, d’attributs, d’utilisateurs ou de groupes aboutit à des performances médiocres. Pour éviter ce problème, vous pouvez désactiver ce paramètre (**valeur 0**). Après avoir modifié ce paramètre. Vous devez exécuter la commande « **EXEC [mdm].[udpPerformanceToggleSwitch];**  » pour vérifier l’exactitude de la vue et des données.|  
   
  Pour plus d’informations, consultez [Appliquer immédiatement des autorisations de membre &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   

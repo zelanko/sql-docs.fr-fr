@@ -18,12 +18,12 @@ ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8436835ab2003e2700ec48d5a490887d0d0cb25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a3e5ac533e7f207b9f7d1079a37baa3ef351104
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669797"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979228"
 ---
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant utilise la méthode `STGeomeFromText()` pour créer une instance `geometry`.  
+ L'exemple suivant utilise la méthode `STGeomFromText()` pour créer une instance `geometry`.  
   
 ```  
 DECLARE @g geometry;  

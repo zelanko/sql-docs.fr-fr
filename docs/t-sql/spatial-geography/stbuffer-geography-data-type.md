@@ -18,12 +18,12 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7a09c5653fe89528c49ade19e044066acfb34cd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 55316e61b2690e56949e7fff3fe209e9b02fa0aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403704"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979305"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "52403704"
   
  La limite de distance maximale permet à la construction de la mémoire tampon d'être aussi flexible que possible.  
   
- L’erreur entre la mémoire tampon théorique et la mémoire tampon calculée correspond à max (tolerance, étendues * 1E-7), où tolerance = distance \* 0,001. Pour plus d’informations sur les étendues, consultez [Référence de méthodes de type de données geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ L’erreur entre la mémoire tampon théorique et la mémoire tampon calculée correspond à max (tolérance, étendues * 1E-7), où tolérance = distance \* 0,001. Pour plus d’informations sur les étendues, consultez [Référence de méthodes de type de données geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant crée une instance `LineString``geography`. Il utilise ensuite `STBuffer()` pour retourner la région située à une proximité d'un mètre de l'instance.  

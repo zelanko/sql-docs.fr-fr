@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating text attributes
@@ -15,12 +14,12 @@ ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0e74d369ccc79bead39e3214fa73be5333ede070
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227c43c52fda16e8c521ecefe9771dc5ea5a41e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854807"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759391"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>Créer un attribut de texte (Master Data Services)
 
@@ -43,7 +42,7 @@ ms.locfileid: "47854807"
 |colonne|Description|  
 |------------|-----------------|  
 |État|État de l’attribut.<br /><br /> Quand vous cliquez sur Enregistrer, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que l’attribut est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’un attribut, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
-|Nom   |Nom de l'attribut.|  
+|Créer une vue d’abonnement|Nom de l'attribut.|  
 |Nom complet|Nom de l’attribut.|  
 |Description|Description de l’attribut.|  
 |Largeur d’affichage en pixels|Largeur de l’attribut.|  
@@ -52,13 +51,13 @@ ms.locfileid: "47854807"
   
  Quand vous cliquez sur un attribut, les informations suivantes s’affichent.  
   
--   **Créé par**: nom de l’utilisateur qui a créé l’attribut.  
+-   **Créé par** : nom de l’utilisateur qui a créé l’attribut.  
   
--   **Le**: date et heure de création de l’attribut.  
+-   **Le** : date et heure de création de l’attribut.  
   
 -   **Mis à jour par**: nom du dernier utilisateur qui a mis à jour l’attribut.  
   
--   **Le**: date et heure de la dernière mise à jour de l’attribut.  
+-   **Le** : date et heure de la dernière mise à jour de l’attribut.  
   
 ### <a name="to-create-a-text-attribute"></a>Pour créer un attribut de texte  
   

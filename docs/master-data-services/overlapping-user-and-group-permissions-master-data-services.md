@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], resolving permissions
@@ -16,12 +15,12 @@ ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9c8e5c76ceffe53f2b2ee4dd759db748ae58f7b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b337b716905523d78d3e49d60477c7b6f29f72f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606587"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765321"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Chevauchement des autorisations d'accès (Master Data Services)
 
@@ -55,7 +54,7 @@ ms.locfileid: "47606587"
   
  Groupe 2 a l’autorisation **Lecture** sur l’entité Product.  
   
- Résultat : l'autorisation effective de l'utilisateur est **Mise à jour** sur l'entité Product.  
+ Résultat : l’autorisation effective de l’utilisateur est **Mise à jour** sur l’entité Product.  
   
 ## <a name="example-2"></a>Exemple 2  
  ![mds_conc_user_group_ex_2](../master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -68,7 +67,7 @@ ms.locfileid: "47606587"
   
  Groupe 2 a l'autorisation **Refuser** sur l'entité Product.  
   
- Résultat : l'autorisation effective de l'utilisateur est **Refuser** sur l'entité Product.  
+ Résultat : l’autorisation effective de l’utilisateur est **Refuser** sur l’entité Product.  
   
 ## <a name="example-3"></a>Exemple 3  
  ![mds_conc_user_group_ex_3](../master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -81,7 +80,7 @@ ms.locfileid: "47606587"
   
  Groupe 2 a l’autorisation **Lecture** sur un groupe de membres dans un nœud de la hiérarchie.  
   
- Résultat : l'autorisation effective de l'utilisateur est **Mise à jour** sur les membres.  
+ Résultat : l’autorisation effective de l’utilisateur est **Mise à jour** sur les membres.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Mode de détermination des autorisations &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   

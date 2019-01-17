@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 554e582d23afa6ef62b8bc1fd5ab7c8f0c704f4c
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158914"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997571"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, objet Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52158914"
 |**Débit de sauvegarde/restauration/seconde**|Débit de lecture/écriture par seconde pour les opérations de sauvegarde et de restauration d'une base de données. Par exemple, il est possible de mesurer l'évolution des performances de l'opération de sauvegarde d'une base de données si l'on utilise davantage d'unités de sauvegarde en parallèle ou si ces dernières sont plus rapides. Le débit d'une opération de sauvegarde ou de restauration d'une base de données permet de déterminer la progression et les performances de ces opérations.|  
 |**Lignes de la copie en bloc/s**|Nombre de lignes copiées en bloc par seconde.|  
 |**Débit de la copie en bloc/s**|Quantité de données copiées en bloc (en kilo-octets) par seconde.|  
-|**Entrées de la table de validation**|Taille de la partie en mémoire de la table de validation pour la base de données. Pour plus d’informations, consultez [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
+|**Entrées de la table de validation**|Taille (nombre de lignes) de la partie en mémoire de la table de validation pour la base de données. Pour plus d’informations, consultez [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
 |**Taille des fichiers de données (Ko)**|Taille cumulée (en kilo-octets) de tous les fichiers de données de la base de données prenant en compte la croissance automatique. Il est utile d’analyser ce compteur, par exemple pour déterminer la taille appropriée de **tempdb**.|  
 |**Octets d'analyse logique DBCC/s**|Nombre d'octets d'analyse de lecture logique par seconde pour les commandes DBCC (Database Console Commands).|  
 |**Durée de validation du groupe/sec**|Temps d’attente du groupe (microsecondes) par seconde|

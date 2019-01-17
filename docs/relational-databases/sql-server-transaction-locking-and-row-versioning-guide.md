@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6dd3633cfe8b51cebceac01c0a9b0e2f17ee999a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511771"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980555"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guide du verrouillage des transactions et du contrôle de version de ligne
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52511771"
   
 -   Des fonctionnalités de verrouillage permettant d'assurer l'isolement des transactions.  
   
--   Des fonctionnalités de consignation assurent la durabilité des transactions. Pour les transactions durables, l'enregistrement du journal est renforcé sur le disque avant les validations des transactions. Ainsi, en cas de défaillance du matériel serveur, du système d'exploitation ou de l'instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] lui-même, l'instance utilise au redémarrage les journaux des transactions pour restaurer automatiquement toutes les transactions incomplètes jusqu'au moment de la défaillance du système. Les transactions durables retardées sont validées avant de renforcer l'enregistrement du journal des transactions sur le disque. Ces transactions peuvent être perdues en cas de défaillance du système avant que l'enregistrement du journal ne soit renforcé sur le disque. Pour plus d’informations sur la durabilité des transactions retardées, consultez la rubrique [Durabilité des transactions](../relational-databases/logs/control-transaction-durability.md).  
+-   Des fonctionnalités de consignation assurent la durabilité des transactions. Pour les transactions durables, l'enregistrement du journal est renforcé sur le disque avant les validations des transactions. Ainsi, en cas de défaillance du matériel serveur, du système d’exploitation ou de l’instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] lui-même, l’instance utilise au redémarrage les journaux des transactions pour restaurer automatiquement toutes les transactions incomplètes jusqu’au moment de la défaillance du système. Les transactions durables retardées sont validées avant de renforcer l'enregistrement du journal des transactions sur le disque. Ces transactions peuvent être perdues en cas de défaillance du système avant que l'enregistrement du journal ne soit renforcé sur le disque. Pour plus d’informations sur la durabilité des transactions retardées, consultez la rubrique [Durabilité des transactions](../relational-databases/logs/control-transaction-durability.md).  
   
 -   Des fonctionnalités de gestion des transactions qui assurent l'atomicité et la cohérence des transactions. Lorsqu'une transaction a débuté, elle doit se dérouler correctement jusqu'à la fin (validée), sans quoi l'instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] annule toutes les modifications effectuées sur les données depuis le début de la transaction. Cette opération est appelée restauration d'une transaction, car elle retourne les données telles qu'elles étaient avant ces modifications.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52511771"
  Le mode de validation automatique est le mode de gestion par défaut des transactions du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Chaque instruction [!INCLUDE[tsql](../includes/tsql-md.md)] est validée ou restaurée dès qu'elle se termine. Lorsqu'une instruction est exécutée avec succès, elle est validée ; si une erreur se produit, elle est restaurée. Une connexion à une instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] fonctionne par défaut en mode autocommit si les modes explicite ou implicite n'ont pas été spécifiés pour une transaction. Le mode autocommit est également le mode par défaut pour ADO, OLE DB, ODBC et DB-Library.  
   
  **Transactions implicites**  
- Lorsqu'une connexion fonctionne en mode de transaction implicite, l'instance de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] démarre automatiquement une nouvelle transaction après la validation ou la restauration de la transaction en cours. Vous n'avez pas à définir le début d'une transaction, il vous suffit de valider ou de restaurer chaque transaction. Le mode de transaction implicite génère une succession continue de transactions. Activez le mode de transaction implicite en utilisant une fonction d'API ou l'instruction [!INCLUDE[tsql](../includes/tsql-md.md)] SET IMPLICIT_TRANSACTIONS ON.  
+ Lorsqu'une connexion fonctionne en mode de transaction implicite, l'instance de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] démarre automatiquement une nouvelle transaction après la validation ou la restauration de la transaction en cours. Vous n'avez pas à définir le début d'une transaction, il vous suffit de valider ou de restaurer chaque transaction. Le mode de transaction implicite génère une succession continue de transactions. Activez le mode de transaction implicite en utilisant une fonction d'API ou l'instruction [!INCLUDE[tsql](../includes/tsql-md.md)] SET IMPLICIT_TRANSACTIONS ON.  Ce mode est également appelé « Autocommit OFF ». Consultez [Méthode setAutoCommit dans JDBC](../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md) 
   
  Lorsque le mode de transaction implicite est activé pour une connexion, l'instance de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] démarre automatiquement une transaction lorsqu'il exécute pour la première fois l'une des instructions suivantes :  
   
@@ -159,7 +159,7 @@ SELECT * FROM TestBatch;  -- Returns rows 1 and 2.
 GO  
 ```  
   
- Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] introduit la résolution de nom différée, dans laquelle la résolution des noms d'objets est effectuée au moment de l'exécution seulement. Dans l'exemple suivant, les deux premières instructions `INSERT` sont exécutées et validées, et ces deux lignes restent dans la table `TestBatch`, même une fois que la référence à une table inexistante dans la troisième instruction `INSERT` a généré une erreur d'exécution.  
+ Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] introduit la résolution de nom différée, dans laquelle la résolution des noms d’objet est effectuée au moment de l’exécution seulement. Dans l'exemple suivant, les deux premières instructions `INSERT` sont exécutées et validées, et ces deux lignes restent dans la table `TestBatch`, même une fois que la référence à une table inexistante dans la troisième instruction `INSERT` a généré une erreur d'exécution.  
   
 ```sql  
 CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));  
@@ -284,24 +284,24 @@ GO
 |Lecture non validée|Le niveau d'isolement le plus bas et suffisant pour s'assurer que les données physiquement corrompues ne sont pas lues. À ce niveau, les lectures de modifications sont autorisées. Ainsi, une transaction peut afficher les modifications qui ne sont pas encore validées apportées par d'autres transactions.|  
 |Lecture validée|Permet à une transaction de lire des données lues auparavant (non modifiées) par une autre transaction, sans attendre la fin de la première transaction. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] conserve les verrous d'écriture (acquis sur les données sélectionnées) jusqu'à la fin de la transaction, mais les verrous le lecture sont libérés dès que l'opération SELECT est terminée. C'est le niveau par défaut du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].|  
 |Lecture renouvelable|Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] conserve les verrous de lecture et d'écriture acquis sur les données sélectionnées jusqu'à la fin de la transaction. Cependant, étant donné que les verrous d'étendus ne sont pas gérés, des lectures fantômes peuvent se produire.|  
-|Sérialisable|Niveau le plus élevé, dans lequel les transactions sont totalement isolées les unes des autres. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] conserve les verrous de lecture et d'écriture acquis sur les données sélectionnées de façon à les libérer à la fin de la transaction. Les verrous d'étendues sont acquis lorsqu'une opération SELECT utilise une clause WHERE, plus particulièrement pour éviter les lectures fantômes.<br /><br /> **Remarque :** Les opérations DDL et les transactions sur les tables répliquées peuvent échouer quand le niveau d’isolation sérialisable est demandé. Cela est dû au fait que les requêtes de réplication utilisent des indicateurs qui peuvent être incompatibles avec le niveau d'isolation sérialisable.|  
+|Sérialisable|Niveau le plus élevé, dans lequel les transactions sont totalement isolées les unes des autres. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] conserve les verrous de lecture et d'écriture acquis sur les données sélectionnées de façon à les libérer à la fin de la transaction. Les verrous d'étendues sont acquis lorsqu'une opération SELECT utilise une clause WHERE, plus particulièrement pour éviter les lectures fantômes.<br /><br /> **Remarque :** Les opérations DDL et les transactions sur les tables répliquées peuvent échouer lorsque le niveau d'isolation sérialisable est demandé. Cela est dû au fait que les requêtes de réplication utilisent des indicateurs qui peuvent être incompatibles avec le niveau d'isolation sérialisable.|  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend également en charge deux niveaux d'isolement de la transaction supplémentaires qui utilisent le contrôle de version de ligne. Le premier est une implémentation de l'isolement read committed, et le deuxième est un niveau d'isolement, l'instantané.  
   
 |Niveau d'isolement basé sur le contrôle de version de ligne|Définition|  
 |------------------------------------|----------------|  
 |Instantané read committed|Lorsque l'option de base de données READ_COMMITTED_SNAPSHOT a la valeur ON, le niveau d'isolation read committed utilise le contrôle de version de ligne pour procurer une lecture cohérente au niveau des instructions. Les opérations de lecture ont besoin uniquement de verrous de table SCH-S, et pas de verrous de page ni de ligne. À savoir, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise le contrôle de version de ligne pour présenter à chaque instruction un instantané cohérent des données (du point de vue transactionnel) telles qu’elles étaient au début de l’instruction. Les verrous ne sont pas utilisés pour protéger les données des mises à jour par d'autres transactions. Une fonction définie par l'utilisateur peut retourner des données qui ont été validées après l'heure de début de l'instruction contenant cette fonction.<br /><br /> Si l’option de base de données `READ_COMMITTED_SNAPSHOT` a la valeur OFF (valeur par défaut), l’isolation read committed utilise des verrous partagés pour empêcher d’autres transactions de modifier des lignes pendant que la transaction active exécute une opération de lecture. Les verrous partagés empêchent également l'instruction de lire des lignes modifiées par d'autres transactions, tant que celles-ci ne sont pas terminées. Les deux variantes sont conformes à la définition de l'isolation read committed de l'ISO.|  
-|Snapshot|Le niveau d'isolation d'instantané utilise le contrôle de version de ligne pour assurer la cohérence des lectures au niveau de la transaction. Les opérations de lecture ont besoin uniquement de verrous de table SCH-S, et pas de verrous de page ni de ligne. Lorsque l'opération de lecture lit des lignes modifiées par une autre transaction, elle récupère la version de la ligne du début de la transaction. Vous pouvez utiliser l’isolation d’instantané pour une base de données uniquement quand la valeur ON est attribuée à l’option de base de données `ALLOW_SNAPSHOT_ISOLATION`. Par défaut, cette option est désactivée (OFF) pour les bases de données utilisateur.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge le contrôle de version des métadonnées. Pour cette raison, il existe des restrictions sur les opérations DDL pouvant être effectuées dans une transaction explicite exécutée avec le niveau d'isolement d'instantané. Les instructions DDL suivantes ne sont pas autorisées avec le niveau d'isolation d'instantané après une instruction BEGIN TRANSACTION : ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou toute autre instruction DDL utilisant le langage CLR (Common Language Runtime). Ces instructions sont autorisées lorsque vous avez recours à l'isolation d'instantané au sein des transactions implicites. Par définition, une transaction implicite est une instruction unique qui permet d'appliquer la sémantique de l'isolation d'instantané, même avec des instructions DDL. Tout manquement à ce principe peut provoquer l’erreur 3961 : `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
+|Snapshot|Le niveau d'isolation d'instantané utilise le contrôle de version de ligne pour assurer la cohérence des lectures au niveau de la transaction. Les opérations de lecture ont besoin uniquement de verrous de table SCH-S, et pas de verrous de page ni de ligne. Lorsque l'opération de lecture lit des lignes modifiées par une autre transaction, elle récupère la version de la ligne du début de la transaction. Vous pouvez utiliser l’isolation d’instantané pour une base de données uniquement quand la valeur ON est attribuée à l’option de base de données `ALLOW_SNAPSHOT_ISOLATION`. Par défaut, cette option est désactivée (OFF) pour les bases de données utilisateur.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge le contrôle de version des métadonnées. Pour cette raison, il existe des restrictions sur les opérations DDL pouvant être effectuées dans une transaction explicite exécutée avec le niveau d'isolement d'instantané. Les instructions DDL suivantes ne sont pas autorisées en isolement d'instantanée après une instruction BEGIN TRANSACTION : ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou toute instruction DDL CLR (Common Language Runtime). Ces instructions sont autorisées lorsque vous avez recours à l'isolation d'instantané au sein des transactions implicites. Par définition, une transaction implicite est une instruction unique qui permet d'appliquer la sémantique de l'isolation d'instantané, même avec des instructions DDL. Tout manquement à ce principe peut provoquer l’erreur 3961 : `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
   
  Le tableau suivant répertorie les effets secondaires de la concurrence provoqués par les différents niveaux d'isolation.  
   
 |Niveau d'isolation|Lecture incorrecte|Lecture non renouvelable|Fantôme|  
 |---------------------|----------------|------------------------|-------------|  
 |**Lecture non validée**|Oui|Oui|Oui|  
-|**Lecture validée**|non|Oui|Oui|  
-|**Lecture renouvelée**|non|non|Oui|  
-|**Snapshot**|non|non|non|  
-|**Sérialisable**|non|non|non|  
+|**Lecture validée**|Non|Oui|Oui|  
+|**Lecture renouvelée**|Non|Non|Oui|  
+|**Snapshot**|Non|Non|Non|  
+|**Sérialisable**|Non|Non|Non|  
   
  Pour plus d’informations sur les types spécifiques de verrouillage ou de contrôle de version de ligne contrôlés par chaque niveau d’isolation de la transaction, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
@@ -369,7 +369,7 @@ GO
 |Mise à jour (U)|Utilisé pour les ressources pouvant être mises à jour. Empêche une forme de blocage courante qui se produit lorsque plusieurs sessions lisent, verrouillent et mettent à jour des ressources ultérieurement.|  
 |Exclusif (X)|Utilisé pour les opérations de modification de données, telles que `INSERT`, `UPDATE` ou `DELETE`. Empêche des mises à jour multiples sur la même ressource au même moment.|  
 |Intentionnel|Permet d'établir une hiérarchie de verrouillage. Les types de verrouillage intentionnels sont les suivants : les verrous de partage intentionnel (IS), d'exclusion intentionnelle (IX) et de partage intentionnel exclusif (SIX).|  
-|Schéma|Utilisé lors de l'exécution d'une opération associée au schéma d'une table. Les types de verrouillage de schéma sont les suivant : la stabilité du schéma (Sch-S) et la modification du schéma (Sch-M).|  
+|schéma|Utilisé lors de l'exécution d'une opération associée au schéma d'une table. Les types de verrouillage de schéma sont les suivant : la stabilité du schéma (Sch-S) et la modification du schéma (Sch-M).|  
 |Mise à jour en bloc (BU)|Utilisé lors de la copie en bloc de données dans une table avec l’indicateur `TABLOCK` spécifié.|  
 |Verrou de clé|Protège la plage de lignes lue par une requête lorsque le niveau d'isolation des transactions SERIALIZABLE est utilisé. Garantit qu'aucune autre transaction ne peut insérer des lignes susceptibles de répondre aux requêtes de la transaction sérialisable si ces dernières étaient réexécutées.|  
   
@@ -392,9 +392,9 @@ GO
  Les verrous intentionnels ont deux fonctions :  
   
 -   Empêcher les autres transactions de modifier la ressource de niveau supérieur de façon à invalider le verrou au niveau inférieur. 
--   Améliorer l'efficacité du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] en matière de détection de conflits de verrous au plus haut niveau de granularité.  
+-   Améliorer l’efficacité du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] en matière de détection de conflits de verrous au plus haut niveau de granularité.  
   
- Par exemple, un verrou de partage intentionnel est demandé au niveau table avant une demande de verrous partagés (S) sur les pages ou les lignes de cette table. Un verrou intentionnel placé au niveau de la table empêche une autre transaction d'acquérir un verrou exclusif (X) sur la table contenant cette page. Les verrous intentionnels améliorent les performances, car le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] n'examine les verrous intentionnels qu'au niveau des tables afin de déterminer si une transaction peut acquérir un verrou en toute sécurité sur chaque table. Cela supprime la nécessité d'examiner chaque verrou de ligne ou page pour déterminer si une transaction peut verrouiller la table entière.  
+ Par exemple, un verrou de partage intentionnel est demandé au niveau table avant une demande de verrous partagés (S) sur les pages ou les lignes de cette table. Un verrou intentionnel placé au niveau de la table empêche une autre transaction d'acquérir un verrou exclusif (X) sur la table contenant cette page. Les verrous intentionnels améliorent les performances, car le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] n’examine les verrous intentionnels qu’au niveau des tables afin de déterminer si une transaction peut acquérir un verrou en toute sécurité sur chaque table. Cela supprime la nécessité d'examiner chaque verrou de ligne ou page pour déterminer si une transaction peut verrouiller la table entière.  
   
 <a name="lock_intent_table"></a> Les verrous intentionnels comprennent les verrous de partage intentionnel (IS), d'exclusion intentionnelle (IX) et de partage intentionnel exclusif (SIX).  
   
@@ -412,7 +412,7 @@ GO
   
  Certaines opérations DML(langage de manipulation de données), comme la troncation de table, utilisent les verrous SCH-M pour empêcher l'accès aux tables affectées par des opérations simultanées.  
   
- Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les verrous de stabilité du schéma (Sch-S) lors de la compilation et l'exécution des requêtes. Les verrous Sch-S ne bloquent aucun verrou transactionnel, verrous exclusifs (X) y compris. Par conséquent, les autres transactions, y compris celles avec des verrous exclusifs (X) sur une table, continuent à s'exécuter pendant la compilation d'une requête. Toutefois, les opérations DDL simultanées, ainsi que les opérations DML simultanées qui définissent des verrous Sch-M, ne peuvent pas être exécutées sur la table.  
+ Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les verrous de stabilité de schéma (Sch-S) lors de la compilation et l’exécution des requêtes. Les verrous Sch-S ne bloquent aucun verrou transactionnel, verrous exclusifs (X) y compris. Par conséquent, les autres transactions, y compris celles avec des verrous exclusifs (X) sur une table, continuent à s'exécuter pendant la compilation d'une requête. Toutefois, les opérations DDL simultanées, ainsi que les opérations DML simultanées qui définissent des verrous Sch-M, ne peuvent pas être exécutées sur la table.  
   
 #### <a name="bulk_update"></a> Verrous de mise à jour en bloc (BU)  
  Les verrous BU permettent à plusieurs threads de charger simultanément en masse des données dans la même table tout en empêchant les processus qui n'effectuent pas de chargement de données en masse d'accéder à cette table. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise des verrous BU lorsque les deux conditions suivantes sont vraies.  
@@ -434,12 +434,12 @@ GO
 ||Mode accordé existant||||||  
 |------|---------------------------|------|------|------|------|------|  
 |**Mode requis**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**Intent partagé (IS)**|Oui|Oui|Oui|Oui|Oui|non|  
-|**Partagé (S)**|Oui|Oui|Oui|non|non|non|  
-|**Mise à jour (U)**|Oui|Oui|non|non|non|non|  
-|**Intent exclusif (IX)**|Oui|non|non|Oui|non|non|  
-|**Partagé avec intent exclusif (SIX)**|Oui|non|non|non|non|non|  
-|**Exclusif (X)**|non|non|non|non|non|non|  
+|**Intent partagé (IS)**|Oui|Oui|Oui|Oui|Oui|Non|  
+|**Partagé (S)**|Oui|Oui|Oui|Non|Non|Non|  
+|**Mise à jour (U)**|Oui|Oui|Non|Non|Non|Non|  
+|**Intent exclusif (IX)**|Oui|Non|Non|Oui|Non|Non|  
+|**Partagé avec intent exclusif (SIX)**|Oui|Non|Non|Non|Non|Non|  
+|**Exclusif (X)**|Non|Non|Non|Non|Non|Non|  
   
 > [!NOTE]  
 > Un verrou intent exclusif (IX) est compatible avec un mode de verrouillage IX car IX signifie l'intention de mettre à jour uniquement certaines lignes et non pas toutes les lignes. Les autres transactions qui essaient de lire ou de mettre à jour certaines lignes sont aussi autorisées si elles ne mettent pas à jour les lignes en cours de mise à jour par les autres transactions. De plus, si deux transactions essaient de mettre à jour la même ligne, un verrou IX sera accordé aux deux transactions au niveau de la table et de la page. Toutefois, un verrou X sera accordé à une transaction au niveau de la ligne. L'autre transaction doit attendre jusqu'à ce que le verrouillage au niveau de la ligne soit supprimé.  
@@ -477,13 +477,13 @@ GO
 ||Mode accordé existant|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**Mode requis**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**Partagé (S)**|Oui|Oui|non|Oui|Oui|Oui|non|  
-|**Mise à jour (U)**|Oui|non|non|Oui|non|Oui|non|  
-|**Exclusif (X)**|non|non|non|non|non|Oui|non|  
-|**RangeS-S**|Oui|Oui|non|Oui|Oui|non|non|  
-|**RangeS-U**|Oui|non|non|Oui|non|non|non|  
-|**RangeI-N**|Oui|Oui|Oui|non|non|Oui|non|  
-|**RangeX-X**|non|non|non|non|non|non|non|  
+|**Partagé (S)**|Oui|Oui|Non|Oui|Oui|Oui|Non|  
+|**Mise à jour (U)**|Oui|Non|Non|Oui|Non|Oui|Non|  
+|**Exclusif (X)**|Non|Non|Non|Non|Non|Oui|Non|  
+|**RangeS-S**|Oui|Oui|Non|Oui|Oui|Non|Non|  
+|**RangeS-U**|Oui|Non|Non|Oui|Non|Non|Non|  
+|**RangeI-N**|Oui|Oui|Oui|Non|Non|Oui|Non|  
+|**RangeX-X**|Non|Non|Non|Non|Non|Non|Non|  
   
 #### <a name="lock_conversion"></a> Verrous de conversion  
  Les verrous de conversion sont créés lorsqu'un verrou d'étendue de clés chevauche un autre verrou.  
@@ -509,7 +509,7 @@ GO
  Les conditions suivantes doivent être satisfaites pour qu'un verrouillage d'étendues de clés puisse se produire :  
   
 -   Le niveau d'isolement de la transaction doit être défini sur SERIALIZABLE.  
--   Le processeur de requêtes doit utiliser un index pour implémenter le prédicat de filtre de l'étendue. Par exemple, la clause WHERE dans une instruction SELECT peut établir une condition d’étendue avec le prédicat suivant : ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**. Un verrou de groupes de clés ne peut être acquis que si **ColumnX** est couvert par une clé d’index.  
+-   Le processeur de requêtes doit utiliser un index pour implémenter le prédicat de filtre de l'étendue. Par exemple, la clause WHERE dans une instruction SELECT peut établir une condition d'étendue avec le prédicat suivant : ColonneX BETWEEN N **’** AAA **’** AND N **’** CZZ **’**. Un verrou de groupes de clés ne peut être acquis que si **ColumnX** est couvert par une clé d’index.  
   
 #### <a name="examples"></a>Exemples  
  La table et l'index suivants sont utilisés comme base pour les exemples de verrouillage d'étendues de clés ci-dessous.  
@@ -585,7 +585,7 @@ INSERT mytable VALUES ('Dan');
 -   La transaction A demande un verrou exclusif sur la ligne 2, mais elle est bloquée jusqu'à la fin de la transaction B qui libérera le verrou partagé sur la ligne 2.  
 -   La transaction B demande un verrou exclusif sur la ligne 1, mais elle est bloquée jusqu'à la fin de la transaction A qui libérera le verrou partagé sur la ligne 1.  
   
- La transaction A ne peut pas se terminer tant que la transaction B n'est pas terminée, mais la transaction B est bloquée par la transaction A. Il s'agit d'une dépendance cyclique : la transaction A est dépendante de la transaction B, mais celle-ci ne peut pas s'exécuter car elle est dépendante de la transaction A.  
+ La transaction A ne peut pas se terminer tant que la transaction B n'est pas terminée, mais la transaction B est bloquée par la transaction A. Il s'agit d'une dépendance cyclique : La transaction A est dépendante de la transaction B, mais celle-ci ne peut pas s'exécuter car elle est dépendante de la transaction A.  
   
  Les deux transactions en interblocage attendent indéfiniment que la situation soit débloquée par un processus externe. Le moniteur d’interblocage du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] recherche périodiquement les tâches d’interblocage. S'il détecte une situation de dépendance cyclique, il désigne une des tâches comme victime et met fin à sa transaction avec un message d'erreur. Cela permet à l'autre tâche de terminer sa transaction. L'application qui exécutait la transaction abandonnée peut effectuer une nouvelle tentative qui réussit en général une fois que l'autre transaction est terminée.  
   
@@ -1195,7 +1195,7 @@ BEGIN TRANSACTION
 #### <a name="space-used-in-large-objects"></a>Espace occupé dans les objets volumineux  
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] prend en charge six types de données pouvant contenir des chaînes volumineuses d’une longueur de 2 gigaoctets (Go) au maximum : `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, `ntext`, `text` et `image`. Les chaînes volumineuses stockées à l'aide de ces types de données sont stockées dans une série de fragments de données associés à la ligne de données. Les informations sur le contrôle de version de ligne sont stockées dans chaque fragment utilisé pour le stockage des chaînes volumineuses. Les fragments de données sont un ensemble de pages dédiées aux objets volumineux d'une table.  
   
- Lorsque des valeurs importantes sont ajoutées dans une base de données, elles sont allouées avec un maximum de 8 040 octets de données par fragment. Les versions antérieures du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pouvaient stocker jusqu'à 8 080 octets de données `ntext`, `text` ou `image` par fragment.  
+ Lorsque des valeurs importantes sont ajoutées dans une base de données, elles sont allouées avec un maximum de 8 040 octets de données par fragment. Les versions antérieures du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pouvaient stocker jusqu’à 8 080 octets de données `ntext`, `text` ou `image` par fragment.  
   
  Les données des objets volumineux (LOB) `ntext`, `text` et `image` existants ne sont pas mises à jour pour libérer de l'espace pour les informations sur le contrôle de version de ligne lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d'une version antérieure de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Cependant, lors de leur première modification, les données LOB sont mises à niveau de manière dynamique pour permettre le stockage des informations sur le contrôle de version, même si des versions de lignes sont générées. Une fois la mise à niveau des données LOB terminée, le nombre maximum d'octets stockés par fragment passe de 8 080 à 8 040. Le processus de mise à niveau équivaut à supprimer la valeur LOB et à réinsérer la même valeur. Les données LOB sont mises à niveau même en cas de modification d'un seul octet. Cette opération est unique pour chaque colonne `ntext`, `text` ou `image` Chaque opération peut néanmoins générer une quantité importante d'allocations de pages et d'activité E/S selon la taille des données LOB, ainsi qu'une activité importante d'écriture dans le journal si la modification doit être écrite en entier dans le journal. Les opérations WRITETEXT et UPDATETEXT sont écrites dans le journal de façon minimale si le mode de récupération de la base de données n'est pas défini sur FULL.  
   
@@ -1373,7 +1373,7 @@ ROLLBACK TRANSACTION
 GO  
 ```  
   
-#### <a name="b-working-with-read-committed-using-row-versioning"></a>B. Utilisation d'une transaction validée en lecture à l'aide du contrôle de version de ligne  
+#### <a name="b-working-with-read-committed-using-row-versioning"></a>b. Utilisation d'une transaction validée en lecture à l'aide du contrôle de version de ligne  
  Dans cet exemple, une transaction validée en lecture à l'aide du contrôle de version de ligne est exécutée en même temps qu'une autre transaction. La transaction validée en lecture se comporte différemment de la transaction d'instantané. À l'instar d'une transaction d'instantané, la transaction validée en lecture lit les lignes avec version même après la modification des données effectuée par l'autre transaction. Toutefois, contrairement à une transaction d'instantané, la transaction validée en lecture :  
   
 -   lit les données modifiées une fois que l'autre transaction a validé les modifications de données ;  
@@ -1628,7 +1628,7 @@ GO
   
 Le niveau d'isolation peut être remplacé si nécessaire pour des requêtes ou des instructions DML individuelles, en spécifiant un indicateur de niveau table. Un indicateur de niveau table n'affecte pas les autres instructions de la session. Il est recommandé de n'utiliser les indicateurs de niveau table pour modifier le comportement par défaut qu'en cas d'absolue nécessité.  
   
-Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] peut être obligé d'acquérir des verrous lors de la lecture de métadonnées même si le niveau d'isolation est tel que les verrous partagés ne sont pas nécessaires pendant la lecture des données. Par exemple, une transaction qui s'exécute au niveau d'isolation READ UNCOMMITTED n'acquiert pas de verrous partagés pendant la lecture de données, mais elle peut en demander quelquefois lors de la lecture d'un affichage catalogue système. Autrement dit, une transaction de lecture non validée peut provoquer un blocage si elle interroge une table pendant qu'une transaction modifie simultanément les données de cette table.  
+Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] peut être obligé d’acquérir des verrous lors de la lecture de métadonnées même si le niveau d’isolation est tel que les verrous partagés ne sont pas nécessaires pendant la lecture des données. Par exemple, une transaction qui s'exécute au niveau d'isolation READ UNCOMMITTED n'acquiert pas de verrous partagés pendant la lecture de données, mais elle peut en demander quelquefois lors de la lecture d'un affichage catalogue système. Autrement dit, une transaction de lecture non validée peut provoquer un blocage si elle interroge une table pendant qu'une transaction modifie simultanément les données de cette table.  
   
 Pour déterminer le niveau d'isolation des transactions en cours, utilisez l'instruction `DBCC USEROPTIONS` comme dans l'exemple qui suit. Le jeu de résultats peut être différent sur votre système.  
   
@@ -1659,7 +1659,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ### <a name="locking-hints"></a>Indicateurs de verrouillage  
- Il est possible de spécifier des indicateurs de verrouillage pour des références de table individuelles dans les instructions SELECT, INSERT, UPDATE et DELETE. Ces indicateurs déterminent le type de verrouillage ou de contrôle de version de ligne qu'utilise le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour les données de la table. Les indicateurs de verrouillage au niveau des tables peuvent être utilisés pour un contrôle plus fin des types de verrous acquis sur un objet. Ces options de verrouillage remplacent le niveau d'isolement courant de la transaction pour la session.  
+ Il est possible de spécifier des indicateurs de verrouillage pour des références de table individuelles dans les instructions SELECT, INSERT, UPDATE et DELETE. Ces indicateurs déterminent le type de verrouillage ou de contrôle de version de ligne qu’utilise l’instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour les données de la table. Les indicateurs de verrouillage au niveau des tables peuvent être utilisés pour un contrôle plus fin des types de verrous acquis sur un objet. Ces options de verrouillage remplacent le niveau d'isolement courant de la transaction pour la session.  
   
  Pour plus d’informations sur les indicateurs de verrouillage spécifiques et leurs comportements, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-table.md).  
   
@@ -1803,7 +1803,7 @@ GO
  Les sessions associées peuvent être utilisées pour développer des applications à trois niveaux où la logique de gestion est incluse dans des programmes distincts qui peuvent travailler en coopération sur une seule transaction commerciale. Ces programmes doivent être codés de manière à coordonner soigneusement leur accès à une base de données. Comme les deux sessions partagent les mêmes verrous, les deux programmes ne doivent pas essayer de modifier simultanément les mêmes données. A tout moment, une seule session peut participer à la transaction ; aucune exécution en parallèle n'est possible. La transaction ne peut passer d'une session à l'autre que lors de points d'interruption bien définis, notamment lorsque l'exécution de toutes les instructions DML est terminée et que les résultats correspondants ont été extraits.  
   
 ### <a name="coding-efficient-transactions"></a>Écriture de transactions performantes  
- Il est important de réduire la durée des transactions au minimum. Au démarrage d'une transaction, le SGBD, autrement dit le système de gestion de base de données, doit utiliser de nombreuses ressources pour toute la durée de la transaction afin de préserver les propriétés ACID (atomicité, cohérence, isolement et durabilité) de la transaction. En cas de modification des données, les lignes modifiées doivent être protégées par des verrous exclusifs qui empêchent les autres transactions de lire ces lignes, et ces verrous doivent être maintenus jusqu'à ce que la transaction soit validée ou restaurée. En fonction des paramètres de niveau d’isolation de la transaction, les instructions `SELECT` peuvent acquérir des verrous qui doivent être maintenus jusqu’à la restauration ou la validation de la transaction. Dans le cas de systèmes comprenant de nombreux utilisateurs, les transactions doivent être aussi courtes que possible afin de limiter la contention des ressources par les verrous pour des connexions concurrentes. Des transactions longues et peu performantes peuvent ne pas poser de problème pour un nombre réduit d'utilisateurs, mais elles sont inacceptables dans le cas d'un système comprenant plusieurs milliers d'utilisateurs. À partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge les transactions durables retardées. Les transactions durables retardées ne garantissent pas la durabilité. Consultez la rubrique [Durabilité des transactions](../relational-databases/logs/control-transaction-durability.md) pour plus d’informations.  
+ Il est important de réduire la durée des transactions au minimum. Au démarrage d'une transaction, le SGBD, autrement dit le système de gestion de base de données, doit utiliser de nombreuses ressources pour toute la durée de la transaction afin de préserver les propriétés ACID (atomicité, cohérence, isolement et durabilité) de la transaction. En cas de modification des données, les lignes modifiées doivent être protégées par des verrous exclusifs qui empêchent les autres transactions de lire ces lignes, et ces verrous doivent être maintenus jusqu'à ce que la transaction soit validée ou restaurée. En fonction des paramètres de niveau d’isolation de la transaction, les instructions `SELECT` peuvent acquérir des verrous qui doivent être maintenus jusqu’à la restauration ou la validation de la transaction. Dans le cas de systèmes comprenant de nombreux utilisateurs, les transactions doivent être aussi courtes que possible afin de limiter la contention des ressources par les verrous pour des connexions concurrentes. Des transactions longues et peu performantes peuvent ne pas poser de problème pour un nombre réduit d'utilisateurs, mais elles sont inacceptables dans le cas d'un système comprenant plusieurs milliers d'utilisateurs. À partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge les transactions durables retardées. Les transactions durables retardées ne garantissent pas la durabilité. Consultez la rubrique [Durabilité des transactions](../relational-databases/logs/control-transaction-durability.md) pour plus d’informations.  
   
 #### <a name="guidelines"></a> Directives de codage  
  Vous trouverez ci-dessous des directives vous permettant de coder des transactions performantes :  

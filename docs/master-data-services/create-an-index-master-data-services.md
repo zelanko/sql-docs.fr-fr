@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20fad19ffa9d5d82c83321f63236b066e3e1c781
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0dc4612ff2d77558a04062704df61e1f93b58ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849837"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774101"
 ---
 # <a name="create-an-index-master-data-services"></a>Créer un index (Master Data Services)
 
@@ -55,19 +54,19 @@ ms.locfileid: "47849837"
 |Nom de la colonne|Description|  
 |-----------------|-----------------|  
 |État|État de l’index.<br /><br /> Quand vous cliquez sur **Enregistrer**, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que l’index est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’un index, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
-|Nom   |Nom de l'index.|  
+|Créer une vue d’abonnement|Nom de l'index.|  
 |Est unique|Indique si l’index est unique.|  
 |Sur les attributs|Affiche les noms complets des attributs sur lesquels l’index est défini.|  
   
  Lorsque vous cliquez sur un index, les informations suivantes s’affichent.  
   
--   **Créé par**: nom de l’utilisateur qui a créé l’index.  
+-   **Créé par** : nom de l’utilisateur qui a créé l’index.  
   
--   **Le**: date et heure de création de l’index.  
+-   **Le** : date et heure de création de l’index.  
   
--   **Mis à jour par**: nom de l’utilisateur qui a en dernier mis à jour l’index.  
+-   **Mis à jour par** : nom de l’utilisateur qui a effectué la dernière mise à jour de l’index.  
   
--   **Le**: date et heure de mise à jour de l’index.  
+-   **Le** : date et heure de la dernière mise à jour de l’index.  
   
 ## <a name="next-steps"></a>Next Steps  
  [Modifier et supprimer un index &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  

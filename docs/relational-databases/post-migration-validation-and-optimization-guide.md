@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 7dcb9f3efe8ffcc0e1dc2dbd0ff800f67f82d499
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506339"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213618"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guide de validation et d’optimisation post-migration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ L’étape post-migration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.m
 Voici quelques-uns des scénarios de performance courants rencontrés après la migration vers la plateforme [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et leur résolution. Certains scénarios sont spécifiques à la migration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (d’une version antérieure vers une version plus récente), d’autres à la migration d’une plateforme étrangère (comme Oracle, DB2, MySQL ou Sybase) vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 ## <a name="CEUpgrade"></a> Régression des requêtes en raison d’un changement de version CE
-
+ 
 **S’applique à :** migration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Quand vous migrez d’une ancienne version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (ou une version ultérieure) et que vous passez au tout dernier [niveau de compatibilité de la base de données](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), il est possible que les performances d’une charge de travail fassent l’objet d’une régression.
@@ -48,7 +48,7 @@ Pour plus d’informations à ce sujet, consultez [Maintenir la stabilité des p
 
 ## <a name="ParameterSniffing"></a> Sensibilité de la détection de paramètres
 
-**S’applique à :** Plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) et à la migration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**S’applique à :** Migration d’une plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Pour les migrations de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si ce problème existe dans la source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la migration vers une version plus récente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  en l’état ne concerne pas ce scénario. 
@@ -69,7 +69,7 @@ Un problème peut se produire quand la première compilation n’a pas utilisé 
 
 ## <a name="MissingIndexes"></a> Index manquants
 
-**S’applique à :** Plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) et à la migration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**S’applique à :** Migration d’une plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Les index incorrects ou manquants provoquent des suppléments d’E/S qui entraînent un gaspillage de mémoire et d’UC. Cela peut être dû au fait que le profil de charge de travail a changé, par exemple en raison de l’utilisation d’autres prédicats ou à la suite de l’invalidation de la conception d’index existante. Voici comment identifier une mauvaise stratégie d’indexation ou l’existence de changements dans le profil de charge de travail :
 -   Recherchez les index dupliqués, redondants, rarement utilisés et complètement inutilisés.
@@ -87,7 +87,7 @@ Les index incorrects ou manquants provoquent des suppléments d’E/S qui entra�
 
 ## <a name="InabilityPredicates"></a> Incapacité à utiliser les prédicats pour filtrer les données
 
-**S’applique à :** Plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) et à la migration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**S’applique à :** Migration d’une plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Pour les migrations de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si ce problème existe dans la source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la migration vers une version plus récente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en l’état ne concerne pas ce scénario.
@@ -115,7 +115,7 @@ Voici quelques exemples de prédicats non SARGable :
 
 ## <a name="TableValuedFunctions"></a> Utilisation de fonctions table (à instructions multiples ou inline)
 
-**S’applique à :** Plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) et à la migration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**S’applique à :** Migration d’une plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Pour les migrations de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si ce problème existe dans la source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la migration vers une version plus récente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en l’état ne concerne pas ce scénario.

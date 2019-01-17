@@ -1,6 +1,7 @@
 ---
-title: Basculement et modes de basculement (groupes de disponibilité Always On) | Microsoft Docs
-ms.custom: ''
+title: Modes de basculement pour les groupes de disponibilité
+description: Description des différents modes de basculement disponibles pour les bases de données participant à un groupe de disponibilité Always On.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d66d1ccdbfbcd7f59f395b9ecf8367b7a7e16058
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 44e11edc9608dc4c10634ea58af1c0140bba666f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523397"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207438"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Basculement et modes de basculement (groupes de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,10 +66,10 @@ ms.locfileid: "52523397"
  Le basculement manuel planifié, ou *basculement manuel*, est un basculement qui est initié par un administrateur de base de données, en général pour des raisons administratives. Un basculement manuel planifié est pris en charge uniquement si le réplica principal et le réplica secondaire sont configurés en mode de validation synchrone et que le réplica secondaire est actuellement synchronisé (dans l'état SYNCHRONIZED). Lorsque le réplica secondaire cible est synchronisé, un basculement manuel (sans perte de données) est possible même si le réplica principal est hors service car les bases de données secondaires sont prêtes pour le basculement. C'est l'administrateur de base de données qui initie manuellement un basculement manuel.  
   
  Basculement forcé (avec possible perte de données)  
- Basculement qui peut être initié par un administrateur de base de données lorsqu'aucun réplica secondaire n'est synchronisé (SYNCHRONIZED) avec le réplica principal, ou lorsque le réplica principal n'est pas en cours d'exécution et aucun réplica secondaire n'est prêt pour le basculement. Le basculement forcé présente un risque de perte des données et est exclusivement recommandé dans le cas d'une récupération d'urgence. Le basculement forcé est également appelé « basculement manuel forcé » car il ne peut être initié que manuellement. Il s'agit de la seule forme de basculement prise en charge en mode de disponibilité avec validation asynchrone.  
+ Basculement qui peut être initié par un administrateur de base de données lorsqu'aucun réplica secondaire n'est synchronisé (SYNCHRONIZED) avec le réplica principal, ou lorsque le réplica principal n'est pas en cours d'exécution et aucun réplica secondaire n'est prêt pour le basculement. Le basculement forcé présente un risque de perte des données et est exclusivement recommandé dans le cas d'une récupération d'urgence. Le basculement forcé est également appelé « basculement manuel forcé » car il ne peut être initié que manuellement. Il s'agit de la seule forme de basculement prise en charge en mode de disponibilité avec validation asynchrone.  
   
  [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)]  
- Dans un groupe de disponibilité donné, paire de réplicas de disponibilité (réplica principal actuel compris) qui est configurée pour le mode de validation synchrone avec basculement automatique, le cas échéant. Un[!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]entre en vigueur uniquement si le réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
+ Dans un groupe de disponibilité donné, paire de réplicas de disponibilité (réplica principal actuel compris) qui est configurée pour le mode de validation synchrone avec basculement automatique, le cas échéant. Un [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] entre en vigueur uniquement si le réplica secondaire se trouve en mode SYNCHRONIZED avec le réplica principal.  
   
  [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)]  
  Dans un groupe de disponibilité donné, un groupe de deux ou trois réplicas de disponibilité (réplica principal actuel compris) qui est configuré pour le mode de validation synchrone, le cas échéant. Un [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)]entre en vigueur uniquement si les réplicas secondaires sont configurés pour le mode de basculement manuel et qu’au moins un réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
@@ -81,8 +82,8 @@ ms.locfileid: "52523397"
   
 ||Mode de validation asynchrone|Mode de validation synchrone avec mode de basculement manuel|Mode de validation synchrone avec mode de basculement automatique|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|Basculement automatique|non|non|Oui|  
-|Basculement manuel planifié|non|Oui|Oui|  
+|Basculement automatique|Non|Non|Oui|  
+|Basculement manuel planifié|Non|Oui|Oui|  
 |basculement forcé|Oui|Oui|Oui**\***|  
   
  **\*** Si vous exécutez une commande de basculement forcé sur un réplica secondaire synchronisé, le réplica secondaire se comporte de la même manière que pour un basculement manuel.  
@@ -95,11 +96,11 @@ ms.locfileid: "52523397"
 ### <a name="failover-sets"></a>Ensembles de basculement  
  Les formes de basculement possibles pour un groupe de disponibilité donné peuvent être présentées en termes de groupes de basculement. Un groupe de basculement comprend le réplica principal et les réplicas secondaires qui prennent en charge un type donné de basculement, comme suit :  
   
--   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (facultatif) :**  dans un groupe de disponibilité donné, une paire de réplicas de disponibilité (réplica principal actuel compris) configurés pour le mode de validation synchrone avec basculement automatique, le cas échéant. Un groupe des basculements automatiques est appliqué uniquement si le réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
+-   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (facultatif) :**  Dans un groupe de disponibilité donné, paire de réplicas de disponibilité (réplica principal actuel compris) qui est configurée pour le mode de validation synchrone avec basculement automatique, le cas échéant. Un groupe des basculements automatiques est appliqué uniquement si le réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
   
--   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (facultatif) :**  dans un groupe de disponibilité donné, un ensemble de deux ou trois réplicas de disponibilité (réplica principal actuel compris) configurés pour le mode de validation synchrone, le cas échéant. Un groupe de basculements avec validation synchrone est appliqué uniquement si les réplicas secondaires sont configurés pour le mode de basculement manuel et qu'au moins un réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
+-   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (facultatif) :**  Dans un groupe de disponibilité donné, un groupe de deux ou trois réplicas de disponibilité (réplica principal actuel compris) qui est configuré pour le mode de validation synchrone, le cas échéant. Un groupe de basculements avec validation synchrone est appliqué uniquement si les réplicas secondaires sont configurés pour le mode de basculement manuel et qu'au moins un réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  dans un groupe de disponibilité donné, l'ensemble de tous les réplicas de disponibilité dont l'état opérationnel est actuellement ONLINE, quel que soit le mode de disponibilité et le mode de basculement. Le groupe de basculements devient approprié lorsqu'aucun réplica secondaire ne se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
+-   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  Dans un groupe de disponibilité donné, l'ensemble de tous les réplicas de disponibilité dont l'état opérationnel est actuellement ONLINE, quel que soit le mode de disponibilité et le mode de basculement. Le groupe de basculements devient approprié lorsqu'aucun réplica secondaire ne se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
   
  Lorsque vous configurez un réplica de disponibilité en tant que validation synchrone avec basculement automatique, le réplica de disponibilité devient partie intégrante du [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Toutefois, l'entrée en vigueur de l'ensemble dépend du réplica principal actuel. Les formes de basculement qui sont en fait possibles à un moment donné dépendent des ensembles de basculement actuellement en vigueur.  
   
@@ -258,16 +259,16 @@ ms.locfileid: "52523397"
   
 |Mode de disponibilité d'un réplica secondaire|Las base de données est-elle synchronisée ?|Une perte de données est-elle possible ?|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Validation synchrone|Oui|non|  
-|Validation synchrone|non|Oui|  
-|Validation asynchrone|non|Oui|  
+|Validation synchrone|Oui|Non|  
+|Validation synchrone|Non|Oui|  
+|Validation asynchrone|Non|Oui|  
   
- Les bases de données secondaires suivent uniquement deux branchements de récupération. Par conséquent, si vous exécutez plusieurs basculements forcés, il est possible que certaines bases de données secondaires qui ont démarré la synchronisation des données avec le basculement forcé précédent, ne puissent pas être reprises. Si cela se produit, les bases de données secondaires qui ne peuvent pas être reprises devront être supprimées du groupe de disponibilité, restaurées au moment approprié et rejoindre le groupe de disponibilité. L’erreur 1408 avec état 103 peut être observée dans ce scénario (erreur : 1408, gravité : 16, état : 103). Une restauration ne fonctionnera pas entre plusieurs branchements de récupération, par conséquent, vous devez veiller à sauvegarder le journal après l'exécution de plus d'un basculement forcé.  
+ Les bases de données secondaires suivent uniquement deux branchements de récupération. Par conséquent, si vous exécutez plusieurs basculements forcés, il est possible que certaines bases de données secondaires qui ont démarré la synchronisation des données avec le basculement forcé précédent, ne puissent pas être reprises. Si cela se produit, les bases de données secondaires qui ne peuvent pas être reprises devront être supprimées du groupe de disponibilité, restaurées au moment approprié et rejoindre le groupe de disponibilité. L’erreur 1408 avec état 103 peut être observée dans ce scénario (erreur : 1408, gravité : 16, état : 103). Une restauration ne fonctionnera pas entre plusieurs branchements de récupération, par conséquent, vous devez veiller à sauvegarder le journal après l'exécution de plus d'un basculement forcé.  
   
 ###  <a name="WhyFFoPostForcedQuorum"></a> Raisons pour lesquelles le basculement forcé est requis après avoir forcé le quorum  
  Après avoir forcé le quorum sur le cluster WSFC (*quorum forcé*), vous devez forcer le basculement de chaque groupe de disponibilité (avec perte possible de données). Le basculement forcé est requis, car l'état réel des valeurs de cluster WSFC peut avoir été perdu. Il est nécessaire d'empêcher les basculements normaux après un quorum forcé, car un réplica secondaire non synchronisé pourrait apparaître comme synchronisé sur le cluster WSFC reconfiguré.  
   
- Par exemple, considérez un cluster WSFC qui héberge un groupe de disponibilité sur trois nœuds : le nœud A héberge le réplica principal et les nœuds B et C hébergent un réplica secondaire. Le nœud C est déconnecté du cluster WSFC tandis que le réplica secondaire local est SYNCHRONIZED.  Mais le nœud A et le nœud B conservent un quorum sain et le groupe de disponibilité reste en ligne. Sur le nœud A, le réplica principal continue d'accepter les mises à jour, et sur le nœud B, le réplica secondaire continue d'être synchonisé avec le réplica principal. Le réplica secondaire sur le nœud C n'est plus synchronisé et passe de plus en plus derrière le réplica principal. Toutefois, étant donné que le nœud C est déconnecté, le réplica reste incorrectement dans l'état SYNCHRONIZED.  
+ Par exemple, considérez un cluster WSFC qui héberge un groupe de disponibilité sur trois nœuds :  le nœud A héberge le réplica principal et les nœuds B et C hébergent un réplica secondaire. Le nœud C est déconnecté du cluster WSFC tandis que le réplica secondaire local est SYNCHRONIZED.  Mais le nœud A et le nœud B conservent un quorum sain et le groupe de disponibilité reste en ligne. Sur le nœud A, le réplica principal continue d'accepter les mises à jour, et sur le nœud B, le réplica secondaire continue d'être synchonisé avec le réplica principal. Le réplica secondaire sur le nœud C n'est plus synchronisé et passe de plus en plus derrière le réplica principal. Toutefois, étant donné que le nœud C est déconnecté, le réplica reste incorrectement dans l'état SYNCHRONIZED.  
   
  Si le quorum est perdu et s’il est ensuite forcé sur le nœud A, l’état de synchronisation du groupe de disponibilité sur le cluster WSFC devrait être correct, et le réplica secondaire sur le nœud C apparaît comme UNSYNCHRONIZED. Toutefois, si le quorum est forcé sur le nœud C, la synchronisation du groupe de disponibilité sera incorrecte. L’état de synchronisation sur le cluster retrouve le même niveau que lorsque le nœud C a été déconnecté, et le réplica secondaire sur le nœud C apparaît *incorrectement* comme SYNCHRONIZED. Puisque les basculements manuels planifiés garantissent la sécurité des données, ils ne sont pas autorisés pour ramener un groupe de disponibilité en ligne après qu'un quorum a été forcé.  
   
@@ -350,7 +351,7 @@ ms.locfileid: "52523397"
   
 -   [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

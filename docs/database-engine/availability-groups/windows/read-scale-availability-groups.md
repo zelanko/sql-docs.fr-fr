@@ -1,6 +1,7 @@
 ---
-title: Groupes de disponibilité avec échelle lecture | Microsoft Docs
-ms.custom: ''
+title: Utiliser une échelle lecture avec des groupes de disponibilité
+description: 'Description de la mise en œuvre d’une échelle lecture lors de l’utilisation de groupes de disponibilité Always On. '
+ms.custom: seodec18
 ms.date: 10/24/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee043206e4525f8c549f9bf6e90c2655bff0c6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b9556e7cecf64d0cd3d2abfe0aecdf3c5aa7cc8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622403"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203838"
 ---
-# <a name="read-scale-availability-groups"></a>Groupes de disponibilité avec échelle lecture
+# <a name="use-read-scale-with-always-on-availability-groups"></a>Utiliser une échelle lecture avec des groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Un groupe de disponibilité est une solution complète qui fournit des fonctionnalités de haute disponibilité à SQL Server, ainsi que des solutions de mise à l’échelle intégrées. Dans une application de base de données classique, plusieurs clients exécutent divers types de charge de travail. Des goulots d’étranglement peuvent parfois apparaître à cause d’une insuffisance de ressources. Vous pouvez libérer des ressources et obtenir un débit plus élevé pour la charge de travail OLTP. Vous pouvez également fournir une mise à l’échelle et des performances plus élevées sur les charges de travail en lecture seule. Tirez parti de la technologie de réplication la plus rapide pour SQL Server et créez un groupe de bases de données répliquées pour décharger les charges de travail de reporting et d’analytique sur des réplicas en lecture seule.

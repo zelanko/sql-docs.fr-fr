@@ -20,16 +20,16 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e7ddca2a5f33e26cb60a9e45068fcaacc10a294
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 302ad4ce50e3e1bd1b63bd734dcdc4e88cb83fdc
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506567"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380730"
 ---
 # <a name="statistics"></a>Statistiques
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,9 +51,9 @@ Pour créer l'histogramme, l'optimiseur de requête trie les valeurs de colonnes
 
 Plus précisément, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée **l’histogramme** à partir du jeu de valeurs de colonnes trié, en trois étapes :
 
-- **Initialisation de l’histogramme** : Dans la première étape, une suite de valeurs situées au début du jeu trié est traitée, et jusqu’à 200 valeurs de *range_high_key*, *equal_rows*, *range_rows* et *distinct_range_rows* sont collectées (*range_rows* et *distinct_range_rows* ont toujours une valeur nulle lors de cette étape). La première étape se termine quand toutes les entrées ont été traitées ou quand 200 valeurs ont été trouvées. 
-- **Analyse avec fusion des compartiments** : chaque valeur supplémentaire, issue de la première colonne de la clé de statistiques, est traitée selon l’ordre de tri à la deuxième étape. Chaque valeur suivante est ajoutée à la dernière plage ou une nouvelle plage est créée à la fin (ceci est possible parce que les valeurs d’entrée sont triées). Si une plage est créée, une paire de plages voisines existantes est réduite en une plage unique. Cette paire de plages est sélectionnée pour minimiser la perte d’informations. Cette méthode utilise un algorithme de *différence maximale* pour réduire le nombre d’étapes dans l’histogramme, tout en augmentant la différence entre les valeurs limites. Le nombre d’étapes après réduction des plages reste à 200 pendant toute la durée de cette étape.
-- **Consolidation de l’histogramme** : Dans la troisième étape, d’autres plages peuvent être réduites, s’il n’y a pas eu de perte importante d’informations. Le nombre d'étapes d'histogramme peut être inférieur au nombre de valeurs distinctes, même pour les colonnes comportant moins de 200 points de limite. Par conséquent, même si la colonne contient plus de 200 valeurs uniques, l’histogramme peut comporter moins de 200 étapes. Pour une colonne comprenant uniquement des valeurs uniques, l’histogramme consolidé comporte un minimum de trois étapes.
+- **Initialisation de l’histogramme** : Dans la première étape, une suite de valeurs situées au début du jeu trié est traitée, et jusqu’à 200 valeurs de *range_high_key*, *equal_rows*, *range_rows* et *distinct_range_rows* sont collectées (*range_rows* et *distinct_range_rows* ont toujours une valeur égale à zéro lors de cette étape). La première étape se termine quand toutes les entrées ont été traitées ou quand 200 valeurs ont été trouvées. 
+- **Analyse avec fusion des compartiments** : Chaque valeur supplémentaire issue de la première colonne de la clé de statistiques est traitée selon l’ordre de tri à la deuxième étape. Chaque valeur suivante est ajoutée à la dernière plage ou une nouvelle plage est créée à la fin (ceci est possible, car les valeurs d’entrée sont triées). Si une plage est créée, une paire de plages voisines existantes est réduite en une plage unique. Cette paire de plages est sélectionnée pour minimiser la perte d’informations. Cette méthode utilise un algorithme de *différence maximale* pour réduire le nombre d’étapes dans l’histogramme, tout en augmentant la différence entre les valeurs limites. Le nombre d’étapes après réduction des plages reste à 200 pendant toute la durée de cette étape.
+- **Consolidation de l’histogramme** : Dans la troisième étape, d’autres plages peuvent être réduites s’il n’y a pas de perte importante d’informations. Le nombre d'étapes d'histogramme peut être inférieur au nombre de valeurs distinctes, même pour les colonnes comportant moins de 200 points de limite. Par conséquent, même si la colonne contient plus de 200 valeurs uniques, l’histogramme peut comporter moins de 200 étapes. Pour une colonne comprenant uniquement des valeurs uniques, l’histogramme consolidé comporte un minimum de trois étapes.
 
 > [!NOTE]
 > Si l’histogramme a été créé à l’aide de l’option SAMPLE plutôt qu’avec l’option FULLSCAN, les valeurs de *equal_rows*, *range_rows*, *distinct_range_rows* et  *average_range_rows* sont estimées, et n’ont donc pas besoin d’être des entiers.
@@ -200,7 +200,7 @@ Dans cet exemple, l'objet de statistiques `LastFirst` comprend des densités pou
 ### <a name="query-selects-from-a-subset-of-data"></a>La requête effectue une sélection dans un sous-ensemble de données  
 Lorsque l'optimiseur de requête crée des statistiques pour des colonnes et des index uniques, il crée les statistiques pour les valeurs contenues dans toutes les lignes. Lorsque les requêtes effectuent une sélection dans un sous-ensemble de lignes et que ce sous-ensemble de lignes présente une distribution de données unique, des statistiques filtrées peuvent améliorer les plans de requête. Vous pouvez créer des statistiques filtrées en utilisant l’instruction [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) avec la clause [WHERE](../../t-sql/queries/where-transact-sql.md) pour définir l’expression de prédicat du filtre.  
   
-Par exemple, dans [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], chaque produit de la table `Production.Product` appartient à l'une des quatre catégories de la table `Production.ProductCategory` : Bikes, Components, Clothing et Accessories. Chacune de ces catégories présente une distribution de données différente pour le poids (Weight) : le poids des bicyclettes (Bikes) varie de 13,77 à 30,0, le poids des composants (Components) varie de 2,12 à 1 050,00 avec quelques valeurs NULL, le poids des vêtements (Clothing) est toujours NULL et le poids des accessoires (Accessories) est également toujours NULL.  
+Par exemple, avec [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], chaque produit de la table `Production.Product` appartient à une des quatre catégories de la table `Production.ProductCategory` : Bikes, Components, Clothing et Accessories. Chacune de ces catégories présente une distribution de données différente pour le poids (Weight) : le poids des bicyclettes (Bikes) varie de 13,77 à 30,0, le poids des composants (Components) varie de 2,12 à 1 050,00 avec quelques valeurs NULL, le poids des vêtements (Clothing) est toujours NULL et le poids des accessoires (Accessories) est également toujours NULL.  
   
 Si l'on prend la catégorie Bikes pour exemple, les statistiques filtrées sur tous les poids de bicyclettes fournissent des statistiques plus précises à l'optimisateur de requête et peuvent améliorer la qualité du plan de requête par rapport aux statistiques de table entière ou aux statistiques inexistantes de la colonne Weight (Poids). Si la colonne où figure le poids des bicyclettes constitue un candidat valable pour les statistiques filtrées, tel n'est pas forcément le cas pour un index filtré si le nombre de recherches de poids est relativement faible. Les gains en performances offerts par un index filtré lors des recherches risquent de ne pas compenser les coûts de maintenance et de stockage supplémentaires liés à l'ajout d'un index filtré à la base de données.  
   

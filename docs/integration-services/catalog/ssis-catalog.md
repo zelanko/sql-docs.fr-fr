@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaae67a3d08fd899a9a73e4e853b1dbc97dba9ee
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535540"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553211"
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
   Le catalogue **SSISDB** est l’élément central pour l’utilisation des projets [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que vous avez déployés sur le serveur [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Ainsi, c'est dans ce catalogue que vous définissez les paramètres de projet et de package, configurez les environnements pour spécifier des valeurs d'exécution pour les packages, exécutez et résolvez les problèmes relatifs aux packages, et gérez les opérations du serveur [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -412,7 +412,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
   
     ```  
   
-3.  Sauvegardez la base de données SSISDB à l’aide de la boîte de dialogue **Sauvegarder la base de données** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Procédure : sauvegarder une base de données (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Sauvegardez la base de données SSISDB à l’aide de la boîte de dialogue **Sauvegarder la base de données** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations, consultez [Procédure : sauvegarder une base de données (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Générez le script CREATE LOGIN pour ##MS_SSISServerCleanupJobLogin## en effectuant les actions suivantes. Pour plus d’informations, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
@@ -436,7 +436,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
   
 ### <a name="to-restore-the-ssis-database"></a>Pour restaurer la base de données SSIS  
   
-1.  Si vous restaurez la base de données SSISDB sur une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où le catalogue SSISDB n'a jamais été créé, activez le CLR en exécutant la procédure stockée sp_configure. Pour plus d’informations, consultez [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) et [clr enabled (option de configuration de serveur)](https://go.microsoft.com/fwlink/?LinkId=231855).  
+1.  Si vous restaurez la base de données SSISDB sur une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où le catalogue SSISDB n’a jamais été créé, activez le CLR en exécutant la procédure stockée `sp_configure`. Pour plus d’informations, consultez [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) et [clr enabled (option de configuration de serveur)](https://go.microsoft.com/fwlink/?LinkId=231855).  
   
     ```  
     use master   
@@ -541,10 +541,10 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
   
 2.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez le serveur local puis développez **Catalogues Integration Services**.  
   
-3.  Cliquez avec le bouton droit sur **SSISDB**, puis sélectionnez **Mise à niveau de base de données** pour lancer l’Assistant Mise à niveau de SSISDB.  
+3.  Cliquez avec le bouton droit sur **SSISDB**, puis sélectionnez **Mise à niveau de base de données** pour lancer l’Assistant Mise à niveau de SSISDB. Vous pouvez aussi lancer l’Assistant Mise à niveau de SSISDB en exécutant `C:\Program Files\Microsoft SQL Server\140\DTS\Binn\ISDBUpgradeWizard.exe` avec des autorisations élevées sur le serveur local.
   
-     ![Lancer l’Assistant Mise à niveau de SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png "Lancer l’Assistant Mise à niveau de SSISDB")  
-  
+     ![Lancer l’Assistant Mise à niveau de SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png)
+
 4.  Sur la page **Sélectionner une instance** , sélectionnez une instance de SQL Server sur le serveur local.  
   
     > [!IMPORTANT]  
@@ -587,20 +587,20 @@ Avant d’activer la prise en charge d’Always On pour la base de données SSIS
   
 ###  <a name="Firsttime"></a> Configurer la prise en charge de SSIS pour AlwaysOn  
   
--   [Étape 1 : créer un catalogue Integration Services](#Step1)  
+-   [Étape 1 : Créer un catalogue Integration Services](#Step1)  
   
--   [Étape 2 : ajouter la base de données SSISDB à un groupe de disponibilité AlwaysOn](#Step2)  
+-   [Étape 2 : Ajouter la base de données SSISDB à un groupe de disponibilité Always On](#Step2)  
   
--   [Étape 3 : activer la prise en charge de SSIS pour AlwaysOn](#Step3)  
+-   [Étape 3 : Activer la prise en charge de SSIS pour Always On](#Step3)  
   
 > [!IMPORTANT]  
 > -   Vous devez exécuter les étapes suivantes sur le **nœud primaire** du groupe de disponibilité.
 > -   Vous devez activer la **prise en charge d’Always On par SSIS** *après* avoir ajouté la base de données SSISDB à un groupe de disponibilité Always On.  
 
 > [!NOTE]
-> Pour plus d’informations sur cette procédure, consultez le guide pas à pas suivant, qui comprend des captures d’écran, de Marcos Freccia (MVP Data Platform) : [Ajouter une base de données SSISDB à un groupe de disponibilité pour SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
+> Pour plus d’informations sur cette procédure, consultez le guide pas à pas suivant, qui comprend d’autres captures d’écran de Marcos Freccia (MVP Data Platform) : [Ajouter une base de données SSISDB à un groupe de disponibilité pour SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
 
-####  <a name="Step1"></a> Étape 1 : créer un catalogue Integration Services  
+####  <a name="Step1"></a> Étape 1 : Créer un catalogue Integration Services  
   
 1.  Lancez **SQL Server Management Studio** , puis connectez-vous à une instance SQL Server dans le cluster que vous voulez définir comme **nœud primaire** du groupe de disponibilité AlwaysOn pour la base de données SSISDB.  
   
@@ -612,14 +612,14 @@ Avant d’activer la prise en charge d’Always On pour la base de données SSIS
   
 5.  Entrez un **mot de passe**, puis cliquez sur **OK**. Le mot de passe protège la clé principale de la base de données utilisée pour le chiffrement des données du catalogue. Enregistrez le mot de passe dans un emplacement sécurisé. Il est également recommandé de sauvegarder la clé principale de base de données. Pour plus d'informations, consultez [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
-####  <a name="Step2"></a> Étape 2 : ajouter la base de données SSISDB à un groupe de disponibilité AlwaysOn  
+####  <a name="Step2"></a> Étape 2 : Ajouter la base de données SSISDB à un groupe de disponibilité Always On  
 La procédure à suivre pour ajouter la base de données SSISDB à un groupe de disponibilité AlwaysOn est presque identique à celle qui permet d’ajouter n’importe quelle autre base de données utilisateur à un groupe de disponibilité. Voir [Utiliser l’Assistant groupe de disponibilité](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
   
 Indiquez le mot de passe que vous avez spécifié durant la création du catalogue SSIS sur la page **Sélectionner les bases de données** de l’Assistant **Nouveau groupe de disponibilité**.
 
 ![Nouveau groupe de disponibilité](../../integration-services/service/media/ssis-newavailabilitygroup.png "Nouveau groupe de disponibilité")  
   
-####  <a name="Step3"></a> Étape 3 : activer la prise en charge de SSIS pour AlwaysOn  
+####  <a name="Step3"></a> Étape 3 : Activer la prise en charge de SSIS pour Always On  
  Après avoir créé le catalogue Integration Services, cliquez avec le bouton droit sur le nœud **Catalogues Integration Services**, puis cliquez sur **Activer la prise en charge d’Always On**. La boîte de dialogue **Enable Support for AlwaysOn** (Activer la prise en charge d’AlwaysOn) doit s’afficher. Si cette option de menu est désactivée, vérifiez que vous disposez de tous les composants requis, puis cliquez sur **Actualiser**.  
   
  ![Activer la prise en charge d’Always On](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
@@ -655,9 +655,9 @@ Si l’option **Activer la prise en charge d’Always On** du menu contextuel se
   
 3.  Mettez à niveau la base de données SSISDB sur le **nœud primaire**. Dans**l’Explorateur d’objets** de SQL Server Management Studio, développez **Catalogues Integration Services**, cliquez avec le bouton droit sur **SSISDB**, puis sélectionnez **Mise à niveau de la base de données**. Suivez les instructions de l’ **Assistant Mise à niveau de SSISDB** pour mettre à niveau la base de données. Lancez **l’Assistant Mise à niveau de SSIDB** localement sur le **nœud principal**.  
   
-4.  Suivez les instructions de [l’étape 2 : ajouter la base de données SSISDB à un groupe de disponibilité AlwaysOn](#Step2) pour rajouter la base de données SSISDB à un groupe de disponibilité.  
+4.  Suivez les instructions de l’[étape 2 : Ajouter la base de données SSISDB à un groupe de disponibilité Always On](#Step2) pour rajouter la base de données SSISDB à un groupe de disponibilité.  
   
-5.  Suivez les instructions de [l’étape 3 : activer la prise en charge de SSIS pour AlwaysOn](#Step3).  
+5.  Suivez les instructions de l’[étape 3 : Activer la prise en charge de SSIS pour Always On](#Step3).  
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   

@@ -11,12 +11,12 @@ ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2a96184600b2601fcb75159b4a76c2255deacb3
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6133e753364cda914bda7106f74d42cc5d48b781
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617099"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210141"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
 
@@ -25,7 +25,7 @@ ms.locfileid: "52617099"
   Cette section fournit des informations sur les activités de gestion de bases de données qui peuvent être effectuées sur des bases de données DQS, telles que la sauvegarde/restauration ou le détachement et l'attachement.  
   
 ##  <a name="BackupRestore"></a> Sauvegarder et restaurer les bases de données DQS  
- La sauvegarde et la restauration de bases de données SQL Server sont des opérations courantes que les administrateurs de bases de données exécutent pour empêcher la perte de données en cas d'incident lors de la récupération de données à partir des bases de données de sauvegarde. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est principalement implémenté par deux bases de données SQL Server : DQS_MAIN et DQS_PROJECTS. Les procédures de sauvegarde et de restauration des bases de données [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) sont similaires à celles de toute autre base de données SQL Server. Il existe trois défis inhérents à la sauvegarde et à la restauration des bases de données DQS :  
+ La sauvegarde et la restauration de bases de données SQL Server sont des opérations courantes que les administrateurs de bases de données exécutent pour empêcher la perte de données en cas d'incident lors de la récupération de données à partir des bases de données de sauvegarde. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est principalement implémenté par deux bases de données SQL Server : DQS_MAIN et DQS_PROJECTS. Les procédures de sauvegarde et de restauration des bases de données [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) sont similaires à celles de toute autre base de données SQL Server. Il existe trois défis inhérents à la sauvegarde et à la restauration des bases de données DQS :  
   
 -   Les opérations de sauvegarde et de restauration des bases de données de DQS doivent être synchronisées. Sinon la base de données [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] restaurée ne sera pas fonctionnelle.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "52617099"
   
 -   Le mode de récupération par défaut des bases de données DQS est défini sur **Simple**. En mode de récupération simple, les transactions sont journalisées de façon minimale et la troncation du journal se produit automatiquement une fois que la transaction est terminée pour libérer de l'espace dans le journal des transactions (fichier .ldf). Pour plus d’informations sur le mode de récupération simple, consultez [Sauvegardes complètes de bases de données &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   En mode de récupération simple, lorsque les enregistrements du journal restent actifs longtemps (par exemple, lors d'une longue transaction), la troncation peut être différée et peut donc entraîner la saturation du journal des transactions. Par ailleurs, la troncation du journal ne réduit pas la taille du fichier journal physique (fichier .ldf). Pour réduire la taille d'un fichier journal physique, vous devez réduire le fichier journal. Pour plus d’informations sur la résolution des problèmes liés au journal des transactions, consultez [Journal des transactions &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) ou l’article du support Microsoft à l’adresse [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
 > -   Vous devez effectuer régulièrement une sauvegarde complète ou différentielle des bases de données DQS et sauvegarder le journal des transactions pour récupérer les données jusqu'à une date et une heure spécifiques. Pour plus d’informations, consultez [Sauvegardes complètes de bases de données &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) et [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   

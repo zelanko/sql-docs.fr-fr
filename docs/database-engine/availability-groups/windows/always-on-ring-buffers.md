@@ -1,6 +1,7 @@
 ---
-title: Mémoires tampons en anneau des groupes de disponibilité Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Utiliser des mémoires tampons en anneau pour obtenir des informations sur l’intégrité des groupes de disponibilité
+description: Obtenez certaines informations de diagnostic sur les groupes de disponibilité Always On à partir des mémoires tampons en anneau SQL Server.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bc5ccc83285ead5a5d5de55742380d0af5766b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26f6cd91a0b2af905d863d398245c672657092dd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642389"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208298"
 ---
-# <a name="always-on-availability-groups-ring-buffers"></a>Mémoires tampons en anneau des groupes de disponibilité Always On
+# <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>Utiliser des mémoires tampons en anneau pour obtenir des informations sur l’intégrité des groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Vous pouvez obtenir certaines informations de diagnostic sur les groupes de disponibilité Always On à partir des mémoires tampons en anneau SQL Server ou de la vue de gestion dynamique (DMV) sys.dm_os_ring_buffers. Les mémoires tampons en anneau sont créées durant le démarrage de SQL Server et enregistrent les alertes générées au sein du système SQL Server à des fins de diagnostic interne. Même si elles ne sont pas prises en charge, vous pouvez toujours en déduire des informations utiles pour la résolution des problèmes. Ces mémoires tampons en anneau fournissent une autre source de diagnostics quand SQL Server plante ou se bloque.  
   

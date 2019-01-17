@@ -1,6 +1,7 @@
 ---
-title: Configurer un groupe de disponibilité distribué (Groupe de disponibilité AlwaysOn) | Microsoft Docs
-ms.custom: ''
+title: Configurer un groupe de disponibilité distribué
+description: 'Décrit comment créer et configurer un groupe de disponibilité distribué Always On. '
+ms.custom: seodec18
 ms.date: 08/17/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6cfc2b3cbb9dedc9f2b8902229c6aea9e68226ec
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: bc8dc35b72a5544bc6b52934a4e2e517a047a621
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603995"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215365"
 ---
-# <a name="configure-distributed-availability-group"></a>Configurer un groupe de disponibilité distribué  
+# <a name="configure-a-distributed-always-on-availability-group"></a>Configurer un groupe de disponibilité distribué Always On  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Pour créer un groupe de disponibilité distribué, vous devez créer un groupe de disponibilité et un écouteur sur chaque cluster de basculement Windows Server. Vous combinez ensuite ces groupes de disponibilité dans un groupe de disponibilité distribué. Les étapes suivantes fournissent un exemple de base dans Transact-SQL. Cet exemple ne couvre pas tous les détails de la création des groupes de disponibilité et des écouteurs. Son but est de mettre en évidence les exigences principales. 

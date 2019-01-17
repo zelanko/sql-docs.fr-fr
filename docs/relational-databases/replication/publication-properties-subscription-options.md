@@ -13,12 +13,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 92aa4b83697bd424d4e6940f3c46b96033d5ecf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1a0b583c66355245790004a8612afa0ace72999
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847008"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213128"
 ---
 # <a name="publication-properties-subscription-options"></a>Propriétés de la publication, Options d'abonnement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47847008"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine s'il est nécessaire d'autoriser l'utilisation de fichiers de sauvegarde pour initialiser les abonnements. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Autoriser les abonnés non-SQL Server**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine si la publication prend en charge les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si cette option est définie sur **True** , les autres propriétés de publication prennent également en charge les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option est en lecture seule si des abonnements existent. Elle ne peut avoir la valeur **True** si l'option **Autoriser les abonnements mis à jour immédiatement**, **Autoriser les abonnements mis à jour en attente**ou **Autoriser les abonnements d'égal à égal** a la valeur **True**. Pour plus d’informations, consultez [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine si la publication prend en charge les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si cette option est définie sur **True**, les autres propriétés de publication prennent également en charge les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette option est en lecture seule si des abonnements existent. Elle ne peut avoir la valeur **True** si l'option **Autoriser les abonnements mis à jour immédiatement**, **Autoriser les abonnements mis à jour en attente**ou **Autoriser les abonnements d'égal à égal** a la valeur **True**. Pour plus d’informations, consultez [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Transformation des données  
  **Autoriser les transformations de données**  
@@ -117,7 +117,7 @@ ms.locfileid: "47847008"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine s'il est nécessaire d'optimiser la synchronisation en calculant à l'avance l'appartenance des lignes de données aux partitions. La valeur par défaut de ce paramètre est **True** si la publication répond aux critères des partitions précalculées. Pour plus d’informations, consultez [Optimiser les performances des filtres paramétrés avec des partitions précalculées](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  **Optimiser la synchronisation**  
- Détermine s'il est nécessaire d'optimiser le traitement de la fusion en stockant des métadonnées supplémentaires pour chaque abonné. Cette optimisation a été remplacée par les partitions précalculées. L'option **Optimiser la synchronisation** est uniquement pertinente si le paramètre **Précalculer les partitions** a la valeur **False**. Pour plus d’informations, consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Détermine s'il est nécessaire d'optimiser le traitement de la fusion en stockant des métadonnées supplémentaires pour chaque abonné. Cette optimisation a été remplacée par les partitions précalculées. L'option **Optimiser la synchronisation** est uniquement pertinente si le paramètre **Précalculer les partitions** a la valeur **False**. Pour plus d'informations, voir [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ### <a name="merge-processes"></a>Processus de fusion  
  **Limiter les processus simultanés**  

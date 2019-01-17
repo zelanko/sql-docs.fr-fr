@@ -26,12 +26,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad662f209361dbffd8096bd7605cb5ad0e01a9d5
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 8c8a970d96475d2682bc58246aa2383bf19e8365
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072043"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979735"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -113,7 +113,7 @@ Les opérations de reconfiguration suivantes effacent également le cache de pro
 -   user options  
   
 ## <a name="result-sets"></a>Jeux de résultats  
-Quand la clause WITH NO_INFOMSGS n’est pas spécifiée, l’instruction DBCC FREEPROCCACHE retourne : « Exécution de DBCC terminée. Si DBCC vous a adressé des messages d'erreur, contactez l'administrateur système. »
+Lorsque la clause WITH NO_INFOMSGS n'est pas spécifiée, l'instruction DBCC FREEPROCCACHE retourne le message : « Exécution de DBCC terminée. Si DBCC vous a adressé des messages d'erreur, contactez l'administrateur système. »
   
 ## <a name="permissions"></a>Permissions  
 S’applique à : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
@@ -131,7 +131,7 @@ Il est possible d’annuler DBCC FREEPROCCACHE lors de l’exécution.
   
 ## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Limitations et restrictions pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Il n’est pas possible d’exécuter DBCC FREEPROCCACHE dans une transaction.
-L’instruction DBCC FREEPROCCACHE n’est pas prise en charge dans une instruction EXPLAIN.
+DBCC FREEPROCCACHE n’est pas pris en charge dans une instruction EXPLAIN.
   
 ## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Métadonnées pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Une nouvelle ligne est ajoutée à la vue système sys.pdw_exec_requests lors de l’exécution de DBCC FREEPROCCACHE.
@@ -171,7 +171,7 @@ DBCC FREEPROCCACHE (0x060006001ECA270EC0215D05000000000000000000000000);
 GO  
 ```  
   
-### <a name="b-clearing-all-plans-from-the-plan-cache"></a>B. Effacement de tous les plans du cache du plan  
+### <a name="b-clearing-all-plans-from-the-plan-cache"></a>b. Effacement de tous les plans du cache du plan  
 L'exemple suivant efface tous les éléments du cache du plan. La clause WITH `NO_INFOMSGS` est spécifiée pour empêcher l’affichage du message d’information.
   
 ```sql  

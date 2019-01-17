@@ -13,12 +13,12 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bdda5d95544df6b7cd7cc4108c3bd21dc8f50d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fca3b535b31a3524389804442bb61370fb164008
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779157"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591533"
 ---
 # <a name="object-dependencies"></a>Dépendances d'objet
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,10 +29,10 @@ Les **Dépendances d'objet (page Avancé)** de l'objet actuel répertorient les 
 Utilisez cette boîte de dialogue pour comprendre les dépendances avant de modifier ou de supprimer l'objet sélectionné.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
-**Objets dépendant de** *<selected object>*  
+**Objets qui dépendent de** _\<l’objet sélectionné>_  
 Cliquez sur ce bouton pour afficher la liste des objets dont les dépendances sont suivies et qui dépendent de l'objet sélectionné.  
   
-**Objets dont** *<selected object>* **dépend**  
+**Objets dont**  _\<objet sélectionné>_ **dépend**  
 Cliquez sur ce bouton pour afficher la liste des objets dont les dépendances sont suivies et dont dépend l'objet sélectionné.  
   
 **Dépendances**  

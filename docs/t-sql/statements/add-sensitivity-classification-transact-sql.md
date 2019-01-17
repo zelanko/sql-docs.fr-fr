@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: cbede7141154147bbb714d00d794d4b8af7cf8e0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0fc010c3b02bfbe5e2c5fabb1f8e6313144d7efa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696399"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979376"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>AJOUTER UNE CLASSIFICATION DE SENSIBILITÉ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ Il s’agit d’un identificateur associé au type d’information. Il est souve
 ## <a name="remarks"></a>Notes   
 
 - Seule une classification peut être ajoutée à un objet unique. L’ajout d’une classification à un objet déjà classifié remplacera la classification existante.
-- Plusieurs objets peuvent être classifiés avec une seule instruction `ADD SENSITIVITY CLASSIFICTION`.
+- Plusieurs objets peuvent être classifiés avec une seule instruction `ADD SENSITIVITY CLASSIFICATION`.
 - L’affichage du système [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) peut être utilisé pour récupérer les informations de classification de sensibilité d’une base de données.
 
 
@@ -108,7 +108,7 @@ ADD SENSITIVITY CLASSIFICATION TO
     WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial' )
 ```  
 
-### <a name="b-classifying-only-a-label"></a>B. Classification d’une seule étiquette
+### <a name="b-classifying-only-a-label"></a>b. Classification d’une seule étiquette
 L’exemple suivant classifie la colonne **dbo.customer.comments** portant l’étiquette **Confidentiel** et ID d’étiquette **643f7acd-776a-438d-890c-79c3f2a520d6**. Le type d’information n’est pas classifié pour cette colonne.
 
 ```sql
@@ -119,7 +119,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 ## <a name="see-also"></a> Voir aussi  
 
-[DROP SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 

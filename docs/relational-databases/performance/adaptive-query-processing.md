@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4494b91315c8d2cd155e2ac80d6b5005685ff32
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503414"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207309"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Traitement de requêtes adaptatif dans les bases de données SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,17 +120,17 @@ Pour activer la préversion publique de la rétroaction d’allocation de mémoi
 
 L’activité de la rétroaction d’allocation de mémoire en mode ligne sera visible par le biais du XEvent **memory_grant_updated_by_feedback**. 
 
-Avec la rétroaction d’allocation de mémoire en mode ligne, deux nouveaux attributs de plan de requête apparaissent pour les plans réels après exécution : ***IsMemoryGrantFeedbackAdjusted*** et ***LastRequestedMemory***, qui sont ajoutés à l’élément XML du plan de requête *MemoryGrantInfo*. 
+Dans la rétroaction d’allocation de mémoire en mode ligne, deux nouveaux attributs de plan de requête sont affichés pour les plans post-exécution : ***IsMemoryGrantFeedbackAdjusted*** et ***LastRequestedMemory***, qui sont ajoutés à l’élément XML de plan de requête *MemoryGrantInfo*. 
 
 *LastRequestedMemory* indique la mémoire allouée en kilo-octets (Ko) à partir de l’exécution de la requête précédente. L’attribut *IsMemoryGrantFeedbackAdjusted* permet de vérifier l’état de la rétroaction d’allocation de mémoire de l’instruction au sein d’un plan d’exécution de requête réel. Les valeurs affichées dans cet attribut sont les suivantes :
 
 | Valeur IsMemoryGrantFeedbackAdjusted | Description |
 |---|---|
-| Non : première exécution | La rétroaction d’allocation de mémoire n’ajuste pas la mémoire pour la première compilation et l’exécution associée.  |
+| Non : première exécution | La rétroaction d’allocation de mémoire n’ajuste pas la mémoire pour la première compilation et l’exécution associée.  |
 | Non : allocation précise | S’il n’y a pas de dépassement sur disque et que l’instruction utilise au moins 50 % de la mémoire allouée, la rétroaction d’allocation de mémoire n’est pas déclenchée. |
 | Non : rétroaction désactivée | Si la rétroaction d’allocation de mémoire est déclenchée en permanence et varie entre des opérations d’augmentation et de diminution de la mémoire, nous la désactivons pour l’instruction. |
 | Oui : ajustement | La rétroaction d’allocation de mémoire a été appliquée et peut encore être ajustée pour l’exécution suivante. |
-| Oui : stable | La rétroaction d’allocation de mémoire a été appliquée et la mémoire allouée est maintenant stable ; en d’autres termes, ce qui a été alloué pour l’exécution précédente est identique à ce qui a été alloué pour l’exécution actuelle. |
+| Oui : Stable | La rétroaction d’allocation de mémoire a été appliquée et la mémoire allouée est maintenant stable ; en d’autres termes, ce qui a été alloué pour l’exécution précédente est identique à ce qui a été alloué pour l’exécution actuelle. |
 
 > [!NOTE]
 > Les attributs du plan de rétroaction d’allocation de mémoire en mode ligne en préversion publique sont visibles dans les plans d’exécution de requêtes graphique [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans les versions 17.9 et ultérieures. 
@@ -171,7 +171,7 @@ La requête suivante est utilisée pour illustrer un exemple de jointure adaptat
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
@@ -190,7 +190,7 @@ Dans le plan, nous voyons les éléments suivants :
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
 La requête retourne une ligne. En activant les statistiques des requêtes actives, nous observons le plan suivant :

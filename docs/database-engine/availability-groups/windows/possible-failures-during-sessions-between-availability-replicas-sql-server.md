@@ -1,6 +1,7 @@
 ---
-title: Défaillances possibles pendant les sessions entre les réplicas de disponibilité (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Déterminer la cause possible des problèmes de connectivité entre des réplicas de disponibilité
+description: Cette rubrique décrit les différentes causes possibles d’un échec de connexion entre des réplicas membres d’un groupe de disponibilité Always On.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4117189da3979bb3e8faff3fec7b48e1a75d96e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83db89086fe8370669600610695737c940f3468e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655907"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211558"
 ---
-# <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Défaillances possibles pendant les sessions entre les réplicas de disponibilité (SQL Server)
+# <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>Déterminer la cause possible des problèmes de connectivité entre des réplicas de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Des problèmes physiques, de système d'exploitation ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent provoquer un échec dans une session entre deux réplicas de disponibilité. Un réplica de disponibilité ne contrôle pas régulièrement les composants sur lesquels Sqlservr.exe s'appuie pour vérifier s'ils fonctionnent correctement ou s'ils ont échoué. Toutefois, pour certains types d'échecs, le composant affecté signale une erreur à Sqlservr.exe. Une erreur signalée par un autre composant est appelée *erreur matérielle*. Pour détecter les autres erreurs qui passeraient sinon inaperçues, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implémente son propre mécanisme de délai d'expiration de session. Spécifie le délai d'expiration de la session en secondes. Ce délai d'attente est la durée maximale pendant laquelle une instance de serveur attend de recevoir un message PING d'une autre instance avant de considérer que cette dernière est déconnectée. Quand un délai d’expiration de session se produit entre deux réplicas de disponibilité, les réplicas de disponibilité partent du principe qu’une erreur s’est produite et déclarent une *erreur logicielle*.  
   
@@ -58,7 +59,7 @@ Des problèmes physiques, de système d'exploitation ou [!INCLUDE[ssNoVersion](.
   
 -   le DNS ne fonctionne pas ;  
   
--   les câbles sont débranchés ;  
+-   les câbles sont débranchés ;  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows comprend un pare-feu qui bloque un port spécifique ;  
   
@@ -66,7 +67,7 @@ Des problèmes physiques, de système d'exploitation ou [!INCLUDE[ssNoVersion](.
   
 -   un serveur Windows a été renommé ;  
   
--   un serveur Windows a été redémarré ;  
+-   un serveur Windows a été redémarré ;  
   
 > [!NOTE]  
 >  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] ne protège pas des problèmes spécifiques au client qui accède aux serveurs. Prenons l'exemple d'un cas dans lequel une carte réseau publique gère des connexions clientes au réplica principal, tandis qu'une carte d'interface réseau privée gère le trafic entre les instances de serveur qui hébergent les réplicas d'un groupe de disponibilité. Dans ce cas, l'échec de la carte réseau publique empêcherait les clients d'accéder aux bases de données.  

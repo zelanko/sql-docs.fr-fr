@@ -1,21 +1,23 @@
 ---
-title: 'Rapports mobiles SQL Server : procédure pas à pas de bout en bout | Microsoft Docs'
-ms.date: 11/07/2017
+title: 'Rapports mobiles SQL Server : Procédure pas à pas de bout en bout'
+description: Découvrez une procédure pas à pas permettant de créer des rapports mobiles pour n’importe quelle taille d’écran avec l’Éditeur de rapports mobiles Microsoft SQL Server sur le portail web Reporting Services et de les afficher dans les applications mobiles Power BI.
+ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7db1fd9af6a36f0804819c389b06778ae04d2ebf
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813762"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209708"
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Rapports mobiles SQL Server : procédure pas à pas de bout en bout
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Rapports mobiles SQL Server : Procédure pas à pas de bout en bout
 Étapes permettant de créer des rapports mobiles pour n’importe quelle taille d’écran avec [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] sur le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et de les afficher dans les applications mobiles Power BI.
 
 Créez des rapports mobiles sur une aire de conception avec des lignes et des colonnes de grille réglables et des éléments de rapport mobile flexibles. Connectez-vous à diverses sources de données locales ou chargez des classeurs Excel pour créer des rapports mobiles. Enregistrez ensuite vos rapports sur un portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] et affichez-les dans un navigateur ou dans les applications mobiles Power BI.  
@@ -30,14 +32,14 @@ Cet article explique comment :
 ## <a name="before-we-start"></a>Avant de commencer  
 Pour suivre la procédure, vous avez besoin de ces produits :  
   
-* Pour créer des sources de données et des indicateurs de performance clés, et publier des jeux de données et des rapports mobiles, vous devez accéder à un [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
-* Pour [créer des jeux de données partagés](../install-windows/install-report-builder.md).  
+* Pour créer des sources de données et des indicateurs de performance clés, et pour publier des jeux de données et des rapports mobiles, vous devez accéder à un [serveur de rapports Reporting Services en mode natif](../install-windows/install-reporting-services-native-mode-report-server.md).  
+* Pour créer des jeux de données partagés, [installez le Générateur de rapports](../install-windows/install-report-builder.md).  
 * Pour créer des rapports mobiles, [installez l’Éditeur de rapports mobiles SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
-*  OU : exemple de base de données World Wide Importers, disponible à partir de la page [Exemples Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
+*  OU Exemple de base de données World Wide Importers, disponible à partir de la page [Exemples Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Pour afficher le résultat 
   *   [Inscrivez-vous au service Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) et
-  *  [Téléchargez l’application mobile Power BI](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) sur votre appareil mobile : iOS, téléphone Android ou appareil Windows 10.  
+  *  [Téléchargez l’application mobile Power BI](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) sur votre appareil mobile : iOS, téléphone Android ou appareil Windows 10.  
 
   
 ## <a name="create-a-shared-data-source"></a>Créer une source de données partagée  
@@ -77,7 +79,7 @@ Utilisez un outil client [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md
 4. Dans le champ Nom, tapez le nom du serveur où vous avez enregistré votre source de données au format suivant :   
    
    Nom : https://*localhost*/ReportServer  
-   Éléments de type : Sources de données (*.rsds)  
+   Élément de type : Sources de données (*.rsds)  
    
 5. Cliquez sur **Ouvrir**et accédez à la source de données que vous avez créée sur ce serveur.  
    
@@ -281,7 +283,9 @@ Pour afficher votre rapport [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnover
   
     ![PBI_iPad_SSMRP_LeftNavBiggr](../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-leftnavbiggr.png)  
       
->**Conseil**: Appuyez sur l’icône d’options ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) à tout moment pour basculer entre vos rapports mobiles Reporting Services sur le portail web Reporting Services et vos tableaux de bord dans le service Power BI.   
+> [!TIP]
+> Appuyez sur l’icône d’options ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) à tout moment pour basculer entre vos rapports mobiles Reporting Services sur le portail web Reporting Services et vos tableaux de bord dans le service Power BI.  
+
   
 ## <a name="view-kpis-and-mobile-reports-in-the-power-bi-app"></a>Afficher des indicateurs de performance clés et des rapports mobiles dans l’application Power BI  
   
@@ -297,12 +301,10 @@ Appuyez sur l’onglet **Indicateurs de performance clés** ou **Rapports mobile
   
 Les indicateurs de performance clés et les rapports mobiles sont affichés dans les mêmes dossiers que ceux où ils sont stockés sur le portail web Reporting Services.   
   
-### <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  
--  Affichez les [rapports mobiles Reporting Services et les indicateurs de performance clés dans l’application iPad](https://powerbi.microsoft.com/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI pour iOS)  
--  Affichez les [rapports mobiles Reporting Services et les indicateurs de performance clés dans l’application iPhone](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI pour iOS)  
--  Affichez les [rapports mobiles Reporting Services et les indicateurs de performance clés dans l’application Power BI pour téléphones Android](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
--  Affichez les [rapports mobiles Reporting Services et les indicateurs de performance clés dans l’application Power BI pour téléphones Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
+-  Afficher des [rapports mobiles et des indicateurs de performance clés du serveur de rapports local dans l’application mobile Power BI](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) pour les appareils iOS et Android
+-  Afficher des [rapports mobiles et des indicateurs de performance clés du serveur de rapports local dans l’application mobile Power BI pour les appareils Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
 

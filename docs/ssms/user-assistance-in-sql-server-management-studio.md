@@ -14,12 +14,12 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e85c73beea1db9b3db7032492321556bb17253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9db497d157ac6b48591fccb42c0eb6fd9dc34779
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818759"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208928"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Assistance utilisateur de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ Les onglets **Sommaire** et **Index** offrent des fonctionnalités et une interf
   
     Stocke les signets utilisateur de rubriques pour y avoir accès facilement ultérieurement.  
   
-Aide sur l'aide (Aide de l'Explorateur de documents[!INCLUDE[msCoName](../includes/msconame_md.md)] ) permet aux utilisateurs d'avoir accès à la documentation sur la visionneuse de l'aide, mais les rubriques se trouvent dans une collection distincte de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations sur l’afficheur d’aide, sélectionnez **Aide sur l’aide** dans le menu ? (Aide) de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+Aide sur l’aide (Aide de l’Explorateur de documents [!INCLUDE[msCoName](../includes/msconame_md.md)]) permet aux utilisateurs d’avoir accès à la documentation sur la visionneuse de l’aide, mais les rubriques se trouvent dans une collection distincte de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations sur l’afficheur d’aide, sélectionnez **Aide sur l’aide** dans le menu ? (Aide) de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>Site MSDN et communautés SQL Server  
 L'aide de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] permet également aux utilisateurs d'avoir accès au site MSDN et aux communautés [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sur le web. Vous pouvez :  

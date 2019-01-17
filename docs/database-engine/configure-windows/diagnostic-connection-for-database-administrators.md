@@ -21,12 +21,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d08609edc596006290d5e0bb062701c5f212ff8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c51655426d892c4d6e233bc72b7388d200bbce8a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514704"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589394"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connexion de diagnostic pour les administrateurs de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52514704"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue chaque tentative pour établir la connexion DAC, mais cela peut échouer dans des situations extrêmes.  
   
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="connecting-with-dac"></a>Connexion avec DAC  
  Par défaut, la connexion est uniquement autorisée à partir d'un client s'exécutant sur le serveur. Les connexions réseau sont autorisées uniquement si elles sont configurées en utilisant la procédure stockée sp_configure avec [l’option remote admin connections](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "52514704"
   
     -   BACKUP  
   
--   Seules des ressources limitées sont garanties disponibles avec la connexion DAC. N'utilisez pas la connexion DAC pour exécuter des requêtes à utilisation intensive des ressources (par exemple, une jointure complexe sur une grande table) ou des requêtes pouvant créer des blocages. Cela permet d'éviter que la connexion DAC n'amplifie d'éventuels problèmes de serveur existants. Pour éviter les scénarios de blocages potentiels, si vous devez exécuter des requêtes pouvant créer un blocage, exécutez la requête sous des niveaux d'isolement basés si possible sur un instantané ; sinon, réglez le niveau d'isolement des transactions à READ UNCOMMITTED et attribuez à LOCK_TIMEOUT une valeur faible, par exemple 2 000 millisecondes, ou les deux. Vous éviterez ainsi le blocage de la session DAC. Cependant, selon l'état de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la session DAC pourrait se bloquer sur un verrou. La session DAC peut éventuellement être terminée avec Ctrl+C, mais ceci n’est pas garanti. Dans ce cas, la seule option consiste à redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Seules des ressources limitées sont garanties disponibles avec la connexion DAC. N'utilisez pas la connexion DAC pour exécuter des requêtes à utilisation intensive des ressources (par exemple, une jointure complexe sur une grande table) ou des requêtes pouvant créer des blocages. Cela permet d'éviter que la connexion DAC n'amplifie d'éventuels problèmes de serveur existants. Pour éviter les scénarios de blocages potentiels, si vous devez exécuter des requêtes pouvant créer un blocage, exécutez la requête sous des niveaux d'isolement basés si possible sur un instantané ; sinon, réglez le niveau d'isolement des transactions à READ UNCOMMITTED et attribuez à LOCK_TIMEOUT une valeur faible, par exemple 2 000 millisecondes, ou les deux. Vous éviterez ainsi le blocage de la session DAC. Cependant, selon l'état de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la session DAC pourrait se bloquer sur un verrou. La session DAC peut éventuellement être terminée avec Ctrl+C, mais ceci n’est pas garanti. Dans ce cas, la seule option consiste à redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Pour garantir la connectivité et le dépannage avec la connexion DAC, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réserve des ressources limitées pour traiter les commandes exécutées sur la connexion DAC. Ces ressources ne permettent généralement que de simples fonctions de diagnostic et de dépannage, telles que celles répertoriées ci-dessous.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52514704"
   
  Le port DAC est affecté dynamiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pendant le démarrage. Lors d’une connexion à l’instance par défaut, la DAC évite d’utiliser une demande SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) à SQL Server Browser Service lors de la connexion. Elle se connecte d'abord sur le port TCP 1434. Si cette tentative échoue, elle effectue un appel SSRP pour obtenir le port. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser n'écoute pas les demandes SSRP, la demande de connexion retourne une erreur. Reportez-vous au journal des erreurs pour trouver le numéro de port que la DAC écoute. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour accepter les connexions d'administration distante, la DAC doit être initialisée avec un numéro de port explicite :  
   
- **sqlcmd -S tcp:***\<serveur>,\<port>*  
+ **sqlcmd -S tcp:**_\<serveur>,\<port>_  
   
  Le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indique le numéro de port de la connexion DAC, qui est 1434 par défaut. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour accepter uniquement des connexions DAC locales, connectez-vous au moyen de l'adaptateur de bouclage en utilisant la commande suivante :  
   

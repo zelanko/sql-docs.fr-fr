@@ -1,6 +1,7 @@
 ---
-title: Délai d’attente du contrôle d’intégrité et délai d’expiration du bail pour les groupes de disponibilité SQL Server | Microsoft Docs
-ms.custom: ''
+title: Mécanismes du délai d’attente du contrôle d’intégrité et du délai d’expiration du bail pour les groupes de disponibilité
+description: Mécanismes et recommandations pour les délais concernant les baux, les clusters et le contrôle d’intégrité pour les groupes de disponibilité Always On.
+ms.custom: seodec18
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c1c337e4a43082cef846623073054ae75513dc31
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393982"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209078"
 ---
-# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>Explications et instructions concernant les délais d’expiration des baux et des clusters, et les délais d’attente du contrôle d’intégrité 
+# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mécanismes et recommandations liés aux délais d’attente concernant les baux, les clusters et le contrôle d’intégrité pour les groupes de disponibilité Always On 
 
 En raison des différences de configuration au niveau du matériel, des logiciels et des clusters, ainsi que des différents besoins de disponibilité et de performances des applications, il est nécessaire de définir des valeurs de délai spécifiques pour les baux, les clusters et le contrôle d’intégrité. Certaines applications et charges de travail nécessitent une surveillance plus importante dans le but de limiter les temps d’arrêt conséquents à une défaillance. D’autres nécessitent une plus grande tolérance aux pannes réseau temporaires. Elles attendent avant d’utiliser une grande quantité de ressources et tolèrent les basculements lents. 
 
@@ -76,11 +77,11 @@ Le niveau de condition d’échec du groupe de disponibilité modifie les condit
 
 | Level | Condition sous laquelle l’instance est considérée comme morte
 |:---|---
-| 1 : OnServerDown | Le contrôle d’intégrité n’entreprend aucune action si l’une des ressources échoue, en dehors du groupe de disponibilité. Si les données du groupe de disponibilité ne sont pas reçues au bout de 5 intervalles ou 5/3 \* HealthCheckTimeout
-| 2 : OnServerUnresponsive | Si aucune donnée n’est reçue de `sp_server_diagnostics` pour HealthCheckTimeout
-| 3 : OnCriticalServerError | (Par défaut) Si le composant Système signale une erreur
-| 4 : OnModerateServerError | Si le composant Ressource signale une erreur 
-| 5 : OnAnyQualifiedFailureConitions |  Si le composant Traitement des requêtes signale une erreur
+| 1 : OnServerDown | Le contrôle d’intégrité n’entreprend aucune action si l’une des ressources échoue, en dehors du groupe de disponibilité. Si les données du groupe de disponibilité ne sont pas reçues au bout de 5 intervalles ou 5/3 \* HealthCheckTimeout
+| 2 : OnServerUnresponsive | Si aucune donnée n’est reçue de `sp_server_diagnostics` pour HealthCheckTimeout
+| 3: OnCriticalServerError | (Par défaut) Si le composant Système signale une erreur
+| 4 : OnModerateServerError | Si le composant Ressource signale une erreur 
+| 5 :  OnAnyQualifiedFailureConitions |  Si le composant Traitement des requêtes signale une erreur
 
 ## <a name="updating-cluster-and-always-on-timeout-values"></a>Mise à jour des valeurs d’expiration des clusters et d’AlwaysOn 
 
@@ -128,7 +129,7 @@ Le mécanisme de bail est contrôlé par une seule valeur qui est spécifique à
    
 ### <a name="health-check-values"></a>Délai d’attente du contrôle d’intégrité 
 
-Deux valeurs définissent le contrôle d’intégrité AlwaysOn : FailureConditionLevel et HealthCheckTimeout. FailureConditionLevel indique le niveau de tolérance pour les conditions d’échec signalées par `sp_server_diagnostics`, et HealthCheckTimeout définit le délai pendant lequel la DLL de ressource peut fonctionner sans recevoir de mise à jour de `sp_server_diagnostics`. L’intervalle de mise à jour pour `sp_server_diagnostics` est toujours égal à un tiers de HealthCheckTimeout. 
+Deux valeurs définissent le contrôle d’intégrité Always On : FailureConditionLevel et HealthCheckTimeout. FailureConditionLevel indique le niveau de tolérance pour les conditions d’échec signalées par `sp_server_diagnostics`, et HealthCheckTimeout définit le délai pendant lequel la DLL de ressource peut fonctionner sans recevoir de mise à jour de `sp_server_diagnostics`. L’intervalle de mise à jour pour `sp_server_diagnostics` est toujours égal à un tiers de HealthCheckTimeout. 
 
 Pour configurer le niveau de condition de basculement, utilisez l’option `FAILURE_CONDITION_LEVEL = <n>` de l’instruction `CREATE` ou `ALTER` `AVAILABILITY GROUP`, où `<n>` est un entier compris entre 1 et 5. La commande suivante définit le niveau de condition d’échec sur 1 pour le groupe de disponibilité « AG1 » : 
 
@@ -155,7 +156,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
 ## <a name="see-also"></a> Voir aussi    
 
-[Secondaires actifs : sauvegarde sur les réplicas secondaires &#40;Groupes de disponibilité AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
+[Secondaires actifs : sauvegarde sur les réplicas secondaires &#40;groupes de disponibilité AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
 
 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)         
 

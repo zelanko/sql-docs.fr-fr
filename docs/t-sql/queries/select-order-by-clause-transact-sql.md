@@ -1,7 +1,7 @@
 ---
 title: ORDER BY, clause (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/13/2017
+ms.date: 12/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7279def5a168f46a86db05be1c41b28bbfa9db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8babb966273c05524a373a14c6a084e5c74cfc7b
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530233"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980275"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - Clause ORDER BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +98,14 @@ ORDER BY order_by_expression
   
  Il est possible de définir plusieurs colonnes de tri. Les noms de colonne doivent être uniques. La séquence des colonnes de tri de la clause ORDER BY définit la structure du jeu de résultats trié. Autrement dit, le jeu de résultats est trié par la première colonne puis, cette liste triée est triée par la deuxième colonne, et ainsi de suite.  
   
- Les noms de colonnes référencés dans la clause ORDER BY doivent correspondre à ceux de colonnes de la liste de sélection ou de colonnes définies dans une table spécifiée dans la clause FROM et ce, sans ambiguïté.  
+ Les noms de colonnes référencés dans la clause ORDER BY doivent correspondre à une colonne ou à un alias de colonne de la liste de sélection, ou à une colonne définie dans une table spécifiée dans la clause FROM, sans ambiguïté. Si la clause ORDER BY référence un alias de colonne de la liste de sélection, l’alias de colonne doit être utilisé de manière autonome, et non dans le cadre d’une expression dans la clause ORDER BY, par exemple :
+ 
+```sql
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName; -- correct 
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName + ''; -- wrong
+```
   
  COLLATE *collation_name*  
  Spécifie que l’opération ORDER BY doit être exécutée conformément au classement spécifié dans *collation_name*, et pas selon le classement de la colonne défini dans la table ou l’affichage. *collation_name* peut être un nom de classement Windows ou SQL. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE est applicable uniquement aux colonnes de types **char**, **varchar**, **nchar** et **nvarchar**.  
@@ -216,7 +223,7 @@ WHERE Name LIKE 'Lock Washer%'
 ORDER BY ProductID;  
 ```  
   
-#### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>B. Spécification d'une colonne qui n'est pas définie dans la liste de sélection  
+#### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>b. Spécification d'une colonne qui n'est pas définie dans la liste de sélection  
  L'exemple suivant classe le jeu de résultats selon une colonne qui n'est pas incluse dans la liste de sélection, mais est définie dans la table spécifiée dans la clause FROM.  
   
 ```sql
@@ -267,7 +274,7 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-an-ascending-order"></a>B. Spécification d’un ordre croissant  
+#### <a name="b-specifying-an-ascending-order"></a>b. Spécification d’un ordre croissant  
  L'exemple suivant classe le jeu de résultats selon la colonne `Name` dans l'ordre croissant. Les caractères sont triés par ordre alphabétique, et non par ordre numérique. Autrement dit, 10 arrive avant 2.  
   
 ```sql
@@ -384,7 +391,7 @@ ORDER BY DepartmentID
   
 ```  
   
-#### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. Spécification de variables pour les valeurs OFFSET et FETCH  
+#### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>b. Spécification de variables pour les valeurs OFFSET et FETCH  
  L'exemple suivant déclare les variables `@StartingRowNumber` et `@FetchRows`, puis spécifie ces variables dans les clauses OFFSET et FETCH.  
   
 ```sql

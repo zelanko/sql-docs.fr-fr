@@ -20,12 +20,12 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 98cdf238c4e88e6121e96fec911ad86ba1a7db7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf815386b00ca70ceacbb549b9dbccd50c9a482
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852347"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206348"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Réplication de fusion avancée - Détection et résolution des conflits
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,15 +96,15 @@ ms.locfileid: "47852347"
   
  Pour spécifier un type d'abonnement de fusion et une priorité pour la résolution des conflits, consultez  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [ Spécifier un type d’abonnement de fusion et une priorité pour la résolution des conflits &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Spécifier un type d’abonnement de fusion et une priorité pour la résolution des conflits &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la réplication et programmation RMO (Replication Management Objects) : [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) et [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la réplication et programmation RMO (Replication Management Objects) : [Créer un abonnement par extraction de données (pull)](../../../relational-databases/replication/create-a-pull-subscription.md) et [Créer un abonnement par émission (push)](../../../relational-databases/replication/create-a-push-subscription.md).  
   
 ### <a name="interactive-resolver"></a>Programme de résolution interactif  
  La réplication fournit une interface utilisateur du programme de résolution interactif, exploitable en association avec le programme de résolution de conflits par défaut basé sur les priorités ou avec un programme de résolution d'articles. Lors d'une synchronisation à la demande via le Gestionnaire de synchronisation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, le programme de résolution interactif affiche les données conflictuelles durant l'exécution et vous permet de choisir le moyen de résoudre les conflits. Pour plus d'informations sur la manière d'activer la résolution interactive et de démarrer le programme de résolution interactif, consultez [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
 ## <a name="viewing-conflicts"></a>Affichage des conflits  
- Le moyen le plus direct d'afficher les conflits consiste à utiliser l'Outil de résolution des conflits de réplication, disponible à partir de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit également les procédures stockées qui permettent l'interrogation des tables conflictuelles). L'Outil de résolution des conflits et le programme de résolution interactif sont des outils similaires, mais le second permet de résoudre des conflits au moment de la synchronisation tandis que le premier affiche les conflits après leur résolution. Si les métadonnées en conflit sont toujours disponibles dans les tables système (les métadonnées en conflit sont conservées par défaut pendant 14 jours), vous pouvez supplanter les résultats de la résolution des conflits dans l'Outil de résolution des conflits ; si, en revanche, une intervention directe est régulièrement demandée, pensez à utiliser le Programme de résolution interactif.  
+ Le moyen le plus direct d’afficher les conflits consiste à utiliser l’Outil de résolution des conflits de réplication, disponible à partir de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit également les procédures stockées qui permettent l’interrogation des tables conflictuelles). L'Outil de résolution des conflits et le programme de résolution interactif sont des outils similaires, mais le second permet de résoudre des conflits au moment de la synchronisation tandis que le premier affiche les conflits après leur résolution. Si les métadonnées en conflit sont toujours disponibles dans les tables système (les métadonnées en conflit sont conservées par défaut pendant 14 jours), vous pouvez supplanter les résultats de la résolution des conflits dans l'Outil de résolution des conflits ; si, en revanche, une intervention directe est régulièrement demandée, pensez à utiliser le Programme de résolution interactif.  
   
 > [!NOTE]  
 >  Les conflits qui concernent des enregistrements logiques ne sont pas affichés dans l'Outil de résolution des conflits. Pour afficher des informations sur ces conflits, utilisez des procédures stockées de réplication. Pour plus d’informations, consultez [Afficher les informations relatives aux conflits pour les publications de fusion &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
@@ -129,9 +129,9 @@ ms.locfileid: "47852347"
   
  **Pour afficher les conflits**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [Afficher et résoudre les conflits de données pour les publications de fusion &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Afficher et résoudre les conflits de données pour les publications de fusion &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la réplication : [Afficher les informations relatives aux conflits pour les publications de fusion &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+-   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de réplication : [Afficher les informations relatives aux conflits pour les publications de fusion &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   
 ## <a name="see-also"></a> Voir aussi  
  [Synchroniser les données](../../../relational-databases/replication/synchronize-data.md)  

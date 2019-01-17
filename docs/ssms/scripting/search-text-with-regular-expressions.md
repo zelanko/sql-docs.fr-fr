@@ -7,8 +7,6 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
-- vsregularexpressionhelp
-- vs.regularexpressionhelp
 - vs.regularexpressionbuilder
 helpviewer_keywords:
 - regular expressions [SQL Server Management Studio]
@@ -19,25 +17,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58a824164a694239faeb5dbfc9ce18ba260f518f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ac5b1039e6424a66842fcd156fe3475d14826694
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538785"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53329029"
 ---
 # <a name="search-text-with-regular-expressions"></a>Rechercher du texte avec des expressions régulières
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
+
+Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
   
-#### <a name="to-find-using-regular-expressions"></a>Pour effectuer une recherche à l'aide d'expressions régulières  
+## <a name="find-using-regular-expressions"></a>Pour effectuer une recherche à l’aide d’expressions régulières  
   
-1.  Pour pouvoir utiliser des expressions régulières dans le champ **Rechercher** pendant des opérations **Recherche rapide**, **Rechercher dans les fichiers**, **Remplacement rapide**ou **Remplacer dans les fichiers** , sélectionnez l’option **Utiliser** sous **Options de recherche**, puis choisissez **Expressions régulières**.  
+1.  Pour pouvoir utiliser des expressions régulières dans le champ **Rechercher** pendant des opérations **Recherche rapide**, **Rechercher dans les fichiers**, **Remplacement rapide**ou **Remplacer dans les fichiers**, sélectionnez l’option **Utiliser** sous **Options de recherche**, puis choisissez **Expressions régulières**.  
   
 2.  Le bouton triangulaire **Générateur d'expressions** situé en regard du champ **Rechercher** devient alors disponible. Cliquez sur ce bouton pour afficher la liste des expressions régulières les plus couramment utilisées. Lorsque vous choisissez un élément dans le Générateur d'expressions, il est inséré dans la chaîne **Rechercher** .  
   
 > [!NOTE]  
->  Il existe des différences de syntaxe entre les expressions régulières qui peuvent être utilisées dans les chaînes **Rechercher** et celles qui sont valides dans la programmation avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Par exemple, dans **Rechercher et remplacer**, les accolades {} sont utilisées pour les expressions avec balises. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « zo » suivies de la balise 1, comme dans « Alonzo1 » et « Gonzo1 ».  En revanche, dans le .NET Framework, les accolades {} sont utilisées pour les quantificateurs. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « z » suivies de la lettre « o », comme dans « zone » (et non « zoo »).   
+> Il existe des différences de syntaxe entre les expressions régulières qui peuvent être utilisées dans les chaînes **Rechercher** et celles qui sont valides dans la programmation avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Par exemple, dans **Rechercher et remplacer**, les accolades {} sont utilisées pour les expressions avec balises. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « zo » suivies de la balise 1, comme dans « Alonzo1 » et « Gonzo1 ».  En revanche, dans le .NET Framework, les accolades {} sont utilisées pour les quantificateurs. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « z » suivies de la lettre « o », comme dans « zone » (et non « zoo »).   
   
  Le tableau ci-dessous décrit les expressions régulières disponibles dans le **Générateur d'expressions**.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "52538785"
 |----------------|------------|-----------------|  
 |Zéro ou plusieurs occurrences au minimum|@|Représente zéro ou plusieurs occurrences de l'expression précédente, en faisant correspondre le moins de caractères possible.|  
 |Une ou plusieurs occurrences au minimum|#|Représente au moins une occurrence de l'expression précédente, en faisant correspondre le moins de caractères possible.|  
-|Répétition n fois|^n|Représente n occurrences de l'expression précédente. Par exemple, [0-9]^4 représente toute séquence à 4 chiffres.|  
+|Répétition n fois|^n|Représente n occurrences de l'expression précédente. Par exemple, [0-9]^4 représente toute séquence à quatre chiffres.|  
 |Regroupement|()|Regroupe une sous-expression.|  
 |Énième texte avec balises|\n|Dans une expression **Rechercher ou Remplacer** , recherche la concordance du texte correspondant à la énième expression avec balises, où n désigne un chiffre compris entre 1 et 9.<br /><br /> Dans une expression **Remplacer** , \0 insère le texte correspondant à l’expression entière.|  
 |Champ justifié à droite|\\(w,n)|Dans une expression **Remplacer** , aligne à droite la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
@@ -137,5 +136,3 @@ ms.locfileid: "52538785"
 ## <a name="see-also"></a> Voir aussi  
  [Recherche et remplacement](../../relational-databases/scripting/search-and-replace.md)   
  [Rechercher du texte avec des caractères génériques](../../relational-databases/scripting/search-text-with-wildcards.md)  
-  
-  

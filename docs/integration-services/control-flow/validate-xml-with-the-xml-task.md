@@ -14,12 +14,12 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4271eb5bc3956fd58b942eb7c7076716f8f03f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2617ab51ffdde7bd8986c0a7d508067ac2686e1e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414266"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203258"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   Validez des documents XML et obtenez une sortie d’erreur détaillée en activant la propriété **ValidationDetails** de la tâche XML.  
@@ -32,8 +32,8 @@ ms.locfileid: "52414266"
   
  La fonctionnalité de validation XML s’adapte aisément aux documents XML volumineux et aux nombres d’erreurs élevés. Étant donné que le fichier de sortie proprement dit présente le format XML, vous pouvez exécuter des requêtes sur la sortie et analyser cette dernière. Par exemple, si la sortie contient un grand nombre d’erreurs, vous pouvez regrouper les erreurs en exécutant une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] , comme décrit dans cette rubrique.  
   
-> [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) a introduit la propriété **ValidationDetails** dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. Cette propriété est également disponible dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+> [!NOTE]
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ( [!INCLUDE[ssIS](../../includes/ssis-md.md)]) a introduit la propriété **ValidationDetails** dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. Cette propriété est également disponible dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>Exemple de sortie pour XML valide  
  Voici un exemple de fichier de sortie présentant les résultats de validation d’un fichier XML valide.  

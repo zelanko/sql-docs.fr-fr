@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c7768b97ba5fc337ab06b42e61fb1e80330bc76
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 066b202a91f646dadd4a72182193e9fb0fcee6f1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970971"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979995"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ Identificateur valide pour l’expression de table commune. *expression_name* do
  *CTE_query_definition*  
  Spécifie une instruction SELECT dont le jeu de résultats remplit l'expression de table commune. L’instruction SELECT de *CTE_query_definition* doit remplir les mêmes conditions que celles requises pour la création d’une vue, mis à part qu’une expression de table commune ne peut pas en définir une autre. Pour plus d’informations, consultez la section Notes et [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Si plusieurs arguments *CTE_query_definition* sont définis, les définitions de requêtes doivent être jointes par l’un de ces opérateurs : UNION ALL, UNION, EXCEPT ou INTERSECT.  
+ Si plusieurs *CTE_query_definition* sont définis, les définitions de requêtes doivent être jointes par l’un des opérateurs de jeu ci-après : UNION ALL, UNION, EXCEPT, ou INTERSECT.  
   
 ## <a name="remarks"></a>Notes   
   
@@ -75,7 +75,7 @@ Identificateur valide pour l’expression de table commune. *expression_name* do
   
 -   Une expression de table commune doit être suivie d'une seule instruction SELECT, INSERT, UPDATE ou DELETE qui fait référence à certaines ou à toutes les colonnes de l'expression de table commune. Une expression de table commune peut également être spécifiée dans une instruction CREATE VIEW comme faisant partie de l'instruction SELECT de définition de la vue.  
   
--   Des définitions de requête d'expression de table commune multiples peuvent être définies dans une expression de table commune non récursive. Les définitions doivent être associées par l'un des opérateurs de jeu ci-après : UNION ALL, UNION, INTERSECT ou EXCEPT.  
+-   Des définitions de requête d'expression de table commune multiples peuvent être définies dans une expression de table commune non récursive. Les définitions doivent être associées par l'un des opérateurs de jeu ci-après : UNION ALL, UNION, INTERSECT, ou EXCEPT.  
   
 -   Une expression de table commune peut faire référence à elle-même ou à des expressions de table communes définies précédemment dans la même clause WITH. Les références à des éléments ultérieurs ne sont pas autorisées.  
   
@@ -104,7 +104,7 @@ Identificateur valide pour l’expression de table commune. *expression_name* do
   
 -   La définition de l'expression de table commune récursive doit contenir au moins deux définitions de requête d'expression de table commune, un membre d'ancrage et un membre récursif. Plusieurs membres d'ancrage et membres récursifs peuvent être définis ; toutefois, toutes les définitions de requêtes de membres d'ancrage doivent être placées avant la première définition de membre récursif. Toutes les définitions de requête d'expression de table commune sont des membres d'ancrage à moins qu'ils ne fassent référence à l'expression de table commune elle-même.  
   
--   Les membres d'ancrage doivent être associés par l'un des opérateurs de jeu ci-après : UNION ALL, UNION, INTERSECT ou EXCEPT. UNION ALL est le seul opérateur défini autorisé entre le dernier membre d'ancrage et le premier membre récursif, ainsi que lors de la combinaison de plusieurs membres récursifs.  
+-   Les membres d'ancrage doivent être associés par l'un des opérateurs de jeu ci-après : UNION ALL, UNION, INTERSECT, ou EXCEPT. UNION ALL est le seul opérateur défini autorisé entre le dernier membre d'ancrage et le premier membre récursif, ainsi que lors de la combinaison de plusieurs membres récursifs.  
   
 -   Le nombre de colonnes des membres d'ancrage et récursifs doivent être identiques.  
   
@@ -144,7 +144,7 @@ Identificateur valide pour l’expression de table commune. *expression_name* do
   
 -   Les tables de serveurs distants peuvent être référencées dans l'expression de table commune. Si le serveur distant est référencé dans le membre récursif de l'expression de table commune récursive, un spouleur est créé pour chaque table distante afin que les tables soient accessibles localement de manière répétée. S'il s'agit d'une requête d'expression de table commune, Index Spool/Lazy Spools est affiché dans le plan de requête avec le prédicat WITH STACK supplémentaire. Il s'agit de l'une des méthodes permettant de confirmer la récursivité appropriée.  
   
--   Les fonctions analytiques et d'agrégation dans la partie récursive de l'expression CTE sont appliquées à l'ensemble du niveau de récursivité actuel et non à l'ensemble de l'expression CTE. Les fonctions telles que ROW_NUMBER s'appliquent uniquement au sous-ensemble de données qui leur est transmis par le niveau de récursivité actuel et non à l'ensemble entier de données transmis à la partie récursive de l'expression CTE. Pour plus d’informations, consultez « K. Utilisation de fonctions analytiques dans une expression de table commune récursive », plus loin dans cet article.  
+-   Les fonctions analytiques et d'agrégation dans la partie récursive de l'expression CTE sont appliquées à l'ensemble du niveau de récursivité actuel et non à l'ensemble de l'expression CTE. Les fonctions telles que ROW_NUMBER s’appliquent uniquement au sous-ensemble de données qui leur est transmis par le niveau de récursivité actuel, et non à l’ensemble entier de données transmis à la partie récursive de l’expression CTE. Pour plus d’informations, consultez « K. Utilisation de fonctions analytiques dans une expression de table commune récursive », plus loin dans cet article.  
   
 ## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Fonctionnalités et limitations des expressions de table commune dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L’implémentation actuelle des expressions de table communes dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] présente les fonctionnalités et limitations suivantes :  
@@ -202,7 +202,7 @@ GO
   
 ```  
   
-### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>B. Utilisation d'une expression de table commune pour limiter les nombres et les moyennes de rapports  
+### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>b. Utilisation d'une expression de table commune pour limiter les nombres et les moyennes de rapports  
  L'exemple suivant affiche le nombre moyen de commandes client de toutes les années pour les commerciaux.  
   
 ```  

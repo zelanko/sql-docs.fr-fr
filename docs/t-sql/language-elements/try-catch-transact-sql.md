@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3374d7ae2f86ce27de46fad9027f78a040ca356b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 68900243001edf7d9dcb39bcf10bf13e24bd0c48
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545751"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997581"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -103,7 +103,7 @@ END CATCH
   
 -   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) renvoie le texte complet du message d’erreur. Le texte comprend les valeurs fournies pour tous les paramètres remplaçables, tels que les longueurs, les noms d'objet ou les heures.  
   
- Ces fonctions renvoient la valeur NULL si elles sont appelées en dehors de l'étendue du bloc CATCH. Les informations sur les erreurs peuvent être récupérées à l'aide de ces fonctions à partir de n'importe quel emplacement dans l'étendue du bloc CATCH. Par exemple, le script suivant montre une procédure stockée contenant des fonctions de gestion des erreurs : dans le bloc `CATCH` d'une construction `TRY...CATCH`, la procédure stockée est appelée et les informations sur l'erreur sont retournées.  
+Ces fonctions renvoient la valeur NULL si elles sont appelées en dehors de l'étendue du bloc CATCH. Les informations sur les erreurs peuvent être récupérées à l'aide de ces fonctions à partir de n'importe quel emplacement dans l'étendue du bloc CATCH. Par exemple, le script suivant montre une procédure stockée contenant des fonctions de gestion des erreurs : dans le bloc `CATCH` d'une construction `TRY...CATCH`, la procédure stockée est appelée et les informations sur l'erreur sont retournées.  
   
 ```sql  
 -- Verify that the stored procedure does not already exist.  
@@ -146,17 +146,19 @@ END CATCH;
   
 -   Cela survient lorsque la session est terminée par un administrateur système utilisant l'instruction KILL.  
   
- Les types d’erreurs suivants ne sont pas gérés par un bloc CATCH quand elles surviennent au même niveau d’exécution que la construction TRY...CATCH :  
+Les types d’erreurs suivants ne sont pas gérés par un bloc CATCH quand elles surviennent au même niveau d’exécution que la construction TRY...CATCH :  
   
 -   Les erreurs de compilation, telles que les erreurs de syntaxe, qui empêchent un traitement de s'exécuter.  
   
 -   Les erreurs qui se produisent pendant une recompilation de niveau instruction, telles que les erreurs de résolution de nom d’objet qui surviennent après la compilation en raison d’une résolution de nom différée.  
+-   Erreurs de résolution de noms d’objets   
+
   
- Ces erreurs sont renvoyées au niveau qui a exécuté le traitement, la procédure stockée ou le déclencheur.  
+Ces erreurs sont renvoyées au niveau qui a exécuté le traitement, la procédure stockée ou le déclencheur.  
   
- Si une erreur survient pendant la compilation ou la recompilation au niveau de l’instruction à un niveau d’exécution inférieur (par exemple lors de l’exécution de sp_executesql ou d’une procédure stockée définie par l’utilisateur) à l’intérieur du bloc TRY, l’erreur survient à un niveau inférieur à la construction TRY...CATCH et est gérée par le bloc CATCH associé.  
+Si une erreur survient pendant la compilation ou la recompilation au niveau de l’instruction à un niveau d’exécution inférieur (par exemple lors de l’exécution de sp_executesql ou d’une procédure stockée définie par l’utilisateur) à l’intérieur du bloc TRY, l’erreur survient à un niveau inférieur à la construction TRY...CATCH et est gérée par le bloc CATCH associé.  
   
- L'exemple suivant montre comment une erreur de résolution de noms d'objets générée par une instruction `SELECT` n'est pas interceptée par la construction `TRY...CATCH`, mais par le bloc `CATCH` lorsque la même instruction `SELECT` est exécutée au sein d'une procédure stockée.  
+L'exemple suivant montre comment une erreur de résolution de noms d'objets générée par une instruction `SELECT` n'est pas interceptée par la construction `TRY...CATCH`, mais par le bloc `CATCH` lorsque la même instruction `SELECT` est exécutée au sein d'une procédure stockée.  
   
 ```sql  
 BEGIN TRY  
@@ -225,7 +227,7 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-trycatch-in-a-transaction"></a>B. Utilisation de TRY...CATCH dans une transaction  
+### <a name="b-using-trycatch-in-a-transaction"></a>b. Utilisation de TRY...CATCH dans une transaction  
  L'exemple suivant montre comment un bloc `TRY...CATCH` fonctionne dans une transaction. L'instruction dans le bloc `TRY` génère une erreur de violation de contrainte.  
   
 ```sql  

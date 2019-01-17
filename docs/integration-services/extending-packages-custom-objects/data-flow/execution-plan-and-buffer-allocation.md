@@ -21,22 +21,22 @@ ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ff691e764392c65a49dc5527f8a44f8d036ac59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1ede86329f0082bac1927ca0c75fc64d6116a56
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853287"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591713"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Plan d'exécution et allocation de mémoire tampon
   Avant l'exécution, la tâche de flux de données examine ses composants et génère un plan d'exécution pour chaque séquence de composants. Cette section fournit des détails sur le plan d'exécution et son mode d'affichage, ainsi que sur l'allocation de mémoires tampons d'entrée et de sortie en fonction du plan d'exécution.  
   
 ## <a name="understanding-the-execution-plan"></a>Fonctionnement du plan d'exécution  
- Un plan d'exécution contient des threads sources et des threads de travail. Chaque thread contient des listes de travaux qui spécifient des listes de travaux de sortie pour les threads sources ou des listes de travaux d'entrée et de sortie pour les threads de travail. Les threads sources d’un plan d’exécution, qui représentent les composants sources du flux de données, sont identifiés dans le plan d’exécution par *SourceThread**n*, où *n* correspond au numéro (commençant à zéro) du thread source.  
+ Un plan d'exécution contient des threads sources et des threads de travail. Chaque thread contient des listes de travaux qui spécifient des listes de travaux de sortie pour les threads sources ou des listes de travaux d'entrée et de sortie pour les threads de travail. Les threads sources d’un plan d’exécution, qui représentent les composants sources du flux de données, sont identifiés dans le plan d’exécution par *SourceThreadn*, où *n* correspond au numéro (commençant à zéro) du thread source.  
   
  Chaque thread source crée une mémoire tampon, définit un écouteur et appelle la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> sur le composant source. C'est de cet emplacement que démarre l'exécution et que proviennent les données, pendant que le composant source commence à ajouter des lignes aux mémoires tampons de sortie que lui fournit la tâche de flux de données. Une fois que les threads sources sont exécutés, la charge de travail est répartie entre les threads de travail.  
   
- Un thread de travail, qui peut contenir des listes de travaux d’entrée et de sortie, est identifié dans le plan d’exécution par *WorkThread**n*, où *n* correspond au numéro (commençant à zéro) du thread de travail. Ces threads contiennent des listes de travaux de sortie lorsque le graphique contient un composant à sorties asynchrones.  
+ Un thread de travail, qui peut contenir des listes de travaux d’entrée et de sortie, est identifié dans le plan d’exécution par *WorkThreadn*, où *n* correspond au numéro (commençant à zéro) du thread de travail. Ces threads contiennent des listes de travaux de sortie lorsque le graphique contient un composant à sorties asynchrones.  
   
  L'exemple de plan d'exécution suivant représente un flux de données qui contient un composant source connecté à une transformation à sortie asynchrone connectée à un composant de destination. Dans cet exemple, WorkThread0 contient une liste des travaux de sortie car le composant de transformation possède une sortie asynchrone.  
   

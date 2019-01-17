@@ -15,22 +15,22 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0280e8039b5288186e910289eeb7c7566fdb0ae0
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae292a384a26c050976d4557793f6060ac3fe1b7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558726"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980445"
 ---
 # <a name="create-a-database-mail-profile"></a>Créer un profil de messagerie de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Utilisez l' **Assistant Configuration de la messagerie de base de données** ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer des profils privés et publics de messagerie de base de données. Pour plus d’informations sur les profils de messagerie, consultez [Profil de messagerie de base de données](database-mail-configuration-objects.md).
   
--   **Avant de commencer :** [Configuration requise](#Prerequisites), [Sécurité](#Security)  
+-   **Avant de commencer :** [Prérequis](#Prerequisites), [Sécurité](#Security)  
   
--   **Pour créer un profil privé de messagerie de base de données en utilisant :**  [Assistant Configuration de la messagerie de base de données](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **Pour créer un profil privé Database Mail en utilisant :**  [ Assistant Configuration de Database Mail](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **Pour créer un profil public de messagerie de base de données en utilisant :**  [Assistant Configuration de la messagerie de base de données](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **Pour créer un profil public Database Mail en utilisant :**  [ Assistant Configuration de Database Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51558726"
   
 -   Dans la page **Gérer les profils et les comptes** , sélectionnez l'option **Créer un nouveau profil** , puis cliquez sur **Suivant**.  
   
--   Dans la page **Nouveau profil** , spécifiez le nom de profil et la description, et ajoutez des comptes à inclure dans le profil, puis cliquez sur **Suivant**.  
+-   Dans la page **Nouveau profil**, spécifiez le nom de profil et la description, et ajoutez des comptes à inclure dans le profil, puis cliquez sur **Suivant**.  
   
 -   Dans la page **Terminer l'Assistant** , examinez les actions à exécuter, puis cliquez sur **Terminer** pour terminer la création du nouveau profil.  
   

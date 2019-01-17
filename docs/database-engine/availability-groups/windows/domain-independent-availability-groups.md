@@ -1,6 +1,7 @@
 ---
-title: Groupes de disponibilité indépendants du domaine (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Créer un groupe de disponibilité indépendant du domaine
+description: Étapes à suivre pour créer un groupe de disponibilité qui utilise un cluster de groupe de travail. Cela permet à SQL Server 2016 (et versions ultérieures) de déployer un groupe de disponibilité Always On sur un cluster WSFC qui ne nécessite pas Active Directory Domain Services et qui n’exige donc pas que chaque serveur fasse partie du même domaine.
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0024663d9d16d191338abfa2604e6c969f0d58e5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c70aba3f6dc1648b70c9bc9a524052a7ba591793
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415076"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211908"
 ---
-# <a name="domain-independent-availability-groups"></a>Groupes de disponibilité indépendants du domaine
+# <a name="create-a-domain-independent-availability-group"></a>Créer un groupe de disponibilité indépendant du domaine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Les groupes de disponibilité AlwaysOn exigent un cluster de basculement Windows Server (cluster WSFC) sous-jacent. Le déploiement d’un cluster WSFC via Windows Server 2012 R2 a toujours nécessité que les serveurs participant à un cluster WSFC, également connu sous le nom de nœuds, soient joints au même domaine. Pour plus d’informations sur Active Directory Domain Services (AD DS), reportez-vous [ici](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).

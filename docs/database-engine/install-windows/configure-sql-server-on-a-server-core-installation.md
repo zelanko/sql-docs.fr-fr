@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 26a4fcb38edaa490fd295b7f781a2062a7671199
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 15dd8854a12f5cfc12a4bca095742f2095c44724
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409046"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209067"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurer SQL Server sur une installation Server Core
 
@@ -40,7 +40,7 @@ Pour plus d’informations sur la configuration et la gestion d’une installati
   
 - [Installer des rôles et fonctionnalités de serveur sur un serveur Server Core Windows Server 2012 R2](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Gestion d’une installation Server Core : Présentation](https://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Gestion d’une installation Server Core : Vue d’ensemble](https://go.microsoft.com/fwlink/?LinkId=245962)  
   
 - [Administration d’une installation Server Core](https://go.microsoft.com/fwlink/?LinkId=245963)
   
@@ -120,7 +120,7 @@ Ces étapes doivent être effectuées sur un PC exécutant l’édition cliente 
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enregistre votre modification. Ensuite, vous devez redémarrer manuellement le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela vous permet de choisir l'heure de redémarrage la plus adaptée aux besoins de l'entreprise. Lorsque le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redémarre, AlwaysOn est activé, et la propriété de serveur IsHadrEnabled a la valeur 1.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   Vous devez posséder les droits d'utilisateur appropriés, ou vous devez avoir l'autorisation appropriée sur l'ordinateur cible pour vous connecter à cet ordinateur.  
 > -   Le nom de l'ordinateur que vous gérez apparaît entre parenthèses en regard de Gestion d'ordinateur dans l'arborescence de la console.  
   
@@ -153,7 +153,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
  Effectuez les actions décrites ci-dessous pour configurer l’accès à distance d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] qui s’exécute sur Windows Server Core.  
   
 ### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Activer les connexions distantes sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Pour activer les connexions distantes, utilisez SQLCMD.exe localement et exécutez les instructions suivantes sur l'instance de Server Core :  
+ Pour activer les connexions distantes, utilisez SQLCMD.exe localement et exécutez les instructions suivantes sur l'instance de Server Core :  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
   
@@ -226,7 +226,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Utiliser les outils de dépannage  
  Vous pouvez utiliser l’ [utilitaire SQLdiag](../../tools/sqldiag-utility.md) pour collecter des fichiers journaux et des fichiers de données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et depuis d’autres types de serveurs, mais aussi analyser vos serveurs au fil des jours ou trouver des solutions à des problèmes spécifiques les concernant. SQLdiag a été conçu pour accélérer et simplifier la collecte d'informations de diagnostic pour les services d'assistance Microsoft.  
   
- Vous pouvez lancer l’utilitaire à partir de l’invite de commandes d’administrateur sur Server Core, à l’aide de la syntaxe spécifiée dans l’article : [Utilitaire SQLdiag](../../tools/sqldiag-utility.md).  
+ Vous pouvez lancer l’utilitaire dans l’invite de commandes d’administrateur sur Server Core, à l’aide de la syntaxe spécifiée dans l’article : [Utilitaire SQLdiag](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Installer SQL Server sur Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

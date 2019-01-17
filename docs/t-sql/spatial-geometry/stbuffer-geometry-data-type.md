@@ -18,12 +18,12 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d18d64f08eacc5b2784c9101d77e90f4c5d33a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fdb4a177f1d391877e6f1b9d0f7b37c9c001b955
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702797"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979475"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Retourne un objet géométrique qui représente l’union de tous les points don
   
  Une mémoire tampon négative supprime tous les points situés dans la distance donnée de la limite de la géométrie.  
   
- L’erreur entre la mémoire tampon théorique et la mémoire tampon calculée correspond à max (tolerance, étendues * 1E-7), où tolerance = distance \* 0,001. Pour plus d’informations sur les étendues, consultez [Référence de méthodes de type de données geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ L’erreur entre la mémoire tampon théorique et la mémoire tampon calculée correspond à max (tolérance, étendues * 1E-7), où tolérance = distance \* 0,001. Pour plus d’informations sur les étendues, consultez [Référence de méthodes de type de données geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -79,7 +79,7 @@ Retourne un objet géométrique qui représente l’union de tous les points don
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. Appel de STBuffer() avec parameter_value < 0 sur une instance Polygon  
+### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>b. Appel de STBuffer() avec parameter_value < 0 sur une instance Polygon  
  L'exemple suivant retourne une instance `Polygon` avec une mémoire tampon négative :  
   
 ```

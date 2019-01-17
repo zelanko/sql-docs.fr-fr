@@ -15,18 +15,18 @@ ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f3ec990e48b6d9913db9e610fee6bfca6b9190a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4e928be305f701c8493e03fea504c8d275226966
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701365"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215375"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>Introduction à SQL Server Management Studio pour Business Intelligence
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Pour accéder, configurer, gérer et administrer [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], utilisez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Même si les trois technologies de décisionnel reposent sur [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], les tâches d'administration associées à chacune d'entre elle sont légèrement différentes.  
   
-> [!NOTE]  
+> [!NOTE]
 > Pour créer et modifier des solutions [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]et [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , utilisez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)], et non [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)] est un environnement de développement basé sur [!INCLUDE[msCoName](../includes/msconame_md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
 ## <a name="managing-analysis-services-solutions-using-sql-server-management-studio"></a>Gestion des solutions Analysis Services à l'aide de SQL Server Management Studio  
@@ -42,19 +42,19 @@ Pour plus d’informations sur la façon d’utiliser [!INCLUDE[ssManStudioFull]
 ## <a name="managing-reporting-services-projects-using-sql-server-management-studio"></a>Gestion des projets Reporting Services à l'aide de SQL Server Management Studio  
 Utiliser SQL Server Management Studio pour activer les fonctionnalités de Reporting Services, administrer le serveur et les bases de données, et gérer des rôles et des travaux.  
   
-Vous gérez des planifications partagées à l'aide du dossier Planifications partagées et gérer des bases de données du serveur de rapports (ReportServer, ReportServerTempdb). Vous créez aussi un RSExecRole dans la base de données système Master quand vous déplacez une base de données du serveur de rapports vers un moteur de base de données SQL Server ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). Pour plus d'informations sur ces tâches, consultez les rubriques suivantes :  
+Vous gérez des planifications partagées à l'aide du dossier Planifications partagées et gérer des bases de données du serveur de rapports (ReportServer, ReportServerTempdb). Vous créez aussi un RSExecRole dans la base de données système MASTER quand vous déplacez une base de données du serveur de rapports vers un moteur de base de données SQL Server nouveau ou différent ([!INCLUDE[ssDE](../includes/ssde_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]). Pour plus d'informations sur ces tâches, consultez les rubriques suivantes :  
   
 -   [Management Studio - Rubriques de procédures](https://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
   
 -   [Administration d'une base de données du serveur de rapports](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)  
   
--   [Procédure : créer le rôle RSExecRole](../reporting-services/security/create-the-rsexecrole.md)  
+-   [Guide pratique : Créer le RSExecRole](../reporting-services/security/create-the-rsexecrole.md)  
   
 Vous gérez également le serveur en activant et configurant différentes fonctionnalités, en définissant les valeurs par défaut du serveur, et en gérant des rôles et des travaux. Pour plus d'informations sur ces tâches, consultez les rubriques suivantes :  
   
--   [Procédure : définir les propriétés du serveur de rapports (Management Studio)](https://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
+-   [Guide pratique : Définir les propriétés du serveur de rapports (Management Studio)](https://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
   
--   [Procédure : créer, supprimer ou modifier un rôle (Management Studio)](https://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
+-   [Guide pratique : Créer, supprimer ou modifier un rôle (Management Studio)](https://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
   
 -   [Activation et désactivation de l'impression côté client pour Reporting Services](https://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)  
   

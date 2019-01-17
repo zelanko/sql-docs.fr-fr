@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eadf8d4512e3dd5e119dd92e9e2039e0af9dc0ce
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: a72ef38b960e00a88c7d4e1e0038e32a897a46d9
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617434"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980115"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,8 @@ Retourne une expression de caractères du même type de données que `inputStrin
 
 `TRANSLATE` retourne une erreur si les expressions *characters* et *translations* ont des longueurs différentes. `TRANSLATE` retourne NULL si un des arguments est NULL.  
 
-Le comportement de la fonction `TRANSLATE` est équivalent à l’utilisation de plusieurs fonctions [REPLACE](../../t-sql/functions/replace-transact-sql.md).
+Le comportement de la fonction `TRANSLATE` est similaire à l’utilisation de plusieurs fonctions [REPLACE](../../t-sql/functions/replace-transact-sql.md). `TRANSLATE` ne remplace cependant pas un caractère plusieurs fois. Ceci diffère de fonctions `REPLACE` multiples, car chaque utilisation remplace tous les caractères appropriés. 
+
 
 `TRANSLATE` est toujours conscient du classement SC.
 
@@ -97,7 +98,7 @@ REPLACE
 );
 ```
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>B. Convertir les points GeoJSON en WKT    
+###  <a name="b-convert-geojson-points-into-wkt"></a>b. Convertir les points GeoJSON en WKT    
 GeoJSON est un format d’encodage de diverses structures de données géographiques. Avec la fonction `TRANSLATE`, les développeurs peuvent facilement convertir les points GeoJSON au format WKT et vice versa. La requête suivante remplace les crochets et les accolades dans l’entrée par des parenthèses :   
 ```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
@@ -110,6 +111,20 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 |Point  |Coordinates |  
 ---------|--------- |
 (137.4  72.3) |[137.4,72.3] |
+
+
+### <a name="c-use-the-translate-function"></a>C. Utiliser la fonction TRANSLATE
+
+```sql
+SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
+       REPLACE(REPLACE(REPLACE('abcdef','a','b'),'b','c'),'c','d') AS Replaced;
+```
+
+Les résultats sont :
+
+| Traduit | Remplacé |  
+| ---------|--------- |
+| bcddef | ddddef |
 
 
 ## <a name="see-also"></a> Voir aussi

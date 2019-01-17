@@ -21,12 +21,12 @@ ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f146b9aed0e8d5cf94e2028c83d7eb751202c309
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75dbab8f45c8a617ed0a98829082170dcf85e310
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746337"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53265960"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 >  L'utilisation des fonctions de chiffrement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjointement au paramètre ANSI_PADDING OFF peut entraîner la perte de données en raison de conversions implicites. Pour plus d’informations sur ANSI_PADDING, consultez [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
- La fonctionnalité illustrée dans les exemples suivants utilise les clés et les certificats créés dans [Guide pratique pour chiffrer une colonne de données](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
+ La fonctionnalité illustrée dans les exemples suivants utilise les clés et les certificats créés dans [Procédure : Chiffrer une colonne de données](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. Chiffrer une chaîne à l'aide d'une clé symétrique  
  L'exemple de code suivant ajoute une colonne à la table `Employee`, puis chiffre la valeur du numéro de sécurité sociale stockée dans la colonne `NationalIDNumber`.  
@@ -122,13 +122,13 @@ SET EncryptedNationalIDNumber
 GO  
 ```  
   
-### <a name="b-encrypting-a-record-together-with-an-authentication-value"></a>B. Chiffrer un enregistrement avec une valeur d'authentification  
+### <a name="b-encrypting-a-record-together-with-an-authentication-value"></a>b. Chiffrer un enregistrement avec une valeur d'authentification  
   
 ```  
 USE AdventureWorks2012;  
   
 -- Create a column in which to store the encrypted data.  
-ALTER TABLE Sales.CreditCard.   
+ALTER TABLE Sales.CreditCard   
     ADD CardNumber_Encrypted varbinary(128);   
 GO  
   
