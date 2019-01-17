@@ -43,16 +43,16 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 48e1ef4a027c3bd62818bb85fd0218e033e620da
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9bb9f7368f9250bd96adb62c6af7e7711213e4fc
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203878"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242282"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -367,7 +367,7 @@ Spécifie le texte de format libre servant à décrire le jeu de sauvegarde. La 
 NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 Spécifie le nom du jeu de sauvegarde. Les noms peuvent contenir jusqu'à 128 caractères. Si l'option NAME n'est pas spécifiée, le nom reste vide.  
   
-{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** *days* }  
+{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ }  
 Spécifie la date à laquelle le jeu de sauvegarde de cette sauvegarde peut être écrasé. Si ces options sont toutes les deux utilisées, RETAINDAYS l'emporte sur EXPIREDATE.  
   
 Si aucune de ces options n’est spécifiée, la date d’expiration est déterminée par le paramètre de configuration **mediaretention**. Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).   
@@ -518,7 +518,7 @@ Depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], n'a aucun effet. Ell
   
 **Options de surveillance**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 Affiche un message à chaque fois qu’un autre *pourcentage* se termine et sert à évaluer l’état d’avancement de l’opération. Si *percentage* est omis, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche un message à chaque incrément de 10 pour cent.  
   
 L'option STATS signale le pourcentage terminé comme seuil de rapport de l'intervalle suivant. C'est-à-dire approximativement le pourcentage spécifié ; par exemple, si STATS=10, et si le pourcentage terminé est 40 pour cent, l'option peut afficher 43 pour cent. Pour les jeux de sauvegardes volumineux, cela n'est pas un problème car le pourcentage terminé varie très lentement entre les appels d'E/S terminés.  
@@ -564,14 +564,14 @@ Ces options ne sont utilisées qu’avec `BACKUP LOG`.
 > [!NOTE]  
 > Si vous ne voulez pas effectuer de sauvegarde du journal, utilisez le mode de récupération simple. Pour plus d’informations, consultez [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
-{ NORECOVERY | STANDBY **=** *undo_file_name* }  
+{ NORECOVERY | STANDBY **=** _undo_file_name_ }  
   NORECOVERY 
 
 Effectue une sauvegarde de la fin du journal et laisse la base de données en état de restauration (RESTORING). NORECOVERY s'avère utile lors du basculement vers une base de données secondaire ou de l'exécution d'une sauvegarde de la fin du journal avant une opération RESTORE.  
   
 Pour effectuer au mieux une sauvegarde du journal qui évite la troncation du journal et place la base de données en état RESTORING de manière atomique, utilisez conjointement les options `NO_TRUNCATE` et `NORECOVERY`.  
   
-STANDBY **=** *standby_file_name* 
+STANDBY **=** _standby_file_name_ 
 
 Effectue une sauvegarde de la fin du journal et laisse la base de données en lecture seule et en état STANDBY. La clause STANDBY écrit les données en attente (annulation avec option de restauration ultérieure). L'option STANDBY est semblable à BACKUP LOG WITH NORECOVERY suivie par RESTORE WITH STANDBY.  
   
@@ -1113,7 +1113,7 @@ Cette option n'a aucun effet. Elle est acceptée par cette version à des fins d
   
 **Options de surveillance**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 Affiche un message à chaque fois qu’un autre *pourcentage* se termine et sert à évaluer l’état d’avancement de l’opération. Si *percentage* est omis, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche un message à chaque incrément de 10 pour cent.  
   
 L'option STATS signale le pourcentage terminé comme seuil de rapport de l'intervalle suivant. C'est-à-dire approximativement le pourcentage spécifié ; par exemple, si STATS=10, et si le pourcentage terminé est 40 pour cent, l'option peut afficher 43 pour cent. Pour les jeux de sauvegardes volumineux, cela n'est pas un problème car le pourcentage terminé varie très lentement entre les appels d'E/S terminés.  

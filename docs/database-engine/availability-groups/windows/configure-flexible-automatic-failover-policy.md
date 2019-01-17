@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: abfad9aeef575035f4f171a19073b97a266797ef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3de9c31febeecca588464cfb386543347ddad852
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208558"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126579"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Configurer une stratégie de basculement automatique flexible pour un groupe de disponibilité Always On
 
@@ -113,7 +113,7 @@ ms.locfileid: "53208558"
   
 2.  Quand vous ajoutez un réplica de disponibilité à un groupe de disponibilité, utilisez l’applet de commande **New-SqlAvailabilityGroup** . Quand vous modifiez un réplica de disponibilité existant, utilisez l’applet de commande **Set-SqlAvailabilityGroup** .  
   
-    -   Pour définir le niveau de condition de basculement, utilisez le paramètre **FailureConditionLevel***niveau*, où *niveau* est une des valeurs suivantes :  
+    -   Pour définir le niveau de condition de basculement, utilisez le paramètre **FailureConditionLevel**_niveau_ , où *niveau* a l’une des valeurs suivantes :  
   
         |Valeur|Level|Le basculement automatique démarre lorsque…|  
         |-----------|-----------|-------------------------------------------|  
@@ -133,7 +133,7 @@ ms.locfileid: "53208558"
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Pour définir le seuil du délai d’attente de contrôle d’intégrité, utilisez le paramètre **HealthCheckTimeout***n*, où *n* est un entier compris entre 15 000 millisecondes (15 secondes) et 4 294 967 295 millisecondes. La valeur par défaut est 30 000 millisecondes (ou 30 secondes).  
+    -   Pour définir le seuil du délai d’attente de vérification d’intégrité, utilisez le paramètre **HealthCheckTimeout**_n_ , où *n* est un entier compris entre 15000 millisecondes (15 secondes) et 4294967295 millisecondes. La valeur par défaut est 30 000 millisecondes (ou 30 secondes).  
   
          Par exemple, la commande suivante modifie le seuil du délai d'attente de contrôle d'intégrité d'un groupe de disponibilité existant, `AG1`, sur 120 000 millisecondes (deux minutes).  
   

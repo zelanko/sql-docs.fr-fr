@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdb2e2dc081bce539bf2671e14993281d2415b98
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3e151639595e181fb434e5144daa64cc84128892
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206228"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132449"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -187,7 +187,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  Si un index cluster est supprimé à l'aide de MOVE TO, tous les index non cluster sur la table de base sont recréés, mais ils restent dans leur schéma de partition ou groupe de fichiers d'origine. Si la table de base est déplacée vers un schéma de partition ou groupe de fichiers différent, les index non cluster ne sont pas déplacés pour coïncider avec le nouvel emplacement de la table de base (segment de mémoire). Par conséquent, même si les index non cluster étaient précédemment alignés avec l'index cluster, ils peuvent ne plus être alignés avec le segment de mémoire. Pour plus d’informations sur les index partitionnés, consultez [Index et tables partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
- *partition_scheme_name* **(** *column_name* **)**  
+ _partition_scheme_name_ **(** _column_name_ **)**  
  **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Spécifie un schéma de partition comme emplacement de la table résultante. Le schéma de partition doit déjà avoir été créé en exécutant soit [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md), soit [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). Si aucun emplacement n'est spécifié et que la table est partitionnée, la table est incluse dans le même schéma de partition que l'index cluster existant.  

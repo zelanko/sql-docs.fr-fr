@@ -16,12 +16,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f710a7ef79f5532cd8a58921cb8b07d350c1305
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: d3a20135a3063e5316f133e2f6483eb40e17d035
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380882"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256634"
 ---
 # <a name="view-statistics-properties"></a>Afficher les propriétés des statistiques
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,9 +60,9 @@ ms.locfileid: "53380882"
   
 5.  Cliquez avec le bouton droit sur l’objet Statistiques dont vous voulez afficher les propriétés, puis sélectionnez **Propriétés**.  
   
-6.  Dans la boîte de dialogue **Propriétés des statistiques -** *nom_statistiques* , dans le volet **Sélectionner une page** , sélectionnez **Détails**.  
+6.  Dans la boîte de dialogue **Propriétés des statistiques -** _nom_statistiques_ , dans le volet **Sélectionner une page** , sélectionnez **Détails**.  
   
-     Les propriétés suivantes s’affichent dans la page **Détails** dans la boîte de dialogue **Propriétés des statistiques -** *nom_statistiques* .  
+     Les propriétés suivantes s’affichent dans la page **Détails** dans la boîte de dialogue **Propriétés des statistiques -** _nom_statistiques_ .  
   
      **Nom de la table**  
      Affiche le nom de la table décrite par les statistiques.  

@@ -13,12 +13,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a0b583c66355245790004a8612afa0ace72999
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a204ee5d34e37736ddd433636cf0e86564718b77
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213128"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128011"
 ---
 # <a name="publication-properties-subscription-options"></a>Propriétés de la publication, Options d'abonnement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "53213128"
  Détermine s'il est nécessaire d'utiliser un agent indépendant des autres publications de cette base de données. Cette option est en lecture seule. Par défaut, elle a la valeur **True** pour les publications créées à l'aide de l'Assistant Nouvelle publication et ne peut être modifiée une fois la publication créée. Pour plus d’informations, consultez [Administration de l’Agent de réplication](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
  **Instantané toujours disponible**  
- Détermine si les fichiers d'instantanés sont créés lors de chaque exécution de l'Agent d'instantané (nécessite l'option **Agent de distribution indépendant**). Cette option est en lecture seule. Elle a la valeur **True** si vous sélectionnez **Créer un instantané immédiatement et garder cette dernière disponible pour l'initialisation des abonnements** à la page **Agent d'instantané** de l'Assistant Nouvelle publication (valeur par défaut). Pour plus d’informations, consultez [Créer et appliquer un instantané](../../relational-databases/replication/create-and-apply-the-snapshot.md).  
+ Détermine si les fichiers d'instantanés sont créés lors de chaque exécution de l'Agent d'instantané (nécessite l'option **Agent de distribution indépendant**). Cette option est en lecture seule. Elle a la valeur **True** si vous sélectionnez **Créer un instantané immédiatement et garder cette dernière disponible pour l'initialisation des abonnements** à la page **Agent d'instantané** de l'Assistant Nouvelle publication (valeur par défaut). Pour plus d’informations, consultez [Créer et appliquer un instantané](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
  **Autoriser l'initialisation à partir de fichiers de sauvegarde**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine s'il est nécessaire d'autoriser l'utilisation de fichiers de sauvegarde pour initialiser les abonnements. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  

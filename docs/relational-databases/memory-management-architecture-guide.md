@@ -1,7 +1,7 @@
 ---
 title: Guide d’architecture de gestion de la mémoire | Microsoft Docs
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 01/09/2019"
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 924b347e5fa8907fa1f2b9cb9b820a63808cbc3b
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 31ebb5ef9994c3c853b8163f4f2ba58e8cbe7d3b
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328979"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206445"
 ---
 # <a name="memory-management-architecture-guide"></a>guide d’architecture de gestion de la mémoire
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ## <a name="windows-virtual-memory-manager"></a>Gestionnaire de mémoire virtuelle Windows  
@@ -70,7 +71,10 @@ L’utilisation d’AWE et du privilège de verrouillage des pages en mémoire v
 > [!NOTE]
 > Les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent s’exécuter sur un système d’exploitation 32 bits. L’accès à plus de 4 gigaoctets (Go) de mémoire sur un système d’exploitation 32 bits nécessite AWE (Address Windowing Extensions) pour gérer la mémoire. Cela n’est pas nécessaire lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est exécuté sur des systèmes d’exploitation 64 bits. Pour plus d’informations sur AWE, consultez [Espace d’adressage de processus](https://msdn.microsoft.com/library/ms189334.aspx) et [Gestion de la mémoire pour des bases de données volumineuses](https://msdn.microsoft.com/library/ms191481.aspx) dans la documentation de [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
 
+<a name="changes-to-memory-management-starting-2012-11x-gm"></a>
+
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Changements apportés à la gestion de la mémoire à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+
 Dans les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), la mémoire était allouée selon cinq mécanismes différents :
 -  **Allocateur de page unique (SPA)**, comprenant uniquement les allocations de mémoire inférieures ou égales à 8 Ko dans le processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les options de configuration *Mémoire maximum du serveur (Mo)* et *Mémoire minimum du serveur (Mo)* déterminaient les limites de la mémoire physique consommée par SPA. Le pool de tampons était aussi le mécanisme pour SPA et le plus grand consommateur d’allocations de pages uniques.
 -  **Allocateur de plusieurs pages (MPA)**, pour les allocations de mémoire demandant plus de 8 Ko.

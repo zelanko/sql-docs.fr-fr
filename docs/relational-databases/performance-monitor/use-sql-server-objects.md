@@ -31,19 +31,19 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: b6fd6c8f987fb0349f6282755ebb4c4ff33a9147
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 4f842829fd3d00e6e2cc238107024fa5f284eff2
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380650"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257154"
 ---
 # <a name="use-sql-server-objects"></a>Utiliser des objets SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des objets et des compteurs qui peuvent être utilisés par le Moniteur système pour surveiller l'activité des ordinateurs exécutant une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un objet peut être n'importe quelle ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , telle qu'un verrou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un processus Windows. Chaque objet contient un ou plusieurs compteurs qui déterminent divers aspects de l'objet à surveiller. Par exemple, l’objet **SQL Server Locks** contient des compteurs appelés **Nombre d’interblocages/s** et **Dépassement du délai d’attente des verrous/s**.  
   
- Certains objets disposent de plusieurs instances si plusieurs ressources d'un type donné sont présentes sur l'ordinateur. Par exemple, le type d'objet **Processor** possède plusieurs instances si le système est multiprocesseur. Le type d'objet **Databases** dispose d'une instance pour chaque base de données sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Certains types d’objets (l’objet **Memory Manager** , par exemple) ne disposent que d’une seule instance. Si un type d'objet dispose de plusieurs instances, vous pouvez ajouter des compteurs pour suivre les statistiques de chaque instance ou, le plus souvent, de toutes les instances à la fois. Les compteurs de l’instance par défaut apparaissent au format **SQLServer:***\<nom_objet>*. Les compteurs des instances nommées apparaissent au format **MSSQL$***\<nom_instance>***:***\<nom_compteur>* ou **SQLAgent$***\<nom_instance>***:***\<nom_compteur>*.  
+ Certains objets disposent de plusieurs instances si plusieurs ressources d'un type donné sont présentes sur l'ordinateur. Par exemple, le type d'objet **Processor** possède plusieurs instances si le système est multiprocesseur. Le type d'objet **Databases** dispose d'une instance pour chaque base de données sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Certains types d’objets (l’objet **Memory Manager** , par exemple) ne disposent que d’une seule instance. Si un type d'objet dispose de plusieurs instances, vous pouvez ajouter des compteurs pour suivre les statistiques de chaque instance ou, le plus souvent, de toutes les instances à la fois. Les compteurs de l’instance par défaut apparaissent au format **SQLServer:**_\<nom_objet>_. Les compteurs des instances nommées apparaissent au format **MSSQL$**_\<nom_instance>_**:**_\<nom_compteur>_ ou **SQLAgent$**_\<nom_instance>_**:**_\<nom_compteur>_.  
   
  En ajoutant ou en supprimant des compteurs du graphique et en enregistrant les valeurs du graphique, vous pouvez spécifier les objets et compteurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] surveillés lors du démarrage du Moniteur système.  
   

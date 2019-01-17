@@ -18,12 +18,12 @@ ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 112cb38585aa83ba52aee415b793ed88549894c6
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 5b16face59c4a2271cbbf068860f2701b3d45a9b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979815"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133409"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>DENY (Refus d'autorisations de groupe de disponibilité) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  Spécifie une autorisation qu'il est possible de refuser sur un groupe de disponibilité. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- ON AVAILABILITY GROUP **::***availability_group_name*  
+ ON AVAILABILITY GROUP **::**_availability_group_name_  
  Spécifie le groupe de disponibilité sur lequel l'autorisation est refusée. Le qualificateur d’étendue (**::**) est obligatoire.  
   
  TO \<server_principal>  

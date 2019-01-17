@@ -10,12 +10,12 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: 498432a84d523c597d7c7c52c151dce003047ba2
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328553"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254694"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Développer avec les API REST pour Reporting Services
 
@@ -40,14 +40,14 @@ Une paire demande/réponse d’API REST peut être divisée en cinq composants :
 
 * Champs d’en-tête du message de requête HTTP :
 
-    * [Méthode HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) obligatoire (également appelée opération ou verbe), qui indique au service le type d’opération que vous demandez. Les API REST Reporting Services prennent en charge les méthodes DELETE, GET, HEAD, PUT, POST et PATCH.
+    * [Méthode HTTP](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) obligatoire (également appelée opération ou verbe), qui indique au service le type d’opération que vous demandez. Les API REST Reporting Services prennent en charge les méthodes DELETE, GET, HEAD, PUT, POST et PATCH.
     * Des champs d’en-tête supplémentaires facultatifs, suivant l’URI et la méthode HTTP spécifiés.
 
 * Des champs du **corps de message de demande** HTTP, pour prendre en charge l’URI et l’opération HTTP. Par exemple, les opérations POST contiennent des objets codés au format MIME qui sont passés comme paramètres complexes. Pour les opérations POST ou PUT, le type de codage MIME pour le corps doit être spécifié dans l’en-tête de demande `Content-type`. Certains services vous obligent à utiliser un type MIME spécifique, tel que `application/json`.
 
 * Champs **d’en-tête du message de réponse** HTTP :
 
-    * Un [code d’état HTTP](https://www.w3.org/Protocols/HTTP/HTRESP.html), compris entre 2xx (opérations réussies) et 4xx ou 5xx (erreur). Ou bien un code d’état défini par le service peut être retourné, comme indiqué dans la documentation de l’API.
+    * Un [code d’état HTTP](http://www.w3.org/Protocols/HTTP/HTRESP.html), compris entre 2xx (opérations réussies) et 4xx ou 5xx (erreur). Ou bien un code d’état défini par le service peut être retourné, comme indiqué dans la documentation de l’API.
     * Des champs d’en-tête supplémentaires facultatifs, nécessaires à la prise en charge de la réponse de la demande, tels qu’un en-tête de réponse `Content-type`.
 
 * Champs du **corps du message de réponse** HTTP facultatifs :

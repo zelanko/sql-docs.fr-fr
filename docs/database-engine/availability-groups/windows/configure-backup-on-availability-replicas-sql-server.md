@@ -19,12 +19,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a70a9808f51ff102d62159d524007101aa2d3dd8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c6016d1feff6d66fa7ef93fc99b04f20eda88970
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212328"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133221"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Configurer des sauvegardes sur des réplicas secondaires d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ ms.locfileid: "53212328"
   
 2.  Éventuellement, configurez la priorité de sauvegarde de chaque réplica de disponibilité que vous ajoutez ou modifiez. Cette priorité est utilisée par l'instance de serveur qui héberge le réplica principal pour décider quel réplica doit traiter une demande de sauvegarde automatique sur une base de données dans le groupe de disponibilité (le réplica avec la priorité la plus élevée est choisi). Cette priorité peut être tout nombre compris entre 0 et 100 (inclus). Une priorité de 0 indique que le réplica ne doit pas être considéré comme candidat pour le traitement des demandes de sauvegarde.  La valeur par défaut est 50.  
   
-     Quand vous ajoutez un réplica de disponibilité à un groupe de disponibilité, utilisez l’applet de commande **New-SqlAvailabilityReplica** . Quand vous modifiez un réplica de disponibilité existant, utilisez l’applet de commande **Set-SqlAvailabilityReplica** . Dans les deux cas, spécifiez le paramètre **BackupPriority***n*, où *n* est une valeur comprise entre 0 et 100.  
+     Quand vous ajoutez un réplica de disponibilité à un groupe de disponibilité, utilisez l’applet de commande **New-SqlAvailabilityReplica** . Quand vous modifiez un réplica de disponibilité existant, utilisez l’applet de commande **Set-SqlAvailabilityReplica** . Dans les deux cas, spécifiez le paramètre **BackupPriority**_n_ , où *n* est une valeur comprise entre 0 et 100.  
   
      Par exemple, la commande suivante affecte à la priorité de sauvegarde du réplica de disponibilité `MyReplica` la valeur **60**.  
   

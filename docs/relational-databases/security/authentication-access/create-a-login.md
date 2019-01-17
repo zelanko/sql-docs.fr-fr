@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 290dd7ad7be98334ebd7eccf49c29df89890bc13
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6b2e04e5b63000bcdd7100c297ecd9d90dd33f27
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209098"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125579"
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -135,7 +135,7 @@ ms.locfileid: "53209098"
  La page **Mappage de l'utilisateur** répertorie toutes les bases de données possibles et les appartenances de rôle de base de données sur ces bases de données qui peuvent être appliquées à la connexion. Les bases de données sélectionnées déterminent les appartenances aux rôles disponibles pour la connexion. Les options suivantes sont disponibles sur cette page :  
   
  **Utilisateurs mappés à cette connexion**  
- Sélectionnez les bases de données auxquelles cette connexion peut accéder. Lorsque vous sélectionnez une base de données, ses rôles de base de données valides s’affichent dans le volet **Appartenance au rôle de base de données pour :** *nom_base_de_données* .  
+ Sélectionnez les bases de données auxquelles cette connexion peut accéder. Lorsque vous sélectionnez une base de données, ses rôles de base de données valides s’affichent dans le volet **Appartenance au rôle de base de données pour :** _nom_base_de_données_ .  
   
  **Carte**  
  Autorise la connexion à accéder aux bases de données répertoriées au-dessous.  
@@ -149,10 +149,10 @@ ms.locfileid: "53209098"
  **Schéma par défaut**  
  Spécifie le schéma par défaut de l'utilisateur. Lors de la création d'un utilisateur, son schéma par défaut est **dbo**. Il est possible de spécifier un schéma par défaut qui n'existe pas encore. Vous ne pouvez pas spécifier de schéma par défaut pour un utilisateur mappé sur un groupe Windows, un certificat ou une clé asymétrique.  
   
- **Compte Invité activé pour :**  *nom_base_de_données*  
+ **Guest account enabled for:**  _database_name_  
  Attribut en lecture seule indiquant si le compte Invité est activé sur la base de données sélectionnée. Utilisez la page **État** de la boîte de dialogue **Propriétés de la connexion** du compte Invité pour activer ou désactiver le compte Invité.  
   
- **Appartenance au rôle de base de données pour :**  *nom_base_de_données*  
+ **Database role membership for:**  _database_name_  
  Sélectionnez les rôles pour l'utilisateur dans la base de données spécifiée. Tous les utilisateurs sont membres du rôle **public** de chaque base de données et ne peuvent pas être supprimés. Pour plus d’informations sur les rôles de base de données, consultez [Rôles au niveau de la base de données](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
 ### <a name="securables"></a>Éléments sécurisables  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 78dfe43617d9a519b479e53abbabcf311d726b1d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 48df9a641db478f58f2e7db1ec8b3477594d04eb
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980515"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242252"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instructions RESTORE – Arguments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -402,7 +402,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 ##### <a name="monitoring-options"></a>Options de surveillance  
  Ces options vous permettent de surveiller le transfert des données à partir de l'unité de sauvegarde.  
   
- STATS [ **=** *percentage* ]  
+ STATS [ **=** _percentage_ ]  
  **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  Affiche un message à chaque fois qu'un autre pourcentage se termine et sert à évaluer l'état d'avancement de l'opération. Si *percentage* est omis, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche un message à chaque incrément de 10 pour cent (environ).  

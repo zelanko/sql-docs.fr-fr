@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d67a43a1732ccbbecb7ffe3b6099acf315c86ecb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9eb95a89fa8539eede53a154f7e7087a3f31f71b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203108"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135319"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -138,7 +138,7 @@ CURRENT
   
 Indique que la base de données actuelle en cours d'utilisation doit être modifiée.  
   
-MODIFY NAME **=***new_database_name*  
+MODIFY NAME **=**_new_database_name_  
 Renomme la base de données avec le nom spécifié *nouveau_nom_base_de_données*.  
   
 COLLATE *collation_name*  
@@ -378,7 +378,7 @@ CURRENT
 
 Indique que la base de données actuelle en cours d'utilisation doit être modifiée.  
   
-MODIFY NAME **=***new_database_name*  
+MODIFY NAME **=**_new_database_name_  
 
 Renomme la base de données avec le nom spécifié *nouveau_nom_base_de_données*. L’exemple suivant remplace le nom de la base de données `db1` par `db2` :   
 
