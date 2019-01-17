@@ -11,12 +11,12 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7273baec814905d86e431c5a6a8f13313b9743e4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 98f7e0ac3667bc8546a7bf7ce2d8036341bb2650
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536651"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206598"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Utilisation d’Azure Active Directory avec ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -32,9 +32,9 @@ Le pilote Microsoft ODBC pour SQL Server avec la version 13.1 ou version ultéri
 
 Le `Authentication` mot clé peut être utilisé lors de la connexion avec une source de données ou chaîne de connexion pour contrôler le mode d’authentification. La valeur définie dans la chaîne de connexion qui remplace dans la source de données, s’il est fourni. Le _valeur d’attribut préalable_ de le `Authentication` paramètre est la valeur calculée à partir de la chaîne de connexion et les valeurs de la source de données.
 
-|Nom   |Valeurs|Valeur par défaut|Description|
+|Créer une vue d’abonnement|Valeurs|Valeur par défaut|Description|
 |-|-|-|-|
-|`Authentication`|(non défini), (chaîne vide), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`|(non défini)|Contrôle le mode d’authentification.<table><tr><th>Valeur<th>Description<tr><td>(non défini)<td>Mode d’authentification déterminé par les autres mots clés (options de connexion hérité existant).<tr><td>(chaîne vide)<td>La chaîne de connexion est « {0} » Remplacer et annuler la définition une `Authentication` valeur ensemble dans la source de données.<tr><td>`SqlPassword`<td>S’authentifier directement à une instance de SQL Server à l’aide d’un nom d’utilisateur et le mot de passe.<tr><td>`ActiveDirectoryPassword`<td>S’authentifier avec une identité Azure Active Directory à l’aide d’un nom d’utilisateur et le mot de passe.<tr><td>`ActiveDirectoryIntegrated`<td>_Pilote Windows uniquement_. S’authentifier avec une identité Azure Active Directory à l’aide de l’authentification intégrée.<tr><td>`ActiveDirectoryInteractive`<td>_Pilote Windows uniquement_. S’authentifier avec une identité Azure Active Directory à l’aide de l’authentification interactive.</table>|
+|`Authentication`|(non défini), (chaîne vide), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`|(non défini)|Contrôle le mode d’authentification.<table><tr><th>Valeur<th>Description<tr><td>(non défini)<td>Mode d’authentification déterminé par les autres mots clés (options de connexion hérité existant).<tr><td>(chaîne vide)<td>Mode Chaîne de connexion Remplacer et annuler la définition une `Authentication` valeur ensemble dans la source de données.<tr><td>`SqlPassword`<td>S’authentifier directement à une instance de SQL Server à l’aide d’un nom d’utilisateur et le mot de passe.<tr><td>`ActiveDirectoryPassword`<td>S’authentifier avec une identité Azure Active Directory à l’aide d’un nom d’utilisateur et le mot de passe.<tr><td>`ActiveDirectoryIntegrated`<td>_Pilote Windows uniquement_. S’authentifier avec une identité Azure Active Directory à l’aide de l’authentification intégrée.<tr><td>`ActiveDirectoryInteractive`<td>_Pilote Windows uniquement_. S’authentifier avec une identité Azure Active Directory à l’aide de l’authentification interactive.</table>|
 |`Encrypt`|(non défini), `Yes`, `No`|(voir description)|Contrôle le chiffrement pour une connexion. Si la valeur d’attribut avant le `Authentication` paramètre n’est pas _aucun_ dans la source de données ou chaîne de connexion, la valeur par défaut est `Yes`. Sinon, la valeur par défaut est `No`. Si l’attribut `SQL_COPT_SS_AUTHENTICATION` remplace la valeur d’attribut préliminaire `Authentication`explicitement définir la valeur de chiffrement dans la source de données ou la chaîne de connexion ou l’attribut de connexion. La valeur d’attribut préalable de chiffrement est `Yes` si la valeur est définie sur `Yes` dans la chaîne de la source de données ou de la connexion.|
 
 ## <a name="new-andor-modified-connection-attributes"></a>Attributs de connexion nouveaux et/ou modifiés
@@ -136,7 +136,7 @@ L’exemple suivant montre le code requis pour se connecter à SQL Server à l�
     ...
     SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword"
     ...
-    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
+    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
     ...
 ~~~
 L’exemple suivant montre le code requis pour se connecter à SQL Server à l’aide d’Azure Active Directory avec authentification par jeton d’accès. Dans ce cas, il est nécessaire de modifier le code d’application pour traiter le jeton d’accès et de définir l’attribut de connexion associée.

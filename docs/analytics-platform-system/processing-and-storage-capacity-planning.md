@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7188ace65e31d92cc5acfdc684457b219836d2d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527801"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361569"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacité de stockage et de traitement d’Analytique Platform System
 Besoins de votre entreprise déterminent le nombre d’unités d’échelle de données et la taille des disques de nœud de calcul dont vous avez besoin dans votre appliance Analytique Platform System (APS). Utilisez ces calculs de traitement et de stockage pour guider votre capacité d’achat et planification des décisions.  
@@ -85,14 +85,14 @@ Cette table estime que vous pouvez charger et stocker jusqu'à 6 plusieurs péta
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
 |HPE|1 TO|16 TO|8|128 TO|320 TO|7|2,240 TO|  
 |HPE|2 TO|32 TO|8|256 TO|640 TO|7|4,480 TO|  
-|HPE|3 TO|48 TO|8|384 TO|960 TO|7|6,720 TO|  
+|HPE|4 TO|64 TO|8|512 TO|1280 TO|7|8,960 TO|  
 |DELL|1 TO|16 TO|9|144 TO|360 TO|6|2,160 TO|  
 |DELL|2 TO|32 TO|9|288 TO|720 TO|6|4 320 TO|  
-|DELL|3 TO|48 TO|9|432 TO|TO-1 080 PIXELS|6|6,480 TO|  
+|DELL|4 TO|64 TO|9|576 TO|1 440 TO|6|8,640 TO|   
   
 Explication :  
   
--   **Taille du lecteur** est 1, 2 ou 3 To pour chaque fournisseur de matériel.  
+-   **Taille du lecteur** est 1, 2 ou 4 To pour chaque fournisseur de matériel.  
   
 -   **Stockage de données physiques par nœud de calcul** = (taille du lecteur) * (16 disques par nœud de calcul). Les disques en miroir ne sont pas inclus dans la mesure où ils sont pour la redondance.  
   

@@ -3,7 +3,7 @@ title: Notes de publication et le journal des modifications
 titleSuffix: Azure Data Studio
 description: Notes de publication Azure Data Studio
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 01/17/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,17 +11,26 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 163f5740626b0f4cb927272d46acddc79495e4c1
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143659"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361679"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure dernières notes de Studio de données et journal des modifications
 
-**[Téléchargez la version de janvier !](download.md)**
+**[Téléchargez et installez la dernière version !](download.md)**
 
+
+## <a name="january-hotfix-2019-january-hotfix-release"></a>Correctif logiciel de janvier 2019 (version de correctif logiciel de janvier)
+
+date de publication : 16 janvier 2019  
+Version : 1.3.9
+
+Version 1.3.9 résout certains problèmes découverts dans 1.3.8. Pour plus d’informations, consultez [version de correctif logiciel de janvier](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).
+
+Pour plus d’informations, consultez le [journal des modifications](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), et [versions](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="january-2019-january-release"></a>Janvier 2019 (version de janvier)
 
@@ -37,8 +46,6 @@ Version : 1.3.8
 - Résultats de la diffusion en continu pour les grandes requêtes (version préliminaire).
 - Extensions de la Communauté : sp_executesql to sql et de la nouvelle base de données.
 - Résolu [bogues et problèmes](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1).
-
-Pour plus d’informations, consultez le [journal des modifications](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), et [versions](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="november-2018-november-release"></a>Novembre 2018 (version de novembre)
 
@@ -249,7 +256,7 @@ Le *préliminaire peut* se concentre sur la stabilisation et de correctifs de bo
 - Résoudre les problèmes de GitHub :
    - Corriger [émettre 703](https://github.com/Microsoft/azuredatastudio/issues/703): Entrée de texte HTML similaire dans modifier des données entraîne la valeur à afficher incorrectement jusqu'à ce que l’actualisation
    - Corriger [émettre 821](https://github.com/Microsoft/azuredatastudio/issues/821): dépendance de package azuredatastudio.deb
-   - Corriger [émettre 1260](https://github.com/Microsoft/azuredatastudio/issues/1260): Mot clé « distinct » ne pas mis en surbrillance
+   - Corriger [émettre 1260](https://github.com/Microsoft/azuredatastudio/issues/1260): Keyword 'distinct' not highlighted
    - Corriger [émettre 1332](https://github.com/Microsoft/azuredatastudio/issues/1332): Modifier des données rétablir ligne ne fonctionne pas
    - Corriger [émettre 1215](https://github.com/Microsoft/azuredatastudio/issues/1215): Extension de l’Agent SQL et de la barre d’état
    - Corriger [émettre 1316](https://github.com/Microsoft/azuredatastudio/issues/1316): Redimensionnement de SQL Agent n’après modifier la taille de windows
