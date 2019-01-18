@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: design
+ms.subservice: design
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -14,12 +14,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 205d731e262514c0782cad09af6bf36d24b25bc5
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: fdebe91359fbe9d7c9ef7aaadc38ba096427f651
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254415"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395389"
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -52,10 +52,10 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les colonnes de cette table sont renvoyées. Si *propriétaire* n’est pas spécifié et l’utilisateur actuel ne possède pas d’une table de l’objet *nom*, cette procédure recherche une table de l’objet *nom* appartenant à la base de données propriétaire. Si la table existe, ses colonnes sont retournées.  
   
- [ @qualifier=] '*qualificateur*'  
+ [ @qualifier=] '*qualifier*'  
  Nom du qualificateur de la table. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (*qualifier.owner.name*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
- [ @col_type=] '*type_colonne*'  
+ [ @col_type=] '*col_type*'  
  Est le type de colonne. *type_colonne* est **char (** 1 **)**, avec un défaut Type R retourne la colonne ou jeu optimal de colonnes qui, en récupérant des valeurs à partir de l’ou les colonnes, permettant à n’importe quelle ligne dans le texte spécifié table pour identifier de manière unique. Une colonne peut être soit une colonne virtuelle spécifiquement créée à cet effet, soit la ou les colonnes d'un index unique de la table. Le type V fournit la ou les colonnes de la table spécifiée qui, le cas échéant, sont automatiquement mises à jour par la source de données lorsqu'une valeur dans la ligne est mise à jour par une transaction.  
   
  [ @scope=] '*étendue*'  
@@ -68,7 +68,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
  Est la version ODBC utilisée. *ODBCVer* est **int (** 4 **)**, avec une valeur par défaut 2. Cela indique ODBC version 2.0. Pour plus d’informations sur la différence entre la version 2.0 et ODBC version 3.0, consultez la spécification ODBC SQLSpecialColumns pour ODBC version 3.0.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -86,7 +86,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>Notes  
  sp_special_columns est équivalent à SQLSpecialColumns dans ODBC. Les résultats obtenus sont triés par SCOPE.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
