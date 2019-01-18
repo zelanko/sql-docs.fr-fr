@@ -5,17 +5,17 @@ description: Découvrez comment installer les outils utilisés avec les clusters
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 54ea67e8b85d4e9a1a8cdbe4b40cf1bb9c3f1062
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ab8633ef6741ae1d1a3a973796eec1de0cc12c37
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241600"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372641"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installer les outils de données volumineuses de SQL Server 2019
 
@@ -38,7 +38,14 @@ Le tableau suivant répertorie les outils de cluster big data courants et commen
 | **sqlcmd** | Pour certains scripts | Outil de ligne de commande hérité pour l’interrogation de SQL Server ([plus d’informations](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** <sup>3</sup> | Pour certains scripts | Outil de ligne de commande pour transférer des données avec des URL. | [Windows](https://curl.haxx.se/windows/) \| Linux : package d’installation de curl |
 
-<sup>1</sup> vous devez utiliser kubectl 1,10 ou version ultérieure. En outre, la version de Kubectl doit être plus ou moins une version secondaire de votre cluster Kubernetes. Si vous souhaitez installer une version spécifique sur le client kubectl, consultez [installer kubectl binaire via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (sur Windows 10, utilisez cmd.exe, pas Windows PowerShell pour exécuter la commande curl).
+<sup>1</sup> vous devez utiliser kubectl 1,10 ou version ultérieure. En outre, la version de kubectl doit être plus ou moins une version secondaire de votre cluster Kubernetes. Si vous souhaitez installer une version spécifique sur le client kubectl, consultez [installer kubectl binaire via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (sur Windows 10, utilisez cmd.exe, pas Windows PowerShell pour exécuter la commande curl). 
+
+> [!TIP]
+> Pour utiliser kubectl avec un cluster précédemment déployé sur Azure Kubernetes Service (AKS), vous devez définir le contexte de cluster avec la commande Azure CLI suivante :
+>
+>    ```azurecli
+>    az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>
+>    ```
 
 <sup>2</sup> , vous devez utiliser Azure CLI version 2.0.4 ou version ultérieure. Exécutez `az --version` pour trouver la version, si nécessaire.
 
