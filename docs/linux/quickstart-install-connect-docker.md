@@ -13,12 +13,12 @@ ms.custom: sql-linux, seodec18
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f4e6298cb1165f75dcd9a6aa6c77a1628650c0f6
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: f7c9612bac16463c1ea82d9e5a83bbad9f371700
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206315"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397628"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Démarrage rapide : Exécuter des images de conteneur de SQL Server avec Docker
 
@@ -99,9 +99,9 @@ any changes to one section should be duplicated in the other-->
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  Définissez la variable **ACCEPT_EULA** sur n’importe quelle valeur pour confirmer que vous acceptez le [Contrat de licence utilisateur final](https://go.microsoft.com/fwlink/?LinkId=746388). Paramètre obligatoire pour l’image de SQL Server. |
    | **-e ' SA_PASSWORD =\<YourStrong ! Passw0rd\>'** | Spécifiez votre propre mot de passe fort, qui doit avoir au moins 8 caractères et respecter les [exigences de mot de passe SQL Server](../relational-databases/security/password-policy.md). Paramètre obligatoire pour l’image de SQL Server. |
-   | **p - 1433:1433** | Mappez un port TCP sur l’environnement hôte (première valeur) à un port TCP dans le conteneur (deuxième valeur). Dans cet exemple, SQL Server écoute sur TCP 1433 dans le conteneur et il est exposé au port, 1433, sur l’ordinateur hôte. |
+   | **-p 1433:1433** | Mappez un port TCP sur l’environnement hôte (première valeur) à un port TCP dans le conteneur (deuxième valeur). Dans cet exemple, SQL Server écoute sur TCP 1433 dans le conteneur et il est exposé au port, 1433, sur l’ordinateur hôte. |
    | **--name sql1** | Spécifiez un nom personnalisé pour le conteneur plutôt qu’un nom généré de manière aléatoire. Si vous exécutez plusieurs conteneurs, vous ne pouvez pas réutiliser le même nom. |
-   | **MCR.Microsoft.com/MSSQL/Server:2017-Latest** | Image conteneur Linux de SQL Server 2017. |
+   | **mcr.microsoft.com/mssql/server:2017-latest** | Image conteneur Linux de SQL Server 2017. |
 
 3. Pour afficher vos conteneurs Docker, utilisez la commande `docker ps`.
 
@@ -181,9 +181,9 @@ Pour identifier facilement le conteneur cible, définissez `-h` et `--name` sur 
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  Définissez la variable **ACCEPT_EULA** sur n’importe quelle valeur pour confirmer que vous acceptez le [Contrat de licence utilisateur final](https://go.microsoft.com/fwlink/?LinkId=746388). Paramètre obligatoire pour l’image de SQL Server. |
    | **-e ' SA_PASSWORD =\<YourStrong ! Passw0rd\>'** | Spécifiez votre propre mot de passe fort, qui doit avoir au moins 8 caractères et respecter les [exigences de mot de passe SQL Server](../relational-databases/security/password-policy.md). Paramètre obligatoire pour l’image de SQL Server. |
-   | **p - 1433:1433** | Mappez un port TCP sur l’environnement hôte (première valeur) à un port TCP dans le conteneur (deuxième valeur). Dans cet exemple, SQL Server écoute sur TCP 1433 dans le conteneur et il est exposé au port, 1433, sur l’ordinateur hôte. |
+   | **-p 1433:1433** | Mappez un port TCP sur l’environnement hôte (première valeur) à un port TCP dans le conteneur (deuxième valeur). Dans cet exemple, SQL Server écoute sur TCP 1433 dans le conteneur et il est exposé au port, 1433, sur l’ordinateur hôte. |
    | **--name sql1** | Spécifiez un nom personnalisé pour le conteneur plutôt qu’un nom généré de manière aléatoire. Si vous exécutez plusieurs conteneurs, vous ne pouvez pas réutiliser le même nom. |
-   | **MCR.Microsoft.com/MSSQL/Server:2019-CTP2.2-Ubuntu** | L’image de conteneur SQL Server 2019 CTP 2.2 Linux. |
+   | **mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu** | L’image de conteneur SQL Server 2019 CTP 2.2 Linux. |
 
 3. Pour afficher vos conteneurs Docker, utilisez la commande `docker ps`.
 
@@ -348,7 +348,7 @@ Voici d’autres outils courants pour vous connecter à SQL Server :
 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) sur Windows](sql-server-linux-manage-ssms.md)
-- [Studio de données Azure (version préliminaire)](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [mssql-cli (préversion)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>Supprimer votre conteneur
