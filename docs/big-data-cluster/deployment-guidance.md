@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 12ec074501e93af586a5d495bd7984ad62f3fd88
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 900bd5fea075e304dae73a20168da952433f20be
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242140"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405819"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Comment déployer des clusters de données volumineuses de SQL Server sur Kubernetes
 
@@ -42,9 +42,9 @@ Vous pouvez choisir de déployer Kubernetes dans une des trois manières :
 
 | Déploiement Kubernetes sur : | Description | Lien |
 |---|---|---|
-| **Minikube** | Un cluster Kubernetes à nœud unique dans une machine virtuelle. | [Obtenir des instructions](deploy-on-minikube.md) |
-| **Services de Azure Kubernetes (AKS)** | Un service de conteneur Kubernetes géré dans Azure. | [Obtenir des instructions](deploy-on-aks.md) |
-| **Plusieurs ordinateurs** | Un cluster Kubernetes déployé sur des ordinateurs physiques ou virtuels à l’aide de **kubeadm** | [Obtenir des instructions](deploy-with-kubeadm.md) |
+| **Minikube** | Un cluster Kubernetes à nœud unique dans une machine virtuelle. | [Instructions](deploy-on-minikube.md) |
+| **Services de Azure Kubernetes (AKS)** | Un service de conteneur Kubernetes géré dans Azure. | [Instructions](deploy-on-aks.md) |
+| **Plusieurs ordinateurs** | Un cluster Kubernetes déployé sur des ordinateurs physiques ou virtuels à l’aide de **kubeadm** | [Instructions](deploy-with-kubeadm.md) |
   
 > [!TIP]
 > Pour un exemple de script python qui déploie le cluster de données volumineux AKS et SQL Server, consultez [déployer un serveur SQL Server sur Azure Kubernetes Service (ACS) de cluster de données volumineuses](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
@@ -85,7 +85,7 @@ La configuration du cluster peut être personnalisée à l’aide d’un ensembl
 | Variable d'environnement | Requis | Valeur par défaut | Description |
 |---|---|---|---|
 | **ACCEPT_EULA** | Oui | N/A | Acceptez le contrat de licence de SQL Server (par exemple, « Y »).  |
-| **NOM_CLUSTER** | Oui | N/A | Le nom de l’espace de noms Kubernetes pour déployer SQLServer regrouper les données volumineuses en. |
+| **CLUSTER_NAME** | Oui | N/A | Le nom de l’espace de noms Kubernetes pour déployer SQLServer regrouper les données volumineuses en. |
 | **CLUSTER_PLATFORM** | Oui | N/A | La plateforme du cluster Kubernetes est déployée. Peut être `aks`, `minikube`, `kubernetes`|
 | **CLUSTER_COMPUTE_POOL_REPLICAS** | Non | 1 | Le nombre de réplicas de pool de calcul à créer. Dans CTP 2.2 uniquement à la valeur autorisée est 1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | Non | 2 | Le nombre de données du pool pour créer les réplicas. |
@@ -248,7 +248,7 @@ kubectl get svc -n <your-cluster-name>
 
 Actuellement, la seule façon de mettre à niveau un cluster de données volumineux vers une nouvelle version consiste à supprimer et recréer le cluster manuellement. Chaque version comporte une version unique de **mssqlctl** qui n’est pas compatible avec la version précédente. En outre, si un cluster plus anciens avait télécharger une image sur un nouveau nœud, la dernière image peut-être pas compatible avec les anciennes images sur le cluster. Pour mettre à niveau vers la dernière version, procédez comme suit :
 
-1. Avant de supprimer l’ancien cluster, sauvegardez les données sur l’instance principale de SQL Server et sur HDFS. Pour l’instance principale de SQL Server, vous pouvez utiliser [sauvegarde et restauration SQL Server](data-ingestion-restore-databse.md). Système de fichiers HDFS, vous [peut copier les données avec **curl**](data-ingestion-curl.md).
+1. Avant de supprimer l’ancien cluster, sauvegardez les données sur l’instance principale de SQL Server et sur HDFS. Pour l’instance principale de SQL Server, vous pouvez utiliser [sauvegarde et restauration SQL Server](data-ingestion-restore-database.md). Système de fichiers HDFS, vous [peut copier les données avec **curl**](data-ingestion-curl.md).
 
 1. Supprimer l’ancien cluster avec le `mssqlctl delete cluster` commande.
 
@@ -310,10 +310,10 @@ Pour surveiller et résoudre les problèmes d’un déploiement, utilisez **kube
 
    | Service | Description |
    |---|---|
-   | **pool de point de terminaison principal** | Fournit l’accès à l’instance principale.<br/>(**EXTERNAL-IP, 31433** et **SA** utilisateur) |
-   | **service-mssql-contrôleur-lb**<br/>**service-mssql-contrôleur-nodeport** | Prend en charge des outils et les clients qui gèrent le cluster. |
-   | **proxy-service-lb**<br/>**proxy-service-nodeport** | Fournit l’accès à la [portail d’Administration de Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**: 30777/portail)|
-   | **service-sécurité-lb**<br/>**service-sécurité-nodeport** | Fournit l’accès à la passerelle HDFS/Spark.<br/>(**EXTERNAL-IP** et **racine** utilisateur) |
+   | **endpoint-master-pool** | Fournit l’accès à l’instance principale.<br/>(**EXTERNAL-IP, 31433** et **SA** utilisateur) |
+   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Prend en charge des outils et les clients qui gèrent le cluster. |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Fournit l’accès à la [portail d’Administration de Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**: 30777/portail)|
+   | **service-security-lb**<br/>**service-security-nodeport** | Fournit l’accès à la passerelle HDFS/Spark.<br/>(**EXTERNAL-IP** et **racine** utilisateur) |
 
    > [!NOTE]
    > Les noms de service peuvent varier en fonction de votre environnement Kubernetes. Lorsque vous déployez sur Azure Kubernetes Service (AKS), les noms de service doit se terminent par **-lb**. Pour les déploiements minikube et kubeadm, les noms de service se terminent par **- nodeport**.

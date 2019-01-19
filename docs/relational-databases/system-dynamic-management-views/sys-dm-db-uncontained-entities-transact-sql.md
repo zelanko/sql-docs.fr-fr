@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_uncontained_entities (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_uncontained_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40235280563039493bdd174de1c314809a424336
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb3351abb75827c3eac7f48687823ffeed76986c
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694087"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405609"
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47694087"
 |**Nom de colonne**|**Type**|**Description**|  
 |*class*|**Int**|1 = objet ou colonne (inclut des modules, XPs, vues, synonymes et tables).<br /><br /> 4 = Principal de la base de données<br /><br /> 5 = Assembly<br /><br /> 6 = Type<br /><br /> 7 = Index (index de texte intégral)<br /><br /> 12 = déclencheur DDL de base de données<br /><br /> 19 = Itinéraire<br /><br /> 30 = Spécification d'audit|  
 |*class_desc*|**nvarchar(120)**|Description de la classe de l'entité. Parmi les options suivantes pour correspondre à la classe :<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**Int**|ID de l'entité.<br /><br /> Si *classe* = 1, puis object_id<br /><br /> Si *classe* = 4, puis sys.database_principals.principal_id.<br /><br /> Si *classe* = 5, puis sys.assemblies.assembly_id.<br /><br /> Si *classe* = 6, puis sys.types.user_type_id.<br /><br /> Si *classe* = 7, puis sys.indexes.index_id.<br /><br /> Si *classe* = 12, puis sys.triggers.object_id.<br /><br /> Si *classe* = 19, sys.routes.Route_ID.<br /><br /> Si *classe* = 30, puis sys. database_audit_specifications.databse_specification_id.|  
+|*major_id*|**Int**|ID de l'entité.<br /><br /> Si *classe* = 1, puis object_id<br /><br /> Si *classe* = 4, puis sys.database_principals.principal_id.<br /><br /> Si *classe* = 5, puis sys.assemblies.assembly_id.<br /><br /> Si *classe* = 6, puis sys.types.user_type_id.<br /><br /> Si *classe* = 7, puis sys.indexes.index_id.<br /><br /> Si *classe* = 12, puis sys.triggers.object_id.<br /><br /> Si *classe* = 19, sys.routes.Route_ID.<br /><br /> Si *classe* = 30, puis sys. database_audit_specifications.database_specification_id.|  
 |*statement_line_number*|**Int**|Si la classe est un module, retourne le numéro de ligne sur lequel l'utilisation sans relation contenant-contenu se trouve.  Sinon, la valeur est Null.|  
 |*statement_ offset_begin*|**Int**|Si la classe est un module, indique, en octets, en commençant par 0, la position de départ où l'utilisation sans relation contenant-contenu démarre. Sinon, la valeur de retour est Null.|  
 |*statement_ offset_end*|**Int**|Si la classe est un module, indique, en octets, en commençant par 0, la position de fin de l'utilisation sans relation contenant-contenu. La valeur -1 indique la fin du module. Sinon, la valeur de retour est Null.|  
@@ -65,7 +65,7 @@ ms.locfileid: "47694087"
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Sys.dm_db_uncontained_entities retourne uniquement les objets pour lesquels l’utilisateur a un type d’autorisation. Pour évaluer entièrement la relation contenant-contenu de la base de données que cette fonction doit être utilisée par un utilisateur à privilèges élevés tel qu’un membre de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle.  
   
 ## <a name="examples"></a>Exemples  

@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7fbed76272903fb7a9b6eee037a070677411a0f5
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 4b3beca0f9e9a8c714e60bde7a2e7ff067e2265e
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596420"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405729"
 ---
-# <a name="tutorial-in-database-analytics-for-data-scientists-using-r"></a>Didacticiel : Analytique en base de données pour les scientifiques de données à l’aide de R
+# <a name="tutorial-sql-development-for-r-data-scientists"></a>Didacticiel : Développement de SQL pour les scientifiques de données R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dans ce didacticiel pour scientifiques des données, découvrez comment créer des solutions de bout en bout pour la modélisation prédictive basée sur la prise en charge des fonctionnalités de R dans SQL Server 2016 ou SQL Server 2017. Ce didacticiel utilise un [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) base de données sur SQL Server. 
@@ -43,7 +43,7 @@ Nous vous recommandons d’effectuer cette procédure pas à pas sur une station
 Vous pouvez également exécuter la procédure pas à pas sur un ordinateur qui possède ces deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un environnement de développement R, mais nous ne recommandons pas cette configuration pour un environnement de production. Si vous avez besoin de placer le client et le serveur sur le même ordinateur, veillez à installer un deuxième ensemble de bibliothèques Microsoft R pour l’envoi de script R à partir d’un client « distant ». N’utilisez pas les bibliothèques R qui sont installés dans les fichiers de programme de l’instance de SQL Server. Plus précisément, si vous utilisez un seul ordinateur, vous avez besoin de la bibliothèque RevoScaleR dans ces deux emplacements pour prendre en charge les opérations de client et serveur.
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
-+ C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library\RevoScaleR
++ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 <a name="add-packages"></a>
 

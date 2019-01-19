@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: ab28dafe062d7a8d492e702aa5570881ef77f1e0
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596680"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405619"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Didacticiel : Analytique en base de données Python pour les développeurs SQL
+# <a name="tutorial-python-data-analytics-for-sql-developers"></a>Didacticiel : Analytique de données Python pour les développeurs SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dans ce didacticiel pour les programmeurs SQL, en savoir plus sur l’intégration de Python en créant et déploiement d’un ordinateur basé sur Python learning à l’aide de la solution un [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) base de données sur SQL Server. 
+Dans ce didacticiel pour les programmeurs SQL, en savoir plus sur l’intégration de Python en créant et déploiement d’un ordinateur basé sur Python learning à l’aide de la solution un [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) base de données sur SQL Server. Vous allez utiliser T-SQL, SQL Server Management Studio et une instance du moteur de base de données avec [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) et prise en charge du langage Python.
 
-Ce didacticiel vous présente les fonctions de Python utilisées dans un flux de travail de modélisation de données. Étapes comprennent l’exploration de données, création et l’apprentissage d’un modèle de classification binaire et un déploiement de modèle. Vous allez utiliser les exemples de données des taxis de New York City et Limosine Commission, et le modèle que vous générerez prédit si un voyage est susceptible d’entraîner une info-bulle en fonction de l’heure du jour, la distance parcourue et l’emplacement de la prise en charge. Tout le code Python utilisé dans ce didacticiel est encapsulé dans des procédures stockées que vous créez et exécutez dans Management Studio.
+Ce didacticiel vous présente les fonctions de Python utilisées dans un flux de travail de modélisation de données. Étapes comprennent l’exploration de données, création et l’apprentissage d’un modèle de classification binaire et un déploiement de modèle. Vous allez utiliser les exemples de données des taxis de New York City et Limosine Commission, et le modèle que vous générerez prédit si un voyage est susceptible d’entraîner une info-bulle en fonction de l’heure du jour, la distance parcourue et l’emplacement de la prise en charge. 
+
+Tout le code Python utilisé dans ce didacticiel est encapsulé dans des procédures stockées que vous créez et exécutez dans Management Studio.
 
 > [!NOTE]
 > Ce didacticiel est disponible dans R et Python. Pour la version de R, consultez [en base de données analytique pour les développeurs R](sqldev-in-database-r-for-sql-developers.md).
@@ -38,13 +40,13 @@ Développement et le test du code réel est préférable d’effectuer à l’ai
 
 Si vous êtes un programmeur SQL vous débutez avec Python ou Python développeur SQL, ce didacticiel en plusieurs parties présente un flux de travail typique pour la conduite d’analytique en base de données avec Python et SQL Server. 
 
-+ [Leçon 1 : Explorer et visualiser les données à l’aide de Python](sqldev-py3-explore-and-visualize-the-data.md)
++ [Leçon 1 : Explorer et visualiser les données à l’aide de Python](sqldev-py3-explore-and-visualize-the-data.md)
 
 + [Leçon 2 : Créer des caractéristiques de données à l’aide de fonctions SQL personnalisées](sqldev-py4-create-data-features-using-t-sql.md)
 
-+ [Leçon 3 : Former et enregistrer un modèle de Python à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
++ [Leçon 3 : Former et enregistrer un modèle de Python à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-+ [Leçon 4 : Prédire les résultats potentiels à l’aide d’un modèle Python dans une procédure stockée](sqldev-py6-operationalize-the-model.md)
++ [Leçon 4 : Prédire les résultats potentiels à l’aide d’un modèle Python dans une procédure stockée](sqldev-py6-operationalize-the-model.md)
 
 Une fois que le modèle a été enregistré dans la base de données, vous pouvez appeler le modèle pour les prédictions à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de procédures stockées.
 

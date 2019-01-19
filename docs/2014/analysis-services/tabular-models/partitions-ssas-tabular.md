@@ -11,12 +11,12 @@ ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cb150e2bf076c6cef4e05d626b71eaab05d64a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8126278319caff77a3d4ff6a334ed985c190288e
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197205"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405639"
 ---
 # <a name="partitions-ssas-tabular"></a>Partitions (SSAS Tabulaire)
   Les partitions divisent une table en sections logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment d'autres partitions. Les partitions créées à l'aide de la boîte de dialogue Partitions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] au cours de la création de modèles s'appliquent à la base de données model de l'espace de travail. Lorsque le modèle est déployé, les partitions définies pour la base de données model de l'espace de travail sont dupliquées dans la base de données model déployée. Vous pouvez continuer à créer et gérer des partitions pour une base de données model déployée à l'aide de la boîte de dialogue Partitions dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  Les informations fournies dans cette rubrique décrivent les partitions créées pendant la génération de modèles à l'aide de la boîte de dialogue Gestionnaire de partitions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations sur la création et la gestion de partitions pour un modèle déployé, consultez [Créer et gérer des partitions de modèles tabulaires &#40;SSAS Tabulaire&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "48197205"
  En divisant une table en partitions logiques, vous pouvez déterminer de manière sélective les éléments, la date et le mode de traitement des données dans chaque partition. Lorsque vous déployez un modèle, le traitement des partitions peut être effectué manuellement à l'aide de la boîte de dialogue Partitions dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ou en utilisant un script qui exécute une commande Traiter.  
   
 ### <a name="partitions-in-the-model-workspace-database"></a>Partitions dans la base de données model de l'espace de travail  
- Vous pouvez créer de nouvelles partitions, modifier, fusionner ou supprimer des partitions à l'aide du Gestionnaire de partitions dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Le gestionnaire de partitions fournit deux modes pour sélectionner des tables, des lignes et des colonnes pour une partition : Mode Aperçu de la table et mode de requête SQL. Toutes les partitions sont définies à l'aide d'une requête SQL ; toutefois, à l'aide du mode Aperçu de la table, vous pouvez afficher un aperçu et sélectionner les données à inclure dans la partition. La requête SQL est créée et validée automatiquement. Étant donné que le mode Aperçu de la table correspond au même aperçu de la table que celui affiché dans la boîte de dialogue Modifier les propriétés de la table et de la page Aperçu de la table de l'Assistant Importation de table, le nombre maximal de lignes dans l'aperçu est de 50.  
+ Vous pouvez créer de nouvelles partitions, modifier, fusionner ou supprimer des partitions à l'aide du Gestionnaire de partitions dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Partition Manager propose deux modes de sélection des tables, lignes et colonnes d’une partition : Mode d’aperçu de table et le mode de requête SQL. Toutes les partitions sont définies à l'aide d'une requête SQL ; toutefois, à l'aide du mode Aperçu de la table, vous pouvez afficher un aperçu et sélectionner les données à inclure dans la partition. La requête SQL est créée et validée automatiquement. Étant donné que le mode Aperçu de la table correspond au même aperçu de la table que celui affiché dans la boîte de dialogue Modifier les propriétés de la table et de la page Aperçu de la table de l'Assistant Importation de table, le nombre maximal de lignes dans l'aperçu est de 50.  
   
 ### <a name="partitions-in-a-deployed-model-database"></a>Partitions dans une base de données model déployée  
  Lorsque vous déployez un modèle, les partitions pour la base de données model déployée apparaissent en tant qu'objets de base de données dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez créer, modifier, fusionner et supprimer des partitions pour un modèle déployé à l'aide de la boîte de dialogue Partitions dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. La gestion des partitions pour un modèle déployé dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] n'est pas traitée dans cette rubrique. Pour en savoir plus sur la gestion des partitions dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consultez [Créer et gérer des partitions de modèles tabulaires &#40;SSAS Tabulaire&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
@@ -49,11 +49,11 @@ ms.locfileid: "48197205"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Créer et gérer des Partitions dans la base de données de l’espace de travail &#40;SSAS tabulaire&#41;](workspace-database-ssas-tabular.md)|Décrit comment créer et gérer des partitions dans la base de données model de l'espace de travail à l'aide du gestionnaire de partitions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
-|[Traiter les Partitions dans la base de données d’espace de travail &#40;SSAS tabulaire&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)|Explique comment traiter (actualiser) des partitions dans la base de données model de l'espace de travail.|  
+|[Créer et gérer des partitions dans la base de données de l’espace de travail &#40;SSAS Tabulaire&#41;](workspace-database-ssas-tabular.md)|Décrit comment créer et gérer des partitions dans la base de données model de l'espace de travail à l'aide du gestionnaire de partitions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
+|[Traiter les Partitions dans la base de données de l’espace de travail &#40;SSAS tabulaire&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)|Explique comment traiter (actualiser) des partitions dans la base de données model de l'espace de travail.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mode DirectQuery &#40;SSAS Tabulaire&#41;](directquery-mode-ssas-tabular.md)   
- [Traiter les données &#40;SSAS tabulaire&#41;](../process-data-ssas-tabular.md)  
+ [Traiter les données &#40;SSAS Tabulaire&#41;](../process-data-ssas-tabular.md)  
   
   
