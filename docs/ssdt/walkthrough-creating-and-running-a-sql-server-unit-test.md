@@ -1,5 +1,5 @@
 ---
-title: "Procédure pas à pas : création et exécution d'un test unitaire SQL Server | Microsoft Docs"
+title: 'Procédure pas à pas : création et exécution d’un test unitaire SQL Server | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,14 +11,14 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71be318c40c5776440bf427cad57ed3fb903e55a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540934"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143589"
 ---
-# <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procédure pas à pas : création et exécution d'un test unitaire SQL Server
+# <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procédure pas à pas : création et exécution d'un test unitaire SQL Server
 Dans cette procédure pas à pas, vous créez un test unitaire SQL Server qui vérifie le comportement de plusieurs procédures stockées. Vous créez des tests unitaires SQL Server pour identifier les erreurs de code qui peuvent provoquer un comportement d'application incorrect. Vous pouvez exécuter des tests unitaires SQL Server et des tests d'application dans le cadre d'une suite automatisée de tests.  
   
 Au cours de cette procédure pas à pas, vous effectuez les tâches suivantes :  
@@ -274,7 +274,7 @@ Par défaut, lorsque vous appuyez sur F5, vous déployez (ou publiez) la base de
   
 2.  Cliquez avec le bouton droit sur les procédures stockées, puis cliquez sur **Créer des tests unitaires** pour afficher la boîte de dialogue **Créer des tests unitaires**.  
   
-3.  Cochez les cases des cinq procédures stockées : **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**et **Sales.uspShowOrderDetails**.  
+3.  Cochez les cases des cinq procédures stockées : **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** et **Sales.uspShowOrderDetails**.  
   
 4.  Dans la liste déroulante **Projet**, sélectionnez **Créer un nouveau projet de test Visual C#**.  
   
@@ -723,7 +723,7 @@ Les tests supposent que la base de données démarre dans un état propre. Vous 
     |--------|-------------------|  
     |Sales_uspPlaceNewOrderTest|Succès|  
     |Sales_uspShowOrderDetailsTest|Succès|  
-    |Sales_uspFillOrderTest|Échoue avec l'erreur suivante : « Échec de ScalarValueCondition (scalarValueCondition2) : ResultSet 1 Ligne 1 Colonne 1 : les valeurs diffèrent, réelle « -100 », attendu « 100 ». Cette erreur se produit, car la définition de la procédure stockée contient une erreur mineure.|  
+    |Sales_uspFillOrderTest|Échec avec l'erreur suivante : « Échec de la condition ScalarValueCondition (scalarValueCondition2) : jeu de résultats 1 ligne 1 colonne 1 : les valeurs ne correspondent pas, réelles '-100' attendues '100'. » Cette erreur se produit, car la définition de la procédure stockée contient une erreur mineure.|  
   
     Ensuite, vous allez corriger l'erreur et réexécuter le test.  
   
@@ -950,7 +950,7 @@ Pour créer et vérifier un test négatif, vous devez effectuer les tâches suiv
   
     Le test échoue et l'erreur suivante s'affiche :  
   
-    **Tester la méthode TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest a levé une exception : System.Data.SqlClient.SqlException : vous ne pouvez annuler que les commandes en cours.**  
+    **La méthode de test TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest a levé une exception : System.Data.SqlClient.SqlException : Vous pouvez uniquement annuler les commandes ouvertes.**  
   
     Ensuite, vous modifiez le code pour indiquer que l'exception est attendue.  
   
@@ -958,7 +958,7 @@ Pour créer et vérifier un test négatif, vous devez effectuer les tâches suiv
   
 1.  Dans l'**Explorateur de solutions**, développez **TestProject1**, cliquez avec le bouton droit sur **SqlServerUnitTests1.cs**, puis cliquez sur **Afficher le code**.  
   
-2.  Dans l'éditeur de code, accédez à la méthode Sales_uspCancelOrderTest. Modifiez les attributs de la méthode de façon à ce qu'elle corresponde au code suivant :  
+2.  Dans l'éditeur de code, accédez à la méthode Sales_uspCancelOrderTest. Modifiez les attributs de la méthode de façon à ce qu'elle corresponde au code suivant :  
   
     ```  
     [TestMethod(), ExpectedSqlException(Severity=16, MatchFirstError=false, State=1)]  
@@ -968,7 +968,7 @@ Pour créer et vérifier un test négatif, vous devez effectuer les tâches suiv
     Spécifiez que vous attendez une exception spécifique. Vous pouvez éventuellement spécifier un numéro d'erreur spécifique. Si vous n'ajoutez pas cet attribut, le test unitaire échoue et un message s'affiche dans la fenêtre Résultats de tests  
   
     > [!IMPORTANT]  
-    > Actuellement, Visual Studio 2012 ne prend pas en charge l'attribut ExpectedSqlException. Pour plus d'informations sur la façon de contourner cela, consultez [Impossible d'exécuter le test unitaire de base de données « Échec attendu »](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
+    > Actuellement, Visual Studio 2012 ne prend pas en charge l'attribut ExpectedSqlException. Pour plus d'informations sur la façon de contourner cela, consultez [Impossible d'exécuter le test unitaire de base de données « Échec attendu »](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
   
 3.  Dans le menu Fichier, cliquez sur Enregistrer SqlServerUnitTests1.cs.  
   
@@ -991,5 +991,5 @@ Après avoir généré une ligne de base, créez et modifiez les objets de base 
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Vérifier le code de la base de données à l’aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [Procédure : créer un test unitaire SQL Server vide](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
-[Procédure : configurer l'exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
+[Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
   

@@ -11,12 +11,12 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1857f503abe300127d92c26ba5591407b863ebc0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8faabc4655cd3aff4d6f15790a4f0e03dd60b8e8
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527921"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226536"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procédure : exécuter des tests unitaires SQL Server en utilisant Team Foundation Build
 Utilisez Team Foundation Build pour exécuter vos tests unitaires SQL Server dans un test de vérification de la génération. Configurez les tests unitaires pour déployer la base de données, générer des données de test, puis exécuter les tests sélectionnés. Si vous n'êtes pas familiarisé avec Team Foundation Build, vous devez vérifier les informations suivantes avant de suivre les procédures de cette rubrique :  
@@ -262,7 +262,7 @@ Dans cette procédure, vous archivez tous les fichiers de la solution. Ces fichi
   
 9. Cliquez sur **OK**.  
   
-10. Dans le groupe  **De base**, sous **Tests automatisés**, spécifiez les tests à exécuter. Par défaut, les tests contenus dans les fichiers nommés *test*\*.dll de votre solution seront exécutés.  
+10. Dans le groupe  **De base**, sous **Tests automatisés**, spécifiez les tests à exécuter. Par défaut, les tests contenus dans les fichiers nommés \*test\*.dll de votre solution seront exécutés.  
   
 11. Dans le menu **Fichier**, cliquez sur **Enregistrer** *ProjectName*.  
   

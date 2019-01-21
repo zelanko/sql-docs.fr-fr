@@ -11,23 +11,23 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4e9112840f6329bd846c62bd7f8dbb8b5d99340
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 128e1feeb3b344a21dbb682d4d41d402060ab1ff
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520952"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256944"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilisation de MSDeploy avec le fournisseur dbSqlPackage
 **DbSqlPackage**est un fournisseur **MSDeploy** qui vous permet d'interagir avec des bases de données SQL Server/SQL Azure. **DbSqlPackage** prend en charge les actions suivantes :  
   
--   **Extraire** : crée un fichier d'instantané de base de données (.dacpac) à partir de bases de données SQL Server ou SQL Azure actives.  
+-   **Extraire** : crée un fichier d’instantané de base de données (.dacpac) à partir de bases de données SQL Server ou SQL Azure actives.  
   
--   **Publier** : met à jour de manière incrémentielle un schéma de base de données pour qu'il corresponde au schéma d'un fichier .dacpac source.  
+-   **Publier** : met à jour de manière incrémentielle un schéma de base de données pour qu’il corresponde au schéma d’un fichier .dacpac source.  
   
 -   **DeployReport** (déployer un rapport) : crée un rapport XML sur les modifications devant être apportées par une action de publication.  
   
--   **Script** : crée un script Transact\-SQL équivalent au script exécuté par l'action Publier.  
+-   **Script** : crée un script Transact\-SQL équivalent au script exécuté par l’action Publier.  
   
 Pour plus d’informations concernant DACFx, consultez la documentation sur l’API gérée par DACFx sous [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) ou [SqlPackage.exe](../tools/sqlpackage.md) (outil en ligne de commande DACFx).  
   
@@ -47,15 +47,15 @@ Vous devez spécifier les verbes MS-Deploy à l’aide du commutateur **-verb** 
   
 |Verbe|Description|  
 |--------|---------------|  
-|dump|Fournit les informations (y compris le nom, le numéro de version et la description) relatives à une base de données source contenue dans un fichier .dacpac. Spécifiez la base de données source depuis la ligne de commande en utilisant le format suivant :<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="***.dacpac-file-path***"**|  
-|sync|Spécifie les actions dbSqlPackage depuis la ligne de commande en utilisant le format suivant :<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Pour obtenir les paramètres source et de destination valide pour le verbe sync, consultez les sections ci-dessous.|  
+|dump|Fournit les informations (y compris le nom, le numéro de version et la description) relatives à une base de données source contenue dans un fichier .dacpac. Spécifiez la base de données source depuis la ligne de commande en utilisant le format suivant :<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_.dacpac-file-path_**"**|  
+|sync|Spécifie les actions dbSqlPackage depuis la ligne de commande en utilisant le format suivant :<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_**dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Pour obtenir les paramètres source et de destination valide pour le verbe sync, consultez les sections ci-dessous.|  
   
 ## <a name="dbsqlpackage-source"></a>Source dbSqlPackage  
 Le fournisseur **dbSqlPackage** accepte une entrée qui correspond à une chaîne de connexion SQL Server/SQL Azure valide ou à un chemin d'accès à un fichier .dacpac présent sur le disque.  La syntaxe de spécification de la source d'entrée pour le fournisseur est la suivante :  
   
 |Entrée|Valeur par défaut|Description|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=**{*input*}|**N/A**|*entrée* correspond à une chaîne de connexion SQL Server ou SQL Azure valide ou à un chemin d'accès à un fichier .dacpac présent sur le disque.<br /><br />**REMARQUE :** les seules propriétés de chaîne de connexion prises en charge lors de l’utilisation d’une chaîne de connexion comme source d'entrée sont *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* et *ConnectionTimeout*.|  
+|**-source:dbSqlPackage=**{*input*}|**N/A**|*entrée* correspond à une chaîne de connexion SQL Server ou SQL Azure valide ou à un chemin d'accès à un fichier .dacpac présent sur le disque.<br /><br />**REMARQUE :** Les seules propriétés de chaîne de connexion prises en charge lors de l’utilisation d’une chaîne de connexion comme source d’entrée sont *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* et *ConnectionTimeout*.|  
   
 Si votre source d'entrée correspond à une chaîne de connexion à une base de données SQL Server/SQL Azure active, **dbSqlPackage** extrait un instantané de base de données au format de fichier .dacpac à partir d'une base de données SQL Server/Azure active.  
   
