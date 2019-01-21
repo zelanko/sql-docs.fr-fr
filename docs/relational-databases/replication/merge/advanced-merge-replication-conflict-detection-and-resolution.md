@@ -20,30 +20,32 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf815386b00ca70ceacbb549b9dbccd50c9a482
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 88f175d5d3658a61964ab7d7daba1be88438e2cd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206348"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130569"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Réplication de fusion avancée - Détection et résolution des conflits
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Lorsqu'un serveur de publication et un Abonné sont connectés et que la synchronisation se produit, l'Agent de fusion détecte la présence d'éventuels conflits. Si tel est le cas, l'Agent de fusion utilise un programme de résolution de conflits (spécifié lorsqu'un article est ajouté à une publication) pour déterminer les données qui doivent être acceptées et propagées aux autres sites.  
+
+ La réplication de fusion propose plusieurs méthodes de détection et de résolution des conflits. Pour la plupart des applications, la méthode par défaut est la plus adaptée :  
+  
+-   Si un conflit se produit entre un serveur de publication et un Abonné, la modification du serveur de publication est conservée tandis que celle de l'Abonné est annulée.   
+-   Si un conflit se produit entre deux Abonnés utilisant des abonnements client (le type par défaut des abonnements par extraction de données), la modification provenant du premier Abonné pour se synchroniser avec le serveur de publication est conservée tandis que celle provenant du second Abonné est annulée. Pour plus d’informations sur la spécification des abonnements client et serveur, consultez [Spécifier un type d’abonnement de fusion et une priorité pour la résolution des conflits &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).   
+-   Si un conflit se produit entre deux Abonnés utilisant des abonnements serveur (le type par défaut des abonnements par envoi de données), la modification provenant de l'Abonné ayant la valeur de priorité la plus élevée est conservée tandis que celle provenant du second Abonné est annulée. Si les valeurs de priorité sont identiques, la modification provenant du premier Abonné pour se synchroniser avec le serveur de publication est conservée.  
   
 > [!NOTE]  
 >  Bien qu'un Abonné se synchronise avec le serveur de publication, des conflits surviennent généralement entre les mises à jour effectuées par différents Abonnés plutôt qu'entre les mises à jour effectuées par l'Abonné et le serveur de publication.  
   
- Le comportement de la détection et de la résolution des conflits est lié aux options suivantes, décrites dans cette rubrique :  
-  
--   que vous définissiez le suivi au niveau des colonnes, au niveau des lignes ou au niveau des enregistrements logiques,  
-  
+ Le comportement de la détection et de la résolution des conflits est lié aux options suivantes, décrites dans cette rubrique :    
+-   que vous définissiez le suivi au niveau des colonnes, au niveau des lignes ou au niveau des enregistrements logiques,    
 -   que vous définissiez le mécanisme de résolution par défaut basé sur les priorités ou un programme de résolution d'articles, un programme de résolution d'articles peut être :  
   
-    -   Un *gestionnaire de logique métier* écrit en code managé  
-  
-    -   Un *programme de résolution personnalisé*basé sur COM  
-  
+    -   Un *gestionnaire de logique métier* écrit en code managé   
+    -   Un *programme de résolution personnalisé*basé sur COM    
     -   Un programme de résolution basé sur COM fourni par [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
      Si le mécanisme de résolution par défaut est utilisé, le comportement est également déterminé par le type d'abonnement utilisé : client ou serveur.  
@@ -51,18 +53,32 @@ ms.locfileid: "53206348"
 ## <a name="conflict-detection"></a>Détection des conflits  
  Qu'une modification de données soit considérée comme un conflit dépend du type de suivi des conflits défini pour un article :  
   
--   si vous sélectionnez le suivi des conflits au niveau des colonnes, il y a conflit si des modifications sont apportées à la même colonne d'une même ligne sur plusieurs nœuds de réplication ;  
-  
--   si vous sélectionnez le suivi au niveau des lignes, il y a conflit si des modifications sont apportées à des colonnes quelconques d'une même ligne sur plusieurs nœuds de réplication (les colonnes affectées dans les lignes correspondantes ne doivent pas être identiques) ;  
-  
+-   si vous sélectionnez le suivi des conflits au niveau des colonnes, il y a conflit si des modifications sont apportées à la même colonne d'une même ligne sur plusieurs nœuds de réplication ;    
+-   si vous sélectionnez le suivi au niveau des lignes, il y a conflit si des modifications sont apportées à des colonnes quelconques d'une même ligne sur plusieurs nœuds de réplication (les colonnes affectées dans les lignes correspondantes ne doivent pas être identiques) ;    
 -   si vous sélectionnez le suivi au niveau des enregistrements logiques, il y a conflit si des modifications sont apportées à des lignes quelconques d'un même enregistrement logique sur plusieurs nœuds de réplication (les colonnes affectées dans les lignes correspondantes ne doivent pas être identiques).  
   
  Pour plus d'informations, voir [Détection et résolution des conflits dans les enregistrements logiques](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- Pour spécifier le niveau de suivi et de résolution des conflits pour un article, consultez [spécifier le niveau de résolution et de suivi de conflit pour les Articles de fusion](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Pour spécifier le niveau de suivi et de résolution des conflits pour un article, consultez [Spécifier les propriétés de la réplication de fusion](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## <a name="conflict-resolution"></a>Résolution de conflits  
  Après la détection d'un conflit, l'Agent de fusion lance le programme de résolution de conflits sélectionné afin pour déterminer le « vainqueur du conflit ». La ligne gagnante est appliquée au serveur de publication et à l'Abonné tandis que les données de la ligne perdante sont consignées dans une table de conflits. Les conflits sont résolus immédiatement après l'exécution du programme de résolution, à moins que vous ne choisissiez de les résoudre interactivement.  
+
+Résoudre les conflits de réplication de fusion [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Lorsqu'un serveur de publication et un Abonné sont connectés et que la synchronisation se produit, l'Agent de fusion détecte la présence d'éventuels conflits. Si tel est le cas, l'Agent de fusion utilise un programme de résolution de conflits pour déterminer les données qui doivent être acceptées et propagées aux autres sites.  
+  
+> [!NOTE]  
+>  Bien qu'un Abonné se synchronise avec le serveur de publication, les conflits se produisent généralement entre les mises à jour des différents Abonnés plutôt qu'entre les mises à jour de l'Abonné et du serveur de publication.  
+  
+ La réplication de fusion propose plusieurs méthodes de détection et de résolution des conflits. Pour la plupart des applications, la méthode par défaut est la plus adaptée :  
+  
+-   Si un conflit se produit entre un serveur de publication et un Abonné, la modification du serveur de publication est conservée tandis que celle de l'Abonné est annulée.  
+  
+-   Si un conflit se produit entre deux Abonnés utilisant des abonnements client (le type par défaut des abonnements par extraction de données), la modification provenant du premier Abonné pour se synchroniser avec le serveur de publication est conservée tandis que celle provenant du second Abonné est annulée. Pour plus d’informations sur la spécification des abonnements client et serveur, consultez [Spécifier un type d’abonnement de fusion et une priorité pour la résolution des conflits &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).  
+  
+-   Si un conflit se produit entre deux Abonnés utilisant des abonnements serveur (le type par défaut des abonnements par envoi de données), la modification provenant de l'Abonné ayant la valeur de priorité la plus élevée est conservée tandis que celle provenant du second Abonné est annulée. Si les valeurs de priorité sont identiques, la modification provenant du premier Abonné pour se synchroniser avec le serveur de publication est conservée.  
+  
+ Pour plus d'informations sur la détection et la résolution des conflits pour la réplication de fusion, consultez [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ### <a name="resolver-types"></a>Types de programmes de résolution  
  Dans la réplication de fusion, la résolution des conflits a lieu au niveau de l'article. Pour les publications composées de plusieurs articles, différents programmes de résolution de conflits peuvent gérer différents articles, sinon un même programme de résolution de conflits peut gérer un article, plusieurs articles, ou tous les articles d'une publication.  

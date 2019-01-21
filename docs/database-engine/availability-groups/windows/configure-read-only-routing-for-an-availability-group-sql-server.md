@@ -18,12 +18,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4a65105416da0a53327cbcd174062a92d3659529
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ed04fab7d5496f71bc4c9accbcb4fd2e5579df5c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207408"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126139"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Configurer le routage en lecture seule pour un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ Le routage en lecture seule est disponible dans [!INCLUDE[sssql15](../../../incl
   
     -   Pour configurer le routage en lecture seule pour le rôle secondaire, dans la clause ADD REPLICA ou MODIFY REPLICA WITH, spécifiez l'option SECONDARY_ROLE, comme suit :  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://***adresse_système***:***port***')**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**')**  
   
          Les paramètres de l'URL de routage en lecture sont les suivants :  
   
@@ -119,7 +119,7 @@ Le routage en lecture seule est disponible dans [!INCLUDE[sssql15](../../../incl
   
     -   Pour configurer le routage en lecture seule pour le rôle principal, dans la clause ADD REPLICA ou MODIFY REPLICA WITH, spécifiez l'option PRIMARY_ROLE, comme suit :  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('***serveur***'** [ **,**...*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('**_serveur_**'** [ **,**...*n* ] **))**  
   
          où *server* indique une instance de serveur qui héberge un réplica secondaire en lecture seule dans le groupe de disponibilité.  
   
@@ -189,13 +189,13 @@ GO
   
 2.  Quand vous ajoutez un réplica de disponibilité à un groupe de disponibilité, utilisez l’applet de commande **New-SqlAvailabilityReplica** . Quand vous modifiez un réplica de disponibilité existant, utilisez l’applet de commande **Set-SqlAvailabilityReplica** . Les paramètres pertinents sont les suivants :  
   
-    -   Pour configurer le routage en lecture seule pour le rôle secondaire, spécifiez le paramètre **ReadonlyRoutingConnectionUrl"***url***"**.  
+    -   Pour configurer le routage en lecture seule pour le rôle secondaire, spécifiez le paramètre **ReadonlyRoutingConnectionUrl"**_url_**"** .  
   
          où *url* est le nom de domaine complet (FQDN) de la connectivité et le port à utiliser lors de l’acheminement vers le réplica pour les connexions en lecture seule. Par exemple :  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          Pour plus d’informations, consultez [Calcul de l’URL de routage en lecture seule pour Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
   
-    -   Pour configurer l’accès à la connexion pour le rôle principal, spécifiez **ReadonlyRoutingList"***serveur***"** [ **,**...*n* ], où *serveur* identifie une instance de serveur qui héberge un réplica secondaire en lecture seule dans le groupe de disponibilité. Par exemple :  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   Pour configurer l’accès à la connexion pour le rôle principal, spécifiez **ReadonlyRoutingList"**_server_**"** [ **,**...*n* ], où *server* identifie une instance de serveur qui héberge un réplica secondaire en lecture seule dans le groupe de disponibilité. Par exemple :  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  Vous devez définir l'URL de routage en lecture seule d'un réplica avant de configurer sa liste de routage en lecture seule.  

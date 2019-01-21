@@ -20,16 +20,16 @@ helpviewer_keywords:
 - RESTORE HEADERONLY statement
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cfc88234cf7d8fea62a07969949e53b084eee17f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 818bd4150965f0a1e36c942f21d9446759c4ec04
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207788"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242242"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instructions RESTORE – HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -85,7 +85,7 @@ FROM <backup_device>
  Pour chaque sauvegarde réalisée sur une unité donnée, le serveur envoie une ligne d'informations d'en-tête composée des colonnes suivantes :  
   
 > [!NOTE]
->  RESTORE HEADERONLY recherche tous les jeux de sauvegarde sur le support. Par conséquent, la production de ce jeu de résultats en utilisant des lecteurs de bande à capacité élevée risque de prendre du temps. Pour obtenir un aperçu du support sans récupérer les informations propres à chaque jeu de sauvegarde, utilisez RESTORE LABELONLY ou définissez l’argument FILE **=** *backup_set_file_number*.  
+>  RESTORE HEADERONLY recherche tous les jeux de sauvegarde sur le support. Par conséquent, la production de ce jeu de résultats en utilisant des lecteurs de bande à capacité élevée risque de prendre du temps. Pour obtenir un aperçu du support sans récupérer les informations propres à chaque jeu de sauvegarde, utilisez RESTORE LABELONLY ou définissez l’argument FILE **=** _backup_set_file_number_.  
 > 
 > [!NOTE]
 >  Par sa nature, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format autorise la cohabitation de jeux de sauvegarde créés avec d’autres logiciels sur le même support que les jeux de sauvegarde [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le jeu de résultats renvoyé par RESTORE HEADERONLY inclue une ligne pour chacun de ces autres jeux de sauvegardes.  
@@ -122,7 +122,7 @@ FROM <backup_device>
 |**SoftwareVersionBuild**|**Int**|Numéro de build du serveur qui a créé le jeu de sauvegardes.|  
 |**MachineName**|**nvarchar(128)**|Nom de l'ordinateur qui a effectué l'opération de sauvegarde.|  
 |**Indicateurs**|**Int**|Signification des différents bits d’indicateurs avec la valeur **1** :<br /><br /> **1** = La sauvegarde de journal contient des opérations de journalisation en bloc.<br /><br /> **2** = Sauvegarde d’instantané.<br /><br /> **4** = La base de données était accessible en lecture seule au moment de la sauvegarde.<br /><br /> **8** = La base de données était accessible en mode mono-utilisateur au moment de la sauvegarde.<br /><br /> **16** = La sauvegarde contient des sommes de contrôle de sauvegarde.<br /><br /> **32** = La base de données a été endommagée pendant la sauvegarde, mais l’opération de sauvegarde doit continuer malgré les erreurs.<br /><br /> **64** = Sauvegarde de la fin du journal.<br /><br /> **128** = Sauvegarde de la fin du journal avec des métadonnées incomplètes.<br /><br /> **256** = Sauvegarde de la fin du journal avec NORECOVERY.<br /><br /> **Important :** Au lieu d’utiliser des **indicateurs**, nous vous conseillons les colonnes de valeur booléenne individuelles (listées ci-dessous, en commençant à **HasBulkLoggedData**, jusqu’à **IsCopyOnly**).|  
-|**BindingID**|**uniqueidentifier**|ID de liaison de la base de données. Cela correspond à **sys.database_recovery_status****database_guid**. Lors de la restauration d'une base de données, une nouvelle valeur est attribuée. Voir aussi **FamilyGUID** (ci-dessous).|  
+|**BindingID**|**uniqueidentifier**|ID de liaison de la base de données. Cela correspond à **sys.database_recovery_status database_guid**. Lors de la restauration d'une base de données, une nouvelle valeur est attribuée. Voir aussi **FamilyGUID** (ci-dessous).|  
 |**RecoveryForkID**|**uniqueidentifier**|ID de la fourchette de récupération de fin. Cette colonne correspond à **last_recovery_fork_guid** dans la table [backupset](../../relational-databases/system-tables/backupset-transact-sql.md).<br /><br /> Pour les sauvegardes de données, **RecoveryForkID** équivaut à **FirstRecoveryForkID**.|  
 |**Classement**|**nvarchar(128)**|Classement utilisé par la base de données.|  
 |**FamilyGUID**|**uniqueidentifier**|ID de la base de données d'origine lors de sa création. Cette valeur reste identique lors de la restauration de la base de données.|  
@@ -150,7 +150,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) via la version actuelle.<br /><br /> Type de chiffreur utilisé : certificat ou clé asymétrique. Si la sauvegarde n'est pas chiffrée, cette valeur est NULL.|  
   
 > [!NOTE]  
->  Si des mots de passe sont définis pour les jeux de sauvegarde, RESTORE HEADERONLY n'affiche que les informations complètes relatives au jeu de sauvegarde dont le mot de passe correspond à la définition de l'option PASSWORD de la commande. RESTORE HEADERONLY affiche également les informations complètes relatives aux jeux de sauvegarde non protégés. La colonne **BackupName** des autres jeux de sauvegarde du support protégés par mot de passe prend la valeur « ***Password Protected\*\*\* », et toutes les autres colonnes ont la valeur NULL.  
+>  Si des mots de passe sont définis pour les jeux de sauvegarde, RESTORE HEADERONLY n'affiche que les informations complètes relatives au jeu de sauvegarde dont le mot de passe correspond à la définition de l'option PASSWORD de la commande. RESTORE HEADERONLY affiche également les informations complètes relatives aux jeux de sauvegarde non protégés. La colonne **BackupName** des autres jeux de sauvegarde du support protégés par mot de passe prend la valeur '**_Password Protected_**', et toutes les autres colonnes ont la valeur NULL.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Un client peut utiliser RESTORE HEADERONLY pour récupérer toutes les informations des en-têtes de sauvegarde pour toutes les sauvegardes figurant sur une unité particulière. Pour chaque sauvegarde réalisée sur une unité de sauvegarde, le serveur envoie les informations d'en-tête sous forme de ligne.  

@@ -47,18 +47,18 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980385"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300566"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Participez à l’amélioration de la documentation SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Crée une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -618,7 +618,7 @@ Indique qu’il faut créer un index sur la table. Il peut s’agir d’un index
  Lorsque l'attribut de stockage FILESTREAM est spécifié pour une colonne, toutes les valeurs de cette colonne sont stockées dans un conteneur de données FILESTREAM sur le système de fichiers.  
   
  COLLATE *collation_name*  
- Indique le classement de la colonne. Le nom du classement peut être un nom de classement Windows ou un nom de classement SQL. *collation_name* s’applique uniquement aux colonnes des types de données **char**, **varchar**, **texte**, **nchar**, ** nvarchar** et **ntext**. Si cette valeur n'est pas spécifiée, la colonne reçoit le classement du type de données utilisateur, si son type de données est un type de données utilisateur, ou le classement par défaut de la base de données.  
+ Indique le classement de la colonne. Le nom du classement peut être un nom de classement Windows ou un nom de classement SQL. *collation_name* s’applique uniquement aux colonnes des types de données **char**, **varchar**, **texte**, **nchar**,  **nvarchar** et **ntext**. Si cette valeur n'est pas spécifiée, la colonne reçoit le classement du type de données utilisateur, si son type de données est un type de données utilisateur, ou le classement par défaut de la base de données.  
   
  Pour plus d’informations sur les noms de classements Windows et SQL, consultez [Nom de classement Windows](../../t-sql/statements/windows-collation-name-transact-sql.md) et [Nom de classement SQL](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
@@ -916,7 +916,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MIGRATION_STATE = { OUTBOUND |  INBOUND | PAUSED }  
    
-**S’applique à **: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], et Azure SQL . 
+**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], et Azure SQL . 
   
 -   Spécifiez `OUTBOUND` pour migrer des données de SQL Server vers Azure.  
   
@@ -990,6 +990,8 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
   
  Si plusieurs tables temporaires sont créées dans un lot ou une seule procédure stockée, elles doivent porter des noms différents.  
+ 
+ Si vous incluez une valeur *schema_name* lorsque vous créez ou accédez à une table temporaire, cette valeur est ignorée.  Toutes les tables temporaires sont créées dans le schéma dbo.
   
  Si vous créez une table temporaire locale dans une procédure stockée ou dans une application qui peut être exécutée en même temps par plusieurs utilisateurs, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être capable de distinguer les tables créées par les différents utilisateurs. Cela est effectué en interne par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] en ajoutant de manière interne un suffixe numérique à chaque nom de table temporaire locale. Le nom complet d’une table temporaire, tel qu’il est stocké dans la table **sysobjects** de **tempdb**, est constitué du nom de table spécifié dans l’instruction CREATE TABLE et du suffixe numérique généré par le système. Pour laisser assez de place au suffixe, le *table_name* spécifié pour un nom de table temporaire locale ne doit pas dépasser 116 caractères.  
   

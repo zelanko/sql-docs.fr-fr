@@ -2,7 +2,7 @@
 title: Options SET d’ALTER DATABASE (Transact-SQL) | Microsoft Docs
 description: Découvrez comment définir des options de base de données telles que l’optimisation automatique, le chiffrement et le magasin des requêtes dans SQL Server et Azure SQL Database.
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 1/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a06414a9ca09ecfd02438827cbee6645ca381ae
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1dee3b66253935a979aa483de87c42dc4bb53e3f
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215385"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211130"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL) 
 
@@ -393,7 +393,7 @@ Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] signale les régressions des p
 
 **\<change_tracking_option> ::=**  
   
-**S’applique à ** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
+**S’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
   
 Contrôle les options de suivi des modifications. Vous pouvez activer le suivi des modifications, définir des options, modifier des options et désactiver le suivi des modifications. Vous trouverez des exemples dans la section Exemples plus loin dans cet article.  
   
@@ -704,10 +704,13 @@ ON
 Active le magasin de requêtes.  
   
 OFF  
-Désactive le magasin de requêtes. Il s'agit de la valeur par défaut.   
+Désactive le magasin de requêtes. Il s'agit de la valeur par défaut.
   
 CLEAR  
-Supprime le contenu du magasin de requêtes.  
+Supprime le contenu du magasin de requêtes.
+
+> [!NOTE]  
+> Pour Azure SQL Data Warehouse, vous devez exécuter `ALTER DATABASE SET QUERY_STORE` à partir de la base de données utilisateur. L’exécution de l’instruction à partir d’une autre instance d’entrepôt de données n’est pas prise en charge.
   
 OPERATION_MODE  
 Décrit le mode de fonctionnement du magasin de requête. Les valeurs valides sont READ_ONLY et READ_WRITE. En mode READ_WRITE, le magasin de requête collecte et conserve les informations sur le plan de requête et les statistiques d'exécution. En mode READ_ONLY, les informations peuvent être lues à partir du magasin de requête, mais les nouvelles informations ne sont pas ajoutées. Si la valeur maximale de l'espace du magasin  de requête allouée est épuisée, le mode d’opération du magasin de requête passe en READ_ONLY.  

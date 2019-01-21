@@ -14,12 +14,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 07cc3b6b11d4f40792ede3c0d2a9668c5ada0db6
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214168"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226556"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Gestion basée sur des stratégies pour les problèmes opérationnels avec des groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53214168"
 ##  <a name="Always OnPBM"></a> Stratégies prédéfinies et problèmes rencontrés  
  Le tableau suivant récapitule les stratégies définies.  
   
-|Nom de stratégie|Problème|Catégorie**\***|Facette|  
+|Nom de stratégie|Problème|Catégorie **&#42;**|Facette|  
 |-----------------|-----------|--------------------|-----------|  
 |État du cluster WSFC|[Le service de cluster WSFC est hors connexion](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md).|Critique|Instance de SQL Server|  
 |État en ligne du groupe de disponibilité|[Le groupe de disponibilité est hors connexion](../../../database-engine/availability-groups/windows/availability-group-is-offline.md).|Critique|Groupe de disponibilité|  
@@ -67,7 +67,7 @@ ms.locfileid: "53214168"
 |État de synchronisation des données de la base de données de disponibilité|[L’état de synchronisation des données de la base de données de disponibilité n’est pas sain](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Avertissement|Base de données de disponibilité|  
   
 > [!IMPORTANT]
->  **\*** Pour les stratégies Always On, les noms de catégorie sont utilisés comme identificateurs. Modifier le nom d’une catégorie Always On compromettrait sa fonctionnalité d’évaluation de l’intégrité. Par conséquent, ne modifiez pas les noms des catégories Always On.  
+>  **&#42;** Pour les stratégies Always On, les noms de catégorie sont utilisés comme identificateurs. Modifier le nom d’une catégorie Always On compromettrait sa fonctionnalité d’évaluation de l’intégrité. Par conséquent, ne modifiez pas les noms des catégories Always On.  
   
 ##  <a name="Dashboard"></a> Tableau de bord Always On  
  Le tableau de bord Always On offre un aperçu rapide de l’intégrité d’un groupe de disponibilité. Il inclut les fonctionnalités suivantes :  

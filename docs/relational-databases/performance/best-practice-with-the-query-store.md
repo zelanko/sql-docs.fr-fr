@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 8b46686dfb440e9d0d9fa68fcaf23d51eea86c97
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328969"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143469"
 ---
 # <a name="best-practice-with-the-query-store"></a>Bonnes pratiques relatives au magasin de requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -329,17 +329,17 @@ WHERE is_forced_plan = 1;
   
 ##  <a name="Renaming"></a> Éviter de renommer les bases de données en présence de requêtes associées à des plans forcés  
 
- Dans les plans d’exécution, les objets sont référencés avec des noms en trois parties (`database.schema.object`).   
+Dans les plans d’exécution, les objets sont référencés avec des noms en trois parties (`database.schema.object`).   
 
 Si vous renommez une base de données, le forçage de plan échoue, ce qui entraîne une recompilation dans toutes les exécutions de requête suivantes.  
 
-##  <a name="Recovery"></a> Utiliser des indicateurs de trace sur des serveurs critiques pour améliorer la récupération d’urgence
+##  <a name="Recovery"></a> Utiliser des indicateurs de trace sur des serveurs critiques
  
-Vous pouvez utiliser les indicateurs de trace globaux 7745 et 7752 pour améliorer les performances du Magasin des requêtes dans les scénarios de haute disponibilité et de récupération d’urgence. Pour plus d'informations, consultez [Indicateurs de trace](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+Les indicateurs de trace globaux 7745 et 7752 peuvent être utilisés pour améliorer la disponibilité des bases de données à l’aide du Magasin des requêtes. Pour plus d'informations, consultez [Indicateurs de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
-L’indicateur de trace 7745 empêche le comportement par défaut où le Magasin des requêtes écrit des données sur le disque avant que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne puisse être arrêté.
+-  L’indicateur de trace 7745 empêche le comportement par défaut où le Magasin des requêtes écrit des données sur le disque avant que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne puisse être arrêté. Cela signifie que les données du Magasin des requêtes qui ont été collectées mais pas encore enregistrées sur disque seront perdues. 
   
-L’indicateur de trace 7752 permet le chargement asynchrone du Magasin des requêtes et permet également à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’exécuter des requêtes avant le chargement complet du Magasin des requêtes. Le comportement du Magasin des requêtes par défaut empêche les requêtes de s’exécuter avant la récupération du Magasin des requêtes.
+-  L’indicateur de trace 7752 permet le chargement asynchrone du Magasin des requêtes. Cela permet de mettre en ligne une base de données et d’exécuter des requêtes avant la récupération complète du Magasin des requêtes. Le comportement par défaut consiste à charger de façon synchrone le Magasin des requêtes. Le comportement par défaut empêche l’exécution des requêtes avant la récupération complète du Magasin des requêtes, mais il évite également qu’une requête soit oubliée lors de la collection des données.
 
 > [!IMPORTANT]
 > Si vous utilisez le Magasin des requêtes pour avoir un aperçu juste-à-temps de la charge de travail dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prévoyez d’installer les correctifs d’évolutivité des performances dans [KB 4340759](https://support.microsoft.com/help/4340759) dès que possible. 

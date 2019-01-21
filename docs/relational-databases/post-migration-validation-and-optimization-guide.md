@@ -1,6 +1,6 @@
 ---
 title: Guide de validation et d’optimisation post-migration | Microsoft Docs
-ms.date: 5/03/2017
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,23 +13,25 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213618"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206365"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guide de validation et d’optimisation post-migration
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 L’étape post-migration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est cruciale pour rapprocher et compléter les données, ainsi que pour détecter les problèmes de performances liés à la charge de travail.
 
-# <a name="common-performance-scenarios"></a>Scénarios de performance courants 
+## <a name="common-performance-scenarios"></a>Scénarios de performance courants
+
 Voici quelques-uns des scénarios de performance courants rencontrés après la migration vers la plateforme [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et leur résolution. Certains scénarios sont spécifiques à la migration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (d’une version antérieure vers une version plus récente), d’autres à la migration d’une plateforme étrangère (comme Oracle, DB2, MySQL ou Sybase) vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 ## <a name="CEUpgrade"></a> Régression des requêtes en raison d’un changement de version CE
- 
+
 **S’applique à :** migration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Quand vous migrez d’une ancienne version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (ou une version ultérieure) et que vous passez au tout dernier [niveau de compatibilité de la base de données](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), il est possible que les performances d’une charge de travail fassent l’objet d’une régression.
@@ -126,6 +128,7 @@ Les fonctions table retournent un type de données de table qui peut représente
 > Dans la mesure où la table de sortie d’une fonction table à instructions multiples n’est pas créée au moment de la compilation, l’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s’appuie sur des valeurs heuristiques et non des statistiques réelles pour déterminer les estimations de lignes. Même si les index sont ajoutés aux tables de base, cela n’est d’aucune aide. En ce qui concerne les fonctions table à instructions multiples, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise une estimation fixe égale à 1 pour le nombre de lignes à retourner par une fonction table à instructions multiples (à partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], cette estimation fixe est de 100 lignes).
 
 ### <a name="steps-to-resolve"></a>Étapes de résolution
+
 1.  Si la fonction table à instructions multiples contient une seule instruction, convertissez-la en fonction table inline.
 
     ```sql
@@ -142,7 +145,8 @@ Les fonctions table retournent un type de données de table qui peut représente
     RETURN
     END
     ```
-    Pour 
+
+    L’exemple de format inline s’affiche ci-après.
 
     ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress_inline(@ID int)
@@ -158,7 +162,8 @@ Les fonctions table retournent un type de données de table qui peut représente
 
 2.  Si la situation est plus complexe, utilisez des résultats intermédiaires stockés dans des tables à mémoire optimisée ou des tables temporaires.
 
-##  <a name="Additional_Reading"></a> Lecture supplémentaire  
+##  <a name="Additional_Reading"></a> Lecture supplémentaire
+
  [Bonnes pratiques relatives au Magasin des requêtes](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [Tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [Fonctions définies par l'utilisateur](../relational-databases/user-defined-functions/user-defined-functions.md)  

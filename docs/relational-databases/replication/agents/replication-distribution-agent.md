@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a71962ea2e0a6d40534a9884fbb026e3d90aaf1c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b1b43a2c739de3ae0f23871c7bc023b3f215b4ce
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590483"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126639"
 ---
 # <a name="replication-distribution-agent"></a>Agent de distribution de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,9 +144,9 @@ distrib [-?]
 |**2**|Spécifie que le chiffrement SSL est utilisé et que le certificat est vérifié.|  
  
  > [!NOTE]  
- >  Un certificat SSL valide est défini avec le nom de domaine complet de l’instance SQL Server. Pour que l’agent puisse se connecter lorsque vous définissez EncryptionLevel sur 2, créez un alias sur l’instance locale de SQL Server. Le paramètre « Nom de l’alias » doit correspondre au nom du serveur, et le paramètre « Serveur » doit être défini sur le nom complet de l’instance SQL Server.
+ >  Un certificat SSL valide est défini avec le nom de domaine complet de l’instance SQL Server. Pour que l’agent puisse se connecter lorsque vous définissez EncryptionLevel sur 2, créez un alias sur l’instance locale de SQL Server. Le paramètre « Nom de l’alias » doit correspondre au nom du serveur, et le paramètre « Serveur » doit être défini sur le nom complet de l’instance SQL Server.
 
- Pour plus d’informations, consultez [Vue d’ensemble de la sécurité &#40;réplication&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
+ Pour plus d’informations, consultez [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
  **-ErrorFile** _error_path_and_file_name_  
  Chemin d'accès et nom du fichier d'erreurs généré par l'Agent de distribution. Ce fichier est généré là où une erreur s'est produite lors de l'application de transactions de réplication sur l'Abonné ; les erreurs se produisant sur le serveur de publication ou de distribution ne sont pas journalisées dans ce fichier. Ce fichier contient les transactions de réplication ayant échoué, avec les messages d'erreur associés. S'il n'est pas spécifié, le fichier d'erreurs est créé dans le répertoire même de l'Agent de distribution. Le nom du fichier d'erreurs est le nom de l'Agent de distribution avec une extension .err. Si le nom de fichier spécifié existe, les messages d'erreur sont ajoutés au fichier. Ce paramètre peut contenir jusqu'à 256 caractères Unicode.  
@@ -276,7 +276,7 @@ distrib [-?]
  Spécifie le type d'abonnement pour la distribution. La valeur **0** indique un abonnement par émission de données, la valeur **1** un abonnement par extraction et la valeur **2** un abonnement anonyme.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Spécifie l'intervalle de transaction pour la journalisation d'historique. Si le nombre de transactions validées après la dernière instance de journalisation d'historique est supérieur à cette option, un message d'historique est journalisé. La valeur par défaut est 100. Une valeur de **0** indique une quantité infinie de **TransactionsPerHistory**. Consultez le paramètre **-MessageInterval** précédent.  
+ Spécifie l'intervalle de transaction pour la journalisation d'historique. Si le nombre de transactions validées après la dernière instance de journalisation d'historique est supérieur à cette option, un message d'historique est journalisé. La valeur par défaut est 100. Une valeur de **0** indique une quantité infinie de **TransactionsPerHistory**. See the preceding **–MessageInterval**parameter.  
   
  **-UseDTS**  
  Doit être spécifié en tant que paramètre pour une publication qui autorise la transformation de données.  

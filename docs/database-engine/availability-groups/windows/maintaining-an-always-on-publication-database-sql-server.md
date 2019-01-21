@@ -14,12 +14,12 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1c8c674eb0e86d0b78348f07fb95259327582cc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 00de66d272688a7b61b4847e38a41f4738457d92
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208728"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300146"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Gérer une base de données de serveur de publication répliquée et membre d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "53208728"
     > [!NOTE]  
     >  Lorsqu'un groupe de disponibilité comportant des bases de données membres publiées est supprimé, ou lorsqu'une base de données publiée est est supprimée d'un groupe de disponibilité, toutes les copies des bases de données publiées sont laissées à l'état de récupération. Si elles sont restaurées, chacune apparaîtra comme une base de données publiée. Une seule copie doit être conservée avec les métadonnées de publication. Pour désactiver la réplication d'une copie de base de données publiée, commencez par supprimer tous les abonnements et toutes les publications de la base de données.  
   
-     Exécutez **sp_dropsubscription** pour supprimer les abonnements de publication. Veillez à affecter la valeur 1 au paramètre *@ignore_distributributor* pour conserver les métadonnées de la base de données de publication active sur le serveur de distribution.  
+     Exécutez **sp_dropsubscription** pour supprimer les abonnements de publication. Veillez à affecter la valeur 1 au paramètre *@ignore_distributor* pour conserver les métadonnées de la base de données de publication active sur le serveur de distribution.  
   
     ```  
     USE MyDBName;  
@@ -115,7 +115,7 @@ ms.locfileid: "53208728"
   
 -   [Réplication, suivi des modifications, capture de données modifiées et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
--   [Administration &#40;réplication&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [FAQ sur l’administration de la réplication](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [Abonnés de réplication et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

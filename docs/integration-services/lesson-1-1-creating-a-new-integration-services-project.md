@@ -1,7 +1,7 @@
 ---
-title: 'Étape 1 : Création d’un projet Integration Services | Microsoft Docs'
+title: 'Étape 1 : Créer un projet Integration Services | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,41 +11,42 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: edf6642557510b61b19766766250ee2869bf512f
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 0b5fd6b088b9affb4986b67deffb50b134e08d5c
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553011"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143229"
 ---
-# <a name="lesson-1-1---creating-a-new-integration-services-project"></a>Leçon 1-1 : Création d’un projet Integration Services
-La première étape de la création d'un package dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste à créer un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Ce projet comprend les modèles des objets (sources de données, vues de source de données et packages) que vous utilisez dans une solution de transformation de données.  
+# <a name="lesson-1-1-create-a-new-integration-services-project"></a>Leçon 1-1 : Créer un projet Integration Services
+
+La première étape de la création d'un package dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste à créer un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Cet exemple de projet comprend les modèles des sources de données, vues de source de données et packages qui constituent une solution de transformation de données.  
   
-Les packages que vous allez créer dans ce didacticiel [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] interprètent les valeurs des données de paramètres régionaux. Si votre ordinateur n'est pas configuré pour l'utilisation du paramètre Anglais (États-Unis), vous devez définir des propriétés supplémentaires dans le package. Les packages que vous utilisez dans les leçons 2 à 5 sont copiés à partir du package créé dans la leçon 1 ; vous n'avez pas besoin de mettre à jour les propriétés des paramètres régionaux dans les packages copiés.  
+Les packages que vous créez dans ce didacticiel [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] interprètent les valeurs des données de paramètres régionaux. Si votre ordinateur n'est pas configuré pour l'utilisation du paramètre **Anglais (États-Unis)**, vous devez définir des propriétés supplémentaires dans le package. 
+
+Les packages que vous utilisez dans les leçons 2 à 6 sont copiés à partir du package que vous créez dans cette leçon.  
   
 > [!NOTE]  
-> Ce didacticiel nécessite Microsoft SQL Server Data Tools.  
->   
-> Pour plus d'informations sur l'installation de SQL Server Data Tools, consultez [Téléchargement de SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017).  
+> Si ce n’est déjà fait, consultez les [prérequis de la leçon 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
+
+## <a name="create-a-new-integration-services-project"></a>Créer un projet Integration Services  
   
-### <a name="to-create-a-new-integration-services-project"></a>Pour créer un nouveau projet Integration Services  
+1.  Dans le menu **Démarrer** de Windows, recherchez et sélectionnez **Visual Studio (SSDT)**.  
   
-1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, puis sur **Microsoft SQL Server**et cliquez sur **SQL Server Data Tools**.  
+2.  Dans Visual Studio, sélectionnez **Fichier** > **Nouveau** > **Projet** pour créer un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-2.  Dans le menu **Fichier** , pointez sur **Nouveau**, puis cliquez sur **Projet** pour créer un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+3.  Dans la boîte de dialogue **Nouveau projet** , développez le nœud **Business Intelligence** sous **Installé**, puis sélectionnez **Projet Integration Services** dans le volet **Modèles**.  
   
-3.  Dans la boîte de dialogue **Nouveau projet** , développez le nœud **Business Intelligence** sous **Modèles installés**, puis sélectionnez **Projet Integration Services** dans le volet **Modèles** .  
+4.  Dans la zone **Nom** , remplacez le nom par défaut par **SSIS Tutorial**. Pour utiliser un dossier existant, désactivez la case à cocher **Créer un répertoire pour la solution**.  
   
-4.  Dans la zone **Nom** , remplacez le nom par défaut par **SSIS Tutorial**. Vous pouvez éventuellement désactiver la case à cocher **Créer le répertoire pour la solution** .  
+5.  Acceptez l'emplacement par défaut ou sélectionnez **Parcourir** pour rechercher et accéder au dossier que vous souhaitez utiliser. Dans la boîte de dialogue **Emplacement du projet**, choisissez le dossier puis **Sélectionner le dossier**.  
   
-5.  Acceptez l'emplacement par défaut ou cliquez sur **Parcourir** pour rechercher et accéder au dossier que vous souhaitez utiliser. Dans la boîte de dialogue **Emplacement du projet** , cliquez sur le dossier, puis sur **Sélectionner le dossier**.  
+6.  Sélectionnez **OK**.  
   
-6.  Cliquez sur **OK**.  
+    Par défaut, un package vide nommé **Package.dtsx** est créé et ajouté à votre projet sous **Packages SSIS**.  
   
-    Par défaut, un package vide nommé **Package.dtsx**est créé et ajouté à votre projet sous Packages SSIS.  
+7.  Dans **l’Explorateur de solutions** , cliquez avec le bouton droit sur **Package.dtsx**, sélectionnez **Renommer**, puis attribuez au package par défaut le nom **Lesson 1.dtsx**.  
   
-7.  Dans la barre d’outils de **l’Explorateur de solutions** , cliquez avec le bouton droit sur **Package.dtsx**, choisissez **Renommer**, puis attribuez au package par défaut le nom **Lesson 1.dtsx**.  
-  
-## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 2 : Ajout et configuration d’un Gestionnaire de connexions de fichiers plats](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+## <a name="go-to-next-task"></a>Passer à la tâche suivante
+[Étape 2 : Ajouter et configurer un gestionnaire de connexions de fichiers plats](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   

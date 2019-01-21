@@ -13,12 +13,12 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58b0010f2440a95b698bb37d99e8e3bc11cce218
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 57330040f7fc5ba1fdd48278b69a46bcf7eaee46
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209978"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226546"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>Créer un groupe de disponibilité Always On à l’aide de PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "53209978"
 ###  <a name="SummaryPSStatements"></a> Résumé des tâches et applets de commande PowerShell correspondantes  
  Le tableau suivant répertorie les tâches de base impliquées dans la configuration d'un groupe de disponibilité et indique celles qui sont prises en charge par les applets de commande PowerShell. Les tâches [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] doivent être effectuées dans la séquence dans laquelle elles sont présentées dans le tableau.  
   
-|Tâche|Applets de commande PowerShell (le cas échéant) ou instruction Transact-SQL|Où effectuer la tâche**\***|  
+|Tâche|Applets de commande PowerShell (le cas échéant) ou instruction Transact-SQL|Où effectuer la tâche **&#42;**|  
 |----------|--------------------------------------------------------------------|---------------------------------|  
 |Créer le point de terminaison de mise en miroir de bases de données (une fois par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|**New-SqlHadrEndPoint**|Exécutez sur chaque instance de serveur dans laquelle le point de terminaison de mise en miroir de bases de données est manquant.<br /><br /> Remarque : Pour modifier un point de terminaison de mise en miroir de bases de données existant, utilisez **Set-SqlHadrEndpoint**.|  
 |Créer un groupe de disponibilité|En premier lieu, utilisez l’applet de commande **New-SqlAvailabilityReplica** avec le paramètre **-AsTemplate** pour créer un objet en mémoire du réplica de disponibilité pour chacun des deux réplicas de disponibilité que vous envisagez d’inclure dans le groupe de disponibilité.<br /><br /> Créez ensuite le groupe de disponibilité en utilisant l’applet de commande **New-SqlAvailabilityGroup** et en référençant vos objets de réplica de disponibilité.|Exécutez sur l'instance de serveur qui hébergera le réplica principal initial.|  
@@ -247,7 +247,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **Vidéos :**  
   
-     [Microsoft SQL Server, nom de code « Denali », série Always On, Partie 1 : Présentation de la solution haute disponibilité de la génération suivante](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server, nom de code « Denali », série Always On, Partie 1 : Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (vidéo de présentation de la solution haute disponibilité de la génération suivante)  
   
      [Microsoft SQL Server, nom de code « Denali », série Always On, Partie 2 : Génération d’une solution haute disponibilité critique à l’aide d’AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

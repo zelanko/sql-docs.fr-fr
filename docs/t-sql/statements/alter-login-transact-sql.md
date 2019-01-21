@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd062ba7ea48de6cce202b964dea9d80754b75f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 757d06003da83e2506e2912f0f5e7cd6a03a3e52
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215588"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211110"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -209,22 +209,29 @@ ALTER LOGIN Mary5 ENABLE;
 ```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
+
+### <a name="c-changing-the-password-of-a-login-when-logged-in-as-the-login"></a>C. Modification du mot de passe d’une session à laquelle vous êtes connecté 
+ Si vous essayez de modifier le mot de passe de la session à laquelle vous êtes actuellement connecté et que vous n’avez pas l’autorisation `ALTER ANY LOGIN`, vous devez spécifier l’option `OLD_PASSWORD`.    
   
-### <a name="c-changing-the-name-of-a-login"></a>C. Modification du nom d'une connexion  
+```sql  
+ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>' OLD_PASSWORD = '<oldWeakPasswordHere>';  
+```  
+
+### <a name="d-changing-the-name-of-a-login"></a>D. Modification du nom d'une connexion  
  L'exemple suivant remplace le nom de connexion `Mary5` par `John2`.  
   
 ```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
-### <a name="d-mapping-a-login-to-a-credential"></a>D. Mappage d'une connexion sur des informations d'identification  
+### <a name="e-mapping-a-login-to-a-credential"></a>E. Mappage d'une connexion sur des informations d'identification  
  L'exemple suivant mappe la connexion `John2` aux informations d'identification `Custodian04`.  
   
 ```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
-### <a name="e-mapping-a-login-to-an-extensible-key-management-credential"></a>E. Mappage d'une connexion à des informations d'identification de gestion de clés extensible  
+### <a name="f-mapping-a-login-to-an-extensible-key-management-credential"></a>F. Mappage d'une connexion à des informations d'identification de gestion de clés extensible  
  L'exemple suivant mappe la connexion `Mary5` aux informations d'identification EKM `EKMProvider1`.  
   
   
