@@ -16,15 +16,15 @@ helpviewer_keywords:
 - REVOKE statement, users
 - application roles [SQL Server], permissions
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 54f2add3bd85250d94e82d13e9e1b3ddcef61a43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afb12785dd744ddfd938fd2ddfd02e058f2e4034
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629177"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327400"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de principal de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. Révocation d'une autorisation CONTROL sur un utilisateur à partir d'un autre utilisateur  
- Dans l'exemple ci-dessous, l'autorisation `CONTROL` sur l'utilisateur [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] `Wanida` est révoquée pour l'utilisateur `RolandX`.  
+ Dans l'exemple ci-dessous, l'autorisation `CONTROL` sur l'utilisateur [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]`Wanida` est révoquée pour l'utilisateur `RolandX`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -168,8 +168,8 @@ REVOKE CONTROL ON USER::Wanida FROM RolandX;
 GO  
 ```  
   
-### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>B. Révocation d'une autorisation VIEW DEFINITION sur un rôle à partir d'un utilisateur auquel l'autorisation avait été accordée avec l'option WITH GRANT OPTION  
- Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur le rôle [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] `SammamishParking` est révoquée pour l'utilisateur de base de données `JinghaoLiu`. L'option `CASCADE` est spécifiée car l'utilisateur `JinghaoLiu` avait obtenu l'autorisation `VIEW DEFINITION` avec l'option `WITH GRANT OPTION`.  
+### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>b. Révocation d'une autorisation VIEW DEFINITION sur un rôle à partir d'un utilisateur auquel l'autorisation avait été accordée avec l'option WITH GRANT OPTION  
+ Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur le rôle [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]`SammamishParking` est révoquée pour l'utilisateur de base de données `JinghaoLiu`. L'option `CASCADE` est spécifiée car l'utilisateur `JinghaoLiu` avait obtenu l'autorisation `VIEW DEFINITION` avec l'option `WITH GRANT OPTION`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -179,7 +179,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. Révocation d'une autorisation IMPERSONATE sur un utilisateur à partir d'un rôle d'application  
- Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est révoquée pour le rôle d'application [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] `AccountsPayable17`.  
+ Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est révoquée pour le rôle d'application [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]`AccountsPayable17`.  
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

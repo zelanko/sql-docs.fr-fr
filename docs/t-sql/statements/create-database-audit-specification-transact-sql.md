@@ -20,20 +20,20 @@ helpviewer_keywords:
 - database audit specification
 - CREATE DATABASE AUDIT SPECIFICATION statement
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2612f61d9a64d8b7d7cf156a1bd03d32d29dc1c9
-ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
+ms.openlocfilehash: f691bd99036ea6b27f9f20cd53e8d6bc72312224
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51289879"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326300"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crée un objet Spécification de l'audit de la base de données à l'aide de la fonctionnalité d'audit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Crée un objet Spécification de l'audit de la base de données à l'aide de la fonctionnalité d'audit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -120,7 +120,7 @@ WITH (STATE = ON) ;
 GO  
 ``` 
 
-### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>B. Auditer le DML (INSERT, UPDATE ou DELETE) dans _tous_ les objets du schéma _sales_ d’un rôle de base de données  
+### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>b. Auditer le DML (INSERT, UPDATE ou DELETE) dans _tous_ les objets du schéma _sales_ d’un rôle de base de données  
  L’exemple suivant crée un audit du serveur nommé `DataModification_Security_Audit`, puis une spécification d’audit de la base de données nommée `Audit_Data_Modification_On_All_Sales_Tables` qui audite les instructions `INSERT`, `UPDATE` et `DELETE` par les utilisateurs d’un nouveau rôle de base de données `SalesUK`, pour tous les objets du schéma `Sales` de la base de données `AdventureWorks2012`.  
   
 ```  

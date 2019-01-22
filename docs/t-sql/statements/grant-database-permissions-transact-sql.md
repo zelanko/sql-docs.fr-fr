@@ -17,16 +17,16 @@ helpviewer_keywords:
 - database permissions [SQL Server], granting
 - GRANT statement, databases
 ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34a23cc197b1720df2e2a1dae4cbc28c4bf70554
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07680455783316fd3854b9b45ba7f5077a58d3f9
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682237"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327490"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT – octroi d'autorisations de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ permission | ALL [ PRIVILEGES ]
  Spécifie une autorisation qui peut être accordée sur une base de données. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
  ALL  
- Cette option n'entraîne pas l'octroi de toutes les autorisations possibles. L'utilisation de l'option ALL équivaut à accorder les autorisations suivantes : BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE et CREATE VIEW.  
+ Cette option n'entraîne pas l'octroi de toutes les autorisations possibles. Elle revient à accorder les autorisations suivantes : BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, et CREATE VIEW.  
   
  PRIVILEGES  
  Inclus pour la conformité aux normes ISO. Ne change pas le comportement de l'option ALL.  
@@ -226,7 +226,7 @@ GRANT CREATE TABLE TO MelanieK;
 GO  
 ```  
   
-### <a name="b-granting-showplan-permission-to-an-application-role"></a>B. Octroi d'une autorisation SHOWPLAN à un rôle d'application  
+### <a name="b-granting-showplan-permission-to-an-application-role"></a>b. Octroi d'une autorisation SHOWPLAN à un rôle d'application  
  Dans l'exemple ci-dessous, l'autorisation `SHOWPLAN` sur la base de données `AdventureWorks2012` est accordée au rôle d'application `AuditMonitor`.  
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]

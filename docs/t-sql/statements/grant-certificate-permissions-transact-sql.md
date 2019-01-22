@@ -15,15 +15,15 @@ helpviewer_keywords:
 - permissions [SQL Server], certificates
 - GRANT statement, certificates
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6cd121ddef59e59da76bbf7b4ee3303833863b23
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9cbc0842265a077d7167bdd0f613a9aed3f0e66
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514619"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326520"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>Autorisations de certificat GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ GRANT permission  [ ,...n ]
   
 -   d'un utilisateur de base de données ;  
 -   d'un rôle de base de données ;  
--   d'un rôle d'application ;  
+-   d'un rôle d'application ;  
 -   d'un utilisateur de base de données mappé sur une connexion Windows ;  
 -   d'un utilisateur de base de données mappé sur un groupe Windows ;  
 -   d'un utilisateur de base de données mappé sur un certificat ;  
@@ -68,7 +68,7 @@ AS *granting_principal*
   
 -   d'un utilisateur de base de données ;  
 -   d'un rôle de base de données ;  
--   d'un rôle d'application ;  
+-   d'un rôle d'application ;  
 -   d'un utilisateur de base de données mappé sur une connexion Windows ;  
 -   d'un utilisateur de base de données mappé sur un groupe Windows ;  
 -   d'un utilisateur de base de données mappé sur un certificat ;  

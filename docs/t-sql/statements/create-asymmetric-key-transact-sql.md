@@ -21,15 +21,15 @@ helpviewer_keywords:
 - asymmetric keys [SQL Server]
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d318349e792cb7579efcc2062ca8eb1b5521db48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa20850f0784b734173f46ceee4235694c15b9cd
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600718"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361549"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ CREATE ASYMMETRIC KEY PacificSales09
 GO  
 ```  
   
-### <a name="b-creating-an-asymmetric-key-from-a-file-giving-authorization-to-a-user"></a>B. Création d'une clé asymétrique à partir d'un fichier, octroi d'une autorisation à un utilisateur  
+### <a name="b-creating-an-asymmetric-key-from-a-file-giving-authorization-to-a-user"></a>b. Création d'une clé asymétrique à partir d'un fichier, octroi d'une autorisation à un utilisateur  
  Dans l'exemple ci-dessous, la clé asymétrique `PacificSales19` est créée à partir d'une paire de clés stockées dans un fichier, puis l'utilisateur `Christina` est autorisé à utiliser la clé asymétrique.  
   
 ```  

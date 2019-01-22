@@ -23,15 +23,15 @@ helpviewer_keywords:
 - CREATE SECURITY POLICY statement
 - Row-Level Security
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 01417c90e5583b8b2276f05ec92347758689d284
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f5732c63ae381c0ca9c120b64aef3915dc6db926
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532481"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326080"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
 ## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation ALTER ANY SECURITY POLICY et l'autorisation ALTER sur le schéma.  
   
- En outre, les autorisations suivantes sont requises pour chaque prédicat ajouté :  
+ En outre, les autorisations suivantes sont requises pour chaque prédicat ajouté :  
   
 -   Les autorisations SELECT et REFERENCES sur la fonction utilisée en tant que prédicat  
   
@@ -117,7 +117,7 @@ ADD FILTER PREDICATE [rls].[fn_securitypredicate]([CustomerId])
 ON [dbo].[Customer];  
 ```  
   
-### <a name="b-creating-a-policy-that-affects-multiple-tables"></a>B. Création d'une stratégie qui affecte plusieurs tables  
+### <a name="b-creating-a-policy-that-affects-multiple-tables"></a>b. Création d'une stratégie qui affecte plusieurs tables  
  La syntaxe suivante crée une stratégie de sécurité avec trois prédicats de filtre sur trois tables différentes et active la stratégie de sécurité.  
   
 ```  

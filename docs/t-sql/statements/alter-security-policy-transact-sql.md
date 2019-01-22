@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - ALTER SECURITY POLICY statement
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1476efcf0060344279a1bd78a25057e25c54bb2a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5eb2b34e078d6fa48b3b9bc8e0be6b1b6c367732
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519794"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361509"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  Vous ne pouvez pas modifier (ALTER) l’opération pour laquelle un prédicat BLOCK est appliqué, car l’opération est utilisée pour identifier le prédicat de façon unique. À la place, vous devez supprimer le prédicat et en ajouter un nouveau pour la nouvelle opération.  
   
  WITH ( STATE = { ON | OFF } )  
- Permet à la stratégie de sécurité d'appliquer ses prédicats de sécurité sur les tables cibles, ou l'empêche d'effectuer cette opération. Sauf indication contraire, la stratégie de sécurité en cours de création est désactivée.  
+ Permet à la stratégie de sécurité d'appliquer ses prédicats de sécurité sur les tables cibles, ou l'empêche d'effectuer cette opération. Sauf indication contraire, la stratégie de sécurité en cours de création est activée.  
   
  NOT FOR REPLICATION  
  Indique que la stratégie de sécurité ne doit pas être exécutée quand un agent de réplication modifie l'objet cible. Pour plus d’informations, consultez [Contrôler le comportement de déclencheurs et de contraintes au cours de la synchronisation &#40;programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  
@@ -117,7 +117,7 @@ ALTER SECURITY POLICY pol1
     ON myschema.mytable;  
 ```  
   
-### <a name="b-enabling-an-existing-policy"></a>B. Activation d'une stratégie existante  
+### <a name="b-enabling-an-existing-policy"></a>b. Activation d'une stratégie existante  
  L'exemple suivant utilise la syntaxe ALTER pour activer une stratégie de sécurité.  
   
 ```  
