@@ -25,15 +25,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d07dc597f293414c2c4fae2704085ac4449038cf
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b8781f155f96fa9e80270eaf6f75f2438eae4549
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905770"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299476"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - Utilisation des opérateurs PIVOT et UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
   Vous pouvez utiliser les opérateurs de relation `PIVOT` et `UNPIVOT` pour modifier une expression table dans une autre table. À partir d’une expression table, l’opérateur `PIVOT` transforme les valeurs uniques d’une colonne de l’expression en plusieurs colonnes de sortie et effectue les agrégations nécessaires sur les valeurs de colonne restantes qui doivent figurer dans la sortie finale. L’opérateur `UNPIVOT` effectue l’opération inverse : il transforme les colonnes d’une expression table en valeurs de colonne.  
   

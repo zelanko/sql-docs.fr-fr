@@ -13,12 +13,12 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47cc4ba5cb66cd810f536940bc896938734dda65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: deb1f9af6d006ff9e524d2f91d61af6269737079
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643357"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129659"
 ---
 # <a name="publisher-information-publications"></a>Informations sur le serveur de publication, Publications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "47643357"
 ## <a name="options"></a>Options  
  Pour modifier la façon dont la grille affiche les données, cliquez avec le bouton droit sur la grille, puis cliquez sur l'une des options suivantes :  
   
--   **Trier**: cette option vous permet d'effectuer un tri sur ou plusieurs colonnes dans la boîte de dialogue **Trier les colonnes** .  
+-   **Trier** : cette option vous permet d’effectuer un tri sur une ou plusieurs colonnes dans la boîte de dialogue **Trier les colonnes**.  
   
--   **Choisir les colonnes à afficher**: cette option vous permet de sélectionner les colonnes à afficher et l'ordre d'affichage dans la boîte de dialogue **Choisir les colonnes** .  
+-   **Choisir les colonnes à afficher** : cette option vous permet de sélectionner les colonnes à afficher et l’ordre d’affichage dans la boîte de dialogue **Choisir les colonnes**.  
   
--   **Filtre**: cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre** .  
+-   **Filtrer** : cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre**.  
   
--   **Effacer le filtre**: cette option vous permet d'effacer tous les paramètres du filtre pour la grille.  
+-   **Effacer le filtre** : cette option vous permet d’effacer tous les paramètres du filtre pour la grille.  
   
  Les paramètres du filtre sont spécifiques à chaque grille. La sélection et le tri des colonnes sont appliqués à toutes les grilles du même type, par exemple la grille de publications pour chaque serveur de publication.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47643357"
  La valeur d'état **Critique pour les performances** est pertinente pour les abonnements transactionnels et de fusion. Pour les abonnements transactionnels, elle ne peut être affichée que si un seuil est défini. Pour plus d’informations sur les mesures de performances et sur la définition des seuils, consultez [Analyser les performances avec le Moniteur de réplication](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) et [Définir des seuils et des avertissements dans le Moniteur de réplication](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Publication**  
- Nom de chaque publication, sous la forme *PublicationDatabaseName: PublicationName*.  
+ Nom de chaque publication, sous la forme *NomBasedeDonnéesPublication: NomPublication*.  
   
  **Abonnements**  
  Nombre d'abonnements pour chaque publication.  
@@ -86,7 +86,7 @@ ms.locfileid: "47643357"
   
 ## <a name="see-also"></a> Voir aussi  
  [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [Moniteur de réplication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Moniteur de réplication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

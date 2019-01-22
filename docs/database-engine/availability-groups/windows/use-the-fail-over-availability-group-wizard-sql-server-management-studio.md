@@ -20,12 +20,12 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 78bc2ed5285440afa526cc7e6e6ef1e732e4fc9e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8b11894150e184233b985dcfd21002175b1d9555
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530007"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255924"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Utiliser l’Assistant Basculement d’un groupe de disponibilité (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52530007"
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Avant votre premier basculement manuel planifié, consultez la section « Avant de commencer » dans [Effectuer un basculement manuel planifié d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
- Avant votre premier basculement forcé, consultez les sections « Avant de commencer » et « Suivi : tâches essentielles après un basculement forcé » dans [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+ Avant votre premier basculement forcé, consultez les sections « Avant de commencer » et « Suivi : Tâches essentielles après un basculement forcé » dans [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52530007"
   
 4.  Les informations présentées dans la page d' **Introduction** varient selon qu'un réplica secondaire est éligible ou non à un basculement planifié. Si cette page indique «**Effectuer un basculement planifié pour ce groupe de disponibilité**», vous pouvez basculer le groupe de disponibilité sans perte de données.  
   
-5.  Dans la page **Sélectionner le nouveau réplica principal** , vous pouvez afficher l’état du réplica principal actuel et du quorum WSFC avant de choisir le réplica secondaire qui deviendra le nouveau réplica principal ( *cible de basculement*). Pour un basculement manuel planifié, veillez à sélectionner un réplica secondaire dont la valeur **Disponibilité du basculement** est «**Aucune perte de données**». Dans un basculement forcé, pour toutes les cibles de basculement possibles, cette valeur sera « **Perte de données, avertissements (***#***)**  », où *#* indique le nombre d’avertissements qui existent pour un réplica secondaire donné. Pour afficher les avertissements d’une cible de basculement donnée, cliquez sur sa valeur « Disponibilité de basculement ».  
+5.  Dans la page **Sélectionner le nouveau réplica principal** , vous pouvez afficher l’état du réplica principal actuel et du quorum WSFC avant de choisir le réplica secondaire qui deviendra le nouveau réplica principal ( *cible de basculement*). Pour un basculement manuel planifié, veillez à sélectionner un réplica secondaire dont la valeur **Disponibilité du basculement** est «**Aucune perte de données**». Dans un basculement forcé, pour toutes les cibles de basculement possibles, cette valeur sera « **Perte de données, avertissements (**_#_**)**  », où *#* indique le nombre d’avertissements qui existent pour un réplica secondaire donné. Pour afficher les avertissements d’une cible de basculement donnée, cliquez sur sa valeur « Disponibilité de basculement ».  
   
      Pour plus d'informations, consultez la [page Sélectionner le nouveau réplica principal](#SelectNewPrimaryReplica), plus loin dans cette rubrique.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "52530007"
   
      Pour plus d’informations, consultez [Page Résultats &#40;Assistants de groupe de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md).  
   
-11. Après un basculement forcé, consultez la section « Suivi : après un basculement forcé » dans [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+11. Après un basculement forcé, consultez la section « Suivi : Après un basculement forcé » dans [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>Aide sur les pages qui sont exclusives à cet Assistant  
  Cette section décrit les pages qui sont propres à l' [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)].  
@@ -151,7 +151,7 @@ ms.locfileid: "52530007"
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Aucune perte de données**|Ce réplica secondaire prend actuellement en charge le basculement planifié. Cette valeur est présente uniquement lorsqu'un réplica secondaire en mode de validation synchrone est actuellement synchronisé avec le réplica principal.|  
-|**Perte de données, avertissements (** *#* **)**|Ce réplica secondaire prend actuellement en charge le basculement forcé (avec perte de données possible). Cette valeur est présente chaque fois que le réplica secondaire n'est pas synchronisé avec le réplica principal. Cliquez sur le lien d'un avertissement de perte de données pour plus d'informations sur la perte de données.|  
+|**Perte de données, avertissements (** _#_ **)**|Ce réplica secondaire prend actuellement en charge le basculement forcé (avec perte de données possible). Cette valeur est présente chaque fois que le réplica secondaire n'est pas synchronisé avec le réplica principal. Cliquez sur le lien d'un avertissement de perte de données pour plus d'informations sur la perte de données.|  
   
  **Actualiser**  
  Cliquez pour actualiser la grille.  

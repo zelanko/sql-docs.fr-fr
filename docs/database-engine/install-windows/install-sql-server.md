@@ -15,26 +15,29 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c58fcf00f0feb3f6dc78f1df095a5934edfde6f3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 89bb096f92bfd2ae5cc4da46ba99fb4ae41929d0
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600889"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300366"
 ---
 # <a name="install-sql-server"></a>Installer SQL Server
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
+
  
  À partir de [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] est disponible uniquement en tant qu’application 64 bits. Voici des informations importantes sur la façon d’obtenir SQL Server et de l’installer.
 
 ## <a name="installation-details"></a>Détails de l’installation
   
-*  **Options**: effectuez l’installation par le biais de l’Assistant Installation, de l’outil sysprep ou d’une invite de commandes
+*  **Options** : Effectuez l’installation par le biais de l’Assistant Installation, de l’outil sysprep ou d’une invite de commandes
  
-*  **Configuration requise**: avant de procéder à l’installation, prenez connaissance de la configuration requise, des vérifications de configuration du système et des considérations sur la sécurité décrites dans [Planification d’une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md) 
+*  **Exigences** : Avant de procéder à l’installation, prenez connaissance de la configuration requise, des vérifications de configuration du système et des considérations sur la sécurité décrites dans [Planification d’une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md). 
 
-* **Processus**: consultez [Installation de SQL Server](../../database-engine/install-windows/installation-for-sql-server-2016.md) pour obtenir des instructions complètes sur le processus d’installation
+* **Processus** : Consultez [Installation de SQL Server](../../database-engine/install-windows/installation-for-sql-server-2016.md) pour obtenir des instructions complètes sur le processus d’installation.
 
 * **Exemples de bases de données et exemples de code**: 
     * Par défaut, ils ne sont pas installés dans le cadre de l’installation de SQL Server 

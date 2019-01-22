@@ -15,15 +15,15 @@ helpviewer_keywords:
 - tail-log backups
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d4272379809eabde398a6b50c54d39c7139419d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 47876b387c06c1ba65e6a1a04fcbcee616097166
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535018"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241845"
 ---
 # <a name="tail-log-backups-sql-server"></a>Sauvegardes de la fin du journal (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52535018"
   
  Une *sauvegarde de la fin du journal* capture tous les enregistrements de journal qui n’ont pas encore été sauvegardés (la *fin du journal*) pour empêcher toute perte de travail et préserver la continuité de la séquence de journaux de transactions consécutifs. Avant de pouvoir récupérer une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux date et heure les plus récentes, vous devez sauvegarder la fin de son journal des transactions. La sauvegarde de la fin du journal est la dernière sauvegarde intéressante dans le plan de récupération de la base de données.  
   
-> **REMARQUE :** les scénarios de restauration ne nécessite pas tous une sauvegarde de la fin du journal. Vous n'avez pas besoin d'une sauvegarde de la fin du journal si le point de récupération est contenu dans une sauvegarde de journal antérieure. En outre, une sauvegarde de la fin du journal est inutile si vous déplacez ou remplacez (par écrasement) la base de données et ne souhaitez pas la restaurer à un point donné après la sauvegarde la plus récente.  
+> **REMARQUE :** Les scénarios de restauration ne nécessitent pas tous une sauvegarde de la fin du journal. Vous n'avez pas besoin d'une sauvegarde de la fin du journal si le point de récupération est contenu dans une sauvegarde de journal antérieure. En outre, une sauvegarde de la fin du journal est inutile si vous déplacez ou remplacez (par écrasement) la base de données et ne souhaitez pas la restaurer à un point donné après la sauvegarde la plus récente.  
   
    ##  <a name="TailLogScenarios"></a> Scénarios qui nécessitent une sauvegarde de la fin du journal  
  Nous vous recommandons d'effectuer une sauvegarde de la fin du journal dans les scénarios suivants :  
@@ -48,7 +48,7 @@ ms.locfileid: "52535018"
   
 |Option BACKUP LOG|Commentaires|  
 |-----------------------|--------------|  
-|NORECOVERY|Utilisez NORECOVERY chaque fois que vous envisagez de poursuivre une opération de restauration sur la base de données. NORECOVERY fait passer la base de données en état de restauration. Ceci permet d'éviter des modifications dans la base de données après la sauvegarde de la fin du journal. Le journal sera tronqué sauf si l’option NO_TRUNCATE ou COPY_ONLY est aussi spécifiée.<br /><br /> **Important :**  Évitez d’utiliser NO_TRUNCATE, sauf si la base de données est endommagée.|  
+|NORECOVERY|Utilisez NORECOVERY chaque fois que vous envisagez de poursuivre une opération de restauration sur la base de données. NORECOVERY fait passer la base de données en état de restauration. Ceci permet d'éviter des modifications dans la base de données après la sauvegarde de la fin du journal. Le journal sera tronqué sauf si l’option NO_TRUNCATE ou COPY_ONLY est aussi spécifiée.<br /><br /> **Important :** Évitez d’utiliser NO_TRUNCATE, sauf si la base de données est endommagée.|  
 |CONTINUE_AFTER_ERROR|Utilisez CONTINUE_AFTER_ERROR uniquement si vous sauvegardez la fin d'une base de données endommagée.<br /><br /> Si vous sauvegardez la fin du journal sur une base de données endommagée, certaines métadonnées capturées normalement dans des sauvegardes de journaux sont parfois indisponibles. Pour plus d’informations, consultez [Sauvegardes de la fin du journal avec des métadonnées de sauvegarde incomplètes](#IncompleteMetadata), dans cette rubrique.|  
   
 ##  <a name="IncompleteMetadata"></a> Sauvegardes de la fin du journal avec des métadonnées de sauvegarde incomplètes  

@@ -13,34 +13,26 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7eb5a872b713571c544a03039010aa3dbdc4aa1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adbece38622571eecc0e3bcb00c8f69f022919b6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639947"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135599"
 ---
 # <a name="replication-monitor-main-page"></a>Moniteur de réplication, Page principale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Le Moniteur de réplication permet de suivre l'état et les performances des publications et des abonnements dans une topologie de réplication. Les rubriques suivantes fournissent plus d'informations :  
   
--   Pour une vue d’ensemble du Moniteur de réplication, consultez [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
+-   Pour une vue d’ensemble du Moniteur de réplication, consultez [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication.md).  
   
 -   Le volet de gauche du Moniteur de réplication porte sur les serveurs de publication et les groupes de serveurs de publication. Ajoutez des serveurs de publication au Moniteur de réplication pour afficher les informations sur les publications et les abonnements. Pour plus d’informations, consultez [Ajouter et supprimer des serveurs de publication à partir du moniteur de réplication](../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md).  
   
 -   Pour plus d'informations sur les tâches qui peuvent être exécutées dans le Moniteur de réplication, consultez les rubriques suivantes :  
   
-    -   [Actualiser des données dans le Moniteur de réplication](../../relational-databases/replication/monitor/refresh-data-in-replication-monitor.md)  
+    -   [Actualiser des données dans le moniteur de réplication](../../relational-databases/replication/monitor/refresh-data-in-replication-monitor.md)  
   
-    -   [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
-  
-    -   [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
-  
-    -   [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)  
-  
-    -   [Afficher des informations et exécuter des tâches relatives à un abonnement &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
-  
-    -   [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
+    -   [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)    
   
     -   [Mesurer la latence et valider les connexions pour la réplication transactionnelle](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
@@ -50,6 +42,6 @@ ms.locfileid: "47639947"
   
 ## <a name="see-also"></a> Voir aussi  
  [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

@@ -1,38 +1,47 @@
 ---
-title: Propriétés de l’abonnement - Abonné | Microsoft Docs
+title: Réplication SQL Server, boîte de dialogue Propriétés de l’abonnement | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
+- sql13.rep.newsubwizard.subproperties.publisher.f1
 - sql13.rep.newsubwizard.subproperties.subscriber.f1
-helpviewer_keywords:
-- Subscription Properties dialog box
-ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
+ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd811f69d34d39f6fd93826e88295b75ec1dc780
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43268755a3de5cf3a8a84547bafe5dc66ad1ac48
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806907"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134079"
 ---
-# <a name="subscription-properties---subscriber"></a>Propriétés de l'abonnement - Abonné
+# <a name="sql-server-replication-subscription-properties-dialog-box"></a>Réplication SQL Server, boîte de dialogue Propriétés de l’abonnement 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La boîte de dialogue **Propriétés de l'abonnement** de l'abonné permet d'afficher et de configurer les propriétés des abonnements par extraction.  
+
+### <a name="publisher-properties"></a>Propriétés du serveur de publication
+La boîte de dialogue **Propriétés de l'abonnement** du serveur de publication permet d'afficher et de configurer les propriétés des abonnements par envoi de données. Vous pouvez également afficher certaines propriétés des abonnements par extraction. Cependant, la boîte de dialogue **Propriétés de l'abonnement** de l'abonné affiche des propriétés supplémentaires que vous pouvez modifier.  
   
- Chaque propriété de **cette boîte de dialogue** comporte une description. Cliquez sur une propriété pour afficher sa description au bas de la boîte de dialogue. Cette rubrique fournit des informations sur diverses propriétés, Les propriétés sont regroupées selon les catégories suivantes :  
+ Chaque propriété de **cette boîte de dialogue** comporte une description. Cliquez sur une propriété pour afficher sa description au bas de la boîte de dialogue. Cette rubrique fournit des informations supplémentaires sur diverses propriétés, dont la plupart sont affichées dans le serveur de publication uniquement pour les abonnements par envoi de données. Les propriétés sont regroupées selon les catégories suivantes :  
   
--   Propriétés appliquées à tous les abonnements.  
-  
+-   Propriétés appliquées à tous les abonnements.    
 -   Propriétés appliquées aux abonnements transactionnels.  
+-   Propriétés appliquées aux abonnements de fusion.  
   
+ Si une option est affichée en lecture seule, vous pouvez la configurer uniquement lorsque l'abonnement est créé. Si vous voulez configurer des options non disponibles dans l'Assistant Nouvel abonnement, créez l'abonnement avec des procédures stockées. Pour plus d'informations, consultez [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) et [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
+
+### <a name="subscriber-properties"></a>Propriétés de l’abonné
+La boîte de dialogue **Propriétés de l'abonnement** de l'abonné permet d'afficher et de configurer les propriétés des abonnements par extraction.  
+  
+ Chaque propriété de **cette boîte de dialogue** comporte une description. Cliquez sur une propriété pour afficher sa description au bas de la boîte de dialogue. Cette rubrique fournit des informations sur diverses propriétés, Les propriétés sont regroupées selon les catégories suivantes :    
+-   Propriétés appliquées à tous les abonnements.    
+-   Propriétés appliquées aux abonnements transactionnels.   
 -   Propriétés appliquées aux abonnements de fusion.  
   
  Si une option est affichée en lecture seule, vous pouvez la configurer uniquement lorsque l'abonnement est créé. Si vous voulez configurer des options non disponibles dans l'Assistant Nouvel abonnement, créez l'abonnement avec des procédures stockées. Pour plus d'informations, consultez [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) et [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
@@ -40,20 +49,46 @@ ms.locfileid: "47806907"
 > [!NOTE]  
 >  Si un Agent de distribution ou un Agent de fusion n'est pas encore créé pour l'abonnement, de nombreuses propriétés ne sont pas affichées. Pour créer un travail d’agent pour un abonnement par extraction, exécutez [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (pour un abonnement destiné à une publication transactionnelle ou d’instantané) ou [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (pour un abonnement destiné à une publication de fusion).  
   
-## <a name="options-for-all-subscriptions"></a>Options pour tous les abonnements  
+## <a name="publisher-options-for-all-subscriptions"></a>Options du serveur de publication pour tous les abonnements  
+ **Sécurité**  
+ Cliquez sur la ligne **Compte de processus de l'agent** , puis sur le bouton des propriétés (**...**) pour modifier le compte sous lequel l'Agent de distribution ou de fusion s'exécute sur le serveur de distribution. Pour modifier le compte sous lequel l'Agent de distribution ou de fusion établit les connexions avec l'abonné, cliquez sur **Connexion de l'Abonné**, puis sur le bouton des propriétés (**...**).  
+  
+ Pour plus d'informations sur les autorisations indispensables pour chaque agent, consultez [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+  
+## <a name="publisher-options-for-transactional-subscriptions"></a>Options du serveur de publication pour les abonnements transactionnels  
+ **Empêcher le bouclage de la transaction**  
+ Détermine si l'Agent de distribution retourne à l'Abonné les transactions créées sur ce dernier. Cette option est utilisée pour la réplication transactionnelle bidirectionnelle. Pour plus d’informations, voir [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).  
+  
+ **Abonnement pouvant être mis à jour**  
+ Détermine si les modifications de l'Abonné sont répliquées dans le serveur de publication. Vous pouvez répliquer les modifications en utilisant la mise à jour immédiate ou en file d'attente. L'option **Méthode de mise à jour de l'Abonné** détermine la méthode à utiliser. Pour plus d’informations, voir [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
+  
+## <a name="publisher-options-for-merge-subscriptions"></a>Options du serveur de publication pour les abonnements de fusion  
+ **Définition de la partition (HOST_NAME)**  
+ Pour une publication qui utilise des filtres paramétrés, la publication de fusion évalue une des deux fonctions système (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu'un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()**. Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()**, consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+  
+ **Type d'abonnement** et **Priorité**  
+ Indique si l'abonnement est un abonnement de client ou de serveur (cette option n'est pas modifiable après la création de l'abonnement). Les abonnements de serveur peuvent republier les données vers d'autres abonnés. Il est possible de leur affecter une priorité pour la résolution des conflits.  
+  
+ Si vous avez sélectionné un abonnement de type serveur dans l'Assistant Nouvel abonnement, l'abonné a la priorité utilisée lors de la résolution des conflits.  
+  
+ **Résoudre les conflits interactivement**  
+ Détermine s'il faut utiliser l'interface utilisateur du Résolveur interactif pour résoudre les conflits pendant la synchronisation de fusion. Pour cela, l'option **Utiliser le Gestionnaire de synchronisation Windows** doit être active ( **Activer**). Pour plus d’informations, consultez [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+
+  
+## <a name="subscriber-options-for-all-subscriptions"></a>Options de l’Abonné pour tous les abonnements  
  **Initialise les données publiées à partir d'un instantané**  
  Détermine si les options sont initialisées avec un instantané (par défaut) ou une autre méthode. Pour plus d’informations sur l’initialisation des abonnements, consultez [Initialiser un abonnement](../../relational-databases/replication/initialize-a-subscription.md).  
   
  **Emplacement de l'instantané**  
  Détermine l'emplacement à partir duquel les fichiers d'instantanés sont accessibles lors de l'initialisation ou de la réinitialisation de l'abonnement. Les valeurs suivantes peuvent déterminer l'emplacement :  
   
--   **Emplacement par défaut**: emplacement par défaut défini lors de la configuration d'un serveur de distribution. Pour plus d’informations, consultez [Spécifier l’emplacement par défaut des instantanés &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md).  
+-   **Emplacement par défaut**: emplacement par défaut défini lors de la configuration d'un serveur de distribution. Pour plus d’informations, consultez [Spécifier les options des instantanés](../../relational-databases/replication/snapshot-options.md).  
   
--   **Autre dossier**: autre emplacement que vous pouvez spécifier dans la boîte de dialogue **Propriétés de la publication** . Pour plus d’informations, consultez [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md).  
+-   **Autre dossier**: autre emplacement que vous pouvez spécifier dans la boîte de dialogue **Propriétés de la publication** . Pour plus d’informations, consultez [Spécifier les options des instantanés](../../relational-databases/replication/snapshot-options.md).  
   
--   **Dossier d'instantanés dynamiques**: emplacement d'instantané pour les publications de fusion à filtres de lignes paramétrables. Pour plus d'informations, voir [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   **Dossier d'instantanés dynamiques**: emplacement d'instantané pour les publications de fusion à filtres de lignes paramétrables. Pour plus d'informations, voir [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
--   **Dossier FTP**: dossier accessible sur un serveur FTP (File Transfer Protocol). Pour plus d’informations, consultez [Transférer des instantanés via FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+-   **Dossier FTP**: dossier accessible sur un serveur FTP (File Transfer Protocol). Pour plus d’informations, consultez [Remettre des instantanés par le biais du protocole FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
  **Dossier d'instantanés**  
  Si vous sélectionnez une valeur différente de l' **Emplacement par défaut** de l'option **Emplacement de l'instantané** , vous devez spécifier un chemin d'accès au dossier d'instantanés.  
@@ -72,13 +107,13 @@ ms.locfileid: "47806907"
   
  Pour plus d'informations sur les autorisations indispensables pour chaque agent, consultez [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-## <a name="options-for-transactional-subscriptions"></a>Options des abonnements transactionnels  
+## <a name="subscriber-options-for-transactional-subscriptions"></a>Options de l’Abonné pour les abonnements transactionnels  
  **Abonnement pouvant être mis à jour**  
  Détermine si les modifications de l'Abonné sont répliquées dans le serveur de publication. Vous pouvez répliquer les modifications en utilisant la mise à jour immédiate ou en file d'attente. L'option **Méthode de mise à jour de l'Abonné** détermine la méthode à utiliser. Pour plus d’informations, voir [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
 ## <a name="options-for-merge-subscriptions"></a>Options des abonnements de fusion  
  **Définition de la partition (HOST_NAME)**  
- Pour une publication qui utilise des filtres paramétrables, la publication de fusion évalue une des deux fonctions système (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu'un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()**. Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()**, consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Pour une publication qui utilise des filtres paramétrés, la publication de fusion évalue une des deux fonctions système (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu'un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()**. Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()**, consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Type d'abonnement** et **Priorité**  
  Indique si l'abonnement est un abonnement de client ou de serveur (cette option n'est pas modifiable après la création de l'abonnement). Les abonnements de serveur peuvent republier les données vers d'autres abonnés. Il est possible de leur affecter une priorité pour la résolution des conflits.  
@@ -93,17 +128,17 @@ ms.locfileid: "47806907"
   
  Si vous sélectionnez la valeur **True** pour l'option **Utiliser la synchronisation Web**:  
   
--   Entrez l'adresse complète du serveur IIS dans le champ **Adresse du serveur Web**.  
-  
--   Cliquez sur la ligne **Connexion du serveur Web** , puis sur le bouton de propriétés (**...**) pour définir le compte sous lequel l'abonné se connecte au serveur IIS.  
-  
--   Modifiez la valeur **Délai d'attente du serveur Web** si nécessaire. Ce délai d'attente représente le temps (en secondes) écoulé avant l'expiration d'une demande de synchronisation Web.  
-  
- Pour plus d'informations sur la configuration, consultez [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
+-   Entrez l'adresse complète du serveur IIS dans le champ **Adresse du serveur Web**.    
+-   Cliquez sur la ligne **Connexion du serveur Web** , puis sur le bouton de propriétés (**...**) pour définir le compte sous lequel l'abonné se connecte au serveur IIS.    
+-   Modifiez la valeur **Délai d'attente du serveur Web** si nécessaire. Ce délai d'attente représente le temps (en secondes) écoulé avant l'expiration d'une demande de synchronisation Web. 
+
+ 
+Pour plus d'informations sur la configuration, consultez [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md). 
   
 ## <a name="see-also"></a> Voir aussi  
  [Afficher et modifier les propriétés d’un abonnement par extraction](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [Afficher et modifier les propriétés d’un abonnement par émission de données](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
+ [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)   
+
   
   

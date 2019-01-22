@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef9738e2c6f2f2ff89f384b1c7ff46aba39b9fa2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c2b1729996b53bb3419838c0ce55dc30182c467f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536433"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135439"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Utiliser des profils d'agent de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "52536433"
   
     -   Supprimer un profil  
   
--   **Suivi :**  [Après avoir modifié les paramètres de l'Agent](#FollowUp)  
+-   **Suivi :**  [Après avoir changé les paramètres de l’Agent](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52536433"
   
 1.  Si la boîte de dialogue **Profils d'Agent** affiche les profils de plusieurs agents, sélectionnez un Agent.  
   
-2.  Cliquez sur le bouton des propriétés (**...**) en regard d’un profil.  
+2.  Cliquez sur le bouton des propriétés (**…**) en regard d'un profil.  
   
 3.  Affichez les paramètres et les valeurs dans la boîte de dialogue **Propriétés du profil \<Nom_du_profil**.  
   
@@ -286,7 +286,7 @@ ms.locfileid: "52536433"
   
 5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> pour supprimer le profil défini par l'utilisateur représenté par cet objet du serveur.  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir modifié les paramètres de l'Agent  
+##  <a name="FollowUp"></a> Suivi : Après avoir changé les paramètres de l’Agent  
 Les modifications apportées aux paramètres prennent effet au prochain démarrage de l'Agent. Si l'Agent fonctionne en continu, vous devez l'arrêter, puis le redémarrer. À compter de la mise à jour cumulative 3 pour SQL Server 2017, certaines modifications apportées aux paramètres de l’Agent prennent effet sans avoir à redémarrer les Agents. 
   
 ## <a name="see-also"></a> Voir aussi  

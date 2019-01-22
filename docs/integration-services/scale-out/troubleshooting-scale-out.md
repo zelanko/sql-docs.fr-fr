@@ -2,7 +2,7 @@
 title: Résoudre les problèmes liés à SSIS (SQL Server Integration Services) Scale Out | Microsoft Docs
 description: Cet article décrit comment résoudre les problèmes courants avec SSIS Scale Out.
 ms.custom: performance
-ms.date: 05/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 20473c4555a0f0a98484bd66ef93ce659d51a2a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732490"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206325"
 ---
 # <a name="troubleshoot-scale-out"></a>Résoudre les problèmes de Scale Out
 
@@ -38,7 +38,7 @@ Pour étudier les problèmes que vous rencontrez, suivez les étapes ci-après u
 
     Dans l’Explorateur d’objets de SSMS, cliquez avec le bouton droit sur **SSISDB**, puis vérifiez que **la fonctionnalité Scale Out est activée**.
 
-    ![Vérifier si Scale Out est activé](media\isenabled.PNG)
+    ![Vérifier si Scale Out est activé](media/isenabled.PNG)
 
     Si la valeur de propriété est False, activez Scale Out en appelant la procédure stockée `[catalog].[enable_scaleout]`.
 
@@ -62,7 +62,7 @@ Vérifiez les messages d’erreur dans le journal du service Scale Out Worker so
 
 ### <a name="symptoms"></a>Symptômes
 
-*« System.ServiceModel.EndpointNotFoundException : Il n’existait pas de point de terminaison à l’écoute sur https://*[nom_machine]:[port]*/ClusterManagement/ pouvant accepter le message. »*
+*"System.ServiceModel.EndpointNotFoundException: Aucun point de terminaison à l’écoute sur https://*[NomMachine]:[Port]*/ClusterManagement/ pouvant accepter le message. »*
 
 ### <a name="solution"></a>Solution
 
@@ -77,11 +77,11 @@ Vérifiez les messages d’erreur dans le journal du service Scale Out Worker so
 ## <a name="could-not-establish-trust-relationship"></a>Impossible d’établir une relation d’approbation
 
 ### <a name="symptoms"></a>Symptômes
-*« System.ServiceModel.Security.SecurityNegotiationException : Impossible d’établir une relation d’approbation pour le canal sécurisé SSL/TLS avec l’autorité '[nom_machine]:[port]'. »*
+*""System.ServiceModel.Security.SecurityNegotiationException: Impossible d’établir une relation d’approbation pour le canal sécurisé SSL/TLS avec l’autorité '[NomMachine]:[Port]'. »*
 
-*« System.Net.WebException : La connexion sous-jacente a été fermée : Impossible d’établir une relation de confiance pour le canal sécurisé SSL/TLS. »*
+*"System.Net.WebException: La connexion sous-jacente a été fermée : Impossible d’établir une relation d’approbation pour le canal sécurisé SSL/TLS. »*
 
-*« System.Security.Authentication.AuthenticationException : Le certificat distant n’est pas valide selon la procédure de validation. »*
+*"System.Security.Authentication.AuthenticationException: Le certificat distant n’est pas valide selon la procédure de validation. »*
 
 ### <a name="solution"></a>Solution
 1.  Installez le certificat Scale Out Master dans le magasin de certificats racine de l’ordinateur local sur le nœud Scale Out Worker si ce n’est déjà fait, puis redémarrez le service Scale Out Worker.
@@ -97,9 +97,9 @@ Vérifiez les messages d’erreur dans le journal du service Scale Out Worker so
 
 ### <a name="symptoms"></a>Symptômes
 
-*« System.ServiceModel.Security.SecurityNegotiationException : Impossible d’établir un canal sécurisé pour SSL/TLS avec l’autorité '[nom_machine]:[port]. »*
+*"System.ServiceModel.Security.SecurityNegotiationException: Impossible d’établir un canal sécurisé pour SSL/TLS avec l’autorité '[NomMachine]:[Port]'. »*
 
-*« System.Net.WebException : La demande a été abandonnée : Impossible de créer un canal sécurisé SSL/TLS. »*
+*"System.Net.WebException: La demande a été abandonnée : Impossible de créer un canal sécurisé SSL/TLS. »*
 
 ### <a name="solution"></a>Solution
 Vérifiez si le compte exécutant le service Scale Out Worker a accès au certificat Scale Out Worker en exécutant la commande suivante :
@@ -118,9 +118,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>Symptômes
 
-*« System.ServiceModel.Security.MessageSecurityException : La requête HTTP a été interdite avec le schéma d’authentification client 'Anonyme'. »*
+*"System.ServiceModel.Security.MessageSecurityException: La requête HTTP a été interdite avec le schéma d’authentification client 'Anonyme'. »*
 
-*« System.Net.WebException : Le serveur distant a retourné une erreur : (403) Interdit. »*
+*"System.Net.WebException: Le serveur distant a retourné une erreur : (403) Interdit. »*
 
 ### <a name="solution"></a>Solution
 1.  Installez le certificat Scale Out Worker dans le magasin de certificats racine de l’ordinateur local sur le nœud Scale Out Master si ce n’est déjà fait, puis redémarrez le service Scale Out Worker.
@@ -131,21 +131,21 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
-    Nom de la valeur : **SendTrustedIssuerList** 
+    Nom de valeur : **SendTrustedIssuerList** 
 
-    Type de valeur : **REG_DWORD** 
+    Type de valeur : **REG_DWORD** 
 
-    Données de valeur : **0 (False)**
+    Données de la valeur : **0 (False)**
 
 4.  S’il n’est pas possible de nettoyer tous les certificats non signés comme décrit à l’étape 2, attribuez à la clé de Registre suivante la valeur 2.
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
-    Nom de la valeur : **ClientAuthTrustMode** 
+    Nom de valeur : **ClientAuthTrustMode** 
 
-    Type de valeur : **REG_DWORD** 
+    Type de valeur : **REG_DWORD** 
 
-    Données de valeur : **2**
+    Données de la valeur : **2**
 
     > [!NOTE]
     > S’il existe des certificats non signés automatiquement dans le magasin de certificats racine, l’authentification par certificat client échoue. Pour plus d’informations, voir [Internet Information Services (IIS) 8 peut rejeter les demandes de certificat client avec une erreur HTTP 403.7 ou 403.16](https://support.microsoft.com/help/2802568/internet-information-services-iis-8-may-reject-client-certificate-requ).
@@ -154,7 +154,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>Symptômes
 
-*« System.ServiceModel.CommunicationException : Une erreur s’est produite lors de la requête HTTP à https://[nom_machine]:[port]/ClusterManagement/. Cela peut être dû au fait que le certificat de serveur n’est pas configuré correctement avec HTTP.SYS pour HTTPS. Une autre raison possible est une non-correspondance de la liaison de sécurité entre le client et le serveur. »*
+*"System.ServiceModel.CommunicationException: Une erreur s’est produite lors de la requête HTTP envoyée à https://[Machine]:[Port]/ClusterManagement/. Cela peut être dû au fait que le certificat de serveur n’est pas configuré correctement avec HTTP.SYS pour HTTPS. Une autre raison possible est une non-correspondance de la liaison de sécurité entre le client et le serveur. »*
 
 ### <a name="solution"></a>Solution
 1.  Vérifiez si le certificat Scale Out Master est correctement lié au port dans le point de terminaison maître sur le nœud Master en exécutant la commande suivante :
@@ -224,4 +224,4 @@ WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions
 ## <a name="next-steps"></a>Étapes suivantes
 Pour plus d’informations, consultez les articles suivants sur l’installation et la configuration de SSIS Scale Out :
 -   [Bien démarrer avec SSIS (SQL Server Integration Services) Scale Out sur un seul ordinateur](get-started-with-ssis-scale-out-onebox.md)
--   [Procédure pas à pas : Configurer SSIS (SQL Server Integration Services) Scale Out](walkthrough-set-up-integration-services-scale-out.md)
+-   [Procédure pas à pas : Configurer Integration Services (SSIS) Scale Out](walkthrough-set-up-integration-services-scale-out.md)

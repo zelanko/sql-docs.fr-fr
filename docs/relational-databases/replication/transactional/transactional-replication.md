@@ -14,16 +14,16 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b85e937dc16ffe3e9561a6344829c9aae5af508c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1d5269b19f8bfb04321ac23e01d1f85b8c0861e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791167"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129459"
 ---
 # <a name="transactional-replication"></a>Réplication transactionnelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La réplication transactionnelle commence en général avec l'instantané des objets et des données de la base de données de publication. Dès que l'instantané initial est effectué, les changements de données et les modifications de schémas effectués ensuite au niveau du serveur de publication sont en général transmis à l'Abonné à mesure qu'ils se produisent (presque en temps réel). Les changements de données sont appliqués à l'Abonné dans le même ordre et dans les mêmes limites de transaction que sur le serveur de publication ; c'est pourquoi, dans une publication, la cohérence des transactions est garantie.  
+  La réplication transactionnelle commence en général avec l'instantané des objets et des données de la base de données de publication. Dès que l'instantané initial est effectué, les changements de données et les modifications de schémas effectués ensuite au niveau du serveur de publication sont en général transmis à l'Abonné à mesure qu'ils se produisent (presque en temps réel). Les changements de données sont appliqués à l'Abonné dans le même ordre et dans les mêmes limites de transaction que sur le serveur de publication ; c'est pourquoi, dans une publication, la cohérence des transactions est garantie.  
   
  La réplication transactionnelle est en général utilisée dans les environnements serveur à serveur, et convient pour chacun des cas suivants :  
   
@@ -72,5 +72,15 @@ ms.locfileid: "47791167"
   
 ##  <a name="DistributionAgent"></a> Agent de distribution  
  Cet agent s'exécute généralement sur le serveur de distribution pour les abonnements par envoi de données et sur l'Abonné pour les abonnements par extraction. L'Agent déplace les transactions de la base de données de distribution vers l'Abonné. Si un abonnement est marqué pour validation, l'Agent de distribution vérifie également si les données correspondent entre le serveur de publication et l'Abonné.  
+
+## <a name="publication-types"></a>Types de publications 
+La réplication transactionnelle propose quatre types de publications :  
+  
+|Type de publication|Description|  
+|----------------------|-----------------|  
+|Publication transactionnelle standard|Adaptée aux topologies dans lesquelles toutes les données de l'Abonné sont en lecture seule (la réplication transactionnelle ne l'applique pas sur l'Abonné).<br /><br /> Les publications transactionnelles standard sont créées par défaut lorsque vous utilisez Transact-SQL ou Replication Management Objects. Lorsque vous utilisez l'Assistant Nouvelle publication, elles sont créées par la sélection de l'option **Publication transactionnelle** dans la page **Type de publication** .<br /><br /> Pour plus d’informations sur la création de publications, consultez [Publier des données et des objets de base de données](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
+|Publication transactionnelle avec abonnements pouvant être mis à jour|Les caractéristiques de ce type de publication sont les suivantes :<br /><br /> -Chaque emplacement a des données identiques, avec un serveur de publication et un Abonné. <br /> -Il est possible de mettre à jour des lignes au niveau de l’Abonné.<br /> -Cette topologie convient surtout aux environnements serveur exigeant une disponibilité élevée et des possibilités d’évolutivité en lecture.<br /><br />Pour plus d’informations, consultez [Abonnements pouvant être mis à jour](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
+|Topologie d’égal à égal|Les caractéristiques de ce type de publication sont les suivantes :<br /> - Chaque emplacement a des données identiques et fait à la fois office de serveur de publication et d’Abonné.<br /> - La même ligne ne peut être changée qu’à un seul emplacement à la fois.<br /> - Prend en charge la [détection de conflit](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  <br />- Cette topologie convient surtout aux environnements serveur exigeant une disponibilité élevée et des possibilités de scalabilité en lecture.<br /><br />Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|Réplication transactionnelle bidirectionnelle|Les caractéristiques de ce type de publication sont les suivantes :<br />La réplication bidirectionnelle est similaire à la réplication d’égal à égal, mais elle n’offre pas la résolution des conflits. De plus, la réplication bidirectionnelle est limitée à 2 serveurs. <br /><br /> Pour plus d’informations, consultez [Réplication transactionnelle bidirectionnelle](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md). |  
   
   

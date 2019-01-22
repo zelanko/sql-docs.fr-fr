@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Transact-SQL restore sequence
 - file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2817ce0133db51ae5b4cd8ed4d7a81db81074fc2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85cd45abfbc434ce02d5000d48ed5dacd48ad208
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639937"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242120"
 ---
 # <a name="file-restores-full-recovery-model"></a>Restaurations de fichiers (mode de récupération complète)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47639937"
   
  Si le groupe de fichiers en cours de restauration est en lecture seule, l'application de sauvegardes de journal est souvent inutile et ignorée. Si la sauvegarde a été réalisée après la mise en lecture seule du fichier, il s'agit de la dernière sauvegarde à restaurer. La récupération par progression s'arrête au point cible.  
   
- Les scénarios de restauration de fichiers sont les suivants :  
+ Les scénarios de restauration de fichiers sont les suivants :  
   
 -   Restauration de fichiers hors ligne  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47639937"
      Pour plus d’informations sur la prise en charge de la restauration de fichiers et de pages en ligne, consultez [Éditions et fonctionnalités prises en charge dans SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Pour plus d’informations sur les restaurations en ligne, consultez [Restauration en ligne (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).
   
     > [!TIP]  
-    >  Si vous souhaitez que la base de données soit hors connexion pour une restauration de fichiers, mettez-la hors connexion avant de démarrer la séquence de restauration en exécutant l’instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) suivante : ALTER DATABASE *nom_base_de_données* SET OFFLINE.  
+    >  Si vous voulez que la base de données soit hors connexion pour une restauration de fichiers, mettez celle-ci hors connexion avant de démarrer la séquence de restauration en exécutant l’instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) suivante : ALTER DATABASE *nom_base_de_données* SET OFFLINE.  
   
   
 ##  <a name="Overview"></a> Restauration de fichiers endommagés à partir de sauvegardes de fichiers  
@@ -116,11 +116,11 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 ## <a name="examples"></a>Exemples  
   
--   [Exemple : restauration en ligne d’un fichier en lecture/écriture &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [Exemple : restauration en ligne d’un fichier en lecture/écriture &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de restauration complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de restauration complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
--   [Exemple : restauration hors ligne du groupe de fichiers primaire et d’un autre groupe de fichiers &#40;mode de restauration complète&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Exemple : restauration hors ligne du groupe de fichiers primaire et d’un autre groupe de fichiers &#40;mode de restauration complète&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
  **Pour restaurer des fichiers et des groupes de fichiers**  
@@ -133,7 +133,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
   
 ## <a name="see-also"></a> Voir aussi  
- [Sauvegarde et restauration : interopérabilité et coexistence &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Sauvegarde et restauration : interopérabilité et coexistence &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Sauvegardes différentielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Sauvegardes de fichiers complètes &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   

@@ -31,18 +31,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4253de9ed6c538640762ac415acf4759ea83567c
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: a80ecfd82a50f7c69645901733ad74234f0dfd9d
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50969950"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298576"
 ---
 # <a name="getdate-transact-sql"></a>GETDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Participez à l’amélioration de la documentation SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Renvoie l’horodateur système de base de données actuel en tant que valeur **datetime** sans le décalage de fuseau horaire de la base de données. Cette valeur est dérivée du système d'exploitation de l'ordinateur sur lequel l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute.  
 
@@ -101,7 +101,7 @@ GETDATE()          2007-04-30 13:10:02.047
 GETUTCDATE()       2007-04-30 20:10:02.047
 ```  
   
-### <a name="b-getting-the-current-system-date"></a>B. Obtention de la date système actuelle  
+### <a name="b-getting-the-current-system-date"></a>b. Obtention de la date système actuelle  
   
 ```  
 SELECT CONVERT (date, SYSDATETIME())  

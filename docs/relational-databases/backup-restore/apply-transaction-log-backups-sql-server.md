@@ -14,15 +14,15 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], quantity needed for restore sequence
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ea3ebc57689e6dd0a3da1b0cde158354d7309f2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1e4927c1eb0dba333091f231a624db3c8cb7e45
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618077"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242170"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Appliquer les sauvegardes du journal de transactions (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "47618077"
 ##  <a name="Requirements"></a> Conditions requises pour la restauration des sauvegardes du journal des transactions  
  Pour appliquer une sauvegarde du journal des transactions, les conditions suivantes doivent être remplies :  
   
--   **Sauvegardes de journal en nombre suffisant pour une séquence de restauration** Vous devez disposer de suffisamment d'enregistrements de journal sauvegardés pour exécuter une séquence de restauration. Les sauvegardes de journal nécessaires, notamment la [sauvegarde de la fin du journal](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) le cas échéant, doivent être disponibles avant le début de la séquence de restauration.  
+-   **Sauvegardes de journal en nombre suffisant pour une séquence de restauration :** Vous devez disposer de suffisamment d'enregistrements de journal sauvegardés pour exécuter une séquence de restauration. Les sauvegardes de journal nécessaires, notamment la [sauvegarde de la fin du journal](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) le cas échéant, doivent être disponibles avant le début de la séquence de restauration.  
   
--   **Ordre de restauration correct :**  La sauvegarde différentielle ou la sauvegarde complète de base de données effectuée juste avant doit d'abord être restaurée. Puis, tous les journaux de transactions créés après cette sauvegarde complète ou différentielle de base de données doivent être restaurés dans l'ordre chronologique. Si une sauvegarde du journal des transactions dans cette séquence de journaux de transactions consécutifs est perdue ou endommagée, vous ne pouvez restaurer que les journaux des transactions antérieurs au journal des transactions manquant.  
+-   **Ordre de restauration correct :**  La sauvegarde différentielle ou la sauvegarde complète de base de données effectuée juste avant doit d'abord être restaurée. Puis, tous les journaux de transactions créés après cette sauvegarde complète ou différentielle de base de données doivent être restaurés dans l'ordre chronologique. Si une sauvegarde du journal des transactions dans cette séquence de journaux de transactions consécutifs est perdue ou endommagée, vous ne pouvez restaurer que les journaux des transactions antérieurs au journal des transactions manquant.  
   
--   **Base de données pas encore récupérée :**  La base de données ne peut pas être récupérée tant que le dernier journal des transactions n'a pas été appliqué. Si vous récupérez la base de données après avoir restauré l'une des sauvegardes du journal des transactions intermédiaires, c'est-à-dire avant la fin de la séquence de journaux de transactions consécutifs, vous ne pouvez pas restaurer la base de données au-delà de ce point sans redémarrer toute la séquence de restauration, en commençant par la sauvegarde complète de base de données.  
+-   **Base de données pas encore récupérée :**  La base de données ne peut pas être récupérée tant que le dernier journal des transactions n'a pas été appliqué. Si vous récupérez la base de données après avoir restauré l'une des sauvegardes du journal des transactions intermédiaires, c'est-à-dire avant la fin de la séquence de journaux de transactions consécutifs, vous ne pouvez pas restaurer la base de données au-delà de ce point sans redémarrer toute la séquence de restauration, en commençant par la sauvegarde complète de base de données.  
   
     > **ASTUCE** Il est recommandé de restaurer toutes les sauvegardes des journaux (RESTORE LOG *nom_base_de_données* WITH NORECOVERY). Ensuite, après la restauration de la dernière sauvegarde du journal, récupérez la base de données dans une opération séparée (RESTORE DATABASE *nom_base_de_données* WITH RECOVERY).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47618077"
   
  Par exemple, une série de sauvegardes du journal des transactions contient une transaction longue. Le démarrage de la transaction est enregistré dans la première sauvegarde du journal des transactions, mais la fin de la transaction est enregistrée dans la seconde sauvegarde du journal des transactions. Il n’y a pas d'enregistrement d’une opération de validation ou de restauration dans la première sauvegarde du journal des transactions. Si une opération de récupération est exécutée lors de l'application de la première sauvegarde du journal des transactions, la longue transaction est traitée comme incomplète, et les modifications de données enregistrées dans la première sauvegarde du journal des transactions pour la transaction sont restaurées. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne permet pas l'application de la deuxième sauvegarde du journal des transactions après ce stade.  
   
-> **REMARQUE :** Dans certains cas, vous pouvez ajouter un fichier de façon explicite pendant la restauration du journal.  
+> **REMARQUE :** Dans certains cas, vous pouvez ajouter un fichier de façon explicite pendant la restauration du journal.  
   
 ##  <a name="PITrestore"></a> Utiliser les sauvegardes du journal des transactions pour effectuer une restauration jusqu’au point d’échec  
  Supposons la séquence d'événements suivante.  
@@ -61,19 +61,19 @@ ms.locfileid: "47618077"
 |20h00|Sauvegarde du journal des transactions.|  
 |21h45|Une défaillance se produit.|  
   
-> **REMARQUE :** Pour une explication de cet exemple de cette séquence de sauvegardes, consultez [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
+> **REMARQUE :** Pour une explication de cet exemple de cette séquence de sauvegardes, consultez [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  Pour restaurer la base de données à son état à 21:45 (point d'échec), les autres procédures suivantes peuvent être utilisées :  
   
- **Solution 1 : restaurer la base de données en utilisant la sauvegarde complète de base de données la plus récente**  
+ **Solution 1 : restaurer la base de données en utilisant la sauvegarde complète de base de données la plus récente**  
   
 1.  Créez une sauvegarde de la fin du journal du journal des transactions actuellement actif comme point d'échec.  
   
 2.  Ne restaurez pas la sauvegarde complète de base de données de 18h00. Restaurez plutôt la sauvegarde complète de base de données la plus récente de 18h00, puis appliquez la sauvegarde du journal de 20h00 et la sauvegarde de la fin du journal.  
   
- **Solution 2 : restaurer la base de données en utilisant une sauvegarde complète de base de données antérieure**  
+ **Solution 2 : restaurer la base de données en utilisant une sauvegarde complète de base de données antérieure**  
   
-> **REMARQUE :** Cette autre solution est utile si un problème vous empêche d’utiliser la sauvegarde complète de base de données de 18h00. Ce processus prend plus de temps que la restauration de la sauvegarde complète de base de données de 18h00.  
+> **REMARQUE :** Cette autre solution est utile si un problème vous empêche d'utiliser la sauvegarde complète de base de données de 18h00. Ce processus prend plus de temps que la restauration de la sauvegarde complète de base de données de 18h00.  
   
 1.  Créez une sauvegarde de la fin du journal du journal des transactions actuellement actif comme point d'échec.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "47618077"
   
      Cette solution souligne la sécurité redondante offerte par le maintien d'une séquence de sauvegardes de journaux de transactions dans une série de sauvegardes complètes de base de données.  
   
-> **REMARQUE :** Dans certains cas, vous pouvez utiliser des journaux de transactions pour restaurer une base de données à un point spécifique dans le temps. Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+> **REMARQUE :** Dans certains cas, vous pouvez utiliser des journaux de transactions pour restaurer une base de données à un point spécifique dans le temps. Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="RelatedTasks"></a> Related tasks  
  **Pour appliquer une sauvegarde du journal des transactions**  
   
 -   [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  

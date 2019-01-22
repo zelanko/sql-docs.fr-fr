@@ -22,12 +22,12 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cad1677bccbb6db5516c1c93c79ad493ca8a27e0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3a6b17b2e157042c41690c3c2cdf6ab92cd84a09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699922"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125989"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *aggregate_name*  
  Nom de la fonction d'agrégation que vous voulez créer.  
   
- **@** *param_name*  
+ **@** _param_name_  
  Un ou plusieurs paramètres dans l'agrégat défini par l'utilisateur. L'utilisateur doit fournir la valeur d'un paramètre lors de l'exécution de la fonction d'agrégation. Spécifiez un nom de paramètre en plaçant le signe **@** comme premier caractère. Le nom du paramètre doit respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md). Les paramètres sont locaux à la fonction.  
   
  *system_scalar_type*  
@@ -79,7 +79,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  Nom d'un type CLR défini par l'utilisateur et déjà créé dans la base de données active. Si le paramètre *udt_schema_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose que le type appartient au schéma de l’utilisateur actuel.  
   
- *assembly_name* [ **.***class_name* ]  
+ *assembly_name* [ **.**_class_name_ ]  
  Spécifie l'assembly à lier à la fonction d'agrégation définie par l'utilisateur et, éventuellement, le nom du schéma auquel appartient l'assembly et le nom de la classe d'assembly qui met en œuvre l'agrégation définie par l'utilisateur. L'assembly doit avoir été déjà créé dans la base de données à l'aide de l'instruction CREATE ASSEMBLY. Le paramètre *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit correspondre au nom d’une classe qui existe dans l’assembly. *class_name* peut être un nom qualifié par l’espace de noms, si le langage de programmation utilisé pour écrire la classe utilise des espaces de noms, comme C#. Si le paramètre *class_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose qu’il est identique à *aggregate_name*.  
   
 ## <a name="remarks"></a>Notes   

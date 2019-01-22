@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : création d’un rapport au format libre (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : création d’un rapport au format libre (Générateur de rapports) | Microsoft Docs'
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,21 +8,21 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d89562ce168d8cf5662fc7af96da3d89cdafe509
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d473ba8f0a16fd161ec2c6edce2cd6de51a08f36
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021923"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143489"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Didacticiel : création d'un rapport au format libre (Générateur de rapports)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Didacticiel : création d'un rapport au format libre (Générateur de rapports)
 Dans ce didacticiel, vous créez un rapport paginé qui fait office de newsletter. Chaque page affiche du texte statique, des éléments visuels de synthèse et des exemples de données de ventes détaillées.
 
 ![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
 
 Le rapport regroupe les informations par secteur de vente et affiche le nom du directeur des ventes pour le secteur, ainsi que des informations détaillées et de synthèse sur les ventes. Vous commencez avec une région de données de liste comme base du rapport de forme libre, puis vous ajoutez un panneau décoratif avec une image, du texte statique avec des données insérées, un tableau pour afficher les informations détaillées, et éventuellement un graphique à secteurs et un histogramme pour afficher les informations de synthèse.  
   
-Durée estimée pour effectuer le didacticiel : 20 minutes.  
+Durée estimée pour effectuer ce didacticiel : 20 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -48,11 +48,11 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
 1.  Dans le volet Données du rapport, cliquez sur **Nouveau** > **Source de données**.  
   
-2.  Dans la zone **Nom** , tapez **ListDataSource**.  
+2.  Dans la zone **Nom**, tapez : **ListDataSource**  
   
 3.  Cliquez sur **Utiliser une connexion incorporée dans mon rapport**.  
   
-4.  Vérifiez que le type de connexion est Microsoft SQL Server, puis, dans la zone **Chaîne de connexion**, tapez **Data Source = \<nom_serveur>**  
+4.  Vérifiez que le type de connexion est bien Microsoft SQL Server puis, dans la zone **Chaîne de connexion** , tapez : **Source de données = \<nom_serveur>**  
   
     **\<nom_serveur>**, par exemple Rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Dans la mesure où les données du rapport ne sont pas extraites d’une base de données SQL Server, vous n’avez pas besoin d’inclure le nom d’une base de données. La base de données par défaut sur le serveur spécifié est utilisée seulement pour analyser la requête.  
   
@@ -64,7 +64,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
 1.  Dans le volet Données du rapport, cliquez sur **Nouveau** > **Dataset**.  
   
-2.  Dans la zone **Nom** , tapez **ListDataset**.  
+2.  Dans la zone **Nom**, tapez : **ListDataset**.  
   
 3.  Cliquez sur **Utiliser un dataset incorporé dans mon rapport**, puis vérifiez que la source de données est **ListDataSource**.  
   
@@ -199,7 +199,7 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
   
 2.  Sous l’onglet **Insérer** > **Zone de texte**. Cliquez en haut à gauche de la liste, à l’intérieur du rectangle que vous avez ajouté, et faites glisser pour dimensionner la zone de texte sur 3,45 pouces de large et 5 pouces de haut.  
   
-3.  Placez le curseur dans la zone de texte et tapez **Newsletter for** . Ajoutez un espace après le mot « for », pour séparer le texte du champ que vous ajouterez à l’étape suivante.   
+3.  Placez le curseur dans la zone de texte et tapez : **Newsletter for**. Ajoutez un espace après le mot « for », pour séparer le texte du champ que vous ajouterez à l’étape suivante.   
   
     ![Ajouter un texte de titre au bulletin d’informations](../reporting-services/media/tutorial-newsletterfor.png "Ajouter un texte de titre au bulletin d’informations")  
   
@@ -215,7 +215,7 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
     *  **20 pt**.
     *  **Tomate**.  
   
-9. Placez le curseur sous le texte que vous avez entré à l’étape 3 et tapez : **Bonjour** avec un espace après le mot, pour séparer le texte et le champ que vous ajouterez à l’étape suivante.  
+9. Placez le curseur sous le texte que vous avez tapé à l'étape 3, puis tapez : **Hello**, avec un espace après le mot pour séparer le texte et le champ que vous ajouterez à l’étape suivante.  
  
 10. Faites glisser le champ `[FullName]` de ListDataSet dans le volet Données du rapport vers la zone de texte et placez-le après « Hello », puis tapez une virgule (,).  
    
@@ -244,7 +244,7 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
       *  **10 pt**.
       *  **Noir**.  
  
-20. Placez le curseur à l’intérieur de la zone de texte sous le texte sans signification et tapez : **Congratulations on your total sales of**, avec un espace après le mot pour séparer le texte et le champ que vous ajouterez à l’étape suivante. 
+20. Placez le curseur à l’intérieur de la zone de texte sous le texte sans signification et tapez : **Congratulations on your total sales of**, avec un espace après le mot pour séparer le texte et le champ que vous ajouterez à l’étape suivante. 
   
 21. Faites glisser le champ Ventes dans la zone de texte, placez-le après le texte que vous avez tapé à l’étape précédente, puis tapez un point d’exclamation (!).  
 
@@ -341,7 +341,7 @@ Dans ce didacticiel, enregistrez le rapport sur un serveur de rapports. Si vous 
   
 3.  Sélectionnez ou tapez le nom du serveur de rapports sur lequel vous êtes autorisé à enregistrer des rapports.  
   
-    Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
+    Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
   
 4.  Dans **Nom**, remplacez le nom par défaut par **SalesInformationByTerritory**.  
   
@@ -405,7 +405,7 @@ Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphiqu
   
 9. Faites glisser le graphique à l'intérieur du rectangle.  
    
-10. Sélectionnez le titre du graphique et tapez : **Product Quantities Sold**.  
+10. Sélectionnez le titre du graphique et tapez : **Product Quantities Sold**.  
   
 12. Sous l’onglet **Accueil** > **Police**, choisissez pour le titre :
     * **Police** **Segoe UI Semibold**.
@@ -444,7 +444,7 @@ Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphiqu
   
 9. Faites glisser le graphique à l'intérieur du rectangle, sous le graphique à secteurs.  
    
-10. Sélectionnez le titre du graphique et tapez : **Ventes de produits**.  
+10. Sélectionnez le titre du graphique et tapez : **Product Sales**.  
   
 12. Sous l’onglet **Accueil** > **Police**, choisissez pour le titre :
     * **Police** **Segoe UI Semibold**.
@@ -458,7 +458,7 @@ Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphiqu
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. Sélectionnez l’axe du graphique, puis, sous l’onglet *Accueil** > **Nombre** > **Devise**.
+12. Sélectionnez l’axe du graphique, puis sous l’onglet **Accueil** > **Nombre** > **Devise**.
 
 13. Sélectionnez deux fois **Réduire les décimales** pour que le nombre montre simplement des dollars, sans cents.      
 ### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>Pour vérifier que les graphiques sont à l'intérieur du rectangle  

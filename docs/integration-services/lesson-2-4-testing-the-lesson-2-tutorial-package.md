@@ -1,7 +1,7 @@
 ---
-title: 'Étape 4 : Test du package du didacticiel de la leçon 2 | Microsoft Docs'
+title: 'Étape 4 : Tester le package du tutoriel de la leçon 2 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,23 +11,22 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f612768d1e4cd6bff6be8204b38c0a99e1eb285
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: 2c17b7679a10d9273578c74dfa452b120ae2d87b
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629512"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143199"
 ---
-# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Leçon 2-4 : Test du package du didacticiel de la leçon 2
-Une fois le conteneur de boucles Foreach et le gestionnaire de connexions de fichiers plats configurés, le package Lesson 2 peut parcourir l'ensemble des 14 fichiers plats dans le dossier Sample Data. À chaque fois qu'un nom de fichier correspondant au nom de fichier spécifié est trouvé, le conteneur de boucles Foreach remplace la variable définie par l'utilisateur par ce nom de fichier. Cette variable met à jour à son tour la propriété ConnectionString du Gestionnaire de connexions de fichiers plats, et une connexion au nouveau fichier plat est établie. Le conteneur de boucles Foreach exécute alors la tâche de flux de données inchangée sur les données du nouveau fichier plat avant de se connecter au fichier suivant dans le dossier.  
-  
-Suivez la procédure ci-dessous pour tester la nouvelle fonctionnalité de bouclage que vous avez ajoutée à votre package.  
+# <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>Leçon 2-4 : Tester le package du tutoriel de la leçon 2
+
+Une fois le conteneur de boucles Foreach et le gestionnaire de connexions de fichiers plats configurés, le package Lesson 2 peut parcourir les 14 fichiers plats dans le dossier Sample Data. Chaque fois qu’un nom de fichier correspond au critère spécifié, le conteneur de boucles Foreach remplace la variable définie par l’utilisateur par ce nom de fichier. Cette variable met à jour à son tour la propriété ConnectionString du gestionnaire de connexions de fichiers plats, qui se connecte à ce fichier plat. Le conteneur de boucles Foreach exécute alors la tâche de flux de données inchangée sur les données de ce fichier plat.  
   
 > [!NOTE]  
-> Si vous avez exécuté le package de la leçon 1, vous devez supprimer les enregistrements de dbo.NewFactCurrencyRate dans AdventureWorksDW2012 avant d’exécuter le package de cette leçon, sans quoi il échouera avec une erreur indiquant une violation de contrainte de clé primaire. Vous obtiendrez les mêmes erreurs si vous exécutez le package en sélectionnant Déboguer/Démarrer le débogage (ou en appuyant sur F5), car la leçon 1 et la leçon 2 s'exécuteront en même temps. La leçon 2 essaiera d'insérer des enregistrements déjà insérés dans la leçon 1.  
+> Si vous avez exécuté le package de la leçon 1, vous devez supprimer les enregistrements de la table dbo.NewFactCurrencyRate de la base de données AdventureWorksDW2012 avant d’exécuter le package à partir de cette leçon. La leçon 2 tente d’insérer des enregistrements déjà insérés dans la leçon 1, ce qui provoque une erreur.  
   
-## <a name="checking-the-package-layout"></a>Vérification de la disposition du package  
-Avant de tester le package, vous devez vérifier que le flux de contrôle et le flux de données dans le package de la leçon 2 contiennent les objets affichés dans les diagrammes suivants. Le flux de données doit être identique au flux de données de la leçon 1.  
+## <a name="check-the-package-layout"></a>Vérifier la disposition du package  
+Avant de tester le package, vérifiez que le flux de contrôle et le flux de données dans le package de la leçon 2 contiennent les objets affichés dans les diagrammes suivants. Le flux de données de la leçon 2 est identique à celui de la leçon 1.  
   
 **Flux de contrôle**  
   
@@ -37,19 +36,19 @@ Avant de tester le package, vous devez vérifier que le flux de contrôle et le 
   
 ![Flux de données dans le package](../integration-services/media/task9lesson1data.gif "Flux de données dans le package")  
   
-### <a name="to-test-the-lesson-2-tutorial-package"></a>Pour tester le package du didacticiel de la leçon 2  
+## <a name="test-the-lesson-2-tutorial-package"></a>Tester le package du tutoriel de la leçon 2  
   
-1.  Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur **Lesson 2.dtsx** , puis cliquez sur **Exécuter le package**.  
+1.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur **Lesson 2.dtsx**, puis sélectionnez **Exécuter le package**.  
   
-    Le package est exécuté. Vous pouvez vérifier l'état de chaque boucle dans la fenêtre de résultat ou le consulter sous l'onglet **Progression** . Par exemple, vous pouvez voir que 1097 lignes ont été ajoutées à la table de destination à partir du fichier Currency_VEB.txt.  
+    Le package s’exécute. Vous pouvez vérifier l’état de chaque boucle dans la fenêtre **Sortie** ou le consulter sous l’onglet **Progression**. Par exemple, vous pouvez voir que 1 097 lignes ont été ajoutées à la table de destination à partir du fichier Currency_VEB.txt.  
   
-2.  Une fois l'exécution du package terminée, dans le menu **Déboguer** , cliquez sur **Arrêter le débogage**.  
+2.  Une fois l’exécution du package terminée, dans le menu **Déboguer**, sélectionnez **Arrêter le débogage**.  
   
-## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 5 : Ajouter des configurations de package SSIS pour le modèle de déploiement de package](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+## <a name="go-to-next-lesson"></a>Passer à la leçon suivante  
+[Leçon 3 : Ajouter la journalisation avec SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
-## <a name="see-also"></a> Voir aussi  
-[Exécution de projets et de packages](~/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
+## <a name="see-also"></a>Voir aussi  
+[Exécution de projets et de packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   
   

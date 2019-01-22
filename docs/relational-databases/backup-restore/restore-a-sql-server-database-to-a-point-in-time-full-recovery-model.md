@@ -15,12 +15,12 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fb896309e39a2abe054ce470fd9cec33b690181c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b858639e60419d955a32981ceeac56d8acc42110
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535571"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133179"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurer une base de données SQL Server jusqu'à une limite dans le temps (mode de récupération complète)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "52535571"
   
          Après avoir ajouté les unités souhaitées à la zone de liste **Support de sauvegarde** , cliquez sur **OK** pour revenir à la page **Général** .  
   
-         Dans la zone de liste **Source : Unité : Base de données** , sélectionnez le nom de la base de données à restaurer.  
+         Dans la zone de liste **Source : Unité : Base de données**, sélectionnez le nom de la base de données à restaurer.  
   
          **Remarque** Cette liste n'est disponible que lorsque **Unité** est sélectionné. Seules les bases de données qui ont des copies de sauvegarde sur l'unité sélectionnée seront disponibles.  
   
@@ -135,11 +135,11 @@ ms.locfileid: "52535571"
   
  **Syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] de base**  
   
- RESTORE LOG *nom_base_de_données* FROM <unité_sauvegarde> WITH STOPAT **=***heure***,** RECOVERY...  
+ RESTORE LOG *nom_base_de_données* FROM <unité_sauvegarde> WITH STOPAT **=**_heure_**,** RECOVERY...  
   
  Le point de récupération est la dernière validation de transaction qui s’est produite au plus tard à l’heure **datetime** spécifiée par *time*.  
   
- Pour restaurer uniquement les modifications apportées avant un moment spécifique dans le temps, spécifiez WITH STOPAT **=** *time* pour chaque sauvegarde que vous restaurez. De cette manière, vous êtes certain de ne pas dépasser le moment cible.  
+ Pour restaurer uniquement les modifications apportées avant un moment spécifique dans le temps, spécifiez WITH STOPAT **=** _time_ pour chaque sauvegarde que vous restaurez. De cette manière, vous êtes certain de ne pas dépasser le moment cible.  
   
  **Pour restaurer une base de données à un point dans le temps**  
   
@@ -155,7 +155,7 @@ ms.locfileid: "52535571"
   
 3.  Restaurez la dernière sauvegarde différentielle de base de données, si elle existe, sans récupérer la base de données (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Appliquez chaque sauvegarde du journal des transactions dans l’ordre de sa création, en spécifiant l’heure à laquelle vous avez l’intention d’arrêter la restauration du journal (RESTORE DATABASE *nom_base_de_données* FROM <unité_sauvegarde> WITH STOPAT**=***heure***,** RECOVERY).  
+4.  Appliquez chaque sauvegarde du journal des transactions dans l’ordre de sa création, en spécifiant l’heure à laquelle vous avez l’intention d’arrêter la restauration du journal (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=**_time_**,** RECOVERY).  
   
     > [!NOTE]  
     >  Options RECOVERY et STOPAT. Si la sauvegarde du journal des transactions ne contient pas l'heure demandée (par exemple, si l'heure spécifiée dépasse la dernière heure figurant dans le journal des transactions), un avertissement est émis et la base de données n'est pas récupérée.  

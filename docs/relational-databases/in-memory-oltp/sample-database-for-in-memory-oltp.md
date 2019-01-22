@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7adb7156a6f61ef76f62d1eeff9a4689208815
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: ddbafb58662497dc2ee9c513aa206d826d5db8c1
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712480"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226696"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Exemple de base de données pour OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52712480"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Pour tester les performances, un serveur avec des caractéristiques semblables dans votre environnement de production. Pour cet exemple spécifique, vous devez disposer d’au moins 16 Go de mémoire disponible sur SQL Server. Pour obtenir des conseils généraux sur le matériel pour l’OLTP en mémoire, consultez le billet de blog suivant : [Hardware considerations for In-Memory OLTP in SQL Server 2014](blog-hardware-in-memory-oltp.md)
+-   Pour tester les performances, un serveur avec des caractéristiques semblables dans votre environnement de production. Pour cet exemple spécifique, vous devez disposer d’au moins 16 Go de mémoire disponible sur SQL Server. Pour obtenir des conseils généraux sur le matériel pour l’OLTP en mémoire, consultez le billet de blog suivant : [Considérations matérielles pour l’OLTP en mémoire dans SQL Server 2014](blog-hardware-in-memory-oltp.md)
 
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installation de l’exemple In-Memory OLTP basé sur AdventureWorks  
  Procédez comme suit pour installer l'exemple :  
@@ -148,7 +148,7 @@ ms.locfileid: "52712480"
   
 -   *Colonnes calculées[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] : les colonnes calculées SalesOrderNumber et TotalDue sont omises, car*  ne prend pas en charge les colonnes calculées dans les tables optimisées en mémoire. La nouvelle vue Sales.vSalesOrderHeader_extended_inmem reflète les colonnes SalesOrderNumber et TotalDue. Par conséquent, vous pouvez utiliser cette vue si ces colonnes sont nécessaires.  
 
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les colonnes calculées sont prises en charge dans les tables optimisées en mémoire et les index.
 
   
@@ -215,13 +215,13 @@ ms.locfileid: "52712480"
   
  Sales.SpecialOfferProduct_inmem n’est pas référencé dans la charge de travail de démonstration, et il n’est donc pas nécessaire d’utiliser les index de hachage de cette table pour optimiser la charge de travail ; les index sur (SpecialOfferID, ProductID) et (ProductID) sont NONCLUSTERED.  
   
- Notez que ci-dessus, certains bucket_counts sont surdimensionnés, mais pas les bucket_counts des index sur SalesOrderHeader_inmem et SalesOrderDetail_inmem qui sont dimensionnés uniquement à 10 millions de commandes. Cela a pour but de permettre l'installation de l'exemple sur des systèmes avec une faible disponibilité de mémoire ; cependant dans ces cas, la charge de travail de démonstration échoue pour conditions de mémoire insuffisante. Si vous voulez dimensionner au-delà de 10 millions de commandes, augmentez le nombre de compartiments en conséquence.  
+ Notez que ci-dessus, certains bucket_counts sont surdimensionnés, mais pas les bucket_counts des index sur SalesOrderHeader_inmem et SalesOrderDetail_inmem qui sont dimensionnés uniquement à 10 millions de commandes. Cela a pour but de permettre l'installation de l'exemple sur des systèmes avec une faible disponibilité de mémoire ; cependant dans ces cas, la charge de travail de démonstration échoue pour conditions de mémoire insuffisante. Si vous voulez dimensionner au-delà de 10 millions de commandes, augmentez le nombre de compartiments en conséquence.  
   
 #### <a name="considerations-for-memory-utilization"></a>Observations sur l'utilisation de la mémoire  
  L'utilisation de la mémoire dans la base de données d'exemple, avant et après l'exécution de la charge de travail de démonstration, est décrite dans la section [Utilisation de la mémoire pour les tables optimisées en mémoire](#Memoryutilizationforthememory-optimizedtables).  
   
 ### <a name="stored-procedures-added-by-the-sample"></a>Procédures stockées ajoutées par l'exemple  
- Les deux procédures stockées clés d'insertion des commandes et de mise à jour des informations d'expédition sont les suivantes :  
+ Les deux procédures stockées clés d'insertion des commandes et de mise à jour des informations d'expédition sont les suivantes :  
   
 -   Sales.usp_InsertSalesOrder_inmem  
   
@@ -313,12 +313,12 @@ ms.locfileid: "52712480"
   
  Étapes d'installation :  
   
-1.  Téléchargez et exécutez le package d’installation x64 pour les utilitaires RML à partir de la page suivante : [Télécharger Report Markup Language (RML) pour SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
+1.  Téléchargez et exécutez le package d'installation x64 pour les utilitaires RML à partir de la page suivante : [Télécharger Report Markup Language (RML) pour SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
 
 2.  Si une boîte de dialogue indique que certains fichiers sont en cours d’utilisation, cliquez sur « Continuer »  
   
 ### <a name="running-ostress"></a>Exécution d'Ostress  
- Ostress s'exécute à partir de l'invite de ligne de commande. Il est plus pratique d'exécuter l'outil à partir de l'« invite de commandes RML », qui est installé avec les Utilitaires RML.  
+ Ostress s'exécute à partir de l'invite de ligne de commande. Il est plus pratique d'exécuter l'outil à partir de l'« invite de commandes RML », qui est installé avec les Utilitaires RML.  
   
  Pour ouvrir l'invite de commandes RML exécutez l'instruction suivante :  
   
@@ -380,14 +380,14 @@ END
  Nous utiliserons l'outil Ostress pour exécuter des scripts utilisant plusieurs connexions simultanées. Nous utiliserons le paramètre « -n » pour contrôler le nombre de connexions, et le paramètre « r » pour contrôler le nombre de fois où le script est exécuté sur chaque connexion.  
   
 #### <a name="running-the-workload"></a>Exécution de la charge de travail  
- Pour tester à l'échelle, nous insérons 10 millions de commandes, à l'aide de 100 connexions. Ce test peut être exécuté aisément sur un serveur de taille moyenne (par exemple, 8 noyaux physiques, et 16 noyaux logiques), et un stockage SSD de base pour le journal. Si le test ne fonctionne pas correctement sur votre matériel, consultez la section [Dépannage des tests lents](#Troubleshootingslow-runningtests). Si vous voulez réduire le niveau d’extraction pour le test, réduisez le nombre de connexions en modifiant le paramètre « -n ». Par exemple, pour réduire le nombre de connexions à 40, remplacez le paramètre « -n100 » par « -n40 ».  
+ Pour tester à l'échelle, nous insérons 10 millions de commandes, à l'aide de 100 connexions. Ce test peut être exécuté aisément sur un serveur de taille moyenne (par exemple, 8 noyaux physiques, et 16 noyaux logiques), et un stockage SSD de base pour le journal. Si le test ne fonctionne pas correctement sur votre matériel, consultez la section [Dépannage des tests lents](#Troubleshootingslow-runningtests). Si vous voulez réduire le niveau d’extraction pour le test, réduisez le nombre de connexions en modifiant le paramètre « -n ». Par exemple, pour réduire le nombre de connexions à 40, remplacez le paramètre « -n100 » par « -n40 ».  
   
  Comme mesure de performances pour la charge de travail, nous utilisons le temps écoulé tel qu'indiqué par ostress.exe après avoir exécuté la charge de travail.  
   
  Les instructions et les mesures ci-dessous utilisent une charge de travail qui insère 10 millions de commandes. Pour obtenir des instructions sur l’exécution d’une charge de travail réduite en vue d’insérer 1 million de commandes, consultez les instructions figurant dans le fichier « In-Memory OLTP\readme.txt » qui fait partie de l’archive SQLServer2016CTP3Samples.zip.  
   
 ##### <a name="memory-optimized-tables"></a>Tables optimisées en mémoire  
- Nous allons commencer par exécuter la charge de travail sur les tables optimisées en mémoire. La commande suivante ouvre 100 threads, chacun exécuté pour 5 000 itérations.  Chaque itération insère 20 commandes dans des transactions séparées. Il y a 20 insertions par itération pour compenser le fait que la base de données est utilisée pour générer les données à insérer. Cela donne un total de 20 * 5 000 \* 100 = 10 000 000 commandes insérées.  
+ Nous allons commencer par exécuter la charge de travail sur les tables optimisées en mémoire. La commande suivante ouvre 100 threads, chacun exécuté pour 5 000 itérations.  Chaque itération insère 20 commandes dans des transactions séparées. Il y a 20 insertions par itération pour compenser le fait que la base de données est utilisée pour générer les données à insérer. Cela donne un total de 20 \* 5 000 \* 100 = 10 000 000 commandes insérées.  
   
  Ouvrez l'invite de commandes RML et exécutez la commande suivante :  
   
@@ -436,11 +436,11 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
 -   Nombre de transactions simultanées : lors de l’exécution de la charge de travail sur un seul thread, le gain de performances avec l’OLTP en mémoire sera probablement inférieur à 2X. La contention de verrou n'est un problème que si le niveau de concurrence est élevé.  
   
--   Nombre faible de noyaux disponibles pour SQL Server : cela signifie qu’il y aura un niveau de concurrence faible dans le système, car il ne peut y avoir qu’autant de transactions simultanée en cours d’exécution qu’il y a de noyaux disponibles pour SQL.  
+-   Nombre faible de cœurs disponibles pour SQL Server  : cela signifie qu'il y aura un niveau de simultanéité faible dans le système, car il ne peut pas y avoir plus de transactions simultanées en cours d'exécution que de cœurs disponibles pour SQL.  
   
     -   Symptôme : si l'utilisation de l'UC est élevée lors de l'exécution de la charge de travail sur les tables sur disque, cela signifie qu'il n'y a pas beaucoup de contentions, et donc qu'il n'y a pas de concurrence.  
   
--   Vitesse du lecteur de journalisation : si le lecteur de journalisation n'arrive pas à suivre le débit des transactions dans le système, la charge de travail est congestionnée dans le journal des E/S. Bien que la journalisation soit plus efficace avec l’OLTP en mémoire, si le journal des E/S est congestionné, le gain de performance potentiel est limité.  
+-   Vitesse du lecteur de journal : si le lecteur de journal n'arrive pas à suivre le débit des transactions dans le système, la charge de travail devient un goulot d'étranglement dans les E/S du journal. Bien que la journalisation soit plus efficace avec l’OLTP en mémoire, si le journal des E/S est congestionné, le gain de performance potentiel est limité.  
   
     -   Symptôme : si l'utilisation de l'UC n'est pas proche de 100 % ou varie beaucoup pendant l'exécution de la charge de travail sur les tables optimisées en mémoire, il est possible qu'il existe un goulot d'étranglement du journal des E/S. Cela peut être vérifié en ouvrant le moniteur de ressource et en examinant la longueur de la file d'attente du lecteur de journalisation.  
   
@@ -496,7 +496,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- Comme vous pouvez le voir, les tables sont assez petites : SalesOrderHeader_inmem a une taille d'environ 7 Mo, et SalesOrderDetail_inmem a une taille d'environ 15 Mo.  
+ Comme vous pouvez le constater, les tables sont assez petites : SalesOrderHeader_inmem a une taille d'environ 7 Mo et SalesOrderDetail_inmem a une taille d'environ 15 Mo.  
   
  Ce qui est frappant ici est la taille de la mémoire allouée aux index, par rapport à la taille des données de table. Cela est dû au fait que les index de hachage de l'exemple sont prédimensionnés pour contenir plus de données. Notez que les index de hachage ont une taille fixe, par conséquent, leur taille n'augmente pas selon la taille des données de la table.  
   

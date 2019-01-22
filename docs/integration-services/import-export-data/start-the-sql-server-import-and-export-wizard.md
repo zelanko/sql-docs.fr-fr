@@ -16,14 +16,17 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ab2820f37466cfd14a9d29791a7999a70b48dade
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: ed4bb739f6ca74e5e0744af1ed40b37196995213
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383574"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299056"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Démarrer l’Assistant Importation et Exportation SQL Server
+
+  > [!div class="nextstepaction"]
+  > [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Démarrez l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l’une des méthodes décrites dans cette rubrique pour exporter et importer des données de n’importe quelle source de données prise en charge.
 

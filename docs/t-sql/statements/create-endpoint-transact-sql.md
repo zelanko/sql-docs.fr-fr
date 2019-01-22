@@ -32,12 +32,12 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c3920cdf30575d5b51948fe7789d568a1dacc961
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41b6c0009c2cfc3c83a4326875c13083875166b3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596218"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124579"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  Les arguments suivants s'appliquent uniquement à l'option du protocole TCP.  
   
- LISTENER_PORT **=***listenerPort*  
+ LISTENER_PORT **=**_listenerPort_  
  Spécifie le numéro du port écouté pour les connexions par le protocole TCP/IP Service Broker. Par convention, 4022 est utilisé mais n'importe quel numéro entre 1024 et 32767 est valide.  
   
- LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "* ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
  Spécifie l'adresse IP que le point de terminaison va écouter. La valeur par défaut est ALL. Ce qui signifie que l'écouteur acceptera une connexion sur n'importe quelle adresse IP valide.  
   
  Si vous configurez la mise en miroir de bases de données avec une adresse IP au lieu d'un nom de domaine complet (`ALTER DATABASE SET PARTNER = partner_IP_address` ou `ALTER DATABASE SET WITNESS = witness_IP_address`), vous devez spécifier `LISTENER_IP =IP_address` au lieu de `LISTENER_IP=ALL` lorsque vous créez des points de terminaison de mise en miroir.  
@@ -230,7 +230,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Annule les messages destinés à des services situés ailleurs. Il s'agit du paramètre par défaut.  
   
- MESSAGE_FORWARD_SIZE **=***forward_size*  
+ MESSAGE_FORWARD_SIZE **=**_forward_size_  
  Indique l'espace de stockage maximal, en mégaoctets, à allouer au point de terminaison lors du stockage des messages à transférer.  
   
  **Options DATABASE_MIRRORING**  

@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd1a43b50d0d36efacfe3c5a93a9bf0a169c4ede
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed0dd384b3ca1a90b1a40bbb23d63feabf2ae85d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760337"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143289"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ SET ANSI_PADDING ON
  Cette valeur affecte uniquement la définition de nouvelles colonnes. Une fois la colonne créée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les valeurs en fonction du paramètre en vigueur lors de la création de la colonne. Les colonnes existantes ne sont pas affectées par toute modification ultérieure du paramètre.  
   
 > [!NOTE]  
->  Il est recommandé que l'option SET ANSI_PADDING soit toujours activée (ON).  
+> ANSI_PADDING doit toujours avoir la valeur ON.  
   
  Le tableau suivant montre les effets de l’option SET ANSI_PADDING quand des valeurs comportant des types de données **char**, **varchar**, **binary** et **varbinary** sont insérées dans des colonnes.  
   
@@ -69,34 +69,35 @@ SET ANSI_PADDING ON
 |OFF|Complète la valeur d’origine (avec des espaces à droite pour les colonnes de type **char** et des zéros à droite pour les colonnes de type **binary**), à concurrence de la longueur de la colonne.|Suit les mêmes règles que pour **varchar** ou **varbinary** quand SET ANSI_PADDING est OFF.|Les espaces à droite dans les valeurs de type character insérées dans les colonnes **varchar** sont tronqués. Les zéros à droite dans les valeurs de type binary insérées dans les colonnes **varbinary** sont tronqués.|  
   
 > [!NOTE]  
->  Quand les colonnes sont complétées, celles de type **char** le sont avec des espaces, et celles de type **binary** le sont avec des zéros. Quand les colonnes sont tronquées, celles de type **char** perdent les espaces à droite, tandis que celles de type **binary** perdent les zéros à droite.  
+> Quand les colonnes sont complétées, celles de type **char** le sont avec des espaces, et celles de type **binary** le sont avec des zéros. Quand les colonnes sont tronquées, celles de type **char** perdent les espaces à droite, tandis que celles de type **binary** perdent les zéros à droite.  
   
- SET ANSI_PADDING doit être activée (valeur ON) lors de la création ou de la modification d'index dans des colonnes calculées ou des vues indexées. Pour plus d’informations sur les paramètres de l’option SET obligatoire avec les vues indexées et les index sur des colonnes calculées, consultez « Remarques sur l’utilisation des instructions SET » dans [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
+ANSI_PADDING doit être activé (valeur ON) lors de la création ou de la modification d’index dans des colonnes calculées ou des vues indexées. Pour plus d’informations sur les paramètres de l’option SET obligatoire avec les vues indexées et les index sur des colonnes calculées, consultez « Remarques sur l’utilisation des instructions SET » dans [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
   
- La valeur par défaut de SET ANSI_PADDING est ON. Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affectent automatiquement la valeur ON à ANSI_PADDING lors de la connexion. Cette option peut être configurée dans les sources de données et les attributs de connexion ODBC, ou encore dans les propriétés de connexion OLE DB définies dans l'application avant la connexion. Dans le cas d'applications DB-Library, SET ANSI_PADDING prend par défaut la valeur OFF.  
+La valeur par défaut de SET ANSI_PADDING est ON. Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affectent automatiquement la valeur ON à ANSI_PADDING lors de la connexion. Cette option peut être configurée dans les sources de données et les attributs de connexion ODBC, ou encore dans les propriétés de connexion OLE DB définies dans l'application avant la connexion. Dans le cas d'applications DB-Library, SET ANSI_PADDING prend par défaut la valeur OFF.  
   
  La valeur de SET ANSI_PADDING n’affecte pas les types de données **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)**, **varchar(max)** et **nvarchar(max)**. Le comportement par défaut est toujours celui de l'option SET ANSI_PADDING ON. Les espaces et les zéros à droite ne sont donc pas tronqués.  
   
- Lorsque SET ANSI_DEFAULTS a la valeur ON, l'option SET ANSI_PADDING est activée.  
+Quand ANSI_DEFAULTS a la valeur ON, l’option ANSI_PADDING est activée.  
   
- La valeur de SET ANSI_PADDING est définie lors de l'exécution, et non durant l'analyse.  
+La valeur d’ANSI_PADDING est définie au moment de l’exécution, pas au moment de l’analyse.  
   
- Pour afficher la valeur actuelle de ce paramètre, exécutez la requête suivante.  
+Pour afficher la valeur actuelle de ce paramètre, exécutez la requête suivante.  
   
-```  
+```sql  
 DECLARE @ANSI_PADDING VARCHAR(3) = 'OFF';  
 IF ( (16 & @@OPTIONS) = 16 ) SET @ANSI_PADDING = 'ON';  
 SELECT @ANSI_PADDING AS ANSI_PADDING;  
-  
 ```  
   
 ## <a name="permissions"></a>Permissions  
- Nécessite l'appartenance au rôle public.  
+Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant présente comment l'option affecte les différents types de données.  
-  
-```  
+L'exemple suivant présente comment l'option affecte les différents types de données.  
+
+Définissez ANSI_PADDING avec la valeur ON et effectuez un test.
+
+```sql  
 PRINT 'Testing with ANSI_PADDING ON'  
 SET ANSI_PADDING ON;  
 GO  
@@ -114,7 +115,11 @@ SELECT 'CHAR' = '>' + charcol + '\<', 'VARCHAR'='>' + varcharcol + '\<',
    varbinarycol  
 FROM t1;  
 GO  
-  
+```
+
+Définissez à présent ANSI_PADDING avec la valeur OFF et effectuez un test.
+
+```sql
 PRINT 'Testing with ANSI_PADDING OFF';  
 SET ANSI_PADDING OFF;  
 GO  

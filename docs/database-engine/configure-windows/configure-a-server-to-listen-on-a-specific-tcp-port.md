@@ -18,12 +18,12 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0b8be637da67d9aa083fb4afbc024381c1b83a81
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a990088feab172954f82b3be34a505202626c7d0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605299"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132799"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurer un serveur pour l’écoute sur un port TCP spécifique
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +56,11 @@ Comme le port 1433 est la norme connue pour [!INCLUDE[ssNoVersion](../../include
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  Dans la boîte de dialogue **Propriétés* **IP***n**, dans la zone **Port TCP**, tapez le numéro du port sur lequel vous voulez que cette adresse IP écoute, puis cliquez sur **OK**. Plusieurs ports peuvent être spécifiés en les séparant par une virgule.
+4.  Dans la zone **Port TCP**_, dans_ **Properties** area box, in the **TCP Port** box, type the port number you want this Port TCP address to listen on, and then click **OK**. Plusieurs ports peuvent être spécifiés en les séparant par une virgule.
 
     > [!NOTE] 
-    > Si le paramètre **Écouter tout** sous l’onglet **Protocole** a la valeur « Oui », seules les valeurs **Port TCP** et **TCP Dynamic Port** (Port TCP dynamique) sous la section **IPAll** seront utilisées et les sections **IP *** n* individuelles seront ignorées dans leur intégralité. Si le paramètre **Écouter tout** a la valeur « Non », les paramètres **Port TCP** et **Port TCP dynamique** sous la section **IPAll** seront ignorés et les paramètres **Port TCP**, **Port TCP dynamique** et **Activé** des sections **IP***n* individuelles seront utilisés à la place.
-    > Chaque section **IP***n* présente un paramètre **Activé** avec la valeur par défaut « Non », ce qui amène [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à ignorer cette adresse IP, même si elle a un port défini.  
+    > Si le paramètre **Écouter tout** sous l’onglet **Protocole** a la valeur « Oui », seules les valeurs **Port TCP** et **TCP Dynamic Port** (Port TCP dynamique) sous la section **IPAll** seront utilisées et les sections **IP**_n_ individuelles seront ignorées dans leur intégralité. Si le paramètre **Écouter tout** a la valeur « Non », les paramètres **Port TCP** et **Port TCP dynamique** sous la section **IPAll** seront ignorés et les paramètres **Port TCP**, **Port TCP dynamique** et **Activé** des sections **IP**_n_ individuelles seront utilisés à la place.
+    > Chaque section **IP**_n_n présente un paramètre **Activé** avec la valeur par défaut « Non », ce qui amène [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à ignorer cette adresse IP, même si elle a un port défini.  
   
 5.  Dans le volet de la console, cliquez sur **Services SQL Server**.  
   

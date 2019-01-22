@@ -16,18 +16,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fcdf1b3e63f0f6b1c0bcff61145fb9e887aa9f5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4eeaccc3eecd0da4b65c6a983dc83ed0ba65a8b6
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676659"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256754"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Fichiers de format pour l'importation ou l'exportation de données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Lorsque vous importez en bloc des données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exportez en bloc des données depuis une table, utilisez un *fichier de format* pour stocker toutes les informations de format nécessaires à l'exportation ou l'importation en bloc des données. Cela inclut les informations de format pour chaque champ dans un fichier de données relatif à cette table.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge deux types de fichiers de format : XML et non XML. Les fichiers de format XML et non-XML contiennent la description de chacun des champs d'un fichier de données, et les fichiers de format XML contiennent également des descriptions des colonnes de table correspondantes. En règle générale, les fichiers de format XML et non-XML sont interchangeables. Toutefois, nous recommandons d'utiliser la syntaxe XML pour les nouveaux fichiers de format, car elle offre plusieurs avantages par rapport aux fichiers de format non-XML. Pour plus d’informations, consultez [Fichiers de format XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge deux types de fichiers de format : les fichiers de formats XML et de format non-XML. Les fichiers de format XML et non-XML contiennent la description de chacun des champs d'un fichier de données, et les fichiers de format XML contiennent également des descriptions des colonnes de table correspondantes. En règle générale, les fichiers de format XML et non-XML sont interchangeables. Toutefois, nous recommandons d'utiliser la syntaxe XML pour les nouveaux fichiers de format, car elle offre plusieurs avantages par rapport aux fichiers de format non-XML. Pour plus d’informations, consultez [Fichiers de format XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
   
 ##  <a name="Benefits"></a> Avantages des fichiers de format  
@@ -58,7 +58,7 @@ The contents of this format file are as follows: 9.0
  Pour plus d’informations, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
   
-### <a name="b-using-an-xml-format-file"></a>B. Utilisation d'un fichier de format XML  
+### <a name="b-using-an-xml-format-file"></a>b. Utilisation d'un fichier de format XML  
  Le fichier de format XML suivant utilise le format de données natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la table `HumanResources.myTeam` . Ce fichier de format a été créé à l'aide de la commande `bcp` suivante.  
   
 ```cmd
@@ -69,7 +69,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 ```xml
  <?xml version="1.0"?>  
-<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" LENGTH="1"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="2" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  

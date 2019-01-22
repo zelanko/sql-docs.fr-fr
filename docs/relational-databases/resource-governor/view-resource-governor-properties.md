@@ -14,12 +14,12 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 94ec8e822bc0b3419f772c0e7fac9a93f89dbde1
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: a1262a35450963851e3091d783aaea8bb8dface0
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380586"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100424"
 ---
 # <a name="view-resource-governor-properties"></a>Afficher les propriétés du gouverneur de ressources
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "53380586"
  Activez ou désactivez Resource Governor en activant ou désactivant la case à cocher.  
   
  **Pools de ressources**  
- Créez ou modifiez la configuration des pools de ressources et des pools de ressources externes à l’aide de la grille fournie. Cette grille est remplie à l'aide des informations des pools internes et par défaut prédéfinis. Sélectionnez un pool à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un pool de ressources, cliquez sur la ligne comportant le préfixe**\***(astérisque).  
+ Créez ou modifiez la configuration des pools de ressources et des pools de ressources externes à l’aide de la grille fournie. Cette grille est remplie à l'aide des informations des pools internes et par défaut prédéfinis. Sélectionnez un pool à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un pool de ressources, cliquez sur la ligne comportant le préfixe **&#42;** (astérisque).  
   
  **Nom**  
  Spécifiez le nom du pool de ressources.  
@@ -91,7 +91,7 @@ ms.locfileid: "53380586"
  Pour plus d’informations, consultez [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md) et [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md).  
   
  **Groupes de charge de travail pour le pool de ressources**  
- Créez ou modifiez la configuration du groupe de charges de travail à l'aide de la grille fournie. Cette grille est remplie à l'aide des informations des groupes internes et par défaut prédéfinis. Sélectionnez un groupe à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un groupe de charges de travail, cliquez sur la ligne comportant le préfixe**\***(astérisque).  
+ Créez ou modifiez la configuration du groupe de charges de travail à l'aide de la grille fournie. Cette grille est remplie à l'aide des informations des groupes internes et par défaut prédéfinis. Sélectionnez un groupe à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un groupe de charges de travail, cliquez sur la ligne comportant le préfixe **&#42;** (astérisque).  
   
  **Nom**  
  Spécifiez le nom du groupe de charges de travail.  

@@ -18,18 +18,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71c0f046ad2f831cdff7136bd92059fd4a24bfce
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 2b86774b2245f8cfd505921045b5d9426d08b41f
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970430"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300346"
 ---
 # <a name="data-types-transact-sql"></a>Types de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Participez à l’amélioration de la documentation SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à chaque colonne, variable locale, expression et paramètre correspond un type de données. Un type de données est un attribut qui spécifie le type de données que l'objet peut contenir : données de type Integer, données caractères, données monétaires, données de date et d'heure, chaînes binaires, et ainsi de suite.
   

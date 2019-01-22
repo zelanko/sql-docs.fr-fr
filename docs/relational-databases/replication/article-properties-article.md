@@ -15,12 +15,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35fbe2c739ac8dafcedf18a4873bc7235469648b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d33dc0d7103e821eaf2796630cada56f199eebd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857120"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133929"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriétés de l’article - &lt;Article&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "47857120"
  Cette option s'applique uniquement aux procédures stockées. Elle permet d'indiquer si vous voulez répliquer la définition de la procédure stockée (instruction CREATE PROCEDURE) ou son exécution. Si vous répliquez l'exécution de la procédure, la définition de la procédure est répliquée vers l'Abonné lors de l'initialisation de l'abonnement. Lorsque la procédure est exécutée sur le serveur de publication, la réplication exécute la procédure correspondante au niveau de l'Abonné. Ceci peut améliorer les performances de manière significative lorsque des opérations de traitement par lot volumineuses sont exécutées. Pour plus d’informations, voir [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Options des publications de fusion  
- La boîte de dialogue **Propriétés de l'article** des publications de fusion contient deux onglets : **Propriétés** et **Résolveur**.  
+ La boîte de dialogue **Propriétés de l’article** des publications de fusion contient deux onglets : **Propriétés** et **Résolveur**.  
   
 ### <a name="properties-tab"></a>Onglet Propriétés  
  **Direction de la synchronisation**  
@@ -123,7 +123,7 @@ ms.locfileid: "47857120"
   
 ### <a name="resolver-tab"></a>Onglet Résolveur  
  **Utiliser le résolveur par défaut**  
- Si vous sélectionnez le résolveur par défaut, les conflits sont résolus en fonction de la priorité affectée à chaque abonné ou de la première modification écrite sur le serveur de publication, selon le type d'abonnement utilisé. Pour plus d’informations, consulter [Détecter et résoudre des conflits de réplication de fusion](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+ Si vous sélectionnez le résolveur par défaut, les conflits sont résolus en fonction de la priorité affectée à chaque abonné ou de la première modification écrite sur le serveur de publication, selon le type d'abonnement utilisé. Pour plus d’informations, consulter [Détecter et résoudre des conflits de réplication de fusion](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Utiliser un résolveur personnalisé (inscrit sur le serveur de distribution)**  
  Si vous décidez d'utiliser un résolveur d'article (fourni par [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou que vous avez écrit), vous devez sélectionner un résolveur dans la zone de liste. Pour plus d’informations, voir [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
@@ -137,7 +137,7 @@ ms.locfileid: "47857120"
  Tous les résolveurs COM fournis par [!INCLUDE[msCoName](../../includes/msconame-md.md)] sont signés. Sélectionnez cette option pour vérifier que le résolveur est valide lors de la synchronisation.  
   
 ## <a name="options-for-oracle-publications"></a>Options des publications Oracle  
- La boîte de dialogue **Propriétés de l'article** des publications Oracle contient deux onglets : **Propriétés** et **Mappage de données**. Les publications Oracle ne prennent pas en charge toutes les propriétés que prennent en charge les publications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, voir [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+ La boîte de dialogue **Propriétés de l’article** des publications Oracle contient deux onglets : **Propriétés** et **Mappage de données**. Les publications Oracle ne prennent pas en charge toutes les propriétés que prennent en charge les publications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, voir [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ### <a name="properties-tab"></a>Onglet Propriétés  
  **Copie des procédures stockées INSERT, UPDATE et DELETE**  

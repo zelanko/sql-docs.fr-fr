@@ -15,12 +15,12 @@ ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ff2ba1d74d8ffa722dfecad9dc0ed588a2902459
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6efca71c246eaa08b237cd551c0cfae022463fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760847"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123849"
 ---
 # <a name="snapshot-agent"></a>Agent d'instantané
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,8 +66,8 @@ ms.locfileid: "47760847"
   
 ## <a name="see-also"></a> Voir aussi  
  [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
- [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Présentation des Agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

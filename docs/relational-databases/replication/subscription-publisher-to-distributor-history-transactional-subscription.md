@@ -13,12 +13,12 @@ ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d4622234e579d055635594f5dbfbd097f8943339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 793420d352b25d969c5cd618861c9b355dea8491
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675977"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131979"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Abonnement, Historique du serveur de publication vers le serveur de distribution (abonnement transactionnel)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,8 +64,8 @@ ms.locfileid: "47675977"
   
 ## <a name="see-also"></a> Voir aussi  
  [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Afficher des informations et exécuter des tâches pour les agents associés à un abonnement &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
- [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Présentation des Agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

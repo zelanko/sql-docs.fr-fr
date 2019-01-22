@@ -17,18 +17,18 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4256efa5952870ede608d96fa2659ce9d88f35da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668418"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124609"
 ---
 # <a name="upgrade-replicated-databases"></a>Mettre à niveau des bases de données répliquées
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
-  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] prend en charge la mise à niveau des bases de données répliquées à partir des versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; il n'est pas nécessaire d'interrompre l'activité des autres nœuds lorsqu'un nœud est en cours de mise à niveau. Prenez soin de respecter les règles relatives aux versions qui sont prises en charge dans une topologie :  
+  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] prend en charge la mise à niveau des bases de données répliquées à partir des versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; il n'est pas nécessaire d'interrompre l'activité des autres nœuds lorsqu'un nœud est en cours de mise à niveau. Prenez soin de respecter les règles relatives aux versions qui sont prises en charge dans une topologie :  
   
 -   Toute version convient pour le serveur de distribution dès lors qu'elle est égale ou supérieure à celle du serveur de publication (en général, l'instance du serveur de distribution est la même que celle du serveur de publication).    
 -   Toute version convient pour le serveur de publication dès lors qu'elle est inférieure ou égale à celle du serveur de distribution.    
@@ -37,8 +37,8 @@ ms.locfileid: "51668418"
     - Un abonné à une publication de fusion peut avoir toute version égale ou inférieure à la version de l’éditeur qui est prise en charge selon le cycle de prise en charge du cycle de vie des versions.  
  
 Le chemin de mise à niveau vers SQL Server dépend du modèle de déploiement. SQL Server offre deux chemins de mise à niveau en général :
-- Côte à côte : déployez un environnement parallèle et déplacez les bases de données ainsi que les objets de niveau instance associés, tels que les connexions et les travaux, vers le nouvel environnement. 
-- Mise à niveau sur place : autorisez le support d’installation de SQL Server à mettre à niveau l’installation de SQL Server existante en remplaçant les bits de SQL Server et en mettant à niveau les objets de base de données. Pour les environnements exécutant des groupes de disponibilité Always On ou des instances de cluster de basculement, une mise à niveau sur place est combinée avec une [mise à niveau propagée](choose-a-database-engine-upgrade-method.md#rolling-upgrade) pour réduire les temps d’arrêt. 
+- Côte à côte Déployez un environnement parallèle et déplacez les bases de données ainsi que les objets de niveau instance associés, tels que les connexions et les travaux, vers le nouvel environnement. 
+- Mise à niveau sur place : Autorisez le support d’installation de SQL Server à mettre à niveau l’installation de SQL Server existante en remplaçant les bits de SQL Server et en mettant à niveau les objets de base de données. Pour les environnements exécutant des groupes de disponibilité Always On ou des instances de cluster de basculement, une mise à niveau sur place est combinée avec une [mise à niveau propagée](choose-a-database-engine-upgrade-method.md#rolling-upgrade) pour réduire les temps d’arrêt. 
 
 Une approche courante qui a été adoptée pour les mises à niveau côte à côte de topologies de réplication consiste à déplacer des paires éditeur/abonné par lots vers le nouvel environnement côte à côte, au lieu de procéder à un déplacement de la topologie complète. Cette approche par phases aide à maîtriser les temps d’arrêt et, dans une certaine mesure, à réduire l’impact sur les activités qui dépendent de la réplication.  
 
@@ -132,9 +132,9 @@ Si vous envisagez de mettre à niveau votre instance SQL Server vers SQL 2016 (
  Pour vous assurer que les paramètres de réplication sont conservés lorsque vous restaurez la sauvegarde d'une base de données répliquée à partir d'une version précédente : effectuez la restauration vers un serveur et une base de données du même nom que le serveur et la base de données à l'origine de la sauvegarde.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Administration &#40;réplication&#41;](../../relational-databases/replication/administration/administration-replication.md)   
+ [Réplication SQL Server](../../relational-databases/replication/sql-server-replication.md)  
+ [FAQ sur l’administration de la réplication](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Compatibilité descendante de la réplication](../../relational-databases/replication/replication-backward-compatibility.md)   
- [Nouveautés &#40;Réplication&#41;](../../relational-databases/replication/what-s-new-replication.md)   
  [Mises à niveau de la version et de l'édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Mise à niveau vers SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
  [Mise à niveau d’une topologie de réplication vers SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)

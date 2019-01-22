@@ -1,7 +1,7 @@
 ---
 title: Chiffrement TDE (Transparent Data Encryption) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2fda42994bb86d1087f22024205f8a521ec530d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: bb61a9c18c8e0f2b164c8df01a8b84cebd5c8ab8
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210578"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185125"
 ---
 # <a name="transparent-data-encryption-tde"></a>Chiffrement TDE (Transparent Data Encryption)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53210578"
   
  **Informations applicables à [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- Quand vous utilisez le chiffrement transparent des données avec [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12, le certificat de niveau serveur stocké dans la base de données master est automatiquement créé par [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Pour déplacer une base de données avec chiffrement transparent des données sur [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] , vous devez déchiffrer la base de données, la déplacer, puis réactiver le chiffrement transparent des données sur la [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]de destination. Pour obtenir des instructions pas à pas pour le chiffrement transparent des données sur [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], consultez [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
+ Quand vous utilisez TDE avec [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12, le certificat de niveau serveur stocké dans la base de données master est automatiquement créé par [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Pour déplacer une base de données TDE sur [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], vous n’êtes pas obligé de déchiffrer la base de données pour l’opération de déplacement. Pour plus d’informations sur l’utilisation de TDE avec [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], consultez [Transparent Data Encryption avec Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
   
  **Informations applicables à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   

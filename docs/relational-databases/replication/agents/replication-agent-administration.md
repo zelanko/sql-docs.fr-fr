@@ -23,12 +23,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c96134ede585acee4b556200e67c7301feef7713
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca04967d4230ce6693736b53c99a21bbfd07eae6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730897"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125684"
 ---
 # <a name="replication-agent-administration"></a>Administration de l'Agent de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47730897"
 |[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[Agent de lecture du journal des réplications](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
 |[Agent de lecture de la file d’attente de réplication](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
-|[Agent de fusion de réplication](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
+|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
   
  En plus des agents de réplication, la réplication a plusieurs travaux qui effectuent de la maintenance planifiée et à la demande.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47730897"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et moniteur de réplication : [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
--   Programmation de la réplication : [Concepts des exécutables de l’agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   Programmation de la réplication : [Concepts des exécutables de l'agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 ## <a name="agent-profiles"></a>Profils de l'Agent  
  Quand la réplication est configurée, un ensemble de profils d'agent est installé sur le serveur de distribution. Un profil d'agent contient un ensemble de paramètres qui sont utilisés chaque fois qu'un agent s'exécute : pendant le processus de démarrage, chaque agent se connecte au service de distribution et interroge les paramètres situés dans son profil. La réplication fournit un profil par défaut pour chaque agent et des profils supplémentaires prédéfinis pour l'Agent de lecture du journal, l'Agent de distribution et l'Agent de fusion. En plus des profils fournis, vous pouvez créer des profils adaptés aux besoins de vos applications. Pour plus d'informations, voir [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "47730897"
   
     -   Agent de lecture de la file d'attente  
   
-     Accédez aux informations et aux tâches associées à ces agents via l'onglet **Agents** . Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents de publication &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+     Accédez aux informations et aux tâches associées à ces agents via l'onglet **Agents** . Pour plus d’informations, consultez Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Les agents suivants sont associés à des abonnements dans le moniteur de réplication :  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47730897"
   
     -   Agent de fusion  
   
-     Accédez aux informations et aux tâches associées à ces agents via les onglets suivants : **Liste de suivi des abonnements** (disponible pour chaque serveur de publication) ou **Tous les abonnements** (disponible pour chaque abonnement). Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Accédez aux informations et aux tâches associées à ces agents via les onglets suivants : **Liste de suivi des abonnements** (disponible pour chaque serveur de publication) ou **Tous les abonnements** (disponible pour chaque publication). Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="independent-and-shared-agents"></a>Agents indépendants et partagés  
  Un Agent indépendant est un Agent qui sert un seul abonnement. Un agent partagé fournit des services à plusieurs abonnements ; si plusieurs abonnements utilisant le même agent partagé doivent se synchroniser, ils attendent par défaut dans une file d'attente, et l'agent partagé leur fournit ce service l'un après l'autre. Le temps de latence est réduit lors de l'utilisation d'agents indépendants car ceux-ci sont disponibles dès que l'abonnement doit être synchronisé. La réplication de fusion utilise toujours des agents indépendants, et la réplication transactionnelle utilise par défaut des agents indépendants pour les publications créées dans l'Assistant Nouvelle publication (dans les versions précédentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la réplication transactionnelle utilisait par défaut des agents partagés).  
@@ -89,14 +89,14 @@ ms.locfileid: "47730897"
   
 |Travail de nettoyage|Description|Planification par défaut|  
 |------------------|-----------------|----------------------|  
-|Nettoyage de l'historique de l'agent : distribution|Supprime les enregistrements historiques des agents de réplication dans la base de données de distribution.|S'exécute toutes les dix minutes|  
-|Nettoyage de la distribution : distribution|Suppression des transactions répliquées de la base de données de distribution. |S'exécute toutes les dix minutes|  
+|Nettoyage de l'historique de l'Agent : Distribution|Supprime les enregistrements historiques des agents de réplication dans la base de données de distribution.|S'exécute toutes les dix minutes|  
+|Nettoyage de la distribution : Distribution|Suppression des transactions répliquées de la base de données de distribution. |S'exécute toutes les dix minutes|  
 |Nettoyage de l'abonnement expiré|Détecte les abonnements expirés et les retire des bases de données de publication. Sur le serveur de distribution, désactive les abonnements qui n’ont été pas été synchronisés au cours de la période maximale de rétention de distribution.|S'exécute chaque jour à 1 heure du matin.| 
 |Réinitialiser les abonnements présentant des erreurs lors de la validation de données|Détecte tous les abonnements qui ont des échecs de validation des données et les marque pour réinitialisation. Lors de l'exécution suivante de l'Agent de fusion ou de l'Agent de distribution, un nouvel instantané sera appliqué aux Abonnés.|Pas de planification par défaut (non activé par défaut).|  
 |Contrôle des Agents de réplication|Détecte les Agents de réplication n'ayant pas d'enregistrement historique actif. Il écrit dans le journal des événements de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows si l'étape d'un travail échoue.|S'exécute toutes les dix minutes.|  
 |Actualisateur d'analyse de réplication pour la distribution|Actualise les requêtes mises en cache utilisées par le moniteur de réplication.|S'exécute en permanence.|  
   
 ## <a name="see-also"></a> Voir aussi  
- [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

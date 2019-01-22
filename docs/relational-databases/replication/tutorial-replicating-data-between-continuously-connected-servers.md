@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle) | Microsoft Docs'
+title: 'Didacticiel : configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f477276ef55689b6d79244f4493246f99aa9d34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514200"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128349"
 ---
-# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutoriel : Configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle)
+# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Didacticiel : configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 La réplication transactionnelle constitue une bonne solution au problème de transfert de données entre serveurs connectés en permanence. À l’aide de l’Assistant Réplication, vous pouvez aisément configurer et administrer une topologie de réplication. 
 
@@ -39,7 +39,7 @@ Dans ce didacticiel, vous apprendrez à :
   
   
 ## <a name="prerequisites"></a>Conditions préalables requises  
-Ce didacticiel est destiné aux utilisateurs qui sont familiers des opérations élémentaires de base de données, mais dont l'expérience en matière de réplication est limitée. Avant de commencer ce tutoriel, vous devez effectuer le [Tutoriel : Préparer SQL Server pour la réplication](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
+Ce didacticiel est destiné aux utilisateurs qui sont familiers des opérations élémentaires de base de données, mais dont l'expérience en matière de réplication est limitée. Avant de commencer ce tutoriel, vous devez effectuer le [Tutoriel : Préparer SQL Server pour la réplication](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Pour suivre ce tutoriel, vous avez besoin de SQL Server, SQL Server Management Studio (SSMS) et une base de données AdventureWorks :  
   
@@ -59,7 +59,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server, SQL Server Management S
 > - Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez vous connecter au serveur de publication et à l’abonné à l’aide d’un identifiant de connexion membre du rôle serveur fixe **sysadmin**. Pour plus d’informations sur ce rôle, consultez [Rôles de niveau serveur](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
-**Durée estimée pour effectuer ce tutoriel : 60 minutes**  
+**Durée estimée pour effectuer le didacticiel : 60 minutes**  
   
 ## <a name="configure-the-publisher-for-transactional-replication"></a>Configurer le serveur de publication pour la réplication transactionnelle
 Dans cette section, vous créez une publication transactionnelle en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour publier un sous-ensemble filtré de la table **Product** de l’exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Vous ajoutez également à la liste d'accès à la publication (PAL) le compte de connexion SQL Server utilisée par l'Agent de distribution.
@@ -226,7 +226,7 @@ Dans cette section, vous utilisez les jetons de suivi pour vérifier que les mod
   
    A. Sélectionnez l’onglet **Jetons de suivi**.  
    B. Sélectionnez **Insérer un suivi**.    
-   c. Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l'Abonné**et **Latence totale**. Une valeur **En attente** indique que le jeton n’a pas atteint un point spécifié.
+   c. Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l’Abonné**, **Latence totale**. Une valeur **En attente** indique que le jeton n’a pas atteint un point spécifié.
 
    ![Informations pour le jeton de suivi](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 
@@ -242,4 +242,4 @@ Vous avez correctement configuré votre serveur de publication et votre abonné 
 L’article suivant va vous apprendre à configurer la réplication de fusion :  
 
 > [!div class="nextstepaction"]
-> [Tutoriel : Configurer la réplication entre un serveur et des clients mobiles (réplication de fusion)](tutorial-replicating-data-with-mobile-clients.md)
+> [Didacticiel : configurer la réplication entre un serveur et des clients mobiles (fusion)](tutorial-replicating-data-with-mobile-clients.md)

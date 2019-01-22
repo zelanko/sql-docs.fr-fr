@@ -32,18 +32,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b83fc9e0629c89d29c9e2eeac4ce6f814ffd29bd
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 7bf523ed04740005d2e901f95f510dc29599696a
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971040"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299566"
 ---
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Participez à l’amélioration de la documentation SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Cette fonction retourne l’horodatage du système de base de données actif sous forme de valeur **DateHeure**, sans le décalage lié au fuseau horaire de la base de données. `CURRENT_TIMESTAMP` tire cette valeur du système d’exploitation de l’ordinateur sur lequel l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute.
   
@@ -95,7 +95,7 @@ GETUTCDATE()       2007-04-30 20:10:02.047
 */
 ```  
   
-### <a name="b-get-the-current-system-date"></a>B. Obtention de la date système actuelle  
+### <a name="b-get-the-current-system-date"></a>b. Obtention de la date système actuelle  
   
 ```sql
 SELECT CONVERT (date, SYSDATETIME())  

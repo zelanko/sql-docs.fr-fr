@@ -1,7 +1,7 @@
 ---
-title: 'Leçon 2 : Ajout d’un bouclage avec SSIS | Microsoft Docs'
+title: 'Leçon 2 : Ajouter un bouclage avec SSIS | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,19 +11,20 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed4b198ab8f0582f3e01cfaca957af4f72e343e2
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 90f3d3c73eea1413159d29ec2cc25522271d5646
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641216"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143300"
 ---
-# <a name="lesson-2-adding-looping-with-ssis"></a>Leçon 2 : Ajout d’un bouclage avec SSIS
-Au cours de la [Leçon 1 : Créer un projet et un package de base avec SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md), vous avez créé un package qui a extrait des données d’une source de fichier plat unique, transformé les données au moyen de la fonction de transformation des recherches, puis chargé les données dans la copie de la table de faits **FactCurrencyRate** de l’exemple de base de données **AdventureWorksDW2012**.  
+# <a name="lesson-2-add-looping-with-ssis"></a>Leçon 2 : Ajouter un bouclage avec SSIS
+
+Dans [Leçon 1 : Créer un projet et un package de base avec SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md), vous avez créé un package qui extrait des données d’une source de fichier plat unique. Les données sont ensuite transformées par des transformations de recherche. Enfin, le package charge les données dans une copie de la table de faits **FactCurrencyRate** de l’exemple de base de données **AdventureWorksDW2012**.  
   
-Toutefois, il est rare qu'un processus d'extraction, de transformation et de chargement (ETL, extract, transform, and load) utilise un seul fichier plat. Un processus ETL classique extrait généralement les données de plusieurs sources de fichiers plats. L'extraction des données à partir de plusieurs sources nécessite un flux de contrôle répétitif. L'une des fonctions les plus appréciées de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est la facilité avec laquelle vous pouvez ajouter une itération ou un bouclage aux packages.  
+Un processus ETL (extraction, transformation et chargement) permet généralement d’extraire des données de plusieurs sources de fichiers plats. L'extraction des données à partir de plusieurs sources nécessite un flux de contrôle répétitif. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permet d’ajouter facilement une itération ou un bouclage à des packages.  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit deux types de conteneurs pour effectuer des boucles dans des packages : le conteneur de boucles Foreach et le conteneur de boucles For. Le conteneur de boucles Foreach utilise un énumérateur pour effectuer le bouclage, tandis que le conteneur de boucles For utilise généralement une expression variable. Cette leçon est basée sur le conteneur de boucles Foreach.  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit deux types de conteneurs pour effectuer des boucles dans des packages : le conteneur de boucles Foreach et le conteneur de boucles For. Le conteneur de boucles Foreach utilise un énumérateur pour le bouclage, tandis que le conteneur de boucles For utilise généralement une expression variable. Cette leçon est basée sur le conteneur de boucles Foreach.  
   
 Le conteneur de boucles Foreach permet à un package de répéter le flux de contrôle pour chaque membre d'un énumérateur spécifié. Avec le conteneur de boucles Foreach, vous pouvez énumérer :  
   
@@ -31,11 +32,11 @@ Le conteneur de boucles Foreach permet à un package de répéter le flux de con
   
 -   Informations du schéma ADO.NET  
   
--   des structures de fichiers et de répertoires ;  
+-   Des structures de fichiers et de répertoires  
   
--   des variables système, package et utilisateur ;  
+-   Des variables système, package et utilisateur  
   
--   Objets énumérables contenus dans une variable  
+-   Des objets énumérables dans une variable  
   
 -   Éléments d'une collection  
   
@@ -43,28 +44,28 @@ Le conteneur de boucles Foreach permet à un package de répéter le flux de con
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO)  
   
-Au cours de cette leçon, vous allez modifier le package ETL simple que vous avez créé au cours de la leçon 1 pour tirer parti du conteneur de boucles Foreach. Vous allez également définir des variables de package définies par l'utilisateur pour faire en sorte que le package du didacticiel effectue une itération sur tous les fichiers plats du dossier. Si vous n'avez pas effectué la leçon précédente, vous pouvez également copier le package final de la leçon 1 inclus dans le didacticiel.  
+Au cours de cette leçon, vous modifiez l’exemple de package ETL de la leçon 1 pour utiliser un conteneur de boucles Foreach et vous définissez une variable de package définie par l’utilisateur pour le package. Cette variable est ensuite utilisée pour itérer au sein des fichiers correspondants dans l’exemple de dossier.   
   
-Au cours de cette leçon, vous n'allez pas modifier le flux de données mais uniquement le flux de contrôle.  
+Au cours de cette leçon, vous n’allez pas modifier le flux de données mais uniquement le flux de contrôle.  
   
-> [!IMPORTANT]  
-> Pour suivre ce didacticiel, vous devez disposer de l'exemple de base de données **AdventureWorksDW2012** . Pour plus d'informations sur l'installation et le déploiement d' **AdventureWorksDW2012**, consultez [Reporting Services Product Samples sur CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
-  
+> [!NOTE]  
+> Si ce n’est déjà fait, consultez les [prérequis de la leçon 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
+
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
 Cette leçon contient les tâches suivantes :  
   
--   [Étape 1 : Copie du package de la leçon 1](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
+-   [Étape 1 : Copier le package de la leçon 1](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [Étape 2 : Ajout et configuration du conteneur de boucles Foreach](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [Étape 2 : Ajouter et configurer le conteneur de boucles Foreach](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [Étape 3 : Modification du gestionnaire de connexions de fichiers plats](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [Étape 3 : Modifier le gestionnaire de connexions de fichiers plats](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [Étape 4 : Test de la leçon 2 du Package du tutoriel](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [Étape 4 : Tester le package du tutoriel de la leçon 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
-[Étape 1 : Copie du package de la leçon 1](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
+[Étape 1 : Copier le package de la leçon 1](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Conteneur de boucles For](../integration-services/control-flow/for-loop-container.md)  
   
   

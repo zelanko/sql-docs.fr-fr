@@ -28,18 +28,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebc5c6b688bf7871ff3e75ab30fbb7dadb31f315
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 92373c80cfd2de09e0222aa9af6ef0a3dca90cf6
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521222"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299946"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Participez à l’amélioration de la documentation SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Cette fonction retourne un entier représentant la valeur *datepart* spécifiée de la *date* spécifiée.
   
@@ -164,8 +164,8 @@ Les systèmes de numérotation des différents pays peuvent ne pas se conformer 
 |---|---|---|---|
 |Dimanche|1er janvier,<br /><br /> Premier samedi,<br /><br /> 1 à 7 jours de l’année|Oui|United States|  
 |Lundi|1er janvier,<br /><br /> Premier dimanche,<br /><br /> 1 à 7 jours de l’année|Oui|Majorité de l'Europe et Royaume-Uni|  
-|Lundi|4 janvier<br /><br /> Premier jeudi,<br /><br /> 4 à 7 jours de l’année|non|ISO 8601, Norvège et Suède|  
-|Lundi|7 janvier,<br /><br /> Premier lundi,<br /><br /> 7 jours de l'année|non||  
+|Lundi|4 janvier<br /><br /> Premier jeudi,<br /><br /> 4 à 7 jours de l’année|Non|ISO 8601, Norvège et Suède|  
+|Lundi|7 janvier,<br /><br /> Premier lundi,<br /><br /> 7 jours de l'année|Non||  
 |Mercredi|1er janvier,<br /><br /> Premier mardi,<br /><br /> 1 à 7 jours de l’année|Oui||  
 |Samedi|1er janvier,<br /><br /> Premier vendredi,<br /><br /> 1 à 7 jours de l’année|Oui||  
   

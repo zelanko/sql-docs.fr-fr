@@ -16,15 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae8ce2b79d49a7754a7049e005c34d4837a0d313
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: d8cb50c87778f3ab5255482213305cd974e4e64a
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384154"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300206"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Ajouter des colonnes à une table (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
   Cette rubrique explique comment ajouter des colonnes à une table dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
@@ -58,7 +61,7 @@ ms.locfileid: "49384154"
     > [!NOTE]  
     >  Les valeurs par défaut des propriétés des colonnes sont ajoutées lorsque vous créez une nouvelle colonne, mais vous pouvez les modifier sous l’onglet **Propriétés de la colonne** .  
   
-6.  Quand vous avez fini d’ajouter des colonnes, dans le menu **Fichier** , choisissez **Enregistrer** *nom de la table*.  
+6.  Quand vous avez fini d’ajouter des colonnes, dans le menu **Fichier** , choisissez **Enregistrer** _nom de la table_.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

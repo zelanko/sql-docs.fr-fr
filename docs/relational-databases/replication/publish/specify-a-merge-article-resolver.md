@@ -15,32 +15,19 @@ ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef65d698db19d1ada3c9c5260f19fa39c4140e95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 216387f82df57f8f3485ba95566fecf36c0ca897
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821937"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135999"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Spécifier un programme de résolution d'articles de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment spécifier un programmes de résolution d'articles de fusion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+
   
- **Dans cette rubrique**  
-  
--   **Avant de commencer :**  
-  
-     [Recommandations](#Recommendations)  
-  
--   **Pour spécifier un programme de résolution d'articles de fusion à l'aide de :**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
-  
-###  <a name="Recommendations"></a> Recommandations  
+##  <a name="recommendations"></a>Recommandations  
   
 -   La réplication de fusion accepte les types de programmes de résolution d'articles suivants :  
   
@@ -112,7 +99,7 @@ ms.locfileid: "47821937"
     > [!NOTE]  
     >  L'emplacement d'installation par défaut du fichier exécutable de l'Agent de fusion est [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM.  
   
-#### <a name="to-specify-a-custom-resolver-when-defining-a-merge-article"></a>Pour spécifier un programme de résolution personnalisé lors de la définition d'un article de fusion  
+## <a name="specify-a-custom-resolver-when-defining-a-merge-article"></a>Spécifier un programme de résolution personnalisé lors de la définition d’un article de fusion  
   
 1.  Si vous projetez d'utiliser un outil personnalisé de résolution des conflits, créez et inscrivez le programme de résolution à l'aide de la procédure précitée.  
   
@@ -120,7 +107,7 @@ ms.locfileid: "47821937"
   
 3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Spécifiez le nom du programme de résolution de l'étape 2 pour **@article_resolver** et toute entrée requise pour le programme de résolution personnalisé à l'aide du paramètre **@resolver_info** . Pour les programmes de résolution personnalisés s'appuyant sur des procédures stockées, **@resolver_info** est le nom de la procédure stockée. Pour plus d’informations sur l’entrée nécessaire aux programmes de résolution fournis par [!INCLUDE[msCoName](../../../includes/msconame-md.md)], consultez [Programmes de résolution COM Microsoft](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
-#### <a name="to-specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>Pour spécifier ou modifier un programme de résolution personnalisé pour un article de fusion existant  
+## <a name="specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>Spécifier ou changer un programme de résolution personnalisé pour un article de fusion existant  
   
 1.  Pour déterminer si un programme de résolution personnalisé a été défini pour un article, ou pour obtenir le nom du programme de résolution, exécutez [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Si un programme de résolution personnalisé a été défini pour l'article, son nom est affiché dans le champ **article_resolver** . Toute entrée fournie au programme de résolution est affichée dans le champ **resolver_info** du jeu de résultats.  
   
@@ -130,7 +117,7 @@ ms.locfileid: "47821937"
   
 4.  Pour modifier toute entrée requise pour le programme de résolution personnalisé, réexécutez [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Affectez la valeur **resolver_info** à **@property** et toute entrée requise pour le programme de résolution personnalisé à **@value**. Pour les programmes de résolution personnalisés s'appuyant sur des procédures stockées, **@resolver_info** est le nom de la procédure stockée. Pour plus d’informations sur l’entrée nécessaire, consultez [Programmes de résolution COM Microsoft](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
-#### <a name="to-unregister-a-custom-conflict-resolver"></a>Pour annuler l'inscription d'un outil personnalisé de résolution des conflits  
+## <a name="unregister-a-custom-conflict-resolver"></a>Annuler l’inscription d’un outil de résolution des conflits personnalisé  
   
 1.  Sur le serveur de publication, exécutez [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) et notez le nom du programme de résolution personnalisé à supprimer dans le champ **value** du jeu de résultats.  
   

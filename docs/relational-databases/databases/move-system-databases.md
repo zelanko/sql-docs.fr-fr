@@ -28,12 +28,12 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb3ae1a8437ddf73b371f317d6a9c85f200cff8c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0995346ac3c740efb6779f69e29003abf625a81e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531480"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136119"
 ---
 # <a name="move-system-databases"></a>Déplacer des bases de données système
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,11 +66,11 @@ ms.locfileid: "52531480"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  Arrêtez l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou éteignez le système pour que la maintenance ait lieu. Pour plus d'informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+2.  Arrêtez l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou éteignez le système pour que la maintenance ait lieu. Pour plus d'informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Déplacez le ou les fichiers vers le nouvel emplacement.  
 
-4.  Redémarrez l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le serveur. Pour plus d’informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+4.  Redémarrez l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le serveur. Pour plus d'informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 5.  Vérifiez le changement de fichier en exécutant la requête suivante.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52531480"
         NET START MSSQL$instancename /f /T3608
         ```  
   
-     Pour plus d’informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Pour plus d'informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Pour chaque fichier à déplacer, utilisez les commandes **sqlcmd** ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour exécuter l’instruction suivante.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "52531480"
   
 2.  Dans le nœud **Services SQL Server** , cliquez avec le bouton droit sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, **SQL Server (MSSQLSERVER)**), puis cliquez sur **Propriétés**.  
   
-3.  Dans la boîte de dialogue **Propriétés de SQL Server (***nom_instance***)** , cliquez sur l’onglet **Paramètres de démarrage**.  
+3.  Dans la boîte de dialogue **Propriétés de SQL Server (**_nom_instance_**)** , cliquez sur l’onglet **Paramètres de démarrage** .  
   
 4.  Dans la zone **Paramètres existants**, sélectionnez le paramètre -d pour déplacer le fichier de données MASTER. Cliquez sur **Mettre à jour** pour enregistrer les modifications.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "52531480"
 ##  <a name="Resource"></a> Déplacement de la base de données Resources  
  L’emplacement de la base de données Resource est \<*lecteur*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*nom_instance*>\MSSQL\Binn\\. La base de données ne peut pas être déplacée.  
   
-##  <a name="Follow"></a> Suivi : après le déplacement de toutes les bases de données système  
+##  <a name="Follow"></a> Suivi : après le déplacement de toutes les bases de données système  
  Si vous avez déplacé toutes les bases de données système vers un même lecteur ou volume ou vers un autre serveur utilisant une lettre de lecteur différente, effectuez les mises à jour suivantes.  
   
 -   Modifiez le chemin d'accès du journal de l'Agent SQL Server. Si vous ne mettez pas à jour ce chemin d'accès, l'Agent SQL Server ne démarre pas.  

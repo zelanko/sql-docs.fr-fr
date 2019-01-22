@@ -31,12 +31,12 @@ f1_keywords:
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2d201186c8e10fb193923a6313f9bd5bd690d69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4b71175eb95acf68f1f7a6d0eb2a2e23f609006
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596397"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134280"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Modifier les légendes de carte, l'échelle de couleurs et les règles associées (Générateur de rapports et SSRS)
   Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une carte peut contenir des légendes de carte, une échelle de couleurs et une échelle des distances. Ces parties d'une carte aident les utilisateurs à interpréter la visualisation des données sur la carte.  
@@ -55,7 +55,7 @@ ms.locfileid: "47596397"
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Pour modifier la position d'une légende par rapport à la fenêtre d'affichage  
   
-1.  En mode Conception, cliquez avec le bouton droit sur la légende et ouvrez la page *\<***Propriétés de l’élément de rapport**.  
+1.  En mode Conception, cliquez avec le bouton droit sur la légende et ouvrez la page _Propriétés de_ **\<élément de rapport>**.  
   
 2.  Dans **Position**, cliquez sur l'emplacement qui spécifie où afficher la légende par rapport à la fenêtre d'affichage.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "47596397"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur *\<Règle de couleur **de type d’élément cartographique>***.  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de_ **\<type d’élément cartographique>**.  
   
 3.  Cliquez sur **Légende**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "47596397"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur *\<Règle de couleur **de type d’élément cartographique>***.  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de_ **\<type d’élément cartographique>**.  
   
 3.  Cliquez sur **Appliquer le style du modèle**.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "47596397"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur *\<Règle de couleur **de type d’élément cartographique>***.  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de_ **\<type d’élément cartographique>**.  
   
 3.  Cliquez sur **Visualiser les données à l'aide de la palette de couleurs**.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "47596397"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur *\<Règle de couleur **de type d’élément cartographique>***.  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de_ **\<type d’élément cartographique>**.  
   
 3.  Cliquez sur **Visualiser les données à l'aide de plages de couleurs**.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "47596397"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur *\<Règle de couleur **de type d’élément cartographique>***.  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de_ **\<type d’élément cartographique>**.  
   
 3.  Cliquez sur **Visualiser les données à l'aide de couleurs personnalisées**.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "47596397"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur *\<Règle de couleur **de type d’élément cartographique>***.  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de_ **\<type d’élément cartographique>**.  
   
 3.  Sélectionnez l’option **Visualiser les données à l’aide de** \<type de règle>. Pour utiliser des options de distribution, vous devez créer des plages dans la page **Distribution** en fonction des données analytiques associées à la couche.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "47596397"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur *\<Règle **de type d’élément cartographique>***.  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de_ **\<type d’élément cartographique>**.  
   
 3.  Vérifiez que l’option **Visualiser les données à l’aide de** \<*type de règle*> est sélectionnée.  
   
@@ -240,7 +240,7 @@ ms.locfileid: "47596397"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur *\<Règle de couleur **de type d’élément cartographique>***.  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de_ **\<type d’élément cartographique>**.  
   
 3.  Sélectionnez l'option de règle de couleur à utiliser. Pour afficher des éléments dans une légende de carte ou une échelle de couleurs, vous devez sélectionner l’une des options **Visualiser les données à l’aide de** \<type de règle>.  
   
@@ -261,7 +261,7 @@ ms.locfileid: "47596397"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur *\<Règle **de type d’élément cartographique>***.  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de_ **\<type d’élément cartographique>**.  
   
 3.  Cliquez sur **Légende**.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "47596397"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur *\<Règle **de type d’élément cartographique>***.  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de_ **\<type d’élément cartographique>**.  
   
 3.  Cliquez sur **Légende**.  
   
@@ -286,7 +286,7 @@ ms.locfileid: "47596397"
  [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Ajouter, changer ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Personnaliser des données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

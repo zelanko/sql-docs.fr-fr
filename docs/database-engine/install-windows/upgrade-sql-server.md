@@ -13,16 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 8c6b1e4aeeb8a7969c663c42a50035cf0a521274
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1fafc2c94e92f2aeb878e8b1ecf6d9e6f86387d2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599982"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300126"
 ---
 # <a name="upgrade-sql-server"></a>Mettre à niveau SQL Server
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
  
  Vous pouvez mettre à niveau des instances de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou de [!INCLUDE[ss2016](../../includes/sssql15-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Avant d’exécuter le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour procéder à la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], examinez les articles suivants traitant de la mise à niveau, ainsi que les notes de publication.  
   

@@ -15,12 +15,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d410a838083aeb52c090dee0f9878a8baa52cca3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0b91a574a9b239e2e9f7bca83151fd50d37b08c9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504046"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131649"
 ---
 # <a name="secure-the-subscriber"></a>Sécuriser l'abonné
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "52504046"
 > [!IMPORTANT]  
 >  Pour spécifier des informations de connexion, utilisez la procédure stockée [sp_link_publication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Vous pouvez également utiliser la page **Nom d'accès aux abonnements pouvant être mis à jour** de l'Assistant Nouvel abonnement qui appelle **sp_link_publication**. Dans certaines conditions, cette procédure stockée peut échouer si l'Abonné exécute [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Service Pack 1 (SP1) ou une version ultérieure, et que le serveur de publication exécute une version antérieure. Si la procédure stockée échoue dans ce scénario, mettez à niveau le serveur de publication vers [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] SP1 ou une version ultérieure.  
   
- Pour plus d’informations, consultez [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) et [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
+ Pour plus d’informations, consultez [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) et [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  Le compte spécifié pour la connexion doit uniquement avoir l'autorisation d'insérer, de mettre à jour et de supprimer des données sur les vues créées par la réplication dans la base de données de publication. Il ne doit pas bénéficier d'autres autorisations. Octroyez des autorisations sur les vues de la base de données de publication qui sont mentionnées dans le panneau **syncobj_**_\<Nombre_hexadécimal>_ pour le compte que vous avez configuré pour chaque abonné.  
+>  Le compte spécifié pour la connexion doit uniquement avoir l'autorisation d'insérer, de mettre à jour et de supprimer des données sur les vues créées par la réplication dans la base de données de publication. Il ne doit pas bénéficier d'autres autorisations. Octroyez des autorisations sur les vues de la base de données de publication qui sont mentionnées dans le panneau **syncobj_***\<Nombre_hexadécimal>* pour le compte que vous avez configuré pour chaque abonné.  
   
 ## <a name="queued-updating-subscriptions"></a>Abonnements mis à jour en attente  
  Quand vous configurez des abonnements mis à jour en attente, il faut garder à l'esprit deux points relatifs à la sécurité :  
@@ -73,11 +73,11 @@ ms.locfileid: "52504046"
     > [!IMPORTANT]  
     >  Utilisez l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour les connexions avec les Abonnés, et spécifiez un autre compte pour la connexion avec chaque Abonné. Si vous utilisez un abonnement par extraction de données (pull), la réplication définit toujours la connexion de façon à ce qu'elle utilise l'authentification Windows (pour les abonnements par extraction de données, la réplication ne peut pas accéder aux métadonnées sur l'Abonné qui doit utiliser l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ). Dans ce cas, modifiez la connexion pour qu'elle utilise l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] après la configuration de l'abonnement.  
   
-     Pour plus d’informations, consultez le Guide pratique pour créer un abonnement pouvant être mis à jour à une publication transactionnelle (SQL Server Management Studio) et [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
+     Pour plus d’informations, consultez Guide pratique pour créer un abonnement pouvant être mis à jour à une publication transactionnelle (SQL Server Management Studio) et [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Sécurité et protection &#40;réplication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [Sécurité et protection &#40;réplication&#41;](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

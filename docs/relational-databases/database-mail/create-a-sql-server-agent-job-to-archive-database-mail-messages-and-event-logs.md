@@ -16,12 +16,12 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9705b867d8f12c83b0c3e3c0d1ec6a8461e7a2dd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: dd24314a8948e5893e4e4625c695485c7611c5bb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559926"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130279"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Créer un travail d'Agent SQL Server pour archiver les messages et les journaux d'événements de la messagerie de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51559926"
   
 -   **Avant de commencer :**  , [Conditions préalables](#Prerequisites), [Recommandations](#Recommendations), [Autorisations](#Permissions)  
   
--   **Pour archiver les messages et les journaux de la messagerie de base de données à l'aide de :**  [Agent SQL Server](#Process_Overview)  
+-   **Pour archiver les messages et les journaux Database Mail à l’aide de :**  [SQL Server Agent](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -48,11 +48,11 @@ ms.locfileid: "51559926"
   
 -   La première procédure crée un travail intitulé Archiver la messagerie de base de données avec les étapes suivantes.  
   
-    1.  Copiez tous les messages contenus dans les tables de la messagerie de base de données vers une nouvelle table nommée d’après le mois précédent au format **DBMailArchive_***<année_mois>*.  
+    1.  Copiez tous les messages contenus dans les tables de la messagerie de base de données vers une nouvelle table nommée d’après le mois précédent au format **DBMailArchive_**_<année_mois>_.  
   
-    2.  Copiez les pièces jointes associées aux messages copiés à la première étape, à partir des tables de la messagerie de base de données vers une nouvelle table nommée d’après le mois précédent au format **DBMailArchive_Attachments_***<année_mois>*.  
+    2.  Copiez les pièces jointes associées aux messages copiés à la première étape, à partir des tables de la messagerie de base de données vers une nouvelle table nommée d’après le mois précédent au format **DBMailArchive_Attachments_**_<année_mois>_.  
   
-    3.  Copiez les événements du journal des événements de la messagerie de base de données qui sont associés aux messages copiés à la première étape, à partir des tables de la messagerie de base de données vers une nouvelle table nommée d’après le mois précédent au format **DBMailArchive_Log_***<année_mois>*.  
+    3.  Copiez les événements du journal des événements de la messagerie de base de données qui sont associés aux messages copiés à la première étape, à partir des tables de la messagerie de base de données vers une nouvelle table nommée d’après le mois précédent au format **DBMailArchive_Log_**_<année_mois>_.  
   
     4.  Supprimez des tables de la messagerie de base de données les enregistrements des éléments de messagerie transférés.  
   

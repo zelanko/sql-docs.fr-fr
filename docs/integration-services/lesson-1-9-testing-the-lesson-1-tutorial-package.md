@@ -1,7 +1,7 @@
 ---
-title: 'Étape 9 : Test du package du didacticiel de la leçon 1 | Microsoft Docs'
+title: 'Étape 9 : Tester le package du tutoriel de la leçon 1 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,28 +11,30 @@ ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b140ea28397ace096c5b37db26a661fd7194647
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: dde0ffe53ab5763230cafa752d687ab42d3a60c5
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629542"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143219"
 ---
-# <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>Leçon 1-9 : Test du package du didacticiel de la leçon 1
-Au cours de cette leçon, vous allez effectuer les tâches suivantes :  
+# <a name="lesson-1-9-test-the-lesson-1-package"></a>Leçon 1-9 : Tester le package de la leçon 1
+
+Dans ce tutoriel, vous avez effectué les tâches suivantes :  
   
--   création d'un nouveau projet [!INCLUDE[ssIS](../includes/ssis-md.md)] ;  
+-   Création d'un nouveau projet [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
--   configuration des gestionnaires de connexions dont le package a besoin pour se connecter aux données sources et de destination ;  
+-   Configuration des gestionnaires de connexions pour que le package se connecte aux données sources et de destination.  
   
--   ajout d'un flux de données qui récupère les données à partir d'une source de fichier plat, effectue les transformations de recherche nécessaires sur les données et configure les données pour la destination.  
+-   Ajout d'un flux de données qui récupère les données à partir d'une source de fichier plat, effectue les transformations de recherche nécessaires sur les données et configure les données pour la destination.  
   
-Le package est à présent terminé. Il est temps de le tester.  
+Votre package est maintenant terminé et prêt à être testé !
   
-## <a name="checking-the-package-layout"></a>Vérification de la disposition du package  
-Avant de tester le package, vous devez vérifier que le flux de contrôle et le flux de données dans le package de la leçon 1 contiennent les objets affichés dans les diagrammes suivants.  
+## <a name="check-the-package-components"></a>Vérifier les composants de package
   
-**Flux de contrôle**  
+Avant de tester le package, vous devez vérifier que le flux de contrôle et le flux de données dans le package de la leçon 1 contiennent les objets affichés dans les diagrammes suivants.  
+  
+**Flux de contrôle** 
   
 ![Flux de contrôle dans le package](../integration-services/media/task9lesson1control.gif "Flux de contrôle dans le package")  
   
@@ -40,18 +42,18 @@ Avant de tester le package, vous devez vérifier que le flux de contrôle et le 
   
 ![Flux de données dans le package](../integration-services/media/task9lesson1data.gif "Flux de données dans le package")  
   
-### <a name="to-run-the-lesson-1-tutorial-package"></a>Pour exécuter le package du didacticiel de la leçon 1  
+## <a name="run-the-lesson-1-package"></a>Exécuter le package de la leçon 1  
   
-1.  Dans le menu **Déboguer** , cliquez sur **Démarrer le débogage**.  
+1.  Dans le menu **Déboguer**, sélectionnez **Démarrer le débogage**.  
   
-    Le package s’exécute et 1 097 lignes sont ajoutées à la table de faits **NewFactCurrencyRate** dans **AdventureWorksDW2012**.  
+    Le package s’exécute, ce qui se traduit par l’ajout de 1 097 lignes à la table de faits **NewFactCurrencyRate** dans **AdventureWorksDW2012**. Pour vérifier ce résultat, sélectionnez l’onglet **Flux de données**.
   
-2.  Une fois l'exécution du package terminée, dans le menu **Déboguer** , cliquez sur **Arrêter le débogage**.  
+2.  Une fois l’exécution du package terminée, dans le menu **Déboguer**, sélectionnez **Arrêter le débogage**.  
   
-## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 2 : Ajout d’un bouclage avec SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+## <a name="go-to-next-lesson"></a>Passer à la leçon suivante
+[Leçon 2 : Ajouter un bouclage avec SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Exécution de projets et de packages](packages/run-integration-services-ssis-packages.md) 
   
   

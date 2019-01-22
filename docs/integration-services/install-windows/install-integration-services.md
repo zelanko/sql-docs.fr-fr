@@ -20,14 +20,18 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d612ad390500bd7e279d90872ed2b08c6afe2428
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d1ef66f97683b24014661fb6a1e633ce6ce06ce
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677197"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299916"
 ---
 # <a name="install-integration-services"></a>Installer Integration Services
+
+  > [!div class="nextstepaction"]
+  > [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un programme d'installation unique pour installer tout ou une partie de ses composants, y compris [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Utilisez-le pour installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec ou sans d’autres composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un seul ordinateur.    
     
  Cet article met l’accent sur quelques facteurs importants qu’il convient de prendre en compte avant d’installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Les informations dans cet article vous aideront à évaluer les options d’installation afin que vous puissiez effectuer des sélections garantissant la réussite de l’installation.    
@@ -74,7 +78,7 @@ Pour utiliser un serveur dédié pour les processus d’extraction, de transform
 
 ### <a name="configuring-ssis-event-logging"></a>Configurer la journalisation des événements SSIS
     
-Par défaut, dans une nouvelle installation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré de façon à ne pas journaliser les événements en rapport avec l'exécution de packages dans le journal des événements des applications. Ce paramètre limite le nombre d'entrées de journal des événements lorsque vous utilisez la fonctionnalité du collecteur de données de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les événements qui ne sont pas enregistrés incluent l'ID d'événement 12288, « le Package a démarré », et l'ID d'événement 12289, « le Package a fini avec succès ». Pour enregistrer ces événements dans le journal des événements des applications, ouvrez le Registre pour y apporter des modifications. Dans le Registre, recherchez le nœud HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS et modifiez la valeur DWORD du paramètre LogPackageExecutionToEventLog en remplaçant 0 par 1.    
+Par défaut, dans une nouvelle installation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré de façon à ne pas journaliser les événements en rapport avec l'exécution de packages dans le journal des événements des applications. Ce paramètre limite le nombre d'entrées de journal des événements lorsque vous utilisez la fonctionnalité du collecteur de données de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les événements qui ne sont pas enregistrés incluent l'ID d'événement 12288, « le Package a démarré », et l'ID d'événement 12289, « le Package a fini avec succès ». Pour enregistrer ces événements dans le journal des événements des applications, ouvrez le Registre pour y apporter des modifications. Dans le Registre, recherchez le nœud HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS et modifiez la valeur DWORD du paramètre LogPackageExecutionToEventLog en remplaçant 0 par 1.    
     
 ## <a name="install-additional-components-for-integration-services"></a>Installer des composants supplémentaires pour Integration Services
 

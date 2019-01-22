@@ -14,12 +14,12 @@ ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6ef6f0f0a8d271780df238f9af175d4a85df7297
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db570a981038f39312d36e749fc300012aed5f7f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656462"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256004"
 ---
 # <a name="non-deterministic-content-models"></a>modèles de contenu non déterministes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -27,12 +27,12 @@ ms.locfileid: "51656462"
   
  À compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1, toutefois, les modèles de contenu non déterministes sont acceptés si les contraintes d’occurrence sont 0,1, ou non liées.  
   
-## <a name="example-non-deterministic-content-model-rejected"></a>Exemple: modèle de contenu non déterministe rejeté  
+## <a name="example-non-deterministic-content-model-rejected"></a>Exemple : modèle de contenu non déterministe rejeté  
  L'exemple suivant tente de créer un schéma XML dont le modèle de contenu est non déterministe. Le code échoue car il n'est pas certain si l'élément `<root>` doit avoir une séquence de deux éléments `<a>` ou si l'élément `<root>` doit avoir deux séquences, chacune possédant un élément `<a>` .  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
     <element name="root">  
         <complexType>  
             <sequence minOccurs="1" maxOccurs="2">  
@@ -61,12 +61,12 @@ GO
 </sequence>  
 ```  
   
-## <a name="example-non-deterministic-content-model-accepted"></a>Exemple: modèle de contenu non déterministe accepté  
+## <a name="example-non-deterministic-content-model-accepted"></a>Exemple : modèle de contenu non déterministe accepté  
  Le schéma suivant serait rejeté dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1.  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
     <element name="root">  
         <complexType>  
             <sequence minOccurs="0" maxOccurs="unbounded">  

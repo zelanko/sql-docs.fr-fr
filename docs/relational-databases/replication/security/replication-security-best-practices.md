@@ -16,12 +16,12 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41346b81aa56f9ed4d83494092834535611cb905
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbda6137d9b844b13485c63488fad9efa85366c7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794537"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131559"
 ---
 # <a name="replication-security-best-practices"></a>Bonnes pratiques en matière de sécurité de la réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47794537"
   
     -   [Concepts des exécutables de l'agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
--   Exécutez chaque agent de réplication sous un compte Windows différent et utilisez l'authentification Windows pour toutes les connexions des agents de réplication. Pour plus d’informations sur la spécification de comptes, consultez [Gérer les connexions et les mots de passe dans la réplication](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
+-   Exécutez chaque agent de réplication sous un compte Windows différent et utilisez l'authentification Windows pour toutes les connexions des agents de réplication. Pour plus d’informations sur la spécification de comptes, consultez [Identité et contrôle d’accès pour la réplication](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
   
 -   Accordez à chaque agent les autorisations dont ils ont besoin et pas davantage. Pour plus d'informations, consultez la section « Autorisations requises par les agents » de [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47794537"
   
     -   Vérifiez qu'un agent donné (par exemple, l'Agent de distribution d'un abonnement) établit des connexions sous le même compte sur chaque ordinateur.  
   
-    -   Dans les situations exigeant l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , l'accès aux partages d'instantanés UNC n'est souvent pas disponible (par exemple, l'accès peut être bloqué par un pare-feu). Dans ce cas, vous pouvez transférer l'instantané aux abonnés via FTP (File Transfer Protocol). Pour plus d’informations, consultez [Transférer des instantanés via FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   Dans les situations exigeant l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , l'accès aux partages d'instantanés UNC n'est souvent pas disponible (par exemple, l'accès peut être bloqué par un pare-feu). Dans ce cas, vous pouvez transférer l'instantané aux abonnés via FTP (File Transfer Protocol). Pour plus d’informations, consultez [Transférer des instantanés via FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
@@ -75,6 +75,6 @@ ms.locfileid: "47794537"
  [Sécuriser l’abonné](../../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Sécuriser le serveur de distribution](../../../relational-databases/replication/security/secure-the-distributor.md)   
  [Sécuriser le serveur de publication](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [Sécurité et protection &#40;réplication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

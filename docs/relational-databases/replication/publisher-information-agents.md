@@ -13,12 +13,12 @@ ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab01e5745293bd4e50f59358b17a0fa5d06d9e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e6192da995dac47d974c3c3f2ff6c5f576acc2e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785237"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123960"
 ---
 # <a name="publisher-information-agents"></a>Informations sur le serveur de publication, Agents
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ ms.locfileid: "47785237"
 ## <a name="options"></a>Options  
  Pour afficher des informations sur un agent ou un travail, sélectionnez l'option de votre choix dans le menu déroulant **Types d'agents et de travaux** . Pour des informations plus détaillées et obtenir des tâches en relation avec un Agent ou un travail, cliquez avec le bouton droit sur la ligne correspondant à cet Agent ou à ce travail, puis cliquez sur une option dans le menu contextuel. Pour modifier la façon dont la grille affiche les données, cliquez avec le bouton droit sur la grille, puis cliquez sur l'une des options suivantes :  
   
--   **Trier**: cette option vous permet d'effectuer un tri sur ou plusieurs colonnes dans la boîte de dialogue **Trier les colonnes** .  
+-   **Trier** : cette option vous permet d’effectuer un tri sur une ou plusieurs colonnes dans la boîte de dialogue **Trier les colonnes**.  
   
--   **Choisir les colonnes à afficher**: cette option vous permet de sélectionner les colonnes à afficher et l'ordre d'affichage dans la boîte de dialogue **Choisir les colonnes** .  
+-   **Choisir les colonnes à afficher** : cette option vous permet de sélectionner les colonnes à afficher et l’ordre d’affichage dans la boîte de dialogue **Choisir les colonnes**.  
   
--   **Filtre**: cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre** .  
+-   **Filtrer** : cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre**.  
   
--   **Effacer le filtre**: cette option vous permet d'effacer tous les paramètres du filtre pour la grille.  
+-   **Effacer le filtre** : cette option vous permet d’effacer tous les paramètres du filtre pour la grille.  
   
  Les paramètres du filtre sont spécifiques à chaque grille. La sélection et le tri des colonnes sont appliqués à toutes les grilles du même type, par exemple la grille de publications pour chaque serveur de publication.  
   
@@ -198,8 +198,7 @@ ms.locfileid: "47785237"
   
 ## <a name="see-also"></a> Voir aussi  
  [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
- [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

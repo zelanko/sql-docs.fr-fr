@@ -1,7 +1,7 @@
 ---
 title: Destination du fichier HDFS | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: addb3312def505802aab695301f7cca170eab3d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f18f6b0516ab9ae417251e49f5a3cf24fd2aa997
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799667"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185005"
 ---
 # <a name="hdfs-file-destination"></a>HDFS File Destination
   Le composant HDFS File Destination permet à un package SSIS d’écrire des données dans un fichier HDFS. Les formats de fichier pris en charge sont les formats texte, Avro et ORC.  
@@ -39,9 +39,42 @@ ms.locfileid: "47799667"
 |**Noms de colonnes dans la première ligne de données**|Si vous avez sélectionné le format Texte, indiquez si la première ligne du fichier contient les noms de colonnes.|  
   
  Après avoir configuré ces options, sélectionnez l’onglet **Colonnes** pour mapper les colonnes source aux colonnes de destination dans le flux de données.  
-  
+
+::: moniker range=">= sql-server-ver15"
+## <a name="prerequisite-for-orc-format"></a>Prérequis pour le format ORC
+
+Avant de pouvoir utiliser le format de fichier ORC, vous devez installer Java Runtime Environment (JRE) 1.7.51 ou ultérieur pour la plateforme appropriée.
+
+Les JRE Zulu et Oracle sont tous les deux pris en charge.
+-   [JRE Zulu](https://www.azul.com/downloads/zulu/zulu-windows/)
+-   [JRE Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
+
+### <a name="set-up-the-zulu-jre"></a>Configurer JRE Zulu
+
+1. Téléchargez et extrayez le package compressé d’installation Zulu OpenJDK.
+
+2.  À partir de l’invite de commandes, exécutez `sysdm.cpl`.
+
+3. Sous l’onglet **Avancé**, sélectionnez **Variables d’environnement**.
+
+4. Sous la section **Variables système**, sélectionnez **Nouveau**.
+
+5. Entrez `JAVA_HOME` pour le **Nom de la variable**.
+
+6. Sélectionnez **Parcourir le répertoire**, accédez au dossier d’installation Zulu OpenJDK, puis sélectionnez le sous-dossier `jre`. Sélectionnez ensuite OK. La valeur de la variable est automatiquement renseignée.
+
+7. Sélectionnez **OK** pour fermer la boîte de dialogue **Nouvelle Variable système**.
+
+8. Sélectionnez **OK** pour fermer la boîte de dialogue Variables d’environnement.
+
+### <a name="set-up-the-oracle-jre"></a>Configurer JRE Oracle
+
+1. Téléchargez et exécutez le programme d’installation de JRE Oracle.
+
+1. Suivez les instructions du programme d’installation pour terminer l’installation.
+
+::: moniker-end
+
 ## <a name="see-also"></a> Voir aussi  
  [Gestionnaire de connexions Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [Source de fichier HDFS](../../integration-services/data-flow/hdfs-file-source.md)  
-  
-  
+ [HDFS File Source](../../integration-services/data-flow/hdfs-file-source.md)  

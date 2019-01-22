@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd3811f05891f7a270e059a7d36296f9d9ab3eae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 157d307187333cdde730bfb6657ae9927db060c1
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638717"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100894"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -107,14 +107,15 @@ OBJECTPROPERTY ( id , property )
 |IsRule|Tout objet étendu aux schémas|Règle liée.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsScalarFunction|Fonction|Fonction scalaire.<br /><br /> 1 = Fonction scalaire<br /><br /> 0 = Fonction non scalaire|  
 |IsSchemaBound|Fonction, vue|Fonction ou vue liée à un schéma, créée à l'aide de SCHEMABINDING.<br /><br /> 1 = Fonction liée à un schéma<br /><br /> 0 = Non liée à un schéma|  
-|IsSystemTable|Table de charge de travail|Table système.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsSystemTable|Table de charge de travail|Table système.<br /><br /> 1 = True<br /><br /> 0 = False| 
+|IsSystemVerified|Object|SQL Server peut vérifier les propriétés de déterminisme et de précision de l’objet.<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsTable|Table de charge de travail|Table.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsTableFunction|Fonction|Fonction table.<br /><br /> 1 = Fonction table<br /><br /> 0 = Fonction non-table|  
 |IsTrigger|Tout objet étendu aux schémas|Déclencheur.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|Tout objet étendu aux schémas|Contrainte UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Table de charge de travail|Table définie par l'utilisateur.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|Affichage|Vue.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|Tout objet étendu aux schémas|Propriétaire de l'objet.<br /><br /> **Remarque :** Le propriétaire du schéma n’est pas nécessairement le propriétaire de l’objet. Par exemple, les objets enfants (ceux où *parent_object_id* est non-NULL) retournent toujours le même ID de propriétaire que leur parent.<br /><br /> Non NULL = ID utilisateur de base de données du propriétaire de l'objet.|  
+|OwnerId|Tout objet étendu aux schémas|Propriétaire de l'objet.<br /><br /> **Remarque :**  Le propriétaire du schéma n'est pas nécessairement le propriétaire de l'objet. Par exemple, les objets enfants (ceux où *parent_object_id* est non-NULL) retournent toujours le même ID de propriétaire que leur parent.<br /><br /> Non NULL = ID utilisateur de base de données du propriétaire de l'objet.|  
 |TableDeleteTrigger|Table de charge de travail|La table comporte un déclencheur DELETE.<br /><br /> >1 = ID du premier déclencheur du type spécifié.|  
 |TableDeleteTriggerCount|Table de charge de travail|La table comporte le nombre de déclencheurs DELETE spécifié.<br /><br /> >0 = Nombre de déclencheurs DELETE.|  
 |TableFullTextMergeStatus|Table de charge de travail|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indique s'il s'agit d'une table qui a un index de recherche en texte intégral qui est en cours de fusion.<br /><br /> 0 = La table n'a pas d'index de recherche en texte intégral ou l'index de recherche en texte intégral n'est pas en cours de fusion.<br /><br /> 1 = L'index de recherche en texte intégral est en cours de fusion.|  
@@ -199,7 +200,7 @@ GO
   
 ```  
   
-### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. Vérification du déterminisme d'une fonction définie par l'utilisateur à valeur scalaire  
+### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>b. Vérification du déterminisme d'une fonction définie par l'utilisateur à valeur scalaire  
  L’exemple suivant teste si la fonction `ufnGetProductDealerPrice` (à valeur scalaire et définie par l’utilisateur), qui retourne une valeur **money**, est déterministe.  
   
 ```  
@@ -216,7 +217,7 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C. Recherche des tables appartenant à un schéma spécifique  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C : Recherche des tables appartenant à un schéma spécifique  
  L’exemple suivant retourne toutes les tables figurant dans le schéma dbo.  
   
 ```  
@@ -231,7 +232,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-verifying-that-an-object-is-a-table"></a>D. Vérification qu’un objet est une table  
+### <a name="d-verifying-that-an-object-is-a-table"></a>D : Vérification qu'un objet est une table  
  L'exemple suivant teste si `dbo.DimReseller` est une table dans la base de données [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```  

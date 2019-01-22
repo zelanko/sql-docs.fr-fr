@@ -1,7 +1,7 @@
 ---
 title: FOR, clause (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,30 +22,30 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0db7176da41eec27cfffc4db5a9cbcc0835196a9
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: a8f1ce1c1c5a572874b301f326a711bbcfbda8a1
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906269"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143549"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - Clause FOR (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  La clause FOR vous permet de spécifier l’une des options suivantes pour les résultats de la requête.  
+La clause FOR vous permet de spécifier l’une des options suivantes pour les résultats de la requête.
   
 -   Autoriser les mises à jour pendant la consultation des données de la requête dans un curseur de mode de navigation en spécifiant **FOR BROWSE**.  
   
 -   Mettre les résultats de la requête au format XML en spécifiant **FOR XML**.  
   
 -   Mettre les résultats de la requête au format JSON en spécifiant **FOR JSON**.  
-  
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```
 [ FOR { BROWSE | <XML> | <JSON>} ]  
   
 <XML> ::=  
@@ -84,20 +84,21 @@ JSON
         [ , WITHOUT_ARRAY_WRAPPER ]  
     ]  
   
-}  
-```  
+}
+```
   
-## <a name="for-browse"></a>FOR BROWSE  
+## <a name="for-browse"></a>FOR BROWSE
+
  BROWSE  
  Indique que des mises à jour sont autorisées pendant la consultation des données dans un curseur de mode de navigation DB-Library. Il est possible de naviguer dans une table d’une application si la table inclut une colonne **timestamp**, si elle possède un index unique, et si l’option FOR BROWSE se trouve à la fin des instructions SELECT envoyées à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-> [!NOTE]  
->  Il est impossible d’utiliser \<lock_hint> HOLDLOCK dans une instruction SELECT qui comporte l’option FOR BROWSE.
+> [!NOTE]
+> Il est impossible d’utiliser \<lock_hint> HOLDLOCK dans une instruction SELECT qui comporte l’option FOR BROWSE.
   
  FOR BROWSE ne peut pas apparaître dans des instructions SELECT qui sont jointes par l'opérateur UNION.  
   
-> [!NOTE]  
->  Lorsque les colonnes clés d'index unique d'une table peuvent accepter les valeurs NULL, et si la table se trouve sur le côté intérieur d'une jointure externe, l'index n'est pas pris en charge par le mode de navigation.  
+> [!NOTE]
+> Lorsque les colonnes clés d'index unique d'une table peuvent accepter les valeurs NULL, et si la table se trouve sur le côté intérieur d'une jointure externe, l'index n'est pas pris en charge par le mode de navigation.  
   
  Le mode de navigation vous permet d'analyser les lignes de la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et d'y mettre à jour les données, une ligne après l'autre. Pour accéder à une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans votre application en mode de navigation, vous devez utiliser l’une des deux options suivantes :  
   
@@ -155,8 +156,7 @@ JSON
     FROM tleft   
     RIGHT JOIN tright   
     ON tleft.c1 = tright.c1   
-    WHERE tright.c1 <> 2 ;  
-  
+    WHERE tright.c1 <> 2 ;
     ```  
   
      Remarquez la sortie suivante dans le volet Résultats :  
@@ -171,14 +171,15 @@ JSON
   
  Après avoir exécuté la requête SELECT pour accéder aux tables en mode de navigation, le jeu de résultats de la requête SELECT contient deux valeurs NULL pour la colonne c1 dans la table tleft à cause de la définition de l'instruction de jointure externe droite. Par conséquent, dans le jeu de résultats, vous ne pouvez pas distinguer les valeurs NULL provenant de la table de celles introduites par l'instruction de jointure externe droite. Vous pouvez recevoir des résultats incorrects si vous devez ignorer les valeurs NULL du jeu de résultats.  
   
-> [!NOTE]  
->  Si les colonnes incluses dans l'index unique n'acceptent pas de valeurs NULL, toutes les valeurs NULL contenues dans le jeu de résultats ont été introduites par l'instruction de jointure externe droite.  
+> [!NOTE]
+> Si les colonnes incluses dans l'index unique n'acceptent pas de valeurs NULL, toutes les valeurs NULL contenues dans le jeu de résultats ont été introduites par l'instruction de jointure externe droite.  
   
-## <a name="for-xml"></a>FOR XML  
+## <a name="for-xml"></a>FOR XML
+
  XML  
- Spécifie que les résultats d'une requête doivent être retournés sous la forme d'un document XML. L'un des modes XML suivants doit être spécifié : RAW, AUTO, EXPLICIT. Pour plus d’informations sur les données XML et sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
+ Spécifie que les résultats d'une requête doivent être retournés sous la forme d'un document XML. L'un des modes XML suivants doit être indiqué : RAW, AUTO, EXPLICIT. Pour plus d’informations sur les données XML et sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
   
- RAW [ **('***ElementName***')** ]  
+ RAW [ **('**_ElementName_**')** ]  
  Prend le résultat de la requête et transforme chaque ligne du jeu de résultats en un élément XML avec un identificateur générique \<row /> comme balise d’élément. Vous pouvez éventuellement spécifier un nom pour l'élément de ligne. La sortie de code XML utilise le nom *ElementName* spécifié pour identifier l’élément de ligne généré pour chaque ligne. Pour plus d’informations, consultez [Utiliser le mode RAW avec FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).
   
  AUTO  
@@ -190,10 +191,26 @@ JSON
  XMLDATA  
  Retourne un schéma XDR inclus, mais n'ajoute pas l'élément racine au résultat. Si XMLDATA est spécifié, le schéma XDR est ajouté au document.  
   
-> [!IMPORTANT]  
->  La directive XMLDATA est dépréciée. Utilisez la génération XSD en mode RAW et AUTO. Il n'y a aucun remplacement pour la directive XMLDATA en mode EXPLICIT. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
- XMLSCHEMA [ **('***TargetNameSpaceURI***')** ]  
+> [!IMPORTANT]
+> La directive XMLDATA est **dépréciée**. Utilisez la génération XSD en mode RAW et AUTO. Il n'y a aucun remplacement pour la directive XMLDATA en mode EXPLICIT. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+
+_Supprimer les sauts de ligne indésirables :_ vous pouvez utiliser SSMS (SQL Server Management Studio) pour émettre une requête qui utilise la clause FOR XML. Il est arrive parfois qu’une grande chaîne XML soit retournée et affichée dans une cellule de grille. La longueur de cette chaîne XML peut être supérieure à celle d’une ligne unique dans une cellule de grille SSMS. Dans ce cas, SSMS peut insérer des caractères de fin de ligne entre les longs segments de la chaîne XML. De tels sauts de ligne peuvent se produire au milieu d’une sous-chaîne qui n’est pas censée être scindée en plusieurs lignes. Pour empêcher les sauts de ligne, vous pouvez utiliser un cast AS XMLDATA. Cette solution s’applique également quand vous utilisez FOR JSON PATH. La technique est décrite sur Stack Overflow et est indiquée dans l’instruction SELECT de l’exemple Transact-SQL suivant :
+
+- [Using SQL Server FOR XML: Convert Result Datatype to Text/varchar/string whatever?](https://stackoverflow.com/questions/5655332/using-sql-server-for-xml-convert-result-datatype-to-text-varchar-string-whate/5658758#5658758)
+
+    ```sql
+    SELECT CAST(
+        (SELECT column1, column2
+            FROM my_table
+            FOR XML PATH('')
+        )
+            AS VARCHAR(MAX)
+    ) AS XMLDATA ;
+    ```
+
+<!-- The preceding Stack Overflow example is per MicrosoftDocs/sql-docs Issue 1501.  2019-01-06 -->
+
+ XMLSCHEMA [ **('**_TargetNameSpaceURI_**')** ]  
  Retourne le schéma XSD inclus. Lorsque vous spécifiez cette directive, vous pouvez éventuellement spécifier un URI d'espace de noms cible, qui retourne l'espace de noms spécifié dans le schéma. Pour plus d’informations, consultez [Générer un schéma XSD Inline](../../relational-databases/xml/generate-an-inline-xsd-schema.md).  
   
  ELEMENTS  
@@ -205,7 +222,7 @@ JSON
  ABSENT  
  Indique que pour les valeurs de colonne NULL, les éléments XML correspondants ne seront pas ajoutés dans le résultat XML. Vous ne devez spécifier cette option qu'avec ELEMENTS.  
   
- PATH [ **('***ElementName***')** ]  
+ PATH [ **('**_ElementName_**')** ]  
  Génère un élément wrapper \<row> pour chaque ligne du jeu de résultats. Vous pouvez éventuellement spécifier un nom d’élément pour l’élément wrapper \<row>. Si une chaîne vide est fournie, comme FOR XML PATH (**''**) ), aucun élément wrapper n’est généré. L'utilisation de PATH peut constituer une solution plus simple pour les requêtes écrites à l'aide de la directive EXPLICIT. Pour plus d’informations, consultez [Utiliser le mode PATH avec FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md).  
   
  BINARY BASE64  
@@ -214,7 +231,7 @@ JSON
  TYPE  
  Spécifie que la requête retourne des résultats de type **xml**. Pour plus d’informations, consultez [Directive TYPE dans les requêtes FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md).  
   
- ROOT [ **('***RootName***')** ]  
+ ROOT [ **('**_RootName_**')** ]  
  Spécifie qu'un élément de premier niveau unique doit être ajouté au XML résultant. Vous pouvez, si vous le souhaitez, spécifier le nom d'élément racine à générer. Si le nom de racine facultatif n’est pas spécifié, l’élément \<root> par défaut est ajouté.  
   
  Pour plus d’informations, consultez [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
@@ -234,9 +251,10 @@ ORDER BY LastName, FirstName
 FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;  
 ```  
   
-## <a name="for-json"></a>FOR JSON  
+## <a name="for-json"></a>FOR JSON
+
  JSON  
- Spécifiez FOR JSON pour retourner les résultats d’une requête au format texte JSON. Vous devez également spécifier un des modes JSON suivants : AUTO ou PATH. Pour plus d’informations sur la clause **FOR JSON**, consultez [Mettre les résultats de requête au format JSON avec FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
+ Spécifiez FOR JSON pour retourner les résultats d’une requête au format texte JSON. Vous devez également spécifier l’un des modes JSON suivants : AUTO ou PATH. Pour plus d’informations sur la clause **FOR JSON**, consultez [Mettre les résultats de requête au format JSON avec FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
  AUTO  
  Mettez la sortie JSON automatiquement en forme en fonction de la structure de l’instruction **SELECT**  
@@ -249,7 +267,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  INCLUDE_NULL_VALUES  
  Incluez les valeurs NULL dans la sortie JSON en spécifiant l’option **INCLUDE_NULL_VALUES** avec la clause **FOR JSON**. Si vous ne spécifiez pas cette option, la sortie n’inclut pas les propriétés JSON pour les valeurs NULL dans les résultats de la requête. Pour obtenir plus d’informations et des exemples, consultez[Inclure des valeurs NULL dans une sortie JSON avec l’option INCLUDE_NULL_VALUES &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).  
   
- ROOT [ **('***RootName***')** ]  
+ ROOT [ **('**_RootName_**')** ]  
  Ajoutez un élément racine unique à la sortie JSON en spécifiant l’option **ROOT** avec la clause **FOR JSON**. Si vous ne spécifiez pas l’option **ROOT** , la sortie JSON n'aura pas d’élément racine. Pour obtenir plus d’informations et des exemples, consultez [Ajouter un nœud racine à la sortie JSON avec l’option ROOT &#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
  WITHOUT_ARRAY_WRAPPER  
@@ -257,7 +275,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
   
  Pour plus d’informations, consultez [Mettre les résultats de requête au format JSON avec FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
-## <a name="see-also"></a> Voir aussi  
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-  
-  
+## <a name="see-also"></a> Voir aussi
+
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
+

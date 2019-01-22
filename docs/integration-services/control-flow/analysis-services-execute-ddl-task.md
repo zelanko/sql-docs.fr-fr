@@ -18,12 +18,12 @@ ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26771864aab13c9e5c65976532c1c46151367259
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1bc7cdf4c8ba8e114565aee25b557ea3173b7051
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519526"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255404"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Tâche DDL d'exécution de SQL Server Analysis Services
   La tâche DDL d'exécution de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exécute des instructions DDL (Data Definition Language) qui peuvent créer, supprimer ou modifier des modèles d'exploration de données et des objets multidimensionnels tels que des cubes et des dimensions. Par exemple, une instruction DDL peut créer une partition dans le cube **Adventure Works** ou supprimer une dimension dans [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], l’exemple de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclus dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "52519526"
 ```  
 <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Parallel>  
-    <Process xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+    <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
       <Object>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
       </Object>  
@@ -90,7 +90,7 @@ ms.locfileid: "52519526"
         <MiningStructureID>Forecasting</MiningStructureID>  
     </ParentObject>  
     <ObjectDefinition>  
-        <MiningModel xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+        <MiningModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
             <ID>Forecasting</ID>  
             <Name>Forecasting</Name>  
             <Algorithm>Microsoft_Time_Series</Algorithm>  
@@ -152,7 +152,7 @@ ms.locfileid: "52519526"
 ```  
 <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Parallel>  
-    <Process xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+    <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
       <Object>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
       </Object>  
@@ -173,7 +173,7 @@ ms.locfileid: "52519526"
         <MiningStructureID>Forecasting</MiningStructureID>  
     </ParentObject>  
     <ObjectDefinition>  
-        <MiningModel xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+        <MiningModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
             <ID>Forecasting</ID>  
             <Name>Forecasting</Name>  
             <Algorithm>Microsoft_Time_Series</Algorithm>  
@@ -252,7 +252,7 @@ ms.locfileid: "52519526"
  **Connexion**  
  Sélectionnez un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans la liste, ou cliquez sur <\<**Nouvelle connexion**> et utilisez la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** pour créer une connexion.  
   
- **Rubriques connexes :** [Référence de l'interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+ **Rubriques connexes :** [Informations de référence sur l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  Spécifiez le type de source des instructions DDL. Cette propriété dispose des options répertoriées dans le tableau suivant :  
@@ -273,11 +273,11 @@ ms.locfileid: "52519526"
  **Source**  
  Sélectionnez une connexion de fichiers dans la liste ou cliquez sur <\<**Nouvelle connexion**> et utilisez la boîte de dialogue **Gestionnaire de connexions** de fichiers pour créer une connexion.  
   
- **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>SourceType = Variable  
  **Source**  
  Sélectionnez une variable dans la liste ou cliquez sur \<**Nouvelle variable**> et utilisez la boîte de dialogue **Ajouter une variable** pour créer une variable.  
   
- **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
   

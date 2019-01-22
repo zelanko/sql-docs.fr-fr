@@ -23,12 +23,12 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67ab5eafeda0ca4c01d21b0fc2379ee7b9efc60d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cac8d0132d5b59d8840071254f9f71a84d2e89ed
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392423"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256524"
 ---
 # <a name="integration-services-service-ssis-service"></a>Service Integration Services (Service SSIS)
   Les rubriques de cette section décrivent le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un service Windows de gestion des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ce service n'est pas obligatoire pour créer, enregistrer et exécuter des packages Integration Services. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] prend en charge le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -74,7 +74,7 @@ ms.locfileid: "52392423"
   
  Vous ne pouvez installer qu'une seule instance du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur un ordinateur. Le service n'est pas spécifique à une instance particulière du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Vous vous connectez au service en utilisant le nom de l'ordinateur sur lequel il s'exécute.  
   
- Vous pouvez gérer le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide de l’un des composants logiciels enfichables MMC (Microsoft Management Console) suivants : Gestionnaire de configuration SQL Server ou Services. Avant de pouvoir gérer des packages dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez vérifier que le service a démarré.  
+ Vous pouvez gérer le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide de l’un des composants logiciels enfichables Microsoft Management Console (MMC) suivants : Gestionnaire de configuration ou Services SQL Server. Avant de pouvoir gérer des packages dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez vérifier que le service a démarré.  
   
  Par défaut, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui est installée au même moment que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’est pas installée au même moment, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance locale par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour gérer des packages stockés dans une instance nommée ou une instance distante du [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou dans plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)], vous devez modifier le fichier de configuration du service.
   
@@ -160,6 +160,28 @@ ms.locfileid: "52392423"
   
 8.  Redémarrez le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
 
+### <a name="event-logged-when-permissions-are-missing"></a>Événement journalisé en l’absence d’autorisations
+
+Si le compte de service de l’agent SQL Server n’a pas le modèle DCOM (Distributed Component Object Model) Integration Services **[Autorisations de lancement et d’activation]**, l’événement suivant est ajouté aux journaux des événements système quand l’agent SQL Server exécute les travaux du package SSIS :
+
+```
+Log Name: System
+Source: **Microsoft-Windows-DistributedCOM**
+Date: 1/9/2019 5:42:13 PM
+Event ID: **10016**
+Task Category: None
+Level: Error
+Keywords: Classic
+User: NT SERVICE\SQLSERVERAGENT
+Computer: testmachine
+Description:
+The application-specific permission settings do not grant Local Activation permission for the COM Server application with CLSID
+{xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+and APPID
+{xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487193-2804545603-1466107430) from address LocalHost (Using LRPC) running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.
+```
+
 ## <a name="configure-the-service"></a>Configurer le service
  
 Lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], le processus d'installation crée et installe le fichier de configuration pour le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ce fichier de configuration par défaut contient les paramètres suivants :  
@@ -187,7 +209,7 @@ Lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -232,7 +254,7 @@ Lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  

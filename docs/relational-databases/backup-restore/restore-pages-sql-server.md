@@ -17,15 +17,15 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de03858d60e5a8ad21232b2f13d17b880f106ed2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d2e5e0cad34fdd9364868e5f9c2e4a02d460dba
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761987"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242262"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurer des pages (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47761987"
   
     -   Journal des transactions  
   
-    -   Pages d'allocation : pages GAM (Global Allocation Map), pages SGAM(Shared Global Allocation Map) et pages PFS (Page Free Space).  
+    -   Pages d'allocation : pages Global Allocation Map (GAM), pages Shared Global Allocation Map (SGAM) et pages Page Free Space (PFS).  
   
     -   Page 0 de tous les fichiers de données (page de démarrage des fichiers)  
   
@@ -136,8 +136,8 @@ ms.locfileid: "47761987"
     |En-tête|Valeurs|  
     |------------|------------|  
     |**Nom**|Nom du jeu de sauvegarde.|  
-    |**Composant**|Composant sauvegardé : **Base de données**, **Fichier** ou **\<vide>** (pour les journaux des transactions).|  
-    |**Type**|Type de sauvegarde effectué : **Complète**, **Différentielle**ou **Journal des transactions**.|  
+    |**Composant**|Composant sauvegardé : **Base de données**, **Fichier** ou **\<vide>** (pour des journaux de transactions).|  
+    |**Type**|Types de sauvegarde proposés : **Complète**, **Différentielle** ou **Journal des transactions**.|  
     |**Server**|Nom de l'instance [!INCLUDE[ssDE](../../includes/ssde-md.md)] du moteur de base de données qui a effectué l'opération de sauvegarde.|  
     |**Sauvegarde de la base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
     |**Position**|La position du jeu de sauvegarde dans le volume.|  

@@ -13,12 +13,12 @@ ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 849fc7c55957fa0f404f2886b983b548282fa7a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2067c4c267cf1b010a2a72a92b402d3f02034a7e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811007"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126618"
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +52,13 @@ ms.locfileid: "47811007"
   
 -   Dans tous les cas où cette erreur est signalée :  
   
-     Vérifiez les détails de l'erreur dans le moniteur de réplication, puis redémarrez l'agent s'il s'est arrêté. Les détails de l'erreur devraient fournir des informations supplémentaires sur la raison pour laquelle l'agent ne fonctionnait pas correctement. Si l'agent ne fonctionne pas, n'arrêtez pas et ne redémarrez pas l'agent car cela peut aggraver le problème. Pour des informations sur l'affichage de l'état et des informations détaillées des erreurs des agents dans le moniteur de réplication, consultez les rubriques suivantes :  
-  
-    -   Pour l’Agent d’instantané, l’Agent de lecture du journal et l’Agent de lecture de la file d’attente, consultez [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
-  
-    -   Pour l’Agent de distribution et l’Agent de fusion, consultez [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Vérifiez les détails de l'erreur dans le moniteur de réplication, puis redémarrez l'agent s'il s'est arrêté. Les détails de l'erreur devraient fournir des informations supplémentaires sur la raison pour laquelle l'agent ne fonctionnait pas correctement. Si l'agent ne fonctionne pas, n'arrêtez pas et ne redémarrez pas l'agent car cela peut aggraver le problème. Pour obtenir des informations sur l’affichage de l’état de l’agent et des détails de l’erreur dans le moniteur de réplication, consultez [Afficher des informations et effectuer des tâches avec le moniteur de réplication](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).    
   
 -   Si l'erreur est signalée fréquemment parce que l'agent est occupé :  
   
      Il peut être nécessaire de reconcevoir l'application de façon à ce que les traitements effectués par l'agent soient moins longs.  
   
-     Vous pouvez augmenter l'intervalle auquel l'état de l'agent est vérifié à l'aide de la boîte de dialogue **Propriétés du travail** . Pour obtenir des informations sur l’accès à cette boîte de dialogue pour les tâches de réplication, consultez [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+     Vous pouvez augmenter l'intervalle auquel l'état de l'agent est vérifié à l'aide de la boîte de dialogue **Propriétés du travail** . Pour obtenir des informations sur l’accès à cette boîte de dialogue pour les tâches de réplication, consultez [Afficher des informations et effectuer des tâches avec le moniteur de réplication](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Si un agent ne peut pas se connecter à un des ordinateurs de la topologie :  
   
@@ -81,6 +77,6 @@ ms.locfileid: "47811007"
  [Agent de lecture du journal de réplication](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [Agent de fusion de réplication](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [Agent de lecture de la file d’attente de réplication](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Agent d'instantané de réplication](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

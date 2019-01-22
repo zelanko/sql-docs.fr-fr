@@ -18,12 +18,12 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e9378663dbe37bb6e00602cc34bc42c4a5bd4e08
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fa5285bee7041b0da548a963087493f4c5cc9b21
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530498"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134734"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Mise en miroir de bases de données ALTER DATABASE (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  Une seule \<partner_option> est autorisée par clause SET PARTNER.  
   
- **'** *partner_server* **'**  
+ **'** _partner_server_ **'**  
  Spécifie l'adresse réseau de serveur d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionnée comme partenaire de basculement dans une nouvelle session de mise en miroir de bases de données. Chaque session requiert deux serveurs partenaires : l'un démarre comme serveur principal et l'autre démarre comme serveur miroir. Les deux serveurs partenaires doivent de préférence résider sur des ordinateurs différents.  
   
  Cette option est spécifiée une seule fois par session sur chaque serveur partenaire. L’initialisation d’une session de mise en miroir de bases de données nécessite deux instructions ALTER DATABASE *database* SET PARTNER **='**_partner_server_**'**. Leur ordre est important. Commencez par vous connecter au serveur miroir et spécifiez l’instance de serveur principal *partner_server* (SET PARTNER **='**_principal_server_**'**). Ensuite, connectez-vous au serveur principal et spécifiez l’instance de serveur miroir *partner_server* (SET PARTNER **='**_mirror_server_**'**). Ceci démarre une session de mise en miroir de bases de données entre ces deux serveurs partenaires. Pour plus d'informations, consultez [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
@@ -148,7 +148,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  Le comportement du mode haute sécurité dépend en partie du témoin :  
   
--   Lorsque SAFETY a la valeur FULL et qu'un témoin est défini pour la session, la session s'exécute en mode haute sécurité avec basculement automatique. En cas de perte du serveur principal, la session bascule automatiquement si la base de données est synchronisée et si l'instance du serveur miroir et le témoin sont toujours connectés l'un à l'autre (en d'autres termes, ils ont un quorum). Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+-   Lorsque SAFETY a la valeur FULL et qu'un témoin est défini pour la session, la session s'exécute en mode haute sécurité avec basculement automatique. En cas de perte du serveur principal, la session bascule automatiquement si la base de données est synchronisée et si l'instance du serveur miroir et le témoin sont toujours connectés l'un à l'autre (en d'autres termes, ils ont un quorum). Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
      Si un témoin est défini pour la session mais qu'il est déconnecté à ce moment-là, la perte du serveur miroir provoque l'arrêt du serveur principal.  
   
@@ -175,7 +175,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  Pour plus d’informations, consultez [Défaillances possibles pendant la mise en miroir d’une base de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).  
   
  WITNESS \<witness_option>  
- Contrôle les propriétés de base de données qui définissent un témoin de mise en miroir de bases de données. Une clause SET WITNESS affecte les deux copies de la base de données, mais vous ne pouvez la spécifier que sur le serveur principal. Si un témoin est défini pour une session, le quorum est obligatoire pour servir la base de données, quelle que soit l’option SAFETY. Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Contrôle les propriétés de base de données qui définissent un témoin de mise en miroir de bases de données. Une clause SET WITNESS affecte les deux copies de la base de données, mais vous ne pouvez la spécifier que sur le serveur principal. Si un témoin est défini pour une session, le quorum est obligatoire pour servir la base de données sans tenir compte de l’option SAFETY. Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  Les partenaires de basculement et témoins doivent de préférence résider sur des ordinateurs différents. Pour plus d’informations sur le témoin, consultez [Témoin de mise en miroir de base de données](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
@@ -195,7 +195,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  Une seule \<witness_option> est autorisée par clause SET WITNESS.  
   
- **'** *witness_server* **'**  
+ **'** _witness_server_ **'**  
  Spécifie une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui doit servir de serveur témoin pour une session de mise en miroir de bases de données. Vous ne pouvez spécifier d'instructions SET WITNESS que sur le serveur principal.  
   
  Dans une instruction SET WITNESS **='**_witness_server_**'**, la syntaxe de *witness_server* est identique à celle de *partner_server*.  
@@ -210,7 +210,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 ### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>A. Création d'une session de mise en miroir de bases de données avec un témoin  
  Pour configurer la mise en miroir de bases de données avec un témoin, vous devez configurer la sécurité, préparer la base de données miroir et utiliser ALTER DATABASE pour définir les serveurs partenaires. Pour obtenir un exemple illustrant la procédure d’installation complète, consultez [Configuration de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-### <a name="b-manually-failing-over-a-database-mirroring-session"></a>B. Basculement manuel d'une session de mise en miroir de bases de données  
+### <a name="b-manually-failing-over-a-database-mirroring-session"></a>b. Basculement manuel d'une session de mise en miroir de bases de données  
  Le basculement manuel peut être débuté par l'un ou l'autre des serveurs partenaires de mise en miroir de bases de données. Avant le basculement, assurez-vous que le serveur considéré comme serveur principal est effectivement le serveur principal. Par exemple, pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], sur l'instance de serveur représentant, selon vous, le serveur principal, exécutez la requête suivante :  
   
 ```  

@@ -13,12 +13,12 @@ ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e05a58c9a88ffaa4292fd4d103cd56f5b827e9b5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ecdd4da637f8f29df60b6815d2f8231b8ba941c5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665648"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130109"
 ---
 # <a name="mssqleng018752"></a>MSSQL_ENG018752
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "51665648"
 ## <a name="user-action"></a>Action de l'utilisateur  
  La procédure suivante peut vous aider à résoudre ce problème. Si l'une des étapes permet à l'Agent de lecture de journal de démarrer sans erreur, il n'est pas nécessaire d'exécuter le reste de la procédure.  
   
--   Vérifiez dans l'historique de l'Agent de lecture de journal s'il y a d'autres erreurs qui pourraient être cause de cette erreur. Pour obtenir des informations sur l’affichage de l’état de l’agent et des détails de l’erreur dans le moniteur de réplication, consultez [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+-   Vérifiez dans l'historique de l'Agent de lecture de journal s'il y a d'autres erreurs qui pourraient être cause de cette erreur. Pour obtenir des informations sur l’affichage de l’état de l’agent et des détails de l’erreur dans le moniteur de réplication, consultez [Afficher des informations et effectuer des tâches avec le moniteur de réplication](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Recherchez dans le résultat de [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) s’il existe des numéros spécifiques d’identification de processus (SPID) relatifs à la base de données publiée. Fermez toute connexion susceptible d'avoir exécuté **sp_repldone**, **sp_replcmds**ou **sp_replshowcmds**.  
   

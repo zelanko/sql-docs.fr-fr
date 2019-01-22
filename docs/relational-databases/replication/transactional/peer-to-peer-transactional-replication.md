@@ -17,12 +17,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58fa9cf55a0ef120266c0398734fc6671402634c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51b083073e38c44708f4d017ee1fd1eb86278f24
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785247"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129309"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Réplication transactionnelle d’égal à égal
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47785247"
  La réplication d'égal à égal comprend une option permettant d'activer la détection des conflits dans une topologie d'égal à égal. Cette option permet d'éviter les problèmes issus de conflits non détectés, notamment le comportement incohérent des applications et les mises à jour perdues. Lorsqu'elle est activée, une modification en conflit est considérée par défaut comme une erreur critique qui provoque l'échec de l'Agent de distribution. En cas de conflit, la topologie reste dans un état incohérent jusqu'à la résolution manuelle du conflit et au rétablissement de la cohérence des données dans la topologie. Pour plus d’informations, voir [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
 > [!NOTE]  
->  Pour éviter l'incohérence potentielle des données, faites-en sorte d'éviter les conflits dans une topologie d'égal à égal, même si la détection des conflits est activée. Afin de garantir que les opérations d'écriture pour une ligne particulière soient réalisées au niveau d'un seul nœud, les applications qui accèdent aux données et les modifient doivent partitionner les opérations d'insertion, de mise à jour et de suppression. Ce partitionnement garantit que les modifications apportées à une ligne donnée provenant d'un nœud sont synchronisées avec tous les autres nœuds de la topologie avant que cette ligne ne soit modifiée par un autre nœud. Si une application requiert des fonctionnalités avancées de détection et de résolution des conflits, utilisez la réplication de fusion. Pour plus d’informations, consultez [Réplication de fusion](../../../relational-databases/replication/merge/merge-replication.md) et [Détecter et résoudre des conflits de réplication de fusion](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+>  Pour éviter l'incohérence potentielle des données, faites-en sorte d'éviter les conflits dans une topologie d'égal à égal, même si la détection des conflits est activée. Afin de garantir que les opérations d'écriture pour une ligne particulière soient réalisées au niveau d'un seul nœud, les applications qui accèdent aux données et les modifient doivent partitionner les opérations d'insertion, de mise à jour et de suppression. Ce partitionnement garantit que les modifications apportées à une ligne donnée provenant d'un nœud sont synchronisées avec tous les autres nœuds de la topologie avant que cette ligne ne soit modifiée par un autre nœud. Si une application requiert des fonctionnalités avancées de détection et de résolution des conflits, utilisez la réplication de fusion. Pour plus d’informations, consultez [Réplication de fusion](../../../relational-databases/replication/merge/merge-replication.md) et [Détecter et résoudre des conflits de réplication de fusion](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ## <a name="peer-to-peer-topologies"></a>Topologies d'égal à égal  
  Les scénarios suivants illustrent des utilisations standard de la réplication d'égal à égal.  
@@ -75,13 +75,13 @@ ms.locfileid: "47785247"
   
  Chaque bureau possède un serveur de base de données et un serveur d'applications dont se servent les ingénieurs de support lorsqu'ils entrent et mettent à jour les informations sur les appels clients. La topologie est partitionnée selon l'horaire. Les mises à jour n'ont donc lieu que sur le nœud actuellement ouvert, puis elles sont acheminées aux autres bases de données participantes. Cette topologie présente les avantages suivants :  
   
--   indépendance sans isolement : chaque bureau peut insérer, mettre à jour ou supprimer des données indépendamment, mais aussi les partager du fait de leur réplication sur toutes les bases de données participantes ;  
+-   indépendance sans isolement : chaque bureau peut insérer, mettre à jour ou supprimer des données indépendamment, mais aussi les partager du fait de leur réplication sur toutes les bases de données participantes ;  
   
 -   disponibilité élevée en cas de panne ou de maintenance sur une ou plusieurs bases de données participante.  
   
      ![Réplication d’égal à égal, trois et quatre nœuds](../../../relational-databases/replication/transactional/media/repl-multinode-04.gif "Réplication d’égal à égal, trois et quatre nœuds")  
   
- L'illustration ci-dessus montre l'ajout d'un nœud dans la topologie qui en compte déjà trois. Un nœud pourrait être ajouté dans ce scénario pour les raisons suivantes :  
+ L'illustration ci-dessus montre l'ajout d'un nœud dans la topologie qui en compte déjà trois. Un nœud pourrait être ajouté dans ce scénario pour les raisons suivantes :  
   
 -   parce qu'un autre bureau est ouvert ;  
   
@@ -124,7 +124,7 @@ ms.locfileid: "47785247"
   
 -   filtres de lignes et de colonnes ;  
   
--   colonnes d'horodatage ;  
+-   colonnes d'horodatage ;  
   
 -   serveurs de publication et Abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ;  
   
@@ -159,7 +159,7 @@ ms.locfileid: "47785247"
   
 ||Homologues SQL Server 2005 uniquement ou combinaison d’homologues SQL Server 2005 et d’homologues SQL Server 2008 ou version ultérieure|Homologues SQL Server 2005 uniquement ou combinaison d’homologues SQL Server 2005 et d’homologues SQL Server 2008 ou version ultérieure|Homologues SQL 2008 ou version ultérieure|Homologues SQL 2008 ou version ultérieure|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
-|Ajout d’un nœud à la topologie|2 nœuds dans la topologie complète : aucune suspension requise. Utilisez plutôt `sync_type = 'initialize with backup'`|Plus de 2 nœuds : suspension requise.|`sync_type = 'replication support only'`: suspension requise.|`sync_type = 'initialize with backup'` et `'initialize from lsn'`: aucune suspension requise.|  
+|Ajout d’un nœud à la topologie|2 nœuds dans la topologie complète : aucune suspension requise. Utilisez plutôt `sync_type = 'initialize with backup'`|Plus de 2 nœuds : suspension requise.|`sync_type = 'replication support only'`: suspension requise.|`sync_type = 'initialize with backup'` et `'initialize from lsn'` : aucune suspension requise.|  
   
  Les modifications de schéma de topologie (ajout ou suppression d’un article) nécessitent une suspension. Pour plus d’informations, consultez [Administrer une topologie d’égal à égal &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   
@@ -169,9 +169,9 @@ ms.locfileid: "47785247"
   
  Les modifications de schéma d’article (ajout/suppression de colonnes) ne nécessitent jamais de suspension.  
   
--   Ajout d’article : pour l’ajout d’un article à une configuration existante, nous devons suspendre le système, exécuter l’instruction CREATE TABLE, charger les données initiales dans chaque nœud de la topologie, puis ajouter le nouvel article à chacun de ces nœuds.  
+-   Ajout d’article : pour l’ajout d’un article à une configuration existante, nous devons suspendre le système, exécuter l’instruction CREATE TABLE, charger les données initiales dans chaque nœud de la topologie, puis ajouter le nouvel article à chacun de ces nœuds.  
   
--   Suppression d’article : si nous voulons que tous les nœuds présentent un état cohérent, nous devons suspendre la topologie.  
+-   Suppression d’article : si nous voulons que tous les nœuds présentent un état cohérent, nous devons suspendre la topologie.  
   
  Pour plus d’informations, consultez[Suspendre une topologie de réplication &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md) et [Administrer une topologie d’égal à égal &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   
@@ -182,6 +182,6 @@ ms.locfileid: "47785247"
 ## <a name="see-also"></a> Voir aussi  
  [Administrer une topologie d’égal à égal &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d’instantané](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [Types de publication pour la réplication transactionnelle](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)  
+ [Réplication transactionnelle](../../../relational-databases/replication/transactional/transactional-replication.md)  
   
   

@@ -19,12 +19,12 @@ ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d84de9706fe17d490c5bfc423969b748122ef79e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1042ab20755059c0b6730f1bfe810c1b5d46c31b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630418"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129449"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Afficher et modifier les propriétés d'un abonnement par extraction (pull)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47630418"
      [Objets RMO (Replication Management Objects)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Affichez les propriétés de l’abonnement par extraction à partir du serveur de publication ou de l’Abonné dans la boîte de dialogue **Propriétés de l’abonnement - \<serveur_publication> : \<base_de_données_publication>**, disponible dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez modifier des propriétés ou en afficher d'autres sur l'Abonné. Vous pouvez également afficher des propriétés à partir du serveur de publication sous l'onglet **Tous les abonnements** , disponible dans le moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Affichez les propriétés d’abonnement par extraction à partir du serveur de publication ou de l’Abonné dans la boîte de dialogue **Propriétés de l’abonnement - \<serveur_publication> : \<base_de_données_publication>**, disponible dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez modifier des propriétés ou en afficher d'autres sur l'Abonné. Vous pouvez également afficher des propriétés à partir du serveur de publication sous l'onglet **Tous les abonnements** , disponible dans le moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>Pour afficher des propriétés d'extraction d'abonnement à partir du serveur de publication dans Management Studio  
   
@@ -161,8 +161,8 @@ ms.locfileid: "47630418"
 8.  Fermez toutes les connexions.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Afficher des informations et exécuter des tâches relatives à un abonnement &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [Bonnes pratiques en matière de sécurité de la réplication](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

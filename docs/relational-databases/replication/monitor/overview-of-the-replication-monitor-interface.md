@@ -14,12 +14,12 @@ ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2deb67c8fff00cc2780fc28e4a04e938db41c4a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c6df1fe4c6954539afe8043ffb36c89e5f428fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764647"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128549"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Présentation de l'interface du moniteur de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "47764647"
   
      Cet onglet affiche les informations détaillées sur les agents et les travaux utilisés par tous les types de réplication. L'onglet permet également de démarrer et d'arrêter chaque agent ou travail.  
   
- Pour plus d’informations, consultez [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+ Pour plus d’informations, consultez [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Le moniteur de réplication fournit également un menu contextuel pour le nœud Serveur de publication. Cliquez avec le bouton droit sur un serveur de publication dans le volet gauche pour effectuer les tâches suivantes :  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47764647"
   
 -   Onglet**Agents**   
   
-     Cet onglet affiche des informations sur les agents utilisés par la réplication. Cet onglet affiche des informations sur les agents suivants :  
+     Cet onglet affiche des informations sur les agents utilisés par la réplication. Cet onglet affiche des informations sur les agents suivants :  
   
     -   Agent d'instantané, utilisé par toutes les publications  
   
@@ -179,7 +179,7 @@ ms.locfileid: "47764647"
   
          Les messages d'erreur disponibles fournissent des informations détaillées sur la raison de la non-exécution d'un agent et constituent un point de départ à la résolution des problèmes liés aux agents associés à une publication.  
   
- Pour plus d’informations, consultez [Afficher des informations et exécuter des tâches pour une publication &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) et [Afficher des informations et exécuter des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+ Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Le moniteur de réplication fournit également un menu contextuel pour le nœud de publications. Cliquez avec le bouton droit sur un serveur de publication dans le volet gauche pour effectuer les opérations suivantes :  
   
@@ -218,7 +218,7 @@ ms.locfileid: "47764647"
   
          Cet onglet fournit des statistiques détaillées sur chaque article traité pendant la synchronisation, notamment la durée de chaque phase de traitement (téléchargement des modifications amont/aval, etc.). Il permet d'identifier les tables qui provoquent des ralentissements et il est l'emplacement idéal pour résoudre les problèmes de performances posés par les abonnements de fusion.  
   
- Pour plus d’informations, consultez [Afficher des informations et exécuter des tâches pour un abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) et [Afficher des informations et exécuter des tâches pour les agents associés à un abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>Affichage d'informations et réalisation de tâches associées aux profils d'agents  
  Le moniteur de réplication inclut plusieurs boîtes de dialogue permettant de gérer les profils d'agents. Les profils d'agents sont des ensembles de paramètres qui déterminent le comportement des agents. Pour plus d’informations, consultez [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md). Les boîtes de dialogue sont les suivantes :  
@@ -236,6 +236,6 @@ ms.locfileid: "47764647"
      Cette boîte de dialogue vous permet de créer un profil incluant en option les valeurs d'un profil existant.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

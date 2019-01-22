@@ -21,12 +21,12 @@ ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 8ae88c08604236c74915275c3b7edb515697d8ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5faae18ce730182218886cf46c711d16344cfd88
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652871"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125869"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Supprime tous les messages d'information.
 ## <a name="remarks"></a>Notes   
 Sur un serveur de production, pour éviter un comportement imprévisible, il est recommandé d'activer uniquement les indicateurs de trace à l'échelle du serveur à l'aide de l'une des méthodes suivantes :
 -   Utilisez l’option de démarrage de ligne de commande **-T** de Sqlservr.exe. Cette pratique est recommandée car elle garantit que toutes les instructions sont exécutées avec l'indicateur de trace activé. Celles-ci comprennent les commandes des scripts de démarrage. Pour plus d’informations, consultez [sqlservr Application](../../tools/sqlservr-application.md).  
--   Utilisez DBCC TRACEON **(***trace#* [**,** ...*.n*]**,-1)** uniquement quand des utilisateurs ou des applications ne sont pas simultanément en train d’exécuter des instructions sur le système.  
+-   Utilisez DBCC TRACEON **(**_trace#_ [**,** ...*.n*]**,-1)** uniquement quand des utilisateurs ou des applications ne sont pas simultanément en train d’exécuter des instructions sur le système.  
 
 Les indicateurs de trace permettent de personnaliser certaines caractéristiques en contrôlant le fonctionnement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les indicateurs de trace, une fois activés, le restent sur le serveur jusqu'à ce qu'ils soient désactivés lors de l'exécution de l'instruction DBCC TRACEOFF. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il existe deux types d'indicateurs de trace : les indicateurs de trace de session et les indicateurs de trace globaux. Les indicateurs de trace de session sont actifs pour une connexion et visibles uniquement pour celle-ci. Les indicateurs de trace globaux sont définis au niveau du serveur et sont visibles pour chaque connexion sur celui-ci. Pour déterminer l'état des indicateurs de trace, utilisez l'instruction DBCC TRACESTATUS. Pour désactiver certains indicateurs de trace, exécutez DBCC TRACEOFF.
   

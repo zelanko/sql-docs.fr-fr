@@ -26,15 +26,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9429c36f66a749ba2de37e4cb222e09209e672f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b941c351bdc40bcfa22ee65ec1587764e5bb7e78
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700307"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300236"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Éditeurs de texte et de requête (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
+
   Vous pouvez utiliser l'un des éditeurs [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour modifier et tester de manière interactive un script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX ou XML/A, ou pour modifier un fichier texte brut ou XML. Chaque éditeur est pris en charge par un service propre à un langage qui met en couleurs les mots clés et qui vérifie la syntaxe et les erreurs d'utilisation. L'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] comprend un débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] que vous pouvez utiliser pour résoudre les problèmes présents dans le code [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ## <a name="sql-server-management-studio-editors"></a>Éditeurs SQL Server Management Studio  

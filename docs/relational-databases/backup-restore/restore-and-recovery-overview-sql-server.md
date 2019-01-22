@@ -18,15 +18,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], about restoring databases
 - database restores [SQL Server], scenarios
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: afc9d46066c435bc14f2e14fedb0a285ac3b95e3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 013458c80692f4b7f31ba1302028585496a0cd25
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672828"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242040"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Vue d'ensemble de la restauration et de la récupération (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,15 +146,15 @@ ms.locfileid: "51672828"
 ##  <a name="DRA"></a> Assistant de récupération de base de données (SQL Server Management Studio)  
  L'Assistant Récupération de base de données permet de créer des plans de restauration qui implémentent des séquences de restauration correctes et optimales. De nombreux problèmes connus, liés à la restauration de la base de données, et améliorations demandées par les clients ont été pris en considération. Les améliorations importantes introduites par l'Assistant Récupération de base de données sont les suivantes :  
   
--   **Algorithme de plan de restauration :**  l’algorithme utilisé pour créer des plans de restauration a été amélioré considérablement, en particulier pour les scénarios de restauration complexes. Nombre de cas limites, notamment la réplication de scénarios dans les restaurations ponctuelles, sont gérés plus efficacement que dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Algorithme de plan de restauration :**  l’algorithme utilisé pour créer des plans de restauration a été amélioré considérablement, en particulier pour les scénarios de restauration complexes. Nombre de cas limites, notamment la réplication de scénarios dans les restaurations ponctuelles, sont gérés plus efficacement que dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Restaurations dans le temps :**  l’Assistant Récupération de base de données simplifie considérablement la restauration d’une base de données à un moment donné. Une chronologie visuelle de sauvegarde améliore considérablement la prise en charge des restaurations dans le temps. La chronologie visuelle vous permet d'identifier un point possible comme point de récupération cible pour restaurer une base de données. La chronologie permet de parcourir un chemin de récupération ramifié (un chemin d'accès qui couvre les branchements de récupération). Un plan spécifique de restauration dans le temps inclut automatiquement les sauvegardes pertinentes pour la restauration à un point cible (date et heure). Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+-   **Restaurations dans le temps :**  l’Assistant Récupération de base de données simplifie considérablement la restauration d’une base de données à un moment donné. Une chronologie visuelle de sauvegarde améliore considérablement la prise en charge des restaurations dans le temps. La chronologie visuelle vous permet d'identifier un point possible comme point de récupération cible pour restaurer une base de données. La chronologie permet de parcourir un chemin de récupération ramifié (un chemin d'accès qui couvre les branchements de récupération). Un plan spécifique de restauration dans le temps inclut automatiquement les sauvegardes pertinentes pour la restauration à un point cible (date et heure). Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
  Pour plus d'informations sur l'Assistant Récupération de base de données, consultez les blogs de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivants :  
   
--   [Assistant Récupération : introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Assistant Récupération : introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Assistant Récupération : utilisation de SSMS pour créer/restaurer des sauvegardes fractionnées](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Assistant Récupération : utilisation de SSMS pour créer/restaurer des sauvegardes fractionnées](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
   
 ##  <a name="RelatedContent"></a> Contenu associé  
  Aucun.  

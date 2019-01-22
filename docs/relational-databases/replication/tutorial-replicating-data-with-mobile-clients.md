@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Configurer la réplication entre un serveur et des clients mobiles (réplication de fusion) | Microsoft Docs'
+title: 'Didacticiel : configurer la réplication entre un serveur et des clients mobiles (réplication de fusion) | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/03/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc09bcca6e70d80e256cba8cd8a1ad6a477a4742
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545544"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130719"
 ---
-# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutoriel : Configurer la réplication entre un serveur et des clients mobiles (réplication de fusion)
+# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Didacticiel : configurer la réplication entre un serveur et des clients mobiles (fusion)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 La réplication de fusion constitue une bonne solution au problème de transfert des données entre un serveur central et des clients mobiles qui ne sont connectés que de façon occasionnelle. Grâce aux Assistants de réplication, vous pouvez aisément configurer et administrer une topologie de réplication de fusion. 
 
@@ -37,7 +37,7 @@ Dans ce didacticiel, vous apprendrez à :
 > * Synchroniser l’abonnement avec la publication de fusion.
   
 ## <a name="prerequisites"></a>Conditions préalables requises  
-Ce tutoriel est destiné aux utilisateurs qui sont familiers des opérations essentielles de base de données, mais pas de la réplication. Avant de commencer ce tutoriel, vous devez effectuer le [Tutoriel : Préparer le serveur à la réplication](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
+Ce tutoriel est destiné aux utilisateurs qui sont familiers des opérations essentielles de base de données, mais pas de la réplication. Avant de commencer ce tutoriel, vous devez effectuer le [Tutoriel : Préparer SQL Server pour la réplication](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Pour suivre ce tutoriel, vous avez besoin de SQL Server, SQL Server Management Studio (SSMS) et une base de données AdventureWorks : 
   
@@ -58,7 +58,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server, SQL Server Management S
 > - Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez vous connecter au serveur de publication et à l’abonné à l’aide d’un identifiant de connexion membre du rôle serveur fixe **sysadmin**. Pour plus d’informations sur ce rôle, consultez [Rôles de niveau serveur](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
-**Durée estimée pour effectuer ce tutoriel : 60 minutes**  
+**Durée estimée pour effectuer le didacticiel : 60 minutes**  
   
 ## <a name="configure-a-publisher-for-merge-replication"></a>Configurer un serveur de publication pour la réplication de fusion
 Dans cette leçon, vous allez créer une publication de fusion à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour publier un sous-ensemble des tables **Employee**, **SalesOrderHeader** et **SalesOrderDetail** dans l’exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Ces tables sont filtrées avec des filtres de lignes paramétrables pour que chaque abonnement contienne une partition unique des données. Vous ajouterez également la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée par l’Agent de fusion à la liste d’accès à la publication.  
@@ -205,7 +205,7 @@ Dans cette section, vous allez ajouter un abonnement à la publication de fusion
 
    ![Sélections pour l’ajout d’une base de données à l’abonné](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. Dans la page **Sécurité de l’Agent de fusion**, cliquez sur les points de suspension (**...**). Entrez <*nom_ordinateur_abonné*>**\repl_merge** dans la zone **Compte de processus** et fournissez le mot de passe pour ce compte. Sélectionnez **OK**, **Suivant**, puis à nouveau **Suivant**.  
+8. Dans la page **Sécurité de l’agent de fusion**, cliquez sur le bouton de sélection (**...** ). Entrez <*nom_ordinateur_abonné*>**\repl_merge** dans la zone **Compte de processus** et fournissez le mot de passe pour ce compte. Sélectionnez **OK**, **Suivant**, puis à nouveau **Suivant**.  
 
    ![Sélections pour la sécurité de l’Agent de fusion](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
@@ -251,7 +251,7 @@ Dans cette section, vous allez ajouter un abonnement à la publication de fusion
 Pour plus d'informations, consultez :  
 - [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
 - [Créer un abonnement par extraction](../../relational-databases/replication/create-a-pull-subscription.md)  
-- [Instantanés des publications de fusion avec des filtres paramétrés](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+- [Instantanés des publications de fusion avec des filtres paramétrés](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
 
 ## <a name="synchronize-the-subscription-to-the-merge-publication"></a>Synchroniser l’abonnement avec la publication de fusion
 

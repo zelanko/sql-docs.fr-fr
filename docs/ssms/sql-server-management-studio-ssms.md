@@ -13,18 +13,21 @@ ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7157a60410fcf2d0b75dce7e73edb0814d042e97
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 107bbfa29c7118252bbad06d2f81829e3d9dedf0
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699887"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299206"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
+
+
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) est un environnement intégré de gestion des infrastructures SQL. Utilisez SSMS pour accéder à, configurer, gérer, administrer et développer tous les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Azure SQL Database et SQL Data Warehouse. SSMS fournit un utilitaire unique et complet qui associe un vaste ensemble d’outils graphiques à différents éditeurs de script performants, pour permettre aux développeurs et aux administrateurs de base de données de tous niveaux d’avoir accès à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
-
-
 
  
  - [**Télécharger SQL Server Management Studio (SSMS)**](download-sql-server-management-studio-ssms.md) 
@@ -48,8 +51,8 @@ ms.locfileid: "51699887"
 - Pour des informations supplémentaires, consultez [les FAQ sur la stratégie moderne](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
 
 ## <a name="next-steps"></a>Étapes suivantes  
-[Didacticiel : SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
-[Didacticiel : écriture d'instructions Transact-SQL](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)  
+[Didacticiel : SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
+[Didacticiel : Écriture d’instructions Transact-SQL](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)  
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 

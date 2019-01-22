@@ -16,18 +16,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8d57d294ffe2fe70a4bbfcf805d4eeb350771f2
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cb85ebe35b50d143f4887cba91eda08a930666a0
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697338"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299006"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Référence Transact-SQL (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Participez à l’amélioration de la documentation SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Cette rubrique présente les principes de base pour rechercher et utiliser les rubriques de référence Microsoft Transact-SQL (T-SQL). T-SQL est un élément essentiel de l’utilisation des produits et services Microsoft SQL. Tous les outils et applications qui communiquent avec une base de données SQL envoient des commandes T-SQL.  
 
@@ -91,7 +91,7 @@ La documentation SQL comprend les autres informations de référence du langage 
 
 Maintenant que vous savez comment rechercher les rubriques de référence T-SQL, vous êtes prêt à effectuer ce qui suit :
 
-- Suivre un court didacticiel sur l’écriture de T-SQL, consultez [Didacticiel : Écriture d’instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md). 
+- Suivre un court tutoriel sur l’écriture de T-SQL, consultez [Tutoriel : Écriture d’instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md). 
 - Consulter les [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
 
   

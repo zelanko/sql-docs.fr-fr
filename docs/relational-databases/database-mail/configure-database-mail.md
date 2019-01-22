@@ -40,20 +40,20 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d0f86f70a4cd496c4f4f32dd0a88077337cf645
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e16bca2aabbf35c3bd75dd7a0c75e81c13efcfbd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505144"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127659"
 ---
 # <a name="configure-database-mail"></a>Configuration de la Messagerie de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment activer et configurer la messagerie de base de données à l'aide de l'Assistant Configuration de la messagerie de base de données, et créer un script de configuration de la messagerie de base de données à l'aide de modèles.  
   
--   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Sécurité](#Security)  
+-   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [sécurité](#Security)  
   
--   **Pour configurer la messagerie de base de données, utilisez :**  [Assistant Configuration de la messagerie de base de données](#DBWizard), [Utilisation de modèles](#Template)  
+-   **Pour configurer Database Mail, utilisez :**  [Assistant Configuration de Database Mail](#DBWizard), [Utilisation de modèles](#Template)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Pour activer la messagerie de base de données sur ce serveur, utilisez l’option **Messagerie de base de données XPs** . Pour plus d’informations, consultez la rubrique de référence [Messagerie de base de données XPs (option de configuration de serveur)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
@@ -155,7 +155,7 @@ ms.locfileid: "52505144"
  Tapez l'adresse de messagerie à utiliser pour les réponses aux messages électroniques envoyés à partir de ce compte. L'adresse Répondre au courrier est facultative. Par exemple, les réponses envoyées vers un compte du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peuvent être adressées à l’administrateur de base de données, dont l’adresse est danw@Adventure-Works.com.  
   
  **Nom du serveur**  
- Tapez le nom ou l'adresse IP du serveur SMTP utilisé par le compte pour envoyer du courrier électronique. En général, son format est semblable à celui-ci : **smtp.***<votre_société>***.com**. Pour plus d'informations, contactez l'administrateur de messagerie.  
+ Tapez le nom ou l'adresse IP du serveur SMTP utilisé par le compte pour envoyer du courrier électronique. En général, son format est semblable à celui-ci : **smtp.**_<votre_société>_**.com**. Pour plus d'informations, contactez l'administrateur de messagerie.  
   
  **Numéro de port**  
  Tapez le numéro de port du serveur SMTP de ce compte. La plupart des serveurs SMTP utilisent le port 25.  
@@ -420,7 +420,7 @@ ms.locfileid: "52505144"
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Utilisez la page **Envoyer un message électronique de test à partir de***<nom_instance>* pour envoyer un e-mail en utilisant le profil de messagerie de base de données spécifié. Seuls les membres du rôle serveur fixe **sysadmin** peuvent envoyer des messages électroniques de test avec cette page.  
+ Utilisez la page **Envoyer un message électronique de test à partir de**_<nom_instance>_ pour envoyer un message électronique en utilisant le profil de messagerie de base de données spécifié. Seuls les membres du rôle serveur fixe **sysadmin** peuvent envoyer des messages électroniques de test avec cette page.  
   
  **Profil de messagerie de base de données**  
  Sélectionnez un profil de messagerie de base de données dans la liste. Ce champ est obligatoire. Si aucun profil ne s'affiche, soit il n'en existe pas, soit vous n'avez pas d'autorisation sur ces profils. Utilisez l' **Assistant Configuration de la messagerie de base de données** pour créer et configurer des profils. Si aucun profil n'est répertorié, utilisez l'Assistant Configuration de la messagerie de base de données pour créer un profil pour votre propre usage.  

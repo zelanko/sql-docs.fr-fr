@@ -1,7 +1,7 @@
 ---
-title: 'Étape 4 : Ajout d’une destination de fichier plat | Microsoft Docs'
+title: 'Étape 4 : Ajouter une destination de fichier plat | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/07/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,56 +11,57 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ed5aa9aab3e53288f2cc482f87b32048d45a56b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b59967b631475fc0f7eb7737fac65022fc18973
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842787"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211020"
 ---
-# <a name="lesson-4-4---adding-a-flat-file-destination"></a>Leçon 4-4 : Ajout d’une destination de fichier plat
-La sortie d'erreur de la transformation Lookup Currency Key réachemine vers la transformation Script toutes les lignes de données ayant échoué au cours de l'opération de recherche. Pour améliorer les informations recueillies sur les erreurs survenues, la transformation Script exécute un script chargé d'obtenir la description des erreurs.  
+# <a name="lesson-4-4-add-a-flat-file-destination"></a>Leçon 4-4 : Ajouter une destination de fichier plat
+
+La sortie d’erreur de la transformation Lookup Currency Key réachemine toutes les lignes de données ayant échoué au cours de la recherche vers l’opération de transformation Script. Pour fournir davantage d’informations sur les erreurs survenues, la transformation Script exécute un script chargé d’obtenir la description de chaque erreur.  
   
-Au cours de cette tâche, vous allez enregistrer toutes ces informations sur les lignes échouées dans un fichier délimité pour les traiter ultérieurement. Pour enregistrer les lignes ayant échoué, vous devez ajouter et configurer un gestionnaire de connexions de fichiers plats pour le fichier texte censé contenir les données sur les erreurs, ainsi qu'une destination de fichier plat. En définissant les propriétés du gestionnaire de connexions de fichier plat utilisé par la destination de fichier plat, vous pouvez spécifier la façon dont elle met en forme et écrit le fichier texte. Pour plus d'informations, consultez [Flat File Connection Manager](../integration-services/connection-manager/flat-file-connection-manager.md) et [Flat File Destination](../integration-services/data-flow/flat-file-destination.md).  
+Au cours de cette tâche, vous enregistrez toutes ces informations sur les lignes échouées dans un fichier texte délimité pour les traiter ultérieurement. Pour enregistrer les lignes ayant échoué, vous ajoutez et configurez un gestionnaire de connexions de fichiers plats pour le fichier texte qui contient les données sur les erreurs ainsi qu’une destination de fichier plat. En définissant les propriétés du gestionnaire de connexions de fichier plat utilisé par la destination de fichier plat, vous pouvez spécifier la façon dont elle met en forme et écrit le fichier texte. Pour plus d’informations, consultez [Gestionnaire de connexions de fichiers plats](../integration-services/connection-manager/flat-file-connection-manager.md) et [Destination de fichier plat](../integration-services/data-flow/flat-file-destination.md).  
   
-### <a name="to-add-and-configure-a-flat-file-destination"></a>Pour ajouter et configurer une destination de fichier plat  
+## <a name="add-and-configure-a-flat-file-destination"></a>Ajouter et configurer une destination de fichier plat  
   
-1.  Cliquez sur l'onglet **Flux de données** .  
+1.  Sélectionnez l’onglet **Flux de données**.  
   
-2.  Dans la **Boîte à outils SSIS**, développez **Autre**, puis faites glisser **Destination du fichier plat** sur l'aire de conception Flux de données. Placez la **Destination de fichier plat** directement sous la transformation **Get Error Description** .  
+2.  Dans la **Boîte à outils SSIS**, développez **Autres destinations**, puis faites glisser **Destination du fichier plat** sur l’aire de conception Flux de données. Placez la **Destination de fichier plat** directement sous la transformation **Get Error Description** .  
   
-3.  Cliquez sur la transformation **Obtenir la description de l’erreur** , puis faites glisser la flèche verte vers la nouvelle **Destination de fichier plat**.  
+3.  Sélectionnez la transformation **Obtenir la description de l’erreur**, puis faites glisser la flèche bleue vers la nouvelle **Destination de fichier plat**.  
   
-4.  Sur l'aire de conception **Flux de données** , cliquez sur **Destination de fichier plat** dans la transformation de **Destination de fichier plat** nouvellement ajoutée, puis remplacez le nom par **Failed Rows**.  
+4.  Sur l’aire de conception **Flux de données**, sélectionnez le nom **Destination de fichier plat** dans la nouvelle transformation de **Destination de fichier plat**, puis remplacez ce nom par **Failed Rows**.  
   
-5.  Cliquez avec le bouton droit sur la transformation **Failed Rows** , cliquez sur **Modifier**, puis dans **l’Éditeur de destination de fichier plat**, cliquez sur **Nouveau**.  
+5.  Cliquez avec le bouton droit sur la transformation **Failed Rows**, sélectionnez **Modifier**, puis dans l’**Éditeur de destination de fichier plat**, sélectionnez **Nouveau**.  
   
-6.  Dans la boîte de dialogue **Format de fichier plat** , assurez-vous que **Délimité** est sélectionné, puis cliquez sur **OK**.  
+6.  Dans la boîte de dialogue **Format de fichier plat**, assurez-vous que **Délimité** est sélectionné, puis sélectionnez **OK**.  
   
-7.  Dans l' **Éditeur du gestionnaire de connexions de fichiers plats**, dans la zone **Nom du gestionnaire de connexions** , tapez **Données d'erreur**.  
+7.  Dans l’**Éditeur du gestionnaire de connexions de fichiers plats**, dans la zone **Nom du gestionnaire de connexions**, entrez *Données d’erreur*.  
   
-8.  Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** , cliquez sur **Parcourir**, puis recherchez le dossier dans lequel le fichier est à stocker.  
+8.  Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats**, sélectionnez **Parcourir**, puis recherchez le dossier dans lequel le fichier est à stocker.  
   
-9. Dans la boîte de dialogue **Ouvrir** , dans la zone **Nom de fichier**, tapez **SortieErreur.txt**, puis cliquez sur **Ouvrir**.  
+9. Dans la boîte de dialogue **Ouvrir**, dans la zone **Nom de fichier**, entrez *SortieErreur.txt*, puis sélectionnez **Ouvrir**.  
   
-10. Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** , vérifiez que la zone **Paramètres régionaux** contient la valeur Anglais (États-Unis) et la zone **Page de codes** la valeur 1252 (ANSI - Latin I).  
+10. Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats**, vérifiez que **Paramètres régionaux** a pour valeur **Anglais (États-Unis)** et que la zone **Page de codes** a pour valeur **1252 (ANSI-Latin I)**.  
   
-11. Dans le volet Options, cliquez sur **Colonnes**.  
+11. Dans le volet Options, sélectionnez **Colonnes**.  
   
-    Notez qu'en plus des colonnes du fichier de données source, trois nouvelles colonnes sont présentes : ErrorCode, ErrorColumn et ErrorDescription. Ces colonnes sont générées par la sortie d'erreur de la transformation Lookup Currency Key et par le script de la transformation Get Error Description. Vous pouvez les utiliser pour résoudre le problème à l'origine de l'échec de la ligne.  
+    En plus des colonnes du fichier de données source, il existe trois nouvelles colonnes : ErrorCode, ErrorColumn et ErrorDescription. Ces colonnes représentent la sortie d’erreur de la transformation Lookup Currency Key et le script de la transformation Get Error Description. Vous pouvez utiliser ces colonnes pour résoudre le problème à l’origine de l’échec de la ligne.  
   
-12. Cliquez sur **OK**.  
+12. Sélectionnez **OK**.  
   
 13. Dans l' **Éditeur de destination de fichier plat**, désactivez la case à cocher **Remplacer les données du fichier** .  
   
-    La désactivation de cette case à cocher conserve les erreurs sur plusieurs exécutions de packages.  
+    Le fait de décocher cette case conserve les erreurs sur plusieurs exécutions de packages en ajoutant la sortie d’erreur de chaque nouvelle exécution.
   
-14. Dans l' **Éditeur de destination de fichier plat**, cliquez sur **Mappages** pour vérifier que toutes les colonnes sont correctes. Vous pouvez également renommer les colonnes dans la destination.  
+14. Dans l’**Éditeur de destination de fichier plat**, sélectionnez **Mappages** pour vérifier que toutes les colonnes sont correctes. Vous pouvez également renommer les colonnes dans la destination.  
   
-15. Cliquez sur **OK**.  
+15. Sélectionnez **OK**.  
   
-## <a name="next-steps"></a>Next Steps  
-[Étape 5 : Test de la leçon 4 du Package du tutoriel](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+## <a name="go-to-next-task"></a>Passer à la tâche suivante
+[Étape 5 : Tester le package du tutoriel de la leçon 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   
   

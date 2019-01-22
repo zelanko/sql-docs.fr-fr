@@ -22,15 +22,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63c65bb6348afa4d095971b5833f26e8e33dd5a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 111d7cb0790bd0cbdb9c9bb17a6ebcb78ac3b04a
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666765"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298606"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Évalue les arguments dans l’ordre et retourne la valeur actuelle de la première expression qui ne prend pas initialement la valeur `NULL`. Par exemple, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` renvoie la troisième valeur, car il s’agit de la première valeur qui n’est pas Null. 
   
@@ -125,7 +128,7 @@ COALESCE(Class, Color, ProductNumber) AS FirstNotNull
 FROM Production.Product;  
 ```  
   
-### <a name="b-running-a-complex-example"></a>B. Exécution d'un exemple complexe  
+### <a name="b-running-a-complex-example"></a>b. Exécution d'un exemple complexe  
  Dans l'exemple suivant, la table `wages` comporte trois colonnes qui contiennent des informations sur les salaires annuels des employés : salaire horaire, salaire et commission. Cependant, chaque employé ne perçoit qu'un seul type de salaire. Pour déterminer le montant total versé à tous les employés, utilisez `COALESCE` afin de recevoir seulement la valeur non NULL trouvée dans `hourly_wage`, `salary` et `commission`.  
   
 ```sql  

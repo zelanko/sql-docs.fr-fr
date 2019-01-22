@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 21008fca4e8bb75b9daace2d83cd166dafc79eb9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9c15f88e1bf3e7d07d09c5d92ceff5a3face1ade
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521615"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135409"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Afficher et modifier les paramètres de sécurité de la réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52521615"
   
      [Objets RMO (Replication Management Objects)](#RMOProcedure)  
   
--   **Suivi :**  [Après avoir modifié les paramètres de sécurité de la réplication](#FollowUp)  
+-   **Suivi :**  [après avoir modifié les paramètres de sécurité de la réplication](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -144,9 +144,9 @@ ms.locfileid: "52521615"
   
 1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** sur le serveur de publication, vous pouvez apporter les modifications suivantes :  
   
-    -   Pour modifier le compte sous lequel l’Agent de distribution s’exécute et établit des connexions au serveur de distribution, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés (**...**) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de distribution** .  
+    -   Pour modifier le compte sous lequel l'Agent de distribution s'exécute et établit des connexions sur le serveur de distribution, cliquez sur la ligne **Compte de processus de l'agent** puis cliquez sur le bouton des propriétés (**...**) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de distribution** .  
   
-    -   Pour modifier le contexte sous lequel l’Agent de distribution se connecte à l’Abonné, cliquez sur la ligne **Connexion de l’Abonné**, puis sur le bouton des propriétés (**…**) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
+    -   Pour modifier le contexte sous lequel l'Agent de distribution se connecte à l'Abonné, cliquez sur la ligne **Connexion de l'Abonné** puis cliquez sur le bouton des propriétés (**…**) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
   
          Si vous utilisez les abonnements de mise à jour en attente, l'Agent de lecture de la file d'attente utilise également le contexte spécifié ici pour les connexions à l'Abonné.  
   
@@ -156,11 +156,11 @@ ms.locfileid: "52521615"
   
 1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** sur l’Abonné, vous pouvez apporter les modifications suivantes :  
   
-    -   Pour modifier le compte sous lequel l’Agent de distribution s’exécute et établit des connexions à l’Abonné, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés (**...**) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de distribution** .  
+    -   Pour modifier le compte sous lequel l'Agent de distribution s'exécute et établit des connexions sur l'Abonné, cliquez sur la ligne **Compte de processus de l'agent** puis cliquez sur le bouton des propriétés (**...**) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de distribution** .  
   
          Si vous utilisez les abonnements de mise à jour en attente, l'Agent de lecture de la file d'attente utilise également le contexte spécifié ici pour les connexions à l'Abonné.  
   
-    -   Pour modifier le contexte sous lequel l’Agent de distribution se connecte au serveur de distribution, cliquez sur la ligne **Connexion du serveur de distribution**, puis sur le bouton des propriétés (**…**) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
+    -   Pour modifier le contexte sous lequel l'Agent de distribution se connecte au serveur de distribution, cliquez sur la ligne **Connexion du serveur de distribution** puis cliquez sur le bouton des propriétés (**…**) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -168,9 +168,9 @@ ms.locfileid: "52521615"
   
 1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** sur le serveur de publication, vous pouvez apporter les modifications suivantes :  
   
-    -   Pour modifier le compte sous lequel l’Agent de fusion s’exécute et établit des connexions au serveur de publication et au serveur de distribution, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés (**...**) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de fusion** .  
+    -   Pour modifier le compte sous lequel l'Agent de fusion s'exécute et établit des connexions sur le serveur de distribution, cliquez sur la ligne **Compte de processus de l'agent** puis cliquez sur le bouton des propriétés (**...**) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de fusion** .  
   
-    -   Pour modifier le contexte sous lequel l’Agent de fusion se connecte à l’Abonné, cliquez sur la ligne **Connexion de l’Abonné**, puis sur le bouton des propriétés (**…**) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
+    -   Pour modifier le contexte sous lequel l'Agent de fusion se connecte à l'Abonné, cliquez sur la ligne **Connexion de l'Abonné** puis cliquez sur le bouton des propriétés (**…**) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -178,15 +178,15 @@ ms.locfileid: "52521615"
   
 1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** sur l’Abonné, vous pouvez apporter les modifications suivantes :  
   
-    -   Pour modifier le compte sous lequel l’Agent de fusion s’exécute et établit des connexions à l’Abonné, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés (**...**) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de fusion** .  
+    -   Pour modifier le compte sous lequel l'Agent de fusion s'exécute et établit des connexions sur l'Abonné, cliquez sur la ligne **Compte de processus de l'agent** puis cliquez sur le bouton des propriétés (**...**) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de fusion** .  
   
-    -   Pour modifier le contexte sous lequel l’Agent de fusion se connecte au serveur de publication et au serveur de distribution, cliquez sur la ligne **Connexion du serveur de publication**, puis sur le bouton des propriétés (**…**) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
+    -   Pour modifier le contexte sous lequel l'Agent de fusion se connecte au serveur de publication et au serveur de distribution, cliquez sur la ligne **Connexion du serveur de publication** puis cliquez sur le bouton des propriétés (**…**) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>Pour modifier le compte sous lequel s'exécute l'Agent de lecture de la file d'attente  
   
-1.  Dans la page **Général** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur_de_distribution>**, cliquez sur le bouton des propriétés (**...**) à côté de la base de données de distribution.  
+1.  Dans la page **Général** de la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>**, cliquez sur le bouton des propriétés (**...**) à côté de la base de données de distribution.  
   
 2.  Dans la boîte de dialogue **Propriétés de la base de données de distribution - \<Base_de_données>**, cliquez sur le bouton **Paramètres de sécurité** à côte de la zone de texte **Compte de processus de l’agent**.  
   
@@ -468,7 +468,7 @@ ms.locfileid: "52521615"
   
 1.  Créez une connexion à l'Abonné en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription>.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription> .  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>et <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> pour l'abonnement et définissez la connexion créée à l'étape 1 pour la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
@@ -491,7 +491,7 @@ ms.locfileid: "52521615"
   
 1.  Créez une connexion à l'Abonné en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription>.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription> .  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>et <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> pour l'abonnement et définissez la connexion créée à l'étape 1 pour la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
@@ -568,16 +568,16 @@ ms.locfileid: "52521615"
   
  [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir modifié les paramètres de sécurité de la réplication  
+##  <a name="FollowUp"></a> Suivi : après avoir modifié les paramètres de sécurité de la réplication  
  Après avoir modifié le nom de connexion ou le mot de passe d'un Agent, vous devez arrêter et redémarrer celui-ci avant que la modification prenne effet.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Concepts liés à RMO (Replication Management Objects)](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Mettre à niveau les scripts de réplication &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [Gérer les connexions et les mots de passe dans la réplication](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [Identité et contrôle d’accès pour la réplication](../../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [Modèle de sécurité de l’Agent de réplication](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Sécurité et protection &#40;Réplication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

@@ -19,12 +19,12 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b45bd2df29628717d8cb1b2d1ba66a858a03f7a3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1fdf5f600cd455803fe102b487e7a39296bc6fb9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521489"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257004"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Générer un schéma XSD en ligne
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "52521489"
  Exemple :  
   
 ```  
-<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
+<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
   <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="Production.ProductModel">  
     <xsd:complexType>  
@@ -118,7 +118,7 @@ FOR XML AUTO, ELEMENTS, XMLSCHEMA
   
  Comme la requête spécifie la directive ELEMENTS, les données XML résultantes sont centrées sur les éléments. La requête spécifie également la directive XMLSCHEMA. Par conséquent, un schéma XSD en ligne est retourné. Voici le résultat obtenu :  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
   
@@ -196,7 +196,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
   
  Voici l'ensemble de résultats. Notez dans le schéma XSD en ligne que l'élément OrderID est défini deux fois. Dans une des déclarations, minOccurs a la valeur 0, ce qui correspond à l'OrderID de la table CustOrderDetail, et l'autre déclaration est mappée avec la colonne clé primaire OrderID de la table `CustOrder` où minOccurs a la valeur 1 par défaut.  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
   
@@ -223,7 +223,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>Conflits de noms d'éléments  
  Dans FOR XML, le même nom peut être utilisé pour indiquer deux sous-éléments. Par exemple, la requête ci-dessous récupère les valeurs ListPrice et DealerPrice des produits, mais la requête spécifie le même alias, Price, pour ces deux colonnes. Par conséquent, l'ensemble de lignes résultant possèdera deux colonnes du même nom.  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Cas 1 : les deux sous-éléments sont des colonnes non-clés du même type et ils acceptent la valeur NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Cas n° 1 : les deux sous-éléments sont des colonnes non-clés du même type et ils acceptent la valeur NULL  
  Dans la requête ci-dessous, les deux sous-éléments sont des colonnes non-clés du même type et ils acceptent la valeur NULL.  
   
 ```  
@@ -243,7 +243,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
@@ -277,11 +277,11 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
 -   ListPrice et DealerPrice sont du même type, `money`, et les deux acceptent la valeur NULL dans la table. Par conséquent, comme ils peuvent ne pas être retournés dans les données XML résultantes, il existe un seul élément enfant <`Price`> dans la déclaration de type complexe de l'élément <`row`> pour lequel minOccurs=0 et maxOccurs=2.  
   
--   Dans le résultat, comme `DealerPrice` a une valeur NULL dans la table, seul `ListPrice` est retourné comme élément <`Price`>. Si vous ajoutez le paramètre `XSINIL` à la directive ELEMENTS, vous recevrez les deux éléments pour lesquels `xsi:nil` a pour valeur TRUE pour l’élément <`Price`> qui correspond à DealerPrice. Vous recevrez aussi deux éléments enfants <`Price`> dans la définition de type complexe <`row`> dans le schéma XSD en ligne avec l'attribut `nillable` ayant la valeur TRUE pour les deux. Ce fragment est un résultat partiel :  
+-   Dans le résultat, comme `DealerPrice` a une valeur NULL dans la table, seul `ListPrice` est retourné comme élément <`Price`>. Si vous ajoutez le paramètre `XSINIL` à la directive ELEMENTS, vous recevrez les deux éléments pour lesquels `xsi:nil` a pour valeur TRUE pour l’élément <`Price`> qui correspond à DealerPrice. Vous recevrez aussi deux éléments enfants <`Price`> dans la définition de type complexe <`row`> dans le schéma XSD en ligne avec l'attribut `nillable` ayant la valeur TRUE pour les deux. Ce fragment est un résultat partiel :  
   
  `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
@@ -305,7 +305,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</xsd:schema>`  
   
- `<row xmlns="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">`  
+ `<row xmlns="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">`  
   
  `<ProductID>1</ProductID>`  
   
@@ -315,7 +315,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Cas 2 : une colonne clé et une colonne non-clé du même type  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Cas n° 2 : une colonne clé et une colonne non-clé du même type  
  La requête ci-dessous illustre une colonne clé et une colonne non-clé du même type.  
   
 ```  
@@ -337,7 +337,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
@@ -393,7 +393,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Notez dans le schéma XSD en ligne que l'élément <`Col`> correspondant à Col2 a une valeur minOccurs égale à 0.  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Cas 3 : les deux éléments sont de types différents et les colonnes correspondantes acceptent la valeur NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Cas 3 : les deux éléments sont de types différents et les colonnes correspondantes acceptent la valeur NULL  
  La requête ci-dessous est spécifiée sur l'exemple de table défini dans le cas 2 :  
   
 ```  
@@ -406,7 +406,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
@@ -452,11 +452,11 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  `<Col1>1</Col1>`  
   
- `<Col xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"`  
+ `<Col xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
   
  `xsi:type="Col1">1</Col>`  
   
- `<Col xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"`  
+ `<Col xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
   
  `xsi:type="Col2">test</Col>`  
   

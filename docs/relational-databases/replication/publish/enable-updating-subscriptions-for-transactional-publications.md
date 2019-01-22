@@ -15,12 +15,12 @@ ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69993f82e8b32a0bb2dd1702de72cb51d381355a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bb2b72da5f90cf2ff91c386e2a34fed1001de73
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692727"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130099"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Activer les abonnements pouvant être mis à jour pour les publications transactionnelles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47692727"
   
 2.  Dans la page **Sécurité de l'Agent** , spécifiez des paramètres de sécurité pour l'Agent de lecture de file d'attente, en plus de l'Agent d'instantané et de l'Agent de lecture du journal. Pour plus d'informations sur les autorisations nécessaires pour le compte sour lequel s'exécute l'Agent de lecture de file d'attente, consultez [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-    > **REMARQUE :** L’Agent de lecture de la file d’attente est configuré même si vous n’utilisez que des abonnements mis à jour immédiatement.  
+    > **REMARQUE :** L'Agent de lecture de file d'attente est configuré même si vous n'utilisez que des abonnements mis à jour immédiatement.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Lors de la création d'une publication transactionnelle par programme à l'aide de procédures stockées de réplication, vous pouvez activer les abonnements avec mise à jour immédiate ou avec mise à jour en file d'attente.  
@@ -64,7 +64,7 @@ ms.locfileid: "47692727"
   
 3.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Spécifiez le nom de publication utilisé à l’étape 2 pour **@publication** et les informations d’identification Windows sous lesquelles l’Agent d’instantané s’exécute pour **@job_name** et **@password**. Si l'agent utilise l'authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication.  
   
-4.  Ajoutez des articles à la publication. Pour plus d'informations, voir [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+4.  Ajoutez des articles à la publication. Pour plus d’informations, consultez [définir un Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 5.  Au niveau de l'Abonné, créez un abonnement avec mise à jour à cette publication.   
   
@@ -76,7 +76,7 @@ ms.locfileid: "47692727"
   
     -   Si vous ne savez pas si un travail de l’Agent de lecture du journal existe pour une base de données publiée, exécutez [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) au niveau du serveur de publication dans la base de données de publication. Si le jeu de résultats est vide, un travail de l'Agent de lecture du journal doit être créé.  
   
-    -   Sur le serveur de publication, exécutez [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Indiquez les informations d'identification Windows sous lesquelles l'agent s'exécute pour **@job_name** et **@password**. Si l'agent utilise l'authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**.  
+    -   Sur le serveur de publication, exécutez [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Spécifiez les informations d'identification Windows sous lesquelles l'agent s'exécute pour **@job_name** et **@password**. Si l'agent utilise l'authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**.  
   
 2.  Si nécessaire, créez un travail de l'Agent de lecture de la file d'attente pour le serveur de distribution.  
   
@@ -84,13 +84,13 @@ ms.locfileid: "47692727"
   
     -   Si vous ne savez pas si un travail de l’Agent de lecture de la file d’attente existe pour la base de données de distribution, exécutez [sp_helpqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md) au niveau du serveur de distribution dans la base de données de distribution. Si le jeu de résultats est vide, un travail de l'Agent de lecture de la file d'attente doit être créé.  
   
-    -   Sur le serveur de distribution, exécutez [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md). Indiquez les informations d'identification Windows sous lesquelles l'agent s'exécute pour **@job_name** et **@password**. Ces informations d'identification sont utilisées lorsque l'Agent de lecture de la file d'attente se connecte au serveur de publication et à l'Abonné. Pour plus d’informations, consultez [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+    -   Sur le serveur de distribution, exécutez [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md). Indiquez les informations d'identification Windows sous lesquelles l'agent s'exécute pour **@job_name** et **@password**. Ces informations d'identification sont utilisées lorsque l'Agent de lecture de la file d'attente se connecte au serveur de publication et à l'Abonné. Pour plus d’informations, voir [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 3.  Exécutez [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), en affectant la valeur **true** au paramètre **@allow_queued_tran** et la valeur **pub wins**, **sub reinit** ou **sub wins** à **@conflict_policy**.  
   
 4.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Spécifiez le nom de publication utilisé à l'étape 3 pour **@publication** et les informations d’identification Windows sous lesquelles l’Agent d’instantané s’exécute pour **@snapshot_job_name** et **@password**. Si l'agent utilise l'authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication.  
   
-5.  Ajoutez des articles à la publication. Pour plus d'informations, voir [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+5.  Ajoutez des articles à la publication. Pour plus d’informations, consultez [définir un Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 6.  Au niveau de l'Abonné, créez un abonnement avec mise à jour à cette publication.  
   
@@ -104,11 +104,11 @@ ms.locfileid: "47692727"
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../relational-databases/replication/codesnippet/tsql/enable-updating-subscrip_1.sql)]  
   
 ## <a name="see-also"></a> Voir aussi  
- [Définir des options de résolution des conflits de mise à jour en attente &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   
- [Types de publication pour la réplication transactionnelle](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
+ [Définir des options de résolution des conflits de mise à jour en attente &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Réplication transactionnelle](../../../relational-databases/replication/transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
- [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](create-updatable-subscription-to-transactional-publication.md)   
+ [Create an Updatable Subscription to a Transactional Publication](create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Utiliser sqlcmd avec des variables de script](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   

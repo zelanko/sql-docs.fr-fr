@@ -11,23 +11,23 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f732c4038940ef2ed5ee511e399f3bcf2efae54f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 43423c8db03d27c26558672d287415fa5e12d638
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606889"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255954"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Introduite dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], l'extension du pool de mémoires tampons permet l'intégration transparente d'une extension de mémoire vive non volatile (c'est-à-dire d'un disque SSD) dans le pool de mémoires tampons [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour améliorer le débit d'E/S de façon significative. L'extension du pool de mémoires tampons n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>Avantages de l'extension du pool de mémoires tampons  
- L'objectif principal d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est de stocker et de récupérer les données, l'utilisation intensive d'E/S sur disque est donc une caractéristique centrale du moteur de base de données. Étant donné que les opérations d'E/S sur disque peuvent consommer beaucoup de ressources et durer relativement longtemps, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'attache à rendre ces opérations efficaces. Le pool de mémoires tampons fait office de source principale d'allocation mémoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La gestion des tampons joue un rôle essentiel pour parvenir à cette efficacité. Le composant de gestion des tampons comprend deux mécanismes : le gestionnaire de tampons qui permet d'accéder et mettre à jour les pages de la base de données, et le pool de mémoires tampons, qui permet de réduire les opérations d'E/S du fichier de la base de données.  
+ L'objectif principal d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est de stocker et de récupérer les données, l'utilisation intensive d'E/S sur disque est donc une caractéristique centrale du moteur de base de données. Étant donné que les opérations d'E/S sur disque peuvent consommer beaucoup de ressources et durer relativement longtemps, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'attache à rendre ces opérations efficaces. Le pool de mémoires tampons fait office de source principale d'allocation mémoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La gestion des tampons joue un rôle essentiel pour parvenir à cette efficacité. Le composant de gestion des tampons comprend deux mécanismes : le gestionnaire de tampons qui permet d’accéder aux pages de la base de données et de les mettre à jour, ainsi que le pool de mémoires tampons, qui permet de réduire les opérations d’E/S du fichier de la base de données.  
   
  Les pages de données et d'index sont lues sur le disque dans le pool de mémoires tampons et les pages modifiées (également appelées « pages de modifications ») sont écrites sur le disque. Lorsque la mémoire sur les points de contrôle du serveur et de la base de données est sollicitée, les pages de modifications actives dans le cache des tampons sont supprimées du cache et écrites sur des disques mécaniques, puis relues dans le cache. Ces opérations d'E/S sont généralement des lectures et des écritures aléatoires de petite taille, de l'ordre de 4 à 16 Ko de données. Les E/S de ce type entraînent des appels fréquents qui entrent en concurrence pour les contentions de disque mécanique, augmentent la latence des E/S et réduisent le débit global des E/S du système.  
   
- L'approche habituelle pour résoudre ces goulots d'étranglement des E/S est d'ajouter plus de DRAM, ou bien, des axes SAS hautes performances. Si ces options sont utiles, elles ont des inconvénients importants : la DRAM est plus coûteuse que les disques de stockage de données, et l'ajout d'axes augmente les dépenses d'investissement en matériel et les coûts d'exploitation en raison d'une consommation d'énergie accrue et de la plus forte probabilité de défaillance d'un composant.  
+ L'approche habituelle pour résoudre ces goulots d'étranglement des E/S est d'ajouter plus de DRAM, ou bien, des axes SAS hautes performances. Si ces options sont utiles, elles présentent des inconvénients importants : la DRAM est plus coûteuse que les disques de stockage de données, et l'ajout d'axes augmente les dépenses d'investissement en matériel et les coûts d'exploitation en raison d'une consommation d'énergie accrue et de la plus forte probabilité de défaillance d'un composant.  
   
  La fonctionnalité d'extension du pool de mémoires tampons étend le cache du pool avec le stockage non volatile (généralement, les disques SSD). Grâce à cette extension, le pool de mémoires tampons peut gérer une plus vaste plage de travail de la base de données, ce qui force la pagination des E/S entre la mémoire RAM et les disques SSD. Cela décharge efficacement les E/S aléatoires de petite taille des disques mécaniques vers les disques SSD. En raison de la plus faible latence et des meilleures performances des E/S aléatoires fournies par les disques SSD, l'extension du pool de mémoires tampons améliore considérablement le débit des E/S.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "51606889"
   
  Une fois activée, l'extension du pool de mémoires tampons spécifie la taille et le chemin d'accès du fichier de mise en cache du pool de mémoires tampons sur le disque SSD. Ce fichier est une extension contiguë du stockage sur le disque SSD, et est configuré statiquement au démarrage de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La modification des paramètres de configuration des fichiers est uniquement possible lorsque la fonctionnalité d'extension du pool de mémoires tampons est désactivée. Dans ce cas, tous les paramètres de configuration associés sont supprimés du Registre. Le fichier d'extension du pool de mémoires tampons est supprimé en cas d'arrêt de l'instance de SQL Server.  
   
-## <a name="best-practices"></a>Meilleures pratiques  
+## <a name="best-practices"></a>Bonnes pratiques  
  Nous vous recommandons d'appliquer ces bonnes pratiques.  
   
 -   Après avoir activé l’extension du pool de mémoires tampons pour la première fois, il est recommandé de redémarrer l’instance SQL Server pour obtenir des performances optimales.  

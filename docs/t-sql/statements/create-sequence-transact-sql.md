@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d26d4d303ffb312a2dc289e9f7426fbc6d191de8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629030"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226526"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -56,52 +56,48 @@ CREATE SEQUENCE [schema_name . ] sequence_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *sequence_name*  
- Spécifie le nom unique sous lequel la séquence est connue dans la base de données. Le type est **sysname**.  
+*sequence_name*  
+Spécifie le nom unique sous lequel la séquence est connue dans la base de données. Le type est **sysname**.  
   
- [ built_in_integer_type | user-defined_integer_type  
- Une séquence peut être définie comme tout type entier. Les types suivants sont autorisés.  
+[ built_in_integer_type | user-defined_integer_type  
+Une séquence peut être définie comme tout type entier. Les types suivants sont autorisés.  
   
 -   **tinyint** : plage comprise entre 0 et 255  
-  
 -   **smallint** : plage comprise entre -32 768 et 32 767  
-  
 -   **int** : plage comprise entre -2 147 483 648 et 2 147 483 647  
-  
 -   **bigint** : plage comprise entre -9 223 372 036 854 775,808 et 9 223 372 036 854 775 807  
-  
 -   **décimal** et **numérique** avec une échelle de 0.  
-  
 -   Tout type de données défini par l'utilisateur (type d'alias) basé sur l'un des types autorisés.  
   
- Si aucun type de données n’est fourni, le type de données **bigint** est utilisé comme valeur par défaut.  
+Si aucun type de données n’est fourni, le type de données **bigint** est utilisé comme valeur par défaut.  
   
- START WITH \<constant>  
- Première valeur retournée par l'objet séquence. La valeur **START** doit être une valeur inférieure ou égale à la valeur maximale et supérieure ou égale à la valeur minimale de l’objet séquence. La valeur de début par défaut d'un nouvel objet séquence correspond à la valeur minimale pour un objet séquence croissant et à la valeur maximale pour un objet séquence décroissant.  
+START WITH \<constant>  
+Première valeur retournée par l'objet séquence. La valeur **START** doit être une valeur inférieure ou égale à la valeur maximale et supérieure ou égale à la valeur minimale de l’objet séquence. La valeur de début par défaut d'un nouvel objet séquence correspond à la valeur minimale pour un objet séquence croissant et à la valeur maximale pour un objet séquence décroissant.  
   
- INCREMENT BY \<constant>  
- Valeur utilisée pour incrémenter (ou décrémenter si la valeur est négative) la valeur de l’objet séquence pour chaque appel à la fonction **NEXT VALUE FOR**. Si l'incrément est une valeur négative, l'objet séquence décroît ; sinon, il croît. L'incrément ne peut pas avoir la valeur 0. L'incrément par défaut pour un nouvel objet séquence est 1.  
+INCREMENT BY \<constant>  
+Valeur utilisée pour incrémenter (ou décrémenter si la valeur est négative) la valeur de l’objet séquence pour chaque appel à la fonction **NEXT VALUE FOR**. Si l'incrément est une valeur négative, l'objet séquence décroît ; sinon, il croît. L'incrément ne peut pas avoir la valeur 0. L'incrément par défaut pour un nouvel objet séquence est 1.  
   
- [ MINVALUE \<constant> | **NO MINVALUE** ]  
- Spécifie les limites de l'objet séquence. La valeur minimale par défaut d'un nouvel objet séquence correspond à la valeur minimale du type de données de l'objet séquence. Il s’agit de zéro pour le type de données **tinyint** et d’un nombre négatif pour tous les autres types de données.  
+[ MINVALUE \<constant> | **NO MINVALUE** ]  
+Spécifie les limites de l'objet séquence. La valeur minimale par défaut d'un nouvel objet séquence correspond à la valeur minimale du type de données de l'objet séquence. Il s’agit de zéro pour le type de données **tinyint** et d’un nombre négatif pour tous les autres types de données.  
   
- [ MAXVALUE \<constant> | **NO MAXVALUE**  
- Spécifie les limites de l'objet séquence. La valeur maximale par défaut d'un nouvel objet séquence correspond à la valeur maximale du type de données de l'objet séquence.  
+[ MAXVALUE \<constant> | **NO MAXVALUE**  
+Spécifie les limites de l'objet séquence. La valeur maximale par défaut d'un nouvel objet séquence correspond à la valeur maximale du type de données de l'objet séquence.  
   
- [ CYCLE | **NO CYCLE** ]  
- Propriété qui spécifie si l'objet séquence doit redémarrer de la valeur minimale (ou maximale pour les objets de séquence décroissante) ou générer une exception lorsque sa valeur minimale ou maximale est dépassée. L'option de cycle par défaut pour les nouveaux objets séquences est NO CYCLE.  
+[ CYCLE | **NO CYCLE** ]  
+Propriété qui spécifie si l'objet séquence doit redémarrer de la valeur minimale (ou maximale pour les objets de séquence décroissante) ou générer une exception lorsque sa valeur minimale ou maximale est dépassée. L'option de cycle par défaut pour les nouveaux objets séquences est NO CYCLE.  
   
- Notez que l'itération redémarre à partir de la valeur minimale ou maximale, et non de la valeur de début.  
+> [!NOTE]
+> L’exécution d’un cycle de SEQUENCE redémarre à partir de la valeur minimale ou maximale, et non de la valeur de début.  
   
- [ **CACHE** [\<constant> ] | NO CACHE ]  
- Augmente la performance des applications qui utilisent des objets séquences en réduisant le nombre d'E/S sur le disque requises pour générer des numéros séquentiels. Paramètres par défaut sur CACHE.  
+[ **CACHE** [\<constant> ] | NO CACHE ]  
+Augmente la performance des applications qui utilisent des objets séquences en réduisant le nombre d'E/S sur le disque requises pour générer des numéros séquentiels. Paramètres par défaut sur CACHE.  
   
- Par exemple, si une taille de cache de 50 est choisie, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne conserve pas 50 valeurs individuelles en cache. Il met uniquement en cache la valeur actuelle et le nombre de valeurs restées dans le cache. Cela signifie que la quantité de mémoire requise pour stocker le cache correspond toujours à deux instances du type de données de l'objet séquence.  
+Par exemple, si une taille de cache de 50 est choisie, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne conserve pas 50 valeurs individuelles en cache. Il met uniquement en cache la valeur actuelle et le nombre de valeurs restées dans le cache. Cela signifie que la quantité de mémoire requise pour stocker le cache correspond toujours à deux instances du type de données de l'objet séquence.  
   
 > [!NOTE]  
->  Si l'option de cache est activée sans spécifier une taille du cache, le moteur de base de données en sélectionne une automatiquement. Toutefois, les utilisateurs ne doivent pas compter sur une sélection cohérente. [!INCLUDE[msCoName](../../includes/msconame-md.md)] peut modifier la méthode de calcul de la taille du cache sans préavis.  
+> Si l'option de cache est activée sans spécifier une taille du cache, le moteur de base de données en sélectionne une automatiquement. Toutefois, les utilisateurs ne doivent pas compter sur une sélection cohérente. [!INCLUDE[msCoName](../../includes/msconame-md.md)] peut modifier la méthode de calcul de la taille du cache sans préavis.  
   
- En cas de création avec l’option **CACHE**, un arrêt inattendu (tel qu’une panne de courant) peut provoquer la perte des numéros séquentiels qui restent dans le cache.  
+En cas de création avec l’option **CACHE**, un arrêt inattendu (tel qu’une panne de courant) peut provoquer la perte des numéros séquentiels qui restent dans le cache.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Les numéros séquentiels sont générés à l'extérieur de l'étendue de la transaction actuelle. Ils sont utilisés si la transaction à l'aide du numéro séquentiel est validée ou restaurée.  
@@ -167,7 +163,7 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
  L’exemple suivant accorde à l’utilisateur AdventureWorks\Larry l’autorisation de créer des séquences dans le schéma Test.  
   
-```  
+```sql  
 GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]  
 ```  
   
@@ -185,7 +181,7 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
   
  Pour créer le schéma Test, exécutez l’instruction suivante.  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
 ```  
@@ -193,17 +189,17 @@ GO
 ### <a name="a-creating-a-sequence-that-increases-by-1"></a>A. Création d'une séquence qui augmente de 1  
  Dans l’exemple suivant, Thierry crée une séquence nommée CountBy1 qui augmente de une unité chaque fois qu’elle est utilisée.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 1  
     INCREMENT BY 1 ;  
 GO  
 ```  
   
-### <a name="b-creating-a-sequence-that-decreases-by-1"></a>B. Création d'une séquence qui décroît de 1  
+### <a name="b-creating-a-sequence-that-decreases-by-1"></a>b. Création d'une séquence qui décroît de 1  
  L'exemple suivant démarre à 0 et décroît d'une valeur négative chaque fois qu'il est utilisé.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountByNeg1  
     START WITH 0  
     INCREMENT BY -1 ;  
@@ -213,7 +209,7 @@ GO
 ### <a name="c-creating-a-sequence-that-increases-by-5"></a>C. Création d'une séquence qui augmente de 5  
  L'exemple suivant crée une séquence qui augmente de 5 chaque fois qu'elle est utilisée.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 5  
     INCREMENT BY 5 ;  
@@ -223,7 +219,7 @@ GO
 ### <a name="d-creating-a-sequence-that-starts-with-a-designated-number"></a>D. Création d'une séquence qui démarre avec un nombre désigné  
  Après avoir importé une table, Thierry remarque que le numéro d'ID le plus élevé utilisé est 24 328. Thierry a besoin d'une séquence qui générera des nombres qui démarrent à 24 329. Le code suivant crée une séquence qui démarre à 24 329 et est incrémentée de 1.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.ID_Seq  
     START WITH 24329  
     INCREMENT BY 1 ;  
@@ -233,13 +229,13 @@ GO
 ### <a name="e-creating-a-sequence-using-default-values"></a>E. Création d'une séquence à l'aide de valeurs par défaut  
  L'exemple suivant crée une séquence à l'aide des valeurs par défaut.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.TestSequence ;  
 ```  
   
  Exécutez l'instruction suivante pour consulter les propriétés de la séquence.  
   
-```  
+```sql  
 SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;  
 ```  
   
@@ -258,15 +254,15 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 ### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>F. Création d'une séquence avec un type de données spécifique  
  L’exemple suivant crée une séquence à l’aide du type de données **smallint**, avec une plage comprise entre -32 768 et 32 767.  
   
-```  
-CREATE SEQUENCE SmallSeq  
+```sql  
+CREATE SEQUENCE SmallSeq 
     AS smallint ;  
 ```  
   
 ### <a name="g-creating-a-sequence-using-all-arguments"></a>G. Création d'une séquence à l'aide de tous les arguments  
  L’exemple suivant crée une séquence nommée DecSeq à l’aide du type de données **decimal**, avec une plage comprise entre 0 et 255. La séquence démarre à 125 et est incrémentée de 25 chaque fois qu'un nombre est généré. Étant donné que la séquence est configurée pour se répéter lorsque la valeur dépasse la valeur maximale de 200, la séquence redémarre à la valeur minimale de 100.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.DecSeq  
     AS decimal(3,0)   
     START WITH 125  
@@ -280,7 +276,7 @@ CREATE SEQUENCE Test.DecSeq
   
  Exécutez l'instruction suivante pour consulter la première valeur ; l'option `START WITH` de 125.  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.DecSeq;  
 ```  
   
@@ -290,7 +286,7 @@ SELECT NEXT VALUE FOR Test.DecSeq;
   
  Exécutez le code suivant pour confirmer la taille du cache et consulter la valeur actuelle.  
   
-```  
+```sql  
 SELECT cache_size, current_value   
 FROM sys.sequences  
 WHERE name = 'DecSeq' ;  

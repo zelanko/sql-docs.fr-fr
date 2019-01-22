@@ -26,15 +26,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 53de562bb59b279f511e73a66ad308eff029b26e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526398"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299426"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - Clause OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
   Détermine le partitionnement et l'ordre d'un ensemble de lignes avant l'application de la fonction de fenêtre associée. Autrement dit, la clause OVER définit une fenêtre ou un ensemble de lignes spécifié par l'utilisateur dans un jeu de résultats de requête. Une fonction de fenêtre calcule ensuite une valeur pour chaque ligne dans la fenêtre. Vous pouvez utiliser la clause OVER avec des fonctions pour calculer des valeurs agrégées telles que les moyennes mobiles, les agrégats cumulatifs, des cumuls ou les N premières lignes par groupe de résultats.  
   
@@ -229,7 +232,7 @@ GO
  8               Tsoflias                1421810.9242          98055
  ```  
   
-### <a name="b-using-the-over-clause-with-aggregate-functions"></a>B. Utilisation de la clause OVER avec des fonctions d'agrégation  
+### <a name="b-using-the-over-clause-with-aggregate-functions"></a>b. Utilisation de la clause OVER avec des fonctions d'agrégation  
  L'exemple suivant utilise la clause `OVER` avec des fonctions d'agrégation sur toutes les lignes retournées par la requête. Dans cet exemple, l'utilisation de la clause `OVER` est plus efficace que l'utilisation de sous-requêtes pour dériver les valeurs d'agrégation.  
   
 ```sql  

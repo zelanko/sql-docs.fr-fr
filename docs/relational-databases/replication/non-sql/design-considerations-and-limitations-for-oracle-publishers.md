@@ -13,12 +13,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fbef18dc28786fc6455af68e09c788a3f0e2db1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7488391716a4ebc094bd6e783b591252bd24590f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748747"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125854"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Problèmes et limitations de conception des serveurs de publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47748747"
   
  Veillez également à prendre en compte les points suivants :  
   
--   Oracle et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] traitent différemment la valeur NULL : Oracle autorise la présence de plusieurs lignes comportant des valeurs NULL pour les colonnes qui acceptent NULL et sont incluses dans des contraintes ou index uniques. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applique l'unicité en n'autorisant qu'une seule ligne contenant une valeur NULL pour la même colonne. Vous ne pouvez pas publier une contrainte ou un index unique qui autorise NULL car une violation de contrainte se produit au niveau de l'Abonné si la table publiée contient plusieurs lignes avec des valeurs NULL pour l'une des colonnes incluses dans l'index ou la contrainte.  
+-   Oracle et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] traitent différemment la valeur NULL : Oracle autorise la présence de plusieurs lignes comportant des valeurs NULL pour les colonnes qui acceptent NULL et sont incluses dans des contraintes ou index uniques. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applique l'unicité en n'autorisant qu'une seule ligne contenant une valeur NULL pour la même colonne. Vous ne pouvez pas publier une contrainte ou un index unique qui autorise NULL car une violation de contrainte se produit au niveau de l'Abonné si la table publiée contient plusieurs lignes avec des valeurs NULL pour l'une des colonnes incluses dans l'index ou la contrainte.  
   
 -   Lors de la vérification de l'unicité, les espaces à droite dans un champ sont ignorés par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mais pas par Oracle.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47748747"
   
 -   Les Abonnés aux publications Oracle ne peuvent pas être automatiquement initialisés à partir d'une sauvegarde.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge deux types de validation : binaire et nombre de lignes. Les serveurs de publication Oracle prennent uniquement en charge la validation du nombre de lignes. Pour plus d’informations, consultez [Valider des données répliquées](../../../relational-databases/replication/validate-replicated-data.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge deux types de validation : binaire et nombre de lignes. Les serveurs de publication Oracle prennent uniquement en charge la validation du nombre de lignes. Pour plus d’informations, consultez [Valider des données répliquées](../../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre deux formats d'instantanés : le mode bcp natif et le mode caractère. Les serveurs de publication Oracle prennent en charge les instantanés en mode caractères.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "47748747"
   
     -   Vous ne pouvez pas modifier le paramètre **@job_login** via [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) ou [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), mais le mot de passe, oui.  
   
- Pour plus d’informations sur la sécurité de la réplication, consultez [Sécurité et protection &#40;réplication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md).  
+ Pour plus d’informations sur la sécurité de la réplication, consultez [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Considérations sur l’administration des serveurs de publication Oracle](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   

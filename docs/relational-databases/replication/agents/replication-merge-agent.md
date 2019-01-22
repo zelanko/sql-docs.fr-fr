@@ -16,12 +16,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3ce470350556e035453e68c8e84e6cff1ae1ee14
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c7262d2ed909729d03563ca0f5aa17f8781ab843
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590223"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125899"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ replmerg [-?]
 [-InternetLogin internet_login]  
 [-InternetPassword internet_password]  
 [-InternetProxyLogin internet_proxy_login]  
-[-InternetProxyPassword internet_proxy_password]  
+[–InternetProxyPassword internet_proxy_password]  
 [-InternetProxyServer internet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeout internet_timeout]  
@@ -174,9 +174,9 @@ replmerg [-?]
 |**2**|Spécifie que le chiffrement SSL est utilisé et que le certificat est vérifié.|  
 
  > [!NOTE]  
- >  Un certificat SSL valide est défini avec le nom de domaine complet de l’instance SQL Server. Pour que l’agent puisse se connecter lorsque vous définissez EncryptionLevel sur 2, créez un alias sur l’instance locale de SQL Server. Le paramètre « Nom de l’alias » doit correspondre au nom du serveur, et le paramètre « Serveur » doit être défini sur le nom complet de l’instance SQL Server.
+ >  Un certificat SSL valide est défini avec le nom de domaine complet de l’instance SQL Server. Pour que l’agent puisse se connecter lorsque vous définissez EncryptionLevel sur 2, créez un alias sur l’instance locale de SQL Server. Le paramètre « Nom de l’alias » doit correspondre au nom du serveur, et le paramètre « Serveur » doit être défini sur le nom complet de l’instance SQL Server.
 
- Pour plus d’informations, consultez [Vue d’ensemble de la sécurité &#40;réplication&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
+ Pour plus d’informations, consultez [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
@@ -246,7 +246,7 @@ replmerg [-?]
  **-InternetProxyLogin**  *internet_proxy_login*  
  Spécifie le nom de connexion utilisé lors de la connexion à un serveur proxy, défini dans *internet_proxy_server*, qui nécessite une authentification.  
   
- **-InternetProxyPassword**  *internet_proxy_password*  
+ **–InternetProxyPassword**  *internet_proxy_password*  
  Spécifie le mot de passe utilisé lors de la connexion à un serveur proxy, défini dans *internet_proxy_server*, qui nécessite une authentification.  
   
  **-InternetProxyServer**  *internet_proxy_server*  
@@ -383,7 +383,7 @@ replmerg [-?]
 |**3**|Validation du nombre de lignes et de la somme de contrôle binaire.|  
   
 > [!NOTE]  
->  Une validation utilisant la somme de contrôle binaire ou la somme de contrôle peut signaler de façon incorrecte un échec si les types de données sont différents entre l'Abonné et le serveur de publication. Pour plus d’informations, consultez la section « Considérations sur la validation des données » dans la rubrique [Valider des données répliquées](../../../relational-databases/replication/validate-replicated-data.md).  
+>  Une validation utilisant la somme de contrôle binaire ou la somme de contrôle peut signaler de façon incorrecte un échec si les types de données sont différents entre l'Abonné et le serveur de publication. Pour plus d’informations, consultez la section « Considérations sur la validation des données » dans la rubrique [Valider des données répliquées](../../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
  **-ValidateInterval** _validate_interval_  
  Fréquence, en minutes, de validation de l'abonnement en mode continu. La valeur par défaut est **60** minutes.  

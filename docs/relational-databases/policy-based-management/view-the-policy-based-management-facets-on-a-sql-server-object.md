@@ -13,12 +13,12 @@ ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 162b0f18759253ac5c842a88eb0027926a4c458b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 30043f330755981b2aef93d7aacabe284f35cd9f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521198"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256914"
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>Afficher les facettes de gestion basée sur des stratégies sur un objet SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52521198"
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un objet d’instance, une base de données ou un objet de base de données, puis cliquez sur **Facettes**.  
   
-2.  Dans la boîte de dialogue **Afficher les facettes -***nom_objet*, sélectionnez une facette dans la liste **Facette** pour afficher ses propriétés. Pour plus d'informations sur les options disponibles dans cette boîte de dialogue, consultez [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md).  
+2.  Dans la boîte de dialogue **Afficher les facettes -**_nom_objet_, sélectionnez une facette dans la liste **Facette** pour afficher ses propriétés. Pour plus d'informations sur les options disponibles dans cette boîte de dialogue, consultez [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md).  
   
 3.  Lorsque vous avez terminé, cliquez sur **OK**.  
   

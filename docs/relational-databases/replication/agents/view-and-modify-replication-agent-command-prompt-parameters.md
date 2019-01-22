@@ -13,12 +13,12 @@ ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed2ffecb1f73cdafcd00bf12866a852047e5e266
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1137138911519b2e6497525acb39b7de87a4fd63
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516906"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254894"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>Afficher et modifier les paramètres d’invite de commandes d’un Agent de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,15 +31,15 @@ ms.locfileid: "52516906"
   
  Si vous accédez à des travaux d'Agent à partir du dossier **Travaux** , utilisez la table ci-dessous pour déterminer le nom du travail d'Agent et les paramètres disponibles pour chaque Agent.  
   
-|Agent|Nom du travail|Pour obtenir une liste de paramètres, consultez...|  
+|Agent|Nom du travail|Pour obtenir une liste des paramètres, voir…|  
 |-----------|--------------|------------------------------------|  
 |Agent d'instantané|**\<serveur_publication>-\<base_de_données_publication>-\<publication>-\<entier>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
 |Agent d'instantané pour une partition de publication de fusion|**Dyn_\<serveur_publication>-\<base_de_données_publication>-\<publication>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
 |l'Agent de lecture du journal ;|**\<serveur_publication>-\<serveur_publication>-\<entier>**|[Agent de lecture du journal des réplications](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
 |Agent de fusion pour les abonnements extraits|**\<serveur_publication>-\<base_de_données_publication>-\<publication>-\<abonné>-\<base_de_données_abonnement>-\<entier>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
 |Agent de fusion pour abonnements par envoi de données (push)|**\<serveur_publication>-\<base_de_données_publication>-\<publication>-\<abonné>-\<entier>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|Agent de distribution pour abonnements par envoi de données (push)|**\<serveur_publication>-\<base_de_données_publication>-\<publication>-\<abonné>-\<entier>***|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Agent de distribution pour abonnements par extraction de données (pull)|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>***\*|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Agent de distribution pour abonnements par envoi de données (push)|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<entier>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Agent de distribution pour abonnements par extraction de données (pull)|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<BasededonnéesPublication>-\<GUID>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |Agent de distribution pour les abonnements par envoi de données aux Abonnés non SQL Server|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<entier>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |Agent de lecture de la file d'attente|**[\<base_de_données_distribution>].\<entier>**|[Agent de lecture de la file d’attente de réplication](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   

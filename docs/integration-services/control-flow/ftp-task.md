@@ -17,12 +17,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52f86e1750858ec7fabcb8fab30dcd23b4306ace
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ab81a9e76ea17a683062431da678fa679ceffdee
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509431"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226636"
 ---
 # <a name="ftp-task"></a>Tâche FTP
   La tâche FTP télécharge des fichiers de données et gère des répertoires sur les serveurs. Par exemple, un package peut télécharger des fichiers de données à partir d’un serveur distant ou d’un emplacement Internet dans le cadre d’un flux de travail de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Vous pouvez utiliser la tâche FTP aux fins suivantes :  
@@ -40,7 +40,7 @@ ms.locfileid: "52509431"
   
  Pour accéder à un fichier local ou à un répertoire local, la tâche FTP utilise un gestionnaire de connexions de fichiers ou des informations de chemin d'accès stockées dans une variable. À l'inverse, pour accéder à un fichier distant ou à un répertoire distant, la tâche FTP utilise un chemin d'accès directement spécifié sur le serveur distant, tel qu'indiqué dans le gestionnaire de connexions FTP, ou des informations de chemin d'accès stockées dans une variable. Pour plus d’informations, consultez [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md) et [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
- Cela signifie que la tâche FTP peut recevoir plusieurs fichiers et supprimer plusieurs fichiers distants ; toutefois, la tâche peut envoyer seulement un fichier et supprimer seulement un fichier local si elle utilise un gestionnaire de connexions, car un gestionnaire de connexions de fichiers ne peut accéder qu'à un fichier. Pour accéder à plusieurs fichiers locaux, la tâche FTP doit utiliser une variable afin d'indiquer les informations de chemin d'accès. Par exemple, une variable contenant le texte « C:\Test\\*.txt » désigne un chemin qui prend en charge la suppression ou l’envoi de tous les fichiers ayant pour extension .txt et figurant dans le répertoire Test.  
+ Cela signifie que la tâche FTP peut recevoir plusieurs fichiers et supprimer plusieurs fichiers distants ; toutefois, la tâche peut envoyer seulement un fichier et supprimer seulement un fichier local si elle utilise un gestionnaire de connexions, car un gestionnaire de connexions de fichiers ne peut accéder qu'à un fichier. Pour accéder à plusieurs fichiers locaux, la tâche FTP doit utiliser une variable afin d'indiquer les informations de chemin d'accès. Par exemple, une variable contenant le texte « C:\Test\&#42;.txt » désigne un chemin qui prend en charge la suppression ou l’envoi de tous les fichiers ayant pour extension .txt et figurant dans le répertoire Test.  
   
  Pour envoyer plusieurs fichiers et accéder à plusieurs fichiers et répertoires locaux, vous pouvez également exécuter la tâche FTP plusieurs fois en l'incluant dans une boucle Foreach. La boucle Foreach peut passer en revue tous les fichiers d'un répertoire à l'aide de l'énumérateur For Each File. Pour plus d’informations, consultez [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52509431"
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions FTP prend en charge uniquement l'authentification anonyme et l'authentification de base. Il ne prend pas en charge l'authentification Windows.  
   
- **Rubriques connexes :** [Gestionnaires de connexion FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Éditeur du gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Éditeur du gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
  **Arrêt en cas d'échec de l'opération**  
  Indique si la tâche FTP se termine en cas d'échec de l'opération.  
@@ -147,13 +147,13 @@ ms.locfileid: "52509431"
  **RemoteVariable**  
  Sélectionnez une variable définie par l’utilisateur existante ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), Ajouter une variable  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Ajouter une variable  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemovePath**  
  Sélectionnez un gestionnaire de connexions FTP existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [Gestionnaires de connexion FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Éditeur du gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Éditeur du gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>Options dynamiques IsLocalPathVariable  
   
@@ -161,7 +161,7 @@ ms.locfileid: "52509431"
  **LocalVariable**  
  Sélectionnez une variable définie par l’utilisateur existante ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), Ajouter une variable  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Ajouter une variable  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  

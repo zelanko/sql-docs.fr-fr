@@ -32,15 +32,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05489fa8c36f037ecde7d15f1e1109299bbec7f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7d8bfaf8e2b07bd34843893a67a823e6841b6d6
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625087"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299986"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
   Détermine si une chaîne de caractères donnée correspond à un modèle spécifié. Une chaîne peut comprendre des caractères normaux ainsi que des caractères génériques. Au cours de l'analyse, les caractères normaux doivent correspondre exactement aux caractères spécifiés dans la chaîne de caractères. Toutefois, les caractères génériques peuvent être associés à des portions aléatoires de la chaîne de caractères. L'utilisation de caractères génériques rend l'opérateur LIKE plus flexible que lorsque les opérateurs de comparaison des chaînes = et != sont utilisés. Si l'un de ces arguments n'est pas du type chaîne de caractères, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] essaie de le convertir, dans la mesure du possible.  
   
@@ -122,17 +125,17 @@ EXEC FindEmployee @EmpLName = 'Barb';
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
  ```
- FirstName      LastName            City
+ FirstName      LastName            City
  ----------     -------------------- --------------- 
  Angela         Barbariol            Snohomish
  David          Barber               Snohomish
  (2 row(s) affected)  
- ``` 
+ ``` 
  
-## <a name="pattern-matching-by-using-like"></a>Recherche générique à l'aide de LIKE  
- Le mot clé LIKE prend en charge la recherche générique ASCII ainsi que la recherche générique Unicode. Lorsque tous les arguments (*match_expression*, *pattern* et *escape_character*, le cas échéant) sont des types de données caractères ASCII, une correspondance de modèles ASCII est effectuée. Si l'un des arguments est de type de données Unicode, tous les arguments sont convertis en Unicode et une recherche générique Unicode est effectuée. Lors de l’utilisation des données Unicode (types de données **nchar** ou **nvarchar**) avec LIKE, les espaces à droite sont significatifs ; pour les autres données, cependant, ils ne le sont pas. Unicode LIKE est compatible avec la version standard de ISO. ASCII LIKE est compatible avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## Pattern Matching by Using LIKE  
+ LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks are not significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Voici une série d'exemples illustrant les différences dans les lignes renvoyées entre une recherche générique ASCII LIKE et une recherche générique Unicode LIKE.  
+ The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
   
 ```sql  
 -- ASCII pattern matching with char column  
@@ -219,7 +222,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
  
  ```
- FirstName             LastName             Phone
+ FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
  Shelby                Cook                 415-555-0121  
@@ -233,10 +236,10 @@ GO
  Gabrielle              Russell             415-555-0197  
  Dalton                 Simmons             415-555-0115  
  (11 row(s) affected)  
- ``` 
+ ``` 
  
-### <a name="b-using-not-like-with-the--wildcard-character"></a>B. Utilisation de NOT LIKE avec le caractère générique %  
- L'exemple ci-après renvoie tous les numéros de téléphone de la table `PersonPhone` dont l'indicatif n'est pas `415`.  
+### B. Using NOT LIKE with the % wildcard character  
+ The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -253,7 +256,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
  
  ```
-FirstName              LastName            Phone
+FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
 Gail                  Butler               1 (11) 500 555-0191  
@@ -263,11 +266,11 @@ Gail                  Griffin              450-555-0171
 Gail                  Moore                155-555-0169  
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
-(8 row(s) affected)  
-```  
+(8 row(s) affected)  
+```  
 
-### <a name="c-using-the-escape-clause"></a>C. Utilisation de la clause ESCAPE  
- L'exemple suivant utilise la clause `ESCAPE` et le caractère d'échappement pour trouver la chaîne de caractères exacte `10-15%` dans la colonne `c1` de la table `mytbl2`.  
+### C. Using the ESCAPE clause  
+ The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  
   
 ```sql
 USE tempdb;  

@@ -14,20 +14,20 @@ ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5532e7916f5713dea0dde30f5afb01634f86367
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d17b39369f19736e587fc82507a82fe02f85590
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684747"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124259"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>Initialiser un abonnement avec un instantané
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Lorsqu'une publication est créée, un instantané initial est généralement créé puis copié dans le dossier d'instantanés (cela se produit par défaut pour les publications de fusion créées avec l'Assistant Nouvelle publication). Il est ensuite appliqué à l'Abonné par l'Agent de distribution (pour les publications transactionnelles et d'instantané) ou l'Agent de fusion (pour les publications de fusion) lors de la synchronisation initiale de l'abonnement. Le processus d'instantané dépend du type de publication :  
   
--   Si l'instantané est pour une publication d'instantané, une publication transactionnelle ou une publication de fusion n'utilisant pas de filtres paramétrés, l'instantané contient le schéma et les données dans des fichiers programme (bcp) de copie en bloc, ainsi que des contraintes, des propriétés étendues, des index, des déclencheurs et les tables système nécessaires à la réplication. Pour plus d’informations sur la création et l’application de l’instantané, consultez [Créer et appliquer un instantané](../../relational-databases/replication/create-and-apply-the-snapshot.md).  
+-   Si l'instantané est pour une publication d'instantané, une publication transactionnelle ou une publication de fusion n'utilisant pas de filtres paramétrés, l'instantané contient le schéma et les données dans des fichiers programme (bcp) de copie en bloc, ainsi que des contraintes, des propriétés étendues, des index, des déclencheurs et les tables système nécessaires à la réplication. Pour plus d’informations sur la création et l’application de l’instantané, consultez [Créer et appliquer un instantané](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
--   Si l'instantané est pour une publication de fusion utilisant des filtres paramétrés, il est créé à l'aide d'un processus en deux parties. D'abord, un instantané de schéma est créé contenant les scripts de réplication et le schéma des objets publiés, mais pas les données. Ensuite, chaque abonnement est initialisé avec un instantané comprenant les scripts et le schéma copiés à partir de l'instantané de schéma et des données appartenant à la partition de l'abonnement. Pour plus d’informations, consultez [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   Si l'instantané est pour une publication de fusion utilisant des filtres paramétrés, il est créé à l'aide d'un processus en deux parties. D'abord, un instantané de schéma est créé contenant les scripts de réplication et le schéma des objets publiés, mais pas les données. Ensuite, chaque abonnement est initialisé avec un instantané comprenant les scripts et le schéma copiés à partir de l'instantané de schéma et des données appartenant à la partition de l'abonnement. Pour plus d’informations, consultez [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  L'instantané se compose de fichiers différents qui dépendent du type de réplication et des articles que comprend la publication. Ces fichiers sont copiés sur le dossier d'instantanés par défaut spécifié lors de la configuration du serveur de distribution, ou sur le dossier d'instantanés de remplacement spécifié lors de la création de la publication.  
   
@@ -41,13 +41,13 @@ ms.locfileid: "47684747"
 ## <a name="snapshot-options"></a>Options d'instantané  
  Il existe de nombreuses options disponibles lors de l'initialisation d'un abonnement avec un instantané. Vous pouvez :  
   
--   Spécifier un emplacement de dossier d'instantanés de remplacement à la place, ou en plus de l'emplacement de dossier d'instantanés par défaut. Pour plus d’informations, consultez [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md).  
+-   Spécifier un emplacement de dossier d'instantanés de remplacement à la place, ou en plus de l'emplacement de dossier d'instantanés par défaut. Pour plus d’informations, consultez [Modifier les options des instantanés](../../relational-databases/replication/snapshot-options.md).  
   
--   Compresser les instantanés pour un stockage sur support amovible ou pour un transfert sur un réseau lent. Pour plus d’informations, consultez [Compressed Snapshots](../../relational-databases/replication/compressed-snapshots.md).  
+-   Compresser les instantanés pour un stockage sur support amovible ou pour un transfert sur un réseau lent. Pour plus d’informations, consultez [Compressed Snapshots](../../relational-databases/replication/snapshot-options.md#compressed-snapshots). 
+
+-   Exécuter des scripts Transact-SQL avant ou après l'application de l'instantané. Pour plus d’informations, consultez [Exécuter des scripts avant et après l’application de l’instantané](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).  
   
--   Exécuter des scripts Transact-SQL avant ou après l'application de l'instantané. Pour plus d’informations, consultez [Exécuter des scripts avant et après l’application de l’instantané](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).  
-  
--   Transférer des fichiers d'instantanés via le protocole FTP. Pour plus d’informations, consultez [Transférer des instantanés via FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+-   Transférer des fichiers d'instantanés via le protocole FTP. Pour plus d’informations, consultez [Transférer des instantanés via FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Initialiser un abonnement](../../relational-databases/replication/initialize-a-subscription.md)   

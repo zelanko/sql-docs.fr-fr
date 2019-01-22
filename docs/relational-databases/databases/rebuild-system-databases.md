@@ -16,12 +16,12 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f0a1a40b1f4dd31a91436ae7af80f691c2e5a7c
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4225bb49eb60c61ba01575a2269120dff4a427d3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559192"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125609"
 ---
 # <a name="rebuild-system-databases"></a>Reconstruire des bases de données système
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,15 +107,15 @@ ms.locfileid: "51559192"
     |/ACTION=REBUILDDATABASE|Spécifie que le programme d'installation doit recréer les bases de données système.|  
     |/INSTANCENAME=*Nom_Instance*|Représente le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour l'instance par défaut, entrez MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*comptes*|Spécifie les comptes de groupes Windows ou les comptes individuels à ajouter au rôle serveur fixe **sysadmin** . Lorsque vous spécifiez plusieurs comptes, utilisez l'espace comme séparateur. Par exemple, entrez **BUILTIN\Administrateurs MonDomaine\MonUtilisateur**. Lorsque vous spécifiez un compte qui contient un espace vide dans son nom, placez le compte entre guillemets doubles. Par exemple, entrez **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*MotDePasseFort* ]|Spécifie le mot de passe du compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** . Ce paramètre est requis si l’instance utilise le mode Authentification mixte (authentification[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows).<br /><br /> **\*\* Remarque sur la sécurité \*\*** Le compte **sa** est un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bien connu qui est souvent la cible d’utilisateurs malveillants. Il est par conséquent essentiel d'utiliser un mot de passe fort pour la connexion **sa** .<br /><br /> Ne spécifiez pas ce paramètre pour le mode Authentification Windows.|  
+    |[ /SAPWD=*MotDePasseFort* ]|Spécifie le mot de passe du compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** . Ce paramètre est requis si l’instance utilise le mode Authentification mixte (authentification[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows).<br /><br /> **&#42;&#42; Remarque sur la sécurité &#42;&#42;** Le compte **sa** est un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bien connu qui est souvent la cible d’utilisateurs malveillants. Il est par conséquent essentiel d'utiliser un mot de passe fort pour la connexion **sa** .<br /><br /> Ne spécifiez pas ce paramètre pour le mode Authentification Windows.|  
     |[ /SQLCOLLATION=*NomClassement* ]|Spécifie un nouveau classement au niveau du serveur. Ce paramètre est facultatif. S'il n'est pas spécifié, c'est le classement actuel du serveur qui est utilisé.<br /><br /> **\*\* Important \*\*** La modification du classement de niveau serveur ne modifie pas le classement des bases de données utilisateur existantes. En revanche, les bases de données utilisateur qui seront créées utiliseront le nouveau classement par défaut.<br /><br /> Pour plus d’informations, consultez [Définir ou modifier le classement du serveur](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|Spécifie le nombre de fichiers de données tempdb Cette valeur peut être augmentée jusqu’à 8 ou jusqu’au nombre de cœurs, la valeur la plus élevée étant applicable.<br /><br /> Valeur par défaut : 8 ou le nombre de cœurs (la plus petite valeur des deux).|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Spécifie la taille initiale en Mo de chaque fichier de données tempdb. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|Spécifie l’incrément de croissance de chaque fichier de données tempdb en Mo. La valeur 0 indique que la croissance automatique est désactivée et qu'aucun espace supplémentaire n'est autorisé. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 64|  
-    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|Spécifie la taille initiale en Mo du fichier journal tempdb. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 8<br /><br /> Plage autorisée : Min = 8, Max = 1024|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|Spécifie l’incrément de croissance en Mo du fichier journal tempdb. La valeur 0 indique que la croissance automatique est désactivée et qu'aucun espace supplémentaire n'est autorisé. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 64<br /><br /> Plage autorisée : Min = 8, Max = 1024|  
-    |[ /SQLTEMPDBDIR=Directories ]|Spécifie les répertoires des fichiers de données tempdb. Lorsque vous spécifiez plusieurs répertoires, utilisez l’espace comme séparateur. Si plusieurs répertoires sont spécifiés, les fichiers de données tempdb sont répartis entre les répertoires selon le principe du tourniquet (round robin).<br /><br /> Valeur par défaut : Répertoire des données système.|  
-    |[ /SQLTEMPDBLOGDIR=Directory ]|Spécifie le répertoire pour les fichiers journaux tempdb.<br /><br /> Valeur par défaut : Répertoire des données système.|  
+    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|Spécifie la taille initiale en Mo du fichier journal tempdb. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 8.<br /><br /> Plage autorisée : Min = 8, max = 1024.|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|Spécifie l’incrément de croissance en Mo du fichier journal tempdb. La valeur 0 indique que la croissance automatique est désactivée et qu'aucun espace supplémentaire n'est autorisé. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 64<br /><br /> Plage autorisée : Min = 8, max = 1024.|  
+    |[ /SQLTEMPDBDIR=Directories ]|Spécifie les répertoires des fichiers de données tempdb. Lorsque vous spécifiez plusieurs répertoires, utilisez l’espace comme séparateur. Si plusieurs répertoires sont spécifiés, les fichiers de données tempdb sont répartis entre les répertoires selon le principe du tourniquet (round robin).<br /><br /> Valeur par défaut : Répertoire des données système|  
+    |[ /SQLTEMPDBLOGDIR=Directory ]|Spécifie le répertoire pour les fichiers journaux tempdb.<br /><br /> Valeur par défaut : Répertoire des données système|  
   
 3.  Lorsque le programme d'installation a terminé la reconstruction des bases de données système, il revient à l'invite de commandes sans afficher de message. Examinez le fichier journal Summary.txt pour vérifier que le processus s'est correctement déroulé. Ce fichier se trouve à l’emplacement C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "51559192"
 10. Sauvegardez la base de données **msdb** .  
   
 ##  <a name="Troubleshoot"></a> Corriger les erreurs liées à la reconstruction  
- Les erreurs de syntaxe et autres erreurs d'exécution sont affichées dans la fenêtre d'invite de commandes. Vérifiez que l'instruction Setup ne comporte pas les erreurs de syntaxe suivantes :  
+ Les erreurs de syntaxe et autres erreurs d'exécution sont affichées dans la fenêtre d'invite de commandes. Vérifiez que l'instruction Setup ne comporte pas les erreurs de syntaxe suivantes :  
   
 -   Barre oblique (/) manquante devant chaque nom de paramètre.  
   

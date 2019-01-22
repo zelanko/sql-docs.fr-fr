@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbab8cc4eb36d81c0aa6f1ff40c2f498157257f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e43c8f3fb6be391bcead0c2671d73d46d5d2b261
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525938"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226506"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Fonctionnalités de recherche en texte intégral déconseillées dans SQL Server 2016
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,12 +34,12 @@ Surveillez l’utilisation des fonctionnalités dépréciées à l’aide du com
   
 |Fonctionnalité déconseillée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  
 |------------------------|-----------------|------------------|----------------|  
-|Propriété FULLTEXTCATALOGPROPERTY : LogSize|Aucun.|FULLTEXTCATALOGPROPERTY **('LogSize')**|211|  
+|Propriété FULLTEXTCATALOGPROPERTY : LogSize|Aucun.|FULLTEXTCATALOGPROPERTY **('LogSize')**|211|  
 |Propriété FULLTEXTSERVICEPROPERTY :<br /><br /> ConnectTimeout<br /><br /> DataTimeout|Aucun.|FULLTEXTSERVICEPROPERTY **('ConnectTimeout')**<br /><br /> FULLTEXTSERVICEPROPERTY **('DataTimeout'**)|210<br /><br /> 209|  
 |sp_fulltext_catalog|CREATE FULL CATALOG<br /><br /> ALTER FULLTEXT CATALOG<br /><br /> DROP FULLTEXT CATALOG|sp_fulltext_catalog|84|  
 |sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|CREATE FULL INDEX<br /><br /> ALTER FULLTEXT INDEX<br /><br /> DROP FULLTEXT INDEX|sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|86<br /><br /> 87<br /><br /> 85 %|  
 |sp_help_fulltext_catalogs<br /><br /> sp_help_fulltext_catalog_components<br /><br /> sp_help_fulltext_catalogs_cursor<br /><br /> sp_help_fulltext_columns<br /><br /> sp_help_fulltext_columns_cursor<br /><br /> sp_help_fulltext_tables<br /><br /> sp_help_fulltext_tables_cursor|sys.fulltext_catalogs<br /><br /> sys.fulltext_index_columns<br /><br /> sys.fulltext_indexes|sp_help_fulltext_catalogs<br /><br /> sp_help_fulltext_catalog_components<br /><br /> sp_help_fulltext_catalogs_cursor<br /><br /> sp_help_fulltext_columns<br /><br /> sp_help_fulltext_columns_cursor<br /><br /> sp_help_fulltext_table<br /><br /> sp_help_fulltext_tables_cursor|88<br /><br /> 203<br /><br /> 90<br /><br /> 92<br /><br /> 93<br /><br /> 91<br /><br /> 89|  
-|Valeurs d’action sp_fulltext_service : clean_up, connect_timeout et data_timeout retournent la valeur zéro|Aucun|sp_fulltext_service @action=clean_up<br /><br /> sp_fulltext_service @action=connect_timeout<br /><br /> sp_fulltext_service @action=data_timeout|116<br /><br /> 117<br /><br /> 118|  
+|Valeurs d’action sp_fulltext_service : clean_up, connect_timeout et data_timeout retournent la valeur zéro|None|sp_fulltext_service @action=clean_up<br /><br /> sp_fulltext_service @action=connect_timeout<br /><br /> sp_fulltext_service @action=data_timeout|116<br /><br /> 117<br /><br /> 118|  
 |Colonnes sys.dm_fts_active_catalogs :<br /><br /> is_paused<br /><br /> previous_status<br /><br /> previous_status_description<br /><br /> row_count_in_thousands<br /><br /> status<br /><br /> status_description<br /><br /> worker_count|Aucun.|dm_fts_active_catalogs.is_paused<br /><br /> dm_fts_active_catalogs.previous_status<br /><br /> dm_fts_active_catalogs.previous_status_description<br /><br /> dm_fts_active_catalogs.row_count_in_thousands<br /><br /> dm_fts_active_catalogs.status<br /><br /> dm_fts_active_catalogs.status_description<br /><br /> dm_fts_active_catalogs.worker_count|218<br /><br /> 221<br /><br /> 222<br /><br /> 224<br /><br /> 219<br /><br /> 220<br /><br /> 223|  
 |Colonne sys.dm_fts_memory_buffers :<br /><br /> row_count|Aucun.|dm_fts_memory_buffers.row_count|225|  
 |Colonnes sys.fulltext_catalogs :<br /><br /> path<br /><br /> data_space_id<br /><br /> Colonnes file_id|Aucun.|fulltext_catalogs.path<br /><br /> fulltext_catalogs.data_space_id<br /><br /> fulltext_catalogs.file_id|215<br /><br /> 216<br /><br /> 217|  
@@ -53,10 +53,10 @@ Surveillez l’utilisation des fonctionnalités dépréciées à l’aide du com
 |------------------------|-----------------|------------------|----------------|  
 |Opérateur NEAR générique CONTAINS et CONTAINSTABLE :<br /><br /> {<terme_simple> &#124; <terme_préfixe>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<terme_simple> &#124; <terme_préfixe>} } [...*n*]<br /><br /> }|Opérateur NEAR personnalisé :<br /><br /> NEAR(<br /><br /> {   {<terme_simple> &#124; <terme_préfixe>} [ ,...*n* ]<br /><br /> &#124; ( {<terme_simple> &#124; <terme_préfixe>} [,...*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> )<br /><br /> <distance> ::= {*entier* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |Option CREATE FULLTEXT CATALOG :<br /><br /> IN PATH '*chemin_racine*'<br /><br /> ON FILEGROUP *filegroup*|Aucun.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Aucun.<sup>*</sup>|237<br /><br /> Aucun.*|  
-|Propriété DATABASEPROPERTYEX : IsFullTextEnabled|Aucun.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
+|Propriété DATABASEPROPERTYEX : IsFullTextEnabled|Aucun.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |Option sp_detach_db :<br /><br /> [ @keepfulltextindexfile = ] '*conserver_fichier_index_recherche_en_texte-intégral*'|Aucun.|sp_detach_db @keepfulltextindexfile|226|  
-|Valeurs d’action sp_fulltext_service : resource_usage n’a pas de fonction.|Aucun|sp_fulltext_service @action=resource_usage|200|  
+|Valeurs d’action sp_fulltext_service : resource_usage n’a pas de fonction.|None|sp_fulltext_service @action=resource_usage|200|  
   
- *L’objet **SQL Server:Deprecated Features** ne surveille pas les occurrences de CREATE FULLTEXT CATLOG ON FILEGROUP *groupe_de_fichiers*.  
+ &#42;L’objet **SQL Server:Deprecated Features** ne supervise pas les occurrences de CREATE FULLTEXT CATLOG ON FILEGROUP *groupe_de_fichiers*.  
   
   

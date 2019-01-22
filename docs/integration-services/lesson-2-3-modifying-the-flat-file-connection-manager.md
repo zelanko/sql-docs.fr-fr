@@ -1,7 +1,7 @@
 ---
-title: 'Étape 3 : Modification du gestionnaire de connexions de fichiers plats | Microsoft Docs'
+title: 'Étape 3 : Modifier le gestionnaire de connexions de fichiers plats | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,38 +11,39 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79c6f65a6ceba8eef0a61f27512fa09b6fb3f474
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1de57ab14dc4dcfc07f838494ca48f8b12da6660
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531800"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143559"
 ---
-# <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>Leçon 2-3 : Modification du Gestionnaire de connexions de fichiers plats
-Dans cette tâche, vous allez modifier le gestionnaire de connexions de fichiers plats que vous avez créé et configuré dans la leçon 1. Le gestionnaire de connexions de fichiers plats a été configuré au départ pour charger statiquement un seul fichier. Pour faire en sorte que le Gestionnaire de connexions de fichiers plats charge les fichiers interactivement, vous devez modifier la propriété ConnectionString du Gestionnaire de connexions afin que la variable `User:varFileName`définie par l’utilisateur soit acceptée. Cette variable contient le chemin du fichier qui doit être chargé au moment de l’exécution.  
+# <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Leçon 2-3 : Modifier le gestionnaire de connexions de fichiers plats
+
+Au cours de cette tâche, vous allez modifier le gestionnaire de connexions de fichiers plats de la leçon 1. Ce gestionnaire de connexions de fichiers plats est configuré pour charger statiquement un seul fichier. Pour faire en sorte que le gestionnaire de connexions de fichiers plats charge les fichiers de manière itérative, vous devez modifier sa propriété ConnectionString de sorte à utiliser la variable définie par l’utilisateur `User::varFileName`. Celle-ci contient le chemin du fichier à charger au moment de l’exécution.  
   
-La modification du Gestionnaire de connexions pour qu’il utilise la variable `User::varFileName`définie par l’utilisateur et qui remplit la propriété ConnectionString du Gestionnaire de connexions, permettra à ce dernier de se connecter à plusieurs fichiers plats. Au moment de l'exécution, chaque itération du conteneur de boucles Foreach mettra à jour la variable `User::varFileName` dynamiquement. Si la variable est à son tour mise à jour, le Gestionnaire de connexions se connecte à un autre fichier plat et la tâche de flux de données traite un autre jeu de données.  
+En modifiant le gestionnaire de connexions de sorte à utiliser la valeur de la variable définie par l’utilisateur pour modifier la propriété ConnectionString, le gestionnaire de connexions se connecte à différents fichiers plats. Au moment de l’exécution, chaque itération du conteneur de boucles Foreach met à jour la variable `User::varFileName`. Si la variable est à son tour mise à jour, le Gestionnaire de connexions se connecte à un autre fichier plat et la tâche de flux de données traite un autre jeu de données.  
   
-### <a name="to-configure-the-flat-file-connection-manager-to-use-a-variable-for-the-connection-string"></a>Pour configurer le Gestionnaire de connexions de fichiers plats afin qu'il utilise une variable pour la chaîne de connexion  
+## <a name="configure-the-flat-file-connection-manager-to-use-a-variable"></a>Configurer le gestionnaire de connexions de fichiers plats pour utiliser une variable  
   
 1.  Dans le volet **Gestionnaires de connexions** , cliquez avec le bouton droit sur **Sample Flat File Source Data**, puis sélectionnez **Propriétés**.  
   
-2.  Dans la fenêtre Propriétés, pour **Expressions**, cliquez dans la cellule vide, puis sur le bouton **(...)**.  
+2.  Dans la fenêtre **Propriétés**, pour **Expressions**, sélectionnez la cellule vide, puis le bouton **(...)**.  
   
-3.  Dans la boîte de dialogue **Éditeur d’expressions de la propriété** , dans la colonne **Propriété** , tapez ou sélectionnez **ConnectionString**.  
+3.  Dans la boîte de dialogue **Éditeur d’expressions de la propriété**, dans la colonne **Propriété**, sélectionnez **ConnectionString**.  
   
-4.  Dans la colonne **Expression**, cliquez sur le bouton **(...)** pour ouvrir la boîte de dialogue **Générateur d’expression**.  
+4.  Dans la colonne **Expression**, sélectionnez le bouton **(...)** pour ouvrir la boîte de dialogue **Générateur d’expressions**.  
   
-5.  Dans la boîte de dialogue **Générateur d’expression** , développez le nœud **Variables** .  
+5.  Dans la boîte de dialogue **Générateur d’expressions**, développez le nœud **Variables**.  
   
-6.  Faites glisser la variable **User::varFileName**dans la zone **Expression** .  
+6.  Faites glisser la variable **User::varFileName** dans la zone **Expression**.  
   
-7.  Cliquez sur **OK** pour fermer la boîte de dialogue **Générateur d’expression** .  
+7.  Sélectionnez **OK** pour fermer la boîte de dialogue **Générateur d’expressions**.  
   
-8.  Recliquez sur **OK** pour fermer la boîte de dialogue **Éditeur d’expressions de la propriété** .  
+8.  Resélectionnez **OK** pour fermer la boîte de dialogue **Éditeur d’expressions de la propriété**.  
   
-## <a name="next-lesson-task"></a>Tâche suivante de la leçon  
-[Étape 4 : test de la leçon 2 du Package du didacticiel](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+## <a name="go-to-next-task"></a>Passer à la tâche suivante  
+[Étape 4 : Tester le package du tutoriel de la leçon 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   
   

@@ -1,7 +1,7 @@
 ---
-title: 'Étape 8 : Comment rendre le package de la leçon 1 plus facile à assimiler | Microsoft Docs'
+title: 'Étape 8 : Annoter et mettre en forme le package de la leçon 1 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,48 +11,51 @@ ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61eea29c0c8094bf5f5c70df4488a950b860bc4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5890cf61593d894daf7539d324922bfcf0d8651
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806047"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143629"
 ---
-# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>Leçon 1-8 : Comment rendre le package de la leçon 1 plus facile à assimiler
-Une fois la configuration du package de la leçon 1 terminée; il peut être judicieux de mettre un peu d'ordre dans la disposition du package. Si les formes dans la disposition des flux de contrôle et de données affichent des tailles aléatoires, ou si elles ne sont pas alignées ou groupées, la maîtrise des fonctionnalités du package peut s'avérer plus délicate.  
+# <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>Leçon 1-8 : Annoter et mettre en forme le package de la leçon 1 
+
+La configuration du package de la leçon 1 étant terminée, c’est probablement le moment de mettre un peu d’ordre dans la disposition du package. Si les formes dans les dispositions de flux de données et de contrôle sont de tailles différentes ou ne sont pas disposées uniformément, le package peut être plus difficile à comprendre.  
   
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools fournit des outils qui facilitent et accélèrent le processus de mise en forme de la disposition des packages. Les fonctionnalités de mise en forme offrent notamment la possibilité d'attribuer la même taille aux formes, de les aligner et de manipuler l'espace horizontal et vertical entre elles.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools fournit des outils qui facilitent la mise en forme de la disposition des packages. Les fonctionnalités de mise en forme offrent notamment la possibilité d’attribuer la même taille aux formes, de les aligner et de changer l’espace horizontal et vertical entre elles.  
   
 Une autre manière d'améliorer la compréhension des fonctionnalités des packages est d'ajouter des annotations décrivant ces fonctionnalités.  
   
-Au cours de cette tâche, vous allez exploiter les fonctionnalités de mise en forme disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools pour améliorer la disposition du flux de données et ajouter une annotation à ce dernier.  
+Au cours de cette tâche, vous exploitez les fonctionnalités de mise en forme disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools pour améliorer la disposition du flux de données et pour ajouter une annotation.  
   
-### <a name="to-format-the-layout-of-the-data-flow"></a>Pour mettre en forme la disposition du flux de données  
+## <a name="format-the-layout-of-the-data-flow"></a>Mettre en forme la disposition du flux de données  
   
-1.  Si le package de la leçon 1 n'est pas encore ouvert, double-cliquez sur le fichier Lesson 1.dtsx dans l'Explorateur de solutions.  
+1.  Si le package de la leçon 1 n’est pas encore ouvert, double-cliquez sur le fichier **Lesson 1.dtsx** dans l’**Explorateur de solutions**.  
   
-2.  Cliquez sur l'onglet **Flux de données** .  
+2.  Sélectionnez l’onglet **Flux de données**.  
   
-3.  Placez le curseur en haut et à droite de la transformation Extract Sample Currency, cliquez, puis faites glisser le curseur sur tous les composants du flux de données.  
+3.  Pour sélectionner tous les composants de flux de données à la fois, utilisez **Modifier** > **Tout sélectionner**.
   
-4.  Dans le menu **Format** , pointez sur **Uniformiser la taille**, puis cliquez sur **Les deux**.  
+4.  Dans le menu **Format**, sélectionnez **Uniformiser la taille**, puis sélectionnez **Les deux**.  
   
-5.  Avec les objets du flux de données sélectionnés, dans le menu **Format** , pointez sur **Aligner**, puis cliquez sur **Gauche**.  
+5.  Avec les objets du flux de données sélectionnés, dans le menu **Format**, sélectionnez **Aligner**, puis sélectionnez **Centrer**.  
+
+6.  Avec les objets du flux de données sélectionnés, dans le menu **Format**, pointez sur **Espacement vertical**, puis sélectionnez **Égaliser**.  
   
-### <a name="to-add-an-annotation-to-the-data-flow"></a>Pour ajouter une annotation au flux de données  
+## <a name="add-an-annotation-to-the-data-flow"></a>Ajouter une annotation au flux de données  
   
-1.  Cliquez avec le bouton droit n’importe où sur l’arrière-plan de la zone de conception du flux de données, puis cliquez sur **Ajouter une annotation**.  
+1.  Cliquez avec le bouton droit n’importe où sur l’arrière-plan de la zone de conception du flux de données, puis sélectionnez **Ajouter une annotation**.  
   
-2.  Tapez ou collez le texte suivant dans la zone de l'annotation.  
+2.  Entrez ou collez le texte suivant dans la zone de l’annotation.  
   
-    **Le flux de données extrait les données d'un fichier, recherche des valeurs dans la colonne CurrencyKey de la table DimCurrency et dans la colonne DateKey de la table DimDate, puis écrit les données dans la table NewFactCurrencyRate.**  
+        The data flow extracts data from a file, looks up values in the CurrencyKey column in the DimCurrency table and the DateKey column in the DimDate table, and writes the data to the NewFactCurrencyRate table.
   
-    Pour renvoyer à la ligne le texte de la zone d'annotation, placez le curseur à l'endroit où vous souhaitez démarrer une nouvelle ligne, puis appuyez sur la touche Entrée.  
+    Pour renvoyer à la ligne le texte de la zone d’annotation, placez le curseur à l’endroit où vous souhaitez démarrer une nouvelle ligne, puis appuyez sur **Entrée**.  
   
-    Si vous n'ajoutez aucun texte dans la zone de l'annotation, cette dernière disparaît lorsque vous cliquez en dehors.  
+    Si vous n’ajoutez aucun texte dans la zone de l’annotation, cette dernière disparaît quand vous cliquez en dehors.  
   
-## <a name="next-steps"></a>Next Steps  
-[Étape 9 : Test de la leçon 1 du package du tutoriel](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+## <a name="go-to-next-task"></a>Passer à la tâche suivante
+[Étape 9 : Tester le package de la leçon 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   
   

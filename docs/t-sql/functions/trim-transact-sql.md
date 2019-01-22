@@ -19,18 +19,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0319cf34c9aaf973580051134814fd0115deba16
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: a7854b2419b3644c2f3c76cd96cccc06bfae2902
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970610"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299616"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Participez à l’amélioration de la documentation SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Supprime le caractère espace `char(32)` ou d’autres caractères spécifiés au début ou à la fin d’une chaîne.  
  
@@ -67,7 +67,7 @@ SELECT TRIM( '     test    ') AS Result;
 `test`
 
 
-### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  Supprimer les caractères spécifiés des deux côtés de la chaîne   
+### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>b.  Supprimer les caractères spécifiés des deux côtés de la chaîne   
 L’exemple suivant supprime un point final et les espaces à droite.
 ```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;

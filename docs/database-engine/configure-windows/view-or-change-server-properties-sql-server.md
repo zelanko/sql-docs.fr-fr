@@ -19,12 +19,12 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 42b9955b4bae6549e26cefd3739d7a8f624f2ab5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c4f4c40711fad6d32d8fcc0aa859507e266fdd7
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825177"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255374"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Afficher ou modifier des propriétés de serveur (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47825177"
   
      [Gestionnaire de configuration SQL Server](#PowerShellProcedure)  
   
--   **Suivi :**  [après avoir modifié les propriétés du serveur](#FollowUp)  
+-   **Suivi :**  [Après avoir modifié les propriétés du serveur](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -155,11 +155,11 @@ GO
   
 2.  Dans le **Gestionnaire de configuration SQL Server**, cliquez sur **Services SQL Server**.  
   
-3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (\<***nom_instance***>)**, puis cliquez sur **Propriétés**.  
+3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (\<**_nom_instance_**>)**, puis cliquez sur **Propriétés**.  
   
-4.  Dans la boîte de dialogue **Propriétés de SQL Server (\<***nom_instance***>)**, modifiez les propriétés du serveur sous l’onglet **Service** ou **Avancé**, puis cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **Propriétés de SQL Server (\<**_nom_instance_**>)**, modifiez les propriétés du serveur sous l’onglet **Service** ou **Avancé**, puis cliquez sur **OK**.  
   
-##  <a name="FollowUp"></a> Suivi : après avoir modifié les propriétés du serveur  
+##  <a name="FollowUp"></a> Suivi : Après avoir modifié les propriétés du serveur  
  Pour certaines propriétés, le serveur doit être redémarré afin d'appliquer les modification.  
   
 ## <a name="see-also"></a> Voir aussi  

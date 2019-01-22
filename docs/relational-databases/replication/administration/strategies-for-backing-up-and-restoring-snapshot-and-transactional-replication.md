@@ -21,12 +21,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 881cb75b8f58bb20c8418fe18aaab6499b58e442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612577"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125269"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d'instantané
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47612577"
   
  **Pour définir l'option sync with backup**  
   
--   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)]de la réplication : [Activer les sauvegardes coordonnées pour la réplication transactionnelle &#40;programmation Transact-SQL de la réplication&#41;.](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
+-   Programmation de la réplication [!INCLUDE[tsql](../../../includes/tsql-md.md)] : [Activer les sauvegardes coordonnées pour la réplication transactionnelle &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Restauration des bases de données concernées par la réplication  
  Il est possible de restaurer toutes les bases de données d'une topologie de réplication s'il existe des sauvegardes récentes et si vous respectez la procédure indiquée. Les étapes de restauration de la base de données de publication dépendent du type de réplication et des options utilisées, ce qui n'est pas le cas pour toutes les autres bases de données.  
@@ -93,7 +93,7 @@ ms.locfileid: "47612577"
   
  La restauration des bases de données **msdb** et **master** , également décrite dans cette section, est identique pour les quatre types.  
   
-#### <a name="publication-database-snapshot-replication"></a>Base de données de publication : réplication d'instantané  
+#### <a name="publication-database-snapshot-replication"></a>Base de données de publication : Réplication d'instantané  
   
 1.  Restaurez la dernière sauvegarde de la base de données de publication. Passez à l’étape 2.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "47612577"
   
      Pour plus d’informations sur la suppression de la réplication, consultez [sp_removedbreplication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
   
-#### <a name="publication-database-read-only-transactional-replication"></a>Base de données de publication : réplication transactionnelle en lecture seule  
+#### <a name="publication-database-read-only-transactional-replication"></a>Base de données de publication : réplication transactionnelle en lecture seule  
   
 1.  Restaurez la dernière sauvegarde de la base de données de publication. Passez à l’étape 2.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "47612577"
   
      Si l'option est activée, la requête `SELECT DATABASEPROPERTYEX('<PublicationDatabaseName>', 'IsSyncWithBackup')` retourne la valeur 1.  
   
-3.  La sauvegarde restaurée est-elle complète et à jour ? Si elle contient la configuration la plus récente de tous les abonnements et publications, la restauration est alors terminée. Sinon, passez à l’étape 4.  
+3.  La sauvegarde restaurée est-elle complète et à jour ? Si elle contient la configuration la plus récente de tous les abonnements et publications, la restauration est alors terminée. Sinon, passez à l’étape 4.  
   
 4.  Les informations de configuration dans la base de données de publication restaurée ne sont pas à jour. Par conséquent, vous devez vous assurer que les Abonnés ont toutes les commandes en attente dans la base de données de distribution, puis supprimer et recréer la configuration de la réplication.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "47612577"
   
          Pour plus d’informations sur l’exécution de l’Agent de distribution, consultez [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) ou [Concepts des exécutables de l’Agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-         Pour plus d’informations sur la vérification des commandes, consultez [Afficher les commandes répliquées et autres informations dans la base de données de distribution &#40;Programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) et [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Pour plus d’informations sur la vérification des commandes, consultez [Afficher les commandes répliquées et autres informations dans la base de données de distribution &#40;Programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) et [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Supprimez la configuration de la réplication sur le serveur de publication, le serveur de distribution et les Abonnés, puis recréez la configuration. Lorsque vous recréez les abonnements, spécifiez que l'Abonné possède déjà les données. La restauration est terminée.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "47612577"
   
          Pour plus d’informations sur l’exécution de l’Agent de distribution, consultez [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) ou [Concepts des exécutables de l’Agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-         Pour plus d’informations sur la vérification des commandes, consultez [Afficher les commandes répliquées et autres informations dans la base de données de distribution &#40;Programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) et [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Pour plus d’informations sur la vérification des commandes, consultez [Afficher les commandes répliquées et autres informations dans la base de données de distribution &#40;Programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) et [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Utilisez l' [utilitaire tablediff](../../../tools/tablediff-utility.md) ou un autre outil pour synchroniser manuellement le serveur de publication avec l'Abonné. Cela vous permet de récupérer les données de la base de données d'abonnement qui ne se trouvaient pas dans la sauvegarde de la base de données de publication. Passez à l'étape c.  
   
@@ -150,15 +150,15 @@ ms.locfileid: "47612577"
   
          Pour plus d'informations sur la manière de spécifier que l'Abonné possède déjà les données, consultez [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Base de données de publication : réplication transactionnelle avec des abonnements mis à jour  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Base de données de publication : réplication transactionnelle avec des abonnements mis à jour  
   
-1.  Restaurez la dernière sauvegarde de la base de données de publication. Passez à l’étape 2.  
+1.  Restaurez la dernière sauvegarde de la base de données de publication. Passez à l’étape 2.  
   
 2.  Exécutez l'Agent de distribution jusqu'à ce que tous les Abonnés soient synchronisés avec les commandes non traitées dans la base de données de distribution. Vérifiez que toutes les commandes sont remises aux Abonnés via l'onglet **Commandes non distribuées** du moniteur de réplication ou en interrogeant la vue [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) de la base de données de distribution. Passez à l’étape 3.  
   
      Pour plus d’informations sur l’exécution de l’Agent de distribution, consultez [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) ou [Concepts des exécutables de l’Agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-     Pour plus d’informations sur la vérification des commandes, consultez [Afficher les commandes répliquées et autres informations dans la base de données de distribution &#40;Programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) et [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Pour plus d’informations sur la vérification des commandes, consultez [Afficher les commandes répliquées et autres informations dans la base de données de distribution &#40;Programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) et [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Si vous utilisez les abonnements mis à jour en attente, connectez-vous à chaque Abonné et supprimez toutes les lignes de la table [MSreplication_queue &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-queue-transact-sql.md) dans la base de données d’abonnement. Passez à l’étape 4.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "47612577"
   
          Pour plus d'informations sur la manière de spécifier que l'Abonné possède déjà les données, consultez [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Base de données de publication : réplication transactionnelle d'égal à égal  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Base de données de publication : Peer-to-Peer Transactional Replication  
  Dans les étapes suivantes, les bases de données de publication **A**, **B**et **C** font partie d'une topologie de réplication transactionnelle d'égal à égal. Les bases de données **A** et **C** sont en ligne et fonctionnent correctement tandis que la base de données **B** doit être restaurée. Le processus décrit ici, surtout les étapes 7, 10 et 11, est très similaire à celui requis pour ajouter un nœud à une topologie d'égal à égal. Le moyen le plus simple pour effectuer ces étapes consiste à utiliser l'Assistant Configurer la topologie d'égal à égal. Toutefois, vous pouvez également utiliser des procédures stockées.  
   
 1.  Exécutez les Agents de distribution pour synchroniser les abonnements sur les bases de données **A** et **C**. Passez à l’étape 2.  
@@ -287,7 +287,7 @@ ms.locfileid: "47612577"
   
     2.  Marquez toutes les publications pour validation. Réinitialisez tous les abonnements qui n'ont pas pu être validés. La récupération est terminée.  
   
-         Pour plus d'informations sur la validation, consultez [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md). Pour plus d’informations sur la réinitialisation, consultez [Réinitialiser des abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+         Pour plus d'informations sur la validation, consultez [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Pour plus d’informations sur la réinitialisation, consultez [Réinitialiser des abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 #### <a name="msdb-database-distributor"></a>Base de données msdb (serveur de distribution)  
   
@@ -303,7 +303,7 @@ ms.locfileid: "47612577"
   
 4.  Marquez toutes les publications pour validation. Réinitialisez tous les abonnements qui n'ont pas pu être validés. La récupération est terminée.  
   
-     Pour plus d'informations sur la validation, consultez [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md). Pour plus d’informations sur la réinitialisation, consultez [Réinitialiser des abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+     Pour plus d'informations sur la validation, consultez [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Pour plus d’informations sur la réinitialisation, consultez [Réinitialiser des abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 #### <a name="master-database-distributor"></a>Base de données master (serveur de distribution)  
   
@@ -323,7 +323,7 @@ ms.locfileid: "47612577"
   
 2.  Restaurez la dernière sauvegarde de la base de données d'abonnement. Passez à l’étape 3.  
   
-3.  Si la base de données d'abonnement contient uniquement des abonnements par émission de données, allez à étape 4. Si la base de données d'abonnement contient des abonnements par extraction, posez-vous les questions suivantes : les informations d'abonnement sont-elles à jour ? La base de données inclut-elle toutes les tables et options définies au moment de la défaillance ? Si tel est le cas, passez à l’étape 4. Si non, réinitialisez l'abonnement. La récupération est terminée.  
+3.  Si la base de données d'abonnement contient uniquement des abonnements par émission de données, allez à étape 4. Si la base de données d’abonnement contient des abonnements par extraction, posez-vous les questions suivantes : les informations d’abonnement sont-elles à jour ? La base de données inclut-elle toutes les tables et options définies au moment de la défaillance ? Si tel est le cas, passez à l’étape 4. Si non, réinitialisez l'abonnement. La récupération est terminée.  
   
 4.  Pour synchroniser l'Abonné, exécutez l'Agent de distribution. La récupération est terminée.  
   
@@ -352,7 +352,7 @@ ms.locfileid: "47612577"
  [Sauvegarder et restaurer des bases de données répliquées](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Configurer la distribution](../../../relational-databases/replication/configure-distribution.md)   
  [Publier des données et des objets de base de données](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
+ [S’abonner aux Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [Initialiser un abonnement](../../../relational-databases/replication/initialize-a-subscription.md)   
  [Synchroniser les données](../../../relational-databases/replication/synchronize-data.md)  
   

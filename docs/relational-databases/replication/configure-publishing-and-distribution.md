@@ -15,12 +15,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0d99aac35afb4d5e4cc9fc4c56c497a95641300e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5ab0b82002024a819ef1e6794b6c99bb238fa18e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210808"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135889"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurer la publication et la distribution
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53210808"
 ##  <a name="BeforeYouBegin"></a> Avant de commencer 
 
 ###  <a name="Security"></a> Sécurité 
-Pour plus d’informations, consultez [Déploiement sécurisé &#40;réplication&#41;](../../relational-databases/replication/security/secure-deployment-replication.md).
+Pour plus d’informations, consultez [Afficher et modifier les paramètres de sécurité de la réplication](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
 
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio 
 Configurez la distribution à l'aide de l'Assistant Nouvelle publication ou de l'Assistant Configuration de la distribution. Après avoir configuré le serveur de distribution, affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>**. Utilisez l'Assistant Configuration de la distribution si vous voulez configurer un serveur de distribution de telle sorte que les membres des rôles de base de données fixes `db_owner` puissent créer des publications, ou si vous souhaitez configurer un serveur de distribution distant qui ne soit pas un serveur de publication.

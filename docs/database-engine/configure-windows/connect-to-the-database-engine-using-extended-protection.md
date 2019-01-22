@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f820161dcf242a06054e3f64198aad1f827ed3dd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3d911c26eee5893d6817fe98b7a982e2ce25316f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395352"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133209"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Se connecter au moteur de base de données à l'aide de la protection étendue
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "52395352"
   
 1.  Dans le menu **Démarrer** , cliquez sur **Tous les programmes**, pointez sur **Microsoft SQL Server** , puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-2.  Développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** *\<* nom_instance*>*, puis cliquez sur **Propriétés**.  
+2.  Développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** _\<_nom_instance*>*, puis cliquez sur **Propriétés**.  
   
 3.  Pour la liaison de service et la liaison de canal, sous l'onglet **Avancé** , affectez le paramètre approprié à **Protection étendue** .  
   

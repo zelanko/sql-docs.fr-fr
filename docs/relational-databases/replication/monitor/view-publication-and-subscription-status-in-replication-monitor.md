@@ -22,12 +22,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 851431754767545977c43c19b44880c54543872d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b11a1206e691e834c3ed44d7ab83c73ffc002ec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613438"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127730"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Afficher l'état des publications et des abonnements dans le Moniteur de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +55,11 @@ ms.locfileid: "47613438"
   
  **Pour afficher l'état des publications et des abonnements**  
   
--   Moniteur de réplication : [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) et [Afficher des informations et exécuter des tâches pour un abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   Moniteur de réplication : [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md) 
   
  **Pour afficher des informations détaillées pour les agents**  
   
--   Moniteur de réplication : [Afficher des informations et exécuter des tâches pour les agents associés à un serveur de publication &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md) et [Afficher des informations et exécuter des tâches pour les agents associés à un abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+-   Moniteur de réplication : [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).
   
 ## <a name="publication-status-values"></a>Valeurs d'état des publications  
  Le tableau suivant montre les valeurs d'état des publications et leurs icônes correspondantes dans l'ordre de la priorité.  
@@ -69,7 +69,7 @@ ms.locfileid: "47613438"
 |Error|![Icône d’interface utilisateur : erreur](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icône d’interface utilisateur : erreur")|  
 |Critique pour les performances|![Icône d’interface utilisateur : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
 |Nouvelle tentative de la commande qui a échoué|![Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication")|  
-|OK|aucun|  
+|OK|none|  
   
 ## <a name="subscription-status-values"></a>Valeurs d'état des abonnements  
  Les tableaux suivants montrent les valeurs d'état des abonnements et leurs icônes correspondantes dans l'ordre de la priorité. Un abonnement peut avoir deux états en même temps (par exemple, **Expire bientôt/Expiré** et **Nouvelle tentative de la commande qui a échoué**) ; l'état de haute priorité est affiché.  
@@ -113,6 +113,6 @@ ms.locfileid: "47613438"
 |Sans synchronisation|![Icône d’interface utilisateur : agent de réplication arrêté](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icône d’interface utilisateur : agent de réplication arrêté")|  
   
 ## <a name="see-also"></a> Voir aussi  
- [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

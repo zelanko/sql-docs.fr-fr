@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 28bd264498c681542c9cb27e79cdd21f3cf0821c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2270917dad9f366b09fbc7cbc0d88c286fe6761c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509943"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257094"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ L’Assistant Paramétrage de requêtes cible les modèles possibles connus de r
 Les modèles d’estimateur de cardinalité recherchés par l’Assistant Paramétrage de requêtes sont les suivants : 
 -  **Indépendance ou corrélation** : si l’hypothèse de l’indépendance fournit de meilleures estimations pour la requête en question, l’indicateur de requête `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` fait en sorte que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un plan d’exécution à l’aide d’une sélectivité minimale lors de l’estimation des prédicats `AND` pour les filtres afin de prendre en compte la corrélation. Pour plus d’informations, consultez [Indicateurs de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) et [Versions de l’estimateur de cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
 -  **Autonomie simple ou autonomie de base** : si une autonomie de jointure différente fournit de meilleures estimations pour la requête en question, l’indicateur de requête `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` fait en sorte que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un plan d’exécution à l’aide de l’hypothèse Autonomie simple plutôt que l’hypothèse Autonomie de base par défaut. Pour plus d’informations, consultez [Indicateurs de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) et [Versions de l’estimateur de cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
--  **Estimation de cardinalité fixe des fonctions table à instructions multiples (MSTVF)** de 100 lignes ou 1 ligne : si l’estimation fixe par défaut pour les TVF de 100 lignes ne donne pas un plan plus efficace que l’utilisation de l’estimation fixe d’1 ligne pour les TVF (correspondant à la valeur par défaut sous le modèle d’estimateur de cardinalité de l’optimiseur de requête de [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] et versions antérieures), l’indicateur de requête `QUERYTRACEON 9488` est utilisé pour générer un plan d’exécution. Pour plus d’informations sur les MSTVF, consultez [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+-  **Estimation de cardinalité fixe des fonctions table à instructions multiples (MSTVF)** de 100 lignes ou 1 ligne : si l’estimation fixe par défaut pour les TVF de 100 lignes ne donne pas un plan plus efficace que l’utilisation de l’estimation fixe d’1 ligne pour les TVF (correspondant à la valeur par défaut sous le modèle d’estimateur de cardinalité de l’optimiseur de requête de [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] et versions antérieures), l’indicateur de requête `QUERYTRACEON 9488` est utilisé pour générer un plan d’exécution. Pour plus d’informations sur les MSTVF, consultez [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 > [!NOTE]
 > En dernier recours, si les indicateurs à étendue étroite ne génèrent pas de résultats suffisamment bons pour les modèles de requête éligibles, l’utilisation complète de l’estimateur de cardinalité 70 est également considérée, en utilisant l’indicateur de requête `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` pour générer un plan d’exécution.
@@ -98,10 +98,10 @@ L’Assistant Paramétrage de requêtes est une fonctionnalité basée sur la se
 
        ![Fenêtre de paramètres de mise à niveau de base de données](../../relational-databases/performance/media/qta-new-session-settings.png "Fenêtre de paramètres de mise à niveau de base de données")
 
-        > [!IMPORTANT]
-        > La proposition *Taille maximale* est une valeur arbitraire qui peut convenir à une charge de travail de courte durée.   
-        > Toutefois, gardez à l’esprit qu’elle risque d’être insuffisante pour contenir des informations sur les charges de travail de base de référence et de post-mise à niveau de base de données très intensives, c’est-à-dire quand de nombreux plans différents peuvent être générés.   
-        > Si vous prévoyez que ce sera le cas, entrez une valeur plus élevée qui convient.
+       > [!IMPORTANT]
+       > La proposition *Taille maximale* est une valeur arbitraire qui peut convenir à une charge de travail de courte durée.   
+       > Toutefois, gardez à l’esprit qu’elle risque d’être insuffisante pour contenir des informations sur les charges de travail de base de référence et de post-mise à niveau de base de données très intensives, c’est-à-dire quand de nombreux plans différents peuvent être générés.   
+       > Si vous prévoyez que ce sera le cas, entrez une valeur plus élevée qui convient.
 
 4.  La fenêtre **Réglage** conclut la configuration de session et indique les étapes suivantes à effectuer pour ouvrir et poursuivre la session. Une fois que vous avez fini, cliquez sur **Terminer**.
 
@@ -186,7 +186,7 @@ L’Assistant Paramétrage de requêtes est une fonctionnalité basée sur la se
     -  **Texte de la requête** : instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] que vous pouvez développer en cliquant sur le bouton **...**.
     -  **État** : affiche l’état actuel de l’expérimentation pour la requête.
     -  **Métrique de référence** : métrique sélectionnée (durée ou temps processeur), en ms, pour la requête telle qu’exécutée à l’**Étape 2 Sous-étape 3**, représentant la requête régressée après la mise à niveau de la compatibilité de base de données.
-    -  **Métrique observée**: métrique sélectionnée (durée ou temps processeur), en ms, pour la requête après l’expérimentation, pour une optimisation proposée suffisamment bonne.
+    -  **Métrique observée** : métrique sélectionnée (durée ou temps processeur), en ms, pour la requête après l’expérimentation, pour une optimisation proposée suffisamment bonne.
     -  **% de changement** : pourcentage de changement pour la métrique sélectionnée, entre les états antérieur et postérieur à l’expérimentation, représentant le taux d’amélioration mesuré pour la requête avec l’optimisation proposée.
     -  **Option de requête** : lien vers l’indicateur proposé qui améliore la métrique d’exécution de requête.
     -  **Peut déployer** : *True* ou *False* selon que l’optimisation de requête proposée peut être déployée ou non en tant que repère de plan.

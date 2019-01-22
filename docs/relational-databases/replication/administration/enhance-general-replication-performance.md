@@ -22,12 +22,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e58d15af6605a8b50440fcff6e181a39c58098f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539186"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134362"
 ---
 # <a name="enhance-general-replication-performance"></a>Améliorer les performances générales de la réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "52539186"
   
     -   Dans le cas d'une réplication de fusion, il peut être plus efficace d'utiliser des gestionnaires de logique métier. Pour plus d’informations, consultez [Exécuter la logique métier pendant la synchronisation de fusion](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
-     Si vous utilisez des déclencheurs pour conserver l'intégrité référentielle dans les tables publiées pour la réplication de fusion, indiquez l'ordre de traitement des tables afin de réduire le nombre de tentatives nécessaires à l'Agent de fusion. Pour plus d’informations, consultez [Spécifier l’ordre de traitement d’articles de fusion](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+     Si vous utilisez des déclencheurs pour conserver l'intégrité référentielle dans les tables publiées pour la réplication de fusion, indiquez l'ordre de traitement des tables afin de réduire le nombre de tentatives nécessaires à l'Agent de fusion. Pour plus d’informations, consultez [Spécifier les options de la réplication de fusion](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 -   Limitez l'utilisation des types de données d'objets volumineux (LOB).  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52539186"
   
      Lorsque des quantités importantes de modifications doivent être envoyées aux abonnés, la réinitialisation de ces derniers à partir d'un nouvel instantané peut s'avérer plus rapide que l'utilisation de la réplication pour déplacer chaque modification. Pour plus d’informations, consultez [Réinitialiser des abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-     Pour la réplication transactionnelle, le moniteur de réplication affiche des informations sur l'onglet **Commandes non distribuées** sur : le nombre de transactions dans la base de données de distribution qui n'ont pas encore été distribuées à un Abonné ; et sur le temps estimé pour distribuer ces transactions. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Pour la réplication transactionnelle, le moniteur de réplication affiche des informations sur l'onglet **Commandes non distribuées** sur : le nombre de transactions dans la base de données de distribution qui n'ont pas encore été distribuées à un Abonné ; et sur le temps estimé pour distribuer ces transactions. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="snapshot-considerations"></a>Considérations sur les instantanés  
   
@@ -144,8 +144,7 @@ ms.locfileid: "52539186"
   
      La compression des fichiers d'instantanés dans le dossier d'instantanés de remplacement permet de réduire les besoins de stockage sur disque, et de simplifier le transfert des fichiers d'instantanés sur support amovible.  
   
-     Compresser les instantanés permet dans certains cas d'améliorer les performances du transfert des fichiers d'instantanés sur le réseau. Toutefois, la compression de l'instantané nécessite un traitement supplémentaire de la part de l'Agent d'instantané lors de la génération des fichiers d'instantanés, et de la part de l'Agent de distribution lors de l'application de ces fichiers. Dans certains cas, cela peut ralentir la génération de l'instantané et rallonger le délai d'application d'un instantané. De plus, les instantanés compressés ne peuvent pas reprendre si une défaillance du réseau se produit ; ils ne conviennent donc pas aux réseaux non fiables. Évaluez ces différents facteurs avec précaution lors de l'utilisation d'instantanés compressés sur un réseau. Pour plus d'informations, consultez [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md) et [Compressed Snapshots](../../../relational-databases/replication/compressed-snapshots.md).  
-  
+     Compresser les instantanés permet dans certains cas d'améliorer les performances du transfert des fichiers d'instantanés sur le réseau. Toutefois, la compression de l'instantané nécessite un traitement supplémentaire de la part de l'Agent d'instantané lors de la génération des fichiers d'instantanés, et de la part de l'Agent de distribution lors de l'application de ces fichiers. Dans certains cas, cela peut ralentir la génération de l'instantané et rallonger le délai d'application d'un instantané. De plus, les instantanés compressés ne peuvent pas reprendre si une défaillance du réseau se produit ; ils ne conviennent donc pas aux réseaux non fiables. Évaluez ces différents facteurs avec précaution lors de l'utilisation d'instantanés compressés sur un réseau. Pour plus d’informations, consultez [Modifier les options des instantanés](../../../relational-databases/replication/snapshot-options.md). 
 -   Envisagez d'initialiser manuellement un abonnement.  
   
      Dans certains scénarios, comme ceux impliquant de volumineux datasets initiaux, il est préférable d'initialiser un abonnement à l'aide d'une autre méthode que l'instantané. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
@@ -154,11 +153,11 @@ ms.locfileid: "52539186"
   
 -   Réduisez les niveaux de détail des Agents de réplication, sauf au cours des test initiaux, de l'analyse ou du débogage.  
   
-     Réduisez le paramètre **-HistoryVerboseLevel** et le paramètre **-OutputVerboseLevel** des Agents de distribution ou de fusion. Cela diminue la quantité de nouvelles lignes insérées pour le suivi de l'historique et des valeurs de sortie de l'Agent. En contrepartie, les messages d'historique antérieurs présentant le même état sont mis à jour à partir des nouvelles informations d'historique. Augmentez les niveaux de commentaire pour les tests, l'analyse et le débogage afin d'obtenir le plus d'informations possibles sur l'activité de l'Agent.  
+     Réduisez le paramètre **–HistoryVerboseLevel** et le paramètre **–OutputVerboseLevel** des Agents de distribution ou de fusion. Cela diminue la quantité de nouvelles lignes insérées pour le suivi de l'historique et des valeurs de sortie de l'Agent. En contrepartie, les messages d'historique antérieurs présentant le même état sont mis à jour à partir des nouvelles informations d'historique. Augmentez les niveaux de commentaire pour les tests, l'analyse et le débogage afin d'obtenir le plus d'informations possibles sur l'activité de l'Agent.  
   
--   Utilisez le paramètre **-MaxBCPThreads** de l’Agent d’instantané, de l’Agent de fusion et de l’Agent de distribution (le nombre de threads spécifié ne doit pas dépasser le nombre de processeurs sur l’ordinateur). Ce paramètre indique le nombre d'opérations de copie en bloc pouvant être effectuées en parallèle lorsque l'instantané est créé et appliqué.  
+-   Utilisez le paramètre **–MaxBCPThreads** de l’Agent d’instantané, de l’Agent de fusion et de l’Agent de distribution (le nombre de threads spécifié ne doit pas dépasser le nombre de processeurs sur l’ordinateur). Ce paramètre indique le nombre d'opérations de copie en bloc pouvant être effectuées en parallèle lorsque l'instantané est créé et appliqué.  
   
--   Utilisez le paramètre **-UseInprocLoader** de l’Agent de distribution et de l’Agent de fusion (il est impossible d’utiliser ce paramètre si des tables publiées comportent des colonnes XML). Ce paramètre entraîne l'utilisation de la commande BULK INSERT par l'Agent lorsque l'instantané est appliqué.  
+-   Utilisez le paramètre **–UseInprocLoader** de l’Agent de distribution et de l’Agent de fusion (il est impossible d’utiliser ce paramètre si des tables publiées comportent des colonnes XML). Ce paramètre entraîne l'utilisation de la commande BULK INSERT par l'Agent lorsque l'instantané est appliqué.  
   
  Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
   

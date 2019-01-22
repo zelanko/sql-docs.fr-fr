@@ -23,18 +23,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e75c6040a74f58ae0c6fb8e340a61a8a90332de
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 6485ebf0eea1565a13e53a0aa7746a724352c35e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970670"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300196"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Participez à l’amélioration de la documentation SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Définit une date qui est associée à une heure de la journée avec des fractions de seconde qui se présente au format 24 heures.
   
@@ -50,16 +50,16 @@ Définit une date qui est associée à une heure de la journée avec des fractio
 |Formats de littéraux de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|Non applicable|  
 |Plage de dates|Du 1er janvier 1753 au 31 décembre 9999|  
 |Plage temporelle|00:00:00 à 23:59:59.997|  
-|Plage de décalages de fuseau horaire|Aucun|  
+|Plage de décalages de fuseau horaire|None|  
 |Plages d'éléments|AAAA comprend quatre chiffres, entre 1753 et 9999, qui représentent une année.<br /><br /> MM comprend deux chiffres, entre 01 et 12, qui représentent un mois de l’année spécifiée.<br /><br /> DD comprend deux chiffres, entre 01 et 31 selon le mois, qui représentent un jour du mois spécifié.<br /><br /> hh comprend deux chiffres, entre 00 et 23, qui représentent l'heure.<br /><br /> mm comprend deux chiffres, entre 00 et 59, qui représentent la minute.<br /><br /> ss comprend deux chiffres, entre 00 et 59, qui représentent la seconde.<br /><br /> n* comprend entre zéro et trois chiffres, entre 0 et 999, qui représentent les fractions de seconde.|  
 |Longueur de caractère|19 positions au minimum et 23 au maximum|  
 |Taille de stockage|8 octets|  
 |Précision|Arrondi aux incréments de ,000, ,003 ou ,007 secondes|  
 |Valeur par défaut|1900-01-01 00:00:00|  
 |Calendrier|Grégorien (N'inclut pas la plage complète des années.)|  
-|Précision à la fraction de seconde définie par l'utilisateur|non|  
-|Prise en charge et conservation du décalage de fuseau horaire|non|  
-|Prise en charge de l'heure d'été|non|  
+|Précision à la fraction de seconde définie par l'utilisateur|Non|  
+|Prise en charge et conservation du décalage de fuseau horaire|Non|  
+|Prise en charge de l'heure d'été|Non|  
   
 ## <a name="supported-string-literal-formats-for-datetime"></a>Formats de littéraux de chaîne pris en charge pour datetime  
 Les tableaux suivants répertorient les formats de littéraux de chaîne pris en charge pour **datetime**. Sauf pour ODBC, les littéraux de chaîne **datetime** sont encadrés par des guillemets simples ('), par exemple 'string_literaL'. Si l’environnement n’est pas **us_english**, les littéraux de chaîne doivent se présenter au format N'string_literaL'.

@@ -14,18 +14,18 @@ ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e196af0c5c2e71eb544426183300959be3bedab8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4aee8234b48fca2919f75a1cbf999e0dfb3c49c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776137"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128899"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>Conflit de réplication de fusion avancée - Résolution dans les enregistrements logiques
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique couvre les différentes combinaisons des approches possibles de détection et de résolution des conflits lors de l'utilisation d'enregistrements logiques. Un conflit se produit dans une réplication de fusion quand un ou plusieurs nœuds modifient les mêmes données, ou quand la réplication de fusion rencontre certains types d'erreurs lors de la réplication de modifications, par exemple une violation de contrainte. Pour plus d'informations sur la détection et la résolution des conflits, consultez [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- Pour spécifier le niveau de suivi et de résolution des conflits pour un article, consultez [spécifier le niveau de résolution et de suivi de conflit pour les Articles de fusion](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Pour spécifier le niveau de suivi et de résolution des conflits pour un article, consultez [Modifier les options de la réplication de fusion](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## <a name="conflict-detection"></a>Détection des conflits  
  La façon dont les conflits sont détectés pour les enregistrements logiques est déterminée par deux propriétés d'article : **column_tracking** et **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et les versions ultérieures prennent également en charge la détection au niveau des enregistrements logiques.  

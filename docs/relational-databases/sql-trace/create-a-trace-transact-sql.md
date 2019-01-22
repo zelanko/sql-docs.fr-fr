@@ -14,12 +14,12 @@ ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2b8c22d597f3f3115fa0630db524eb0909f499a
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 37c5c0d4793087e4cbdfd5f0a6e38197582068ef
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571058"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128459"
 ---
 # <a name="create-a-trace-transact-sql"></a>Créer une trace (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51571058"
      **sp_trace_setevent** et **sp_trace_setfilter** ne peuvent être exécutées que sur des traces existantes arrêtées.  
   
     > [!IMPORTANT]  
-    >  Contrairement aux procédures stockées standard, les paramètres de toutes les procédures stockées de SQL Server Profiler (**sp_trace_* xx***) sont strictement typés et ne prennent pas en charge la conversion automatique des types de données. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
+    >  Contrairement aux procédures stockées standard, les paramètres de toutes les procédures stockées de SQL Server Profiler (<strong>sp_trace_*xx*</strong>) sont strictement typés et ne prennent pas en charge la conversion automatique des types de données. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
   
 ## <a name="example"></a> Exemple  
  L'exemple de code suivant montre comment créer une trace à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il est divisé en trois sections : création de la trace, remplissage du fichier de trace et arrêt de la trace. Personnalisez la trace en ajoutant les événements dont vous souhaitez effectuer le suivi. Pour obtenir la liste des événements et des colonnes, consultez [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  

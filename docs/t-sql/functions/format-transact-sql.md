@@ -18,18 +18,18 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9616a482a220c1c15813fc548ad959dccf46e10
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 64341fd261cb1c1e419b925049cf86403a64ab3e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703097"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299596"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Participez à l’amélioration de la documentation SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 
 Retourne une valeur mise en forme avec la culture facultative et le format spécifiés dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Utilisez la fonction FORMAT pour la mise en forme comme chaînes de valeurs de date/heure et de valeurs numériques compatibles avec les paramètres régionaux. Pour les conversions de type de données général, continuez à utiliser CAST ou CONVERT.  
@@ -76,11 +76,11 @@ FORMAT ( value, format [, culture ] )
   
 |Catégorie|Type|Type .NET|  
 |--------------|----------|---------------|  
-|Numérique|bigint|Int64|  
+|Numérique|BIGINT|Int64|  
 |Numérique|INT|Int32|  
 |Numérique|SMALLINT|Int16|  
 |Numérique|TINYINT|Byte|  
-|Numérique|decimal|SqlDecimal|  
+|Numérique|Décimal|SqlDecimal|  
 |Numérique|NUMERIC|SqlDecimal|  
 |Numérique|FLOAT|Double|  
 |Numérique|REAL|Unique|  
@@ -127,7 +127,7 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-format-with-custom-formatting-strings"></a>B. FORMAT avec chaînes de format personnalisées  
+### <a name="b-format-with-custom-formatting-strings"></a>b. FORMAT avec chaînes de format personnalisées  
  L'exemple suivant montre la mise en forme des valeurs numériques en spécifiant un format personnalisé. L’exemple suppose que la date actuelle est le 27 septembre 2012. Pour plus d’informations sur ces formats et d’autres formats personnalisés, consultez [Chaînes de format numérique personnalisées](https://msdn.microsoft.com/library/0c899ak8.aspx).  
   
 ```sql  

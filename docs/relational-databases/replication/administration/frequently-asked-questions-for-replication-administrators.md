@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04e138f38923745d0095344959bc5876fc213b00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5f6d488b46f576ed5c5d97358ec8674a64be46bd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507444"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135359"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Questions fréquentes (FAQ) pour les administrateurs de la réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "52507444"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>Quand un abonnement est-il disponible, quand la base de données d'abonnement peut-elle être utilisée ?  
  Un abonnement est disponible après que l'instantané ait été appliqué à la base de données d'abonnement. Bien que la base de données d'abonnement soit accessible avant, il est conseillé de ne pas l'utiliser tant que l'instantané n'a pas été appliqué. Utilisez le Moniteur de réplication pour vérifier l'état de génération et d'application d'instantané :  
   
--   L'instantané est généré par l'Agent d'instantané. Affichez l'état de génération de l'instantané sur l'onglet **Agents** pour une publication du moniteur de réplication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+-   L'instantané est généré par l'Agent d'instantané. Affichez l'état de génération de l'instantané sur l'onglet **Agents** pour une publication du moniteur de réplication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
--   L'instantané est appliqué par l'Agent de distribution ou par l'Agent de fusion. Affichez l'état d'application d'instantané sur la page **Agent de distribution** ou **Agent de fusion** du Moniteur de réplication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+-   L'instantané est appliqué par l'Agent de distribution ou par l'Agent de fusion. Affichez l'état d'application d'instantané sur la page **Agent de distribution** ou **Agent de fusion** du Moniteur de réplication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>Que se passe-t-il si l’Agent d'instantané n’a pas terminé lorsque l’Agent de distribution ou l'Agent de fusion démarre ?  
  Cela n'entraînera aucune erreur si l'Agent de distribution ou l'Agent de fusion s'exécute en même temps que l'Agent d'instantané. Vous devez cependant prendre en compte les éléments suivants :  
@@ -96,7 +96,7 @@ ms.locfileid: "52507444"
  Ces informations sont disponibles via [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]et plusieurs procédures stockées de réplication. Pour plus d’informations, voir [Distributor and Publisher Information Script](../../../relational-databases/replication/administration/distributor-and-publisher-information-script.md).  
   
 ### <a name="does-replication-encrypt-data"></a>La réplication chiffre-t-elle les données ?  
- Non. La réplication ne chiffre pas les données stockées dans la base de données ou transférées sur le réseau. Pour plus d’informations, consultez la section « Chiffrement » de la rubrique [Vue d’ensemble de la sécurité &#40;réplication&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
+ Non. La réplication ne chiffre pas les données stockées dans la base de données ou transférées sur le réseau. Pour plus d’informations, consultez la section « Chiffrement » de la rubrique [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>Comment puis-je répliquer des données via Internet ?  
  Vous pouvez répliquer des données via Internet en utilisant :  
@@ -142,8 +142,9 @@ ms.locfileid: "52507444"
   
 -   Exécutez les instructions GRANT directement sur la base de données d'abonnement.  
   
--   Utilisez un script après l'instantané pour exécuter les instructions. Pour plus d’informations, consultez [Exécuter des scripts avant et après l’application de l’instantané](../../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).  
-  
+-   Utilisez un script après l'instantané pour exécuter les instructions. Pour plus d’informations, consultez [Exécuter des scripts avant et après l’application de l’instantané](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).  
+
+ 
 -   Utilisez la procédure stockée [sp_addscriptexec](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md) pour exécuter les instructions.  
   
 ### <a name="what-happens-to-permissions-granted-in-a-subscription-database-if-a-subscription-is-reinitialized"></a>Qu'advient-il des autorisations accordées dans une base de données d'abonnement si un abonnement est réinitialisé ?  
@@ -169,7 +170,7 @@ ms.locfileid: "52507444"
  Oui. Il existe de nombreuses règles spécifiques pour les bases de données impliquées dans une réplication. Pour plus d’informations, consultez [Sauvegarder et restaurer des bases de données répliquées](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>La réplication affecte-t-elle la taille du journal des transactions ?  
- La réplication de fusion et la réplication d'instantané n'affectent pas la taille du journal des transactions, contrairement à la réplication transactionnelle. Si une base de données comprend une ou plusieurs publications transactionnelles, le journal n'est pas tronqué tant que toutes les transactions relatives aux publications n'ont pas été remises à la base de données de distribution. Si la taille du journal des transactions devient trop importante et que l'Agent de lecture du journal s'exécute de manière planifiée, envisagez de réduire l'intervalle entre les exécutions. Ou, définissez-le pour qu'il s'exécute en mode continu. S'il est paramétré pour s'exécuter en mode continu (par défaut), vérifiez qu'il fonctionne. Pour plus d’informations sur la vérification de l’état de l’Agent de lecture du journal, consultez [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+ La réplication de fusion et la réplication d'instantané n'affectent pas la taille du journal des transactions, contrairement à la réplication transactionnelle. Si une base de données comprend une ou plusieurs publications transactionnelles, le journal n'est pas tronqué tant que toutes les transactions relatives aux publications n'ont pas été remises à la base de données de distribution. Si la taille du journal des transactions devient trop importante et que l'Agent de lecture du journal s'exécute de manière planifiée, envisagez de réduire l'intervalle entre les exécutions. Ou, définissez-le pour qu'il s'exécute en mode continu. S'il est paramétré pour s'exécuter en mode continu (par défaut), vérifiez qu'il fonctionne. Pour plus d’informations sur la vérification de l’état de l’Agent de lecture du journal, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  De plus, si vous avez défini l'option « sync with backup » sur la base de données de publication ou la base de données de distribution, le journal des transactions n'est pas tronqué tant que toutes les transactions ne sont pas sauvegardées. Si la taille du journal des transactions devient trop importante et que cette option est définie, envisagez de réduire l'intervalle entre les enregistrements du journal des transactions. Pour plus d’informations sur la sauvegarde et la restauration des bases de données impliquées dans la réplication transactionnelle, consultez [Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d’instantané](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
@@ -186,12 +187,12 @@ ms.locfileid: "52507444"
  Commencez par supprimer l’article de la publication en utilisant [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) ou la boîte de dialogue **Propriétés de la publication - \<Publication>**, puis supprimez-le de la base de données à l’aide de `DROP <Object>`. Vous ne pouvez pas supprimer d'articles d'un instantané ou de publications transactionnelles après avoir ajouté les abonnements, vous devez d'abord supprimer les abonnements. Pour plus d’informations, consultez [Ajouter et supprimer des articles de publications existantes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Comment puis-je ajouter ou supprimer des colonnes sur une table publiée ?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge une large variété de modifications de schéma sur les objets publiés, y compris l'ajout et la suppression de colonnes. Par exemple, si vous exécutez ALTER TABLE ... DROP COLUMN sur le serveur de publication, l’instruction est répliquée vers les abonnés, puis exécutée pour supprimer la colonne. Les abonnés qui exécutent des versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] prennent en charge l'ajout et la suppression de colonnes à travers les procédures stockées [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) et [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge une large variété de modifications de schéma sur les objets publiés, y compris l'ajout et la suppression de colonnes. Par exemple, si vous exécutez ALTER TABLE … DROP COLUMN sur le serveur de publication, l’instruction est répliquée vers les abonnés, puis exécutée pour supprimer la colonne. Les abonnés qui exécutent des versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] prennent en charge l'ajout et la suppression de colonnes à travers les procédures stockées [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) et [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="replication-maintenance"></a>Maintenance de réplication  
   
 ### <a name="how-do-i-determine-if-the-data-at-subscribers-is-synchronized-with-data-at-the-publisher"></a>Comment puis-je déterminer si les données sur les abonnés sont synchronisées avec celles du serveur de publication ?  
- Utilisez la validation. La validation fournit un rapport sur la synchronisation ou non de l'Abonné avec le serveur de publication. Pour plus d’informations, consultez [Valider des données répliquées](../../../relational-databases/replication/validate-replicated-data.md). La validation ne fournit pas d'informations sur les lignes non correctement synchronisées, à l'inverse de l'utilitaire [tablediff utility](../../../tools/tablediff-utility.md) .  
+ Utilisez la validation. La validation fournit un rapport sur la synchronisation ou non de l'Abonné avec le serveur de publication. Pour plus d’informations, consultez [Valider des données répliquées](../../../relational-databases/replication/validate-data-at-the-subscriber.md). La validation ne fournit pas d'informations sur les lignes non correctement synchronisées, à l'inverse de l'utilitaire [tablediff utility](../../../tools/tablediff-utility.md) .  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>Comment puis-je ajouter une table à une publication existante ?  
  Il n'est pas nécessaire d'arrêter l'activité sur les bases de données de publication ou d'abonnement pour ajouter une table (ou un autre objet). Ajoutez une table à une publication par le biais de la boîte de dialogue **Propriétés de la publication - \<Publication>** ou des procédures stockées [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) et [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Pour plus d’informations, consultez [Ajouter et supprimer des articles de publications existantes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
@@ -209,7 +210,7 @@ ms.locfileid: "52507444"
  Les actions nécessaires à la suppression de la réplication d'une base de données varient suivant que la base de données ait servi de base de données de publication, de base de données d'abonnement, ou des deux à la fois.  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>Comment puis-je déterminer s'il existe des transactions ou des lignes à répliquer ?  
- Pour la réplication transactionnelle, utilisez les procédures stockées ou l'onglet **Commandes non distribuées** du Moniteur de réplication. Pour plus d’informations, consultez [Afficher les commandes répliquées et d’autres informations dans la base de données de distribution &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) et [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Pour la réplication transactionnelle, utilisez les procédures stockées ou l'onglet **Commandes non distribuées** du Moniteur de réplication. Pour plus d’informations, consultez [Afficher les commandes répliquées et autres informations dans la base de données de distribution &#40;Programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) et [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Pour la réplication de fusion, utilisez la procédure stockée **sp_showpendingchanges**. Pour plus d’informations, consultez [sp_showpendingchanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md).  
   
@@ -220,7 +221,7 @@ ms.locfileid: "52507444"
   
 -   Délai estimé de distribution des commandes à l'Abonné. Si cette valeur est supérieure au délai nécessaire pour générer et appliquer un instantané à l'Abonné, réinitialisez l'Abonné. Pour plus d’informations, consultez [Réinitialiser des abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
- Pour plus d’informations, consultez [sp_replmonitorsubscriptionpendingcmds (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) et [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement (moniteur de réplication)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Pour plus d’informations, consultez [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) et [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="replication-and-other-database-features"></a>Réplication et autres fonctionnalités de base de données  
   
@@ -231,7 +232,7 @@ ms.locfileid: "52507444"
  Oui. Aucune règle spécifique n'est nécessaire car toutes les données sont stockées sur un ensemble de disques sur le cluster.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Administration &#40;réplication&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
+ [FAQ sur l’administration de la réplication](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   

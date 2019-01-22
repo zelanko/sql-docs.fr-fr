@@ -15,12 +15,12 @@ ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd5c45f61329a63825eac983d21aca7e3106920d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dadf635e055a06a8f86349c73d4921c124f7f4c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814078"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123799"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47814078"
   
  Les articles en téléchargement uniquement fonctionnent conjointement avec les abonnements clients : si un article est considéré comme en téléchargement seul, les lignes de cet article ne peuvent pas être insérées, mises à jour ou supprimées pour les abonnés utilisant des abonnements clients. Les serveurs de publication et les abonnés qui utilisent le type d'abonnement serveur (généralement les abonnés qui publient à nouveau des données sur d'autres abonnés) peuvent insérer, mettre à jour et supprimer des données. Pour plus d’informations sur les abonnements clients, consultez [S’abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md).  
   
- Pour spécifier qu'un article est en téléchargement seul, consultez [Spécifier qu'un article de table de fusion est en téléchargement seul](../../../relational-databases/replication/publish/specify-that-a-merge-table-article-is-download-only.md).  
+ Pour spécifier qu’un article est en téléchargement uniquement, consultez [Spécifier les propriétés de la réplication de fusion](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## <a name="using-different-article-types-in-your-applications"></a>Utilisation de différents types d'articles dans vos applications  
  Grâce à la compréhension des besoins de votre application, vous pouvez faire des compromis entre flexibilité maximale et performance optimale. Par exemple, les applications comportant de nombreux conflits et modifications, à la fois sur le serveur de publication et sur les abonnés, utiliseront une publication composée d'articles standards. Certaines applications, comme une application d'automatisation des forces de vente, peuvent comporter des articles potentiellement conflictuels et d'autres articles fonctionnant comme des tables de correspondances, pouvant être spécifiés comme étant en téléchargement seul. Les applications d'entrée de données, comme les systèmes de points de vente et les applications d'automatisation des groupes opérationnels, partitionnent souvent les données de façon à éliminer les conflits, et les données d'un abonné ne vont jamais vers un autre. Dans ces situations, une combinaison de partitions ne se chevauchant pas, d'articles en téléchargement seul et de partitions précalculées offre des performances et une évolutivité maximales. Pour plus d'informations sur les partitions ne se chevauchant pas et les partitions précalculées, consultez [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  

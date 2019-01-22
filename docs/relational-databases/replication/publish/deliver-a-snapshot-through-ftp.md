@@ -1,7 +1,7 @@
 ---
 title: Remettre un instantané via FTP | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,40 +15,28 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2dab89b5eacc0cd8c7bd639cdb2c92b1384dcea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e06cc6312c88139be3d4225ddd4e92fe432f4bb3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699288"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126189"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Remettre un instantané via FTP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment remettre un instantané via FTP dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+
+Par défaut, les instantanés sont stockés dans des dossiers définis sous forme de partages UNC (Universal Naming Convention). La réplication vous permet aussi de spécifier un partage FTP (File Transfer Protocol) plutôt qu'UNC. Pour utiliser FTP, vous devez configurer un serveur FTP puis une publication et un ou plusieurs abonnements qui utiliseront FTP. Pour obtenir des informations sur la configuration d'un serveur SMTP, consultez la documentation IIS (Internet Information Services). Si vous spécifiez des informations FTP pour une publication, les abonnements à cette publication utiliseront par défaut FTP. FTP est uniquement utilisé avec la synchronisation Web lorsque l'ordinateur exécutant IIS est séparé du serveur de distribution par un pare-feu. Dans ce cas, FTP peut être utilisé pour transférer l'instantané entre le serveur de distribution et l'ordinateur qui exécute IIS. (L'instantané est toujours transféré à l'Abonné en utilisant le protocole HTTPS.)  
   
- **Dans cette rubrique**  
+> [!IMPORTANT]  
+>  Il est conseillé d’utiliser l’authentification Microsoft Windows et un partage UNC plutôt qu’un partage FTP puisque les mots de passe FTP doivent être stockés et que le mot de passe est transmis de l’Abonné ou de l’ordinateur exécutant IIS quand il utilise la synchronisation web avec le serveur FTP en texte brut. De plus, parce qu'un seul compte contrôle l'accès au partage d'instantané, il n'est pas possible de garantir qu'un Abonné à une publication de fusion filtrée n'aura accès qu'aux fichiers d'instantanés de sa partition de données.  
   
--   **Avant de commencer :**  
-  
-     [Limitations et restrictions](#Restrictions)  
-  
-     [Configuration requise](#Prerequisites)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour remettre un instantané via FTP à l'aide de :**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
-  
-###  <a name="Restrictions"></a> Limitations et restrictions  
+
+## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
   
 -   L'Agent d'instantané doit posséder des autorisations en écriture sur le répertoire spécifié et les Agents de distribution et de fusion des autorisations en lecture. Si vous utilisez des abonnements extraits, vous devez définir un répertoire partagé en tant que chemin UNC, par exemple \\\ftpserver\home\snapshots. Pour plus d’informations, consultez [Sécuriser le dossier d’instantanés](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
   
 -   Pour transférer des fichiers d'instantanés via FTP (File Transfer Protocol), vous devez avant tout configurer un serveur FTP. Pour plus d'informations, consultez la documentation de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS).  
   
@@ -76,14 +64,12 @@ ms.locfileid: "47699288"
   
 3.  Spécifiez que l'Agent d'instantané doit écrire les fichiers d'instantanés dans le répertoire défini à l'étape 2. Par exemple, pour que l’Agent d’instantané écrive les fichiers d’instantanés dans \\\ftpserver\home\snapshots\ftp, vous devez définir le chemin \\\ftpserver\home\snapshots dans l’un ou l’autre emplacement :  
   
-    -   Emplacement des instantanés par défaut sur le serveur de distribution associé à cette publication.  
-  
-         Pour plus d’informations sur la spécification de l’emplacement par défaut des instantanés, consultez [Spécifier l’emplacement par défaut des instantanés &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md).  
-  
+    -   Emplacement des instantanés par défaut sur le serveur de distribution associé à cette publication.    
     -   Autre emplacement de dossier d'instantanés pour cette publication. Un autre emplacement est requis si l'instantané est compressé.  
+
+Pour plus d’informations sur la modification des propriétés d’emplacement du dossier d’instantanés, consultez [Options des instantanés](../snapshot-options.md).
   
-         Entrez le chemin dans la zone de texte **Placer les fichiers dans le dossier suivant** dans la page Instantané de la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d'informations sur la définition d'autres emplacements de dossier d'instantanés, consultez [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md).  
-  
+
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
@@ -103,7 +89,7 @@ ms.locfileid: "47699288"
   
     -   (Facultatif) **@ftp_password** - le mot de passe de la connexion FTP.  
   
-     Une publication qui utilise FTP est alors créée. Pour plus d’informations, consultez [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+     Une publication qui utilise FTP est alors créée. Pour plus d’informations, voir [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>Pour activer la remise d'instantanés via FTP pour une publication de fusion  
   
@@ -119,7 +105,7 @@ ms.locfileid: "47699288"
   
     -   (Facultatif) **@ftp_password** - le mot de passe de la connexion FTP.  
   
-     Une publication qui utilise FTP est alors créée. Pour plus d’informations, consultez [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+     Une publication qui utilise FTP est alors créée. Pour plus d’informations, voir [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication-that-uses-ftp-snapshot-delivery"></a>Pour créer un abonnement par extraction vers une publication transactionnelle ou d'instantané qui utilise la remise d'instantanés via FTP  
   
@@ -185,9 +171,8 @@ ms.locfileid: "47699288"
  [!code-sql[HowTo#sp_createmergepullsubagent_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_3.sql)]  
   
 ## <a name="see-also"></a> Voir aussi  
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Transférer des instantanés via FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)   
- [Modifier les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Concepts liés aux procédures stockées système de réplication](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Changer les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Initialiser un abonnement avec un instantané](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
   
   

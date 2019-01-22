@@ -18,12 +18,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35f53ef33d1cf9316fcb7225ab5baf67a3b33383
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b8b74629bcaea743026c453614f2c69e268b6bc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804058"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130929"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Déboguer un gestionnaire de logique métier (programmation de la réplication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "47804058"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>Pour déboguer un gestionnaire de logique métier sur un ordinateur local  
   
-1.  Configurez la publication et la distribution, créez une publication et créez un abonnement à la publication. Pour plus d’informations, consultez [Configurer la publication et la distribution](../../relational-databases/replication/configure-publishing-and-distribution.md) et [Créer, modifier et supprimer des publications et des articles &#40;réplication&#41;](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md).  
+1.  Configurez la publication et la distribution, créez une publication et créez un abonnement à la publication. Pour plus d’informations, consultez [Configurer la publication et la distribution](../../relational-databases/replication/configure-publishing-and-distribution.md) et [Créer une Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Créez et inscrivez un gestionnaire de logique métier. Pour plus d'informations, voir [Implémenter un gestionnaire de logique métier pour un article de fusion](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Créez et inscrivez un gestionnaire de logique métier. Pour plus d’informations, voir [Implémenter un gestionnaire de logique métier pour un article de fusion](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Créez un projet Replication Management Objects dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio qui démarre par programme l'Agent de fusion de façon synchrone. Pour plus d’informations, voir [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 4.  Définissez un point d'arrêt dans le code du gestionnaire de logique métier, soit dans la méthode en cours de débogage, soit dans le constructeur de classe. Pour plus d'informations sur les méthodes qui peuvent être implémentées dans un gestionnaire de logique métier, consultez la rubrique sur les méthodes <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
-5.  Construisez le gestionnaire de logique métier en mode débogage et déployez l'assembly et le fichier de symboles de débogage (.pdb) dans l'emplacement inscrit à l'étape 1.  
+5.  Construisez le gestionnaire de logique métier en mode débogage et déployez l'assembly et le fichier de symboles de débogage (.pdb) dans l'emplacement inscrit à l'étape 1.  
   
     > [!NOTE]  
     >  Pour simplifier le débogage, créez une solution Visual Studio .NET unique qui contient à la fois le projet de gestionnaire de logique métier et le projet qui synchronise l'abonnement. Dans ce cas, définissez le projet de synchronisation comme projet de démarrage et configurez l'environnement de génération pour déployer l'assembly de logique métier dans l'emplacement inscrit à l'étape 1 au cours du débogage.  

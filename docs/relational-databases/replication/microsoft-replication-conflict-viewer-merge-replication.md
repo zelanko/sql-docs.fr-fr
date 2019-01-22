@@ -13,18 +13,18 @@ ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 10b67088d8c7fde760db975070bf7bc53860d107
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d27c90646aa8bae800780af97f9100427ccc06b6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545680"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124479"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Outil de résolution des conflits de réplication Microsoft (réplication de fusion)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L'outil de résolution des conflits de réplication permet d'afficher et de résoudre les conflits qui se sont produits pendant la synchronisation de la réplication. Des conflits ont lieu lorsque les mêmes données sont modifiées sur deux serveurs différents, par exemple sur un Éditeur et un Abonné ou sur deux Abonnés différents. La réplication résout automatiquement les conflits à l'aide du résolveur de conflits sélectionné lors de la création de l'article. Cependant, l'outil de résolution des conflits permet de choisir une résolution différente des conflits lorsque c'est nécessaire. Les conflits suivants peuvent se produire :  
   
--   Conflits de mise à jour. Les conflits de mise à jour se produisent lorsque les mêmes données sont modifiées dans deux emplacements. L'un « gagne », l'autre « perd ». Vous avez le choix entre conserver les données existantes (les gagnantes) et remplacer les données existantes par celles qui sont en conflit (les perdantes), ou fusionner les données gagnantes et perdantes et mettre à jour les données existantes.  
+-   Conflits de mise à jour. Les conflits de mise à jour se produisent lorsque les mêmes données sont modifiées dans deux emplacements. L'un « gagne », l'autre « perd ». Vous avez le choix entre conserver les données existantes (les gagnantes) et remplacer les données existantes par celles qui sont en conflit (les perdantes), ou fusionner les données gagnantes et perdantes et mettre à jour les données existantes.  
   
 -   Conflits d'insertion. Les conflits d'insertion se produisent lorsqu'une ligne est insérée à un emplacement qui ne respecte pas une règle de cohérence des données lorsqu'elles sont fusionnées avec des modifications à d'autres emplacements. Vous avez le choix entre conserver les données existantes (les gagnantes) et remplacer les données existantes par celles qui sont en conflit (les perdantes), ou fusionner les données gagnantes et perdantes et mettre à jour les données existantes.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "52545680"
  Sélectionnez cette option pour afficher les cinq premières colonnes et toute colonne qui comporte des conflits. Cette option est utile lorsque la table comporte de nombreuses colonnes si vous voulez afficher uniquement les colonnes les plus pertinentes pour la résolution du conflit. Les cinq premières colonnes figurent toujours dans cette vue du fait que les champs qui identifient une ligne (par exemple la clé primaire ou les noms des champs) se trouvent souvent parmi les premières colonnes de la table.  
   
  **Informations sur la colonne** (**…**)  
- Affiche les informations sur la colonne : **Nom de la table**, **Nom de la colonne**, **Type de données**et **Valeur de la colonne**. Le champ**Valeur de la colonne** est modifiable à moins que la valeur ne soit affichée en lecture seule.  
+ Affiche les informations sur la colonne : **Nom de la table**, **Nom de la colonne**, **Type de données** et **Valeur de la colonne**. Le champ**Valeur de la colonne** est modifiable à moins que la valeur ne soit affichée en lecture seule.  
   
  **Soumettre le gagnant**  
  Conserve la ligne que l'outil de résolution des conflits a déterminée gagnante. Vous pouvez modifier la valeur de n'importe quelle colonne qui n'est pas affichée en lecture seule avant de cliquer sur ce bouton.  

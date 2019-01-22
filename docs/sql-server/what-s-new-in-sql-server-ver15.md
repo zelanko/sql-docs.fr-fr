@@ -1,6 +1,6 @@
 ---
 title: Nouveautés de SQL Server 2019 | Microsoft Docs
-ms.date: 12/07/2018
+ms.date: 01/09/2019
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,16 +9,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0d36e43d4015d0edf2271ee86ea0d2f7a761ce8d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e0a5dab4eeccc5c4e31a151ec9611d7ed8367a78
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207778"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300176"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Nouveautés de SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+  > [!div class="nextstepaction"]
+  > [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] s’appuie sur les versions précédentes pour faire de SQL Server une plateforme compatible avec de nombreux langages de développement, types de données et systèmes d’exploitation, localement ou dans le cloud. Cet article résume les nouveautés de SQL Server 2019. Pour obtenir plus d’informations et découvrir les problèmes connus, consultez les [Notes de publication de SQL Server 2019](sql-server-ver15-release-notes.md).
 
@@ -39,7 +42,7 @@ Community Technology Preview (CTP) 2.2 est la première version publique de [!IN
 
 ## <a name="previous-ctps"></a>Versions précédentes de CTP
 
-Les versions antérieures de CTP ajoutaient ou amélioraient les fonctionnalités suivantes pour [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+Les versions antérieures de CTP ajoutaient ou amélioraient les fonctionnalités suivantes pour [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 - [Clusters Big Data](#bigdatacluster) 
   - Déployer un cluster Big Data avec des conteneurs SQL et Spark Linux sur Kubernetes (CTP 2.0)

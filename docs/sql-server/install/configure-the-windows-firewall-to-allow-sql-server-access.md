@@ -23,18 +23,18 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f82ce2b0d3ec19dea48f99634a5c5c9936f25ef9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 483696e8ecc717e0ead5c7be16a627c046cb47ca
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408466"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300066"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 > [!div class="nextstepaction"]
-> [Participez à l’amélioration de la documentation SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Les systèmes de pare-feu empêchent les accès non autorisés aux ressources de l'ordinateur. Si un pare-feu est activé alors qu'il n'est pas configuré correctement, les tentatives de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être bloquées.  
   
@@ -117,8 +117,8 @@ Configurez les paramètres du Pare-feu Windows avec **Microsoft Management Conso
 |Connexion administrateur dédiée|Port TCP 1434 pour l'instance par défaut. D'autres ports sont utilisés pour les instances nommées. Recherchez le numéro de port dans le journal des erreurs.|Par défaut, les connexions distantes à la connexion administrateur dédiée ne sont pas activées. Pour activer une DAC distante, utilisez la facette Configuration de la surface d'exposition. Pour plus d'informations, consultez [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Browser|Port UDP 1434|Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est à l'écoute des connexions entrantes vers une instance nommée et fournit au client le numéro de port TCP qui correspond à cette instance nommée. Normalement le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est démarré toutes les fois que les instances nommées du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont utilisées. Il n'est pas nécessaire que le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soit démarré si le client est configuré pour se connecter au port spécifique de l'instance nommée.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui s'exécute sur un point de terminaison HTTP.|Peut être spécifié lors de la création d'un point de terminaison HTTP. La valeur par défaut est le port TCP 80 pour le trafic CLEAR_PORT et le port 443 pour le trafic SSL_PORT.|Utilisé pour une connexion HTTP via une URL.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui s'exécute sur un point de terminaison HTTPS.|Port TCP 443|Utilisé pour une connexion HTTPS via une URL. HTTPS est une connexion HTTP qui utilise SSL (Secure Sockets Layer).|  
-|[!INCLUDE[ssSB](../../includes/sssb-md.md)]|Port TCP 4022. Pour vérifier le port utilisé, exécutez la requête suivante :<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|Il n’existe aucun port par défaut pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)], mais il s’agit de la configuration classique utilisée dans les exemples de la documentation en ligne.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui s'exécute sur un point de terminaison HTTPS.|Port TCP 443|Utilisé pour une connexion HTTPS via une URL. HTTPS est une connexion HTTP qui utilise SSL (Secure Sockets Layer).|  
+|[!INCLUDE[ssSB](../../includes/sssb-md.md)]|Port TCP 4022. Pour vérifier le port utilisé, exécutez la requête suivante :<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|Il n’existe aucun port par défaut pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)], mais il s’agit de la configuration classique utilisée dans les exemples de la documentation en ligne.|  
 |Mise en miroir de bases de données|Port choisi par l'administrateur. Pour déterminer le port, exécutez la requête suivante :<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|Il n’y a aucun port par défaut pour la mise en miroir de bases de données ; cependant, les exemples de la documentation en ligne utilisent le port TCP 5022 ou 7022. Il est très important d'éviter d'interrompre un point de terminaison de mise en miroir en cours d'utilisation, en particulier en mode haute sécurité avec basculement automatique. Votre configuration du pare-feu doit éviter de rompre le quorum. Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
 |REPLICATION|Les connexions de réplication à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent les ports standard type du [!INCLUDE[ssDE](../../includes/ssde-md.md)] (port TCP 1433 pour l'instance par défaut, etc.)<br /><br /> La synchronisation Web et l'accès de FTP/UNC pour l'instantané de réplication requièrent l'ouverture de ports supplémentaires sur le pare-feu. Pour transférer des données initiales et le schéma d'un emplacement à un autre, la réplication peut utiliser FTP (port TCP 21), ou la synchronisation via HTTP (port TCP 80) ou le partage de fichiers. Le partage de fichiers utilise les ports UDP 137 et 138, et le port TCP 139 avec NetBIOS. Le partage de fichiers utilise le port TCP 445.|Pour la synchronisation via HTTP, la réplication utilise le point de terminaison IIS (dont les ports sont configurables, mais qui a par défaut le port 80), mais le processus IIS se connecte au système principal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via les ports standard (1433 pour l'instance par défaut).<br /><br /> Pendant la synchronisation Web via FTP, le transfert FTP s'effectue entre IIS et le serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pas entre l'abonné et IIS.|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] Débogueur|Port TCP 135<br /><br /> Consultez [Considérations spéciales relatives au port 135](#BKMK_port_135)<br /><br /> L'exception [IPsec](#BKMK_IPsec) peut également être requise.|Si vous utilisez [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], sur l'ordinateur hôte [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , vous devez également ajouter **Devenv.exe** à la liste Exceptions et ouvrir le port TCP 135.<br /><br /> Si vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], sur l'ordinateur hôte [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , vous devez également ajouter **ssms.exe** à la liste Exceptions et ouvrir le port TCP 135. Pour plus d’informations, consultez [Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
@@ -173,7 +173,7 @@ Le tableau suivant répertorie les ports qui sont fréquemment utilisés par [!I
   
 |Fonctionnalité|d’|Commentaires|  
 |-------------|----------|--------------|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Services Web|Port TCP 80|Utilisé pour une connexion HTTP à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] via une URL. Nous vous recommandons de ne pas utiliser la règle préconfigurée **Services World Wide Web (HTTP)**. Pour plus d'informations, consultez ci-dessous la section [Interaction avec d'autres règles de pare-feu](#BKMK_other_rules) .|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Services Web|Port TCP 80|Utilisé pour une connexion HTTP à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] via une URL. Nous vous recommandons de ne pas utiliser la règle préconfigurée **Services World Wide Web (HTTP)**. Pour plus d'informations, consultez ci-dessous la section [Interaction avec d'autres règles de pare-feu](#BKMK_other_rules) .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuré pour une utilisation via HTTPS|Port TCP 443|Utilisé pour une connexion HTTPS via une URL. HTTPS est une connexion HTTP qui utilise SSL (Secure Sockets Layer). Nous vous recommandons de ne pas utiliser la règle préconfigurée **Services World Wide Web sécurisés (HTTPS)**. Pour plus d'informations, consultez ci-dessous la section [Interaction avec d'autres règles de pare-feu](#BKMK_other_rules) .|  
   
 Lorsque [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se connecte à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous devez également ouvrir les ports appropriés pour ces services. Pour obtenir des instructions détaillées sur la manière de configurer le Pare-feu Windows pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Configurer un pare-feu pour accéder au serveur de rapports](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
@@ -313,6 +313,6 @@ Le tableau suivant répertorie les ports et services dont [!INCLUDE[ssNoVersion]
   
 ## <a name="see-also"></a> Voir aussi  
  [Vue d'ensemble des services et exigences de ports réseau pour le système Windows Server](https://support.microsoft.com/kb/832017)   
- [Procédure : configurer les paramètres de pare-feu (base de données SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
+ [Procédure : configurer les paramètres de pare-feu (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

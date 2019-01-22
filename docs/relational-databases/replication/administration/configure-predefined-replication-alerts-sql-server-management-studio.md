@@ -14,12 +14,12 @@ ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5738e4c46d7223561162d970a2ae9137df721191
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b90293de93fd032f7ebc1ee77d839cc2211a7e9d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505328"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136139"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>configurer des alertes de réplication prédéfinies (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "52505328"
   
 -   **Réplication : suppression de l'abonnement expiré**  
   
--   **Réplication : abonnement réinitialisé après l'échec de validation**  
+-   **Réplication : abonnement réinitialisé après l’échec de validation**  
   
--   **Réplication : l'Abonné n'a pas réussi la validation des données**  
+-   **Réplication : l’Abonné n’a pas réussi la validation des données**  
   
--   **Réplication : l'Abonné a passé la validation des données**  
+-   **Réplication : l’Abonné a passé la validation des données**  
   
 -   **Réplication : arrêt personnalisé de l'Agent**  
   
- Configurez ces alertes à partir du dossier **Alertes[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] dans**  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ou de l’onglet **Avertissements** dans le moniteur de réplication. Pour plus d’informations sur l’accès à cet onglet, consultez [Afficher des informations et effectuer des tâches pour un abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
+ Configurez ces alertes à partir du dossier **Alertes[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] dans**  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ou de l’onglet **Avertissements** dans le moniteur de réplication. Pour plus d’informations sur l’accès à cet onglet, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  En plus de ces alertes, le moniteur de réplication comprend un ensemble d'avertissements et d'alertes liées aux états et aux performances. Pour plus d’informations, voir [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md). Vous pouvez aussi définir des alertes pour d'autres événements de réplication à l'aide de l'infrastructure d'alertes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Créer un événement défini par l’utilisateur](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52505328"
   
     -   Sur la page **Réponse** , spécifiez si un courrier électronique doit être envoyé et/ou si un travail doit être effectué.  
   
-         Si l’alerte est **Réplication : l’Abonné n’a pas réussi la validation des données**, vous pouvez spécifier le travail de réponse que la réplication fournit pour cette alerte : sélectionnez **Exécuter le travail**, puis cliquez sur le bouton Parcourir (**…**). Dans la boîte de dialogue **Localiser le travail** , cliquez sur **Parcourir**. Dans la boîte de dialogue **Rechercher des objets** , sélectionnez **Réinitialiser les abonnements présentant des erreurs de validation de données**. Cliquez sur **OK** dans les deux boîtes de dialogue ouvertes. Lorsque le travail s'exécute, il utilise un appel de procédure distante (RPC) à une procédure stockée qui réinitialise l'abonnement. Si le serveur de publication utilise un serveur de distribution distant, vous devez définir une connexion serveur distante sur le serveur de publication, pour que l'appel de procédure distante puisse être effectué du serveur de distribution au serveur de publication.  
+         Si l'alerte est **Réplication : l’Abonné n’a pas réussi la validation des données**, vous pouvez spécifier le travail de réponse que la réplication fournit pour cette alerte : Sélectionnez **Exécuter le travail**, puis cliquez sur le bouton de parcours (**…**). Dans la boîte de dialogue **Localiser le travail** , cliquez sur **Parcourir**. Dans la boîte de dialogue **Rechercher des objets** , sélectionnez **Réinitialiser les abonnements présentant des erreurs de validation de données**. Cliquez sur **OK** dans les deux boîtes de dialogue ouvertes. Lorsque le travail s'exécute, il utilise un appel de procédure distante (RPC) à une procédure stockée qui réinitialise l'abonnement. Si le serveur de publication utilise un serveur de distribution distant, vous devez définir une connexion serveur distante sur le serveur de publication, pour que l'appel de procédure distante puisse être effectué du serveur de distribution au serveur de publication.  
   
     -   Sur la page **Options** , personnalisez le texte de la réponse.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52505328"
   
     -   Sur la page **Réponse** , spécifiez si un courrier électronique doit être envoyé et/ou si un travail doit être effectué.  
   
-         Si l’alerte est **Réplication : l’Abonné n’a pas réussi la validation des données**, vous pouvez spécifier le travail de réponse que la réplication fournit pour cette alerte : sélectionnez **Exécuter le travail**, puis cliquez sur le bouton Parcourir (**…**). Dans la boîte de dialogue **Localiser le travail** , cliquez sur **Parcourir**. Dans la boîte de dialogue **Rechercher des objets** , sélectionnez **Réinitialiser les abonnements présentant des erreurs de validation de données**. Cliquez sur **OK** dans les deux boîtes de dialogue ouvertes. Lorsque le travail s'exécute, il utilise un appel de procédure distante (RPC) à une procédure stockée qui réinitialise l'abonnement. Si le serveur de publication utilise un serveur de distribution distant, vous devez définir une connexion serveur distante sur le serveur de publication, pour que l'appel de procédure distante puisse être effectué du serveur de distribution au serveur de publication.  
+         Si l'alerte est **Réplication : l’Abonné n’a pas réussi la validation des données**, vous pouvez spécifier le travail de réponse que la réplication fournit pour cette alerte : Sélectionnez **Exécuter le travail**, puis cliquez sur le bouton de parcours (**…**). Dans la boîte de dialogue **Localiser le travail** , cliquez sur **Parcourir**. Dans la boîte de dialogue **Rechercher des objets** , sélectionnez **Réinitialiser les abonnements présentant des erreurs de validation de données**. Cliquez sur **OK** dans les deux boîtes de dialogue ouvertes. Lorsque le travail s'exécute, il utilise un appel de procédure distante (RPC) à une procédure stockée qui réinitialise l'abonnement. Si le serveur de publication utilise un serveur de distribution distant, vous devez définir une connexion serveur distante sur le serveur de publication, pour que l'appel de procédure distante puisse être effectué du serveur de distribution au serveur de publication.  
   
     -   Sur la page **Options** , personnalisez le texte de la réponse.  
   

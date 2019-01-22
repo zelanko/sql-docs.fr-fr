@@ -15,12 +15,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e6b91d754c477efe14ee0d47192beff5c735138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d13a0da50bc9a19728ecd4af6034ffc52849164
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784417"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124069"
 ---
 # <a name="replication-tutorials"></a>Tutoriels sur la réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,21 +34,21 @@ Ces tutoriels utilisent NODE1\SQL2016 comme serveur de publication et serveur de
 > La plupart des tâches expliquées dans ces didacticiels peuvent être effectuées par programme. Pour plus d’informations, consultez le [Guide du développeur (réplication)](../../relational-databases/replication/concepts/replication-developer-documentation.md).  
   
 ## <a name="replication-tutorials"></a>Tutoriels sur la réplication  
-[Tutoriel : Préparer SQL Server pour la réplication (serveur de publication, serveur de distribution, abonné)](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 
+[Didacticiel : préparer SQL Server pour la réplication (serveur de publication, serveur de distribution, abonné)](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 
  
 Apprenez à préparer les serveurs afin que la réplication puisse s'exécuter avec les privilèges minimaux. Ce didacticiel doit être effectué avant les autres didacticiels sur la réplication.  
   
-[Tutoriel : Configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle)](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)
+[Didacticiel : configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle)](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)
 
 Découvrez comment configurer la réplication transactionnelle pour répliquer des données entre serveurs intégralement connectés. Ce tutoriel inclut également une méthodologie de résolution des erreurs de base. 
 
   
-[Tutoriel : Configurer la réplication entre un serveur et des clients mobiles (réplication de fusion)](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)
+[Didacticiel : configurer la réplication entre un serveur et des clients mobiles (réplication de fusion)](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)
 
 Découvrez comment configurer la réplication de fusion pour échanger des données entre un serveur et un ou plusieurs clients connectés uniquement de façon occasionnelle.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Sécurité et protection pour la réplication](../../relational-databases/replication/security/security-and-protection-replication.md) 
+[Afficher et modifier les paramètres de sécurité de la réplication](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
 [Présentation de la réplication transactionnelle](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
 

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - online restores [SQL Server]
 - online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e71cf2024fb848ab2c67b4b38d270142a6bdebf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4c91fff761b25e1a8fa1efea65d08121d5cf03c
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682767"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242202"
 ---
 # <a name="online-restore-sql-server"></a>Restauration en ligne (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47682767"
 ## <a name="log-backups-for-online-restore"></a>Sauvegardes de journal pour une restauration en ligne  
  Pour une restauration en ligne, le point de récupération est le point où les données en cours de restauration ont été mises hors connexion ou mises en lecture seule pour la dernière fois. Les sauvegardes des journaux de transactions jusqu'à ce point de récupération compris doivent toutes être disponibles. Généralement, une sauvegarde de fichier journal est requise après ce point pour couvrir le point de récupération du fichier. La seule exception concerne une restauration en ligne de données en lecture seule à partir une sauvegarde de données effectuée après la mise en lecture seule des données. Dans ce cas, vous n'avez pas besoin d'une sauvegarde de journal.  
   
- En général, vous pouvez effectuer des sauvegardes des journaux de transactions pendant que la base de données est en ligne, même après le début de la séquence de restauration. Le moment de la dernière sauvegarde de journal dépend des propriétés du fichier en cours de restauration :  
+ En général, vous pouvez effectuer des sauvegardes des journaux de transactions pendant que la base de données est en ligne, même après le début de la séquence de restauration. Le moment de la dernière sauvegarde de journal dépend des propriétés du fichier en cours de restauration :  
   
 -   Pour un fichier en lecture seule en ligne, vous pouvez effectuer la dernière sauvegarde de journal nécessaire à la récupération avant ou pendant la première séquence de restauration. Un groupe de fichiers en lecture seule peut se passer de sauvegardes de journal si une sauvegarde de données ou différentielle a été effectuée après la mise en lecture seule du groupe de fichiers.  
   
@@ -82,19 +82,19 @@ ms.locfileid: "47682767"
 > [!NOTE]  
 >  La syntaxe pour une séquence de restauration en ligne est la même que pour une séquence de restauration hors connexion.  
   
--   [Exemple : restauration fragmentaire d’une base de données &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Exemple : restauration fragmentaire d’une base de données &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Exemple : restauration fragmentaire de quelques groupes de fichiers uniquement &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Exemple : restauration fragmentaire de quelques groupes de fichiers uniquement &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;Mode de récupération simple&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Exemple : restauration fragmentaire d’une base de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Exemple : restauration fragmentaire d’une base de données &#40;mode de restauration complète&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Exemple : restauration fragmentaire de quelques groupes de fichiers &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Exemple : restauration fragmentaire de quelques groupes de fichiers &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [Exemple : restauration en ligne d’un fichier en lecture/écriture &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [Exemple : restauration en ligne d’un fichier en lecture/écriture &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de restauration complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   

@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26a078bd0e34344cfa84abc336a125e79af18bab
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: e4e1fef3fdaad1b7c8a1bd2b82f8ee1f1da8f76d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336218"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130839"
 ---
 # <a name="countbig--sql"></a>COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +74,7 @@ COUNT_BIG(ALL *expression*) évalue l’argument *expression* pour chaque ligne 
   
 COUNT_BIG (DISTINCT *expression*) évalue l’argument *expression* pour chaque ligne d’un groupe et retourne le nombre de valeurs non-NULL uniques.
   
-COUNT_BIG est une fonction déterministe lorsqu'elle est utilisée ***sans*** les clauses OVER et ORDER BY. COUNT_BIG n'est pas déterministe lorsqu’il est utilisé ***avec*** les clauses OVER et ORDER BY. Consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) pour plus d’informations.
+COUNT_BIG est une fonction déterministe quand elle est utilisée **_sans_** les clauses OVER et ORDER BY. COUNT_BIG n’est pas déterministe quand elle est utilisée **_avec_** les clauses OVER et ORDER BY. Consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) pour plus d’informations.
   
 ## <a name="examples"></a>Exemples  
 Pour obtenir des exemples, consultez [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md).

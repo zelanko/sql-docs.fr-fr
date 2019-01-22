@@ -17,12 +17,12 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ea67ab144a87c2ad77cdaac725d36777cc281ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 413fc991d9f908d4390de109dededa07056e5b63
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770757"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125530"
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Abonnements pouvant être mis à jour - Résolution des conflits de mise à jour en attente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +56,13 @@ ms.locfileid: "47770757"
   
  **Pour définir la stratégie de résolution des conflits de mise à jour en attente**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [Définir des options de résolution des conflits de mise à jour en attente &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Définir des options de résolution des conflits de mise à jour en attente &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
--   Programmation Transact-SQL de la réplication : [Activer les abonnements pouvant être mis à jour pour les publications transactionnelles](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   Programmation Transact-SQL de la réplication : [Activer les abonnements de mise à jour pour les publications transactionnelles](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **Pour afficher les conflits de données**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### <a name="publisher-wins"></a>L'éditeur gagne  
  Lorsque la résolution de conflit appliquée est « Le serveur de publication gagne », la cohérence transactionnelle est conservée dans les données situées sur le serveur de publication. La transaction en conflit est annulée sur l'abonné qui l'a initialisée.  

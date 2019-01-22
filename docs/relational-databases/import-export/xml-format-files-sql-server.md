@@ -1,7 +1,7 @@
 ---
 title: Fichiers de format XML (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2cbf1dfaef9b5985cff5764f3855d23029fd29f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a8c29bf1705343972bf8921bad1523f2ad5b19a8
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659358"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256114"
 ---
 # <a name="xml-format-files-sql-server"></a>Fichiers de format XML (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -205,7 +205,7 @@ ms.locfileid: "51659358"
 |ID **="**_fieldID_**"**|Spécifie le nom logique du champ dans le fichier de données. L'ID d'un champ est la clé utilisée pour y faire référence.<br /><br /> \<FIELD ID **="**_fieldID_**"**/> est mappé à \<COLUMN SOURCE **="**_fieldID_**"**/>|Requis|  
 |xsi:type **="**_fieldType_**"**|Il s'agit d'une construction XML (utilisée comme un attribut) qui identifie le type de l'instance de l'élément. La valeur de *fieldType* détermine de quels attributs facultatifs (ci-dessous) vous avez besoin dans une instance donnée.|Obligatoire (selon le type de données)|  
 |LENGTH **="**_n_**"**|Cet attribut définit la longueur pour une instance d'un type de données à longueur fixe.<br /><br /> Cette valeur de *n* doit être un entier positif.|Facultatif sauf s'il est requis par la valeur xsi:type|  
-|PREFIX_LENGTH **="**_p_**"**|Cet attribut définit la longueur de préfixe pour une représentation de données binaires. La valeur PREFIX_LENGTH, *p*, doit correspondre à l’une des valeurs suivantes : 1, 2, 4 ou 8.|Facultatif sauf s'il est requis par la valeur xsi:type|  
+|PREFIX_LENGTH **="**_p_**"**|Cet attribut définit la longueur de préfixe pour une représentation de données binaires. La valeur PREFIX_LENGTH, *p*, doit correspondre à l’une des valeurs suivantes : 1, 2, 4 ou 8.|Facultatif sauf s'il est requis par la valeur xsi:type|  
 |MAX_LENGTH **="**_m_**"**|Cet attribut est le nombre maximal d'octets pouvant être stockés dans un champ donné. Sans table cible, la longueur maximale de la colonne est inconnue. L'attribut MAX_LENGTH limite la longueur maximale d'une colonne de caractères en sortie, limitant ainsi le stockage alloué pour la valeur de la colonne. Ceci est particulièrement pratique lors de l'utilisation de l'option BULK de la fonction OPENROWSET dans une clause SELECT FROM.<br /><br /> Cette valeur de *m* doit être un entier positif. Par défaut, la longueur maximale est de 8 000 caractères pour une colonne **char** et de 4 000 caractères pour une colonne **nchar** .|Ce paramètre est facultatif|  
 |COLLATION **="**_collationName_**"**|COLLATION est uniquement autorisé pour les champs caractères. Pour obtenir la liste des noms du classement SQL, consultez [Nom du classement SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Ce paramètre est facultatif|  
 |TERMINATOR **= "**_terminator_**"**|Cet attribut spécifie la marque de fin d'un champ de données. La marque de fin peut être n'importe quel caractère. La marque de fin doit être un caractère unique ne faisant pas partie des données.<br /><br /> Par défaut, la marque de fin de champ est le caractère tabulation (représenté par \t). Pour représenter une marque de paragraphe, utilisez \r\n.|Utilisé uniquement avec un xsi:type de données caractères, qui nécessite cet attribut|  
@@ -257,7 +257,7 @@ ms.locfileid: "51659358"
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="**_fieldID_**"**|Spécifie l'ID du champ mappé à la colonne.<br /><br /> \<COLUMN SOURCE **="**_fieldID_**"**/> est mappé à \<FIELD ID **="**_fieldID_**"**/>|Requis|  
 |NAME = "*columnName*"|Spécifie le nom de la colonne dans l'ensemble de lignes représenté par le fichier de format. Ce nom de colonne est utilisé pour identifier la colonne dans le jeu de résultats, et il ne doit pas nécessairement correspondre au nom de colonne utilisé dans la table cible.|Requis|  
-|xsi **:** type **="**_ColumnType_**"**|Il s'agit d'une construction XML (utilisée comme un attribut) qui identifie le type de données de l'instance de l'élément. La valeur de *ColumnType* détermine de quels attributs facultatifs (ci-dessous) vous avez besoin dans une instance donnée.<br /><br /> Remarque : Les valeurs possibles de *ColumnType* et leurs attributs associés sont répertoriés dans le tableau relatif à l’élément \<COLUMN> dans la section [Valeurs Xsi:type de l’élément &lt;COLUMN&gt;](#XsiTypeValuesOfCOLUMN).|Ce paramètre est facultatif|  
+|xsi **:** type **="**_ColumnType_**"**|Il s'agit d'une construction XML (utilisée comme un attribut) qui identifie le type de données de l'instance de l'élément. La valeur de *ColumnType* détermine de quels attributs facultatifs (ci-dessous) vous avez besoin dans une instance donnée.<br /><br /> Remarque : Les valeurs possibles de *ColumnType* et leurs attributs associés sont répertoriés dans le tableau relatif à l’élément \<COLUMN> dans la section [Valeurs Xsi:type de l’élément &lt;COLUMN&gt;](#XsiTypeValuesOfCOLUMN).|Ce paramètre est facultatif|  
 |LENGTH **="**_n_**"**|Définit la longueur d'une instance d'un type de données à longueur fixe. LENGTH est utilisé uniquement lorsque xsi:type est un type de données string.<br /><br /> Cette valeur de *n* doit être un entier positif.|Facultatif (disponible uniquement si xsi:type est un type de données string)|  
 |PRECISION **="**_n_**"**|Nombre de chiffres qui composent un nombre. Par exemple, le nombre 123,45 a une précision de 5.<br /><br /> Cette valeur doit être un entier positif.|Facultatif (disponible uniquement si xsi:type est un type de données variable-number)|  
 |SCALE **="**_int_**"**|Indique le nombre de chiffres à droite du point décimal (notre virgule) dans un nombre. Par exemple, le nombre 123,45 a une précision de 2.<br /><br /> La valeur doit être un entier.|Facultatif (disponible uniquement si xsi:type est un type de données variable-number)|  
@@ -278,7 +278,7 @@ ms.locfileid: "51659358"
 |Chaîne de caractères|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**et **SQLNVARCHAR**|Aucun.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
->  Pour exporter ou importer en bloc des données SQLXML, utilisez l'un des types de données ci-dessous dans votre fichier de format : SQLCHAR ou SQLVARYCHAR (les données sont envoyées dans la page de codes du client ou dans la page de codes inhérente au classement) ; SQLNCHAR ou SQLNVARCHAR (les données sont envoyées au format Unicode) ; SQLBINARY ou SQLVARYBIN (les données sont envoyées sans être converties).  
+>  Pour exporter ou importer en bloc des données SQLXML, utilisez l'un des types de données ci-dessous dans votre fichier de format : SQLCHAR ou SQLVARYCHAR (les données sont envoyées dans la page de codes client ou dans la page de codes inhérente au classement) ; SQLNCHAR ou SQLNVARCHAR (les données sont envoyées au format Unicode) ; SQLBINARY ou SQLVARYBIN (les données sont envoyées sans être converties).  
   
  Pour plus d’informations sur les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
@@ -319,7 +319,7 @@ XmlNodeList ColumnList = myDoc.GetElementsByTagName("COLUMN");
 for(int i=0;i<ColumnList.Count;i++)  
 {  
    Console.Write("COLUMN: xsi:type=" +ColumnList[i].Attributes["type",  
-      "https://www.w3.org/2001/XMLSchema-instance"].Value+"\n");  
+      "http://www.w3.org/2001/XMLSchema-instance"].Value+"\n");  
 }  
 ```  
   
@@ -351,7 +351,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ###  <a name="OrderCharFieldsSameAsCols"></a> A. Classement de champs de données caractères dans le même ordre que les colonnes d'une table  
  L'exemple suivant illustre un fichier de format XML décrivant un fichier de données qui contient trois champs de données caractères. Le fichier de format mappe le fichier de données sur une table contenant trois colonnes. Les champs de données correspondent un-à-un aux colonnes de la table.  
   
- **Table (ligne) :** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **Table (ligne) :** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
  **Fichier de données (enregistrement) :** Age\<tab>Firstname\<tab>Lastname\<return>  
   
@@ -365,7 +365,7 @@ for(int i=0;i<ColumnList.Count;i++)
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>   
@@ -389,7 +389,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="OrderFieldsAndColsDifferently"></a> B. Classement de champs de données et de colonnes d'une table dans un ordre différent  
  L'exemple suivant illustre un fichier de format XML décrivant un fichier de données qui contient trois champs de données caractères. Le fichier de format mappe le fichier de données sur une table contenant trois colonnes classées dans un ordre différent de celui des champs du fichier de données.  
   
- **Table (ligne) :** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **Table (ligne) :** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
  **Fichier de données** (enregistrement) : Age\<tab>Lastname\<tab>Firstname\<return>  
   
@@ -401,7 +401,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>  
@@ -424,7 +424,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="OmitField"></a> C. Omission d'un champ de données  
  L'exemple suivant illustre un fichier de format XML décrivant un fichier de données qui contient quatre champs de données caractères. Le fichier de format mappe le fichier de données sur une table contenant trois colonnes. Le deuxième champ de données ne correspond à aucune colonne de la table.  
   
- **Table (ligne) :** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
+ **Table (ligne) :** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
   
  **Fichier de données (enregistrement) :** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
   
@@ -436,7 +436,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version = "1.0"?>  
 <BCPFORMAT   
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>  
@@ -468,7 +468,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version = "1.0"?>  
 <BCPFORMAT  
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-   xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    <RECORD>  
       <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t"   
             MAX_LENGTH="4"/>  
@@ -510,7 +510,7 @@ CREATE TABLE t_xml (c1 int, c2 xml)
 ```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" PREFIX_LENGTH="1"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="8"/>  
@@ -529,7 +529,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version="1.0"?>  
 <BCPFORMAT  
        xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
-       xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  
     <FIELD ID="2" xsi:type="CharFixed" LENGTH="6"/>  

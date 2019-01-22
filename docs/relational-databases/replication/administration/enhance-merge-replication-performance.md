@@ -20,12 +20,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cb5603b98701597847e1997c17714affa7b923
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 931c881651b87fd7ab8ce4b47a4e24710ce8c487
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535284"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136069"
 ---
 # <a name="enhance-merge-replication-performance"></a>Améliorer les performances de réplication de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,9 +102,9 @@ ms.locfileid: "52535284"
   
      La mise à niveau de l'Abonné vers [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure met à niveau l'Agent de fusion utilisé par les abonnements sur cet Abonné. Pour tirer parti des nouvelles fonctionnalités et optimisations des performances, l'Agent de fusion [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure est obligatoire.  
   
--   Si un abonnement est synchronisé par le biais d’une connexion rapide et si des modifications sont envoyées à partir du serveur de publication et à partir de l’Abonné, utilisez le paramètre **-ParallelUploadDownload** pour l’Agent de fusion.  
+-   Si un abonnement est synchronisé par le biais d’une connexion rapide et si des modifications sont envoyées à partir du serveur de publication et à partir de l’Abonné, utilisez le paramètre **–ParallelUploadDownload** pour l’Agent de fusion.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un nouveau paramètre pour l’Agent de fusion : **-ParallelUploadDownload**. La définition de ce paramètre permet à l'Agent de fusion de traiter en parallèle les modifications chargées vers le serveur de publication et celles qui sont téléchargées vers l'Abonné. Ceci est utile dans les environnements où les volumes sont élevés, avec une bande passante réseau élevée. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un nouveau paramètre pour l’Agent de fusion : **–ParallelUploadDownload**. La définition de ce paramètre permet à l'Agent de fusion de traiter en parallèle les modifications chargées vers le serveur de publication et celles qui sont téléchargées vers l'Abonné. Ceci est utile dans les environnements où les volumes sont élevés, avec une bande passante réseau élevée. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
   
     -   [Utiliser des profils d’agent de réplication](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -130,22 +130,22 @@ ms.locfileid: "52535284"
   
     -   Une valeur par défaut NEWSEQUENTIALID() ou NEWID(). NEWSEQUENTIALID() est recommandée car elle peut améliorer les performances lorsque des modifications sont effectuées et suivies.  
   
-    -   La propriété ROWGUIDCOL définie.  
+    -   La propriété ROWGUIDCOL définie.  
   
     -   un index unique sur la colonne.  
   
 -   Prégénérez des instantanés et/ou permettez aux Abonnés de demander la génération et l'application d'un instantané la première fois qu'ils se synchronisent.  
   
-     Utilisez l'une ou l'autre de ces options ou les deux pour fournir des instantanés pour les publications qui utilisent des filtres paramétrés. Si vous ne spécifiez pas une de ces options, les abonnements sont initialisés à l'aide d'une série d'instructions SELECT et INSERT au lieu d'utiliser l'utilitaire **bcp** , ce processus étant beaucoup plus lent. Pour plus d'informations, voir [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+     Utilisez l'une ou l'autre de ces options ou les deux pour fournir des instantanés pour les publications qui utilisent des filtres paramétrés. Si vous ne spécifiez pas une de ces options, les abonnements sont initialisés à l'aide d'une série d'instructions SELECT et INSERT au lieu d'utiliser l'utilitaire **bcp** , ce processus étant beaucoup plus lent. Pour plus d'informations, voir [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="maintenance-and-monitoring-considerations"></a>Considérations sur la maintenance et sur l'analyse  
   
 -   Réindexez occasionnellement les tables système d'une réplication de fusion  
   
-     Dans le cadre de la gestion d'une réplication de fusion, contrôlez de temps en temps le développement des tables système associées à cette réplication : **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**et **MSmerge_past_partition_mappings**. Réindexez périodiquement ces tables. Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+     Dans le cadre de la gestion d'une réplication de fusion, contrôlez de temps en temps le développement des tables système associées à cette réplication : **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings** et **MSmerge_past_partition_mappings**. Réindexez périodiquement ces tables. Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Analysez les performances de la synchronisation à l'aide de l'onglet **Historique de synchronisation** dans le moniteur de réplication.  
   
-     Pour la réplication de fusion, le moniteur de réplication affiche des statistiques détaillées dans l'onglet **Historique de synchronisation** pour chaque article traité lors de la synchronisation, notamment la quantité de temps passé dans chaque phase du traitement (chargement des modifications, téléchargement des modifications, etc.). Il peut être utile d'identifier les tables spécifiques qui provoquent les ralentissements ; il s'agit du meilleur observatoire pour résoudre les problèmes de performance avec les abonnements de fusion. Pour plus d’informations sur l’affichage de statistiques détaillées, consultez [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement &#40;Moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Pour la réplication de fusion, le moniteur de réplication affiche des statistiques détaillées dans l'onglet **Historique de synchronisation** pour chaque article traité lors de la synchronisation, notamment la quantité de temps passé dans chaque phase du traitement (chargement des modifications, téléchargement des modifications, etc.). Il peut être utile d'identifier les tables spécifiques qui provoquent les ralentissements ; il s'agit du meilleur observatoire pour résoudre les problèmes de performance avec les abonnements de fusion. Pour plus d’informations sur l’affichage de statistiques détaillées, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

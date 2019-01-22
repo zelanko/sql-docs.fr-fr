@@ -9,17 +9,18 @@ ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.subscription.synchhistory.f1
+- sql13.rep.monitor.subscription.downlevelsynchhistory.f1
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f283cc069a5849804b078d1d36697e42c4df2d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b19c1a55e81973ee5f0ad196d6ba5c9cd89f8a4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821817"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134649"
 ---
 # <a name="subscription-synchronization-history"></a>Abonnement, Historique de synchronisation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "47821817"
  Sélectionnez les sessions de l'Agent de fusion à afficher.  
   
  **État**  
- État de l'Agent de fusion à la fin de la session. La liste ci-dessous indique les valeurs d'état possibles :  
+ État de l'Agent de fusion à la fin de la session. La liste ci-dessous indique les valeurs d'état possibles :  
   
 -   Error  
   
@@ -99,8 +100,8 @@ ms.locfileid: "47821817"
   
 ## <a name="see-also"></a> Voir aussi  
  [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Afficher des informations et exécuter des tâches pour les agents associés à un abonnement &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
- [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Présentation des Agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

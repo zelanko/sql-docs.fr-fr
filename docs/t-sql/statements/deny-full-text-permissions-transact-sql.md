@@ -19,12 +19,12 @@ ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd7cf407f3634824f18137ec4539c56d930221c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6818a3ea8879b0fe49743e83261e120894cc359
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800197"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130749"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY - Autorisations relatives au texte intégral (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ DENY permission [ ,...n ] ON
  *permission*  
  Nom d'une autorisation. Les mappages valides des autorisations des éléments sécurisables sont décrits dans la section « Notes », plus loin dans cette rubrique.  
   
- ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
  Indique le catalogue de texte intégral pour lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
- ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
  Indique la liste de mots vides de texte intégral pour laquelle l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
  *database_principal*  
@@ -65,7 +65,7 @@ DENY permission [ ,...n ] ON
   
 -   d'un rôle de base de données ;  
   
--   d'un rôle d'application ;  
+-   d'un rôle d'application ;  
   
 -   d'un utilisateur de base de données mappé sur une connexion Windows ;  
   
@@ -87,7 +87,7 @@ DENY permission [ ,...n ] ON
   
 -   d'un rôle de base de données ;  
   
--   d'un rôle d'application ;  
+-   d'un rôle d'application ;  
   
 -   d'un utilisateur de base de données mappé sur une connexion Windows ;  
   

@@ -23,18 +23,18 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5deb2b29c70187bb0222e21df7193f300f7eb7b0
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: f8b1560ef694885ae0debbf06f2d61d23c5d0f66
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970540"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299396"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutoriels pour SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [Participez à l’amélioration de la documentation SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Le didacticiel SQL Server Management Studio (SSMS) vous présente l’environnement intégré pour la gestion de votre infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] présente une interface graphique pour configurer, surveiller et administrer les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il vous permet également de déployer, surveiller et mettre à niveau les composants de la couche Données utilisés par vos applications, comme les bases de données. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit également des éditeurs de langage [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX et XML pour modifier et déboguer des scripts.  
   
@@ -47,24 +47,24 @@ La meilleure façon de se familiariser avec SSMS est d’effectuer des exercices
 Voici les sujets traités dans les tutoriels : 
 
   
-- [Tutoriel : Se connecter à SQL Server et l’interroger à l’aide de SSMS](connect-query-sql-server.md)
+- [Didacticiel : Se connecter à et interroger SQL Server avec SSMS](connect-query-sql-server.md)
 
     Dans ce tutoriel, vous allez apprendre à vous connecter à votre instance SQL Server. Vous allez également étudier quelques commandes T-SQL (Transact-SQL) de base pour créer, puis interroger une base de données. 
 
-- [Tutoriel : Génération de scripts d’objets dans SSMS](scripting-ssms.md)
+- [Didacticiel : Objets de script dans SSMS](scripting-ssms.md)
 
     Dans ce tutoriel, vous allez apprendre à générer le script de différents objets dans SSMS, dont les bases de données et les requêtes. 
 
-- [Tutoriel : Utilisation de modèles dans SSMS](templates-ssms.md)
+- [Didacticiel : Utilisation de modèles dans SSMS](templates-ssms.md)
    
     Dans ce tutoriel, vous allez apprendre à utiliser les modèles prédéfinis dans SSMS. Les modèles sont une fonctionnalité peu connue qui stocke un nombre d’extraits de code Transact-SQL pour diverses tâches d’administration de base de données. 
 
-- [Tutoriel : Configuration de SSMS](ssms-configuration.md)
+- [Didacticiel : Configuration de SSMS](ssms-configuration.md)
 
     Dans ce tutoriel, vous apprenez les bases de la configuration de votre environnement SSMS, comme le changement de la disposition de l’environnement. Ce tutoriel explique également quels sont les différents composants SSMS. 
   
 
-- [Tutoriel : Conseils et astuces supplémentaires sur l’utilisation de SSMS](ssms-tricks.md)
+- [Didacticiel : Conseils et astuces supplémentaires pour utiliser SSMS](ssms-tricks.md)
 
     Dans ce tutoriel, vous allez découvrir d’autres conseils et astuces pour utiliser SSMS. Le tutoriel inclut les thèmes suivants :
     - Ajout et suppression de commentaires dans le texte
@@ -81,7 +81,7 @@ Pour ce didacticiel, les éléments suivants doivent être installés :
 
   -   Installez la dernière version de [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 
-La première section vous guide dans la création d’une base de données, mais les autres exemples de bases de données se trouvent ici : [Exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Les instructions de restauration des bases de données dans SSMS se trouvent ici : [Restauration d’une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+La première section vous guide dans la création d’une base de données, mais les autres exemples de bases de données se trouvent ici : [Exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Les instructions de restauration des bases de données dans SSMS se trouvent ici : [Restauration d’une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
   

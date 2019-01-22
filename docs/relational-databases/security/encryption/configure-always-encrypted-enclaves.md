@@ -1,7 +1,7 @@
 ---
 title: Configurer Always Encrypted avec enclaves sécurisées | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,14 +11,15 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0cfe8b4bf09b545a5141a2896eb757254265e092
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534771"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206405"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurer Always Encrypted avec enclaves sécurisées
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [Always Encrypted avec enclaves sécurisés](always-encrypted-enclaves.md) étend la fonctionnalité [Always Encrypted](always-encrypted-database-engine.md) existante pour activer des fonctionnalités plus complexes sur les données sensibles tout en préservant la confidentialité des données.
@@ -26,14 +27,14 @@ ms.locfileid: "52534771"
 Pour configurer Always Encrypted avec enclaves sécurisées, utilisez le flux de travail suivant :
 
 1. Configurez l’attestation de Service de Guardian hôte (SGH).
-2. Installez [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] sur l’ordinateur SQL Server.
+2. Installez [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] sur l’ordinateur SQL Server.
 3. Installez les outils sur l’ordinateur client/développement.
 4. Configurez le type d’enclave dans votre instance SQL Server.
 5. Approvisionnez les clés prenant en charge les enclaves.
 6. Chiffrez des colonnes qui contiennent des données sensibles.
 
->[!NOTE]
->Pour un tutoriel pas à pas sur la manière de tester votre environnement de test et tester la fonctionnalité Always Encrypted avec enclaves sécurisées dans SSMS, consultez [Tutoriel : prise en main d’Always Encrypted avec enclaves sécurisées à l’aide de SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+> [!NOTE]
+> Pour obtenir un tutoriel pas à pas sur la manière de tester votre environnement de test et d’essayer la fonctionnalité Always Encrypted avec enclaves sécurisées dans SSMS, consultez [Tutoriel : bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
 
 ## <a name="configure-your-environment"></a>Configurer votre environnement
 
@@ -45,7 +46,7 @@ L’ordinateur qui exécute SQL Server a besoin du système d’exploitation et 
 
 *SQL Server* :
 
-- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] ou version ultérieure
+- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] ou ultérieur
 
 *Windows* :
 
@@ -134,7 +135,7 @@ Sur l’ordinateur client/développement :
    ```
 
     > [!NOTE]
-    > Les calculs complexes sont désactivés par défaut dans [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]. Ils doivent être activés à l’aide de l’instruction ci-dessus après chaque redémarrage de votre instance SQL Server.
+    > Les calculs complexes sont désactivés par défaut dans [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]. Ils doivent être activés à l’aide de l’instruction ci-dessus après chaque redémarrage de votre instance SQL Server.
 
 ## <a name="provision-enclave-enabled-keys"></a>Approvisionner des clés prenant en charge les enclaves
 
@@ -217,7 +218,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 Sur l’ordinateur client/développement, ouvrez Windows PowerShell ISE et exécutez le script suivant.
 
-**Étape 1 : approvisionner une clé principale de colonne dans Azure Key Vault**
+**Étape 1 : provisionner une clé principale de colonne dans Azure Key Vault**
 
 Cela est également possible à l’aide du portail Azure. Pour plus d’informations, consultez [Gérer vos coffres de clés à partir du portail Azure](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
 
@@ -249,7 +250,7 @@ Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resource
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 ```
 
-**Étape 2 : créer des métadonnées de clé principale de colonne dans la base de données, créer une clé de chiffrement de colonne et créer des métadonnées de clé de chiffrement de colonne dans la base de données**
+**Étape 2 : créer des métadonnées de clé principale de colonne dans la base de données, créer une clé de chiffrement de colonne et créer des métadonnées de clé de chiffrement de colonne dans la base de données**
 
 
 ```powershell
@@ -496,13 +497,13 @@ GO
 
 Il existe plusieurs façons d’activer la fonctionnalité d’enclave pour une colonne existante ne prenant pas en charge les enclaves. La méthode choisie dépend de plusieurs facteurs :
 
-- **Étendue/granularité :** voulez-vous activer la fonctionnalité d’enclave pour un sous-ensemble de colonnes, ou pour toutes les colonnes protégées par une clé principale de colonne donnée ?
+- **Étendue/granularité :** voulez-vous activer la fonctionnalité d’enclave pour une partie des colonnes ou pour toutes les colonnes protégées par une clé principale de colonne donnée ?
 - **Taille des données :** quelle est la taille des tables contenant les colonnes dont vous souhaitez qu’elles prennent en charge des enclaves ?
 - Voulez-vous également modifier le type de chiffrement pour vos colonnes ? N’oubliez pas que seul le chiffrement aléatoire prend en charge les calculs complexes (critères spéciaux, les opérateurs de comparaison). Si votre colonne est chiffrée à l’aide du chiffrement déterministe, vous devrez également la chiffrer à nouveau avec le chiffrement aléatoire pour déverrouiller toutes les fonctionnalités de l’enclave.
 
 Voici les trois approches de prise en charge d’enclaves pour des colonnes existantes :
 
-#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>Option 1 : remplacer la clé principale de colonne par une clé principale de colonne prenant en charge les enclaves.
+#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>Option n°1 : remplacer la clé principale de colonne par une clé principale de colonne prenant en charge les enclaves.
   
 - Avantages :
   - N’implique pas de nouveau chiffrement des données et est donc généralement l’approche la plus rapide. Cette approche est recommandée pour les colonnes contenant de grandes quantités de données, à condition que toutes les colonnes dont vous avez besoin pour permettre des calculs complexes utilisent déjà le chiffrement déterministe et, par conséquent, ne doivent pas faire l’objet d’un nouveau chiffrement.
@@ -514,7 +515,7 @@ Voici les trois approches de prise en charge d’enclaves pour des colonnes exis
   - Surcroît de travail lié à la gestion des clés : vous devez créer une clé principale de colonne et la mettre à la disposition des applications qui interrogent les colonnes affectées.  
 
 
-#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>Option 2 : cette approche implique deux étapes : 1) remplacement de la clé principale de colonne (comme dans l’option 1) et 2) nouveau chiffrement d’un sous-ensemble de colonnes chiffrées de façon déterministe avec le chiffrement aléatoire afin d’y permettre des calculs complexes.
+#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>Option 2 : Cette approche implique deux étapes : 1) remplacement de la clé principale de colonne (comme dans l’option 1) et 2) nouveau chiffrement d’un sous-ensemble de colonnes chiffrées de façon déterministe avec le chiffrement aléatoire afin d’y permettre des calculs complexes.
   
 - Avantages :
   - Chiffre à nouveau les données sur place, ce qui en fait une méthode recommandée pour permettre les requêtes complexes pour des colonnes chiffrées de façon déterministe qui contiennent de grandes quantités de données. Notez que l’étape 1 déverrouille le chiffrement sur place pour les colonnes à l’aide du chiffrement déterministe, afin que l’étape 2 puisse être effectuée sur place.
@@ -524,7 +525,7 @@ Voici les trois approches de prise en charge d’enclaves pour des colonnes exis
   - Ne vous permet pas de convertir certaines colonnes de manière sélective en liaison avec une clé principale de colonne donnée.
   - Surcroît de travail lié à la gestion des clés : vous devez créer une clé principale de colonne et la mettre à la disposition des applications qui interrogent les colonnes affectées.
 
-#### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>Option 3 : nouveau chiffrement des colonnes sélectionnées avec une nouvelle clé de chiffrement de colonne prenant en charge les enclaves et le chiffrement aléatoire (le cas échéant) côté client.
+#### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>Option 3 : nouveau chiffrement des colonnes sélectionnées avec une nouvelle clé de chiffrement de colonne prenant en charge les enclaves et le chiffrement aléatoire (le cas échéant) côté client.
   
 - Avantages de cette méthode :
   - Vous permet d’activer de manière sélective la fonctionnalité d’enclave pour une colonne ou pour un petit sous-ensemble de colonnes.

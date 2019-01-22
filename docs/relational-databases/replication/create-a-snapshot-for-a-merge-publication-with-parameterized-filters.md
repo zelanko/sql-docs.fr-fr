@@ -1,7 +1,7 @@
 ---
 title: Créer un instantané d’une publication de fusion avec des filtres paramétrés | Microsoft Docs
 ms.custom: ''
-ms.date: 05/03/2016
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,38 +15,48 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71d7e79a0e941b5f080b033469700e19eaa3241e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14255fde1f8d0d165e1071f95c737f60aacf5058
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666091"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131429"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Créer un instantané d'une publication de fusion avec des filtres paramétrés
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique explique comment créer un instantané pour une publication de fusion avec des filtres paramétrables dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
+Cette rubrique explique comment créer un instantané pour une publication de fusion avec des filtres paramétrables dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
+
+Lorsque vous utilisez des filtres de lignes paramétrés dans les publications de fusion, la réplication initialise chaque abonnement avec un instantané en deux parties. Un instantané est d'abord créée. Il contient tous les objets nécessaires à la publication ainsi que le schéma des objets publiés mais pas les données. Ensuite, chaque abonnement est initialisé avec un instantané qui comprend les objets et le schéma provenant de l'instantané du schéma ainsi que les données appartenant à la partition de l'abonnement. Si plusieurs abonnements reçoivent une partition donnée (en d'autres termes, s'ils reçoivent les mêmes schéma et données), l'instantané de cette partition n'est créé qu'une seule fois ; plusieurs abonnements sont initialisés à l'aide du même instantané. Pour plus d'informations sur les filtres de lignes paramétrés, consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
- **Dans cette rubrique**  
+ Pour créer des instantanés de publication avec des filtres paramétrés, trois méthodes sont possibles :  
   
--   **Avant de commencer :**  
+-   **Vous pouvez prégénérer des instantanés pour chaque partition.** Cette option vous permet de contrôler le moment où les instantanés sont générés.    
+     Vous pouvez également choisir d'actualiser les instantanés selon une planification définie. Les nouveaux Abonnés à une partition dont vous avez créé un instantané reçoivent un instantané à jour.   
+-   **Vous pouvez autoriser les Abonnés à demander la génération** et l’application d’un instantané lors de leur première synchronisation. Cette option permet aux nouveaux Abonnés de se synchroniser sans intervention d'un administrateur (l'Agent[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en cours d'exécution sur le serveur de publication pour que l'instantané puisse être généré).  
   
-     [Recommandations](#Recommendations)  
+    > [!NOTE]  
+    >  Si le filtrage d'un ou plusieurs articles de la publication donne des partitions qui ne se chevauchent pas et sont uniques pour chaque abonnement, les métadonnées sont nettoyées à chaque exécution de l'Agent de fusion. Cela signifie que l'instantané partitionné expire plus rapidement. Lorsque vous optez pour cette méthode, envisagez d'autoriser les Abonnées à initialiser la génération et la remise d'instantané. Pour plus d'informations sur les options de filtrage, consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
--   **Pour créer un instantané d'une publication de fusion avec des filtres paramétrés à l'aide de :**  
+-   **Vous pouvez générer manuellement un instantané pour chaque Abonné avec l’Agent d’instantané**. L'Abonné doit alors fournir l'emplacement de l'instantané à l'Agent de fusion afin qu'il puisse extraire et appliquer l'instantané approprié.  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+    > [!NOTE]  
+    >  Cette option est prise en charge pour assurer la compatibilité descendante et n'autorise pas les partages d'instantanés FTP.  
   
-     [Transact-SQL](#TsqlProcedure)  
+ L'approche la plus souple est celle qui consiste à combiner les options d'instantané prégénéré et d'instantané demandé par l'Abonné : les instantanés sont prégénérés et actualisés à intervalles planifiés (généralement pendant les heures creuses), mais un Abonné peut générer son propre instantané en cas de création d'un abonnement nécessitant une nouvelle partition.  
   
-     [Objets RMO (Replication Management Objects)](#RMOProcedure)  
+ Prenons l'exemple de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], qui possède une force de vente nomade chargée d'approvisionner en stock différents magasins. Chaque commercial reçoit un abonnement basé sur son nom de connexion, lequel extrait les données relatives aux magasins dont le commercial est responsable. L'administrateur choisit de prégénérer des instantanés et de les actualiser tous les dimanches. De temps à autre, un nouvel utilisateur est ajouté au système et a besoin de données pour une partition dont il n'existe aucun instantané disponible. L'administrateur décide par ailleurs d'autoriser les instantanés initialisés par l'Abonné pour éviter que ce dernier se retrouve dans une situation où il est incapable de s'abonner à la publication car aucun instantané n'est disponible. Lorsque le nouvel Abonné se connecte pour la première fois, l'instantané est généré pour la partition spécifiée et appliqué à l'Abonné (l'Agent[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en cours d'exécution sur le serveur de publication pour que l'instantané puisse être généré).  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+ Pour créer un instantané d'une publication avec des filtres paramétrés, consultez [Créer un instantané d'une publication de fusion avec des filtres paramétrés](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
-###  <a name="Recommendations"></a> Recommandations  
+## <a name="security-settings-for-the-snapshot-agent"></a>Paramètres de sécurité de l'Agent d'instantané  
+ L'Agent d'instantané crée des instantanés de chaque partition. Pour les instantanés prégénérés et ceux demandés par un Abonné, l'Agent s'exécute et se connecte avec les informations d'identification spécifiées au moment de la création du travail de l'Agent d'instantané pour la publication (ce travail est créé par l'Assistant Nouvelle publication ou par **sp_addpublication_snapshot**). Pour modifier les informations d'identification, utilisez **sp_changedynamicsnapshot_job**. Pour plus d’informations, consultez [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md).  
+
+  
+##  <a name="Recommendations"></a> Recommandations  
   
 -   Lors de la génération d'un instantané pour une publication de fusion à l'aide de filtres paramétrables, vous devez commencer par générer un instantané standard (schéma) qui contient l'ensemble des données publiées, ainsi que les métadonnées de l'Abonné pour l'abonnement. Pour plus d'informations, voir [Créer et appliquer l'instantané initial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). Après avoir créé l'instantané de schéma, vous pouvez générer l'instantané qui contient la partition des données publiées spécifique à l'Abonné.  
   
--   Si le filtrage d'un ou plusieurs articles de la publication donne des partitions qui ne se chevauchent pas et sont uniques pour chaque abonnement, les métadonnées sont nettoyées à chaque exécution de l'Agent de fusion. Cela signifie que l'instantané partitionné expire plus rapidement. Lorsque vous optez pour cette méthode, envisagez d'autoriser les Abonnées à initialiser la génération et la remise d'instantané. Pour plus d’informations sur les options de filtrage, consultez la section « Définition des options de partition » dans [Instantanés des publications de fusion avec des filtres paramétrés](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   Si le filtrage d'un ou plusieurs articles de la publication donne des partitions qui ne se chevauchent pas et sont uniques pour chaque abonnement, les métadonnées sont nettoyées à chaque exécution de l'Agent de fusion. Cela signifie que l'instantané partitionné expire plus rapidement. Lorsque vous optez pour cette méthode, envisagez d'autoriser les Abonnées à initialiser la génération et la remise d'instantané. 
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Générez des instantanés pour des partitions dans la page **Partitions de données** de la boîte de dialogue **Propriétés de la publication\< -** Publication>. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Vous pouvez permettre à des Abonnés de lancer la génération et la livraison d'instantanés et/ou de générer des instantanés.  
@@ -413,7 +423,6 @@ PAUSE
 ## <a name="see-also"></a> Voir aussi  
  [Filtres de lignes paramétrés](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Concepts liés aux procédures stockées système de réplication](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Instantanés des publications de fusion avec des filtres paramétrés](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)   
  [Bonnes pratiques en matière de sécurité de la réplication](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   
