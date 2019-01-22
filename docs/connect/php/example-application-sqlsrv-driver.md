@@ -13,12 +13,12 @@ ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c47ecfcb9f7c3c321ad91e45fd3db1e4033e680
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e8682d8bf38dc32f9eddc50c8bf32113ebf9e516
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677368"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397528"
 ---
 # <a name="example-application-sqlsrv-driver"></a>Exemple d’application (pilote SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +30,7 @@ L’exemple d’application Évaluations de produits AdventureWorks est une appl
 1.  Installez [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Pour plus d’informations, consultez [mise en route avec le Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md).
 2.  Copiez le code répertorié plus loin dans ce document dans deux fichiers : adventureworks_demo.php et photo.php.  
 3.  Placez les fichiers adventureworks_demo.php et photo.php dans le répertoire racine de votre serveur web.  
-4.  Exécutez l’application en démarrant https://localhost/adventureworks_demo.php depuis votre navigateur.  
+4.  Exécutez l’application en démarrant `https://localhost/adventureworks_demo.php` depuis votre navigateur.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour exécuter l’exemple d’application Évaluations de produits AdventureWorks, les conditions suivantes doivent être remplies sur votre ordinateur :  

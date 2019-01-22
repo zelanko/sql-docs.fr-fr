@@ -14,18 +14,18 @@ ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0aba0eeb6d3d6450a0493a4cf06a8c58bb21d23a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6737a995db78f2a5ba625ddf200a0171582026ae
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655997"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419734"
 ---
 # <a name="installing-the-software-odbc"></a>Installation du logiciel (ODBC)
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, utilisez le pilote ODBC fourni par Oracle.  
   
- Le pilote ODBC pour Oracle est un des composants d’accès aux données. Il accompagne les autres composants ODBC, telles que l’administrateur de sources de données ODBC et doit déjà être installé. Le pilote également être accessibles sous « Pilotes et autres téléchargements » sur le site Web de Services de Support technique Microsoft en ligne à l’adresse www.microsoft.com.  
+ Le pilote ODBC pour Oracle est un des composants d’accès aux données. Il accompagne les autres composants ODBC, telles que l’administrateur de sources de données ODBC et doit déjà être installé. Le pilote aussi disponibles sous « Pilotes et autres téléchargements » sur le site Web de Services de Support technique Microsoft en ligne à l’adresse [www.microsoft.com](https://www.microsoft.com).  
   
  Logiciel réseau doit être installé en fonction de sa propre documentation. Le pilote ODBC pour Oracle ne requiert aucuns considérations spéciales installation tant que le logiciel réseau est pris en charge.  
   

@@ -1,7 +1,7 @@
 ---
 title: Des changements importants à base de données du moteur de fonctionnalités dans SQL Server 2014 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2018
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: release-landing
@@ -13,12 +13,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe4dc2f55b8d9b1bc9475e936341d24d16ce77a6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375271"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420204"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Changements essentiels dans les fonctionnalités du moteur de base de données de SQL Server 2014
   Cette rubrique décrit les changements essentiels dans les [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] et les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ces modifications peuvent interrompre les applications, scripts ou fonctionnalités fondés sur les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il se peut que vous rencontriez ces problèmes lors d'une mise à niveau. Pour plus d'informations, consultez [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -42,7 +42,6 @@ ms.locfileid: "53375271"
 |ALTER TABLE|L'instruction ALTER TABLE permet uniquement les noms de tables (schema.object) en deux parties. En spécifiant un nom de table à l’aide des formats suivants maintenant échoue au moment de la compilation avec l’erreur 117 :<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> Dans les versions antérieures, la spécification du format server.database.schema.table retournait l'erreur 4902. La spécification du format .database.schema.table ou .schema.table aboutissait. Pour résoudre le problème, supprimez l'utilisation d'un préfixe en quatre parties.|  
 |Exploration des métadonnées|L'interrogation d'une vue à l'aide de FOR BROWSE ou SET NO_BROWSETABLE ON retourne maintenant les métadonnées de la vue, et non pas les métadonnées de l'objet sous-jacent. Ce comportement correspond désormais à d'autres méthodes d'exploration de métadonnées.|  
 |SOUNDEX|Lorsque le niveau de compatibilité de la base de données est défini à 110, la fonction SOUNDEX implémente de nouvelles règles qui peuvent générer des valeurs calculées par la fonction qui sont différentes des valeurs calculées à des niveaux de compatibilité antérieurs. Après la mise à niveau vers le niveau de compatibilité 110, vous pouvez être amené à reconstruire les index, les segments de mémoire ou les contraintes CHECK qui utilisent la fonction SOUNDEX. Pour plus d’informations, consultez [SOUNDEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/soundex-transact-sql).
- .|  
 |Message de nombre de lignes pour les échecs d'instructions DML|Dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], le [!INCLUDE[ssDE](../includes/ssde-md.md)] envoie régulièrement le jeton TDS DONE avec RowCount : 0 aux clients lorsqu'une instruction DML échoue. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la valeur incorrecte -1 est envoyée au client lorsque l'instruction DML qui échoue est contenue dans un bloc TRY-CATCH ou est automatiquement paramétrable par le [!INCLUDE[ssDE](../includes/ssde-md.md)] ou lorsque le bloc TRY-CATCH n'est pas au même niveau que l'instruction qui échoue. Par exemple, si un bloc TRY-CATCH appelle une procédure stockée et une instruction DML dans la procédure échoue, le client ne reçoit pas correctement la valeur -1.<br /><br /> Les applications qui reposent sur ce comportement incorrect échouent.|  
 |SERVERPROPERTY ('Edition »)|Édition du produit installée de l'instance de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Utilisez la valeur de cette propriété pour déterminer les fonctionnalités et les limites, par exemple le nombre maximal de processeurs qui sont pris en charge par le produit installé.<br /><br /> Selon l’édition Enterprise installée, cela peut retourner « Enterprise Edition » ou « Enterprise Edition : Licence par cœur ». Les éditions Enterprise sont différenciées selon la capacité maximale de calcul par une seule instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations sur les limites de capacité de calcul dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], consultez [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).|  
 |CREATE LOGIN|Le `CREATE LOGIN WITH PASSWORD = '` *mot de passe* `' HASHED` option ne peut pas être utilisée avec des hachages créés par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7 ou une version antérieure.|  
@@ -146,7 +145,7 @@ ms.locfileid: "53375271"
 #### <a name="affected-xquery-functions-and-operators"></a>Fonctions et opérateurs XQuery affectés  
  Les fonctions et opérateurs XQuery suivants gèrent maintenant les paires de substitution UTF-16 correctement dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] :  
   
--   **fn-longueur**. Toutefois, si une paire de substitution non valides ou partielles est passée en tant qu’argument, le comportement de **longueur de chaîne** n’est pas défini.  
+-   **fn:string-length**. Toutefois, si une paire de substitution non valides ou partielles est passée en tant qu’argument, le comportement de **longueur de chaîne** n’est pas défini.  
   
 -   **fn:SUBSTRING**.  
   
@@ -189,9 +188,9 @@ ms.locfileid: "53375271"
   
  Les fonctions suivantes illustrent le nouveau comportement décrit ci-dessus uniquement lorsque l’URI d’espace de noms par défaut correspond à l’espace de noms dans la recommandation finale, autrement dit, [ http://www.w3.org/2005/xpath-functions ](http://www.w3.org/2005/xpath-functions). Lorsque le niveau de compatibilité est supérieur ou égal à 110, alors par défaut [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] lie l'espace de noms de fonction par défaut à cet espace de noms. Toutefois ces fonctions illustrent le nouveau comportement lorsque cet espace de noms est utilisé quel que soit le niveau de compatibilité.  
   
--   **fn-longueur**  
+-   **fn:string-length**  
   
--   **fn:SUBSTRING**  
+-   **fn:substring**  
   
 ##  <a name="KJKatmai"></a> Modifications avec rupture dans SQL Server 2008/SQL Server 2008 R2  
  Cette section contient les modifications avec rupture introduites dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Aucune modification n'a été introduite dans [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)].  
@@ -215,7 +214,7 @@ ms.locfileid: "53375271"
 |Affichage|Description|  
 |----------|-----------------|  
 |sys.dm_os_sys_info|Suppression des colonnes cpu_ticks_in_ms et sqlserver_start_time_cpu_ticks.|  
-|Sys.dm_exec_query_resource_semaphoressys.dm_exec_query_memory_grants|La colonne resource_semaphore_id n'est pas un ID unique dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Cette modification peut affecter l'exécution de la requête de résolution des problèmes. Pour plus d’informations, consultez [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql).|  
+|sys.dm_exec_query_resource_semaphoressys.dm_exec_query_memory_grants|La colonne resource_semaphore_id n'est pas un ID unique dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Cette modification peut affecter l'exécution de la requête de résolution des problèmes. Pour plus d’informations, consultez [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql).|  
   
 ### <a name="errors-and-events"></a>Erreurs et événements  
   

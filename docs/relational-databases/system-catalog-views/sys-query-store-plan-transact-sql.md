@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60b9137e52b34b79fa4faddbef7b9e4da8734142
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: ea7c955718dbe6d2437b44b915057fc095151dc4
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397608"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419794"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "54397608"
   Contient des informations sur chaque plan d’exécution associé à une requête.  
   
 |Nom de colonne|Type de données|Description|  
-|-----------------|---------------|-----------------|  
+|-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|Clé primaire.|  
 |**query_id**|**bigint**|Clé étrangère. Joint à [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
 |**plan_group_id**|**bigint**|ID du groupe de plan. Les requêtes de curseur nécessitent généralement plusieurs (remplir et fetch) des plans. Remplir et plans d’extraction qui sont compilés ensemble dans le même groupe.<br /><br /> 0 signifie le plan n’est pas dans un groupe.|  
@@ -57,13 +57,8 @@ ms.locfileid: "54397608"
 |**last_execution_time**|**datetimeoffset**|Dernier temps d’exécution fait référence à la dernière heure de fin du plan de requête /.|  
 |**avg_compile_duration**|**float**|Planifier les statistiques de compilation.|  
 |**last_compile_duration**|**bigint**|Planifier les statistiques de compilation.|  
-|**plan_forcing_type**|**Int**|Planifier le forçage de type.<br /><br />
-0 : Aucune<br /><br />
-1 : MANUAL<br /><br />
-2 : AUTO | | **plan_forcing_type_desc**|**nvarchar (60)**| Description textuelle de plan_forcing_type.<br /><br />
-NONE : Aucune application forcée du plan<br /><br />
-MANUELLE : Plan forcé par l’utilisateur<br /><br />
-AUTO : Plan forcé par le réglage automatique |
+|**plan_forcing_type**|**Int**|Planifier le forçage de type.<br /><br />0 : Aucune<br /><br />1 : MANUAL<br /><br />2 : AUTO|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Description textuelle de plan_forcing_type.<br /><br />NONE : Aucune application forcée du plan<br /><br />MANUELLE : Plan forcé par l’utilisateur<br /><br />AUTO : Plan forcé par le réglage automatique|  
 
 ## <a name="plan-forcing-limitations"></a>Limitations de forçage de plan
 Le Magasin des requêtes a un mécanisme qui permet de forcer l’optimiseur de requête à utiliser un certain plan d’exécution. Toutefois, il existe certaines limitations qui peuvent empêcher l’application d’un plan. 

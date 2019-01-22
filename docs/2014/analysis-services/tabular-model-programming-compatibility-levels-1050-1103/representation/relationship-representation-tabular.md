@@ -1,7 +1,7 @@
 ---
 title: Représentation sous forme de relation (tabulaire) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -12,17 +12,17 @@ ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c62af4be43978f36f46594757964a9fcdae58ce5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d11d0b6a1e1be93cb3c521bb32782dcb127e822
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058899"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420154"
 ---
 # <a name="relationship-representation-tabular"></a>Représentation (tabulaire) d'une relation
   Une relation est une connexion entre deux tables de données. La relation établit la façon dont les données des deux tables doivent être mises en corrélation.  
   
- Consultez [représentation (tabulaire) d’une relation](relationship-representation-tabular.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de relation.  
+ Consultez [Relationship Representation (Tabular)](relationship-representation-tabular.md) pour une explication détaillée sur la façon de créer et manipuler la représentation d'une relation.  
   
 ## <a name="relationship-representation"></a>Représentation d'une relation  
  Dans les modèles tabulaires, plusieurs relations peuvent être définies entre deux tables. Lorsque plusieurs relations entre deux tables sont définies, une seule peut être définie en tant que relation par défaut pour le modèle et est nommée comme relation active ; toutes les autres relations sont nommées comme inactives.  
@@ -32,8 +32,7 @@ ms.locfileid: "48058899"
   
  Les extraits de code suivants montrent comment créer une relation dans les modèles tabulaires, comment activer une relation et comment définir une clé primaire dans une table (autre que « RowNumber »). Pour créer une relation active, une clé primaire doit être définie dans la table de clé primaire (PKTableName) de la relation (le côté « un » de la relation). L'exemple ci-après crée la clé primaire sur PKColumnName si aucune clé primaire n'est définie dans cette colonne. Les relations inactives peuvent être créées sans clé primaire sur la colonne de clé primaire.  
   
-```  
-  
+```cs
 private Boolean createRelationship(string PKTableName, string PKColumnName, string MVTableName, string MVColumnName, AMO.Database tabularDb, string cubeName, Boolean forceActive)  
 {  
     //verify input parameters  

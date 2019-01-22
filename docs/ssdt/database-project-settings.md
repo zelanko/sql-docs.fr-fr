@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94eea6f9e8d76875c11a6e52de423812c16b255e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78dde89a5554dbd548cc2d1d5d4b1436f08c9662
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516016"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143579"
 ---
 # <a name="database-project-settings"></a>Paramètres du projet de base de données
 Vous utilisez des paramètres de projet de base de données pour contrôler des aspects de vos configurations de build, de débogage et de bases de données. Ces paramètres peuvent être répartis dans les catégories suivantes :  
@@ -170,8 +170,7 @@ La page de propriétés **Build SQLCLR** contient des paramètres de build avanc
   
 2.  Si l'objet est écrit en VB, sélectionnez d'abord VB dans la liste déroulante **Langage** , puis cliquez sur le bouton **Avancé** . La description des options VB est disponible dans l'article [Boîte de dialogue Paramètres avancés du compilateur (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx)  
   
-Pour plus d'informations, consultez [Propriétés de la configuration de build](https://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(CS.PROJECTPROPERTIESBUILD))  
-  
+
 ## <a name="bkmk_build"></a>Build  
 Vous pouvez choisir une configuration de build pour chaque projet de base de données dans votre solution. Par défaut il n'existe qu'une seule configuration, mais vous pouvez ajouter des configurations personnalisées. Vous pouvez décider de procéder ainsi, par exemple, si vous voulez une configuration personnalisée dans laquelle vous supprimez toujours la base de données, puis la recréez. Dans les solutions qui contiennent différents types de projets, vous pouvez créer une configuration de solution personnalisée contenant une configuration de build spécifique pour chaque projet.  
   
@@ -195,7 +194,7 @@ Les paramètres du tableau suivant s'appliquent aux configurations de build de c
 |---------|-----------------|---------------|  
 |Chemin de sortie de la génération|bin\Debug\|Spécifie où la sortie de la génération est générée lorsque vous générez ou déployez le projet de base de données. Si vous spécifiez un chemin d'accès relatif, vous devez le faire par rapport au chemin d'accès de projet de base de données. Si le chemin d'accès n'existe pas, il est créé.|  
 |Nom du fichier de sortie de la génération|*DatabaseProjectName*|Spécifie le nom que vous souhaitez donner à la sortie qui est créée lorsque vous générez le projet de base de données.|  
-|Traiter les avertissements Transact\-SQL comme des erreurs|non|Spécifie si un avertissement Transact\-SQL doit provoquer l'annulation du processus de génération et de déploiement. Si cette case est décochée, des avertissements apparaissent mais le processus de génération et de déploiement continue. Ce paramètre est spécifique au projet, et non à l'utilisateur, et il est stocké dans le fichier .sqlproj.|  
+|Traiter les avertissements Transact\-SQL comme des erreurs|Non|Spécifie si un avertissement Transact\-SQL doit provoquer l'annulation du processus de génération et de déploiement. Si cette case est décochée, des avertissements apparaissent mais le processus de génération et de déploiement continue. Ce paramètre est spécifique au projet, et non à l'utilisateur, et il est stocké dans le fichier .sqlproj.|  
 |Supprimer les avertissements Transact\-SQL|Vide|Spécifie une liste de numéros d'avertissement, délimitée par des virgules ou des points-virgules, qui identifient des avertissements supprimés.<br /><br />Les avertissements supprimés n'apparaissent pas dans la fenêtre **Liste d'erreurs** et n'affectent pas le succès de la génération, même si vous activez la case à cocher **Traiter les avertissements Transact\-SQL comme des erreurs**.|  
   
 ## <a name="bkmk_sqlcmd_variables"></a>Variables SQLCMD  
@@ -210,8 +209,8 @@ Vous pouvez utiliser ces paramètres pour spécifier une ligne de commande à ex
   
 |Champ|Valeur par défaut|Description|  
 |---------|-----------------|---------------|  
-|Ligne de commande de l'événement avant génération|Aucun|Spécifie la ligne de commande à exécuter avant la génération du projet. Cliquez sur **Modifier pré-build** pour modifier la ligne de commande.|  
-|Ligne de commande d'événement après génération|Aucun|Spécifie la ligne de commande à exécuter après la génération du projet. Cliquez sur **Modifier post-build** pour modifier la ligne de commande.|  
+|Ligne de commande de l'événement avant génération|None|Spécifie la ligne de commande à exécuter avant la génération du projet. Cliquez sur **Modifier pré-build** pour modifier la ligne de commande.|  
+|Ligne de commande d'événement après génération|None|Spécifie la ligne de commande à exécuter après la génération du projet. Cliquez sur **Modifier post-build** pour modifier la ligne de commande.|  
 |Exécuter l'événement post-build|En cas de build réussie|Spécifie si la ligne de commande post-build doit être exécutée toujours, uniquement en cas de génération réussie ou uniquement lorsque la génération a mis à jour la sortie de projet (le script de compilation).|  
   
 ## <a name="bkmk_debug"></a>Déboguer  
@@ -219,14 +218,14 @@ Vous pouvez utiliser ces paramètres pour contrôler le débogage de votre proje
   
 |Champ|Valeur par défaut|Description|  
 |---------|-----------------|---------------|  
-|Action de démarrage|Aucun|Spécifie un script ou un programme externe à exécuter lorsque vous déboguez votre projet.|  
+|Action de démarrage|None|Spécifie un script ou un programme externe à exécuter lorsque vous déboguez votre projet.|  
 |Chaîne de connexion cible|Data Source=(localdb)\\*SolutionName*;Initial Catalog=*DatabaseProjectName*;Integrated Security=True;Pooling=False;Connect Timeout=30|Spécifie les informations de connexion du serveur de base de données que vous souhaitez cibler pour la configuration de build spécifiée. La chaîne de connexion par défaut est spécifiée par rapport à une instance LocalDB SQL Server et une base de données.|  
 |Déployer les propriétés de la base de données|Oui|Spécifie si les paramètres DatabaseProerties.DatabaseProperties sont déployés ou mis à jour lorsque vous déployez le projet de base de données.|  
-|Toujours recréer la base de données|non|Spécifie si la base de données doit être supprimée et recréée au lieu d'effectuer une mise à niveau incrémentielle. Vous pouvez cocher cette case par exemple si vous souhaitez exécuter des tests unitaires de bases de données par rapport à un déploiement propre de la base de données. Si cette case à cocher est désactivée, la base de données existante sera mise à jour au lieu d'être supprimée et recréée.|  
+|Toujours recréer la base de données|Non|Spécifie si la base de données doit être supprimée et recréée au lieu d'effectuer une mise à niveau incrémentielle. Vous pouvez cocher cette case par exemple si vous souhaitez exécuter des tests unitaires de bases de données par rapport à un déploiement propre de la base de données. Si cette case à cocher est désactivée, la base de données existante sera mise à jour au lieu d'être supprimée et recréée.|  
 |Bloquer le déploiement incrémentiel si une perte de données peut se produire|oui|Spécifie si le déploiement s'arrête si une mise à jour entraîne la perte de données. Si cette case à cocher est activée, les modifications susceptibles de créer une perte de données entraînent l'arrêt du déploiement avec une erreur, ce qui empêche toute perte des données. Par exemple, le déploiement s'arrête si une colonne `varchar(50)` a été remplacée par une colonne `varchar(30)`.<br /><br />**REMARQUE :** Le déploiement est bloqué uniquement si les tables dans lesquelles une perte de données peut se produire contiennent des données. Le déploiement se poursuit si aucune donnée n'a été perdue.|  
 |Objets DROP dans la cible mais pas dans le projet|non|Spécifie si les objets qui sont dans la base de données cible, mais pas dans le projet de base de données, doivent être supprimés dans le cadre du script de déploiement. Vous pouvez exclure des fichiers de votre projet pour les supprimer temporairement de votre script de compilation. Toutefois, il est possible que vous souhaitiez laisser les versions existantes de ces objets dans la base de données cible. Cette case à cocher n'a aucun effet si la case **Toujours recréer la base de données** est cochée, car la base de données sera supprimée.|  
-|Ne pas utiliser d'instructions ALTER ASSEMBLY pour mettre à jour les types CLR|non|Spécifie si les instructions ALTER ASSEMBLY permettent de mettre à jour des types CLR (Common Language Run-time) ou si l'objet qui instancie le type CLR doit plutôt être supprimé et recréé lors du déploiement de modifications.|  
-|Avancé...|non|Bouton de commande qui vous permet de spécifier les options qui contrôlent les événements et le comportement du déploiement.|  
+|Ne pas utiliser d'instructions ALTER ASSEMBLY pour mettre à jour les types CLR|Non|Spécifie si les instructions ALTER ASSEMBLY permettent de mettre à jour des types CLR (Common Language Run-time) ou si l'objet qui instancie le type CLR doit plutôt être supprimé et recréé lors du déploiement de modifications.|  
+|Avancé...|Non|Bouton de commande qui vous permet de spécifier les options qui contrôlent les événements et le comportement du déploiement.|  
   
 ## <a name="bkmk_ref_paths"></a>Chemins d'accès des références  
 Vous pouvez utiliser cette page pour définir les variables de serveur et de base de données associées à une référence entre bases de données. En outre, vous pouvez spécifier les valeurs de ces variables. Pour plus d'informations, consultez [Utilisation de références dans les projets de base de données](https://msdn.microsoft.com/library/bb386242.aspx).  

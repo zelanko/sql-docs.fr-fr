@@ -1,7 +1,7 @@
 ---
 title: Types de données Microsoft Access | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11f45698a5ad8b7fd05052cbb2d23520790c425a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692977"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420174"
 ---
 # <a name="microsoft-access-data-types"></a>Types de données Microsoft Access
 Le tableau suivant montre les types de données Microsoft Access, types de données utilisés pour créer des tables et les types de données ODBC SQL.  
@@ -38,8 +38,8 @@ Le tableau suivant montre les types de données Microsoft Access, types de donn�
 |DATE/HEURE|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
 |BINAIRE LONGUE|LONGBINARY|SQL_LONGVARBINARY|  
-|TEXTE LONG|LONGTEXT|SQL_WLONGVARCHAR SQL_LONGVARCHAR [2] [3]|  
-|MÉMO|LONGTEXT|SQL_WLONGVARCHAR SQL_LONGVARCHAR [2] [3]|  
+|TEXTE LONG|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
+|MEMO|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
 |NOMBRE (taille du champ = unique)|UNIQUE|SQL_REAL|  
 |NOMBRE (taille du champ = DOUBLE)|DOUBLE|SQL_DOUBLE|  
 |NOMBRE (taille du champ = octet)|OCTET NON SIGNÉ|SQL_TINYINT|  
@@ -47,8 +47,8 @@ Le tableau suivant montre les types de données Microsoft Access, types de donn�
 |NOMBRE (taille du champ = entier LONG)|LONG|SQL_INTEGER|  
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
 |OLE|LONGBINARY|SQL_LONGVARBINARY|  
-|TEXT|VARCHAR|SQL_WVARCHAR SQL_VARCHAR [1] [2]|  
-ARBINARY|VARBINARY|SQL_VARBINARY|  
+|TEXT|VARCHAR|SQL_VARCHAR[1] SQL_WVARCHAR[2]|  
+|VARBINARY|VARBINARY|SQL_VARBINARY|  
   
  [1] applications accès 4.0 uniquement. Longueur maximale de 4 000 octets. Comportement similaire à LONGBINARY.  
   

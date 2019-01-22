@@ -1,7 +1,7 @@
 ---
 title: Configuration des protocoles réseau par défaut de SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 197b694f0ff68b459bff7517bbf5701a0452d48f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f98a6e019790e7bc4e102a400c6f28f53c344e92
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622087"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419615"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configuration des protocoles réseau par défaut de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,16 +32,16 @@ Utilisez le nœud Configuration du réseau [!INCLUDE[ssNoVersion_md](../../inclu
 
 Le tableau suivant décrit la configuration après l'installation.
 
-Édition | Nouvelle installation ou installation précédente présente | Mémoire partagée | TCP/IP    | Canaux nommés
+|Édition | Nouvelle installation ou installation précédente présente | Mémoire partagée | TCP/IP | Canaux nommés|
 | -------- | -- | -- | -- | --  |  
-Enterprise  | Nouvelle installation  | Activé   | Activé   | Désactivés pour les connexions réseau.
-Standard    | Nouvelle installation  | Activé   | Activé   | Désactivés pour les connexions réseau.
-Web | Nouvelle installation  | Activé   | Activé   | Désactivés pour les connexions réseau.
-Développeur   | Nouvelle installation  | Activé   | Désactivé  | Désactivés pour les connexions réseau.
-Evaluation  | Nouvelle installation  | Activé   | Activé   | Désactivés pour les connexions réseau.
-SQL Server Express  | Nouvelle installation  | Activé   | Désactivé  | Désactivés pour les connexions réseau.
-Toutes les éditions    | L'installation précédente est présente mais n'est pas mise à niveau.   | Même configuration que pour une nouvelle installation  | Même configuration que pour une nouvelle installation  | Même configuration que pour une nouvelle installation
-Toutes les éditions    | UPGRADE   | Activé   | Les paramètres de l'installation précédente sont conservés.    | Les paramètres de l'installation précédente sont conservés.
+|Enterprise | Nouvelle installation | Activé | Activé | Désactivés pour les connexions réseau.|
+|Standard | Nouvelle installation | Activé | Activé | Désactivés pour les connexions réseau.|
+|Web | Nouvelle installation | Activé | Activé | Désactivés pour les connexions réseau.|
+|Développeur | Nouvelle installation | Activé | Désactivé | Désactivés pour les connexions réseau.|
+|Evaluation | Nouvelle installation | Activé | Activé | Désactivés pour les connexions réseau.|
+|SQL Server Express | Nouvelle installation | Activé | Désactivé | Désactivés pour les connexions réseau.|
+|Toutes les éditions | L'installation précédente est présente mais n'est pas mise à niveau. | Même configuration que pour une nouvelle installation | Même configuration que pour une nouvelle installation | Même configuration que pour une nouvelle installation|
+|Toutes les éditions | UPGRADE | Activé | Les paramètres de l'installation précédente sont conservés. | Les paramètres de l'installation précédente sont conservés.|
 
 
 >[!NOTE]

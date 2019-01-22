@@ -1,7 +1,7 @@
 ---
 title: SQLGetDiagField, fonction | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f975b15d07bf837c0f5fe5d2649cc78b341d23c6
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203978"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420164"
 ---
 # <a name="sqlgetdiagfield-function"></a>Fonction SQLGetDiagField
+
 **Conformité**  
  Version introduite : Conformité aux normes 3.0 de ODBC : ISO 92  
   
@@ -36,8 +37,7 @@ ms.locfileid: "53203978"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```cpp
 SQLRETURN SQLGetDiagField(  
      SQLSMALLINT     HandleType,  
      SQLHANDLE       Handle,  
@@ -104,7 +104,7 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_SUCCESS_WITH_INFO : \**DiagInfoPtr* était trop petite pour contenir le champ de diagnostic demandé. Par conséquent, les données dans le champ de diagnostic a été tronquées. Pour déterminer qu’une troncation s’est produite, l’application doit comparer *BufferLength* au nombre réel d’octets disponibles, ce qui est écrite dans **StringLengthPtr*.  
   
--   SQL_INVALID_HANDLE : Le handle a indiqué par *HandleType* et *gérer* n’était pas un handle valide.  
+-   SQL_INVALID_HANDLE: Le handle a indiqué par *HandleType* et *gérer* n’était pas un handle valide.  
   
 -   SQL_ERROR : Parmi les options suivantes s’est produite :  
   
@@ -118,7 +118,7 @@ SQLRETURN SQLGetDiagField(
   
     -   Lorsque vous utilisez la notification asynchrone, l’opération asynchrone sur le handle n’est pas complète.  
   
--   SQL_NO_DATA : *RecNumber* a été supérieur au nombre d’enregistrements de diagnostics qui existaient pour le handle spécifié dans *gérer.* La fonction retourne également SQL_NO_DATA pour n’importe quel résultat positif *RecNumber* si aucun enregistrement de diagnostic pour *gérer*.  
+-   SQL_NO_DATA: *RecNumber* a été supérieur au nombre d’enregistrements de diagnostics qui existaient pour le handle spécifié dans *gérer.* La fonction retourne également SQL_NO_DATA pour n’importe quel résultat positif *RecNumber* si aucun enregistrement de diagnostic pour *gérer*.  
   
 ## <a name="comments"></a>Commentaires  
  Une application appelle généralement **SQLGetDiagField** pour accomplir une des trois objectifs :  
@@ -189,38 +189,59 @@ SQLRETURN SQLGetDiagField(
   
 |Instruction SQL<br /><br /> Exécutée|Valeur de<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|Valeur de<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
 |--------------------------------|-----------------------------------------------|-----------------------------------------------------|  
-|*domaine-instruction ALTER*|« ALTER DOMAINE »|SQL_DIAG_ALTER_DOMAIN|  
-|*instruction table ALTER*|« ALTER TABLE »|SQL_DIAG_ALTER_TABLE|  
-|*définition de l’assertion*|« CREATE ASSERTION »|SQL_DIAG_CREATE_ASSERTION|  
-|*définition de jeu de caractères*|« CRÉER LE JEU DE CARACTÈRES »|SQL_DIAG_CREATE_CHARACTER_SET|  
-|*définition de classement*|« CRÉER UN CLASSEMENT »|SQL_DIAG_CREATE_COLLATION|  
-|*instruction-index créer*|« CREATE INDEX »|SQL_DIAG_CREATE_INDEX|  
-|*instruction de table CREATE*|« CREATE TABLE »|SQL_DIAG_CREATE_TABLE|  
-|*instruction du mode Création*|« CREATE VIEW »|SQL_DIAG_CREATE_VIEW|  
-|*spécification de curseur*|« SELECT CURSEUR »|SQL_DIAG_SELECT_CURSOR|  
-|*positionné-instruction de suppression*|« CURSEUR DYNAMIQUE DE SUPPRESSION »|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
-|*Delete-instruction recherché*|« DELETE WHERE »|SQL_DIAG_DELETE_WHERE|  
-n-définition *|« CRÉER UN DOMAINE »|SQL_DIAG_CREATE_DOMAIN|  
-|*instruction DROP-assertion*|« DROP ASSERTION »|SQL_DIAG_DROP_ASSERTION|  
-|*DROP-caractère-set-stmt*|« JEU DE CARACTÈRES DE DÉPÔT »|SQL_DIAG_DROP_CHARACTER_SET|  
-|*instruction DROP-classement*|« DROP CLASSEMENT »|SQL_DIAG_DROP_COLLATION|  
-|*instruction DROP-domaine*|« DROP DOMAINE »|SQL_DIAG_DROP_DOMAIN|  
-|*instruction DROP-index*|« DROP INDEX »|SQL_DIAG_DROP_INDEX|  
-|*instruction DROP-schéma*|« DROP SCHEMA »|SQL_DIAG_DROP_SCHEMA|  
-|*instruction DROP-table*|« DROP TABLE »|SQL_DIAG_DROP_TABLE|  
-|*instruction DROP-traduction*|« DÉPÔT TRADUCTION »|SQL_DIAG_DROP_TRANSLATION|  
-|*instruction DROP-vue*|« DROP VIEW »|SQL_DIAG_DROP_VIEW|  
--instruction *|« GRANT »|SQL_DIAG_GRANT|  
-|*instruction d’insertion*|« INSERT »|SQL_DIAG_INSERT|  
-|*Extension de procédure ODBC*|« APPELER »|APPEL DE SQL_DIAG_|  
-|*instruction REVOKE*|« REVOKE »|SQL_DIAG_REVOKE|  
-|*définition de schéma*|« CRÉER UN SCHÉMA »|SQL_DIAG_CREATE_SCHEMA|  
-|*définition de la traduction*|« CRÉER LA TRADUCTION »|SQL_DIAG_CREATE_TRANSLATION|  
-|*instruction de mise à jour positionnée*|« MISE À JOUR DYNAMIQUE CURSOR »|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
-|*recherche-instruction de mise à jour*|« UPDATE WHERE »|SQL_DIAG_UPDATE_WHERE|  
+|*alter-domain-statement*|« ALTER DOMAINE »|SQL_DIAG_ALTER_DOMAIN|  
+|*alter-table-statement*|« ALTER TABLE »|SQL_DIAG_ALTER_TABLE|  
+|*assertion-definition*|« CREATE ASSERTION »|SQL_DIAG_CREATE_ASSERTION|  
+|*character-set-definition*|« CRÉER LE JEU DE CARACTÈRES »|SQL_DIAG_CREATE_CHARACTER_SET|  
+|*collation-definition*|« CRÉER UN CLASSEMENT »|SQL_DIAG_CREATE_COLLATION|  
+|*domainn-definition*|« CRÉER UN DOMAINE »|SQL_DIAG_CREATE_DOMAIN|
+|*create-index-statement*|« CREATE INDEX »|SQL_DIAG_CREATE_INDEX|  
+|*create-table-statement*|« CREATE TABLE »|SQL_DIAG_CREATE_TABLE|  
+|*create-view-statement*|« CREATE VIEW »|SQL_DIAG_CREATE_VIEW|  
+|*cursor-specification*|« SELECT CURSEUR »|SQL_DIAG_SELECT_CURSOR|  
+|*delete-statement-positioned*|« CURSEUR DYNAMIQUE DE SUPPRESSION »|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
+|*delete-statement-searched*|« DELETE WHERE »|SQL_DIAG_DELETE_WHERE|  
+|*drop-assertion-statement*|« DROP ASSERTION »|SQL_DIAG_DROP_ASSERTION|  
+|*drop-character-set-stmt*|« JEU DE CARACTÈRES DE DÉPÔT »|SQL_DIAG_DROP_CHARACTER_SET|  
+|*drop-collation-statement*|« DROP CLASSEMENT »|SQL_DIAG_DROP_COLLATION|  
+|*drop-domain-statement*|« DROP DOMAINE »|SQL_DIAG_DROP_DOMAIN|  
+|*drop-index-statement*|« DROP INDEX »|SQL_DIAG_DROP_INDEX|  
+|*drop-schema-statement*|« DROP SCHEMA »|SQL_DIAG_DROP_SCHEMA|  
+|*drop-table-statement*|« DROP TABLE »|SQL_DIAG_DROP_TABLE|  
+|*drop-translation-statement*|« DÉPÔT TRADUCTION »|SQL_DIAG_DROP_TRANSLATION|  
+|*drop-view-statement*|« DROP VIEW »|SQL_DIAG_DROP_VIEW|  
+|*grantstatement*|« GRANT »|SQL_DIAG_GRANT|
+|*insert-statement*|« INSERT »|SQL_DIAG_INSERT|  
+|*ODBC-procedure-extension*|« APPELER »|SQL_DIAG_ CALL|  
+|*revoke-statement*|« REVOKE »|SQL_DIAG_REVOKE|  
+|*schema-definition*|« CRÉER UN SCHÉMA »|SQL_DIAG_CREATE_SCHEMA|  
+|*translation-definition*|« CRÉER LA TRADUCTION »|SQL_DIAG_CREATE_TRANSLATION|  
+|*update-statement-positioned*|« MISE À JOUR DYNAMIQUE CURSOR »|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
+|*update-statement-searched*|« UPDATE WHERE »|SQL_DIAG_UPDATE_WHERE|  
 |Unknown|*chaîne vide*|SQL_DIAG_UNKNOWN_STATEMENT|  
-  
-## <a name="sequence-of-status-records"></a>Séquence d’enregistrements d’état  
+
+<!--
+These two malformed table rows were fixed by educated GUESS only.
+Each pair starts with the original flawed row.
+Flawed because treated as only two cells by HTML render,
+and because missing info anyway.
+Also, these flawed rows lacked '|' as their first nonWhitespace character (although markdown technically allows this omission, unfortunately).
+Arguably the following SQL.H file shows the sequence of the flawed rows in the table was suboptimal also.
+
+ftp://www.fpc.org/fpc32/VS6Disk1/VC98/INCLUDE/SQL.H
+
+GeneMi , 2019/01/19
+- - - - - - - - - - - - - -
+
+n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|  
+|*domain-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
+
+-statement*|"GRANT"|SQL_DIAG_GRANT|  
+|*grant-statement*|"GRANT"|SQL_DIAG_GRANT|
+-->
+
+## <a name="sequence-of-status-records"></a>Séquence d’enregistrements d’état
+
  Enregistrements d’état sont positionnés dans une séquence basée sur le numéro de ligne et le type du diagnostic. Le Gestionnaire de pilotes détermine l’ordre final dans lequel retourner les enregistrements d’état qu’il génère. Le pilote détermine l’ordre final dans lequel retourner les enregistrements d’état qu’il génère.  
   
  Si les enregistrements de diagnostic sont publiées par le Gestionnaire de pilotes et le pilote, le Gestionnaire de pilotes est responsable de leur classement.  
@@ -254,7 +275,7 @@ n-définition *|« CRÉER UN DOMAINE »|SQL_DIAG_CREATE_DOMAIN|
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
-|Obtention de plusieurs champs d’une structure de données de diagnostic|[SQLGetDiagRec, fonction](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
+|Obtention de plusieurs champs d’une structure de données de diagnostic|[SQLGetDiagRec, fonction](sqlgetdiagrec-function.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

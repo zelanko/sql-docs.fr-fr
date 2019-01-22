@@ -3,17 +3,17 @@ title: Téléchargements de fichier CAB pour les mises à jour cumulatives de SQ
 description: R et Python CAB et package téléchargements pour SQL Server 2017 Machine Learning Services et SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 01/19/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: bb89093909b2ec39bdcfc892bd2d8b14651f2f7d
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 83eb9ace15a3f96a15baa98000f872d719d5d0d2
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626363"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420054"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>CAB télécharge les mises à jour cumulatives d’analytique en base de données de SQL Server instances
 
@@ -34,14 +34,14 @@ Vous pouvez également appliquer des mises à jour cumulatives pour un serveur a
 
 Fichiers CAB sont répertoriées dans l’ordre chronologique inverse. Lorsque vous téléchargez les fichiers CAB et les transférez vers l’ordinateur cible, les placer dans un dossier tel que **télécharge** ou le dossier %Temp% de l’utilisateur le programme d’installation.
 
-Version  |Composant | Télécharger le lien  | Problèmes résolus | 
----------|----------|----------------|------------------|
-**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
+|Version  |Composant | Télécharger le lien  | Problèmes résolus | 
+|---------|----------|----------------|------------------|
+|**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Aucune modification à partir de versions précédentes. |
 | | R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| Contient un correctif pour la mise à niveau un [mis en œuvre de R Server autonome](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), comme installé via le programme d’installation de SQL Server. Utilisez les fichiers CAB CU13 et suivez [ces instructions](sql-machine-learning-standalone-windows-install.md#apply-cu) pour appliquer la mise à jour. |
 | | Python de Microsoft Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Aucune modification à partir de versions précédentes. |
 | | Serveur de Python    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| Contient un correctif pour la mise à niveau un [mis en œuvre de Python serveur autonome](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), comme installé via le programme d’installation de SQL Server. Utilisez les fichiers CAB CU13 et suivez [ces instructions](sql-machine-learning-standalone-windows-install.md#apply-cu) pour appliquer la mise à jour. |
-**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)-[CU12](https://support.microsoft.com/help/4464082)** |  |  |  |
+|**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)-[CU12](https://support.microsoft.com/help/4464082)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Aucune modification à partir de versions précédentes. |
 | | R Server      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| Correctifs mineurs.|
 | | Python de Microsoft Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Aucune modification à partir de versions précédentes. |
@@ -61,7 +61,7 @@ Version  |Composant | Télécharger le lien  | Problèmes résolus |
 | | R Server      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)| Erreurs de long chemin d’accès relatif dans rxInstallPackages.<br/>Connexions dans un bouclage pour RxExec.
 | | Python de Microsoft Open    | Aucune modification à partir de versions précédentes. |
 | | Serveur de Python    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)| <br/>Connexions dans un bouclage pour rx_exec.
-**[Cu4 et versions ultérieures SQL Server 2017](https://support.microsoft.com/help/4056498)** |  |   |  |
+**[SQL Server 2017 CU4](https://support.microsoft.com/help/4056498)** |  |   |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Aucune modification à partir de versions précédentes. |
 | | R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
 | | Python de Microsoft Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Aucune modification à partir de versions précédentes. |
@@ -91,7 +91,7 @@ Pour SQL Server 2016 R Services, les versions de ligne de base sont la version R
 
 Version  |Télécharger le lien  |
 ---------|---------------|
-**SQL Server 2016 SP2 CU1 à CU2**     |
+**SQL Server 2016 SP2 CU1-CU2**     |
 Microsoft R Open     |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039)|
 Microsoft R Server    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
 **SQL Server 2016 SP1 CU4-CU10**     |

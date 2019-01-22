@@ -1,7 +1,7 @@
 ---
 title: Métadonnées (Master Data Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2050e1fe428108713d4cfed8473feec592bc1daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 186329f71e19f23801fb366fe2117067fbf70c6c
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185009"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419885"
 ---
 # <a name="metadata-master-data-services"></a>Métadonnées (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les métadonnées définies par l'utilisateur sont des informations qui vous permettent de décrire les objets de modèle. Par exemple, vous pouvez effectuer le suivi des propriétaires d'un modèle ou d'une entité spécifique, ou des systèmes sources qui fournissent des données à une entité.  
@@ -33,7 +33,7 @@ ms.locfileid: "48185009"
 ## <a name="metadata-entities"></a>Entités de métadonnées  
  Le modèle Métadonnées inclut cinq entités, chacune représentant un type d'objet modèle de données de référence qui prend en charge les métadonnées définies par l'utilisateur. Par exemple, le **définition de métadonnées de modèle** entité contient des membres qui représentent des modèles, et le **définition de métadonnées d’attribut** entité comporte des membres qui représentent tous les attributs dans tous les modèles.  
   
- Pour définir les métadonnées d'un objet de modèle, vous devez remplir un de ces attributs de membre. Par exemple, dans le **définition de métadonnées d’entité** entité, vous pouvez remplir attribut de Description du membre Price avec le texte : **le prix du produit vendu à un client**.  
+ Pour définir les métadonnées d'un objet de modèle, vous devez remplir un de ces attributs de membre. Par exemple, dans le **définition de métadonnées d’entité** entité, vous pouvez remplir attribut de Description du membre Price avec le texte : **Le prix du produit vendu à un client**.  
   
  Les membres du modèle Métadonnées sont mis à jour automatiquement à chaque ajout ou suppression d'objets de modèle qui prennent en charge des métadonnées définies par l'utilisateur.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48185009"
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Ajoutez des métadonnées à un objet de modèle.|[Ajouter des métadonnées &#40;Master Data Services&#41;](add-metadata-master-data-services.md)
-)|  
+|&nbsp;|&nbsp;|
   
 ## <a name="related-content"></a>Contenu associé  
   

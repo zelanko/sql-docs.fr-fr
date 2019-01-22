@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a5a265f75e983ec6994114196b6890f13d94e850
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299966"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420224"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Éditions et fonctionnalités prises en charge de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Mise en miroir de bases de données|Oui|Oui<br /><br /> Sécurité complète uniquement|Témoin uniquement|Témoin uniquement|Témoin uniquement| 
 |Compression de sauvegarde|Oui|Oui|Non|Non|Non| 
 |Instantané de base de données|Oui|Oui <sup>3</sup>|Oui <sup>3</sup>|Oui <sup>3</sup>|Oui <sup>3</sup>|
-|Instances de cluster de basculement Always On|Oui<br /><br /> Le nombre de nœuds correspond au maximum du système d’exploitation|Oui<br /><br /> Prise en charge de 2 nœuds|Non|Non|Non|  
+|Instances de cluster de basculement Always On|Oui<br /><br /> 16|Oui<br /><br /> Prise en charge de 2 nœuds|Non|Non|Non|  
 |Groupes de disponibilité Always On|Oui<br /><br /> Jusqu’à 8 réplicas secondaires, notamment 2 réplicas secondaires synchrones|Non|Non|Non|Non|
 |Groupes de disponibilité de base <sup>2</sup>|Non|Oui<br /><br /> Prise en charge de 2 nœuds|Non|Non|Non|
 |Restauration en ligne de pages et de fichiers|Oui|Non|Non|Non|Non|
