@@ -18,16 +18,16 @@ helpviewer_keywords:
 - identity columns [SQL Server], IDENTITY property
 - autonumbers, identity numbers
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: af536ef3867d3f74ce04a8a8fef8b93e224f09c0
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507393"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326640"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (propriété)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -78,7 +78,7 @@ IDENTITY [ (seed , increment) ]
   
  Une seule colonne d'identité peut être créée par table.  
   
- Pour les tables optimisées en mémoire, la valeur initiale et l'incrément doivent être définis à « 1,1 ». L’affectation d’une valeur de départ ou d’incrément autre que 1 provoque l’erreur suivante : L’utilisation de valeurs de départ ou d’incrément autres que 1 n’est pas prise en charge avec les tables à mémoire optimisée.  
+ Pour les tables optimisées en mémoire, la valeur initiale et l'incrément doivent être définis à « 1,1 ». Le fait de définir la valeur initiale ou l'incrément à une valeur autre que 1 provoque l'erreur suivante : L'utilisation de valeurs autres que 1 pour la valeur initiale et l'incrément n'est pas prise en charge avec les tables optimisées en mémoire.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -110,7 +110,7 @@ VALUES
    ('Pirkko', 'O', 'Koskitalo');  
 ```  
   
-### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>B. Utilisation d'une syntaxe générique afin de trouver des intervalles entre les valeurs d'identité  
+### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>b. Utilisation d'une syntaxe générique afin de trouver des intervalles entre les valeurs d'identité  
  L'exemple suivant illustre une syntaxe générique qui permet de trouver des intervalles entre les valeurs d'identité lorsque des données sont supprimées.  
   
 > [!NOTE]  
