@@ -1,5 +1,5 @@
 ---
-title: Sys.sensitivity_classifications (Transact-SQL) | Microsoft Docs
+title: sys.sensitivity_classifications (Transact-SQL) | Microsoft Docs
 ms.date: 06/17/2018
 ms.reviewer: ''
 ms.prod: sql
@@ -7,8 +7,8 @@ ms.technology: t-sql
 ms.topic: language-reference
 ms.custom: ''
 ms.manager: craigg
-ms.author: giladm
-author: giladmit
+ms.author: arib
+author: vainolo
 f1_keywords:
 - 'sys.sensitivity_classifications '
 dev_langs:
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1b189aa97616a265785a369c0ec7cccfc3b80d56
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 478ab8dd464541c08252eac049a840a789615971
+ms.sourcegitcommit: e6e5da19b393f30b068552a18c911495cbc32952
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979465"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443685"
 ---
-# <a name="syssensitivityclassifications-transact-sql"></a>Sys.sensitivity_classifications (Transact-SQL)
+# <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Retourne une ligne pour chaque élément classifiée dans la base de données.
@@ -38,7 +38,7 @@ Retourne une ligne pour chaque élément classifiée dans la base de données.
 |Nom de colonne|Type de données|Description|
 |-----------------|---------------|-----------------|  
 |**class**|**Int**|Identifie la classe de l’élément sur lequel se trouve la classification|  
-|**class_desc**|**varchar (16)**|Une description de la classe de l’élément sur lequel se trouve la classification|  
+|**class_desc**|**varchar(16)**|Une description de la classe de l’élément sur lequel se trouve la classification|  
 |**major_id**|**Int**|ID de l’élément sur lequel se trouve la classification. < br \>< br \>si classe est 0, major_id est toujours 0.<br>Si la valeur de class est 1, 2 ou 7, major_id est object_id.|  
 |**minor_id**|**Int**|ID secondaire de l’élément sur lequel la classification existe, interprété en fonction de sa classe.<br><br>Si classe = 1, minor_id est column_id (Si colonne), ou 0 (si objet).<br>Si class = 2, minor_id est parameter_id.<br>Si classe = 7, minor_id est index_id. |  
 |**label**|**sysname**|L’étiquette (lisibles par l’homme) attribuée pour la classification de sensibilité|  
@@ -73,10 +73,13 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
                          and sys.sensitivity_classifications.minor_id = sys.all_columns.column_id
 ```
 
+## <a name="permissions"></a>Autorisations  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+
 ## <a name="see-also"></a>Voir aussi  
 
 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
-[SUPPRIMER la CLASSIFICATION de sensibilité (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [Prise en main de SQL Information Protection](https://aka.ms/sqlip)
