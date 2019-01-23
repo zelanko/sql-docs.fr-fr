@@ -14,12 +14,12 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ef7392b4e41271bacd91b5e1a9244bbfe1c1139
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1b14a63222721f21848518cbee5acfe99feb4d0f
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558636"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405859"
 ---
 # <a name="master-database"></a>Base de données master
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,34 +49,34 @@ Le tableau suivant indique la valeur par défaut de chaque option de la base de 
 
 |Option de base de données|Valeur par défaut|Peut être modifiée|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|non|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|Non|  
 |ANSI_NULL_DEFAULT|OFF|Oui|  
 |ANSI_NULLS|OFF|Oui|  
 |ANSI_PADDING|OFF|Oui|  
 |ANSI_WARNINGS|OFF|Oui|  
 |ARITHABORT|OFF|Oui|  
-|AUTO_CLOSE|OFF|non|  
+|AUTO_CLOSE|OFF|Non|  
 |AUTO_CREATE_STATISTICS|ON|Oui|  
-|AUTO_SHRINK|OFF|non|  
+|AUTO_SHRINK|OFF|Non|  
 |AUTO_UPDATE_STATISTICS|ON|Oui|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Oui|  
-|CHANGE_TRACKING|OFF|non|  
+|CHANGE_TRACKING|OFF|Non|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Oui|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Oui|  
 |CURSOR_DEFAULT|GLOBAL|Oui|  
-|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|non<br /><br /> non<br /><br /> non|  
+|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Non<br /><br /> Non|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Oui|  
-|DB_CHAINING|ON|non|  
-|ENCRYPTION|OFF|non|  
-|MIXED_PAGE_ALLOCATION|ON|non|  
+|DB_CHAINING|ON|Non|  
+|ENCRYPTION|OFF|Non|  
+|MIXED_PAGE_ALLOCATION|ON|Non|  
 |NUMERIC_ROUNDABORT|OFF|Oui|  
 |PAGE_VERIFY|CHECKSUM|Oui|  
 |PARAMETERIZATION|SIMPLE|Oui|  
 |QUOTED_IDENTIFIER|OFF|Oui|  
-|READ_COMMITTED_SNAPSHOT|OFF|non|  
+|READ_COMMITTED_SNAPSHOT|OFF|Non|  
 |RECOVERY|SIMPLE|Oui|  
 |RECURSIVE_TRIGGERS|OFF|Oui|  
-|Options de Service Broker|DISABLE_BROKER|non|  
+|Options de Service Broker|DISABLE_BROKER|Non|  
 |TRUSTWORTHY|OFF|Oui|  
   
 Pour obtenir une description de ces options de base de données, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
@@ -88,7 +88,7 @@ Les opérations suivantes ne peuvent pas être effectuées sur la base de donné
 - Modification du classement. Le classement par défaut est le classement du serveur.  
 - Modification du propriétaire de la base de données. La base de données**master** appartient à **sa**.  
 - création d'un catalogue ou d'un index de texte intégral ;  
-- création de déclencheurs sur les tables système de la base de données ;  
+- création de déclencheurs sur les tables système de la base de données ;  
 - Suppression de la base de données  
 - Suppression de l'utilisateur **Invité** de la base de données  
 - Activation de la capture des données modifiées.  

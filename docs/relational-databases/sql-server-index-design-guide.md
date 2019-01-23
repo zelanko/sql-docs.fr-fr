@@ -1,7 +1,7 @@
 ---
 title: Guide de conception et d’architecture d’index SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/06/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 217fe5bc510d5f25eaddfad69fa08ad4dd760c8f
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e294759588beeb5d79f4613848ca49634d8e40cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712700"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420184"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guide de conception et d’architecture d’index SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -218,7 +218,7 @@ Utilisez ces vues de métadonnées pour voir les attributs des index. Des inform
 |-|-|
 |[sys.indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
 |[sys.partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
-[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
+|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
 |[sys.column_store_segments &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
 |[sys.column_store_row_groups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
 |[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
@@ -856,9 +856,9 @@ Un fractionnement s’effectue en deux étapes atomiques. Dans l’image ci-dess
 
 ![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "Fractionnement de pages")
 
-**Étape 1** : Allouez deux nouvelles pages P1 et P2, puis fractionnez les lignes de la page P1 précédente sur ces nouvelles pages, y compris la ligne venant d’être insérée. Dans la table de mappage des pages, un nouvel emplacement est utilisé pour stocker l’adresse physique de la page P2. Ces pages P1 et P2 ne sont pas encore accessibles pour d’autres opérations simultanées. En outre, le pointeur logique entre P1 et P2 est défini. Puis, en une seule étape atomique, mettez à jour la table de mappage des pages pour changer le pointeur de l’ancienne page P1 à la nouvelle page P1. 
+**Étape 1 :** Allouez deux nouvelles pages P1 et P2, puis fractionnez les lignes de la page P1 précédente sur ces nouvelles pages, y compris la ligne venant d’être insérée. Dans la table de mappage des pages, un nouvel emplacement est utilisé pour stocker l’adresse physique de la page P2. Ces pages P1 et P2 ne sont pas encore accessibles pour d’autres opérations simultanées. En outre, le pointeur logique entre P1 et P2 est défini. Puis, en une seule étape atomique, mettez à jour la table de mappage des pages pour changer le pointeur de l’ancienne page P1 à la nouvelle page P1. 
 
-**Étape 2** : La page non feuille pointe vers P1, mais il n’y a pas de pointeur direct entre cette page non feuille et la page P2. P2 est uniquement accessible via P1. Pour créer un pointeur entre une page non feuille et la page P2, allouez une nouvelle page non feuille (page d’index interne), copiez toutes les lignes à partir de l’ancienne page non feuille et ajoutez une nouvelle ligne pour pointer vers P2. Après cela, en une seule étape atomique, mettez à jour la table de mappage des pages pour changer le pointeur de l’ancienne page non feuille à la nouvelle page non feuille.
+**Étape 2 :** La page non feuille pointe vers P1, mais il n’y a pas de pointeur direct entre cette page non feuille et la page P2. P2 est uniquement accessible via P1. Pour créer un pointeur entre une page non feuille et la page P2, allouez une nouvelle page non feuille (page d’index interne), copiez toutes les lignes à partir de l’ancienne page non feuille et ajoutez une nouvelle ligne pour pointer vers P2. Après cela, en une seule étape atomique, mettez à jour la table de mappage des pages pour changer le pointeur de l’ancienne page non feuille à la nouvelle page non feuille.
 
 #### <a name="merge-page"></a>Fusion de page
 Quand une opération `DELETE` crée une page d’une taille inférieure à 10 % de la taille de page maximale (qui est de 8 Ko), ou une page contenant une seule ligne, cette page est fusionnée avec une page contiguë.
@@ -869,11 +869,11 @@ Dans l’image ci-dessous, l’exemple suppose qu’une opération `DELETE` va s
 
 ![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "Fusion de pages")
 
-**Étape 1** : Une page delta représentant la valeur de clé 10 (triangle bleu) est créée, et son pointeur dans la page non feuille Pp1 est défini à la nouvelle page delta. De plus, une page delta spécifique pour la fusion (triangle vert) est créée, et est liée pour pointer vers la page delta. À ce stade, les deux pages (page delta et page delta de la fusion) ne sont pas visibles pour les autres transactions simultanées. En une seule étape atomique, le pointeur vers la page de niveau feuille P1 dans la table de mappage des pages est mis à jour pour pointer vers la page delta de la fusion. Après cette étape, l’entrée de la valeur de clé 10 dans la page Pp1 pointe maintenant vers la page delta de la fusion. 
+**Étape 1 :** Une page delta représentant la valeur de clé 10 (triangle bleu) est créée, et son pointeur dans la page non feuille Pp1 est défini à la nouvelle page delta. De plus, une page delta spécifique pour la fusion (triangle vert) est créée, et est liée pour pointer vers la page delta. À ce stade, les deux pages (page delta et page delta de la fusion) ne sont pas visibles pour les autres transactions simultanées. En une seule étape atomique, le pointeur vers la page de niveau feuille P1 dans la table de mappage des pages est mis à jour pour pointer vers la page delta de la fusion. Après cette étape, l’entrée de la valeur de clé 10 dans la page Pp1 pointe maintenant vers la page delta de la fusion. 
 
-**Étape 2** : La ligne représentant la valeur de clé 7 dans la page non feuille Pp1 doit être supprimée, et l’entrée de la valeur de clé 10 doit être mise à jour pour pointer vers P1. Pour ce faire, une nouvelle page non feuille Pp2 est allouée, et toutes les lignes de la page Pp1 sont copiées à l’exception de la ligne représentant la valeur de clé 7. Ensuite, la ligne de la valeur de clé 10 est mise à jour pour pointer vers la page P1. Après cela, en une seule étape atomique, l’entrée de la table de mappage des pages pointant vers Pp1 est mise à jour pour pointer vers Pp2. Pp1 n’est plus accessible. 
+**Étape 2 :** La ligne représentant la valeur de clé 7 dans la page non feuille Pp1 doit être supprimée, et l’entrée de la valeur de clé 10 doit être mise à jour pour pointer vers P1. Pour ce faire, une nouvelle page non feuille Pp2 est allouée, et toutes les lignes de la page Pp1 sont copiées à l’exception de la ligne représentant la valeur de clé 7. Ensuite, la ligne de la valeur de clé 10 est mise à jour pour pointer vers la page P1. Après cela, en une seule étape atomique, l’entrée de la table de mappage des pages pointant vers Pp1 est mise à jour pour pointer vers Pp2. Pp1 n’est plus accessible. 
 
-**Étape 3** : Les pages de niveau feuille P2 et P1 sont fusionnées, et les pages delta sont supprimées. Pour ce faire, une nouvelle page P3 est allouée, les lignes des pages P2 et P1 sont fusionnées, et les modifications des pages delta sont ajoutées à la nouvelle page P3. Ensuite, en une seule opération atomique, l’entrée de la table de mappage des pages pointant vers la page P1 est mise à jour pour pointer vers la page P3. 
+**Étape 3 :** Les pages de niveau feuille P2 et P1 sont fusionnées, et les pages delta sont supprimées. Pour ce faire, une nouvelle page P3 est allouée, les lignes des pages P2 et P1 sont fusionnées, et les modifications des pages delta sont ajoutées à la nouvelle page P3. Ensuite, en une seule opération atomique, l’entrée de la table de mappage des pages pointant vers la page P1 est mise à jour pour pointer vers la page P3. 
 
 ### <a name="performance-considerations"></a>Considérations relatives aux performances
 

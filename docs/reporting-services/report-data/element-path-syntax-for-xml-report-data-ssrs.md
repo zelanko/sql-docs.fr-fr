@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 836a043b3047a8116b969cfa8e95f26f1f6282f8
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: ffa45f4eb7fdd8d989810dcdea6cfab0cd4cb4cc
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813802"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420194"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntaxe du chemin d'accès à l'élément pour des données de rapport XML (SSRS)
   Dans le Concepteur de rapports, vous spécifiez les données à utiliser pour un rapport à partir d'une source de données XML en définissant un chemin d'accès à l'élément qui respecte la casse. Le chemin d'accès à l'élément indique comment parcourir les nœuds hiérarchiques XML et leurs attributs dans la source de données XML. Pour utiliser le chemin de l’élément par défaut, laissez vide la requête du dataset ou le **ElementPath** XML du **Query** XML. Lorsque les données sont extraites de la source de données XML, les nœuds d'élément possédant des valeurs de texte et des attributs de nœud d'élément deviennent des colonnes dans le jeu de résultats. Les valeurs des nœuds et les attributs deviennent les données de ligne lorsque vous exécutez la requête. Les colonnes apparaissent sous la forme de collection de champs de dataset dans le volet des données de rapport. Cette rubrique décrit la syntaxe du chemin d'accès à l'élément.  
@@ -90,14 +90,14 @@ XMLLocalName :: =
 > [!NOTE]  
 >  Lorsque le chemin d'accès à l'élément est vide, la requête utilise le chemin d'accès à l'élément par défaut : le premier chemin d'accès à une collection de nœuds terminaux. Dans le premier exemple, laisser un chemin d'accès à l'élément vide équivaut à spécifier le chemin d'accès à l'élément /Customers/Customer/Orders/Order. L'ensemble des attributs et des valeurs de nœud, ainsi que le chemin d'accès, sont retournés dans le jeu de résultats, et les noms de nœuds et les noms d'attributs apparaissent en tant que champs du dataset.  
   
- **Exemple #1**: *Vide*  
+ **Exemple 1** : *Vide*  
   
 |JSON|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6|1|Bobby|Moore|11|https://www.adventure-works.com|  
-|Table de charge de travail|1|2|Bobby|Moore|11|https://www.adventure-works.com|  
-|Sofa|2|8|Crystal|Hu|20|https://www.adventure-works.com|  
-|EndTables|2|15|Wyatt|Diaz|33|https://www.adventure-works.com|  
+|Chair|6|1|Bobby|Moore|11|https\://www.adventure-works.com|  
+|Table de charge de travail|1|2|Bobby|Moore|11|https\://www.adventure-works.com|  
+|Sofa|2|8|Crystal|Hu|20|https\://www.adventure-works.com|  
+|EndTables|2|15|Wyatt|Diaz|33|https\://www.adventure-works.com|  
   
  **Exemple 2**: `Customers {}/Customer`  
   
@@ -133,7 +133,7 @@ XMLLocalName :: =
 |8|Crystal|Hu|20|  
 |15|Wyatt|Diaz|33|  
   
-#### <a name="xml-document-customersxml"></a>Document XML : Customers.xml  
+#### <a name="xml-document-customersxml"></a>Document XML : Customers.xml  
  Pour vous entraîner avec les exemples de chemin d’élément présentés dans la section précédente, vous pouvez copier ce code XML et l’enregistrer dans une URL à laquelle le Concepteur de rapports peut accéder, puis utiliser le document XML comme source de données XML : par exemple, `https://localhost/Customers.xml`.  
   
 ```  

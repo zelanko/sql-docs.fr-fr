@@ -17,23 +17,23 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38077378d0980d351c4c65ca25b1574b7a7d7bc2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673575"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327866"
 ---
 # <a name="always-encrypted-wizard"></a>Assistant Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Utilisez l’ **Assistant Always Encrypted** pour protéger les données sensibles stockées dans une base de données SQL Server. Le Chiffrement intégral permet aux clients de chiffrer des données sensibles dans des applications clientes et de ne jamais révéler les clés de chiffrement à SQL Server. Ainsi, Always Encrypted fournit une séparation entre ceux qui possèdent les données (et qui peuvent les afficher) et ceux qui les gèrent (mais qui ne doivent pas y avoir accès).  Pour obtenir la description complète de la fonctionnalité, consultez [Always Encrypted &#40;moteur de base de données&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
  
- - Pour une procédure détaillée montrant comment configurer la fonctionnalité Always Encrypted avec l’Assistant et comment l’utiliser dans une application cliente, consultez [Didacticiel sur les bases de données SQL : Protéger les données à l’aide d’Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
+ - Pour une procédure détaillée montrant comment configurer la fonctionnalité Always Encrypted avec l’Assistant et comment l’utiliser dans une application cliente, consultez [Didacticiel SQL Database : Protéger les données à l’aide d’Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
  
  - Consultez [Prise en main d’Always Encrypted avec SSMS](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)pour regarder une vidéo qui traite de l’utilisation de l’Assistant. Consultez également le blog de l’équipe de sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Assistant de chiffrement SSMS - Activer Always Encrypted en quelques étapes](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx).  
  
- - **Autorisations :** pour interroger des colonnes chiffrées et sélectionner des clés à l’aide de cet Assistant, vous devez disposer des autorisations `VIEW ANY COLUMN MASTER KEY DEFINITION` et `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` . Pour créer des clés, vous devez également disposer des autorisations `ALTER ANY COLUMN MASTER KEY` et `ALTER ANY COLUMN ENCRYPTION KEY` .  
+ - **Autorisations :** Pour interroger des colonnes chiffrées et sélectionner des clés à l’aide de cet Assistant, vous devez disposer des autorisations `VIEW ANY COLUMN MASTER KEY DEFINITION` et `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` . Pour créer des clés, vous devez également disposer des autorisations `ALTER ANY COLUMN MASTER KEY` et `ALTER ANY COLUMN ENCRYPTION KEY` .  
  
  #### <a name="to-open-the-always-encrypted-wizard"></a>Pour ouvrir l’Assistant Always Encrypted  
  
@@ -57,7 +57,7 @@ Utilisez l’ **Assistant Always Encrypted** pour protéger les données sensibl
  
    - **Stockage d’une clé principale dans AKV** Pour plus d’informations, consultez [Prise en main du coffre de clés Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
  
- - Pour générer une clé principale de colonne dans le coffre de clés Azure, l’utilisateur doit disposer des autorisations **WrapKey**, **UnwrapKey**, **Verify**et **Sign** dans le coffre de clés. Il est possible que les utilisateurs aient également besoin des autorisations **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**et **Restore** . Pour plus d’informations, consultez [Qu’est-ce que le coffre de clés Azure ?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) et   [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
+ - Pour générer une clé principale de colonne dans le coffre de clés Azure, l’utilisateur doit disposer des autorisations **WrapKey**, **UnwrapKey**, **Verify**et **Sign** dans le coffre de clés. Il est possible que les utilisateurs aient également besoin des autorisations **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**et **Restore** . Pour plus d’informations, consultez [Qu’est-ce qu’Azure Key Vault ?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) et   [Set-AzKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
  
  - L’Assistant ne prend en charge que deux options. Les magasins clients et les modules de sécurité matérielle doivent être configurés à l’aide de [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)].  
  

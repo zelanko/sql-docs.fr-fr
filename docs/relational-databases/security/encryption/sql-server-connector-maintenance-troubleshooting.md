@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 48db6ede27c4ca7565ca4de1b0eab798c1eb2ef7
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520689"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327840"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Résolution des problèmes et maintenance du connecteur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "52520689"
   
  Dans le cas du chiffrement transparent des données, voici comment procéder :  
   
--   **Dans PowerShell** : Créez une clé asymétrique (avec un nom différent de celui de votre clé asymétrique TDE) dans le coffre de clés.  
+-   **Dans PowerShell :** Créez une clé asymétrique (avec un nom différent de celui de votre clé asymétrique TDE) dans le coffre de clés.  
   
     ```powershell  
-    Add-AzureRmKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
+    Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
@@ -144,7 +144,7 @@ Si vous utilisez actuellement la version 1.0.0.440 ou une version plus récente,
 ### <a name="key-backup-and-recovery"></a>Sauvegarde et récupération des clés  
 Le coffre de clés doit être sauvegardé régulièrement. Si une clé asymétrique dans le coffre est perdue, elle peut être restaurée à partir d’une sauvegarde. La clé doit être restaurée à l’aide du même nom qu’avant, ce que fera la commande PowerShell Restore (voir les étapes ci-dessous).  
 Si le coffre a été perdu, vous devez recréer un coffre et restaurer la clé asymétrique dans le coffre en utilisant le même nom qu’avant. Le nom du coffre peut être différent (ou le même qu’avant). En outre, vous devez définir les autorisations d’accès sur le nouveau coffre de manière à accorder au principal du service SQL Server l’accès nécessaire pour les scénarios de chiffrement SQL Server, puis paramétrer les informations d’identification SQL Server afin qu’elles reflètent le nom du nouveau coffre.  
-Voici un récapitulatif des étapes :  
+Voici un récapitulatif des étapes :  
   
 * Sauvegarder la clé de coffre (à l’aide de l’applet de commande PowerShell Backup-AzureKeyVaultKey).  
 * En cas de défaillance du coffre, créer un coffre dans la même région géographique*. L’utilisateur qui effectue cette création doit se trouver dans le même répertoire par défaut que le programme d’installation du principal du service pour SQL Server.  
@@ -152,7 +152,7 @@ Voici un récapitulatif des étapes :
 * Accorder des autorisations au principal du service SQL Server pour utiliser ce nouveau coffre.  
 * Modifier les informations d’identification SQL Server utilisées par le moteur de base de données afin qu’elles reflètent le nom du nouveau coffre (le cas échéant).  
   
-Les sauvegardes des clés peuvent être restaurées entre les régions Azure, tant qu’elles restent dans la même région géographique ou le même cloud national : États-Unis, Canada, Japon, Australie, Inde, Asie et Pacifique du sud, Europe, Brésil, Chine, Administration américaine ou Allemagne.  
+Les sauvegardes des clés peuvent être restaurées dans les régions Azure, tant qu’elles restent dans la même région géographique ou le même cloud national : États-Unis, Canada, Japon, Australie, Inde, Asie-Pacifique, Europe, Brésil, Chine, Gouvernement des États-Unis ou Allemagne.  
   
   
 ##  <a name="AppendixB"></a> B. Forum Aux Questions (FAQ)  

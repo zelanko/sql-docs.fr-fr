@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3bdc541e919e9a30d4ab043ef9c13d78a2f4b445
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522922"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327350"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Gestion de clés extensible de SQL server TDE avec Azure Key Vault - Étapes de configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
  ![ekm-key-id](../../../relational-databases/security/encryption/media/ekm-key-id.png "ekm-key-id")  
   
-## <a name="part-ii-create-a-key-vault-and-key"></a>Partie II : Créer un coffre de clés et une clé  
+## <a name="part-ii-create-a-key-vault-and-key"></a>Partie II : Créer un Key Vault et une clé  
  Le coffre de clés et la clé créés ici seront utilisés par le moteur de base de données SQL Server pour la protection des clés de chiffrement.  
   
 > [!IMPORTANT]  
@@ -69,7 +69,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
      Installez et démarrez la [dernière version d’Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 ou ultérieure). Connectez-vous à votre compte Azure à l’aide de la commande suivante :  
   
     ```powershell  
-    Login-AzureRmAccount  
+    Connect-AzAccount  
     ```  
   
      L’instruction retourne ceci :  
@@ -83,14 +83,14 @@ Version de SQL Server  |Lien d’installation du package redistribuable
     ```  
   
     > [!NOTE]  
-    >  Si vous avez plusieurs abonnements et que vous voulez en spécifier un en vue de l’utiliser pour le coffre, recourez à `Get-AzureRmSubscription` pour afficher les abonnements et à `Select-AzureRmSubscription` pour choisir l’abonnement approprié. Dans le cas contraire, PowerShell en sélectionne automatiquement un par défaut.  
+    >  Si vous avez plusieurs abonnements et que vous voulez en spécifier un en vue de l’utiliser pour le coffre, recourez à `Get-AzSubscription` pour afficher les abonnements et à `Select-AzSubscription` pour choisir l’abonnement approprié. Dans le cas contraire, PowerShell en sélectionne automatiquement un par défaut.  
   
 2.  **Créer un groupe de ressources**  
   
      Toutes les ressources Azure créées via Azure Resource Manager doivent être contenues dans des groupes de ressources. Créez un groupe de ressources pour héberger votre coffre de clés. Cet exemple utilise `ContosoDevRG`. Choisissez vos propres noms de groupe de ressources et de coffre de clés **uniques** , car tous les noms de coffre de clés sont globalement uniques.  
   
     ```powershell  
-    New-AzureRmResourceGroup -Name ContosoDevRG -Location 'East Asia'  
+    New-AzResourceGroup -Name ContosoDevRG -Location 'East Asia'  
     ```  
   
      L’instruction retourne ceci :  
@@ -109,10 +109,10 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
 3.  **Créer un coffre de clés**  
   
-     L’applet de commande `New-AzureRmKeyVault` nécessite un nom de groupe de ressources, un nom de coffre de clés et un emplacement géographique. Par exemple, pour un coffre de clés nommé `ContosoDevKeyVault`, tapez :  
+     L’applet de commande `New-AzKeyVault` nécessite un nom de groupe de ressources, un nom de coffre de clés et un emplacement géographique. Par exemple, pour un coffre de clés nommé `ContosoDevKeyVault`, tapez :  
   
     ```powershell  
-    New-AzureRmKeyVault -VaultName 'ContosoDevKeyVault' `  
+    New-AzKeyVault -VaultName 'ContosoDevKeyVault' `  
        -ResourceGroupName 'ContosoDevRG' -Location 'East Asia'  
     ```  
   
@@ -152,20 +152,20 @@ Version de SQL Server  |Lien d’installation du package redistribuable
     > [!IMPORTANT]  
     >  Le principal du service Azure Active Directory doit avoir au moins les autorisations `get`, `wrapKey` et `unwrapKey` pour le coffre de clés.  
   
-     Comme illustré ci-dessous, utilisez l’ **ID client** de la partie I pour le paramètre `ServicePrincipalName` . La commande `Set-AzureRmKeyVaultAccessPolicy` s’exécute en mode silencieux sans aucune sortie si son exécution réussit.  
+     Comme illustré ci-dessous, utilisez l’ **ID client** de la partie I pour le paramètre `ServicePrincipalName` . La commande `Set-AzKeyVaultAccessPolicy` s’exécute en mode silencieux sans aucune sortie si son exécution réussit.  
   
     ```powershell  
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
+    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     Appelez l’applet de commande `Get-AzureRmKeyVault` pour vérifier les autorisations. Dans la sortie de l’instruction, sous « Access Policies », vous devez voir le nom de votre application AAD listé comme autre locataire ayant accès à ce coffre de clés.  
+     Appelez l’applet de commande `Get-AzKeyVault` pour vérifier les autorisations. Dans la sortie de l’instruction, sous « Access Policies », vous devez voir le nom de votre application AAD listé comme autre locataire ayant accès à ce coffre de clés.  
   
        
 5.  **Générer une clé asymétrique dans le coffre de clés**  
   
-     Il existe deux manières de générer une clé dans Azure Key Vault : 1) importer une clé existante ou 2) créer une clé.  
+     Il existe deux manières de générer une clé dans Azure Key Vault : 1) Importer une clé existante ou 2) créer une nouvelle clé.  
                   
       > [!NOTE]
         >  SQL Server prend en charge seulement les clés RSA 2 048 bits.
@@ -185,9 +185,9 @@ Version de SQL Server  |Lien d’installation du package redistribuable
     ### <a name="types-of-keys"></a>Types de clés :
     Vous pouvez générer deux types de clés dans Azure Key Vault qui fonctionnent avec SQL Server. Les deux sont des clés RSA asymétriques 2 048 bits.  
   
-    -   **À protection logicielle :** traitées dans le logiciel et chiffrées au repos. Les opérations sur les clés à protection logicielle ont lieu sur les machines virtuelles Azure. Recommandé pour les clés qui ne sont pas utilisées dans un déploiement de production.  
+    -   **À protection logicielle :** Traitées dans le logiciel et chiffrées au repos. Les opérations sur les clés à protection logicielle ont lieu sur les machines virtuelles Azure. Recommandé pour les clés qui ne sont pas utilisées dans un déploiement de production.  
   
-    -   **Protégées par HSM :** créées et protégées par un module de sécurité matériel HSM pour une sécurité renforcée. Le coût est d’environ 1 $ par version de clé.  
+    -   **Protégées par HSM :** Créées et protégées par un module de sécurité matériel (HSM) pour une sécurité renforcée. Le coût est d’environ 1 $ par version de clé.  
   
         > [!IMPORTANT]  
         >  Le connecteur SQL Server exige que le nom de clé utilise uniquement les caractères « a-z », « A-Z », « 0-9 » et « - », avec une limite de 26 caractères.   

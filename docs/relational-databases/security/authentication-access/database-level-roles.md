@@ -1,7 +1,7 @@
 ---
 title: Rôles au niveau de la base de données | Microsoft Docs
 ms.custom: ''
-ms.date: 06/29/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -39,14 +39,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f90a0ac06ed8852410874ffc2fb4a26b04ebf3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780827"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420094"
 ---
 # <a name="database-level-roles"></a>Rôles au niveau de la base de données
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Pour gérer facilement les autorisations dans vos bases de données, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit plusieurs *rôles* , qui sont des principaux de sécurité regroupant d'autres principaux. Ils sont similaires aux ***groupes*** du système d'exploitation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Les autorisations des rôles au niveau de la base de données ont une portée à l'échelle de la base de données.  
@@ -92,11 +93,11 @@ Ces rôles de base de données existent uniquement dans la base de données MAST
 
 |Nom du rôle|Description|  
 |--------------------|-----------------|
-**dbmanager** | Permet de créer et de supprimer des bases de données. Un membre du rôle dbmanager qui crée une base de données devient le propriétaire de cette base de données qui permet à cet utilisateur de se connecter à cette base de données en tant qu’utilisateur dbo. L’utilisateur dbo possède toutes les autorisations de base de données dans la base de données. Les membres du rôle dbmanager n’ont pas nécessairement l’autorisation d’accéder aux bases de données qui ne leur appartiennent pas.
-**loginmanager** | Peut créer et supprimer des connexions dans la base de données MASTER virtuelle.  
+|**dbmanager** | Permet de créer et de supprimer des bases de données. Un membre du rôle dbmanager qui crée une base de données devient le propriétaire de cette base de données qui permet à cet utilisateur de se connecter à cette base de données en tant qu’utilisateur dbo. L’utilisateur dbo possède toutes les autorisations de base de données dans la base de données. Les membres du rôle dbmanager n’ont pas nécessairement l’autorisation d’accéder aux bases de données qui ne leur appartiennent pas.|
+|**loginmanager** | Peut créer et supprimer des connexions dans la base de données MASTER virtuelle.|
 
 > [!NOTE]
-> Le principal de niveau du serveur et l’administrateur Azure Active Directory (s’il est configuré) détiennent toutes les autorisations dans [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sans avoir besoin d’être membres de tous les rôles. Pour plus d’informations, voir [Authentification et autorisation de base de données SQL : octroi de l’accès](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> Le principal de niveau du serveur et l’administrateur Azure Active Directory (s’il est configuré) détiennent toutes les autorisations dans [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sans avoir besoin d’être membres de tous les rôles. Pour plus d’informations, voir [Authentification et autorisation SQL Database : Octroi de l’accès](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
   
 ## <a name="msdb-roles"></a>Rôles de msdb  
  La base de données msdb contient les rôles à usages spéciaux présentés dans le tableau ci-dessous.  
@@ -114,7 +115,7 @@ Ces rôles de base de données existent uniquement dans la base de données MAST
 
 ## <a name="working-with-r-services"></a>Utilisation de R Services  
 
-**S’applique à :** SQL Server à partir de [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
+**S’applique à :** SQL Server à compter de [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
 
 Quand vous installez R Services, vous disposez de rôles de base de données supplémentaires pour la gestion des packages. Pour plus d’informations, consultez [Gestion des packages R pour SQL Server](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
 

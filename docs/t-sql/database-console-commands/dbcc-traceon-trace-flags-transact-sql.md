@@ -1,7 +1,7 @@
 ---
 title: Indicateurs de trace (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2019
+ms.date: 01/15/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 90f27a36b455b4c0b497b43d5b302684a1a7a9ba
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: f57bd4ef770d4958c09bd54fb19718e8e8c641df
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206465"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361689"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Indicateurs de trace (Transact-SQL)
 
@@ -145,6 +145,7 @@ Le tableau ci-dessous répertorie et décrit les indicateurs de trace disponible
 |**9488**|<a name="9488"></a>Définit l’estimation fixe pour les fonctions table à la valeur par défaut 1 (correspondant à la valeur par défaut sous le modèle d’estimation de la cardinalité de l’optimiseur de requête des versions [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] et antérieures) quand vous utilisez le modèle d’estimation de la cardinalité de l’optimiseur de requête des versions [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />**Étendue** : globale, de session ou de requête|
 |**9495**|Désactive le parallélisme lors de l’insertion pour les opérations INSERT...SELECT et applique cette mesure à la fois aux tables utilisateur et temporaires. Pour plus d’informations, consultez [l’article du support technique Microsoft](https://support.microsoft.com/kb/3180087)<br /><br />**Étendue** : globale ou de session| 
 |**9567**|Active la compression du flux de données pour les groupes de disponibilité Always On au cours de l’amorçage automatique. La compression peut réduire considérablement le temps de transfert pendant l’amorçage automatique et augmente la charge sur le processeur. Pour plus d’informations, consultez [Initialiser automatiquement le groupe de disponibilité Always On](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) et [Régler la compression pour un groupe de disponibilité](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Étendue** : globale ou de session|
+|**9571**|Désactive l’amorçage automatique des groupes de disponibilité pour le chemin d’accès de la base de données par défaut. Pour plus d'informations, consultez [Disposition du disque](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md).<br /><br />**Étendue** : globale ou de session| 
 |**9591**|Désactive la compression de bloc de journal dans les groupes de disponibilité Always On. La compression de bloc de journal est le comportement par défaut utilisé avec les réplicas synchrones et asynchrones dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la compression est utilisée uniquement avec la réplication asynchrone. <br /><br />**Étendue** : globale ou de session|
 |**9592**|Active la compression du flux de journal pour les groupes de disponibilité synchrones. Cette fonctionnalité est désactivée par défaut sur les groupes de disponibilité synchrones, car la compression ajoute une latence. Pour plus d’informations, consultez [Régler la compression pour le groupe de disponibilité](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Étendue** : globale ou de session| 
 |**9929**|Réduit les fichiers de point de contrôle en mémoire à 1 Mo chacun. Pour plus d’informations, consultez cet [article du support technique Microsoft](https://support.microsoft.com/kb/3147012).<br /><br />**Étendue** : globale uniquement|  

@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d04f3383409e51be48498853068c93b2d1a66725
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+ms.openlocfilehash: 05501a3d084921f52088a76d7e1a69390cd48998
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211090"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405799"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mécanismes et recommandations liés aux délais d’attente concernant les baux, les clusters et le contrôle d’intégrité pour les groupes de disponibilité Always On 
 
@@ -46,7 +46,7 @@ Contrairement à d’autres mécanismes de basculement, l’instance SQL Server 
 
 Le mécanisme de bail applique la synchronisation entre SQL Server et le cluster de basculement Windows Server. Lorsqu’une commande de basculement est émise, le service de cluster effectue un appel hors connexion à la DLL de ressource du réplica principal actuel. La DLL de ressource essaie d’abord de mettre le groupe de disponibilité hors connexion à l’aide d’une procédure stockée. Si cette procédure stockée échoue ou expire, l’échec est signalé au service de cluster, qui, à son tour, émet une commande de fin d’exécution. La commande de fin d’exécution tente à nouveau d’exécuter la même procédure stockée. Toutefois, cette fois-ci, le cluster n’attend pas que la DLL de ressource signale une réussite ou un échec avant de mettre en ligne le groupe de disponibilité sur un nouveau réplica. Si ce deuxième appel de procédure échoue, l’hôte des ressources devra compter sur le mécanisme de bail pour mettre l’instance hors connexion. Lorsque la DLL de ressource est appelée pour mettre le groupe de disponibilité hors connexion, la DLL de ressource signale l’événement d’arrêt de bail, et sort de veille le thread de travail de bail SQL Server pour mettre le groupe de disponibilité hors connexion. Même si cet événement d’arrêt n’est pas signalé, le bail expire, et le réplica passe à l’état de résolution. 
 
-Le bail est principalement un mécanisme de synchronisation entre l’instance principale et le cluster, mais il peut également créer des conditions d’échec là où un basculement n’était pas nécessaire. Par exemple, les situations d’utilisation élevée du processeur, de mémoire insuffisante, d’absence de réponse du processus SQL lors de la génération d’un vidage de mémoire, de blocage à l’échelle du système, de déconnexion du cluster (WSFC) en raison d’une perte de quorum, ou de pression sur tempdb peuvent priver de ressources le thread du travail de bail, ce qui empêche le renouvellement du bail de l’instance SQL et provoque un basculement. 
+Le bail est principalement un mécanisme de synchronisation entre l’instance principale et le cluster, mais il peut également créer des conditions d’échec là où un basculement n’était pas nécessaire. Par exemple, les situations d’utilisation élevée du processeur, de mémoire insuffisante (mémoire virtuelle faible, pagination du processus), d’absence de réponse du processus SQL lors de la génération d’un vidage de mémoire, de blocage à l’échelle du système, de déconnexion du cluster (WSFC) (par exemple, en raison d’une perte de quorum) peuvent empêcher le renouvellement du bail de l’instance SQL et provoque un basculement. 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>Recommandations concernant les valeurs de délai d’expiration des clusters 
 

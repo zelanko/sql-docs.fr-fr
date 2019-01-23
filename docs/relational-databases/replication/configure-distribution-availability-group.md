@@ -1,7 +1,7 @@
 ---
 title: Configurer la base de données de distribution SQL Server dans un groupe de disponibilité | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b2f6defed7ad897f3464aec1b8b99391a2b9149
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d23495f210a2c5979a5e5abecd9f43e4f5b62c02
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126449"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372689"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurer la base de données de distribution de réplication dans un groupe de disponibilité AlwaysOn
 
@@ -34,7 +34,9 @@ Cet article explique comment configurer une base de données distribution de ré
 SQL Server 2017 CU6 et SQL Server 2016 SP2-CU3 prennent désormais en charge l’utilisation de bases de données de distribution de réplication dans un groupe de disponibilité, grâce aux mécanismes suivants :
 
 - Le groupe de disponibilité de base de données de distribution doit avoir un écouteur. Lorsque le serveur de publication ajoute le serveur de distribution, il utilise le nom de l’écouteur pour nommer le serveur de distribution.
-- Les travaux de réplication sont créés avec le nom de l’écouteur comme nom du serveur de distribution.
+- Les travaux de réplication sont créés avec le nom de l’écouteur comme nom du serveur de distribution. Les travaux de capture instantanée de réplication, du lecteur de journaux et de l’agent de distribution (abonnement Push) créés sur le serveur de distribution sont créés sur tous les réplicas secondaires du groupe de disponibilité pour la base de données de distribution.
+ >[!NOTE]
+ >Les travaux de l’agent de distribution pour les abonnements Pull sont créés sur le serveur de l’abonné et non sur le serveur de distribution. 
 - Un nouveau travail surveille l’état (principal ou secondaire dans le groupe de disponibilité) des bases de données de distribution, et active ou désactive les travaux de réplication en fonction de l’état des bases de données de distribution.
 
 Une fois qu’une base de données de distribution du groupe de disponibilité a été configurée selon les étapes décrites ci-dessous, les travaux liés à la configuration de la réplication et à l’exécution peuvent s’exécuter correctement avant et après le basculement du groupe de disponibilité de la base de données.

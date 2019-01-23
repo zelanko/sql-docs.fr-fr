@@ -1,7 +1,7 @@
 ---
 title: Option de détection de l’intégrité des bases de données pour le basculement | Microsoft Docs
 ms.custom: ''
-ms.date: 04/28/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -16,12 +16,12 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04f1834ebc282044164b2e1d2b77e784b3260973
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7bb2a0c9582fcf5e0092ef23009b9270a7b0d010
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525108"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419964"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Option de détection de l’intégrité au niveau base de données du groupe de disponibilité pour le basculement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,8 @@ L’option de détection de l’intégrité au niveau base de données du groupe
 
 Par exemple, avec l’option de détection de l’intégrité au niveau base de données, si SQL Server n’a pas pu écrire dans le fichier journal des transactions pour une des bases de données, l’état de cette base de données va changer et indiquer cet échec : le groupe de disponibilité est sur le point de basculer tandis que votre application peut se reconnecter et continuer à fonctionner avec une interruption minimale une fois que les bases de données sont à nouveau en ligne.
 
-<a name="enabling-database-level-health-detection"></a>Activation de l’option Détection de l’état d’intégrité au niveau base de données
-----
+### <a name="enabling-database-level-health-detection"></a>Activation de l’option Détection de l’état d’intégrité au niveau base de données
+
 Bien qu’elle soit généralement recommandée, l’option d’intégrité des bases de données est **désactivée par défaut** afin de conserver la compatibilité descendante avec les paramètres par défaut des versions antérieures.
 
 Il existe plusieurs façons d’activer le paramètre de détection de l’intégrité au niveau base de données :
@@ -52,7 +52,7 @@ Il existe plusieurs façons d’activer le paramètre de détection de l’inté
 
 3. Syntaxe Transact-SQL pour **CREATE AVAILABILITY GROUP**. Le paramètre DB_FAILOVER accepte les valeurs ON ou OFF.
 
-   ```Transact-SQL
+   ```sql
    CREATE AVAILABILITY GROUP [Contoso-ag]
    WITH (DB_FAILOVER=ON)
    FOR DATABASE [AutoHa-Sample]
@@ -65,7 +65,7 @@ Il existe plusieurs façons d’activer le paramètre de détection de l’inté
 
 4. Syntaxe Transact-SQL pour **ALTER AVAILABILITY GROUP**. Le paramètre DB_FAILOVER accepte les valeurs ON ou OFF.
 
-   ```Transact-SQL
+   ```sql
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
 
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = OFF);
@@ -89,40 +89,40 @@ La détection de l’état d’intégrité au niveau base de données implément
 
 La vue de gestion dynamique système sys.availability_groups contient une colonne db_failover, qui indique si l’option de détection de l’état d’intégrité au niveau base de données est désactivée (0) ou activée (1).
 
-```Transact-SQL
+```sql
 select name, db_failover from sys.availability_groups
 ```
 
 
 Exemple de sortie de la vue de gestion dynamique :
 
-NAME  |  db_failover
----------|---------
-| Contoso-ag |  1  |
+|NAME  |  db_failover|
+|---------|---------|
+| Contoso-ag | 1  |
 
 ### <a name="errorlog"></a>ErrorLog
 Le journal des erreurs de SQL Server (ou le texte retourné par sp_readerrorlog) affiche le message d’erreur 41653 quand un groupe de disponibilité a basculé en raison des contrôles de la détection de l’état d’intégrité au niveau base de données.
 
 Par exemple, cet extrait de journal des erreurs montre qu’une écriture dans le journal des transactions a échoué en raison d’un problème de disque, et que par la suite, la base de données nommée AutoHa-Sample a été arrêtée, ce qui a déclenché le basculement du groupe de disponibilité par la détection de l’état d’intégrité au niveau base de données.
 
->25-04-2016 12:20:21.08 spid1s      Erreur : 17053, Gravité : 16, État : 1.
+>2016-04-25 12:20:21.08 spid1s      Erreur : 17053, Gravité : 16, état : 1.
 >
->25-04-2016 12:20:21.08 spid1s      SQLServerLogMgr::LogWriter: erreur du système d’exploitation 21(Le périphérique n’est pas prêt.).
+>2016-04-25 12:20:21.08 spid1s      SQLServerLogMgr::LogWriter: Erreur du système d’exploitation 21(L’appareil n’est pas prêt.).
 >25-04-2016 12:20:21.08 spid1s      Erreur d’écriture lors du vidage du journal.
 >
->25-04-2016 12:20:21.08 spid79      Erreur : 9001, Gravité : 21, État : 4.
+>2016-04-25 12:20:21.08 spid79      Erreur : 9001, Gravité : 21, État : 4.
 >
 >25-04-2016 12:20:21.08 spid79      Le journal de la base de données « AutoHa-Sample » n’est pas disponible. Consultez le journal des événements pour voir s'il contient des messages d'erreur liés à ce problème. Résolvez toutes les erreurs et redémarrez la base de données.
 >
->**25-04-2016 12:20:21.15 spid79      Erreur : 41653, Gravité : 21, État : 1.**
+>**2016-04-25 12:20:21.15 spid79      Erreur : 41653, Gravité : 21, État : 1.**
 >
->**25-04-2016 12:20:21.15 spid79      La base de données « AutoHa-Sample » a rencontré une erreur (type d’erreur : 2 ’DB_SHUTDOWN’) entraînant une défaillance du groupe de disponibilité « Contoso-ag ».  Reportez-vous au journal des erreurs de SQL Server pour en apprendre davantage sur les erreurs rencontrées.  Si cette situation persiste, contactez l’administrateur système.**
+>**2016-04-25 12:20:21.15 spid79      La base de données 'AutoHa-Sample' a rencontré une erreur (type d’erreur : 2 'DB_SHUTDOWN') entraînant une défaillance du groupe de disponibilité 'Contoso-ag'.  Reportez-vous au journal des erreurs de SQL Server pour en apprendre davantage sur les erreurs rencontrées.  Si cette situation persiste, contactez l’administrateur système.**
 >
 >25-04-2016 12:20:21.17 spid79      Informations d’état de la base de données « AutoHa-Sample » - LSN sécurisé de manière renforcée : « (34:664:1) »    LSN de validation : « (34:656:1) »    Heure de validation : « 25 avril 2016 12:19 »
 >
 >25-04-2016 12:20:21.19 spid15s     Connexion des groupes de disponibilité Always On avec la base de données secondaire interrompue pour la base de données principale « AutoHa-Sample » sur le réplica de disponibilité « SQLServer-0 » associé à l’ID de réplica : {c4ad5ea4-8a99-41fa-893e-189154c24b49}. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.
 >
->25-04-2016 12:20:21.21 spid75      Always On : le réplica local du groupe de disponibilité « Contoso-ag » est en cours de préparation pour passer au rôle principal en réponse à une demande du cluster pour le clustering de basculement Windows Server (WSFC). Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.
+>2016-04-25 12:20:21.21 spid75      Always On : Le réplica local du groupe de disponibilité « Contoso-ag » est en cours de préparation pour passer au rôle principal en réponse à une demande du cluster pour le clustering de basculement Windows Server (WSFC). Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.
 >
 >25-04-2016 12:20:21.21 spid75      L’état du réplica de disponibilité local du groupe de disponibilité « ag » est passé de « PRIMARY_NORMAL » à « RESOLVING_NORMAL ».  L’état a changé, car le groupe de disponibilité passe hors connexion.  Le réplica passe hors connexion, car le groupe de disponibilité associé a été supprimé, ou l’utilisateur a passé hors connexion le groupe de disponibilité associé dans la console de gestion WSFC, ou le groupe de disponibilité bascule sur une autre instance de SQL Server.  Pour plus d’informations, consultez le journal des erreurs SQL Server, la console de gestion WSFC ou le journal WSFC.
 
@@ -135,7 +135,8 @@ Cet événement étendu est déclenché seulement sur le réplica principal. Cet
 Voici un exemple de création d’une session XEvent qui capture cet événement. Comme aucun chemin n’est spécifié, le fichier de sortie XEvent doit se trouver dans le chemin par défaut du journal des erreurs SQL Server. Exécutez ceci sur le réplica principal de votre groupe de disponibilité :
 
 Exemple de script de session d’événements étendus
-```
+
+```sql
 CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER
 ADD EVENT sqlserver.availability_replica_database_fault_reporting
 ADD TARGET package0.event_file(SET filename=N'dbfault.xel',max_file_size=(5),max_rollover_files=(4))
@@ -151,32 +152,32 @@ Dans SQL Server Management Studio, connectez-vous au serveur SQL Server principa
 
 Explication des champs :
 
-|Données de la colonne    | Description
-|---------|---------
-|availability_group_id  |ID du groupe de disponibilité.
-|availability_group_name    |Nom du groupe de disponibilité.
-|availability_replica_id    |ID du réplica de disponibilité.
-|availability_replica_name  |Nom du réplica de disponibilité.
-|database_name  |Nom de la base de données signalant l’erreur.
-|database_replica_id    |ID de la base de données du réplica de disponibilité.
-|failover_ready_replicas    |Nombre de réplicas secondaires du basculement automatique qui sont synchronisés.
-|fault_type     | ID de l’erreur signalée. Valeurs possibles :  <br/> 0 - AUCUN <br/>1 - Inconnu<br/>2 - Arrêt
-|is_critical    | À compter de SQL Server 2016, cette valeur doit toujours retourner true pour l’événement étendu.
+|Données de la colonne | Description|
+|---------|---------|
+|availability_group_id |ID du groupe de disponibilité.|
+|availability_group_name |Nom du groupe de disponibilité.|
+|availability_replica_id |ID du réplica de disponibilité.|
+|availability_replica_name |Nom du réplica de disponibilité.|
+|database_name |Nom de la base de données signalant l’erreur.|
+|database_replica_id |ID de la base de données du réplica de disponibilité.|
+|failover_ready_replicas |Nombre de réplicas secondaires du basculement automatique qui sont synchronisés.|
+|fault_type  | ID de l’erreur signalée. Valeurs possibles :  <br/> 0 - AUCUN <br/>1 - Inconnu<br/>2 - Arrêt|
+|is_critical | À compter de SQL Server 2016, cette valeur doit toujours retourner true pour l’événement étendu.|
 
 
 Dans cet exemple de sortie, fault_type indique qu’un événement critique s’est produit sur le groupe de disponibilité Contoso-ag, sur le réplica nommé SQLSERVER-1, en raison de la base de données nommée AutoHa-Sample2, avec le type d’erreur 2 - Shutdown (Arrêt).
 
-|Champ  | Valeur
-|---------|---------
-|availability_group_id |    24E6FE58-5EE8-4C4E-9746-491CFBB208C1
-|availability_group_name |  Contoso-ag
-|availability_replica_id    | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1
-|availability_replica_name |    SQLSERVER-1
-|database_name |    AutoHa-Sample2
-|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |  1
-|fault_type |   2
-|is_critical    | True
+|Champ  | Valeur|
+|---------|---------|
+|availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
+|availability_group_name | Contoso-ag|
+|availability_replica_id | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1|
+|availability_replica_name | SQLSERVER-1|
+|database_name | AutoHa-Sample2|
+|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00|
+|failover_ready_replicas | 1|
+|fault_type | 2|
+|is_critical | True|
 
 
 ### <a name="related-references"></a>Références connexes

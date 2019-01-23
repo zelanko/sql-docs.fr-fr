@@ -13,16 +13,16 @@ helpviewer_keywords:
 - granting permissions [SQL Server], objects
 - GRANT statement, objects
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a03e07f20c2e33c4ffad59d7050793cd1b52b9c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed580cb28c65eab7f0abd7702cab623bcf9fcd2e
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621217"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326320"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT – octroi d'autorisations d'objet (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,7 @@ GRANT <permission> [ ,...n ] ON
   
 - Autorisations de fonction scalaire : EXECUTE, REFERENCES.  
 - Autorisations de fonction table : DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-- Autorisations de procédure stockée : EXECUTE.  
+- Autorisations de procédure stockée : EXECUTE.  
 - Autorisations de table : DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
 - Autorisations de vue : DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
@@ -163,7 +163,7 @@ GRANT SELECT ON OBJECT::Person.Address TO RosaQdM;
 GO  
 ```  
   
-### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>B. Octroi d'une autorisation EXECUTE sur une procédure stockée  
+### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>b. Octroi d'une autorisation EXECUTE sur une procédure stockée  
  Dans l'exemple ci-dessous, l'autorisation `EXECUTE` sur la procédure stockée `HumanResources.uspUpdateEmployeeHireInfo` est accordée à un rôle d'application nommé `Recruiting11`.  
   
 ```  
