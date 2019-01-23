@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a424f6fa95a7b295722750f9bb68db9ef30d66a4
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: b4ac8b044308ad7bfb2431e35429558b9deb3cf5
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257244"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405879"
 ---
 # <a name="database-engine-errors"></a>Erreurs du moteur de base de données
 
@@ -927,7 +927,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   1846    |   16  |   Non  |   Impossible de trouver le composant SQL Volume Shadow Copy Service (VSS) Writer pour la base de données '%ls' tout en créant un instantané VSS à récupération automatique pour contrôle DBCC en ligne.  |
 |   1847    |   16  |   Non  |   La version actuelle du système d'exploitation ne prend pas en charge les instantanés Volume Shadow Copy (VSS) à récupération automatique.  |
 |   1848    |   16  |   Non  |   Volume Shadow Copy Service (VSS) n'a pas réussi à créer d'instantané à récupération automatique de la base de données '%ls' pour contrôle DBCC en ligne.   |
-|   1849    |   16  |   Non  |   Échec de CREATE DATABASE, car des groupes de fichiers FILESTREAM ont été déclarés et ALLOW_SNAPSHOT_ISOLATION ou READ_COMMITTED_SNAPSHOT a la valeur ON dans la base de données de modèle. Affectez à ALLOW_SNAPSHOT_ISOLATION et à READ_COMMITTED_SNAPSHOT la valeur OFF dans la base de données de modèle ou créez la base de données sans déclarer de groupes de fichiers FILESTREAM, affectez à ALLOW_SNAPSHOT_ISOLATION et à READ_COMMITTED_SNAPSHOT la valeur OFF dans la nouvelle base de données, puis utilisez ALTER DATABASE pour ajouter les groupes de fichiers et fichiers FILESTREAM.    |
+|   1849    |   16  |   Non  |   Échec de CREATE DATABASE, car des groupes de fichiers FILESTREAM ont été déclarés et ALLOW_SNAPSHOT_ISOLATION ou READ_COMMITTED_SNAPSHOT a la valeur ON dans la base de données de modèle. Affectez à ALLOW_SNAPSHOT_ISOLATION et à READ_COMMITTED_SNAPSHOT la valeur OFF dans la base de données de modèle ou créez la base de données sans déclarer de groupes de fichiers FILESTREAM, affectez à ALLOW_SNAPSHOT_ISOLATION et à READ_COMMITTED_SNAPSHOT la valeur OFF dans la nouvelle base de données, puis utilisez0 ALTER DATABASE pour ajouter les groupes de fichiers et fichiers FILESTREAM.   |
 |   1901    |   16  |   Non  |   Impossible de créer l'index ou les statistiques '%.*ls' sur la vue '%.* ls' car la colonne clé '%.*ls' est imprécise, calculée et non persistante. Envisagez de supprimer la référence à la colonne dans la clé d'index ou de statistiques de la vue, ou de modifier la colonne de sorte qu'elle soit précise. Si la colonne est calculée dans la table de base, envisagez de la marquer comme PERSISTED. |
 |   1902    |   16  |   Non  |   Impossible de créer plusieurs index cluster sur %S_MSG '%.*ls'. Supprimez l'index cluster existant '%.* ls' avant d'en créer un nouveau.   |
 |   [1904](mssqlserver-1904-database-engine-error.md)   |   16  |   Non  |   Le %S_MSG '%.*ls' sur la table '%.* ls' a %d noms de colonnes dans la liste de clés %S_MSG. La limite maximale pour la liste des colonnes de clés d'index ou de statistiques est %d.    |
