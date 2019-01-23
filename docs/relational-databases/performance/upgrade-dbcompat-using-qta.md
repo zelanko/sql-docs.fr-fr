@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 2270917dad9f366b09fbc7cbc0d88c286fe6761c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257094"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317799"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
