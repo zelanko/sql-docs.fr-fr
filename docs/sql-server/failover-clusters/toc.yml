@@ -1,57 +1,76 @@
-- name: Solutions haute disponibilité
-  href: high-availability-solutions-sql-server.md
-- name: 'Réparation de page automatique (groupes de disponibilité : mise en miroir de bases de données)'
-  href: automatic-page-repair-availability-groups-database-mirroring.md
-- name: Gestion des connexions et des travaux après un basculement de rôle
-  href: management-of-logins-and-jobs-after-role-switching-sql-server.md
-- name: Dépanner des utilisateurs orphelins
-  href: troubleshoot-orphaned-users-sql-server.md
-- name: Installation d’un cluster de basculement
-  href: install/sql-server-failover-cluster-installation.md
-- name: Clustering de basculement Windows Server (WSFC) avec SQL Server
+- name: Vue d'ensemble
   href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md
   items:
-    - name: Modes de quorum WSFC et configuration de vote
-      href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
+    - name: Instances de cluster de basculement Always On
+      href: windows/always-on-failover-cluster-instances-sql-server.md
+- name: Procédures
+  items:
+    - name: Déploiement
       items:
-        - name: Afficher les paramètres NodeWeight pour le quorum de cluster
-          href: windows/view-cluster-quorum-nodeweight-settings.md
+        - name: Avant d’installer
+          href: install/before-installing-failover-clustering.md
+        - name: Installation
+          href: install/sql-server-failover-cluster-installation.md
+        - name: Créer un cluster
+          href: install/create-a-new-sql-server-failover-cluster-setup.md
+        - name: Installer les outils clients sur un cluster de basculement
+          href: install/install-client-tools-on-a-sql-server-failover-cluster.md
+        - name: Ajouter ou supprimer des nœuds
+          href: install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+        - name: Supprimer un cluster de basculement
+          href: install/remove-a-sql-server-failover-cluster-instance-setup.md
+        - name: Mettre à niveau une instance de cluster de basculement
+          href: windows/upgrade-a-sql-server-failover-cluster-instance.md
+          items:
+            - name: Mettre à niveau une instance de cluster de basculement SQL Server
+              href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+            - name: Mettre à niveau une instance de cluster de basculement SQL Server (Windows Server 2008/2008 R2/2012)
+              href: windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
+    - name: Configuration
+      items:
+        - name: Renommer un cluster de basculement
+          href: install/rename-a-sql-server-failover-cluster-instance.md
+        - name: Ajouter des dépendances à une ressource SQL Server
+          href: windows/add-dependencies-to-a-sql-server-resource.md
         - name: Configurer les paramètres NodeWeight pour un quorum de cluster
           href: windows/configure-cluster-quorum-nodeweight-settings.md
-    - name: Récupération d'urgence WSFC par le quorum forcé
-      href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
-      items:
-        - name: Forcer un cluster WSFC à démarrer sans quorum
-          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
-    - name: Clustering de sous-réseaux multiples SQL Server
-      href: windows/sql-server-multi-subnet-clustering-sql-server.md
-    - name: Dépannage de clusters de basculement
-      href: windows/failover-cluster-troubleshooting.md
-- name: Instances de cluster de basculement Always On
-  href: windows/always-on-failover-cluster-instances-sql-server.md
-  items:
-    - name: Stratégie de basculement pour les instances de cluster de basculement
-      href: windows/failover-policy-for-failover-cluster-instances.md
-      items:
+        - name: Modifier l'adresse IP d'une instance de cluster de basculement
+          href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
         - name: Configurer les paramètres de propriété HealthCheckTimeout
           href: windows/configure-healthchecktimeout-property-settings.md
         - name: Configurer les paramètres de propriété FailureConditionLevel
           href: windows/configure-failureconditionlevel-property-settings.md
+    - name: Administration
+      items:
+        - name: Afficher les paramètres NodeWeight pour le quorum de cluster
+          href: windows/view-cluster-quorum-nodeweight-settings.md
+        - name: Récupération d'urgence WSFC par le quorum forcé
+          href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
+        - name: Forcer un cluster WSFC à démarrer sans quorum
+          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
+        - name: Dépannage de clusters de basculement
+          href: windows/failover-cluster-troubleshooting.md
+        - name: Dépanner des utilisateurs orphelins
+          href: troubleshoot-orphaned-users-sql-server.md
         - name: Afficher et lire le journal de diagnostic de l'instance de cluster de basculement
           href: windows/view-and-read-failover-cluster-instance-diagnostics-log.md
-    - name: Administration et maintenance de l'instance de cluster de basculement
-      href: windows/failover-cluster-instance-administration-and-maintenance.md
-      items:
-        - name: Ajouter des dépendances à une ressource SQL Server
-          href: windows/add-dependencies-to-a-sql-server-resource.md
+        - name: Administration et maintenance de l'instance de cluster de basculement
+          href: windows/failover-cluster-instance-administration-and-maintenance.md
         - name: Récupérer à partir d'une défaillance d'instance de cluster de basculement
           href: windows/recover-from-failover-cluster-instance-failure.md
-        - name: Modifier l'adresse IP d'une instance de cluster de basculement
-          href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
-    - name: Mettre à niveau une instance de cluster de basculement SQL Server
-      href: windows/upgrade-a-sql-server-failover-cluster-instance.md
+- name: Concepts
+  items:
+    - name: Configuration
       items:
-        - name: Mettre à niveau une instance de cluster de basculement SQL Server (programme d'installation)
-          href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
-        - name: Mettre à niveau une instance de cluster de basculement SQL Server (Windows Server 2008/2008 R2/2012)
-          href: windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
+        - name: Modes de quorum WSFC et configuration de vote
+          href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
+        - name: Clustering de sous-réseaux multiples SQL Server
+          href: windows/sql-server-multi-subnet-clustering-sql-server.md
+        - name: Stratégie de basculement pour les instances de cluster de basculement
+          href: windows/failover-policy-for-failover-cluster-instances.md
+    - name: Administration
+      items:
+        - name: Réparation de page automatique
+          href: automatic-page-repair-availability-groups-database-mirroring.md
+        - name: Gestion des connexions et des travaux après un basculement de rôle
+          href: management-of-logins-and-jobs-after-role-switching-sql-server.md
