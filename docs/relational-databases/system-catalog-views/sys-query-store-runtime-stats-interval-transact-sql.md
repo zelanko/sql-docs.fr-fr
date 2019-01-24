@@ -1,7 +1,7 @@
 ---
-title: Sys.query_store_runtime_stats_interval (Transact-SQL) | Microsoft Docs
+title: sys.query_store_runtime_stats_interval (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,24 +22,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d2e7e8805b97c37893f558c0083849f5ed333e0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: c9c494ab580d94f82587041c5c28ec60e2481e98
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710980"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838026"
 ---
-# <a name="sysquerystoreruntimestatsinterval-transact-sql"></a>Sys.query_store_runtime_stats_interval (Transact-SQL)
+# <a name="sysquerystoreruntimestatsinterval-transact-sql"></a>sys.query_store_runtime_stats_interval (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contient des informations sur l’heure de début et de fin de chaque intervalle sur quel runtime les informations de statistiques d’exécution d’une requête ont été collectées.  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_interval_id**|**bigint**|Clé primaire.|  
-|**start_time**|**datetimeoffset**|Heure de début de l’intervalle.|  
-|**end_time**|**datetimeoffset**|Heure de fin de l’intervalle.|  
-|**Commentaire**|**nvarchar(32)**|Toujours NULL.|  
+|**runtime_stats_interval_id**|**bigint**|Clé primaire.|
+|**start_time**|**datetimeoffset**|Heure de début de l’intervalle.|
+|**end_time**|**datetimeoffset**|Heure de fin de l’intervalle.|
+|**comment**|**nvarchar(32)**|Toujours NULL.|
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite le **VIEW DATABASE STATE** autorisation.  
@@ -48,7 +48,7 @@ ms.locfileid: "52710980"
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [Sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  

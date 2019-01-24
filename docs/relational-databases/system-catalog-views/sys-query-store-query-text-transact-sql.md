@@ -1,7 +1,7 @@
 ---
-title: Sys.query_store_query_text (Transact-SQL) | Microsoft Docs
+title: sys.query_store_query_text (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b5fe04b5852eeebc858067505eaa0342ad8cb87
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e41eca10cf5db5e34b5e9e9122eb56a1a236315e
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712240"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838076"
 ---
-# <a name="sysquerystorequerytext-transact-sql"></a>Sys.query_store_query_text (Transact-SQL)
+# <a name="sysquerystorequerytext-transact-sql"></a>sys.query_store_query_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contient le [!INCLUDE[tsql](../../includes/tsql-md.md)] texte et le handle SQL de la requête.  
@@ -39,8 +39,8 @@ ms.locfileid: "52712240"
 |**query_text_id**|**bigint**|Clé primaire.|  
 |**query_sql_text**|**nvarchar(max)**|Texte SQL de la requête, tel que fourni par l’utilisateur. Inclut des espaces blancs, des indicateurs et des commentaires.|  
 |**statement_sql_handle**|**vabinary(64)**|Handle SQL de la requête individuelle.|  
-|**is_part_of_encrypted_module**|**bit**|Texte de la requête fait partie d’un module de cryptée.|  
-|**has_restricted_text**|**bit**|Texte de la requête contient un mot de passe ou d’autres mots unmentionable.|  
+|**is_part_of_encrypted_module**|**bit**|Texte de la requête fait partie d’un module de cryptée.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|
+|**has_restricted_text**|**bit**|Texte de la requête contient un mot de passe ou d’autres mots unmentionable.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite le **VIEW DATABASE STATE** autorisation.  
@@ -49,7 +49,7 @@ ms.locfileid: "52712240"
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [Sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   

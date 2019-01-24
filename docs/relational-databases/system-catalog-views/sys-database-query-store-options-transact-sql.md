@@ -1,7 +1,7 @@
 ---
-title: Sys.database_query_store_options (Transact-SQL) | Microsoft Docs
+title: sys.database_query_store_options (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cef670e97387c2eb4b9493fc1303e36a742f89bc
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: ca46886ab9648142bb79863dad0818033c2ce0a1
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53265924"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838106"
 ---
-# <a name="sysdatabasequerystoreoptions-transact-sql"></a>Sys.database_query_store_options (Transact-SQL)
+# <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Retourne les options de requête Store pour cette base de données.  
   
-**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "53265924"
 |**readonly_reason**|**Int**|Lorsque le **desired_state_desc** est READ_WRITE et **actual_state_desc** est en lecture seule, **readonly_reason** retourne mapper un peu à indiquer pourquoi le Store de la requête se trouve dans mode lecture seule.<br /><br /> 1 - base de données est en mode lecture seule<br /><br /> 2 - base de données est en mode mono-utilisateur<br /><br /> 4 - base de données est en mode d’urgence<br /><br /> 8 - base de données est le réplica secondaire (s’applique à Always On et Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] géo-réplication). Cette valeur peut être efficacement observée uniquement sur **lisible** réplicas secondaires<br /><br /> 65536 - le Store de la requête a atteint la limite de taille définie par l’option MAX_STORAGE_SIZE_MB.<br /><br /> 131072 - le nombre d’instructions différentes dans le Store de la requête a atteint la limite de mémoire interne. Envisagez les requêtes que vous n’avez pas besoin de suppression ou la mise à niveau vers un niveau de service supérieur pour activer le transfert de Store de la requête en mode lecture-écriture.<br />S'applique uniquement à [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> 262144 - taille des éléments en mémoire en attente d’être rendues persistantes sur disque a atteint la limite de mémoire interne. Requête Store sera en mode en lecture seule jusqu'à ce que les éléments en mémoire sont conservées sur le disque. <br />S'applique uniquement à [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br />524288 - base de données a atteint la limite de taille de disque. Store de la requête fait partie de base de données utilisateur, donc si l’espace n’est disponible pour une base de données, ce qui signifie qu’est Store de la requête ne peut pas croître plus.<br />S'applique uniquement à [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. <br /> <br /> Pour basculer les opérations de requête Store arrière en mode lecture-écriture, consultez **Vérifiez Query Store est collecte les données de requête en continu** section de [recommandé avec la requête Store](../../relational-databases/performance/best-practice-with-the-query-store.md).|  
 |**current_storage_size_mb**|**bigint**|Taille de la requête Store sur le disque en mégaoctets.|  
 |**flush_interval_seconds**|**bigint**|Définit la période pour le vidage régulière des données de requête Store sur le disque. Valeur par défaut est 900 (15 minutes).<br /><br /> Modification à l’aide de la `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` instruction.|  
-|**interval_length_minutes**|**bigint**|L’intervalle d’agrégation de statistiques. Des valeurs arbitraires ne sont pas autorisés. Utilisez une des opérations suivantes : 1, 5, 10, 15, 30, 60 et 1440 minutes. La valeur par défaut est 60 minutes.|  
+|**interval_length_minutes**|**bigint**|L’intervalle d’agrégation de statistiques. Des valeurs arbitraires ne sont pas autorisés. Utilisez l’une des valeurs suivantes : 1, 5, 10, 15, 30, 60 et 1440 minutes. La valeur par défaut est 60 minutes.|  
 |**max_storage_size_mb**|**bigint**|Taille maximale de disque pour le Store de la requête. Valeur par défaut est 100 Mo.<br />Pour [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] édition Premium, par la valeur par défaut est de 1 Go et pour [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] édition De base, elle est de 10 Mo.<br /><br /> Modification à l’aide de la `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` instruction.|  
 |**stale_query_threshold_days**|**bigint**|Nombre de jours pendant lesquels les requêtes avec aucun paramètre de stratégie sont conservés dans le Store de la requête. Valeur par défaut est 30. La valeur 0 pour désactiver la stratégie de rétention.<br />Pour l’édition [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] de base, la valeur par défaut est 7 jours.<br /><br /> Modification à l’aide de la `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` instruction.|  
 |**max_plans_per_query**|**bigint**|Limite le nombre maximal de plans stockées. Valeur par défaut est 200. Si la valeur maximale est atteinte, Query Store arrête la capture de nouveaux plans de cette requête. 0 au paramètre supprime la limitation en ce qui concerne le nombre de plans capturées.<br /><br /> Modification à l’aide de la `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` instruction.|  
@@ -62,7 +62,7 @@ ms.locfileid: "53265924"
 ## <a name="see-also"></a>Voir aussi  
  [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [Sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
