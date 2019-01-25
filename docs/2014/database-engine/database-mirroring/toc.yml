@@ -1,143 +1,150 @@
+items:
 - name: Vue d'ensemble
   href: database-mirroring-sql-server.md
   items:
-    - name: 'Conditions préalables, limitations et recommandations relatives à la mise en miroir de bases de données'
-      href: prerequisites-restrictions-and-recommendations-for-database-mirroring.md
-    - name: États de la mise en miroir (SQL Server)
-      href: mirroring-states-sql-server.md
-    - name: Modes de fonctionnement de la mise en miroir de bases de données
-      href: database-mirroring-operating-modes.md
-    - name: Témoin de mise en miroir de base de données
-      href: database-mirroring-witness.md
+  - name: Conditions préalables, limitations et recommandations relatives à la mise en miroir de bases de données
+    href: prerequisites-restrictions-and-recommendations-for-database-mirroring.md
+  - name: États de la mise en miroir (SQL Server)
+    href: mirroring-states-sql-server.md
+  - name: Modes de fonctionnement de la mise en miroir de bases de données
+    href: database-mirroring-operating-modes.md
+  - name: Témoin de mise en miroir de base de données
+    href: database-mirroring-witness.md
 - name: Procédures
   items:
-    - name: Configuration
+  - name: Configuration
+    items:
+    - name: Déploiement
       items:
-        - name: Déploiement
-          items:
-            - name: Configuration de la mise en miroir d'une base de données
-              href: setting-up-database-mirroring-sql-server.md
-            - name: Préparer une base de données miroir pour la mise en miroir
-              href: prepare-a-mirror-database-for-mirroring-sql-server.md
-            - name: Configurer une base de données miroir chiffrée
-              href: set-up-an-encrypted-mirror-database.md
-            - name: configurer une base de données miroir pour qu'elle utilise la propriété Trustworthy
-              href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
-            - name: Spécifier une adresse réseau de serveur
-              href: specify-a-server-network-address-database-mirroring.md
-            - name: Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows
-              href: establish-database-mirroring-session-windows-authentication.md
-            - name: Suppression d'une mise en miroir des bases de données
-              href: removing-database-mirroring-sql-server.md
-        - name: Témoin
-          items:
-            - name: Ajouter un témoin à l’aide de l’authentification Windows
-              href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
-            - name: Ajouter ou remplacer un témoin (SQL Server Management Studio)
-              href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
-            - name: Supprimer le témoin
-              href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
-    - name: Administration
+      - name: Configuration de la mise en miroir d'une base de données
+        href: setting-up-database-mirroring-sql-server.md
+      - name: Préparer une base de données miroir pour la mise en miroir
+        href: prepare-a-mirror-database-for-mirroring-sql-server.md
+      - name: Configurer une base de données miroir chiffrée
+        href: set-up-an-encrypted-mirror-database.md
+      - name: configurer une base de données miroir pour qu'elle utilise la propriété Trustworthy
+        href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
+      - name: Spécifier une adresse réseau de serveur
+        href: specify-a-server-network-address-database-mirroring.md
+      - name: Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows
+        href: establish-database-mirroring-session-windows-authentication.md
+      - name: Suppression d'une mise en miroir des bases de données
+        href: removing-database-mirroring-sql-server.md
+    - name: Témoin
       items:
-        - name: Afficher l’état d'une base de données mise en miroir
-          href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
-        - name: Suspendre ou reprendre la mise en miroir de bases de données
-          href: pausing-and-resuming-database-mirroring-sql-server.md
-        - name: Connecter des clients
-          href: connect-clients-to-a-database-mirroring-session-sql-server.md
-        - name: Modifier le niveau de sécurité des transactions
-          href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
-        - name: Basculer manuellement (T-SQL)
-          href: manually-fail-over-a-database-mirroring-session-transact-sql.md
-        - name: Basculer manuellement (SSMS)
-          href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
-        - name: Forcer le basculement du service
-          href: force-service-in-a-database-mirroring-session-transact-sql.md
-        - name: Estimer l’interruption pendant le basculement de rôle
-          href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
-        - name: Réduire le temps d'indisponibilité des bases de données mises en miroir lors de la mise à niveau d'instances de serveur
-          href: upgrading-mirrored-instances.md
-        - name: Utiliser des seuils d'avertissement et d'alertes sur des métriques de performances de mise en miroir
-          href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
-    - name: Sécurité
+      - name: Ajouter un témoin à l’aide de l’authentification Windows
+        href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
+      - name: Ajouter ou remplacer un témoin (SQL Server Management Studio)
+        href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
+      - name: Supprimer le témoin
+        href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
+  - name: Administration
+    items:
+    - name: Afficher l’état d'une base de données mise en miroir
+      href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
+    - name: Suspendre ou reprendre la mise en miroir de bases de données
+      href: pausing-and-resuming-database-mirroring-sql-server.md
+    - name: Connecter des clients
+      href: connect-clients-to-a-database-mirroring-session-sql-server.md
+    - name: Modifier le niveau de sécurité des transactions
+      href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
+    - name: Basculer manuellement (T-SQL)
+      href: manually-fail-over-a-database-mirroring-session-transact-sql.md
+    - name: Basculer manuellement (SSMS)
+      href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
+    - name: Forcer le basculement du service
+      href: force-service-in-a-database-mirroring-session-transact-sql.md
+    - name: Estimer l’interruption pendant le basculement de rôle
+      href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
+    - name: Réduire le temps d'indisponibilité des bases de données mises en miroir lors de la mise à niveau d'instances de serveur
+      href: upgrading-mirrored-instances.md
+    - name: Utiliser des seuils d'avertissement et d'alertes sur des métriques de performances de mise en miroir
+      href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
+  - name: Sécurité
+    items:
+    - name: Configurer des comptes de connexion pour la mise en miroir de bases de données ou les groupes de disponibilité AlwaysOn
+      href: set-up-login-accounts-database-mirroring-always-on-availability.md
+    - name: Créer un point de terminaison pour l’authentification Windows
+      href: create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
+    - name: Autoriser l’accès réseau à un point de terminaison
+      href: ../database-mirroring-allow-network-access-windows-authentication.md
+    - name: Utiliser des certificats pour un point de terminaison
+      href: use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
       items:
-        - name: Configurer des comptes de connexion pour la mise en miroir de bases de données ou les groupes de disponibilité AlwaysOn
-          href: set-up-login-accounts-database-mirroring-always-on-availability.md
-        - name: Créer un point de terminaison pour l’authentification Windows
-          href: create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
-        - name: Autoriser l’accès réseau à un point de terminaison
-          href: ../database-mirroring-allow-network-access-windows-authentication.md
-        - name: Utiliser des certificats pour un point de terminaison
-          href: use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
-          items:
-            - name: Utiliser des certificats pour les connexions sortantes
-              href: database-mirroring-use-certificates-for-outbound-connections.md
-            - name: Utiliser des certificats pour les connexions entrantes
-              href: database-mirroring-use-certificates-for-inbound-connections.md
+      - name: Utiliser des certificats pour les connexions sortantes
+        href: database-mirroring-use-certificates-for-outbound-connections.md
+      - name: Utiliser des certificats pour les connexions entrantes
+        href: database-mirroring-use-certificates-for-inbound-connections.md
 - name: Concepts
   items:
-    - name: Interopérabilité et coexistence
-      href: database-mirroring-interoperability-and-coexistence-sql-server.md
-      items:
-        - name: Mise en miroir de base de données et instances de cluster de basculement SQL Server
-          href: database-mirroring-and-sql-server-failover-cluster-instances.md
-        - name: Mise en miroir de bases de données et copie des journaux de transaction
-          href: database-mirroring-and-log-shipping-sql-server.md
-        - name: Mise en miroir de bases de données et catalogues de texte intégral
-          href: database-mirroring-and-full-text-catalogs-sql-server.md
-        - name: Mise en miroir et instantanés de bases de données
-          href: database-mirroring-and-database-snapshots-sql-server.md
-        - name: Mise en miroir de bases de données et réplication
-          href: database-mirroring-and-replication-sql-server.md
-    - name: Administration
-      items:
-        - name: Surveillance de la mise en miroir de bases de données
-          href: monitoring-database-mirroring-sql-server.md
-        - name: "Quorum\_: effets d'un témoin sur la disponibilité de la base de données"
-          href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
-        - name: Basculement de rôle durant une session de mise en miroir de bases de données
-          href: role-switching-during-a-database-mirroring-session-sql-server.md
-        - name: Défaillances possibles pendant la mise en miroir d’une base de données
-          href: possible-failures-during-database-mirroring.md
-        - name: Résoudre des problèmes de configuration de mise en miroir de bases de données
-          href: troubleshoot-database-mirroring-configuration-sql-server.md
-        - name: Installer un Service Pack sur un système avec un temps mort minimal pour les bases de données mises en miroir
-          href: ../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md
-    - name: Sécurité
-      items:
-        - name: Points de terminaison
-          href: the-database-mirroring-endpoint-sql-server.md
-        - name: Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité AlwaysOn
-          href: transport-security-database-mirroring-always-on-availability.md
+  - name: Interopérabilité et coexistence
+    href: database-mirroring-interoperability-and-coexistence-sql-server.md
+    items:
+    - name: Mise en miroir de base de données et instances de cluster de basculement SQL Server
+      href: database-mirroring-and-sql-server-failover-cluster-instances.md
+    - name: Mise en miroir de bases de données et copie des journaux de transaction
+      href: database-mirroring-and-log-shipping-sql-server.md
+    - name: Mise en miroir de bases de données et catalogues de texte intégral
+      href: database-mirroring-and-full-text-catalogs-sql-server.md
+    - name: Mise en miroir et instantanés de bases de données
+      href: database-mirroring-and-database-snapshots-sql-server.md
+    - name: Mise en miroir de bases de données et réplication
+      href: database-mirroring-and-replication-sql-server.md
+  - name: Administration
+    items:
+    - name: Surveillance de la mise en miroir de bases de données
+      href: monitoring-database-mirroring-sql-server.md
+    - name: "Quorum : effets d'un témoin sur la disponibilité de la base de données"
+      href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
+    - name: Basculement de rôle durant une session de mise en miroir de bases de données
+      href: role-switching-during-a-database-mirroring-session-sql-server.md
+    - name: Défaillances possibles pendant la mise en miroir d’une base de données
+      href: possible-failures-during-database-mirroring.md
+    - name: Résoudre des problèmes de configuration de mise en miroir de bases de données
+      href: troubleshoot-database-mirroring-configuration-sql-server.md
+    - name: Installer un Service Pack sur un système avec un temps mort minimal pour les bases de données mises en miroir
+      href: ../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md
+  - name: Sécurité
+    items:
+    - name: Points de terminaison
+      href: the-database-mirroring-endpoint-sql-server.md
+    - name: Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité AlwaysOn
+      href: transport-security-database-mirroring-always-on-availability.md
 - name: Référence
   items:
-    - name: Configuration de la sécurité de mise en miroir de bases de données (Assistant)
-      href: start-the-configuring-database-mirroring-security-wizard.md
-      items:
-        - name: Inclure un serveur témoin
-          href: include-witness-server-configure-database-mirroring-security-wizard.md
-        - name: Choisir les serveurs à configurer
-          href: choose-servers-to-configure-configure-database-mirroring-security-wizard.md
-        - name: Instance de serveur principal
-          href: principal-server-instance-configure-database-mirroring-security-wizard.md
-        - name: Instance de serveur miroir
-          href: mirror-server-instance-configure-database-mirroring-security-wizard.md
-        - name: Instance de serveur témoin
-          href: witness-server-instance-configure-database-mirroring-security-wizard.md
-        - name: Comptes de service
-          href: service-accounts-configure-database-mirroring-security-wizard.md
-    - name: Vue d'ensemble du moniteur de mise en miroir de bases de données
-      href: database-mirroring-monitor-overview.md
-      items:
-        - name: Démarrer le moniteur de mise en miroir de bases de données (SQL Server Management Studio)
-          href: start-database-mirroring-monitor-sql-server-management-studio.md
-        - name: Inscrire la base de données mise en miroir
-          href: register-mirrored-database.md
-        - name: Moniteur de mise en miroir de bases de données (Page État)
-          href: database-mirroring-monitor-status-page.md
-        - name: Historique de la mise en miroir de bases de données
-          href: database-mirroring-history.md
-        - name: Moniteur de mise en miroir de bases de données (Page Avertissements)
-          href: database-mirroring-monitor-warnings-page.md
-        - name: Définir les seuils d'avertissement
-          href: set-warning-thresholds.md
+  - name: Configuration de la sécurité de mise en miroir de bases de données (Assistant)
+    href: start-the-configuring-database-mirroring-security-wizard.md
+    items:
+    - name: Inclure un serveur témoin
+      href: include-witness-server-configure-database-mirroring-security-wizard.md
+    - name: Choisir les serveurs à configurer
+      href: choose-servers-to-configure-configure-database-mirroring-security-wizard.md
+    - name: Instance de serveur principal
+      href: principal-server-instance-configure-database-mirroring-security-wizard.md
+    - name: Instance de serveur miroir
+      href: mirror-server-instance-configure-database-mirroring-security-wizard.md
+    - name: Instance de serveur témoin
+      href: witness-server-instance-configure-database-mirroring-security-wizard.md
+    - name: Comptes de service
+      href: service-accounts-configure-database-mirroring-security-wizard.md
+  - name: Vue d'ensemble du moniteur de mise en miroir de bases de données
+    href: database-mirroring-monitor-overview.md
+    items:
+    - name: Démarrer le moniteur de mise en miroir de bases de données (SQL Server Management Studio)
+      href: start-database-mirroring-monitor-sql-server-management-studio.md
+    - name: Inscrire la base de données mise en miroir
+      href: register-mirrored-database.md
+    - name: Moniteur de mise en miroir de bases de données (Page État)
+      href: database-mirroring-monitor-status-page.md
+    - name: Historique de la mise en miroir de bases de données
+      href: database-mirroring-history.md
+    - name: Moniteur de mise en miroir de bases de données (Page Avertissements)
+      href: database-mirroring-monitor-warnings-page.md
+    - name: Définir les seuils d'avertissement
+      href: set-warning-thresholds.md
+ms.openlocfilehash: 0239489ead1956474a2807b1cf13ae86a580eac7
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457572"
