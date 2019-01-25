@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ab8633ef6741ae1d1a3a973796eec1de0cc12c37
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.openlocfilehash: 0413da85b4f213eb75a1b9ed5d80852663870c74
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372641"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898955"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installer les outils de données volumineuses de SQL Server 2019
 
-Cet article décrit les outils clients qui doivent être installés pour la création, la gestion, et à l’aide de SQL Server 2019 données volumineuses de clusters (version préliminaire).
+Cet article décrit les outils clients qui doivent être installés pour la création, la gestion, et à l’aide de SQL Server 2019 données volumineuses de clusters (version préliminaire). La section suivante fournit une liste des outils et des liens vers des instructions d’installation. Avant de déployer un cluster de données volumineux, configurez les outils marqué comme requis sur Windows ou Linux.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -63,5 +63,10 @@ Le tableau précédent fournit tous les outils courants qui sont utilisés avec 
 Les autres outils sont uniquement requises dans certains scénarios. **Azure CLI** peut être utilisé pour gérer des services Azure associés au déploiement de AKS. **MSSQL-cli** est un outil facultatif mais utile qui vous permet de se connecter à l’instance principale de SQL Server dans le cluster et exécuter des requêtes à partir de la ligne de commande. Et **sqlcmd** et **curl** sont requises si vous prévoyez d’installer des exemples de données avec le script de GitHub.
 
 ## <a name="next-steps"></a>Étapes suivantes
+
+Après avoir configuré les outils, déployer un cluster de données volumineuses de SQL Server 2019 sur Kubernetes dans le nuage ou sur site. Pour plus d’informations, consultez les articles de déploiement suivants :
+
+- [Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)
+- [Comment déployer des clusters de données volumineuses de SQL Server sur Kubernetes](deployment-guidance.md)
 
 Pour plus d’informations sur les clusters de données volumineuses, consultez [que sont les clusters de données volumineuses de SQL Server 2019 ?](big-data-cluster-overview.md).

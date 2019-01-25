@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8e6e91836b3daf0392da082df1f4ec806e9faf94
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a5dcc1c2726eaf234056fc77979df4d21a0dea17
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241240"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898924"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Configurer Azure Kubernetes Service pour les déploiements de cluster (version préliminaire) de SQL Server 2019 big data
 
@@ -26,12 +26,12 @@ AKS permet de facilement créer, configurer et gérer un cluster de machines vir
 Cet article décrit les étapes pour déployer Kubernetes sur AKS à l’aide d’Azure CLI. Si vous n’avez pas un abonnement Azure, créez un compte gratuit avant de commencer.
 
 > [!TIP] 
-> Pour un exemple de script python qui déploie le cluster de données volumineux AKS et SQL Server, consultez [déployer un serveur SQL Server sur Azure Kubernetes Service (ACS) de cluster de données volumineuses](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+> Pour un exemple de script python qui déploie le cluster de données volumineux AKS et SQL Server, consultez [Guide de démarrage rapide : Déployer SQL Server sur Azure Kubernetes Service (ACS) de cluster de données volumineuses](quickstart-big-data-cluster-deploy.md).
 
 ## <a name="prerequisites"></a>Prérequis
 
 - [Déployer les outils de données volumineuses de SQL Server 2019](deploy-big-data-tools.md):
-   - **kubectl**
+   - **Kubectl**
    - **Azure Data Studio**
    - **Extension de SQL Server 2019**
    - **Azure CLI**
@@ -106,6 +106,6 @@ Un groupe de ressources Azure est un groupe logique dans Azure les ressources so
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Les étapes décrites dans cet article configuré un cluster Kubernetes dans ACS. L’étape suivante consiste à déployer SQL Server 2019 des données volumineuses vers le cluster.
+Les étapes décrites dans cet article configuré un cluster Kubernetes dans ACS. L’étape suivante consiste à déployer SQL Server 2019 des données volumineuses vers le cluster. Pour plus d’informations sur la façon de déployer des clusters de données volumineuses, consultez l’article suivant :
 
-[Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)
+[Comment déployer des clusters de données volumineuses de SQL Server sur Kubernetes](deployment-guidance.md)
