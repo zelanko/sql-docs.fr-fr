@@ -16,14 +16,15 @@ ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50862270598172f8ff9e8572e9f201cbeb826bc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd92344552371e2e052a958485340b70522cc121
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637237"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044515"
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>Définition d’options par programmation pour le pilote Paradox
+
 |Option|Description|Méthode|  
 |------------|-----------------|------------|  
 |Répertoire|Définit le répertoire cible.|Pour définir cette option de manière dynamique, utilisez le **DEFAULTDIR** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  

@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300186"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044545"
 ---
 # <a name="sql-graph-architecture"></a>Graphique de l’Architecture SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -135,6 +135,7 @@ Les fonctions intégrées suivantes sont ajoutées. Ces fonctionnalités aideron
 Découvrez le [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduites dans SQL Server et de la base de données SQL Azure, qui activer la création et l’interrogation des objets graphiques. Les extensions de langage de requête vous aider à la requête et parcourent le graphique à l’aide de la syntaxe d’art ASCII.
  
 ### <a name="data-definition-language-ddl-statements"></a>Instructions de langage de définition (DDL) de données
+
 |Tâche   |Article connexe  |Remarques
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` est désormais étendue pour prendre en charge la création d’une table en tant que nœud ou AS EDGE. Notez que le tableau de bord peut ou ne peut pas avoir tous les attributs définis par l’utilisateur.  |
@@ -145,6 +146,7 @@ Découvrez le [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introdui
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Instructions de langage de manipulation de données
+
 |Tâche   |Article connexe  |Remarques
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Insertion dans une table de nœud n’est pas différent de l’insertion dans une table relationnelle. Les valeurs de `$node_id` colonne est générée automatiquement. Tentative d’insertion d’une valeur dans `$node_id` ou `$edge_id` colonne entraîne une erreur. Les utilisateurs doivent fournir des valeurs pour `$from_id` et `$to_id` colonnes lors de l’insertion dans une table d’arêtes. `$from_id` et `$to_id` sont le `$node_id` valeurs des nœuds qui se connecte un bord donné.  |
@@ -154,6 +156,7 @@ Découvrez le [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introdui
 
 
 ### <a name="query-statements"></a>Instructions de requête
+
 |Tâche   |Article connexe  |Remarques
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Nœuds et les bords sont stockées en interne en tant que tables, par conséquent, la plupart des opérations prises en charge sur une table dans SQL Server ou de la base de données SQL Azure est pris en charge sur les tables de nœuds et d’arêtes  |

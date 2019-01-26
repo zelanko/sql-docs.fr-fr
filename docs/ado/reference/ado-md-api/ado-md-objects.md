@@ -14,20 +14,21 @@ ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e7f6cb865ec06e1031cd627316821ef4f666a64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42b0aed3c63b1303e4d8743ea441348c351be822
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828708"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044915"
 ---
 # <a name="ado-md-objects"></a>Objets ADO MD
+
 |||  
 |-|-|  
 |[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Représente une position ou l’axe de filtre d’un ensemble de cellules contenant des membres sélectionnés d’une ou plusieurs dimensions.|  
 |[Catalogue](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Contient des informations de schéma multidimensionnel (autrement dit, les cubes et sous-jacent dimensions, hiérarchies, niveaux et membres) spécifiques à un fournisseur de données multidimensionnelles (MDP).|  
-|[Cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Représente les données à l’intersection de coordonnées d’axe, contenus dans un ensemble de cellules.|  
-|[Ensemble de cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Représente les résultats d’une requête multidimensionnelle. C’est un ensemble de cellules sélectionnées à partir de cubes ou d’autres ensembles de cellules.|  
+|[Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Représente les données à l’intersection de coordonnées d’axe, contenus dans un ensemble de cellules.|  
+|[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Représente les résultats d’une requête multidimensionnelle. C’est un ensemble de cellules sélectionnées à partir de cubes ou d’autres ensembles de cellules.|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Représente un cube à partir d’un schéma multidimensionnel, contenant un ensemble de dimensions associées.|  
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Représente une des dimensions d’un cube multidimensionnel, contenant une ou plusieurs hiérarchies de membres.|  
 |[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Représente une façon dans lequel les membres d’une dimension peuvent être agrégées ou « remontées ». Une dimension peut être agrégée avec une ou plusieurs hiérarchies.|  

@@ -14,14 +14,15 @@ ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 696685a4c1550ab503b7847ae676ee7c41c679c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f24ffa490ac8ae5b88809b89eed8a188b86fabb
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611497"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044674"
 ---
 # <a name="ado-properties"></a>Propriétés ADO
+
 |||  
 |-|-|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|Indique la page sur laquelle réside l’enregistrement actif.|  
@@ -37,11 +38,11 @@ ms.locfileid: "47611497"
 |[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|Indique le jeu de caractères dans lequel le contenu d’un texte **Stream** doivent être convertis.|  
 |[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)|Indique le flux utilisé comme entrée à un **commande** objet.|  
 |[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)|Indique le texte d’une commande doit être émis par rapport à un fournisseur.|  
-|[commandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)|Indique le délai d’attente lors de l’exécution d’une commande avant d’abandonner la tentative et de générer une erreur.|  
+|[CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)|Indique le délai d’attente lors de l’exécution d’une commande avant d’abandonner la tentative et de générer une erreur.|  
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|Indique le type d’un **commande** objet.|  
 |[ConnectionString, propriété](../../../ado/reference/ado-api/connectionstring-property-ado.md)|Indique les informations utilisées pour établir une connexion à une source de données.|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|Indique le délai d’attente lors de l’établissement d’une connexion avant d’abandonner la tentative et de générer une erreur.|  
-|[Nombre](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
+|[Compter](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Indique l’emplacement du service de curseur.|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Indique le type de curseur utilisé dans un **Recordset** objet.|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Indique le nom du membre de données qui est récupérée à partir de l’objet référencé par le **DataSource** propriété.|  
@@ -53,7 +54,7 @@ ms.locfileid: "47611497"
 |[Sens](../../../ado/reference/ado-api/direction-property.md)|Indique si le **paramètre** représente un paramètre d’entrée, un paramètre de sortie ou les deux, ou si le paramètre est la valeur de retour d’une procédure stockée.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Indique l’état de modification de l’enregistrement en cours.|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|Indique si la position actuelle est à la fin du flux.|  
-|[Filtre](../../../ado/reference/ado-api/filter-property.md)|Indique un filtre pour les données dans un **Recordset**.|  
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|Indique un filtre pour les données dans un **Recordset**.|  
 |[HelpContext et HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Indique le fichier d’aide et de la rubrique associée à un **erreur** objet.<br /><br /> **HelpContextID** retourne un ID de contexte, comme un **Long** valeur, pour une rubrique dans un fichier d’aide.<br /><br /> **HelpFile** retourne un **chaîne** valeur qui correspond à un chemin d’accès entièrement résolu d’un fichier d’aide.|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|Indique le nom de l’index actuellement en vigueur pour un **Recordset** objet.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Indique le niveau d’isolation pour un **connexion** objet.|  
@@ -93,7 +94,7 @@ ms.locfileid: "47611497"
 |[Type](../../../ado/reference/ado-api/type-property-ado.md)|Indique le type de données ou de type opérationnel d’un **paramètre**, **champ**, ou **propriété** objet.|  
 |[Type (Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Indique le type de données qui sont contenues dans le **Stream** (binaire ou texte).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Indique la valeur actuelle dans la base de données pour un **champ** objet.|  
-|[Value](../../../ado/reference/ado-api/value-property-ado.md)|Indique la valeur assignée à un **champ**, **paramètre**, ou **propriété** objet.|  
+|[Valeur](../../../ado/reference/ado-api/value-property-ado.md)|Indique la valeur assignée à un **champ**, **paramètre**, ou **propriété** objet.|  
 |[Version](../../../ado/reference/ado-api/version-property-ado.md)|Indique le numéro de version d’ADO.|  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -101,7 +102,7 @@ ms.locfileid: "47611497"
  [Collections ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Constantes énumérées ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Annexe b : erreurs ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Annexe b : Erreurs ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Événements ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Méthodes ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md)   

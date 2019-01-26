@@ -16,14 +16,15 @@ ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd5ebd223c3b4a15193f6ce5f9f8aa8bf03170f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a268e72262f9f8252ea89774876f3d04008fe4c4
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745887"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044435"
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>Définition d’options par programmation pour le pilote dBASE
+
 |Option|Description|Méthode|  
 |------------|-----------------|------------|  
 |Nombre de lignes approximatif|Détermine si les statistiques de taille de table sont arrondies. Cette option s’applique à toutes les sources de données qui utilisent le pilote ODBC.|Pour définir cette option de manière dynamique, utilisez le **statistiques** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  

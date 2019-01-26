@@ -1,5 +1,5 @@
 ---
-title: Sys.configurations (Transact-SQL) | Microsoft Docs
+title: sys.configurations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,17 +20,18 @@ ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f1a2ae2d0d8f8c5eea00ed5d31ad8aadb88e5ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa2bae15b2da81dcf69ca1e486c74e7b4ccd5ba8
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596107"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044995"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque valeur d’option de configuration de l’échelle du serveur dans le système.  
+
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**Int**|ID unique pour la valeur de configuration.|  
@@ -48,7 +49,7 @@ ms.locfileid: "47596107"
 > [!NOTE]  
 >  Pour les options de configuration au niveau de la base de données, consultez [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Pour configurer Soft-NUMA, consultez [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

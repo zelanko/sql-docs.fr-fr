@@ -14,14 +14,15 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 494de627d6e76ba59f1bfb0684c31afe4bf07e68
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530243"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044755"
 ---
 # <a name="ado-methods"></a>Méthodes ADO
+
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Crée un nouvel enregistrement pour être une mise à jour **Recordset** objet.|  
@@ -44,8 +45,8 @@ ms.locfileid: "52530243"
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Supprime un fichier ou répertoire et tous ses sous-répertoires.|  
 |[Exécuter (commande ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Exécute la requête, une instruction SQL ou une procédure stockée spécifiée dans le **CommandText** propriété.|  
 |[Exécuter (objet Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Exécute la requête spécifiée, l’instruction SQL, le procédure stockée ou texte propre au fournisseur.|  
-|[Rechercher](../../../ado/reference/ado-api/find-method-ado.md)|Recherche un **Recordset** pour la ligne répondant aux critères spécifiés.|  
-|[Vider](../../../ado/reference/ado-api/flush-method-ado.md)|Force le contenu de la **Stream** restants dans la mémoire tampon de ADO à l’objet sous-jacent auquel le **Stream** est associé.|  
+|[Find](../../../ado/reference/ado-api/find-method-ado.md)|Recherche un **Recordset** pour la ligne répondant aux critères spécifiés.|  
+|[Flush](../../../ado/reference/ado-api/flush-method-ado.md)|Force le contenu de la **Stream** restants dans la mémoire tampon de ADO à l’objet sous-jacent auquel le **Stream** est associé.|  
 |[get_OLEDBCommand, méthode](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Retourne la commande OLE DB sous-jacent, tout d’abord propagation n’importe quel paramètre d’informations sur la commande ADO à la commande OLE DB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Retourne un **Recordset** dont les lignes représentent les fichiers et sous-répertoires dans le répertoire représenté par ce **enregistrement**.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|Retourne l’ensemble ou une partie du contenu d’un texte de grande taille ou les données binaires **champ** objet.|  
@@ -67,7 +68,7 @@ ms.locfileid: "52530243"
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Lit un nombre spécifié de caractères à partir d’un texte **Stream** objet.|  
 |[Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md)|Met à jour les objets dans une collection afin de refléter les objets disponibles à partir d’et spécifiques au fournisseur.|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Met à jour les données dans un **Recordset** objet en exécutant à nouveau la requête sur laquelle repose l’objet.|  
-|[Resynchronisation](../../../ado/reference/ado-api/resync-method.md)|Actualise les données en cours **Recordset** objet, ou **champs** collection d’un **enregistrement** objet, à partir de la base de données sous-jacente.|  
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|Actualise les données en cours **Recordset** objet, ou **champs** collection d’un **enregistrement** objet, à partir de la base de données sous-jacente.|  
 |[Enregistrer](../../../ado/reference/ado-api/save-method.md)|Enregistre le **Recordset** dans un fichier ou **Stream** objet.|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|Enregistre le contenu binaire d’un **Stream** dans un fichier.|  
 |[Rechercher](../../../ado/reference/ado-api/seek-method.md)|Recherche l’index d’un **Recordset** pour localiser rapidement la ligne qui correspond aux valeurs spécifiées et la position de ligne actuelle pour cette ligne.|  

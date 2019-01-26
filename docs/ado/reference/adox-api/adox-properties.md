@@ -14,21 +14,22 @@ ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6218ef0c0d39aa1393c5b467c4d8d96960c487f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 176afb0ed710087ec150838e1e6bc6c49eb9e908
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637227"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044663"
 ---
 # <a name="adox-properties"></a>Propriétés ADOX
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indique le ADO **connexion** de l’objet auquel appartient le catalogue.|  
 |[Attributs](../../../ado/reference/adox-api/attributes-property-adox.md)|Décrit les caractéristiques de la colonne.|  
-|[En cluster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indique si l’index est groupé.|  
-|[Commandee](../../../ado/reference/adox-api/command-property-adox.md)|Spécifie une ADO **commande** objet qui peut être utilisé pour créer ou exécuter la procédure.|  
-|[Nombre](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
+|[Cluster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indique si l’index est groupé.|  
+|[Commande](../../../ado/reference/adox-api/command-property-adox.md)|Spécifie une ADO **commande** objet qui peut être utilisé pour créer ou exécuter la procédure.|  
+|[Compter](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indique la date de que création de l’objet.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Indique la date de que dernière modification de l’objet.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Indique la taille maximale définie de la colonne.|  

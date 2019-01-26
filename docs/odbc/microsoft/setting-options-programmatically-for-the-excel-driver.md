@@ -16,14 +16,15 @@ ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c62503611e88435b139a00b180d3e087769b7fda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 271f61247b6083abd31657fe319bce234bc16f50
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786580"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044336"
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>Définition d’options par programmation pour le pilote Excel
+
 |Option|Description|Méthode|  
 |------------|-----------------|------------|  
 |Nom de la source de données|Un nom qui identifie la source de données, telles que la paie ou Personnel.|Pour définir cette option de manière dynamique, utilisez le **DSN** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  

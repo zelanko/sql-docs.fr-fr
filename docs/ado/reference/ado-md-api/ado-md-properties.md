@@ -14,21 +14,22 @@ ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d37b1a07566943038bd73b0d79eb2dcd4655fda6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 522c563a113bab599481821dbb5d79422126a901
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696928"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044771"
 ---
 # <a name="ado-md-properties"></a>Propriétés ADO MD
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Indique à quel ADO **connexion** l’ensemble de cellules en cours de l’objet ou le catalogue auquel appartient actuellement.|  
 |[Légende](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indique la légende de texte à utiliser lors de l’affichage un **niveau** ou **membre** objet.|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Indique le nombre de membres pour lesquels actuel **membre** objet est le parent dans une hiérarchie.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Retourne une collection de **membres** pour lequel actuel **membre** est le parent dans la hiérarchie.|  
-|[Nombre](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
+|[Compter](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
 |[Profondeur](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indique le nombre de niveaux entre le **niveau** et la racine de la hiérarchie.|  
 |[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Retourne une explication textuelle de l’objet actuel.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Indique le nombre de dimensions sur un axe.|  
@@ -48,7 +49,7 @@ ms.locfileid: "47696928"
 |[État](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Indique l’état actuel de l’ensemble de cellules.|  
 |[Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Indique le type du membre actuel.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Indique un nom clair pour l’objet actuel.|  
-|[Value](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Indique la valeur de la cellule active.|  
+|[Valeur](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Indique la valeur de la cellule active.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de l’API ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   

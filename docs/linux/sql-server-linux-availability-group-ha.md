@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a76cadf3fafc1980d6600d406b30492b6a6bc2fa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031022"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044932"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Haute disponibilité et protection des données pour les configurations de groupe de disponibilité
 
@@ -59,12 +59,13 @@ Cette configuration se compose de trois réplicas synchrones. Par défaut, il fo
 
 Un groupe de disponibilité avec trois réplicas synchrones peut fournir en lecture à l’échelle, haute disponibilité et protection des données. Le tableau suivant décrit le comportement de disponibilité. 
 
-| |échelle de lecture|Haute disponibilité & </br> protection de données | Protection des données
-|:---|---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|Indisponibilité du réplica principal | Basculement manuel. Perte de données possible. Nouveau réplica principal est R / w. |Basculement automatique. Nouveau réplica principal est R / w. |Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que le réplica principal précédent récupère et joint le groupe de disponibilité comme secondaire. 
-|Une indisponibilité du réplica secondaire  | Principal est R / w. Aucun basculement automatique si le serveur principal échoue. |Principal est R / w. Aucun basculement automatique si le serveur principal échoue également. | Principal n’est pas disponible pour les transactions utilisateur. 
-<sup>*</sup> Par défaut
+| |échelle de lecture|Haute disponibilité & </br> protection de données | Protection des données|
+|:---|---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
+|Indisponibilité du réplica principal | Basculement manuel. Perte de données possible. Nouveau réplica principal est R / w. |Basculement automatique. Nouveau réplica principal est R / w. |Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que le réplica principal précédent récupère et joint le groupe de disponibilité comme secondaire. |
+|Une indisponibilité du réplica secondaire  | Principal est R / w. Aucun basculement automatique si le serveur principal échoue. |Principal est R / w. Aucun basculement automatique si le serveur principal échoue également. | Principal n’est pas disponible pour les transactions utilisateur. |
+
+<sup>\*</sup> Par défaut
 
 <a name="twoSynch"></a>
 
@@ -76,15 +77,16 @@ Cette configuration permet la protection des données. Comme les autres configur
 
 Un groupe de disponibilité avec deux réplicas synchrones fournit une protection à l’échelle en lecture et de données. Le tableau suivant décrit le comportement de disponibilité. 
 
-| |échelle de lecture |Protection des données
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|Indisponibilité du réplica principal | Basculement manuel. Perte de données possible. Nouveau réplica principal est R / w.| Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que le réplica principal précédent récupère et joint le groupe de disponibilité comme secondaire.
-|Une indisponibilité du réplica secondaire  |Principal est en lecture/écriture, exécution exposée à une perte de données. |Principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que la récupération du réplica secondaire.
-<sup>*</sup> Par défaut
+| |échelle de lecture |Protection des données|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|Indisponibilité du réplica principal | Basculement manuel. Perte de données possible. Nouveau réplica principal est R / w.| Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que le réplica principal précédent récupère et joint le groupe de disponibilité comme secondaire.|
+|Une indisponibilité du réplica secondaire  |Principal est en lecture/écriture, exécution exposée à une perte de données. |Principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que la récupération du réplica secondaire.|
 
->[!NOTE]
->Le scénario précédent est le comportement antérieur à SQL Server 2017 CU 1. 
+<sup>\*</sup> Par défaut
+
+> [!NOTE]
+> Le scénario précédent est le comportement antérieur à SQL Server 2017 CU 1. 
 
 <a name = "configOnly"></a>
 
@@ -99,38 +101,39 @@ Un groupe de disponibilité avec réplicas synchrones deux (ou plus) et un répl
 
 Dans le diagramme de groupe de disponibilité, un réplica principal envoie les données de configuration pour le réplica secondaire et le réplica en configuration seule. Le réplica secondaire reçoit également des données de l’utilisateur. Le réplica en configuration seule ne reçoit pas de données utilisateur. Le réplica secondaire est en mode de disponibilité synchrones. Le réplica en configuration seule ne contient pas les bases de données du groupe de disponibilité - seules les métadonnées sur le groupe de disponibilité. Données de configuration sur le réplica en configuration seule sont validées synchrone.
 
->[!NOTE]
->Un groupe availabilility avec réplica en configuration seule est une nouveauté pour SQL Server 2017 CU1. Toutes les instances de SQL Server dans le groupe de disponibilité doivent être SQL Server 2017 CU1 ou version ultérieure. 
+> [!NOTE]
+> Un groupe availabilility avec réplica en configuration seule est une nouveauté pour SQL Server 2017 CU1. Toutes les instances de SQL Server dans le groupe de disponibilité doivent être SQL Server 2017 CU1 ou version ultérieure. 
 
 La valeur par défaut `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est 0. Le tableau suivant décrit le comportement de disponibilité. 
 
-| |Haute disponibilité & </br> protection de données | Protection des données
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|Indisponibilité du réplica principal | Basculement automatique. Nouveau réplica principal est R / w. | Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur. 
-|Indisponibilité du réplica secondaire | Réplica principal est lecture/écriture, exécution exposée à une perte de données (si principal échoue et ne peuvent pas être récupérée). Aucun basculement automatique si le serveur principal échoue également. | Principal n’est pas disponible pour les transactions utilisateur. Aucun réplica vers lequel basculer principale n’échoue également. 
-|Panne de réplica configuration uniquement | Principal est R / w. Aucun basculement automatique si le serveur principal échoue également. | Principal est R / w. Aucun basculement automatique si le serveur principal échoue également. 
-|Base de données secondaire synchrone + configuration uniquement indisponibilité du réplica| Principal n’est pas disponible pour les transactions utilisateur. Aucun basculement automatique. | Principal n’est pas disponible pour les transactions utilisateur. Aucun réplica vers lequel basculer if principal échoue également. 
-<sup>*</sup> Par défaut
+| |Haute disponibilité & </br> protection de données | Protection des données|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|Indisponibilité du réplica principal | Basculement automatique. Nouveau réplica principal est R / w. | Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur. |
+|Indisponibilité du réplica secondaire | Réplica principal est lecture/écriture, exécution exposée à une perte de données (si principal échoue et ne peuvent pas être récupérée). Aucun basculement automatique si le serveur principal échoue également. | Principal n’est pas disponible pour les transactions utilisateur. Aucun réplica vers lequel basculer principale n’échoue également. |
+|Panne de réplica configuration uniquement | Principal est R / w. Aucun basculement automatique si le serveur principal échoue également. | Principal est R / w. Aucun basculement automatique si le serveur principal échoue également. |
+|Base de données secondaire synchrone + configuration uniquement indisponibilité du réplica| Principal n’est pas disponible pour les transactions utilisateur. Aucun basculement automatique. | Principal n’est pas disponible pour les transactions utilisateur. Aucun réplica vers lequel basculer if principal échoue également. |
 
->[!NOTE]
->L’instance de SQL Server qui héberge le réplica en configuration seule peut également héberger d’autres bases de données. Il peut également participer en tant qu’une configuration seule base de données pour plus d’un groupe de disponibilité. 
+<sup>\*</sup> Par défaut
 
-## <a name="requirements"></a>Spécifications
+> [!NOTE]
+> L’instance de SQL Server qui héberge le réplica en configuration seule peut également héberger d’autres bases de données. Il peut également participer en tant qu’une configuration seule base de données pour plus d’un groupe de disponibilité. 
 
-* Tous les réplicas dans un groupe de disponibilité avec un réplica en configuration seule doivent être SQL Server 2017 CU 1 ou version ultérieure.
-* N’importe quelle édition de SQL Server peut héberger un réplica en configuration seule, y compris SQL Server Express. 
-* Le groupe de disponibilité doit au moins un réplica secondaire - en plus le réplica principal.
-* Réplicas uniquement de configuration ne comptent pas dans le nombre maximal de réplicas pour chaque instance de SQL Server. SQL Server standard edition autorise jusqu'à trois réplicas, SQL Server Enterprise Edition permet jusqu'à 9.
+## <a name="requirements"></a>Configuration requise
+
+- Tous les réplicas dans un groupe de disponibilité avec un réplica en configuration seule doivent être SQL Server 2017 CU 1 ou version ultérieure.
+- N’importe quelle édition de SQL Server peut héberger un réplica en configuration seule, y compris SQL Server Express. 
+- Le groupe de disponibilité doit au moins un réplica secondaire - en plus le réplica principal.
+- Réplicas uniquement de configuration ne comptent pas dans le nombre maximal de réplicas pour chaque instance de SQL Server. SQL Server standard edition autorise jusqu'à trois réplicas, SQL Server Enterprise Edition permet jusqu'à 9.
 
 ## <a name="considerations"></a>Observations
 
-* Pas plus d’un réplica en configuration seule par groupe de disponibilité. 
-* Un réplica en configuration seule ne peut pas être un réplica principal.
-* Vous ne pouvez pas modifier le mode de disponibilité d’un réplica en configuration seule. Pour modifier à partir d’un réplica en configuration seule vers un réplica secondaire synchrone ou asynchrone, supprimez le réplica en configuration seule et ajouter un réplica secondaire avec le mode de disponibilité requis. 
-* Un réplica en configuration seule est synchrone avec les métadonnées de groupe de disponibilité. Aucune donnée utilisateur. 
-* Un groupe de disponibilité avec un réplica principal et réplica en une configuration seule, mais aucun réplica secondaire n’est pas valide. 
-* Vous ne pouvez pas créer un groupe de disponibilité sur une instance de SQL Server Express edition. 
+- Pas plus d’un réplica en configuration seule par groupe de disponibilité. 
+- Un réplica en configuration seule ne peut pas être un réplica principal.
+- Vous ne pouvez pas modifier le mode de disponibilité d’un réplica en configuration seule. Pour modifier à partir d’un réplica en configuration seule vers un réplica secondaire synchrone ou asynchrone, supprimez le réplica en configuration seule et ajouter un réplica secondaire avec le mode de disponibilité requis. 
+- Un réplica en configuration seule est synchrone avec les métadonnées de groupe de disponibilité. Aucune donnée utilisateur. 
+- Un groupe de disponibilité avec un réplica principal et réplica en une configuration seule, mais aucun réplica secondaire n’est pas valide. 
+- Vous ne pouvez pas créer un groupe de disponibilité sur une instance de SQL Server Express edition. 
 
 <a name="pacemakerNotify"></a>
 
@@ -150,8 +153,8 @@ Par exemple, un groupe de disponibilité avec trois réplicas synchrones : un r
 
 Dans ce scénario, deux réplicas doivent répondre pour le basculement soit déclenché. Pour le basculement automatique réussi après une panne de réplica principal, les deux réplicas secondaires doivent être à jour et de répondre à la notification de prépromotion. S’ils sont en ligne et synchrone, ils ont le même numéro de séquence. Le groupe de disponibilité promeut un d’eux. Si seul un des réplicas secondaires répond à l’action de prépromotion l’agent de ressource ne peut pas garantir que la base de données secondaire qui a répondu a le sequence_number le plus élevé et un basculement n’est pas déclenché.
 
->[!IMPORTANT]
->Quand la valeur de `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est 0, il existe un risque de perte de données. Pendant une panne de réplica principal, l’agent de ressource ne déclenche pas automatiquement un basculement. Vous pouvez attendre principal à récupérer, ou basculer manuellement à l’aide de `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
+> [!IMPORTANT]
+> Quand la valeur de `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est 0, il existe un risque de perte de données. Pendant une panne de réplica principal, l’agent de ressource ne déclenche pas automatiquement un basculement. Vous pouvez attendre principal à récupérer, ou basculer manuellement à l’aide de `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
 
 Vous pouvez choisir de remplacer le comportement par défaut et empêcher la ressource de groupe de disponibilité de paramètre `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` automatiquement.
 
@@ -167,8 +170,8 @@ Pour rétablir la valeur par défaut, selon la configuration du groupe de dispon
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 ```
 
->[!NOTE]
->Lorsque vous exécutez les commandes précédentes, le réplica principal est temporairement rétrogradé vers le site secondaire, puis promu à nouveau. La mise à jour de ressource entraîne tous les réplicas arrêter et redémarrer. La nouvelle valeur pour`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est définie uniquement une fois que les réplicas sont redémarrés, pas instantanément.
+> [!NOTE]
+> Lorsque vous exécutez les commandes précédentes, le réplica principal est temporairement rétrogradé vers le site secondaire, puis promu à nouveau. La mise à jour de ressource entraîne tous les réplicas arrêter et redémarrer. La nouvelle valeur pour`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est définie uniquement une fois que les réplicas sont redémarrés, pas instantanément.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: faaa59e8607f707bb43f31638880f771ae7ae6ab
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 26e93209e2cbd9809d607f90c7eff4da32d2cd98
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030483"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045028"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Tableaux de bord dans [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -84,6 +84,7 @@ Exemple de configuration de menu volant Insight détails
     },
     "value": "second_column_and_condition_check_value_column_for_summary_list_view",
 ```
+
 |propriété|Type|valeur|Valeur par défaut|description|comment|
 |:---|:---|:---|:---|:---|:---|
 |détails|objet JSON|||propriété obligatoire à définir des définitions de détail insight dans sa structure||
@@ -93,7 +94,7 @@ Exemple de configuration de menu volant Insight détails
 |column|chaîne|||indiquer le nom de la première colonne dans la vue liste récapitulative du jeu de résultats de requête|dans les futures le nom de cette propriété devient plus intuitif nom|
 |valeur|chaîne|||indiquer le nom de la deuxième colonne dans la vue liste récapitulative du jeu de résultats de requête. La valeur de cette colonne est utilisée pour vérifier les conditions et définir des couleurs pour chaque point de couleur des éléments de liste récapitulative vue|dans les futures le nom de cette propriété change pour quelque chose de plus intuitive|
 |condition|objet JSON|||définit la vérification de condition pour la valeur de colonne et de déterminer la couleur de chaque élément de la vue liste récapitulative||
-|if|chaîne|toujours, equals, notEquals, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals||opérateur de vérification de condition|dans les futures le nom de propriété change à l’opérateur|
+|if|chaîne|always, equals, notEquals, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals||opérateur de vérification de condition|dans les futures le nom de propriété change à l’opérateur|
 |equals|chaîne|||valeur de vérification de condition|dans les futures ce nom de propriété changera à 'value'|
 
 ## <a name="insight-actions"></a>Actions d’Insight

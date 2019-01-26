@@ -16,14 +16,15 @@ ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5227985c56d5e2fd4730c86fe9182c8b16b2cb02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57bc9dd31299a70c5c8a2272dd49b577f58b7bb0
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804457"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044465"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Définition d’options par programmation pour le pilote Access
+
 |Option|Description|Méthode|  
 |------------|-----------------|------------|  
 |Taille de mémoire tampon|La taille de la mémoire tampon interne, en kilo-octets, qui est utilisé par Microsoft Access pour transférer des données vers et depuis le disque. La taille de mémoire tampon par défaut est de 2 048 Ko (affiché en tant que 2048). Toute valeur entière divisible par 256 peut être entré.|Pour définir cette option dynamiquement, utilisez le mot clé MAXBUFFERSIZE dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
