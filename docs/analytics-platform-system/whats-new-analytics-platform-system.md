@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5467362b32733e6ef10036bf9b45d38fe3150a1e
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 44ed335524d21cd4931722a20be4eb0da5681603
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626353"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044706"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quelles sont les nouveautés d’Analytique Platform System, un entrepôt de données MPP montée en puissance
 Consultez les nouveautés introduite dans les dernières mises à jour de matériel pour Microsoft Analytique Platform System (APS). APS est une appliance de montée en puissance en local qui héberge MPP SQL Server Parallel Data Warehouse. 
@@ -24,13 +24,14 @@ Consultez les nouveautés introduite dans les dernières mises à jour de matér
 ## <a name="aps-cu73"></a>APS CU7.3
 Date de publication - décembre 2018
 
-### <a name="common-subexpression-elimination"></a>Élimination de sous-expressions communes
+### <a name="common-subexpression-elimination"></a>Élimination des sous-expressions communes
 APS CU7.3 améliore les performances de requête avec élimination de sous-expressions communes dans l’optimiseur de requête SQL. L’amélioration améliore les requêtes de deux manières. Le premier, c’est la capacité à identifier et éliminer ces expressions permettent de réduire le temps de compilation SQL. L’avantage de la deuxième et le plus important est les opérations de déplacement de données pour ces sous-expressions redondantes sont éliminées ainsi les temps d’exécution de requêtes devient plus rapide. Vous pouvez trouver une explication détaillée de cette fonctionnalité [ici](common-sub-expression-elimination.md).
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Connecteur APS Informatica pour Informatica 10.2.0 publié
 Nous avons publié une nouvelle version des connecteurs d’Informatica pour les points d’accès qui fonctionne avec Informatica version 10.2.0. Les nouveaux connecteurs peuvent être téléchargées à partir de [site de téléchargement](https://www.microsoft.com/download/details.aspx?id=57472).
 
 #### <a name="supported-versions"></a>Versions prises en charge
+
 | Version de points d’accès | Informatica PowerCenter | Pilote |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
@@ -147,13 +148,13 @@ APS AU6 prend en charge ces améliorations de compatibilité de T-SQL.  Ces él�
 
 - [Classements SQL au niveau des colonnes][] sont désormais pris en charge, en plus des classements de Windows.
 - [Index non cluster sur les index columnstore en cluster][] améliorer les performances des requêtes qui recherchent des valeurs spécifiques dans l’index cluster columnstore. 
-- [SÉLECTIONNEZ... DANS][] 
+- [SELECT...INTO][] 
 - [sp_spaceused()][] affiche l’espace disque utilisé ou réservé dans une table ou une base de données.
 - [Tableaux larges][] prise en charge est identique à SQL Server 2016. La limite de 32 Ko pour la taille de ligne n’existe plus. 
 
 **Types de données**
 
-- [Varchar (max)][], [nvarchar (max)][] et [varbinary (max)][]. Ces types de données LOB ont une taille maximale de 2 Go. Pour charger ces objets utilisent [utilitaire bcp][]. Actuellement, PolyBase et dwloader ne prennent en charge ces types de données. 
+- [VARCHAR(MAX)][], [NVARCHAR(MAX)][] et [VARBINARY(MAX)][]. Ces types de données LOB ont une taille maximale de 2 Go. Pour charger ces objets utilisent [utilitaire bcp][]. Actuellement, PolyBase et dwloader ne prennent en charge ces types de données. 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][] et types de données décimal.
@@ -192,7 +193,7 @@ Un nouveau matériel à partir de HPE ou DELL inclut toutes les dernières mises
 - Mettre à jour vers inférieur de barrettes DIMM DDR4
 - Améliorer le débit DIMM
 
-**Intégration**
+**Integration**
 
 - Entièrement prise en charge du nom de domaine complet (FQDN) permet de configurer une approbation de domaine à l’appliance. 
 - Pour utiliser le nom de domaine complet, vous devez effectuer une mise à niveau complète et participer au cours de la mise à niveau. 
@@ -215,11 +216,11 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [Classements SQL au niveau des colonnes]: ~/relational-databases/collations/collation-and-unicode-support.md
 
 [Index non cluster sur les index columnstore en cluster]:/sql/t-sql/statements/create-index-transact-sql
-[VARCHAR (MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
-[NVARCHAR (MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
-[VARBINARY (MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
+[VARCHAR(MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
+[NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
+[VARBINARY(MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
-[SÉLECTIONNEZ... DANS]:/sql/t-sql/queries/select-into-clause-transact-sql
+[SELECT...INTO]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [Tableaux larges]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
