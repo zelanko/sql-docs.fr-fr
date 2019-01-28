@@ -10,22 +10,24 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 72dc0b6cd9b5cf5f5818e0f447901fcce8c17def
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c47021ce06d51b833ede6ee75f1e575e4b078314
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416229"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044902"
 ---
 # <a name="sql-server-development-partners"></a>Partenaires pour le développement avec SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Pour la prise en charge du développement de solutions de base de données SQL Server, vous pouvez choisir parmi un large éventail d’outils de pointe.  Cet article présente les sociétés partenaires de Microsoft offrant des solutions de développement pour Microsoft SQL Server.
 
 ## <a name="our-development-partners"></a>Nos partenaires pour le développement
+
 | Partenaire | Description | Liens |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>Rapid SQL est un environnement de développement intégré SQL intelligent, permettant aux développeurs et aux administrateurs de base de données de créer du code SQL à hautes performances sur toutes les plateformes de base de données principales incluant SQL Server, à partir d’une même interface.<br><br>[Configuration système requise][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Site web][idera_website]<br>[Twitter][idera_twitter]<br>[Vidéo][idera_youtube] |
 |![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. donne à la communauté des développeurs une flexibilité dans le choix des langages de programmation, des frameworks et des services, ainsi que dans l’utilisation de l’ensemble d’outils approprié. En utilisant le kit de ressources Click2Cloud, les développeurs peuvent créer des conteneurs « SQL sur Linux » et les attacher à une application, tout en mettant en œuvre une architecture multilocataire sécurisée. Les conteneurs peuvent être déployés indépendamment sur n’importe quelle plateforme de conteneurs cloud.|[Place de marché][click2cloud_marketplace]<br>[Site web][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[Vidéo][click2cloud_youtube] |
+
 ## <a name="next-steps"></a>Étapes suivantes
 Pour plus d’informations sur quelques autres de nos partenaires, consultez [Partenaires pour la haute disponibilité et la récupération d’urgence][hadr_partners], [partenaires pour la gestion][management_partners] et [partenaires pour la surveillance][monitor_partners].
 

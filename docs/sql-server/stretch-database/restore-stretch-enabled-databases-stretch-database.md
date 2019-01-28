@@ -9,12 +9,12 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46cbbaa2654e18f0aef5d5a3b904f41ce5a88219
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: f9ee612238f9e8208de48b6d52256141d1ed638d
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596580"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457632"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Restaurer des bases de données Stretch (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "53596580"
   Pour plus d’informations sur la sauvegarde, consultez [Sauvegarder des bases de données Stretch](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md).
 
 > [!TIP]
-> La sauvegarde ne constitue qu’une partie d’une solution complète de haute disponibilité et de continuité d’activité. Pour plus d’informations sur la haute disponibilité, consultez [Solutions haute disponibilité](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).
+> La sauvegarde ne constitue qu’une partie d’une solution complète de haute disponibilité et de continuité d’activité. Pour plus d’informations sur la haute disponibilité, consultez [Solutions haute disponibilité](../../database-engine/sql-server-business-continuity-dr.md).
 
 ## <a name="restore-your-sql-server-data"></a>Restaurer vos données SQL Server
 Pour effectuer une récupération après une défaillance matérielle ou un endommagement, restaurez la base de données Stretch SQL Server à partir d’une sauvegarde. Vous pouvez continuer à utiliser les méthodes de restauration de SQL Server dont vous vous servez habituellement. Pour plus d’informations, consultez [Vue d’ensemble de la restauration et de la récupération](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).

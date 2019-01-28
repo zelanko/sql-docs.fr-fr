@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a63d6e347f83e63f7f99a2e06e1122b1c93934b0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 6c669932929f690a1d3f01968bbaaa482aa4d568
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257054"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044555"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Mettre à niveau les instances de SQL Server s’exécutant sur des clusters Windows Server 2008/2008 R2/2012
 
@@ -49,6 +49,7 @@ La stratégie de migration appropriée dépend de certains paramètres de la top
 | **_Groupes de disponibilité ? (O/N)_**                  | **_O_**                              | **_N_**                                                            | **_O_**    | **_N_**    |
 | **Le cluster utilise l’instance de cluster de basculement SQL uniquement**         | [Scénario 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [Scénario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [Scénario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Scénario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
 | **Le cluster utilise des instances autonomes** | [Scénario 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Scénario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Scénario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Scénario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
+
 \* À l’exception des noms des écouteurs de groupe de disponibilité
 
 ## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>Scénario 1 : Cluster Windows avec des groupes de disponibilité SQL Server et aucune instance de cluster de basculement
