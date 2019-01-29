@@ -11,12 +11,12 @@ ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d2808f6f653ee25f240dbe400b76e018e5033676
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fe75fc89ffa1642ebc3fa4301cb0a80c83895141
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376651"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087788"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Liste de vérification : utiliser PowerShell pour vérifier PowerPivot pour SharePoint
   Aucune opération d'installation ou de récupération de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] n'est terminée sans exécuter un test de vérification complet qui confirme que les services et les données sont opérationnels. Dans cet article, nous vous indiquons comment effectuer ces étapes avec Windows PowerShell. Nous avons consacré une section distincte à chaque étape afin que vous puissiez accéder directement aux tâches spécifiques. Par exemple, exécutez le script dans la section [Bases de données](#bkmk_databases) de cette rubrique pour vérifier le nom de l'application de service et des bases de données de contenu si vous souhaitez les planifier pour la maintenance ou la sauvegarde.  
@@ -33,7 +33,7 @@ ms.locfileid: "53376651"
   
 |||  
 |-|-|  
-|[Préparation de votre environnement PowerShell](#bkmk_prerequisites)<br /><br /> [Symptômes et actions recommandées](#bkmk_symptoms)<br /><br /> **(A)** [Service Windows Analysis Services](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService et PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Application(s) et proxys du service PowerPivot](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Bases de données](#bkmk_databases)<br /><br /> [Fonctionnalités SharePoint](#bkmk_features)<br /><br /> [Travaux du minuteur](#bkmk_timer_jobs)<br /><br /> [Règles d'intégrité](#bkmk_health_rules)<br /><br /> **(E)** [Journaux Windows et ULS](#bkmk_logs)<br /><br /> [Fournisseur MSOLAP](#bkmk_msolap)<br /><br /> [Bibliothèque cliente ADOMD.NET](#bkmk_adomd)<br /><br /> [Règles de collecte de données d'intégrité](#bkmk_health_collection)<br /><br /> [Solutions](#bkmk_solutions)<br /><br /> [Étapes manuelles de contrôle](#bkmk_manual)<br /><br /> [Plus de ressources](#bkmk_more_resources)<br /><br /> [Script PowerShell complet](#bkmk_full_script)|![vérification de PowerShell de powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "vérification powershell de powerpivot")|  
+|[Préparation de votre environnement PowerShell](#bkmk_prerequisites)<br /><br /> [Symptômes et actions recommandées](#bkmk_symptoms)<br /><br /> **(A)** [Service Windows Analysis Services](#bkmk_windows_service)<br /><br /> **(B)**  [PowerPivotSystemService et PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Application(s) et proxys du service PowerPivot](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Bases de données](#bkmk_databases)<br /><br /> [Fonctionnalités SharePoint](#bkmk_features)<br /><br /> [Travaux du minuteur](#bkmk_timer_jobs)<br /><br /> [Règles d'intégrité](#bkmk_health_rules)<br /><br /> **(E)** [Journaux Windows et ULS](#bkmk_logs)<br /><br /> [Fournisseur MSOLAP](#bkmk_msolap)<br /><br /> [Bibliothèque cliente ADOMD.NET](#bkmk_adomd)<br /><br /> [Règles de collecte de données d'intégrité](#bkmk_health_collection)<br /><br /> [Solutions](#bkmk_solutions)<br /><br /> [Étapes manuelles de contrôle](#bkmk_manual)<br /><br /> [Plus de ressources](#bkmk_more_resources)<br /><br /> [Script PowerShell complet](#bkmk_full_script)|![vérification de PowerShell de powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "vérification powershell de powerpivot")|  
   
 ##  <a name="bkmk_prerequisites"></a> Préparation de votre environnement PowerShell  
  Les étapes de cette section préparent votre environnement PowerShell. Elles peuvent ne pas être requises, selon la façon dont votre environnement de script est actuellement configuré.  
@@ -70,7 +70,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
 |L'actualisation des données ne fonctionne pas|Consultez la section [Timer Jobs](#bkmk_timer_jobs) et vérifiez que le **Travail du minuteur d'actualisation des données PowerPivot** est en ligne.|  
 |Les données du tableau de bord de gestion sont obsolètes|Consultez la section [Travaux du minuteur](#bkmk_timer_jobs) et vérifiez que le **Travail du minuteur pour le traitement du tableau de bord de gestion** est en ligne.|  
 |Certaines parties du tableau de bord de gestion ne sont pas accessibles|Si vous installez PowerPivot pour SharePoint dans une batterie de serveurs qui présente la topologie d'Administration centrale, sans Excel Services ou PowerPivot pour SharePoint, vous devez télécharger et installer la bibliothèque cliente Microsoft ADOMD.NET si vous voulez disposer d'un accès total aux rapports intégrés dans le tableau de bord de gestion PowerPivot. Certains rapports du tableau de bord utilisent ADOMD.NET pour accéder aux données internes qui fournissent les données de création de rapports sur le traitement des requêtes PowerPivot et l'intégrité des serveurs de la batterie. Consultez la section [Bibliothèque cliente ADOMD.NET](#bkmk_adomd) et la rubrique [Installer ADOMD.NET sur des serveurs web frontaux exécutant l’Administration centrale](../../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md).|  
-|\<contenu à venir >||  
+|\<future content>||  
   
 ##  <a name="bkmk_windows_service"></a> Service Windows Analysis Services  
  Le script de cette section vérifie l'instance d' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode SharePoint. Vérifiez que le service est **en cours d'exécution**.  
@@ -87,7 +87,7 @@ Name              DisplayName                                Status
 MSOLAP$POWERPIVOT SQL Server Analysis Services (POWERPIVOT) Running  
 ```  
   
-##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService et PowerPivotEngineSerivce  
+##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService et PowerPivotEngineService  
  Les scripts de cette section vérifient les services système de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] . Il existe un seul service système pour un déploiement SharePoint 2013 et deux services pour un déploiement SharePoint 2010.  
   
  **PowerPivotSystemService**  
@@ -106,7 +106,7 @@ TypeName                                  Status Applications                   
 SQL Server PowerPivot Service Application Online {Default PowerPivot Service Application} SPFarm Name=SharePoint_Config_77d8ab0744a34e8aa27c806a2b8c760c  
 ```  
   
- **PowerPivotEngineSerivce**  
+ **PowerPivotEngineService**  
   
 > [!NOTE]  
 >  **Ignorez ce script si** vous utilisez SharePoint 2013. Le service PowerPivotEngineService ne fait pas partie d'un déploiement SharePoint 2013. Si vous exécutez l'applet de commande Get-PowerPivot**Engine**Service sur SharePoint 2013, vous verrez s'afficher un message d'erreur semblable au suivant. Ce message d'erreur est retourné même si vous avez exécuté la commande Add-PSSnapin décrite dans la section des conditions préalables requises de cette rubrique.  
@@ -467,7 +467,7 @@ Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 get-service | select name, displayname, status | where {$_.Name -eq "msolap`$powerpivot"} | format-table -property * -autosize | out-default  
   
 #Write-Host ""  
-Write-Host -ForegroundColor Green "PowerPivotEngineSerivce and PowerPivotSystemService"  
+Write-Host -ForegroundColor Green "PowerPivotEngineService and PowerPivotSystemService"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
   
 Get-PowerPivotSystemService | select typename, status, applications, farm | format-table -property * -autosize | out-default  

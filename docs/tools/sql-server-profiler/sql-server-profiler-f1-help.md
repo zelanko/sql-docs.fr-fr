@@ -42,12 +42,12 @@ ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a598cb35b1b54151abb1393d231c23fb9a7ef0aa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f34497270485668a8f1bcd5d0486a2fc5a9fc1fa
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667438"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55047247"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Boîtes de dialogue SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,7 @@ Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de Microsoft es
 ## <a name="trace-properties"></a>Propriétés de la trace
 ### <a name="general-tab"></a>Onglet Général
 Utilisez l’onglet **Général** de la boîte de dialogue **Propriétés de la trace** pour consulter ou spécifier les propriétés d’une trace.  
+
 |Élément|Description
 |---|---
 |**Nom de la trace** |Spécifiez le nom de la trace.  
@@ -74,6 +75,7 @@ Utilisez l’onglet **Général** de la boîte de dialogue **Propriétés de la 
 
 ### <a name="events-selection-tab"></a>Onglet Sélection des événements
 Utilisez l'onglet **Sélection des événements** de la boîte de dialogue **Propriétés de la trace** pour afficher ou spécifier les événements à tracer et les colonnes de données.  
+
 |Élément|Description
 |---|---
 |Colonne**Events** |Spécifiez les événements à tracer en activant ou en désactivant les cases à cocher dans la colonne des événements. Les**événements** sont organisés par catégorie. Les classes d'événements spécifiées dans le modèle sont automatiquement sélectionnées. Pour plus d'informations, consultez [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
@@ -87,6 +89,7 @@ Utilisez l'onglet **Sélection des événements** de la boîte de dialogue **Pro
 ## <a name="trace-template-properties"></a>Propriétés du modèle de trace 
 ### <a name="new-general-tab"></a>Nouveau (onglet Général)
 Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modèle de trace** pour créer de nouveaux modèles de trace à l'aide des options suivantes. Pour accéder à cette boîte de dialogue, dans le menu **Fichier** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], pointez sur **Modèles**, puis cliquez sur **Nouveau**.
+
 |Élément|Description
 |---|---
 |**Sélectionnez le type de serveur**|Indiquez le type de serveur sur lequel ce modèle va être utilisé.  
@@ -96,6 +99,7 @@ Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modè
 
 ### <a name="edit-general-tab"></a>Modifier (onglet Général)
  Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modèle de trace** pour consulter ou modifier les modèles de trace existants en utilisant les options suivantes. Pour accéder à cette boîte de dialogue, dans le menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Edit Template**.  
+
 |Élément|Description
 |---|---
 |**Sélectionnez le type de serveur**|Indiquez le type de serveur sur lequel ce modèle va être utilisé.  
@@ -104,6 +108,7 @@ Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modè
 
 ### <a name="events-selection-tab"></a>Onglet Sélection des événements
 L'onglet **Sélection des événements** de la boîte de dialogue **Propriétés du modèle de trace** vous permet d'afficher, de modifier ou de spécifier les classes d'événements et les colonnes de données à inclure dans un modèle de trace [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
+
 |Élément|Description
 |---|---
 |Colonne**Events** |Permet de spécifier les événements à tracer en activant ou en désactivant la case à cocher dans la colonne d'événement. Les événements sont organisés par catégorie d'événement. Si vous avez sélectionné **Baser le nouveau modèle sur un modèle existant** sous l'onglet **Général** , des événements sont sélectionnés automatiquement en fonction du modèle spécifié. Pour plus d'informations sur les classes d'événements, consultez [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
@@ -113,10 +118,12 @@ L'onglet **Sélection des événements** de la boîte de dialogue **Propriétés
 |**Afficher toutes les colonnes**|Affiche toutes les colonnes de données disponibles. Cette option est activée par défaut si vous créez un nouveau modèle qui n'est pas basé sur un modèle existant. Désactivez l'option pour masquer toutes les colonnes de données non sélectionnées dans la grille **Sélection des événements** .  
 |**Filtres de colonnes**|Lance la boîte de dialogue **Modifier le filtre**, qui affiche une icône de filtre à gauche de l’étiquette d’une colonne de données. La boîte de dialogue **Modifier le filtre** vous permet de modifier les filtres des colonnes de données.  
 |**Organiser les colonnes**|Modifie l'ordre des colonnes dans la trace et regroupe les résultats suivant une ou plusieurs colonnes. 
+
 ## <a name="trace-file-properties"></a>Propriétés du fichier de trace 
 ### <a name="general-tab"></a>Onglet Général
 Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du fichier de trace** pour consulter les propriétés d'un fichier de trace.  
 Pour afficher cette fenêtre, ouvrez un fichier de trace. Ensuite, dans le menu **Fichier** , cliquez sur **Propriétés**.  
+
 |Élément|Description
 |---|---
 |**Nom de fichier**|Le chemin d'accès et le nom du fichier de trace ouvert.  
@@ -126,9 +133,11 @@ Pour afficher cette fenêtre, ouvrez un fichier de trace. Ensuite, dans le menu 
 |**Taille du fichier (Ko)**|La taille du fichier de trace en kilo-octets (Ko).  
 |**Créé le**|La date et l'heure de création du fichier de trace.  
 |**Modifié le** |La date et l'heure de modification du fichier de trace.  
+
 ### <a name="events-selection-tab"></a>Onglet Sélection des événements
 Utilisez l'onglet **Sélection des événements** de la boîte de dialogue **Propriétés du modèle de trace** pour consulter les propriétés des colonnes de la trace ou pour supprimer des colonnes de données de la trace.  
 Pour afficher cette fenêtre, ouvrez un fichier de trace. Ensuite, dans le menu **Fichier** , cliquez sur **Propriétés**, puis cliquez sur l'onglet **Sélection des événements** .  
+
 |Élément|Description
 |---|---
 |Colonne**Events** |Affiche les événements tracés organisés par catégorie. Initialement, tous les événements de la trace sont sélectionnés. Sélectionnez les événements requis en activant ou en désactivant les cases à cocher correspondant à une colonne de données d'un événement. Si une case d'événement est cochée, toutes les colonnes de données de cet événement sont sélectionnées. Si la colonne de données d'un événement est cochée, l'événement l'est aussi, de même que toutes les autres colonnes requises. Lors de l'affichage d'une table ou d'un fichier de trace, la désactivation des cases à cocher de certains événements ou de colonnes de données réduit la quantité de données visibles dans la fenêtre de trace, ce qui facilite les analyses. Pour réduire la quantité d'informations visibles, vous pouvez également modifier les filtres de colonne. Pour plus d'informations sur les classes d'événements, consultez [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
@@ -138,10 +147,12 @@ Pour afficher cette fenêtre, ouvrez un fichier de trace. Ensuite, dans le menu 
 |**Afficher toutes les colonnes**|Affiche toutes les colonnes de données disponibles. Par défaut, seules les colonnes de données sélectionnées sont affichées. Désactivez cette case à cocher pour masquer toutes les colonnes de données non sélectionnées dans la grille **Sélection des événements** .  
 |**Filtres de colonnes**|Ouvre la boîte de dialogue **Modifier le filtre** , dans laquelle une icône de filtre apparaît à gauche de l’étiquette des colonnes de données filtrées. La boîte de dialogue **Modifier le filtre** vous permet de modifier les filtres des colonnes de données.  
 |**Organiser les colonnes**|Après avoir sélectionné les colonnes **Événements** et de données à inclure dans la trace, cliquez sur **Organiser les colonnes** pour forcer la réorganisation dans la grille des colonnes de la fenêtre des résultats de la trace.  
+
 ## <a name="trace-table-properties"></a>Propriétés de la table de trace
 ### <a name="events-selection-tab"></a>Onglet Sélection des événements
 Utilisez l'onglet **Sélection des événements** de la boîte de dialogue **Propriétés de la table de trace** pour afficher les propriétés des colonnes de données et d'événements dans la trace ou pour supprimer de tels événements ou colonnes.  
 Pour afficher cette fenêtre, utilisez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour ouvrir un fichier de trace. Dans le menu **Fichier** , cliquez sur **Propriétés**puis sur l'onglet **Sélection des événements** .  
+
 |Élément|Description
 |---|---
 |Colonne**Events** |Affiche les événements tracés organisés par catégorie. Sélectionnez les événements requis en activant ou en désactivant les cases à cocher correspondant à une colonne de données d'un événement. Si une case d'événement est cochée, toutes les colonnes de données de cet événement sont sélectionnées. Si la colonne de données d'un événement est cochée, l'événement l'est aussi, de même que toutes les autres colonnes requises. Lors de l'affichage d'une table ou d'un fichier de trace, la désactivation des cases à cocher de certains événements ou de colonnes de données réduit la quantité de données visibles dans la fenêtre de trace, ce qui facilite les analyses. Pour réduire la quantité d'informations visibles, vous pouvez également modifier les filtres de colonne. Pour plus d'informations sur les classes d'événements, consultez [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
@@ -151,6 +162,7 @@ Pour afficher cette fenêtre, utilisez le [!INCLUDE[ssSqlProfiler](../../include
 |**Afficher toutes les colonnes**|Affiche toutes les colonnes de données disponibles. Par défaut, seules les colonnes de données sélectionnées sont affichées. Désactivez cette case à cocher pour masquer toutes les colonnes de données non sélectionnées dans la grille **Sélection des événements** .  
 |**Filtres de colonnes**|Affiche la boîte de dialogue **Modifier le filtre**, avec une icône de filtre à gauche de l’étiquette de colonne. Vous pouvez utiliser celle-ci pour modifier les filtres de colonnes de données.  
 |**Organiser les colonnes** |Après avoir sélectionné les colonnes **Événements** et de données à inclure dans la trace, cliquez sur **Organiser les colonnes** pour forcer la réorganisation dans la grille des colonnes de la fenêtre des résultats de la trace.  
+
 ## <a name="performance-counters-limit"></a>Limite des compteurs de performances
 Utilisez la boîte de dialogue Limite des compteurs de performances pour limiter les informations provenant d'un fichier journal de performances du Moniteur système lors de sa corrélation avec une trace du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Cette boîte de dialogue vous permet de sélectionner les compteurs qui doivent être affichés et utilisés pour la corrélation.  
 La boîte de dialogue **Limite des compteurs de performances** est remplie avec les objets et compteurs de performances contenus dans le fichier journal de performances.  
@@ -162,6 +174,7 @@ Si vous souhaitez sélectionner tous les compteurs pour un objet de performance,
 ## <a name="toolsoptions-general-options-page"></a>Outils/options (page options générales)
 Utilisez la boîte de dialogue **Options générales** pour afficher ou spécifier les options ci-après.  
 ### <a name="display-options"></a>Options d’affichage  
+
 |Élément|Description
 |---|---
 |**Nom de police**|Affiche le nom de la police utilisée dans la grille des résultats de trace pendant les traces.  
@@ -169,23 +182,30 @@ Utilisez la boîte de dialogue **Options générales** pour afficher ou spécifi
 |**Choisir la police**|Ouvre une boîte de dialogue permettant de modifier les paramètres de police.  
 |**Utiliser des paramètres régionaux pour afficher les valeurs de date et d'heure**|Affiche les valeurs de date et d'heure selon les paramètres régionaux configurés sur votre ordinateur. Si vous ne sélectionnez pas cette option, les valeurs de date et d'heure sont affichées dans le format fixe de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], qui comprend les millisecondes. Notez qu’en cochant et en décochant cette case, vous modifiez le format d’affichage des colonnes de date/heure, comme **StartTime** et **EndTime**. Toutefois, vous ne modifiez pas les paramètres de valeur **DateTime** dans les événements de langage ou les appels de procédure distante (RPC).  
 |**Afficher les valeurs dans la colonne Durée en microsecondes**|Affiche les valeurs en microsecondes dans la colonne de données **Durée** des traces. Par défaut, la colonne **Durée** affiche les valeurs en millisecondes.  
+
 ### <a name="tracing-options"></a>Options de suivi  
+
 |Élément|Description
 |---|---
 |**Démarrer le suivi juste après avoir établi la connexion**|Commence une trace utilisant le modèle par défaut dès qu'une connexion est établie.  
 |**Mettre à jour la définition de la trace lors de la modification de la version du fournisseur**|Applique la définition de trace la plus récente à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque le fournisseur est mis à jour. Cette option n'est pas activée par défaut. Elle force le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] à interroger le serveur sur la définition de trace et à recréer le fichier sur le disque le cas échéant.  
+
 ### <a name="file-rollover-options"></a>Options de remplacement des fichiers  
+
 |Élément|Description
 |---|---
 |**Charger tous les fichiers de substitution en séquence sans invite**|Charge automatiquement les fichiers de substitution lorsqu'un fichier de trace est ouvert. Si plusieurs fichiers ont été créés pendant le suivi, la sélection de cette option charge automatiquement tous les fichiers de substitution.  
 |**Demander confirmation avant le chargement des fichiers de substitution**|Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] vous demande confirmation avant l'ajout d'un fichier de substitution lorsqu'un fichier de trace est ouvert.  
 |**Ne jamais charger les fichiers de substitution suivants**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ne charge jamais les fichiers de substitution suivants quand un fichier de trace est ouvert.  
+
 ### <a name="replay-options"></a>Options de relecture  
+
 |Élément|Description
 |---|---
 |**Nombre par défaut de threads de relecture**|Spécifiez le nombre de threads de relecture à utiliser simultanément. Un nombre élevé consomme davantage de ressources pendant la relecture, mais améliore la simultanéité de relecture.  
 |**Délai d'attente du moniteur d'intégrité par défaut (sec)**|Spécifiez le délai d'attente de la relecture, en secondes. La valeur par défaut est 3 600 secondes (1 heure). Ce paramètre affecte la durée d'exécution d'un thread autorisée avant son interruption par le moniteur d'intégrité.  
 |**Intervalle d'interrogation du moniteur d'intégrité par défaut (sec)**|Spécifiez, en secondes, l'intervalle d'interrogation du moniteur d'intégrité pendant la relecture. La valeur par défaut est 60 secondes. Cette valeur permet à l'utilisateur de configurer la fréquence à laquelle le moniteur d'intégrité interroge les candidats à l'arrêt.
+
 ## <a name="source-table-database-engine-tuning-advisor-select-workload-table"></a>Table source (Assistant Paramétrage du moteur de base de données - Sélectionner une table de charge de travail)
 Microsoft SQL Server Profiler et l’Assistant Paramétrage utilisent cette boîte de dialogue pour sélectionner des tables.  
 - Dans Profiler, utilisez la boîte de dialogue **Table source** pour spécifier une table source pour une table de trace. Ceci est une table à partir de laquelle une trace est chargée et dont le contenu est affiché ou utilisé pour relire la trace.  
@@ -197,18 +217,22 @@ Microsoft SQL Server Profiler et l’Assistant Paramétrage utilisent cette boî
 |**Sauvegarde de la base de données**|Spécifie la base de données dans laquelle se trouve la table de trace.  
 |**Propriétaire**|Specifies the owner of the trace table. Ce champ est rempli automatiquement comme **dbo**.  
 |**Table**|Spécifie le nom de la table de trace à partir de laquelle la trace doit être lue.  
+
 ## <a name="destination-table"></a>Table de destination
 La boîte de dialogue **Table de destination** vous permet de spécifier la table dans laquelle vous souhaitez stocker la trace.  
+
 |Élément|Description
 |---|---
 |**SQL Server**|Spécifie l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actuellement connectée. Ce champ est rempli automatiquement et ne peut pas être mis à jour. Pour modifier le serveur, cliquez sur **Annuler** et connectez-vous à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans laquelle vous voulez stocker la table de trace.  
 |**Sauvegarde de la base de données**|Spécifiez la base de données dans laquelle vous voulez stocker la table de trace.  
 |**Propriétaire**|Specifies the owner of the trace table. Ce champ est rempli automatiquement comme **dbo**.  
 |**Table**|Spécifiez le nom de la table dans laquelle vous voulez stocker la trace.  
+
 ## <a name="replay-configuration"></a>Configuration de la relecture
 ### <a name="basic-replay-options"></a>Options de relecture de base
 Dans la boîte de dialogue **Configuration de la relecture**, utilisez la page **Options de relecture de base** pour spécifier la manière de relire un fichier ou une table de trace.  
 Pour afficher cette fenêtre, utilisez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour ouvrir un fichier de trace ou une table qui contient les événements appropriés pour la relecture. Pour plus d’informations, consultez [Conditions préalables à la relecture](../../tools/sql-server-profiler/replay-requirements.md). Lorsque le fichier ou la table de trace est ouvert, dans le menu **Relire** , cliquez sur **Début**, puis connectez-vous à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans laquelle vous voulez relire la trace.  
+
 |Élément|Description
 |---|---
 |**Serveur de relecture**|Affiche l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle se connecter pour la relecture.  
@@ -219,9 +243,11 @@ Pour afficher cette fenêtre, utilisez le [!INCLUDE[ssSqlProfiler](../../include
 |**Relire les événements selon leur ordre de suivi**|Permet de relire les événements de manière séquentielle. Utilisez cette option pour relire une trace pour un débogage.  
 |**Relire les événements en utilisant plusieurs threads** |Permet de relire les événements de manière simultanée. Cette option est plus rapide que la relecture séquentielle des événements, mais elle désactive le débogage. Les événements sont ordonnés à l'aide de leurs identificateurs de processus système (SPID).  
 |**Afficher les résultats de relecture**|Permet d'afficher les résultats de relecture dans [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. 
+
 ### <a name="advanced-replay-options"></a>Options de relecture avancées
 Dans la boîte de dialogue **Configuration de la relecture** , utilisez l’onglet **Options de relecture avancées** pour spécifier le mode de relecture d’un fichier de trace.  
 Pour afficher cette fenêtre, utilisez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour ouvrir un fichier de trace ou une table qui contient les événements appropriés pour la relecture. Pour plus d’informations, consultez [Conditions préalables à la relecture](../../tools/sql-server-profiler/replay-requirements.md). Après avoir ouvert le fichier de trace ou la table, dans le menu **Relecture** , cliquez sur **Démarrer**, connectez-vous à l’instance de SQL Server sur laquelle vous voulez relire la trace, puis cliquez sur l’onglet **Options de relecture avancées** .  
+
 |Élément|Description
 |---|---
 |**Relire les SPID système**|Spécifie si le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] relit les SPID système.  
@@ -234,9 +260,11 @@ Pour afficher cette fenêtre, utilisez le [!INCLUDE[ssSqlProfiler](../../include
 |**Intervalle d'interrogation du moniteur d'intégrité par défaut (sec)**|Spécifiez, en secondes, l'intervalle d'interrogation du moniteur d'intégrité pendant la relecture. La valeur par défaut est 60 secondes. Cette valeur permet à l'utilisateur de configurer la fréquence à laquelle le moniteur d'intégrité interroge les candidats à l'arrêt.  
 |**Activer le moniteur de processus bloqués de SQL Server**|Active un processus qui recherche les processus bloqués ou les processus de blocage.  
 |**Délai d'attente du moniteur de processus bloqués (s)**|Configure la fréquence à laquelle le moniteur de processus recherche les processus bloqués ou les processus de blocage.  
+
 ## <a name="find-dialog-box"></a>Rechercher (boîte de dialogue)
 Utilisez la boîte de dialogue **Rechercher** pour rechercher une trace de caractères ou de mots spécifiques. Pour annuler une recherche en cours, appuyez sur ÉCHAP.  
  Dans le menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Edition **, cliquez sur** Rechercher **pour ouvrir cette boîte de dialogue dans**.  
+
 |Élément|Description
 |---|---
 |**Rechercher**|Entrez le texte à rechercher. La recherche retourne toute chaîne contenant la chaîne spécifiée. Par exemple, si vous recherchez "Completed", la chaîne "SQL:BatchCompleted" est retournée. Les caractères génériques (*, ?, etc.) ne sont pas pris en charge.  
@@ -245,6 +273,7 @@ Utilisez la boîte de dialogue **Rechercher** pour rechercher une trace de carac
 |**Mot entier**|Restreint la recherche à des mots entiers. Décochez la case **Mot entier** pour rechercher des caractères spécifiques au sein d’un mot.  
 |**Suivant**|Recherche la correspondance suivante avec les caractères spécifiés dans la zone **Rechercher** .  
 |**Précédent**|Recherche dans la trace la correspondance précédente avec les caractères spécifiés dans la zone **Rechercher** .  
+
  ## <a name="organize-columns"></a>Organiser les colonnes
 Utilisez la boîte de dialogue **Organiser les colonnes** pour sélectionner des colonnes de données en vue de regrouper ou d'agréger des événements affichés dans une trace et faciliter ainsi la consultation et l'analyse des tables ou des fichiers de trace volumineux.  
 - L'agrégation déplace et réduit tous les événements de la trace sous leur type de classe d'événements respectif. Un signe plus (**+**) apparaît à gauche du nom de la classe d’événements. Si vous cliquez sur le signe plus, la classe d'événements se développe et affiche tous les événements de ce type.  
@@ -261,6 +290,7 @@ Déplacez des noms de colonne de données sous **Groupes** pour regrouper ou agr
 |**Colonnes**|Répertorie les colonnes de données qui peuvent être déplacées vers **Groupes**. Cliquez sur le signe plus (**+**) à gauche de l’option **Colonnes** pour développer la liste.  
 |**Monter**|Lorsque vous avez sélectionné une colonne de données, cliquez sur **Haut** pour déplacer des colonnes de données vers le haut dans **Groupes**. Vous pouvez également cliquer sur **Haut** pour réorganiser l'affichage des colonnes dans l'affichage de la fenêtre de trace.  
 |**Descendre**|Lorsque vous avez sélectionné une colonne de données, cliquez sur **Bas** pour déplacer des colonnes de données vers le bas dans **Groupes**. Vous pouvez également cliquer sur **Bas** pour réorganiser l'affichage des colonnes dans l'affichage de la fenêtre de trace.  
+
 ## <a name="edit-filter"></a>Modifier le filtre
 Utilisez la boîte de dialogue **Modifier le filtre** pour créer et modifier des filtres de colonne de données dans une trace. Cliquez sur le nom d'une colonne de données dans la liste pour afficher dans le volet adjacent les critères de filtre disponibles pour cette colonne. Entrez les critères de filtre et cliquez sur **OK** pour les appliquer à la colonne de données sélectionnée. Si une icône de filtre apparaît à gauche du nom de la colonne de données dans la liste, cela signifie qu'un filtre est déjà configuré pour cette colonne.  
  >[!NOTE]
@@ -268,6 +298,7 @@ Utilisez la boîte de dialogue **Modifier le filtre** pour créer et modifier de
 
 ## <a name="select-template-name"></a>Sélectionnez le nom du modèle
 Utilisez la boîte de dialogue **Sélectionner le nom du modèle** pour sélectionner un modèle de trace [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] existant à exporter vers un fichier du système d'exploitation. Vous pouvez également utiliser cette boîte de dialogue pour sélectionner ou entrer un autre nom afin d'enregistrer un modèle de trace lorsqu'un modèle de trace existant est modifié. Pour accéder à cette boîte de dialogue lorsque vous exportez un modèle, dans le menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **de** , pointez sur **Modèles**, puis cliquez sur **Exporter le modèle**. Pour accéder à cette boîte de dialogue lorsque vous changez le nom d'un modèle, dans le menu **Fichier** , pointez sur **Modèles**, sur **Modifier le modèle**, puis cliquez sur **Enregistrer sous**.  
+
 |Élément|Description
 |---|---
 |**Type de serveur**|Sélectionnez le type de serveur dans lequel vous souhaitez choisir un modèle. Cette option est uniquement disponible lorsque vous exportez un modèle.  

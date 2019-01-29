@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9ccfcd29c7389ee1724994561bca382ae98e13b9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 46cfdd9075bd950b287bef399ca3a505a1261f5d
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516383"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087828"
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Liste de vérification : Utiliser PowerShell pour vérifier Power Pivot pour SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +74,7 @@ Name              DisplayName                                Status
 MSOLAP$POWERPIVOT SQL Server Analysis Services (POWERPIVOT) Running  
 ```  
   
-##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService et PowerPivotEngineSerivce  
+##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService et PowerPivotEngineService  
  Les scripts de cette section vérifient les services système de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] . Il existe un seul service système pour un déploiement SharePoint 2013 et deux services pour un déploiement SharePoint 2010.  
   
  **PowerPivotSystemService**  
@@ -93,7 +93,7 @@ TypeName                                  Status Applications                   
 SQL Server PowerPivot Service Application Online {Default PowerPivot Service Application} SPFarm Name=SharePoint_Config_77d8ab0744a34e8aa27c806a2b8c760c  
 ```  
   
- **PowerPivotEngineSerivce**  
+ **PowerPivotEngineService**  
   
 > [!NOTE]  
 >  **Ignorez ce script si** vous utilisez SharePoint 2013. Le service PowerPivotEngineService ne fait pas partie d'un déploiement SharePoint 2013. Si vous exécutez l’applet de commande Get-PowerPivotEngineService sur SharePoint 2013, vous verrez s’afficher un message d’erreur semblable au suivant. Ce message d'erreur est retourné même si vous avez exécuté la commande Add-PSSnapin décrite dans la section des conditions préalables requises de cette rubrique.  
@@ -454,7 +454,7 @@ Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 get-service | select name, displayname, status | where {$_.Name -eq "msolap`$powerpivot"} | format-table -property * -autosize | out-default  
   
 #Write-Host ""  
-Write-Host -ForegroundColor Green "PowerPivotEngineSerivce and PowerPivotSystemService"  
+Write-Host -ForegroundColor Green "PowerPivotEngineService and PowerPivotSystemService"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
   
 Get-PowerPivotSystemService | select typename, status, applications, farm | format-table -property * -autosize | out-default  

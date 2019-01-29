@@ -18,12 +18,12 @@ ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9177f154af1085a28c902e137cad0640f5702fb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 384d1cd437947e23f571cf30b6ec7fad84704942
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354895"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087898"
 ---
 # <a name="thread-pool-properties"></a>Propriétés du pool de threads
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise le multithreading pour de nombreuses opérations, afin d’optimiser les performances globales du serveur en exécutant plusieurs travaux en parallèle. Pour gérer les threads plus efficacement, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise des pools pour préallouer les threads et faciliter leur disponibilité pour le travail suivant.  
@@ -193,13 +193,13 @@ ms.locfileid: "53354895"
   
  Les nœuds NUMA sont ignorés. Il n'y aura qu'un seul pool de threads IOProcess, et tous les threads dans le pool posséderont une affinité avec l'ensemble des processeurs logiques. Par défaut (où PerNumaNode=-1) ; il s'agit du paramètre opérationnel si l'ordinateur possède moins de 4 nœuds NUMA.  
   
- ![Correspondance de pool NUMA, processeur et](../media/ssas-threadpool-numaex0.PNG "Numa, processeur et correspondance de pool")  
+ ![NUMA, processeur et pool correspondance](../media/ssas-threadpool-numaex0.PNG "Numa, processeur et pool de correspondance")  
   
  **Paramètre PerNumaNode=1**  
   
  Les pools de threads IOProcess sont créés pour chaque nœud NUMA. Des pools de threads distincts améliorent l'accès coordonné aux ressources locales, telles que le cache local sur un nœud NUMA.  
   
- ![Correspondance de pool NUMA, processeur et](../media/ssas-threadpool-numaex1.PNG "Numa, processeur et correspondance de pool")  
+ ![NUMA, processeur et pool correspondance](../media/ssas-threadpool-numaex1.PNG "Numa, processeur et pool de correspondance")  
   
  **Paramètre PerNumaNode=2**  
   
@@ -207,7 +207,7 @@ ms.locfileid: "53354895"
   
  Dans l’exemple suivant, sur un système comportant 4 nœuds NUMA et 32 processeurs logiques, en définissant `PerNumaNode` sur 2, vous obtenez 32 pools de threads IOProcess. Les threads dans les 8 premiers pools sont associés à tous les processeurs logiques dans le nœud NUMA 0, mais avec le processeur idéal défini sur 0, 1, 2, jusqu'à 7. Les 8 pools de threads suivants sont associés à tous les processeurs logiques dans le nœud NUMA 1, avec le processeur idéal défini sur 8, 9, 10, jusqu'à 15, et ainsi de suite.  
   
- ![Correspondance de pool NUMA, processeur et](../media/ssas-threadpool-numaex2.PNG "Numa, processeur et correspondance de pool")  
+ ![NUMA, processeur et pool correspondance](../media/ssas-threadpool-numaex2.PNG "Numa, processeur et pool de correspondance")  
   
  À ce niveau d'affinité, le planificateur tente toujours d'utiliser le processeur logique idéal en premier, au sein du nœud NUMA préférentiel. Si le processeur logique est indisponible, le planificateur choisit un autre processeur dans le même nœud, ou dans le même du groupe de processeurs si aucun autre thread n'est disponible. Pour plus d’informations et des exemples, consultez [Paramètres de configuration d’Analysis Services 2012 (blog Wordpress)](https://go.microsoft.com/fwlink/?LinkId=330387).  
   

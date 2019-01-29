@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2f323ac135ed41ff15c1d41a17407d03138e4807
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.openlocfilehash: 6fd14582fdae0d76463b8d8739d214882b78f999
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372700"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147007"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Installer SQL Server Machine Learning Services sur Windows
 
@@ -29,7 +29,9 @@ Cet article explique comment installer le composant d’apprentissage machine en
 
 + Une instance du moteur de base de données est requise. Vous ne pouvez pas installer uniquement les fonctionnalités R ou Python, bien que vous puissiez les ajouter progressivement à une instance existante.
 
-- L’installation des Services Machine Learning est *ne pas pris en charge* sur un cluster de basculement dans SQL Server 2017. Toutefois, il *est pris en charge* avec SQL Server 2019. 
++ Pour la continuité d’activité, [toujours sur les groupes de disponibilité](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) sont pris en charge pour Machine Learning Services. Vous devez installer les Services Machine Learning et configurer des packages, sur chaque nœud.
+
++ L’installation des Services Machine Learning est *ne pas pris en charge* sur un cluster de basculement dans SQL Server 2017. Toutefois, il *est pris en charge* avec SQL Server 2019. 
  
 + N’installez pas les Services Machine Learning sur un contrôleur de domaine. La partie de la Machine Learning Services du programme d’installation échoue.
 

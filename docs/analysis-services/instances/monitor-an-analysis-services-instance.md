@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ac0f94b7f12cdba6237b2694114580f56dc6597
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 39cc5a22165d07aafce29e4216548c4e8d226892
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540457"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087628"
 ---
 # <a name="monitoring-overview"></a>Vue d'ensemble de la surveillance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-Analysis Services dispose de plusieurs outils pour vous aider à surveiller et et régler les performances de vos serveurs. Le choix de l'outil dépend du type de surveillance ou de paramétrage à effectuer et des événements spécifiques à contrôler.
+Analysis Services dispose de plusieurs outils pour vous aider à surveiller et régler les performances de vos serveurs. Le choix de l'outil dépend du type de surveillance ou de paramétrage à effectuer et des événements spécifiques à contrôler.
 
 Pour plus d’informations sur la surveillance de SQL Server Analysis Services, consultez le [Guide des opérations SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539).  
   

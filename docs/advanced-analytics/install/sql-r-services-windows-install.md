@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 69b3b9a57b2a4f6120c88552ca3100b288968b69
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 0cfe6b67217521f829f7b4745d42283e70a411fe
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645318"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147027"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installer SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,6 +27,8 @@ Dans SQL Server 2017, l’intégration de R est disponible en [Machine Learning 
 ## <a name="pre-install-checklist"></a>Liste de vérification de préinstallation
 
 + Une instance du moteur de base de données est requise. Vous ne pouvez pas installer R simplement, bien que vous pouvez l’ajouter progressivement à une instance existante.
+
++ Pour la continuité d’activité, [toujours sur les groupes de disponibilité](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) sont pris en charge pour R Services. Vous devez installer R Services et configurer des packages, sur chaque nœud.
 
 + N’installez pas de R Services sur un cluster de basculement. Le mécanisme de sécurité utilisé pour isoler les processus R n’est pas compatible avec un environnement de cluster de basculement Windows Server.
 

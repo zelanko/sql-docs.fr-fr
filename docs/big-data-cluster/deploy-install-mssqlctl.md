@@ -9,12 +9,12 @@ ms.date: 01/15/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aec8f030a996e5dd86c44a5a655e98d4926988ed
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: d3ee1a0d2b6f3ec2c395b2c318aaf4b151497562
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361409"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087608"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>Installer mssqlctl pour gérer des clusters SQL Server 2019 big data
 
@@ -34,9 +34,15 @@ Cet article décrit comment installer le **mssqlctl** outil sur Windows ou Linux
 
 1. Ouvrez une nouvelle session Windows PowerShell afin qu’il obtient le chemin d’accès plus récente avec Python qu’il contient.
 
-2. Installer **mssqlctl** avec la commande suivante :
+1. Si vous disposez de toutes les versions précédentes de **mssqlctl** installé, il est important de désinstaller **mssqlctl** premier avant d’installer la dernière version.
 
-   ```bash
+   ```powershell
+   pip3 uninstall mssqlctl
+   ```
+
+1. Installer **mssqlctl** avec la commande suivante :
+
+   ```powershell
    pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
    ```
 
@@ -57,16 +63,22 @@ Sur Linux, vous devez installer Python 3.5 et ensuite mettre à niveau pip. L’
    ```bash
    sudo -H pip3 install --upgrade pip
    ```
-   
+
+1. Si vous disposez de toutes les versions précédentes de **mssqlctl** installé, il est important de désinstaller **mssqlctl** premier avant d’installer la dernière version.
+
+   ```bash
+   pip3 uninstall mssqlctl
+   ```
+
 1. Installer **mssqlctl** avec la commande suivante :
 
    ```bash
    pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
    ```
-   
+
    > [!NOTE]
    > Le `--user` commutateur installe mssqlctl dans le répertoire d’installation de Python utilisateur. Il s’agit généralement `~/.local/bin` sur Linux. Soit ajouter ce répertoire à votre chemin d’accès ou accédez au répertoire d’installation utilisateur et que vous exécutez `./mssqlctl` à partir de là.
-   
+
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur les clusters de données volumineuses, consultez [que sont les clusters de données volumineuses de SQL Server 2019 ?](big-data-cluster-overview.md).

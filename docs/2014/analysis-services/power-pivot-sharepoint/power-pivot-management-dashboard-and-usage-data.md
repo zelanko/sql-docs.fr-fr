@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419871"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087710"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Tableau de bord de gestion PowerPivot et données d'utilisation
   Le tableau de bord de gestion PowerPivot est une collection de rapports et de composants WebPart prédéfinis dans l'Administration centrale de SharePoint, qui vous aident à administrer un déploiement de SQL Server PowerPivot pour SharePoint. Le tableau de bord de gestion fournit des informations sur l'intégrité du serveur, l'activité du classeur et l'actualisation des données. Le tableau de bord utilise les données issues de la collecte des données d'utilisation de SharePoint.  
@@ -67,7 +67,7 @@ ms.locfileid: "52419871"
 ### <a name="change-the-current-service-application"></a>Modifiez l'application de service actuelle.  
  Pour modifier l'application de service PowerPivot actuelle dans le tableau de bord de gestion :  
   
-1.  En haut du tableau de bord de gestion PowerPivot, repérez le nom de l'application de service actuelle, par exemple **Application de service PowerPivot par défaut**.  
+1.  En haut du tableau de bord de gestion PowerPivot, repérez le nom de l’application de service actuelle, par exemple **Application de Service PowerPivot par défaut**.  
   
 2.  Dans le tableau de bord **Actions** , cliquez sur **Lister les applications de service**.  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7158c0c441c11f87c4cc4989ca66061318a60df4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f53c8835da14fc3ee41eb9598303f80c062a0e82
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419700"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087748"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Tableau de bord de gestion Power Pivot et données d’utilisation
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52419700"
 ### <a name="change-the-current-service-application"></a>Modifiez l'application de service actuelle.  
  Pour modifier l’application de service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] actuelle dans le tableau de bord de gestion :  
   
-1.  En haut du tableau de bord de gestion [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)], repérez le nom de l’application de service actuelle, par exemple **Application de service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] par défaut**.  
+1.  En haut de la [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] tableau de bord de gestion, notez le nom de l’application de service actuelle, par exemple **par défaut [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Application de Service**.  
   
 2.  Dans le tableau de bord **Actions** , cliquez sur **Lister les applications de service**.  
   
