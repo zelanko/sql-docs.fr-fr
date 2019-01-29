@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327866"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805715"
 ---
 # <a name="always-encrypted-wizard"></a>Assistant Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ Utilisez l’ **Assistant Always Encrypted** pour protéger les données sensibl
  
  - **Autorisations :** Pour interroger des colonnes chiffrées et sélectionner des clés à l’aide de cet Assistant, vous devez disposer des autorisations `VIEW ANY COLUMN MASTER KEY DEFINITION` et `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` . Pour créer des clés, vous devez également disposer des autorisations `ALTER ANY COLUMN MASTER KEY` et `ALTER ANY COLUMN ENCRYPTION KEY` .  
  
- #### <a name="to-open-the-always-encrypted-wizard"></a>Pour ouvrir l’Assistant Always Encrypted  
+ #### <a name="to-open-the-always-encrypted-wizard"></a>Pour ouvrir l’Assistant Always Encrypted
  
  1.  Connectez-vous à votre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le composant Explorateur d’objets de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
    
  2.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, puis sélectionnez **Chiffrer les colonnes**.  
    
- ## <a name="column-selection-page"></a>Page de sélection de la colonne  
+ ## <a name="column-selection-page"></a>Page de sélection de la colonne
  - Recherchez une table et une colonne, puis sélectionnez un type de chiffrement (déterministe ou aléatoire) et une clé de chiffrement pour les colonnes sélectionnées. Pour déchiffrer une colonne chiffrée, sélectionnez **Texte en clair**. Pour modifier une clé de chiffrement de colonne, sélectionnez une clé de chiffrement différente. L’Assistant déchiffrera la colonne et la chiffrera à nouveau avec la nouvelle clé. (Le chiffrement de tables temporelles et en mémoire est pris en charge par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mais ne peut pas être configuré par cet Assistant.)  
  
 ## <a name="master-key-configuration-page"></a>Page de configuration de la clé principale  

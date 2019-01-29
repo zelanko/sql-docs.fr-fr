@@ -26,12 +26,12 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a4a31e52cbaa9e91219c2e67341de968d5c7e2c
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: e0c9cf64fa8e2b4304e2ba25536a298edbd306ac
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626329"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044326"
 ---
 # <a name="database-engine-service-startup-options"></a>Options de démarrage du service moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,7 @@ ms.locfileid: "53626329"
   
 ## <a name="list-of-startup-options"></a>Liste des options de démarrage  
 ### <a name="default-startup-options"></a>Options de démarrage par défaut  
+
 |Options|Description|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|Représente le chemin d’accès complet au fichier de base de données MASTER (il s’agit généralement de C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf). Si vous ne spécifiez pas cette option, les paramètres du Registre existant sont utilisés.|  
@@ -56,6 +57,7 @@ ms.locfileid: "53626329"
 |**-l**  *master_log_path*|Représente le chemin d’accès complet au fichier journal de la base de données MASTER (il s’agit généralement de C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf). Si vous ne spécifiez pas cette option, les paramètres de Registre existants sont utilisés.|  
   
 ### <a name="other-startup-options"></a>Autres options de démarrage   
+
 |Options |Description|   
 |---------------------------|-----------------|  
 |**-c**|Raccourcit la durée nécessaire au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de l'invite de commandes. En général, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] démarre en tant que service en appelant le gestionnaire de contrôle de services. Comme [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ne démarre pas en tant que service pendant le démarrage à partir de l’invite de commandes, vous devez utiliser **-c** pour ignorer cette étape.|  

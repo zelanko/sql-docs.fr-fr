@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 68fb5c69d30e9ba30f27bcd23347ed5543c7e792
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 6c4ccf371cdcac99d50c3142ec42641380623501
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947584"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044495"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurer PolyBase pour accéder à des données externes dans MongoDB
 
@@ -95,7 +95,7 @@ Voici les objets de création qui vont être utilisés dans cette section :
      );
      ```
 
-1. **Facultatif :** Créez des statistiques sur une table externe.
+1. **Facultatif :** Créez des statistiques sur une table externe.
 
     Pour des performances de requêtes optimales, nous vous recommandons de créer des statistiques sur les colonnes de table externe, en particulier celles utilisées pour les jointures, les filtres et les agrégats.
 
@@ -142,6 +142,7 @@ L’adresse de l’objet sera aplanie comme suit :
 * Le champ imbriqué restaurant.address.zipcode devient restaurant.address_zipcode
 
 Les notes du tableau seront aplanies comme suit :
+
 | grades_date | grades_grade  | games_score | 
 | ------------- | ------------------------- | -------------- |
 |1393804800000 |Un |2|

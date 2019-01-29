@@ -14,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
-ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
+ms.openlocfilehash: 4a76d8d657f2451c52aea74c99576ffd89b30c8c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738115"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044485"
 ---
 # <a name="system-settings-master-data-services"></a>Paramètres système (Master Data Services)
 
@@ -130,6 +130,7 @@ ms.locfileid: "53738115"
 ||**SecurityMemberProcessInterval**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , fréquence à laquelle les autorisations d'accès définies sous l'onglet **Membres de hiérarchie** sont appliquées (en secondes). La valeur par défaut est **3 600** secondes (60 minutes).|  
 
 ##  <a name="Performance"></a> Paramètres de performances  
+
 |Paramètre du Gestionnaire de configuration|Paramètre système|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**Enable performance improvement setting** (Activer le paramètre d’amélioration des performances)|**PerformanceImprovementEnable**|Par défaut, nous activons ce paramètre (**valeur 1**) qui permet que la page associée aux autorisations de charge obtienne de bonnes performances. Toutefois, dans ce cas, la création/modification d’entités, d’attributs, d’utilisateurs ou de groupes aboutit à des performances médiocres. Pour éviter ce problème, vous pouvez désactiver ce paramètre (**valeur 0**). Après avoir modifié ce paramètre. Vous devez exécuter la commande « **EXEC [mdm].[udpPerformanceToggleSwitch];**  » pour vérifier l’exactitude de la vue et des données.|  

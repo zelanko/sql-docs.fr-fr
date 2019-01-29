@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e294759588beeb5d79f4613848ca49634d8e40cf
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 4214bcf8d2dcd3c8b00d51580ea71eae0e40e96e
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420184"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880542"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guide de conception et d’architecture d’index SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -362,7 +362,7 @@ L'illustration suivante montre la structure d'un index non-cluster avec une seul
   
 -   Couvrent la requête.  
   
-     Lorsque l’index contient toutes les colonnes de la requête, les performances augmentent. L'optimiseur de requête peut localiser toutes les valeurs de colonnes dans l'index ; les données de table ou d'index cluster ne sont pas accédées, avec pour conséquence une réduction des opérations d'E/S disque. Utilisez un index avec [colonnes incluses](#Included_Columns) pour ajouter des colonnes couvrantes au lieu de créer une clé d’index de grande taille.  
+     Performances accrues lorsque l'index contient toutes les colonnes de la requête. L'optimiseur de requête peut localiser toutes les valeurs de colonnes dans l'index ; les données de table ou d'index cluster ne sont pas accédées, avec pour conséquence une réduction des opérations d'E/S disque. Utilisez un index avec [colonnes incluses](#Included_Columns) pour ajouter des colonnes couvrantes au lieu de créer une clé d’index de grande taille.  
   
      Si la table a un index cluster, la ou les colonnes définies dans cet index sont automatiquement ajoutées à la fin de chaque index non-cluster de la table. Ceci peut produire une requête couverte sans spécifier les colonnes de l'index cluster dans la définition de l'index non-cluster. Par exemple, si une table a un index cluster sur la colonne `C`, un index non cluster sur les colonnes `B` et `A` aura comme valeurs de clé les colonnes `B`, `A`et `C`.  
       

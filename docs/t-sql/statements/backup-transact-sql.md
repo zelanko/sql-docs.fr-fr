@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bb9f7368f9250bd96adb62c6af7e7711213e4fc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805775"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1132,9 +1132,9 @@ Des problèmes de propriété et d’autorisations sur l’URL sont susceptibles
 L’exemple effectue une sauvegarde COPY_ONLY de `Sales` vers le service de stockage Blob Microsoft Azure.  Le nom du compte de stockage est `mystorageaccount`.  Le conteneur se nomme `myfirstcontainer`.  Une stratégie d’accès stockée a été créée avec des droits de lecture, écriture, suppression et liste.  Les informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) ont été créées à l’aide d’une signature d’accès partagé associée à la stratégie d’accès stockée.  Pour plus d’informations sur la sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le service de stockage Blob Microsoft Azure, consultez [Sauvegarde et restauration SQL Server avec le service de stockage Blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) et [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ```sql  
-BACKUP DATABASE Sales WITH COPY_ONLY
+BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
-WITH STATS = 5;
+WITH STATS = 5, COPY_ONLY;
 ```
 
   
