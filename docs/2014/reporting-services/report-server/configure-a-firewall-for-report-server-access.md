@@ -46,7 +46,7 @@ ms.locfileid: "48224449"
   
 3.  Cliquez sur **Règles de trafic entrant**.  
   
-4.  Cliquez sur **Nouvelle règle** dans la fenêtre **Actions****.**  
+4.  Cliquez sur **Nouvelle règle** dans la fenêtre **Actions**.****  
   
 5.  Cliquez sur **Type de règle** de **Port**.  
   
