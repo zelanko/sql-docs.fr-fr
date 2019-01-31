@@ -22,12 +22,12 @@ ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3607ad38e58c5bc1315bc8d01bd0d188d704261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f3919729fc29933d348f8ef0e10d697c5e00646
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781697"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805705"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ ms.locfileid: "47781697"
   
 -   En réinitialisant @@ROWCOUNT à 0 sans renvoyer la valeur au client.  
   
- Les instructions qui réalisent une affectation simple attribuent toujours à @@ROWCOUNT la valeur 1. Aucune ligne n'est envoyée au client. Parmi ces instructions figurent SET @*local_variable*, RETURN, READTEXT, ainsi que les instructions de sélection sans requête telles que SELECT GETDATE() ou SELECT **'***Generic Text***'**.  
+ Les instructions qui réalisent une affectation simple attribuent toujours à @@ROWCOUNT la valeur 1. Aucune ligne n'est envoyée au client. Parmi ces instructions figurent : SET @*local_variable*, RETURN, READTEXT, ainsi que les instructions de sélection sans requête telles que SELECT GETDATE() or SELECT **'***Generic Text***'**.  
   
- Les instructions qui réalisent une affectation dans une requête ou utilisent RETURN dans une requête attribuent à @@ROWCOUNT le nombre de lignes affectées ou lues par la requête, par exemple SELECT @*local_variable* = c1 FROM t1.  
+ Les instructions qui effectuent une affectation dans une requête ou qui utilisent RETURN dans une requête attribuent à @@ROWCOUNT le nombre de lignes affectées ou lues par la requête ; par exemple : SELECT @*local_variable* = c1 FROM t1.  
   
  Les instructions DML (Data Manipulation Language) attribuent à @@ROWCOUNT le nombre de lignes affectées par la requête et renvoient cette valeur au client. Les instructions DML peuvent ne pas envoyer de lignes au client.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47781697"
   
  Les instructions EXECUTE conservent la valeur @@ROWCOUNT précédente.  
   
- Les instructions telles que USE, SET \<option>, DEALLOCATE CURSOR, CLOSE CURSOR, BEGIN TRANSACTION ou COMMIT TRANSACTION réinitialisent la valeur ROWCOUNT à 0.  
+ Les instructions telles que USE, SET \<option>, DEALLOCATE CURSOR, CLOSE CURSOR, PRINT, RAISERROR, BEGIN TRANSACTION ou COMMIT TRANSACTION réinitialisent la valeur ROWCOUNT à 0.  
   
  Les procédures stockées compilées en mode natif conservent la valeur @@ROWCOUNT précédente. Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’intérieur des procédures stockées compilées en mode natif ne définissent pas @@ROWCOUNT. Pour plus d’informations, consultez [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   

@@ -1,7 +1,7 @@
 ---
-title: 'Étape 1 : Copie du package de la leçon 4 | Microsoft Docs'
+title: 'Étape 1 : Copier le package de la leçon 4 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,56 +11,51 @@ ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77c3644de5503ac35121c954c8dda4137322ea0a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f6e3f2999bb686d0e6242ec8a6eea9d926cc787c
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504116"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880442"
 ---
-# <a name="lesson-5-1---copying-the-lesson-4-package"></a>Leçon 5-1 : Copie du package de la leçon 4
-Dans cette tâche, vous créez une copie du package Lesson 4.dtsx que vous avez créé à la leçon 4. Vous pouvez également ajouter au projet le package final de la leçon 4 inclus avec le didacticiel, puis le copier. Vous allez utiliser cette nouvelle copie tout au long de la leçon 5.  
+# <a name="lesson-5-1-copy-the-lesson-4-package"></a>Leçon 5-1 : Copier le package de la leçon 4
+
+Au cours de cette tâche, vous créez une copie du package **Lesson 4.dtsx** de la leçon 4. Si vous n’avez pas terminé la leçon 4, vous pouvez ajouter au projet le package final de la leçon 4 inclus dans le tutoriel, puis le copier pour l’utiliser. Vous allez utiliser cette nouvelle copie tout au long de la leçon 5.  
   
-### <a name="to-copy-the-lesson-4-package"></a>Pour copier le package de la leçon 4  
+## <a name="create-the-lesson-5-package"></a>Créer le package de la leçon 5  
   
-1.  Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools n’est pas déjà ouvert, dans le menu **Démarrer**, pointez sur **Tous les programmes**, puis sur **Microsoft SQL Server 2012**et cliquez sur **SQL Server Data Tools**.  
+Utilisez cette procédure si vous copiez le package final de la leçon 4.  Pour copier l’exemple de la leçon 4, consultez la section suivante.
+
+1.  Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools n’est pas déjà ouvert, sélectionnez **Démarrer** > **Tous les programmes** > **Microsoft SQL Server 2017**, puis **SQL Server Data Tools**.
+
+2.  Dans le menu **Fichier**, sélectionnez **Ouvrir** > **Projet/Solution**, le dossier **SSIS Tutorial**, puis **Ouvrir**.  Double-cliquez ensuite sur **SSIS Tutorial.sln**.
+
+3.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur **Lesson 4.dtsx** et sélectionnez **Copier**.
+
+4.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur **SSIS Packages** et sélectionnez **Coller**.
+
+    Par défaut, le nom du package copié est **Lesson 4.dtsx**.
+
+5.  Dans l’**Explorateur de solutions**, double-cliquez sur **Lesson 4.dtsx** pour ouvrir le package.
+
+6.  Cliquez avec le bouton droit n’importe où dans l’arrière-plan de l’aire de conception **Flux de contrôle**, puis sélectionnez **Propriétés**.
+
+7.  Dans la fenêtre **Propriétés**, remplacez la propriété **Name** par **Lesson 5**.
+
+8.  Sélectionnez la zone de la propriété **ID**, la flèche déroulante, puis **\<Générer un nouvel ID>**.
+
+## <a name="add-the-completed-lesson-4-package"></a>Ajouter le package final de la leçon 4
+
+1.  Ouvrez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools et ouvrez le projet Didacticiel SSIS.
+
+2.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur **Packages SSIS**, puis sélectionnez **Ajouter le package existant**.
+
+3.  Dans la boîte de dialogue **Ajouter une copie des packages existants** , dans **Emplacement du package**, sélectionnez **Système de fichiers**.
+
+4.  Sélectionnez le bouton de navigation **(...)**, accédez à **Lesson 4.dtsx** sur votre ordinateur, puis sélectionnez **Ouvrir**.
+
+5.  Copiez et collez le package de la leçon 4 en effectuant les étapes 3 à 8 décrites dans la section précédente.
   
-2.  Dans le menu **Fichier** , cliquez sur **Ouvrir**, cliquez sur **Projet/Solution**, sélectionnez **Didacticiel SSIS** , cliquez sur **Ouvrir**, puis double-cliquez sur **SSIS Tutorial.sln**.  
-  
-3.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur **Lesson 4.dtsx**et choisissez **Copier**.  
-  
-4.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur **Packages SSIS**et choisissez **Coller**.  
-  
-    Par défaut, le package copié est nommé Lesson 5.dtsx.  
-  
-5.  Dans l’Explorateur de solutions, double-cliquez sur **Lesson 5.dtsx** pour ouvrir le package.  
-  
-6.  Cliquez n’importe où dans l’arrière-plan de l’onglet **Flux de contrôle** , puis cliquez sur **Propriétés**.  
-  
-7.  Dans la fenêtre Propriétés, changez la propriété **Nom** en **Leçon 5**.  
-  
-8.  Cliquez sur la zone de la propriété **ID** , cliquez sur la flèche déroulante, puis sur **<Generate New ID>**.  
-  
-### <a name="to-add-the-completed-lesson-4-package"></a>Pour ajouter le package final de la leçon 4  
-  
-1.  Ouvrez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools et ouvrez le projet Didacticiel SSIS.  
-  
-2.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur **Packages SSIS**, puis cliquez sur **Ajouter le package existant**.  
-  
-3.  Dans la boîte de dialogue **Ajouter une copie des packages existants** , dans **Emplacement du package**, sélectionnez **Système de fichiers**.  
-  
-4.  Cliquez sur le bouton de navigation **(...)**, accédez à **Lesson 4.dtsx** sur votre ordinateur, puis cliquez sur **Ouvrir**.  
-  
-    Pour télécharger tous les packages de leçons de ce didacticiel, procédez comme suit.  
-  
-    1.  Accédez à [Exemples de produits Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
-  
-    2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
-  
-    3.  Cliquez sur le fichier SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
-  
-5.  Copiez et collez le package de la leçon 4 comme décrit dans les étapes 3 à 8 de la procédure précédente.  
-  
-## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 2 : Activation et configuration des configurations de package](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
+## <a name="go-to-next-task"></a>Passer à la tâche suivante  
+[Étape 2 : Activer et définir les configurations du package](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   

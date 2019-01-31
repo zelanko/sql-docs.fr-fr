@@ -1,7 +1,7 @@
 ---
 title: Définir ou changer le classement du serveur | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2017
+ms.date: 01/22/2019
 ms.prod: sql
 ms.reviewer: carlrab
 ms.technology: ''
@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 231cc69c164e9ac4d91477710f959b073420c08e
-ms.sourcegitcommit: 4df7db58095384152195039d91a01d2bee6bd07d
+ms.openlocfilehash: 629ab86b869e36ec816dc99070f11a88147a1ca8
+ms.sourcegitcommit: e6e5da19b393f30b068552a18c911495cbc32952
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52954393"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443695"
 ---
 # <a name="set-or-change-the-server-collation"></a>Définir ou changer le classement du serveur
 
@@ -61,8 +61,8 @@ ms.locfileid: "52954393"
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Définition du classement du serveur dans Managed Instance
 
-Le classement du serveur dans Azure SQL Managed Instance (préversion) peut être spécifié quand l’instance est créée (uniquement avec PowerShell). Le classement par défaut au niveau du serveur est **SQL_Latin1_General_CP1_CI_AS**. Les classements Unicode seulement et les nouveaux classements UTF-8 ne peuvent pas être spécifiés comme classement au niveau du serveur.
-Pour obtenir un modèle de script montrant comment définir le classement au niveau du serveur dans Azure SQL Database Managed Instance, consultez [Définir le classement Managed Instance à l’aide du modèle Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template). Si vous migrez des bases de données depuis SQL Server vers Managed Instance, vérifiez le classement du serveur dans le serveur SQL Server source à l’aide de la fonction `SERVERPROPERTY(N'Collation')`, puis créez une instance Managed Instance qui correspond au classement de votre serveur SQL Server. La migration d’une base de données depuis SQL Server vers Managed Instance sans mise en correspondance des classements au niveau du serveur peut entraîner plusieurs erreurs inattendues dans les requêtes. Vous ne pouvez pas changer le classement au niveau du serveur sur l’instance Managed Instance existante.
+Le classement au niveau du serveur (préversion) dans Azure SQL Managed Instance peut être spécifié quand l’instance est créée et ne peut pas être changé par la suite. Vous pouvez définir le classement au niveau du serveur par le biais du [portail Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) ou de [PowerShell et du modèle Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) lors de la création de l’instance. Le classement par défaut au niveau du serveur est **SQL_Latin1_General_CP1_CI_AS**. Les classements Unicode seulement et les nouveaux classements UTF-8 ne peuvent pas être spécifiés comme classement au niveau du serveur.
+Si vous migrez des bases de données depuis SQL Server vers Managed Instance, vérifiez le classement du serveur dans le serveur SQL Server source à l’aide de la fonction `SERVERPROPERTY(N'Collation')`, puis créez une instance Managed Instance qui correspond au classement de votre serveur SQL Server. La migration d’une base de données depuis SQL Server vers Managed Instance sans mise en correspondance des classements au niveau du serveur peut entraîner plusieurs erreurs inattendues dans les requêtes. Vous ne pouvez pas changer le classement au niveau du serveur sur l’instance Managed Instance existante.
 
 ## <a name="see-also"></a> Voir aussi
 

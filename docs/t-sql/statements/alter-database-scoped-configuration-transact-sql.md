@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/02/2018
+ms.date: 01/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e50b19daefc7f765a4d24850c6557af419c0a345
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: d7bb8abac5765265e93282ae88266ece24d8a8a5
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226596"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838119"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -73,6 +73,12 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
+    | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
 }
 ```
 
@@ -229,7 +235,31 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
 
-Vous permet d’activer ou de désactiver la rétroaction d’allocation de mémoire en mode ligne dans l’étendue de la base de données ou de l’instruction tout en maintenant le niveau de compatibilité de la base de données à 150 et au-delà. La rétroaction d’allocation de mémoire en mode ligne est une fonctionnalité qui fait partie du [Traitement de requêtes adaptatif](../../relational-databases/performance/adaptive-query-processing.md) introduit dans SQL Server 2019.
+Vous permet d’activer ou de désactiver la rétroaction d’allocation de mémoire en mode ligne dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 150. La rétroaction d’allocation de mémoire en mode ligne est une fonctionnalité qui fait partie du [traitement de requêtes adaptatif](../../relational-databases/performance/adaptive-query-processing.md) introduit dans SQL Server 2017. (Le mode ligne est pris en charge dans SQL Server 2019 et Azure SQL Database.)
+
+BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
+
+**S’applique à :** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+Vous permet d’activer ou de désactiver la rétroaction d’allocation de mémoire en mode batch dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 140. La rétroaction d’allocation de mémoire en mode batch est une fonctionnalité qui fait partie du [Traitement de requêtes adaptatif](../../relational-databases/performance/adaptive-query-processing.md) introduit dans SQL Server 2017.
+
+BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+
+**S’applique à :** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+Vous permet d’activer ou de désactiver les jointures adaptatives en mode batch dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 140. Les jointures adaptatives en mode batch sont une fonctionnalité qui fait partie du [traitement de requêtes adaptatif](../../relational-databases/performance/adaptive-query-processing.md) introduit dans SQL Server 2017.
+
+BATCH_MODE_ON_ROWSTORE = { ON | OFF}
+
+**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
+
+Vous permet d’activer ou de désactiver le mode batch sur rowstore dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 150. Le mode batch sur rowstore est une fonctionnalité qui fait partie de la famille de fonctionnalités de [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md).
+
+DEFERRED_COMPILATION_TV = { ON | OFF}
+
+**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
+
+Vous permet d’activer ou de désactiver la compilation différée de variables de table dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 150. La compilation différée de variables de table est une fonctionnalité qui fait partie de la famille de fonctionnalités de [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md).
 
 ## <a name="Permissions"></a> Permissions
 

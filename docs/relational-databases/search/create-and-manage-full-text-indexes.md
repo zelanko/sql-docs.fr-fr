@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba2842966623d1f820bcb0d8df969634922da57d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d92ef10b48115ddb26307a9d89260185d8d65b4a
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669018"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044525"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Créer et gérer des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,6 +51,7 @@ Pour plus d’informations, consultez [Alimenter des index de recherche en texte
 
 ##  <a name="view"></a> Afficher les propriétés d’un index de recherche en texte intégral
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Afficher les propriétés d’un index de recherche en texte intégral avec Transact-SQL
+
 |Vue catalogue ou vue de gestion dynamique|Description|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Retourne une ligne pour chaque catalogue de texte intégral vers une référence d'index de recherche en texte intégral.|  
@@ -76,7 +77,7 @@ Pour plus d’informations, consultez [Alimenter des index de recherche en texte
     |----------|-----------------|  
     |**Général**|Affiche les propriétés de base de l'index de recherche en texte intégral. Il s'agit de plusieurs propriétés modifiables et non modifiables telles que le nom de la base de données, le nom de la table et le nom de la colonne clé de recherche en texte intégral. Les propriétés modifiables sont les suivantes :<br /><br /> **Liste de mots vides de l’index de recherche en texte intégral**<br /><br /> **Indexation de texte intégral activée**<br /><br /> **Suivi des modifications**<br /><br /> **Liste de propriétés de recherche**<br /><br />Pour plus d’informations, consultez [Propriétés d’index de recherche en texte intégral &#40;page Général&#41;](https://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
     |**Colonnes**|Affiche les colonnes de table qui sont disponibles pour l'indexation de texte intégral. La ou les colonnes sélectionnées sont indexées en texte intégral. Vous pouvez sélectionner autant de colonnes disponibles que vous souhaitez inclure dans l'index de recherche en texte intégral. Pour plus d’informations, consultez [Propriétés d’index de recherche en texte intégral &#40;page Colonnes&#41;](https://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
-    |**Planifications**|Utilisez cette page afin de créer ou gérer des planifications pour un travail de l'Agent SQL Server qui démarre un remplissage incrémentiel de la table pour remplir l'index de recherche en texte intégral. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Remarque : Une fois que vous avez fermé la boîte de dialogue **Propriétés d’index de recherche en texte intégral** , la planification que vous venez de créer est associée à un travail de SQL Server Agent (Démarrer le remplissage incrémentiel de la table sur *nom_base_de_données*.*nom_table*).|  
+    |**Planifications**|Utilisez cette page afin de créer ou gérer des planifications pour un travail de l'Agent SQL Server qui démarre un remplissage incrémentiel de la table pour remplir l'index de recherche en texte intégral. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Remarque : Une fois que vous avez fermé la boîte de dialogue **Propriétés d’index de recherche en texte intégral**, la planification que vous venez de créer est associée à un travail de SQL Server Agent (démarrer le remplissage incrémentiel de la table sur *database_name*.*table_name*).|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] pour enregistrer vos modifications et fermer la boîte de dialogue **Propriétés d’index de recherche en texte intégral**.  
   

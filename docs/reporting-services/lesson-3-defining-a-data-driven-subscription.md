@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : définition d’un abonnement piloté par les données | Microsoft Docs'
+title: 'Leçon 3 : Définition d’un abonnement piloté par les données | Microsoft Docs'
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3ed9f661a49e6ad64642938672f6355a1d19d9f6
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 4de4f510bcb584e0ec409f89eaba8c13ba6d8c6e
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457652"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Leçon 3 : Définition d'un abonnement piloté par les données
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Leçon 3 : Définition d'un abonnement piloté par les données
 Au cours de cette leçon du didacticiel [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , vous utilisez les pages d’abonnement pilotées par les données des portails web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour vous connecter à une source de données d’abonnement, créer une requête qui extrait des données d’abonnement et mapper le jeu de résultats aux options de remise et de rapport.  
   
 > [!NOTE]  
 > Avant de commencer, vérifiez que le service **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** est en cours d’exécution. Sans ce service, vous ne pouvez pas enregistrer l'abonnement.  Une méthode de vérification consiste à ouvrir le [Gestionnaire de configuration SQL Server](../relational-databases/sql-server-configuration-manager.md).
-Cette leçon suppose que vous avez terminé les leçons 1 et 2, et que la source de données du rapport utilise des informations d'identification stockées.  Pour plus d’informations, consultez [Leçon 2 : Modification des propriétés d’une source de données de rapport](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+Cette leçon suppose que vous avez terminé les leçons 1 et 2, et que la source de données du rapport utilise des informations d'identification stockées.  Pour plus d’informations, consultez la [Leçon 2 : Modification des propriétés d’une source de données de rapport](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
   
 ## <a name="bkmk_startwizard"></a>Démarrer l'Assistant Abonnement piloté par les données  
   
@@ -60,8 +60,9 @@ Cette leçon suppose que vous avez terminé les leçons 1 et 2, et que la source
 1. Sélectionnez **À l’aide des informations d’identification suivantes**.
 2. Sélectionnez **Nom d’utilisateur et mot de passe de Windows**.
 3.  Dans les zones **Nom d'utilisateur** et **Mot de passe**, tapez le nom d'utilisateur et le mot de passe de votre domaine. Prenez en compte à la fois le domaine et le compte d'utilisateur au moment de définir le **Nom d'utilisateur**.
-    > [!NOTE]  
-    > Les informations d'identification utilisées pour la connexion à la source de données d'un abonné ne sont pas renvoyées à [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Si vous modifiez l'abonnement ultérieurement, vous devrez retaper le mot de passe utilisé pour la connexion à la source de données.
+
+> [!NOTE]  
+> Les informations d'identification utilisées pour la connexion à la source de données d'un abonné ne sont pas renvoyées à [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Si vous modifiez l'abonnement ultérieurement, vous devrez retaper le mot de passe utilisé pour la connexion à la source de données.
 
 ## <a name="query"></a>Requête      
 1.  Dans la zone de requête, tapez la requête suivante :  
@@ -97,7 +98,7 @@ Lors de l'exécution de l'abonnement, quatre fichiers de rapport sont remis au p
 ![Liste de fichiers créée par l’abonnement](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Liste de fichiers créée par l’abonnement")  
   
 La page des abonnements dans le portail web contiendra la date de **Dernière exécution** et **l’État** de l’abonnement. 
-**Remarque :** Actualisez la page après l’exécution de l’abonnement pour voir les informations mises à jour.  
+**Remarque :** Actualisez la page après l'exécution de l'abonnement pour consulter les informations mises à jour.  
     
 ![Résultats d’abonnement dans le Gestionnaire de rapports](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Résultats d’abonnement dans le Gestionnaire de rapports")  
   

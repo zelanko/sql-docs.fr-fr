@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c2335efbd97872975fd6779081e7a5a693266e02
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457672"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ ON SERVER
  WITH ( \<event_session_options> [ ,...*n*] ) Spécifie les options à utiliser avec la session d’événements.  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
- Spécifie la quantité de mémoire maximale à allouer à la session pour la mise en mémoire tampon d'événement. La valeur par défaut est 4 Mo. *size* est un nombre entier qui peut s’exprimer en kilo-octets (Ko) ou en mégaoctets (Mo).  
+ Spécifie la quantité de mémoire maximale à allouer à la session pour la mise en mémoire tampon d'événement. La valeur par défaut est 4 Mo. *size* est un nombre entier qui peut s’exprimer en kilo-octets (Ko) ou en mégaoctets (Mo). La valeur maximale ne peut pas dépasser 2 Go (moins de 2 048 Mo). Toutefois, il est déconseillé d’utiliser des plages de valeurs de mémoire exprimées en Go.
   
  EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }  
  Spécifie le mode de rétention des événements à utiliser pour gérer la perte d'événements.  

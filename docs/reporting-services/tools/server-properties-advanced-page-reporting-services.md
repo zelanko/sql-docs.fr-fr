@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 08/16/2018
-ms.openlocfilehash: 49058b7c6ef7bc3fce9997c5492a1551b94f46dd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.date: 01/15/2019
+ms.openlocfilehash: b041e4a7f672468f5c2959f8ecb86ddaa62f09fd
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805745"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriétés du serveur (page Avancé) - Reporting Services
 
@@ -80,6 +80,28 @@ Valeur (en secondes) du délai d'exécution du traitement du rapport par défaut
 **SystemSnapshotLimit**  
 Nombre maximal d'instantanés stockées pour un rapport. Les valeurs valides sont comprises entre **-1** et **2** **147** **483** **647**. Si la valeur est égale à **-1**, il n’existe aucune limite sur le nombre d’instantanés.  
 
+**AccessControlAllowCredentials**  
+Indique si la réponse à la requête du client peut être exposée quand l’indicateur 'credentials' a la valeur true. La valeur par défaut est **false**.
+
+**AccessControlAllowHeaders** Liste séparée par des virgules des en-têtes autorisés par le serveur quand un client soumet une requête. Cette propriété peut être une chaîne vide. Spécifiez * pour autoriser tous les en-têtes.
+
+**AccessControlAllowMethods** Liste séparée par des virgules des méthodes HTTP autorisées par le serveur quand un client soumet une requête. Les valeurs par défaut sont GET, PUT, POST, PATCH, DELETE. Spécifiez * pour autoriser toutes les méthodes.
+
+**AccessControlAllowMethods** Liste séparée par des virgules des méthodes HTTP autorisées par le serveur quand un client soumet une requête. La valeur par défaut est vide, ce qui empêche toutes les requêtes. Spécifiez * pour autoriser toutes les origines quand les informations d’identification ne sont pas définies. Si les informations d’identification sont spécifiées, une liste explicite d’origines doit être indiquée.
+
+**AccessControlExposeHeaders** Liste séparée par des virgules des en-têtes que le serveur expose aux clients. La valeur par défaut est vide.
+
+**AccessControlMaxAge** Spécifie le nombre de secondes pendant lesquelles les résultats de la requête préliminaire peuvent être mis en cache. La valeur par défaut est 600 (10 minutes).
+
+**AllowedResourceExtensionsForUpload** ***(Power BI Report Server uniquement)*** Définir des extensions de ressources qui peuvent être chargées sur le serveur de rapports. Les extensions pour les types de fichiers intégrés comme &ast;.rdl et &ast;.pbix ne doivent pas obligatoirement être incluses. La valeur par défaut est « &ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx ». 
+
+
+**EditSessionCacheLimit**  
+Spécifie le nombre des entrées de cache de données qui peuvent être actives dans une session d'édition de rapport. La valeur par défaut est 5.  
+
+**EditSessionTimeout**  
+Spécifie le nombre de secondes jusqu'à l'expiration d'une session d'édition de rapport. La valeur par défaut est 7 200 secondes (deux heures).  
+
 **EnableIntegratedSecurity**  
 Détermine si la sécurité intégrée de Windows est prise en charge pour les connexions à la source de données de rapports. La valeur par défaut est **True**. Les valeurs valides sont les suivantes :
 
@@ -97,25 +119,6 @@ La désactivation de cette option atténue la menace qu'un utilisateur malveilla
 
 **EnableRemoteErrors**  
 Inclut les informations externes sur l'erreur (par exemple, les informations d'erreur relatives aux sources de données de rapport) avec les messages d'erreur retournés pour les utilisateurs qui demandent des rapports à partir d'ordinateurs distants. Les valeurs valides sont **true** et **false**. La valeur par défaut est **false**. Pour plus d’informations, consultez [Activer les erreurs distantes &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
-
-**AccessControlAllowCredentials**  
-Indique si la réponse à la requête du client peut être exposée quand l’indicateur 'credentials' a la valeur true. La valeur par défaut est **false**.
-
-**AccessControlAllowHeaders** Liste séparée par des virgules des en-têtes autorisés par le serveur quand un client soumet une requête. Cette propriété peut être une chaîne vide. Spécifiez * pour autoriser tous les en-têtes.
-
-**AccessControlAllowMethods** Liste séparée par des virgules des méthodes HTTP autorisées par le serveur quand un client soumet une requête. Les valeurs par défaut sont GET, PUT, POST, PATCH, DELETE. Spécifiez * pour autoriser toutes les méthodes.
-
-**AccessControlAllowMethods** Liste séparée par des virgules des méthodes HTTP autorisées par le serveur quand un client soumet une requête. La valeur par défaut est vide, ce qui empêche toutes les requêtes. Spécifiez * pour autoriser toutes les origines quand les informations d’identification ne sont pas définies. Si les informations d’identification sont spécifiées, une liste explicite d’origines doit être indiquée.
-
-**AccessControlExposeHeaders** Liste séparée par des virgules des en-têtes que le serveur expose aux clients. La valeur par défaut est vide.
-
-**AccessControlMaxAge** Spécifie le nombre de secondes pendant lesquelles les résultats de la requête préliminaire peuvent être mis en cache. La valeur par défaut est 600 (10 minutes).
-
-**EditSessionCacheLimit**  
-Spécifie le nombre des entrées de cache de données qui peuvent être actives dans une session d'édition de rapport. La valeur par défaut est 5.  
-
-**EditSessionTimeout**  
-Spécifie le nombre de secondes jusqu'à l'expiration d'une session d'édition de rapport. La valeur par défaut est 7 200 secondes (deux heures).  
 
 **EnableCustomVisuals** ***(Power BI Report Server uniquement)*** Activez l’affichage des visuels personnalisés Power BI. Les valeurs sont True/False. *La valeur par défaut est True.*  
 
@@ -136,6 +139,8 @@ Spécifie le nombre de secondes jusqu'à l'expiration d'une session d'édition d
 **ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server uniquement)*** Définissez la durée au terme de laquelle vous souhaitez que l’actualisation planifiée expire. *La valeur par défaut est 120.*
 
 **ShowDownloadMenu** Active le menu de téléchargement des outils du client. *La valeur par défaut est true.*
+
+**SupportedHyperlinkSchemes** ***(Power BI Report Server uniquement)*** Définit une liste de schémas d’URI séparés par des virgules et pouvant être définis sur des actions de lien hypertexte dont la restitution est autorisée ou « &ast; » pour activer toutes les schémas de lien hypertexte. Par exemple, le paramètre « http, https » autoriserait les liens hypertexte vers « https://www. contoso.com », mais supprimerait les liens hypertextes vers « mailto:bill@contoso.com » ou « javascript:window.open(‘www.contoso.com’, ‘_blank’) ». La valeur par défaut est « &ast; ».
 
 **TimeInitialDelaySeconds** Définissez la durée pendant laquelle vous souhaitez que l’heure initiale soit différée, en secondes. *La valeur par défaut est 60.*
 

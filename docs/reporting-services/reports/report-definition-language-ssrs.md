@@ -1,6 +1,6 @@
 ---
 title: Langage de définition de rapport (SSRS, Report Definition Language) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 01/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reports
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8303c08d67a6a18b7dff13db60fccf5653cbae18
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6ab16fccf8808aca17a64d0764c84295bc56f351
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813507"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044595"
 ---
 # <a name="report-definition-language-ssrs"></a>Langage de définition de rapport (SSRS, Report Definition Language)
   Report Definition Language (RDL) est une représentation XML d’une définition de rapport [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Une définition de rapport contient les informations d'extraction de données et de mise en page d'un rapport. La spécification RDL est composée d’éléments XML qui sont conformes à une grammaire XML créée pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Vous pouvez ajouter vos propres fonctions personnalisées pour contrôler les valeurs, les styles et la mise en forme des éléments de rapport en accédant à des assemblys de code dans les fichiers de définition de rapport.  
@@ -41,7 +41,7 @@ ms.locfileid: "51813507"
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> Définition de schéma XML RDL  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est validé à l’aide d’un fichier XSD (XML Schema Definition). Le schéma définit les règles indiquant où des éléments RDL peuvent se trouver dans un fichier .rdl. Un élément inclut son type de données et sa cardinalité, c’est-à-dire le nombre d’occurrences autorisées. Un élément peut être simple ou complexe. Un élément simple n'a pas d'éléments enfants ni d'attributs. Un élément complexe a des enfants et éventuellement des attributs.  
   
- Par exemple, le schéma inclut l’élément RDL **ReportParameters**, qui est le type complexe **ReportParametersType**. Par convention, le type complexe d’un élément correspond au nom de l’élément suivi du mot **Type**. Un élément **ReportParameters** peut être contenu par l’élément **Report** (type complexe) et peut contenir des éléments **ReportParameter** . **ReportParameterType** est un type simple qui peut uniquement avoir l’une des valeurs suivantes : **Boolean**, **DateTime**, **Integer**, **Float**ou **String**. Pour plus d’informations sur les types de données de schéma XML, consultez [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)(Schéma XML - Partie 2 : Types de données - Deuxième édition).  
+ Par exemple, le schéma inclut l’élément RDL **ReportParameters**, qui est le type complexe **ReportParametersType**. Par convention, le type complexe d’un élément correspond au nom de l’élément suivi du mot **Type**. Un élément **ReportParameters** peut être contenu par l’élément **Report** (type complexe) et peut contenir des éléments **ReportParameter** . **ReportParameterType** est un type simple qui peut uniquement avoir l’une des valeurs suivantes : **Boolean**, **DateTime**, **Integer**, **Float** ou **String**. Pour plus d’informations sur les types de données de schéma XML, consultez la recommandation du W3C [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871).  
   
  Le XSD RDL est disponible dans le fichier ReportDefinition.xsd, situé dans le dossier Extras sur le CD-ROM du produit. Il est également disponible sur le serveur de rapports via l’URL suivante : `https://servername/reportserver/reportdefinition.xsd`.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "51813507"
 |----------|-----------------|  
 |**Binaire**|Propriété dotée d'une valeur binaire encodée en base 64.|  
 |**Boolean**|Propriété de l’objet ayant pour valeur **true** ou **false** . Sauf indication contraire, la valeur d’un objet Boolean facultatif omis est **False**.|  
-|**Date**|Propriété dotée d'une valeur date ou date/heure entièrement spécifiée au format de date ISO8601 : AAAA-MM-JJ[THH:MM[:SS[.S]]]|  
+|**Date**|Propriété dotée d'une valeur date ou date/heure entièrement spécifiée au format de date ISO8601 : AAAA-MM-JJ[THH:MM[:SS[.S]]].|  
 |**Enum**|Propriété dont la valeur est le texte d'une chaîne, qui doit appartenir à une liste de valeurs désignées.|  
 |**Float**|Propriété dotée d'une valeur flottante (Float). Une virgule (,) est utilisée comme séparateur décimal facultatif.|  
 |**Integer**|Propriété dotée d'une valeur entière (int32).|  

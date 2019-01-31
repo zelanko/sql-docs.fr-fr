@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9b2d920b55e412f3b9fa119db0a7cf893659fca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8c5e406cdab8f4950a897cc66556e54a1faa53f1
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805725"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Déployer le composant WebPart Visionneuse de rapports de SQL Server Reporting Services sur un site SharePoint
 
@@ -20,7 +20,7 @@ ms.locfileid: "52502816"
 
 Le composant WebPart Visionneuse de rapports est un composant WebPart personnalisé qui peut être utilisé pour afficher des rapports SQL Server Reporting Services (mode natif) au sein de votre site SharePoint. Vous pouvez l’utiliser pour afficher, parcourir, imprimer et exporter des rapports sur un serveur de rapports. Le composant WebPart Visionneuse de rapports est associé aux fichiers de définition de rapport (.rdl) qui sont traités par un serveur de rapports SQL Server Reporting Services ou un serveur Power BI Report Server. Il ne peut pas être utilisé avec les rapports Power BI hébergés dans Power BI Report Server.
 
-Utilisez les instructions suivantes pour déployer manuellement le package de solution qui ajoute le composant WebPart Visionneuse de rapports à un environnement SharePoint Server 2013 ou SharePoint Server 2016. Le déploiement de la solution est une étape indispensable pour configurer le composant WebPart.
+Utilisez les instructions suivantes pour déployer manuellement le package de solution qui ajoute le composant WebPart Report Viewer à un environnement SharePoint Server 2013, SharePoint Server 2016 ou SharePoint Server 2019. Le déploiement de la solution est une étape indispensable pour configurer le composant WebPart.
 
 **Le composant WebPart Visionneuse de rapports est un package de solution autonome et n’est pas associé au mode intégré SharePoint pour SQL Server Reporting Services.**
 
@@ -32,6 +32,7 @@ Utilisez les instructions suivantes pour déployer manuellement le package de so
 >
 
 **Versions SharePoint Server prises en charge :**
+* SharePoint Server 2019
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -67,7 +68,7 @@ Cette section montre comment déployer le package de solution sur votre batterie
     Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
     ```
 
-    **SharePoint 2016**
+    **SharePoint Server 2016 et 2019**
 
     ```
     Install-SPSolution -Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}

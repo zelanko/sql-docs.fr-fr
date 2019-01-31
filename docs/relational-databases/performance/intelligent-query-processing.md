@@ -13,20 +13,20 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 768f9d00e1eea9b97c32d35c240befdaf555122f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e07bfa316330a24e9a7b9db5a2486ddd7cad470c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254924"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087799"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Traitement de requêtes intelligent dans les bases de données SQL
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-La famille des fonctionnalités de **traitement de requêtes intelligent** inclut des fonctionnalités qui améliorent les performances des charges de travail existantes avec un minimum d’effort d’implémentation.
+La famille des fonctionnalités de **traitement de requêtes intelligent** inclut des fonctionnalités qui améliorent les performances des charges de travail existantes avec un minimum d’effort d’implémentation.  Vous pouvez tirer automatiquement parti de cette famille de fonctionnalités en adoptant le niveau de compatibilité de base de données applicable.
 
-![Fonctionnalités de traitement de requêtes intelligent](./media/3_IQPFeatureFamily2.png)
+![Fonctionnalités de traitement de requêtes intelligent](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>Traitement de requêtes adaptatif
 

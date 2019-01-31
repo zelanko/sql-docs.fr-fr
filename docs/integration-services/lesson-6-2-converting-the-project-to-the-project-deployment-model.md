@@ -1,7 +1,7 @@
 ---
-title: 'Étape 2 : Conversion du projet en modèle de déploiement de projet | Microsoft Docs'
+title: 'Étape 2 : Convertir le projet en modèle de déploiement de projet | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,48 +11,47 @@ ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce29d9e39b2abd46845a035183e6dee80f6c7236
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfa218409ae82f5e59f81e110cffafb1775c6dd3
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767707"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880413"
 ---
-# <a name="lesson-6-2---converting-the-project-to-the-project-deployment-model"></a>Leçon 6-2 : Conversion du projet en modèle de déploiement de projet
-Dans cette tâche, vous allez utiliser l'Assistant Conversion de projet Integration Services pour convertir le projet en modèle de déploiement de projet.  
+# <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>Leçon 6-2 : Convertir le projet en modèle de déploiement de projet
+
+Dans cette tâche, vous utilisez l’Assistant Conversion de projet Integration Services pour convertir le projet en modèle de déploiement de projet.  
   
-### <a name="converting-the-project-to-the-project-deployment-model"></a>Conversion du projet en modèle de déploiement de projet  
+1.  Dans le menu **Projet**, sélectionnez **Convertir en modèle de déploiement de projet**.  
   
-1.  Dans le menu Projet, cliquez sur Convertir en modèle de déploiement de projet.  
+2.  Dans la page **Introduction** de l’**Assistant Conversion de projet Integration Services**, passez en revue les étapes, puis sélectionnez **Suivant**.  
   
-2.  Dans la page d'introduction de l'Assistant Conversion de projet Integration Services, passez en revue les étapes, puis cliquez sur Suivant.  
+3.  Dans la page **Sélectionner les packages**, dans la liste **Packages**, décochez toutes les cases à l’exception de **Lesson 6.dtsx**, puis sélectionnez **Suivant**.  
   
-3.  Dans la page Sélectionner les packages, dans la liste Packages, décochez toutes les cases à l'exception de Lesson 6.dtsx, puis cliquez sur Suivant.  
+4.  Dans la page **Spécifier les propriétés du projet**, sélectionnez **Suivant**.  
   
-4.  Dans la page Spécifier les propriétés du projet, cliquez sur Suivant.  
+5.  Dans la page **Mettre à jour la tâche d’exécution de package**, sélectionnez **Suivant**.  
   
-5.  Dans la page Mettre à jour la tâche d'exécution de package, cliquez sur Suivant.  
+6.  Dans la page **Sélectionner les configurations**, assurez-vous que le package **Lesson 6.dtsx** est sélectionné dans la liste **Configurations**, puis sélectionnez **Suivant**.  
   
-6.  Dans la page Sélectionner les configurations, assurez-vous que le package Lesson 6.dtsx est sélectionné dans la liste Configurations, puis cliquez sur Suivant.  
+7.  Dans la page **Créer des paramètres**, vérifiez que le package **Lesson 6.dtsx** est sélectionné.  Vérifiez que la valeur pour **Étendue** est **Package** dans la liste **Propriétés de configuration**, puis sélectionnez **Suivant**.  
   
-7.  Dans la page Créer des paramètres, assurez-vous que le package Lesson 6.dtsx est sélectionné et qu'Étendue est définie sur Package, dans la liste Propriétés de configuration, puis cliquez sur Suivant.  
+8.  Dans la page **Configurer les paramètres**, vérifiez que les valeurs **Nom** et **Valeur** sont identiques à celles spécifiées dans la leçon 5 pour la variable et la valeur de configuration, puis sélectionnez **Suivant**.  
   
-8.  Dans la page Configurer les paramètres, vérifiez que les valeurs Nom et Valeur sont identiques à celles spécifiées dans la leçon 5 pour la variable et la valeur de configuration, puis cliquez sur Suivant.  
+9. Dans la page **Révision**, dans le volet **Résumé**, notez que l’Assistant a utilisé les informations du fichier de configuration pour définir les **propriétés** converties.  
   
-9. Dans la page Révision, dans le volet Résumé, notez que l'Assistant a utilisé les informations du fichier de configuration pour définir les propriétés à convertir.  
+10. Sélectionnez **Convertir**.  
   
-10. Cliquez sur Convertir.  
+    Une fois la conversion terminée, vous voyez un message d’avertissement indiquant que les modifications ne sont pas enregistrées tant que vous n’avez pas enregistré le projet. Sélectionnez **OK** pour fermer la boîte de dialogue d’avertissement.  
   
-    Lorsque la conversion est terminée, un message avertit que les modifications ne sont pas enregistrées tant que le projet n'est pas enregistré dans Visual Studio. Cliquez sur OK dans la boîte de dialogue d'avertissement.  
+11. Dans l’**Assistant Conversion de projet Integration Services**, sélectionnez **Fermer**.  
   
-11. Dans l'Assistant Conversion de projet Integration Services, cliquez sur Fermer.  
+12. Dans **SQL Server Data Tools**, sélectionnez le menu **Fichier**, puis **Enregistrer** pour enregistrer le package converti.  
   
-12. Dans SQL Server Data Tools, cliquez sur le menu Fichier, puis cliquez sur Enregistrer pour enregistrer le package converti.  
+13. Sélectionnez l’onglet **Paramètres** et vérifiez que le package contient désormais un paramètre pour **VarFolderName**. Cette valeur de paramètre correspond au chemin spécifié pour le dossier **New Sample Data** dans le fichier de configuration de la leçon 5.  
   
-13. Cliquez sur l'onglet Paramètres et vérifiez que le package contient désormais un paramètre pour VarFolderName et que la valeur est le même chemin d'accès que celui spécifié pour le dossier New Sample Data du fichier de configuration de la leçon 5.  
-  
-## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 3 : Test du package de la leçon 6](../integration-services/lesson-6-3-testing-the-lesson-6-package.md)  
+## <a name="go-to-next-task"></a>Passer à la tâche suivante
+[Étape 3 : Tester le package de la leçon 6](../integration-services/lesson-6-3-testing-the-lesson-6-package.md)  
   
   
   

@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c854d2e332d38443646de560a906826c419705b7
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 8f7de9a4f6e99c60b0bbe560d57f6e7adf397c2e
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300546"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087908"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Journal des modifications (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -314,7 +314,7 @@ L’absence d’étiquette *préversion 5* ou *préversion 6* indique que le c
   - Résolution d’un plantage pendant l’utilisation du moniteur d’activité des travaux (avec des filtres)
 
 - **Prise en charge des instances gérées**
-  - Amélioration/perfectionnement de la prise en charge des instances gérées : désactivation des options non prises en charge dans l’interface utilisateur et correction de l’option Afficher les journaux d’audit pour gérer la cible d’audit d’URL.
+  - Amélioration/perfectionnement de la prise en charge des instances managées : désactivation des options non prises en charge dans l’interface utilisateur et correction de l’option Afficher les journaux d’audit pour gérer la cible d’audit d’URL.
   - L’Assistant « Générer et publier des scripts » génère un script pour les clauses CREATE DATABASE non prises en charge
   - L’option Statistiques des requêtes actives a été désactivée pour les instances CL
   - Propriétés de la base de données -> Fichiers générait un script incorrect pour ALTER DB ADD FILE

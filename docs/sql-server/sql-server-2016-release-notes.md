@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7252b672eb29206bbd77cc92cdb3de68f3d6c91
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c243af9bdc0963ba83e94f8e35d90b68c5874a2c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524323"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044376"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notes de publication de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,7 @@ ms.locfileid: "52524323"
 Il peut s’avérer nécessaire de redémarrer le système après l’installation de SQL Server 2016 SP2. Nous vous recommandons de planifier et d’effectuer un redémarrage après l’installation de SQL Server 2016 SP2.
 
 Améliorations relatives aux performances et à la scalabilité incluses dans SQL Server 2016 SP2.
+
 |Fonctionnalité|Description|Informations complémentaires|
 |   --- |   --- |   --- |
 |Procédure améliorée de nettoyage de base de données de distribution |   Une table de base de données de distribution de grande taille causait une situation de blocage. Cette amélioration vise à éviter certains scénarios de blocage ou d’interblocage. |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
@@ -53,6 +54,7 @@ Améliorations relatives aux performances et à la scalabilité incluses dans SQ
 |Mise à jour des statistiques automatique améliorée pour les statistiques incrémentielles |    Dans certains scénarios, lorsque plusieurs modifications des données ont eu lieu sur plusieurs partitions d’une table entraînant le compteur de modifications totales pour les statistiques incrémentielles à dépasser le seuil de mise à jour automatique, mais sans que les partitions individuelles ne dépassent le seuil de mise à jour automatique, la mise à jour des statistiques peut être retardée jusqu’à ce que davantage de modifications aient lieu dans la table. Ce comportement est corrigé sous l’indicateur de trace 11024.   |       |
 
 Améliorations relatives à la prise en charge et aux diagnostics incluses dans SQL Server 2016 SP2.
+
 |Fonctionnalité |Description   |Informations complémentaires   |
 |   --- |   --- |   --- |
 |Prise en charge complète de DTC pour les bases de données dans un groupe de disponibilité    |   Les transactions entre bases de données faisant partie d’un groupe de disponibilité ne sont actuellement pas prises en charge pour SQL Server 2016. Avec SQL Server 2016 SP2, nous présentons la prise en charge complète des transactions distribuées avec des bases de données de groupes de disponibilité.   |       |
@@ -110,12 +112,12 @@ Le tableau suivant récapitule les principales améliorations fournies dans SQL 
 |CREATE ou ALTER|Déployer des objets tels que des procédures stockées, des déclencheurs, des fonctions définies par l’utilisateur et des vues.|[Blog relatif au moteur de base de données SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
 |Prise en charge de DROP TABLE pour la réplication|Prise en charge de la DLL TABLE DROP pour la réplication afin de permettre la suppression d’articles de réplication.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
 |Signature du pilote Filestream RsFx|Le pilote Filestream RsFx est signé et certifié à l’aide du portail du tableau de bord du centre de développement du matériel Windows (portail de développement), ce qui permet d’installer le pilote Filestream RsFx SQL Server 2016 SP1 sur Windows Server 2016 et Windows 10 sans aucun problème.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|LPIM sur un compte de service SQL - identification par programmation|Permettre aux administrateurs de base de données d’identifier par programmation si le privilège LPIM (Verrouiller les pages en mémoire) est en vigueur au moment du démarrage du service.|[Choix des développeurs : Identifier par programmation des privilèges LPIM et IFI dans SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|LPIM sur un compte de service SQL - identification par programmation|Permettre aux administrateurs de base de données d’identifier par programmation si le privilège LPIM (Verrouiller les pages en mémoire) est en vigueur au moment du démarrage du service.|[Developers Choice: Programmatically identify LPIM and IFI privileges in SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
 |Nettoyage manuel du suivi des modifications|Une nouvelle procédure stockée nettoie à la demande la table interne de suivi des modifications.| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
 |Changements de Parallel INSERT..SELECT pour les tables temporaires locales|Nouvelle fonctionnalité Parallel INSERT dans les opérations INSERT..SELECT.|[SQL Server Customer Advisory Team](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
 |Showplan XML|Diagnostics étendus incluant un avertissement d’allocation et une mémoire maximale activés pour une requête, des indicateurs de trace activés, ainsi que d’autres informations de diagnostic. | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
 |Mémoire de classe de stockage|Améliore le traitement des transactions à l’aide de la mémoire de classe de stockage dans Windows Server 2016, ce qui permet d’accélérer les temps de validation des transactions par ordre de grandeur.|[Blog relatif au moteur de base de données SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
-|USE HINT|Utilisez l’option de requête `OPTION(USE HINT('<option>'))` pour modifier le comportement de l’optimiseur de requête à l’aide d’indicateurs de niveau requête pris en charge. Contrairement à QUERYTRACEON, l’option USE HINT ne nécessite pas de privilèges sysadmin.|[Choix des développeurs : Indicateurs de requête USE HINT](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
+|USE HINT|Utilisez l’option de requête `OPTION(USE HINT('<option>'))` pour modifier le comportement de l’optimiseur de requête à l’aide d’indicateurs de niveau requête pris en charge. Contrairement à QUERYTRACEON, l’option USE HINT ne nécessite pas de privilèges sysadmin.|[Developers Choice: USE HINT query hints](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
 |Ajouts d’événements XEvent|Nouvelles fonctionnalités de diagnostics XEvent et Perfmon améliorent la résolution des problèmes de latence.|[Événements étendus](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
 
 De plus, notez les correctifs suivants :
@@ -141,9 +143,9 @@ Il peut s’avérer nécessaire de redémarrer le système après l’installati
 -   [Documentation du produit (DG)](#bkmk_ga_docs)
  
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
-**Problème et impact sur le client :** Microsoft a identifié un problème qui affecte les fichiers binaires Microsoft VC ++ 2013 Runtime qui sont installés en tant que composants requis par SQL Server 2016. Une mise à jour est disponible pour résoudre ce problème. Si cette mise à jour des fichiers binaires du runtime VC n’est pas installée, SQL Server 2016 risque de rencontrer des problèmes de stabilité dans certains scénarios. Avant d’installer SQL Server 2016, vérifiez si l’ordinateur a besoin du correctif décrit dans l’ [article 3164398 de la Base de connaissances](https://support.microsoft.com/kb/3164398). Le correctif est également inclus dans [Package de mises à jour cumulatives 1 (CU1) pour SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338). 
+**Problème et impact sur le client :** Microsoft a identifié un problème qui affecte les fichiers binaires Microsoft VC ++ 2013 Runtime qui sont installés en tant que prérequis par SQL Server 2016. Une mise à jour est disponible pour résoudre ce problème. Si cette mise à jour des fichiers binaires du runtime VC n’est pas installée, SQL Server 2016 risque de rencontrer des problèmes de stabilité dans certains scénarios. Avant d’installer SQL Server 2016, vérifiez si l’ordinateur a besoin du correctif décrit dans l’ [article 3164398 de la Base de connaissances](https://support.microsoft.com/kb/3164398). Le correctif est également inclus dans [Package de mises à jour cumulatives 1 (CU1) pour SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338). 
 
-**Résolution :** Utilisez une des solutions suivantes :
+**Résolution :** Utilisez l’une des solutions suivantes :
 
 - Installez la [Mise à jour pour Visual C++ 2013 et de Visual C++ Redistributable Package (KB 3138367)](https://support.microsoft.com/kb/3138367). Le recours à l’article de la Base de connaissances est la méthode de résolution recommandée. Vous pouvez installer cette mise à jour avant ou après avoir installé SQL Server 2016. 
 
@@ -159,24 +161,24 @@ Il peut s’avérer nécessaire de redémarrer le système après l’installati
  
     Si vous utilisez **KB 3164398**, vous pouvez l’installer en même temps que SQL Server, via Microsoft Update ou à partir du Centre de téléchargement Microsoft. 
 
-    - **Pendant l’installation de SQL Server 2016 :** si l’ordinateur exécutant le programme d’installation de SQL Server a accès à Internet, le programme d’installation de SQL Server recherche la mise à jour pendant l’installation générale de SQL Server. Si vous acceptez la mise à jour, le programme d’installation télécharge et met à jour les fichiers binaires pendant l’installation.
+    - **Pendant l’installation de SQL Server 2016 :** si l’ordinateur exécutant le programme d’installation de SQL Server a accès à Internet, le programme d’installation de SQL Server recherche la mise à jour pendant l’installation générale de SQL Server. Si vous acceptez la mise à jour, le programme d’installation télécharge et met à jour les fichiers binaires pendant l’installation.
 
-    - **Microsoft Update :** la mise à jour est disponible auprès de Microsoft Update en tant que mise à jour critique de SQL Server 2016 non liée à la sécurité. Une installation via Microsoft Update après SQL Server 2016 nécessite le redémarrage du serveur à la suite de la mise à jour. 
+    - **Microsoft Update :** la mise à jour est disponible auprès de Microsoft Update en tant que mise à jour critique de SQL Server 2016 non liée à la sécurité. Une installation via Microsoft Update après SQL Server 2016 nécessite le redémarrage du serveur à la suite de la mise à jour. 
 
-    - **Centre de téléchargement :** enfin, la mise à jour est accessible à partir du Centre de téléchargement Microsoft. Vous pouvez télécharger le logiciel nécessaire à la mise à jour et l’installer sur les serveurs équipés de SQL Server 2016. 
+    - **Centre de téléchargement :** enfin, la mise à jour est accessible à partir du Centre de téléchargement Microsoft. Vous pouvez télécharger le logiciel nécessaire à la mise à jour et l’installer sur les serveurs équipés de SQL Server 2016. 
 
 
 ### <a name="bkmk_ga_stretch"></a>Stretch Database
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>Problème lié à la présence d’un caractère spécifique dans le nom d’une base de données ou d’une table
 
-**Problème et impact sur le client :** l’activation de Stretch Database sur une base de données ou une table échoue avec une erreur. Ce problème se produit quand le nom de l’objet comprend un caractère qui est traité comme un caractère différent quand il est converti de minuscule en majuscule. Le caractère « ƒ » (créé en tapant Alt+159) est un exemple de caractère provoquant ce problème.
+**Problème et impact sur le client :** la tentative d’activation de Stretch Database sur une base de données ou une table échoue avec une erreur. Ce problème se produit quand le nom de l’objet comprend un caractère qui est traité comme un caractère différent quand il est converti de minuscule en majuscule. Le caractère « ƒ » (créé en tapant Alt+159) est un exemple de caractère provoquant ce problème.
 
 **Solution de contournement :** si vous voulez activer Stretch Database sur la base de données ou la table, la seule solution est de renommer l’objet et de supprimer le caractère qui pose problème.
 
 #### <a name="problem-with-an-index-that-uses-the-include-keyword"></a>Problème lié à un index qui utilise le mot clé INCLUDE
 
-**Problème et impact sur le client :** l’activation de Stretch Database sur une table dont l’index utilise le mot clé INCLUDE pour inclure des colonnes supplémentaires dans l’index échoue avec une erreur.
+**Problème et impact sur le client :** la tentative d’activation de Stretch Database sur une table dont un index utilise le mot clé INCLUDE pour inclure des colonnes supplémentaires dans l’index échoue avec une erreur.
 
 **Solution de contournement :** supprimez l’index qui utilise le mot clé INCLUDE, activez Stretch Database sur la table, puis recréez l’index. Dans ce cas, veillez à suivre les pratiques et stratégies de maintenance de votre organisation pour limiter autant que possible ou éviter tout impact sur les utilisateurs de la table concernée.
 
@@ -184,9 +186,9 @@ Il peut s’avérer nécessaire de redémarrer le système après l’installati
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>Problème de nettoyage de données automatique sur les éditions autres que Enterprise et Developer
 
- **Problème et impact sur le client :** le nettoyage de données automatique échoue sur les éditions autres que Enterprise et Developer. Par voie de conséquence, dans la mesure où les données ne sont pas purgées manuellement, l’espace utilisé par le Magasin des requêtes croît au fil du temps jusqu’à atteindre la limite configurée. Si ce problème n’est pas corrigé, l’espace disque alloué pour les journaux d’erreurs se remplit également, car chaque tentative de nettoyage génère un fichier de vidage. La période d’activation du nettoyage dépend de la fréquence de la charge de travail, mais elle ne dépasse pas 15 minutes.
+ **Problème et impact sur le client :** le nettoyage de données automatique échoue sur les éditions qui ne sont pas Entreprise et Developer. Par voie de conséquence, dans la mesure où les données ne sont pas purgées manuellement, l’espace utilisé par le Magasin des requêtes croît au fil du temps jusqu’à atteindre la limite configurée. Si ce problème n’est pas corrigé, l’espace disque alloué pour les journaux d’erreurs se remplit également, car chaque tentative de nettoyage génère un fichier de vidage. La période d’activation du nettoyage dépend de la fréquence de la charge de travail, mais elle ne dépasse pas 15 minutes.
 
- **Solution de contournement :** si vous prévoyez d’utiliser le magasin de requêtes sur des éditions autres que Enterprise et Developer, vous devez désactiver explicitement les stratégies de nettoyage. Cela peut être fait à partir de SQL Server Management Studio (page Propriétés de la base de données) ou via un script Transact-SQL :
+ **Solution de contournement :** si vous prévoyez d’utiliser le Magasin des requêtes sur des éditions autres que les éditions Entreprise et Developer, vous devez désactiver explicitement les stratégies de nettoyage. Cela peut être fait à partir de SQL Server Management Studio (page Propriétés de la base de données) ou via un script Transact-SQL :
 
 ```ALTER DATABASE <database name> SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 0), SIZE_BASED_CLEANUP_MODE = OFF)```
 
@@ -204,9 +206,9 @@ De même, exécutez les procédures stockées ci-dessous du magasin de requêtes
 
 
 ###  <a name="bkmk_ga_docs"></a> Documentation du produit (DG) 
- **Problème et impact sur le client :** la version téléchargeable de la documentation de SQL Server 2016 n’est pas encore disponible. Quand vous utilisez le Gestionnaire de bibliothèque d’aide pour **installer du contenu à partir d’une source en ligne**, vous voyez la documentation de SQL Server 2012 et SQL Server 2014, mais il n’existe aucune option pour la documentation de SQL Server 2016.    
+ **Problème et impact sur le client :** la version téléchargeable de la documentation de SQL Server 2016 n’est pas encore disponible. Quand vous utilisez le Gestionnaire de bibliothèque d’aide pour **installer du contenu à partir d’une source en ligne**, vous voyez la documentation de SQL Server 2012 et SQL Server 2014, mais il n’existe aucune option pour la documentation de SQL Server 2016.    
     
- **Solution de contournement :** utilisez l’une des solutions de contournement suivantes :    
+ **Solution de contournement :** utilisez l’une des solutions de contournement suivantes :    
     
  ![Gérer les paramètres de l’aide pour SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Gérer les paramètres de l’aide pour SQL Server")    
     
@@ -214,7 +216,7 @@ De même, exécutez les procédures stockées ci-dessous du magasin de requêtes
     
 -   Utilisez l’option **Installer du contenu à partir d’une source en ligne** , puis téléchargez le contenu SQL Server 2014.    
 
- **Aide (F1) :** par défaut, quand vous appuyez sur F1 dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], la version en ligne de l’article d’aide F1 s’affiche dans le navigateur. Le problème vient de l’aide basée sur le navigateur même si vous avez configuré et installé l’aide locale. 
+ **Aide (F1) :** par défaut, quand vous appuyez sur F1 dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], la version en ligne de l’article d’aide F1 s’affiche dans le navigateur. Le problème vient de l’aide basée sur le navigateur même si vous avez configuré et installé l’aide locale. 
 
 **Mise à jour de contenu :** Dans SQL Server Management Studio et Visual Studio, l’application Visionneuse d’aide peut se figer (se bloquer) pendant l’ajout de la documentation. Pour résoudre ce problème, effectuez les étapes ci-dessous. Pour plus d’informations sur ce problème, consultez [La visionneuse d’aide Visual Studio se fige sur l’écran de démarrage](https://msdn.microsoft.com/library/mt654096.aspx).    
     
