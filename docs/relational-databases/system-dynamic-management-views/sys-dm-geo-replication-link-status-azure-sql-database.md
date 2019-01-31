@@ -1,7 +1,7 @@
 ---
 title: Sys.dm_geo_replication_link_status (base de données Azure SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/13/2016
+ms.date: 01/28/2019
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,14 +20,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 251dcb7121b568444387a1e864294095a556b827
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 94d5a2e924cfe4aa7625f6cfce40c5758eecb6a5
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396019"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421156"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque lien de réplication entre les bases de données primaires et secondaires dans un partenariat de géo-réplication. Cela inclut les bases de données primaires et secondaire. S’il existe plusieurs liens de réplication continue pour une base de données primaire donnée, cette table contient une ligne pour chacune des relations. La vue est créée dans toutes les bases de données, y compris la logique principale. Cependant, l'interrogation de cette vue dans la base de données master logique retourne un ensemble vide.  
@@ -35,8 +36,8 @@ ms.locfileid: "52396019"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|ID unique du lien de réplication.|  
-|partner_server|**sysname**|Nom du serveur logique qui contient la base de données lié.|  
-|partner_database|**sysname**|Nom de la base de données lié sur le serveur logique lié.|  
+|partner_server|**sysname**|Nom du serveur de base de données SQL contenant la base de données lié.|  
+|partner_database|**sysname**|Nom de la base de données liée sur le serveur SQL Database lié.|  
 |last_replication|**datetimeoffset**|Horodatage de l’accusé de réception de la dernière transaction par la base de données secondaire en fonction de l’horloge de la base de données primaire. Cette valeur est disponible sur la base de données primaire.|  
 |replication_lag_sec|**Int**|Différence de temps en secondes entre la valeur last_replication et l’horodateur de validation de cette transaction sur le serveur principal basé sur l’horloge de la base de données primaire.  Cette valeur est disponible sur la base de données primaire.|  
 |replication_state|**tinyint**|L’état de géo-réplication pour cette base de données :.<br /><br /> 1 = Seeding. La cible de géo-réplication est en cours d’amorçage, mais les deux bases de données ne sont pas encore synchronisés. Jusqu'à ce que l’amorçage terminé, vous ne peut pas se connecter à la base de données secondaire. Suppression de base de données secondaire du site principal annulera l’opération d’amorçage.<br /><br /> 2 = mise à jour. La base de données secondaire est dans un état transactionnellement cohérent et est constamment synchronisé avec la base de données primaire.<br /><br /> 4 = messages interrompus. Il ne s'agit pas d'une relation de copie continue active. Cet état indique généralement que la bande passante disponible pour l'interlien est insuffisante pour le niveau d'activité de transaction dans la base de données primaire. Toutefois, la relation de copie continue est toujours intacte.|  
