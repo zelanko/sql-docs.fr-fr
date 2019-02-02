@@ -1,7 +1,7 @@
 ---
 title: sp_addrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/20/2017
+ms.date: 01/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 610c4c6a5692496ff8bcf6bd2650557264f70862
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d7b47670d56ab916a8c2f263f9ddee3dc85c0a6
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659647"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652538"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,24 +38,16 @@ ms.locfileid: "47659647"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-sp_addrolemember [ @rolename = ] 'role',  
-    [ @membername = ] 'security_account'  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-sp_addrolemember 'role', 'security_account'  
-```  
+```
+sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
+
+```    
   
 ## <a name="arguments"></a>Arguments  
- [ @rolename=] '*rôle*'  
+ [ @rolename= ] '*role*'  
  Nom du rôle de base de données dans la base de données actuelle. *rôle* est un **sysname**, sans valeur par défaut.  
   
- [ @membername=] '*auxquels celui-ci a*'  
+ [ @membername= ] '*security_account*'  
  Compte de sécurité ajouté au rôle. *celui-ci* est un **sysname**, sans valeur par défaut. *celui-ci* peut être un utilisateur de base de données, d’un rôle de base de données, d’une connexion de Windows ou d’un groupe de Windows.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -70,7 +62,7 @@ sp_addrolemember 'role', 'security_account'
   
  Utilisez uniquement sp_addrolemember pour ajouter un membre à un rôle de base de données. Pour ajouter un membre à un rôle de serveur, utilisez [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'ajout de membres à des rôles de base de données flexibles nécessite l'un des éléments suivants :  
   
 -   Appartenance au rôle de base de données fixe db_securityadmin ou db_owner.  
@@ -96,14 +88,14 @@ CREATE USER Mary5 FOR LOGIN [Contoso\Mary5] ;
 GO  
 ```  
   
-### <a name="b-adding-a-database-user"></a>B. Ajout d'un utilisateur de base de données  
+### <a name="b-adding-a-database-user"></a>b. Ajout d'un utilisateur de base de données  
  L'exemple suivant ajoute l'utilisateur de base de données `Mary5` au rôle de base de données `Production` dans la base de données actuelle.  
   
 ```  
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. Ajout d'une connexion Windows  
  L’exemple suivant ajoute la connexion `LoginMary` à la `AdventureWorks2008R2` base de données en tant qu’utilisateur `UserMary`. L'utilisateur `UserMary` est ensuite ajouté au rôle `Production`.  

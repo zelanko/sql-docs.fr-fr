@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 44ed335524d21cd4931722a20be4eb0da5681603
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 3731f60047e22da7209b6c131ab93b28a20a99c2
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044706"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652588"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quelles sont les nouveautés d’Analytique Platform System, un entrepôt de données MPP montée en puissance
 Consultez les nouveautés introduite dans les dernières mises à jour de matériel pour Microsoft Analytique Platform System (APS). APS est une appliance de montée en puissance en local qui héberge MPP SQL Server Parallel Data Warehouse. 
@@ -28,14 +28,14 @@ Date de publication - décembre 2018
 APS CU7.3 améliore les performances de requête avec élimination de sous-expressions communes dans l’optimiseur de requête SQL. L’amélioration améliore les requêtes de deux manières. Le premier, c’est la capacité à identifier et éliminer ces expressions permettent de réduire le temps de compilation SQL. L’avantage de la deuxième et le plus important est les opérations de déplacement de données pour ces sous-expressions redondantes sont éliminées ainsi les temps d’exécution de requêtes devient plus rapide. Vous pouvez trouver une explication détaillée de cette fonctionnalité [ici](common-sub-expression-elimination.md).
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Connecteur APS Informatica pour Informatica 10.2.0 publié
-Nous avons publié une nouvelle version des connecteurs d’Informatica pour les points d’accès qui fonctionne avec Informatica version 10.2.0. Les nouveaux connecteurs peuvent être téléchargées à partir de [site de téléchargement](https://www.microsoft.com/download/details.aspx?id=57472).
+Nous avons publié une nouvelle version des connecteurs d’Informatica pour les points d’accès qui fonctionne avec Informatica version 10.2.0 et 10.2.0 1 de correctif logiciel. Les nouveaux connecteurs peuvent être téléchargées à partir de [site de téléchargement](https://www.microsoft.com/download/details.aspx?id=57472).
 
 #### <a name="supported-versions"></a>Versions prises en charge
 
 | Version de points d’accès | Informatica PowerCenter | Pilote |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
-| APS 2016 et versions ultérieures | 10.2.0 | SQL Server Native Client 11.x |
+| APS 2016 et versions ultérieures | 10.2.0, 10.2.0 correctif 1 | SQL Server Native Client 11.x |
 
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2

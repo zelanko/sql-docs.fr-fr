@@ -1,7 +1,7 @@
 ---
-title: Sys.dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs
+title: sys.dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/23/2017
+ms.date: 01/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71493b066385840d065ff51e1f202c547686f774
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e19451a24d35e63fa84a17d409d19b5c9b02ccc3
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857107"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570722"
 ---
 # <a name="sysdmhadrclustermembers-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ ms.locfileid: "47857107"
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**MEMBER_NAME**|**nvarchar(128)**|Nom de membre, qui peut être un nom d'ordinateur, une lettre de lecteur ou un chemin d'accès de partage de fichiers.|  
-|**member_type**|**tinyint**|Type du membre. Peut prendre une des valeurs suivantes :<br /><br /> 0 = Nœud WSFC<br /><br /> 1 = Disque témoin<br /><br /> 2 = Témoin de partage de fichiers|  
-|**member_type_desc**|**nvarchar(50)**|Description de **member_type**, l’un des :<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS|  
+|**member_name**|**nvarchar(128)**|Nom de membre, qui peut être un nom d'ordinateur, une lettre de lecteur ou un chemin d'accès de partage de fichiers.|  
+|**member_type**|**tinyint**|Type du membre. Peut prendre une des valeurs suivantes :<br /><br /> 0 = Nœud WSFC<br /><br /> 1 = Disque témoin<br /><br /> 2 = Témoin de partage de fichiers<br /><br /> 3 = témoin cloud|  
+|**member_type_desc**|**nvarchar(50)**|Description de **member_type**, l’un des :<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
 |**member_state**|**tinyint**|État du membre. Peut prendre une des valeurs suivantes :<br /><br /> 0 = Hors connexion<br /><br /> 1 = En ligne|  
 |**member_state_desc**|**nvarchar(60)**|Description de **member_state**, l’un des :<br /><br /> UP<br /><br /> VERS LE BAS|  
-|**number_of_quorum_votes**|**tinyint**|Nombre de votes de quorum détenus par ce membre de quorum. Pour les quorums Non majoritaire - Disque uniquement, cette valeur est par défaut 0. Pour les autres types de quorum, cette valeur est par défaut 1.|  
+|**number_of_quorum_votes**|**tinyint**|Nombre de votes de quorum détenus par ce membre de quorum. Pour aucune majorité : Quorums seul disque, cette valeur par défaut est 0. Pour les autres types de quorum, cette valeur est par défaut 1.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
