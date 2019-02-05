@@ -1,7 +1,7 @@
 ---
 title: Connexion avec chiffrement SSL | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78cdeb64cbd0bc76109c7bd3db784c2262ae80ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14f33ac9e6ab8d17954039f4ae0fca1f11e46af5
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812187"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737130"
 ---
 # <a name="connecting-with-ssl-encryption"></a>Connexion avec le chiffrement SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -64,8 +64,7 @@ String connectionUrl =
 > [!NOTE]  
 >  Vous pouvez également définir la valeur des propriétés de connexion en utilisant les méthodes **setter** appropriées fournies par la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Si la propriété **encrypt** est définie sur **true** et que la propriété **trustServerCertificate** est définie sur **false**, et si le nom du serveur dans la chaîne de connexion ne correspond pas au nom du serveur du certificat SSL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le message d’erreur suivant s’affiche : Le pilote n’a pas pu établir de connexion sécurisée au serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du chiffrement SSL (Secure Sockets Layer). Erreur : « java.security.cert.CertificateException : Échec de la validation du nom de serveur dans un certificat lors de l'initialisation SSL (Secure Sockets Layer). »  
-  
+ Si le **chiffrer** propriété est définie sur **true** et **trustServerCertificate** propriété est définie sur **false** et si le nom de serveur dans le chaîne de connexion ne correspond pas au nom du serveur dans le certificat SSL, l’erreur suivante s’affichera : `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. Depuis la version 7.2, le pilote prend en charge le modèle de caractère générique correspondant dans l’étiquette la plus à gauche du nom du serveur dans le certificat SSL.
 ## <a name="see-also"></a> Voir aussi  
  [Utilisation du chiffrement SSL](../../connect/jdbc/using-ssl-encryption.md)   
  [Sécurisation des applications de pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
