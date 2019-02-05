@@ -14,15 +14,15 @@ ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 891e3e41bab9be82145bfeb905e9243b7bf31340
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 7132cacb79266243aab94e0b71e18b4a8cdcbb0f
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044346"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689922"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de ressources du gouverneur de ressources
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Dans le gouverneur de ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un pool de ressources représente un sous-ensemble des ressources physiques d'une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le gouverneur de ressources vous permet de spécifier des limites sur la quantité d'UC, les E/S physiques et la mémoire que les demandes d'application entrantes peuvent utiliser avec le pool de ressources. Chaque pool de ressources peut contenir un ou plusieurs groupes de charges de travail. Lorsqu'une session est démarrée, le classifieur du gouverneur de ressources affecte la session à un groupe de charges de travail spécifique, et la session doit s'exécuter à l'aide des ressources attribuées au groupe de charges de travail.  
   

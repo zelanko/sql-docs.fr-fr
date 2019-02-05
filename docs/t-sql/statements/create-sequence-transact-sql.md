@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226526"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428646"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ En cas de création avec l’option **CACHE**, un arrêt inattendu (tel qu’une
   
 3.  La valeur calculée est retournée à l'instruction appelante.  
   
- **Option CACHE quand le cache est épuisé**  
+**Option CACHE quand le cache est épuisé**  
   
  Le processus suivant se produit chaque fois qu’un objet séquence est demandé pour générer la valeur suivante de l’option **CACHE** si le cache est épuisé :  
   
@@ -139,7 +139,7 @@ En cas de création avec l’option **CACHE**, un arrêt inattendu (tel qu’une
   
 3.  La ligne de table système pour l'objet séquence est verrouillée, et la valeur calculée à l'étape 2 (dernière valeur) est écrite dans la table système. Un xevent de cache épuisé est déclenché pour notifier l'utilisateur de la nouvelle valeur rendue persistante.  
   
- **Option NO CACHE**  
+**Option NO CACHE**  
   
  Le processus suivant se produit chaque fois qu’un objet séquence est demandé pour générer la valeur suivante de l’option **NON CACHE** :  
   
