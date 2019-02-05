@@ -12,9 +12,9 @@ items:
     items:
     - name: 'Étape 1 : Configurer l’environnement de développement pour le développement Java'
       href: step-1-configure-development-environment-for-java-development.md
-    - name: 'Étape 2 : Créer une base de données SQL pour le développement Java'
+    - name: 'Étape 2 : Créer une base de données SQL pour le développement Java'
       href: step-2-create-a-sql-database-for-java-development.md
-    - name: 'Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Java'
+    - name: 'Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de Java'
       href: step-3-proof-of-concept-connecting-to-sql-using-java.md
   - name: Présentation du pilote JDBC
     href: overview-of-the-jdbc-driver.md
@@ -172,6 +172,8 @@ items:
         href: using-basic-data-types.md
       - name: Utilisation des types de données spatiales
         href: use-spatial-datatypes.md
+      - name: Utilisation du type de données Sql_variant
+        href: using-sql-variant-datatype.md
       - name: Présentation des transactions
         href: understanding-transactions.md
       - name: Utilisation d'une connexion
@@ -269,10 +271,10 @@ items:
       - name: Exemple de version Azure Key Vault 6.2.2
         href: azure-key-vault-sample-version-6.2.2.md
       - name: Exemple de version Azure Key Vault 7.0.0
-        href: azure-key-vault-sample-version-7-0-0.md
-ms.openlocfilehash: 3c63ab259dc117d5f0d7a5193dacdcd4cdc90f9d
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+        href: azure-key-vault-sample.md
+ms.openlocfilehash: 0cbb07039cfce807ee3223b52bdc41fe77409773
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051131"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736800"
