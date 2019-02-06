@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4876b890067bd851167bc1e3e3c355c9701569d5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: af6d4df964820ced9f4d79b67859e010a895bc29
+ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405094"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742119"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>Approvisionnement du certificat PDW - Analytique Platform System
 Le **provisionnement du certificat PWD** page du système de plateforme Analytique **Configuration Manager** importe ou supprime le certificat utilisé par la région PDW. À l’aide, un certificat pour chiffrer les connexions peut aider à une communication sécurisée au nœud de contrôle via les clients de SQL Server, les outils qui utilisent les pilotes SQL Server PDW, le [Console d’administration](monitor-the-appliance-by-using-the-admin-console.md), et charge les Services d’intégration.  
@@ -41,7 +41,10 @@ Le chemin d’accès de certification doit contenir le nom de domaine complet qu
 Utiliser le système de plateforme Analytique**Configuration Manager** pour ajouter ou supprimer le certificat approuvé. Directement à l’aide de l’outil de Configuration de certificat Microsoft Windows HTTP Services (**winHttpCertCfg.exe**) pour gérer le certificat est non pris en charge.  
   
 ## <a name="import-or-remove-the-certificate"></a>Importer ou de supprimer le certificat  
-Les instructions suivantes vous montrent comment importer ou de supprimer le certificat de l’appliance.  
+Les instructions suivantes vous montrent comment importer ou de supprimer le certificat de l’appliance.
+
+> [!WARNING]
+> Pour renouveler un certificat ayant expiré, vous devez supprimer le certificat existant avant d’importer une nouvelle.
   
 ### <a name="to-import-the-certificate"></a>Pour importer le certificat  
   
