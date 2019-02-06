@@ -132,7 +132,7 @@ Spécifie le nom du nouvel index.
   
 Si la table a déjà un index cluster columnstore, vous pouvez spécifier le même nom que l’index existant, ou vous pouvez utiliser l’option DROP EXISTING pour spécifier un nouveau nom.  
   
-ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Spécifie le nom à une, deux ou trois parties de la table à stocker en tant qu'index columnstore cluster. Si la table est un segment ou un index cluster, elle est convertie de rowstore en columnstore. Si la table est déjà un index columnstore, cette instruction reconstruit l’index cluster columnstore.  
   
 #### <a name="with-options"></a>Options WITH  
@@ -215,7 +215,7 @@ Créez un index columnstore non-cluster en mémoire sur une table rowstore stock
     Spécifie les colonnes à stocker. Un index columnstore non-cluster est limité à 1 024 colonnes.  
    Chaque colonne doit appartenir à un type de données pris en charge pour les index columnstore. Pour obtenir la liste des types de données pris en charge, consultez [Limitations et Restrictions](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest).  
 
-ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Spécifie un nom en une, deux ou trois parties pour la table qui contient l’index.  
 
 #### <a name="with-options"></a>Options WITH
