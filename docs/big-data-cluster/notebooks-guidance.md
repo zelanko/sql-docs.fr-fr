@@ -5,17 +5,17 @@ description: Cet article explique comment exécuter les blocs-notes Jupyter dans
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 95a1f141467fa4c3ee9cd7e7076eca604aa497ca
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e4f1c945bd09c4d2878ebb441027e32898f24c56
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241800"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807469"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Comment utiliser des blocs-notes en version préliminaire de SQL Server 2019
 
@@ -33,18 +33,18 @@ Pour utiliser des blocs-notes, vous devez installer les conditions préalables s
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="connect-to-the-hadoop-gateway-knox-end-point"></a>Se connecter au point de terminaison Hadoop passerelle Knox
+## <a name="connect-to-the-sql-server-big-data-cluster-end-point"></a>Se connecter au point de terminaison du cluster SQL Server big data
 
-Vous pouvez vous connecter à différents points de terminaison dans le cluster. Vous pouvez vous connecter au type de connexion Microsoft SQL Server ou au point de terminaison de passerelle HDFS/Spark.
-Dans Azure Data Studio (version préliminaire), appuyez sur F1, puis cliquez sur **nouvelle connexion** et vous pouvez vous connecter à votre point de terminaison de passerelle HDFS/Spark.
+Vous pouvez vous connecter à différents points de terminaison dans le cluster. Vous pouvez vous connecter pour le type de connexion de Microsoft SQL Server ou pour le point de terminaison de cluster de données SQL Server.
+Dans Azure Data Studio (version préliminaire), appuyez sur F1, puis cliquez sur **nouvelle connexion** et vous pouvez vous connecter à votre point de terminaison de cluster de données SQL Server.
 
-![Image1](media/notebooks-guidance/image1.png)
+![image1](media/notebooks-guidance/image1.png)
 
-## <a name="browse-hdfs"></a>Parcourir le HDFS
+## <a name="browse-hdfs"></a>Browse HDFS
 
-Une fois que vous vous connectez, vous serez en mesure de parcourir votre dossier HDFS. WebHDFS démarre lorsque le déploiement terminé, et vous pourrez **Actualiser**, ajouter **nouveau répertoire**, **télécharger** fichiers, et **supprimer**.
+Une fois que vous vous connectez, vous serez en mesure de parcourir votre dossier HDFS. SQL Server démarre WebHDFS est démarré lorsque le déploiement est terminé. Avec WebHDFS, vous pouvez **Actualiser**, ajouter **nouveau répertoire**, **télécharger** fichiers, et **supprimer**.
 
-![Image2](media/notebooks-guidance/image2.png)
+![image2](media/notebooks-guidance/image2.png)
 
 Ces opérations simples vous permettent d’importer vos propres données dans HDFS.
 
@@ -55,21 +55,23 @@ Ces opérations simples vous permettent d’importer vos propres données dans H
 
 S’il existe des problèmes pour installer les dépendances du bloc-notes, cliquez sur Ctrl + Maj + P ou pour Macintosh Cmd + Maj + P, puis tapez `Reinstall Notebook dependencies` dans la palette de commandes.
 
-![Image3](media/notebooks-guidance/image3.png)
+![image3](media/notebooks-guidance/image3.png)
 
 Il existe plusieurs façons de lancer un nouveau bloc-notes.
 
 1. À partir de la **gérer le tableau de bord**. Après avoir établi une connexion, vous verrez un tableau de bord. Cliquez sur **nouveau bloc-notes** tâche du tableau de bord.
-
-  ![image4](media/notebooks-guidance/image4.png)
+  
+    ![image4](media/notebooks-guidance/image4.png)
 
 1. Avec le bouton droit de la connexion HDFS/Spark et cliquez sur **nouveau bloc-notes** dans le menu contextuel.
 
-  ![image5](media/notebooks-guidance/image5.png)
+    ![image5](media/notebooks-guidance/image5.png)
 
-  Fournissez un nom de votre ordinateur portable, par exemple, `Test.ipynb`. Cliquez sur **Enregistrer**.
+    Un nouveau fichier nommé `Notebook-0.ipynb` s’ouvre.
 
-![image6](media/notebooks-guidance/image6.png)
+    ![image6](media/notebooks-guidance/image6.png)
+
+Lorsque vous ouvrez le bloc-notes à partir de la palette de commandes, le bloc-notes s’ouvre en tant que `Untitled-0.ipynb`.
 
 ## <a name="supported-kernels-and-attach-to-context"></a>Prise en charge les noyaux et d’attachement au contexte
 
@@ -77,97 +79,95 @@ L’Installation de l’ordinateur portable prend en charge les noyaux PySpark e
 
 ![image7](media/notebooks-guidance/image7.png)
 
-Lorsque vous sélectionnez une de ces noyaux, nous allons installer ce noyau dans l’environnement virtuel et vous pouvez commencer à écrire de code dans le langage pris en charge.
+Lorsque vous sélectionnez une de ces noyaux, l’installation configure ce noyau dans l’environnement virtuel et vous pouvez commencer à écrire de code dans le langage pris en charge.
 
 |Noyau|Description
 |:-----|:-----
-|Noyau PySpark|Pour l’écriture de code Python à l’aide de calcul Spark à partir du cluster.
-|Noyau Spark|Pour l’écriture de code Scala à l’aide de calcul Spark à partir du cluster.
-|Noyau Python|Pour l’écriture de code Python pour un développement local.
+|PySpark3 et le noyau PySpark| Écrire du code Python à l’aide de calcul Spark à partir du cluster.
+|Noyau Spark|Écrire du code Scala et R à l’aide de calcul Spark à partir du cluster.
+|Python Kernel|Écrire du code Python pour un développement local.
 
-Le `Attach to` fournit le contexte pour le noyau à attacher. Lorsque vous êtes connecté à la fin de la passerelle (Knox) HDFS/Spark point de la valeur par défaut `Attach to` est ce point de terminaison du cluster.
+`Attach to` fournit le contexte pour le noyau à attacher. Lorsque vous êtes connecté à SQL Server des données big cluster point de terminaison, la valeur par défaut `Attach to` est ce point de terminaison du cluster.
 
-![image8](media/notebooks-guidance/image8.png)
+Lorsque vous n’êtes pas connecté au point de terminaison du cluster SQL Server des données volumineuses, la valeur par défaut du noyau est Python et `Attach to` est `localhost`.
 
 ## <a name="hello-world-in-different-contexts"></a>Hello world dans différents contextes
 
-### <a name="pyspark-kernel"></a>Noyau Pyspark
+### <a name="pyspark3pyspark-kernel"></a>Noyau Pyspark3/PySpark
 
-Choisissez le noyau PySpark et dans le type de cellule dans le code suivant :
+Choisissez le noyau PySpark et dans le type de cellule dans le code suivant.
+
+Cliquez sur **Exécuter**.
+
+L’Application Spark est démarrée et renvoie le résultat suivant :
+
+![image8](media/notebooks-guidance/image8.png)
+
+### <a name="spark-kernel--scala-language"></a>Noyau Spark | Langage de Scala
+
+Choisissez le Spark | Noyau de Scala et dans le type de cellule dans le code suivant.
 
 ![image9](media/notebooks-guidance/image9.png)
 
-Cliquez sur l’exécution et que vous devez voir l’Application Spark en cours de démarrage et vous verrez la sortie suivante :
-
-![Image10](media/notebooks-guidance/image10.png)
-
-Le résultat doit ressembler à quelque chose de similaire à l’image suivante.
-
-![Image11](media/notebooks-guidance/image11.png)
-
-### <a name="spark-kernel"></a>Noyau Spark
 Ajoutez une nouvelle cellule de code en cliquant sur le **+ Code** commande dans la barre d’outils.
 
-![Image12](media/notebooks-guidance/image12.png)
+Maintenant, choisissez le Spark | Scala dans la liste déroulante pour les noyaux et dans le type de cellule/coller dans :
+
+![image10](media/notebooks-guidance/image10.png)
 
 Vous pouvez également afficher les Options « cellule » lorsque vous cliquez sur l’icône des options ci-dessous :
 
-![Image13](media/notebooks-guidance/image13.png)
+![image11](media/notebooks-guidance/image11.png)
 
-Voici les options pour chaque cellule-
+### <a name="spark-kernel--r-language"></a>Noyau Spark | Langage R
 
-![Image14](media/notebooks-guidance/image14.png)-
+Choisissez le Spark | R dans la liste déroulante pour les noyaux. Dans la cellule, tapez ou collez le code. Cliquez sur **exécuter** pour afficher la sortie suivante.
 
-Maintenant, choisissez le noyau Spark dans la liste déroulante pour les noyaux et dans la cellule type/collez-
+![image13](media/notebooks-guidance/image13.png)
 
-![Image15](media/notebooks-guidance/image15.png)
+### <a name="local-python-kernel"></a>Noyau Python local
 
-Cliquez sur **exécuter** et vous devez voir l’Application Spark en cours de démarrage et que cette opération crée la session Spark en tant que **spark** et définira le **HelloWorld** objet.
+Choisissez le noyau Python local et dans le type de cellule :
+
+![image14](media/notebooks-guidance/image14.png)
+
+### <a name="markdown-text"></a>Markdown text
+
+Ajoutez une nouvelle cellule de texte en cliquant sur le **+ texte** commande dans la barre d’outils.
+
+![image15](media/notebooks-guidance/image15.png)
+
+Double-cliquez dans la cellule de texte à modifier pour modifier la vue 
+
+![image16](media/notebooks-guidance/image16.png)
+
+La cellule est modifiée en mode édition
+
+![image17](media/notebooks-guidance/image17.png)
+
+Markdown de type et que vous voyez à présent la version préliminaire en même temps
+
+![image18](media/notebooks-guidance/image18.png)
+
+Cliquez sur **Exécuter**. Démarrage de l’application Spark crée la session Spark en tant que **spark** et définit le **HelloWorld** objet.
 
 Le bloc-notes doit ressembler à l’image suivante.
 
-![Image16](media/notebooks-guidance/image16.png)
+Cliquez en dehors de la cellule de texte change en mode Aperçu et masque le code markdown.
 
-Une fois que vous définissez l’objet puis dans la prochaine cellule du bloc-notes, tapez le code suivant :
+![image19](media/notebooks-guidance/image19.png)
 
-![Image17](media/notebooks-guidance/image17.png)
-
-Cliquez sur **exécuter** dans le bloc-notes menu doit s’afficher « Hello, world ! » dans la sortie.
-
-![Image18](media/notebooks-guidance/image18.png)
-
-### <a name="local-python-kernel"></a>Noyau python local
-Choisissez le noyau Python local et dans le type de cellule :
-
-![Image19](media/notebooks-guidance/image19.png)
-
-Vous devez voir la sortie suivante :
-
-![Image20](media/notebooks-guidance/image20.png)
-
-### <a name="markdown-text"></a>Texte markdown
-Ajoutez une nouvelle cellule de texte en cliquant sur le **+ texte** commande dans la barre d’outils.
-
-![Image21](media/notebooks-guidance/image21.png)
-
-Cliquez sur l’icône d’aperçu pour ajouter votre markdown
-
-![Image22](media/notebooks-guidance/image22.png)
-
-Cliquez sur l’icône d’aperçu pour activer/désactiver le consultez simplement la syntaxe markdown
-
-![Image23](media/notebooks-guidance/image23.png)
 
 ## <a name="manage-packages"></a>Gérer les Packages
-Une des choses que nous avons optimisé pour le développement Python local était d’incluent la possibilité d’installer des packages qui les clients devraient pour leurs scénarios. Par défaut, nous incluons les packages courants tels que pandas, numpy, etc., mais si vous attendez un package qui n’est pas inclus puis écrire le code suivant dans la cellule du bloc-notes : 
+Une des choses que nous avons optimisé pour le développement Python local était d’incluent la possibilité d’installer des packages qui les clients devraient pour leurs scénarios. Par défaut, nous incluons les packages courants tels que `pandas`, `numpy` etc., mais si vous attendez un package qui n’est pas inclus ensuite écrire le code suivant dans la cellule du bloc-notes : 
 
 ```python
 import <package-name>
 ```
 
-Lorsque vous exécutez cette commande, vous obtiendrez un `Module not found` erreur. Si votre package existe, puis vous pas obtiendrez l’erreur.
+Lorsque vous exécutez cette commande, `Module not found` est retournée. Si votre package existe, puis vous pas obtiendrez l’erreur.
 
-Si vous trouvez un `Module not Found` erreur, puis cliquez sur **gérer les Packages** pour lancer le terminal avec le chemin d’accès pour votre Virtualenv identifié. Vous pouvez désormais installer les packages localement. Utilisez les commandes suivantes pour installer les packages :
+Si elle retourne un `Module not Found` erreur, puis cliquez sur **gérer les Packages** pour lancer le terminal avec le chemin d’accès pour votre Virtualenv identifié. Vous pouvez désormais installer les packages localement. Utilisez les commandes suivantes pour installer les packages :
 
 ```bash
 ./pip install <package-name>
@@ -178,8 +178,6 @@ Une fois que le package est installé, vous devez pouvoir dans la cellule du blo
 ```python
 import <package-name>
 ```
-
-Maintenant lorsque vous exécutez la cellule, vous devez obtenir n’est plus le `Module not found` erreur.
 
 Pour désinstaller un package, utilisez la commande suivante à partir de votre terminal :
 
