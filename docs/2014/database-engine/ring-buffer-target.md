@@ -14,27 +14,27 @@ ms.assetid: 54494e11-b56b-43b7-aa5e-c8724e56b251
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d52dc4ba85ec3b65ddf3e1c703befd0ee32d78a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d042ef49a82d16eb33cb27d80c8083a68ea69092
+ms.sourcegitcommit: 4b5ea5fa3253fea028e1adbd46bd18b89f0a115b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182539"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905654"
 ---
 # <a name="ring-buffer-target"></a>Cible de mémoire tampon en anneau
   La cible de mémoire tampon en anneau maintient brièvement les données d'événements en mémoire. Cette cible peut gérer des événements dans deux modes différents.  
   
 -   Le premier mode est le mode FIFO strict (premier entré, premier sorti), où l'événement le plus ancien est supprimé lorsque toute la mémoire allouée à la cible est utilisée. Dans ce mode (par défaut), l'option occurrence_number a la valeur 0.  
   
--   Le deuxième mode est le mode FIFO par événement, où un nombre spécifié d'événements de chaque type est conservé. Dans ce mode, les événements les plus anciens de chaque type sont supprimés lorsque toute la mémoire allouée à la cible est utilisée. Vous pouvez configurer l'option occurrence_number pour spécifier le nombre d'événements de chaque type à conserver.  
+-   Le deuxième mode est le mode FIFO par événement, où un nombre spécifié d'événements de chaque type est conservé. Dans ce mode, les événements les plus anciens de chaque type sont ignorées lorsque toute la mémoire allouée à la cible est utilisée. Vous pouvez configurer l'option occurrence_number pour spécifier le nombre d'événements de chaque type à conserver.  
   
  Le tableau suivant décrit les options disponibles pour configurer la cible de mémoire tampon en anneau.  
   
 |Option|Valeurs autorisées|Description|  
 |------------|--------------------|-----------------|  
-|max_memory|Tout entier de 32 bits. Cette valeur est facultative.|Quantité de mémoire maximale, en kilo-octet (Ko), à utiliser. Des événements existants sont supprimés en fonction de la limite qui est atteinte en premier : max_event_limit ou max_memory.|  
-|max_event_limit|Tout entier de 32 bits. Cette valeur est facultative.|Nombre maximal d'événements conservés dans le tampon ring_buffer. Des événements existants sont supprimés en fonction de la limite qui est atteinte en premier : max_event_limit ou max_memory. Par défaut = 1000.|  
-|occurrence_number|Une des valeurs suivantes :<br /><br /> 0 (par défaut) = l'événement le plus ancien est supprimé lorsque toute la mémoire allouée à la cible est utilisée.<br /><br /> entier 32 bits = le nombre d'événements de chaque type à conserver avant d'être supprimés en fonction du mode FIFO par événement.<br /><br /> <br /><br /> Cette valeur est facultative.|Le mode FIFO à utiliser et, s'il est supérieur à 0, le nombre d'événements préférés de chaque type à conserver dans la mémoire tampon.|
+|max_memory|Un entier 32 bits. Cette valeur est facultative.|Quantité de mémoire maximale, en kilo-octet (Ko), à utiliser. Des événements existants sont supprimés en fonction de la limite qui est atteinte en premier : max_event_limit ou max_memory. La valeur maximale est 4194303 Ko. Une étude attentive doit être effectuée avant de définir la taille du tampon en anneau aux limites dans la plage Go comme il peut affecter les autres consommateurs de mémoire dans SQL Server|  
+|max_event_limit|Un entier 32 bits. Cette valeur est facultative.|Nombre maximal d'événements conservés dans le tampon ring_buffer. Des événements existants sont supprimés en fonction de la limite qui est atteinte en premier : max_event_limit ou max_memory. Par défaut = 1000.|  
+|occurrence_number|Une des valeurs suivantes :<br /><br /> 0 (par défaut) = l'événement le plus ancien est supprimé lorsque toute la mémoire allouée à la cible est utilisée.<br /><br /> N’importe quel entier 32 bits = le nombre d’événements de chaque type à conserver avant d’être supprimés de manière FIFO par événement.<br /><br /> <br /><br /> Cette valeur est facultative.|Le mode FIFO à utiliser et, s'il est supérieur à 0, le nombre d'événements préférés de chaque type à conserver dans la mémoire tampon.|
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="adding-the-target-to-a-session"></a>Ajout de la cible à une session  
