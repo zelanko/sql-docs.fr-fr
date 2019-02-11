@@ -343,7 +343,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="remarks"></a>Notes  
  **sp_addmergepullsubscription_agent** est utilisée dans la réplication de fusion et utilise des fonctionnalités similaires à celles [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
- Pour obtenir un exemple montrant comment spécifier correctement les paramètres de sécurité lors de l’exécution **sp_addmergepullsubscription_agent**, consultez [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
+ Pour obtenir un exemple montrant comment spécifier correctement les paramètres de sécurité lors de l’exécution **sp_addmergepullsubscription_agent**, consultez [Créer un abonnement par extraction de données ](../../relational-databases/replication/create-a-pull-subscription.md).  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  
@@ -352,7 +352,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addmergepullsubscription_agent**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Créer un abonnement par extraction de données ](../../relational-databases/replication/create-a-pull-subscription.md)   
  [S’abonner aux Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
