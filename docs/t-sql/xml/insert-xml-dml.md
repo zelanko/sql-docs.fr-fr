@@ -3,7 +3,6 @@ title: insert (DML XML) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - insert keyword [XML DML]
 - insert XML DML statement
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e4b7193e2b113cdbac330215abc3915c01f1385c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4cedc8dee9040e198ffc5f229453a10d54065257
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699957"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012110"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ GO
   
  Notez que des expressions de chemin d'accès différentes dans cet exemple spécifient "[1]" comme exigence par type statique. Cela garantit l'unicité du nœud cible.  
   
-### <a name="b-inserting-multiple-elements-into-the-document"></a>B. Insertion de plusieurs éléments dans le document  
+### <a name="b-inserting-multiple-elements-into-the-document"></a>b. Insertion de plusieurs éléments dans le document  
  Dans l’exemple suivant, un document est affecté au préalable à une variable de type **xml**. Ensuite, une séquence de deux éléments, représentant les caractéristiques du produit, est affectée à une deuxième variable de type **xml**. Cette séquence est alors insérée dans la première variable.  
   
 ```  
