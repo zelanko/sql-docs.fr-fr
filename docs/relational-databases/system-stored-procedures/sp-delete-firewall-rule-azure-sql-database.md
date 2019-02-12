@@ -1,11 +1,9 @@
 ---
-title: sp_delete_firewall_rule (base de données Azure SQL) | Microsoft Docs
+title: sp_delete_firewall_rule (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
-ms.prod: ''
-ms.prod_service: sql-database, sql-data-warehouse
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_firewall_rule_TSQL
@@ -21,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a9f446d9c8645d344cf6c14b886323468e387a72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 406f94ab0ab2d0ebaddf9635448e364bf90ceb8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781107"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031750"
 ---
 # <a name="spdeletefirewallrule-azure-sql-database"></a>sp_delete_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -44,13 +42,13 @@ sp_delete_firewall_rule [@name =] 'name'
 ## <a name="arguments"></a>Arguments  
  L'argument de la procédure stockée est le suivant :  
   
- [@name =] '*nom*'  
+ [@name =] '*name*'  
  Nom du paramètre de pare-feu de niveau serveur qui sera supprimé. *nom* est **nvarchar (128)** sans valeur par défaut.  
   
 ## <a name="remarks"></a>Notes  
  Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], les données de connexion exigées pour authentifier une connexion et les règles de pare-feu de niveau serveur sont temporairement mises en cache dans chaque base de données. Ce cache est régulièrement actualisé. Pour forcer une actualisation du cache d’authentification et garantir qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seul le nom de connexion du principal au niveau du serveur créé par le processus de déploiement peut supprimer les règles de pare-feu côté serveur. L’utilisateur doit être connecté à la base de données master pour exécuter sp_delete_firewall_rule.  
   
 ## <a name="example"></a>Exemple  
@@ -62,7 +60,7 @@ EXEC sp_delete_firewall_rule N'Example setting 1';
   
 ## <a name="see-also"></a>Voir aussi  
  [Pare-feu de base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Comment : configurer les paramètres de pare-feu (base de données SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [Procédure : Configurer les paramètres de pare-feu (base de données SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [Sys.firewall_rules &#40;base de données SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
   

@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.designtable.f1
 ms.assetid: c64c659b-2926-4773-8cbb-0d8d22b640f3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a3f26a52cc101a671e5587bd07e39503dfcfd0e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: a59d959443c2e9a021bf570147fd8dba5eb85aba
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222965"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018191"
 ---
 # <a name="design-the-table-report-wizard"></a>Générer le tableau (Assistant Rapport)
   Utilisez cette page de l'Assistant Rapport pour sélectionner les champs à placer dans le rapport.  
@@ -30,7 +30,7 @@ ms.locfileid: "48222965"
  **Champs affichés**  
  Affiche les champs affectés à la page, au groupe ou aux détails. Cliquez sur **Supprimer** pour supprimer le champ de la liste.  
   
- **Radiomessagerie**  
+ **Page**  
  Consultez la liste des champs qui s'affichent au niveau de la page. Pour modifier l'ordre des champs, sélectionnez l'un d'entre eux, puis cliquez sur le bouton Haut ou Bas.  
   
  **Grouper**  

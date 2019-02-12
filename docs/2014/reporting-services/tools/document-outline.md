@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 521f3772-043a-4bfa-a3d6-d5e3405ac09c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 933c23926febafa595a538105cc84c281ddb3554
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fd6e8afa8a60cb01367eb538f191052de7cf5621
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104479"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015930"
 ---
 # <a name="document-outline"></a>Structure du document
   Utilisez la fenêtre Structure du document pour afficher la hiérarchie des éléments d’un rapport. Les régions des données du tableau matriciel affichent toutes les zones de texte et les autres éléments de rapport contenus dans les cellules du tableau matriciel. Lorsque vous sélectionnez un élément de rapport sur l'aire de conception, l'élément de rapport correspondant est sélectionné dans la fenêtre Structure du document. Utilisez cette vue pour rechercher des éléments de rapport sur l’aire de conception. Par exemple, lorsque vous affichez l’aperçu d’un rapport contenant des erreurs d'expression, la fenêtre Sortie indique un message pour chaque erreur. Le message contient le nom de la zone de texte qui comporte l’expression erronée. Vous pouvez cliquer sur le nom de la zone de texte dans la fenêtre Structure du document, constater qu’elle est sélectionnée sur l'aire de conception et voir l'expression qui contenait l'erreur.  

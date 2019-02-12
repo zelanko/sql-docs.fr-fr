@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b987446144cf63651e056cf49a5791bacce705b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e71c7e2c933afc0da1a09adbb26cc5e08bc9747f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085706"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035630"
 ---
 # <a name="data-alert-messages"></a>Messages d'alerte de données
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Les alertes de données autorisent l’envoi de deux types de messages d’alerte de données par courrier électronique : les messages contenant les résultats de l’alerte de données et les messages sans description d’erreur. Les messages contenant des résultats avisent tous les destinataires des modifications apportées aux données d'un rapport dignes d'intérêt et importantes pour les décisions économiques. Si pour une raison quelconque une erreur se produit et les résultats ne sont pas disponibles, un message d'erreur est envoyé à la place.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] alertes de données remettre les deux types de données des messages d’alerte par courrier électronique : Messages avec des données d’alerte résultats et des messages sans description d’erreur. Les messages contenant des résultats avisent tous les destinataires des modifications apportées aux données d'un rapport dignes d'intérêt et importantes pour les décisions économiques. Si pour une raison quelconque une erreur se produit et les résultats ne sont pas disponibles, un message d'erreur est envoyé à la place.  
   
  Le propriétaire de la définition d'alerte de données peut également afficher des informations sur l'instance de l'alerte de données dans le Gestionnaire des alertes de données. Pour plus d’informations, consultez [Gestionnaire des alertes de données pour les utilisateurs SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md).  
   
@@ -57,14 +57,14 @@ ms.locfileid: "48085706"
 ##  <a name="HowTo"></a> Tâches associées  
  Cette section répertorie les procédures de création et de modification des définitions d'alerte de données qui fournissent la plupart des informations sur les éléments affichés dans les messages d'alerte de données.  
   
--   [Créer une alerte de données dans le concepteur d’alertes de données](create-a-data-alert-in-data-alert-designer.md)  
+-   [Créer une alerte de données dans le Concepteur d'alertes](create-a-data-alert-in-data-alert-designer.md)  
   
--   [Modifier une alerte de données dans le concepteur d'alertes](edit-a-data-alert-in-alert-designer.md)  
+-   [Modifier une alerte de données dans le Concepteur d'alertes](edit-a-data-alert-in-alert-designer.md)  
   
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur d’alertes de données](../../2014/reporting-services/data-alert-designer.md)   
+ [Concepteur d'alertes de données](../../2014/reporting-services/data-alert-designer.md)   
  [Alertes de données Reporting Services](../ssms/agent/alerts.md)  
   
   

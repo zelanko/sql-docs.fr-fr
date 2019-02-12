@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4a7545fd-37a3-4766-ad59-0946f1bd3524
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d5dc03fefedbf95d9e84069c2875db9e8a4be7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066169"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022170"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>Traitement du modèle Sequence Clustering
   Une fois que vous avez créé une structure d'exploration de données, vous devez déployer les modifications que vous avez apportées sur la solution d'exploration de données, puis traiter la structure. À l'issue du traitement de la nouvelle structure et du modèle d'exploration de données, vous pouvez parcourir le modèle d'exploration de données.  
@@ -25,7 +24,7 @@ ms.locfileid: "48066169"
   
 ### <a name="to-process-the-mining-structure-and-model"></a>Pour traiter la structure et le modèle d'exploration de données  
   
-1.  Sur le **Mining Model** menu de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], sélectionnez **traiter la Structure d’exploration de données et tous les modèles**.  
+1.  Dans le menu **Modèle d'exploration de données** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], sélectionnez **Traiter l'exploration de données et tous les modèles**.  
   
 2.  Cliquez sur **Oui**pour répondre à l'avertissement qui vous invite à indiquer si vous souhaitez générer et déployer le projet.  
   
@@ -41,8 +40,8 @@ ms.locfileid: "48066169"
  [Exploration du modèle Sequence Clustering &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur d’exploration de données](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [Algorithme de Clustering de séquence de Microsoft](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Traitement des exigences et considérations &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Concepteur d'exploration de données](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

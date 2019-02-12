@@ -13,16 +13,16 @@ helpviewer_keywords:
 - node tests [SQLXML]
 - location path for XPath query
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2883b1645dfe1114fc40f63c576797b477ae0ea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15d5389f9a16d676aa5d644b030455d4c63adf7b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792017"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027401"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Spécification d'un test de nœud dans le chemin d'accès d'emplacement (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47792017"
   
  Dans cet exemple, `child` est l'axe et `Customer` est le test de nœud. Le type de nœud principal pour le **enfant** axe est  **\<élément >**. Par conséquent, le test de nœud est TRUE si le  **\<client >** nœud est un  **\<élément >** nœud. Si le nœud de contexte n’a pas  **\<client >** enfants, un ensemble de nœuds vide est retourné.  
   
-## <a name="node-test-example-2"></a>Test de nœud : exemple 2  
+## <a name="node-test-example-2"></a>Test de nœud : Exemple 2  
  Le chemin d’accès de l’emplacement `attribute::CustomerID` sélectionne le **CustomerID** attribut du nœud de contexte.  
   
  Dans l’exemple, `attribute` est l’axe et `CustomerID` est le test de nœud. Le type de nœud principal de le **attribut** axe est  **\<attribut >**. Par conséquent, le test de nœud est TRUE si **CustomerID** est un  **\<attribut >** nœud. Si le nœud de contexte n’a pas **CustomerID**, un ensemble de nœuds vide est retourné.  

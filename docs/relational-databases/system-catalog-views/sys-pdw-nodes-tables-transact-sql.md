@@ -1,9 +1,9 @@
 ---
-title: Sys.pdw_nodes_tables (Transact-SQL) | Microsoft Docs
+title: sys.pdw_nodes_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b5413d6900b133cb7a5baf1e80fe4fa5be09b285
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99693b4261df24a666144f93dc07b8aaa68bc3d4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665888"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031280"
 ---
-# <a name="syspdwnodestables-transact-sql"></a>Sys.pdw_nodes_tables (Transact-SQL)
+# <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contient une ligne pour chaque objet de table qui détient un principal ou sur lequel le principal a accordé des autorisations.  
@@ -41,7 +41,7 @@ ms.locfileid: "51665888"
 |text_in_row_limit|**Int**|0 = l'option « text in row » n'est pas définie.|Toujours 0.|  
 |large_value_types_out_of_row|**bit**|1 = les types de valeur élevée sont stockés en dehors de la ligne.|Toujours 0.|  
 |is_tracked_by_cdc|**bit**|1 = table est activée pour la capture de données modifiées|Toujours 0 ; Aucune prise en charge de la capture de données modifiées.|  
-|lock_escalation|**tinyint**|La valeur de l’option LOCK_ESCALATION pour la table : 2 = AUTO|Toujours 2.|  
+|lock_escalation|**tinyint**|Valeur de l'option LOCK_ESCALATION pour la table : 2 = AUTO|Toujours 2.|  
 |lock_escalation_desc|**nvarchar(60)**|Description textuelle de l’option lock_escalation.|Toujours ꞌAUTOꞌ.|  
 |pdw_node_id|**Int**|Identificateur unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nœud.|NOT NULL|  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Ajouter un histogramme à votre rapport (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ee60121e4356b8b54a943ab7373fafd504e5778f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104129"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026768"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Didacticiel : Ajouter un histogramme à votre rapport (Générateur de rapports)
   Un histogramme affiche une série sous la forme d'un ensemble de barres verticales regroupées par catégorie. Un histogramme s'avère utile pour :  
   
 -   montrer l'évolution des données sur une période ;  
@@ -53,11 +53,11 @@ ms.locfileid: "48104129"
 9. [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données et la création d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions détaillées sur l’accès à un serveur de rapports, choisissez une source de données et créer un jeu de données, consultez le premier didacticiel de cette série : [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Durée estimée pour effectuer ce didacticiel : 15 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Chart"></a> 1. Créer un rapport de graphique à partir de l'Assistant Graphique  
@@ -111,20 +111,20 @@ ms.locfileid: "48104129"
   
 8.  (Facultatif) Cliquez sur le bouton Exécuter (**!**) pour voir les données sur lesquelles votre graphique sera basé.  
   
-9. Cliquez sur **Suivant**.  
+9. Cliquer sur **Suivant**.  
   
 ##  <a name="ChartType"></a> 2. Choisir le type de graphique  
  Vous avez le choix entre plusieurs types de graphiques prédéfinis.  
   
 #### <a name="to-add-a-column-chart"></a>Pour ajouter un histogramme  
   
-1.  Dans la page **Choisir un type de graphique** , l’histogramme est le type de graphique par défaut. Cliquez sur **Suivant**.  
+1.  Dans la page **Choisir un type de graphique** , l’histogramme est le type de graphique par défaut. Cliquer sur **Suivant**.  
   
 2.  Dans la page **Organiser les champs du graphique** , faites glisser le champ SalesDate vers **Catégories**. Les catégories s'affichent sur l'axe horizontal.  
   
 3.  Faites glisser le champ Sales vers **Valeurs**. La zone **Valeurs** affiche Sum(Sales), car la somme de la valeur totale des ventes est agrégée pour chaque date. Les valeurs s'affichent sur l'axe vertical.  
   
-4.  Cliquez sur **Suivant**.  
+4.  Cliquer sur **Suivant**.  
   
 5.  Sur le **choisir un Style** page, dans la zone Styles, sélectionnez un style.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48104129"
   
 1.  Basculez en mode création de rapport.  
   
-2.  Sélectionnez les mots **titre du graphique** en haut du graphique, puis tapez le texte suivant : **Store Sales Order totaux**.  
+2.  Sélectionnez les mots **titre du graphique** en haut du graphique, puis tapez le texte suivant : **Total des commandes de Store**.  
   
 3.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   

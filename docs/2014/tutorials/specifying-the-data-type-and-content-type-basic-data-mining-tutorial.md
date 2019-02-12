@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 72484d27-3ef1-4f16-813c-2f43231fc2da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b97cec782c7f95de42ee64d7db0ce56ffa916c3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176605"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040201"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Spécification du type de données et du type de contenu (Didacticiel sur l'exploration de données de base)
   Maintenant que vous avez sélectionné les colonnes à utiliser pour la génération de votre structure et l'apprentissage de vos modèles, apportez les modifications nécessaires aux données et aux types de contenu par défaut définis par l'Assistant.  
@@ -31,29 +30,29 @@ ms.locfileid: "48176605"
   
     |colonne|Type de contenu|Type de données|  
     |------------|------------------|---------------|  
-    |**Adresse ligne1**|**Discrètes**|**Texte**|  
-    |**Adresse ligne2**|**Discrètes**|**Texte**|  
+    |**Adresse ligne1**|**Discrètes**|**Text**|  
+    |**Adresse ligne2**|**Discrètes**|**Text**|  
     |**Âge**|**continue**|**Long**|  
     |**Bike Buyer**|**Discrètes**|**Long**|  
-    |**Commute Distance**|**Discrètes**|**Texte**|  
+    |**Commute Distance**|**Discrètes**|**Text**|  
     |**CustomerKey**|**Clé**|**Long**|  
     |**DateLastPurchase**|**continue**|**Date**|  
-    |**Email Address**|**Discrètes**|**Texte**|  
-    |**English Education**|**Discrètes**|**Texte**|  
-    |**English Occupation**|**Discrètes**|**Texte**|  
-    |**firstName**|**Discrètes**|**Texte**|  
-    |**Gender**|**Discrètes**|**Texte**|  
-    |**Clé de zone géographique**|**Discrètes**|**Texte**|  
-    |**House Owner Flag**|**Discrètes**|**Texte**|  
-    |**Last Name**|**Discrètes**|**Texte**|  
-    |**Marital Status**|**Discrètes**|**Texte**|  
+    |**Email Address**|**Discrètes**|**Text**|  
+    |**English Education**|**Discrètes**|**Text**|  
+    |**English Occupation**|**Discrètes**|**Text**|  
+    |**FirstName**|**Discrètes**|**Text**|  
+    |**Gender**|**Discrètes**|**Text**|  
+    |**Clé de zone géographique**|**Discrètes**|**Text**|  
+    |**House Owner Flag**|**Discrètes**|**Text**|  
+    |**Last Name**|**Discrètes**|**Text**|  
+    |**Marital Status**|**Discrètes**|**Text**|  
     |**Number Cars Owned**|**Discrètes**|**Long**|  
     |**Number Children At Home**|**Discrètes**|**Long**|  
-    |**Région**|**Discrètes**|**Texte**|  
+    |**Région**|**Discrètes**|**Text**|  
     |**Total Children**|**Discrètes**|**Long**|  
     |**Yearly Income**|**continue**|**Double**|  
   
-3.  Cliquez sur **Suivant**.  
+3.  Cliquer sur **Suivant**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Spécification d’un jeu de données de test pour la Structure &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md)  
@@ -62,7 +61,7 @@ ms.locfileid: "48176605"
  [Création d’une Structure de modèle d’exploration de données publipostage ciblé &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de contenu &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
+ [Types de contenu &#40;Exploration de données&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
  [Types de données &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

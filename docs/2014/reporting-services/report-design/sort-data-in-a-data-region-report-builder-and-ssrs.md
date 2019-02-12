@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 254cd7875988103fd6dc479d66794f4d2627179d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 57933ec6894d36af0ab8a54236ff75655fab6967
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119999"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019413"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Trier des données dans une région de données (Générateur de rapports et SSRS)
   Pour changer l'ordre de tri des données dans une région de données à la première exécution d'un rapport, vous devez définir l'expression de tri sur le groupe ou la région de données. Par défaut, l'expression de tri d'un groupe a automatiquement la même valeur que l'expression de groupe.  
@@ -27,7 +27,7 @@ ms.locfileid: "48119999"
   
 -   Dans une région de données de jauge, vous n'avez généralement pas besoin de trier les données, la jauge affichant une valeur unique relative à une plage. Si vous devez trier les données dans une jauge, définissez d’abord un groupe, puis l’expression de tri pour ce dernier.  
   
- Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
  Pour une région de données de tableau matriciel, vous pouvez également ajouter un bouton de tri interactif en haut d’un en-tête de colonne pour permettre aux utilisateurs de modifier l’ordre de tri des groupes ou des lignes de détails. Pour plus d’informations, consultez [Tri interactif &#40;Générateur de rapports et SSRS&#41;](interactive-sort-report-builder-and-ssrs.md).  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], tutorials
@@ -14,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12581756e6ffa7d77ba7dc3339c3f38c96962d4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372904"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033680"
 ---
 # <a name="basic-data-mining-tutorial"></a>Didacticiel d’exploration de données de base
   Bienvenue dans le Didacticiel sur l'exploration de données de base [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un environnement intégré pour la création des modèles d’exploration de données et élaborer des prédictions. Dans ce didacticiel, vous allez réaliser un scénario pour une campagne de publipostage ciblé dans laquelle vous allez utiliser l'apprentissage automatique pour analyser et prédire le comportement d'achat des clients. Le didacticiel montre comment utiliser trois des algorithmes d'exploration de données les plus importants : clustering, arbres de décision et Naive Bayes. Vous allez également apprendre comment analyser vos résultats à l'aide des visionneuses de modèle d'exploration de données, puis à créer des prédictions et des graphiques d'analyse de précision à l'aide des outils d'exploration de données inclus dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La société fictive, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], est utilisée pour tous les exemples.  
@@ -43,13 +42,13 @@ ms.locfileid: "53372904"
   
  Ce didacticiel contient les leçons suivantes :  
   
- [Leçon 1 : Préparation de l’analyse des Services de base de données &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
+ [Leçon 1 : Préparation de l’analyse des Services de base de données &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
  Au cours de cette leçon, vous allez apprendre à créer une nouvelle base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , à ajouter une source de données et une vue de source de données, ainsi qu'à préparer la nouvelle base de données qu'il sera possible d'utiliser avec l'exploration de données.  
   
  [Leçon 2 : Création d’une Structure de publipostage ciblé &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
  Au cours de cette leçon, vous allez apprendre à créer une structure de modèle d'exploration de données qu'il sera possible d'utiliser dans un scénario de publipostage ciblé.  
   
- [Leçon 3 : Ajout et traitement des modèles](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Leçon 3 : Ajout et traitement des modèles](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  Dans cette leçon, vous apprendrez à ajouter des modèles à une structure. Les modèles que vous créez sont générés à l'aide des algorithmes suivants :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees  
@@ -58,13 +57,13 @@ ms.locfileid: "53372904"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes  
   
- [Leçon 4 : Exploration des modèles de publipostage ciblé &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
+ [Leçon 4 : Exploration des modèles de publipostage ciblé &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  Dans cette leçon, vous apprendrez à explorer et interpréter les conclusions de chaque modèle à l'aide des visionneuses.  
   
- [Leçon 5 : Test des modèles &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [Leçon 5 : Test des modèles &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  Dans cette leçon, vous faites une copie de l'un des modèles de publipostage ciblé, vous ajoutez un filtre de modèle d'exploration de données afin de restreindre les données d'apprentissage à un jeu particulier de clients, puis vous évaluez la viabilité du modèle.  
   
- [Leçon 6 : Création et utilisation de prédictions &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Leçon 6 : Création et utilisation de prédictions &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
  Dans cette dernière leçon du didacticiel sur l'exploration de données de base, vous utilisez le modèle pour prédire quels clients sont les plus susceptibles d'acheter un vélo. Vous allez ensuite effectuer une extraction dans les cas sous-jacents pour obtenir des informations de contact.  
   
 ## <a name="requirements"></a>Configuration requise  

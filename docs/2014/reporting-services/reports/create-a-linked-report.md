@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 277ee4ff416ad9710eecf501651b5a5143b0fa68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0ad789a8246479c16ed5ceba17c3e7d9cf19d6ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210205"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010890"
 ---
 # <a name="create-a-linked-report"></a>Créer un rapport lié
   Un rapport lié est un élément de serveur de rapports qui fournit un point d'accès à un rapport existant. Au niveau conceptuel, il est assimilable au raccourci d'un programme que vous utilisez pour exécuter une application ou ouvrir un fichier.  
@@ -35,7 +35,7 @@ ms.locfileid: "48210205"
   
 2.  Indiquez un nom pour le nouveau rapport lié. Tapez éventuellement une description.  
   
-3.  Pour sélectionner un autre dossier pour le rapport, cliquez sur **Modifier l’emplacement**. Cliquez ensuite sur le dossier à utiliser ou tapez son nom dans la zone **Emplacement** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Si vous ne sélectionnez pas un autre dossier, le rapport lié est créé dans le dossier actif (où est stocké le rapport, sur qu'il est basé).  
+3.  Pour sélectionner un autre dossier pour le rapport, cliquez sur **Modifier l’emplacement**. Cliquez ensuite sur le dossier à utiliser ou tapez son nom dans la zone **Emplacement** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Si vous ne sélectionnez aucun dossier, le rapport lié est créé dans le dossier actif (où est stocké le rapport sur lequel il est basé).  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Le rapport lié s’ouvre.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48210205"
      ![Icône Rapport lié](../media/hlp-16linked.gif "Icône Rapport lié")  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ouvrir et fermer un rapport &#40;le Gestionnaire de rapports&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Ouvrir et fermer un rapport &#40;Gestionnaire de rapports&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [Page Nouveau rapport lié &#40;Gestionnaire de rapports&#41;](../new-linked-report-page-report-manager.md)   
  [Page Choisir l’emplacement de l’élément &#40;Gestionnaire de rapports&#41;](../choose-item-location-page-report-manager.md)   
  [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](../general-properties-page-reports-report-manager.md)   

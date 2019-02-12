@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c7f64a54-c555-4d31-bf99-3abe57dc8626
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f31ea33f116cbabf1a808f30a9575ada43bae900
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: bd5ce45952b88c21b9f5aa1a2f2f46de00428b68
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392823"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011781"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Activer les fonctionnalités d'intégration Report Server et Power View dans SharePoint
   Les fonctionnalités de collection de sites de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sont généralement activées par défaut après l’installation du complément [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] pour les produits SharePoint. Dans certaines circonstances, vous devrez activer les fonctionnalités manuellement.  

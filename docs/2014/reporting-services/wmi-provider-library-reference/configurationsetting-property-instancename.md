@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 5e8aa5fb-2d4a-45ac-bbd8-47ed3c667cbb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 75551a28646c54caeaaae8d2a214a5a0c6cbc2de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9ff7824705c167b2747e30e590d13f4fe1566caa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212349"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040220"
 ---
 # <a name="instancename-property-wmi-msreportserverconfigurationsetting"></a>Propriété InstanceName (WMI MSReportServer_ConfigurationSetting)
   Spécifie le nom d'une instance de serveur de rapports sur un ordinateur spécifique. En lecture seule.  
@@ -40,12 +40,12 @@ public string InstanceName;
 ```  
   
 ## <a name="property-value"></a>Valeur de propriété  
- Un `String` objet qui représente le nom de l’instance de serveur de rapports.  
+ Objet `String` qui représente le nom de l'instance de serveur de rapports.  
   
 ## <a name="example-code"></a>Exemple de code  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

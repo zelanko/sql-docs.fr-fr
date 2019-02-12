@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d165b4137c8deb0afb232d58f0e19bb183ddf860
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 85556b6ec616d16962214b1737fcc445b54d0801
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098749"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019680"
 ---
 # <a name="preventing-invalid-requests"></a>Éviter les demandes non valides
   Vous pouvez éviter que certains types d'exceptions soient levés en analysant le flux de votre application et en veillant à ce que les demandes qui sont envoyées au serveur de rapports soient valides. Par exemple, dans les applications qui permettent aux utilisateurs d'ajouter ou de mettre à jour le nom d'un rapport, d'une source de données ou d'autres éléments de serveur de rapports, vous devez valider le texte entré par un utilisateur. Vous devez toujours vérifier que la demande ne contient pas de caractères réservés avant de l'envoyer à un serveur de rapports. Utilisez des instructions **if** conditionnelles ou d’autres constructions logiques dans votre code pour avertir l’utilisateur que les conditions nécessaires à l’envoi de demandes au serveur de rapports n’ont pas été réunies.  

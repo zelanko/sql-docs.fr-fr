@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2379a62a39453dcde75b39386ab6701a9fba101a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 75845ddac250c70078c8ee43d885b7d2b99a69a1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107219"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031090"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Activer ou désactiver les fonctionnalités Reporting Services
   Vous pouvez désactiver les fonctionnalités de serveur de rapports que vous n'utilisez pas dans le cadre d'une stratégie de verrouillage pour réduire l'exposition aux attaques d'un serveur de rapports de production. Dans la plupart des cas, vous préférerez exécuter les fonctionnalités de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] conjointement afin de bénéficier de toutes les fonctionnalités offertes dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Toutefois, vous pouvez désactiver les fonctionnalités dont vous n'avez pas besoin, selon votre modèle de déploiement. Par exemple, vous pouvez activer le traitement en arrière-plan uniquement si le traitement de tous les rapports a été planifié. De même, vous pouvez exécuter simplement le service Web Report Server si vous souhaitez disposer uniquement de rapports interactifs à la demande.  
@@ -42,7 +42,7 @@ ms.locfileid: "48107219"
   
 1.  Ouvrez le fichier `RsReportServer.config` dans un éditeur de texte. Pour plus d’informations, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-2.  Pour activer le service Web Report Server, définissez `IsWebServiceEnabled` à `true`:  
+2.  Pour activer le service Web Report Server, affectez à `IsWebServiceEnabled` la valeur `true` :  
   
     ```  
     <IsWebServiceEnabled>true</IsWebServiceEnabled>  
@@ -124,13 +124,13 @@ ms.locfileid: "48107219"
   
 1.  Ouvrez le fichier RsReportServer.config dans un éditeur de texte. Pour obtenir des instructions, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-2.  Pour activer le Gestionnaire de rapports, affectez `IsReportManagerEnabled` à `true`:  
+2.  Pour activer le Gestionnaire de rapports, affectez à `IsReportManagerEnabled` la valeur `true`:  
   
     ```  
     <IsReportManagerEnabled>true</IsReportManagerEnabled>  
     ```  
   
-3.  Pour activer le Gestionnaire de rapports, affectez `IsReportManagerEnabled` à `false`:  
+3.  Pour désactiver le Gestionnaire de rapports, affectez à `IsReportManagerEnabled` la valeur `false`:  
   
     ```  
     <IsReportManagerEnabled>false</IsReportManagerEnabled>  

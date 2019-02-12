@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3c908bfa457c9bc692c56a1625a64116365958db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9d4052b6e330bab1c32650b7cdeae7ecb5c7b21f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144639"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031080"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>Configurer les propriétés d’exécution d’un rapport (Gestionnaire de rapports)
   Vous pouvez définir les options de traitement d'un rapport afin de spécifier le moment où les données d'un rapport sont récupérées. Il est utile de planifier le traitement des données d'un rapport si la source de données externe est actualisée à des heures spécifiques (par exemple un entrepôt de données actualisé chaque jour ou chaque semaine) et si vous souhaitez éviter le temps de traitement lié à la récupération des mêmes données chaque fois qu'un rapport est demandé. La planification du traitement des données est également utile lorsque vous souhaitez contrôler la charge de traitement du serveur de base de données externe, ou lorsque vous souhaitez fournir des résultats cohérents pour plusieurs utilisateurs qui doivent travailler avec des jeux de données identiques. Avec des données volatiles, un rapport à la demande peut produire des résultats différents en l'espace d'une minute. En revanche, un instantané de rapport vous permet d'effectuer des comparaisons valides par rapport à d'autres rapports ou peut servir d'outil d'analyse contenant des données toutes datées d'un même point dans le temps.  
@@ -48,10 +48,10 @@ ms.locfileid: "48144639"
 3.  Cliquez sur **Appliquer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les propriétés de traitement de rapport](../report-server/set-report-processing-properties.md)   
- [Ouvrir et fermer un rapport &#40;le Gestionnaire de rapports&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [Contenu de la Page &#40;le Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
- [Gestion de contenu de serveur de rapports &#40;SSRS en Mode natif&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Définir les propriétés de traitement d’un rapport](../report-server/set-report-processing-properties.md)   
+ [Ouvrir et fermer un rapport &#40;Gestionnaire de rapports&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Page Contenu &#40;Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
+ [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Page de propriétés Options de traitement &#40;Gestionnaire de rapports&#41;](../processing-options-properties-page-report-manager.md)  
   
   

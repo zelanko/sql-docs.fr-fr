@@ -1,24 +1,21 @@
 ---
-title: 'Tâche 6 : Vérifier que l’attribut basé sur un domaine est créé à l’aide de Master Data Manager | Microsoft Docs'
+title: 'Tâche 6 : Vérifiez que l’attribut basé sur un domaine est créé à l’aide de Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 042cff6f687bb54466afb2334ad95402de319e94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207109"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037730"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Tâche 6 : Vérifier que l'attribut basé sur un domaine est créé à l'aide de Master Data Manager
   Dans cette tâche, vous allez vérifier que l’entité **État** est créée dans **MDS** et que l’attribut **État** de l’entité **Fournisseur** est un attribut basé sur un domaine qui dépend de l’entité **État** à l’aide de **Master Data Manager**.  
@@ -29,7 +26,7 @@ ms.locfileid: "48207109"
   
 3.  Vérifiez que le modèle **Fournisseurs** est sélectionné et cliquez sur **Explorateur**. Vous pouvez actualiser la page si **l’Explorateur** est déjà ouvert.  
   
-4.  Pointez votre souris sur **Entités** dans la barre de menus et notez qu’il y a maintenant deux entités : **Fournisseur** et **État**.  
+4.  Pointez votre souris sur **entités** sur la barre de menus et notez qu’à présent, il existe deux entités : **Fournisseur** et **état**.  
   
      ![Menu entités avec état et fournisseur](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "Menu entités avec état et fournisseur")  
   
@@ -41,7 +38,7 @@ ms.locfileid: "48207109"
   
 8.  Répétez les étapes précédentes pour les autres États.  
   
-    |Code|Nom   |  
+    |Code|Créer une vue d’abonnement|  
     |----------|----------|  
     |CA|California|  
     |CO|Colorado|  

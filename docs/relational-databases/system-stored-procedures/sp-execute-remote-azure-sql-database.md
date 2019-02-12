@@ -2,10 +2,8 @@
 title: sp_execute_remote (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: conceptual
 f1_keywords:
 - sp_execute_remote
@@ -18,12 +16,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c61098eabfe58cb1e791dd379cafb5f91d50f247
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a475ba50aa8d3ba140ea551306d8b9f17fe66d22
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837087"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035900"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -46,10 +44,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ \@data_source_name =] *datasourcename*  
+ [ \@data_source_name = ] *datasourcename*  
  Identifie la source de données externe dans laquelle l’instruction est exécutée. Consultez [créer une SOURCE de données externe &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). La source de données externe peut être de type « SGBDR » ou « SHARD_MAP_MANAGER ».  
   
- [ \@stmt =] *instruction*  
+ [ \@stmt= ] *statement*  
  Est une chaîne Unicode contenant un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot. \@stmt doit être une constante Unicode ou une variable Unicode. L'utilisation d'expressions Unicode plus complexes (comme la concaténation de deux chaînes avec l'opérateur +) n'est pas autorisée. L'utilisation de constantes de caractères n'est pas autorisée. Si une constante Unicode est spécifiée, elle doit porter le préfixe avec un **N**. Par exemple, la constante Unicode **ne sp_who'** est valide, mais la constante caractère **'sp_who'** n’est pas. La taille de la chaîne n'est limitée que par la quantité de mémoire disponible sur le serveur de base de données. Sur les serveurs 64 bits, la taille de la chaîne est limitée à 2 Go, la taille maximale de **nvarchar (max)**.  
   
 > [!NOTE]  
@@ -60,7 +58,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  [ \@params =] N'\@*nom_paramètre ** data_type* [,... *n* ] '  
  Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans \@stmt. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique les définitions de paramètres supplémentaires. Chaque paramètre spécifié dans \@stmtmust être défini dans \@params. Si le [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot de \@stmt ne contient-elle pas de paramètres, \@params n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
   
- [ \@param1 =] '*value1*'  
+ [ \@param1= ] '*value1*'  
  Valeur du premier paramètre qui est défini dans la chaîne de paramètres. Cette valeur peut être une constante ou une variable Unicode. Il doit y avoir une valeur de paramètre fournie pour chaque paramètre inclus dans \@stmt. Les valeurs ne sont pas requis lorsque la [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot de \@stmt n’a aucun paramètre.  
   
  *n*  
@@ -72,7 +70,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne le jeu de résultats de la première instruction SQL.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `ALTER ANY EXTERNAL DATA SOURCE`.  
   
 ## <a name="remarks"></a>Notes  
@@ -107,5 +105,5 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 ## <a name="see-also"></a>Voir aussi :
 
 [CRÉER LA BASE DE DONNÉES INFORMATIONS D’IDENTIFICATION](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
-[CRÉER la SOURCE de données externe (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+[CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
     

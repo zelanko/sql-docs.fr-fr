@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8b857d0aab5cc64255e3d041d58fdc7ab398358
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cc661c1241ce6d265fc949d7324ed4c54a5793f5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216619"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029500"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>Rendre un instantané d'historique de rapport à l'aide de l'accès URL
   Vous pouvez effectuer le rendu d’un rapport reposant sur une capture instantanée d’historique de rapport en indiquant le paramètre *rs:Snapshot* et en définissant sa valeur sur un ID de capture instantanée valide. La valeur de ce paramètre doit être spécifiée au format AAAA-MM-JJTHH:MM:SS, conformément à la norme ISO 8601.  
   
- Si vous omettez ce paramètre, le rapport est rendu selon le paramétrage des options d'exécution de rapports et de gestion du cache du serveur de rapports. Pour plus d’informations sur l’exécution des rapports, consultez [définir les propriétés de traitement de rapport](report-server/set-report-processing-properties.md).  
+ Si vous omettez ce paramètre, le rapport est rendu selon le paramétrage des options d'exécution de rapports et de gestion du cache du serveur de rapports. Pour plus d’informations sur l’exécution des rapports, consultez [Définir les propriétés de traitement d’un rapport](report-server/set-report-processing-properties.md).  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant montre une URL qui extrait un instantané d'historique de rapport :  
@@ -38,6 +38,6 @@ http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07
   
 ## <a name="see-also"></a>Voir aussi  
  [Accès URL &#40;SSRS&#41;](url-access-ssrs.md)   
- [Référence de paramètres d'accès URL](url-access-parameter-reference.md)  
+ [Référence de paramètre d'accès URL](url-access-parameter-reference.md)  
   
   

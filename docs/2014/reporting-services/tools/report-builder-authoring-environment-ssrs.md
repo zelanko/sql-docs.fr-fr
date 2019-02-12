@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 67e1fe559e8bbb4c9c484671737223766c4a0554
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 525eccd52a0a680304533ac73bb852f4f5c4e74c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358151"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017670"
 ---
 # <a name="report-builder-ssrs"></a>Générateur de rapports (SSRS)
   Le Générateur de rapports est un environnement de création de rapports destiné aux utilisateurs professionnels qui préfèrent travailler dans l'environnement [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office. Lorsque vous concevez un rapport, vous spécifiez l'emplacement des données à obtenir, leur nature et leur mode d'affichage. Au moment de l'exécution du rapport, le processeur de rapports assimile l'ensemble des informations que vous avez spécifiées, puis il récupère les données et les combine à la mise en page du rapport pour générer le rapport.  

@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccabc5546cd61f7b685480cf2c2819d6594aee1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8d3abef04fd707681499d13246f050bc75eeda98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182670"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015979"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visionneuse HTML et barre d'outils Rapport
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit une visionneuse HTML utilisée pour afficher des rapports sur demande lorsqu'ils sont demandés auprès du serveur de rapports. La visionneuse HTML offre une infrastructure pour afficher les rapports au format HTML. Elle comporte une barre d'outils Rapport, une section de paramétrage, une section sur les informations d'identification et un explorateur de documents. Cette barre d'outils offre des fonctionnalités qui permettent d'utiliser votre rapport, notamment des options d'exportation qui permettent d'afficher votre rapport dans d'autres formats que le format HTML. La section de paramètre et l'explorateur de documents sont affichés uniquement lorsque vous ouvrez des rapports configurés pour utiliser des paramètres et une commande d'explorateur de documents.  
   
 > [!NOTE]  
->  Bien que vous ne puissiez pas modifier la barre d'outils Rapport, vous pouvez configurer les paramètres dans une adresse URL destinée aux rapports pour la masquer dans un rapport. Pour plus d’informations sur le masquage de la barre d’outils rapport, consultez [référence de paramètre d’accès URL](url-access-parameter-reference.md).  
+>  Bien que vous ne puissiez pas modifier la barre d'outils Rapport, vous pouvez configurer les paramètres dans une adresse URL destinée aux rapports pour la masquer dans un rapport. Pour plus d’informations sur le masquage de la barre d’outils des rapports, consultez [Référence de paramètre d’accès URL](url-access-parameter-reference.md).  
   
 ## <a name="report-toolbar"></a>Barre d'outils Rapport  
  Cette barre d'outils offre des fonctionnalités de navigation entre les pages, de zoom, d'actualisation, de recherche, d'exportation, d'impression et de source de donnés pour les rapports affichés dans l'extension de rendu HTML.  
@@ -34,18 +34,18 @@ ms.locfileid: "48182670"
   
  La barre d'outils Rapport est identique à celle illustrée ci-dessous. Elle peut être toutefois différente selon les fonctionnalités de rapport ou les options de rendu disponibles.  
   
- ![Barre d’outils Rapport](media/htmlviewer-toolbar.gif "Barre d’outils Rapport")  
+ ![Report toolbar](media/htmlviewer-toolbar.gif "Report toolbar")  
   
  Le tableau ci-dessous décrit les fonctionnalités couramment utilisées de la barre d'outils Rapport. Chaque fonctionnalité est identifiée par la commande que vous utilisez pour y accéder.  
   
 |Utilisez cette icône ou cette commande||Pour|  
 |------------------------------|-|--------|  
-|![Contrôles de navigation de page](media/htmlviewer-pagenav.gif "des contrôles de navigation de Page")|**Commandes de navigation entre les pages**|Ouvrir la première ou la dernière page d'un rapport, faire défiler un rapport page par page et ouvrir une page particulière d'un rapport. Pour afficher une page spécifique, tapez le numéro de page et appuyez sur Entrée.|  
-|![Page Afficher les contrôles](media/htmlviewer-pagesize.gif "Page Afficher les contrôles")|**Commandes d'affichage des pages**|Agrandir ou réduire la taille de la page d'un rapport. Outre les modifications des pourcentages, vous pouvez sélectionner **Largeur de page** pour ajuster la longueur horizontale d’une page d’un rapport à la fenêtre du navigateur ou **Page entière** pour ajuster la longueur verticale d’un rapport à la fenêtre du navigateur. **Internet Explorer 5.5 et versions ultérieures prennent en charge l'option** Zoom [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  
-|![Champ de recherche](media/htmlviewer-search.gif "champ de recherche")|**Champ de recherche**|Rechercher du contenu dans un rapport en tapant un terme ou une phrase que vous souhaitez trouver (la longueur maximale de la valeur est de 256 caractères). La recherche ne respecte pas la casse et commence au niveau de la page ou de la section actuellement sélectionnée. Seul le contenu visible est compris dans une opération de recherche. Pour rechercher d'autres occurrences de la même valeur, cliquez sur **Suivant**.|  
-|![Formats d’exportation](media/htmlviewer-export.GIF "formats d’exportation")|**Formats d'exportation**|Ouvrir une nouvelle fenêtre de navigateur et effectuer le rendu du rapport dans le format sélectionné. Les formats disponibles sont déterminés par les extensions de rendu installées sur le serveur de rapports. Le format TIFF est recommandé pour l'impression. Cliquez sur **Exporter** pour afficher le rapport dans le format sélectionné.|  
-|![Icône Explorateur de documents](media/htmlviewer-docmap.GIF "icône Explorateur de documents")|**Icône Explorateur de documents**|Afficher ou masquer le volet de l'explorateur de documents dans un rapport qui comprend un explorateur de documents. Un explorateur de documents est un contrôle de navigation entre les rapports similaire au volet de navigation d'un site Web. Vous pouvez cliquer sur des éléments dans l'explorateur de documents pour naviguer jusqu'à un groupe, une page ou un sous-rapport spécifique.|  
-|![Icône imprimante](media/printer-icon.gif "icône imprimante")|**Icône Imprimante**|Ouvre la boîte de dialogue Imprimer qui permet de spécifier les options d'impression et d'imprimer un rapport. À la première utilisation, lorsque vous cliquez sur cette icône, vous téléchargez le contrôle de l'impression.|  
+|![Commandes de navigation entre les pages](media/htmlviewer-pagenav.gif "Commandes de navigation entre les pages")|**Commandes de navigation entre les pages**|Ouvrir la première ou la dernière page d'un rapport, faire défiler un rapport page par page et ouvrir une page particulière d'un rapport. Pour afficher une page spécifique, tapez le numéro de page et appuyez sur Entrée.|  
+|![Commandes d'affichage des pages](media/htmlviewer-pagesize.gif "Commandes d'affichage des pages")|**Commandes d'affichage des pages**|Agrandir ou réduire la taille de la page d'un rapport. Outre les modifications des pourcentages, vous pouvez sélectionner **Largeur de page** pour ajuster la longueur horizontale d’une page d’un rapport à la fenêtre du navigateur ou **Page entière** pour ajuster la longueur verticale d’un rapport à la fenêtre du navigateur. **Internet Explorer 5.5 et versions ultérieures prennent en charge l'option** Zoom [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  
+|![Champ de recherche](media/htmlviewer-search.gif "Champ de recherche")|**Champ de recherche**|Rechercher du contenu dans un rapport en tapant un terme ou une phrase que vous souhaitez trouver (la longueur maximale de la valeur est de 256 caractères). La recherche ne respecte pas la casse et commence au niveau de la page ou de la section actuellement sélectionnée. Seul le contenu visible est compris dans une opération de recherche. Pour rechercher d'autres occurrences de la même valeur, cliquez sur **Suivant**.|  
+|![Formats d'exportation](media/htmlviewer-export.GIF "Formats d'exportation")|**Formats d'exportation**|Ouvrir une nouvelle fenêtre de navigateur et effectuer le rendu du rapport dans le format sélectionné. Les formats disponibles sont déterminés par les extensions de rendu installées sur le serveur de rapports. Le format TIFF est recommandé pour l'impression. Cliquez sur **Exporter** pour afficher le rapport dans le format sélectionné.|  
+|![Icône Explorateur de documents](media/htmlviewer-docmap.GIF "Icône Explorateur de documents")|**Icône Explorateur de documents**|Afficher ou masquer le volet de l'explorateur de documents dans un rapport qui comprend un explorateur de documents. Un explorateur de documents est un contrôle de navigation entre les rapports similaire au volet de navigation d'un site Web. Vous pouvez cliquer sur des éléments dans l'explorateur de documents pour naviguer jusqu'à un groupe, une page ou un sous-rapport spécifique.|  
+|![Icône Imprimante](media/printer-icon.gif "Icône Imprimante")|**Icône Imprimante**|Ouvre la boîte de dialogue Imprimer qui permet de spécifier les options d'impression et d'imprimer un rapport. À la première utilisation, lorsque vous cliquez sur cette icône, vous téléchargez le contrôle de l'impression.|  
 ||**Icônes d'affichage ou de masquage**|Afficher ou masquer les champs de valeurs de paramètre et le bouton **Afficher le rapport** dans un rapport qui contient des paramètres.|  
 |![Bouton d’actualisation du navigateur sur la barre d’outils du rapport](media/htmlviewer-refresh.GIF "Bouton d’actualisation du navigateur sur la barre d’outils du rapport")|**Icône d'actualisation de rapport**|Actualiser le rapport. Les données des rapports actifs seront actualisées. Les rapports mis en cache sont rechargés à partir de l'emplacement où ils sont stockés.|  
 |![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**Icône de source de données**|Sources de données générées à partir de rapports.|  

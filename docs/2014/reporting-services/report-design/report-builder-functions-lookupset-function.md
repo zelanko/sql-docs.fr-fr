@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d84ee2971ca430d87220d07ec461180f5c31f759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b43eebafb47a2f9173825ea79b5ba035e27ebca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166399"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029540"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>Fonction LookupSet (Générateur de rapports et SSRS)
   Retourne le jeu de valeurs correspondantes pour le nom spécifié d'un dataset contenant des paires nom/valeur.  
@@ -45,12 +45,12 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « ContactInformation ».  
   
 ## <a name="return"></a>Return  
- Retourne un `VariantArray`, ou `Nothing` s’il n’existe aucune correspondance.  
+ Retourne une valeur `VariantArray`, ou `Nothing` si aucune correspondance n'est trouvée.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez `LookupSet` pour récupérer un ensemble de valeurs à partir du dataset spécifié pour une paire nom/valeur où il existe une relation 1-à-plusieurs. Par exemple, pour un identificateur de client dans une table, vous pouvez utiliser `LookupSet` pour récupérer tous les numéros de téléphone associés pour ce client à partir d’un jeu de données qui n’est pas lié à la région de données.  
+ Utilisez `LookupSet` pour récupérer un jeu de valeurs du dataset spécifié pour une paire nom-valeur lorsqu'il existe une relation un à plusieurs. Par exemple, pour un identificateur de client dans une table, vous pouvez utiliser `LookupSet` pour récupérer tous les numéros de téléphone associés à ce client à partir d'un dataset qui n'est pas lié à la région de données.  
   
- `LookupSet` effectue les opérations suivantes :  
+ La fonction `LookupSet` effectue les actions suivantes :  
   
 -   Évalue l'expression source dans l'étendue actuelle.  
   
@@ -74,7 +74,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   `LookupSet` ne peut pas être utilisé comme expression pour les éléments de rapport suivants :  
   
-    -   des chaînes de connexion dynamiques pour une source de données ;  
+    -   des chaînes de connexion dynamiques pour une source de données ;  
   
     -   des champs calculés dans un dataset ;  
   
@@ -98,9 +98,9 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="example"></a>Exemple  
- Étant donné que `LookupSet` retourne une collection d’objets, vous ne pouvez pas afficher l’expression de résultat directement dans une zone de texte. Vous pouvez concaténer la valeur de chaque objet dans la collection en tant que chaîne.  
+ Étant donné que `LookupSet` retourne une collection d'objets, vous ne pouvez pas afficher directement l'expression de résultat dans une zone de texte. Vous pouvez concaténer la valeur de chaque objet dans la collection en tant que chaîne.  
   
- Utilisez le [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] fonction `Join` créer une chaîne délimitée à partir d’un ensemble d’objets. Utilisez une virgule comme séparateur pour combiner les objets en une ligne unique. Dans certains convertisseurs, vous pouvez utiliser un saut de ligne [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) comme séparateur pour répertorier chaque valeur sur une nouvelle ligne.  
+ Utilisez la fonction [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Join` pour créer une chaîne délimitée à partir d'un jeu d'objets. Utilisez une virgule comme séparateur pour combiner les objets en une ligne unique. Dans certains convertisseurs, vous pouvez utiliser un saut de ligne [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) comme séparateur pour répertorier chaque valeur sur une nouvelle ligne.  
   
  L’expression suivante, lorsqu’elle est utilisée en tant que la valeur de propriété pour une zone de texte, utilise `Join` pour créer une liste.  
   
@@ -148,9 +148,9 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

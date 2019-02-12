@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e6a022b50d4fb37474ba1183abc432ca4a7de463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bf1d2d6a884f3751cd2d252bbba38d62aeea5bf9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080819"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023720"
 ---
 # <a name="msreportserverconfigurationsetting-properties"></a>Propriétés MSReportServer_ConfigurationSetting
   La classe MSReportServer_ConfigurationSetting représente les paramètres d’installation et d’exécution d’une instance de serveur de rapports. Ces paramètres sont stockés dans le fichier de configuration RSReportServer.config.  

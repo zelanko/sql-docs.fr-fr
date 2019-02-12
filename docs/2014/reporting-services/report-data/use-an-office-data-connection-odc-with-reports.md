@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c40f02e86f736b96398de4bb9e3d1183de2f9c6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54082236bed728d81d060b73ecdc03fb53d82825
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162859"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016592"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>Utiliser une connexion de données Office (.odc) avec les rapports (Reporting Services en mode intégré SharePoint)
   Pour certains scénarios, vous pouvez utiliser un fichier .odc (Office Data Connection) existant pour fournir des informations de connexion à un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Un fichier .odc peut être utilisé à la place d’un fichier .rsds quand vous créez une source de données partagée. Le serveur de rapports utilise le fichier .odc de la même manière qu'un fichier .rsds ; il le lit pour obtenir le type de sources de données, une chaîne de connexion et les informations d'identification.  
@@ -35,7 +35,7 @@ ms.locfileid: "48162859"
   
 -   Le fichier .odc doit spécifier une chaîne de connexion.  
   
--   Informations d’identification peuvent être définies sur `None`, `Stored`, ou `Integrated`. Si la méthode d’identification est définie sur `Stored`, le serveur de rapports invite l’utilisateur pour les informations d’identification au lieu d’utiliser les informations d’identification stockées. Le serveur de rapports ne peut pas utiliser les informations d'identification stockées telles qu'elles sont définies dans le fichier .odc.  
+-   Les valeurs `None`, `Stored` ou `Integrated` peuvent être affectées aux informations d'identification. Si la méthode relative aux informations d'identification a la valeur `Stored`, le serveur de rapports invite l'utilisateur à fournir ses informations d'identification au lieu d'utiliser les informations d'identification stockées. Le serveur de rapports ne peut pas utiliser les informations d'identification stockées telles qu'elles sont définies dans le fichier .odc.  
   
 -   La source de données doit contenir un schéma identique à celui utilisé pour créer le rapport. Si les structures de données diffèrent, le rapport ne s'exécutera pas.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48162859"
   
 4.  Sélectionnez **Fournisseur Microsoft OLE DB pour SQL Server**, puis cliquez sur **Suivant**.  
   
-5.  Entrez le nom du serveur (par défaut, il s'agit du nom réseau de l'ordinateur) et un compte d'utilisateur disposant d'autorisations valides sur la connexion et la base de données. Cliquez sur **Suivant**.  
+5.  Entrez le nom du serveur (par défaut, il s'agit du nom réseau de l'ordinateur) et un compte d'utilisateur disposant d'autorisations valides sur la connexion et la base de données. Cliquer sur **Suivant**.  
   
 6.  Sélectionnez une base de données, puis cliquez sur **OK** pour fermer la boîte de dialogue **Liaison de données** .  
   
@@ -102,6 +102,6 @@ ms.locfileid: "48162859"
      Si vous appliquez cette procédure avec l'exemple de base de données et les exemples de rapports [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , soyez conscient que seul le rapport Company Sales fonctionnera immédiatement avec un fichier .odc. Les autres rapports exemple contiennent des paramètres de requête et des fonctionnalités non compatibles avec le fournisseur OLE DB. Vous pouvez cependant les faire fonctionner avec le fournisseur OLE DB si vous les modifiez au préalable dans le Concepteur de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer, modifier et supprimer des Sources de données partagées &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)  
+ [Créer, modifier et supprimer des sources de données partagées &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

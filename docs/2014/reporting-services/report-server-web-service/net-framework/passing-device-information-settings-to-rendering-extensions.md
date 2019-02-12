@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1f9f8df66bdd07a2a30a563af27b4c98cccf2c52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 56f5540e1bde5ea0a4fee51f445bccd1566fbb7a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081979"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026330"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Transmission de paramètres d'informations de périphérique aux extensions de rendu
   Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les paramètres d'informations de périphérique sont utilisés pour passer les paramètres de rendu à l'extension de rendu définie. Les paramètres du service Web Report Server sont passés comme élément XML **DeviceInfo** , puis sont traités par le serveur de rapports. Des valeurs par défaut étant attribuées aux paramètres d'informations de périphérique, ces paramètres sont considérés comme des arguments facultatifs lors du processus de rendu. Toutefois, vous pouvez utiliser ces paramètres afin de personnaliser le rendu et remplacer les valeurs par défaut fournies par le serveur.  
@@ -36,7 +36,7 @@ ms.locfileid: "48081979"
  Les paramètres d'informations de périphérique peuvent être spécifiés de diverses manières. Vous pouvez utiliser la méthode Render dans un programme. Si vous accédez à un rapport à l'aide de son URL, vous pouvez spécifier les informations de périphérique sous la forme de paramètres d'URL. Enfin, vous pouvez modifier les paramètres d'informations de périphérique dans les fichiers de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et ainsi spécifier les paramètres de rendu de manière globale. Pour plus d’informations sur la spécification des paramètres de rendu de manière globale, consultez [Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config](../../customize-rendering-extension-parameters-in-rsreportserver-config.md).  
   
 ## <a name="passing-device-information-using-the-render-method"></a>Passage des informations de périphérique à l'aide de la méthode Render  
- Pour passer des paramètres d’informations de périphérique à une extension de rendu, utilisez la <xref:ReportExecution2005.ReportExecutionService.Render%2A> (méthode). Par exemple, la chaîne XML suivante peut être passée à la méthode <xref:ReportExecution2005.ReportExecutionService.Render%2A> pour créer un fragment HTML quand le rapport est restitué au format HTML.  
+ Pour passer des paramètres d'informations de périphérique à l'extension de rendu définie, utilisez la méthode <xref:ReportExecution2005.ReportExecutionService.Render%2A>. Par exemple, la chaîne XML suivante peut être passée à la méthode <xref:ReportExecution2005.ReportExecutionService.Render%2A> pour créer un fragment HTML quand le rapport est restitué au format HTML.  
   
 ```  
 <DeviceInfo>  
@@ -44,7 +44,7 @@ ms.locfileid: "48081979"
 </DeviceInfo>  
 ```  
   
- Lorsqu'un rapport est restitué sous la forme d'un fragment HTML, son contenu est placé dans un élément TABLE et aucun élément HTML ou BODY n'est utilisé. Vous pouvez utiliser ce fragment afin d'intégrer le rapport concerné à un document HTML existant. Pour plus d’informations sur les paramètres d’informations de périphérique utilisés pour le format HTML, consultez [Paramètres d’informations de périphérique HTML](../../html-device-information-settings.md).  
+ Lorsqu'un rapport est restitué sous la forme d'un fragment HTML, son contenu est placé dans un élément TABLE et aucun élément HTML ou BODY n'est utilisé. Vous pouvez utiliser ce fragment afin d'intégrer le rapport concerné à un document HTML existant. Pour plus d'informations sur les paramètres d'informations de périphérique utilisés pour le format HTML, consultez [HTML Device Information Settings](../../html-device-information-settings.md).  
   
 ## <a name="passing-device-information-using-url-access"></a>Passage d'informations de périphérique à l'aide d'un accès URL  
  Vous pouvez également passer des paramètres d'informations de périphérique en utilisant un accès URL. Les paramètres d'informations de périphérique sont alors passés sous la forme de paramètres d'URL. La chaîne d'accès URL suivante peut être passée au serveur de rapports pour générer un rapport rendu ne comportant pas de barre d'outils de visionneuse HTML.  

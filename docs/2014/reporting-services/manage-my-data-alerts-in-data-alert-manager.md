@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7dd75468674f4013c3587f98ef32d112c8442438
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a79771080b1b9c2b7009e7d6228e943e48edbc04
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188659"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027100"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Gérer mes alertes de données dans le Gestionnaire des alertes de données
   Les utilisateurs SharePoint peuvent consulter la liste des alertes de données qu'ils ont créées et les informations sur les alertes. Ils peuvent également supprimer leurs alertes, ouvrir les définitions d'alerte pour les modifier dans le Concepteur d'alertes de données et les exécuter. L'image suivante affiche les fonctionnalités disponibles aux utilisateurs dans le Gestionnaire des alertes de données.  
@@ -47,7 +47,7 @@ ms.locfileid: "48188659"
   
 -   Cliquez avec le bouton droit sur l’alerte de données que vous souhaitez modifier, puis cliquez sur **Modifier**.  
   
-     La définition de l'alerte s'ouvre dans le Concepteur d'alertes de données. Pour plus d’informations, consultez [modifier une alerte de données dans le Concepteur d’alertes](edit-a-data-alert-in-alert-designer.md) et [Concepteur d’alertes de données](../../2014/reporting-services/data-alert-designer.md).  
+     La définition de l'alerte s'ouvre dans le Concepteur d'alertes de données. Pour plus d’informations, consultez [Modifier une alerte de données dans le Concepteur d’alertes](edit-a-data-alert-in-alert-designer.md) et [Concepteur d’alertes de données](../../2014/reporting-services/data-alert-designer.md).  
   
     > [!NOTE]  
     >  Uniquement l'utilisateur qui a créé la définition d'alerte de données peut la modifier.  

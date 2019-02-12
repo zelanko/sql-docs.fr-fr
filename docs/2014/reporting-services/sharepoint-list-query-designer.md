@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 593de30c-69f0-42a8-8467-16e78647b74c
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a68cc175ec8339fc9af0554a6b9c5c5b6f7386ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: ee2dd2c9776402dd639858e2a330f31d02b04635
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135161"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017710"
 ---
 # <a name="sharepoint-list-query-designer"></a>Concepteur de requêtes de liste SharePoint
   Le Concepteur de rapports fournit un Concepteur de requêtes graphique et un Concepteur de requêtes textuel qui permettent de créer une requête spécifiant les données à récupérer à partir d'un site SharePoint pour un dataset de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées de liste SharePoint, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique, modifier une requête ou taper les commandes d'une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
@@ -64,7 +64,7 @@ ms.locfileid: "48135161"
  Pour ajouter des champs à ce volet ou en supprimer, activez ou désactivez les cases à cocher en regard des champs de table ou de vue dans le volet Vue de base de données.  
   
 ###  <a name="AppliedFilters"></a> Volet Filtres appliqués  
- Le volet Filtres appliqués affiche les critères utilisés pour limiter le nombre de lignes de données qui sont récupérées au moment de l'exécution. Les critères spécifiés dans ce volet sont utilisés pour générer un [!INCLUDE[tsql](../includes/tsql-md.md)] clause WHERE. Lorsque vous sélectionnez l'option de paramètre, un paramètre de rapport est automatiquement créé. Les paramètres de rapport basés sur des paramètres de requête permettent à un utilisateur de spécifier des valeurs pour la requête afin de contrôler les données dans le rapport.  
+ Le volet Filtres appliqués affiche les critères utilisés pour limiter le nombre de lignes de données qui sont récupérées au moment de l'exécution. Les critères spécifiés dans ce volet sont utilisés pour générer une clause WHERE [!INCLUDE[tsql](../includes/tsql-md.md)] . Lorsque vous sélectionnez l'option de paramètre, un paramètre de rapport est automatiquement créé. Les paramètres de rapport basés sur des paramètres de requête permettent à un utilisateur de spécifier des valeurs pour la requête afin de contrôler les données dans le rapport.  
   
  Les colonnes suivantes sont affichées :  
   

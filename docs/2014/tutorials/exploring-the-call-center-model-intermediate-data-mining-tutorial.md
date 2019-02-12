@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e6b1995ad715ea529da548f06e0643be076abe96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518898"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037760"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Exploration du modèle de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
   Maintenant que vous avez généré le modèle exploratoire, vous pouvez l'utiliser pour en savoir plus sur vos données à l'aide des outils suivants fournis dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -110,8 +109,8 @@ ms.locfileid: "52518898"
   
 |Attribute|Value|Privilégie \< 0,07|Privilèges >= 0.12|  
 |---------------|-----------|--------------------|----------------------|  
-|Average Time Per Issue|89.087-120.000||Score :  100<br /><br /> Probabilité de Value1 : 4,45 %<br /><br /> Probabilité de Value2 : 51.94 %<br /><br /> Finesse pour Value1 : 0.19<br /><br /> Finesse pour Value2 : 1,94|  
-|Average Time Per Issue|44.000-70.597|Score : 92.35<br /><br /> Probabilité de Value1 : 60.06 %<br /><br /> Probabilité de Value2 : 8,30 %<br /><br /> Finesse pour Value1 : 2.61<br /><br /> Finesse pour Value2 : 0.31||  
+|Average Time Per Issue|89.087 - 120.000||Score :  100<br /><br /> Probabilité de Value1 : 4.45 %<br /><br /> Probabilité de Value2 : 51.94 %<br /><br /> Finesse pour Value1 : 0.19<br /><br /> Finesse pour Value2 : 1.94|  
+|Average Time Per Issue|44.000 - 70.597|Score : 92.35<br /><br /> Probabilité de Value1 : 60.06 %<br /><br /> Probabilité de Value2 : 8.30 %<br /><br /> Finesse pour Value1 : 2.61<br /><br /> Finesse pour Value2 : 0.31||  
   
  [Retour au début](#bkmk_NNviewer)  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b2b8979b945e6f7149f14ba11d8703221adab3a5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 17706542014f3835cb0a100d7dbf3e579b47aa65
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350024"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010654"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Afficher et explorer des rapports en mode natif à l’aide de composants WebPart SharePoint (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit plusieurs composants WebPart qui fonctionnent avec des versions spécifiques d'un serveur de rapports et dans des modes de déploiement particulier.  

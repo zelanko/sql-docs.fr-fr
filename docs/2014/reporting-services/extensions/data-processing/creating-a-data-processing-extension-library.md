@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 82f4b71b-dd39-467d-8d8c-6771eb2b12de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9070c23997211eec25d23976a48de321611f4efd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: be66209ab3b724c31fde38bad4f251db94a72765
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217749"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017340"
 ---
 # <a name="creating-a-data-processing-extension-library"></a>Création d'une bibliothèque d'extensions pour le traitement des données
   Chaque extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que vous créez doit être affectée à un espace de noms unique et intégrée dans un fichier bibliothèque ou d'assembly. Le nom exact de l'espace de noms n'est pas important, mais il doit être unique et ne pas être partagé avec une autre extension. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] utilise l'espace de noms <xref:Microsoft.ReportingServices.DataProcessing> pour les extensions pour le traitement des données fournies avec [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Vous devez créer vos propres espaces de noms uniques pour les extensions pour le traitement des données de votre entreprise.  

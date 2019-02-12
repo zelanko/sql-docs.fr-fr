@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3b8dc70cf1502363585abd7f1be5de7c72c6256a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1c6854194122dbc4ab5e1781ea62de119f7a09e9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062639"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029050"
 ---
 # <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>Méthode ListIPAddresses (WMI MSReportServer_ConfigurationSetting)
   Répertorie les adresses IP de l'ordinateur serveur de rapports.  
@@ -61,7 +61,7 @@ public void ListIPAddresses (out string[] IPAddress,
   
  Si *IsDhcpEnabled* est `True`, le *IPAddress* est dynamique. Elle ne doit pas être utilisée pour les liaisons SSL.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

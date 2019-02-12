@@ -15,14 +15,14 @@ helpviewer_keywords:
 - query designers [Reporting Services], text-based
 ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 36805b803d52652d0b072f6124eb2f90cf9617c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 61c57d661a9865c9ced6912af921dd45b9e1db74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085739"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012390"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Interface utilisateur du Concepteur de requêtes textuel
   Utilisez le Concepteur de requêtes textuel pour spécifier une requête à l'aide du langage de requête pris en charge par la source de données, exécuter la requête et afficher les résultats au moment de la conception. Vous pouvez spécifier plusieurs instructions [!INCLUDE[tsql](../includes/tsql-md.md)] , une syntaxe de requête ou de commande pour les extensions pour le traitement des données personnalisées et des requêtes spécifiées en tant qu'expressions. Comme le Concepteur de requêtes textuel n'effectue pas de prétraitement de la requête et peut accepter tout type de syntaxe de requête, il s'agit de l'outil du Concepteur de requêtes par défaut pour de nombreux types de sources de données.  
@@ -39,7 +39,7 @@ ms.locfileid: "48085739"
 |Bouton|Description|  
 |------------|-----------------|  
 |**Modifier en tant que texte**|Bascule entre le Concepteur de requêtes textuel et le concepteur de requêtes graphique. Les types de sources de données ne prennent pas tous en charge les concepteurs de requêtes graphiques.|  
-|**Importer**|Importe une requête existante à partir d'un fichier ou d'un rapport. Seuls les types de fichiers sql et rdl sont pris en charge. Pour plus d’informations, consultez [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|**Importer**|Importe une requête existante à partir d'un fichier ou d'un rapport. Seuls les types de fichiers sql et rdl sont pris en charge. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Exécuter la requête](../analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche le jeu de résultats dans le volet Résultats.|  
 |**Type de commande**|Sélectionnez **Text**, **StoredProcedure**ou **TableDirect**. Si une procédure stockée comporte des paramètres, la boîte de dialogue **Définir les paramètres de la requête** s'affiche lorsque vous cliquez sur **Exécuter** dans la barre d'outils, et vous pouvez spécifier les valeurs souhaitées. Notez que si une procédure stockée retourne plusieurs jeux de résultats, seul le premier jeu de résultats est utilisé pour remplir le jeu de données.<br /><br /> La prise en charge du type de commande varie en fonction du type de source de données. Par exemple, seuls OLE DB et ODBC prennent en charge **TableDirect**.|  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48085739"
 |Volet|Fonction|  
 |----------|--------------|  
 |Requête|Affiche le texte de la requête [!INCLUDE[tsql](../includes/tsql-md.md)] . Ce volet permet d'écrire ou de modifier une requête [!INCLUDE[tsql](../includes/tsql-md.md)] .|  
-|Résultats|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
+|Résultat|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
   
 #### <a name="example"></a>Exemple  
  La requête suivante retourne la liste des noms depuis la table `Contact` de la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  

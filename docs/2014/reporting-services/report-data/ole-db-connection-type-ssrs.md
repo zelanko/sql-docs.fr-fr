@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1cb3c7e8f9be785a93b29e453b5dfc727d747569
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 4afaa2c5c6abe201df23707104889a0f29f617f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369571"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033040"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Type de connexion OLE DB (SSRS)
   Pour inclure les données d'un fournisseur de données OLE DB, vous devez avoir un dataset basé sur une source de données de rapport de type OLE DB. Ce type de source de données intégré est basé sur l’extension pour le traitement des données OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

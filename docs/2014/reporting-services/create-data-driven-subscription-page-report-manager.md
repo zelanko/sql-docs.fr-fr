@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 041553621a9f85cf4ca4f409f25b05cb2660c12b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d3abebe357646aab1a09e3bc6a59130461d268bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116853"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027040"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Page Créer un abonnement piloté par les données (Gestionnaire de rapports)
   Les pages Créer un abonnement piloté par les données vous permettent de générer ou modifier un abonnement qui interroge une base de données de l'abonné pour obtenir des informations sur l'abonnement chaque fois que l'abonnement est exécuté. Les abonnements pilotés par les données utilisent les résultats de la requête pour identifier les destinataires de l'abonnement, paramètres de remise et valeurs des paramètres de rapport. Lors de l'exécution, le serveur de rapports exécute une requête pour obtenir les valeurs utilisées pour les paramètres de l'abonnement. Vous pouvez utiliser ces pages pour définir la requête et attribuer des valeurs de requête aux paramètres de l'abonnement. Les valeurs et les options que vous spécifiez pour un abonnement piloté par les données sont réparties dans plusieurs pages (identiques à celles d'un Assistant). Il existe sept pages en tout.  
@@ -51,9 +51,9 @@ ms.locfileid: "48116853"
  **Spécifiez le mode de notification des destinataires**  
  Sélectionnez l'extension de remise à utiliser pour distribuer le rapport. Une seule extension de remise peut être utilisée pour chaque abonnement. Les options suivantes sont disponibles :  
   
--   Sélectionnez **Partage de fichiers du serveur de rapports** pour remettre les rapports à un partage de fichiers. Le rapport sera remis en tant que fichier statique, déconnecté du serveur de rapports. Pour plus d'informations, consultez [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md).  
+-   Sélectionnez **Partage de fichiers du serveur de rapports** pour remettre les rapports à un partage de fichiers. Le rapport sera remis en tant que fichier statique, déconnecté du serveur de rapports. Pour plus d’informations, voir [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md).  
   
--   Sélectionnez **Messagerie Report Server** pour remettre les rapports à une boîte de réception de messagerie. Pour plus d’informations, consultez [Remise par courrier électronique dans Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   Sélectionnez **Messagerie Report Server** pour remettre les rapports à une boîte de réception de messagerie. Pour plus d’informations, voir [E-Mail Delivery in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 -   Sélectionnez **Fournisseur de remise Null** pour remettre les rapports à la base de données du serveur de rapports. Cette option crée des instantanés de rapport. Choisissez cette option lorsque vous souhaitez précharger le serveur de rapports avec des instantanés de rapport spécifiques à l'utilisateur ou paramétrés, suivant une planification spécifique. Pour plus d’informations, consultez [Mise en cache de rapports &#40;SSRS&#41;](report-server/caching-reports-ssrs.md).  
   
@@ -152,7 +152,7 @@ ms.locfileid: "48116853"
  Définit une planification qui s'exécute toutes les heures.  
   
  **Quotidienne**  
- Définit une planification qui s'exécute les jours sélectionnés à une heure spécifique. Vous pouvez spécifier les jours comme suit : chaque  *\<jour >*, tous les jours ouvrables et chaque  *\<nombre >* jours. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
+ Définit une planification qui s'exécute les jours sélectionnés à une heure spécifique. Vous pouvez spécifier les jours comme suit : Chaque  *\<jour >*, tous les jours ouvrables et chaque  *\<nombre >* jours. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
   
  **Hebdomadaire**  
  Définit une planification qui s'exécute de façon hebdomadaire à une heure spécifique. L'intervalle peut correspondre à des semaines entières (toutes les deux semaines, par exemple) ou à des jours compris dans la semaine.  
@@ -170,11 +170,11 @@ ms.locfileid: "48116853"
  Le bouton **Terminer** est activé lorsqu'il existe suffisamment d'informations pour l'abonnement. Cliquez sur **Terminer** pour terminer l'abonnement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Abonnements pilotés par les données](subscriptions/data-driven-subscriptions.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Abonnements et remises &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Abonnements et remise &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

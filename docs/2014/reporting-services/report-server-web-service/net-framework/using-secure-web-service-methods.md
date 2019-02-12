@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 84dd6a3dcf6ca60a2f0af92064777ae5e204c31d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bedd007e7dabe1f96ac9f5fc22f565952c99d728
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074442"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018860"
 ---
 # <a name="using-secure-web-service-methods"></a>Utilisation des méthodes de service Web sécurisées
   Certaines méthodes de service Web Report Server peuvent requérir une connexion sécurisée lorsque vous les appelez. Ces méthodes sont déterminées par le paramètre `SecureConnectionLevel` dans le fichier RSReportServer.config. La valeur du paramètre est une valeur entière avec une plage valide supérieure ou égale à 0. Le tableau suivant décrit ces valeurs.  

@@ -12,14 +12,14 @@ f1_keywords:
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6b41dd0e97f8a729d2c58b7fd6b8f0d443fe9c3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b663f9cd95d055fe8736ee2232bbc273fe89798e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115755"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015013"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Boîte de dialogue Propriétés des méridiens de la carte, Étiquettes
   Utilisez le **MapMeridian propriétés** la boîte de dialogue options d’étiquette pour le quadrillage vertical de la carte. Un méridien représente la valeur suivante en fonction du système de coordonnées spécifié pour la fenêtre d'affichage :  
@@ -37,7 +37,7 @@ ms.locfileid: "48115755"
  **Afficher les étiquettes**  
  Sélectionnez cette option pour afficher des étiquettes pour les méridiens.  
   
- **sélection élective**  
+ **Placement**  
  Sélectionnez un emplacement pour afficher les étiquettes par rapport à la partie supérieure, centrale ou inférieure de la fenêtre d'affichage. L'emplacement par défaut est **Rapproché**.  
   
 -   **Rapproché** Affiche les étiquettes sur le bord gauche.  

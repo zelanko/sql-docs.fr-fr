@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 77e371c1-7c26-44f9-9119-7c8dc838db32
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e348aa6dec1488af16cd6948b1f7132c5d3a7387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ed69a02ddf8a02c1256c8f468e9ee75c573c2797
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196471"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031670"
 ---
 # <a name="removeunattendedexecutionaccount-method-wmi-msreportserverconfigurationsetting"></a>Méthode RemoveUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting)
   Supprime l'entrée de compte d'exécution sans assistance du fichier de configuration du serveur de rapports.  
@@ -46,7 +46,7 @@ public void RemoveUnattendedExecutionAccount (out Int32 HRESULT);
 ## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

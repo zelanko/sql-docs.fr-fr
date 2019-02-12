@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6fc3ab4ce541e194f9768cc710993db0119eaefd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: a38f52a4d5031e2b70f11263cd73d2015abbee73
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410186"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037878"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Créer, modifier et supprimer des abonnements pilotés par les données
   Un abonnement piloté par les données est un abonnement qui a recours à une requête pour obtenir les valeurs de données qui seront utilisées dans le traitement de l'abonnement au moment de l'exécution. Lorsque l'abonnement est déclenché, une requête est traitée pour récupérer des informations récentes sur les destinataires, les options de remise de rapport, les formats de rendu et les valeurs de paramètre. Les résultats de la requête sont combinées à la définition de l'abonnement pour créer un abonnement dynamique utilisant les données que vous avez conservées dans une base de données employés, une base de données clients ou dans toute autre base de données contenant des informations utilisables comme données d'abonnés.  

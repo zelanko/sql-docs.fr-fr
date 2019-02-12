@@ -17,14 +17,14 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0d3c218b5e72e231179443c146a6ea3c23747d4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e33547643adf7345bbbc7c020dcbd11959bb6119
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180609"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012026"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Fonctionnalités des états Access prises en charge (SSRS)
   Lorsque vous importez un rapport dans le Concepteur de rapports, le processus d'importation convertit le rapport d'Access [!INCLUDE[msCoName](../includes/msconame-md.md)] en un fichier RDL (Report Definition Language) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend en charge plusieurs fonctionnalités d'Access ; toutefois, puisqu'il existe des différences entre Access et [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], certains éléments sont légèrement modifiés ou ne sont pas pris en charge. Cette rubrique décrit comment les fonctionnalités des états Access sont converties en mode RDL.  
@@ -57,7 +57,7 @@ ms.locfileid: "48180609"
   
 |||||  
 |-|-|-|-|  
-|image|Étiquette|Ligne|Rectangle|  
+|Image|Etiquette|Ligne|Rectangle|  
 |Sous-formulaire|Sous-état<br /><br /> **Remarque** si un contrôle sous-état est converti dans le rapport principal, le sous-état lui-même est converti séparément.|TextBox||  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ne prend pas en charge les contrôles suivants :  
@@ -79,9 +79,9 @@ ms.locfileid: "48180609"
 |-|-|-|-|  
 |CouleurFond|StyleFond|BorderColor|BorderStyle|  
 |BorderWidth|BottomMargin|AutoExtensible (zone de texte)|AutoRéductible (zone de texte)|  
-|Légende|Gras|Italique|FontName|  
+|Légende|FontBold|Italique|FontName|  
 |FontSize|Souligné|FontWeight|SautPage|  
-|CouleurTexte|Hauteur|HideDuplicates|Hyperlink|  
+|ForeColor|Hauteur|HideDuplicates|Hyperlink|  
 |EstLienHypertexte|EstVisible|SectionInsécable (groupe)|Gauche|  
 |LeftMargin|Inclinaison|Interligne|ChampsFils|  
 |ChampsPères|NvLigOuCol|PageFooter|PageHeader|  
@@ -256,7 +256,7 @@ ms.locfileid: "48180609"
   
 |||||  
 |-|-|-|-|  
-|Choose|IIf|Commutateur||  
+|Choose|IIf|Basculer||  
   
 #### <a name="sql-aggregate-functions"></a>Fonctions d'agrégation SQL  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend en charge les fonctions d'agrégation SQL suivantes :  
@@ -264,7 +264,7 @@ ms.locfileid: "48180609"
 |||||  
 |-|-|-|-|  
 |Avg|Compter|Max|Min|  
-|StDev|StDevP|SUM|Var|  
+|StDev|StDevP|Sum|Var|  
 |VarP||||  
   
 #### <a name="text-functions"></a>Fonctions de texte  
@@ -294,7 +294,7 @@ ms.locfileid: "48180609"
 ## <a name="rectangles-and-containment"></a>Rectangles et relation contenant-contenu  
  Dans une définition de rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], les rectangles peuvent contenir d'autres éléments de rapport. Tout rectangle plus large qu'un élément de rapport, et qui recouvre plus de 90 % de sa surface, devient le conteneur de cet élément de rapport.  
   
-## <a name="bitmaps"></a>Images bitmap  
+## <a name="bitmaps"></a>Bitmaps  
  Toutes les images bitmap qui sont incorporées dans un état sont converties au format .bmp lorsque l'état est importé, quel que soit leur format d'origine. Par exemple, si votre état inclut des fichiers .jpg et .gif, les ressources résultantes importées dans le rapport sont des fichiers .bmp. Les images bitmap sont stockées sous forme d'images incorporées dans le rapport. Pour plus d’informations sur les Images incorporées, consultez [Images &#40;Générateur de rapports et SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
   
 ## <a name="other-considerations"></a>Autres considérations  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 98dc45752779a6610d735040e16bc5783447396d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a8bbbcc9ba9f1eefad4801a0e9294affea4ef39a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107057"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020583"
 ---
 # <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>Propriété DatabaseLogonType (WMI MSReportServer_ConfigurationSetting)
   Spécifie si le serveur de rapports utilise un compte de service [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, un compte d’utilisateur Windows ou un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour accéder à la base de données du serveur de rapports. En lecture seule.  
@@ -54,13 +54,13 @@ public int DatabaseLogonType;
   
 -   2 pour une connexion en tant que service.  
   
- Si vous spécifiez 0 (Windows), vous devez définir la valeur dans le [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) propriété d’un compte d’utilisateur Windows valid correspondant.  
+ Si vous spécifiez 0 (Windows), vous devez définir la valeur dans la propriété [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) en fonction d’un compte d’utilisateur Windows valide correspondant.  
   
- Si vous spécifiez 1 (SQL Server), assurez-vous que la valeur de la [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) correspond à une commande valide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.  
+ Si vous spécifiez 1 (SQL Server), assurez-vous que la valeur de la propriété [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) correspond à une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide.  
   
  Si vous spécifiez 2 (service Windows), le serveur de rapports utilise un compte [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] et le compte de service Windows pour accéder à la base de données du serveur de rapports. La propriété DatabaseLogonAccount est ignorée.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

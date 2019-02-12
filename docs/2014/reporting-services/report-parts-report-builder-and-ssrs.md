@@ -11,14 +11,14 @@ f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6114407d959a29944f01711b2446ce375f203b83
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 97e15adf9bbc18fadfd9789472f75a1070ebd60d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366371"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022829"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Publication de parties de rapports (Générateur de rapports et SSRS)
   Les éléments de rapport tels que les tableaux, matrices, graphiques et images peuvent être publiés en tant que *parties de rapports*. Parties et éléments de rapport qui ont été publiés séparément sur un serveur de rapports et qui peuvent être réutilisés dans d'autres rapports. Les parties de rapports ont l'extension de fichier .rsc.  

@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Ajouter un graphique à secteurs à votre rapport (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 12c567f91d526d3ac44485704f7c76fdfa345c11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 30966fc1ccc592539e543869aef03f555ca59b2d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202529"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020100"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Didacticiel : Ajouter un graphique à secteurs à votre rapport (Générateur de rapports)
   Les graphiques à secteurs et les graphiques en anneau affichent des données sous la forme d'une proportion de la totalité. Les graphiques en secteurs sont utilisés le plus souvent pour faire des comparaisons entre des groupes. Les graphique à secteurs et les graphiques en anneau, ainsi que les graphiques en pyramide et les graphiques en entonnoir, constituent un groupe de graphiques connus sous le nom de graphiques à base de formes. Les graphiques à base de formes n'ont pas d'axe. Lorsqu'un champ numérique est placé sur un graphique à base de formes, le graphique calcule le pourcentage de chaque valeur par rapport au total.  
   
  Lorsqu'un graphique à secteurs comporte trop de points de données, vos étiquettes de points de données peuvent devenir illisibles. Dans ce cas, envisagez d’utiliser un graphique en courbes. Pensez à utiliser des graphiques à secteurs uniquement lorsque vos données ont été agrégées en quelques points de données.  
@@ -45,11 +45,11 @@ ms.locfileid: "48202529"
 7.  [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en deux procédures. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, l’ajout d’une source de données et l’ajout d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en deux procédures. Pour obtenir des instructions détaillées sur l’accès à un serveur de rapports, ajouter une source de données et ajouter un jeu de données, consultez le premier didacticiel de cette série : [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Durée estimée pour effectuer le didacticiel : 10 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 10 minutes  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Chart"></a> 1. Créer un graphique à secteurs à partir de l'Assistant Graphique  
@@ -95,7 +95,7 @@ ms.locfileid: "48202529"
   
 8.  (Facultatif) Cliquez sur le bouton Exécuter (**!**) pour voir les données sur lesquelles votre graphique sera basé.  
   
-9. Cliquez sur **Suivant**.  
+9. Cliquer sur **Suivant**.  
   
 ##  <a name="ChartType"></a> 2. Choisir le type de graphique  
  Vous avez le choix entre plusieurs types de graphiques prédéfinis.  
@@ -108,7 +108,7 @@ ms.locfileid: "48202529"
   
 2.  Faites glisser le champ Sales vers le volet **Valeurs** . Le champ Sales représente le montant des ventes réalisées pour la sous-catégorie. Le volet **Valeurs** affiche `[Sum(Sales)]` , car le graphique affiche l’agrégat pour chaque produit.  
   
-3.  Cliquez sur **Suivant**.  
+3.  Cliquer sur **Suivant**.  
   
 4.  Sur le **choisir un style** page, dans le volet Styles, sélectionnez un style.  
   

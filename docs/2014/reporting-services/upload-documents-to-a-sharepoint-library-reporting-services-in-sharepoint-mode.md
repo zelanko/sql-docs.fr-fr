@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5cfb22d29120f7ee27e378329045c79f57252d61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c5534c1946cc07e35f64ab3baf3654a589a60706
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194289"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017150"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Télécharger des documents vers une bibliothèque SharePoint (Reporting Services en mode SharePoint)
   Vous pouvez télécharger des définitions de rapport et des modèles de rapport vers une bibliothèque SharePoint. Lorsque vous téléchargez un élément du serveur de rapports, vous devez sélectionner une bibliothèque ou un dossier dans une bibliothèque. Vous ne pouvez pas télécharger un élément de serveur de rapports vers une liste ou une page.  
@@ -28,7 +28,7 @@ ms.locfileid: "48194289"
  Vous ne pouvez pas télécharger de fichier de source de données (.rds). Toutefois, vous pouvez publier des fichiers .rds à partir d'un outil de conception, par exemple le Concepteur de rapports, vers une bibliothèque SharePoint. Au cours de la publication, un nouveau fichier .rsds est créé à partir du fichier .rds original dans la solution. Vous pouvez également créer un nouveau fichier .rsds dans une bibliothèque SharePoint, puis définir les propriétés de connexion à la source de données dans les rapports et les modèles téléchargés pour utiliser la nouvelle connexion.  
   
 > [!NOTE]  
->  Le serveur de rapports doit être configuré pour le mode SharePoint ; par ailleurs, l'instance du produit SharePoint doit posséder le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qui fournit les fichiers programme pour le stockage des éléments du serveur de rapports et leur accès à partir d'un site SharePoint.  
+>  Le serveur de rapports doit être configuré pour le mode SharePoint ; par ailleurs, l'instance du produit SharePoint doit posséder le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qui fournit les fichiers programme pour le stockage des éléments du serveur de rapports et leur accès à partir d'un site SharePoint.  
   
  Pour télécharger un document vers une bibliothèque, vous devez disposer de l'autorisation « Ajouter des éléments » au niveau du site. Si vous utilisez les paramètres de sécurité par défaut, cette autorisation est accordée aux membres du groupe **Propriétaires** qui disposent du niveau d’autorisation Contrôle total et aux membres du groupe **Membres** qui disposent du niveau d’autorisation Contribuer.  
   
@@ -49,8 +49,8 @@ ms.locfileid: "48194289"
  Un rapport peut contenir des paramètres permettant aux utilisateurs de filtrer les données. Vous pouvez configurer les paramètres pour utiliser des valeurs spécifiques ou modifier la manière dont elles apparaissent à l'utilisateur. Pour plus d’informations, consultez [Définir les paramètres sur un rapport publié &#40;Reporting Services en mode intégré SharePoint&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Publier un rapport dans une bibliothèque SharePoint](reports/publish-a-report-to-a-sharepoint-library.md)   
- [Publier une source de données partagée sur une bibliothèque SharePoint](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [publier un rapport dans une bibliothèque SharePoint](reports/publish-a-report-to-a-sharepoint-library.md)   
+ [publier une source de données partagée sur une bibliothèque SharePoint](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

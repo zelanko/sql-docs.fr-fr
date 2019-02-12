@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 335300f5b8e7f91c3595cdb26cb531bb589c782a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca5f2b01894818680b6b760a1f2b8a342d43d8ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085619"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022894"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Configuration et administration d'un serveur de rapports (mode SharePoint de Reporting Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est une plateforme de création de rapports basée sur le serveur qui fournit une gamme complète d’outils de prêts à l’emploi et des services pour vous aider à créer, déployer et gérer des rapports pour votre organisation, ainsi que les fonctionnalités de programmation qui vous permettent d’étendre et personnaliser vos rapports fonctionnalité. Vous pouvez intégrer votre environnement de création de rapports à un produit SharePoint afin de tirer parti des avantages liés à l'utilisation de l'environnement de collaboration fourni par les sites SharePoint.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est une plateforme de création de rapports basée sur serveur qui fournit une plage complète d’outils et de services prêts à l’emploi pour vous aider à créer, déployer et gérer des rapports pour votre organisation, ainsi que des fonctions de programmation pour vous permettre d’étendre et de personnaliser vos fonctionnalités de création de rapports. Vous pouvez intégrer votre environnement de création de rapports à un produit SharePoint afin de tirer parti des avantages liés à l'utilisation de l'environnement de collaboration fourni par les sites SharePoint.  
   
 ## <a name="in-this-section"></a>Contenu de cette section  
  Utilisez les sections suivantes pour vous aider à comprendre entre autres les concepts, scénarios de déploiement et procédures pour l'intégration de votre environnement [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] à un produit ou une technologie SharePoint :  
@@ -28,7 +28,7 @@ ms.locfileid: "48085619"
   
     -   [Gestionnaire des alertes de données pour les utilisateurs SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
-    -   [Create and Manage Subscriptions for SharePoint Mode Report Servers](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+    -   [Créer et gérer des abonnements pour les serveurs de rapports en mode Sharepoint](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
     -   [Mettre à jour les informations d'identification dans les sources de données de rapport à partir d'un site SharePoint](report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   

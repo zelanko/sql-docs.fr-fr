@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 06703a6f1a95b66a0c90fa022c186dca90d21b8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 87768f105f1e8a2b7d1e09433106e9a25baa0a93
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080849"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029690"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Définir des propriétés de déploiement (Reporting Services)
   Dans[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous devez spécifier le serveur de rapports et éventuellement les dossiers pour les rapports et les sources de données partagées afin de pouvoir publier les éléments dans un projet Report Server sur un serveur de rapports. Les propriétés et valeurs dont [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] a besoin pour générer, visualiser et déployer des rapports sont stockées dans les configurations de projet du projet Report Server. Vous pouvez créer plusieurs jeux nommés pour ces propriétés de projet afin de pouvoir aisément basculer entre les jeux de propriétés. Chaque jeu de propriétés est une configuration. Par exemple, vous pouvez avoir une configuration pour publier des rapports sur un serveur de test et une configuration différente pour publier des rapports sur un serveur de production.  

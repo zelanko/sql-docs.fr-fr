@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c4df8b4f17c006d51bdfc5bba6e7cb13b7cc69eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a3bea101bf16376ffc02699dc700f500f08f7222
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202969"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017720"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Ajouter ou supprimer un indicateur (Générateur de rapports et SSRS)
   Les indicateurs sont des jauges minimales qui communiquent en un coup d'œil l'état d'une valeur de donnée unique. Pour plus d’informations les concernant, consultez [Indicateurs &#40;Générateur de rapports et SSRS&#41;](indicators-report-builder-and-ssrs.md).  
@@ -25,7 +25,7 @@ ms.locfileid: "48202969"
   
  Lorsque vous ajoutez un indicateur pour la première fois, il est configuré par défaut pour utiliser des pourcentages comme unités de mesure. Les plages de pourcentage sont réparties uniformément entre les membres du jeu d'indicateurs, et l'étendue de valeurs indiquée par l'indicateur correspond au parent de l'indicateur tel qu'une table ou une matrice.  
   
- Vous pouvez mettre à jour les valeurs et les états d'indicateurs. Pour plus d'informations, consultez les rubriques suivantes :  
+ Vous pouvez mettre à jour les valeurs et les états d'indicateurs. Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Modifier les icônes d’indicateur et jeux d’indicateurs &#40;Générateur de rapports et SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   

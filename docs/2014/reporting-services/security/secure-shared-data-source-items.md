@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d888ef0f3019e38e043ebe00c68e03f82e924f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6b159467fc511292ecb1ae3832a04c73dabdd251
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067241"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009641"
 ---
 # <a name="secure-shared-data-source-items"></a>Sécuriser les éléments de source de données partagée
   Vous pouvez définir la sécurité sur un élément de source de données partagée afin d'en activer ou d'en désactiver l'accès.  
@@ -41,10 +41,10 @@ ms.locfileid: "48067241"
 |Définir la sécurité au niveau des éléments|Créer et modifier des attributions de rôles qui contrôlent l'accès à la source de données partagée. Cette tâche doit être utilisée avec la tâche « Afficher les sources de données » ou avec la tâche « Gérer les sources de données ». Si tel n'est pas le cas, elle est sans effet puisque l'utilisateur ne peut pas sélectionner l'élément.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer les Sources de données de rapport](../report-data/manage-report-data-sources.md)   
+ [Gérer des sources de données de rapports](../report-data/manage-report-data-sources.md)   
  [Dossiers sécurisés](secure-folders.md)   
  [Sécuriser des rapports et des ressources](secure-reports-and-resources.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](granting-permissions-on-a-native-mode-report-server.md)   
- [Stocker des informations d’identification dans une source de données Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Store Credentials in a Reporting Services Data Source](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

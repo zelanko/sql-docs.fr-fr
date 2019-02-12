@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8b9724139d6a89e345d1a8dd0c967f51afe5f8c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9fed65b504d8e76cdd6c827126ab752950ae821c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183479"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025370"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Installation côte à côte de Reporting Services et d'Internet Information Services (SSRS en mode natif)
   Vous pouvez installer et exécuter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) et Internet Information Services (IIS) sur le même ordinateur. La version des services IIS (Internet Information Services) que vous utilisez détermine les problèmes d'interopérabilité que vous devez traiter.  
@@ -50,7 +50,7 @@ ms.locfileid: "48183479"
 |http://+:80|Reçoit les requêtes qui ne sont pas déjà reçues par d'autres applications, pour tous les points de terminaison d'application mappés à **Assigné**.|  
 |http://*:80|Reçoit les requêtes qui ne sont pas déjà reçues par d'autres applications, pour les points de terminaison d'application mappés à **Non assigné**.|  
   
- Le message d'erreur suivant indique un conflit de ports : « System.IO.FileLoadException : Le processus ne peut pas accéder au fichier, car il est utilisé par un autre processus. (Exception de HRESULT : 0x80070020). »  
+ Une indication d’un conflit de port est que vous verrez le message d’erreur suivant : 'System.IO.FileLoadException: Le processus ne peut pas accéder au fichier, car il est utilisé par un autre processus. (Exception de HRESULT : 0x80070020).'  
   
 ## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>Réservations d'URL pour IIS 6.0, 7.0, 8.0, 8.5 avec [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services  
  Grâce aux règles de priorité décrites dans la section précédente, vous pouvez comprendre comment les réservations d'URL définies pour Reporting Services et les services IIS (Internet Information Services) favorisent l'interopérabilité. Reporting Services reçoit des requêtes qui spécifient explicitement les noms de répertoires virtuels de ses applications ; les services IIS (Internet Information Services) reçoivent toutes les requêtes restantes, lesquelles peuvent être adressées ensuite aux applications qui s'exécutent dans le cadre du modèle de processus IIS.  
@@ -74,13 +74,13 @@ ms.locfileid: "48183479"
   
  Pour vous assurer que toutes les applications reçoivent des requêtes, suivez ces instructions :  
   
--   Pour les installations Reporting Services, choisissez des noms de répertoires virtuels qui ne sont pas déjà utilisés par un site Web IIS sur le même port que Reporting Services. En cas de conflit, installez Reporting Services en mode « fichiers uniquement » (via le programme d'installation, mais ne configurez pas l'option serveur dans l'Assistant Installation) afin de pouvoir configurer les répertoires virtuels, une fois l'installation terminée. Le message d'erreur suivant indique un conflit au niveau de votre configuration : « System.IO.FileLoadException : Le processus ne peut pas accéder au fichier, car il est utilisé par un autre processus. (Exception de HRESULT : 0x80070020). »  
+-   Pour les installations Reporting Services, choisissez des noms de répertoires virtuels qui ne sont pas déjà utilisés par un site Web IIS sur le même port que Reporting Services. En cas de conflit, installez Reporting Services en mode « fichiers uniquement » (via le programme d'installation, mais ne configurez pas l'option serveur dans l'Assistant Installation) afin de pouvoir configurer les répertoires virtuels, une fois l'installation terminée. Indique que votre configuration est en conflit est que le message d’erreur s’affiche : System.IO.FileLoadException: Le processus ne peut pas accéder au fichier, car il est utilisé par un autre processus. (Exception de HRESULT : 0x80070020).  
   
 -   Pour les installations que vous configurez manuellement, adoptez les conventions d'affectation des noms par défaut dans les URL de configuration. Si vous installez [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] en tant qu'instance nommée, incluez le nom de l'instance lors de la création d'un répertoire virtuel.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des URL de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurer une URL &#40;Gestionnaire de Configuration de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
- [Installer le serveur de rapports Reporting Services en Mode natif](install-reporting-services-native-mode-report-server.md)  
+ [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [Installer le serveur de rapports Reporting Services en mode natif](install-reporting-services-native-mode-report-server.md)  
   
   

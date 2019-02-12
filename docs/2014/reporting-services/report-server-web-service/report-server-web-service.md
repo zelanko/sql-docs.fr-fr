@@ -19,20 +19,20 @@ helpviewer_keywords:
 ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: deac736b28aa9b50c20d3a831685f1f2be62590c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2ad59a4389e8a214e12a80eef6e81127a8958562
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167689"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012440"
 ---
 # <a name="report-server-web-service"></a>service Web Report Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permet d’accéder à toutes les fonctionnalités du serveur de rapports par le biais du service web Report Server. Le service Web Report Server est un service Web XML avec une API SOAP. Il utilise SOAP sur HTTP et agit comme une interface de communication entre les programmes clients et le serveur de rapports. Le service Web fournit deux points de terminaison (un pour l'exécution des rapports et l'autre pour la gestion des rapports) avec des méthodes qui exposent les fonctionnalités du serveur de rapports et qui vous permettent de créer des outils personnalisés pour n'importe quelle partie du cycle de vie du rapport.  
   
  Trois méthodes principales s’offrent à vous pour développer des applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] basées sur le service web. Vous pouvez :  
   
--   Développer des applications à l’aide du SDK de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] et du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Pour plus d’informations sur l’utilisation du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour générer des applications de service web, consultez [Génération d’applications à l’aide du service web et du .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
+-   Développer des applications à l'aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] et du Kit de développement logiciel (SDK) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Pour plus d’informations sur l’utilisation du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour générer des applications de service web, consultez [Génération d’applications à l’aide du service web et du .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 -   Développer des applications à l’aide de l’utilitaire **rs** (RS.exe), l’environnement de script [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Avec les scripts [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], vous pouvez exécuter n’importe laquelle des opérations de service web Report Server. Pour plus d’informations sur les scripts dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Écrire des scripts avec l’utilitaire rs.exe et le service web](../tools/script-with-the-rs-exe-utility-and-the-web-service.md).  
   
@@ -56,13 +56,13 @@ Options de développement de service Web disponibles dans Reporting Services
  Contient des informations sur le développement d'applications et de services Web qui appellent l'API SOAP Reporting Services.  
   
  [Écrire des scripts avec l'utilitaire rs.exe et le service Web](../tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
- Fournit une vue d'ensemble de l'environnement de script [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ Fournit une vue d'ensemble de l'environnement de script [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  [Informations techniques de référence &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)  
  Contient les documents de référence spécifiques aux méthodes des services Web Report Server et aux types complexes correspondants.  
   
 ## <a name="user-requirements-for-web-service-development"></a>Conditions requises liées à l'utilisateur pour le développement du service Web  
- Pour développer des applications à l'aide du service Web Report Server, vous devez posséder :  
+ Pour développer des applications à l'aide du service Web Report Server, vous devez posséder :  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 ou version ultérieure, installé sur un ordinateur doté d’une connexion Internet et ayant accès au serveur de rapports ;  
   
@@ -70,7 +70,7 @@ Options de développement de service Web disponibles dans Reporting Services
   
 -   des connaissances approfondies des fonctionnalités et des capacités de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ;  
   
--   de solides acquis concernant SOAP et les [!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)] ;  
+-   de solides acquis concernant SOAP et les [!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)];  
   
 -   de l’expérience en développement dans un langage compatible avec le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], tel que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], si vous envisagez d’utiliser le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] comme plateforme de développement.  
   

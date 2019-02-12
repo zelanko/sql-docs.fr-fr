@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6af3783ca583dfa328b32ee6cfb4eaf8cd73b4dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24ebd92281a66e258aef10a47a50e3e76b7a2d9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100621"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019417"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>Rechercher du texte, des nombres ou des dates dans un rapport (Reporting Services en mode intégré SharePoint)
   Vous pouvez rechercher du contenu dans un rapport en tapant un mot ou une expression que vous souhaitez trouver (la longueur maximale de la chaîne de recherche est de 256 caractères). La recherche est une technique de navigation qui vous permet de trouver une valeur correspondante dans le rapport et de placer le focus sur la partie du rapport qui contient cette valeur.  
@@ -44,6 +44,6 @@ ms.locfileid: "48100621"
 4.  Pour rechercher d'autres occurrences de la même valeur, cliquez sur **Suivant**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter le composant WebPart Visionneuse de rapports à une Page Web &#40;Reporting Services dans SharePoint Mode intégré&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Ajouter le composant WebPart Visionneuse de rapports à une page web &#40;Reporting Services en mode intégré SharePoint&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

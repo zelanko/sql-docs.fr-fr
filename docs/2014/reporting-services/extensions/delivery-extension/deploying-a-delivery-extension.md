@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a69f0a79ce10a17825490bd77e48a26d0d823af4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a461f3dfa1dca66efb2708e15f56c7fa30c58dc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184249"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037460"
 ---
 # <a name="deploying-a-delivery-extension"></a>Déploiement d'une extension de remise
   Les extensions de remise fournissent leurs informations de configuration sous la forme d'un fichier de configuration XML. Le fichier XML est conforme au schéma XML défini pour les extensions de remise. Les extensions de remise fournissent l'infrastructure nécessaire pour définir et modifier le fichier de configuration.  
@@ -37,9 +37,9 @@ ms.locfileid: "48184249"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|`Name`|Nom unique de l'extension (par exemple, « Messagerie électronique du serveur de rapports » pour l'extension de remise par messagerie ou « Partage de fichiers du serveur de rapports » pour l'extension de remise par partage de fichiers). La longueur maximale de l'attribut `Name` s'élève à 255 caractères. Le nom doit être unique parmi toutes les entrées de la `Extension` élément d’un fichier de configuration. Si un nom existe en double, le serveur de rapports retourne une erreur.|  
+|`Name`|Nom unique de l'extension (par exemple, « Messagerie électronique du serveur de rapports » pour l'extension de remise par messagerie ou « Partage de fichiers du serveur de rapports » pour l'extension de remise par partage de fichiers). La longueur maximale de l'attribut `Name` s'élève à 255 caractères. Le nom doit être unique au sein de toutes les entrées de l'élément `Extension` d'un fichier de configuration. Si un nom existe en double, le serveur de rapports retourne une erreur.|  
 |`Type`|Liste séparée par des virgules qui inclut l'espace de noms complet, ainsi que le nom de l'assembly.|  
-|`Visible`|La valeur `false` indique que l'extension de remise ne doit pas être visible dans les interfaces utilisateur. Si l’attribut n’est pas inclus, la valeur par défaut est `true`.|  
+|`Visible`|La valeur `false` indique que l'extension de remise ne doit pas être visible dans les interfaces utilisateur. Si cet attribut n'est pas défini, la valeur par défaut est `true`.|  
   
  Pour plus d’informations sur le fichier RSReportServer.config, consultez [Fichiers de configuration de Reporting Services](../../report-server/reporting-services-configuration-files.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48184249"
   
 2.  Une fois le fichier correspondant à l'assembly copié, ouvrez le fichier RSReportServer.config. Le fichier RSReportServer.config se trouve dans %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting Services\ReportServer. Vous devez créer une entrée pour le fichier d'assembly d'extension de remise dans le fichier de configuration. Vous pouvez ouvrir le fichier de configuration à l’aide de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou à l’aide d’un simple éditeur de texte, tel que le Bloc-notes.  
   
-3.  Recherchez le `Delivery` élément dans le fichier RSReportServer.config. Une entrée correspondant à votre nouvelle extension de remise doit être créée à l'emplacement suivant :  
+3.  Localisez l'élément `Delivery` dans le fichier RSReportServer.config. Une entrée correspondant à votre nouvelle extension de remise doit être créée à l'emplacement suivant :  
   
     ```  
     <Extensions>  
@@ -99,7 +99,7 @@ ms.locfileid: "48184249"
   
 2.  Une fois le fichier correspondant à l'assembly copié, ouvrez le fichier RSReportServer.config. Le fichier RSReportServer.config se trouve dans %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting Services\ReportServer. Vous devez créer une entrée pour le fichier d'assembly d'extension de remise dans le fichier de configuration. Vous pouvez ouvrir le fichier de configuration avec Visual Studio .NET ou un simple éditeur de texte, tel que le bloc-notes.  
   
-3.  Recherchez le `DeliveryUI` élément dans le fichier RSReportServer.config. Une entrée correspondant à votre nouvelle extension de remise doit être créée à l'emplacement suivant :  
+3.  Localisez l'élément `DeliveryUI` dans le fichier RSReportServer.config. Une entrée correspondant à votre nouvelle extension de remise doit être créée à l'emplacement suivant :  
   
     ```  
     <Extensions>  

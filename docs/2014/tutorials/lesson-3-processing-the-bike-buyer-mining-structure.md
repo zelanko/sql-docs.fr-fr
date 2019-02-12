@@ -1,25 +1,24 @@
 ---
-title: 'Leçon 3 : Traitement de la Structure d’exploration de données Bike Buyer | Microsoft Docs'
+title: 'Leçon 3 : Traitement de la Structure d’exploration de données Bike Buyer | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e748c2cd-339d-4e82-82f1-be2d0fc41b61
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 77c49a7b1616d1a54c652efee05ff1e827d07caf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053829"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025330"
 ---
-# <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Leçon 3 : traitement de la structure d'exploration de données Bike Buyer
-  Dans cette leçon, vous allez utiliser l’insertion dans l’instruction et la vue vTargetMail de la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de données exemple pour traiter les structures d’exploration de données et les modèles d’exploration de données que vous avez créé dans [leçon 1 : création de la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) et [leçon 2 : ajout des modèles d’exploration de données à la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+# <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Leçon 3 : Traitement de la structure d'exploration de données Bike Buyer
+  Dans cette leçon, vous allez utiliser l’insertion dans l’instruction et la vue vTargetMail de la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de données exemple pour traiter les structures d’exploration de données et les modèles d’exploration de données que vous avez créé dans [leçon 1 : Création de la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) et [leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
  Lorsque vous traitez une structure d'exploration de données, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lit les données sources et génère les structures qui soutiennent les modèles d'exploration de données. Lorsque vous traitez un modèle d'exploration de données, les données définies par la structure sont transmises via l'algorithme d'exploration de données de votre choix. L'algorithme recherche des tendances et des modèles, puis stocke les informations recueillies dans le modèle d'exploration de données. Par conséquent, le modèle d'exploration de données ne contient pas les données source réelles mais plutôt les informations recueillies par l'algorithme. Pour plus d’informations sur les modèles d’exploration de données de traitement, consultez [traitement des exigences et considérations &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
@@ -178,6 +177,6 @@ OPENQUERY([<datasource>],'<SELECT statement>')
  Dans la leçon suivante, vous allez explorer le contenu des modèles d'exploration de données que vous avez ajoutés à la structure d'exploration de données au cours de cette leçon.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 4 : Exploration des modèles d’exploration de données Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Leçon 4 : Exploration des modèles d’exploration de données Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
   
   

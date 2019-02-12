@@ -13,16 +13,16 @@ helpviewer_keywords:
 - number function
 - XPath queries [SQLXML], explicit conversion functions
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f992e474646b376eff1f510121fe640b6be9dbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 543f0d0234c6f4bc2f34904bda0cd6b0019aaaa0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607257"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030700"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Spécification de fonctions de conversion explicite dans les requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "47607257"
 </ROOT>  
 ```  
   
-### <a name="b-use-the-string-explicit-conversion-function"></a>B. Utiliser la fonction de conversion explicite string()  
+### <a name="b-use-the-string-explicit-conversion-function"></a>b. Utiliser la fonction de conversion explicite string()  
  Le **string()** fonction convertit un argument en une chaîne.  
   
  La requête suivante convertit **ContactID** en une chaîne et la compare avec la chaîne de valeur « 4 ». La requête retourne tous les  **\<employé >** éléments enfants du nœud de contexte avec un **ContactID** avec une valeur de chaîne « 4 » :  

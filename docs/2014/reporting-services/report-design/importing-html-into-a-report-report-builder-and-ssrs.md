@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ffd9c83cb5aad8e22c98ebf1ff2472237452e1c4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: kfile
+ms.openlocfilehash: 0b954f61e947a7422d518516987be6215d6263b7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208369"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021511"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importation de données HTML dans un rapport (Générateur de rapports et SSRS)
   Vous pouvez utiliser une zone de texte pour insérer dans un rapport du texte au format HTML récupéré à partir de l'un des champs de votre dataset. Ce texte au format HTML peut être issu de toute expression simple ou complexe capable de transformer correctement des données au format HTML. Le texte ainsi mis en forme peut être converti dans tous les formats de sortie pris en charge, y compris au format PDF.  
@@ -28,7 +28,7 @@ ms.locfileid: "53208369"
 > [!NOTE]  
 >  Lorsque vous importez du texte qui contient des balises HTML, les données de ce texte doivent toujours être analysées en premier par la zone de texte où elles sont importées. Seul un sous-ensemble de balises HTML étant pris en charge, les données HTML affichées dans le rapport rendu peuvent différer des données HTML d'origine.  
   
- Pour rapidement commencer, consultez [didacticiel : Mettre en forme texte &#40;Générateur de rapports&#41;](../tutorial-format-text-report-builder.md).  
+ Pour démarrer rapidement, consultez [Tutoriel : Mettre en forme du texte &#40;Générateur de rapports&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -36,7 +36,7 @@ ms.locfileid: "53208369"
 ## <a name="supported-html-tags"></a>Balises HTML prises en charge  
  La liste suivante répertorie toutes les balises qui seront restituées sous forme de balises HTML lorsque définies comme texte de l'espace réservé :  
   
--   Éléments d'en-tête, de style et de bloc : \<H {n} >, \<DIV >, \<étendue >,\<P >, \<LI >  
+-   Éléments d'en-tête, de style et de bloc : \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<LI>  
   
  Toutes les autres balises HTML ne seront pas prises en compte lorsque le rapport sera généré. Si le texte au format HTML de l'espace réservé représenté par son expression comporte des erreurs de langage, il apparaîtra au format texte simple. Aucune des balises HTML n'est sensible à la casse.  
   

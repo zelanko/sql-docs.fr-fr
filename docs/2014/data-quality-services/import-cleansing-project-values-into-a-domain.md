@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4239776908aaca1f6f925baa6ce412dcc71bc343
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 07992b9a5150e6b81d869aa21831e019c32ae6e4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032356"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020010"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importer des valeurs de projet de nettoyage dans un domaine
   Dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), vous pouvez importer les connaissances de qualité des données collectées pendant le processus de nettoyage dans un projet de nettoyage de qualité des données ou un package Integration Services qui contient le composant de nettoyage DQS dans un domaine. Cela garantit que des connaissances approuvées ne sont pas perdues, et que la base de connaissances est améliorée en permanence.  
@@ -71,7 +71,7 @@ ms.locfileid: "51032356"
     > [!NOTE]  
     >  Pour plus d'informations sur l'utilisation des valeurs dans l'onglet **Valeurs du domaine** , consultez [Change Domain Values](../../2014/data-quality-services/change-domain-values.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après l'importation de valeurs de projet de nettoyage dans un domaine  
+##  <a name="FollowUp"></a> Suivi : Après avoir importé des valeurs de projet dans un domaine  
  Après avoir importé les connaissances de qualité des données collectées pendant le processus de nettoyage dans un domaine, vous pouvez effectuer d'autres tâches de gestion de domaine sur le domaine et les valeurs. Pour plus d’informations, consultez [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md).  
   
 ##  <a name="Values"></a> Valeurs qui seront importées  
@@ -89,7 +89,7 @@ ms.locfileid: "51032356"
   
 -   Les valeurs non valides seront créées si la valeur importées contredit une règle de domaine.  
   
--   Si vous importez des valeurs à partir de plusieurs projets à la fois, les valeurs sont importées en ordre séquentiel.  
+-   Si vous importez des valeurs à partir de plusieurs projets à la fois, les valeurs sont importées en ordre séquentiel.  
   
 -   Une correction effectuée suite à une relation à base de termes dans un domaine est importée en tant que valeur correcte (et non en tant qu'erreur).  
   

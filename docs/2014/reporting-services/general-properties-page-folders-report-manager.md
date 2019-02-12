@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8fca88baa1a3886f06e0c812164d0c759e7d835
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2181e4ab949eef70c5ba9cb06c4fc8cfe82435dc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156452"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031590"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Page Propriétés générales, Dossiers (Gestionnaire de rapports)
   La page Propriétés générales des dossiers vous permet d'afficher et de définir les propriétés des dossiers que vous créez. Des informations sur la personne qui a créé ou modifié le dossier et sur la date de modification apparaissent en haut de la page des propriétés générales.  
@@ -54,7 +54,7 @@ ms.locfileid: "48156452"
  Cliquez pour déplacer un rapport ou un dossier dans l'espace de noms du serveur de rapports. Un clic sur ce bouton permet d'ouvrir la page Déplacer élément dans laquelle vous pouvez rechercher un nouvel emplacement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

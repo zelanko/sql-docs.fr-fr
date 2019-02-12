@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 173696f4f75d14cbb0ea1b78104b69db50af7a2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d7c74eb4f69bf40446a4f912ed6673b57890c64b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065559"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029550"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Remise par courrier électronique dans Reporting Services
-  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension de remise par e-mail qui permet d’envoyer par e-mail des rapports à des utilisateurs individuels ou à des groupes. Vous pouvez configurer l'extension de remise par messagerie à l'aide du Gestionnaire de configuration de Reporting Services et en modifiant les fichiers de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension de remise par e-mail qui permet d’envoyer par e-mail des rapports à des utilisateurs individuels ou à des groupes. Vous pouvez configurer l'extension de remise par messagerie à l'aide du Gestionnaire de configuration de Reporting Services et en modifiant les fichiers de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Pour distribuer ou recevoir un rapport par courrier électronique, vous devez définir un abonnement standard ou piloté par les données. Vous pouvez vous abonner ou effectuer la remise que d'un seul rapport à la fois. Vous ne pouvez pas créer d'abonnement qui distribue plusieurs rapports dans un seul message électronique. Pour plus d’informations sur les abonnements, consultez [créer, modifier et supprimer des abonnements Standard &#40;Reporting Services en Mode natif&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
@@ -78,11 +78,11 @@ ms.locfileid: "48065559"
   
  Pour plus d'informations sur la configuration d'un serveur de rapports en mode SharePoint, consultez :  
   
--   [Configurer la messagerie électronique pour l’Application de Service pour Reporting Services &#40;SharePoint 2010 et SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Configurer la messagerie électronique pour une application de service Reporting Services &#40;SharePoint 2010 et SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches et autorisations](../security/tasks-and-permissions.md)   
- [Abonnements et remises &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Abonnements et remise &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Abonnements pilotés par les données](data-driven-subscriptions.md)   
  [Attributions de rôles](../security/role-assignments.md)  
   

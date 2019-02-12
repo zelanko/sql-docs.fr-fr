@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 69f989fd4714aaafed94f1b8a9fb3ad077cc7cf8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a3abfb7cbecbf496c7c2083d5d75b1833069d12c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065719"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029410"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Conseils de création de rapport (Générateur de rapports et SSRS)
   Utilisez les conseils suivants pour concevoir vos rapports.  
@@ -156,7 +156,7 @@ ms.locfileid: "48065719"
   
     4.  Dans les en-têtes de colonnes, modifiez la propriété de zone de texte WritingMode pour utiliser le texte vertical.  
   
- La combinaison de ce comportement, des propriétés de hauteur et de largeur des éléments de rapport, de la taille du corps du rapport, de la définition de hauteur de page et de largeur de page, des paramètres de marge du rapport parent, ainsi que de la prise en charge de la pagination spécifique au convertisseur détermine quels éléments du rapport s'ajustent dans une page rendue. Pour plus d’informations, consultez [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ La combinaison de ce comportement, des propriétés de hauteur et de largeur des éléments de rapport, de la taille du corps du rapport, de la définition de hauteur de page et de largeur de page, des paramètres de marge du rapport parent, ainsi que de la prise en charge de la pagination spécifique au convertisseur détermine quels éléments du rapport s'ajustent dans une page rendue. Pour plus d’informations, voir [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Générateur de rapports dans SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   

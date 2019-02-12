@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.matchingproject.export.f1
 - sql12.dqs.matchingproject.map.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6c39c1c9651872a7e47070cfec400e77fa578a7f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f020f30d651acd8ac9267b510d116af808d9b5e7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512053"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019690"
 ---
 # <a name="run-a-matching-project"></a>Exécuter un projet de correspondance
   Cette rubrique décrit comment réaliser la correspondance de données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Le processus de correspondance identifie les clusters des enregistrements correspondants selon les règles de correspondance de la stratégie de correspondance, indique un enregistrement de chaque cluster en tant que survivant basé sur une règle de survivance, et exporte les résultats. DQS exécute le processus de correspondance, également appelé déduplication, dans un processus assisté par ordinateur, mais vous créez des règles de correspondance de manière interactive et sélectionnez la règle de survivance parmi plusieurs choix, afin de contrôler le processus de correspondance.  

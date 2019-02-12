@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Expression dialog box [Reporting Services]
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a231e4fcc071338f4fcf168475bde86514470b41
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 43f27ea78bec3f7b81f49d44a6bd56274367f2b5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590833"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021682"
 ---
 # <a name="expression-dialog-box"></a>Boîte de dialogue Expression
   Utilisez le **Expression** boîte de dialogue pour écrire [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] propriétés d’un élément expressions pour les rapports. Vous pouvez utiliser des expressions pour définir un grand nombre de propriétés, notamment la couleur, la police et les bordures. Au moment de l'exécution, le processeur de rapports évalue les expressions et remplace le résultat de la valeur de la propriété.  
@@ -37,7 +37,7 @@ ms.locfileid: "53590833"
 ## <a name="expression-constructs"></a>Composants d'une expression  
  Les expressions commencent par un signe égal (=) et peuvent inclure des constantes, des littéraux, des opérateurs, ainsi que des références à des champs prédéfinis, à des collections intégrées, à des fonctions intégrées, à des fonctions de la bibliothèque d'exécutables [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], à des classes Common Language Runtime (CLR) [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] et à des fonctions personnalisées. La liste suivante décrit les catégories et les valeurs que vous pouvez ajouter à une expression.  
   
- **Définir l’expression pour :**  _\<PropertyName >_  
+ **Définir l’expression pour :**  _\<PropertyName>_  
  Nom de la propriété pour laquelle vous définissez une expression. Vous pouvez également définir cette propriété, par son nom, dans le volet Propriétés.  
   
  **Constantes**  

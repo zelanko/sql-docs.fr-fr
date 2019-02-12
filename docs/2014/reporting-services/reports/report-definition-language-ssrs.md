@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f21bfe746f409b40b2535da231da4dd2725f4f7a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 32442fad5d3d6f265769927d291c3154ff362f38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367012"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010417"
 ---
 # <a name="report-definition-language-ssrs"></a>Langage de définition de rapport (SSRS, Report Definition Language)
   Report Definition Language (RDL) est une représentation XML d’une définition de rapport [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Une définition de rapport contient les informations d'extraction de données et de mise en page d'un rapport. La spécification RDL est composée d’éléments XML qui sont conformes à une grammaire XML créée pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Vous pouvez ajouter vos propres fonctions personnalisées pour contrôler les valeurs, les styles et la mise en forme des éléments de rapport en accédant à des assemblys de code dans les fichiers de définition de rapport.  
@@ -44,7 +44,7 @@ ms.locfileid: "53367012"
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> Définition de schéma XML RDL  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est validé à l’aide d’un fichier XSD (XML Schema Definition). Le schéma définit les règles indiquant où des éléments RDL peuvent se trouver dans un fichier .rdl. Un élément inclut son type de données et sa cardinalité, c’est-à-dire le nombre d’occurrences autorisées. Un élément peut être simple ou complexe. Un élément simple n'a pas d'éléments enfants ni d'attributs. Un élément complexe a des enfants et éventuellement des attributs.  
   
- Par exemple, le schéma inclut l'élément RDL `ReportParameters`, qui est le type complexe `ReportParametersType`. Par convention, un type complexe d'un élément correspond au nom de l'élément suivi du mot `Type`. Un élément `ReportParameters` peut être contenu par l'élément `Report` (type complexe) et peut contenir des éléments `ReportParameter`. Un type `ReportParameterType` est un type simple qui ne peut avoir d'autres valeurs que les valeurs suivantes : `Boolean`, `DateTime`, `Integer`, `Float` et `String`. Pour plus d’informations sur les types de données de schéma XML, consultez [XML Schema Part 2 : Types de données deuxième édition](https://go.microsoft.com/fwlink/?linkid=4871).  
+ Par exemple, le schéma inclut l'élément RDL `ReportParameters`, qui est le type complexe `ReportParametersType`. Par convention, un type complexe d'un élément correspond au nom de l'élément suivi du mot `Type`. Un élément `ReportParameters` peut être contenu par l'élément `Report` (type complexe) et peut contenir des éléments `ReportParameter`. Un type `ReportParameterType` est un type simple qui ne peut avoir d'autres valeurs que les valeurs suivantes : `Boolean`, `DateTime`, `Integer`, `Float` et `String`. Pour plus d’informations sur les types de données de schéma XML, consultez la recommandation du W3C [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871).  
   
  Le XSD RDL est disponible dans le fichier ReportDefinition.xsd, situé dans le dossier Extras sur le CD-ROM du produit. Il est également disponible sur le serveur de rapports via l’URL suivante : http://servername/reportserver/reportdefinition.xsd.  
   

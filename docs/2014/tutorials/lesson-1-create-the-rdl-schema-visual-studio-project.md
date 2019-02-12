@@ -1,25 +1,24 @@
 ---
-title: 'Leçon 1 : Créer le projet Visual Studio du schéma RDL | Microsoft Docs'
+title: 'Leçon 1 : Créer le projet Visual Studio du schéma RDL | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f420509c-51aa-4170-8c25-64c2954f4bb9
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: fdf146743a74ff3e546072287848b033f365bc8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187329"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018910"
 ---
-# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Leçon 1 : Création du projet Visual Studio du schéma RDL
-  Dans ce didacticiel, vous allez créer une application console simple. Ce didacticiel suppose que vous développez dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
+# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Leçon 1 : Création du projet Visual Studio du schéma RDL
+  Dans ce didacticiel, vous allez créer une application console simple. Il est supposé que vous utilisez [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]pour le développement.  
   
 > [!NOTE]  
 >  Lorsque vous accédez au service Web Report Server qui s'exécute sur [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services, vous devez ajouter "_SQLExpress" au chemin d'accès "ReportServer". Exemple :  
@@ -70,9 +69,9 @@ ms.locfileid: "48187329"
   
      Pour plus d’informations sur la connexion au service Web Report Server, consultez [création d’Applications à l’aide du Service Web et le .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
-10. Dans l'Explorateur de solutions, développez le nœud du projet. Vous verrez un fichier de code avec le nom par défaut du fichier Program.cs (Module1.vb pour [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) a été ajouté à votre projet.  
+10. Dans l'Explorateur de solutions, développez le nœud du projet. Un fichier de code portant le nom par défaut Program.cs (Module1.vb pour [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) a été ajouté à votre projet.  
   
-11. Ouvrez le fichier Program.cs (Module1.vb pour [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) et remplacez le code par le suivant :  
+11. Ouvrez le fichier Program.cs (Module1.vb pour [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) et remplacez le code par le suivant :  
   
      Le code suivant fournit les stubs de méthode que nous utiliserons pour implémenter les fonctionnalités de chargement, de mise à jour et d'enregistrement.  
   
@@ -198,7 +197,7 @@ ms.locfileid: "48187329"
     ```  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- Dans la prochaine leçon, vous allez utiliser l'outil de définition de schéma XML (Xsd.exe) pour générer des classes à partir du schéma RDL et les inclure dans votre projet. Consultez [leçon 2 : générer des Classes à partir du schéma RDL à l’aide de l’outil xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
+ Dans la prochaine leçon, vous allez utiliser l'outil de définition de schéma XML (Xsd.exe) pour générer des classes à partir du schéma RDL et les inclure dans votre projet. Consultez [leçon 2 : Générer des Classes à partir du schéma RDL à l’aide de l’outil xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

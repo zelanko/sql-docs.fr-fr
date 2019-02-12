@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 871f16c520d6682de0afb384577c17c096cdf18a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 40828dd4e7767688a329b641610a65dc0f3493c1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150419"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018201"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>Boîte de dialogue de conversion des éléments de rapport personnalisés (Générateur de rapports)
   Ce rapport contient des éléments de rapport personnalisés (CRI, Custom Report Item) avec des fonctionnalités non prises en charge. Les éléments de rapport personnalisés sont des extensions du langage RDL (Report Definition Language) qui prennent en charge les objets personnalisés qui affichent les données dans un rapport. Les CRI incluent des composants du moment du design et du moment de l'exécution fournis par des éditeurs de logiciels tiers.  
@@ -31,7 +31,7 @@ ms.locfileid: "48150419"
   
  Certains CRI peuvent être convertis en éléments de rapport dans le nouveau format de définition de rapport. Lorsque vous ouvrez le rapport, vous êtes invité à effectuer une mise à niveau. À partir des informations suivantes, déterminez s'il est nécessaire de convertir les CRI dans ce rapport :  
   
--   **Oui** Choisissez **Oui** pour convertir tous les CRI du rapport, dans la mesure du possible. Les fonctionnalités non prises en charge dans les CRI ne peuvent pas être mises à niveau et peuvent être supprimées du fichier de définition du rapport. Pour la liste des fonctionnalités non prises en charge, consultez [Upgrade Reports](../install-windows/upgrade-reports.md). Lorsque vous consultez le rapport, vous pouvez voir des différences dans la manière dont les CRI apparaissent dans le rapport.  
+-   **Oui** Choisissez **Oui** pour convertir tous les CRI du rapport, dans la mesure du possible. Les fonctionnalités non prises en charge dans les CRI ne peuvent pas être mises à niveau et peuvent être supprimées du fichier de définition du rapport. Pour obtenir la liste des fonctionnalités non prises en charge, consultez [Mettre à niveau des rapports](../install-windows/upgrade-reports.md). Lorsque vous consultez le rapport, vous pouvez voir des différences dans la manière dont les CRI apparaissent dans le rapport.  
   
 -   **Non** Choisissez **Non** si vous ne souhaitez pas convertir les CRI dans le rapport. Ces CRI ne peuvent pas être affichés par le processeur de rapports dans leur version actuelle. Si votre administrateur système projette d’installer une nouvelle version du CRI de l’éditeur de logiciels tiers compatible avec le nouveau format de définition de rapport, vous devez choisir **Non**. Tant que de nouvelles versions ne sont pas disponibles, les CRI apparaissent dans le rapport sous la forme d'une zone de texte vide marquée d'une croix (X) rouge.  
   
@@ -44,6 +44,6 @@ ms.locfileid: "48150419"
  Pour identifier le format de définition de rapport actuel d’un rapport, d’un serveur de rapports ou de votre environnement de création de rapports, consultez [Rechercher la version du schéma de définition de rapport &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide du Générateur de rapports pour les boîtes de dialogue, volets et les Assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

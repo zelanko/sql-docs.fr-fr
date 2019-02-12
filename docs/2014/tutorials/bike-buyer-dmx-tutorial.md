@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/19/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
@@ -16,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af20e220b4f1c2010606fec0d50e51025c73d31f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366721"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025250"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Didacticiel DMX Bike Buyer
   Dans ce didacticiel, vous allez apprendre à créer, assimiler et explorer des modèles d'exploration de données à l'aide du langage de requête DMX (Data Mining Extensions). Vous utiliserez ensuite ces modèles pour créer des tâches de prédiction déterminant si un client envisage ou non d'acheter un vélo.  
@@ -80,19 +79,19 @@ ms.locfileid: "53366721"
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Ce didacticiel contient les leçons suivantes :  
   
- [Leçon 1 : Création de la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
+ [Leçon 1 : Création de la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `CREATE` pour créer des structures d'exploration de données.  
   
  [Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `ALTER` pour ajouter des modèles d'exploration de données à une structure d'exploration de données.  
   
- [Leçon 3 : Traitement de la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
+ [Leçon 3 : Traitement de la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `INSERT INTO` pour traiter des structures d'exploration de données et les modèles qui y sont associés.  
   
- [Leçon 4 : Exploration des modèles d’exploration de données Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Leçon 4 : Exploration des modèles d’exploration de données Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `SELECT` pour explorer le contenu des modèles d'exploration de données.  
   
- [Leçon 5 : L’exécution de requêtes de prédiction](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [Leçon 5 : L’exécution de requêtes de prédiction](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `PREDICTION JOIN` pour établir des prédictions par rapport à des modèles d'exploration de données.  
   
 ## <a name="requirements"></a>Configuration requise  

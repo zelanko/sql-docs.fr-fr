@@ -2,22 +2,20 @@
 title: Sys.dm_xe_database_sessions (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7602e03864a736c6011142fd56c3e6129efcb718
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: ba1a198e9550f72f3e6781659f1cba39bd3d5d1f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143269"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013510"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ ms.locfileid: "54143269"
 |From|Pour|Relation|  
 |--------|------|----------------|  
 |sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.address|Plusieurs-à-un|  
-|Sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|Plusieurs-à-un|  
+|sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|Plusieurs-à-un|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Événements étendus dans la base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  

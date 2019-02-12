@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d75fed63f44e0371b81fbd7309a0a3f826543b5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 24457cb6a471b91666f4eb0792e1c8fa186eaf42
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401052"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011830"
 ---
 # <a name="custom-report-item-architecture"></a>Architecture des éléments de rapports personnalisés
   Un élément de rapport personnalisé est une extension du langage RDL (Report Definition Language) qui permet aux développeurs d’ajouter des fonctionnalités qui ne sont pas prises en charge en mode natif dans le langage RDL ou d’étendre les fonctionnalités de contrôles existants. Un élément de rapport personnalisé comprend deux composants principaux : le composant d'exécution et le composant de conception. Ces composants sont implémentés en tant qu'assemblys [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et peuvent être écrits dans n'importe quel langage conforme CLS.  
@@ -37,6 +37,6 @@ ms.locfileid: "52401052"
 ## <a name="see-also"></a>Voir aussi  
  [Création d’un composant d’exécution d’éléments de rapport personnalisé](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Création d’un composant au moment de la conception d’éléments de rapport personnalisé](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Comment : Déployer un élément de rapport personnalisé](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Procédure : déployer un élément de rapport personnalisé](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

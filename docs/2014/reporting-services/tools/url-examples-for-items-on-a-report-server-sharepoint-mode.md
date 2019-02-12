@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 763d33dd182883f3b781b3e7e70cf91eda906044
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9138f2b27518a3b271bd14628b753ba5f729b3f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157929"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026530"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Exemples d'URL pour les éléments de rapport publiés sur un serveur de rapports en mode SharePoint (SSRS)
   Pour publier des rapports et des éléments associés dans une bibliothèque SharePoint, vous pouvez soit publier le contenu à l’aide des outils de création de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tels que le Concepteur de rapports, soit télécharger le contenu à l’aide des actions de site SharePoint.  
@@ -76,7 +76,7 @@ ms.locfileid: "48157929"
  Une définition de rapport peut inclure un fichier image stocké comme fichier externe. Vous pouvez faire référence à ce fichier dans la définition de rapport en définissant une URL complète vers le fichier image. Il peut être stocké sur un site SharePoint ou sur un ordinateur distant.  
   
 > [!IMPORTANT]  
->  Si l'URL externe correspond à une image située sur un site SharePoint, l'icône d'image rompue apparaît lorsque vous affichez un aperçu du rapport dans le Générateur de rapports. Lorsque vous téléchargez le rapport sur le site SharePoint et affichez le rapport en mode connecté, l’icône d’image rompue apparaît si vous disposez seulement `View Items` autorisations.  
+>  Si l'URL externe correspond à une image située sur un site SharePoint, l'icône d'image rompue apparaît lorsque vous affichez un aperçu du rapport dans le Générateur de rapports. Lorsque vous téléchargez le rapport sur le site SharePoint, puis affichez le rapport en mode connecté, l'icône d'image rompue apparaît si vous disposez seulement des autorisations `View Items`.  
   
  Quel que soit le mode de serveur de rapports, les références à un fichier image externe au sein d'un rapport doivent être une URL complète. De plus, la référence à un fichier image externe nécessite généralement que vous configuriez le compte de traitement de rapport sans assistance.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "48157929"
  Lorsqu'un serveur de rapports s'exécute en mode intégré SharePoint, le concept de ressource présente une définition moins large. Le serveur de rapports conserve le concept de ressource pour le stockage des rapports qui font référence à une image externe. Cela s'applique si le rapport est un instantané ou une copie conservée pour un usage interne.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Publier un rapport dans une bibliothèque SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
+ [publier un rapport dans une bibliothèque SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publier une source de données partagée sur une bibliothèque SharePoint](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Pages de propriétés du projet, boîte de dialogue](project-property-pages-dialog-box.md)  
   

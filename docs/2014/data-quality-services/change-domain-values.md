@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 12d6db8e8f9add797d640f043de8470fa7a5ed15
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ea3b91f72b3fdd836d0b5cdb3e73122570bdbfcf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392512"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017230"
 ---
 # <a name="change-domain-values"></a>Modifier les valeurs de domaine
   Cette rubrique décrit comment modifier et augmenter les métadonnées d'une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Après avoir généré une connaissance par la découverte des connaissances, importé la connaissance dans la base de connaissances ou les domaines, ou basé une base de connaissances sur une autre base de connaissances, vous pouvez modifier de manière interactive les valeurs des données. La génération d'une base de connaissances non seulement bénéficie des processus assistés par ordinateur, mais vous permet aussi d'utiliser votre propre connaissance pour vérifier les valeurs des données et les modifier des manières suivantes :  

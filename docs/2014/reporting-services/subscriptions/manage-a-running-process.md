@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc8c6adf930df4d6eaf721db4782d5d1627439c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 84199b2bf01101a1bcc67b6e3d0870824a116860
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166269"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013590"
 ---
 # <a name="manage-a-running-process"></a>Gérer un processus en cours d'exécution
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] analyse l'état des travaux qui s'exécutent sur le serveur de rapports. À intervalles réguliers, le serveur de rapports procède à une analyse des travaux en cours et transmet des informations d'état à la base de données du serveur de rapports ou aux bases de données d'application de service pour le mode SharePoint. Un travail est en cours si l'un des processus suivants est en cours : exécution de la requête sur un serveur de base de données distant ou local, traitement des rapports et rendu de rapport.  
@@ -76,7 +76,7 @@ ms.locfileid: "48166269"
   
 ### <a name="how-to-cancel-report-processing-or-subscription"></a>Procédure d'annulation du traitement d'un rapport ou d'un abonnement  
   
-1.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], connectez-vous au serveur de rapports. Pour obtenir des instructions, consultez [se connecter à un serveur de rapports dans Management Studio](../tools/connect-to-a-report-server-in-management-studio.md).  
+1.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], connectez-vous au serveur de rapports. Pour obtenir des instructions, consultez [Se connecter à un serveur de rapports dans Management Studio](../tools/connect-to-a-report-server-in-management-studio.md).  
   
 2.  Ouvrez le dossier **Jobs** .  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48166269"
   
 1.  Ouvrez le fichier RSReportServer.config dans un éditeur de texte.  
   
-2.  Rechercher `IsNotificationService`.  
+2.  Recherchez `IsNotificationService`.  
   
 3.  Affectez-lui la valeur `False`.  
   
@@ -94,12 +94,12 @@ ms.locfileid: "48166269"
   
 5.  Dans le Gestionnaire de rapports, supprimez l’abonnement piloté par les données sous l’onglet Abonnements du rapport ou dans **Mes abonnements**.  
   
-6.  Après avoir supprimé l’abonnement, dans le fichier RSReportServer.config, recherchez `IsNotificationService` et affectez-lui la valeur `True`.  
+6.  Après avoir supprimé l'abonnement, dans le fichier RSReportServer.config, recherchez `IsNotificationService` et affectez-lui la valeur `True`.  
   
 7.  Enregistrez le fichier.  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Configuration des paramètres de fréquence pour la récupération de l'état des travaux  
- Un travail en cours d'exécution est stocké dans la base de données temporaire du serveur de rapports. Vous pouvez modifier les paramètres de configuration dans le fichier RSReportServer.config pour contrôler la fréquence d'analyse du serveur de rapports sur les travaux en cours et le laps de temps à la suite duquel l'état d'un travail passe de « nouveau » à « en cours d'exécution ». Le `RunningRequestsDbCycle` paramètre spécifie la fréquence à laquelle le serveur de rapports recherche les processus en cours d’exécution. Par défaut, les informations d'état sont enregistrées toutes les 60 secondes. Le `RunningRequestsAge` paramètre spécifie l’intervalle auquel un travail est passé de nouveau à l’exécution.  
+ Un travail en cours d'exécution est stocké dans la base de données temporaire du serveur de rapports. Vous pouvez modifier les paramètres de configuration dans le fichier RSReportServer.config pour contrôler la fréquence d'analyse du serveur de rapports sur les travaux en cours et le laps de temps à la suite duquel l'état d'un travail passe de « nouveau » à « en cours d'exécution ». Le paramètre `RunningRequestsDbCycle` spécifie la périodicité suivant laquelle le serveur de rapports procède à l'analyse des processus en cours d'exécution. Par défaut, les informations d'état sont enregistrées toutes les 60 secondes. Le paramètre `RunningRequestsAge` précise la durée suite à laquelle l'état d'un nouveau travail évolue vers l'état d'exécution en cours.  
   
 ##  <a name="bkmk_sharepoint"></a> Afficher et annuler les travaux (mode SharePoint)  
  La gestion des travaux d'un déploiement en mode SharePoint s'effectue via l'Administration centrale de SharePoint, pour chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -120,11 +120,11 @@ ms.locfileid: "48166269"
  Vous pouvez gérer des travaux par programmation ou au moyen d'un script. Pour plus d’informations, consultez <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Annuler les travaux de serveur de rapports &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
+ [Annuler les travaux du serveur de rapports &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
  [Propriétés du travail &#40;Management Studio&#41;](../tools/job-properties-management-studio.md)   
  [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../report-manager-ssrs-native-mode.md)   
- [Contrôle des performances d'un serveur de rapports](../report-server/monitoring-report-server-performance.md)  
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)   
+ [Analyse des performances d'un serveur de rapports](../report-server/monitoring-report-server-performance.md)  
   
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d30e91edb402af3797bf88aa67492032206159cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21b24350f3ab377170a51333716b710b4a3f44ad
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064949"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020130"
 ---
 # <a name="enable-and-disable-my-reports"></a>Activer et désactiver Mes rapports
   La fonctionnalité Mes rapports alloue un espace de stockage personnel dans la base de données du serveur de rapports afin que les utilisateurs puissent enregistrer les rapports qu'ils possèdent dans un dossier privé. En tant qu'administrateur du serveur de rapports, vous pouvez activer ou désactiver cette fonctionnalité, ou modifier la façon dont elle opère en modifiant les paramètres de sécurité qui déterminent ce que les utilisateurs sont autorisés à faire avec cet espace de travail.  
@@ -32,7 +32,7 @@ ms.locfileid: "48064949"
 ## <a name="how-to-enable-and-disable-my-reports"></a>Comment activer et désactiver Mes rapports  
  Pour activer Mes rapports à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à l’instance du serveur de rapports et ouvrez la page **Propriétés du serveur** . Puis sous l’onglet **Général** , sélectionnez l’option **Activer un dossier Mes rapports pour chaque utilisateur** .  
   
- La définition de rôle utilisée pour Mes rapports détermine les actions prises en charge dans l'espace de travail Mes rapports. Si, par exemple, le rôle Mes rapports exclut « Créer des rapports liés », les utilisateurs ne peuvent pas créer de rapports liés dans les dossiers Mes rapports. Pour plus d’informations, consultez [Sécuriser Mes Rapports](../security/secure-my-reports.md).  
+ La définition de rôle utilisée pour Mes rapports détermine les actions prises en charge dans l'espace de travail Mes rapports. Si, par exemple, le rôle Mes rapports exclut « Créer des rapports liés », les utilisateurs ne peuvent pas créer de rapports liés dans les dossiers Mes rapports. Pour plus d’informations, consultez [Sécuriser Mes rapports](../security/secure-my-reports.md).  
   
  Pour désactiver Mes rapports, désactivez l’option **Activer un dossier Mes rapports pour chaque utilisateur**. Le fait de désactiver Mes rapports masque pour les utilisateurs toutes les indications visibles du dossier Mes rapports. Les dossiers de stockage proprement dit (c'est-à-dire les sous-dossiers de Dossiers des utilisateurs) doivent être supprimés manuellement une fois la fonctionnalité désactivée.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48064949"
  Remarque : Si vous activez Mes rapports, le serveur de rapports crée un dossier Mes rapports pour chaque utilisateur doté d'un compte de domaine qui clique sur le lien Mes rapports, même si cet utilisateur ne souhaite pas utiliser un tel dossier, ou n'en a pas besoin. Il n'existe pas de procédure systématique pour déterminer quels sont les dossiers utilisés. Vous devez vérifier les dossiers manuellement pour déterminer s'ils contiennent des informations.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécuriser mes rapports](../security/secure-my-reports.md)   
+ [Sécuriser Mes rapports](../security/secure-my-reports.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](report-server-content-management-ssrs-native-mode.md)  
   
   

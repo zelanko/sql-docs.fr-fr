@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.reportproperties.pagesetup.f1
 ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c9331aede0a02f0f84bd2ae76998efeb8edc075b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d1dcf20ef0a282d28ce8c50c5935100b48fb57e6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905069"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029420"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Boîte de dialogue Propriétés du rapport, Mise en page
   Sélectionnez **mise en Page** sur le **propriétés du rapport**, boîte de dialogue pour définir les options de page pour l’intégralité du rapport.  
@@ -49,13 +49,13 @@ ms.locfileid: "48905069"
  **Top**  
  Définit la distance entre le haut du rapport et le haut de sa première ligne.  
   
- **en bas**  
+ **Bottom**  
  Définit la distance entre le bas du rapport et le bas de sa dernière ligne.  
   
- **Gauche**  
+ **Left**  
  Définit la distance entre le bord gauche du rapport et le bord gauche des lignes.  
   
- **Oui**  
+ **Right**  
  Définit la distance entre le bord droit du rapport et le bord droit des lignes.  
   
 ## <a name="see-also"></a>Voir aussi  

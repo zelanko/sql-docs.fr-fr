@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 571c6251b2af502d0032b95ac9bb4dc4227fcb15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 601f4ca75b9126d1f3d5e4b534159245e3785a0e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165139"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041780"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Fonctionnalités et tâches Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est organisé par les rapports et les fonctionnalités de rapport, les fonctionnalités du serveur de rapports, et les fonctionnalités de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -33,7 +33,7 @@ ms.locfileid: "48165139"
   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-design/report-parameters-report-builder-and-report-designer.md)  
   
- [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)  
+ [Parties de rapport dans le Concepteur de rapports &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)  
   
  [Planifications](subscriptions/schedules.md)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48165139"
   
  [Alertes de données Reporting Services](../ssms/agent/alerts.md)  
   
- [Sécurité et Protection de Reporting Services](security/reporting-services-security-and-protection.md)  
+ [Sécurité et protection de Reporting Services](security/reporting-services-security-and-protection.md)  
   
  [Accès URL &#40;SSRS&#41;](url-access-ssrs.md)  
   

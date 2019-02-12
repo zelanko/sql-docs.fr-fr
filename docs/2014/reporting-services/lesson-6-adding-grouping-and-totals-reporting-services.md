@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7565cf64d64197a261c36fb755e3f20a65f1fa27
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7bd3261a6669b1677fbfeff23b0017e622600007
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356463"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012740"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Leçon 6 : ajout d'un regroupement et de totaux (Reporting Services)
   Ajoutez un regroupement et des totaux à votre rapport pour organiser et synthétiser vos données.  

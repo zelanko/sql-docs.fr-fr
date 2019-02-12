@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 859c7d2cb6545c6a15e1e3e40aff28720921fb27
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505645"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023120"
 ---
 # <a name="rsexe-utility-ssrs"></a>Utilitaire RS.exe (SSRS)
   L'utilitaire rs.exe traite le script que vous fournissez dans un fichier d'entrée. Utilisez cet utilitaire pour automatiser les tâches de déploiement et d'administration du serveur de rapports.  
@@ -65,16 +65,16 @@ ms.locfileid: "52505645"
  **-?**  
  (Facultatif) Affiche la syntaxe des arguments de **rs** .  
   
- `-i` *fichier_entrée*  
+ `-i` *input_file*  
  (Obligatoire) Spécifie le fichier .rss à exécuter. Cette valeur peut être un chemin d'accès relatif ou totalement défini au fichier .rss.  
   
  `-s` *serverURL*  
  (Obligatoire) Spécifie les noms du serveur Web et du répertoire virtuel du serveur de rapports auxquels s'applique le fichier à exécuter. L'URL du serveur de rapports pourrait être par exemple `http://examplewebserver/reportserver`. Le préfixe http:// ou https:// placé au début du nom du serveur est facultatif. Si vous omettez le préfixe, l'environnement d'exécution de scripts du serveur de rapports tente en premier lieu d'utiliser https et, si cela ne fonctionne pas, il essaie avec http.  
   
- `-u` [*domaine*\\]*nom d’utilisateur*  
+ `-u` [*domain*\\]*username*  
  (Facultatif) Spécifie un compte d'utilisateur utilisé pour se connecter au serveur de rapports. Si `-u` et `-p` sont absents, le compte d'utilisateur Windows actuel est utilisé.  
   
- `-p` *Mot de passe*  
+ `-p` *password*  
  (Obligatoire si `-u` est spécifié) Spécifie le mot de passe à utiliser avec l'argument `-u`. Cette valeur respecte la casse.  
   
  `-e`  
@@ -96,7 +96,7 @@ ms.locfileid: "52505645"
  **-b**  
  (Facultatif) Spécifie que les commandes du fichier script s'exécutent dans un lot. En cas d'échec d'une commande, l'ensemble du lot est annulé. Certaines commandes ne peuvent pas être traitées par lot ; leur exécution se déroule normalement. Seules les exceptions générées qui ne sont pas gérées par le code du script entraînent une annulation. Si le script gère une exception et si l'exécution se poursuit normalement à partir de `Main`, le traitement est validé. Si vous omettez ce paramètre, les commandes s'exécutent sans créer de lot. Pour plus d’informations, voir [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
- `-v` *GlobalVar*  
+ `-v` *globalvar*  
  (Facultatif) Spécifie les variables globales utilisées dans le script. Si le script utilise des variables globales, vous devez spécifier cet argument. La valeur que vous spécifiez doit être une valeur correcte définie dans le fichier .rss pour les variables globales. Vous devez spécifier une variable globale pour chaque argument **-v**.  
   
  L'argument `-v` est spécifié sur la ligne de commande et est utilisé pour configurer la valeur pour une variable globale définie dans votre script au moment de l'exécution. Par exemple, si votre script contient une variable nommée *parentFolder*, vous pouvez spécifier un nom pour ce dossier sur la ligne de commande :  

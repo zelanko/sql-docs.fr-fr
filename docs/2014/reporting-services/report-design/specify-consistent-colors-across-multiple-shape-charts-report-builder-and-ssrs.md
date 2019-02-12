@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 00dea3b8f7c13789d63700f64dcf01b698411ae9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8595050b478743b7092787acf880425b24c5b1e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208709"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011291"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes (Générateur de rapports et SSRS)
   Sur les graphiques de base de formes non, une nouvelle couleur est sélectionnée dans la palette en fonction de l’index de la série dans le graphique. Par exemple, la première série sur votre graphique sera associée à la première couleur dans la palette. Toutefois, ce comportement diffère pour les graphiques à base de formes. Sur les graphiques à base de formes, chaque couleur de la palette est associée à un point de données dans le dataset. Par exemple, le point de données 1 est associé à la première couleur de la palette, le point de données 2 est associé à la deuxième couleur et ainsi de suite.  

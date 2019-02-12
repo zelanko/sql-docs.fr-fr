@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9741f5e3234462e0793effd3ba5242f0ff272b3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8ae3948d019467590b885c706e6b2c8d1c186da2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109922"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031540"
 ---
 # <a name="subscriptions-page-report-manager"></a>Page Abonnements (Gestionnaire de rapports)
   La page Abonnements vous permet de répertorier tous les abonnements de la source de données partagée ou du rapport actifs. Si vous disposez d'une autorisation suffisante (accordée par la tâche « Gérer tous les abonnements », par exemple), vous pouvez afficher les abonnements de tous les utilisateurs. Si ce n'est pas le cas, cette page affiche uniquement les abonnements dont vous être propriétaire.  
@@ -80,7 +80,7 @@ ms.locfileid: "48109922"
  Il n'est pas possible de traiter un abonnement s'il a été désactivé. Pour mettre à jour l'abonnement et le rendre opérationnel, ouvrez-le, puis enregistrez-le.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Créer, modifier et supprimer des abonnements Standard &#40;Reporting Services en Mode natif&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
  [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  

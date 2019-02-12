@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 67884329476d76619399cfedabb6f84d97881bcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a788984a75a950ae822180c070200ce7cc88694d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136269"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018890"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Gestionnaire des alertes de données pour les administrateurs d'alertes
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit le Gestionnaire des alertes de données utilisé par les administrateurs d’alertes SharePoint pour gérer des alertes de données. Les administrateurs d'alertes peuvent consulter les informations relatives à toutes les alertes enregistrées sur le site et supprimer des alertes. L'image suivante affiche les fonctionnalités disponibles aux gestionnaires d'alertes SharePoint dans le Gestionnaire des alertes de données.  
@@ -40,7 +40,7 @@ ms.locfileid: "48136269"
   
  ![Section Reporting Services de la page Paramètres du site](media/rs-sitesettings.gif "Section Reporting Services de la page Paramètres du site")  
   
- Le Gestionnaire des alertes de données inclut une table qui répertorie le nom de l'alerte, le nom du rapport, le nom de la personne qui a créé l'alerte, le nombre de messages d'alerte envoyés, la dernière fois que la définition d'alerte a été exécutée, la dernière fois qu'elle a été modifiée et l'état du message d'alerte. Si l'alerte de données ne peut pas être générée ou envoyée, la colonne d'état contient des informations sur l'erreur et vous aide à dépanner l'alerte. Pour plus d’informations, consultez [gérer toutes les alertes de données sur un SharePoint Site dans le Gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+ Le Gestionnaire des alertes de données inclut une table qui répertorie le nom de l'alerte, le nom du rapport, le nom de la personne qui a créé l'alerte, le nombre de messages d'alerte envoyés, la dernière fois que la définition d'alerte a été exécutée, la dernière fois qu'elle a été modifiée et l'état du message d'alerte. Si l'alerte de données ne peut pas être générée ou envoyée, la colonne d'état contient des informations sur l'erreur et vous aide à dépanner l'alerte. Pour plus d’informations, consultez [Gérer toutes les alertes de données sur un site SharePoint dans le Gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
  Le tableau suivant présente des exemples de données d'une table dans le Gestionnaire des alertes de données. Quand une erreur se produit, le message d’erreur et l’identificateur de l’entrée du journal (GUID) sont inclus dans le champ **État** de la table.  
   
@@ -48,18 +48,18 @@ ms.locfileid: "48136269"
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|La dernière alerte a été exécutée avec succès et l'alerte a été envoyée.|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|La dernière alerte a été exécutée avec succès, mais aucune donnée n'a été modifiée et aucune alerte n'a été envoyée.|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<message d’erreur> Le fichier journal contient des informations détaillées sur l’erreur. Consultez l’entrée du journal portant l’identificateur : \<GUID>.|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<message d’erreur> Le fichier journal contient des informations détaillées sur l’erreur. Consultez l’entrée de journal avec l’identificateur : \<GUID>.|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|Alerte créée.|  
   
- Pour plus d’informations, consultez [gérer toutes les alertes de données sur un SharePoint Site dans le Gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+ Pour plus d’informations, consultez [Gérer toutes les alertes de données sur un site SharePoint dans le Gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
  Vous pouvez consulter toutes les alertes créées par les utilisateurs du site. Choisissez un utilisateur puis indiquez s'il faut consulter toutes ses alertes ou uniquement celles pour un rapport spécifique.  
   
   
 ##  <a name="DeleteAlerts"></a> Supprimer des alertes de données  
- Vous pouvez supprimer des définitions d'alerte dans le Gestionnaire des alertes de données. Chaque définition d'alerte de données a un propriétaire, l'utilisateur SharePoint qui l'a créée. Les propriétaires peuvent supprimer uniquement les définitions d'alerte qu'ils ont créées. Pour plus d’informations, consultez [gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).  
+ Vous pouvez supprimer des définitions d'alerte dans le Gestionnaire des alertes de données. Chaque définition d'alerte de données a un propriétaire, l'utilisateur SharePoint qui l'a créée. Les propriétaires peuvent supprimer uniquement les définitions d'alerte qu'ils ont créées. Pour plus d’informations, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).  
   
- Un administrateurs d'alertes SharePoint peut répertorier puis supprimer des définitions d'alerte créées par tous les utilisateurs du site. Pour plus d’informations, consultez [gérer toutes les alertes de données sur un SharePoint Site dans le Gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+ Un administrateurs d'alertes SharePoint peut répertorier puis supprimer des définitions d'alerte créées par tous les utilisateurs du site. Pour plus d’informations, consultez [Gérer toutes les alertes de données sur un site SharePoint dans le Gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
  Une fois que vous avez supprimé la définition d'alerte, aucune alerte supplémentaire n'est envoyée. Toutefois, si vous interrogez la base de données des alertes, vous constaterez que la définition d'alerte existe encore. Le service d'alertes effectue un nettoyage planifié qui supprimera définitivement la définition d'alerte lors du nettoyage suivant. L'intervalle de nettoyage par défaut est de 20 minutes. Cet intervalle, ainsi que d'autres paramètres de nettoyage, sont configurables. Pour plus d’informations, consultez [Alertes de données Reporting Services](../ssms/agent/alerts.md).  
   

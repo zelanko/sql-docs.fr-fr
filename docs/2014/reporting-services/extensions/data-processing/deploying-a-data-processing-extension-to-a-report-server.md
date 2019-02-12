@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : déployer une extension pour le traitement des données sur un serveur de rapports | Microsoft Docs'
+title: 'Procédure : Déployer une Extension de traitement des données à un serveur de rapports | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf4013f5a557dde93cf628f55e108c5a4e1772ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: db03408b8ed7909f534b5dad09dbb742f7edc6c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160745"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017971"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Procédure : déployer une extension pour le traitement des données sur un serveur de rapports
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Procédure : Déployer une Extension de traitement des données à un serveur de rapports
   Les serveurs de rapports utilisent les extensions de traitement des données pour extraire, puis traiter les données qui figurent dans les rapports rendus. Vous devez déployer l'assembly d'extension utilisé pour le traitement des données sur un serveur de rapports, et ce sous la forme d'un assembly privé. Vous devez également créer une entrée dans le fichier de configuration du serveur de rapports, à savoir dans le fichier dénommé RSReportServer.config.  
   
 ## <a name="procedures"></a>Procédures  
@@ -36,7 +36,7 @@ ms.locfileid: "48160745"
   
 2.  Une fois le fichier correspondant à l'assembly copié, ouvrez le fichier RSReportServer.config. Ce fichier se trouve dans le répertoire ReportServer. Dans le fichier de configuration, créez une entrée correspondant au fichier d'assembly copié. Vous pouvez ouvrir le fichier de configuration dans Visual Studio ou simplement à l’aide d’un éditeur de texte, tel que le Bloc-notes.  
   
-3.  Recherchez le `Data` élément dans le fichier RSReportServer.config. L'entrée correspondant à votre nouvelle extension pour le traitement des données doit être créée à l'emplacement suivant :  
+3.  Localisez l'élément `Data` dans le fichier RSReportServer.config. L'entrée correspondant à votre nouvelle extension pour le traitement des données doit être créée à l'emplacement suivant :  
   
     ```  
     <Extensions>  

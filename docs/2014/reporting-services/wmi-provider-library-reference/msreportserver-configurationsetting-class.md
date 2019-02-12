@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7dfcef8a18d1d3fae45d8ebabe85da1bf5d3fbbe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3fb36315de4a9d2f83e4a6c11f129f5603147e25
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165169"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024660"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>classe MSReportServer_ConfigurationSetting
   Représente les paramètres d’installation et d’exécution d’une instance de serveur de rapports. Ces paramètres sont stockés dans le fichier de configuration du serveur de rapports.  
   
- Pour obtenir la liste de tous les membres de ce type, consultez [membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md).  
+ Pour obtenir la liste de tous les membres de ce type, consultez [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +46,7 @@ public class MSReportServer_ConfigurationSetting
  Tous les membres publics statiques (**Shared** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) de ce type sont sécurisés pour les opérations multithread. Il n'est pas garanti que les membres d'instance soient thread-safe.  
   
 ## <a name="example"></a>Exemple  
- Pour exécuter le code suivant, ajoutez le nom de votre serveur à la place de chaque \<*nom_serveur*>. Mettez à jour le chemin d'accès de façon à pointer vers votre emplacement d'installation, s'il ne s'agit pas de la valeur par défaut. L’exemple de code suivant parcourt chaque propriété dans le [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) (classe), affiche le nom de chaque propriété et sa valeur dans la console.  
+ Pour exécuter le code suivant, ajoutez le nom de votre serveur à la place de chaque \<*nom_serveur*>. Mettez à jour le chemin d'accès de façon à pointer vers votre emplacement d'installation, s'il ne s'agit pas de la valeur par défaut. L’exemple de code suivant parcourt chaque propriété dans la classe [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) et affiche le nom de chaque propriété et sa valeur sur la console.  
   
 ```vb  
 Imports System  
@@ -170,7 +170,7 @@ class Class1
 }  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
  **Plateforme :** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  

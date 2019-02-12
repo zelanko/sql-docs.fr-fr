@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce940bd22b9fbc5d2628cdeae3a0eea376f2bc99
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 097e61db74fbe2d1ba46ac35c6245745309d00af
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165275"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010880"
 ---
 # <a name="tasks-and-permissions"></a>Tâches et autorisations
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les *tâches* correspondent aux actions qu’un utilisateur ou un administrateur peut effectuer. Les tâches sont prédéfinies. Vous ne pouvez pas créer de tâches personnalisées ou modifier celles qui sont fournies, par programme ou à l'aide d'un outil. Il en existe vingt cinq en tout. Ces tâches comprennent l'ensemble des opérations disponibles dans la sécurité basée sur l'attribution de rôles. Parmi ces tâches, citons par exemple « Afficher les rapports », « Gérer les rapports » et « Gérer les propriétés du serveur de rapports ».  
@@ -46,7 +46,7 @@ Diagramme Autorisations et tâches
   
 ## <a name="see-also"></a>Voir aussi  
  [Définitions de rôles](role-definitions.md)   
- [Rôles prédéfinis](role-definitions-predefined-roles.md)   
+ [Predefined Roles](role-definitions-predefined-roles.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](granting-permissions-on-a-native-mode-report-server.md)  
   
   

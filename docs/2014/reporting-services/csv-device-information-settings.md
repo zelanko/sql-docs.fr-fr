@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2dfb27e467dc762c6591c8b820cb71302eac99fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1273eed3bc53b5f23bd51430f1fd2fbe2b712d5d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116909"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019000"
 ---
 # <a name="csv-device-information-settings"></a>Paramètres d'informations de périphérique CSV
   Les paramètres d'informations de périphérique de l'extension de rendu CSV permettent de modifier les séparateurs et les qualificateurs et de spécifier la manière de gérer les sauts de ligne. L'extension du fichier peut également être envoyée, ainsi que l'encodage et l'inclusion des lignes d'en-tête dans la sortie. Étant donné que les séparateurs sont probablement des caractères spéciaux, vous devez les encoder dans une section CDATA, si les paramètres sont écrits au format XML.  
   
  Le tableau suivant répertorie les paramètres d'informations de périphérique qui permettent un rendu du rapport au format Texte.  
   
-|Paramètre|Valeur|  
+|Paramètre|Value|  
 |-------------|-----------|  
 |`Encoding`|Nom IANA (Internet Assigned Numbers Authority) d'un encodage de caractères pris en charge par le .NET Framework. La valeur par défaut est `UTF-8`. Les exemples d'autres valeurs incluent ASCII, UTF-7 et UTF-16.|  
 |`ExcelMode`|Indique que la sortie cible est destinée à Excel. La valeur par défaut est `true`.|  
@@ -35,13 +35,13 @@ ms.locfileid: "48116909"
 |**NoHeader**|Indique si la ligne d'en-tête est exclue de la sortie. La valeur par défaut est `false`.|  
 |`Qualifier`|Chaîne de qualificateur à placer dans les résultats qui contiennent le séparateur de champs ou le séparateur d'enregistrements. Si les résultats contiennent le qualificateur, celui-ci est répété. Le paramètre `Qualifier` doit être différent des paramètres `FieldDelimiter` et `RecordDelimiter`. La valeur par défaut est un guillemet (").|  
 |`RecordDelimiter`|Séparateur d'enregistrements à placer à la fin de chaque d'enregistrement. La valeur par défaut est \<cr>\<lf>.|  
-|**SuppressLineBreaks**|Indique si les sauts de ligne sont supprimés des données incluses dans la sortie. La valeur par défaut est `false`. Si la valeur est `true`, le `FieldDelimiter`, `RecordDelimiter`, et `Qualifier` paramètres ne peut pas être un caractère d’espacement.|  
-|`UseFormattedValues`|Indique si les chaînes mises en forme sont placées dans la sortie CSV. La valeur par défaut est `true` lorsque `ExcelMode` est `true`; sinon, il est `false`.|  
+|**SuppressLineBreaks**|Indique si les sauts de ligne sont supprimés des données incluses dans la sortie. La valeur par défaut est `false`. Si la valeur est `true`, les paramètres `FieldDelimiter`, `RecordDelimiter` et `Qualifier` ne peuvent pas être un espace.|  
+|`UseFormattedValues`|Indique si les chaînes mises en forme sont placées dans la sortie CSV. La valeur par défaut est `true` lorsque le `ExcelMode` a pour valeur `true` ; sinon, la valeur par défaut est `false`.|  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Transmission de paramètres d’informations de périphérique aux Extensions de rendu](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Transmission de paramètres d'informations de périphérique aux extensions de rendu](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

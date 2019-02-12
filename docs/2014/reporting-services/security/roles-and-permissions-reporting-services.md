@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4f9364b2c15adc07e7d265434678eca573537567
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ab60b588b276fd95e253d3ccf3fdeaf8ac71d409
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116861"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010971"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>Rôles et autorisations (Reporting Services)
   Reporting Services propose un sous-système d'authentification et un modèle d'autorisation basé sur les rôles. Les modèles d'authentification et d'autorisation varient selon que le serveur de rapports s'exécute en mode natif ou en mode SharePoint. Si le serveur de rapports fait partie d'un déploiement SharePoint, les autorisations SharePoint déterminent quels sont les utilisateurs qui ont accès au serveur de rapports.  

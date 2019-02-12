@@ -18,25 +18,25 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16a92441dd7e3088b6be0f8235f6719b6bc7cdb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 22810ae8acf19782997245a3746c70f95628fd1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192529"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012070"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurer le compte d'exécution sans assistance (Gestionnaire de configuration de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un compte spécial utilisé pour le traitement de rapport sans assistance et pour l'envoi de demandes de connexion par le biais du réseau. Le compte est utilisé des façons suivantes :  
   
--   Envoyez les demandes de connexion sur le réseau pour les rapports qui utilisent l'authentification de base de données ou connectez-vous aux sources de données de rapport externes qui ne requièrent pas ou n'utilisent pas l'authentification. Pour plus d’informations, consultez [spécifier les informations d’identification et les informations de connexion pour les Sources de données de rapport](../../integration-services/connection-manager/data-sources.md) dans la documentation en ligne de SQL Server.  
+-   Envoyez les demandes de connexion sur le réseau pour les rapports qui utilisent l'authentification de base de données ou connectez-vous aux sources de données de rapport externes qui ne requièrent pas ou n'utilisent pas l'authentification. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../integration-services/connection-manager/data-sources.md) dans la documentation en ligne de SQL Server.  
   
 -   Extraire des fichiers image externes qui sont utilisés dans un rapport. Si vous souhaitez utiliser un fichier image et que le fichier est inaccessible par le biais de l'accès Anonyme, vous pouvez configurer le compte de traitement de rapport sans surveillance et accorder au compte l'autorisation d'accéder au fichier.  
   
  Le traitement sans surveillance des rapports désigne tout processus d'exécution de rapport déclenché par un événement, d'actualisation de données ou piloté par planification, plutôt que par une demande d'utilisateur. Le serveur de rapports utilise le compte de traitement sans surveillance des rapports pour se connecter à l'ordinateur qui héberge la source de données externe. Ce compte est nécessaire car les informations d'identification du compte de service Report Server ne sont jamais utilisées pour la connexion à d'autres ordinateurs.  
   
 > [!IMPORTANT]  
->  La configuration de ce compte est facultative. Cependant, si vous ne le configurez pas, vous limitez vos options pour la connexion à certaines sources de données et vous risquez de ne pas pouvoir récupérer de fichiers image à partir d'ordinateurs distants. Si vous configurez le compte, vous devez le maintenir à jour. Plus spécifiquement, si vous laissez un mot de passe expirer ou si les informations de compte sont modifiées dans Active Directory, vous rencontrerez l'erreur suivante lors du prochain traitement de rapport : « Échec de l'ouverture de session (rsLogonFailed) Échec d'ouverture de session : nom d'utilisateur inconnu ou mot de passe incorrect ». Une maintenance correcte du compte de traitement de rapport sans surveillance est essentielle, même si vous ne récupérez jamais de fichiers image ou si vous n'envoyez jamais de demandes de connexion à des ordinateurs externes. Si vous configurez le compte et constatez ultérieurement que vous ne l'utilisez pas, vous pouvez le supprimer afin d'éliminer des tâches de maintenance de compte routinières.  
+>  La configuration de ce compte est facultative. Cependant, si vous ne le configurez pas, vous limitez vos options pour la connexion à certaines sources de données et vous risquez de ne pas pouvoir récupérer de fichiers image à partir d'ordinateurs distants. Si vous configurez le compte, vous devez le maintenir à jour. Plus spécifiquement, si vous laissez un mot de passe expirer ou si les informations de compte sont modifiées dans Active Directory, vous rencontrerez l'erreur suivante lors du prochain traitement de rapport : « Échec d'ouverture de session (rsLogonFailed) Échec d'ouverture de session : nom d'utilisateur inconnu ou mot de passe incorrect. » Une maintenance correcte du compte de traitement de rapport sans surveillance est essentielle, même si vous ne récupérez jamais de fichiers image ou si vous n'envoyez jamais de demandes de connexion à des ordinateurs externes. Si vous configurez le compte et constatez ultérieurement que vous ne l'utilisez pas, vous pouvez le supprimer afin d'éliminer des tâches de maintenance de compte routinières.  
   
 ## <a name="how-to-configure-the-account"></a>Comment configurer le compte  
  Vous devez utiliser un compte utilisateur de domaine. Pour assumer son rôle prévu, ce compte doit être différent de celui utilisé pour exécuter le service Report Server. Veillez à utiliser un compte ayant les autorisations minimales (l'accès en lecture seule avec les autorisations de connexion réseau est suffisant) et un accès limité aux seuls ordinateurs qui fournissent des sources de données et des ressources au serveur de rapports. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
@@ -54,13 +54,13 @@ ms.locfileid: "48192529"
   
 1.  Créez ou sélectionnez un compte de domaine qui ne peut accéder qu'aux ordinateurs et aux serveurs qui fournissent des données ou des services à un serveur de rapports. Vous devez utiliser un compte bénéficiant d'autorisations réduites (telles que des autorisations de lecture seule).  
   
-2.  Ouvrez une invite de commandes : dans le menu **Démarrer** , cliquez sur **Exécuter**, tapez **cmd**, puis cliquez sur **OK**.  
+2.  Ouvrez une invite de commandes : Sur le **Démarrer** menu, cliquez sur **exécuter**, type **cmd**, puis cliquez sur **OK**.  
   
 3.  Tapez la commande suivante pour configurer le compte sur une instance de serveur de rapports locale :  
   
      **rsconfig -e -u\<domaine/nom utilisateur> -p\<mot de passe>**  
   
- **rsconfig -e** prend en charge d’autres arguments. Pour plus d’informations sur la syntaxe et pour obtenir des exemples de commande, consultez [Utilitaire rsconfig&#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) dans la documentation en ligne de SQL Server.  
+ **rsconfig -e** prend en charge d’autres arguments. Pour plus d’informations sur la syntaxe et pour obtenir des exemples de commande, consultez [Utilitaire rsconfig&#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) dans la documentation en ligne de SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Comment les informations sur le compte sont stockées  
  Lorsque vous définissez le compte, les paramètres suivants sont spécifiés comme valeurs chiffrées dans le fichier RSreportserver.config sur une instance de serveur de rapports locale ou distante :  

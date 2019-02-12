@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9814db13e9d360f390456283077bd42973b978d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1859d70c0ee0c10571897c4695eb64179b313168
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071149"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024850"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>Accorder à un utilisateur l'accès à un serveur de rapports (Gestionnaire de rapports)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise la sécurité basée sur les rôles pour permettre à un utilisateur d’accéder à un serveur de rapports. Dans une nouvelle installation du serveur de rapports, seuls les utilisateurs membres du groupe Administrateurs local disposent d'autorisations relatives au contenu et au fonctionnement du serveur de rapports. Pour rendre le serveur de rapports accessible à d’autres utilisateurs, vous devez créer des attributions de rôles qui mappent des comptes d’utilisateurs ou de groupes à un rôle prédéfini spécifiant une collection de tâches.  
   
- **Serveurs de rapports en mode SharePoint :** pour un serveur de rapports configuré en mode intégré SharePoint, vous configurez l’accès à partir d’un site SharePoint à l’aide d’autorisations SharePoint. Les niveaux d'autorisation du site SharePoint déterminent l'accès au contenu du serveur de rapports et son bon fonctionnement. Vous devez être un administrateur de site pour pouvoir accorder des autorisations sur un site SharePoint. Pour plus d’informations, consultez [Accord d’autorisations sur des éléments de serveur de rapports sur un site SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
+ **Serveurs de rapports en mode SharePoint :** Pour un serveur de rapports configuré en mode intégré SharePoint, vous configurez l'accès à partir d'un site SharePoint à l'aide d'autorisations SharePoint. Les niveaux d'autorisation du site SharePoint déterminent l'accès au contenu du serveur de rapports et son bon fonctionnement. Vous devez être un administrateur de site pour pouvoir accorder des autorisations sur un site SharePoint. Pour plus d’informations, consultez [Accord d’autorisations sur des éléments de serveur de rapports sur un site SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
- **Serveurs de rapports en mode natif :** cette rubrique traite d’un serveur de rapports configuré pour le mode natif et de l’utilisation du Gestionnaire de rapports pour affecter des utilisateurs à un rôle. Il existe deux types de rôles :  
+ **Serveurs de rapports en mode natif :** Cette rubrique se concentre sur un serveur de rapports est configuré en mode natif et l’utilisation du Gestionnaire de rapports pour affecter des utilisateurs à un rôle. Il existe deux types de rôles :  
   
 -   Les rôles au niveau élément permettent d'afficher, d'ajouter et de gérer le contenu du serveur de rapports, les abonnements, le traitement des rapports et l'historique de rapport. Les attributions de rôles au niveau élément sont définies sur le nœud racine (dossier de base) mais aussi sur des dossiers ou des éléments spécifiques situés plus bas dans l'arborescence.  
   
 -   Les rôles de niveau système accordent l'accès aux opérations à l'échelle du site qui ne sont pas liées à un élément spécifique. Cela inclut par exemple l'utilisation du Générateur de rapports et des planifications partagées.  
   
-     Les deux types de rôles sont complémentaires et doivent être utilisés ensemble. Par conséquent, l'ajout d'un utilisateur à un serveur de rapports est une opération en deux parties. Si vous attribuez un rôle au niveau élément à un utilisateur, vous devez également lui attribuer un rôle de niveau système. Lorsque vous attribuez un rôle à un utilisateur, vous devez sélectionner un rôle déjà défini. Pour créer, modifier ou supprimer des rôles, utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour plus d’informations, consultez [créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
+     Les deux types de rôles sont complémentaires et doivent être utilisés ensemble. Par conséquent, l'ajout d'un utilisateur à un serveur de rapports est une opération en deux parties. Si vous attribuez un rôle au niveau élément à un utilisateur, vous devez également lui attribuer un rôle de niveau système. Lorsque vous attribuez un rôle à un utilisateur, vous devez sélectionner un rôle déjà défini. Pour créer, modifier ou supprimer des rôles, utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour plus d’informations, consultez [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
   
 ## <a name="before-you-start"></a>Avant de commencer  
  Examinez la liste suivante avant d'ajouter des utilisateurs à un serveur de rapports en mode natif.  
@@ -87,8 +87,8 @@ ms.locfileid: "48071149"
   
 ## <a name="see-also"></a>Voir aussi  
  (créer-et-gérer-rôle-assignments.md)   
- [Nouvelle attribution de rôle : Modifier la Page d’attribution de rôle &#40;le Gestionnaire de rapports&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
- [Page de propriétés de sécurité, éléments &#40;le Gestionnaire de rapports&#41;](../security-properties-page-items-report-manager.md)   
+ [Nouvelle attribution de rôle : Page Modifier le rôle attribution &#40;le Gestionnaire de rapports&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
+ [Page Propriétés de sécurité, Éléments &#40;Gestionnaire de rapports&#41;](../security-properties-page-items-report-manager.md)   
  [Attributions de rôles](role-assignments.md)   
  [Définitions de rôles](role-definitions.md)  
   

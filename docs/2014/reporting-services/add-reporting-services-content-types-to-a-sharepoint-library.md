@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 380a257fd72ec776b92581895f85859a0a622003
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+manager: kfile
+ms.openlocfilehash: 50ff2626108c26ca5cee3845da437b27dbfcade0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617139"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030850"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Ajouter des types de contenu de serveur de rapports à une bibliothèque (Reporting Services en mode intégré SharePoint)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit des types de contenu prédéfinis SharePoint qui sont utilisés pour gérer les fichiers de sources de données partagées (.rsds), les modèles de rapports (.smdl) et les fichiers de définitions de rapports (.rdl) du Générateur de rapports. L'ajout à une bibliothèque des types de contenu **Rapport du Générateur de rapports**, **Modèle de rapport**et **Source de données du rapport** active la commande **Nouveau** , qui permet de créer de nouveaux documents de ce type.  
@@ -66,7 +66,7 @@ ms.locfileid: "52617139"
   
 5.  Actualisez le navigateur, puis cliquez sur **Activer** pour la **Fonctionnalité d'intégration Report Server**.  
   
-    ![Désactiver](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
+    ![Deactivate](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
   
 ##  <a name="bkmk_enable_content_management"></a> Pour activer la gestion des types de contenu pour une bibliothèque de documents (SharePoint 2013)  
   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 247233e90e5fa35cbaacd905d208f07f15e850bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3a9e61cc8cc546156d24c209a68c3a523a0f8a29
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083859"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015060"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Utilisation des en-têtes SOAP de Reporting Services
   La communication avec une méthode Web Service à l'aide de SOAP suit un format standard. Ce format est constitué en partie des données encodées dans un document XML. Le document XML consiste en un élément **Envelope** racine, composé lui-même d’un élément **Body** obligatoire et d’un élément **Header** facultatif. L’élément **Body** contient les données propres au message. L’élément **Header** facultatif peut contenir des informations supplémentaires qui ne sont pas directement liées au message. Chaque élément enfant de l’élément **Header** est appelé « en-tête SOAP ».  

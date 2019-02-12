@@ -29,16 +29,16 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32e6ae99d44fbcf3f09a18fb899a2d14368dfd31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdd0c4efafbab577aef1016d367ca2210ea3d863
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790907"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011431"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modèle objet de chargement en masse XML de SQL Server (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47790907"
  Procède au chargement en masse des données à l'aide du fichier de schéma et du fichier de données (ou flux) fournis en guise de paramètres.  
   
 ## <a name="properties"></a>Properties  
- Chargement en bloc  
+ BulkLoad  
  Spécifie si un chargement en masse doit avoir lieu. Cette propriété est utile si vous souhaitez générer uniquement les schémas (voir les propriétés SchemaGen, SGDropTables et SGUseID qui suivent) et pas effectuer un chargement en masse. Il s'agit d'une propriété booléenne. Lorsque la propriété est définie sur TRUE, le processus de chargement en masse XML s'exécute. Lorsqu'elle est définie sur FALSE, aucun processus de chargement en masse XML n'a lieu.  
   
  La valeur par défaut est TRUE.  

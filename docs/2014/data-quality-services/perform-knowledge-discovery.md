@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmap.f1
 - sql12.dqs.kb.kbterms.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 627c3d071609b1b0053e7f8b79d20b9bff08c921
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1577fbdfd4133e419ab5dfe6520efd5e19893cb8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505579"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019670"
 ---
 # <a name="perform-knowledge-discovery"></a>Effectuer une découverte des connaissances
   Cette rubrique décrit comment créer une base de connaissances via la découverte des connaissances. Dans le processus de découverte, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analyse les données dans un exemple de source de données via un processus assisté par ordinateur, et ajoute les connaissances qu'il acquiert à la base de connaissances. Ces connaissances peuvent être modifiées et améliorées dans l'étape **Gestion des valeurs de domaine** de l'activité de découverte des connaissances ou de celle de gestion des domaines.  
@@ -186,7 +186,7 @@ ms.locfileid: "52505579"
   
 11. Cliquez sur **Terminer** pour mettre fin à l'activité de découverte des connaissances. Un message s'affiche si vous n'avez pas examiné chacun des domaines. Cliquez sur **Oui** pour continuer l'examen ou sur **Non** pour poursuivre. Si vous cliquez sur Non, une autre fenêtre s'affiche, qui vous permet d'effectuer les opérations suivantes :  
   
-    1.  **Publier**: La base de connaissances sera publiée pour l’utilisateur actuel ou d’autres personnes à utiliser. La base de connaissances ne sera pas verrouillée, l'état de la base de connaissances (dans la table de bases de connaissances) sera défini sur Vide, et les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. La page d'accueil s'affichera à nouveau. Pour terminer le processus, cliquez sur **Oui** dans le message.  
+    1.  **Publier** : La base de connaissances sera publiée pour l’utilisateur actuel ou d’autres personnes à utiliser. La base de connaissances ne sera pas verrouillée, l'état de la base de connaissances (dans la table de bases de connaissances) sera défini sur Vide, et les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. La page d'accueil s'affichera à nouveau. Pour terminer le processus, cliquez sur **Oui** dans le message.  
   
     2.  **Ne**: Votre travail sera enregistré, la base de connaissances restera verrouillée et l’état de la base de connaissances sera défini sur en cours. Les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. La page d'accueil s'affichera à nouveau.  
   

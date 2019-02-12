@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2fe9b635b53a83699cfc40eddadd7d73bd7948c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c87cd3d902f80b73475dd68726df091971ef0dff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132339"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035998"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Intégration de Reporting Services à l'aide de l'accès URL
   Avec l'accès URL, vous accédez aux rapports via l'URL d'un serveur de rapports. Une demande d'URL vous permet d'accéder à un serveur de rapports spécifique ainsi qu'aux rapports, ressources et autres éléments inclus dans la base de données du serveur de rapports. Vous pouvez également personnaliser la consultation des rapports et la navigation pour vos utilisateurs. La chaîne de requête de l'URL contient des paramètres d'informations de périphérique, ainsi que des paramètres de rapport ciblés sur votre rapport et la sortie de rendu choisie. La façon dont le serveur de rapports gère les demandes d'URL dépend des paramètres, des préfixes de paramètres et du type d'élément auquel vous accédez via l'URL.  

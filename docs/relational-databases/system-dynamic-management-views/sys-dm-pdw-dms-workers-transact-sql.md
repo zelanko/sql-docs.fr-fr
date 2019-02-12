@@ -1,9 +1,9 @@
 ---
-title: Sys.dm_pdw_dms_workers (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5ddc8e7ee7f160d6673e9a698075e923740041b8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 756943d49a794781d9422071dd5e233ce4e37806
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663018"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027360"
 ---
-# <a name="sysdmpdwdmsworkers-transact-sql"></a>Sys.dm_pdw_dms_workers (Transact-SQL)
+# <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contient des informations sur tous les traitements étapes effectuées DMS.  
@@ -37,7 +37,7 @@ ms.locfileid: "51663018"
 |bytes_per_sec|**bigint**|Débit de lecture ou d’écriture de la dernière seconde.|Supérieur ou égal à 0. NULL si la requête a été annulée ou a échoué avant d’exécuter le processus de travail.|  
 |bytes_processed|**bigint**|Nombre total d’octets traité par ce processus de travail.|Supérieur ou égal à 0. NULL si la requête a été annulée ou a échoué avant d’exécuter le processus de travail.|  
 |rows_processed|**bigint**|Nombre de lignes lues ou écrites pour ce processus de travail.|Supérieur ou égal à 0. NULL si la requête a été annulée ou a échoué avant d’exécuter le processus de travail.|  
-|start_time|**datetime**|Heure de début de l’exécution de ce processus de travail.|Supérieur ou égal à l’heure de début de l’étape de requête qu'auquel appartient ce processus de travail. Consultez [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|start_time|**datetime**|Heure de début de l’exécution de ce processus de travail.|Supérieur ou égal à l’heure de début de l’étape de requête qu'auquel appartient ce processus de travail. See [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |end_time|**datetime**|Heure à laquelle l’exécution s’est terminée, a échoué ou a été annulée.|NULL pour les travailleurs en cours ou en file d’attente. Sinon, supérieur à start_time.|  
 |total_elapsed_time|**Int**|Temps total passé dans l’exécution, en millisecondes.|Supérieur ou égal à 0.<br /><br /> Temps total écoulé depuis le système de démarrer ou redémarrer. Si total_elapsed_time dépasse la valeur maximale d’un entier (24,8 jours en millisecondes), cela entraînera l’échec de matérialisation en raison d’un dépassement de capacité.<br /><br /> La valeur maximale en millisecondes est équivalente à 24,8 jours environ.|  
 |cpu_time|**bigint**|Temps de processeur consommé par ce processus de travail, en millisecondes.|Supérieur ou égal à 0.|  

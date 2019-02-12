@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 28f25620cede6c626280a8a095c66457344679d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5028e1034a7f94cc877d6164b15f6f7b925a661e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363011"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017180"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
   Cette rubrique est une vue d’ensemble des options de mise à niveau et migration pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il existe deux approches générales liées à la mise à niveau d'un déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -113,7 +113,7 @@ ms.locfileid: "53363011"
   
 -   Sauvegardez toutes les personnalisations effectuées dans les répertoires virtuels [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans IIS.  
   
--   Supprimez les certificats SSL non valides.  Cela inclut les certificats expirés et que vous ne projetez pas de mettre à jour avant la mise à niveau de Reporting Services.  Certificats non valides provoqueront l’échec mise à niveau et un message d’erreur semblable au suivant sera écrit dans le fichier journal Reporting Services : **Microsoft.ReportingServices.WmiProvider.WMIProviderException : Un certificat Secure Sockets Layer (SSL) n’est pas configuré sur le site Web.** .  
+-   Supprimez les certificats SSL non valides.  Cela inclut les certificats expirés et que vous ne projetez pas de mettre à jour avant la mise à niveau de Reporting Services.  Certificats non valides provoqueront l’échec mise à niveau et un message d’erreur semblable au suivant sera écrit dans le fichier journal Reporting Services : **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Un certificat Secure Sockets Layer (SSL) n’est pas configuré sur le site Web.** .  
   
  Avant de mettre à niveau un environnement de production, veillez à toujours exécuter une mise à niveau de test dans un environnement de préproduction qui a la même configuration que votre environnement de production.  
   

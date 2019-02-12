@@ -1,11 +1,9 @@
 ---
-title: Sys.database_firewall_rules (Azure SQL Database) | Microsoft Docs
+title: sys.database_firewall_rules (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.prod: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.database_firewall_rules_TSQL
@@ -22,33 +20,33 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e224bec27ba3151fb531f5ad0ce9676a4e3a8d2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59c59150136910e2d0818fe93ff4811ed3262d8d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789507"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012320"
 ---
 # <a name="sysdatabasefirewallrules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retourne des informations sur les paramètres de pare-feu au niveau de la base de données associé à votre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Les paramètres de pare-feu de niveau base de données sont particulièrement utiles lors de l’utilisation des utilisateurs de base de données autonome. Pour plus d’informations, consultez [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
- Le `sys.database_firewall_rules` vue contient les colonnes suivantes :  
+ La vue `sys.database_firewall_rules` contient les colonnes suivantes :  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |id|**INTEGER**|Identificateur du paramètre de pare-feu de niveau base de données.|  
-|NAME|**NVARCHAR (128)**|Nom que vous avez choisi pour décrire et distinguer le paramètre de pare-feu de niveau base de données.|  
-|start_ip_address|**VARCHAR (50)**|Adresse IP la plus basse dans la plage de paramètres de pare-feu au niveau base de données. Les adresses IP supérieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus basse possible est `0.0.0.0`.|  
-|end_ip_address|**VARCHAR (50)**|Adresse IP la plus élevée dans la plage du paramètre de pare-feu. Les adresses IP inférieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus élevée possible est `255.255.255.255`.<br /><br /> Remarque : Les tentatives de connexion Azure de Windows sont autorisées lorsque ce champ et le **start_ip_address** champ equals `0.0.0.0`.|  
+|NAME|**NVARCHAR(128)**|Nom que vous avez choisi pour décrire et distinguer le paramètre de pare-feu de niveau base de données.|  
+|start_ip_address|**VARCHAR(50)**|Adresse IP la plus basse dans la plage de paramètres de pare-feu au niveau base de données. Les adresses IP supérieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus basse possible est `0.0.0.0`.|  
+|end_ip_address|**VARCHAR(50)**|Adresse IP la plus élevée dans la plage du paramètre de pare-feu. Les adresses IP inférieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus élevée possible est `255.255.255.255`.<br /><br /> Remarque : Tentatives de connexion de Windows Azure sont autorisées lorsque ce champ et le **start_ip_address** champ equals `0.0.0.0`.|  
 |create_date|**DATE/HEURE**|Date et heure UTC de création du paramètre de pare-feu de niveau base de données.|  
 |modify_date|**DATE/HEURE**|Date et heure UTC de la dernière modification du paramètre de pare-feu de niveau base de données.|  
   
 ## <a name="remarks"></a>Notes  
  Pour supprimer une règle de pare-feu de base de données, utilisez [sp_delete_database_firewall_rule &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md). Pour définir une règle de pare-feu pour tous les [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [sp_set_firewall_rule &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md). Pour retourner des règles de pare-feu plus d’informations sur la base de données existante, interrogez [sys.database_firewall_rules (Azure SQL Database)](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue est disponible dans le **master** base de données et dans chaque base de données utilisateur. L'accès en lecture seule à cette vue est disponible pour tous les utilisateurs autorisés à se connecter à la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  

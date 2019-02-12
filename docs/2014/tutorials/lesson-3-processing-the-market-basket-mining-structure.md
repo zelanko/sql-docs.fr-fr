@@ -1,25 +1,24 @@
 ---
-title: 'Leçon 3 : Traitement de la Structure d’exploration de données Market Basket | Microsoft Docs'
+title: 'Leçon 3 : Traitement de la Structure d’exploration de données de panier d’achat | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 095a043f-cf6f-45bb-a021-ae4e1b535c65
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 979738186c9af128087049e71fa248d41fd27b50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192249"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018261"
 ---
-# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Leçon 3 : traitement de la structure d'exploration de données Market Basket
-  Dans cette leçon, vous allez utiliser le [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instruction et vAssocSeqLineItems et vAssocSeqOrders à partir de la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de données exemple pour traiter les structures d’exploration et l’exploration des modèles que vous avez créé dans [leçon 1 : création de la Structure d’exploration de données Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) et [leçon 2 : ajout de modèles d’exploration de données à la Structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
+# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Leçon 3 : Traitement de la structure d'exploration de données Market Basket
+  Dans cette leçon, vous allez utiliser le [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instruction et vAssocSeqLineItems et vAssocSeqOrders à partir de la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de données exemple pour traiter les structures d’exploration et l’exploration des modèles que vous avez créé dans [leçon 1 : Création de la Structure d’exploration de données de panier](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) et [leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
   
  Lorsque vous traitez une structure d'exploration de données, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lit les données sources et génère les structures qui soutiennent les modèles d'exploration de données. Lorsque vous traitez un modèle d’exploration de données, les données définies par la structure d’exploration de données sont transmises via l’algorithme d’exploration de données que vous avez choisi. L'algorithme recherche des tendances et des modèles, puis stocke les informations recueillies dans le modèle d'exploration de données. Par conséquent, le modèle d'exploration de données ne contient pas les données source réelles mais plutôt les informations recueillies par l'algorithme. Pour plus d’informations sur les modèles d’exploration de données de traitement, consultez [traitement des exigences et considérations &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
@@ -193,6 +192,6 @@ RELATE [<case key>] TO [<foreign key>]
  Dans la leçon suivante, vous allez créer plusieurs prédictions fondées sur les modèles d'exploration de données que vous avez ajoutés à la structure Market Basket.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 4 : Exécution de prédictions Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Leçon 4 : L’exécution de prédictions Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
   
   

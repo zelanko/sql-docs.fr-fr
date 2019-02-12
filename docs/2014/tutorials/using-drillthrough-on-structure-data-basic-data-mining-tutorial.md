@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a693979c-0564-4d6d-b35d-cbbc8f350469
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9e12e4c4bcde1887de25e3ed75479da8b4eb5433
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053040"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012760"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Utilisation de l'extraction sur les données de structure (Didacticiel sur l'exploration de données de base)
-  Dans le cadre de leur campagne de publicité, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] envoie un courrier de publipostage à des clients potentiels dans l’âge 34-40 démographiques. Le service marketing a décidé qu’il souhaite également adresser ce courrier aux clients ayant acheté des vélos dans [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] il y a plus de cinq ans. Dans cette leçon vous allez identifier les clients ayant des vélos anciens et extraire leurs informations de contact. Ces informations ne sont pas incluses dans le modèle, mais sont incluses dans la structure. Pour extraire les informations de contact, vous allez d'abord vérifier que l'extraction est activée pour la structure puis vous utiliserez l'extraction pour extraire les noms et adresses des clients ciblés.  
+  Dans le cadre de leur campagne de publicité, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] envoie un courrier de publipostage à des clients potentiels dans la tranche d'âge 34-40 ans. Le service marketing souhaite également adresser ce courrier aux clients ayant acheté des vélos dans [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] il y a plus de cinq ans. Dans cette leçon vous allez identifier les clients ayant des vélos anciens et extraire leurs informations de contact. Ces informations ne sont pas incluses dans le modèle, mais sont incluses dans la structure. Pour extraire les informations de contact, vous allez d'abord vérifier que l'extraction est activée pour la structure puis vous utiliserez l'extraction pour extraire les noms et adresses des clients ciblés.  
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>Pour activer l'extraction sur un modèle d'exploration de données  
   
-1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans le **des modèles d’exploration de données** onglet du Concepteur d’exploration de données, cliquez sur le **TM_Decision_Tree** de modèle, puis sélectionnez **propriétés**.  
+1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans l'onglet **Modèles d'exploration de données** du Concepteur d'exploration de données, cliquez avec le bouton droit sur le modèle **TM_Decision_Tree** , et sélectionnez **Propriétés**.  
   
 2.  Dans les fenêtres Propriétés, cliquez sur **AllowDrillthrough**et sélectionnez **True**.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48053040"
  Félicitations, vous avez terminé le didacticiel sur l'exploration de données de base. Maintenant que vous maîtrisez les outils d'exploration de données, nous vous recommandons de compléter également le didacticiel intermédiaire sur l'exploration de données qui montre comment créer des modèles pour la prévision, l'analyse du panier d'achat et Sequence Clustering.  
   
 ## <a name="previous-task-in-lesson"></a>Tâche précédente de la leçon  
- [Création de prédictions &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Création de prédictions &#40;Didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  

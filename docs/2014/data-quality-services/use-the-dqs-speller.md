@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7d3e0ab451344b443452052960c16f9ccfdc9462
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7e043e20af78653fccfa0ed3a2b227a1023e0657
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412946"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016080"
 ---
 # <a name="use-the-dqs-speller"></a>Utiliser le vérificateur d'orthographe DQS
   Le vérificateur d'orthographe [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) vérifie la syntaxe, l'orthographe, et la structure de la phrase des valeurs de chaîne dans un domaine. Le vérificateur d'orthographe est une fonctionnalité autonome et côté client qui n'a pas d'intégration avec les moteurs côté serveur et aucune conséquence sur les flux ou les états actuels. Le vérificateur d'orthographe identifie ces valeurs de chaîne qu'il considère comme des erreurs potentielles, puis les marque d'un trait de soulignement rouge dans le même emplacement que celui où vous apportez d'autres modifications manuelles aux valeurs de domaine. Ces emplacements incluent :  

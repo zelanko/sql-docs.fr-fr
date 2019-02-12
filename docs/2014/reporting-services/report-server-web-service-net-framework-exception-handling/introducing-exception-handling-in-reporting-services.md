@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 54381870-ce67-482b-aa83-6a838cdbf9b9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 03bade736ae1a52942d42a7b1b675077a3ba6e7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b0415d5344999b61b026ef69879b607220a72031
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219999"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014920"
 ---
 # <a name="introducing-exception-handling-in-reporting-services"></a>Présentation de la gestion des exceptions dans Reporting Services
   Si votre application [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] envoie un demande au service Web Report Server, mais que ce dernier ne parvient pas à la traiter, le service retourne une exception SOAP au client. La gestion des exceptions levées par le service Web Report Server est une composante importante des applications que vous développez car vous avez la possibilité de retourner des informations utiles aux utilisateurs lorsque des erreurs se produisent.  

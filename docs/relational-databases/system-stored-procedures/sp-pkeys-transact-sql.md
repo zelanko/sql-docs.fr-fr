@@ -3,7 +3,6 @@ title: sp_pkeys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -19,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da9b788e69decf1c209eec846fbeccc811e70374
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 759d666f725eb6ebad49b3dffe2cd93bf9469eb0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589763"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022930"
 ---
 # <a name="sppkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +51,7 @@ sp_pkeys [ @table_name = ] 'name'
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les colonnes de cette table sont renvoyées. Si le *propriétaire* n’est pas spécifié et l’utilisateur actuel ne possède pas d’une table avec la valeur *nom*, cette procédure recherche une table avec la valeur *nom* détenus par le propriétaire de la base de données. Si la recherche de la table aboutit, ce sont les colonnes de cette dernière qui sont retournées.  
   
- [ @table_qualifier=] '*qualificateur*'  
+ [ @table_qualifier= ] '*qualifier*'  
  Est l’identificateur de la table. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

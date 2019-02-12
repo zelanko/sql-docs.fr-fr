@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.refdata.f1
 - sql12.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f3990965c78bec153ef87011f152ca0f13881055
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 254e1209a8198a6021222edc0b9b8abc72210884
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519199"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024260"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Attacher un domaine ou un domaine composite à des données de référence
   Cette rubrique explique comment attacher des domaines/domaines composites dans une base de connaissances à un service de données de référence dans Windows Azure Marketplace pour générer des connaissances sur les données de référence de haute qualité. Chaque service de données de référence contient un schéma (colonnes de données). Après avoir attaché un domaine ou un domaine composite à un service de données de référence, vous devez mapper le domaine joint, ou chaque domaine au sein du domaine composite joint, aux colonnes appropriées du schéma de service des données de référence. L'attachement d'un domaine composite à un service de données de référence vous permet d'attacher un seul domaine à un service de données de référence, puis de mapper les différents domaines du domaine composite aux colonnes appropriées du schéma de service des données de référence.  

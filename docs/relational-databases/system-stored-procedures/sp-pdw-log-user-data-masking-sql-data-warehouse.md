@@ -2,8 +2,7 @@
 title: sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 23d7846bd72329a62579765679687204a8e14ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0d9a6ec090e799b4b6f0aad7e7335d1e36999dd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630237"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022972"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47630237"
 > [!IMPORTANT]  
 >  Le [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité faisant l’objet **sp_pdw_log_user_data_masking** êtes certain [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité. **sp_pdw_log_user_data_masking** n’affecte pas les journaux de transaction de base de données, ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les journaux d’erreurs.  
   
- **Arrière-plan :** dans la configuration par défaut [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] contiennent des journaux d’activité complète [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions et peut dans certains cas incluent les données utilisateur contenues dans les opérations telles que **insérer**,  **Mise à jour**, et **sélectionnez** instructions. En cas de problème sur l’appliance, cela permet l’analyse des conditions qui a provoqué le problème sans avoir à reproduire le problème. Afin d’éviter les données utilisateur en cours d’écriture [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité, les clients peuvent choisir d’activer sur le masquage des données utilisateur à l’aide de cette procédure stockée. Les instructions sont toujours écrits dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité, mais tous les littéraux dans les instructions qui contiennent des données utilisateur seront masqués ; remplacé avec des valeurs de constante prédéfinies.  
+ **Arrière-plan :** Dans la configuration par défaut [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] contiennent des journaux d’activité complète [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions et peut dans certains cas incluent les données utilisateur contenues dans les opérations telles que **insérer**, **mise à jour**, et **Sélectionnez** instructions. En cas de problème sur l’appliance, cela permet l’analyse des conditions qui a provoqué le problème sans avoir à reproduire le problème. Afin d’éviter les données utilisateur en cours d’écriture [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité, les clients peuvent choisir d’activer sur le masquage des données utilisateur à l’aide de cette procédure stockée. Les instructions sont toujours écrits dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité, mais tous les littéraux dans les instructions qui contiennent des données utilisateur seront masqués ; remplacé avec des valeurs de constante prédéfinies.  
   
  Lorsque le chiffrement transparent des données est activé sur l’appliance, masquage des données utilisateur dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité est automatiquement activée.  
   
@@ -41,7 +40,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [  **@masking_mode=** ] *masking_mode*  
+ [ **@masking_mode=** ] *masking_mode*  
  Détermine si les données d’utilisateur du journal de chiffrement transparent des données de masquage sont activées. *masking_mode* est **int**, et peut prendre l’une des valeurs suivantes :  
   
 -   0 = désactivé, l’utilisateur les données apparaissent dans le [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité.  
@@ -65,7 +64,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
 -   Vous pouvez activer explicitement dans de masquage des données utilisateur [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité à l’aide de la **sp_pdw_log_user_data_masking** procédure.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **sysadmin** rôle de base de données fixe ou **CONTROL SERVER** autorisation.  
   
 ## <a name="example"></a>Exemple  

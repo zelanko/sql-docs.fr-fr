@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f77a0163c40d29dd06f49fc61a816c92d9484e80
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: b613fa7adf8d4a149924101f92a8b3dc87e6916a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374901"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033750"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Type de connexion Hyperion Essbase (SSRS)
   Pour inclure les données d’une source de données externe [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Ce type de source de données intégré est basé sur l’extension de données pour [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], ce qui vous permet de récupérer les données multidimensionnelles d’une source de données externe [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 60a601fb20617f5a41b27a7c1972778e116f25a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4db37e85a43b6eb64a6999590f5b2be92293de56
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111729"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016780"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Activer les erreurs distantes (Reporting Services)
-  Vous pouvez définir des propriétés de serveur sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de façon à retourner des informations supplémentaires concernant les conditions d'erreur qui se produisent sur des serveurs distants. Si un message d'erreur contient le texte « Pour obtenir plus d'informations sur cette erreur, accédez au serveur de rapports sur le serveur local ou activez les erreurs distantes », vous pouvez définir la propriété `EnableRemoteErrors` de façon à accéder à des informations supplémentaires qui peuvent vous aider à résoudre le problème. Pour plus d’informations, consultez [Report Server System Properties](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
+  Vous pouvez définir des propriétés de serveur sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de façon à retourner des informations supplémentaires concernant les conditions d'erreur qui se produisent sur des serveurs distants. Si un message d'erreur contient le texte « Pour obtenir plus d'informations sur cette erreur, accédez au serveur de rapports sur le serveur local ou activez les erreurs distantes », vous pouvez définir la propriété `EnableRemoteErrors` de façon à accéder à des informations supplémentaires qui peuvent vous aider à résoudre le problème. Pour plus d’informations, consultez [Propriétés système de Report Server](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Dans cette rubrique :**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48111729"
   
 ##  <a name="bkmk_mgtStudio"></a> Activer les erreurs distantes au moyen de SQL Server Management Studio (mode natif)  
   
-1.  Démarrez Management Studio et connectez-vous à une instance du serveur de rapports. Pour plus d’informations, consultez [se connecter à un serveur de rapports dans Management Studio](../tools/connect-to-a-report-server-in-management-studio.md) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
+1.  Démarrez Management Studio et connectez-vous à une instance du serveur de rapports. Pour plus d’informations, consultez [Se connecter à un serveur de rapports dans Management Studio](../tools/connect-to-a-report-server-in-management-studio.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  Cliquez avec le bouton droit sur le nœud du serveur de rapports, puis sélectionnez **Propriétés**.  
   

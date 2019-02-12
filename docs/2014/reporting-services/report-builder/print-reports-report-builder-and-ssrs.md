@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b0f0b2087471d8f0c905b1a173eff57a0be7fd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 80b5920bdcf3aa3f1db9c649115613f6dca34ab5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096695"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031206"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>Imprimer des rapports (Générateur de rapports et SSRS)
   Après avoir enregistré un rapport sur un serveur de rapports, vous pouvez l'afficher et l'imprimer à partir d'un navigateur, du Gestionnaire de rapports ou de toute application permettant d'afficher un rapport exporté. Avant d'enregistrer un rapport, vous pouvez l'imprimer après avoir affiché son aperçu.  
@@ -34,20 +34,20 @@ ms.locfileid: "48096695"
 3.  Pour la plupart des rapports exportés, les rapports imprimés incluent tout ce qui est visible sur les rapports, tel que l'utilisateur peut les voir sur un moniteur d'ordinateur. L'espace blanc de l'aire de conception du rapport est conservé. Pour ajouter ou supprimer des pages vierges supplémentaires horizontalement, modifiez la largeur de page de rapport.  
   
 > [!NOTE]  
->  L'impression des rapports HTML ne montre que le contenu de leur première page, si vous utilisez la commande Imprimer du navigateur. Vous pouvez obtenir de meilleurs résultats si vous imprimez les rapports HTML à l'aide de la fonctionnalité d'impression côté client de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [imprimer des rapports à partir d’un navigateur avec le contrôle d’impression &#40;Générateur de rapports et SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md).  
+>  L'impression des rapports HTML ne montre que le contenu de leur première page, si vous utilisez la commande Imprimer du navigateur. Vous pouvez obtenir de meilleurs résultats si vous imprimez les rapports HTML à l'aide de la fonctionnalité d'impression côté client de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Imprimer des rapports à partir d’un navigateur à l’aide du contrôle d’impression &#40;Générateur de rapports et SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Imprimer des rapports à partir d’un navigateur avec le contrôle d’impression &#40;Générateur de rapports et SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
+ [Imprimer des rapports à partir d’un navigateur à l’aide du contrôle d’impression &#40;Générateur de rapports et SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
  Décrit l'utilisation de l'impression des rapports côté client à partir du navigateur Web ou du Gestionnaire de rapports.  
   
- [Imprimer des rapports à partir d’autres Applications &#40;Générateur de rapports et SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  
+ [Imprimer des rapports à partir d’autres applications &#40;Générateur de rapports et SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  
  Explique comment imprimer des rapports exportés vers une autre application.  
   
  [Imprimer un rapport &#40;Générateur de rapports et SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
- Fournit des instructions détaillées sur la façon d'imprimer un rapport, sur la façon de contrôler les marges dans une page et sur la façon de spécifier le format du papier pour les rapports qui seront affichés par les convertisseurs de saut de page manuel : PDF, image ou impression.  
+ Fournit des instructions détaillées sur la façon d’imprimer un rapport, comment contrôler les marges dans une page et comment spécifier le format du papier pour les rapports qui seront affichés par les convertisseurs de saut de page manuel : PDF, Image ou impression.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](export-reports-report-builder-and-ssrs.md)   

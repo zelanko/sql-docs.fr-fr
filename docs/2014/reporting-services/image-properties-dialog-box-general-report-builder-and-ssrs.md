@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: afd91dda1a6a4694980d0976f1ceae9db928c36a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: cbbe4fe5917419bc07cef81629c7b2e38b7cff15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108429"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019633"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de l'image, Général (Générateur de rapports et SSRS)
   Sélectionnez **Général** dans la boîte de dialogue **Propriétés de l’image** pour ajouter une image, changer le nom par défaut de l’image et ajouter le texte de l’info-bulle.  
@@ -59,6 +59,6 @@ ms.locfileid: "48108429"
 ## <a name="see-also"></a>Voir aussi  
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Images &#40;Générateur de rapports et SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Aide du Générateur de rapports pour les boîtes de dialogue, volets et les Assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

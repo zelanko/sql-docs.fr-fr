@@ -10,15 +10,15 @@ helpviewer_keywords:
 - log files,advanced settings
 - dqs log files,advanced settings
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d375857e0f2603814c6cf35a73b55a0a422b3e49
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3fc2eec8064b9b5cad1f6a1875032f1d1158bc97
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030126"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040360"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configurer les paramètres avancés pour les fichiers journaux DQS
   Cette rubrique explique comment configurer les paramètres avancés pour [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] et les fichiers journaux [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , tels que la définition de la limite de la taille des fichiers par progression des fichiers journaux, la définition du modèle d'horodatage les événements, etc.  

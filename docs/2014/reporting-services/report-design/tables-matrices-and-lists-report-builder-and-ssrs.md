@@ -35,13 +35,13 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cf80cbb87916ccf6887f3d6508126c5770d7666c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24b1fbcacee78de2448100d9b46f79b412140a66
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220849"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017801"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tables, matrices et listes (Générateur de rapports et SSRS)
   Les tables, matrices et listes sont des régions de données qui affichent les données du rapport dans des cellules organisées en lignes et colonnes. Les cellules contiennent en général des données texte, telles que du texte, des dates et des nombres, mais elles peuvent également contenir des jauges, des graphiques ou des éléments de rapport, par exemple des images. Ensemble, les tables, matrices et listes sont fréquemment connues sous le nom de régions de données de tableau matriciel.  
@@ -56,7 +56,7 @@ ms.locfileid: "48220849"
   
  ![RS_TableMatrixList](../media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- Pour commencer à utiliser rapidement les tables, matrices et listes, consultez [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../tutorial-creating-a-basic-table-report-report-builder.md), [Didacticiel : création d’un rapport de matrice &#40;Générateur de rapports&#41;](../tutorial-creating-a-matrix-report-report-builder.md) et [Didacticiel : création d’un rapport au format libre &#40;Générateur de rapports&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Pour commencer rapidement avec les tables, matrices et listes, consultez [didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../tutorial-creating-a-basic-table-report-report-builder.md), [didacticiel : Création d’un rapport de matrice &#40;Générateur de rapports&#41;](../tutorial-creating-a-matrix-report-report-builder.md), et [didacticiel : Création d’un rapport de forme libre &#40;Générateur de rapports&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  Vous pouvez publier des tables, des matrices et des listes indépendamment d'un rapport en tant que parties de rapports. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -82,7 +82,7 @@ ms.locfileid: "48220849"
   
  ![Nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée](../media/rs-matrixtemplatenewselected.gif "Nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée")  
   
- Vous pouvez regrouper des données en fonction de plusieurs champs ou expressions dans des groupes de lignes et de colonnes. Au moment de l'exécution, lorsque les régions de données et données de rapport sont combinées, une matrice se développe horizontalement et verticalement sur la page à mesure que des colonnes pour les groupes de colonnes et des lignes pour les groupes de lignes sont ajoutées. Les cellules de matrice affichent des valeurs d'agrégation limitées à l'intersection des groupes de lignes et de colonnes auxquels la cellule appartient. Par exemple, si votre matrice a un groupe de lignes (Category) et deux groupes de colonnes (Territory et Year) qui affichent la somme des ventes, le rapport affiche deux cellules avec les sommes des ventes pour chaque valeur dans le groupe Category. L'étendue des cellules au niveau des deux intersections est : Category et Territory, Category et Year. La matrice peut inclure des groupes imbriqués et adjacents. Les groupes imbriqués ont une relation parent-enfant et les groupes adjacents ont une relation d'égal à égal. Vous pouvez ajouter des sous-totaux pour tous les niveaux de groupes de lignes et de colonnes imbriqués dans la matrice.  
+ Vous pouvez regrouper des données en fonction de plusieurs champs ou expressions dans des groupes de lignes et de colonnes. Au moment de l'exécution, lorsque les régions de données et données de rapport sont combinées, une matrice se développe horizontalement et verticalement sur la page à mesure que des colonnes pour les groupes de colonnes et des lignes pour les groupes de lignes sont ajoutées. Les cellules de matrice affichent des valeurs d'agrégation limitées à l'intersection des groupes de lignes et de colonnes auxquels la cellule appartient. Par exemple, si votre matrice a un groupe de lignes (Category) et deux groupes de colonnes (Territory et Year) qui affichent la somme des ventes, le rapport affiche deux cellules avec les sommes des ventes pour chaque valeur dans le groupe Category. L’étendue des cellules sont les deux intersections sont : Catégorie et secteur et catégorie et année. La matrice peut inclure des groupes imbriqués et adjacents. Les groupes imbriqués ont une relation parent-enfant et les groupes adjacents ont une relation d'égal à égal. Vous pouvez ajouter des sous-totaux pour tous les niveaux de groupes de lignes et de colonnes imbriqués dans la matrice.  
   
  Pour rendre les données de matrice plus lisibles et mettre en surbrillance les données que vous souhaitez mettre en évidence, vous pouvez fusionner les cellules ou fractionner horizontalement et verticalement, et appliquer une mise en forme aux données et titres de table.  
   
@@ -133,11 +133,11 @@ ms.locfileid: "48220849"
   
 -   [Ajouter un groupe de détails &#40;Générateur de rapports et SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
   
--   [Ajouter un Total à un groupe ou d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+-   [Ajouter un total à un groupe ou à une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
 -   [Modifier un élément dans une cellule &#40;Générateur de rapports et SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
   
--   [Modifier la hauteur de ligne ou de la largeur de colonne &#40;Générateur de rapports et SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
+-   [Modifier la hauteur de ligne ou la largeur de colonne &#40;Générateur de rapports et SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
 -   [Insérer ou supprimer une colonne &#40;Générateur de rapports et SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
   
@@ -149,11 +149,11 @@ ms.locfileid: "48220849"
   
 -   [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [Afficher des en-têtes et pieds de page avec un groupe &#40;Générateur de rapports et SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+-   [Afficher des en-têtes et des pieds de page de groupe &#40;Générateur de rapports et SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
 -   [Créer un rapport en escalier &#40;Générateur de rapports et SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
   
--   [Ajouter, déplacer ou supprimer une Table, matrice ou liste &#40;Générateur de rapports et SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
+-   [Ajouter, déplacer ou supprimer une table, une matrice ou une liste &#40;Générateur de rapports et SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
 
   
@@ -166,16 +166,16 @@ ms.locfileid: "48220849"
  [Ajout de données à une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  Fournit des informations détaillées sur l'ajout de données de détail et groupées, de sous-totaux et totaux, et d'étiquettes à une région de données de tableau matriciel.  
   
- [Contrôle de l’affichage de la région de données de tableau matriciel sur une Page de rapport &#40;Générateur de rapports et SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
+ [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
  Décrit les propriétés d'une région de données de tableau matriciel que vous pouvez modifier pour changer l'affichage d'une région de données de tableau matriciel dans un rapport.  
   
- [Contrôle des en-têtes de colonne et de ligne &#40;Générateur de rapports et SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
+ [Contrôle des en-têtes de ligne et de colonne &#40;Générateur de rapports et SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
  Décrit comment contrôler les en-têtes de lignes et de colonnes lorsqu'une région de données de table, matrice ou liste peut s'étendre sur plusieurs pages horizontalement ou verticalement.  
   
  [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
  Décrit comment afficher des données récursives là où la relation entre parent et enfant est représentée par des champs dans le dataset.  
   
- [Présentation des groupes &#40;Générateur de rapports et SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
  Définit les groupes et le moment de les utiliser ainsi que les groupes disponibles pour les différentes régions de données de tableau matriciel.  
   
 

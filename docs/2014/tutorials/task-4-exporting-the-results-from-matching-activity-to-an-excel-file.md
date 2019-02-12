@@ -1,26 +1,23 @@
 ---
-title: 'Tâche 4 : Exporter les résultats à partir de l’activité vers un fichier Excel de correspondance | Microsoft Docs'
+title: 'Tâche 4 : Exportez les résultats à partir de l’activité vers un fichier Excel de correspondance | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: abded209f6367308c23e548962e1d4a5362791f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9424f2ba21fb4b93e359c8662974a82c62b4895
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127629"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020440"
 ---
-# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Tâche 4 (Facultatif) : Exportation des résultats de l'activité de mise en correspondance dans un fichier Excel
+# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Tâche 4 : Exportation des résultats de l'activité de mise en correspondance dans un fichier Excel
   Dans cette tâche, vous allez exporter les résultats de l'activité de mise en correspondance dans un fichier Excel.  
   
 1.  Dans le **exporter** page, sélectionnez **fichier Excel** pour le **Type de Destination**.  
@@ -33,11 +30,11 @@ ms.locfileid: "48127629"
   
 5.  Vérifiez que **enregistrement Pivot** est sélectionné pour le **règle de SURVIVANCE**. Lorsque vous sélectionnez cette option, l'enregistrement pivot de chaque cluster est choisi pour la sortie d'un cluster. Les autres options de la règle de survivance sont les suivantes :  
   
-    1.  **Enregistrement le plus complet :** l’enregistrement survivant est celui contenant le plus grand nombre de champs remplis.  
+    1.  **Enregistrement le plus complet :** l'enregistrement survivant est celui contenant le plus grand nombre de champs remplis.  
   
-    2.  **Enregistrement le plus long :** l’enregistrement survivant est celui contenant le plus grand nombre de termes dans les champs sources.  
+    2.  **Enregistrement le plus long :** l'enregistrement survivant est celui contenant le plus grand nombre de termes dans les champs sources.  
   
-    3.  **Enregistrement le plus complet et le plus long :** l’enregistrement survivant est celui contenant le plus grand nombre de champs remplis et a le plus grand nombre de termes dans chaque champ.  
+    3.  **Enregistrement plus complet et le plus long :** l'enregistrement survivant est celui avec le plus grand nombre de champs remplis, et le plus grand nombre de termes dans chaque champ.  
   
      ![Exporter les résultats de la Page de correspondance](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "exporter les résultats de la Page de correspondance")  
   
@@ -52,6 +49,6 @@ ms.locfileid: "48127629"
  À présent, les données des fournisseurs ont été nettoyées et mises en correspondance pour supprimer les doublons.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Leçon 4 : Stockage des données sur les fournisseurs dans MDS](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)  
+ [Leçon 4 : Stockage des données des fournisseurs dans MDS](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)  
   
   

@@ -1,26 +1,25 @@
 ---
-title: 'Création et l’interrogation des modèles d’exploration de données avec DMX : didacticiels (Analysis Services - Exploration de données) | Microsoft Docs'
+title: 'Création et l’interrogation des modèles d’exploration de données avec DMX : Didacticiels (Analysis Services - Exploration de données) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 145b81a7-c0c3-4ca3-bb32-0b482423b9a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4cc23d274fc086168f580031d9dd7f44b1afd05c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176989"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012520"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Création et interrogation de modèles d'exploration de données à l'aide du langage DMX : didacticiels (Analysis Services - Exploration de données)
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Création et l’interrogation des modèles d’exploration de données avec DMX : Didacticiels (Analysis Services - Exploration de données)
   Une fois que vous avez créé une solution d’exploration de données à l’aide de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez créer des requêtes sur les modèles d’exploration de données pour prévoir des tendances, extraire des modèles dans les données et mesurer la précision des modèles d’exploration de données.  
   
  Les didacticiels pas à pas dans la liste suivante vous aidera à apprendre à générer et exécuter des requêtes d’exploration de données à l’aide de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] afin que vous pouvez obtenir le meilleur parti de vos données.  
@@ -42,7 +41,7 @@ ms.locfileid: "48176989"
 ## <a name="reference"></a>Référence  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Data Mining Extensions &#40;DMX&#41; référence](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Informations de référence sur le langage DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>Sections connexes  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48176989"
   
 ## <a name="see-also"></a>Voir aussi  
  [Solutions d’exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
- [Outils d’exploration de données](../../2014/analysis-services/data-mining/data-mining-tools.md)   
+ [Outils d'exploration de données](../../2014/analysis-services/data-mining/data-mining-tools.md)   
  [Projets d’exploration de données](../../2014/analysis-services/data-mining/data-mining-projects.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d0d844f9f58b22a2982c19ca0347bd75f41da1a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5967303b875ed7bc2ddaba8d1c77c169d0025d04
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106903"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015650"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>Fonction CountRows (Générateur de rapports et SSRS)
   Retourne le nombre de lignes dans l'étendue spécifiée, y compris celles contenant des valeurs Null.  
@@ -36,13 +36,13 @@ CountRows(scope, recursive)
  (`String`) Nom d'un dataset, d'un groupe ou d'une région de données qui contient les éléments de rapport à compter.  
   
  *récursifs*  
- (**Type énuméré**) Facultatif. `Simple` (valeur par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
+ (**Type énuméré**) Facultatif. `Simple` (par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
   
 ## <a name="return-type"></a>Type de retour  
  Retourne un `Integer`.  
   
 ## <a name="remarks"></a>Notes  
- `CountRows` compte toutes les lignes dans la portée spécifiée, y compris les lignes qui ont des valeurs null.  
+ `CountRows` compte toutes les lignes dans l'étendue spécifiée, y compris celles contenant des valeurs Null.  
   
  La valeur du paramètre *scope* ne peut pas être une expression et doit faire référence à l'étendue actuelle ou à une étendue contenante.  
   
@@ -58,9 +58,9 @@ CountRows(scope, recursive)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

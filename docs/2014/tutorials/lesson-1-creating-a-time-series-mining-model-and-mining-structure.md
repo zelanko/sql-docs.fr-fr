@@ -1,24 +1,23 @@
 ---
-title: 'Leçon 1 : Création d’une série chronologique de modèle d’exploration de données et la Structure d’exploration de données | Microsoft Docs'
+title: 'Leçon 1 : Création d’une série chronologique de modèle d’exploration de données et la Structure d’exploration de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b201f2b8-9ab5-425b-9ff3-fe321a60a7b7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5ea66ce1ef677e150a93fbd873c8b97f939e19e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174019"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014160"
 ---
-# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Leçon 1 : création d'une structure d'exploration de données et de modèle d'exploration de données de série chronologique
+# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Leçon 1 : Création d’une série chronologique de modèle d’exploration de données et la Structure d’exploration de données
   Dans cette leçon, vous allez créer un modèle d'exploration de données qui vous permet de prédire des valeurs dans le temps à partir de données historiques. Lorsque vous créez le modèle, la structure sous-jacente est générée automatiquement et peut servir de base pour les modèles d'exploration de données supplémentaires.  
   
  Cette leçon suppose que vous connaissez les modèles de prévision et les spécifications de l'algorithme MTS (Microsoft Time Series). Pour plus d’informations, consultez [Algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  
@@ -80,9 +79,9 @@ CREATE MINING MODEL [Mining Model Name]
   
 #### <a name="to-create-a-new-dmx-query-in-sql-server-management-studio"></a>Pour créer une requête DMX dans SQL Server Management Studio  
   
-1.  Ouvrir [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Ouvrez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  Dans le **se connecter au serveur** boîte de dialogue pour **type de serveur**, sélectionnez **Analysis Services**. Dans **nom du serveur**, type `LocalHost`, ou le nom de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous souhaitez vous connecter à pour cette leçon. Cliquez sur **Se connecter**.  
+2.  Dans le **se connecter au serveur** boîte de dialogue pour **type de serveur**, sélectionnez **Analysis Services**. Dans **nom du serveur**, type `LocalHost`, ou le nom de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous souhaitez vous connecter à pour cette leçon. Cliquer sur **Se connecter**.  
   
 3.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
@@ -196,7 +195,7 @@ CREATE MINING MODEL [Mining Model Name]
  Dans la leçon suivante, vous allez ajouter un modèle d’exploration de données pour le **Forecasting_MIXED** structure d’exploration de données que vous venez de créer.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Ajout de modèles d’exploration de données à la structure d’exploration de données de série chronologique](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [Leçon 2 : Ajout de modèles d’exploration de données à la Structure d’exploration de données de série chronologique](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contenu du modèle pour les modèles de série chronologique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   

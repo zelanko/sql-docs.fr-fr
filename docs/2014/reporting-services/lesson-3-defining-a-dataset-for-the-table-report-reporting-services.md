@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 33a91c27f78e3bbf2dfec3aeb71f2f2230c9376d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 3f57ec59753e7539107c652d60f7a00959f95cbb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528207"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009671"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Leçon 3 : Définition d’un Dataset pour le rapport de Table (Reporting Services)
   Après avoir défini une source de données, vous devez spécifier un dataset. Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], les données utilisées par les rapports sont contenues dans des *datasets*. Les datasets contiennent un pointeur qui renvoient à la source des données, la requête que doit utiliser le rapport ainsi que des champs et variables calculées.  

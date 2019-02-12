@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0b9e394929aa78e301e0431d25781626c3ba79dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4edd99567611754f8208ac3271951b9e566e5613
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112766"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040380"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Générer une requête dans le concepteur de requêtes relationnelles (Générateur de rapports et SSRS)
   Un concepteur de requêtes vous aide à spécifier les données à récupérer à partir d'une source de données externe pour un dataset de rapport. Vous utilisez un concepteur de requêtes lorsque vous générez une requête dans un Assistant ou créez une requête de dataset.  

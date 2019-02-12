@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e0c9e553ebff35c865adabfeea164a56b5cffce0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 859d4ae6557300582b866d6dcd6d0cd3ed124d2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075969"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014980"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>ajout d'un instantané à un historique de rapport (Gestionnaire de rapports)
   L'historique de rapport est un ensemble d'instantanés de rapport que vous créez au fil du temps. Un instantané de rapport est un rapport contenant des informations de mise en page et des résultats de requêtes récupérés à un moment précis. Contrairement aux rapports à la demande, qui récupèrent les résultats des requêtes récentes lorsque vous les sélectionnez, les instantanés de rapport sont traités par planification, puis enregistrés sur un serveur de rapports. Lorsque vous sélectionnez un instantané de rapport pour le visualiser, le serveur de rapports récupère le rapport stocké dans la base de données du serveur de rapports, puis affiche les données et la mise en page telles qu'elles étaient lors de la création de l'instantané.  
@@ -38,7 +38,7 @@ ms.locfileid: "48075969"
 3.  Cliquez sur **Nouvel instantané**. Un instantané est créé dans la colonne **Lors de l’exécution** .  
   
     > [!NOTE]  
-    >  Pour effectuer cette opération, l’historique de rapport doit être configuré par l’administrateur pour **Autoriser la création manuelle de l’historique**. Pour plus d’informations, consultez [limiter l’historique de rapport &#40;le Gestionnaire de rapports&#41;](../reports/limit-report-history-report-manager.md).  
+    >  Pour effectuer cette opération, l’historique de rapport doit être configuré par l’administrateur pour **Autoriser la création manuelle de l’historique**. Pour plus d’informations, consultez [Limiter l’historique de rapport &#40;Gestionnaire de rapports&#41;](../reports/limit-report-history-report-manager.md).  
   
 4.  Cliquez sur **Appliquer**.  
   
@@ -73,8 +73,8 @@ ms.locfileid: "48075969"
 5.  Cliquez sur **Appliquer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer les propriétés d’exécution d’un rapport &#40;le Gestionnaire de rapports&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Ouvrir et fermer un rapport &#40;le Gestionnaire de rapports&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Configurer les propriétés d’exécution d’un rapport &#40;Gestionnaire de rapports&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [Ouvrir et fermer un rapport &#40;Gestionnaire de rapports&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [Limiter l’historique de rapport &#40;Gestionnaire de rapports&#41;](../reports/limit-report-history-report-manager.md)   
  [Planifications](../subscriptions/schedules.md)   
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)  

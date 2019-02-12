@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 62923987b3214a319268291b1349cb32f5bd0bd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1350c25450dfae5ed02b9761ed79182ccac817d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147455"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021588"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Fonction Multilookup (Générateur de rapports et SSRS)
   Retourne le jeu de valeurs de première correspondance pour le jeu de noms spécifié d'un dataset contenant des paires nom/valeur.  
@@ -33,7 +33,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 #### <a name="parameters"></a>Paramètres  
  *source_expression*  
- (`VariantArray`) Une expression qui est évaluée dans l’étendue actuelle et qui spécifie le jeu de noms ou de clés à rechercher. Par exemple, pour un paramètre à valeurs multiples, `=Parameters!IDs.value`.  
+ (`VariantArray`) Expression évaluée dans l'étendue actuelle et qui spécifie le jeu de noms ou de clés à rechercher. Par exemple, pour un paramètre à valeurs multiples, `=Parameters!IDs.value`.  
   
  *destination_expression*  
  (`Variant`) Expression évaluée pour chaque ligne d'un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple, `=Fields!ID.Value`.  
@@ -42,15 +42,15 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (`Variant`) Une expression qui est évaluée pour la ligne dans le jeu de données où *source_expression* = *destination_expression*, et qui spécifie la valeur à récupérer. Par exemple, `=Fields!Name.Value`.  
   
  *dataset*  
- Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « Couleurs ».  
+ Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « Couleurs ».  
   
 ## <a name="return"></a>Return  
- Retourne un `VariantArray`, ou `Nothing` s’il n’existe aucune correspondance.  
+ Retourne une valeur `VariantArray`, ou `Nothing` si aucune correspondance n'est trouvée.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez `Multilookup` pour récupérer un ensemble de valeurs à partir d’un jeu de données pour les paires nom-valeur où chaque paire possède une relation 1 à 1. `MultiLookup` est l’équivalent de l’appel `Lookup` pour un ensemble de noms ou de clés. Par exemple, pour un paramètre à valeurs multiples qui repose sur les identificateurs de clé primaire, vous pouvez utiliser `Multilookup` dans une expression dans une zone de texte dans une table pour récupérer les valeurs associées à partir d’un jeu de données qui n’est pas lié au paramètre ou à la table.  
+ Utilisez `Multilookup` pour récupérer un ensemble de valeurs d'un dataset pour les paires nom-valeur lorsqu'il existe une relation un-à-un pour chaque paire. `MultiLookup` équivaut à appeler `Lookup` pour un ensemble de noms ou de clés. Par exemple, pour un paramètre à valeurs multiples basé sur des identificateurs de clé primaire,vous pouvez utiliser `Multilookup` dans une expression d'une zone de texte d'une table pour récupérer des valeurs associées d'un dataset qui n'est pas lié au paramètre ou à la table.  
   
- `Multilookup` effectue les opérations suivantes :  
+ La fonction `Multilookup` effectue les actions suivantes :  
   
 -   Elle évalue l'expression source dans l'étendue active et génère un tableau d'objets de type Variant.  
   
@@ -62,7 +62,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Les restrictions suivantes s'appliquent :  
   
--   `Multilookup` est évalué après que toutes les expressions de filtre sont appliquées.  
+-   `Multilookup` est évalué après que toutes les expressions de filtre ont été appliquées.  
   
 -   Un seul niveau de recherche est pris en charge. Une expression source, destination ou de résultat ne peut pas inclure de référence à une fonction de recherche.  
   
@@ -72,7 +72,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   `Multilookup` ne peut pas être utilisé comme expression pour les éléments de rapport suivants :  
   
-    -   des chaînes de connexion dynamiques pour une source de données ;  
+    -   des chaînes de connexion dynamiques pour une source de données ;  
   
     -   des champs calculés dans un dataset ;  
   
@@ -91,14 +91,14 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Le dataset CategoryNames contient l'identificateur et le nom de catégorie, comme indiqué dans le tableau ci-dessous.  
   
-|ID|Nom   |  
+|ID|Créer une vue d’abonnement|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
-|4|Components|  
+|4|Composants|  
   
- Pour rechercher les noms correspondant à la liste d'identificateurs, utilisez `Multilookup`. Vous devez tout d’abord fractionner la liste en un tableau de chaînes, appeler `Multilookup` pour récupérer les noms de catégorie, puis concaténer les résultats dans une chaîne.  
+ Pour rechercher les noms correspondant à la liste d'identificateurs, utilisez `Multilookup`. Vous devez tout d'abord fractionner la liste en un tableau de chaînes, appeler `Multilookup` pour récupérer les noms des catégories, puis concaténer les résultats en une chaîne.  
   
  L'expression suivante, lorsqu'elle est placée dans une zone de texte dans une région de données liée au dataset Catégorie, affiche « Bicyclettes, Composants, Bicyclettes, Accessoires » :  
   
@@ -111,7 +111,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="example"></a>Exemple  
  Supposons qu' un dataset CouleursProduits contient un champ d'identificateur de couleur IDCouleur et un champ de valeur de couleur Couleur, comme indiqué dans le tableau ci-dessous.  
   
-|ColorID|Couleur|  
+|ColorID|Color|  
 |-------------|-----------|  
 |1|Rouge|  
 |2|Bleu|  
@@ -124,9 +124,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

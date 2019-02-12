@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7903489a3fc34900ed8f717cc5a292f9af686af0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 45b7973dd7711f09b6bf187f7c2798e44e91c375
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076979"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017951"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Personnaliser des feuilles de style pour la visionneuse HTML et pour le Gestionnaire de rapports
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit de style en cascade par défaut des fichiers de feuilles (.css) qui définissent des styles pour le **rapport** barre d’outils dans la visionneuse HTML et pour le Gestionnaire de rapports. Si vous êtes un développeur Web expérimenté dans la création de feuilles de style en cascade, vous pouvez modifier les styles par défaut à vos propres risques pour changer les couleurs, les polices et la disposition de la barre d'outils ou du Gestionnaire de rapports. Ni les feuilles de style par défaut, ni les instructions pour modifier ces feuilles de style ne sont documentées dans cette version.  
@@ -31,7 +31,7 @@ ms.locfileid: "48076979"
 >  Si vous souhaitez utiliser des styles de rapport prédéfinis, utilisez l'Assistant Rapport pour créer un rapport. L'Assistant Rapport fournit différents thèmes que vous pouvez utiliser pour créer des rapports stylisés qui utilisent différentes combinaisons de couleurs et de polices. Les modèles de style qui définissent les thèmes d'un rapport peuvent être modifiés.  
   
 ## <a name="reporting-services-style-sheets"></a>Feuilles de style de Reporting Services  
- Le tableau suivant décrit les fichiers de feuille (.css) de style qui sont utilisés dans un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installation.  
+ Le tableau suivant décrit les fichiers de feuilles de style (.css) qui sont utilisés dans une installation [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 |Feuille de style|Description|  
 |-----------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "48076979"
 |ReportingServices.css|Définit des styles pour le Gestionnaire de rapports.|  
   
 > [!NOTE]  
->  Les feuilles de style suivantes sont utilisées pour la documentation en ligne du Gestionnaire de rapports et ne doivent jamais être modifiées : Sql.css et Mailto.css. D'autres feuilles de style définissent des styles pour les rapports et le Gestionnaire de rapports qui s'ouvrent dans des composants WebPart SharePoint. Ces feuilles de styles sont Rswebparts.css, Sp_full.css et Sp_small.css. La modification de ces feuilles de style n'est pas recommandée. Pour plus d’informations sur la façon dont les composants WebPart sont utilisées, consultez [afficher et Explorer Native Mode rapports à l’aide de composants WebPart SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
+>  Les feuilles de style suivantes sont utilisées pour la documentation en ligne du Gestionnaire de rapports et ne doivent jamais être modifiées : SQL.CSS et Mailto.css. D'autres feuilles de style définissent des styles pour les rapports et le Gestionnaire de rapports qui s'ouvrent dans des composants WebPart SharePoint. Ces feuilles de styles sont Rswebparts.css, Sp_full.css et Sp_small.css. La modification de ces feuilles de style n'est pas recommandée. Pour plus d’informations sur la façon dont les composants WebPart sont utilisées, consultez [afficher et Explorer Native Mode rapports à l’aide de composants WebPart SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>Configuration de Reporting Services pour l'utilisation d'une feuille de style personnalisée  
  La feuille de style doit être un fichier de feuille de style en cascade (.css) valide et doit se trouver dans le dossier Styles. Par défaut, le dossier Styles se trouve dans \< *lecteur*> : \Program Files\Microsoft SQL Server\MSSQL. *n*\Reporting Services\ReportServer\Styles.  
@@ -73,7 +73,7 @@ http://localhost/reportserver?/AdventureWorksSampleReports/Product+Line+Sales&rs
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Visionneuse HTML et la barre d’outils rapport](html-viewer-and-the-report-toolbar.md)   
  [Fichier de configuration RSReportServer](report-server/rsreportserver-config-configuration-file.md)  
   

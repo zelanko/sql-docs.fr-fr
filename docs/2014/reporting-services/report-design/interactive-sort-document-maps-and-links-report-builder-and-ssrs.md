@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 68e73b7fc2d7b1982724da4040c4912473f30d78
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 62ed0c324711ab38460c59ecc0e74291a1080d2d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352574"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017730"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Tri interactif, Explorateurs de documents et liens (Générateur de rapports et SSRS)
   Dans les environnements Web, vous pouvez ajouter un certain nombre de fonctionnalités qui permettent à vos utilisateurs d'intervenir sur les rapports. Vos utilisateurs peuvent modifier l'ordre de tri des valeurs dans votre rapport, afficher ou masquer des éléments du rapport ou cliquer sur les liens pointant vers d'autres rapports ou des pages Web. Vous pouvez également ajouter une table des matières ou un Explorateur de documents. Vos utilisateurs de rapport peuvent cliquer sur des éléments de la table des matières ou de l'Explorateur de documents pour accéder instantanément aux sections voulues du rapport.  

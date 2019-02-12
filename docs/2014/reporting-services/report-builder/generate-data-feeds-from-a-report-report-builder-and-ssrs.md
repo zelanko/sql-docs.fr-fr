@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 876fba07af1e7f82c38d4142914c1aded10117e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 20787347abe92f83ea2163f5cd297804153d364d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134139"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017030"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Générer des flux de données à partir d'un rapport (Générateur de rapports et SSRS)
-  Vous pouvez générer des flux de données conformes à Atom à partir de rapports et ensuite utiliser les flux de données dans les applications, telles que la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] client, ce qui peut utiliser des sources de données.  
+  Vous pouvez générer des flux de données conformes à Atom à partir de rapports, puis utiliser ces flux de données dans des applications, par exemple le client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , qui est capable d'utiliser des flux de données.  
   
  L'extension de rendu Atom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] génère un document de service Atom qui répertorie les flux de données disponibles d'un rapport. Le document répertorie au moins un flux de données pour chaque région de données du rapport. Selon le type de région de données et les données affichées par cette région, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut générer plusieurs flux de données à partir d'une région de données.  
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Report Data pane
 ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 81ab7f53f546c3b048551a0f3acd3866c29a8eb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b73080811e001b67ea52e3cbc9572eb014162e68
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179379"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010350"
 ---
 # <a name="report-data-pane-report-builder"></a>Volet des données de rapport (Générateur de rapports)
   Utilisez le volet **Données du rapport** pour consulter les paramètres, sources de données, datasets, collections de champs et images définis dans votre rapport. Le volet des données de rapportpropose une vue hiérarchique des éléments qui représentent les données de votre rapport. Les nœuds du niveau supérieur représentent les champs prédéfinis, paramètres et images, ainsi que les références de sources de données. Développez chaque nœud pour en afficher les éléments de données. Par exemple, lorsque vous développez un nœud de source de données, les datasets définis pour cette source de données apparaissent. Lorsque vous développez un dataset, sa collection de champs apparaît. Faites glisser des éléments vers l'aire de conception de rapport ou vers le volet Regroupement pour lier les données aux éléments de rapport sélectionnés dans la page du rapport. Pour plus d’informations, consultez [Mode Création de rapport &#40;Générateur de rapports&#41;](report-builder/report-design-view-report-builder.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "48179379"
  Représente des champs communément utilisés dans un rapport, tels que le nom du rapport ou le numéro de page. Pour plus d’informations, consultez [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md).  
   
  **Paramètres**  
- Représente la collection des paramètres de rapport, chacun pouvant correspondre à une valeur unique ou à plusieurs valeurs. Pour plus d’informations, consultez [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md).  
+ Représente la collection des paramètres de rapport, chacun pouvant correspondre à une valeur unique ou à plusieurs valeurs. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-design/report-parameters-report-builder-and-report-designer.md).  
   
  **Images**  
  Représente l'ensemble d'images utilisé dans le rapport. Pour plus d’informations, consultez [Images &#40;Générateur de rapports et SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  

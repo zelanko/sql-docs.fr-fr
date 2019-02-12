@@ -1,26 +1,23 @@
 ---
-title: 'Tâche 3 : Création et exécution d’un projet de qualité des données pour la correspondance | Microsoft Docs'
+title: 'Tâche 3 : Création et exécution d’un projet de qualité des données pour la correspondance | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00f4c86dd09dd9b88959415459151d4cef518d57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abca2dcf68472884eb3c1e42f0ff9c14004098c5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099529"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035854"
 ---
-# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tâche 3 : Création et exécution d'un projet de qualité des données pour la mise en correspondance
+# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tâche 3 : Création et exécution d'un projet de qualité des données pour la mise en correspondance
   Dans cette tâche, vous allez créer un projet de qualité des données pour l'activité de correspondance, puis exécuter le processus de mise en correspondance sur les données des fournisseurs nettoyées pour supprimer les doublons.  
   
 1.  Dans la page principale de **Client DQS**, cliquez sur **nouveau projet de qualité des données**.  
@@ -33,7 +30,7 @@ ms.locfileid: "48099529"
   
      ![Nouveau projet de qualité des données - correspondance sélectionnée](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "nouveau projet de qualité des données - correspondance sélectionnée")  
   
-5.  Cliquez sur **Suivant**.  
+5.  Cliquer sur **Suivant**.  
   
 6.  Dans la page **Mapper** , sélectionnez **Fichier Excel** pour **Source de données**.  
   
@@ -50,6 +47,6 @@ ms.locfileid: "48099529"
 12. Cliquez sur **suivant** pour basculer vers le **exporter** page.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 4 : Exportation des résultats de l’activité de mise en correspondance dans un fichier Excel](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
+ [Tâche 4 : Exportez les résultats à partir de l’activité vers un fichier Excel de correspondance](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
   
   

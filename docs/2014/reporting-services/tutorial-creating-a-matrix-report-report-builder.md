@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 45e488f189cf9068531b927b1b28bfde621555da
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353394"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033120"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Didacticiel : Création d’un rapport de matrice (Générateur de rapports)
   Ce didacticiel vous apprend comment créer un rapport de matrice de base reposant sur des exemples de données de vente. La matrice comporte des groupes de lignes et de colonnes imbriqués, ainsi qu'un groupe de colonnes adjacent. Vous apprendrez également comment mettre en forme les colonnes et faire pivoter le texte. L'illustration suivante montre un rapport similaire à celui que vous allez créer.  

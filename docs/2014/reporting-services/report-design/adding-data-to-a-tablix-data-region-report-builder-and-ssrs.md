@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b8a4d21b2db6673fda184bdd7ed391dd2af8b48d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ce182fda15373e15baffcda73cc777c2cf154065
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105869"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011120"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Ajout de données à une région de données de tableau matriciel (Générateur de rapports et SSRS)
   Pour afficher les données d'un dataset de rapport dans une table ou une matrice, spécifiez dans chaque cellule de données le nom d'un champ de dataset à afficher. Vous pouvez afficher des données de détail ou des données groupées. Si vous ajoutez des groupes à une table ou à une matrice, les lignes et les colonnes des valeurs de groupe et les données de groupe sont automatiquement ajoutées. Vous pouvez ensuite ajouter des totaux et des sous-totaux pour vos données.  
@@ -49,7 +49,7 @@ ms.locfileid: "48105869"
  Pour ajouter des étiquettes pour un groupe ou pour la région de données, ajoutez une ligne ou une colonne à l'extérieur du groupe que vous souhaitez étiqueter. Les lignes et les colonnes d'étiquette ressemblent aux lignes et aux colonnes que vous ajoutez pour afficher des totaux. Pour plus d’informations, consultez [Insérer ou supprimer une ligne &#40;Générateur de rapports et SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md) ou [Insérer ou supprimer une colonne &#40;Générateur de rapports et SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>Ajout d'une région de données de tableau matriciel existante à partir d'un autre rapport  
- Vous pouvez copier une région de données d'un autre rapport et la coller dans un nouveau rapport ou un rapport existant. Une fois la région de données collée, vous devez vérifier que le dataset utilisé par la région de données est défini et que les champs du dataset portent les mêmes noms et possèdent les mêmes types de données que dans le rapport d'origine. Vous ne pouvez pas copier de datasets d'un rapport vers un autre, mais si vos rapports utilisent des sources de données partagées, vous pouvez dupliquer rapidement le dataset dans l'autre rapport. Vous pouvez également importer le texte des requêtes qui récupèrent les données du dataset, ce qui facilite la duplication des requêtes dans les rapports. Pour plus d’informations, consultez [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Vous pouvez copier une région de données d'un autre rapport et la coller dans un nouveau rapport ou un rapport existant. Une fois la région de données collée, vous devez vérifier que le dataset utilisé par la région de données est défini et que les champs du dataset portent les mêmes noms et possèdent les mêmes types de données que dans le rapport d'origine. Vous ne pouvez pas copier de datasets d'un rapport vers un autre, mais si vos rapports utilisent des sources de données partagées, vous pouvez dupliquer rapidement le dataset dans l'autre rapport. Vous pouvez également importer le texte des requêtes qui récupèrent les données du dataset, ce qui facilite la duplication des requêtes dans les rapports. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   

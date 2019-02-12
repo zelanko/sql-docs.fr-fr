@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eea42bfc7b02c4964f34ebc6fe5f4b067a33d21e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1905dbe53d5c869c25fcf6f9b07b46bf48dcaf98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084539"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013246"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendu au format HTML (Générateur de rapports et SSRS)
   L'extension de rendu HTML effectue le rendu d'un rapport au format HTML. Elle peut également produire des pages HTML entièrement formées ou des fragment HTML à incorporer dans d'autres pages HTML. La sortie HTML est générée avec l'encodage UTF-8.  
   
  L'extension de rendu HTML représente l'extension de rendu par défaut pour les rapports qui s'affichent dans un navigateur, y compris lors d'une exécution dans le Gestionnaire de rapports.  
   
- L'extension de rendu HTML représente l'extension de rendu par défaut pour les rapports qui s'affichent dans un navigateur, y compris lors d'une exécution dans le Gestionnaire de rapports. L'extension de rendu HTML peut rendre un document HTML complet ou un fragment. Si le code HTML est un fragment, le `HEAD`, `HTML`, et `BODY` du document HTML sont supprimées. Seul le contenu de la balise `BODY` est rendu. Ceci est utile pour incorporer le code HTML à celui généré par une autre application.  
+ L'extension de rendu HTML représente l'extension de rendu par défaut pour les rapports qui s'affichent dans un navigateur, y compris lors d'une exécution dans le Gestionnaire de rapports. L'extension de rendu HTML peut rendre un document HTML complet ou un fragment. Dans le cas d'un fragment HTML, les balises `HEAD`, `HTML` et `BODY` du document HTML sont supprimées. Seul le contenu de la balise `BODY` est rendu. Ceci est utile pour incorporer le code HTML à celui généré par une autre application.  
   
  Dans certains scénarios, les paramètres de rapport peuvent être utilisés pour lancer des attaques par injection de script lors du rendu de rapports en HTML. Pour plus d’informations sur la sécurisation des rapports, consultez [Sécurisation des rapports et des ressources](../security/secure-reports-and-resources.md).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48084539"
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

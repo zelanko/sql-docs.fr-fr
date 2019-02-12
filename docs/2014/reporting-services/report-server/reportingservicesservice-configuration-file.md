@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2029cd6fd95916b71ee673713978a1fe3a1ccd36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 15bac4bb872e1fb3fc42fb62cf355f53358442b9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082539"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014570"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>fichier de configuration ReportingServicesService
   Le fichier ReportingServicesService.exe.config contient les paramètres de configuration de la trace.  
@@ -29,7 +29,7 @@ ms.locfileid: "48082539"
  Ce fichier est situé dans le dossier \Reporting Services\Report Server\Bin.  
   
 ## <a name="editing-guidelines"></a>Instructions de modification  
- Vous pouvez modifier ce fichier pour renommer le fichier journal ou pour augmenter ou réduire les niveaux de trace. Ne modifiez aucun autre paramètre. Pour obtenir des instructions, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md). Pour plus d’informations sur les journaux de suivi, consultez [Report Server Service Trace Log](report-server-service-trace-log.md).  
+ Vous pouvez modifier ce fichier pour renommer le fichier journal ou pour augmenter ou réduire les niveaux de trace. Ne modifiez aucun autre paramètre. Pour obtenir des instructions, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md). Pour plus d’informations sur les journaux des traces, consultez [Journal des traces du service Report Server](report-server-service-trace-log.md).  
   
 ## <a name="example-configuration"></a>Exemple de configuration  
  L'exemple suivant illustre les paramètres et valeurs par défaut du fichier ReportingServicesService.exe.config.  
@@ -77,7 +77,7 @@ ms.locfileid: "48082539"
 |**RStrace**|Spécifie les espaces de noms utilisés pour les erreurs et la trace.|  
 |**DefaultTraceSwitch**|Spécifie le niveau des informations consignées dans le journal de trace de ReportServerService. Chaque niveau comprend les informations signalées par tous les niveaux inférieurs. La désactivation de la trace n'est pas recommandée. Les valeurs valides sont les suivantes :<br /><br /> 0= Trace désactivée<br /><br /> 1= Exceptions et redémarrages<br /><br /> 2= Exceptions, redémarrages, avertissements<br /><br /> 3= Exceptions, redémarrages, avertissements, messages d'état (par défaut)<br /><br /> 4= Mode commenté|  
 |**FileName**|Spécifie la première partie du nom du fichier journal. La valeur spécifiée par `Prefix` complète le reste du nom. Le nom est ReportServerService_ par défaut.|  
-|**FileSizeLimitMb**|Spécifie une taille maximale pour le journal de trace. La taille du fichier est exprimée en mégaoctets. Les valeurs valides vont de 0 à un entier maximal. La valeur par défaut est 32.|  
+|**FileSizeLimitMb**|Spécifie une taille maximale pour le journal de trace. La taille du fichier est exprimée en mégaoctets. Les valeurs valides vont de 0 à un entier maximal. La valeur par défaut est 32.|  
 |**KeepFilesForDays**|Spécifie le nombre de jours après lequel supprimer un journal de trace. Les valeurs valides vont de 0 à un entier maximal. La valeur par défaut est 14.|  
 |`Prefix`|Spécifie une valeur générée qui distingue une instance de journal d'une autre. Par défaut, des valeurs d'horodatage sont ajoutées aux noms des journaux de trace. Cette valeur est définie sur « tid, time ». Ne modifiez pas ce paramètre.|  
 |**TraceListeners**|Spécifie une cible de sortie du contenu du journal de trace. Vous pouvez spécifier plusieurs cibles ; dans ce cas, utilisez la virgule comme séparateur. Les valeurs valides sont les suivantes :<br /><br /> DebugWindow (par défaut)<br /><br /> File (par défaut)<br /><br /> StdOut|  
@@ -87,6 +87,6 @@ ms.locfileid: "48082539"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichiers de configuration de Reporting Services](reporting-services-configuration-files.md)   
- [Journal de suivi de service du serveur de rapports](report-server-service-trace-log.md)  
+ [Journal des traces du service Report Server](report-server-service-trace-log.md)  
   
   

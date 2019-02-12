@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: af0db1ac3d03fa03ea7bb3267656597d164c5302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f92c0886bf3e1e5d5022cde96ad39671588225d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222207"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019340"
 ---
 # <a name="server-properties-general-page"></a>Propriétés du serveur (page Général)
   Utilisez cette page pour afficher ou modifier le titre utilisé dans le Gestionnaire de rapports, activer ou désactiver Mes rapports, sélectionner une définition de rôle pour la sécurité de Mes rapports, et activer ou désactiver le contrôle d'impression du client.  
@@ -50,7 +50,7 @@ ms.locfileid: "48222207"
  Spécifiez une définition de rôle à utiliser pour la sécurité de Mes rapports. La définition de rôle identifie l'ensemble des tâches qui sont prises en charge dans chaque dossier Mes rapports.  
   
  **Activer le téléchargement pour le contrôle d’impression client ActiveX**  
- Définit le `EnableClientPrinting` propriété système du serveur de rapports. Si vous activez l'impression côté client, les utilisateurs qui disposent d'autorisations d'administrateur local peuvent télécharger un contrôle ActiveX signé pour imprimer les rapports HTML. Pour plus d’informations, consultez [activer et désactiver l’impression côté Client pour Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Définit la propriété système du serveur de rapports `EnableClientPrinting`. Si vous activez l'impression côté client, les utilisateurs qui disposent d'autorisations d'administrateur local peuvent télécharger un contrôle ActiveX signé pour imprimer les rapports HTML. Pour plus d’informations, consultez [Activer et désactiver l’impression côté client pour Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

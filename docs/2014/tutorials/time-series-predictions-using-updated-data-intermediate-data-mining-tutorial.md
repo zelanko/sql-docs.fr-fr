@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: af73681d-ce1c-4b6e-b195-6df3d2fb5275
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74bc6afe0c5c3bddd4b36ebe844ae963da8fbe28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2017defaba74071b1a12bee14a5d8907e4c71cda
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185489"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041800"
 ---
 # <a name="time-series-predictions-using-updated-data-intermediate-data-mining-tutorial"></a>Prédictions de série chronologique à l'aide des données mises à jour (Didacticiel intermédiaire sur l'exploration de données)
     
@@ -70,7 +69,7 @@ ms.locfileid: "48185489"
   
     4.  Faites glisser le champ Quantité à partir de la **Mining Model** volet dans le **critères/Argument** colonne.  
   
-    5.  Dans le **critères/Argument** colonne, après le nom de champ, tapez le texte suivant : **5, EXTEND_MODEL_CASES**  
+    5.  Dans le **critères/Argument** colonne, après le nom de champ, tapez le texte suivant :  **5,EXTEND_MODEL_CASES**  
   
          Le texte complet de le **critères/Argument** zone de texte doit être comme suit : `[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48185489"
  [À l’aide de données de remplacement des prédictions de série chronologique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence technique de Microsoft Time Series algorithme](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Contenu du modèle pour les modèles de série chronologique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Références techniques relatives à l'algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

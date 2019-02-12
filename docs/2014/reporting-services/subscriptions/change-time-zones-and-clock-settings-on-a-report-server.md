@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 79df62b8215c242c7f2af2032bdb7671281178fd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 961b9bbbbaf47e716f887a1a0b3904f545357ecb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362331"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017744"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>Modifier les fuseaux horaires et les paramètres d'horloge sur un serveur de rapports
   Un serveur de rapports utilise toujours l'heure locale de l'ordinateur sur lequel il est installé. Vous ne pouvez pas le configurer de manière à utiliser un autre fuseau horaire. Si une application cliente pointe vers un serveur de rapports se trouvant dans un autre fuseau horaire, c'est le fuseau horaire du serveur de rapports qui sera utilisé pour effectuer une opération planifiée. Dans les pages de gestion SharePoint et le Gestionnaire de rapports, le fuseau horaire est indiqué sur chaque page de planification de sorte que vous savez exactement à quel moment doit se produire une opération planifiée. Par exemple, la page consacrée à la création de planifications personnalisées indiquera « Les heures sont exprimées en (UTC-08:00) Heure du Pacifique (États-Unis et Canada). »  

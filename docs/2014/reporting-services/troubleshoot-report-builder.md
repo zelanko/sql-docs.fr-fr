@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 61965f9d07ebef7d3f30623df318125e67587890
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 22eb90e4fc162d2805f760e8f0b3152c3791111f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349396"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017690"
 ---
 # <a name="troubleshoot-report-builder"></a>Résolution des problèmes liés au Générateur de rapports
   Le Générateur de rapports est un outil de création de rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qui permet de générer des rapports à partir de nombreux types différents de sources de données et de les publier sur un serveur de rapports ou un site SharePoint. Les rapports que vous créez sont consultables dans le Générateur de rapports, dans un navigateur Web, ou en tant que partie d’un [!INCLUDE[msCoName](../includes/msconame-md.md)] application de Windows ou un site SharePoint.  
@@ -26,7 +26,7 @@ ms.locfileid: "53349396"
  Les rubriques suivantes peuvent vous aider à résoudre des problèmes liés aux rapports, selon que vous êtes un auteur de rapport ou un administrateur de serveur de rapports.  
   
 ## <a name="report-authors"></a>Auteurs de rapports  
- [Dépanner les rapports : Mapper des rapports &#40;Générateur de rapports et SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Résoudre les problèmes liés aux rapports : Mapper des rapports &#40;Générateur de rapports et SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
  [Résoudre les problèmes de parties de rapports &#40;Générateur de rapports et SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   

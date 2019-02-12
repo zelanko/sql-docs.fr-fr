@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 90b2b323-babd-464a-8914-9dc5e66aca74
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d11487c2bfbcda4c18904c77d029c91440ca8410
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e5e6478bc1b424a8744a17f2e67d2bd74b9e70d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211602"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026990"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Tâche 10 : Ajouter la transformation de regroupement probable pour identifier des doublons
   Dans cette tâche, vous allez ajouter une transformation de regroupement probable au flux de données. La transformation de regroupement probable aide à identifier les doublons dans les données sources. Consultez [Transformation de regroupement approximatif](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) pour plus d’informations.  
@@ -58,6 +55,6 @@ ms.locfileid: "48211602"
 15. Cliquez sur **OK** pour fermer la **éditeur de Transformation de regroupement probable**.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 11 : Ajout d’une transformation de fractionnement conditionnel pour filtrer les doublons](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
+ [Tâche 11 : Ajouter la transformation de fractionnement conditionnel pour filtrer les doublons](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
   
   

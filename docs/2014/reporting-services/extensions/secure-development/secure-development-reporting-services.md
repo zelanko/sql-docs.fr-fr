@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 12161a6c-b93b-4312-9d27-0c922561eb9b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3fda898ff10e22bbed7cf31569ae6acdc3f852ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2e6e4ea444a243baf06b96448621d4f189d5efa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110441"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027060"
 ---
 # <a name="secure-development-reporting-services"></a>Développement sécurisé (Reporting Services)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] constitue un système de sécurité fiable qui peut exécuter du code dans des contextes de sécurité soumis à de fortes contraintes et définis par l’administrateur. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise le système de sécurité du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], appelé sécurité d'accès du code (ou sécurité basée sur les preuves). Sous la sécurité d'accès du code, un utilisateur doit être approuvé pour pouvoir accéder à une ressource, mais si le code qu'il exécute n'est pas approuvé, l'accès à la ressource lui est refusé.  
