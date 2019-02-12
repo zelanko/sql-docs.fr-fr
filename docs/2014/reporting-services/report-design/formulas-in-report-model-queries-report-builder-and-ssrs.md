@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 60a6c6a9271245e36c3e491b946c36e175f12d12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 18390c8cb1df552b746f16c5eb569f08063e7763
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209469"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026560"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formules dans les requêtes de modèle de rapport (Générateur de rapports et SSRS)
   Les formules sont des calculs effectués sur les valeurs d'un rapport utilisant un modèle de rapport comme source de données. Une formule peut contenir des fonctions, des opérateurs, des constantes et des références à des champs ou des entités. Les formules vous permettent de combiner, d'agréger, de filtrer et d'évaluer des données numériques et de texte. Vous pouvez créer des formules et les enregistrer en tant que nouveaux champs, ou vous pouvez modifier les formules des champs existants.  
@@ -44,7 +44,7 @@ ms.locfileid: "48209469"
  Lorsque vous utilisez des références, le processeur de rapports exécute la formule sur chaque valeur du champ. Par exemple, supposons qu'un champ contienne le total des ventes annuelles des cinq années passées. Ce champ contient cinq valeurs, chacune représentant le total des ventes d'une année donnée. Si la formule contient une référence à ce champ, elle calcule la nouvelle valeur à l'aide de chacune des valeurs.  
   
 ## <a name="operators"></a>Opérateurs  
- Les opérateurs spécifient le type de calcul à réaliser sur les valeurs d'une formule. Il existe trois différents types d'opérateurs de calcul : arithmétique, comparaison et texte. Les opérateurs sont indiqués à l'aide de symboles, tels que le signe plus (+).  
+ Les opérateurs spécifient le type de calcul à réaliser sur les valeurs d'une formule. Il existe trois différents types d'opérateurs de calcul : arithmétique, comparaison et texte. Les opérateurs sont indiqués à l'aide de symboles, tels que le signe plus (+).  
   
  **Opérateurs arithmétiques.** Les opérateurs arithmétiques réalisent des opérations mathématiques de base, telles que l'addition, la soustraction ou la multiplication, combinent des nombres et génèrent des résultats numériques.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48209469"
  **Opérateur de concaténation de texte.** Utilisez l'esperluette (&) pour joindre ou concaténer une ou plusieurs chaînes de texte et générer un seul élément de texte.  
   
 ##  <a name="Constants"></a> Constantes  
- Une constante est une valeur qui n'est pas calculée et qui, par conséquent, ne change pas. Rapport générateur utilise les constantes suivantes : `True`, `False`, et `Empty`. Ces constantes permettent d'évaluer les champs booléens. Par exemple, supposons que vous possédez un champ appelé IsDiscontinued. Les seules valeurs valides pour ce champ sont True, False ou Empty (" ").  
+ Une constante est une valeur qui n'est pas calculée et qui, par conséquent, ne change pas. Le Générateur de rapports utilise les constantes suivantes : `True`, `False` et `Empty`. Ces constantes permettent d'évaluer les champs booléens. Par exemple, supposons que vous possédez un champ appelé IsDiscontinued. Les seules valeurs valides pour ce champ sont True, False ou Empty (" ").  
   
 ##  <a name="Functions"></a> Fonctions  
  Les fonctions sont des formules prédéfinies qui réalisent des calculs à l'aide de valeurs spécifiques, appelées *arguments*, indiquées dans un ordre précis. Les arguments peuvent être des valeurs littérales et/ou des champs. Lorsqu'un champ est utilisé dans une formule, le nom du champ représente chaque instance du champ. Si l'argument est une valeur littérale, vous pouvez être amené à indiquer sa nature à l'aide de caractères spécifiques.  

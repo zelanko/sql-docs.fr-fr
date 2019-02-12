@@ -12,14 +12,14 @@ f1_keywords:
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ba603b2b05108f6b7cd0b4cb7b6a4d65904af678
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: f82b38efac61ca6cdddb10c13e584c0c8f79a346
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097289"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018101"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Boîte de dialogue Propriétés des parallèles de la carte, Étiquettes
   Utilisez le **MapParallel propriétés** la boîte de dialogue options d’étiquette pour le quadrillage horizontal de la carte. Un parallèle représente la valeur suivante en fonction du système de coordonnées spécifié pour la fenêtre de carte :  
@@ -37,7 +37,7 @@ ms.locfileid: "48097289"
  **Afficher les étiquettes**  
  Sélectionnez cette option pour afficher des étiquettes pour les parallèles.  
   
- **sélection élective**  
+ **Placement**  
  Sélectionnez un emplacement pour afficher les étiquettes par rapport à la partie supérieure, centrale ou inférieure de la fenêtre d'affichage. L'emplacement par défaut est **Rapproché**.  
   
 -   **Rapproché** Affiche les étiquettes en haut.  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 87bdd8c30468f18a30de5bcb3ee122469ac3958c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9b38c5820a1680726b3c69d2e09c1d29600a71b4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189609"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024470"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Page Propriétés de sécurité, Éléments (Gestionnaire de rapports)
   La page Propriétés de sécurité vous permet d'afficher ou de modifier les paramètres de sécurité qui déterminent l'accès aux dossiers, aux rapports, aux modèles, aux ressources et aux sources de données partagées. Cette page est disponible pour les éléments que vous êtes autorisé à sécuriser.  
@@ -51,7 +51,7 @@ ms.locfileid: "48189609"
  Activez la case à cocher en regard du nom d'utilisateur ou de groupe à supprimer et cliquez sur **Supprimer**. Vous ne pouvez pas supprimer une attribution de rôle s'il s'agit de la dernière ou s'il s'agit d'une attribution de rôle intégrée (par exemple « Built-in\Administrateurs ») qui définit la ligne de base de la sécurité du serveur de rapports. La suppression d'une attribution de rôle n'entraîne pas celle d'un compte d'utilisateur ou de groupe ou des définitions de rôles.  
   
  **Nouvelle attribution de rôle**  
- Cliquez pour ouvrir la page Nouvelle attribution de rôle qui permet de créer des attributions de rôles supplémentaires pour l'élément actif. Pour plus d’informations, consultez [nouvelle attribution de rôle : modifier la Page attribution de rôle &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
+ Cliquez pour ouvrir la page Nouvelle attribution de rôle qui permet de créer des attributions de rôles supplémentaires pour l'élément actif. Pour plus d’informations, consultez [nouvelle attribution de rôle : Page Modifier le rôle attribution &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
   
  **Rétablir la sécurité du Parent**  
  Cliquez pour rétablir les paramètres de sécurité en fonction de ceux du dossier immédiatement parent. Si l'héritage est arrêté dans toute l'arborescence des dossiers du serveur de rapports, les paramètres de sécurité du dossier de niveau supérieur (Dossier racine) sont utilisés.  

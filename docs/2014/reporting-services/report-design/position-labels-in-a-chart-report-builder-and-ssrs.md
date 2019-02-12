@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 77a4a9b2749eefbe43cac04351fd1d2bd2c9300e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cfc294f1ae01241dbcabfff954aa42c242f6aad7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138734"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018231"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Placer des étiquettes dans un graphique (Générateur de rapports et SSRS)
-  Chaque type de graphique ayant une forme différente, les étiquettes de point de données sont positionnées de manière optimale de façon à ne pas interférer sur le graphique. La position par défaut des étiquettes varie en fonction du type de graphique :  
+  Chaque type de graphique ayant une forme différente, les étiquettes de point de données sont positionnées de manière optimale de façon à ne pas interférer sur le graphique. La position par défaut des étiquettes varie en fonction du type de graphique :  
   
 -   Sur les graphiques empilés, les étiquettes peuvent être uniquement être positionnées à l'intérieur de la série.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48138734"
 6.  Pour un graphique en entonnoir, sélectionnez une valeur pour la propriété FunnelLabelStyle. Pour un graphique en pyramide, sélectionnez une valeur pour la propriété PyramidLabelStyle.  
   
     > [!NOTE]  
-    >  Lorsque cette propriété est définie sur une valeur `OutsideInColumn`, les étiquettes sont dessinées dans une colonne verticale. Il est impossible de modifier la position de la colonne.  
+    >  Quand cette propriété a une valeur `OutsideInColumn`, les étiquettes sont dessinées dans une colonne verticale. Il est impossible de modifier la position de la colonne.  
   
 ### <a name="to-change-the-position-of-point-labels-in-a-bar-chart"></a>Pour modifier la position des étiquettes de point dans un graphique à barres  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48138734"
   
 6.  Sélectionnez une valeur pour la propriété BarLabelStyle.  
   
- Lorsque la barre de style de l’étiquette est définie sur `Outside`, les étiquettes sont placées en dehors de la barre, tant qu’elles s’ajustent à la zone de graphique. Si l'étiquette ne peut pas être placée en dehors de barre mais dans la zone du graphique, elle est placée à l'intérieur de la barre à la position la plus proche de l'extrémité de la barre.  
+ Quand le style de l’étiquette de la barre a la valeur `Outside`, les étiquettes sont placées en dehors de la barre, dans la mesure où elles s’ajustent à la zone du graphique. Si l'étiquette ne peut pas être placée en dehors de barre mais dans la zone du graphique, elle est placée à l'intérieur de la barre à la position la plus proche de l'extrémité de la barre.  
   
 ### <a name="to-change-the-position-of-point-labels-in-an-area-column-line-or-scatter-chart"></a>Pour modifier la position des étiquettes de point dans un graphique à secteurs, un histogramme, un graphique en courbes ou un graphique à nuage de points  
   
@@ -96,11 +96,11 @@ ms.locfileid: "48138734"
 6.  Sélectionnez une valeur pour la propriété Position.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Graphiques en secteurs &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Graphiques à secteurs &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Graphiques à barres &#40;Générateur de rapports et SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Mettre en forme les étiquettes des axes en tant que dates ou devises &#40;Générateur de rapports et SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Étiquettes de Point de données d’affichage à l’extérieur un graphique à secteurs &#40;Générateur de rapports et SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Afficher des étiquettes de points de données à l’extérieur d’un graphique à secteurs &#40;Générateur de rapports et SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   

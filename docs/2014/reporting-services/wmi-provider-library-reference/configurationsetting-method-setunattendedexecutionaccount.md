@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 159bd5e43a9079fe431d921f8275da7a721b5392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4bc1620e5f3bd625eb0b68e51183ce869673747f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181689"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021762"
 ---
 # <a name="setunattendedexecutionaccount-method-wmi-msreportserverconfigurationsetting"></a>Méthode SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting)
   Spécifie le compte utilisé pour exécuter des rapports sans assistance.  
@@ -59,7 +59,7 @@ public void SetUnattendedExecutionAccount (string UserName,
   
  Il est impossible d’utiliser la méthode SetUnattendedExecutionAccount pour exécuter des exécutions sans assistance dans le contexte du service Windows de serveur de rapports.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

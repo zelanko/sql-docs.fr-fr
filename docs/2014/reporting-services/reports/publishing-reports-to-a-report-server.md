@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a3efdc60e34555aeb0cf706c7f8ab219fd64d7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f028a70d2f1d26f18f7940f89364c23dc5050b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182569"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021578"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publication de rapports sur un serveur de rapports
   Après avoir conçu et testé un rapport ou ensemble de rapports, vous pouvez utiliser les fonctionnalités de déploiement intégrées dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour publier des rapports sur un serveur de rapports. Vous pouvez publier des rapports individuels ou un projet Report Server. La publication d'un projet Report Server est la méthode la plus simple pour publier plusieurs rapports. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise le terme *déployer*, au lieu du terme *publier*. Les deux termes sont interchangeables.  
@@ -60,7 +60,7 @@ ms.locfileid: "48182569"
   
 ## <a name="see-also"></a>Voir aussi  
  [Pages de propriétés du projet, boîte de dialogue](../tools/project-property-pages-dialog-box.md)   
- [Gestion de contenu de serveur de rapports &#40;SSRS en Mode natif&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Mettre à niveau des rapports](../install-windows/upgrade-reports.md)  
   
   

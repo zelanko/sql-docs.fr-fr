@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 24e303409568f028ff57cf189cad4f1022111e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 72bd3d617fa14e785b29b9c89e3d53d7d5dd3da4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202729"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032750"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Page Propriétés générales, Datasets partagés (Gestionnaire de rapports)
   La page Dataset partagé permet d'afficher et de gérer les propriétés d'un élément de dataset partagé.  
@@ -65,12 +65,12 @@ ms.locfileid: "48202729"
  Permet de remplacer la définition du dataset partagé par une définition différente d'un fichier .rds situé dans le système de fichiers.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenu de la Page &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Page Contenu &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Options d’actualisation de cache &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [Page mise en cache, Datasets partagés &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
- [Gérer des Datasets partagés](report-data/manage-shared-datasets.md)   
- [Cache des Datasets partagés &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
+ [Gérer des datasets partagés](report-data/manage-shared-datasets.md)   
+ [Mettre en cache les datasets partagés &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

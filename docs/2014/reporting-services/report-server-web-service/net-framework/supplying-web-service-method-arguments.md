@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 92cbee94cad189a4752a2fb3300894dcb1c4c5c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 82e389f0c09ddc75fb7bbfa09e24cb18cf154f3e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073999"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033840"
 ---
 # <a name="supplying-web-service-method-arguments"></a>Spécification d'arguments de méthode de service Web
   Une méthode de service Web Report Server envoie une demande au service à une URL donnée à l'aide de SOAP sur HTTP. Le service reçoit la demande, la traite, puis renvoie une réponse. Ces demandes et réponses prennent la forme de documents XML.  

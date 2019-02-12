@@ -12,14 +12,14 @@ f1_keywords:
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4b939fe20f4bcd280c00dc6279ebb1c8ba3a1f45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c6a9c5445e5ed0371922a7c5aad929519ed4e0d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082244"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022780"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de la légende, Général (Générateur de rapports et SSRS)
   Utilisez la boîte de dialogue **Légende** pour définir l'apparence et la disposition de la légende du graphique. Pour plus d’informations, consultez [mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "48082244"
  **Nom**  
  Tapez un nom pour la légende.  
   
- **Mise en page**  
+ **Disposition**  
  Sélectionnez une option pour indiquer la mise en page de la légende. La mise en page de la légende par défaut est Tableau automatique.  
   
 -   **Tableau haut** Affichez le contenu de la légende dans un tableau. Les entrées de la légende seront ajoutées de manière à ce que la légende s'étende verticalement.  

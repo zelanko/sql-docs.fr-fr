@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6b990f4a2dbf321b20d9d8e45ecf13b3ede47987
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9eb3cd35267075b6228df993f31dbec021b681bf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147869"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031370"
 ---
 # <a name="report-server-http-log"></a>Journal HTTP Report Server
   Les fichiers journaux HTTP Report Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gardent un enregistrement de chaque requête et réponse HTTP gérée par le serveur de rapports. Dans la mesure où les erreurs de dépassement de capacité et de délai d'attente des requêtes n'atteignent pas le serveur de rapports, elles ne sont pas enregistrées dans le fichier journal.  
@@ -55,33 +55,33 @@ ms.locfileid: "48147869"
 ```  
   
 ## <a name="log-file-fields"></a>Champs du fichier journal  
- Le tableau suivant décrit les champs disponibles dans le journal. La liste de champs est configurable ; Vous pouvez spécifier les champs à inclure via le `HTTPTraceSwitches` paramètre de configuration. Le **par défaut** colonne Spécifie si le champ doit être inclus dans le fichier journal automatiquement si vous ne spécifiez pas `HTTPTraceSwitches`.  
+ Le tableau suivant décrit les champs disponibles dans le journal. La liste des champs est configurable ; vous pouvez spécifier quels sont les champs à inclure via le paramètre de configuration `HTTPTraceSwitches`. Le **par défaut** colonne Spécifie si le champ doit être inclus dans le fichier journal automatiquement si vous ne spécifiez pas `HTTPTraceSwitches`.  
   
-|Champ|Description|Valeur par défaut|  
+|Champ|Description|Par défaut|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Cette valeur est facultative. La valeur par défaut est ReportServerServiceHTTP_. Vous pouvez spécifier une autre valeur si vous souhaitez utiliser une convention d'affectation de noms de fichiers distincte (pour inclure le nom du serveur lorsque vous enregistrez les fichiers journaux dans un emplacement central, par exemple).|Oui|  
-|HTTPTraceSwitches|Cette valeur est facultative. Si vous le spécifiez, vous pouvez configurer les champs du fichier journal en utilisant le format délimité par des virgules.|non|  
-|Date|Date à laquelle l'activité s'est produite.|non|  
-|Time|Heure à laquelle l'activité s'est produite.|non|  
+|HTTPTraceSwitches|Cette valeur est facultative. Si vous le spécifiez, vous pouvez configurer les champs du fichier journal en utilisant le format délimité par des virgules.|Non|  
+|Date|Date à laquelle l'activité s'est produite.|Non|  
+|Time|Heure à laquelle l'activité s'est produite.|Non|  
 |ClientIp|Adresse IP du client qui accède au serveur de rapports.|Oui|  
-|UserName|Nom de l'utilisateur qui a accédé au serveur de rapports.|non|  
-|ServerPort|Numéro de port utilisé pour la connexion.|non|  
-|Hôte|Contenu de l'en-tête de l'hôte.|non|  
+|UserName|Nom de l'utilisateur qui a accédé au serveur de rapports.|Non|  
+|ServerPort|Numéro de port utilisé pour la connexion.|Non|  
+|Hôte|Contenu de l'en-tête de l'hôte.|Non|  
 |Méthode|Action ou méthode SOAP appelée à partir du client.|Oui|  
 |UriStem|Ressource ayant fait l'objet d'un accès.|Oui|  
-|UriQuery|Requête utilisée pour accéder à la ressource.|non|  
+|UriQuery|Requête utilisée pour accéder à la ressource.|Non|  
 |ProtocolStatus|Code d'état HTTP.|Oui|  
-|BytesReceived|Nombre d'octets reçus par le serveur.|non|  
-|TimeTaken|Délai écoulé (en millisecondes) entre le moment où HTTP.SYS retourne les données de requête et le moment où le serveur termine le dernier envoi, sans inclure la durée de transmission réseau.|non|  
-|ProtocolVersion|Version de protocole utilisée par le client.|non|  
-|UserAgent|Type de navigateur utilisé par le client.|non|  
-|CookieReceived|Contenu du cookie reçu par le serveur.|non|  
-|CookieSent|Contenu du cookie envoyé par le serveur.|non|  
-|Referrer|Site précédent visité par le client.|non|  
+|BytesReceived|Nombre d'octets reçus par le serveur.|Non|  
+|TimeTaken|Délai écoulé (en millisecondes) entre le moment où HTTP.SYS retourne les données de requête et le moment où le serveur termine le dernier envoi, sans inclure la durée de transmission réseau.|Non|  
+|ProtocolVersion|Version de protocole utilisée par le client.|Non|  
+|UserAgent|Type de navigateur utilisé par le client.|Non|  
+|CookieReceived|Contenu du cookie reçu par le serveur.|Non|  
+|CookieSent|Contenu du cookie envoyé par le serveur.|Non|  
+|Referrer|Site précédent visité par le client.|Non|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Journal de Trace de Service de serveur de rapports](report-server-service-trace-log.md)   
+ [Report Server Service Trace Log](report-server-service-trace-log.md)   
  [Fichiers journaux et sources de Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Erreurs et événements référence &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Guide de référence des erreurs et des événements &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

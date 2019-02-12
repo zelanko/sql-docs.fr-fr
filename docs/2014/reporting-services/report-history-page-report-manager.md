@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0b5865ecbca2ea5577fccf0c28faeabf27b9573d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cb6d9de69656d40b3a5fd87c5353c6d0b8f0ef5f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053139"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033860"
 ---
 # <a name="report-history-page-report-manager"></a>Page Historique de rapport (Gestionnaire de rapports)
   La page Historique de rapport vous permet d'afficher des instantanés de rapport qui sont générés et stockés dans le temps. Selon les options définies sur le serveur de rapports, l'historique de rapport peut contenir uniquement les instantanés les plus récents.  
@@ -56,7 +56,7 @@ ms.locfileid: "48053139"
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher ou supprimer l’historique de rapport &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [Ajouter un instantané à l’historique de rapport &#40;le Gestionnaire de rapports&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Ajout d’un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Page de propriétés Options d’instantanés &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  

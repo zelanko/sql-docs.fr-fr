@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b40693cd426779f7878c1101fb57efa12ce4e6de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b6413a1cf3e25575078c2f126439cc03ca95a933
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057259"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023890"
 ---
 # <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>Méthode SetServiceState (WMI MSReportServer_ConfigurationSetting)
   Active ou désactive les services Web et Windows Report Server.  
@@ -44,13 +44,13 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="parameters"></a>Paramètres  
  *EnableWindowsService*  
- Un `Boolean` valeur indiquant l’état du service Windows. La valeur `true` démarre le Windows du serveur de rapports service ; la valeur `false` arrête le service Windows.  
+ Valeur `Boolean` indiquant l'état du service Windows. La valeur `true` démarre le service Windows Report Server ; la valeur `false` arrête le service Windows.  
   
  *EnableWebService*  
  Un `Boolean` valeur indiquant l’état de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service Web. La valeur `true` démarre le service Web Report Server ; la valeur `false` arrête le service Web.  
   
  *EnableReportManager*  
- Un `Boolean` valeur indiquant l’état souhaité du Gestionnaire de rapports.  
+ Valeur `Boolean` indiquant l'état souhaité du Gestionnaire de rapports.  
   
  *HRESULT*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
@@ -60,7 +60,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="remarks"></a>Notes  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

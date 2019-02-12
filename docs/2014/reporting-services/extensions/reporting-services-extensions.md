@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 46dd4563cbc35ce2625e31329bd1a68cf55f177f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 231ba80e2abe304ba98f6ab64eaeba30ea783918
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198539"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030770"
 ---
 # <a name="reporting-services-extensions"></a>Extensions Reporting Services
-  L'architecture modulaire de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est conçue à des fins d'extensibilité. Une API de code managé est disponible afin de vous permettre de développer, installer et gérer facilement des extensions consommées par de nombreux composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Vous pouvez créer des assemblys privés ou partagés à l’aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], puis ajouter de nouvelles fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour répondre aux besoins en constante évolution de votre entreprise.  
+  L'architecture modulaire de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est conçue à des fins d'extensibilité. Une API de code managé est disponible afin de vous permettre de développer, installer et gérer facilement des extensions consommées par de nombreux composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous pouvez créer des assemblys privés ou partagés à l’aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], puis ajouter de nouvelles fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour répondre aux besoins en constante évolution de votre entreprise.  
   
  L'architecture d'extensibilité unique de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permet aux développeurs d'étendre des fonctionnalités spécifiques du produit et de ses composants. Il existe actuellement une prise en charge générale pour étendre les fonctions de traitement de données de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. L'API de traitement de données comprend des constructions et des conventions du fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] couramment utilisées, qui permettent aux développeurs d'ajouter des fonctions de traitement de données supplémentaires à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Ces extensions pour le traitement des données ajoutent des fonctionnalités au serveur de rapports et au Concepteur de rapports, ce qui se traduit par une intégration transparente des données personnalisées aux rapports.  
   

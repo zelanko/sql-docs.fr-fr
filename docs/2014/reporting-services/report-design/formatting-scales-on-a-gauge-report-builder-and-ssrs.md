@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3995d85af81e6417e3117c25c1ec06052d60f269
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 36074fe67459cb47f6becfe914fe868baf5d4940
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068999"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021657"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Mise en forme des échelles sur une jauge (Générateur de rapports et SSRS)
   Une échelle de jauge correspond à la plage de nombres, limités par une valeur minimale et une valeur maximale, indiqués sur une jauge. En général, une échelle de jauge contient des étiquettes et des graduations qui permettent de lire avec précision la valeur indiquée par le pointeur de la jauge. Une échelle de jauge est la plupart du temps associée à un ou plusieurs pointeurs de jauge. Plusieurs échelles sont possibles sur une même jauge.  
@@ -73,7 +73,7 @@ ms.locfileid: "48068999"
   
  ![Rayon de l’échelle par rapport à diamètre de la jauge](../media/scaleradiusdiagram.gif "Rayon de l’échelle par rapport au diamètre de la jauge")  
   
- L'angle de début correspond à l'angle de rotation, entre 0 et 360, auquel l'échelle commencera. La position zéro (0) se trouve en bas de la jauge et l'angle de début pivote dans le sens des aiguilles d'une montre. Par exemple, l'échelle commence à la position 9 heures avec un angle de début de 90 degrés.  
+ L'angle de début correspond à l'angle de rotation, entre 0 et 360, auquel l'échelle commencera. La position zéro (0) se trouve en bas de la jauge et l'angle de début pivote dans le sens des aiguilles d'une montre. Par exemple, l'échelle commence à la position 9 heures avec un angle de début de 90 degrés.  
   
  L'angle de balayage correspond au nombre de degrés, entre 0 et 360, que l'échelle balaiera dans un cercle. Avec un angle de balayage de 360 degrés, une échelle représente un cercle complet. Cela peut s'avérer utile si vous souhaitez concevoir une jauge ressemblant à une horloge.  
   

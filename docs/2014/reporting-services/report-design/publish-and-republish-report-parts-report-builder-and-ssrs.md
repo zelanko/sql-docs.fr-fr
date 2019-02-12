@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1ecface6931e73f2153e32ee9ae71ed22ca56057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 375d4c87b444411c0882ecb748976df40ed98412
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136899"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027120"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Publier et republier des parties de rapports (Générateur de rapports et SSRS)
   Vous pouvez publier une partie de rapport avec des paramètres par défaut à un emplacement par défaut, ou vous pouvez modifier des métadonnées de partie de rapport, telles que le nom et la description, puis les enregistrer ailleurs sur un serveur de rapports. Vous pouvez également les enregistrer sur un site SharePoint intégré avec un serveur de rapports si vous avez les autorisations appropriées.  
@@ -35,7 +35,7 @@ ms.locfileid: "48136899"
   
      Sinon, cliquez sur **Vérifier et modifier les parties de rapport avant de procéder à la publication**.  
   
-3.  Modifiez le nom et la description de la partie de rapport : double-cliquez sur le nom pour le modifier et cliquez dans le champ **Description** pour ajouter une description.  
+3.  Modifier le nom de partie de rapport et la description : Double-cliquez sur le nom à modifier et cliquez dans le **Description** champ pour ajouter une description.  
   
     > [!NOTE]  
     >  Il est judicieux de donner un nom et une description à la partie de rapport pour aider les personnes à l'identifier lors de la recherche. La longueur maximale du nom d'une partie de rapport est de 260 caractères pour le chemin d'accès entier, y compris les noms des dossiers sur le serveur, suivi par le nom réel de la partie de rapport.  
@@ -58,8 +58,8 @@ ms.locfileid: "48136899"
 >  Si vous la publiez en tant que nouvelle partie de rapport, elle aura un nouvel ID unique. Elle ne recevra plus les mises à jour si la partie de rapport d'origine est modifiée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Parties de rapport &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [Parties de rapports et jeux de données dans le Générateur de rapports](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Parties de rapports et datasets dans le Générateur de rapports](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Résoudre les problèmes de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Recherchez les mises à jour ou désactiver les mises à jour &#40;Générateur de rapports et SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [Rechercher des parties de rapports et définir un dossier par défaut &#40;Générateur de rapports et SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  

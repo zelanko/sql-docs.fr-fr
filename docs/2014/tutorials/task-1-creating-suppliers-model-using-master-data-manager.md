@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71b3a98a2a5052d6da4fec3e12d81ee8d452c6f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 275b7cd57336c22b6d1f67206d1e1cdb0b7d2abd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148319"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035480"
 ---
 # <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>Tâche 1 : Créer un modèle Fournisseurs à l'aide de Master Data Manager
   Dans cette tâche, vous créez un modèle nommé **fournisseurs** dans MDS à l’aide **Master Data Manager**.  
@@ -44,6 +41,6 @@ ms.locfileid: "48148319"
 6.  Cliquez sur **enregistrer le modèle** dans la barre d’outils.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 2 : Chargement des données des fournisseurs vers MDS à l’aide du complément MDS pour Excel](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
+ [Tâche 2 : Téléchargement des données des fournisseurs vers MDS à l’aide de complément MDS pour Excel](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
   
   

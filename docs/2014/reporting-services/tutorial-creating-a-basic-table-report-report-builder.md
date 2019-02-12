@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : création d’un rapport de tableau de base (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Création d’un rapport de tableau de base (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 438ea8d61900a78c6522cf8897b960598d8d3976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189109"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020430"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Didacticiel : création d'un rapport de tableau de base (Générateur de rapports)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Didacticiel : Création d’un rapport de tableau de base (Générateur de rapports)
   Ce didacticiel vous apprend à créer un rapport de tableau de base à partir des exemples de données de ventes. L’illustration suivante montre le rapport que vous allez créer.  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
@@ -50,9 +50,9 @@ ms.locfileid: "48189109"
   
 7.  [Exporter le rapport](#Export)  
   
- Durée estimée pour effectuer le didacticiel : 20 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 20 minutes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="CreateTable"></a> 1. Créer un rapport à partir de la mise en route  
@@ -71,7 +71,7 @@ ms.locfileid: "48189109"
   
 3.  Dans le volet droit, vérifiez que **Assistant Tableau ou matrice** est sélectionné.  
   
-##  <a name="DataConnection"></a> 1 a. Spécifier une connexion de données dans l'Assistant Tableau  
+##  <a name="DataConnection"></a> 1a. Spécifier une connexion de données dans l'Assistant Tableau  
  Une connexion de données contient les informations nécessaires pour se connecter à une source de données externe telle qu'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . En règle générale, vous obtenez les informations de connexion et le type d'informations d'identification à utiliser auprès du propriétaire de la source de données. Pour spécifier une connexion de données, vous pouvez utiliser une source de données partagée sur le serveur de rapports ou créer une source de données incorporée utilisée uniquement dans ce rapport.  
   
  Dans ce didacticiel, vous allez utiliser une source de données incorporée. Pour en savoir plus sur l’utilisation des sources de données partagées, consultez [Autres procédures pour l’obtention d’une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -106,9 +106,9 @@ ms.locfileid: "48189109"
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-10. Cliquez sur **Suivant**.  
+10. Cliquer sur **Suivant**.  
   
-##  <a name="Query"></a> 1 b. Créer une requête dans l'Assistant Tableau  
+##  <a name="Query"></a> 1b. Créer une requête dans l'Assistant Tableau  
  Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requête prédéfinie, ou vous pouvez créer un dataset incorporé utilisable uniquement dans votre rapport. Dans ce didacticiel, vous allez créer un dataset incorporé.  
   
 > [!NOTE]  
@@ -162,7 +162,7 @@ ms.locfileid: "48189109"
   
      Dans le jeu de résultats, les en-têtes de colonnes sont basés sur les noms présents dans la requête. Dans le dataset, les en-têtes de colonnes deviennent les noms de champs et sont enregistrés dans le rapport. Après avoir terminé l'Assistant, vous pouvez utiliser le volet des données de rapport pour afficher la collection de champs de dataset.  
   
-4.  Cliquez sur **Suivant**.  
+4.  Cliquer sur **Suivant**.  
   
 ##  <a name="Groups"></a> 1c. Organiser les données en groupes dans l'Assistant Tableau  
  Lorsque vous sélectionnez des champs à regrouper, vous concevez un tableau dont les lignes et les colonnes affichent des données de détail et des données agrégées.  
@@ -189,9 +189,9 @@ ms.locfileid: "48189109"
   
      Les étapes 4 et 5 organisent les valeurs des champs par date, puis par sous-catégorie de produits pour chaque date.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
-##  <a name="Subtotals"></a> 1D. Ajouter des lignes de sous-total et de total dans l'Assistant Tableau  
+##  <a name="Subtotals"></a> 1d. Ajouter des lignes de sous-total et de total dans l'Assistant Tableau  
  Après avoir créé des groupes, vous pouvez ajouter et mettre en forme les lignes dans lesquelles afficher les valeurs agrégées des champs. Vous pouvez afficher toutes les données ou laisser l'utilisateur développer/réduire les données regroupées de manière interactive.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Pour ajouter des sous-totaux et des totaux  
@@ -214,9 +214,9 @@ ms.locfileid: "48189109"
   
 3.  Décochez l’option **Développer/Réduire les groupes**. Dans ce didacticiel, le rapport que vous créez n'utilise pas la fonctionnalité d'exploration vers le bas qui permet à un utilisateur de développer une hiérarchie de groupe parente afin d'afficher les lignes de groupes enfants et les lignes de détails.  
   
-4.  Cliquez sur **Suivant**.  
+4.  Cliquer sur **Suivant**.  
   
-##  <a name="Style"></a> 1E. Choisir un style dans l'Assistant Tableau  
+##  <a name="Style"></a> 1e. Choisir un style dans l'Assistant Tableau  
  Un style spécifie un style de police, un jeu de couleurs et un style de bordure.  
   
 #### <a name="to-specify-a-table-style"></a>Pour spécifier un style de tableau  
@@ -229,7 +229,7 @@ ms.locfileid: "48189109"
   
 3.  Cliquez sur **Terminer**.  
   
- Le tableau est ajouté à l'aire de conception. Le tableau possède 5 colonnes et 5 lignes. Le volet Groupes de lignes affiche trois lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+ Le tableau est ajouté à l'aire de conception. Le tableau possède 5 colonnes et 5 lignes. Le volet groupes de lignes affiche trois lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset.  
   
 ##  <a name="FormatCurrency"></a> 2. Mettre en forme les données en tant que devises  
  Par défaut, les données de synthèse du champ Sales affichent un nombre général. Appliquez une mise en forme pour afficher ce nombre dans un format monétaire. Activez/désactivez **Styles des espaces réservés** pour afficher les zones de texte mises en forme et le texte de l’espace réservé en tant qu’exemples de valeurs.  
@@ -338,7 +338,7 @@ ms.locfileid: "48189109"
   
 3.  Sélectionnez ou tapez le nom du serveur de rapports sur lequel vous êtes autorisé à enregistrer des rapports.  
   
-     Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
+     Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
   
 4.  Dans **Nom**, remplacez le nom par défaut par **Ventes de produits**.  
   

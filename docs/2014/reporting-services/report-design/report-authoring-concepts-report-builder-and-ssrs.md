@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: df8a54eb3f130da611c5ad79bcb411fe8318da88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b7aa95480780c89dadcbcba4b4d08016adae50f4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220009"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026793"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Concepts de création de rapport (Générateur de rapports et SSRS)
   Cette section définit brièvement les concepts clés utilisés dans la documentation du Générateur de rapports et du Concepteur de rapports. Pour obtenir des définitions de mots ou de termes spécifiques, consultez le [Glossaire &#40;Générateur de rapports&#41;](../report-builder/glossary-report-builder.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "48220009"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Rapports, parties de rapports et définitions de rapport &#40;Générateur de rapports et SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
+ [Rapports, parties de rapports et définitions de rapports &#40;Générateur de rapports et SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  Décrit un certain nombre de termes utilisés pour décrire un rapport dans différents états, notamment la définition initiale, le rapport publié et le rapport affiché tel qu'il apparaît à l'utilisateur.  
   
  [Incorporée et partagée des connexions de données ou Sources de données &#40;Générateur de rapports et SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  

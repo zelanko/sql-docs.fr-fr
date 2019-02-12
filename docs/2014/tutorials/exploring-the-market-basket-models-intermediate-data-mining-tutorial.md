@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: da1c9cb7-6c32-4b9b-96ec-ecea772aeb77
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c71dfded020167ddd9d01c458f370882dc493fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211939"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035300"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Exploration des modèles d'analyse de panier (Didacticiel intermédiaire sur l'exploration de données)
   Maintenant que vous avez créé le `Association` modèle, vous pouvez le parcourir à l’aide de la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse d’associations dans le **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données. Ce didacticiel vous guide dans l'utilisation de la visionneuse pour explorer les relations entre des éléments. La visionneuse vous aide à consulter d'un coup d'œil les produits qui tendent à apparaître ensemble et avoir une idée générale des nouvelles tendances.  
   
- Le [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse d’associations contient trois onglets : **règles**, **jeux d’éléments**, et **réseau de dépendances**. Comme chaque onglet révèle une vue légèrement différente des données, lorsque vous explorez un modèle, vous basculez en général entre les différents volets plusieurs fois pour obtenir des éclaircissements.  
+ La Visionneuse d'associations [!INCLUDE[msCoName](../includes/msconame-md.md)] contient trois onglets : **Règles**, **jeux d’éléments**, et **réseau de dépendances**. Comme chaque onglet révèle une vue légèrement différente des données, lorsque vous explorez un modèle, vous basculez en général entre les différents volets plusieurs fois pour obtenir des éclaircissements.  
   
 -   [Onglet réseau de dépendances](#bkmk_DepNet)  
   
@@ -81,11 +80,11 @@ ms.locfileid: "48211939"
 ##  <a name="bkmk_Itemsets"></a> Onglet jeux d’éléments  
  Ensuite, vous approfondirez vos connaissances des règles et des jeux d'éléments générés par le modèle pour les produits Touring Tire et Touring Tire Tube. Le **jeux d’éléments** onglet affiche trois informations importantes qui se rapportent à des jeux d’éléments qui le [!INCLUDE[msCoName](../includes/msconame-md.md)] détecte de l’algorithme d’Association :  
   
--   **Prise en charge :** le nombre de transactions dans lequel le jeu d’éléments se produit.  
+-   **Prise en charge :** Le nombre de transactions dans lequel le jeu d’éléments se produit.  
   
--   **Taille :** le nombre d’éléments dans le jeu d’éléments.  
+-   **Taille :** Le nombre d’éléments dans le jeu d’éléments.  
   
--   **Éléments :** une liste des éléments inclus dans chaque jeu d’éléments.  
+-   **Éléments :** Une liste des éléments inclus dans chaque jeu d’éléments.  
   
  En fonction de la manière dont les paramètres d'algorithme sont définis, l'algorithme peut générer un grand nombre de jeux d'éléments. Chaque jeu d'éléments retourné dans la visionneuse représente des transactions dans lesquelles l'élément a été vendu. En utilisant les contrôles en haut de la **jeux d’éléments** onglet, vous pouvez filtrer la visionneuse pour afficher uniquement les jeux d’éléments qui contiennent une taille de jeu d’éléments et de prise en charge minimale spécifiée.  
   
@@ -138,13 +137,13 @@ ms.locfileid: "48211939"
 ##  <a name="bkmk_Rules"></a> Onglet règles  
  Le **règles** onglet affiche les informations suivantes relatives aux règles que l’algorithme de recherche.  
   
--   **Probabilité :** le *probabilité* d’une règle, définie comme la probabilité de l’élément de droite compte tenu de l’élément côté gauche.  
+-   **Probabilité :** Le *probabilité* d’une règle, définie comme la probabilité de l’élément de droite compte tenu de l’élément côté gauche.  
   
--   **Importance :** une mesure de l’utilité d’une règle. Une valeur supérieure signifie une meilleure règle.  
+-   **Importance :** Une mesure de l’utilité d’une règle. Une valeur supérieure signifie une meilleure règle.  
   
      L'importance est indiquée pour vous aider à mesurer l'utilité d'une règle, car se baser uniquement sur la probabilité peut porter à confusion. Par exemple, si chaque transaction contient une bouteille d'eau-- la bouteille d'eau est peut-être ajoutée automatiquement au chariot de chaque client dans le cadre d'une promotion--le modèle peut créer une règle qui prédit que la bouteille d'eau a une probabilité de 1. En tenant compte de la probabilité uniquement, cette règle est exacte, mais elle ne fournit pas d'informations utiles.  
   
--   **Règle :** la définition de la règle. Pour un modèle d'analyse de panier, une règle décrit une combinaison spécifique d'éléments.  
+-   **Règle :** La définition de la règle. Pour un modèle d'analyse de panier, une règle décrit une combinaison spécifique d'éléments.  
   
  Chaque règle peut être utilisée pour prévoir la présence d'un élément dans une transaction en se basant sur la présence d'autres éléments. Tout comme dans le **jeux d’éléments** onglet, vous pouvez filtrer les règles afin qu’uniquement les règles les plus intéressantes sont affichés. Si vous utilisez un modèle d'exploration de données qui n'a pas de règles, vous pouvez modifier les paramètres d'algorithme pour abaisser le seuil de probabilité des règles.  
   
@@ -197,8 +196,8 @@ ms.locfileid: "48211939"
  [Filtrage d’une Table imbriquée dans un modèle d’exploration de données &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
- [Leçon 4 : Création d’un scénario Sequence Clustering &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
+ [Leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
+ [Leçon 4 : Création d’un scénario Sequence Clustering &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
  [Algorithme Microsoft Association](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Informations techniques de référence sur l’algorithme Microsoft Association](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)  
   

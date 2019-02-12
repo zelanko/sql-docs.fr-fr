@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 88534e8e-2877-41cd-b5c2-b1d33a0fd203
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 553afbfe7e6ad274261172740d7d55b27729b546
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5309932735310bc0e794d10766312b650b6eb934
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057299"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018970"
 ---
 # <a name="generatedatabaseupgradescript-method-wmi-msreportserverconfigurationsetting"></a>Méthode GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting)
   Génère un script pouvant être utilisé pour mettre à niveau la base de données de serveur de rapports vers le schéma [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -62,7 +62,7 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
 ## <a name="remarks"></a>Notes  
  Le script généré prend en charge [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]et [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

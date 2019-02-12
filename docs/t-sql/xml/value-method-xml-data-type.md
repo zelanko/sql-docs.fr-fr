@@ -3,7 +3,6 @@ title: Méthode value() (type de données xml) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - value method
 - value() method
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c44abf761d2576dd0e73c7c88fb9e52a823d25eb
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0a208baaf237987c9f3e544da4d02dca72b191f9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697907"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021450"
 ---
 # <a name="value-method-xml-data-type"></a>value(), méthode (Type de données xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ SELECT @ProdID
   
  Bien qu'il n'y ait qu'un seul attribut `ProductID` dans l'instance XML, les règles de types statiques exigent que vous spécifiiez de manière explicite que l'expression de chemin d'accès retourne un singleton. Par conséquent, le `[1]` supplémentaire est spécifié à la fin de l'expression de chemin d'accès. Pour plus d’informations sur les types statiques, consultez [Requête Xml et typage statique](../../xquery/xquery-and-static-typing.md).  
   
-### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. Utilisation de la méthode value() pour récupérer une valeur à partir d'une colonne de type xml  
+### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>b. Utilisation de la méthode value() pour récupérer une valeur à partir d'une colonne de type xml  
  La requête suivante porte sur une colonne de type **xml** (`CatalogDescription`) dans la base de données `AdventureWorks`. La requête récupère des valeurs d'attributs `ProductModelID` à partir de chaque instance XML stockée dans la colonne.  
   
 ```  
