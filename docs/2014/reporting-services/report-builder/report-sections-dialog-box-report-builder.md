@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39d3aab1e36d51df8eabf14bbd5fb4ecf6824591
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3f52afcf99e1727e8de255ca62aa74c893a24273
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050550"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015030"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Boîte de dialogue Sections de rapport (Générateur de rapports)
   Lorsque vous ouvrez un rapport, le Générateur de rapports vérifie que le rapport contient un seul élément **\<Section>** RDL (Report Definition Language). L’ouverture d’un rapport avec plusieurs éléments **\<Section>** n’est pas prise en charge.  
@@ -30,6 +30,6 @@ ms.locfileid: "48050550"
  Pour continuer, cliquez sur **OK** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide du Générateur de rapports pour les boîtes de dialogue, volets et les Assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

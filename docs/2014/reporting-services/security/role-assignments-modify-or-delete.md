@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6a562c7b9a888f6bfbb071e3068a3c4cf661c3ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 19f87ffa52dcc8cc1434afa7e6519e93bd580cb5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215529"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026890"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>Modifier ou supprimer une attribution de rôle (Gestionnaire de rapports)
   Une attribution de rôle mappe un compte d'utilisateur ou de groupe à une définition de rôle prédéfinie qui inclut les tâches pouvant être effectuées. Elle détermine les types d'opérations qu'un utilisateur peut effectuer sur un dossier, un rapport, un modèle ou tout autre type de contenu. Pour créer, modifier ou supprimer des attributions de rôles, vous devez utiliser le Gestionnaire de rapports. Après avoir créé une attribution de rôle pour un utilisateur ou un groupe particulier, vous pouvez la modifier ultérieurement en sélectionnant un autre rôle. Pour révoquer des autorisations d'accès à un serveur de rapports, vous pouvez supprimer une attribution de rôle du serveur de rapports.  
@@ -67,6 +67,6 @@ ms.locfileid: "48215529"
  (créer-et-gérer-rôle-assignments.md)   
  [Attributions de rôles](role-assignments.md)   
  [Page Paramètres du site &#40;Gestionnaire de rapports&#41;](../site-settings-page-report-manager.md)   
- [Page Nouvelle attribution de rôle système : Modifier les attributions de rôles système &#40;Gestionnaire de rapports&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [Nouvelle attribution de rôle système : Modifier les attributions de rôles système &#40;le Gestionnaire de rapports&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

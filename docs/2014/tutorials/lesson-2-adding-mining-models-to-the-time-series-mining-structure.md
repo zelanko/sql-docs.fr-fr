@@ -1,25 +1,24 @@
 ---
-title: 'Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données de série chronologique | Microsoft Docs'
+title: 'Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données de série chronologique | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2b58723b20802619baf9489f6dd0c6302805301b
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461945"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022260"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Leçon 2 : Ajout de modèles d'exploration de données à la structure d'exploration de données de série chronologique
-  Dans cette leçon, vous allez ajouter un nouveau modèle d’exploration de données à la structure d’exploration de données que vous venez de créer dans [leçon 1 : création d’un modèle d’exploration de données de série chronologique et de la Structure d’exploration de](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Leçon 2 : Ajout de modèles d’exploration de données à la Structure d’exploration de données de série chronologique
+  Dans cette leçon, vous allez ajouter un nouveau modèle d’exploration de données à la structure d’exploration de données que vous venez de créer dans [leçon 1 : Création d’une série chronologique de modèle d’exploration de données et la Structure d’exploration de données](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## <a name="alter-mining-structure-statement"></a>Instruction ALTER MINING STRUCTURE  
  Pour ajouter un nouveau modèle d’exploration de données à une structure d’exploration de données existante, vous utilisez le [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) instruction. Le code dans l’instruction peut être divisé en parties suivantes :  
@@ -219,7 +218,7 @@ WITH DRILLTHROUGH
  Dans la leçon suivante, vous allez traiter tous les modèles et la structure d'exploration de données.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 3 : Traitement de la structure et des modèles de série chronologique](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
+ [Leçon 3 : Traitement de la série chronologique Structure et modèles](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   

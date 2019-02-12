@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 859a0ba0757b141bbcba6869d1138c7a3862a3c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b5834091c16072dd143fa9ae582ea6c128331a8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049055"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018840"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Gestionnaire des alertes de données pour les utilisateurs SharePoint
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit le Gestionnaire des alertes de données pour permettre aux travailleurs de l’information SharePoint de gérer les alertes de données. Ces derniers peuvent afficher les informations relatives aux alertes qu'ils ont créées, supprimer des alertes, ouvrir les définitions d'alerte pour les modifier et exécuter des alertes à la demande. Il peuvent choisir de consulter les alertes d'un seul rapport ou les alertes de tous les rapports. L'illustration suivante montre les fonctionnalités dont les travailleurs de l'information disposent dans le Gestionnaire des alertes de données.  
@@ -40,7 +40,7 @@ ms.locfileid: "48049055"
   
  ![Ouvrir le Gestionnaire d’alertes à partir du menu contextuel du rapport](media/rs-openalertmanager.gif "Ouvrir le Gestionnaire d’alertes à partir du menu contextuel du rapport")  
   
- Le Gestionnaire des alertes de données inclut une table qui répertorie le nom de l'alerte, le nom du rapport, votre nom en tant que créateur de la définition d'alerte, le nombre de messages d'alerte envoyés, la dernière fois que la définition d'alerte a été exécutée, la dernière fois qu'elle a été modifiée et l'état du dernier message d'alerte. Si le message d'alerte ne peut pas être généré ou envoyé, la colonne d'état contient des informations sur l'erreur et vous aide à dépanner l'alerte. Pour plus d’informations, consultez [gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).  
+ Le Gestionnaire des alertes de données inclut une table qui répertorie le nom de l'alerte, le nom du rapport, votre nom en tant que créateur de la définition d'alerte, le nombre de messages d'alerte envoyés, la dernière fois que la définition d'alerte a été exécutée, la dernière fois qu'elle a été modifiée et l'état du dernier message d'alerte. Si le message d'alerte ne peut pas être généré ou envoyé, la colonne d'état contient des informations sur l'erreur et vous aide à dépanner l'alerte. Pour plus d’informations, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).  
   
  Le tableau suivant présente des exemples de données d'une table dans le Gestionnaire des alertes de données. Quand une erreur se produit, le message d’erreur et l’identificateur de l’entrée du journal (GUID) sont inclus dans le champ **État** de la table.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48049055"
   
   
 ##  <a name="DeleteAlerts"></a> Supprimer des alertes de données  
- Vous pouvez supprimer des définitions d'alerte dans le Gestionnaire des alertes de données. En tant que travailleur de l'information, vous pouvez supprimer les définitions d'alerte que vous avez créées. Vous ne pouvez pas supprimer des définitions d'alerte créées par d'autres. Pour plus d’informations, consultez [gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).  
+ Vous pouvez supprimer des définitions d'alerte dans le Gestionnaire des alertes de données. En tant que travailleur de l'information, vous pouvez supprimer les définitions d'alerte que vous avez créées. Vous ne pouvez pas supprimer des définitions d'alerte créées par d'autres. Pour plus d’informations, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).  
   
  Lorsque vous supprimez une définition d'alerte, elle est supprimée définitivement. Si vous souhaitez uniquement suspendre les messages d'alerte, vous pouvez modifier la périodicité ou bien la date de démarrage ou d'arrêt dans la définition de l'alerte. Pour plus d’informations, consultez [Modifier une alerte de données dans le Concepteur d’alertes](edit-a-data-alert-in-alert-designer.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48049055"
   
   
 ##  <a name="RunAlerts"></a> Exécuter des alertes de données  
- Le Gestionnaire des alertes de données contient des informations sur la dernière exécution par le service d'alerte de la définition d'alerte de données et le nombre de fois que des messages d'alerte de données ont été envoyés. Vous pouvez exécuter et envoyer le message d'alerte immédiatement, au lieu d'attendre l'heure spécifiée par la planification. Lorsque vous exécutez une alerte du Gestionnaire des alertes de données, la planification de l'alerte est supprimée et le traitement commence après un délai d'une à cinq minutes, en fonction du temps nécessaire pour exécuter le rapport et selon que le serveur de rapports est occupé ou non au moment où vous avez choisi d'exécuter l'alerte. Toutefois, si vous avez spécifié qu'un message soit envoyé uniquement si les résultats changent, aucun message ne sera créé ou envoyé si les résultats ne changent pas. Pour plus d’informations, consultez [gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).  
+ Le Gestionnaire des alertes de données contient des informations sur la dernière exécution par le service d'alerte de la définition d'alerte de données et le nombre de fois que des messages d'alerte de données ont été envoyés. Vous pouvez exécuter et envoyer le message d'alerte immédiatement, au lieu d'attendre l'heure spécifiée par la planification. Lorsque vous exécutez une alerte du Gestionnaire des alertes de données, la planification de l'alerte est supprimée et le traitement commence après un délai d'une à cinq minutes, en fonction du temps nécessaire pour exécuter le rapport et selon que le serveur de rapports est occupé ou non au moment où vous avez choisi d'exécuter l'alerte. Toutefois, si vous avez spécifié qu'un message soit envoyé uniquement si les résultats changent, aucun message ne sera créé ou envoyé si les résultats ne changent pas. Pour plus d’informations, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).  
   
 > [!NOTE]  
 >  Après avoir cliqué sur l’option **Exécuter**  , un délai de quelques secondes est nécessaire avant la mise à jour de la valeur de la colonne **État** indiquant que l’alerte est en cours de traitement. Si vous cliquez plusieurs fois sur l’option **Exécuter**  , l’alerte est traitée plusieurs fois. Cette opération consomme inutilement des ressources sur le serveur de rapports et peut affecter les performances de celui-ci. Pour afficher des informations d'alerte à jour, cliquez sur le bouton d'actualisation du navigateur Web pour rechercher les mises à jour d'état ainsi que d'autres informations sur l'alerte.  
@@ -74,7 +74,7 @@ ms.locfileid: "48049055"
 ##  <a name="HowTo"></a> Tâches associées  
  Cette section inclut les procédures qui vous expliquent comment gérer vos alertes et modifier vos définitions d'alerte.  
   
--   [Gérer mes alertes de données dans le gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md)  
+-   [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md)  
   
 -   [Modifier une alerte de données dans le concepteur d'alertes](edit-a-data-alert-in-alert-designer.md)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48049055"
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteur d’alertes de données](../../2014/reporting-services/data-alert-designer.md)   
- [Créer une alerte de données dans le Concepteur d’alertes de données](create-a-data-alert-in-data-alert-designer.md)   
+ [Créer une alerte de données dans le Concepteur d'alertes](create-a-data-alert-in-data-alert-designer.md)   
  [Alertes de données Reporting Services](../ssms/agent/alerts.md)  
   
   

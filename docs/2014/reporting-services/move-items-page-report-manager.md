@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a6c4d822448b452cd66cbc59beffb8fe2d6f0fb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96d3310c489dea5aadc3e9b7e873dbb89ceee9bb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082749"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009683"
 ---
 # <a name="move-items-page-report-manager"></a>Page Déplacer les éléments (Gestionnaire de rapports)
   La page Déplacer les éléments vous permet de déplacer un rapport, un dossier ou un autre élément vers un nouvel emplacement sur le serveur de rapports. Vous pouvez taper le chemin d'accès au nouvel emplacement ou utiliser l'arborescence pour naviguer jusqu'à un nouvel emplacement dans l'espace de noms du serveur de rapports. Vous pouvez déplacer uniquement les éléments que vous êtes autorisé à déplacer et qui sont stockés sur le serveur de rapports actuel.  
@@ -66,7 +66,7 @@ ms.locfileid: "48082749"
 4.  Dans la barre d'outils de l'élément, cliquez sur **Déplacer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Page propriétés générales, dossiers &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Page propriétés générales, ressources &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - metadata [Master Data Services]
 - user-defined metadata [Master Data Services]
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 186329f71e19f23801fb366fe2117067fbf70c6c
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: f45d9d2a50327259c987cd41fefc6039c629eb77
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419885"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022893"
 ---
 # <a name="metadata-master-data-services"></a>Métadonnées (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les métadonnées définies par l'utilisateur sont des informations qui vous permettent de décrire les objets de modèle. Par exemple, vous pouvez effectuer le suivi des propriétaires d'un modèle ou d'une entité spécifique, ou des systèmes sources qui fournissent des données à une entité.  

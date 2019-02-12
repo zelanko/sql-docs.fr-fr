@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b4b342251e2b7bac68aa8c7015be82ec9dc1df19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96092da800b6df640ffa9f99b2fe851460edacc8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056249"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019431"
 ---
 # <a name="contents-page-report-manager"></a>Page Contenu (Gestionnaire de rapports)
   La page Contenu vous permet d'afficher le contenu du dossier actif, de sélectionner les éléments à afficher ou d'accéder à d'autres dossiers. Elle s'ouvre lorsque vous sélectionnez un dossier. Elle correspond également à la page d'accueil du Gestionnaire de rapports.  
@@ -56,8 +56,8 @@ ms.locfileid: "48056249"
  Cliquez pour déplacer un élément dans l'arborescence des dossiers. Avant de cliquer sur **Déplacer**, activez la case à cocher en regard de chaque élément à déplacer. Vous ouvrez ainsi la page Déplacer les éléments dans laquelle vous pouvez parcourir les dossiers pour sélectionner un nouvel emplacement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Gestion de contenu de serveur de rapports &#40;SSRS en Mode natif&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

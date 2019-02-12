@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7559dd0e7766b601e525ed25885af34a84c98f1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 44a4bb146117dd12fedb8b897811100ebd951a32
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065515"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026550"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Utiliser la sécurité intégrée dans Windows SharePoint Services pour les éléments de serveur de rapports
   SharePoint fournit des fonctionnalités de sécurité intégrée qui vous permettent d'accéder aux éléments d'un serveur de rapports à partir de sites et de bibliothèques SharePoint. Si vous avez déjà affecté des autorisations de site et de listes aux utilisateurs, ces derniers auront accès aux éléments et opérations de serveur de rapports dès que vous aurez configuré les paramètres d'intégration entre SharePoint et un serveur de rapports.  
@@ -51,12 +51,12 @@ ms.locfileid: "48065515"
 |**Membres**|Collaboration|Les membres peuvent créer des éléments, publier les rapports et les modèles correspondants à partir d'outils de conception dans une bibliothèque SharePoint.|Ajoutez des rapports et autres éléments à des bibliothèques. Modifiez les propriétés d'éléments des rapports et autres documents. Supprimez les rapports et autres éléments. Affichez les rapports, y compris ceux qui reposent sur des modèles de rapports pour l'exploration de données. Affichez les versions antérieures d'un document, y compris les instantanés d'historique de rapport (l'utilisateur doit disposer également de l'autorisation nécessaire pour ouvrir le rapport dont l'historique de rapport a été créé). Définissez les paramètres des rapports. Définissez les options de traitement d'un rapport. Générez des modèles de rapports. Créez des rapports dans le Générateur de rapports. Créez et gérez des sources de données partagées. Créez, modifiez et supprimez les abonnements détenus par l'utilisateur. Utilisez des planifications partagées avec un abonnement. Créez et gérez les versions d'un document, y compris l'historique de rapport. Téléchargez le fichier source d'une définition de rapport ou d'un modèle de rapport. Remplacez une définition de rapport, un modèle de rapport, une source de données partagée ou une ressource (en conservant les autorisations et les propriétés d'éléments).|  
 |**Visiteurs** et **visionneuses**|Lire|Les visiteurs peuvent afficher les rapports|Affichez les rapports, y compris ceux qui reposent sur des modèles de rapports pour l'exploration de données.|  
   
- Si vous n'utilisez pas les groupes et les niveaux d'autorisation prédéfinis, vous devez inclure des autorisations spécifiques pour l'accès aux fonctionnalités de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [définir des autorisations pour les opérations de serveur de rapports dans une Application Web SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
+ Si vous n'utilisez pas les groupes et les niveaux d'autorisation prédéfinis, vous devez inclure des autorisations spécifiques pour l'accès aux fonctionnalités de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Définir des autorisations pour les opérations de serveur de rapports dans une application web SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Octroi d’autorisations sur les éléments de serveur de rapports sur un Site SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Comparer des rôles et des tâches dans Reporting Services avec les autorisations et les groupes SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [Définir des autorisations pour des opérations de serveurs de rapports dans une application web SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
+ [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Définir des autorisations pour les opérations de serveur de rapports dans une application web SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b26701352b94150a61fe0586f4c32cdf3db87137
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 88c864b3e3243ab7cb380b4af5b092757585115d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211009"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023740"
 ---
 # <a name="create-and-manage-role-assignments"></a>Créer et gérer des attributions de rôles
   Une *attribution de rôle* est une stratégie de sécurité qui détermine si un utilisateur ou un groupe peut accéder à un élément de serveur de rapports spécifique ou effectuer une opération. Elle se compose d'un seul nom de compte d'utilisateur ou de groupe et d'une ou de plusieurs définitions de rôles.  
@@ -51,7 +51,7 @@ ms.locfileid: "48211009"
   
  Les attributions de rôles au niveau système incluent un large éventail d'autorisations, mais elles n'incluent pas les autorisations qui font partie d'une attribution de rôle au niveau élément. Contrairement aux autorisations système sur un ordinateur, les rôles système dans les serveurs de rapports n'acheminent pas des autorisations primordiales qui incluent le jeu complet de toutes les opérations possibles. Au lieu de cela, les attributions de rôles au niveau système sont simplement un ensemble des tâches dont la portée est le site du serveur de rapports. Les autorisations acheminées par le biais d'attributions de rôles système déterminent si les utilisateurs peuvent afficher les propriétés des applications (telles que l'image ou le titre de la page d'accueil), afficher ou gérer des planifications partagées, ou utiliser le Générateur de rapports.  
   
- Pour plus d’informations, consultez [accorder l’accès utilisateur à un serveur de rapports &#40;le Gestionnaire de rapports&#41; ](grant-user-access-to-a-report-server.md) et [rôles prédéfinis](role-definitions-predefined-roles.md).  
+ Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md) et [Rôles prédéfinis](role-definitions-predefined-roles.md).  
   
 ## <a name="modifying-a-role-assignment"></a>Modification d'une attribution de rôle  
  Vous pouvez modifier une attribution de rôle à tout moment. Vos modifications prennent effet lorsque vous enregistrez l'attribution de rôle. Les sessions utilisateur ne sont pas affectées par les modifications d'attributions de rôles. Si un utilisateur a un rapport ouvert, et que vous modifiez une attribution de rôle pour en refuser l'accès, l'utilisateur peut continuer à utiliser le rapport tant que la session est active.  
@@ -65,10 +65,10 @@ ms.locfileid: "48211009"
   
 ## <a name="see-also"></a>Voir aussi  
  [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md)   
- [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](role-assignments-modify-or-delete.md)   
+ [Modifier ou supprimer une attribution de rôle &#40;Gestionnaire de rapports&#41;](role-assignments-modify-or-delete.md)   
  [Attributions de rôles](role-assignments.md)   
  [Définitions de rôles](role-definitions.md)   
- [Rôles prédéfinis](role-definitions-predefined-roles.md)   
+ [Predefined Roles](role-definitions-predefined-roles.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](granting-permissions-on-a-native-mode-report-server.md)  
   
   

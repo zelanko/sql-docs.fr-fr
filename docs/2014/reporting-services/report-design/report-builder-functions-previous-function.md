@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0c4a4a8f66f00e8446c189bddfe31ed626d0170
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3e856bf37328c5abaf4edd5bf296c1d557a2be7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118209"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010680"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Fonction Previous (Générateur de rapports et SSRS)
   Retourne la valeur ou la valeur d'agrégation spécifiée pour l'instance précédente d'un élément dans l'étendue spécifiée.  
@@ -33,7 +33,7 @@ Previous(expression, scope)
   
 #### <a name="parameters"></a>Paramètres  
  *expression*  
- (`Variant` ou `Binary`) l’expression à utiliser pour identifier les données et pour lequel récupérer la valeur précédente, par exemple, `Fields!Fieldname.Value` ou `Sum(Fields!Fieldname.Value)`.  
+ (`Variant` ou `Binary`) Expression à utiliser pour identifier les données et pour laquelle récupérer la valeur précédente, par exemple, `Fields!Fieldname.Value` ou `Sum(Fields!Fieldname.Value)`.  
   
  *portée*  
  (`String`) Facultatif. Le nom d’un groupe ou région de données ou null (`Nothing` dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), qui spécifie la portée à partir de laquelle récupérer la valeur précédente spécifiée par *expression*.  
@@ -46,7 +46,7 @@ Previous(expression, scope)
   
  Si *expression* ne contient pas d’agrégat, la `Previous` fonction des valeurs par défaut à l’étendue actuelle pour l’élément de rapport.  
   
- Dans un groupe de détails, utilisez `Previous` pour spécifier la valeur d’une référence de champ dans l’instance précédente de la ligne de détails.  
+ Dans le groupe de détails, utilisez `Previous` pour spécifier la valeur d'une référence de champ dans l'instance précédente de la ligne de détails.  
   
 > [!NOTE]  
 >  Le `Previous` fonction prend uniquement en charge les références de champ dans le groupe de détails. Par exemple, dans une zone de texte du groupe de détails, `=Previous(Fields!Quantity.Value)` retourne les données du champ `Quantity` de la ligne précédente. Cette expression dans la première ligne retourne une valeur Null (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]).  
@@ -82,9 +82,9 @@ Previous(expression, scope)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

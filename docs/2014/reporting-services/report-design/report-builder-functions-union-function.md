@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 37d858e465e67bfba98da5d4ad9a0c44fbf1e46b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 09c16397bae867309fce5d47cc5f0397825d7953
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102839"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027191"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Fonction Union (Générateur de rapports et SSRS)
   Retourne l'union de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée dans l'étendue donnée.  
@@ -33,13 +33,13 @@ Union(expression, scope, recursive)
   
 #### <a name="parameters"></a>Paramètres  
  *expression*  
- (`SqlGeometry` ou `SqlGeography`) expression sur laquelle effectuer l’agrégation.  
+ (`SqlGeometry` ou `SqlGeography`) Expression sur laquelle effectuer l'agrégation.  
   
  *portée*  
  (`String`) Facultatif. Nom d'un dataset, d'un groupe ou d'une région de données qui contient les éléments de rapport auxquels appliquer la fonction d'agrégation. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
   
  *récursifs*  
- (**Type énuméré**) Facultatif. `Simple` (valeur par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
+ (**Type énuméré**) Facultatif. `Simple` (par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
   
 ## <a name="return"></a>Return  
  Retourne un objet spatial, `SqlGeometry` ou `SqlGeography`, selon le type d'expression. Pour plus d’informations sur `SqlGeometry` et `SqlGeography` des types de données spatiales, consultez [vue d’ensemble des Types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md).  
@@ -64,7 +64,7 @@ Union(expression, scope, recursive)
  Pour plus d’informations sur les agrégats récursifs, consultez [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 ## <a name="example"></a>Exemple  
- Le tableau suivant présente des exemples de `SqlGeometry` expressions et `Union` result_expression, affichés au format WKT (Well Known Text) pour les données spatiales.  
+ Le tableau suivant montre des exemples d'expressions `SqlGeometry` et d'expressions de résultat de la fonction `Union`, affichés au format de données spatiales WKT (Well-Known Text).  
   
 |Champ avec données spatiales|Exemple|Résultat de la fonction Union|  
 |-----------------------------|-------------|------------------|  
@@ -79,9 +79,9 @@ Union(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

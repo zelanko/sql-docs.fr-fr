@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: df688c3948c30bae3feef03fefbc1171e5c98491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: eb1c984abec2667a09587eda673ed02176aa8e8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220725"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010572"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Page Rapports générés interactifs (Gestionnaire de rapports)
   Un rapport généré interactif affiche une table de données associées lorsque vous cliquez sur les données interactives contenues dans votre rapport. Ces rapports sont générés par le serveur de rapports à partir des informations contenues dans le modèle utilisé pour créer le rapport. Si vous ne souhaitez pas utiliser les rapports générés interactifs que le serveur de rapports génère, vous pouvez créer des rapports personnalisés que vous publiez sur un serveur de rapports et mappez aux points de données interactifs définis dans le modèle. Les rapports personnalisés doivent être créés dans le Générateur de rapports à partir du même modèle, puis publiés sur le serveur de rapports. Pour mapper des rapports personnalisés aux éléments dans le modèle, utilisez la page Rapports générés interactifs dans le Gestionnaire de rapports.  
@@ -32,7 +32,7 @@ ms.locfileid: "48220725"
  Bien qu'il soit possible de sélectionner tous les rapports auxquels vous avez accès, sélectionnez uniquement les rapports créés spécifiquement pour le modèle que vous configurez.  
   
 > [!NOTE]  
->  Rapports générés interactifs ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Si vous ne savez pas précisément quelle est l'édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qu'utilise votre organisation, contactez votre administrateur de base de données.  
+>  Les rapports générés interactifs ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Si vous ne savez pas précisément quelle est l'édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qu'utilise votre organisation, contactez votre administrateur de base de données.  
   
 ## <a name="navigation"></a>Navigation  
  Utilisez la procédure suivante pour naviguer jusqu'à cet emplacement dans l'interface utilisateur.  

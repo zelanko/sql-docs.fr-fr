@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b8870f37741a26f99065f41f0231cea8b22b2770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e7f513cc737e50b6ad8276b550df30b8fd05be8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102659"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009693"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Accès aux assemblys personnalisés par le biais d'expressions
   Une fois que vous avez créé un assembly personnalisé, qu'il est disponible auprès du Concepteur de rapports ou du serveur de rapports, que vous avez ajouté la stratégie de sécurité appropriée et une référence à votre assembly personnalisé dans votre définition de rapport, vous pouvez accéder aux membres des classes dans votre assembly à l'aide d'expressions de rapport. Pour faire référence à du code personnalisé dans une expression, vous devez appeler le membre d'une classe au sein de l'assembly. La procédure pour ce faire dépend du type de méthode, à savoir statique ou basée sur une instance.  

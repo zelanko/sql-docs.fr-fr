@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : ajouter un paramètre à votre rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Ajouter un paramètre à votre rapport (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ec3f74d9237d917fd4b5d94e029cb5a15ea6e59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190299"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018880"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Didacticiel : ajouter un paramètre à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Didacticiel : Ajouter un paramètre à un rapport (Générateur de rapports)
   Ajoutez un paramètre à votre rapport pour permettre aux utilisateurs de filtrer les données de rapport à partir de la source de données ou dans le rapport. Les paramètres de rapport sont créés automatiquement pour chaque paramètre de requête que vous incluez dans une requête de dataset. Le type de données du paramètre détermine son apparence dans la barre d'outils de l'affichage du rapport.  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
@@ -55,11 +55,11 @@ ms.locfileid: "48190299"
 10. [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données et la création d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions détaillées sur l’accès à un serveur de rapports, choisissez une source de données et créer un jeu de données, consultez le premier didacticiel de cette série : [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Durée estimée pour effectuer le didacticiel : 25 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 25 minutes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Setup"></a> 1. Créer un rapport de matrice et un dataset à partir de l'Assistant Tableau ou matrice  
@@ -85,11 +85,11 @@ ms.locfileid: "48190299"
   
 5.  Dans la page **Choisir un dataset** , cliquez sur **Créer un dataset**.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 7.  Dans la page **Choisir une connexion à une source de données**, sélectionnez une source de données de type **SQL Server**. Sélectionnez une source de données dans la liste ou naviguez jusqu'au serveur de rapports pour en sélectionner une.  
   
-8.  Cliquez sur **Suivant**.  
+8.  Cliquer sur **Suivant**.  
   
 9. Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**.  
   
@@ -119,9 +119,9 @@ ms.locfileid: "48190299"
   
      Cette requête ne contient pas de paramètres de requête. Vous ajouterez ultérieurement des paramètres de requête dans ce didacticiel.  
   
-11. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**). Le jeu de résultats affiche 11 lignes de données qui montrent le volume d'articles vendus pour chaque sous-catégorie dans quatre magasins et inclut les colonnes suivantes : StoreID, Subcategory, Quantity.  
+11. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**). Le jeu de résultats affiche 11 lignes de données qui montrent la quantité d’articles vendus pour chaque sous-catégorie dans quatre magasins et inclut les colonnes suivantes : StoreID, Subcategory, Quantity.  
   
-12. Cliquez sur **Suivant**.  
+12. Cliquer sur **Suivant**.  
   
 ##  <a name="CompleteWizard"></a> 2. Organiser les données, choisir la mise en page et le style à partir de l'Assistant Tableau ou matrice  
  Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher les données. Le volet de visualisation de l'Assistant vous aide à visualiser le résultat du regroupement des données avant de terminer la conception de la table ou de la matrice.  
@@ -136,13 +136,13 @@ ms.locfileid: "48190299"
   
      Vous avez organisé les valeurs des quantités vendues dans des lignes regroupées par sous-catégorie. Il y a une colonne pour chaque magasin.  
   
-4.  Cliquez sur **Suivant**.  
+4.  Cliquer sur **Suivant**.  
   
 5.  Sur le **choisir une disposition** page sous **Options**, vérifiez que **afficher les sous-totaux et les totaux généraux** est sélectionné.  
   
      Lorsque vous exécuterez le rapport, la dernière colonne affichera la quantité totale de chaque sous-catégorie pour tous les magasins, et la dernière ligne affichera la quantité totale pour toutes les sous-catégories pour chaque magasin.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 7.  Sur le **choisir un Style** page, dans le volet Styles, sélectionnez un style.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "48190299"
   
 7.  Dans la barre d’outils de la visionneuse de rapports, en regard de StoreID, tapez **200**, puis cliquez sur **Afficher le rapport**.  
   
-##  <a name="AddDataset"></a> 4 a. Ajouter un dataset pour fournir des valeurs disponibles et des noms d'affichage  
+##  <a name="AddDataset"></a> 4a. Ajouter un dataset pour fournir des valeurs disponibles et des noms d'affichage  
  Pour vous assurer qu'un utilisateur ne peut taper que des valeurs valides pour un paramètre, vous pouvez créer une liste déroulante de valeurs à choisir. Les valeurs peuvent provenir d'un dataset ou d'une liste que vous spécifiez. Les valeurs disponibles doivent être fournies à partir d'un dataset comportant une requête qui ne contient pas de référence au paramètre.  
   
 #### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>Pour créer un dataset de valeurs valides pour un paramètre  
@@ -238,7 +238,7 @@ ms.locfileid: "48190299"
   
      Le volet des données de rapport affiche les champs StoreID et StoreName sous le nœud du dataset **Stores** .  
   
-##  <a name="AvailableValues"></a> 4 b. Spécifier les valeurs disponibles pour la création d'une liste déroulante de valeurs  
+##  <a name="AvailableValues"></a> 4b. Spécifier les valeurs disponibles pour la création d'une liste déroulante de valeurs  
  Après avoir créé un dataset pour fournir des valeurs disponibles, vous devez modifier les propriétés de rapport pour spécifier quel dataset et quel champ utiliser pour remplir la liste déroulante à l'aide de valeurs valides dans la barre d'outils de la visionneuse de rapports.  
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Pour fournir des valeurs disponibles pour un paramètre à partir d'un dataset  
@@ -306,7 +306,7 @@ ms.locfileid: "48190299"
   
  Pour *@StoreID*, la visionneuse de rapports affiche la valeur « Contoso Catalog Store ». C’est le nom d’affichage pour l’identificateur de magasin **200**. Le rapport affiche les quantités vendues des articles « Accessories », « Camcorders » et « Digital SLR Cameras » pour l’identificateur de magasin **200**.  
   
-##  <a name="NameValue"></a> 4D. Rechercher une valeur à partir d'un dataset qui contient des paires nom/valeur  
+##  <a name="NameValue"></a> 4d. Rechercher une valeur à partir d'un dataset qui contient des paires nom/valeur  
  Un dataset peut contenir à la fois l'identificateur et le champ Nom correspondant. Lorsque vous avez seulement un identificateur, vous pouvez rechercher le nom correspondant dans un dataset que vous avez créé et qui inclut des paires nom/valeur.  
   
 #### <a name="to-look-up-a-value-from-a-dataset"></a>Pour rechercher une valeur dans un dataset  
@@ -327,7 +327,7 @@ ms.locfileid: "48190299"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     L’en-tête de colonne de magasin contient le texte affiché pour une expression complexe :  **< \<Expr >>**.  
+     L’en-tête de colonne de magasin contient le texte affiché pour une expression complexe : **<\<Expr >>**.  
   
 8.  Affichez l'aperçu du rapport.  
   
@@ -422,7 +422,7 @@ ms.locfileid: "48190299"
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-15. Cliquez dans la zone de texte devant l'expression que vous venez de créer, puis tapez ce qui suit : Valeurs de paramètres sélectionnées :.  
+15. Cliquez dans la zone de texte devant l'expression que vous venez de créer, puis tapez ce qui suit :  Valeurs de paramètres sélectionnées :.  
   
 16. Affichez l'aperçu du rapport.  
   

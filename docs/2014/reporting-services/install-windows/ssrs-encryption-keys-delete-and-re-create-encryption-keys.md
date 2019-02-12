@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ff8e8792079fcca8ed4affa373964ec6cb39fe1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f036d86b7bcdef97de03a80c0b9b615f08eda82
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111018"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012461"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Supprimer et recréer des clés de chiffrement (Gestionnaire de configuration de SSRS)
   La suppression et la recréation de clés de chiffrement sont des activités qui dépassent le cadre d'une simple opération de maintenance des clés de chiffrement. Vous effectuez ces tâches en réponse à une menace spécifique pesant sur votre serveur de rapports ou comme ultime recours si vous ne pouvez plus accéder à la base de données du serveur de rapports.  
@@ -41,7 +41,7 @@ ms.locfileid: "48111018"
   
 #### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>Procédure de recréation des clés de chiffrement (outil de configuration de Reporting Services)  
   
-1.  Désactiver le service Web Report Server et l’accès HTTP en modifiant le `IsWebServiceEnabled` propriété dans le fichier rsreportserver.config. Cette étape arrête temporairement l'envoi des demandes d'authentification au serveur de rapports sans arrêter complètement le serveur. Vous devez avoir le service minimal afin de pouvoir recréer les clés.  
+1.  Désactivez le service Web Report Server et l'accès HTTP en modifiant la propriété `IsWebServiceEnabled` dans le fichier rsreportserver.config. Cette étape arrête temporairement l'envoi des demandes d'authentification au serveur de rapports sans arrêter complètement le serveur. Vous devez avoir le service minimal afin de pouvoir recréer les clés.  
   
      Si vous recréez des clés de chiffrement pour un déploiement évolutif de serveurs de rapports, désactivez cette propriété sur toutes les instances du déploiement.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48111018"
   
     2.  Ouvrez le fichier rsreportserver.config.  
   
-    3.  Pour le `IsWebServiceEnabled` propriété, spécifiez `False`, puis enregistrez vos modifications.  
+    3.  Pour la propriété `IsWebServiceEnabled`, spécifiez `False`, puis enregistrez vos modifications.  
   
 2.  Démarrez l'outil de configuration de Reporting Services et connectez-vous à l'instance de serveur de rapports à configurer.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48111018"
   
 4.  Redémarrez le service Windows Report Server. Si vous recréez des clés de chiffrement pour un déploiement évolutif, redémarrez le service sur toutes les instances.  
   
-5.  Réactiver le service Web et l’accès HTTP en modifiant le `IsWebServiceEnabled` propriété dans le fichier rsreportserver.config. Effectuez cette action pour toutes les instances si vous utilisez un déploiement évolutif.  
+5.  Réactivez le service Web et l'accès HTTP en modifiant la propriété `IsWebServiceEnabled` dans le fichier rsreportserver.config. Effectuez cette action pour toutes les instances si vous utilisez un déploiement évolutif.  
   
 #### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>Procédure de recréation des clés de chiffrement (rskeymgmt)  
   
@@ -110,14 +110,14 @@ ms.locfileid: "48111018"
   
 1.  Indiquez de nouveau la chaîne de connexion de chaque source de données partagée.  
   
-2.  Pour chaque rapport et chaque source de données partagée utilisant des informations d'identification stockées, vous devez retaper le nom d'utilisateur et le mot de passe, puis les enregistrer. Pour plus d’informations, consultez [spécifier les informations d’identification et les informations de connexion pour les Sources de données de rapport](../../integration-services/connection-manager/data-sources.md) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
+2.  Pour chaque rapport et chaque source de données partagée utilisant des informations d'identification stockées, vous devez retaper le nom d'utilisateur et le mot de passe, puis les enregistrer. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../integration-services/connection-manager/data-sources.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 3.  Pour les abonnements pilotés par les données, ouvrez chaque abonnement et retapez les informations d'identification dans la base de données d'abonnement.  
   
 4.  Pour les abonnements utilisant des données chiffrées (ce qui comprend l'extension de remise dans le partage de fichiers et toute extension de remise créées par d'autres développeurs qui utilisent le chiffrement), ouvrez chaque abonnement et retapez les informations d'identification. Les abonnements utilisant la remise par messagerie électronique du serveur de rapports n'ont pas recours aux données chiffrées, ils ne sont donc pas concernés par les modifications apportées à la clé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer et gérer les clés de chiffrement &#40;Gestionnaire de Configuration de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Store les données chiffrées de rapports Server &#40;Gestionnaire de Configuration de SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4109625d2f596d095a8b691bc11b164b67506f72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6f9143c2a93bc5a5c6ffbc116745511de58755d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179219"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024000"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Aide du serveur de rapports dans Management Studio accessible par la touche F1
   Cette section contient des rubriques sur les boîtes de dialogue de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] qui peuvent servir à gérer les serveurs de rapports.  
@@ -27,9 +27,9 @@ ms.locfileid: "48179219"
   
 -   [Annuler les travaux du serveur de rapports](cancel-report-server-jobs-management-studio.md)  
   
--   [Supprimer des éléments du catalogue](delete-catalog-items-management-studio.md)  
+-   [Suppression des éléments du catalogue](delete-catalog-items-management-studio.md)  
   
--   [Page propriétés du travail](job-properties-management-studio.md)  
+-   [Page Propriétés du travail](job-properties-management-studio.md)  
   
 -   [Nouvelle planification partagée](new-shared-schedule-management-studio.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48179219"
   
 -   [Propriétés du rôle système](system-role-properties-management-studio.md)  
   
--   [Propriétés du rôle utilisateur](user-role-properties-management-studio.md)  
+-   [Propriétés de rôle d'utilisateur](user-role-properties-management-studio.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Références relatives aux fonctionnalités (Reporting Services)](../feature-reference-reporting-services.md)   

@@ -9,17 +9,17 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0704648805ce9538e16ec504a8c3508b71f1c6ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e1f048a91f8e20255050772f1503e6dfa387954b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053739"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017350"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Exporter un rapport dans un autre type de fichier (Générateur de rapports et SSRS)
-  Vous pouvez effectuer le rendu d'un rapport dans un autre format de fichier, tel que CSV, Image, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)] ou [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)], en affichant un aperçu de votre rapport dans le Générateur de rapports ou le Concepteur de rapports, ou vous pouvez effectuer le rendu du rapport en visualisant le rapport sur le serveur de rapports. Le rendu du rapport dans un format spécifique est utile lorsque vous souhaitez enregistrer immédiatement le rapport dans un autre type de fichier sans le publier sur le serveur de rapports ou lorsque vous souhaitez voir l'aspect de votre conception de rapport une fois remis aux lecteurs du rapport dans un format spécifique. Le rendu du rapport sur le serveur de rapports est utile lorsque vous définissez des abonnements ou remettez vos rapports via messagerie électronique, ou si vous souhaitez enregistrer un rapport qui est disponible sur le serveur de rapports. Pour plus d’informations, consultez [Abonnements et remise &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
+  Vous pouvez effectuer le rendu d'un rapport dans un autre format de fichier, tel que CSV, Image, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)]ou [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)], en affichant un aperçu de votre rapport dans le Générateur de rapports ou le Concepteur de rapports, ou vous pouvez effectuer le rendu du rapport en visualisant le rapport sur le serveur de rapports. Le rendu du rapport dans un format spécifique est utile lorsque vous souhaitez enregistrer immédiatement le rapport dans un autre type de fichier sans le publier sur le serveur de rapports ou lorsque vous souhaitez voir l'aspect de votre conception de rapport une fois remis aux lecteurs du rapport dans un format spécifique. Le rendu du rapport sur le serveur de rapports est utile lorsque vous définissez des abonnements ou remettez vos rapports via messagerie électronique, ou si vous souhaitez enregistrer un rapport qui est disponible sur le serveur de rapports. Pour plus d’informations, consultez [Abonnements et remise &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  

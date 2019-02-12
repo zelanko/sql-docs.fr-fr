@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 08c490fd6643d8d440444d46d9ac19673d847938
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 02c15c6336171bb324f610b42c97559bcfb0d44b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518629"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026620"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserverconfigurationsetting"></a>Méthode SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting)
   Définit la connexion à une base de données de serveur de rapports spécifique.  
@@ -82,7 +82,7 @@ public void BackupEncryptionKey(string Server,
   
  La méthode SetDatabaseConnection ne vérifie pas si le serveur de rapports peut se connecter à la base de données à l’aide des données spécifiées.  
   
- Si la valeur pour la première fois, la propriété a la valeur de ConnectionPoolSize basée sur les processeurs suivants : ConnectionPoolSize = #Processors * 75.  
+ Quand ’elle est définie pour la première fois, la propriété ConnectionPoolSize est définie selon les processeurs suivants : ConnectionPoolSize = #Processors * 75.  
   
  La méthode SetDatabaseConnection n’accorde pas d’autorisations aux comptes spécifiés. Vous devez appeler la méthode [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) pour chaque compte qui doit accéder à la base de données du serveur de rapports et exécuter le script obtenu.  
   
