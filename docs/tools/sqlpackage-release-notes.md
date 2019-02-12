@@ -10,21 +10,44 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 69b3b5c9574578b286b882b7d2125b0bb984759b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f9fe0558b169acea58bb98a4f9a07267549aa58f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413746"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013000"
 ---
 # <a name="sqlpackage-release-notes"></a>notes de publication de Sqlpackage
 
 **[Télécharger la version la plus récente](sqlpackage-download.md)**
 
+## <a name="sqlpackage-181"></a>sqlpackage 18.1
+
+Date de publication : 1er février 2019  
+Build 15.0.4316.1 
+
+La version inclut les correctifs et les fonctionnalités suivantes :
+
+- Prise en charge pour les classements UTF-8.
+- Correction des performances à utiliser l’estimateur de cardinalité héritée pour les requêtes ingénieries inverses.
+- Activer les index columnstore non cluster sur des vues indexées.
+- Correction d’un problème de performances de comparaison de schéma significatifs lors de la génération d’un script.
+- Correction de la logique de détection de dérive du schéma afin d’ignorer certaines sessions xevent.
+- Importation fixe de classement pour les tables de graphique.
+- Correction d’exportation des tables externes avec les autorisations d’objet.
+- Déplacé vers .NET Core 2.2 
+- Utilisation du stockage de mémoire soutenue pour la comparaison de schémas sur .NET Core.
+
+Cette version inclut les versions d’évaluation d’inter-plateformes de sqlpackage qui ciblent .NET Core 2.2 et peuvent s’exécuter sur macOS et Linux. Cette version préliminaire présente les problèmes connus suivants :
+
+- Les contributeurs de génération et de déploiement ne sont pas pris en charge.
+- Fichiers .dacpac et .bacpac plus anciens qui utilisent la sérialisation des données json ne sont pas pris en charge.
+- .Dacpacs référencé (par exemple master.dacpac) ne peut pas résoudre en raison de problèmes avec les systèmes de fichiers respectant la casse.
+  - Une solution de contournement consiste à mettre en majuscule le nom du fichier de référence (par exemple le serveur maître. BACPAC).
 ## <a name="sqlpackage-180"></a>sqlpackage 18.0
 
 Date de publication : 24 octobre 2018  
-Build : 15.0.4200.1 
+Build 15.0.4200.1 
 
 La version inclut les correctifs et les fonctionnalités suivantes :
 
@@ -41,8 +64,8 @@ La version inclut les correctifs et les fonctionnalités suivantes :
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
-Date de publication : 22 juin 2018  
-Build : 14.0.4079.2  
+Date de publication : 22 juin 2018  
+Build 14.0.4079.2  
 
 La version inclut les correctifs suivants :
 
@@ -54,7 +77,7 @@ La version inclut les correctifs suivants :
 ## <a name="sqlpackage-1741"></a>sqlpackage 17.4.1
 
 Date de publication : 25 janvier 2018  
-Build : 14.0.3917.1
+Build 14.0.3917.1
 
 La version inclut les correctifs suivants :
 
@@ -66,8 +89,8 @@ La version inclut les correctifs suivants :
 
 ## <a name="sqlpackage-1740"></a>sqlpackage 17.4.0
 
-Date de publication : 12 décembre 2017  
-Build : 14.0.3881.1
+Date de publication : 12 décembre 2017  
+Build 14.0.3881.1
 
 La version inclut les correctifs suivants :
 
@@ -76,22 +99,3 @@ La version inclut les correctifs suivants :
 - Paramètre de ligne de commande ajouté /DiagnosticsFile:"C:\Temp\sqlpackage.log » pour spécifier un chemin d’accès de fichier pour enregistrer les informations de diagnostic.
 - Paramètre de ligne de commande ajouté /Diagnostics pour consigner des informations de diagnostic dans la console.
 
-## <a name="sqlpackage-on-macos-and-linux-net-core-preview"></a>Sqlpackage sur macOS et Linux .NET Core (version préliminaire)
-
-Date de publication : 15 novembre 2018  
-Build
-
-Cette version contient la version préliminaire d’inter-plateformes de sqlpackage qui cible .NET Core 2.1 et peut s’exécuter sur macOS et Linux. 
-
-La version inclut les correctifs suivants :
-
-- Déplacé vers .NET Core 2.1 
-- Prise en charge pour les types CLR UDT, y compris les types SQL CLR UDT : SqlGeography, SqlGeometry & SqlHierarchyId.
-
-Cette version est une version préliminaire avec les problèmes connus suivants :
-
-- Le paramètre /p:CommandTimeout est difficile à 120.
-- Les contributeurs de génération et de déploiement ne sont pas pris en charge.
-- Fichiers .dacpac et .bacpac plus anciens qui utilisent la sérialisation des données json ne sont pas pris en charge.
-- .Dacpacs référencé (par exemple master.dacpac) ne peut pas résoudre en raison de problèmes avec les systèmes de fichiers respectant la casse.
-  - Une solution de contournement consiste à mettre en majuscule le nom du fichier de référence (par exemple le serveur maître. BACPAC).
