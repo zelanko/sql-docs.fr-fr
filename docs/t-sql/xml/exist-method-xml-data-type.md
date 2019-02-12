@@ -3,7 +3,6 @@ title: Méthode exist() (type de données xml) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - exist() method
 - exist method
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83b029554b8a85f11c477063a818bd90a4019740
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 97b13091d9b43a371a629d4f3d929e66ffffd368
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698547"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026638"
 ---
 # <a name="exist-method-xml-data-type"></a>Méthode exist() (type de données xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ select @x.exist('true()');
 ## <a name="examples"></a>Exemples  
  Les exemples suivants montrent comment spécifier la méthode **exist()**.  
   
-### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>Exemple : Spécification de la méthode exist() par rapport à une variable de type xml  
+### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>Exemple : Spécification de la méthode exist() par rapport à une variable de type xml  
  Dans l’exemple suivant, @x est une variable de type **xml** (xml non typé) et @f est une variable de type entier qui stocke la valeur renvoyée par la méthode **exist()**. La méthode **exist()** renvoie True (1) si la valeur de date stockée dans l’instance XML est `2002-01-01`.  
   
 ```  
@@ -92,7 +91,7 @@ SELECT @f;
   
 -   La méthode **text()** renvoie un nœud de texte qui contient la valeur non typée `2002-01-01`. (Le type de requête Xml est **xdt:untypedAtomic**.) Vous devez explicitement caster cette valeur typée de **x** en **xsd:date** car le cast implicite n’est pas pris en charge dans ce cas.  
   
-### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>Exemple : Spécification de la méthode exist() par rapport à une variable xml typée  
+### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>Exemple : Spécification de la méthode exist() par rapport à une variable xml typée  
  L’exemple suivant illustre l’utilisation de la méthode **exist()** par rapport à une variable de type **xml**. Il s'agit d'une variable XML typée, car elle spécifie le nom de la collection d'espaces de noms de schéma, `ManuInstructionsSchemaCollection`.  
   
  Dans l’exemple, un document contenant des instructions de fabrication est d’abord affecté à cette variable, puis la méthode **exist()** est utilisée pour savoir si le document comprend un élément <`Location`> dont l’attribut **LocationID** a pour valeur 50.  
@@ -112,7 +111,7 @@ SET @f = @x.exist(' declare namespace AWMI="https://schemas.microsoft.com/sqlser
 SELECT @f;  
 ```  
   
-### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>Exemple : Spécification de la méthode exist() par rapport à une colonne de type xml  
+### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>Exemple : Spécification de la méthode exist() par rapport à une colonne de type xml  
  La requête suivante extrait les ID de modèle de produit dont les descriptions de catalogue ne comprennent pas les spécifications, en l'occurrence l'élément <`Specifications`> :  
   
 ```  
