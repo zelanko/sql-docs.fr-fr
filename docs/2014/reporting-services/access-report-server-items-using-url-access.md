@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1af38969f461cc607eb2b002fbc88aea77a2880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0fe057b1fc441a41d536e4890cd4971202df7e38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098599"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018031"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Accéder à des éléments de serveur de rapports à l'aide de l'accès URL
   Cette rubrique explique comment accéder aux éléments du catalogue de types différents dans une base de données du serveur de rapports ou dans un site SharePoint en utilisant *rs:Command*=*Value*.  
   
  Il n'est pas nécessaire d'ajouter cette chaîne de paramètres. Si vous l'omettez, le serveur de rapports évalue le type d'élément et sélectionne automatiquement la valeur du paramètre appropriée. Toutefois, l’utilisation de la chaîne *rs:Command*=*Valeur* dans l’URL améliore les performances du serveur de rapports.  
   
- Notez la syntaxe de proxy `_vti_bin` dans les exemples ci-dessous. Pour plus d’informations sur l’utilisation de la syntaxe de proxy, consultez [référence de paramètre d’accès URL](url-access-parameter-reference.md).  
+ Notez la syntaxe de proxy `_vti_bin` dans les exemples ci-dessous. Pour plus d’informations sur l’utilisation de la syntaxe de proxy, consultez [Informations de référence sur les paramètres d’accès URL](url-access-parameter-reference.md).  
   
 ## <a name="access-a-report"></a>Accéder à un rapport  
  Pour afficher un rapport dans le navigateur, utilisez le paramètre *rs:Command*=*Render* . Exemple :  
@@ -66,7 +66,7 @@ ms.locfileid: "48098599"
 </DataSourceDefinition>  
 ```  
   
- La chaîne de connexion est retournée selon le paramètre **SecureConnectionLevel** du serveur de rapports. Pour plus d’informations sur la **SecureConnectionLevel** définition, consultez [à l’aide des méthodes de Service Web sécurisées](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
+ La chaîne de connexion est retournée selon le paramètre **SecureConnectionLevel** du serveur de rapports. Pour plus d’informations sur le paramètre **SecureConnectionLevel** , consultez [Utilisation des méthodes de service web sécurisées](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
   
 ## <a name="access-the-contents-of-a-folder"></a>Accéder au contenu d'un dossier  
  Pour accéder au contenu d’un dossier, utilisez le paramètre *rs:Command*=*GetChildren* . Il retourne une page générique de navigation des dossiers qui contient des liens vers les sous-dossiers, rapports, sources de données et ressources dans le dossier demandé. Exemple :  
@@ -79,6 +79,6 @@ ms.locfileid: "48098599"
   
 ## <a name="see-also"></a>Voir aussi  
  [Accès URL &#40;SSRS&#41;](url-access-ssrs.md)   
- [Référence de paramètres d'accès URL](url-access-parameter-reference.md)  
+ [Référence de paramètre d'accès URL](url-access-parameter-reference.md)  
   
   

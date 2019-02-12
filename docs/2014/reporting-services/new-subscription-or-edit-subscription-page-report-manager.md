@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a89c8c66eab37f20c8816823b44cefcfb77ad9ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a6194516bfc230c73df928bda5095c106776beff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208391"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030130"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Page Nouvel abonnement ou Modifier l’abonnement (Gestionnaire de rapports)
   La page Nouvel abonnement ou Modifier l'abonnement permet de créer un abonnement ou de modifier un abonnement existant à un rapport. Les options de cette page varient selon votre attribution de rôle. Les utilisateurs qui possèdent des autorisations avancées peuvent utiliser des options supplémentaires.  
   
- Les abonnements sont pris en charge pour les rapports qui peuvent s'exécuter sans assistance. Les rapports doivent utiliser au minimum des informations d'identification stockées ou aucune information d'identification. Si le rapport utilise des paramètres, une valeur par défaut doit être spécifiée. Les abonnements peuvent devenir inactifs si vous modifiez les paramètres d'exécution de rapport ou que vous supprimez les valeurs par défaut utilisées par les propriétés de paramètres. Pour plus d’informations, consultez [créer et gérer des abonnements pour les serveurs de rapports en Mode natif](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md).  
+ Les abonnements sont pris en charge pour les rapports qui peuvent s'exécuter sans assistance. Les rapports doivent utiliser au minimum des informations d'identification stockées ou aucune information d'identification. Si le rapport utilise des paramètres, une valeur par défaut doit être spécifiée. Les abonnements peuvent devenir inactifs si vous modifiez les paramètres d'exécution de rapport ou que vous supprimez les valeurs par défaut utilisées par les propriétés de paramètres. Pour plus d’informations, consultez [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md).  
   
 > [!NOTE]  
 >  Cette fonctionnalité n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "48208391"
   
 3.  Dans le menu déroulant, effectuez l'une des opérations suivantes :  
   
-    -   Cliquez sur **Gérer**. La page des propriétés générales pour le rapport s'ouvre. Sélectionnez ensuite l'onglet **Abonnements** . Dans la barre d’outils, cliquez sur **nouvel abonnement**, ou sélectionnez un abonnement existant et cliquez sur **modifier**.  
+    -   Cliquez sur **Gérer**. La page des propriétés générales pour le rapport s'ouvre. Sélectionnez ensuite l'onglet **Abonnements** . Dans la barre d'outils, cliquez sur **Nouvel abonnement**ou sélectionnez un abonnement existant et cliquez sur **Modifier**.  
   
     -   Cliquez sur **S'abonner**. Ainsi, vous ouvrez la page **Nouvel abonnement** pour le rapport.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48208391"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
  [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   

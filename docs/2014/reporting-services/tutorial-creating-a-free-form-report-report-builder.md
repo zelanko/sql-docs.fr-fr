@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : création d’un rapport au format libre (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : création d’un rapport au format libre (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 97082f1fcfc739e622c976b4dff0c1dbe4e6a79d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068989"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013750"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Didacticiel : création d'un rapport au format libre (Générateur de rapports)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Didacticiel : création d'un rapport au format libre (Générateur de rapports)
   Ce didacticiel vous apprend à créer un rapport de forme libre SSRS qui ressemble à une lettre type. Vous pouvez organiser les éléments du rapport pour créer un formulaire avec des zones de texte, des images et autres régions de données.  
   
  Le rapport que vous créez dans ce didacticiel est basé sur des exemples de données de vente incluses dans le didacticiel. Le rapport regroupe les informations par secteur de vente et affiche le nom du directeur des ventes pour le secteur, ainsi que des informations détaillées et de synthèse sur les ventes. Vous allez utiliser la région de données de liste comme base du rapport de forme libre, puis ajouterez un panneau décoratif avec une image, du texte statique avec des données insérées, un tableau pour afficher les informations détaillées, et éventuellement, un graphique à secteurs et un histogramme pour afficher les informations de synthèse.  
@@ -46,9 +46,9 @@ ms.locfileid: "48068989"
   
 -   [Ajouter la visualisation des données de synthèse](#Visualization)  
   
- Durée estimée pour effectuer le didacticiel : 20 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 20 minutes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="BlankReport"></a> 1. Créer un rapport, une source de données et un dataset vides  
@@ -75,7 +75,7 @@ ms.locfileid: "48068989"
   
 3.  Cliquez sur **Utiliser une connexion incorporée dans mon rapport**.  
   
-4.  Vérifiez que le type de connexion est Microsoft SQL Server, puis, dans la zone **Chaîne de connexion**, tapez **Data Source = \<nom_serveur>**  
+4.  Vérifiez que le type de connexion est bien Microsoft SQL Server puis, dans la zone **Chaîne de connexion** , tapez : **Source de données = \<nom_serveur>**  
   
      \<servername >, par exemple rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Dans la mesure où les données du rapport ne sont pas extraites d'une base de données SQL Server, vous n'avez pas besoin d'inclure le nom d'une base de données. La base de données par défaut sur le serveur spécifié est utilisée pour analyser la requête.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "48068989"
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Une colonne est ajoutée à la liste. La colonne contient la cellule `[Territory].`  
+     Une colonne est ajoutée à la liste. La colonne contient la cellule `[Territory].`.  
   
 4.  Cliquez avec le bouton droit sur la colonne Territory dans la liste, puis cliquez sur **Supprimer les colonnes**.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "48068989"
   
 2.  Sous l'onglet **Insertion** du ruban, cliquez sur **Zone de texte**, puis faites glisser une zone de texte en haut à gauche de la liste, à l'intérieur du rectangle que vous avez ajouté précédemment. Définissez la taille de la zone de texte sur environ 3 pouces de haut et 5 pouces de large.  
   
-3.  Placez le curseur dans la partie supérieure de la zone de texte, puis tapez **Bulletin d'informations pour** .  
+3.  Placez le curseur dans la partie supérieure de la zone de texte, puis tapez  : **Newsletter for**.  
   
      ![Ajouter un texte de titre au bulletin d’informations](../../2014/tutorials/media/tutorial-newsletterfor.png "Ajouter un texte de titre au bulletin d’informations")  
   
@@ -245,7 +245,7 @@ ms.locfileid: "48068989"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Placez le curseur sous le texte que vous avez tapé à l'étape 3 et tapez **Bonjour** .  
+9. Placez le curseur sous le texte que vous avez tapé à l'étape 3, puis tapez : **Hello** .  
   
     > [!NOTE]  
     >  Veillez à inclure l'espace supplémentaire après « Bonjour ». Cet espace sépare le texte du champ que vous allez ajouter à l'étape suivante.  
@@ -279,7 +279,7 @@ ms.locfileid: "48068989"
   
      ![Ajouter du texte du bulletin d’informations](../../2014/tutorials/media/tutorial-newslettertext.png "ajouter du texte du bulletin d’informations")  
   
-20. Placez le curseur sous le texte que vous avez collé à étape 15, puis tapez **Félicitations pour le total de vos ventes,** .  
+20. Placez le curseur sous le texte que vous avez collé à l'étape 15, puis tapez : **Félicitations pour votre total de ventes** .  
   
     > [!NOTE]  
     >  Veillez à inclure l'espace supplémentaire après la virgule. Cet espace sépare le texte du champ que vous allez ajouter à l'étape suivante.  
@@ -329,19 +329,19 @@ ms.locfileid: "48068989"
   
 2.  Dans la page Choisir un dataset, cliquez sur **ListDataset**.  
   
-3.  Cliquez sur **Suivant**.  
+3.  Cliquer sur **Suivant**.  
   
 4.  Dans la page **Organiser les champs** , faites glisser le champ Product de **Champs disponibles** vers **Valeurs**.  
   
 5.  Répétez l'étape 4 pour SalesDate, Quantity et Sales. Placez SalesDate sous Product, Quantity sous SalesDate et Sales sous SalesDate.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 7.  Dans la page **Choisir la disposition** , observez la mise en page de la table.  
   
      Le tableau est très simple. Il comporte cinq colonnes et aucun groupe de lignes ni de colonnes. Dans la mesure où il ne comporte aucun groupe, les options de mise en page relatives aux groupes ne sont pas disponibles. Vous mettrez manuellement à jour le tableau ultérieurement de manière à inclure un total.  
   
-8.  Cliquez sur **Suivant**.  
+8.  Cliquer sur **Suivant**.  
   
 9. Dans la page **Choisir un style** , dans le volet **Styles** , sélectionnez **Ardoise**.  
   
@@ -394,7 +394,7 @@ ms.locfileid: "48068989"
   
 3.  Sélectionnez ou tapez le nom du serveur de rapports sur lequel vous êtes autorisé à enregistrer des rapports.  
   
-     Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
+     Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
   
 4.  Dans `Name`, remplacez le nom par défaut par **SalesInformationByTerritory**.  
   
@@ -466,7 +466,7 @@ ms.locfileid: "48068989"
   
 10. Cliquez avec le bouton droit sur le titre du graphique, puis cliquez sur **Propriétés du titre**.  
   
-11. Dans la boîte de dialogue **Propriétés du titre du graphique** , dans le texte du titre, tapez **Quantités de produits vendues**.  
+11. Dans le **propriétés du titre de graphique** boîte de dialogue, dans le texte de titre, tapez : **Product Quantities Sold**.  
   
 12. Cliquez sur l'onglet **Police** , puis dans la liste **Taille** , cliquez sur **10pt**.  
   
@@ -500,7 +500,7 @@ ms.locfileid: "48068989"
   
 10. Cliquez avec le bouton droit sur le titre du graphique, puis cliquez sur **Propriétés du titre**.  
   
-11. Dans la boîte de dialogue **Propriétés du titre du graphique** , dans le texte du titre, tapez **Ventes de produits**.  
+11. Dans le **propriétés du titre de graphique** boîte de dialogue, dans le texte de titre, tapez : **Product Sales**.  
   
 12. Cliquez sur l'onglet **Police** , puis dans la liste **Taille** , cliquez sur **10pt**, puis sur **OK**.  
   
@@ -519,7 +519,7 @@ ms.locfileid: "48068989"
   
 1.  Cliquez sur le rectangle que vous avez ajouté précédemment dans cette leçon.  
   
-     Dans le volet Propriétés, le `Name` propriété affiche le nom du rectangle.  
+     Dans le volet Propriétés, la propriété `Name` affiche le nom du rectangle.  
   
      ![Nom du rectangle](../../2014/tutorials/media/tutorial-rectanglename.png "nom du rectangle")  
   

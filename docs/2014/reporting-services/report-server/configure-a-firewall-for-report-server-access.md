@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 841bdd13dfbc1fe7ca29a4eb3f3dbe757a28c36c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0f7016d47d060fa5f6708f907da848d7329482d4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224449"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024710"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurer un pare-feu pour accéder au serveur de rapports
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et les rapports publiés sont accessibles via les URL qui spécifient une adresse IP, un port et un répertoire virtuel. Si le Pare-feu Windows est activé, le port que le serveur de rapports est configuré pour utiliser est très probablement fermé. La présence d'une page Web vierge après la demande d'un rapport ou l'affichage d'une page vierge lorsque vous tentez d'ouvrir le Gestionnaire de rapports à partir d'un ordinateur client distant constituent une indication qu'un port peut être fermé.  
@@ -31,7 +31,7 @@ ms.locfileid: "48224449"
  Si vous accédez à des bases de données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur des ordinateurs externes, ou si la base de données du serveur de rapports se trouve sur une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] externe, vous devez ouvrir les ports 1433 et 1434 sur l'ordinateur externe. Pour plus d’informations, consultez [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur les paramètres par défaut du Pare-feu Windows et pour obtenir une description des ports TCP qui affectent le [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="prerequisites"></a>Prérequis  
- Ces instructions supposent que vous avez déjà configuré le compte de service, créé la base de données du serveur de rapports et configuré les URLS du service Web Report Server et du Gestionnaire de rapports. Pour plus d’informations, consultez [gérer un Reporting Services en Mode serveur de rapports natif](manage-a-reporting-services-native-mode-report-server.md).  
+ Ces instructions supposent que vous avez déjà configuré le compte de service, créé la base de données du serveur de rapports et configuré les URLS du service Web Report Server et du Gestionnaire de rapports. Pour plus d’informations, consultez [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](manage-a-reporting-services-native-mode-report-server.md).  
   
  Vous devez aussi avoir vérifié que le serveur de rapports est accessible via une connexion locale du navigateur Web à l'instance locale du serveur de rapports. Cette étape établit que votre installation est en état de marche. Vous devez vérifier que l'installation est configurée correctement avant de commencer à ouvrir les ports. Pour compléter cette étape sur Windows Server, vous devez également avoir ajouté le site du serveur de rapports aux Sites de confiance. Pour plus d’informations, consultez [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
@@ -50,21 +50,21 @@ ms.locfileid: "48224449"
   
 5.  Cliquez sur **Type de règle** de **Port**.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 7.  Dans la page **Protocole et ports** , cliquez sur **TCP**.  
   
 8.  Sélectionnez **Ports locaux spécifiques** et tapez la valeur **80**.  
   
-9. Cliquez sur **Suivant**.  
+9. Cliquer sur **Suivant**.  
   
 10. Dans la page **Action** , cliquez sur **Autoriser la connexion**.  
   
-11. Cliquez sur **Suivant**.  
+11. Cliquer sur **Suivant**.  
   
 12. Dans la page **Profil** , cliquez sur les options appropriées pour votre environnement.  
   
-13. Cliquez sur **Suivant**.  
+13. Cliquer sur **Suivant**.  
   
 14. Dans la page **Nom** , entrez un nom de**ReportServer (TCP sur le port 80)**.  
   
@@ -102,10 +102,10 @@ ms.locfileid: "48224449"
  Vous pouvez également vérifier que le port est ouvert correctement en démarrant le Gestionnaire de rapports sur un autre ordinateur. Pour plus d’informations, consultez [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer le compte de Service Report Server &#40;Gestionnaire de Configuration de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configurer des URL de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Créer une base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Configurer le compte de Service Report Server &#40;Gestionnaire de Configuration de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Créer une base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Gérer un serveur de rapports Reporting Services en mode natif](manage-a-reporting-services-native-mode-report-server.md)  
   
   
